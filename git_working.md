@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-1"
+lastupdated: "2017-6-5"
 
 ---
 
@@ -37,7 +37,7 @@ You can locally access the Git repos that are stored in {{site.data.keyword.gitr
 
 **Tip**: {{site.data.keyword.gitrepos}} supports HTTPS connections only that use TLS1.2. If you use Eclipse to connect, you might be required to specify this protocol for your Java&trade; version by adding `-Dhttps.protocols=TLSv1.2` to your eclipse.ini file and then restarting Eclipse.
 
-## Authenticating with Gitlab  
+## Authenticating with GitLab  
 {: #git_authentication}
 
 To complete remote Git operations, such as `clone` or `push`, from your local Git repo, you must use a personal access token or SSH key to authenticate with GitLab.
