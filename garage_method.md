@@ -53,7 +53,7 @@ With [Delivery Pipeline ![External link icon](../../icons/launch-glyph.svg "Exte
 
 [Create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}. Learn how to start with a pipeline and create an open toolchain that includes a GitHub repo and the pipeline.
 
-For more tutorials, see the [Learning Lab ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/tutorials){:new_window}
+For more tutorials, see the [Learning Lab ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/courses){:new_window}
 
 ## Continuous delivery courses
 {: #gm_cd_courses}
