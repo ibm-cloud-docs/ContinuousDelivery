@@ -498,7 +498,7 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
   * Paste the generated toolchain webhook.
  ![Webhook URL](images/jenkins_webhook_url.png)
 
-  * Add a post-build action for Notify OTC and select the **Job Completed** check box.
+  * Add a post-build action for Notify OTC and select the **Job Completed** check box. To track the deployment of code changes by creating tags, labels and comments on commits, pull requests, and referenced issues, select the **Track deployment of code changes** check box.
  ![Post-build action](images/jenkins_postbuild_action.png)  
 
  c. In your deploy jobs, complete these steps:
