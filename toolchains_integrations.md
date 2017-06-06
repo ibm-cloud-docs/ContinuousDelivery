@@ -513,7 +513,7 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
   * Configure your bindings for the Cloud Foundry CLI by using the `CF_CREDS_USR` username variable and the `CF_CREDS_PSW` password variable.
  ![Cloud Foundry CLI bindings](images/jenkins_config_bindings.png)  
 
-  * In the **Build** field, enter these commands to log in and deploy your application to {{site.data.keyword.Bluemix_notm}}:
+ * In the **Build** field, enter these commands to log in and deploy your application to {{site.data.keyword.Bluemix_notm}}:
  ![Build commands](images/jenkins_build_commands.png)    
 
  d. Save your changes and return to the Configure the Integration page for the Jenkins tool integration.
