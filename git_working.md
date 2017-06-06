@@ -49,7 +49,7 @@ To authenticate with your Git repo over HTTPS, you must create a personal access
 1. Optional: Choose an expiry date for the access token.
 1. Select the **api** check box to create a personal access token that uses api as the scope.
 1. Click **Create Personal Access Token**. Make note of your access token in a secure location for future use.
-1. On the {{site.data.keyword.gitrepos}} [Account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, in the Change username section, find your {{site.data.keyword.gitrepos}} username. Your username is also displayed as the first segment of the URL for any personal Git repos that you create. Your {{site.data.keyword.gitrepos}} password is your personal access token.
+1. On the {{site.data.keyword.gitrepos}} [Account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, in the Change username section, find your {{site.data.keyword.gitrepos}} username. Your username is also displayed as the first segment of the URL for any personal Git repos that you create.
 1. Use your {{site.data.keyword.gitrepos}} username and personal access token to authenticate with your Git repo from an external Git client.
 
 To learn more, see [Personal access tokens ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}.
