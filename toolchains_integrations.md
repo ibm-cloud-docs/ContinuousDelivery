@@ -513,10 +513,8 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
   * Configure your bindings for the Cloud Foundry CLI by using the `CF_CREDS_USR` username variable and the `CF_CREDS_PSW` password variable.
  ![Cloud Foundry CLI bindings](images/jenkins_config_bindings.png)  
 
-  * In the **Build** field, enter these commands to log in and use the IBM Cloud DevOps Cloud Foundry plug-in to send the application deployable mappings, with Git commit traceability, to your toolchain:
+  * In the **Build** field, enter these commands to log in and deploy your application to {{site.data.keyword.Bluemix_notm}}:
  ![Build commands](images/jenkins_build_commands.png)    
-
-  * In the **Build** field, enter the `cf icd --create-connection $IBM_CLOUD_DEVOPS_WEBHOOK_URL $CF_APP` command to send the application deployable mappings to the toolchain.    
 
  d. Save your changes and return to the Configure the Integration page for the Jenkins tool integration.
 
