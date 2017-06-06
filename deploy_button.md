@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-12"
+lastupdated: "2017-6-6"
 
 ---
 
@@ -197,4 +197,3 @@ With the manifest file, you can specify:
  </ul>
 </ul>
 
-For troubleshooting help, see [Deploy to Bluemix button doesn't deploy an app](/docs/troubleshoot/ts_apps.html#ts_deploybutton){:new_window}.	
