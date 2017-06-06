@@ -62,7 +62,7 @@ The second section is the editor pane. The editor provides several coding featur
  2. In the file navigator, click a file.
 
 ### Keyboard shortcuts
-Many of the commands in the {{site.data.keyword.webide}} are also accessible  through keyboard shortcuts.
+Many of the commands in the {{site.data.keyword.webide}} are accessible through keyboard shortcuts.
 
 To see a list of the keyboard shortcuts in the editor, click **Tools** > **Show keys**. Alternatively, you can see the list by pressing Alt+Shift+?, or on a Mac OS, Ctrl+Shift+?. You can customize a shortcut by hovering over the key, clicking the pencil, and typing the new key binding.
 
