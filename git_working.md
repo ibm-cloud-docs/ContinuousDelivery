@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-5"
+lastupdated: "2017-6-6"
 
 ---
 
@@ -43,14 +43,14 @@ You can locally access the Git repos that are stored in {{site.data.keyword.gitr
 To complete remote Git operations, such as `clone` or `push`, from your local Git repo, you must use a personal access token or SSH key to authenticate with GitLab.
 
 ### Creating a personal access token  
-You can create a personal access token to authenticate with Git over HTTP.
+To authenticate with your Git repo over HTTPS, you must create a personal access token. Your {{site.data.keyword.Bluemix_notm}} login and password work with {{site.data.keyword.gitrepos}} only in a browser. You cannot use your {{site.data.keyword.Bluemix_notm}} user credentials to authenticate from external Git clients.
 
 1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, on the [Access Tokens page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, type the name of the application that you want to create an access token for. For example, `Git CLI`.
 1. Optional: Choose an expiry date for the access token.
 1. Select the **api** check box to create a personal access token that uses api as the scope.
 1. Click **Create Personal Access Token**. Make note of your access token in a secure location for future use.
-
-**Important**: You cannot authenticate with GitLab by using your {{site.data.keyword.Bluemix_notm}} user credentials; you must use your {{site.data.keyword.gitrepos}} username and personal access token. You can find your {{site.data.keyword.gitrepos}} username on the {{site.data.keyword.gitrepos}} [Account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, in the Change username section. Your username is also displayed as the first part of the URL for any personal Git repos that you create. Your {{site.data.keyword.gitrepos}} password is your personal access token.
+1. On the {{site.data.keyword.gitrepos}} [Account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, in the Change username section, find your {{site.data.keyword.gitrepos}} username. Your username is also displayed as the first segment of the URL for any personal Git repos that you create. Your {{site.data.keyword.gitrepos}} password is your personal access token.
+1. Use your {{site.data.keyword.gitrepos}} username and personal access token to authenticate with your Git repo from an external Git client.
 
 To learn more, see [Personal access tokens ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}.
 
