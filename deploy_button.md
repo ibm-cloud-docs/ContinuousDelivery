@@ -35,7 +35,7 @@ When someone clicks your button, these actions occur:
 
 ##Examples of the button {: #button-examples} 
 
-See an app button example for a public Git Repos and Issue Tracking repository:
+See an app button example for a public {{site.data.keyword.gitrepos}} repository:
 
 <p>
 <a class="xref" href="https://bluemix.net/deploy?repository=https://hub.jazz.net/git/idsorg/sample-java-cloudant" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/deploy_buttonx2.png" alt="Deploy to Bluemix" /></a>
