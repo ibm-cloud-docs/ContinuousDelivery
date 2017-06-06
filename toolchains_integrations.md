@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-29"
+lastupdated: "2017-6-6"
 
 ---
 
@@ -487,17 +487,9 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
 1. Copy the generated toolchain webhook.
 1. In your Jenkins server, complete these steps:
 
- a. Install the [Cloud Foundry CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html){: new_window}.
+ a. Install and configure the IBM Cloud DevOps Jenkins plug-in for DevOps Insights and Notifications. For more information, see [Installing and configuring the plug-in](/docs/services/DevOpsInsights/insights_risk.html#integrate_jenkins){: new_window}.
 
- b. Install the IBM Cloud DevOps Cloud Foundry plug-in by entering one of these commands:
-
-  * Mac OS: `cf install-plugin https://icd.ng.bluemix.net/icd_darwin_amd64`
-
-  * Linux or Docker: `cf install-plugin https://icd.ng.bluemix.net/icd_linux_amd64`
-
- c. Install and configure the IBM Cloud DevOps Jenkins plug-in for DevOps Insights and Notifications. For more information, see [Installing and configuring the plug-in](/docs/services/DevOpsInsights/insights_risk.html#integrate_jenkins){: new_window}.
-
- d. In each job for which you want to send notifications to your toolchain, complete these steps:
+ b. In each job for which you want to send notifications to your toolchain, complete these steps:
 
   * Select the **This project is parameterized** check box.
 
@@ -509,7 +501,7 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
   * Add a post-build action for Notify OTC and select the **Job Completed** check box.
  ![Post-build action](images/jenkins_postbuild_action.png)  
 
- e. In your deploy jobs, complete these steps:
+ c. In your deploy jobs, complete these steps:
 
   * Add the `IBM_CLOUD_DEVOPS_WEBHOOK_URL`, `CF_API`, `CF_ORG`, `CF_SPACE`, and `CF_APP` string parameters. These examples show how to add each of the string parameters.
  ![Webhook URL string parameter](images/jenkins_set_webhook_url.png)
@@ -526,7 +518,7 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
 
   * In the **Build** field, enter the `cf icd --create-connection $IBM_CLOUD_DEVOPS_WEBHOOK_URL $CF_APP` command to send the application deployable mappings to the toolchain.    
 
- f. Save your changes and return to the Configure the Integration page for the Jenkins tool integration.
+ d. Save your changes and return to the Configure the Integration page for the Jenkins tool integration.
 
 1. Click **Create Integration**.
 1. From your toolchain, click **Jenkins** to view the Jenkins server.  
