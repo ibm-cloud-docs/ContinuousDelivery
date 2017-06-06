@@ -31,12 +31,7 @@ Continuous Delivery
         pipeline_deployment_plan.md
 
   {: .topicgroup}
-    Toolchains
-        toolchains_about.md
-        toolchains_working.md
-        toolchains_using.md
-        toolchains_integrations.md
-        deploy_button.md
+  ../toolchains/
 
   {: .topicgroup}
     Eclipse Orion Web IDE
