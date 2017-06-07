@@ -16,7 +16,7 @@ lastupdated: "2017-6-7"
 {: #git_local}
 
 
-You can manage your GitHub, GitHub Enterprise, or Git Repos and Issue Tracking repo and work locally or in the Eclipse Orion  Web IDE. To work locally, you can either use the command line to access your repo or, if you work in Eclipse, install the EGit plug-in for version control.  Once you have a local version of your repo, you can use any tools to develop your app.
+You can manage your GitHub, GitHub Enterprise, or Git Repos and Issue Tracking repo and work locally or in the Eclipse Orion  Web IDE. To work locally, you can either use the command line to access your repo or, if you work in Eclipse, install the EGit plug-in for version control.  Once you have a local version of your repo, you can use any tool to develop your app.
 
 If you are using Git Repos and Issue Tracking, please see [Authorizing access](https://console.stage1.bluemix.net/docs/services/ContinuousDelivery/git_working.html#git_authentication).
 
