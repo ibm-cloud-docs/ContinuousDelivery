@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-6"
+lastupdated: "2017-6-7"
 
 ---
 
@@ -487,36 +487,11 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
 1. Copy the generated toolchain webhook.
 1. In your Jenkins server, complete these steps:
 
- a. Install and configure the IBM Cloud DevOps Jenkins plug-in for DevOps Insights and Notifications. For more information, see [Installing and configuring the plug-in](/docs/services/DevOpsInsights/insights_risk.html#integrate_jenkins){: new_window}.
+ a. [Install the IBM Cloud DevOps plug-in](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Installingtheplugin){: new_window}.
 
- b. In each job for which you want to send notifications to your toolchain, complete these steps:
+ b. [Configure Jenkins to notify toolchains](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Notifyingtoochains){: new_window}.
 
-  * Select the **This project is parameterized** check box.
-
-  * Add the `IBM_CLOUD_DEVOPS_WEBHOOK_URL` string parameter.
-
-  * Paste the generated toolchain webhook.
- ![Webhook URL](images/jenkins_webhook_url.png)
-
-  * Add a post-build action for Notify OTC and select the **Job Completed** check box. To track the deployment of code changes by creating tags, labels and comments on commits, pull requests, and referenced issues, select the **Track deployment of code changes** check box.
- ![Post-build action](images/jenkins_postbuild_action.png)  
-
- c. In your deploy jobs, complete these steps:
-
-  * Add the `IBM_CLOUD_DEVOPS_WEBHOOK_URL`, `CF_API`, `CF_ORG`, `CF_SPACE`, and `CF_APP` string parameters. These examples show how to add each of the string parameters.
- ![Webhook URL string parameter](images/jenkins_set_webhook_url.png)
- ![CFI API string parameter](images/jenkins_set_cfapi.png)
- ![CFI ORG string parameter](images/jenkins_set_cforg.png)
- ![CFI SPACE string parameter](images/jenkins_set_cfspace.png)
- ![CFI APP string parameter](images/jenkins_set_cfapp.png)
-
-  * Configure your bindings for the Cloud Foundry CLI by using the `CF_CREDS_USR` username variable and the `CF_CREDS_PSW` password variable.
- ![Cloud Foundry CLI bindings](images/jenkins_config_bindings.png)  
-
- * In the **Build** field, enter these commands to log in and deploy your application to {{site.data.keyword.Bluemix_notm}}:
- ![Build commands](images/jenkins_build_commands.png)    
-
- d. Save your changes and return to the Configure the Integration page for the Jenkins tool integration.
+ c. Return to the Configure the Integration page for the Jenkins tool integration.
 
 1. Click **Create Integration**.
 1. From your toolchain, click **Jenkins** to view the Jenkins server.  
