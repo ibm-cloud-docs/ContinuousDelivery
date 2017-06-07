@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-6"
+lastupdated: "2017-6-7"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2017-6-6"
 
 #Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button {: #deploy-button} 
 
-The Deploy to {{site.data.keyword.Bluemix}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to IBM {{site.data.keyword.Bluemix_notm}} by using a toolchain. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository so that your original app remains unaffected. 
+The Deploy to {{site.data.keyword.Bluemix}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to IBM {{site.data.keyword.Bluemix_notm}} by using a toolchain. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository (repo) so that your original app remains unaffected. 
 {: shortdesc} 
 
 When someone clicks your button, these actions occur: 
@@ -35,13 +35,13 @@ When someone clicks your button, these actions occur:
 
 ##Examples of the button {: #button-examples} 
 
-See an app button example for a public {{site.data.keyword.gitrepos}} repository:
+See an app button example for a public {{site.data.keyword.gitrepos}} repo:
 
 <p>
 <a class="xref" href="https://bluemix.net/deploy?repository=https://hub.jazz.net/git/idsorg/sample-java-cloudant" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/deploy_buttonx2.png" alt="Deploy to Bluemix" /></a>
 </p> 
 
-See an app button example for a public GitHub repository: 
+See an app button example for a public GitHub repo: 
 
 <p>
 <a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/ibmjstart/bluemix-node-mysql-uploader" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/deploy_buttonx2.png" alt="Deploy to Bluemix" /></a>
@@ -58,7 +58,7 @@ See a button example for an app that is deployed in a {{site.data.keyword.Bluemi
 To create a Deploy to {{site.data.keyword.Bluemix_notm}} button: 
 
 <ol>
-<li> Copy and modify one of the following snippet templates and include a public Git repository.
+<li> Copy and modify one of the following snippet templates and include a public Git repo.
 <p></p>
 <p>
 <strong>Tip</strong>: You can specify which branch to use by adding a branch parameter to the Git URL. If you don't specify a branch, the the master branch is used by default.
@@ -115,16 +115,16 @@ Review these considerations when you are customizing the snippet for your Deploy
 	
 	* If you prefer to use a larger image for the button, there is a PNG image available that is twice the size of the original. You can change the path of the external button image that is used in the snippet to `https://bluemix.net/deploy/button_x2.png`. 
 	
-	* If you prefer to store the image locally, you can download the image and store it in your Git repository. Adjust the path to use the relative location of the image. 
+	* If you prefer to store the image locally, you can download the image and store it in your Git repo. Adjust the path to use the relative location of the image. 
 	
 	* If you want to use a translated version of the button, you can reference it remotely or download it from [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button ![External link icon](../../icons/launch-glyph.svg "External link icon")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}. 
 	
 ##Repository considerations for the button {: #button-repo} 
 
-Review these considerations for the repository that you will use in your Deploy to Bluemix button. 
+Review these considerations for the repo that you will use in your Deploy to Bluemix button. 
 
 <ul>
-<li>A <code>manifest.yml</code> is not required to be in your repository. However, if your app requires other services to run, you must provide a manifest file that declares those services.  
+<li>A <code>manifest.yml</code> is not required to be in your repo. However, if your app requires other services to run, you must provide a manifest file that declares those services.  
 
 With the manifest file, you can specify: 
     <ul>
@@ -166,7 +166,7 @@ With the manifest file, you can specify:
 </pre>
    </li>
    </ul>
-	<li> If the app must be built before it can be deployed, you must include a build file in your repository. If a build script file is detected in the root directory of the repository, an automated build of the code is triggered before deployment. 
+	<li> If the app must be built before it can be deployed, you must include a build file in your repo. If a build script file is detected in the root directory of the repo, an automated build of the code is triggered before deployment. 
 	
 	Supported builders: 
 	    <ul>
@@ -176,21 +176,21 @@ With the manifest file, you can specify:
 		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank" title="(Opens in a new tab or window)">Maven: <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> <code>/pom.xml</code>, which builds output to the <code>./target/</code> folder</li>
 	   </ul>
 	</li>	
-	<li>To configure the pipeline for the project, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. You can create a <code>pipeline.yml</code> file manually or you can generate one from an existing DevOps Services project. To create a pipeline.yml file from a {{site.data.keyword.jazzhub_short}} project and add it to your repository, complete these steps. 
+	<li>To configure the pipeline for the toolchain in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. You can create a <code>pipeline.yml</code> file manually or you can generate one from an existing toolchain. To create a pipeline.yml file from a toolchain and add it to your repository, complete these steps. 
 <ol>
-<li>Open your DevOps Services project in a browser and click <b>Build and Deploy</b>.</li>
+<li>Open your toolchain in a browser and select an existing pipeline or create a new pipeline.</li>
 <li>Configure your pipeline with build and deployment jobs.</li>
 <li>In your browser, add <code>/yaml</code> to the project pipeline URL and press Enter. 
-<br>Example: <code>https://hub.jazz.net/pipeline/<owner>/<project_name>/yaml</code></li>
+<br>Example: <code>https://console.bluemix.net/devops/pipelines/pipeline_id/yaml</code></li>
 <li>Save the resulting <code>pipeline.yml</code> file.</li>
-<li>In the root directory of your project, create a <code>.bluemix</code> directory.</li>
-<li>Upload the <code>pipeline.yml</code> file to the <code>.bluemix</code> repository.</li>
+<li>In the root directory of your Git repo, create a <code>.bluemix</code> directory.</li>
+<li>Upload the <code>pipeline.yml</code> file to the <code>.bluemix</code> repo.</li>
 </ol> </li>
-	<li>To deploy an app in a container by using <strong>IBM Containers</strong>, you must include Dockerfile in the root directory of the repository and, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. 
+	<li>To deploy an app in a container by using <strong>IBM Containers</strong>, you must include Dockerfile in the root directory of the repo and, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. 
 	<ul>
-	    <li>The Dockerfile acts as a kind of build script for the app. If a Dockerfile is detected in the repository, the app is automatically built into an image before it is deployed in a container. If the app itself must be built before the app is built into an image, include a build script for the app as well as a Dockerfile, as previously described.</li>
+	    <li>The Dockerfile acts as a kind of build script for the app. If a Dockerfile is detected in the repo, the app is automatically built into an image before it is deployed in a container. If the app itself must be built before the app is built into an image, include a build script for the app as well as a Dockerfile, as previously described.</li>
 	    <li> To learn more about creating Dockerfiles, <a class="xref" href="https://docs.docker.com/reference/builder/" target="_blank" title="(Opens in a new tab or window)">see the Docker documentation <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a>. </li>
-	    <li>You can create a <code>pipeline.yml</code> file manually or you can generate one from an existing DevOps Services project. To create a <code>pipeline.yml</code> manually that is specifically for containers, <a class="xref" href="https://github.com/Puquios/" target="_blank" title="(Opens in a new tab or window)">see the examples in GitHub <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a>. </li>
+	    <li>You can create a <code>pipeline.yml</code> file manually or you can generate one from an existing toolchain. To create a <code>pipeline.yml</code> manually that is specifically for containers, <a class="xref" href="https://github.com/Puquios/" target="_blank" title="(Opens in a new tab or window)">see the examples in GitHub <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a>. </li>
         </ul>
 
  </li>
