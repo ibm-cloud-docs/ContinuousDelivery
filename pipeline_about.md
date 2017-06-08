@@ -70,7 +70,12 @@ Build jobs compile your project in preparation for deployment. They generate art
 
 Jobs that take input from build jobs must reference build artifacts in the same structure that they were created in. For example, if a build job archives build artifacts to an `output` directory, a deploy script would refer to the `output` directory rather than the project root directory to deploy the compiled project. You can specify the directory to archive by entering the directory name in the  **Build Archive Directory** field. Leaving the field blank archives the root directory.
 
-**Note:** If you select the **Simple** builder type for a build job, you skip the build process. In that case, your code is not compiled, but is sent to the deployment stage as is. To both build and deploy, select a builder type other than **Simple**.
+**Note:** If you use the **Simple** builder type, your code is not compiled or built; it is packaged and made available for future stages.
+
+When you deploy a Java or Node.js app to Cloud Foundry, Cloud Foundry includes the correct artifacts to allow your app to run. For more information, see  [Deploying applications by using the cf command](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps). The pipeline for a Cloud Foundry app contains a Deploy stage that runs a cf command.
+
+Specify the [buildpack](https://console.ng.bluemix.net/docs/cfapps/byob.html#using-community-buildpacks) to use in the manifest file in the root folder of your app. Buildpacks typically examine user-provided artifacts to determine what dependencies to download and how to configure applications to communicate with bound services. For more information about manifest files, see [Application manifest](https://console.ng.bluemix.net/docs/manageapps/depapps.html#appmanifest). 
+
 
 #### Environment properties for build scripts
 You can include environment properties within a build job's build shell commands. The properties provide access to information about the job's execution environment. For more information, see [Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
