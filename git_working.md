@@ -35,7 +35,7 @@ You can locally access the Git repos that are stored in {{site.data.keyword.gitr
 ## Authenticating with {{site.data.keyword.gitrepos}}  
 {: #git_authentication}
 
-Your {{site.data.keyword.Bluemix_notm}} login and password are used to authenticate with {{site.data.keyword.gitrepos}} only in a web browser. You cannot use your {{site.data.keyword.Bluemix_notm}} user credentials to authenticate from external Git clients. To complete remote Git operations, such as `clone` or `push`, from your local Git repo, you must use a personal access token or SSH key to authenticate with {{site.data.keyword.gitrepos}}.
+Your {{site.data.keyword.Bluemix_notm}} login and password are only used to authenticate with {{site.data.keyword.gitrepos}} in a web browser. You cannot use your {{site.data.keyword.Bluemix_notm}} user credentials to authenticate from external Git clients. To complete remote Git operations, such as `clone` or `push`, from your local Git repo, you must use a personal access token or SSH key to authenticate with {{site.data.keyword.gitrepos}}.
 
 ### Creating a personal access token  
 **Important**: To authenticate with your Git repo over HTTPS, you must create a personal access token. 
@@ -65,5 +65,4 @@ Files are strictly limited to 100 MB. The suggested repo size limit is 1 GB. If 
 Check out one of these tutorials on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}:
 
   * [Create a toolchain that uses {{site.data.keyword.gitrepos}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
-  
   * [Create and use a microservices toolchain with DevOps Insights (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
