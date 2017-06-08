@@ -29,8 +29,7 @@ Continuous Delivery
         deliverypipeline_extension.md
         pipeline_deployment_plan.md
 
-  {: .topicgroup}
-  ../toolchains/
+
 
   {: .topicgroup}
     Eclipse Orion Web IDE
@@ -39,7 +38,12 @@ Continuous Delivery
         bluemixlive.md
 
     git_working.md
+    git_locally.md
     di_working.md
+    
+  {: .topicgroup}
+  ../toolchains/
+  
   {: .navgroup-end}
 
   {: .navgroup id="help"}
