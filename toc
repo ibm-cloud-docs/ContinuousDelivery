@@ -20,6 +20,9 @@ Continuous Delivery
     upgrade_projects.md
 
   {: .topicgroup}
+  ../../toolchains/
+  
+  {: .topicgroup}
     Delivery Pipeline
         pipeline_about.md
         pipeline_working.md
@@ -28,8 +31,6 @@ Continuous Delivery
         pipeline_deploy_var.md
         deliverypipeline_extension.md
         pipeline_deployment_plan.md
-
-
 
   {: .topicgroup}
     Eclipse Orion Web IDE
@@ -41,9 +42,7 @@ Continuous Delivery
     git_locally.md
     di_working.md
     
-  {: .topicgroup}
-  ../../toolchains/
-  
+
   {: .navgroup-end}
 
   {: .navgroup id="help"}
