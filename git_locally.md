@@ -53,8 +53,8 @@ After the download is complete, you have a local repo of the files for your proj
 
 If you use Eclipse and have a project that uses Git for source control, you can use the EGit plug-in to manage your repo from Eclipse. For more information and instructions on how to install and configure EGit, please see [EGit tutorial](http://eclipsesource.com/blogs/tutorials/egit-tutorial/).
 
-<a name='etools'></a>
 ## Developing with IBM Eclipse Tools
+{: #git_eclipse_tools}
 
 IBM&reg; Eclipse Tools for Bluemix&trade; provides plug-ins that you can install into an existing Eclipse environment to assist in integrating your IDE with Bluemix.
 
