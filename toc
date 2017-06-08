@@ -42,7 +42,7 @@ Continuous Delivery
     di_working.md
     
   {: .topicgroup}
-  ../toolchains/
+  ../../toolchains/
   
   {: .navgroup-end}
 
