@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-7"
+lastupdated: "2017-6-8"
 
 ---
 
@@ -64,5 +64,5 @@ With the tools, you can deploy the following types of files and servers to the B
 * EAR (enterprise archive) files
 * Liberty Profile packaged servers
 
-You can also create services and link them to your app and define environment variables as part of the deployment. For more information about IBM Eclipse Tools, [see Deploying apps with IBM Eclipse Tools for Bluemix][https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html].
+You can also create services and link them to your app and define environment variables as part of the deployment. For more information about IBM Eclipse Tools, [see Deploying apps with IBM Eclipse Tools for Bluemix](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html).
 
