@@ -16,9 +16,9 @@ lastupdated: "2017-6-7"
 {: #git_local}
 
 
-You can manage your GitHub, GitHub Enterprise, or Git Repos and Issue Tracking repo and work locally or in the Eclipse Orion  Web IDE. To work locally, you can either use the command line to access your repo or, if you work in Eclipse, install the EGit plug-in for version control.  Once you have a local version of your repo, you can use any tool to develop your app.
+You can manage your GitHub, GitHub Enterprise, or Git Repos and Issue Tracking repo and work locally or in the Eclipse Orion  Web IDE. To work locally, you can either use the command line to access your repository (repo) or, if you work in Eclipse, install the EGit plug-in for version control. After you have a local version of your repo, you can use any tool to develop your app.
 
-If you are using Git Repos and Issue Tracking, please see [Authorizing access](https://console.stage1.bluemix.net/docs/services/ContinuousDelivery/git_working.html#git_authentication).
+If you are using Git Repos and Issue Tracking, see [Authorizing access](https://console.stage1.bluemix.net/docs/services/ContinuousDelivery/git_working.html#git_authentication).
 
 
 ## Cloning your Git project from the command line
@@ -33,9 +33,9 @@ Check whether Git is installed. On a command line, type `git version`. If Git is
 ### Cloning your project
 {: #git_clone}
 
-1. From the Toolchain Overview page, click the GitHub, GitHub Enterprise, or Git Repos and Issue Tracking card.
+1. From your toolchain's Overview page, click **GitHub**, **GitHub Enterprise**, or **Git Repos and Issue Tracking**.
 
-2. In GitHub, click on the **Clone or download** button and select  HTTPS or SSH.  Click the Clipboard icon to copy the URL .  In Git Repos and Issue Tracking, Select the HTTPS or SSH and copy the URL in the next field.
+2. In GitHub, click **Clone or download**. The option to clone with SSH is shown. If you prefer to use HTTPS, click **Use HTTPS**. Click the clipboard icon to copy the URL. In Git Repos and Issue Tracking, select either **HTTPS** or **SSH** and copy the URL in the field.
 
 3. Open a command line.
 
@@ -51,18 +51,18 @@ After the download is complete, you have a local repo of the files for your proj
 ## Accessing your repo by using Eclipse and the EGit plug-in
 {: #git_egit}
 
-If you use Eclipse and have a project that uses Git for source control, you can use the EGit plug-in to manage your repo from Eclipse. For more information and instructions on how to install and configure EGit, please see [EGit tutorial](http://eclipsesource.com/blogs/tutorials/egit-tutorial/).
+If you use Eclipse and have a project that uses Git for source control, you can use the EGit plug-in to manage your repo from Eclipse. For instructions to install and configure EGit, see [EGit tutorial](http://eclipsesource.com/blogs/tutorials/egit-tutorial/).
 
 ## Developing with IBM Eclipse Tools
 {: #git_eclipse_tools}
 
-IBM&reg; Eclipse Tools for Bluemix&trade; provides plug-ins that you can install into an existing Eclipse environment to assist in integrating your IDE with Bluemix.
+IBM Eclipse Tools for Bluemix provides plug-ins that you can install into an Eclipse environment to assist in integrating your IDE with Bluemix.
 
-With the tools, you can deploy the following types of files and servers to the Bluemix server directly from your Eclipse IDE or from IBM&reg; WebSphere&reg; Application Server Developer Tools (WDT):
+With the tools, you can deploy the following types of files and servers to the Bluemix server directly from your Eclipse IDE or from IBM WebSphere&reg; Application Server Developer Tools (WDT):
 * JavaScript files
 * WAR (web archive) files
 * EAR (enterprise archive) files
 * Liberty Profile packaged servers
 
-You can also create services and link them to your app, and define environment variables as part of the deployment. For more information about IBM Eclipse Tools, [see Deploying apps with IBM Eclipse Tools for Bluemix][https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html].
+You can also create services and link them to your app and define environment variables as part of the deployment. For more information about IBM Eclipse Tools, [see Deploying apps with IBM Eclipse Tools for Bluemix][https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html].
 
