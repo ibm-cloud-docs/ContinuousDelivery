@@ -64,7 +64,7 @@ The second section is the editor pane. The editor provides several coding featur
 ### Keyboard shortcuts
 Many of the commands in the {{site.data.keyword.webide}} are accessible through keyboard shortcuts.
 
-To see a list of the keyboard shortcuts in the editor, click **Tools** > **Show keys**. Alternatively, you can see the list by pressing Alt+Shift+?, or on a Mac OS, Ctrl+Shift+?. You can customize a shortcut by hovering over the key, clicking the pencil, and typing the new key binding.
+To see a list of the keyboard shortcuts in the editor, click **Tools** > **Show keys**. Alternatively, you can see the list by pressing Alt+Shift+?, or on MacOS, Ctrl+Shift+?. You can customize a shortcut by hovering over the key, clicking the pencil, and typing the new key binding.
 
 ## Managing source code
 {: #sourcecontrol}
