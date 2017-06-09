@@ -72,7 +72,7 @@ Jobs that take input from build jobs must reference build artifacts in the same 
 
 **Note:** If you use the **Simple** builder type, your code is not compiled or built; it is packaged and made available for future stages.
 
-When you deploy by using Cloud Foundry, Cloud Foundry includes the correct artifacts to allow your app to run.  For more information, see  [Deploying applications by using the cf command](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps). The pipeline for a Cloud Foundry app contains a Deploy stage that runs a cf command.
+When you deploy by using Cloud Foundry, Cloud Foundry includes the correct artifacts to allow your app to run. For more information, see  [Deploying applications by using the cf command](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps). The pipeline for a Cloud Foundry app contains a Deploy stage that runs a cf command.
 
 Cloud Foundtry tries to [detect the buildpack to use ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/buildpacks/detection.html). You can specify the [buildpack](/docs/cfapps/byob.html#using-community-buildpacks) to use in the manifest file in the root folder of your app. Buildpacks typically examine user-provided artifacts to determine what dependencies to download and how to configure applications to communicate with bound services. For more information about manifest files, see [Application manifest](/docs/manageapps/depapps.html#appmanifest). 
 
