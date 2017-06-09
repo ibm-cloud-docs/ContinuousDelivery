@@ -203,7 +203,7 @@ The Eclipse Orion {{site.data.keyword.webide}} provides content assist, tooltips
 </li><li>git config
 </li><li>cfignore
 </li><li>properties
-<li></ul>
+</li></ul>
 </td>
 </tr>
 </table>
