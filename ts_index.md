@@ -112,34 +112,6 @@ You can either increase the memory quota of your account, or reduce the memory t
 For more information about general problems with managing your apps, see [Troubleshooting for managing apps](https://console.bluemix.net/docs/troubleshoot/ts_apps.html#managingapps).
 
 
-## Run bar does not show Bluemix Live Sync icons in Eclipse Orion Web IDE
-{: #ts_llz_lkb_3r}
-
-You created an app, but the IBM Bluemix Live Sync icons aren't shown in the Eclipse Orion Web IDE run bar.  You don't see the full run bar with the Live Edit icons:
-
-![Run bar](images/webide_runbar_light.png)   
-
-When you edit a Node.js app in the Web IDE, the {{site.data.keyword.Bluemix_notm}} live edit, quick restart, and debug icons aren't shown in the run bar.
-{: tsSymptoms}
-
-The icons aren't available in these circumstances:
-{: tsCauses}
-
-* The `manifest.yml` file isn't stored at the top level of your project.
-* Your app is stored in a subdirectory rather than root, but the path to the subdirectory isn't specified in the `manifest.yml` file.
-* The app does not contain a `package.json` file.
-
-Use one of the following methods:
-{: tsResolve}
-
-* If the `manifest.yml` file isn't stored at the root, store it there.
-* If your app is stored in a subdirectory, specify the path to the subdirectory in the `manifest.yml` file.
-   ```
-    path: path_to_application
-    ```
-* Create a `package.json` file that is in the same directory as your app.
-
-
 ## Toolchain does not load
 {: #toolchains_load}
 
@@ -186,60 +158,3 @@ Configure the tool integration again:
 
 1. Make sure that you are using valid configuration parameters. If the error was caused by an invalid configuration, an error message is displayed; for example, `The integration could not be set up. Check the settings and try again. Reason: Invalid api_key:fakeKey`. Update the settings for the tool integration and click **Save integration**.
 1. If the error was caused by a communication problem, click **Save integration** to try again.
-
-
-
-<!-- ## Pipeline job failures
-{: #cannot_authorize_github}
-
-A pipeline job failed.
-{:shortdesc}
-
-Your pipeline job failed.
-{: tsSymptoms}
-
- * Some reasons
-
-Many reasons  
-{: tsCauses}
-
-If you are configuring the GitHub tool integration while you are creating your toolchain, follow these steps:
-{: tsResolve}
-
-  1. In the Configurable Integrations section, click **GitHub**.
-  1. If you are creating the toolchain on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, click **Authorize** to go to the GitHub website.
-  1. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
-
-If you already have a toolchain, update the GitHub tool integration's configuration:
-
- 1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**, and then click **Overview**.
- 1. On the GitHub card, click the menu and click **Configure**.
- 1. Update the configuration settings to authorize {{site.data.keyword.Bluemix_notm}} to access GitHub. Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
- 1. When you are finished updating the settings, click **Save Integration**.  -->
-
-
-
-
-<!-- This is the template for a problem topic.  -->
-
-<!-- The short description section contains a brief description of problem. For example:  
-
-After you create an app on the Dashboard, you click *ADD GIT* to create a Git repository, but you cannot proceed.
-{:shortdesc} -->
-
-<!-- The symptoms section contains a description of problem symptoms. For example:  
-When you click ADD GIT, a window opens and one of these issues occur:
-- The window hangs with a blank screen.
-- A message states that a problem exists with 3rd party cookies.
-{: tsSymptoms} -->
-
-<!-- The causes section contains a brief explanation of what causes the problem. For example:  
-Your browser might be configured to prevent a cookie from being set. That cookie must be set from the IBM Bluemix DevOps Services site in the hub.jazz.net internet domain from within the context of the Bluemix console.
-{: tsCauses} -->
-
-<!-- The resolve section contains steps to resolve the problem. For example:  
-You can fix this problem in one of three ways:
-- Follow the instructions that are in the window that opens from the Bluemix console. Click the button. Another browser window opens temporarily. In that window, DevOps Services sets the authentication cookie.
-- In another browser tab, go to https://hub.jazz.net and log in. Return to the Bluemix console and refresh the page. Click ADD GIT again.
-- Change your browser settings to enable 3rd party cookies and click ADD GIT again.
-{: tsResolve} -->

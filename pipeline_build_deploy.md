@@ -89,5 +89,3 @@ To view the runtime log of a deployed application, click **View runtime log**.
 In addition to job logs, you can view unit test results, generated artifacts, and code changes for any build job.
 
 You can also run, cancel, or configure a stage from the Stage History page. Click **RUN** to run a stage or **CONFIGURE** to configure a stage. While a stage is running, you can cancel it by clicking the run number and then clicking **CANCEL**.
-
-

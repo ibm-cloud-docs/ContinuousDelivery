@@ -60,7 +60,7 @@ Additionally, pipeline jobs can run only the following commands as `sudo`:
 
 After a job runs, the container that was created for it is discarded. The results of a job run can persist, but the environment in which it ran does not.
 
-**Note:** Jobs can run for up to 60 minutes. When jobs exceed that limit, they fail. If a job is exceeding the limit, break it into multiple jobs. For example, if a job performs three tasks, you might break it into three jobs: one for each task.
+**Note**: Jobs can run for up to 60 minutes. When jobs exceed that limit, they fail. If a job is exceeding the limit, break it into multiple jobs. For example, if a job performs three tasks, you might break it into three jobs: one for each task.
 
 To learn how to add a job to a stage, see [Adding a job to a stage](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}.
 
@@ -70,12 +70,7 @@ Build jobs compile your project in preparation for deployment. They generate art
 
 Jobs that take input from build jobs must reference build artifacts in the same structure that they were created in. For example, if a build job archives build artifacts to an `output` directory, a deploy script would refer to the `output` directory rather than the project root directory to deploy the compiled project. You can specify the directory to archive by entering the directory name in the  **Build Archive Directory** field. Leaving the field blank archives the root directory.
 
-**Note:** If you use the **Simple** builder type, your code is not compiled or built; it is packaged and made available for future stages.
-
-When you deploy by using Cloud Foundry, Cloud Foundry includes the correct artifacts to allow your app to run. For more information, see  [Deploying applications by using the cf command](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps). The pipeline for a Cloud Foundry app contains a Deploy stage that runs a cf command.
-
-Cloud Foundtry tries to [detect the buildpack to use ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/buildpacks/detection.html). You can specify the [buildpack](/docs/cfapps/byob.html#using-community-buildpacks) to use in the manifest file in the root folder of your app. Buildpacks typically examine user-provided artifacts to determine what dependencies to download and how to configure applications to communicate with bound services. For more information about manifest files, see [Application manifest](/docs/manageapps/depapps.html#appmanifest). 
-
+**Note**: If you select the **Simple** builder type for a build job, you skip the build process. In that case, your code is not compiled, but is sent to the deployment stage as is. To both build and deploy, select a builder type other than **Simple**.
 
 #### Environment properties for build scripts
 You can include environment properties within a build job's build shell commands. The properties provide access to information about the job's execution environment. For more information, see [Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
@@ -118,7 +113,7 @@ To use the `cf push` command arguments, open the configuration settings for a de
 A simple pipeline might contain three stages:
 
 1. A Build stage that compiles and runs build processes on an app.
-2. A Test stage that deploys an instance of the app and then runs tests on it.
+2. A Test stage that deploys a instance of the app and then runs tests on it.
 3. A Prod stage that deploys a production instance of the tested app.
 
 This pipeline is shown in the following conceptual diagram:
@@ -127,4 +122,4 @@ This pipeline is shown in the following conceptual diagram:
 
 *A conceptual model of a three-stage pipeline*
 
-Stages take their input from repositories and build jobs, and jobs within a stage run sequentially and independently of each other. In the example pipeline, the stages run sequentially, even though the Test and Prod stages both take the Build stage's output as their input.
+Stages take their input from repositories and build jobs, and jobs within a stage run sequentially and independently of each other. In the example pipeline, the stages will run sequentially, even though the Test and Prod stages both take the Build stage's output as their input.

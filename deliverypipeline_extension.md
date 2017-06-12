@@ -1,8 +1,8 @@
-{{site.data.keyword.staticanalyzershort}} ---
+---
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-11"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -18,10 +18,10 @@ lastupdated: "2017-5-11"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Extending the Delivery Pipeline
+# Extending the {{site.data.keyword.deliverypipeline}}
 {: #deliverypipeline_extending}
 
-You can extend the {{site.data.keyword.deliverypipeline}} capabilities of {{site.data.keyword.contdelivery_full}} by configuring your jobs to use supported services. For example, test jobs can run static code scans and build jobs can globalize strings.
+You can extend the {{site.data.keyword.deliverypipeline}} capabilities by configuring your jobs to use supported services. For example, test jobs can run static code scans and build jobs can globalize strings.
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -32,9 +32,9 @@ The following tasks describe how to integrate selected tools with a Delivery Pip
 
 {: #deliverypipeline_scan}
 
-Want to find security issues in your code before you deploy it? When you use the {{site.data.keyword.staticanalyzerfull}} as part of your pipeline, you can run automated checks against your Java™ app's static `.war`, `.ear`, `.jar`, or `.class` build binary files.
+Want to find security issues in your code before you deploy it? When you use the IBM® Static Analyzer for Bluemix™ as part of your pipeline, you can run automated checks against your Java™ app's static `.war`, `.ear`, `.jar`, or `.class` build binary files.
 
-A pipeline that uses the {{site.data.keyword.staticanalyzershort}} service typically includes these stages:
+A pipeline that uses the Static Analyzer service typically includes these stages:
 
 + A build stage to build the source files
 + A processing stage that includes these jobs:
@@ -71,13 +71,13 @@ Before you begin, [review the Terms of Use for the service ![External link icon]
 
   e. Select or clear the **Set up service and space for me** check box as needed.
 
-    * If you want the pipeline to check your {{site.data.keyword.Bluemix_short}}  space for the service and an app that binds the service to the container, select the check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
+    * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select the check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your {{site.data.keyword.Bluemix_short}}  space already, or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, leave the check box cleared.
+    * If you configured the service and bound app in your Bluemix space already, or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, leave the check box cleared.
 
-  f. In the **Minutes to wait for analysis to complete** field, type a value of 0 - 59 minutes. The default value is 5 minutes. A URL to the {{site.data.keyword.staticanalyzershort}}  dashboard is in the console logs at the end of the job.
+  f. In the **Minutes to wait for analysis to complete** field, type a value of 0 - 59 minutes. The default value is 5 minutes. A URL to the Static Analyzer dashboard is in the console logs at the end of the job.
 
-     If the {{site.data.keyword.staticanalyzershort}} scan is not complete before the time that you specified, the job fails. However, the scan analysis continues to run and you can view it on the {{site.data.keyword.staticanalyzershort}} dashboard. After the {{site.data.keyword.staticanalyzershort}} scan is complete, if you rerun the job, the scan request is not resubmitted and the pipeline job can be completed. Alternatively, you can configure the pipeline not to be blocked on a successful scan result. For instructions, see the next step.
+     If the Static Analyzer scan is not complete before the time that you specified, the job fails. However, the scan analysis continues to run and you can view it on the Static Analyzer dashboard. After the Static Analyzer scan is complete, if you rerun the job, the scan request is not resubmitted and the pipeline job can be completed. Alternatively, you can configure the pipeline not to be blocked on a successful scan result. For instructions, see the next step.
 
   g. Select or clear the **Stop running this stage if this job fails** check box depending on what you want to happen if this job fails or times out. Jobs can fail when vulnerabilities are high.
 
@@ -106,7 +106,7 @@ Console output examples:
 **Pending scan**
 ![Example pending scan](images/analyzer_pending.png)
 
-For more information about using the {{site.data.keyword.staticanalyzershort}}  service, see the [{{site.data.keyword.staticanalyzershort}}  service docs](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
+For more information about using the Static Analyzer service, see the [Static Analyzer service docs](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 
@@ -177,7 +177,7 @@ For more information about using the Globalization Pipeline service from the Blu
 ## Creating Slack notifications for builds in the pipeline
 {: #deliverypipeline_slack}
 
-You can send notifications about {{site.data.keyword.containerlong}}, {{site.data.keyword.staticanalyzershort}}, and {{site.data.keyword.globalizationfull}} build results from your Delivery Pipeline to your Slack channels.
+You can send notifications about IBM Container Service, IBM Security Static Analyzer, and IBM Globalization build results from your Delivery Pipeline to your Slack channels.
 
 Before you begin, create or copy a Slack WebHook URL:
 
@@ -322,11 +322,6 @@ To create HipChat notifications:
 5. Click **Save**.
 
 6. Repeat these steps to send HipChat notifications for other stages that include IBM Container Service, IBM Security Static Analyzer, and IBM Globalization jobs.
-
-## Using Active Deploy for zero downtime deployment in the pipeline
-{: #deliverypipeline_activedeploy}
-
-You can automate the continuous deployment of your apps or container groups by using the IBM® Active Deploy service in the Delivery Pipeline. For more information about getting started, see the [Active Deploy documentation](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}.
 
 ## Building and deploying container images with the pipeline
 {: #deliverypipeline_containers}
