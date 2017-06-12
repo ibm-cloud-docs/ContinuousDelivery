@@ -178,7 +178,7 @@ With the manifest file, you can specify:
 <ol>
 <li>Open your toolchain in a browser and select an existing pipeline or create a new pipeline.</li>
 <li>Configure your pipeline with build and deployment jobs.</li>
-<li>In your browser, add <code>/yaml</code> to the project pipeline URL and press Enter. For example, <code>https://console.bluemix.net/devops/pipelines/pipeline_id/yaml</code>.</li>
+<li>In your browser, add <code>/yaml</code> to the project pipeline URL and press Enter. For example, <code>https://console.bluemix.net/devops/pipelines/pipeline_id/yaml</code></li>
 <li>Save the resulting <code>pipeline.yml</code> file.</li>
 <li>In the root directory of your Git repo, create a <code>.bluemix</code> directory.</li>
 <li>Upload the <code>pipeline.yml</code> file to the <code>.bluemix</code> repo.</li>
