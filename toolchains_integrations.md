@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-29"
+lastupdated: "2017-6-7"
 
 ---
 
@@ -487,46 +487,11 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
 1. Copy the generated toolchain webhook.
 1. In your Jenkins server, complete these steps:
 
- a. Install the [Cloud Foundry CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html){: new_window}.
+ a. [Install the IBM Cloud DevOps plug-in ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Installingtheplugin){: new_window}.
 
- b. Install the IBM Cloud DevOps Cloud Foundry plug-in by entering one of these commands:
+ b. [Configure Jenkins to notify toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Notifyingtoolchains){: new_window}.
 
-  * Mac OS: `cf install-plugin https://icd.ng.bluemix.net/icd_darwin_amd64`
-
-  * Linux or Docker: `cf install-plugin https://icd.ng.bluemix.net/icd_linux_amd64`
-
- c. Install and configure the IBM Cloud DevOps Jenkins plug-in for DevOps Insights and Notifications. For more information, see [Installing and configuring the plug-in](/docs/services/DevOpsInsights/insights_risk.html#integrate_jenkins){: new_window}.
-
- d. In each job for which you want to send notifications to your toolchain, complete these steps:
-
-  * Select the **This project is parameterized** check box.
-
-  * Add the `IBM_CLOUD_DEVOPS_WEBHOOK_URL` string parameter.
-
-  * Paste the generated toolchain webhook.
- ![Webhook URL](images/jenkins_webhook_url.png)
-
-  * Add a post-build action for Notify OTC and select the **Job Completed** check box.
- ![Post-build action](images/jenkins_postbuild_action.png)  
-
- e. In your deploy jobs, complete these steps:
-
-  * Add the `IBM_CLOUD_DEVOPS_WEBHOOK_URL`, `CF_API`, `CF_ORG`, `CF_SPACE`, and `CF_APP` string parameters. These examples show how to add each of the string parameters.
- ![Webhook URL string parameter](images/jenkins_set_webhook_url.png)
- ![CFI API string parameter](images/jenkins_set_cfapi.png)
- ![CFI ORG string parameter](images/jenkins_set_cforg.png)
- ![CFI SPACE string parameter](images/jenkins_set_cfspace.png)
- ![CFI APP string parameter](images/jenkins_set_cfapp.png)
-
-  * Configure your bindings for the Cloud Foundry CLI by using the `CF_CREDS_USR` username variable and the `CF_CREDS_PSW` password variable.
- ![Cloud Foundry CLI bindings](images/jenkins_config_bindings.png)  
-
-  * In the **Build** field, enter these commands to log in and use the IBM Cloud DevOps Cloud Foundry plug-in to send the application deployable mappings, with Git commit traceability, to your toolchain:
- ![Build commands](images/jenkins_build_commands.png)    
-
-  * In the **Build** field, enter the `cf icd --create-connection $IBM_CLOUD_DEVOPS_WEBHOOK_URL $CF_APP` command to send the application deployable mappings to the toolchain.    
-
- f. Save your changes and return to the Configure the Integration page for the Jenkins tool integration.
+ c. Return to the Configure the Integration page for the Jenkins tool integration.
 
 1. Click **Create Integration**.
 1. From your toolchain, click **Jenkins** to view the Jenkins server.  
