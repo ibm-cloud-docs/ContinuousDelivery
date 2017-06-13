@@ -3,7 +3,7 @@
 copyright:
   years: 2017
 
-lastupdated: "2017-4-5"
+lastupdated: "2017-6-5"
 
 ---
 <!-- Copyright info at top of file: REQUIRED
@@ -43,7 +43,17 @@ Como o [Delivery Pipeline ![Ícone de link externo](../../icons/launch-glyph.svg
 
 [Criar e usar sua primeira cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}. Saiba como criar uma cadeia de ferramentas aberta por meio de um modelo e usá-la para entregar continuamente um app "Hello World".
 
+[Incluir uma cadeia de ferramentas em um app ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?=task1){:new_window}. Saiba como incluir uma cadeia de ferramentas aberta em um app e usá-la para entregar continuamente o app.
+
 [Criar e usar uma cadeia de ferramentas de microsserviços ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}. Saiba como criar uma cadeia de ferramentas por meio de um modelo com três microsserviços e usá-la para entregar continuamente um app "Hello World".
+
+[Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}. Saiba como configurar uma cadeia de ferramentas aberta que desenvolve e entrega continuamente um app de microsserviços.
+
+[Criar uma cadeia de ferramentas que usa o {{site.data.keyword.gitrepos}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}. Crie uma cadeia de ferramentas aberta de um modelo que inclui um app Cloud Foundry e usa {{site.data.keyword.gitrepos}}. Em seguida, use a cadeia de ferramentas para entregar continuamente o app.
+
+[Criar um pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}. Saiba como iniciar com um pipeline e criar uma cadeia de ferramentas aberta que inclui um repositório GitHub e o pipeline.
+
+Para mais tutoriais, veja o [Laboratório de aprendizado ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/category/courses){:new_window}.
 
 ## Cursos de entrega contínua
 {: #gm_cd_courses}

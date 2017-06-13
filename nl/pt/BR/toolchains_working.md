@@ -26,9 +26,9 @@ você criar uma cadeia de ferramentas, certifique-se de estar trabalhando na org
 ##Criando uma cadeia de ferramentas com base em um modelo   
 {: #creating_a_toolchain_from_a_template}
 
-É possível usar um modelo como um ponto de início para [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/devops/create){: new_window} que inclua um conjunto específico de integrações de ferramentas. Saiba mais sobre como usar os modelos no [IBM Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/category/tools){:new_window}.
+É possível usar um modelo como um ponto de início para [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/create){: new_window} que inclua um conjunto específico de integrações de ferramentas. Saiba mais sobre como usar os modelos no [IBM Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/category/tools){:new_window}.
 
-1. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, efetue login no [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://console.ng.bluemix.net){:new_window}.
+1. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, efetue login no [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://console.bluemix.net){:new_window}.
 1. Se você usar o {{site.data.keyword.Bluemix_notm}} Dedicated, efetue login no ambiente Dedicated no {{site.data.keyword.Bluemix_notm}}.
 1. No menu da barra de menus do {{site.data.keyword.Bluemix_notm}}, clique em **Serviços** e, em seguida, clique em **DevOps**.
 1. No painel DevOps, na página **Cadeias de ferramentas**, clique em **Criar uma cadeia de ferramentas**.
@@ -44,8 +44,7 @@ uma cadeia de ferramentas, o diagrama mostrará cada integração de ferramenta 
 ![Diagrama da cadeia de ferramentas](images/toolchain_diagram.png)
 
 1. Revise as informações padrão para as configurações da cadeia de ferramentas. O nome da cadeia de ferramentas as identifica em
-{{site.data.keyword.Bluemix_notm}}. Se você desejar usar um nome diferente, mude
-o nome da cadeia de ferramentas.  
+{{site.data.keyword.Bluemix_notm}}. Se você desejar usar um nome diferente, mude o nome da cadeia de ferramentas.  
 1. Na seção Integrações de ferramentas, selecione cada integração de ferramenta que deseja configurar para sua cadeia de ferramentas. Algumas integrações de ferramentas não requerem configuração. Para obter informações sobre como configurar as integrações de ferramentas, consulte
 [Configurando
 integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.

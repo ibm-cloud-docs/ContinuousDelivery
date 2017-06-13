@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-19"
 
 ---
 
@@ -32,14 +32,41 @@ suas cadeias de ferramentas.
 um modelo de cadeia de ferramentas", clique em **Visualizar suas cadeias de
 ferramentas**. Para obter mais informações sobre como trabalhar com cadeias de ferramentas, veja [Usando cadeias de ferramentas](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
 
-**Dica**: os pipelines são gerenciados pelas cadeias de ferramentas. É possível incluir um pipeline em uma cadeia de ferramentas existente. Se você criar um pipeline e não tiver cadeias de ferramentas existentes, uma cadeia de ferramentas com um nome padrão será criada para você. Com a cadeia de ferramentas, é possível expandir os recursos de seu pipeline pela integração com outras ferramentas e serviços.
+**Dica**: os pipelines são gerenciados pelas cadeias de ferramentas. É possível incluir um pipeline em uma cadeia de ferramentas existente. Se você criar um pipeline e não tiver cadeias de ferramentas existentes, uma cadeia de ferramentas com um nome padrão será criada. Com a cadeia de ferramentas, é possível expandir os recursos de seu pipeline pela integração com outras ferramentas e serviços.
+
+##Visão geral do {{site.data.keyword.contdelivery_short}}
+{: #cd_overview}
+
+Com o {{site.data.keyword.contdelivery_short}}, é possível construir, testar
+e entregar aplicativos usando práticas DevOps e ferramentas líderes de mercado.
+{:shortdesc}
+
+O serviço de {{site.data.keyword.contdelivery_short}} suporta seus fluxos de trabalho DevOps:
+
+ * É possível criar [cadeias de ferramentas](/docs/services/ContinuousDelivery/toolchains_about.html){: new_window} abertas DevOps integradas para permitir integrações de ferramentas que suportem suas tarefas de desenvolvimento, implementação e operações.
+
+  Uma cadeia de ferramentas é um conjunto integrado de ferramentas que podem ser usadas para desenvolver, construir, implementar, testar e gerenciar aplicativos de forma colaborativa e tornar as operações repetíveis e mais fáceis de gerenciar. As cadeias de ferramentas podem incluir ferramentas de software livre, serviços do {{site.data.keyword.Bluemix_notm}}, como [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window} e ferramentas de terceiros, como GitHub, PagerDuty e Slack. 
+
+ * Entregue continuamente usando pipelines [pipelines](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window} automatizados.
+
+  Automatize construções, testes de unidade, implementações etc. Construa, teste e implemente repetidamente, com mínima intervenção humana. Esteja pronto para liberar para a produção a qualquer momento.
+
+ * Edite e envie por push seu código de qualquer lugar usando o [IDE baseado na web](/docs/services/ContinuousDelivery/web_ide.html){: new_window}.
+
+  Crie, edite, execute e depure, bem como conclua as tarefas de controle de fonte
+no GitHub. Mova sem problemas da edição do seu código para a implementação dele
+em produção. 
+  
+ * Colabore com sua equipe e gerencie seu código-fonte com um [repositório Git (repos) e rastreador de problemas](/docs/services/ContinuousDelivery/git_working.html#git_working){: new_window} que é hospedado pela IBM e construído no GitLab Community Edition.
+
+  Gerencie repositórios Git por meio de controles de acesso de baixa granularidade que mantêm o código seguro. Revise o código e aprimore a colaboração por meio de solicitações de mesclagem. Rastreie problemas e compartilhe ideias por meio do rastreador de problemas. Documente projetos no sistema wiki.
 
 ##Iniciando com um pipeline
 {: #starting_with_a_pipeline}
 
 Os pipelines automatizam construções, implementações e muito mais. Para iniciar com um pipeline automatizado, selecione um modelo e forneça o local de seu repositório GitHub (repo).
 
-Para [criar um pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){:new_window} que esteja configurado para implementar um aplicativo Cloud Foundry, siga estas etapas:
+Para [criar um pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/pipelines/dashboard/create){:new_window} que esteja configurado para implementar um aplicativo Cloud Foundry, siga estas etapas:
 
 1. Clique em **Cloud Foundry**.
 1. Se você desejar usar um nome diferente para o pipeline, mude o nome padrão. O
@@ -78,7 +105,7 @@ selecione-o na lista de repositórios disponíveis.
 1. Clique em **Criar**. O pipeline é criado, configurado e exibido na página Visão geral da cadeia de ferramentas.
  ![Cartão de pipeline](images/cd_pipeline.png)
 
-Para criar um [pipeline vazio ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} sem nenhum estágio pré-configurado:
+Para criar um [pipeline vazio ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} sem nenhum estágio pré-configurado:
 
 1. Clique em **Customizado**.
 1. Se você desejar usar um nome diferente para o pipeline, mude o nome padrão. O
@@ -91,7 +118,7 @@ pipelines são gerenciados pelas cadeias de ferramentas. Com a cadeia de ferrame
 ##Iniciando a partir de um modelo de cadeia de ferramentas
 {: #starting_from_a_toolchain_template}
 
-Para criar e configurar uma cadeia de ferramentas de entrega contínua por meio de um [modelo ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/devops/create){: new_window}:
+Para criar e configurar uma cadeia de ferramentas de entrega contínua por meio de um [modelo ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/create){: new_window}:
 
 1. Na página **Criar uma cadeia de ferramentas**, clique em um
 modelo de cadeia de ferramentas.  

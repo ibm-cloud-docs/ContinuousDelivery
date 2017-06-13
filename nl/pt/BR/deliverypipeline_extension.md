@@ -394,11 +394,6 @@ os parâmetros a seguir são atendidos:
 que incluam tarefas do IBM Container Service, IBM Security Static Analyzer e IBM
 Globalization.
 
-## Usando o Active Deploy para implementação com tempo de inatividade zero no pipeline
-{: #deliverypipeline_activedeploy}
-
-É possível automatizar a implementação contínua dos apps ou grupos de contêiner usando o serviço IBM® Active Deploy no Delivery Pipeline. Para obter mais informações sobre introdução, veja a [documentação do Active Deploy](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}.
-
 ## Construindo e implementando imagens de contêiner com o pipeline
 {: #deliverypipeline_containers}
 

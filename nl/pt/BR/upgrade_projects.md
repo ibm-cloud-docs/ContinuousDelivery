@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-10"
+lastupdated: "2017-6-5"
 
 ---
 
@@ -16,6 +16,14 @@ O {{site.data.keyword.jazzhub}} está sendo desenvolvido para o {{site.data.keyw
 
 É possível fazer upgrade de seu projeto ou esperar que seja submetido a upgrade automaticamente. Para obter a melhor experiência, certifique-se de atender aos [pré-requisitos](#upgrade_prereqs) e fazer upgrade de seu projeto assim que possível para que possa controlar o nome da sua cadeia de ferramentas e a organização na qual ela foi criada.
 {: shortdesc}
+
+**Perguntas Mais Frequentes**
+
+- [Meu projeto JazzHub está associado à região do Reino Unido, mas minha cadeia de ferramentas estará na região sul dos EUA. Como isso funcionará?](#faq_region)
+- [O que acontecerá com meus itens de trabalho e painéis em Track &amp; Plan quando eu fizer upgrade?](#faq_tp)
+- [O que acontecerá com meu repositório de código quando eu fizer upgrade?](#faq_repo)
+- [O que acontecerá com minhas definições de construção no meu projeto quando eu fizer upgrade para uma cadeia de ferramentas?](#faq_build)
+- [Preciso criar uma organização para meu projeto que será submetido a upgrade para uma cadeia de ferramentas. Eu entendo que preciso incluir um cartão de crédito em minha conta antes que eu possa criar uma organização. Meu cartão de crédito será debitado?](#faq_charges)
 
 ## Cadeias de ferramentas
 {: #compare_toolchains}
@@ -57,6 +65,14 @@ Ao iniciar o upgrade, os estágios do pipeline em seu projeto serão bloqueados.
 
 Se seu projeto usar um repositório Git hospedado no JazzHub, depois de iniciar o upgrade, o repositório será bloqueado para garantir a integridade dos dados que são movidos para a cadeia de ferramentas. Se você reverter o upgrade excluindo a cadeia de ferramentas, o repo no JazzHub será desbloqueado.
 
+Para obter detalhes integrais sobre como cada tipo de repositório é tratado no processo de upgrade, veja a tabela a seguir.
+
+|Repositório de projetos |Tipo de projeto	|Repositório de cadeias de ferramentas |
+|:----------|:------------------------------|:------------------|
+|github.com 		|Privado ou público 		|O mesmo repositório github.com com o {{site.data.keyword.Bluemix_notm}} Public.	|
+|hub.jazz.net/git		|Privado ou público 		|Um novo repositório no {{site.data.keyword.gitrepos}} com o {{site.data.keyword.Bluemix_notm}} Public.	|
+{: caption="Tabela 1. Repositórios de projeto mapeados para repositórios de cadeia de ferramentas" caption-side="top"}
+
 ## Iniciando o Processo de Upgrade
 {: #start_upgrade}
 
@@ -71,13 +87,7 @@ Para fazer upgrade de seu projeto para uma cadeia de ferramentas, siga estas eta
 
    Para obter uma visão geral do processo de upgrade, leia a descrição nessa página. A cadeia de ferramentas incluirá um novo pipeline que contém os mesmos estágios e tarefas que o pipeline do projeto. Além disso, a cadeia de ferramentas conterá um ponteiro para o Eclipse Orion {{site.data.keyword.webide}}, que é executado no {{site.data.keyword.contdelivery_short}}.
 
-   Neste exemplo, como o projeto usa um repositório público no github.com, a cadeia de ferramentas será conectada ao mesmo repositório GitHub. Se seu projeto usar um repositório Git hospedado no JazzHub, o conteúdo desse repositório será clonado em um novo repositório no {{site.data.keyword.gitrepos}}, que faz parte do {{site.data.keyword.contdelivery_short}}. Para obter detalhes completos sobre como cada tipo de repositório é tratado, consulte a tabela a seguir.
-
-|Repositório de projetos |Tipo de projeto	|Repositório de cadeias de ferramentas |
-|:----------|:------------------------------|:------------------|
-|github.com 		|Privado ou público 		|O mesmo repositório github.com com o {{site.data.keyword.Bluemix_notm}} Public.	|
-|hub.jazz.net/git		|Privado ou público 		|Um novo repositório no {{site.data.keyword.gitrepos}} com o {{site.data.keyword.Bluemix_notm}} Public.	|
-{: caption="Tabela 1. Repositórios de projeto mapeados para repositórios de cadeia de ferramentas" caption-side="top"}
+   Neste exemplo, como o projeto usa um repositório público no github.com, a cadeia de ferramentas será conectada ao mesmo repositório GitHub. Se seu projeto usar um repositório Git hospedado no JazzHub, o conteúdo desse repositório será clonado em um novo repositório no {{site.data.keyword.gitrepos}}, que faz parte do {{site.data.keyword.contdelivery_short}}.
 
 2. Para customizar a cadeia de ferramentas, é possível configurar algumas definições:
 
@@ -171,3 +181,54 @@ Quando você retornar ao seu projeto, a mensagem de upgrade será exibida novame
 {: #upgrade_troubleshoot}
 
 Se você tiver perguntas ou problemas, acesse o [fórum de suporte](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services). No post do fórum, inclua as URLs em seu projeto {{site.data.keyword.jazzhub_short}} e na cadeia de ferramentas do {{site.data.keyword.contdelivery_short}} e identifique seu post com a tag `devops-services`.
+   
+## Perguntas Mais Freqüentes
+{: #upgrade_faq}
+
+### Meu projeto JazzHub está associado à região do Reino Unido, mas minha cadeia de ferramentas estará na região sul dos EUA. Como isso funcionará?
+{: #faq_region}
+
+Os projetos no hub.jazz.net e as cadeias de ferramentas são ambos hospedados na região sul dos EUA. Se seu projeto foi configurado para implementar apps em uma região diferente, como a região do Reino Unido, ele ainda implementará apps nessa região após o upgrade para uma cadeia de ferramentas. Portanto, nada está realmente mudando com relação a qual lugar os dados são hospedados. As cadeias de ferramentas estarão disponíveis em mais regiões no futuro.
+
+### O que acontecerá com meus itens de trabalho e painéis em Track &amp; Plan quando eu fizer upgrade?
+{: #faq_tp}
+
+O serviço {{site.data.keyword.contdelivery_short}} fornece recursos de rastreamento de problemas por meio do {{site.data.keyword.gitrepos}}, que é hospedado pela IBM e baseado no GitLab Community Edition. O {{site.data.keyword.contdelivery_short}} também suporta integrações com outras ferramentas de planejamento e rastreamento de problemas, como GitHub Issues e JIRA.
+
+Durante o processo de upgrade, é possível escolher migrar seus itens de trabalho do Track &amp; Plan para o Git Issues. O GitHub Issues e o {{site.data.keyword.gitrepos}} fornecem placas kanban e rastreamento de problemas para planejamento. Para saber mais sobre Placas de problemas, que é o recurso kanban no Git Repos and Issue Tracking, veja [Placa de problema ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window}.
+
+Para clientes que requerem a mesma função que o JazzHub Track &amp; Plan descontinuado, um novo serviço IBM Track and Plan on Cloud está disponível para compra separadamente em países selecionados em uma base por usuário por mês. Com esse serviço de nuvem, você obtém a função integral, equivalente a licenças do contribuidor do Rational Team Concert&trade;, em uma assinatura de nuvem de locatário único.
+
+Esse novo serviço IBM Track and Plan on Cloud fornece muito mais capacidade do que o JazzHub Track &amp; Plan descontinuado, suportando customização do processo, hierarquias do projeto, SAFe&reg; e muitos outros métodos ágeis e híbridos, além de escalabilidade para crescer além um único projeto. Ele é baseado na versão mais recente do Rational Team Concert 6.0.3 e estará na versão 6.0.4 nos próximos 60 dias, enquanto o JazzHub Track &amp; Plan era baseado no Rational Team Concert 5.x. Uma migração de dados é possível para o IBM Track and Plan on Cloud por meio de serviços adicionais. É possível entrar em contato com [Tom Hollowell ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](mailto:trhollow@us.ibm.com){:new_window}, Connected Products SaaS Sales Leader, para obter mais informações.
+
+Para obter informações sobre o IBM Track and Plan on Cloud ou para comprar on-line, visite [IBM Marketplace ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}.
+
+Para comprar também o Build Automation and Source Code Management, o [Rational Team Concert on Cloud ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window} é uma opção.  
+
+### O que acontecerá com meu repositório de código quando eu fizer upgrade?
+{: #faq_repo}
+
+Após o upgrade, seu novo serviço Git será comparável ao que você tinha antes. Se você usava github.com com seu projeto JazzHub, sua cadeia de ferramentas será conectada ao mesmo repositório GitHub. Se o seu projeto JazzHub usava o IBM Hosted Git, o conteúdo desse repositório será clonado em um novo repositório no {{site.data.keyword.gitrepos}}, que faz parte do {{site.data.keyword.contdelivery_short}} e hospedado pela IBM.
+
+Para obter detalhes integrais sobre como cada tipo de repositório é tratado no processo de upgrade, veja a tabela a seguir.
+
+|Repositório de projetos |Tipo de projeto	|Repositório de cadeias de ferramentas |
+|:----------|:------------------------------|:------------------|
+|github.com 		|Privado ou público 		|O mesmo repositório github.com com o {{site.data.keyword.Bluemix_notm}} Public.	|
+|hub.jazz.net/git		|Privado ou público 		|Um novo repositório privado ou público no {{site.data.keyword.gitrepos}} com o {{site.data.keyword.Bluemix_notm}} Public.	|
+{: caption="Tabela 1. Repositórios de projeto mapeados para repositórios de cadeia de ferramentas" caption-side="top"}
+
+
+### O que acontecerá com minhas definições de construção no meu projeto quando eu fizer upgrade para uma cadeia de ferramentas.
+{: #faq_build}
+
+Se você está construindo seu código-fonte usando o Jazz em vez do Delivery Pipeline, deve-se migrar manualmente suas definições de construção para o Delivery Pipeline em sua cadeia de ferramentas. 
+
+Se você está usando o Jazz SCM como um repositório de origem e usando o Delivery Pipeline para construir seu código, a origem no Jazz SCM será movida automaticamente para um repositório Git. Sua configuração do Delivery Pipeline permanecerá igual, exceto que consumirá a origem do repositório Git em vez da origem do Jazz SCM.
+
+### Preciso criar uma organização para meu projeto que será submetido a upgrade para uma cadeia de ferramentas. Eu entendo que preciso incluir um cartão de crédito em minha conta antes que eu possa criar uma organização. Meu cartão de crédito será debitado?
+{: #faq_charges}
+
+Como um [cliente de Pagamento por uso ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}, se usar qualquer tempo de execução, serviço ou componente além das dotações livres que estão listadas para ele no catálogo do Bluemix, você será cobrado. Para uma estimativa de uso, veja a [folha de precificação ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}. Para precificação atual para o Continuous Delivery, veja o [catálogo do Bluemix ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}.
+
+Se você for um funcionário IBM, projetos IBM internos poderão ser faturados para departamentos em vez de um cartão de crédito pessoal. Se você precisar usar recursos além das dotações grátis para funcionários IBM, crie um chamado de suporte.

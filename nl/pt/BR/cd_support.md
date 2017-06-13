@@ -41,7 +41,7 @@ Se você tiver um problema mais sério ou encontrar problemas com o serviço {{s
 1. Na barra de menus, clique em **Suporte** e, em seguida, clique em **Incluir chamado**.
 1. Conclua o formulário para indicar o que você precisa do suporte técnico.
 
-Para obter mais informações sobre como abrir um chamado de suporte IBM {{site.data.keyword.Bluemix_notm}} ou sobre os níveis de suporte e severidades de chamado, veja [Entrando em contato com o suporte](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+Para obter mais informações sobre como abrir um chamado de suporte IBM {{site.data.keyword.Bluemix_notm}} ou sobre os níveis de suporte e severidades de chamado, veja [Entrando em contato com o suporte](https://console.bluemix.net/docs/support/index.html#contacting-support).
 
 
 ## Suporte para o Bluemix
