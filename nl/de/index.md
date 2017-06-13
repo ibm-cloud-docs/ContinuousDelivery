@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-19"
 
 ---
 
@@ -24,12 +24,36 @@ Nachdem Sie eine Instanz von {{site.data.keyword.contdelivery_short}} erstellt h
 
 **Tipp**: Pipelines werden von Toolchains verwaltet. Sie können eine Pipeline zu einer vorhandenen Toolchain hinzufügen. Wenn Sie eine Pipeline erstellen, nicht aber über bereits vorhandene Toolchains verfügen, so wird eine Toolchain mit einem Standardnamen für Sie erstellt. Mit der Toolchain können Sie die Funktionalität Ihrer Pipeline durch Integrieren mit anderen Tools und Services erweitern.
 
+##Übersicht über {{site.data.keyword.contdelivery_short}}
+{: #cd_overview}
+
+Mit {{site.data.keyword.contdelivery_short}} können Anwendungen unter Verwendung bewährter DevOps-Verfahren und branchenführender Tools erstellt, getestet und bereitgestellt werden.
+{:shortdesc}
+
+Der {{site.data.keyword.contdelivery_short}}-Service unterstützt Ihre DevOps-Workflows:
+
+ * Sie können integrierte offene DevOps-[Toolchains](/docs/services/ContinuousDelivery/toolchains_about.html){: new_window} erstellen, um Toolintegrationen zu aktivieren, die Ihre Entwicklungs-, Bereitstellungs- und Betriebstasks unterstützen.
+
+  Eine Toolchain ist eine integrierte Gruppe von Tools für das gemeinsame Entwickeln, Erstellen, Bereitstellen, Testen und Verwalten von Anwendungen. Diese Tools haben darüber hinaus die Aufgabe, die Wiederholbarkeit von Operationen sicherzustellen und die Verwaltung von Operationen zu vereinfachen. Toolchains können Open-Source-Tools, {{site.data.keyword.Bluemix_notm}}-Services wie [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window} und Tools von anderen Anbietern wie GitHub, PagerDuty und Slack enthalten. 
+
+ * Die Verwendung automatisierter [Pipelines](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window} ermöglicht die fortlaufende Bereitstellung.
+
+  Sie können beispielsweise Builds, Komponententests und Bereitstellungen automatisieren. Builds, Tests und Bereitstellungen sind reproduzierbar und erfordern nur geringe manuelle Eingriffen. Seien Sie jederzeit bereit für eine Produktionsfreigabe.
+
+ * Mithilfe der [webbasierten IDE](/docs/services/ContinuousDelivery/web_ide.html){: new_window} kann Code überall bearbeitet und mit Push-Operation übertragen werden.
+
+  In GitHub können Quellcodeverwaltungstasks erstellt, bearbeitet, ausgeführt und korrigiert werden. Sie können nahtlos von der Codebearbeitung zur Bereitstellung in der Produktion übergehen. 
+  
+ * Arbeiten Sie mit Ihrem Team zusammen und verwalten Sie Ihren Quellcode mit einem [Git-Repository- und Problemtracker](/docs/services/ContinuousDelivery/git_working.html#git_working){: new_window}, der von IBM gehostet wird und auf GitLab Community Edition basiert.
+
+  Verwalten Sie Git-Repositorys mittels differenzierter Zugriffssteuerungsmechanismen, durch die der Code geschützt bleibt. Überprüfen Sie den Code und verbessern Sie die Zusammenarbeit durch Zusammenführungsanforderungen (Merge). Verfolgen Sie Probleme und teilen Sie Ihre Ideen mittels Problemtracker mit anderen. Dokumentieren Sie Projekte auf dem Wiki-System.
+
 ##Mit einer Pipeline beginnen
 {: #starting_with_a_pipeline}
 
 Mit Pipelines können beispielsweise Builds und Bereitstellungen automatisiert werden. Wählen Sie eine Vorlage aus und geben Sie die Position des GitHub-Repositorys an, um mit einer automatisierten Pipeline zu beginnen.
 
-Führen Sie zum [Erstellen einer Pipeline![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){:new_window}, die für die Bereitstellung einer Cloud Foundry-Anwendung konfiguriert ist, die folgenden Schritte aus:
+Führen Sie zum [Erstellen einer Pipeline![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/devops/pipelines/dashboard/create){:new_window}, die für die Bereitstellung einer Cloud Foundry-Anwendung konfiguriert ist, die folgenden Schritte aus:
 
 1. Klicken Sie auf **Cloud Foundry**.
 1. Wenn Sie einen anderen Namen für die Pipeline verwenden möchten, ändern Sie den Standardnamen. Der Name der Pipeline macht sie in {{site.data.keyword.Bluemix_notm}} identifizierbar.
@@ -57,7 +81,7 @@ Führen Sie zum [Erstellen einer Pipeline![Symbol für externen Link](../../icon
 1. Klicken Sie auf **Erstellen**. Die Pipeline wird erstellt, konfiguriert und auf der Übersichtsseite der Toolchain angezeigt.
  ![Karte für Pipeline](images/cd_pipeline.png)
 
-Führen Sie zum Erstellen einer [leeren Pipeline ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} ohne jegliche vorkonfigurierten Stages die folgenden Schritte aus:
+Führen Sie zum Erstellen einer [leeren Pipeline ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} ohne jegliche vorkonfigurierten Stages die folgenden Schritte aus:
 
 1. Klicken Sie auf **Angepasst**.
 1. Wenn Sie einen anderen Namen für die Pipeline verwenden möchten, ändern Sie den Standardnamen. Der Name der Pipeline macht sie in {{site.data.keyword.Bluemix_notm}} identifizierbar.
@@ -68,7 +92,7 @@ Führen Sie zum Erstellen einer [leeren Pipeline ![Symbol für externen Link](..
 ##Mit einer Toolchain-Vorlage beginnen
 {: #starting_from_a_toolchain_template}
 
-Gehen Sie zum Erstellen und Konfigurieren einer Continuous Delivery-Toolchain anhand einer [Vorlage ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/devops/create){: new_window} wie folgt vor:
+Gehen Sie zum Erstellen und Konfigurieren einer Continuous Delivery-Toolchain anhand einer [Vorlage ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/devops/create){: new_window} wie folgt vor:
 
 1. Klicken Sie auf der Seite **Toolchain erstellen** auf eine Toolchain-Vorlage.  
 1. Überprüfen Sie das Diagramm der Toolchain, die Sie gerade erstellen. In dem Diagramm wird jede Toolintegration in ihrer aktuellen Lebenszyklusphase in der Toolchain angezeigt.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-5-8"
+lastupdated: "2017-6-1"
 ---
 
 {:new_window: target="_blank"}
@@ -38,7 +38,7 @@ Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence r
 ### Eclipse Orion Web IDE
 1. Cliquez sur la liste **Référence** et développez **local**.
 
-2. En regard de la branche à modifier, cliquez sur l'icône de réservation <img  class="inline" src="./images/checkout.png" alt="Icône de réservation">.
+2. Cliquez sur l'icône de réservation <img  class="inline" src="./images/checkout.png" alt="Icône de réservation"> de la branche à modifier. 
 
 1. Vérifiez que la branche sélectionnée s'affiche dans la liste **Référence**.
 
@@ -67,7 +67,7 @@ Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence r
 
 1. Cliquez sur la liste **Référence** et développez **local**.
 
-2. En regard de la branche locale à supprimer, cliquez sur **Supprimer** <img class="inline"  src="./images/delete.png" alt="Icône de suppression">.
+2. Cliquez sur **Supprimer** <img class="inline"  src="./images/delete.png" alt="Icône Supprimer"> de la branche locale à supprimer. 
 
 ### Terminal Git
 1. Entrez `git branch -d <nom de branche>` et appuyez sur Entrée.
@@ -82,7 +82,7 @@ distante.
 
 ### Eclipse Orion Web IDE
 
-1. Dans la section Modification du répertoire de travail, dans la section Sortant, cliquez sur la flèche située en regard de **Insérer**.
+1. Dans la section Modifications du répertoire de travail, sous Sortant, cliquez sur la flèche située en regard de **Insérer**.
 2. Cliquez sur **Forcer l'insertion de branche**.
 3. Confirmez l'avertissement.
 
@@ -147,7 +147,7 @@ pour aider.
 
 1. Cliquez sur l'icône **bouton à bascule de représentation graphique** <img  class="inline" src="./images/graphicalhistoryicon.png" alt="Icône d'historique graphique">.
 
-  Une fois le bouton activé, l'historique de validation et toutes les modifications entrantes ou sortantes pour une branche active s'affichent en tant que graphique connecté. La
+  Une fois le bouton activé, l'historique de validation et toutes les modifications entrantes ou sortantes pour une branche active s'affichent en tant que graphique connecté.  La
 représentation visuelle montre toutes les validations et toutes les branches sur lesquelles elles ont été effectuées.
 
   <img class="screen-shot" src="./images/visualhistoryexample.png" alt="Historique visuel des validations">
@@ -165,14 +165,13 @@ représentation visuelle montre toutes les validations et toutes les branches su
 {: #compare_changes}
 
 ### Eclipse Orion Web IDE
-1. Affichez votre historique des validations et localisez la validation. Pour plus d'informations, voir [ Afficher l'historique de validation](#view_commit_history).
+1. Affichez votre historique des validations et localisez la validation. Pour plus d'informations, voir [Afficher l'historique de validation](#view_commit_history).
 
 2. Affichez les détails de la validation en cliquant dessus.
 
-3. En regard d'un fichier, cliquez sur **>** et examinez les modifications du fichier.
+3. Pour vérifier les modifications d'un fichier, cliquez sur **>**.
 
-  **Remarque :** si une validation a introduit une modification dans une ligne, la ligne d'origine est ombrée en rose et la nouvelle ligne est ombrée en vert.
-De même, les lignes ajoutées par une validation sont ombrées en vert et les lignes supprimées par une validation sont ombrées en rose. 
+  **Remarque :** si une validation a introduit une modification dans une ligne, la ligne d'origine est ombrée en rose et la nouvelle ligne est ombrée en vert.  De même, les lignes ajoutées par une validation sont ombrées en vert et les lignes supprimées par une validation sont ombrées en rose.
 
 ### Terminal Git
 1. Entrez `git log -p` et appuyez sur Entrée.
@@ -185,8 +184,7 @@ De même, les lignes ajoutées par une validation sont ombrées en vert et les l
 
 3. Passez en revue les modifications.
 
-  **Remarque :** si une validation a introduit un changement dans une ligne, le texte de la ligne d'origine apparaît en rouge et est précédé d'un signe moins (-). Le texte de la nouvelle ligne est affiché en vert et est précédé d'un signe plus (+). De même, le texte des lignes ajoutées par une validation est affiché en vert et est précédé d'un signe plus (+). 
-Le texte des lignes supprimées par une validation est affiché en rouge et est précédé d'un signe moins (-). 
+  **Remarque :** si une validation a introduit un changement dans une ligne, le texte de la ligne d'origine apparaît en rouge et est précédé d'un signe moins (-). Le texte de la nouvelle ligne est affiché en vert et est précédé d'un signe plus (+).  De même, le texte des lignes ajoutées par une validation est affiché en vert et est précédé d'un signe plus (+). Le texte des lignes supprimées par une validation est affiché en rouge et est précédé d'un signe moins (-).
 
 1. Pour arrêter l'affichage des entrées, appuyez sur Q.
 
@@ -197,7 +195,7 @@ Le texte des lignes supprimées par une validation est affiché en rouge et est 
 causer des erreurs de validation et d'autres problèmes aux autres contributeurs de votre projet. Assurez-vous de ce que vous faîtes avant de modifier une validation envoyée par commande push à un référentiel distant.
 
 ### Eclipse Orion Web IDE
-1. Cochez les cases correspondant aux éléments à ajouter à la validation. 
+1. Cochez les cases correspondant aux éléments à ajouter à la validation.
 
 1. Cochez la case **Modifier la validation précédente**.
 
@@ -219,7 +217,7 @@ causer des erreurs de validation et d'autres problèmes aux autres contributeurs
 {: #tag_commit}
 
 ### Eclipse Orion Web IDE
-1. Affichez votre historique des validations et localisez la validation. Pour plus d'informations, voir [ Afficher l'historique de validation](#view_commit_history).
+1. Affichez votre historique des validations et localisez la validation. Pour plus d'informations, voir [Afficher l'historique de validation](#view_commit_history).
 
 2. Affichez les détails de la validation en cliquant dessus.
 
@@ -256,13 +254,13 @@ Pour mettre à jour votre nom et votre adresse e-mail pour tous les référentie
 ##Annulation d'une validation
 {: #revert}
 
-Annuler les modifications introduites par une validation dans votre branche active. 
+Annuler les modifications introduites par une validation dans votre branche active.
 
 ### Eclipse Orion Web IDE
 
 1. Sous historique, sélectionnez une validation.
 
-2. Sur le côté droit de la page, au-dessus du récapitulatif de validation, cliquez sur l'icône Rétablir <img class="inline" src="./images/revert.png" alt="Icône Rétablir">.
+2. Cliquez sur l'icône Rétablir <img class="inline" src="./images/revert.png" alt="Icône Rétablir">.
 
 ### Terminal Git
 
@@ -334,13 +332,13 @@ tout fonctionne comme prévu.
 		=======
 		Texte dans la branche fusionnée.
 		>>>>>>> branche_fusionnée
-4. Ajoutez le contenu de l'index de chaque fichier que vous avez modifié, puis validez la fusion. 
+4. Ajoutez le contenu de l'index de chaque fichier que vous avez modifié, puis validez la fusion.
 
 ## Resynchronisation des branches
 {: #rebase_branches}
 
 ### Eclipse Orion Web IDE
-1. Sélectionnez les branches à resynchroniser. Vous allez resynchroniser le contenu de la branche source dans la branche de destination. 
+1. Sélectionnez les branches à resynchroniser. Vous allez resynchroniser le contenu de la branche source dans la branche de destination.
 
 2. Réservez la branche de destination. Pour plus d'informations, voir [ Utilisation d'une branche locale](#start_working_on_branch).
 

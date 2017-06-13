@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-19"
 
 ---
 
@@ -24,12 +24,36 @@ lastupdated: "2017-3-31"
 
 **提示**：管線是透過工具鏈所管理。您可以將管線新增至現有工具鏈。如果您建立管線，但沒有任何現有工具鏈，系統會為您建立具有預設名稱的工具鏈。使用工具鏈時，只要與其他工具及服務整合，即可擴充管線的功能。
 
+##{{site.data.keyword.contdelivery_short}} 概觀
+{: #cd_overview}
+
+使用 {{site.data.keyword.contdelivery_short}} 時，您可以使用 DevOps 作法及業界領先工具來建置、測試及提供應用程式。
+{:shortdesc}
+
+{{site.data.keyword.contdelivery_short}} 服務支援 DevOps 工作流程：
+
+ * 您可以建立整合式 DevOps 開放式[工具鏈](/docs/services/ContinuousDelivery/toolchains_about.html){: new_window}，來啟用支援開發、部署及操作作業的工具整合。
+
+  工具鏈是一組整合式工具，可用來協同開發、建置、部署、測試及管理應用程式，並且可以使作業能重複執行，也較容易管理。工具鏈可以包含開放程式碼工具、{{site.data.keyword.Bluemix_notm}} 服務（例如 [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window}）和協力廠商工具（例如 GitHub、PagerDuty 及 Slack）。 
+
+ * 使用自動化[管線](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window}進行持續交付。
+
+  自動進行建置、單元測試、部署及其他作業。以最少人為介入的可重複方式進行建置、測試及部署。隨時準備好投入正式作業。
+
+ * 使用 [Web 型 IDE](/docs/services/ContinuousDelivery/web_ide.html){: new_window}，從任何位置編輯及推送程式碼。
+
+  在 GitHub 中，建立、編輯、執行、除錯及完成來源控制作業。平順地從編輯程式碼，移至將程式碼部署至正式作業。 
+  
+ * 使用 IBM 所管理並以 GitLab Community Edition 為建置基礎的 [Git 儲存庫及問題追蹤器](/docs/services/ContinuousDelivery/git_working.html#git_working){: new_window}，來與團隊分工合作並且管理原始碼。
+
+  透過讓程式碼更為安全的精密存取控制，來管理 Git 儲存庫。透過合併要求，來檢閱程式碼並加強協同作業。透過問題追蹤器，來追蹤問題與共用構想。在 Wiki 系統上記載專案。
+
 ##開始使用管線
 {: #starting_with_a_pipeline}
 
 管線會自動進行建置、部署及其他作業。若要開始使用自動化管線，請選取範本，並提供 GitHub 儲存庫的位置。
 
-若要[建立管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){:new_window}，且配置成部署 Cloud Foundry 應用程式，請遵循下列步驟：
+若要[建立管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/devops/pipelines/dashboard/create){:new_window}，且配置成部署 Cloud Foundry 應用程式，請遵循下列步驟：
 
 1. 按一下 **Cloud Foundry**。
 1. 如果您要使用不同的管線名稱，請變更其預設名稱。在 {{site.data.keyword.Bluemix_notm}} 中，可透過管線名稱來識別管線。
@@ -57,7 +81,7 @@ lastupdated: "2017-3-31"
 1. 按一下**建立**。即會建立、配置管線，並顯示在工具鏈的「概觀」頁面上。
  ![管線卡片](images/cd_pipeline.png)
 
-若要建立沒有任何預先配置階段的[空管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window}，請執行下列動作：
+若要建立沒有任何預先配置階段的[空管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window}，請執行下列動作：
 
 1. 按一下**自訂**。
 1. 如果您要使用不同的管線名稱，請變更其預設名稱。在 {{site.data.keyword.Bluemix_notm}} 中，可透過管線名稱來識別管線。
@@ -68,7 +92,7 @@ lastupdated: "2017-3-31"
 ##從工具鏈範本開始
 {: #starting_from_a_toolchain_template}
 
-若要從[範本 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/devops/create){: new_window} 來建立及配置持續交付工具鏈，請執行下列動作：
+若要從[範本 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/devops/create){: new_window} 來建立及配置持續交付工具鏈，請執行下列動作：
 
 1. 在**建立工具鏈**頁面上，按一下工具鏈範本。  
 1. 檢閱即將建立之工具鏈的圖表。此圖會顯示每個工具整合在工具鏈中的生命週期階段。

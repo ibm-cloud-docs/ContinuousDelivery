@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-25"
+lastupdated: "2017-6-1"
 
 ---
 
@@ -27,7 +27,7 @@ Mais surtout, {{site.data.keyword.webide}} est basé sur le Web. Vous n'avez rie
 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="Icône des paramètres">.
 
 Si vous changez souvent certains paramètres au cours de l'édition, vous pouvez accéder à ces paramètres rapidement via l'icône **Paramètres de l'éditeur local**
-<img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icône Paramètres de l'éditeur local">. 
+<img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icône Paramètres de l'éditeur local">.
 
 ![Paramètres de l'éditeur local](images/webide_local_editor_settings_light.png)
 
@@ -65,7 +65,7 @@ La seconde section correspond à la sous-fenêtre de l'éditeur. L'éditeur four
  2. Dans le navigateur de fichiers, cliquez sur un fichier.
 
 ### Raccourcis-clavier
-La plupart des commandes de {{site.data.keyword.webide}} sont accessibles uniquement via des raccourcis-clavier.
+De nombreuses commandes de {{site.data.keyword.webide}} sont également accessibles via des raccourcis-clavier.
 
 Pour afficher la liste des raccourcis-clavier dans l'éditeur, appuyez sur Alt+Maj+?. Si vous utilisez un système Mac OS, appuyez sur Ctrl+Maj+?.
 
@@ -73,7 +73,7 @@ Pour afficher la liste des raccourcis-clavier dans l'éditeur, appuyez sur Alt+M
 {: #sourcecontrol}
 
 {{site.data.keyword.webide}} est intégré aux outils de gestion du code source. Pour utiliser votre référentiel Git, cliquez sur l'icône **Référentiel Git**
-<img class="inline" src="images/webide_git_icon_light_small.png"  alt="Icone Référentiel Git">. 
+<img class="inline" src="images/webide_git_icon_light_small.png"  alt="Icône Référentiel Git">.
 
  **Astuce** : si vous utilisez l'interface {{site.data.keyword.webide}} avec des chaînes d'outils ouvertes, votre espace de travail est prérempli avec vos
 référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git Repos and Issue Tracking. Les référentiels associés à votre chaîne d'outils en cours sont mis en évidence.
@@ -83,19 +83,33 @@ référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git Repos and Issue Tr
 {: #deploy}
 
 1. Pour déployer votre application, depuis la barre d'exécution, sélectionnez ou créez une configuration de lancement.
-1. Cliquez sur l'icône de déploiement <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="Icône de déploiement">. Une instance de votre application est déployée à l'aide du contenu actuel de votre espace de travail et de l'environnement défini dans votre configuration de lancement. 
+   ![ Barre d'exécution](images/webide_runbar_light.png)   
+1. Cliquez sur l'icône de déploiement <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="Icône de déploiement">. Une instance de votre application est déployée à l'aide du contenu actuel de votre espace de travail et de l'environnement défini dans votre configuration de lancement.
 2. Une fois votre application déployée, vous pouvez utiliser la barre d'exécution pour arrêter, redémarrer ou déboguer votre application, consulter des journaux, etc.
-![ Barre d'exécution](images/webide_runbar_light.png)    
 
-<!-- 3/6/2016: bl commands don't work with V2/CD 
+<table>
+<tr><td><img src="./images/stop_button.png"  alt="Icône d'arrêt"></td><td>Arrêtez l'application</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="Icône d'ouverture de l'URL de l'application"></td><td> Ouvrez l'application déployée</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="Icône d'affichage des journaux"></td><td>Affichez les journaux de l'application déployée</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="Icône d'ouverture du tableau de bord"></td><td>Ouvrez le tableau de bord de l'application</td></tr>
+</table>
+
+Si vous développez une application Node.js, activez le mode Edition directe : <img  src="./images/enable_live_edit.png"  alt="Curseur d'activation de l'édition directe">
+
+<table><tr><td><img src="./images/live_edit_restart.png"  alt="Icône de redémarrage de l'édition directe"></td><td>En mode Edition directe, redémarrez rapidement l'application sans redéploiement</td></tr>
+<tr><td> <img src="./images/debug_icon.png"  alt="Icône de débogage"></td><td>En mode Edition directe, accédez au débogueur
+</td></tr>
+</table>
+
+<!-- 3/6/2016: bl commands don't work with V2/CD
 ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}. 
+To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}.
 
-### Before you begin 
+### Before you begin
 
-Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
+Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
 
 ### Synchronizing your local environment with {{site.data.keyword.Bluemix_notm}}
 {: #edit_local_download}
@@ -109,7 +123,7 @@ Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line i
 	{: pre}
 
 3. When you are prompted, enter your IBMid and password.
-4. View a list of your {{site.data.keyword.Bluemix_notm}} projects: 
+4. View a list of your {{site.data.keyword.Bluemix_notm}} projects:
 
 	```
 	bl projects
@@ -140,11 +154,61 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 2. Use the launch configuration that you created in the {{site.data.keyword.webide}}. After you select the launch configuration, the Desktop Sync feature is enabled in your local environment. In the command-line window that you just opened, you can view the app's URL, the debug URL, the manage URL, and view the {{site.data.keyword.Bluemix_live_notm}} state.
 
-3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace. 
+3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace.
 
 ### Disabling the Desktop Sync feature
 
 1. In the second command-line window, enter `bl stop`.
 2. In the first command-line window, enter `q`.
 
---> 
+-->
+
+## Langages pris en charge
+{: #supported_languages}
+
+Eclipse Orion {{site.data.keyword.webide}} fournit un assistant de contenu, des infobulles, des aperçus et la mise en évidence de syntaxe pour les fichiers JavaScript, HTML, CSS et Markdown. La mise en évidence de syntaxe est également prise en charge pour les types de fichier suivants :
+
+<table>
+<tr>
+<td>
+<ul><li>Arduino
+</li><li>C</li>
+<li>C#
+</li><li>C++
+</li><li>CoffeeScript
+</li><li>CSHTML
+</li><li>Embedded JavaScript (ejs)
+</li><li>Erlang
+</li><li>Go
+</li><li>HTML abstraction markup language (Haml)
+</li><li>Jade
+</li><li>Java
+</li><li>JSON
+</li><li>Less  
+</li><li>Lua  
+</li><li>Objective-C
+</li><li>PHP
+</li><li>Python</li></ul>
+</td>
+<td>
+<ul><li>Ruby
+</li><li>Sass/SCSS
+</li><li>SQL
+</li><li>Swift
+</li><li>TypeScript
+</li><li>Visual Basic (vb)
+</li><li>VMHTML
+</li><li>XHTML
+</li><li>XML
+</li><li>XQuery
+</li><li>YAML
+</li><li>Launch file 	
+</li><li>Dockerfile
+</li><li>gitignore
+</li><li>git config
+</li><li>cfignore
+</li><li>properties
+</ul>
+</td>
+</tr>
+</table>

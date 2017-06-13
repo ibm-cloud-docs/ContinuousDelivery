@@ -3,7 +3,7 @@
 copyright:
   years: 2017
 
-lastupdated: "2017-4-5"
+lastupdated: "2017-6-5"
 
 ---
 <!-- Copyright info at top of file: REQUIRED
@@ -43,7 +43,17 @@ lastupdated: "2017-4-5"
 
 [建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}。學習如何從範本建立開放式工具鏈，以及使用工具鏈來持續交付 "Hello World" 應用程式。
 
+[將工具鏈新增至應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?=task1){:new_window}。學習如何將開放式工具鏈新增至應用程式，並使用工具鏈來持續交付應用程式。
+
 [建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}。學習如何從具有三個微服務的範本建立工具鏈，以及使用工具鏈來持續交付 "Hello World" 應用程式。
+
+[使用 {{site.data.keyword.DRA_short}} (v2) 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}。瞭解如何設定開發並持續交付微服務應用程式的開放式工具鏈。
+
+[建立使用 {{site.data.keyword.gitrepos}} 的工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}。建立包含 Cloud Foundry 應用程式並使用 {{site.data.keyword.gitrepos}} 的範本建立開放式工具鏈。然後，使用工具鏈以持續交付應用程式。
+
+[建立管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}。學習如何開始使用管線及建立包含 GitHub 儲存庫和管線的開放式工具鏈。
+
+如需相關指導教學，請參閱 [Learning Lab ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/category/courses){:new_window}。
 
 ## 持續交付課程
 {: #gm_cd_courses}

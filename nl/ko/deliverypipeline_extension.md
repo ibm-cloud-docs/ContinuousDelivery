@@ -323,11 +323,6 @@ HipChat 알림을 작성하려면 다음을 수행하십시오.
 
 6. IBM Container Service, IBM Security Analyzer 및 IBM Globalization 작업을 포함하는 다른 단계에 대한 HipChat 알림을 전송하려면 이 단계를 반복하십시오. 
 
-## 파이프라인에서 작동 중단 없는 배치를 위해 Active Deploy 사용
-{: #deliverypipeline_activedeploy}
-
-Delivery Pipeline에서 IBM® Active Deploy 서비스를 사용하여 앱 또는 컨테이너 그룹의 지속적 배치를 자동화할 수 있습니다. 시작하기에 대한 자세한 정보는 [Active Deploy 문서](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}를 참조하십시오. 
-
 ## 파이프라인을 사용하여 컨테이너 이미지 빌드 및 배치
 {: #deliverypipeline_containers}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-6-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -53,10 +53,9 @@ Sie können eine Stage manuell ausführen, indem Sie auf das Symbol **Stage ausf
 
 Sie können über eine von zwei Möglichkeiten auch bedarfsgerechte Builds und Bereitstellungen von der Seite für Buildprotokolle anfordern.
 * Ziehen Sie einen Build auf die Box, die sich unter einer konfigurierten Stage befindet.
-* Klicken Sie neben einem Build auf das Symbol **Senden an** und wählen Sie dann einen Bereich aus, in dem die Bereitstellung erfolgen soll.
-  ![Die Stage für die Ausführung mit diesem Buildsymbol](images/deploy_to.png)
+* Klicken Sie im Abschnitt für das Ergebnis der letzten Ausführung (LAST EXECUTION RESULT) auf das Symbol für **Senden an** und wählen Sie dann einen Bereich aus, in dem die Bereitstellung erfolgen soll. ![Die Stage für die Ausführung mit diesem Buildsymbol](images/deploy_to.png)
 
-Klicken Sie in der Stage auf **Protokolle und Verlauf anzeigen**, um eine aktive Stage abzubrechen. Klicken Sie in der Liste der Jobs auf die Nummer des aktiven Jobs und anschließend auf **ABBRECHEN**. Sie können Jobs auch einzeln abbrechen, indem Sie auf einen Job und anschließend auf das Symbol **Abbrechen** klicken, oder indem Sie auf das Symbol **Stopp** neben einem Job in seiner Stage klicken.
+Klicken Sie in der Stage auf **Protokolle und Verlauf anzeigen**, um eine aktive Stage abzubrechen. Klicken Sie in der Liste der Jobs auf die Nummer des aktiven Jobs und anschließend auf **ABBRECHEN**. Sie können Jobs auch einzeln abbrechen, indem Sie auf einen Job und anschließend auf das Symbol **Abbrechen** klicken, oder indem Sie für einen Job in seiner Stage auf das Symbol **Stopp** klicken.
 
 ## Eine App bereitstellen
 {: #deliverypipeline_deploy}

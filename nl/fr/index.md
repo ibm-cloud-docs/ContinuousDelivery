@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-19"
 
 ---
 
@@ -27,19 +27,44 @@ d'outils**. Pour plus d'informations sur l'utilisation des chaînes d'outils, vo
 
 **Astuce** : Les pipelines sont gérés par des chaînes d'outils. Vous pouvez ajouter un pipeline à une chaîne d'outils existante. Si vous créez un pipeline et qu'il n'existe pas de chaînes d'outils, une chaîne d'outils avec un nom par défaut est automatiquement créée. Grâce à la chaîne d'outils, vous pouvez développer les capacités de votre pipeline par une intégration avec d'autres outils et services.
 
+##Présentation de {{site.data.keyword.contdelivery_short}}
+{: #cd_overview}
+
+Avec {{site.data.keyword.contdelivery_short}}, vous pouvez construire, tester et livrer des applications en suivant des pratiques DevOps et en utilisant des outils à la pointe du secteur.
+{:shortdesc}
+
+Le service {{site.data.keyword.contdelivery_short}} prend en charge vos flux de travaux DevOps :
+
+ * Vous pouvez créer des [chaînes d'outils](/docs/services/ContinuousDelivery/toolchains_about.html){: new_window} ouvertes DevOps intégrées activant des intégrations d'outils prenant en charge vos tâches de développement, de déploiement et vos opérations.
+
+  Une chaîne d'outils est un ensemble d'outils intégré que vous pouvez utiliser pour développer, construire, déployer, tester et gérer vos applications en collaborant avec d'autres utilisateurs, et pour faciliter la gestion des opérations reproductibles. Les chaînes d'outils peuvent inclure des outils open source, des services {{site.data.keyword.Bluemix_notm}}, comme [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window} et des outils tiers, comme GitHub, PagerDuty et Slack. 
+
+ * Distribution continue à l'aide de [pipelines](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window} automatisés.
+
+  Automatisation des générations, des tests unitaires, des déploiements, etc. Générez, testez et déployez de manière reproductible en intervenant le moins possible. Soyez prêt à lancer en production à tout moment.
+
+ * Edition et envoi du code depuis n'importe quel emplacement à l'aide de l'[interface IDE basée sur
+le Web](/docs/services/ContinuousDelivery/web_ide.html){: new_window}.
+
+  Création, édition, exécution, débogage et réalisation de tâches de contrôle des sources dans GitHub. Passage transparent de l'édition du code à son déploiement en production. 
+  
+ * Collaborez avec votre équipe et gérez votre code source avec un [référentiel Git (repos) et le dispositif de suivi de problèmes](/docs/services/ContinuousDelivery/git_working.html#git_working){: new_window}, hébergé par IBM et basé sur GitLab Community Edition.
+
+  Gérez les référentiels Git via des contrôles d'accès à granularité fine qui permettent de sécuriser le code. Révisez le code et améliorez la collaboration via des demandes de fusion. Suivez les problèmes et partagez des idées via le dispositif de suivi de problèmes. Documentez des projets sur le système de wiki.
+
 ##Démarrage avec un pipeline
 {: #starting_with_a_pipeline}
 
 Les pipelines automatisent les générations, les déploiements, etc. Pour commencer avec un pipeline automatisé, sélectionnez un modèle et indiquez l'emplacement de votre référentiel GitHub (repo).
 
-Pour [créer un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){:new_window} configuré pour déployer une application Cloud Foundry, procédez comme suit :
+Pour [créer un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops/pipelines/dashboard/create){:new_window} configuré pour déployer une application Cloud Foundry, procédez comme suit :
 
 1. Cliquez sur **Cloud Foundry**.
 1. Si vous désirez utiliser un nom différent pour le pipeline, modifiez son nom par défaut. Le nom du pipeline l'identifie dans {{site.data.keyword.Bluemix_notm}}.
 1. Si vous désirez utiliser un nom différent pour l'application, modifiez son nom par défaut. Le nom de l'application l'identifie dans {{site.data.keyword.Bluemix_notm}}. Ce nom est celui de l'application où est déployé le pipeline.
 1. Si vous n'avez pas de chaînes d'outils, une chaîne d'outils portant le nom par défaut est créée pour vous. Si vous désirez utiliser un autre nom pour la chaîne d'outils, modifiez son nom. Les pipelines sont gérés par des chaînes d'outils. Grâce à la chaîne d'outils, vous pouvez étendre les capacités de votre pipeline par une intégration avec d'autres outils et services.
 
- **Astuce **: les pipelines et les chaînes d'outils appartiennent à des organisations. Si vous appartenez à une organisation disposant de chaînes d'outils, vous pouvez utiliser ces chaînes d'outils même si vous ne les avez pas créées.
+ **Astuce **: les pipelines et les chaînes d'outils appartiennent à des organisations (orgs). Si vous appartenez à une organisation disposant de chaînes d'outils, vous pouvez utiliser ces chaînes d'outils même si vous ne les avez pas créées.
 
 1. Sélectionnez la chaîne d'outils que vous désirez utiliser ou entrez le nom de la nouvelle chaîne d'outils à créer.
 1. Sélectionnez votre fournisseur Git.
@@ -61,7 +86,7 @@ Pour [créer un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg 
 1. Cliquez sur **Créer**. Le pipeline est créé, configuré et affiché sur la page Présentation de la chaîne d'outils.
  ![Carte du pipeline](images/cd_pipeline.png)
 
-Pour créer un [pipeline vide ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} sans étapes préconfigurées :
+Pour créer un [pipeline vide ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} sans étapes préconfigurées :
 
 1. Cliquez sur **Personnalisé**.
 1. Si vous désirez utiliser un nom différent pour le pipeline, modifiez son nom par défaut. Le nom du pipeline l'identifie dans {{site.data.keyword.Bluemix_notm}}.
@@ -72,7 +97,7 @@ Pour créer un [pipeline vide ![Icône de lien externe](../../icons/launch-glyph
 ##Démarrage depuis un modèle de chaîne d'outils
 {: #starting_from_a_toolchain_template}
 
-Pour créer et configurer une chaîne d'outils de distribution continue depuis un [modèle ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/create){: new_window} :
+Pour créer et configurer une chaîne d'outils de distribution continue depuis un [modèle ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops/create){: new_window} :
 
 1. Sur la page **Créer une chaîne d'outils**, cliquez sur un modèle de chaîne d'outils.  
 1. Examinez le diagramme de la chaîne d'outils que vous être sur le point de créer. Ce diagramme montre chaque intégration d'outils dans sa phase de cycle de vie au sein de la chaîne d'outils.

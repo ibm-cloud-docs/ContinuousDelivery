@@ -41,7 +41,7 @@ Wenn Sie ein ernsteres Problem haben oder Probleme mit dem {{site.data.keyword.c
 1. Klicken Sie in der Menüleiste auf **Support** und anschließend auf **Ticket hinzufügen**.
 1. Geben Sie im Formular an, wobei bzw. wofür Sie technische Unterstützung benötigen.
 
-Weitere Informationen zum Öffnen eines IBM {{site.data.keyword.Bluemix_notm}}-Support-Tickets oder zu den Supportebenen und Ticketprioritäten enthält [Unterstützung anfordern](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+Weitere Informationen zum Öffnen eines IBM {{site.data.keyword.Bluemix_notm}}-Support-Tickets oder zu den Supportebenen und Ticketprioritäten enthält [Unterstützung anfordern](https://console.bluemix.net/docs/support/index.html#contacting-support).
 
 
 ## Support für Bluemix

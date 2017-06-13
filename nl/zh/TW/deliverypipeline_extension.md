@@ -323,11 +323,6 @@ Slack 中所顯示的建置通知，會包含專案的鏈結，可能還會包�
 
 6. 重複這些步驟，以針對包含 IBM Container Service、IBM Security Static Analyzer 及 IBM Globalization 工作的其他階段傳送 HipChat 通知。
 
-## 在管線中使用 Active Deploy 進行零關閉時間部署
-{: #deliverypipeline_activedeploy}
-
-在 Delivery Pipeline 中使用 IBM® Active Deploy 服務，即可自動持續部署應用程式或容器群組。如需開始使用的相關資訊，請參閱 [Active Deploy 文件](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}。
-
 ## 使用管線建置及部署容器映像檔
 {: #deliverypipeline_containers}
 

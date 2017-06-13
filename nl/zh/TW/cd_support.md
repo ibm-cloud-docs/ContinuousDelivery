@@ -41,7 +41,7 @@ lastupdated: "2017-4-11"
 1. 從功能表列中，按一下**支援**，然後按一下**新增問題單**。
 1. 完成表單，指出您需要技術支援的部分。
 
-如需開啟 IBM {{site.data.keyword.Bluemix_notm}} 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)。
+如需開啟 IBM {{site.data.keyword.Bluemix_notm}} 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://console.bluemix.net/docs/support/index.html#contacting-support)。
 
 
 ## Bluemix 支援

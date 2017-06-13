@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+lastupdated: "2017-5-25"
 
 ---
 
@@ -35,14 +35,14 @@ lastupdated: "2017-4-28"
 1. 從 {{site.data.keyword.Bluemix_notm}} 功能表列的功能表中，按一下**服務**，然後按一下 **DevOps**。
 1. 按一下**管線**，然後按一下**建立管線**。
 
-若要[建立管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window}，且配置成部署 Cloud Foundry 應用程式，請遵循下列步驟：
+若要[建立管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window}，且配置成部署 Cloud Foundry 應用程式，請遵循下列步驟：
 
 1. 按一下 **Cloud Foundry**。
 1. 如果您要使用不同的管線名稱，請變更其預設名稱。
 1. 如果您要使用不同的應用程式名稱，請變更其預設名稱。此名稱是管線部署至其中的應用程式。
-1. 如果您沒有工具鏈，則系統會為您建立具有預設名稱的工具鏈。如果您要使用不同的工具鏈名稱，請變更其名稱。使用工具鏈時，只要與其他工具及服務整合，即可延伸管線的功能。如需工具鏈的相關資訊，請參閱[使用工具鏈](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}。
+1. 如果您沒有工具鏈，則系統會為您建立具有預設名稱的工具鏈。如果您要使用不同的工具鏈名稱，請變更其名稱。使用工具鏈時，只要與其他工具及服務整合，即可延伸管線的功能。如需工具鏈的相關資訊，請參閱[建立工具鏈](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}。
 
- **提示**：管線及工具鏈屬於組織。如果您隸屬於具有工具鏈的組織，則可以將您新增至其任何相關聯工具鏈的存取控制清單。將您新增至工具鏈的存取控制清單之後，您就可以使用該工具鏈及任何相關聯管線，即使您未建立它們。如需工具鏈存取控制的相關資訊，請參閱[管理存取權](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}。
+ **提示**：管線及工具鏈屬於組織。如果您隸屬於具有工具鏈的組織，則可以將您新增至其任何相關聯工具鏈的存取控制清單。將您新增至工具鏈的存取控制清單之後，您就可以檢視該工具鏈及任何相關聯管線，即使您未建立它們。如果授與您管理專用權，那麼您也可以修改及刪除工具鏈。如需工具鏈存取控制的相關資訊，請參閱[管理存取權](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}。
 
 1. 選取您要使用的工具鏈，或鍵入您要建立的新工具鏈的名稱。
 1. 選取 Git 提供者。
@@ -62,7 +62,7 @@ lastupdated: "2017-4-28"
  ![管線卡片](images/cd_pipeline.png)
 1. 如果您已在包含複合管線的工具鏈中建立管線，則會將新的管線新增至複合管線。請修改部署方案，以包含新管線的部署作業。請參閱[建立 Delivery Pipeline 作業](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}。
 
-若要建立沒有任何預先配置階段的[空管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window}，請執行下列動作：
+若要建立沒有任何預先配置階段的[空管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window}，請執行下列動作：
 
 1. 按一下**自訂**。
 1. 如果您要使用不同的管線名稱，請變更其預設名稱。

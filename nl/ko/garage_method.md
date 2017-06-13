@@ -3,7 +3,7 @@
 copyright:
   years: 2017
 
-lastupdated: "2017-4-5"
+lastupdated: "2017-6-5"
 
 ---
 <!-- Copyright info at top of file: REQUIRED
@@ -43,7 +43,17 @@ IBM Bluemix Continuous Delivery에 포함된 [Delivery Pipeline ![외부 링크 
 
 [Create and use your first toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}. 템플리트에서 오픈 도구 체인을 작성하고 이 도구 체인을 사용하여 "Hello World" 앱의 지속적 딜리버리를 제공하는 방법을 알아봅니다. 
 
+[Add a toolchain to an app ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?=task1){:new_window}. 오픈 도구 체인을 앱에 추가하고 그 도구 체인을 사용하여 지속적으로 앱을 전달하는 방법을 알아봅니다. 
+
 [Create and use a microservices toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}. 3개의 마이크로서비스로 템플리트에서 도구 체인을 작성하고 이 도구 체인을 사용하여 "Hello World" 앱의 지속적 딜리버리를 제공하는 방법을 알아봅니다. 
+
+[Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}. 마이크로서비스 앱을 개발하고 지속적으로 전달하는 오픈 도구 체인을 설정하는 방법을 알아봅니다. 
+
+[Create a toolchain that uses {{site.data.keyword.gitrepos}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}. Cloud Foundry 앱을 포함하고 {{site.data.keyword.gitrepos}}을 사용하는 템플리트에서 오픈 도구 체인을 작성하십시오. 그리고 나서 도구 체인을 사용하여 앱을 지속적으로 전달하십시오. 
+
+[Create a pipeline ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}. 파이프라인을 시작하고 GitHub 저장소 및 해당 파이프라인을 포함하는 오픈 도구 체인을 작성하는 방법을 알아봅니다. 
+
+추가 튜토리얼은 [Learning Lab ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/category/courses){:new_window}을 참조하십시오. 
 
 ## 지속적 딜리버리 코스
 {: #gm_cd_courses}

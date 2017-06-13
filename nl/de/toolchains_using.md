@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-26"
+lastupdated: "2017-5-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-4-26"
 # Toolchains verwenden
 {: #toolchains-using}
 
-Offene Toolchains stehen in den öffentlichen und den dedizierten Umgebungen von {{site.data.keyword.Bluemix}} (Public bzw. Dedicated) zur Verfügung. Mithilfe einer Toolchain können Sie Ihre täglichen Entwicklungs-, Bereitstellungs- und Systemaufgaben produktiv abwickeln. Nach dem Einrichten einer Toolchain können Sie Toolintegrationen hinzufügen, löschen oder konfigurieren sowie den Zugriff auf die Toolchain verwalten. 
+Offene Toolchains stehen in den öffentlichen und den dedizierten Umgebungen von {{site.data.keyword.Bluemix}} (Public bzw. Dedicated) zur Verfügung. Mithilfe einer Toolchain können Sie Ihre täglichen Entwicklungs-, Bereitstellungs- und Systemaufgaben produktiv abwickeln. Nach dem Einrichten einer Toolchain können Sie Toolintegrationen hinzufügen, löschen oder konfigurieren sowie den Zugriff auf die Toolchain verwalten.
 {: shortdesc}
 
 ## Toolintegration konfigurieren
@@ -33,7 +33,7 @@ Wenn Sie die Konfiguration einer Toolintegration beim Erstellen einer Toolchain 
 
  **Tipp**: Einige Toolintegrationen sind vorkonfiguriert und erfordern keinerlei Konfigurationsparameter. Sie können die Konfigurationseinstellungen nur für die von Ihnen konfigurierten Toolintegrationen aktualisieren.
 
- Wenn Sie die Aktualisierung der Einstellungen abgeschlossen haben, klicken Sie auf **Integration speichern**.
+ Wenn Sie die Aktualisierung der Einstellungen abgeschlossen haben, klicken Sie auf **Integration speichern**. Informationen zum Konfigurieren spezifischer Toolintegrationen finden Sie in [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 
 ## Toolintegration hinzufügen
 {: #adding_a_tool_integration}
@@ -80,17 +80,17 @@ Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated für {{site.data.keyword.g
    a. Klicken Sie in der Menüleiste auf **Verwalten > Konto > Organisationen**.
 
    b. Klicken Sie auf **Teammitglieder einladen**.
-   
+
    c. Wählen Sie die Organisation aus, zu der Sie den Benutzer einladen wollen, und klicken Sie auf **Weiter**.
-   
+
    d. Wählen Sie die Bereiche aus, auf die der Benutzer Zugriff erhalten soll.
-   
-   e. Wählen Sie die Rolle aus, die Sie für die ausgewählten Bereiche in der Organisation zuweisen wollen. 
-   
-     **Hinweis**: Standardmäßig verfügen Organisationsmanager über uneingeschränkte Administratorberechtigungen für alle Toolchains, die der Organisation zugeordnet sind. Um einem Benutzer die vollen Administratorberechtigungen zu erteilen, wählen Sie die Rolle **Manager** aus. Die Rollen 'Abrechnungsmanager' und 'Auditor' haben keinerlei Einfluss auf den Zugriff auf Toolchains. Sie können die Rollen später auf der Seite 'Teamverzeichnis' ändern. Weitere Information enthält [Teammitglieder und Rollen verwalten](/docs/admin/users_roles.html){: new_window}.
-   
+
+   e. Wählen Sie die Rolle aus, die Sie für die ausgewählten Bereiche in der Organisation zuweisen wollen.
+
+     **Hinweis:** Standardmäßig verfügen Organisationsmanager über uneingeschränkte Administratorberechtigungen für alle Toolchains, die der Organisation zugeordnet sind. Um einem Benutzer die vollen Administratorberechtigungen zu erteilen, wählen Sie die Rolle **Manager** aus. Die Rollen 'Abrechnungsmanager' und 'Auditor' haben keinerlei Einfluss auf den Zugriff auf Toolchains. Sie können die Rollen später auf der Seite 'Teamverzeichnis' ändern. Weitere Information enthält [Teammitglieder und Rollen verwalten](/docs/admin/users_roles.html){: new_window}.
+
    f. Wählen Sie die Option zum Bestätigen aus, dass Sie die finanzielle Verantwortung für alle Gebühren übernehmen, die für das Konto anfallen.
-   
+
    g. Geben Sie die E-Mail-Adresse des Benutzers ein, den Sie einladen möchten, und klicken Sie auf **Senden**.
 
    h. Nachdem der Benutzer nun zu einem Mitglied der Organisation geworden ist, kehren Sie zu der Verwaltungsseite der Toolchain zurück und fügen Sie den Benutzer zu der Toolchain hinzu.  
@@ -103,7 +103,7 @@ Sie können eine Toolchain löschen und angeben, welche der zugehörigen Toolint
 
 1. Klicken Sie im DevOps-Dashboard auf der Seite **Toolchains** auf die Toolchain, die gelöscht werden soll. Alternativ können Sie auf der Übersichtsseite der App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** klicken.
 1. Klicken Sie neben **App anzeigen** auf das Menü **Weitere Aktionen**.
-1. Klicken Sie auf **Löschen** und überprüfen oder ändern Sie die zu löschenden Toolintegrationen.
+1. Klicken Sie auf **Löschen**. Beim Löschen einer Toolchain werden auch alle zugehörigen Toolintegrationen entfernt, was unter Umständen bewirkt, dass von diesen Integrationen verwaltete Ressourcen ebenfalls gelöscht werden.
 1. Bestätigen Sie das Löschen, indem Sie den Namen der Toolchain eingeben und auf **Löschen** klicken.  
 
- **Tipp**: Wenn Sie eine GitHub-, {{site.data.keyword.ghe_short}}- oder Git Repos and Issue Tracking-Toolintegration löschen, wird das zugeordnete GitHub-Repository nicht aus GitHub, {{site.data.keyword.ghe_short}} bzw. Git Repos and Issue Tracking gelöscht. Sie müssen das Repository manuell entfernen.
+ **Tipp**: Wenn Sie eine GitHub-, {{site.data.keyword.ghe_short}}- oder {{site.data.keyword.gitrepos}}-Toolintegration löschen, wird das zugeordnete Repository nicht aus GitHub, {{site.data.keyword.ghe_short}} oder {{site.data.keyword.gitrepos}} gelöscht. Sie müssen das Repository manuell entfernen.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-11"
+lastupdated: "2017-6-6"
 
 ---
 
@@ -11,13 +11,13 @@ lastupdated: "2017-4-11"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Git Repos and Issue Tracking(베타)
+# Git Repos and Issue Tracking
 {: #git_working}
 
 IBM에서 호스팅하고 [GitLab Community Edition ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://about.gitlab.com/){:new_window}에서 빌드된 Git 저장소(repo) 및 문제 트래커를 사용하여 사용자의 팀과 협업하고 소스 코드를 관리합니다.
 {: shortdesc}
 
-Git Repos and Issue Tracking 도구 통합은 코드를 관리하고 다양한 방법으로 협업할 수 있도록 팀을 지원합니다. 
+{{site.data.keyword.gitrepos}} 도구 통합은 코드를 관리하고 다양한 방법으로 협업할 수 있도록 팀을 지원합니다. 
    * 코드의 보안을 유지하는 미세 조정된 액세스 제어를 통해 Git 저장소를 관리함
    * 코드를 검토하고 병합 요청을 통해 협업을 개선함
    * 문제 트래커를 통해 문제를 추적하고 아이디어를 공유함
@@ -31,12 +31,30 @@ Git Repos and Issue Tracking 도구 통합은 코드를 관리하고 다양한 �
 파일 크기는 100MB로 엄격히 제한됩니다. 권장되는 저장소 크기 한계는 1GB입니다. 저장소가 1GB를 초과하면 저장소 크기를 줄여달라는 요청 이메일을 받을 수 있습니다. 
 
 ## 로컬에서 Git Repos and Issue Tracking 사용
+{: #git_local}
+
+{{site.data.keyword.gitrepos}}에 저장된 Git 저장소에 로컬로 액세스할 수 있습니다. 로컬에 Git을 설정하는 지시사항은 [Start using Git on the command line ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}을 참조하십시오. 
+
+**팁**: {{site.data.keyword.gitrepos}}은 TLS1.2를 사용하는 HTTPS 연결만 지원합니다. 연결하기 위해 Eclipse를 사용하는 경우, `-Dhttps.protocols=TLSv1.2`를 eclipse.ini 파일에 추가하고 Eclipse를 다시 시작하여 사용자의 Java&trade; 버전에 이 프로토콜을 지정해야 할 수 있습니다. 
+
+## GitLab으로 인증  
 {: #git_authentication}
 
-Git Repos and Issue Tracking에 저장된 Git 저장소에 로컬로 액세스할 수 있습니다. 로컬에 Git을 설정하는 지시사항은 [Start using Git on the command line ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}을 참조하십시오. 
-
-### 인증을 위한 개인 액세스 토큰 또는 SSH 키 작성  
 `clone` 또는 `push` 등의 원격 Git 조작을 완료하려면, 로컬 Git 저장소에서 개인 액세스 토큰 또는 SSH 키를 사용하여 GitLab을 인증해야 합니다. 
 
-* 개인 액세스 토큰을 설정하려면 [Personal Access Tokens ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}을 참조하십시오. 
-* SSH 키를 설정하려면 [SSH ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help/ssh/README){:new_window} 또는 [How to create your SSH Keys ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){:new_window}을 참조하십시오. SSH 인증으로 저장소에 액세스하려면 프록시 및 방화벽에 대한 추가 구성이 필요할 수 있습니다. 
+### 개인 액세스 토큰 작성  
+HTTPS를 통해 Git 저장소로 인증하려면 개인 액세스 토큰을 작성해야 합니다. {{site.data.keyword.Bluemix_notm}} 로그인 및 비밀번호는 브라우저에서만 {{site.data.keyword.gitrepos}}과 함께 작동합니다. 외부 Git 클라이언트에서 인증하기 위해 {{site.data.keyword.Bluemix_notm}} 사용자 신임 정보를 사용할 수 없습니다.
+
+1. {{site.data.keyword.gitrepos}} 사용자 설정 대시보드의 [액세스 토큰 페이지에서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, 액세스 토큰을 작성하려는 애플리케이션의 이름을 입력하십시오. 예: `Git CLI`
+1. 선택사항: 액세스 토큰의 만료 날짜를 선택하십시오. 
+1. **api** 선택란을 선택하여 api를 범위로 사용하는 개인 액세스 토큰을 작성하십시오.
+1. **개인 액세스 토큰 작성**을 클릭하십시오. 나중에 사용할 수 있도록 보안이 유지되는 위치에 액세스 토큰을 기록해 놓으십시오.
+1. [계정 페이지에서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, 사용자 이름 변경 섹션에서 {{site.data.keyword.gitrepos}} 사용자 이름을 찾으십시오. 작성하는 개인 Git 저장소에 대한 URL의 첫 번째 세그먼트로 사용자 이름이 표시됩니다.
+1. {{site.data.keyword.gitrepos}} 사용자 이름 및 개인 액세스 토큰을 사용하여 외부 Git 클라이언트에서 Git 저장소로 인증하십시오. 
+
+자세히 알아보려면 [Personal Access Tokens ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}을 참조하십시오.
+
+### SSH 키 작성  
+SSH 키를 작성하려면 [How to create your SSH Keys ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){:new_window}을 참조하십시오. SSH 인증으로 저장소에 액세스하려면 프록시 및 방화벽에 대한 추가 구성이 필요할 수 있습니다. 
+
+자세히 알아보려면 [SSH ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help/ssh/README){:new_window}을 참조하십시오. 

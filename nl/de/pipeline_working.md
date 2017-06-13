@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+lastupdated: "2017-5-25"
 
 ---
 
@@ -33,17 +33,17 @@ Führen Sie diese Schritte aus, um eine {{site.data.keyword.deliverypipeline}} f
 
 1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Apps-Dashboard auf Ihre App.
 1. Klicken Sie im Menü in der {{site.data.keyword.Bluemix_notm}}-Menüleiste auf **Services** und dann
-auf **DevOps**. 
+auf **DevOps**.
 1. Klicken Sie auf **Pipelines** und dann auf **Pipeline erstellen**.
 
-Führen Sie zum [Erstellen einer Pipeline![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window}, die für die Bereitstellung einer Cloud Foundry-Anwendung konfiguriert ist, die folgenden Schritte aus:
+Führen Sie zum [Erstellen einer Pipeline![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window}, die für die Bereitstellung einer Cloud Foundry-Anwendung konfiguriert ist, die folgenden Schritte aus:
 
 1. Klicken Sie auf **Cloud Foundry**.
 1. Wenn Sie einen anderen Namen für die Pipeline verwenden möchten, ändern Sie den Standardnamen.
 1. Wenn Sie einen anderen Namen für die Anwendung verwenden möchten, ändern Sie den Standardnamen. Dieser Name ist der Name der Anwendung, in der die Bereitstellung durch die Pipeline erfolgt.
-1. Wenn Sie über keine Toolchain verfügen, wird eine Toolchain mit einem Standardnamen erstellt. Wenn Sie einen anderen Namen für die Toolchain verwenden möchten, ändern Sie den Namen entsprechend. Durch die Integration anderer Tools und Services haben Sie mit der Toolchain die Möglichkeit, die Funktionalität Ihrer Pipeline zu erweitern. Weitere Informationen zu Toolchains enthält [Mit Toolchains arbeiten](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
+1. Wenn Sie über keine Toolchain verfügen, wird eine Toolchain mit einem Standardnamen erstellt. Wenn Sie einen anderen Namen für die Toolchain verwenden möchten, ändern Sie den Namen entsprechend. Durch die Integration anderer Tools und Services haben Sie mit der Toolchain die Möglichkeit, die Funktionalität Ihrer Pipeline zu erweitern. Weitere Informationen zu Toolchains enthält [Toolchains erstellen](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
 
- **Tipp**: Pipelines und Toolchains gehören zu Organisationen. Wenn Sie einer Organisation angehören, die über Toolchains verfügt, können Sie zu der Zugriffssteuerungsliste für jede der zugeordneten Toolchains hinzugefügt werden. Nachdem Sie zu der Zugriffskontrollliste für eine Toolchain hinzugefügt worden sind, können Sie diese Toolchain sowie alle zugeordneten Pipelines benutzen, selbst wenn Sie diese nicht erstellt haben. Weitere Informationen zur Zugriffssteuerung für Toolchains enthält [Zugriff verwalten](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
+ **Tipp**: Pipelines und Toolchains gehören zu Organisationen. Wenn Sie einer Organisation angehören, die über Toolchains verfügt, können Sie zu der Zugriffssteuerungsliste für jede der zugeordneten Toolchains hinzugefügt werden. Nachdem Sie zu der Zugriffskontrollliste für eine Toolchain hinzugefügt worden sind, können Sie diese Toolchain sowie alle zugeordneten Pipelines anzeigen, selbst wenn Sie diese nicht erstellt haben. Falls Sie über Administratorberechtigungen verfügen, können Sie außerdem Änderungen an den Toolchains vornehmen und Toolchains löschen. Weitere Informationen zur Zugriffssteuerung für Toolchains enthält [Zugriff verwalten](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
 
 1. Wählen Sie entweder den Namen der gewünschten Toolchain aus oder geben Sie einen Namen für die neue Toolchain ein, die Sie erstellen möchten.
 1. Wählen Sie Ihren Git-Provider aus.
@@ -63,7 +63,7 @@ Führen Sie zum [Erstellen einer Pipeline![Symbol für externen Link](../../icon
  ![Karte für Pipeline](images/cd_pipeline.png)
 1. Wenn Sie eine Pipeline in einer Toolchain erstellt haben, die eine Kombinationspipeline enthält, wird die neu erstellte Pipeline zu der Kombinationspipeline hinzugefügt. Nehmen Sie Änderungen am Bereitstellungsplan vor, sodass dieser Bereitstellungstasks für die neue Pipeline enthält. Näheres enthält [Delivery Pipeline-Tasks erstellen](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}.
 
-Führen Sie zum Erstellen einer [leeren Pipeline ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} ohne jegliche vorkonfigurierten Stages die folgenden Schritte aus:
+Führen Sie zum Erstellen einer [leeren Pipeline ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} ohne jegliche vorkonfigurierten Stages die folgenden Schritte aus:
 
 1. Klicken Sie auf **Angepasst**.
 1. Wenn Sie einen anderen Namen für die Pipeline verwenden möchten, ändern Sie den Standardnamen.

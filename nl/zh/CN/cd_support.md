@@ -41,7 +41,7 @@ lastupdated: "2017-4-11"
 1. 从菜单栏中单击**支持**，然后单击**添加凭单**。
 1. 完成表单以指出您所需要的技术支持。
 
-有关开具 IBM {{site.data.keyword.Bluemix_notm}} 支持凭单或有关支持级别和凭单严重性的更多信息，请参阅[联系支持人员](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)。
+有关开具 IBM {{site.data.keyword.Bluemix_notm}} 支持凭单或有关支持级别和凭单严重性的更多信息，请参阅[联系支持人员](https://console.bluemix.net/docs/support/index.html#contacting-support)。
 
 
 ## Bluemix 的支持

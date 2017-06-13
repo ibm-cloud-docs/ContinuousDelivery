@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-19"
 
 ---
 
@@ -23,12 +23,36 @@ lastupdated: "2017-3-31"
 
 **提示**：管道由工具链进行管理。您可以向现有工具链添加管道。如果您创建管道但没有任何现有的工具链，那么会为您创建具有缺省名称的工具链。使用该工具链，您可以通过与其他工具和服务相集成来扩展管道的功能。
 
+##{{site.data.keyword.contdelivery_short}} 概述
+{: #cd_overview}
+
+通过 {{site.data.keyword.contdelivery_short}}，您可以使用 DevOps 实践和业界领先的工具来构建、测试和交付应用程序。
+{:shortdesc}
+
+{{site.data.keyword.contdelivery_short}} 服务支持 DevOps 工作流程：
+
+ * 可以创建集成 DevOps 开放式[工具链](/docs/services/ContinuousDelivery/toolchains_about.html){: new_window}，以启用支持开发、部署和操作任务的工具集成。
+
+  工具链是一组集成工具，可用于以协作方式开发、构建、部署、测试和管理应用程序并使得操作可重复使用且更易于管理。工具链可以包含开放式源代码工具、{{site.data.keyword.Bluemix_notm}} 服务（如 [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window}）和第三方工具（如 GitHub、PagerDuty 和 Slack）。 
+
+ * 使用自动化[管道](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window}持续交付。
+
+  自动执行构建、单元测试、部署等操作。以可重复的方式进行构建、测试和部署，需要的人为干预最少。可随时发布到生产环境。
+
+ * 使用[基于 Web 的 IDE](/docs/services/ContinuousDelivery/web_ide.html){: new_window} 从任意位置编辑并推送代码。
+
+  在 GitHub 中创建、编辑、运行、调试和完成源代码控制任务。从编辑代码到将代码部署到生产环境，实现无缝衔接。 
+  
+ * 与您的团队协作，并使用由 IBM 托管且在 GitLab Community Edition 上构建的 [Git 存储库和问题跟踪程序](/docs/services/ContinuousDelivery/git_working.html#git_working){: new_window}来管理源代码。
+
+  通过可让代码保持安全的细颗粒度访问控制来管理 Git 存储库。通过合并请求复查代码并加强协作。通过问题跟踪程序来跟踪问题并分享构想。在 Wiki 系统上记录项目。
+
 ##开始使用管道
 {: #starting_with_a_pipeline}
 
 管道可自动执行构建、部署等操作。要开始使用自动化管道，请选择模板，并提供 GitHub 存储库的位置。
 
-要[创建管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){:new_window}（已配置为部署 Cloud Foundry 应用程序），请执行以下步骤：
+要[创建管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/devops/pipelines/dashboard/create){:new_window}（已配置为部署 Cloud Foundry 应用程序），请执行以下步骤：
 
 1. 单击 **Cloud Foundry**。
 1. 如果要对管道使用其他名称，请更改其缺省名称。管道的名称在 {{site.data.keyword.Bluemix_notm}} 中起到标识符的作用。
@@ -56,7 +80,7 @@ lastupdated: "2017-3-31"
 1. 单击**创建**。这将创建和配置管道，并将其显示在工具链的“概述”页面上。
  ![管道卡](images/cd_pipeline.png)
 
-要在没有任何预配置阶段的情况下创建[空管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window}，请执行以下操作：
+要在没有任何预配置阶段的情况下创建[空管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window}，请执行以下操作：
 
 1. 单击**定制**。
 1. 如果要对管道使用其他名称，请更改其缺省名称。管道的名称在 {{site.data.keyword.Bluemix_notm}} 中起到标识符的作用。
@@ -67,7 +91,7 @@ lastupdated: "2017-3-31"
 ##从工具链模板开始
 {: #starting_from_a_toolchain_template}
 
-要从[模板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/devops/create){: new_window} 创建并配置持续交付工具链，请执行以下操作：
+要从[模板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/devops/create){: new_window} 创建并配置持续交付工具链，请执行以下操作：
 
 1. 在**创建工具链**页面上，单击工具链模板。  
 1. 复查您要创建的工具链的图。该图按生命周期阶段显示工具链中的每一个工具集成。

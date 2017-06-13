@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-15"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-3-31"
 {:codeblock:.codeblock}
 
 
-# 關於工具鏈    
+# 工具鏈概觀   
 {: #toolchains_about}  
 
 開放式工具鏈適用於 {{site.data.keyword.Bluemix}} 的「公用」及「專用」環境。您可以使用兩種方式來建立工具鏈：使用範本來建立工具鏈，或從應用程式建立工具鏈。您可以使用工具鏈範本作為起點。視您使用的範本而定，您可以建立具有一組特定工具整合的工具鏈，或是建立可在其中新增工具整合的空白工具鏈。    

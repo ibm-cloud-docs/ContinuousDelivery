@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-2-16"
+lastupdated: "2017-5-17"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -34,4 +34,44 @@ lastupdated: "2017-2-16"
 * 在正常开发流程中用于助长仇恨言论的站点或服务，或者违反 IBM 商业行为准则的其他活动。
 * 使用事件生成行为，对 {{site.data.keyword.Bluemix_notm}} 或其他站点进行恶意侵入或攻击
 
-对于违反 {{site.data.keyword.contdelivery_short}} 服务或 [IBM 商业行为准则 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/investor/governance/business-conduct-guidelines.html){: new_window} 的可接受使用行为的用户，IBM 将酌情直接禁用而不另行通知。如果用户在收到攻击行为的通知后更正了其使用行为，IBM 将酌情复原一些服务。否则，可能会暂挂或终止帐户。 
+对于违反 {{site.data.keyword.contdelivery_short}} 服务或 [IBM 商业行为准则 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/investor/governance/business-conduct-guidelines.html){: new_window} 的可接受使用行为的用户，IBM 将酌情直接禁用而不另行通知。如果用户在收到攻击行为的通知后更正了其使用行为，IBM 将酌情复原一些服务。否则，可能会暂挂或终止帐户。
+
+## Git Repos and Issue Tracking 限制
+{: #git_limitations}
+
+虽然 {{site.data.keyword.gitrepos}} 以 GitLab Community Edition 为基础构建且由 IBM 在 {{site.data.keyword.Bluemix_notm}} 上托管，但是仍有一些 GitLab 选项不可用：
+
+ * 因为 {{site.data.keyword.deliverypipeline}} 为 {{site.data.keyword.Bluemix_notm}} 提供持续集成和持续交付，所以在 GitLab 中不支持持续集成功能。
+ * GitLab 管理功能不可用，因为它们由 IBM 管理。
+ * 可能无法完全访问 {{site.data.keyword.gitrepos}}。
+
+
+## Git Repos and Issue Tracking 用户信息和内容
+{: #git_projects}
+
+可以使用三种 {{site.data.keyword.gitrepos}} 项目类型：
+
+  1. 公共项目对所有站点访问者可见。公共项目中的内容对可访问 {{site.data.keyword.contdelivery_short}} 的所有人可见，即使他们未受邀加入该项目也是如此。
+  2. 专用项目仅对选择的用户可见。有关授予用户项目访问权的详细信息，请参阅[项目用户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){: new_window}。
+  3. 内部项目对所有登录的用户可见。具有 {{site.data.keyword.Bluemix_notm}} 帐户的任何用户都可以查看这些项目。
+
+您可以在项目的设置中修改项目类型。有关更多信息，请参阅[如何更改项目可视性 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/public_access/public_access#how-to-change-project-visibility){: new_window}。
+
+当您使用 {{site.data.keyword.gitrepos}} 时，您向项目提供的内容即获得该项目中指定的任何条款的许可。当您创建项目时，请包括描述适用于该内容的许可证的文件。当您提交至项目时，您与提交相关联的名称和电子邮件地址可能对公众可见。当您通过 {{site.data.keyword.gitrepos}} Web 界面创建提交时，会使用与 {{site.data.keyword.Bluemix_notm}} 帐户相关联的电子邮件地址。
+
+<!-- ###Privacy with Git Repos and Issue Tracking profiles -->
+
+<!-- A few features of {{site.data.keyword.gitrepos}} require the use of a profile page that publicly displays information that you provide. You give IBM the following permissions: -->
+
+  <!-- a. Make the information in your profile&mdash;such as your name, email, picture, bio, social media links, and user activity&mdash;visible to other users of the service. -->
+
+  <!-- b. Publicly disclose your name and other public information and activities that are associated with your use of the service, or otherwise publicize the fact that you are a user of the service, without any further notice to you. -->
+
+<!-- The email address that is associated with your profile page is derived from your {{site.data.keyword.Bluemix_notm}} account details. To modify the email address that is displayed on your profile page, modify your {{site.data.keyword.Bluemix_notm}} account. -->
+
+## 已弃用的服务
+{: #deprecated_services}
+
+属于 IBM Bluemix {{site.data.keyword.jazzhub_short}} (JazzHub) 的 {{site.data.keyword.trackplan}} 和 {{site.data.keyword.deliverypipeline}} Classic 已引退。有关更多信息，请参阅 [Track & Plan 引退 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2017/04/track-plan-retirement/){: new_window} 和 [Delivery Pipeline 引退 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2017/04/delivery-pipeline-retirement/){: new_window}。
+
+从 5 月 25 日开始，无法创建新的 JazzHub 项目。通过自动滚动升级，JazzHub 项目将升级到 {{site.data.keyword.contdelivery_short}} 工具链。JazzHub 站点将在 7 月初从服务中除去。有关升级的更多信息，请参阅[将 JazzHub 项目升级到 Bluemix Continuous Delivery 工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/devops-services/2017/4/18/upgrading-jazzhub-projects-bluemix-continuous-delivery-toolchains/){: new_window}

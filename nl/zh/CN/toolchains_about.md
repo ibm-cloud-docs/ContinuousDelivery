@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-15"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-3-31"
 {:codeblock:.codeblock}
 
 
-# 关于工具链    
+# 工具链概述   
 {: #toolchains_about}  
 
 {{site.data.keyword.Bluemix}} 上的 Public 和 Dedicated 环境中可使用开放式工具链。您可以使用两种方法来创建工具链：使用模板创建工具链，或者通过应用程序创建工具链。您可以使用工具链模板作为起始点。根据使用的模板，您可以创建具有一组特定工具集成的工具链，或者创建可以向其中添加工具集成的空工具链。    

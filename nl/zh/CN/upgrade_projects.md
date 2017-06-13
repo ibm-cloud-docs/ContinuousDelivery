@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-10"
+lastupdated: "2017-6-5"
 
 ---
 
@@ -16,6 +16,14 @@ lastupdated: "2017-5-10"
 
 您可以升级项目或等待其自动升级。为了获得最佳体验，请确保满足[先决条件](#upgrade_prereqs)并尽快升级项目，以便您可以控制工具链的名称以及在其中创建工具链的组织。
 {: shortdesc}
+
+**常见问题解答**
+
+- [我的 JazzHub 项目与英国区域相关联，但我的工具链将在美国南部区域。这将如何运作？](#faq_region)
+- [升级时，Track &amp; Plan 中的工作项和仪表板将发生什么？](#faq_tp)
+- [升级时，代码存储库将发生什么？](#faq_repo)
+- [升级到工具链时，项目中的构建定义将发生什么？](#faq_build)
+- [我需要为将升级到工具链的我的项目创建组织。我了解我需要先向我的帐户添加信用卡，然后才能创建组织。要对我的信用卡进行收费吗？](#faq_charges)
 
 ## 工具链
 {: #compare_toolchains}
@@ -57,6 +65,14 @@ lastupdated: "2017-5-10"
 
 如果项目使用的是在 JazzHub 上托管的 Git 存储库，那么在启动升级后，会锁定该存储库以确保移至工具链的数据的完整性。如果通过删除工具链来还原升级，那么会解锁 JazzHub 上的存储库。
 
+有关如何在升级过程中处理每种类型的存储库的完整详细信息，请参阅下表。
+
+|项目存储库 |项目类型	|工具链存储库 |
+|:----------|:------------------------------|:------------------|
+|github.com 		|专用或公共 		|{{site.data.keyword.Bluemix_notm}} Public 上的相同 github.com 存储库。	|
+|hub.jazz.net/git		|专用或公共 		|{{site.data.keyword.Bluemix_notm}} Public 上 {{site.data.keyword.gitrepos}} 中的新存储库。	|
+{: caption="表 1. 映射到工具链存储库的项目存储库" caption-side="top"}
+
 ## 启动升级过程
 {: #start_upgrade}
 
@@ -71,13 +87,7 @@ lastupdated: "2017-5-10"
 
    如需升级过程的概述，请阅读该页面上的描述。工具链将包含新的管道，其包含与项目管道相同的阶段和作业。此外，工具链还包含指向 {{site.data.keyword.contdelivery_short}} 中运行的 Eclipse Orion {{site.data.keyword.webide}} 的指针。
 
-   在此示例中，因为项目使用 github.com 上的公共存储库，所以工具链将连接到相同的 GitHub 存储库。如果项目使用的是在 JazzHub 上托管的 Git 存储库，那么会将该存储库的内容克隆到作为 {{site.data.keyword.contdelivery_short}} 一部分的 {{site.data.keyword.gitrepos}} 中的新存储库。有关如何处理每种类型的存储库的完整详细信息，请参阅下表。
-
-|项目存储库 |项目类型	|工具链存储库 |
-|:----------|:------------------------------|:------------------|
-|github.com 		|专用或公共 		|{{site.data.keyword.Bluemix_notm}} Public 上的相同 github.com 存储库。	|
-|hub.jazz.net/git		|专用或公共 		|{{site.data.keyword.Bluemix_notm}} Public 上 {{site.data.keyword.gitrepos}} 中的新存储库。	|
-{: caption="表 1. 映射到工具链存储库的项目存储库" caption-side="top"}
+   在此示例中，因为项目使用 github.com 上的公共存储库，所以工具链将连接到相同的 GitHub 存储库。如果项目使用的是在 JazzHub 上托管的 Git 存储库，那么会将该存储库的内容克隆到作为 {{site.data.keyword.contdelivery_short}} 一部分的 {{site.data.keyword.gitrepos}} 中的新存储库。
 
 2. 要定制工具链，您可以配置一些设置：
 
@@ -170,3 +180,54 @@ lastupdated: "2017-5-10"
 {: #upgrade_troubleshoot}
 
 如果您有疑问或问题，请转至[支持论坛](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services)。在论坛帖子中，请包含 {{site.data.keyword.jazzhub_short}} 项目和 {{site.data.keyword.contdelivery_short}} 工具链的 URL，并使用 `devops-services` 标签来标记帖子。
+   
+## 常见问题解答
+{: #upgrade_faq}
+
+### 我的 JazzHub 项目与英国区域相关联，但我的工具链将在美国南部区域。这将如何运作？
+{: #faq_region}
+
+hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。如果您的项目配置为将应用程序部署到其他区域（如英国区域），那么该项目升级到工具链后，仍会将应用程序部署到该区域。因此，关于数据的托管位置，实际上并没有发生变化。未来，工具链将在更多区域可用。
+
+### 升级时，Track &amp; Plan 中的工作项和仪表板将发生什么？
+{: #faq_tp}
+
+{{site.data.keyword.contdelivery_short}} 服务通过 {{site.data.keyword.gitrepos}} 提供问题跟踪功能，后者由 IBM 托管且以 GitLab Community Edition 为基础。{{site.data.keyword.contdelivery_short}} 还支持与其他规划和问题跟踪工具（如 GitHub Issues 和 JIRA）集成。
+
+在升级过程中，您可以选择将 Track &amp; Plan 工作项迁移至 Git Issues。GitHub Issues 和 {{site.data.keyword.gitrepos}} 都提供看板和问题跟踪功能，以进行规划。要了解 Git Repos and Issue Tracking 中看板功能“问题板”的更多信息，请参阅[问题板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window}。
+
+对于需要与已弃用 JazzHub Track &amp; Plan 相同功能的客户来说，可以按月按用户在所选国家或地区个别购买新 IBM Track and Plan on Cloud 服务。使用此云服务，您将在单个租户云预订中，获得等同于 Rational Team Concert&trade; 内容添加者许可证的完整功能。
+
+此新 IBM Track and Plan on Cloud 服务提供比已弃用 JazzHub Track &amp; Plan 更丰富的功能，支持流程定制、项目层次结构、SAFe&reg; 和许多其他灵活的混合方法，以及可成长超过单个项目的可扩展性。它以最新版本的 Rational Team Concert 6.0.3 为基础，将在未来 60 天内升级为 V6.0.4，而 JazzHub Track &amp; Plan 以 Rational Team Concert 5.x 为基础。通过其他服务，IBM Track and Plan on Cloud 可进行数据迁移。您可以联系相关产品 SaaS 销售主管 [Tom Hollowell ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](mailto:trhollow@us.ibm.com){:new_window}，以获取更多信息。
+
+有关 IBM Track and Plan on Cloud 或在线购买的相关信息，请访问 [IBM Marketplace ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}。
+
+要额外购买 Build Automation 和 Source Code Management，可以选择 [Rational Team Concert on Cloud ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window}。  
+
+### 升级时，代码存储库将发生什么？
+{: #faq_repo}
+
+在您升级之后，新 Git 服务将可与您之前所拥有的服务相媲美。如果您搭配使用 github.com 和 JazzHub 项目，那么您的工具链将连接至相同的 GitHub 存储库。如果您的 JazzHub 项目使用 IBM 托管的 Git，那么该存储库的内容将会克隆到 {{site.data.keyword.gitrepos}} 中的新存储库，其由 IBM 托管且为 {{site.data.keyword.contdelivery_short}} 的一部分。
+
+有关如何在升级过程中处理每种类型的存储库的完整详细信息，请参阅下表。
+
+|项目存储库 |项目类型	|工具链存储库 |
+|:----------|:------------------------------|:------------------|
+|github.com 		|专用或公共 		|{{site.data.keyword.Bluemix_notm}} Public 上的相同 github.com 存储库。	|
+|hub.jazz.net/git		|专用或公共 		|{{site.data.keyword.Bluemix_notm}} Public 上 {{site.data.keyword.gitrepos}} 中的新专用或公共存储库。	|
+{: caption="表 1. 映射到工具链存储库的项目存储库" caption-side="top"}
+
+
+### 升级到工具链时，项目中的构建定义将发生什么？
+{: #faq_build}
+
+如果您使用 Jazz 而非 Delivery Pipeline 构建源代码，那么您必须手动将构建定义迁移到工具链的 Delivery Pipeline 中。 
+
+如果您使用 Jazz SCM 作为源存储库并使用 Delivery Pipeline 构建代码，那么 Jazz SCM 中的源代码将会自动移至 Git 存储库。Delivery Pipeline 配置仍保持不变，只是它将从 Git 存储库使用源代码而非从 Jazz SCM 使用源代码。
+
+### 我需要为将升级到工具链的项目创建组织。我了解我需要先向我的帐户添加信用卡，然后才能创建组织。要对我的信用卡收费吗？
+{: #faq_charges}
+
+作为[现买现付客户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}，如果您使用任何运行时、服务或组件超过 Bluemix 目录中为其列出的免费限额，那么您需要付费。有关使用情况估算的信息，请参阅[价格表 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}。有关 Continuous Delivery 的当前定价，请参阅 [Bluemix 目录 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}。
+
+如果您是 IBM 员工，内部 IBM 项目可以计入部门费用而非个人信用卡。如果您需要使用的资源超出 IBM 员工的免费限额，请创建支持凭单。

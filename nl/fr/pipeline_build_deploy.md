@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-6-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -53,10 +53,10 @@ Vous pouvez lancer manuellement une étape en cliquant sur l'icône **Exécuter 
 
 Vous pouvez également demander des générations et des déploiements à la demande depuis la page de l'historique de génération de l'une des deux façons suivantes :
 * Faites glisser une génération vers la zone située sous une étape configurée.
-* En regard d'une génération, cliquez sur l'icône **Envoyer à**, puis sélectionnez un espace dans lequel effectuer le déploiement.
+* Dans la section Résultat de la dernière exécution, cliquez sur l'icône **Envoyer à**, puis sélectionnez un espace dans lequel effectuer le déploiement.
   ![Etape d'exécution avec cette icône de génération](images/deploy_to.png)
 
-Pour annuler une étape d'exécution, sur l'étape, cliquez sur **Afficher les journaux et l'historique**. Dans la liste de travaux, cliquez sur le numéro du travail en cours d'exécution, puis cliquez sur **ANNULER**. Vous pouvez également annuler des travaux individuellement en cliquant sur un travail, puis en cliquant sur **ANNULER** ou en cliquant sur l'icône **Arrêter** en regard d'un travail sur son étape.
+Pour annuler une étape d'exécution, sur l'étape, cliquez sur **Afficher les journaux et l'historique**. Dans la liste de travaux, cliquez sur le numéro du travail en cours d'exécution, puis cliquez sur **ANNULER**. Vous pouvez également annuler des travaux individuellement en cliquant sur un travail, puis en cliquant sur **ANNULER** ou en cliquant sur l'icône **Arrêter** d'un travail sur son étape.
 
 ## Déploiement d'une application
 {: #deliverypipeline_deploy}

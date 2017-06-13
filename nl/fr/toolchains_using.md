@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-26"
+lastupdated: "2017-5-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-4-26"
 # Utilisation de chaînes d'outils
 {: #toolchains-using}
 
-Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dédié. Vous pouvez utiliser une chaîne d'outils pour améliorer la productivité de votre travail quotidien de développement, de déploiement et de vos opérations. Après avoir configuré une chaîne d'outils, vous pouvez ajouter, supprimer ou configurer des intégrations d'outils et gérer l'accès à la chaîne d'outils. 
+Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dédié. Vous pouvez utiliser une chaîne d'outils pour améliorer la productivité de votre travail quotidien de développement, de déploiement et de vos opérations. Après avoir configuré une chaîne d'outils, vous pouvez ajouter, supprimer ou configurer des intégrations d'outils et gérer l'accès à la chaîne d'outils.
 {: shortdesc}
 
 ## Configuration d'une intégration d'outils
@@ -34,7 +34,7 @@ d'ensemble correspondante. Vous pouvez également, depuis la page de présentati
 
  **Astuce** : quelques intégrations d'outils sont préconfigurées et ne requièrent aucun paramètre de configuration. Vous pouvez mettre à jour les paramètres de configuration uniquement pour les intégrations d'outils que vous avez configurées.
 
- Lorsque vous avez terminé la mis à jour des paramètres, cliquez sur **Sauvegarder l'intégration**.
+ Lorsque vous avez terminé la mise à jour des paramètres, cliquez sur **Sauvegarder l'intégration**. Pour plus d'informations sur la configuration des intégrations d'outils spécifiques, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 
 ## Ajout d'une intégration d'outils
 {: #adding_a_tool_integration}
@@ -84,18 +84,18 @@ plus d'informations, voir [Utilisation de Dedicated GitHub Enterprise](/docs/ser
    a. Dans la barre de menus, cliquez sur **Gérer > Compte > Organisations**.
 
    b. Cliquez sur **Inviter des membres d'équipe**.
-   
+
    c. Sélectionnez l'organisation dans laquelle vous souhaitez inviter l'utilisateur et cliquez sur **Suivant**.
-   
+
    d. Sélectionnez les espaces auxquels vous souhaitez autoriser l'accès à l'utilisateur.
-   
-   e. Sélectionnez le rôle à affecter aux espaces sélectionnés dans l'organisation. 
-   
-     **Remarque** : Par défaut, les responsables de l'organisation disposent de privilèges d'administrateur complets pour toutes les chaînes d'outils qui sont associées à l'organisation. Pour accorder des privilèges d'administrateur complets à l'utilisateur, sélectionnez le rôle **Responsable**. Les rôles Responsable de la facturation et Auditeur n'ont pas d'impact sur l'accès à la chaîne d'outils. Vous pouvez changer les rôles
+
+   e. Sélectionnez le rôle à affecter aux espaces sélectionnés dans l'organisation.
+
+     **Remarque :** Par défaut, les responsables de l'organisation disposent de privilèges d'administrateur complets pour toutes les chaînes d'outils qui sont associées à l'organisation. Pour accorder des privilèges d'administrateur complets à l'utilisateur, sélectionnez le rôle **Responsable**. Les rôles Responsable de la facturation et Auditeur n'ont pas d'impact sur l'accès à la chaîne d'outils. Vous pouvez changer les rôles
 ultérieurement dans la page Répertoire d'équipe. Pour plus d'informations, voir [Gestion des membres de l'équipe et des rôles](/docs/admin/users_roles.html){: new_window}.
-   
+
    f. Sélectionnez l'option pour confirmer que vous pouvez prendre en charge tous les frais liés au compte.
-   
+
    g. Saisissez l'adresse électronique de l'utilisateur que vous souhaitez inviter et cliquez sur **Envoyer**.
 
    h. Une fois que l'utilisateur est membre de l'organisation, retournez à la page Gérer de la chaîne d'outils et ajoutez l'utilisateur à la chaîne d'outils.  
@@ -108,8 +108,8 @@ Vous pouvez supprimer une chaîne d'outils et spécifier les intégrations d'out
 
 1. Dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur la chaîne d'outils à supprimer. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Distribution continue, cliquer sur **Afficher la chaîne d'outils**.
 1. Cliquez sur le menu **Plus d'actions**, qui se trouve à côté du menu **Afficher l'appli**.
-1. Cliquez sur **Supprimer**, examinez et modifiez éventuellement la liste des intégrations d'outils à supprimer.
+1. Cliquez sur **Supprimer**. La suppression d'une chaîne d'outils supprime toutes ses intégrations d'outils, et donc éventuellement les ressources gérées par ces intégrations.
+
 1. Confirmez la suppression en entrant le nom de la chaîne d'outils et en cliquant sur **Supprimer**.  
 
- **Astuce** : lorsque vous supprimez une intégration d'outils GitHub, {{site.data.keyword.ghe_short}} ou Git Repos and Issue Tracking, le référentiel
-associé n'est pas supprimé de GitHub, de {{site.data.keyword.ghe_short}} ou de Git Repos and Issue Tracking. Vous devez le supprimer manuellement.
+ **Astuce** : lorsque vous supprimez une intégration d'outils GitHub, {{site.data.keyword.ghe_short}} ou {{site.data.keyword.gitrepos}}, le référentiel associé n'est pas supprimé de GitHub, de {{site.data.keyword.ghe_short}} ou de {{site.data.keyword.gitrepos}}. Vous devez le supprimer manuellement.

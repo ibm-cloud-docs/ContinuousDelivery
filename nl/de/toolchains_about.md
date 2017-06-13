@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-15"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-3-31"
 {:codeblock:.codeblock}
 
 
-# Informationen zu Toolchains    
+# Toolchains - Übersicht   
 {: #toolchains_about}  
 
 Offene Toolchains stehen in den öffentlichen und den dedizierten Umgebungen von {{site.data.keyword.Bluemix}} (Public bzw. Dedicated) zur Verfügung. Sie können eine Toolchain auf zwei Arten erstellen: Entweder Sie verwenden eine Vorlage zum Erstellen einer Toolchain oder Sie erstellen eine Toolchain aus einer App. Als Ausgangspunkt können Sie eine Toolchain-Vorlage verwenden. Abhängig von der verwendeten Vorlage können Sie eine Toolchain erstellen, die eine bestimmte Gruppe von Toolintegrationen enthält, oder eine leere Toolchain, zu der Sie Toolintegrationen hinzufügen können.    

@@ -23,13 +23,13 @@ L'équipe {{site.data.keyword.contdelivery_full}} surveille activement les quest
   <p>
    <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/ask-a-question.png" alt="Poser une question"/></a></p>
    <p>
-    <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Affichez les questions récentes <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> sur {{site.data.keyword.Bluemix_notm}} DevOps Services dans Stack Overflow.</p></td>
+    <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Affichez les questions récentes <img class="image" src="../../icons/launch-glyph.svg" alt="Icône de lien externe"/></a> sur {{site.data.keyword.Bluemix_notm}} DevOps Services dans Stack Overflow.</p></td>
   <td align="center">
   <strong>dW Answers</strong>
    <p>
    <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/ask-a-question.png" alt="Poser une question"/></a></p>
    <p>
-    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Affichez les questions récentes sur <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services dans dW Answers.</p></td>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Affichez les questions récentes sur <img class="image" src="../../icons/launch-glyph.svg" alt="Icône de lien externe"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services dans dW Answers.</p></td>
   </table>  
 
 
@@ -41,7 +41,7 @@ Si vous avez un problème plus sérieux ou que vous rencontres des difficultés 
 1. Dans la barre de menus, cliquez sur **Support**, puis sur **Ajouter un ticket**.
 1. Complétez le formulaire pour indiquer le sujet pour lequel vous avez besoin d'un support technique.
 
-Pour plus d'informations sur l'ouverture d'un ticket de demande de service IBM {{site.data.keyword.Bluemix_notm}}, ou sur les niveaux de support et les degrés de gravité des tickets, voir [Contacter le service de support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+Pour plus d'informations sur l'ouverture d'un ticket de demande de service IBM {{site.data.keyword.Bluemix_notm}}, ou sur les niveaux de support et les degrés de gravité des tickets, voir [Contacter le service de support](https://console.bluemix.net/docs/support/index.html#contacting-support).
 
 
 ## Support pour Bluemix

@@ -162,8 +162,7 @@ Wenn Ihre Integration erfolgreich durchgeführt wurde, können Sie IBM UrbanCode
 ## Apps von IBM UrbanCode Deploy hinzufügen
 {: #compositepipeline_add_apps}
 
-Wenn Sie Mitglied einer Organisation sind, die mithilfe von DevOps Connect mit IBM UrbanCode Deploy integriert ist, können Sie die Apps,
-auf die Sie in IBM UrbanCode Deploy Zugriff haben, zur Kombinationspipeline hinzufügen. Installationsanweisungen enthält [IBM Bluemix DevOps Connect zum Integrieren mit IBM UrbanCode Deploy verwenden](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
+Wenn Sie Mitglied einer Organisation sind, die mithilfe von DevOps Connect mit IBM UrbanCode Deploy integriert ist, können Sie die Apps, auf die Sie in IBM UrbanCode Deploy Zugriff besitzen, zur Kombinationspipeline hinzufügen. Installationsanweisungen enthält [IBM Bluemix DevOps Connect zum Integrieren mit IBM UrbanCode Deploy verwenden](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
 
 Wenn Sie Mitglied einer Organisation sind, die mit IBM UrbanCode Deploy verbunden ist, können Sie UrbanCode Deploy-Apps zu Kombinationspipelines hinzufügen, die App-Prozesse auswählen, die in den Bereitstellungsplan aufgenommen werden sollen, und die Bereitstellung der Apps anpassen.
 

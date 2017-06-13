@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-6-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -53,10 +53,10 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 서비스에서는 
 
 다음 두 방법 중 하나로 빌드 히스토리 페이지에서 On-Demand 빌드 및 배치를 요청할 수도 있습니다.
 * 구성된 단계 아래에 있는 상자로 빌드를 끌어옵니다.
-* 빌드 옆에 있는 **전송 대상** 아이콘을 클릭한 후 배치할 영역을 선택하십시오.
+* LAST EXECUTION RESULT 섹션에서 **전송 대상** 아이콘을 클릭한 후 배치할 영역을 선택하십시오.
   ![이 빌드가 있는 단계 실행 아이콘](images/deploy_to.png)
 
-실행 중인 단계를 취소하려면 단계에서 **로그 및 히스토리 보기**를 클릭하십시오. 작업 목록에서 실행 작업의 번호를 클릭한 후 **취소**를 클릭하십시오. 작업을 클릭한 후 **취소**를 클릭하거나 해당 단계에서 작업 옆의 **중지** 아이콘을 클릭하여 작업을 개별적으로 취소할 수도 있습니다.
+실행 중인 단계를 취소하려면 단계에서 **로그 및 히스토리 보기**를 클릭하십시오. 작업 목록에서 실행 작업의 번호를 클릭한 후 **취소**를 클릭하십시오. 작업을 클릭한 후 **취소**를 클릭하거나 해당 단계에서 작업에 대해 **중지** 아이콘을 클릭하여 작업을 개별적으로 취소할 수도 있습니다.
 
 ## 앱 배치
 {: #deliverypipeline_deploy}
@@ -73,7 +73,7 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 서비스에서는 
 **팁:** 이전 빌드를 배치할 수 있습니다. 빌드가 포함된 단계에서 **로그 및 히스토리 보기**를 클릭하십시오. 열린 페이지에서 클릭하여 실행 번호를 펼친 후 빌드 작업을 클릭하십시오. **받는 사람**을 클릭하고 대상을 선택하십시오.
 
 ###앱에 서비스 추가
-서비스를 앱에 추가하고 Bluemix 대시보드 또는 Cloud Foundry 명령 인터페이스(CLI)에서 해당 서비스를 관리할 수 있습니다. 또한 파이프라인 작업에 대해 스크립트에서 Cloud Foundry CLI 명령을 실행할 수도 있습니다. 예를 들어, 배치 작업의 스크립트에서 앱에 서비스를 추가할 수 있습니다. 서비스 추가에 대한 자세한 정보는 [애플리케이션에 서비스 추가](/docs/services/reqnsi.html#add_service)를 참조하십시오.
+서비스를 앱에 추가하고 Bluemix 대시보드 또는 Cloud Foundry 명령행 인터페이스(CLI)에서 해당 서비스를 관리할 수 있습니다. 또한 파이프라인 작업에 대해 스크립트에서 Cloud Foundry CLI 명령을 실행할 수도 있습니다. 예를 들어, 배치 작업의 스크립트에서 앱에 서비스를 추가할 수 있습니다. 서비스 추가에 대한 자세한 정보는 [애플리케이션에 서비스 추가](/docs/services/reqnsi.html#add_service)를 참조하십시오.
 
 ## 로그 보기
 {: #deliverypipeline_view_logs}

@@ -323,11 +323,6 @@ Gehen Sie wie folgt vor, um HipChat-Benachrichtigungen zu erstellen:
 
 6. Wiederholen Sie diese Schritte, um HipChat-Benachrichtigungen für andere Stages zu senden, die Jobs von IBM Container Service, IBM Security Static Analyzer und IBM Globalization enthalten.
 
-## Active Deploy für Bereitstellungen ohne Ausfallzeit in der Pipeline verwenden
-{: #deliverypipeline_activedeploy}
-
-Sie können die kontinuierliche Bereitstellung von Ihren Apps oder Containergruppen durch die Verwendung des Service IBM® Active Deploy in Delivery Pipeline automatisieren. Weitere Informationen zu ersten Schritten enthält die [Dokumentation zu Active Deploy](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}.
-
 ## Containerimages mit der Pipeline erstellen und bereitstellen
 {: #deliverypipeline_containers}
 

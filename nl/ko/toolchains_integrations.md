@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-26"
+lastupdated: "2017-5-29"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2017-4-26"
 오픈 도구 체인을 작성하는 동안 사용자는 개발, 배치 및 운영 태스크를 지원하는 도구 통합을 구성할 수 있습니다. 또는 도구 통합을 추가하고 구성하여 기존 도구 체인을 사용자 정의할 수도 있습니다.   
 {:shortdesc}
 
-도구 체인에 대해 추가와 구성이 가능한 도구 통합은 사용자가 도구 체인을 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용 중인지 여부에 따라 다릅니다. {{site.data.keyword.Bluemix_notm}} 데디케이티드의 도구 체인을 사용 중인 경우 사용 가능한 도구 통합은 사용자의 특정 환경에 {{site.data.keyword.contdelivery_full}}가 설정되는 방법에 따라 달라집니다.
+도구 체인에 대해 추가와 구성이 가능한 도구 통합은 사용자가 도구 체인을 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 사용 중인지 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용 중인지 여부에 따라 다릅니다. {{site.data.keyword.Bluemix_notm}} 데디케이티드의 도구 체인을 사용 중인 경우 사용 가능한 도구 통합은 사용자의 특정 환경에 {{site.data.keyword.contdelivery_full}}가 설정되는 방법에 따라 달라집니다.
 
 |도구 통합 |{{site.data.keyword.Bluemix_notm}} 퍼블릭에서 사용 가능	|{{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용 가능(환경에 따라 다름)|
 |:----------|:------------------------------|:------------------|
@@ -28,7 +28,7 @@ lastupdated: "2017-4-26"
 |{{site.data.keyword.deliverypipeline}} 		|예	   	|예  		|
 |{{site.data.keyword.DRA_short}} 		|예		|아니오			|
 |Eclipse Orion {{site.data.keyword.webide}}		|예		|예			|
-|Git Repos and Issue Tracking	|예		|아니오		|
+|{{site.data.keyword.gitrepos}}	|예		|아니오		|
 |GitHub 및 Issues		|예		|예		|
 |Dedicated {{site.data.keyword.ghe_short}} and Issues			|아니오		|예		|
 |Jenkins		|예		|아니오		|
@@ -36,12 +36,13 @@ lastupdated: "2017-4-26"
 |Nexus			|예		|아니오		|
 |기타 도구			|예		|예		|
 |PagerDuty			|예		|예		|
+|Rational Team Concert			|예		|아니오		|
 |Sauce Labs		|예		|아니오		|
 |Slack			|예		|예		|
 |SonarQube			|예		|아니오		|
-{: caption="표 1. Bluemix 퍼블릭 및 데디케이티드에서 도구 체인에 사용 가능한 도구 통합" caption-side="top"}
+{: caption="표 1. {{site.data.keyword.Bluemix_notm}} 퍼블릭 및 데디케이티드에서 도구 체인에 사용 가능한 도구 통합" caption-side="top"}
 
-**팁:** {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 소스 코드로 개발을 시작하려면 {{site.data.keyword.deliverypipeline}}을 구성하기 전에 GitHub 도구 통합 또는 Git Repos and Issue Tracking 도구 통합을 구성하십시오. {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 코드로 개발을 시작하려는 경우, {{site.data.keyword.deliverypipeline}}을 구성하기 전에 {{site.data.keyword.ghe_short}} 도구 통합 또는 GitHub 도구 통합을 구성하십시오. 
+**팁:** {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 소스 코드로 개발을 시작하려는 경우, {{site.data.keyword.deliverypipeline}}을 구성하기 전에 GitHub 도구 통합 또는 {{site.data.keyword.gitrepos}} 도구 통합을 구성하십시오. {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 코드로 개발을 시작하려는 경우, {{site.data.keyword.deliverypipeline}}을 구성하기 전에 {{site.data.keyword.ghe_short}} 도구 통합 또는 GitHub 도구 통합을 구성하십시오. 
 
 
 ## Alert Notification 구성(시범)
@@ -68,7 +69,7 @@ DevOps 프로세스 중에 문제에 대한 알림을 수신하도록 {{site.dat
 ### Alert Notification 구성
 
 1. 도구 체인을 작성하면서 이 도구 통합을 구성 중이면 구성 가능한 통합 섹션에서 **{{site.data.keyword.alertnotificationshort}}**을 클릭하십시오. 
-1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.   
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.   
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -80,7 +81,7 @@ DevOps 프로세스 중에 문제에 대한 알림을 수신하도록 {{site.dat
 1. **통합 작성**을 클릭하십시오.
 1. 도구 체인에서 **{{site.data.keyword.alertnotificationshort}}**을 클릭하십시오. 
 
-자세한 정보는 [IBM {{site.data.keyword.alertnotificationshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window}을 참조하십시오. 
+자세히 알아보려면 IBM Cloud Garage Method에서 [IBM {{site.data.keyword.alertnotificationshort}} 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window}을 참조하십시오. 
 
 
 ## Artifactory 구성
@@ -89,7 +90,7 @@ DevOps 프로세스 중에 문제에 대한 알림을 수신하도록 {{site.dat
 Artifactory 저장소(repo)에 빌드 아티팩트를 저장하도록 Artifactory 저장소 관리자를 구성합니다. 
 
 1. 도구 체인을 작성하면서 이 도구 통합을 구성 중이면 구성 가능한 통합 섹션에서 **Artifactory**를 클릭하십시오. 
-1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.   
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.   
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -182,7 +183,7 @@ Maven 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을
 
 1. **저장**을 클릭하십시오. 파이프라인이 실행될 때마다 이 빌드 작업은 Artifactory 도구 통합의 구성 정보를 사용하여 Maven 저장소에 연결합니다. 
 
-자세히 알아보려면 [Artifactory ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window}을 참조하십시오. 
+자세히 알아보려면 IBM Cloud Garage Method에서 [Artifactory 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window}을 참조하십시오. 
 
 
 ## Availability Monitoring 추가
@@ -194,7 +195,7 @@ Maven 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을
 
 빌드하면서 앱 상태를 테스트, 모니터하고 개선하려면 {{site.data.keyword.prf_hubshort}} 도구 통합을 추가하십시오. 
 
-1. DevOps 대시보드의 도구 체인 페이지에서 {{site.data.keyword.prf_hubshort}}가 추가될 도구 체인을 클릭하십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
+1. DevOps 대시보드의 도구 체인 페이지에서 {{site.data.keyword.prf_hubshort}}가 추가될 도구 체인을 클릭하십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -203,7 +204,7 @@ Maven 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을
 1. **통합 작성**을 클릭하십시오.
 1. **{{site.data.keyword.prf_hubshort}}**을 클릭하여 {{site.data.keyword.prf_hubshort}} 대시보드를 열고 앱을 선택한 후에 앱에 대한 모니터링을 구성하십시오. 
 
-자세히 알아보려면 [{{site.data.keyword.prf_hublong}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window}을 참조하십시오. 
+자세히 알아보려면 IBM Cloud Garage Method에서 [{{site.data.keyword.prf_hublong}} 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window}을 참조하십시오. 
 
 
 ## Cloud Event Management 추가(시범)
@@ -215,7 +216,7 @@ Maven 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을
 
 DevOps 팀이 안정적 운영 상태, 서비스 품질 및 지속적 개선 목표를 달성하도록 도움을 주려면 도구 체인에 Cloud Event Management를 추가하십시오. 
 
-1. DevOps 대시보드에서 **도구 체인**을 클릭하십시오. Cloud Event Management를 추가할 도구 체인을 클릭하십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
+1. DevOps 대시보드에서 **도구 체인**을 클릭하십시오. Cloud Event Management를 추가할 도구 체인을 클릭하십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -230,7 +231,7 @@ DevOps 팀이 안정적 운영 상태, 서비스 품질 및 지속적 개선 목
 
  * **Runbook Automation** - Cloud Event Management에서 런북의 카탈로그를 관리하는 경우. 
 
-자세히 알아보려면 [Cloud Event Management ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window}을 참조하십시오.
+자세히 알아보려면 IBM Cloud Garage Method에서 [ Cloud Event Management 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window}을 참조하십시오. 
 
 
 ## Delivery Pipeline 구성
@@ -241,7 +242,7 @@ DevOps 팀이 안정적 운영 상태, 서비스 품질 및 지속적 개선 목
 앱의 지속적 빌드, 테스트 및 배치를 자동화하도록 {{site.data.keyword.deliverypipeline}}을 구성하십시오. 
 
 1. 도구 체인을 작성하면서 이 도구 통합을 구성 중이면 구성 가능한 통합 섹션에서 **{{site.data.keyword.deliverypipeline}}**을 클릭하십시오. 사용하는 템플리트에 따라 사용 가능한 필드가 다를 수 있습니다. 기본 필드 값을 검토하고 필요한 경우 해당 설정을 변경하십시오. 
-1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -254,9 +255,9 @@ DevOps 팀이 안정적 운영 상태, 서비스 품질 및 지속적 개선 목
 
   **팁:** 커미트를 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소(repo)에 푸시할 때 파이프라인을 자동으로 실행하려면 다음 단계를 따르십시오.
 
-   a. 파이프라인의 스테이지를 정의하기 전에 도구 체인에 맞게 GitHub, {{site.data.keyword.ghe_short}} 또는 Git Repos and Issue Tracking을 구성하십시오. 파이프라인 단계에는 사용하는 저장소의 Git URL이 필요합니다. 각 파이프라인 단계는 도구 체인과 연관된 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소 중 하나만 참조할 수 있습니다. GitHub 구성에 대한 지시사항은 [GitHub](#github) 섹션을 참조하십시오. 데디케이티드 {{site.data.keyword.ghe_short}} 구성에 대한 지시사항은 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated/index.html){: new_window}를 참조하십시오. Git Repos and Issue Tracking 구성에 대한 지시사항은 [Git Repos and Issue Tracking](##gitbluemix) 절을 참조하십시오. 
+   a. 파이프라인의 스테이지를 정의하기 전에 도구 체인에 대해 GitHub, {{site.data.keyword.ghe_short}} 또는 {{site.data.keyword.gitrepos}}를 구성하십시오. 파이프라인 단계에는 사용하는 저장소의 Git URL이 필요합니다. 각 파이프라인 단계는 도구 체인과 연관된 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소 중 하나만 참조할 수 있습니다. GitHub 구성에 대한 지시사항은 [GitHub](#github) 섹션을 참조하십시오. 데디케이티드 {{site.data.keyword.ghe_short}} 구성에 대한 지시사항은 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated/index.html){: new_window}를 참조하십시오. {{site.data.keyword.gitrepos}} 구성에 대한 지시사항은 [{{site.data.keyword.gitrepos}}](##gitbluemix) 섹션을 참조하십시오. 
 
-   b. 웹훅을 사용하십시오. 웹훅이 없으면 파이프라인을 수동으로만 실행할 수 있습니다. GitHub 또는 {{site.data.keyword.ghe_short}} 저장소에 연결할 때 웹훅을 사용하려면 관리자 권한이 있어야 합니다. Git Repos and Issue Tracking 저장소에 연결하려면 마스터 또는 소유자 권한이 필요합니다.
+   b. 웹훅을 사용하십시오. 웹훅이 없으면 파이프라인을 수동으로만 실행할 수 있습니다. GitHub 또는 {{site.data.keyword.ghe_short}} 저장소에 연결할 때 웹훅을 사용하려면 관리자 권한이 있어야 합니다. {{site.data.keyword.gitrepos}} 저장소에 연결하려면 마스터 또는 소유자 권한이 필요합니다.
 
 1. 선택사항: {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 도구 체인을 사용 중이고 Sauce Labs에서 앱에 대한 테스트를 실행하도록 하려면 Sauce Labs 테스트 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을 구성하십시오. 테스트 작업을 구성하는 데 관한 지시사항은 [파이프라인에서 Sauce Labs 테스트 작업 구성](#config_saucelabs) 절을 참조하십시오. 
 
@@ -297,7 +298,7 @@ Sauce Labs 테스트 작업을 추가하도록 {{site.data.keyword.deliverypipel
 
 1. **저장**을 클릭하십시오. 파이프라인을 실행할 때마다 Sauce Labs 테스트가 실행됩니다. 
 
-자세히 알아보려면 [Delivery Pipeline ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window}을 참조하십시오. 
+자세히 알아보려면 IBM Cloud Garage Method에서 [Delivery Pipeline 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window}을 참조하십시오. 
 
 
 ## DevOps Insights 추가(베타)
@@ -310,7 +311,7 @@ Sauce Labs 테스트 작업을 추가하도록 {{site.data.keyword.deliverypipel
 {{site.data.keyword.DRA_short}}를 추가하여 배치를 모니터하고 위험이 표출되기 전에 위험을 식별함으로써 {{site.data.keyword.Bluemix_notm}}의 코드 품질을 유지하고 향상시킬 수 있습니다. 
 
 1. 도구 체인을 작성하면서 이 도구 통합을 구성 중이면 구성 가능한 통합 섹션에서 **{{site.data.keyword.DRA_short}}**을 클릭하십시오. 
-1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -319,7 +320,7 @@ Sauce Labs 테스트 작업을 추가하도록 {{site.data.keyword.deliverypipel
 1. **통합 작성**을 클릭하십시오.
 1. **{{site.data.keyword.DRA_short}}**를 클릭한 후에 시작하기 단계를 완료하십시오. 기준을 작성하고 파이프라인에 기준을 연결한 후에 파이프라인을 실행하십시오. 
 
-자세히 알아보려면 [{{site.data.keyword.DRA_short}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window}을 참조하십시오. 
+자세히 알아보려면 IBM Cloud Garage Method에서 [{{site.data.keyword.DRA_short}} 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window}을 참조하십시오. 
 
 
 ## Eclipse Orion Web IDE 추가
@@ -332,7 +333,7 @@ Eclipse Orion {{site.data.keyword.webide}}는 소스 제어 태스크를 작성,
 소스 제어 태스크를 완료하려면 Eclipse Orion {{site.data.keyword.webide}} 도구 통합을 추가하십시오. 
 
 1. 도구 체인을 작성할 때 이 도구 통합을 구성하는 경우, 구성 가능한 통합 섹션에서 **Eclipse Orion {{site.data.keyword.webide}}**를 클릭하십시오. 
-1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -341,22 +342,22 @@ Eclipse Orion {{site.data.keyword.webide}}는 소스 제어 태스크를 작성,
 1. **통합 작성**을 클릭하십시오.
 1. **Eclipse Orion {{site.data.keyword.webide}}**를 클릭하십시오. 작업공간이 GitHub 또는 {{site.data.keyword.ghe_short}} 저장소로 미리 채워집니다. 현재 도구 체인과 연관된 저장소가 강조표시됩니다. 
 
-자세히 알아보려면 [Eclipse Orion {{site.data.keyword.webide}}로 코드 편집](/docs/services/ContinuousDelivery/web_ide.html){: new_window} 및 [Eclipse Orion {{site.data.keyword.webide}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window}을 참조하십시오. 
+자세히 알아보려면 IBM Cloud Garage Method에서 [Eclipse Orion으로 코드 편집 {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} 및 [Eclipse Orion {{site.data.keyword.webide}} 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window}을 참조하십시오.
 
 
-## Git Repos and Issue Tracking(베타) 구성
+## Git Repos and Issue Tracking 구성
 {: #gitbluemix}
 
-Git Repos and Issue Tracking 도구 통합은 Git 저장소의 웹 기반 호스팅 서비스인 GitLab Community Edition을 기반으로 합니다. 사용자는 저장소의 로컬 및 원격 사본 모두를 보유할 수 있습니다. 자세히 알아보려면 [Git Repos and Issue Tracking ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help){:new_window}을 참조하십시오. 
+{{site.data.keyword.gitrepos}} 도구 통합은 Git 저장소의 웹 기반 호스팅 서비스인 GitLab Community Edition을 기반으로 합니다. 사용자는 저장소의 로컬 및 원격 사본 모두를 보유할 수 있습니다. 자세히 알아보려면 [{{site.data.keyword.gitrepos}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help){:new_window}을 참조하십시오. 
 
-도구 체인을 작성하면서 Git Repos and Issue Tracking을 구성 중이면 다음 단계를 따르십시오.     
+도구 체인을 작성할 때 {{site.data.keyword.gitrepos}}을 구성하는 경우 다음 단계를 따르십시오.     
 
 1. 구성 가능한 통합 섹션에서 **Git Repos and Issue Tracking**을 클릭하십시오. 
 1. Git 저장소의 기본 대상 위치를 검토하십시오. 해당 저장소는 샘플 저장소에서 복제됩니다. 필요한 경우 대상 저장소의 이름을 변경하십시오. 
 
-도구 체인이 있으며 이에 Git Repos and Issue Tracking을 추가 중이면 다음 단계를 따르십시오.     
+도구 체인이 있으며 그에 대한 {{site.data.keyword.gitrepos}}을 추가하는 경우 다음 단계를 따르십시오.     
 
-1. DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
+1. DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
 1. **도구 추가**를 클릭하십시오.
 1. 도구 통합 섹션에서 **Git Repos and Issue Tracking**을 클릭하십시오. 
 1. 저장소 유형을 선택하십시오.      
@@ -390,7 +391,7 @@ GitHub Issues는 작업과 플랜을 모두 한 위치에 보관하는 추적 �
  b. GitHub 저장소의 기본 대상 저장소 위치를 검토하십시오. 해당 저장소는 샘플 저장소에서 복제됩니다. 필요한 경우 대상 저장소의 이름을 변경하십시오.
  ![기본 대상 저장소 위치](images/toolchain_github_config.png)
 
-1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -416,7 +417,7 @@ GitHub Issues는 작업과 플랜을 모두 한 위치에 보관하는 추적 �
 
 **참고:** 링크 중인 저장소에 대해 관리자 권한이 없으면 웹훅을 사용할 수 없으므로 통합이 제한됩니다. 웹훅은 커미트가 저장소에 푸시될 때 파이프라인을 자동으로 실행하는 데 필요합니다. 웹훅이 없으면 파이프라인을 수동으로 시작해야 합니다. 
 
-자세한 정보는 [GitHub ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} 및 [GitHub Issues ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}을 참조하십시오. 
+자세히 알아보려면 IBM Cloud Garage Method에서 [GitHub 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} 및 [GitHub 문제 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}을 참조하십시오. 
 
 
 ## Bluemix 데디케이티드에서 GitHub Enterprise 및 Issues 구성
@@ -424,7 +425,7 @@ GitHub Issues는 작업과 플랜을 모두 한 위치에 보관하는 추적 �
 
  **참고:** 다음 지시사항은 {{site.data.keyword.ghe_short}}용 {{site.data.keyword.Bluemix_notm}} 데디케이티드에 적용됩니다. {{site.data.keyword.ghe_short}}의 자체 관리 버전을 사용 중이면 일부 단계가 내부 프로시저에 따라 다를 수 있습니다. 
 
-{{site.data.keyword.ghe_long}}는 Git 저장소를 위한 온프레미스 웹 기반 호스팅 서비스입니다. 데디케이티드 {{site.data.keyword.ghe_short}}는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 고객 전용입니다. GitHub Issues는 작업과 플랜을 한 위치에 보관하는 추적 도구입니다. 개발 저장소에 통합되므로 중요한 태스크에 집중할 수 있습니다. 데디케이티드 {{site.data.keyword.ghe_short}} 및 GitHub Issues에 대한 자세한 정보는 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated/index.html){: new_window} 및 [GitHub Issues ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}을 참조하십시오. 
+{{site.data.keyword.ghe_long}}는 Git 저장소를 위한 온프레미스 웹 기반 호스팅 서비스입니다. 데디케이티드 {{site.data.keyword.ghe_short}}는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 고객 전용입니다. GitHub Issues는 작업과 플랜을 한 위치에 보관하는 추적 도구입니다. 개발 저장소에 통합되므로 중요한 태스크에 집중할 수 있습니다. 데디케이티드 {{site.data.keyword.ghe_short}} 및 GitHub 문제에 대한 자세한 정보는 IBM Cloud Garage Method에서 [{{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} 시작하기 및 [GitHub 문제 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}을 참조하십시오. 
 
 회사의 [{{site.data.keyword.Bluemix_notm}} 데디케이티드](/docs/dedicated/index.html#dedicated){: new_window} 인스턴스에서 소스 코드를 관리할 수 있도록 {{site.data.keyword.ghe_short}}를 도구 체인의 도구 통합으로 구성할 수 있습니다. 
 
@@ -437,7 +438,7 @@ GitHub Issues는 작업과 플랜을 모두 한 위치에 보관하는 추적 �
  c. 새 {{site.data.keyword.ghe_short}} 저장소의 기본 이름을 검토하십시오. 필요한 경우 새 저장소의 이름을 변경하십시오. 다음 이미지는 샘플 저장소에서 복제된 저장소의 예를 보여줍니다. 기존 저장소 또는 새 저장소를 사용할 수 있습니다. 새 저장소를 사용하려면 비어 있는 저장소를 작성하거나 저장소를 복제하거나 또는 저장소를 분기시킬 수 있습니다.
 ![기본 저장소 위치](images/toolchain_ghe_config.png)
 
-1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -475,7 +476,7 @@ Jenkins 도구 통합을 사용하면 Slack 및 PagerDuty와 같은 도구 체�
 앱의 지속적 빌드, 테스트 및 배치를 자동화하도록 Jenkins를 구성하십시오. 
 
 1. 도구 체인을 작성하면서 이 도구 통합을 구성 중이면 구성 가능한 통합 섹션에서 **Jenkins**를 클릭하십시오. 
-1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.   
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.   
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -500,17 +501,17 @@ Jenkins 도구 통합을 사용하면 Slack 및 PagerDuty와 같은 도구 체�
 
   * **이 프로젝트가 매개변수화됨** 선택란을 선택하십시오. 
 
-  * `ICD_WEBHOOK_URL` 문자열 매개변수를 추가하십시오. 
+  * `IBM_CLOUD_DEVOPS_WEBHOOK_URL` 문자열 매개변수를 추가하십시오.
 
   * 생성된 도구 체인 웹훅을 붙여넣으십시오.
  ![웹훅 URL](images/jenkins_webhook_url.png)
 
-  * IBM Cloud DevOps - Webhook Notification에 대해 사후 빌드 조치를 추가하고 **작업이 완료됨** 선택란을 선택하십시오.
+  * OTC 알림에 대한 사후 빌드 조치를 추가하고 **작업이 완료됨** 선택란을 선택하십시오.
  ![사후 빌드 조치](images/jenkins_postbuild_action.png)  
 
  e. 배치 작업에서 다음 단계를 완료하십시오. 
 
-  * `ICD_WEBHOOK_URL`, `CF_API`, `CF_ORG`, `CF_SPACE` 및 `CF_APP` 문자열 매개변수를 추가하십시오. 다음 예제는 각각의 문자열 매개변수를 추가하는 방법을 보여줍니다.
+  * `IBM_CLOUD_DEVOPS_WEBHOOK_URL`, `CF_API`, `CF_ORG`, `CF_SPACE` 및 `CF_APP` 문자열 매개변수를 추가하십시오. 다음 예제는 각각의 문자열 매개변수를 추가하는 방법을 보여줍니다.
  ![웹훅 URL 문자열 매개변수](images/jenkins_set_webhook_url.png)
  ![CFI API 문자열 매개변수](images/jenkins_set_cfapi.png)
  ![CFI ORG 문자열 매개변수](images/jenkins_set_cforg.png)
@@ -523,14 +524,14 @@ Jenkins 도구 통합을 사용하면 Slack 및 PagerDuty와 같은 도구 체�
   * **빌드** 필드에서 다음 명령을 입력하여 로그인하고 IBM Cloud DevOps Cloud Foundry 플러그인을 사용하여 Git 커미트 추적성과 함께 애플리케이션 배치 가능 맵핑을 도구 체인에 전송하십시오.
  ![빌드 명령](images/jenkins_build_commands.png)    
 
-  * **빌드** 필드에서 `cf icd --create-connection $ICD_WEBHOOK_URL $CF_APP` 명령을 입력하여 애플리케이션 배치 가능 맵핑을 도구 체인에 전송하십시오.     
+  * **빌드** 필드에서 `cf icd --create-connection $IBM_CLOUD_DEVOPS_WEBHOOK_URL $CF_APP` 명령을 입력하여 애플리케이션 배치 가능 맵핑을 도구 체인에 전송하십시오.     
 
  f. 변경사항을 저장하고 Jenkins 도구 통합의 통합 구성 페이지로 리턴하십시오. 
 
 1. **통합 작성**을 클릭하십시오.
 1. 도구 체인에서 **Jenkins**를 클릭하여 Jenkins 서버를 보십시오.   
 
-자세한 정보는 [Jenkins ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window}을 참조하십시오. 
+자세히 알아보려면 IBM Cloud Garage Method에서 [Jenkins 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window}을 참조하십시오. 
 
 
 ## JIRA 구성
@@ -541,7 +542,7 @@ JIRA는 소프트웨어와 관련된 문제와 버그를 추적하는 도구입�
 품질 코드를 계획, 추적하고 전달하도록 JIRA 구성
 
 1. 도구 체인을 작성하면서 이 도구 통합을 구성 중이면 구성 가능한 통합 섹션에서 **JIRA**를 클릭하십시오. 
-1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.   
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.   
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -578,7 +579,7 @@ JIRA는 소프트웨어와 관련된 문제와 버그를 추적하는 도구입�
 1. **통합 작성**을 클릭하십시오.
 1. 도구 체인에서 **JIRA**를 클릭하여 연결할 JIRA 프로젝트의 대시보드를 보십시오. 
 
-자세히 알아보려면 [JIRA ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window}을 참조하십시오. 
+자세히 알아보려면 IBM Cloud Garage Method에서 [JIRA 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window}을 참조하십시오. 
 
 
 ## Nexus 구성
@@ -587,7 +588,7 @@ JIRA는 소프트웨어와 관련된 문제와 버그를 추적하는 도구입�
 Nexus 저장소(repo)에 빌드 아티팩트를 저장하도록 Nexus 저장소 관리자를 구성합니다. 
 
 1. 도구 체인을 작성하면서 이 도구 통합을 구성 중이면 구성 가능한 통합 섹션에서 **Nexus**를 클릭하십시오. 
-1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.   
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.   
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -681,7 +682,7 @@ Maven 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을
 
 1. **저장**을 클릭하십시오. 파이프라인이 실행될 때마다 이 빌드 작업은 Nexus 도구 통합의 구성 정보를 사용하여 Maven 저장소에 연결합니다. 
 
-자세한 정보는 [Nexus ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window}을 참조하십시오. 
+자세히 알아보려면 IBM Cloud Garage Method에서 [Nexus 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window}을 참조하십시오. 
 
 
 ## 사용자 정의 도구(기타 도구) 구성
@@ -691,7 +692,7 @@ Maven 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을
 
 사용자 정의 도구를 구성하면 도구 체인에서 다른 도구와 함께 작동하며 사용자의 팀에 사용 가능합니다. 
 
-1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -718,7 +719,7 @@ PagerDuty는 여러 모니터링 시스템의 데이터를 단일 보기로 통�
 문제점을 보다 빨리 수정하여 가동중단시간을 줄이려면 파이프라인 단계 장애가 발생할 경우 알림을 전송하도록 PagerDuty를 구성하십시오. 
 
 1. 도구 체인을 작성할 때 이 도구 통합을 구성하는 경우, 구성 가능한 통합 섹션에서 **PagerDuty**를 클릭하십시오. 
-1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -731,20 +732,59 @@ PagerDuty는 여러 모니터링 시스템의 데이터를 단일 보기로 통�
 1. **통합 작성**을 클릭하십시오.
 1. **PagerDuty**를 클릭하여 pagerduty.com으로 이동하십시오. 도구 체인에 대해 이 도구 통합을 구성할 때 지정한 PagerDuty 서비스와 연관된 이벤트를 볼 수 있습니다. 
 
-자세히 알아보려면 [PagerDuty ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}을 참조하십시오. 
+자세히 알아보려면 IBM Cloud Garage Method에서 [PagerDuty 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}을 참조하십시오. 
+
+
+## Rational Team Concert 구성
+{: #rationalteamconcert}
+
+IBM Rational Team Concert&trade;는 반복 계획, 변경 관리, 결함 추적, 소스 제어, 빌드 자동화 및 보고를 포함하는 개발 태스크를 통합하는 팀 협업 도구입니다. 
+
+개발 환경에서 DevOps 접근 방법 및 지속적 딜리버리의 사례로 Rational Team Concert를 구성하십시오. 
+
+1. 도구 체인을 작성할 때 이 도구 통합을 구성하는 경우 구성 가능한 통합 섹션에서 **Rational Team Concert**를 클릭하십시오. 
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.   
+
+ a. **도구 추가**를 클릭하십시오. 
+
+ b. 도구 통합 섹션에서 **Rational Team Concert**를 클릭하십시오. 
+
+1. 도구 체인에서 Rational Team Concert 카드를 클릭할 때 열고자 하는 Rational Team Concert 서버의 URL을 입력하십시오. 
+1. Rational Team Concert 서버에 액세스하기 위해 사용하는 사용자 ID를 입력하십시오. 
+1. Rational Team Concert 서버에 액세스하기 위해 사용하는 비밀번호를 입력하십시오. 
+1. 도구 체인에 추가하려는 Rational Team Concert 프로젝트 영역이 있는 경우 다음 단계를 따르십시오. 
+
+ a. **프로젝트 영역 유형** 목록에서 **기존 프로젝트 영역**을 선택하십시오. 
+
+ b. 도구 체인에 추가할 프로젝트 영역의 이름을 입력하십시오. 
+ 
+1. 도구 체인에 추가할 Rational Team Concert 프로젝트 영역을 작성하려는 경우 다음 단계를 따르십시오. 
+ 
+ a. **프로젝트 영역 유형** 목록에서 **새 프로젝트 영역**을 선택하십시오. 
+
+ b. 도구 체인에 추가할 새 프로젝트 영역의 이름을 입력하십시오. 
+ 
+ c. 프로젝트 작성에 사용할 Rational Team Concert 프로세스 템플리트의 이름을 입력하십시오. 
+ 
+1. 작업 항목에 대한 태그 및 주석을 작성하여 프로젝트에 대한 코드 변경사항의 배치를 추적하려면 **코드 변경사항의 배치 추적** 선택란을 선택하십시오. 
+1. **통합 작성**을 클릭하십시오.
+1. 도구 체인에서 **Rational Team Concert**를 클릭하여 구성한 Rational Team Concert 대시보드를 여십시오. 
+
+자세히 알아보려면 IBM Cloud Garage Method에서 [IBM Rational Team Concert 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/think/tool_rtc/){: new_window}을 참조하십시오. 
+
 
 
 ## Sauce Labs 구성
 {: #saucelabs}
 
-Sauce Labs는 기능 단위 테스트를 실행합니다. {{site.data.keyword.deliverypipeline}}에서 Sauce Labs 테스트 스위트가 테스트 작업으로 구성되어 있는 경우, 이 테스트 스위트는 Continuous Delivery 프로세스의 일부로 웹 또는 모바일 앱에 대해 테스트를 실행할 수 있습니다. 이러한 테스트는 프로젝트의 중요한 플로우 제어를 제공할 수 있으며 잘못된 코드의 배치를 방지하는 게이트 역할을 합니다. 
+Sauce Labs는 기능 단위 테스트를 실행합니다. {{site.data.keyword.deliverypipeline}}에서 Sauce Labs 테스트 스위트가 테스트 작업으로 구성되어 있는 경우, 이 테스트 스위트는 지속적 딜리버리 프로세스의 일부로 웹 또는 모바일 앱에 대해 테스트를 실행할 수 있습니다. 이러한 테스트는 프로젝트의 중요한 플로우 제어를 제공할 수 있으며 잘못된 코드의 배치를 방지하는 게이트 역할을 합니다. 
 
  **참고:** 이 도구 통합은 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서만 사용 가능합니다. 
 
 여러 운영 체제 및 브라우저에서 자동화된 기능 테스트를 실행하도록 Sauce Labs를 구성하십시오. 그러면 사용자가 웹 사이트 또는 애플리케이션을 사용할 가능성이 있는 방법을 에뮬레이트할 수 있습니다. 
 
 1. 도구 체인을 작성할 때 이 도구 통합을 구성하는 경우, 구성 가능한 통합 섹션에서 **Sauce Labs**를 클릭하십시오. 
-1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -755,9 +795,9 @@ Sauce Labs는 기능 단위 테스트를 실행합니다. {{site.data.keyword.de
 1. **통합 작성**을 클릭하십시오.
 1. **Sauce Labs**를 클릭하여 saucelabs.com으로 이동하고 도구 체인의 테스트 활동을 보십시오. 
 
- **팁:** {{site.data.keyword.deliverypipeline}}에 Sauce Labs 테스트 작업을 추가한 경우 해당 서비스 인스턴스를 선택할 수 있습니다. 
+ **팁:** {{site.data.keyword.deliverypipeline}}에 Sauce Labs 테스트 작업을 추가한 경우 해당 서비스 인스턴스를 선택할 수 있습니다. 파이프라인에서 테스트 작업을 구성하기 위한 지시사항은 [파이프라인에서 Sauce Labs 테스트 작업 구성](#config_saucelabs) 절을 참조하십시오. 
 
-자세히 알아보려면 [Sauce Labs ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window}을 참조하십시오. 
+자세히 알아보려면 IBM Cloud Garage Method에서 [Sauce Labs 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window}을 참조하십시오. 
 
 
 ## Slack 구성
@@ -770,7 +810,7 @@ Slack은 클라우드 기반의 실시간 메시징 및 알림 시스템입니�
 도구 통합에서 도구 체인에 대한 알림(예: 테스트 및 배치 활동)을 수신하도록 Slack을 구성하십시오. 
 
 1. 도구 체인을 작성할 때 이 도구 통합을 구성하는 경우, 구성 가능한 통합 섹션에서 **Slack**을 클릭하십시오. 
-1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
+1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오. 
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -788,7 +828,7 @@ Slack은 클라우드 기반의 실시간 메시징 및 알림 시스템입니�
 
 1. **Slack**을 클릭하십시오. 구성된 Slack 채널에서 도구 체인의 모든 활동을 볼 수 있습니다. 
 
-자세히 알아보려면 [Slack ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}을 참조하십시오. 
+자세히 알아보려면 IBM Cloud Garage Method에서 [Slack 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}을 참조하십시오. 
 
 
 ## SonarQube 구성
@@ -798,7 +838,7 @@ SonarQube에서는 소스 코드의 전체 상태와 품질의 개요을 제공�
 
 소스 코드의 품질을 지속적으로 분석하고 측정하도록 SonarQube를 구성하십시오.
 
-1. DevOps 대시보드에서 **도구 체인**을 클릭하십시오. SonarQube를 추가할 도구 체인을 클릭하십시오. 또는 앱 개요 페이지의 지속적 딜리버리 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.   
+1. DevOps 대시보드에서 **도구 체인**을 클릭하십시오. SonarQube를 추가할 도구 체인을 클릭하십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.   
 
  a. **도구 추가**를 클릭하십시오. 
 
@@ -814,4 +854,4 @@ SonarQube에서는 소스 코드의 전체 상태와 품질의 개요을 제공�
 1. **통합 작성**을 클릭하십시오.
 1. 도구 체인에서 **SonarQube**를 클릭하여 연결할 SonarQube 인스턴스의 대시보드를 보십시오. 
 
-자세히 알아보려면 [SonarQube ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window}을 참조하십시오. 
+자세히 알아보려면 IBM Cloud Garage Method에서 [SonarQube 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window}을 참조하십시오. 

@@ -46,7 +46,7 @@ Un pipeline qui utilise le service Static Analyzer inclut généralement les ét
 ### Création d'une analyse de code statique
 
 Avant de commencer, [consultez les
-conditions d'utilisation du service ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}.
+conditions d'utilisation du service ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}.
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -191,7 +191,7 @@ Avant de commencer, créez une URL webhook Slack ou copiez-en une qui existe :
 3. Sélectionnez un canal et cliquez sur **Add Incoming WebHooks Integration**.
 4. Ajoutez une **URL webhook** ou copiez-en une qui existe.
 
-Pour plus d'informations, voir la rubrique [Incoming WebHooks dans la documentation Slack ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){: new_window}.
+Pour plus d'informations, voir la rubrique [Incoming WebHooks dans la documentation Slack ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://api.slack.com/incoming-webhooks){: new_window}.
 
 Pour créer des notifications Slack :
 
@@ -239,7 +239,7 @@ sont envoyés, mais pas les messages d'information.
       <li><code>unknown</code> : aucun type n'est associé aux messages inconnus.</li></ul></td>
    </table>
 
-5. Cliquez sur **Sauvegarder**.
+5. Cliquez sur **Save**.
 
 6. Répétez ces étapes afin d'envoyer des notifications Slack pour d'autres étapes incluant des travaux IBM Container Service, IBM Security Analyzer et IBM Globalization.
 
@@ -328,14 +328,9 @@ les paramètres suivants sont remplis :
     </tr>
   </table>
 
-5. Cliquez sur **Sauvegarder**.
+5. Cliquez sur **Save**.
 
 6. Répétez ces étapes afin d'envoyer des notifications HipChat pour d'autres étapes incluant des travaux IBM Container Service, IBM Security Static Analyzer et IBM Globalization.
-
-## Utilisation d'Active Deploy pour un déploiement sans durée d'immobilisation dans le pipeline
-{: #deliverypipeline_activedeploy}
-
-Vous pouvez automatiser le déploiement en continu de vos applications ou de vos groupes de conteneurs à l'aide du service IBM Active Deploy dans Delivery Pipeline. Pour plus d'informations sur la mise en route, voir la [documentation Active Deploy](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}.
 
 ## Génération et déploiement d'images de conteneur à l'aide du pipeline
 {: #deliverypipeline_containers}

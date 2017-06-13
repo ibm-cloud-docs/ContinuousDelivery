@@ -3,7 +3,7 @@
 copyright:
   years: 2017
 
-lastupdated: "2017-4-5"
+lastupdated: "2017-6-5"
 
 ---
 <!-- Copyright info at top of file: REQUIRED
@@ -41,9 +41,19 @@ Mit [Delivery Pipeline ![Symbol für externen Link](../../icons/launch-glyph.svg
 ## Continuous Delivery-Lernprogramme
 {: #gm_cd_tutorials}
 
-[Erstellen und verwenden Sie Ihre erste Toolchain ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}. Erfahren Sie, wie Sie eine offene Toolchain aus einer Vorlage erstellen und die Toolchain für die fortlaufende Bereitstellung einer 'Hello World'-App verwenden.
+[Erste Toolchain erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window} Erfahren Sie, wie Sie eine offene Toolchain aus einer Vorlage erstellen und die Toolchain für die fortlaufende Bereitstellung einer 'Hello World'-App verwenden.
 
-[Erstellen und verwenden Sie eine Microservice-Toolchain ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}. Erfahren Sie, wie Sie aus einer Vorlage eine Toolchain mit drei Microservices erstellen und die Toolchain für die fortlaufende Bereitstellung einer 'Hello World'-App verwenden.
+[Toolchain zu einer App hinzufügen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?=task1){:new_window} Erfahren Sie, wie Sie eine offene Toolchain zu einer App hinzufügen und die Toolchain für die fortlaufende Bereitstellung der App verwenden.
+
+[Microservice-Toolchain erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window} Erfahren Sie, wie Sie aus einer Vorlage eine Toolchain mit drei Microservices erstellen und die Toolchain für die fortlaufende Bereitstellung einer 'Hello World'-App verwenden.
+
+[Microservice-Toolchain mit {{site.data.keyword.DRA_short}} (Version 2) erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window} Erfahren Sie, wie Sie eine offene Toolchain einrichten, mit der eine Microservice-App entwickelt und fortlaufend bereitgestellt wird.
+
+[Toolchain erstellen, die {{site.data.keyword.gitrepos}} verwendet ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}. Erstellen Sie eine offene Toolchain aus einer Vorlage, die eine Cloud Foundry-App enthält und {{site.data.keyword.gitrepos}} verwendet. Verwenden Sie anschließend die Toolchain für die fortlaufende Bereitstellung der App.
+
+[Pipeline erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window} Erfahren Sie, wie Sie mit einer Pipeline beginnen und eine offene Toolchain erstellen, die ein GitHub-Repository und die Pipeline enthält.
+
+Weitere Lernprogramme finden Sie im [Learning Lab ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/category/courses){:new_window}.
 
 ## Continuous Delivery-Kurse
 {: #gm_cd_courses}

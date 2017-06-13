@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-15"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-3-31"
 {:codeblock:.codeblock}
 
 
-# A propos des chaînes d'outils    
+# Présentation des chaînes d'outils   
 {: #toolchains_about}  
 
 Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dédié. Vous pouvez créer une chaîne d'outils de deux façons : à l'aide d'un modèle ou à partir d'une application. Comme point de départ, vous pouvez utiliser un modèle de chaîne d'outils. En fonction du modèle utilisé, vous pouvez créer une chaîne d'outils possédant un ensemble spécifique d'intégrations d'outils ou une chaîne d'outils vide dans laquelle ajouter des intégrations d'outils.    

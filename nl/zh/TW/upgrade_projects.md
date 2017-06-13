@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-10"
+lastupdated: "2017-6-5"
 
 ---
 
@@ -16,6 +16,14 @@ lastupdated: "2017-5-10"
 
 您可以升級專案，或等待它自動升級。若要獲得最佳經驗，請確定您符合[必要條件](#upgrade_prereqs)，並盡快升級專案，以控制工具鏈的名稱，以及在其中建立它的組織。
 {: shortdesc}
+
+**常見問題集**
+
+- [我的 JazzHub 專案與 UK 地區相關聯，但我的工具鏈將會在美國南部地區。這樣會如何運作？](#faq_region)
+- [當我升級時，Track &amp; Plan 中的工作項目和儀表板會發生什麼事？](#faq_tp)
+- [當我升級時，我的程式碼儲存庫會發生什麼事？](#faq_repo)
+- [當我升級至工具鏈時，我專案中的建置定義會發生什麼事？](#faq_build)
+- [我需要為將升級至工具鏈的專案建立組織。我瞭解我需要先新增信用卡到我的帳戶中，才能建立組織。我的信用卡會被收費嗎？](#faq_charges)
 
 ## 工具鏈
 {: #compare_toolchains}
@@ -57,6 +65,14 @@ lastupdated: "2017-5-10"
 
 如果您的專案使用在 JazzHub 上管理的 Git 儲存庫，則在開始升級之後，會鎖定儲存庫，確保移至工具鏈的資料的完整性。如果您刪除工具鏈來回復升級，則會將 JazzHub 上的儲存庫解除鎖定。
 
+如需升級過程中，各種儲存庫處理方式的完整詳細資料，請參閱下表。
+
+|專案儲存庫 |專案類型	|工具鏈儲存庫 |
+|:----------|:------------------------------|:------------------|
+|github.com 		|專用或公用 		|具有「{{site.data.keyword.Bluemix_notm}} 公用」的相同 github.com 儲存庫。	|
+|hub.jazz.net/git		|專用或公用 		|{{site.data.keyword.gitrepos}} 中具有「{{site.data.keyword.Bluemix_notm}} 公用」的新儲存庫。	|
+{: caption="表 1. 對映至工具鏈儲存庫的專案儲存庫" caption-side="top"}
+
 ## 開始升級處理程序
 {: #start_upgrade}
 
@@ -71,13 +87,7 @@ lastupdated: "2017-5-10"
 
    如需升級處理程序的概觀，請閱讀該頁面上的說明。此工具鏈會包含新的管線，而這個管線包含與專案管線相同的階段及工作。此外，此工具鏈將包含 {{site.data.keyword.contdelivery_short}} 中所執行 Eclipse Orion {{site.data.keyword.webide}} 的指標。
 
-   在此範例中，因為專案使用 github.com 上的公用儲存庫，所以工具鏈將會連接至相同的 GitHub 儲存庫。如果您的專案使用在 JazzHub 上管理的 Git 儲存庫，則該儲存庫的內容將會複製到 {{site.data.keyword.gitrepos}}（這是 {{site.data.keyword.contdelivery_short}} 的一部分）中的新儲存庫。如需各種儲存庫處理方式的完整詳細資料，請參閱下表。
-
-|專案儲存庫 |專案類型	|工具鏈儲存庫 |
-|:----------|:------------------------------|:------------------|
-|github.com 		|專用或公用 		|具有「{{site.data.keyword.Bluemix_notm}} 公用」的相同 github.com 儲存庫。	|
-|hub.jazz.net/git		|專用或公用 		|{{site.data.keyword.gitrepos}} 中具有「{{site.data.keyword.Bluemix_notm}} 公用」的新儲存庫。	|
-{: caption="表 1. 對映至工具鏈儲存庫的專案儲存庫" caption-side="top"}
+   在此範例中，因為專案使用 github.com 上的公用儲存庫，所以工具鏈將會連接至相同的 GitHub 儲存庫。如果您的專案使用在 JazzHub 上管理的 Git 儲存庫，則該儲存庫的內容將會複製到 {{site.data.keyword.gitrepos}}（這是 {{site.data.keyword.contdelivery_short}} 的一部分）中的新儲存庫。
 
 2. 若要自訂工具鏈，您可以配置一些設定：
 
@@ -171,3 +181,54 @@ lastupdated: "2017-5-10"
 {: #upgrade_troubleshoot}
 
 如果您有任何疑問或問題，請移至[支援討論區](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services)。在討論區貼文中，併入 {{site.data.keyword.jazzhub_short}} 專案及 {{site.data.keyword.contdelivery_short}} 工具鏈的 URL，並將貼文標上 `devops-services` 標籤。
+   
+## 常見問題集
+{: #upgrade_faq}
+
+### 我的 JazzHub 專案與 UK 地區相關聯，但我的工具鏈將會在美國南部地區。這樣會如何運作？
+{: #faq_region}
+
+hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果您的專案已配置成將應用程式部署至不同地區，例如 UK 地區，則在將專案升級至工具鏈之後，仍會將應用程式部署至該地區。因此，關於資料的管理所在之處其實沒有什麼改變。工具鏈未來將可在更多地區使用。
+
+### 當我升級時，Track &amp; Plan 中的工作項目和儀表板會發生什麼事？
+{: #faq_tp}
+
+{{site.data.keyword.contdelivery_short}} 服務透過 {{site.data.keyword.gitrepos}} 提供問題追蹤功能，{{site.data.keyword.gitrepos}} 是由 IBM 管理，並且是以 GitLab Community Edition 為基礎。{{site.data.keyword.contdelivery_short}} 也支援整合其他規劃及問題追蹤工具，例如 GitHub Issues 及 JIRA。
+
+在升級過程期間，您可以選擇將 Track &amp; Plan 工作項目移轉至 Git Issues。GitHub Issues 和 {{site.data.keyword.gitrepos}} 提供看板與問題追蹤，以便進行規劃。若要進一步瞭解 Issue Board（這是 Git Repos and Issue Tracking 中的看板特性），請參閱 [Issue Board ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window}。
+
+對於需要與已淘汰之 JazzHub Track &amp; Plan 相同功能的客戶，在選定的國家或地區中有一項新的 IBM Track and Plan Cloud 服務可以依每月每位使用者單獨購買。使用這項雲端服務，您會在單一承租戶雲端訂閱中獲得完整的功能，相等於 Rational Team Concert&trade; 貢獻者授權。
+
+這項新的 IBM Track and Plan on Cloud 服務提供的功能遠比已淘汰的 JazzHub Track &amp; Plan 更豐富，並且支援處理程序自訂作業、專案階層、SAFe&reg; 以及許多其他敏捷式和混合式方法，也提供成長超越單一專案的可擴充性。它是根據最新版本的 Rational Team Concert 6.0.3，且在未來 60 天內將為 6.0.4 版，而 JazzHub Track &amp; Plan 則是根據 Rational Team Concert 5.x。您可以透過其他服務將資料移轉到 IBM Track and Plan on Cloud。您可以與 [Tom Hollowell ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](mailto:trhollow@us.ibm.com){:new_window}（Connected Products SaaS 業務主管）聯絡，以取得相關資訊。
+
+如需 IBM Track and Plan on Cloud 的相關資訊，或是想要線上購買，請造訪 [IBM Marketplace ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}。
+
+若要額外購買 Build Automation 和 Source Code Management，可以選擇 [Rational Team Concert on Cloud ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window}。  
+
+### 當我升級時，我的程式碼儲存庫會發生什麼事？
+{: #faq_repo}
+
+升級之後，新的 Git 服務將類似於您先前的服務。如果您使用 github.com 搭配 JazzHub 專案，您的工具鏈將連接至相同的 GitHub 儲存庫。如果您的 JazzHub 專案使用 IBM 管理的 Git，則該儲存庫的內容將會複製到 {{site.data.keyword.gitrepos}}（這是 {{site.data.keyword.contdelivery_short}} 的一部分且由 IBM 管理）中的新儲存庫。
+
+如需升級過程中，各種儲存庫處理方式的完整詳細資料，請參閱下表。
+
+|專案儲存庫 |專案類型	|工具鏈儲存庫 |
+|:----------|:------------------------------|:------------------|
+|github.com 		|專用或公用 		|具有「{{site.data.keyword.Bluemix_notm}} 公用」的相同 github.com 儲存庫。	|
+|hub.jazz.net/git		|專用或公用 		|{{site.data.keyword.gitrepos}} 中具有「{{site.data.keyword.Bluemix_notm}} 公用」的新專用或公用儲存庫。	|
+{: caption="表 1. 對映至工具鏈儲存庫的專案儲存庫" caption-side="top"}
+
+
+### 當我升級至工具鏈時，我專案中的建置定義會發生什麼事？
+{: #faq_build}
+
+如果您使用 Jazz 而非 Delivery Pipeline 來建置原始碼，則必須手動移轉建置定義到工具鏈中的 Delivery Pipeline。 
+
+如果您使用 Jazz SCM 作為來源儲存庫，且使用 Delivery Pipeline 建置程式碼，則 Jazz SCM 中的原始檔會自動移到 Git 儲存庫。您的 Delivery Pipeline 配置將維持相同，只除了它會使用來自 Git 儲存庫的原始檔，而不是來自 Jazz SCM 的原始檔。
+
+### 我需要為將升級至工具鏈的專案建立組織。我瞭解我需要先新增信用卡到我的帳戶中，才能建立組織。我的信用卡會被收費嗎？
+{: #faq_charges}
+
+身為[隨收隨付制客戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}，如果您使用超過 Bluemix 型錄中所列免費額度的任何運行環境、服務或元件，將會向您收費。如需用量預估，請參閱[定價單 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}。如需 Continuous Delivery 的現行定價，請參閱 [Bluemix 型錄 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}。
+
+如果您是 IBM 員工，可以按照內部 IBM 專案將帳單計入部門，來代替個人信用卡。如果您需要使用超過 IBM 員工免費額度的資源，請建立支援問題單。

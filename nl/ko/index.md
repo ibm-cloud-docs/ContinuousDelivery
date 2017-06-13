@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-19"
 
 ---
 
@@ -22,14 +22,38 @@ lastupdated: "2017-3-31"
  * 템플리트를 사용하여 Continuous Delivery 도구 체인을 작성하고 구성하려면 "도구 체인 템플리트에서 시작" 섹션에서 **[여기서 시작](#starting_from_a_toolchain_template)**을 클릭하십시오. 도구 체인은 파이프라인의 계획, 개발, 배치와 애플리케이션의 관리에 사용할 도구를 통합합니다. 언제나 도구 체인에서 도구를 추가하거나 제거할 수 있습니다.
  * 도구 체인이 이미 있는 경우에는 "도구 체인 템플리트에서 시작" 섹션에서 **도구 체인 보기**를 클릭하십시오. 도구 체인 관련 작업에 대한 자세한 정보는 [도구 체인 사용](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}을 참조하십시오. 
 
-**팁**: 파이프라인은 도구 체인에 의해 관리됩니다. 기존 도구 체인에 파이프라인을 추가할 수 있습니다. 파이프라인을 작성하며 기존 도구 체인이 없는 경우에는 기본 이름의 도구 체인이 사용자를 위해 작성됩니다. 도구 체인을 사용하면 기타 도구 및 서비스와 통합하여 파이프라인의 기능을 확장할 수 있습니다. 
+**팁**: 파이프라인은 도구 체인에 의해 관리됩니다. 기존 도구 체인에 파이프라인을 추가할 수 있습니다. 파이프라인을 작성하며 기존 도구 체인이 없는 경우, 기본 이름의 도구 체인이 사용자를 위해 작성됩니다. 도구 체인을 사용하면 기타 도구 및 서비스와 통합하여 파이프라인의 기능을 확장할 수 있습니다. 
+
+##{{site.data.keyword.contdelivery_short}} 개요
+{: #cd_overview}
+
+{{site.data.keyword.contdelivery_short}}를 통해 DevOps 사례와 업계 최고의 도구를 사용하여 애플리케이션을 빌드하고 테스트하며 전달할 수 있습니다.
+{:shortdesc}
+
+{{site.data.keyword.contdelivery_short}} 서비스에서는 다음과 같이 DevOps 워크플로우를 지원합니다.
+
+ * 개발, 배치 및 운영 태스크를 지원하는 도구 통합을 사용할 수 있도록 통합된 DevOps 오픈 [도구 체인](/docs/services/ContinuousDelivery/toolchains_about.html){: new_window}을 작성할 수 있습니다. 
+
+  도구 체인은 애플리케이션 개발, 빌드, 배치, 테스트 및 관리에 함께 사용할 수 있는 통합 도구 세트이며 오퍼레이션을 반복 가능하고 관리하기 더 쉽게 만듭니다. 도구 체인에는 오프 소스 도구, {{site.data.keyword.Bluemix_notm}} 서비스(예: [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window}) 및 써드파티 도구(예:GitHub, PagerDuty, Slack)가 포함될 수 있습니다. 
+
+ * 자동화된 [파이프라인](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window}을 사용하여 지속적 딜리버리를 제공합니다. 
+
+  빌드, 단위 테스트, 배치 등을 자동화하십시오. 사용자 개입을 최소화하여 반복할 수 있는 방식으로 빌드, 테스트, 배치를 수행하십시오. 언제든 프로덕션으로 릴리스할 수 있게 준비하십시오.
+
+ * [웹 기반 IDE](/docs/services/ContinuousDelivery/web_ide.html){: new_window}를 사용하여 어디서든 코드를 편집하고 푸시합니다. 
+
+  GitHub에서 소스 제어 태스크의 작성, 편집, 실행, 디버그, 완료를 수행하십시오. 코드 편집에서 프로덕션으로 배치하는 작업으로 원활하게 이동하십시오. 
+  
+ * IBM에서 호스팅하고 GitLab Community Edition에 빌드된 [Git 저장소(repos) 및 문제 트래커](/docs/services/ContinuousDelivery/git_working.html#git_working){: new_window}로 사용자의 팀과 협업하고 소스 코드를 관리합니다. 
+
+  코드의 보안을 유지하는 미세 조정된 액세스 제어를 통해 Git 저장소를 관리합니다. 코드를 검토하고 병합 요청을 통해 협업을 개선합니다. 문제 트래커를 통해 문제를 추적하고 아이디어를 공유합니다. 위키 시스템에서 프로젝트를 문서화합니다. 
 
 ##파이프라인을 사용하여 시작
 {: #starting_with_a_pipeline}
 
 파이프라인은 빌드와 배치 등을 자동화합니다. 자동화된 파이프라인을 사용하여 시작하려면 템플리트를 선택하고 GitHub 저장소(repo)의 위치를 제공하십시오.
 
-Cloud Foundry 애플리케이션을 배치하도록 구성된 [파이프라인 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){:new_window}을 수행하려면 다음 단계를 따르십시오. 
+Cloud Foundry 애플리케이션을 배치하도록 구성된 [파이프라인 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/devops/pipelines/dashboard/create){:new_window}을 수행하려면 다음 단계를 따르십시오. 
 
 1. **Cloud Foundry**를 클릭하십시오.
 1. 파이프라인에 다른 이름을 사용하려면 파이프라인의 기본 이름을 변경하십시오. 파이프라인의 이름은 {{site.data.keyword.Bluemix_notm}}에서 해당 파이프라인을 식별합니다.
@@ -57,7 +81,7 @@ Cloud Foundry 애플리케이션을 배치하도록 구성된 [파이프라인 �
 1. **작성**을 클릭하십시오.  도구 체인의 개요 페이지에 파이프라인이 작성되고 구성되어 표시됩니다.
  ![파이프라인 카드](images/cd_pipeline.png)
 
-사전 구성된 단계 없이 [비어 있는 파이프라인 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window}을 작성하려면 다음을 수행하십시오. 
+사전 구성된 단계 없이 [비어 있는 파이프라인 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window}을 작성하려면 다음을 수행하십시오. 
 
 1. **사용자 정의**를 클릭하십시오.
 1. 파이프라인에 다른 이름을 사용하려면 파이프라인의 기본 이름을 변경하십시오. 파이프라인의 이름은 {{site.data.keyword.Bluemix_notm}}에서 해당 파이프라인을 식별합니다.
@@ -68,9 +92,9 @@ Cloud Foundry 애플리케이션을 배치하도록 구성된 [파이프라인 �
 ##도구 체인 템플리트에서 시작
 {: #starting_from_a_toolchain_template}
 
-[템플리트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/devops/create){: new_window}에서 지속적 딜리버리 도구 체인을 작성하고 구성하려면 다음을 수행하십시오. 
+[템플리트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/devops/create){: new_window}에서 지속적 딜리버리 도구 체인을 작성하고 구성하려면 다음을 수행하십시오. 
 
-1. **도구 체인 작성** 페이지에서 도구 체인 템플리트를 클릭하십시오.   
+1. **도구 체인 작성** 페이지에서 도구 체인 템플리트를 클릭하십시오.  
 1. 작성하려는 도구 체인의 다이어그램을 검토하십시오. 다이어그램은 도구 체인에서 해당 라이프사이클 단계(Phase)에 있는 각 도구 통합을 보여줍니다. 
 
  **팁**: 일부 도구 체인 템플리트에는 도구 통합의 여러 인스턴스가 있습니다. 예를 들어, {{site.data.keyword.Bluemix_notm}} 퍼블릭의 마이크로서비스 도구 체인 템플리트에는 3개 마이크로서비스 각각에 대해 하나씩 GitHub의 3개 인스턴스와 Delivery Pipeline의 3개 인스턴스가 포함되어 있습니다. 

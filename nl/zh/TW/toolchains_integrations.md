@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-26"
+lastupdated: "2017-5-29"
 
 ---
 
@@ -28,7 +28,7 @@ lastupdated: "2017-4-26"
 |{{site.data.keyword.deliverypipeline}} 		|是	   	|是  		|
 |{{site.data.keyword.DRA_short}} 		|是		|否			|
 |Eclipse Orion {{site.data.keyword.webide}}		|是		|是			|
-|Git Repos and Issue Tracking	|是		|否		|
+|{{site.data.keyword.gitrepos}}	|是		|否		|
 |GitHub 及 GitHub Issues		|是		|是		|
 |專用 {{site.data.keyword.ghe_short}} 及 Issues			|否		|是		|
 |Jenkins		|是		|否		|
@@ -36,12 +36,13 @@ lastupdated: "2017-4-26"
 |Nexus			|是		|否		|
 |其他工具			|是		|是		|
 |PagerDuty			|是		|是		|
+|Rational Team Concert			|是		|否		|
 |Sauce Labs		|是		|否		|
 |Slack			|是		|是		|
 |SonarQube			|是		|否		|
-{: caption="表 1.「Bluemix 公用」及「Bluemix 專用」上工具鏈可用的工具整合" caption-side="top"}
+{: caption="表 1.「{{site.data.keyword.Bluemix_notm}} 公用」及「專用」上工具鏈可用的工具整合" caption-side="top"}
 
-**提示：**如果您要在「{{site.data.keyword.Bluemix_notm}} 公用」上開始使用原始碼進行開發，請先配置 GitHub 工具整合或 Git Repos and Issue Tracking 工具整合，再配置 {{site.data.keyword.deliverypipeline}}。如果您要在「{{site.data.keyword.Bluemix_notm}} 專用」上開始使用程式碼進行開發，請先配置 {{site.data.keyword.ghe_short}} 工具整合或 GitHub 工作整合，再配置 {{site.data.keyword.deliverypipeline}}。
+**提示：**如果您要在「{{site.data.keyword.Bluemix_notm}} 公用」上開始使用原始碼進行開發，請先配置 GitHub 工具整合或 {{site.data.keyword.gitrepos}} 工具整合，再配置 {{site.data.keyword.deliverypipeline}}。如果您要在「{{site.data.keyword.Bluemix_notm}} 專用」上開始使用程式碼進行開發，請先配置 {{site.data.keyword.ghe_short}} 工具整合或 GitHub 工作整合，再配置 {{site.data.keyword.deliverypipeline}}。
 
 
 ## 配置 Alert Notification（實驗性）
@@ -68,7 +69,7 @@ lastupdated: "2017-4-26"
 ### 配置 Alert Notification
 
 1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **{{site.data.keyword.alertnotificationshort}}**。
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**。然後，按一下**概觀**。  
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**。然後，按一下**概觀**。  
 
  a. 按一下**新增工具**。
 
@@ -80,7 +81,7 @@ lastupdated: "2017-4-26"
 1. 按一下**建立整合**。
 1. 從工具鏈中，按一下 **{{site.data.keyword.alertnotificationshort}}**。
 
-如需相關資訊，請參閱 [IBM {{site.data.keyword.alertnotificationshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window}。
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的 [IBM {{site.data.keyword.alertnotificationshort}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window}。
 
 
 ## 配置 Artifactory
@@ -89,7 +90,7 @@ lastupdated: "2017-4-26"
 配置 Artifactory 儲存庫管理員，以將建置構件儲存至 Artifactory 儲存庫：
 
 1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **Artifactory**。
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**。然後，按一下**概觀**。  
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**。然後，按一下**概觀**。  
 
  a. 按一下**新增工具**。
 
@@ -180,7 +181,7 @@ lastupdated: "2017-4-26"
 
 1. 按一下**儲存**。只要管線執行，此建置工作就會使用 Artifactory 工具整合中的配置資訊來連接至 Maven 儲存庫。
 
-若要進一步瞭解，請參閱 [Artifactory ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window}。
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的 [Artifactory 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window}。
 
 
 ## 新增 Availability Monitoring
@@ -201,7 +202,7 @@ lastupdated: "2017-4-26"
 1. 按一下**建立整合**。
 1. 按一下 **{{site.data.keyword.prf_hubshort}}**，以開啟 {{site.data.keyword.prf_hubshort}} 儀表板、選取應用程式，以及配置監視應用程式。
 
-若要進一步瞭解，請參閱 [{{site.data.keyword.prf_hublong}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window}。
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的[{{site.data.keyword.prf_hublong}}文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window}。
 
 
 ## 新增 Cloud Event Management（實驗性）
@@ -228,7 +229,7 @@ lastupdated: "2017-4-26"
 
  * **Runbook Automation**，以在 Cloud Event Management 中管理 Runbook 型錄。
 
-若要進一步瞭解，請參閱 [Cloud Event Management ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window}。
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的 [Cloud Event Management 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window}。
 
 
 ## 配置 Delivery Pipeline
@@ -239,7 +240,7 @@ lastupdated: "2017-4-26"
 配置 {{site.data.keyword.deliverypipeline}} 來自動進行應用程式的持續建置、測試及部署：
 
 1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **{{site.data.keyword.deliverypipeline}}**。視您使用的範本而定，可能會有不同的欄位。請檢閱預設欄位值，並在必要時變更那些設定。
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
 
  a. 按一下**新增工具**。
 
@@ -252,9 +253,9 @@ lastupdated: "2017-4-26"
 
   **提示：**如果您要在將確定推送至 GitHub、{{site.data.keyword.ghe_short}} 或 Git 儲存庫時自動執行管線，請遵循下列步驟：
 
-   a. 先配置工具鏈的 GitHub、{{site.data.keyword.ghe_short}} 或 Git Repos and Issue Tracking，然後再定義管線的階段。管線階段需要儲存庫的 Git URL。每一個管線階段都只能參照與您工具鏈相關聯的其中一個 GitHub、{{site.data.keyword.ghe_short}} 或 Git 儲存庫。如需配置 GitHub 的指示，請參閱 [GitHub](#github) 一節。如需配置「專用 {{site.data.keyword.ghe_short}}」的指示，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}。如需配置 Git Repos and Issue Tracking 的指示，請參閱 [Git Repos and Issue Tracking](##gitbluemix) 一節。
+   a. 先配置工具鏈的 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}}，然後再定義管線的階段。管線階段需要儲存庫的 Git URL。每一個管線階段都只能參照與您工具鏈相關聯的其中一個 GitHub、{{site.data.keyword.ghe_short}} 或 Git 儲存庫。如需配置 GitHub 的指示，請參閱 [GitHub](#github) 一節。如需配置「專用 {{site.data.keyword.ghe_short}}」的指示，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}。如需配置 {{site.data.keyword.gitrepos}} 的指示，請參閱 [{{site.data.keyword.gitrepos}}](##gitbluemix) 一節。
 
-   b. 使用 Webhook。如果沒有 Webhook，您只能手動執行管線。若要在鏈結至 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫時使用 Webhook，您需要管理者專用權。若要鏈結至 Git Repos and Issue Tracking 儲存庫，您需要「主要」或「擁有者」專用權。
+   b. 使用 Webhook。如果沒有 Webhook，您只能手動執行管線。若要在鏈結至 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫時使用 Webhook，您需要管理者專用權。若要鏈結至 {{site.data.keyword.gitrepos}} 儲存庫，您需要「主要」或「擁有者」專用權。
 
 1. 選用項目：如果您是在「{{site.data.keyword.Bluemix_notm}} 公用」上使用工具鏈，並且想要 Sauce Labs 對您的應用程式執行測試，請配置 {{site.data.keyword.deliverypipeline}} 來新增 Sauce Labs 測試工作。如需配置測試工作的指示，請參閱[在管線中配置 Sauce Labs 測試工作](#config_saucelabs)一節。
 
@@ -297,7 +298,7 @@ lastupdated: "2017-4-26"
 
 1. 按一下**儲存**。只要執行管線，就會執行 Sauce Labs 測試。
 
-若要進一步瞭解，請參閱 [Delivery Pipeline ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window}。
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的 [Delivery Pipeline 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window}。
 
 
 ## 新增 DevOps Insights（測試版）
@@ -310,7 +311,7 @@ lastupdated: "2017-4-26"
 新增 {{site.data.keyword.DRA_short}} 來維護及改善 {{site.data.keyword.Bluemix_notm}} 中的程式碼品質，方法是監視部署，以在釋出之前先找出風險。
 
 1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **{{site.data.keyword.DRA_short}}**。
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
 
  a. 按一下**新增工具**。
 
@@ -319,7 +320,7 @@ lastupdated: "2017-4-26"
 1. 按一下**建立整合**。
 1. 按一下 **{{site.data.keyword.DRA_short}}**，然後完成開始使用步驟：建立準則，並將準則連接至管線，然後執行管線。
 
-若要進一步瞭解，請參閱 [{{site.data.keyword.DRA_short}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window}。
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的[{{site.data.keyword.DRA_short}}文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window}。
 
 
 ## 新增 Eclipse Orion Web IDE
@@ -332,7 +333,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一個整合的 Web 型環境，�
 若要完成來源控制作業，請新增 Eclipse Orion {{site.data.keyword.webide}} 工具整合：
 
 1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **Eclipse Orion {{site.data.keyword.webide}}**。
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
 
  a. 按一下**新增工具**。
 
@@ -341,23 +342,23 @@ Eclipse Orion {{site.data.keyword.webide}} 是一個整合的 Web 型環境，�
 1. 按一下**建立整合**。
 1. 按一下 **Eclipse Orion {{site.data.keyword.webide}}**。您的工作區會預先移入您的 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫。會強調顯示與現行工具鏈相關聯的儲存庫。
 
-若要進一步瞭解，請參閱[使用 Eclipse Orion {{site.data.keyword.webide}} 編輯程式碼](/docs/services/ContinuousDelivery/web_ide.html){: new_window}以及 [Eclipse Orion {{site.data.keyword.webide}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window}。
+若要進一步瞭解，請參閱[使用 Eclipse Orion {{site.data.keyword.webide}} 編輯程式碼](/docs/services/ContinuousDelivery/web_ide.html){: new_window}和 IBM Cloud Garage Method 上的 [Eclipse Orion {{site.data.keyword.webide}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window}。
 
 
-## 配置 Git Repos and Issue Tracking（測試版）
+## 配置 Git Repos and Issue Tracking
 {: #gitbluemix}
 
-Git Repos and Issue Tracking 工具整合是根據 GitLab Community Edition，其為 Git 儲存庫的 Web 型管理服務。您可以同時具有儲存庫的本端及遠端副本。若要進一步瞭解，請參閱 [Git Repos and Issue Tracking ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help){:new_window}。
+{{site.data.keyword.gitrepos}} 工具整合是根據 GitLab Community Edition，其為 Git 儲存庫的 Web 型管理服務。您可以同時具有儲存庫的本端及遠端副本。若要進一步瞭解，請參閱 [{{site.data.keyword.gitrepos}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help){:new_window}。
 
-如果您要在建立工具鏈時配置 Git Repos and Issue Tracking，請遵循下列步驟：    
+如果您要在建立工具鏈時配置 {{site.data.keyword.gitrepos}}，請遵循下列步驟：    
 
 1. 在「可配置的整合」區段中，按一下 **Git Repos and Issue Tracking**。
 1. 檢閱 Git 儲存庫的預設目標位置。那些儲存庫是從範例儲存庫中複製而來。必要的話，請變更目標儲存庫的名稱。
  
 
-如果您有工具鏈，並要向其新增 Git Repos and Issue Tracking，請遵循下列步驟：    
+如果您有工具鏈，並要向其新增 {{site.data.keyword.gitrepos}}，請遵循下列步驟：    
 
-1. 在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
+1. 在 DevOps 儀表板的「工具鏈」頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
 1. 按一下**新增工具**。
 1. 在「工具整合」區段中，按一下 **Git Repos and Issue Tracking**。
 1. 選取儲存庫類型：     
@@ -391,7 +392,7 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
  b. 檢閱 GitHub 儲存庫的預設目標儲存庫位置。那些儲存庫是從範例儲存庫中複製而來。必要的話，請變更目標儲存庫的名稱。
  ![預設目標儲存庫位置](images/toolchain_github_config.png)
 
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
 
  a. 按一下**新增工具**。
 
@@ -417,7 +418,7 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
 
 **附註：**如果您沒有要鏈結之儲存庫的管理者專用權，則整合會受到限制，因為您無法使用 Webhook。需要有 Webhook，才能在將確定推送至儲存庫時自動執行管線。如果沒有 Webhook，您必須手動啟動管線。
 
-如需相關資訊，請參閱 [GitHub ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} 及 [GitHub Issues ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}。
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的 [GitHub 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} 和 [GitHub Issues 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}。
 
 
 ## 在 Bluemix 專用上配置 GitHub Enterprise 及 Issues
@@ -425,7 +426,7 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
 
  **附註：**這些指示適用於 {{site.data.keyword.ghe_short}} 的「{{site.data.keyword.Bluemix_notm}} 專用」。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，則視內部程序而定，有些步驟可能會有所不同。
 
-{{site.data.keyword.ghe_long}} 是 Git 儲存庫的內部部署 Web 型管理服務。「專用 {{site.data.keyword.ghe_short}}」僅供「{{site.data.keyword.Bluemix_notm}} 專用」客戶使用。GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一個位置。它與您的開發儲存庫整合，因此您可以專注於重要作業。如需「專用 {{site.data.keyword.ghe_short}}」及 GitHub Issues 的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} 及 [GitHub Issues ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}。
+{{site.data.keyword.ghe_long}} 是 Git 儲存庫的內部部署 Web 型管理服務。「專用 {{site.data.keyword.ghe_short}}」僅供「{{site.data.keyword.Bluemix_notm}} 專用」客戶使用。GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一個位置。它與您的開發儲存庫整合，因此您可以專注於重要作業。如需「專用 {{site.data.keyword.ghe_short}}」及 GitHub Issues 的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} 和 IBM Cloud Garage Method 上的 [GitHub Issues 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}。
 
 您可以將 {{site.data.keyword.ghe_short}} 配置為工具鏈中的工具整合，以在公司的 [{{site.data.keyword.Bluemix_notm}} 專用](/docs/dedicated/index.html#dedicated){: new_window}實例中管理原始碼。
 
@@ -438,7 +439,7 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
  c. 檢閱新 {{site.data.keyword.ghe_short}} 儲存庫的預設名稱。必要的話，請變更新儲存庫的名稱。下列影像顯示從範例儲存庫複製的儲存庫範例。您可以使用現有儲存庫或新儲存庫。若要使用新的儲存庫，您可以建立空的儲存庫、複製儲存庫，或分出儲存庫。
  ![預設儲存庫位置](images/toolchain_ghe_config.png)
 
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
 
  a. 按一下**新增工具**。
 
@@ -476,7 +477,7 @@ Jenkins 是一種可持續建置及測試軟體的開放程式碼、伺服器型
 配置 Jenkins 來自動進行應用程式的持續建置、測試及部署：
 
 1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **Jenkins**。
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**。然後，按一下**概觀**。  
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**。然後，按一下**概觀**。  
 
  a. 按一下**新增工具**。
 
@@ -501,17 +502,17 @@ Jenkins 是一種可持續建置及測試軟體的開放程式碼、伺服器型
 
   * 選取**此專案已參數化**勾選框。
 
-  * 新增 `ICD_WEBHOOK_URL` 字串參數。
+  * 新增 `IBM_CLOUD_DEVOPS_WEBHOOK_URL` 字串參數。
 
   * 貼上產生的工具鏈 Webhook。
  ![Webhook URL](images/jenkins_webhook_url.png)
 
-  * 新增「IBM Cloud DevOps - Webhook 通知」的後建置動作，然後選取**工作已完成**勾選框。
+  * 新增 Notify OTC 的後建置動作，然後選取**工作已完成**勾選框。
  ![後建置動作](images/jenkins_postbuild_action.png)  
 
  e. 在部署工作中，完成下列步驟：
 
-  * 新增 `ICD_WEBHOOK_URL`、`CF_API`、`CF_ORG`、`CF_SPACE` 及 `CF_APP` 字串參數。這些範例顯示如何新增每一個字串參數。
+  * 新增 `IBM_CLOUD_DEVOPS_WEBHOOK_URL`、`CF_API`、`CF_ORG`、`CF_SPACE` 及 `CF_APP` 字串參數。這些範例顯示如何新增每一個字串參數。
  ![Webhook URL 字串參數](images/jenkins_set_webhook_url.png)
  ![CFI API 字串參數](images/jenkins_set_cfapi.png)
  ![CFI ORG 字串參數](images/jenkins_set_cforg.png)
@@ -523,14 +524,14 @@ Jenkins 是一種可持續建置及測試軟體的開放程式碼、伺服器型
 
   * 在**建置**欄位中，輸入這些指令來登入及使用 IBM Cloud DevOps Cloud Foundry 外掛程式，以透過 Git 確定可追蹤性將應用程式可部署對映傳送至工具鏈：![建置指令](images/jenkins_build_commands.png)    
 
-  * 在**建置**欄位中，輸入 `cf icd --create-connection $ICD_WEBHOOK_URL $CF_APP` 指令，以將應用程式可部署對映傳送至工具鏈。    
+  * 在**建置**欄位中，輸入 `cf icd --create-connection $IBM_CLOUD_DEVOPS_WEBHOOK_URL $CF_APP` 指令，以將應用程式可部署對映傳送至工具鏈。    
 
  f. 儲存變更，並回到 Jenkins 工具整合的「配置整合」頁面。
 
 1. 按一下**建立整合**。
 1. 從工具鏈中，按一下 **Jenkins** 以檢視 Jenkins 伺服器。  
 
-如需相關資訊，請參閱 [Jenkins ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window}。
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的 [Jenkins 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window}。
 
 
 ## 配置 JIRA
@@ -541,7 +542,7 @@ JIRA 是一個工具，可追蹤與您軟體相關的問題及錯誤。只要 Je
 配置 JIRA，以計劃、追蹤及交付優質程式碼：
 
 1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **JIRA**。
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**。然後，按一下**概觀**。  
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**。然後，按一下**概觀**。  
 
  a. 按一下**新增工具**。
 
@@ -578,7 +579,7 @@ JIRA 是一個工具，可追蹤與您軟體相關的問題及錯誤。只要 Je
 1. 按一下**建立整合**。
 1. 從工具鏈中，按一下 **JIRA** 以檢視您已連接之 JIRA 專案的儀表板。
 
-若要進一步瞭解，請參閱 [JIRA ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window}。
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的 [JIRA 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window}。
 
 
 ## 配置 Nexus
@@ -587,7 +588,7 @@ JIRA 是一個工具，可追蹤與您軟體相關的問題及錯誤。只要 Je
 配置「Nexus 儲存庫管理員」，以將建置構件儲存至 Nexus 儲存庫：
 
 1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **Nexus**。
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**。然後，按一下**概觀**。  
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**。然後，按一下**概觀**。  
 
  a. 按一下**新增工具**。
 
@@ -679,7 +680,7 @@ JIRA 是一個工具，可追蹤與您軟體相關的問題及錯誤。只要 Je
 
 1. 按一下**儲存**。只要管線執行，此建置工作就會使用 Nexus 工具整合中的配置資訊來連接至 Maven 儲存庫。
 
-如需相關資訊，請參閱 [Nexus ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window}。
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的 [Nexus 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window}。
 
 
 ## 配置自訂工具（其他工具）
@@ -689,7 +690,7 @@ JIRA 是一個工具，可追蹤與您軟體相關的問題及錯誤。只要 Je
 
 配置自訂工具，使其可與工具鏈上的其他工具一起運作，且可供您的團隊使用：
 
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
 
  a. 按一下**新增工具**。
 
@@ -716,7 +717,7 @@ PagerDuty 會將多個監視系統中的資料整合至單一視圖。發生問�
 配置 PagerDuty 在管線階段失敗時傳送通知，讓您可以更快速地修正問題，並減少關閉時間：
 
 1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **PagerDuty**。
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
 
  a. 按一下**新增工具**。
 
@@ -729,7 +730,46 @@ PagerDuty 會將多個監視系統中的資料整合至單一視圖。發生問�
 1. 按一下**建立整合**。
 1. 按一下 **PagerDuty** 以移至 pagerduty.com。您可以檢視與 PagerDuty 服務相關聯的事件，而 PagerDuty 服務是您在配置工具鏈的這個工具整合時所指定。
 
-若要進一步瞭解，請參閱 [PagerDuty ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}。
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的 [PagerDuty 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}。
+
+
+## 配置 Rational Team Concert
+{: #rationalteamconcert}
+
+IBM Rational Team Concert&trade; 是一種團隊協同作業工具，可整合開發作業，包括：疊代規劃、變更管理、問題報告追蹤、來源控制、建置自動化，以及報告。
+
+配置 Rational Team Concert 以在開發環境中實施 DevOps 方法及持續交付：
+
+1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **Rational Team Concert**。
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**。然後，按一下**概觀**。  
+
+ a. 按一下**新增工具**。
+
+ b. 在「工具整合」區段中，按一下 **Rational Team Concert**。
+
+1. 鍵入當您從工具鏈按一下 Rational Team Concert 卡片時所要開啟的 Rational Team Concert 伺服器 URL。
+1. 鍵入用來存取 Rational Team Concert 伺服器的使用者 ID。
+1. 鍵入用來存取 Rational Team Concert 伺服器的密碼。
+1. 如果您想要將某個 Rational Team Concert 專案區域新增至工具鏈，請遵循下列步驟：
+
+ a. 從**專案區域類型**清單，選取**現有的專案區域**。 
+
+ b. 鍵入要新增至工具鏈的專案區域名稱。
+ 
+1. 如果您想要建立 Rational Team Concert 專案區域以便新增至工具鏈，請遵循下列步驟：
+ 
+ a. 從**專案區域類型**清單，選取**新的專案區域**。 
+
+ b. 鍵入要新增至工具鏈的新專案區域名稱。
+ 
+ c. 鍵入 Rational Team Concert 處理程序範本名稱以便用來建立專案。
+ 
+1. 若要透過建立工作項目的標籤及註解來追蹤專案的程式碼變更部署，請選取**追蹤程式碼變更部署**勾選框。
+1. 按一下**建立整合**。
+1. 從您的工具鏈，按一下 **Rational Team Concert**，以開啟您配置的 Rational Team Concert 儀表板。
+
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的 [IBM Rational Team Concert 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/think/tool_rtc/){: new_window}。
+
 
 
 ## 配置 Sauce Labs
@@ -742,7 +782,7 @@ Sauce Labs 會執行功能單元測試。在 {{site.data.keyword.deliverypipelin
 配置 Sauce Labs 對多個作業系統和瀏覽器執行自動化功能測試，讓您模擬使用者可能使用網站或應用程式的方式：
 
 1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **Sauce Labs**。
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
 
  a. 按一下**新增工具**。
 
@@ -753,9 +793,9 @@ Sauce Labs 會執行功能單元測試。在 {{site.data.keyword.deliverypipelin
 1. 按一下**建立整合**。
 1. 按一下 **Sauce Labs** 以移至 saucelabs.com，然後檢視工具鏈的測試活動。
 
- **提示：**如果您已將 Sauce Labs 測試工作新增至 {{site.data.keyword.deliverypipeline}}，則可以選取服務實例。
+ **提示：**如果您已將 Sauce Labs 測試工作新增至 {{site.data.keyword.deliverypipeline}}，則可以選取服務實例。如需在管線中配置測試工作的指示，請參閱[在管線中配置 Sauce Labs 測試工作](#config_saucelabs)一節。
 
-若要進一步瞭解，請參閱 [Sauce Labs ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window}。
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的 [Sauce Labs 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window}。
 
 
 ## 配置 Slack
@@ -768,7 +808,7 @@ Slack 是一種雲端型、即時傳訊和通知系統。Slack 會提供持續�
 配置 Slack 接收來自工具整合有關工具鏈的通知（例如測試和部署活動）：
 
 1. 如果您要在建立工具鏈時配置此工具整合，請按一下「可配置的整合」區段中的 **Slack**。
-1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
+1. 如果您有工具鏈，並且要在其中新增此工具整合，請在 DevOps 儀表板的「工具鏈」頁面上按一下工具鏈，以開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
 
  a. 按一下**新增工具**。
 
@@ -786,7 +826,7 @@ Slack 是一種雲端型、即時傳訊和通知系統。Slack 會提供持續�
 
 1. 按一下 **Slack**。您可以在已配置的 Slack 頻道中檢視工具鏈的所有活動。
 
-若要進一步瞭解，請參閱 [Slack ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}。
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的 [Slack 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}。
 
 
 ## 配置 SonarQube
@@ -812,4 +852,4 @@ SonarQube 概述原始碼的整體性能及品質，以及強調顯示在新程�
 1. 按一下**建立整合**。
 1. 從工具鏈中，按一下 **SonarQube** 以檢視您已連接之 SonarQube 實例的儀表板。
 
-若要進一步瞭解，請參閱 [SonarQube ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window}。
+若要進一步瞭解，請參閱 IBM Cloud Garage Method 上的 [SonarQube 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window}。

@@ -41,7 +41,7 @@ lastupdated: "2017-4-11"
 1. 메뉴 표시줄에서 **지원**을 클릭한 후에 **티켓 추가**를 클릭하십시오. 
 1. 기술 지원이 필요한 항목을 표시하는 양식을 채우십시오. 
 
-IBM {{site.data.keyword.Bluemix_notm}} 지원 티켓 열기 또는 지원 레벨과 티켓 심각도에 대한 자세한 정보는 [지원 문의](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)를 참조하십시오. 
+IBM {{site.data.keyword.Bluemix_notm}} 지원 티켓 열기 또는 지원 레벨과 티켓 심각도에 대한 자세한 정보는 [지원 문의](https://console.bluemix.net/docs/support/index.html#contacting-support)를 참조하십시오. 
 
 
 ## Bluemix에 대한 지원

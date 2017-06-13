@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-5-8"
+lastupdated: "2017-6-1"
 ---
 
 {:new_window: target="_blank"}
@@ -37,7 +37,7 @@ lastupdated: "2017-5-8"
 ### Eclipse Orion Web IDE
 1. 按一下 **Reference** 清單，然後展開 **local**。
 
-2. 在要修改的分支旁邊，按一下移出圖示 <img  class="inline" src="./images/checkout.png" alt="「移出」圖示">。
+2. 針對要修改的分支，按一下移出圖示 <img  class="inline" src="./images/checkout.png" alt="「移出」圖示">。
 
 1. 確定您的已選取分支顯示在 **Reference** 清單中。
 
@@ -66,7 +66,7 @@ lastupdated: "2017-5-8"
 
 1. 按一下 **Reference** 清單，然後展開 **local**。
 
-2. 在要移除的本端分支旁，按一下 **Delete** <img class="inline"  src="./images/delete.png" alt="「刪除」圖示">。
+2. 針對要移除的本端分支，按一下**刪除** <img class="inline"  src="./images/delete.png" alt="「刪除」圖示">。
 
 ### Git 終端機
 1. 鍵入 `git branch -d <branchname>`，然後按 Enter 鍵。
@@ -80,7 +80,7 @@ lastupdated: "2017-5-8"
 
 ### Eclipse Orion Web IDE
 
-1. 在 Working Directory Changes 區段的 Outgoing 區段中，按一下 **Push** 旁的箭頭。
+1. 在 Working Directory Changes 區段的 Outgoing 區段中，按一下 **Push** 的箭頭。
 2. 按一下 **Force Push Branch**。
 3. 確認警告。
 
@@ -160,7 +160,7 @@ lastupdated: "2017-5-8"
 
 2. 按一下確定，以檢視其詳細資料。
 
-3. 按一下檔案旁的 **>**，然後檢閱檔案的變更。
+3. 若要檢閱檔案的變更，請按一下 **>**。
 
   **附註：**如果確定已建立行的變更，則原始行會加上粉紅色陰影，而新行會加上綠色陰影。同樣地，確定所新增的行會加上綠色陰影，而確定所移除的行會加上粉紅色陰影。
 
@@ -249,7 +249,7 @@ lastupdated: "2017-5-8"
 
 1. 在 History 下，選取某個確定。
 
-2. 在頁面右側的確定摘要上方，按一下回復圖示 <img class="inline" src="./images/revert.png" alt="「回復」圖示">。
+2. 按一下回復圖示 <img class="inline" src="./images/revert.png" alt="「回復」圖示">。
 
 ### Git 終端機
 
@@ -273,7 +273,7 @@ lastupdated: "2017-5-8"
 
 1. 在 Incoming 區段中，按一下 **Merge** 圖示 <img  class="inline" src="./images/mergeicon.png" alt="Incoming 區段中的 Merge 圖示">
 
-1. 在 **Reference** 清單中，按一下您剛剛將變更合併至其中的分支旁的移出圖示。
+1. 在 **Reference** 清單中，針對您剛剛將變更合併至其中的分支，按一下移出圖示。
 
 1. 如果您要遞送變更，請按一下 **Push**。否則，此時，您可以建立測試部署，以確定每項作業都如預期運作。
 

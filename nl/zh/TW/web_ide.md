@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-25"
+lastupdated: "2017-6-1"
 
 ---
 
@@ -25,7 +25,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行�
 
 {{site.data.keyword.webide}} 可進行自訂，以選擇色系、技術工具，以及符合開發需求的設定。若要檢視及修改設定，請從左邊的功能表中，按一下**設定**圖示 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="「設定」圖示">。
 
-如果您經常需要在編輯時變更特定設定，則可以從**本端編輯器設定**圖示 <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="「本端編輯器設定」圖示"> 快速存取這些設定。 
+如果您經常需要在編輯時變更特定設定，則可以從**本端編輯器設定**圖示 <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="「本端編輯器設定」圖示"> 快速存取這些設定。
 
 ![本端編輯器設定](images/webide_local_editor_settings_light.png)
 
@@ -35,7 +35,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行�
 
 2. 按一下**編輯器設定**。
 
-3. 若要在**本端編輯器設定**功能表包含或排除設定，請按一下每一個設定旁的星星。
+3. 若要在**本端編輯器設定**功能表包含或排除設定，請按一下每一個設定的星星。
 
 ![「編輯器設定」切換](images/webide_editor_settings_toggle_light.png)
 
@@ -62,14 +62,14 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行�
  2. 在檔案導覽器中，按一下檔案。
 
 ### 鍵盤快速鍵
-只能透過鍵盤快速鍵存取 {{site.data.keyword.webide}} 中的大部分指令。
+您也可以透過鍵盤快速鍵存取 {{site.data.keyword.webide}} 中的許多指令。
 
 若要查看編輯器中的鍵盤快速鍵清單，請按 Alt+Shift+?。如果您是使用 Mac OS，請按 Ctrl+Shift+?。
 
 ## 管理原始碼
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} 是與原始碼管理工具整合。若要使用 Git 儲存庫，請按一下 **Git 儲存庫**圖示 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="「Git 儲存庫」圖示">。 
+{{site.data.keyword.webide}} 是與原始碼管理工具整合。若要使用 Git 儲存庫，請按一下 **Git 儲存庫**圖示 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="「Git 儲存庫」圖示">。
 
  **提示**：如果您要搭配使用 {{site.data.keyword.webide}} 與開放式工具鏈，則工作區會預先移入 GitHub、{{site.data.keyword.ghe_short}} 或 Git Repos and Issue Tracking 儲存庫。會強調顯示與現行工具鏈相關聯的儲存庫。
 
@@ -77,20 +77,33 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行�
 ## 從工作區部署應用程式
 {: #deploy}
 
-1. 若要部署應用程式，請從執行列中選取或建立啟動配置。
-1. 按一下部署圖示 <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="「部署」圖示">。使用您工作區的現行內容以及啟動配置中所定義的環境，即可部署您應用程式的實例。 
+1. 若要部署應用程式，請從執行列中選取或建立啟動配置。![執行列](images/webide_runbar_light.png)   
+1. 按一下部署圖示 <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="「部署」圖示">。使用您工作區的現行內容以及啟動配置中所定義的環境，即可部署您應用程式的實例。
 2. 部署應用程式之後，即可使用執行列來停止、重新啟動或除錯應用程式、檢視日誌，以及執行其他作業。
-![執行列](images/webide_runbar_light.png)    
 
-<!-- 3/6/2016: bl commands don't work with V2/CD 
+
+<table>
+<tr><td><img src="./images/stop_button.png"  alt="停止圖示"></td><td>停止應用程式</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="開啟應用程式 URL 圖示"></td><td> 開啟已部署的應用程式</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="檢視日誌圖示"></td><td>檢視已部署應用程式的日誌</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="開啟儀表板圖示"></td><td>開啟應用程式的儀表板</td></tr>
+</table>
+
+如果您正在開發 Node.js 應用程式，請啟用「即時編輯」模式：<img  src="./images/enable_live_edit.png"  alt="啟用即時編輯調節器">
+
+<table><tr><td><img src="./images/live_edit_restart.png"  alt="「即時編輯」重新啟動圖示"></td><td>在啟用「即時編輯」模式的情況下，快速重新啟動應用程式，而不重新部署</td></tr>
+<tr><td> <img src="./images/debug_icon.png"  alt="除錯圖示"></td><td>在啟用「即時編輯」模式的情況下，存取除錯器</td></tr>
+</table>
+
+<!-- 3/6/2016: bl commands don't work with V2/CD
 ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}. 
+To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}.
 
-### Before you begin 
+### Before you begin
 
-Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
+Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
 
 ### Synchronizing your local environment with {{site.data.keyword.Bluemix_notm}}
 {: #edit_local_download}
@@ -104,7 +117,7 @@ Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line i
 	{: pre}
 
 3. When you are prompted, enter your IBMid and password.
-4. View a list of your {{site.data.keyword.Bluemix_notm}} projects: 
+4. View a list of your {{site.data.keyword.Bluemix_notm}} projects:
 
 	```
 	bl projects
@@ -135,11 +148,61 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 2. Use the launch configuration that you created in the {{site.data.keyword.webide}}. After you select the launch configuration, the Desktop Sync feature is enabled in your local environment. In the command-line window that you just opened, you can view the app's URL, the debug URL, the manage URL, and view the {{site.data.keyword.Bluemix_live_notm}} state.
 
-3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace. 
+3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace.
 
 ### Disabling the Desktop Sync feature
 
 1. In the second command-line window, enter `bl stop`.
 2. In the first command-line window, enter `q`.
 
---> 
+-->
+
+## 支援的語言
+{: #supported_languages}
+
+Eclipse Orion {{site.data.keyword.webide}} 提供 JavaScript、HTML、CSS 及 Markdown 檔案的內容輔助、工具提示、預覽、驗證及語法強調顯示。也支援下列檔案類型的語法強調顯示：
+
+<table>
+<tr>
+<td>
+<ul><li>Arduino
+</li><li>C</li>
+<li>C#
+</li><li>C++
+</li><li>CoffeeScript
+</li><li>CSHTML
+</li><li>嵌入式 JavaScript (ejs)
+</li><li>Erlang
+</li><li>Go
+</li><li>HTML 抽象標記語言 (Haml)
+</li><li>Jade
+</li><li>Java
+</li><li>JSON
+</li><li>Less  
+</li><li>Lua  
+</li><li>Objective-C
+</li><li>PHP
+</li><li>Python</li></ul>
+</td>
+<td>
+<ul><li>Ruby
+</li><li>Sass/SCSS
+</li><li>SQL
+</li><li>Swift
+</li><li>TypeScript
+</li><li>Visual Basic (vb)
+</li><li>VMHTML
+</li><li>XHTML
+</li><li>XML
+</li><li>XQuery
+</li><li>YAML
+</li><li>啟動檔案
+</li><li>Dockerfile
+</li><li>gitignore
+</li><li>git config
+</li><li>cfignore
+</li><li>properties
+</ul>
+</td>
+</tr>
+</table>

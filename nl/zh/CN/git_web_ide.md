@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-5-8"
+lastupdated: "2017-6-1"
 ---
 
 {:new_window: target="_blank"}
@@ -37,7 +37,7 @@ lastupdated: "2017-5-8"
 ### Eclipse Orion Web IDE
 1. 单击**引用**列表，并展开**本地**。
 
-2. 单击要修改的分支旁边的“检出”图标 <img  class="inline" src="./images/checkout.png" alt="“检出”图标">。
+2. 针对要修改的分支，单击检出图标 <img  class="inline" src="./images/checkout.png" alt="检出图标">。
 
 1. 确保所选分支显示在**引用**列表中。
 
@@ -66,7 +66,7 @@ lastupdated: "2017-5-8"
 
 1. 单击**引用**列表，并展开**本地**。
 
-2. 单击要除去的本地分支旁边的**删除** <img class="inline"  src="./images/delete.png" alt="“删除”图标">。
+2. 针对要除去的本地分支，单击**删除** <img class="inline"  src="./images/delete.png" alt="删除图标">。
 
 ### Git 终端
 1. 输入 `git branch -d <branchname>`，然后按 Enter 键。
@@ -80,7 +80,7 @@ lastupdated: "2017-5-8"
 
 ### Eclipse Orion Web IDE
 
-1. 在“工作目录更改”部分的“出局”部分中，单击**推送**旁边的箭头。
+1. 在“工作目录更改”部分的“出局”部分中，单击**推送**的箭头。
 2. 单击**强制推送分支**。
 3. 确认警告。
 
@@ -161,8 +161,7 @@ lastupdated: "2017-5-8"
 
 2. 通过单击提交来查看该提交的详细信息。
 
-3. 单击文件旁边的 **>**，然后复查该文件的更改。
-
+3. 要复查文件的更改，请单击**>**。
 
   **注**：如果提交引入了对行的更改，那么原始行将为渐变粉，新行将为渐变绿。与此类似，通过提交所添加的行将为渐变绿，通过提交所除去的行将为渐变粉。
 
@@ -251,7 +250,7 @@ lastupdated: "2017-5-8"
 
 1. 在“历史记录”下，选择提交。
 
-2. 单击页面右侧提交摘要上方的“还原”图标 <img class="inline" src="./images/revert.png" alt="“还原”图标">。
+2. 单击还原图标 <img class="inline" src="./images/revert.png" alt="还原图标">。
 
 ### Git 终端
 
@@ -275,14 +274,14 @@ lastupdated: "2017-5-8"
 
 1. 在“入局”部分中，单击**合并**图标 <img  class="inline" src="./images/mergeicon.png" alt="“入局”部分中的“合并”图标">
 
-1. 在**引用**列表中，单击刚才将更改合并到其中的分支旁边的“检出”图标。
+1. 在**引用**列表中，单击刚才将更改合并到其中的分支的检出图标。
 
 1. 如果要传递更改，请单击**推送**。否则，此时可以创建测试部署，以确保一切按预期运行。
 
 ### Git 终端
 1. 确定要合并的分支。
 
-2. 检出目标分支。 有关更多信息，请参阅[使用本地分支](#start_working_on_branch)。
+2. 检出目标分支。有关更多信息，请参阅[使用本地分支](#start_working_on_branch)。
 
 3. 输入 `git merge <source_name>`，然后按 Enter 键。
 

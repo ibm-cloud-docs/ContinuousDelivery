@@ -317,11 +317,6 @@ For more information about using the Globalization Pipeline service from the Blu
 
 6. 重复上述步骤，以针对包含 IBM Container Service、IBM Security Static Analyzer 和 IBM Globalization 作业的其他阶段，发送 HipChat 消息。
 
-## 使用 Active Deploy 在管道中实现零停机时间部署
-{: #deliverypipeline_activedeploy}
-
-您可以使用 Delivery Pipeline 中的 IBM® Active Deploy 服务，实现应用程序或容器组的自动连续部署。有关入门的更多信息，请参阅 [Active Deploy 文档](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}。
-
 ## 使用管道构建和部署容器映像
 {: #deliverypipeline_containers}
 

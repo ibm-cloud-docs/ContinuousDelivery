@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-6-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -53,10 +53,10 @@ lastupdated: "2017-3-16"
 
 您还可以从构建历史记录页面通过以下两种方式之一来请求随需应变构建和部署：
 * 将构建拖动到已配置阶段下的框中。
-* 在构建旁边，单击**发送到**图标，然后选择要部署到的空间。
+* 在“上次执行结果”部分中，单击**发送到**图标，然后选择要部署到的空间。
 ![具有此构建的执行阶段图标](images/deploy_to.png)
 
-要取消正在运行的阶段，请在该阶段上单击**查看日志和历史记录**。在作业列表中，单击正在运行的作业号，然后单击**取消**。您还可以通过单击作业，再单击**取消**，或单击其阶段上作业旁边的**停止**图标，单独取消作业。
+要取消正在运行的阶段，请在该阶段上单击**查看日志和历史记录**。在作业列表中，单击正在运行的作业号，然后单击**取消**。您还可以通过单击作业，再单击**取消**，或单击其阶段上作业的**停止**图标，单独取消作业。
 
 ## 部署应用程序
 {: #deliverypipeline_deploy}

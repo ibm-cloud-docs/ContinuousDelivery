@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+lastupdated: "2017-5-25"
 
 ---
 
@@ -26,8 +26,7 @@ lastupdated: "2017-4-28"
 
 배치 작업은 빌드 작업의 결과물을 가져와 IBM Containers 또는 {{site.data.keyword.Bluemix_notm}}와 같은 Cloud Foundry 서버에 배치합니다. 
 
-하나 또는 다수의 지역과 서비스에 배치할 수 있습니다. 예를 들면, {{site.data.keyword.deliverypipeline}}이 하나 이상의 서비스를 사용하고 한 지역에서 테스트되며 여러 지역의 프로덕션에 배치되도록 설정할 수 있습니다. 자세한 정보는
-				[지역](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}을 참조하십시오.
+하나 또는 다수의 지역과 서비스에 배치할 수 있습니다. 예를 들면, {{site.data.keyword.deliverypipeline}}이 하나 이상의 서비스를 사용하고 한 지역에서 테스트되며 여러 지역의 프로덕션에 배치되도록 설정할 수 있습니다. 자세한 정보는 [지역](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}을 참조하십시오.
 
 오픈 도구 체인에서 여러 개의 파이프라인을 사용하는 경우에는 컴포지트 파이프라인을 작성하여 단일 위치에서 모든 파이프라인의 배치를 관리할 수 있습니다. 
 
@@ -39,14 +38,14 @@ lastupdated: "2017-4-28"
 1. {{site.data.keyword.Bluemix_notm}} 메뉴 표시줄의 메뉴에서 **서비스**를 클릭한 후 **DevOps**를 클릭하십시오.
 1. **파이프라인**을 클릭한 후 **파이프라인 작성**을 클릭하십시오.
 
-Cloud Foundry 애플리케이션을 배치하도록 구성된 [파이프라인 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window}을 수행하려면 다음 단계를 따르십시오. 
+Cloud Foundry 애플리케이션을 배치하도록 구성된 [파이프라인 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window}을 수행하려면 다음 단계를 따르십시오. 
 
 1. **Cloud Foundry**를 클릭하십시오.
 1. 파이프라인에 다른 이름을 사용하려면 파이프라인의 기본 이름을 변경하십시오. 
 1. 애플리케이션에 다른 이름을 사용하려면 애플리케이션의 기본 이름을 변경하십시오. 이 이름은 파이프라인이 배치하는 대상 애플리케이션입니다.
-1. 도구 체인이 없는 경우에는 기본 이름의 도구 체인이 작성됩니다. 도구 체인에 다른 이름을 사용하려면 도구 체인의 기본 이름을 변경하십시오. 도구 체인을 사용하면 기타 도구 및 서비스와 통합하여 파이프라인의 기능을 확장할 수 있습니다.도구 체인에 대한 자세한 정보는 [도구 체인 관련 작업](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}을 참조하십시오. 
+1. 도구 체인이 없는 경우에는 기본 이름의 도구 체인이 작성됩니다. 도구 체인에 다른 이름을 사용하려면 도구 체인의 기본 이름을 변경하십시오. 도구 체인을 사용하면 기타 도구 및 서비스와 통합하여 파이프라인의 기능을 확장할 수 있습니다.도구 체인에 대한 자세한 정보는 [도구 체인 작성](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}을 참조하십시오. 
 
- **팁**: 파이프라인과 도구 체인은 조직(orgs)에 속합니다. 도구 체인이 있는 조직에 속하는 경우, 사용자는 이와 연관된 도구 체인의 액세스 제어 목록에 추가될 수 있습니다. 도구 체인의 액세스 제어 목록에 추가되면 직접 작성하지 않았어도 해당 도구 체인 및 이와 연관된 파이프라인을 사용할 수 있습니다. 도구 체인의 액세스 제어에 대한 자세한 정보는 [액세스 관리](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}를 참조하십시오. 
+ **팁**: 파이프라인과 도구 체인은 조직(orgs)에 속합니다. 도구 체인이 있는 조직에 속하는 경우, 사용자는 이와 연관된 도구 체인의 액세스 제어 목록에 추가될 수 있습니다. 도구 체인의 액세스 제어 목록에 추가된 후에는 직접 작성하지 않았어도 해당 도구 체인과 연관된 파이프라인을 볼 수 있습니다. 관리 권한이 부여되면 도구 체인을 수정하고 삭제할 수도 있습니다. 도구 체인의 액세스 제어에 대한 자세한 정보는 [액세스 관리](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}를 참조하십시오. 
 
 1. 사용할 도구 체인을 선택하거나 작성하려는 새 도구 체인의 이름을 입력하십시오.
 1. Git 제공자를 선택하십시오. 
@@ -66,7 +65,7 @@ Cloud Foundry 애플리케이션을 배치하도록 구성된 [파이프라인 �
  ![파이프라인 카드](images/cd_pipeline.png)
 1. 컴포지트 파이프라인이 포함된 도구 체인에서 파이프라인을 작성한 경우에는 새 파이프라인이 컴포지트 파이프라인에 추가됩니다. 새 파이프라인의 배치 태스크가 포함되도록 배치 플랜을 수정하십시오. [Delivery Pipeline 작성 태스크](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}를 참조하십시오. 
 
-사전 구성된 단계 없이 [비어 있는 파이프라인 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window}을 작성하려면 다음을 수행하십시오. 
+사전 구성된 단계 없이 [비어 있는 파이프라인 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window}을 작성하려면 다음을 수행하십시오. 
 
 1. **사용자 정의**를 클릭하십시오.
 1. 파이프라인에 다른 이름을 사용하려면 파이프라인의 기본 이름을 변경하십시오. 

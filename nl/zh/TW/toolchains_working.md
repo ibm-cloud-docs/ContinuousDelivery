@@ -23,9 +23,9 @@ lastupdated: "2017-4-28"
 ##從範本建立工具鏈   
 {: #creating_a_toolchain_from_a_template}
 
-您可以使用範本作為起點來[建立工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/devops/create){: new_window}，而此工具鏈包含一組特定的工具整合。進一步瞭解如何使用 [IBM Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/category/tools){:new_window} 中的範本。
+您可以使用範本作為起點來[建立工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/devops/create){: new_window}，而此工具鏈包含一組特定的工具整合。進一步瞭解如何使用 [IBM Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/category/tools){:new_window} 中的範本。
 
-1. 如果您使用「{{site.data.keyword.Bluemix_notm}} 公用」，請登入 [{{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://console.ng.bluemix.net){:new_window}。
+1. 如果您使用「{{site.data.keyword.Bluemix_notm}} 公用」，請登入 [{{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://console.bluemix.net){:new_window}。
 1. 如果您使用「{{site.data.keyword.Bluemix_notm}} 專用」，請登入 {{site.data.keyword.Bluemix_notm}} 的「專用」環境。
 1. 從 {{site.data.keyword.Bluemix_notm}} 功能表列的功能表中，按一下**服務**，然後按一下 **DevOps**。
 1. 在 DevOps 儀表板的**工具鏈**頁面上，按一下**建立工具鏈**。

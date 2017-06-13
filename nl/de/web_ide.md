@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-25"
+lastupdated: "2017-6-1"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-4-25"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Mit der Eclipse Orion-Web-IDE entwickeln 
+# Mit der Eclipse Orion-Web-IDE entwickeln
 {: #web_ide}
 
 Die Eclipse Orion-{{site.data.keyword.webide}} ist eine browserbasierte Entwicklungsumgebung, in der Sie Anwendungen für das Web entwickeln können. Für die Entwicklung in JavaScript, HTML und CSS stehen Content-Assist-Funktionen, Codevervollständigung und Fehlerprüfung zur Verfügung. Die {{site.data.keyword.webide}} ist mit nahezu jeder Programmiersprache verwendbar und bietet Syntaxhervorhebung für die meisten Dateitypen. Die Quellcodeverwaltung ist integriert und Sie können Code lokal bereitstellen, um Ihre Apps zu testen und zu debuggen.
@@ -25,7 +25,7 @@ Als weiterer wesentlicher Vorteil kommt hinzu, dass {{site.data.keyword.webide}}
 
 Die {{site.data.keyword.webide}} ist konfigurierbar, d. h. Sie können Farbschemen, technische Tools und Einstellungen wählen, die Ihren Entwicklungsanforderungen entsprechen. Um die Einstellungen anzuzeigen und zu ändern, klicken Sie links im Menü auf das Symbol **Einstellungen** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="Symbol 'Einstellungen'">.
 
-Wenn Sie bestimmte Einstellungen beim Bearbeiten häufig ändern müssen, können Sie auf diese Einstellungen schnell über das Symbol **Lokale Einstellungen für Editor** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Symbol 'Lokale Einstellungen für Editor"> zugreifen. 
+Wenn Sie bestimmte Einstellungen beim Bearbeiten häufig ändern müssen, können Sie auf diese Einstellungen schnell über das Symbol **Lokale Einstellungen für Editor** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Symbol 'Lokale Einstellungen für Editor"> zugreifen.
 
 ![Lokale Einstellungen für Editor](images/webide_local_editor_settings_light.png)
 
@@ -35,7 +35,7 @@ Standardmäßig werden die Einstellungen für den Editorstil und die Schriftgrö
 
 2. Klicken Sie auf **Editoreinstellungen**.
 
-3. Um eine Einstellung in das Menü **Lokale Einstellungen für Editor** aufzunehmen oder aus diesem zu entfernen, klicken Sie jeweils auf den Stern neben der betreffenden Einstellung.
+3. Um eine Einstellung in das Menü **Lokale Einstellungen für Editor** aufzunehmen oder aus diesem zu entfernen, klicken Sie für jede Einstellung jeweils auf den Stern.
 
 ![Umschalter für Editoreinstellungen](images/webide_editor_settings_toggle_light.png)
 
@@ -62,14 +62,14 @@ Der zweite Abschnitt ist das Editorteilfenster. Der Editor bietet verschiedene C
  2. Klicken Sie im Dateinavigator auf eine Datei.
 
 ### Tastenkombinationen
-Die meisten Befehle in der {{site.data.keyword.webide}} können nur über die Tastatur ausgeführt werden.
+Viele Befehle in der {{site.data.keyword.webide}} können auch über die Tastatur ausgeführt werden.
 
 Verwenden Sie die Tastenkombination Alt+Umschalttaste+?, um eine Liste mit den Tastenbelegungen anzuzeigen. Wenn Sie Mac OS verwenden, lautet die Tastenkombination Strg+Umschalttaste+?.
 
 ## Quellcode verwalten
 {: #sourcecontrol}
 
-Die {{site.data.keyword.webide}} ist mit Quellcodeverwaltungstools integriert. Um mit dem Git-Repository zu arbeiten, klicken Sie auf das Symbol **Git-Repository** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="Symbol 'Git-Repository'">. 
+Die {{site.data.keyword.webide}} ist mit Quellcodeverwaltungstools integriert. Um mit dem Git-Repository zu arbeiten, klicken Sie auf das Symbol **Git-Repository** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="Symbol 'Git-Repository'">.
 
  **Tipp**: Wenn Sie die {{site.data.keyword.webide}} in Verbindung mit offenen Toolchains verwenden, werden in Ihrem Arbeitsbereich bereits Ihre GitHub-, {{site.data.keyword.ghe_short}}- oder Git Repos and Issue Tracking-Repositorys angezeigt. Die Repositorys, die Ihrer aktuellen Toolchain zugeordnet sind, sind hervorgehoben.
 
@@ -78,19 +78,32 @@ Die {{site.data.keyword.webide}} ist mit Quellcodeverwaltungstools integriert. U
 {: #deploy}
 
 1. Um die App bereitzustellen, wählen Sie in der Ausführungsleiste entweder eine Startkonfiguration aus oder erstellen Sie ein solche.
-1. Klicken Sie auf das Symbol für die Bereitstellung <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="Symbol 'Bereitstellung'">. Bei der Bereitstellung einer Instanz Ihrer App werden der aktuelle Inhalt Ihres Arbeitsbereichs und die Umgebung verwendet, die in Ihrer Startkonfiguration definiert sind. 
+   ![Ausführungsleiste](images/webide_runbar_light.png)   
+1. Klicken Sie auf das Symbol für die Bereitstellung <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="Symbol 'Bereitstellung'">. Bei der Bereitstellung einer Instanz Ihrer App werden der aktuelle Inhalt Ihres Arbeitsbereichs und die Umgebung verwendet, die in Ihrer Startkonfiguration definiert sind.
 2. Wenn Ihre App bereitgestellt wurde, können Sie die Ausführungsleiste verwenden, um Ihre App zu stoppen, erneut zu starten oder zu debuggen, um Protokolle anzuzeigen usw.
-![Ausführungsleiste](images/webide_runbar_light.png)    
 
-<!-- 3/6/2016: bl commands don't work with V2/CD 
+<table>
+<tr><td><img src="./images/stop_button.png"  alt="Symbol 'Stoppen'"></td><td>Stoppt die App.</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="Symbol 'App-URL öffnen'"></td><td> Öffnet die bereitgestellte App.</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="Symbol 'Protokolle anzeigen'"></td><td>Zeigt die Protokolle der bereitgestellten App an.</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="Symbol 'Dashboard öffnen'"></td><td>Öffnet das Dashboard der App.</td></tr>
+</table>
+
+Wenn Sie eine Node.js-App entwickeln, aktivieren Sie den Modus 'Live Edit' für die Livebearbeitung: <img  src="./images/enable_live_edit.png"  alt="Schieberegler für die Aktivierung des Modus 'Live Edit'">
+
+<table><tr><td><img src="./images/live_edit_restart.png"  alt="Symbol zum Neustarten im aktivierten Modus 'Live Edit'"></td><td>Der aktivierte Modus 'Live Edit' ermöglicht den raschen Neustart der App ohne erneute Bereitstellung.</td></tr>
+<tr><td> <img src="./images/debug_icon.png"  alt="Symbol 'Debuggen'"></td><td>Ermöglicht bei aktiviertem Modus 'Live Edit' den direkten Zugriff auf den Debugger.</td></tr>
+</table>
+
+<!-- 3/6/2016: bl commands don't work with V2/CD
 ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}. 
+To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}.
 
-### Before you begin 
+### Before you begin
 
-Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
+Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
 
 ### Synchronizing your local environment with {{site.data.keyword.Bluemix_notm}}
 {: #edit_local_download}
@@ -104,7 +117,7 @@ Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line i
 	{: pre}
 
 3. When you are prompted, enter your IBMid and password.
-4. View a list of your {{site.data.keyword.Bluemix_notm}} projects: 
+4. View a list of your {{site.data.keyword.Bluemix_notm}} projects:
 
 	```
 	bl projects
@@ -135,11 +148,61 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 2. Use the launch configuration that you created in the {{site.data.keyword.webide}}. After you select the launch configuration, the Desktop Sync feature is enabled in your local environment. In the command-line window that you just opened, you can view the app's URL, the debug URL, the manage URL, and view the {{site.data.keyword.Bluemix_live_notm}} state.
 
-3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace. 
+3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace.
 
 ### Disabling the Desktop Sync feature
 
 1. In the second command-line window, enter `bl stop`.
 2. In the first command-line window, enter `q`.
 
---> 
+-->
+
+## Unterstützte Sprachen
+{: #supported_languages}
+
+Die Eclipse Orion {{site.data.keyword.webide}} bietet Content-Assist, QuickInfo, Vorschaufunktionen, Validierung und Syntaxhervorhebung für JavaScript-, HTML-, CSS- und Markdown-Dateien. Für die folgenden Dateitypen wird die Funktion der Syntaxhervorhebung ebenfalls unterstützt:
+
+<table>
+<tr>
+<td>
+<ul><li>Arduino
+</li><li>C</li>
+<li>C#
+</li><li>C++
+</li><li>CoffeeScript
+</li><li>CSHTML
+</li><li>Embedded JavaScript (ejs)
+</li><li>Erlang
+</li><li>Go
+</li><li>HTML abstraction markup language (Haml)
+</li><li>Jade
+</li><li>Java
+</li><li>JSON
+</li><li>Less  
+</li><li>Lua  
+</li><li>Objective-C
+</li><li>PHP
+</li><li>Python</li></ul>
+</td>
+<td>
+<ul><li>Ruby
+</li><li>Sass/SCSS
+</li><li>SQL
+</li><li>Swift
+</li><li>TypeScript
+</li><li>Visual Basic (vb)
+</li><li>VMHTML
+</li><li>XHTML
+</li><li>XML
+</li><li>XQuery
+</li><li>YAML
+</li><li>Launch file 	
+</li><li>Dockerfile
+</li><li>gitignore
+</li><li>git config
+</li><li>cfignore
+</li><li>properties
+</ul>
+</td>
+</tr>
+</table>

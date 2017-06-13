@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-10"
+lastupdated: "2017-6-5"
 
 ---
 
@@ -16,6 +16,14 @@ lastupdated: "2017-5-10"
 
 사용자는 프로젝트를 업그레이드할 수 있으며, 또는 프로젝트가 자동으로 업그레이드될 때까지 대기할 수 있습니다. 최상의 환경을 위해서는 [필수 소프트웨어](#upgrade_prereqs)를 만족하는지 확인하고 도구 체인의 이름이 무엇인지와 이 도구 체인이 작성되는 조직을 제어할 수 있도록 가급적 빨리 프로젝트를 업그레이드하십시오.
 {: shortdesc}
+
+**자주 묻는 질문(FAQ)**
+
+- [내 JazzHub 프로젝트는 영국 지역과 연관되어 있지만 내 도구 체인은 미국 남부 지역에 있습니다. 이런 경우 어떻게 작업하게 됩니까?](#faq_region)
+- [업그레이드 시에 Track &amp; Plan의 내 작업 항목 및 대시보드에 무슨 일이 발생하게 됩니까?](#faq_tp)
+- [업그레이드 시에 내 코드 저장소에 무슨 일이 발생하게 됩니까?](#faq_repo)
+- [도구 체인으로 업그레이드 시에 내 프로젝트의 빌드 정의에 무슨 일이 발생하게 됩니까?](#faq_build)
+- [도구 체인으로 업그레이드될 내 프로젝트에 대한 조직을 작성해야 합니다. 조직을 작성하기 전에 우선 내 계정에 신용카드를 추가해야 하는 것을 알고 있습니다. 내 신용카드가 청구됩니까?](#faq_charges)
 
 ## 도구 체인
 {: #compare_toolchains}
@@ -57,6 +65,14 @@ lastupdated: "2017-5-10"
 
 프로젝트에서 JazzHub에서 호스팅된 Git 저장소를 사용하는 경우 업그레이드를 시작하고 나면 도구 체인으로 이동된 데이터의 무결성을 위해 저장소가 잠깁니다. 도구 체인을 삭제하여 업그레이드를 되돌리면 JazzHub의 저장소가 잠금 해제됩니다.
 
+업그레이드 프로세스에서 각 저장소 유형을 취급하는 방법에 대한 모든 세부사항은 다음 표를 참조하십시오.
+
+|프로젝트 저장소 |프로젝트 유형	|도구 체인 저장소 |
+|:----------|:------------------------------|:------------------|
+|github.com 		|사설 또는 공용 		|{{site.data.keyword.Bluemix_notm}} Public과 동일한 github.com 저장소.	|
+|hub.jazz.net/git		|사설 또는 공용 		|{{site.data.keyword.Bluemix_notm}} Public이 있는 {{site.data.keyword.gitrepos}}의 새 저장소.	|
+{: caption="표 1. 도구 체인 저장소에 맵핑된 프로젝트 저장소" caption-side="top"}
+
 ## 업그레이드 프로세스 시작
 {: #start_upgrade}
 
@@ -71,13 +87,7 @@ lastupdated: "2017-5-10"
 
    업그레이드 프로세스의 개요를 보려면 해당 페이지의 설명을 읽으십시오. 도구 체인에는 프로젝트의 파이프라인과 동일한 단계 및 작업이 포함된 새 파이프라인이 포함됩니다. 또한 도구 체인에는 {{site.data.keyword.contdelivery_short}}에서 실행되는 Eclipse Orion {{site.data.keyword.webide}}에 대한 포인터가 포함됩니다. 
 
-   이 예에서는 프로젝트가 github.com의 공용 저장소를 사용하므로 도구 체인이 동일한 GitHub 저장소에 연결됩니다. 프로젝트가 JazzHub에서 호스팅된 Git 저장소를 사용하는 경우 해당 저장소의 컨텐츠가 {{site.data.keyword.contdelivery_short}}의 일부인 {{site.data.keyword.gitrepos}}의 새 저장소에 복제됩니다. 각 저장소 유형을 취급하는 방법에 대한 자세한 정보는 다음 테이블을 참조하십시오.
-
-|프로젝트 저장소 |프로젝트 유형	|도구 체인 저장소 |
-|:----------|:------------------------------|:------------------|
-|github.com 		|사설 또는 공용 		|{{site.data.keyword.Bluemix_notm}} Public과 동일한 github.com 저장소.	|
-|hub.jazz.net/git		|사설 또는 공용 		|{{site.data.keyword.Bluemix_notm}} Public이 있는 {{site.data.keyword.gitrepos}}의 새 저장소.	|
-{: caption="표 1. 도구 체인 저장소에 맵핑된 프로젝트 저장소" caption-side="top"}
+   이 예에서는 프로젝트가 github.com의 공용 저장소를 사용하므로 도구 체인이 동일한 GitHub 저장소에 연결됩니다. 프로젝트가 JazzHub에서 호스팅된 Git 저장소를 사용하는 경우 해당 저장소의 컨텐츠가 {{site.data.keyword.contdelivery_short}}의 일부인 {{site.data.keyword.gitrepos}}의 새 저장소에 복제됩니다. 
 
 2. 도구 체인을 사용자 정의하기 위해 일부 설정을 구성할 수 있습니다. 
 
@@ -171,3 +181,54 @@ lastupdated: "2017-5-10"
 {: #upgrade_troubleshoot}
 
 질문이나 문제점이 있으면 [지원 포럼](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services)에 문의하십시오. 포럼 게시물에 {{site.data.keyword.jazzhub_short}} 프로젝트와 {{site.data.keyword.contdelivery_short}} 도구 체인의 URL을 포함시키고 `devops-services` 태그로 게시물의 태그를 지정하십시오.
+   
+## 자주 묻는 질문(FAQ)
+{: #upgrade_faq}
+
+### 내 JazzHub 프로젝트는 영국 지역과 연관되어 있지만 내 도구 체인은 미국 남부 지역에 있습니다. 이런 경우 어떻게 작업하게 됩니까?
+{: #faq_region}
+
+hub.jazz.net의 프로젝트와 도구 체인은 모두 미국 남부 지역에서 호스팅됩니다. 다른 지역(예: 영국 지역)에 앱을 배치하도록 프로젝트가 구성된 경우, 도구 체인으로 업그레이드된 후에도 앱이 여전히 그 지역으로 배치됩니다. 따라서 데이터를 호스팅하고 있는 위치와 관련하여 아무 것도 바뀌지 않습니다. 미래에는 더 많은 지역에서 도구 체인을 사용할 수 있게 됩니다.
+
+### 업그레이드 시에 Track &amp; Plan의 내 작업 항목 및 대시보드에 무슨 일이 발생하게 됩니까?
+{: #faq_tp}
+
+{{site.data.keyword.contdelivery_short}} 서비스는 {{site.data.keyword.gitrepos}}를 통해 문제 추적 기능을 제공하며, IBM에서 호스팅하며 GitLab Community Edition을 기반으로 합니다. {{site.data.keyword.contdelivery_short}}는 다른 계획 및 문제 추적 도구(예: GitHub Issues 및 JIRA)와 통합도 지원합니다. 
+
+업그레이드 프로세스 중에 Track &amp; Plan 작업 항목을 Git Issues로 마이그레이션하도록 선택할 수 있습니다. GitHub Issues 및 {{site.data.keyword.gitrepos}}에서는 모두 계획용 문제 추적 및 kanban 보드를 제공합니다. Git Repos and Issue Tracking의 kanban 기능인 Issue Boards에 대한 자세히 알아보려면 [Issue board ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window}의 내용을 참조하십시오. 
+
+더 이상 사용되지 않는 JazzHub Track &amp; Plan과 같은 기능을 필요로 하는 고객의 경우, 클라우드에서 새 IBM Track and Plan 서비스를 사용자별 월별 기준으로 선택된 국가에서 개별적으로 구매하는 것이 가능합니다. 이 클라우드 서비스를 사용하여 Rational Team Concert&trade; 기여자 라이센스와 동등한 전체 기능을 단일 테넌트 클라우드 등록으로 얻게 됩니다. 
+
+이 새 IBM Track and Plan on Cloud 서비스는 더 이상 사용되지 않는 JazzHub Track &amp; Plan보다 훨씬 더 풍부한 기능을 제공하여 프로세스 사용자 정의, 프로젝트 계층구조, SAFe&reg; 및 많은 다른 신속한 하이브리드 방식, 단일 프로젝트 이상으로 성장하도록 하는 확장성을 지원합니다. 이는 최신 버전인 Rational Team Concert 6.0.3을 기반으로 하며 다음 60일 후에는 버전 6.0.4가 되는 반면에 JazzHub Track &amp; Plan을 Rational Team Concert 5.x를 기반으로 합니다. 추가 서비스를 통해 데이터 마이그레이션이 IBM Track and Plan on Cloud에 가능합니다. 자세한 정보는 Connected Products SaaS 영업 담당자인 [Tom Hollowell ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](mailto:trhollow@us.ibm.com){:new_window}에게 문의합니다. 
+
+IBM Track and Plan on Cloud에 대한 정보가 필요하거나 온라인으로 구매하려면 [IBM Marketplace ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}을 방문하십시오. 
+
+빌드 자동화 및 소스 코드 관리를 추가적으로 구매하려면 [Rational Team Concert on Cloud ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window}이 옵션입니다.  
+
+### 업그레이드 시에 내 코드 저장소에 무슨 일이 발생하게 됩니까?
+{: #faq_repo}
+
+업그레이드 후에 새 Git 서비스를 이전 서비스와 비교할 수 있게 됩니다. JazzHub 프로젝트와 github.com을 사용한 경우 도구 체인이 같은 GitHub 저장소에 연결됩니다. JazzHub 프로젝트가 IBM Hosted Git을 사용한 경우, 해당 저장소의 컨텐츠가 {{site.data.keyword.contdelivery_short}}의 일부이며 IBM에서 호스팅하는 {{site.data.keyword.gitrepos}}의 새 저장소로 복제됩니다. 
+
+업그레이드 프로세스에서 각 저장소 유형을 취급하는 방법에 대한 모든 세부사항은 다음 표를 참조하십시오.
+
+|프로젝트 저장소 |프로젝트 유형	|도구 체인 저장소 |
+|:----------|:------------------------------|:------------------|
+|github.com 		|사설 또는 공용 		|{{site.data.keyword.Bluemix_notm}} Public과 동일한 github.com 저장소.	|
+|hub.jazz.net/git		|사설 또는 공용 		|{{site.data.keyword.Bluemix_notm}} 퍼블릭이 있는 {{site.data.keyword.gitrepos}}의 새 개인용 또는 공용 저장소.	|
+{: caption="표 1. 도구 체인 저장소에 맵핑된 프로젝트 저장소" caption-side="top"}
+
+
+### 도구 체인으로 업그레이드 시에 내 프로젝트의 빌드 정의에 무슨 일이 발생하게 됩니까?
+{: #faq_build}
+
+Delivery Pipeline 대신에 Jazz를 사용해서 소스 코드를 빌드하는 경우, 빌드 정의를 도구 체인의 Delivery Pipeline으로 수동으로 마이그레이션해야 합니다.  
+
+소스 저장소로 Jazz SCM을 사용하고 Delivery Pipeline을 사용하여 코드를 빌드하는 경우, Jazz SCM의 소스가 Git 저장소로 자동으로 이동됩니다. Delivery Pipeline 구성은 Jazz SCM의 소스 대신에 Git 저장소에서 소스를 이용하게 되는 것을 제외하고 동일하게 유지됩니다. 
+
+### 도구 체인으로 업그레이드될 내 프로젝트에 대한 조직을 작성해야 합니다. 조직을 작성하기 전에 우선 내 계정에 신용카드를 추가해야 하는 것을 알고 있습니다. 내 신용카드가 청구됩니까?
+{: #faq_charges}
+
+[종량과금제 고객 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}으로서 런타임, 서비스 또는 Bluemix 카탈로그에 나열된 무료 할당액을 초과하는 컴포넌트를 사용하는 경우에는 비용이 청구됩니다. 사용량 추정은 [가격 책정 시트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}을 참조하십시오. Continuous Delivery에 대한 현재 가격 책정은 [Bluemix 카탈로그 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}을 참조하십시오.
+
+IBM 직원인 경우, 내부 IBM 프로젝트는 개인 신용카드 대신에 부서에 청구할 수 있습니다. IBM 직원에 대한 무료 할당액을 초과하는 리소스를 사용해야 하는 경우 지원 티켓을 작성하십시오. 

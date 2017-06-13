@@ -111,7 +111,7 @@ IBM Bluemix DevOps Connect coordonne les communications entre votre installation
 
    * Pour enregistrer DevOps Connect, vous devez disposer d'un IBMid.
 
-   * Assurez-vous que [Java Runtime Environment version 8 mise à jour 121 ou suivante ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://java.com/en/download/){:new_window} se trouve sur le système hôte et que la variable système PATH est définie sur son emplacement.
+   * Assurez-vous que [Java Runtime Environment version 8 mise à jour 121 ou suivante ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://java.com/en/download/){:new_window} se trouve sur le système hôte et que la variable système PATH est définie sur son emplacement.
 
    * Vous avez besoin d'un jeton d'autorisation administrateur d'IBM UrbanCode Deploy.
 
@@ -133,7 +133,7 @@ Pour utiliser DevOps Connect pour l'intégration à IBM UrbanCode Deploy, procé
 
 1. Enregistrez DevOps Connect.
 
-  1.  Sur l'ordinateur où vous avez placé DevOps Connect, utilisez un navigateur Web pour ouvrir le tableau de bord DevOps Connect. L'URL par défaut est https://localhost:8443. Pour modifier l'URL et en savoir plus sur les autres options de démarrage, consultez la [documentation DevOps Connect ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/urbancode/plugindoc/urbancode-sync/ibm-urbancode-sync-utility/1-2/){:new_window}.
+  1.  Sur l'ordinateur où vous avez placé DevOps Connect, utilisez un navigateur Web pour ouvrir le tableau de bord DevOps Connect. L'URL par défaut est https://localhost:8443. Pour modifier l'URL et en savoir plus sur les autres options de démarrage, consultez la [documentation DevOps Connect ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/urbancode/plugindoc/urbancode-sync/ibm-urbancode-sync-utility/1-2/){:new_window}.
 
 
 1. Sur la page "Sign-in to IBM", saisissez votre IBMid et votre mot de passe, puis cliquez sur **Sign In**. Vous vous connectez chaque fois que vous démarrez DevOps Connect.
@@ -174,7 +174,7 @@ Si vous êtes membre d'une organisation qui est connectée à IBM UrbanCode Depl
 
 4. Sélectionnez les processus d'application à utiliser pour les applications. Utilisez les options de recherche et de filtrage pour localiser les processus.
 
-5. Cliquez sur **Sauvegarder**. Chaque application IBM UrbanCode Deploy que vous avez sélectionnée s'affiche sous forme d'appli dans le pipeline composite.
+5. Cliquez sur **Save**. Chaque application IBM UrbanCode Deploy que vous avez sélectionnée s'affiche sous forme d'appli dans le pipeline composite.
 
 6. Mappez les environnements des applications IBM UrbanCode Deploy aux environnements logiques du pipeline composite :
 
@@ -184,6 +184,6 @@ Si vous êtes membre d'une organisation qui est connectée à IBM UrbanCode Depl
 
     2. Pour chaque application du pipeline composite, sélectionnez les environnements que vous avez définis dans IBM UrbanCode Deploy. Les processus d'application que vous avez sélectionnés s'exécutent uniquement dans les environnements de cette application.
 
-    3. Cliquez sur **Sauvegarder**.
+    3. Cliquez sur **Save**.
 
     4. Répétez ces étapes pour chaque environnement logique que vous utilisez.

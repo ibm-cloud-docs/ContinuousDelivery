@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-5-8"
+lastupdated: "2017-6-1"
 ---
 
 {:new_window: target="_blank"}
@@ -37,7 +37,7 @@ Eclipse Orion {{site.data.keyword.webide}}를 사용할 때 Git 터미널이 필
 ### Eclipse Orion Web IDE
 1. **참조** 목록을 클릭하고 **로컬**을 펼치십시오.
 
-2. 수정할 분기 옆의 체크아웃 아이콘 <img  class="inline" src="./images/checkout.png" alt="체크아웃 아이콘">을 클릭하십시오.
+2. 수정할 분기에 대해 체크아웃 아이콘 <img  class="inline" src="./images/checkout.png" alt="체크아웃 아이콘">을 클릭하십시오. 
 
 1. 선택한 분기가 **참조** 목록에 표시되는지 확인하십시오.
 
@@ -66,7 +66,7 @@ Eclipse Orion {{site.data.keyword.webide}}를 사용할 때 Git 터미널이 필
 
 1. **참조** 목록을 클릭하고 **로컬**을 펼치십시오.
 
-2. 제거할 로컬 분기 옆의 **삭제** <img class="inline"  src="./images/delete.png" alt="삭제 아이콘">를 클릭하십시오.
+2. 제거할 로컬 분기에 대해 **삭제** <img class="inline"  src="./images/delete.png" alt="삭제 아이콘">을 클릭하십시오.
 
 ### Git 터미널
 1. `git branch -d <branchname>`을 입력하고 Enter를 누르십시오.
@@ -80,7 +80,7 @@ Eclipse Orion {{site.data.keyword.webide}}를 사용할 때 Git 터미널이 필
 
 ### Eclipse Orion Web IDE
 
-1. 작업 디렉토리 변경 섹션의 출력 섹션에서 **푸시** 옆의 화살표를 클릭하십시오.
+1. 작업 디렉토리 변경 섹션의 출력 섹션에서 **푸시**에 대한 화살표를 클릭하십시오.
 2. **분기 푸시 강제 실행**을 클릭하십시오.
 3. 경고를 확인하십시오.
 
@@ -160,7 +160,7 @@ Eclipse Orion {{site.data.keyword.webide}}를 사용할 때 Git 터미널이 필
 
 2. 커미트를 클릭하여 커미트의 세부사항을 보십시오.
 
-3. 파일 옆의 **>**를 클릭하고 파일 변경사항을 검토하십시오.
+3. 파일의 변경사항을 검토하려면 **>**을 클릭하십시오. 
 
   **참고:** 커미트를 행이 변경된 경우 원래 행은 음영 처리된 분홍색이 되고 새 행은 음영 처리된 초록색이 됩니다. 마찬가지로 커미트를 통해 추가된 행은 음영 처리된 초록색이고 커미트를 통해 제거된 행은 음영 처리된 분홍색입니다.
 
@@ -249,7 +249,7 @@ Eclipse Orion {{site.data.keyword.webide}}를 사용할 때 Git 터미널이 필
 
 1. 히스토리에서 커미트를 선택하십시오.
 
-2. 페이지 오른쪽의 커미트 요약 위에서 되돌리기 아이콘 <img class="inline" src="./images/revert.png" alt="되돌리기 아이콘">을 클릭하십시오.
+2. 되돌리기 아이콘 <img class="inline" src="./images/revert.png" alt="되돌리기 아이콘">을 클릭하십시오.
 
 ### Git 터미널
 
@@ -273,7 +273,7 @@ Eclipse Orion {{site.data.keyword.webide}}를 사용할 때 Git 터미널이 필
 
 1. 수신 섹션에서 **병합** 아이콘 <img  class="inline" src="./images/mergeicon.png" alt="수신 섹션의 병합 아이콘">을 클릭하십시오.
 
-1. **참조** 목록에서 방금 변경사항을 병합한 분기 옆의 체크아웃 아이콘을 클릭하십시오.
+1. **참조** 목록에서 방금 변경사항을 병합한 분기에 대해 체크아웃 아이콘을 클릭하십시오.
 
 1. 변경사항을 전달하려면 **푸시**를 클릭하십시오. 그렇지 않으면 이때 테스트 배치를 작성하여 모두가 제대로 작동하는지 확인할 수 있습니다.
 

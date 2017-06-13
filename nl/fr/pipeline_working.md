@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+lastupdated: "2017-5-25"
 
 ---
 
@@ -47,14 +47,14 @@ application existante :
 1. Dans le menu de la barre de menus {{site.data.keyword.Bluemix_notm}}, cliquez sur **Services** puis sur **DevOps**.
 1. Cliquez sur **Pipelines**, puis sur **Créer un pipeline**.
 
-Pour [créer un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} configuré pour déployer une application Cloud Foundry, procédez comme suit :
+Pour [créer un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} configuré pour déployer une application Cloud Foundry, procédez comme suit :
 
 1. Cliquez sur **Cloud Foundry**.
 1. Si vous désirez utiliser un nom différent pour le pipeline, modifiez son nom par défaut.
 1. Si vous désirez utiliser un nom différent pour l'application, modifiez son nom par défaut. Ce nom est celui de l'application où est déployé le pipeline.
-1. Si vous n'avez pas de chaînes d'outils, une chaîne d'outils portant le nom par défaut est créée pour vous. Si vous désirez utiliser un autre nom pour la chaîne d'outils, modifiez son nom. Grâce à la chaîne d'outils, vous pouvez étendre les capacités de votre pipeline par une intégration avec d'autres outils et services. Pour plus d'informations sur les chaînes d'outils, voir [Utilisation des chaînes d'outils](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
+1. Si vous n'avez pas de chaînes d'outils, une chaîne d'outils portant le nom par défaut est créée pour vous. Si vous désirez utiliser un autre nom pour la chaîne d'outils, modifiez son nom. Grâce à la chaîne d'outils, vous pouvez étendre les capacités de votre pipeline par une intégration avec d'autres outils et services. Pour plus d'informations sur les chaînes d'outils, voir [Création de chaînes d'outils](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
 
- **Astuce **: les pipelines et les chaînes d'outils appartiennent à des organisations (orgs). Si vous appartenez à une organisation disposant de chaînes d'outils, vous pouvez être ajouté à la liste de contrôle d'accès de l'une de ses chaînes d'outils associées. Une fois que vous êtes ajouté à la liste de contrôle d'accès d'une chaîne d'outils,vous pouvez utiliser cette chaîne d'outils et ses pipelines associés, même si vous ne les avez pas créés. Pour plus d'informations sur le contrôle d'accès pour les chaînes d'outils,  voir [Gestion de l'accès](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
+ **Astuce **: les pipelines et les chaînes d'outils appartiennent à des organisations (orgs). Si vous appartenez à une organisation disposant de chaînes d'outils, vous pouvez être ajouté à la liste de contrôle d'accès de l'une de ses chaînes d'outils associées. Une fois que vous êtes ajouté à la liste de contrôle d'accès d'une chaîne d'outils,vous pouvez afficher cette chaîne d'outils et ses pipelines associés, même si vous ne les avez pas créés. Si vous disposez des droits administrateur, vous pouvez également modifier et supprimer la chaîne d'outils. Pour plus d'informations sur le contrôle d'accès pour les chaînes d'outils,  voir [Gestion de l'accès](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
 
 1. Sélectionnez la chaîne d'outils que vous désirez utiliser ou entrez le nom de la nouvelle chaîne d'outils à créer.
 1. Sélectionnez votre fournisseur Git.
@@ -75,7 +75,7 @@ Pour [créer un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg 
  ![Carte du pipeline](images/cd_pipeline.png)
 1. Si vous avez créé un pipeline dans une chaîne d'outils contenant un pipeline composite, le nouveau pipeline est ajouté au pipeline composite. Modifiez le plan de déploiement pour inclure des tâches de déploiement pour le nouveau pipeline. Voir [Création de tâches Delivery Pipeline](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}.
 
-Pour créer un [pipeline vide ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} sans étapes préconfigurées :
+Pour créer un [pipeline vide ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} sans étapes préconfigurées :
 
 1. Cliquez sur **Personnalisé**.
 1. Si vous désirez utiliser un nom différent pour le pipeline, modifiez son nom par défaut.

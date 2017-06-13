@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-10"
+lastupdated: "2017-6-5"
 
 ---
 
@@ -18,6 +18,14 @@ Vous pouvez mettre à niveau votre projet ou attendre qu'il soit automatiquement
 [conditions requises](#upgrade_prereqs) et mettez à niveau votre projet dès que possible afin de pouvoir contrôler le nom de votre chaîne d'outils et dans quelle organisation
 elle est créée.
 {: shortdesc}
+
+**Foire aux questions**
+
+- [Mon projet JazzHub est associé à la région Royaume-Uni, mais ma chaîne d'outils se trouvera dans la région Sud des Etats-Unis. Comment cela va-t-il fonctionner ?](#faq_region)
+- [Qu'arrivera-t-il à mes éléments de travail et mes tableaux de bord dans Track &amp; Plan lors de la mise à niveau ?](#faq_tp)
+- [Qu'arrivera-t-il à mon référentiel de code lors de la mise à niveau ?](#faq_repo)
+- [Qu'arrivera-t-il à mes définitions de génération dans mon projet lors de la mise à niveau vers une chaîne d'outils ?](#faq_build)
+- [Je dois créer une organisation pour mon projet qui va être mis à jour vers une chaîne d'outils. Je comprends que je dois ajouter une carte de crédit à mon compte avant de créer une organisation. Ma carte de crédit sera-t-elle débitée ?](#faq_charges)
 
 ## Chaînes d'outils
 {: #compare_toolchains}
@@ -67,6 +75,14 @@ supprimant la chaîne d'outils, le pipeline est débloqué.
 Si votre projet utilise un référentiel Git qui est hébergé sur JazzHub, après avoir lancé la mise à niveau, le référentiel est bloqué pour assurer l'intégrité des données qui sont
 déplacées vers la chaîne d'outils. Si vous annulez la mise à niveau en supprimant la chaîne d'outils, le référentiel hébergé sur JazzHub est débloqué.
 
+Pour obtenir des informations détaillées sur la manière dont chaque type de référentiel est traité lors de la mise à niveau, veuillez vous reporter au tableau ci-dessous.
+
+|Référentiel de projet |Type de projet	|Référentiel de chaîne d'outils |
+|:----------|:------------------------------|:------------------|
+|github.com 		|Privé ou public 		|Le même référentiel github.com avec {{site.data.keyword.Bluemix_notm}} Public.	|
+|hub.jazz.net/git		|Privé ou public 		|Un nouveau référentiel dans {{site.data.keyword.gitrepos}} avec {{site.data.keyword.Bluemix_notm}} Public.	|
+{: caption="Tableau 1. Référentiels de projet mappés à des référentiels de chaîne d'outils" caption-side="top"}
+
 ## Démarrage du processus de mise à niveau
 {: #start_upgrade}
 
@@ -82,14 +98,7 @@ Pour mettre à niveau votre projet vers une chaîne d'outils, procédez comme su
    Pour une présentation du processus de mise à niveau, lisez la description sur cette page. La chaîne d'outils inclut un nouveau pipeline qui contient les mêmes étapes et travaux que le pipeline du projet. En outre, la chaîne d'outils contient un pointeur vers l'interface Eclipse Orion {{site.data.keyword.webide}} qui s'exécute dans {{site.data.keyword.contdelivery_short}}.
 
    Dans cet exemple, le projet utilise un référentiel public sur github.com et la chaîne d'outils sera donc connectée au même référentiel GitHub. Si votre projet utilise un référentiel Git
-hébergé sur JazzHub, le contenu de ce référentiel sera cloné dans un nouveau référentiel dans {{site.data.keyword.gitrepos}} qui appartient à {{site.data.keyword.contdelivery_short}}. Pour
-obtenir des informations détaillées sur la manière dont chaque type de référentiel est traité, veuillez vous reporter au tableau ci-dessous.
-
-|Référentiel de projet |Type de projet	|Référentiel de chaîne d'outils |
-|:----------|:------------------------------|:------------------|
-|github.com          		|Privé ou public 		|Le même référentiel github.com avec {{site.data.keyword.Bluemix_notm}} Public.	|
-|hub.jazz.net/git    		|Privé ou public 		|Un nouveau référentiel dans {{site.data.keyword.gitrepos}} avec {{site.data.keyword.Bluemix_notm}} Public.	|
-{: caption="Tableau 1. Référentiels de projet mappés à des référentiels de chaîne d'outils" caption-side="top"}
+hébergé sur JazzHub, le contenu de ce référentiel sera cloné dans un nouveau référentiel dans {{site.data.keyword.gitrepos}} qui appartient à {{site.data.keyword.contdelivery_short}}.
 
 2. Pour personnaliser la chaîne d'outils, vous pouvez configurer quelques paramètres :
 
@@ -108,7 +117,7 @@ obtenir des informations détaillées sur la manière dont chaque type de réfé
    ![Options de Track and Plan](images/upgrade-tutorial-track-and-plan.png)
 
    - Indiquez si vous souhaitez faire migrer vos données Track & Plan.
-   - Par défaut, toutes vos données Track & Plan seront migrées. Si vous préférez faire migrer uniquement les éléments de travail appartenant à une requête spécifique, indiquez
+   - Par défaut, toutes vos données Track & Plan sont migrées. Si vous préférez faire migrer uniquement les éléments de travail appartenant à une requête spécifique, indiquez
 cette requête.
    - Sélectionnez les attributs d'éléments de travail que vous souhaitez mapper aux étiquettes dans GitHub Issues.
 
@@ -162,8 +171,7 @@ pour faire une nouvelle tentative.
     - Chaque membre d'équipe doit disposer d'un compte {{site.data.keyword.Bluemix_notm}} valide. Les membres de l'équipe qui ne possèdent pas de comptes doivent [s'enregistrer![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/registration){:new_window}.
     - Accordez aux membres de l'organisation (org) un accès à la chaîne d'outils depuis la page Gérer de la chaîne d'outils. Pour en savoir plus sur le contrôle d'accès aux chaînes d'outils, voir [Gestion des accès ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
     - Si un utilisateur n'est pas membre de l'organisation à laquelle appartient la chaîne d'outils, ajoutez-le à l'organisation depuis la page Gérer les organisations.
-
-Pour obtenir des informations complémentaires sur la gestions des organisations, voir [Gestion des organisations et des espaces ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
+      Pour obtenir des informations complémentaires sur la gestions des organisations, voir [Gestion des organisations et des espaces ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
 
 3. Utilisez les outils de votre chaîne d'outils au lieu des outils de votre projet {{site.data.keyword.jazzhub_short}}. Par exemple, pour modifier le code à partir d'un navigateur, utilisez l'interface IDE Web de votre chaîne d'outils.
 
@@ -197,3 +205,54 @@ plus d'informations, voir [Initiation à {{site.data.keyword.DRA_short}}](/docs/
 Si vous avez des questions ou des problèmes, accédez au [forum de support](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services). Dans votre
 publication de forum, incluez les URL à votre projet {{site.data.keyword.jazzhub_short}} et votre chaîne d'outils {{site.data.keyword.contdelivery_short}} et signalez votre
 publication avec l'étiquette `devops-services`.
+   
+## Foire aux questions
+{: #upgrade_faq}
+
+### Mon projet JazzHub est associé à la région Royaume-Uni, mais ma chaîne d'outils se trouvera dans la région Sud des Etats-Unis. Comment cela va-t-il fonctionner ?
+{: #faq_region}
+
+Les projets sur hub.jazz.net et les chaînes d'outils sont hébergés dans la région Sud des Etats-Unis. Si votre projet a été configuré pour déployer des applications dans une autre région, comme la région Royaume-Uni, il déploiera quand même les applications dans cette région après avoir été mis à niveau dans une chaîne d'outils. Aucune modification n'est donc réellement apportée quant à l'emplacement d'hébergement des données. A l'avenir, les chaînes d'outils seront disponibles dans davantage de régions. 
+
+### Qu'arrivera-t-il à mes éléments de travail et mes tableaux de bord dans Track &amp; Plan lors de la mise à niveau ?
+{: #faq_tp}
+
+Le service {{site.data.keyword.contdelivery_short}} fournit des fonctions de suivi des problèmes grâce à {{site.data.keyword.gitrepos}}, hébergé par IBM et basé sur GitLab Community Edition. {{site.data.keyword.contdelivery_short}} prend également en charge les intégrations dotées d'autres outils de planification et de suivi des problèmes, tels que GitHub Issues et JIRA.
+
+Pendant le processus de mise à niveau, vous pouvez choisir de migrer vos éléments de travail Track &amp; Plan vers Git Issues. GitHub Issues et {{site.data.keyword.gitrepos}} fournissent des tableaux Kanban et un système de suivi des problèmes pour la planification. Pour en savoir plus sur Issue Boards, qui est la fonction kanban de Git Repos and Issue Tracking, voir [Issue board ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window}.
+
+Pour les clients qui exigent la même fonction que JazzHub Track &amp; Plan désormais obsolète, un nouveau service IBM Track and Plan on Cloud est disponible et peut être acheté séparément dans certains pays sur une base mensuelle par utilisateur. Ce service de cloud vous permet de bénéficier de fonctions complètes, équivalentes aux licences contributeur Rational Team Concert&trade;, avec un abonnement de cloud à service exclusif.
+
+Ce nouveau service IBM Track and Plan on Cloud propose une fonctionnalité beaucoup plus riche que la fonction obsolète JazzHub Track &amp; Plan, en prenant en charge la personnalisation des processus, les hiérarchies de projet, SAFe&reg; et de nombreuses autres méthodes hybrides et agiles, tout en garantissant l'évolutivité qui permet une croissance au-delà d'un simple projet. Il repose sur la version la plus récente de Rational Team Concert 6.0.3 et sera au niveau de la version 6.0.4 dans les 60 prochains jours, alors que JazzHub Track &amp; Plan était basé sur Rational Team Concert 5.x. Il est possible de migrer les données vers IBM Track and Plan on Cloud grâce à des services supplémentaires. Pour plus d'informations, vous pouvez contacter [Tom Hollowell ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](mailto:trhollow@us.ibm.com){:new_window}, Responsable des ventes SaaS des produits connectés.
+
+Pour plus d'informations sur IBM Track and Plan on Cloud, ou pour effectuer un achat en ligne, visitez le site Web [IBM Marketplace ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}.
+
+[Rational Team Concert on Cloud ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window} vous permet également de bénéficier en plus des fonctions d'automatisation de la construction et de gestion du code source.   
+
+### Qu'arrivera-t-il à mon référentiel de code lors de la mise à niveau ?
+{: #faq_repo}
+
+Une fois la mise à niveau effectuée, votre nouveau service Git sera comparable à ce dont vous disposiez auparavant. Si vous utilisiez github.com avec votre projet JazzHub, votre chaîne d'outils est connectée au même référentiel GitHub. Si votre projet JazzHub utilisait le référentiel Git hébergé par IBM, le contenu de ce référentiel est cloné vers un nouveau référentiel dans {{site.data.keyword.gitrepos}}, qui fait partie de {{site.data.keyword.contdelivery_short}} et est hébergé par IBM.
+
+Pour obtenir des informations détaillées sur la manière dont chaque type de référentiel est traité lors de la mise à niveau, veuillez vous reporter au tableau ci-dessous.
+
+|Référentiel de projet |Type de projet	|Référentiel de chaîne d'outils |
+|:----------|:------------------------------|:------------------|
+|github.com 		|Privé ou public 		|Le même référentiel github.com avec {{site.data.keyword.Bluemix_notm}} Public.	|
+|hub.jazz.net/git		|Privé ou public 		|Un nouveau référentiel privé ou public dans {{site.data.keyword.gitrepos}} avec {{site.data.keyword.Bluemix_notm}} Public.	|
+{: caption="Tableau 1. Référentiels de projet mappés à des référentiels de chaîne d'outils" caption-side="top"}
+
+
+### Qu'arrivera-t-il à mes définitions de génération dans mon projet lors de la mise à niveau vers une chaîne d'outils ?
+{: #faq_build}
+
+Si vous générez votre code source avec Jazz à la place de Delivery Pipeline, vous devez migrer manuellement vos définitions de génération vers Delivery Pipeline dans votre chaîne d'outils.  
+
+Si vous utilisez Jazz SCM comme référentiel source et Delivery Pipeline pour générer votre code, le source de Jazz SCM est automatiquement déplacé vers un référentiel Git. Votre configuration Delivery Pipeline reste la même, mais consomme le source issu du référentiel Git à la place du source de Jazz SCM.
+
+### Je dois créer une organisation pour mon projet qui va être mis à jour vers une chaîne d'outils. Je comprends que je dois ajouter une carte de crédit à mon compte avant de créer une organisation. Ma carte de crédit sera-t-elle débitée ?
+{: #faq_charges}
+
+En tant que [client de type Paiement à la carte ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}, si vous utilisez un contexte d'exécution, un service ou un composant au-delà des allocations gratuites répertoriées dans le catalogue Bluemix, vous êtes facturé. Pour avoir une estimation de votre utilisation, reportez-vous à la  [fiche de prix ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}. Pour connaître la tarification en cours de Continuous Delivery, voir le [catalogue Bluemix ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}.
+
+Si vous êtes un employé IBM, les projets IBM internes peuvent être facturés aux départements, à la place d'une carte de crédit personnelle. Si vous avez besoin d'utiliser des ressources au-delà des allocations gratuites destinées aux employés IBM, créez un ticket de demande de service. 

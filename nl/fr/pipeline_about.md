@@ -76,7 +76,7 @@ vous laissez la zone vide, l'archivage est effectué dans le répertoire racine.
 **Remarque** : Si vous sélectionnez le type de générateur **Simple** pour un travail de génération, vous ignorez le processus de génération. Dans ce cas, votre code n'est pas compilé, mais envoyé à l'étape de déploiement en l'état. Pour la génération et le déploiement, sélectionnez un type de générateur autre que **Simple**.
 
 #### Propriétés d'environnement pour les scripts de génération
-Vous pouvez inclure des propriétés d'environnement au sein des commandes shell de génération d'un travail de génération. Les propriétés permettent d'accéder aux informations relatives à l'environnement d'exécution du travail. Pour plus d'informations, voir [Propriétés et ressources d'environnement pour le service {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
+Vous pouvez inclure des propriétés d'environnement au sein des commandes shell de génération d'un travail de génération. Les propriétés permettent d'accéder aux informations relatives à l'environnement d'exécution du travail. Pour plus d'informations, voir [Propriétés et ressources d'environnement pour le {{site.data.keyword.deliverypipeline}}service](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
 
 ### Travaux de déploiement
 
@@ -110,7 +110,7 @@ Dans le pipeline, vous pouvez indiquer tout ce qu'un fichier manifeste peut cont
 
 Pour éviter les conflits, vous pouvez spécifier une route en utilisant la commande `cf push` suivie de l'argument de nom d'hôte, `-n` et d'un nom de route. En modifiant le script de déploiement pour des étapes individuelles, vous pouvez éviter des conflits de route lorsque vous procédez au déploiement sur plusieurs cibles.
 
-Pour utiliser les arguments de commande `cf push`, ouvrez les paramètres de configuration pour un travail de déploiement et modifiez la zone **Script de déploiement**. Pour plus d'informations, consultez la [documentation Cloud Foundry Push ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}.
+Pour utiliser les arguments de commande `cf push`, ouvrez les paramètres de configuration pour un travail de déploiement et modifiez la zone **Script de déploiement**. Pour plus d'informations, consultez la [documentation Cloud Foundry Push ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}.
 
 ## Exemple de pipeline
 {: #deliverypipeline_example}
@@ -127,5 +127,4 @@ Ce pipeline est affiché dans le diagramme conceptuel suivant :
 
 *Modèle conceptuel d'un pipeline composé de trois étapes*
 
-Les étapes prennent leur entrée dans des référentiels et des travaux de génération et les travaux au sein d'une étape s'exécutent de façon séquentielle et indépendamment les uns des autres. Dans
-l'exemple de pipeline, les étapes s'exécutent de manière séquentielle, même si les étapes de test et de production utilisent la sortie de l'étape de génération comme entrée.
+Les étapes prennent leur entrée dans des référentiels et des travaux de génération et les travaux au sein d'une étape s'exécutent de façon séquentielle et indépendamment les uns des autres. Dans l'exemple de pipeline, les étapes s'exécutent de manière séquentielle, même si les étapes de test et de production utilisent la sortie de l'étape de génération comme entrée.

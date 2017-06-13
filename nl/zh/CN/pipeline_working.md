@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+lastupdated: "2017-5-25"
 
 ---
 
@@ -35,14 +35,14 @@ lastupdated: "2017-4-28"
 1. 从 {{site.data.keyword.Bluemix_notm}} 菜单栏上的菜单中，单击**服务**，然后单击 **DevOps**。
 1. 单击**管道**，然后单击**创建管道**。
 
-要[创建管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window}（已配置为部署 Cloud Foundry 应用程序），请执行以下步骤：
+要[创建管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window}（已配置为部署 Cloud Foundry 应用程序），请执行以下步骤：
 
 1. 单击 **Cloud Foundry**。
 1. 如果要对管道使用其他名称，请更改其缺省名称。
 1. 如果要对应用程序使用其他名称，请更改其缺省名称。这是管道部署到的应用程序的名称。
-1. 如果没有工具链，那么将为您创建具有缺省名称的工具链。如果要对工具链使用其他名称，请更改其名称。使用工具链，您可以通过与其他工具和服务相集成来扩展管道的功能。有关工具链的更多信息，请参阅[使用工具链](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}。
+1. 如果没有工具链，那么将为您创建具有缺省名称的工具链。如果要对工具链使用其他名称，请更改其名称。使用工具链，您可以通过与其他工具和服务相集成来扩展管道的功能。有关工具链的更多信息，请参阅[创建工具链](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}。
 
- **提示**：管道和工具链属于组织。如果您属于具有工具链的组织，那么您可以添加到任何相关联工具链的访问控制表中。在您添加到工具链的访问控制表后，您可以使用该工具链和任何相关联的管道，即使您未创建它们也是如此。有关工具链访问控制的更多信息，请参阅[管理访问权](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}。
+ **提示**：管道和工具链属于组织。如果您属于具有工具链的组织，那么您可以添加到任何相关联工具链的访问控制表中。在您添加到工具链的访问控制表后，您可以查看该工具链和任何相关联的管道，即使您未创建它们也是如此。如果您获得了管理特权，那么您还可以修改和删除工具链。有关工具链访问控制的更多信息，请参阅[管理访问权](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}。
 
 1. 选择要使用的工具链，或输入要创建的新工具链的名称。
 1. 选择 Git 提供程序。
@@ -62,7 +62,7 @@ lastupdated: "2017-4-28"
  ![管道卡](images/cd_pipeline.png)
 1. 如果您已在包含组合管道的工具链中创建了管道，那么新管道会添加到组合管道。修改部署计划，以包含新管道的部署任务。请参阅[创建 Delivery Pipeline 任务](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}。
 
-要在没有任何预配置阶段的情况下创建[空管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window}，请执行以下操作：
+要在没有任何预配置阶段的情况下创建[空管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window}，请执行以下操作：
 
 1. 单击**定制**。
 1. 如果要对管道使用其他名称，请更改其缺省名称。

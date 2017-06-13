@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-26"
+lastupdated: "2017-5-29"
 
 ---
 
@@ -34,7 +34,7 @@ votre environnement spécifique.
 |{{site.data.keyword.deliverypipeline}} 		|Oui	   	|Oui  		|
 |{{site.data.keyword.DRA_short}} 		|Oui		|Non			|
 |Eclipse Orion {{site.data.keyword.webide}}		|Oui		|Oui			|
-|Git Repos and Issue Tracking	|Oui		|Non		|
+|{{site.data.keyword.gitrepos}}	|Oui		|Non		|
 |GitHub et Issues		|Oui		|Oui		|
 |{{site.data.keyword.ghe_short}} dédié et Issues			|Non		|Oui		|
 |Jenkins		|Oui		|Non		|
@@ -42,13 +42,13 @@ votre environnement spécifique.
 |Nexus			|Oui		|Non		|
 |Autre outil			|Oui		|Oui		|
 |PagerDuty			|Oui		|Oui		|
+|Rational Team Concert			|Oui		|Non		|
 |Sauce Labs		|Oui		|Non		|
 |Slack			|Oui		|Oui		|
 |SonarQube			|Oui		|Non		|
-{: caption="Tableau 1. Intégrations d'outils disponibles pour les chaînes d'outils sur Bluemix Public et Dédié" caption-side="top"}
+{: caption="Tableau 1. Intégrations d'outils disponibles pour les chaînes d'outils sur {{site.data.keyword.Bluemix_notm}} public et dédié" caption-side="top"}
 
-**Astuce :** si vous souhaitez commencer à développer avec votre code source sur {{site.data.keyword.Bluemix_notm}} Public, configurez l'intégration d'outils
-GitHub ou l'intégration d'outils Git Repos and Issue Tracking avant de configurer {{site.data.keyword.deliverypipeline}}. Si vous souhaitez débuter le développement par votre code source sur
+**Astuce :** si vous souhaitez commencer à développer avec votre code source sur {{site.data.keyword.Bluemix_notm}} public, configurez l'intégration d'outils GitHub ou l'intégration d'outils {{site.data.keyword.gitrepos}} avant de configurer {{site.data.keyword.deliverypipeline}}. Si vous souhaitez débuter le développement par votre code source sur
 {{site.data.keyword.Bluemix_notm}} dédié, configurez
 l'intégration d'outils {{site.data.keyword.ghe_short}} ou
 l'intégration d'outils GitHub avant
@@ -79,7 +79,7 @@ Configurez {{site.data.keyword.alertnotificationshort}} pour recevoir des notifi
 ### Configuration de l'application Alert Notification
 
 1. Si vous configurez cette intégration d'outils lorsque vous créez la chaîne d'outils, à la section Intégrations configurables, cliquez sur **{{site.data.keyword.alertnotificationshort}}**.
-1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**. Ensuite, cliquez sur **Vue d'ensemble**.  
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**. Ensuite, cliquez sur **Vue d'ensemble**.  
 
  a. Cliquez sur **Ajouter un outil**.
 
@@ -91,7 +91,7 @@ Configurez {{site.data.keyword.alertnotificationshort}} pour recevoir des notifi
 1. Cliquez sur **Créer une intégration**.
 1. A partir de votre chaîne d'outils, cliquez sur **{{site.data.keyword.alertnotificationshort}}**.
 
-Pour plus d'informations, voir [IBM {{site.data.keyword.alertnotificationshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window}.
+Pour en savoir plus, voir l'[article IBM {{site.data.keyword.alertnotificationshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window} sur IBM Cloud Garage Method.
 
 
 ## Configuration d'Artifactory
@@ -100,7 +100,7 @@ Pour plus d'informations, voir [IBM {{site.data.keyword.alertnotificationshort}}
 Configurez le gestionnaire de référentiels Artifactory afin de stocker les artefacts de génération dans votre référentiel Artifactory :
 
 1. Si vous configurez cette intégration d'outils lorsque vous créez la chaîne d'outils, à la section Intégrations configurables, cliquez sur **Artifactory**.
-1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**. Ensuite, cliquez sur **Vue d'ensemble**.  
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**. Ensuite, cliquez sur **Vue d'ensemble**.  
 
  a. Cliquez sur **Ajouter un outil**.
 
@@ -159,8 +159,9 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de gé
      # ou
      npm publish --registry "${NPM_RELEASE_URL}"
      ```
-  **Astuce :** vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les
-paramètres de configuration pour l'intégration des outils Artifactory.
+  **Astuce :** vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de
+configuration pour l'intégration des outils Artifactory.
+
   e. Si votre travail de génération est publié dans le registre Artifactory et que le format de votre version de module de noeud est `x.y.z-SNAPSHOT.w`, cochez la case **Increment snapshot module version**. Le travail de génération met automatiquement à jour la version du module avant que le travail ne soit publié dans le registre Artifactory. Le travail sélectionne la version la plus élevée du module à partir du registre npm et du fichier local `package.json`, et incrémente la version du module à l'aide de semver. Le travail de génération ne répercute pas les modifications dans le référentiel SCM.
 
 1. Cliquez sur **SAUVEGARDER**. Lors de l'exécution de votre pipeline, ce travail de génération utilise les informations de configuration provenant de l'intégration d'outils pour la connexion à votre registre npm.
@@ -191,9 +192,10 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de gé
      ```
   **Astuce :** vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de
 configuration pour l'intégration des outils Artifactory.
+
 1. Cliquez sur **SAUVEGARDER**. Lors de l'exécution de votre pipeline, ce travail de génération utilise les informations de configuration provenant de l'intégration d'outils pour la connexion à votre référentiel Maven.
 
-Pour en savoir plus, voir [Artifactory ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window}.
+Pour en savoir plus, voir l'[article Artifactory ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window} sur IBM Cloud Garage Method.
 
 
 ## Ajout d'Availability Monitoring
@@ -214,7 +216,7 @@ Pour tester, surveiller et améliorer la santé de votre appli au fur et à mesu
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur **{{site.data.keyword.prf_hubshort}}** pour ouvrir le tableau de bord {{site.data.keyword.prf_hubshort}}, sélectionner une application et configurer sa surveillance.
 
-Pour en savoir plus, voir [{{site.data.keyword.prf_hublong}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window}.
+Pour en savoir plus, voir l'[article {{site.data.keyword.prf_hublong}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window} sur IBM Cloud Garage Method.
 
 
 ## Ajout de Cloud Event Management (expérimental)
@@ -241,7 +243,7 @@ Pour aider votre équipe DevOps à atteindre des objectifs fiables et opération
 
  * **Runbook Automation** pour gérer votre catalogue de dossiers d'exploitation dans Cloud Event Management.
 
-Pour en savoir plus, voir [Cloud Event Management ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window}.
+Pour en savoir plus, voir l'[article Cloud Event Management ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window} sur IBM Cloud Garage Method.
 
 
 ## Configuration de Delivery Pipeline
@@ -252,7 +254,7 @@ Pour en savoir plus, voir [Cloud Event Management ![Icône de lien externe](../.
 Configurez {{site.data.keyword.deliverypipeline}} afin d'automatiser la génération, le test et le déploiement en continu de vos applications.
 
 1. Si vous configurez cette intégration d'outils lorsque vous créez la chaîne d'outils, à la section Intégrations configurables, cliquez sur **{{site.data.keyword.deliverypipeline}}**. En fonction du modèle utilisé, des zones différentes peuvent être disponibles. Passez en revue les valeurs de zone par défaut et, si nécessaire, modifiez ces paramètres.
-1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
 
  a. Cliquez sur **Ajouter un outil**.
 
@@ -268,12 +270,11 @@ Présentation de la chaîne d'outils.
   **Astuce :** si vous souhaitez que le pipeline s'exécute automatiquement lorsqu'une validation est envoyée à votre référentiel GitHub,
 {{site.data.keyword.ghe_short}} ou Git, procédez comme suit :
 
-   a. Configurez GitHub, {{site.data.keyword.ghe_short}} ou Git Repos and Issue Tracking pour votre chaîne d'outils avant de définir les étapes pour votre pipeline. Ces étapes requièrent les URL de vos référentiels. Chaque étape de pipeline peut faire référence à un seul des référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git associés à votre chaîne d'outils. Pour
-savoir comment configurer GitHub, voir la section [GitHub](#github). Pour la configuration de {{site.data.keyword.ghe_short}} Dédié, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. Pour savoir comment configurer Git Repos and Issue Tracking, voir la section [Git Repos and Issue Tracking](##gitbluemix).
+   a. Configurez GitHub, {{site.data.keyword.ghe_short}} ou {{site.data.keyword.gitrepos}} pour votre chaîne d'outils avant de définir les étapes pour votre pipeline. Ces étapes requièrent les URL de vos référentiels. Chaque étape de pipeline peut faire référence à un seul des référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git associés à votre chaîne d'outils. Pour
+savoir comment configurer GitHub, voir la section [GitHub](#github). Pour la configuration de {{site.data.keyword.ghe_short}} Dédié, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. Pour les instructions de configuration de {{site.data.keyword.gitrepos}}, voir la section [{{site.data.keyword.gitrepos}}](##gitbluemix).
 
    b. Utilisez un webhook. Sans webhook, vous pouvez seulement exécuter les pipelines manuellement. Pour utiliser un webhook lorsque vous vous connectez à un référentiel GitHub
-ou {{site.data.keyword.ghe_short}}, vous devez disposer d'un droit d'administrateur. Pour associer un référentiel Git Repos and Issue Tracking, vous devez disposer d'un droit Maître ou
-Propriétaire.
+ou {{site.data.keyword.ghe_short}}, vous devez disposer d'un droit d'administrateur. Pour associer un référentiel {{site.data.keyword.gitrepos}}, vous devez disposer d'un droit Maître ou Propriétaire.
 
 1. Facultatif : si vous utilisez une chaîne d'outils sur {{site.data.keyword.Bluemix_notm}} public et souhaitez que Sauce Labs exécute des tests sur votre application, configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de test Sauce Labs. Pour des instructions de configuration du travail de test, voir la section [Configuration d'un travail de test Sauce Labs sur votre pipeline](#config_saucelabs).
 
@@ -315,7 +316,7 @@ cliquez sur **Configurer**.
 
 1. Cliquez sur **SAUVEGARDER**. A chaque exécution de votre pipeline, vos tests Sauce Labs s'exécuteront.
 
-Pour en savoir plus, voir [Delivery Pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window}.
+Pour en savoir plus, voir l'[article Delivery Pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window} sur IBM Cloud Garage Method.
 
 
 ## Ajout de DevOps Insights (bêta)
@@ -328,7 +329,7 @@ Pour en savoir plus, voir [Delivery Pipeline ![Icône de lien externe](../../ico
 Ajoutez {{site.data.keyword.DRA_short}} afin de gérer et d'améliorer la qualité de votre code dans {{site.data.keyword.Bluemix_notm}} en surveillant vos déploiements afin d'identifier les risques avant la publication.
 
 1. Si vous configurez cette intégration d'outils lorsque vous créez la chaîne d'outils, à la section Intégrations configurables, cliquez sur **{{site.data.keyword.DRA_short}}**.
-1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
 
  a. Cliquez sur **Ajouter un outil**.
 
@@ -337,7 +338,7 @@ Ajoutez {{site.data.keyword.DRA_short}} afin de gérer et d'améliorer la qualit
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur **{{site.data.keyword.DRA_short}}**, puis complétez les étapes de mise en route : créez des critères, connectez-les au pipeline, puis exécutez ce dernier.
 
-Pour en savoir plus, voir [{{site.data.keyword.DRA_short}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window}.
+Pour en savoir plus, voir l'[article {{site.data.keyword.DRA_short}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window} sur IBM Cloud Garage Method.
 
 
 ## Ajout d'Eclipse Orion Web IDE
@@ -350,7 +351,7 @@ Eclipse Orion {{site.data.keyword.webide}} est un environnement de développemen
 Pour effectuer des tâches de contrôle des sources, ajoutez l'intégration d'outils Eclipse Orion {{site.data.keyword.webide}} :
 
 1. Si vous configurez cette intégration d'outils en même temps que vous créez la chaîne d'outils, dans la section Intégrations configurables, cliquez sur **Eclipse Orion {{site.data.keyword.webide}}**.
-1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
 
  a. Cliquez sur **Ajouter un outil**.
 
@@ -359,24 +360,22 @@ Pour effectuer des tâches de contrôle des sources, ajoutez l'intégration d'ou
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur **Eclipse Orion {{site.data.keyword.webide}}**. Votre espace de travail est prérempli avec vos référentiels GitHub ou {{site.data.keyword.ghe_short}}. Les référentiels associés à votre chaîne d'outils en cours sont mis en évidence.
 
-Pour en savoir plus, voir [Edition de code avec Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} et [Eclipse Orion {{site.data.keyword.webide}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window}.
+Pour en savoir plus, voir [Edition de code avec Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} et l'[article Eclipse Orion {{site.data.keyword.webide}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window} sur IBM Cloud Garage Method.
 
 
-## Configuration de Git Repos and Issue Tracking (version bêta)
+## Configuration de Git Repos and Issue Tracking
 {: #gitbluemix}
 
-L'intégration d'outils Git Repos and Issue Tracking est basée sur GitLab Community Edition, un service d'hébergement Web pour les référentiels Git. Vous pouvez avoir des copies en local et à distance de vos référentiels. Pour
-en savoir plus, voir [Git Repos and Issue Tracking ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help){:new_window}.
+L'intégration d'outils {{site.data.keyword.gitrepos}} est basée sur GitLab Community Edition, un service d'hébergement Web pour les référentiels Git. Vous pouvez avoir des copies en local et à distance de vos référentiels. Pour en savoir plus, voir [{{site.data.keyword.gitrepos}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help){:new_window}.
 
-Si vous configurez Git Repos and Issue Tracking lors de la création de la chaîne d'outils, procédez comme suit :    
+Si vous configurez {{site.data.keyword.gitrepos}} lors de la création de la chaîne d'outils, procédez comme suit :    
 
 1. A la section Intégrations configurables, cliquez sur **Git Repos and Issue Tracking**.
 1. Passez en revue les emplacements cible par défaut pour les référentiels Git. Ces référentiels sont clonés à partir des référentiels exemple. Si nécessaire, modifiez les noms des référentiels cible.
 
-Si vous disposez d'une chaîne d'outils et que vous lui ajoutez un référentiel Git Repos and Issue Tracking, procédez comme suit :    
+Si vous disposez d'une chaîne d'outils et que vous lui ajoutez {{site.data.keyword.gitrepos}}, procédez comme suit :    
 
-1. Dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur la chaîne d'outils afin d'ouvrir sa page Vue
-d'ensemble. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
+1. Dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur la chaîne d'outils afin d'ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
 1. Cliquez sur **Ajouter un outil**.
 1. A la section Intégrations d'outils, cliquez sur **Git Repos and Issue Tracking**.
 1. Sélectionnez un type de référentiel :     
@@ -393,8 +392,8 @@ l'URL du référentiel source.
 1. Cliquez sur la carte du référentiel Git à utiliser. La page de présentation de votre projet s'ouvre.    
 
 **Remarque :** si vous ne disposez pas d'un droit Maître ou Propriétaire sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser
-un webhook. Les webhooks sont nécessaires pour exécuter automatiquement un pipeline lorsqu'une validation est envoyée par commande push dans le référentiel. Sans webhook, vous devez démarrer
-manuellement vos pipelines.
+un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans
+webhook, vous devez démarrer manuellement vos pipelines.
 
 
 ## Configuration de GitHub et Issues
@@ -413,7 +412,7 @@ Configurez GitHub pour gérer votre code source dans le cloud :
  b. Passez en revue les emplacements de référentiel cible par défaut pour les référentiels GitHub. Ces référentiels sont clonés à partir des référentiels exemple. Si nécessaire, modifiez les noms des référentiels cible.
  ![Emplacements de référentiel cible par défaut](images/toolchain_github_config.png)
 
-1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
 
  a. Cliquez sur **Ajouter un outil**.
 
@@ -438,10 +437,11 @@ GitHub et déployer une application depuis votre espace de travail.
 
 1. Si vous avez activé GitHub Issues, cliquez sur **GitHub Issues** pour l'ouvrir. Vous pouvez utiliser cette instance de GitHub Issues pour l'ensemble de votre chaîne d'outils, même si cette dernière contient plusieurs référentiels GitHub.    
 
-**Remarque :** si vous ne disposez pas d'un droit d'administrateur sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser un webhook. Les
-webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans webhook, vous devez démarrer manuellement vos pipelines.
+**Remarque :** si vous ne disposez pas d'un droit d'administrateur sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser un
+webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans
+webhook, vous devez démarrer manuellement vos pipelines.
 
-Pour plus d'informations, voir [GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} et [GitHub Issues ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
+Pour en savoir plus, voir l'[article GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} et l'[article GitHub Issues ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} sur IBM Cloud Garage Method.
 
 
 ## Configuration de GitHub Enterprise et Issues sur Bluemix Dédié
@@ -449,7 +449,7 @@ Pour plus d'informations, voir [GitHub ![Icône de lien externe](../../icons/lau
 
  **Remarque :** Ces instructions s'appliquent à {{site.data.keyword.Bluemix_notm}} Dédié pour {{site.data.keyword.ghe_short}}. Si vous utilisez votre propre version gérée de {{site.data.keyword.ghe_short}}, certaines étapes peuvent varier en fonction de vos procédures internes.
 
-{{site.data.keyword.ghe_long}} est un service d'hébergement Web sur site pour les référentiels Git. {{site.data.keyword.ghe_short}} Dédié est destiné aux clients {{site.data.keyword.Bluemix_notm}} Dédié uniquement. GitHub Issues est un outil de suivi qui conserve votre travail et vos plans à un seul et même emplacement. Il est intégré à votre référentiel de développement pour vous permettre de vous concentrer sur les tâches importantes. Pour plus d'informations sur {{site.data.keyword.ghe_short}} Dédié et GitHub Issues, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} et [GitHub Issues ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
+{{site.data.keyword.ghe_long}} est un service d'hébergement Web sur site pour les référentiels Git. {{site.data.keyword.ghe_short}} Dédié est destiné aux clients {{site.data.keyword.Bluemix_notm}} Dédié uniquement. GitHub Issues est un outil de suivi qui conserve votre travail et vos plans à un seul et même emplacement. Il est intégré à votre référentiel de développement pour vous permettre de vous concentrer sur les tâches importantes. Pour plus d'informations sur Bluemix Dédié pour {{site.data.keyword.ghe_short}} et GitHub Issues, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} et l'[article GitHub Issues ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} sur IBM Cloud Garage Method.
 
 Vous pouvez configurer {{site.data.keyword.ghe_short}} en tant qu'intégration d'outils dans votre chaîne d'outils afin de pouvoir gérer le code source depuis l'instance de l'environnement [{{site.data.keyword.Bluemix_notm}} Dédié](/docs/dedicated/index.html#dedicated){: new_window} de votre société.
 
@@ -462,7 +462,7 @@ Vous pouvez configurer {{site.data.keyword.ghe_short}} en tant qu'intégration d
  c. Vérifiez le nom par défaut pour le nouveau référentiel {{site.data.keyword.ghe_short}}. Si nécessaire, changez le nom du nouveau référentiel. L'image suivante montre un exemple de référentiel cloné à partir d'un référentiel exemple. Vous pouvez utiliser un référentiel existant ou un nouveau référentiel. Pour utiliser un nouveau référentiel, vous pouvez créer un référentiel vide, cloner un référentiel ou dévier un référentiel.
  ![Emplacements de référentiel par défaut](images/toolchain_ghe_config.png)
 
-1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
 
  a. Cliquez sur **Ajouter un outil**.
 
@@ -498,12 +498,12 @@ Jenkins est un outil open source basé sur un serveur, qui génère et teste des
 
 **Important :** avant de créer une intégration d'outils Jenkins, vous devez disposer d'un serveur Jenkins.
 
-L'intégration d'outils Jenkins vous permet d'envoyer des notifications de travail Jenkins à d'autres outils de votre chaîne d'outils, comme Slack et PagerDuty. Pour tracer le code dans les déploiements, vous pouvez ajouter des messages de déploiement dans vos validations Git et les problèmes Git ou JIRA associés. Vous pouvez également visualiser vos déploiements dans la page Toolchain Connections. Vous pouvez fournir les résultats de test à {{site.data.keyword.DRA_short}}, ajouter des seuils de qualité automatisés et procéder au suivi des risques de déploiement.
+L'intégration d'outil Jenkins vous permet d'envoyer des notifications de travail Jenkins à d'autres outils de votre chaîne d'outils, comme Slack et PagerDuty. Pour tracer le code dans les déploiements, vous pouvez ajouter des messages de déploiement dans vos validations Git et les problèmes Git ou JIRA associés. Vous pouvez également visualiser vos déploiements dans la page Toolchain Connections. Vous pouvez fournir les résultats de test à {{site.data.keyword.DRA_short}}, ajouter des seuils de qualité automatisés et procéder au suivi des risques de déploiement.
 
 Configurez Jenkins afin d'automatiser la génération, le test et le déploiement en continu de vos applications.
 
 1. Si vous configurez cette intégration d'outils lorsque vous créez la chaîne d'outils, à la section Intégrations configurables, cliquez sur **Jenkins**.
-1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**. Ensuite, cliquez sur **Vue d'ensemble**.  
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**. Ensuite, cliquez sur **Vue d'ensemble**.  
 
  a. Cliquez sur **Ajouter un outil**.
 
@@ -529,17 +529,17 @@ Configurez Jenkins afin d'automatiser la génération, le test et le déploiemen
 
   * Cochez la case **This project is parameterized**.
 
-  * Ajoutez le paramètre de chaîne `ICD_WEBHOOK_URL`.
+  * Ajoutez le paramètre de chaîne `IBM_CLOUD_DEVOPS_WEBHOOK_URL`.
 
   * Collez le webhook de la chaîne d'outils généré.
  ![URL du webhook](images/jenkins_webhook_url.png)
 
-  * Ajoutez une action de post-génération pour IBM Cloud DevOps - Webhook Notification et cochez la case **Job Completed**.
+  * Ajoutez une action de post-génération pour Notify OTC  et cochez la case **Job Completed**.
  ![Action de post-génération](images/jenkins_postbuild_action.png)  
 
  e. Dans vos travaux de déploiement, procédez comme suit :
 
-  * Ajoutez les paramètres de chaîne `ICD_WEBHOOK_URL`, `CF_API`, `CF_ORG`, `CF_SPACE` et `CF_APP`. Ces exemples montrent comment ajouter chacun des paramètres de chaîne.
+  * Ajoutez les paramètres de chaîne `IBM_CLOUD_DEVOPS_WEBHOOK_URL`, `CF_API`, `CF_ORG`, `CF_SPACE` et `CF_APP`. Ces exemples montrent comment ajouter chacun des paramètres de chaîne.
  ![paramètre de chaîne d'URL du webhook](images/jenkins_set_webhook_url.png)
  ![paramètre de chaîne CFI API](images/jenkins_set_cfapi.png)
  ![paramètre de chaîne CFI ORG](images/jenkins_set_cforg.png)
@@ -553,15 +553,14 @@ Configurez Jenkins afin d'automatiser la génération, le test et le déploiemen
 l'application, avec traçabilité de validation Git, à votre chaîne d'outils :
  ![Commandes de génération](images/jenkins_build_commands.png)    
 
-  * Dans la zone **Générer**, saisissez la commande `cf icd --create-connection $ICD_WEBHOOK_URL $CF_APP` pour envoyer les mappages déployables
-de l'application à la chaîne d'outils.    
+  * Dans la zone **Générer**, saisissez la commande `cf icd --create-connection $IBM_CLOUD_DEVOPS_WEBHOOK_URL $CF_APP` pour envoyer les mappages déployables de l'application à la chaîne d'outils.    
 
  f. Enregistrez vos modifications et retournez à la page Configurer l'intégration pour l'intégration d'outils Jenkins.
 
 1. Cliquez sur **Créer une intégration**.
 1. A partir de votre chaîne d'outils, cliquez sur **Jenkins** pour afficher le serveur Jenkins.  
 
-Pour plus d'informations, voir [Jenkins ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window}.
+Pour en savoir plus, voir l'[article Jenkins ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window} sur IBM Cloud Garage Method.
 
 
 ## Configuration de JIRA
@@ -572,7 +571,7 @@ JIRA est un outil qui assure le suivi des bogues et des problèmes liés à votr
 Configurez JIRA pour planifier, suivre et distribuer un code de qualité :
 
 1. Si vous configurez cette intégration d'outils lorsque vous créez la chaîne d'outils, à la section Intégrations configurables, cliquez sur **JIRA**.
-1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**. Ensuite, cliquez sur **Vue d'ensemble**.  
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**. Ensuite, cliquez sur **Vue d'ensemble**.  
 
  a. Cliquez sur **Ajouter un outil**.
 
@@ -611,7 +610,7 @@ des modifications du code**. Assurez-vous que vous utilisez JIRA Smart Commit po
 1. Cliquez sur **Créer une intégration**.
 1. A partir de cette chaîne d'outils, cliquez sur **JIRA** pour afficher le tableau de bord du projet JIRA auquel vous êtes connecté.
 
-Pour en savoir plus, voir [JIRA ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window}.
+Pour en savoir plus, voir l'[article JIRA ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window} sur IBM Cloud Garage Method.
 
 
 ## Configuration de Nexus
@@ -620,7 +619,7 @@ Pour en savoir plus, voir [JIRA ![Icône de lien externe](../../icons/launch-gly
 Configurez le gestionnaire de référentiels Nexus pour stocker les artefacts de génération dans votre référentiel Nexus :
 
 1. Si vous configurez cette intégration d'outils lorsque vous créez la chaîne d'outils, à la section Intégrations configurables, cliquez sur **Nexus**.
-1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**. Ensuite, cliquez sur **Vue d'ensemble**.  
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**. Ensuite, cliquez sur **Vue d'ensemble**.  
 
  a. Cliquez sur **Ajouter un outil**.
 
@@ -681,7 +680,8 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de gé
      npm publish --registry "${NPM_RELEASE_URL}"
      ```
   **Astuce :** vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de
-configuration de votre intégration d'outils Nexus.
+configuration pour l'intégration des outils Nexus.
+
   e. Si votre travail de génération est publié dans le registre Nexus et que le format de votre version de module de noeud est `x.y.z-SNAPSHOT.w`, cochez la case **Increment snapshot module version**. Le travail de génération met automatiquement à jour la version du module avant qu'il ne soit publié dans le registre Nexus. Le travail de génération sélectionne la version la plus élevée du module à partir du registre npm et du fichier local `package.json`, et incrémente la version du module à l'aide de semver. Le travail de génération ne répercute pas les modifications dans le référentiel SCM.
 
 1. Cliquez sur **SAUVEGARDER**. Lors de l'exécution de votre pipeline, ce travail de génération utilise les informations de configuration provenant de l'intégration d'outils Nexus pour la connexion à votre registre npm.
@@ -712,9 +712,10 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de gé
      ```
   **Astuce :** vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de
 configuration pour l'intégration des outils Nexus.
+
 1. Cliquez sur **SAUVEGARDER**. Lors de l'exécution de votre pipeline, ce travail de génération utilise les informations de configuration provenant de l'intégration d'outils Nexus pour la connexion à votre référentiel Maven.
 
-Pour plus d'informations, voir [Nexus ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window}.
+Pour en savoir plus, voir l'[article Nexus ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window} sur IBM Cloud Garage Method.
 
 
 ## Configuration d'un outil personnalisé (autre outil)
@@ -727,7 +728,7 @@ Configurez un outil personnalisé qui puisse fonctionner avec
 les autres outils de votre chaîne d'outils et qui soit disponible
 pour votre équipe :
 
-1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
 
  a. Cliquez sur **Ajouter un outil**.
 
@@ -756,7 +757,7 @@ PagerDuty intègre dans une vue unique les données provenant de plusieurs syst�
 Configurez PagerDuty pour l'envoi de notifications en cas d'échec d'étape de pipeline afin de pouvoir résoudre les problèmes plus rapidement et de réduire le temps d'indisponibilité.
 
 1. Si vous configurez cette intégration d'outils lorsque vous créez la chaîne d'outils, à la section Intégrations configurables, cliquez sur **PagerDuty**.
-1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
 
  a. Cliquez sur **Ajouter un outil**.
 
@@ -769,7 +770,46 @@ Configurez PagerDuty pour l'envoi de notifications en cas d'échec d'étape de p
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur **PagerDuty** pour accéder au site pagerduty.com. Vous pouvez afficher les événements associés au service PagerDuty spécifié lors de la configuration de cette intégration d'outils pour votre chaîne d'outils.
 
-Pour en savoir plus, voir [PagerDuty ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}.
+Pour en savoir plus, voir l'[article PagerDuty ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window} sur IBM Cloud Garage Method.
+
+
+## Configuration de Rational Team Concert
+{: #rationalteamconcert}
+
+IBM Rational Team Concert&trade; est un outil de collaboration des équipes qui intègre des tâches de développement, notamment la planification d'itérations, la gestion des changements, le suivi des incidents, le contrôle des sources, l'automatisation de la construction et la génération de rapports. 
+
+Configurez Rational Team Concert pour pouvoir bénéficier d'une approche DevOps et de la distribution continue dans votre environnement de développement : 
+
+1. Si vous configurez cette intégration d'outils lorsque vous créez la chaîne d'outils, à la section Intégrations configurables, cliquez sur **Rational Team Concert**.
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**. Ensuite, cliquez sur **Vue d'ensemble**.  
+
+ a. Cliquez sur **Ajouter un outil**.
+
+ b. Dans la section Intégrations d'outils, cliquez sur **Rational Team Concert**.
+
+1. Saisissez l'URL du serveur Rational Team Concert qui doit s'ouvrir lorsque vous cliquez sur la carte Rational Team Concert à partir de votre chaîne d'outils.
+1. Entrez l'ID utilisateur que vous utilisez pour accéder au serveur Rational Team Concert. 
+1. Indiquez le mot de passe que vous utilisez pour accéder au serveur Rational Team Concert. 
+1. Si vous disposez d'une zone de projet Rational Team Concert que vous souhaitez ajouter à votre chaîne d'outils, procédez comme suit : 
+
+ a. Dans la liste **Type de zone de projet**, sélectionnez **Zone de projet existante**. 
+
+ b. Indiquez le nom de la zone de projet à ajouter à la chaîne d'outils. 
+ 
+1. Si vous souhaitez créer une zone de projet Rational Team Concert à ajouter à votre chaîne d'outils, procédez comme suit : 
+ 
+ a. Dans la liste **Type de zone de projet**, sélectionnez **Nouvelle zone de projet**. 
+
+ b. Indiquez le nom de la nouvelle zone de projet à ajouter à la chaîne d'outils. 
+ 
+ c. Entrez le nom du modèle de processus Rational Team Concert à utiliser pour créer le projet. 
+ 
+1. Pour suivre le déploiement des modifications du code du projet en créant des étiquettes et des commentaires sur les éléments de travail, cochez la case **Suivi du déploiement des modifications du code**.
+1. Cliquez sur **Créer une intégration**.
+1. A partir de la chaîne d'outils, cliquez sur **Rational Team Concert** pour ouvrir le tableau de bord Rational Team Concert que vous avez configuré.
+
+Pour en savoir plus, voir l'[article IBM Rational Team Concert ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_rtc/){: new_window} sur IBM Cloud Garage Method.
+
 
 
 ## Configuration de Sauce Labs
@@ -777,12 +817,12 @@ Pour en savoir plus, voir [PagerDuty ![Icône de lien externe](../../icons/launc
 
 Sauce Labs exécute des tests unitaires fonctionnels. Quand une suite de tests Sauce Labs est configurée comme travail de test dans {{site.data.keyword.deliverypipeline}}, cette suite de tests peut exécuter des tests en fonction de votre application Web ou mobile dans le cadre de votre processus de distribution continue. Ces tests peuvent fournir un contrôle de flux de valeur pour vos projets, agissant comme des barrières pour empêcher le déploiement de code incorrect.
 
- **Remarque :** Cette intégration d'outils est uniquement disponible sur {{site.data.keyword.Bluemix_notm}} Public. 
+ **Remarque :** Cette intégration d'outils est uniquement disponible sur {{site.data.keyword.Bluemix_notm}} Public.
 
 Configurez Sauce Labs pour l'exécution de tests fonctionnels automatisés sur plusieurs systèmes d'exploitation et navigateurs afin de pouvoir émuler la façon dont un utilisateur peut utiliser un site Web ou une application :
 
 1. Si vous configurez cette intégration d'outils lorsque vous créez la chaîne d'outils, à la section Intégrations configurables, cliquez sur **Sauce Labs**.
-1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
 
  a. Cliquez sur **Ajouter un outil**.
 
@@ -793,9 +833,9 @@ Configurez Sauce Labs pour l'exécution de tests fonctionnels automatisés sur p
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur **Sauce Labs** pour accéder à saucelabs.com et afficher l'activité de test pour la chaîne d'outils.
 
- **Astuce :** si vous avez ajouté une tâche test Sauce Labs à {{site.data.keyword.deliverypipeline}}, vous pouvez sélectionner l'instance de service.
+ **Astuce :** si vous avez ajouté une tâche test Sauce Labs à {{site.data.keyword.deliverypipeline}}, vous pouvez sélectionner l'instance de service. Pour connaître les instructions de configuration d'un travail de test dans votre pipeline, voir [Configuration d'un travail de test Sauce Labs sur votre pipeline](#config_saucelabs).
 
-Pour en savoir plus, voir [Sauce Labs ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window}.
+Pour en savoir plus, voir l'[article Sauce Labs ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window} sur IBM Cloud Garage Method.
 
 
 ## Configuration de Slack
@@ -808,7 +848,7 @@ Slack est un système de messagerie et de notification en temps réel, basé sur
 Configurez Slack pour la réception de notifications concernant votre chaîne d'outils depuis les intégrations d'outils, par exemple les activités de test et de déploiement :
 
 1. Si vous configurez cette intégration d'outils lorsque vous créez la chaîne d'outils, à la section Intégrations configurables, cliquez sur **Slack**.
-1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
+1. Si vous disposez d'une chaîne d'outils et lui ajoutez cette intégration d'outils, dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
 
  a. Cliquez sur **Ajouter un outil**.
 
@@ -830,7 +870,7 @@ que vous utilisez des paramètres de configuration valides pour l'URL de webhook
 
 1. Cliquez sur **Slack**. Vous pouvez afficher toutes les activités de votre chaîne d'outils dans le canal Slack configuré.
 
-Pour en savoir plus, voir [Slack ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}.
+Pour en savoir plus, voir l'[article Slack ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window} sur IBM Cloud Garage Method.
 
 
 ## Configuration de SonarQube
@@ -858,4 +898,4 @@ d'authentification pour la connexion, laissez cette zone vide.
 1. Cliquez sur **Créer une intégration**.
 1. Dans la chaîne d'outils, cliquez sur **SonarQube** pour afficher le tableau de bord pour l'instance SonarQube à laquelle vous vous êtes connecté.
 
-Pour en savoir plus, voir [SonarQube ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window}.
+Pour en savoir plus, voir l'[article SonarQube ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window} sur IBM Cloud Garage Method.
