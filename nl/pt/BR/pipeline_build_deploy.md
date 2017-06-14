@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-6-1"
+lastupdated: "2017-3-16"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -58,12 +58,15 @@ estágio** na página Pipeline.
 É possível também solicitar construções e implementações sob demanda na página de
 histórico de construções de uma de duas maneiras:
 * Arraste uma construção para a caixa que está sob um estágio configurado.
-* Na seção RESULTADO DA ÚLTIMA EXECUÇÃO, clique no ícone **Enviar para** e, em seguida, selecione um espaço para implementar.
- ![O estágio de Execução com este ícone de construção](images/deploy_to.png)
+* Ao lado de uma construção, clique no ícone **Enviar para** e, em seguida, selecione um espaço no qual implementar.
+  ![O estágio de Execução com este ícone de construção](images/deploy_to.png)
 
 Para cancelar um estágio em execução, no estágio, clique em **Visualizar
 logs e histórico**. Na lista de tarefas, clique no número da tarefa em
-execução e, em seguida, clique em **CANCELAR**. É possível também cancelar tarefas individualmente clicando em uma tarefa e, em seguida, clicando em **CANCELAR** ou clicando no ícone **Parar** para uma tarefa em seu estágio.
+execução e, em seguida, clique em **CANCELAR**. É possível também
+cancelar tarefas individualmente clicando em uma tarefa e, em seguida, clicando em
+**CANCELAR** ou clicando no ícone **Parar** ao
+lado de uma tarefa em seu estágio.
 
 ## Implementando um app
 {: #deliverypipeline_deploy}

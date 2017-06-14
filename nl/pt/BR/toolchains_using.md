@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-16"
+lastupdated: "2017-4-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-5-16"
 {: #toolchains-using}
 
 As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Dedicated no {{site.data.keyword.Bluemix}}. É possível usar uma cadeia de ferramentas para ser produtivo em seu trabalho diário de desenvolvimento, implementação e operações. Após
-configurar uma cadeia de ferramentas, é possível incluir, excluir ou configurar integrações de ferramenta e gerenciar acesso à cadeia de ferramentas.
+configurar uma cadeia de ferramentas, é possível incluir, excluir ou configurar integrações de ferramenta e gerenciar acesso à cadeia de ferramentas. 
 {: shortdesc}
 
 ## Configurando uma integração de ferramenta
@@ -35,7 +35,7 @@ Se você tiver adiado a configuração de uma integração de ferramenta quando 
 
  **Dica**: algumas das integrações de ferramenta são pré-configuradas e não requerem parâmetros de configuração. É possível atualizar as definições de configuração para apenas as integrações de ferramenta configuradas.
 
- Quando tiver finalizado a atualização das configurações, clique em **Salvar integração**. Para obter mais informações sobre como configurar integrações de ferramentas específicas, veja [Configurando integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+ Quando tiver finalizado a atualização das configurações, clique em **Salvar integração**.
 
 ## Incluindo uma integração de ferramenta
 {: #adding_a_tool_integration}
@@ -82,17 +82,17 @@ Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{sit
    a. Na barra de menus, clique em **Gerenciar > Conta > Organizações**.
 
    b. Clique em **Convidar membros da equipe**.
-
+   
    c. Selecione a organização para a qual você deseja convidar o usuário e clique em **Avançar**.
-
+   
    d. Selecione os espaços os quais você deseja permitir que o usuário acesse.
-
-   e. Selecione a função a ser designada aos espaços selecionados na organização.
-
-     **Nota:** por padrão, os gerenciadores da organização têm privilégios integrais de administrador para todas as cadeias de ferramentas que estão associadas à organização. Para conceder privilégios integrais de administrador ao usuário, selecione a função de **Gerenciador**. As funções Gerente de faturamento e Auditor não afetam o acesso da cadeia de ferramentas. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para obter mais informações, veja [Gerenciando membros da equipe e funções](/docs/admin/users_roles.html){: new_window}.
-
+   
+   e. Selecione a função a ser designada aos espaços selecionados na organização. 
+   
+     **Nota**: por padrão, os gerenciadores da organização têm privilégios completos de administrador a todas as cadeias de ferramentas que estão associadas à organização. Para conceder privilégios completos de administrador ao usuário, selecione a função **Gerenciador**. As funções Gerente de faturamento e Auditor não afetam o acesso da cadeia de ferramentas. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para obter mais informações, veja [Gerenciando membros da equipe e funções](/docs/admin/users_roles.html){: new_window}.
+   
    f. Selecione a opção para confirmar que você assume a responsabilidade financeira por todos os encargos incorridos na conta.
-
+   
    g. Insira o endereço de e-mail do usuário que você deseja convidar e clique em **Enviar**.
 
    h. Depois que o usuário for um membro da organização, retorne à página Gerenciar da cadeia de ferramentas e inclua o usuário na cadeia de ferramentas.  
@@ -105,7 +105,7 @@ Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{sit
 
 1. No painel do DevOps, na página **Cadeias de ferramentas**, clique na cadeia de ferramentas a ser excluída. Como alternativa, na página Visão geral do app, no cartão do Continuous Delivery, clique em **Visualizar cadeia de ferramentas**.
 1. Clique no menu **Mais ações**, que está próximo a **Visualizar app**.
-1. Clique em **Excluir**. Excluir uma cadeia de ferramentas remove todas as suas integrações de ferramenta, que pode excluir recursos que são gerenciados por essas integrações.
+1. Clique em **Excluir** e revise ou ajuste as integrações de ferramentas que você estiver excluindo.
 1. Confirme a exclusão digitando o nome da cadeia de ferramentas e clicando em **Excluir**.  
 
- **Dica**: ao excluir uma integração de ferramenta GitHub, {{site.data.keyword.ghe_short}} ou {{site.data.keyword.gitrepos}}, o repositório associado não é excluído do GitHub, {{site.data.keyword.ghe_short}} ou {{site.data.keyword.gitrepos}}. Deve-se remover manualmente o repositório.
+ **Dica**: ao excluir uma integração de ferramenta GitHub, {{site.data.keyword.ghe_short}} ou Git Repos and Issue Tracking, o repositório associado não será excluído do GitHub, do {{site.data.keyword.ghe_short}} ou do Git Repos and Issue Tracking. Deve-se remover manualmente o repositório.
