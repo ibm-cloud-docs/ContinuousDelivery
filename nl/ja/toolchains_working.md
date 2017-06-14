@@ -23,9 +23,9 @@ lastupdated: "2017-4-28"
 ##テンプレートからのツールチェーンの作成   
 {: #creating_a_toolchain_from_a_template}
 
-特定のツール統合のセットを含む[ツールチェーンを作成する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/devops/create){: new_window} ための開始点としてテンプレートを使用できます。テンプレートの使用方法について詳しくは、[IBM Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/category/tools){:new_window} を参照してください。
+特定のツール統合のセットを含む[ツールチェーンを作成する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/create){: new_window} ための開始点としてテンプレートを使用できます。テンプレートの使用方法について詳しくは、[IBM Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/category/tools){:new_window} を参照してください。
 
-1. {{site.data.keyword.Bluemix_notm}} Public を使用する場合、[{{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://console.ng.bluemix.net){:new_window} にログインします。
+1. {{site.data.keyword.Bluemix_notm}} Public を使用する場合、[{{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://console.bluemix.net){:new_window} にログインします。
 1. {{site.data.keyword.Bluemix_notm}} Dedicated を使用する場合、{{site.data.keyword.Bluemix_notm}} の Dedicated 環境にログインします。
 1. {{site.data.keyword.Bluemix_notm}} メニュー・バーのメニューから、**「サービス」**をクリックして、**「DevOps」**をクリックします。
 1. DevOps ダッシュボードの**「ツールチェーン」**ページで、**「ツールチェーンの作成 (Create a Toolchain)」**をクリックします。

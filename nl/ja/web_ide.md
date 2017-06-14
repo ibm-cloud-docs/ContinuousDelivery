@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-25"
+lastupdated: "2017-6-1"
 
 ---
 
@@ -26,7 +26,7 @@ Eclipse Orion {{site.data.keyword.webide}} は、Web 開発を行うことので
 {{site.data.keyword.webide}} はカスタマイズ可能であり、開発ニーズに合わせて、カラー・スキーム、テクニカル・ツール、および設定を選択することができます。これらの設定を表示したり変更したりするには、左側のメニューから**「設定」**アイコン<img class="inline" src="images/webide_settings_icon_light_small.png"  alt="設定アイコン">をクリックします。
 
 
-編集中にしばしば設定を変更する必要がある場合は、**「ローカル・エディター設定」**アイコン <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="「ローカル・エディター設定」アイコン">から簡単に設定にアクセスできます。 
+編集中にしばしば設定を変更する必要がある場合は、**「ローカル・エディター設定」**アイコン <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="「ローカル・エディター設定」アイコン">から簡単に設定にアクセスできます。
 
 ![ローカル・エディター設定](images/webide_local_editor_settings_light.png)
 
@@ -36,7 +36,7 @@ Eclipse Orion {{site.data.keyword.webide}} は、Web 開発を行うことので
 
 2. **「エディター設定」**をクリックします。
 
-3. **「ローカル・エディター設定」**メニューから設定を組み込んだり除外したりするには、各設定の横の星印をクリックします。
+3. **「ローカル・エディター設定」**メニューから設定を組み込んだり除外したりするには、各設定の星印をクリックします。
 
 ![「エディター設定」トグル](images/webide_editor_settings_toggle_light.png)
 
@@ -63,14 +63,14 @@ Eclipse Orion {{site.data.keyword.webide}} は、Web 開発を行うことので
  2. ファイル・ナビゲーターで、いずれかのファイルをクリックします。
 
 ### キーボード・ショートカット
-{{site.data.keyword.webide}} の大部分のコマンドは、キーボード・ショートカットでのみアクセス可能です。
+{{site.data.keyword.webide}} のコマンドの多くは、キーボード・ショートカットでもアクセス可能です。
 
 エディターのキーボード・ショートカットのリストを表示するには、Alt+Shift+? を押します。Mac OS を使用している場合は、Ctrl+Shift+? を押します。
 
 ## ソース・コードの管理
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} は、ソース・コード管理ツールと統合されています。Git リポジトリーに関する作業を行うには、**「Git リポジトリー」**アイコン<img class="inline" src="images/webide_git_icon_light_small.png"  alt="「Git リポジトリー」アイコン">をクリックします。 
+{{site.data.keyword.webide}} は、ソース・コード管理ツールと統合されています。Git リポジトリーに関する作業を行うには、**「Git リポジトリー」**アイコン<img class="inline" src="images/webide_git_icon_light_small.png"  alt="「Git リポジトリー」アイコン">をクリックします。
 
  **ヒント**: {{site.data.keyword.webide}} をオープン・ツールチェーンと共に使用している場合、ワークスペースには GitHub、{{site.data.keyword.ghe_short}}、または Git Repos and Issue Tracking のリポジトリーが事前に取り込まれます。現行のツールチェーンと関連付けられているリポジトリーは強調表示されます。
 
@@ -78,19 +78,33 @@ Eclipse Orion {{site.data.keyword.webide}} は、Web 開発を行うことので
 ## ワークスペースからのアプリのデプロイ
 {: #deploy}
 
-1. アプリをデプロイするには、実行バーから、起動構成を選択または作成します。
-1. 「デプロイ」アイコン<img class="inline" src="images/webide_deploy_button_light_small.png"  alt="「デプロイ」アイコン">をクリックします。ワークスペースの現在の内容と、起動構成に定義された環境を使用して、アプリのインスタンスがデプロイされます。 
-2. アプリがデプロイされた後、実行バーを使用して、アプリの停止、再始動、デバッグ、ログの表示などを行うことができます。![実行バー](images/webide_runbar_light.png)    
+1. アプリをデプロイするには、実行バーから、起動構成を選択または作成します。![実行バー](images/webide_runbar_light.png)   
+1. 「デプロイ」アイコン<img class="inline" src="images/webide_deploy_button_light_small.png"  alt="「デプロイ」アイコン">をクリックします。ワークスペースの現在の内容と、起動構成に定義された環境を使用して、アプリのインスタンスがデプロイされます。
+2. アプリがデプロイされた後、実行バーを使用して、アプリの停止、再始動、デバッグ、ログの表示などを行うことができます。
 
-<!-- 3/6/2016: bl commands don't work with V2/CD 
+<table>
+<tr><td><img src="./images/stop_button.png"  alt="停止アイコン"></td><td>アプリを停止します</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="アプリ URL を開くアイコン"></td><td> デプロイされたアプリを開きます</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="ログ表示アイコン"></td><td>デプロイされたアプリのログを表示します</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="ダッシュボードを開くアイコン"></td><td>アプリのダッシュボードを開きます</td></tr>
+</table>
+
+Node.js アプリを開発している場合は、ライブ編集モードを有効にします <img  src="./images/enable_live_edit.png"  alt="ライブ編集を有効にするスライダー">。
+
+<table><tr><td><img src="./images/live_edit_restart.png"  alt="ライブ編集再開アイコン"></td><td>ライブ編集モードを有効にして、再デプロイメントなしでアプリを素早く再始動します</td></tr>
+<tr><td> <img src="./images/debug_icon.png"  alt="デバッグ・アイコン"></td><td>ライブ編集モードを有効にして、デバッガーにアクセスします
+</td></tr>
+</table>
+
+<!-- 3/6/2016: bl commands don't work with V2/CD
 ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}. 
+To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}.
 
-### Before you begin 
+### Before you begin
 
-Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
+Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
 
 ### Synchronizing your local environment with {{site.data.keyword.Bluemix_notm}}
 {: #edit_local_download}
@@ -104,7 +118,7 @@ Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line i
 	{: pre}
 
 3. When you are prompted, enter your IBMid and password.
-4. View a list of your {{site.data.keyword.Bluemix_notm}} projects: 
+4. View a list of your {{site.data.keyword.Bluemix_notm}} projects:
 
 	```
 	bl projects
@@ -135,11 +149,61 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 2. Use the launch configuration that you created in the {{site.data.keyword.webide}}. After you select the launch configuration, the Desktop Sync feature is enabled in your local environment. In the command-line window that you just opened, you can view the app's URL, the debug URL, the manage URL, and view the {{site.data.keyword.Bluemix_live_notm}} state.
 
-3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace. 
+3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace.
 
 ### Disabling the Desktop Sync feature
 
 1. In the second command-line window, enter `bl stop`.
 2. In the first command-line window, enter `q`.
 
---> 
+-->
+
+## サポートされる言語
+{: #supported_languages}
+
+Eclipse Orion {{site.data.keyword.webide}} では、JavaScript、HTML、CSS、Markdown の各ファイルでコンテンツ・アシスト、ツールチップ、プレビュー、妥当性検査、構文強調表示を利用できます。構文強調表示は、以下のファイル・タイプでも使用できます。
+
+<table>
+<tr>
+<td>
+<ul><li>Arduino
+</li><li>C</li>
+<li>C#
+</li><li>C++
+</li><li>CoffeeScript
+</li><li>CSHTML
+</li><li>組み込み JavaScript (ejs)
+</li><li>Erlang
+</li><li>Go
+</li><li>HTML 抽象化マークアップ言語 (Haml)
+</li><li>Jade
+</li><li>Java
+</li><li>JSON
+</li><li>Less  
+</li><li>Lua  
+</li><li>Objective-C
+</li><li>PHP
+</li><li>Python</li></ul>
+</td>
+<td>
+<ul><li>Ruby
+</li><li>Sass/SCSS
+</li><li>SQL
+</li><li>Swift
+</li><li>TypeScript
+</li><li>Visual Basic (vb)
+</li><li>VMHTML
+</li><li>XHTML
+</li><li>XML
+</li><li>XQuery
+</li><li>YAML
+</li><li>Launch ファイル 	
+</li><li>Dockerfile
+</li><li>gitignore
+</li><li>git config
+</li><li>cfignore
+</li><li>properties
+</ul>
+</td>
+</tr>
+</table>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+lastupdated: "2017-5-25"
 
 ---
 
@@ -36,15 +36,15 @@ lastupdated: "2017-4-28"
 1. {{site.data.keyword.Bluemix_notm}} メニュー・バーのメニューから、**「サービス」**をクリックして、**「DevOps」**をクリックします。
 1. **「パイプライン」**をクリックして、 **「パイプラインの作成 (Create a Pipeline)」**をクリックします。
 
-Cloud Foundry アプリケーションをデプロイするように構成された[パイプラインを作成する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} には、以下のステップを実行します。
+Cloud Foundry アプリケーションをデプロイするように構成された[パイプラインを作成する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} には、以下のステップを実行します。
 
 1. **「Cloud Foundry」**をクリックします。
 1. パイプラインに別の名前を使用する場合は、デフォルトの名前を変更します。
 
 1. アプリケーションに別の名前を使用する場合は、デフォルトの名前を変更します。この名前は、パイプラインのデプロイ先のアプリケーションです。
-1. ツールチェーンがない場合は、デフォルトの名前が付いたツールチェーンが作成されます。ツールチェーンに別の名前を使用する場合は、名前を変更します。ツールチェーンを使用して、他のツールやサービスと統合することで、パイプラインの機能を拡張できます。ツールチェーンについて詳しくは、[ツールチェーンを使用した作業](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}を参照してください。
+1. ツールチェーンがない場合は、デフォルトの名前が付いたツールチェーンが作成されます。ツールチェーンに別の名前を使用する場合は、名前を変更します。ツールチェーンを使用して、他のツールやサービスと統合することで、パイプラインの機能を拡張できます。ツールチェーンについて詳しくは、[ツールチェーンの作成](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}を参照してください。
 
- **ヒント**: パイプラインとツールチェーンは、組織に属しています。ユーザーが、ツールチェーンを持つ組織に属している場合は、関連付けられているツールチェーンのアクセス制御リストに追加してもらうことができます。ツールチェーンのアクセス制御リストに追加されると、そのツールチェーンと、関連付けられたすべてのパイプラインを (たとえそれらを作成していなくても) 使用できます。ツールチェーンのアクセス制御について詳しくは、[アクセスの管理](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}を参照してください。
+ **ヒント**: パイプラインとツールチェーンは、組織に属しています。ユーザーが、ツールチェーンを持つ組織に属している場合は、関連付けられているツールチェーンのアクセス制御リストに追加してもらうことができます。ツールチェーンのアクセス制御リストに追加されたユーザーは、そのツールチェーンと、それに関連付けられたすべてのパイプラインを (そのユーザーが作成していなくても) 閲覧できます。管理特権を付与されたユーザーは、ツールチェーンの変更や削除もできます。ツールチェーンのアクセス制御について詳しくは、[アクセスの管理](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}を参照してください。
 
 1. 使用するツールチェーンを選択するか、作成する新しいツールチェーンの名前を入力します。
 1. Git プロバイダーを選択します。
@@ -64,7 +64,7 @@ Cloud Foundry アプリケーションをデプロイするように構成され
 ![パイプライン・カード](images/cd_pipeline.png)
 1. 複合パイプラインを含むツールチェーン内にパイプラインを作成した場合、新しいパイプラインは複合パイプラインに追加されます。デプロイメント計画を変更して、新しいパイプラインのデプロイメント・タスクを含めます。[Delivery Pipeline タスクの作成](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}を参照してください。
 
-事前構成されたステージのない[空のパイプライン ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} を作成するには、以下のようにします。
+事前構成されたステージのない[空のパイプライン ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} を作成するには、以下のようにします。
 
 1. **「カスタム」**をクリックします。
 1. パイプラインに別の名前を使用する場合は、デフォルトの名前を変更します。

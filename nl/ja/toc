@@ -19,6 +19,7 @@ Continuous Delivery
 
   {: .navgroup id="howto"}
     upgrade_projects.md
+
   {: .topicgroup}
     Delivery Pipeline
         pipeline_about.md
@@ -36,7 +37,7 @@ Continuous Delivery
         toolchains_using.md
         toolchains_integrations.md
 
-      {: .topicgroup}
+  {: .topicgroup}
     Eclipse Orion Web IDE
         web_ide.md
         git_web_ide.md

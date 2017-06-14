@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-10"
+lastupdated: "2017-6-5"
 
 ---
 
@@ -17,6 +17,14 @@ lastupdated: "2017-5-10"
 ユーザーは、プロジェクトを自分でアップグレードするか、自動的にアップグレードされるのを待つことができます。最良の結果を得るためには、[前提条件](#upgrade_prereqs)を満たしたうえで、できるだけ早くプロジェクトをアップグレードして、ツールチェーンの名前やツールチェーンが作成される組織を制御できるようにしてください。
 {: shortdesc}
 
+**よくある質問**
+
+- [私の JazzHub プロジェクトは英国地域に関連付けられていますが、ツールチェーンは米国南部地域になります。どのような仕組みですか。](#faq_region)
+- [アップグレードする場合、Track &amp; Plan 内の作業項目とダッシュボードはどうなりますか。](#faq_tp)
+- [アップグレードする場合、コード・リポジトリーはどうなりますか。](#faq_repo)
+- [ツールチェーンにアップグレードする場合、プロジェクト内のビルド定義はどうなりますか。](#faq_build)
+- [ツールチェーンにアップグレードするプロジェクト用の組織を作成する必要があります。組織を作成するには、その前にアカウントにクレジット・カードを追加する必要があることは理解しています。クレジット・カードに課金されるのでしょうか。](#faq_charges)
+
 ## ツールチェーン
 {: #compare_toolchains}
 
@@ -26,8 +34,8 @@ lastupdated: "2017-5-10"
 - ツールチェーンには、Slack、Sauce Labs、PagerDuty、および {{site.data.keyword.DRA_full}} などの、プロジェクトでは使用できないツールを組み込むことができます。
 - ツールチェーンへのアクセスは、標準の {{site.data.keyword.Bluemix_notm}} 組織で管理されます。メンバーシップは、プロジェクト・レベルで管理されていたプロジェクトと異なり、組織レベルで維持されます。
 
-ツールチェーンの詳細情報は、[YouTube ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://youtu.be/2SIPE1e7NJ4){: new_window}または [{{site.data.keyword.contdelivery_short}} 入門](/docs/services/ContinuousDelivery/index.html)
-[![YouTube](images/CD_video.png) の外部リンク](https://youtu.be/2SIPE1e7NJ4){: new_window}で知ることができます。
+ツールチェーンについては、[YouTube ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://youtu.be/2SIPE1e7NJ4){: new_window} または [{{site.data.keyword.contdelivery_short}} 概説](/docs/services/ContinuousDelivery/index.html)
+[![YouTube](images/CD_video.png) への外部リンク](https://youtu.be/2SIPE1e7NJ4){: new_window} で説明しています。
 
 ## 前提条件
 {: #upgrade_prereqs}
@@ -57,6 +65,14 @@ lastupdated: "2017-5-10"
 
 JazzHub でホストされている Git リポジトリーをプロジェクトが使用する場合は、アップグレード開始後に、ツールチェーンに移動するデータの整合性を確保するためにリポジトリーがロックされます。ツールチェーンを削除してアップグレードを元に戻すと、JazzHub 上のリポジトリーはアンロックされます。
 
+アップグレード・プロセス中に各タイプのリポジトリーがどのように処理されるかについて、次の表にまとめています。
+
+|プロジェクト・リポジトリー |プロジェクト・タイプ	|ツールチェーン・リポジトリー |
+|:----------|:------------------------------|:------------------|
+|github.com 		|プライベートまたはパブリック 		|{{site.data.keyword.Bluemix_notm}} Public と同じ github.com リポジトリー	|
+|hub.jazz.net/git		|プライベートまたはパブリック 		|{{site.data.keyword.Bluemix_notm}} Public の {{site.data.keyword.gitrepos}}内の新しいリポジトリー	|
+{: caption="表 1. プロジェクト・リポジトリー対ツールチェーン・リポジトリーのマッピング" caption-side="top"}
+
 ## アップグレード・プロセスの開始
 {: #start_upgrade}
 
@@ -71,13 +87,7 @@ JazzHub でホストされている Git リポジトリーをプロジェクト�
 
    アップグレード・プロセスの概要については、そのページ上の説明をお読みください。ツールチェーンには、プロジェクトのパイプラインと同じステージとジョブを含む新しいパイプラインが組み込まれます。さらに、ツールチェーンには、{{site.data.keyword.contdelivery_short}} で実行されている Eclipse Orion {{site.data.keyword.webide}} へのポインターも含まれます。
 
-   この例では、プロジェクトは github.com のパブリック・リポジトリーを使用するため、ツールチェーンは同じ GitHub リポジトリーに接続されます。JazzHub にホストされている Git リポジトリーをプロジェクトが使用する場合、そのリポジトリーの内容は、{{site.data.keyword.contdelivery_short}} の一部である {{site.data.keyword.gitrepos}}内の新しいリポジトリーに複製されます。リポジトリーの各タイプの扱いの全詳細については、次の表を参照してください。
-
-|プロジェクト・リポジトリー |プロジェクト・タイプ	|ツールチェーン・リポジトリー |
-|:----------|:------------------------------|:------------------|
-|github.com 		|プライベートまたはパブリック 		|{{site.data.keyword.Bluemix_notm}} Public と同じ github.com リポジトリー	|
-|hub.jazz.net/git		|プライベートまたはパブリック 		|{{site.data.keyword.Bluemix_notm}} Public の {{site.data.keyword.gitrepos}}内の新しいリポジトリー	|
-{: caption="表 1. プロジェクト・リポジトリー対ツールチェーン・リポジトリーのマッピング" caption-side="top"}
+   この例では、プロジェクトは github.com のパブリック・リポジトリーを使用するため、ツールチェーンは同じ GitHub リポジトリーに接続されます。JazzHub にホストされている Git リポジトリーをプロジェクトが使用する場合、そのリポジトリーの内容は、{{site.data.keyword.contdelivery_short}} の一部である {{site.data.keyword.gitrepos}}内の新しいリポジトリーに複製されます。
 
 2. ツールチェーンをカスタマイズするには、次のいくつかの設定を構成できます。
 
@@ -171,3 +181,54 @@ JazzHub でホストされている Git リポジトリーをプロジェクト�
 {: #upgrade_troubleshoot}
 
 ご質問または問題がある場合は、[サポート・フォーラム](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services)にアクセスしてください。フォーラムへの投稿には、{{site.data.keyword.jazzhub_short}} プロジェクトと {{site.data.keyword.contdelivery_short}} ツールチェーンの URL を記載し、`devops-services` タグを付けてください。
+   
+## よくある質問
+{: #upgrade_faq}
+
+### 私の JazzHub プロジェクトは英国地域に関連付けられていますが、ツールチェーンは米国南部地域になります。どのような仕組みですか。
+{: #faq_region}
+
+hub.jazz.net のプロジェクトとツールチェーンはどちらも、米国南部地域でホストされます。英国地域などの異なる地域にアプリをデプロイするようにプロジェクトが構成されている場合でも、プロジェクトがツールチェーンにアップグレードされた後に、アプリは前述の地域にデプロイされます。そのため、データがホストされる場所に関しては、変更がありません。ツールチェーンは、今後、複数の地域で利用できるようになる予定です。
+
+### アップグレードする場合、Track &amp; Plan 内の作業項目とダッシュボードはどうなりますか。
+{: #faq_tp}
+
+{{site.data.keyword.contdelivery_short}} サービスには、IBM がホストする GitLab Community Edition ベースの {{site.data.keyword.gitrepos}} を使用する問題追跡機能があります。{{site.data.keyword.contdelivery_short}} はまた、プランニングと問題追跡のための他のツール (GitHub Issues や JIRA など) との統合もサポートしています。
+
+アップグレード・プロセス中に、Track &amp; Plan 作業項目を Git Issues に移行することを選択できます。GitHub Issues と {{site.data.keyword.gitrepos}} のどちらにも、プランニング用のかんばんボードと問題追跡機能が備わっています。Git Repos and Issue Tracking のかんばん機能である「問題ボード」について詳しくは、[問題ボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window} を参照してください。
+
+非推奨の JazzHub Track &amp; Plan と同じ機能が必要なお客様は、新しい IBM Track and Plan on Cloud サービスを該当する国で別途購入できます。このサービスは、月単位でユーザーごとに購入します。このクラウド・サービスを利用すると、単一のテナント・クラウド・サブスクリプションで、Rational Team Concert&trade; コントリビューター・ライセンスに相当するフル機能を利用できます。
+
+この新しい IBM Track and Plan on Cloud サービスの機能は非推奨の JazzHub Track &amp; Plan よりも豊富で、プロセスのカスタマイズ、プロジェクトの階層、SAFe&reg; やその他の多くのアジャイルかつハイブリッドなメソッド、単一プロジェクトからのスケーラビリティーなどをサポートしています。これは最新バージョンの Rational Team Concert 6.0.3 をベースとしていて、今後 60 日間以内にバージョン 6.0.4 になる予定です。一方、JazzHub Track &amp; Plan のベースは Rational Team Concert 5.x でした。追加サービスを使用すると、IBM Track and Plan on Cloud へのデータ移行が可能です。詳しくは、コネクティッド製品 SaaS のセールス・リーダーである [Tom Hollowell ![ 外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](mailto:trhollow@us.ibm.com){:new_window} にお問い合わせください。
+
+IBM Track and Plan on Cloud の詳細を確認したりオンラインで購入したりする場合には、[IBM マーケットプレイス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window} にアクセスしてください。
+
+ビルド自動化およびソース・コード管理を追加購入するには、[Rational Team Concert on Cloud ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window} を選択できます。  
+
+### アップグレードする場合、コード・リポジトリーはどうなりますか。
+{: #faq_repo}
+
+アップグレードすると、それまでのサービスと同等の新しい Git サービスを使用できるようになります。github.com を JazzHub プロジェクトで使用していた場合は、ツールチェーンが同じ GitHub リポジトリーに接続されます。IBM がホストする Git を JazzHub プロジェクトで使用していた場合は、そのリポジトリーの内容が、{{site.data.keyword.contdelivery_short}} の一部として IBM がホストする {{site.data.keyword.gitrepos}} 内の新しいリポジトリーに複製されます。
+
+アップグレード・プロセス中に各タイプのリポジトリーがどのように処理されるかについて、次の表にまとめています。
+
+|プロジェクト・リポジトリー |プロジェクト・タイプ	|ツールチェーン・リポジトリー |
+|:----------|:------------------------------|:------------------|
+|github.com 		|プライベートまたはパブリック 		|{{site.data.keyword.Bluemix_notm}} Public と同じ github.com リポジトリー	|
+|hub.jazz.net/git		|プライベートまたはパブリック 		|{{site.data.keyword.Bluemix_notm}} Public の {{site.data.keyword.gitrepos}} の新しいプライベート・リポジトリーまたはパブリック・リポジトリー	|
+{: caption="表 1. プロジェクト・リポジトリー対ツールチェーン・リポジトリーのマッピング" caption-side="top"}
+
+
+### ツールチェーンにアップグレードする場合、プロジェクト内のビルド定義はどうなりますか。
+{: #faq_build}
+
+Delivery Pipeline ではなく Jazz を使用してソース・コードを構築する場合、ツールチェーンの Delivery Pipeline にビルド定義を手動で移行する必要があります。 
+
+Jazz SCM をソース・リポジトリーとして使用し、Delivery Pipeline を使用してコードをビルドする場合は、Jazz SCM 内のソースが Git リポジトリーに自動的に移されます。Jazz SCM のソースではなく Git リポジトリーのソースを取り込むという点を除き、Delivery Pipeline 構成は同じです。
+
+### ツールチェーンにアップグレードするプロジェクト用の組織を作成する必要があります。組織を作成するには、その前にアカウントにクレジット・カードを追加する必要があることは理解しています。クレジット・カードに課金されるのでしょうか。
+{: #faq_charges}
+
+[従量課金 (PAYG) のお客様 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window} が、Bluemix カタログにリストされている無料割り当て分を超えたランタイム、サービス、コンポーネントを使用すると課金されます。使用量の見積もりについては、[料金シート ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window} を参照してください。継続的デリバリーの現在の料金については、[Bluemix カタログ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window} を参照してください。
+
+IBM 社員の場合、内部 IBM プロジェクトは、個人のクレジット・カードではなく部門に対して課金されます。IBM 社員に割り当てられている無料分を超えるリソースを使用する必要がある場合、サポート・チケットを作成してください。

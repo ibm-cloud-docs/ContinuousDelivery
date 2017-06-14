@@ -41,7 +41,7 @@ lastupdated: "2017-4-11"
 1. メニュー・バーで**「サポート」**をクリックし、次に**「チケットの追加」**をクリックします。
 1. フォームに記入して、技術サポートが必要な理由を示します。
 
-IBM {{site.data.keyword.Bluemix_notm}} サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポートへのお問い合わせ](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) を参照してください。
+IBM {{site.data.keyword.Bluemix_notm}} サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポートへのお問い合わせ](https://console.bluemix.net/docs/support/index.html#contacting-support) を参照してください。
 
 
 ## Bluemix のサポート

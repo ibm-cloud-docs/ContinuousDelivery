@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2017-4-11"
+lastupdated: "2016-11-17"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -19,7 +19,8 @@ lastupdated: "2017-4-11"
 # 環境プロパティーとリソース
 {: #deliverypipeline_environment}
 
-環境プロパティーとあらかじめインストールされたリソースを使用して、IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} サービスと対話できます。たとえば、ジョブ・スクリプトやテスト・コマンドを取り込むことができます。{:shortdesc}
+環境プロパティーとあらかじめインストールされたリソースを使用して、IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} サービスと対話できます。たとえば、ジョブ・スクリプトやテスト・コマンドを取り込むことができます。
+{:shortdesc}
 
 独自の環境プロパティーを、ステージの**「環境プロパティー (ENVIRONMENT PROPERTIES)」**タブからステージに追加します。環境プロパティーは、ステージのすべてのジョブに使用可能です。
 

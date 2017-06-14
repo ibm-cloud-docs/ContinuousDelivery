@@ -3,7 +3,7 @@
 copyright:
   years: 2017
 
-lastupdated: "2017-4-5"
+lastupdated: "2017-6-5"
 
 ---
 <!-- Copyright info at top of file: REQUIRED
@@ -43,7 +43,17 @@ IBM Bluemix Continuous Delivery に組み込まれている [Delivery Pipeline !
 
 [Create and use your first toolchain (最初のツールチェーンの作成と使用)![外部リンク・アイコン](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}。テンプレートからオープン・ツールチェーンを作成し、そのツールチェーンを使用して「Hello World」アプリの継続的デリバリーを行う方法を学習します。
 
+[Add a toolchain to an app ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?=task1){:new_window}。オープン・ツールチェーンをアプリに追加し、そのツールチェーンを使用してアプリの継続的デリバリーを行う方法を学習します。
+
 [Create and use a microservices toolchain (Microservices ツールチェーンの作成と使用)![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}。3 つのマイクロサービスを使用するテンプレートからツールチェーンを作成し、そのツールチェーンを使用して「Hello World」アプリの継続的デリバリーを行う方法を学習します。
+
+[Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}。マイクロサービス・アプリを開発して継続的にデリバリーするオープン・ツールチェーンをセットアップする方法を学習します。
+
+[Create a toolchain that uses {{site.data.keyword.gitrepos}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}。Cloud Foundry アプリを含み、{{site.data.keyword.gitrepos}} を使用するテンプレートからオープン・ツールチェーンを作成します。そして、そのツールチェーンを使用して、アプリの継続的なデリバリーを行います。
+
+[Create a pipeline ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}。パイプラインから開始し、GitHub リポジトリーとパイプラインを含むオープン・ツールチェーンを作成する方法を学習します。
+
+他のチュートリアルについては、[Learning Lab ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/category/courses){:new_window} を参照してください。
 
 ## 継続的デリバリーのコース
 {: #gm_cd_courses}

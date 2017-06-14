@@ -21,7 +21,8 @@ lastupdated: "2017-3-16"
 # {{site.data.keyword.deliverypipeline}} の拡張
 {: #deliverypipeline_extending}
 
-サポートされるサービスを使用するようにジョブを構成することで、{{site.data.keyword.deliverypipeline}} の機能を拡張できます。例えば、テスト・ジョブで静的コード・スキャンを実行し、ビルド・ジョブで文字列をグローバル化できます。{:shortdesc}
+サポートされるサービスを使用するようにジョブを構成することで、{{site.data.keyword.deliverypipeline}} の機能を拡張できます。例えば、テスト・ジョブで静的コード・スキャンを実行し、ビルド・ジョブで文字列をグローバル化できます。
+{:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
 
@@ -321,11 +322,6 @@ HipChat 通知を作成するには、次のようにします。
 5. **「保存」**をクリックします。
 
 6. 上記ステップを繰り返し、IBM Container Service、IBM Security Static Analyzer、IBM Globalization ジョブが含まれる他のステージについて HipChat 通知を送信するようにします。
-
-## パイプラインでデプロイメントのダウン時間をゼロにする Active Deploy の使用
-{: #deliverypipeline_activedeploy}
-
-Delivery Pipeline で IBM® Active Deploy サービスを使用して、アプリまたはコンテナー・グループの継続デプロイメントを自動化できます。概要について詳しくは、[Active Deploy の資料](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}を参照してください。
 
 ## パイプラインでのコンテナー・イメージのビルドとデプロイ
 {: #deliverypipeline_containers}
