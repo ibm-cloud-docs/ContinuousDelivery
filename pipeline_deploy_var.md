@@ -19,7 +19,7 @@ lastupdated: "2016-11-17"
 # Environment properties and resources
 {: #deliverypipeline_environment}
 
-You can use environment properties and pre-installed resources to interact with the IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service. For example, you might incorporate them into a job script or test command.
+You can use environment properties and pre-installed resources to interact with {{site.data.keyword.contdelivery_full}}'s pipeline capability. For example, you might incorporate them into a job script or test command.
 {:shortdesc}
 
 You can add your own environment properties to a stage from its **ENVIRONMENT PROPERTIES** tab. Environment properties are available to every job in a stage.
