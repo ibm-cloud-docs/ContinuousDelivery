@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-7"
+lastupdated: "2017-6-16"
 
 ---
 
@@ -272,12 +272,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 1. On the stage, add a test job after the deploy job. By placing these jobs in the same stage, they can access the same set of environment properties.   
   ![Test job](images/toolchain_test_job.png)
 
-1. Configure the stage:
-
-  a. On the **ENVIRONMENT PROPERTIES** tab, create three properties: CF_APP_NAME, SAUCE_USERNAME, and SAUCE_ACCESS_KEY.
-
-  b. Enter your Sauce Labs user name and access key. By doing so, you externalize those values so that you can use them in your tests.
-
+1. Configure the stage. On the **ENVIRONMENT PROPERTIES** tab, create the CF_APP_NAME property.
 1. Configure the deploy job. In the **Deploy Script** field, include this command: `export CF_APP_NAME="$CF_APP"`. That command exports the app name as an environment property.
 1. Configure the test job. The values in the following image are examples. The **Service Instance**, **Target**, **Organization**, and **Space** fields are populated with the Sauce Labs user name, region, org, and space that you are using.  
 ![Configure job](images/toolchain_configure_job.png)
