@@ -113,7 +113,7 @@ Para utilizar los argumentos del mandato `cf push`, abra los valores de configur
 Un conducto de ejemplo puede contener tres etapas:
 
 1. Una etapa de compilación que compila y ejecuta procesos de compilación en una app.
-2. Una etapa de prueba que despliega una instancia de la app y, an continuación, ejecuta pruebas en esta.
+2. Una etapa de prueba que despliega una instancia de la app y, a continuación, ejecuta pruebas en esta.
 3. Una etapa de producción que despliega una instancia de producción de la app probada.
 
 Este conducto se muestra en el siguiente diagrama conceptual:
@@ -122,4 +122,4 @@ Este conducto se muestra en el siguiente diagrama conceptual:
 
 *Un modelo conceptual de un conducto de tres etapas*
 
-Las etapas toman su entrada de repositorios y trabajos de compilación, y los trabajos de una etapa se ejecutan de forma secuencial e independiente entre sí. En el conducto de ejemplo, las etapas se ejecutan secuencialmente, aunque las etapas de Prueba y de Producción tomen la salida de la etapa de Compilación como su entrada.
+Las etapas toman su entrada de repositorios y trabajos de compilación, y los trabajos de una etapa se ejecutan de forma secuencial e independiente entre sí. En el conducto de ejemplo, las etapas se ejecutarán secuencialmente, aunque las etapas de Prueba y de Producción tomen la salida de la etapa de Compilación como su entrada.

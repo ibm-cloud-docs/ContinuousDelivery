@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-26"
+lastupdated: "2017-5-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-4-26"
 # Utilización de cadenas de herramientas
 {: #toolchains-using}
 
-Las cadenas de herramientas abiertas están disponibles en los entornos Público y Dedicado en {{site.data.keyword.Bluemix}}. Puede utilizar una cadena de herramientas para que sea productiva en su trabajo diario de desarrollo, despliegue y operaciones. Una vez que se ha configurado una cadena de herramientas, es posible añadir, eliminar o configurar integraciones de herramientas y gestionar el acceso a la cadena de herramientas. 
+Las cadenas de herramientas abiertas están disponibles en los entornos Público y Dedicado en {{site.data.keyword.Bluemix}}. Puede utilizar una cadena de herramientas para que sea productiva en su trabajo diario de desarrollo, despliegue y operaciones. Una vez que se ha configurado una cadena de herramientas, es posible añadir, eliminar o configurar integraciones de herramientas y gestionar el acceso a la cadena de herramientas.
 {: shortdesc}
 
 ## Configuración de una integración de herramienta
@@ -33,7 +33,7 @@ Si ha aplazado la configuración de una integración de herramientas al crear un
 
  **Consejo**: Algunos de las integraciones de herramientas están preconfiguradas y no requieren ningún parámetro de configuración. Puede actualizar los valores de configuración sólo para las integraciones de herramientas que ha configurado.
 
- Cuando haya terminado de configurar los ajustes, pulse **Guardar integración**.
+ Cuando haya terminado de configurar los ajustes, pulse **Guardar integración**. Para obtener más información sobre cómo configurar las integraciones de herramientas específicas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 
 ## Adición de una integración de herramienta
 {: #adding_a_tool_integration}
@@ -80,17 +80,17 @@ Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.
    a. En la barra de menús, pulse **Gestionar > Cuenta > Organizaciones**.
 
    b. Pulse **Invitar a miembros del equipo**.
-   
+
    c. Seleccione la organización a la que desea invitar al usuario y pulse **Siguiente**.
-   
+
    d. Seleccione los espacios a los que desea permitir el acceso al usuario.
-   
-   e. Seleccione el rol que desea asignar para los espacios seleccionados en la organización. 
-   
-     **Nota**: De forma predeterminada, los gestores de una organización tienen privilegios completos de administrador sobre todas las cadenas de herramientas asociadas a la organización. Para otorgar privilegios completos de administrador al usuario, seleccione el rol **Gestor**. Los roles Gestor de facturación y Auditor no afectan al acceso a la cadena de herramientas. Puede cambiar los roles más adelante en la página Directorio del equipo. Para obtener más información, consulte [Gestión de miembros y roles del equipo](/docs/admin/users_roles.html){: new_window}.
-   
+
+   e. Seleccione el rol que desea asignar para los espacios seleccionados en la organización.
+
+     **Nota:** De forma predeterminada, los gestores de una organización tienen privilegios completos de administrador sobre todas las cadenas de herramientas asociadas a la organización. Para otorgar privilegios completos de administrador al usuario, seleccione el rol **Gestor**. Los roles Gestor de facturación y Auditor no afectan al acceso a la cadena de herramientas. Puede cambiar los roles más adelante en la página Directorio del equipo. Para obtener más información, consulte [Gestión de miembros y roles del equipo](/docs/admin/users_roles.html){: new_window}.
+
    f. Seleccione la opción para confirmar que acepta la responsabilidad financiera de todos cargos en los que se incurra en la cuenta.
-   
+
    g. Especifique la dirección de correo electrónico del usuario que desea invitar y pulse **Enviar**.
 
    h. Después de que el usuario se convierta en miembro de la organización, vuelva a la página gestionar de la cadena de herramientas y añada el usuario a la cadena de herramientas.  
@@ -103,7 +103,7 @@ Puede eliminar una cadena de herramientas y especificar qué integraciones de he
 
 1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse sobre la cadena de herramientas que desea suprimir. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**.
 1. Pulse el menú **Más acciones**, que se encuentra junto a **Ver app**.
-1. Pulse **Suprimir** y revise o ajuste las integraciones de herramientas que se dispone a eliminar.
+1. Pulse **Suprimir**. Cuando se suprime una cadena de herramientas, también se suprimen todas sus integraciones de herramienta, lo que podría dar lugar a la supresión de los recursos que dichas integraciones gestionan. 
 1. Para confirmar la eliminación, escriba el nombre de la cadena de herramientas y pulse **Suprimir**.  
 
- **Consejo**: Cuando suprime una integración de herramienta GitHub, {{site.data.keyword.ghe_short}} o Git Repos and Issue Tracking, el repositorio asociado no se suprime de GitHub, {{site.data.keyword.ghe_short}} o Git Repos and Issue Tracking. Debe eliminar manualmente el repositorio.
+ **Sugerencia**: Cuando suprime GitHub, {{site.data.keyword.ghe_short}} o las herramientas de integración de {{site.data.keyword.gitrepos}}, el repositorio asociado no se suprime de GitHub, {{site.data.keyword.ghe_short}} ni {{site.data.keyword.gitrepos}}. Debe eliminar manualmente el repositorio.

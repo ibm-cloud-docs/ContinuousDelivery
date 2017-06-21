@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-15"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-3-31"
 {:codeblock:.codeblock}
 
 
-# Acerca de cadenas de herramientas    
+# Visión general de las cadenas de herramientas   
 {: #toolchains_about}  
 
 Las cadenas de herramientas abiertas están disponibles en los entornos Público y Dedicado en {{site.data.keyword.Bluemix}}. Una cadena de herramientas se puede crear de dos formas: mediante una plantilla o a partir de una app. Como punto de partida, puede utilizar una plantilla de cadena de herramientas. En función de la plantilla que utilice, puede crear una cadena de herramientas que tenga un conjunto específico de integraciones de herramientas o bien una cadena de herramientas vacía a la que puede añadir integraciones de herramientas.    

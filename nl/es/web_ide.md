@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-25"
+lastupdated: "2017-6-1"
 
 ---
 
@@ -25,7 +25,7 @@ Lo mejor de todo es que {{site.data.keyword.webide}} está basado en la web. No 
 
 {{site.data.keyword.webide}} se puede personalizar para que pueda elegir los esquemas de colores, las herramientas técnicas y los valores que cumplan sus necesidades de desarrollo. Para ver y modificar los valores, desde el menú de la izquierda, pulse el icono **Valores** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="El icono Valores">.
 
-Si necesita a menudo cambiar determinados valores mientras edita, puede acceder a dichos valores rápidamente desde el icono **Valores de editor local** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icono Valores de editor local">. 
+Si necesita a menudo cambiar determinados valores mientras edita, puede acceder a dichos valores rápidamente desde el icono **Valores de editor local** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icono Valores de editor local">.
 
 ![Valores de editor local](images/webide_local_editor_settings_light.png)
 
@@ -35,7 +35,7 @@ De forma predeterminada, siempre se muestran los valores para el estilo del edit
 
 2. Pulse **Valores del editor**.
 
-3. Para incluir o excluir un valor del menú **Valores del editor local**, pulse la estrella que hay junto a cada valor.
+3. Para incluir o excluir un valor del menú **Valores del editor local**, pulse la estrella que hay en cada valor. 
 
 ![Conmutador Valores de editor](images/webide_editor_settings_toggle_light.png)
 
@@ -62,14 +62,14 @@ La segunda sección es el panel del editor. El editor proporciona varias caracte
  2. En el navegador de archivos, pulse un archivo.
 
 ### Accesos directos de teclado
-Sólo se puede acceder a la mayoría de los mandatos de {{site.data.keyword.webide}} mediante accesos directos de teclado.
+También es posible acceder a muchos mandatos en {{site.data.keyword.webide}} a través de accesos directos de teclado. 
 
 Para ver una lista de los accesos directos de teclado en el editor, pulse Alt+Mayús+?. Si está utilizando un Mac OS, pulse Ctrl+Mayús+?.
 
 ## Gestión del código fuente
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} se integra con herramientas de gestión de código fuente. Para trabajar con el repositorio de Git, pulse el icono **Repositorio de Git** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="El icono Repositorio de Git">. 
+{{site.data.keyword.webide}} se integra con herramientas de gestión de código fuente. Para trabajar con el repositorio de Git, pulse el icono **Repositorio de Git** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="El icono Repositorio de Git">.
 
  **Consejo**: Si utiliza {{site.data.keyword.webide}} con cadenas de herramientas abiertas, el espacio de trabajo ya contiene su GitHub, {{site.data.keyword.ghe_short}} o repositorios de Git Repos and Issue Tracking. Los repositorios que están asociados a la cadena de herramientas actual aparecen resaltados.
 
@@ -78,19 +78,32 @@ Para ver una lista de los accesos directos de teclado en el editor, pulse Alt+Ma
 {: #deploy}
 
 1. Para desplegar la app, desde la barra de ejecución, seleccione o cree una configuración de inicio.
-1. Pulse el icono de despliegue <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="icono de despliegue">. Se desplegará una instancia de la app utilizando el contenido actual del espacio de trabajo y del entorno definido en la configuración de lanzamiento. 
+   ![Barra de ejecución](images/webide_runbar_light.png)   
+1. Pulse el icono de despliegue <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="icono de despliegue">. Se desplegará una instancia de la app utilizando el contenido actual del espacio de trabajo y del entorno definido en la configuración de lanzamiento.
 2. Una vez que se despliegue la app, puede utilizar la barra de ejecución para detener, reiniciar o depurar la app, ver registros, etc.
-![Barra de ejecución](images/webide_runbar_light.png)    
 
-<!-- 3/6/2016: bl commands don't work with V2/CD 
+<table>
+<tr><td><img src="./images/stop_button.png"  alt="Icono detener"></td><td>Detiene la app</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="Icono abrir URL de app"></td><td> Abre la app desplegada</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="Icono ver registros"></td><td>Visualiza los registros de la app desplegada</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="Icono abrir panel de control"></td><td>Abre el panel de control de la app</td></tr>
+</table>
+
+Si está desarrollando una app Node.js, habilite la modalidad de Edición en directo: <img  src="./images/enable_live_edit.png"  alt="Graduador para habilitar edición en directo">
+
+<table><tr><td><img src="./images/live_edit_restart.png"  alt="Icono reiniciar edición en directo"></td><td>Con la modalidad de edición en directo, reinicia con rapidez la app, sin volver a desplegar</td></tr>
+<tr><td> <img src="./images/debug_icon.png"  alt="Icono depurar"></td><td>Con la modalidad de edición en directo, accede al depurador</td></tr>
+</table>
+
+<!-- 3/6/2016: bl commands don't work with V2/CD
 ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}. 
+To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}.
 
-### Before you begin 
+### Before you begin
 
-Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
+Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
 
 ### Synchronizing your local environment with {{site.data.keyword.Bluemix_notm}}
 {: #edit_local_download}
@@ -104,7 +117,7 @@ Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line i
 	{: pre}
 
 3. When you are prompted, enter your IBMid and password.
-4. View a list of your {{site.data.keyword.Bluemix_notm}} projects: 
+4. View a list of your {{site.data.keyword.Bluemix_notm}} projects:
 
 	```
 	bl projects
@@ -135,11 +148,62 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 2. Use the launch configuration that you created in the {{site.data.keyword.webide}}. After you select the launch configuration, the Desktop Sync feature is enabled in your local environment. In the command-line window that you just opened, you can view the app's URL, the debug URL, the manage URL, and view the {{site.data.keyword.Bluemix_live_notm}} state.
 
-3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace. 
+3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace.
 
 ### Disabling the Desktop Sync feature
 
 1. In the second command-line window, enter `bl stop`.
 2. In the first command-line window, enter `q`.
 
---> 
+-->
+
+## Lenguajes soportados
+
+{: #supported_languages}
+
+Eclipse Orion {{site.data.keyword.webide}} proporciona ayuda de contenido, ayudas contextuales, vistas previas, validación y resaltado de sintaxis para archivos JavaScript, HTML, CSS y Markdown. También se da soporte al resaltado de sintaxis para estos tipos de archivos: 
+
+<table>
+<tr>
+<td>
+<ul><li>Arduino
+</li><li>C</li>
+<li>C#
+</li><li>C++
+</li><li>CoffeeScript
+</li><li>CSHTML
+</li><li>Embedded JavaScript (ejs)
+</li><li>Erlang
+</li><li>Go
+</li><li>HTML Abstraction Markup Language (Haml)
+</li><li>Jade
+</li><li>Java
+</li><li>JSON
+</li><li>Less  
+</li><li>Lua  
+</li><li>Objective-C
+</li><li>PHP
+</li><li>Python</li></ul>
+</td>
+<td>
+<ul><li>Ruby
+</li><li>Sass/SCSS
+</li><li>SQL
+</li><li>Swift
+</li><li>TypeScript
+</li><li>Visual Basic (vb)
+</li><li>VMHTML
+</li><li>XHTML
+</li><li>XML
+</li><li>XQuery
+</li><li>YAML
+</li><li>Archivo de lanzamiento
+</li><li>Dockerfile
+</li><li>gitignore
+</li><li>git config
+</li><li>cfignore
+</li><li>properties
+</ul>
+</td>
+</tr>
+</table>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-6-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -47,16 +47,16 @@ Complete las tareas siguientes para crear y configurar un conducto.
 ## Ejecución de una etapa
 {: #deliverypipeline_run_stage}
 
-Puede ejecutar de manera manual una etapa pulsando el icono **Run Stage** en la página Conducto.
+Puede ejecutar de manera manual una etapa pulsando el icono **Ejecutar etapa** en la página Conducto.
 
 ![Al pulsar el icono Run Stage en una etapa](images/RunStage.png)
 
 También puede solicitar compilaciones y despliegues a demanda desde la página de historial de compilaciones de una de estas dos formas:
 * Arrastre una compilación al recuadro que hay bajo una etapa configurada.
-* Junto a una compilación, pulse el icono **Enviar a** y, a continuación, seleccione un espacio en el que desplegarlo.
+* En la sección LAST EXECUTION RESULT, pulse el icono **Enviar a** y, a continuación, seleccione un espacio en el que desplegarlo.
   ![La etapa Ejecutar con este icono de compilación](images/deploy_to.png)
 
-Para cancelar una etapa de ejecución, en la etapa, pulse **Ver registros e historial**. En la lista de trabajos, pulse el número del trabajo en ejecución y, a continuación, pulse **CANCELAR**. También puede cancelar trabajos individualmente pulsando un trabajo y, a continuación, pulsando **CANCELAR**, o pulsando el icono **Detener** junto a un trabajo en su etapa.
+Para cancelar una etapa de ejecución, en la etapa, pulse **Ver registros e historial**. En la lista de trabajos, pulse el número del trabajo en ejecución y, a continuación, pulse **CANCELAR**. También puede cancelar trabajos individualmente pulsando un trabajo y, a continuación, pulsando **CANCELAR**, o pulsando el icono **Detener** de un trabajo en su etapa. 
 
 ## Despliegue de una app
 {: #deliverypipeline_deploy}

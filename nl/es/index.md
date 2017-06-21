@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-19"
 
 ---
 
@@ -24,12 +24,37 @@ Después de crear una instancia de {{site.data.keyword.contdelivery_short}} sele
 
 **Consejo**: Los conductos se gestionan mediante cadenas de herramientas. Puede añadir un conducto a una cadena de herramientas existente. Si crea un conducto y no dispone de ninguna cadena de herramientas, se crea automáticamente una cadena de herramientas con un nombre predeterminado. Con la cadena de herramientas, puede ampliar las prestaciones del conducto integrándolo con otras herramientas y servicios.
 
+##Visión
+general de {{site.data.keyword.contdelivery_short}}
+{: #cd_overview}
+
+Con {{site.data.keyword.contdelivery_short}} puede crear, probar y entregar aplicaciones mediante las herramientas más utilizadas de la industria y prácticas de DevOps.
+{:shortdesc}
+
+El servicio {{site.data.keyword.contdelivery_short}} da soporte a los flujos de trabajo de DevOps:
+
+ * Puede crear [cadenas de herramientas](/docs/services/ContinuousDelivery/toolchains_about.html){: new_window} abiertas integradas de DevOps para habilitar las integraciones de herramientas que dan soporte a las tareas de desarrollo, despliegue y operaciones.
+
+  Una cadena de herramientas es un conjunto integrado de herramientas que sirve para desarrollar, crear, desplegar, probar y gestionar aplicaciones para repetir estas operaciones de forma cíclica de forma que se fácil gestionarlas. Las cadenas de herramientas pueden incluir herramientas de código abierto, servicios {{site.data.keyword.Bluemix_notm}} como [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window} y herramientas de terceros como GitHub, PagerDuty o Slack.  
+
+ * Entrega continua mediante [conductos](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window} automatizados.
+
+  Automatice compilaciones, pruebas de unidad, despliegues y más. Cree, pruebe y despliegue de manera repetitiva con una mínima intervención humana. Esté listo para pasar a producción en cualquier momento.
+
+ * Edite y envíe el código desde cualquier lugar utilizando el [IDE basado en web](/docs/services/ContinuousDelivery/web_ide.html){: new_window}.
+
+  Cree, edite, ejecute, depure y complete tareas de control de código fuente en GitHub. Puede pasar fácilmente de editar el código a desplegarlo en producción. 
+  
+ * Colabore con su equipo y gestione su código fuentes con [Git Repository and Issue Tracker](/docs/services/ContinuousDelivery/git_working.html#git_working){: new_window} alojado en IBM y que se basa en GitLab Community Edition.
+
+  Gestione repositorios Git a través de controles de acceso precisos que mantienen el código seguro. Revise el código y mejore la colaboración mediante solicitudes de fusión. Realice un seguimiento de los problemas y comparta ideas mediante el rastreador de problemas. Documente sus proyectos con un sistema wiki. 
+
 ##Inicio con un conducto
 {: #starting_with_a_pipeline}
 
 Los conductos automatizan las compilaciones, despliegues y más. Para empezar con un conducto automatizado, seleccione una plantilla y especifique la ubicación del repositorio GitHub (repositorio).
 
-Para [crear un conducto ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){:new_window} configurado para desplegar una aplicación Cloud Foundry, siga estos pasos:
+Para [crear un conducto ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/pipelines/dashboard/create){:new_window} configurado para desplegar una aplicación Cloud Foundry, siga estos pasos:
 
 1. Pulse **Cloud Foundry**.
 1. Si desea utilizar otro nombre para el conducto, cambie el nombre predeterminado. El nombre del conducto lo identifica en {{site.data.keyword.Bluemix_notm}}.
@@ -57,7 +82,7 @@ Para [crear un conducto ![Icono de enlace externo](../../icons/launch-glyph.svg 
 1. Pulse **Crear**. El conducto se crea, se configura y se visualiza en la página Visión general de la cadena de herramientas.
  ![Tarjeta de conducto](images/cd_pipeline.png)
 
-Para crear un [conducto vacío ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} sin etapas preconfiguradas:
+Para crear un [conducto vacío ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} sin etapas preconfiguradas:
 
 1. Pulse **Personalizado**.
 1. Si desea utilizar otro nombre para el conducto, cambie el nombre predeterminado. El nombre del conducto lo identifica en {{site.data.keyword.Bluemix_notm}}.
@@ -68,7 +93,7 @@ Para crear un [conducto vacío ![Icono de enlace externo](../../icons/launch-gly
 ##Inicio desde una plantilla de cadena de herramientas
 {: #starting_from_a_toolchain_template}
 
-Para crear y configurar una cadena de herramientas de entrega continua desde una [plantilla ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/devops/create){: new_window}:
+Para crear y configurar una cadena de herramientas de entrega continua desde una [plantilla ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/create){: new_window}:
 
 1. En la página **Crear una cadena de herramientas**, pulse una plantilla de cadena de herramientas.  
 1. Revise el diagrama de la cadena de herramientas que se dispone a crear. El diagrama muestra cada integración de herramientas en la fase del ciclo de vida correspondiente en la cadena de herramientas.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-11"
+lastupdated: "2017-6-6"
 
 ---
 
@@ -11,13 +11,13 @@ lastupdated: "2017-4-11"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Git Repos e Issue Tracking (Beta)
+# Git Repos and Issue Tracking
 {: #git_working}
 
 Colabore con su equipo y gestione su código fuente con un repositorio Git (repositorio) y un rastreador de problemas alojado en IBM que se basa en [GitLab Community Edition ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://about.gitlab.com/){:new_window}.
 {: shortdesc}
 
-La integración de la herramienta Git Repos and Issue Tracking permite a los equipos gestionar código y colaborar de varias formas:
+La integración de la herramienta {{site.data.keyword.gitrepos}} permite a los equipos gestionar código y colaborar de varias formas:
    * Gestionar repositorios Git a través de controles de acceso que mantienen el código seguro
    * Revisar el código y mejorar la colaboración mediante solicitudes de fusión
    * Hacer un seguimiento de problemas y compartir ideas mediante el rastreador de problemas
@@ -31,12 +31,31 @@ La integración de la herramienta Git Repos and Issue Tracking permite a los equ
 Los archivos están estrictamente limitados a 100 MB. El límite recomendado de tamaño de repositorios es 1 GB. Si el repositorio supera 1 GB, es posible que reciba un mensaje de correo electrónico con una solicitud para reducir el tamaño del repositorio.
 
 ## Utilización de Git Repos and Issue Tracking localmente
+{: #git_local}
+
+Puede acceder localmente a los repositorios Git almacenados en {{site.data.keyword.gitrepos}}. Para ver instrucciones sobre cómo configurar Git localmente, consulte [Empezar a utilizar Git en la línea de mandatos ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
+
+**Sugerencia**: {{site.data.keyword.gitrepos}} da soporte únicamente a conexiones HTTPS que utilicen TLS1.2. 
+Si utiliza Eclipse para conectarse, podría necesitar especificar este protocolo para su versión de Java añadiendo `-Dhttps.protocols=TLSv1.2` a su archivo eclipse.ini y, a continuación, reiniciar Eclipse. 
+
+## Autenticación con GitLab  
 {: #git_authentication}
 
-Puede acceder localmente a los repositorios Git almacenados en Git Repos and Issue Tracking. Para ver instrucciones sobre cómo configurar Git localmente, consulte [Empezar a utilizar Git en la línea de mandatos![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
-
-### Creación de una señal de acceso personal o una clave SSH para la autenticación  
 Para realizar operaciones Git remotas, como `clone` o `push`, desde su repositorio local de Git, debe utilizar una señal de acceso personal o una clave SSH para autenticarse con GitLab.
 
-* Para configurar una señal de acceso personal, consulte [Señales de acceso personales ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}.
-* Para configurar una clave SSH, consulte [SSH ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/ssh/README){:new_window} o [Cómo crear claves SSH ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){:new_window}. Para acceder a los repositorios con autenticación SSH es posible que se requiera cierta configuración adicional para proxies y cortafuegos.
+### Creación de una señal de acceso personal  
+Para autenticarse en el repositorio Git a través de HTTPS, debe crear una señal de acceso personal. Su usuario y contraseña de {{site.data.keyword.Bluemix_notm}} sólo funcionarán con {{site.data.keyword.gitrepos}} en un navegador. No es posible utilizar sus credenciales de usuario de {{site.data.keyword.Bluemix_notm}} para autenticarse desde clientes Git externos. 
+
+1. En el panel de control de Valores de usuario de {{site.data.keyword.gitrepos}}, en la [página de Señales de acceso ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, escriba su nombre de su aplicación para la que desea crear una señal de acceso. Por ejemplo, `Git CLI`.
+1. Opcional: Elija una fecha de caducidad para la señal de acceso. 
+1. Seleccione el recuadro de selección **api** para crear una señal de acceso personal que utilice como ámbito a la api. 
+1. Pulse **Crear señal de acceso personal**. Conserve su señal de acceso en una ubicación segura para utilizarla en el futuro. 
+1. En la [página de Cuenta ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, en la sección de Cambiar nombre de usuario, busque su nombre de usuario de {{site.data.keyword.gitrepos}}. El nombre de usuario también se visualiza como el primer segmento del URL para cualquier repositorio Git personal que cree. 
+1. Utilice su nombre de usuario y contraseña de {{site.data.keyword.gitrepos}} y la señal de acceso personal con su repositorio Git desde un cliente Git externo. 
+
+Para obtener más información, consulte [Señales de acceso personal ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}.
+
+### Creación de una clave SSH  
+Para crear una clave SSH, consulte [Cómo crear claves SSH ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){:new_window}. Para acceder a los repositorios con autenticación SSH es posible que se requiera configuración adicional para proxies y cortafuegos.
+
+Para obtener más información, consulte [SSH ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/ssh/README){:new_window}.

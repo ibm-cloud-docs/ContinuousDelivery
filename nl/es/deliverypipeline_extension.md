@@ -325,11 +325,6 @@ Para crear notificaciones de HipChat:
 
 6. Repita estos pasos para enviar las notificaciones de HipChat para otras etapas que incluyan los trabajos de IBM Container Service, IBM Security Static Analyzer, e IBM Globalization.
 
-## Uso de Active Deploy para el despliegue de tiempo de inactividad cero en el conducto
-{: #deliverypipeline_activedeploy}
-
-Puede automatizar el despliegue continuo de las apps o de los grupos de contenedores mediante el servicio de IBM® Active Deploy en Delivery Pipeline. Para obtener más información sobre cómo empezar, consulte la [documentación de Active Deploy](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}.
-
 ## Compilación y despliegue de imágenes del contenedor con el conducto
 {: #deliverypipeline_containers}
 
