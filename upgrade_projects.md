@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-5"
+lastupdated: "2017-6-21"
 
 ---
 
@@ -180,7 +180,13 @@ When you return to your project, the upgrade message is displayed again, and you
 ## Troubleshooting
 {: #upgrade_troubleshoot}
 
-If you have questions or problems, go to the [support forum](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services). In your forum post, include the URLs to your {{site.data.keyword.jazzhub_short}} project and your {{site.data.keyword.contdelivery_short}} toolchain, and tag your post with the `devops-services` tag.
+If you encounter a problem during the upgrade process, try one or more of these troubleshooting steps:
+
+- Check the [prerequisites](#upgrade_prereqs) to make sure that you meet them. In particular, make sure that you're a member of every org and space that the pipeline deploys to. 
+- If the problem occurred during your first attempt to upgrade and you meet all the prerequisites, try the upgrade again.
+- If your project uses Jazz SCM or IBM Hosted Git for source control, check the size of the repo. If it is larger than 500 MB, [contact the DevOps services team ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}.
+- If you continue to encounter problems, post a question in the [support forum ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}. In your forum post, include the URLs to your {{site.data.keyword.jazzhub_short}} project and your {{site.data.keyword.contdelivery_short}} toolchain, and tag your post with the `devops-services` tag.
+
    
 ## Frequently asked questions
 {: #upgrade_faq}
