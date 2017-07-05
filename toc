@@ -17,6 +17,7 @@ Continuous Delivery
   {: .navgroup-end}
 
   {: .navgroup id="howto"}
+    toolchains_post_upgrade.md
     upgrade_projects.md
 
   {: .topicgroup}
