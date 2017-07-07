@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-7-5"
+lastupdated: "2017-7-7"
 
 ---
 
@@ -33,8 +33,9 @@ Toolchains are like projects, with a few important differences:
 - Projects can have only one repository (repo) and pipeline. Toolchains can have as many repos and pipelines as you need.
 - Toolchains can include tools that aren't available in projects, such as Slack, Sauce Labs, PagerDuty, and {{site.data.keyword.DRA_full}}.
 - In projects, membership was maintained at the project level. Access to toolchains is managed by {{site.data.keyword.Bluemix_notm}} organization (org) and by toolchain. To work with a toolchain, you must be a member of the org that contains the toolchain. The toolchain owner has further control over who can access the toolchain and what they can do. For details, see step 2 in [Getting started with your toolchain](#upgrade_next_steps).
+- Depending on the type of repo you used in your project on hub.jazz.net, your toolchain might contain a GitHub.com repo or a {{site.data.keyword.gitrepos}} repo.
 
-You can learn about toolchains on [YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/2SIPE1e7NJ4){: new_window} or from [Getting started with {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html).
+You can learn more about toolchains on [YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/2SIPE1e7NJ4){: new_window} or from [Getting started with {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html).
 [![External link to YouTube](images/CD_video.png)](https://youtu.be/2SIPE1e7NJ4){: new_window}
 
 
@@ -124,3 +125,55 @@ If you're using Jazz SCM as a source repo and using Delivery Pipeline to build y
 As a [Pay As You Go customer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}, if you use any runtime, service, or component beyond the free allotments that are listed for it in the Bluemix catalog, you will be charged. For a usage estimate, see the [pricing sheet ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}. For current pricing for Continuous Delivery, see the [Bluemix catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}.
 
 If you're an IBM employee, internal IBM projects can be billed to departments in lieu of a personal credit card. If you need to use resources beyond the free allotments for IBM employees, create a support ticket.
+
+### I can't find or access my toolchain. What should I do?
+{: #faq_find}
+
+Toolchains are hosted in Bluemix organizations. The upgrade process adds all members of the JazzHub project to the toolchain. However, unless the owner of the Bluemix organization adds those users to the organization, they cannot see the toolchain.
+
+To access your toolchain, go to Bluemix, click the menu icon, and click **Services &gt; DevOps**. The Toolchains page opens. Make sure that you are in the US South region and that you are in the organization that contains the toolchain. If your toolchain is not listed on the Toolchains page, see [this FAQ entry](#faq_uk).
+
+Alternatively, while the JazzHub site is still available, you can go to your toolchain by clicking the link in the banner on your project's Overview page.
+
+### My project is associated with the UK region. After the upgrade, I see error messages, my colleagues can't access the toolchain, and I don't see my toolchain on the Toolchains page on Bluemix. What's wrong?
+{: #faq_uk}
+
+**Full question:**
+
+My JazzHub project is associated with the {{site.data.keyword.Bluemix_notm}} UK region according to the project settings. I verified my project settings by going to its overview page on JazzHub, clicking the **Settings** icon, which looks like a gear, and clicking **Options &gt; Make this a Bluemix Project: Region**. After I upgraded the project to toolchain in the US, these problems occur:
+
+   1. When I select the US organization, I see a message saying that the organization doesn't have a space in the US South region, and I'm prompted to create a space. I don't want to run anything in the US.
+   
+   2. Some of my colleagues can't access it the toolchain, although they were listed as members in the original JazzHub project. If they try to open the toolchain from the app overview page in the UK region by clicking **View Toolchain**, they see an "access denied" message.
+   
+   3. I don't see the toolchain listed on my Toolchains page at [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window}, although I can access the toolchain directly from the app overview page in the UK region by clicking **View Toolchain**. I either get an error that I cannot modify the toolchain or I get an error that I have no toolchain and I need to create one. 
+
+**Answer:**
+
+These issues can occur if you came from a non-US {{site.data.keyword.Bluemix_notm}} organization and didn't explicitly expand your organization to the US South region before you upgraded. You can confirm this in two ways:
+
+   * When you open the toolchain URL, check the {{site.data.keyword.Bluemix_notm}} header. Most likely, you'll see your organization name and no Space will be indicated.
+   
+   * Click **Toolchains &gt; Manage**. The organization that has access to this toolchain is listed first. This organization should be a different organization than the one you intended.
+
+What happened is that at the time of the upgrade, your non-US organization didn't exist in the US, so the upgrade selected another org for you by looking up an another one you happen to have access to.
+
+If you switch to that {{site.data.keyword.Bluemix_notm}} organization in the US, you can find the toolchain. If you add your colleagues to that organization, they will be granted access. This toolchain can continue to deploy to your non-US org. The only problem is that these two organizations are distinct; you can't perform user management across them both automatically.
+
+If you want your toolchain to be in the a US organization that matches your non-US organization, follow these steps:
+
+   1. Log into [https://console.bluemix.net ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} and select the non-US region and org that you are coming from.
+   
+   2. In the {{site.data.keyword.Bluemix_notm}} header, switch to the US South region. You will be prompted to create a space in that region.
+   
+   3. Create a space in the US South region to expand your organization into that region. 
+   
+   4. Delete the toolchain that was created through the upgrade process. 
+   
+      **Note:** The Git repo is not automatically deleted. You might want to delete it manually or rename it for now. If you made changes to it already, you can switch the future toolchain to use it later.
+
+   5. Return to the JazzHub project. It should reset itself for another upgrade attempt. If it doesn't reset, contact hub@jazz.net and provide the URL of the project.
+   
+   6. Restart the upgrade process and be sure to select the proper organization in the US, matching the name of your organization in the non-US region.
+   
+   7. If you kept or renamed the Git repo from the previous toolchain upgrade attempt (see step 4), you can reconfigure the Git card in your toolchain to point to this Git repo URL instead. The change is automatically reflected in the pipeline. To confirm, check the Input tab on the Build stage.
