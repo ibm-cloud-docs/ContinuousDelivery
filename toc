@@ -41,8 +41,8 @@ Continuous Delivery
     Eclipse Orion Web IDE
         web_ide.md
         git_web_ide.md
-	bluemixlive.md
-	
+        bluemixlive.md
+
     git_working.md
     di_working.md
   {: .navgroup-end}
