@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-17"
+lastupdated: "2017-7-10"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -55,7 +55,7 @@ The following properties and resources are available by default in pipeline envi
 | BUILD_NUMBER | The incremental stage ID that is shown in the pipeline UI.  |
 | GIT_BRANCH | The Git branch that the job uses as input. This property is only available in jobs that use a Git repository as input. |
 | GIT_COMMIT | The Git commit that the job uses as input. This property is only available in jobs that use a Git repository as input. |
-| GIT_PREVIOUS_COMMIT | The Git commit value of the job's last successful run. This property is only available only in jobs that use a Git repository as input. |
+| GIT_PREVIOUS_COMMIT | The Git commit value of the job's last successful run. This property is only available in jobs that use a Git repository as input. |
 | GIT_URL | The Git repository URL that the job uses as input. This property is only available in jobs that use a Git repository as input. |
 | IDS_JOB_ID | The unique ID of the job's configuration. |
 | IDS_JOB_NAME | The name of the job's configuration. |
@@ -65,6 +65,7 @@ The following properties and resources are available by default in pipeline envi
 | IDS_URL | The URL for the current pipeline. |
 | IDS_VERSION | The number for the build that is being deployed or the SCM identifier. This property is available only for deploy jobs.
 | JOB_NAME | The unique job ID in the context of the current pipeline. |
+| PIPELINE_KUBERNETES_CLUSTER_NAME | The name of the Kubernetes cluster that is selected in the current job. |
 | PIPELINE_STAGE_INPUT_JOB_ID | The ID of the job that is input for the current stage. |
 | PIPELINE_STAGE_INPUT_REV | The revision of the input for the current stage. |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | The unique ID for the run of the pipeline. |
@@ -77,12 +78,15 @@ The following properties and resources are available by default in pipeline envi
 | Environment property | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | ANT_HOME | The path to Apache Ant 1.9.2. |
+| ANT_JAVA8_HOME | The path to a 1.10+ version of Apache Ant that requires Java 8. |
 | GRADLE_HOME | The path to Gradle 1.11. |
 | JAVA_HOME | The path to IBM&reg; Java&trade; 7. |
 | JAVA7_HOME | The path to IBM Java 7. |
 | JAVA8_HOME | The path to IBM Java 8. |
 | MAVEN_HOME | The path to Apache Maven 3.2.1. |
 | NODE_HOME | The path to Node.js 0.10.29. |
+
+**Tip**: You can use the 1.10+ version of Apache Ant in your pipeline's scripts by setting `ANT_HOME` to `$ANT_JAVA8_HOME` and `JAVA_HOME` to `$JAVA8_HOME`.
 
 ### Deployment properties
 
