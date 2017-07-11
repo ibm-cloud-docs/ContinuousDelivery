@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-16"
+lastupdated: "2017-7-10"
 
 ---
 
@@ -22,7 +22,7 @@ The tool integrations that are available to add and configure for your toolchain
 |Tool integration |Available on {{site.data.keyword.Bluemix_notm}} Public	|Available on {{site.data.keyword.Bluemix_notm}} Dedicated (environment dependent)|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.alertnotificationshort}}		|Yes		|No		|
-|Artifactory		|Yes		|No		|
+|Artifactory		|Yes		|Yes		|
 |Availability Monitoring		|Yes		|No		|
 |Cloud Event Management		|Yes		|No		|
 |{{site.data.keyword.deliverypipeline}} 		|Yes	   	|Yes  		|
@@ -31,15 +31,15 @@ The tool integrations that are available to add and configure for your toolchain
 |{{site.data.keyword.gitrepos}}	|Yes		|No		|
 |GitHub and Issues		|Yes		|Yes		|
 |Dedicated {{site.data.keyword.ghe_short}} and Issues			|No		|Yes		|
-|Jenkins		|Yes		|No		|
-|JIRA		|Yes		|No		|
-|Nexus			|Yes		|No		|
+|Jenkins		|Yes		|Yes		|
+|JIRA		|Yes		|Yes		|
+|Nexus			|Yes		|Yes		|
 |Other Tool			|Yes		|Yes		|
 |PagerDuty			|Yes		|Yes		|
-|Rational Team Concert			|Yes		|No		|
+|Rational Team Concert			|Yes		|Yes		|
 |Sauce Labs		|Yes		|No		|
 |Slack			|Yes		|Yes		|
-|SonarQube			|Yes		|No		|
+|SonarQube			|Yes		|Yes		|
 {: caption="Table 1. Tool integrations available for toolchains on {{site.data.keyword.Bluemix_notm}} Public and Dedicated" caption-side="top"}
 
 **Tip:** If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
@@ -273,6 +273,9 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
   ![Test job](images/toolchain_test_job.png)
 
 1. Configure the stage. On the **ENVIRONMENT PROPERTIES** tab, create the CF_APP_NAME property.
+
+  **Tip:** The SAUCE_USERNAME and SAUCE_ACCESS_KEY properties are preconfigured as environment variables in the test job script.
+  
 1. Configure the deploy job. In the **Deploy Script** field, include this command: `export CF_APP_NAME="$CF_APP"`. That command exports the app name as an environment property.
 1. Configure the test job. The values in the following image are examples. The **Service Instance**, **Target**, **Organization**, and **Space** fields are populated with the Sauce Labs user name, region, org, and space that you are using.  
 ![Configure job](images/toolchain_configure_job.png)
@@ -375,13 +378,25 @@ If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, fol
 
 GitHub is a web-based hosting service for Git repos. You can have both local and remote copies of your repos, which makes it easy to collaborate.
 
+{{site.data.keyword.ghe_long}} is an on-premises, web-based hosting service for Git repos. Dedicated {{site.data.keyword.ghe_short}} is for [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} customers only.
+
 GitHub Issues is a tracking tool that keeps your work and your plans all in one place. It is integrated with your development repo so that you can focus on important tasks.
 
-Configure GitHub to manage your source code on the cloud:
+You can configure GitHub as a tool integration in your toolchain so that you can manage source code in a new or existing repo on GitHub.com, an instance of {{site.data.keyword.ghe_short}} managed by IBM, or your company's {{site.data.keyword.ghe_short}} instance. Engage in social coding through wikis, issue tracking, and pull requests.
+
+### Prerequisites
+
+1. Before you log in to Dedicated {{site.data.keyword.ghe_short}} for the first time, ask your company's region administrator to add your user ID to your {{site.data.keyword.Bluemix_notm}} Dedicated instance from your company's user registry by using LDAP. For information about setting up your {{site.data.keyword.ghe_short}} account, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}.
+
+ **Note:** These instructions apply to {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, some steps might differ depending on your internal procedures. 
+ 
+1. If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
+
+### Configuring GitHub
 
 1. If you are configuring this tool integration as you are creating the toolchain, follow these steps:
 
- a. In the Configurable Integrations section, click **GitHub**. If you are creating the toolchain on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
+ a. In the Configurable Integrations section, if you are using {{site.data.keyword.Bluemix_notm}} Public, click **GitHub**. If you are using {{site.data.keyword.Bluemix_notm}} Dedicated, click **{{site.data.keyword.ghe_short}}**.
 
  b. Review the default target repo locations for the GitHub repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
  ![Default target repo locations](images/toolchain_github_config.png)
@@ -392,71 +407,29 @@ Configure GitHub to manage your source code on the cloud:
 
  b. In the Tool Integrations section, click **GitHub**.
 
-1. If you have a GitHub repo and want to use it, for the repository type, click **Existing** and type the URL.
-1. If you want to use a new GitHub repo, type a name for the GitHub repo, type the URL for the repo that you are cloning or forking, and select the repository type:
+1. Click the GitHub server that you want to use.
+1. If you have a GitHub or {{site.data.keyword.ghe_short}} repo and want to use it, for the repository type, click **Existing** and type the URL.
+1. If you want to use a new GitHub or {{site.data.keyword.ghe_short}} repo, type a name for the repo, type the URL for the repo that you are cloning or forking, and select the repository type:
 
  a. To create an empty repo, click **New**.
 
- b. To create a copy of a GitHub repo, click **Clone**.
+ b. To create a copy of a GitHub or {{site.data.keyword.ghe_short}} repo, click **Clone**.
 
- c. To fork a GitHub repo so that you can contribute changes through pull requests, click **Fork**.
+ c. To fork a GitHub or {{site.data.keyword.ghe_short}} repo so that you can contribute changes through pull requests, click **Fork**.
 
+1. If you selected a {{site.data.keyword.ghe_short}} server and you want to make a new private repo on that server, select the **Make this repository private** check box.
 1. If you want to use GitHub's Issues for issue tracking, select the **Enable GitHub Issues** check box.
 1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Click **Create Integration**.
-1. Click the card for the GitHub repo that you want to work with. The GitHub website opens, where you can view the contents of the repo.
+1. Click the card for the GitHub or {{site.data.keyword.ghe_short}} repo that you want to work with. Depending on the repo that you selected, either the GitHub website or your company's {{site.data.keyword.ghe_short}} repo opens, where you can view the contents of the repo.
 
   **Tip:** You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the GitHub repo and deploy an app from your workspace.
 
-1. If you enabled GitHub Issues, click **GitHub Issues** to open it. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub repos.    
+1. If you enabled GitHub Issues, click **GitHub Issues** to open it. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub or {{site.data.keyword.ghe_short}} repos.    
 
 **Note:** If you don't have admin privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 
-To learn more, see the [GitHub article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} and the [GitHub Issues article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} on the IBM Cloud Garage Method.
-
-
-## Configuring GitHub Enterprise and Issues on Bluemix Dedicated
-{: #configghe}
-
- **Note:** These instructions apply to {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, some steps might differ depending on your internal procedures.
-
-{{site.data.keyword.ghe_long}} is an on-premises, web-based hosting service for Git repos. Dedicated {{site.data.keyword.ghe_short}} is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only. GitHub Issues is a tracking tool that keeps your work and your plans in one place. It is integrated with your development repo so that you can focus on important tasks. For more information about Dedicated {{site.data.keyword.ghe_short}} and GitHub Issues, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} and the [GitHub Issues article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} on the IBM Cloud Garage Method.
-
-You can configure {{site.data.keyword.ghe_short}} as a tool integration in your toolchain so that you can manage source code in your company's [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} instance.
-
-1. If you are configuring this tool integration as you are creating the toolchain, follow these steps:
-
- a. Before you log in to Dedicated {{site.data.keyword.ghe_short}} for the first time, ask your company's region administrator to add your user ID to your {{site.data.keyword.Bluemix_notm}} Dedicated instance from your company's user registry by using LDAP. For information about setting up your {{site.data.keyword.ghe_short}} account, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}.
-
- b. In the Configurable Integrations section, click **{{site.data.keyword.ghe_short}}**.    
-
- c. Review the default name for the new {{site.data.keyword.ghe_short}} repo. If needed, change the name of the new repo. The following image shows an example of a repo that is cloned from a sample repo. You can use an existing repo or a new repo. To use a new repo, you can create an empty repo, clone a repo, or fork a repo.
- ![Default repo locations](images/toolchain_ghe_config.png)
-
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
-
- a. Click **Add a Tool**.
-
- b. In the Tool Integrations section, click **{{site.data.keyword.ghe_short}}**.
-
-1. If you have a {{site.data.keyword.ghe_short}} repo that you want to use, type the URL for the repo. For the repository type, click **Existing**.
-1. If you want to use a new {{site.data.keyword.ghe_short}} repo, type a name for the repo, type the URL for the repo that you are cloning or forking, and select the repository type:
-
- a. To create an empty repo, click **New**.
-
- b. To create a copy of a repo, click **Clone**.
-
- c. To fork a repo so that you can contribute changes through pull requests, click **Fork**.
-
-1. To use GitHub Issues for issue tracking, select the **Enable GitHub Issues** check box.
-1. Click **Create Integration**.
-1. Click the card for the {{site.data.keyword.ghe_short}} repo that you want to work with. Your company's {{site.data.keyword.ghe_short}} repo opens.
-
-  **Tip:** You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the {{site.data.keyword.ghe_short}} repo and deploy an app from your workspace.
-
-1. If you enabled GitHub Issues, click **GitHub Issues**. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub repos.    
-
-**Note:** If you don't have admin privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+To learn more, see the [GitHub article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} and the [GitHub Issues article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} on the IBM Cloud Garage Method. For more information about Dedicated {{site.data.keyword.ghe_short}}, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}.
 
 
 ## Configuring Jenkins
