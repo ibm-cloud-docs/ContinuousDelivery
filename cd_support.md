@@ -21,7 +21,7 @@ The {{site.data.keyword.contdelivery_full}} team actively monitors the Stack Ove
  <td align="center">
  <strong>Stack Overflow</strong>
   <p>
-   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
+   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,devops-services" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
     <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Opens in a new tab or window)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on Stack Overflow.</p></td>
   <td align="center">
