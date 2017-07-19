@@ -44,6 +44,7 @@ Continuous Delivery
         bluemixlive.md
 
     git_working.md
+    git_locally.md
     di_working.md
   {: .navgroup-end}
 
