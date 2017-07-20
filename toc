@@ -18,7 +18,6 @@ Continuous Delivery
 
   {: .navgroup id="howto"}
     toolchains_post_upgrade.md
-    upgrade_projects.md
 
   {: .topicgroup}
     Delivery Pipeline
