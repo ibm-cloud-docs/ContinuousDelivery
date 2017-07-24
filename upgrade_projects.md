@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-7-7"
+lastupdated: "2017-7-24"
 
 ---
 
@@ -270,9 +270,9 @@ My JazzHub project is associated with the {{site.data.keyword.Bluemix_notm}} UK 
 
 These issues can occur if you came from a non-US {{site.data.keyword.Bluemix_notm}} organization and didn't explicitly expand your organization to the US South region before you upgraded. You can confirm this in two ways:
 
-   * When you open the toolchain URL, check the {{site.data.keyword.Bluemix_notm}} header. Most likely, you'll see your organization name and no Space will be indicated.
+   * When you open the toolchain URL, check the {{site.data.keyword.Bluemix_notm}} header. Most likely, you'll see your organization name and no space will be indicated.
    
-   * Click **Toolchains &gt; Manage**. The organization that has access to this toolchain is listed first. This organization should be a different organization than the one you intended.
+   * From your toolchain's Overview page, click **Manage**. On the Access Control page, click the **Org managers** link. The organization that contains the toolchain is listed on the main page.
 
 What happened is that at the time of the upgrade, your non-US organization didn't exist in the US, so the upgrade selected another org for you by looking up an another one you happen to have access to.
 
@@ -295,4 +295,3 @@ If you want your toolchain to be in the a US organization that matches your non-
    6. Restart the upgrade process and be sure to select the proper organization in the US, matching the name of your organization in the non-US region.
    
    7. If you kept or renamed the Git repo from the previous toolchain upgrade attempt (see step 4), you can reconfigure the Git card in your toolchain to point to this Git repo URL instead. The change is automatically reflected in the pipeline. To confirm, check the Input tab on the Build stage.
-
