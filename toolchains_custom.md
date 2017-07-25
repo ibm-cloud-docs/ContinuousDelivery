@@ -211,7 +211,7 @@ In that example, the Git URL and Git branch are for a new toolchain template.
 
  As part of the continuous delivery process, you can configure a toolchain to deploy an application to any {{site.data.keyword.Bluemix_notm}} Region, Organization, or Space to which a user has access. The specific details of where to deploy your application can be selected from the toolchain creation page.
 
- ![Delivery Pipeline Configuration settings](images/deploy_configuration.png)
+ ![Delivery Pipeline Configuration settings](images/pipeline_configuration.png)
 
  This section of the `toolchain.yml` file defines the pipeline stages that are available to be configured from the toolchain creation page.
 
