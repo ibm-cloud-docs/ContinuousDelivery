@@ -206,7 +206,7 @@ In that example, the Git URL and Git branch are for a new toolchain template.
        execute: true ```
  {: codeblock}
 
-4\. **Deployment details:** - need to verify
+4\. **Deployment details:**
 
 
  As part of the continuous delivery process, you can configure a toolchain to deploy an application to any {{site.data.keyword.Bluemix_notm}} Region, Organization, or Space to which a user has access. The specific details of where to deploy your application can be selected from the toolchain creation page.
