@@ -181,7 +181,7 @@ In that example, the Git URL and Git branch are for a new toolchain template.
 | hidden | property | <`[form, description]`> |  |
 -->
 
- Information about creating a `pipeline.yml` file can be found in a [later section.](#toolchains_custom_pipeline_yml)
+ Information about creating a `pipeline.yml` file can be found in a [later section](#toolchains_custom_pipeline_yml).
 
  This snippet shows an example of this section of the file:
 
@@ -480,7 +480,7 @@ You can configure those items for each tool.
 
  After you configure the core components of your toolchain, you can include other tool integrations that add additional functions to your toolchain. All additional tools require their own entry in the `toolchain.yml` file. Some tools also require that you add a separate YAML configuration file to `.bluemix` directory.
 
- ![Files needed to define a toolchain](images/files_for_toolchain_with_additional_tools.png)
+<!-- ![Files needed to define a toolchain](images/files_for_toolchain_with_additional_tools.png) -->
 
 To see the list of available tool integrations, see <a ref="https://github.com/open-toolchain/sdk/wiki/services.md" target="_blank">Services available in a toolchain template</a>.
 
