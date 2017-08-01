@@ -18,7 +18,7 @@ lastupdated: "2017-7-7"
 Improve your DevOps workflow by creating a custom toolchain. You can get started quickly with an existing toolchain template, or create a toolchain that includes just the integrations you need. You can add or remove your toolchain's integrations at any time.
 {:shortdesc}
 
-There are many ways to [create and deploy a toolchain](/docs/toolchains/toolchains_setup.html){: new_window}. After you create a custom toolchain, you can share it by using a [Deploy to {{site.data.keyword.Bluemix_notm}} button](/docs/develop/deploy_button.html){: new_window}.
+There are many ways to [create and deploy a toolchain](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}. After you create a custom toolchain, you can share it by using a [Deploy to {{site.data.keyword.Bluemix_notm}} button](/docs/develop/deploy_button.html){: new_window}.
 
 
 ## Getting started
