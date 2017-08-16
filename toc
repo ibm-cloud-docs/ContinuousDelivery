@@ -35,6 +35,7 @@ Continuous Delivery
         toolchains_working.md
         toolchains_using.md
         toolchains_integrations.md
+	deploy_button.md
 	    toolchains_custom.md
 
   {: .topicgroup}
