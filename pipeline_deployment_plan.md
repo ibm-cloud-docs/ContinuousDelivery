@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-08-15"
 
 ---
 
@@ -67,43 +67,6 @@ After tasks are added to deployment plans, you can manage them in several ways:
 
    * To delete a task, click it and click **Delete** <img class="inline" src="../UCCR/images/trash-group.png"  alt="delete icon">. The task is removed from the deployment plan.
 
-<!-- ## Creating UrbanCode Deploy tasks
-{: #tasks_UDTasks}
-
-UrbanCode Deploy tasks manage UrbanCode Deploy applications. When you run an UrbanCode Deploy task, the associated UrbanCode Deploy application runs by using the process, version, and environment specified by the task. You can set the version and environment at design time or wait and select them at run time.
-
-During deployments, UrbanCode Deploy tasks start automatically when they become eligible to run.   
-
-**Important** Applications become available after {{site.data.keyword.uccr_short}} is integrated with UrbanCode Deploy. The applications that are available to a deployment plan depend on the team that is assigned to the plan. The applications that are managed by the team in UrbanCode Deploy are also available in {{site.data.keyword.uccr_short}}.
-
-Complete the following tasks to create an UrbanCode Deploy task.
-
-1. On the Deployment Plan Details page, click **Create Task**. If you want to insert a task at a specific position in the plan, select a task before using the **Create Task**. The new task is inserted above the selected task.
-
-1. On the Create Task dialog box, in the **Type** list, select **UrbanCode Deploy**.
-
-1. In the **Name** field, enter a name for the task.
-
-3. In the **Duration (minutes)** field, enter the number of minutes that you expect the task to run until it is completed. The estimated duration is used to calculate expected deployment times.
-
-3. In the **Tags** list, attach a tag to the task. You can select multiple tags. To create a tag, type the tag name in list's text field.
-
-3. In the **Application Name** list, select an application.
-
-3. In the **Process** list, select an application process. Processes that belong to the selected UrbanCode Deploy application are available.
-
-3. In the **Environment** list, select an application environment. Environments that belong to the selected UrbanCode Deploy application are available.  To postpone selecting an environment until you are ready to run the deployment, select **Use Version Tab**.
-
-3. In the **Version** list, select an application version. Versions refer to IBM UrbanCode Deploy application snapshots. Versions that belong to the selected application are available.  To postpone selecting a version, select **Use Version Tab**. If the application process does not require a version, select **No Version**. You might select this last option if you are running a configuration-type process that does not require components.
-
-3. In the **Assigned groups and users** list, assign the task to a user or group. The assigned user runs the task during deployment.
-
-3. In the **Owner** list, select the task owner. The default owner is the user who created the task. The **Owner** list is displayed after the task is assigned to a user or group.    
-
-5. Click **Save**. The task is inserted into the deployment plan.
-
-After the task is created, the plan's **Version** tab is updated with information about the application assigned to the task. If you selected **Use Version Tab** for the application environment and version, use the Version tab to set those options before running the deployment. -->
-
 ## Creating manual tasks
 {: #tasks_manual}
 
@@ -111,7 +74,7 @@ Typically, manual tasks represent some activity that is associated with a softwa
 
 To create a manual task, follow these steps:
 
-1. On the Deployment Plan Details page, click **Create Task**. To insert a task at a specific position in the plan, before you click **Create Task**, select a task. The new task is inserted above the selected task.
+1. On the Deployment Plan Details page, click **Create Task**. To insert a task at a specific position in the plan, before you click **Create Task**, select a task. The new task is inserted before the selected task.
 
 1. In the Create Task window, from the **Type** list, select **Manual**.
 
@@ -119,7 +82,7 @@ To create a manual task, follow these steps:
 
 3. In the **Duration (minutes)** field, type the number of minutes that you expect the task to run until it is completed. The estimated duration is used to calculate expected deployment times.
 
-3. In the **Tags** list, attach a tag to the task. You can select multiple tags. To create a tag, type the tag name in list's text field.
+3. In the **Tags** list, attach a tag to the task. You can select multiple tags. To create a tag, type the tag name in list's field.
 
 3. In the **Assigned groups and users** list, assign the task to a user or group. The assigned user runs the task during deployment.
 
@@ -142,7 +105,7 @@ To create a delayed task, follow these steps:
 
 1. In the **Name** field, type a name for the task.
 
-3. In the **Time** field, enter or select the time that the task will be completed.
+3. In the **Time** field, enter or select the time that the task should be completed.
 
 3. In the **Time Zone** list, select the time zone for the value that is entered in the **Time** field.    
 
@@ -157,7 +120,7 @@ Header tasks represent organization elements that you can add to deployment plan
 
 To create a header task, follow these steps:
 
-1. On the Deployment Plan Details page, click **Create Task**. If you want to insert a task at a specific position in the plan, before you click **Create Task**, select a task. The new task is inserted above the selected task.
+1. On the Deployment Plan Details page, click **Create Task**. If you want to insert a task at a specific position in the plan, before you click **Create Task**, select a task. The new task is inserted before the selected task.
 
 1. In the Create Task window, from the **Type** list, select **Header**.
 
@@ -174,7 +137,7 @@ In the {{site.data.keyword.contdelivery_short}} service, {{site.data.keyword.del
 
 To create a Delivery Pipeline task, follow these steps:
 
-1. On the Deployment Plan Details page, click **Create Task**. If you want to insert a task at a specific position in the plan, before you click **Create Task**, select a task. The new task is inserted above the selected task.
+1. On the Deployment Plan Details page, click **Create Task**. If you want to insert a task at a specific position in the plan, before you click **Create Task**, select a task. The new task is inserted before the selected task.
 
 1. In the Create Task window, from the **Type** list, select **Continuous Delivery Pipeline**.
 
@@ -191,9 +154,9 @@ To create a Delivery Pipeline task, follow these steps:
 ## Managing task groups
 {: #tasks_groups}
 
-You can combine two or more tasks into a task group. When you create a group, you define the group's execution pattern, which is sequential or parallel. You can run the tasks in a parallel-pattern group in any order and can run tasks simultaneously unless dependencies exist. The tasks in sequential groups are done in list-order, starting with the first or top-most task.
+You can combine two or more tasks into a task group. When you create a group, you define the group's execution pattern, which is sequential or parallel. You can run the tasks in a parallel-pattern group in any order and can run tasks simultaneously unless dependencies exist. The tasks in sequential groups are done in list-order, starting with the first, or top-most task.
 
-You can embed groups within other groups. You can embed a sequential-pattern group within a parallel-pattern group, and vice versa. However, you cannot embed a sequential-pattern group within another sequential group or embed a parallel-pattern group within another parallel group.  
+You can embed groups within other groups. You can embed a sequential-pattern group within a parallel-pattern group, as well as the other way around. However, you cannot embed a sequential-pattern group within another sequential group or embed a parallel-pattern group within another parallel group.  
 
 To create a task group, follow these steps:
 
@@ -258,7 +221,7 @@ By controlling task dependencies, you can ensure that events occur in their expe
 
 To make a task a prerequisite for other tasks, complete these steps:
 
-1. On the Deployment Plan Details page, select a task or task group and click **Manage Prerequisites** <img class="inline" src="../UCCR/images/task-depend.png"  alt="task prerequisite">. You can select multiple tasks and groups.
+1. On the Deployment Plan Details page, select a task or task group and click **Manage Prerequisites** <img class="inline" src="../UCCR/images/task-depend.png"  alt="Task prerequisite">. You can select multiple tasks and groups.
 
 1. In the "Manage Prerequisites for Selected Tasks" window, from the **Prerequisite tasks for selected tasks** list, select the prerequisite task.
 
@@ -272,4 +235,4 @@ In the following figure, the first task does not have any prerequisites and two 
 
 *Figure 4. Task dependencies*
 
-To review or modify dependencies, select the task and click **Manage Prerequisites** <img class="inline" src="../UCCR/images/task-depend.png"  alt="task prerequisite">.
+To review or modify dependencies, select the task and click **Manage Prerequisites** <img class="inline" src="../UCCR/images/task-depend.png"  alt="Task prerequisite">.

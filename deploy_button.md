@@ -111,11 +111,11 @@ Default master branch:
 
 When you customize the snippet for your Deploy to {{site.data.keyword.Bluemix_notm}} button, consider that both of the templates use a default path to an external button image in PNG format and in English. 
 
-* If you prefer to use an SVG image for the button instead of a PNG, there is an SVG version available. Change the path to the external button image that is used in the snippet to `https://bluemix.net/deploy/button.svg`.
+* If you prefer to use an SVG image for the button instead of a PNG, change the path to the button image that is used in the snippet to `https://bluemix.net/deploy/button.svg`.
 	
-* If you prefer to use a larger image for the button, there is a PNG image available that is twice the size of the original. Change the path of the external button image that is used in the snippet to `https://bluemix.net/deploy/button_x2.png`. 
+* If you prefer to use an image for the button, change the path of the button image that is used in the snippet to `https://bluemix.net/deploy/button_x2.png`. This image is twice the size of the default one.
 	
-* If you prefer to store the image locally, you can download the image and store it in your Git repo. Adjust the path to use the relative location of the image. 
+* If you prefer to store the image locally, you can download the image and store it in your Git repo. Adjust the path to use the relative location of the image.
 	
 * If you want to use a translated version of the button, you can reference it remotely or download it from [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button ![External link icon](../../icons/launch-glyph.svg "External link icon")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}. 
 	
@@ -124,12 +124,12 @@ When you customize the snippet for your Deploy to {{site.data.keyword.Bluemix_no
 Review these considerations for the repo that you will use in your Deploy to {{site.data.keyword.Bluemix_notm}} button. 
 
 <ul>
-<li>A <code>manifest.yml</code> file is not required to be in your repo. However, if your app requires other services to run, you must provide a manifest file that declares those services.  
+<li>A <code>manifest.yml</code> file is not required to be in your repo. However, if your app requires other services to run, you must provide a manifest file that declares those services.
 With the manifest file, you can specify: 
     <ul>
     <li>A unique app name.</li>  
-    <li>Declared services, a manifest extension, which creates or looks for the required or optional services that are expected to be     set up before the app is deployed, such as a data cache service. You can find a list of the eligible     {{site.data.keyword.Bluemix_notm}} services, labels, and plans by using the <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Opens in a new tab or window)">CF Command Line Interface <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> to run the <code>cf marketplace</code> command or by browsing the <a class="xref" href="https://console.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store" target="_blank" title="(Opens in a new tab or window)"> {{site.data.keyword.Bluemix_notm}} catalog <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a>. 
-<p></p>    
+    <li>Declared services, a manifest extension which creates or looks for the required or optional services that are expected to be set up before the app is deployed, such as a data cache service. You can find a list of the eligible {{site.data.keyword.Bluemix_notm}} services, labels, and plans by using the <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Opens in a new tab or window)">CF Command Line Interface <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> to run the <code>cf marketplace</code> command or by browsing the <a class="xref" href="https://console.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store" target="_blank" title="(Opens in a new tab or window)"> {{site.data.keyword.Bluemix_notm}} catalog <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a>. 
+<p></p>    
           
   <p><strong>Note:</strong> Declared services is an IBM extension of the standard Cloud Foundry manifest format. This extension might be revised in a future release as the feature evolves and improves.</p>
   
@@ -182,17 +182,18 @@ With the manifest file, you can specify:
 		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank" title="(Opens in a new tab or window)">Maven: <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> <code>/pom.xml</code>, which builds output to the <code>./target/</code> folder</li>
 	   </ul>
 	</li>	
-	<li>To configure the pipeline for the toolchain in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. For each <code>pipeline.yml</code> file in that directory, a pipeline will be created when the toolchain is instantiated. 
+	<li>To configure the pipeline for the toolchain in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. For each <code>pipeline.yml</code> file in that directory, a pipeline is created when the toolchain is instantiated. 
 
-  To create a pipeline file manually, consult the example file in the [custom toolchain pipeline instructions](toolchains_custom.html#toolchains_custom_pipeline_yml). Just as when you define a pipeline in the web interface, you define a pipeline in text by creating stages and jobs, setting inputs and environment variables, and adding scripts. You can also see a number of more complex pipeline files in [this demo project](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix).
+  To create a pipeline file manually, consult the example file in the [custom toolchain pipeline instructions](toolchains_custom.html#toolchains_custom_pipeline_yml). Just as when you define a pipeline in the web interface, you define a pipeline in text by creating stages and jobs, setting inputs and environment variables, and adding scripts. You can also see a number of more complex pipeline files in [this demonstration project](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix).
    </li>
 	<li>To deploy an app in a container by using IBM Containers, you must include Dockerfile in the root directory of the repo and, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. 
 	<ul>
-	    <li>The Dockerfile acts as a kind of build script for the app. If a Dockerfile is detected in the repo, the app is automatically built into an image before it is deployed in a container. If the app itself must be built before the app is built into an image, include a build script for the app as well as a Dockerfile, as previously described.</li>
-	    <li> To learn more about creating Dockerfiles, see the <a class="xref" href="https://docs.docker.com/reference/builder/" target="_blank" title="(Opens in a new tab or window)">Docker documentation <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a>. </li>
-	    <li>To create a <code>pipeline.yml</code> manually that is specifically for containers, see the <a class="xref" href="https://github.com/Puquios/" target="_blank" title="(Opens in a new tab or window)">examples in GitHub <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a>. </li>
+	    <li>The Dockerfile acts as a kind of build script for the app. If a Dockerfile is detected in the repo, the app is automatically built into an image before it is deployed in a container. If the app itself must be built before the app is built into an image, include a build script for the app and a Dockerfile.</li>
+	    <li> To learn more about creating Dockerfiles, see the <a class="xref" href="https://docs.docker.com/reference/builder/" target="_blank" title="(Opens in a new tab or window)">Docker documentation <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a>.</li>
+	    <li>To create a <code>pipeline.yml</code> manually that is specifically for containers, see the <a class="xref" href="https://github.com/Puquios/" target="_blank" title="(Opens in a new tab or window)">examples in GitHub <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a>.</li>
         </ul>
 
  </li>
  </ul>
 </ul>
+

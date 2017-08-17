@@ -32,7 +32,7 @@ To learn how to adopt a continuous delivery approach in your organization, use t
 ## Continuous delivery articles
 {: #gm_cd_articles}
 
-These articles provide conceptual overviews of continuous delivery.
+The Cloud Garage Method site contains articles that describe continuous delivery at a high level.
 
 [Continuous Delivery ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window} is a practice by which you build and deploy your software so that it can be released into production at any time. One of the hallmarks of computer science is the shortening of various cycle times in the development and operations process.
 

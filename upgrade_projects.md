@@ -295,3 +295,4 @@ If you want your toolchain to be in the a US organization that matches your non-
    6. Restart the upgrade process and be sure to select the proper organization in the US, matching the name of your organization in the non-US region.
    
    7. If you kept or renamed the Git repo from the previous toolchain upgrade attempt (see step 4), you can reconfigure the Git card in your toolchain to point to this Git repo URL instead. The change is automatically reflected in the pipeline. To confirm, check the Input tab on the Build stage.
+

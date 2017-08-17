@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-8-1"
+lastupdated: "2017-8-17"
 
 ---
 
@@ -81,7 +81,11 @@ Configure {{site.data.keyword.alertnotificationshort}} to receive notifications 
 1. Click **Create Integration**.
 1. From your toolchain, click **{{site.data.keyword.alertnotificationshort}}**.
 
-To learn more, see the [IBM {{site.data.keyword.alertnotificationshort}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window} on the IBM Cloud Garage Method.
+To learn more, see the [IBM {{site.data.keyword.alertnotificationshort}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
+
+  * [Add a tool integration to a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_add_tool_integration_to_toolchain?task=1){:new_window}
+  
+  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using Bluemix Availability Monitoring and Alert Notification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## Configuring Artifactory
@@ -189,7 +193,7 @@ To learn more, see the [Artifactory article ![External link icon](../../icons/la
 ## Adding Availability Monitoring
 {: #availabilitymonitoring}
 
-{{site.data.keyword.prf_hublong}} isolates problems, identifies patterns, and improves performance before users are affected. You can test your app from locations around the world, integrate with delivery pipelines, and gain insights on how to continuously optimize your code.
+{{site.data.keyword.prf_hublong}} isolates problems, identifies patterns, and improves performance before users are affected. You can test your app from locations around the world, integrate with delivery pipelines, and gain insights about how to continuously optimize your code.
 
 **Note:** This tool integration is preconfigured and does not require any configuration parameters. You cannot reconfigure this tool integration.
 
@@ -423,7 +427,7 @@ If you have a toolchain and are adding this tool integration to it, follow these
 
  c. To fork a GitHub or {{site.data.keyword.ghe_short}} repo so that you can contribute changes through pull requests, click **Fork**.
 
-1. If you are a GitHub.com user with an upgraded account or you selected a {{site.data.keyword.ghe_short}} server and you want to make a new private repo on the server, select the **Make this repository private** check box.
+1. If you are a GitHub.com user with an upgraded account, or you selected a {{site.data.keyword.ghe_short}} server and you want to make a new private repo on the server, select the **Make this repository private** check box.
 1. If you want to use GitHub's Issues for issue tracking, select the **Enable GitHub Issues** check box.
 1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Click **Create Integration**.
@@ -537,11 +541,9 @@ Configure JIRA to plan, track, and deliver quality code:
 
  b. Type the base API URL for your JIRA instance. You can find the API URL from the header of your JIRA instance. Click the **Administration** icon and click **System**.
 
- c. Optional: Type your JIRA user name. Your user name is required only if you are connecting to a private JIRA instance or if you are connecting to a public instance and you want to receive traceability information.
+ c. If you are connecting to a private JIRA instance, or you want to receive traceability information from a public JIRA instance, enter your JIRA user name and password.
 
- d. Optional: Type your JIRA password. Your password is required only if you are connecting to a private JIRA instance or if you are connecting to a public instance and you want to receive traceability information.
-
- e. To track the deployment of code changes for the project by creating labels and comments for referenced issues, select the **Track deployment of code changes** check box. Make sure that you use JIRA Smart Commit to reference the JIRA issues in your GitHub commits. If you don't select this option, the JIRA tool integration ignores any commits.
+ d. To track the deployment of code changes for the project by creating labels and comments for referenced issues, select the **Track deployment of code changes** check box. Make sure that you use JIRA Smart Commit to reference the JIRA issues in your GitHub commits. If you don't select this option, the JIRA tool integration ignores any commits.
 
 1. If you want to create a JIRA project, for the JIRA type, click **New**:
 

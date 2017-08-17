@@ -19,7 +19,7 @@ lastupdated: "2017-7-10"
 # Environment properties and resources
 {: #deliverypipeline_environment}
 
-You can use environment properties and pre-installed resources to interact with {{site.data.keyword.contdelivery_full}}'s pipeline capability. For example, you might incorporate them into a job script or test command.
+You can use environment properties and preinstalled resources to interact with {{site.data.keyword.contdelivery_full}}'s pipeline capability. For example, you might incorporate them into a job script or test command.
 {:shortdesc}
 
 You can add your own environment properties to a stage from its **ENVIRONMENT PROPERTIES** tab. Environment properties are available to every job in a stage.
@@ -63,7 +63,7 @@ The following properties and resources are available by default in pipeline envi
 | IDS_PROJECT_NAME | The name of the project, for example, <code>Owner - Project Name</code>. |
 | IDS_STAGE_NAME | The name of the current stage. |
 | IDS_URL | The URL for the current pipeline. |
-| IDS_VERSION | The number for the build that is being deployed or the SCM identifier. This property is available only for deploy jobs.
+| IDS_VERSION | The number for the build that is being deployed or the SCM identifier. This property is available only in deploy jobs.
 | JOB_NAME | The unique job ID in the context of the current pipeline. |
 | PIPELINE_KUBERNETES_CLUSTER_NAME | The name of the Kubernetes cluster that is selected in the current job. |
 | PIPELINE_STAGE_INPUT_JOB_ID | The ID of the job that is input for the current stage. |
@@ -100,10 +100,10 @@ The following properties and resources are available by default in pipeline envi
 | CF_TARGET_URL | For deployments, the URL of IBM Bluemix&reg; or Cloud Foundry. |
 | IDS_VERSION | For deployments, the version of the app that is being deployed or the source identifier. |
 
-## Pre-installed resources
+## Preinstalled resources
 {: #deliverypipeline_resources}
 
-Several runtimes, tools, and Node modules are pre-installed in every pipeline.
+Several runtimes, tools, and Node modules are preinstalled in every pipeline.
 
 ### Runtimes and tools
 

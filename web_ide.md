@@ -71,7 +71,7 @@ To see a list of the keyboard shortcuts in the editor, click **Tools** > **Show 
 
 The {{site.data.keyword.webide}} is integrated with source code management tools. To work with your Git repository, click the **Git Repository** icon <img class="inline" src="images/webide_git_icon_light_small.png"  alt="The Git Repository icon">.
 
- **Tip**: If you are using the {{site.data.keyword.webide}} with open toolchains, your workspace is pre-populated with your GitHub,  {{site.data.keyword.ghe_short}}, or Git Repos and  Issue Tracking repos. The repos that are associated with your current toolchain are highlighted.
+ **Tip**: If you are using the {{site.data.keyword.webide}} with open toolchains, your workspace is pre-populated with your GitHub,  {{site.data.keyword.ghe_short}}, or Git Repos and Issue Tracking repos. The repos that are associated with your current toolchain are highlighted.
 
 
 ## Deploying an app from your workspace
@@ -92,7 +92,8 @@ The {{site.data.keyword.webide}} is integrated with source code management tools
 If you are developing a Node.js app, enable Live Edit mode:  <img  src="./images/enable_live_edit.png"  alt="The enable live edit slider">
 
 <table><tr><td><img src="./images/live_edit_restart.png"  alt="The Live Edit restart icon"></td><td>With Live Edit mode enabled, restart the app quickly, without redeployment</td></tr>
-<tr><td> <img src="./images/debug_icon.png"  alt="The debug icon"></td><td>With Live Edit mode enabled, access the debugger
+<tr><td> <img src="./images/debug_icon.png"  alt="The debug icon"></td>
+<td>With Live Edit mode enabled, access the debugger
 </td></tr>
 </table>
 

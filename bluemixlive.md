@@ -22,7 +22,7 @@ If you are building a Node.js application, you can use {{site.data.keyword.Bluem
 
 When you make a change, you can see that change in your running {{site.data.keyword.Bluemix_notm}} application immediately. {{site.data.keyword.Bluemix_notm}} Live Sync works
 <!--from both the command line and -->
-in the Eclipse Orion Web IDE (Web IDE). You can debug applications written in Node.js by using {{site.data.keyword.Bluemix_notm}} Live Sync.  
+in the Eclipse Orion Web IDE (Web IDE). You can debug applications that are written in Node.js by using {{site.data.keyword.Bluemix_notm}} Live Sync.  
 
 {{site.data.keyword.Bluemix_notm}} Live Sync consists of two features.
 <!--three -->
@@ -35,17 +35,17 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 
 **Live Edit**
 
-You can make changes to a Node.js application running in {{site.data.keyword.Bluemix_notm}} and test them in your browser right away. Any changes that you make in the Web IDE are propagated to the application’s file system immediately.  
+You can edit a Node.js application that runs on {{site.data.keyword.Bluemix_notm}} and test them in your browser right away. Any changes that you make in the Web IDE are propagated to the application’s file system immediately.  
 
 **Debug**  
 
-While a Node.js application is in Live Edit mode, you can shell into it and debug it. You can edit code dynamically, insert breakpoints, step through code, restart the runtime, and more using the Node Inspector debugger.  
+While a Node.js application is in Live Edit mode, you can shell into it and debug it. You can edit code dynamically, insert breakpoints, step through code, restart the runtime, and more by using the Node Inspector debugger.  
 
 
 ##Live Edit
 {: #live-edit}
 
-If you are building a Node.js application, when you make changes to your project using the Web IDE, the Live Edit feature of the {{site.data.keyword.Bluemix_notm}} Live Sync can quickly update the application instance running on {{site.data.keyword.Bluemix_notm}}. Live Edit allows you to develop as you would on the desktop without redeploying.
+If you are building a Node.js application that runs on {{site.data.keyword.Bluemix_notm}}, the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync can quickly update the application instance. Live Edit is available in the Web IDE only. Live Edit allows you to develop as you would on the desktop without redeploying.
 
 Live Edit is supported for Node.js applications only.
 
@@ -53,15 +53,15 @@ In the Eclipse Orion Web IDE (Web IDE), in the run bar, click **Live Edit**.
 
 ![Image of Run bar with live edit](images/bluemix-live-sync-light.png)
 
-Live Edit allows you to quickly preview changes to Node.js applications running on {{site.data.keyword.Bluemix_notm}}. When you update your code with Live Edit turned on, you can refresh your web application's browser window to see those changes reflected seconds after you make them.
+Live Edit allows you to quickly preview changes to Node.js applications that run on {{site.data.keyword.Bluemix_notm}}. When you update your code with Live Edit turned on, you can refresh your web application's browser window to see those changes reflected seconds after you make them.
 
 <!--
 For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see the tutorial [Test and debug a Node.js app with Bluemix Live Sync![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/livesync){:new_window}.
 -->
 
-When you change the files in your Web IDE, they are automatically redeployed to your application running on {{site.data.keyword.Bluemix_notm}}. If you need to restart the Node application, then you can use the **Restart** button in the run bar.
+When you change the files in your Web IDE, they are automatically redeployed to your application instance on {{site.data.keyword.Bluemix_notm}}. If you need to restart the Node application, then you can use the **Restart** button in the run bar.
 
-**NOTE:** For a more consistent experience when using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, 256MB of additional memory is required and will be added.
+**NOTE:** For a more consistent experience when you use the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, 256MB of additional memory is required and is added.
 
 ## Bluemix Live Debug
 {: #live-debug}

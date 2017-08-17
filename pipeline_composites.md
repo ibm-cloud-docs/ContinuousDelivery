@@ -95,7 +95,7 @@ After you expand an app to display its jobs, you can manually run all of its job
 
 ![Running a stage in a single app](images/composite_run_stage.png)
 
-To run all of the jobs in all of the apps that are in a space, click the **Deploy to *space*** icon in the space for the composite pipeline.
+To run every job in every app that is in a space, click the **Deploy to *space*** icon in the space for the composite pipeline.
 
 ![Running a stage in all apps](images/composite_run_space.png)
 
@@ -104,7 +104,7 @@ The jobs run according to the composite blueprint's deployment plan.
 ##Adding apps that are deployed by delivery pipelines
 {: #compositepipeline_add_apps}
 
-You can add apps that are deployed by delivery pipelines only by automatically synchronizing the composite pipeline with the toolchain. Because a composite pipeline is associated with a single toolchain, you can include only apps whose delivery pipelines that are in that toolchain.
+You can add apps that are deployed by delivery pipelines only by synchronizing the composite pipeline with the toolchain. Because a composite pipeline is associated with a single toolchain, you can include only apps whose delivery pipelines that are in that toolchain.
 
 To add an app that is deployed by a delivery pipeline to the composite pipeline, take these steps:
 
@@ -124,7 +124,7 @@ The app is added to the composite pipeline, and the deployment plans for each st
 ##Updating delivery pipelines in the composite pipeline
 {: #compositepipeline_sync}
 
-Before you add or update delivery pipelines that are included in a composite pipeline, you must enable automatic synchronization in the composite pipeline.
+You must enable automatic synchronization in the composite pipeline before you can add or change the pipelines that are part of it.
 
 1. Open the composite pipeline.
 
@@ -195,7 +195,7 @@ If your integration succeeded, you can add IBM UrbanCode Deploy apps to your com
 ## Adding apps from IBM UrbanCode Deploy
 {: #compositepipeline_add_apps}
 
-If you are a member of an org that integrated with IBM UrbanCode Deploy by using DevOps Connect, you can add the apps that you can access in IBM UrbanCode Deploy to the composite pipeline. For installation instructions, see [Using IBM Bluemix DevOps Connect to integrate with IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
+If you are a member of an org that integrated with IBM UrbanCode Deploy by using DevOps Connect, you can add the apps that you can access in UrbanCode Deploy to the composite pipeline. For installation instructions, see [Using IBM Bluemix DevOps Connect to integrate with IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
 
 When you are a member of an org that is connected to IBM UrbanCode Deploy, you can add UrbanCode Deploy apps to composite pipelines, select the app processes to include in the deployment plan, and customize the deployment of the apps.
 

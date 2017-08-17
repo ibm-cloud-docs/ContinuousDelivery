@@ -18,7 +18,7 @@ lastupdated: "2017-7-7"
 Improve your DevOps workflow by creating a custom toolchain. You can get started quickly with an existing toolchain template, or create a toolchain that includes just the integrations you need. You can add or remove your toolchain's integrations at any time.
 {:shortdesc}
 
-There are many ways to [create and deploy a toolchain](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}. After you create a custom toolchain, you can share it by using a [Deploy to {{site.data.keyword.Bluemix_notm}} button](/docs/develop/deploy_button.html){: new_window}.
+You can [create and deploy a toolchain](/docs/toolchains/toolchains_setup.html){: new_window} in several ways. After you create a custom toolchain, you can share it by using a [Deploy to {{site.data.keyword.Bluemix_notm}} button](/docs/develop/deploy_button.html){: new_window}.
 
 
 ## Getting started
@@ -43,15 +43,15 @@ To create a custom toolchain, begin by cloning the Simple Cloud Foundry toolchai
  {: pre}
 
 The microservices template deploys an online store that is composed of three microservices, each contained in their own GitHub repository. It also is a more complex toolchain that is preconfigured for:
-* continuous delivery
-* source control
-* blue-green deployments
-* functional testing
-* issue tracking
-* online editing
-* messaging.
+* Continuous delivery
+* Source control
+* Blue-green deployments
+* Functional testing 
+* Issue tracking 
+* Online editing 
+* Messaging
 
-Regardless of which template you choose, the process for customizing the toolchain you create will generally be the same.
+Regardless of which template you choose, the process for customizing the toolchain you create is generally the same.
 
 After you clone the template, you will have a basic GitHub repository that contains a readme file and a `.bluemix` directory. The directory contains all of the configuration files that the toolchain requires to function. At a minimum, the `.bluemix` directory must contain the following files:
 
@@ -59,10 +59,10 @@ After you clone the template, you will have a basic GitHub repository that conta
 * `deploy.json`
 * `pipeline.yml`
 
-![Minimum files needed to define a toolchain](images/min_files_for_a_toolchain.png)
+![Minimum files that are needed to define a toolchain](images/min_files_for_a_toolchain.png)
 
 
-Each of these files is explained in the following sections. Each section contains configuration information that you can consult as your toolchain evolves.
+Each of these files is explained in the following sections. Each section contains configuration information that you can consult as your toolchain evolves. 
 
 
 ## Understanding the configuration files
@@ -72,13 +72,13 @@ Each of these files is explained in the following sections. Each section contain
 The toolchain template configuration files are comprised primarily of YAML formatted files. Each file contains metadata that describes different aspects of the toolchain. The metadata includes
 * Information about the toolchain, GitHub, or Git Repo and Issue Tracking repositories.
 * Details about how code is built and deployed.
-* Configuration properties for the tools that are in the toolchain.
+* Configuration properties for the tools that are in the toolchain. 
 
-As your toolchain becomes more complex, the configuration files will grow in complexity, too.
+As your toolchain becomes more complex, the configuration files might grow in complexity, too. 
 
 A few guidelines to keep in mind when you work with YAML files:
 
-* Only use spaces. Tabs are not allowed.
+* Only spaces use spaces. Tabs are not allowed.
 * All properties and lists must be indented with one or more spaces.
 * All keys and properties are case-sensitive.
 
@@ -181,7 +181,7 @@ In that example, the Git URL and Git branch are for a new toolchain template.
 | hidden | property | <`[form, description]`> |  |
 -->
 
- Information about creating a `pipeline.yml` file can be found in a [later section](#toolchains_custom_pipeline_yml).
+ Information about creating a `pipeline.yml` file can be found in a [later section.](#toolchains_custom_pipeline_yml)
 
  This snippet shows an example of this section of the file:
 
@@ -206,12 +206,12 @@ In that example, the Git URL and Git branch are for a new toolchain template.
        execute: true ```
  {: codeblock}
 
-4\. **Deployment details:**
+4\. **Deployment details:** - need to verify
 
 
- As part of the continuous delivery process, you can configure a toolchain to deploy an application to any {{site.data.keyword.Bluemix_notm}} Region, Organization, or Space to which a user has access. The specific details of where to deploy your application can be selected from the toolchain creation page.
+ As part of the continuous delivery process, you can configure a toolchain to deploy an application to any {{site.data.keyword.Bluemix_notm}} Region, Organization, or Space to which a user has access. The specific details of where to deploy your application can be selected from the toolchain creation page. 
 
- ![Delivery Pipeline Configuration settings](images/pipeline_configuration.png)
+ ![Delivery Pipeline Configuration settings](images/deploy_configuration.png)
 
  This section of the `toolchain.yml` file defines the pipeline stages that are available to be configured from the toolchain creation page.
 
@@ -346,7 +346,7 @@ stages:
  	* The application's name
  	* The Region, Organization, and Space that your pipeline stages deploy to.
 
-You can configure those items for each tool.
+You can configure those items for each tool. 
 
  ![Delivery Pipeline Configuration settings](images/deploy_configuration.png)
 
@@ -480,11 +480,9 @@ You can configure those items for each tool.
 
  After you configure the core components of your toolchain, you can include other tool integrations that add additional functions to your toolchain. All additional tools require their own entry in the `toolchain.yml` file. Some tools also require that you add a separate YAML configuration file to `.bluemix` directory.
 
-<!-- ![Files needed to define a toolchain](images/files_for_toolchain_with_additional_tools.png) -->
+ ![Files needed to define a toolchain](images/files_for_toolchain_with_additional_tools.png)
 
-To see the list of available tool integrations, see <a ref="https://github.com/open-toolchain/sdk/wiki/services.md" target="_blank">Services available in a toolchain template</a>.
-
-<!-- The following examples show how to format additions to a toolchain YAML file.
+To see the list of available tool integrations, see <a ref="https://github.com/open-toolchain/sdk/wiki/services.md" target="_blank">Services available in a toolchain template</a>. The following examples show how to format additions to a toolchain YAML file.
 
  * **Slack**
 
@@ -532,5 +530,3 @@ To see the list of available tool integrations, see <a ref="https://github.com/o
 	  service_id: orion
 	```
 	{: codeblock}
-
-  -->

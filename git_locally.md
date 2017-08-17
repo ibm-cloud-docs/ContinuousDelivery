@@ -16,7 +16,7 @@ lastupdated: "2017-7-12"
 {: #git_local}
 
 
-You can manage and work with your source code in a GitHub, GitHub Enterprise, or Git Repos and Issue Tracking repository (repo), locally or in the Eclipse Orion  Web IDE. To work locally, clone your repo with a Git client such as the Git command line interface, and edit your code with your favorite editor. If you work in Eclipse, you can install the EGit plug-in for version control.
+You can manage and work with your source code in a GitHub, GitHub Enterprise, or Git Repos and Issue Tracking repository (repo), locally or in the Eclipse Orion Web IDE. To work locally, clone your repo with a Git client such as the Git command-line interface, and edit your code with your favorite editor. If you work in Eclipse, you can install the EGit plug-in for version control.
 
 ## Cloning your Git project from the command line
 
@@ -28,11 +28,11 @@ You can manage and work with your source code in a GitHub, GitHub Enterprise, or
 
 | Git Type  | HTTPS Setup | HTTPS Use |  SSH Setup |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Personal access token](/docs/ContinuousDelivery/git_working.html#create_pat) | Git Repos and Issue tracking username (not your IBMid) and personal access token | [Configure the SSH key](/docs/ContinuousDelivery/git_working.html#create_ssh) |
-| Public GitHub (github.com) | Personal access token is not required, but you may set one up and use it | GitHub username and password, or GitHub username and personal access token, or just the personal access token as the username | [Configure a GitHub SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-| GitHub Enterprise | [Personal access token](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | GitHub Enterprise username (not your IBMid) and personal access token | [Configure the GitHub Enterprise SSH key](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
+| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Personal access token](/docs/ContinuousDelivery/git_working.html#create_pat) | Git Repos and Issue tracking user name (not your IBM id) and personal access token | [Configure the SSH key](/docs/ContinuousDelivery/git_working.html#create_ssh) |
+| Public GitHub (github.com) | Personal access token is not required, but you can set one up and use it | GitHub user name and password, or GitHub user name and Personal Access token, or just the personal access token as the user name | [Configure a GitHub SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
+| GitHub Enterprise | [Personal access token](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | GitHub Enterprise user name (not your IBM id) and personal access token | [Configure the GitHub Enterprise SSH key](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
-**Note**: If you prefer to use SSH, you can reuse a single key across all Git servers. Create or locate your key and configure it in each server as described in the links above. If you create your key with a passphrase, you will be prompted for that passphrase when you use the key.
+**Note**: If you prefer to use SSH, you can reuse a single key across all Git servers. Create or locate your key and configure it in each server as described in the previous links. If you create your key with a passphrase, you will be prompted for that passphrase when you use the key.
 
 2. If you are going to use the Git command line, do the following:
 
@@ -46,9 +46,9 @@ You can manage and work with your source code in a GitHub, GitHub Enterprise, or
 ### Cloning your project
 {: #git_clone}
 
-Create a local copy of the project files by cloning the Git repo so that you can access the contents of your repo outside the Web IDE using any desktop tool.
+Create a local copy of the project files by cloning the Git repo so that you can access the contents of your repo outside the Web IDE by using any desktop tool.
 
-1. From your toolchain's Overview page, click on the card for the repo you want to clone.
+1. From your toolchain's Overview page, click the card for the repo you want to clone.
 
 2. Gather your repo URL:
 
@@ -62,7 +62,7 @@ Create a local copy of the project files by cloning the Git repo so that you can
 
 5. Type `git clone`, paste the URL, and press Enter.
 
-6. If you are prompted for authentication, enter the appropriate information, as defined in the table above.
+6. If you are prompted for authentication, enter the appropriate information, as defined in the previous table.
 
 
 After the download is complete, you have a local version of the files in your repo. For more information about using Git, [see the Git documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")]](http://git-scm.com/doc){: new_window}.
@@ -77,7 +77,7 @@ If you use Git Repos and Issue Tracking and have any problems, see [Git Repos an
 ## Developing with IBM Eclipse Tools
 {: #git_eclipse_tools}
 
-IBM Eclipse Tools for Bluemix provides plug-ins that you can install into an Eclipse environment to assist in integrating your IDE with Bluemix.
+IBM Eclipse Tools for Bluemix provides plug-ins that you can install into an Eclipse environment to integrate your IDE with Bluemix.
 
 With the tools, you can deploy the following types of files and servers to the Bluemix server directly from your Eclipse IDE or from IBM WebSphere&reg; Application Server Developer Tools (WDT):
 

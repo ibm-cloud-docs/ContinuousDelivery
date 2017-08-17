@@ -14,9 +14,9 @@ lastupdated: "2017-6-1"
 # Working with Git in the Eclipse Orion Web IDE
 {: #git_web_ide}
 
-When you use the Eclipse Orion {{site.data.keyword.webide}}, you don't need the Git terminal: you can run many common Git commands in the Web IDE.
+You can run many common Git commands in the Eclipse Orion {{site.data.keyword.webide}}.
 
-No matter where you code, you can use this quick reference to do common tasks.
+No matter where you code, you can use this quick reference to do common tasks. When possible, Git commands are shown with their equivalents in the Web IDE. 
 
 ## Create a local branch
 {: #create_branch}
@@ -139,24 +139,24 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 
 1. Click the **graphical representation toggle** icon <img  class="inline" src="./images/graphicalhistoryicon.png" alt="Graphical history icon">.
 
-  Once toggled, the commit history and any incoming or outgoing changes for the active branch are drawn as a connected graph.  The visual representation shows all of the commits and the branches they were made on.
+  When toggled, the commit history and any incoming or outgoing changes for the active branch are drawn as a connected graph.  The visual representation shows all of the commits and the branches they were made on.
 
   <img class="screen-shot" src="./images/visualhistoryexample.png" alt="Visual commit histroy">
 
 ### Git terminal
 1. Type `git log` and press Enter.
 
-2. Navigate through the committer's commits.
+2. Browse the committer's commits.
  * To view more entries, press Page Down.
  * To view previous entries, press Page Up.
 
-3. To stop viewing entries, press  Q.
+3. To stop viewing entries, press Q.
 
 ## Compare changes that a commit introduced
 {: #compare_changes}
 
 ### Eclipse Orion Web IDE
-1. View your commit history and locate the commit. For more information, see [ View the commit history](#view_commit_history).
+1. View your commit history and locate the commit. For more information, see [View the commit history](#view_commit_history).
 
 2. View the details of the commit by clicking it.
 
@@ -206,7 +206,7 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 {: #tag_commit}
 
 ### Eclipse Orion Web IDE
-1. View your commit history and locate the commit. For more information, see [ View the commit history](#view_commit_history).
+1. View your commit history and locate the commit. For more information, see [View the commit history](#view_commit_history).
 
 2. View the details of the commit by clicking it.
 
@@ -215,7 +215,7 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 3. In the name field, type your tag text. Click **Submit**.
 
 ### Git terminal
-1. View the commit history and obtain the ID of the commit to tag. For more information, see [ View the commit history](#view_commit_history).
+1. View the commit history and obtain the ID of the commit to tag. For more information, see [View the commit history](#view_commit_history).
 
 2. Type `git tag -a <tag_text> <commit_id>` and press Enter.
 
@@ -243,7 +243,7 @@ To update your name and email address for all repos:
 ##Revert a commit
 {: #revert}
 
-Revert the changes that a commit has introduced into your active branch.
+Revert the changes that a commit introduced into your active branch.
 
 ### Eclipse Orion Web IDE
 
@@ -263,7 +263,7 @@ When you need to deliver changes from a source branch to a destination branch, y
 ### Eclipse Orion Web IDE
 1. Decide which branches to merge.
 
-2. Check out the destination branch. For more information, see [ Work on a local branch](#start_working_on_branch).
+2. Check out the destination branch. For more information, see [Work on a local branch](#start_working_on_branch).
 
  <img class="screen-shot" src="./images/destinationbranch.png" alt="Checkout destination branch">
 
@@ -280,7 +280,7 @@ When you need to deliver changes from a source branch to a destination branch, y
 ### Git terminal
 1. Decide which branches to merge.
 
-2. Check out the destination branch. For more information, see [ Work on a local branch](#start_working_on_branch).
+2. Check out the destination branch. For more information, see [Work on a local branch](#start_working_on_branch).
 
 3. Type `git merge <source_name>` and press Enter.
 
@@ -326,7 +326,7 @@ When you need to deliver changes from a source branch to a destination branch, y
 ### Eclipse Orion Web IDE
 1. Decide which branches to rebase. You will rebase the contents of the source branch into the destination branch.
 
-2. Check out the destination branch. For more information, see [ Work on a local branch](#start_working_on_branch).
+2. Check out the destination branch. For more information, see [Work on a local branch](#start_working_on_branch).
 
 1. Click the **Reference** list.
 
