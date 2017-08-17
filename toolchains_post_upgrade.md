@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-7-24"
+lastupdated: "2017-8-17"
 
 ---
 
@@ -130,8 +130,6 @@ If you're an IBM employee, internal IBM projects can be billed to departments in
 Toolchains are hosted in Bluemix organizations. The upgrade process adds all members of the JazzHub project to the toolchain. However, unless the owner of the Bluemix organization adds those users to the organization, they cannot see the toolchain.
 
 To access your toolchain, go to Bluemix, click the menu icon, and click **Services &gt; DevOps**. The Toolchains page opens. Make sure that you are in the US South region and that you are in the organization that contains the toolchain. If your toolchain is not listed on the Toolchains page, see [this FAQ entry](#faq_uk).
-
-Alternatively, while the JazzHub site is still available, you can go to your toolchain by clicking the link in the banner on your project's Overview page.
 
 ### My project is associated with the UK region. After the upgrade, I see error messages, my colleagues can't access the toolchain, and I don't see my toolchain on the Toolchains page on Bluemix. What's wrong?
 {: #faq_uk}
