@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-4-28"
+lastupdated: "2017-8-18"
 
 
 ---
@@ -29,7 +29,7 @@ You can use a template as a starting point to [create a toolchain ![External lin
 
 1. If you use {{site.data.keyword.Bluemix_notm}} Public, log in to [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://console.bluemix.net){:new_window}.
 1. If you use {{site.data.keyword.Bluemix_notm}} Dedicated, log in to your Dedicated environment on {{site.data.keyword.Bluemix_notm}}.
-1. From the menu on the {{site.data.keyword.Bluemix_notm}} menu bar, click **Services** and then click **DevOps**.
+1. From the menu on the {{site.data.keyword.Bluemix_notm}} menu bar, click **DevOps**.
 1. On the DevOps dashboard, on the **Toolchains** page, click **Create a Toolchain**.
 1. On the **Create a Toolchain** page, click a toolchain template.
 1. Review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
