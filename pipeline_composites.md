@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-5-5"
+lastupdated: "2017-8-18"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -27,29 +27,29 @@ You create composite pipelines to manage the apps in a toolchain. If your toolch
 ## Creating a composite pipeline
 {: #compositepipeline_create_for_toolchain}
 
-1. From the menu near the Bluemix logo, click **Services > DevOps**
+1. From the menu on the {{site.data.keyword.Bluemix_notm}} menu bar, click **DevOps**.
 
-1. From the left navigation, click **Pipelines**.
+2. From the left navigation, click **Pipelines**.
 
-2. Enable the composite pipeline feature by clicking **Learn more** and then clicking **Enable**. The composite pipeline is enabled for each user, so only the members of your organization (org) who opt in to the experimental feature see the composite pipelines that you create.
+3. Enable the composite pipeline feature by clicking **Learn more** and then clicking **Enable**. The composite pipeline is enabled for each user, so only the members of your organization (org) who opt in to the experimental feature see the composite pipelines that you create.
 
-2. Click **Create pipeline** > **Composite Pipeline**.
+4. Click **Create pipeline** > **Composite Pipeline**.
 
-3. Type a name for the composite pipeline. You can also modify the pipeline description.
+5. Type a name for the composite pipeline. You can also modify the pipeline description.
 
-4. From the **Toolchain** list, select a toolchain.
+6. From the **Toolchain** list, select a toolchain.
 
-    1. To create an empty toolchain and composite pipeline, select **New**.
+    a. To create an empty toolchain and composite pipeline, select **New**.
 
-    2. To create a composite pipeline for one of your toolchains, select its name.
+    b. To create a composite pipeline for one of your toolchains, select its name.
 
-5. If you create an empty toolchain, select **Add default environments**. You use these default logical environments to control process execution through the composite pipeline.
+7. If you create an empty toolchain, select **Add default environments**. You use these default logical environments to control process execution through the composite pipeline.
 
-6. To update the composite pipeline when you add pipelines to the toolchain, remove pipelines from the toolchain, or modify the stages of the toolchain's pipelines, select **Automatically synchronize this composite pipeline with the selected toolchain**.
+8. To update the composite pipeline when you add pipelines to the toolchain, remove pipelines from the toolchain, or modify the stages of the toolchain's pipelines, select **Automatically synchronize this composite pipeline with the selected toolchain**.
 
   **Note:** You must enable automatic synchronization before you change the toolchain's pipelines. Only changes that you make while automatic synchronization is enabled are included in the composite pipeline.
 
-7. Click **Create**.
+9. Click **Create**.
 
 The stages that you configured are automatically mapped to the appropriate space in your org and a deployment plan is created for the composite pipeline.
 
