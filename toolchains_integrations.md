@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-8-17"
+lastupdated: "2017-8-22"
 
 ---
 
@@ -81,10 +81,11 @@ Configure {{site.data.keyword.alertnotificationshort}} to receive notifications 
 1. Click **Create Integration**.
 1. From your toolchain, click **{{site.data.keyword.alertnotificationshort}}**.
 
-To learn more, see the [IBM {{site.data.keyword.alertnotificationshort}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
+### Learn more about Alert Notification
 
-  * [Add a tool integration to a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_add_tool_integration_to_toolchain?task=1){:new_window}
-  
+To learn more about {{site.data.keyword.alertnotificationshort}}, see the [IBM {{site.data.keyword.alertnotificationshort}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
+
+  * [Add a tool integration to a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
   * [Manage your {{site.data.keyword.Bluemix_notm}} application by using Bluemix Availability Monitoring and Alert Notification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
@@ -187,7 +188,9 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
 
 1. Click **SAVE**. Whenever your pipeline runs, this build job uses the configuration information from the Artifactory tool integration to connect to your Maven repo.
 
-To learn more, see the [Artifactory article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about Artifactory
+
+To learn more about Artifactory, see the [Artifactory article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window} on the IBM Cloud Garage Method.
 
 
 ## Adding Availability Monitoring
@@ -208,7 +211,11 @@ To test, monitor, and improve your app's health as you build it, add the {{site.
 1. Click **Create Integration**.
 1. Click **{{site.data.keyword.prf_hubshort}}** to open the {{site.data.keyword.prf_hubshort}} dashboard, select an app, and configure monitoring for the app.
 
-To learn more, see the [{{site.data.keyword.prf_hublong}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about Availability Monitoring
+
+To learn more about {{site.data.keyword.prf_hubshort}}, see the [{{site.data.keyword.prf_hublong}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window} on the IBM Cloud Garage Method or take this tutorial:
+
+  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using Bluemix Availability Monitoring and Alert Notification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## Adding Cloud Event Management (Experimental)
@@ -235,7 +242,9 @@ To help your DevOps team achieve reliable operational health, service quality, a
 
  * **Runbook Automation** to manage your catalog of runbooks in Cloud Event Management.
 
-To learn more, see the [Cloud Event Management article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about Cloud Event Management
+
+To learn more about Cloud Event Management, see the [Cloud Event Management article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window} on the IBM Cloud Garage Method.
 
 
 ## Configuring Delivery Pipeline
@@ -278,7 +287,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 
 1. Configure the stage. On the **ENVIRONMENT PROPERTIES** tab, create the CF_APP_NAME property.
 
-  **Tip:** The Sauce Labs user name and access key are available in the test job script as the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables. When you write your tests, you must use these environment variables to authenticate with Sauce Labs.
+  **Tip:** The Sauce Labs user name and access key are available in the test job script as the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables. When you write your tests, you must use these environment variables to authenticate with Sauce Labs.
   
 1. Configure the deploy job. In the **Deploy Script** field, include this command: `export CF_APP_NAME="$CF_APP"`. That command exports the app name as an environment property.
 1. Configure the test job. The values in the following image are examples. The **Service Instance**, **Target**, **Organization**, and **Space** fields are populated with the Sauce Labs user name, region, org, and space that you are using.  
@@ -300,7 +309,12 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 
 1. Click **SAVE**. Whenever your pipeline runs, your Sauce Labs tests run.
 
-To learn more, see the [Delivery Pipeline article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about Delivery Pipeline
+
+To learn more about {{site.data.keyword.deliverypipeline}}, see the [Delivery Pipeline article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
+
+  * [Create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}
+  * [Create and use your first toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
 
 
 ## Adding DevOps Insights (Beta)
@@ -322,7 +336,13 @@ Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your 
 1. Click **Create Integration**.
 1. Click **{{site.data.keyword.DRA_short}}**, and then complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline.
 
-To learn more, see the [{{site.data.keyword.DRA_short}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about Devops Insights
+
+To learn more about {{site.data.keyword.DRA_short}}, see the [{{site.data.keyword.DRA_short}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
+
+  * [Create a toolchain that uses {{site.data.keyword.DRA_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_devops_insights){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Deployment Risk Analytics with GitHub and Jenkins ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
 
 
 ## Adding the Eclipse Orion Web IDE
@@ -344,7 +364,12 @@ To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webi
 1. Click **Create Integration**.
 1. Click **Eclipse Orion {{site.data.keyword.webide}}**. Your workspace is pre-populated with your GitHub or {{site.data.keyword.ghe_short}} repos. The repos that are associated with your current toolchain are highlighted.
 
-To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} and the [Eclipse Orion {{site.data.keyword.webide}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about the Eclipse Orion Web IDE
+
+To learn more about the Eclipse Orion {{site.data.keyword.webide}}, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} and the [Eclipse Orion {{site.data.keyword.webide}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
+
+  * [Create and use your first toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
+  * [Use {{site.data.keyword.Bluemix_notm}} Live Sync to develop, debug, and deploy your app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_livesync){:new_window}
 
 
 ## Configuring Git Repos and Issue Tracking
@@ -375,6 +400,12 @@ If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, fol
 1. Click the card for the Git repo that you want to work with. Your project overview page opens.    
 
 **Note:** If you don't have Master or Owner privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+
+### Learn more about Git Repos and Issue Tracking
+
+To learn more about {{site.data.keyword.gitrepos}}, see the [{{site.data.keyword.gitrepos}}: Social coding hosted by IBM article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_git_repos_and_issue_tracking/){: new_window} on the IBM Cloud Garage Method or take this tutorial:
+
+  * [Create a toolchain that uses {{site.data.keyword.gitrepos}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
 
 
 ## Configuring GitHub and Issues
@@ -435,11 +466,16 @@ If you have a toolchain and are adding this tool integration to it, follow these
 
   **Tip:** You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the GitHub repo and deploy an app from your workspace.
 
-1. If you enabled GitHub Issues, click **GitHub Issues** to open it. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub or {{site.data.keyword.ghe_short}} repos.    
+1. If you enabled GitHub Issues, click **GitHub Issues** to open it. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub or {{site.data.keyword.ghe_short}} repos.    
 
 **Note:** If you don't have admin privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 
-To learn more, see the [GitHub article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} and the [GitHub Issues article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about GitHub and Issues
+
+To learn more about GitHub and Issues, see the [GitHub article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} and the [GitHub Issues article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
+
+  * [Deployment Risk Analytics with GitHub and Jenkins ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
+  * [Create a custom toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom){:new_window}
 
 
 ## Configuring GitHub Enterprise and Issues on Bluemix Dedicated
@@ -518,9 +554,13 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
 1. Click **Create Integration**.
 1. From your toolchain, click **Jenkins** to view the Jenkins server.  
 
-To learn more, see the [Jenkins article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about Jenkins
 
+To learn more about Jenkins, see the [Jenkins article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window} on the IBM Cloud Garage Method or take this tutorial:
 
+  * [Deployment Risk Analytics with GitHub and Jenkins ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
+  
+  
 ## Configuring JIRA
 {: #jira}
 
@@ -564,7 +604,11 @@ Configure JIRA to plan, track, and deliver quality code:
 1. Click **Create Integration**.
 1. From your toolchain, click **JIRA** to view the dashboard for the JIRA project that you connected to.
 
-To learn more, see the [JIRA article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about JIRA
+
+To learn more about JIRA, see the [JIRA article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window} on the IBM Cloud Garage Method or take this tutorial:
+
+  * [Gain developer and team insights on a JIRA and GitHub project ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_dev_insights_team_dynamics){:new_window}
 
 
 ## Configuring Nexus
@@ -667,7 +711,9 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
 
 1. Click **SAVE**. Whenever your pipeline runs, this build job uses the configuration information from the Nexus tool integration to connect to your Maven repo.
 
-To learn more, see the [Nexus article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about Nexus
+
+To learn more about Nexus, see the [Nexus article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window} on the IBM Cloud Garage Method.
 
 
 ## Configuring a custom tool (Other Tool)
@@ -693,7 +739,11 @@ Configure a custom tool so that it works with other tools in your toolchain and 
 1. (Advanced) Add more properties as needed. For example, list any information or attributes that are required for your tool to integrate with other tools in the toolchain.  
 1. Click **Create Integration**.
 
-To learn more, see [Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window}.
+### Learn more about custom tool
+
+To learn more about the custom tool, see [Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window} or take this tutorial:
+
+  * [Add a custom tool integration to a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_add_custom_tool){:new_window}
 
 
 ## Configuring PagerDuty
@@ -717,7 +767,12 @@ Configure PagerDuty to send notifications when pipeline stage failures occur so 
 1. Click **Create Integration**.
 1. Click **PagerDuty** to go to pagerduty.com. You can view the events that are associated with the PagerDuty service that you specified when you configured this tool integration for your toolchain.
 
-To learn more, see the [PagerDuty article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about PagerDuty
+
+To learn more about PagerDuty, see the [PagerDuty article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window} on the IBM Cloud Garage Method or take this tutorial and  the Garage Method advocate course:
+
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices?task=5){:new_window}
+  * [Become a Garage Method advocate ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/course/gm_advocate/){:new_window}
 
 
 ## Configuring Rational Team Concert
@@ -755,8 +810,9 @@ Configure Rational Team Concert to practice a DevOps approach and continuous del
 1. Click **Create Integration**.
 1. From your toolchain, click **Rational Team Concert** to open the Rational Team Concert dashboard that you configured.
 
-To learn more, see the [IBM Rational Team Concert article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_rtc/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about Rational Team Concert
 
+To learn more about Rational Team Concert, see the [IBM Rational Team Concert article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_rtc/){: new_window} on the IBM Cloud Garage Method.
 
 
 ## Configuring Sauce Labs
@@ -782,7 +838,12 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 
  **Tip:** If you added a Sauce Labs test job to the {{site.data.keyword.deliverypipeline}}, you can select the service instance. For instructions to configure a test job in your pipeline, see the [Configuring a Sauce Labs test job in your pipeline](#config_saucelabs) section.
 
-To learn more, see the [Sauce Labs article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about Sauce Labs
+
+To learn more about Sauce Labs, see the [Sauce Labs article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
+
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
 
 
 ## Configuring Slack
@@ -813,7 +874,13 @@ Configure Slack to receive notifications about your toolchain from the tool inte
 
 1. Click **Slack**. You can view all of the activity for your toolchain in the configured Slack channel.
 
-To learn more, see the [Slack article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about Slack
+
+To learn more about Slack, see the [Slack article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window} on the IBM Cloud Garage Method or take these tutorials and the Garage Method advocate course:
+
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Become a Garage Method advocate ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/course/gm_advocate/){:new_window}
 
 
 ## Configuring SonarQube
@@ -839,4 +906,6 @@ Configure SonarQube to continuously analyze and measure the quality of your sour
 1. Click **Create Integration**.
 1. From your toolchain, click **SonarQube** to view the dashboard for the SonarQube instance that you connected to.
 
-To learn more, see the [SonarQube article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window} on the IBM Cloud Garage Method.
+### Learn more about SonarQube
+
+To learn more about SonarQube, see the [SonarQube article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window} on the IBM Cloud Garage Method.
