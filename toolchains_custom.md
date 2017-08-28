@@ -12,10 +12,10 @@ lastupdated: "2017-7-7"
 {:pre: .pre}
 
 
-# Creating custom toolchains
+# Creating custom toolchain templates
 {: #toolchains_custom}
 
-Improve your DevOps workflow by creating a custom toolchain. You can get started quickly with an existing toolchain template, or create a toolchain that includes just the integrations you need. You can add or remove your toolchain's integrations at any time.
+Improve your DevOps workflow by creating a custom toolchain template. You can get started quickly with an existing toolchain template, or create a toolchain that includes just the integrations you need. You can add or remove your toolchain's integrations at any time.
 {:shortdesc}
 
 You can [create and deploy a toolchain](/docs/toolchains/toolchains_setup.html){: new_window} in several ways. After you create a custom toolchain, you can share it by using a [Deploy to {{site.data.keyword.Bluemix_notm}} button](/docs/develop/deploy_button.html){: new_window}.
@@ -24,7 +24,7 @@ You can [create and deploy a toolchain](/docs/toolchains/toolchains_setup.html){
 ## Getting started
 {: #toolchains_custom_gettingstarted}
 
-To create a custom toolchain, begin by cloning the Simple Cloud Foundry toolchain template. Cloning an existing template gives you starting point for your customized toolchain.
+To create a custom toolchain template, begin by cloning the Simple Cloud Foundry toolchain template. Cloning an existing template gives you starting point for your customized toolchain.
 
 1. Using the Git client of your choice, enter the following command to clone the [Simple Toolchain](https://github.com/open-toolchain/simple-toolchain){: new_window} template in GitHub.
 
