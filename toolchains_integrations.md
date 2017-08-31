@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-8-22"
+lastupdated: "2017-8-31"
 
 ---
 
@@ -760,10 +760,22 @@ Configure PagerDuty to send notifications when pipeline stage failures occur so 
 
  b. In the Tool Integrations section, click **PagerDuty**.
 
-1. Type the API access key for your PagerDuty account. If you don't have a PagerDuty account, [register for one ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://signup.pagerduty.com/accounts/new){: new_window}. For instructions to find the key, see [Generating an API Key ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
-1. Type the name of your PagerDuty service.
-1. Type the email address for the primary PagerDuty contact.
-1. Type the phone number for the primary PagerDuty contact.
+1. If you want to integrate PagerDuty at the account level by using an API key, click **Account**:
+
+ a. Type the API access key for your PagerDuty account. If you don't have a PagerDuty account, [register for one ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://signup.pagerduty.com/accounts/new){: new_window}. For instructions to find the key, see [Generating an API Key ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
+
+ b. Type the name of your PagerDuty service.
+
+ c. Type the email address for the primary PagerDuty contact.
+
+ d. Type the phone number for the primary PagerDuty contact.
+
+1. If you want to integrate PagerDuty at the service level by using an integration key, click **Service**:
+
+ a. Type the URL for the PagerDuty service that you want to post alerts to.
+
+ b. Type your PagerDuty integration key. You can find your key or create a key in the Integrations section of your PagerDuty service page.
+
 1. Click **Create Integration**.
 1. Click **PagerDuty** to go to pagerduty.com. You can view the events that are associated with the PagerDuty service that you specified when you configured this tool integration for your toolchain.
 
