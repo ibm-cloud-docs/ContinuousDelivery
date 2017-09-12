@@ -528,7 +528,7 @@ You can configure {{site.data.keyword.ghe_short}} as a tool integration in your 
 
 GitLab is a web-based hosting service for Git repos. You can have both local and remote copies of your repos, which makes it easy to collaborate.
 
-You can configure GitLab as a tool integration in your toolchain so that you can manage source code in a new or existing repo on GitLab.com or your company's GitLab instance. Engage in social coding through wikis, issue tracking, and pull requests.
+You can configure GitLab as a tool integration in your toolchain so that you can manage source code in a new or existing repo on GitLab.com or your company's GitLab instance. Engage in social coding through wikis, issue tracking, and merge requests.
 
 If you are configuring this tool integration as you are creating the toolchain, follow these steps:
 
@@ -564,7 +564,7 @@ If you have a toolchain and are adding this tool integration to it, follow these
 
  b. To create a copy of a GitLab repo, click **Clone**.
 
- c. To fork a GitLab repo so that you can contribute changes through pull requests, click **Fork**.
+ c. To fork a GitLab repo so that you can contribute changes through merge requests, click **Fork**.
 
 1. If you want to create a public repo on the server, clear the **Make this repository private** check box.
 1. If you want to use GitLab's Issues for issue tracking, select the **Enable GitLab Issues** check box.
