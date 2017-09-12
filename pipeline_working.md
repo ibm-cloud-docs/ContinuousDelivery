@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-8-18"
+lastupdated: "2017-09-05"
 
 ---
 
@@ -12,12 +12,12 @@ lastupdated: "2017-8-18"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# Working with {{site.data.keyword.deliverypipeline}} {: #pipeline-working}
+# Working with pipelines {: #pipeline-working}
 
-To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
+To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use {{site.data.keyword.contdelivery_full}} pipelines.
 {: shortdesc}
 
-With {{site.data.keyword.deliverypipeline}}, you can choose from several build types. You provide the build script, and {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} runs it; you don't need to set up build systems. Then, you can deploy your app to {{site.data.keyword.Bluemix_notm}} spaces, public Cloud Foundry servers, or Docker containers and Kubernetes clusters on IBM Containers for {{site.data.keyword.Bluemix_notm}}.
+With pipelines, you can choose from several build types. You provide the build script, and {{site.data.keyword.contdelivery_short}} runs it; you don't need to set up build systems. Then, with one click, you can automatically deploy your app to one or many {{site.data.keyword.Bluemix_notm}} spaces, public Cloud Foundry servers, or Docker containers on IBM Containers for {{site.data.keyword.Bluemix_notm}}.
 
 Build jobs compile and package your app source code from Git repositories. The build jobs produce deployable artifacts, such as WAR files or Docker containers for IBM Containers. In addition, you can run unit tests within your build automatically. You can set up your build jobs so that each time a commit is pushed, a build is triggered.
 
@@ -32,7 +32,7 @@ There are several ways to create a pipeline, including adding a pipeline to an e
 Complete these steps to set up a {{site.data.keyword.deliverypipeline}} for an existing application:
 
 1. On the {{site.data.keyword.Bluemix_notm}} app Dashboard, click your app.
-1. From the menu on the {{site.data.keyword.Bluemix_notm}} menu bar, click **DevOps**.
+1. From the menu on the {{site.data.keyword.Bluemix_notm}} menu bar, click **Services**, and then click **DevOps**.
 1. Click **Pipelines**, and then click **Create a Pipeline**.
 
 To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:
@@ -47,7 +47,7 @@ To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "Extern
 1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
 1. Select your Git provider.
 
- **Tip**: If {{site.data.keyword.Bluemix_notm}} is not authorized to access GitHub, you are prompted to click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account.
+ **Tip**: If you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, you are prompted to click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
 
    * If you have a repo and want to use it, for the repository type, select **Link**. Search for the location of the repo or select the repo from the list of available repos.
 
