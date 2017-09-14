@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-9-12"
+lastupdated: "2017-9-14"
 
 ---
 
@@ -577,6 +577,10 @@ If you have a toolchain and are adding this tool integration to it, follow these
 1. If you enabled GitLab Issues, click **GitLab Issues** to open it. You can use this instance of GitLab Issues for your entire toolchain, even if the toolchain contains multiple GitLab repos.    
 
 **Note:** If you don't have owner or master privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+
+### Learn more about GitLab
+
+To learn more about GitLab, see the [GitLab article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_gitlab/){: new_window} on the IBM Cloud Garage Method.
 
 
 ## Configuring Jenkins
