@@ -29,7 +29,7 @@ When someone clicks your button, these actions occur:
  
 4. If the app requires a build file, the build file is detected automatically and the app is built. 
 
-5. If a pipeline is configured for the build and deployment process,  a `pipeline.yml` file is used to deploy the app.
+5. If a pipeline is configured for the build and deployment process, a `pipeline.yml` file is used to deploy the app.
 
 6. If the app requires a container, a `pipeline.yml` file that defines the IBM Containers service and a Dockerfile that defines an image are used to deploy the app in a {{site.data.keyword.Bluemix_notm}} container. 
 
@@ -39,7 +39,7 @@ When someone clicks your button, these actions occur:
 
 See an app button example for a public {{site.data.keyword.gitrepos}} repo:
 
-[![Deploy to Bluemix](images/deploy_buttonx2.png)](https://bluemix.net/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant/){:new_window}
+[![Deploy to Bluemix](images/deploy_buttonx2.png)](https://bluemix.net/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
 
 See an app button example for a public GitHub repo: 
 
