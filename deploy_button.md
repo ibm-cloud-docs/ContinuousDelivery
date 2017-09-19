@@ -55,7 +55,7 @@ To create a Deploy to {{site.data.keyword.Bluemix_notm}} button, copy and modify
 
 ### Creating a button in HTML
 
-To create a button in HTML, copy this snippet and insert a pubic Git repository URL and branch.
+To create a button in HTML, copy this snippet and insert a public Git repository URL and branch.
 
 ```HTML
 <a href="https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"></a>
@@ -65,7 +65,7 @@ If you don't include the `branch` parameter in your snippet's repository URL, th
 
 ### Creating a button in Markdown
 
-To create a button in Markdown, copy this snippet and insert a pubic Git repository URL and branch.
+To create a button in Markdown, copy this snippet and insert a public Git repository URL and branch.
 
 ```Markdown
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>)
