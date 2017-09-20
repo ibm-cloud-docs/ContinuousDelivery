@@ -45,10 +45,6 @@ See an app button example for a public GitHub repo:
 
 [![Deploy to Bluemix](images/deploy_buttonx2.png)](https://bluemix.net/deploy?repository=https://github.com/ibmjstart/bluemix-node-mysql-uploader){:new_window}
 
-See a button example for an app that is deployed in a {{site.data.keyword.Bluemix_notm}} container: 
-
-[![Deploy to Bluemix](images/deploy_buttonx2.png)](https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers){:new_window}
-
 ## Creating a button {: #create-button}
 
 To create a Deploy to {{site.data.keyword.Bluemix_notm}} button, copy and modify one of the following snippet templates. Specify a Git repository and branch in the URL.
@@ -60,6 +56,7 @@ To create a button in HTML, copy this snippet and insert a public Git repository
 ```HTML
 <a href="https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"></a>
 ```
+{: codeblock}
 
 If you don't include the `branch` parameter in your snippet's repository URL, the Deploy to Bluemix button defaults to the repository's master branch.
 
@@ -70,6 +67,7 @@ To create a button in Markdown, copy this snippet and insert a public Git reposi
 ```Markdown
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>)
 ```
+{: codeblock}
 
 If you don't include the `branch` parameter in your snippet's repository URL, the Deploy to Bluemix button defaults to the repository's master branch.
 
@@ -119,6 +117,7 @@ If you don't know how to create manifest files, [learn how to create them here !
     name: appname
     host: apphostname
 ```
+{: codeblock}
 
 ```YAML
 ---
@@ -134,6 +133,7 @@ If you don't know how to create manifest files, [learn how to create them here !
     name: My app
     host: myapp
 ```
+{: codeblock}
 
 
 ### Build file requirements
