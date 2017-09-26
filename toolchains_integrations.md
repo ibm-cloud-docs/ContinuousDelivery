@@ -22,6 +22,7 @@ The tool integrations that are available to add and configure for your toolchain
 |Tool integration |Available on {{site.data.keyword.Bluemix_notm}} Public	|Available on {{site.data.keyword.Bluemix_notm}} Dedicated (environment dependent)|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.alertnotificationshort}}		|Yes		|No		|
+|Application Security on Cloud		|Yes		|No		|
 |Artifactory		|Yes		|Yes		|
 |Availability Monitoring		|Yes		|No		|
 |Cloud Event Management		|Yes		|No		|
@@ -88,6 +89,31 @@ To learn more about {{site.data.keyword.alertnotificationshort}}, see the [IBM {
 
   * [Add a tool integration to a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
   * [Manage your {{site.data.keyword.Bluemix_notm}} application by using Bluemix Availability Monitoring and Alert Notification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+
+
+## Configuring Application Security on Cloud
+{: #appscan}
+
+IBM&reg; Application Security on Cloud secures your organization's applications by detecting dozens of the most pervasive published security vulnerabilities. You can use it to eliminate security vulnerabilities from applications before they are deployed to production. With convenient, detailed reporting, you can address vulnerabilities and ultimately enable your application's users to benefit from a more secure experience.
+
+Configure Application Security on Cloud to continuously analyze your source code:
+
+1. From the DevOps dashboard, click **Toolchains**. Click the toolchain that you want to add Application Security on Cloud to. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.  
+
+ a. Click **Add a Tool**.
+
+ b. In the Tool Integrations section, click **IBM Application Security on Cloud**.
+
+1. Type a name for this instance of the Application Security on Cloud tool integration.
+1. Type the URL for the Application Security on Cloud instance that you want to open when you click the IBM Application Security on Cloud card from your toolchain.
+1. Type the user name that you use to connect to the IBM Application Security on Cloud server.
+1. Type the authentication token that you use to connect to the IBM Application Security on Cloud server.
+1. Click **Create Integration**.
+1. From your toolchain, click **IBM Application Security on Cloud** to view the dashboard for the IBM Application Security on Cloud instance that you connected to.
+
+### Learn more about Application Security on Cloud
+
+To learn more about Application Security on Cloud, see the [Application Security on Cloud article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_ibm_security_appscan/){: new_window} on the IBM Cloud Garage Method.
 
 
 ## Configuring Artifactory
