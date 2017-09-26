@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-9-14"
+lastupdated: "2017-9-25"
 
 ---
 
@@ -382,6 +382,20 @@ If you are configuring {{site.data.keyword.gitrepos}} as you are creating the to
 
 1. In the Configurable Integrations section, click **Git Repos and Issue Tracking**.
 1. Review the default target locations for the Git repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
+
+If you have a toolchain and want to migrate a Git repo in your toolchain to {{site.data.keyword.gitrepos}}, follow these steps:
+
+**Note**: These instructions apply to toolchains that already contain the Git repo that you want to migrate to {{site.data.keyword.gitrepos}}. For information about adding different types of Git repos to your toolchain, see the [Configuring GitHub and Issues](#github), [Configuring GitHub Enterprise and Issues on Bluemix Dedicated](#configghe), and [Configuring GitLab](#gitlab) sections.
+
+1. On the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+1. Click **Add a Tool**.
+1. In the Tool Integrations section, click **Git Repos and Issue Tracking**.
+1. To create a copy of the Git repo, for the repository type, click **Clone**. Type a new repo name and the URL for the source repo.
+1. If you want to use Issues for issue tracking, select the **Enable Issues** check box.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Click **Create Integration**.
+
+**Tip:** After you clone the Git repo, you can remove it from your toolchain. 
 
 If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, follow these steps:    
 
