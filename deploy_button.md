@@ -43,7 +43,7 @@ See an app button example for a public {{site.data.keyword.gitrepos}} repo:
 
 See an app button example for a public GitHub repo: 
 
-[![Deploy to Bluemix](images/deploy_buttonx2.png)](https://bluemix.net/deploy?repository=https://github.com/ibmjstart/bluemix-node-mysql-uploader){:new_window}
+[![Deploy to Bluemix](images/deploy_buttonx2.png)](https://bluemix.net/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
 
 ## Creating a button {: #create-button}
 
