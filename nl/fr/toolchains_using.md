@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-16"
+lastupdated: "2017-7-17"
 
 ---
 
@@ -64,7 +64,9 @@ d'ensemble correspondante. Vous pouvez également, depuis la page de présentati
 
 Vous pouvez accorder l'accès à une chaîne d'outils à des utilisateurs en les ajoutant à la fois à l'organisation (org) à laquelle la chaîne d'outils est associée et à la liste de contrôle d'accès de la chaîne d'outils. Chaque chaîne d'outils est associée à une organisation spécifique, et tout membre de cette organisation peut être ajouté à la liste de contrôle d'accès de l'une des chaînes d'outils associées. L'organisation au sein de laquelle vous travaillez actuellement s'affiche dans la barre de menus. Pour accéder à un ensemble différent de chaînes d'outils, changez d'organisation.
 
-Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dédié pour {{site.data.keyword.ghe_short}}, lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix_notm}}, ces utilisateurs peuvent se connecter à {{site.data.keyword.ghe_short}} à l'aide de leurs ID et mot de passe {{site.data.keyword.Bluemix_notm}}. Lorsque les utilisateurs se connectent, les comptes correspondants sont créés. Lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix_notm}}, ils ne sont pas automatiquement ajoutés au référentiel {{site.data.keyword.ghe_short}}. Une personne dotée de privilèges d'administrateur pour le référentiel doit les ajouter. Pour
+**Astuce :** vous devez ajouter des utilisateurs à l'organisation de la chaîne d'outils dans la région où la chaîne d'outils est hébergée. Etant donné que les chaînes d'outils sont actuellement hébergées uniquement dans la région du Sud des Etats-Unis, vous devez ajouter des utilisateurs à l'organisation dans la région du Sud des Etats-Unis. Si la chaîne d'outils est configurée pour déployer des applications dans une autre région, elle déploiera quand même les applications dans cette région.
+
+Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dedicated pour {{site.data.keyword.ghe_short}}, lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix_notm}}, ces utilisateurs peuvent se connecter à {{site.data.keyword.ghe_short}} à l'aide de leurs ID et mot de passe {{site.data.keyword.Bluemix_notm}}. Lorsque les utilisateurs se connectent, les comptes correspondants sont créés. Lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix_notm}}, ils ne sont pas automatiquement ajoutés au référentiel {{site.data.keyword.ghe_short}}. Une personne dotée de privilèges d'administrateur pour le référentiel doit les ajouter. Pour
 plus d'informations, voir [Utilisation de Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. Si vous utilisez votre propre version gérée de {{site.data.keyword.ghe_short}}, suivez vos procédures internes.
 
 ###Conseils pour la gestion de l'accès à une chaîne d'outils
@@ -81,7 +83,7 @@ plus d'informations, voir [Utilisation de Dedicated GitHub Enterprise](/docs/ser
 
 * Pour accorder un accès à un utilisateur qui n'est pas membre de l'organisation de la chaîne d'outils, procédez comme suit :
 
-   a. Dans la barre de menus, cliquez sur **Gérer > Compte > Organisations**.
+   a. Dans la barre de menu, cliquez sur **Gérer > Compte > Organisations**.
 
    b. Cliquez sur **Inviter des membres d'équipe**.
 
@@ -94,7 +96,7 @@ plus d'informations, voir [Utilisation de Dedicated GitHub Enterprise](/docs/ser
      **Remarque :** Par défaut, les responsables de l'organisation disposent de privilèges d'administrateur complets pour toutes les chaînes d'outils qui sont associées à l'organisation. Pour accorder des privilèges d'administrateur complets à l'utilisateur, sélectionnez le rôle **Responsable**. Les rôles Responsable de la facturation et Auditeur n'ont pas d'impact sur l'accès à la chaîne d'outils. Vous pouvez changer les rôles
 ultérieurement dans la page Répertoire d'équipe. Pour plus d'informations, voir [Gestion des membres de l'équipe et des rôles](/docs/admin/users_roles.html){: new_window}.
 
-   f. Sélectionnez l'option pour confirmer que vous pouvez prendre en charge tous les frais liés au compte.
+   f. Sélectionnez l'option permettant de confirmer que vous prenez en charge tous les frais liés au compte.
 
    g. Saisissez l'adresse électronique de l'utilisateur que vous souhaitez inviter et cliquez sur **Envoyer**.
 
@@ -109,7 +111,13 @@ Vous pouvez supprimer une chaîne d'outils et spécifier les intégrations d'out
 1. Dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur la chaîne d'outils à supprimer. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Distribution continue, cliquer sur **Afficher la chaîne d'outils**.
 1. Cliquez sur le menu **Plus d'actions**, qui se trouve à côté du menu **Afficher l'appli**.
 1. Cliquez sur **Supprimer**. La suppression d'une chaîne d'outils supprime toutes ses intégrations d'outils, et donc éventuellement les ressources gérées par ces intégrations.
-
 1. Confirmez la suppression en entrant le nom de la chaîne d'outils et en cliquant sur **Supprimer**.  
 
  **Astuce** : lorsque vous supprimez une intégration d'outils GitHub, {{site.data.keyword.ghe_short}} ou {{site.data.keyword.gitrepos}}, le référentiel associé n'est pas supprimé de GitHub, de {{site.data.keyword.ghe_short}} ou de {{site.data.keyword.gitrepos}}. Vous devez le supprimer manuellement.
+
+##Suivre un tutoriel : Utilisation de chaînes d'outils
+{: #toolchain-tutorial}
+
+Consultez le tutoriel suivant sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method){:new_window} :
+  * [Create and use your first toolchain (GitHub) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

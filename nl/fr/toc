@@ -12,13 +12,12 @@ Continuous Delivery
 
   {: .topicgroup}
     Liens connexes
-	    [Learning Lab](https://www.ibm.com/devops/method/category/courses)
-		  [IBM Bluemix Continuous Delivery](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/)
+	    [IBM Cloud DevOps Insights](/docs/services/DevOpsInsights/index.html#gettingstarted)
 		  [IBM Cloud Garage Method](https://www.ibm.com/devops/method)
   {: .navgroup-end}
 
   {: .navgroup id="howto"}
-    upgrade_projects.md
+    toolchains_post_upgrade.md
 
   {: .topicgroup}
     Delivery Pipeline
@@ -31,18 +30,22 @@ Continuous Delivery
         pipeline_deployment_plan.md
 
   {: .topicgroup}
-    Chaînes d'outils
+    Toolchains
         toolchains_about.md
         toolchains_working.md
         toolchains_using.md
         toolchains_integrations.md
+	      deploy_button.md
+	      toolchains_custom.md
 
   {: .topicgroup}
     Eclipse Orion Web IDE
         web_ide.md
         git_web_ide.md
+        bluemixlive.md
 
     git_working.md
+    git_locally.md
     di_working.md
   {: .navgroup-end}
 

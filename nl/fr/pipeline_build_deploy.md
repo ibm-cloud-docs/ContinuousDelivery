@@ -19,7 +19,7 @@ lastupdated: "2017-6-1"
 # Génération et déploiement
 {: #deliverypipeline_build_deploy}
 
-Le service IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} vous permet d'implémenter un processus de distribution continue et d'intégration continue reproductibles.
+{{site.data.keyword.contdelivery_full}} inclut Delivery Pipeline, que vous pouvez utiliser pour implémenter un processus de distribution continue et d'intégration continue reproductibles.
 {:shortdesc}
 
 Pour créer et configurer un pipeline, procédez comme suit :
@@ -49,7 +49,7 @@ Pour créer et configurer un pipeline, procédez comme suit :
 
 Vous pouvez lancer manuellement une étape en cliquant sur l'icône **Exécuter une étape** sur la page Pipeline.
 
-![Clic sur l'icône Exécuter une étape dans une étape](images/RunStage.png)
+![Utilisation de l'icône Exécuter une étape](images/RunStage.png)
 
 Vous pouvez également demander des générations et des déploiements à la demande depuis la page de l'historique de génération de l'une des deux façons suivantes :
 * Faites glisser une génération vers la zone située sous une étape configurée.
@@ -85,9 +85,11 @@ Pour afficher le journal d'un travail, cliquez sur celui-ci. Sinon, sur une éta
 
 Pour afficher le journal d'exécution d'une application déployée, cliquez sur **Afficher le journal d'exécution**.
 
-![Zones d'une vignette d'étape dans lesquelles l'utilisateur peut cliquer pour ouvrir les journaux concernés](images/view_logs_and_history.png)
+![Zones d'une mosaïque d'étapes dans lesquelles vous pouvez cliquer pour ouvrir les journaux pertinents](images/view_logs_and_history.png)
 
 Outre les journaux des travaux, vous pouvez afficher les résultats de tests unitaires, les artefacts générés et les modifications de code pour n'importe quel travail de génération.
 
 Vous pouvez également exécuter, annuler ou configurer une étape à partir de la page Historique des étapes. Cliquez sur **EXECUTER** pour exécuter une étape ou sur **CONFIGURER** pour configurer une étape. Pendant qu'une étape est en exécution,
 vous pouvez l'annuler en cliquant sur son numéro, puis sur **Annuler**.
+
+

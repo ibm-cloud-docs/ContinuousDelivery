@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-1"
+lastupdated: "2017-6-9"
 
 ---
 
@@ -65,9 +65,9 @@ La seconde section correspond à la sous-fenêtre de l'éditeur. L'éditeur four
  2. Dans le navigateur de fichiers, cliquez sur un fichier.
 
 ### Raccourcis-clavier
-De nombreuses commandes de {{site.data.keyword.webide}} sont également accessibles via des raccourcis-clavier.
+De nombreuses commandes {{site.data.keyword.webide}} sont accessibles via des raccourcis-clavier.
 
-Pour afficher la liste des raccourcis-clavier dans l'éditeur, appuyez sur Alt+Maj+?. Si vous utilisez un système Mac OS, appuyez sur Ctrl+Maj+?.
+Pour afficher la liste des raccourcis-clavier dans l'éditeur, cliquez sur **Outils** > **Afficher des outils**. Vous pouvez aussi afficher la liste en appuyant sur Alt+Maj+?, ou sur MacOS, en appuyant sur Ctrl+Maj+?. Vous pouvez personnaliser un raccourci en survolant la touche, en cliquant sur le crayon et en tapant la nouvelle définition de raccourci clavier. 
 
 ## Gestion du code source
 {: #sourcecontrol}
@@ -83,7 +83,7 @@ référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git Repos and Issue Tr
 {: #deploy}
 
 1. Pour déployer votre application, depuis la barre d'exécution, sélectionnez ou créez une configuration de lancement.
-   ![ Barre d'exécution](images/webide_runbar_light.png)   
+   ![Barre d'exécution](images/webide_runbar_light.png)   
 1. Cliquez sur l'icône de déploiement <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="Icône de déploiement">. Une instance de votre application est déployée à l'aide du contenu actuel de votre espace de travail et de l'environnement défini dans votre configuration de lancement.
 2. Une fois votre application déployée, vous pouvez utiliser la barre d'exécution pour arrêter, redémarrer ou déboguer votre application, consulter des journaux, etc.
 
@@ -97,7 +97,8 @@ référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git Repos and Issue Tr
 Si vous développez une application Node.js, activez le mode Edition directe : <img  src="./images/enable_live_edit.png"  alt="Curseur d'activation de l'édition directe">
 
 <table><tr><td><img src="./images/live_edit_restart.png"  alt="Icône de redémarrage de l'édition directe"></td><td>En mode Edition directe, redémarrez rapidement l'application sans redéploiement</td></tr>
-<tr><td> <img src="./images/debug_icon.png"  alt="Icône de débogage"></td><td>En mode Edition directe, accédez au débogueur
+<tr><td> <img src="./images/debug_icon.png"  alt="Icône de débogage"></td>
+<td>En mode Edition directe, accédez au débogueur
 </td></tr>
 </table>
 
@@ -208,7 +209,15 @@ Eclipse Orion {{site.data.keyword.webide}} fournit un assistant de contenu, des 
 </li><li>git config
 </li><li>cfignore
 </li><li>properties
-</ul>
+</li></ul>
 </td>
 </tr>
 </table>
+
+## Suivre un tutoriel : Eclipse Orion Web IDE
+{: #toolchain_tutorials}
+
+Consultez l'un des tutoriels suivants sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method){:new_window} :
+  * [Create and use your first toolchain (GitHub) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Create a toolchain that uses Git Repos and Issue Tracking ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Create and use a microservices toolchain with DevOps Insights (v2) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

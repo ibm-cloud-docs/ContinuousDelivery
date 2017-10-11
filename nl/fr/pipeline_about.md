@@ -14,7 +14,7 @@ lastupdated: "2017-4-4"
 # A propos de Delivery Pipeline
 {: #deliverypipeline_about}
 
-Le service IBM Bluemix {{site.data.keyword.deliverypipeline}}, également appelé pipeline, automatise le déploiement en continu de vos projets Bluemix. Dans un pipeline, des séquences d'étapes permettent d'extraire des entrées et d'exécuter des travaux, par exemple, des générations, des tests et des déploiements.
+{{site.data.keyword.contdelivery_full}} inclut Delivery Pipeline qui vous permet de générer, tester et déployer d'une manière reproductible avec un minimum d'intervention humaine. Dans un pipeline, des séquences d'étapes permettent d'extraire des entrées et d'exécuter des travaux, par exemple, des générations, des tests et des déploiements.
 {:shortdesc}
 
 Les sections ci-après décrivent les détails des concepts relatifs aux pipelines.
@@ -41,7 +41,7 @@ Vous souhaiterez peut-être avoir un contrôle plus strict d'une étape spécifi
 
 Un travail est une unité d'exécution au sein d'une étape. Une étape peut contenir plusieurs travaux et les travaux d'une étape s'exécutent de manière séquentielle. Par défaut, si un travail échoue, les travaux suivants dans cette étape ne s'exécutent pas.
 
-![Générer et tester des travaux dans une étape](images/jobs.png)
+![Travaux de génération et de test dans une étape](images/jobs.png)
 
 Les travaux s'exécutent dans des répertoires de travail discrets au sein de conteneurs Docker créés pour chaque exécution de pipeline. Avant l'exécution d'un travail, son répertoire de travail est renseigné avec des entrées définies au niveau de l'étape. Par exemple, vous pouvez avoir une étape qui contient un travail de test et un travail de déploiement. Si vous installez des dépendances sur un travail, elles ne sont pas disponibles pour l'autre travail. Toutefois, si vous rendez les dépendances disponibles dans l'entrée de l'étape, elles sont disponibles pour les deux travaux.
 
@@ -62,7 +62,7 @@ En outre, les travaux de pipeline peuvent exécuter uniquement les commandes sui
 
 Une fois qu'un travail est exécuté, le conteneur qui a été créé pour lui est supprimé. Les résultats de l'exécution d'un travail peuvent être conservés, mais l'environnement dans lequel ce travail a été exécuté n'est pas conservé.
 
-**Remarque** : L'exécution des travaux peut prendre jusqu'à 60 minutes. Lorsque des travaux dépassent cette limite, ils échouent. Si un travail dépasse la limite, scindez-le en plusieurs travaux. Par exemple, si un travail effectue trois tâches, vous pouvez le scinder en trois travaux, un pour chaque tâche.
+**Remarque** : l'exécution des travaux peut prendre jusqu'à 60 minutes. Lorsque des travaux dépassent cette limite, ils échouent. Si un travail dépasse la limite, scindez-le en plusieurs travaux. Par exemple, si un travail effectue trois tâches, vous pouvez le scinder en trois travaux, un pour chaque tâche.
 
 Pour savoir comment ajouter un travail à une étape, voir [Ajout d'un travail à une étape](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}.
 
@@ -73,7 +73,12 @@ Les travaux de génération compilent votre projet dans le cadre de la préparat
 Les travaux qui utilisent des entrées provenant de travaux de génération doivent faire référence à des artefacts de génération figurant dans la même structure que celle dans laquelle ils ont été créés. Par exemple, si un travail de génération procède à l'archivage d'artefacts de génération dans un répertoire `output`, un script de déploiement doit faire référence au répertoire `output` et non au répertoire cible de projet pour déployer le projet compilé. Vous pouvez spécifier le répertoire d'archivage en indiquant son nom dans la zone **Répertoire d'archivage de génération**. Si
 vous laissez la zone vide, l'archivage est effectué dans le répertoire racine.
 
-**Remarque** : Si vous sélectionnez le type de générateur **Simple** pour un travail de génération, vous ignorez le processus de génération. Dans ce cas, votre code n'est pas compilé, mais envoyé à l'étape de déploiement en l'état. Pour la génération et le déploiement, sélectionnez un type de générateur autre que **Simple**.
+**Remarque :** si vous utilisez le type de générateur **Simple**, votre code n'est pas compilé ni généré ; il est conditionné et rendu disponible pour des étapes ultérieures. 
+
+Lorsque vous effectuez un déploiement à l'aide de la technologie Cloud Foundry, celle-ci inclut les artefacts appropriés permettant à votre application de s'exécuter. Pour plus d'informations, voir [Déploiement d'applications avec la commande cf](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps). Le pipeline pour une application Cloud Foundry contient une étape de déploiement qui exécute une commande cf. 
+
+Cloud Foundry tente de [détecter le pack de construction à utiliser ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.cloudfoundry.org/buildpacks/detection.html). Vous pouvez spécifier le[pack de construction](/docs/cfapps/byob.html#using-community-buildpacks) à utiliser dans le fichier manifeste dans le dossier principal de votre application. En général, les packs de construction examinent les artefacts fournis par l'utilisateur afin d'identifier les dépendances à télécharger et de déterminer comment configurer les applications pour qu'elles communiquent avec des services liés. Pour plus d'informations sur les fichiers manifeste, voir [Manifeste d'application](/docs/manageapps/depapps.html#appmanifest). 
+
 
 #### Propriétés d'environnement pour les scripts de génération
 Vous pouvez inclure des propriétés d'environnement au sein des commandes shell de génération d'un travail de génération. Les propriétés permettent d'accéder aux informations relatives à l'environnement d'exécution du travail. Pour plus d'informations, voir [Propriétés et ressources d'environnement pour le {{site.data.keyword.deliverypipeline}}service](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
@@ -118,7 +123,7 @@ Pour utiliser les arguments de commande `cf push`, ouvrez les paramètres de con
 Un pipeline simple peut contenir trois étapes :
 
 1. Une étape de génération qui compile et exécute des processus de génération sur une application.
-2. Une étape de test qui déploie une instance de l'application puis exécute des tests sur cette instance.
+2. Une étape de test qui déploie une instance de l'application, puis exécute des tests sur cette instance.
 3. Une étape de production qui déploie une instance de production de l'application testée.
 
 Ce pipeline est affiché dans le diagramme conceptuel suivant :

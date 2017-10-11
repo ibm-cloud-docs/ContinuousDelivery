@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-5-17"
+lastupdated: "2017-7-24"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -34,12 +34,12 @@ Les comportements non autorisés en matière d'utilisation sont les suivants, sa
 * L'utilisation dans le processus de développement normal de sites ou de services faisant la promotion d'un discours haineux ou d'autres activités violant les Principes de conduite dans les affaires d'IBM
 * L'utilisation d'un comportement généré par un événement pour une intrusion malveillante ou des attaques contre {{site.data.keyword.Bluemix_notm}} ou d'autres sites
 
-A la discrétion d'IBM, les utilisateurs qui violent les comportements d'utilisation acceptables des services {{site.data.keyword.contdelivery_short}} ou les [Principes de conduite dans les affaires d'IBM ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/investor/governance/business-conduct-guidelines.html){: new_window} peuvent être désactivés sans préavis. A la discrétion d'IBM, certains services peuvent être restaurés si les utilisateurs corrigent leurs comportements d'utilisation après avoir été informés de l'action offensante en cause. Sinon, les comptes peuvent être suspendus ou clôturés.
+A la discrétion d'IBM, les utilisateurs qui violent les comportements d'utilisation acceptables des services {{site.data.keyword.contdelivery_short}} ou les [Principes de conduite dans les affaires d'IBM ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/investor/governance/business-conduct-guidelines.html){: new_window} peuvent être désactivés sans préavis. A la discrétion d'IBM, certains services peuvent être restaurés si les utilisateurs corrigent leurs comportements d'utilisation après avoir été informés de l'action offensante en cause. Sinon, les comptes peuvent être suspendus ou clôturés.
 
 ## Limitations liées à Git Repos and Issue Tracking
 {: #git_limitations}
 
-{{site.data.keyword.gitrepos}} repose sur GitLab Community Edition et est hébergé par IBM sur {{site.data.keyword.Bluemix_notm}}. Certaines options GitLab ne sont toutefois pas disponibles : 
+{{site.data.keyword.gitrepos}} repose sur GitLab Community Edition et est hébergé par IBM sur {{site.data.keyword.Bluemix_notm}}. Certaines options GitLab ne sont toutefois pas disponibles :
 
  * Etant donné que {{site.data.keyword.deliverypipeline}} fournit l'intégration continue et la distribution continue pour {{site.data.keyword.Bluemix_notm}}, les fonctions d'intégration continue de GitLab ne sont pas prises en charge.
  * Les fonctions d'administration de GitLab ne sont pas disponibles car elles sont gérées par IBM.
@@ -49,11 +49,11 @@ A la discrétion d'IBM, les utilisateurs qui violent les comportements d'utilisa
 ## Informations utilisateur et contenu de Git Repos and Issue Tracking
 {: #git_projects}
 
-Trois types de projet {{site.data.keyword.gitrepos}} sont disponibles : 
+Trois types de projet {{site.data.keyword.gitrepos}} sont disponibles :
 
-  1. Les projets publics sont visibles par tous les visiteurs du site. Le contenu d'un projet public est visible par toutes les personnes qui accèdent à {{site.data.keyword.contdelivery_short}}, même si elles ne sont pas invitées dans le projet. 
+  1. Les projets publics sont visibles par tous les visiteurs du site. Le contenu d'un projet public est visible par toutes les personnes qui accèdent à {{site.data.keyword.contdelivery_short}}, même si elles ne sont pas invitées dans le projet.
   2. Les projets privés sont visibles uniquement par les utilisateurs sélectionnés. Pour plus de détails sur l'octroi de l'accès à un projet aux utilisateurs, voir [Project users ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){: new_window}.
-  3. Les projets internes sont visibles par tous les utilisateurs connectés. Tout utilisateur doté d'un compte {{site.data.keyword.Bluemix_notm}} peut visualiser ces projets. 
+  3. Les projets internes sont visibles par tous les utilisateurs connectés. Tout utilisateur doté d'un compte {{site.data.keyword.Bluemix_notm}} peut visualiser ces projets.
 
 Vous pouvez modifier le type de projet dans les paramètres du projet. Pour plus d'informations, voir [How to change project visibility ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/public_access/public_access#how-to-change-project-visibility){: new_window}.
 
@@ -69,9 +69,9 @@ Lorsque vous utilisez {{site.data.keyword.gitrepos}}, le contenu que vous apport
 
 <!-- The email address that is associated with your profile page is derived from your {{site.data.keyword.Bluemix_notm}} account details. To modify the email address that is displayed on your profile page, modify your {{site.data.keyword.Bluemix_notm}} account. -->
 
-## Services obsolètes
-{: #deprecated_services}
+<!-- ## Deprecated services
+{: #deprecated_services} -->
 
-{{site.data.keyword.trackplan}} et {{site.data.keyword.deliverypipeline}} Classic, qui font partie d'IBM Bluemix {{site.data.keyword.jazzhub_short}} (JazzHub), sont retirés. Pour plus d'informations, voir [Track & Plan Retirement ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/04/track-plan-retirement/){: new_window} et [Delivery Pipeline Retirement ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/04/delivery-pipeline-retirement/){: new_window}.
+<!--{{site.data.keyword.trackplan}} and {{site.data.keyword.deliverypipeline}} Classic, which are part of IBM Bluemix {{site.data.keyword.jazzhub_short}} (JazzHub), are being retired. For more information, see [Track & Plan Retirement ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/04/track-plan-retirement/){: new_window} and [Delivery Pipeline Retirement ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/04/delivery-pipeline-retirement/){: new_window}. -->
 
-Depuis le 25 mai, il n'est plus possible de créer de projets JazzHub. Grâce à des mises à jour en continu automatiques, les projets JazzHub sont mis à niveau vers des chaînes d'outils {{site.data.keyword.contdelivery_short}}. Le site JazzHub sera arrêté début juillet. Pour plus d'informations sur la mise à niveau, voir [Upgrading JazzHub project to Bluemix Continuous Delivery toolchains ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2017/4/18/upgrading-jazzhub-projects-bluemix-continuous-delivery-toolchains/){: new_window}.
+<!-- Starting on May 25, no new JazzHub projects can be created. Through automatic rolling upgrades, JazzHub projects will be upgraded to {{site.data.keyword.contdelivery_short}} toolchains. The JazzHub site will be removed from service in early July. For more information about the upgrade, see [Upgrading JazzHub project to Bluemix Continuous Delivery toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2017/4/18/upgrading-jazzhub-projects-bluemix-continuous-delivery-toolchains/){: new_window} -->

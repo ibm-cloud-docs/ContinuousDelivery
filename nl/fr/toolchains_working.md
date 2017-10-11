@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+
+lastupdated: "2017-8-18"
+
 
 ---
 
@@ -25,9 +27,9 @@ Chaque chaîne d'outils est associée à une organisation (org) spécifique, et 
 
 Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne d'outils![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/create){: new_window} incluant un ensemble spécifique d'intégrations d'outils. Pour en savoir plus sur l'utilisation des modèles, consultez [IBM Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/tools){:new_window}.
 
-1. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Public, connectez-vous à [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://console.bluemix.net){:new_window}.
+1. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Public, connectez-vous à [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://console.bluemix.net){:new_window}.
 1. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dédié, connectez-vous à votre environnement Dédié sur {{site.data.keyword.Bluemix_notm}}.
-1. Dans le menu de la barre de menus {{site.data.keyword.Bluemix_notm}}, cliquez sur **Services** puis sur **DevOps**.
+1. Dans le menu de la barre de menus {{site.data.keyword.Bluemix_notm}}, cliquez sur **DevOps**.
 1. Dans le tableau de bord DevOps, sur la page **Chaînes d'outils**, cliquez sur **Créer une chaîne d'outils**.
 1. Sur la page **Créer une chaîne d'outils**, cliquez sur un modèle de chaîne d'outils.
 1. Examinez le diagramme de la chaîne d'outils que vous être sur le point de créer. Ce diagramme montre chaque intégration d'outils dans sa phase de cycle de vie au sein de la chaîne d'outils.
@@ -79,3 +81,11 @@ d'ensemble. Vous pouvez également, depuis la page de présentation de l'applica
  **Astuce **: si vous disposez de plusieurs référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git, plusieurs cartes peuvent être disponibles pour une
 même intégration d'outils car chaque référentiel dispose de sa propre carte. Si vous disposez de plusieurs pipelines, plusieurs cartes peuvent être disponibles pour la même intégration d'outils car chaque pipeline est représenté par sa propre carte. Par exemple, lorsque vous créez une chaîne d'outils Microservices,
 chacun des trois microservices dispose de son propre référentiel GitHub, {{site.data.keyword.ghe_short}} ou Git et de son propre pipeline.
+
+## Suivre un tutoriel : Utilisation de chaînes d'outils
+{: #toolchain_tutorials}
+
+Consultez l'un des tutoriels suivants sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method){:new_window} :
+  * [Create and use your first toolchain (GitHub) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Create a toolchain that uses Git Repos and Issue Tracking ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Add a toolchain to an app ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?task=1){:new_window}

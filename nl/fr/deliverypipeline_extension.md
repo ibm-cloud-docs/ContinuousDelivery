@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-5-11"
 
 ---
 
@@ -18,10 +18,10 @@ lastupdated: "2017-3-16"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Extension du {{site.data.keyword.deliverypipeline}}
+# Extension de Delivery Pipeline
 {: #deliverypipeline_extending}
 
-Vous pouvez étendre les capacités du {{site.data.keyword.deliverypipeline}} en configurant vos travaux afin d'utiliser les services pris en charge. Par exemple, les travaux de test peuvent exécuter des analyses de code statique et les travaux de génération peuvent globaliser des chaînes.
+Vous pouvez étendre les capacités de la fonction {{site.data.keyword.deliverypipeline}} d'{{site.data.keyword.contdelivery_full}} en configurant vos travaux afin d'utiliser les services pris en charge. Par exemple, les travaux de test peuvent exécuter des analyses de code statique et les travaux de génération peuvent globaliser des chaînes.
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -32,9 +32,9 @@ Les tâches suivantes expliquent comment intégrer des outils sélectionnés à 
 
 {: #deliverypipeline_scan}
 
-Vous souhaitez rechercher des problèmes de sécurité dans votre code avant de le déployer ? Lorsque vous utilisez IBM® Static Analyzer for Bluemix™ dans le cadre de votre pipeline, vous pouvez exécuter des vérifications automatisées par rapport aux fichiers binaires de génération `.war`, `.ear`, `.jar` ou `.class` statique d'application Java.
+Vous souhaitez rechercher des problèmes de sécurité dans votre code avant de le déployer ? Lorsque vous utilisez {{site.data.keyword.staticanalyzerfull}} dans le cadre de votre pipeline, vous pouvez exécuter des vérifications automatisées sur les fichiers binaires de génération `.war`, `.ear`, `.jar` ou`.class` statique d'application Java. 
 
-Un pipeline qui utilise le service Static Analyzer inclut généralement les étapes suivantes :
+Un pipeline qui utilise le service {{site.data.keyword.staticanalyzershort}} inclut généralement les étapes suivantes :
 
 + Une étape de génération permettant de créer les fichiers source
 + Une étape de traitement incluant les travaux suivants :
@@ -56,13 +56,13 @@ conditions d'utilisation du service ![Icône de lien externe](../../icons/launch
 
   b. Donnez un nom à l'étape, par exemple, `Traitement en cours`.
 
-  c. Pour le type d'entrée, sélectionnez **Artefacts de construction**.
+  c. Pour le type d'entrée, sélectionnez **Artefacts de génération**.
 
   d. Pour l'étape et pour le travail, vérifiez les valeurs et mettez-les à jour si besoin.
 
 2. Dans l'étape de traitement, ajoutez un travail de génération pour exécuter l'examen du code.
 
-  a. Sur l'onglet **Travaux**, cliquez sur **Ajouter un travail**.
+  a. Dans l'onglet **Travaux**, cliquez sur **Ajouter un travail**.
 
   b. Pour le type de travail, sélectionnez **Tester**.
 
@@ -70,17 +70,17 @@ conditions d'utilisation du service ![Icône de lien externe](../../icons/launch
 
   d. Pour l'organisation et l'espace, vérifiez les valeurs et mettez-les à jour si besoin.
 
-  e. Sélectionnez ou désélectionnez la case à cocher **Configurer un service et un espace pour moi** selon les besoins.
+  e. Sélectionnez ou désélectionnez la case à cocher **Configurer un service et un espace pour moi** selon vos besoins.
 
-    * Si vous souhaitez que le pipeline vérifie dans votre espace Bluemix l'existence du service et d'une application qui établit une liaison entre le service et le conteneur, sélectionnez la case à cocher. Si le service ou l'application liée n'existe pas, il est créé par le pipeline pour ajouter le forfait gratuit du service à votre espace. L'application liée est créée avec le nom `pipeline_bridge_app`. Ensuite, le pipeline utilise les données d'identification de pipeline_bridge_app pour accéder aux services liés.
+    * Si vous souhaitez que le pipeline vérifie dans votre espace {{site.data.keyword.Bluemix_short}} l'existence du service et d'une application qui établit une liaison entre le service et le conteneur, sélectionnez la case à cocher. Si le service ou l'application liée n'existe pas, il est créé par le pipeline pour ajouter le forfait gratuit du service à votre espace. L'application liée est créée avec le nom `pipeline_bridge_app`. Ensuite, le pipeline utilise les données d'identification de pipeline_bridge_app pour accéder aux services liés.
 
-    * Si vous avez déjà configuré le service et lié l'application dans votre espace Bluemix, ou si vous désirez
+    * Si vous avez déjà configuré le service et lié l'application dans votre espace {{site.data.keyword.Bluemix_short}}, ou si vous désirez
 [configurer manuellement ces exigences](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window},
 ne cochez pas cette case.
 
-  f. Dans la zone **Minutes to wait for analysis to complete**, tapez une valeur comprise entre 0 et 59 minutes. La valeur par défaut est 5 minutes. Une URL vers le tableau de bord Static Analyzer figure dans les journaux de console à la fin du travail.
+  f. Dans la zone **Temps d'attente en minutes pour l'achèvement de l'analyse**, tapez une valeur comprise entre 0 et 59 minutes. La valeur par défaut est 5 minutes. Une URL vers le tableau de bord {{site.data.keyword.staticanalyzershort}} figure dans les journaux de console à la fin du travail.
 
-     Si l'analyse Static Analyzer n'est pas terminée avant l'heure que vous avez spécifiée, le travail échoue. Toutefois, l'analyse de l'examen continue de s'exécuter et vous pouvez l'afficher sur le tableau de bord Static Analyzer. Une fois l'examen Static Analyzer terminé, si vous relancez l'exécution du travail, la demande d'examen n'est pas soumise et le travail de pipeline peut être effectué. Sinon, vous pouvez configurer le pipeline pour qu'il ne soit pas bloqué si l'analyse aboutit. Pour obtenir des instructions, voir l'étape suivante.
+     Si l'analyse  {{site.data.keyword.staticanalyzershort}} n'est pas terminée avant l'heure que vous avez spécifiée, le travail échoue. Toutefois, l'analyse de l'examen continue de s'exécuter et vous pouvez l'afficher sur le tableau de bord {{site.data.keyword.staticanalyzershort}}. Une fois l'examen {{site.data.keyword.staticanalyzershort}} terminé, si vous relancez l'exécution du travail, la demande d'examen n'est pas soumise à nouveau et le travail de pipeline peut être effectué. Sinon, vous pouvez configurer le pipeline pour qu'il ne soit pas bloqué si l'analyse aboutit. Pour obtenir des instructions, voir l'étape suivante.
 
   g. Sélectionnez ou désélectionnez la case à cocher **Arrêter d'exécuter cette étape si ce travail échoue** selon ce qui doit se produire si ce travail échoue ou dépasse le délai d'attente prévu. Les travaux peuvent échouer lorsque les vulnérabilités sont élevées.
 
@@ -89,7 +89,7 @@ ne cochez pas cette case.
     * Si vous désélectionnez la case à cocher et que le travail échoue, l'étape se poursuit sans bloquer les travaux et les étapes ultérieurs. Par exemple, si vous savez que le rapport inclut de nombreux problèmes à traiter, vous souhaiterez peut-être configurer la poursuite de l'étape car l'examen peut durer un certain temps. Dans ce cas, il n'est pas souhaitable que le reste de vos travaux et de vos étapes s'arrêtent uniquement parce que l'examen
 dure trop longtemps.
 
-  h. Cliquez sur **Sauvegarder**.
+  h. Cliquez sur **SAUVEGARDER**.
 
 3. Lorsque le travail est terminé, affichez les résultats en cliquant sur **Afficher les journaux et l'historique
 **. En cas de réussite ou de dépassement de délai de l'analyse, une URL apparaît dans les résultats de l'examen. Si l'examen est en attente, attendez qu'il se termine pour afficher tous les résultats.
@@ -111,7 +111,7 @@ Exemples de sortie dans la console :
 **Examen en attente**
 ![Exemple d'examen en attente](images/analyzer_pending.png)
 
-Pour plus d'informations sur l'utilisation du service Static Analyzer, voir les [documents sur le service Static Analyzer](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
+Pour plus d'informations sur l'utilisation du service {{site.data.keyword.staticanalyzershort}}, voir les [documents sur le service {{site.data.keyword.staticanalyzershort}}](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 
@@ -182,7 +182,7 @@ For more information about using the Globalization Pipeline service from the Blu
 ## Création de notifications Slack pour les générations dans le pipeline
 {: #deliverypipeline_slack}
 
-Vous pouvez envoyer des notifications sur les résultats de génération d'IBM Container Service, d'IBM Security Static Analyzer et d'IBM Globalization depuis votre service Delivery Pipeline vers vos canaux Slack.
+Vous pouvez envoyer des notifications sur les résultats de génération d'{{site.data.keyword.containerlong}}, de {{site.data.keyword.staticanalyzershort}} et d'{{site.data.keyword.globalizationfull}} depuis votre service Delivery Pipeline vers vos canaux Slack.
 
 Avant de commencer, créez une URL webhook Slack ou copiez-en une qui existe :
 
@@ -200,7 +200,7 @@ Pour créer des notifications Slack :
 3. Sélectionnez **Propriété de texte**.
 4. Entrez le nom et une valeur pour la propriété d'environnement. Répétez l'opération afin de créer plusieurs propriétés d'environnement.
 
-  *Tableau 1. Propriétés d'environnement pour la configuration de notifications Slack*
+  _Tableau 1. Propriétés d'environnement pour la configuration de notifications Slack_
 
   <table>
   <tr>
@@ -262,7 +262,7 @@ Pour créer des notifications HipChat, procédez comme suit :
 3. Sélectionnez **Propriété de texte**.
 4. Entrez le nom et une valeur pour la propriété d'environnement. Répétez l'opération afin de créer plusieurs propriétés d'environnement.
 
-  *Tableau 2. Propriétés d'environnement pour la configuration de notifications HipChat*
+  _Tableau 2. Propriétés d'environnement pour la configuration de notifications HipChat_
 
   <table>
   <tr>

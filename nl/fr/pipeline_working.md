@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-25"
+lastupdated: "2017-09-05"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2017-5-25"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# Utilisation de {{site.data.keyword.deliverypipeline}} {: #pipeline-working}
+# Utilisation de pipelines{: #pipeline-working}
 
-Pour automatiser vos générations et déploiements dans {{site.data.keyword.Bluemix}}, utilisez
-{{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
+Pour automatiser vos générations et déploiements vers {{site.data.keyword.Bluemix}}, utilisez
+des pipelines {{site.data.keyword.contdelivery_full}}.
 {: shortdesc}
 
-Avec {{site.data.keyword.deliverypipeline}}, vous pouvez choisir entre plusieurs types de génération. Vous fournissez le script de génération et {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} l'exécute ; il n'est pas nécessaire de configurer des systèmes de génération. Ensuite, en un clic, vous pouvez déployer automatiquement votre application dans un ou plusieurs espaces {{site.data.keyword.Bluemix_notm}}, sur un ou plusieurs serveurs Cloud Foundry publics, ou dans un ou plusieurs
+Avec des pipelines, vous pouvez choisir entre plusieurs types de génération. Vous fournissez le script de génération et {{site.data.keyword.contdelivery_short}} l'exécute ; il n'est pas nécessaire de configurer des systèmes de génération. Ensuite, en un clic, vous pouvez déployer automatiquement votre application dans un ou plusieurs espaces {{site.data.keyword.Bluemix_notm}}, sur un ou plusieurs serveurs Cloud Foundry publics, ou dans un ou plusieurs
 conteneurs Docker dans IBM Containers for {{site.data.keyword.Bluemix_notm}}.
 
 Les travaux de génération compilent et assemblent en package le code source de votre application depuis les référentiels Git. Ils génèrent des artefacts pouvant être déployés,
@@ -72,7 +72,7 @@ Pour [créer un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg 
 
 1. Sélectionnez un référentiel ou entrez une URL de référentiel.
 1. Cliquez sur **Créer**. Le pipeline est créé, configuré et affiché sur la page Présentation de la chaîne d'outils.
- ![Carte du pipeline](images/cd_pipeline.png)
+ ![Carte de pipeline](images/cd_pipeline.png)
 1. Si vous avez créé un pipeline dans une chaîne d'outils contenant un pipeline composite, le nouveau pipeline est ajouté au pipeline composite. Modifiez le plan de déploiement pour inclure des tâches de déploiement pour le nouveau pipeline. Voir [Création de tâches Delivery Pipeline](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}.
 
 Pour créer un [pipeline vide ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} sans étapes préconfigurées :
@@ -84,3 +84,9 @@ Pour créer un [pipeline vide ![Icône de lien externe](../../icons/launch-glyph
 1. Cliquez sur **Créer**. Un pipeline vide est créé et représenté sous forme de carte sur la page Présentation de la chaîne d'outils.
 
 A partir de {{site.data.keyword.deliverypipeline}}, modifiez votre configuration, vérifiez le statut des générations, l'application déployée et les déploiements récents, examinez les journaux les plus récents et les détails du déploiement, ou supprimez votre pipeline.
+
+## Suivre un tutoriel : {{site.data.keyword.deliverypipeline}}
+{: #pipeline-tutorial}
+
+Consultez le tutoriel suivant sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method){:new_window} :
+  * [Create a pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}

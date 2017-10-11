@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-11"
+lastupdated: "2017-07-18"
 
 ---
 
@@ -21,7 +21,7 @@ L'équipe {{site.data.keyword.contdelivery_full}} surveille activement les quest
  <td align="center">
  <strong>Stack Overflow</strong>
   <p>
-   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/ask-a-question.png" alt="Poser une question"/></a></p>
+   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,devops-services" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/ask-a-question.png" alt="Poser une question"/></a></p>
    <p>
     <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(S'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Affichez les questions récentes <img class="image" src="../../icons/launch-glyph.svg" alt="Icône de lien externe"/></a> sur {{site.data.keyword.Bluemix_notm}} DevOps Services dans Stack Overflow.</p></td>
   <td align="center">

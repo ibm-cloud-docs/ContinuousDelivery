@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-08-15"
 
 ---
 
@@ -67,43 +67,6 @@ Une fois que des tâches sont ajoutées aux plans de déploiement, vous pouvez l
 
    * Pour supprimer une tâche, cliquez dessus, puis sur l'icône **Supprimer** <img class="inline" src="../UCCR/images/trash-group.png"  alt="delete icon">. La tâche est supprimée du plan de déploiement.
 
-<!-- ## Creating UrbanCode Deploy tasks
-{: #tasks_UDTasks}
-
-UrbanCode Deploy tasks manage UrbanCode Deploy applications. When you run an UrbanCode Deploy task, the associated UrbanCode Deploy application runs by using the process, version, and environment specified by the task. You can set the version and environment at design time or wait and select them at run time.
-
-During deployments, UrbanCode Deploy tasks start automatically when they become eligible to run.   
-
-**Important** Applications become available after {{site.data.keyword.uccr_short}} is integrated with UrbanCode Deploy. The applications that are available to a deployment plan depend on the team that is assigned to the plan. The applications that are managed by the team in UrbanCode Deploy are also available in {{site.data.keyword.uccr_short}}.
-
-Complete the following tasks to create an UrbanCode Deploy task.
-
-1. On the Deployment Plan Details page, click **Create Task**. If you want to insert a task at a specific position in the plan, select a task before using the **Create Task**. The new task is inserted above the selected task.
-
-1. On the Create Task dialog box, in the **Type** list, select **UrbanCode Deploy**.
-
-1. In the **Name** field, enter a name for the task.
-
-3. In the **Duration (minutes)** field, enter the number of minutes that you expect the task to run until it is completed. The estimated duration is used to calculate expected deployment times.
-
-3. In the **Tags** list, attach a tag to the task. You can select multiple tags. To create a tag, type the tag name in list's text field.
-
-3. In the **Application Name** list, select an application.
-
-3. In the **Process** list, select an application process. Processes that belong to the selected UrbanCode Deploy application are available.
-
-3. In the **Environment** list, select an application environment. Environments that belong to the selected UrbanCode Deploy application are available.  To postpone selecting an environment until you are ready to run the deployment, select **Use Version Tab**.
-
-3. In the **Version** list, select an application version. Versions refer to IBM UrbanCode Deploy application snapshots. Versions that belong to the selected application are available.  To postpone selecting a version, select **Use Version Tab**. If the application process does not require a version, select **No Version**. You might select this last option if you are running a configuration-type process that does not require components.
-
-3. In the **Assigned groups and users** list, assign the task to a user or group. The assigned user runs the task during deployment.
-
-3. In the **Owner** list, select the task owner. The default owner is the user who created the task. The **Owner** list is displayed after the task is assigned to a user or group.    
-
-5. Click **Save**. The task is inserted into the deployment plan.
-
-After the task is created, the plan's **Version** tab is updated with information about the application assigned to the task. If you selected **Use Version Tab** for the application environment and version, use the Version tab to set those options before running the deployment. -->
-
 ## Création de tâches manuelles
 {: #tasks_manual}
 
@@ -111,7 +74,7 @@ En général, les tâches manuelles représentent les activités qui sont associ
 
 Pour créer une tâche manuelle, procédez comme suit :
 
-1. Sur la page Deployment Plan Details, cliquez sur **Create Task**. Pour insérer une tâche à un endroit spécifique du plan, sélectionnez une tâche avant de cliquer sur **Create Task**. La nouvelle tâche est insérée au-dessus de la tâche sélectionnée.
+1. Sur la page Deployment Plan Details, cliquez sur **Create Task**. Pour insérer une tâche à un endroit spécifique du plan, sélectionnez une tâche avant de cliquer sur **Create Task**. La nouvelle tâche est insérée avant la tâche sélectionnée.
 
 1. Dans la fenêtre Create Task, dans la liste **Type**, sélectionnez **Manual**.
 
@@ -119,7 +82,7 @@ Pour créer une tâche manuelle, procédez comme suit :
 
 3. Dans la zone **Duration (minutes)**, saisissez le nombre de minutes prévu avant la fin de l'exécution de la tâche. La durée estimée est utilisée pour calculer les délais de déploiement attendus.
 
-3. Dans la liste **Tags**, attachez une étiquette à la tâche. Vous pouvez sélectionner plusieurs étiquettes. Pour créer une étiquette, entrez le nom de l'étiquette dans la zone de texte de la liste.
+3. Dans la liste **Tags**, attachez une étiquette à la tâche. Vous pouvez sélectionner plusieurs étiquettes. Pour créer une étiquette, entrez son nom dans la zone de la liste.
 
 3. Dans la liste **Assigned groups and users**, affectez la tâche à un utilisateur ou un groupe. L'utilisateur affecté exécute la tâche lors du déploiement.
 
@@ -143,7 +106,7 @@ Pour créer une tâche différée, procédez comme suit :
 
 1. Dans la zone **Name**, saisissez un nom pour la tâche.
 
-3. Dans la zone **Time**, saisissez ou sélectionnez l'heure à laquelle la tâche sera terminée.
+3. Dans la zone **Time**, saisissez ou sélectionnez l'heure à laquelle la tâche doit être terminée.
 
 3. Dans la liste **Time Zone**, sélectionnez le fuseau horaire pour la valeur saisie dans la zone **Time**.    
 
@@ -158,7 +121,7 @@ Les tâches d'en-tête représentent des éléments organisationnels que vous po
 
 Pour créer une tâche d'en-tête, procédez comme suit :
 
-1. Sur la page Deployment Plan Details, cliquez sur **Create Task**. Si vous voulez insérer une tâche à un endroit spécifique du plan, sélectionnez une tâche avant de cliquer sur **Create Task**. La nouvelle tâche est insérée au-dessus de la tâche sélectionnée.
+1. Sur la page Deployment Plan Details, cliquez sur **Create Task**. Si vous voulez insérer une tâche à un endroit spécifique du plan, sélectionnez une tâche avant de cliquer sur **Create Task**. La nouvelle tâche est insérée avant la tâche sélectionnée.
 
 1. Dans la fenêtre de création de tâche, dans la liste **Type**, sélectionnez **Header**.
 
@@ -175,7 +138,7 @@ Dans le service {{site.data.keyword.contdelivery_short}}, {{site.data.keyword.de
 
 Pour créer une tâche Delivery Pipeline, procédez comme suit :
 
-1. Sur la page Deployment Plan Details, cliquez sur **Create Task**. Si vous voulez insérer une tâche à un endroit spécifique du plan, sélectionnez une tâche avant de cliquer sur **Create Task**. La nouvelle tâche est insérée au-dessus de la tâche sélectionnée.
+1. Sur la page Deployment Plan Details, cliquez sur **Create Task**. Si vous voulez insérer une tâche à un endroit spécifique du plan, sélectionnez une tâche avant de cliquer sur **Create Task**. La nouvelle tâche est insérée avant la tâche sélectionnée.
 
 1. Dans la fenêtre de création de tâche, dans la liste **Type**, sélectionnez **Continuous Delivery Pipeline**.
 
@@ -260,7 +223,7 @@ En contrôlant les dépendances de tâche, vous pouvez vérifier que les événe
 
 Pour qu'une tâche devienne un prérequis pour d'autres tâches, procédez comme suit :
 
-1. Sur la page Deployment Plan Details, sélectionnez une tâche ou un groupe de tâches, puis cliquez sur **Manage Prerequisites** <img class="inline" src="../UCCR/images/task-depend.png"  alt="task prerequisite">. Vous pouvez sélectionner plusieurs tâches et groupes.
+1. Sur la page Deployment Plan Details, sélectionnez une tâche ou un groupe de tâches et cliquez sur **Manage Prerequisites** <img class="inline" src="../UCCR/images/task-depend.png"  alt="Prérequis des tâches">. Vous pouvez sélectionner plusieurs tâches et groupes.
 
 1. Dans la fenêtre "Manage Prerequisites for Selected Tasks", sélectionnez la tâche prérequise dans la liste **Prerequisite tasks for selected tasks**.
 
@@ -274,4 +237,4 @@ Dans la figure suivante, la première tâche ne contient pas de prérequis et de
 
 *Figure 4. Dépendances de tâche*
 
-Pour consulter ou modifier des dépendances, sélectionnez la tâche et cliquez sur **Manage Prerequisites** <img class="inline" src="../UCCR/images/task-depend.png"  alt="task prerequisite">.
+Pour consulter ou modifier des dépendances, sélectionnez la tâche et cliquez sur **Manage Prerequisites** <img class="inline" src="../UCCR/images/task-depend.png"  alt="Prérequis des tâches">.

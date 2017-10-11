@@ -14,10 +14,9 @@ lastupdated: "2017-6-1"
 # Utilisation de Git dans Eclipse Orion Web IDE
 {: #git_web_ide}
 
-Si vous utilisez l'interface Eclipse Orion {{site.data.keyword.webide}}, vous n'avez pas besoin du terminal Git : vous pouvez exécuter un grand nombre de commandes Git
-communes dans l'interface Web IDE.
+Vous pouvez exécuter un grand nombre de commandes Git courantes dans Eclipse Orion {{site.data.keyword.webide}}.
 
-Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence rapide pour réaliser les tâches communes.
+Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence rapide pour réaliser les tâches courantes. Lorsque cela est possible, les commandes Git sont affichées avec leurs équivalents dans l'interface IDE Web.  
 
 ## Création d'une branche locale
 {: #create_branch}
@@ -30,7 +29,7 @@ Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence r
 2. Entrez votre nom de branche puis cliquez sur **Soumettre**.
 
 ### Terminal Git
-1. Entrez `git branch <nom de branche>` et appuyez sur Entrée.
+1. Tapez `git branch <branchname>` et appuyez sur Entrée.
 
 ## Utilisation d'une branche locale
 {: #start_working_on_branch}
@@ -38,14 +37,14 @@ Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence r
 ### Eclipse Orion Web IDE
 1. Cliquez sur la liste **Référence** et développez **local**.
 
-2. Cliquez sur l'icône de réservation <img  class="inline" src="./images/checkout.png" alt="Icône de réservation"> de la branche à modifier. 
+2. Cliquez sur l'icône de réservation <img  class="inline" src="./images/checkout.png" alt="Icône de réservation"> de la branche à modifier.
 
 1. Vérifiez que la branche sélectionnée s'affiche dans la liste **Référence**.
 
 ### Terminal Git
 1. Pour afficher vos branches locales, entrez `git branch -l` et appuyez sur Entrée.
 
-2. Entrez `git checkout <nom de branche>` et appuyez sur Entrée.
+2. Tapez `git checkout <branchname>` et appuyez sur Entrée.
 
 
 ## Mise à jour d'une branche locale pour inclure des modifications de la branche distante
@@ -67,10 +66,10 @@ Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence r
 
 1. Cliquez sur la liste **Référence** et développez **local**.
 
-2. Cliquez sur **Supprimer** <img class="inline"  src="./images/delete.png" alt="Icône Supprimer"> de la branche locale à supprimer. 
+2. Cliquez sur **Supprimer** <img class="inline"  src="./images/delete.png" alt="Icône Supprimer"> de la branche locale à supprimer.
 
 ### Terminal Git
-1. Entrez `git branch -d <nom de branche>` et appuyez sur Entrée.
+1. Tapez `git branch -d <branchname>` et appuyez sur Entrée.
 
 ##Insertion forcée des modifications locales dans une banche distante
 {: #force_push}
@@ -88,7 +87,7 @@ distante.
 
 ### Terminal Git
 
-1. Entrez `git push <origine> <branche distante> -f` et appuyez sur Entrée.
+1. Tapez `git push <origin> <remote branch> -f` et appuyez sur Entrée. 
 
 ## Elimination des contenus retirés de l'index de la branche locale active
 {: #discard_changes}
@@ -147,7 +146,7 @@ pour aider.
 
 1. Cliquez sur l'icône **bouton à bascule de représentation graphique** <img  class="inline" src="./images/graphicalhistoryicon.png" alt="Icône d'historique graphique">.
 
-  Une fois le bouton activé, l'historique de validation et toutes les modifications entrantes ou sortantes pour une branche active s'affichent en tant que graphique connecté.  La
+  Lorsque le bouton est activé, l'historique de validation et toutes les modifications entrantes ou sortantes pour la branche active s'affichent en tant que graphique connecté. La
 représentation visuelle montre toutes les validations et toutes les branches sur lesquelles elles ont été effectuées.
 
   <img class="screen-shot" src="./images/visualhistoryexample.png" alt="Historique visuel des validations">
@@ -176,7 +175,7 @@ représentation visuelle montre toutes les validations et toutes les branches su
 ### Terminal Git
 1. Entrez `git log -p` et appuyez sur Entrée.
 
-  **Remarque :** pour afficher uniquement un certain nombre de validations, entrez `git log -p -<nombre_de_validations_à_afficher>`.
+  **Remarque :** pour afficher uniquement un certain nombre de validations, entrez `git log -p -<number_of_commits_to_view>`.
 
 2. Parcourez les validations.
  * Pour afficher plus d'entrées, appuyez sur Page avant.
@@ -228,7 +227,7 @@ causer des erreurs de validation et d'autres problèmes aux autres contributeurs
 ### Terminal Git
 1. Affichez l'historique de validation et obtenez l'ID de la validation à étiqueter. Pour plus d'informations, voir [Afficher l'historique de validation](#view_commit_history).
 
-2. Entrez `git tag -a <texte_étiquette> <ID_validation>` et appuyez sur Entrée.
+2. Tapez `git tag -a <tag_text> <commit_id>` et appuyez sur Entrée.
 
 ## Modification du nom et de l'adresse e-mail du valideur
 {: #change_the_committer_name_and_email_address}
@@ -241,15 +240,15 @@ causer des erreurs de validation et d'autres problèmes aux autres contributeurs
 ### Terminal Git
 Pour mettre à jour votre nom et votre adresse e-mail pour un référentiel spécifique :
 
-1. Entrez `git config user.email "<votre@e-mail.com>"` et appuyez sur Entrée.
+1. Tapez `git config user.email "<your@email.com>"` et appuyez sur Entrée. 
 
-2. Entrez `git config user.name "<votre nom>"` et appuyez sur Entrée.
+2. Tapez `git config user.name "<Your Name>"` et appuyez sur Entrée. 
 
 Pour mettre à jour votre nom et votre adresse e-mail pour tous les référentiels :
 
-1. Entrez `git config --global user.email "<votre@e-mail.com>"` et appuyez sur Entrée.
+1. Tapez `git config --global user.email "<your@email.com>"` et appuyez sur Entrée. 
 
-2. Entrez `git config --global user.name "<votre nom>"` et appuyez sur Entrée.
+2. Tapez `git config --global user.name "<Your Name>"` et appuyez sur Entrée. 
 
 ##Annulation d'une validation
 {: #revert}
@@ -264,7 +263,7 @@ Annuler les modifications introduites par une validation dans votre branche acti
 
 ### Terminal Git
 
-1. Entrez `git revert <ID validation>` et appuyez sur Entrée.
+1. Tapez `git revert <commit ID>` et appuyez sur Entrée.
 
 ## Fusion des modifications
 {: #merge_changes}
@@ -296,7 +295,7 @@ tout fonctionne comme prévu.
 
 2. Réservez la branche de destination. Pour plus d'informations, voir [ Utilisation d'une branche locale](#start_working_on_branch).
 
-3. Entrez `git merge <nom_source>` et appuyez sur Entrée.
+3. Tapez `git merge <source_name>` et appuyez sur Entrée.
 
 
 ## Résolution d'un conflit de fusion
@@ -357,9 +356,9 @@ tout fonctionne comme prévu.
 1. Cliquez sur **Insérer**.
 
 ### Terminal Git
-1. Réservez la branche à mettre à jour en tapant `git checkout <nom_branche_destination>` et en appuyant sur Entrée.
+1. Réservez la branche à mettre à jour en tapant `git checkout <destination_branchname>` et en appuyant sur Entrée.
 
-2. Entrez `git rebase <nom_branche_source>` et appuyez sur Entrée.
+2. Tapez sur `git rebase <source_branchname>` et appuyez sur Entrée.
 
 3. Si vous rencontrez des conflits, [résolvez-les](#resolve_a_rebase_conflict).
 

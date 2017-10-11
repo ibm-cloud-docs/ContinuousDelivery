@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-5"
+lastupdated: "2017-7-24"
 
 ---
 
@@ -26,6 +26,8 @@ elle est créée.
 - [Qu'arrivera-t-il à mon référentiel de code lors de la mise à niveau ?](#faq_repo)
 - [Qu'arrivera-t-il à mes définitions de génération dans mon projet lors de la mise à niveau vers une chaîne d'outils ?](#faq_build)
 - [Je dois créer une organisation pour mon projet qui va être mis à jour vers une chaîne d'outils. Je comprends que je dois ajouter une carte de crédit à mon compte avant de créer une organisation. Ma carte de crédit sera-t-elle débitée ?](#faq_charges)
+- [Ma chaîne d'outils est introuvable ou inaccessible. Que dois-je faire ?](#faq_find)
+- [Mon projet est associé à la région Royaume-Uni. Après la mise à niveau, des messages d'erreur apparaissent, mes collègues ne peuvent pas accéder à la chaîne d'outils et ma chaîne d'outils n'apparaît pas sur la page Chaînes d'outils de Bluemix. Qu'est-ce qui ne va pas ?](#faq_uk)
 
 ## Chaînes d'outils
 {: #compare_toolchains}
@@ -36,7 +38,7 @@ Les chaînes d'outils sont semblables à des projets, à quelques différences i
 - Les chaînes d'outils peuvent inclure des outils qui ne sont pas disponibles dans des projets, tels que Slack, Sauce Labs, PagerDuty et {{site.data.keyword.DRA_full}}.
 - L'accès aux chaînes d'outils est géré à travers les organisations {{site.data.keyword.Bluemix_notm}} standard. L'appartenance est gérée au niveau de l'organisation, contrairement aux projets, où elle est gérée au niveau du projet.
 
-Pour en savoir plus sur les chaînes d'outils, consultez [YouTube![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/2SIPE1e7NJ4){: new_window} ou la section [Initiation à {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html).
+Pour en savoir plus sur les chaînes d'outils, consultez [YouTube ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://youtu.be/2SIPE1e7NJ4){: new_window} ou la rubrique [Initiation à {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html).
 [![Lien externe vers YouTube](images/CD_video.png)](https://youtu.be/2SIPE1e7NJ4){: new_window}
 
 ## Conditions préalables requises
@@ -46,11 +48,11 @@ Pour en savoir plus sur les chaînes d'outils, consultez [YouTube![Icône de lie
 vérifier que vous avez un ID {{site.data.keyword.Bluemix_notm}} actif. Si vous n'en possédez pas, [enregistrez-vous](https://console.ng.bluemix.net/registration/) pour en obtenir un.
 - Vérifiez que votre propriétaire de projet {{site.data.keyword.jazzhub_short}} est correct. La chaîne d'outil qui est créée dans votre projet appartiendra à l'organisation
 {{site.data.keyword.Bluemix_notm}} de ce propriétaire.
-- Si vous prévoyez de lancer la mise à niveau, vérifiez que vous êtes membre de chaque organisation et de chaque espace que le pipeline a pour cible de déploiement. N'importe quel administrateur
-du projet peut démarrer la mise à niveau. Cependant, si l'administrateur qui lance la mise à niveau n'est pas membre de chaque organisation et de chaque espace que le pipeline a pour
-cible de déploiement, le pipeline ne peut pas être créé. La personne qui lance la mise à niveau devient le propriétaire du référentiel dans la chaîne d'outils.
-- L'interface Eclipse Orion {{site.data.keyword.webide}} dans la chaîne d'outils est séparée de l'interface {{site.data.keyword.webide}} qui est associée à votre
-projet. Si vous utilisez l'interface {{site.data.keyword.webide}} et que certaines modifications ne sont pas validées, validez-les avant la mise à niveau.
+- Assurez-vous que l'organisation et l'espace sur lesquels vous souhaitez créer votre chaîne d'outils se trouvent sur {{site.data.keyword.Bluemix_notm}} Public dans la région Sud des Etats-Unis. Pour vérifier que vous disposez d'une organisation et d'un espace valides dans la région Sud des Etats-Unis, connectez-vous à [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window} et créez un espace si vous êtes invité à le faire. 
+- Si vous prévoyez de lancer la mise à niveau, vérifiez que vous êtes membre de chaque organisation et de chaque espace sur lesquels le pipeline sera déployé. N'importe quel administrateur
+du projet peut démarrer la mise à niveau. Cependant, si l'administrateur qui lance la mise à niveau n'est pas membre de chaque organisation et de chaque espace sur lesquels le pipeline sera déployé, celui-ci ne peut pas être créé. La personne qui lance la mise à niveau devient le propriétaire du référentiel dans la chaîne d'outils.
+- Eclipse Orion {{site.data.keyword.webide}} dans la chaîne d'outils est séparée de l'interface {{site.data.keyword.webide}} qui est associée à votre
+projet. Si vous utilisez {{site.data.keyword.webide}} et que certaines modifications ne sont pas validées, validez-les avant la mise à niveau.
 
 
 ## Mise à niveau d'un projet vers une chaîne d'outils
@@ -61,13 +63,13 @@ applications dans une autre région, il déploiera quand même les applications 
 
 Lorsque votre projet est prêt pour la mise à niveau, un message s'affiche sur la carte du projet et la page de présentation.
 
-![Image d'une carte portant le libellé Ready To Upgrade](images/card-project-to-upgrade.png)
+![Image comportant le libellé Prêt pour la mise à niveau](images/card-project-to-upgrade.png)
 
-![Message Time to Upgrade](images/banner-ready-to-upgrade.png)
+![Message indiquant que la mise à niveau peut être démarrée](images/banner-ready-to-upgrade.png)
 
 **Astuce :** Les projets prêts pour la mise à niveau se trouvent dans le menu de la page Mes projets :
 
-![Image de l'élément de menu Projects To Upgrade](images/menu-projects-to-upgrade.png)
+![Image illustrant l'élément de menu Projets à mettre à niveau](images/menu-projects-to-upgrade.png)
 
 Lorsque vous démarrez la mise à niveau, les étapes du pipeline dans votre projet sont bloquées. Vous ne pourrez pas les exécuter ni les modifier. Si vous annulez la mise à jour en
 supprimant la chaîne d'outils, le pipeline est débloqué.
@@ -77,7 +79,7 @@ déplacées vers la chaîne d'outils. Si vous annulez la mise à niveau en suppr
 
 Pour obtenir des informations détaillées sur la manière dont chaque type de référentiel est traité lors de la mise à niveau, veuillez vous reporter au tableau ci-dessous.
 
-|Référentiel de projet |Type de projet	|Référentiel de chaîne d'outils |
+|Référentiel de projet |Type de projet |Référentiel de chaîne d'outils |
 |:----------|:------------------------------|:------------------|
 |github.com 		|Privé ou public 		|Le même référentiel github.com avec {{site.data.keyword.Bluemix_notm}} Public.	|
 |hub.jazz.net/git		|Privé ou public 		|Un nouveau référentiel dans {{site.data.keyword.gitrepos}} avec {{site.data.keyword.Bluemix_notm}} Public.	|
@@ -86,7 +88,7 @@ Pour obtenir des informations détaillées sur la manière dont chaque type de r
 ## Démarrage du processus de mise à niveau
 {: #start_upgrade}
 
-Avant de débuter le processus de mise à niveau, vous pouvez l'observer en action sur [YouTube![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/LSr2e3uvyLs){: new_window}.
+Avant de débuter le processus de mise à niveau, vous pouvez l'observer en action sur [YouTube ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://youtu.be/LSr2e3uvyLs){: new_window}.
 [![Lien externe vers YouTube](images/migration-video2.png)](https://youtu.be/LSr2e3uvyLs){: new_window}
 
 Pour mettre à niveau votre projet vers une chaîne d'outils, procédez comme suit :
@@ -132,25 +134,25 @@ cette requête.
    Si vous retournez à votre projet durant la mise à niveau, le message de la bannière risque d'indiquer que la mise à niveau est en cours, en particulier si le processus de mise à
 jour implique l'importation d'un code source dans un nouveau référentiel ou l'importation d'éléments de travail Track &amp; Plan comme problèmes.
 
-   ![Message concernant un projet en cours de mise à niveau vers une chaîne d'outils](images/project-being-upgraded-banner.png)
+   ![Message indiquant qu'un projet est en cours de mise à niveau vers une chaîne d'outils](images/project-being-upgraded-banner.png)
 
 ## Révision de votre projet
 {: #revisit_projects}
 
 Vous êtes prêt à utiliser votre nouvelle chaîne d'outils. Votre projet s'intitule maintenant "Upgraded" et un message de confirmation s'affiche sur la page de présentation.
 
-![Image de la carte du projet avec le libellé Upgraded](images/card-upgraded-project.png)
+![Image comportant le libellé Mis à niveau](images/card-upgraded-project.png)
 
 ![Projet mis à niveau](images/banner-upgraded.png)
 
-Vous pouvez voir quels projets sont mis à niveau en sélectionnant **Upgraded Projects** dans le menu de la page Mes projets.
+Vous pouvez voir quels projets sont mis à niveau en sélectionnant **Projets mis à niveau** dans le menu de la page Mes projets.
 
-![Image de l'élément de menu Upgraded Projects](images/menu-upgraded-projects.png)
+![Image illustrant l'élément de menu Projets mis à niveau](images/menu-upgraded-projects.png)
 
 Pour annuler la mise à niveau, supprimez votre chaîne d'outils. Vous pouvez supprimer votre chaîne d'outils du menu **Plus d'actions** sur la page de présentation de
 la chaîne d'outils :
 
-![Image de l'action Supprimer dans le menu Plus d'actions](images/upgrade-tutorial-delete-toolchain.png)
+![Image illustrant l'option Supprimer du menu Plus d'actions](images/upgrade-tutorial-delete-toolchain.png)
 
 Lorsque vous retournez à votre projet, le message de mise à niveau s'affiche à nouveau et vous pouvez renouveler la mise à niveau lorsque vous êtes prêt.
 
@@ -160,18 +162,19 @@ Lorsque vous retournez à votre projet, le message de mise à niveau s'affiche �
 1. Confirmez que la mise à niveau est terminée en actualisant votre navigateur et en recherchant le message indiquant que votre projet "a été mis à niveau vers cette chaîne d'outils" sur
 la page de présentation du projet :
 
-   ![Message dans la bannière indiquant que le projet a été mis à niveau](images/banner-upgraded.png)
+   ![Message indiquant que le projet a été mis à niveau](images/banner-upgraded.png)
 
    **Remarque :** si le message indique "mettre à niveau maintenant", votre mise à niveau a échoué. Cliquez sur le lien **mettre à niveau maintenant**
 pour faire une nouvelle tentative.
 
-   ![Message dans la bannière indiquant que le projet est prêt à être mis à niveau](images/banner-ready-to-upgrade.png)
+   ![Message indiquant que le projet est prêt à être mis à niveau](images/banner-ready-to-upgrade.png)
 
 2. Accordez l'accès à la chaîne d'outils aux membres de votre équipe.
     - Chaque membre d'équipe doit disposer d'un compte {{site.data.keyword.Bluemix_notm}} valide. Les membres de l'équipe qui ne possèdent pas de comptes doivent [s'enregistrer![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/registration){:new_window}.
-    - Accordez aux membres de l'organisation (org) un accès à la chaîne d'outils depuis la page Gérer de la chaîne d'outils. Pour en savoir plus sur le contrôle d'accès aux chaînes d'outils, voir [Gestion des accès ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
+    - Accordez aux membres de l'organisation un accès à la chaîne d'outils depuis la page Gérer de la chaîne d'outils. Des membres de projet existants sont ajoutés en tant que membres de la chaîne d'outils dans le cadre du processus de mise à niveau. Pour en savoir plus sur le contrôle d'accès aux chaînes d'outils, voir [Gestion des accès ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
     - Si un utilisateur n'est pas membre de l'organisation à laquelle appartient la chaîne d'outils, ajoutez-le à l'organisation depuis la page Gérer les organisations.
-      Pour obtenir des informations complémentaires sur la gestions des organisations, voir [Gestion des organisations et des espaces ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
+    - Si votre chaîne d'outils utilise {{site.data.keyword.gitrepos}}, tous les membres du projet JazzHub dotés d'un ID Bluemix valide sont ajoutés au référentiel {{site.data.keyword.gitrepos}} avec les mêmes privilèges que ceux qu'ils avaient dans le projet JazzHub. Si votre projet JazzHub comprend des membres qui ne disposent pas d'un ID Bluemix valide, ceux-ci peuvent s'inscrire pour en obtenir un et vous pouvez les ajouter au référentiel.
+      Pour obtenir des informations complémentaires sur la gestion des organisations, voir [Gestion des organisations et des espaces ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
 
 3. Utilisez les outils de votre chaîne d'outils au lieu des outils de votre projet {{site.data.keyword.jazzhub_short}}. Par exemple, pour modifier le code à partir d'un navigateur, utilisez l'interface IDE Web de votre chaîne d'outils.
 
@@ -183,9 +186,7 @@ pour faire une nouvelle tentative.
     5. Si vous souhaitez réutiliser le référentiel local de votre référentiel JazzHub Git, faites pointer le référentiel vers le nouveau référentiel dans {{site.data.keyword.gitrepos}}. Depuis un interpréteur de commande shell dans un terminal, accédez au répertoire dans lequel le référentiel JazzHub Git est cloné. Entrez la commande `git remote set-url` : `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
         **Astuce :** pour vérifier quelles URL distantes sont définies sur quels noms distants, utilisez la commande `git remote -v`. Le nom distant
-par défaut est `origin`. Si vous disposez d'une configuration plus avancée, le format de la commande est le suivant : `git remote set-url
-<nom-distant-qui-utilise-le-référentiel-jazzhub>
-https://git.ng.bluemix.net/<userid>/<nom-du-nouveau-référentiel>`
+par défaut est `origin`. Si vous disposez d'une configuration plus avancée, le format de la commande est le suivant : `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
 5. Lorsque votre chaîne d'outils est configurée et vous avez commencé de l'utiliser, pensez à suivre toutes ou partie de ces étapes afin de vous assurer que personne n'utilise
 votre projet :
@@ -202,17 +203,24 @@ plus d'informations, voir [Initiation à {{site.data.keyword.DRA_short}}](/docs/
 ## Traitement des incidents
 {: #upgrade_troubleshoot}
 
-Si vous avez des questions ou des problèmes, accédez au [forum de support](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services). Dans votre
+Si un problème se produit lors du processus de mise à niveau, essayez une ou plusieurs des étapes de traitement des incidents suivantes :
+
+- Vérifiez que les [prérequis](#upgrade_prereqs) ont été respectés. Plus spécifiquement, assurez-vous que vous êtes membre de chaque organisation et de chaque espace sur lesquels le pipeline sera déployé. 
+- Si le problème s'est produit lors de votre première tentative de mise à niveau et que tous les prérequis sont respectés, relancez l'opération. 
+- Si votre projet utilise Jazz SCM ou IBM Hosted Git pour le contrôle des sources, vérifiez la taille du référentiel. Si celui-ci fait plus de 500 Mo, [contactez l'équipe de services DevOps![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}.
+- Si votre chaîne d'outils est introuvable ou inaccessible, consultez [cette entrée de FAQ](#faq_find).
+- Si les problèmes persistent, publiez une question sur le [forum de support ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}. Dans votre
 publication de forum, incluez les URL à votre projet {{site.data.keyword.jazzhub_short}} et votre chaîne d'outils {{site.data.keyword.contdelivery_short}} et signalez votre
 publication avec l'étiquette `devops-services`.
-   
+
+
 ## Foire aux questions
 {: #upgrade_faq}
 
 ### Mon projet JazzHub est associé à la région Royaume-Uni, mais ma chaîne d'outils se trouvera dans la région Sud des Etats-Unis. Comment cela va-t-il fonctionner ?
 {: #faq_region}
 
-Les projets sur hub.jazz.net et les chaînes d'outils sont hébergés dans la région Sud des Etats-Unis. Si votre projet a été configuré pour déployer des applications dans une autre région, comme la région Royaume-Uni, il déploiera quand même les applications dans cette région après avoir été mis à niveau dans une chaîne d'outils. Aucune modification n'est donc réellement apportée quant à l'emplacement d'hébergement des données. A l'avenir, les chaînes d'outils seront disponibles dans davantage de régions. 
+Les projets sur hub.jazz.net et les chaînes d'outils sont hébergés dans la région Sud des Etats-Unis. Si votre projet a été configuré pour déployer des applications dans une autre région, comme la région Royaume-Uni, il déploiera quand même les applications dans cette région après avoir été mis à niveau dans une chaîne d'outils. Aucune modification n'est donc réellement apportée quant à l'emplacement d'hébergement des données. A l'avenir, les chaînes d'outils seront disponibles dans davantage de régions.
 
 ### Qu'arrivera-t-il à mes éléments de travail et mes tableaux de bord dans Track &amp; Plan lors de la mise à niveau ?
 {: #faq_tp}
@@ -227,7 +235,7 @@ Ce nouveau service IBM Track and Plan on Cloud propose une fonctionnalité beauc
 
 Pour plus d'informations sur IBM Track and Plan on Cloud, ou pour effectuer un achat en ligne, visitez le site Web [IBM Marketplace ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}.
 
-[Rational Team Concert on Cloud ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window} vous permet également de bénéficier en plus des fonctions d'automatisation de la construction et de gestion du code source.   
+[Rational Team Concert on Cloud ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window} vous permet également de bénéficier en plus des fonctions d'automatisation de la construction et de gestion du code source.
 
 ### Qu'arrivera-t-il à mon référentiel de code lors de la mise à niveau ?
 {: #faq_repo}
@@ -236,7 +244,7 @@ Une fois la mise à niveau effectuée, votre nouveau service Git sera comparable
 
 Pour obtenir des informations détaillées sur la manière dont chaque type de référentiel est traité lors de la mise à niveau, veuillez vous reporter au tableau ci-dessous.
 
-|Référentiel de projet |Type de projet	|Référentiel de chaîne d'outils |
+|Référentiel de projet |Type de projet |Référentiel de chaîne d'outils |
 |:----------|:------------------------------|:------------------|
 |github.com 		|Privé ou public 		|Le même référentiel github.com avec {{site.data.keyword.Bluemix_notm}} Public.	|
 |hub.jazz.net/git		|Privé ou public 		|Un nouveau référentiel privé ou public dans {{site.data.keyword.gitrepos}} avec {{site.data.keyword.Bluemix_notm}} Public.	|
@@ -246,7 +254,7 @@ Pour obtenir des informations détaillées sur la manière dont chaque type de r
 ### Qu'arrivera-t-il à mes définitions de génération dans mon projet lors de la mise à niveau vers une chaîne d'outils ?
 {: #faq_build}
 
-Si vous générez votre code source avec Jazz à la place de Delivery Pipeline, vous devez migrer manuellement vos définitions de génération vers Delivery Pipeline dans votre chaîne d'outils.  
+Si vous générez votre code source avec Jazz à la place de Delivery Pipeline, vous devez migrer manuellement vos définitions de génération vers Delivery Pipeline dans votre chaîne d'outils.
 
 Si vous utilisez Jazz SCM comme référentiel source et Delivery Pipeline pour générer votre code, le source de Jazz SCM est automatiquement déplacé vers un référentiel Git. Votre configuration Delivery Pipeline reste la même, mais consomme le source issu du référentiel Git à la place du source de Jazz SCM.
 
@@ -255,4 +263,57 @@ Si vous utilisez Jazz SCM comme référentiel source et Delivery Pipeline pour g
 
 En tant que [client de type Paiement à la carte ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}, si vous utilisez un contexte d'exécution, un service ou un composant au-delà des allocations gratuites répertoriées dans le catalogue Bluemix, vous êtes facturé. Pour avoir une estimation de votre utilisation, reportez-vous à la  [fiche de prix ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}. Pour connaître la tarification en cours de Continuous Delivery, voir le [catalogue Bluemix ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}.
 
-Si vous êtes un employé IBM, les projets IBM internes peuvent être facturés aux départements, à la place d'une carte de crédit personnelle. Si vous avez besoin d'utiliser des ressources au-delà des allocations gratuites destinées aux employés IBM, créez un ticket de demande de service. 
+Si vous êtes un employé IBM, les projets IBM internes peuvent être facturés aux départements, à la place d'une carte de crédit personnelle. Si vous avez besoin d'utiliser des ressources au-delà des allocations gratuites destinées aux employés IBM, créez un ticket de demande de service.
+
+### Ma chaîne d'outils est introuvable ou inaccessible. Que dois-je faire ?
+{: #faq_find}
+
+Les chaînes d'outils sont hébergées dans des organisations Bluemix. Le processus de mise à niveau ajoute tous les membres du projet JazzHub à la chaîne d'outils. Cela dit, si ces utilisateurs ne sont pas ajoutés à l'organisation Bluemix par le propriétaire de cette dernière, ils ne peuvent pas voir la chaîne d'outils. 
+
+Pour accéder à votre chaîne d'outils, accédez à Bluemix, cliquez sur l'icône de menu, puis sur **Services &gt; DevOps**. La page Chaîne d'outils s'affiche. Vérifiez que vous vous trouvez dans la région Sud des Etats-Unis et que vous avez été ajouté à l'organisation qui contient la chaîne d'outils. Si votre chaîne d'outils n'apparaît pas sur la page Chaînes d'outils, consultez [cette entrée de FAQ](#faq_uk).
+
+Sinon, tant que le site JazzHub est encore disponible, vous pouvez aussi accéder à votre chaîne d'outils en cliquant sur le lien dans la bannière figurant sur la page de présentation de votre projet. 
+
+### Mon projet est associé à la région Royaume-Uni. Après la mise à niveau, des messages d'erreur apparaissent, mes collègues ne peuvent pas accéder à la chaîne d'outils et ma chaîne d'outils n'apparaît pas sur la page Chaînes d'outils de Bluemix. Qu'est-ce qui ne va pas ?
+{: #faq_uk}
+
+**Question complète :**
+
+Mon projet JazzHub est associé à la région Royaume-Uni de {{site.data.keyword.Bluemix_notm}} conformément aux paramètres du projet. J'ai vérifié les paramètres de mon projet en accédant à la page de présentation le concernant sur JazzHub, en cliquant sur l'icône **Settings** (qui ressemble à un engrenage) et en cliquant sur **Options &gt; Make this a Bluemix Project: Region**. Après la mise à niveau du projet vers une chaîne d'outils aux Etats-Unis, les problèmes suivants se sont produits : 
+
+   1. Lorsque je sélectionne l'organisation américaine, un message indiquant que cette organisation ne comporte pas d'espace dans la région Sud des Etats-Unis s'affiche et je suis invité à créer un espace. Je ne veux rien exécuter aux Etats-Unis. 
+   
+   2. Certains de mes collègues ne peuvent pas accéder à la chaîne d'outils, pourtant ils apparaissaient en tant que membres dans le projet JazzHub initial. S'ils tentent d'ouvrir la chaîne d'outils à partir de la page de présentation de l'application dans la région Etats-Unis en cliquant sur **Afficher la chaîne d'outils**, un message "accès refusé"  s'affiche. 
+   
+   3. La chaîne d'outils répertoriée sur ma page Chaînes d'outils n'apparaît pas sur [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window}, en revanche, je peux y accéder directement à partir de la page de présentation de l'application dans la région Etats-Unis en cliquant sur **Afficher la chaîne d'outils**. J'obtiens un message d'erreur indiquant que je ne peux pas modifier la chaîne d'outils ou que je possède pas de chaîne d'outils et que je dois en créer une.  
+
+**Réponse :**
+
+Ces problèmes peuvent se produire si vous êtes issu d'une organisation {{site.data.keyword.Bluemix_notm}} non américaine et que vous n'avez pas étendu explicitement votre organisation dans la région Sud des Etats-Unis avant la mise à niveau. Vous pouvez vérifier cela de deux façons :
+
+   * Lorsque vous ouvrez l'URL de chaîne d'outils, vérifiez l'en-tête {{site.data.keyword.Bluemix_notm}}. La plupart du temps, seul le nom de votre organisation apparaît et aucun espace n'est indiqué. 
+   
+   * A partir de la page de présentation de votre chaîne d'outils, cliquez sur **Gérer**. Sur la page de contrôle d'accès, cliquez sur **Responsables de l'organisation**. L'organisation qui contient la chaîne d'outils s'affiche sur la page principale. 
+
+Voici ce qu'il s'est passé : au moment de la mise à niveau, votre organisation non américaine n'existait pas aux Etats-Unis, par conséquent, la mise à niveau a sélectionné une autre organisation pour vous en en recherchant une autre à laquelle il vous est arrivé d'accéder. 
+
+Si vous passez dans cette organisation {{site.data.keyword.Bluemix_notm}} américaine, la chaîne d'outils apparaîtra. Si vous ajoutez vos collègues à cette organisation, un accès leur sera accordé. Cette chaîne d'outils peut continuer à être déployée sur votre organisation non américaine. Le seul problème est que ces deux organisations sont distinctes ; la gestion des utilisateurs ne peut pas s'effectuer automatiquement sur les deux. 
+
+Si vous souhaitez que votre chaîne d'outils figure dans une organisation américaine correspondant à votre organisation non américaine, procédez comme suit :
+
+   1. Connectez-vous à [https://console.bluemix.net ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net){: new_window} et sélectionnez la région et l'organisation non américaines dont vous êtes issu. 
+   
+   2. Dans l'en-tête {{site.data.keyword.Bluemix_notm}}, passez dans la région Sud des Etats-Unis. Vous serez invité à créer un espace dans cette région.
+   
+   3. Créez un espace dans la région Sud des Etats pour étendre votre organisations dans cette région.  
+   
+   4. Supprimez la chaîne d'outils qui a été créée via le processus de mise à niveau.  
+   
+      **Remarque :** le référentiel Git n'est pas supprimé automatiquement. Vous souhaiterez peut-être le supprimer manuellement ou le renommer pour le moment. Si vous l'avez déjà modifié, vous pourrez passer à la future chaîne d'outils pour l'utiliser ultérieurement. 
+
+   5. Revenez au projet JazzHub. Normalement, il doit être automatiquement réinitialisé pour permettre une autre tentative de mise à niveau. Si tel n'est pas le cas, contactez hub@jazz.net en indiquant l'URL du projet. 
+   
+   6. Redémarrez le processus de mise à niveau en prenant soin de sélectionner l'organisation dans la région Etats-Unis qui correspond au nom de votre organisation dans la région hors des Etats-Unis. 
+   
+   7. Si vous avez conservé ou renommé le référentiel Git issu de votre précédente tentative de mise à niveau de chaîne d'outils (voir l'étape 4), vous pouvez reconfigurer la carte Git dans votre chaîne d'outils pour qu'elle pointe vers l'URL du référentiel Git. Cette modification est automatiquement répercutée dans le pipeline. Pour le vérifier, consultez l'onglet Entrée sur l'étape Génération. 
+

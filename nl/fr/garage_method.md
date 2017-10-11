@@ -21,7 +21,7 @@ lastupdated: "2017-6-5"
 # Pratiques de distribution continue
 {: #gm_cd_best}
 
-![Phases de Garage Method](images/garage_method_phases.png) [IBM Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method){:new_window} est l'approche IBM qui permet de
+![Phases de Garage Method](images/garage_method_phases.png) [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method){:new_window} est l'approche IBM qui permet de
 distribuer rapidement des applications d'engagement. Elle combine la distribution continue avec des pratiques agiles, IBM Design Thinking, lean et DevOps. Ces
 pratiques sont axées sur le cloud, mais peuvent profiter de tous les efforts déployés en matière de développement logiciel.
 
@@ -34,7 +34,7 @@ Pour découvrir comment adopter une approche de distribution continue dans votre
 ## Articles sur la distribution continue
 {: #gm_cd_articles}
 
-Ces articles fournissent des présentations conceptuelles de la distribution continue.
+Le site Cloud Garage Method contient des articles décrivant la distribution continue à un niveau élevé. 
 
 La [distribution continue ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window} est une pratique dans laquelle vous générez et déployez vos logiciels afin qu'ils puissent être envoyés en production à tout moment. L'une des marques de fabrique de l'informatique consiste à raccourcir les divers temps de cycle au cours du processus d'opérations et de développement.
 
@@ -51,7 +51,7 @@ La [distribution continue ![Icône de lien externe](../../icons/launch-glyph.svg
 
 [Créez et utilisez une chaîne d'outils de microservices avec {{site.data.keyword.DRA_short}} (v2) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}. Apprenez à configurer une chaîne d'outils ouverte qui développe et distribue de manière continue une application de microservices.
 
-[Créez une chaîne d'outils qui utilise {{site.data.keyword.gitrepos}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}. Créez une chaîne d'outils ouverte à partir d'un modèle qui inclut une application Cloud Foundry et utilise {{site.data.keyword.gitrepos}}. Utilisez ensuite la chaîne d'outils pour distribuer l'application de manière continue. 
+[Créez une chaîne d'outils qui utilise {{site.data.keyword.gitrepos}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}. Créez une chaîne d'outils ouverte à partir d'un modèle qui inclut une application Cloud Foundry et utilise {{site.data.keyword.gitrepos}}. Utilisez ensuite la chaîne d'outils pour distribuer l'application de manière continue.
 
 [Créez un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}. Apprenez à démarrer avec un pipeline et à créer une chaîne d'outils ouverte qui inclut un référentiel GitHub et le pipeline.
 

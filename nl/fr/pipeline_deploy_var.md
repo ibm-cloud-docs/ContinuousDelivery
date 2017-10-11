@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-17"
+lastupdated: "2017-7-10"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -20,8 +20,7 @@ lastupdated: "2016-11-17"
 {: #deliverypipeline_environment}
 
 Vous pouvez utiliser des propriétés d'environnement et des
-ressources pré-installées pour interagir avec le service IBM&reg; Bluemix&reg;
-{{site.data.keyword.deliverypipeline}}. Par exemple, vous souhaiterez peut-être les intégrer dans un script de travail oui une commande de test.
+ressources préinstallées pour interagir avec le dispositif de pipeline d'{{site.data.keyword.contdelivery_full}}. Par exemple, vous souhaiterez peut-être les intégrer dans un script de travail oui une commande de test.
 {:shortdesc}
 
 Vous pouvez ajouter vos propres propriétés d'environnement à une étape à partir de son onglet **PROPRIETES D'ENVIRONNEMENT**. Des propriétés d'environnement sont disponibles pour chaque travail d'une étape.
@@ -66,8 +65,9 @@ défaut dans les environnements de pipeline.
 | IDS_PROJECT_NAME | Nom du projet, par exemple, <code>Propriétaire - Nom du projet</code>. |
 | IDS_STAGE_NAME | Nom de l'étape en cours. |
 | IDS_URL | URL du pipeline en cours. |
-| IDS_VERSION | Numéro de la génération qui est déployée ou identificateur SCM. Cette propriété est disponible uniquement pour les travaux de déploiement.
+| IDS_VERSION | Numéro de la génération qui est déployée ou identificateur SCM. Cette propriété est disponible uniquement dans les travaux de déploiement.
 | JOB_NAME | ID de travail unique dans le contexte du pipeline en cours. |
+| PIPELINE_KUBERNETES_CLUSTER_NAME | Nom du cluster Kubernetes sélectionné dans le travail en cours. |
 | PIPELINE_STAGE_INPUT_JOB_ID | ID du travail en entrée pour l'étape en cours. |
 | PIPELINE_STAGE_INPUT_REV | Révision de l'entrée pour l'étape en cours. |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | ID unique pour l'exécution du pipeline. |
@@ -80,12 +80,15 @@ défaut dans les environnements de pipeline.
 | Propriété d'environnement | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | ANT_HOME | Chemin d'accès à Apache Ant 1.9.2. |
+| ANT_JAVA8_HOME | Chemin d'accès à une version 1.10+ d'Apache Ant qui nécessite Java 8. |
 | GRADLE_HOME | Chemin d'accès à Gradle 1.11. |
 | JAVA_HOME | Chemin d'accès à IBM&reg; Java&trade; 7. |
 | JAVA7_HOME | Chemin d'accès à IBM Java 7. |
 | JAVA8_HOME | Chemin d'accès à IBM Java 8. |
 | MAVEN_HOME | Chemin d'accès à Apache Maven 3.2.1. |
 | NODE_HOME | Chemin d'accès à Node.js 0.10.29. |
+
+**Astuce** : vous pouvez utiliser la version 1.10+ d'Apache Ant dans les scripts de votre pipeline en affectant à `ANT_HOME` la valeur `$ANT_JAVA8_HOME` et en affectant à `JAVA_HOME` la valeur `$JAVA8_HOME`.
 
 ### Propriétés de déploiement
 
