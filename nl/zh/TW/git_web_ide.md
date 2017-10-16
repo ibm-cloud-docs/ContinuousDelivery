@@ -14,9 +14,9 @@ lastupdated: "2017-6-1"
 # 在 Eclipse Orion Web IDE 中使用 Git
 {: #git_web_ide}
 
-當您使用 Eclipse Orion {{site.data.keyword.webide}} 時，不需要 Git 終端機：您可以在 Web IDE 中執行多個一般 Git 指令。
+您可以在 Eclipse Orion {{site.data.keyword.webide}} 中執行許多一般 Git 指令。
 
-不管您在哪裏編寫程式碼，都可以使用此快速參照來執行一般作業。
+不管您在哪裏編寫程式碼，都可以使用此快速參照來執行一般作業。會盡可能顯示 Git 指令與其在 Web IDE 中的對等項目。 
 
 ## 建立本端分支
 {: #create_branch}
@@ -139,14 +139,14 @@ lastupdated: "2017-6-1"
 
 1. 按一下 **graphical representation toggle** 圖示 <img  class="inline" src="./images/graphicalhistoryicon.png" alt="「圖形歷程」圖示">。
 
-  切換之後，會將作用中分支的確定歷程以及任何送入或送出變更繪製為已連接的圖形。視覺化表示法會顯示所有確定以及它們在其上進行的分支。
+  切換時，會將作用中分支的確定歷程以及任何送入或送出變更繪製為已連接的圖形。視覺化表示法會顯示所有確定以及它們在其上進行的分支。
 
   <img class="screen-shot" src="./images/visualhistoryexample.png" alt="視覺化確定歷程">
 
 ### Git 終端機
 1. 鍵入 `git log`，然後按 Enter 鍵。
 
-2. 導覽確定者的確定。
+2. 瀏覽確認者的確定。
  * 若要檢視更多項目，請按 Page Down 鍵。
  * 若要檢視先前的項目，請按 Page Up 鍵。
 

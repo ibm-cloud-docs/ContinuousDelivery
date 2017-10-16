@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-5-11"
 
 ---
 
@@ -18,10 +18,10 @@ lastupdated: "2017-3-16"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 延伸 {{site.data.keyword.deliverypipeline}}
+# 延伸 Delivery Pipeline
 {: #deliverypipeline_extending}
 
-將工作配置成使用支援的服務，即可延伸 {{site.data.keyword.deliverypipeline}} 功能。例如，測試工作可以執行靜態程式碼掃描，建置工作則可以將字串進行全球化。
+您可以配置工作使用支援的服務，來延伸 {{site.data.keyword.contdelivery_full}} 的 {{site.data.keyword.deliverypipeline}} 功能。例如，測試工作可以執行靜態程式碼掃描，建置工作則可以將字串進行全球化。
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -32,9 +32,9 @@ lastupdated: "2017-3-16"
 
 {: #deliverypipeline_scan}
 
-要在部署程式碼之前找出其中的安全問題嗎？如果您將 IBM® Static Analyzer for Bluemix™ 當成管線的一部分來使用，則可以針對 Java™ 應用程式的靜態 `.war`、`.ear`、`.jar` 或 `.class` 建置二進位檔來執行自動化檢查。
+要在部署程式碼之前找出其中的安全問題嗎？如果您將 {{site.data.keyword.staticanalyzerfull}} 當成管線的一部分來使用，則可以針對 Java™ 應用程式的靜態 `.war`、`.ear`、`.jar` 或 `.class` 建置二進位檔來執行自動化檢查。
 
-使用 Static Analyzer 服務的管線通常包含下列階段：
+使用 {{site.data.keyword.staticanalyzershort}} 服務的管線通常包括下列階段：
 
 + 用來建置原始檔的建置階段
 + 包含下列工作的處理階段：
@@ -57,7 +57,7 @@ lastupdated: "2017-3-16"
 
   c. 針對輸入類型，選取**建置構件**。
 
-  d. 針對階段和工作，驗證值並在必要時予以更新。
+  d. 針對階段及工作，驗證值並在必要時予以更新。
 
 2. 在處理階段中，新增建置工作來執行程式碼掃描。
 
@@ -71,13 +71,13 @@ lastupdated: "2017-3-16"
 
   e. 視需要，選取或清除**為我設定服務及空間**勾選框。
 
-    * 如果您要管線檢查 Bluemix 空間，尋找服務以及將服務連結至容器的應用程式，請選取此勾選框。如果服務或所連結的應用程式不存在，則管線會將服務的免費方案新增至您的空間。建立的已連結應用程式命名為 `pipeline_bridge_app`。然後，管線會使用來自 pipeline_bridge_app 的認證，以存取連結的服務。
+    * 如果您要管線檢查 {{site.data.keyword.Bluemix_short}} 空間來尋找服務以及將服務連結至容器的應用程式，請選取此勾選框。如果服務或所連結的應用程式不存在，則管線會將服務的免費方案新增至您的空間。建立的已連結應用程式命名為 `pipeline_bridge_app`。然後，管線會使用來自 pipeline_bridge_app 的認證，以存取連結的服務。
 
-    * 如果您已在 Bluemix 空間中配置服務及連結的應用程式，或者要[手動配置這些需求](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}，請清除此勾選框。
+    * 如果您已在 {{site.data.keyword.Bluemix_short}} 空間中配置服務及連結的應用程式，或者要[手動配置這些需求](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}，請清除此勾選框。
 
-  f. 在**等待分析完成的分鐘數**欄位中，鍵入 0 - 59 分鐘的值。預設值為 5 分鐘。在工作結束時，Static Analyzer 儀表板的 URL 是在主控台日誌中。
+  f. 在**等待分析完成的分鐘數**欄位中，鍵入 0 - 59 分鐘的值。預設值為 5 分鐘。在工作結束時，{{site.data.keyword.staticanalyzershort}} 儀表板的 URL 是在主控台日誌中。
 
-     如果 Static Analyzer 掃描未在指定的時間之前完成，則工作會失敗。不過，掃描分析會繼續執行，而且您可以在 Static Analyzer 儀表板上進行檢視。Static Analyzer 掃描完成之後，如果您重新執行工作，則不會重新提交掃描要求，而且可以完成管線工作。您也可以配置在掃描結果成功時不封鎖管線。如需指示，請參閱下一步。
+     如果 {{site.data.keyword.staticanalyzershort}} 掃描未在指定的時間之前完成，則工作會失敗。不過，掃描分析會繼續執行，而且您可以在 {{site.data.keyword.staticanalyzershort}} 儀表板上進行檢視。{{site.data.keyword.staticanalyzershort}} 掃描完成之後，如果您重新執行工作，則不會重新提交掃描要求，而且可以完成管線工作。您也可以配置在掃描結果成功時不封鎖管線。如需指示，請參閱下一步。
 
   g. 視您想要在此工作失敗或逾時採取何種作法而定，選取或清除**如果此工作失敗，停止執行此階段**勾選框。漏洞數太高時，工作會失敗。
 
@@ -106,7 +106,7 @@ lastupdated: "2017-3-16"
 **擱置掃描**
 ![範例擱置掃描](images/analyzer_pending.png)
 
-如需使用 Static Analyzer 服務的相關資訊，請參閱 [Static Analyzer 服務文件](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}。
+如需使用 {{site.data.keyword.staticanalyzershort}} 服務的相關資訊，請參閱 [{{site.data.keyword.staticanalyzershort}} 服務文件](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}。
 
 <!--
 
@@ -177,7 +177,7 @@ For more information about using the Globalization Pipeline service from the Blu
 ## 在管線中建立建置的 Slack 通知
 {: #deliverypipeline_slack}
 
-您可以將 IBM Container Service、IBM Security Static Analyzer 及 IBM Globalization 建置結果的相關通知，從 Delivery Pipeline 傳送至 Slack 頻道。
+您可以將 {{site.data.keyword.containerlong}}、{{site.data.keyword.staticanalyzershort}} 及 {{site.data.keyword.globalizationfull}} 建置結果的相關通知，從 Delivery Pipeline 傳送至 Slack 頻道。
 
 開始之前，請建立或複製 Slack WebHook URL：
 
@@ -195,7 +195,7 @@ For more information about using the Globalization Pipeline service from the Blu
 3. 選取**文字內容**。
 4. 輸入環境內容的名稱及值。重複以建立多個環境內容。
 
-  *表格 1. 用於配置 Slack 通知的環境內容*
+  _表格 1. 用於配置 Slack 通知的環境內容_
 
   <table>
   <tr>
@@ -256,7 +256,7 @@ Slack 中所顯示的建置通知，會包含專案的鏈結，可能還會包�
 3. 選取**文字內容**。
 4. 輸入環境內容的名稱及值。重複以建立多個環境內容。
 
-  *表格 2. 用於配置 HipChat 通知的環境內容*
+  _表格 2. 用於配置 HipChat 通知的環境內容_
 
   <table>
   <tr>

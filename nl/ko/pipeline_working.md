@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-25"
+lastupdated: "2017-09-05"
 
 ---
 
@@ -12,17 +12,14 @@ lastupdated: "2017-5-25"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.deliverypipeline}}에 대한 작업 {: #pipeline-working}
+# 파이프라인에 대한 작업 {: #pipeline-working}
 
-빌드와 {{site.data.keyword.Bluemix}}에 대한 배치를 자동화하려면 {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}를 사용하십시오.
+빌드와 {{site.data.keyword.Bluemix}}에 대한 배치를 자동화하려면 {{site.data.keyword.contdelivery_full}} 파이프라인을 사용하십시오.
 {: shortdesc}
 
-{{site.data.keyword.deliverypipeline}}을 사용하면 여러 빌드 유형 중에서 선택할 수 있습니다. 사용자가 빌드 스크립트를
-		제공하면 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}}에서 이 스크립트를 실행합니다. 사용자가 빌드 시스템을 설정할
-		필요는 없습니다. 그러면 한 번의 클릭으로 하나 또는 다수의 {{site.data.keyword.Bluemix_notm}} 영역, 공용 Cloud Foundry 서버 또는 IBM Containers for {{site.data.keyword.Bluemix_notm}}의 Docker 컨테이너에 앱을 자동적으로 배치할 수 있습니다. 
+파이프라인을 사용하면 여러 빌드 유형 중에서 선택할 수 있습니다. 사용자가 빌드 스크립트를 제공하면 {{site.data.keyword.contdelivery_short}}에서 이 스크립트를 실행합니다. 사용자가 빌드 시스템을 설정할 필요는 없습니다. 그러면 한 번의 클릭으로 하나 또는 다수의 {{site.data.keyword.Bluemix_notm}} 영역, 공용 Cloud Foundry 서버 또는 IBM Containers for {{site.data.keyword.Bluemix_notm}}의 Docker 컨테이너에 앱을 자동적으로 배치할 수 있습니다. 
 
-빌드 작업은 Git 저장소에서 앱 소스 코드를 컴파일하고 패키지합니다. 빌드 작업을 통해 WAR 파일 또는 IBM Containers용 Docker 컨테이너와 같은 배치 가능한 아티팩트가 생성됩니다. 또한, 빌드 내에서 단위 테스트를
-				자동으로 실행할 수 있습니다. 커미트가 푸시될 때마다 빌드가 트리거되도록 빌드 작업을 설정할 수 있습니다.
+빌드 작업은 Git 저장소에서 앱 소스 코드를 컴파일하고 패키지합니다. 빌드 작업을 통해 WAR 파일 또는 IBM Containers용 Docker 컨테이너와 같은 배치 가능한 아티팩트가 생성됩니다. 또한, 빌드 내에서 단위 테스트를 자동으로 실행할 수 있습니다. 커미트가 푸시될 때마다 빌드가 트리거되도록 빌드 작업을 설정할 수 있습니다.
 
 배치 작업은 빌드 작업의 결과물을 가져와 IBM Containers 또는 {{site.data.keyword.Bluemix_notm}}와 같은 Cloud Foundry 서버에 배치합니다. 
 
@@ -61,8 +58,8 @@ Cloud Foundry 애플리케이션을 배치하도록 구성된 [파이프라인 �
    * 가져오기 요청을 통해 변경사항을 제공할 수 있도록 저장소를 분기하려면 **분기**를 선택하십시오. 저장소의 위치를 검색하거나 사용 가능한 저장소 목록에서 저장소를 선택하십시오.
 
 1. 저장소를 선택하거나 저장소 URL을 입력하십시오. 
-1. **작성**을 클릭하십시오.  도구 체인의 개요 페이지에 파이프라인이 작성되고 구성되어 표시됩니다.
- ![파이프라인 카드](images/cd_pipeline.png)
+1. **작성**을 클릭하십시오. 도구 체인의 개요 페이지에 파이프라인이 작성되고 구성되어 표시됩니다.
+![파이프라인 카드](images/cd_pipeline.png)
 1. 컴포지트 파이프라인이 포함된 도구 체인에서 파이프라인을 작성한 경우에는 새 파이프라인이 컴포지트 파이프라인에 추가됩니다. 새 파이프라인의 배치 태스크가 포함되도록 배치 플랜을 수정하십시오. [Delivery Pipeline 작성 태스크](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}를 참조하십시오. 
 
 사전 구성된 단계 없이 [비어 있는 파이프라인 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window}을 작성하려면 다음을 수행하십시오. 
@@ -74,3 +71,9 @@ Cloud Foundry 애플리케이션을 배치하도록 구성된 [파이프라인 �
 1. **작성**을 클릭하십시오. 비어 있는 파이프라인이 작성되며 도구 체인의 개요 페이지에 카드로서 표시됩니다. 
 
 {{site.data.keyword.deliverypipeline}}에서 구성을 변경하십시오. 빌드 상태, 배치된 앱 및 최근 배치를 확인하십시오. 최신 로그와 배치 세부사항을 확인하거나 파이프라인을 삭제하십시오. 
+
+## 튜토리얼 보기: {{site.data.keyword.deliverypipeline}}
+{: #pipeline-tutorial}
+
+[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method){:new_window}에 있는 다음 튜토리얼을 확인하십시오. 
+  * [파이프라인 작성![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}

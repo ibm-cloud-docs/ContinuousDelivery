@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-5-17"
+lastupdated: "2017-7-24"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -34,7 +34,7 @@ lastupdated: "2017-5-17"
 * 在正常开发流程中用于助长仇恨言论的站点或服务，或者违反 IBM 商业行为准则的其他活动。
 * 使用事件生成行为，对 {{site.data.keyword.Bluemix_notm}} 或其他站点进行恶意侵入或攻击
 
-对于违反 {{site.data.keyword.contdelivery_short}} 服务或 [IBM 商业行为准则 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/investor/governance/business-conduct-guidelines.html){: new_window} 的可接受使用行为的用户，IBM 将酌情直接禁用而不另行通知。如果用户在收到攻击行为的通知后更正了其使用行为，IBM 将酌情复原一些服务。否则，可能会暂挂或终止帐户。
+如果用户违反了 {{site.data.keyword.contdelivery_short}} 服务或 [IBM 商业行为准则 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/investor/governance/business-conduct-guidelines.html){: new_window} 规定的可接受使用行为，那么 IBM 将酌情直接禁用而不另行通知。如果用户在收到攻击行为的通知后更正了其使用行为，IBM 将酌情复原一些服务。否则，可能会暂挂或终止帐户。
 
 ## Git Repos and Issue Tracking 限制
 {: #git_limitations}
@@ -69,9 +69,9 @@ lastupdated: "2017-5-17"
 
 <!-- The email address that is associated with your profile page is derived from your {{site.data.keyword.Bluemix_notm}} account details. To modify the email address that is displayed on your profile page, modify your {{site.data.keyword.Bluemix_notm}} account. -->
 
-## 已弃用的服务
-{: #deprecated_services}
+<!-- ## Deprecated services
+{: #deprecated_services} -->
 
-属于 IBM Bluemix {{site.data.keyword.jazzhub_short}} (JazzHub) 的 {{site.data.keyword.trackplan}} 和 {{site.data.keyword.deliverypipeline}} Classic 已引退。有关更多信息，请参阅 [Track & Plan 引退 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2017/04/track-plan-retirement/){: new_window} 和 [Delivery Pipeline 引退 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2017/04/delivery-pipeline-retirement/){: new_window}。
+<!--{{site.data.keyword.trackplan}} and {{site.data.keyword.deliverypipeline}} Classic, which are part of IBM Bluemix {{site.data.keyword.jazzhub_short}} (JazzHub), are being retired. For more information, see [Track & Plan Retirement ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/04/track-plan-retirement/){: new_window} and [Delivery Pipeline Retirement ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/04/delivery-pipeline-retirement/){: new_window}. -->
 
-从 5 月 25 日开始，无法创建新的 JazzHub 项目。通过自动滚动升级，JazzHub 项目将升级到 {{site.data.keyword.contdelivery_short}} 工具链。JazzHub 站点将在 7 月初从服务中除去。有关升级的更多信息，请参阅[将 JazzHub 项目升级到 Bluemix Continuous Delivery 工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/devops-services/2017/4/18/upgrading-jazzhub-projects-bluemix-continuous-delivery-toolchains/){: new_window}
+<!-- Starting on May 25, no new JazzHub projects can be created. Through automatic rolling upgrades, JazzHub projects will be upgraded to {{site.data.keyword.contdelivery_short}} toolchains. The JazzHub site will be removed from service in early July. For more information about the upgrade, see [Upgrading JazzHub project to Bluemix Continuous Delivery toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2017/4/18/upgrading-jazzhub-projects-bluemix-continuous-delivery-toolchains/){: new_window} -->

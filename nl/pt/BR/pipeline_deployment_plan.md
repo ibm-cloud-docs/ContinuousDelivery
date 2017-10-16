@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-4-11"
+lastupdated: "2017-08-15"
 
 ---
 
@@ -74,7 +74,7 @@ Geralmente, as tarefas manuais representam alguma atividade que está associada 
 
 Para criar uma tarefa manual, siga estas etapas:
 
-1. Na página Detalhes do plano de implementação, clique em **Criar tarefa**. Para inserir uma tarefa em uma posição específica no plano, antes de clicar em **Criar tarefa**, selecione uma tarefa. A nova tarefa é inserida acima da tarefa selecionada.
+1. Na página Detalhes do plano de implementação, clique em **Criar tarefa**. Para inserir uma tarefa em uma posição específica no plano, antes de clicar em **Criar tarefa**, selecione uma tarefa. A nova tarefa é inserida antes da tarefa selecionada.
 
 1. Na janela Criar tarefa, na lista **Tipo**, selecione **Manual**.
 
@@ -105,7 +105,7 @@ Para criar uma tarefa atrasada, siga estas etapas:
 
 1. No campo **Nome**, digite um nome para a tarefa.
 
-3. No campo **Horário**, insira ou selecione o horário em que a tarefa será concluída.
+3. No campo **Horário**, insira ou selecione o horário em que a tarefa deve ser concluída.
 
 3. Na lista **Fuso horário**, selecione o fuso horário para o valor que será inserido no campo **Horário**.    
 
@@ -120,7 +120,7 @@ As tarefas de cabeçalho representam elementos da organização que podem ser in
 
 Para criar uma tarefa de cabeçalho, siga estas etapas:
 
-1. Na página Detalhes do plano de implementação, clique em **Criar tarefa**. Se desejar inserir uma tarefa em uma posição específica no plano, antes de clicar em **Criar tarefa**, selecione uma tarefa. A nova tarefa é inserida acima da tarefa selecionada.
+1. Na página Detalhes do plano de implementação, clique em **Criar tarefa**. Se desejar inserir uma tarefa em uma posição específica no plano, antes de clicar em **Criar tarefa**, selecione uma tarefa. A nova tarefa é inserida antes da tarefa selecionada.
 
 1. Na janela Criar tarefa, na lista **Tipo**, selecione **Cabeçalho**.
 
@@ -137,7 +137,7 @@ No serviço {{site.data.keyword.contdelivery_short}}, o {{site.data.keyword.deli
 
 Para criar uma tarefa do Delivery Pipeline, siga estas etapas:
 
-1. Na página Detalhes do plano de implementação, clique em **Criar tarefa**. Se desejar inserir uma tarefa em uma posição específica no plano, antes de clicar em **Criar tarefa**, selecione uma tarefa. A nova tarefa é inserida acima da tarefa selecionada.
+1. Na página Detalhes do plano de implementação, clique em **Criar tarefa**. Se desejar inserir uma tarefa em uma posição específica no plano, antes de clicar em **Criar tarefa**, selecione uma tarefa. A nova tarefa é inserida antes da tarefa selecionada.
 
 1. Na janela Criar tarefa, na lista **Tipo**, selecione **Continuous Delivery Pipeline**.
 
@@ -154,9 +154,9 @@ Para criar uma tarefa do Delivery Pipeline, siga estas etapas:
 ## Gerenciando grupos de tarefas
 {: #tasks_groups}
 
-É possível combinar duas ou mais tarefas em um grupo de tarefas. Ao criar um grupo, você define o padrão de execução do grupo, que é sequencial ou paralelo. É possível executar as tarefas em um grupo de padrão paralelo em qualquer ordem e podem ser executadas simultaneamente, a menos que existam dependências. As tarefas em grupos sequenciais são feitas na ordem da lista, começando com a primeira tarefa ou a tarefa mais elevada.
+É possível combinar duas ou mais tarefas em um grupo de tarefas. Ao criar um grupo, você define o padrão de execução do grupo, que é sequencial ou paralelo. É possível executar as tarefas em um grupo de padrão paralelo em qualquer ordem e podem ser executadas simultaneamente, a menos que existam dependências. As tarefas em grupos sequenciais são executadas na ordem da lista, iniciando com a primeira ou mais alta tarefa.
 
-É possível integrar grupos em outros grupos. É possível integrar um grupo de padrão sequencial em um grupo de padrão paralelo e vice-versa. No entanto, não é possível integrar um grupo de padrão sequencial em outro grupo sequencial ou integrar um grupo de padrão paralelo em outro grupo paralelo.  
+É possível integrar grupos em outros grupos. É possível integrar um grupo de padrão sequencial em um grupo de padrão paralelo, assim como o contrário. No entanto, não é possível integrar um grupo de padrão sequencial em outro grupo sequencial ou integrar um grupo de padrão paralelo em outro grupo paralelo.  
 
 Para criar um grupo de tarefas, siga estas etapas:
 
@@ -221,7 +221,7 @@ Ao controlar as dependências de tarefas, é possível assegurar que os eventos 
 
 Para tornar uma tarefa um pré-requisito para outras tarefas, conclua estas etapas:
 
-1. Na página Detalhes do plano de implementação, selecione uma tarefa ou um grupo de tarefas e clique em **Gerenciar pré-requisitos** <img class="inline" src="../UCCR/images/task-depend.png"  alt="pré-requisito de tarefa">. É possível selecionar múltiplas tarefas e grupos.
+1. Na página Detalhes do plano de implementação, selecione uma tarefa ou um grupo de tarefas e clique em **Gerenciar pré-requisitos** <img class="inline" src="../UCCR/images/task-depend.png" alt="Pré-requisito de tarefa">. É possível selecionar múltiplas tarefas e grupos.
 
 1. Na janela "Gerenciar pré-requisitos para tarefas selecionadas", na lista **Tarefas de pré-requisito para tarefas selecionadas**, selecione a tarefa de pré-requisito.
 
@@ -235,4 +235,4 @@ Na figura a seguir, a primeira tarefa não possui pré-requisitos e duas tarefas
 
 *Figura 4. Dependências de tarefa*
 
-Para revisar ou modificar dependências, selecione a tarefa e clique em **Gerenciar pré-requisitos** <img class="inline" src="../UCCR/images/task-depend.png"  alt="pré-requisito de tarefa">.
+Para revisar ou modificar dependências, selecione a tarefa e clique em **Gerenciar pré-requisitos** <img class="inline" src="../UCCR/images/task-depend.png"  alt="Pré-requisito de tarefa">.

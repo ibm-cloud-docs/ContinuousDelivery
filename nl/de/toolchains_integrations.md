@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-29"
+lastupdated: "2017-9-25"
 
 ---
 
@@ -22,24 +22,26 @@ Die Toolintegrationen, die zum Hinzufügen und Konfigurieren für Ihre Toolchain
 |Toolintegration |Verfügbar unter {{site.data.keyword.Bluemix_notm}} Public	|Verfügbar unter {{site.data.keyword.Bluemix_notm}} Dedicated (umgebungsabhängig)|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.alertnotificationshort}}		|Ja		|Nein		|
-|Artifactory		|Ja		|Nein		|
+|Application Security on Cloud		|Ja		|Nein		|
+|Artifactory		|Ja		|Ja		|
 |Availability Monitoring		|Ja		|Nein		|
 |Cloud Event Management		|Ja		|Nein		|
-|{{site.data.keyword.deliverypipeline}} 		|Ja	   	|Ja  		|
+|{{site.data.keyword.deliverypipeline}} 		|Ja   	|Ja  		|
 |{{site.data.keyword.DRA_short}} 		|Ja		|Nein			|
 |Eclipse Orion {{site.data.keyword.webide}}		|Ja		|Ja			|
 |{{site.data.keyword.gitrepos}}	|Ja		|Nein		|
-|GitHub Issues		|Ja		|Ja		|
+|GitHub Issues |Ja		|Ja		|
 |Dedicated {{site.data.keyword.ghe_short}} und Issues			|Nein		|Ja		|
-|Jenkins		|Ja		|Nein		|
-|JIRA		|Ja		|Nein		|
-|Nexus			|Ja		|Nein		|
+|GitLab		|Ja		|Nein		|
+|Jenkins		|Ja		|Ja		|
+|JIRA		|Ja		|Ja		|
+|Nexus			|Ja		|Ja		|
 |Anderes Tool			|Ja		|Ja		|
 |PagerDuty			|Ja		|Ja		|
-|Rational Team Concert			|Ja		|Nein		|
+|Rational Team Concert			|Ja		|Ja		|
 |Sauce Labs		|Ja		|Nein		|
 |Slack			|Ja		|Ja		|
-|SonarQube			|Ja		|Nein		|
+|SonarQube			|Ja		|Ja		|
 {: caption="Tabelle 1. Toolintegrationen, die für Toolchains unter {{site.data.keyword.Bluemix_notm}} Public und Dedicated verfügbar sind" caption-side="top"}
 
 **Tipp:** Wenn Sie damit beginnen möchten, mit Ihrem eigenen Quellcode unter {{site.data.keyword.Bluemix_notm}} Public zu entwickeln, müssen Sie vor dem Konfigurieren von {{site.data.keyword.deliverypipeline}} zuerst die GitHub-Toolintegration oder die {{site.data.keyword.gitrepos}}-Toolintegration konfigurieren. Wenn Sie beginnen möchten, mit Ihrem eigenen Code unter {{site.data.keyword.Bluemix_notm}} Dedicated zu entwickeln, müssen Sie die {{site.data.keyword.ghe_short}}-Toolintegration oder die GitHub-Toolintegration vor der {{site.data.keyword.deliverypipeline}} konfigurieren.
@@ -81,7 +83,37 @@ Konfigurieren Sie {{site.data.keyword.alertnotificationshort}}, um bei Problemen
 1. Klicken Sie auf **Integration erstellen**.
 1. Klicken Sie von Ihrer Toolchain aus auf **{{site.data.keyword.alertnotificationshort}}**.
 
-Mehr erfahren Sie im [IBM {{site.data.keyword.alertnotificationshort}}-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu Alert Notification
+
+Mehr zu {{site.data.keyword.alertnotificationshort}} erfahren Sie im Artikel zu [IBM {{site.data.keyword.alertnotificationshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window} in IBM Cloud Garage Method oder in einem dieser Lernprogramme:
+
+  * [Toolintegration zu Toolchain hinzufügen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
+  * [{{site.data.keyword.Bluemix_notm}}-Anwendung mit Bluemix Availability Monitoring und Alert Notification verwalten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+
+
+## Application Security on Cloud konfigurieren
+{: #appscan}
+
+IBM&reg; Application Security on Cloud schützt die Anwendungen Ihrer Organisation durch die Erkennung einer Vielzahl gängiger veröffentlichter Sicherheitslücken. So können Sie Sicherheitslücken bei Anwendungen schon beseitigen, bevor diese in der Produktionsumgebung bereitgestellt werden. Anhand einer komfortablen, detaillierten Berichtsfunktion können Sie Sicherheitslücken beheben, um den Benutzern der Anwendung mehr Sicherheit zu bieten.
+
+Konfigurieren Sie Application Security on Cloud, um Ihren Quellcode kontinuierlich zu analysieren:
+
+1. Klicken Sie im DevOps-Dashboard auf **Toolchains**. Klicken Sie auf die Toolchain, der Sie Application Security on Cloud hinzufügen wollen. Alternativ können Sie auf der Übersichtsseite Ihrer App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** klicken. Klicken Sie anschließend auf **Übersicht**.  
+
+ a. Klicken Sie auf **Tool hinzufügen**.
+
+ b. Klicken Sie im Abschnitt mit den Toolintegrationen auf **IBM Application Security on Cloud**.
+
+1. Geben Sie einen Namen für diese Instanz der Application Security on Cloud-Toolintegration ein.
+1. Geben Sie die URL für die Application Security on Cloud-Instanz ein, die geöffnet werden soll, wenn Sie in Ihrer Toolchain auf die Karte für Application Security on Cloud klicken. 
+1. Geben Sie den Benutzernamen ein, den Sie zum Herstellen einer Verbindung zum IBM Application Security on Cloud-Server verwenden. 
+1. Geben Sie das Authentifizierungstoken ein, das Sie zum Herstellen einer Verbindung zum IBM Application Security on Cloud-Server verwenden. 
+1. Klicken Sie auf **Integration erstellen**.
+1. Klicken Sie in Ihrer Toolchain auf **IBM Application Security on Cloud**, um das Dashboard für die IBM Application Security on Cloud-Instanz anzuzeigen, zu der Sie eine Verbindung hergestellt haben. 
+
+### Weitere Informationen zu Application Security on Cloud
+
+Mehr zu Application Security on Cloud erfahren Sie im Artikel zu [Application Security on Cloud ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/manage/tool_ibm_security_appscan/){: new_window} in IBM Cloud Garage Method.
 
 
 ## Artifactory konfigurieren
@@ -141,7 +173,7 @@ Konfigurieren Sie {{site.data.keyword.deliverypipeline}} durch Hinzufügen eines
 
   b. Falls Sie mehrere Instanzen der Artifactory-Toolintegration konfiguriert haben, geben Sie den Namen der Artifactory-Toolintegration ein, für die Sie den npm-Buildjob konfigurieren wollen.
 
-  c. Wählen Sie als Toolintegrationtyp den Typ **Artifactory** aus.
+  c. Wählen Sie als Toolintegrationstyp den Typ **Artifactory** aus.
 
   d. Geben Sie beim Buildbefehl die Befehle zum Erstellen Ihres npm-Moduls ein oder die Befehle zum Veröffentlichen des Moduls in Ihrer Registry. Das nachfolgende Beispiel zeigt die Befehle zum Erstellen (Builden) des Moduls bzw. zum Veröffentlichen.
      ```
@@ -172,7 +204,7 @@ Konfigurieren Sie {{site.data.keyword.deliverypipeline}} durch Hinzufügen eines
 
   b. Falls Sie mehrere Instanzen der Artifactory-Toolintegration konfiguriert haben, geben Sie den Namen der Artifactory-Toolintegration ein, für die Sie den Maven-Buildjob konfigurieren wollen.
 
-  c. Wählen Sie als Toolintegrationtyp den Typ **Artifactory** aus.
+  c. Wählen Sie als Toolintegrationstyp den Typ **Artifactory** aus.
 
   d. Geben Sie beim Buildbefehl die Befehle zum Erstellen Ihres Maven-Moduls ein oder die Befehle zum Veröffentlichen des Moduls in Ihrer Registry. Das nachfolgende Beispiel zeigt die Befehle zum Erstellen (Builden) bzw. zum Veröffentlichen des Moduls in einer Snapshot-Registry.
      ```
@@ -185,7 +217,9 @@ Registry verwendet haben, in den Konfigurationseinstellungen für die Artifactor
 
 1. Klicken Sie auf **SPEICHERN**. Wann immer Ihre Pipeline ausgeführt wird, verwendet dieser Buildjob die Konfigurationsinformationen aus der Artifactory-Toolintegration, um eine Verbindung zu Ihrem Maven-Repository herzustellen.
 
-Mehr erfahren Sie im [Artifactory-Artikel ![Symbol für externen Link ](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu Artifactory
+
+Mehr zu Artifactory erfahren Sie im Artikel zu [Artifactory ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window} in IBM Cloud Garage Method.
 
 
 ## Availability Monitoring hinzufügen
@@ -207,7 +241,11 @@ Fügen Sie die {{site.data.keyword.prf_hubshort}}-Toolintegration hinzu, um den 
 1. Klicken Sie auf **Integration erstellen**.
 1. Klicken Sie auf **{{site.data.keyword.prf_hubshort}}**, um das {{site.data.keyword.prf_hubshort}}-Dashboard zu öffnen, wählen Sie eine App aus und konfigurieren Sie die Überwachung für diese App.
 
-Mehr erfahren Sie im [{{site.data.keyword.prf_hublong}}-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu Availability Monitoring
+
+Mehr zu {{site.data.keyword.prf_hubshort}} erfahren Sie im Artikel zu [{{site.data.keyword.prf_hublong}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window} in IBM Cloud Garage Method oder in diesem Lernprogramm:
+
+  * [{{site.data.keyword.Bluemix_notm}}-Anwendung mit Bluemix Availability Monitoring und Alert Notification verwalten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## Cloud Event Management hinzufügen (Experimentell)
@@ -219,8 +257,7 @@ Mehr erfahren Sie im [{{site.data.keyword.prf_hublong}}-Artikel ![Symbol für ex
 
 Fügen Sie Cloud Event Management zu Ihrer Toolchain hinzu, um Ihrem DevOps-Team bei der Umsetzung seiner Ziele in Form von zuverlässigem Betriebszustand, hoher Servicequalität und kontinuierlicher Verbesserung zu helfen. Gehen Sie dazu wie folgt vor:
 
-1. Klicken Sie im DevOps-Dashboard auf **Toolchains**. Klicken Sie auf die Toolchain, zu der Sie Cloud Event
-Management hinzufügen möchten. Alternativ können Sie auf der Übersichtsseite Ihrer App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** und dann auf **Übersicht** klicken. 
+1. Klicken Sie im DevOps-Dashboard auf **Toolchains**. Klicken Sie auf die Toolchain, zu der Sie Cloud Event Management hinzufügen möchten. Alternativ können Sie auf der Übersichtsseite Ihrer App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** und dann auf **Übersicht** klicken.
 
  a. Klicken Sie auf **Tool hinzufügen**.
 
@@ -235,7 +272,9 @@ Management hinzufügen möchten. Alternativ können Sie auf der Übersichtsseite
 
  * **Runbook Automation**, um Ihren Katalog von Runbooks in Cloud Event Management zu verwalten.
 
-Mehr erfahren Sie im [Cloud Event Management-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu Cloud Event Management
+
+Mehr zu Cloud Event Management erfahren Sie im Artikel zu [Cloud Event Management ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window} in IBM Cloud Garage Method.
 
 
 ## Delivery Pipeline konfigurieren
@@ -246,7 +285,7 @@ Mehr erfahren Sie im [Cloud Event Management-Artikel ![Symbol für externen Link
 Konfigurieren Sie {{site.data.keyword.deliverypipeline}}, um das kontinuierliche Erstellen, Testen und Bereitstellen Ihrer Apps zu automatisieren. Gehen Sie dazu wie folgt vor:
 
 1. Wenn Sie diese Toolintegration konfigurieren, während Sie die Toolchain erstellen, klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **{{site.data.keyword.deliverypipeline}}**. Abhängig von der Vorlage, die Sie verwenden, sind unterschiedliche Felder verfügbar. Überprüfen Sie die Standardfeldwerte und ändern Sie diese Einstellungen gegebenenfalls.
-1. Wenn Sie eine Toolchain haben und diese Toolintegration hinzufügen, klicken Sie im DevOps-Dashboard auf der Seite 'Toolchains' auf die Toolchain, um die zugehörige Übersichtsseite zu öffnen. Alternativ können Sie auf der Übersichtsseite Ihrer App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** und dann auf **Übersicht** klicken. 
+1. Wenn Sie eine Toolchain haben und diese Toolintegration hinzufügen, klicken Sie im DevOps-Dashboard auf der Seite 'Toolchains' auf die Toolchain, um die zugehörige Übersichtsseite zu öffnen. Alternativ können Sie auf der Übersichtsseite Ihrer App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** und dann auf **Übersicht** klicken.
 
  a. Klicken Sie auf **Tool hinzufügen**.
 
@@ -279,22 +318,19 @@ Konfigurieren Sie die {{site.data.keyword.deliverypipeline}}, um einen Sauce Lab
 1. Fügen Sie in der Stage nach dem Bereitstellungsjob einen Testjob hinzu. Indem Sie diese Jobs in derselben Stage platzieren, können sie auf dieselbe Gruppe von Umgebungseigenschaften zugreifen.   
   ![Testjob](images/toolchain_test_job.png)
 
-1. Konfigurieren Sie die Stage:
+1. Konfigurieren Sie die Stage. Erstellen Sie auf der Registerkarte **UMGEBUNGSEIGENSCHAFTEN** die Eigenschaft CF_APP_NAME.
 
-  a. Erstellen Sie auf der Registerkarte **UMGEBUNGSEIGENSCHAFTEN** drei Eigenschaften: CF_APP_NAME, SAUCE_USERNAME und SAUCE_ACCESS_KEY.
-
-  b. Geben Sie Ihren Sauce Labs-Benutzernamen und -Zugriffsschlüssel ein. Dadurch stellen Sie diese Werte extern bereit und können sie in Ihren Tests verwenden.
-
+  **Tipp:** Der Sauce Labs-Benutzername und -Zugriffsschlüssel stehen im Test-Job-Script als die Umgebungsvariablen SAUCE_USERNAME und SAUCE_ACCESS_KEY zur Verfügung. Wenn Sie Ihre Tests schreiben, müssen Sie diese Umgebungsvariablen verwenden, um sich für Sauce Labs zu authentifizieren.
+  
 1. Konfigurieren Sie den Bereitstellungsjob. Schließen Sie im Feld **Bereitstellungsscript** diesen Befehl ein: `export CF_APP_NAME="$CF_APP"`. Der Befehl exportiert den Namen der App als Umgebungseigenschaft.
 1. Konfigurieren Sie den Testjob. Die Werte in der folgenden Abbildung sind Beispiele. In die Felder **Serviceinstanz**, **Ziel**, **Organisation** und **Bereich** werden der Sauce Labs-Benutzername, die Region, die Organisation und der Bereich eingetragen, die Sie verwenden.  
 ![Job konfigurieren](images/toolchain_configure_job.png)
 
-  Wählen Sie als Testertyp **Sauce Labs** aus.
+  a. Wählen Sie als Testertyp **Sauce Labs** aus.
 
   b. Wählen Sie als Serviceinstanz den Sauce Labs-Benutzernamen aus, den Sie beim Konfigurieren von Sauce Labs für Ihre Toolchain verwendet haben.
 
-   **Tipp:** Um zu sehen, welchen Benutzernamen und Zugriffsschlüssel Sie beim Konfigurieren von Sauce Labs für Ihre
-Toolchain verwendet haben, klicken Sie auf **Konfigurieren**.
+   **Tipp:** Um zu sehen, welchen Benutzernamen und Zugriffsschlüssel Sie beim Konfigurieren von Sauce Labs für Ihre Toolchain verwendet haben, klicken Sie auf **Konfigurieren**.
 
   c. Geben Sie im Feld **Befehl für die Testausführung** die Befehle ein, die die für Ihre Tests erforderlichen Abhängigkeiten installieren, und führen Sie dann die Tests aus. Für eine Node.js-App würden Sie beispielsweise folgende Befehle eingeben:
      ```
@@ -306,7 +342,12 @@ Toolchain verwendet haben, klicken Sie auf **Konfigurieren**.
 
 1. Klicken Sie auf **SPEICHERN**. Immer, wenn Ihre Pipeline aktiv ist, werden Sauce Labs-Tests ausgeführt.
 
-Mehr erfahren Sie im [Delivery Pipeline-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu Delivery Pipeline
+
+Mehr zu {{site.data.keyword.deliverypipeline}} erfahren Sie im Artikel zu [Delivery Pipeline ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window} in IBM Cloud Garage Method oder in folgenden Lernprogrammen:
+
+  * [Pipeline erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}
+  * [Erste Toolchain erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
 
 
 ## DevOps Insights hinzufügen (Beta)
@@ -328,13 +369,19 @@ Fügen Sie {{site.data.keyword.DRA_short}} hinzu, um die Qualität Ihres Codes i
 1. Klicken Sie auf **Integration erstellen**.
 1. Klicken Sie auf **{{site.data.keyword.DRA_short}}** und führen Sie dann die anfänglichen Schritte aus: Kriterien erstellen, Kriterien mit der Pipeline verknüpfen und Pipeline ausführen.
 
-Mehr erfahren Sie im [{{site.data.keyword.DRA_short}}-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu Devops Insights
+
+Mehr zu {{site.data.keyword.DRA_short}} erfahren Sie im Artikel zu [{{site.data.keyword.DRA_short}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window} in IBM Cloud Garage Method oder in folgenden Lernprogrammen:
+
+  * [Toolchain erstellen, die {{site.data.keyword.DRA_short}} verwendet ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_devops_insights){:new_window}
+  * [Microservice-Toolchain mit {{site.data.keyword.DRA_short}} erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Deployment Risk Analytics mit GitHub und Jenkins ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
 
 
 ## Eclipse Orion-Web-IDE hinzufügen
 {: #webide}
 
-Die Eclipse Orion-{{site.data.keyword.webide}} ist eine integrierte webbasierte Umgebung, in der Sie Quellcodeverwaltungstasks erstellen, bearbeiten, ausführen, debuggen und abschließen können. Sie können nahtlos von der Bearbeitung zur Ausführung, zur Übergabe und zur Bereitstellung übergehen.
+Die Eclipse Orion-Web-IDE ist eine integrierte webbasierte Umgebung, in der Sie Quellcodeverwaltungstasks erstellen, bearbeiten, ausführen, debuggen und abschließen können. Sie können nahtlos von der Bearbeitung zur Ausführung, zur Übergabe und zur Bereitstellung übergehen.
 
  **Hinweis:** Diese Toolintegration ist vorkonfiguriert. Sie erfordert keine Konfigurationsparameter und Sie können sie nicht neu konfigurieren.
 
@@ -346,12 +393,17 @@ Integrationen auf **Eclipse Orion-Web-IDE**.
 
  a. Klicken Sie auf **Tool hinzufügen**.
 
- b. Klicken Sie im Abschnitt mit den Toolintegrationen auf die Option für die **Eclipse Orion-Web-IDE**.
+ b. Klicken Sie im Abschnitt mit den Toolintegrationen auf die Option für die **Eclipse Orion-Web-IDE**. 
 
 1. Klicken Sie auf **Integration erstellen**.
 1. Klicken Sie auf **Eclipse Orion-Web-IDE**. In Ihrem Arbeitsbereich sind Ihre GitHub- oder {{site.data.keyword.ghe_short}}-Repositorys bereits aufgeführt. Die Repositorys, die Ihrer aktuellen Toolchain zugeordnet sind, sind hervorgehoben.
 
-Mehr erfahren Sie in [Code mit der {{site.data.keyword.webide}} für Eclipse Orion bearbeiten](/docs/services/ContinuousDelivery/web_ide.html){: new_window} und im [Eclipse Orion {{site.data.keyword.webide}}-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zur Eclipse Orion-Web-IDE
+
+Mehr zur Eclipse Orion-Web-IDE erfahren Sie unter [Code mit der {{site.data.keyword.webide}} für Eclipse Orion bearbeiten](/docs/services/ContinuousDelivery/web_ide.html){: new_window} und im Artikel zur [Eclipse Orion-Web-IDE ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window} in IBM Cloud Garage Method oder in diesen Lernprogrammen: 
+
+  * [Erste Toolchain erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
+  * [{{site.data.keyword.Bluemix_notm}} Live Sync zum Entwickeln, Debuggen und Bereitstellen Ihrer App verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_livesync){:new_window}
 
 
 ## Git Repos and Issue Tracking konfigurieren
@@ -363,6 +415,20 @@ Wenn Sie {{site.data.keyword.gitrepos}} konfigurieren, während Sie die Toolchai
 
 1. a. Klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **Git Repos and Issue Tracking**.
 1. Überprüfen Sie die Standardzielspeicherorte für die Git-Repositorys. Diese Repositorys werden aus den Beispielrepositorys geklont. Ändern Sie gegebenenfalls die Namen der Zielrepositorys.
+
+Wenn Sie eine Toolchain haben und ein Git-Repository in Ihrer Toolchain auf {{site.data.keyword.gitrepos}} migrieren wollen, führen Sie die folgenden Schritte aus: 
+
+**Hinweis**: Diese Anweisungen gelten für Toolchains, die bereits das Git-Repository enthalten, das Sie auf {{site.data.keyword.gitrepos}} migrieren wollen. Weitere Informationen zum Hinzufügen von verschiedenen Arten von Git-Repositorys zu Ihrer Toolchain finden Sie in den Abschnitten [GitHub und GitHub Issues konfigurieren](#github), [GitHub Enterprise und GitHub Issues unter Bluemix Dedicated konfigurieren](#configghe) und [GitLab konfigurieren](#gitlab).
+
+1. Klicken Sie im DevOps-Dashboard auf der Seite 'Toolchains' auf die Toolchain, um die zugehörige Übersichtsseite zu öffnen. Alternativ können Sie auf der Übersichtsseite der App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** und dann auf **Übersicht** klicken.
+1. Klicken Sie auf **Tool hinzufügen**.
+1. Klicken Sie im Abschnitt mit den Toolintegrationen auf **Git Repos and Issue Tracking**.
+1. Um eine Kopie des Git-Repositorys zu erstellen, klicken Sie auf **Klonen**. Geben Sie einen neuen Repository-Namen und die URL für das Quellenrepository ein.
+1. Wenn Sie Issues für die Verfolgung von Problemen verwenden möchten, wählen Sie das Kontrollkästchen **Issues aktivieren** aus.
+1. Wenn Sie die Bereitstellung von Codeänderungen bei Commits durch Erstellen von Tags und Kommentaren und bei Problemen, die über die Commits referenziert werden, mit Bezeichnungen und Kommentaren verfolgen wollen, wählen Sie das Kontrollkästchen **Bereitstellung von Codeänderungen verfolgen** aus. Weitere Informationen enthält der Bluemix-Blog im Abschnitt [Mit Toolchains verfolgen, wo Ihr Code bereitgestellt wird ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Klicken Sie auf **Integration erstellen**.
+
+**Tipp:** Wenn Sie das Git-Repository geklont haben, können Sie es aus Ihrer Toolchain entfernen. 
 
 Wenn Sie {{site.data.keyword.gitrepos}} zu einer bereits vorhandenen Toolchain hinzufügen, führen Sie diese Schritte aus:    
 
@@ -381,9 +447,13 @@ Wenn Sie {{site.data.keyword.gitrepos}} zu einer bereits vorhandenen Toolchain h
 1. Klicken Sie auf **Integration erstellen**.
 1. Klicken Sie auf die Karte für das Git-Repository, mit dem Sie arbeiten möchten. Die Übersichtsseite für Ihr Projekt wird geöffnet.    
 
-**Hinweis:** Falls Sie nicht über Master- oder Eignerberechtigungen für das Repository verfügen, zu dem Sie einen
-Link herstellen, ist Ihre Integration eingeschränkt, da Sie keine Web-Hooks verwenden können. Web-Hooks sind erforderlich, um eine Pipeline
-automatisch auszuführen, wenn ein Commit per Push-Operation an das Repository übertragen wird. Ohne Web-Hook müssen Sie Ihre Pipelines manuell starten.
+**Hinweis:** Falls Sie nicht über Master- oder Eignerberechtigungen für das Repository verfügen, zu dem Sie einen Link herstellen, ist Ihre Integration eingeschränkt, da Sie keine Web-Hooks verwenden können. Web-Hooks sind erforderlich, um eine Pipeline automatisch auszuführen, wenn ein Commit per Push-Operation an das Repository übertragen wird. Ohne Web-Hook müssen Sie Ihre Pipelines manuell starten.
+
+### Weitere Informationen zu Git Repos and Issue Tracking
+
+Mehr zu {{site.data.keyword.gitrepos}} erfahren Sie im Artikel [{{site.data.keyword.gitrepos}}: Social Coding, das von IBM gehostet wird ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/code/tool_git_repos_and_issue_tracking/){: new_window} in IBM Cloud Garage Method oder in diesem Lernprogramm:
+
+  * [Toolchain erstellen, die {{site.data.keyword.gitrepos}} verwendet ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
 
 
 ## GitHub und GitHub Issues konfigurieren
@@ -391,47 +461,69 @@ automatisch auszuführen, wenn ein Commit per Push-Operation an das Repository �
 
 GitHub ist ein webbasierter Hosting-Service für Git-Repositorys. Sie können sowohl über lokale als auch über ferne Kopien Ihrer Repositorys verfügen, was die Zusammenarbeit sehr einfach gestaltet.
 
+{{site.data.keyword.ghe_short}} ist ein lokaler webbasierter Hosting-Service für Git-Repositorys.
+
 GitHub Issues ist ein Überwachungstool, das Ihre Arbeit und Ihre Pläne an einem einzigen zentralen Ort aufbewahrt. Es ist in Ihr Entwicklungsrepository integriert, damit Sie sich auf die wichtigen Aufgaben konzentrieren können.
 
-Konfigurieren Sie GitHub zum Verwalten Ihres Quellcodes in der Cloud:
+Sie können GitHub als Toolintegration in Ihrer Toolchain konfigurieren, sodass Sie Quellcode in einem neuen oder vorhandenen Repository unter GitHub.com oder in der {{site.data.keyword.ghe_short}}-Instanz Ihres Unternehmens verwalten können. Nehmen Sie über Wikis, Problemverfolgung und Pull-Anforderungen am Social Coding teil.
 
-1. Wenn Sie diese Toolintegration konfigurieren, während Sie die Toolchain erstellen, führen Sie diese Schritte aus:
+Wenn Sie diese Toolintegration konfigurieren, während Sie die Toolchain erstellen, führen Sie diese Schritte aus:
 
- a. Klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **GitHub**. Wenn Sie die Toolchain unter {{site.data.keyword.Bluemix_notm}} Public erstellen und {{site.data.keyword.Bluemix_notm}} nicht für den Zugriff auf GitHub autorisiert haben, klicken Sie auf **Autorisieren**, um zur GitHub-Website zu wechseln. Wenn keine aktive GitHub-Sitzung existiert, werden Sie aufgefordert, sich anzumelden. Klicken Sie auf **Anwendung autorisieren**, um {{site.data.keyword.Bluemix_notm}} den Zugriff auf Ihr GitHub-Konto zu erlauben. Falls eine aktive GitHub-Sitzung existiert, Sie Ihr Kennwort aber bereits vor einiger Zeit eingegeben haben, werden Sie möglicherweise aufgefordert, Ihr GitHub-Kennwort durch erneute Eingabe zu bestätigen.
+1. Wenn Sie Ihren Quellcode in einem GitHub-Repository speichern, klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **GitHub**. Wenn Sie diese Toolintegration unter {{site.data.keyword.Bluemix_notm}} Public konfigurieren und {{site.data.keyword.Bluemix_notm}} nicht für den Zugriff auf GitHub autorisiert haben, klicken Sie auf **Autorisieren**, um zur GitHub-Website zu wechseln. Wenn keine aktive GitHub-Sitzung existiert, werden Sie aufgefordert, sich anzumelden. Klicken Sie auf **Anwendung autorisieren**, um {{site.data.keyword.Bluemix_notm}} den Zugriff auf Ihr GitHub-Konto zu erlauben. Falls eine aktive GitHub-Sitzung existiert, Sie Ihr Kennwort aber bereits vor einiger Zeit eingegeben haben, werden Sie möglicherweise aufgefordert, Ihr GitHub-Kennwort durch erneute Eingabe zu bestätigen.
+1. Wenn Sie ein Repository auf Ihrem eigenen {{site.data.keyword.ghe_short}}-Server verwenden, klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **Angepassten Server hinzufügen**. Geben Sie einen Titel für Ihren angepassten GitHub-Server ein und geben Sie die Stamm-URL für den Server an. Geben Sie Ihre persönlichen Zugriffstokens ein und klicken Sie dann auf **Angepasste Integration speichern**. 
+ 
+  **Tipp**: Wenn Sie nicht über ein persönliches Zugriffstoken verfügen, können Sie eines erstellen: 
+  
+     a. Klicken Sie auf einer beliebigen GitHub-Seite auf Ihr Profilsymbol und klicken Sie anschließend auf **Einstellungen**. 
+   
+     b. Klicken Sie auf der Seitenleiste auf **Persönliche Zugriffstokens**. 
+   
+     c. Klicken Sie auf **Neues Token generieren**.
+   
+     d. Fügen Sie eine Beschreibung für das Token hinzu.
+     
+     e. Wählen Sie die Kontrollkästchen für **Repository** und **Benutzer** aus, um den Zugriff auf das persönliche Token zu definieren.
+     
+     f. Klicken Sie auf **Token generieren**.
+   
+     g. Kopieren Sie das Token an eine sichere Position oder in die App für das Kennwortmanagement. Aus Sicherheitsgründen ist das Token nicht mehr sichtbar, wenn Sie die Seite verlassen haben.
 
- b. Überprüfen Sie die Standardspeicherorte für die GitHub-Zielrepositorys. Diese Repositorys werden aus den Beispielrepositorys geklont. Ändern Sie gegebenenfalls die Namen der Zielrepositorys.
+1. Überprüfen Sie die Standardspeicherorte für die GitHub-Zielrepositorys. Diese Repositorys werden aus den Beispielrepositorys geklont. Ändern Sie gegebenenfalls die Namen der Zielrepositorys.
  ![Standardspeicherorte für Zielrepositorys](images/toolchain_github_config.png)
 
-1. Wenn Sie eine Toolchain haben und diese Toolintegration hinzufügen, klicken Sie im DevOps-Dashboard auf der Seite 'Toolchains' auf die Toolchain, um die zugehörige Übersichtsseite zu öffnen. Alternativ können Sie auf der Übersichtsseite der App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** und dann auf **Übersicht** klicken.
+Wenn Sie diese Toolintegration zu einer bereits vorhandenen Toolchain hinzufügen, führen Sie diese Schritte aus: 
 
- a. Klicken Sie auf **Tool hinzufügen**.
-
- b. Klicken Sie im Abschnitt mit den Toolintegrationen auf **GitHub**.
-
-1. Falls Sie über ein GitHub-Repository verfügen und dieses verwenden möchten, klicken Sie beim Repository-Typ auf **Vorhanden** und geben Sie die URL ein.
-1. Falls Sie ein neues GitHub-Repository verwenden möchten, geben Sie einen Namen für das GitHub-Repository ein, das Sie klonen oder verzweigen, und wählen Sie den Repository-Typ aus:
+1. Klicken Sie im DevOps-Dashboard auf der Seite 'Toolchains' auf die Toolchain, um die zugehörige Übersichtsseite zu öffnen. Alternativ können Sie auf der Übersichtsseite der App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** und dann auf **Übersicht** klicken.
+1. Klicken Sie auf **Tool hinzufügen**.
+1. Klicken Sie im Abschnitt mit den Toolintegrationen auf **GitHub**.
+1. Klicken Sie auf den GitHub-Server, den Sie verwenden wollen.
+1. Falls Sie über ein GitHub- oder {{site.data.keyword.ghe_short}}-Repository verfügen und dieses verwenden möchten, klicken Sie beim Repository-Typ auf **Vorhanden** und geben Sie die URL ein.
+1. Falls Sie ein neues GitHub- oder {{site.data.keyword.ghe_short}}-Repository verwenden möchten, geben Sie einen Namen für das Repository ein, geben Sie die URL für das Repository ein, das Sie klonen oder verzweigen, und wählen Sie den Repository-Typ aus:
 
  a. Klicken Sie auf **Neu**, um ein leeres Repository zu erstellen.
 
- b. Klicken Sie auf **Klonen**, um eine Kopie eines GitHub-Repositorys zu erstellen.
+ b. Klicken Sie auf **Klonen**, um eine Kopie eines GitHub- oder {{site.data.keyword.ghe_short}}-Repositorys zu erstellen.
 
- c. Klicken Sie auf **Verzweigen**, um ein GitHub-Repository zu verzweigen, sodass Sie Änderungen per Pull-Anforderungen beitragen können.
+ c. Klicken Sie auf **Verzweigen**, um ein GitHub- oder {{site.data.keyword.ghe_short}}-Repository zu verzweigen, sodass Sie Änderungen per Pull-Anforderungen beitragen können.
 
+1. Wenn Sie ein GitHub.com-Benutzer mit Upgrade-Konto sind oder wenn Sie einen {{site.data.keyword.ghe_short}}-Server ausgewählt haben und ein neues privates Repository auf dem Server erstellen wollen, wählen Sie das Kontrollkästchen **Repository als privat definieren** aus. 
 1. Wenn Sie GitHub Issues für die Verfolgung von Problemen verwenden möchten, wählen Sie das Kontrollkästchen **GitHub Issues aktivieren** aus.
 1. Wenn Sie die Bereitstellung von Codeänderungen bei Commits durch Erstellen von Tags und Kommentaren und bei Problemen, die über die Commits referenziert werden, mit Bezeichnungen und Kommentaren verfolgen wollen, wählen Sie das Kontrollkästchen **Bereitstellung von Codeänderungen verfolgen** aus. Weitere Informationen enthält der Bluemix-Blog im Abschnitt [Mit Toolchains verfolgen, wo Ihr Code bereitgestellt wird ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Klicken Sie auf **Integration erstellen**.
-1. Klicken Sie auf die Karte für das GitHub-Repository, mit dem Sie arbeiten möchten. Daraufhin wird die GitHub-Website geöffnet, auf der Sie den Inhalt des Repositorys anzeigen können.
+1. Klicken Sie auf die Karte für das GitHub- oder {{site.data.keyword.ghe_short}}-Repository, mit dem Sie arbeiten möchten. Abhängig von dem von Ihnen ausgewählten Repository wird entweder die GitHub-Website oder das {{site.data.keyword.ghe_short}}-Repository Ihres Unternehmens geöffnet, wo die Inhalte des Repositorys angezeigt werden.
 
-  **Tipp:** Sie können die integrierten Quellcodeverwaltungstools in der Eclipse Orion-Web-IDE verwenden, um das
-GitHub-Repository zu bearbeiten und eine App aus Ihrem Arbeitsbereich bereitzustellen.
+  **Tipp:** Sie können die integrierten Quellcodeverwaltungstools in der Eclipse Orion-Web-IDE verwenden, um das GitHub-Repository zu bearbeiten und eine App aus Ihrem Arbeitsbereich bereitzustellen.
 
-1. Falls Sie GitHub Issues aktiviert haben, klicken Sie auf **GitHub Issues**, um GitHub Issues zu öffnen. Sie können diese Instanz von GitHub Issues für Ihre gesamte Toolchain verwenden, selbst wenn die Toolchain mehr als nur ein GitHub-Repository enthält.    
+1. Falls Sie GitHub Issues aktiviert haben, klicken Sie auf **GitHub Issues**, um GitHub Issues zu öffnen. Sie können diese Instanz von GitHub Issues für Ihre gesamte Toolchain verwenden, selbst wenn die Toolchain mehr als nur ein GitHub- {{site.data.keyword.ghe_short}}-Repository enthält.    
 
-**Hinweis:** Falls Sie nicht über Administratorberechtigungen für das Repository verfügen, zu dem Sie einen Link
-herstellen, ist Ihre Integration eingeschränkt, da Sie keine Web-Hooks verwenden können. Web-Hooks sind erforderlich, um eine Pipeline
-automatisch auszuführen, wenn ein Commit per Push-Operation an das Repository übertragen wird. Ohne Web-Hook müssen Sie Ihre Pipelines manuell starten.
+**Hinweis:** Falls Sie nicht über Master- oder Eignerberechtigungen für das Repository verfügen, zu dem Sie einen Link herstellen, ist Ihre Integration eingeschränkt, da Sie keine Web-Hooks verwenden können. Web-Hooks sind erforderlich, um eine Pipeline automatisch auszuführen, wenn ein Commit per Push-Operation an das Repository übertragen wird. Ohne Web-Hook müssen Sie Ihre Pipelines manuell starten.
 
-Mehr erfahren Sie im [GitHub-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} und im [GitHub Issues-Artikel ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu GitHub und GitHub Issues
+
+Mehr zu GitHub und GitHub Issues erfahren Sie im Artikel zu [GitHub ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} und im Artikel zu [GitHub Issues ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} in IBM Cloud Garage Method oder in diesen Lernprogrammen: 
+
+  * [Deployment Risk Analytics mit GitHub und Jenkins ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
+  * [Angepasste Toolchain erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom){:new_window}
 
 
 ## GitHub Enterprise und GitHub Issues unter Bluemix Dedicated konfigurieren
@@ -449,7 +541,8 @@ Sie können {{site.data.keyword.ghe_short}} als Toolintegration in Ihrer Toolcha
 
  b. Klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **{{site.data.keyword.ghe_short}}**.    
 
- c. Prüfen Sie den Standardnamen für das neue {{site.data.keyword.ghe_short}}-Repository. Ändern Sie gegebenenfalls den Namen des neuen Repositorys. Die folgende Abbildung zeigt ein Beispiel für ein Repository, das aus einem Beispielrepository geklont ist. Sie können ein vorhandenes oder ein neues Repository verwenden. Um ein neues Repository zu verwenden, können Sie ein leeres Repository erstellen oder Sie können ein Repository klonen oder verzweigen.
+ c. Prüfen Sie den Standardnamen für das neue {{site.data.keyword.ghe_short}}-Repository. Ändern Sie gegebenenfalls den Namen des neuen Repositorys. Die folgende Abbildung zeigt ein Beispiel für ein Repository, das aus einem Beispielrepository geklont ist. Sie können ein vorhandenes oder ein neues Repository verwenden. 
+Um ein neues Repository zu verwenden, können Sie ein leeres Repository erstellen oder Sie können ein Repository klonen oder verzweigen.
  ![Standardspeicherorte für Repositorys](images/toolchain_ghe_config.png)
 
 1. Wenn Sie eine Toolchain haben und diese Toolintegration hinzufügen, klicken Sie im DevOps-Dashboard auf der Seite 'Toolchains' auf die Toolchain, um die zugehörige Übersichtsseite zu öffnen. Alternativ können Sie auf der Übersichtsseite Ihrer App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** und dann auf **Übersicht** klicken.
@@ -476,8 +569,68 @@ Sie können {{site.data.keyword.ghe_short}} als Toolintegration in Ihrer Toolcha
 
 1. Falls Sie GitHub Issues aktiviert haben, klicken Sie auf **GitHub Issues**. Sie können diese Instanz von GitHub Issues für Ihre gesamte Toolchain verwenden, selbst wenn die Toolchain mehr als nur ein GitHub-Repository enthält.    
 
-**Hinweis:** Falls Sie nicht über Master- oder Eignerberechtigungen für das Repository verfügen, zu dem Sie einen Link herstellen, ist Ihre Integration eingeschränkt, da Sie keine Web-Hooks verwenden können. Web-Hooks sind erforderlich, um eine Pipeline
+**Hinweis:** Falls Sie nicht über Master- oder Eignerberechtigungen für das Repository verfügen, zu dem Sie einen Link herstellen, ist Ihre Integration eingeschränkt, da Sie keine Web-Hooks verwenden können. Web-Hooks sind erforderlich, um eine Pipeline automatisch auszuführen, wenn ein Commit per Push-Operation an das Repository übertragen wird. Ohne Web-Hook müssen Sie Ihre Pipelines manuell starten.
+
+
+## GitLab konfigurieren
+{: #gitlab}
+
+GitLab ist ein webbasierter Hosting-Service für Git-Repositorys. Sie können sowohl über lokale als auch über ferne Kopien Ihrer Repositorys verfügen, was die Zusammenarbeit sehr einfach gestaltet.
+
+Sie können GitLab als Toolintegration in Ihrer Toolchain konfigurieren, sodass Sie Quellcode in einem neuen oder vorhandenen Repository unter GitLab.com oder in der GitLab-Instanz Ihres Unternehmens verwalten können. Nehmen Sie über Wikis, Problemverfolgung und Merge-Anforderungen am Social Coding teil.
+
+Wenn Sie diese Toolintegration konfigurieren, während Sie die Toolchain erstellen, führen Sie diese Schritte aus:
+
+1. Wenn Sie Ihren Quellcode in einem GitLab-Repository GitLab speichern, klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **GitLab**. Wenn Sie diese Toolintegration unter {{site.data.keyword.Bluemix_notm}} Public konfigurieren und {{site.data.keyword.Bluemix_notm}} nicht für den Zugriff auf GitLab autorisiert haben, klicken Sie auf **Autorisieren**, um zur GitLab-Website zu wechseln. Wenn keine aktive GitLab-Sitzung existiert, werden Sie aufgefordert, sich anzumelden. Klicken Sie auf **Anwendung autorisieren**, um {{site.data.keyword.Bluemix_notm}} den Zugriff auf Ihr GitLab-Konto zu erlauben. Falls eine aktive GitLab-Sitzung existiert, Sie Ihr Kennwort aber bereits vor einiger Zeit eingegeben haben, werden Sie möglicherweise aufgefordert, Ihr GitLab-Kennwort durch erneute Eingabe zu bestätigen.
+1. Wenn Sie ein Repository auf Ihrem eigenen GitLab-Server verwenden, klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **Angepassten Server hinzufügen**. Geben Sie einen Titel für Ihren angepassten GitLab-Server ein und geben Sie die Stamm-URL für den Server an. Geben Sie Ihre persönlichen Zugriffstokens ein und klicken Sie dann auf **Angepasste Integration speichern**. 
+ 
+  **Tipp**: Wenn Sie nicht über ein persönliches Zugriffstoken verfügen, können Sie eines erstellen: 
+  
+     a. Klicken Sie auf einer beliebigen GitLab-Seite auf Ihr Profilsymbol und klicken Sie anschließend auf **Einstellungen**. 
+   
+     b. Geben Sie auf der Seite 'Zugriffstoken' den Namen der Anwendung ein, für die Sie ein persönliches Zugriffstoken erstellen wollen.
+     
+     c. Optional. Wählen Sie ein Ablaufdatum für das Zugriffstoken aus.
+     
+     d. Wählen Sie das Kontrollkästchen **API** aus, um den Zugriff auf das persönliche Token zu definieren.
+     
+     e. Klicken Sie auf **Persönliches Zugriffstoken erstellen**.
+   
+     f. Kopieren Sie das Token an eine sichere Position oder in die App für das Kennwortmanagement. Aus Sicherheitsgründen ist das Token nicht mehr sichtbar, wenn Sie die Seite verlassen haben.
+
+1. Überprüfen Sie die Standardspeicherorte für die GitLab-Zielrepositorys. Diese Repositorys werden aus den Beispielrepositorys geklont. Ändern Sie gegebenenfalls die Namen der Zielrepositorys.
+
+Wenn Sie diese Toolintegration zu einer bereits vorhandenen Toolchain hinzufügen, führen Sie diese Schritte aus: 
+
+1. Klicken Sie im DevOps-Dashboard auf der Seite 'Toolchains' auf die Toolchain, um die zugehörige Übersichtsseite zu öffnen. Alternativ können Sie auf der Übersichtsseite der App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** und dann auf **Übersicht** klicken.
+1. Klicken Sie auf **Tool hinzufügen**.
+1. Klicken Sie im Abschnitt mit den Toolintegrationen auf **GitLab**.
+1. Klicken Sie auf den GitLab-Server, den Sie verwenden wollen.
+1. Falls Sie über ein GitLab-Repository verfügen und dieses verwenden möchten, klicken Sie beim Repository-Typ auf **Vorhanden** und geben Sie die URL ein.
+1. Falls Sie ein neues GitLab-Repository verwenden möchten, geben Sie einen Namen für das Repository ein, geben Sie die URL für das Repository ein, das Sie klonen oder verzweigen, und wählen Sie den Repository-Typ aus:
+
+ a. Klicken Sie auf **Neu**, um ein leeres Repository zu erstellen.
+
+ b. Klicken Sie auf **Klonen**, um eine Kopie eines GitLab-Repositorys zu erstellen.
+
+ c. Klicken Sie auf **Verzweigen**, um ein GitLab-Repository zu verzweigen, sodass Sie Änderungen per Zusammenführungsanforderungen (Merge) beitragen können.
+
+1. Wenn Sie ein öffentliches Repository auf dem Server erstellen wollen, inaktivieren Sie das Kontrollkästchen **Repository als privat definieren**.
+1. Wenn Sie GitLab Issues für die Verfolgung von Problemen verwenden möchten, wählen Sie das Kontrollkästchen **GitLab Issues aktivieren** aus.
+1. Wenn Sie die Bereitstellung von Codeänderungen bei Commits durch Erstellen von Tags und Kommentaren und bei Problemen, die über die Commits referenziert werden, mit Bezeichnungen und Kommentaren verfolgen wollen, wählen Sie das Kontrollkästchen **Bereitstellung von Codeänderungen verfolgen** aus. Weitere Informationen enthält der Bluemix-Blog im Abschnitt [Mit Toolchains verfolgen, wo Ihr Code bereitgestellt wird ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Klicken Sie auf **Integration erstellen**.
+1. Klicken Sie auf die Karte für das GitLab-Repository, mit dem Sie arbeiten möchten. Abhängig von dem von Ihnen ausgewählten Repository wird entweder die GitLab-Website oder das GitLab-Repository Ihres Unternehmens geöffnet, wo die Inhalte des Repositorys angezeigt werden.
+
+  **Tipp:** Sie können die integrierten Quellcodeverwaltungstools in der Eclipse Orion-Web-IDE verwenden, um das GitLab-Repository zu bearbeiten und eine App aus Ihrem Arbeitsbereich bereitzustellen.
+
+1. Falls Sie GitLab Issues aktiviert haben, klicken Sie auf **GitLab Issues**, um GitHub Issues zu öffnen. Sie können diese Instanz von GitLab Issues für Ihre gesamte Toolchain verwenden, selbst wenn die Toolchain mehr als nur ein GitLab-Repository enthält.    
+
+**Hinweis:** Falls Sie nicht über owner- oder Eignerberechtigungen für das Repository verfügen, zu dem Sie einen Link herstellen, ist Ihre Integration eingeschränkt, da Sie keine Web-Hooks verwenden können. Web-Hooks sind erforderlich, um eine Pipeline
 automatisch auszuführen, wenn ein Commit per Push-Operation an das Repository übertragen wird. Ohne Web-Hook müssen Sie Ihre Pipelines manuell starten.
+
+### Weitere Informationen zu GitLab
+
+Mehr zu GitLab erfahren Sie im Artikel zu [GitLab ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/code/tool_gitlab/){: new_window} in IBM Cloud Garage Method.
 
 
 ## Jenkins konfigurieren
@@ -503,54 +656,22 @@ Konfigurieren Sie Jenkins, um das kontinuierliche Erstellen, Testen und Bereitst
 1. Kopieren Sie den generierten Web-Hook der Toolchain.
 1. Führen Sie in Ihrem Jenkins-Server die folgenden Schritte aus:
 
- a. Installieren Sie die [Cloud Foundry-CLI ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html){: new_window}.
+ a. [Installieren Sie das IBM Cloud DevOps-Plug-in ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Installingtheplugin){: new_window}.
 
- b. Installieren Sie das Cloud Foundry-Plug-in von IBM Cloud DevOps, indem Sie einen der folgenden Befehle eingeben:
+ b. [Konfigurieren Sie Jenkins, um Toolchains zu benachrichtigen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Notifyingtoolchains){: new_window}.
 
-  * Mac OS: `cf install-plugin https://icd.ng.bluemix.net/icd_darwin_amd64`
-
-  * Linux oder Docker: `cf install-plugin https://icd.ng.bluemix.net/icd_linux_amd64`
-
- c. Installieren und konfigurieren Sie das Jenkins-Plug-in von IBM Cloud DevOps für DevOps Insights und Notifications. Weitere Informationen enthält [Plug-in installieren und konfigurieren](/docs/services/DevOpsInsights/insights_risk.html#integrate_jenkins){: new_window}.
-
- d. Führen Sie in jedem Job, für den Sie Benachrichtigungen an Ihre Toolchain senden wollen, die folgenden Schritte aus:
-
-  * Wählen Sie das Kontrollkästchen **Dieses Projekt besitzt Parameterangaben** aus.
-
-  * Fügen Sie den Zeichenfolgeparameter `IBM_CLOUD_DEVOPS_WEBHOOK_URL` hinzu.
-
-  * Fügen Sie den generierten Web-Hook der Toolchain ein.
- ![URL des Web-Hooks](images/jenkins_webhook_url.png)
-
-  * Fügen Sie für die OTC-Benachrichtigung eine Aktion nach Buildabschluss hinzu und wählen Sie das Kontrollkästchen **Job abgeschlossen** aus..
- ![Aktion nach Buildabschluss](images/jenkins_postbuild_action.png)  
-
- e. Führen Sie in Ihren Bereitstellungsjobs die folgenden Schritte aus:
-
-  * Fügen Sie die Zeichenfolgeparameter `IBM_CLOUD_DEVOPS_WEBHOOK_URL`, `CF_API`, `CF_ORG`, `CF_SPACE` und `CF_APP` hinzu. Die Beispiele veranschaulichen, wie Sie die einzelnen Zeichenfolgeparameter hinzufügen.
- ![Web-Hook-URL-Zeichenfolgeparameter](images/jenkins_set_webhook_url.png)
- ![CFI-API-Zeichenfolgeparameter](images/jenkins_set_cfapi.png)
- ![CFI-ORG-Zeichenfolgeparameter](images/jenkins_set_cforg.png)
- ![CFI-SPACE-Zeichenfolgeparameter](images/jenkins_set_cfspace.png)
- ![CFI-APP-Zeichenfolgeparameter](images/jenkins_set_cfapp.png)
-
-  * Konfigurieren Sie die Bindungen für die Cloud Foundry-CLI mit der Variablen `CF_CREDS_USR` für den Benutzernamen und der Kennwortvariablen `CF_CREDS_PSW`.
- ![Cloud Foundry-CLI-Bindungen](images/jenkins_config_bindings.png)  
-
-  * Geben Sie im Feld **Build** diese Befehle ein, um sich anzumelden, und senden Sie mithilfe des Cloud Foundry-Plug-ins
-für IBM Cloud DevOps die durch die Anwendung bereitstellbaren Zuordnungen mit Git-Commit-Verfolgbarkeit an Ihre Toolchain:
- ![Build-Befehle](images/jenkins_build_commands.png)    
-
-  * Geben Sie im Feld **Build** den Befehl `cf icd --create-connection $IBM_CLOUD_DEVOPS_WEBHOOK_URL $CF_APP` ein, um die durch die Anwendung bereitstellbaren Zuordnungen an die Toolchain zu senden.    
-
- f. Speichern Sie Ihre Änderungen und kehren Sie für die Jenkins-Toolintegration zu der Seite zum Konfigurieren der Integration zurück.
+ c. Kehren Sie für die Jenkins-Toolintegration zu der Seite zum Konfigurieren der Integration zurück.
 
 1. Klicken Sie auf **Integration erstellen**.
 1. Klicken Sie von Ihrer Toolchain aus auf **Jenkins**, um den Jenkins-Server anzuzeigen.  
 
-Mehr erfahren Sie im [Jenkins-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu Jenkins
 
+Mehr zu Jenkins erfahren Sie im Artikel zu [Jenkins ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window} in IBM Cloud Garage Method oder in diesem Lernprogramm:
 
+  * [Deployment Risk Analytics mit GitHub und Jenkins ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
+  
+  
 ## JIRA konfigurieren
 {: #jira}
 
@@ -571,11 +692,9 @@ Konfigurieren Sie JIRA für die Planung, Verfolgung und Übermittlung von Qualit
 
  b. Geben Sie die API-Basis-URL für Ihre JIRA-Instanz ein. Die API-URL können Sie dem Header Ihrer JIRA-Instanz entnehmen. Klicken Sie auf das Symbol für **Administration** und klicken Sie dann auf **System**.
 
- c. Optional: Geben Sie Ihren JIRA-Benutzernamen ein. Ihr Benutzername ist nur erforderlich, wenn Sie eine Verbindung zu einer privaten JIRA-Instanz herstellen oder wenn Sie eine Verbindung zu einer öffentlichen Instanz herstellen und Verfolgbarkeitsinformationen erhalten möchten.
+ c. Wenn Sie eine Verbindung zu einer privaten JIRA-Instanz herstellen oder Verfolgbarkeitsinformationen von einer öffentlichen JIRA-Instanz erhalten möchten, geben Sie Ihren JIRA-Benutzernamen und das Kennwort ein.
 
- d. Optional: Geben Sie Ihr JIRA-Kennwort ein. Ihr Kennwort ist nur erforderlich, wenn Sie eine Verbindung zu einer privaten JIRA-Instanz herstellen oder wenn Sie eine Verbindung zu einer öffentlichen Instanz herstellen und Verfolgbarkeitsinformationen erhalten möchten.
-
- e. Wenn Sie die Bereitstellung von Codeänderungen für das Projekt durch Erstellen von Bezeichnungen und Kommentaren für referenzierte Problemen verfolgen wollen, wählen Sie das Kontrollkästchen **Bereitstellung von Codeänderungen verfolgen** aus. Stellen Sie sicher, dass Sie JIRA Smart Commit beim Referenzieren der JIRA-Probleme in Ihren GitHub-Commits verwenden. Wenn Sie diese Option nicht auswählen, ignoriert die JIRA-Toolintegration alle Commits.
+ d. Wenn Sie die Bereitstellung von Codeänderungen für das Projekt durch Erstellen von Bezeichnungen und Kommentaren für referenzierte Probleme verfolgen wollen, wählen Sie das Kontrollkästchen **Bereitstellung von Codeänderungen verfolgen** aus. Stellen Sie sicher, dass Sie JIRA Smart Commit beim Referenzieren der JIRA-Probleme in Ihren GitHub-Commits verwenden. Wenn Sie diese Option nicht auswählen, ignoriert die JIRA-Toolintegration alle Commits.
 
 1. Wenn Sie ein JIRA-Projekt erstellen möchten, klicken Sie beim JIRA-Typ auf **Neu** und gehen Sie wie folgt vor:
 
@@ -596,7 +715,11 @@ Konfigurieren Sie JIRA für die Planung, Verfolgung und Übermittlung von Qualit
 1. Klicken Sie auf **Integration erstellen**.
 1. Klicken Sie von Ihrer Toolchain aus auf **JIRA**, um das Dashboard für das JIRA-Projekt anzuzeigen, mit dem Sie verbunden sind.
 
-Mehr erfahren Sie im [JIRA-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu JIRA
+
+Mehr zu JIRA erfahren Sie im Artikel zu [JIRA ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window} in IBM Cloud Garage Method oder in diesem Lernprogramm:
+
+  * [Entwickler- und Teamerkenntnisse für ein JIRA- und GitHGain-Projekt erlangen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_dev_insights_team_dynamics){:new_window}
 
 
 ## Nexus konfigurieren
@@ -657,7 +780,7 @@ Konfigurieren Sie {{site.data.keyword.deliverypipeline}} durch Hinzufügen eines
 
   b. Falls Sie mehrere Instanzen der Nexus-Toolintegration konfiguriert haben, geben Sie den Namen der Nexus-Toolintegration ein, für die Sie den npm-Buildjob konfigurieren wollen.
 
-  c. Wählen Sie als Toolintegrationtyp den Typ **Nexus** aus.
+  c. Wählen Sie als Toolintegrationstyp den Typ **Nexus** aus.
 
   d. Geben Sie beim Buildbefehl die Befehle zum Erstellen Ihres npm-Moduls ein oder die Befehle zum Veröffentlichen des Moduls in Ihrer Registry. Das nachfolgende Beispiel zeigt die Befehle zum Erstellen (Builden) des Moduls bzw. zum Veröffentlichen.
      ```
@@ -688,7 +811,7 @@ Konfigurieren Sie {{site.data.keyword.deliverypipeline}} durch Hinzufügen eines
 
   b. Falls Sie mehrere Instanzen der Nexus-Toolintegration konfiguriert haben, geben Sie den Namen der Nexus-Toolintegration ein, für die Sie den Maven-Buildjob konfigurieren wollen.
 
-  c. Wählen Sie als Toolintegrationtyp den Typ **Nexus** aus.
+  c. Wählen Sie als Toolintegrationstyp den Typ **Nexus** aus.
 
   d. Geben Sie beim Buildbefehl die Befehle zum Erstellen Ihres Maven-Moduls ein oder die Befehle zum Veröffentlichen des Moduls in Ihrer Registry. Das nachfolgende Beispiel zeigt die Befehle zum Erstellen (Builden) des Moduls bzw. zum Veröffentlichen.
      ```
@@ -701,13 +824,15 @@ Registry verwendet haben, in den Konfigurationseinstellungen für die Nexus-Tool
 
 1. Klicken Sie auf **SPEICHERN**. Wann immer Ihre Pipeline ausgeführt wird, verwendet dieser Buildjob die Konfigurationsinformationen aus der Nexus-Toolintegration, um eine Verbindung zu Ihrem Maven-Repository herzustellen.
 
-Mehr erfahren Sie im [Nexus-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu Nexus
+
+Mehr zu Nexus erfahren Sie im Artikel zu [Nexus ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window} in IBM Cloud Garage Method.
 
 
 ## Angepasstes Tool konfigurieren (Option 'Other Tool')
 {: #othertool}
 
-Falls Ihr Team ein Tool verwendet, das nicht in der Liste der Toolchainintegrationen enthalten ist, können Sie ein angepasstes Tool integrieren.
+Falls Ihr Team ein Tool verwendet, das nicht in der Liste der Toolchain-Integrationen enthalten ist, können Sie ein angepasstes Tool integrieren.
 
 So konfigurieren Sie ein angepasstes Tool, damit es mit anderen Tools in Ihrer Toolchain zusammenarbeitet und für Ihr Team verfügbar ist:
 
@@ -727,7 +852,11 @@ So konfigurieren Sie ein angepasstes Tool, damit es mit anderen Tools in Ihrer T
 1. (Erweitert) Fügen Sie weitere Eigenschaften nach Bedarf hinzu. Listen Sie beispielsweise alle Informationen oder Attribute auf, die gegebenenfalls für die Integration Ihres Tools bei anderen Tools in der Toolchain erforderlich sind.  
 1. Klicken Sie auf **Integration erstellen**.
 
-Weitere Informationen enthält der Bluemix-Blog im Abschnitt [Einführung in die angepasste Toolintegration für {{site.data.keyword.Bluemix_notm}}-Toolchains ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window}.
+### Weitere Informationen zum angepassten Tool
+
+Mehr zu dem angepassten Tool erfahren Sie in der [Einführung in die angepasste Toolintegration für {{site.data.keyword.Bluemix_notm}}-Toolchains ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window} oder in diesem Lernprogramm:
+
+  * [Angepasste Toolintegration zu Toolchain hinzufügen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_add_custom_tool){:new_window}
 
 
 ## PagerDuty konfigurieren
@@ -744,14 +873,31 @@ Konfigurieren Sie PagerDuty, um Benachrichtigungen zu senden, wenn Pipeline-Stag
 
  b. Klicken Sie im Abschnitt mit den Toolintegrationen auf **PagerDuty**.
 
-1. Geben Sie den API-Zugriffsschlüssel für Ihr PagerDuty-Konto ein. Wenn Sie kein PagerDuty-Konto haben, [registrieren Sie sich für ein solches Konto (Link wird in neuem Fenster geöffnet) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://signup.pagerduty.com/accounts/new){: new_window}. Anweisungen zum Auffinden des Schlüssels finden Sie in [Generieren eines API-Schlüssels ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
-1. Geben Sie den Namen Ihres PagerDuty-Service ein.
-1. Geben Sie die E-Mail-Adresse für den primären PagerDuty-Kontakt ein.
-1. Geben Sie die Telefonnummer für den primären PagerDuty-Kontakt ein.
+1. Wenn Sie PagerDuty auf der Kontenebene mithilfe eines API-Schlüssels integrieren wollen, klicken Sie auf **Konto**:
+
+ a. Geben Sie den API-Zugriffsschlüssel für Ihr PagerDuty-Konto ein. Wenn Sie kein PagerDuty-Konto haben, [registrieren Sie sich für ein solches Konto (Link wird in neuem Fenster geöffnet) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://signup.pagerduty.com/accounts/new){: new_window}. Anweisungen zum Auffinden des Schlüssels finden Sie in [Generieren eines API-Schlüssels ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
+
+ b. Geben Sie den Namen Ihres PagerDuty-Service ein.
+
+ c. Geben Sie die E-Mail-Adresse für den primären PagerDuty-Kontakt ein.
+
+ d. Geben Sie die Telefonnummer für den primären PagerDuty-Kontakt ein.
+
+1. Wenn Sie PagerDuty auf der Serviceebene mithilfe eines Integrationsschlüssels integrieren wollen, klicken Sie auf **Service**:
+
+ a. Geben Sie die URL für den PagerDuty-Service ein, an den Sie Alerts senden wollen.
+
+ b. Geben Sie Ihren PagerDuty-Integrationsschlüssel ein. Im Abschnitt mit den Integrationen auf der Seite des PagerDuty-Service können Sie Ihren Schlüssel suchen oder einen Schlüssel erstellen.
+
 1. Klicken Sie auf **Integration erstellen**.
 1. Klicken Sie auf **PagerDuty**, um zu pagerduty.com zu gelangen. Sie können die Ereignisse anzeigen, die dem PagerDuty-Service zugeordnet sind, den Sie während der Konfiguration dieser Toolintegration für Ihre Toolchain angegeben haben.
 
-Mehr erfahren Sie im [PagerDuty-Artikel ![Symbol für externen Link ](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu PagerDuty
+
+Mehr zu PagerDuty erfahren Sie im Artikel zu [PagerDuty ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window} in IBM Cloud Garage Method oder im folgenden Lernprogramm und dem Garage Method Advocate-Kurs:
+
+  * [Microservice-Toolchain mit {{site.data.keyword.DRA_short}} erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices?task=5){:new_window}
+  * [Befürworter von IBM Cloud Garage Method werden![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/course/gm_advocate/){:new_window}
 
 
 ## Rational Team Concert konfigurieren
@@ -771,13 +917,13 @@ Konfigurieren Sie Rational Team Concert, um einen DevOps-Ansatz und Continuous D
 1. Geben Sie die URL für den Rational Team Concert-Server ein, der geöffnet werden soll, wenn Sie in Ihrer Toolchain auf die Karte für Rational Team Concert klicken.
 1. Geben Sie die Benutzer-ID ein, die Sie für den Zugriff auf den Rational Team Concert-Server verwenden.
 1. Geben Sie das Kennwort ein, das Sie für den Zugriff auf den Rational Team Concert-Server verwenden.
-1. Wenn Sie über einen Rational Team Concert-Projektbereich verfügen, den Sie zu Ihrer Toolchain hinzufügen wollen, führen Sie die folgenden Schritte aus: 
+1. Wenn Sie über einen Rational Team Concert-Projektbereich verfügen, den Sie zu Ihrer Toolchain hinzufügen wollen, führen Sie die folgenden Schritte aus:
 
  a. Wählen Sie in der Liste **Projektbereichstyp** den Eintrag **Vorhandener Projektbereich** aus. 
 
  b. Geben Sie den Namen des Projektbereichs ein, der zu Ihrer Toolchain hinzugefügt werden soll.
  
-1. Wenn Sie einen Rational Team Concert-Projektbereich erstellen wollen und diesen anschließend zu ihrer Toolchain hinzufügen möchten, führen Sie die folgenden Schritte aus: 
+1. Wenn Sie einen Rational Team Concert-Projektbereich erstellen wollen und diesen anschließend zu ihrer Toolchain hinzufügen möchten, führen Sie die folgenden Schritte aus:
  
  a. Wählen Sie in der Liste **Projektbereichstyp** den Eintrag **Neuer Projektbereich** aus. 
 
@@ -789,8 +935,9 @@ Konfigurieren Sie Rational Team Concert, um einen DevOps-Ansatz und Continuous D
 1. Klicken Sie auf **Integration erstellen**.
 1. Klicken Sie von Ihrer Toolchain aus auf **Rational Team Concert**, um das von Ihnen konfigurierte Rational Team Concert-Dashboard zu öffnen.
 
-Mehr erfahren Sie im [IBM Rational Team Concert-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/think/tool_rtc/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu Rational Team Concert
 
+Mehr zu Rational Team Concert erfahren Sie im Artikel zu [IBM Rational Team Concert ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/think/tool_rtc/){: new_window} in IBM Cloud Garage Method.
 
 
 ## Sauce Labs konfigurieren
@@ -815,9 +962,14 @@ Konfigurieren Sie Sauce Labs, um automatische Funktionstests auf mehreren Betrie
 1. Klicken Sie auf **Sauce Labs**, um saucelabs.com zu öffnen und die Testaktivität für die Toolchain anzuzeigen.
 
  **Tipp:**: Wenn Sie einen Sauce Labs-Testjob zu {{site.data.keyword.deliverypipeline}} hinzugefügt haben,
-können Sie die Serviceinstanz auswählen. Anweisungen zum Konfigurieren eines Testjobs enthält der Abschnitt [Sauce Labs-Testjob in Ihrer Pipeline konfigurieren](#config_saucelabs). 
+können Sie die Serviceinstanz auswählen. Anweisungen zum Konfigurieren eines Testjobs enthält der Abschnitt [Sauce Labs-Testjob in Ihrer Pipeline konfigurieren](#config_saucelabs).
 
-Mehr erfahren Sie im [Sauce Labs-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu Sauce Labs
+
+Mehr zu Sauce Lab erfahren Sie im Artikel [Sauce Labs ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window} in IBM Cloud Garage Method oder in einem dieser Lernprogramme:
+
+  * [Microservice-Toolchain mit {{site.data.keyword.DRA_short}} erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
+  * [Microservice-Toolchain mit {{site.data.keyword.DRA_short}} (Version 2) erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
 
 
 ## Slack konfigurieren
@@ -851,7 +1003,13 @@ auf der Karte für Slack der Fehler `Einrichtung fehlgeschlagen` angezeigt. Bewe
 
 1. Klicken Sie auf **Slack**. Sie können alle Aktivitäten für Ihre Toolchain im konfigurierten Slack-Kanal anzeigen.
 
-Mehr erfahren Sie im [Slack-Artikel ![Symbol für externen Link ](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu Slack
+
+Mehr zu Slack erfahren Sie im Artikel zu [Slack ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window} in IBM Cloud Garage Method oder in einem der folgenden Lernprogramme und dem Garage Method Advocate-Kurs:
+
+  * [Microservice-Toolchain mit {{site.data.keyword.DRA_short}} erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
+  * [Microservice-Toolchain mit {{site.data.keyword.DRA_short}} (Version 2) erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Befürworter von IBM Cloud Garage Method werden![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/course/gm_advocate/){:new_window}
 
 
 ## SonarQube konfigurieren
@@ -868,7 +1026,7 @@ wollen. Alternativ können Sie auf der Übersichtsseite Ihrer App auf der Karte 
 
  a. Klicken Sie auf **Tool hinzufügen**.
 
- b. Klicken Sie im Abschnitt 'Toolintegrationen' auf **SonarQube**.
+ b. Klicken Sie im Abschnitt mit den Toolintegrationen auf **SonarQube**.
 
 1. Geben Sie einen Namen für diese Instanz der SonarQube-Toolintegration ein.
 1. Geben Sie die URL für die SonarQube-Instanz ein, die geöffnet werden soll, wenn Sie in Ihrer Toolchain auf die Karte für SonarQube
@@ -883,4 +1041,6 @@ ein Kennwort verwenden. Wenn Sie zum Herstellen einer Verbindung ein Authentifiz
 1. Klicken Sie in Ihrer Toolchain auf **SonarQube**, um das Dashboard für die SonarQube-Instanz anzuzeigen, zu der
 Sie eine Verbindung hergestellt haben.
 
-Mehr erfahren Sie im [SonarQube-Artikel ![Symbol für externen Link ](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window} in IBM Cloud Garage Method.
+### Weitere Informationen zu SonarQube
+
+Mehr zu SonarQube erfahren Sie im Artikel zu [SonarQube ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window} in IBM Cloud Garage Method.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-4-5"
+lastupdated: "2017-8-18"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,30 +22,34 @@ lastupdated: "2017-4-5"
 使用 {{site.data.keyword.deliverypipeline}} 的组合管道功能，您可以管理相关软件应用程序的可重复持续集成和持续交付流程。
 {:shortdesc}
 
-您创建组合管道来管理工具链中的应用程序。如果工具链包含 {{site.data.keyword.deliverypipeline}} 部署的应用程序，那么当您在工具链中添加或除去 Delivery Pipeline 时，工具链会动态更新。您还可以将应用程序从外部源添加到组合管道。
+您创建组合管道来管理工具链中的应用程序。如果工具链包含 {{site.data.keyword.deliverypipeline}} 部署的应用程序，那么在工具链中添加或除去 Delivery Pipeline 时，可以设置要更新的组合管道。您还可以将应用程序从外部源添加到组合管道。
 
 ## 创建组合管道
 {: #compositepipeline_create_for_toolchain}
 
-1. 从 Bluemix 徽标附近的菜单中，单击**服务 > DevOps**
+1. 从 {{site.data.keyword.Bluemix_notm}} 菜单栏上的菜单中，单击 **DevOps**。
 
-1. 从左侧导航中，单击**管道**。
+2. 从左侧导航中，单击**管道**。
 
-2. 通过单击**了解更多**，然后单击**启用**，启动组合管道功能。组合管道会针对每个用户启用，因此只有选择试验性功能的组织成员才能看到您所创建的组合管道。
+3. 通过单击**了解更多**，然后单击**启用**，启动组合管道功能。组合管道会针对每个用户启用，因此只有选择试验性功能的组织成员才能看到您所创建的组合管道。
 
-2. 单击**创建** > **组合管道**。
+4. 单击**创建管道** > **组合管道**。
 
-3. 键入组合管道的名称。您还可以修改管道描述。
+5. 键入组合管道的名称。您还可以修改管道描述。
 
-4. 从**工具链**列表中，选择工具链。
+6. 从**工具链**列表中，选择工具链。
 
-    1. 要创建空的工具链和组合管道，请选择**新建**。
+    a. 要创建空的工具链和组合管道，请选择**新建**。
 
-    2. 要为其中一个工具链创建组合管道，请选择其名称。
+    b. 要为其中一个工具链创建组合管道，请选择其名称。
 
-5. 如果您创建空工具链，请选择**添加缺省环境**。您使用这些缺省逻辑环境，通过组合管道来控制流程执行。
+7. 如果您创建空工具链，请选择**添加缺省环境**。您使用这些缺省逻辑环境，通过组合管道来控制流程执行。
 
-6. 单击**创建**。
+8. 要在将管道添加到工具链、从工具链中除去管道或修改工具链管道的阶段时更新组合管道，请选择**自动将此组合管道与所选工具链同步**。
+
+  **注**：在更改工具链的管道之前，必须启用自动同步。只有启用了自动同步，组合管道中才会包含所做的更改。
+
+9. 单击**创建**。
 
 您所配置的阶段会自动映射到您组织的相应空间，且会针对组合管道创建部署计划。
 
@@ -68,7 +72,7 @@ lastupdated: "2017-4-5"
 
 此时将显示环境的部署任务列表。
 
-![包含三个个别管道的组合管道的缺省部署计划](images/composite_deploy_plan.png)
+![包含三个不同管道的组合管道的缺省部署计划](images/composite_deploy_plan.png)
 
 有关修改部署计划的更多信息，请参阅[定制组合管道的部署计划](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html)。
 
@@ -86,15 +90,44 @@ lastupdated: "2017-4-5"
 ## 运行组合管道中的作业
 {: #compositepipeline_run_jobs}
 
-展开应用程序以显示其作业后，您可以手动运行其在阶段中的所有作业。对于某个应用程序，单击空间中的**部署至 *阶段*** 图标。
+展开应用程序以显示其作业后，您可以手动运行其在阶段中的所有作业。在应用程序的空间中，单击 **部署到 *stage*** 图标。
 
-![运行单个应用程序中的阶段](images/composite_run_stage.png)
+![在单个应用程序中运行某个阶段](images/composite_run_stage.png)
 
-要运行空间中所有应用程序中的所有作业，请针对组合管道，单击空间中的**部署至 *空间*** 图标。
+要运行空间中所有应用程序中的所有作业，请单击组合管道空间中的**部署到 *space*** 图标。
 
-![运行所有应用程序中的阶段](images/composite_run_space.png)
+![在所有应用程序中运行某个阶段](images/composite_run_space.png)
 
 作业根据组合蓝图的部署计划运行。
+
+##添加交付管道部署的应用程序
+{: #compositepipeline_add_apps}
+
+只能通过将组合管道与工具链同步来添加 Delivery Pipeline 部署的应用程序。由于组合管道与单个工具链相关联，因此可以仅包含其 Delivery Pipeline 位于该工具链中的应用程序。
+
+要将 Delivery Pipeline 部署的应用程序添加到组合管道，请执行以下步骤：
+
+1. 打开组合管道。
+
+2. 选择**自动将此组合管道与工具链同步**。
+
+  **注**：在创建 Delivery Pipeline 之前，必须启用自动同步。只有启用了自动同步，组合管道中才会包含所做的更改。
+
+3. 为应用程序创建 Delivery Pipeline。确保将 Delivery Pipeline 与组合管道分配给相同的工具链。
+
+4. 配置 Delivery Pipeline 的阶段和作业。
+
+应用程序将添加到组合管道，并且每个阶段的部署计划都包含用于运行您配置的作业的任务。
+
+
+##在组合管道中更新 Delivery Pipeline
+{: #compositepipeline_sync}
+
+必须先在组合管道中启用自动同步，然后才能添加或更改作为其中一部分的管道。
+
+1. 打开组合管道。
+
+2. 选择**自动将此组合管道与工具链同步**。
 
 ## 查看日志
 {: #compositepipeline_view_logs}
@@ -161,7 +194,7 @@ IBM Bluemix DevOps Connect 协调内部部署 IBM&reg; UrbanCode&reg; Deploy 安
 ## 从 IBM UrbanCode Deploy 添加应用程序
 {: #compositepipeline_add_apps}
 
-如果您是使用 DevOps Connect 与 IBM UrbanCode Deploy 集成的组织的成员，那么您可以将 IBM UrbanCode Deploy 中您可以访问的应用程序添加到组合管道中。有关安装指示信息，请参阅[使用 IBM Bluemix DevOps Connect 与 IBM UrbanCode Deploy 集成](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)。
+如果您是某组织的成员，而该组织使用 DevOps Connect 与 IBM UrbanCode Deploy 集成，那么您可以将 UrbanCode Deploy 中您有权访问的应用程序添加到组合管道中。有关安装指示信息，请参阅[使用 IBM Bluemix DevOps Connect 与 IBM UrbanCode Deploy 集成](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)。
 
 当您是连接到 IBM UrbanCode Deploy 的组织的成员时，您可以将 UrbanCode Deploy 应用程序添加到组合管道，选择要包含在部署计划中的应用程序流程，并定制应用程序的部署。
 
@@ -186,3 +219,9 @@ IBM Bluemix DevOps Connect 协调内部部署 IBM&reg; UrbanCode&reg; Deploy 安
     3. 单击**保存**。
 
     4. 针对您使用的每个逻辑环境重复上述步骤。
+
+##学习教程：组合管道
+{: #composite_pipeline-tutorial}
+
+查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method){:new_window} 上的本教程：
+  * [创建并使用具有 DevOps Insights 的微服务工具链 (V2) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

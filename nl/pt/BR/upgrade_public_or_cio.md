@@ -14,7 +14,7 @@ lastupdated: "2017-5-19"
 
 O {{site.data.keyword.jazzhub}} está sendo desenvolvido para o IBM Bluemix {{site.data.keyword.contdelivery_short}}. Como parte dessa mudança, será feito upgrade dos projetos para cadeias de ferramentas.
 
-Quando o projeto está pronto para ser submetido a upgrade, uma mensagem é exibida em sua página Visão geral. É possível então atualizar o projeto para uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Public. A cadeia de ferramentas incluirá um repositório (repo) do Whitewater {{site.data.keyword.ghe_short}} para seu código-fonte. O Whitewater {{site.data.keyword.ghe_short}} é fornecido às equipes IBM para promover e ativar a codificação social dentro da IBM.
+Quando o projeto está pronto para ser submetido a upgrade, uma mensagem é exibida em sua página Visão geral. É possível então atualizar o projeto para uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Public. A cadeia de ferramentas incluirá um repositório (repo) do Whitewater {{site.data.keyword.ghe_short}} para seu código-fonte. O Whitewater {{site.data.keyword.ghe_short}} é fornecido às equipes IBM para promover e ativar a codificação social dentro da IBM. 
 {: shortdesc}
 
 As cadeias de ferramentas do **{{site.data.keyword.contdelivery_short}} são aprovadas para material IBM Confidential quando elas são usadas com o Whitewater {{site.data.keyword.ghe_short}}.** Os Delivery Pipelines que recebem entrada de repositórios do Whitewater {{site.data.keyword.ghe_short}} podem implementar nos ambientes de preparação (YS1) e públicos (YP).

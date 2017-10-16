@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-11"
+lastupdated: "2017-07-18"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2017-4-11"
  <td align="center">
  <strong>Stack Overflow</strong>
   <p>
-   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(新しいタブまたはウィンドウで開く)"><img class="image" src="images/ask-a-question.png" alt="質問を投稿する"/></a></p>
+   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,devops-services" target="_blank" title="(新しいタブまたはウィンドウで開く)"><img class="image" src="images/ask-a-question.png" alt="質問を投稿する"/></a></p>
    <p>
     <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(新しいタブまたはウィンドウで開く)">Stack Overflow の最新の <img class="image" src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services の質問を表示する。</p></td>
   <td align="center">

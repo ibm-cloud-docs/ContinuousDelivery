@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-26"
+lastupdated: "2017-7-17"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-4-26"
 {: #toolchains-using}
 
 As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Dedicated no {{site.data.keyword.Bluemix}}. É possível usar uma cadeia de ferramentas para ser produtivo em seu trabalho diário de desenvolvimento, implementação e operações. Após
-configurar uma cadeia de ferramentas, é possível incluir, excluir ou configurar integrações de ferramenta e gerenciar acesso à cadeia de ferramentas. 
+configurar uma cadeia de ferramentas, é possível incluir, excluir ou configurar integrações de ferramenta e gerenciar acesso à cadeia de ferramentas.
 {: shortdesc}
 
 ## Configurando uma integração de ferramenta
@@ -24,8 +24,7 @@ Se você tiver adiado a configuração de uma integração de ferramenta quando 
 1. No painel do DevOps, na página **Cadeias de ferramentas**, clique em uma cadeia de ferramentas para abrir sua página Visão geral. Como alternativa, na página Visão geral do app, no cartão do Continuous Delivery, clique em **Visualizar cadeia de ferramentas** e, em seguida, clique em **Visão geral**.
 1. Se precisar configurar uma integração de ferramenta pela primeira vez, em seu cartão, clique em **Configurar**.
 
-  ![Botão de configuração
-](images/toolchain_tile_configure.png)
+  ![Botão Configurar](images/toolchain_tile_configure.png)
 
  Quando tiver finalizado a configuração da integração de ferramenta, clique em **Salvar integração**.
 
@@ -35,7 +34,7 @@ Se você tiver adiado a configuração de uma integração de ferramenta quando 
 
  **Dica**: algumas das integrações de ferramenta são pré-configuradas e não requerem parâmetros de configuração. É possível atualizar as definições de configuração para apenas as integrações de ferramenta configuradas.
 
- Quando tiver finalizado a atualização das configurações, clique em **Salvar integração**.
+ Quando tiver finalizado a atualização das configurações, clique em **Salvar integração**. Para obter mais informações sobre como configurar integrações de ferramentas específicas, veja [Configurando integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 
 ## Incluindo uma integração de ferramenta
 {: #adding_a_tool_integration}
@@ -63,6 +62,8 @@ Se você excluir uma integração de ferramenta a partir de sua cadeia de ferram
 
 É possível conceder aos usuários acesso a uma cadeia de ferramentas, incluindo-os na organização (org) à qual a cadeia de ferramentas está associada e à lista de controle de acesso da cadeia de ferramentas. Cada cadeia de ferramentas é associada a uma organização específica e qualquer usuário que seja membro dessa organização poderá ser incluído na lista de controle de acesso de qualquer uma das cadeias de ferramentas associadas. A organização na qual você está trabalhando atualmente é exibida na barra de menus. Para acessar um conjunto diferente de cadeias de ferramentas, alterne para uma organização diferente.
 
+**Dica:** deve-se incluir usuários na organização da cadeia de ferramentas na região na qual a cadeia de ferramentas está hospedada. Como as cadeias de ferramentas estão atualmente hospedadas somente na região sul dos EUA, deve-se incluir usuários na organização na região sul dos EUA. Se a cadeia de ferramentas estiver configurada para implementar apps em uma região diferente, ainda assim ela implementará apps nessa região.
+
 Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, ao incluir usuários em sua organização e espaços do {{site.data.keyword.Bluemix_notm}}, os usuários poderão efetuar login no {{site.data.keyword.ghe_short}} usando seus IDs e senhas do {{site.data.keyword.Bluemix_notm}}. Quando os usuários efetuarem login, as contas serão criadas para eles. Quando você incluir usuários em sua organização e espaços do {{site.data.keyword.Bluemix_notm}}, eles não serão incluídos automaticamente no repositório {{site.data.keyword.ghe_short}}. Alguém com privilégio do administrador para o repositório deverá inclui-los. Para obter mais informações, consulte [Usando o Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. Se você estiver usando sua própria versão gerenciada do {{site.data.keyword.ghe_short}}, siga seus procedimentos internos.
 
 ###Dicas para gerenciar o acesso a uma cadeia de ferramentas
@@ -82,17 +83,17 @@ Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{sit
    a. Na barra de menus, clique em **Gerenciar > Conta > Organizações**.
 
    b. Clique em **Convidar membros da equipe**.
-   
+
    c. Selecione a organização para a qual você deseja convidar o usuário e clique em **Avançar**.
-   
-   d. Selecione os espaços os quais você deseja permitir que o usuário acesse.
-   
-   e. Selecione a função a ser designada aos espaços selecionados na organização. 
-   
-     **Nota**: por padrão, os gerenciadores da organização têm privilégios completos de administrador a todas as cadeias de ferramentas que estão associadas à organização. Para conceder privilégios completos de administrador ao usuário, selecione a função **Gerenciador**. As funções Gerente de faturamento e Auditor não afetam o acesso da cadeia de ferramentas. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para obter mais informações, veja [Gerenciando membros da equipe e funções](/docs/admin/users_roles.html){: new_window}.
-   
+
+   d. Selecione os espaços que você deseja permitir que o usuário acesse.
+
+   e. Selecione a função para designar aos espaços selecionados na organização.
+
+     **Nota:** por padrão, os gerenciadores da organização têm privilégios integrais de administrador para todas as cadeias de ferramentas que estão associadas à organização. Para conceder privilégios integrais de administrador ao usuário, selecione a função de **Gerenciador**. As funções Gerente de faturamento e Auditor não afetam o acesso da cadeia de ferramentas. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para obter mais informações, veja [Gerenciando membros da equipe e funções](/docs/admin/users_roles.html){: new_window}.
+
    f. Selecione a opção para confirmar que você assume a responsabilidade financeira por todos os encargos incorridos na conta.
-   
+
    g. Insira o endereço de e-mail do usuário que você deseja convidar e clique em **Enviar**.
 
    h. Depois que o usuário for um membro da organização, retorne à página Gerenciar da cadeia de ferramentas e inclua o usuário na cadeia de ferramentas.  
@@ -105,7 +106,14 @@ Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{sit
 
 1. No painel do DevOps, na página **Cadeias de ferramentas**, clique na cadeia de ferramentas a ser excluída. Como alternativa, na página Visão geral do app, no cartão do Continuous Delivery, clique em **Visualizar cadeia de ferramentas**.
 1. Clique no menu **Mais ações**, que está próximo a **Visualizar app**.
-1. Clique em **Excluir** e revise ou ajuste as integrações de ferramentas que você estiver excluindo.
+1. Clique em **Excluir**. Excluir uma cadeia de ferramentas remove todas as suas integrações de ferramenta, que pode excluir recursos que são gerenciados por essas integrações.
 1. Confirme a exclusão digitando o nome da cadeia de ferramentas e clicando em **Excluir**.  
 
- **Dica**: ao excluir uma integração de ferramenta GitHub, {{site.data.keyword.ghe_short}} ou Git Repos and Issue Tracking, o repositório associado não será excluído do GitHub, do {{site.data.keyword.ghe_short}} ou do Git Repos and Issue Tracking. Deve-se remover manualmente o repositório.
+ **Dica**: ao excluir uma integração de ferramenta GitHub, {{site.data.keyword.ghe_short}} ou {{site.data.keyword.gitrepos}}, o repositório associado não é excluído do GitHub, {{site.data.keyword.ghe_short}} ou {{site.data.keyword.gitrepos}}. Deve-se remover manualmente o repositório.
+
+##Consulte o tutorial: Usando cadeias de ferramentas
+{: #toolchain-tutorial}
+
+Consulte este tutorial no [IBM&reg; Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method){:new_window}:
+  * [Crie e use sua primeira cadeia de ferramentas (GitHub) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

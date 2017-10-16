@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+lastupdated: "2017-09-05"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2017-4-28"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# Gestione di {{site.data.keyword.deliverypipeline}} {: #pipeline-working}
+# Gestione delle pipeline {: #pipeline-working}
 
-Per automatizzare le tue creazioni e le tue distribuzioni in {{site.data.keyword.Bluemix}}, utilizza {{site.data.keyword.deliverypipeline}} per {{site.data.keyword.Bluemix_notm}}.
+Per automatizzare le tue creazioni e le tue distribuzioni in {{site.data.keyword.Bluemix}}, utilizza le pipeline {{site.data.keyword.contdelivery_full}}.
 {: shortdesc}
 
-Con {{site.data.keyword.deliverypipeline}}, puoi scegliere tra diversi tipi di build. Fornisci lo script
-    di build e {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} lo esegue; non ha bisogno di impostare dei
+Con le pipeline,  puoi scegliere tra diversi tipi di build. Fornisci lo script
+    di build e {{site.data.keyword.contdelivery_short}} lo esegue; non ha bisogno di impostare dei
     sistemi di build. Quindi, con un singolo clic, puoi distribuire automaticamente la tua applicazione a uno o più spazi {{site.data.keyword.Bluemix_notm}}, server Cloud Foundry pubblici o contenitori Docker su IBM Containers for {{site.data.keyword.Bluemix_notm}}.
 
 I lavori di creazione compilano e impacchettano il codice sorgente della tua applicazione da repository Git. I lavori di creazione producono delle risorse utente distribuibili, quali file WAR o contenitori Docker per IBM Containers. Puoi
@@ -38,14 +38,14 @@ Completa la seguente procedura per configurare una {{site.data.keyword.deliveryp
 1. Dal menu nella barra dei menu {{site.data.keyword.Bluemix_notm}}, fai clic su **Servizi** e quindi su **DevOps**.
 1. Fai clic su **Pipeline** e seleziona **Crea una pipeline**.
 
-Per [creare una pipeline ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} configurata per distribuire un'applicazione Cloud Foundry, completa la seguente procedura:
+Per [creare una pipeline ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} configurata per distribuire un'applicazione Cloud Foundry, completa la seguente procedura:
 
 1. Fai clic su **Cloud Foundry**.
 1. Se vuoi utilizzare un nome diverso per la pipeline, modifica il suo nome predefinito.
 1. Se vuoi utilizzare un nome diverso per l'applicazione, modifica il suo nome predefinito. Questo nome indica l'applicazione in cui distribuisce la pipeline.
-1. Se non hai una toolchain, ne viene creata una con un nome predefinito. Se vuoi utilizzare un nome diverso per la toolchain, modifica il suo nome. Con la toolchain, puoi estendere le funzionalità della tua pipeline mediante l'integrazione con altri strumenti e servizi. Per ulteriori informazioni sulle toolchain, consulta [Gestione delle toolchain](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
+1. Se non hai una toolchain, ne viene creata una con un nome predefinito. Se vuoi utilizzare un nome diverso per la toolchain, modifica il suo nome. Con la toolchain, puoi estendere le funzionalità della tua pipeline mediante l'integrazione con altri strumenti e servizi. Per ulteriori informazioni sulle toolchain, vedi [Creazione delle toolchain](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
 
- **Suggerimento**: le pipeline e le toolchain appartengono alle organizzazioni. Se fai parte di un'organizzazione che ha delle toolchain, puoi essere aggiunto al controllo dell'accesso per ogni toolchain associata. Dopo che sei stato aggiunto all'elenco del controllo dell'accesso per una toolchain, puoi utilizzare tale toolchain e tutte le pipeline associate, anche se non le hai create. Per ulteriori informazioni sul controllo dell'accesso alle toolchain, consulta [Gestione dell'accesso](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
+ **Suggerimento**: le pipeline e le toolchain appartengono alle organizzazioni. Se fai parte di un'organizzazione che ha delle toolchain, puoi essere aggiunto al controllo dell'accesso per ogni toolchain associata. Dopo che sei stato aggiunto all'elenco del controllo dell'accesso per una toolchain, puoi visualizzare tale toolchain e tutte le pipeline associate, anche se non le hai create. Se ti vengono concessi i privilegi di amministratore, puoi anche modificare ed eliminare la toolchain. Per ulteriori informazioni sul controllo dell'accesso alle toolchain, consulta [Gestione dell'accesso](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
 
 1. Seleziona la toolchain che vuoi utilizzare o immetti un nome per la nuova toolchain da creare.
 1. Seleziona il tuo provider Git.
@@ -65,12 +65,18 @@ Per [creare una pipeline ![Icona link esterno](../../icons/launch-glyph.svg "Ico
  ![Scheda pipeline](images/cd_pipeline.png)
 1. Se hai creato una pipeline nella toolchain che contiene una pipeline composita, la nuova pipeline viene aggiunta alla pipeline composita. Modifica il piano di distribuzione per includere le attività di distribuzione per la nuova pipeline. Consulta [Creazione di attività Delivery Pipeline](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}.
 
-Per creare una [pipeline vuota ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} senza alcuna fase preconfigurata:
+Per creare una [pipeline vuota ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} senza alcuna fase preconfigurata:
 
 1. Fai clic su **Personalizzato**.
 1. Se vuoi utilizzare un nome diverso per la pipeline, modifica il suo nome predefinito.
 1. Se non hai una toolchain, ne viene creata una con un nome predefinito. Se vuoi utilizzare un nome diverso per la toolchain, modifica il suo nome. Con la toolchain, puoi estendere le funzionalità della tua pipeline mediante l'integrazione con altri strumenti e servizi.
 1. Seleziona la toolchain che vuoi utilizzare o immetti un nome per la nuova toolchain da creare.
-1. Fai clic su **Crea**. Viene creata una pipeline vuota che viene rappresentata in forma di scheda nella pagina Panoramica della toolchain.
+1. Fai clic su **Crea**. Viene creata una pipeline vuota che viene rappresentata in forma di scheda nella pagina di panoramica della toolchain.
 
 Da {{site.data.keyword.deliverypipeline}}, puoi modificare la tua configurazione, controllare lo stato delle creazioni, dell'applicazione distribuita e delle ultime distribuzioni, visualizzare i log più recenti e i dettagli di distribuzione oppure eliminare la tua pipeline.
+
+## Visualizza una esercitazione: {{site.data.keyword.deliverypipeline}}
+{: #pipeline-tutorial}
+
+Guarda questa esercitazione su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method){:new_window}:
+  * [Crea una pipeline ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}

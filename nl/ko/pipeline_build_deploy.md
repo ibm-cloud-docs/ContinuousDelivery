@@ -19,7 +19,7 @@ lastupdated: "2017-6-1"
 # 빌드 및 배치
 {: #deliverypipeline_build_deploy}
 
-IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 서비스에서는 반복 가능한 지속적 통합 및 지속적 딜리버리 프로세스를 구현할 수 있습니다.
+{{site.data.keyword.contdelivery_full}}에는 반복 가능한 지속적 통합 및 지속적 딜리버리 프로세스를 구현할 수 있는 Delivery Pipeline이 포함됩니다.
 {:shortdesc}
 
 파이프라인을 작성하고 구성하려면 다음 태스크를 완료하십시오. 
@@ -49,12 +49,12 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 서비스에서는 
 
 파이프라인 페이지에서 **단계 실행** 아이콘을 클릭하여 단계를 수동으로 실행할 수 있습니다.
 
-![단계의 단계 실행 아이콘 클릭](images/RunStage.png)
+![작업의 실행 단계 아이콘 클릭](images/RunStage.png)
 
 다음 두 방법 중 하나로 빌드 히스토리 페이지에서 On-Demand 빌드 및 배치를 요청할 수도 있습니다.
 * 구성된 단계 아래에 있는 상자로 빌드를 끌어옵니다.
 * LAST EXECUTION RESULT 섹션에서 **전송 대상** 아이콘을 클릭한 후 배치할 영역을 선택하십시오.
-  ![이 빌드가 있는 단계 실행 아이콘](images/deploy_to.png)
+![이 빌드 아이콘을 사용한 실행 단계](images/deploy_to.png)
 
 실행 중인 단계를 취소하려면 단계에서 **로그 및 히스토리 보기**를 클릭하십시오. 작업 목록에서 실행 작업의 번호를 클릭한 후 **취소**를 클릭하십시오. 작업을 클릭한 후 **취소**를 클릭하거나 해당 단계에서 작업에 대해 **중지** 아이콘을 클릭하여 작업을 개별적으로 취소할 수도 있습니다.
 
@@ -84,8 +84,10 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 서비스에서는 
 
 배치된 애플리케이션의 런타임 로그를 보려면 **런타임 로그 보기**를 클릭하십시오. 
 
-![단계 타일에서 클릭하여 관련 로그를 열 수 있는 영역](images/view_logs_and_history.png)
+![클릭하여 관련 로그를 열 수 있는 단계 타일의 영역](images/view_logs_and_history.png)
 
 작업 로그 이외에, 단위 테스트 결과, 생성된 아티팩트 및 빌드 작업의 코드 변경사항을 볼 수 있습니다.
 
 단계 히스토리 페이지에서 단계를 실행, 취소 또는 구성할 수도 있습니다. **실행**을 클릭하여 단계를 실행하거나 **구성**을 클릭하여 단계를 구성하십시오. 단계가 실행 중인 동안 실행 번호를 클릭한 후 **취소**를 클릭하여 단계를 취소할 수 있습니다.
+
+

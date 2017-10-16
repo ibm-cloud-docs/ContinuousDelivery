@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+
+lastupdated: "2017-8-18"
+
 
 ---
 
@@ -27,15 +29,14 @@ lastupdated: "2017-4-28"
 
 1. {{site.data.keyword.Bluemix_notm}} Public を使用する場合、[{{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://console.bluemix.net){:new_window} にログインします。
 1. {{site.data.keyword.Bluemix_notm}} Dedicated を使用する場合、{{site.data.keyword.Bluemix_notm}} の Dedicated 環境にログインします。
-1. {{site.data.keyword.Bluemix_notm}} メニュー・バーのメニューから、**「サービス」**をクリックして、**「DevOps」**をクリックします。
+1. {{site.data.keyword.Bluemix_notm}} メニュー・バーのメニューから、**「DevOps」**をクリックします。
 1. DevOps ダッシュボードの**「ツールチェーン」**ページで、**「ツールチェーンの作成 (Create a Toolchain)」**をクリックします。
 1. **「ツールチェーンの作成 (Create a Toolchain)」**ページで、ツールチェーン・テンプレートをクリックします。
 1. 作成しようとしているツールチェーンの図を確認します。この図は、ツールチェーン内の各ツール統合とそのライフサイクル・フェーズを示しています。
 
  **ヒント**: 一部のツールチェーン・テンプレートには、同じツール統合の複数のインスタンスが含まれています。例えば、{{site.data.keyword.Bluemix_notm}} Public の Microservices ツールチェーン・テンプレートには、GitHub の 3 つのインスタンスと Delivery Pipeline の 3 つのインスタンス (3 つのマイクロサービスのそれぞれに対して 1 つずつ) が含まれています。
 
- 次のイメージの図はその例です。ツールチェーンを作成すると、ツールチェーンを構成する各ツール統合がこの図に表示されます。
-![ツールチェーンの図](images/toolchain_diagram.png)
+ 次のイメージの図はその例です。ツールチェーンを作成すると、ツールチェーンを構成する各ツール統合がこの図に表示されます。![ツールチェーンの図](images/toolchain_diagram.png)
 
 1. ツールチェーン設定のデフォルト情報を確認します。ツールチェーンの名前は、そのツールチェーンを {{site.data.keyword.Bluemix_notm}} 内で識別するためのものです。別の名前を使用する場合は、ツールチェーンの名前を変更します。  
 1. 「ツール統合 (Tool Integrations)」セクションで、ツールチェーンに構成する各ツール統合を選択します。いくつかのツール統合は、構成を必要としません。ツール統合の構成については、[ツール統合の構成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}を参照してください。
@@ -74,3 +75,11 @@ lastupdated: "2017-4-28"
 2. ツールチェーン内にあるツール統合にアクセスするには、ツールをクリックします。
 
  **ヒント**: GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーが複数ある場合、各リポジトリーはそれぞれ固有のカードで表されるため、同じツール統合に対して複数のカードが存在することがあります。複数のパイプラインがある場合、各パイプラインはそれぞれ固有のカードで表されるため、同じツール統合に対して複数のカードが存在することがあります。例えば、Microservices ツールチェーンを作成する場合、3 つのマイクロサービスのそれぞれが固有の GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーと、固有のパイプラインを持ちます。
+
+## チュートリアルを始める: ツールチェーンの使用
+{: #toolchain_tutorials}
+
+[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method){:new_window} の以下のチュートリアルのいずれかをチェックアウトします。
+  * [Create and use your first toolchain (GitHub) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Create a toolchain that uses Git Repos and Issue Tracking ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Add a toolchain to an app ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?task=1){:new_window}

@@ -14,7 +14,7 @@ lastupdated: "2017-4-4"
 # 關於 Delivery Pipeline
 {: #deliverypipeline_about}
 
-IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服務（也稱為管線）會自動持續部署 Bluemix 專案。在管線中，階段的序列會擷取輸入並執行工作（例如建置、測試及部署）。
+{{site.data.keyword.contdelivery_full}} 包括 Delivery Pipeline，以最少人為介入的可重複方式進行建置、測試及部署。在管線中，階段的序列會擷取輸入並執行工作（例如建置、測試及部署）。
 {:shortdesc}
 
 下列各節說明管線的概念性詳細資料。
@@ -60,7 +60,7 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服務（也稱為�
 
 執行工作之後，會捨棄為它所建立的容器。工作執行的結果可以持續保存，但其執行環境則否。
 
-**附註**：工作最多可以執行 60 分鐘。工作超出此限制時，即會失敗。如果工作超出此限制，請將它分成多個工作。例如，如果工作執行三個作業，則可能會將它分成三個工作：一個作業一個工作。
+**附註：**工作最多可以執行 60 分鐘。工作超出此限制時，即會失敗。如果工作超出此限制，請將它分成多個工作。例如，如果工作執行三個作業，則可能會將它分成三個工作：一個作業一個工作。
 
 若要瞭解如何將工作新增至階段，請參閱[將工作新增至階段](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}。
 
@@ -70,7 +70,12 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服務（也稱為�
 
 從建置工作取得輸入的工作，必須參照在它們建立所在之相同結構中的建置構件。例如，如果建置工作會將建置構件保存至 `output` 目錄，則部署所編譯的專案時，部署 Script 會參照 `output` 目錄，而不是專案根目錄。您可以在**建置保存目錄**欄位中輸入目錄名稱，以指定要保存的目錄。將欄位空白，會保存根目錄。
 
-**附註**：如果您為建置工作選取**簡單**建置器類型，則會跳過建置程序。在該情況下，不會編譯您的程式碼，而是會依現狀將它傳送至部署階段。若要建置並部署，請選取非**簡單**的建置器類型。
+**附註：**如果您使用**簡單**建置器類型，則不會編譯或建置程式碼；會將它包裝並設為供未來階段使用。
+
+當您使用 Cloud Foundry 進行部署時，Cloud Foundry 會包括正確的構件來容許應用程式執行。如需相關資訊，請參閱[使用 cf 指令來部署應用程式](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps)。Cloud Foundry 應用程式的管線包含執行 cf 指令的「部署」階段。
+
+Cloud Foundtry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.cloudfoundry.org/buildpacks/detection.html)。您可以在應用程式根資料夾的資訊清單檔中指定要使用的[建置套件](/docs/cfapps/byob.html#using-community-buildpacks)。建置套件一般會檢查使用者提供的構件，來判定下載的相依關係以及如何配置應用程式以與連結服務進行通訊。如需資訊清單檔的相關資訊，請參閱[應用程式資訊清單](/docs/manageapps/depapps.html#appmanifest)。 
+
 
 #### 建置 Script 的環境內容
 您可以在建置工作的建置 Shell 指令內包含環境內容。這些內容讓您能存取工作執行環境的相關資訊。如需相關資訊，請參閱 [{{site.data.keyword.deliverypipeline}} 服務的環境內容及資源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)。
@@ -113,7 +118,7 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服務（也稱為�
 簡單的管線可能包含三個階段：
 
 1. 「建置」階段：在應用程式上編譯及執行建置程序。
-2. 「測試」階段：部署應用程式實例，然後會對其執行測試。
+2. 「測試」階段：部署應用程式實例，然後對其執行測試。
 3. 「正式作業」階段：部署所測試應用程式的正式作業實例。
 
 此管線顯示在下列概念性圖表中：
@@ -122,4 +127,4 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服務（也稱為�
 
 *三階段管線的概念性模型*
 
-階段都採用其從儲存庫及建置工作的輸入，而且會循序並各自獨立地執行階段內的工作。在範例管線中，將會循序執行階段，即使「測試」及「正式作業」階段都採用「建置」階段的輸出作為其輸入也是一樣。
+階段都採用其從儲存庫及建置工作的輸入，而且會循序並各自獨立地執行階段內的工作。在範例管線中，會循序執行階段，即使「測試」及「正式作業」階段都採用「建置」階段的輸出作為其輸入。

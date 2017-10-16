@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-4-11"
+lastupdated: "2017-08-15"
 
 ---
 
@@ -45,7 +45,7 @@ Ogni attività in un piano di distribuzione è contenuta in una riga separata. L
 
 ### Tabella 1. Proprietà attività
 
-| Proprietà  | Descrizione  |
+| Proprietà  | Description  |
 | ------------------ | ------------------ |
 | Nome               |Nome attività       |
 | Tipo               |Tipo di attività: manuale, Continuous Delivery Pipeline, ritardata, email, intestazione / nota, UrbanCode Deploy|             
@@ -74,7 +74,7 @@ Normalmente, le attività manuali rappresentano alcune attività associate a una
 
 Per creare un'attività manuale, completa la seguente procedura:
 
-1. Nella pagina Deployment Plan Details, fai clic su **Create Task**. Per inserire un'attività in una posizione specifica nel piano, fai prima clic su **Create Task**, seleziona un'attività. La nuova attività viene inserita sotto l'attività selezionata.
+1. Nella pagina Deployment Plan Details, fai clic su **Create Task**. Per inserire un'attività in una posizione specifica nel piano, fai prima clic su **Create Task**, seleziona un'attività. La nuova attività viene inserita prima dell'attività selezionata.
 
 1. Nella finestra Create Task, dall'elenco **Type**, seleziona **Manual**.
 
@@ -88,7 +88,7 @@ Per creare un'attività manuale, completa la seguente procedura:
 
 3. Dall'elenco **Owner**, seleziona il proprietario dell'attività. Il proprietario predefinito è l'utente che ha creato l'attività. Viene visualizzato l'elenco **Owner** dopo che l'attività è stata assegnata a un utente o gruppo.    
 
-5. Fai clic su **Salva**. L'attività viene inserita nel piano di distribuzione.
+5. Fai clic su **Save**. L'attività viene inserita nel piano di distribuzione.
 
 ## Creazione di attività ritardate
 {: #tasks_delayed}
@@ -105,11 +105,11 @@ Per creare un'attività ritardata, completa la seguente procedura:
 
 1. Nel campo **Name**, immetti un nome per l'attività.
 
-3. Nel campo **Time**, immetti o seleziona l'ora in cui l'attività dovrà essere stata completata.
+3. Nel campo **Time**, immetti o seleziona l'ora in cui l'attività deve essere completata.
 
 3. Nell'elenco **Time Zone**, seleziona il fuso orario per il valore immesso nel campo **Time**.    
 
-5. Fai clic su **Salva**. L'attività viene inserita nel piano di distribuzione.
+5. Fai clic su **Save**. L'attività viene inserita nel piano di distribuzione.
 
 ## Creazione di attività di intestazione
 {: #tasks_header}
@@ -120,7 +120,7 @@ Le attività di intestazione rappresentano gli elementi organizzativi che puoi a
 
 Per creare un'attività di intestazione, completa la seguente procedura:
 
-1. Nella pagina Deployment Plan Details, fai clic su **Create Task**. Se vuoi inserire un'attività in una posizione specifica nel piano, fai prima clic su **Create Task**, seleziona un'attività. La nuova attività viene inserita sotto l'attività selezionata.
+1. Nella pagina Deployment Plan Details, fai clic su **Create Task**. Se vuoi inserire un'attività in una posizione specifica nel piano, fai prima clic su **Create Task**, seleziona un'attività. La nuova attività viene inserita prima dell'attività selezionata.
 
 1. Nella finestra Create Task, dall'elenco **Type**, seleziona **Header**.
 
@@ -128,7 +128,7 @@ Per creare un'attività di intestazione, completa la seguente procedura:
 
 3. Nel campo **Description**, immetti o incolla una descrizione. Puoi immettere una nota, un promemoria o altre istruzioni.
 
-5. Fai clic su **Salva**. L'attività viene inserita nel piano di distribuzione.
+5. Fai clic su **Save**. L'attività viene inserita nel piano di distribuzione.
 
 ## Creazione di attività Delivery Pipeline
 {: #tasks_pipelineCD}
@@ -137,7 +137,7 @@ Nel servizio {{site.data.keyword.contdelivery_short}}, {{site.data.keyword.deliv
 
 Per creare un'attività Delivery Pipeline, completa la seguente procedura:
 
-1. Nella pagina Deployment Plan Details, fai clic su **Create Task**. Se vuoi inserire un'attività in una posizione specifica nel piano, fai prima clic su **Create Task**, seleziona un'attività. La nuova attività viene inserita sotto l'attività selezionata.
+1. Nella pagina Deployment Plan Details, fai clic su **Create Task**. Se vuoi inserire un'attività in una posizione specifica nel piano, fai prima clic su **Create Task**, seleziona un'attività. La nuova attività viene inserita prima dell'attività selezionata.
 
 1. Nella finestra Create Task, dall'elenco **Type**, seleziona **Continuous Delivery Pipeline**.
 
@@ -149,12 +149,12 @@ Per creare un'attività Delivery Pipeline, completa la seguente procedura:
 
 3. Nel campo **Stage Name**, immetti o incolla il nome della fase.
 
-5. Fai clic su **Salva**. L'attività viene inserita nel piano di distribuzione.
+5. Fai clic su **Save**. L'attività viene inserita nel piano di distribuzione.
 
 ## Gestione dei gruppi di attività
 {: #tasks_groups}
 
-Puoi combinare due o più attività in un gruppo di attività. Quando crei un gruppo, definisci il modello di esecuzione del gruppo, che è sequenziale o parallelo. Puoi eseguire le attività in un gruppo di modello parallelo in qualsiasi ordine e puoi eseguirle contemporaneamente a meno che non esistano dipendenze. Le attività in gruppi sequenziali vengono eseguite in ordine di elenco, iniziando con la prima o l'attività più in alto.
+Puoi combinare due o più attività in un gruppo di attività. Quando crei un gruppo, definisci il modello di esecuzione del gruppo, che è sequenziale o parallelo. Puoi eseguire le attività in un gruppo di modello parallelo in qualsiasi ordine e puoi eseguirle contemporaneamente a meno che non esistano dipendenze. Le attività in gruppi sequenziali vengono eseguite in ordine di elenco, a partire dalla prima attività o quella più in alto.
 
 Puoi incorporare i gruppi in altri gruppi. Puoi incorporare un gruppo di modello sequenziale in un gruppo di modello parallelo e viceversa. Tuttavia, non puoi incorporare un gruppo di modello sequenziale in un altro gruppo sequenziale o incorporare un gruppo di modello parallelo in un altro gruppo parallelo.  
 
@@ -200,7 +200,7 @@ Per aggiungere una tag a un'attività, completa la seguente procedura:
 
 1. Nella finestra "Manage Tags for Selected Tasks", dall'elenco **Common Tags**, seleziona le tag. Puoi creare una tag immettendo un nome nella casella di testo dell'elenco.
 
-1. Fai clic su **Salva**.
+1. Fai clic su **Save**.
 
 Le tag vengono visualizzate nelle righe dell'attività della pagina Deployment Plan Details. Nella seguente figura, l'attività Deploy WAR ha due tag: `Deployment` e `Critical`.
 
@@ -221,11 +221,11 @@ Controllando le dipendenze dell'attività, puoi assicurarti che gli eventi si ve
 
 Per rendere un'attività un prerequisito di altre attività, completa la seguente procedura:
 
-1. Nella pagina Deployment Plan Details, seleziona un'attività o un gruppo di attività e fai clic su **Manage Prerequisites** <img class="inline" src="../UCCR/images/task-depend.png"  alt="prerequisito attività">. Puoi selezionare più attività e gruppi.
+1. Nella pagina Deployment Plan Details, seleziona un'attività o un gruppo di attività e fai clic su **Manage Prerequisites** <img class="inline" src="../UCCR/images/task-depend.png"  alt="Prerequisito attività">. Puoi selezionare più attività e gruppi.
 
 1. Nella finestra "Manage Prerequisites for Selected Tasks", dall'elenco **Prerequisite tasks for selected tasks**, seleziona l'attività prerequisita.
 
-1. Fai clic su **Salva**.
+1. Fai clic su **Save**.
 
 Le dipendenze dell'attività sono visualizzate nella colonna Dependencies nella pagina Deployment Plan Detail. Le frecce verso l'alto indicano i prerequisiti dell'attività; le frecce verso il basso le dipendenze dell'attività.
 
@@ -235,4 +235,4 @@ Nella seguente figura, la prima attività non ha alcun prerequisito e due attivi
 
 *Figura 4. Dipendenze dell'attività*
 
-Per controllare o modificare le dipendenze, seleziona l'attività e fai clic su **Manage Prerequisites** <img class="inline" src="../UCCR/images/task-depend.png"  alt="prerequisito attività">.
+Per esaminare o modificare le dipendenze, seleziona l'attività e fai clic su **Manage Prerequisites** <img class="inline" src="../UCCR/images/task-depend.png"  alt="Prerequisito attività">.

@@ -14,7 +14,7 @@ lastupdated: "2017-4-4"
 # 关于 Delivery Pipeline
 {: #deliverypipeline_about}
 
-IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服务也称为管道，可自动连续部署 Bluemix 项目。在管道中，阶段序列可检索输入并运行作业（例如，构建、测试和部署）。
+{{site.data.keyword.contdelivery_full}} 包含 Delivery Pipeline，用于以可重复的方式进行构建、测试和部署，需要的人为干预最少。在管道中，阶段序列可检索输入并运行作业（例如，构建、测试和部署）。
 {:shortdesc}
 
 以下各节描述管道背后的概念性详细信息。
@@ -39,7 +39,7 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服务也称为管�
 
 作业是阶段中的执行单元。一个阶段可以包含多个作业，阶段中的作业可以按顺序运行。缺省情况下，如果某个作业失败，那么阶段中的后续作业不会运行。
 
-![阶段中的构建和测试作业](images/jobs.png)
+![在阶段中构建和测试作业](images/jobs.png)
 
 作业在 Docker 容器中的独立工作目录中运行，而这些容器是为运行每一个管道所创建的。在作业运行之前，其工作目录中会填充在阶段级别定义的输入。例如，您的某个阶段中可能包含测试作业和部署作业。如果您在一个作业上安装依赖项，那么这些依赖项无法用于另一个作业。但是，如果您在阶段输入中提供依赖项，那么这些依赖项可用于这两个作业。
 
@@ -70,7 +70,12 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服务也称为管�
 
 从构建作业接受输入的作业必须参考与其采用相同结构创建的构建工件。例如，如果构建作业将构建工件归档至 `output` 目录，那么部署脚本会参考 `output` 目录而非项目根目录，以部署编译过的项目。可以通过在**构建归档目录**字段中输入目录名称来指定归档目录。使此字段保留为空白将归档根目录。
 
-**注**：如果您针对构建作业选择**简单**构建器类型，那么您会跳过构建过程。在该情况下，不会编译您的代码，而是会将其按原样发送到部署阶段。要构建并部署，请选择**简单**以外的构建器类型。
+**注**：如果使用**简单**构建器类型，那么不会编译或构建代码；而是将其打包，并使其可用于未来的阶段。
+
+使用 Cloud Foundry 部署时，Cloud Foundry 会包含正确的工件以允许应用程序运行。有关更多信息，请参阅[使用 cf 命令部署应用程序](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps)。Cloud Foundry 应用程序的管道包含运行 cf 命令的部署阶段。
+
+Cloud Foundtry 会尝试[检测要使用的 buildpack ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://docs.cloudfoundry.org/buildpacks/detection.html)。可以在应用程序根文件夹的清单文件中指定要使用的 [buildpack](/docs/cfapps/byob.html#using-community-buildpacks)。buildpack 通常会检查用户提供的工件，以确定要下载的依赖项以及如何配置应用程序以与绑定服务进行通信。有关清单文件的更多信息，请参阅[应用程序清单](/docs/manageapps/depapps.html#appmanifest)。 
+
 
 #### 构建脚本的环境属性
 您可以在构建作业的构建 shell 命令中包括环境属性。这些属性提供作业执行环境相关信息的访问权。有关更多信息，请参阅 [{{site.data.keyword.deliverypipeline}} 服务的环境属性和资源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)。
@@ -118,8 +123,8 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服务也称为管�
 
 此管道在以下概念图中显示：
 
-![管道中阶段和作业的概念图](images/diagram.jpg)
+![管道中各阶段和作业的概念图](images/diagram.jpg)
 
 *三个阶段管道的概念模型*
 
-阶段从存储库和构建作业接受输入，阶段中的作业按顺序彼此独立地运行。在管道示例中，阶段将按顺序运行，即使测试和生产阶段都将构建阶段的输出作为其输入也是如此。
+阶段从存储库和构建作业接受输入，阶段中的作业按顺序彼此独立地运行。在管道示例中，阶段将按顺序运行，尽管测试和生产阶段都将构建阶段的输出作为其输入。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-4-5"
+lastupdated: "2017-8-18"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,30 +22,34 @@ lastupdated: "2017-4-5"
 Mit dem Feature der Kombinationspipelines für {{site.data.keyword.deliverypipeline}} können Sie reproduzierbare, kontinuierliche Integrations- und Continuous Delivery-Prozesses für zusammengehörige Software-Apps verwalten.
 {:shortdesc}
 
-Sie erstellen Kombinationspipelines, um die Apps in einer Toolchain zu verwalten. Wenn Ihre Toolchain Apps enthält, die von {{site.data.keyword.deliverypipeline}} bereitgestellt werden, wird die Toolchain dynamisch aktualisiert, wenn Sie Delivery Pipelines zu ihr hinzufügen oder aus ihr entfernen. Sie können auch Apps aus externen Quellen zu der Kombinationspipeline hinzufügen.
+Sie erstellen Kombinationspipelines, um die Apps in einer Toolchain zu verwalten. Wenn Ihre Toolchain Apps enthält, die von {{site.data.keyword.deliverypipeline}} bereitgestellt werden, können Sie die Kombinationspipeline für die Aktualisierung einstellen, wenn Sie Delivery Pipelines zu ihr hinzufügen oder aus ihr entfernen. Sie können auch Apps aus externen Quellen zu der Kombinationspipeline hinzufügen.
 
 ## Kombinationspipeline erstellen
 {: #compositepipeline_create_for_toolchain}
 
-1. Klicken Sie im Menü nahe dem Bluemix-Logo auf **Services > DevOps**.
+1. Klicken Sie im Menü in der {{site.data.keyword.Bluemix_notm}}-Menüleiste auf **DevOps**.
 
-1. Klicken Sie im Navigationsfenster links auf **Pipelines**.
+2. Klicken Sie im Navigationsfenster links auf **Pipelines**.
 
-2. Aktivieren Sie das Feature für Kombinationspipelines, indem Sie zunächst auf **Weitere Informationen** und dann auf **Aktivieren** klicken. Die Kombinationspipeline wird für jeden Benutzer aktiviert, sodass nur diejenigen Mitglieder Ihrer Organisation (org) die von Ihnen erstellten Kombinationspipelines sehen können, die sich ausdrücklich für das experimentelle Feature entschieden haben.
+3. Aktivieren Sie das Feature für Kombinationspipelines, indem Sie zunächst auf **Weitere Informationen** und dann auf **Aktivieren** klicken. Die Kombinationspipeline wird für jeden Benutzer aktiviert, sodass nur diejenigen Mitglieder Ihrer Organisation (org) die von Ihnen erstellten Kombinationspipelines sehen können, die sich ausdrücklich für das experimentelle Feature entschieden haben.
 
-2. Klicken Sie auf **Erstellen** > **Kombinationspipeline**.
+4. Klicken Sie auf **Pipeline erstellen** > **Kombinationspipeline**.
 
-3. Geben Sie einen Namen für die Kombinationspipeline ein. Sie können auch die Beschreibung für die Pipeline ändern.
+5. Geben Sie einen Namen für die Kombinationspipeline ein. Sie können auch die Beschreibung für die Pipeline ändern.
 
-4. Wählen Sie in der Liste **Toolchain** eine Toolchain aus.
+6. Wählen Sie in der Liste **Toolchain** eine Toolchain aus.
 
-    1. Wenn Sie eine leere Toolchain und eine Kombinationspipeline erstellen wollen, wählen Sie **Neu** aus.
+    a. Wenn Sie eine leere Toolchain und eine Kombinationspipeline erstellen wollen, wählen Sie **Neu** aus.
 
-    2. Wenn Sie eine Kombinationspipeline für eine ihrer vorhandenen Toolchains erstellen wollen, wählen Sie den betreffenden Namen aus.
+    b. Wenn Sie eine Kombinationspipeline für eine ihrer vorhandenen Toolchains erstellen wollen, wählen Sie den betreffenden Namen aus.
 
-5. Wenn Sie eine leere Toolchain erstellen wollen, wählen Sie **Standardumgebungen hinzufügen** aus. Mit diesen standardmäßigen logischen Umgebungen steuern Sie die Prozessausführung im Verlauf der Kombinationspipeline.
+7. Wenn Sie eine leere Toolchain erstellen wollen, wählen Sie **Standardumgebungen hinzufügen** aus. Mit diesen standardmäßigen logischen Umgebungen steuern Sie die Prozessausführung im Verlauf der Kombinationspipeline.
 
-6. Klicken Sie auf **Erstellen**.
+8. Um die Kombinationspipeline beim Hinzufügen von Pipelines zur Toolchain zu aktualisieren, entfernen Sie Pipelines aus der Toolchain oder ändern Sie die Stages der Pipelines der Toolchain und wählen Sie **Kombinationspipeline mit der ausgewählten Toolchain automatisch synchronisieren** aus.
+
+  **Hinweis:** Sie müssen die automatische Synchronisation aktivieren, bevor Sie die Pipelines der Toolchain ändern. Nur Änderungen, die Sie vornehmen, wenn die automatische Synchronisation aktiviert ist, werden in die Kombinationspipeline aufgenommen.
+
+9. Klicken Sie auf **Erstellen**.
 
 Die von Ihnen konfigurierten Stages werden automatisch dem entsprechenden Bereich (Space) in Ihrer Organisation zugeordnet und es wird ein Bereitstellungsplan für die Kombinationspipeline erstellt.
 
@@ -91,11 +95,40 @@ Nachdem Sie eine App erweitert haben, um ihre Jobs anzuzeigen, können Sie alle 
 
 ![Stage in einer einzelnen App ausführen](images/composite_run_stage.png)
 
-Wenn Sie alle Jobs in allen Apps in einem Bereich ausführen wollen, klicken Sie in dem Bereich für die Kombinationspipeline auf das Symbol **Bereitstellen in *Bereich***.
+Wenn Sie jeden Job in jeder App in einem Bereich ausführen wollen, klicken Sie in dem Bereich für die Kombinationspipeline auf das Symbol **Bereitstellen in *Bereich***.
 
 ![Stage in allen Apps ausführen](images/composite_run_space.png)
 
 Die Jobs werden gemäß dem Bereitstellungsplan des Kombinationsblueprints ausgeführt.
+
+##Von Delivery Pipelines bereitgestellte Apps hinzufügen
+{: #compositepipeline_add_apps}
+
+Sie können Apps, die nur von Delivery Pipelines bereitgestellt werden, durch Synchronisieren der zusammengesetzten Pipeline mit der Toolchain hinzufügen. Da eine Kombinationspipeline einer einzigen Toolchain zugeordnet ist, können Sie nur Apps hinzufügen, deren Delivery Pipelines sich in dieser Toolchain befinden.
+
+Gehen Sie wie folgt vor, um eine App hinzuzufügen, die von einer Delivery Pipeline für die Kombinationspipeline bereitgestellt wird:
+
+1. Öffnen Sie die Kombinationspipeline.
+
+2. Wählen Sie **Kombinationspipeline mit der ausgewählten Toolchain automatisch synchronisieren** aus.
+
+  **Hinweis:** Sie müssen die automatische Synchronisation aktivieren, bevor Sie die Delivery Pipelines erstellen. Nur Änderungen, die Sie vornehmen, wenn die automatische Synchronisation aktiviert ist, werden in die Kombinationspipeline aufgenommen.
+
+3. Erstellen Sie die Delivery Pipeline für die App. Stellen Sie sicher, dass Sie die Delivery Pipeline derselben Toolchain wie die Kombinationspipeline zuordnen.
+
+4. Konfigurieren Sie Stages und Jobs für die Delivery Pipeline.
+
+Die App wird der Kombinationspipeline hinzugefügt und die Bereitstellungspläne für jede Stage enthalten Tasks zur Ausführung von Jobs, die Sie konfiguriert haben.
+
+
+##Delivery Pipelines in der Kombinationspipeline aktualisieren
+{: #compositepipeline_sync}
+
+Sie müssen die automatische Synchronisation in der Kombinationspipeline aktivieren, bevor Sie die darin enthaltenen Pipelines hinzufügen oder ändern können.
+
+1. Öffnen Sie die Kombinationspipeline.
+
+2. Wählen Sie **Kombinationspipeline mit der ausgewählten Toolchain automatisch synchronisieren** aus.
 
 ## Protokolle anzeigen
 {: #compositepipeline_view_logs}
@@ -162,7 +195,7 @@ Wenn Ihre Integration erfolgreich durchgeführt wurde, können Sie IBM UrbanCode
 ## Apps von IBM UrbanCode Deploy hinzufügen
 {: #compositepipeline_add_apps}
 
-Wenn Sie Mitglied einer Organisation sind, die mithilfe von DevOps Connect mit IBM UrbanCode Deploy integriert ist, können Sie die Apps, auf die Sie in IBM UrbanCode Deploy Zugriff besitzen, zur Kombinationspipeline hinzufügen. Installationsanweisungen enthält [IBM Bluemix DevOps Connect zum Integrieren mit IBM UrbanCode Deploy verwenden](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
+Wenn Sie Mitglied einer Organisation sind, die mithilfe von DevOps Connect mit IBM UrbanCode Deploy integriert ist, können Sie die Apps, auf die Sie in UrbanCode Deploy Zugriff haben, zur Kombinationspipeline hinzufügen. Installationsanweisungen enthält [IBM Bluemix DevOps Connect zum Integrieren mit IBM UrbanCode Deploy verwenden](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
 
 Wenn Sie Mitglied einer Organisation sind, die mit IBM UrbanCode Deploy verbunden ist, können Sie UrbanCode Deploy-Apps zu Kombinationspipelines hinzufügen, die App-Prozesse auswählen, die in den Bereitstellungsplan aufgenommen werden sollen, und die Bereitstellung der Apps anpassen.
 
@@ -187,3 +220,9 @@ Wenn Sie Mitglied einer Organisation sind, die mit IBM UrbanCode Deploy verbunde
     3. Klicken Sie auf **Speichern**.
 
     4. Wiederholen Sie diese Schritte für jede logische Umgebung, die Sie verwenden.
+
+##Relevantes Lernprogramm: Kombinationspipelines
+{: #composite_pipeline-tutorial}
+
+Informieren Sie sich in dem Lernprogramm zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method){:new_window}:
+  * [Microservice-Toolchain mit DevOps Insights (v2) erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

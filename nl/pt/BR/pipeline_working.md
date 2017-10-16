@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+lastupdated: "2017-09-05"
 
 ---
 
@@ -12,17 +12,13 @@ lastupdated: "2017-4-28"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# Trabalhando com {{site.data.keyword.deliverypipeline}} {: #pipeline-working}
+# Trabalhando com pipelines {: #pipeline-working}
 
-Para automatizar suas construções e implementações no
-{{site.data.keyword.Bluemix}}, use o
-{{site.data.keyword.deliverypipeline}} para
-{{site.data.keyword.Bluemix_notm}}.
+Para automatizar suas construções e implementações para o {{site.data.keyword.Bluemix}}, use pipelines do {{site.data.keyword.contdelivery_full}}.
 {: shortdesc}
 
-Com o {{site.data.keyword.deliverypipeline}}, é possível escolher
-entre diversos tipos de construção. Forneça o script de construção
-e o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} o executará; não é necessário
+Com pipelines, é possível escolher entre diversos tipos de construção. Forneça o script de construção
+e o {{site.data.keyword.contdelivery_short}} o executará; não é necessário
 configurar sistemas de construção. Em seguida, com um clique, é possível implementar automaticamente seu app para um ou
 vários espaços de {{site.data.keyword.Bluemix_notm}}, servidores públicos de Cloud Foundry ou contêineres Docker no IBM Containers para {{site.data.keyword.Bluemix_notm}}.
 
@@ -50,41 +46,37 @@ Conclua estas etapas para configurar um {{site.data.keyword.deliverypipeline}} p
 1. No menu da barra de menus do {{site.data.keyword.Bluemix_notm}}, clique em **Serviços** e, em seguida, clique em **DevOps**.
 1. Clique em **Pipelines** e depois clique em **Criar um pipeline**.
 
-Para [criar um pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} que esteja configurado para implementar um aplicativo Cloud Foundry, siga estas etapas:
+Para [criar um pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} que esteja configurado para implementar um aplicativo Cloud Foundry, siga estas etapas:
 
 1. Clique em **Cloud Foundry**.
 1. Se você desejar usar um nome diferente para o pipeline, mude o nome padrão.
 1. Se você desejar usar um nome diferente para o aplicativo, mude o nome padrão. Esse nome é o aplicativo no qual o pipeline é implementado.
-1. Se você não tiver uma cadeia de ferramentas, será criada uma com um nome padrão. Se você desejar usar um nome diferente para a cadeia de ferramentas, mude o nome. Com a cadeia de ferramentas, é possível ampliar os recursos de seu pipeline por meio da integração com outras ferramentas e serviços. Para obter mais informações sobre cadeias de ferramentas, veja [Trabalhando com cadeias de ferramentas](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
+1. Se você não tiver uma cadeia de ferramentas, será criada uma com um nome padrão. Se você desejar usar um nome diferente para a cadeia de ferramentas, mude o nome. Com a cadeia de ferramentas, é possível ampliar os recursos de seu pipeline por meio da integração com outras ferramentas e serviços. Para obter mais informações sobre cadeias de ferramentas, veja [Criando cadeias de ferramentas](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
 
  **Dica**: os pipelines e as cadeias de ferramentas pertencem às
-organizações (orgs). Se você pertencer a uma organização que tenha cadeias de ferramentas, será possível ser incluído na lista de controle de acesso de qualquer uma de suas cadeias de ferramentas associadas. Depois de ser incluído na lista de controle de acesso de uma cadeia de ferramentas, será possível usar essa cadeia de ferramentas e quaisquer pipelines associados, mesmo se você não os tiver criado. Para obter mais informações sobre o controle de acesso de cadeias de ferramentas, veja [Gerenciando o acesso](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
+organizações (orgs). Se você pertencer a uma organização que tenha cadeias de ferramentas, será possível ser incluído na lista de controle de acesso de qualquer uma de suas cadeias de ferramentas associadas. Depois de ser incluído na lista de controle de acesso para uma cadeia de ferramentas, será possível visualizar essa cadeia de ferramentas e quaisquer pipelines associados, mesmo se você não os tiver criado. Se privilégios de administrador tiverem sido concedidos a você, também será possível modificar e excluir a cadeia de ferramentas. Para obter mais informações sobre o controle de acesso de cadeias de ferramentas, veja [Gerenciando o acesso](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
 
 1. Selecione a cadeia de ferramentas que deseja usar ou digite um nome para a nova cadeia de ferramentas que deseja criar.
 1. Selecione seu provedor Git.
 
- **Dica**: se você não estiver autorizado o {{site.data.keyword.Bluemix_notm}} a acessar o GitHub, será solicitado a clicar em **Autorizar** para acessar o website do GitHub. Se você não
-tiver uma sessão GitHub ativa, será solicitado que efetue login. Clique em **Autorizar aplicativo** para permitir que o {{site.data.keyword.Bluemix_notm}} acesse sua conta GitHub. Se
-você tiver uma sessão GitHub ativa, mas não tiver inserido sua senha recentemente, poderá ser solicitado que insira sua senha GitHub para
-confirmar.
+ **Dica**: se você não tiver autorizado o {{site.data.keyword.Bluemix_notm}} a acessar o GitHub, será solicitado a clicar em **Autorizar** para acessar o website GitHub. Se você não
+tiver uma sessão GitHub ativa, será solicitado que efetue login. Clique em **Autorizar aplicativo** para permitir que o {{site.data.keyword.Bluemix_notm}} acesse sua conta GitHub. Se você tiver uma sessão GitHub ativa, mas não tiver inserido sua senha recentemente, poderá ser solicitado que insira sua senha GitHub para confirmar.
 
    * Se você tiver um repositório e desejar usá-lo, para o tipo de repositório, selecione **Link**. Procure o local do repositório e
 selecione-o na lista de repositórios disponíveis.
 
    * Se desejar criar um repositório vazio, para o tipo de repositório, selecione **Novo**. Digite um nome para o repositório.
 
-   * Se desejar criar um clone de um repositório, para o tipo de repositório, selecione **Copiar**. Procure o local do repositório e
-selecione-o na lista de repositórios disponíveis.
+   * Se desejar criar um clone de um repositório, para o tipo de repositório, selecione **Copiar**. Procure o local do repositório e selecione-o na lista de repositórios disponíveis.
 
    * Se desejar bifurcar um repositório para que possa contribuir com mudanças por meio de solicitações pull, selecione **Bifurcar**. Procure o local do repositório e
 selecione-o na lista de repositórios disponíveis.
 
 1. Selecione um repositório ou insira uma URL de repositório.
-1. Clique em **Criar**. O pipeline é criado, configurado e exibido na página Visão geral da cadeia de ferramentas.
- ![Cartão de pipeline](images/cd_pipeline.png)
+1. Clique em **Criar**. O pipeline é criado, configurado e exibido na página Visão Geral da cadeia de ferramentas. ![Placa do Pipeline](images/cd_pipeline.png)
 1. Se você tiver criado um pipeline na cadeia de ferramentas que contém um pipeline composto, o novo pipeline será incluído no pipeline composto. Modifique o plano de implementação para incluir tarefas de implementação para o novo pipeline. Veja [Criando tarefas do Delivery Pipeline](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}.
 
-Para criar um [pipeline vazio ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} sem nenhum estágio pré-configurado:
+Para criar um [pipeline vazio ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} sem nenhum estágio pré-configurado:
 
 1. Clique em **Customizado**.
 1. Se você desejar usar um nome diferente para o pipeline, mude o nome padrão.
@@ -93,3 +85,9 @@ Para criar um [pipeline vazio ![Ícone de link externo](../../icons/launch-glyph
 1. Clique em **Criar**. Um pipeline vazio é criado e representado como um cartão na página Visão geral da cadeia de ferramentas.
 
 No {{site.data.keyword.deliverypipeline}}, mude a configuração, verifique o status das construções, o app implementado e as implementações recentes; veja os logs mais recentes e os detalhes da implementação ou exclua seu pipeline.
+
+## Fazer um tutorial: {{site.data.keyword.deliverypipeline}}
+{: #pipeline-tutorial}
+
+Consulte este tutorial no [IBM&reg; Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method){:new_window}:
+  * [Criar um pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}

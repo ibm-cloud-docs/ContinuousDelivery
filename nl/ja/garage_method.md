@@ -1,11 +1,7 @@
 ---
 
 copyright:
-  years: 2017
-
-lastupdated: "2017-6-5"
-
----
+  years: 2017lastupdated: "2017-6-5"---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
     It must be surrounded by 3 dashes.
@@ -21,7 +17,7 @@ lastupdated: "2017-6-5"
 # 継続的デリバリー・プラクティス
 {: #gm_cd_best}
 
-![Garage Method フェーズ](images/garage_method_phases.png) [IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method){:new_window}は、関与するアプリケーションを迅速にデリバリーするための IBM のアプローチです。これは、継続的デリバリーを IBM Design Thinking、リーン、DevOps、およびアジャイルのプラクティスと結合します。これらのプラクティスはクラウドに焦点を当てていますが、あらゆるソフトウェア開発の取り組みに役立つ可能性があります。
+![Garage Method フェーズ](images/garage_method_phases.png)  [IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method){:new_window} は、関与するアプリケーションを迅速にデリバリーするための IBM のアプローチです。これは、継続的デリバリーを IBM Design Thinking、リーン、DevOps、およびアジャイルのプラクティスと結合します。これらのプラクティスはクラウドに焦点を当てていますが、あらゆるソフトウェア開発の取り組みに役立つ可能性があります。
 
 
 ## 継続的デリバリー・プラクティスの採用
@@ -32,9 +28,9 @@ lastupdated: "2017-6-5"
 ## 継続的デリバリーの記事
 {: #gm_cd_articles}
 
-これらの記事は、継続的デリバリーの概念的概要を提供します。
+Cloud Garage Method サイトには、継続的デリバリーの概要を説明した記事があります。
 
-[継続的デリバリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window}とは、いつでも実稼働環境にリリースできるようにソフトウェアを構築およびデプロイするためのプラクティスです。コンピューター・サイエンスの特徴の 1 つは、開発および運用プロセスでのさまざまなサイクル・タイムの短縮です。
+[継続的デリバリー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window} とは、いつでも実稼働環境にリリースできるようにソフトウェアをビルドしてデプロイするための方法です。コンピューター・サイエンスの特徴の 1 つは、開発および運用プロセスでのさまざまなサイクル・タイムの短縮です。
 
 IBM Bluemix Continuous Delivery に組み込まれている [Delivery Pipeline ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){:new_window}を使用すると、ソフトウェア・デリバリー・プロセスを複数のステージに分割することにより、一貫性のある、信頼できる方法で継続的デリバリーを達成することができます。目標は、最小限の人的介入で、コードが自動的に各ステージを経て進行することです。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-1"
+lastupdated: "2017-6-9"
 
 ---
 
@@ -62,9 +62,9 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行�
  2. 在檔案導覽器中，按一下檔案。
 
 ### 鍵盤快速鍵
-您也可以透過鍵盤快速鍵存取 {{site.data.keyword.webide}} 中的許多指令。
+您可以透過鍵盤快速鍵存取 {{site.data.keyword.webide}} 中的多數指令。
 
-若要查看編輯器中的鍵盤快速鍵清單，請按 Alt+Shift+?。如果您是使用 Mac OS，請按 Ctrl+Shift+?。
+若要查看編輯器中的鍵盤快速鍵清單，請按一下**工具** > **顯示按鍵**。或者，您也可以按 Alt+Shift+?，或在 MacOS 上按 Ctrl+Shift+?，以查看清單。您可以將游標移至按鍵上方，並按一下鉛筆，然後鍵入新按鍵連結，以自訂快速鍵。
 
 ## 管理原始碼
 {: #sourcecontrol}
@@ -92,7 +92,8 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行�
 如果您正在開發 Node.js 應用程式，請啟用「即時編輯」模式：<img  src="./images/enable_live_edit.png"  alt="啟用即時編輯調節器">
 
 <table><tr><td><img src="./images/live_edit_restart.png"  alt="「即時編輯」重新啟動圖示"></td><td>在啟用「即時編輯」模式的情況下，快速重新啟動應用程式，而不重新部署</td></tr>
-<tr><td> <img src="./images/debug_icon.png"  alt="除錯圖示"></td><td>在啟用「即時編輯」模式的情況下，存取除錯器</td></tr>
+<tr><td> <img src="./images/debug_icon.png"  alt="除錯圖示"></td>
+<td>在啟用「即時編輯」模式的情況下，存取除錯器</td></tr>
 </table>
 
 <!-- 3/6/2016: bl commands don't work with V2/CD
@@ -202,7 +203,15 @@ Eclipse Orion {{site.data.keyword.webide}} 提供 JavaScript、HTML、CSS 及 Ma
 </li><li>git config
 </li><li>cfignore
 </li><li>properties
-</ul>
+</li></ul>
 </td>
 </tr>
 </table>
+
+## 使用指導教學：Eclipse Orion Web IDE
+{: #toolchain_tutorials}
+
+請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method){:new_window} 上的其中一個指導教學：
+  * [建立及使用您的第一個工具鏈 (GitHub) ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [建立使用 Git Repos and Issue Tracking 的工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [使用 DevOps Insights（第 2 版）建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

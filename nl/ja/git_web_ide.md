@@ -2,8 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-6-1"
----
+lastupdated: "2017-6-1"---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -14,9 +13,9 @@ lastupdated: "2017-6-1"
 # Eclipse Orion Web IDE での Git の作業
 {: #git_web_ide}
 
-Eclipse Orion {{site.data.keyword.webide}} を使用する場合、Git 端末は必要ありません。各種の一般的な Git コマンドは、Web IDE で実行できます。
+Eclipse Orion {{site.data.keyword.webide}} で、多数の一般的な Git コマンドを実行できます。
 
-どこでコーディングする場合でも、一般的なタスクの実行に際してはこのクイック・リファレンスを使用できます。
+どこでコーディングする場合でも、一般的なタスクの実行に際してはこのクイック・リファレンスを使用できます。可能な場合は、Git コマンドと Web IDE の同等のコマンドが共に表示されます。 
 
 ## ローカル・ブランチの作成
 {: #create_branch}
@@ -146,7 +145,7 @@ Eclipse Orion {{site.data.keyword.webide}} を使用する場合、Git 端末は
 ### Git 端末
 1. `git log` と入力し、Enter キーを押します。
 
-2. コミッターのコミットをナビゲートします。
+2. コミッターのコミットを参照します。
  * さらに項目を表示するには、Page Down キーを押します。
  * 前の項目を表示するには、Page Up キーを押します。
 
@@ -243,7 +242,7 @@ Eclipse Orion {{site.data.keyword.webide}} を使用する場合、Git 端末は
 ##コミットを元に戻す
 {: #revert}
 
-コミットによってアクティブ・ブランチに加えられた変更を元に戻します。
+コミットによってアクティブ・ブランチに加えられた変更を戻します。
 
 ### Eclipse Orion Web IDE
 

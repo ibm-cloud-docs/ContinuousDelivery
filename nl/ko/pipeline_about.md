@@ -14,10 +14,10 @@ lastupdated: "2017-4-4"
 # Delivery Pipeline 정보
 {: #deliverypipeline_about}
 
-IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 서비스(파이프라인이라고도 함)는 Bluemix 프로젝트의 지속적 배치를 자동화합니다. 파이프라인에서는 일련의 단계에서 입력을 검색하고 작업(예: 빌드, 테스트 및 배치)을 실행합니다.
+{{site.data.keyword.contdelivery_full}}에는 사용자 개입을 최소화하여 반복할 수 있는 방식으로 빌드, 테스트, 배치를 수행하는 Delivery Pipeline이 포함됩니다. 파이프라인에서는 일련의 단계에서 입력을 검색하고 작업(예: 빌드, 테스트 및 배치)을 실행합니다.
 {:shortdesc}
 
-다음 절에서는 파이프라인의 기반이 되는 개념적 세부사항을 설명합니다. 
+다음 섹션에서는 파이프라인의 기반이 되는 개념적 세부사항을 설명합니다. 
 
 ## 단계
 {: #deliverypipeline_stages}
@@ -60,7 +60,7 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 서비스(파이프
 
 작업이 실행된 후에는 그 작업을 위해 작성된 컨테이너가 버려집니다. 작업 실행의 결과는 유지될 수 있지만 작업이 실행된 환경은 유지되지 않습니다.
 
-**참고**: 작업은 최대 60분 동안 실행될 수 있습니다. 작업이 이 한계를 초과하면 작업이 실패합니다. 하나의 작업이 이 한계를 초과하는 경우에는 작업을 여러 개의 작업으로 나누십시오. 예를 들어, 작업이 세 개의 태스크를 수행하는 경우 이 작업을 세 개의 작업(태스크당 하나의 작업)으로 나눌 수 있습니다.
+**참고:** 작업은 최대 60분 동안 실행될 수 있습니다. 작업이 이 한계를 초과하면 작업이 실패합니다. 하나의 작업이 이 한계를 초과하는 경우에는 작업을 여러 개의 작업으로 나누십시오. 예를 들어, 작업이 세 개의 태스크를 수행하는 경우 이 작업을 세 개의 작업(태스크당 하나의 작업)으로 나눌 수 있습니다.
 
 단계에 작업을 추가하는 방법을 알아보려면 [단계에 작업 추가](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}를 참조하십시오. 
 
@@ -70,7 +70,12 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 서비스(파이프
 
 빌드 작업에서 입력되는 작업은 빌드 아티팩트를 작성 시와 동일한 구조로 참조해야 합니다. 예를 들어, 빌드 작업이 빌드 아티팩트를 `output` 디렉토리에 아카이브하는 경우 배치 스크립트는 프로젝트 루트 디렉토리가 아니라 `output` 디렉토리를 참조하여 컴파일된 프로젝트를 배치합니다. **아카이브 디렉토리 빌드** 필드에 디렉토리 이름을 입력하여 아카이브할 디렉토리를 지정할 수 있습니다. 필드를 공백으로 두면 루트 디렉토리를 아카이브합니다.
 
-**참고**: 빌드 작업에 **단순** 빌더 유형을 선택하는 경우 빌드 프로세스를 건너뜁니다. 이 경우에는 코드가 컴파일되지 않지만 있는 그대로 배치 단계에 전송됩니다. 빌드 및 배치 모두에 대해 **단순** 이외의 빌더 유형을 선택하십시오.
+**참고:** **단순** 빌더 유형을 사용하는 경우 코드가 컴파일되거나 빌드되지 않습니다. 다음 단계를 위해 패키지되고 사용 가능하도록 설정됩니다. 
+
+Cloud Foundry를 사용하여 배치할 때 Cloud Foundry에는 올바른 아티팩트가 포함되어 앱을 실행할 수 있습니다. 자세한 정보는 [cf 명령을 사용하여 애플리케이션 배치](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps)를 참조하십시오. Cloud Foundry 앱의 파이프라인에는 cf 명령을 실행하는 배치 단계가 포함됩니다. 
+
+Cloud Foundtry는 [사용할 빌드팩 발견![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.cloudfoundry.org/buildpacks/detection.html)을 시도합니다. 앱의 루트 폴더에 있는 Manifest 파일에 사용할 [빌드팩](/docs/cfapps/byob.html#using-community-buildpacks)을 지정할 수 있습니다. 일반적으로 빌드팩은 사용자 제공 아티팩트를 확인하여 다운로드할 종속 항목 및 바인딩 서비스와 통신하기 위한 애플리케이션 구성 방법을 결정할 수 있습니다. Manifest 파일에 대한 자세한 정보는 [Application Manifest](/docs/manageapps/depapps.html#appmanifest)를 참조하십시오. 
+
 
 #### 빌드 스크립트의 환경 특성
 빌드 작업의 빌드 쉘 명령 내에 환경 특성을 포함시킬 수 있습니다. 이러한 특성을 통해 작업 실행 환경에 대한 정보에 액세스할 수 있습니다. 자세한 정보는 [{{site.data.keyword.deliverypipeline}} 서비스의 환경 특성 및 리소스](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)를 참조하십시오. 
@@ -105,7 +110,7 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 서비스(파이프
 
 충돌을 피하려면 `cf push`와 그 뒤에 호스트 이름 인수 `-n` 및 라우트 이름을 사용하여 라우트를 지정하면 됩니다. 개별 단계의 배치 스크립트를 수정하면 여러 대상에 배치할 때 라우트 충돌을 피할 수 있습니다.
 
-`cf push` 명령 인수를 사용하려면 배치 작업의 구성 설정을 열어 **배치 스크립트** 필드를 수정하십시오. 자세한 정보는 [Cloud Foundry Push 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}을 참조하십시오. 
+`cf push` 명령 인수를 사용하려면 배치 작업의 구성 설정을 열어 **배치 스크립트** 필드를 수정하십시오. 자세한 정보는 [Cloud Foundry Push 문서![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}를 참조하십시오. 
 
 ## 파이프라인 예
 {: #deliverypipeline_example}
@@ -118,7 +123,7 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 서비스(파이프
 
 다음 개념 다이어그램에 이 파이프라인이 표시되어 있습니다. 
 
-![파이프라인에 단계 및 작업이 포함된 개념 다이어그램](images/diagram.jpg)
+![파이프라인에 있는 단계 및 작업의 개념 다이어그램](images/diagram.jpg)
 
 *3단계 파이프라인의 개념 모델*
 

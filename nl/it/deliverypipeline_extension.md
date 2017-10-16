@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-5-11"
 
 ---
 
@@ -18,10 +18,10 @@ lastupdated: "2017-3-16"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Estensione di {{site.data.keyword.deliverypipeline}}
+# Estensione di Delivery Pipeline
 {: #deliverypipeline_extending}
 
-Puoi estendere le funzionalità di {{site.data.keyword.deliverypipeline}} configurando i tuoi lavori per l'utilizzo dei servizi supportati. Ad esempio, i lavori di verifica possono eseguire delle scansioni di codice statico e i lavori di creazione possono globalizzare le stringhe.
+Puoi estendere le funzionalità {{site.data.keyword.deliverypipeline}} di {{site.data.keyword.contdelivery_full}} configurando i tuoi lavori per l'utilizzo dei servizi supportati. Ad esempio, i lavori di verifica possono eseguire delle scansioni di codice statico e i lavori di creazione possono globalizzare le stringhe.
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -32,9 +32,9 @@ Le seguenti attività descrivono come integrare gli strumenti selezionati con un
 
 {: #deliverypipeline_scan}
 
-Desideri ricercare i problemi di sicurezza nel tuo codice prima di distribuirlo? Quando utilizzi IBM® Static Analyzer for Bluemix™ come parte della tua pipeline, puoi eseguire dei controlli automatizzati nei tuoi file binari di creazione `.war`, `.ear`, `.jar` o `.class` statici della tua applicazione Java™.
+Desideri ricercare i problemi di sicurezza nel tuo codice prima di distribuirlo? Quando utilizzi {{site.data.keyword.staticanalyzerfull}} come parte della tua pipeline, puoi eseguire dei controlli automatizzati nei file binari di creazione `.war`, `.ear`, `.jar` o `.class` statici della tua applicazione Java™.
 
-Una pipeline che utilizza il servizio Static Analyzer normalmente include tre fasi:
+Una pipeline che utilizza il servizio {{site.data.keyword.staticanalyzershort}} normalmente include tre fasi:
 
 + Una fase di build per generare i file di origine
 + Una fase di elaborazione che include tali lavori:
@@ -53,7 +53,7 @@ Prima di iniziare, [riesamina i Termini di utilizzo per il servizio ![Icona link
 
   a. Fai clic su **AGGIUNGI FASE**.
 
-  b. Denomina la fase, ad esempio, `Elaborazione`.
+  b. Fornisce un nome per la fase, ad esempio, `Processing`.
 
   c. Per il tipo di input, seleziona **Risorse di build**.
 
@@ -63,21 +63,21 @@ Prima di iniziare, [riesamina i Termini di utilizzo per il servizio ![Icona link
 
   a. Nella scheda **LAVORI**, fai clic su **AGGIUNGI LAVORO**.
 
-  b. Per il tipo di lavoro, seleziona **Verifica**.
+  b. Per il tipo di lavoro, seleziona **Test**.
 
   c. Per il tipo di tester, seleziona **IBM Security Static Analyzer**.
 
   d. Per l'organizzazione e lo spazio, verifica i valori e aggiornali se necessario.
 
-  e. Seleziona o deseleziona la casella di spunta **Configura il servizio e lo spazio per me** se necessario.
+  e. Seleziona o deseleziona la casella di spunta **Configura il servizio e lo spazio per me** come necessario.
 
-    * Se desideri che la pipeline verifichi il tuo spazio Bluemix per il servizio e che un'applicazione associ il servizio al contenitore, seleziona la casella di spunta. Se il servizio o l'applicazione associata non esistono, la pipeline aggiunge il piano gratuito del servizio al tuo spazio. L'applicazione associata che viene creata è denominata `pipeline_bridge_app`. Quindi, la pipeline utilizza le credenziali da pipeline_bridge_app per accedere ai servizi associati.
+    * Se vuoi che la tua pipeline controlli il tuo spazio {{site.data.keyword.Bluemix_short}}  per trovare il servizio e un'applicazione che associ il servizio al contenitore, seleziona la casella di spunta. Se il servizio o l'applicazione associata non esistono, la pipeline aggiunge il piano gratuito del servizio al tuo spazio. L'applicazione associata che viene creata è denominata `pipeline_bridge_app`. Quindi, la pipeline utilizza le credenziali da pipeline_bridge_app per accedere ai servizi associati.
 
-    * Se hai già configurato il servizio e associato l'applicazione nel tuo spazio Bluemix o se vuoi [configurare questi requisiti manualmente](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, lascia deselezionata la casella di spunta.
+    * Se hai già configurato il servizio e associato l'applicazione nel tuo spazio {{site.data.keyword.Bluemix_short}} o se vuoi [configurare questi requisiti manualmente](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, lascia deselezionata la casella di spunta.
 
-  f. Nel campo **Minuti di attesa per il completamento dell'analisi**, immetti un valore compreso tra 0 e 59 minuti. Il valore predefinito è 5 minuti. Un URL al dashboard di Static Analyzer è presente nei log della console alla fine del lavoro.
+  f. Nel campo **Minuti di attesa per il completamento dell'analisi**, immetti un valore compreso tra 0 e 59 minuti. Il valore predefinito è 5 minuti. Un URL al dashboard {{site.data.keyword.staticanalyzershort}}  è presente nei log della console alla fine del lavoro.
 
-     Se la scansione di Static Analyzer non viene completata entro il tempo specificato, il lavoro ha esito negativo. Tuttavia, l'analisi della scansione continua ad essere eseguita e puoi visualizzarla nel dashboard di Static Analyzer. Dopo che la scansione di Static Analyzer è stata completata, se riesegui il lavoro, la richiesta di scansione non viene reinviata e il lavoro della pipeline può essere completato. In alternativa, puoi configurare la pipeline in modo da non venir bloccata da un risultato della scansione positivo. Per le istruzioni, consulta la seguente fase.
+     Se la scansione di {{site.data.keyword.staticanalyzershort}} non viene completata entro il tempo specificato, il lavoro ha esito negativo. Tuttavia, l'analisi della scansione continua ad essere eseguita e puoi visualizzarla nel dashboard di {{site.data.keyword.staticanalyzershort}}. Dopo che la scansione di {{site.data.keyword.staticanalyzershort}} è stata completata, se riesegui il lavoro, la richiesta di scansione non viene reinviata e il lavoro della pipeline può essere completato. In alternativa, puoi configurare la pipeline in modo da non venir bloccata da un risultato della scansione positivo. Per le istruzioni, consulta la seguente fase.
 
   g. Seleziona o deseleziona la casella di spunta **Arrestare l'esecuzione di questa fase se il lavoro non riesce** a seconda di cosa desideri succeda se il lavoro non riesce o va in timeout. I lavori possono avere esito negativo quando le vulnerabilità sono elevate.
 
@@ -106,7 +106,7 @@ Esempi di output della console:
 **Scansione in attesa**
 ![Esempio di scansione in attesa](images/analyzer_pending.png)
 
-Per ulteriori informazioni sull'utilizzo del servizio Static Analyzer, consulta i [documenti del servizio Static Analyzer](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
+Per ulteriori informazioni sull'utilizzo del servizio {{site.data.keyword.staticanalyzershort}}, consulta la [documentazione del servizio {{site.data.keyword.staticanalyzershort}}](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 
@@ -177,7 +177,7 @@ For more information about using the Globalization Pipeline service from the Blu
 ## Creazione di notifiche Slack per le build nella pipeline
 {: #deliverypipeline_slack}
 
-Puoi inviare le notifiche sui risultati di build per IBM Container Service, IBM Security Static Analyzer e IBM Globalization dal tuo Delivery Pipeline ai tuoi canali Slack.
+Puoi inviare le notifiche sui risultati di build per {{site.data.keyword.containerlong}}, {{site.data.keyword.staticanalyzershort}} e {{site.data.keyword.globalizationfull}} da Delivery Pipeline ai tuoi canali Slack.
 
 Prima di iniziare, crea o copia un URL del webhook Slack:
 
@@ -195,7 +195,7 @@ Per creare le notifiche Slack:
 3. Seleziona **Proprietà testo**.
 4. Immetti un nome e un valore per la proprietà di ambiente. Ripeti i passi per creare più proprietà di ambiente.
 
-  *Tabella 1. Proprietà dell'ambiente per la configurazione delle notifiche Slack*
+  _Tabella 1. Proprietà dell'ambiente per la configurazione delle notifiche Slack_
 
   <table>
   <tr>
@@ -233,7 +233,7 @@ Per creare le notifiche Slack:
       <li><code>unknown</code>: ai messaggi sconosciuti non viene assegnato un tipo.</li></ul></td>
    </table>
 
-5. Fai clic su **Salva**.
+5. Fai clic su **Save**.
 
 6. Ripeti questi passi per inviare le notifiche Slack per altre fasi che includono i lavori di IBM Container Service, IBM Security Analyzer e IBM Globalization.
 
@@ -256,7 +256,7 @@ Per creare le notifiche HipChat:
 3. Seleziona **Proprietà testo**.
 4. Immetti un nome e un valore per la proprietà di ambiente. Ripeti i passi per creare più proprietà di ambiente.
 
-  *Tabella 2. Proprietà dell'ambiente per la configurazione delle notifiche HipChat*
+  _Tabella 2. Proprietà dell'ambiente per la configurazione delle notifiche HipChat_
 
   <table>
   <tr>
@@ -319,14 +319,9 @@ Per creare le notifiche HipChat:
     </tr>
   </table>
 
-5. Fai clic su **Salva**.
+5. Fai clic su **Save**.
 
 6. Ripeti questi passi per inviare le notifiche HipChat per altre fasi che includono i lavori di IBM Container Service, IBM Security Static Analyzer e IBM Globalization.
-
-## Utilizzo di Active Deploy per la distribuzione senza tempo di inattività nella pipeline
-{: #deliverypipeline_activedeploy}
-
-Puoi automatizzare la fornitura continua delle tue applicazioni o gruppi di contenitori utilizzando il servizio IBM® Active Deploy in Delivery Pipeline. Per ulteriori informazioni sulle istruzioni introduttive, consulta la documentazione [Active Deploy](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}.
 
 ## Creazione e distribuzione delle immagini del contenitore con la pipeline
 {: #deliverypipeline_containers}

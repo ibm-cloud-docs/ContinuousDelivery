@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+
+lastupdated: "2017-8-18"
+
 
 ---
 
@@ -27,8 +29,7 @@ Sie können eine Vorlage als Ausgangspunkt zum [Erstellen einer Toolchain ![Symb
 
 1. Wenn Sie {{site.data.keyword.Bluemix_notm}} Public verwenden, melden Sie sich bei [{{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://console.bluemix.net){:new_window} an.
 1. Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated verwenden, melden Sie sich bei Ihrer dedizierten Umgebung auf {{site.data.keyword.Bluemix_notm}} an.
-1. Klicken Sie im Menü in der {{site.data.keyword.Bluemix_notm}}-Menüleiste auf **Services** und dann auf
-**DevOps**.
+1. Klicken Sie im Menü in der {{site.data.keyword.Bluemix_notm}}-Menüleiste auf **DevOps**.
 1. Klicken Sie im DevOps-Dashboard auf der Seite **Toolchains** auf **Toolchain erstellen**.
 1. Klicken Sie auf der Seite **Toolchain erstellen** auf eine Toolchain-Vorlage.
 1. Überprüfen Sie das Diagramm der Toolchain, die Sie gerade erstellen. In dem Diagramm wird jede Toolintegration in ihrer aktuellen Lebenszyklusphase in der Toolchain angezeigt.
@@ -36,7 +37,7 @@ Sie können eine Vorlage als Ausgangspunkt zum [Erstellen einer Toolchain ![Symb
  **Tipp**: Für einige der Toolchain-Vorlagen sind mehrere Instanzen einer Toolintegration vorhanden. Die Vorlage für die Microservice-Toolchain unter {{site.data.keyword.Bluemix_notm}} Public enthält beispielsweise drei Instanzen von GitHub und drei Instanzen von Delivery Pipeline - jeweils eine Instanz für jeden der drei Microservices.
 
  Das Diagramm in der folgenden Abbildung ist ein Beispiel. Wenn Sie eine Toolchain erstellen, zeigt das Diagramm jede Toolintegration an, die Teil der Toolchain ist.
-![Diagramm einer Toolchain](images/toolchain_diagram.png)
+![Toolchain-Diagramm](images/toolchain_diagram.png)
 
 1. Überprüfen Sie die Standardinformationen für die Toolchain-Einstellungen. Der Name der Toolchain macht sie in {{site.data.keyword.Bluemix_notm}} identifizierbar. Wenn Sie einen anderen Namen verwenden möchten, ändern Sie den Namen der Toolchain.  
 1. Wählen Sie im Abschnitt mit den Toolintegrationen jede Toolintegration aus, die Sie für Ihre Toolchain konfigurieren möchten. Einige Toolintegrationen erfordern keine Konfiguration. Informationen zum Konfigurieren der Toolintegrationen finden Sie unter [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
@@ -75,3 +76,11 @@ Nachdem Sie die Toolchain und die zugehörigen Toolintegrationen konfiguriert ha
 2. Um auf eine Toolintegration in Ihrer Toolchain zuzugreifen, klicken Sie auf das entsprechende Tool.
 
  **Tipp**: Wenn Sie über mehr als ein GitHub-, {{site.data.keyword.ghe_short}}- oder Git-Repository verfügen, sind möglicherweise mehrere Karten für dieselbe Toolintegration vorhanden, da jedes Repository durch eine eigene Karte dargestellt wird. Wenn Sie über mehrere Pipelines verfügen, sind gegebenenfalls mehrere Karten für dieselbe Toolintegration vorhanden, da jede Pipeline durch ihre eigene Karte dargestellt wird. Wenn Sie eine Microservice-Toolchain erstellen, besitzt jeder dieser drei Microservices sein eigenes GitHub-, {{site.data.keyword.ghe_short}}- oder Git-Repository und seine eigene Pipeline.
+
+## Relevantes Lernprogramm: Toolchains verwenden
+{: #toolchain_tutorials}
+
+Informieren Sie sich in einem der Lernprogramme zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method){:new_window}:
+  * [Erste Toolchain erstellen und verwenden (GitHub) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Toolchain erstellen, die Git Repos and Issue Tracking verwendet ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Toolchain zu einer App hinzufügen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?task=1){:new_window}

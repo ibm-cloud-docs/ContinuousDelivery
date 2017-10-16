@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-5-11"
 
 ---
 
@@ -18,10 +18,10 @@ lastupdated: "2017-3-16"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# {{site.data.keyword.deliverypipeline}} 확장
+# Delivery Pipeline 확장
 {: #deliverypipeline_extending}
 
-지원되는 서비스를 사용하도록 작업을 구성하여 {{site.data.keyword.deliverypipeline}} 기능을 확장할 수 있습니다. 예를 들어, 테스트 작업은 정적 코드 스캔을 실행할 수 있고 빌드 작업은 문자열을 글로벌화할 수 있습니다.
+지원되는 서비스를 사용하도록 작업을 구성하여 {{site.data.keyword.contdelivery_full}}의 {{site.data.keyword.deliverypipeline}} 기능을 확장할 수 있습니다. 예를 들어, 테스트 작업은 정적 코드 스캔을 실행할 수 있고 빌드 작업은 문자열을 글로벌화할 수 있습니다.
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -32,9 +32,9 @@ lastupdated: "2017-3-16"
 
 {: #deliverypipeline_scan}
 
-코드를 배치하기 전에 코드에서 보안 문제를 찾고 싶습니까? IBM® Static Analyzer for Bluemix™를 파이프라인의 일부로 사용하면 Java™ 앱의 정적 `.war`, `.ear`, `.jar` 또는 `.class` 빌드 2진 파일에 대해 자동화된 검사를 실행할 수 있습니다.
+코드를 배치하기 전에 코드에서 보안 문제를 찾고 싶습니까? {{site.data.keyword.staticanalyzerfull}}를 파이프라인의 일부로 사용하면 Java™ 앱의 정적 `.war`, `.ear`, `.jar` 또는 `.class` 빌드 2진 파일에 대해 자동화된 검사를 실행할 수 있습니다.
 
-Static Analyzer 서비스를 사용하는 파이프라인은 일반적으로 다음 단계를 포함합니다.
+{{site.data.keyword.staticanalyzershort}} 서비스를 사용하는 파이프라인은 일반적으로 다음 단계를 포함합니다.
 
 + 소스 파일을 빌드하는 빌드 단계
 + 다음 작업을 포함하는 처리 단계
@@ -45,13 +45,13 @@ Static Analyzer 서비스를 사용하는 파이프라인은 일반적으로 다
 
 ### 정적 코드 스캔 작성
 
-시작하기 전에 [서비스 이용 약관 검토 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}을 수행하십시오. 
+시작하기 전에 [서비스 이용 약관 검토![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}를 수행하십시오. 
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
 1. 처리 단계를 작성하십시오.
 
-  a. **단계 추가**를 클릭하십시오. 
+  a. **단계 추가**를 클릭하십시오.
 
   b. 단계의 이름을 지정하십시오(예: `Processing`).
 
@@ -71,13 +71,13 @@ Static Analyzer 서비스를 사용하는 파이프라인은 일반적으로 다
 
   e. 필요에 따라 **서비스 및 영역 자동 설정** 선택란을 선택하거나 선택 취소하십시오.
 
-    * 파이프라인이 Bluemix 영역에서 서비스와 이 서비스를 컨테이너에 바인드하는 앱이 있는지 확인하도록 하려면 이 선택란을 선택하십시오. 서비스 또는 바인드된 앱이 없는 경우 파이프라인은 서비스의 무료 사용제를 영역에 추가합니다. 작성되는 바인드된 앱은 `pipeline_bridge_app`이라는 이름이 지정됩니다. 파이프라인은 pipeline_bridge_app의 신임 정보를 사용하여 바인드된 서비스에 액세스합니다.
+    * 파이프라인이 {{site.data.keyword.Bluemix_short}} 영역에서 서비스와 이 서비스를 컨테이너에 바인드하는 앱이 있는지 확인하도록 하려면 이 선택란을 선택하십시오. 서비스 또는 바인드된 앱이 없는 경우 파이프라인은 서비스의 무료 사용제를 영역에 추가합니다. 작성되는 바인드된 앱은 `pipeline_bridge_app`이라는 이름이 지정됩니다. 파이프라인은 pipeline_bridge_app의 신임 정보를 사용하여 바인드된 서비스에 액세스합니다.
 
-    * Bluemix 영역에서 서비스와 바인드된 앱을 이미 구성했거나 [해당 요구사항을 수동으로 구성](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}하려는 경우 선택란을 선택 취소된 상태로 두십시오.
+    * {{site.data.keyword.Bluemix_short}} 영역에서 서비스와 바인드된 앱을 이미 구성했거나 [해당 요구사항을 수동으로 구성](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}하려는 경우 선택란을 선택 취소된 상태로 두십시오.
 
-  f. **분석이 완료될 때까지의 대기 시간(분)** 필드에 0 - 59분 값을 입력하십시오. 기본값은 5분입니다. 작업 마지막에 Static Analyzer 대시보드로의 URL이 콘솔 로그에 표시됩니다.
+  f. **분석이 완료될 때까지의 대기 시간(분)** 필드에 0 - 59분 값을 입력하십시오. 기본값은 5분입니다. 작업 마지막에 {{site.data.keyword.staticanalyzershort}} 대시보드로의 URL이 콘솔 로그에 표시됩니다.
 
-     지정한 시간 전에 Static Analyzer 스캔이 완료되지 않으면 작업이 실패합니다. 그러나 스캔 분석은 계속 실행되며 Static Analyzer 대시보드에서 이를 볼 수 있습니다. Static Analyzer 스캔이 완료된 후 작업을 다시 실행하면 스캔 요청이 다시 제출되지 않으며 파이프라인 작업을 완료할 수 있습니다. 또는 스캔이 완료될 때 파이프라인이 차단되지 않도록 구성할 수 있습니다. 지시사항은 다음 단계를 참조하십시오.
+     지정한 시간 전에 {{site.data.keyword.staticanalyzershort}} 스캔이 완료되지 않으면 작업이 실패합니다. 그러나 스캔 분석은 계속 실행되며 {{site.data.keyword.staticanalyzershort}} 대시보드에서 이를 볼 수 있습니다. {{site.data.keyword.staticanalyzershort}} 스캔이 완료된 후 작업을 다시 실행하면 스캔 요청이 다시 제출되지 않으며 파이프라인 작업을 완료할 수 있습니다. 또는 스캔이 완료될 때 파이프라인이 차단되지 않도록 구성할 수 있습니다. 지시사항은 다음 단계를 참조하십시오.
 
   g. 현재 작업이 실패하거나 제한시간을 초과하는 경우에 원하는 결과에 따라 **현재 작업이 실패할 경우 현재 단계 실행 중지** 선택란을 선택하거나 선택 취소하십시오. 취약성이 높으면 작업이 실패할 수 있습니다.
 
@@ -106,7 +106,7 @@ Static Analyzer 서비스를 사용하는 파이프라인은 일반적으로 다
 **보류 중 스캔**
 ![보류 중 스캔 예](images/analyzer_pending.png)
 
-Static Analyzer 서비스의 사용에 대한 자세한 정보는 [Static Analyzer 서비스 문서](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}를 참조하십시오. 
+{{site.data.keyword.staticanalyzershort}} 서비스의 사용에 대한 자세한 정보는 [{{site.data.keyword.staticanalyzershort}}Static Analyzer 서비스 문서](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}를 참조하십시오. 
 
 <!--
 
@@ -177,7 +177,7 @@ For more information about using the Globalization Pipeline service from the Blu
 ## 파이프라인에서 빌드에 대한 Slack 알림 작성
 {: #deliverypipeline_slack}
 
-Delivery Pipeline에서 Slack 채널로 IBM Container Service, IBM Security Static Analyzer 및 IBM Globalization 빌드 결과에 대한 알림을 전송할 수 있습니다.
+Delivery Pipeline에서 Slack 채널로 {{site.data.keyword.containerlong}}, {{site.data.keyword.staticanalyzershort}} 및 {{site.data.keyword.globalizationfull}} 빌드 결과에 대한 알림을 전송할 수 있습니다.
 
 시작하기 전에 Slack 웹훅 URL을 작성하거나 복사하십시오.
 
@@ -186,7 +186,7 @@ Delivery Pipeline에서 Slack 채널로 IBM Container Service, IBM Security Stat
 3. 채널을 선택하고 **수신 웹훅 통합 추가**를 클릭하십시오.
 4. **웹훅 URL**을 추가하거나 기존 URL을 복사하십시오.
 
-자세한 정보는 [Slack의 수신 웹훅 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://api.slack.com/incoming-webhooks){: new_window}을 참조하십시오. 
+자세한 정보는 [Slack의 수신 웹훅 문서![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://api.slack.com/incoming-webhooks){: new_window}를 참조하십시오. 
 
 Slack 알림을 작성하려면 다음을 수행하십시오.
 
@@ -195,7 +195,7 @@ Slack 알림을 작성하려면 다음을 수행하십시오.
 3. **텍스트 특성**을 선택하십시오.
 4. 환경 특성의 이름과 값을 입력하십시오. 여러 환경 특성을 작성하려면 단계를 반복하십시오.
 
-  *표 1. Slack 알림 구성을 위한 환경 특성*
+  _표 1. Slack 알림 구성을 위한 환경 특성_
 
   <table>
   <tr>
@@ -256,7 +256,7 @@ HipChat 알림을 작성하려면 다음을 수행하십시오.
 3. **텍스트 특성**을 선택하십시오.
 4. 환경 특성의 이름과 값을 입력하십시오. 여러 환경 특성을 작성하려면 단계를 반복하십시오.
 
-  *표 2. HipChat 알림 구성을 위한 환경 특성*
+  _표 2. HipChat 알림 구성을 위한 환경 특성_
 
   <table>
   <tr>

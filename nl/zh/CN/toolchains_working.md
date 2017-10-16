@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+
+lastupdated: "2017-8-18"
+
 
 ---
 
@@ -27,15 +29,14 @@ lastupdated: "2017-4-28"
 
 1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Public，请登录到 [{{site.data.keyword.Bluemix_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://console.bluemix.net){:new_window}。
 1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，请登录到 {{site.data.keyword.Bluemix_notm}} 上的 Dedicated 环境。
-1. 从 {{site.data.keyword.Bluemix_notm}} 菜单栏上的菜单中，单击**服务**，然后单击 **DevOps**。
+1. 从 {{site.data.keyword.Bluemix_notm}} 菜单栏上的菜单中，单击 **DevOps**。
 1. 在 DevOps 仪表板的**工具链**页面上，单击**创建工具链**。
 1. 在**创建工具链**页面上，单击工具链模板。
 1. 复查您要创建的工具链的图。该图按生命周期阶段显示工具链中的每一个工具集成。
 
  **提示**：有一些工具链模板具有工具集成的多个实例。例如，{{site.data.keyword.Bluemix_notm}} Public 上的微服务工具链模板包含三个 GitHub 实例和三个 Delivery Pipeline 实例，每个实例都对应于三个微服务中的一个。
 
- 以下图像中的图是示例。创建工具链时，该图显示属于工具链的每一个工具集成。
-![工具链图](images/toolchain_diagram.png)
+ 以下图像中的图是示例。创建工具链时，该图显示属于工具链的每一个工具集成。![工具链图](images/toolchain_diagram.png)
 
 1. 复查工具链设置的缺省信息。工具链的名称在 {{site.data.keyword.Bluemix_notm}} 中起到标识符的作用。如果要使用其他名称，请更改工具链的名称。  
 1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。
@@ -74,3 +75,11 @@ lastupdated: "2017-4-28"
 2. 要访问工具链中的工具集成，请单击工具。
 
  **提示**：如果您具有多个 GitHub、{{site.data.keyword.ghe_short}} 或 Git 存储库，那么同一工具集成可能具有多个卡，因为每一个存储库由其自己的卡表示。如果您具有多个管道，那么同一工具集成可能具有多个卡，因为每一个管道由其自己的卡表示。例如，当您创建微服务工具链时，三个微服务中的每一个都具有自己的 GitHub、{{site.data.keyword.ghe_short}} 或 Git 存储库和自己的管道。
+
+## 学习教程：使用工具链
+{: #toolchain_tutorials}
+
+查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method){:new_window} 上的下列某个教程：
+  * [创建并使用第一个工具链 (GitHub) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [创建使用 Git Repos and Issue Tracking 的工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [向应用程序添加工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?task=1){:new_window}

@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-25"
-
----
+lastupdated: "2017-5-25"---
 <!-- Common attributes used in the template are defined as follows: -->
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
@@ -38,14 +36,14 @@ GitHub アカウントにアクセスできるように {{site.data.keyword.Blue
 {: tsResolve}
 
   1. 「構成可能な統合 (Configurable Integrations)」セクションで**「GitHub」**をクリックします。
-  1. {{site.data.keyword.Bluemix_notm}} Public でツールチェーンを作成していて、 {{site.data.keyword.Bluemix_notm}} に GitHub へのアクセスをまだ認可していなければ、**「認可 (Authorize)」** をクリックして GitHub Web サイトに移動します。
-  1. アクティブな GitHub セッションがない場合は、ログインするよう求められます。**「アプリケーションを許可 (Authorize Application)」** をクリックして、{{site.data.keyword.Bluemix_notm}} が GitHub アカウントにアクセスできるようにします。アクティブな GitHub セッションはあるものの、最近パスワードを入力していない場合は、確認のために GitHub パスワードの入力を求められることがあります。
+  1. {{site.data.keyword.Bluemix_notm}} Public でツールチェーンを作成していて、GitHub にアクセスできるよう {{site.data.keyword.Bluemix_notm}} を認可していない場合、**「認可 (Authorize)」**をクリックして GitHub Web サイトに移動します。
+  1. アクティブな GitHub セッションがない場合は、ログインするよう求められます。**「アプリケーションを許可 (Authorize Application)」** をクリックして、{{site.data.keyword.Bluemix_notm}} が GitHub アカウントにアクセスできるようにします。
 
 既にツールチェーンが存在している場合は、GitHub ツール統合の構成を更新します。
 
  1. DevOps ダッシュボードの**「ツールチェーン」**ページで、ツールチェーンをクリックしてその「概要」ページを開きます。あるいは、アプリの「概要」ページの「継続的デリバリー」カードで、**「ツールチェーンの表示」**をクリックし、その後で**「概要」**をクリックします。
  1. GitHub カードで、メニューをクリックし、**「構成」**をクリックします。
- 1. {{site.data.keyword.Bluemix_notm}} が GitHub にアクセスすることを許可するよう構成設定を更新します。**「認可 (Authorize)」**をクリックして GitHub Web サイトに移動します。アクティブな GitHub セッションがない場合は、ログインするよう求められます。**「アプリケーションを許可 (Authorize Application)」** をクリックして、{{site.data.keyword.Bluemix_notm}} が GitHub アカウントにアクセスできるようにします。アクティブな GitHub セッションはあるものの、最近パスワードを入力していない場合は、確認のために GitHub パスワードの入力を求められることがあります。
+ 1. {{site.data.keyword.Bluemix_notm}} が GitHub にアクセスすることを許可するよう構成設定を更新します。**「認可 (Authorize)」**をクリックして GitHub Web サイトに移動します。アクティブな GitHub セッションがない場合は、ログインするよう求められます。**「アプリケーションを許可 (Authorize Application)」** をクリックして、{{site.data.keyword.Bluemix_notm}} が GitHub アカウントにアクセスできるようにします。
  1. 設定の更新が完了したら、**「統合の保存」**をクリックします。
 
 
@@ -70,7 +68,8 @@ GitHub アカウントにアクセスできるように {{site.data.keyword.Blue
 ## 組織のメモリー上限を超過
 {: #org_outofmemory}
 
-組織のメモリー上限を超過すると、アプリを {{site.data.keyword.Bluemix_notm}} にデプロイできなくなる可能性があります。アプリが使用するメモリーを減らすか、アカウントのメモリー割り当て量を増やすことができます。トライアル・アカウントの最大メモリー割り当て量は 2 GB であり、これを増やすには支払アカウントに移行する必要があります。
+組織のメモリー上限を超過すると、アプリを {{site.data.keyword.Bluemix_notm}} にデプロイできなくなる可能性があります。アプリが使用するメモリーを減らすか、アカウントのメモリー割り当て量を増やすことができます。トライアル・アカウントの最大メモリー割り当て量は 2 GB です。
+この割り当ては、支払アカウントにアップグレードするときに増やすことができます。
 
 アプリを {{site.data.keyword.Bluemix_notm}} にデプロイすると、次のエラー・メッセージが表示されます。
 {: tsSymptoms}
@@ -110,6 +109,34 @@ GitHub アカウントにアクセスできるように {{site.data.keyword.Blue
     3. アプリを再始動して、変更を有効にします。
 
 アプリの管理に関する一般的な問題について詳しくは、[Troubleshooting for managing apps](https://console.bluemix.net/docs/troubleshoot/ts_apps.html#managingapps) を参照してください。
+
+
+## Eclipse Orion Web IDE の実行バーに Bluemix Live Sync アイコンが表示されない
+{: #ts_llz_lkb_3r}
+
+アプリを作成しても、Eclipse Orion Web IDE 実行バーに IBM Bluemix Live Sync アイコンが表示されません。ライブ編集アイコンを備えた完全な実行バーが表示されません。
+
+![実行バー](images/webide_runbar_light.png)   
+
+Web IDE で Node.js アプリを編集するときは、{{site.data.keyword.Bluemix_notm}} ライブ編集、即時再始動、デバッグの各アイコンは実行バーに表示されません。
+{: tsSymptoms}
+
+以下の場合にはアイコンは使用できません。
+{: tsCauses}
+
+* `manifest.yml` ファイルがプロジェクトの最上位に格納されていない。
+* アプリはルートではなくサブディレクトリーに格納されているが、そのサブディレクトリーのパスが `manifest.yml` ファイルに指定されていない。
+* アプリに `package.json` ファイルが含まれていない。
+
+以下のいずれかのメソッドを使用します。{: tsResolve}
+
+* `manifest.yml` ファイルがルートに格納されていない場合は、そこに格納します。
+* アプリがサブディレクトリーに格納されている場合は、そのサブディレクトリーのパスを `manifest.yml` ファイルに指定します。
+
+   ```
+    path: path_to_application
+    ```
+* アプリと同じディレクトリーに `package.json` ファイルを作成します。
 
 
 ## ツールチェーンがロードされない
@@ -158,3 +185,60 @@ DevOps ダッシュボードの**「ツールチェーン」**ページで、ツ
 
 1. 有効な構成パラメーターを使用していることを確認します。無効な構成が原因でエラーが起こった場合、例えば `The integration could not be set up. Check the settings and try again. Reason: Invalid api_key:fakeKey` のようなエラー・メッセージが表示されます。ツール統合の設定を更新し、**「統合の保存」**をクリックします。
 1. 通信の問題が原因でエラーが起こった場合、**「統合の保存」**をクリックして再試行します。
+
+
+
+<!-- ## Pipeline job failures
+{: #cannot_authorize_github}
+
+A pipeline job failed.
+{:shortdesc}
+
+Your pipeline job failed.
+{: tsSymptoms}
+
+ * Some reasons
+
+Many reasons  
+{: tsCauses}
+
+If you are configuring the GitHub tool integration while you are creating your toolchain, follow these steps:
+{: tsResolve}
+
+  1. In the Configurable Integrations section, click **GitHub**.
+  1. If you are creating the toolchain on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, click **Authorize** to go to the GitHub website.
+  1. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
+
+If you already have a toolchain, update the GitHub tool integration's configuration:
+
+ 1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**, and then click **Overview**.
+ 1. On the GitHub card, click the menu and click **Configure**.
+ 1. Update the configuration settings to authorize {{site.data.keyword.Bluemix_notm}} to access GitHub. Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
+ 1. When you are finished updating the settings, click **Save Integration**.  -->
+
+
+
+
+<!-- This is the template for a problem topic.  -->
+
+<!-- The short description section contains a brief description of problem. For example:  
+
+After you create an app on the Dashboard, you click *ADD GIT* to create a Git repository, but you cannot proceed.
+{:shortdesc} -->
+
+<!-- The symptoms section contains a description of problem symptoms. For example:  
+When you click ADD GIT, a window opens and one of these issues occur:
+- The window hangs with a blank screen.
+- A message states that a problem exists with 3rd party cookies.
+{: tsSymptoms} -->
+
+<!-- The causes section contains a brief explanation of what causes the problem. For example:  
+Your browser might be configured to prevent a cookie from being set. That cookie must be set from the IBM Bluemix DevOps Services site in the hub.jazz.net internet domain from within the context of the Bluemix console.
+{: tsCauses} -->
+
+<!-- The resolve section contains steps to resolve the problem. For example:  
+You can fix this problem in one of three ways:
+- Follow the instructions that are in the window that opens from the Bluemix console. Click the button. Another browser window opens temporarily. In that window, DevOps Services sets the authentication cookie.
+- In another browser tab, go to https://hub.jazz.net and log in. Return to the Bluemix console and refresh the page. Click ADD GIT again.
+- Change your browser settings to enable 3rd party cookies and click ADD GIT again.
+{: tsResolve} -->

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-4-5"
+lastupdated: "2017-8-18"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,30 +22,34 @@ lastupdated: "2017-4-5"
 {{site.data.keyword.deliverypipeline}}의 컴포지트 파이프라인 기능을 사용하면 관련 소프트웨어 앱에 대한 반복 가능한 지속적 통합 및 지속적 딜리버리 프로세스를 관리할 수 있습니다.
 {:shortdesc}
 
-사용자는 컴포지트 파이프라인을 작성하여 도구 체인에서 애플리케이션을 관리합니다. 도구 체인에 {{site.data.keyword.deliverypipeline}}에서 배치한 앱이 포함된 경우, 도구 체인은 사용자가 도구 체인에서 딜리버리 파이프라인을 추가하거나 제거할 때 동적으로 업데이트됩니다. 외부 소스의 앱을 컴포지트 파이프라인에 추가할 수도 있습니다. 
+사용자는 컴포지트 파이프라인을 작성하여 도구 체인에서 애플리케이션을 관리합니다. 도구 체인에 {{site.data.keyword.deliverypipeline}}에서 배치한 앱이 포함된 경우, 사용자가 도구 체인에서 딜리버리 파이프라인을 추가하거나 제거할 때 컴포지트 파이프라인을 설정할 수 있습니다. 외부 소스의 앱을 컴포지트 파이프라인에 추가할 수도 있습니다. 
 
 ## 컴포지트 파이프라인 작성
 {: #compositepipeline_create_for_toolchain}
 
-1. Bluemix 로고 부근의 메뉴에서 **서비스 > DevOps**를 클릭하십시오. 
+1. {{site.data.keyword.Bluemix_notm}} 메뉴 표시줄의 메뉴에서 **DevOps**를 클릭하십시오.
 
-1. 왼쪽 탐색에서 **파이프라인**을 클릭하십시오. 
+2. 왼쪽 탐색에서 **파이프라인**을 클릭하십시오. 
 
-2. **자세히 보기**를 클릭한 후에 **사용**을 클릭하여 컴포지트 파이프라인 기능을 사용하십시오. 컴포지트 파이프라인이 각 사용자에 대해 사용되므로, 시범 기능을 선택하는 조직(org)의 구성원만 작성된 파이프라인을 봅니다. 
+3. **자세히 보기**를 클릭한 후에 **사용**을 클릭하여 컴포지트 파이프라인 기능을 사용하십시오. 컴포지트 파이프라인이 각 사용자에 대해 사용되므로, 시범 기능을 선택하는 조직(org)의 구성원만 작성된 파이프라인을 봅니다. 
 
-2. **작성** > **컴포지트 파이프라인**을 클릭하십시오. 
+4. **파이프라인 작성** > **컴포지트 파이프라인**을 클릭하십시오. 
 
-3. 컴포지트 파이프라인의 이름을 입력하십시오. 파이프라인 설명을 수정할 수도 있습니다. 
+5. 컴포지트 파이프라인의 이름을 입력하십시오. 파이프라인 설명을 수정할 수도 있습니다. 
 
-4. **도구 체인** 목록에서 도구 체인을 선택하십시오. 
+6. **도구 체인** 목록에서 도구 체인을 선택하십시오. 
 
-    1. 비어 있는 도구 체인 및 컴포지트 파이프라인을 작성하려면 **새로 작성**을 선택하십시오. 
+    a. 비어 있는 도구 체인 및 컴포지트 파이프라인을 작성하려면 **새로 작성**을 선택하십시오. 
 
-    2. 도구 체인 중 하나에 대해 컴포지트 파이프라인을 작성하려면 해당 이름을 선택하십시오. 
+    b. 도구 체인 중 하나에 대해 컴포지트 파이프라인을 작성하려면 해당 이름을 선택하십시오. 
 
-5. 비어 있는 도구 체인을 작성하려면 **기본 환경 추가**를 선택하십시오. 사용자는 이러한 기본 논리 환경을 사용하여 컴포지트 파이프라인을 통해 프로세스 실행을 제어합니다. 
+7. 비어 있는 도구 체인을 작성하려면 **기본 환경 추가**를 선택하십시오. 사용자는 이러한 기본 논리 환경을 사용하여 컴포지트 파이프라인을 통해 프로세스 실행을 제어합니다. 
 
-6. **작성**을 클릭하십시오. 
+8. 파이프라인을 도구 체인에 추가할 때 컴포지트 파이프라인을 업데이트하려면 도구 체인에서 파이프라인을 제거하거나 도구 체인의 파이프라인 단계를 수정하고 **선택된 도구 체인을 사용하여 이 컴포지트 파이프라인을 자동으로 동기화**를 선택하십시오.
+
+  **참고:** 도구 체인의 파이프라인을 변경하기 전에 자동 동기화를 사용으로 설정해야 합니다. 자동 동기화가 사용으로 설정되는 동안 변경하는 사항만 컴포지트 파이프라인에 포함됩니다. 
+
+9. **작성**을 클릭하십시오. 
 
 구성된 단계는 조직의 적합한 영역으로 자동 맵핑되며 배치 플랜이 컴포지트 파이프라인에 대해 작성됩니다. 
 
@@ -87,15 +91,44 @@ lastupdated: "2017-4-5"
 ## 컴포지트 파이프라인의 작업 실행
 {: #compositepipeline_run_jobs}
 
-해당 작업을 표시할 앱이 펼쳐지면 단계의 모든 해당 작업을 수동으로 실행할 수 있습니다. 앱의 영역에서 ***단계에 배치*** 아이콘을 클릭하십시오. 
+해당 작업을 표시할 앱이 펼쳐지면 단계의 모든 해당 작업을 수동으로 실행할 수 있습니다. 앱의 영역에서 ***단계**에 배치* 아이콘을 클릭하십시오. 
 
 ![단일 앱의 단계 실행](images/composite_run_stage.png)
 
-영역에 있는 모든 앱의 모든 작업을 실행하려면 컴포지트 파이프라인의 영역에서 ***영역에 배치*** 아이콘을 클릭하십시오. 
+영역에 있는 모든 앱의 모든 작업을 실행하려면 컴포지트 파이프라인의 영역에서 ***단계**에 배치* 아이콘을 클릭하십시오. 
 
 ![모든 앱의 단계 실행](images/composite_run_space.png)
 
 작업이 컴포지트 블루프린트의 배치 플랜에 따라 실행됩니다. 
+
+##딜리버리 파이프라인에서 배치한 앱 추가
+{: #compositepipeline_add_apps}
+
+도구 체인을 사용하여 컴포지트 파이프라인을 동기화해야만 딜리버리 파이프라인에서 배치한 앱을 추가할 수 있습니다. 컴포지트 파이프라인이 단일 도구 체인과 연관되므로 딜리버리 파이프라인이 도구 체인에 있는 앱만 포함시킬 수 있습니다. 
+
+딜리버리 파이프라인에서 배치한 앱을 컴포지트 파이프라인에 추가하려면 다음 단계를 수행하십시오. 
+
+1. 컴포지트 파이프라인을 여십시오. 
+
+2. **도구 체인을 사용하여 이 컴포지트 파이프라인을 자동으로 동기화**를 선택하십시오.
+
+  **참고:** 딜리버리 파이프라인을 작성하기 전에 자동 동기화를 사용으로 설정해야 합니다. 자동 동기화가 사용으로 설정되는 동안 변경하는 사항만 컴포지트 파이프라인에 포함됩니다. 
+
+3. 앱의 딜리버리 파이프라인을 작성하십시오. 딜리버리 파이프라인을 컴포지트 파이프라인과 동일한 도구 체인에 지정해야 합니다. 
+
+4. 딜리버리 파이프라인의 단계 및 작업을 구성하십시오. 
+
+앱이 컴포지트 파이프라인에 추가되고 각 단계의 배치 플랜에 구성한 작업을 실행하기 위한 태스크가 포함됩니다. 
+
+
+##컴포지트 파이프라인의 딜리버리 파이프라인 업데이트
+{: #compositepipeline_sync}
+
+컴포지트 파이프라인의 일부인 파이프라인을 추가하거나 변경하기 전에 컴포지트 파이프라인의 자동 동기화를 사용으로 설정해야 합니다. 
+
+1. 컴포지트 파이프라인을 여십시오. 
+
+2. **도구 체인을 사용하여 이 컴포지트 파이프라인을 자동으로 동기화**를 선택하십시오.
 
 ## 로그 보기
 {: #compositepipeline_view_logs}
@@ -133,7 +166,7 @@ DevOps Connect를 사용하여 IBM UrbanCode Deploy와 통합하려면 다음 �
 
 1. DevOps Connect를 등록하십시오. 
 
-  1.  DevOps Connect가 위치한 컴퓨터에서 웹 브라우저를 사용하여 DevOps Connect 대시보드를 여십시오. 기본 URL은 https://localhost:8443입니다. URL을 변경하고 기타 스타트업 옵션에 대해 알아보려면 [DevOps Connect 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/urbancode/plugindoc/urbancode-sync/ibm-urbancode-sync-utility/1-2/){:new_window}을 참조하십시오. 
+  1.  DevOps Connect가 위치한 컴퓨터에서 웹 브라우저를 사용하여 DevOps Connect 대시보드를 여십시오. 기본 URL은 https://localhost:8443입니다. URL을 변경하고 기타 스타트업 옵션에 대해 알아보려면 [DevOps Connect 문서![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/urbancode/plugindoc/urbancode-sync/ibm-urbancode-sync-utility/1-2/){:new_window}를 참조하십시오. 
 
 
 1. "IBM에 사인인" 페이지에서 IBM ID 및 비밀번호를 입력하고 **사인인**을 클릭하십시오. 사용자는 DevOps Connect를 시작할 때마다 사인인합니다. 
@@ -162,7 +195,7 @@ DevOps Connect를 사용하여 IBM UrbanCode Deploy와 통합하려면 다음 �
 ## IBM UrbanCode Deploy에서 앱 추가
 {: #compositepipeline_add_apps}
 
-DevOps Connect를 사용하여 IBM UrbanCode Deploy와 통합된 조직의 구성원인 경우에는 IBM UrbanCode Deploy에서 액세스할 수 있는 앱을 컴포지트 파이프라인에 추가할 수 있습니다. 설치 지시사항은 [IBM Bluemix DevOps Connect를 사용하여 IBM UrbanCode Deploy와 통합](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)을 참조하십시오. 
+DevOps Connect를 사용하여 IBM UrbanCode Deploy와 통합된 조직의 구성원인 경우에는 UrbanCode Deploy에서 액세스할 수 있는 앱을 컴포지트 파이프라인에 추가할 수 있습니다. 설치 지시사항은 [IBM Bluemix DevOps Connect를 사용하여 IBM UrbanCode Deploy와 통합](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)을 참조하십시오. 
 
 IBM UrbanCode Deploy에 연결된 조직의 구성원인 경우에는 UrbanCode Deploy 앱을 컴포지트 파이프라인에 추가하고 배치 플랜에 배치할 앱 프로세스를 선택한 후에 앱의 배치를 사용자 정의할 수 있습니다. 
 
@@ -187,3 +220,9 @@ IBM UrbanCode Deploy에 연결된 조직의 구성원인 경우에는 UrbanCode 
     3. **저장**을 클릭하십시오.
 
     4. 사용하는 각 논리 환경마다 이러한 단계를 반복 실행하십시오. 
+
+##튜토리얼 보기: 컴포지트 파이프라인
+{: #composite_pipeline-tutorial}
+
+[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method){:new_window}에 있는 다음 튜토리얼을 확인하십시오. 
+  * [Create and use a microservices toolchain with DevOps Insights (v2)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

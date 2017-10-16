@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-29"
+lastupdated: "2017-9-25"
 
 ---
 
@@ -19,27 +19,29 @@ lastupdated: "2017-5-29"
 
 根据您是在 {{site.data.keyword.Bluemix_notm}} Public 还是 {{site.data.keyword.Bluemix_notm}} Dedicated 中使用工具链，工具链可添加和配置的工具集成有所不同。如果要在 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用工具链，那么哪些工具集成可用将取决于 {{site.data.keyword.contdelivery_full}} 在您的特定环境中如何设置。
 
-|工具集成 |在 {{site.data.keyword.Bluemix_notm}} Public 中可用	|在 {{site.data.keyword.Bluemix_notm}} Dedicated 中可用（具体取决于环境）|
+|工具集成|在 {{site.data.keyword.Bluemix_notm}} Public 中可用|在 {{site.data.keyword.Bluemix_notm}} Dedicated 中可用（具体取决于环境）|
 |:----------|:------------------------------|:------------------|
-|{{site.data.keyword.alertnotificationshort}}		|是		|否		|
-|Artifactory		|是		|否		|
-|Availability Monitoring		|是		|否		|
-|Cloud Event Management		|是		|否		|
-|{{site.data.keyword.deliverypipeline}} 		|是	   	|是  		|
-|{{site.data.keyword.DRA_short}} 		|是		|否			|
-|Eclipse Orion {{site.data.keyword.webide}}		|是		|是			|
-|{{site.data.keyword.gitrepos}}	|是		|否		|
-|GitHub 和 Issues		|是		|是		|
-|Dedicated {{site.data.keyword.ghe_short}} 和 Issues			|否		|是		|
-|Jenkins		|是		|否		|
-|JIRA		|是		|否		|
-|Nexus			|是		|否		|
-|其他工具			|是		|是		|
-|PagerDuty			|是		|是		|
-|Rational Team Concert			|是		|否		|
-|Sauce Labs		|是		|否		|
-|Slack			|是		|是		|
-|SonarQube			|是		|否		|
+|{{site.data.keyword.alertnotificationshort}}		|是|否|
+|Application Security on Cloud|是|否|
+|Artifactory|是|是|
+|Availability Monitoring|是|否|
+|Cloud Event Management|是|否|
+|{{site.data.keyword.deliverypipeline}} 		|是|是|
+|{{site.data.keyword.DRA_short}} 		|是|否|
+|Eclipse Orion {{site.data.keyword.webide}}|是|是|
+|{{site.data.keyword.gitrepos}}	|是|否|
+|GitHub 和 Issues|是|是|
+|Dedicated {{site.data.keyword.ghe_short}} 和 Issues|否|是|
+|GitLab|是|否|
+|Jenkins|是|是|
+|JIRA|是|是|
+|Nexus|是|是|
+|其他工具|是|是|
+|PagerDuty|是|是|
+|Rational Team Concert|是|是|
+|Sauce Labs|是|否|
+|Slack|是|是|
+|SonarQube|是|是|
 {: caption="表 1. 在 {{site.data.keyword.Bluemix_notm}} Public 和 Dedicated 中，工具链可使用的工具集成" caption-side="top"}
 
 **提示**：如果您想要在 {{site.data.keyword.Bluemix_notm}} Public 中开始使用源代码进行开发，请先配置 GitHub 工具集成或 {{site.data.keyword.gitrepos}} 工具集成，然后再配置 {{site.data.keyword.deliverypipeline}}。如果要在 {{site.data.keyword.Bluemix_notm}} Dedicated 上开始使用您的代码进行开发，请先配置 {{site.data.keyword.ghe_short}} 工具集成或 GitHub 工具集成，然后再配置 {{site.data.keyword.deliverypipeline}}。
@@ -58,7 +60,7 @@ lastupdated: "2017-5-29"
 
  a. 在 IBM Marketplace 中打开 [IBM {{site.data.keyword.alertnotificationshort}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/us-en/marketplace/alert-notification){: new_window} 页面。
 
- b. 购买预订或注册免费 90 天试用。
+ b. 购买预订或注册 90 天免费试用。
 
 1. 在设置 {{site.data.keyword.alertnotificationshort}} 帐户后，打开[我的 IBM 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://myibm.ibm.com/dashboard/){: new_window}。
 1. 在 IBM {{site.data.keyword.alertnotificationshort}} 旁边，单击**启动**。
@@ -81,7 +83,37 @@ lastupdated: "2017-5-29"
 1. 单击**创建集成**。
 1. 从您的工具链，单击 **{{site.data.keyword.alertnotificationshort}}**。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [IBM {{site.data.keyword.alertnotificationshort}} 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window}。
+### 了解有关 Alert Notification 的更多信息
+
+要了解有关 {{site.data.keyword.alertnotificationshort}} 的更多信息，请参阅 IBM Cloud Garage Method 上的 [IBM {{site.data.keyword.alertnotificationshort}} 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window} 或学习以下教程：
+
+  * [将工具集成添加到工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
+  * [使用 Bluemix Availability Monitoring 和 Alert Notification 来管理 {{site.data.keyword.Bluemix_notm}} 应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+
+
+## 配置 Application Security on Cloud
+{: #appscan}
+
+IBM&reg; Application Security on Cloud 通过检测几十个最普遍的已发布安全漏洞来确保组织的应用程序安全。在将应用程序部署到生产环境之前，可以使用此服务来消除应用程序中的安全漏洞。通过方便、详细的报告，可以解决漏洞，并最终使应用程序的用户能够受益于更安全的体验。
+
+配置 Application Security on Cloud 以持续分析源代码：
+
+1. 在 DevOps 仪表板上，单击**工具链**。单击要向其添加 Application Security on Cloud 的工具链。或者，在应用程序“概述”页面的“持续交付”卡上，单击**查看工具链**。然后，单击**概述**。  
+
+ a. 单击**添加工具**。
+
+ b. 在“工具集成”部分中，单击 **IBM Application Security on Cloud**。
+
+1. 输入此 Application Security on Cloud 工具集成实例的名称。
+1. 在工具链中单击 IBM Application Security on Cloud 卡时，想要打开哪个 Application Security on Cloud 实例，请输入其 URL。
+1. 输入用于连接到 IBM Application Security on Cloud 服务器的用户名。
+1. 输入用于连接到 IBM Application Security on Cloud 服务器的认证令牌。
+1. 单击**创建集成**。
+1. 从工具链中单击 **IBM Application Security on Cloud** 以查看您所连接到的 IBM Application Securit y on Cloud 实例的仪表板。
+
+### 了解有关 Application Security on Cloud 的更多信息
+
+要了解有关 Application Security on Cloud 的更多信息，请参阅 IBM Cloud Garage Method 上的 [Application Security on Cloud 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/manage/tool_ibm_security_appscan/){: new_window}。
 
 
 ## 配置 Artifactory
@@ -100,25 +132,25 @@ lastupdated: "2017-5-29"
 1. 选择您要连接到的存储库类型。
 1. 如果您使用 Artifactory npm 注册表，请遵循以下步骤：
 
- a. 键入与注册表相关联的电子邮件地址。
+ a. 输入与注册表相关联的电子邮件地址。
 
- b. 键入与注册表相关联的认证令牌。
+ b. 输入与注册表相关联的认证令牌。
 
- c. 键入 Artifactory 发布存储库的 URL，其为 Artifactory 服务器上的专用注册表。
+ c. 输入 Artifactory 发布存储库的 URL，这是您在 Artifactory 服务器上的专用注册表。
 
- d. 键入您用于结合多个公共和专用 npm 注册表的镜像或公共注册表的 URL。例如，此 URL 可能是可访问专用注册表和 npm 全局 注册表高速缓存的 Artifactory 服务器上虚拟注册表的 URL。
+ d. 输入用于组合多个公共和专用 npm 注册表的镜像或公共注册表的 URL。例如，此 URL 可能是可访问专用注册表和 npm 全局 注册表高速缓存的 Artifactory 服务器上虚拟注册表的 URL。
 
 1. 如果您使用 Artifactory Maven 存储库，请遵循以下步骤：
 
- a. 键入与存储库相关联的用户标识。
+ a. 输入与存储库相关联的用户标识。
 
- b. 键入与存储库相关联的密码。
+ b. 输入与存储库相关联的密码。
 
- c. 键入 Artifactory 发布存储库的 URL，其为 Artifactory 服务器上的专用发布存储库。
+ c. 输入 Artifactory 发布存储库的 URL，这是您在 Artifactory 服务器上的专用发布存储库。
 
- d. 键入 Artifactory 快照存储库的 URL，其为 Artifactory 服务器上的专用快照存储库。
+ d. 输入 Artifactory 快照存储库的 URL，这是您在 Artifactory 服务器上的专用快照存储库。
 
- e. 键入您用于结合多个公共和专用 Maven 存储库的镜像或公共存储库的 URL。例如，此 URL 可能是可访问专用存储库和 Maven 中央存储库高速缓存的 Artifactory 服务器上虚拟存储库的 URL。
+ e. 输入用于组合多个公共和专用 Maven 存储库的镜像或公共存储库的 URL。例如，此 URL 可能是可访问专用存储库和 Maven 中央存储库高速缓存的 Artifactory 服务器上虚拟存储库的 URL。
 
 1. 单击**创建集成**。
 1. 单击您要使用的 Artifactory 存储库的卡。这将打开 Artifactory Web 站点，您可在其中查看存储库的内容。
@@ -138,7 +170,7 @@ lastupdated: "2017-5-29"
 
   a. 对于构建器类型，请选择 **NPM 构建**。
 
-  b. 如果您已配置 Artifactory 工具集成的多个实例，请输入您要配置 npm 构建作业的 Artifactory 工具集成的名称。
+  b. 如果已配置 Artifactory 工具集成的多个实例，请输入要为其配置 npm 构建作业的 Artifactory 工具集成的名称。
 
   c. 对于工具集成类型，请选择 **Artifactory**。
 
@@ -150,7 +182,7 @@ lastupdated: "2017-5-29"
      ```
   **提示**：您可以在 Artifactory 工具集成的配置设置中，查找用于连接到注册表的 URL 和用户凭证。
 
-  e. 如果您的构建作业发布到 Artifactory 注册表且您节点模块版本的格式为 `x.y.z-SNAPSHOT.w`，请选择**增量快照模块版本**复选框。构建作业会在作业发布到 Artifactory 注册表之前，自动更新模块版本。作业会从 npm 注册表和本地 `package.json` 文件中选择最高的模块版本，并使用 semver 递增模块版本。 构建作业不会将更改交付到 SCM 存储库。
+  e. 如果您的构建作业发布到 Artifactory 注册表且您节点模块版本的格式为 `x.y.z-SNAPSHOT.w`，请选中**增量快照模块版本**复选框。构建作业会在作业发布到 Artifactory 注册表之前，自动更新模块版本。作业会从 npm 注册表和本地 `package.json` 文件中选择最高的模块版本，并使用 semver 递增模块版本。 构建作业不会将更改交付到 SCM 存储库。
 
 1. 单击**保存**。管道无论何时运行，此构建作业都会使用 Artifactory 工具集成中的配置信息来连接到您的 npm 注册表。
 
@@ -167,7 +199,7 @@ lastupdated: "2017-5-29"
 
   a. 对于构建器类型，请选择 **Maven 构建**。
 
-  b. 如果您已配置 Artifactory 工具集成的多个实例，请输入您要配置 Maven 构建作业的 Artifactory 工具集成的名称。
+  b. 如果已配置 Artifactory 工具集成的多个实例，请输入要为其配置 Maven 构建作业的 Artifactory 工具集成的名称。
 
   c. 对于工具集成类型，请选择 **Artifactory**。
 
@@ -181,7 +213,9 @@ lastupdated: "2017-5-29"
 
 1. 单击**保存**。管道无论何时运行，此构建作业都会使用 Artifactory 工具集成中的配置信息来连接到您的 Maven 存储库。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [Artifactory 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window}。
+### 了解有关 Artifactory 的更多信息
+
+要了解有关 Artifactory 的更多信息，请参阅 IBM Cloud Garage Method 上的 [Artifactory 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window}。
 
 
 ## 添加 Availability Monitoring
@@ -202,7 +236,11 @@ lastupdated: "2017-5-29"
 1. 单击**创建集成**。
 1. 单击 **{{site.data.keyword.prf_hubshort}}** 以打开 {{site.data.keyword.prf_hubshort}} 仪表板，选择应用程序并为应用程序配置监视。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [{{site.data.keyword.prf_hublong}} 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window}。
+### 了解有关 Availability Monitoring 的更多信息
+
+要了解有关 {{site.data.keyword.prf_hubshort}} 的更多信息，请参阅 IBM Cloud Garage Method 上的 [{{site.data.keyword.prf_hublong}} 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window} 或学习以下教程：
+
+  * [使用 Bluemix Availability Monitoring 和 Alert Notification 来管理 {{site.data.keyword.Bluemix_notm}} 应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## 添加 Cloud Event Management（试验性）
@@ -229,7 +267,9 @@ lastupdated: "2017-5-29"
 
  * **操作手册自动化**以在 Cloud Event Management 中管理操作手册的目录。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [Cloud Event Management 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window}。
+### 了解有关 Cloud Event Management 的更多信息
+
+要了解有关 Cloud Event Management 的更多信息，请参阅 IBM Cloud Garage Method 上的 [Cloud Event Management 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window}。
 
 
 ## 配置 Delivery Pipeline
@@ -271,12 +311,10 @@ lastupdated: "2017-5-29"
    
   ![测试作业](images/toolchain_test_job.png)
 
-1. 配置阶段：
+1. 配置阶段。在**环境属性**选项卡上，创建 CF_APP_NAME 属性。
 
-  a. 在**环境属性**选项卡上，创建三个属性：CF_APP_NAME、SAUCE_USERNAME 和 SAUCE_ACCESS_KEY。
-
-  b. 输入 Sauce Labs 用户名和访问密钥。这样做可将那些值外部化，就能够在测试中使用它们。
-
+  **提示：**Sauce Labs 用户名和访问密钥在测试作业脚本中作为 SAUCE_USERNAME 和 SAUCE_ACCESS_KEY 环境变量提供。编写测试时，必须使用这两个环境变量向 Sauce Labs 进行认证。
+  
 1. 配置部署作业。在**部署脚本**字段中，包括以下命令：`export CF_APP_NAME="$CF_APP"`。该命令会将应用程序名称导出为环境属性。
 1. 配置测试作业。以下图像中的值为示例。**服务实例**、**目标**、**组织**和**空间**字段中会填充您使用的 Sauce Labs 用户名、区域、组织和空间。
   
@@ -294,11 +332,16 @@ npm install
      node_modules/grunt-cli/bin/grunt test:sauce:parallel
      ```
 
-    d. 如果您想要在测试作业日志中查看测试报告，请选中**启用测试报告**复选框，然后将“测试结果文件模式”设置为 `test/*.xml`。
+    d. 如果要在测试作业日志中查看测试报告，请选中**启用测试报告**复选框，然后将“测试结果文件模式”设置为 `test/*.xml`。
 
 1. 单击**保存**。管道无论何时运行，Sauce Labs 测试都会运行。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [Delivery Pipeline 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window}。
+### 了解有关 Delivery Pipeline 的更多信息
+
+要了解有关 {{site.data.keyword.deliverypipeline}} 的更多信息，请参阅 IBM Cloud Garage Method 上的 [Delivery Pipeline 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window} 或学习以下教程：
+
+  * [创建管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}
+  * [创建并使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
 
 
 ## 添加 DevOps Insights (Beta)
@@ -320,7 +363,13 @@ npm install
 1. 单击**创建集成**。
 1. 单击 **{{site.data.keyword.DRA_short}}**，然后完成入门步骤：创建条件、将条件连接到管道并运行管道。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [{{site.data.keyword.DRA_short}} 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window}。
+### 了解有关 DevOps Insights 的更多信息
+
+要了解有关 {{site.data.keyword.DRA_short}} 的更多信息，请参阅 IBM Cloud Garage Method 上的 [{{site.data.keyword.DRA_short}} 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window} 或学习以下教程：
+
+  * [创建使用 {{site.data.keyword.DRA_short}} 的工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_devops_insights){:new_window}
+  * [创建并使用具有 {{site.data.keyword.DRA_short}} 的微服务工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [具有 GitHub 和 Jenkins 的 Deployment Risk Analytics ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
 
 
 ## 添加 Eclipse Orion Web IDE
@@ -342,7 +391,12 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于 Web 的集成环境，您�
 1. 单击**创建集成**。
 1. 单击 **Eclipse Orion {{site.data.keyword.webide}}**。此时，您的工作空间会预填充 GitHub 或 {{site.data.keyword.ghe_short}} 存储库。与您当前工具链相关联的存储库会突出显示。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [使用 Eclipse Orion {{site.data.keyword.webide}} 编辑代码](/docs/services/ContinuousDelivery/web_ide.html){: new_window}和 [Eclipse Orion {{site.data.keyword.webide}} 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window}。
+### 了解有关 Eclipse Orion Web IDE 的更多信息
+
+要了解有关 Eclipse Orion {{site.data.keyword.webide}} 的更多信息，请参阅 IBM Cloud Garage Method 上的[使用 Eclipse Orion {{site.data.keyword.webide}} 编辑代码](/docs/services/ContinuousDelivery/web_ide.html){: new_window}和 [Eclipse Orion {{site.data.keyword.webide}} 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window}，或者学习以下教程：
+
+  * [创建并使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
+  * [使用 {{site.data.keyword.Bluemix_notm}} Live Sync 开发、调试和部署应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_livesync){:new_window}
 
 
 ## 配置 Git Repos and Issue Tracking
@@ -356,6 +410,20 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于 Web 的集成环境，您�
 1. 复查 Git 存储库的缺省目标位置。那些存储库是从样本存储库克隆而来的。如果需要，请更改目标存储库的名称。
 
 
+如果您有工具链，并且希望将工具链中的 Git 存储库迁移到 {{site.data.keyword.gitrepos}}，请执行以下步骤：
+
+**注**：这些指示信息适用于已包含要迁移到 {{site.data.keyword.gitrepos}} 的 Git 存储库的工具链。有关将不同类型的 Git 存储库添加到工具链的信息，请参阅[配置 GitHub 和 Issues](#github)、[在 Bluemix Dedicated 上配置 GitHub Enterprise 和 Issues](#configghe) 以及[配置 GitLab](#gitlab) 部分。
+
+1. 在 DevOps 仪表板的“工具链”页面上，单击工具链，以打开其“概述”页面。或者，在应用程序“概述”页面的“持续交付”卡上，单击**查看工具链**，然后单击**概述**。
+1. 单击**添加工具**。
+1. 在“工具集成”部分中，单击 **Git Repos and Issue Tracking**。
+1. 要创建 Git 存储库的副本，对于存储库类型，请单击**克隆**。键入新存储库名称和源存储库的 URL。
+1. 如果您想要使用 Issues 进行问题跟踪，请选中**启用 Issues** 复选框。
+1. 如果您要通过在提交上创建标记和注释，在提交所参考的问题上创建标签和注释，跟踪代码更改的部署，请选择**跟踪代码更改的部署**复选框。有关更多信息，请参阅[使用工具链跟踪代码部署位置 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}。
+1. 单击**创建集成**。
+
+**提示**：克隆 Git 存储库后，可以将其从工具链中除去。 
+
 如果您具有工具链且要向其添加 {{site.data.keyword.gitrepos}}，请遵循以下步骤：    
 
 1. 在 DevOps 仪表板的“工具链”页面上，单击工具链，以打开其“概述”页面。或者，在应用程序“概述”页面的“持续交付”卡上，单击**查看工具链**，然后单击**概述**。
@@ -363,10 +431,10 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于 Web 的集成环境，您�
 1. 在“工具集成”部分中，单击 **Git Repos and Issue Tracking**。
 1. 选择存储库类型：     
 
-  a. 要创建空的存储库，对于存储库类型，请单击**新建**并键入存储库名称。    
-b. 要派生 Git 存储库以便您可以通过合并请求来提供更改，对于存储库类型，请单击**派生**。键入源存储库的 URL。    
-c. 要创建 Git 存储库的副本，对于存储库类型，请单击**克隆**。键入新存储库名称和源存储库的 URL。     
-d. 如果您有 Git 存储库并且想要使用该存储库，那么对于存储库类型，请单击**现有**。键入 URL。    
+  a. 要创建空的存储库，对于存储库类型，请单击**新建**并输入存储库名称。    
+  b. 要派生 Git 存储库以便您可以通过合并请求来提供更改，对于存储库类型，请单击**派生**。键入源存储库的 URL。    
+  c. 要创建 Git 存储库的副本，对于存储库类型，请单击**克隆**。键入新存储库名称和源存储库的 URL。     
+  d. 如果您有 GitHub 存储库并且要使用该存储库，那么对于存储库类型，请单击**现有**。键入 URL。    
 
 1. 如果您想要使用 Issues 进行问题跟踪，请选中**启用 Issues** 复选框。
 1. 如果您要通过在提交上创建标记和注释，在提交所参考的问题上创建标签和注释，跟踪代码更改的部署，请选择**跟踪代码更改的部署**复选框。有关更多信息，请参阅[使用工具链跟踪代码部署位置 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}。
@@ -375,50 +443,81 @@ d. 如果您有 Git 存储库并且想要使用该存储库，那么对于存储
 
 **注：**如果您对要链接到的存储库没有支配者或所有者特权，那么您的集成将受到限制，因为您无法使用 Webhook。将提交推送到存储库时，需要 Webhook 才能自动运行管道。没有 Webhook，您必须手动启动管道。
 
+### 了解有关 Git Repos and Issue Tracking 的更多信息
+
+要了解有关 {{site.data.keyword.gitrepos}} 的更多信息，请参阅 IBM Cloud Garage Method 上的 [{{site.data.keyword.gitrepos}}：IBM 托管的社交编码文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/code/tool_git_repos_and_issue_tracking/){: new_window} 或学习以下教程：
+
+  * [创建使用 {{site.data.keyword.gitrepos}} 的工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
+
 
 ## 配置 GitHub 和 Issues
 {: #github}
 
 GitHub 是 Git 存储库基于 Web 的托管服务。您可以同时具有存储库的本地和远程副本，这使协作变得更加轻松。
 
+{{site.data.keyword.ghe_short}} 是 Git 存储库基于 Web 的内部部署托管服务。
+
 GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在一个地方。它与您的开发存储库相集成，以便您可将关注点放在重要的任务上。
 
-配置 GitHub，以在云中管理源代码：
+您可以将 GitHub 配置为工具链中的工具集成，以便您可以管理 GitHub.com 上或您公司 {{site.data.keyword.ghe_short}} 实例中新存储库或现有存储库中的源代码。通过 Wiki、问题跟踪和拉取请求，可参与社交编码。
 
-1. 如果您在创建工具链时配置此工具集成，请遵循以下步骤：
+如果您在创建工具链时配置此工具集成，请遵循以下步骤：
 
- a. 在“可配置的集成”部分中，单击 **GitHub**。如果您要在 {{site.data.keyword.Bluemix_notm}} Public 上创建工具链，但尚未授权 {{site.data.keyword.Bluemix_notm}} 访问 GitHub，请单击**授权**以转至 GitHub Web 站点。如果您没有活动的 GitHub 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 GitHub 帐户。如果您有活动的 GitHub 会话但最近未输入过密码，那么系统可能会提示您输入 GitHub 密码以进行确认。
+1. 如果要将源代码存储在 GitHub 存储库中，请在“可配置的集成”部分中，单击 **GitHub**。如果要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具集成，但尚未授权 {{site.data.keyword.Bluemix_notm}} 访问 GitHub，请单击**授权**以转至 GitHub Web 站点。如果您没有活动的 GitHub 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 GitHub 帐户。如果您有活动的 GitHub 会话但最近未输入过密码，那么系统可能会提示您输入 GitHub 密码以进行确认。
+1. 如果要使用您自己的 {{site.data.keyword.ghe_short}} 服务器上的存储库，请在“可配置的集成”部分中，单击**添加定制服务器**。输入定制 GitHub 服务器的标题，并指定该服务器的根 URL。输入您的个人访问令牌，然后单击**保存定制集成**。 
+ 
+  **提示**：如果您没有个人访问令牌，可以进行创建：
+  
+     a. 在任何 GitHub 页面上，单击“概要文件”图标，然后单击**设置**。
+   
+     b. 在侧边栏上，单击**个人访问令牌**。 
+   
+     c. 单击**生成新令牌**。
+   
+     d. 添加令牌的描述。
+     
+     e. 选中**存储库**和**用户**复选框，以定义个人令牌的访问权。
+     
+     f. 单击**生成令牌**。
+   
+     g. 将令牌复制到安全的位置或密码管理应用程序。出于安全原因，离开此页面后，您将无法再看到该令牌。
 
- b. 复查 GitHub 存储库的缺省目标存储库位置。那些存储库是从样本存储库克隆而来的。如果需要，请更改目标存储库的名称。
-![缺省目标存储库位置](images/toolchain_github_config.png)
+1. 复查 GitHub 存储库的缺省目标存储库位置。那些存储库是从样本存储库克隆而来的。如果需要，请更改目标存储库的名称。![缺省目标存储库位置](images/toolchain_github_config.png)
 
-1. 如果您有工具链，并且要将此工具集成添加到该工具链，请在 DevOps 仪表板的“工具链”页面上单击该工具链，以打开其“概述”页面。或者，在应用程序“概述”页面的“持续交付”卡上，单击**查看工具链**，然后单击**概述**。
 
- a. 单击**添加工具**。
+如果您有工具链且要向其添加此工具集成，请执行以下步骤：
 
- b. 在“工具集成”部分中，单击 **GitHub**。
-
-1. 如果您有 GitHub 存储库并且想要使用该存储库，那么对于存储库类型，请单击**现有**并键入 URL。
-1. 如果您想要使用新的 GitHub 存储库，请输入 GitHub 存储库的名称，输入您要克隆或派生的存储库的 URL，然后选择存储库类型：
+1. 在 DevOps 仪表板的“工具链”页面上，单击工具链，以打开其“概述”页面。或者，在应用程序“概述”页面的“持续交付”卡上，单击**查看工具链**，然后单击**概述**。
+1. 单击**添加工具**。
+1. 在“工具集成”部分中，单击 **GitHub**。
+1. 单击要使用的 GitHub 服务器。
+1. 如果您有 GitHub 或 {{site.data.keyword.ghe_short}} 存储库并且想要使用该存储库，那么对于存储库类型，请单击**现有**并输入 URL。
+1. 如果要使用新的 GitHub 或 {{site.data.keyword.ghe_short}} 存储库，请输入存储库的名称，输入您要克隆或派生的存储库的 URL，然后选择存储库类型：
 
  a. 要创建空的存储库，请单击**新建**。
 
- b. 要创建 GitHub 存储库的副本，请单击**克隆**。
+ b. 要创建 GitHub 或 {{site.data.keyword.ghe_short}} 存储库的副本，请单击**克隆**。
 
- c. 要派生 GitHub 存储库以便您可以通过拉出请求来提供更改，请单击**派生**。
+ c. 要派生 GitHub 或 {{site.data.keyword.ghe_short}} 存储库以便您可以通过拉出请求来提供更改，请单击**派生**。
 
+1. 如果您是具有升级帐户的 GitHub.com 用户，或者选择了 {{site.data.keyword.ghe_short}} 服务器，并且希望在该服务器上创建新的专用存储库，请选中**使此存储库成为专用**复选框。
 1. 如果您想要使用 GitHub Issues 进行问题跟踪，请选中**启用 GitHub Issues** 复选框。
 1. 如果您要通过在提交上创建标记和注释，在提交所参考的问题上创建标签和注释，跟踪代码更改的部署，请选择**跟踪代码更改的部署**复选框。有关更多信息，请参阅[使用工具链跟踪代码部署位置 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}。
 1. 单击**创建集成**。
-1. 单击您要使用的 GitHub 存储库的卡。这将打开 GitHub Web 站点，您可在其中查看存储库的内容。
+1. 单击要使用的 GitHub 或 {{site.data.keyword.ghe_short}} 存储库的卡。根据您选择的存储库，将打开 GitHub Web 站点或您公司的 {{site.data.keyword.ghe_short}} 存储库，您可在其中查看存储库的内容。
 
   **提示**：您可以在 Eclipse Orion {{site.data.keyword.webide}} 中使用集成的源代码管理工具，以编辑 GitHub 存储库，并从您的工作空间部署应用程序。
 
-1. 如果您已启用 GitHub Issues，请单击 **GitHub Issues**，以将其打开。您可以对整个工具链使用此 GitHub Issues 的实例，即使工具链包含多个 GitHub 存储库也是如此。    
+1. 如果您已启用 GitHub Issues，请单击 **GitHub Issues**，以将其打开。您可以对整个工具链使用此 GitHub Issues 的实例，即使工具链包含多个 GitHub 或 {{site.data.keyword.ghe_short}} 存储库也是如此。    
 
 **注：**如果您对要链接到的存储库没有管理员特权，那么您的集成将受到限制，因为您无法使用 Webhook。将提交推送到存储库时，需要 Webhook 才能自动运行管道。没有 Webhook，您必须手动启动管道。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [GitHub 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} 和 [GitHub Issues 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}。
+### 了解有关 GitHub 和 Issues 的更多信息
+
+要了解有关 GitHub 和 Issues 的更多信息，请参阅 IBM Cloud Garage Method 上的 [GitHub 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} 和 [GitHub Issues 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}，或者学习以下教程：
+
+  * [具有 GitHub 和 Jenkins 的 Deployment Risk Analytics ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
+  * [创建定制工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom){:new_window}
 
 
 ## 在 Bluemix Dedicated 上配置 GitHub Enterprise 和 Issues
@@ -432,7 +531,7 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
 
 1. 如果您在创建工具链时配置此工具集成，请遵循以下步骤：
 
- a. 首次登录到 Dedicated {{site.data.keyword.ghe_short}} 之前，请要求公司的区域管理员使用 LDAP，在公司的用户注册表中，将您的用户标识添加到 {{site.data.keyword.Bluemix_notm}} Dedicated 实例。有关设置 {{site.data.keyword.ghe_short}} 帐户的信息，请参阅 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated/index.html){: new_window}。
+ a. 首次登录到 Dedicated {{site.data.keyword.ghe_short}} 之前，请要求公司的区域管理员使用 LDAP，将您在公司的用户注册表中的用户标识添加到 {{site.data.keyword.Bluemix_notm}} Dedicated 实例。有关设置 {{site.data.keyword.ghe_short}} 帐户的信息，请参阅 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated/index.html){: new_window}。
 
  b. 在“可配置的集成”部分中，单击 **{{site.data.keyword.ghe_short}}**。    
 
@@ -464,6 +563,67 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
 **注：**如果您对要链接到的存储库没有管理员特权，那么您的集成将受到限制，因为您无法使用 Webhook。将提交推送到存储库时，需要 Webhook 才能自动运行管道。没有 Webhook，您必须手动启动管道。
 
 
+## 配置 GitLab
+{: #gitlab}
+
+GitLab 是 Git 存储库基于 Web 的托管服务。您可以同时具有存储库的本地和远程副本，这使协作变得更加轻松。
+
+您可以将 GitLab 配置为工具链中的工具集成，以便您可以管理 GitLab.com 上或您公司 GitLab 实例中新存储库或现有存储库中的源代码。通过 Wiki、问题跟踪和合并请求，可参与社交编码。
+
+如果您在创建工具链时配置此工具集成，请遵循以下步骤：
+
+1. 如果要将源代码存储在 GitLab 存储库中，请在“可配置的集成”部分中，单击 **GitLab**。如果要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具集成，但尚未授权 {{site.data.keyword.Bluemix_notm}} 访问 GitLab，请单击**授权**以转至 GitLab Web 站点。如果您没有活动的 GitLab 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 GitLab 帐户。如果您有活动的 GitLab 会话但最近未输入过密码，那么系统可能会提示您输入 GitLab 密码以进行确认。
+1. 如果要使用您自己的 GitLab 服务器上的存储库，请在“可配置的集成”部分中，单击**添加定制服务器**。输入定制 GitLab 服务器的标题，并指定该服务器的根 URL。输入您的个人访问令牌，然后单击**保存定制集成**。 
+ 
+  **提示**：如果您没有个人访问令牌，可以进行创建：
+  
+     a. 在任何 GitLab 页面上，单击“概要文件”图标，然后单击**设置**。
+   
+     b. 在“访问令牌”页面上，输入要为其创建个人访问令牌的应用程序的名称。
+     
+     c. 可选。选择访问令牌的到期日期。
+     
+     d. 选中 **API** 复选框，以定义个人令牌的访问权。
+     
+     e. 单击**创建个人访问令牌**。
+   
+     f. 将令牌复制到安全的位置或密码管理应用程序。出于安全原因，离开此页面后，您将无法再看到该令牌。
+
+1. 复查 GitLab 存储库的缺省目标存储库位置。那些存储库是从样本存储库克隆而来的。如果需要，请更改目标存储库的名称。
+
+
+如果您有工具链且要向其添加此工具集成，请执行以下步骤：
+
+1. 在 DevOps 仪表板的“工具链”页面上，单击工具链，以打开其“概述”页面。或者，在应用程序“概述”页面的“持续交付”卡上，单击**查看工具链**，然后单击**概述**。
+1. 单击**添加工具**。
+1. 在“工具集成”部分中，单击 **GitLab**。
+1. 单击要使用的 GitLab 服务器。
+1. 如果您有 GitLab 存储库并且想要使用该存储库，那么对于存储库类型，请单击**现有**并输入 URL。
+1. 如果要使用新的 GitLab 存储库，请输入存储库的名称，输入您要克隆或派生的存储库的 URL，然后选择存储库类型：
+
+ a. 要创建空的存储库，请单击**新建**。
+
+ b. 要创建 GitLab 存储库的副本，请单击**克隆**。
+
+ c. 要派生 GitLab 存储库以便您可以通过拉出请求来提供更改，请单击**派生**。
+
+1. 如果要在服务器上创建公共存储库，请清除**使此存储库成为专用**复选框。
+1. 如果要使用 GitLab Issues 进行问题跟踪，请选中**启用 GitLab Issues** 复选框。
+1. 如果您要通过在提交上创建标记和注释，在提交所参考的问题上创建标签和注释，跟踪代码更改的部署，请选择**跟踪代码更改的部署**复选框。有关更多信息，请参阅[使用工具链跟踪代码部署位置 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}。
+1. 单击**创建集成**。
+1. 单击要使用的 GitLab 存储库的卡。根据您选择的存储库，将打开 GitLab Web 站点或您公司的 GitLab 存储库，您可在其中查看存储库的内容。
+
+  **提示**：您可以在 Eclipse Orion {{site.data.keyword.webide}} 中使用集成的源代码管理工具来编辑 GitLab 存储库，并从您的工作空间部署应用程序。
+
+1. 如果您已启用 GitLab Issues，请单击 **GitLab Issues**，以将其打开。即使工具链中包含多个 GitLab 存储库，也可以将此 GitLab Issues 实例用于整个工具链。    
+
+**注：**如果您对要链接到的存储库没有所有者或支配者特权，那么您的集成将受到限制，因为您无法使用 Webhook。将提交推送到存储库时，需要 Webhook 才能自动运行管道。没有 Webhook，您必须手动启动管道。
+
+### 了解有关 GitLab 的更多信息
+
+要了解有关 GitLab 的更多信息，请参阅 IBM Cloud Garage Method 上的 [GitLab 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/code/tool_gitlab/){: new_window}。
+
+
 ## 配置 Jenkins
 {: #jenkins}
 
@@ -487,51 +647,22 @@ Jenkins 是基于服务器的开放式源代码工具，其可持续构建并测
 1. 复制生成的工具链 Webhook。
 1. 在 Jenkins 服务器中，完成以下步骤：
 
- a. 安装 [Cloud Foundry CLI ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html){: new_window}。
+ a. [安装 IBM Cloud DevOps 插件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Installingtheplugin){: new_window}。
 
- b. 通过输入以下某个命令，安装 IBM Cloud DevOps Cloud Foundry 插件：
+ b. [配置 Jenkins 以通知工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Notifyingtoolchains){: new_window}。
 
-  * Mac OS：`cf install-plugin https://icd.ng.bluemix.net/icd_darwin_amd64`
-
-  * Linux 或 Docker：`cf install-plugin https://icd.ng.bluemix.net/icd_linux_amd64`
-
- c. 针对 DevOps Insights and Notifications，安装并配置 IBM Cloud DevOps Jenkins 插件。有关更多信息，请参阅[安装并配置插件](/docs/services/DevOpsInsights/insights_risk.html#integrate_jenkins){: new_window}。
-
- d. 在要将通知发送到工具链的每个作业中，完成以下步骤：
-
-  * 选择**此项目已参数化**复选框。
-
-  * 添加 `IBM_CLOUD_DEVOPS_WEBHOOK_URL` 字符串参数。
-
-  * 粘贴生成的工具链 Webhook。![Webhook URL](images/jenkins_webhook_url.png)
-
-  * 为 Notify OTC 添加构建后操作，然后选择**已完成作业**复选框。
-![构建后操作](images/jenkins_postbuild_action.png)  
-
- e. 在部署作业中，完成以下步骤：
-
-  * 添加 `IBM_CLOUD_DEVOPS_WEBHOOK_URL`、`CF_API`、`CF_ORG`、`CF_SPACE` 和 `CF_APP` 字符串参数。以下示例显示如何添加每个字符串参数。
-![Webhook URL 字符串参数](images/jenkins_set_webhook_url.png)
- ![CFI API 字符串参数](images/jenkins_set_cfapi.png)
- ![CFI ORG 字符串参数](images/jenkins_set_cforg.png)
- ![CFI SPACE 字符串参数](images/jenkins_set_cfspace.png)
- ![CFI APP 字符串参数](images/jenkins_set_cfapp.png)
-
-  * 通过使用 `CF_CREDS_USR` 用户名变量和 `CF_CREDS_PSW` 密码变量，为 Cloud Foundry CLI 配置绑定。
-![Cloud Foundry CLI 绑定](images/jenkins_config_bindings.png)  
-
-  * 在**构建**字段中，输入以下命令以登录并使用 IBM Cloud DevOps Cloud Foundry 插件将应用程序可部署映射（具有 Git 提交可跟踪性）发送到工具链：![构建命令](images/jenkins_build_commands.png)    
-
-  * 在**构建**字段中，输入 `cf icd --create-connection $IBM_CLOUD_DEVOPS_WEBHOOK_URL $CF_APP` 命令，以将应用程序可部署映射发送到工具链。    
-
- f. 保存更改并返回“配置集成”页面，以进行 Jenkins 工具集成。
+ c. 返回到“配置集成”页面，以进行 Jenkins 工具集成。
 
 1. 单击**创建集成**。
 1. 从工具链中单击 **Jenkins** 以查看 Jenkins 服务器。  
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [Jenkins 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window}。
+### 了解有关 Jenkins 的更多信息
 
+要了解有关 Jenkins 的更多信息，请参阅 IBM Cloud Garage Method 上的 [ 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window} 或学习以下教程：
 
+  * [具有 GitHub 和 Jenkins 的 Deployment Risk Analytics ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
+  
+  
 ## 配置 JIRA
 {: #jira}
 
@@ -548,36 +679,38 @@ JIRA 是跟踪与软件相关的问题和错误的工具。JIRA 工具集成会�
 
 1. 如果您有 JIRA 项目且想要与其进行连接，那么对于 JIRA 类型，请单击**现有**：
 
- a. 键入 JIRA 项目的 JIRA 项目密钥。您可以在 JIRA 项目的 URL 中找到项目密钥。
+ a. 输入 JIRA 项目的 JIRA 项目密钥。您可以在 JIRA 项目的 URL 中找到项目密钥。
 
- b. 键入 JIRA 实例的基本 API URL。您可以从 JIRA 实例的标头中找到 API URL。单击**管理**图标并单击**系统**。
+ b. 输入 JIRA 实例的基本 API URL。您可以从 JIRA 实例的标头中找到 API URL。单击**管理**图标并单击**系统**。
 
- c. 可选：键入 JIRA 用户名。只有在您连接到专用 JIRA 实例，或者您连接到公共实例但想要接收可跟踪性信息时才需要用户名。
+ c. 如果要连接到专用 JIRA 实例，或者要接收来自公用 JIRA 实例的可跟踪性信息，请输入 JIRA 用户名和密码。
 
- d. 可选：键入 JIRA 密码。只有在您连接到专用 JIRA 实例，或者您连接到公共实例但想要接收可跟踪性信息时才需要密码。
-
- e. 要通过创建所参考问题的标签和注释来跟踪项目的代码更改部署，请选择**跟踪代码更改的部署**复选框。请确保您使用 JIRA 智能提交来参考 GitHub 提交中的 JIRA 问题。如果您未选择此选项，那么 JIRA 工具集成将忽略任何提交。
+ d. 要通过创建所参考问题的标签和注释来跟踪项目的代码更改部署，请选中**跟踪代码更改的部署**复选框。请确保您使用 JIRA 智能提交来参考 GitHub 提交中的 JIRA 问题。如果您未选择此选项，那么 JIRA 工具集成将忽略任何提交。
 
 1. 如果您想要创建 JIRA 项目，那么对于 JIRA 类型，请单击**新建**：
 
- a. 键入要用于新项目的 JIRA 项目密钥。此密钥用作项目 URL 中的唯一标识。
+ a. 输入要用于新项目的 JIRA 项目密钥。此密钥用作项目 URL 中的唯一标识。
 
- b. 键入 JIRA 项目的名称。
+ b. 输入 JIRA 项目的名称。
 
- c. 键入 JIRA 实例的基本 API URL。您可以从 JIRA 实例的标头中找到 API URL。单击**管理**图标并单击**系统**。
+ c. 输入 JIRA 实例的基本 API URL。您可以从 JIRA 实例的标头中找到 API URL。单击**管理**图标并单击**系统**。
 
- d. 针对您要用于此项目的 JIRA 项目主管，键入用户名。要将某人指定为 JIRA 项目主管，该人员必须在 JIRA 中具有项目主管许可权。
+ d. 输入要用于此项目的 JIRA 项目主管的用户名。要将某人指定为 JIRA 项目主管，该人员必须在 JIRA 中具有项目主管许可权。
 
- e. 键入此 JIRA 实例的管理员用户名。
+ e. 输入此 JIRA 实例的管理员用户名。
 
- f. 键入此 JIRA 实例的管理员密码。
+ f. 输入此 JIRA 实例的管理员密码。
 
- g. 要通过创建所参考问题的标签和注释来跟踪项目的代码更改部署，请选择**跟踪代码更改的部署**复选框。请确保您使用 JIRA 智能提交来参考 GitHub 提交中的 JIRA 问题。如果您未选择此选项，那么 JIRA 工具集成将忽略任何提交。
+ g. 要通过创建所参考问题的标签和注释来跟踪项目的代码更改部署，请选中**跟踪代码更改的部署**复选框。请确保您使用 JIRA 智能提交来参考 GitHub 提交中的 JIRA 问题。如果您未选择此选项，那么 JIRA 工具集成将忽略任何提交。
 
 1. 单击**创建集成**。
 1. 从工具链中单击 **JIRA** 以查看您所连接的 JIRA 项目的仪表板。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [JIRA 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window}。
+### 了解有关 JIRA 的更多信息
+
+要了解有关 JIRA 的更多信息，请参阅 IBM Cloud Garage Method 上的 [JIRA 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window} 或学习以下教程：
+
+  * [获取开发人员和团队对 JIRA 和 GitHub 项目的洞察 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_dev_insights_team_dynamics){:new_window}
 
 
 ## 配置 Nexus
@@ -597,25 +730,25 @@ JIRA 是跟踪与软件相关的问题和错误的工具。JIRA 工具集成会�
 1. 选择您要连接到的存储库类型。
 1. 如果您选择了 **npm 注册表**，请遵循以下步骤：
 
- a. 键入与注册表相关联的电子邮件地址。
+ a. 输入与注册表相关联的电子邮件地址。
 
- b. 键入与注册表相关联的认证令牌。
+ b. 输入与注册表相关联的认证令牌。
 
- c. 键入 Nexus 发布存储库的 URL，其为 Nexus 服务器上的专用注册表。
+ c. 输入 Nexus 发布存储库的 URL，这是您在 Nexus 服务器上的专用注册表。
 
- d. 键入您用于结合多个公共和专用 npm 注册表的镜像或公共注册表的 URL。例如，此 URL 可能是可访问专用注册表和 npm 全局注册表高速缓存的 Nexus 服务器上虚拟注册表的 URL。
+ d. 输入用于组合多个公共和专用 npm 注册表的镜像或公共注册表的 URL。例如，此 URL 可能是可访问专用注册表和 npm 全局注册表高速缓存的 Nexus 服务器上虚拟注册表的 URL。
 
 1. 如果您选择了 **Maven 存储库**，请遵循以下步骤：
 
- a. 键入与存储库相关联的用户标识。
+ a. 输入与存储库相关联的用户标识。
 
- b. 键入与存储库相关联的密码。
+ b. 输入与存储库相关联的密码。
 
- c. 键入 Nexus 发布存储库的 URL，其为 Nexus 服务器上的专用发布存储库。
+ c. 输入 Nexus 发布存储库的 URL，这是您在 Nexus 服务器上的专用发布存储库。
 
- d. 键入 Nexus 快照存储库的 URL，其为 Nexus 服务器上的专用快照存储库。
+ d. 输入 Nexus 快照存储库的 URL，这是您在 Nexus 服务器上的专用快照存储库。
 
- e. 键入您用于结合多个公共和专用 Maven 存储库的镜像或公共存储库的 URL。例如，此 URL 可能是可访问专用存储库和 Maven 中央存储库高速缓存的 Nexus 服务器上虚拟存储库的 URL。
+ e. 输入用于组合多个公共和专用 Maven 存储库的镜像或公共存储库的 URL。例如，此 URL 可能是可访问专用存储库和 Maven 中央存储库高速缓存的 Nexus 服务器上虚拟存储库的 URL。
 
 1. 单击**创建集成**。
 1. 从工具链中单击您要使用的 Nexus 存储库的卡。这将打开 Nexus Web 站点，您可在其中查看存储库的内容。
@@ -635,7 +768,7 @@ JIRA 是跟踪与软件相关的问题和错误的工具。JIRA 工具集成会�
 
   a. 对于构建器类型，请选择 **NPM 构建**。
 
-  b. 如果您已配置 Nexus 工具集成的多个实例，请输入您要配置 npm 构建作业的 Nexus 工具集成的名称。
+  b. 如果已配置 Nexus 工具集成的多个实例，请输入要为其配置 npm 构建作业的 Nexus 工具集成的名称。
 
   c. 对于工具集成类型，请选择 **Nexus**。
 
@@ -647,7 +780,7 @@ JIRA 是跟踪与软件相关的问题和错误的工具。JIRA 工具集成会�
      ```
   **提示**：您可以在 Nexus 工具集成的配置设置中，查找用于连接到注册表的 URL 和用户凭证。
 
-  e. 如果您的构建作业发布到 Nexus 注册表且您节点模块版本的格式为 `x.y.z-SNAPSHOT.w`，请选择**增量快照模块版本**复选框。构建作业会在作业发布到 Nexus 注册表之前，自动更新模块版本。构建作业会从 npm 注册表和本地 `package.json` 文件中选择最高的模块版本，并使用 semver 递增模块版本。 构建作业不会将更改交付到 SCM 存储库。
+  e. 如果您的构建作业发布到 Nexus 注册表且您节点模块版本的格式为 `x.y.z-SNAPSHOT.w`，请选中**增量快照模块版本**复选框。构建作业会在作业发布到 Nexus 注册表之前，自动更新模块版本。构建作业会从 npm 注册表和本地 `package.json` 文件中选择最高的模块版本，并使用 semver 递增模块版本。 构建作业不会将更改交付到 SCM 存储库。
 
 1. 单击**保存**。管道无论何时运行，此构建作业都会使用 Nexus 工具集成中的配置信息来连接到您的 npm 注册表。
 
@@ -664,7 +797,7 @@ JIRA 是跟踪与软件相关的问题和错误的工具。JIRA 工具集成会�
 
   a. 对于构建器类型，请选择 **Maven 构建**。
 
-  b. 如果您已配置 Nexus 工具集成的多个实例，请输入您要配置 Maven 构建作业的 Nexus 工具集成的名称。
+  b. 如果已配置 Nexus 工具集成的多个实例，请输入要为其配置 Maven 构建作业的 Nexus 工具集成的名称。
 
   c. 对于工具集成类型，请选择 **Nexus**。
 
@@ -678,7 +811,9 @@ JIRA 是跟踪与软件相关的问题和错误的工具。JIRA 工具集成会�
 
 1. 单击**保存**。管道无论何时运行，此构建作业都会使用 Nexus 工具集成中的配置信息来连接到您的 Maven 存储库。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [Nexus 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window}。
+### 了解有关 Nexus 的更多信息
+
+要了解有关 Nexus 的更多信息，请参阅 IBM Cloud Garage Method 上的 [Nexus 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window}。
 
 
 ## 配置定制工具（其他工具）
@@ -704,7 +839,11 @@ JIRA 是跟踪与软件相关的问题和错误的工具。JIRA 工具集成会�
 1. （高级）根据需要添加其他属性。例如，列出您的工具与工具链中其他工具集成所需的任何信息或属性。  
 1. 单击**创建集成**。
 
-要了解更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 工具链的定制工具集成简介 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window}。
+### 了解有关定制工具的更多信息
+
+要了解有关定制工具的更多信息，请参阅[为 {{site.data.keyword.Bluemix_notm}} 工具链引入定制工具集成 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window} 或学习以下教程：
+
+  * [将定制工具集成添加到工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_add_custom_tool){:new_window}
 
 
 ## 配置 PagerDuty
@@ -721,14 +860,31 @@ PagerDuty 可将多个监视系统的数据集成到单一视图。发生问题�
 
  b. 在“工具集成”部分中，单击 **PagerDuty**。
 
-1. 输入 PagerDuty 帐户的 API 访问密钥。如果您没有 PagerDuty 帐户，请[注册帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://signup.pagerduty.com/accounts/new){: new_window}。有关查找密钥的指示信息，请参阅[生成 API 密钥 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}。
-1. 输入 PagerDuty 服务的名称。
-1. 输入主要 PagerDuty 联系人的电子邮件地址。
-1. 输入主要 PagerDuty 联系人的电话号码。
+1. 如果要使用 API 密钥在帐户级别集成 PagerDuty，请单击**帐户**：
+
+ a. 输入 PagerDuty 帐户的 API 访问密钥。如果您没有 PagerDuty 帐户，请[注册帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://signup.pagerduty.com/accounts/new){: new_window}。有关查找密钥的指示信息，请参阅[生成 API 密钥 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}。
+
+ b. 输入 PagerDuty 服务的名称。
+
+ c. 输入主要 PagerDuty 联系人的电子邮件地址。
+
+ d. 输入主要 PagerDuty 联系人的电话号码。
+
+1. 如果要使用集成密钥在服务级别集成 PagerDuty，请单击**服务**：
+
+ a. 输入要向其发布警报的 PagerDuty 服务的 URL。
+
+ b. 输入 PagerDuty 集成密钥。您可以在 PagerDuty 服务页面的“集成”部分中找到密钥或创建密钥。
+
 1. 单击**创建集成**。
 1. 单击 **PagerDuty** 以转至 pagerduty.com。您可以查看与您在为工具链配置此工具集成时所指定的 PagerDuty 服务相关联的事件。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [PagerDuty 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}。
+### 了解有关 PagerDuty 的更多信息
+
+要了解有关 PagerDuty 的更多信息，请参阅 IBM Cloud Garage Method 上的 [PagerDuty 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}，或者学习以下教程和 Garage Method 推广课程：
+
+  * [创建并使用具有 {{site.data.keyword.DRA_short}} 的微服务工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices?task=5){:new_window}
+  * [成为 Garage Method 推广者 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/course/gm_advocate/){:new_window}
 
 
 ## 配置 Rational Team Concert
@@ -752,22 +908,23 @@ IBM Rational Team Concert&trade; 是集成开发任务的团队协作工具，�
 
  a. 从**项目区域类型**列表中，选择**现有项目区域**。 
 
- b. 键入要添加到工具链的项目区域的名称。
+ b. 输入要添加到工具链的项目区域的名称。
  
 1. 如果您想要创建要添加到工具链的 Rational Team Concert 项目区域，请遵循以下步骤：
  
  a. 从**项目区域类型**列表中，选择**新项目区域**。 
 
- b. 键入要添加到工具链的新项目区域的名称。
+ b. 输入要添加到工具链的新项目区域的名称。
  
- c. 键入要用于创建项目的 Rational Team Concert 流程模板的名称。
+ c. 输入要用于创建项目的 Rational Team Concert 流程模板的名称。
  
 1. 要通过创建工作项的标签和注释来跟踪项目的代码更改部署，请选择**跟踪代码更改的部署**复选框。
 1. 单击**创建集成**。
 1. 从工具链单击 **Rational Team Concert** 以打开所配置的 Rational Team Concert 仪表板。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [IBM Rational Team Concert 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/think/tool_rtc/){: new_window}。
+### 了解有关 Rational Team Concert 的更多信息
 
+要了解有关 Rational Team Concert 的更多信息，请参阅 IBM Cloud Garage Method 上的 [IBM Rational Team Concert 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/think/tool_rtc/){: new_window}。
 
 
 ## 配置 Sauce Labs
@@ -793,7 +950,12 @@ Sauce Labs 运行功能单元测试。如果将 Sauce Labs 测试套件配置为
 
  **提示**：如果您将 Sauce Labs 测试作业添加到 {{site.data.keyword.deliverypipeline}}，那么可以选择该服务实例。有关在管道中配置测试作业的指示信息，请参阅[在管道中配置 Sauce Labs 测试作业](#config_saucelabs)一节。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [Sauce Labs 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window}。
+### 了解有关 Sauce Labs 的更多信息
+
+要了解有关 Sauce Labs 的更多信息，请参阅 IBM Cloud Garage Method 上的 [Sauce Labs 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window} 或学习以下教程：
+
+  * [创建并使用具有 {{site.data.keyword.DRA_short}} 的微服务工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
+  * [创建并使用具有 {{site.data.keyword.DRA_short}} (v2) 的微服务工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
 
 
 ## 配置 Slack
@@ -824,7 +986,13 @@ Slack 是基于云的实时消息传递和通知系统。Slack 提供持久交�
 
 1. 单击 **Slack**。您可以在已配置的 Slack 通道中查看工具链的所有活动。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [Slack 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}。
+### 了解有关 Slack 的更多信息
+
+要了解有关 Slack 的更多信息，请参阅 IBM Cloud Garage Method 上的 [Slack 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}，或者学习以下教程和 Garage Method 推广课程：
+
+  * [创建并使用具有 {{site.data.keyword.DRA_short}} 的微服务工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
+  * [创建并使用具有 {{site.data.keyword.DRA_short}} (v2) 的微服务工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [成为 Garage Method 推广者 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/course/gm_advocate/){:new_window}
 
 
 ## 配置 SonarQube
@@ -850,4 +1018,6 @@ SonarQube 提供了源代码总体运行状况和质量的概述，并重点阐�
 1. 单击**创建集成**。
 1. 从工具链中单击 **SonarQube** 以查看您所连接到的 SonarQube 实例的仪表板。
 
-要了解更多信息，请参阅 IBM Cloud Garage Method 上的 [SonarQube 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window}。
+### 了解有关 SonarQube 的更多信息
+
+要了解有关 SonarQube 的更多信息，请参阅 IBM Cloud Garage Method 上的 [SonarQube 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window}。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-25"
+lastupdated: "2017-09-05"
 
 ---
 
@@ -12,12 +12,12 @@ lastupdated: "2017-5-25"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# Mit {{site.data.keyword.deliverypipeline}} arbeiten {: #pipeline-working}
+# Mit Pipelines arbeiten{: #pipeline-working}
 
-Um Ihre Builds und Bereitstellungen für {{site.data.keyword.Bluemix}} zu automatisieren, verwenden Sie {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
+Um Ihre Builds und Bereitstellungen für {{site.data.keyword.Bluemix}} zu automatisieren, verwenden Sie {{site.data.keyword.contdelivery_full}}-Pipelines.
 {: shortdesc}
 
-Bei {{site.data.keyword.deliverypipeline}} können Sie unter verschiedenen Buildtypen auswählen. Sie stellen das Build-Script bereit und {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} führt es aus. Es müssen keine Buildsysteme eingerichtet werden. Anschließend können Sie mit einem einzigen Mausklick Ihre App automatisch in einem oder mehreren {{site.data.keyword.Bluemix_notm}}-Bereichen, auf öffentlichen Cloud Foundry-Servern oder Docker-Containern in IBM Containers for {{site.data.keyword.Bluemix_notm}} bereitstellen.
+Bei Pipelines können Sie unter verschiedenen Buildtypen auswählen. Sie stellen das Build-Script bereit und {{site.data.keyword.contdelivery_short}} führt es aus. Es müssen keine Buildsysteme eingerichtet werden. Anschließend können Sie mit einem einzigen Mausklick Ihre App automatisch in einem oder mehreren {{site.data.keyword.Bluemix_notm}}-Bereichen, auf öffentlichen Cloud Foundry-Servern oder Docker-Containern in IBM Containers for {{site.data.keyword.Bluemix_notm}} bereitstellen.
 
 Über Buildjobs wird Ihr App-Quellcode aus Git-Repositorys heraus kompiliert und paketiert. Bei den Buildjobs werden bereitstellbare Artefakte wie WAR-Dateien oder Docker-Container für IBM Containers erstellt. Sie können außerdem innerhalb Ihres Builds automatisch Komponententests ausführen. Sie können Ihre Buildjobs so konfigurieren, dass bei jedem mit Push-Operation übertragenen Commit ein Build ausgelöst wird.
 
@@ -72,3 +72,9 @@ Führen Sie zum Erstellen einer [leeren Pipeline ![Symbol für externen Link](..
 1. Klicken Sie auf **Erstellen**. Daraufhin wird eine leere Pipeline erstellt und auf der Übersichtsseite als Karte dargestellt.
 
 Von {{site.data.keyword.deliverypipeline}} aus können Sie Ihre Konfiguration ändern, den Status von Builds, der bereitgestellten App und von kürzlich erfolgten Bereitstellungen überprüfen, die aktuellen Protokolle und Bereitstellungsdetails anzeigen und Ihre Pipeline löschen.
+
+## Relevantes Lernprogramm: {{site.data.keyword.deliverypipeline}}
+{: #pipeline-tutorial}
+
+Informieren Sie sich in dem Lernprogramm zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method){:new_window}:
+  * [Pipeline erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}

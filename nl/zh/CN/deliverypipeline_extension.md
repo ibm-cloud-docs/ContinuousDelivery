@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-5-11"
 
 ---
 
@@ -18,10 +18,10 @@ lastupdated: "2017-3-16"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 扩展 {{site.data.keyword.deliverypipeline}}
+# 扩展 Delivery Pipeline
 {: #deliverypipeline_extending}
 
-通过配置作业使用受支持的服务，您可以扩展 {{site.data.keyword.deliverypipeline}} 功能。例如，测试作业可以运行静态代码扫描，而构建作业可以将字符串全球化。
+通过配置作业使用受支持的服务，您可以扩展 {{site.data.keyword.contdelivery_full}} 的 {{site.data.keyword.deliverypipeline}} 功能。例如，测试作业可以运行静态代码扫描，而构建作业可以将字符串全球化。
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -32,9 +32,9 @@ lastupdated: "2017-3-16"
 
 {: #deliverypipeline_scan}
 
-想要在部署代码之前发现代码中的安全问题？当您使用 IBM® Static Analyzer for Bluemix™ 作为管道的一部分时，可针对 Java™ 应用程序的静态 `.war`、`.ear`、`.jar` 或 `.class` 构建二进制文件运行自动检查。
+想要在部署代码之前发现代码中的安全问题？使用 {{site.data.keyword.staticanalyzerfull}} 作为管道的一部分时，可针对 Java™ 应用程序的静态 `.war`、`.ear`、`.jar` 或 `.class` 构建二进制文件运行自动检查。
 
-使用 Static Analyzer 服务的管道通常包括以下阶段：
+使用 {{site.data.keyword.staticanalyzershort}} 服务的管道通常包括以下阶段：
 
 + 构建阶段，用于构建源文件
 + 处理阶段，包括以下作业：
@@ -53,7 +53,7 @@ lastupdated: "2017-3-16"
 
   a. 单击**添加阶段**。
 
-  b. 为阶段命名，例如 `Processing`。
+  b. 为该阶段命名，例如 `Processing`。
 
   c. 对于输入类型，选择**构建工件**。
 
@@ -71,13 +71,13 @@ lastupdated: "2017-3-16"
 
   e. 根据需要，选中或清除**为我设置服务和空间**复选框。
 
-    * 如果要让管道检查 Bluemix 空间中是否有该服务以及将该服务绑定到容器的应用程序，请选中此复选框。如果不存在该服务或绑定的应用程序，那么管道会将该服务的免费套餐添加到空间。所创建的绑定应用程序名为 `pipeline_bridge_app`。之后，管道会使用 pipeline_bridge_app 中的凭证来访问绑定的服务。
+    * 如果要让管道检查 {{site.data.keyword.Bluemix_short}} 空间中是否有该服务以及将该服务绑定到容器的应用程序，请选中此复选框。如果不存在该服务或绑定的应用程序，那么管道会将该服务的免费套餐添加到空间。所创建的绑定应用程序名为 `pipeline_bridge_app`。之后，管道会使用 pipeline_bridge_app 中的凭证来访问绑定的服务。
 
-    * 如果您已在 Bluemix 空间中配置该服务和绑定的应用程序，或者如果您想要[手动配置这些需求](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}，请保持该复选框的未选中状态。
+    * 如果您已在 {{site.data.keyword.Bluemix_short}} 空间中配置该服务和绑定的应用程序，或者如果您想要[手动配置这些需求](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}，请使该复选框保留清除状态。
 
-  f. 在**等待分析完成的时间（分钟）**字段中，输入 0 到 59 分钟之间的值。缺省值为 5 分钟。作业结束时 Static Analyzer 仪表板的 URL 会显示在控制台日志中。
+  f. 在**等待分析完成的时间（分钟）**字段中，输入 0 到 59 分钟之间的值。缺省值为 5 分钟。作业结束时 {{site.data.keyword.staticanalyzershort}} 仪表板的 URL 会显示在控制台日志中。
 
-     如果在您指定的时间之前 Static Analyzer 扫描未完成，那么作业会失败。但是，扫描分析会继续运行，而您可以在 Static Analyzer 仪表板上查看分析。在 Static Analyzer 扫描完成后，如果重新运行该作业，就不会重新提交扫描请求，而管道作业可以完成。或者，也可以配置为扫描结果成功时不阻塞管道。有关指示信息，请参阅下一步。
+     如果您指定的时间到期时 {{site.data.keyword.staticanalyzershort}} 扫描未完成，那么作业会失败。但是，扫描分析会继续运行，而您可以在 {{site.data.keyword.staticanalyzershort}} 仪表板上查看分析。在 {{site.data.keyword.staticanalyzershort}} 扫描完成后，如果重新运行该作业，就不会重新提交扫描请求，而管道作业可以完成。或者，也可以配置为扫描结果成功时不阻塞管道。有关指示信息，请参阅下一步。
 
   g. 根据在此作业失败或超时的情况下您希望执行什么操作，选中或清除**此作业失败时停止运行此阶段**复选框。当漏洞较大时，作业可能会失败。
 
@@ -106,7 +106,7 @@ lastupdated: "2017-3-16"
 **暂挂扫描**
 ![暂挂扫描示例](images/analyzer_pending.png)
 
-有关使用 Static Analyzer 服务的更多信息，请参阅 [Static Analyzer 服务文档](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}。
+有关使用 {{site.data.keyword.staticanalyzershort}} 服务的更多信息，请参阅 [{{site.data.keyword.staticanalyzershort}}Static Analyzer 服务文档](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}。
 
 <!--
 
@@ -177,7 +177,7 @@ For more information about using the Globalization Pipeline service from the Blu
 ## 针对管道中的构建创建 Slack 通知
 {: #deliverypipeline_slack}
 
-您可以将有关 IBM Container Service、IBM Security Static Analyzer 和 IBM Globalization 构建结果的通知，从 Delivery Pipeline 发送到 Slack 通道。
+您可以将有关 {{site.data.keyword.containerlong}}、{{site.data.keyword.staticanalyzershort}} 和 {{site.data.keyword.globalizationfull}} 构建结果的通知，从 Delivery Pipeline 发送到 Slack 通道。
 
 开始之前，先创建或复制 Slack WebHook URL：
 
@@ -195,7 +195,7 @@ For more information about using the Globalization Pipeline service from the Blu
 3. 选择**文本属性**。
 4. 输入环境属性的名称和值。重复上述步骤以创建多个环境属性。
 
-  *表 1. 用于配置 Slack 通知的环境属性*
+  _表 1. 用于配置 Slack 通知的环境属性_
 
   <table>
   <tr>
@@ -253,7 +253,7 @@ For more information about using the Globalization Pipeline service from the Blu
 3. 选择**文本属性**。
 4. 输入环境属性的名称和值。重复上述步骤以创建多个环境属性。
 
-  *表 2. 用于配置 HipChat 通知的环境属性*
+  _表 2. 用于配置 HipChat 通知的环境属性_
 
   <table>
   <tr>

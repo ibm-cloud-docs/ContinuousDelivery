@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-4-5"
+lastupdated: "2017-8-18"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,30 +22,34 @@ lastupdated: "2017-4-5"
 使用 {{site.data.keyword.deliverypipeline}} 的複合管線特性，您可以管理相關軟體應用程式的可重複持續整合及持續交付處理程序。
 {:shortdesc}
 
-您可以建立複合管線來管理工具鏈中的應用程式。如果您的工具鏈包含 {{site.data.keyword.deliverypipeline}} 所部署的應用程式，則會在從工具鏈中新增或移除交付管線時動態更新工具鏈。您也可以將應用程式從外部來源新增至複合管線。
+您可以建立複合管線來管理工具鏈中的應用程式。如果您的工具鏈包含 {{site.data.keyword.deliverypipeline}} 所部署的應用程式，則可以設定要在從工具鏈中新增或移除交付管線時更新的複合管線。您也可以將應用程式從外部來源新增至複合管線。
 
 ## 建立複合管線
 {: #compositepipeline_create_for_toolchain}
 
-1. 從 Bluemix 標誌附近的功能表，按一下**服務 > DevOps**
+1. 從 {{site.data.keyword.Bluemix_notm}} 功能表列的功能表中，按一下 **DevOps**。
 
-1. 從左導覽中，按一下**管線**。
+2. 從左導覽中，按一下**管線**。
 
-2. 按一下**進一步瞭解**，然後按一下**啟用**，以啟用複合管線特性。會針對每一位使用者啟用複合管線，因此，只有接受實驗性特性的組織成員才會看到您建立的複合管線。
+3. 按一下**進一步瞭解**，然後按一下**啟用**，以啟用複合管線特性。會針對每一位使用者啟用複合管線，因此，只有接受實驗性特性的組織成員才會看到您建立的複合管線。
 
-2. 按一下**建立** > **複合管線**。
+4. 按一下**建立管線** > **複合管線**。
 
-3. 鍵入複合管線的名稱。您也可以修改管線說明。
+5. 鍵入複合管線的名稱。您也可以修改管線說明。
 
-4. 從**工具鏈**清單中，選取工具鏈。
+6. 從**工具鏈**清單中，選取工具鏈。
 
-    1. 若要建立空的工具鏈及複合管線，請選取**新建**。
+    a. 若要建立空的工具鏈及複合管線，請選取**新建**。
 
-    2. 若要建立其中一個工具鏈的複合管線，請選取其名稱。
+    b. 若要建立其中一個工具鏈的複合管線，請選取其名稱。
 
-5. 如果您建立空的工具鏈，請選取**新增預設環境**。您可以使用這些預設邏輯環境，透過複合管線來控制處理程序執行。
+7. 如果您建立空的工具鏈，請選取**新增預設環境**。您可以使用這些預設邏輯環境，透過複合管線來控制處理程序執行。
 
-6. 按一下**建立**。
+8. 若要在將管線新增至工具鏈時更新複合管線、從工具鏈中移除管線，或修改工具鏈管線的階段，請選取**自動同步化此複合管線與選取的工具鏈**。
+
+  **附註：**您必須先啟用自動同步化，然後再變更工具鏈的管線。只有在您啟用自動同步化時所進行的變更，才會包括在複合管線中。
+
+9. 按一下**建立**。
 
 您所配置的階段會自動對映至組織中的適當空間，並建立複合管線的部署方案。
 
@@ -87,15 +91,44 @@ lastupdated: "2017-4-5"
 ## 執行複合管線中的工作
 {: #compositepipeline_run_jobs}
 
-在您展開應用程式以顯示其工作之後，即可在階段中手動執行其所有工作。在應用程式的空間中，按一下**部署至 *階段*** 圖示。
+在您展開應用程式以顯示其工作之後，即可在階段中手動執行其所有工作。在應用程式的空間中，按一下**部署至*階段*** 圖示。
 
 ![在單一應用程式中執行階段](images/composite_run_stage.png)
 
-若要執行空間之所有應用程式中的所有工作，請按一下複合管線之空間中的**部署至 *空間*** 圖示。
+若要在空間的每個應用程式中執行每個工作，請按一下複合管線之空間中的**部署至*空間*** 圖示。
 
 ![在所有應用程式中執行階段](images/composite_run_space.png)
 
 根據複合藍圖的部署方案來執行工作。
+
+##新增交付管線所部署的應用程式
+{: #compositepipeline_add_apps}
+
+您只能透過同步化複合管線與工具鏈，來新增交付管線所部署的應用程式。因為複合管線是與單一工具鏈相關聯，所以您只能包括其交付管線位在該工具鏈中的應用程式。
+
+若要將交付管線所部署的應用程式新增至複合管線，請採取下列步驟：
+
+1. 開啟複合管線。
+
+2. 選取**自動同步化此複合管線與您的工具鏈**。
+
+  **附註：**您必須先啟用自動同步化，然後再建立交付管線。只有在您啟用自動同步化時所進行的變更，才會包括在複合管線中。
+
+3. 建立應用程式的交付管線。請務必將交付管線指派給與複合管線相同的工具鏈。
+
+4. 配置交付管線的階段及工作。
+
+應用程式會新增至複合管線，而且每一個階段的部署方案都會包含執行您所配置工作的作業。
+
+
+##更新複合管線中的交付管線
+{: #compositepipeline_sync}
+
+您必須先啟用複合管線中的自動同步化，才能新增或變更為其一部分的管線。
+
+1. 開啟複合管線。
+
+2. 選取**自動同步化此複合管線與您的工具鏈**。
 
 ## 檢視日誌
 {: #compositepipeline_view_logs}
@@ -162,7 +195,7 @@ IBM Bluemix DevOps Connect 會協調內部部署 IBM&reg; UrbanCode&reg; Deploy 
 ## 從 IBM UrbanCode Deploy 新增應用程式
 {: #compositepipeline_add_apps}
 
-如果您是使用 DevOps Connect 而與 IBM UrbanCode Deploy 整合之組織的成員，則可以將可在 IBM UrbanCode Deploy 中存取的應用程式新增至複合管線。如需安裝指示，請參閱[使用 IBM Bluemix DevOps Connect 以與 IBM UrbanCode Deploy 整合](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)。
+如果您是使用 DevOps Connect 與 IBM UrbanCode Deploy 整合之組織的成員，則可以將在 UrbanCode Deploy 中可存取的應用程式新增至複合管線。如需安裝指示，請參閱[使用 IBM Bluemix DevOps Connect 以與 IBM UrbanCode Deploy 整合](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)。
 
 若您是連接至 IBM UrbanCode Deploy 之組織的成員，則可以將 UrbanCode Deploy 應用程式新增至複合管線、選取要包含在部署方案中的應用程式處理程序，以及自訂應用程式的部署。
 
@@ -187,3 +220,9 @@ IBM Bluemix DevOps Connect 會協調內部部署 IBM&reg; UrbanCode&reg; Deploy 
     3. 按一下**儲存**。
 
     4. 針對您使用的每一個邏輯環境，重複這些步驟。
+
+##使用指導教學：複合管線
+{: #composite_pipeline-tutorial}
+
+請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method){:new_window} 上的這個指導教學：
+  * [使用 DevOps Insights（第 2 版）建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

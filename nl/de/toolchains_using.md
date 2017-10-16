@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-16"
+lastupdated: "2017-7-17"
 
 ---
 
@@ -61,6 +61,8 @@ Wenn Sie eine Toolintegration aus Ihrer Toolchain löschen, kann diese Löschung
 
 Sie können Benutzern Zugriff auf eine Toolchain gewähren, indem Sie sie sowohl zu der Organisation (org) hinzufügen, der die Toolchain zugeordnet ist, als auch zu der Zugriffssteuerungsliste für die Toolchain. Jede Toolchain ist einer bestimmten Organisation zugeordnet und jeder Benutzer, der Mitglied dieser Organisation ist, kann für jede der zugeordneten Toolchains zu der Zugriffssteuerungsliste hinzugefügt werden. Die Organisation, in der Sie gegenwärtig arbeiten, wird auf der Menüleiste angezeigt. Wenn Sie auf andere Toolchains zugreifen wollen, wechseln Sie zu einer anderen Organisation.
 
+**Tipp:** Sie müssen Benutzer zur Organisation der Toolchain in der Region hinzufügen, in der die Toolchain gehostet wird. Da Toolchains derzeit nur in der Region 'Vereinigte Staaten (Süden)' gehostet werden, müssen Sie der Organisation die Benutzer in der Region 'Vereinigte Staaten (Süden)' hinzufügen. Wenn die Toolchain für die Bereitstellung von Apps in anderen Regionen konfiguriert ist, wird sie auch weiterhin Apps in diesen Regionen bereitstellen. 
+
 Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated für {{site.data.keyword.ghe_short}} verwenden und Benutzer zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und deren Bereichen hinzufügen, so können sich die Benutzer mit ihrer {{site.data.keyword.Bluemix_notm}}-ID und dem zugehörigen Kennwort bei {{site.data.keyword.ghe_short}} anmelden. Wenn sich die Benutzer anmelden, werden Konten für sie erstellt. Wenn Sie Benutzer zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und deren Bereichen hinzufügen, werden sie nicht automatisch zum {{site.data.keyword.ghe_short}}-Repository hinzugefügt. Ein Benutzer mit Administratorberechtigungen für das Repository muss sie hinzufügen. Weitere Informationen finden Sie im Abschnitt zur Verwendung von [Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. Wenn Sie Ihre eigene verwaltete Version von {{site.data.keyword.ghe_short}} verwenden, gehen Sie gemäß Ihren eigenen internen Prozeduren vor.
 
 ###Tipps für die Verwaltung des Zugriffs auf eine Toolchain
@@ -107,3 +109,10 @@ Sie können eine Toolchain löschen und angeben, welche der zugehörigen Toolint
 1. Bestätigen Sie das Löschen, indem Sie den Namen der Toolchain eingeben und auf **Löschen** klicken.  
 
  **Tipp**: Wenn Sie eine GitHub-, {{site.data.keyword.ghe_short}}- oder {{site.data.keyword.gitrepos}}-Toolintegration löschen, wird das zugeordnete Repository nicht aus GitHub, {{site.data.keyword.ghe_short}} oder {{site.data.keyword.gitrepos}} gelöscht. Sie müssen das Repository manuell entfernen.
+
+##Relevantes Lernprogramm: Toolchains verwenden
+{: #toolchain-tutorial}
+
+Informieren Sie sich in dem Lernprogramm zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method){:new_window}:
+  * [Create and use your first toolchain (GitHub) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Microservice-Toolchain mit {{site.data.keyword.DRA_short}} (Version 2) erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

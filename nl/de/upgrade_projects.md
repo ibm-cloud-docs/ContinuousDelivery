@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-5"
+lastupdated: "2017-7-24"
 
 ---
 
@@ -25,8 +25,10 @@ Organisation sie erstellt wird.
 - [Mein JazzHub-Projekt ist Großbritannien (GB) als geografischer Region zugeordnet, die Toolchain wird sich jedoch im Süden der USA befinden. Wie wird das funktionieren?](#faq_region)
 - [Was geschieht beim Durchführen eines Upgrades mit meinen Arbeitselementen und Dashboards in Track &amp; Plan?](#faq_tp)
 - [Was geschieht beim Durchführen eines Upgrades mit meinem Code-Repository?](#faq_repo)
-- [Was geschieht beim Durchführen eines Upgrades zu einer Toolchain mit den Builddefinitionen in meinem Projekt?](#faq_build)
+- [Was geschieht beim Durchführen eines Upgrades auf eine Toolchain mit den Builddefinitionen in meinem Projekt?](#faq_build)
 - [Ich muss für mein Projekt, für das ein Upgrade auf eine Toolchain durchgeführt wird, eine Organisation erstellen. Mir ist bewusst, dass ich eine Kreditkarte zu meinem Konto hinzufügen muss, bevor ich die Organisation erstellen kann. Wird diese Kreditkarte belastet?](#faq_charges)
+- [Ich kann meine Toolchain nicht finden oder auf sie zugreifen. Was soll ich tun? ](#faq_find)
+- [Mein Projekt ist Großbritannien (GB) als geografischer Region zugeordnet. Nach dem Upgrade werden Fehlernachrichten angezeigt, meine Kollegen können nicht auf die Toolchain zugreifen und ich sehe meine Toolchain nicht auf der Seite 'Toolchains' in Bluemix. Was stimmt nicht?](#faq_uk)
 
 ## Toolchains
 {: #compare_toolchains}
@@ -46,25 +48,22 @@ Mehr zu Toolchains erfahren Sie in [YouTube![Symbol für externen Link](../../ic
 - Für den Zugriff auf die Toolchain Ihres aktualisierten Projekts benötigen Sie eine {{site.data.keyword.Bluemix_notm}}-ID. Vor der Durchführung des Upgrades müssen Sie daher sicherstellen, dass Sie über eine aktive {{site.data.keyword.Bluemix_notm}}-ID verfügen. Sollte das nicht der Fall sein, müssen Sie sich [anmelden](https://console.ng.bluemix.net/registration/).
 - Stellen Sie sicher, dass die Angabe für Ihren {{site.data.keyword.jazzhub_short}}-Projekteigner richtig ist. Die Toolchain,
 die auf der Grundlage Ihres Projekts erstellt wird, ist künftig Teil der {{site.data.keyword.Bluemix_notm}}-Organisation dieses Eigners.
-- Stellen Sie bei der Planung für den Start des Upgrades sicher, dass Sie in jeder Organisation und jedem Bereich, in dem die
-Bereitstellung durch die Pipeline erfolgt, Mitglied sind. Die Durchführung des Upgrades kann von einem beliebigen Projektadministrator
-gestartet werden. Wenn jedoch der Administrator, der die Durchführung des Upgrades startet, nicht Mitglied aller Organisationen und Bereiche
-ist, in denen die Bereitstellung durch die Pipeline erfolgt, kann die Pipeline nicht erstellt werden. Die Person, die die Durchführung des
-Upgrades startet, wird Eigner des Repositorys in der Toolchain.
-- Die Eclipse Orion-Web-IDE in der Toolchain funktioniert gesondert von der
-Web-IDE, die Ihrem Projekt zugeordnet ist. Wenn Sie die {{site.data.keyword.webide}} verwenden und nicht festgeschriebene Änderungen vorliegen, führen Sie einen Commit für diese Änderungen aus, bevor Sie das Upgrade durchführen.
+- Stellen Sie sicher, dass sich die Organisation und der Bereich, in der/dem Sie Ihre Toolchain erstellen wollen, unter {{site.data.keyword.Bluemix_notm}} Public in der Region 'Vereinigte Staaten (Süden)' befinden. Um zu bestätigen, dass Sie eine gültige Organisation und einen gültigen Bereich in der Region 'Vereinigte Staaten (Süden)' haben, melden Sie sich unter [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window} an und erstellen Sie einen Bereich, wenn Sie dazu aufgefordert werden.
+- Stellen Sie bei der Planung für den Start des Upgrades sicher, dass Sie in jeder Organisation und jedem Bereich, in dem die Bereitstellung durch die Pipeline erfolgt, Mitglied sind. Die Durchführung des Upgrades kann von einem beliebigen Projektadministrator
+gestartet werden. Wenn jedoch der Administrator, der die Durchführung des Upgrades startet, nicht Mitglied aller Organisationen und Bereiche ist, in denen die Bereitstellung durch die Pipeline erfolgt, kann die Pipeline nicht erstellt werden. Die Person, die die Durchführung des Upgrades startet, wird Eigner des Repositorys in der Toolchain.
+- Die Eclipse Orion-Web-IDE in der Toolchain funktioniert gesondert von der Web-IDE, die Ihrem Projekt zugeordnet ist. Wenn Sie die {{site.data.keyword.webide}} verwenden und nicht festgeschriebene Änderungen vorliegen, führen Sie einen Commit für diese Änderungen aus, bevor Sie das Upgrade durchführen.
 
 
 ## Upgrade eines Projekts zu einer Toolchain durchführen
 {: #project_to_toolchain}
 
-**Wichtig:** Projekte unter hub.jazz.net und Toolchains werden in den Südstaaten der USA gehostet. Wenn Ihr Projekt
+**Wichtig:** Projekte unter hub.jazz.net und Toolchains werden im Süden der Vereinigten Staaten gehostet. Wenn Ihr Projekt
 für die Bereitstellung von Apps in anderen Regionen konfiguriert wurde, wird es auch nach dem Upgrade auf eine Toolchain weiterhin Apps
 in diesen Regionen bereitstellen.
 
 Wenn Ihr Projekt bereit für das Upgrade ist, wird eine Nachricht auf der Karte des Projekts und auf seiner Übersichtsseite angezeigt.
 
-![Abbildung der Karte mit Bezeichnung 'Bereit für Upgrade'](images/card-project-to-upgrade.png)
+![Abbildung der Karte mit der Bezeichnung 'Bereit für Upgrade'](images/card-project-to-upgrade.png)
 
 ![Nachricht 'Es ist an der Zeit für das Upgrade'](images/banner-ready-to-upgrade.png)
 
@@ -72,21 +71,19 @@ Wenn Ihr Projekt bereit für das Upgrade ist, wird eine Nachricht auf der Karte 
 
 ![Abbildung des Menüelements 'Projekte für Upgrade'](images/menu-projects-to-upgrade.png)
 
-Wenn Sie die Durchführung des Upgrades starten, sind die Pipeline-Stages in Ihrem Projekt gesperrt. Sie können sie weder ausführen
-noch ändern. Wenn Sie das Upgrade durch Löschen der Toolchain zurücksetzen, wird die Pipeline entsperrt.
+Wenn Sie die Durchführung des Upgrades starten, sind die Pipeline-Stages in Ihrem Projekt gesperrt. Sie können sie weder ausführen noch ändern. Wenn Sie das Upgrade durch Löschen der Toolchain zurücksetzen, wird die Pipeline entsperrt.
 
 Wenn in Ihrem Projekt ein Git-Repository verwendet wird, das unter JazzHub gehostet wird, wird das Repository nach dem Start des Upgrades
 gesperrt, um die Integrität der Daten sicherzustellen, die in die Toolchain verschoben werden. Wenn Sie das Upgrade durch Löschen der Toolchain
 zurücksetzen, wird das Repository unter JazzHub entsperrt.
 
-Vollständige Details zur Handhabung der einzelnen Repositorytypen im Rahmen des Upgradeprozesses finden Sie in der
-folgenden Tabelle. 
+Vollständige Details zur Handhabung der einzelnen Repository-Typen im Rahmen des Upgradeprozesses finden Sie in der
+folgenden Tabelle.
 
 |Projektrepository |Projekttyp	|Toolchain-Repository |
 |:----------|:------------------------------|:------------------|
 |github.com 		|Privat oder öffentlich 		|Dasselbe github.com-Repository mit {{site.data.keyword.Bluemix_notm}} Public.	|
-|hub.jazz.net/git		|Privat oder öffentlich 		|Ein neues Repository in {{site.data.keyword.gitrepos}} mit
-{{site.data.keyword.Bluemix_notm}} Public.	|
+|hub.jazz.net/git		|Privat oder öffentlich 		|Ein neues Repository in {{site.data.keyword.gitrepos}} mit {{site.data.keyword.Bluemix_notm}} Public.|
 {: caption="Tabelle 1. Zuordnung von Projektrepositorys zu Toolchain-Repositorys" caption-side="top"}
 
 ## Upgradeprozess starten
@@ -149,7 +146,7 @@ Importieren von Track &amp; Plan-Arbeitselementen als Arbeitsschritte umfasst.
 
 Sie können jetzt Ihre neue Toolchain verwenden. Ihr Projekt ist jetzt mit der Bezeichnung 'Upgrade durchgeführt' versehen und auf der Übersichtsseite wird eine Bestätigungsnachricht angezeigt.
 
-![Abbildung der Karte mit Bezeichnung 'Upgrade durchgeführt'](images/card-upgraded-project.png)
+![Abbildung der Projektkarte mit der Bezeichnung 'Upgrade durchgeführt'](images/card-upgraded-project.png)
 
 ![Projekt mit erfolgtem Upgrade](images/banner-upgraded.png)
 
@@ -157,8 +154,7 @@ Durch Auswahl der Option **Projekte mit erfolgtem Upgrade** im Menü auf der Sei
 
 ![Abbildung des Menüelements 'Projekte mit erfolgtem Upgrade'](images/menu-upgraded-projects.png)
 
-Falls es erforderlich ist, das Upgrade zurückzusetzen, löschen Sie die Toolchain. Sie können Ihre Toolchain im Menü **Weitere
-Aktionen** auf der Toolchain-Seite 'Übersicht' löschen:
+Falls es erforderlich ist, das Upgrade zurückzusetzen, löschen Sie die Toolchain. Sie können Ihre Toolchain im Menü **Weitere Aktionen** auf der Toolchain-Seite 'Übersicht' löschen:
 
 ![Abbildung für die Löschaktion im Menü 'Weitere Aktionen'](images/upgrade-tutorial-delete-toolchain.png)
 
@@ -177,20 +173,14 @@ angezeigt wird:
    **Hinweis:** Wenn in der Nachricht 'Jetzt Upgrade durchführen' steht, ist das Durchführen des Upgrades
 fehlgeschlagen. Klicken Sie auf den Link **Jetzt Upgrade durchführen**, um es erneut zu versuchen.
 
-   ![Nachricht im Banner, die angibt, dass das Projekt für die Durchführung eines Upgrades
-bereit ist](images/banner-ready-to-upgrade.png)
+   ![Nachricht im Banner, die angibt, dass das Projekt für die Durchführung eines Upgrades bereit ist](images/banner-ready-to-upgrade.png)
 
 2. Erteilen Sie den Mitgliedern Ihres Teams Zugriff auf die Toolchain.
     - Jedes Teammitglied muss über ein gültiges {{site.data.keyword.Bluemix_notm}}-Konto verfügen. Teammitglieder, die kein solches Konto besitzen, müssen sich entsprechend [anmelden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/registration){:new_window}.
-    - Erteilen Sie Mitgliedern der Organisation (org) Zugriff auf die Toolchain über die Toolchain-Seite 'Verwalten'. Weitere
-Informationen zur Zugriffssteuerung für Toolchains finden Sie in
-[Zugriff verwalten
-![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
-    - Wenn ein Benutzer nicht Mitglied der Organisation ist, zu der die Toolchain gehört, fügen Sie ihn über die Seite 'Organisationen
-verwalten' der Organisation hinzu.
-      Weitere Informationen zum Verwalten von Organisationen finden Sie in
-[Organisationen und Bereiche verwalten
-![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
+    - Erteilen Sie Mitgliedern der Organisation Zugriff auf die Toolchain über die Toolchain-Seite 'Verwalten'. Vorhandene Projektmitglieder werden im Rahmen des Upgradeprozesses als Mitglieder der Toolchain hinzugefügt. Weitere Informationen zur Zugriffssteuerung für Toolchains finden Sie in [Zugriff verwalten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
+    - Wenn ein Benutzer nicht Mitglied der Organisation ist, zu der die Toolchain gehört, fügen Sie ihn über die Seite 'Organisationen verwalten' der Organisation hinzu.
+      
+    - Wenn Ihre Toolchain {{site.data.keyword.gitrepos}} verwendet, werden alle JazzHub-Projektmitglieder mit gültiger Bluemix-ID mit denselben Berechtigungen zum {{site.data.keyword.gitrepos}}-Repository hinzugefügt, die sie im JazzHub-Projekt hatten. Wenn Ihr JazzHub-Projekt Mitglieder enthält, die keine gültige Bluemix-ID haben, sollten sie für eine ID registriert und zum Repository hinzugefügt werden. Weitere Informationen zum Verwalten von Organisationen finden Sie in [Organisationen und Bereiche verwalten![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
 
 3. Verwenden Sie anstatt der Tools aus Ihrem {{site.data.keyword.jazzhub_short}}-Projekt die Tools aus Ihrer Toolchain. Verwenden Sie zum Bearbeiten von Code über einen Browser zum Beispiel die Web-IDE aus Ihrer Toolchain.
 
@@ -200,32 +190,18 @@ eines SSH-Schlüssels durch. Weitere Informationen zu SSH-Schlüsseln finden Sie
 [Persönliches Zugriffstoken oder SSH-Schlüssel für die
 Authentifizierung erstellen](/docs/services/ContinuousDelivery/git_working.html#git_authentication). Um eine Authentifizierung von einem externen Git-Client über HTTPS durchzuführen, führen Sie folgende
 Schritte aus:
-    1. Wechseln Sie zur [Seite 'Zugriffstoken'
-![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} in Ihren
-{{site.data.keyword.gitrepos}}-Benutzereinstellungen.
+    1. Wechseln Sie zur [Seite 'Zugriffstoken' ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} in Ihren {{site.data.keyword.gitrepos}}-Benutzereinstellungen.
     2. Erstellen Sie ein persönliches Zugriffstoken, in dem als Bereich **api** verwendet wird.
-    3. Rufen Sie die [Seite mit dem Account
-![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git.ng.bluemix.net/profile/account){:new_window} auf und suchen
-Sie Ihren für {{site.data.keyword.gitrepos}} geltenden Benutzernamen. Ihr Benutzername wird im Abschnitt für Änderungen des
-Benutzernamens aufgelistet und er wird bei allen persönlichen Repositorys, die Sie erstellen, auf der ersten Seite der URL angezeigt.
-    4. Für die Authentifizierung mit {{site.data.keyword.gitrepos}} von einem externen Git-Client aus über HTTPS
-verwenden Sie Ihren Benutzernamen und Ihr persönliches Zugriffstoken.
-    5. Wenn Sie das lokale Repository Ihres JazzHub Git-Repositorys wiederverwenden wollen, verweisen Sie von diesem Repository aus auf
-das neue Repository in {{site.data.keyword.gitrepos}}. Wechseln Sie von einer Shell in einem Terminal aus in das Verzeichnis, in
-dem das JazzHub Git-Repository geklont wird. Geben Sie den Befehl `git remote set-url` wie folgt ein:
-`git remote set-url origin https://git.ng.bluemix.net/<Benutzer-ID>/<Name_des_neuen_Repositorys>`
+    3. Rufen Sie die [Seite mit dem Konto ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git.ng.bluemix.net/profile/account){:new_window} auf und suchen Sie Ihren für {{site.data.keyword.gitrepos}} geltenden Benutzernamen. Ihr Benutzername wird im Abschnitt für Änderungen des Benutzernamens aufgelistet und er wird bei allen persönlichen Repositorys, die Sie erstellen, auf der ersten Seite der URL angezeigt.
+    4. Für die Authentifizierung bei {{site.data.keyword.gitrepos}} von einem externen Git-Client aus über HTTPS verwenden Sie Ihren Benutzernamen und Ihr persönliches Zugriffstoken.
+    5. Wenn Sie das lokale Repository Ihres JazzHub Git-Repositorys wiederverwenden wollen, verweisen Sie von diesem Repository aus auf das neue Repository in {{site.data.keyword.gitrepos}}. Wechseln Sie von einer Shell in einem Terminal in das Verzeichnis, in dem das JazzHub Git-Repository geklont wird. Geben Sie den Befehl `git remote set-url` wie folgt ein: `git remote set-url origin https://git.ng.bluemix.net/<Benutzer-ID>/<Name_des_neuen_Repositorys>`
 
         **Tipp:** Verwenden Sie den Befehl `git remote -v`, um zu überprüfen, welche fernen Namen
-für welche fernen URLs festgelegt sind. Der standardmäßige ferne Name lautet `origin`. Wenn Sie eine erweiterte Konfiguration
-haben, lautet das Format des Befehls wie folgt: `git remote set-url <ferner_Name_der_JazzHub_Repo_verwendet>
-https://git.ng.bluemix.net/<Benutzer-ID>/<Name_des_neuen_Repositorys>`
+für welche fernen URLs festgelegt sind. Der standardmäßig verwendete ferne Name lautet `origin`. Wenn Sie eine erweiterte Konfiguration haben, lautet das Format des Befehls wie folgt: `git remote set-url <ferner_Name_der_JazzHub_Repo_verwendet> https://git.ng.bluemix.net/<Benutzer-ID>/<Name_des_neuen_Repositorys>`
 
-5. Überlegen Sie nach dem Einrichten und der anfänglichen Verwendung Ihrer Toolchain, ob Sie folgende Schritte ausführen wollen,
-damit sichergestellt ist, dass Ihr Projekt ausschließlich von Ihnen verwendet wird:
-    - Fügen Sie Ihrem Projektnamen ein Suffix hinzu, um anzugeben, dass es nicht verwendet werden darf. Sie können beispielsweise
-`_DO_NOT_USE` (nicht verwenden) an das Ende des Projektnamens anfügen.
-    - Aktualisieren Sie die Beschreibung des Projekts, um deutlich zu machen, dass es nicht mehr verwendet wird, und fügen Sie der
-Toolchain einen Verweis hinzu.
+5. Überlegen Sie nach dem Einrichten und der anfänglichen Verwendung Ihrer Toolchain, ob Sie folgende Schritte ausführen wollen, damit sichergestellt ist, dass Ihr Projekt ausschließlich von Ihnen verwendet wird:
+    - Fügen Sie Ihrem Projektnamen ein Suffix hinzu, um anzugeben, dass es nicht verwendet werden darf. Sie können beispielsweise `_DO_NOT_USE` (nicht verwenden) an das Ende des Projektnamens anfügen.
+    - Aktualisieren Sie die Beschreibung des Projekts, um deutlich zu machen, dass es nicht mehr verwendet wird, und fügen Sie der Toolchain einen Verweis hinzu.
     - Entfernen Sie die Mitglieder aus dem Projekt.
     - Löschen Sie das Projekt, wenn Sie es nicht mehr benötigen.
 
@@ -239,12 +215,15 @@ Analyse der Entwickler, des Teams und der Bereitstellung an. Weitere Information
 ## Fehlerbehebung
 {: #upgrade_troubleshoot}
 
-Wenn Sie Fragen oder Probleme haben, wenden Sie sich an das
-[Unterstützungsforum](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services). Schließen Sie in Ihren
-Forumpost die URLs für Ihr {{site.data.keyword.jazzhub_short}}-Projekt sowie Ihre
-{{site.data.keyword.contdelivery_short}}-Toolchain ein und taggen Sie Ihren Post
-mit dem Tag `devops-services`.
-   
+Wenn während des Upgradeprozesses ein Problem auftritt, führen Sie einen oder mehrere der folgenden Schritte zur Fehlerbehebung aus:
+
+- Überprüfen Sie die [Voraussetzungen](#upgrade_prereqs), um sicherzustellen, dass sie erfüllt werden. Stellen Sie sicher, dass Sie in jeder Organisation und jedem Bereich, in dem die Bereitstellung durch die Pipeline erfolgt, Mitglied sind. 
+- Wenn das Problem beim ersten Upgradeversuch aufgetreten ist und alle Voraussetzungen erfüllt sind, versuchen Sie das Upgrade erneut.
+- Wenn Ihr Projekt Jazz SCM oder von IBM gehostetes Git für die Quellcodeverwaltung verwendet, überprüfen Sie die Größe des Repositorys. Wenn es größer als 500 MB ist, [wenden Sie sich an das DevOps-Service-Team ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}.
+- Wenn Sie Ihre Toolchain nicht finden oder auf sie zuzugreifen können, finden Sie weitere Informationen dazu unter [diesem FAQ-Eintrag](#faq_find).
+- Wenn weiterhin Probleme auftreten, stellen Sie eine Frage im [Unterstützungsforum ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}. Fügen Sie in Ihren Forumpost die URLs für Ihr {{site.data.keyword.jazzhub_short}}-Projekt sowie Ihre {{site.data.keyword.contdelivery_short}}-Toolchain ein und taggen Sie Ihren Post mit dem Tag `devops-services`.
+
+
 ## Häufig gestellte Fragen
 {: #upgrade_faq}
 
@@ -266,15 +245,15 @@ Dieser neue Service - IBM Track and Plan on Cloud - stellt eine weitaus umfangre
 
 Wenn Sie Informationen zu IBM Track and Plan on Cloud suchen oder IBM Track and Plan on Cloud online kaufen möchten, besuchen Sie [IBM Marketplace ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}.
 
-Wenn Sie zusätzlich Funktionen für die Buildautomation und die Quellcodeverwaltung erwerben möchten, stellt [Rational Team Concert on Cloud ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window} eine Option dar.  
+Wenn Sie zusätzlich Funktionen für die Buildautomation und die Quellcodeverwaltung erwerben möchten, stellt [Rational Team Concert on Cloud ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window} eine Option dar.
 
 ### Was geschieht beim Durchführen eines Upgrades mit meinem Code-Repository?
 {: #faq_repo}
 
 Nach dem Upgrade ist Ihr neuer Git-Service vergleichbar mit dem, was Sie bisher hatten. Wenn Sie github.com mit Ihrem JazzHub-Projekt verwendet haben, ist Ihre Toolchain mit demselben GitHub-Repository verbunden. Wenn Ihr JazzHub-Projekt jedoch IBM Hosted Git verwendet hat, so wird der Inhalt dieses Repositorys in ein neues Repository in {{site.data.keyword.gitrepos}} geklont, einer von IBM gehosteten Komponente von {{site.data.keyword.contdelivery_short}}.
 
-Vollständige Details zur Handhabung der einzelnen Repositorytypen im Rahmen des Upgradeprozesses finden Sie in der
-folgenden Tabelle. 
+Vollständige Details zur Handhabung der einzelnen Repository-Typen im Rahmen des Upgradeprozesses finden Sie in der
+folgenden Tabelle.
 
 |Projektrepository |Projekttyp	|Toolchain-Repository |
 |:----------|:------------------------------|:------------------|
@@ -286,9 +265,9 @@ folgenden Tabelle.
 ### Was geschieht beim Durchführen eines Upgrades zu einer Toolchain mit den Builddefinitionen in meinem Projekt?
 {: #faq_build}
 
-Wenn Sie Ihren Quellcode mit Jazz anstatt mit Delivery Pipeline erstellen, müssen Sie Ihre Builddefinitionen manuell in Ihrer Toolchain auf Delivery Pipeline migrieren. 
+Wenn Sie Ihren Quellcode mit Jazz anstatt mit Delivery Pipeline erstellen, müssen Sie Ihre Builddefinitionen manuell in Ihrer Toolchain auf Delivery Pipeline migrieren.
 
-Wenn Sie Jazz SCM als Quellrepository einsetzen und Delivery Pipeline für die Erstellung von Code Delivery verwenden, wird die Quelle in Jazz SCM automatisch in ein Git-Repository verschoben. Ihre Delivery Pipeline-Konfiguration verwendet künftig die Quelle des Git-Repositorys anstatt der Quelle von Jazz SCM, bleibt aber ansonsten unverändert.
+Wenn Sie Jazz SCM als Quellenrepository einsetzen und Delivery Pipeline für die Erstellung von Code Delivery verwenden, wird die Quelle in Jazz SCM automatisch in ein Git-Repository verschoben. Ihre Delivery Pipeline-Konfiguration verwendet künftig die Quelle des Git-Repositorys anstatt der Quelle von Jazz SCM, bleibt aber ansonsten unverändert.
 
 ### Ich muss für mein Projekt, für das ein Upgrade auf eine Toolchain durchgeführt wird, eine Organisation erstellen. Mir ist bewusst, dass ich eine Kreditkarte zu meinem Konto hinzufügen muss, bevor ich die Organisation erstellen kann. Wird diese Kreditkarte belastet?
 {: #faq_charges}
@@ -296,3 +275,56 @@ Wenn Sie Jazz SCM als Quellrepository einsetzen und Delivery Pipeline für die E
 Als [nutzungsabhängiger Kunde ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window} werden Ihnen bei der Nutzung von Laufzeiten, Services oder Komponenten, die über die im Bluemix-Katalog aufgeführten kostenlosen Zuteilungen hinausgehen, jeweils entsprechende Gebühren berechnet. Einen Voranschlag der Kosten für die Nutzung können Sie der [Preisliste ![Symbol für externen Link ](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window} entnehmen. Die aktuelle Preisstruktur für Continuous Delivery finden Sie im [Bluemix-Katalog ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}.
 
 Wenn Sie ein IBM Mitarbeiter sind, können interne IBM Projekte den entsprechenden Abteilungen in Rechnung gestellt werden, sodass keine privaten Kreditkarten erforderlich sind. Sollten Sie Ressourcen benötigen, die über die kostenlosen Zuteilungen für IBM Mitarbeiter hinausgehen, erstellen Sie ein Support-Ticket.
+
+### Ich kann meine Toolchain nicht finden oder auf sie zugreifen. Was soll ich tun?
+{: #faq_find}
+
+Toolchains werden in Bluemix-Organisationen gehostet. Der Upgradeprozess fügt alle Mitglieder des JazzHub-Projekts der Toolchain hinzu. Allerdings muss der Eigner der Bluemix-Organisation die Benutzer zur Organisation hinzufügen, damit diese die Toolchain sehen können.
+
+Um auf Ihre Toolchain zuzugreifen, rufen Sie Bluemix auf, klicken Sie auf das Menüsymbol und klicken Sie auf **Services &gt; DevOps**. Die Seite 'Toolchains' wird geöffnet. Stellen Sie sicher, dass Sie sich in der Region 'Vereinigte Staaten (Süden)' und in der Organisation befinden, die die Toolchain enthält. Wenn Ihre Toolchain auf der Seite 'Toolchains' nicht aufgeführt ist, lesen Sie [diesen FAQ-Eintrag](#faq_uk).
+
+Alternativ können Sie - während die JazzHub-Site noch verfügbar ist - zu Ihrer Toolchain wechseln, indem Sie auf den Link im Banner auf der Übersichtsseite des Projekts klicken.
+
+### Mein Projekt ist Großbritannien (GB) als geografischer Region zugeordnet. Nach dem Upgrade werden Fehlernachrichten angezeigt, meine Kollegen können nicht auf die Toolchain zugreifen und ich sehe meine Toolchain nicht auf der Seite 'Toolchains' in Bluemix. Was stimmt nicht?
+{: #faq_uk}
+
+**Vollständige Frage:**
+
+Mein JazzHub-Projekt ist entsprechend den Projekteinstellungen der {{site.data.keyword.Bluemix_notm}}-Region Großbritannien (GB) zugeordnet. Ich habe meine Projekteinstellungen geprüft. Dazu habe ich die zugehörige Übersichtsseite unter JazzHub aufgerufen, auf das Symbol **Einstellungen** (Zahnradsymbol) geklickt und auf **Optionen &gt; Als Bluemix-Projekt definieren: Region** geklickt. Nachdem ich ein Upgrade für das Projekt auf Toolchain in den Vereinigten Staaten durchgeführt hatte, sind diese Probleme auftreten:
+
+   1. Wenn ich die Organisation in den Vereinigten Staaten auswähle, wird eine Nachricht angezeigt, die angibt, dass die Organisation über keinen Bereich in der Region 'Vereinigte Staaten (Süden)' verfügt, und ich werde aufgefordert, einen Bereich zu erstellen. Ich möchte aber keine Aktivitäten in den USA ausführen.
+   
+   2. Einige meiner Kollegen können nicht auf die Toolchain zugreifen, obwohl sie als Mitglieder im ursprünglichen JazzHub-Projekt aufgeführt sind. Wenn sie versuchen, die Toolchain über die Seite mit der App-Übersicht in der Region 'Großbritannien' durch Anklicken von **Toolchain anzeigen** zu öffnen, wird die Nachricht "Zugriff verweigert" angezeigt.
+   
+   3. Die Toolchain wird nicht auf meiner Seite 'Toolchains' unter [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window} angezeigt, obwohl ich direkt über die Seite mit der App-Übersicht in der Region 'Großbritannien' auf die Toolchain zugreifen kann, indem ich auf **Toolchain anzeigen** klicke. Es wird eine Fehlernachricht angezeigt, die besagt, dass ich die Toolchain nicht ändern kann oder dass ich keine Toolchain habe und eine erstellen muss. 
+
+**Antwort:**
+
+Diese Probleme können auftreten, wenn Sie von einer {{site.data.keyword.Bluemix_notm}}-Organisation außerhalb der Vereinigten Staaten kommen und Ihre Organisation vor dem Upgrade nicht explizit auf die Region 'Vereinigte Staaten (Süden)' erweitert haben. Sie können dies auf zwei Arten bestätigen:
+
+   * Wenn Sie die Toolchain-URL öffnen, schauen Sie sich den {{site.data.keyword.Bluemix_notm}}-Header an. Sehr wahrscheinlich sehen Sie dort den Namen Ihrer Organisation und es ist kein Bereich angegeben.
+   
+   * Klicken Sie auf der Übersichtsseite Ihrer Toolchain auf **Verwalten**. Klicken Sie auf der Seite 'Zugriffssteuerung' auf **Organisationsmanager**. Die Organisation, die die Toolchain enthält, wird auf der Hauptseite aufgeführt.
+
+Zum Zeitpunkt des Upgrades war Ihre Nicht-US-Organisation nicht in den Vereinigten Staaten vorhanden. Deshalb wählte das Upgrade eine andere Organisation für Sie aus, auf die Sie zufällig Zugriff haben.
+
+Wenn Sie zu dieser {{site.data.keyword.Bluemix_notm}}-Organisation in den Vereinigten Staaten (US) wechseln, finden Sie die Toolchain. Wenn Sie Ihre Kollegen zu dieser Organisation hinzufügen, wird ihnen der Zugriff erteilt. Diese Toolchain kann weiterhin Bereitstellungsaktivitäten für Ihre Nicht-US-Organisation ausführen. Das einzige Problem ist, dass sich diese beiden Organisationen unterscheiden. Sie können die Benutzerverwaltung nicht automatisch für beide ausführen.
+
+Wenn sich Ihre Toolchain in einer US-Organisation befinden soll, die Ihrer Nicht-US-Organisation entspricht, führen Sie die folgenden Schritte aus:
+
+   1. Melden Sie sich bei [https://console.bluemix.net![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net){: new_window} an und wählen Sie die Nicht-US-Region und die Organisation aus, von der Sie kommen.
+   
+   2. Wechseln Sie im {{site.data.keyword.Bluemix_notm}}-Header zu der Region 'Vereinigte Staaten (Süden)'. Sie werden aufgefordert, einen Bereich in dieser Region zu erstellen.
+   
+   3. Erstellen Sie einen Bereich in der Region 'Vereinigte Staaten (Süden)', um Ihre Organisation auf diese Region zu erweitern. 
+   
+   4. Löschen Sie die Toolchain, die durch den Upgradeprozess erstellt wurde. 
+   
+      **Hinweis:** Das Git-Repository wird nicht automatisch gelöscht. Möglicherweise möchten Sie es manuell löschen oder vorläufig umbenennen. Wenn Sie bereits Änderungen daran vorgenommen haben, können Sie zu der künftigen Toolchain wechseln, um sie zu einem späteren Zeitpunkt zu verwenden.
+
+   5. Kehren Sie zum JazzHub-Projekt zurück. Es sollte für einen weiteren Upgradeversuch zurückgesetzt werden. Wenn es nicht zurückgesetzt wird, wenden Sie sich an hub@jazz.net und geben Sie die URL des Projekts an. 
+   
+   6. Starten Sie den Upgradeprozess erneut und stellen Sie sicher, dass Sie die richtige Organisation in den Vereinigten Staaten auswählen, dem mit dem Namen Ihrer Organisation in der Nicht-US-Region übereinstimmt.
+   
+   7. Wenn Sie das Git-Repository vom vorherigen Toolchain-Upgrade-Versuch (siehe Schritt 4) aktualisiert oder umbenannt haben, können Sie die Git-Karte in Ihrer Toolchain umkonfigurieren, um stattdessen auf diese Git-Repository-URL zu verweisen. Die Änderung wird automatisch in der Pipeline nachvollzogen. Prüfen Sie zur Bestätigung die Registerkarte 'Eingabe' in der Build-Stage.
+

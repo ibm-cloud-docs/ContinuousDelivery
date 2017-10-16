@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-5-11"
 
 ---
 
@@ -18,10 +18,10 @@ lastupdated: "2017-3-16"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# {{site.data.keyword.deliverypipeline}} の拡張
+# Delivery Pipeline の拡張
 {: #deliverypipeline_extending}
 
-サポートされるサービスを使用するようにジョブを構成することで、{{site.data.keyword.deliverypipeline}} の機能を拡張できます。例えば、テスト・ジョブで静的コード・スキャンを実行し、ビルド・ジョブで文字列をグローバル化できます。
+サポートされるサービスを使用するようにジョブを構成することで、{{site.data.keyword.contdelivery_full}} の {{site.data.keyword.deliverypipeline}} の機能を拡張できます。例えば、テスト・ジョブで静的コード・スキャンを実行し、ビルド・ジョブで文字列をグローバル化できます。
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -32,9 +32,9 @@ lastupdated: "2017-3-16"
 
 {: #deliverypipeline_scan}
 
-コードをデプロイする前にコードのセキュリティー問題を検索したい場合、IBM® Static Analyzer for Bluemix™ をパイプラインの一部として使用すると、Java™ アプリの静的 `.war`、`.ear`、`.jar`、または `.class` ビルド・バイナリー・ファイルに対して自動化チェックを実行できます。
+コードをデプロイする前にコードのセキュリティー問題を検索したい場合、{{site.data.keyword.staticanalyzerfull}} をパイプラインの一部として使用すると、Java™ アプリの静的 `.war`、`.ear`、`.jar`、または `.class` ビルド・バイナリー・ファイルに対して自動化チェックを実行できます。
 
-Static Analyzer サービスを使用するパイプラインは、通常以下のステージを含みます。
+{{site.data.keyword.staticanalyzershort}} サービスを使用するパイプラインは、通常以下のステージを含みます。
 
 + ソース・ファイルをビルドするためのビルド・ステージ
 + 以下のジョブを含む処理ステージ
@@ -71,13 +71,13 @@ Static Analyzer サービスを使用するパイプラインは、通常以下�
 
   e. 必要に応じて**「サービスとスペースの自動セットアップ」**チェック・ボックスを選択またはクリアします。
 
-    * サービス用の Bluemix のスペースと、サービスをコンテナーにバインドするアプリを、パイプラインで確認する場合は、このチェック・ボックスを選択します。サービスやバインドされたアプリが存在しない場合、パイプラインによって、このサービスの無料プランがご使用のスペースに追加されます。作成されたバインド済みアプリには、`pipeline_bridge_app` という名前が付けられます。その後、パイプラインは、pipeline_bridge_app からの資格情報を使用して、バインド済みサービスにアクセスします。
+    * サービス用の {{site.data.keyword.Bluemix_short}} のスペースと、サービスをコンテナーにバインドするアプリを、パイプラインで確認する場合は、このチェック・ボックスを選択します。サービスやバインドされたアプリが存在しない場合、パイプラインによって、このサービスの無料プランがご使用のスペースに追加されます。作成されたバインド済みアプリには、`pipeline_bridge_app` という名前が付けられます。その後、パイプラインは、pipeline_bridge_app からの資格情報を使用して、バインド済みサービスにアクセスします。
 
-    * サービスとバインド済みアプリを Bluemix のスペースで構成してある場合、または[これらの要件を手動で構成する](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}場合は、このチェック・ボックスをクリアします。
+    * サービスとバインド済みアプリを {{site.data.keyword.Bluemix_short}} のスペースで構成してある場合、または[これらの要件を手動で構成する](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}場合は、このチェック・ボックスをクリアします。
 
-  f. **「分析の完了を待機する時間」**フィールドで、0 から 59 分の値を入力します。デフォルト値は 5 分です。ジョブ終了時、Static Analyzer ダッシュボードの URL がコンソール・ログに記録されます。
+  f. **「分析の完了を待機する時間」**フィールドで、0 から 59 分の値を入力します。デフォルト値は 5 分です。ジョブ終了時、{{site.data.keyword.staticanalyzershort}} ダッシュボードの URL がコンソール・ログに記録されます。
 
-     Static Analyzer のスキャンが指定した時間までに終了しない場合は、ジョブは失敗します。しかし、スキャンの分析は実行を続行し、Static Analyzer ダッシュボードで表示することができます。Static Analyzer スキャンの完了後に、ジョブを再実行した場合、スキャン要求は再実行依頼されず、パイプライン・ジョブは完了できます。また、正常に終了したスキャン結果でパイプラインをブロックされないように構成することもできます。手順については、次のステップを参照してください。
+     {{site.data.keyword.staticanalyzershort}} のスキャンが指定した時間までに終了しない場合は、ジョブは失敗します。しかし、スキャンの分析は実行を続行し、{{site.data.keyword.staticanalyzershort}} ダッシュボードで表示することができます。{{site.data.keyword.staticanalyzershort}} スキャンの完了後に、ジョブを再実行した場合、スキャン要求は再実行依頼されず、パイプライン・ジョブは完了できます。また、正常に終了したスキャン結果でパイプラインをブロックされないように構成することもできます。手順については、次のステップを参照してください。
 
   g. このジョブが失敗またはタイムアウトになる場合の対応に応じて、**「このジョブが失敗したらこのステージの実行を停止する (Stop running this stage if this job fails)」**チェック・ボックスを選択またはクリアします。脆弱性が高い場合、ジョブは失敗する可能性があります。
 
@@ -106,7 +106,7 @@ Static Analyzer サービスを使用するパイプラインは、通常以下�
 **保留中のスキャン**
 ![保留中のスキャンの例](images/analyzer_pending.png)
 
-Static Analyzer サービスの使用について詳しくは、[Static Analyzer サービスの資料](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}を参照してください。
+{{site.data.keyword.staticanalyzershort}} サービスの使用について詳しくは、[{{site.data.keyword.staticanalyzershort}} サービスの資料](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}を参照してください。
 
 <!--
 
@@ -177,7 +177,7 @@ For more information about using the Globalization Pipeline service from the Blu
 ## パイプラインでのビルドの Slack 通知の作成
 {: #deliverypipeline_slack}
 
-IBM Container Service、IBM Security Static Analyzer、IBM Globalization のビルド結果に関する通知を Delivery Pipeline から Slack チャネルに送信できます。
+{{site.data.keyword.containerlong}}、{{site.data.keyword.staticanalyzershort}}、および {{site.data.keyword.globalizationfull}} のビルド結果に関する通知を Delivery Pipeline から Slack チャネルに送信できます。
 
 始める前に、以下のように Slack WebHook URL を作成するかコピーします。
 
@@ -195,7 +195,7 @@ Slack 通知を作成するには、次のようにします。
 3. **「文字プロパティー」**を選択します。
 4. 環境プロパティーの名前と値を入力します。操作を繰り返して、複数の環境プロパティーを作成します。
 
-  *表 1. Slack 通知を構成する環境プロパティー*
+  _表 1. Slack 通知を構成する環境プロパティー_
 
   <table>
   <tr>
@@ -256,7 +256,7 @@ HipChat 通知を作成するには、次のようにします。
 3. **「文字プロパティー」**を選択します。
 4. 環境プロパティーの名前と値を入力します。操作を繰り返して、複数の環境プロパティーを作成します。
 
-  *表 2. HipChat 通知を構成する環境プロパティー*
+  _表 2. HipChat 通知を構成する環境プロパティー_
 
   <table>
   <tr>

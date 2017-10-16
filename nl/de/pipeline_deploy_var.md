@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-17"
+lastupdated: "2017-7-10"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -19,7 +19,7 @@ lastupdated: "2016-11-17"
 # Umgebungseigenschaften und Ressourcen
 {: #deliverypipeline_environment}
 
-Sie können Umgebungseigenschaften und vorinstallierte Ressourcen verwenden, um mit dem Service IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} zu interagieren. Möglicherweise integrieren Sie diese in ein Job-Script oder einen Testbefehl.
+Sie können Umgebungseigenschaften und vorinstallierte Ressourcen verwenden, um mit der Pipelinefunktionalität von {{site.data.keyword.contdelivery_full}} zu interagieren. Möglicherweise integrieren Sie diese in ein Job-Script oder einen Testbefehl.
 {:shortdesc}
 
 Sie können auf der Registerkarte **Umgebungseigenschaften** Ihre eigenen Umgebungseigenschaften zu einer Stage hinzufügen. Umgebungseigenschaften stehen für jeden Job in einer Stage zur Verfügung.
@@ -55,7 +55,7 @@ Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardm
 | BUILD_NUMBER | Die inkrementelle Stages-ID, die in der Benutzerschnittstelle der Pipeline angezeigt wird.  |
 | GIT_BRANCH | Der Git-Zweig, den der Job als Eingabe verwendet. Diese Eigenschaft ist nur für Jobs verfügbar, die als Eingabe ein Git-Repository verwenden. |
 | GIT_COMMIT | Die Git-Commitoperation, die der Job als Eingabe verwendet. Diese Eigenschaft ist nur für Jobs verfügbar, die als Eingabe ein Git-Repository verwenden. |
-| GIT_PREVIOUS_COMMIT | Der Git-Commitwert der letzten erfolgreichen Ausführung des Jobs. Diese Eigenschaft ist nur bei Jobs verfügbar, die als Eingabe ein Git-Repository verwenden. |
+| GIT_PREVIOUS_COMMIT | Der Git-Commitwert der letzten erfolgreichen Ausführung des Jobs. Diese Eigenschaft ist nur für Jobs verfügbar, die als Eingabe ein Git-Repository verwenden. |
 | GIT_URL | Die Git-Repository-URL, die der Job als Eingabe verwendet. Diese Eigenschaft ist nur für Jobs verfügbar, die als Eingabe ein Git-Repository verwenden. |
 | IDS_JOB_ID | Die eindeutige ID der Jobkonfiguration. |
 | IDS_JOB_NAME | Der Name der Jobkonfiguration. |
@@ -63,8 +63,9 @@ Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardm
 | IDS_PROJECT_NAME | Der Name des Projekts, z. B. <code>Owner - Project Name</code>. |
 | IDS_STAGE_NAME | Der Name der aktuellen Stage. |
 | IDS_URL | Die URL der aktuellen Pipeline. |
-| IDS_VERSION | Die Nummer des Builds, der bereitgestellt wird, oder die SCM-ID. Diese Eigenschaft ist nur für Bereitstellungsjobs verfügbar.
+| IDS_VERSION | Die Nummer des Builds, der bereitgestellt wird, oder die SCM-ID. Diese Eigenschaft ist nur in Bereitstellungsjobs verfügbar.
 | JOB_NAME | Die eindeutige Job-ID im Kontext der aktuellen Pipeline. |
+| PIPELINE_KUBERNETES_CLUSTER_NAME | Der Name des Kubernetes-Clusters, der im aktuellen Job ausgewählt ist. |
 | PIPELINE_STAGE_INPUT_JOB_ID | Die ID des Jobs, der als Eingabe für die aktuelle Stage dient. |
 | PIPELINE_STAGE_INPUT_REV | Die Überarbeitung der Eingabe für die aktuelle Stage. |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | Die eindeutige ID der Ausführung der Pipeline. |
@@ -77,12 +78,15 @@ Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardm
 | Umgebungseigenschaft | Beschreibung |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | ANT_HOME | Der Pfad zu Apache Ant 1.9.2. |
+| ANT_JAVA8_HOME | Der Pfad zu Apache Ant Version 1.10 oder höher (Java 8 vorausgesetzt) |
 | GRADLE_HOME | Der Pfad zu Gradle 1.11. |
 | JAVA_HOME | Der Pfad zu IBM&reg; Java&trade; 7. |
 | JAVA7_HOME | Der Pfad zu IBM Java 7. |
 | JAVA8_HOME | Der Pfad zu IBM Java 8. |
 | MAVEN_HOME | Der Pfad zu Apache Maven 3.2.1. |
 | NODE_HOME | Der Pfad zu Node.js 0.10.29. |
+
+**Tipp**: Sie können Apache Ant Version 1.10 oder höher in den Scripts Ihrer Pipeline verwenden, indem Sie `ANT_HOME` auf `$ANT_JAVA8_HOME` und `JAVA_HOME` auf `$JAVA8_HOME` setzen.
 
 ### Bereitstellungseigenschaften
 

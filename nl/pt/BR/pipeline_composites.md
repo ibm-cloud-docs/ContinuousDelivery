@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-4-5"
+lastupdated: "2017-8-18"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,30 +22,34 @@ lastupdated: "2017-4-5"
 Com o recurso de pipeline composto para o {{site.data.keyword.deliverypipeline}}, é possível gerenciar processos repetidos de integração contínua e de entrega contínua para apps de software relacionados.
 {:shortdesc}
 
-Você cria pipelines compostos para gerenciar os apps em uma cadeia de ferramentas. Se a sua cadeia de ferramentas contiver apps implementados pelo {{site.data.keyword.deliverypipeline}}, a cadeia de ferramentas será atualizada dinamicamente quando você incluir ou remover pipelines de entrega da cadeia de ferramentas. Também é possível incluir apps de fontes externas no pipeline composto.
+Você cria pipelines compostos para gerenciar os apps em uma cadeia de ferramentas. Se sua cadeia de ferramentas contém apps que são implementados pelo {{site.data.keyword.deliverypipeline}}, é possível configurar o pipeline composto para ser atualizado quando você inclui ou remove pipelines de entrega da cadeia de ferramentas. Também é possível incluir apps de fontes externas no pipeline composto.
 
 ## Criando um pipeline composto
 {: #compositepipeline_create_for_toolchain}
 
-1. No menu perto do logotipo do Bluemix, clique em **Serviços > DevOps**
+1. No menu na barra de menus do {{site.data.keyword.Bluemix_notm}}, clique em **DevOps**.
 
-1. Na navegação esquerda, clique em **Pipelines**.
+2. Na navegação esquerda, clique em **Pipelines**.
 
-2. Ative o recurso de pipeline composto clicando em **Saiba mais** e, em seguida, clicando em **Ativar**. O pipeline composto é ativado para cada usuário, portanto, apenas os membros de sua organização (org) que optarem por participar do recurso experimental verão os pipelines compostos criados.
+3. Ative o recurso de pipeline composto clicando em **Saiba mais** e, em seguida, clicando em **Ativar**. O pipeline composto é ativado para cada usuário, portanto, apenas os membros de sua organização (org) que optarem por participar do recurso experimental verão os pipelines compostos criados.
 
-2. Clique em **Criar** > **Pipeline composto**.
+4. Clique em **Criar pipeline** > **Pipeline composto**.
 
-3. Digite um nome para o pipeline composto. Também é possível modificar a descrição do pipeline.
+5. Digite um nome para o pipeline composto. Também é possível modificar a descrição do pipeline.
 
-4. Na lista **Cadeia de ferramentas**, selecione uma cadeia de ferramentas.
+6. Na lista **Cadeia de ferramentas**, selecione uma cadeia de ferramentas.
 
-    1. Para criar uma cadeia de ferramentas vazia e um pipeline composto, selecione **Novo**.
+    a. Para criar uma cadeia de ferramentas vazia e um pipeline composto, selecione **Novo**.
 
-    2. Para criar um pipeline composto para uma das cadeias de ferramentas, selecione seu nome.
+    b. Para criar um pipeline composto para uma das cadeias de ferramentas, selecione seu nome.
 
-5. Se você criar uma cadeia de ferramentas vazia, selecione **Incluir ambientes padrão**. Você usa esses ambientes lógicos padrão para controlar a execução do processo por meio do pipeline composto.
+7. Se você criar uma cadeia de ferramentas vazia, selecione **Incluir ambientes padrão**. Você usa esses ambientes lógicos padrão para controlar a execução do processo por meio do pipeline composto.
 
-6. Clique em **Criar**.
+8. Para atualizar o pipeline composto quando você inclui pipelines na cadeia de ferramentas, remove os pipelines da cadeia de ferramentas ou modifica os estágios do pipeline de ferramentas, selecione **Sincronizar automaticamente sincronizar este pipeline composto com a cadeia de ferramentas selecionada**.
+
+  **Nota:** deve-se ativar a sincronização automática antes de mudar os pipelines da cadeia de ferramentas. Somente mudanças feitas durante a ativação da sincronização automática serão incluídas no pipeline composto.
+
+9. Clique em **Criar**.
 
 Os estágios configurados são mapeados automaticamente para o espaço apropriado em sua organização e um plano de implementação é criado para o pipeline composto.
 
@@ -56,7 +60,7 @@ Um plano de implementação também é criado para o pipeline composto. Por padr
 
 Se você tiver criado o pipeline composto para uma nova cadeia de ferramentas, um plano de implementação será criado para customização.
 
-![Expanda cada app para visualizar cada tarefa em seu pipeline](images/composite_view.png "expandir cada app")
+![Expandir cada app para visualizar cada tarefa em seu pipeline](images/composite_view.png "expandir cada app")
 
 ## Modificando o plano de implementação
 {: #compositepipeline_modify_dp}
@@ -65,7 +69,7 @@ Por padrão, um plano de implementação é criado para um pipeline composto. Es
 
 No estágio para o qual você deseja modificar o plano de implementação, clique no menu e, em seguida, em **Plano de implementação**.
 
-![Abra o plano de implementação](images/open_deployment_plan.png "abrir o plano de implementação")
+![Abrir o plano de implementação](images/open_deployment_plan.png "abrir o plano de implementação")
 
 A lista de tarefas de implementação para seu ambiente é exibida.
 
@@ -87,15 +91,44 @@ Para obter mais informações sobre como modificar o plano de implementação, v
 ## Executando tarefas em um pipeline composto
 {: #compositepipeline_run_jobs}
 
-Depois de expandir um app para exibir suas tarefas, será possível executar manualmente todas as suas tarefas em um estágio. Clique no ícone **Implementar no *estágio*** no espaço de um app.
+Depois de expandir um app para exibir suas tarefas, será possível executar manualmente todas as suas tarefas em um estágio. Clique no ícone **Implementar em *estágio*** no espaço para um app.
 
 ![Executando um estágio em um único app](images/composite_run_stage.png)
 
-Para executar todas as tarefas em todos os apps que estão em um espaço, clique no ícone **Implementar no *espaço*** no espaço do pipeline composto.
+Para executar todas as tarefas em cada app que está em um espaço, clique no ícone **Implementar em *espaço*** no espaço para o pipeline composto.
 
 ![Executando um estágio em todos os apps](images/composite_run_space.png)
 
 As tarefas são executadas de acordo com o plano de implementação do blueprint composto.
+
+##Incluindo apps que são implementados por pipelines de entrega
+{: #compositepipeline_add_apps}
+
+É possível incluir apps que são implementados por pipelines de entrega somente sincronizando o pipeline composto com a cadeia de ferramentas. Como um pipeline composto está associado a uma única cadeia de ferramentas, é possível incluir somente apps cujos pipelines de entrega estão nessa cadeia de ferramentas.
+
+Para incluir um app que é implementado por um pipeline de entrega no pipeline composto, execute estas etapas:
+
+1. Abra o pipeline composto.
+
+2. Selecione **Sincronizar este pipeline composto automaticamente com sua cadeia de ferramentas**.
+
+  **Nota:** deve-se ativar a sincronização automática antes de criar os pipelines de entrega. Somente mudanças feitas durante a ativação da sincronização automática serão incluídas no pipeline composto.
+
+3. Crie o pipeline de entrega para o app. Certifique-se de designar o pipeline de entrega à mesma cadeia de ferramentas como pipeline composto.
+
+4. Configure estágios e tarefas para o pipeline de entrega.
+
+O app é incluído no pipeline composto e os planos de implementação para cada estágio contêm tarefas para executar as tarefas que você configurou.
+
+
+##Atualizando pipelines de entrega no pipeline composto
+{: #compositepipeline_sync}
+
+Deve-se ativar a sincronização automática no pipeline composto antes de poder incluir ou mudar os pipelines que fazem parte dele.
+
+1. Abra o pipeline composto.
+
+2. Selecione **Sincronizar este pipeline composto automaticamente com sua cadeia de ferramentas**.
 
 ## Exibindo logs
 {: #compositepipeline_view_logs}
@@ -162,7 +195,7 @@ Se a sua integração tiver sido bem-sucedida, será possível incluir apps IBM 
 ## Incluindo apps do IBM UrbanCode Deploy
 {: #compositepipeline_add_apps}
 
-Se você for membro de uma organização integrada ao IBM UrbanCode Deploy usando o DevOps Connect, será possível incluir os apps que você pode acessar no IBM UrbanCode Deploy no pipeline composto. Para obter instruções de instalação, veja [Usando o IBM Bluemix DevOps Connect para se integrar ao IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
+Se você for um membro de uma organização integrada ao IBM UrbanCode Deploy usando o DevOps Connect, será possível incluir os apps que podem ser acessados no UrbanCode Deploy no pipeline composto. Para obter instruções de instalação, veja [Usando o IBM Bluemix DevOps Connect para se integrar ao IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
 
 Quando você for membro de uma organização que esteja conectada ao IBM UrbanCode Deploy, será possível incluir apps IBM UrbanCode Deploy aos pipeline compostos, selecionar os processos de app para incluir no plano de implementação e customizar a implementação dos apps.
 
@@ -187,3 +220,9 @@ Quando você for membro de uma organização que esteja conectada ao IBM UrbanCo
     3. Clique em **Salvar**.
 
     4. Repita essas etapas para cada ambiente lógico que você usar.
+
+##Usar um tutorial: pipelines compostos
+{: #composite_pipeline-tutorial}
+
+Consulte este tutorial no [IBM&reg; Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method){:new_window}:
+  * [Crie e use uma cadeia de ferramentas de microsserviços com o DevOps Insights (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

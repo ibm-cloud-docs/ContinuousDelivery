@@ -14,7 +14,7 @@ lastupdated: "2017-4-4"
 # Informationen zu Delivery Pipeline
 {: #deliverypipeline_about}
 
-Der IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} Service, der auch als Pipeline bezeichnet wird, automatisiert die kontinuierliche Bereitstellung Ihrer Bluemix-Projekte. In einer Pipeline rufen Abfolgen von Stages Eingabe- und Ausgabejobs wie Builds, Tests und Bereitstellungen ab.
+{{site.data.keyword.contdelivery_full}} enthält die Delivery Pipeline, die reproduzierbare Builds, Tests und Bereitstellungen ermöglicht und nur geringe manuelle Eingriffe erfordert. In einer Pipeline rufen Abfolgen von Stages Eingabe- und Ausgabejobs wie Builds, Tests und Bereitstellungen ab.
 {:shortdesc}
 
 Die folgenden Abschnitte beschreiben die Konzeptionsdetails von Pipelines.
@@ -70,7 +70,12 @@ Buildjobs kompilieren Ihr Projekt in Vorbereitung auf die Bereitstellung. Sie ge
 
 Jobs, die Eingaben von Buildjobs erhalten, müssen Buildartefakte in derselben Struktur referenzieren, in der sie erstellt wurden. Wenn ein Buildjob zum Beispiel Buildartefakte in das Verzeichnis `output` archiviert, würde ein Bereitstellungsscript auf das Verzeichnis `output` und nicht auf das Projektstammverzeichnis verweisen, um das kompilierte Projekt zu implementieren. Sie können das zu archivierende Verzeichnis angeben, indem Sie den Verzeichnisnamen in das Feld **Archivverzeichnis erstellen** eingeben. Wenn Sie das Feld leer lassen, wird das Stammverzeichnis archiviert.
 
-**Hinweis**: Wenn Sie den Erstellungsprogrammtyp **Simple** für einen Buildjob auswählen, überspringen Sie den Erstellungsprozess. In diesem Fall wird Ihr Code nicht kompiliert, sondern unverändert an die Stage für die Bereitstellung gesendet. Wählen Sie daher für Build und Bereitstellung einen anderen Buildertyp als **Simple** aus.
+**Hinweis:** Wenn Sie den Erstellungsprogrammtyp **Simple** verwenden, wird Ihr Code nicht kompiliert oder erstellt; er wird gepackt und für zukünftige Stages zur Verfügung gestellt.
+
+Wenn Sie die Bereitstellung mithilfe von Cloud Foundry durchführen, enthält Cloud Foundry die richtigen Artefakte, damit Ihre App ausgeführt werden kann. Weitere Informationen finden Sie unter [Bereitstellung von Anwendungen mit dem Befehl 'cf'](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps). Die Pipeline für eine Cloud Foundry-App enthält eine Stage für die Bereitstellung, die einen Befehl 'cf' ausführt. 
+
+Cloud Foundtry versucht, [das zu verwendende Buildpack zu erkennen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.cloudfoundry.org/buildpacks/detection.html). Sie können das [Buildpack](/docs/cfapps/byob.html#using-community-buildpacks) angeben, das in der Manifestdatei im Stammordner Ihrer App verwendet werden soll. Buildpacks prüfen in der Regel die vom Benutzer bereitgestellten Artefakte, um festzustellen, welche Abhängigkeiten heruntergeladen werden müssen und wie die Anwendungen für die Kommunikation mit gebundenen Services konfiguriert werden müssen. Weitere Informationen zu Anwendungsmanifesten finden Sie unter [Anwendungsmanifest](/docs/manageapps/depapps.html#appmanifest). 
+
 
 #### Umgebungseigenschaften für Erstellungsscripts
 Sie können Umgebungseigenschaften innerhalb der Buildshellbefehle eines Buildjobs einschließen. Die Eigenschaften bieten Zugriff auf Informationen über die Ausführungsumgebung des Jobs. Weitere Informationen finden Sie unter [Umgebungseigenschaften und Ressourcen für den {{site.data.keyword.deliverypipeline}}-Service](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
@@ -122,4 +127,5 @@ Diese Pipeline wird im folgenden Konzeptionsdiagramm dargestellt:
 
 *Ein konzeptionelles Modell einer Pipeline mit drei Stages*
 
-Stages bekommen Ihre Eingaben von Repositorys und Buildjobs. Jobs innerhalb einer Stage werden nacheinander und unabhängig voneinander ausgeführt. In der Beispielpipeline werden die Stages nacheinander ausgeführt, obwohl die Stages für den Test und für die Produktion jeweils die Ausgabe der Stage für den Build als Eingabe verwenden.
+Stages bekommen Ihre Eingaben von Repositorys und Buildjobs. Jobs innerhalb einer Stage werden nacheinander und unabhängig voneinander ausgeführt. In der Beispielpipeline werden die Stages nacheinander ausgeführt, obwohl die Stages für den Test und die Produktion beide die Ausgabe
+der Stage für den Build als Eingabe verwenden.

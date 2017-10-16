@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-25"
+lastupdated: "2017-09-05"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2017-5-25"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.deliverypipeline}} での作業 {: #pipeline-working}
+# パイプラインでの作業{: #pipeline-working}
 
-ビルドと {{site.data.keyword.Bluemix}} へのデプロイメントを自動化するには、{{site.data.keyword.Bluemix_notm}} 用の {{site.data.keyword.deliverypipeline}} を使用します。
+ビルドと {{site.data.keyword.Bluemix}} へのデプロイメントを自動化するには、{{site.data.keyword.contdelivery_full}} パイプラインを使用します。
 {: shortdesc}
 
-{{site.data.keyword.deliverypipeline}} では、いくつかのビルド・タイプから選択できます。ビルド・スクリプトを指定すれば、
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} が実行します。ビルド・システムをセットアップする必要はありません。1 回クリックするだけで、1 つ以上の {{site.data.keyword.Bluemix_notm}} スペース、Cloud Foundry のパブリック・サーバー、{{site.data.keyword.Bluemix_notm}} 用の IBM コンテナーの Docker コンテナーに自動的にアプリをデプロイできます。
+パイプラインでは、いくつかのビルド・タイプから選択できます。ビルド・スクリプトを指定すれば、
+{{site.data.keyword.contdelivery_short}} が実行します。ビルド・システムをセットアップする必要はありません。1 回クリックするだけで、1 つ以上の {{site.data.keyword.Bluemix_notm}} スペース、Cloud Foundry のパブリック・サーバー、{{site.data.keyword.Bluemix_notm}} 用の IBM コンテナーの Docker コンテナーに自動的にアプリをデプロイできます。
 
 ビルド・ジョブが、アプリのソース・コードを Git リポジトリーからコンパイルしてパッケージします。ビルド・ジョブは、WAR ファイルや IBM コンテナーの Docker コンテナーなど、デプロイ可能な成果物を作成します。また、ビルド内で単体テストを自動的に実行することができます。コミットがプッシュされるたびにビルドがトリガーされるように、ビルド・ジョブを設定することができます。
 
@@ -60,8 +60,7 @@ Cloud Foundry アプリケーションをデプロイするように構成され
    * リポジトリーをフォークし、プル・リクエストで変更内容を提供できるようにする場合は、**「フォーク (Fork)」**を選択します。リポジトリーの場所を検索するか、選択可能なリポジトリーのリストからリポジトリーを選択します。
 
 1. リポジトリーを選択するか、リポジトリーの URL を入力します。
-1. **「作成」**をクリックします。パイプラインが作成され、構成されて、ツールチェーンの「概要」ページに表示されます。
-![パイプライン・カード](images/cd_pipeline.png)
+1. **「作成」**をクリックします。パイプラインが作成され、構成されて、ツールチェーンの「概要」ページに表示されます。![パイプライン・カード](images/cd_pipeline.png)
 1. 複合パイプラインを含むツールチェーン内にパイプラインを作成した場合、新しいパイプラインは複合パイプラインに追加されます。デプロイメント計画を変更して、新しいパイプラインのデプロイメント・タスクを含めます。[Delivery Pipeline タスクの作成](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}を参照してください。
 
 事前構成されたステージのない[空のパイプライン ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} を作成するには、以下のようにします。
@@ -74,3 +73,9 @@ Cloud Foundry アプリケーションをデプロイするように構成され
 1. **「作成」**をクリックします。空のパイプラインが作成され、ツールチェーンの「概要」ページ上にカードとして表されます。
 
 {{site.data.keyword.deliverypipeline}} から、構成を変更したり、ビルドのステータス、デプロイされたアプリ、最近のデプロイメントを確認したり、最新のログとデプロイメントの詳細を参照したり、パイプラインを削除したりすることができます。
+
+## チュートリアルを始める: {{site.data.keyword.deliverypipeline}}
+{: #pipeline-tutorial}
+
+[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method){:new_window} で次のチュートリアルを確認します。
+  * [Create a pipeline ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}

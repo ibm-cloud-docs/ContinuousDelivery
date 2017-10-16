@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-5-11"
 
 ---
 
@@ -18,11 +18,10 @@ lastupdated: "2017-3-16"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Ampliando o {{site.data.keyword.deliverypipeline}}
+# Estendendo o Delivery Pipeline
 {: #deliverypipeline_extending}
 
-É possível ampliar os recursos do {{site.data.keyword.deliverypipeline}}
-configurando suas tarefas para usar serviços suportados. Por exemplo, as tarefas de teste executam varreduras de código
+É possível estender os recursos do {{site.data.keyword.deliverypipeline}} do {{site.data.keyword.contdelivery_full}} configurando suas tarefas para usar serviços suportados. Por exemplo, as tarefas de teste executam varreduras de código
 estático e as tarefas de construção podem globalizar as sequências.
 {:shortdesc}
 
@@ -34,13 +33,9 @@ As tarefas a seguir descrevem como integrar ferramentas selecionadas com um Pipe
 
 {: #deliverypipeline_scan}
 
-Deseja encontrar os problemas de segurança em seu código antes de implementá-lo? Ao
-usar o IBM® Static Analyzer for Bluemix™ como parte do pipeline, é possível executar
-verificações automatizadas com relação a seus arquivos binários de construção
-`.war`, `.ear`, `.jar` ou
-`.class` estáticos do seu app Java™.
+Deseja encontrar os problemas de segurança em seu código antes de implementá-lo? Quando você usa o {{site.data.keyword.staticanalyzerfull}} como parte de seu pipeline, é possível executar verificações automatizadas com relação aos arquivos binários de construção `.war`, `.ear`, `.jar` ou `.class` estáticos do app Java™.
 
-Um pipeline que usa o serviço Analisador estático normalmente inclui estes estágios:
+Um pipeline que usa o serviço {{site.data.keyword.staticanalyzershort}} normalmente inclui estes estágios:
 
 + Um estágio de construção para construir os arquivos de origem
 + Um estágio de processamento que inclui estas tarefas:
@@ -64,49 +59,36 @@ Antes de iniciar, [revise os Termos de uso do serviço ![Ícone de link externo]
 
   c. Para o tipo de entrada, selecione **Artefatos de construção**.
 
-  d. Para o estágio e a tarefa, verifique os valores e atualize-os se necessário.
+  d. Para o estágio e tarefa, verifique os valores e atualize-os se necessário.
 
 2. No estágio de processamento, inclua uma tarefa de compilação
 para executar a varredura de código.
 
   a. Na guia **TAREFAS**, clique em **INCLUIR TAREFA**.
 
-  b. Para o tipo de tarefa, selecione **Teste**.
+  b. Para o tipo de tarefa, selecione **Testar**.
 
   c. Para o tipo de testador, selecione **IBM Security Static Analyzer**.
 
   d. Para a organização e o espaço, verifique os valores e atualize-os se necessário.
 
-  e. Marque ou desmarque a caixa de seleção **Configurar serviço e espaço para mim** conforme necessário.
+  e. Selecione ou limpe a caixa de seleção **Configurar serviço e espaço para mim** conforme necessário.
 
-    * Se desejar que o pipeline verifique o espaço do Bluemix para o serviço e um
-app que ligue o serviço ao contêiner, marque a caixa de seleção. Se o serviço ou o app
+    * Se você desejar que o pipeline verifique o espaço do {{site.data.keyword.Bluemix_short}} para o serviço e um app que liga o serviço ao contêiner, marque a caixa de seleção. Se o serviço ou o app
 vinculado não existir, o pipeline incluirá o plano grátis do serviço em seu espaço. O
 app vinculado que é criado se chama `pipeline_bridge_app`. Em
 seguida, o pipeline usa as credenciais do pipeline_bridge_app para acessar os serviços
 vinculados.
 
-    * Se você já tiver configurado o serviço e ligado o app em seu espaço do
-Bluemix ou se desejar
-[configurar
-esses requisitos manualmente](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, deixe a caixa de seleção desmarcada.
+    * Se você já configurou o serviço e ligou o app em seu espaço {{site.data.keyword.Bluemix_short}} ou se desejar [configurar esses requisitos manualmente](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, deixe a caixa de seleção limpa.
 
-  f. No campo **Minutos para aguardar a análise ser concluída**,
-digite um valor de 0 a 59 minutos. O valor padrão é de 5 minutos. Uma URL para o painel
-do Analisador estático está nos logs do console ao final da tarefa.
+  f. No campo **Minutos de espera para a análise ser concluída**, digite um valor de 0 - 59 minutos. O valor padrão é de 5 minutos. Uma URL para o painel do {{site.data.keyword.staticanalyzershort}} está nos logs do console no término da tarefa.
 
-     Se a varredura do Analisador estático não for concluída antes do tempo
-especificado, a tarefa falhará. No entanto, a análise da varredura continua a ser
-executada e é possível visualizá-la no painel do Analisador estático. Uma vez
-concluída a varredura do Analisador estático, se você executar novamente a tarefa, a
-solicitação de varredura não será enviada novamente e a tarefa de pipeline poderá ser
-concluída. Como alternativa, é possível configurar o pipeline para não ser bloqueado
+     Se a varredura do {{site.data.keyword.staticanalyzershort}} não for concluída antes do tempo especificado, a tarefa falhará. No entanto, a análise de varredura continua em execução e é possível visualizá-la no painel do {{site.data.keyword.staticanalyzershort}}. Depois que varredura do {{site.data.keyword.staticanalyzershort}} for concluída, se você executar novamente a tarefa, a solicitação de varredura não será reenviada e a tarefa de pipeline poderá ser concluída. Como alternativa, é possível configurar o pipeline para não ser bloqueado
 no caso de um resultado de varredura bem-sucedida. Para obter instruções, consulte a
 próxima etapa.
 
-  g. Marque ou desmarque a caixa de seleção **Parar de executar este
-estágio se esta tarefa falhar** dependendo do que você deseja que aconteça se
-essa tarefa falhar ou atingir o tempo limite. As tarefas podem falhar quando as
+  g. Selecione ou limpe a caixa de seleção **Parar de executar este estágio se esta tarefa falhar** dependendo do que você desejar que aconteça se essa tarefa falhar ou atingir o tempo limite. As tarefas podem falhar quando as
 vulnerabilidades são altas.
 
     * Se você marcar a caixa de seleção e a tarefa falhar, as tarefas posteriores
@@ -149,7 +131,7 @@ console:
 **Varredura pendente**
 ![Exemplo de varredura pendente](images/analyzer_pending.png)
 
-Para obter mais informações sobre como usar o serviço Static Analyzer, veja as [as documentações do serviço Static Analyzer](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
+Para obter mais informações sobre como usar o serviço {{site.data.keyword.staticanalyzershort}}, veja os [docs do serviço {{site.data.keyword.staticanalyzershort}}](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 
@@ -220,9 +202,7 @@ For more information about using the Globalization Pipeline service from the Blu
 ## Criando notificações do Slack para construções no pipeline
 {: #deliverypipeline_slack}
 
-É possível enviar notificações sobre os resultados da construção do IBM Container
-Service, IBM Security Static Analyzer e IBM Globalization do pipeline de entrega para os
-canais do Slack.
+É possível enviar notificações sobre os resultados de construção do {{site.data.keyword.containerlong}}, {{site.data.keyword.staticanalyzershort}} e {{site.data.keyword.globalizationfull}} de seu Delivery Pipeline para os canais do Slack.
 
 Antes de iniciar, crie ou copie uma URL de WebHook do Slack:
 
@@ -243,7 +223,7 @@ Para criar notificações do Slack:
 4. Insira o nome e um valor para a propriedade do ambiente. Repita para criar várias propriedades
 de ambiente.
 
-  *Tabela 1. Propriedades do ambiente para configurar notificações do Slack*
+  _Tabela 1. Propriedades do ambiente para configurar notificações do Slack_
 
   <table>
   <tr>
@@ -313,7 +293,7 @@ Para criar notificações do HipChat:
 4. Insira o nome e um valor para a propriedade do ambiente. Repita para criar várias propriedades
 de ambiente.
 
-  *Tabela 2. Propriedades do ambiente para configurar notificações do HipChat*
+  _Tabela 2. Propriedades do ambiente para configurar notificações do HipChat_
 
   <table>
   <tr>
@@ -393,11 +373,6 @@ os parâmetros a seguir são atendidos:
 6. Repita estas etapas para enviar notificações do HipChat para outros estágios
 que incluam tarefas do IBM Container Service, IBM Security Static Analyzer e IBM
 Globalization.
-
-## Usando o Active Deploy para implementação com tempo de inatividade zero no pipeline
-{: #deliverypipeline_activedeploy}
-
-É possível automatizar a implementação contínua dos apps ou grupos de contêiner usando o serviço IBM® Active Deploy no Delivery Pipeline. Para obter mais informações sobre introdução, veja a [documentação do Active Deploy](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window}.
 
 ## Construindo e implementando imagens de contêiner com o pipeline
 {: #deliverypipeline_containers}

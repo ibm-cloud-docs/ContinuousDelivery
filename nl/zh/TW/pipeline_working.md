@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-25"
+lastupdated: "2017-09-05"
 
 ---
 
@@ -12,12 +12,12 @@ lastupdated: "2017-5-25"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# 使用 {{site.data.keyword.deliverypipeline}} {: #pipeline-working}
+# 使用管線 {: #pipeline-working}
 
-若要自動建置及部署至 {{site.data.keyword.Bluemix}}，請使用 {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}。
+若要自動建置及部署至 {{site.data.keyword.Bluemix}}，請使用 {{site.data.keyword.contdelivery_full}} 管線。
 {: shortdesc}
 
-使用 {{site.data.keyword.deliverypipeline}}，有數種建置類型可供您選擇。您提供建置 Script，{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} 便會執行它，不需要設定建置系統。接著只要按一下，您便可將應用程式自動部署至一個或許多個 {{site.data.keyword.Bluemix_notm}} 空間、公用 Cloud Foundry 伺服器，或 IBM Containers for {{site.data.keyword.Bluemix_notm}} 上的 Docker 容器。
+使用管線，有數種建置類型可供您選擇。您提供建置 Script，{{site.data.keyword.contdelivery_short}} 便會執行它，不需要設定建置系統。接著只要按一下，您便可將應用程式自動部署至一個或許多個 {{site.data.keyword.Bluemix_notm}} 空間、公用 Cloud Foundry 伺服器，或 IBM Containers for {{site.data.keyword.Bluemix_notm}} 上的 Docker 容器。
 
 建置工作會從 Git 儲存庫編譯及包裝您的應用程式原始碼。建置工作會產生可部署的構件，例如 WAR 檔或 IBM Containers 的 Docker 容器。此外，您可以在建置內自動執行單元測試。您可以設定建置工作，以在每次推送確定時觸發建置。
 
@@ -58,8 +58,7 @@ lastupdated: "2017-5-25"
    * 如果您要分出儲存庫，以透過取回要求來提出變更，請選取**分出**。請搜尋儲存庫的位置，或從可用儲存庫清單中選取儲存庫。
 
 1. 選取儲存庫，或輸入儲存庫 URL。
-1. 按一下**建立**。即會建立、配置管線，並顯示在工具鏈的「概觀」頁面上。
- ![管線卡片](images/cd_pipeline.png)
+1. 按一下**建立**。即會建立及配置管線，並將其顯示在工具鏈的「概觀」頁面上。![管線卡片](images/cd_pipeline.png)
 1. 如果您已在包含複合管線的工具鏈中建立管線，則會將新的管線新增至複合管線。請修改部署方案，以包含新管線的部署作業。請參閱[建立 Delivery Pipeline 作業](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}。
 
 若要建立沒有任何預先配置階段的[空管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window}，請執行下列動作：
@@ -71,3 +70,9 @@ lastupdated: "2017-5-25"
 1. 按一下**建立**。即會建立空管線，並在工具鏈的「概觀」頁面上呈現為卡片。
 
 從 {{site.data.keyword.deliverypipeline}} 中變更配置；檢查建置的狀態、已部署的應用程式及最近的部署；查看最新日誌及部署詳細資料，或者刪除管線。
+
+## 使用指導教學：{{site.data.keyword.deliverypipeline}}
+{: #pipeline-tutorial}
+
+請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method){:new_window} 上的這個指導教學：
+  * [建立管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}

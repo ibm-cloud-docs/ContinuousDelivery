@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-10"
+lastupdated: "2017-7-24"
 
 ---
 
@@ -16,6 +16,16 @@ O {{site.data.keyword.jazzhub}} está sendo desenvolvido para o {{site.data.keyw
 
 É possível fazer upgrade de seu projeto ou esperar que seja submetido a upgrade automaticamente. Para obter a melhor experiência, certifique-se de atender aos [pré-requisitos](#upgrade_prereqs) e fazer upgrade de seu projeto assim que possível para que possa controlar o nome da sua cadeia de ferramentas e a organização na qual ela foi criada.
 {: shortdesc}
+
+**Perguntas Mais Frequentes**
+
+- [Meu projeto JazzHub está associado à região do Reino Unido, mas minha cadeia de ferramentas estará na região sul dos EUA. Como isso funcionará?](#faq_region)
+- [O que acontecerá com meus itens de trabalho e painéis em Track &amp; Plan quando eu fizer upgrade?](#faq_tp)
+- [O que acontecerá com meu repositório de código quando eu fizer upgrade?](#faq_repo)
+- [O que acontecerá com minhas definições de construção no meu projeto quando eu fizer upgrade para uma cadeia de ferramentas?](#faq_build)
+- [Preciso criar uma organização para meu projeto que será submetido a upgrade para uma cadeia de ferramentas. Eu entendo que preciso incluir um cartão de crédito em minha conta antes que eu possa criar uma organização. Meu cartão de crédito será debitado?](#faq_charges)
+- [Não consigo localizar ou acessar minha cadeia de ferramentas. O que devo fazer?](#faq_find)
+- [Meu projeto está associado à região do Reino Unido. Após o upgrade, eu vejo mensagens de erro, meus colegas não conseguem acessar a cadeia de ferramentas e eu não vejo minha cadeia de ferramentas na página Cadeias de Ferramentas no Bluemix. O que há de errado?](#faq_uk)
 
 ## Cadeias de ferramentas
 {: #compare_toolchains}
@@ -34,7 +44,8 @@ As cadeias de ferramentas são como projetos, com algumas diferenças importante
 
 - Para acessar a cadeia de ferramentas de seu projeto atualizado, você precisa de um ID do {{site.data.keyword.Bluemix_notm}}. Antes de fazer upgrade, deve-se verificar se você tem um ID do {{site.data.keyword.Bluemix_notm}} ativo. Se você não tiver um, [inscreva-se](https://console.ng.bluemix.net/registration/).
 - Certifique-se de que o proprietário do projeto {{site.data.keyword.jazzhub_short}} esteja correto. A cadeia de ferramentas criada no seu projeto fará parte da organização {{site.data.keyword.Bluemix_notm}} desse proprietário.
-- Se você estiver planejando iniciar o upgrade, certifique-se de que seja membro de cada organização e espaço nos quais o pipeline é implementado. Qualquer administrador de projeto pode iniciar o upgrade. No entanto, se o administrador que inicia o upgrade não for membro de cada organização e espaço nos quais o pipeline é implementado, o pipeline não poderá ser criado. A pessoa que inicia o upgrade se torna o proprietário do repositório na cadeia de ferramentas.
+- Certifique-se de que a organização e o espaço nos quais você deseja criar sua cadeia de ferramentas estejam no {{site.data.keyword.Bluemix_notm}} Public na região sul dos EUA. Para confirmar que há uma organização e um espaço válidos no sul dos EUA, efetue login em [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window} e crie um espaço se você for solicitado a criar um.
+- Se estiver planejando iniciar o upgrade, certifique-se de que você seja um membro de cada organização e espaço em que o pipeline for implementado. Qualquer administrador de projeto pode iniciar o upgrade. No entanto, se o administrador que iniciar o upgrade não for um membro de cada organização e espaço em que o pipeline for implementado, o pipeline não poderá ser criado. A pessoa que inicia o upgrade se torna o proprietário do repositório na cadeia de ferramentas.
 - O Eclipse Orion {{site.data.keyword.webide}} na cadeia de ferramentas é separado do {{site.data.keyword.webide}} que está associado ao projeto. Se você usar o {{site.data.keyword.webide}} e houver mudanças não confirmadas, confirme-as antes de fazer upgrade.
 
 
@@ -45,9 +56,9 @@ As cadeias de ferramentas são como projetos, com algumas diferenças importante
 
 Quando seu projeto estiver pronto para ser submetido a upgrade, uma mensagem será exibida no cartão do projeto e na página Visão geral.
 
-![Imagem do cartão com a etiqueta Pronto para upgrade](images/card-project-to-upgrade.png)
+![Imagem do cartão com o rótulo Pronto para upgrade](images/card-project-to-upgrade.png)
 
-![Mensagem Hora de fazer upgrade](images/banner-ready-to-upgrade.png)
+![Mensagem de horário para upgrade](images/banner-ready-to-upgrade.png)
 
 **Dica:** é possível localizar projetos que estão prontos para upgrade no menu na página Meus projetos:
 
@@ -57,10 +68,18 @@ Ao iniciar o upgrade, os estágios do pipeline em seu projeto serão bloqueados.
 
 Se seu projeto usar um repositório Git hospedado no JazzHub, depois de iniciar o upgrade, o repositório será bloqueado para garantir a integridade dos dados que são movidos para a cadeia de ferramentas. Se você reverter o upgrade excluindo a cadeia de ferramentas, o repo no JazzHub será desbloqueado.
 
+Para obter detalhes integrais sobre como cada tipo de repositório é tratado no processo de upgrade, veja a tabela a seguir.
+
+|Repositório de projetos |Tipo de projeto	|Repositório de cadeias de ferramentas |
+|:----------|:------------------------------|:------------------|
+|github.com 		|Privado ou público 		|O mesmo repositório github.com com o {{site.data.keyword.Bluemix_notm}} Public.	|
+|hub.jazz.net/git		|Privado ou público 		|Um novo repositório no {{site.data.keyword.gitrepos}} com o {{site.data.keyword.Bluemix_notm}} Public.	|
+{: caption="Tabela 1. Repositórios de projeto mapeados para repositórios de cadeia de ferramentas" caption-side="top"}
+
 ## Iniciando o Processo de Upgrade
 {: #start_upgrade}
 
-Antes de iniciar o processo de upgrade, é possível vê-lo em ação no [YouTube![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://youtu.be/LSr2e3uvyLs){: new_window}.
+Antes de iniciar o processo de upgrade, é possível observá-lo em ação no [YouTube ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://youtu.be/LSr2e3uvyLs){: new_window}.
 [![Link externo para o YouTube](images/migration-video2.png)](https://youtu.be/LSr2e3uvyLs){: new_window}
 
 Para fazer upgrade de seu projeto para uma cadeia de ferramentas, siga estas etapas:
@@ -71,13 +90,7 @@ Para fazer upgrade de seu projeto para uma cadeia de ferramentas, siga estas eta
 
    Para obter uma visão geral do processo de upgrade, leia a descrição nessa página. A cadeia de ferramentas incluirá um novo pipeline que contém os mesmos estágios e tarefas que o pipeline do projeto. Além disso, a cadeia de ferramentas conterá um ponteiro para o Eclipse Orion {{site.data.keyword.webide}}, que é executado no {{site.data.keyword.contdelivery_short}}.
 
-   Neste exemplo, como o projeto usa um repositório público no github.com, a cadeia de ferramentas será conectada ao mesmo repositório GitHub. Se seu projeto usar um repositório Git hospedado no JazzHub, o conteúdo desse repositório será clonado em um novo repositório no {{site.data.keyword.gitrepos}}, que faz parte do {{site.data.keyword.contdelivery_short}}. Para obter detalhes completos sobre como cada tipo de repositório é tratado, consulte a tabela a seguir.
-
-|Repositório de projetos |Tipo de projeto	|Repositório de cadeias de ferramentas |
-|:----------|:------------------------------|:------------------|
-|github.com 		|Privado ou público 		|O mesmo repositório github.com com o {{site.data.keyword.Bluemix_notm}} Public.	|
-|hub.jazz.net/git		|Privado ou público 		|Um novo repositório no {{site.data.keyword.gitrepos}} com o {{site.data.keyword.Bluemix_notm}} Public.	|
-{: caption="Tabela 1. Repositórios de projeto mapeados para repositórios de cadeia de ferramentas" caption-side="top"}
+   Neste exemplo, como o projeto usa um repositório público no github.com, a cadeia de ferramentas será conectada ao mesmo repositório GitHub. Se seu projeto usar um repositório Git hospedado no JazzHub, o conteúdo desse repositório será clonado em um novo repositório no {{site.data.keyword.gitrepos}}, que faz parte do {{site.data.keyword.contdelivery_short}}.
 
 2. Para customizar a cadeia de ferramentas, é possível configurar algumas definições:
 
@@ -87,13 +100,13 @@ Para fazer upgrade de seu projeto para uma cadeia de ferramentas, siga estas eta
 
    - Para mudar em qual organização do {{site.data.keyword.Bluemix_notm}} criar a cadeia de ferramentas, selecione a organização no menu de sua conta:
 
-      ![Selecionador de organização do Bluemix](images/bluemix-organization-chooser.png)
+      ![Seletor da organização do Bluemix](images/bluemix-organization-chooser.png)
 
    Como as cadeias de ferramentas são gerenciadas no nível de organização, certifique-se de selecionar uma organização na qual os membros do projeto que precisam acessar as cadeias de ferramentas já existam ou possam ser incluídos.
 
 3. Se você usou Track & Plan em seu projeto, é possível transferir os dados do Track & Plan para o GitHub Issues.
 
-   ![Opções do Track and Plan](images/upgrade-tutorial-track-and-plan.png)
+   ![Opções de Track and Plan](images/upgrade-tutorial-track-and-plan.png)
 
    - Indique se você deseja migrar seus dados do Track & Plan.
    - Por padrão, todos os dados do Track & Plan são migrados. Se você preferir migrar apenas os itens de trabalho que fazem parte de uma consulta específica, especifique essa consulta.
@@ -101,7 +114,7 @@ Para fazer upgrade de seu projeto para uma cadeia de ferramentas, siga estas eta
 
 4. Clique em **Criar**. A nova cadeia de ferramentas é criada e sua página Visão geral é exibida.
 
-   ![Visão geral da cadeia de ferramentas submetida a upgrade](images/new-toolchain-page.png)
+   ![Visão geral da cadeia de ferramentas com upgrade](images/new-toolchain-page.png)
 
    - Para acessar seu repositório GitHub ou o rastreador de problemas associado, clique em **GitHub** ou **Problemas**.
    - Para acessar seu pipeline, clique em **Delivery Pipeline**.
@@ -109,24 +122,24 @@ Para fazer upgrade de seu projeto para uma cadeia de ferramentas, siga estas eta
 
    Se você retornar para seu projeto durante o upgrade, a mensagem do banner poderá declarar que o upgrade está em andamento, especialmente se o processo de upgrade envolve a importação de código-fonte para um novo repositório ou a importação de itens de trabalho do Track &amp; Plan como problemas.
 
-   ![Mensagem sobre projeto sendo atualizado para uma cadeia de ferramentas](images/project-being-upgraded-banner.png)
+   ![Mensagem sobre o projeto em upgrade para uma cadeia de ferramentas](images/project-being-upgraded-banner.png)
 
 ## Revisitando seu projeto
 {: #revisit_projects}
 
 Você está pronto para usar sua nova cadeia de ferramentas. Seu projeto agora está identificado como "Submetido a upgrade" e, na página Visão geral, é exibida uma mensagem de confirmação.
 
-![Imagem do cartão do projeto com a etiqueta Submetido a upgrade](images/card-upgraded-project.png)
+![Imagem do cartão do projeto com o rótulo Upgrade feito](images/card-upgraded-project.png)
 
-![Projeto submetido a upgrade](images/banner-upgraded.png)
+![Projeto com upgrade](images/banner-upgraded.png)
 
 É possível ver quais projetos foram submetidos a upgrade selecionando **Projetos submetidos a upgrade** no menu na página Meus projetos:
 
-![Imagem do item de menu Projetos submetidos a upgrade](images/menu-upgraded-projects.png)
+![Imagem do item de menu Projetos com upgrade](images/menu-upgraded-projects.png)
 
 Se for necessário reverter o upgrade, exclua sua cadeia de ferramentas. É possível excluir sua cadeia de ferramentas do menu **Mais ações** na página Visão geral da cadeia de ferramentas:
 
-![imagem da ação Excluir, no menu Mais ações](images/upgrade-tutorial-delete-toolchain.png)
+![imagem da ação Excluir no menu Mais ações](images/upgrade-tutorial-delete-toolchain.png)
 
 Quando você retornar ao seu projeto, a mensagem de upgrade será exibida novamente e um novo upgrade poderá ser feito quando você estiver pronto.
 
@@ -135,7 +148,7 @@ Quando você retornar ao seu projeto, a mensagem de upgrade será exibida novame
 
 1. Confirme se o upgrade está completo atualizando seu navegador e verificando a mensagem de que seu projeto foi "atualizado para essa cadeia de ferramentas" na página Visão geral do projeto:
 
-   ![Mensagem no banner indicando que o projeto foi atualizado](images/banner-upgraded.png)
+   ![Mensagem no banner indicando que foi feito upgrade do projeto](images/banner-upgraded.png)
 
    **Nota:** Se a mensagem disser "upgrade agora", seu upgrade falhou. Clique no link **upgrade agora** para tentar novamente.
 
@@ -143,8 +156,9 @@ Quando você retornar ao seu projeto, a mensagem de upgrade será exibida novame
 
 2. Dê aos membros da equipe acesso à cadeia de ferramentas.
     - Cada membro da equipe deve ter uma conta do {{site.data.keyword.Bluemix_notm}} válida. Os membros da equipe que não tiverem contas deverão [inscrever-se ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/registration){:new_window}.
-    - Conceda aos membros da organização (org) acesso à cadeia de ferramentas na página Gerenciar da cadeia de ferramentas. Para obter mais informações sobre o controle de acesso de cadeias de ferramentas, consulte [Gerenciando o acesso ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
-    - Se um usuário não for membro da organização à qual a cadeia de ferramentas pertence, inclua-o na organização na página Gerenciar organizações.
+    - Conceda aos membros da organização acesso à cadeia de ferramentas na página Gerenciar da cadeia de ferramentas. Os membros existentes do projeto são incluídos como membros da cadeia de ferramentas como parte do processo de upgrade. Para obter mais informações sobre o controle de acesso de cadeias de ferramentas, consulte [Gerenciando o acesso ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
+    - Se um usuário não for um membro da organização à qual a cadeia de ferramentas pertence, inclua-o na organização na página Gerenciar organizações.
+    - Se sua cadeia de ferramentas usar {{site.data.keyword.gitrepos}}, todos os membros do projeto JazzHub que possuem um ID válido do Bluemix serão incluídos no repositório do {{site.data.keyword.gitrepos}} com os mesmos privilégios que eles tinham no projeto JazzHub. Se o seu projeto JazzHub incluir membros que não têm um ID válido do Bluemix, eles deverão se registrar para um e ser incluídos no repositório.
       Para obter mais informações sobre como gerenciar organizações, consulte [Gerenciando organizações e espaços ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
 
 3. Use as ferramentas de sua cadeia de ferramentas no lugar das ferramentas de seu projeto {{site.data.keyword.jazzhub_short}}. Por exemplo, para editar código usando um navegador, use o Web IDE de sua cadeia de ferramentas.
@@ -156,7 +170,7 @@ Quando você retornar ao seu projeto, a mensagem de upgrade será exibida novame
     4. Para autenticar com o {{site.data.keyword.gitrepos}} de um cliente Git externo por meio de https, use seu nome de usuário e seu token de acesso pessoal.
     5. Se você desejar reutilizar o repositório local de seu repositório Git JazzHub, aponte o repositório para o novo repositório no {{site.data.keyword.gitrepos}}. Em um shell em um terminal, mude para o diretório no qual o repositório Git JazzHub é clonado. Insira o comando `git remote set-url`: `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        **Dica:** Para verificar quais URLs remotas estão configuradas para quais nomes remotos, use o comando `git remote -v`. O nome remoto padrão é `origin`. Se você tiver uma configuração mais avançada, o formato do comando será este: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        **Dica:** Para verificar quais URLs remotas estão configuradas para quais nomes remotos, use o comando `git remote -v`. O nome remoto padrão é `origin`. Se você tiver uma configuração mais avançada, o formulário do comando será o seguinte: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
 5. Quando sua cadeia de ferramentas estiver configurada e você tiver começado a usá-la, considere executar todas ou qualquer uma dessas etapas para assegurar que ninguém use seu projeto:
     - Inclua um sufixo no nome do projeto para indicar que ele não deve ser usado. Você poderá incluir `_DO_NOT_USE` no final do nome do projeto.
@@ -170,4 +184,115 @@ Quando você retornar ao seu projeto, a mensagem de upgrade será exibida novame
 ## Solucionando problemas
 {: #upgrade_troubleshoot}
 
-Se você tiver perguntas ou problemas, acesse o [fórum de suporte](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services). No post do fórum, inclua as URLs em seu projeto {{site.data.keyword.jazzhub_short}} e na cadeia de ferramentas do {{site.data.keyword.contdelivery_short}} e identifique seu post com a tag `devops-services`.
+Se você encontrar um problema durante o processo de upgrade, tente uma ou mais destas etapas de resolução de problemas:
+
+- Verifique os [pré-requisitos](#upgrade_prereqs) para assegurar que os atenda. Em particular, certifique-se de que você seja um membro de cada organização e espaço em que o pipeline for implementado.
+- Se o problema ocorreu durante sua primeira tentativa de upgrade e você atende a todos os pré-requisitos, tente o upgrade novamente.
+- Se seu projeto usar o Jazz SCM ou IBM Hosted Git para controle de fonte, verifique o tamanho do repositório. Se ele for maior que 500 MB, [entre em contato com a equipe de serviços do DevOps ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}.
+- Se não for possível localizar ou acessar sua cadeia de ferramentas, veja [esta entrada de FAQ](#faq_find).
+- Se você continuar a encontrar problemas, poste uma pergunta no [fórum de suporte ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}. No post do fórum, inclua as URLs em seu projeto {{site.data.keyword.jazzhub_short}} e na cadeia de ferramentas do {{site.data.keyword.contdelivery_short}} e identifique seu post com a tag `devops-services`.
+
+
+## Perguntas Mais Freqüentes
+{: #upgrade_faq}
+
+### Meu projeto JazzHub está associado à região do Reino Unido, mas minha cadeia de ferramentas estará na região sul dos EUA. Como isso funcionará?
+{: #faq_region}
+
+Os projetos no hub.jazz.net e as cadeias de ferramentas são ambos hospedados na região sul dos EUA. Se seu projeto foi configurado para implementar apps em uma região diferente, como a região do Reino Unido, ele ainda implementará apps nessa região após o upgrade para uma cadeia de ferramentas. Portanto, nada está realmente mudando com relação a qual lugar os dados são hospedados. As cadeias de ferramentas estarão disponíveis em mais regiões no futuro.
+
+### O que acontecerá com meus itens de trabalho e painéis em Track &amp; Plan quando eu fizer upgrade?
+{: #faq_tp}
+
+O serviço {{site.data.keyword.contdelivery_short}} fornece recursos de rastreamento de problemas por meio do {{site.data.keyword.gitrepos}}, que é hospedado pela IBM e baseado no GitLab Community Edition. O {{site.data.keyword.contdelivery_short}} também suporta integrações com outras ferramentas de planejamento e rastreamento de problemas, como GitHub Issues e JIRA.
+
+Durante o processo de upgrade, é possível escolher migrar seus itens de trabalho do Track &amp; Plan para o Git Issues. O GitHub Issues e o {{site.data.keyword.gitrepos}} fornecem placas kanban e rastreamento de problemas para planejamento. Para saber mais sobre Placas de problemas, que é o recurso kanban no Git Repos and Issue Tracking, veja [Placa de problema ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window}.
+
+Para clientes que requerem a mesma função que o JazzHub Track &amp; Plan descontinuado, um novo serviço IBM Track and Plan on Cloud está disponível para compra separadamente em países selecionados em uma base por usuário por mês. Com esse serviço de nuvem, você obtém a função integral, equivalente a licenças do contribuidor do Rational Team Concert&trade;, em uma assinatura de nuvem de locatário único.
+
+Esse novo serviço IBM Track and Plan on Cloud fornece muito mais capacidade do que o JazzHub Track &amp; Plan descontinuado, suportando customização do processo, hierarquias do projeto, SAFe&reg; e muitos outros métodos ágeis e híbridos, além de escalabilidade para crescer além um único projeto. Ele é baseado na versão mais recente do Rational Team Concert 6.0.3 e estará na versão 6.0.4 nos próximos 60 dias, enquanto o JazzHub Track &amp; Plan era baseado no Rational Team Concert 5.x. Uma migração de dados é possível para o IBM Track and Plan on Cloud por meio de serviços adicionais. É possível entrar em contato com [Tom Hollowell ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](mailto:trhollow@us.ibm.com){:new_window}, Connected Products SaaS Sales Leader, para obter mais informações.
+
+Para obter informações sobre o IBM Track and Plan on Cloud ou para comprar on-line, visite [IBM Marketplace ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}.
+
+Para comprar também o Build Automation and Source Code Management, o [Rational Team Concert on Cloud ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window} é uma opção.
+
+### O que acontecerá com meu repositório de código quando eu fizer upgrade?
+{: #faq_repo}
+
+Após o upgrade, seu novo serviço Git será comparável ao que você tinha antes. Se você usava github.com com seu projeto JazzHub, sua cadeia de ferramentas será conectada ao mesmo repositório GitHub. Se o seu projeto JazzHub usava o IBM Hosted Git, o conteúdo desse repositório será clonado em um novo repositório no {{site.data.keyword.gitrepos}}, que faz parte do {{site.data.keyword.contdelivery_short}} e hospedado pela IBM.
+
+Para obter detalhes integrais sobre como cada tipo de repositório é tratado no processo de upgrade, veja a tabela a seguir.
+
+|Repositório de projetos |Tipo de projeto	|Repositório de cadeias de ferramentas |
+|:----------|:------------------------------|:------------------|
+|github.com 		|Privado ou público 		|O mesmo repositório github.com com o {{site.data.keyword.Bluemix_notm}} Public.	|
+|hub.jazz.net/git		|Privado ou público 		|Um novo repositório privado ou público no {{site.data.keyword.gitrepos}} com o {{site.data.keyword.Bluemix_notm}} Public.	|
+{: caption="Tabela 1. Repositórios de projeto mapeados para repositórios de cadeia de ferramentas" caption-side="top"}
+
+
+### O que acontecerá com minhas definições de construção no meu projeto quando eu fizer upgrade para uma cadeia de ferramentas.
+{: #faq_build}
+
+Se você está construindo seu código-fonte usando o Jazz em vez do Delivery Pipeline, deve-se migrar manualmente suas definições de construção para o Delivery Pipeline em sua cadeia de ferramentas.
+
+Se você está usando o Jazz SCM como um repositório de origem e usando o Delivery Pipeline para construir seu código, a origem no Jazz SCM será movida automaticamente para um repositório Git. Sua configuração do Delivery Pipeline permanecerá igual, exceto que consumirá a origem do repositório Git em vez da origem do Jazz SCM.
+
+### Preciso criar uma organização para meu projeto que será submetido a upgrade para uma cadeia de ferramentas. Eu entendo que preciso incluir um cartão de crédito em minha conta antes que eu possa criar uma organização. Meu cartão de crédito será debitado?
+{: #faq_charges}
+
+Como um [cliente de Pagamento por uso ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}, se usar qualquer tempo de execução, serviço ou componente além das dotações livres que estão listadas para ele no catálogo do Bluemix, você será cobrado. Para uma estimativa de uso, veja a [folha de precificação ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}. Para precificação atual para o Continuous Delivery, veja o [catálogo do Bluemix ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}.
+
+Se você for um funcionário IBM, projetos IBM internos poderão ser faturados para departamentos em vez de um cartão de crédito pessoal. Se você precisar usar recursos além das dotações grátis para funcionários IBM, crie um chamado de suporte.
+
+### Eu não consigo localizar ou acessar minha cadeia de ferramentas. O que devo fazer?
+{: #faq_find}
+
+As cadeias de ferramentas são hospedadas nas organizações do Bluemix. O processo de upgrade inclui todos os membros do projeto JazzHub na cadeia de ferramentas. No entanto, a menos que o proprietário da organização do Bluemix inclua esses usuários na organização, eles não poderão ver a cadeia de ferramentas.
+
+Para acessar sua cadeia de ferramentas, acesse o Bluemix, clique no ícone de menu e clique em **Serviços &gt; DevOps**. A página Cadeia de Ferramentas é aberta. Certifique-se de que você está na região Sul dos EUA e que você está na organização que contém a cadeia de ferramentas. Se sua cadeia de ferramentas não for listada na página Cadeia de Ferramentas, consulte [esta entrada da FAQ](#faq_uk).
+
+Como alternativa, enquanto o site JazzHub ainda está disponível, é possível acessar sua cadeia de ferramentas clicando no link no banner na página Visão geral do seu projeto.
+
+### Meu projeto está associado à região Reino Unido. Após o upgrade, eu vejo mensagens de erro, meus colegas não conseguem acessar a cadeia de ferramentas e eu não vejo minha cadeia de ferramentas na página Cadeias de Ferramentas no Bluemix. O que está errado?
+{: #faq_uk}
+
+**Pergunta completa:**
+
+Meu projeto do JazzHub está associado à região Reino Unido do {{site.data.keyword.Bluemix_notm}}, de acordo com as configurações do projeto. Verifiquei minhas configurações do projeto acessando sua página de visão geral no JazzHub, clicando no ícone **Configurações**, o qual se parece com uma engrenagem, e clicando em **Opções &gt; Tornar isso um Projeto do Bluemix: região**. Após fazer upgrade do projeto para a cadeia de ferramentas nos EUA, ocorrem esses problemas:
+
+   1. Quando eu seleciono a organização nos EUA, vejo uma mensagem dizendo que a organização não tem um espaço na região Sul dos EUA e é solicitado que eu crie um espaço. Não desejo executar nada nos EUA.
+   
+   2. Alguns de meus colegas não conseguem acessar a cadeia de ferramentas, embora estejam listados como membros no projeto do JazzHub original. Se eles tentarem abrir a cadeia de ferramentas na página de visão geral do aplicativo na região Reino Unido clicando em **Visualizar cadeia de ferramentas**, verão uma mensagem de "acesso negado".
+   
+   3. Eu não vejo a cadeia de ferramentas listada em minha página Cadeia de Ferramentas em [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window}, embora possa acessar a cadeia de ferramentas diretamente na página de visão geral do aplicativo na região Reino Unido clicando em **Visualizar cadeia de ferramentas**. Eu recebo um erro de que não posso modificar a cadeia de ferramentas ou recebo um erro de que não possuo nenhuma cadeia de ferramentas e preciso criar uma. 
+
+**Resposta:**
+
+Esses problemas podem ocorrer se você veio de uma organização do {{site.data.keyword.Bluemix_notm}} que não é dos EUA e não expandiu sua organização explicitamente para a região Sul dos EUA antes de fazer upgrade. Você pode confirmar isso de duas maneiras:
+
+   * Quando você abrir a URL da cadeia de ferramentas, verifique o cabeçalho do {{site.data.keyword.Bluemix_notm}}. Muito provavelmente você verá o nome de sua organização e nenhum espaço será indicado.
+   
+   * Na página Visão Geral de sua cadeia de ferramentas, clique em **Gerenciar**. Na página Controle de Acesso, clique no link **Gerenciadores da organização**. A organização que contém a cadeia de ferramentas é listada na página principal.
+
+O que aconteceu foi que, no momento do upgrade, sua organização que não é dos EUA não existia nos EUA, portanto, o upgrade selecionou outra organização para você procurando uma à qual você tem acesso.
+
+Se você alternar para essa organização do {{site.data.keyword.Bluemix_notm}} nos EUA, poderá localizar a cadeia de ferramentas. Se você incluir seus colegas nessa organização, eles terão o acesso concedido. Esta cadeia de ferramentas pode continuar implementando sua organização que não é dos EUA. O único problema é que essas duas organizações são distintas; você não consegue executar o gerenciamento do usuário em ambas automaticamente.
+
+Se você deseja que sua cadeia de ferramentas esteja em uma organização dos EUA que corresponda à sua organização que não é dos EUA, siga essas etapas:
+
+   1. Efetue login em [https://console.bluemix.net ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net){: new_window} e selecione a região que não é dos EUA e a organização da qual você está vindo.
+   
+   2. No cabeçalho do {{site.data.keyword.Bluemix_notm}}, alterne para a região Sul dos EUA. Será solicitado que você crie um espaço nessa região.
+   
+   3. Crie um espaço na região Sul dos EUA para expandir sua organização para essa região. 
+   
+   4. Exclua a cadeia de ferramentas que foi criada por meio do processo de upgrade. 
+   
+      **Nota:** o repositório Git não é excluído automaticamente. Você pode desejar excluí-lo manualmente ou renomeá-lo agora. Se você já fez mudanças nela, poderá alternar a cadeia de ferramentas futura para usá-la posteriormente.
+
+   5. Retorne ao projeto do JazzHub. Ele deve se reconfigurar para outra tentativa de upgrade. Se ele não for reconfigurado, entre em contato com hub@jazz.net e forneça a URL do projeto.
+   
+   6. Reinicie o processo de upgrade e certifique-se de selecionar a organização adequada nos EUA, correspondendo o nome de sua organização na região que não é dos EUA.
+   
+   7. Se você manteve ou renomeou o repositório Git da tentativa de upgrade da cadeia de ferramentas anterior (consulte a etapa 4), poderá reconfigurar a placa Git em sua cadeia de ferramentas para apontar para esta URL do repositório Git. A mudança é refletida automaticamente no pipeline. Para confirmar, marque a guia Entrada no estágio Construção.
+

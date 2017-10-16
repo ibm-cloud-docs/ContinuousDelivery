@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2017-4-11"
+lastupdated: "2017-7-10"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -19,7 +19,7 @@ lastupdated: "2017-4-11"
 # Propriedades e recursos do ambiente
 {: #deliverypipeline_environment}
 
-É possível usar as propriedades e os recursos pré-instalados do ambiente para interagir com o serviço IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}}. Por exemplo, você poderá incorporá-los em um script de tarefa ou comando de teste.
+É possível usar propriedades do ambiente e recursos pré-instalados para interagir com o recurso de pipeline do {{site.data.keyword.contdelivery_full}}. Por exemplo, você poderá incorporá-los em um script de tarefa ou comando de teste.
 {:shortdesc}
 
 É possível incluir suas próprias propriedades do ambiente em um estágio a partir
@@ -67,8 +67,9 @@ As propriedades e recursos a seguir estão disponíveis, por padrão, em ambient
 | IDS_PROJECT_NAME | O nome do projeto, exemplo <code>Owner - Project Name</code>. |
 | IDS_STAGE_NAME | O nome do estágio atual. |
 | IDS_URL | A URL para o pipeline atual. |
-| IDS_VERSION | O número da construção que está sendo implementada ou o identificador do SCM. Essa propriedade está disponível somente para tarefas de implementação.
+| IDS_VERSION | O número da construção que está sendo implementada ou o identificador do SCM. Essa propriedade está disponível somente em tarefas de implementação.
 | JOB_NAME | O ID exclusivo da tarefa no contexto do pipeline atual. |
+| PIPELINE_KUBERNETES_CLUSTER_NAME | O nome do cluster do Kubernetes que é selecionado na tarefa atual. |
 | PIPELINE_STAGE_INPUT_JOB_ID | O ID da tarefa que é a entrada para o estágio atual. |
 | PIPELINE_STAGE_INPUT_REV | A revisão da entrada para o estágio atual. |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | O ID exclusivo para a execução do pipeline. |
@@ -81,12 +82,15 @@ As propriedades e recursos a seguir estão disponíveis, por padrão, em ambient
 | Propriedade do ambiente | Descrição |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | ANT_HOME | O caminho para o Apache Ant 1.9.2. |
+| ANT_JAVA8_HOME | O caminho para uma versão 1.10+ do Apache Ant que requer Java 8. |
 | GRADLE_HOME | O caminho para o Gradle 1.11. |
 | JAVA_HOME | O caminho para o IBM&reg; Java&trade; 7. |
 | JAVA7_HOME | O caminho para o IBM Java 7. |
 | JAVA8_HOME | O caminho para o IBM Java 8. |
 | MAVEN_HOME | O caminho para o Apache Maven 3.2.1. |
 | NODE_HOME | O caminho para o Node.js 0.10.29. |
+
+**Dica**: é possível usar a versão 1.10+ do Apache Ant em scripts do seu pipeline configurando `ANT_HOME` para `$ANT_JAVA8_HOME` e `JAVA_HOME` para `$JAVA8_HOME`.
 
 ### Propriedades de implementação
 
@@ -103,7 +107,7 @@ As propriedades e recursos a seguir estão disponíveis, por padrão, em ambient
 ## Recursos pré-instalados
 {: #deliverypipeline_resources}
 
-Vários tempos de execução, ferramentas e módulos do Node são pré-instalados em cada pipeline.
+Vários tempos de execução, ferramentas e módulos de Nó são pré-instalados em cada pipeline.
 
 ### Tempos de execução e ferramentas
 

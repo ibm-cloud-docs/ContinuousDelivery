@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-16"
+lastupdated: "2017-7-17"
 
 ---
 
@@ -61,6 +61,8 @@ lastupdated: "2017-5-16"
 
 將使用者新增至與工具鏈相關聯的組織以及工具鏈的存取控制清單，即可將工具鏈存取權授與使用者。每一個工具鏈都會與特定組織相關聯，而且任何屬於該組織成員的使用者都可以新增至任何相關聯工具鏈的存取控制清單。您目前在其中工作的組織會顯示在功能表列上。若要存取一組不同的工具鏈，請切換至不同的組織。
 
+**提示：**您必須將使用者新增至工具鏈管理所在地區的工具鏈組織。因為工具鏈目前只在美國南部地區進行管理，所以您必須將使用者新增至美國南部地區的組織。如果工具鏈配置成將應用程式部署至不同地區，則仍會將應用程式部署至該地區。
+
 如果您使用的是 {{site.data.keyword.ghe_short}} 的「{{site.data.keyword.Bluemix_notm}} 專用」，則將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，使用者可以使用其 {{site.data.keyword.Bluemix_notm}} ID 及密碼來登入 {{site.data.keyword.ghe_short}}。使用者登入時，就會建立他們的帳戶。將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，並不會將他們自動新增至 {{site.data.keyword.ghe_short}} 儲存庫。必須由具有儲存庫管理專用權的人員來新增他們。如需相關資訊，請參閱[使用專用 GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，請遵循內部程序。
 
 ###管理工具鏈存取權的提示
@@ -107,3 +109,10 @@ lastupdated: "2017-5-16"
 1. 鍵入工具鏈名稱，然後按一下**刪除**，來確認刪除。  
 
  **提示**：當您刪除 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}} 工具整合時，不會從 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}} 刪除相關聯的儲存庫。您必須手動移除儲存庫。
+
+##使用指導教學：使用工具鏈
+{: #toolchain-tutorial}
+
+請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method){:new_window} 上的這個指導教學：
+  * [建立及使用您的第一個工具鏈 (GitHub) ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [使用 {{site.data.keyword.DRA_short}} (v2) 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

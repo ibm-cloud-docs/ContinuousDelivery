@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+
+lastupdated: "2017-8-18"
+
 
 ---
 
@@ -27,7 +29,7 @@ lastupdated: "2017-4-28"
 
 1. {{site.data.keyword.Bluemix_notm}} 퍼블릭을 사용 중이면 [{{site.data.keyword.Bluemix_notm}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://console.bluemix.net){:new_window}에 로그인하십시오. 
 1. {{site.data.keyword.Bluemix_notm}} 데디케이티드를 사용 중이면 {{site.data.keyword.Bluemix_notm}}의 데디케이티드 환경에 로그인하십시오. 
-1. {{site.data.keyword.Bluemix_notm}} 메뉴 표시줄의 메뉴에서 **서비스**를 클릭한 후 **DevOps**를 클릭하십시오.
+1. {{site.data.keyword.Bluemix_notm}} 메뉴 표시줄의 메뉴에서 **DevOps**를 클릭하십시오.
 1. DevOps 대시보드의 **도구 체인** 페이지에서 **도구 체인 작성**을 클릭하십시오. 
 1. **도구 체인 작성** 페이지에서 도구 체인 템플리트를 클릭하십시오. 
 1. 작성하려는 도구 체인의 다이어그램을 검토하십시오. 다이어그램은 도구 체인에서 해당 라이프사이클 단계(Phase)에 있는 각 도구 통합을 보여줍니다. 
@@ -74,3 +76,11 @@ lastupdated: "2017-4-28"
 2. 도구 체인에 있는 도구 통합에 액세스하려면 도구를 클릭하십시오. 
 
  **팁**: 둘 이상의 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소가 있는 경우, 각 저장소가 자체 카드에 의해 표시되므로 동일한 도구 통합에 대해 여러 개의 카드가 있을 수 있습니다. 둘 이상의 파이프라인이 있는 경우, 각 파이프라인이 자체 카드에 의해 표시되므로 동일한 도구 통합에 대해 여러 개의 카드가 있을 수 있습니다. 예를 들어, 사용자가 마이크로서비스 도구 체인을 작성하면 3개 마이크로서비스 각각에는 자체 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소 및 자체 파이프라인이 있습니다. 
+
+## 튜토리얼 보기: 도구 체인 사용
+{: #toolchain_tutorials}
+
+[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method){:new_window}에 있는 다음 튜토리얼 중 하나를 확인하십시오. 
+  * [Create and use your first toolchain (GitHub)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Create a toolchain that uses Git Repos and Issue Tracking![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Add a toolchain to an app![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?task=1){:new_window}

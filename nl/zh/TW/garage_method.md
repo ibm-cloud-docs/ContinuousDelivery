@@ -21,7 +21,7 @@ lastupdated: "2017-6-5"
 # 持續交付作法
 {: #gm_cd_best}
 
-![Garage Method 階段](images/garage_method_phases.png)  [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method){:new_window} 是 IBM 為了快速交付吸引人的應用程式所採用的方式。它結合了持續交付與 IBM Design Thinking、精實 (lean)、DevOps 及敏捷作法。這些作法著重在雲端，但有益於任何軟體開發工作。
+![Garage Method 階段](images/garage_method_phases.png) [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method){:new_window} 是 IBM 為了快速交付吸引人的應用程式所採用的方式。它結合了持續交付與 IBM Design Thinking、精實 (lean)、DevOps 及敏捷作法。這些作法著重在雲端，但有益於任何軟體開發工作。
 
 
 ## 採用持續交付作法
@@ -32,7 +32,7 @@ lastupdated: "2017-6-5"
 ## 持續交付文章
 {: #gm_cd_articles}
 
-這些文章提供持續交付的概念性概觀。
+Cloud Garage Method 網站包含高階說明持續交付的文章。
 
 [Continuous Delivery ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window} 是一種用來建置及部署軟體的作法，隨時都可以投入正式作業。其中一項電腦科學特徵是縮短開發及作業處理程序中的各種循環時間。
 

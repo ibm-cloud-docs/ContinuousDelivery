@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-1"
+lastupdated: "2017-6-9"
 
 ---
 
@@ -65,7 +65,7 @@ Eclipse Orion {{site.data.keyword.webide}} は、Web 開発を行うことので
 ### キーボード・ショートカット
 {{site.data.keyword.webide}} のコマンドの多くは、キーボード・ショートカットでもアクセス可能です。
 
-エディターのキーボード・ショートカットのリストを表示するには、Alt+Shift+? を押します。Mac OS を使用している場合は、Ctrl+Shift+? を押します。
+エディターのキーボード・ショートカットのリストを表示するには、**「ツール (Tools)」** > **「キーの表示 (Show keys)」**をクリックします。または、Alt+Shift+? を押すか、MacOS の場合は Ctrl+Shift+? を押してリストを表示することもできます。キーの上に移動し、鉛筆をクリックして新しいキー・バインディングを入力することで、ショートカットをカスタマイズできます。
 
 ## ソース・コードの管理
 {: #sourcecontrol}
@@ -92,7 +92,8 @@ Eclipse Orion {{site.data.keyword.webide}} は、Web 開発を行うことので
 Node.js アプリを開発している場合は、ライブ編集モードを有効にします <img  src="./images/enable_live_edit.png"  alt="ライブ編集を有効にするスライダー">。
 
 <table><tr><td><img src="./images/live_edit_restart.png"  alt="ライブ編集再開アイコン"></td><td>ライブ編集モードを有効にして、再デプロイメントなしでアプリを素早く再始動します</td></tr>
-<tr><td> <img src="./images/debug_icon.png"  alt="デバッグ・アイコン"></td><td>ライブ編集モードを有効にして、デバッガーにアクセスします
+<tr><td> <img src="./images/debug_icon.png"  alt="デバッグ・アイコン"></td>
+<td>ライブ編集モードを有効にして、デバッガーにアクセスします
 </td></tr>
 </table>
 
@@ -203,7 +204,15 @@ Eclipse Orion {{site.data.keyword.webide}} では、JavaScript、HTML、CSS、Ma
 </li><li>git config
 </li><li>cfignore
 </li><li>properties
-</ul>
+</li></ul>
 </td>
 </tr>
 </table>
+
+## チュートリアルを始める: Eclipse Orion Web IDE
+{: #toolchain_tutorials}
+
+[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method){:new_window} の以下のチュートリアルのいずれかをチェックアウトします。
+  * [Create and use your first toolchain (GitHub) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Create a toolchain that uses Git Repos and Issue Tracking ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Create and use a microservices toolchain with DevOps Insights (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

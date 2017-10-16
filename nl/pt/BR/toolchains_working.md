@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+
+lastupdated: "2017-8-18"
+
 
 ---
 
@@ -26,11 +28,11 @@ você criar uma cadeia de ferramentas, certifique-se de estar trabalhando na org
 ##Criando uma cadeia de ferramentas com base em um modelo   
 {: #creating_a_toolchain_from_a_template}
 
-É possível usar um modelo como um ponto de início para [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/devops/create){: new_window} que inclua um conjunto específico de integrações de ferramentas. Saiba mais sobre como usar os modelos no [IBM Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/category/tools){:new_window}.
+É possível usar um modelo como um ponto de início para [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/create){: new_window} que inclua um conjunto específico de integrações de ferramenta. Saiba mais sobre como usar os modelos no [IBM Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/category/tools){:new_window}.
 
-1. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, efetue login no [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://console.ng.bluemix.net){:new_window}.
+1. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, efetue login no [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://console.bluemix.net){:new_window}.
 1. Se você usar o {{site.data.keyword.Bluemix_notm}} Dedicated, efetue login no ambiente Dedicated no {{site.data.keyword.Bluemix_notm}}.
-1. No menu da barra de menus do {{site.data.keyword.Bluemix_notm}}, clique em **Serviços** e, em seguida, clique em **DevOps**.
+1. No menu na barra de menus do {{site.data.keyword.Bluemix_notm}}, clique em **DevOps**.
 1. No painel DevOps, na página **Cadeias de ferramentas**, clique em **Criar uma cadeia de ferramentas**.
 1. Na página **Criar uma cadeia de ferramentas**, clique em um
 modelo de cadeia de ferramentas.
@@ -39,9 +41,8 @@ mostrará cada integração de ferramenta em sua fase de ciclo de vida na cadeia
 
  **Dica**: alguns dos modelos de cadeia de ferramentas têm múltiplas instâncias de uma integração de ferramenta. Por exemplo, o modelo de cadeia de ferramentas de Microsserviços no {{site.data.keyword.Bluemix_notm}} Public contém três instâncias do GitHub e três instâncias do Delivery Pipeline, uma para cada um dos três microsserviços.
 
- O diagrama na imagem a seguir é um exemplo. Ao criar
-uma cadeia de ferramentas, o diagrama mostrará cada integração de ferramenta que é parte da cadeia de ferramentas.
-![Diagrama da cadeia de ferramentas](images/toolchain_diagram.png)
+ O diagrama na imagem a seguir é um exemplo. Ao criar uma cadeia de ferramentas, o diagrama mostra cada integração de ferramenta que faz parte da cadeia de ferramentas.
+ ![Diagrama de cadeia de ferramentas](images/toolchain_diagram.png)
 
 1. Revise as informações padrão para as configurações da cadeia de ferramentas. O nome da cadeia de ferramentas as identifica em
 {{site.data.keyword.Bluemix_notm}}. Se você desejar usar um nome diferente, mude
@@ -91,3 +92,11 @@ Após configurar a cadeia de ferramentas e as suas integrações de ferramenta, 
 2. Para acessar uma integração de ferramenta que esteja em sua cadeia de ferramentas, clique na ferramenta.
 
  **Dica**: se você tiver mais de um GitHub, {{site.data.keyword.ghe_short}} ou repositório Git, poderá ter múltiplos cartões para a mesma integração de ferramenta porque cada repositório é representado por seu próprio cartão. Se você tiver mais de um pipeline, poderá ter múltiplos cartões para a mesma integração de ferramenta porque cada pipeline será representado por seu próprio cartão. Por exemplo, quando você cria uma cadeia de ferramentas de Microsserviços, cada um dos três microsserviços tem seu próprio GitHub, {{site.data.keyword.ghe_short}} ou repositório Git e seu próprio pipeline.
+
+## Consulte o tutorial: Usando cadeias de ferramentas
+{: #toolchain_tutorials}
+
+Consulte um desses tutoriais no [IBM&reg; Cloud Garage Method ![Ícon de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method){:new_window}:
+  * [Crie e use sua primeira cadeia de ferramentas (GitHub) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Crie uma cadeia de ferramentas que usa Git Repos e Issue Tracking ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Incluir uma cadeia de ferramentas em um app ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?task=1){:new_window}

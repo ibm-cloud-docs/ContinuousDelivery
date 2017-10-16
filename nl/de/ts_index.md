@@ -25,7 +25,7 @@ Hier erhalten Sie Antworten auf allgemeine Fragen zur Fehlerbehebung im Zusammen
 Sie sind nicht mit GitHub autorisiert.
 {:shortdesc}
 
-Wenn Sie {{site.data.keyword.Bluemix_notm}} nicht für den Zugriff auf Ihr GitHub-Konto autorisiert haben, kann eines der folgenden Probleme auftrete:
+Wenn {{site.data.keyword.Bluemix_notm}} nicht für den Zugriff auf Ihr GitHub-Konto autorisiert ist, kann eines der folgenden Probleme auftreten:
 {: tsSymptoms}
 
  * Bei dem Versuch, die GitHub-Toolintegration zu Ihrer Toolchain hinzuzufügen, wird die Toolintegration nicht hinzugefügt.
@@ -38,14 +38,14 @@ Wenn Sie die GitHub-Toolintegration konfigurieren, während Sie die Toolchain er
 {: tsResolve}
 
   1. Klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **GitHub**.
-  1. Wenn Sie die Toolchain unter {{site.data.keyword.Bluemix_notm}} Public erstellen und {{site.data.keyword.Bluemix_notm}} nicht für den Zugriff auf GitHub autorisiert haben, klicken Sie auf **Autorisieren**, um zur GitHub-Website zu wechseln.
-  1. Wenn keine aktive GitHub-Sitzung existiert, werden Sie aufgefordert, sich anzumelden. Klicken Sie auf **Anwendung autorisieren**, um {{site.data.keyword.Bluemix_notm}} den Zugriff auf Ihr GitHub-Konto zu erlauben. Falls eine aktive GitHub-Sitzung existiert, Sie Ihr Kennwort aber bereits vor einiger Zeit eingegeben haben, werden Sie möglicherweise aufgefordert, Ihr GitHub-Kennwort durch erneute Eingabe zu bestätigen.
+  1. Wenn Sie die Toolchain unter {{site.data.keyword.Bluemix_notm}} Public erstellen und {{site.data.keyword.Bluemix_notm}} nicht für den Zugriff auf GitHub autorisiert ist, klicken Sie auf **Autorisieren**, um zur GitHub-Website zu wechseln.
+  1. Wenn keine aktive GitHub-Sitzung existiert, werden Sie aufgefordert, sich anzumelden. Klicken Sie auf **Anwendung autorisieren**, um {{site.data.keyword.Bluemix_notm}} den Zugriff auf Ihr GitHub-Konto zu erlauben.
 
 Wenn Sie bereits über eine Toolchain verfügen, aktualisieren Sie die Konfiguration der GitHub-Toolintegration wie folgt:
 
  1. Klicken Sie im DevOps-Dashboard auf der Seite **Toolchains** auf die Toolchain, um die zugehörige Übersichtsseite zu öffnen. Alternativ können Sie auf der Übersichtsseite der App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** und dann auf **Übersicht** klicken.
  1. Klicken Sie auf der Karte für GitHub auf das Menü und klicken Sie dann auf **Konfigurieren**.
- 1. Aktualisieren Sie die Konfigurationseinstellungen so, dass {{site.data.keyword.Bluemix_notm}} die Autorisierung für den Zugriff auf GitHub erhält. Klicken Sie auf **Autorisieren**, um zur GitHub-Website zu wechseln. Wenn keine aktive GitHub-Sitzung existiert, werden Sie aufgefordert, sich anzumelden. Klicken Sie auf **Anwendung autorisieren**, um {{site.data.keyword.Bluemix_notm}} den Zugriff auf Ihr GitHub-Konto zu erlauben. Falls eine aktive GitHub-Sitzung existiert, Sie Ihr Kennwort aber bereits vor einiger Zeit eingegeben haben, werden Sie möglicherweise aufgefordert, Ihr GitHub-Kennwort durch erneute Eingabe zu bestätigen.
+ 1. Aktualisieren Sie die Konfigurationseinstellungen so, dass {{site.data.keyword.Bluemix_notm}} die Autorisierung für den Zugriff auf GitHub erhält. Klicken Sie auf **Autorisieren**, um zur GitHub-Website zu wechseln. Wenn keine aktive GitHub-Sitzung existiert, werden Sie aufgefordert, sich anzumelden. Klicken Sie auf **Anwendung autorisieren**, um {{site.data.keyword.Bluemix_notm}} den Zugriff auf Ihr GitHub-Konto zu erlauben.
  1. Wenn Sie die Aktualisierung der Einstellungen abgeschlossen haben, klicken Sie auf **Integration speichern**.
 
 
@@ -70,7 +70,7 @@ Entfernen Sie mindestens eine Toolchain aus der Organisation und erstellen Sie d
 ## Speicherbegrenzung der Organisation wurde überschritten
 {: #org_outofmemory}
 
-Unter Umständen ist es nicht möglich, eine App auf {{site.data.keyword.Bluemix_notm}} bereitzustellen, wenn Sie die Speicherbegrenzung für Ihre Organisation überschritten haben. Wahlweise können Sie den durch Ihre Apps belegten Speicher verringern oder das Speicherkontingent Ihres Kontos heraufsetzen. Das maximale Speicherkontingent für ein Testkonto beläuft sich auf 2 GB und kann nur durch Wechseln zu einem zahlungspflichtigen Konto erweitert werden.
+Unter Umständen ist es nicht möglich, eine App auf {{site.data.keyword.Bluemix_notm}} bereitzustellen, wenn Sie die Speicherbegrenzung für Ihre Organisation überschritten haben. Wahlweise können Sie den durch Ihre Apps belegten Speicher verringern oder das Speicherkontingent Ihres Kontos heraufsetzen. Das maximale Speicherkontingent für ein Testkonto beläuft sich auf 2 GB. Das Kontingent kann durch Wechseln zu einem zahlungspflichtigen Konto erweitert werden.
 
 Beim Bereitstellen einer App auf {{site.data.keyword.Bluemix_notm}} wird eine Fehlernachricht mit folgendem Inhalt angezeigt:
 {: tsSymptoms}
@@ -110,6 +110,34 @@ Wahlweise können Sie das Speicherkontingent Ihres Kontos heraufsetzen oder den 
     3. Führen Sie für Ihre App einen Neustart durch, damit die Änderungen in Kraft treten.
 
 Weitere Informationen zu allgemeinen Problemen im Zusammenhang mit der Verwaltung Ihrer Apps finden Sie in [Fehlerbehebung bei der Verwaltung von Apps](https://console.bluemix.net/docs/troubleshoot/ts_apps.html#managingapps).
+
+
+## Ausführungsleiste enthält keine Bluemix Live Sync-Symbole in der Eclipse Orion-Web-IDE
+{: #ts_llz_lkb_3r}
+
+Sie haben eine App erstellt, aber die IBM Bluemix Live Sync-Symbole werden nicht in der Ausführungsleiste der Eclipse Orion-Web-IDE angezeigt. Es wird nicht die vollständige Ausführungsleiste mit den Live Edit-Symbolen angezeigt:
+
+![Ausführungsleiste](images/webide_runbar_light.png)   
+
+Beim Bearbeiten einer Node.js-App in der Web-IDE werden die {{site.data.keyword.Bluemix_notm}}-Symbole für Live Edit, den schnellen Neustart und das Debugging nicht in der Ausführungsleiste angezeigt.
+{: tsSymptoms}
+
+Die Symbole sind in folgenden Fällen nicht verfügbar:
+{: tsCauses}
+
+* Die Datei `manifest.yml` ist nicht auf der höchsten Ebene Ihres Projekts gespeichert. 
+* Ihre App ist in einem Unterverzeichnis und nicht im Stammverzeichnis gespeichert, aber der Pfad zum Unterverzeichnis ist nicht in der Datei `manifest.yml` angegeben. 
+* Die App enthält keine Datei `package.json`.
+
+Verwenden Sie eine der folgenden Methoden:
+{: tsResolve}
+
+* Wenn die Datei `manifest.yml` nicht im Stammverzeichnis gespeichert ist, speichern Sie sie dort.
+* Wenn Ihre App in einem Unterverzeichnis gespeichert ist, geben Sie den Pfad zum Unterverzeichnis in der Datei `manifest.yml` an.
+   ```
+    path: path_to_application
+    ```
+* Erstellen Sie eine Datei `package.json`, die sich im selben Verzeichnis wie Ihre App befindet.
 
 
 ## Toolchain wird nicht geladen
@@ -158,3 +186,60 @@ Konfigurieren Sie die Toolintegration erneut:
 
 1. Stellen Sie sicher, dass Sie gültige Konfigurationsparameter verwenden. Wenn der Fehler durch eine ungültige Konfiguration verursacht wurde, wird eine Fehlermeldung angezeigt, wie zum Beispiel `Die Integration konnte nicht eingerichtet werden. Überprüfen Sie die Einstellungen und wiederholen Sie die Operation. Ursache: Ungültiger api_key:fakeKey`. Aktualisieren Sie die Einstellungen für die Toolintegration und klicken Sie auf **Integration speichern**.
 1. Wenn der Fehler durch einen Kommunikationsfehler verursacht wurde, klicken Sie auf **Integration speichern**, um einen erneuten Versuch zu starten.
+
+
+
+<!-- ## Pipeline job failures
+{: #cannot_authorize_github}
+
+A pipeline job failed.
+{:shortdesc}
+
+Your pipeline job failed.
+{: tsSymptoms}
+
+ * Some reasons
+
+Many reasons  
+{: tsCauses}
+
+If you are configuring the GitHub tool integration while you are creating your toolchain, follow these steps:
+{: tsResolve}
+
+  1. In the Configurable Integrations section, click **GitHub**.
+  1. If you are creating the toolchain on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, click **Authorize** to go to the GitHub website.
+  1. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
+
+If you already have a toolchain, update the GitHub tool integration's configuration:
+
+ 1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**, and then click **Overview**.
+ 1. On the GitHub card, click the menu and click **Configure**.
+ 1. Update the configuration settings to authorize {{site.data.keyword.Bluemix_notm}} to access GitHub. Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
+ 1. When you are finished updating the settings, click **Save Integration**.  -->
+
+
+
+
+<!-- This is the template for a problem topic.  -->
+
+<!-- The short description section contains a brief description of problem. For example:  
+
+After you create an app on the Dashboard, you click *ADD GIT* to create a Git repository, but you cannot proceed.
+{:shortdesc} -->
+
+<!-- The symptoms section contains a description of problem symptoms. For example:  
+When you click ADD GIT, a window opens and one of these issues occur:
+- The window hangs with a blank screen.
+- A message states that a problem exists with 3rd party cookies.
+{: tsSymptoms} -->
+
+<!-- The causes section contains a brief explanation of what causes the problem. For example:  
+Your browser might be configured to prevent a cookie from being set. That cookie must be set from the IBM Bluemix DevOps Services site in the hub.jazz.net internet domain from within the context of the Bluemix console.
+{: tsCauses} -->
+
+<!-- The resolve section contains steps to resolve the problem. For example:  
+You can fix this problem in one of three ways:
+- Follow the instructions that are in the window that opens from the Bluemix console. Click the button. Another browser window opens temporarily. In that window, DevOps Services sets the authentication cookie.
+- In another browser tab, go to https://hub.jazz.net and log in. Return to the Bluemix console and refresh the page. Click ADD GIT again.
+- Change your browser settings to enable 3rd party cookies and click ADD GIT again.
+{: tsResolve} -->

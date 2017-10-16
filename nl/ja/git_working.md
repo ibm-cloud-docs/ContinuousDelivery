@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-6"
+lastupdated: "2017-6-8"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated: "2017-6-6"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Git Repos and Issue Tracking
+# {{site.data.keyword.gitrepos}}
 {: #git_working}
 
 IBM によってホストされ、[GitLab Community Edition ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://about.gitlab.com/){:new_window}上に構築されている Git リポジトリーおよび Issue Tracker を使用して、チームでの共同作業およびソース・コードの管理を行います。
@@ -25,25 +25,22 @@ IBM によってホストされ、[GitLab Community Edition ![外部リンク・
 
 **注:** このツール統合は GitLab Community Edition 上に構築され、IBM によって Bluemix 上でホストされているため、一部の GitLab オプションは使用できません。例えば、Delivery Pipeline は、Bluemix の継続的統合と継続的デリバリーを提供しているため、GitLab の継続的統合フィーチャーはサポートされません。さらに、管理機能は、IBM によって管理されているため使用できません。
 
-## ファイルおよびリポジトリーのサイズ制限
-{: #git_limits}
-
-ファイルは、厳密に 100 MB に制限されています。推奨されているリポジトリー・サイズ制限は 1 GB です。リポジトリーが 1 GB を超えると、リポジトリー・サイズの削減を要求する E メールを受け取る可能性があります。
-
-## Git Repos and Issue Tracking をローカルで使用する
+## {{site.data.keyword.gitrepos}} をローカルに使用する
 {: #git_local}
 
 {{site.data.keyword.gitrepos}} に保管されている Git リポジトリーに、ローカルからアクセスできます。ローカルで Git をセットアップする手順については、[Start using Git on the command line (コマンド・ラインでの Git の使用の開始) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window} を参照してください。
 
 **ヒント**: {{site.data.keyword.gitrepos}} は、TLS1.2 を使用する HTTPS 接続のみをサポートします。Eclipse を使用して接続する場合は、通常、使用する Java&trade; バージョンでこのプロトコルを指定する必要があります。そのためには、eclipse.ini ファイルに `-Dhttps.protocols=TLSv1.2` を追加してから Eclipse を再始動します。
 
-## GitLab の認証  
+## {{site.data.keyword.gitrepos}} の認証
 {: #git_authentication}
 
-ローカル Git リポジトリーから `clone` または `push` などのリモート Git 操作を完了するには、個人用アクセス・トークンまたは SSH 鍵を使用して GitLab の認証を行う必要があります。
+{{site.data.keyword.Bluemix_notm}} ログインとパスワードは、Web ブラウザーでの {{site.data.keyword.gitrepos}} の認証のみに使用されます。外部 Git クライアントからの認証に {{site.data.keyword.Bluemix_notm}} のユーザー資格情報を使用することはできません。ローカル Git リポジトリーから `clone` または `push` などのリモート Git 操作を完了するには、個人用アクセス・トークンまたは SSH 鍵を使用して {{site.data.keyword.gitrepos}} の認証を行う必要があります。
 
-### 個人用アクセス・トークンの作成  
-HTTPS 経由で Git リポジトリーの認証を受けるために、個人用アクセス・トークンを作成する必要があります。{{site.data.keyword.Bluemix_notm}} のログインとパスワードを {{site.data.keyword.gitrepos}} に使用できるのは、ブラウザーを使用する場合のみです。外部 Git クライアントからの認証に {{site.data.keyword.Bluemix_notm}} のユーザー資格情報を使用することはできません。
+### 個人用アクセス・トークンの作成
+{: #create_pat}
+
+**重要:** HTTPS 経由で Git リポジトリーの認証を受けるために、個人用アクセス・トークンを作成する必要があります。
 
 1. {{site.data.keyword.gitrepos}} ユーザー設定ダッシュボードの[「アクセス・トークン」ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window} で、アクセス・トークンを作成するアプリケーションの名前を入力します。例えば、`「Git CLI」`と入力します。
 1. オプション: アクセス・トークンの有効期限日を選択します。
@@ -55,6 +52,21 @@ HTTPS 経由で Git リポジトリーの認証を受けるために、個人用
 詳しくは、[Personal access tokens ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window} を参照してください。
 
 ### SSH 鍵の作成  
+{:create_ssh }
+
 SSH 鍵を作成するには、[How to create your SSH Keys ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){:new_window} を参照してください。SSH 認証を使用してリポジトリーにアクセスするには、プロキシーおよびファイアウォールの追加構成が必要な場合があります。
 
 詳しくは、[SSH ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/help/ssh/README){:new_window} を参照してください。
+
+## ファイルおよびリポジトリーのサイズ制限
+{: #git_limits}
+
+ファイルは、厳密に 100 MB に制限されています。推奨されているリポジトリー・サイズ制限は 1 GB です。リポジトリーが 1 GB を超えると、リポジトリー・サイズの削減を要求する E メールを受け取る可能性があります。
+
+## チュートリアルを始める: {{site.data.keyword.gitrepos}}
+{: #git_tutorials}
+
+[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method){:new_window} の以下のチュートリアルのいずれかをチェックアウトします。
+
+  * [Create a toolchain that uses {{site.data.keyword.gitrepos}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
+  * [Create and use a microservices toolchain with DevOps Insights (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}

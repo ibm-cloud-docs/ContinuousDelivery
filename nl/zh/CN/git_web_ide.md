@@ -14,9 +14,9 @@ lastupdated: "2017-6-1"
 # 在 Eclipse Orion Web IDE 中使用 Git
 {: #git_web_ide}
 
-使用 Eclipse Orion {{site.data.keyword.webide}} 时，无需 Git 终端：您可以在 Web IDE 中运行许多常用 Git 命令。
+您可以在 Eclipse Orion {{site.data.keyword.webide}} 中运行许多常用 Git 命令。
 
-不管您在哪里编写代码，都可以使用本快速参考来执行常用任务。
+不管您在哪里编写代码，都可以使用本快速参考来执行常用任务。如果可能，Git 命令会与其等效命令一起显示在 Web IDE 中。 
 
 ## 创建本地分支
 {: #create_branch}
@@ -86,7 +86,7 @@ lastupdated: "2017-6-1"
 
 ### Git 终端
 
-1. 输入 `git push <origin> <remote branch> -f`，然后按 Enter 键。
+1. 输入 `git push<origin> <remote branch> -f`，然后按 Enter 键。
 
 ## 废弃活动本地分支中未编译打包的更改
 {: #discard_changes}
@@ -140,7 +140,7 @@ lastupdated: "2017-6-1"
 
 1. 单击**图形表示法切换**图标 <img  class="inline" src="./images/graphicalhistoryicon.png" alt="“图形历史记录”图标">。
 
-  一旦切换后，就会将活动分支的提交历史记录以及任何入局或出局更改绘制为连通图。该可视表示法显示所有提交以及提交到的分支。
+  切换后，会将活动分支的提交历史记录以及所有传入或传出更改绘制为连接图。该可视表示法显示所有提交以及提交到的分支。
 
   <img class="screen-shot" src="./images/visualhistoryexample.png" alt="可视提交历史记录">
 
@@ -244,7 +244,7 @@ lastupdated: "2017-6-1"
 ##还原提交
 {: #revert}
 
-还原提交已引入活动分支的更改。
+还原由提交引入活动分支的更改。
 
 ### Eclipse Orion Web IDE
 

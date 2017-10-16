@@ -21,7 +21,7 @@ lastupdated: "2017-6-5"
 # 持续交付实践
 {: #gm_cd_best}
 
-![Garage Method 阶段](images/garage_method_phases.png) [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method){:new_window} 是一种 IBM 方法，用于快速交付预订的应用程序。它将持续交付与 IBM 设计思维实践、精益实践、DevOps 实践和灵敏性实践结合在一起。这些实践虽然致力于云，但也可让任何软件开发工作受益。
+![Garage Method 阶段](images/garage_method_phases.png) [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method){:new_window} 是一种 IBM 方法，用于快速交付使用中的应用程序。它将持续交付与 IBM 设计思维实践、精益实践、DevOps 实践和灵敏性实践结合在一起。这些实践虽然致力于云，但也可让任何软件开发工作受益。
 
 
 ## 采用持续交付实践
@@ -32,7 +32,7 @@ lastupdated: "2017-6-5"
 ## 持续交付文章
 {: #gm_cd_articles}
 
-以下文章提供持续交付的概念性概述。
+Cloud Garage Method 站点包含多篇介绍高级别持续交付的文章。
 
 [持续交付 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window} 是一个可用来构建和部署软件的实践，因此可随时发布到生产。计算机科学的其中一个标志是缩短了开发和操作流程的各种周期时间。
 

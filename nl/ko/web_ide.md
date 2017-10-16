@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-1"
+lastupdated: "2017-6-9"
 
 ---
 
@@ -62,9 +62,9 @@ Eclipse Orion {{site.data.keyword.webide}}는 웹용으로 개발할 수 있는 
  2. 파일 네비게이터에서 파일을 클릭하십시오. 
 
 ### 키보드 단축키
-{{site.data.keyword.webide}}에서 다수의 명령은 키보드 단축키를 통해서도 액세스할 수 있습니다. 
+{{site.data.keyword.webide}}에서 다수의 명령은 키보드 단축키를 통해 액세스할 수 있습니다. 
 
-편집기에서 키보드 단축키 목록을 보려면 Alt+Shift+?를 누르십시오. Mac OS를 사용 중인 경우에는 Ctrl+Shift+?를 누르십시오. 
+편집기에서 키보드 단축키 목록을 보려면 **도구** > **키 표시**를 누르십시오. 또는, Alt+Shift+?를 눌러 목록을 볼 수 있습니다(MacOS의 경우 Ctrl+Shift+?). 키 위로 마우스를 이동하고 연필을 클릭하고 새 키 바인딩을 입력하여 단축키를 사용자 정의할 수 있습니다.
 
 ## 소스 코드 관리
 {: #sourcecontrol}
@@ -77,10 +77,10 @@ Eclipse Orion {{site.data.keyword.webide}}는 웹용으로 개발할 수 있는 
 ## 작업공간에서 앱 배치
 {: #deploy}
 
-1. 앱을 배치하려면 실행 표시줄에서 실행 구성을 선택하거나 작성하십시오. ![실행 표시줄](images/webide_runbar_light.png)   
+1. 앱을 배치하려면 실행 표시줄에서 실행 구성을 선택하거나 작성하십시오.
+   ![실행 표시줄](images/webide_runbar_light.png)   
 1. 배치 아이콘 <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="배치 아이콘">을 클릭하십시오. 작업공간의 현재 컨텐츠와 실행 구성에 정의된 환경을 사용하여 앱의 인스턴스가 배치됩니다. 
 2. 앱이 배치되면 실행 표시줄을 사용하여 앱을 중지, 다시 시작 또는 디버그하고 로그를 보는 등의 작업을 수행할 수 있습니다.
-
 
 <table>
 <tr><td><img src="./images/stop_button.png"  alt="중지 아이콘"></td><td>앱 중지</td></tr>
@@ -92,7 +92,8 @@ Eclipse Orion {{site.data.keyword.webide}}는 웹용으로 개발할 수 있는 
 Node.js 앱을 개발하는 경우, 라이브 편집 모드를 사용하십시오. <img  src="./images/enable_live_edit.png"  alt="라이브 편집 슬라이더 사용">
 
 <table><tr><td><img src="./images/live_edit_restart.png"  alt="라이브 편집 다시 시작 아이콘"></td><td>라이브 편집 모드를 사용하여 재배치하지 않고 앱을 신속하게 다시 시작</td></tr>
-<tr><td> <img src="./images/debug_icon.png"  alt="디버그 아이콘"></td><td>라이브 편집 모드를 사용하여 디버거에 액세스
+<tr><td> <img src="./images/debug_icon.png"  alt="디버그 아이콘"></td>
+<td>라이브 편집 모드를 사용하여 디버거에 액세스
 </td></tr>
 </table>
 
@@ -158,7 +159,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 -->
 
-## 지원되는 언어
+## 지원 언어
 {: #supported_languages}
 
 Eclipse Orion {{site.data.keyword.webide}}는 컨텐츠 지원, 도구 팁, 미리보기, 유효성 검증 및 JavaScript, HTML, CSS, 마크다운 파일에 대한 구문 강조표시를 제공합니다. 구문 강조표시는 다음 파일 유형에 대해서도 지원됩니다. 
@@ -193,7 +194,8 @@ Eclipse Orion {{site.data.keyword.webide}}는 컨텐츠 지원, 도구 팁, 미�
 </li><li>TypeScript
 </li><li>Visual Basic(vb)
 </li><li>VMHTML
-</li><li>XHTML</li><li>XML
+</li><li>XHTML
+</li><li>XML
 </li><li>XQuery
 </li><li>YAML
 </li><li>시작 파일 	
@@ -201,7 +203,16 @@ Eclipse Orion {{site.data.keyword.webide}}는 컨텐츠 지원, 도구 팁, 미�
 </li><li>gitignore
 </li><li>git config
 </li><li>cfignore
-</li><li>properties</ul>
+</li><li>properties
+</li></ul>
 </td>
 </tr>
 </table>
+
+## 튜토리얼 보기: Eclipse Orion Web IDE
+{: #toolchain_tutorials}
+
+[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method){:new_window}에 있는 다음 튜토리얼 중 하나를 확인하십시오. 
+  * [Create and use your first toolchain (GitHub)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Create a toolchain that uses Git Repos and Issue Tracking![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Create and use a microservices toolchain with DevOps Insights (v2)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

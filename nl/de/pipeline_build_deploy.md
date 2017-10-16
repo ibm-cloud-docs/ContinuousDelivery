@@ -19,7 +19,7 @@ lastupdated: "2017-6-1"
 # Builderstellung und Bereitstellung
 {: #deliverypipeline_build_deploy}
 
-Der IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}}-Service ermöglicht es Ihnen, einen reproduzierbaren, kontinuierlichen Integrationsprozess und einen Continuous Delivery-Prozess zu implementieren.
+{{site.data.keyword.contdelivery_full}} enthält die Delivery Pipeline, die es Ihnen ermöglicht, einen reproduzierbaren, kontinuierlichen Integrationsprozess und einen Continuous Delivery-Prozess zu implementieren.
 {:shortdesc}
 
 Führen Sie die folgenden Aufgaben aus, um eine Pipeline zu erstellen und zu konfigurieren.
@@ -53,7 +53,8 @@ Sie können eine Stage manuell ausführen, indem Sie auf das Symbol **Stage ausf
 
 Sie können über eine von zwei Möglichkeiten auch bedarfsgerechte Builds und Bereitstellungen von der Seite für Buildprotokolle anfordern.
 * Ziehen Sie einen Build auf die Box, die sich unter einer konfigurierten Stage befindet.
-* Klicken Sie im Abschnitt für das Ergebnis der letzten Ausführung (LAST EXECUTION RESULT) auf das Symbol für **Senden an** und wählen Sie dann einen Bereich aus, in dem die Bereitstellung erfolgen soll. ![Die Stage für die Ausführung mit diesem Buildsymbol](images/deploy_to.png)
+* Klicken Sie im Abschnitt für das Ergebnis der letzten Ausführung (LAST EXECUTION RESULT) auf das Symbol für **Senden an** und wählen Sie dann einen Bereich aus, in dem die Bereitstellung erfolgen soll.
+  ![Die Stage für die Ausführung mit diesem Buildsymbol](images/deploy_to.png)
 
 Klicken Sie in der Stage auf **Protokolle und Verlauf anzeigen**, um eine aktive Stage abzubrechen. Klicken Sie in der Liste der Jobs auf die Nummer des aktiven Jobs und anschließend auf **ABBRECHEN**. Sie können Jobs auch einzeln abbrechen, indem Sie auf einen Job und anschließend auf das Symbol **Abbrechen** klicken, oder indem Sie für einen Job in seiner Stage auf das Symbol **Stopp** klicken.
 
@@ -88,3 +89,5 @@ Um das Laufzeitprotokoll einer bereitgestellten Anwendung anzuzeigen, klicken Si
 Zusätzlich zu den Jobprotokollen können Sie Komponententestergebnisse, generierte Artefakte und Codeänderungen für beliebige Buildjobs anzeigen.
 
 Sie können ferner eine Stage auf der Seite mit dem Stageverlaufsprotokoll ausführen, abbrechen oder konfigurieren. Klicken Sie auf **Ausführen**, um eine Stage auszuführen, oder klicken Sie auf **Konfigurieren**, um eine Stage zu konfigurieren. Während der Ausführung einer Stage können Sie diese abbrechen, indem Sie auf die Ausführungsnummer und anschließend auf **Abbrechen** klicken.
+
+

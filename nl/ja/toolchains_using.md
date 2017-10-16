@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-16"
+lastupdated: "2017-7-17"
 
 ---
 
@@ -61,6 +61,8 @@ lastupdated: "2017-5-16"
 
 ツールチェーンが関連付けられている組織とツールチェーンのアクセス制御リストの両方にユーザーを追加することによって、ツールチェーンへのアクセス権限をユーザーに付与できます。各ツールチェーンは特定の組織と関連付けられており、その組織のメンバーであるユーザーであればどのユーザーでも、関連付けられたツールチェーンのうちの任意のツールチェーンのアクセス制御リストに追加できます。現在作業している組織は、メニュー・バーに表示されています。ツールチェーンの別のセットにアクセスするには、別の組織に切り替えます。
 
+**ヒント:** ツールチェーンがホストされる地域のツールチェーンの組織にユーザーを追加する必要があります。ツールチェーンは現在米国南部地域でのみホストされているため、米国南部地域の組織にユーザーを追加する必要があります。異なる地域にアプリをデプロイするようにツールチェーンが構成されている場合でも、アプリは前述の地域にデプロイされます。
+
 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} を使用している場合、{{site.data.keyword.Bluemix_notm}} 組織およびスペースにユーザーを追加すると、それらのユーザーは各自の {{site.data.keyword.Bluemix_notm}} ID およびパスワードを使用して {{site.data.keyword.ghe_short}} にログインできます。ユーザーがログインするときに、ユーザーのためのアカウントが作成されます。{{site.data.keyword.Bluemix_notm}} 組織およびスペースにユーザーを追加しても、それらのユーザーが {{site.data.keyword.ghe_short}} リポジトリーに自動的に追加されることはありません。リポジトリーの管理者特権を持つ者がユーザーの追加を行う必要があります。詳しくは、[Dedicated GitHub Enterprise の使用](/docs/services/ghededicated/index.html){: new_window}を参照してください。
 独自の管理版の {{site.data.keyword.ghe_short}} を使用している場合は、内部手順に従ってください。
 
@@ -78,7 +80,7 @@ lastupdated: "2017-5-16"
 
 * ツールチェーンの組織のメンバーではないユーザーにアクセス権限を付与するには、以下のステップを実行します。
 
-   a. メニュー・バーで、**「管理」 > 「アカウント」 > 「組織」**をクリックします。
+   a. メニュー・バーで、**「管理」>「アカウント」>「組織」**をクリックします。
 
    b. **「チーム・メンバーの招待」**をクリックします。
 
@@ -109,3 +111,10 @@ lastupdated: "2017-5-16"
 1. ツールチェーンの名前を入力し、**「削除」**をクリックして、削除を確認します。  
 
  **ヒント**: GitHub、{{site.data.keyword.ghe_short}}、または {{site.data.keyword.gitrepos}} ツール統合を削除するときに、関連付けられているリポジトリーは GitHub、{{site.data.keyword.ghe_short}}、または {{site.data.keyword.gitrepos}} から削除されません。リポジトリーを手動で削除する必要があります。
+
+##チュートリアルを始める: ツールチェーンの使用
+{: #toolchain-tutorial}
+
+[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method){:new_window} で次のチュートリアルを確認します。
+  * [Create and use your first toolchain (GitHub) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

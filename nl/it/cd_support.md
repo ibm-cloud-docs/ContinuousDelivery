@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-11"
+lastupdated: "2017-07-18"
 
 ---
 
@@ -21,7 +21,7 @@ Il team {{site.data.keyword.contdelivery_full}} monitora attivamente i forum Sta
  <td align="center">
  <strong>Stack Overflow</strong>
   <p>
-   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
+   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,devops-services" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
     <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Si apre in una nuova scheda o finestra)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="Icona link esterno"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on Stack Overflow.</p></td>
   <td align="center">
@@ -41,7 +41,7 @@ Se hai riscontrato problemi più gravi con il servizio {{site.data.keyword.contd
 1. Dalla barra del menu, fai clic su **Supporto** e quindi su **Aggiungi ticket**.
 1. Completa il modello per indicare di quale tipo di supporto hai bisogno.
 
-Per ulteriori informazioni su come aprire un ticket di supporto {{site.data.keyword.Bluemix_notm}} IBM o sui livelli di supporto e sulla gravità dei ticket, consulta [Come contattare il supporto](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+Per ulteriori informazioni su come aprire un ticket di supporto {{site.data.keyword.Bluemix_notm}} IBM o sui livelli di supporto e sulla gravità dei ticket, consulta [Come contattare il supporto](https://console.bluemix.net/docs/support/index.html#contacting-support).
 
 
 ## Supporto per Bluemix

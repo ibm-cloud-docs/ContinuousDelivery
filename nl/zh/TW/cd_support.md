@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-11"
+lastupdated: "2017-07-18"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2017-4-11"
  <td align="center">
  <strong>Stack Overflow</strong>
   <p>
-   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/ask-a-question.png" alt="提問"/></a></p>
+   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,devops-services" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/ask-a-question.png" alt="提問"/></a></p>
    <p>
     <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="（在新分頁或視窗中開啟）">在 Stack Overflow 上顯示最新 <img class="image" src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services 問題。</p></td>
   <td align="center">
@@ -35,13 +35,13 @@ lastupdated: "2017-4-11"
 
 ## 支援問題單
 
-如果您有更嚴重的問題或發生 {{site.data.keyword.contdelivery_short}} 服務的問題，請開啟支援問題單。    
+如果您有更嚴重的問題或發生 {{site.data.keyword.contdelivery_short}} 服務的問題，請開立支援問題單。    
 
 1. 登入 {{site.data.keyword.Bluemix_notm}}。
 1. 從功能表列中，按一下**支援**，然後按一下**新增問題單**。
 1. 完成表單，指出您需要技術支援的部分。
 
-如需開啟 IBM {{site.data.keyword.Bluemix_notm}} 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://console.bluemix.net/docs/support/index.html#contacting-support)。
+如需開立 IBM {{site.data.keyword.Bluemix_notm}} 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://console.bluemix.net/docs/support/index.html#contacting-support)。
 
 
 ## Bluemix 支援

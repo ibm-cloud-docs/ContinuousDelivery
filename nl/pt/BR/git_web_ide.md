@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-5-8"
+lastupdated: "2017-6-1"
 ---
 
 {:new_window: target="_blank"}
@@ -14,10 +14,9 @@ lastupdated: "2017-5-8"
 # Trabalhando com Git no Eclipse Orion Web IDE
 {: #git_web_ide}
 
-Quando você usa o Eclipse Orion {{site.data.keyword.webide}}, não precisa
-do terminal do Git: é possível executar vários comandos comuns do Git no Web IDE.
+É possível executar vários comandos comuns do Git no Eclipse Orion {{site.data.keyword.webide}}.
 
-Não importa onde você codifique, é possível usar essa referência rápida para executar tarefas comuns.
+Não importa onde você codifique, é possível usar essa referência rápida para executar tarefas comuns. Quando possível, os comandos do Git são mostrados com seus equivalentes no Web IDE. 
 
 ## Criar uma ramificação local
 {: #create_branch}
@@ -38,8 +37,7 @@ Não importa onde você codifique, é possível usar essa referência rápida pa
 ### Eclipse Orion Web IDE
 1. Clique na lista **Referência** e expanda **local**.
 
-2. Ao lado da ramificação a ser modificada, clique no ícone de check-out
-<img  class="inline" src="./images/checkout.png" alt="Ícone de check-out">.
+2. Clique no ícone de check-out <img  class="inline" src="./images/checkout.png" alt="Ícone de check-out"> para a ramificação ser modificada.
 
 1. Certifique-se de que a ramificação selecionada seja mostrada na lista
 **Referência**.
@@ -70,12 +68,9 @@ remota
 ramificação for retirada, [efetue check-out de outra
 ramificação](#start_working_on_branch).
 
-1. Clique na lista **Referência** e expanda
-**local**.
+1. Clique na lista **Referência** e expanda **local**.
 
-2. Ao lado da ramificação local a ser removida, clique em
-**Excluir**
-<img class="inline"  src="./images/delete.png" alt="ícone Excluir">.
+2. Clique em **Excluir** <img class="inline"  src="./images/delete.png" alt="Ícone Excluir"> para a ramificação local ser removida.
 
 ### Terminal do Git
 1. Digite `git branch -d <branchname>` e pressione Enter.
@@ -90,15 +85,13 @@ local para uma remota, poderá perder as confirmações na ramificação remota.
 
 ### Eclipse Orion Web IDE
 
-1. Na seção Mudanças no diretório ativo, na seção Saída, clique na seta ao
-lado de **Enviar por push**.
+1. Na seção Mudanças no diretório ativo, na seção Saída, clique na seta para **Enviar por push**.
 2. Clique em **Forçar o envio da ramificação por push**.
 3. Confirme o aviso.
 
 ### Terminal do Git
 
-1. Digite `git push <origin> <remote branch> -f` e
-pressione Enter.
+1. Digite `git push <origin> <remote branch> -f` e pressione Enter.
 
 ## Descarte mudanças desmontadas da ramificação local ativa
 {: #discard_changes}
@@ -137,7 +130,7 @@ da confirmação.
   **Dica**: O resumo da confirmação deve ter menos de 50
 caracteres. A descrição da confirmação deve fornecer detalhes suficientes para que alguém
 entenda por que a mudança foi necessária sem mais informações. É possível incluir um link
-para um item no rastreador de problemas da sua equipe para ajudar. 
+para um item no rastreador de problemas da sua equipe para ajudar.
 
 5. Salve a mensagem de confirmação.
 
@@ -159,8 +152,7 @@ histórico de confirmação dessa ramificação.
 1. Clique no ícone **alternância de representação gráfica**
 <img  class="inline" src="./images/graphicalhistoryicon.png" alt="ícone Histórico gráfico">.
 
-  Quando alternado, o histórico de confirmação e quaisquer mudanças de entrada ou de
-saída para a ramificação ativa serão desenhados como um gráfico conectado. A
+  Quando alternado, o histórico de confirmação e quaisquer mudanças recebidas ou de saída para a ramificação ativa são desenhadas como um gráfico conectado. A
 representação visual mostra todas as confirmações e as ramificações que foram feitas.
 
   <img class="screen-shot" src="./images/visualhistoryexample.png" alt="Histórico de confirmação visual">
@@ -168,7 +160,7 @@ representação visual mostra todas as confirmações e as ramificações que fo
 ### Terminal do Git
 1. Digite `git log` e pressione Enter.
 
-2. Navegue pelas confirmações do responsável.
+2. Procure as confirmações do responsável.
  * Para visualizar mais entradas, pressione Page Down.
  * Para visualizar entradas anteriores, pressione Page Up.
 
@@ -183,16 +175,15 @@ mais informações, consulte [ Visualizar o histórico de confirmação](#view_c
 
 2. Visualize os detalhes da confirmação clicando nela.
 
-3. Próximo a um arquivo, clique em **>** e revise as mudanças do arquivo.
+3. Para revisar as mudanças de um arquivo, clique em **>**.
 
   **Nota:** Se uma confirmação introduziu uma mudança em uma
-linha, a linha original será sombreada de rosa e a nova linha será sombreada de verde. Da mesma forma, as linhas que foram incluídas por uma confirmação são verde sombreado e as linhas que foram removidas são rosa sombreado.
+linha, a linha original será sombreada de rosa e a nova linha será sombreada de verde.  Da mesma forma, as linhas que foram incluídas por uma confirmação são verde sombreado e as linhas que foram removidas são rosa sombreado.
 
 ### Terminal do Git
 1. Digite `git log -p` e pressione Enter.
 
-  **Nota:** Para visualizar somente um determinado número de
-confirmações, digite `git log -p -<number_of_commits_to_view>`.
+  **Nota:** para visualizar somente um determinado número de confirmações, digite `git log -p -<number_of_commits_to_view>`.
 
 2. Navegue pelas confirmações.
  * Para visualizar mais entradas, pressione Page Down.
@@ -239,8 +230,7 @@ Vim, que pode ser seu editor de texto padrão, pressione Esc, digite
 
 ### Eclipse Orion Web IDE
 1. Visualize seu histórico de confirmação e localize a confirmação. Para obter
-mais informações, consulte [ Visualizar o histórico de
-confirmação](#view_commit_history).
+mais informações, consulte [ Visualizar o histórico de confirmação](#view_commit_history).
 
 2. Visualize os detalhes da confirmação clicando nela.
 
@@ -252,11 +242,10 @@ confirmação](#view_commit_history).
 
 ### Terminal do Git
 1. Visualize o histórico de confirmação e obtenha o ID da confirmação a ser
-identificada. Para obter mais informações, consulte [
-Visualizar o histórico de confirmação](#view_commit_history).
+identificada. Para obter
+mais informações, consulte [ Visualizar o histórico de confirmação](#view_commit_history).
 
-2. Digite `git tag -a <tag_text> <commit_id>` e
-pressione Enter.
+2. Digite `git tag -a <tag_text> <commit_id>` e pressione Enter.
 
 ## Alterar o nome e o endereço de email do responsável
 {: #change_the_committer_name_and_email_address}
@@ -270,18 +259,15 @@ e user.name. Clique em **Enviar** para salvar cada mudança.
 ### Terminal do Git
 Para atualizar seu nome e endereço de e-mail de um repositório único:
 
-1. Digite `git config user.email "<your@email.com>"` e
-pressione Enter.
+1. Digite `git config user.email "<your@email.com>"` e pressione Enter.
 
 2. Digite `git config user.name "<Your Name>"` e pressione Enter.
 
 Para atualizar seu nome e endereço de e-mail para todos os repositórios:
 
-1. Digite `git config --global user.email
-"<your@email.com>"` e pressione Enter.
+1. Digite `git config --global user.email "<your@email.com>"` e pressione Enter.
 
-2. Digite `git config --global user.name "<Your Name>"` e
-pressione Enter.
+2. Digite `git config --global user.name "<Your Name>"` e pressione Enter.
 
 ##Reverter uma confirmação
 {: #revert}
@@ -292,7 +278,7 @@ Reverta as mudanças que uma confirmação introduziu em sua ramificação ativa
 
 1. Sob Histórico, selecione uma confirmação.
 
-2. No lado direito da página, acima da resumo da confirmação, clique no ícone Reverter <img class="inline" src="./images/revert.png" alt="ícone Reverter">.
+2. Clique no ícone reverter <img class="inline" src="./images/revert.png" alt="Ícone Reverter">.
 
 ### Terminal do Git
 
@@ -316,15 +302,14 @@ Quando precisar entregar mudanças de uma ramificação de origem para uma ramif
 
 1. Na seção Recebido, clique no ícone **Mesclar** <img  class="inline" src="./images/mergeicon.png" alt="ícone Mesclar na seção Recebido">
 
-1. Na lista **Referência**, clique no ícone de check-out ao lado da ramificação na qual você acabou de mesclar as mudanças.
+1. Na lista **Referência**, clique no ícone de check-out para a ramificação na qual você acabou de mesclar as mudanças.
 
 1. Se você quiser entregar as mudanças, clique em **Enviar por push**. Caso contrário, neste momento, é possível criar uma implementação de teste para certificar-se de que tudo está funcionando conforme esperado.
 
 ### Terminal do Git
 1. Decida quais ramificações serão mescladas.
 
-2. Efetue check-out da ramificação de destino. Para obter mais informações,
-consulte [Trabalhar em uma ramificação local](#start_working_on_branch).
+2. Efetue check-out da ramificação de destino. Para obter mais informações, consulte [Trabalhar em uma ramificação local](#start_working_on_branch).
 
 3. Digite `git merge <source_name>` e pressione Enter.
 
@@ -371,8 +356,7 @@ de confirmação da mesclagem e clique em **Confirmar**.
 ### Eclipse Orion Web IDE
 1. Decida quais ramificações serão rebaseadas. Você rebaseará o conteúdo da ramificação de origem na ramificação de destino.
 
-2. Efetue check-out da ramificação de destino. Para obter mais informações,
-consulte [Trabalhar em uma ramificação local](#start_working_on_branch).
+2. Efetue check-out da ramificação de destino. Para obter mais informações, consulte [Trabalhar em uma ramificação local](#start_working_on_branch).
 
 1. Clique na lista **Referência**.
 
@@ -380,8 +364,7 @@ consulte [Trabalhar em uma ramificação local](#start_working_on_branch).
 
 1. Na seção Recebido, clique no ícone Rebasear <img  class="inline" src="./images/rebase.png" alt="ícone Rebasear">.
 
-5. Se você encontrar conflitos,
-[resolva-os](#resolve_a_rebase_conflict).
+5. Se você encontrar conflitos, [resolva-os](#resolve_a_rebase_conflict).
 
 6. Repita a etapa anterior quantas vezes forem necessárias para concluir a operação de rebaseamento.
 
@@ -391,13 +374,11 @@ consulte [Trabalhar em uma ramificação local](#start_working_on_branch).
 1. Clique em **Enviar por push**.
 
 ### Terminal do Git
-1. Efetue check-out da ramificação a ser atualizada, digitando `git checkout
-<destination_branchname>` e pressionando Enter.
+1. Efetue check-out da ramificação a ser atualizada digitando `git checkout <destination_branchname>` e pressionando Enter.
 
 2. Digite `git rebase <source_branchname>` e pressione Enter.
 
-3. Se você encontrar conflitos,
-[resolva-os](#resolve_a_rebase_conflict).
+3. Se você encontrar conflitos, [resolva-os](#resolve_a_rebase_conflict).
 
 5. Repita a etapa anterior quantas vezes forem necessárias para concluir a operação de rebaseamento.
 

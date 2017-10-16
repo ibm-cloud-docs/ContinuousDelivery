@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-5-11"
 
 ---
 
@@ -18,10 +18,10 @@ lastupdated: "2017-3-16"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# {{site.data.keyword.deliverypipeline}} erweitern
+# Delivery Pipeline erweitern
 {: #deliverypipeline_extending}
 
-Sie können die Funktionalität der {{site.data.keyword.deliverypipeline}} erweitern, indem Sie Ihre Jobs für die Verwendung unterstützter Services konfigurieren. Testjobs können zum Beispiel statische Codescans ausführen und Buildjobs können Zeichenfolgen globalisieren.
+Sie können die {{site.data.keyword.deliverypipeline}}-Funktionalität von {{site.data.keyword.contdelivery_full}} erweitern, indem Sie Ihre Jobs für die Verwendung unterstützter Services konfigurieren. Testjobs können zum Beispiel statische Codescans ausführen und Buildjobs können Zeichenfolgen globalisieren.
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -32,14 +32,14 @@ Die folgenden Tasks beschreiben, wie ausgewählte Tools in eine Delivery Pipelin
 
 {: #deliverypipeline_scan}
 
-Sie möchten Sicherheitsprobleme in Ihrem Code finden, bevor Sie diesen bereitstellen? Wenn Sie IBM® Static Analyzer for Bluemix™ als Teil Ihrer Pipeline verwenden, können Sie automatisierte Abgleiche mit den statischen Binärdateien für den Build Ihrer Java™ App mit den Endungen `.war`, `.ear`, `.jar` oder `.class` durchführen.
+Sie möchten Sicherheitsprobleme in Ihrem Code finden, bevor Sie diesen bereitstellen? Wenn Sie {{site.data.keyword.staticanalyzerfull}} als Teil Ihrer Pipeline verwenden, können Sie automatisierte Abgleiche mit den statischen Binärdateien für den Build Ihrer Java™ App mit den Endungen `.war`, `.ear`, `.jar` oder `.class` durchführen.
 
-Eine Pipeline, die den Service Static Analyzer verwendet, umfasst die folgenden Stages:
+Eine Pipeline, die den Service {{site.data.keyword.staticanalyzershort}} verwendet, umfasst die folgenden Stages:
 
 + Eine Stage für den Build der Quellendateien
 + Eine Stage für die Verarbeitung mit den folgenden Jobs:
   + Ein Buildjob für die Ausführung des Service Static Analyzer
-  + Ein Buildjob für die Ausführung eines Containerbuilds
+  + Ein Buildjob für die Ausführung eines Container-Builds
 + Eine Stage für die Bereitstellung des Containers
 
 
@@ -71,13 +71,13 @@ Bevor Sie mit den nachfolgenden Schritten beginnen, lesen Sie zunächst die [Nut
 
   e. Markieren Sie das Kontrollkästchen **Service und Bereich für mich einrichten** oder heben Sie die Markierung bei Bedarf auf.
 
-    * Wenn Sie möchten, dass die Pipeline Ihren Bluemix-Bereich auf den Service und eine App überprüft, die den Service an den Container bindet, wählen Sie das Kontrollkästchen aus. Wenn der Service oder die gebundene App nicht vorhanden sind, fügt die Pipeline den freien Plan des Service zu Ihrem Bereich hinzu. Die gebundene App, die erstellt wird, hat den Namen `pipeline_bridge_app`. Anschließend verwendet die Pipeline die Berechtigungsnachweise von der Datei 'pipeline_bridge_app', um auf die gebundenen Services zuzugreifen.
+    * Wenn Sie möchten, dass die Pipeline Ihren {{site.data.keyword.Bluemix_short}}-Bereich auf den Service und eine App überprüft, die den Service an den Container bindet, wählen Sie das Kontrollkästchen aus. Wenn der Service oder die gebundene App nicht vorhanden sind, fügt die Pipeline den freien Plan des Service zu Ihrem Bereich hinzu. Die gebundene App, die erstellt wird, hat den Namen `pipeline_bridge_app`. Anschließend verwendet die Pipeline die Berechtigungsnachweise von der Datei 'pipeline_bridge_app', um auf die gebundenen Services zuzugreifen.
 
-    * Wenn Sie den Service und die gebundene App in Ihrem Bluemix-Bereich konfiguriert haben, oder wenn Sie [diese Anforderungen manuell konfigurieren](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window} möchten, heben Sie die Markierung für das Kontrollkästchen auf.
+    * Wenn Sie den Service und die gebundene App in Ihrem {{site.data.keyword.Bluemix_short}}-Bereich konfiguriert haben oder wenn Sie [diese Anforderungen manuell konfigurieren](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window} möchten, heben Sie die Markierung für das Kontrollkästchen auf.
 
-  f. Geben Sie im Feld **Anzahl der Minuten für die Durchführung der Analyse** einen Wert zwischen 0 und 59 Minuten ein. Der Standardwert beträgt 5 Minuten. Eine URL zu dem Dashboard von Static Analyzer befindet sich in den Konsolenprotokollen am Ende des Jobs.
+  f. Geben Sie im Feld **Anzahl der Minuten für die Durchführung der Analyse** einen Wert zwischen 0 und 59 Minuten ein. Der Standardwert beträgt 5 Minuten. Eine URL zu dem Dashboard von {{site.data.keyword.staticanalyzershort}} befindet sich in den Konsolenprotokollen am Ende des Jobs.
 
-     Wenn der Static Analyzer-Scan nicht vor dem von Ihnen angegebenen Zeitpunkt vollständig ist, schlägt der Job fehl. Der Scananalyse wird jedoch weiter ausgeführt und Sie können sie im Dashboard von Static Analyzer anzeigen. Nachdem der Static Analyzer-Scan abgeschlossen ist, wird die Scananforderung nicht wiederholt, wenn Sie den Job erneut ausführen, und der Pipelinejob kann abgeschlossen werden. Sie können die Pipeline stattdessen auch so konfigurieren, dass sie bei einem erfolgreichen Scan nicht blockiert wird. Erläuterungen hierzu folgen beim nächsten Schritt.
+     Wenn der {{site.data.keyword.staticanalyzershort}}-Scan nicht vor dem von Ihnen angegebenen Zeitpunkt vollständig ist, schlägt der Job fehl. Die Scananalyse wird jedoch weiter ausgeführt und Sie können sie im Dashboard von {{site.data.keyword.staticanalyzershort}} anzeigen. Nachdem der {{site.data.keyword.staticanalyzershort}}-Scan abgeschlossen ist, wird die Scananforderung nicht wiederholt, wenn Sie den Job erneut ausführen, und der Pipeline-Job kann abgeschlossen werden. Sie können die Pipeline stattdessen auch so konfigurieren, dass sie bei einem erfolgreichen Scan nicht blockiert wird. Erläuterungen hierzu folgen beim nächsten Schritt.
 
   g. Wählen Sie das Kontrollkästchen **Ausführen dieser Stage beenden, wenn dieser Job fehlschlägt** abhängig davon aus bzw. ab, was passieren soll, wenn dieser Job fehlschlägt oder das Zeitlimit überschreitet. Jobs können fehlschlagen, wenn die Anfälligkeit hoch ist.
 
@@ -106,7 +106,7 @@ Beispiele für die Konsolenausgabe:
 **Anstehender Scan**
 ![Beispiel für anstehenden Scan](images/analyzer_pending.png)
 
-Weitere Informationen zur Verwendung des Service Static Analyzer enthält die [Dokumentation zum Service Static Analyzer](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
+Weitere Informationen zur Verwendung des Service {{site.data.keyword.staticanalyzershort}} enthält die [Dokumentation zum Service {{site.data.keyword.staticanalyzershort}}](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 
@@ -177,7 +177,7 @@ For more information about using the Globalization Pipeline service from the Blu
 ## Slack-Benachrichtigungen für Builds in der Pipeline erstellen
 {: #deliverypipeline_slack}
 
-Sie können Benachrichtigungen über Buildergebnisse von IBM Container Service, IBM Security Static Analyzer und IBM Globalization von Ihrer Delivery Pipeline an Ihre Slack-Kanäle senden.
+Sie können Benachrichtigungen über Buildergebnisse von {{site.data.keyword.containerlong}}, {{site.data.keyword.staticanalyzershort}} und {{site.data.keyword.globalizationfull}} von Ihrer Delivery Pipeline an Ihre Slack-Kanäle senden.
 
 Bevor Sie damit beginnen, erstellen oder kopieren Sie eine Slack-WebHook-URL:
 
@@ -195,7 +195,7 @@ Gehen Sie wie folgt vor, um Slack-Benachrichtigungen zu erstellen:
 3. Wählen Sie **Texteigenschaft** aus.
 4. Geben Sie den Namen und einen Wert für die Umgebungseigenschaft ein. Wiederholen Sie dies, um mehrere Umgebungseigenschaften zu erstellen.
 
-  *Tabelle 1. Umgebungseigenschaften für die Konfiguration von Slack-Benachrichtigungen*
+  _Tabelle 1. Umgebungseigenschaften für die Konfiguration von Slack-Benachrichtigungen_
 
   <table>
   <tr>
@@ -256,7 +256,7 @@ Gehen Sie wie folgt vor, um HipChat-Benachrichtigungen zu erstellen:
 3. Wählen Sie **Texteigenschaft** aus.
 4. Geben Sie den Namen und einen Wert für die Umgebungseigenschaft ein. Wiederholen Sie dies, um mehrere Umgebungseigenschaften zu erstellen.
 
-  *Tabelle 2. Umgebungseigenschaften für die Konfiguration von HipChat-Benachrichtigungen*
+  _Tabelle 2. Umgebungseigenschaften für die Konfiguration von HipChat-Benachrichtigungen_
 
   <table>
   <tr>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-1"
+lastupdated: "2017-6-9"
 
 ---
 
@@ -62,9 +62,9 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于浏览器的开发环境，�
  2. 在文件导航器中，单击该文件。
 
 ### 键盘快捷键
-{{site.data.keyword.webide}} 中的许多命令还可通过键盘快捷键访问。
+{{site.data.keyword.webide}} 中的许多命令可通过键盘快捷键访问。
 
-要查看编辑器中的键盘快捷键列表，请按 Alt+Shift+?。如果使用的是 Mac OS，请按 Ctrl+Shift+?。
+要查看编辑器中的键盘快捷键列表，请单击**工具** > **显示键**。或者，您可以通过按 Alt+Shift+？或在 MacOS 上按 Ctrl+Shift+？来查看该列表。可以通过将鼠标悬停在键上、单击画笔并输入新的键绑定来定制快捷键。
 
 ## 管理源代码
 {: #sourcecontrol}
@@ -92,7 +92,8 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于浏览器的开发环境，�
 如果您是在开发 Node.js 应用程序，请启用“实时编辑”方式：<img  src="./images/enable_live_edit.png"  alt="启用实时编辑滑块">
 
 <table><tr><td><img src="./images/live_edit_restart.png"  alt="“实时编辑”重新启动图标"></td><td>在启用“实时编辑”方式的情况下，快速重新启动应用程序而不重新部署。</td></tr>
-<tr><td> <img src="./images/debug_icon.png"  alt="调试图标"></td><td>在启用“实时编辑”方式的情况下，访问调试器</td></tr>
+<tr><td> <img src="./images/debug_icon.png"  alt="调试图标"></td>
+<td>在启用“实时编辑”方式的情况下访问调试器</td></tr>
 </table>
 
 <!-- 3/6/2016: bl commands don't work with V2/CD
@@ -202,7 +203,15 @@ Eclipse Orion {{site.data.keyword.webide}} 为 JavaScript、HTML、CSS 和 Markd
 </li><li>git config
 </li><li>cfignore
 </li><li>properties
-</ul>
+</li></ul>
 </td>
 </tr>
 </table>
+
+## 学习教程：Eclipse Orion Web IDE
+{: #toolchain_tutorials}
+
+查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method){:new_window} 上的下列某个教程：
+  * [创建并使用第一个工具链 (GitHub) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [创建使用 Git Repos and Issue Tracking 的工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [创建并使用具有 DevOps Insights 的微服务工具链 (V2) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

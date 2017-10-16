@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-6-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -19,7 +19,7 @@ lastupdated: "2017-3-16"
 # Construindo e implementando
 {: #deliverypipeline_build_deploy}
 
-O serviço {{site.data.keyword.deliverypipeline}} do IBM&reg; Bluemix&reg; permite que você implemente um processo repetido de integração contínua e entrega contínua.
+O {{site.data.keyword.contdelivery_full}} inclui o Delivery Pipeline, que é possível usar para implementar um processo repetido de integração contínua e entrega contínua.
 {:shortdesc}
 
 Conclua as tarefas a seguir para criar e configurar um pipeline.
@@ -58,15 +58,12 @@ estágio** na página Pipeline.
 É possível também solicitar construções e implementações sob demanda na página de
 histórico de construções de uma de duas maneiras:
 * Arraste uma construção para a caixa que está sob um estágio configurado.
-* Ao lado de uma construção, clique no ícone **Enviar para** e, em seguida, selecione um espaço no qual implementar.
-  ![O estágio de Execução com este ícone de construção](images/deploy_to.png)
+* Na seção ÚLTIMO RESULTADO DE EXECUÇÃO, clique no ícone **Enviar para** e, em seguida, selecione um espaço para implementar.
+  ![O ícone Executar estágio com esta construção](images/deploy_to.png)
 
 Para cancelar um estágio em execução, no estágio, clique em **Visualizar
 logs e histórico**. Na lista de tarefas, clique no número da tarefa em
-execução e, em seguida, clique em **CANCELAR**. É possível também
-cancelar tarefas individualmente clicando em uma tarefa e, em seguida, clicando em
-**CANCELAR** ou clicando no ícone **Parar** ao
-lado de uma tarefa em seu estágio.
+execução e, em seguida, clique em **CANCELAR**. É possível também cancelar tarefas individualmente clicando em uma tarefa e, em seguida, clicando em **CANCELAR** ou clicando no ícone **Parar** para uma tarefa em seu estágio.
 
 ## Implementando um app
 {: #deliverypipeline_deploy}
@@ -109,7 +106,7 @@ Para visualizar o log de uma tarefa, clique na tarefa. Como alternativa, em um e
 
 Para visualizar o log de tempo de execução de um aplicativo implementado, clique em **Visualizar log de tempo de execução**.
 
-![Áreas em um quadro de estágio que pode ser clicado para abrir os logs relevantes](images/view_logs_and_history.png)
+![Áreas no tile de estágio que podem ser clicadas para abrir logs relevantes](images/view_logs_and_history.png)
 
 Além dos logs de tarefas, é possível visualizar resultados de testes, artefatos
 gerados e mudanças de código para qualquer tarefa de construção.
@@ -118,3 +115,5 @@ gerados e mudanças de código para qualquer tarefa de construção.
 de estágios. Clique em **EXECUTAR** para executar um estágio ou em **CONFIGURAR** para configurar um estágio. Enquanto um estágio está em
 execução, é possível cancelá-lo clicando no número da execução e depois clicando em
 **CANCELAR**.
+
+

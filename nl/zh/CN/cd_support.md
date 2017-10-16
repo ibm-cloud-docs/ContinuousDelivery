@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-11"
+lastupdated: "2017-07-18"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2017-4-11"
  <td align="center">
  <strong>Stack Overflow</strong>
   <p>
-   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/ask-a-question.png" alt="提出问题"/></a></p>
+   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,devops-services" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/ask-a-question.png" alt="提出问题"/></a></p>
    <p>
     <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="（在新选项卡或窗口中打开）">显示 Stack Overflow 上最近的 <img class="image" src="../../icons/launch-glyph.svg" alt="外部链接图标"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services 问题。</p></td>
   <td align="center">

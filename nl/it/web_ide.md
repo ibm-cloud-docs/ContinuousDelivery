@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-25"
+lastupdated: "2017-6-9"
 
 ---
 
@@ -23,9 +23,9 @@ Cosa più importante, {{site.data.keyword.webide}} si avvale della tecnologia we
 ## Configurazione dell'IDE
 {: #editorsetup}
 
-{{site.data.keyword.webide}} è personalizzabile in modo che puoi scegliere gli schemi di colori, gli strumenti tecnici e le impostazioni che incontrano i tuoi bisogni di sviluppo. Per visualizzare e modificare le impostazioni, dal menu a sinistra, fai clic sull'icona **Impostazioni** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="L'icona impostazioni">.
+{{site.data.keyword.webide}} è personalizzabile in modo che puoi scegliere gli schemi di colori, gli strumenti tecnici e le impostazioni che incontrano i tuoi bisogni di sviluppo. Per visualizzare e modificare le impostazioni, dal menu a sinistra, fai clic sull'icona **Impostazioni** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="Icona di impostazioni">.
 
-Se durante la modifica hai la necessità di cambiare spesso le impostazioni, puoi accedere rapidamente a esse utilizzando l'icona **Impostazioni dell'editor locali** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icona Impostazioni dell'editor locali">. 
+Se durante la modifica hai la necessità di cambiare spesso le impostazioni, puoi accedere rapidamente a esse utilizzando l'icona **Impostazioni dell'editor locali** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icona Impostazioni dell'editor locali">.
 
 ![Impostazioni dell'editor locali](images/webide_local_editor_settings_light.png)
 
@@ -35,7 +35,7 @@ Per impostazione predefinita, le impostazioni per lo stile dell'editor e la dime
 
 2. Fai clic su **Impostazioni dell'editor**.
 
-3. Per includere o escludere un'impostazione dal menu **Impostazioni dell'editor locali**, fai clic sulla stella accanto a ogni impostazione.
+3. Per includere o escludere un'impostazione dal menu **Impostazioni dell'editor locali**, fai clic sulla stella per ciascuna impostazione.
 
 ![Attiva impostazioni dell'editor](images/webide_editor_settings_toggle_light.png)
 
@@ -64,12 +64,12 @@ La seconda sezione è il pannello dell'editor. L'editor fornisce diverse funzion
 ### Tasti di scelta rapida
 Molti dei comandi in {{site.data.keyword.webide}} sono accessibili tramite dei tasti di scelta rapida.
 
-Per visualizzare un elenco dei tasti di scelta rapida nell'editor, premi Alt+Shift+?. Se stai utilizzando un SO Mac, premi Ctrl+Shift+?.
+Per visualizzare un elenco dei tasti di scelta rapida nell'editor, fai clic su **Tools** > **Show keys**. In alternativa, puoi vedere l'elenco premendo Alt+Maiusc+? oppure Ctrl+Maiusc+? su MacOS. Puoi personalizzare una scelta rapida spostando il mouse sul tasto, facendo clic sulla matita e digitando la nuova associazione di tasti.
 
-## Gestione del codice di origine
+## Gestione del codice sorgente
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} è integrata con gli strumenti di gestione del codice di origine. Per lavorare con il repository Git, fai clic sull'icona **Repository Git** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="Icona Repository Git">. 
+{{site.data.keyword.webide}} è integrata con gli strumenti di gestione del codice sorgente. Per lavorare con il repository Git, fai clic sull'icona **Repository Git** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="Icona Repository Git">.
 
  **Suggerimento**: se stai utilizzando {{site.data.keyword.webide}} con le toolchain aperte, il tuo spazio di lavoro viene prepopolato con GitHub,  {{site.data.keyword.ghe_short}} o i repository Git e del tracciamento del problema. I repository associati con la tua toolchain corrente sono evidenziati.
 
@@ -78,19 +78,34 @@ Per visualizzare un elenco dei tasti di scelta rapida nell'editor, premi Alt+Shi
 {: #deploy}
 
 1. Per distribuire la tua applicazione, dalla barra del menu, seleziona o crea una configurazione di avvio.
-1. Fai clic sull'icona di distribuzione <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="L'icona di distribuzione">. Viene distribuita un'istanza alla tua applicazione utilizzando i contenuti correnti del tuo spazio di lavoro e l'ambiente definito nella tua configurazione di avvio. 
+   ![Barra di esecuzione](images/webide_runbar_light.png)   
+1. Fai clic sull'icona di distribuzione <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="Icona di distribuzione">. Viene distribuita un'istanza alla tua applicazione utilizzando i contenuti correnti del tuo spazio di lavoro e l'ambiente definito nella tua configurazione di avvio.
 2. Dopo che la tua applicazione è stata distribuita, puoi utilizzare la barra di esecuzione per arrestare, riavviare o eseguire il debug della applicazione, dei log di visualizzazione o di altro.
-![Barra di esecuzione](images/webide_runbar_light.png)    
 
-<!-- 3/6/2016: bl commands don't work with V2/CD 
+<table>
+<tr><td><img src="./images/stop_button.png"  alt="Icona di arresto"></td><td>Arresta l'applicazione</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="Icona dell'URL di apertura dell'applicazione"></td><td> Apri l'applicazione distribuita</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="Icona di visualizzazione dei log"></td><td>Visualizza i log dell'applicazione distribuita</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="Icona di apertura del dashboard"></td><td>Apri il dashboard dell'applicazione</td></tr>
+</table>
+
+Se stai sviluppando un'applicazione Node.js, abilita la modalità Live Edit:  <img  src="./images/enable_live_edit.png"  alt="Dispositivo a scorrimento di abilitazione di live edit">
+
+<table><tr><td><img src="./images/live_edit_restart.png"  alt="Icona di riavvio di Live Edit"></td><td>Con la modalità Live Edit abilitata, riavvia l'applicazione, senza rieseguire la distribuzione</td></tr>
+<tr><td> <img src="./images/debug_icon.png"  alt="Icona di debug"></td>
+<td>Con la modalità Live Edit abilitata, accedi al debugger
+</td></tr>
+</table>
+
+<!-- 3/6/2016: bl commands don't work with V2/CD
 ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}. 
+To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}.
 
-### Before you begin 
+### Before you begin
 
-Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
+Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
 
 ### Synchronizing your local environment with {{site.data.keyword.Bluemix_notm}}
 {: #edit_local_download}
@@ -104,7 +119,7 @@ Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line i
 	{: pre}
 
 3. When you are prompted, enter your IBMid and password.
-4. View a list of your {{site.data.keyword.Bluemix_notm}} projects: 
+4. View a list of your {{site.data.keyword.Bluemix_notm}} projects:
 
 	```
 	bl projects
@@ -135,11 +150,69 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 2. Use the launch configuration that you created in the {{site.data.keyword.webide}}. After you select the launch configuration, the Desktop Sync feature is enabled in your local environment. In the command-line window that you just opened, you can view the app's URL, the debug URL, the manage URL, and view the {{site.data.keyword.Bluemix_live_notm}} state.
 
-3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace. 
+3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace.
 
 ### Disabling the Desktop Sync feature
 
 1. In the second command-line window, enter `bl stop`.
 2. In the first command-line window, enter `q`.
 
---> 
+-->
+
+## Linguaggi supportati
+{: #supported_languages}
+
+Eclipse Orion {{site.data.keyword.webide}} fornisce assistenza del contenuto, descrizioni dei comandi, anteprime, convalida ed evidenziazione della sintassi per i file JavaScript, HTML, CSS e Markdown. L'evidenziazione della sintassi è supportata anche per questi tipi di file:
+
+<table>
+<tr>
+<td>
+<ul><li>Arduino
+</li><li>C</li>
+<li>C#
+</li><li>C++
+</li><li>CoffeeScript
+</li><li>CSHTML
+</li><li>Embedded JavaScript (ejs)
+</li><li>Erlang
+</li><li>Go
+</li><li>Haml (HTML abstraction markup language)
+</li><li>Jade
+</li><li>Java
+</li><li>JSON
+</li><li>Less  
+</li><li>Lua  
+</li><li>Objective-C
+</li><li>PHP
+</li><li>Python</li></ul>
+</td>
+<td>
+<ul><li>Ruby
+</li><li>Sass/SCSS
+</li><li>SQL
+</li><li>Swift
+</li><li>TypeScript
+</li><li>vb (Visual Basic)
+</li><li>VMHTML
+</li><li>XHTML
+</li><li>XML
+</li><li>XQuery
+</li><li>YAML
+</li><li>File di avvio 	
+</li><li>Dockerfile
+</li><li>gitignore
+</li><li>git config
+</li><li>cfignore
+</li><li>proprietà
+</li></ul>
+</td>
+</tr>
+</table>
+
+## Visualizza una esercitazione: Eclipse Orion Web IDE
+{: #toolchain_tutorials}
+
+Guarda una di queste esercitazioni su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method){:new_window}:
+  * [Crea e utilizza la tua prima toolchain (GitHub) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Crea una toolchain che utilizza Repository Git e tracciamento del problema ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Crea e utilizza una toolchain microservizi con DevOps Insights (v2) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

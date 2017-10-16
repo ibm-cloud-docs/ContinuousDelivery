@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-1"
+lastupdated: "2017-6-9"
 
 ---
 
@@ -62,9 +62,9 @@ Der zweite Abschnitt ist das Editorteilfenster. Der Editor bietet verschiedene C
  2. Klicken Sie im Dateinavigator auf eine Datei.
 
 ### Tastenkombinationen
-Viele Befehle in der {{site.data.keyword.webide}} können auch über die Tastatur ausgeführt werden.
+Viele Befehle in der {{site.data.keyword.webide}} können über die Tastatur ausgeführt werden.
 
-Verwenden Sie die Tastenkombination Alt+Umschalttaste+?, um eine Liste mit den Tastenbelegungen anzuzeigen. Wenn Sie Mac OS verwenden, lautet die Tastenkombination Strg+Umschalttaste+?.
+Klicken Sie auf **Tools** > **Tasten anzeigen**, um eine Liste mit den Tastenbelegungen anzuzeigen. Alternativ können Sie die Tastenkombination Alt+Umschalttaste+? verwenden (bzw. Strg+Umschalttaste+? unter MacOS). Sie können eine Tastenkombination anpassen, indem Sie die Maus über die Taste bewegen, auf das Stiftsymbol klicken und die neue Tastenbelegung eingeben.
 
 ## Quellcode verwalten
 {: #sourcecontrol}
@@ -77,7 +77,7 @@ Die {{site.data.keyword.webide}} ist mit Quellcodeverwaltungstools integriert. U
 ## App vom Arbeitsbereich aus bereitstellen
 {: #deploy}
 
-1. Um die App bereitzustellen, wählen Sie in der Ausführungsleiste entweder eine Startkonfiguration aus oder erstellen Sie ein solche.
+1. Um die App bereitzustellen, wählen Sie in der Ausführungsleiste entweder eine Startkonfiguration aus oder erstellen Sie eine solche.
    ![Ausführungsleiste](images/webide_runbar_light.png)   
 1. Klicken Sie auf das Symbol für die Bereitstellung <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="Symbol 'Bereitstellung'">. Bei der Bereitstellung einer Instanz Ihrer App werden der aktuelle Inhalt Ihres Arbeitsbereichs und die Umgebung verwendet, die in Ihrer Startkonfiguration definiert sind.
 2. Wenn Ihre App bereitgestellt wurde, können Sie die Ausführungsleiste verwenden, um Ihre App zu stoppen, erneut zu starten oder zu debuggen, um Protokolle anzuzeigen usw.
@@ -92,7 +92,9 @@ Die {{site.data.keyword.webide}} ist mit Quellcodeverwaltungstools integriert. U
 Wenn Sie eine Node.js-App entwickeln, aktivieren Sie den Modus 'Live Edit' für die Livebearbeitung: <img  src="./images/enable_live_edit.png"  alt="Schieberegler für die Aktivierung des Modus 'Live Edit'">
 
 <table><tr><td><img src="./images/live_edit_restart.png"  alt="Symbol zum Neustarten im aktivierten Modus 'Live Edit'"></td><td>Der aktivierte Modus 'Live Edit' ermöglicht den raschen Neustart der App ohne erneute Bereitstellung.</td></tr>
-<tr><td> <img src="./images/debug_icon.png"  alt="Symbol 'Debuggen'"></td><td>Ermöglicht bei aktiviertem Modus 'Live Edit' den direkten Zugriff auf den Debugger.</td></tr>
+<tr><td> <img src="./images/debug_icon.png"  alt="Symbol 'Debuggen'"></td>
+<td>Ermöglicht bei aktiviertem Modus 'Live Edit' den direkten Zugriff auf den Debugger.
+</td></tr>
 </table>
 
 <!-- 3/6/2016: bl commands don't work with V2/CD
@@ -202,7 +204,15 @@ Die Eclipse Orion {{site.data.keyword.webide}} bietet Content-Assist, QuickInfo,
 </li><li>git config
 </li><li>cfignore
 </li><li>properties
-</ul>
+</li></ul>
 </td>
 </tr>
 </table>
+
+## Relevantes Lernprogramm: Eclipse Orion-Web-IDE
+{: #toolchain_tutorials}
+
+Informieren Sie sich in einem der Lernprogramme zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method){:new_window}:
+  * [Erste Toolchain erstellen und verwenden (GitHub) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Toolchain erstellen, die Git Repos and Issue Tracking verwendet ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Microservice-Toolchain mit DevOps Insights (v2) erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

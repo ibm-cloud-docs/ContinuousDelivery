@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-15"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-3-31"
 {:codeblock:.codeblock}
 
 
-# Sobre cadeias de ferramentas    
+# Visão geral de cadeias de ferramentas   
 {: #toolchains_about}  
 
 As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Dedicated no {{site.data.keyword.Bluemix}}. É possível criar uma cadeia de ferramentas de duas formas: usar um modelo para criar uma cadeia de ferramentas ou criar uma cadeia de

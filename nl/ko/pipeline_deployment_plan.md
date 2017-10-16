@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-08-15"
 
 ---
 
@@ -45,16 +45,16 @@ lastupdated: "2017-3-16"
 
 ### 표 1. 태스크 특성
 
-| 특성  | 설명  |
+| 특성| 설명|
 | ------------------ | ------------------ |
-| 이름               |태스크 이름       |
-| 유형               |태스크 유형: 수동, Continuous Delivery Pipeline, 지연, 이메일, 헤더/참고, UrbanCode Deploy|             
-| 상태             |태스크 상태: 시작되지 않음, 완료됨, 실패함, 건너뜀, 적용 불가능 |
-| 소유자              |태스크가 지정된 사용자                                                        |
-| 시작 시간  |시작 시간 또는 스케줄된 시작을 기반으로 하는 예상 시작 시간 또는 기타 태스크의 추정 기간        |
-| 종료 시간               |태스크가 종료된 시간        |
-| 기간               |태스크 시작에서 태스크 종료까지의 기간(분 단위)        |
-| 종속 항목 수               |태스크의 전제조건 및 태스크의 종속자인 태스크의 수        |
+| 이름|태스크 이름|
+| 유형|태스크 유형: 수동, Continuous Delivery Pipeline, 지연, 이메일, 헤더/참고, UrbanCode Deploy|             
+| 상태|태스크 상태: 시작되지 않음, 완료됨, 실패함, 건너뜀, 적용 불가능|
+| 소유자|태스크가 지정된 사용자|
+| 시작 시간|시작 시간 또는 스케줄된 시작을 기반으로 하는 예상 시작 시간 또는 기타 태스크의 추정 기간|
+| 종료 시간|태스크가 종료된 시간|
+| 기간|태스크 시작에서 태스크 종료까지의 기간(분 단위)|
+| 종속 항목 수|태스크의 전제조건 및 태스크의 종속자인 태스크의 수|
 
 ---
 태스크가 배치 플랜에 추가되면 다양한 방법으로 이를 관리할 수 있습니다.
@@ -67,43 +67,6 @@ lastupdated: "2017-3-16"
 
    * 태스크를 삭제하려면 이를 클릭하고 **삭제** <img class="inline" src="../UCCR/images/trash-group.png"  alt="삭제 아이콘">을 클릭하십시오. 태스크가 배치 플랜에서 제거됩니다. 
 
-<!-- ## Creating UrbanCode Deploy tasks
-{: #tasks_UDTasks}
-
-UrbanCode Deploy tasks manage UrbanCode Deploy applications. When you run an UrbanCode Deploy task, the associated UrbanCode Deploy application runs by using the process, version, and environment specified by the task. You can set the version and environment at design time or wait and select them at run time.
-
-During deployments, UrbanCode Deploy tasks start automatically when they become eligible to run.   
-
-**Important** Applications become available after {{site.data.keyword.uccr_short}} is integrated with UrbanCode Deploy. The applications that are available to a deployment plan depend on the team that is assigned to the plan. The applications that are managed by the team in UrbanCode Deploy are also available in {{site.data.keyword.uccr_short}}.
-
-Complete the following tasks to create an UrbanCode Deploy task.
-
-1. On the Deployment Plan Details page, click **Create Task**. If you want to insert a task at a specific position in the plan, select a task before using the **Create Task**. The new task is inserted above the selected task.
-
-1. On the Create Task dialog box, in the **Type** list, select **UrbanCode Deploy**.
-
-1. In the **Name** field, enter a name for the task.
-
-3. In the **Duration (minutes)** field, enter the number of minutes that you expect the task to run until it is completed. The estimated duration is used to calculate expected deployment times.
-
-3. In the **Tags** list, attach a tag to the task. You can select multiple tags. To create a tag, type the tag name in list's text field.
-
-3. In the **Application Name** list, select an application.
-
-3. In the **Process** list, select an application process. Processes that belong to the selected UrbanCode Deploy application are available.
-
-3. In the **Environment** list, select an application environment. Environments that belong to the selected UrbanCode Deploy application are available.  To postpone selecting an environment until you are ready to run the deployment, select **Use Version Tab**.
-
-3. In the **Version** list, select an application version. Versions refer to IBM UrbanCode Deploy application snapshots. Versions that belong to the selected application are available.  To postpone selecting a version, select **Use Version Tab**. If the application process does not require a version, select **No Version**. You might select this last option if you are running a configuration-type process that does not require components.
-
-3. In the **Assigned groups and users** list, assign the task to a user or group. The assigned user runs the task during deployment.
-
-3. In the **Owner** list, select the task owner. The default owner is the user who created the task. The **Owner** list is displayed after the task is assigned to a user or group.    
-
-5. Click **Save**. The task is inserted into the deployment plan.
-
-After the task is created, the plan's **Version** tab is updated with information about the application assigned to the task. If you selected **Use Version Tab** for the application environment and version, use the Version tab to set those options before running the deployment. -->
-
 ## 수동 태스크 작성
 {: #tasks_manual}
 
@@ -111,7 +74,7 @@ After the task is created, the plan's **Version** tab is updated with informatio
 
 수동 태스크를 작성하려면 다음 단계를 따르십시오.
 
-1. 배치 플랜 세부사항 페이지에서 **태스크 작성**을 클릭하십시오. 플랜의 특정 위치에서 태스크를 삽입하려면 **태스크 작성**을 클릭하기 전에 태스크를 선택하십시오. 새 태스크가 선택된 태스크 위에 삽입됩니다. 
+1. 배치 플랜 세부사항 페이지에서 **태스크 작성**을 클릭하십시오. 플랜의 특정 위치에서 태스크를 삽입하려면 **태스크 작성**을 클릭하기 전에 태스크를 선택하십시오. 선택된 태스크 앞에 새 태스크가 삽입됩니다. 
 
 1. 태스크 작성 창의 **유형** 목록에서 **수동**을 선택하십시오. 
 
@@ -119,7 +82,7 @@ After the task is created, the plan's **Version** tab is updated with informatio
 
 3. **기간(분)** 필드에서 태스크가 완료될 때까지 태스크 실행의 예상 기간(분)을 입력하십시오. 예상 기간은 예상 배치 시간을 계산하는 데 사용됩니다. 
 
-3. **태그** 목록에서 태스크에 태그를 첨부하십시오. 여러 개의 태그를 선택할 수 있습니다. 태그를 작성하려면 목록의 텍스트 필드에서 태그 이름을 입력하십시오. 
+3. **태그** 목록에서 태스크에 태그를 첨부하십시오. 여러 개의 태그를 선택할 수 있습니다. 태그를 작성하려면 목록의 필드에서 태그 이름을 입력하십시오. 
 
 3. **지정된 그룹 및 사용자** 목록에서 사용자 또는 그룹에 태스크를 지정하십시오. 지정된 사용자는 배치 중에 태스크를 실행합니다. 
 
@@ -142,7 +105,7 @@ After the task is created, the plan's **Version** tab is updated with informatio
 
 1. **이름** 필드에서 태스크의 이름을 입력하십시오.
 
-3. **시간** 필드에서 태스크가 완료될 시간을 입력하거나 선택하십시오. 
+3. **시간** 필드에서 태스크가 완료되어야 하는 시간을 입력하거나 선택하십시오. 
 
 3. **시간대** 목록에서 **시간** 필드에 입력한 값의 시간대를 선택하십시오.     
 
@@ -157,7 +120,7 @@ After the task is created, the plan's **Version** tab is updated with informatio
 
 헤더 태스크를 작성하려면 다음 단계를 따르십시오.
 
-1. 배치 플랜 세부사항 페이지에서 **태스크 작성**을 클릭하십시오. 플랜의 특정 위치에서 태스크를 삽입하려면 **태스크 작성**을 클릭하기 전에 태스크를 선택하십시오. 새 태스크가 선택된 태스크 위에 삽입됩니다. 
+1. 배치 플랜 세부사항 페이지에서 **태스크 작성**을 클릭하십시오. 플랜의 특정 위치에서 태스크를 삽입하려면 **태스크 작성**을 클릭하기 전에 태스크를 선택하십시오. 선택된 태스크 앞에 새 태스크가 삽입됩니다. 
 
 1. 태스크 작성 창의 **유형** 목록에서 **헤더**를 선택하십시오. 
 
@@ -174,7 +137,7 @@ After the task is created, the plan's **Version** tab is updated with informatio
 
 Delivery Pipeline 태스크를 작성하려면 다음 단계를 따르십시오. 
 
-1. 배치 플랜 세부사항 페이지에서 **태스크 작성**을 클릭하십시오. 플랜의 특정 위치에서 태스크를 삽입하려면 **태스크 작성**을 클릭하기 전에 태스크를 선택하십시오. 새 태스크가 선택된 태스크 위에 삽입됩니다. 
+1. 배치 플랜 세부사항 페이지에서 **태스크 작성**을 클릭하십시오. 플랜의 특정 위치에서 태스크를 삽입하려면 **태스크 작성**을 클릭하기 전에 태스크를 선택하십시오. 선택된 태스크 앞에 새 태스크가 삽입됩니다. 
 
 1. 태스크 작성 창의 **유형** 목록에서 **Continuous Delivery Pipeline**을 선택하십시오. 
 

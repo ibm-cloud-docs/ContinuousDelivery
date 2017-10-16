@@ -14,7 +14,7 @@ lastupdated: "2017-4-4"
 # Informazioni su Delivery Pipeline
 {: #deliverypipeline_about}
 
-Il servizio IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}}, anche conosciuto come pipeline, automatizza la distribuzione continua dei tuoi progetti Bluemix. In una pipeline, le sequenze di fasi richiamano l'input ed eseguono i lavori, come le build, i test e le distribuzioni.
+{{site.data.keyword.contdelivery_full}} include Delivery Pipeline per creare , testare e distribuire in modo ripetibile con un minimo intervento umano. In una pipeline, le sequenze di fasi richiamano l'input ed eseguono i lavori, come le build, i test e le distribuzioni.
 {:shortdesc}
 
 Le seguenti sezioni descrivono i dettagli concettuali dietro le pipeline.
@@ -39,7 +39,7 @@ Potresti desiderare di avere maggiore controllo su una fase specifica. Se non de
 
 Il lavoro è un'unità di esecuzione in una fase. Una fase può contenere più lavori e i lavori in una fase vengono eseguiti in sequenza. Per impostazione predefinita, se un lavoro ha esito negativo, il lavoro seguente nella fase non viene eseguito.
 
-![Crea e verifica i lavori in una fase](images/jobs.png)
+![Lavori di creazione e di test in una fase](images/jobs.png)
 
 I lavori vengono eseguiti in directory di lavoro separate all'interno dei contenitori Docker che sono stati creati per ogni esecuzione della pipeline. Prima che un lavoro venga eseguito, la relativa directory di lavoro viene compilata con l'input definito al livello della fase. Ad esempio, puoi avere una fase che contiene un lavoro di verifica e un lavoro di distribuzione. Se installi le dipendenze su un lavoro, non sono disponibili per un altro lavoro. Tuttavia, se rendi le dipendenze disponibili nell'input della fase, sono disponibili per entrambi i lavori.
 
@@ -60,7 +60,7 @@ In aggiunta, i lavori della pipeline possono eseguire solo i seguenti comandi co
 
 Dopo l'esecuzione di un lavoro, il contenitore creato per esso viene eliminato. I risultati di un'esecuzione di un lavoro possono essere conservati, ma l'ambiente nel quale è stato eseguito non può esserlo.
 
-**Nota**: i lavori possono essere eseguiti fino a un massimo di 60 minuti. Quando i lavori superano tale limite, vengono considerati con esito negativo. Se un lavoro sta per superare il limite, suddividilo in più lavori. Ad esempio, se un lavoro esegue tre attività, puoi suddividerlo in tre lavori: uno per ogni attività.
+**Nota:** i lavori possono essere eseguiti fino a un massimo di 60 minuti. Quando i lavori superano tale limite, vengono considerati con esito negativo. Se un lavoro sta per superare il limite, suddividilo in più lavori. Ad esempio, se un lavoro esegue tre attività, puoi suddividerlo in tre lavori: uno per ogni attività.
 
 Per maggiori informazioni su come aggiungere un lavoro a una fase, consulta [Aggiunta di un lavoro a una fase](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}.
 
@@ -70,7 +70,12 @@ I lavori di creazione compilano il tuo progetto durante la preparazione per la d
 
 I lavori che ricevono l'input dai lavori di creazione devono far riferimento alle risorse utente di creazione nella stessa struttura in cui sono state create. Ad esempio, se un lavoro di creazione archivia le risorse utente di creazione in una directory `output`, uno script di distribuzione deve fare riferimento alla directory `output` anziché alla directory root del progetto per distribuire il progetto compilato. Puoi specificare la directory di archivio immettendo il nome directory nel campo **Build Archive Directory**. Lasciando il campo vuoto, si archivierà la directory root.
 
-**Nota**: se selezioni il tipo di builder **Semplice** per un lavoro di creazione, puoi saltare il processo di creazione. In questo caso, il tuo codice non è compilato, ma è stato inviato alla fase di distribuzione così come è. Per creare e distribuire, selezionare un tipo di builder diverso da **Semplice**.
+**Nota:** se utilizzi il tipo di builder **Semplice**, il codice non viene compilato o creato; invece viene inserito in un pacchetto e reso disponibile per le fasi future.
+
+Quando distribuisci utilizzando Cloud Foundry, Cloud Foundry include le risorse corrette per consentire l'esecuzione della tua applicazione. Per ulteriori informazioni, vedi [Distribuzione delle applicazioni mediante il comando cf](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps). La pipeline per un'applicazione Cloud Foundry contiene una fase di distribuzione che esegue un comando cf.
+
+Cloud Foundry tenta di [rilevare il pacchetto di build da utilizzare ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://docs.cloudfoundry.org/buildpacks/detection.html). Puoi specificare il [pacchetto di build](/docs/cfapps/byob.html#using-community-buildpacks) da utilizzare nel file manifest all'interno della cartella root della tua applicazione. I pacchetti di build generalmente esaminano le risorse fornite dall'utente per determinare quali dipendenze scaricare e come configurare le applicazioni per comunicare con i servizi associati. Per ulteriori informazioni sui file manifest, vedi [Manifest dell'applicazione](/docs/manageapps/depapps.html#appmanifest). 
+
 
 #### Proprietà dell'ambiente per gli script di creazione
 Puoi includere le proprietà dell'ambiente nei comandi shell di creazione del lavoro di creazione. Le proprietà forniscono l'accesso alle informazioni sull'ambiente di esecuzione del lavoro. Per ulteriori informazioni, consulta [Risorse e proprietà dell'ambiente per il servizio {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
@@ -118,7 +123,7 @@ Una pipeline di esempio può contenere tre fasi:
 
 Questa pipeline viene mostrata nel seguente diagramma concettuale:
 
-![Un diagramma concettuale di fasi e lavori in una pipeline](images/diagram.jpg)
+![Diagramma concettuale di fasi e lavori in una pipeline](images/diagram.jpg)
 
 *Un modello concettuale di una pipeline a tre fasi*
 

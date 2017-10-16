@@ -14,7 +14,7 @@ lastupdated: "2017-4-4"
 # Sobre o Delivery Pipeline
 {: #deliverypipeline_about}
 
-O serviço {{site.data.keyword.deliverypipeline}} do IBM&reg; Bluemix&reg;, também conhecido como pipeline, automatiza a implementação contínua dos seus projetos Bluemix. Em um pipeline, as sequências de estágios recuperam a entrada e executam tarefas, como construções, testes e implementações.
+O {{site.data.keyword.contdelivery_full}} inclui o Delivery Pipeline para construir, testar e implementar de forma repetida com mínima intervenção humana. Em um pipeline, as sequências de estágios recuperam a entrada e executam tarefas, como construções, testes e implementações.
 {:shortdesc}
 
 As seções a seguir descrevem os detalhes conceituais por trás dos pipelines.
@@ -78,7 +78,7 @@ Além disso, as tarefas de pipeline podem executar apenas os comandos a seguir c
 
 Após a execução de uma tarefa, o contêiner que foi criado para ela é descartado. Os resultados da execução de uma tarefa podem persistir, mas o ambiente no qual ela foi executada não.
 
-**Nota**: as tarefas podem ser executadas por até 60 minutos. Quando
+**Nota:** as tarefas podem ser executadas por até 60 minutos. Quando
 as tarefas excedem esse limite, elas falham. Se uma tarefa estiver excedendo o limite,
 divida-a em várias tarefas. Por exemplo, se uma tarefa executar três trabalhos, você
 poderá dividi-la em três tarefas: uma para cada trabalho.
@@ -93,7 +93,12 @@ As tarefas que tomam a entrada das tarefas de construção devem referenciar os 
 possível especificar o diretório para archive inserindo o nome do diretório no campo
 **Construir diretório de archive**. Deixar o campo em branco, arquiva o diretório raiz.
 
-**Nota**: se você selecionar o tipo de construtor **Simples** para uma tarefa de construção, irá ignorar o processo de construção. Nesse caso, o código não será compilado, mas enviado para o estágio de implementação no estado em que se encontra. Para construir e implementar, selecione um tipo de construtor diferente de **Simples**.
+**Nota:** se você usa o tipo de construtor **Simples**, seu código não é compilado ou construído; ele é empacotado e disponibilizado para estágios futuros.
+
+Quando você implementa usando o Cloud Foundry, o Cloud Foundry inclui os artefatos corretos para permitir que seu app seja executado. Para obter mais informações, veja [Implementando aplicativos usando o comando cf](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps). O pipeline para um app Cloud Foundry contém um estágio de Implementação que executa um comando cf.
+
+O Cloud Foundtry tenta [detectar o buildpack para usar ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Você pode especificar o [Buildpack](/docs/cfapps/byob.html#using-community-buildpacks) para usar no arquivo manifest na pasta raiz de seu app. Os buildpacks geralmente examinam artefatos fornecidos pelo usuário para determinar quais dependências transferir por download e como configurar aplicativos para comunicação com os serviços de limite. Para obter mais informações sobre arquivos manifest, veja [Manifest do aplicativo](/docs/manageapps/depapps.html#appmanifest). 
+
 
 #### Propriedades do ambiente para scripts de construção
 É possível incluir as propriedades do ambiente nos comandos shell de construção de uma tarefa de construção. As propriedades fornecem acesso a informações sobre o ambiente de execução da tarefa. Para obter mais informações, veja [Propriedades e recursos do ambiente para o serviço {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).

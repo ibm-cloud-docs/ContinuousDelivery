@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-4-5"
+lastupdated: "2017-8-18"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,30 +22,34 @@ lastupdated: "2017-4-5"
 Con la funzione delle pipeline composite per {{site.data.keyword.deliverypipeline}}, puoi gestire i processi di fornitura continua e di integrazione continua ripetibili per le applicazioni software correlate.
 {:shortdesc}
 
-Crea le pipeline composite per gestire le applicazioni in una toolchain. Se la tua toolchain contiene applicazioni distribuite da {{site.data.keyword.deliverypipeline}}, la toolchain si aggiorna dinamicamente quando aggiungi o rimuovi le delivery pipeline dalla toolchain. Puoi anche aggiungere le applicazioni da origini esterne alla pipeline composita.
+Crea le pipeline composite per gestire le applicazioni in una toolchain. Se la tua toolchain contiene applicazioni distribuite da {{site.data.keyword.deliverypipeline}}, puoi impostare la pipeline composita in modo che venga aggiornata quando aggiungi o rimuovi le delivery pipeline dalla toolchain. Puoi anche aggiungere le applicazioni da origini esterne alla pipeline composita.
 
 ## Creazione di una pipeline composita
 {: #compositepipeline_create_for_toolchain}
 
-1. Dal menu accanto al logo Bluemix, fai clic su **Services > DevOps**
+1. Dal menu sulla barra dei menu di {{site.data.keyword.Bluemix_notm}}, fai clic su **DevOps**.
 
-1. Dal menu di navigazione di sinistra, fai clic su **Pipelines**.
+2. Dal menu di navigazione di sinistra, fai clic su **Pipelines**.
 
-2. Abilita la funzione delle pipeline composita facendo clic su **Learn more** e quindi su **Enable**. La pipeline composita viene abilitata per ogni utente, per cui solo i membri della tua organizzazione (org) che optano per la funzione sperimentale visualizzano le pipeline composite che crei.
+3. Abilita la funzione delle pipeline composita facendo clic su **Learn more** e quindi su **Enable**. La pipeline composita viene abilitata per ogni utente, per cui solo i membri della tua organizzazione (org) che optano per la funzione sperimentale visualizzano le pipeline composite che crei.
 
-2. Fai clic su **Create** > **Composite Pipeline**.
+4. Fai clic su **Create pipeline** > **Composite Pipeline**.
 
-3. Immetti un nome per la pipeline composita. Puoi anche modificare la descrizione della pipeline.
+5. Immetti un nome per la pipeline composita. Puoi anche modificare la descrizione della pipeline.
 
-4. Dall'elenco **Toolchain**, seleziona una toolchain.
+6. Dall'elenco **Toolchain**, seleziona una toolchain.
 
-    1. Per creare una toolchain e una pipeline composita vuote, seleziona **New**.
+    a. Per creare una toolchain e una pipeline composita vuote, seleziona **New**.
 
-    2. Per creare una pipeline composita per una delle tue toolchain, selezionane il nome.
+    b. Per creare una pipeline composita per una delle tue toolchain, selezionane il nome.
 
-5. Se hai creato una toolchain vuota, seleziona **Add default environments**. Utilizza questi ambienti logici predefiniti per controllare l'esecuzione del processo tramite le pipeline composita.
+7. Se hai creato una toolchain vuota, seleziona **Add default environments**. Utilizza questi ambienti logici predefiniti per controllare l'esecuzione del processo tramite le pipeline composita.
 
-6. Fai clic su **Crea**.
+8. Per aggiornare la pipeline composita quando aggiungi le pipeline alla toolchain, rimuovi le pipeline dalla toolchain o modifichi le fasi delle pipeline della toolchain, seleziona **Automatically synchronize this composite pipeline with the selected toolchain**.
+
+  **Nota:** devi abilitare la sincronizzazione automatica prima di modificare le pipeline della toolchain. Nella pipeline composita vengono incluse solo le modifiche effettuate mentre la sincronizzazione automatica è abilitata.
+
+9. Fai clic su **Crea**.
 
 Le fasi che hai configurato vengono automaticamente associate allo spazio appropriato nella tua organizzazione e viene creato un piano di distribuzione per la pipeline composita.
 
@@ -91,11 +95,40 @@ Dopo aver espanso un'applicazione per visualizzarne i lavori, puoi eseguire manu
 
 ![Esecuzione di una fase in una sola applicazione](images/composite_run_stage.png)
 
-Per eseguire tutti i lavori in tutte le applicazioni presenti in uno spazio, fai clic sull'icona **Deploy to *space*** nello spazio per la pipeline composita.
+Per eseguire ogni lavoro in ogni applicazione che si trova in uno spazio, fai clic sull'icona **Deploy to *space*** nello spazio per la pipeline composita.
 
 ![Esecuzione di una fase in tutte le applicazioni](images/composite_run_space.png)
 
 I lavori vengono eseguiti in base al piano di distribuzione del blueprint composito.
+
+##Aggiunta di applicazioni distribuite dalle delivery pipeline
+{: #compositepipeline_add_apps}
+
+Puoi aggiungere le applicazioni distribuite dalle delivery pipeline solo sincronizzando la pipeline composita con la toolchain. Poiché una pipeline composita è associata a una sola toolchain, puoi includere solo le applicazioni le cui delivery pipeline sono in quella toolchain.
+
+Per aggiungere un'applicazione distribuita da una delivery pipeline a una pipeline composita, completa questa procedura:
+
+1. Apri la pipeline composita.
+
+2. Seleziona **Automatically synchronize this composite pipeline with your toolchain**.
+
+  **Nota:** devi abilitare la sincronizzazione automatica prima di creare le delivery pipeline. Nella pipeline composita vengono incluse solo le modifiche effettuate mentre la sincronizzazione automatica è abilitata.
+
+3. Crea la delivery pipeline per l'applicazione. Assicurati di assegnare la delivery pipeline alla stessa toolchain della pipeline composita.
+
+4. Configura le fasi e i lavori per la delivery pipeline.
+
+L'applicazione viene aggiunta alla pipeline composita e i piani di distribuzione per ogni fase contengono le attività per eseguire i lavori che hai configurato.
+
+
+##Aggiornamento delle delivery pipeline nella pipeline composita
+{: #compositepipeline_sync}
+
+Devi abilitare la sincronizzazione automatica nella pipeline composta prima di poter aggiungere o modificare le pipeline che ne fanno parte.
+
+1. Apri la pipeline composita.
+
+2. Seleziona **Automatically synchronize this composite pipeline with your toolchain**.
 
 ## Visualizzazione dei log
 {: #compositepipeline_view_logs}
@@ -154,7 +187,7 @@ Per utilizzare DevOps Connect per l'integrazione con IBM UrbanCode Deploy, compl
 
     1. Per confermare che l'integrazione ha avuto esito positivo, fai clic su **Run Integration**. DevOps Connect si collega all'istanza IBM UrbanCode Deploy specificata nel campo **Server URI**. DevOps Connect è autorizzato dal token che è stato incollato nel campo **Authentication Token**.
 
-    1. Fai clic su **Salva**.
+    1. Fai clic su **Save**.
 
 Se la tua integrazione ha esito positivo, puoi aggiungere le applicazioni IBM UrbanCode Deploy alle tue pipeline composite. Per ulteriori informazioni, consulta [Aggiunta delle applicazioni da IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_add_apps).
 
@@ -162,7 +195,7 @@ Se la tua integrazione ha esito positivo, puoi aggiungere le applicazioni IBM Ur
 ## Aggiunta delle applicazioni da IBM UrbanCode Deploy
 {: #compositepipeline_add_apps}
 
-Se sei membro di un'organizzazione che è stata integrata con IBM UrbanCode Deploy utilizzando DevOps Connect, puoi aggiungere le applicazioni a cui puoi accedere in IBM UrbanCode Deploy alla pipeline composita. Per le istruzioni di installazione, consulta [Utilizzo di IBM Bluemix DevOps Connect per l'integrazione con IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
+Se sei un membro di un'organizzazione che è stata integrata con IBM UrbanCode Deploy utilizzando DevOps Connect, puoi aggiungere le applicazioni a cui puoi accedere in UrbanCode Deploy alla pipeline composita. Per le istruzioni di installazione, consulta [Utilizzo di IBM Bluemix DevOps Connect per l'integrazione con IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
 
 Quando sei un membro di un'organizzazione collegata a IBM UrbanCode Deploy, puoi aggiungere le applicazioni UrbanCode Deploy alle pipeline composite, selezionare i processi dell'applicazione da includere nel piano di distribuzione e personalizzare la distribuzione delle applicazioni.
 
@@ -174,7 +207,7 @@ Quando sei un membro di un'organizzazione collegata a IBM UrbanCode Deploy, puoi
 
 4. Seleziona i processi dell'applicazione da utilizzare per le applicazioni. Utilizza le opzioni di ricerca e filtro per individuare i processi.
 
-5. Fai clic su **Salva**. Ogni applicazione IBM UrbanCode Deploy che hai selezionato viene visualizzata come un'applicazione nella pipeline composita.
+5. Fai clic su **Save**. Ogni applicazione IBM UrbanCode Deploy che hai selezionato viene visualizzata come un'applicazione nella pipeline composita.
 
 6. Associa gli ambienti dalle applicazioni IBM UrbanCode Deploy agli ambienti logici della pipeline composita:
 
@@ -184,6 +217,12 @@ Quando sei un membro di un'organizzazione collegata a IBM UrbanCode Deploy, puoi
 
     2. Per ogni applicazione nella pipeline composita, seleziona gli ambienti che hai definito in IBM UrbanCode Deploy. I processi dell'applicazione che hai selezionato sono eseguiti solo negli ambienti da tale applicazione.
 
-    3. Fai clic su **Salva**.
+    3. Fai clic su **Save**.
 
     4. Ripeti questi passi per ogni ambiente logico che utilizzi.
+
+##Visualizza una esercitazione: pipeline composite
+{: #composite_pipeline-tutorial}
+
+Guarda questa esercitazione su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method){:new_window}:
+  * [Crea e utilizza una toolchain microservizi con DevOps Insights (v2) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

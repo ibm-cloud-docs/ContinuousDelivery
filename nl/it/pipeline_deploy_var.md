@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2017-4-11"
+lastupdated: "2017-7-10"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -19,7 +19,7 @@ lastupdated: "2017-4-11"
 # Risorse e proprietà dell'ambiente
 {: #deliverypipeline_environment}
 
-Puoi utilizzare le proprietà dell'ambiente e le risorse preinstallate per interagire con il servizio IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}}. Ad esempio, puoi incorporarle in uno script del lavoro o in un comando di verifica.
+Puoi utilizzare le proprietà dell'ambiente e le risorse preinstallate per interagire con la funzionalità della pipeline di {{site.data.keyword.contdelivery_full}}. Ad esempio, puoi incorporarle in uno script del lavoro o in un comando di verifica.
 {:shortdesc}
 
 Puoi aggiungere le tue proprie proprietà dell'ambiente a una fase dalla relativa scheda **PROPRIETÀ AMBIENTE**. Le proprietà dell'ambiente sono disponibili per ogni lavoro in una fase.
@@ -55,7 +55,7 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 | BUILD_NUMBER | L'ID della fase incrementale visualizzato nella IU della pipeline.  |
 | GIT_BRANCH | Il ramo Git che il lavoro utilizza come input. Questa proprietà è disponibile nei lavori che utilizzano un repository Git come input. |
 | GIT_COMMIT | Il commit Git che il lavoro utilizza come input. Questa proprietà è disponibile nei lavori che utilizzano un repository Git come input. |
-| GIT_PREVIOUS_COMMIT | Il valore di commit Git dell'ultima esecuzione del lavoro con esito positivo. Questa proprietà è disponibile solo nei lavori che utilizzano un repository Git come input. |
+| GIT_PREVIOUS_COMMIT | Il valore di commit Git dell'ultima esecuzione del lavoro con esito positivo. Questa proprietà è disponibile nei lavori che utilizzano un repository Git come input. |
 | GIT_URL | L'URL del repository Git che il lavoro utilizza come input. Questa proprietà è disponibile nei lavori che utilizzano un repository Git come input. |
 | IDS_JOB_ID | L'ID univoco della configurazione del lavoro. |
 | IDS_JOB_NAME | Il nome della configurazione del lavoro. |
@@ -63,8 +63,9 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 | IDS_PROJECT_NAME | Il nome del progetto, ad esempio <code>Owner - Project Name</code>. |
 | IDS_STAGE_NAME | Il nome della fase corrente. |
 | IDS_URL | L'URL della pipeline corrente. |
-| IDS_VERSION | Il numero per la build che sta venendo distribuita o dell'identificativo SCM. Questa proprietà è disponibile solo per i lavori di distribuzione.
+| IDS_VERSION | Il numero per la build che sta venendo distribuita o dell'identificativo SCM. Questa proprietà è disponibile solo nei lavori di distribuzione.
 | JOB_NAME | L'ID del lavoro univoco nel contesto della pipeline corrente. |
+| PIPELINE_KUBERNETES_CLUSTER_NAME | Il nome del cluster Kubernetes selezionato nel lavoro corrente.|
 | PIPELINE_STAGE_INPUT_JOB_ID | L'ID del lavoro che è l'input della fase corrente. |
 | PIPELINE_STAGE_INPUT_REV | La revisione dell'input della fase corrente. |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | L'ID univoco per l'esecuzione della pipeline. |
@@ -77,12 +78,15 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 | Proprietà ambiente | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | ANT_HOME | Il percorso a Apache Ant 1.9.2. |
+| ANT_JAVA8_HOME | Il percorso a una versione 1.10+ di Apache Ant che richiede Java 8. |
 | GRADLE_HOME | Il percorso a Gradle 1.11. |
 | JAVA_HOME | Il percorso a IBM&reg; Java&trade; 7. |
 | JAVA7_HOME | Il percorso a IBM Java 7. |
 | JAVA8_HOME | Il percorso a IBM Java 8. |
 | MAVEN_HOME | Il percorso a Apache Maven 3.2.1. |
 | NODE_HOME | Il percorso a Node.js 0.10.29. |
+
+**Suggerimento**: puoi utilizzare la versione 1.10+ di Apache Ant negli script della tua pipeline impostando `ANT_HOME` su `$ANT_JAVA8_HOME` e `JAVA_HOME` su `$JAVA8_HOME`.
 
 ### Proprietà di distribuzione
 
@@ -96,10 +100,10 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 | CF_TARGET_URL | Per le distribuzioni, l'URL di IBM Bluemix&reg; o Cloud Foundry. |
 | IDS_VERSION | Per le distribuzioni, la versione dell'applicazione che sta venendo distribuita o dell'identificativo della risorsa. |
 
-## Risorse pre-installate
+## Risorse preinstallate
 {: #deliverypipeline_resources}
 
-Molti moduli Node, strumenti e runtime sono pre-installati in ogni pipeline.
+Molti runtime, strumenti e moduli Node sono preinstallati in ogni pipeline.
 
 ### Runtime e strumenti
 

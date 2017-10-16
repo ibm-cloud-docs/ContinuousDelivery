@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-6-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -19,7 +19,7 @@ lastupdated: "2017-3-16"
 # Creazione e distribuzione
 {: #deliverypipeline_build_deploy}
 
-Il servizio IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} ti consente di implementare un'integrazione continua ripetibile e un processo di distribuzione continua.
+{{site.data.keyword.contdelivery_full}} include Delivery Pipeline, che puoi utilizzare per implementare un processo di integrazione continua e distribuzione continua ripetibile.
 {:shortdesc}
 
 Completa le seguenti attività per creare e configurare una pipeline.
@@ -49,14 +49,14 @@ Completa le seguenti attività per creare e configurare una pipeline.
 
 Puoi eseguire manualmente una fase facendo clic sull'icona **Esegui fase** nella pagina Pipeline.
 
-![Fare clic sull'icona Esegui fase su una fase](images/RunStage.png)
+![Clic sull'icona Esegui fase su una fase](images/RunStage.png)
 
 Puoi anche richiedere distribuzioni e creazioni on-demand dalla pagina della cronologia di creazione in uno dei seguenti due modi:
 * Trascina una creazione nella casella nella fase configurata.
-* Accanto alla creazione, fai clic sull'icona **Invia a** e seleziona quindi uno spazio a cui eseguire la distribuzione.
-  ![La fase di esecuzione con questa icona di creazione](images/deploy_to.png)
+* Nella sezione RISULTATO ULTIMA ESECUZIONE, fai clic sull'icona **Invia a** e seleziona quindi uno spazio in cui eseguire la distribuzione.
+  ![Fase di esecuzione con questa icona di creazione](images/deploy_to.png)
 
-Per annullare una fase in esecuzione, nella fase, fai clic su **Visualizza log e cronologia**. Nell'elenco dei lavori, fai clic sul numero di lavori in esecuzione e quindi fai clic su **ANNULLA**. Puoi anche annullare i lavori individualmente facendo clic su un lavoro e quindi su **ANNULLA** o facendo clic sull'icona **Arresta** accanto a un lavoro nella relativa fase.
+Per annullare una fase in esecuzione, nella fase, fai clic su **Visualizza log e cronologia**. Nell'elenco dei lavori, fai clic sul numero di lavori in esecuzione e quindi fai clic su **ANNULLA**. Puoi anche annullare i lavori individualmente facendo clic su un lavoro e quindi su **ANNULLA** o facendo clic sull'icona **Arresta** per un lavoro nella relativa fase.
 
 ## Distribuzione di un'applicazione
 {: #deliverypipeline_deploy}
@@ -84,8 +84,10 @@ Per visualizzare un log del lavoro, fai clic sul lavoro. In alternativa, in una 
 
 Per visualizzare il log di runtime di un'applicazione distribuita, fai clic su **Visualizza log di runtime**.
 
-![Le aree in un tile della fase su cui puoi fare clic per aprire i log pertinenti](images/view_logs_and_history.png)
+![Aree in un tile della fase su cui puoi fare clic per aprire i log pertinenti](images/view_logs_and_history.png)
 
 In aggiunta ai log del lavoro, puoi visualizzare i risultati della verifica dell'unità, le risorse utente generate e le modifiche al codice per ogni lavoro di creazione.
 
 Puoi anche eseguire, annullare, o configurare una fase dalla pagina Cronologia fase. Fai clic su **ESEGUI** per eseguire una fase o su **CONFIGURA** per configurarla. Puoi annullare una fase in esecuzione facendo clic sul numero di esecuzione e quindi su **ANNULLA**.
+
+

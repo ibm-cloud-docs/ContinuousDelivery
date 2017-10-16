@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-6"
+lastupdated: "2017-6-8"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated: "2017-6-6"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Git Repos and Issue Tracking
+# {{site.data.keyword.gitrepos}}
 {: #git_working}
 
 使用 IBM 所管理並以 [GitLab Community Edition ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://about.gitlab.com/){:new_window} 為建置基礎的 Git 儲存庫及問題追蹤器，來與團隊分工合作並且管理原始碼。
@@ -25,25 +25,22 @@ lastupdated: "2017-6-6"
 
 **附註：**因為此工具整合是以 GitLab Community Edition 為建置基礎，並由 IBM 於 Bluemix 上進行管理，所以有一些 GitLab 選項無法使用。例如，Delivery Pipeline 提供 Bluemix 的持續整合及持續交付；因此，不支援 GitLab 中的持續整合特性。此外，無法使用管理功能，因為它們是由 IBM 所管理。
 
-## 檔案及儲存庫大小限制
-{: #git_limits}
-
-檔案嚴格限制為 100 MB。建議的儲存庫大小限制為 1 GB。如果您的儲存庫超出 1 GB，則可能會收到含有減少儲存庫大小要求的電子郵件。
-
-## 在本端使用 Git Repos and Issue Tracking
+## 在本端使用 {{site.data.keyword.gitrepos}}
 {: #git_local}
 
 您可以在本端存取 {{site.data.keyword.gitrepos}} 中所儲存的 Git 儲存庫。如需在本端設定 Git 的指示，請參閱[在指令行上開始使用 Git ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}。
 
 **提示**：{{site.data.keyword.gitrepos}} 只支援使用 TLS1.2 的 HTTPS 連線。如果您使用 Eclipse 來連接，您可能需要為您的 Java&trade; 版本指定此通訊協定，新增 `-Dhttps.protocols=TLSv1.2` 至 eclipse.ini 檔，然後重新啟動 Eclipse。
 
-## 向 GitLab 進行鑑別  
+## 向 {{site.data.keyword.gitrepos}} 進行鑑別 
 {: #git_authentication}
 
-若要從本端 Git 儲存庫完成遠端 Git 作業（例如 `clone` 或 `push`），您必須使用個人存取記號或 SSH 金鑰來向 GitLab 進行鑑別。
+在 Web 瀏覽器中，只會使用您的 {{site.data.keyword.Bluemix_notm}} 登入及密碼向 {{site.data.keyword.gitrepos}} 進行鑑別。您無法使用 {{site.data.keyword.Bluemix_notm}} 使用者認證從外部 Git 用戶端進行鑑別。若要從本端 Git 儲存庫完成遠端 Git 作業（例如 `clone` 或 `push`），您必須使用個人存取記號或 SSH 金鑰來向 {{site.data.keyword.gitrepos}} 進行鑑別。
 
-### 建立個人存取記號  
-若要透過 HTTPS 向 Git 儲存庫進行鑑別，您必須建立個人存取記號。您的 {{site.data.keyword.Bluemix_notm}} 登入及密碼只能在瀏覽器中運作於 {{site.data.keyword.gitrepos}}。您無法使用 {{site.data.keyword.Bluemix_notm}} 使用者認證從外部 Git 用戶端進行鑑別。
+### 建立個人存取記號
+{: #create_pat}
+
+**重要事項**：若要透過 HTTPS 向 Git 儲存庫進行鑑別，您必須建立個人存取記號。
 
 1. 在 {{site.data.keyword.gitrepos}} User Settings 儀表板上的 [Access Tokens 頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}，鍵入您要為其建立存取記號的應用程式名稱。例如 `Git CLI`。
 1. 選用項目：選擇存取記號的到期日期。
@@ -55,6 +52,21 @@ lastupdated: "2017-6-6"
 若要進一步瞭解，請參閱 [Personal Access Tokens ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}。
 
 ### 建立 SSH 金鑰  
+{:create_ssh }
+
 若要建立 SSH 金鑰，請參閱 [How to create your SSH Keys ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){:new_window}。使用 SSH 鑑別來存取儲存庫，可能需要額外配置 Proxy 及防火牆。
 
 若要進一步瞭解，請參閱 [SSH ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/ssh/README){:new_window}。
+
+## 檔案及儲存庫大小限制
+{: #git_limits}
+
+檔案嚴格限制為 100 MB。建議的儲存庫大小限制為 1 GB。如果您的儲存庫超出 1 GB，則可能會收到含有減少儲存庫大小要求的電子郵件。
+
+## 使用指導教學：{{site.data.keyword.gitrepos}}
+{: #git_tutorials}
+
+請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method){:new_window} 上的其中一個指導教學：
+
+  * [建立使用 {{site.data.keyword.gitrepos}} 的工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
+  * [使用 DevOps Insights（第 2 版）建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}

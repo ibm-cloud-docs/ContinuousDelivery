@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-16"
+lastupdated: "2017-7-17"
 
 ---
 
@@ -61,6 +61,8 @@ lastupdated: "2017-5-16"
 
 您可以通过将用户添加到与工具链相关联的组织，以及工具链的访问控制表，对用户授予工具链的访问权。每一个工具链都与特定组织相关联，且属于该组织成员的任何用户都可以添加到任何相关联工具链的访问控制表中。您当前正为之工作的组织会显示在菜单栏上。要访问不同的工具链集，请切换到不同的组织。
 
+**提示：**必须在托管工具链的区域中向工具链的组织添加用户。由于目前工具链仅在美国南部区域托管，因此必须将用户添加到美国南部区域的组织。如果工具链配置为将应用程序部署到其他区域，那么它仍会将应用程序部署到美国南部区域。
+
 将用户添加到 {{site.data.keyword.Bluemix_notm}} 组织和空间时，如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}，那么用户可以使用他们的 {{site.data.keyword.Bluemix_notm}} 标识和密码登录到 {{site.data.keyword.ghe_short}}。用户登录之后，将为他们创建帐户。将用户添加到 {{site.data.keyword.Bluemix_notm}} 组织和空间时，他们不会自动添加到 {{site.data.keyword.ghe_short}} 存储库。必须由具有存储库管理权限的人员进行添加。有关更多信息，请参阅[使用 Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}。如果您使用自己的 {{site.data.keyword.ghe_short}} 受管版本，请遵循内部过程。
 
 ###管理工具链访问权的提示
@@ -89,7 +91,7 @@ lastupdated: "2017-5-16"
 
      **注**：缺省情况下，组织管理员对与组织相关联的所有工具链具有完全的管理特权。要向用户授予完全的管理特权，请选择**管理员**角色。“记帐管理员”和“审计员”角色不会影响工具链访问权。您可以日后在“团队目录”页面上更改这些角色。有关更多信息，请参阅[管理团队成员和角色](/docs/admin/users_roles.html){: new_window}。
 
-   f. 选择选项以确认您对帐户上发生的所有费用承担支付责任。
+   f. 选择相应选项以确认您负责支付该帐户发生的所有费用。
 
    g. 输入您要邀请的用户的电子邮件地址，然后单击**发送**。
 
@@ -107,3 +109,10 @@ lastupdated: "2017-5-16"
 1. 通过输入工具链的名称并单击**删除**，以确认删除。  
 
  **提示**：当您删除 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}} 工具集成时，不会从 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}} 删除相关联的存储库。您必须手动除去存储库。
+
+##学习教程：使用工具链
+{: #toolchain-tutorial}
+
+查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method){:new_window} 上的本教程：
+  * [创建并使用第一个工具链 (GitHub) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [创建并使用具有 {{site.data.keyword.DRA_short}} 的微服务工具链 (V2) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

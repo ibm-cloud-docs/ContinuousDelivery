@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-5-8"
+lastupdated: "2017-6-1"
 ---
 
 {:new_window: target="_blank"}
@@ -14,9 +14,9 @@ lastupdated: "2017-5-8"
 # Utilizzo di Git in Eclipse Orion Web IDE
 {: #git_web_ide}
 
-Quando utilizzi Eclipse Orion {{site.data.keyword.webide}}, non hai bisogno del terminale Git: puoi eseguire molti comandi comuni Git nel Web IDE.
+Puoi eseguire molti comandi comuni di Git in Eclipse Orion {{site.data.keyword.webide}}.
 
-Indipendentemente da dove esegui la codifica, puoi utilizzare questo riferimento rapido per svolgere attività comuni.
+Indipendentemente da dove esegui la codifica, puoi utilizzare questo riferimento rapido per svolgere attività comuni. Quando possibile, i comandi Git vengono visualizzati con i loro equivalenti nel Web IDE. 
 
 ## Crea un ramo locale
 {: #create_branch}
@@ -37,7 +37,7 @@ Indipendentemente da dove esegui la codifica, puoi utilizzare questo riferimento
 ### Eclipse Orion Web IDE
 1. Fai clic sull'elenco **Reference** ed espandi **local**.
 
-2. Accanto al ramo da modificare, fai clic sull'icona Checkout <img  class="inline" src="./images/checkout.png" alt="icona Checkout">.
+2. Fai clic sull'icona di estrazione <img  class="inline" src="./images/checkout.png" alt="Icona di estrazione"> per il ramo da modificare.
 
 1. Assicurati che il tuo ramo selezionato sia visualizzato nell'elenco **Reference**.
 
@@ -66,7 +66,7 @@ Indipendentemente da dove esegui la codifica, puoi utilizzare questo riferimento
 
 1. Fai clic sull'elenco **Reference** ed espandi **local**.
 
-2. Accanto al ramo locale da rimuovere, fai clic su **Delete** <img class="inline"  src="./images/delete.png" alt="icona Delete">.
+2. Fai clic su **Delete** <img class="inline"  src="./images/delete.png" alt="Icona di eliminazione"> per il ramo locale da rimuovere.
 
 ### Terminale Git
 1. Immetti `git branch -d <branchname>` e premi Invio.
@@ -80,7 +80,7 @@ Sovrascrivi il contenuto di un ramo remoto di riferimento con il contenuto del t
 
 ### Eclipse Orion Web IDE
 
-1. Nella sezione Working Directory Changes, nella sezione Outgoing, fai clic sulla freccia accanto a **Push**.
+1. Nella sezione Working Directory Changes, nella sezione Outgoing, fai clic sulla freccia per **Push**.
 2. Fai clic su **Force Push Branch**.
 3. Conferma l'avvertenza.
 
@@ -139,14 +139,14 @@ Sovrascrivi il contenuto di un ramo remoto di riferimento con il contenuto del t
 
 1. Fai clic sull'icona dell'**attivazione della rappresentazione grafica** <img  class="inline" src="./images/graphicalhistoryicon.png" alt="icona cronologia grafica">.
 
-  Una volta attivata, la cronologia di commit e le eventuali modifiche in entrata o in uscita per il ramo attivo vengono disegnate come un grafico collegato.  La rappresentazione visiva mostra tutti i commit e i rami su cui sono stati effettuati.
+  Quando attivata, la cronologia di commit e le eventuali modifiche in entrata o in uscita per il ramo attivo vengono disegnate come un grafico connesso. La rappresentazione visiva mostra tutti i commit e i rami su cui sono stati effettuati.
 
   <img class="screen-shot" src="./images/visualhistoryexample.png" alt="Cronologia commit visiva">
 
 ### Terminale Git
 1. Immetti `git log` e premi Invio.
 
-2. Esplora i commit del committer.
+2. Esamina i commit del committer.
  * Per visualizzare più elementi, premi Pagina giù.
  * Per visualizzare gli elementi precedenti, premi Pagina su.
 
@@ -160,7 +160,7 @@ Sovrascrivi il contenuto di un ramo remoto di riferimento con il contenuto del t
 
 2. Visualizza i dettagli del commit facendo clic su di esso.
 
-3. Accanto a un file, fai clic su **>** e rivedi le modifiche del file.
+3. Per riesaminare le modifiche di un file, fai clic su **>**.
 
   **Nota:** se un commit ha introdotto una modifica a una riga, la riga originale ha un'ombreggiatura rosa e la nuova riga ha un'ombreggiatura verde.  Allo stesso modo, le righe aggiunte da un commit hanno un'ombreggiatura verde e quelle rimosse da un commit hanno un'ombreggiatura rosa.
 
@@ -249,7 +249,7 @@ Ripristina le modifiche introdotte da un commit nel tuo ramo attivo.
 
 1. In History, seleziona un commit.
 
-2. Sul lato destro della pagina, sopra il riepilogo del commit, fai clic sull'icona di ripristino <img class="inline" src="./images/revert.png" alt="icona di ripristino">.
+2. Fai clic sull'icona di ripristino <img class="inline" src="./images/revert.png" alt="Icona di ripristino">.
 
 ### Terminale Git
 
@@ -273,7 +273,7 @@ Quando hai bisogno di trasmettere le modifiche da un ramo di origine a un ramo d
 
 1. Nella sezione Incoming, fai clic sull'icona **Merge** <img  class="inline" src="./images/mergeicon.png" alt="icona Merge nella sezione Incoming">
 
-1. Nell'elenco **Reference**, fai clic sull'icona di estrazione accanto al ramo in cui hai appena unito le modifiche.
+1. Nell'elenco **Reference**, fai clic sull'icona di estrazione per il ramo in cui hai appena unito le modifiche.
 
 1. Se vuoi trasmettere le modifiche, fai clic su **Push**. Altrimenti, a questo punto, puoi creare una distribuzione di prova per assicurarti che tutto funzioni come previsto.
 

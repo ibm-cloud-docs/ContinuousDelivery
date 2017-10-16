@@ -21,7 +21,7 @@ lastupdated: "2017-6-5"
 # Continuous Delivery-Verfahren
 {: #gm_cd_best}
 
-![Garage Method-Phasen](images/garage_method_phases.png) [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method){:new_window} ist der IBM Ansatz zur zügigen Bereitstellung ansprechender Anwendungen. Hierbei werden Continuous Delivery mit IBM Design Thinking, schlanken, DevOps- und agilen Verfahren kombiniert. Diese Verfahren konzentrieren sich zwar vorrangig auf die Cloud, können aber jedem Softwareentwicklungsaufwand zugutekommen.
+![Garage Method-Phasen](images/garage_method_phases.png)  [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method){:new_window} ist der IBM Ansatz zur zügigen Bereitstellung ansprechender Anwendungen. Hierbei werden Continuous Delivery mit IBM Design Thinking, schlanken, DevOps- und agilen Verfahren kombiniert. Diese Verfahren konzentrieren sich zwar vorrangig auf die Cloud, können aber jedem Softwareentwicklungsaufwand zugutekommen.
 
 
 ## Continuous Delivery-Verfahren annehmen
@@ -32,7 +32,7 @@ Um zu erfahren, wie Sie einen Continuous Delivery-Ansatz in Ihrer Organisation �
 ## Continuous Delivery-Artikel
 {: #gm_cd_articles}
 
-Diese Artikel liefern eine Übersicht über die Konzepte, die Continuous Delivery zugrunde liegen.
+Auf der Cloud Garage Method-Site finden Sie Artikel mit einer allgemeinen Beschreibung von Continuous Delivery.
 
 [Continuous Delivery ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window} ist ein Verfahren, nach dem Sie Ihre Software so erstellen und bereitstellen, dass sie jederzeit für die Produktion freigegeben werden kann. Eines der Markenzeichen der Informatik ist die Verkürzung diverser Zykluszeiten im Entwicklungs- und Betriebsprozess.
 
@@ -51,7 +51,7 @@ Mit [Delivery Pipeline ![Symbol für externen Link](../../icons/launch-glyph.svg
 
 [Toolchain erstellen, die {{site.data.keyword.gitrepos}} verwendet ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}. Erstellen Sie eine offene Toolchain aus einer Vorlage, die eine Cloud Foundry-App enthält und {{site.data.keyword.gitrepos}} verwendet. Verwenden Sie anschließend die Toolchain für die fortlaufende Bereitstellung der App.
 
-[Pipeline erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window} Erfahren Sie, wie Sie mit einer Pipeline beginnen und eine offene Toolchain erstellen, die ein GitHub-Repository und die Pipeline enthält.
+[Pipeline erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}. Erfahren Sie, wie Sie mit einer Pipeline beginnen und eine offene Toolchain erstellen, die ein GitHub-Repository und die Pipeline enthält.
 
 Weitere Lernprogramme finden Sie im [Learning Lab ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/category/courses){:new_window}.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-11"
+lastupdated: "2017-07-18"
 
 ---
 
@@ -21,7 +21,7 @@ A equipe do {{site.data.keyword.contdelivery_full}} monitora ativamente os fóru
  <td align="center">
  <strong>Stack Overflow</strong>
   <p>
-   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/ask-a-question.png" alt="Faça uma pergunta"/></a></p>
+   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,devops-services" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/ask-a-question.png" alt="Faça uma pergunta"/></a></p>
    <p>
     <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Abre em uma nova guia ou janela)">Mostrar <img class="image" src="../../icons/launch-glyph.svg" alt="Ícone de link externo"/></a> perguntas recentes do {{site.data.keyword.Bluemix_notm}} DevOps Services no Stack Overflow.</p></td>
   <td align="center">
@@ -41,7 +41,7 @@ Se você tiver um problema mais sério ou encontrar problemas com o serviço {{s
 1. Na barra de menus, clique em **Suporte** e, em seguida, clique em **Incluir chamado**.
 1. Conclua o formulário para indicar o que você precisa do suporte técnico.
 
-Para obter mais informações sobre como abrir um chamado de suporte IBM {{site.data.keyword.Bluemix_notm}} ou sobre os níveis de suporte e severidades de chamado, veja [Entrando em contato com o suporte](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+Para obter mais informações sobre como abrir um chamado de suporte IBM {{site.data.keyword.Bluemix_notm}} ou sobre os níveis de suporte e severidades de chamado, veja [Entrando em contato com o suporte](https://console.bluemix.net/docs/support/index.html#contacting-support).
 
 
 ## Suporte para o Bluemix

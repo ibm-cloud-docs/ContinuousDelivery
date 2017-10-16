@@ -14,9 +14,9 @@ lastupdated: "2017-6-1"
 # Eclipse Orion Web IDE에서 Git에 대한 작업
 {: #git_web_ide}
 
-Eclipse Orion {{site.data.keyword.webide}}를 사용할 때 Git 터미널이 필요하지 않습니다. Web IDE에서 공통 Git 명령을 여러 개 실행할 수 있습니다.
+{{site.data.keyword.webide}}에서 다수의 공통 Git 명령을 실행할 수 있습니다.
 
-코딩 위치와 상관없이 이 빠른 참조서를 통해 일반 태스크를 수행할 수 있습니다.
+코딩 위치와 상관없이 이 빠른 참조서를 통해 일반 태스크를 수행할 수 있습니다. 가능한 경우 Git 명령은 Web IDE에 있는 동등한 항목과 함께 표시됩니다.  
 
 ## 로컬 분기 작성
 {: #create_branch}
@@ -29,7 +29,7 @@ Eclipse Orion {{site.data.keyword.webide}}를 사용할 때 Git 터미널이 필
 2. 분기 이름을 입력하고 **제출**을 클릭하십시오.
 
 ### Git 터미널
-1. `git branch <branchname>`을 입력하고 Enter를 누르십시오.
+1. `git branch<branchname>`를 입력하고 Enter를 누르십시오.
 
 ## 로컬 분기 작업
 {: #start_working_on_branch}
@@ -44,7 +44,7 @@ Eclipse Orion {{site.data.keyword.webide}}를 사용할 때 Git 터미널이 필
 ### Git 터미널
 1. 로컬 분기를 보려면 `git branch -l`를 입력하고 Enter를 누르십시오.
 
-2. `git checkout <branchname>`을 입력하고 Enter를 누르십시오.
+2. `git checkout<branchname>`을 입력하고 Enter를 누르십시오.
 
 
 ## 원격 분기의 변경사항을 포함하도록 로컬 분기 업데이트
@@ -69,7 +69,7 @@ Eclipse Orion {{site.data.keyword.webide}}를 사용할 때 Git 터미널이 필
 2. 제거할 로컬 분기에 대해 **삭제** <img class="inline"  src="./images/delete.png" alt="삭제 아이콘">을 클릭하십시오.
 
 ### Git 터미널
-1. `git branch -d <branchname>`을 입력하고 Enter를 누르십시오.
+1. `git branch -d<branchname>`를 입력하고 Enter를 누르십시오.
 
 ##원격 분기에 로컬 변경사항을 강제로 푸시
 {: #force_push}
@@ -139,14 +139,14 @@ Eclipse Orion {{site.data.keyword.webide}}를 사용할 때 Git 터미널이 필
 
 1. **그래픽 표시 전환** 아이콘 <img  class="inline" src="./images/graphicalhistoryicon.png" alt="그래픽 히스토리 아이콘">을 클릭하십시오.
 
-  전환되고 나면 활성 분기의 모든 수신 또는 출력 변경사항과 커미트 히스토리를 연결된 그래프로 그립니다. 시각적 표현에서 모든 커미트와 해당 커미트를 수행한 분기를 표시합니다.
+  전환되면 활성 분기의 모든 수신 또는 출력 변경사항과 커미트 히스토리를 연결된 그래프로 그립니다. 시각적 표현에서 모든 커미트와 해당 커미트를 수행한 분기를 표시합니다.
 
   <img class="screen-shot" src="./images/visualhistoryexample.png" alt="시각적 커미트 히스토리">
 
 ### Git 터미널
 1. `git log`를 입력하고 Enter를 누르십시오.
 
-2. 커미터의 커미트를 탐색하십시오.
+2. 커미터의 커미트를 찾아보십시오. 
  * 추가 항목을 보려면 다음 페이지를 누르십시오.
  * 이전 항목을 보려면 이전 페이지를 누르십시오.
 
@@ -217,7 +217,7 @@ Eclipse Orion {{site.data.keyword.webide}}를 사용할 때 Git 터미널이 필
 ### Git 터미널
 1. 커미트 히스토리를 보고 태그를 지정할 커미트의 ID를 얻으십시오. 자세한 정보는 [커미트 히스토리 보기](#view_commit_history)를 참조하십시오.
 
-2. `git tag -a <tag_text> <commit_id>`를 입력하고 Enter를 누르십시오.
+2. `git tag -a<tag_text> <commit_id>`를 입력하고 Enter를 누르십시오.
 
 ## 커미터 이름 및 이메일 주소 변경
 {: #change_the_committer_name_and_email_address}
@@ -282,7 +282,7 @@ Eclipse Orion {{site.data.keyword.webide}}를 사용할 때 Git 터미널이 필
 
 2. 대상 분기를 체크아웃하십시오. 자세한 정보는 [ 로컬 분기에 대한 작업](#start_working_on_branch)을 참조하십시오.
 
-3. `git merge <source_name>`을 입력하고 Enter를 누르십시오.
+3. `git merge <source_name>`를 입력하고 Enter를 누르십시오.
 
 
 ## 병합 충돌 해결
@@ -345,7 +345,7 @@ Eclipse Orion {{site.data.keyword.webide}}를 사용할 때 Git 터미널이 필
 ### Git 터미널
 1. `git checkout <destination_branchname>`을 입력하고 Enter를 눌러 업데이트할 분기를 체크아웃하십시오.
 
-2. `git rebase <source_branchname>`을 입력하고 Enter를 누르십시오.
+2. `git rebase <source_branchname>`를 입력하고 Enter를 누르십시오.
 
 3. 충돌이 발생하면 [해결](#resolve_a_rebase_conflict)하십시오.
 

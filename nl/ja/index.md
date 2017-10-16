@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-19"
-
----
+lastupdated: "2017-5-19"---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
@@ -15,12 +13,11 @@ lastupdated: "2017-5-19"
 アプリケーションのビルドとデプロイメントを自動化するオープン・ツールチェーンが組み込まれた {{site.data.keyword.contdelivery_full}} を使用することによって、DevOps アプローチを取り入れることができます。開発、デプロイメント、運用の作業をサポートする単純なデプロイメント・ツールチェーンを作成することから始めることができます。
 {: shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} カタログから選択して {{site.data.keyword.contdelivery_short}} のインスタンスを作成した後、サービスにどのように取り掛かるかを選択できます。
-![Continuous Delivery ウェルカム・ページ](images/cd_landing_page.png)
+{{site.data.keyword.Bluemix_notm}} カタログから選択して {{site.data.keyword.contdelivery_short}} のインスタンスを作成した後、サービスにどのように取り掛かるかを選択できます。![Continuous Delivery ウェルカム・ページ](images/cd_landing_page.png)
 
- * 自動化パイプラインを使用して迅速に始めてアプリケーションをデプロイするには、「パイプラインで開始 (Starting with a pipeline)」セクションで、**[「ここから開始 (Start here)](#starting_with_a_pipeline)**をクリックします。後でさらにツールを追加できます。
- * テンプレートから継続的デリバリー・ツールチェーンを作成して構成するには、「ツールチェーン・テンプレートから開始 (Starting from a toolchain template)」セクションで、**[「ここから開始 (Start here)」](#starting_from_a_toolchain_template)**をクリックします。ツールチェーンは、パイプラインのプランニング、開発、デプロイと、アプリケーションの管理のためのツールを統合したものです。ツールチェーンに対していつでもツールを追加したり削除したりできます。
- * ツールチェーンが既にある場合は、「ツールチェーン・テンプレートから開始 (Starting from a toolchain template)」セクションで、**「ツールチェーンを表示 (View your toolchains)」**をクリックします。ツールチェーンの扱いについて詳しくは、[ツールチェーンの使用](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}を参照してください。
+* 自動化パイプラインを使用して迅速に始めてアプリケーションをデプロイするには、「パイプラインで開始 (Starting with a pipeline)」セクションで、**[「ここから開始 (Start here)](#starting_with_a_pipeline)**をクリックします。後でさらにツールを追加できます。
+* テンプレートから継続的デリバリー・ツールチェーンを作成して構成するには、「ツールチェーン・テンプレートから開始 (Starting from a toolchain template)」セクションで、**[「ここから開始 (Start here)」](#starting_from_a_toolchain_template)**をクリックします。ツールチェーンは、パイプラインのプランニング、開発、デプロイと、アプリケーションの管理のためのツールを統合したものです。ツールチェーンに対していつでもツールを追加したり削除したりできます。
+* ツールチェーンが既にある場合は、「ツールチェーン・テンプレートから開始 (Starting from a toolchain template)」セクションで、**「ツールチェーンを表示 (View your toolchains)」**をクリックします。ツールチェーンの扱いについて詳しくは、[ツールチェーンの使用](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}を参照してください。
 
 **ヒント:** パイプラインはツールチェーンによって管理されます。パイプラインは既存のツールチェーンに追加できます。パイプラインを作成すると、既存のツールチェーンがなければ、デフォルト名のツールチェーンが自動で作成されます。ツールチェーンを使用して、他のツールやサービスと統合することで、パイプラインの機能を展開できます。
 
@@ -65,21 +62,20 @@ Cloud Foundry アプリケーションをデプロイするように構成され
 1. 使用するツールチェーンを選択するか、作成する新しいツールチェーンの名前を入力します。
 1. Git プロバイダーを選択します。
 
- **ヒント**: {{site.data.keyword.Bluemix_notm}} に GitHub へのアクセスをまだ認可していない場合は、**「認可 (Authorize)」** をクリックして GitHub の Web サイトにアクセスするよう求められます。アクティブな GitHub セッションがない場合は、ログインするよう求められます。**「アプリケーションを許可 (Authorize Application)」** をクリックして、{{site.data.keyword.Bluemix_notm}} が GitHub アカウントにアクセスできるようにします。アクティブな GitHub セッションはあるものの、最近パスワードを入力していない場合は、確認のために GitHub パスワードの入力を求められることがあります。
+ **ヒント**: ご使用の GitHub アカウントにアクセスする権限が {{site.data.keyword.Bluemix_notm}} にない場合は、**「許可 (Authorize)」**をクリックして GitHub Web サイトに移動するよう求められます。アクティブな GitHub セッションがない場合は、ログインするよう求められます。**「アプリケーションを許可 (Authorize Application)」** をクリックして、{{site.data.keyword.Bluemix_notm}} が GitHub アカウントにアクセスできるようにします。
 
  {{site.data.keyword.ghe_short}} リポジトリーへのアクセスを許可されていない場合は、リポジトリーの管理特権を持つユーザーに依頼して追加してもらう必要があります。{{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} での許可の説明については、[{{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} 概説](/docs/services/ghededicated/index.html){: new_window}を参照してください。ユーザー自身が管理する {{site.data.keyword.ghe_short}} のバージョンで許可する必要がある場合は、内部プロシージャーに従ってください。
 
-   * 既存のリポジトリーを使用する場合は、リポジトリーのタイプとして**「リンク (Link)」**を選択します。リポジトリーの場所を検索するか、選択可能なリポジトリーのリストからリポジトリーを選択します。
+    * 既存のリポジトリーを使用する場合は、リポジトリーのタイプとして**「リンク (Link)」**を選択します。リポジトリーの場所を検索するか、選択可能なリポジトリーのリストからリポジトリーを選択します。
 
-   * 空のリポジトリーを作成する場合は、リポジトリー・タイプとして**「新規」**を選択します。リポジトリーの名前を入力します。
+    * 空のリポジトリーを作成する場合は、リポジトリー・タイプとして**「新規」**を選択します。リポジトリーの名前を入力します。
 
-   * リポジトリーのクローンを作成する場合は、リポジトリーのタイプに**「コピー」**を選択します。リポジトリーの場所を検索するか、選択可能なリポジトリーのリストからリポジトリーを選択します。
+    * リポジトリーのクローンを作成する場合は、リポジトリーのタイプに**「コピー」**を選択します。リポジトリーの場所を検索するか、選択可能なリポジトリーのリストからリポジトリーを選択します。
 
-   * リポジトリーをフォークし、プル・リクエストで変更内容を提供できるようにする場合は、**「フォーク (Fork)」**を選択します。リポジトリーの場所を検索するか、選択可能なリポジトリーのリストからリポジトリーを選択します。
+    * リポジトリーをフォークし、プル・リクエストで変更内容を提供できるようにする場合は、**「フォーク (Fork)」**を選択します。リポジトリーの場所を検索するか、選択可能なリポジトリーのリストからリポジトリーを選択します。
 
 1. リポジトリーを選択するか、リポジトリーの URL を入力します。
-1. **「作成」**をクリックします。パイプラインが作成され、構成されて、ツールチェーンの「概要」ページに表示されます。
-![パイプライン・カード](images/cd_pipeline.png)
+1. **「作成」**をクリックします。パイプラインが作成され、構成されて、ツールチェーンの「概要」ページに表示されます。![パイプライン・カード](images/cd_pipeline.png)
 
 事前構成されたステージのない[空のパイプライン ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} を作成するには、以下のようにします。
 
@@ -94,13 +90,12 @@ Cloud Foundry アプリケーションをデプロイするように構成され
 
 [テンプレート ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン icon")](https://console.bluemix.net/devops/create){: new_window} から継続的デリバリー・ツールチェーンを作成して構成するには、以下のようにします。
 
-1. **「ツールチェーンの作成 (Create a Toolchain)」**ページで、ツールチェーン・テンプレートをクリックします。  
+1. **「ツールチェーンの作成 (Create a Toolchain)」**ページで、ツールチェーン・テンプレートをクリックします。
 1. 作成しようとしているツールチェーンの図を確認します。この図は、ツールチェーン内の各ツール統合とそのライフサイクル・フェーズを示しています。
 
  **ヒント**: 一部のツールチェーン・テンプレートには、同じツール統合の複数のインスタンスが含まれています。例えば、{{site.data.keyword.Bluemix_notm}} Public の Microservices ツールチェーン・テンプレートには、GitHub の 3 つのインスタンスと Delivery Pipeline の 3 つのインスタンス (3 つのマイクロサービスのそれぞれに対して 1 つずつ) が含まれています。
 
- 次のイメージの図はその例です。ツールチェーンを作成すると、ツールチェーンを構成する各ツール統合がこの図に表示されます。
-![ツールチェーンの図](images/toolchain_diagram.png)
+ 次のイメージの図はその例です。ツールチェーンを作成すると、ツールチェーンを構成する各ツール統合がこの図に表示されます。![ツールチェーンの図](images/toolchain_diagram.png)
 1. ツールチェーン設定のデフォルト情報を確認します。ツールチェーンの名前は、そのツールチェーンを {{site.data.keyword.Bluemix_notm}} 内で識別するためのものです。別の名前を使用する場合は、ツールチェーンの名前を変更します。
 1. 「ツール統合 (Tool Integrations)」セクションで、ツールチェーンに構成する各ツール統合を選択します。いくつかのツール統合は、構成を必要としません。ツール統合の構成については、[ツール統合の構成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}を参照してください。
 1. **「作成」**をクリックします。以下のようにいくつかのステップが自動的に実行されて、ツールチェーンがセットアップされます。セットアップされるツール統合は、どのツールチェーン・テンプレートを選択したのか、また、{{site.data.keyword.Bluemix_notm}} Public と {{site.data.keyword.Bluemix_notm}} Dedicated のどちらを使用しているのかによって異なります。例えば、Microservices ツールチェーンを {{site.data.keyword.Bluemix_notm}} Public で作成する場合、以下のステップが実行されます。

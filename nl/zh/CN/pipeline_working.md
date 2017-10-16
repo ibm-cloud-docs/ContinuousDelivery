@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-25"
+lastupdated: "2017-09-05"
 
 ---
 
@@ -12,12 +12,12 @@ lastupdated: "2017-5-25"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# 使用 {{site.data.keyword.deliverypipeline}} {: #pipeline-working}
+# 使用工具链 {: #pipeline-working}
 
-要自动执行构建并部署到 {{site.data.keyword.Bluemix}}，请使用 {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}。
+要自动执行构建并部署到 {{site.data.keyword.Bluemix}}，请使用 {{site.data.keyword.contdelivery_full}} 管道。
 {: shortdesc}
 
-使用 {{site.data.keyword.deliverypipeline}}，可以从多个构建类型中进行选择。您提供构建脚本，{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} 运行该脚本；无需设置构建系统。然后，只需单击一下，即可将应用程序自动部署到一个或多个 {{site.data.keyword.Bluemix_notm}} 空间、公共 Cloud Foundry 服务器或 IBM Containers for {{site.data.keyword.Bluemix_notm}} 上的 Docker 容器。
+通过管道，可以从多个构建类型中进行选择。您提供构建脚本，{{site.data.keyword.contdelivery_short}} 运行该脚本；无需设置构建系统。然后，只需单击一下，即可将应用程序自动部署到一个或多个 {{site.data.keyword.Bluemix_notm}} 空间、公共 Cloud Foundry 服务器或 IBM Containers for {{site.data.keyword.Bluemix_notm}} 上的 Docker 容器。
 
 构建作业会对 Git 存储库中的应用程序源代码进行编译和打包。构建作业会生成可部署的工件，如 WAR 文件或 IBM Containers 的 Docker 容器。此外，还可以在构建内自动运行单元测试。您可以设置构建作业，以便每次推送落实时，都触发构建。
 
@@ -58,8 +58,7 @@ lastupdated: "2017-5-25"
    * 如果要派生存储库以便您可以通过拉出请求来提供更改，请选择**派生**。搜索该存储库的位置，或者从可用存储库列表中选择该存储库。
 
 1. 选择存储库或输入存储库 URL。
-1. 单击**创建**。这将创建和配置管道，并将其显示在工具链的“概述”页面上。
- ![管道卡](images/cd_pipeline.png)
+1. 单击**创建**。这将创建和配置管道，并将其显示在工具链的“概述”页面上。![“管道”卡](images/cd_pipeline.png)
 1. 如果您已在包含组合管道的工具链中创建了管道，那么新管道会添加到组合管道。修改部署计划，以包含新管道的部署任务。请参阅[创建 Delivery Pipeline 任务](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}。
 
 要在没有任何预配置阶段的情况下创建[空管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window}，请执行以下操作：
@@ -71,3 +70,9 @@ lastupdated: "2017-5-25"
 1. 单击**创建**。这将创建空管道，在工具链的“概述”页面上，该空管道将以卡的形式表示。
 
 通过 {{site.data.keyword.deliverypipeline}}，可更改配置，检查构建、已部署应用程序和最近部署的状态，查看最新日志和部署详细信息，也可以删除管道。
+
+## 学习教程：{{site.data.keyword.deliverypipeline}}
+{: #pipeline-tutorial}
+
+查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method){:new_window} 上的本教程：
+  * [创建管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}

@@ -19,7 +19,7 @@ lastupdated: "2017-6-1"
 # 建置及部署
 {: #deliverypipeline_build_deploy}
 
-IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服務可讓您實作可重複的持續整合及持續交付程序。
+{{site.data.keyword.contdelivery_full}} 包括 Delivery Pipeline，以用來實作可重複的持續整合及持續交付程序。
 {:shortdesc}
 
 請完成下列作業來建立及配置管線。
@@ -53,8 +53,7 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服務可讓您實�
 
 您也可以使用下列兩種方法的其中一種，從建置歷程頁面中要求依需求建置及部署：
 * 將建置拖曳至所配置階段下的方框。
-* 在 LAST EXECUTION RESULT 區段中，按一下**傳送至**圖示，然後選取要部署至的空間。
-  ![具有此建置圖示的「執行」階段](images/deploy_to.png)
+* 在「前次執行結果」區段中，按一下**傳送至**圖示，然後選取要部署至的空間。![具有此建置圖示的「執行」階段](images/deploy_to.png)
 
 若要取消執行中階段，請在階段上按一下**檢視日誌及歷程**。在工作清單中，按一下執行中工作的號碼，然後按一下**取消**。您也可以按一下工作、再按**取消**，或是按一下工作階段的**停止**圖示，來個別取消工作。
 
@@ -89,3 +88,5 @@ IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} 服務可讓您實�
 除了工作日誌之外，您還可以檢視任何建置工作的單元測試結果、所產生的構件，以及程式碼變更。
 
 您也可以從「階段歷程」頁面執行、取消或配置階段。按一下**執行**來執行階段，或按一下**配置**來配置階段。在階段執行時，按一下執行號碼，然後按一下**取消**，即可予以取消。
+
+

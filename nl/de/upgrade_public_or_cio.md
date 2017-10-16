@@ -14,10 +14,10 @@ lastupdated: "2017-5-19"
 
 Aus {{site.data.keyword.jazzhub}} wird künftig IBM Bluemix {{site.data.keyword.contdelivery_short}}. Als Teil dieser Änderungen wird für Projekte ein Upgrade auf Toolchains durchgeführt.
 
-Wenn Ihr Projekt bereit für das Upgrade ist, wird eine Nachricht auf seiner Übersichtsseite angezeigt. Dann können Sie für das Projekt das Upgrade auf eine Toolchain auf {{site.data.keyword.Bluemix_notm}} Public durchführen. Die Toolchain wird ein Whitewater {{site.data.keyword.ghe_short}}-Repository (repo) für Ihren Quellcode enthalten. Whitewater {{site.data.keyword.ghe_short}} wird IBM Teams bereitgestellt, um Social Coding innerhalb von IBM zu ermöglichen und zu fördern.
+Wenn Ihr Projekt bereit für das Upgrade ist, wird eine Nachricht auf seiner Übersichtsseite angezeigt. Dann können Sie für das Projekt das Upgrade auf eine Toolchain auf {{site.data.keyword.Bluemix_notm}} Public durchführen. Die Toolchain wird ein Whitewater {{site.data.keyword.ghe_short}}-Repository (repo) für Ihren Quellcode enthalten. Whitewater {{site.data.keyword.ghe_short}} wird IBM Teams bereitgestellt, um Social Coding innerhalb von IBM zu ermöglichen und zu fördern. 
 {: shortdesc}
 
-**{{site.data.keyword.contdelivery_short}}-Toolchains werden für vertrauliches IBM Material genehmigt, wenn die Verwendung in Verbindung mit Whitewater {{site.data.keyword.ghe_short}} erfolgt.** Delivery Pipelines, die ihre Eingabe über Whitewater {{site.data.keyword.ghe_short}}-Repositorys erhalten, können in Stagingumgebungen (YS1) und öffentlichen Umgebungen (YP) bereitgestellt werden.
+**{{site.data.keyword.contdelivery_short}}-Toolchains werden für vertrauliches IBM Material genehmigt, wenn die Verwendung in Verbindung mit Whitewater {{site.data.keyword.ghe_short}} erfolgt.** Delivery Pipelines, die ihre Eingabe über Whitewater {{site.data.keyword.ghe_short}}-Repositorys erhalten, können in Staging-Umgebungen (YS1) und öffentlichen Umgebungen (YP) bereitgestellt werden.
 
 Während des Upgradeprozesses werden Sie aufgefordert, {{site.data.keyword.contdelivery_short}} die Zugriffsgenehmigung auf Whitewater {{site.data.keyword.ghe_short}} in Ihrem Namen zu erteilen.
 

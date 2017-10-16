@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-16"
+lastupdated: "2017-7-17"
 
 ---
 
@@ -61,6 +61,8 @@ lastupdated: "2017-5-16"
 
 도구 체인이 연관된 조직(org) 및 도구 체인의 액세스 제어 목록 모두에 사용자를 추가하여 도구 체인에 대한 액세스 권한을 해당 사용자에게 부여할 수 있습니다. 각 도구 체인은 특정 조직과 연관되어 있으며 해당 조직의 구성원인 사용자는 이와 연관된 도구 체인의 액세스 제어 목록에 추가될 수 있습니다. 현재 작업 중인 조직은 메뉴 표시줄에 표시됩니다. 다른 도구 체인 세트에 액세스하려면 다른 조직으로 전환하십시오. 
 
+**팁:** 도구 체인이 호스트되는 영역에 있는 도구 체인의 조직에 사용자를 추가할 수 있습니다. 도구 체인이 현재 미국 남부 지역에서만 호스팅되므로 미국 남부 지역의 조직에 사용자를 추가해야 합니다. 앱을 다른 지역에 배치하도록 도구 체인이 구성된 경우 여전히 해당 지역에 앱을 배치합니다.
+
 {{site.data.keyword.ghe_short}}용 {{site.data.keyword.Bluemix_notm}} 데디케이티드를 사용 중인 경우, {{site.data.keyword.Bluemix_notm}} 조직 및 영역에 사용자를 추가하면 해당 사용자가 자체 {{site.data.keyword.Bluemix_notm}} ID 및 비밀번호를 사용하여 {{site.data.keyword.ghe_short}}에 로그인할 수 있습니다. 사용자가 로그인할 때 사용자의 계정이 작성됩니다. {{site.data.keyword.Bluemix_notm}} 조직 및 영역에 사용자를 추가하는 경우, {{site.data.keyword.ghe_short}} 저장소에는 자동으로 추가되지 않습니다. 저장소에 대해 관리자 권한이 있는 사용자가 추가해야 합니다. 자세한 정보는 [Dedicated GitHub Enterprise 사용](/docs/services/ghededicated/index.html){: new_window}의 내용을 참조하십시오. {{site.data.keyword.ghe_short}}의 자체 관리 버전을 사용 중이면 내부 프로시저를 따르십시오. 
 
 ###도구 체인에 대한 액세스 관리를 위한 팁
@@ -107,3 +109,10 @@ lastupdated: "2017-5-16"
 1. 도구 체인의 이름을 입력하고 **삭제**를 클릭하여 삭제를 확인하십시오.   
 
  **팁**: GitHub, {{site.data.keyword.ghe_short}} 또는 {{site.data.keyword.gitrepos}} 도구 통합을 삭제할 때 연관된 저장소는 GitHub, {{site.data.keyword.ghe_short}} 또는 {{site.data.keyword.gitrepos}}에서 삭제되지 않습니다. 해당 저장소를 수동으로 제거해야 합니다. 
+
+##튜토리얼 보기: 도구 체인 사용
+{: #toolchain-tutorial}
+
+[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method){:new_window}에 있는 다음 튜토리얼을 확인하십시오. 
+  * [Create and use your first toolchain (GitHub)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

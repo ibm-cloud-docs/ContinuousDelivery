@@ -14,10 +14,9 @@ lastupdated: "2017-6-1"
 # Mit Git in der Eclipse Orion-Web-IDE arbeiten
 {: #git_web_ide}
 
-Wenn Sie die Eclipse Orion-Web-IDE verwenden,
-benötigen Sie kein Git-Terminal: Sie können viele allgemeine Git-Befehle in der Web-IDE ausführen.
+Sie können viele allgemeine Git-Befehle in der Eclipse Orion-Web-IDE ausführen.
 
-Unabhängig von dem Standort, an dem Sie Code schreiben, können Sie diese Kurzübersicht verwenden, um allgemeine Tasks auszuführen.
+Unabhängig von dem Standort, an dem Sie Code schreiben, können Sie diese Kurzübersicht verwenden, um allgemeine Tasks auszuführen. Wenn möglich werden die Git-Befehle mit ihren Entsprechungen in der Web-IDE gezeigt. 
 
 ## Lokalen Zweig erstellen
 {: #create_branch}
@@ -30,7 +29,7 @@ Unabhängig von dem Standort, an dem Sie Code schreiben, können Sie diese Kurz�
 2. Geben Sie einen Namen für Ihren Zweig ein und klicken Sie auf **Abschicken**.
 
 ### Git-Terminal
-1. Geben Sie `git branch <zweigname>` ein und drücken Sie die Eingabetaste.
+1. Geben Sie `git branch <Name_des_Zweigs>` ein und drücken Sie die Eingabetaste.
 
 ## Lokalen Zweig bearbeiten
 {: #start_working_on_branch}
@@ -45,7 +44,7 @@ Unabhängig von dem Standort, an dem Sie Code schreiben, können Sie diese Kurz�
 ### Git-Terminal
 1. Geben Sie zum Anzeigen Ihrer lokalen Zweige `git branch -l` ein und drücken Sie die Eingabetaste.
 
-2. Geben Sie `git checkout <zweigname>` ein und drücken Sie die Eingabetaste.
+2. Geben Sie `git checkout <Name_des_Zweigs>` ein und drücken Sie die Eingabetaste.
 
 
 ## Lokalen Zweig aktualisieren, um Änderungen des fernen Zweigs einzuschließen
@@ -71,7 +70,7 @@ Unabhängig von dem Standort, an dem Sie Code schreiben, können Sie diese Kurz�
 2. Klicken Sie für den lokalen Zweig, den Sie entfernen möchten, auf **Löschen** <img class="inline"  src="./images/delete.png" alt="Symbol 'Löschen'">.
 
 ### Git-Terminal
-1. Geben Sie `git branch -d <zweigname>` ein und drücken Sie die Eingabetaste.
+1. Geben Sie `git branch -d <Name_des_Zweigs>` ein und drücken Sie die Eingabetaste. 
 
 ##Übertragung von lokalen Änderungen per Push-Operation an einen fernen Zweig erzwingen
 {: #force_push}
@@ -153,15 +152,14 @@ anzuzeigen.
 1. Klicken Sie auf das Symbol **Grafische Darstellung ein-/ausschalten**
 <img  class="inline" src="./images/graphicalhistoryicon.png" alt="Symbol für grafisches Protokoll">.
 
-  Nach dem Einschalten werden das Commitprotokoll und alle eingehenden oder abgehenden Änderungen für den aktiven Zweig als
-verbundenes Diagramm gezeichnet.  Die grafische Darstellung zeigt alle Commitoperationen sowie die Zweige an, für die sie durchgeführt wurden.
+  Nach dem Einschalten werden das Commitprotokoll und alle eingehenden oder abgehenden Änderungen für den aktiven Zweig als verbundenes Diagramm gezeichnet. Die grafische Darstellung zeigt alle Commitoperationen sowie die Zweige an, für die sie durchgeführt wurden.
 
   <img class="screen-shot" src="./images/visualhistoryexample.png" alt="Grafisches Commitprotokoll">
 
 ### Git-Terminal
 1. Geben Sie `git log` ein und drücken Sie die Eingabetaste.
 
-2. Navigieren Sie zu den Commitoperationen des Committers.
+2. Navigieren Sie durch die Commitoperationen des Committers. 
  * Drücken Sie zum Anzeigen weiterer Einträge auf die Taste zum Vorblättern.
  * Drücken Sie zum Anzeigen vorheriger Einträge auf die Taste zum Zurückblättern.
 
@@ -171,9 +169,7 @@ verbundenes Diagramm gezeichnet.  Die grafische Darstellung zeigt alle Commitope
 {: #compare_changes}
 
 ### Eclipse Orion-Web-IDE
-1. Zeigen Sie Ihr Commitprotokoll an und suchen Sie nach der Commitoperation. Weitere Informationen
-finden Sie in
-[Commitprotokoll anzeigen](#view_commit_history).
+1. Zeigen Sie Ihr Commitprotokoll an und suchen Sie nach der Commitoperation. Weitere Informationen finden Sie in [Commitprotokoll anzeigen](#view_commit_history).
 
 2. Zeigen Sie die Details der Commitoperation an, indem Sie auf die Commitoperation klicken.
 
@@ -186,8 +182,7 @@ schattiert, und Zeilen, die aus einer Commitoperation entfernt wurden, werden ro
 ### Git-Terminal
 1. Geben Sie `git log -p` ein und drücken Sie die Eingabetaste.
 
-  **Hinweis:** Geben Sie `git log -p -<Anzahl_der_anzuzeigenden_Commits>` ein, um nur eine
-bestimmte Anzahl von Commitoperationen anzuzeigen.
+  **Hinweis:** Geben Sie `git log -p -<Anzahl_der_anzuzeigenden_Commits>` ein, um nur eine bestimmte Anzahl von Commitoperationen anzuzeigen.
 
 2. Navigieren Sie durch die Commitoperationen.
  * Drücken Sie zum Anzeigen weiterer Einträge auf die Taste zum Vorblättern.
@@ -197,7 +192,7 @@ bestimmte Anzahl von Commitoperationen anzuzeigen.
 
   **Hinweis:** Wenn durch eine Commitoperation die Änderung einer Zeile eingeführt wurde, wird die ursprüngliche
 Zeile in rotem Text angezeigt und beginnt mit einem Minuszeichen (-). Die neue Zeile wird in grünem Text angezeigt und beginnt mit einem
-Pluszeichen (+). In gleicher Weise werden Zeilen, die durch eine Commitoperation hinzugefügt wurden, in grünem Text angezeigt und beginnen
+Pluszeichen (+).  In gleicher Weise werden Zeilen, die durch eine Commitoperation hinzugefügt wurden, in grünem Text angezeigt und beginnen
 mit einem Pluszeichen. Zeilen, die durch eine Commitoperation
 entfernt wurden, werden in rotem Text angezeigt und beginnen mit einem Minuszeichen.
 
@@ -234,9 +229,7 @@ Standardtexteditor ist, drücken Sie die Escapetaste und geben Sie `:wq` ein; dr
 {: #tag_commit}
 
 ### Eclipse Orion-Web-IDE
-1. Zeigen Sie Ihr Commitprotokoll an und suchen Sie nach der Commitoperation. Weitere Informationen
-finden Sie in
-[Commitprotokoll anzeigen](#view_commit_history).
+1. Zeigen Sie Ihr Commitprotokoll an und suchen Sie nach der Commitoperation. Weitere Informationen finden Sie in [Commitprotokoll anzeigen](#view_commit_history).
 
 2. Zeigen Sie die Details der Commitoperation an, indem Sie auf die Commitoperation klicken.
 
@@ -246,9 +239,7 @@ finden Sie in
 3. Geben Sie Ihren Tagtext in das Namensfeld ein. Klicken Sie auf **Abschicken**.
 
 ### Git-Terminal
-1. Zeigen Sie das Commitprotokoll an und rufen Sie die ID der Commitoperation ab, die getaggt werden soll. Weitere Informationen
-finden Sie in
-[Commitprotokoll anzeigen](#view_commit_history).
+1. Zeigen Sie das Commitprotokoll an und rufen Sie die ID der Commitoperation ab, die getaggt werden soll. Weitere Informationen finden Sie in [Commitprotokoll anzeigen](#view_commit_history).
 
 2. Geben Sie `git tag -a <Tagtext> <Commit-ID>` ein und drücken Sie die Eingabetaste.
 
@@ -277,7 +268,7 @@ Gehen Sie wie folgt vor, um Ihren Namen und Ihre E-Mail-Adresse für alle Reposi
 ##Commitoperation zurücksetzen
 {: #revert}
 
-Setzen Sie die Änderungen zurück, die durch eine Commitoperation in Ihrem aktiven Zweig eingeführt wurden.
+Setzen Sie die Änderungen zurück, die durch eine Commitoperation in Ihrem aktiven Zweig eingeführt wurden. 
 
 ### Eclipse Orion-Web-IDE
 
@@ -287,7 +278,7 @@ Setzen Sie die Änderungen zurück, die durch eine Commitoperation in Ihrem akti
 
 ### Git-Terminal
 
-1. Geben Sie `git revert <ID der Commitoperation>` ein und drücken Sie die Eingabetaste.
+1. Geben Sie `git revert <Commit-ID>` ein und drücken Sie die Eingabetaste.
 
 ## Änderungen zusammenführen
 {: #merge_changes}
@@ -299,8 +290,7 @@ verwendete Zweig ist Ihr Masterzweig.
 ### Eclipse Orion-Web-IDE
 1. Entscheiden Sie, welche Zweige zusammengeführt werden sollen.
 
-2. Checken Sie den als Ziel verwendeten Zweig aus. Weitere Informationen finden Sie in
-[Lokalen Zweig bearbeiten](#start_working_on_branch).
+2. Checken Sie den als Ziel verwendeten Zweig aus. Weitere Informationen finden Sie in [Lokalen Zweig bearbeiten](#start_working_on_branch).
 
  <img class="screen-shot" src="./images/destinationbranch.png" alt="Als Ziel verwendeten Zweig auschecken">
 
@@ -320,8 +310,7 @@ können Sie an diesem Zeitpunkt eine Testbereitstellung vornehmen, um sicherzust
 ### Git-Terminal
 1. Entscheiden Sie, welche Zweige zusammengeführt werden sollen.
 
-2. Checken Sie den als Ziel verwendeten Zweig aus. Weitere Informationen finden Sie in
-[Lokalen Zweig bearbeiten](#start_working_on_branch).
+2. Checken Sie den als Ziel verwendeten Zweig aus. Weitere Informationen finden Sie in [Lokalen Zweig bearbeiten](#start_working_on_branch).
 
 3. Geben Sie `git merge <Quellenname>` ein und drücken Sie die Eingabetaste.
 
@@ -369,8 +358,7 @@ Commitnachricht für die Zusammenführung ein und klicken Sie auf **Commit**.
 1. Entscheiden Sie, welche Zweige mit Referenzversionen aktualisiert werden sollen. Sie führen für die Inhalte des als Quelle
 verwendeten Zweigs eine Aktualisierung in den als Ziel verwendeten Zweig durch.
 
-2. Checken Sie den als Ziel verwendeten Zweig aus. Weitere Informationen finden Sie in
-[Lokalen Zweig bearbeiten](#start_working_on_branch).
+2. Checken Sie den als Ziel verwendeten Zweig aus. Weitere Informationen finden Sie in [Lokalen Zweig bearbeiten](#start_working_on_branch).
 
 1. Klicken Sie auf die Liste **Referenz**.
 
@@ -390,8 +378,7 @@ Namen des als Quelle verwendeten Zweigs.
 1. Klicken Sie auf **Push-Operation durchführen**.
 
 ### Git-Terminal
-1. Checken Sie den zu aktualisierenden Zweig aus, indem Sie `git checkout <Name_des_als_Ziel_verwendeten_Zweigs>`
-eingeben und die Eingabetaste drücken.
+1. Checken Sie den zu aktualisierenden Zweig aus, indem Sie `git checkout <Name_des_als_Ziel_verwendeten_Zweigs>` eingeben und die Eingabetaste drücken.
 
 2. Geben Sie `git rebase <Name_des_als_Quelle_verwendeten_Zweigs>` ein und drücken Sie die Eingabetaste.
 
