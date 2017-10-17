@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-5-11"
 
 ---
 
@@ -18,10 +18,10 @@ lastupdated: "2017-3-16"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Ampliación de {{site.data.keyword.deliverypipeline}}
+# Ampliación de Delivery Pipeline
 {: #deliverypipeline_extending}
 
-Puede ampliar {{site.data.keyword.deliverypipeline}} configurando los trabajos para que utilicen los servicios soportados. Por ejemplo, los trabajos de prueba pueden ejecutar exploraciones de código estáticas y los trabajos de compilación pueden globalizar series.
+Puede ampliar la capacidad de {{site.data.keyword.deliverypipeline}} de {{site.data.keyword.contdelivery_full}} configurando los trabajos para utilizar servicios soportados. Por ejemplo, los trabajos de prueba pueden ejecutar exploraciones de código estáticas y los trabajos de compilación pueden globalizar series.
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -32,9 +32,9 @@ Las tareas siguientes describen cómo integrar herramientas seleccionadas con un
 
 {: #deliverypipeline_scan}
 
-¿Desea encontrar problemas de seguridad en el código antes de desplegarlo? Cuando utilice IBM® Static Analyzer for Bluemix™ como parte del conducto, puede ejecutar las comprobaciones automatizadas en los archivos binarios de compilación `.war`, `.ear`, `.jar`, o `.class` estáticos de la app Java™.
+¿Desea encontrar problemas de seguridad en el código antes de desplegarlo? Cuando utilice {{site.data.keyword.staticanalyzerfull}} como parte del conducto, puede ejecutar comprobaciones automatizadas en los archivos binarios de compilación `.war`, `.ear`, `.jar`, o `.class` estáticos de la app Java™.
 
-Un conducto que utiliza el servicio de Static Analyzer normalmente incluye estas etapas:
+Un conducto que utiliza el servicio de {{site.data.keyword.staticanalyzershort}} normalmente incluye estas etapas:
 
 + Una etapa de compilación para crear los archivos de origen
 + Una etapa de procesamiento que incluye estos trabajos:
@@ -71,13 +71,13 @@ Antes de empezar, [revise las Condiciones de uso para el servicio ![Icono de enl
 
   e. Seleccione o quite la marca del recuadro de selección **Configurar servicio y espacio automáticamente** según sea necesario.
 
-    * Si desea que el conducto compruebe el espacio de Bluemix para el servicio y una app que enlaza el servicio al contenedor, marque el recuadro de selección. Si el servicio o la app enlazada no existen, el conducto añadirá el plan gratuito del servicio a su espacio. La app enlazada que se crea se denomina `pipeline_bridge_app`. A continuación, el conducto utilizará las credenciales de pipeline_bridge_app para acceder a los servicios enlazados.
+    * Si desea que el conducto compruebe el espacio de {{site.data.keyword.Bluemix_short}} para el servicio y una app que enlaza el servicio al contenedor, marque el recuadro de selección. Si el servicio o la app enlazada no existen, el conducto añadirá el plan gratuito del servicio a su espacio. La app enlazada que se crea se denomina `pipeline_bridge_app`. A continuación, el conducto utilizará las credenciales de pipeline_bridge_app para acceder a los servicios enlazados.
 
-    * Si ya ha configurado el servicio y ha enlazado la app en el espacio de Bluemix, o si desea [configurar estos requisitos manualmente](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, deje el recuadro de selección sin marcar.
+    * Si ya ha configurado el servicio y ha enlazado la app en el espacio de {{site.data.keyword.Bluemix_short}}, o si desea [configurar estos requisitos manualmente](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, deje el recuadro de selección sin marcar.
 
-  f. En el campo **Minutos que se debe esperar para que el análisis se complete**, escriba un valor de 0 a 59 minutos. El valor predeterminado es 5 minutos. Un URL al panel de control de Static Analyzer se encuentra en los registros de consola al final del trabajo.
+  f. En el campo **Minutos que se debe esperar para que el análisis se complete**, escriba un valor de 0 a 59 minutos. El valor predeterminado es 5 minutos. Un URL al panel de control de {{site.data.keyword.staticanalyzershort}} se encuentra en los registros de consola al final del trabajo.
 
-     Si la exploración de Static Analyzer no se ha completado antes del tiempo especificado, el trabajo fallará. Sin embargo, el análisis de la exploración continuará ejecutándose y puede verlo en el panel de control de Static Analyzer. Una vez que se ha completado la exploración de Static Analyzer, si vuelve a ejecutar el trabajo, la solicitud de exploración no se vuelve a enviar y el trabajo del conducto se puede completar. Como alternativa, puede configurar el conducto para no bloquearse en un resultado de exploraciones correctamente. Para obtener instrucciones, consulte el paso siguiente.
+     Si la exploración de {{site.data.keyword.staticanalyzershort}} no se ha completado antes del tiempo especificado, el trabajo fallará. Sin embargo, el análisis de la exploración continuará ejecutándose y puede verlo en el panel de control de {{site.data.keyword.staticanalyzershort}}. Una vez que se ha completado la exploración de {{site.data.keyword.staticanalyzershort}}, si vuelve a ejecutar el trabajo, la solicitud de exploración no se vuelve a enviar y el trabajo del conducto se puede completar. Como alternativa, puede configurar el conducto para no bloquearse en un resultado de exploraciones correctamente. Para obtener instrucciones, consulte el paso siguiente.
 
   g. Marque o quite la marca del recuadro de selección **Dejar de ejecutar esta etapa si el trabajo falla** en función de lo que desee que suceda si este trabajo falla o se excede el tiempo de espera. Los trabajos pueden fallar cuando las vulnerabilidades son altas.
 
@@ -108,7 +108,7 @@ Ejemplos de salida de la consola:
 **Exploración pendiente**
 ![Exploración pendiente de ejemplo](images/analyzer_pending.png)
 
-Para obtener más información sobre cómo utilizar el servicio de Static Analyzer, consulte la [documentación del servicio Static Analyzer](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
+Para obtener más información sobre cómo utilizar el servicio de {{site.data.keyword.staticanalyzershort}}, consulte la [documentación del servicio {{site.data.keyword.staticanalyzershort}}](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 
@@ -179,7 +179,7 @@ For more information about using the Globalization Pipeline service from the Blu
 ## Creación de notificaciones de Slack para compilaciones en el conducto
 {: #deliverypipeline_slack}
 
-Puede enviar notificaciones sobre los resultados de compilación de IBM Container Service, IBM Security Static Analyzer, e IBM Globalization del Delivery Pipeline a los canales de Slack.
+Puede enviar notificaciones sobre los resultados de compilación de {{site.data.keyword.containerlong}}, {{site.data.keyword.staticanalyzershort}} e {{site.data.keyword.globalizationfull}} del Delivery Pipeline a los canales de Slack.
 
 Antes de empezar, cree o copie un URL de WebHook de Slack:
 
@@ -197,7 +197,7 @@ Para crear notificaciones de Slack:
 3. Seleccione **Propiedades de texto**.
 4. Especifique el nombre y un valor para la propiedad de entorno. Repita este paso para crear varias propiedades de entorno.
 
-  *Tabla 1. Propiedades de entorno para configurar notificaciones de Slack*
+  _Tabla 1. Propiedades de entorno para configurar notificaciones de Slack_
 
   <table>
   <tr>
@@ -258,7 +258,7 @@ Para crear notificaciones de HipChat:
 3. Seleccione **Propiedades de texto**.
 4. Especifique el nombre y un valor para la propiedad de entorno. Repita este paso para crear varias propiedades de entorno.
 
-  *Tabla 2. Propiedades de entorno para configurar notificaciones de HipChat*
+  _Tabla 2. Propiedades de entorno para configurar notificaciones de HipChat_
 
   <table>
   <tr>

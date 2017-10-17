@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-08-15"
 
 ---
 
@@ -67,43 +67,6 @@ Después de añadir tareas a planes de despliegue, puede gestionarlas de varias 
 
    * Para suprimir una tarea, pulse sobre la misma y pulse **Suprimir** <img class="inline" src="../UCCR/images/trash-group.png" alt="icono suprimir">. La tarea se elimina del plan de despliegue.
 
-<!-- ## Creating UrbanCode Deploy tasks
-{: #tasks_UDTasks}
-
-UrbanCode Deploy tasks manage UrbanCode Deploy applications. When you run an UrbanCode Deploy task, the associated UrbanCode Deploy application runs by using the process, version, and environment specified by the task. You can set the version and environment at design time or wait and select them at run time.
-
-During deployments, UrbanCode Deploy tasks start automatically when they become eligible to run.   
-
-**Important** Applications become available after {{site.data.keyword.uccr_short}} is integrated with UrbanCode Deploy. The applications that are available to a deployment plan depend on the team that is assigned to the plan. The applications that are managed by the team in UrbanCode Deploy are also available in {{site.data.keyword.uccr_short}}.
-
-Complete the following tasks to create an UrbanCode Deploy task.
-
-1. On the Deployment Plan Details page, click **Create Task**. If you want to insert a task at a specific position in the plan, select a task before using the **Create Task**. The new task is inserted above the selected task.
-
-1. On the Create Task dialog box, in the **Type** list, select **UrbanCode Deploy**.
-
-1. In the **Name** field, enter a name for the task.
-
-3. In the **Duration (minutes)** field, enter the number of minutes that you expect the task to run until it is completed. The estimated duration is used to calculate expected deployment times.
-
-3. In the **Tags** list, attach a tag to the task. You can select multiple tags. To create a tag, type the tag name in list's text field.
-
-3. In the **Application Name** list, select an application.
-
-3. In the **Process** list, select an application process. Processes that belong to the selected UrbanCode Deploy application are available.
-
-3. In the **Environment** list, select an application environment. Environments that belong to the selected UrbanCode Deploy application are available.  To postpone selecting an environment until you are ready to run the deployment, select **Use Version Tab**.
-
-3. In the **Version** list, select an application version. Versions refer to IBM UrbanCode Deploy application snapshots. Versions that belong to the selected application are available.  To postpone selecting a version, select **Use Version Tab**. If the application process does not require a version, select **No Version**. You might select this last option if you are running a configuration-type process that does not require components.
-
-3. In the **Assigned groups and users** list, assign the task to a user or group. The assigned user runs the task during deployment.
-
-3. In the **Owner** list, select the task owner. The default owner is the user who created the task. The **Owner** list is displayed after the task is assigned to a user or group.    
-
-5. Click **Save**. The task is inserted into the deployment plan.
-
-After the task is created, the plan's **Version** tab is updated with information about the application assigned to the task. If you selected **Use Version Tab** for the application environment and version, use the Version tab to set those options before running the deployment. -->
-
 ## Creación de tareas manuales
 {: #tasks_manual}
 
@@ -111,7 +74,7 @@ Normalmente, las tareas manuales representan una actividad asociada con un relea
 
 Para crear una tarea manual, siga estos pasos:
 
-1. En la página Detalles del plan de despliegue, pulse **Crear tarea**. Para insertar una tarea en una posición específica en el plan, antes de pulsar **Crear tarea**, seleccione una tarea. La nueva tarea se inserta sobre la tarea seleccionada.
+1. En la página Detalles del plan de despliegue, pulse **Crear tarea**. Para insertar una tarea en una posición específica en el plan, antes de pulsar **Crear tarea**, seleccione una tarea. La nueva tarea se inserta después de la tarea seleccionada.
 
 1. En la ventana Crear tarea, en la lista **Tipo**, seleccione **Manual**.
 
@@ -119,7 +82,7 @@ Para crear una tarea manual, siga estos pasos:
 
 3. En el campo **Duración (minutos)**, escriba el número de minutos que cree que durará la ejecución de la tarea hasta que se complete. La duración estimada se utiliza para calcular los tiempos de despliegue previstos.
 
-3. En la lista **Etiquetas**, adjunte una etiqueta a la tarea. Puede seleccionar varias etiquetas. Para crear una etiqueta, escriba el nombre de la etiqueta en campo de texto de la lista. 
+3. En la lista **Etiquetas**, adjunte una etiqueta a la tarea. Puede seleccionar varias etiquetas. Para crear una etiqueta, escriba el nombre de la etiqueta en campo de la lista.
 
 3. En la lista **Grupos y usuarios asignados**, asignar la tarea a un usuario o grupo. El usuario asignado ejecuta la tarea durante el despliegue.
 
@@ -142,7 +105,7 @@ Para crear una tarea retrasada, siga estos pasos:
 
 1. En el campo **Nombre**, escriba un nombre para la tarea.
 
-3. En el campo **Hora**, escriba o seleccione la hora a la que se completará la tarea.
+3. En el campo **Hora**, escriba o seleccione la hora a la que la tarea debe estar completada.
 
 3. En el campo **Huso horario**, seleccione el huso horario para el valor que se especifica en el campo **Hora**.    
 
@@ -157,7 +120,7 @@ Las tareas de cabecera representan elementos de la organización que puede añad
 
 Para crear una tarea de cabecera, siga estos pasos:
 
-1. En la página Detalles del plan de despliegue, pulse **Crear tarea**. Si desea insertar una tarea en una posición específica en el plan, antes de pulsar **Crear tarea**, seleccione una tarea. La nueva tarea se inserta sobre la tarea seleccionada.
+1. En la página Detalles del plan de despliegue, pulse **Crear tarea**. Si desea insertar una tarea en una posición específica en el plan, antes de pulsar **Crear tarea**, seleccione una tarea. La nueva tarea se inserta después de la tarea seleccionada.
 
 1. En la ventana Crear tarea, en la lista **Tipo**, seleccione **Cabecera**.
 
@@ -174,7 +137,7 @@ En el servicio {{site.data.keyword.contdelivery_short}}, {{site.data.keyword.del
 
 Para crear una tarea de Delivery Pipeline, siga estos pasos:
 
-1. En la página Detalles del plan de despliegue, pulse **Crear tarea**. Si desea insertar una tarea en una posición específica en el plan, antes de pulsar **Crear tarea**, seleccione una tarea. La nueva tarea se inserta sobre la tarea seleccionada.
+1. En la página Detalles del plan de despliegue, pulse **Crear tarea**. Si desea insertar una tarea en una posición específica en el plan, antes de pulsar **Crear tarea**, seleccione una tarea. La nueva tarea se inserta después de la tarea seleccionada.
 
 1. En la ventana Crear tarea, en la lista **Tipo**, seleccione **Continuos Delivery Pipeline**.
 
@@ -260,7 +223,7 @@ Mediante el control de dependencias de tareas puede asegurarse de que los suceso
 
 Para hacer que una tarea sea un requisito previo para otras tareas, siga estos pasos:
 
-1. En la página Detalles del plan de despliegue, seleccione una tarea o un grupo de tareas y pulse **Gestionar requisitos previos** <img class="inline" src="../UCCR/images/task-depend.png" alt="requisito previo de tarea">. Puede seleccionar varias tareas y grupos.
+1. En la página Detalles del plan de despliegue, seleccione una tarea o un grupo de tareas y pulse **Gestionar requisitos previos** <img class="inline" src="../UCCR/images/task-depend.png"  alt="Requisito previo de tarea">. Puede seleccionar varias tareas y grupos.
 
 1. En la ventana "Gestionar requisitos previos para tareas seleccionadas", en la lista **Tareas de requisito previo para tareas seleccionadas**, seleccione la tarea de requisito previo.
 
@@ -274,4 +237,4 @@ En la siguiente figura, la primera tarea no tiene ningún requisito previo y dos
 
 *Figura 4. Dependencias de tareas*
 
-Para revisar o modificar dependencias, seleccione la tarea y pulse **Gestionar requisitos previos** <img class="inline" src="../UCCR/images/task-depend.png" alt="requisito previo de tarea">.
+Para revisar o modificar dependencias, seleccione la tarea y pulse **Gestionar requisitos previos** <img class="inline" src="../UCCR/images/task-depend.png"  alt="Requisito previo de tarea">.

@@ -14,9 +14,9 @@ lastupdated: "2017-6-1"
 # Cómo trabajar con Git en Eclipse Orion Web IDE
 {: #git_web_ide}
 
-Si utiliza Eclipse Orion {{site.data.keyword.webide}}, no necesita el terminal Git; puede ejecutar muchos mandatos GIT comunes en Web IDE.
+Puede ejecutar muchos mandatos Git comunes en Eclipse Orion {{site.data.keyword.webide}}.
 
-Independientemente de dónde escriba el código, puede utilizar esta consulta rápida para realizar tareas comunes.
+Independientemente de dónde escriba el código, puede utilizar esta consulta rápida para realizar tareas comunes. Cuando sea posible, se mostrarán los mandatos de Git con sus equivalentes en Web IDE. 
 
 ## Crear una rama local
 {: #create_branch}
@@ -29,7 +29,7 @@ Independientemente de dónde escriba el código, puede utilizar esta consulta r�
 2. Escriba el nombre de la rama y luego pulse **Enviar**.
 
 ### Terminal Git
-1. Escriba `git branch <nombre_rama>` y pulse Intro.
+1. Escriba `git branch <branchname>` y pulse Intro.
 
 ## Trabajar en una rama local
 {: #start_working_on_branch}
@@ -37,14 +37,14 @@ Independientemente de dónde escriba el código, puede utilizar esta consulta r�
 ### Eclipse Orion Web IDE
 1. Pulse la lista **Referencia** y amplíe **local**.
 
-2. Pulse el icono de extraer <img  class="inline" src="./images/checkout.png" alt="Icono de extraer"> en la rama a modificar. 
+2. Pulse el icono de extraer <img  class="inline" src="./images/checkout.png" alt="Icono de extraer"> en la rama a modificar.
 
 1. Asegúrese de que la rama seleccionada se muestra en la lista **Referencia**.
 
 ### Terminal Git
 1. Para ver las ramas locales, escriba `git branch -l` y pulse Intro.
 
-2. Escriba `git checkout <nombre_rama>` y pulse Intro.
+2. Escriba `git checkout <branchname>` y pulse Intro.
 
 
 ## Actualizar una rama local a fin de incluir los cambios de la rama remota
@@ -66,10 +66,10 @@ Independientemente de dónde escriba el código, puede utilizar esta consulta r�
 
 1. Pulse la lista **Referencia** y amplíe **local**.
 
-2. Pulse **Suprimir** <img class="inline"  src="./images/delete.png" alt="Icono Suprimir"> de la rama local a eliminar. 
+2. Pulse **Suprimir** <img class="inline"  src="./images/delete.png" alt="Icono Suprimir"> de la rama local a eliminar.
 
 ### Terminal Git
-1. Escriba `git branch -d <nombre_rama>` y pulse Intro.
+1. Escriba `git branch -d <branchname>` y pulse Intro.
 
 ##Forzar la transmisión de cambios locales a una rama remota
 {: #force_push}
@@ -86,7 +86,7 @@ Sustituya el contenido de una rama remota referenciada por el contenido de la ra
 
 ### Terminal Git
 
-1. Escriba `git push <origen> <rama remota> -f` y pulse Intro.
+1. Escriba `git push <origin> <remote branch> -f` y pulse Intro.
 
 ## Descarte los cambios no transferidos desde la rama local activa
 {: #discard_changes}
@@ -139,14 +139,14 @@ Sustituya el contenido de una rama remota referenciada por el contenido de la ra
 
 1. Pulse el icono de **conmutación de representación gráfica** <img  class="inline" src="./images/graphicalhistoryicon.png" alt="Icono de historial gráfico">.
 
-  Una vez conmutado, el historial de confirmaciones y cualquier cambio entrante o saliente correspondiente a la rama activa se dibuja como un gráfico conectado.  La representación visual muestra todas las confirmaciones y las ramas en las que se han realizado.
+  Una vez conmutado, el historial de confirmaciones y cualquier cambio entrante o saliente correspondiente a la rama activa se dibuja como un gráfico conectado. La representación visual muestra todas las confirmaciones y las ramas en las que se han realizado.
 
   <img class="screen-shot" src="./images/visualhistoryexample.png" alt="Historial de confirmaciones visual">
 
 ### Terminal Git
 1. Escriba `git log` y pulse Intro.
 
-2. Navegue por las confirmaciones del confirmador.
+2. Examine las confirmaciones del confirmador.
  * Para ver más entradas, pulse AvPág.
  * Para ver entradas anteriores, pulse RePág.
 
@@ -160,14 +160,14 @@ Sustituya el contenido de una rama remota referenciada por el contenido de la ra
 
 2. Vea los detalles de la confirmación pulsando sobre la misma.
 
-3. Pulse **>** para revisar los cambios a un archivo. 
+3. Pulse **>** para revisar los cambios a un archivo.
 
   **Nota:** si una confirmación ha incorporado un cambio en una línea, la línea original aparece sombreada en rosa y la nueva línea sombreada en verde.  Paralelamente, las líneas que ha añadido una confirmación aparecen sombreadas en verde y las que ha eliminado una confirmación, sombreadas en rosa.
 
 ### Terminal Git
 1. Escriba `git log -p` y pulse Intro.
 
-  **Nota:** para ver sólo un determinado número de confirmaciones, escriba `git log -p -<número_de_confirmaciones_que_desea_ver>`.
+  **Nota:** Para ver sólo un determinado número de confirmaciones, escriba `git log -p -<number_of_commits_to_view>`.
 
 2. Navegue por las confirmaciones.
  * Para ver más entradas, pulse AvPág.
@@ -217,7 +217,7 @@ Sustituya el contenido de una rama remota referenciada por el contenido de la ra
 ### Terminal Git
 1. Vea el historial de confirmaciones y obtenga el ID de la confirmación que desea etiquetar. Para obtener más información, consulte [Ver el historial de confirmaciones](#view_commit_history).
 
-2. Escriba `git tag -a <texto_etiqueta> <id_confirmación>` y pulse Intro.
+2. Escriba `git tag -a <tag_text> <commit_id>` y pulse Intro.
 
 ## Cambiar el nombre y la dirección de correo electrónico del confirmador
 {: #change_the_committer_name_and_email_address}
@@ -230,20 +230,20 @@ Sustituya el contenido de una rama remota referenciada por el contenido de la ra
 ### Terminal Git
 Para actualizar su nombre y dirección de correo electrónico para un solo repositorio:
 
-1. Escriba `git config user.email "<su@correoelectrónico.com>"` y pulse Intro.
+1. Escriba `git config user.email "<your@email.com>"` y pulse Intro.
 
-2. Escriba `git config user.name "<su nombre>"` y pulse Intro.
+2. Escriba `git config user.name "<Your Name>"` y pulse Intro.
 
 Para actualizar su nombre y dirección de correo electrónico para todos los repositorios:
 
-1. Escriba `git config --global user.email "<su@correoelectrónico.com>"` y pulse Intro.
+1. Escriba `git config --global user.email "<your@email.com>"` y pulse Intro.
 
-2. Escriba `git config --global user.name "<su nombre>"` y pulse Intro.
+2. Escriba `git config --global user.name "<Your Name>"` y pulse Intro.
 
 ##Revertir una confirmación
 {: #revert}
 
-Revierta los cambios que ha incorporado una confirmación en la rama activa.
+Revertir los cambios que ha introducido una confirmación en su rama activa.
 
 ### Eclipse Orion Web IDE
 
@@ -253,7 +253,7 @@ Revierta los cambios que ha incorporado una confirmación en la rama activa.
 
 ### Terminal Git
 
-1. Escriba `git revert <ID confirmación>` y pulse Intro.
+1. Escriba `git revert <commit ID>` y pulse Intro.
 
 ## Fusionar cambios
 {: #merge_changes}
@@ -273,7 +273,7 @@ Cuando tenga que distribuir cambios de una rama de origen a una de destino, prim
 
 1. En la sección Entrantes, pulse el icono **Fusionar** <img class="inline" src="./images/mergeicon.png" alt="Icono Fusionar de la sección Entrantes">
 
-1. En la lista **Referencia**, pulse el icono extraer de la rama en la que acaba de fusionar los cambios. 
+1. En la lista **Referencia**, pulse el icono extraer de la rama en la que acaba de fusionar los cambios.
 
 1. Si desea distribuir los cambios, pulse **Enviar**. De lo contrario, en este punto puede crear un despliegue de prueba para asegurarse de que todo está funcionando según lo previsto.
 
@@ -282,7 +282,7 @@ Cuando tenga que distribuir cambios de una rama de origen a una de destino, prim
 
 2. Extraiga la rama de destino. Para obtener más información, consulte [Cómo trabajar en una rama local](#start_working_on_branch).
 
-3. Escriba `git merge <nombre_origen>` y pulse Intro.
+3. Escriba `git merge <source_name>` y pulse Intro.
 
 
 ## Resolver un conflicto de fusión
@@ -343,9 +343,9 @@ Cuando tenga que distribuir cambios de una rama de origen a una de destino, prim
 1. Pulse **Enviar**.
 
 ### Terminal Git
-1. Extraiga la rama para actualizarla escribiendo `git checkout <nombre_rama_destino>` y pulsando Intro.
+1. Extraiga la rama para actualizarla escribiendo `git checkout <destination_branchname>` y pulsando Intro.
 
-2. Escriba `git rebase <nombre_rama_origen>` y pulse Intro.
+2. Escriba `git rebase <source_branchname>` y pulse Intro.
 
 3. Si detecta conflictos, [resuélvalos](#resolve_a_rebase_conflict).
 

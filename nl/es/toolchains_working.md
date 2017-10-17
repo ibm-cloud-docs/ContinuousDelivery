@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+
+lastupdated: "2017-8-18"
+
 
 ---
 
@@ -27,7 +29,7 @@ Puede utilizar una plantilla como punto de partida para [crear una cadena de her
 
 1. Si utiliza {{site.data.keyword.Bluemix_notm}} público, inicie la sesión en [{{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://console.bluemix.net){:new_window}.
 1. Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado, inicie la sesión en el entorno dedicado en {{site.data.keyword.Bluemix_notm}}.
-1. En el menú de la barra de menús de {{site.data.keyword.Bluemix_notm}}, pulse **Servicios** y luego pulse **DevOps**.
+1. En el menú de la barra de menús de {{site.data.keyword.Bluemix_notm}}, pulse **DevOps**.
 1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse **Crear una cadena de herramientas**.
 1. En la página **Crear una cadena de herramientas**, pulse una plantilla de cadena de herramientas.
 1. Revise el diagrama de la cadena de herramientas que se dispone a crear. El diagrama muestra cada integración de herramientas en la fase del ciclo de vida correspondiente en la cadena de herramientas.
@@ -35,7 +37,7 @@ Puede utilizar una plantilla como punto de partida para [crear una cadena de her
  **Consejo**: Algunas de las plantillas de cadena de herramientas tienen varias instancias de una integración de herramientas. Por ejemplo, la plantilla de la cadena de herramientas de microservicios de {{site.data.keyword.Bluemix_notm}} público contiene tres instancias de GitHub y tres instancias de Delivery Pipeline, una para cada uno de los tres microservicios.
 
  El diagrama de la imagen siguiente es un ejemplo. Cuando cree una cadena de herramientas, el diagrama mostrará cada integración de herramientas que forma parte de la cadena de herramientas.
-![Diagrama de cadena de herramientas](images/toolchain_diagram.png)
+![Diagrama de la cadena de herramientas](images/toolchain_diagram.png)
 
 1. Revise la información predeterminada para la configuración de la cadena de herramientas. El nombre de la cadena de herramientas la identifica en {{site.data.keyword.Bluemix_notm}}. Si desea utilizar otro nombre, cambie el nombre de la cadena de herramientas.  
 1. En la sección Integraciones de herramientas, seleccione las integraciones de herramientas que desee configurar para su cadena de herramientas. Algunas integraciones de herramientas no necesitan configuración. Para obtener información sobre cómo configurar las integraciones de herramientas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
@@ -74,3 +76,11 @@ Una vez que se ha configurado la cadena de herramientas y sus integraciones de h
 2. Para acceder a una integración de herramienta de su cadena de herramientas, pulse la herramienta.
 
  **Consejo**: si tiene más de un repositorio de GitHub, {{site.data.keyword.ghe_short}} o Git, puede tener varias tarjetas para la misma integración de herramientas porque cada repositorio se representa mediante su propia tarjeta. Si tiene más de un conducto, puede tener varias tarjetas para la misma integración de herramientas porque cada conducto se representa mediante su propia tarjeta. Por ejemplo, cuando se crea una cadena de herramientas de microservicios, cada uno de los tres microservicios tiene su propio repositorio GitHub, {{site.data.keyword.ghe_short}} o Git y su propio conducto.
+
+## Realice una guía de aprendizaje: Uso de las cadenas de herramientas
+{: #toolchain_tutorials}
+
+Consulte uno de estas guías de aprendizaje en [IBM&reg; Cloud Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method){:new_window}:
+  * [Crear y utilizar su primera cadena de herramientas (GitHub) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Cree una cadena de herramientas que utilice Git Repos and Issue Tracking ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Añadir una cadena de herramientas a una app ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?task=1){:new_window}

@@ -19,7 +19,7 @@ lastupdated: "2017-6-1"
 # Compilación y despliegue
 {: #deliverypipeline_build_deploy}
 
-El servicio de IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} permite implementar una integración continua repetible y un proceso de entrega continuo.
+{{site.data.keyword.contdelivery_full}} incluye Delivery Pipeline, que puede utilizar para implementar una integración continua repetible y un proceso de entrega continuo.
 {:shortdesc}
 
 Complete las tareas siguientes para crear y configurar un conducto.
@@ -56,7 +56,7 @@ También puede solicitar compilaciones y despliegues a demanda desde la página 
 * En la sección LAST EXECUTION RESULT, pulse el icono **Enviar a** y, a continuación, seleccione un espacio en el que desplegarlo.
   ![La etapa Ejecutar con este icono de compilación](images/deploy_to.png)
 
-Para cancelar una etapa de ejecución, en la etapa, pulse **Ver registros e historial**. En la lista de trabajos, pulse el número del trabajo en ejecución y, a continuación, pulse **CANCELAR**. También puede cancelar trabajos individualmente pulsando un trabajo y, a continuación, pulsando **CANCELAR**, o pulsando el icono **Detener** de un trabajo en su etapa. 
+Para cancelar una etapa de ejecución, en la etapa, pulse **Ver registros e historial**. En la lista de trabajos, pulse el número del trabajo en ejecución y, a continuación, pulse **CANCELAR**. También puede cancelar trabajos individualmente pulsando un trabajo y, a continuación, pulsando **CANCELAR**, o pulsando el icono **Detener** de un trabajo en su etapa.
 
 ## Despliegue de una app
 {: #deliverypipeline_deploy}
@@ -89,3 +89,5 @@ Para ver el registro de tiempo de ejecución de una aplicación desplegada, puls
 Además de los registros de trabajos, puede ver resultados de pruebas de unidades, artefactos generados y cambios de códigos para cualquier trabajo de compilación.
 
 También puede ejecutar, cancelar o configurar una etapa desde la página Historial de etapas. Pulse **EJECUTAR** para ejecutar una etapa o **CONFIGURAR** para configurar una etapa. Mientras una etapa está en ejecución, puede cancelarla pulsando el número de ejecución y, a continuación, pulsando **CANCELAR**.
+
+

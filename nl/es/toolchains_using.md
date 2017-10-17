@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-16"
+lastupdated: "2017-7-17"
 
 ---
 
@@ -61,6 +61,8 @@ Si suprime una integración de herramientas desde su cadena de herramientas, la 
 
 Puede conceder acceso a los usuarios a una cadena de herramientas si los añade a la organización con la que está asociada la cadena de herramientas y a la lista de control de accesos de la cadena de herramientas. Cada cadena de herramientas está asociada con una organización específica y cualquier usuario que sea miembro de la organización se puede añadir a la lista de control de accesos correspondiente a las cadenas de herramientas asociadas. La organización en la que está trabajando actualmente se muestra en la barra de menús. Para acceder a un conjunto distinto de cadenas de herramientas, cambie a una organización distinta.
 
+**Sugerencia:** Debe añadir usuarios a la organización de la cadena de herramientas en la región donde está alojada la cadena de herramientas. Como las cadenas de herramientas están actualmente alojadas sólo en la región EE.UU. Sur, debe añadir usuarios a la organización en la región EE.UU. Sur. Si la cadena de herramientas está configurada para desplegar apps en una región distinta, seguirá desplegando apps en dicha región.
+
 Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.ghe_short}}, cuando añada usuarios a la organización y a los espacios de {{site.data.keyword.Bluemix_notm}}, los usuarios podrán iniciar una sesión en {{site.data.keyword.ghe_short}} con su ID y contraseña de {{site.data.keyword.Bluemix_notm}}. Cuando los usuarios inician sesión, se les crearán cuentas. Al añadir usuarios a la organización y a los espacios de {{site.data.keyword.Bluemix_notm}}, no se añadirán automáticamente al repositorio de {{site.data.keyword.ghe_short}}. Debe añadirlos alguien que tenga privilegios de administración para el repositorio. Para obtener más información, consulte [Utilización de GitHub Enterprise dedicado](/docs/services/ghededicated/index.html){: new_window}. Si utiliza su propia versión gestionada de {{site.data.keyword.ghe_short}}, siga los procedimientos internos.
 
 ###Consejos para gestionar el acceso a una cadena de herramientas
@@ -85,15 +87,15 @@ Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.
 
    d. Seleccione los espacios a los que desea permitir el acceso al usuario.
 
-   e. Seleccione el rol que desea asignar para los espacios seleccionados en la organización.
+   e. Seleccione el rol que se asignará para los espacios seleccionados en la organización.
 
      **Nota:** De forma predeterminada, los gestores de una organización tienen privilegios completos de administrador sobre todas las cadenas de herramientas asociadas a la organización. Para otorgar privilegios completos de administrador al usuario, seleccione el rol **Gestor**. Los roles Gestor de facturación y Auditor no afectan al acceso a la cadena de herramientas. Puede cambiar los roles más adelante en la página Directorio del equipo. Para obtener más información, consulte [Gestión de miembros y roles del equipo](/docs/admin/users_roles.html){: new_window}.
 
-   f. Seleccione la opción para confirmar que acepta la responsabilidad financiera de todos cargos en los que se incurra en la cuenta.
+   f. Seleccione la opción para confirmar que tiene responsabilidad financiera para todos los cargos que se producen en la cuenta.
 
    g. Especifique la dirección de correo electrónico del usuario que desea invitar y pulse **Enviar**.
 
-   h. Después de que el usuario se convierta en miembro de la organización, vuelva a la página gestionar de la cadena de herramientas y añada el usuario a la cadena de herramientas.  
+   h. Una vez que el usuario sea miembro de la organización, vuelva a la página Gestionar de la cadena de herramientas y añada el usuario a la cadena de herramientas.  
 
 
 ## Eliminación de una cadena de herramientas
@@ -103,7 +105,14 @@ Puede eliminar una cadena de herramientas y especificar qué integraciones de he
 
 1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse sobre la cadena de herramientas que desea suprimir. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**.
 1. Pulse el menú **Más acciones**, que se encuentra junto a **Ver app**.
-1. Pulse **Suprimir**. Cuando se suprime una cadena de herramientas, también se suprimen todas sus integraciones de herramienta, lo que podría dar lugar a la supresión de los recursos que dichas integraciones gestionan. 
+1. Pulse **Suprimir**. Cuando se suprime una cadena de herramientas, también se suprimen todas sus integraciones de herramienta, lo que podría dar lugar a la supresión de los recursos que dichas integraciones gestionan.
 1. Para confirmar la eliminación, escriba el nombre de la cadena de herramientas y pulse **Suprimir**.  
 
  **Sugerencia**: Cuando suprime GitHub, {{site.data.keyword.ghe_short}} o las herramientas de integración de {{site.data.keyword.gitrepos}}, el repositorio asociado no se suprime de GitHub, {{site.data.keyword.ghe_short}} ni {{site.data.keyword.gitrepos}}. Debe eliminar manualmente el repositorio.
+
+##Realice una guía de aprendizaje: Uso de las cadenas de herramientas
+{: #toolchain-tutorial}
+
+Consulte esta guía de aprendizaje en [IBM&reg; Cloud Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method){:new_window}:
+  * [Crear y utilizar su primera cadena de herramientas (GitHub) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Crear y utilizar una cadena de herramientas de microservicios con {{site.data.keyword.DRA_short}} (v2) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

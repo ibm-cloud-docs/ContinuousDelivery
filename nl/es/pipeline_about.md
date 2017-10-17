@@ -14,7 +14,7 @@ lastupdated: "2017-4-4"
 # Acerca de Delivery Pipeline
 {: #deliverypipeline_about}
 
-El servicio de IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}}, también conocido como conducto, automatiza el despliegue continuo de los proyectos de Bluemix. En un conducto, las secuencias de etapas recuperan la entrada y los trabajos de ejecución, como compilaciones, pruebas y despliegues.
+{{site.data.keyword.contdelivery_full}} incluye Delivery Pipeline para crear, probar y desplegar de manera repetitiva con una mínima intervención humana. En un conducto, las secuencias de etapas recuperan la entrada y los trabajos de ejecución, como compilaciones, pruebas y despliegues.
 {:shortdesc}
 
 En las secciones siguientes se describen los detalles conceptuales que hay detrás de los conductos.
@@ -60,7 +60,7 @@ Además, los trabajos de conducto sólo pueden ejecutar los siguientes mandatos 
 
 Una vez que se ejecute un trabajo, el contenedor creado para él se descartará. Los resultados de una ejecución de trabajo pueden continuar, pero el entorno en el que se ha ejecutado no.
 
-**Nota**: Los trabajos se pueden ejecutar durante un máximo de 60 minutos. Cuando los trabajos superan dicho límite, fallarán. Si un trabajo está superando el límite, divídalo en varios trabajos. Por ejemplo, si un trabajo lleva a cabo tres tareas, puede dividirlo en tres trabajos: uno para cada tarea.
+**Nota:** Los trabajos se pueden ejecutar durante un máximo de 60 minutos. Cuando los trabajos superan dicho límite, fallarán. Si un trabajo está superando el límite, divídalo en varios trabajos. Por ejemplo, si un trabajo lleva a cabo tres tareas, puede dividirlo en tres trabajos: uno para cada tarea.
 
 Para obtener más información sobre cómo añadir un trabajo a una etapa, consulte [Adición de un trabajo a una etapa](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}.
 
@@ -70,7 +70,12 @@ Los trabajos de compilación compilan el proyecto en preparación para el despli
 
 Los trabajos que toman entrada de trabajos de compilación deben hacer referencia a los artefactos de compilación en la misma estructura en la que se crearon. Por ejemplo, si un trabajo de compilación archiva artefactos de compilación en un directorio de `salida`, un script de despliegue podría hacer referencia al directorio de `salida` en lugar de al directorio raíz del proyecto para desplegar el proyecto compilado. Puede especificar el directorio en el que archivar escribiendo el nombre del directorio en el campo **Directorio de archivado de compilación**. Si deja el campo en blanco, se archiva en el directorio raíz.
 
-**Nota**: Si selecciona el tipo de compilador **Simple** para un trabajo de compilación, salte el proceso de compilación. En ese caso, el código no se compila, pero se envía a la etapa de despliegue tal cual. Para compilar y desplegar, seleccione un tipo de compilador distinto a **Simple**.
+**Nota:** Si utiliza el tipo de constructor **Simple**, el código no se compilará ni creará; se empaquetará y quedará disponible para futuras etapas.
+
+Cuando se despliega utilizando Cloud Foundry, Cloud Foundry incluirá los artefactos correctos para permitir que se ejecute la app. Para obtener más información, consulte [Despliegue de apps mediante el mandato cf](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps). El conducto para una app de Cloud Foundry contiene una etapa de Despliegue que ejecuta un mandato cf.
+
+Cloud Foundry intenta [detectar el paquete de compilación para utilizar ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Puede especificar el [paquete de compilación](/docs/cfapps/byob.html#using-community-buildpacks) que se utilizará en el archivo de manifiesto en la carpeta raíz de la app. Los paquetes de compilación normalmente examinan los artefactos proporcionados por los usuarios para determinar qué dependencias se descargarán y cómo configurar las aplicaciones para que se comuniquen con servicios enlazados. Para obtener más información sobre los archivos de manifiesto, consulte [Manifiesto de aplicación](/docs/manageapps/depapps.html#appmanifest). 
+
 
 #### Propiedades de entorno para scripts de compilación
 Puede incluir propiedades de entorno dentro de los mandatos shell de compilación del trabajo de compilación. Las propiedades proporcionan acceso a información sobre el entorno de ejecución del trabajo. Para obtener más información, consulte [Propiedades y recursos del entorno para el servicio {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
@@ -122,4 +127,4 @@ Este conducto se muestra en el siguiente diagrama conceptual:
 
 *Un modelo conceptual de un conducto de tres etapas*
 
-Las etapas toman su entrada de repositorios y trabajos de compilación, y los trabajos de una etapa se ejecutan de forma secuencial e independiente entre sí. En el conducto de ejemplo, las etapas se ejecutarán secuencialmente, aunque las etapas de Prueba y de Producción tomen la salida de la etapa de Compilación como su entrada.
+Las etapas toman su entrada de repositorios y trabajos de compilación, y los trabajos de una etapa se ejecutan de forma secuencial e independiente entre sí. En el conducto de ejemplo, las etapas se ejecutan secuencialmente, aunque las etapas de Prueba y de Producción tomen la salida de la etapa de Compilación como su entrada.

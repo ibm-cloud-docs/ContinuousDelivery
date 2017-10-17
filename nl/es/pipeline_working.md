@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-25"
+lastupdated: "2017-09-05"
 
 ---
 
@@ -12,12 +12,12 @@ lastupdated: "2017-5-25"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# Cómo trabajar con {{site.data.keyword.deliverypipeline}} {: #pipeline-working}
+# Cómo trabajar con conductos{: #pipeline-working}
 
-Para automatizar las compilaciones y los despliegues en {{site.data.keyword.Bluemix}}, utilice {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
+Para automatizar las compilaciones y los despliegues en {{site.data.keyword.Bluemix}}, utilice los conductos de {{site.data.keyword.contdelivery_full}}.
 {: shortdesc}
 
-Con {{site.data.keyword.deliverypipeline}}, puede elegir entre varios tipos de compilación. Proporcione el script de compilación y {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} lo ejecutará; no es necesario configurar sistemas de compilación. A continuación, con un solo clic puede desplegar automáticamente su app en uno o más espacios de {{site.data.keyword.Bluemix_notm}}, servidores de Cloud Foundry públicos o contenedores Docker en IBM Containers for {{site.data.keyword.Bluemix_notm}}.
+Con los conductos, puede elegir entre distintos tipos de compilación. Proporcione el script de compilación y {{site.data.keyword.contdelivery_short}} lo ejecutará; no es necesario configurar sistemas de compilación. A continuación, con un solo clic puede desplegar automáticamente su app en uno o más espacios de {{site.data.keyword.Bluemix_notm}}, servidores de Cloud Foundry públicos o contenedores Docker en IBM Containers for {{site.data.keyword.Bluemix_notm}}.
 
 Los trabajos de compilación compilan y empaquetan el código fuente de su app desde repositorios Git. Los trabajos de compilación generan artefactos desplegables, como archivos WAR o contenedores Docker para IBM Containers. Además, puede ejecutar automáticamente pruebas de unidad en su compilación. Puede configurar sus trabajos de compilación de modo que cada vez que se envíe una confirmación se desencadene una compilación.
 
@@ -71,3 +71,9 @@ Para crear un [conducto vacío ![Icono de enlace externo](../../icons/launch-gly
 1. Pulse **Crear**. Se crea un conducto vacío y se representa como una tarjeta en la página Visión general de la cadena de herramientas.
 
 En {{site.data.keyword.deliverypipeline}}, puede cambiar la configuración, comprobar el estado de las compilaciones, la app desplegada y los despliegues recientes, consultar los registros y detalles de despliegue más recientes o suprimir el conducto.
+
+## Guía de aprendizaje: {{site.data.keyword.deliverypipeline}}
+{: #pipeline-tutorial}
+
+Consulte esta guía de aprendizaje en [IBM&reg; Cloud Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method){:new_window}:
+  * [Crear un conducto ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}

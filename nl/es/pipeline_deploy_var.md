@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-17"
+lastupdated: "2017-7-10"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -19,7 +19,7 @@ lastupdated: "2016-11-17"
 # Propiedades y recursos del entorno
 {: #deliverypipeline_environment}
 
-Puede utilizar propiedades de entorno y recursos preinstalados para interactuar con el servicio de IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}}. Por ejemplo, puede incorporarlos a un script de trabajo o a un mandato de prueba.
+Puede utilizar propiedades de entorno y recursos preinstalados para que interactúen con la capacidad de conducto de {{site.data.keyword.contdelivery_full}}. Por ejemplo, puede incorporarlos a un script de trabajo o a un mandato de prueba.
 {:shortdesc}
 
 Puede añadir sus propias propiedades de entorno a una etapa desde su separador **PROPIEDADES DE ENTORNO**. Las propiedades de entorno están disponibles para todos los trabajos en una etapa.
@@ -55,7 +55,7 @@ Las siguientes propiedades y recursos están disponibles de forma predeterminada
 | BUILD_NUMBER | El ID de etapa incremental que se muestra en la IU del conducto.  |
 | GIT_BRANCH | La rama Git que utiliza el trabajo como entrada. Esta propiedad sólo está disponible en trabajos que utilizan un repositorio de Git como entrada. |
 | GIT_COMMIT | La confirmación de Git que utiliza el trabajo como entrada. Esta propiedad sólo está disponible en trabajos que utilizan un repositorio de Git como entrada. |
-| GIT_PREVIOUS_COMMIT | El valor de confirmación de Git de la última ejecución correcta del trabajo. Esta propiedad solo está disponible en trabajos que utilizan un repositorio de Git como entrada. |
+| GIT_PREVIOUS_COMMIT | El valor de confirmación de Git de la última ejecución correcta del trabajo. Esta propiedad sólo está disponible en trabajos que utilizan un repositorio de Git como entrada. |
 | GIT_URL | El URL de repositorio de Git que utiliza el trabajo como entrada. Esta propiedad sólo está disponible en trabajos que utilizan un repositorio de Git como entrada. |
 | IDS_JOB_ID | El ID exclusivo de la configuración del trabajo. |
 | IDS_JOB_NAME | El nombre de la configuración del trabajo. |
@@ -63,8 +63,9 @@ Las siguientes propiedades y recursos están disponibles de forma predeterminada
 | IDS_PROJECT_NAME | El nombre del proyecto, por ejemplo, <code>Propietario - Nombre de proyecto</code>. |
 | IDS_STAGE_NAME | El nombre de la etapa actual. |
 | IDS_URL | El URL para el conducto actual. |
-| IDS_VERSION | El número para la compilación que se está desplegando o el identificador de SCM. Esta propiedad sólo está disponible para los trabajos de despliegue.
+| IDS_VERSION | El número para la compilación que se está desplegando o el identificador de SCM. Esta propiedad sólo está disponible en trabajos desplegados.
 | JOB_NAME | El ID de trabajo exclusivo en el contexto del conducto actual. |
+| PIPELINE_KUBERNETES_CLUSTER_NAME | El nombre del clúster de Kubernetes seleccionado en el trabajo actual. |
 | PIPELINE_STAGE_INPUT_JOB_ID | El ID del trabajo que se introduce para la etapa actual. |
 | PIPELINE_STAGE_INPUT_REV | La revisión de la entrada para la etapa actual. |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | El ID exclusivo para la ejecución del conducto. |
@@ -77,12 +78,15 @@ Las siguientes propiedades y recursos están disponibles de forma predeterminada
 | Propiedad de entorno | Descripción |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | ANT_HOME | La vía de acceso para Apache Ant 1.9.2. |
+| ANT_JAVA8_HOME | La vía de acceso a una versión 1.10+ de Apache Ant que necesita Java 8. |
 | GRADLE_HOME | La vía de acceso para Gradle 1.11. |
 | JAVA_HOME | La vía de acceso para IBM&reg; Java&trade; 7. |
 | JAVA7_HOME | La vía de acceso para IBM Java 7. |
 | JAVA8_HOME | La vía de acceso para IBM Java 8. |
 | MAVEN_HOME | La vía de acceso para Apache Maven 3.2.1. |
 | NODE_HOME | La vía de acceso para Node.js 0.10.29. |
+
+**Sugerencia**: Puede utilizar la versión 1.10+ de Apache Ant en los scripts del conducto estableciendo `ANT_HOME` en `$ANT_JAVA8_HOME` y `JAVA_HOME` en `$JAVA8_HOME`.
 
 ### Propiedades de despliegue
 

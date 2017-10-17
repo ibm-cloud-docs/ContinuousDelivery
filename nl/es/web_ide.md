@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-6-1"
+lastupdated: "2017-6-9"
 
 ---
 
@@ -35,7 +35,7 @@ De forma predeterminada, siempre se muestran los valores para el estilo del edit
 
 2. Pulse **Valores del editor**.
 
-3. Para incluir o excluir un valor del menú **Valores del editor local**, pulse la estrella que hay en cada valor. 
+3. Para incluir o excluir un valor del menú **Valores del editor local**, pulse la estrella que hay en cada valor.
 
 ![Conmutador Valores de editor](images/webide_editor_settings_toggle_light.png)
 
@@ -62,9 +62,9 @@ La segunda sección es el panel del editor. El editor proporciona varias caracte
  2. En el navegador de archivos, pulse un archivo.
 
 ### Accesos directos de teclado
-También es posible acceder a muchos mandatos en {{site.data.keyword.webide}} a través de accesos directos de teclado. 
+Muchos de los mandatos de {{site.data.keyword.webide}} son accesibles a través de atajos de teclado.
 
-Para ver una lista de los accesos directos de teclado en el editor, pulse Alt+Mayús+?. Si está utilizando un Mac OS, pulse Ctrl+Mayús+?.
+Para ver una lista de los atajos de teclado en el editor, pulse **Herramientas** > **Mostrar claves**. Como alternativa, puede ver la lista pulsando Alt+Mayús+?, o en MacOS, Control+Mayús+?. Puede personalizar un atajo pasando el ratón sobre la clave, pulsando el lápiz y escribiendo el nuevo enlace clave.
 
 ## Gestión del código fuente
 {: #sourcecontrol}
@@ -77,7 +77,7 @@ Para ver una lista de los accesos directos de teclado en el editor, pulse Alt+Ma
 ## Despliegue de una app desde el espacio de trabajo
 {: #deploy}
 
-1. Para desplegar la app, desde la barra de ejecución, seleccione o cree una configuración de inicio.
+1. Para desplegar la app, desde la barra de ejecución, seleccione o cree una configuración de lanzamiento.
    ![Barra de ejecución](images/webide_runbar_light.png)   
 1. Pulse el icono de despliegue <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="icono de despliegue">. Se desplegará una instancia de la app utilizando el contenido actual del espacio de trabajo y del entorno definido en la configuración de lanzamiento.
 2. Una vez que se despliegue la app, puede utilizar la barra de ejecución para detener, reiniciar o depurar la app, ver registros, etc.
@@ -92,7 +92,9 @@ Para ver una lista de los accesos directos de teclado en el editor, pulse Alt+Ma
 Si está desarrollando una app Node.js, habilite la modalidad de Edición en directo: <img  src="./images/enable_live_edit.png"  alt="Graduador para habilitar edición en directo">
 
 <table><tr><td><img src="./images/live_edit_restart.png"  alt="Icono reiniciar edición en directo"></td><td>Con la modalidad de edición en directo, reinicia con rapidez la app, sin volver a desplegar</td></tr>
-<tr><td> <img src="./images/debug_icon.png"  alt="Icono depurar"></td><td>Con la modalidad de edición en directo, accede al depurador</td></tr>
+<tr><td> <img src="./images/debug_icon.png"  alt="Icono depurar"></td>
+<td>Con la modalidad de edición en directo, accede al depurador
+</td></tr>
 </table>
 
 <!-- 3/6/2016: bl commands don't work with V2/CD
@@ -158,10 +160,9 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 -->
 
 ## Lenguajes soportados
-
 {: #supported_languages}
 
-Eclipse Orion {{site.data.keyword.webide}} proporciona ayuda de contenido, ayudas contextuales, vistas previas, validación y resaltado de sintaxis para archivos JavaScript, HTML, CSS y Markdown. También se da soporte al resaltado de sintaxis para estos tipos de archivos: 
+Eclipse Orion {{site.data.keyword.webide}} proporciona ayuda de contenido, ayudas contextuales, vistas previas, validación y resaltado de sintaxis para archivos JavaScript, HTML, CSS y Markdown. También se da soporte al resaltado de sintaxis para estos tipos de archivos:
 
 <table>
 <tr>
@@ -197,13 +198,21 @@ Eclipse Orion {{site.data.keyword.webide}} proporciona ayuda de contenido, ayuda
 </li><li>XML
 </li><li>XQuery
 </li><li>YAML
-</li><li>Archivo de lanzamiento
+</li><li>Archivo de lanzamiento 	
 </li><li>Dockerfile
 </li><li>gitignore
 </li><li>git config
 </li><li>cfignore
 </li><li>properties
-</ul>
+</li></ul>
 </td>
 </tr>
 </table>
+
+## Realice una guía de aprendizaje: Eclipse Orion Web IDE
+{: #toolchain_tutorials}
+
+Consulte uno de estas guías de aprendizaje en [IBM&reg; Cloud Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method){:new_window}:
+  * [Crear y utilizar su primera cadena de herramientas (GitHub) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Cree una cadena de herramientas que utilice Git Repos and Issue Tracking ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Cree y utilice una cadena de herramientas con DevOps Insights (v2) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

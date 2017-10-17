@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-4-5"
+lastupdated: "2017-8-18"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,30 +22,34 @@ lastupdated: "2017-4-5"
 Con la función de conductos compuestos para {{site.data.keyword.deliverypipeline}}, puede gestionar procesos de entrega continua e integración continua repetibles para apps de software relacionadas.
 {:shortdesc}
 
-Puede crear conductos compuestos para gestionar las apps de una cadena de herramientas. Si la cadena de herramientas contiene apps desplegadas por {{site.data.keyword.deliverypipeline}}, la cadena de herramientas se actualiza de forma dinámica cuando se añaden o retiran conductos de entrega de la cadena de herramientas. También puede añadir apps procedentes de fuentes externas al conducto compuesto.
+Puede crear conductos compuestos para gestionar las apps de una cadena de herramientas. Si la cadena de herramientas contiene apps desplegadas por {{site.data.keyword.deliverypipeline}}, puede establecer que el conducto compuesto se actualice cuando se añaden o retiran conductos de entrega de la cadena de herramientas. También puede añadir apps procedentes de fuentes externas al conducto compuesto.
 
 ## Creación de un conducto compuesto
 {: #compositepipeline_create_for_toolchain}
 
-1. En el menú que hay junto al logotipo de Bluemix, pulse **Servicios > DevOps**
+1. En el menú de la barra de menús de {{site.data.keyword.Bluemix_notm}}, pulse **DevOps**.
 
-1. En el menú de la izquierda, pulse **Conductos**.
+2. En el menú de la izquierda, pulse **Conductos**.
 
-2. Para habilitar la característica de conducto compuesto, pulse **Más información** y luego pulse **Habilitar**. El conducto compuesto se habilita para cada usuario, de modo que sólo los miembros de la organización (org) que decidan utilizar la característica experimental podrán ver los conductos compuestos que cree.
+3. Para habilitar la característica de conducto compuesto, pulse **Más información** y luego pulse **Habilitar**. El conducto compuesto se habilita para cada usuario, de modo que sólo los miembros de la organización (org) que decidan utilizar la característica experimental podrán ver los conductos compuestos que cree.
 
-2. Pulse **Crear** > **Conducto compuesto**.
+4. Pulse **Crear conducto** > **Conducto compuesto**.
 
-3. Escriba un nombre para el conducto compuesto. También puede modificar la descripción del conducto.
+5. Escriba un nombre para el conducto compuesto. También puede modificar la descripción del conducto.
 
-4. En la lista **Cadena de herramientas**, seleccione una cadena de herramientas.
+6. En la lista **Cadena de herramientas**, seleccione una cadena de herramientas.
 
-    1. Para crear una cadena de herramientas y un conducto compuesto vacíos, seleccione **Nuevo**.
+    a. Para crear una cadena de herramientas y un conducto compuesto vacíos, seleccione **Nuevo**.
 
-    2. Para crear un conducto compuesto para una de las cadenas de herramientas, seleccione su nombre.
+    b. Para crear un conducto compuesto para una de las cadenas de herramientas, seleccione su nombre.
 
-5. Si crea una cadena de herramientas vacía, seleccione **Añadir entornos predeterminados**. Puede utilizar estos entornos lógicos predeterminados para controlar la ejecución de procesos a través del conducto compuesto.
+7. Si crea una cadena de herramientas vacía, seleccione **Añadir entornos predeterminados**. Puede utilizar estos entornos lógicos predeterminados para controlar la ejecución de procesos a través del conducto compuesto.
 
-6. Pulse **Crear**.
+8. Para actualizar el conducto compuesto al añadir conductos a la cadena de herramientas, elimine los conductos de la cadena de herramientas, o al modificar las etapas de los conductos de la cadena de herramientas, seleccione **Sincronizar automáticamente este conducto compuesto con la cadena de herramientas seleccionada**.
+
+  **Nota:** Debe habilitar la sincronización automática antes de cambiar los conductos de la cadena de herramientas. Sólo están habilitados e incluidos en el conducto compuesto los cambios que realice durante la sincronización automática.
+
+9. Pulse **Crear**.
 
 Las etapas que haya configurado se correlacionan automáticamente con el espacio adecuado de la organización y se crea un plan de despliegue para el conducto compuesto.
 
@@ -91,11 +95,40 @@ Después de expandir una app para ver sus trabajos, puede ejecutar manualmente t
 
 ![Ejecución de una etapa en una sola app](images/composite_run_stage.png)
 
-Para ejecutar todos los trabajos de todas las apps que están en un espacio, pulse el icono **Desplegar en *espacio*** en el espacio correspondiente al conducto compuesto.
+Para ejecutar cada trabajo en cada app que está en un espacio, pulse el icono **Desplegar en *espacio*** en el espacio correspondiente al conducto compuesto.
 
 ![Ejecución de una etapa en todas las apps](images/composite_run_space.png)
 
 Los trabajos se ejecutan de acuerdo con el plan de despliegue del conducto compuesto.
+
+##Añadir apps que despliegan conductos de entrega
+{: #compositepipeline_add_apps}
+
+Puede añadir apps que despliegan sólo los conductos de entrega sincronizando el conducto compuesto con la cadena de herramientas. Debido a que un conducto compuesto está asociado con una única cadena de herramientas, sólo podrá incluir las apps cuyos conductos de entrega están en dicha cadena de herramientas.
+
+Para añadir una app desplegada por un conducto de entrega en un conducto compuesto, siga estos pasos:
+
+1. Abra el conducto compuesto.
+
+2. Seleccione **Sincronizar automáticamente este conducto compuesto con la cadena de herramientas**.
+
+  **Nota:** Debe habilitar la sincronización automática antes de crear los conductos de entrega. Sólo están habilitados e incluidos en el conducto compuesto los cambios que realice durante la sincronización automática.
+
+3. Cree el conducto de entrega para la app. Asegúrese de asignar el conducto de entrega a la misma cadena de herramientas que el conducto compuesto.
+
+4. Configure las etapas y trabajos para el conducto de entrega.
+
+La app se añade al conducto compuesto, y los planes de despliegue para cada etapa contienen tareas para ejecutar los trabajos que haya configurado.
+
+
+##Actualización de conductos de entrega en el conducto compuesto
+{: #compositepipeline_sync}
+
+Debe habilitar la sincronización automática en el conducto compuesto para poder añadir o cambiar los conductos que forman parte del mismo.
+
+1. Abra el conducto compuesto.
+
+2. Seleccione **Sincronizar automáticamente este conducto compuesto con la cadena de herramientas**.
 
 ## Visualización de registros
 {: #compositepipeline_view_logs}
@@ -162,7 +195,7 @@ Si la integración se ha realizado correctamente, puede añadir apps de IBM Urba
 ## Adición de apps de IBM UrbanCode Deploy
 {: #compositepipeline_add_apps}
 
-Si es miembro de una organización que está conectada a IBM UrbanCode Deploy utilizando DevOps Connect, puede añadir apps de UrbanCode Deploy a conductos compuestos, seleccionar los procesos de apps que desea incluir en el plan de despliegue y personalizar el despliegue de las apps.Para ver instrucciones de instalación, consulte [Utilización de IBM Bluemix DevOps Connect para integrar con IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
+Si es miembro de una organización que se integra con IBM UrbanCode Deploy utilizando DevOps Connect, puede añadir las apps a las que ha podido acceder en UrbanCode Deploy al conducto compuesto. Para ver instrucciones de instalación, consulte [Utilización de IBM Bluemix DevOps Connect para integrar con IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
 
 Si es miembro de una organización que está conectada a IBM UrbanCode Deploy, puede añadir apps de UrbanCode Deploy a conductos compuestos, seleccionar los procesos de apps que desea incluir en el plan de despliegue y personalizar el despliegue de las apps.
 
@@ -187,3 +220,9 @@ Si es miembro de una organización que está conectada a IBM UrbanCode Deploy, p
     3. Pulse **Guardar**.
 
     4. Repita estos pasos para cada entorno lógico que utilice.
+
+##Guía de aprendizaje: Conductos compuestos
+{: #composite_pipeline-tutorial}
+
+Consulte esta guía de aprendizaje en [IBM&reg; Cloud Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method){:new_window}:
+  * [Cree y utilice una cadena de herramientas con DevOps Insights (v2) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

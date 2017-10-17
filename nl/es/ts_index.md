@@ -25,7 +25,7 @@ Aquí encontrará respuestas a preguntas comunes sobre la resolución de problem
 No está autorizado con GitHub.
 {:shortdesc}
 
-Si tiene está autorizado por {{site.data.keyword.Bluemix_notm}} para acceder a la cuenta de GitHub, puede producirse uno de estos problemas:
+Si {{site.data.keyword.Bluemix_notm}} no está autorizado para acceder a la cuenta de GitHub, se puede producir cualquiera de estos problemas:
 {: tsSymptoms}
 
  * Cuando intente añadir la integración de herramientas de GitHub a la cadena de herramientas, la integración de herramientas no se añade.
@@ -38,14 +38,14 @@ Si configura la integración de esta herramienta de GitHub mientras crea la cade
 {: tsResolve}
 
   1. En la sección Integraciones configurables, pulse **GitHub**.
-  1. Si está creando la cadena de herramientas en {{site.data.keyword.Bluemix_notm}} Público y no ha autorizado a {{site.data.keyword.Bluemix_notm}} acceso a GitHub, pulse **Autorizar** para ir al sitio web de GitHub.
-  1. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub. Si tiene una sesión activa de GitHub pero no ha introducido recientemente su contraseña, es posible que se le solicite que introduzca la contraseña de GitHub para confirmarla.
+  1. Si está creando la cadena de herramientas en {{site.data.keyword.Bluemix_notm}} Público y {{site.data.keyword.Bluemix_notm}} no está autorizado para acceder a GitHub, pulse **Autorizar** para ir al sitio web de GitHub.
+  1. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub. 
 
 Si ya tiene una cadena de herramientas, actualice la configuración de la integración de herramientas de GitHub:
 
  1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse sobre la cadena de herramientas para abrir la página Visión general correspondiente. Si lo prefiere, en la página Visión general de la app, tarjeta Entrega continua, pulse **Ver cadena de herramientas** y, a continuación, **Visión general**.
  1. En la tarjeta GitHub, pulse el menú y pulse **Configurar**.
- 1. Actualice los valores de configuración para autorizar a {{site.data.keyword.Bluemix_notm}} para acceder a GitHub. Pulse **Autorizar** para ir al sitio web de GitHub. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub. Si tiene una sesión activa de GitHub pero no ha introducido recientemente su contraseña, es posible que se le solicite que introduzca la contraseña de GitHub para confirmarla.
+ 1. Actualice los valores de configuración para autorizar a {{site.data.keyword.Bluemix_notm}} para acceder a GitHub. Pulse **Autorizar** para ir al sitio web de GitHub. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub. 
  1. Cuando haya terminado de configurar los ajustes, pulse **Guardar integración**.
 
 
@@ -60,7 +60,6 @@ Cuando crea una cadena de herramientas, ve el siguiente mensaje de error:
 
 `Esta organización contiene 200 cadenas de herramientas, que es el límite máximo. Antes de que pueda añadir otra cadena de herramientas, elimine una o varias cadenas de herramientas de la organización.`
 
-
 No puede tener más de 200 cadenas de herramientas en una organización (org).  
 {: tsCauses}
 
@@ -71,7 +70,7 @@ Elimine una o varias cadenas de herramientas de su organización y, a continuaci
 ## Se ha superado el límite memoria de la organización
 {: #org_outofmemory}
 
-Es posible que no pueda desplegar una app en {{site.data.keyword.Bluemix_notm}} si supera el límite de memoria de su organización. Puede reducir la memoria que utilizan las apps o aumentar la cuota de memoria de su cuenta. El máximo de cuota de memoria para una cuenta de prueba es de 2 GB y únicamente se puede incrementar pasando a una cuenta de pago.
+Es posible que no pueda desplegar una app en {{site.data.keyword.Bluemix_notm}} si supera el límite de memoria de su organización. Puede reducir la memoria que utilizan las apps o aumentar la cuota de memoria de su cuenta. El máximo de cuota de memoria para una cuenta de prueba es de 2 GB. La cuota se puede incrementar al actualizar a una cuenta de pago.
 
 Al desplegar una app en {{site.data.keyword.Bluemix_notm}}, verá el siguiente mensaje de error:
 {: tsSymptoms}
@@ -85,8 +84,7 @@ Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utiliza
 {: tsResolve}
 
   * Para aumentar la cuota de memoria de su cuenta, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cuentas de pago](/docs/pricing/index.html#pay-accounts).
-  * Para reducir la memoria que utilizan las apps, utilice la consola de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos cf.
-    
+  * Para reducir la memoria que utilizan las apps, utilice la consola de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos de cf.
 
     Si utiliza la consola de {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
 
@@ -112,6 +110,34 @@ Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utiliza
     3. Reinicie la app para que se apliquen los cambios.
 
 Para obtener más información sobre los problemas generales al gestionar sus apps, consulte [Resolución de problemas de gestión de apps](https://console.bluemix.net/docs/troubleshoot/ts_apps.html#managingapps).
+
+
+## La barra de ejecución no mostrará los iconos de Bluemix Live Sync en Eclipse Orion Web IDE
+{: #ts_llz_lkb_3r}
+
+Ha creado una app, pero los iconos de IBM Bluemix Live Sync no se muestran en la barra de ejecución de Eclipse Orion Web IDE. No verá la barra de ejecución completa con los iconos de Live Edit:
+
+![Barra de ejecución](images/webide_runbar_light.png)   
+
+Al editar una app de Node.js en Web IDE, los iconos de {{site.data.keyword.Bluemix_notm}} Live de editar, reinicio rápido y depurar no se muestran en la barra de ejecución.
+{: tsSymptoms}
+
+Los iconos no estarán disponibles en estas circunstancias:
+{: tsCauses}
+
+* El archivo `manifest.yml` no está almacenado en el nivel superior del proyecto.
+* La app está almacenada en un subdirectorio en lugar de en la raíz, pero la vía de acceso al subdirectorio no está especificada en el archivo `manifest.yml`.
+* La app no contiene un archivo `package.json`.
+
+Utilice uno de los métodos siguientes:
+{: tsResolve}
+
+* Si el archivo `manifest.yml` no está almacenado en la raíz, almacénelo allí.
+* Si la app está almacenada en un subdirectorio, especifique la vía de acceso al subdirectorio en el archivo `manifest.yml`.
+   ```
+    path: path_to_application
+    ```
+* Cree un archivo `package.json` que esté en el directorio de la app.
 
 
 ## La cadena de herramientas no se carga
@@ -161,3 +187,60 @@ Vuelva a configurar la integración de herramientas:
 
 1. Asegúrese de utilizar parámetros de configuración válidos. Si el error está causado por una configuración no válida, se muestra un mensaje de error; por ejemplo, `La integración se ha podido configurar. Compruebe la configuración y vuelva a intentarlo. Razón: api_key:fakeKey no válido`. Actualice los valores de la integración de herramientas y pulse **Guardar integración**.
 1. Si el error está causado por un problema de comunicación, pulse **Guardar integración** para intentarlo de nuevo.
+
+
+
+<!-- ## Pipeline job failures
+{: #cannot_authorize_github}
+
+A pipeline job failed.
+{:shortdesc}
+
+Your pipeline job failed.
+{: tsSymptoms}
+
+ * Some reasons
+
+Many reasons  
+{: tsCauses}
+
+If you are configuring the GitHub tool integration while you are creating your toolchain, follow these steps:
+{: tsResolve}
+
+  1. In the Configurable Integrations section, click **GitHub**.
+  1. If you are creating the toolchain on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, click **Authorize** to go to the GitHub website.
+  1. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
+
+If you already have a toolchain, update the GitHub tool integration's configuration:
+
+ 1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**, and then click **Overview**.
+ 1. On the GitHub card, click the menu and click **Configure**.
+ 1. Update the configuration settings to authorize {{site.data.keyword.Bluemix_notm}} to access GitHub. Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
+ 1. When you are finished updating the settings, click **Save Integration**.  -->
+
+
+
+
+<!-- This is the template for a problem topic.  -->
+
+<!-- The short description section contains a brief description of problem. For example:  
+
+After you create an app on the Dashboard, you click *ADD GIT* to create a Git repository, but you cannot proceed.
+{:shortdesc} -->
+
+<!-- The symptoms section contains a description of problem symptoms. For example:  
+When you click ADD GIT, a window opens and one of these issues occur:
+- The window hangs with a blank screen.
+- A message states that a problem exists with 3rd party cookies.
+{: tsSymptoms} -->
+
+<!-- The causes section contains a brief explanation of what causes the problem. For example:  
+Your browser might be configured to prevent a cookie from being set. That cookie must be set from the IBM Bluemix DevOps Services site in the hub.jazz.net internet domain from within the context of the Bluemix console.
+{: tsCauses} -->
+
+<!-- The resolve section contains steps to resolve the problem. For example:  
+You can fix this problem in one of three ways:
+- Follow the instructions that are in the window that opens from the Bluemix console. Click the button. Another browser window opens temporarily. In that window, DevOps Services sets the authentication cookie.
+- In another browser tab, go to https://hub.jazz.net and log in. Return to the Bluemix console and refresh the page. Click ADD GIT again.
+- Change your browser settings to enable 3rd party cookies and click ADD GIT again.
+{: tsResolve} -->
