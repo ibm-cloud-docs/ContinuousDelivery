@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-10-10"
+lastupdated: "2017-10-18"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,7 @@ lastupdated: "2017-10-10"
 Improve your DevOps workflow by creating a custom toolchain template. You can get started quickly with an existing toolchain template, or create a toolchain template that includes just the integrations you need. You can add or remove your toolchain's integrations at any time.
 {:shortdesc}
 
-You can [create a toolchain](i/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started{: new_window} in several ways. After you create a custom toolchain template, you can share it by [creating a deploy to {{site.data.keyword.Bluemix_notm}} button](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}.   Details about the toolchain template SDK can be found in the [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}.  A step-by-step tutorial can be found on the [Garage Method site](https://www.ibm.com/devops/method/tutorials/tc_custom/){:new_window}.
+You can [create a toolchain](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} in several ways. After you create a custom toolchain template, you can share it by [creating a deploy to {{site.data.keyword.Bluemix_notm}} button](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}.   Details about the toolchain template SDK can be found in the [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. A step-by-step tutorial can be found on the [Garage Method site](https://www.ibm.com/devops/method/tutorials/tc_custom/){:new_window}.
 
 
 ## Getting started
