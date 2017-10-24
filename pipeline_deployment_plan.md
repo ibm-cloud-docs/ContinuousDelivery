@@ -37,7 +37,7 @@ When you create a task, you select the deployment plan where you want to add the
 
 After you save a task, action icons are displayed for the task. You can use the action icons to change the task's status during a deployment. All tasks have the **Skip** action icon. Other icons, such as **Start**, are displayed when the context is appropriate for them.
 
-![](../UCCR/images/deploy-plan-intro.png "Typical deployment plan")
+![A typical deployment plan](../UCCR/images/deploy-plan-intro.png)
 
 *Figure 1. A simple deployment plan with tasks and action icons*
 
@@ -206,7 +206,7 @@ Tags are displayed in the task rows of the Deployment Plan Details page. In the 
 
 The tags that are used by a deployment plan are displayed on the **Versions** tab of the Deployment Plan Details page. To render a task to be not applicable for a deployment, clear the task's tags. Tasks with the "Not Applicable" status cannot be started.  
 
-![](../UCCR/images/task-tag-labels.png "Typical deployment plan")
+![A typical deployment plan](../UCCR/images/task-tag-labels.png)
 
 *Figure 3. Task tags*
 
