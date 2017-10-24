@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-08-15"
+lastupdated: "2017-10-24"
 
 ---
 
@@ -175,7 +175,7 @@ The group is formed and a group select bar is added to the deployment plan. If y
 
 The following figure shows a parallel group. The group select bar identifies the type of group: parallel <img class="inline" src="../UCCR/images/para-select.png"  alt="parallel group select"> or sequential <img class="inline" src="../UCCR/images/seq-select.png"  alt="sequential group select">.
 
-(![](../UCCR/images/group-select.png "Typical deployment plan"))
+![A typical deployment plan](../UCCR/images/group-select.png)
 
 *Figure 2. A parallel group*
 
@@ -231,7 +231,7 @@ Task dependencies are shown in the Dependencies column on the Deployment Plan De
 
 In the following figure, the first task does not have any prerequisites and two tasks depend on it. The second task has one prerequisite task and no tasks depend on it.
 
-(![](../UCCR/images/plan-w-depend.png "Typical deployment plan"))
+![A typical deployment plan](../UCCR/images/plan-w-depend.png)
 
 *Figure 4. Task dependencies*
 
