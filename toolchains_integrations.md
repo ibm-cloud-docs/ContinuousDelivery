@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-9-25"
+lastupdated: "2017-10-11"
 
 ---
 
@@ -25,6 +25,7 @@ The tool integrations that are available to add and configure for your toolchain
 |Application Security on Cloud		|Yes		|No		|
 |Artifactory		|Yes		|Yes		|
 |Availability Monitoring		|Yes		|No		|
+|Bitbucket		|Yes		|No		|
 |Cloud Event Management		|Yes		|No		|
 |{{site.data.keyword.deliverypipeline}} 		|Yes	   	|Yes  		|
 |{{site.data.keyword.DRA_short}} 		|Yes		|No			|
@@ -243,6 +244,45 @@ To test, monitor, and improve your app's health as you build it, add the {{site.
 To learn more about {{site.data.keyword.prf_hubshort}}, see the [{{site.data.keyword.prf_hublong}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window} on the IBM Cloud Garage Method or take this tutorial:
 
   * [Manage your {{site.data.keyword.Bluemix_notm}} application by using Bluemix Availability Monitoring and Alert Notification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+
+
+## Configuring Bitbucket
+{: #bitbucket}
+
+Store your source code in a new or existing repository on bitbucket.org and engage in social coding through wikis, issue tracking, and pull requests.
+
+Configure Bitbucket to collaborate on code with your team:
+
+1. From the DevOps dashboard, click **Toolchains**. Click the toolchain that you want to add Bitbucket to. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+
+ a. Click **Add a Tool**.
+
+ b. In the Tool Integrations section, click **Bitbucket**.
+ 
+   **Tip:** If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access Bitbucket, click **Authorize** to go to the Bitbucket website. If you don't have an active Bitbucket session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your Bitbucket account. If you have an active Bitbucket session but you haven't entered your password recently, you might be prompted to enter your Bitbucket password to confirm.
+
+1. Click the Bitbucket server that you want to use.
+1. If you have a Bitbucket repo that you want to use, type the URL for the repo. For the repository type, click **Existing**.
+1. If you want to use a new Bitbucket repo, type a name for the repo, type the URL for the repo that you are cloning or forking, and select the repository type:
+
+ a. To create an empty repo, click **New**.
+
+ b. To create a copy of a repo, click **Clone**.
+
+ c. To fork a repo so that you can contribute changes through pull requests, click **Fork**.
+
+1. To create a private repo on the server, select the **Make this repository private** check box. 
+1. To use Bitbucket Issues for issue tracking, select the **Enable Bitbucket Issues** check box.
+1. To track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Click **Create Integration**.
+1. From your toolchain, click the card for the Bitbucket repo that you want to work with. The Bitbucket website opens where you can view the contents of the repo.
+1. If you enabled Bitbucket Issues, click **Bitbucket Issues** to open it. You can use this instance of Bitbucket Issues for your entire toolchain, even if the toolchain contains multiple Bitbucket repos.    
+
+**Note:** If you don't have owner or master privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+
+### Learn more about Bitbucket
+
+To learn more about Bitbucket, see the [Bitbucket article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_bitbucket/){: new_window} on the IBM Cloud Garage Method. 
 
 
 ## Adding Cloud Event Management (Experimental)
