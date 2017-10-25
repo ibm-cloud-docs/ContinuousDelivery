@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-10-18"
+lastupdated: "2017-10-25"
 
 ---
 {:new_window: target="_blank"}
@@ -107,8 +107,8 @@ All the information for your toolchain can be in the `toolchain.yml file.  Howev
 
 ### Localizing your toolchain template
 
-You can localize your toolchain by externalizing your UI strings so that the strings in the toolchain are displayed in the user's preferred language.
-Your `toolchain.yml` file needs to include an `$i18n` reference to the files in the `nls` directory.
+You can localize your toolchain by externalizing your UI strings in the `nls` directory so that the strings in the toolchain are displayed in the user's preferred language.
+Your `toolchain.yml` file needs to include an `$i18n` reference.  
 The following example shows an `$i18n` reference to a `messages.yml` file:
 
 ```
@@ -536,46 +536,56 @@ To see the list of available tool integrations, see <a href="https://github.com/
 ### **Slack**
 
 #### toolchain.yml
-	```
-	messaging:
-	  service_id: slack
-	  $ref: slack.yml
-	```
-	{: codeblock}
+{: #slack_toolchain_yaml}
+
+```
+messaging:
+  service_id: slack
+  $ref: slack.yml
+```
+{: codeblock}
 
 #### slack.yml
-	```
-	---
-	parameters:
-	  api_token: ""
-	  channel_name: ""
-	```
-	{: codeblock}
+{: #slack_slack_yaml}
+
+```
+---YAML
+parameters:
+  api_token: ""
+  channel_name: ""
+```
+{: codeblock}
 
 ### **Sauce Labs**
 
 #### toolchain.yml
-	```
-	test:
-	  service_id: saucelabs
-	  $ref: saucelabs.yml
-	```
-	{: codeblock}
+{: #sauce_toolchain_yaml}
+
+```YAML
+test:
+  service_id: saucelabs
+  $ref: saucelabs.yml
+```
+{: codeblock}
 
 #### saucelabs.yml
-	```
-	---
-	parameters:
-	  username: ""
-	  key: ""
-	```
-	{: codeblock}
+{: #sauce_slack_yaml}
+
+```YAML
+---
+parameters:
+  username: ""
+  key: ""
+```
+{: codeblock}
 
 ### **Eclipse Orion Web IDE**
 
 ####	toolchain.yml
-	```
-	webide:
-	  service_id: orion
-	```
-	{: codeblock}
+{: #eclipse_toolchain_yaml}
+
+```YAML
+webide:
+  service_id: orion
+```
+{: codeblock}
