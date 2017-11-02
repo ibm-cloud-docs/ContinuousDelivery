@@ -19,10 +19,10 @@ The {{site.data.keyword.contdelivery_full}} team actively monitors the Stack Ove
 
 <table>
 <tr>
- <th align="center">
+ <th style="text-align:center">
  <strong>Stack Overflow</strong>
  </th>
- <th align="center">
+  <th style="text-align:center">
  <strong>dW Answers</strong>
 </th></tr>
 <tr>
