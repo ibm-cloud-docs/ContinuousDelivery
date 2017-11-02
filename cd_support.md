@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-18"
+lastupdated: "2017-11-02"
 
 ---
 
@@ -18,18 +18,25 @@ lastupdated: "2017-07-18"
 The {{site.data.keyword.contdelivery_full}} team actively monitors the Stack Overflow and developerWorks forums for questions about the {{site.data.keyword.contdelivery_short}} service and DevOps Insights.   
 
 <table>
- <td align="center">
+<tr>
+ <th align="center">
  <strong>Stack Overflow</strong>
-  <p>
+ </th>
+ <th align="center">
+ <strong>dW Answers</strong>
+</th></tr>
+<tr>
+<td align="center">
+<p>
    <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,devops-services" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
     <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Opens in a new tab or window)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on Stack Overflow.</p></td>
   <td align="center">
-  <strong>dW Answers</strong>
    <p>
    <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
     <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Opens in a new tab or window)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on dW Answers.</p></td>
+    </tr>
   </table>  
 
 
@@ -44,5 +51,5 @@ If you have a more serious issue or encounter problems with the {{site.data.keyw
 For more information about opening an IBM {{site.data.keyword.Bluemix_notm}} support ticket, or about support levels and ticket severities, see [Contacting support](https://console.bluemix.net/docs/support/index.html#contacting-support).
 
 
-## Support for Bluemix
+## Support for {{site.data.keyword.Bluemix_notm}}
 For other problems or questions about your {{site.data.keyword.Bluemix_notm}} service, see [Getting customer support](https://www.{DomainName}/docs/support/index.html#getting-customer-support).
