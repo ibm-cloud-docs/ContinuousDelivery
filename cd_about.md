@@ -12,7 +12,7 @@ lastupdated: "2017-10-9"
 {:codeblock:.codeblock}
 
 
-# Toolchain availability and templates  
+# Toolchain availability, templates, and tutorials
 {: #cd_about}  
 
 Toolchains are available on {{site.data.keyword.Bluemix_notm}} Public and Dedicated. You can use a template as a starting point to create a toolchain.
@@ -27,7 +27,7 @@ For source-code management and issue tracking, {{site.data.keyword.Bluemix_notm}
 
 {{site.data.keyword.contdelivery_short}} is available on {{site.data.keyword.Bluemix_notm}} Public and {{site.data.keyword.Bluemix_notm}} Dedicated. Toolchains differ depending on whether you use {{site.data.keyword.contdelivery_short}} on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-**Tip**: Toolchains are hosted in the US South region. If your toolchain is configured to deploy apps to a different region, it will still deploy apps to that region.
+**Tip**: Toolchains are hosted in the US South region. If your toolchain is configured to deploy apps to a different region, it will still deploy apps to that region. To learn more, try the <a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Deploy a secure web application across multiple regions </a> tutorial.
 
 |Toolchains |{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
@@ -39,7 +39,7 @@ For source-code management and issue tracking, {{site.data.keyword.Bluemix_notm}
 {: caption="Table 1. Differences between toolchains on {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Public" caption-side="top"}
 
 
-## Toolchain templates
+## Toolchain templates and tutorials
 {: #templates}
 
 You can use a template as a starting point to [create a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/create){: new_window}. Toolchain templates include specific sets of tool integrations that support development, deployment, and operations tasks.
@@ -54,7 +54,7 @@ The microservices toolchain templates deploy an app with catalog and orders APIs
   <caption>Table 2. Toolchain templates</caption>
   <tr>
     <th style="width:25%; text-align:left; vertical-align:top">Template</th>
-    <th style="width:50%; text-align:left; vertical-align:top">Description</th>
+    <th style="width:50%; text-align:left; vertical-align:top">Description and related tutorials</th>
     <th style="text-align:left; vertical-align:top">Included tools</th>
   </tr>
   <tr>
@@ -231,4 +231,15 @@ This toolchain has no preconfigured tools. If you are already familiar with tool
 Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom" target="_blank">Create a custom toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
 </td><td> &nbsp;&nbsp; None
 </td></tr>
+<tr><td>Continuous Delivery Toolchain</td><td>This toolchain is used when you enable continuous delivery for an app. <br><br>
+Try the tutorials:
+<ul><li><a href="https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain" target="_blank">Add a toolchain to an app <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
+<li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Deploy a secure web application across multiple regions </a></li>
+</ul></td>
+<td><ul><li>{{site.data.keyword.deliverypipeline}}
+</li><li>Eclipse Orion {{site.data.keyword.webide}}
+<li>
+GitHub and Issues
+</li>
+<li>{{site.data.keyword.Bluemix_notm}}</li></ul><td></tr>
 </table>
