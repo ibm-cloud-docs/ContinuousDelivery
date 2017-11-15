@@ -12,8 +12,8 @@ Continuous Delivery
 
   {: .topicgroup}
     Related links
-	    [IBM Cloud DevOps Insights](/docs/services/DevOpsInsights/index.html#gettingstarted)
-		  [IBM Cloud Garage Method](https://www.ibm.com/devops/method)
+	    [IBM Cloud DevOps Insights](../DevOpsInsights/index.html#gettingstarted)
+	    [IBM Cloud Garage Method](https://www.ibm.com/devops/method)
   {: .navgroup-end}
 
   {: .navgroup id="howto"}
