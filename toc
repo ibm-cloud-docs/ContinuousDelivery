@@ -48,6 +48,10 @@ Continuous Delivery
     git_locally.md
     di_working.md
   {: .navgroup-end}
+  
+  {: .navgroup id="reference"}
+      [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki)
+  {: .navgroup-end}
 
   {: .navgroup id="help"}
     cd_support.md
