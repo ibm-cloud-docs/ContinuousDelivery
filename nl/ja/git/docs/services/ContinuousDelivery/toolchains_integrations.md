@@ -80,7 +80,7 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. ツールチェーンから、**「{{site.data.keyword.alertnotificationshort}}」**をクリックします。
 
-詳しくは、[IBM {{site.data.keyword.alertnotificationshort}}![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window}を参照してください。
+詳しくは、[IBM {{site.data.keyword.alertnotificationshort}}![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/manage/tool_alert_notification/){: new_window}を参照してください。
 
 
 ## Artifactory の構成
@@ -182,7 +182,7 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 
 1. **「保存」**をクリックします。パイプラインが実行されると、このビルド・ジョブは Artifactory ツール統合からの構成情報を使用して Maven リポジトリーに接続します。
 
-詳しくは、「[Artifactory ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window}」を参照してください。
+詳しくは、「[Artifactory ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/deliver/tool_artifactory/){: new_window}」を参照してください。
 
 
 ## Availability Monitoring の追加
@@ -203,7 +203,7 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. **「{{site.data.keyword.prf_hubshort}}」**をクリックして {{site.data.keyword.prf_hubshort}} ダッシュボードを開き、アプリを選択し、そのアプリのモニタリングを構成します。
 
-詳しくは、[{{site.data.keyword.prf_hublong}} ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window} を参照してください。
+詳しくは、[{{site.data.keyword.prf_hublong}} ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window} を参照してください。
 
 
 ## Cloud Event Management (試験段階) の追加
@@ -230,7 +230,7 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 
  * Cloud Event Management で運用手順書のカタログを管理するには、**「Runbook Automation」**をクリックします。
 
-詳しくは、[Cloud Event Management ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window} を参照してください。
+詳しくは、[Cloud Event Management ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/manage/tool_cloud_event_mgt/){: new_window} を参照してください。
 
 
 ## Delivery Pipeline の構成
@@ -301,7 +301,7 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 
 1. **「保存」**をクリックします。パイプラインが実行されるときには必ず Sauce Labs のテストが実行されます。
 
-詳しくは、[Delivery Pipeline ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window} を参照してください。
+詳しくは、[Delivery Pipeline ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} を参照してください。
 
 
 ## DevOps Insights (ベータ版) の追加
@@ -323,7 +323,7 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. **「{{site.data.keyword.DRA_short}}」**をクリックし、開始手順 (基準の作成、パイプラインへの基準の接続、パイプラインの実行) を完了します。
 
-詳しくは、[{{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window} を参照してください。
+詳しくは、[{{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){: new_window} を参照してください。
 
 
 ## Eclipse Orion Web IDE の追加
@@ -345,7 +345,7 @@ Eclipse Orion {{site.data.keyword.webide}} は、ソース管理タスクを作�
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. **「Eclipse Orion {{site.data.keyword.webide}}」**をクリックします。ワークスペースに GitHub または {{site.data.keyword.ghe_short}} のリポジトリーが事前に取り込まれています。現行のツールチェーンと関連付けられているリポジトリーは強調表示されます。
 
-詳しくは、『[ Eclipse Orion {{site.data.keyword.webide}} によるコードの編集](/docs/services/ContinuousDelivery/web_ide.html){: new_window}』および [Eclipse Orion {{site.data.keyword.webide}} ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window} を参照してください。
+詳しくは、『[ Eclipse Orion {{site.data.keyword.webide}} によるコードの編集](/docs/services/ContinuousDelivery/web_ide.html){: new_window}』および [Eclipse Orion {{site.data.keyword.webide}} ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} を参照してください。
 
 
 ## Git Repos and Issue Tracking (ベータ) の構成
@@ -421,7 +421,7 @@ GitHub を構成して、クラウドでソース・コードを管理します�
 
 **注:** リンクしようとしているリポジトリーに対する管理特権をお持ちでない場合、Web フックを使用できないので統合は制限されます。リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。Web フックがない場合、パイプラインを手動で開始する必要があります。
 
-詳しくは、[GitHub ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} および [GitHub Issues ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} を参照してください。
+詳しくは、[GitHub ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/code/tool_github/){: new_window} および [GitHub Issues ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} を参照してください。
 
 
 ## Bluemix Dedicated での GitHub Enterprise および GitHub Issues の構成
@@ -429,7 +429,7 @@ GitHub を構成して、クラウドでソース・コードを管理します�
 
  **注:** ここで説明する手順は、{{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} に適用されます。独自の管理版の {{site.data.keyword.ghe_short}} を使用している場合、内部手順によっては一部のステップが異なることがあります。
 
-{{site.data.keyword.ghe_long}} は、オンプレミス型の Web ベースの Git リポジトリー・ホスティング・サービスです。Dedicated {{site.data.keyword.ghe_short}} は {{site.data.keyword.Bluemix_notm}} Dedicated ユーザー専用です。GitHub Issues は、作業と計画を 1 つの場所に保持するトラッキング・ツールです。これは、ユーザーが重要タスクに注力できるようにユーザーの開発リポジトリーと統合されます。Dedicated {{site.data.keyword.ghe_short}} と GitHub Issues の詳細については、「[{{site.data.keyword.ghe_long}}の概説](/docs/services/ghededicated/index.html){: new_window}」と「[GitHub Issues![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}」を参照してください。
+{{site.data.keyword.ghe_long}} は、オンプレミス型の Web ベースの Git リポジトリー・ホスティング・サービスです。Dedicated {{site.data.keyword.ghe_short}} は {{site.data.keyword.Bluemix_notm}} Dedicated ユーザー専用です。GitHub Issues は、作業と計画を 1 つの場所に保持するトラッキング・ツールです。これは、ユーザーが重要タスクに注力できるようにユーザーの開発リポジトリーと統合されます。Dedicated {{site.data.keyword.ghe_short}} と GitHub Issues の詳細については、「[{{site.data.keyword.ghe_long}}の概説](/docs/services/ghededicated/index.html){: new_window}」と「[GitHub Issues![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}」を参照してください。
 
 {{site.data.keyword.ghe_short}}  をツールチェーン内の 1 つのツール統合として構成して、会社の [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} インスタンス内でソース・コードを管理できるようにすることができます。
 
@@ -535,7 +535,7 @@ Jenkins ツール統合を使用すれば、Jenkins ジョブ通知をツール�
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. ツールチェーンから、**「Jenkins」**をクリックして Jenkins サーバーを表示します。  
 
-詳しくは、[Jenkins ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window} を参照してください。
+詳しくは、[Jenkins ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){: new_window} を参照してください。
 
 
 ## JIRA の構成
@@ -583,7 +583,7 @@ JIRA は、ユーザーのソフトウェアに関連する問題およびバグ
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. ツールチェーンから**「JIRA」**をクリックして、接続する JIRA プロジェクトのダッシュボードを表示します。
 
-詳しくは、[JIRA ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window} を参照してください。
+詳しくは、[JIRA ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/code/tool_jira/){: new_window} を参照してください。
 
 
 ## Nexus の構成
@@ -684,7 +684,7 @@ JIRA は、ユーザーのソフトウェアに関連する問題およびバグ
   **ヒント:** レジストリーへの接続に使用した URL およびユーザー資格情報は、Nexus ツール統合の構成設定で見つけることができます。
 1. **「保存」**をクリックします。パイプラインが実行されると、このビルド・ジョブは Nexus ツール統合からの構成情報を使用して Maven リポジトリーに接続します。
 
-詳しくは、[Nexus ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window} を参照してください。
+詳しくは、[Nexus ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/deliver/tool_nexus/){: new_window} を参照してください。
 
 
 ## カスタム・ツール (その他のツール) の構成
@@ -735,7 +735,7 @@ PagerDuty は、複数のモニタリング・システムのデータを単一�
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. **「PagerDuty」**をクリックして pagerduty.com にアクセスします。ツールチェーンに対してこのツール統合を構成したときに指定した PagerDuty サービスに関連付けられているイベントを表示できます。
 
-詳しくは、「[PagerDuty ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}」を参照してください。
+詳しくは、「[PagerDuty ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){: new_window}」を参照してください。
 
 
 ## Sauce Labs の構成
@@ -761,7 +761,7 @@ Sauce Labs は、機能単体テストを実行します。{{site.data.keyword.d
 
  **ヒント**: Sauce Labs テスト・ジョブを {{site.data.keyword.deliverypipeline}} に追加した場合、サービス・インスタンスを選択できます。
 
-詳しくは、「[Sauce Labs ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window}」を参照してください。
+詳しくは、「[Sauce Labs ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: new_window}」を参照してください。
 
 
 ## Slack の構成
@@ -793,7 +793,7 @@ Slack は、クラウド・ベースのリアルタイムでのメッセージ�
 
 1. **「Slack」**をクリックします。構成した Slack チャネルでツールチェーンのアクティビティーをすべて表示できます。
 
-詳しくは、[Slack ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window} を参照してください。
+詳しくは、[Slack ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: new_window} を参照してください。
 
 
 ## SonarQube の構成
@@ -819,4 +819,4 @@ SonarQube は、ソース・コードの全体的な正常性と品質の概要�
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. ツールチェーンから**「SonarQube」**をクリックして、接続する SonarQube インスタンスのダッシュボードを表示します。
 
-詳しくは、[SonarQube ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window} を参照してください。
+詳しくは、[SonarQube ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window} を参照してください。

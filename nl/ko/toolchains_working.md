@@ -25,7 +25,7 @@ lastupdated: "2017-8-18"
 ##템플리트에서 도구 체인 작성   
 {: #creating_a_toolchain_from_a_template}
 
-특정 도구 통합 세트가 포함된 [도구 체인 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/devops/create){: new_window}에 대한 시작점으로 템플리트를 사용할 수 있습니다. [IBM Cloud Garage Method ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/category/tools){:new_window}에서 템플리트 사용 방법에 대해 자세히 알아보십시오. 
+특정 도구 통합 세트가 포함된 [도구 체인 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/devops/create){: new_window}에 대한 시작점으로 템플리트를 사용할 수 있습니다. [IBM Cloud Garage Method ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/category/tools){:new_window}에서 템플리트 사용 방법에 대해 자세히 알아보십시오. 
 
 1. {{site.data.keyword.Bluemix_notm}} 퍼블릭을 사용 중이면 [{{site.data.keyword.Bluemix_notm}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://console.bluemix.net){:new_window}에 로그인하십시오. 
 1. {{site.data.keyword.Bluemix_notm}} 데디케이티드를 사용 중이면 {{site.data.keyword.Bluemix_notm}}의 데디케이티드 환경에 로그인하십시오. 
@@ -80,7 +80,7 @@ lastupdated: "2017-8-18"
 ## 튜토리얼 보기: 도구 체인 사용
 {: #toolchain_tutorials}
 
-[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method){:new_window}에 있는 다음 튜토리얼 중 하나를 확인하십시오. 
-  * [Create and use your first toolchain (GitHub)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Create a toolchain that uses Git Repos and Issue Tracking![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [Add a toolchain to an app![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?task=1){:new_window}
+[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage){:new_window}에 있는 다음 튜토리얼 중 하나를 확인하십시오. 
+  * [Create and use your first toolchain (GitHub)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Create a toolchain that uses Git Repos and Issue Tracking![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Add a toolchain to an app![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain?task=1){:new_window}

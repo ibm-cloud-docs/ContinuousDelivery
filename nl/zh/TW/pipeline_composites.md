@@ -224,5 +224,5 @@ IBM Bluemix DevOps Connect 會協調內部部署 IBM&reg; UrbanCode&reg; Deploy 
 ##使用指導教學：複合管線
 {: #composite_pipeline-tutorial}
 
-請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method){:new_window} 上的這個指導教學：
-  * [使用 DevOps Insights（第 2 版）建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage){:new_window} 上的這個指導教學：
+  * [使用 DevOps Insights（第 2 版）建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

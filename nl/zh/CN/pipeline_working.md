@@ -74,5 +74,5 @@ lastupdated: "2017-09-05"
 ## 学习教程：{{site.data.keyword.deliverypipeline}}
 {: #pipeline-tutorial}
 
-查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method){:new_window} 上的本教程：
-  * [创建管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}
+查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage){:new_window} 上的本教程：
+  * [创建管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline?task=1){:new_window}

@@ -212,7 +212,7 @@ Eclipse Orion {{site.data.keyword.webide}} proporciona ayuda de contenido, ayuda
 ## Realice una guía de aprendizaje: Eclipse Orion Web IDE
 {: #toolchain_tutorials}
 
-Consulte uno de estas guías de aprendizaje en [IBM&reg; Cloud Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method){:new_window}:
-  * [Crear y utilizar su primera cadena de herramientas (GitHub) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Cree una cadena de herramientas que utilice Git Repos and Issue Tracking ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [Cree y utilice una cadena de herramientas con DevOps Insights (v2) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+Consulte uno de estas guías de aprendizaje en [IBM&reg; Cloud Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage){:new_window}:
+  * [Crear y utilizar su primera cadena de herramientas (GitHub) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Cree una cadena de herramientas que utilice Git Repos and Issue Tracking ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Cree y utilice una cadena de herramientas con DevOps Insights (v2) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

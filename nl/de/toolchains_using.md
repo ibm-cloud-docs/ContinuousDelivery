@@ -113,6 +113,6 @@ Sie können eine Toolchain löschen und angeben, welche der zugehörigen Toolint
 ##Relevantes Lernprogramm: Toolchains verwenden
 {: #toolchain-tutorial}
 
-Informieren Sie sich in dem Lernprogramm zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method){:new_window}:
-  * [Create and use your first toolchain (GitHub) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Microservice-Toolchain mit {{site.data.keyword.DRA_short}} (Version 2) erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+Informieren Sie sich in dem Lernprogramm zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage){:new_window}:
+  * [Create and use your first toolchain (GitHub) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Microservice-Toolchain mit {{site.data.keyword.DRA_short}} (Version 2) erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

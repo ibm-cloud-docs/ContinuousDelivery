@@ -75,5 +75,5 @@ En {{site.data.keyword.deliverypipeline}}, puede cambiar la configuración, comp
 ## Guía de aprendizaje: {{site.data.keyword.deliverypipeline}}
 {: #pipeline-tutorial}
 
-Consulte esta guía de aprendizaje en [IBM&reg; Cloud Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method){:new_window}:
-  * [Crear un conducto ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}
+Consulte esta guía de aprendizaje en [IBM&reg; Cloud Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage){:new_window}:
+  * [Crear un conducto ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline?task=1){:new_window}

@@ -224,5 +224,5 @@ Wenn Sie Mitglied einer Organisation sind, die mit IBM UrbanCode Deploy verbunde
 ##Relevantes Lernprogramm: Kombinationspipelines
 {: #composite_pipeline-tutorial}
 
-Informieren Sie sich in dem Lernprogramm zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method){:new_window}:
-  * [Microservice-Toolchain mit DevOps Insights (v2) erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+Informieren Sie sich in dem Lernprogramm zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage){:new_window}:
+  * [Microservice-Toolchain mit DevOps Insights (v2) erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

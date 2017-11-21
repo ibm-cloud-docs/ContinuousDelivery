@@ -212,7 +212,7 @@ Eclipse Orion {{site.data.keyword.webide}}는 컨텐츠 지원, 도구 팁, 미�
 ## 튜토리얼 보기: Eclipse Orion Web IDE
 {: #toolchain_tutorials}
 
-[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method){:new_window}에 있는 다음 튜토리얼 중 하나를 확인하십시오. 
-  * [Create and use your first toolchain (GitHub)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Create a toolchain that uses Git Repos and Issue Tracking![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [Create and use a microservices toolchain with DevOps Insights (v2)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage){:new_window}에 있는 다음 튜토리얼 중 하나를 확인하십시오. 
+  * [Create and use your first toolchain (GitHub)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Create a toolchain that uses Git Repos and Issue Tracking![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Create and use a microservices toolchain with DevOps Insights (v2)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

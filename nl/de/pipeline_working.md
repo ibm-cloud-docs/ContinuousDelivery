@@ -76,5 +76,5 @@ Von {{site.data.keyword.deliverypipeline}} aus können Sie Ihre Konfiguration ä
 ## Relevantes Lernprogramm: {{site.data.keyword.deliverypipeline}}
 {: #pipeline-tutorial}
 
-Informieren Sie sich in dem Lernprogramm zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method){:new_window}:
-  * [Pipeline erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}
+Informieren Sie sich in dem Lernprogramm zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage){:new_window}:
+  * [Pipeline erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline?task=1){:new_window}

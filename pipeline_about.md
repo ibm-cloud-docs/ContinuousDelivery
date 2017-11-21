@@ -74,7 +74,7 @@ Jobs that take input from build jobs must reference build artifacts in the same 
 
 When you deploy by using Cloud Foundry, Cloud Foundry includes the correct artifacts to allow your app to run. For more information, see  [Deploying applications by using the cf command](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps). The pipeline for a Cloud Foundry app contains a Deploy stage that runs a cf command.
 
-Cloud Foundtry tries to [detect the buildpack to use ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/buildpacks/detection.html). You can specify the [buildpack](/docs/cfapps/byob.html#using-community-buildpacks) to use in the manifest file in the root folder of your app. Buildpacks typically examine user-provided artifacts to determine what dependencies to download and how to configure applications to communicate with bound services. For more information about manifest files, see [Application manifest](/docs/manageapps/depapps.html#appmanifest). 
+Cloud Foundtry tries to [detect the buildpack to use ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/buildpacks/detection.html). You can specify the [buildpack](/docs/cfapps/byob.html#using-community-buildpacks) to use in the manifest file in the root folder of your app. Buildpacks typically examine user-provided artifacts to determine what dependencies to download and how to configure applications to communicate with bound services. For more information about manifest files, see [Application manifest](/docs/manageapps/depapps.html#appmanifest).
 
 
 #### Environment properties for build scripts
@@ -82,7 +82,7 @@ You can include environment properties within a build job's build shell commands
 
 ### Deploy jobs
 
-Deploy jobs upload your project to Bluemix as an app and are accessible from a URL. After a project is deployed, you can find the deployed app on your Bluemix dashboard.
+Deploy jobs upload your project to {{site.data.keyword.Bluemix_notm}} as an app and are accessible from a URL. After a project is deployed, you can find the deployed app on your {{site.data.keyword.Bluemix_notm}} dashboard.
 
 Deploy jobs can deploy new apps or update existing apps. Even if you first deployed an app by using another method, such as the Cloud Foundry command line interface or the run bar in the Web IDE, you can update the app by using a deploy job. To update an app, in the deploy job, use that app's name.
 
@@ -104,7 +104,7 @@ You can include environment properties in the script of a test job. The properti
 ## Manifest files
 {: #deliverypipeline_manifest}
 
-Manifest files, which are named `manifest.yml` and stored in a project's root directory, control how your project is deployed to Bluemix. For information about creating manifest files for a project, see the [Bluemix documentation about application manifests](/docs/manageapps/depapps.html#appmanifest). To integrate with Bluemix, your project must have a manifest file in its root directory. However, you are not required to deploy based on the information in the file.
+Manifest files, which are named `manifest.yml` and stored in a project's root directory, control how your project is deployed to {{site.data.keyword.Bluemix_notm}}. For information about creating manifest files for a project, see the [{{site.data.keyword.Bluemix_notm}} documentation about application manifests](/docs/manageapps/depapps.html#appmanifest). To integrate with Bluemix, your project must have a manifest file in its root directory. However, you are not required to deploy based on the information in the file.
 
 In the pipeline, you can specify everything that a manifest file can by using `cf push` command arguments. The `cf push` command arguments are helpful in projects that have multiple deployment targets. If multiple deploy jobs all try to use the route that is specified in the project manifest file, a conflict occurs.
 

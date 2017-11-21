@@ -25,7 +25,7 @@ lastupdated: "2017-8-18"
 ##テンプレートからのツールチェーンの作成   
 {: #creating_a_toolchain_from_a_template}
 
-特定のツール統合のセットを含む[ツールチェーンを作成する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/create){: new_window} ための開始点としてテンプレートを使用できます。テンプレートの使用方法について詳しくは、[IBM Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/category/tools){:new_window} を参照してください。
+特定のツール統合のセットを含む[ツールチェーンを作成する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/create){: new_window} ための開始点としてテンプレートを使用できます。テンプレートの使用方法について詳しくは、[IBM Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/category/tools){:new_window} を参照してください。
 
 1. {{site.data.keyword.Bluemix_notm}} Public を使用する場合、[{{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://console.bluemix.net){:new_window} にログインします。
 1. {{site.data.keyword.Bluemix_notm}} Dedicated を使用する場合、{{site.data.keyword.Bluemix_notm}} の Dedicated 環境にログインします。
@@ -79,7 +79,7 @@ lastupdated: "2017-8-18"
 ## チュートリアルを始める: ツールチェーンの使用
 {: #toolchain_tutorials}
 
-[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method){:new_window} の以下のチュートリアルのいずれかをチェックアウトします。
-  * [Create and use your first toolchain (GitHub) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Create a toolchain that uses Git Repos and Issue Tracking ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [Add a toolchain to an app ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?task=1){:new_window}
+[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage){:new_window} の以下のチュートリアルのいずれかをチェックアウトします。
+  * [Create and use your first toolchain (GitHub) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Create a toolchain that uses Git Repos and Issue Tracking ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Add a toolchain to an app ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain?task=1){:new_window}

@@ -224,5 +224,5 @@ IBM UrbanCode Deploy에 연결된 조직의 구성원인 경우에는 UrbanCode 
 ##튜토리얼 보기: 컴포지트 파이프라인
 {: #composite_pipeline-tutorial}
 
-[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method){:new_window}에 있는 다음 튜토리얼을 확인하십시오. 
-  * [Create and use a microservices toolchain with DevOps Insights (v2)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage){:new_window}에 있는 다음 튜토리얼을 확인하십시오. 
+  * [Create and use a microservices toolchain with DevOps Insights (v2)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

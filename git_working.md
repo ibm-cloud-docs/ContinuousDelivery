@@ -66,7 +66,7 @@ Files are strictly limited to 100 MB. The suggested repo size limit is 1 GB. If 
 ## Take a tutorial: {{site.data.keyword.gitrepos}}
 {: #git_tutorials}
 
-Check out one of these tutorials on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}:
+Check out one of these tutorials on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage){:new_window}:
 
-  * [Create a toolchain that uses {{site.data.keyword.gitrepos}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
-  * [Create and use a microservices toolchain with DevOps Insights (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Create a toolchain that uses {{site.data.keyword.gitrepos}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
+  * [Create and use a microservices toolchain with DevOps Insights (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}

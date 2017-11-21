@@ -75,5 +75,5 @@ Cloud Foundry 애플리케이션을 배치하도록 구성된 [파이프라인 �
 ## 튜토리얼 보기: {{site.data.keyword.deliverypipeline}}
 {: #pipeline-tutorial}
 
-[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method){:new_window}에 있는 다음 튜토리얼을 확인하십시오. 
-  * [파이프라인 작성![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}
+[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage){:new_window}에 있는 다음 튜토리얼을 확인하십시오. 
+  * [파이프라인 작성![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline?task=1){:new_window}

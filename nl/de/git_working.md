@@ -66,7 +66,7 @@ Dateien sind grundsätzlich auf 100 MB begrenzt. Für Repositorys gilt eine Grö
 ## Relevantes Lernprogramm: {{site.data.keyword.gitrepos}}
 {: #git_tutorials}
 
-Informieren Sie sich in einem der Lernprogramme zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method){:new_window}:
+Informieren Sie sich in einem der Lernprogramme zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage){:new_window}:
 
-  * [Toolchain erstellen, die {{site.data.keyword.gitrepos}} verwendet ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
-  * [Microservice-Toolchain mit DevOps Insights (v2) erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Toolchain erstellen, die {{site.data.keyword.gitrepos}} verwendet ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
+  * [Microservice-Toolchain mit DevOps Insights (v2) erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}

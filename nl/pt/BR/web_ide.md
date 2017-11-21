@@ -212,7 +212,7 @@ O Eclipse Orion {{site.data.keyword.webide}} fornece assistência de conteúdo, 
 ## Fazer um tutorial: Eclipse Orion Web IDE
 {: #toolchain_tutorials}
 
-Consulte um desses tutoriais no [IBM&reg; Cloud Garage Method ![Ícon de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method){:new_window}:
-  * [Crie e use sua primeira cadeia de ferramentas (GitHub) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Crie uma cadeia de ferramentas que usa Git Repos e Issue Tracking ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [Crie e use uma cadeia de ferramentas de microsserviços com o DevOps Insights (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+Consulte um desses tutoriais no [IBM&reg; Cloud Garage Method ![Ícon de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage){:new_window}:
+  * [Crie e use sua primeira cadeia de ferramentas (GitHub) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Crie uma cadeia de ferramentas que usa Git Repos e Issue Tracking ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Crie e use uma cadeia de ferramentas de microsserviços com o DevOps Insights (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

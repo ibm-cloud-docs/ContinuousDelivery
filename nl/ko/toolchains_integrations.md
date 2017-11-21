@@ -85,10 +85,10 @@ DevOps 프로세스 중에 문제에 대한 알림을 수신하도록 {{site.dat
 
 ### Alert Notification에 대해 자세히 알아보기
 
-{{site.data.keyword.alertnotificationshort}}에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [IBM {{site.data.keyword.alertnotificationshort}} 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
+{{site.data.keyword.alertnotificationshort}}에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [IBM {{site.data.keyword.alertnotificationshort}} 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/manage/tool_alert_notification/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
 
-  * [Add a tool integration to a toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
-  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using Bluemix Availability Monitoring and Alert Notification ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [Add a tool integration to a toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
+  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using Bluemix Availability Monitoring and Alert Notification ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## Application Security on Cloud 구성
@@ -113,7 +113,7 @@ IBM&reg; Application Security on Cloud는 가장 흔한 여러 보안 취약성�
 
 ### Application Security on Cloud에 대해 자세히 알아보기
 
-Application Security on Cloud에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Application Security on Cloud 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/manage/tool_ibm_security_appscan/){: new_window}를 참조하십시오. 
+Application Security on Cloud에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Application Security on Cloud 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/manage/tool_ibm_security_appscan/){: new_window}를 참조하십시오. 
 
 
 ## Artifactory 구성
@@ -217,7 +217,7 @@ Maven 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을
 
 ### Artifactory에 대해 자세히 알아보기
 
-Artifactory에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Artifactory 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window}를 참조하십시오. 
+Artifactory에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Artifactory 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/deliver/tool_artifactory/){: new_window}를 참조하십시오. 
 
 
 ## Availability Monitoring 추가
@@ -240,9 +240,9 @@ Artifactory에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [A
 
 ### Availability Monitoring에 대해 자세히 알아보기
 
-{{site.data.keyword.prf_hubshort}}에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [{{site.data.keyword.prf_hublong}} 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
+{{site.data.keyword.prf_hubshort}}에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [{{site.data.keyword.prf_hublong}} 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
 
-  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using Bluemix Availability Monitoring and Alert Notification ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using Bluemix Availability Monitoring and Alert Notification ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## Cloud Event Management 추가(시범)
@@ -271,7 +271,7 @@ DevOps 팀이 안정적 운영 상태, 서비스 품질 및 지속적 개선 목
 
 ### Cloud Event Management에 대해 자세히 알아보기
 
-Cloud Event Management에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Cloud Event Management 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window}를 참조하십시오. 
+Cloud Event Management에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Cloud Event Management 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/manage/tool_cloud_event_mgt/){: new_window}를 참조하십시오. 
 
 
 ## Delivery Pipeline 구성
@@ -338,10 +338,10 @@ Sauce Labs 테스트 작업을 추가하도록 {{site.data.keyword.deliverypipel
 
 ### Delivery Pipeline에 대해 자세히 알아보기
 
-{{site.data.keyword.deliverypipeline}}에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [ Delivery Pipeline 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
+{{site.data.keyword.deliverypipeline}}에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [ Delivery Pipeline 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
 
-  * [파이프라인 작성![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}
-  * [Create and use your first toolchain![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
+  * [파이프라인 작성![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline){:new_window}
+  * [Create and use your first toolchain![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}
 
 
 ## DevOps Insights 추가(베타)
@@ -365,11 +365,11 @@ Sauce Labs 테스트 작업을 추가하도록 {{site.data.keyword.deliverypipel
 
 ### Devops Insights에 대해 자세히 알아보기
 
-{{site.data.keyword.DRA_short}}에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [{{site.data.keyword.DRA_short}} 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
+{{site.data.keyword.DRA_short}}에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [{{site.data.keyword.DRA_short}} 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
 
-  * [Create a toolchain that uses {{site.data.keyword.DRA_short}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_devops_insights){:new_window}
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
-  * [GitHub 및 Jenkins를 사용하는 Deployment Risk Analytics ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
+  * [Create a toolchain that uses {{site.data.keyword.DRA_short}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_devops_insights){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [GitHub 및 Jenkins를 사용하는 Deployment Risk Analytics ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
 
 
 ## Eclipse Orion Web IDE 추가
@@ -393,10 +393,10 @@ Eclipse Orion {{site.data.keyword.webide}}는 소스 제어 태스크를 작성,
 
 ### Eclipse Orion Web IDE에 대해 자세히 알아보기
 
-Eclipse Orion {{site.data.keyword.webide}}에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [{{site.data.keyword.webide}} Eclipse Orion으로 코드 편집 ](/docs/services/ContinuousDelivery/web_ide.html){: new_window} 및 [Eclipse Orion {{site.data.keyword.webide}} 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window}를 참조하십시오.
+Eclipse Orion {{site.data.keyword.webide}}에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [{{site.data.keyword.webide}} Eclipse Orion으로 코드 편집 ](/docs/services/ContinuousDelivery/web_ide.html){: new_window} 및 [Eclipse Orion {{site.data.keyword.webide}} 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window}를 참조하십시오.
 
-  * [Create and use your first toolchain![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
-  * [Use {{site.data.keyword.Bluemix_notm}} Live Sync to develop, debug, and deploy your app![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_livesync){:new_window}
+  * [Create and use your first toolchain![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}
+  * [Use {{site.data.keyword.Bluemix_notm}} Live Sync to develop, debug, and deploy your app![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_livesync){:new_window}
 
 
 ## Git Repos and Issue Tracking 구성
@@ -444,9 +444,9 @@ Eclipse Orion {{site.data.keyword.webide}}에 대해 자세히 알아보려면 I
 
 ### Git Repos and Issue Tracking에 대해 자세히 알아보기
 
-{{site.data.keyword.gitrepos}}에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [{{site.data.keyword.gitrepos}}: Social coding hosted by IBM 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/code/tool_git_repos_and_issue_tracking/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
+{{site.data.keyword.gitrepos}}에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [{{site.data.keyword.gitrepos}}: Social coding hosted by IBM 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/code/tool_git_repos_and_issue_tracking/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
 
-  * [Create a toolchain that uses {{site.data.keyword.gitrepos}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
+  * [Create a toolchain that uses {{site.data.keyword.gitrepos}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
 
 
 ## GitHub 및 Issues 구성
@@ -514,16 +514,16 @@ GitHub.com의 새 저장소 또는 기존 저장소에서 소스 코드를 관�
 
 ### GitHub 및 Issues에 대해 자세히 알아보기
 
-GitHub 및 Issues에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [GitHub 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} 및 [GitHub Issues 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
+GitHub 및 Issues에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [GitHub 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/code/tool_github/){: new_window} 및 [GitHub Issues 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
 
-  * [GitHub 및 Jenkins를 사용하는 Deployment Risk Analytics ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
-  * [Create a custom toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom){:new_window}
+  * [GitHub 및 Jenkins를 사용하는 Deployment Risk Analytics ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
+  * [Create a custom toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_custom){:new_window}
 ## Bluemix 데디케이티드에서 GitHub Enterprise 및 Issues 구성
 {: #configghe}
 
  **참고:** 다음 지시사항은 {{site.data.keyword.ghe_short}}용 {{site.data.keyword.Bluemix_notm}} 데디케이티드에 적용됩니다. {{site.data.keyword.ghe_short}}의 자체 관리 버전을 사용 중이면 일부 단계가 내부 프로시저에 따라 다를 수 있습니다. 
 
-{{site.data.keyword.ghe_long}}는 Git 저장소를 위한 온프레미스 웹 기반 호스팅 서비스입니다. 데디케이티드 {{site.data.keyword.ghe_short}}는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 고객 전용입니다. GitHub Issues는 작업과 플랜을 한 위치에 보관하는 추적 도구입니다. 개발 저장소에 통합되므로 중요한 태스크에 집중할 수 있습니다. 데디케이티드 {{site.data.keyword.ghe_short}} 및 문제에 대한 자세한 정보는 IBM Cloud Garage Method에서 [{{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} 시작하기 및 [GitHub Issues 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}를 참조하십시오. 
+{{site.data.keyword.ghe_long}}는 Git 저장소를 위한 온프레미스 웹 기반 호스팅 서비스입니다. 데디케이티드 {{site.data.keyword.ghe_short}}는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 고객 전용입니다. GitHub Issues는 작업과 플랜을 한 위치에 보관하는 추적 도구입니다. 개발 저장소에 통합되므로 중요한 태스크에 집중할 수 있습니다. 데디케이티드 {{site.data.keyword.ghe_short}} 및 문제에 대한 자세한 정보는 IBM Cloud Garage Method에서 [{{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} 시작하기 및 [GitHub Issues 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}를 참조하십시오. 
 
 회사의 [{{site.data.keyword.Bluemix_notm}} 데디케이티드](/docs/dedicated/index.html#dedicated){: new_window} 인스턴스에서 소스 코드를 관리할 수 있도록 {{site.data.keyword.ghe_short}}를 도구 체인의 도구 통합으로 구성할 수 있습니다. 
 
@@ -620,7 +620,7 @@ GitLab.com의 새 저장소 또는 기존 저장소에서 소스 코드를 관�
 
 ### GitLab에 대해 자세히 알아보기
 
-GitLab에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [GitLab 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/code/tool_gitlab/){: new_window}를 참조하십시오. 
+GitLab에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [GitLab 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/code/tool_gitlab/){: new_window}를 참조하십시오. 
 
 
 ## Jenkins 구성
@@ -657,9 +657,9 @@ Jenkins 도구 통합을 사용하면 Slack 및 PagerDuty와 같은 도구 체�
 
 ### Jenkins에 대해 자세히 알아보기
 
-Jenkins에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Jenkins 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
+Jenkins에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Jenkins 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
 
-  * [GitHub 및 Jenkins를 사용하는 Deployment Risk Analytics ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
+  * [GitHub 및 Jenkins를 사용하는 Deployment Risk Analytics ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
   
   
 ## JIRA 구성
@@ -707,9 +707,9 @@ JIRA는 소프트웨어와 관련된 문제와 버그를 추적하는 도구입�
 
 ### JIRA에 대해 자세히 알아보기
 
-JIRA에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [JIRA 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
+JIRA에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [JIRA 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/code/tool_jira/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
 
-  * [Gain developer and team insights on a JIRA and GitHub project ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_dev_insights_team_dynamics){:new_window}
+  * [Gain developer and team insights on a JIRA and GitHub project ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_dev_insights_team_dynamics){:new_window}
 
 
 ## Nexus 구성
@@ -814,7 +814,7 @@ Maven 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을
 
 ### Nexus에 대해 자세히 알아보기
 
-Nexus에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Nexus 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window}를 참조하십시오. 
+Nexus에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Nexus 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/deliver/tool_nexus/){: new_window}를 참조하십시오. 
 
 
 ## 사용자 정의 도구(기타 도구) 구성
@@ -844,7 +844,7 @@ Nexus에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Nexus �
 
 사용자 정의 도구에 대해 자세히 알아보려면 [Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window}를 참조하십시오. 
 
-  * [Add a custom tool integration to a toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_add_custom_tool){:new_window}
+  * [Add a custom tool integration to a toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_add_custom_tool){:new_window}
 
 
 ## PagerDuty 구성
@@ -882,10 +882,10 @@ PagerDuty는 여러 모니터링 시스템의 데이터를 단일 보기로 통�
 
 ### PagerDuty에 대해 자세히 알아보기
 
-PagerDuty에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [PagerDuty 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}를 참조하거나 이 튜토리얼 및 Garage Method advocate 코스를 수행하십시오. 
+PagerDuty에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [PagerDuty 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){: new_window}를 참조하거나 이 튜토리얼 및 Garage Method advocate 코스를 수행하십시오. 
 
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices?task=5){:new_window}
-  * [Become a Garage Method advocate ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/course/gm_advocate/){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices?task=5){:new_window}
+  * [Become a Garage Method advocate ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
 
 
 ## Rational Team Concert 구성
@@ -925,7 +925,7 @@ IBM Rational Team Concert&trade;는 반복 계획, 변경 관리, 결함 추적,
 
 ### Rational Team Concert에 대해 자세히 알아보기
 
-Rational Team Concert에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [IBM Rational Team Concert 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/think/tool_rtc/){: new_window}를 참조하십시오. 
+Rational Team Concert에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [IBM Rational Team Concert 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/think/tool_rtc/){: new_window}를 참조하십시오. 
 
 
 ## Sauce Labs 구성
@@ -953,10 +953,10 @@ Sauce Labs는 기능 단위 테스트를 실행합니다. {{site.data.keyword.de
 
 ### Sauce Labs에 대해 자세히 알아보기
 
-Sauce Labs에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Sauce Labs 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
+Sauce Labs에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Sauce Labs 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오. 
 
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
 
 
 ## Slack 구성
@@ -989,11 +989,11 @@ Slack은 클라우드 기반의 실시간 메시징 및 알림 시스템입니�
 
 ### Slack에 대해 자세히 알아보기
 
-Slack에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Slack 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}를 참조하거나 이 튜토리얼 및 Garage Method advocate 코스를 수행하십시오. 
+Slack에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Slack 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: new_window}를 참조하거나 이 튜토리얼 및 Garage Method advocate 코스를 수행하십시오. 
 
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
-  * [Become a Garage Method advocate ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/course/gm_advocate/){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Become a Garage Method advocate ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
 
 
 ## SonarQube 구성
@@ -1021,4 +1021,4 @@ SonarQube에서는 소스 코드의 전체 상태와 품질의 개요을 제공�
 
 ### SonarQube에 대해 자세히 알아보기
 
-SonarQube에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [SonarQube 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window}를 참조하십시오. 
+SonarQube에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [SonarQube 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window}를 참조하십시오. 

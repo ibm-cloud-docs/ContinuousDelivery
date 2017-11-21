@@ -152,13 +152,15 @@ To create the globalization stage and job:
 
   f. Determine whether to select the **Set up service and space for me** check box.
 
-    * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
+    * If you want the pipeline to check your {{site.data.keyword.Bluemix_notm}} space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
+    * If you configured the service and bound app in your {{site.data.keyword.Bluemix_notm}} space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
+   <!--
     **Tip:** Use the DevOps Services project name in the prefix so that the project can be identified easily in the Globalization Pipeline service.
+   -->
 
   h. Click **SAVE**.
 
@@ -170,7 +172,7 @@ The machine translated files are placed in the same directory as the source `.pr
 
 After the stage is completed, you can review the translated files from the console output. You can also direct translators to the files so that they can review the machine-translation output and provide revisions to improve quality. The revisions are stored in a Cloudant™ database and take precedence over any future machine translations of the same strings.
 
-For more information about using the Globalization Pipeline service from the Bluemix Dashboard, [see the Globalization Pipeline service documentation](https://www.ng.bluemix.net/docs/services/GlobalizationPipeline/index.html).
+For more information about using the Globalization Pipeline service from the {{site.data.keyword.Bluemix_notm}} Dashboard, [see the Globalization Pipeline service documentation](https://www.ng.bluemix.net/docs/services/GlobalizationPipeline/index.html).
 
 -->
 
@@ -237,7 +239,7 @@ To create Slack notifications:
 
 6. Repeat these steps to send Slack notifications for other stages that include IBM Container Service, IBM Security Analyzer, and IBM Globalization jobs.
 
-The build notification that is displayed in Slack includes a link to the project and sometimes to the project's dashboard. For a Slack user to open these links, the user must be registered with Bluemix and be a member of the project that the pipeline is configured in.
+The build notification that is displayed in Slack includes a link to the project and sometimes to the project's dashboard. For a Slack user to open these links, the user must be registered with {{site.data.keyword.Bluemix_notm}} and be a member of the organization that the pipeline is configured in.
 
 ## Creating HipChat notifications for builds in the pipeline
 {: #deliverypipeline_hipchat}
@@ -326,8 +328,8 @@ To create HipChat notifications:
 ## Building and deploying container images with the pipeline
 {: #deliverypipeline_containers}
 
-You can automate your app builds and container deployments to Bluemix by using the IBM Continuous Delivery Pipeline for Bluemix. The Delivery Pipeline service supports:
+You can automate your app builds and container deployments to {{site.data.keyword.Bluemix_notm}} by using the Delivery Pipeline in {{site.data.keyword.contdelivery_full}}. The Delivery Pipeline supports:
   - Building Docker images
-  - Deploying images in containers to Bluemix
+  - Deploying images in containers to {{site.data.keyword.Bluemix_notm}}
 
 For more information about getting started, see the [Delivery Pipeline and containers overview](/docs/containers/container_integrations.html#container_pipeline_ov){: new_window}.

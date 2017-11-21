@@ -66,7 +66,7 @@ SSH 鍵を作成するには、[How to create your SSH Keys ![外部リンク・
 ## チュートリアルを始める: {{site.data.keyword.gitrepos}}
 {: #git_tutorials}
 
-[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method){:new_window} の以下のチュートリアルのいずれかをチェックアウトします。
+[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage){:new_window} の以下のチュートリアルのいずれかをチェックアウトします。
 
-  * [Create a toolchain that uses {{site.data.keyword.gitrepos}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
-  * [Create and use a microservices toolchain with DevOps Insights (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Create a toolchain that uses {{site.data.keyword.gitrepos}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
+  * [Create and use a microservices toolchain with DevOps Insights (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}

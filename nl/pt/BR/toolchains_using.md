@@ -114,6 +114,6 @@ Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{sit
 ##Consulte o tutorial: Usando cadeias de ferramentas
 {: #toolchain-tutorial}
 
-Consulte este tutorial no [IBM&reg; Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method){:new_window}:
-  * [Crie e use sua primeira cadeia de ferramentas (GitHub) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+Consulte este tutorial no [IBM&reg; Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage){:new_window}:
+  * [Crie e use sua primeira cadeia de ferramentas (GitHub) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

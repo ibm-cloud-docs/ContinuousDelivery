@@ -223,5 +223,5 @@ IBM UrbanCode Deploy に接続している組織のメンバーの場合、Urban
 ##チュートリアルを始める: 複合パイプライン
 {: #composite_pipeline-tutorial}
 
-[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method){:new_window} の次のチュートリアルを確認してください。
-  * [Create and use a microservices toolchain with DevOps Insights (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage){:new_window} の次のチュートリアルを確認してください。
+  * [Create and use a microservices toolchain with DevOps Insights (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

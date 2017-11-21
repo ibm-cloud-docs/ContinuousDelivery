@@ -224,5 +224,5 @@ Si vous êtes membre d'une organisation qui est connectée à IBM UrbanCode Depl
 ##Suivre un tutoriel : Pipelines composites
 {: #composite_pipeline-tutorial}
 
-Consultez le tutoriel suivant sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method){:new_window} :
-  * [Create and use a microservices toolchain with DevOps Insights (v2) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+Consultez le tutoriel suivant sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage){:new_window} :
+  * [Create and use a microservices toolchain with DevOps Insights (v2) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

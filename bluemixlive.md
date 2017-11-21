@@ -13,7 +13,7 @@ lastupdated: "2017-09-20"
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#Bluemix Live Sync
+#{{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
 
 
@@ -56,17 +56,17 @@ In the Eclipse Orion Web IDE (Web IDE), in the run bar, click **Live Edit**.
 Live Edit allows you to quickly preview changes to Node.js applications that run on {{site.data.keyword.Bluemix_notm}}. When you update your code with Live Edit turned on, you can refresh your web application's browser window to see those changes reflected seconds after you make them.
 
 <!--
-For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see the tutorial [Test and debug a Node.js app with Bluemix Live Sync![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/livesync){:new_window}.
+For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see the tutorial [Use {{site.data.keyword.Bluemix_notm}} to develop, debug, and deploy your Node.js app![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_livesync){:new_window}.
 -->
 
 When you change the files in your Web IDE, they are automatically redeployed to your application instance on {{site.data.keyword.Bluemix_notm}}. If you need to restart the Node application, then you can use the **Restart** button in the run bar.
 
 **NOTE:** For a more consistent experience when you use the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, 256MB of additional memory is required and is added.
 
-## Bluemix Live Debug
+## {{site.data.keyword.Bluemix_notm}} Live Debug
 {: #live-debug}
 
-{{site.data.keyword.Bluemix_notm}} Live Sync Debug uses 
+{{site.data.keyword.Bluemix_notm}} Live Sync Debug uses
 [Node Inspector ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/node-inspector/node-inspector){:new_window}
 to provide debug features.  You need to use version 4 of Node for the debugger to be available since later versions of Node.js do not include Node Inspector.
 
@@ -114,10 +114,10 @@ Monitor memory and CPU usage within the instance that uses standard Linux comman
 
 ### Configuring an app to enable {{site.data.keyword.Bluemix_notm}} Live Debug {: #configure_app_debug}
 
-1. The Bluemix Live Debugger uses Node Inspector. You need to use Node version 4. You also need to allow the buildpack to detect the app start command. The start command must be auto-detected by the buildpack, not set in the manifest.yml file. 
-  
+1. The {{site.data.keyword.Bluemix_notm}} Live Debugger uses Node Inspector. You need to use Node version 4. You also need to allow the buildpack to detect the app start command. The start command must be auto-detected by the buildpack, not set in the manifest.yml file.
+
    A `package.json` file that supports {{site.data.keyword.Bluemix_notm}} Live Debug is:
-   
+
   ```
   {
       "scripts": {
@@ -139,10 +139,6 @@ Push the app and then browse to `https://_app-host.mybluemix.net_/bluemix-debug/
 
 **Note:** The Debugger may take a minute or so to initialize.
 
-<!--
-   **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
-   -->
-
 ### Restoring app configurations and disabling {{site.data.keyword.Bluemix_notm}} Live Debug {: #restore_live_debug}
 
 1. Restore the app's original Node.js version, start command, and memory value.
@@ -151,4 +147,4 @@ Push the app and then browse to `https://_app-host.mybluemix.net_/bluemix-debug/
 
 ### For more information
 
-* See [Eclipse tools for Bluemix ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
+* See [Eclipse tools for {{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

@@ -75,5 +75,5 @@ From your {{site.data.keyword.deliverypipeline}}, change your configuration; che
 ## Take a tutorial: {{site.data.keyword.deliverypipeline}}
 {: #pipeline-tutorial}
 
-Check out this tutorial on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}:
-  * [Create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}
+Check out this tutorial on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage){:new_window}:
+  * [Create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline?task=1){:new_window}

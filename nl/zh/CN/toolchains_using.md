@@ -113,6 +113,6 @@ lastupdated: "2017-7-17"
 ##学习教程：使用工具链
 {: #toolchain-tutorial}
 
-查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method){:new_window} 上的本教程：
-  * [创建并使用第一个工具链 (GitHub) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [创建并使用具有 {{site.data.keyword.DRA_short}} 的微服务工具链 (V2) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage){:new_window} 上的本教程：
+  * [创建并使用第一个工具链 (GitHub) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [创建并使用具有 {{site.data.keyword.DRA_short}} 的微服务工具链 (V2) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

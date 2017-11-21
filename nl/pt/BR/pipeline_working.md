@@ -89,5 +89,5 @@ No {{site.data.keyword.deliverypipeline}}, mude a configuração, verifique o st
 ## Fazer um tutorial: {{site.data.keyword.deliverypipeline}}
 {: #pipeline-tutorial}
 
-Consulte este tutorial no [IBM&reg; Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method){:new_window}:
-  * [Criar um pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}
+Consulte este tutorial no [IBM&reg; Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage){:new_window}:
+  * [Criar um pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline?task=1){:new_window}

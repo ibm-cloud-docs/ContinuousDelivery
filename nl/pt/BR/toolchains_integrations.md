@@ -87,10 +87,10 @@ Configure o {{site.data.keyword.alertnotificationshort}} para receber notificaç
 
 ### Saiba mais sobre Notificação de alerta
 
-Para saber mais sobre o {{site.data.keyword.alertnotificationshort}}, veja o artigo [IBM {{site.data.keyword.alertnotificationshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
+Para saber mais sobre o {{site.data.keyword.alertnotificationshort}}, veja o artigo [IBM {{site.data.keyword.alertnotificationshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/manage/tool_alert_notification/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
 
-  * [Incluir uma integração de ferramenta em uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
-  * [Gerencie seu aplicativo do {{site.data.keyword.Bluemix_notm}} usando o Bluemix Availability Monitoring e o Alert Notification ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [Incluir uma integração de ferramenta em uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
+  * [Gerencie seu aplicativo do {{site.data.keyword.Bluemix_notm}} usando o Bluemix Availability Monitoring e o Alert Notification ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## Configurando o Application Security on Cloud
@@ -116,7 +116,7 @@ Configure o Application Security on Cloud para analisar continuamente seu códig
 
 ### Saiba mais sobre o Application Security on Cloud
 
-Para saber mais sobre o Application Security on Cloud, veja o artigo [Application Security on Cloud ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/manage/tool_ibm_security_appscan/){: new_window} no IBM Cloud Garage Method.
+Para saber mais sobre o Application Security on Cloud, veja o artigo [Application Security on Cloud ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/manage/tool_ibm_security_appscan/){: new_window} no IBM Cloud Garage Method.
 
 
 ## Configurando o Artifactory
@@ -221,7 +221,7 @@ Configure o {{site.data.keyword.deliverypipeline}} para incluir uma tarefa de co
 
 ### Saiba mais sobre o Artifactory
 
-Para saber mais sobre o Artifactory, veja o [artigo Artifactory ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window} no IBM Cloud Garage Method.
+Para saber mais sobre o Artifactory, veja o [artigo Artifactory ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_artifactory/){: new_window} no IBM Cloud Garage Method.
 
 
 ## Incluindo o Availability Monitoring
@@ -245,9 +245,9 @@ Para testar, monitorar e melhorar o funcionamento do app ao construí-lo, inclua
 
 ### Saiba mais sobre o Availability Monitoring
 
-Para saber mais sobre {{site.data.keyword.prf_hubshort}}, veja o artigo [{{site.data.keyword.prf_hublong}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window} no IBM Cloud Garage Method ou faça este tutorial:
+Para saber mais sobre {{site.data.keyword.prf_hubshort}}, veja o artigo [{{site.data.keyword.prf_hublong}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window} no IBM Cloud Garage Method ou faça este tutorial:
 
-  * [Gerencie seu aplicativo do {{site.data.keyword.Bluemix_notm}} usando o Bluemix Availability Monitoring e o Alert Notification ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [Gerencie seu aplicativo do {{site.data.keyword.Bluemix_notm}} usando o Bluemix Availability Monitoring e o Alert Notification ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## Incluindo o Cloud Event Management (Experimental)
@@ -277,7 +277,7 @@ Para ajudar sua equipe do DevOps a alcançar saúde operacional confiável, qual
 
 ### Saiba mais sobre o Cloud Event Management
 
-Para saber mais sobre o Cloud Event Management, veja o [artigo Cloud Event Management ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window} no IBM Cloud Garage Method.
+Para saber mais sobre o Cloud Event Management, veja o [artigo Cloud Event Management ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/manage/tool_cloud_event_mgt/){: new_window} no IBM Cloud Garage Method.
 
 
 ## Configurando o Delivery Pipeline
@@ -344,10 +344,10 @@ Configure o {{site.data.keyword.deliverypipeline}} para incluir uma tarefa de te
 
 ### Saiba mais sobre o Delivery Pipeline
 
-Para saber mais sobre o {{site.data.keyword.deliverypipeline}}, veja o [artigo Delivery Pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
+Para saber mais sobre o {{site.data.keyword.deliverypipeline}}, veja o [artigo Delivery Pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
 
-  * [Criar um pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}
-  * [Crie e use sua primeira cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
+  * [Criar um pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline){:new_window}
+  * [Crie e use sua primeira cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}
 
 
 ## Incluindo o DevOps Insights (Beta)
@@ -372,11 +372,11 @@ Inclua o {{site.data.keyword.DRA_short}} para manter e melhorar a qualidade de s
 
 ### Saiba mais sobre o Devops Insights
 
-Para saber mais sobre o {{site.data.keyword.DRA_short}}, veja o artigo [{{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
+Para saber mais sobre o {{site.data.keyword.DRA_short}}, veja o artigo [{{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
 
-  * [Criar uma cadeia de ferramentas que usa o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_devops_insights){:new_window}
-  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
-  * [Deployment Risk Analytics com GitHub e Jenkins ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
+  * [Criar uma cadeia de ferramentas que usa o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_devops_insights){:new_window}
+  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Deployment Risk Analytics com GitHub e Jenkins ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
 
 
 ## Incluindo o Eclipse Orion Web IDE
@@ -401,10 +401,10 @@ Para concluir tarefas de controle de fonte, inclua a integração de ferramenta 
 
 ### Saiba mais sobre o Eclipse Orion Web IDE
 
-Para saber mais sobre o Eclipse Orion {{site.data.keyword.webide}}, veja [Editando código com o Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} e o artigo [Eclipse Orion {{site.data.keyword.webide}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window} no IBM Cloud Garage Method ou use estes tutoriais:
+Para saber mais sobre o Eclipse Orion {{site.data.keyword.webide}}, veja [Editando código com o Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} e o artigo [Eclipse Orion {{site.data.keyword.webide}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} no IBM Cloud Garage Method ou use estes tutoriais:
 
-  * [Crie e use sua primeira cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
-  * [Use o {{site.data.keyword.Bluemix_notm}} Live Sync para desenvolver, depurar e implementar seu app ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_livesync){:new_window}
+  * [Crie e use sua primeira cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}
+  * [Use o {{site.data.keyword.Bluemix_notm}} Live Sync para desenvolver, depurar e implementar seu app ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_livesync){:new_window}
 
 
 ## Configurando o Git Repos and Issue Tracking
@@ -454,9 +454,9 @@ Se você tiver uma cadeia de ferramentas e estiver incluindo o {{site.data.keywo
 
 ### Saiba mais sobre o Git Repos and Issue Tracking
 
-Para saber mais sobre o {{site.data.keyword.gitrepos}}, veja o [artigo {{site.data.keyword.gitrepos}}: codificação social hospedada pela IBM ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/code/tool_git_repos_and_issue_tracking/){: new_window} no IBM Cloud Garage Method ou faça este tutorial:
+Para saber mais sobre o {{site.data.keyword.gitrepos}}, veja o [artigo {{site.data.keyword.gitrepos}}: codificação social hospedada pela IBM ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/code/tool_git_repos_and_issue_tracking/){: new_window} no IBM Cloud Garage Method ou faça este tutorial:
 
-  * [Criar uma cadeia de ferramentas que usa o {{site.data.keyword.gitrepos}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
+  * [Criar uma cadeia de ferramentas que usa o {{site.data.keyword.gitrepos}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
 
 
 ## Configurando o GitHub e Issues
@@ -524,10 +524,10 @@ Se você tiver uma cadeia de ferramentas e estiver incluindo esta integração d
 
 ### Saiba mais sobre o GitHub and Issues
 
-Para saber mais sobre o GitHub and Issues, veja o [artigo do GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} e o [artigo do GitHub Issues ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
+Para saber mais sobre o GitHub and Issues, veja o [artigo do GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/code/tool_github/){: new_window} e o [artigo do GitHub Issues ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
 
-  * [Deployment Risk Analytics com GitHub e Jenkins ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
-  * [Criar uma cadeia de ferramentas customizada ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom){:new_window}
+  * [Deployment Risk Analytics com GitHub e Jenkins ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
+  * [Criar uma cadeia de ferramentas customizada ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_custom){:new_window}
 
 
 ## Configurando o GitHub Enterprise and Issues no Bluemix Dedicated
@@ -535,7 +535,7 @@ Para saber mais sobre o GitHub and Issues, veja o [artigo do GitHub ![Ícone de 
 
  **Nota:** estas instruções se aplicam ao {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. Se você estiver usando sua própria versão gerenciada do {{site.data.keyword.ghe_short}}, algumas etapas poderão ser diferentes, dependendo de seus procedimentos internos.
 
-O {{site.data.keyword.ghe_long}} é um serviço de hospedagem no local, baseado na web para repositórios Git. O Dedicated {{site.data.keyword.ghe_short}} é para clientes {{site.data.keyword.Bluemix_notm}} Dedicated somente. O GitHub Issues é uma ferramenta de rastreamento que mantém o seu trabalho e os seus planos em um local. Ele é integrado a seu repo de desenvolvimento para que possa focar em tarefas importantes. Para obter mais informações sobre o Dedicated {{site.data.keyword.ghe_short}} e o GitHub Issues, veja [Introdução ao {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} e o [artigo Problemas do GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} no IBM Cloud Garage Method.
+O {{site.data.keyword.ghe_long}} é um serviço de hospedagem no local, baseado na web para repositórios Git. O Dedicated {{site.data.keyword.ghe_short}} é para clientes {{site.data.keyword.Bluemix_notm}} Dedicated somente. O GitHub Issues é uma ferramenta de rastreamento que mantém o seu trabalho e os seus planos em um local. Ele é integrado a seu repo de desenvolvimento para que possa focar em tarefas importantes. Para obter mais informações sobre o Dedicated {{site.data.keyword.ghe_short}} e o GitHub Issues, veja [Introdução ao {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} e o [artigo Problemas do GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} no IBM Cloud Garage Method.
 
 É possível configurar o {{site.data.keyword.ghe_short}} como uma integração de ferramenta em sua cadeia de ferramentas para que você possa gerenciar o código-fonte na instância do [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} de sua empresa.
 
@@ -635,7 +635,7 @@ Se você tiver uma cadeia de ferramentas e estiver incluindo esta integração d
 
 ### Saiba mais sobre o GitLab
 
-Para saber mais sobre o GitLab, veja o [artigo do GitLab ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/code/tool_gitlab/){: new_window} no IBM Cloud Garage Method.
+Para saber mais sobre o GitLab, veja o [artigo do GitLab ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/code/tool_gitlab/){: new_window} no IBM Cloud Garage Method.
 
 
 ## Configurando o Jenkins
@@ -673,9 +673,9 @@ Configure o Jenkins para automatizar a construção, o teste e a implementação
 
 ### Saiba mais sobre o Jenkins
 
-Para saber mais sobre o Jenkins, veja o [artigo Jenkins ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window} no IBM Cloud Garage Method ou faça este tutorial:
+Para saber mais sobre o Jenkins, veja o [artigo Jenkins ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){: new_window} no IBM Cloud Garage Method ou faça este tutorial:
 
-  * [Deployment Risk Analytics com GitHub e Jenkins ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
+  * [Deployment Risk Analytics com GitHub e Jenkins ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
   
   
 ## Configurando o JIRA
@@ -724,9 +724,9 @@ Configure o JIRA para planejar, rastrear e entregar código de qualidade:
 
 ### Saiba mais sobre o JIRA
 
-Para saber mais sobre o JIRA, veja o [artigo JIRA ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window} no IBM Cloud Garage Method ou faça este tutorial:
+Para saber mais sobre o JIRA, veja o [artigo JIRA ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/code/tool_jira/){: new_window} no IBM Cloud Garage Method ou faça este tutorial:
 
-  * [Obter insights de desenvolvedor e equipe em um projeto JIRA e GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_dev_insights_team_dynamics){:new_window}
+  * [Obter insights de desenvolvedor e equipe em um projeto JIRA e GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_dev_insights_team_dynamics){:new_window}
 
 
 ## Configurando o Nexus
@@ -832,7 +832,7 @@ Configure o {{site.data.keyword.deliverypipeline}} para incluir uma tarefa de co
 
 ### Saiba mais sobre o Nexus
 
-Para saber mais sobre o Nexus, veja o [artigo do Nexus ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window} no IBM Cloud Garage Method.
+Para saber mais sobre o Nexus, veja o [artigo do Nexus ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_nexus/){: new_window} no IBM Cloud Garage Method.
 
 
 ## Configurando uma ferramenta customizada (Outra Ferramenta)
@@ -863,7 +863,7 @@ Configure uma ferramenta customizada para que ela trabalhe com outras ferramenta
 
 Para saber mais sobre a ferramenta customizada, veja [Introduzindo a integração de ferramenta customizada para cadeias de ferramentas do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window} ou faça este tutorial:
 
-  * [Incluir uma integração de ferramenta customizada em uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_add_custom_tool){:new_window}
+  * [Incluir uma integração de ferramenta customizada em uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_add_custom_tool){:new_window}
 
 
 ## Configurando o PagerDuty
@@ -904,10 +904,10 @@ que você especificou quando configurou esta integração de ferramenta para sua
 
 ### Saiba mais sobre o PagerDuty
 
-Para saber mais sobre o PagerDuty, veja o [artigo do PagerDuty ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window} no IBM Cloud Garage Method ou faça este tutorial e o curso de advogado do Garage Method:
+Para saber mais sobre o PagerDuty, veja o [artigo do PagerDuty ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){: new_window} no IBM Cloud Garage Method ou faça este tutorial e o curso de advogado do Garage Method:
 
-  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices?task=5){:new_window}
-  * [Torne-se um advogado do Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/course/gm_advocate/){:new_window}
+  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices?task=5){:new_window}
+  * [Torne-se um advogado do Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
 
 
 ## Configurando o Rational Team Concert
@@ -948,7 +948,7 @@ Configure o Rational Team Concert para praticar uma abordagem DevOps e entrega c
 
 ### Saiba mais sobre o Rational Team Concert
 
-Para saber mais sobre o Rational Team Concert, veja o [artigo IBM Rational Team Concert ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/think/tool_rtc/){: new_window} no IBM Cloud Garage Method.
+Para saber mais sobre o Rational Team Concert, veja o [artigo IBM Rational Team Concert ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/think/tool_rtc/){: new_window} no IBM Cloud Garage Method.
 
 
 ## Configurando o Sauce Labs
@@ -981,10 +981,10 @@ forma que um usuário pode usar um website ou um aplicativo:
 
 ### Saiba mais sobre o Sauce Labs
 
-Para saber mais sobre o Sauce Labs, veja o [artigo Sauce Labs ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
+Para saber mais sobre o Sauce Labs, veja o [artigo Sauce Labs ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
 
-  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
-  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}
+  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
 
 
 ## Configurando o Slack
@@ -1024,11 +1024,11 @@ configuráveis, clique em **Slack**.
 
 ### Saiba mais sobre o Slack
 
-Para saber mais sobre o Slack, veja o [artigo Slack ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais e o curso de advogado do Garage Method:
+Para saber mais sobre o Slack, veja o [artigo Slack ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais e o curso de advogado do Garage Method:
 
-  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
-  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
-  * [Torne-se um advogado do Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/course/gm_advocate/){:new_window}
+  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}
+  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Torne-se um advogado do Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
 
 
 ## Configurando o SonarQube
@@ -1057,4 +1057,4 @@ Configure o SonarQube para continuamente analisar e medir a qualidade de seu có
 
 ### Saiba mais sobre o SonarQube
 
-Para saber mais sobre o SonarQube, veja o [artigo SonarQube ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window} no IBM Cloud Garage Method.
+Para saber mais sobre o SonarQube, veja o [artigo SonarQube ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window} no IBM Cloud Garage Method.

@@ -25,7 +25,7 @@ lastupdated: "2017-8-18"
 ##通过模板创建工具链   
 {: #creating_a_toolchain_from_a_template}
 
-您可以使用模板作为起始点来[创建工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/devops/create){: new_window}，其包含一组特定工具集成。了解如何通过 [IBM Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/category/tools){:new_window} 使用模板的更多信息。
+您可以使用模板作为起始点来[创建工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/devops/create){: new_window}，其包含一组特定工具集成。了解如何通过 [IBM Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/category/tools){:new_window} 使用模板的更多信息。
 
 1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Public，请登录到 [{{site.data.keyword.Bluemix_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://console.bluemix.net){:new_window}。
 1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，请登录到 {{site.data.keyword.Bluemix_notm}} 上的 Dedicated 环境。
@@ -79,7 +79,7 @@ lastupdated: "2017-8-18"
 ## 学习教程：使用工具链
 {: #toolchain_tutorials}
 
-查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method){:new_window} 上的下列某个教程：
-  * [创建并使用第一个工具链 (GitHub) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [创建使用 Git Repos and Issue Tracking 的工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [向应用程序添加工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?task=1){:new_window}
+查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage){:new_window} 上的下列某个教程：
+  * [创建并使用第一个工具链 (GitHub) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [创建使用 Git Repos and Issue Tracking 的工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [向应用程序添加工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain?task=1){:new_window}

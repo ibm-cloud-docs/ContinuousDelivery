@@ -78,5 +78,5 @@ Da {{site.data.keyword.deliverypipeline}}, puoi modificare la tua configurazione
 ## Visualizza una esercitazione: {{site.data.keyword.deliverypipeline}}
 {: #pipeline-tutorial}
 
-Guarda questa esercitazione su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method){:new_window}:
-  * [Crea una pipeline ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}
+Guarda questa esercitazione su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window}:
+  * [Crea una pipeline ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline?task=1){:new_window}

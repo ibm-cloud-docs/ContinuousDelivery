@@ -28,7 +28,7 @@ você criar uma cadeia de ferramentas, certifique-se de estar trabalhando na org
 ##Criando uma cadeia de ferramentas com base em um modelo   
 {: #creating_a_toolchain_from_a_template}
 
-É possível usar um modelo como um ponto de início para [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/create){: new_window} que inclua um conjunto específico de integrações de ferramenta. Saiba mais sobre como usar os modelos no [IBM Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/category/tools){:new_window}.
+É possível usar um modelo como um ponto de início para [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/create){: new_window} que inclua um conjunto específico de integrações de ferramenta. Saiba mais sobre como usar os modelos no [IBM Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/category/tools){:new_window}.
 
 1. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, efetue login no [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://console.bluemix.net){:new_window}.
 1. Se você usar o {{site.data.keyword.Bluemix_notm}} Dedicated, efetue login no ambiente Dedicated no {{site.data.keyword.Bluemix_notm}}.
@@ -96,7 +96,7 @@ Após configurar a cadeia de ferramentas e as suas integrações de ferramenta, 
 ## Consulte o tutorial: Usando cadeias de ferramentas
 {: #toolchain_tutorials}
 
-Consulte um desses tutoriais no [IBM&reg; Cloud Garage Method ![Ícon de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method){:new_window}:
-  * [Crie e use sua primeira cadeia de ferramentas (GitHub) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Crie uma cadeia de ferramentas que usa Git Repos e Issue Tracking ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [Incluir uma cadeia de ferramentas em um app ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?task=1){:new_window}
+Consulte um desses tutoriais no [IBM&reg; Cloud Garage Method ![Ícon de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage){:new_window}:
+  * [Crie e use sua primeira cadeia de ferramentas (GitHub) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Crie uma cadeia de ferramentas que usa Git Repos e Issue Tracking ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Incluir uma cadeia de ferramentas em um app ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain?task=1){:new_window}

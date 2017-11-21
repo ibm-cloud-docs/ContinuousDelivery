@@ -66,7 +66,7 @@ lastupdated: "2017-6-8"
 ## 学习教程：{{site.data.keyword.gitrepos}}
 {: #git_tutorials}
 
-查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method){:new_window} 上的下列某个教程：
+查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage){:new_window} 上的下列某个教程：
 
-  * [创建使用 {{site.data.keyword.gitrepos}} 的工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
-  * [创建并使用具有 DevOps Insights 的微服务工具链 (V2) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [创建使用 {{site.data.keyword.gitrepos}} 的工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
+  * [创建并使用具有 DevOps Insights 的微服务工具链 (V2) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}

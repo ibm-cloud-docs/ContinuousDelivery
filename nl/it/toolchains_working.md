@@ -25,7 +25,7 @@ Ogni toolchain è associata a un'organizzazione (org) specifica e ogni utente ch
 ##Creazione di una toolchain da un template   
 {: #creating_a_toolchain_from_a_template}
 
-Puoi utilizzare un template come punto di partenza nella [creazione di una toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/devops/create){: new_window} che includa una serie specifica di integrazioni dello strumento. Scopri come utilizzare i template da [IBM Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method/category/tools){:new_window}.
+Puoi utilizzare un template come punto di partenza nella [creazione di una toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/devops/create){: new_window} che includa una serie specifica di integrazioni dello strumento. Scopri come utilizzare i template da [IBM Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/category/tools){:new_window}.
 
 1. Se utilizzi {{site.data.keyword.Bluemix_notm}} Pubblico, accedi a [{{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://console.bluemix.net){:new_window}.
 1. Se utilizzi {{site.data.keyword.Bluemix_notm}} Dedicato, accedi al tuo ambiente dedicato in {{site.data.keyword.Bluemix_notm}}.
@@ -80,7 +80,7 @@ Dopo aver configurato la toolchain e le sue integrazioni dello strumento, puoi v
 ## Visualizza una esercitazione: utilizzo delle toolchain
 {: #toolchain_tutorials}
 
-Guarda una di queste esercitazioni su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method){:new_window}:
-  * [Crea e utilizza la tua prima toolchain (GitHub) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Crea una toolchain che utilizza Repository Git e tracciamento del problema ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [Aggiungi una toolchain a un'applicazione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?task=1){:new_window}
+Guarda una di queste esercitazioni su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window}:
+  * [Crea e utilizza la tua prima toolchain (GitHub) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Crea una toolchain che utilizza Repository Git e tracciamento del problema ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Aggiungi una toolchain a un'applicazione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain?task=1){:new_window}

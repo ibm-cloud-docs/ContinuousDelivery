@@ -66,7 +66,7 @@ I file sono tassativamente limitati a 100 MB. Il limite di dimensione del reposi
 ## Visualizza una esercitazione: {{site.data.keyword.gitrepos}}
 {: #git_tutorials}
 
-Guarda una di queste esercitazioni su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method){:new_window}:
+Guarda una di queste esercitazioni su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window}:
 
-  * [Crea una toolchain che utilizza {{site.data.keyword.gitrepos}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
-  * [Crea e utilizza una toolchain microservizi con DevOps Insights (v2) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Crea una toolchain che utilizza {{site.data.keyword.gitrepos}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
+  * [Crea e utilizza una toolchain microservizi con DevOps Insights (v2) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}

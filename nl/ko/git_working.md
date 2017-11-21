@@ -66,7 +66,7 @@ SSH 키를 작성하려면 [How to create your SSH Keys![외부 링크 아이콘
 ## 튜토리얼 보기: {{site.data.keyword.gitrepos}}
 {: #git_tutorials}
 
-[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method){:new_window}에 있는 다음 튜토리얼 중 하나를 확인하십시오. 
+[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage){:new_window}에 있는 다음 튜토리얼 중 하나를 확인하십시오. 
 
-  * [Create a toolchain that uses {{site.data.keyword.gitrepos}}![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
-  * [Create and use a microservices toolchain with DevOps Insights (v2)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Create a toolchain that uses {{site.data.keyword.gitrepos}}![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
+  * [Create and use a microservices toolchain with DevOps Insights (v2)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}

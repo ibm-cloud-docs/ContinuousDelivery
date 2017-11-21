@@ -21,7 +21,7 @@ lastupdated: "2017-6-5"
 # 持续交付实践
 {: #gm_cd_best}
 
-![Garage Method 阶段](images/garage_method_phases.png) [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method){:new_window} 是一种 IBM 方法，用于快速交付使用中的应用程序。它将持续交付与 IBM 设计思维实践、精益实践、DevOps 实践和灵敏性实践结合在一起。这些实践虽然致力于云，但也可让任何软件开发工作受益。
+![Garage Method 阶段](images/garage_method_phases.png) [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage){:new_window} 是一种 IBM 方法，用于快速交付使用中的应用程序。它将持续交付与 IBM 设计思维实践、精益实践、DevOps 实践和灵敏性实践结合在一起。这些实践虽然致力于云，但也可让任何软件开发工作受益。
 
 
 ## 采用持续交付实践
@@ -34,33 +34,33 @@ lastupdated: "2017-6-5"
 
 Cloud Garage Method 站点包含多篇介绍高级别持续交付的文章。
 
-[持续交付 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window} 是一个可用来构建和部署软件的实践，因此可随时发布到生产。计算机科学的其中一个标志是缩短了开发和操作流程的各种周期时间。
+[持续交付 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/deliver/tool_continuous_delivery/){:new_window} 是一个可用来构建和部署软件的实践，因此可随时发布到生产。计算机科学的其中一个标志是缩短了开发和操作流程的各种周期时间。
 
-使用 [Delivery Pipeline ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){:new_window}（随附于 IBM Bluemix Continuous Delivery），您可以通过一种一致且可靠的方法，将软件交付过程分成各个阶段，从而实现持续交付。目标是以最少的人为干预，自动在各个阶段执行代码。
+使用 [Delivery Pipeline ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:new_window}（随附于 IBM Bluemix Continuous Delivery），您可以通过一种一致且可靠的方法，将软件交付过程分成各个阶段，从而实现持续交付。目标是以最少的人为干预，自动在各个阶段执行代码。
 
 ## 持续交付教程
 {: #gm_cd_tutorials}
 
-[创建并使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}。了解如何通过模板创建开放式工具链，并使用工具链持续交付“Hello World”应用程序。
+[创建并使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}。了解如何通过模板创建开放式工具链，并使用工具链持续交付“Hello World”应用程序。
 
-[添加工具链至应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?=task1){:new_window}。了解如何添加开放式工具链至应用程序并使用工具链来持续交付应用程序。
+[添加工具链至应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain?=task1){:new_window}。了解如何添加开放式工具链至应用程序并使用工具链来持续交付应用程序。
 
-[创建并使用微服务工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}。了解如何通过具有三个微服务的模板创建工具链，并使用工具链持续交付“Hello World”应用程序。
+[创建并使用微服务工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}。了解如何通过具有三个微服务的模板创建工具链，并使用工具链持续交付“Hello World”应用程序。
 
-[创建并使用具有 {{site.data.keyword.DRA_short}} (v2) 的微服务工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}。了解如何设置开放式工具链以开发并持续交付微服务应用程序。
+[创建并使用具有 {{site.data.keyword.DRA_short}} (v2) 的微服务工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}。了解如何设置开放式工具链以开发并持续交付微服务应用程序。
 
-[创建使用 {{site.data.keyword.gitrepos}} 的工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}。通过包含 Cloud Foundry 应用程序并使用 {{site.data.keyword.gitrepos}} 的模板创建开放式工具链。然后，使用该工具链持续交付应用程序。
+[创建使用 {{site.data.keyword.gitrepos}} 的工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}。通过包含 Cloud Foundry 应用程序并使用 {{site.data.keyword.gitrepos}} 的模板创建开放式工具链。然后，使用该工具链持续交付应用程序。
 
-[创建管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}。
+[创建管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline){:new_window}。
 了解如何开始使用管道并创建包含 GitHub 存储库和管道的开放式工具链。
 
-有关更多教程，请参阅 [Learning Lab ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/category/courses){:new_window}。
+有关更多教程，请参阅 [Learning Lab ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/category/courses){:new_window}。
 
 ## 持续交付课程
 {: #gm_cd_courses}
 
-[开始使用敏捷开发和持续交付 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/course/get_started_agile_cd){:new_window}。了解如何通过模板创建工具链，并使用工具链持续交付“Hello World”应用程序。
+[开始使用敏捷开发和持续交付 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/course/get_started_agile_cd){:new_window}。了解如何通过模板创建工具链，并使用工具链持续交付“Hello World”应用程序。
 
-[成为 IBM Cloud Garage Method 倡导者 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/course/gm_advocate){:new_window}。参加此高级课程，以熟悉 Cloud Garage Method 的实践和工具。
+[成为 IBM Cloud Garage Method 倡导者 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/course/gm_advocate){:new_window}。参加此高级课程，以熟悉 Cloud Garage Method 的实践和工具。
 
-要查看所有 Cloud Garage Method 学习材料，请参阅 [Cloud Garage Method Learning Lab ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/category/courses){:new_window}。
+要查看所有 Cloud Garage Method 学习材料，请参阅 [Cloud Garage Method Learning Lab ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/category/courses){:new_window}。

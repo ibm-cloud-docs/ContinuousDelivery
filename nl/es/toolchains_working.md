@@ -25,7 +25,7 @@ Cada cadena de herramientas está asociada con una organización (org) específi
 ##Creación de una cadena de herramientas a partir de una plantilla   
 {: #creating_a_toolchain_from_a_template}
 
-Puede utilizar una plantilla como punto de partida para [crear una cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/create){: new_window} que incluya un conjunto específico de integraciones de herramientas. Obtenga más información sobre cómo utilizar las plantillas en el [Método IBM Cloud Garage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/category/tools){:new_window}.
+Puede utilizar una plantilla como punto de partida para [crear una cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/create){: new_window} que incluya un conjunto específico de integraciones de herramientas. Obtenga más información sobre cómo utilizar las plantillas en el [Método IBM Cloud Garage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/category/tools){:new_window}.
 
 1. Si utiliza {{site.data.keyword.Bluemix_notm}} público, inicie la sesión en [{{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://console.bluemix.net){:new_window}.
 1. Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado, inicie la sesión en el entorno dedicado en {{site.data.keyword.Bluemix_notm}}.
@@ -80,7 +80,7 @@ Una vez que se ha configurado la cadena de herramientas y sus integraciones de h
 ## Realice una guía de aprendizaje: Uso de las cadenas de herramientas
 {: #toolchain_tutorials}
 
-Consulte uno de estas guías de aprendizaje en [IBM&reg; Cloud Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method){:new_window}:
-  * [Crear y utilizar su primera cadena de herramientas (GitHub) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Cree una cadena de herramientas que utilice Git Repos and Issue Tracking ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [Añadir una cadena de herramientas a una app ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?task=1){:new_window}
+Consulte uno de estas guías de aprendizaje en [IBM&reg; Cloud Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage){:new_window}:
+  * [Crear y utilizar su primera cadena de herramientas (GitHub) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Cree una cadena de herramientas que utilice Git Repos and Issue Tracking ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Añadir una cadena de herramientas a una app ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain?task=1){:new_window}

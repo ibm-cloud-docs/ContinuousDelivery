@@ -85,10 +85,10 @@ lastupdated: "2017-9-25"
 
 ### 進一步瞭解 Alert Notification
 
-若要進一步瞭解 {{site.data.keyword.alertnotificationshort}}，請參閱 IBM Cloud Garage Method 上的 [IBM {{site.data.keyword.alertnotificationshort}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window}，或採用下列指導教學：
+若要進一步瞭解 {{site.data.keyword.alertnotificationshort}}，請參閱 IBM Cloud Garage Method 上的 [IBM {{site.data.keyword.alertnotificationshort}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/manage/tool_alert_notification/){: new_window}，或採用下列指導教學：
 
-  * [將工具整合新增至工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
-  * [使用 Bluemix Availability Monitoring 及 Alert Notification ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 來管理 {{site.data.keyword.Bluemix_notm}} 應用程式](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [將工具整合新增至工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
+  * [使用 Bluemix Availability Monitoring 及 Alert Notification ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 來管理 {{site.data.keyword.Bluemix_notm}} 應用程式](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## 配置 Application Security on Cloud
@@ -113,7 +113,7 @@ IBM&reg; Application Security on Cloud 會透過偵測數十個最通用的已�
 
 ### 進一步瞭解 Application Security on Cloud
 
-若要進一步瞭解 Application Security on Cloud，請參閱 IBM Cloud Garage Method 上的 [Application Security on Cloud 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/manage/tool_ibm_security_appscan/){: new_window}。
+若要進一步瞭解 Application Security on Cloud，請參閱 IBM Cloud Garage Method 上的 [Application Security on Cloud 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/manage/tool_ibm_security_appscan/){: new_window}。
 
 
 ## 配置 Artifactory
@@ -215,7 +215,7 @@ IBM&reg; Application Security on Cloud 會透過偵測數十個最通用的已�
 
 ### 進一步瞭解 Artifactory
 
-若要進一步瞭解 Artifactory，請參閱 IBM Cloud Garage Method 上的 [Artifactory 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window}。
+若要進一步瞭解 Artifactory，請參閱 IBM Cloud Garage Method 上的 [Artifactory 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/deliver/tool_artifactory/){: new_window}。
 
 
 ## 新增 Availability Monitoring
@@ -238,9 +238,9 @@ IBM&reg; Application Security on Cloud 會透過偵測數十個最通用的已�
 
 ### 進一步瞭解 Availability Monitoring
 
-若要進一步瞭解 {{site.data.keyword.prf_hubshort}}，請參閱 IBM Cloud Garage Method 上的 [{{site.data.keyword.prf_hublong}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window}，或採用下列指導教學：
+若要進一步瞭解 {{site.data.keyword.prf_hubshort}}，請參閱 IBM Cloud Garage Method 上的 [{{site.data.keyword.prf_hublong}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window}，或採用下列指導教學：
 
-  * [使用 Bluemix Availability Monitoring 及 Alert Notification ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 來管理 {{site.data.keyword.Bluemix_notm}} 應用程式](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [使用 Bluemix Availability Monitoring 及 Alert Notification ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 來管理 {{site.data.keyword.Bluemix_notm}} 應用程式](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## 新增 Cloud Event Management（實驗性）
@@ -269,7 +269,7 @@ IBM&reg; Application Security on Cloud 會透過偵測數十個最通用的已�
 
 ### 進一步瞭解 Cloud Event Management
 
-若要進一步瞭解 Cloud Event Management，請參閱 IBM Cloud Garage Method 上的 [Cloud Event Management 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window}。
+若要進一步瞭解 Cloud Event Management，請參閱 IBM Cloud Garage Method 上的 [Cloud Event Management 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/manage/tool_cloud_event_mgt/){: new_window}。
 
 
 ## 配置 Delivery Pipeline
@@ -338,10 +338,10 @@ IBM&reg; Application Security on Cloud 會透過偵測數十個最通用的已�
 
 ### 進一步瞭解 Delivery Pipeline
 
-若要進一步瞭解 {{site.data.keyword.deliverypipeline}}，請參閱 IBM Cloud Garage Method 上的 [Delivery Pipeline 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window}，或採用下列指導教學：
+若要進一步瞭解 {{site.data.keyword.deliverypipeline}}，請參閱 IBM Cloud Garage Method 上的 [Delivery Pipeline 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window}，或採用下列指導教學：
 
-  * [建立管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}
-  * [建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
+  * [建立管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline){:new_window}
+  * [建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}
 
 
 ## 新增 DevOps Insights（測試版）
@@ -365,11 +365,11 @@ IBM&reg; Application Security on Cloud 會透過偵測數十個最通用的已�
 
 ### 進一步瞭解 Devops Insights
 
-若要進一步瞭解 {{site.data.keyword.DRA_short}}，請參閱 IBM Cloud Garage Method 上的 [{{site.data.keyword.DRA_short}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window}，或採用下列指導教學：
+若要進一步瞭解 {{site.data.keyword.DRA_short}}，請參閱 IBM Cloud Garage Method 上的 [{{site.data.keyword.DRA_short}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){: new_window}，或採用下列指導教學：
 
-  * [建立使用 {{site.data.keyword.DRA_short}} 的工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_devops_insights){:new_window}
-  * [使用 {{site.data.keyword.DRA_short}} 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
-  * [Deployment Risk Analytics with GitHub and Jenkins ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
+  * [建立使用 {{site.data.keyword.DRA_short}} 的工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_devops_insights){:new_window}
+  * [使用 {{site.data.keyword.DRA_short}} 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Deployment Risk Analytics with GitHub and Jenkins ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
 
 
 ## 新增 Eclipse Orion Web IDE
@@ -393,10 +393,10 @@ Eclipse Orion {{site.data.keyword.webide}} 是一個整合的 Web 型環境，�
 
 ### 進一步瞭解 Eclipse Orion Web IDE
 
-若要進一步瞭解 Eclipse Orion {{site.data.keyword.webide}}，請參閱[使用 Eclipse Orion {{site.data.keyword.webide}} 編輯程式碼](/docs/services/ContinuousDelivery/web_ide.html){: new_window}以及 IBM Cloud Garage Method 上的 [Eclipse Orion {{site.data.keyword.webide}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window}，或採用下列指導教學：
+若要進一步瞭解 Eclipse Orion {{site.data.keyword.webide}}，請參閱[使用 Eclipse Orion {{site.data.keyword.webide}} 編輯程式碼](/docs/services/ContinuousDelivery/web_ide.html){: new_window}以及 IBM Cloud Garage Method 上的 [Eclipse Orion {{site.data.keyword.webide}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window}，或採用下列指導教學：
 
-  * [建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
-  * [使用 {{site.data.keyword.Bluemix_notm}} Live Sync 開發、除錯及部署應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_livesync){:new_window}
+  * [建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}
+  * [使用 {{site.data.keyword.Bluemix_notm}} Live Sync 開發、除錯及部署應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_livesync){:new_window}
 
 
 ## 配置 Git Repos and Issue Tracking
@@ -445,9 +445,9 @@ Eclipse Orion {{site.data.keyword.webide}} 是一個整合的 Web 型環境，�
 
 ### 進一步瞭解 Git Repos and Issue Tracking
 
-若要進一步瞭解 {{site.data.keyword.gitrepos}}，請參閱 IBM Cloud Garage Method 上的 [{{site.data.keyword.gitrepos}}：IBM 所管理的社交編碼文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/code/tool_git_repos_and_issue_tracking/){: new_window}，或採用下列指導教學：
+若要進一步瞭解 {{site.data.keyword.gitrepos}}，請參閱 IBM Cloud Garage Method 上的 [{{site.data.keyword.gitrepos}}：IBM 所管理的社交編碼文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/code/tool_git_repos_and_issue_tracking/){: new_window}，或採用下列指導教學：
 
-  * [建立使用 {{site.data.keyword.gitrepos}} 的工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
+  * [建立使用 {{site.data.keyword.gitrepos}} 的工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
 
 
 ## 配置 GitHub 及 GitHub Issues
@@ -513,16 +513,16 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
 
 ### 進一步瞭解 GitHub 及 GitHub Issues
 
-若要進一步瞭解 GitHub 及 GitHub Issues，請參閱 IBM Cloud Garage Method 上的 [GitHub 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} 及 [GitHub Issues 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}，或採用下列指導教學：
+若要進一步瞭解 GitHub 及 GitHub Issues，請參閱 IBM Cloud Garage Method 上的 [GitHub 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/code/tool_github/){: new_window} 及 [GitHub Issues 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}，或採用下列指導教學：
 
-  * [Deployment Risk Analytics with GitHub and Jenkins ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
-  * [建立自訂工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom){:new_window}
+  * [Deployment Risk Analytics with GitHub and Jenkins ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
+  * [建立自訂工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_custom){:new_window}
 ## 在 Bluemix 專用上配置 GitHub Enterprise 及 Issues
 {: #configghe}
 
  **附註：**這些指示適用於 {{site.data.keyword.ghe_short}} 的「{{site.data.keyword.Bluemix_notm}} 專用」。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，則視內部程序而定，有些步驟可能會有所不同。
 
-{{site.data.keyword.ghe_long}} 是 Git 儲存庫的內部部署 Web 型管理服務。「專用 {{site.data.keyword.ghe_short}}」僅供「{{site.data.keyword.Bluemix_notm}} 專用」客戶使用。GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一個位置。它與您的開發儲存庫整合，因此您可以專注於重要作業。如需「專用 {{site.data.keyword.ghe_short}}」及 GitHub Issues 的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} 和 IBM Cloud Garage Method 上的 [GitHub Issues 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}。
+{{site.data.keyword.ghe_long}} 是 Git 儲存庫的內部部署 Web 型管理服務。「專用 {{site.data.keyword.ghe_short}}」僅供「{{site.data.keyword.Bluemix_notm}} 專用」客戶使用。GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一個位置。它與您的開發儲存庫整合，因此您可以專注於重要作業。如需「專用 {{site.data.keyword.ghe_short}}」及 GitHub Issues 的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} 和 IBM Cloud Garage Method 上的 [GitHub Issues 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}。
 
 您可以將 {{site.data.keyword.ghe_short}} 配置為工具鏈中的工具整合，以在公司的 [{{site.data.keyword.Bluemix_notm}} 專用](/docs/dedicated/index.html#dedicated){: new_window}實例中管理原始碼。
 
@@ -618,7 +618,7 @@ GitLab 是 Git 儲存庫的 Web 型管理服務。您可以同時具有儲存庫
 
 ### 進一步瞭解 GitLab
 
-若要進一步瞭解 GitLab，請參閱 IBM Cloud Garage Method 上的 [GitLab 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/code/tool_gitlab/){: new_window}。
+若要進一步瞭解 GitLab，請參閱 IBM Cloud Garage Method 上的 [GitLab 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/code/tool_gitlab/){: new_window}。
 
 
 ## 配置 Jenkins
@@ -655,9 +655,9 @@ Jenkins 是一種可持續建置及測試軟體的開放程式碼、伺服器型
 
 ### 進一步瞭解 Jenkins
 
-若要進一步瞭解 Jenkins，請參閱 IBM Cloud Garage Method 上的 [Jenkins 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window}，或採用下列指導教學：
+若要進一步瞭解 Jenkins，請參閱 IBM Cloud Garage Method 上的 [Jenkins 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){: new_window}，或採用下列指導教學：
 
-  * [Deployment Risk Analytics with GitHub and Jenkins ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
+  * [Deployment Risk Analytics with GitHub and Jenkins ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
   
   
 ## 配置 JIRA
@@ -705,9 +705,9 @@ JIRA 是一個工具，可追蹤與您軟體相關的問題及錯誤。只要 Je
 
 ### 進一步瞭解 JIRA
 
-若要進一步瞭解 JIRA，請參閱 IBM Cloud Garage Method 上的 [JIRA 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window}，或採用下列指導教學：
+若要進一步瞭解 JIRA，請參閱 IBM Cloud Garage Method 上的 [JIRA 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/code/tool_jira/){: new_window}，或採用下列指導教學：
 
-  * [獲得 JIRA 和 GitHub 專案的開發人員與團隊見解 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_dev_insights_team_dynamics){:new_window}
+  * [獲得 JIRA 和 GitHub 專案的開發人員與團隊見解 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_dev_insights_team_dynamics){:new_window}
 
 
 ## 配置 Nexus
@@ -810,7 +810,7 @@ JIRA 是一個工具，可追蹤與您軟體相關的問題及錯誤。只要 Je
 
 ### 進一步瞭解 Nexus
 
-若要進一步瞭解 Nexus，請參閱 IBM Cloud Garage Method 上的 [Nexus 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window}。
+若要進一步瞭解 Nexus，請參閱 IBM Cloud Garage Method 上的 [Nexus 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/deliver/tool_nexus/){: new_window}。
 
 
 ## 配置自訂工具（其他工具）
@@ -840,7 +840,7 @@ JIRA 是一個工具，可追蹤與您軟體相關的問題及錯誤。只要 Je
 
 若要進一步瞭解自訂工具，請參閱 [{{site.data.keyword.Bluemix_notm}} 工具鏈的自訂工具整合簡介 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window}，或採用下列指導教學：
 
-  * [將自訂工具整合新增至工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_add_custom_tool){:new_window}
+  * [將自訂工具整合新增至工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_add_custom_tool){:new_window}
 
 
 ## 配置 PagerDuty
@@ -878,10 +878,10 @@ PagerDuty 會將多個監視系統中的資料整合至單一視圖。發生問�
 
 ### 進一步瞭解 PagerDuty
 
-若要進一步瞭解 PagerDuty，請參閱 IBM Cloud Garage Method 上的 [PagerDuty 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}，或採用下列指導教學及 Garage Method 代言人課程：
+若要進一步瞭解 PagerDuty，請參閱 IBM Cloud Garage Method 上的 [PagerDuty 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){: new_window}，或採用下列指導教學及 Garage Method 代言人課程：
 
-  * [使用 {{site.data.keyword.DRA_short}} 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices?task=5){:new_window}
-  * [成為 Garage Method 代言人 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/course/gm_advocate/){:new_window}
+  * [使用 {{site.data.keyword.DRA_short}} 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices?task=5){:new_window}
+  * [成為 Garage Method 代言人 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
 
 
 ## 配置 Rational Team Concert
@@ -921,7 +921,7 @@ IBM Rational Team Concert&trade; 是一種團隊協同作業工具，可整合�
 
 ### 進一步瞭解 Rational Team Concert
 
-若要進一步瞭解 Rational Team Concert，請參閱 IBM Cloud Garage Method 上的 [IBM Rational Team Concert 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/think/tool_rtc/){: new_window}。
+若要進一步瞭解 Rational Team Concert，請參閱 IBM Cloud Garage Method 上的 [IBM Rational Team Concert 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/think/tool_rtc/){: new_window}。
 
 
 ## 配置 Sauce Labs
@@ -949,10 +949,10 @@ Sauce Labs 會執行功能單元測試。在 {{site.data.keyword.deliverypipelin
 
 ### 進一步瞭解 Sauce Labs
 
-若要進一步瞭解 Sauce Labs，請參閱 IBM Cloud Garage Method 上的 [Sauce Labs 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window}，或採用下列指導教學：
+若要進一步瞭解 Sauce Labs，請參閱 IBM Cloud Garage Method 上的 [Sauce Labs 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: new_window}，或採用下列指導教學：
 
-  * [使用 {{site.data.keyword.DRA_short}} 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
-  * [使用 {{site.data.keyword.DRA_short}} (v2) 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [使用 {{site.data.keyword.DRA_short}} 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}
+  * [使用 {{site.data.keyword.DRA_short}} (v2) 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
 
 
 ## 配置 Slack
@@ -985,11 +985,11 @@ Slack 是一種雲端型、即時傳訊和通知系統。Slack 會提供持續�
 
 ### 進一步瞭解 Slack
 
-若要進一步瞭解 Slack，請參閱 IBM Cloud Garage Method 上的 [Slack 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}，或採用下列指導教學及 Garage Method 代言人課程：
+若要進一步瞭解 Slack，請參閱 IBM Cloud Garage Method 上的 [Slack 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: new_window}，或採用下列指導教學及 Garage Method 代言人課程：
 
-  * [使用 {{site.data.keyword.DRA_short}} 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
-  * [使用 {{site.data.keyword.DRA_short}} (v2) 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
-  * [成為 Garage Method 代言人 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/course/gm_advocate/){:new_window}
+  * [使用 {{site.data.keyword.DRA_short}} 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}
+  * [使用 {{site.data.keyword.DRA_short}} (v2) 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [成為 Garage Method 代言人 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
 
 
 ## 配置 SonarQube
@@ -1017,4 +1017,4 @@ SonarQube 概述原始碼的整體性能及品質，以及強調顯示在新程�
 
 ### 進一步瞭解 SonarQube
 
-若要進一步瞭解 SonarQube，請參閱 IBM Cloud Garage Method 上的 [SonarQube 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window}。
+若要進一步瞭解 SonarQube，請參閱 IBM Cloud Garage Method 上的 [SonarQube 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window}。

@@ -77,13 +77,13 @@ If you use Git Repos and Issue Tracking and have any problems, see [Git Repos an
 ## Developing with IBM Eclipse Tools
 {: #git_eclipse_tools}
 
-IBM Eclipse Tools for Bluemix provides plug-ins that you can install into an Eclipse environment to integrate your IDE with Bluemix.
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} provides plug-ins that you can install into an Eclipse environment to integrate your IDE with {{site.data.keyword.Bluemix_notm}}.
 
-With the tools, you can deploy the following types of files and servers to the Bluemix server directly from your Eclipse IDE or from IBM WebSphere&reg; Application Server Developer Tools (WDT):
+With the tools, you can deploy the following types of files and servers to the {{site.data.keyword.Bluemix_notm}} server directly from your Eclipse IDE or from IBM WebSphere&reg; Application Server Developer Tools (WDT):
 
 * JavaScript files
 * WAR (web archive) files
 * EAR (enterprise archive) files
 * Liberty Profile packaged servers
 
-You can also create services and link them to your app and define environment variables as part of the deployment. For more information about IBM Eclipse Tools, [see Deploying apps with IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html).
+You can also create services and link them to your app and define environment variables as part of the deployment. For more information about IBM Eclipse Tools, [see Deploying apps with IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../../manageapps/eclipsetools/eclipsetools.html).

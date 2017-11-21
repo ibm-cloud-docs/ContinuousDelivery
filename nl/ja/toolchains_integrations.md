@@ -85,10 +85,10 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 
 ### Alert Notification に関する詳細
 
-{{site.data.keyword.alertnotificationshort}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.alertnotificationshort}}」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/manage/tool_alert_notification/){: new_window} を参照するか、これらのチュートリアルを始めてください。
+{{site.data.keyword.alertnotificationshort}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.alertnotificationshort}}」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/manage/tool_alert_notification/){: new_window} を参照するか、これらのチュートリアルを始めてください。
 
-  * [ツールチェーンへのツール統合の追加![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
-  * [Bluemix Availability Monitoring と Alert Notification を使用した {{site.data.keyword.Bluemix_notm}} アプリケーションの管理![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [ツールチェーンへのツール統合の追加![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
+  * [Bluemix Availability Monitoring と Alert Notification を使用した {{site.data.keyword.Bluemix_notm}} アプリケーションの管理![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## Application Security on Cloud の構成
@@ -113,7 +113,7 @@ IBM&reg; Application Security on Cloud により、最も広範囲に公開さ�
 
 ### Application Security on Cloud に関する詳細
 
-Application Security on Cloud について詳しくは、IBM Cloud Garage Method の[記事「Application Security on Cloud」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/manage/tool_ibm_security_appscan/){: new_window} を参照してください。
+Application Security on Cloud について詳しくは、IBM Cloud Garage Method の[記事「Application Security on Cloud」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/manage/tool_ibm_security_appscan/){: new_window} を参照してください。
 
 
 ## Artifactory の構成
@@ -217,7 +217,7 @@ Application Security on Cloud について詳しくは、IBM Cloud Garage Method
 
 ### Artifactory に関する詳細
 
-Artifactory について詳しくは、IBM Cloud Garage Method の[記事「Artifactory」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window} を参照してください。
+Artifactory について詳しくは、IBM Cloud Garage Method の[記事「Artifactory」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/deliver/tool_artifactory/){: new_window} を参照してください。
 
 
 ## Availability Monitoring の追加
@@ -240,9 +240,9 @@ Artifactory について詳しくは、IBM Cloud Garage Method の[記事「Arti
 
 ### Availability Monitoring に関する詳細
 
-{{site.data.keyword.prf_hubshort}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.prf_hublong}}」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/manage/tool_bluemix_availability_monitoring/){: new_window} を参照するか、このチュートリアルを始めてください。
+{{site.data.keyword.prf_hubshort}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.prf_hublong}}」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window} を参照するか、このチュートリアルを始めてください。
 
-  * [Bluemix Availability Monitoring と Alert Notification を使用した {{site.data.keyword.Bluemix_notm}} アプリケーションの管理![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [Bluemix Availability Monitoring と Alert Notification を使用した {{site.data.keyword.Bluemix_notm}} アプリケーションの管理![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## Cloud Event Management (試験段階) の追加
@@ -271,7 +271,7 @@ Artifactory について詳しくは、IBM Cloud Garage Method の[記事「Arti
 
 ### Cloud Event Management に関する詳細
 
-Cloud Event Management について詳しくは、IBM Cloud Garage Method の[記事「Cloud Event Management」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window} を参照してください。
+Cloud Event Management について詳しくは、IBM Cloud Garage Method の[記事「Cloud Event Management」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/manage/tool_cloud_event_mgt/){: new_window} を参照してください。
 
 
 ## Delivery Pipeline の構成
@@ -342,10 +342,10 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 
 ### Delivery Pipeline に関する詳細
 
-{{site.data.keyword.deliverypipeline}} について詳しくは、IBM Cloud Garage Method の[記事「Delivery Pipeline」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){: new_window} を参照するか、これらのチュートリアルを始めてください。
+{{site.data.keyword.deliverypipeline}} について詳しくは、IBM Cloud Garage Method の[記事「Delivery Pipeline」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} を参照するか、これらのチュートリアルを始めてください。
 
-  * [Create a pipeline ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}
-  * [Create and use your first toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
+  * [Create a pipeline ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline){:new_window}
+  * [Create and use your first toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}
 
 
 ## DevOps Insights (ベータ版) の追加
@@ -370,11 +370,11 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 
 ### DevOps Insights に関する詳細
 
-{{site.data.keyword.DRA_short}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.DRA_short}}」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window} を参照するか、これらのチュートリアルを始めてください。
+{{site.data.keyword.DRA_short}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.DRA_short}}」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){: new_window} を参照するか、これらのチュートリアルを始めてください。
 
-  * [Create a toolchain that uses {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_devops_insights){:new_window}
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
-  * [Deployment Risk Analytics with GitHub and Jenkins ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
+  * [Create a toolchain that uses {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_devops_insights){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Deployment Risk Analytics with GitHub and Jenkins ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
 
 
 ## Eclipse Orion Web IDE の追加
@@ -398,10 +398,10 @@ Eclipse Orion {{site.data.keyword.webide}} は、ソース管理タスクを作�
 
 ### Eclipse Orion Web IDE に関する詳細
 
-Eclipse Orion {{site.data.keyword.webide}} について詳しくは、[Eclipse Orion {{site.data.keyword.webide}} によるコードの編集](/docs/services/ContinuousDelivery/web_ide.html){: new_window}と IBM Cloud Garage Method の[記事「Eclipse Orion {{site.data.keyword.webide}}」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window} を参照するか、これらのチュートリアルを始めてください。
+Eclipse Orion {{site.data.keyword.webide}} について詳しくは、[Eclipse Orion {{site.data.keyword.webide}} によるコードの編集](/docs/services/ContinuousDelivery/web_ide.html){: new_window}と IBM Cloud Garage Method の[記事「Eclipse Orion {{site.data.keyword.webide}}」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} を参照するか、これらのチュートリアルを始めてください。
 
-  * [Create and use your first toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
-  * [{{site.data.keyword.Bluemix_notm}} Live Sync を使用したアプリの開発、デバッグ、デプロイ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_livesync){:new_window}
+  * [Create and use your first toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}
+  * [{{site.data.keyword.Bluemix_notm}} Live Sync を使用したアプリの開発、デバッグ、デプロイ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_livesync){:new_window}
 
 
 ## Git Repos and Issue Tracking の構成
@@ -450,9 +450,9 @@ Eclipse Orion {{site.data.keyword.webide}} について詳しくは、[Eclipse O
 
 ### Git Repos and Issue Tracking に関する詳細
 
-{{site.data.keyword.gitrepos}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.gitrepos}}: Social coding hosted by IBM」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/code/tool_git_repos_and_issue_tracking/){: new_window}を参照するか、このチュートリアルを始めてください。
+{{site.data.keyword.gitrepos}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.gitrepos}}: Social coding hosted by IBM」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_git_repos_and_issue_tracking/){: new_window}を参照するか、このチュートリアルを始めてください。
 
-  * [Create a toolchain that uses {{site.data.keyword.gitrepos}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}
+  * [Create a toolchain that uses {{site.data.keyword.gitrepos}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
 
 
 ## GitHub and Issues の構成
@@ -518,16 +518,16 @@ GitHub.com または会社の {{site.data.keyword.ghe_short}} インスタンス
 
 ### GitHub and Issues に関する詳細
 
-GitHub and Issues について詳しくは、IBM Cloud Garage Method の [GitHub に関する記事![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window}と [GitHub Issues に関する記事![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}を参照するか、次のチュートリアルを始めてください。
+GitHub and Issues について詳しくは、IBM Cloud Garage Method の [GitHub に関する記事![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_github/){: new_window}と [GitHub Issues に関する記事![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}を参照するか、次のチュートリアルを始めてください。
 
-  * [Deployment Risk Analytics with GitHub and Jenkins ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
-  * [Create a custom toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom){:new_window}
+  * [Deployment Risk Analytics with GitHub and Jenkins ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
+  * [Create a custom toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_custom){:new_window}
 ## Bluemix Dedicated での GitHub Enterprise および GitHub Issues の構成
 {: #configghe}
 
  **注:** ここで説明する手順は、{{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} に適用されます。独自の管理版の {{site.data.keyword.ghe_short}} を使用している場合、内部手順によっては一部のステップが異なることがあります。
 
-{{site.data.keyword.ghe_long}} は、オンプレミス型の Web ベースの Git リポジトリー・ホスティング・サービスです。Dedicated {{site.data.keyword.ghe_short}} は {{site.data.keyword.Bluemix_notm}} Dedicated ユーザー専用です。GitHub Issues は、作業と計画を 1 つの場所に保持するトラッキング・ツールです。これは、ユーザーが重要タスクに注力できるようにユーザーの開発リポジトリーと統合されます。Dedicated {{site.data.keyword.ghe_short}} と GitHub Issues について詳しくは、[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated/index.html){: new_window}と IBM Cloud Garage Method の[記事「GitHub Issues」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} を参照してください。
+{{site.data.keyword.ghe_long}} は、オンプレミス型の Web ベースの Git リポジトリー・ホスティング・サービスです。Dedicated {{site.data.keyword.ghe_short}} は {{site.data.keyword.Bluemix_notm}} Dedicated ユーザー専用です。GitHub Issues は、作業と計画を 1 つの場所に保持するトラッキング・ツールです。これは、ユーザーが重要タスクに注力できるようにユーザーの開発リポジトリーと統合されます。Dedicated {{site.data.keyword.ghe_short}} と GitHub Issues について詳しくは、[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated/index.html){: new_window}と IBM Cloud Garage Method の[記事「GitHub Issues」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} を参照してください。
 
 {{site.data.keyword.ghe_short}}  をツールチェーン内の 1 つのツール統合として構成して、会社の [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} インスタンス内でソース・コードを管理できるようにすることができます。
 
@@ -624,7 +624,7 @@ GitLab.com または会社の GitLab インスタンスの新規または既存�
 
 ### GitLab に関する詳細
 
-GitLab について詳しくは、IBM Cloud Garage Method の[記事「GitLab」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/code/tool_gitlab/){: new_window} を参照してください。
+GitLab について詳しくは、IBM Cloud Garage Method の[記事「GitLab」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_gitlab/){: new_window} を参照してください。
 
 
 ## Jenkins の構成
@@ -661,9 +661,9 @@ Jenkins ツール統合を使用すれば、Jenkins ジョブ通知をツール�
 
 ### Jenkins に関する詳細
 
-Jenkins について詳しくは、IBM Cloud Garage Method の[記事「Jenkins」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/deliver/tool_jenkins/){: new_window} を参照するか、このチュートリアルを始めてください。
+Jenkins について詳しくは、IBM Cloud Garage Method の[記事「Jenkins」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){: new_window} を参照するか、このチュートリアルを始めてください。
 
-  * [Deployment Risk Analytics with GitHub and Jenkins ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra){:new_window}
+  * [Deployment Risk Analytics with GitHub and Jenkins ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
   
   
 ## JIRA の構成
@@ -711,9 +711,9 @@ JIRA は、ユーザーのソフトウェアに関連する問題およびバグ
 
 ### JIRA に関する詳細
 
-JIRA について詳しくは、IBM Cloud Garage Method の[記事「JIRA」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/code/tool_jira/){: new_window} を参照するか、このチュートリアルを始めてください。
+JIRA について詳しくは、IBM Cloud Garage Method の[記事「JIRA」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_jira/){: new_window} を参照するか、このチュートリアルを始めてください。
 
-  * [Gain developer and team insights on a JIRA and GitHub project ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_dev_insights_team_dynamics){:new_window}
+  * [Gain developer and team insights on a JIRA and GitHub project ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_dev_insights_team_dynamics){:new_window}
 
 
 ## Nexus の構成
@@ -816,7 +816,7 @@ JIRA について詳しくは、IBM Cloud Garage Method の[記事「JIRA」![�
 
 ### Nexus に関する詳細
 
-Nexus について詳しくは、IBM Cloud Garage Method の[記事「Nexus」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window} を参照してください。
+Nexus について詳しくは、IBM Cloud Garage Method の[記事「Nexus」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/deliver/tool_nexus/){: new_window} を参照してください。
 
 
 ## カスタム・ツール (その他のツール) の構成
@@ -847,7 +847,7 @@ Nexus について詳しくは、IBM Cloud Garage Method の[記事「Nexus」![
 
 カスタム・ツールについて詳しくは、[Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window} を参照するか、このチュートリアルを始めてください。
 
-  * [Add a custom tool integration to a toolchain![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_add_custom_tool){:new_window}
+  * [Add a custom tool integration to a toolchain![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_add_custom_tool){:new_window}
 
 
 ## PagerDuty の構成
@@ -885,10 +885,10 @@ PagerDuty は、複数のモニタリング・システムのデータを単一�
 
 ### PagerDuty に関する詳細
 
-PagerDuty について詳しくは、IBM Cloud Garage Method の [PagerDuty に関する記事![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}を参照するか、このチュートリアルと Garage Method 支持者のコースを始めてください。
+PagerDuty について詳しくは、IBM Cloud Garage Method の [PagerDuty に関する記事![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){: new_window}を参照するか、このチュートリアルと Garage Method 支持者のコースを始めてください。
 
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices?task=5){:new_window}
-  * [Become a Garage Method advocate (Garage Method 支持者になる)![External link icon](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/course/gm_advocate/){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices?task=5){:new_window}
+  * [Become a Garage Method advocate (Garage Method 支持者になる)![External link icon](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
 
 
 ## Rational Team Concert の構成
@@ -928,7 +928,7 @@ IBM Rational Team Concert&trade; は、反復計画、変更管理、障害追�
 
 ### Rational Team Concert に関する詳細
 
-Rational Team Concert について詳しくは、IBM Cloud Garage Method の[記事「IBM Rational Team Concert」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/think/tool_rtc/){: new_window} を参照してください。
+Rational Team Concert について詳しくは、IBM Cloud Garage Method の[記事「IBM Rational Team Concert」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/think/tool_rtc/){: new_window} を参照してください。
 
 
 ## Sauce Labs の構成
@@ -957,10 +957,10 @@ Sauce Labs は、機能単体テストを実行します。{{site.data.keyword.d
 
 ### Sauce Labs に関する詳細
 
-Sauce Labs について詳しくは、IBM Cloud Garage Method の[記事「Sauce Labs」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window} を参照するか、これらのチュートリアルを始めてください。
+Sauce Labs について詳しくは、IBM Cloud Garage Method の[記事「Sauce Labs」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: new_window} を参照するか、これらのチュートリアルを始めてください。
 
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
 
 
 ## Slack の構成
@@ -994,11 +994,11 @@ Slack は、クラウド・ベースのリアルタイムでのメッセージ�
 
 ### Slack に関する詳細
 
-Slack について詳しくは、IBM Cloud Garage Method の [Slack に関する記事![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}を参照するか、これらのチュートリアルと Garage Method 支持者のコースを始めてください。
+Slack について詳しくは、IBM Cloud Garage Method の [Slack に関する記事![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: new_window}を参照するか、これらのチュートリアルと Garage Method 支持者のコースを始めてください。
 
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd){:new_window}
-  * [Become a Garage Method advocate (Garage Method 支持者になる)![External link icon](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/course/gm_advocate/){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}
+  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Become a Garage Method advocate (Garage Method 支持者になる)![External link icon](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
 
 
 ## SonarQube の構成
@@ -1026,4 +1026,4 @@ SonarQube は、ソース・コードの全体的な正常性と品質の概要�
 
 ### SonarQube に関する詳細
 
-SonarQube について詳しくは、IBM Cloud Garage Method の[記事「SonarQube」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window} を参照してください。
+SonarQube について詳しくは、IBM Cloud Garage Method の[記事「SonarQube」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window} を参照してください。

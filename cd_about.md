@@ -46,9 +46,9 @@ You can use a template as a starting point to [create a toolchain ![External lin
 
 **Tip**: Your company's {{site.data.keyword.Bluemix_notm}} Dedicated environment might not contain the same toolchain templates as the {{site.data.keyword.Bluemix_notm}} Public site. Toolchain templates that are available on both {{site.data.keyword.Bluemix_notm}} Public and {{site.data.keyword.Bluemix_notm}} Dedicated might contain a different set of tool integrations on {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-Some toolchain templates include tool integrations that are part of the {{site.data.keyword.contdelivery_short}} service. If an instance of that service isn't already in your organization, when you click **Create** to create the toolchain, the service is automatically added at no cost to you. For more information and terms, see the [Bluemix catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/continuous-delivery/){:new_window}.
+Some toolchain templates include tool integrations that are part of the {{site.data.keyword.contdelivery_short}} service. If an instance of that service isn't already in your organization, when you click **Create** to create the toolchain, the service is automatically added at no cost to you. For more information and terms, see the [{{site.data.keyword.Bluemix_notm}} catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/continuous-delivery/){:new_window}.
 
-The microservices toolchain templates deploy an app with catalog and orders APIs that are backed by a Cloudant store. As part of deploying the app, a no-cost Cloudant service instance is created. For more information and terms, see the [Bluemix catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/cloudant-nosql-db/){:new_window}.
+The microservices toolchain templates deploy an app with catalog and orders APIs that are backed by a Cloudant store. As part of deploying the app, a no-cost Cloudant service instance is created. For more information and terms, see the [{{site.data.keyword.Bluemix_notm}} catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/cloudant-nosql-db/){:new_window}.
 
 <table valign="top" padding="2px">
   <caption>Table 2. Toolchain templates</caption>
@@ -68,7 +68,7 @@ This toolchain demonstrates the DevOps practices that are featured in the Garage
 </li><li>Eclipse Orion {{site.data.keyword.webide}}
 </li><li>GitHub and Issues
 </li><li>Google Analytics
-</li><li>IBM Bluemix
+</li><li>{{site.data.keyword.Bluemix_notm}}
 </li><li>New Relic
 </li><li>PagerDuty
 </li><li>Sauce Labs
@@ -80,13 +80,13 @@ This toolchain demonstrates the DevOps practices that are featured in the Garage
 Microservices toolchain with {{site.data.keyword.DRA_short}} <img src="../../icons/launch-glyph.svg" alt="External link icon"</a>
 </td><td>
 With this cloud-native toolchain, you can use a sample to create an online store that consists of three microservices: a Catalog API, an Orders API, and a UI that calls both of the APIs. The toolchain is preconfigured for continuous delivery, source control, functional testing, issue tracking, online editing, and alert notification. <br><br>
-Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices" target="_blank">Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} <img src="../../icons/launch-glyph.svg" alt="External link icon"></a><br><br>
+Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices" target="_blank">Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} <img src="../../icons/launch-glyph.svg" alt="External link icon"></a><br><br>
 </td><td>
 <ul>
 <li>{{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}
 </li><li>GitHub and Issues
-</li><li>IBM Bluemix
+</li><li>{{site.data.keyword.Bluemix_notm}}
 </li><li>{{site.data.keyword.DRA_full}}
 </li><li>PagerDuty
 </li><li>Sauce Labs
@@ -99,14 +99,14 @@ Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorials/tutorial_
   </td><td>
   With this cloud-native toolchain, you can use a sample to create an online store that consists of three microservices: a Catalog API, an Orders API, and a UI that calls both of the APIs. The toolchain is preconfigured for continuous delivery, source control, functional testing, issue tracking, online editing, and alert notification.
   <br><br>
-  Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd" target="_blank">Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) <img src="../../icons/launch-glyph.svg" alt="External link icon"</a>
+  Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd" target="_blank">Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) <img src="../../icons/launch-glyph.svg" alt="External link icon"</a>
    <br><br>
   </td><td><ul>
   <li>{{site.data.keyword.deliverypipeline}}
   </li><li>Eclipse Orion {{site.data.keyword.webide}}
   </li><li>Git Repos and Issue Tracking
-  </li><li>IBM Bluemix
-  </li><li>{{site.data.keyword.DRA_full}}
+  </li><li>{{site.data.keyword.Bluemix_notm}}
+  </li><li>{{site.data.keyword.DRA_short}}
   </li><li>PagerDuty
   </li><li>Sauce Labs
   </li><li>Slack
@@ -116,24 +116,24 @@ Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorials/tutorial_
 <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsecure-container-toolchain" target="_blank">Secure container toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"</a>
 </td><td>
 With this toolchain, you can develop and deploy a secure Docker container app. By default, the toolchain uses a sample Node.js "Hello World" app, but you can link to your own GitHub repo instead. The toolchain is preconfigured for continuous delivery with Vulnerability Advisor, source control, issue tracking, and online editing. <br><br>
-Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_secure_container" target="_blank">Create and use a secure container toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"</a>  
+Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_secure_container" target="_blank">Create and use a secure container toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"</a>  
 <br><br>
 </td><td><ul><li>{{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}
 </li><li>GitHub and Issues
-</li><li>IBM Bluemix Container
+</li><li>{{site.data.keyword.containershort}}
 </li></ul></td></tr>
 
 <tr><td>
 <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsecure-kube-toolchain" target="_blank">Secure container toolchain (v2) - Kurbernetes <img src="../../icons/launch-glyph.svg" alt="External link icon"</a>
 </td><td>
 With this toolchain, you can securely develop and deploy an app to a Kubernetes cluster that is managed by the IBM® Bluemix® Container Service. By default, the toolchain uses a sample Node.js "Hello World" app, but you can link to your own GitHub repo instead. The toolchain is preconfigured for continuous delivery with Vulnerability Advisor, source control, issue tracking, and online editing. <br><br>
-Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorialstc_secure_kube" target="_blank">Create and use a secure Kubernetes toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"</a>	 <br><br>
+Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorialstc_secure_kube" target="_blank">Create and use a secure Kubernetes toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"</a>	 <br><br>
 </td><td><ul>
 <li>{{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}
 </li><li>Git Repos and Issue Tracking
-</li><li>IBM Bluemix Container (Kurbernetes cluster)
+</li><li>{{site.data.keyword.containershort}} (Kurbernetes cluster)
 </li><ul></td></tr>
 <tr><td>
 <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain" target="_blank">Simple Cloud Foundry toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
@@ -141,37 +141,38 @@ Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorialstc_secure_
 </td><td>
 With this toolchain, you can develop and deploy a Cloud Foundry app. By default, this toolchain uses a sample Node.js "Hello world" app, but you can link to your own GitHub repo instead. The toolchain is preconfigured for continuous delivery, source control, issue tracking, and online editing.	<br><br>
 
-Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow" target="_blank">Create and use your first toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
+Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow" target="_blank">Create and use your first toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
 </td><td><ul><li>
 {{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}
 </li><li>GitHub and Issues
-</li><li>IBM Bluemix
+</li><li>{{site.data.keyword.Bluemix_notm}}
 </li></ul></td></tr>
 <tr><td>
 <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain-hosted" target="_blank">Simple Cloud Foundry toolchain (v2) <img src="../../icons/launch-glyph.svg" alt="External link icon"</a> <br><br>
 
 </td><td>With this toolchain, you can develop and deploy a Cloud Foundry app. By default, this toolchain clones a sample Node.js "Hello world" app into an IBM hosted Git repo, which you can then modify. The toolchain is preconfigured for continuous delivery, source control, issue tracking, and online editing. <br><br>
-Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2" target="_blank">Create a toolchain that
+Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2" target="_blank">Create a toolchain that
 uses {{site.data.keyword.gitrepos}} <img src="../../icons/launch-glyph.svg" alt="External link icon"</a> <br><br>
 </td><td><ul><li>
 {{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}
 </li><li>Git Repos and Issue Tracking
-</li><li>IBM Bluemix
+</li><li>{{site.data.keyword.Bluemix_notm}}
 </li></ul></td></tr>
 <tr><td>
 <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdra-toolchain-demo" target="_blank">Simple Cloud Foundry toolchain with {{site.data.keyword.DRA_short}} <img src="../../icons/launch-glyph.svg" alt="External link icon"</a> <br><br>
 
 </td><td>With this cloud-native toolchain, you can use {{site.data.keyword.DRA_short}} to gate the deployment of a simple Cloud Foundry app. By default, this toolchain uses a sample Node.js weather app, or you can link to your own GitHub repo. <br><br>
 
-Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_devops_insights" target="_blank">Create a toolchain that uses {{site.data.keyword.DRA_short}} <img src="../../icons/launch-glyph.svg" alt="External link icon"</a> <br><br>
+Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_devops_insights" target="_blank">Create a toolchain that uses {{site.data.keyword.DRA_short}} <img src="../../icons/launch-glyph.svg" alt="External link icon"</a> <br><br>
 
 </td><td><ul><li>
 {{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}
-</li><li>GitHub and Issues<br>IBM Bluemix
-</li><li>{{site.data.keyword.DRA_full}}
+</li><li>GitHub and Issues
+</li><li>{{site.data.keyword.Bluemix_notm}}
+</li><li>{{site.data.keyword.DRA_short}}
 </li></ul><td></tr>
 
 <tr><td>
@@ -185,7 +186,7 @@ Try the tutorial: <a href="_blank">Create and use a simple container toolchain  
 {{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}
 </li><li>GitHub and Issues
-  </li><li>IBM Bluemix
+  </li><li>{{site.data.keyword.Bluemix_notm}}
 </li></ul><td></tr>
 
 <tr><td>
@@ -193,7 +194,7 @@ Try the tutorial: <a href="_blank">Create and use a simple container toolchain  
 
 </td><td>With this toolchain, you can view deployment metrics from IBM UrbanCode Deploy. Enable this toolchain to communicate with IBM UrbanCode Deploy by downloading and configuring DevOps Connect from the Settings page in {{site.data.keyword.DRA_short}}.
 <br><br>
-Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_delivery_insights" target="_blank">View metrics from IBM UrbanCode Deploy servers in {{site.data.keyword.DRA_short}}  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> 	
+Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_delivery_insights" target="_blank">View metrics from IBM UrbanCode Deploy servers in {{site.data.keyword.DRA_short}}  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> 	
 <br><br>
 </td><td><ul><li>{{site.data.keyword.DRA_full}}
 </li><li>UrbanCode Deploy
@@ -204,11 +205,11 @@ Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorials/tutorial_
 
 </td><td>With this toolchain, you can gain insights into your Jenkins process for continuous integration and delivery. You can configure the Jenkins server to send data to {{site.data.keyword.DRA_short}} when the jobs are run by Jenkins. You can also implement quality gates to block deployments based on policies. You can view results on the Deployment Risk dashboard in {{site.data.keyword.DRA_short}}. If you configure a GitHub repo to indicate the source repo that is used by Jenkins, change traceability is available.  
 <br><br>
-Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_dra" target="_blank">Deployment Risk Analytics with GitHub and Jenkins  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>  <br><br>
+Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra" target="_blank">Deployment Risk Analytics with GitHub and Jenkins  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>  <br><br>
 </td><td><ul><li>
 GitHub and Issues
 </li><li>Jenkins
-</li><li>{{site.data.keyword.DRA_full}}
+</li><li>{{site.data.keyword.DRA_short}}
 </li><li>Slack
 </li></ul><td></tr>
 
@@ -216,10 +217,10 @@ GitHub and Issues
 <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain" target="_blank">Developer Insights and Team Dynamics with GitHub and JIRA <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> 	
 </td><td>
 With this toolchain, you can explore your project's development risk and use social coding analysis to understand interaction patterns between developers. You can analyze GitHub source code in conjunction with GitHub issues, JIRA issues, or both. Use Developer Insights to identify files that are highly prone to errors, and see how the project complies with DevOps practices. The social coding analysis in Team Dynamics identifies the level of interaction between team members so that the team can fix unproductive practices.<br><br>
-Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorials/tutorial_dev_insights_team_dynamics" target="_blank">Gain developer and team insights on a JIRA and GitHub project  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
+Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_dev_insights_team_dynamics" target="_blank">Gain developer and team insights on a JIRA and GitHub project  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
 </td><td><ul><li>
 GitHub and Issues
-</li><li>{{site.data.keyword.DRA_full}}
+</li><li>{{site.data.keyword.DRA_short}}
 </li><li>JIRA
 </li><li>Slack
 </li></ul><td></tr>
@@ -228,12 +229,12 @@ GitHub and Issues
 <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain" target="_blank">Build your own toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
 </td><td>
 This toolchain has no preconfigured tools. If you are already familiar with toolchains, you can set up your own toolchain. <br><br>
-Try the tutorial: <a href="https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom" target="_blank">Create a custom toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
+Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_custom" target="_blank">Create a custom toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
 </td><td> &nbsp;&nbsp; None
 </td></tr>
 <tr><td>Continuous Delivery Toolchain</td><td>This toolchain is used when you enable continuous delivery for an app. <br><br>
 Try the tutorials:
-<ul><li><a href="https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain" target="_blank">Add a toolchain to an app <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
+<ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain" target="_blank">Add a toolchain to an app <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
 <li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Deploy a secure web application across multiple regions </a></li>
 </ul></td>
 <td><ul><li>{{site.data.keyword.deliverypipeline}}
