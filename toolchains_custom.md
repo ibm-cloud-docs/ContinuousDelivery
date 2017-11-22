@@ -97,7 +97,7 @@ Each service subsection contains the following information:
 
 ### Including text from other files
 
-All the information for your toolchain can be in the `toolchain.yml file.  However, you may want to create separate files for each tool integration UI using `$text`. This can make maintaining your toolchains easier, as well as minimize the time you spend editing configuration files.  This example snippet from a `toolchain.yml` shows how to use the contents of the `pipeline.yml` file as the value for `content`.
+All the information for your toolchain can be in the `toolchain.yml` file.  However, you may want to create separate files for each tool integration UI using `$text`. This can make maintaining your toolchains easier, as well as minimize the time you spend editing configuration files.  This example snippet from a `toolchain.yml` shows how to use the contents of the `pipeline.yml` file as the value for `content`.
 
 ```
   configuration:
