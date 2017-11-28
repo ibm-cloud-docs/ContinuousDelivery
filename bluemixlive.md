@@ -147,4 +147,4 @@ Push the app and then browse to `https://_app-host.mybluemix.net_/bluemix-debug/
 
 ### For more information
 
-* See [Eclipse tools for {{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
+* See [Eclipse tools for {{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
