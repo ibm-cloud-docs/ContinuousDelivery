@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-8-18"
+lastupdated: "2017-12-6"
 
 
 ---
@@ -37,9 +37,14 @@ You can use a template as a starting point to [create a toolchain ![External lin
  **Tip**: A few of the toolchain templates have multiple instances of a tool integration. For example, the Microservices toolchain template on {{site.data.keyword.Bluemix_notm}} Public contains three instances of GitHub and three instances of Delivery Pipeline, one for each of the three microservices.
 
  The diagram in the following image is an example. When you create a toolchain, the diagram shows each tool integration that is part of the toolchain.
-![Toolchain diagram](images/toolchain_diagram.png)
+![Toolchain diagram](images/toolchain_diagram2.png)
+ 
+1. Review the default information for the toolchain settings:
 
-1. Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you want to use a different name, change the toolchain's name.  
+ * The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you want to use a different name, change the toolchain's name.
+ * The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
+ * The organization to create the toolchain in. If you want to use a different org, select it from the list of available orgs.
+ 
 1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For information about configuring the tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on which toolchain template you selected and whether you are using {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. For example, when you create a Microservices toolchain on {{site.data.keyword.Bluemix_notm}} Public, these steps are run:
 
