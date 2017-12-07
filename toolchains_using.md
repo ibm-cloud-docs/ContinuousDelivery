@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-7-17"
+lastupdated: "2017-12-6"
 
 ---
 
@@ -79,7 +79,7 @@ If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.ke
 
 * To grant access to a user who is not a member of the toolchain's org, follow these steps:
 
-   a. From the menu bar, click **Manage > Account > Organizations**.
+   a. From the menu bar, click **Manage > Account > Cloud Foundry Orgs**.
 
    b. Click **Invite Team Members**.
 
