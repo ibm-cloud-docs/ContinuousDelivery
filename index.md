@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-19"
+lastupdated: "2017-12-6"
 
 ---
 
@@ -58,9 +58,11 @@ To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "Extern
 1. Click **Cloud Foundry**.
 1. If you want to use a different name for the pipeline, change its default name. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}.
 1. If you want to use a different name for the application, change its default name. The application's name identifies it in {{site.data.keyword.Bluemix_notm}}. This name is the application that the pipeline deploys to.
+1. If you want to create the pipeline in a different organization (org), change its default org. You can create pipelines in orgs that you belong to.
+1. If you want to create the pipeline in a different space, change its default space. You can create the pipeline in a space that is in your org.
 1. If you don't have a toolchain, a toolchain with a default name is created for you. If you want to use a different name for the toolchain, change its name. Pipelines are managed by toolchains. With the toolchain, you can extend the capabilities of your pipeline by integrating with other tools and services.
 
- **Tip**: Pipelines and toolchains belong to organizations (orgs). If you belong to an org that has toolchains, you can use those toolchains even if you didn't create them.
+ **Tip**: Pipelines and toolchains belong to orgs. If you belong to an org that has toolchains, you can use those toolchains even if you didn't create them.
 
 1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
 1. Select your Git provider.
@@ -85,6 +87,8 @@ To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg 
 
 1. Click **Custom**.
 1. If you want to use a different name for the pipeline, change its default name. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}.
+1. If you want to create the pipeline in a different org, change its default org. You can create pipelines in orgs that you belong to.
+1. If you want to create the pipeline in a different space, change its default space. You can create the pipeline in a space that is in your org.
 1. If you don't have a toolchain, a toolchain with a default name is created for you. If you want to use a different name for the toolchain, change its name. Pipelines are managed by toolchains. With the toolchain, you can extend the capabilities of your pipeline by integrating with other tools and services.
 1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
 1. Click **Create**. An empty pipeline is created and represented as a card on the toolchain's Overview page.
@@ -101,7 +105,12 @@ To create and configure a continuous delivery toolchain from a [template ![Exter
 
  The diagram in the following image is an example. When you create a toolchain, the diagram shows each tool integration that is part of the toolchain.
  ![Toolchain_diagram](images/toolchain_diagram2.png)
-1. Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you want to use a different name, change the toolchain's name.
+1. Review the default information for the toolchain settings:
+
+ * The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you want to use a different name, change the toolchain's name.
+ * The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
+ * The organization to create the toolchain in. If you want to use a different org, select it from the list of available orgs.
+ 
 1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For information about configuring the tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on which toolchain template you selected and whether you are using {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. For example, when you create a Microservices toolchain on {{site.data.keyword.Bluemix_notm}} Public, these steps are run:
 
