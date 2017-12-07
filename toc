@@ -7,6 +7,7 @@ Continuous Delivery
   {: .navgroup id="learn"}
     index.md
     cd_about.md
+    devops_intro.md
     garage_method.md
     limitations_plans.md
 
@@ -35,7 +36,7 @@ Continuous Delivery
         toolchains_working.md
         toolchains_using.md
         toolchains_integrations.md
-	      deploy_button.md
+        deploy_button.md
 	      toolchains_custom.md
 
   {: .topicgroup}
@@ -48,7 +49,7 @@ Continuous Delivery
     git_locally.md
     di_working.md
   {: .navgroup-end}
-  
+
   {: .navgroup id="reference"}
       [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki)
   {: .navgroup-end}
