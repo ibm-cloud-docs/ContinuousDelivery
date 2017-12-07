@@ -195,7 +195,7 @@ Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_t
 Try the tutorials:
 
 <ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain" target="_blank">Add a toolchain to an app <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
-<ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Create a custom toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
+<li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Create a custom toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
 <li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Deploy a secure web application across multiple regions </a></li>
 </ul></td>
 <td><ul><li>{{site.data.keyword.deliverypipeline}}
