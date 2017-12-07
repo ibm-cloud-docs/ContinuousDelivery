@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-05"
+lastupdated: "2017-12-6"
 
 ---
 
@@ -40,6 +40,8 @@ To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "Extern
 1. Click **Cloud Foundry**.
 1. If you want to use a different name for the pipeline, change its default name.
 1. If you want to use a different name for the application, change its default name. This name is the application that the pipeline deploys to.
+1. If you want to create the pipeline in a different organization (org), change its default org. You can create pipelines in orgs that you belong to.
+1. If you want to create the pipeline in a different space, change its default space. You can create the pipeline in a space that is in your org.
 1. If you don't have a toolchain, a toolchain with a default name is created for you. If you want to use a different name for the toolchain, change its name. With the toolchain, you can extend the capabilities of your pipeline by integrating with other tools and services. For more information about toolchains, see [Creating toolchains](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
 
  **Tip**: Pipelines and toolchains belong to organizations (orgs). If you belong to an org that has toolchains, you can be added to the access control list for any of its associated toolchains. After you are added to the access control list for a toolchain, you can view that toolchain and any associated pipelines, even if you didn't create them. If you are granted admin privileges, you can also modify and delete the toolchain. For more information about access control for toolchains, see [Managing access](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
@@ -66,6 +68,8 @@ To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg 
 
 1. Click **Custom**.
 1. If you want to use a different name for the pipeline, change its default name.
+1. If you want to create the pipeline in a different org, change its default org. You can create pipelines in orgs that you belong to.
+1. If you want to create the pipeline in a different space, change its default space. You can create the pipeline in a space that is in your org.
 1. If you don't have a toolchain, a toolchain with a default name is created for you. If you want to use a different name for the toolchain, change its name. With the toolchain, you can extend the capabilities of your pipeline by integrating with other tools and services.
 1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
 1. Click **Create**. An empty pipeline is created and represented as a card on the toolchain's Overview page.
