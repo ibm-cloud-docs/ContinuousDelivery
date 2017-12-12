@@ -15,6 +15,7 @@ lastupdated: "2017-12-12"
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
+{:tip:.tip}
 
 # Environment properties and resources
 {: #deliverypipeline_environment}
