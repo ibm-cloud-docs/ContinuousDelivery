@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-25"
+lastupdated: "2017-12-11"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -12,10 +12,10 @@ lastupdated: "2017-5-25"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.contdelivery_short}} troubleshooting
+# {{site.data.keyword.contdelivery_short}} FAQs
 {: #ts_cd}
 
-Get answers to common troubleshooting questions about using {{site.data.keyword.contdelivery_full}}.
+Get answers to common questions about using {{site.data.keyword.contdelivery_full}}.
 {:shortdesc}
 
 
@@ -112,10 +112,10 @@ You can either increase the memory quota of your account, or reduce the memory t
 For more information about general problems with managing your apps, see [Troubleshooting for managing apps](https://console.bluemix.net/docs/troubleshoot/ts_apps.html#managingapps).
 
 
-## Run bar does not show Bluemix Live Sync icons in Eclipse Orion Web IDE
+## Run bar does not show {{site.data.keyword.Bluemix_notm}} Live Sync icons in Eclipse Orion Web IDE
 {: #ts_llz_lkb_3r}
 
-You created an app, but the IBM Bluemix Live Sync icons aren't shown in the Eclipse Orion Web IDE run bar.  You don't see the full run bar with the Live Edit icons:
+You created an app, but the {{site.data.keyword.Bluemix_notm}} Live Sync icons aren't shown in the Eclipse Orion Web IDE run bar.  You don't see the full run bar with the Live Edit icons:
 
 ![Run bar](images/webide_runbar_light.png)   
 
@@ -234,12 +234,12 @@ When you click ADD GIT, a window opens and one of these issues occur:
 {: tsSymptoms} -->
 
 <!-- The causes section contains a brief explanation of what causes the problem. For example:  
-Your browser might be configured to prevent a cookie from being set. That cookie must be set from the IBM Bluemix DevOps Services site in the hub.jazz.net internet domain from within the context of the Bluemix console.
+Your browser might be configured to prevent a cookie from being set. That cookie must be set from the {{site.data.keyword.Bluemix_notm}} DevOps Services site in the hub.jazz.net internet domain from within the context of the {{site.data.keyword.Bluemix_notm}} Platform console.
 {: tsCauses} -->
 
 <!-- The resolve section contains steps to resolve the problem. For example:  
 You can fix this problem in one of three ways:
-- Follow the instructions that are in the window that opens from the Bluemix console. Click the button. Another browser window opens temporarily. In that window, DevOps Services sets the authentication cookie.
-- In another browser tab, go to https://hub.jazz.net and log in. Return to the Bluemix console and refresh the page. Click ADD GIT again.
+- Follow the instructions that are in the window that opens from the {{site.data.keyword.Bluemix_notm}} Platform console. Click the button. Another browser window opens temporarily. In that window, DevOps Services sets the authentication cookie.
+- In another browser tab, go to https://hub.jazz.net and log in. Return to the {{site.data.keyword.Bluemix_notm}} Platform console and refresh the page. Click ADD GIT again.
 - Change your browser settings to enable 3rd party cookies and click ADD GIT again.
 {: tsResolve} -->
