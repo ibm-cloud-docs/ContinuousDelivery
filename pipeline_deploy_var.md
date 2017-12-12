@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2017-7-10"
+lastupdated: "2017-12-12"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -30,6 +30,8 @@ You can add four types of properties from the Environment Properties tab:
 * **Secure**: A property key with a single-line value. The value is displayed as asterisks.
 * **Properties**: A file in the project's repository. This file can contain multiple properties. Each property must be on its own line. To separate key-value pairs, use the equals sign (=).
 
+You can examine the environment properties for a pipeline job by running the `env` command in the job's script.
+{:tip}
 
 The following properties and resources are available by default in pipeline environments.
 
