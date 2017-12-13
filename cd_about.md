@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2017
-lastupdated: "2017-12-7"
+lastupdated: "2017-11-7"
 
 ---
 
@@ -74,13 +74,13 @@ The "Develop and test microservices on Cloud Foundry" toolchain deploys an app w
   <tr><td>
   <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsecure-kube-toolchain" target="_blank">"Develop a Kubernetes app" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"</a>
   </td><td>
-  With this toolchain, you can develop, and deploy an application securely into a Kubernetes cluster managed by the IBM Bluemix Container Service. By default, the toolchain uses a sample Node.js "Hello World" app, but you can link to your own GitHub repository instead. This toolchain is preconfigured for continuous delivery with Vulnerability Advisor, source control, issue tracking, and online editing. <br><br>
+  With this toolchain, you can develop, and deploy an application securely into a Kubernetes cluster managed by the {{site.data.keyword.Bluemix_notm}} Container Service. By default, the toolchain uses a sample Node.js "Hello World" app, but you can link to your own GitHub repository instead. This toolchain is preconfigured for continuous delivery with Vulnerability Advisor, source control, issue tracking, and online editing. <br><br>
   Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain" target="_blank">Use the "Develop a Kubernetes app" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"</a>  
   <br><br>
   </td><td><ul><li>{{site.data.keyword.deliverypipeline}}
   </li><li>Eclipse Orion {{site.data.keyword.webide}}
   </li><li>GitHub and Issues
-  </li><li>{{site.data.keyword.Bluemix_notm}}
+  </li><li>{{site.data.keyword.Bluemix_notm}} Container (Kubernetes cluster)
   </li></ul></td></tr>
 
   <tr><td>
@@ -191,6 +191,7 @@ This toolchain has no preconfigured tools. If you are already familiar with tool
 Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_custom" target="_blank">Create a custom toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
 </td><td> &nbsp;&nbsp; None
 </td></tr>
+
 <tr><td>Continuous Delivery Toolchain</td><td>This toolchain is used when you enable continuous delivery for an app. <br><br>
 Try the tutorials:
 
