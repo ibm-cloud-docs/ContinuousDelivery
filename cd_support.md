@@ -15,27 +15,28 @@ lastupdated: "2017-11-02"
 # Getting help and support for {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-The {{site.data.keyword.contdelivery_full}} team actively monitors the Stack Overflow and developerWorks forums for questions about the {{site.data.keyword.contdelivery_short}} service and DevOps Insights.   
+The {{site.data.keyword.contdelivery_full}} team actively monitors the developerWorks forum for questions about the {{site.data.keyword.contdelivery_short}} service and toolchains.   On the bottom of toolchain and {{site.data.keyword.contdelivery_short}} pages, you will find the **Get help in the forum** button
+![**Get help in the forum** button](images/get_help_in_the_forum.png)
+which brings up the "Ask us a Question" dialog box.
 
 <table>
 <tr>
- <th style="text-align:center">
- <strong>Stack Overflow</strong>
- </th>
-  <th style="text-align:center">
- <strong>dW Answers</strong>
-</th></tr>
+<th style="width:20%"> &nbsp; &nbsp; &nbsp;</th>
+ <th style="text-align:center;width=60%">
+ <strong>Ask us a Question</strong> </th>
+<th> &nbsp; &nbsp; &nbsp;</th>
+</tr>
 <tr>
-<td align="center">
-<p>
-   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,devops-services" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
-   <p>
-    <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Opens in a new tab or window)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on Stack Overflow.</p></td>
+<td> </td>
   <td align="center">
-   <p>
+  <p>Get help fast, directly from IBM delivery and other DevOps Services users.</p>
+  <b>dW Answers</b>
+  <p>
    <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
-    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Opens in a new tab or window)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on dW Answers.</p></td>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Opens in a new tab or window)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on dW Answers.</p>
+ </td>
+ <td></td>
     </tr>
   </table>  
 
