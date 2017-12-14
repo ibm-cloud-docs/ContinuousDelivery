@@ -100,7 +100,7 @@ The following properties and resources are available by default in pipeline envi
 | CF_ORGANIZATION_ID | For deployments, the ID of the org to deploy to. |
 | CF_SPACE | For deployments, the name of the space to deploy to. |
 | CF_SPACE_ID | For deployments, the ID of the space to deploy to.  |
-| CF_TARGET_URL | For deployments, the URL of IBM Bluemix&reg; or Cloud Foundry. |
+| CF_TARGET_URL | For deployments, the URL of IBM Cloud&reg; or Cloud Foundry. |
 | IDS_VERSION | For deployments, the version of the app that is being deployed or the source identifier. |
 
 ## Preinstalled resources
