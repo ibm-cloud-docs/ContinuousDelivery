@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-7-24"
+lastupdated: "2017-12-15"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -17,10 +17,21 @@ lastupdated: "2017-7-24"
 {:codeblock:.codeblock}
 
 # Plan limitations and usage
-{: #deliverypipeline_plans}
-{: #free_deprecation}
+{: #limitations_usage}
 
 The use of {{site.data.keyword.contdelivery_full}} is limited to the building, deploying, testing, and ongoing operations of applications on the {{site.data.keyword.Bluemix_notm}} platform or other compatible platform-as-a-service or infrastructure-as-a-service offerings.
+
+## Authorized users
+{: #authorized_users}
+
+{{site.data.keyword.contdelivery_short}} service plans are defined and priced based on the number of authorized users of a service instance. Anyone who contributes to an effort must be counted as an authorized user, including:
+
+ * Users who interact with issues, issues boards, source code, or other artifacts in a {{site.data.keyword.gitrepos}} repository.
+ * Users who manipulate, trigger (either directly in the UI or indirectly by committing to a repo), or view the status of a delivery pipeline.
+ * Users who interact wth the Eclipse Orion {{site.data.keyword.webide}}.
+
+## Delivery Pipeline usage
+{: #pipeline_usage}
 
 The acceptable usage behaviors include, but are not limited to, these behaviors:
 
@@ -44,7 +55,6 @@ At the discretion of IBM, users who violate the acceptable usage behaviors of th
  * Because {{site.data.keyword.deliverypipeline}} provides continuous integration and continuous delivery for {{site.data.keyword.Bluemix_notm}}, the continuous integration features in GitLab are not supported.
  * GitLab admin functions are not available because they are managed by IBM.
  * {{site.data.keyword.gitrepos}} might not be fully accessible.
-
 
 ## Git Repos and Issue Tracking user information and content
 {: #git_projects}
