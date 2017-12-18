@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-7-12"
+lastupdated: "2017-12-12"
 
 ---
 
@@ -79,7 +79,7 @@ If you use Git Repos and Issue Tracking and have any problems, see [Git Repos an
 
 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} provides plug-ins that you can install into an Eclipse environment to integrate your IDE with {{site.data.keyword.Bluemix_notm}}.
 
-With the tools, you can deploy the following types of files and servers to the {{site.data.keyword.Bluemix_notm}} server directly from your Eclipse IDE or from IBM WebSphere&reg; Application Server Developer Tools (WDT):
+With the tools, you can deploy the following types of files and servers to {{site.data.keyword.Bluemix_notm}} directly from your Eclipse IDE or from IBM WebSphere&reg; Application Server Developer Tools (WDT):
 
 * JavaScript files
 * WAR (web archive) files
