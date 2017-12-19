@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-12-6
+lastupdated: "2017-12-6"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
