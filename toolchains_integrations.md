@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-11"
+  years: 2015, 2018
+lastupdated: "2018-1-3"
 
 ---
 
@@ -22,7 +22,6 @@ The tool integrations that are available to add and configure for your toolchain
 |Tool integration |Available on {{site.data.keyword.Bluemix_notm}} Public	|Available on {{site.data.keyword.Bluemix_notm}} Dedicated (environment dependent)|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.alertnotificationshort}}		|Yes		|No		|
-|Application Security on Cloud		|Yes		|No		|
 |Artifactory		|Yes		|Yes		|
 |Availability Monitoring		|Yes		|No		|
 |Bitbucket		|Yes		|No		|
@@ -31,7 +30,7 @@ The tool integrations that are available to add and configure for your toolchain
 |{{site.data.keyword.DRA_short}} 		|Yes		|No			|
 |Eclipse Orion {{site.data.keyword.webide}}		|Yes		|Yes			|
 |{{site.data.keyword.gitrepos}}	|Yes		|No		|
-|GitHub and Issues		|Yes		|Yes		|
+|GitHub		|Yes		|Yes		|
 |Dedicated {{site.data.keyword.ghe_short}} and Issues			|No		|Yes		|
 |GitLab		|Yes		|No		|
 |Jenkins		|Yes		|Yes		|
@@ -89,32 +88,7 @@ Configure {{site.data.keyword.alertnotificationshort}} to receive notifications 
 To learn more about {{site.data.keyword.alertnotificationshort}}, see the [IBM {{site.data.keyword.alertnotificationshort}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/manage/tool_alert_notification/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
 
   * [Add a tool integration to a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
-  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using Bluemix Availability Monitoring and Alert Notification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
-
-
-## Configuring Application Security on Cloud
-{: #appscan}
-
-IBM&reg; Application Security on Cloud secures your organization's applications by detecting dozens of the most pervasive published security vulnerabilities. You can use it to eliminate security vulnerabilities from applications before they are deployed to production. With convenient, detailed reporting, you can address vulnerabilities and ultimately enable your application's users to benefit from a more secure experience.
-
-Configure Application Security on Cloud to continuously analyze your source code:
-
-1. From the DevOps dashboard, click **Toolchains**. Click the toolchain that you want to add Application Security on Cloud to. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.  
-
- a. Click **Add a Tool**.
-
- b. In the Tool Integrations section, click **IBM Application Security on Cloud**.
-
-1. Type a name for this instance of the Application Security on Cloud tool integration.
-1. Type the URL for the Application Security on Cloud instance that you want to open when you click the IBM Application Security on Cloud card from your toolchain.
-1. Type the user name that you use to connect to the IBM Application Security on Cloud server.
-1. Type the authentication token that you use to connect to the IBM Application Security on Cloud server.
-1. Click **Create Integration**.
-1. From your toolchain, click **IBM Application Security on Cloud** to view the dashboard for the IBM Application Security on Cloud instance that you connected to.
-
-### Learn more about Application Security on Cloud
-
-To learn more about Application Security on Cloud, see the [Application Security on Cloud article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/manage/tool_ibm_security_appscan/){: new_window} on the IBM Cloud Garage Method.
+  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using {{site.data.keyword.Bluemix_notm}} Availability Monitoring and Alert Notification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## Configuring Artifactory
@@ -243,7 +217,7 @@ To test, monitor, and improve your app's health as you build it, add the {{site.
 
 To learn more about {{site.data.keyword.prf_hubshort}}, see the [{{site.data.keyword.prf_hublong}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window} on the IBM Cloud Garage Method or take this tutorial:
 
-  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using Bluemix Availability Monitoring and Alert Notification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using {{site.data.keyword.Bluemix_notm}} Availability Monitoring and Alert Notification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## Configuring Bitbucket
@@ -335,7 +309,7 @@ Configure {{site.data.keyword.deliverypipeline}} to automate the continuous buil
 
   **Tip:** If you want the pipeline to automatically run when a commit is pushed to your GitHub, {{site.data.keyword.ghe_short}}, or Git repository (repo), follow these steps:
 
-   a. Configure GitHub, {{site.data.keyword.ghe_short}}, or {{site.data.keyword.gitrepos}} for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub, {{site.data.keyword.ghe_short}}, or Git repos that are associated with your toolchain. For instructions to configure GitHub, see the [GitHub](#github) section. For instructions to configure Dedicated {{site.data.keyword.ghe_short}}, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. For instructions to configure {{site.data.keyword.gitrepos}}, see the [{{site.data.keyword.gitrepos}}](##gitbluemix) section.
+   a. Configure GitHub, {{site.data.keyword.ghe_short}}, or {{site.data.keyword.gitrepos}} for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub, {{site.data.keyword.ghe_short}}, or Git repos that are associated with your toolchain. For instructions to configure GitHub, see the [GitHub](#github) section. For instructions to configure Dedicated {{site.data.keyword.ghe_short}}, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. For instructions to configure {{site.data.keyword.gitrepos}}, see the [{{site.data.keyword.gitrepos}}](#gitbluemix) section.
 
    b. Use a webhook. Without a webhook, you can run pipelines manually only. To use a webhook when you link to a GitHub or {{site.data.keyword.ghe_short}} repo, you need admin priviledges. To link to a {{site.data.keyword.gitrepos}} repo, you need Master or Owner priviledges.
 
@@ -451,7 +425,7 @@ If you are configuring {{site.data.keyword.gitrepos}} as you are creating the to
 
 If you have a toolchain and want to migrate a Git repo in your toolchain to {{site.data.keyword.gitrepos}}, follow these steps:
 
-**Note**: These instructions apply to toolchains that already contain the Git repo that you want to migrate to {{site.data.keyword.gitrepos}}. For information about adding different types of Git repos to your toolchain, see the [Configuring GitHub and Issues](#github), [Configuring GitHub Enterprise and Issues on Bluemix Dedicated](#configghe), and [Configuring GitLab](#gitlab) sections.
+**Note**: These instructions apply to toolchains that already contain the Git repo that you want to migrate to {{site.data.keyword.gitrepos}}. For information about adding different types of Git repos to your toolchain, see the [Configuring GitHub and Issues](#github), [Configuring GitHub Enterprise and Issues on {{site.data.keyword.Bluemix_notm}} Dedicated](#configghe), and [Configuring GitLab](#gitlab) sections.
 
 1. On the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
 1. Click **Add a Tool**.
@@ -489,7 +463,7 @@ To learn more about {{site.data.keyword.gitrepos}}, see the [{{site.data.keyword
   * [Create a toolchain that uses {{site.data.keyword.gitrepos}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
 
 
-## Configuring GitHub and Issues
+## Configuring GitHub
 {: #github}
 
 GitHub is a web-based hosting service for Git repos. You can have both local and remote copies of your repos, which makes it easy to collaborate.
@@ -551,15 +525,15 @@ If you have a toolchain and are adding this tool integration to it, follow these
 
 **Note:** If you don't have admin privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 
-### Learn more about GitHub and Issues
+### Learn more about GitHub
 
-To learn more about GitHub and Issues, see the [GitHub article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/code/tool_github/){: new_window} and the [GitHub Issues article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
+To learn more about GitHub, see the [GitHub article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/code/tool_github/){: new_window} and the [GitHub Issues article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
 
   * [Deployment Risk Analytics with GitHub and Jenkins ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
   * [Create a custom toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_custom){:new_window}
 
 
-## Configuring GitHub Enterprise and Issues on Bluemix Dedicated
+## Configuring GitHub Enterprise and Issues on {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #configghe}
 
  **Note:** These instructions apply to {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, some steps might differ depending on your internal procedures.
