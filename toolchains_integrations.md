@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-3"
+lastupdated: "2018-1-5"
 
 ---
 
@@ -352,7 +352,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 
 ### Learn more about Delivery Pipeline
 
-To learn more about {{site.data.keyword.deliverypipeline}}, see the [Delivery Pipeline article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
+To learn more about {{site.data.keyword.deliverypipeline}}, see [Working with pipelines](/docs/services/ContinuousDelivery/pipeline_working.html){: new_window} and the [Delivery Pipeline article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
 
   * [Create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline){:new_window}
   * [Create and use your first toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}
