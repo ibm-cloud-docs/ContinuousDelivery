@@ -42,6 +42,7 @@ The tool integrations that are available to add and configure for your toolchain
 |Sauce Labs		|Yes		|No		|
 |Slack			|Yes		|Yes		|
 |SonarQube			|Yes		|Yes		|
+|UrbanCode Deploy			|Yes		|No		|
 {: caption="Table 1. Tool integrations available for toolchains on {{site.data.keyword.Bluemix_notm}} Public and Dedicated" caption-side="top"}
 
 **Tip:** If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
@@ -1036,3 +1037,26 @@ Configure SonarQube to continuously analyze and measure the quality of your sour
 ### Learn more about SonarQube
 
 To learn more about SonarQube, see the [SonarQube article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window} on the IBM Cloud Garage Method.
+
+
+## Adding UrbanCode Deploy (Beta)
+{: #urbancodedeploy}
+
+IBM UrbanCode Deploy simplifies and automates application deployment. It uses a graphical flowchart tool to create automated processes that deploy, upgrade, roll back, and uninstall applications. By using those automated tasks, you move your applications through each stage in the development pipeline, including development, testing, and production environments.
+
+**Note:** This tool integration is available only on {{site.data.keyword.Bluemix_notm}} Public. It is preconfigured and does not require any configuration parameters. You cannot reconfigure this tool integration.
+
+To view deployment trends across applications, teams, and environments and find bottlenecks in the delivery pipeline and which areas are more efficient, add the UrbanCode Deploy tool integration.
+
+1. From the DevOps dashboard, click **Toolchains**. Click the toolchain that you want to add UrbanCode Deploy to. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+
+ a. Click **Add a Tool**.
+
+ b. In the Tool Integrations section, click **UrbanCode Deploy**.
+
+1. Click **Create Integration**.
+1. From your toolchain, click **UrbanCode Deploy**. To see data from an UrbanCode Deploy server in Delivery Insights, you must set up an instance of DevOps Connect, install a patch on the server, and then connect that server to DevOps Connect. For more information, see [Showing data from IBM UrbanCode Deploy servers](/docs/services/DevOpsInsights/uc_insights_connect_ucd.html){: new_window}.
+
+### Learn more about UrbanCode Deploy
+
+To learn more about UrbanCode Deploy, see the [IBM UrbanCode Deploy article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/tool_ibm_urbancode_deploy/){: new_window} on the IBM Cloud Garage Method.
