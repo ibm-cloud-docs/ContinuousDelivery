@@ -1,8 +1,8 @@
 ---
 
 Copyright:
- years: 2015, 2017
-lastupdated: "2017-12-07"
+ years: 2015, 2018
+lastupdated: "2018-1-9"
 
 ---
 
@@ -27,8 +27,10 @@ As team members join a project, they need an integrated set of tools that span d
 
 {{site.data.keyword.contdelivery_full}} provides a core set of tools for any DevOps toolchain: Git repositories, issue tracking, delivery pipeline, and Web IDE. Git Repositories and Issue Tracking is based on GitLab Community Edition, and offers planning boards and source code collaboration through merge requests. The Delivery Pipeline orchestrates build, testing, and deployment jobs across multiple environments as changes progress from the developer to production. Applications can be deployed in minutes to the Cloud Foundry environment or to a Kubernetes cluster on {{site.data.keyword.Bluemix_notm}}, to either public or private clouds. The Eclipse Orion Web IDE gives developers quick access to the code from any browser.
 
-Open toolchain integrates additional tools around Continuous Delivery such as Slack, Atlassian JIRA, Sonatype Nexus, JFrog Artifactory, Sauce Labs, PagerDuty, IBM Cloud Availability Monitoring, IBM Cloud Alert Notification, IBM Vulnerability Advisor, and IBM Globalization Pipeline. You can also substitute other tools for the Continuous Delivery capabilities, include GitHub, GitHub Enterprise, and Jenkins. And, of course, developers can use their favorite IDEs and editors, like Visual Studio Code, Eclipse, and others.
+Open toolchain integrates additional tools around Continuous Delivery such as Slack, Atlassian JIRA, Sonatype Nexus, JFrog Artifactory, Sauce Labs, PagerDuty, IBM Cloud Availability Monitoring, IBM Cloud Alert Notification, IBM Vulnerability Advisor, and IBM Globalization Pipeline. You can also substitute other tools for the Continuous Delivery capabilities, including GitHub, GitHub Enterprise, and Jenkins. And, of course, developers can use their favorite IDEs and editors, like Visual Studio Code, Eclipse, and others.
 
 Code repos, issue tracking systems, build systems, and deployment systems represent a wealth of data that can be used to help you deliver apps more efficiently and effectively. {{site.data.keyword.DRA_full}} uses big data analysis to provide valuable insights to executives, managers and developers. DevOps Insights aggregates and analyzes data from your DevOps toolchain to advise you about the risk of deploying specific changes, as well as areas to improve both your codebase and team productivity. The Delivery Pipeline can automatically gate deployment to an environment based on the risk of a change.
+
+**Note**: {{site.data.keyword.DRA_short}} is available only in the US South region.
 
 {{site.data.keyword.Bluemix_notm}} DevOps provides concrete practices and architectures for cloud development, enables developers to get started quickly with new projects that employ the rich catalog of services on the {{site.data.keyword.Bluemix_notm}}, and provides developers an open and integrated set of tools for automating delivery with speed and control.
