@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-5"
+lastupdated: "2018-1-12"
 
 ---
 
@@ -17,32 +17,32 @@ lastupdated: "2018-1-5"
 You can configure tool integrations that support development, deployment, and operations tasks while you create an open toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
 {:shortdesc}
 
-The tool integrations that are available to add and configure for your toolchain are different depending on whether you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. If you are using toolchains on {{site.data.keyword.Bluemix_notm}} Dedicated, the tool integrations that are available to you depend on how {{site.data.keyword.contdelivery_full}} was set up on your specific environment.
+The tool integrations that are available to add and configure for your toolchain are different depending on whether you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. If you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public, the tool integrations that are available to you depend on the region of your toolchain and the availabiliy of tool integrations in that region. If you are using toolchains on {{site.data.keyword.Bluemix_notm}} Dedicated, the tool integrations that are available to you depend on how {{site.data.keyword.contdelivery_full}} was set up on your specific environment.
 
 |Tool integration |Available on {{site.data.keyword.Bluemix_notm}} Public	|Available on {{site.data.keyword.Bluemix_notm}} Dedicated (environment dependent)|
 |:----------|:------------------------------|:------------------|
-|{{site.data.keyword.alertnotificationshort}}		|Yes		|No		|
-|Artifactory		|Yes		|Yes		|
-|Availability Monitoring		|Yes		|No		|
-|Bitbucket		|Yes		|No		|
-|Cloud Event Management		|Yes		|No		|
-|{{site.data.keyword.deliverypipeline}} 		|Yes	   	|Yes  		|
-|{{site.data.keyword.DRA_short}} 		|Yes		|No			|
-|Eclipse Orion {{site.data.keyword.webide}}		|Yes		|Yes			|
-|{{site.data.keyword.gitrepos}}	|Yes		|No		|
-|GitHub		|Yes		|Yes		|
+|{{site.data.keyword.alertnotificationshort}}		|US South		|No		|
+|Artifactory		|US South, Germany		|Yes		|
+|Availability Monitoring		|US South		|No		|
+|Bitbucket		|US South, Germany		|No		|
+|Cloud Event Management		|US South		|No		|
+|{{site.data.keyword.deliverypipeline}} 		|US South, Germany	   	|Yes  		|
+|{{site.data.keyword.DRA_short}} 		|US South		|No			|
+|Eclipse Orion {{site.data.keyword.webide}}		|US South, Germany		|Yes			|
+|{{site.data.keyword.gitrepos}}	|US South, Germany		|No		|
+|GitHub		|US South, Germany		|Yes		|
 |Dedicated {{site.data.keyword.ghe_short}} and Issues			|No		|Yes		|
-|GitLab		|Yes		|No		|
-|Jenkins		|Yes		|Yes		|
-|JIRA		|Yes		|Yes		|
-|Nexus			|Yes		|Yes		|
-|Other Tool			|Yes		|Yes		|
-|PagerDuty			|Yes		|Yes		|
-|Rational Team Concert			|Yes		|Yes		|
-|Sauce Labs		|Yes		|No		|
-|Slack			|Yes		|Yes		|
-|SonarQube			|Yes		|Yes		|
-|UrbanCode Deploy			|Yes		|No		|
+|GitLab		|US South, Germany		|No		|
+|Jenkins		|US South, Germany		|Yes		|
+|JIRA		|US South, Germany		|Yes		|
+|Nexus			|US South, Germany		|Yes		|
+|Other Tool			|US South, Germany		|Yes		|
+|PagerDuty			|US South, Germany		|Yes		|
+|Rational Team Concert			|US South, Germany		|Yes		|
+|Sauce Labs		|US South, Germany		|No		|
+|Slack			|US South, Germany		|Yes		|
+|SonarQube			|US South, Germany		|Yes		|
+|UrbanCode Deploy			|US South		|No		|
 {: caption="Table 1. Tool integrations available for toolchains on {{site.data.keyword.Bluemix_notm}} Public and Dedicated" caption-side="top"}
 
 **Tip:** If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
@@ -478,7 +478,11 @@ You can configure GitHub as a tool integration in your toolchain so that you can
 If you are configuring this tool integration as you are creating the toolchain, follow these steps:
 
 1. If you are storing your source code in a GitHub repo, in the Configurable Integrations section, click **GitHub**. If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
-1. If you are using a repo on your own {{site.data.keyword.ghe_short}} server, in the Configurable Integrations section, click **Add custom server**. Type a title for your custom GitHub server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**. 
+1. If you are using a repo on your own {{site.data.keyword.ghe_short}} server, in the Configurable Integrations section, click **Add custom server**. 
+
+ **Important**: The network must be able to access the target Git server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment. If your GitHub server is not available on the public internet or the hostname does not resolve on the public Domain Name Server (DNS), [open a support ticket](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. You can use the support ticket to submit a request to open the network routes or update the DNS settings.
+
+ Type a title for your custom GitHub server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**. 
  
   **Tip**: If you don't have a personal access token, you can create one:
   
@@ -588,7 +592,11 @@ You can configure GitLab as a tool integration in your toolchain so that you can
 If you are configuring this tool integration as you are creating the toolchain, follow these steps:
 
 1. If you are storing your source code in a GitLab repo, in the Configurable Integrations section, click **GitLab**. If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitLab, click **Authorize** to go to the GitLab website. If you don't have an active GitLab session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitLab account. If you have an active GitLab session but you haven't entered your password recently, you might be prompted to enter your GitLab password to confirm.
-1. If you are using a repo on your own GitLab server, in the Configurable Integrations section, click **Add custom server**. Type a title for your custom GitLab server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**. 
+1. If you are using a repo on your own GitLab server, in the Configurable Integrations section, click **Add custom server**. 
+
+ **Important**: The network must be able to access the target GitLab server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment. If your GitLab server is not available on the public internet or the hostname does not resolve on the public Domain Name Server (DNS), [open a support ticket](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. You can use the support ticket to submit a request to open the network routes or update the DNS settings.
+
+ Type a title for your custom GitLab server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**. 
  
   **Tip**: If you don't have a personal access token, you can create one:
   
