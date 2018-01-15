@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-04"
+  years: 2015, 2018
+lastupdated: "2018-1-12"
 
 ---
 
@@ -37,6 +37,9 @@ Toolchains are like projects, with a few important differences:
 
 - Projects can have only one repository (repo) and pipeline. Toolchains can have as many repos and pipelines as you need.
 - Toolchains can include tools that aren't available in projects, such as Slack, Sauce Labs, PagerDuty, and {{site.data.keyword.DRA_full}}.
+
+ **Note**: {{site.data.keyword.DRA_short}} is available only in the US South region.
+ 
 - In projects, membership was maintained at the project level. Access to toolchains is managed by {{site.data.keyword.Bluemix_notm}} organization (org) and by toolchain. To work with a toolchain, you must be a member of the org that contains the toolchain. The toolchain owner has further control over who can access the toolchain and what they can do. For details, see step 2 in [Getting started with your toolchain](#upgrade_next_steps).
 - Depending on the type of repo you used in your project on hub.jazz.net, your toolchain might contain a GitHub.com repo or a {{site.data.keyword.gitrepos}} repo.
 
@@ -62,6 +65,8 @@ You can learn more about toolchains on [YouTube ![External link icon](../../icon
         **Tip:** To check which remote URLs are set to which remote names, use the `git remote -v` command. The default remote name is `origin`. If you have a more advanced setup, the form of the command is as follows: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
 3. Optional: To explore your project's development maturity, your team's practices, and the quality of your code base, add IBM Cloud {{site.data.keyword.DRA_short}} to your toolchain. {{site.data.keyword.DRA_short}} applies developer, team, and deployment analytics to DevOps projects. For more information, see [Getting started with {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html).
+
+  **Note**: {{site.data.keyword.DRA_short}} is available only in the US South region.
 
 
 ## Troubleshooting
