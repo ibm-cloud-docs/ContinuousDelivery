@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-6"
+  years: 2015, 2018
+lastupdated: "2018-1-9"
 
 ---
 
@@ -113,6 +113,8 @@ You can delete a toolchain and specify which of the associated tool integrations
 ##Take a tutorial: Using toolchains
 {: #toolchain-tutorial}
 
-Check out this tutorial on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage){:new_window}:
+Check out these tutorials on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage){:new_window}:
   * [Create and use your first toolchain (GitHub) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
   * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+  
+  **Note**: {{site.data.keyword.DRA_short}} is available only in the US South region.
