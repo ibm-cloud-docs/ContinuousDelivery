@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-8-18"
+  years: 2017, 2018
+lastupdated: "2018-1-9"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -21,6 +21,8 @@ lastupdated: "2017-8-18"
 
 With the composite pipeline feature for {{site.data.keyword.deliverypipeline}}, you can manage repeatable continuous integration and continuous delivery processes for related software apps.
 {:shortdesc}
+
+**Note**: This feature is available only in the US South region.
 
 You create composite pipelines to manage the apps in a toolchain. If your toolchain contains apps that are deployed by {{site.data.keyword.deliverypipeline}}, you can set the composite pipeline to update when you add or remove delivery pipelines from the toolchain. You can also add apps from external sources to the composite pipeline.
 
@@ -226,3 +228,5 @@ When you are a member of an org that is connected to IBM UrbanCode Deploy, you c
 
 Check out this tutorial on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage){:new_window}:
   * [Create and use a microservices toolchain with DevOps Insights (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+  
+  **Note**: {{site.data.keyword.DRA_short}} is available only in the US South region.
