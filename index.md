@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-6"
+  years: 2015, 2018
+lastupdated: "2018-1-15"
 
 ---
 
@@ -15,14 +15,11 @@ lastupdated: "2017-12-6"
 Adopt a DevOps approach by using {{site.data.keyword.contdelivery_full}}, which includes open toolchains that automate the building and deployment of applications. You can get started by creating a simple deployment toolchain that supports development, deployment, and operations tasks.
 {: shortdesc}
 
-After you create an instance of {{site.data.keyword.contdelivery_short}} by selecting it from the {{site.data.keyword.Bluemix_notm}} catalog, you can choose how you want to get started with the service.
- ![Continuous Delivery welcome page](images/cd_landing_page.png)
+After you create an instance of {{site.data.keyword.contdelivery_short}} by selecting it from the {{site.data.keyword.Bluemix_notm}} catalog, you can create a continuous delivery toolchain from a template or work with existing toolchains.
+ ![Continuous Delivery welcome page](images/cd_landing_page2.png)
 
-* To get started quickly and deploy your application by using an automated pipeline, in the "Starting with a pipeline" section, click **[Start here](#starting_with_a_pipeline)**. You can add more tools later.
-* To create and configure a continuous delivery toolchain from a template, in the "Starting from a toolchain template" section, click **[Start here](#starting_from_a_toolchain_template)**. The toolchain integrates tools for planning, developing, deploying pipelines, and managing your applications. You can always add or remove tools from your toolchains.
-* If you already have toolchains, in the "Starting from a toolchain template" section, click **View your toolchains**. For more information about working with toolchains, see [Using toolchains](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
-
-**Tip**: Pipelines are managed by toolchains. You can add a pipeline to an existing toolchain. If you create a pipeline and don't have any existing toolchains, a toolchain with a default name is created for you. With the toolchain, you can expand the capabilities of your pipeline by integrating with other tools and services.
+* To create and configure a continuous delivery toolchain from a template, click **[Start here](#starting_from_a_toolchain_template)**. The toolchain integrates tools for planning, developing, deploying pipelines, and managing your applications. You can always add or remove tools from your toolchains.
+* If you already have toolchains, in the "Start from a toolchain template" section, click **View your toolchains**. For more information about working with toolchains, see [Using toolchains](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
 
 ##{{site.data.keyword.contdelivery_short}} overview
 {: #cd_overview}
@@ -35,6 +32,8 @@ The {{site.data.keyword.contdelivery_short}} service supports your DevOps workfl
  * You can create integrated DevOps open [toolchains](/docs/services/ContinuousDelivery/toolchains_about.html){: new_window} to enable tool integrations that support your development, deployment, and operations tasks.
 
   A toolchain is an integrated set of tools that you can use to collaboratively develop, build, deploy, test, and manage applications and make operations repeatable and easier to manage. Toolchains can include open source tools, {{site.data.keyword.Bluemix_notm}} services, such as [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window}, and third-party tools, such as GitHub, PagerDuty, and Slack. 
+  
+  **Note**: {{site.data.keyword.DRA_short}} is available only in the US South region.
 
  * Deliver continuously by using automated [pipelines](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window}.
 
@@ -48,50 +47,6 @@ The {{site.data.keyword.contdelivery_short}} service supports your DevOps workfl
 
   Manage Git repos through fine-grained access controls that keep code secure. Review code and enhance collaboration through merge requests. Track issues and share ideas through the issue tracker. Document projects on the wiki system.
 
-##Starting with a pipeline
-{: #starting_with_a_pipeline}
-
-Pipelines automate builds, deployments, and more. To get started with an automated pipeline, select a template and provide the location of your GitHub repository (repo).
-
-To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/pipelines/dashboard/create){:new_window} that is configured to deploy a Cloud Foundry application, follow these steps:
-
-1. Click **Cloud Foundry**.
-1. If you want to use a different name for the pipeline, change its default name. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}.
-1. If you want to use a different name for the application, change its default name. The application's name identifies it in {{site.data.keyword.Bluemix_notm}}. This name is the application that the pipeline deploys to.
-1. If you want to create the pipeline in a different organization (org), change its default org. You can create pipelines in orgs that you belong to.
-1. If you want to create the pipeline in a different space, change its default space. You can create the pipeline in a space that is in your org.
-1. If you don't have a toolchain, a toolchain with a default name is created for you. If you want to use a different name for the toolchain, change its name. Pipelines are managed by toolchains. With the toolchain, you can extend the capabilities of your pipeline by integrating with other tools and services.
-
- **Tip**: Pipelines and toolchains belong to orgs. If you belong to an org that has toolchains, you can use those toolchains even if you didn't create them.
-
-1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
-1. Select your Git provider.
-
- **Tip**: If {{site.data.keyword.Bluemix_notm}} is not authorized to access your GitHub account, you are prompted to click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account.
-
- If you are not authorized to access the {{site.data.keyword.ghe_short}} repo, someone who has admin privileges for the repo must add you. For instructions to authorize with {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, see [Getting started with {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}](/docs/services/ghededicated/index.html){: new_window}. If you need to authorize with your own managed version of {{site.data.keyword.ghe_short}}, follow your internal procedures.
-
-    * If you have a repo and want to use it, for the repository type, select **Link**. Search for the location of the repo or select the repo from the list of available repos.
-
-    * If you want to create an empty repo, for the repository type, select **New**. Type a name for the repo.
-
-    * If you want to create a clone of a repo, for the repository type, select **Copy**. Search for the location of the repo or select the repo from the list of available repos.
-
-    * If you want to fork a repo so that you can contribute changes through pull requests, select **Fork**. Search for the location of the repo or select the repo from the list of available repos.
-
-1. Select a repo or enter a repo URL.
-1. Click **Create**. The pipeline is created, configured, and displayed on the toolchain's Overview page.
- ![Pipeline card](images/cd_pipeline.png)
-
-To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
-
-1. Click **Custom**.
-1. If you want to use a different name for the pipeline, change its default name. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}.
-1. If you want to create the pipeline in a different org, change its default org. You can create pipelines in orgs that you belong to.
-1. If you want to create the pipeline in a different space, change its default space. You can create the pipeline in a space that is in your org.
-1. If you don't have a toolchain, a toolchain with a default name is created for you. If you want to use a different name for the toolchain, change its name. Pipelines are managed by toolchains. With the toolchain, you can extend the capabilities of your pipeline by integrating with other tools and services.
-1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
-1. Click **Create**. An empty pipeline is created and represented as a card on the toolchain's Overview page.
 
 ##Starting from a toolchain template
 {: #starting_from_a_toolchain_template}
