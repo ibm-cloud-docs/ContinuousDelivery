@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-24"
+  years: 2017, 2018
+lastupdated: "2018-1-9"
 
 ---
 
@@ -17,6 +17,8 @@ lastupdated: "2017-10-24"
 In a deployment plan for a composite pipeline, a task represents some business-meaningful activity that is associated with a software deployment. Tasks are defined in deployment plans.
 
 {:shortdesc}
+
+**Note**: This feature is available only in the US South region.
 
 Most tasks have a starting point, an ending point, and a measurable duration. A task can be of one of following types:
 
