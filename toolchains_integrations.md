@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-12"
+lastupdated: "2018-1-16"
 
 ---
 
@@ -594,7 +594,7 @@ If you are configuring this tool integration as you are creating the toolchain, 
 1. If you are storing your source code in a GitLab repo, in the Configurable Integrations section, click **GitLab**. If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitLab, click **Authorize** to go to the GitLab website. If you don't have an active GitLab session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitLab account. If you have an active GitLab session but you haven't entered your password recently, you might be prompted to enter your GitLab password to confirm.
 1. If you are using a repo on your own GitLab server, in the Configurable Integrations section, click **Add custom server**. 
 
- **Important**: The network must be able to access the target GitLab server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment. If your GitLab server is not available on the public internet or the hostname does not resolve on the public Domain Name Server (DNS), [open a support ticket](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. You can use the support ticket to submit a request to open the network routes or update the DNS settings.
+ **Important**: The network must be able to access the target GitLab server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment.
 
  Type a title for your custom GitLab server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**. 
  
