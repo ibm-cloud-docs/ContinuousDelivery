@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-4-4"
+  years: 2016, 2018
+lastupdated: "2018-1-23"
 ---
 
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-4-4"
 {:codeblock:.codeblock}
 
 
-# About Delivery Pipeline
+# Delivery Pipeline Overview
 {: #deliverypipeline_about}
 
 {{site.data.keyword.contdelivery_full}} includes Delivery Pipeline to build, test, and deploy in a repeatable way with minimal human intervention. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
@@ -101,17 +101,6 @@ If your tests produce result files in JUnit XML format, a report that is based o
 
 You can include environment properties in the script of a test job. The properties provide access to information about the job's run environment. For more information, see [Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
 
-## Manifest files
-{: #deliverypipeline_manifest}
-
-Manifest files, which are named `manifest.yml` and stored in a project's root directory, control how your project is deployed to {{site.data.keyword.Bluemix_notm}}. For information about creating manifest files for a project, see the [{{site.data.keyword.Bluemix_notm}} documentation about application manifests](/docs/manageapps/depapps.html#appmanifest). To integrate with Bluemix, your project must have a manifest file in its root directory. However, you are not required to deploy based on the information in the file.
-
-In the pipeline, you can specify everything that a manifest file can by using `cf push` command arguments. The `cf push` command arguments are helpful in projects that have multiple deployment targets. If multiple deploy jobs all try to use the route that is specified in the project manifest file, a conflict occurs.
-
-To avoid conflicts, you can specify a route by using `cf push` followed by the host name argument, `-n`, and a route name. By modifying the deployment script for individual stages, you can avoid route conflicts when you deploy to multiple targets.
-
-To use the `cf push` command arguments, open the configuration settings for a deploy job and modify the **Deploy Script** field. For more information, see the [Cloud Foundry Push documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}.
-
 ## An example pipeline
 {: #deliverypipeline_example}
 
@@ -128,3 +117,15 @@ This pipeline is shown in the following conceptual diagram:
 *A conceptual model of a three-stage pipeline*
 
 Stages take their input from repositories and build jobs, and jobs within a stage run sequentially and independently of each other. In the example pipeline, the stages run sequentially, even though the Test and Prod stages both take the Build stage's output as their input.
+
+## Cloud Foundry Manifest files
+{: #deliverypipeline_manifest}
+
+Manifest files, which are named `manifest.yml` and stored in a project's root directory, control how your project is deployed to {{site.data.keyword.Bluemix_notm}}. For information about creating manifest files for a project, see the [{{site.data.keyword.Bluemix_notm}} documentation about application manifests](/docs/manageapps/depapps.html#appmanifest). To integrate with {{site.data.keyword.Bluemix_notm}}, your project must have a manifest file in its root directory. However, you are not required to deploy based on the information in the file.
+
+In the pipeline, you can specify everything that a manifest file can by using `cf push` command arguments. The `cf push` command arguments are helpful in projects that have multiple deployment targets. If multiple deploy jobs all try to use the route that is specified in the project manifest file, a conflict occurs.
+
+To avoid conflicts, you can specify a route by using `cf push` followed by the host name argument, `-n`, and a route name. By modifying the deployment script for individual stages, you can avoid route conflicts when you deploy to multiple targets.
+
+To use the `cf push` command arguments, open the configuration settings for a deploy job and modify the **Deploy Script** field. For more information, see the [Cloud Foundry Push documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}.
+
