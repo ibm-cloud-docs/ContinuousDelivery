@@ -4,23 +4,30 @@
 {: .toc subcollection="ContinuousDelivery" audience="service" href="/docs/services/ContinuousDelivery/index.html"}
 Continuous Delivery
 
-  {: .navgroup id="learn"}
+    {: .navgroup id="learn"}
     index.md
     cd_about.md
     devops_intro.md
     garage_method.md
     limitations_plans.md
 
-  {: .topicgroup}
+    {: .topicgroup}
     Related links
-	    [IBM Cloud DevOps Insights](../DevOpsInsights/index.html#gettingstarted)
-	    [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage)
-  {: .navgroup-end}
+        [IBM Cloud DevOps Insights](../DevOpsInsights/index.html#gettingstarted)
+        [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage)
+    {: .navgroup-end}
 
-  {: .navgroup id="howto"}
-    toolchains_post_upgrade.md
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    Toolchains
+        toolchains_about.md
+        toolchains_working.md
+        toolchains_using.md
+        toolchains_integrations.md
+        deploy_button.md
+        toolchains_custom.md
 
-  {: .topicgroup}
+    {: .topicgroup}
     Delivery Pipeline
         pipeline_about.md
         pipeline_working.md
@@ -30,16 +37,7 @@ Continuous Delivery
         deliverypipeline_extension.md
         pipeline_deployment_plan.md
 
-  {: .topicgroup}
-    Toolchains
-        toolchains_about.md
-        toolchains_working.md
-        toolchains_using.md
-        toolchains_integrations.md
-        deploy_button.md
-	      toolchains_custom.md
-
-  {: .topicgroup}
+    {: .topicgroup}
     Eclipse Orion Web IDE
         web_ide.md
         git_web_ide.md
@@ -48,13 +46,15 @@ Continuous Delivery
     git_working.md
     git_locally.md
     di_working.md
-  {: .navgroup-end}
+    toolchains_post_upgrade.md
+    {: .navgroup-end}
 
-  {: .navgroup id="reference"}
-      [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki)
-  {: .navgroup-end}
+    {: .navgroup id="reference"}
+    [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki)
+    {: .navgroup-end}
 
-  {: .navgroup id="help"}
+    {: .navgroup id="help"}
     cd_support.md
     ts_index.md
-  {: .navgroup-end}
+    {: .navgroup-end}
+    
