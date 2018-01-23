@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-12"
+  years: 2015, 2018
+lastupdated: "2018-1-23"
 
 ---
 
@@ -98,7 +98,7 @@ If you are developing a Node.js app, enable Live Edit mode:  <img  src="./images
 ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}.
+To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.Bluemix_short}}.
 
 ### Before you begin
 
