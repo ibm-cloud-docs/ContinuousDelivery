@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-6-1"
+  years: 2016, 2018
+lastupdated: "2018-1-23"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -88,4 +88,4 @@ To view the runtime log of a deployed application, click **View runtime log**.
 
 In addition to job logs, you can view unit test results, generated artifacts, and code changes for any build job.
 
-You can also run, cancel, or configure a stage from the Stage History page. Click **RUN** to run a stage or **CONFIGURE** to configure a stage. While a stage is running, you can cancel it by clicking the run number and then clicking **CANCEL**.
+You can also run, redeploy, cancel, or configure a stage from the Stage History page. Click **RUN** to run the stage, **REDEPLOY** to redeploy if it is a deployment job, or **CONFIGURE** to configure a stage. While a stage is running, you can cancel it by clicking the run number and then clicking **CANCEL**.
