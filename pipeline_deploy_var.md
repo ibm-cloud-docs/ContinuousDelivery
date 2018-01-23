@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2017-12-12"
+  years: 2016,2018
+lastupdated: "2018-1-23"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -100,7 +100,7 @@ The following properties and resources are available by default in pipeline envi
 | CF_ORGANIZATION_ID | For deployments, the ID of the org to deploy to. |
 | CF_SPACE | For deployments, the name of the space to deploy to. |
 | CF_SPACE_ID | For deployments, the ID of the space to deploy to.  |
-| CF_TARGET_URL | For deployments, the URL of IBM Cloud&reg; or Cloud Foundry. |
+| CF_TARGET_URL | For deployments, the URL of {{site.data.keyword.Bluemix_short}} or Cloud Foundry. |
 | IDS_VERSION | For deployments, the version of the app that is being deployed or the source identifier. |
 
 ## Preinstalled resources
