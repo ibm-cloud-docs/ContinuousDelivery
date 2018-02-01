@@ -11,7 +11,7 @@ lastupdated: "2018-1-23"
 {:codeblock:.codeblock}
 
 
-# Delivery Pipeline Overview
+# Delivery Pipeline overview
 {: #deliverypipeline_about}
 
 {{site.data.keyword.contdelivery_full}} includes Delivery Pipeline to build, test, and deploy in a repeatable way with minimal human intervention. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
