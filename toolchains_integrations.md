@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-16"
+lastupdated: "2018-2-1"
 
 ---
 
@@ -17,31 +17,31 @@ lastupdated: "2018-1-16"
 You can configure tool integrations that support development, deployment, and operations tasks while you create an open toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
 {:shortdesc}
 
-The tool integrations that are available to add and configure for your toolchain are different depending on whether you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. If you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public, the tool integrations that are available to you depend on the region of your toolchain and the availabiliy of tool integrations in that region. If you are using toolchains on {{site.data.keyword.Bluemix_notm}} Dedicated, the tool integrations that are available to you depend on how {{site.data.keyword.contdelivery_full}} was set up on your specific environment.
+The tool integrations that are available to add and configure for your toolchain are different depending on whether you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. If you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public, the tool integrations that are available to you depend on the region of your toolchain and the availability of tool integrations in that region. If you are using toolchains on {{site.data.keyword.Bluemix_notm}} Dedicated, the tool integrations that are available to you depend on how {{site.data.keyword.contdelivery_full}} was set up on your specific environment.
 
 |Tool integration |Available on {{site.data.keyword.Bluemix_notm}} Public	|Available on {{site.data.keyword.Bluemix_notm}} Dedicated (environment dependent)|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.alertnotificationshort}}		|US South		|No		|
-|Artifactory		|US South, Germany		|Yes		|
+|Artifactory		|US South, Germany, United Kingdom		|Yes		|
 |Availability Monitoring		|US South		|No		|
-|Bitbucket		|US South, Germany		|No		|
+|Bitbucket		|US South, Germany, United Kingdom		|No		|
 |Cloud Event Management		|US South		|No		|
-|{{site.data.keyword.deliverypipeline}} 		|US South, Germany	   	|Yes  		|
+|{{site.data.keyword.deliverypipeline}} 		|US South, Germany, United Kingdom	   	|Yes  		|
 |{{site.data.keyword.DRA_short}} 		|US South		|No			|
-|Eclipse Orion {{site.data.keyword.webide}}		|US South, Germany		|Yes			|
-|{{site.data.keyword.gitrepos}}	|US South, Germany		|No		|
-|GitHub		|US South, Germany		|Yes		|
+|Eclipse Orion {{site.data.keyword.webide}}		|US South, Germany, United Kingdom		|Yes			|
+|{{site.data.keyword.gitrepos}}	|US South, Germany, United Kingdom		|No		|
+|GitHub		|US South, Germany, United Kingdom		|Yes		|
 |Dedicated {{site.data.keyword.ghe_short}} and Issues			|No		|Yes		|
-|GitLab		|US South, Germany		|No		|
-|Jenkins		|US South, Germany		|Yes		|
-|JIRA		|US South, Germany		|Yes		|
-|Nexus			|US South, Germany		|Yes		|
-|Other Tool			|US South, Germany		|Yes		|
-|PagerDuty			|US South, Germany		|Yes		|
-|Rational Team Concert			|US South, Germany		|Yes		|
-|Sauce Labs		|US South, Germany		|No		|
-|Slack			|US South, Germany		|Yes		|
-|SonarQube			|US South, Germany		|Yes		|
+|GitLab		|US South, Germany, United Kingdom		|No		|
+|Jenkins		|US South, Germany, United Kingdom		|Yes		|
+|JIRA		|US South, Germany, United Kingdom		|Yes		|
+|Nexus			|US South, Germany, United Kingdom		|Yes		|
+|Other Tool			|US South, Germany, United Kingdom		|Yes		|
+|PagerDuty			|US South, Germany, United Kingdom		|Yes		|
+|Rational Team Concert			|US South, Germany, United Kingdom		|Yes		|
+|Sauce Labs		|US South, Germany, United Kingdom		|No		|
+|Slack			|US South, Germany, United Kingdom		|Yes		|
+|SonarQube			|US South, Germany, United Kingdom		|Yes		|
 |UrbanCode Deploy			|US South		|No		|
 {: caption="Table 1. Tool integrations available for toolchains on {{site.data.keyword.Bluemix_notm}} Public and Dedicated" caption-side="top"}
 
@@ -594,7 +594,7 @@ If you are configuring this tool integration as you are creating the toolchain, 
 1. If you are storing your source code in a GitLab repo, in the Configurable Integrations section, click **GitLab**. If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitLab, click **Authorize** to go to the GitLab website. If you don't have an active GitLab session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitLab account. If you have an active GitLab session but you haven't entered your password recently, you might be prompted to enter your GitLab password to confirm.
 1. If you are using a repo on your own GitLab server, in the Configurable Integrations section, click **Add custom server**. 
 
- **Important**: The network must be able to access the target GitLab server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment.
+ **Important**: The network must be able to access the target GitLab server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment. 
 
  Type a title for your custom GitLab server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**. 
  
