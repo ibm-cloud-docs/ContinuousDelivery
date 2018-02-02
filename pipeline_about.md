@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-1-23"
+lastupdated: "2018-2-1"
 ---
 
 {:new_window: target="_blank"}
@@ -33,6 +33,33 @@ By default in a stage, builds and deployments are run automatically every time c
 You might want tighter control of a specific stage. If you do not want a stage to run every time that a change occurs at its input, you can disable the capability. On the **INPUT** tab, in the Stage Trigger section, click **Run jobs only when this stage is run manually**.
 
 ![The INPUT tab](images/input_tab_only_execute.png)
+
+
+### Build stage
+{: #build_stage}
+
+The build stage specifies a **Builder type** to indicate how to build the artifacts.  The following Builder types are available:
+
+1. **Simple** - If you use the **Simple** builder type, your code is not compiled or built; it is packaged and made available for future stages.
+2. **Ant**
+3. **Container Registry**
+4. **DEPRICATED - IBM Container Service** - Use **Container Registry**.
+5. **Gradle**
+6. **Gradle (Artifactory, Nexus, or SonarQube)**
+7. **Grunt**
+8. **IBM Globalization Pipeline**
+9. **Maven**
+10. **Maven (Artifactory, Nexus, or SonarQube)**
+11. **npm**
+12. **npm (Artifactory or Nexus)**
+13. **Shell Script**
+
+### Deploy stage
+The deploy stage specifies input from a Build stage.  The jobs in the deploy stage specify a **Deployer type**.  The following Deployer types are available:
+
+1. **Cloud Foundry**
+2. **DEPRICATED - IBM Container on Bluemix** - Use **Kubernetes**.
+3. **Kubernetes**
 
 ## Jobs
 {: #deliverypipeline_jobs}
