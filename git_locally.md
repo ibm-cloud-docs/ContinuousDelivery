@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-12-12"
+lastupdated: "2018-2-20"
 
 ---
 
@@ -28,7 +28,7 @@ You can manage and work with your source code in a GitHub, GitHub Enterprise, or
 
 | Git Type  | HTTPS Setup | HTTPS Use |  SSH Setup |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Personal access token](/docs/ContinuousDelivery/git_working.html#create_pat) | Git Repos and Issue tracking user name (not your IBM id) and personal access token | [Configure the SSH key](/docs/ContinuousDelivery/git_working.html#create_ssh) |
+| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Personal access token](/docs/services/ContinuousDelivery/git_working.html#git_authentication) | Git Repos and Issue tracking user name (not your IBM id) and personal access token | [Configure the SSH key](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
 | Public GitHub (github.com) | Personal access token is not required, but you can set one up and use it | GitHub user name and password, or GitHub user name and Personal Access token, or just the personal access token as the user name | [Configure a GitHub SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
 | GitHub Enterprise | [Personal access token](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | GitHub Enterprise user name (not your IBM id) and personal access token | [Configure the GitHub Enterprise SSH key](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
