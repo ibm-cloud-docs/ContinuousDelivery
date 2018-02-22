@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-1"
+lastupdated: "2018-2-16"
 
 ---
 
@@ -426,7 +426,7 @@ If you are configuring {{site.data.keyword.gitrepos}} as you are creating the to
 
 If you have a toolchain and want to migrate a Git repo in your toolchain to {{site.data.keyword.gitrepos}}, follow these steps:
 
-**Note**: These instructions apply to toolchains that already contain the Git repo that you want to migrate to {{site.data.keyword.gitrepos}}. For information about adding different types of Git repos to your toolchain, see the [Configuring GitHub and Issues](#github), [Configuring GitHub Enterprise and Issues on {{site.data.keyword.Bluemix_notm}} Dedicated](#configghe), and [Configuring GitLab](#gitlab) sections.
+**Note**: These instructions apply to toolchains that already contain the Git repo that you want to migrate to {{site.data.keyword.gitrepos}}. For information about adding different types of Git repos to your toolchain, see the [Configuring GitHub](#github), [Configuring GitHub Enterprise and Issues on {{site.data.keyword.Bluemix_notm}} Dedicated](#configghe), and [Configuring GitLab](#gitlab) sections.
 
 1. On the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
 1. Click **Add a Tool**.
