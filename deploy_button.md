@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-12-6"
+lastupdated: "2018-2-17"
 
 ---
 
@@ -89,54 +89,9 @@ When you customize the snippet for your Deploy to {{site.data.keyword.Bluemix_no
 
 Review these considerations for the repo that you use in your Deploy to {{site.data.keyword.Bluemix_notm}} button.
 
-### Manifest file requirements
 
-A `manifest.yml` file is not required to be in your repo. However, if your app requires other services to run, you must provide a manifest file that declares those services.
-
-With the manifest file, you can specify:
-
-* A unique app name.
-
-* Declared services, a manifest extension which creates or looks for the required or optional services that are expected to be set up before the app is deployed, such as a data cache service. You can find a list of the eligible {{site.data.keyword.Bluemix_notm}} services, labels, and plans by using the [CF Command Line Interface ![External link icon](../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases) to run the `cf marketplace` command or by browsing the [{{site.data.keyword.Bluemix_notm}} catalog](https://console.bluemix.net/catalog?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store).
-
-Declared services is an IBM extension of the standard Cloud Foundry manifest format. This extension might be revised in a future release as the feature evolves and improves.
-
-If you don't know how to create manifest files, [learn how to create them here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest){:new_window}.
-
-```YAML
----
-    #Template manifest.yml
-
-  declared-services:
-    arbitrary_service_instance_name:  # [required]
-      label: actual_service_name # [required] The actual service name from market place
-      plan: Shared # [optional] If provided, used to fetch the declared service. Otherwise, defaults to 'Free' or 'free'.
-  applications:
-  - services
-    - arbitrary_service_instance_name
-    name: appname
-    host: apphostname
-```
-{: codeblock}
-
-```YAML
----
-    #Example manifest.yml
-
-  declared-services:
-      sample-java-cloudant-cloudantNoSQLDB:
-        label: cloudantNoSQLDB
-        plan: Shared
-  applications:
-  - services
-    - sample-java-cloudant-cloudantNoSQLDB
-    name: My app
-    host: myapp
-```
-{: codeblock}
-
-
-### Build file requirements
+## Build file requirements
+{: build_file}
 
 If the app must be built before it can be deployed, you must include a build file in your repo. If a build script file is detected in the root directory of the repo, an automated build of the code is triggered before deployment.
 
@@ -148,17 +103,31 @@ Supported builders include:
 * [Maven ![External link icon](../../icons/launch-glyph.svg "External link icon"):](http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven){:new_window} `/pom.xml`, which builds output to the `./target/` folder
 
 ### Pipeline file requirements
+{: pipeline_file}
 
 To configure the pipeline for the toolchain in a `.bluemix` directory, include a `pipeline.yml` file. For each `pipeline.yml` file in that directory, a pipeline is created when the toolchain is instantiated.
 
+If you do not have `pipeline.yml` file in the `.bluemix` directory, the Deploy to {{site.data.keyword.Bluemix_notm}} button will create a default pipeline with two stages: a Build stage and a Deploy stage that deploys to Cloud Foundry.
+
 To create a pipeline file, consult the example file in the [custom toolchain pipeline instructions](toolchains_custom.html#toolchains_custom_pipeline_yml). Just as when you define a pipeline in the web interface, you define a pipeline in text by creating stages and jobs, setting inputs and environment variables, and adding scripts. You can also see a number of more complex pipeline files in [this demonstration project](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix).
 
-### Container dockerfile requirements
+### Container Dockerfile requirements
+{: container_dockerfile}
 
 To deploy an app in a container by using IBM Containers, you must include a Dockerfile in the root directory of the repo and, in a `.bluemix` directory, include a `pipeline.yml` file.
 
 The Dockerfile acts as a kind of build script for the app. If a Dockerfile is detected in the repo, the app is automatically built into an image before it is deployed in a container. If the app itself must be built before the app is built into an image, include a build script for the app and a Dockerfile.
 
-To learn more about creating Dockerfiles, see the [Docker documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.docker.com/reference/builder/){:new_window}.
+To learn more about creating Dockerfiles, see the [Docker documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.docker.com/reference/builder/){:new_window}.  To follow step-by-step instructions using a toolchain template to deploy to Kubernetes, see [Tutorial: Use the "Develop a Kubernetes app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window} or [Tutorial: Use the "Develop a Kubernetes app with Helm" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window}.  
+   To learn about port your Cloud Foundry app to a Kubernetes cluster, see [Tutorial: Port your Cloud Foundry app to deploy to Kubernetes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/port-an-app-from-cf-to-kubernetes-in-a-toolchain?task=0){:new_window}.  
+
+To create a `pipeline.yml` manually that is specifically for containers
 
 To create a `pipeline.yml` manually that is specifically for containers, see the [examples in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/Puquios/){:new_window}.
+
+## Manifest file requirements (for apps deployed to Cloud Foundry)
+{: #manifest_files}
+
+A `manifest.yml` file is not required to be in your repo. However, if your app requires other services to run, you must provide a manifest file that declares those services.
+
+Learn about manifest files here [learn how to create them here ![Application manifest](../cfapps/depapps.html#appmanifest).
