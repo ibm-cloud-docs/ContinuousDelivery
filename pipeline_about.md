@@ -43,23 +43,21 @@ The build stage specifies a **Builder type** to indicate how to build the artifa
 1. **Simple** - If you use the **Simple** builder type, your code is not compiled or built; it is packaged and made available for future stages.
 2. **Ant**
 3. **Container Registry**
-4. **DEPRICATED - IBM Container Service** - Use **Container Registry**.
-5. **Gradle**
-6. **Gradle (Artifactory, Nexus, or SonarQube)**
-7. **Grunt**
-8. **IBM Globalization Pipeline**
-9. **Maven**
-10. **Maven (Artifactory, Nexus, or SonarQube)**
-11. **npm**
-12. **npm (Artifactory or Nexus)**
-13. **Shell Script**
+4. **Gradle**
+5. **Gradle (Artifactory, Nexus, or SonarQube)**
+6. **Grunt**
+7. **IBM Globalization Pipeline**
+8. **Maven**
+9. **Maven (Artifactory, Nexus, or SonarQube)**
+10. **npm**
+11. **npm (Artifactory or Nexus)**
+12. **Shell Script**
 
 ### Deploy stage
 The deploy stage specifies input from a Build stage.  The jobs in the deploy stage specify a **Deployer type**.  The following Deployer types are available:
 
 1. **Cloud Foundry**
-2. **DEPRICATED - IBM Container on Bluemix** - Use **Kubernetes**.
-3. **Kubernetes**
+2. **Kubernetes**
 
 ## Jobs
 {: #deliverypipeline_jobs}
@@ -155,4 +153,3 @@ In the pipeline, you can specify everything that a manifest file can by using `c
 To avoid conflicts, you can specify a route by using `cf push` followed by the host name argument, `-n`, and a route name. By modifying the deployment script for individual stages, you can avoid route conflicts when you deploy to multiple targets.
 
 To use the `cf push` command arguments, open the configuration settings for a deploy job and modify the **Deploy Script** field. For more information, see the [Cloud Foundry Push documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}.
-
