@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-23"
+lastupdated: "2018-2-17"
 
 ---
 
@@ -158,9 +158,9 @@ To create the globalization stage and job:
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
-   
+
     **Tip:** Use the DevOps Services project name in the prefix so that the project can be identified easily in the Globalization Pipeline service.
- 
+
 
   h. Click **SAVE**.
 
@@ -327,12 +327,3 @@ To create HipChat notifications:
 6. Repeat these steps to send HipChat notifications for other stages that include IBM Container Service, IBM Security Static Analyzer, and IBM Globalization jobs.
 
 -->
-
-## Building and deploying container images with the pipeline
-{: #deliverypipeline_containers}
-
-You can automate your app builds and container deployments to {{site.data.keyword.Bluemix_notm}} by using the Delivery Pipeline in {{site.data.keyword.contdelivery_full}}. The Delivery Pipeline supports:
-  - Building Docker images
-  - Deploying images in containers to {{site.data.keyword.Bluemix_notm}}
-
-For more information about getting started, see the [Delivery Pipeline and containers overview](/docs/containers/container_integrations.html#container_pipeline_ov){: new_window}.
