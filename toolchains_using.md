@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-9"
+lastupdated: "2018-2-21"
 
 ---
 
@@ -79,23 +79,29 @@ If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.ke
 
 * To grant access to a user who is not a member of the toolchain's org, follow these steps:
 
-   a. From the menu bar, click **Manage > Account > Cloud Foundry Orgs**.
+   a. From the menu bar, click **Manage > Security > Identity and Access**.
 
-   b. Click **Invite Team Members**.
+   b. From the row for the user that you want to assign access, select the **Actions** menu, and then click **Assign access**.
 
-   c. Select the org that you want to invite the user to and click **Next**.
+   c. Select **Assign access by using Cloud Foundry**.
 
-   d. Select the spaces that you want to allow the user to access.
+   d. Select **Assign organization**.
 
-   e. Select the role to assign for the selected spaces in the org.
-
-     **Note:** By default, org managers have full admin privileges for all of the toolchains that are associated with the org. To grant full admin privileges to the user, select the **Manager** role. The Billing Manager and Auditor roles do not affect toolchain access. You can change the roles later on the Team Directory page. For more information, see [Managing team members and roles](/docs/admin/users_roles.html){: new_window}.
-
-   f. Select the option to confirm that you take financial responsibility for all charges that are incurred on the account.
-
-   g. Enter the email address of the user that you want to invite and click **Send**.
-
-   h. After the user is a member of the org, return to the toolchain's Manage page and add the user to the toolchain.  
+   e. Assign the user access:
+   
+     * Choose an organization to add the user to.
+     
+     * Assign an organization role. 
+     
+     * Choose a region.
+     
+     * Choose a space. 
+     
+     * Assign a role for the selected space in the organization.
+     
+     **Note:** By default, org managers have full admin privileges for all of the toolchains that are associated with the org. To grant full admin privileges to the user, select the **Manager** role. The Billing Manager and Auditor roles do not affect toolchain access. You can change the roles later on the Team Directory page. For more information, see [Cloud Foundry roles](/docs/iam/cfaccess.html#cfaccess){: new_window}.
+     
+   After the user is a member of the org, return to the toolchain's Manage page and add the user to the toolchain.  
 
 
 ## Deleting a toolchain
