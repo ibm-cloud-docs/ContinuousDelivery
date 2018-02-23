@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-16"
+lastupdated: "2018-2-23"
 
 ---
 
@@ -48,7 +48,7 @@ The tool integrations that are available to add and configure for your toolchain
 **Tip:** If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
 
 
-## Configuring Alert Notification (Experimental)
+## Configuring Alert Notification
 {: #alertnotification}
 
 {{site.data.keyword.alertnotificationfull}} is a hybrid cloud-based solution that you can use to centralize and simplify your notification strategy. It works with other cloud-based and on-premises applications. Alerts are forwarded to {{site.data.keyword.alertnotificationshort}} by using a secure RESTful API.
@@ -260,7 +260,7 @@ Configure Bitbucket to collaborate on code with your team:
 To learn more about Bitbucket, see the [Bitbucket article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/code/tool_bitbucket/){: new_window} on the IBM Cloud Garage Method. 
 
 
-## Adding Cloud Event Management (Experimental)
+## Adding Cloud Event Management
 {: #cloudeventmanagement}
 
 {{site.data.keyword.evtmgt_full}} provides a consolidated view of problems that occur with your services, applications, and infrastructure. You can set up real-time incident management to resolve the problems more efficiently.
