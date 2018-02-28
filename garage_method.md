@@ -3,7 +3,7 @@
 copyright:
   years: 2017, 2018
 
-lastupdated: "2017-12-11"
+lastupdated: "2018-2-26"
 
 ---
 <!-- Copyright info at top of file: REQUIRED
@@ -43,13 +43,11 @@ With [Delivery Pipeline ![External link icon](../../icons/launch-glyph.svg "Exte
 ## Continuous delivery tutorials
 {: #gm_cd_tutorials}
 
-[Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}. Learn how to create an open toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
+[Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}. Learn how to create an open toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
 
-[Add a toolchain to an app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain?=task1){:new_window}. Learn how to add an open toolchain to an app and use the toolchain to continuously deliver the app.
+[Add a toolchain to an app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}. Learn how to add an open toolchain to an app and use the toolchain to continuously deliver the app.
 
-[Use the "Develop and test microservices on Cloud Foundry" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}. Learn how to create a toolchain from a template with three microservices and use the toolchain to continuously deliver an online store.
-
-[Create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline){:new_window}. Learn how to start with a pipeline and create an open toolchain that includes a Git Repos and Issue Tracking repo and the pipeline.
+[Use the "Develop and test microservices on Cloud Foundry" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}. Learn how to create a toolchain from a template with three microservices and use the toolchain to continuously deliver an online store.
 
 For more tutorials, see the [Learning Lab ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/category/courses){:new_window}.
 

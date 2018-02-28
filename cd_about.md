@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2018
-lastupdated: "2018-2-1"
+lastupdated: "2018-2-26"
 
 ---
 
@@ -59,7 +59,7 @@ The "Develop and test microservices on Cloud Foundry" toolchain deploys an app w
   </tr>
   <tr><td>
   <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain" target="_blank">“Develop a Cloud Foundry app” toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-  
+
   Available in US South, Germany, and United Kingdom
 
   </td><td>
@@ -76,9 +76,9 @@ The "Develop and test microservices on Cloud Foundry" toolchain deploys an app w
 
   <tr><td>
   <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsecure-kube-toolchain" target="_blank">"Develop a Kubernetes app" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-  
+
   Available in US South, Germany, and United Kingdom
-  
+
   </td><td>
   With this toolchain, you can develop, and deploy an application securely into a Kubernetes cluster managed by the {{site.data.keyword.Bluemix_notm}} Container Service. By default, the toolchain uses a sample Node.js "Hello World" app, but you can link to your own GitHub repository instead. This toolchain is preconfigured for continuous delivery with Vulnerability Advisor, source control, issue tracking, and online editing. <br><br>
   Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain" target="_blank">Use the "Develop a Kubernetes app" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>  
@@ -93,9 +93,9 @@ The "Develop and test microservices on Cloud Foundry" toolchain deploys an app w
   <tr><td>
   <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-helm-toolchain" target="_blank">"Develop a Kubernetes app with Helm" toolchain
    <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-  
+
   Available in US South, Germany, and United Kingdom
-  
+
   </td><td>
   With this toolchain, you can develop a Docker application and its Helm chart together in source control and have it built and deployed automatically to a Kubernetes cluster. The toolchain performs sanity checks prior to building or deploying and ensures privacy by using a private container registry and namespaces for the container registry and the Kubernetes cluster. This toolchain is also leveraging Vulnerability Advisor, to ensure only secure images get deployed. <br><br>
   Try the tutorial: <a href="https://www.ibm.com/cloud/garage/use-develop-kubernetes-app-with-helm-toolchain" target="_blank">Use the "Develop a Kubernetes app with Helm" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>	 <br><br>
@@ -110,9 +110,9 @@ The "Develop and test microservices on Cloud Foundry" toolchain deploys an app w
   <tr><td>
   <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-helm-toolchain" target="_blank">"Develop and test a Cloud Foundry app" toolchain
    <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-  
+
   Available in US South, Germany, and United Kingdom
-  
+
   </td><td>
   With this cloud-native toolchain, you can use DevOps Insights to gate the deployment of a simple Cloud Foundry application. By default, the toolchain uses a sample Node.js weather app, or you can link to your own GitHub repository. The toolchain runs unit tests using Mocha, checks code coverage by using Istanbul.<br><br>
   Try the tutorial: <a href="https://www.ibm.com/cloud/garage/use-develop-test-cloud-foundry-app-toolchain" target="_blank">Use the "Develop and test a Cloud Foundry app" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>  <br><br>
@@ -128,9 +128,9 @@ The "Develop and test microservices on Cloud Foundry" toolchain deploys an app w
   <tr><td>
   <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-toolchain-hosted" target="_blank">
   "Develop and test microservices on Cloud Foundry" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-  
+
   Available in US South, Germany, and United Kingdom
-  
+
   </td><td>
   With this cloud-native toolchain, you can use a sample to create an online store that consists of three microservices: a Catalog API, an Orders API, and a UI that calls both of the APIs. The toolchain is preconfigured for continuous delivery, source control, functional testing, issue tracking, online editing, and alert notification. <br><br>
   Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain" target="_blank">Use the "Develop and test microservices on Cloud Foundry" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a><br><br>
@@ -151,7 +151,7 @@ The "Develop and test microservices on Cloud Foundry" toolchain deploys an app w
   <tr>
   <td><a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" targe="_blank">
 "Garage Method tutorial with Cloud Foundry" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-  
+
   Available in US South, Germany, and United Kingdom
 
 </td><td>
@@ -172,7 +172,7 @@ This toolchain demonstrates the DevOps practices that are featured in the Garage
 
 <tr><td>
 <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain" target="_blank">"Deployment Risk Analytics with GitHub and Jenkins" toolchain   <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-  
+
   Available in US South
 
 </td><td>With this toolchain, you can gain insights into your Jenkins process for continuous integration and delivery. You can configure the Jenkins server to send data to {{site.data.keyword.DRA_short}} when the jobs are run by Jenkins. You can also implement quality gates to block deployments based on policies. You can view results on the Deployment Risk dashboard in {{site.data.keyword.DRA_short}}. If you configure a GitHub repo to indicate the source repo that is used by Jenkins, change traceability is available.  
@@ -188,9 +188,9 @@ GitHub and Issues
 
 <tr><td>
 <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain" target="_blank">"Developer Insights and Team Dynamics with GitHub and JIRA" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-  
+
   Available in US South
-  
+
 </td><td>
 With this toolchain, you can explore your project's development risk and use social coding analysis to understand interaction patterns between developers. You can analyze GitHub source code in conjunction with GitHub issues, JIRA issues, or both. Use Developer Insights to identify files that are highly prone to errors, and see how the project complies with DevOps practices. The social coding analysis in Team Dynamics identifies the level of interaction between team members so that the team can fix unproductive practices.<br><br>
 Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain" target="_blank">Gain insights by using the "Developer Insights and Team Dynamics with GitHub and JIRA" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
@@ -205,7 +205,7 @@ GitHub and Issues
 
 <tr><td>
 <a href="(https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdeliveryinsights-toolchain" target="_blank">"Delivery Insights with IBM UrbanCode Deploy" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-  
+
   Available in US South
 
 </td><td>With this toolchain, you can view deployment metrics from IBM UrbanCode Deploy. Enable this toolchain to communicate with IBM UrbanCode Deploy by downloading and configuring DevOps Connect from the Settings page in {{site.data.keyword.DRA_short}}.
@@ -219,24 +219,24 @@ Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/view-metri
 
 <tr><td>
 <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain" target="_blank">Build your own toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-  
+
   Available in US South, Germany, and United Kingdom
-  
+
 </td><td>
 This toolchain has no preconfigured tools. If you are already familiar with toolchains, you can set up your own toolchain. <br><br>
-Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_custom" target="_blank">Create a custom toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
+Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Create a custom toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
 </td><td> &nbsp;&nbsp; None
 </td></tr>
 
 <tr><td>Continuous Delivery Toolchain <br><br>
-  
+
  Available in US South, Germany, and United Kingdom
- 
+
 </td><td>
 This toolchain is used when you enable continuous delivery for an app. <br><br>
 Try the tutorials:
 
-<ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain" target="_blank">Add a toolchain to an app <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
+<ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app" target="_blank">Add a toolchain to an app <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
 <li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Create a custom toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
 <li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Deploy a secure web application across multiple regions </a></li>
 </ul></td>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-21"
+lastupdated: "2018-2-26"
 
 ---
 
@@ -88,19 +88,19 @@ If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.ke
    d. Select **Assign organization**.
 
    e. Assign the user access:
-   
+
      * Choose an organization to add the user to.
-     
-     * Assign an organization role. 
-     
+
+     * Assign an organization role.
+
      * Choose a region.
-     
-     * Choose a space. 
-     
+
+     * Choose a space.
+
      * Assign a role for the selected space in the organization.
-     
+
      **Note:** By default, org managers have full admin privileges for all of the toolchains that are associated with the org. To grant full admin privileges to the user, select the **Manager** role. The Billing Manager and Auditor roles do not affect toolchain access. You can change the roles later on the Team Directory page. For more information, see [Cloud Foundry roles](/docs/iam/cfaccess.html#cfaccess){: new_window}.
-     
+
    After the user is a member of the org, return to the toolchain's Manage page and add the user to the toolchain.  
 
 
@@ -120,7 +120,9 @@ You can delete a toolchain and specify which of the associated tool integrations
 {: #toolchain-tutorial}
 
 Check out these tutorials on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage){:new_window}:
-  * [Create and use your first toolchain (GitHub) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
-  
-  **Note**: {{site.data.keyword.DRA_short}} is available only in the US South region.
+
+  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+
+  * [Add a toolchain to an app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.

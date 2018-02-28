@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-23"
+lastupdated: "2018-2-26"
 
 ---
 
@@ -88,8 +88,9 @@ Configure {{site.data.keyword.alertnotificationshort}} to receive notifications 
 
 To learn more about {{site.data.keyword.alertnotificationshort}}, see the [IBM {{site.data.keyword.alertnotificationshort}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/manage/tool_alert_notification/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
 
-  * [Add a tool integration to a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
-  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using {{site.data.keyword.Bluemix_notm}} Availability Monitoring and Alert Notification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [Add a tool integration to a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/add-a-tool-integration-to-a-toolchain){:new_window}
+
+  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using {{site.data.keyword.Bluemix_notm}} Availability Monitoring and Alert Notification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## Configuring Artifactory
@@ -218,7 +219,7 @@ To test, monitor, and improve your app's health as you build it, add the {{site.
 
 To learn more about {{site.data.keyword.prf_hubshort}}, see the [{{site.data.keyword.prf_hublong}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window} on the IBM Cloud Garage Method or take this tutorial:
 
-  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using {{site.data.keyword.Bluemix_notm}} Availability Monitoring and Alert Notification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using {{site.data.keyword.Bluemix_notm}} Availability Monitoring and Alert Notification ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## Configuring Bitbucket
@@ -233,7 +234,7 @@ Configure Bitbucket to collaborate on code with your team:
  a. Click **Add a Tool**.
 
  b. In the Tool Integrations section, click **Bitbucket**.
- 
+
    **Tip:** If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access Bitbucket, click **Authorize** to go to the Bitbucket website. If you don't have an active Bitbucket session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your Bitbucket account. If you have an active Bitbucket session but you haven't entered your password recently, you might be prompted to enter your Bitbucket password to confirm.
 
 1. Click the Bitbucket server that you want to use.
@@ -246,18 +247,18 @@ Configure Bitbucket to collaborate on code with your team:
 
  c. To fork a repo so that you can contribute changes through pull requests, click **Fork**.
 
-1. To create a private repo on the server, select the **Make this repository private** check box. 
+1. To create a private repo on the server, select the **Make this repository private** check box.
 1. To use Bitbucket Issues for issue tracking, select the **Enable Bitbucket Issues** check box.
 1. To track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Click **Create Integration**.
 1. From your toolchain, click the card for the Bitbucket repo that you want to work with. The Bitbucket website opens where you can view the contents of the repo.
-1. If you enabled Bitbucket Issues, click **Bitbucket Issues** to open it. You can use this instance of Bitbucket Issues for your entire toolchain, even if the toolchain contains multiple Bitbucket repos.    
+1. If you enabled Bitbucket Issues, click **Bitbucket Issues** to open it. You can use this instance of Bitbucket Issues for your entire toolchain, even if the toolchain contains multiple Bitbucket repos.    
 
 **Note:** If you don't have owner or master privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 
 ### Learn more about Bitbucket
 
-To learn more about Bitbucket, see the [Bitbucket article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/code/tool_bitbucket/){: new_window} on the IBM Cloud Garage Method. 
+To learn more about Bitbucket, see the [Bitbucket article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/code/tool_bitbucket/){: new_window} on the IBM Cloud Garage Method.
 
 
 ## Adding Cloud Event Management
@@ -329,8 +330,8 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 
 1. Configure the stage. On the **ENVIRONMENT PROPERTIES** tab, create the CF_APP_NAME property.
 
-  **Tip:** The Sauce Labs user name and access key are available in the test job script as the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables. When you write your tests, you must use these environment variables to authenticate with Sauce Labs.
-  
+  **Tip:** The Sauce Labs user name and access key are available in the test job script as the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables. When you write your tests, you must use these environment variables to authenticate with Sauce Labs.
+
 1. Configure the deploy job. In the **Deploy Script** field, include this command: `export CF_APP_NAME="$CF_APP"`. That command exports the app name as an environment property.
 1. Configure the test job. The values in the following image are examples. The **Service Instance**, **Target**, **Organization**, and **Space** fields are populated with the Sauce Labs user name, region, org, and space that you are using.  
 ![Configure job](images/toolchain_configure_job.png)
@@ -355,8 +356,9 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 
 To learn more about {{site.data.keyword.deliverypipeline}}, see [Working with pipelines](/docs/services/ContinuousDelivery/pipeline_working.html){: new_window} and the [Delivery Pipeline article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
 
-  * [Create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline){:new_window}
-  * [Create and use your first toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}
+  * [Create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:new_window}
+
+  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
 
 ## Adding DevOps Insights (Beta)
@@ -382,9 +384,11 @@ Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your 
 
 To learn more about {{site.data.keyword.DRA_short}}, see the [{{site.data.keyword.DRA_short}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
 
-  * [Create a toolchain that uses {{site.data.keyword.DRA_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_devops_insights){:new_window}
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
-  * [Deployment Risk Analytics with GitHub and Jenkins ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
+  * [Use the "Develop and test a Cloud Foundry app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
+
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+
+  * [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
 
 
 ## Adding the Eclipse Orion Web IDE
@@ -410,8 +414,9 @@ To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webi
 
 To learn more about the Eclipse Orion {{site.data.keyword.webide}}, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} and the [Eclipse Orion {{site.data.keyword.webide}} article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
 
-  * [Create and use your first toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}
-  * [Use {{site.data.keyword.Bluemix_notm}} Live Sync to develop, debug, and deploy your app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_livesync){:new_window}
+  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
+
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
 
 
 ## Configuring Git Repos and Issue Tracking
@@ -436,7 +441,7 @@ If you have a toolchain and want to migrate a Git repo in your toolchain to {{si
 1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Click **Create Integration**.
 
-**Tip:** After you clone the Git repo, you can remove it from your toolchain. 
+**Tip:** After you clone the Git repo, you can remove it from your toolchain.
 
 If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, follow these steps:    
 
@@ -461,7 +466,7 @@ If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, fol
 
 To learn more about {{site.data.keyword.gitrepos}}, see the [{{site.data.keyword.gitrepos}}: Social coding hosted by IBM article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/code/tool_git_repos_and_issue_tracking/){: new_window} on the IBM Cloud Garage Method or take this tutorial:
 
-  * [Create a toolchain that uses {{site.data.keyword.gitrepos}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
+  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
 
 ## Configuring GitHub
@@ -478,26 +483,26 @@ You can configure GitHub as a tool integration in your toolchain so that you can
 If you are configuring this tool integration as you are creating the toolchain, follow these steps:
 
 1. If you are storing your source code in a GitHub repo, in the Configurable Integrations section, click **GitHub**. If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
-1. If you are using a repo on your own {{site.data.keyword.ghe_short}} server, in the Configurable Integrations section, click **Add custom server**. 
+1. If you are using a repo on your own {{site.data.keyword.ghe_short}} server, in the Configurable Integrations section, click **Add custom server**.
 
  **Important**: The network must be able to access the target Git server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment. If your GitHub server is not available on the public internet or the hostname does not resolve on the public Domain Name Server (DNS), [open a support ticket](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. You can use the support ticket to submit a request to open the network routes or update the DNS settings.
 
- Type a title for your custom GitHub server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**. 
- 
+ Type a title for your custom GitHub server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**.
+
   **Tip**: If you don't have a personal access token, you can create one:
-  
+
      a. On any GitHub page, click your profile icon and then click **Settings**.
-   
-     b. On the sidebar, click **Personal access tokens**. 
-   
+
+     b. On the sidebar, click **Personal access tokens**.
+
      c. Click **Generate new token**.
-   
+
      d. Add a description for the token.
-     
+
      e. Select the **repo** and **user** check boxes to define the access for the personal token.
-     
+
      f. Click **Generate token**.
-   
+
      g. Copy the token to a secure location or password management app. For security reasons, after you leave the page, you can no longer see the token.
 
 1. Review the default target repo locations for the GitHub repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
@@ -526,7 +531,7 @@ If you have a toolchain and are adding this tool integration to it, follow these
 
   **Tip:** You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the GitHub repo and deploy an app from your workspace.
 
-1. If you enabled GitHub Issues, click **GitHub Issues** to open it. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub or {{site.data.keyword.ghe_short}} repos.    
+1. If you enabled GitHub Issues, click **GitHub Issues** to open it. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub or {{site.data.keyword.ghe_short}} repos.    
 
 **Note:** If you don't have admin privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 
@@ -534,8 +539,11 @@ If you have a toolchain and are adding this tool integration to it, follow these
 
 To learn more about GitHub, see the [GitHub article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/code/tool_github/){: new_window} and the [GitHub Issues article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
 
-  * [Deployment Risk Analytics with GitHub and Jenkins ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
-  * [Create a custom toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_custom){:new_window}
+ * [Use the "Develop and test a Cloud Foundry app" toolchain  ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
+
+  * [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+
+  * [Create a custom toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
 
 
 ## Configuring GitHub Enterprise and Issues on {{site.data.keyword.Bluemix_notm}} Dedicated
@@ -592,24 +600,24 @@ You can configure GitLab as a tool integration in your toolchain so that you can
 If you are configuring this tool integration as you are creating the toolchain, follow these steps:
 
 1. If you are storing your source code in a GitLab repo, in the Configurable Integrations section, click **GitLab**. If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitLab, click **Authorize** to go to the GitLab website. If you don't have an active GitLab session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitLab account. If you have an active GitLab session but you haven't entered your password recently, you might be prompted to enter your GitLab password to confirm.
-1. If you are using a repo on your own GitLab server, in the Configurable Integrations section, click **Add custom server**. 
+1. If you are using a repo on your own GitLab server, in the Configurable Integrations section, click **Add custom server**.
 
- **Important**: The network must be able to access the target GitLab server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment. 
+ **Important**: The network must be able to access the target GitLab server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment.
 
- Type a title for your custom GitLab server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**. 
- 
+ Type a title for your custom GitLab server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**.
+
   **Tip**: If you don't have a personal access token, you can create one:
-  
+
      a. On any GitLab page, click your profile icon and then click **Settings**.
-   
+
      b. On the Access Tokens page, type the name of the application that you want to create a personal access token for.
-     
+
      c. Optional. Choose an expiry date for the access token.
-     
+
      d. Select the **api** check box to define the access for the personal token.
-     
+
      e. Click **Create personal access token**.
-   
+
      f. Copy the token to a secure location or password management app. For security reasons, after you leave the page, you can no longer see the token.
 
 1. Review the default target repo locations for the GitLab repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
@@ -637,7 +645,7 @@ If you have a toolchain and are adding this tool integration to it, follow these
 
   **Tip:** You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the GitLab repo and deploy an app from your workspace.
 
-1. If you enabled GitLab Issues, click **GitLab Issues** to open it. You can use this instance of GitLab Issues for your entire toolchain, even if the toolchain contains multiple GitLab repos.    
+1. If you enabled GitLab Issues, click **GitLab Issues** to open it. You can use this instance of GitLab Issues for your entire toolchain, even if the toolchain contains multiple GitLab repos.    
 
 **Note:** If you don't have owner or master privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 
@@ -682,9 +690,8 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
 
 To learn more about Jenkins, see the [Jenkins article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){: new_window} on the IBM Cloud Garage Method or take this tutorial:
 
-  * [Deployment Risk Analytics with GitHub and Jenkins ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
-  
-  
+  * [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+
 ## Configuring JIRA
 {: #jira}
 
@@ -732,7 +739,7 @@ Configure JIRA to plan, track, and deliver quality code:
 
 To learn more about JIRA, see the [JIRA article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/code/tool_jira/){: new_window} on the IBM Cloud Garage Method or take this tutorial:
 
-  * [Gain developer and team insights on a JIRA and GitHub project ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_dev_insights_team_dynamics){:new_window}
+  * [Gain insights by using the "Developer Insights and Team Dynamics with GitHub and JIRA" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain){:new_window}
 
 
 ## Configuring Nexus
@@ -867,7 +874,7 @@ Configure a custom tool so that it works with other tools in your toolchain and 
 
 To learn more about the custom tool, see [Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window} or take this tutorial:
 
-  * [Add a custom tool integration to a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_add_custom_tool){:new_window}
+  * [Add a custom tool integration to a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/add-a-custom-tool-integration-to-a-toolchain){:new_window}
 
 
 ## Configuring PagerDuty
@@ -907,8 +914,9 @@ Configure PagerDuty to send notifications when pipeline stage failures occur so 
 
 To learn more about PagerDuty, see the [PagerDuty article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){: new_window} on the IBM Cloud Garage Method or take this tutorial and  the Garage Method advocate course:
 
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices?task=5){:new_window}
-  * [Become a Garage Method advocate ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+
+  * [Become a Garage Method advocate ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
 
 
 ## Configuring Rational Team Concert
@@ -930,18 +938,18 @@ Configure Rational Team Concert to practice a DevOps approach and continuous del
 1. Type the password that you use to access the Rational Team Concert server.
 1. If you have a Rational Team Concert project area that you want to add to your toolchain, follow these steps:
 
- a. From the **Project Area type** list, select **Existing project area**. 
+ a. From the **Project Area type** list, select **Existing project area**.
 
  b. Type the name of the project area to add to your toolchain.
- 
+
 1. If you want to create a Rational Team Concert project area to add to your toolchain, follow these steps:
- 
- a. From the **Project Area type** list, select **New project area**. 
+
+ a. From the **Project Area type** list, select **New project area**.
 
  b. Type a name for the new project area to add to your toolchain.
- 
+
  c. Type the name of the Rational Team Concert process template to use to create the project.
- 
+
 1. To track the deployment of code changes for the project by creating tags and comments on work items, select the **Track deployment of code changes** check box.
 1. Click **Create Integration**.
 1. From your toolchain, click **Rational Team Concert** to open the Rational Team Concert dashboard that you configured.
@@ -976,10 +984,10 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 
 ### Learn more about Sauce Labs
 
-To learn more about Sauce Labs, see the [Sauce Labs article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: new_window} on the IBM Cloud Garage Method or take these tutorials:
+To learn more about Sauce Labs, see the [Sauce Labs article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: new_window} on the IBM Cloud Garage Method or take this tutorial:
 
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+
 
 
 ## Configuring Slack
@@ -1012,10 +1020,10 @@ Configure Slack to receive notifications about your toolchain from the tool inte
 
 ### Learn more about Slack
 
-To learn more about Slack, see the [Slack article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: new_window} on the IBM Cloud Garage Method or take these tutorials and the Garage Method advocate course:
+To learn more about Slack, see the [Slack article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: new_window} on the IBM Cloud Garage Method or take this tutorial and the Garage Method advocate course:
 
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+
   * [Become a Garage Method advocate ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
 
 
