@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-20"
+lastupdated: "2018-3-21"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -53,7 +53,7 @@ When trying to deploy an app to {{site.data.keyword.Bluemix_notm}}, if you get t
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
-You can either increase the memory quota of your account or reduce the memory that your apps use. The maximum memory quota for a trial account is 2 GB. To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [Pay accounts](/docs/pricing/index.html#pay-accounts). To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} console or the cf command-line interface.
+You can either increase the memory quota of your account or reduce the memory that your apps use. The maximum memory quota for a trial account is 2 GB. To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [Pay accounts](/docs/pricing/index.html#pay-accounts). To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} console or the cf command line interface.
 
 If you use the {{site.data.keyword.Bluemix_notm}} console, complete the following steps:
 
