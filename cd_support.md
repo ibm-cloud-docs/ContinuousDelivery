@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-11-02"
+lastupdated: "2018-3-26"
 
 ---
 
@@ -15,9 +15,7 @@ lastupdated: "2017-11-02"
 # Getting help and support for {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-The {{site.data.keyword.contdelivery_full}} team actively monitors the developerWorks forum for questions about the {{site.data.keyword.contdelivery_short}} service and toolchains.   On the bottom of toolchain and {{site.data.keyword.contdelivery_short}} pages, you will find the **Get help in the forum** button
-![**Get help in the forum** button](images/get_help_in_the_forum.png)
-which brings up the "Ask us a Question" dialog box.
+The {{site.data.keyword.contdelivery_full}} team actively monitors the developerWorks forum for questions about the {{site.data.keyword.contdelivery_short}} service and toolchains. To ask a question in the forum, click the **Get help in the forum** button ![**Get help in the forum** button](images/get_help_in_the_forum.png) at the bottom of toolchain and {{site.data.keyword.contdelivery_short}} pages.
 
 <table>
 <tr>
@@ -29,7 +27,7 @@ which brings up the "Ask us a Question" dialog box.
 <tr>
 <td> </td>
   <td align="center">
-  <p>Get help fast, directly from IBM delivery and other DevOps Services users.</p>
+  <p>Get help fast, directly from IBM {{site.data.keyword.contdelivery_short}} and other DevOps Services users.</p>
   <b>dW Answers</b>
   <p>
    <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
