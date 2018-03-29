@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-17"
+lastupdated: "2018-3-26"
 
 ---
 
@@ -71,11 +71,11 @@ Before you begin, [review the Terms of Use for the service ![External link icon]
 
   e. Select or clear the **Set up service and space for me** check box as needed.
 
-    * If you want the pipeline to check your {{site.data.keyword.Bluemix_short}}  space for the service and an app that binds the service to the container, select the check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
+    * If you want the pipeline to check your {{site.data.keyword.Bluemix_short}} space for the service and an app that binds the service to the container, select the check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your {{site.data.keyword.Bluemix_short}}  space already, or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, leave the check box cleared.
+    * If you configured the service and bound app in your {{site.data.keyword.Bluemix_short}} space already, or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, leave the check box cleared.
 
-  f. In the **Minutes to wait for analysis to complete** field, type a value of 0 - 59 minutes. The default value is 5 minutes. A URL to the {{site.data.keyword.staticanalyzershort}}  dashboard is in the console logs at the end of the job.
+  f. In the **Minutes to wait for analysis to complete** field, type a value of 0 - 59 minutes. The default value is 5 minutes. A URL to the {{site.data.keyword.staticanalyzershort}} dashboard is in the console logs at the end of the job.
 
      If the {{site.data.keyword.staticanalyzershort}} scan is not complete before the time that you specified, the job fails. However, the scan analysis continues to run and you can view it on the {{site.data.keyword.staticanalyzershort}} dashboard. After the {{site.data.keyword.staticanalyzershort}} scan is complete, if you rerun the job, the scan request is not resubmitted and the pipeline job can be completed. Alternatively, you can configure the pipeline not to be blocked on a successful scan result. For instructions, see the next step.
 
