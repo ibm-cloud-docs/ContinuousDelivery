@@ -3,7 +3,7 @@
 copyright:
   years: 2017, 2018
 
-lastupdated: "2018-2-26"
+lastupdated: "2018-3-23"
 
 ---
 <!-- Copyright info at top of file: REQUIRED
@@ -38,7 +38,7 @@ The Cloud Garage Method site contains articles that describe continuous delivery
 
 [Continuous Delivery ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/practice_continuous_delivery/] ){:new_window} is a practice by which you build and deploy your software so that it can be released into production at any time. One of the hallmarks of computer science is the shortening of various cycle times in the development and operations process.
 
-With [Delivery Pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:new_window}, which is included in {{site.data.keyword.Bluemix_notm}} Continuous Delivery, you can achieve continuous delivery in a consistent and reliable way by dividing the software delivery process into stages. The goal is for code to progress through each stage automatically with minimal human intervention.  With the [practice of using Delivery Pipelines] ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/practice_delivery_pipeline/){:new_window}, you can automate the continuous deployment of your project.
+With [Delivery Pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:new_window}, which is included in {{site.data.keyword.Bluemix_notm}} Continuous Delivery, you can achieve continuous delivery in a consistent and reliable way by dividing the software delivery process into stages. The goal is for code to progress through each stage automatically with minimal human intervention. With the [practice of using Delivery Pipelines ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/practice_delivery_pipeline/){:new_window}, you can automate the continuous deployment of your project.
 
 ## Continuous delivery tutorials
 {: #gm_cd_tutorials}
