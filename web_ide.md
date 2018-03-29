@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-3-20"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-2-26"
 # Developing with the Eclipse Orion Web IDE
 {: #web_ide}
 
-The Eclipse Orion {{site.data.keyword.webide}} is a browser-based development environment where you can develop for the web. You can develop in JavaScript, HTML, and CSS with the help of content assist, code completion, and error checking. The {{site.data.keyword.webide}} works with nearly any language and offers syntax highlighting for most file types. Source control is built in, and you can deploy code locally to test and debug your apps.
+The Eclipse Orion {{site.data.keyword.webide}} is a browser-based development environment where you can develop for the web in JavaScript, HTML, and CSS with the help of content assist, code completion, and error checking. The {{site.data.keyword.webide}} works with nearly any language and offers syntax highlighting for most file types. Source control is built in, and you can deploy code locally to test and debug your apps.
 {:shortdesc}
 
 Best of all, the {{site.data.keyword.webide}} is powered by the web. You have nothing to install, nothing to maintain, and nothing to scale. You can develop anywhere that you have an internet connection.
