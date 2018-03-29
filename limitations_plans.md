@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-12-15"
+lastupdated: "2018-3-23"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -28,7 +28,7 @@ The use of {{site.data.keyword.contdelivery_full}} is limited to the building, d
 
  * Users who interact with issues, issues boards, source code, or other artifacts in a {{site.data.keyword.gitrepos}} repository.
  * Users who manipulate, trigger (either directly in the UI or indirectly by committing to a repo), or view the status of a delivery pipeline.
- * Users who interact wth the Eclipse Orion {{site.data.keyword.webide}}.
+ * Users who interact with the Eclipse Orion {{site.data.keyword.webide}}.
 
 ## Delivery Pipeline usage
 {: #pipeline_usage}
