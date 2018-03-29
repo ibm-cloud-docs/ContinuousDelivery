@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-3-26"
 
 ---
 
@@ -50,6 +50,8 @@ Some toolchain templates include tool integrations that are part of the {{site.d
 
 The "Develop and test microservices on Cloud Foundry" toolchain deploys an app with catalog and orders APIs that are backed by a Cloudant store. As part of deploying the app, a no-cost Cloudant service instance is created. For more information and terms, see the [{{site.data.keyword.Bluemix_notm}} catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/cloudant-nosql-db/){:new_window}.
 
+The predefined DevOps toolchain templates are recommended examples that solve real world scenarios and each contains a sample app.  You can use your own app by specifying your git repo when you create the toolchain from the template.
+
 <table valign="top" padding="2px">
   <caption>Table 2. Toolchain templates</caption>
   <tr>
@@ -70,7 +72,7 @@ The "Develop and test microservices on Cloud Foundry" toolchain deploys an app w
   {{site.data.keyword.deliverypipeline}}
   </li><li>Eclipse Orion {{site.data.keyword.webide}}
   </li><li>GitHub and Issues
-  </li><li>{{site.data.data.keyword.Bluemix_notm}}
+  </li><li>{{site.data.keyword.Bluemix_notm}}
   </li></ul>
   </td></tr>
 
@@ -97,7 +99,7 @@ The "Develop and test microservices on Cloud Foundry" toolchain deploys an app w
   Available in US South, Germany, and United Kingdom
 
   </td><td>
-  With this toolchain, you can develop a Docker application and its Helm chart together in source control and have it built and deployed automatically to a Kubernetes cluster. The toolchain performs sanity checks prior to building or deploying and ensures privacy by using a private container registry and namespaces for the container registry and the Kubernetes cluster. This toolchain is also leveraging Vulnerability Advisor, to ensure only secure images get deployed. <br><br>
+  With this toolchain, you can develop a Docker application and its Helm chart together in source control and build and deploy it automatically to a Kubernetes cluster. The toolchain performs smoke tests before building or deploying and ensures privacy by using a private container registry and namespaces for the container registry and the Kubernetes cluster. This toolchain also uses Vulnerability Advisor to ensure only secure images get deployed. <br><br>
   Try the tutorial: <a href="https://www.ibm.com/cloud/garage/use-develop-kubernetes-app-with-helm-toolchain" target="_blank">Use the "Develop a Kubernetes app with Helm" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>	 <br><br>
   </td><td><ul>
   <li>{{site.data.keyword.deliverypipeline}}
@@ -114,7 +116,7 @@ The "Develop and test microservices on Cloud Foundry" toolchain deploys an app w
   Available in US South, Germany, and United Kingdom
 
   </td><td>
-  With this cloud-native toolchain, you can use DevOps Insights to gate the deployment of a simple Cloud Foundry application. By default, the toolchain uses a sample Node.js weather app, or you can link to your own GitHub repository. The toolchain runs unit tests using Mocha, checks code coverage by using Istanbul.<br><br>
+  With this cloud-native toolchain, you can use DevOps Insights to gate the deployment of a simple Cloud Foundry application. By default, the toolchain uses a sample Node.js weather app, or you can link to your own GitHub repository. The toolchain runs unit tests using Mocha and checks code coverage by using Istanbul.<br><br>
   Try the tutorial: <a href="https://www.ibm.com/cloud/garage/use-develop-test-cloud-foundry-app-toolchain" target="_blank">Use the "Develop and test a Cloud Foundry app" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>  <br><br>
   </td><td><ul>
   <li>{{site.data.keyword.deliverypipeline}}
@@ -192,7 +194,7 @@ GitHub and Issues
   Available in US South
 
 </td><td>
-With this toolchain, you can explore your project's development risk and use social coding analysis to understand interaction patterns between developers. You can analyze GitHub source code in conjunction with GitHub issues, JIRA issues, or both. Use Developer Insights to identify files that are highly prone to errors, and see how the project complies with DevOps practices. The social coding analysis in Team Dynamics identifies the level of interaction between team members so that the team can fix unproductive practices.<br><br>
+With this toolchain, you can explore your project's development risk and use social coding analysis to understand interaction patterns between developers. You can analyze GitHub source code along with GitHub issues, JIRA issues, or both. Use Developer Insights to identify files that are highly prone to errors, and see how the project complies with DevOps practices. The social coding analysis in Team Dynamics identifies the level of interaction between team members so that the team can fix unproductive practices.<br><br>
 Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain" target="_blank">Gain insights by using the "Developer Insights and Team Dynamics with GitHub and JIRA" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
 </td><td><ul><li>
 GitHub and Issues
@@ -238,7 +240,7 @@ Try the tutorials:
 
 <ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app" target="_blank">Add a toolchain to an app <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
 <li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Create a custom toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
-<li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Deploy a secure web application across multiple regions </a></li>
+<li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Deploy a secure web application across multiple regions</a></li>
 </ul></td>
 <td><ul><li>{{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}
@@ -247,4 +249,21 @@ GitHub and Issues
 </li>
 <li>{{site.data.keyword.Bluemix_notm}}</li></ul>
 </td></tr>
+
+<tr><td>Custom toolchain template <br><br>
+
+ Available in US South, Germany, and United Kingdom
+
+</td><td>
+<br><br>
+You can create a custom toolchain template that can be used by others. <br><br>
+
+See the documentation:
+<a href="https://github.com/open-toolchain/sdk/wiki" target="_blank">Creating custom toolchain templates <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
+ <br><br>
+Try the tutorial:
+<a href="https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain" target="_blank">Create a template for a custom toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></td>
+<td>None
+</td></tr>
+
 </table>
