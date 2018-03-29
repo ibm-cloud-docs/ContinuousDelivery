@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2017-10-31"
+lastupdated: "2018-3-23"
 ---
 
 {:new_window: target="_blank"}
@@ -109,7 +109,7 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 {: #discard_changes_web}
 
 1. In the Working Directory Changes section, select the check box for each modified file that has changes you want to discard.
-2. Click the checkout icon <img class="inline"  src="./images/discard.png" alt="Checkout the selected files, discarding all changes">.
+2. Click the checkout icon <img class="inline"  src="./images/discard.png" alt="Check out the selected files, discarding all changes">.
 
 ### Git terminal
 {: #discard_changes_cmd}
@@ -165,7 +165,7 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 
   When toggled, the commit history and any incoming or outgoing changes for the active branch are drawn as a connected graph.  The visual representation shows all of the commits and the branches they were made on.
 
-  <img class="screen-shot" src="./images/visualhistoryexample.png" alt="Visual commit histroy">
+  <img class="screen-shot" src="./images/visualhistoryexample.png" alt="Visual commit history">
 
 ### Git terminal
 {: #view_commit_history_cmd}
@@ -207,12 +207,12 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 
   **Note:** If a commit introduced a change to a line, the original line is in red text and starts with a minus sign (-). The new line is in green text and starts with a plus sign (+).  Similarly, lines that were added by a commit are in green text and start with a +. Lines that were removed by a commit are in red text and start with a -.
 
-1. To stop viewing entries, press  Q.
+1. To stop viewing entries, press Q.
 
 ## Modify the last commit
 {: #modify_last_commit}
 
-  **Note:** When you modify the last commit after you push it to a remote repo, you rewrite the commit history. This might cause commit failures and other problems for the other contributors in your project. Be sure that you know what you're doing before you modify a commit that you pushed to a remote repo.
+  **Note:** When you modify the last commit after you push it to a remote repo, you rewrite the commit history. This change might cause commit failures and other problems for the other contributors in your project. Be sure that you know what you're doing before you modify a commit that you pushed to a remote repo.
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}
@@ -309,7 +309,7 @@ When you need to deliver changes from a source branch to a destination branch, y
 
 2. Check out the destination branch. For more information, see [Work on a local branch](#start_working_on_branch).
 
- <img class="screen-shot" src="./images/destinationbranch.png" alt="Checkout destination branch">
+ <img class="screen-shot" src="./images/destinationbranch.png" alt="Check out destination branch">
 
 1. Click the **Reference** list, expand **local**, and click the name of the source branch. The changes from the source branch are shown in the Incoming section.
 
