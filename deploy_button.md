@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-17"
+lastupdated: "2018-3-26"
 
 ---
 
@@ -130,4 +130,4 @@ To create a `pipeline.yml` manually that is specifically for containers, see the
 
 A `manifest.yml` file is not required to be in your repo. However, if your app requires other services to run, you must provide a manifest file that declares those services.
 
-Learn about manifest files here [learn how to create them here ![Application manifest](../cfapps/depapps.html#appmanifest).
+To learn more about manifest files, see [Application manifest](/docs/cfapps/depapps.html#appmanifest).
