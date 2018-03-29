@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-3-26"
 
 ---
 
@@ -35,7 +35,7 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 
 **Live Edit**
 
-You can edit a Node.js application that runs on {{site.data.keyword.Bluemix_notm}} and test them in your browser right away. Any changes that you make in the Web IDE are propagated to the application’s file system immediately.  
+You can edit a Node.js application that runs on {{site.data.keyword.Bluemix_notm}} and test it in your browser right away. Any changes that you make in the Web IDE are propagated to the application’s file system immediately.  
 
 **Debug**  
 
@@ -55,18 +55,18 @@ In the Eclipse Orion Web IDE (Web IDE), in the run bar, click **Live Edit**.
 
 Live Edit allows you to quickly preview changes to Node.js applications that run on {{site.data.keyword.Bluemix_notm}}. When you update your code with Live Edit turned on, you can refresh your web application's browser window to see those changes reflected seconds after you make them.
 
-For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see the tutorial [Use {{site.data.keyword.Bluemix_notm}} Use Live Sync to develop, debug, and deploy your app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-live-sync-to-develop-debug-and-deploy-your-app){:new_window}.
+For a tutorial about using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see [Use {{site.data.keyword.Bluemix_notm}} Live Sync to develop, debug, and deploy your app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-live-sync-to-develop-debug-and-deploy-your-app){:new_window}.
 
-When you change the files in your Web IDE, they are automatically redeployed to your application instance on {{site.data.keyword.Bluemix_notm}}. If you need to restart the Node application, then you can use the **Restart** button in the run bar.
+When you change the files in your Web IDE, they are automatically redeployed to your application instance on {{site.data.keyword.Bluemix_notm}}. If you need to restart the Node application, click the **Restart** button in the run bar.
 
-**NOTE:** For a more consistent experience when you use the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, 256MB of additional memory is required and is added.
+**Note:** For a more consistent experience when you use the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, 256 MB of additional memory is required and is added.
 
 ## {{site.data.keyword.Bluemix_notm}} Live Debug
 {: #live-debug}
 
 {{site.data.keyword.Bluemix_notm}} Live Sync Debug uses
 [Node Inspector ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/node-inspector/node-inspector){:new_window}
-to provide debug features.  You need to use version 4 of Node for the debugger to be available since later versions of Node.js do not include Node Inspector.
+to provide debug features. You need to use version 4 of Node for the debugger to be available since later versions of Node.js do not include Node Inspector.
 
 You can access {{site.data.keyword.Bluemix_notm}} Live Debug when {{site.data.keyword.Bluemix_notm}} Live Edit is enabled for your Node.js app.  
 
@@ -94,7 +94,7 @@ After you log in, the {{site.data.keyword.Bluemix_notm}} Live Debug page opens.
 
 ### Debug {: #debug}
 
-**Restriction:** Google Chrome is required.  Node 4 is required.
+**Restriction:** Google Chrome and Node 4 are required.
 
 Debug includes the following capabilities:  
 * Set breakpoints in the app code to pause execution at a specific line.
@@ -106,7 +106,7 @@ Debug includes the following capabilities:
 
 ### Shell {: #shell}
 
-This tool gives you shell access to the container in which your app is running. By using this terminal, you can remotely run diagnostic shell commands to administer your app.  All versions of Node.js support the Shell feature.
+This tool gives you shell access to the container in which your app is running. By using this terminal, you can remotely run diagnostic shell commands to administer your app. All versions of Node.js support the Shell feature.
 
 Monitor memory and CPU usage within the instance that uses standard Linux commands, such as **top**, **ps**, and **kill**.
 
@@ -129,13 +129,13 @@ Monitor memory and CPU usage within the instance that uses standard Linux comman
 
 2. Increase the memory.  
 
-    a. In the app `manifest.yml` file, add 128M or more to the value that is specified for the memory attribute.
+    a. In the app `manifest.yml` file, add 128 MB or more to the value that is specified for the memory attribute.
 
 After the {{site.data.keyword.Bluemix_notm}} Live Debug is installed, you can use the debug tools.
 
-Push the app and then browse to `https://_app-host.mybluemix.net_/bluemix-debug/manage` to access the {{site.data.keyword.Bluemix_notm}} debug user interface. When you are prompted to authenticate, enter your IBMid username and password or a one-time passcode.    
+Push the app and then browse to `https://_app-host.mybluemix.net_/bluemix-debug/manage` to access the {{site.data.keyword.Bluemix_notm}} debug user interface. When you are prompted to authenticate, enter your IBM id username and password or a one-time passcode.    
 
-**Note:** The Debugger may take a minute or so to initialize.
+**Note:** The Debugger might take a minute or so to initialize.
 
 ### Restoring app configurations and disabling {{site.data.keyword.Bluemix_notm}} Live Debug {: #restore_live_debug}
 
