@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-5-19"
+lastupdated: "2018-3-20"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-5-19"
 # Upgrading IBM Confidential projects to toolchains 
 {: #upgrade_public_or_cio}
 
-{{site.data.keyword.jazzhub}} is evolving into IBM Bluemix {{site.data.keyword.contdelivery_short}}. As part of that change, projects will be upgraded to toolchains.
+{{site.data.keyword.jazzhub}} is evolving into {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.contdelivery_short}}. As part of that change, projects will be upgraded to toolchains.
 
 When your project is ready to be upgraded, a message is displayed on its Overview page. You can then upgrade the project to a toolchain on {{site.data.keyword.Bluemix_notm}} Public. The toolchain will include a Whitewater {{site.data.keyword.ghe_short}} repository (repo) for your source code. Whitewater {{site.data.keyword.ghe_short}} is provided to IBM teams to promote and enable social coding within IBM. 
 {: shortdesc}
@@ -31,8 +31,8 @@ An intermittent problem sometimes occurs when you try to change the target of a 
 
 This problem typically occurs only when you change the target from the pipeline so that the pipeline that is created during the upgrade will deploy correctly to the same targets as it did before.
 
-If you try to change the target and this problem occurs, switch between targets a few times until the **Organization** and **Space** fields are filled in.
+If you try to change the target and this problem occurs, switch between targets a few times until the **Organization** and **Space** fields are completed.
 
-A related problem occasionally causes deploys to YS1 targets to fail. This situation is rare; if it happens, re-run the pipeline.
+A related problem occasionally causes deployments to YS1 targets to fail. This situation is rare; if it happens, rerun the pipeline.
 
 The IBM DevOps Services team is actively working to resolve these problems.
