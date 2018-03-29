@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 
-lastupdated: "2018-2-26"
+lastupdated: "2018-3-21"
 
 
 ---
@@ -53,7 +53,7 @@ You can use a template as a starting point to [create a toolchain ![External lin
  * If you configured Sauce Labs, the toolchain is set up to add Sauce Labs test jobs to the pipelines.
  * If you configured PagerDuty, the toolchain is set up to send alert notifications to the PagerDuty service that you specified.
  * If you configured Slack, the toolchain is set up to send notifications about deployment status to the Slack channel that you specified.
- * If you configured a source code tool integration such as  GitHub, the sample GitHub repo is cloned into your GitHub account.
+ * If you configured a source code tool integration such as GitHub, the sample GitHub repo is cloned into your GitHub account.
 
 
 ##Creating a toolchain from an app
