@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-12-6"
+lastupdated: "2018-3-21"
 
 ---
 
@@ -62,7 +62,7 @@ To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "Extern
 1. Select a repo or enter a repo URL.
 1. Click **Create**. The pipeline is created, configured, and displayed on the toolchain's Overview page.
  ![Pipeline card](images/cd_pipeline.png)
-1. If you created a pipeline in toolchain that contains a composite pipeline, the new pipeline is added to the composite pipeline. Modify the deployment plan to include deployment tasks for the new pipeline. See [Creating Delivery Pipeline tasks](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}.
+1. If you created a pipeline in a toolchain that contains a composite pipeline, the new pipeline is added to the composite pipeline. Modify the deployment plan to include deployment tasks for the new pipeline. See [Creating Delivery Pipeline tasks](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}.
 
 To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
 
