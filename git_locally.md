@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-20"
+lastupdated: "2018-3-21"
 
 ---
 
@@ -24,7 +24,7 @@ You can manage and work with your source code in a GitHub, GitHub Enterprise, or
 ## Before you begin
 {: #git_before_clone}
 
-1. To access the Git server outside the browser, you may need to create a personal access token or SSH key for authentication.   The following table shows what you need to do to set up authentication.
+1. To access the Git server outside the browser, you may need to create a personal access token or SSH key for authentication. The following table shows what you need to do to set up authentication.
 
 | Git Type  | HTTPS Setup | HTTPS Use |  SSH Setup |
 |:-----------|:-------------|:------------|:-------------|
