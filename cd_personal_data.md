@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-4-12"
+lastupdated: "2018-4-13"
 
 ---
 
@@ -51,11 +51,11 @@ If you have permission to create an object in an account, you also have the righ
 
 A corporate account is set up by your company. Typically, you are added automatically to the account, rather than being invited. Corporate accounts provide users with a place to work, communicate, and share resources and charging; however, this is just a convention. A corporate account is really no different than a personal account. Objects that are created in a corporate account are associated with the account and users can be invited to the account.
 
-Teams of people who work for a corporation often collaborate using a corporate account.
+Teams of people who work for a corporation often collaborate by using a corporate account.
 
 ###Corporate individual accounts
 
-When you work for a corporation, the work in your account might be legally owned by the corporation. Many users who work for a corporation have a corporate individual account. If you log in to your account using credentials that contain your corporation's name and also have what appears to be a personal account, the work within your personal account might belong to the corporation.
+When you work for a corporation, the work in your account might be legally owned by the corporation. Many users who work for a corporation have a corporate individual account. If you log in to your account by using credentials that contain your corporation's name and also have what appears to be a personal account, the work within your personal account might belong to the corporation.
 
 A corporate individual account is no different from any other account. You can invite users to a corporate individual account and objects that are created in a corporate individual account are owned by the account.
 
@@ -64,7 +64,7 @@ If you work for a corporation that owns your work, a personal account that usual
 ## Modifying, exporting, and deleting personal data
 {: #managing_personal_data}
 
-Regardless of what type of IBM Cloud account is used, if you have rights to the objects in the account, you can modify, export, and delete them. Before you make changes, coordinate with other users to make sure that you don't unecessarily modify or delete data.
+Regardless of what type of IBM Cloud account is used, if you have rights to the objects in the account, you can modify, export, and delete them. Before you make changes, coordinate with other users to make sure that you don't unnecessarily modify or delete data.
 
 Before you delete data from an account, determine whether it is a personal account or a corporate individual account.
 
@@ -82,7 +82,7 @@ Before you start to manage your personal data for the {{site.data.keyword.contde
 
 If you can't log in to your IBM Cloud account, contact your corporation and work with them to delete your personal data.
 
-**Important**: If you want to delete all of your personal data from {{site.data.keyword.contdelivery_short}}, the order in which you delete that data is important. First, delete all of your {{site.data.keyword.webide}} workspaces, next delete your {{site.data.keyword.gitrepos}} data, and then delete your {{site.data.keyword.gitrepos}} account. Finally, delete your delivery pipelines, tool integrations, and toolchains.
+**Important**: If you want to delete all of your personal data from {{site.data.keyword.contdelivery_short}}, the order in which you delete that data is important. First, delete all of your {{site.data.keyword.webide}} workspaces. Next, delete your {{site.data.keyword.gitrepos}} data, and then delete your {{site.data.keyword.gitrepos}} account. Finally, delete your delivery pipelines, tool integrations, and toolchains.
 
 ## Exporting and deleting Web IDE data
 {: #managing_web_ide_data}
@@ -142,7 +142,7 @@ You can delete your {{site.data.keyword.gitrepos}} account and everything that i
 1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, on the [Account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, in the Delete account section, click **Delete account**.
 1. All Git projects, including repositories and issues are deleted. You are also removed from any {{site.data.keyword.gitrepos}} groups that you belong to.
 
-**Tip**: After your account is deleted, some content will remain. This content is assigned to a system wide Ghost User. For more information about deleting a {{site.data.keyword.gitrepos}} account, see [Deleting a user account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}.
+**Tip**: After your account is deleted, some content will remain. This content is assigned to a system-wide Ghost User. For more information about deleting a {{site.data.keyword.gitrepos}} account, see [Deleting a user account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}.
 
 **Important**: {{site.data.keyword.gitrepos}} uses a single sign-on mechanism that automatically creates a corresponding Git account for your IBM Cloud account the first time that you access the tool integration. After you delete your account, do not access {{site.data.keyword.gitrepos}}. If you access {{site.data.keyword.gitrepos}} again, a new account is automatically created that you must delete.
 
@@ -194,9 +194,9 @@ To take ownership of a pipeline, a user must complete the following steps:
 ## Modifying and deleting toolchains and tool integrations
 {: #managing_toolchains}
 
-By using toolchains, teams can collaborate and and share different tool integrations. 
+By using toolchains, teams can collaborate and share different tool integrations. 
 
-It is recommended that you configure all {{site.data.keyword.contdelivery_short}} integrations by using data that is associated with your team or company, rather than data that is associated with you. However, there might be instances where your personal data is inadvertently used instead. In such instances, you must identify all of the data that you own and delete it.
+It is recommended that you configure all {{site.data.keyword.contdelivery_short}} integrations by using data that is associated with your team or company, rather than data that is associated with you. However, in some instances your personal data might be inadvertently used instead. In such instances, you must identify all of the data that you own and delete it.
 
 When a tool integration is created, {{site.data.keyword.contdelivery_short}} cannot record the origin of all of the data. For example, another team member might create a tool integration for you by using personal data that you provide in an email. You must understand which data you own and make sure that it is deleted.
 
