@@ -46,6 +46,7 @@ Continuous Delivery
     git_working.md
     git_locally.md
     di_working.md
+    cd_personal_data.md
     toolchains_post_upgrade.md
     {: .navgroup-end}
 
