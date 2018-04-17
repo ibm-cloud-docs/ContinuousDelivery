@@ -32,9 +32,10 @@ Continuous Delivery
         pipeline_about.md
         pipeline_working.md
         pipeline_build_deploy.md
-        pipeline_composites.md
         pipeline_deploy_var.md
+        pipeline_custom_docker_images.md
         deliverypipeline_extension.md
+        pipeline_composites.md
         pipeline_deployment_plan.md
 
     {: .topicgroup}
