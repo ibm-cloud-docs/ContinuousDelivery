@@ -2,19 +2,12 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-3-23"
----
-<!-- Copyright info at top of file: REQUIRED
-    The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be surrounded by 3 dashes.
-    The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
-    Indentation as per the previous template must be preserved.
--->
+lastupdated: "2018-4-16"
 
-{:new_window: target="_blank"}
+---
+
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
 
 # Plan limitations and usage
 {: #limitations_usage}
@@ -29,6 +22,10 @@ The use of {{site.data.keyword.contdelivery_full}} is limited to the building, d
  * Users who interact with issues, issues boards, source code, or other artifacts in a {{site.data.keyword.gitrepos}} repository.
  * Users who manipulate, trigger (either directly in the UI or indirectly by committing to a repo), or view the status of a delivery pipeline.
  * Users who interact with the Eclipse Orion {{site.data.keyword.webide}}.
+ 
+### What happens when you exceed the limits of your service plan 
+
+Some service plans might have other limitations, such as the number of Delivery Pipeline jobs that can be run or the storage consumption. For more information, see the plan description in the catalog. If any of the plan limitations are exceeded in a billing period, the service might suspend. For example, Delivery Pipeline jobs might not run for the remainder of the billing period.
 
 ## Delivery Pipeline usage
 {: #pipeline_usage}
