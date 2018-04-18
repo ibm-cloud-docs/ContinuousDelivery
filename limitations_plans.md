@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-4-16"
+lastupdated: "2018-4-18"
 
 ---
 
@@ -23,7 +23,18 @@ The use of {{site.data.keyword.contdelivery_full}} is limited to the building, d
  * Users who manipulate, trigger (either directly in the UI or indirectly by committing to a repo), or view the status of a delivery pipeline.
  * Users who interact with the Eclipse Orion {{site.data.keyword.webide}}.
  
-### What happens when you exceed the limits of your service plan 
+### How are users counted?
+
+Authorized users are counted by looking at all of the users in the Cloud organization (org) that contains the {{site.data.keyword.contdelivery_short}} service. 
+
+To view the list of users in your org, from the menu bar, click **Manage > Account > Cloud Foundry Orgs**.
+
+You can also view all of the instances of the {{site.data.keyword.contdelivery_short}} service in your account and the number of users that are reported against each instance.
+
+1. From the menu bar, click **Manage > Account > Cloud Foundry Orgs**.
+2. Click **Usage Dashboard**.
+
+### What happens when you exceed the limits of your service plan? 
 
 Some service plans might have other limitations, such as the number of Delivery Pipeline jobs that can be run or the storage consumption. For more information, see the plan description in the catalog. If any of the plan limitations are exceeded in a billing period, the service might suspend. For example, Delivery Pipeline jobs might not run for the remainder of the billing period.
 
