@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-4-23"
 
 ---
 {:new_window: target="_blank"}
@@ -253,7 +253,8 @@ In that example, the Git URL and Git branch are for a new toolchain template.
           PROD_SPACE_NAME: '{{form.pipeline.parameters.prod-space}}'
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
-       execute: true ```
+       execute: true
+ ```
  {: codeblock}
 
 4\. **Deployment details:**
