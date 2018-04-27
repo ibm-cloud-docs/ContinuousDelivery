@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-12"
+lastupdated: "2018-4-27"
 
 ---
 
@@ -26,12 +26,11 @@ For your DevOps projects, use the [{{site.data.keyword.contdelivery_short}} serv
 Confirm that the upgrade is complete by going to the [Toolchains page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/toolchains){: new_window} and verifying that you see toolchains with names that match the names of your hub.jazz.net projects. If your projects were automatically upgraded, keep these caveats in mind:
    - If another toolchain already used your project's name before your project was upgraded, the new toolchain that was created for your project might not have the exact name of your project. 
    - If you don't see toolchains for your projects, switch to any other orgs that you belong to and check the toolchains there.
-   - If you still can't find the toolchain for one of your projects, the upgrade for it might still be in progress. If you need immediate access to that toolchain, contact [support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}.
-
+   
 ## Toolchains overview
 {: #compare_toolchains}
 
-If you had one or more projects on hub.jazz.net, they were automatically upgraded to toolchains in the {{site.data.keyword.contdelivery_short}} service, unless the upgrade failed. Upgrades can fail due to invalid IBM Cloud accounts or orgs. These account and org owners were notified by email about the failures and the specific actions required on their part to address them. If you don't see the toolchain for your project and you need immediate access to it, contact [support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}. 
+If you had one or more projects on hub.jazz.net, they were automatically upgraded to toolchains in the {{site.data.keyword.contdelivery_short}} service, unless the upgrade failed. Upgrades can fail due to invalid IBM Cloud accounts or orgs. These account and org owners were notified by email about the failures and the specific actions required on their part to address them. If you need help to locate the toolchain for your upgraded project, contact [support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}. 
 
 Toolchains are like projects, with a few important differences:
 
