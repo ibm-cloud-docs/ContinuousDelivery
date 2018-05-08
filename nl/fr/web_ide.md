@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-6-9"
+  years: 2015, 2018
+lastupdated: "2018-3-20"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-6-9"
 # Développement avec l'interface Eclipse Orion Web IDE
 {: #web_ide}
 
-Eclipse Orion {{site.data.keyword.webide}} est un environnement de développement basé navigateur dans lequel vous pouvez faire du développement pour le Web. Vous pouvez développer en JavaScript, HTML et CSS en vous aidant de l'assistant de contenu, de la validation de code et du contrôle des erreurs. L'interface {{site.data.keyword.webide}} fonctionne avec quasiment toutes les langues et propose la mise en évidence de syntaxe pour la plupart des types de fichier. Le contrôle des sources est intégré et vous pouvez déployer le code en local afin de tester et déboguer vos applications.
+L'interface Eclipse Orion {{site.data.keyword.webide}} est un environnement de développement basé sur un navigateur dans lequel vous pouvez développer pour le Web en JavaScript, HTML et CSS en vous aidant de l'assistant de contenu, la validation de code et le contrôle des erreurs. L'interface {{site.data.keyword.webide}} fonctionne avec quasiment toutes les langues et propose la mise en évidence de syntaxe pour la plupart des types de fichier. Le contrôle des sources est intégré et vous pouvez déployer le code en local afin de tester et déboguer vos applications.
 {:shortdesc}
 
 Mais surtout, {{site.data.keyword.webide}} est basé sur le Web. Vous n'avez rien à installer, rien à gérer ni rien à mettre à l'échelle. Vous pouvez faire du développement depuis n'importe quel endroit, dans la mesure où vous disposez d'une connexion Internet.
@@ -23,8 +23,7 @@ Mais surtout, {{site.data.keyword.webide}} est basé sur le Web. Vous n'avez rie
 ## Configuration de l'interface IDE
 {: #editorsetup}
 
-{{site.data.keyword.webide}} est personnalisable : vous pouvez choisir les schémas de couleurs, les outils techniques et les paramètres correspondant à vos besoins de développement. Pour afficher et modifier les paramètres, dans le menu de gauche, cliquez sur l'icône **Paramètres**
-<img class="inline" src="images/webide_settings_icon_light_small.png"  alt="Icône des paramètres">.
+{{site.data.keyword.webide}} est personnalisable : vous pouvez choisir les schémas de couleurs, les outils techniques et les paramètres correspondant à vos besoins de développement. Pour afficher et modifier les paramètres, dans le menu de gauche, cliquez sur l'icône **Paramètres** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="Icône Paramètres"> dans la barre latérale de navigation de gauche.
 
 Si vous changez souvent certains paramètres au cours de l'édition, vous pouvez accéder à ces paramètres rapidement via l'icône **Paramètres de l'éditeur local**
 <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icône Paramètres de l'éditeur local">.
@@ -67,17 +66,13 @@ La seconde section correspond à la sous-fenêtre de l'éditeur. L'éditeur four
 ### Raccourcis-clavier
 De nombreuses commandes {{site.data.keyword.webide}} sont accessibles via des raccourcis-clavier.
 
-Pour afficher la liste des raccourcis-clavier dans l'éditeur, cliquez sur **Outils** > **Afficher des outils**. Vous pouvez aussi afficher la liste en appuyant sur Alt+Maj+?, ou sur MacOS, en appuyant sur Ctrl+Maj+?. Vous pouvez personnaliser un raccourci en survolant la touche, en cliquant sur le crayon et en tapant la nouvelle définition de raccourci clavier. 
+Pour afficher la liste des raccourcis-clavier dans l'éditeur, cliquez sur **Outils** > **Afficher des outils**. Vous pouvez aussi afficher la liste en appuyant sur Alt+Maj+?, ou sur MacOS, en appuyant sur Ctrl+Maj+?. Vous pouvez personnaliser un raccourci en survolant la touche, en cliquant sur le crayon et en tapant la nouvelle définition de raccourci clavier.
 
 ## Gestion du code source
 {: #sourcecontrol}
 
 {{site.data.keyword.webide}} est intégré aux outils de gestion du code source. Pour utiliser votre référentiel Git, cliquez sur l'icône **Référentiel Git**
-<img class="inline" src="images/webide_git_icon_light_small.png"  alt="Icône Référentiel Git">.
-
- **Astuce** : si vous utilisez l'interface {{site.data.keyword.webide}} avec des chaînes d'outils ouvertes, votre espace de travail est prérempli avec vos
-référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git Repos and Issue Tracking. Les référentiels associés à votre chaîne d'outils en cours sont mis en évidence.
-
+<img class="inline" src="images/webide_git_icon_light_small.png"  alt="Icône Référentiel Git">.  Pour en savoir plus, voir [Utilisation de Git dans Eclipse Orion Web IDE](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide).
 
 ## Déploiement d'une application depuis votre espace de travail
 {: #deploy}
@@ -106,7 +101,7 @@ Si vous développez une application Node.js, activez le mode Edition directe : <
 ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}.
+To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.Bluemix_short}}.
 
 ### Before you begin
 
@@ -218,6 +213,7 @@ Eclipse Orion {{site.data.keyword.webide}} fournit un assistant de contenu, des 
 {: #toolchain_tutorials}
 
 Consultez l'un des tutoriels suivants sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage){:new_window} :
-  * [Create and use your first toolchain (GitHub) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Create a toolchain that uses Git Repos and Issue Tracking ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [Create and use a microservices toolchain with DevOps Insights (v2) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+
+  * [Création et utilisation de votre propre chaîne d'outils à l'aide de la chaîne d'outils "Développer une application Cloud Foundry"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+
+  * [Utilisation de la chaîne d'outils "Développer et tester des microservices sur Cloud Foundry" ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.

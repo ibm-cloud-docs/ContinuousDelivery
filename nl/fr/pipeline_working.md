@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-09-05"
+  years: 2015, 2018
+lastupdated: "2018-3-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-09-05"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# Utilisation de pipelines{: #pipeline-working}
+# Utilisation de pipelines {: #pipeline-working}
 
 Pour automatiser vos générations et déploiements vers {{site.data.keyword.Bluemix}}, utilisez
 des pipelines {{site.data.keyword.contdelivery_full}}.
@@ -50,8 +50,10 @@ application existante :
 Pour [créer un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} configuré pour déployer une application Cloud Foundry, procédez comme suit :
 
 1. Cliquez sur **Cloud Foundry**.
-1. Si vous désirez utiliser un nom différent pour le pipeline, modifiez son nom par défaut.
-1. Si vous désirez utiliser un nom différent pour l'application, modifiez son nom par défaut. Ce nom est celui de l'application où est déployé le pipeline.
+1. Si vous souhaitez utiliser un nom différent pour le pipeline, modifiez son nom par défaut.
+1. Si vous souhaitez utiliser un nom différent pour l'application, modifiez son nom par défaut. Ce nom est celui de l'application où est déployé le pipeline.
+1. Si vous souhaitez créer le pipeline dans une organisation différente, modifiez son organisation par défaut. Vous pouvez créer des pipelines dans des organisations auxquelles vous appartenez.
+1. Si vous souhaitez créer le pipeline dans un espace différent, modifiez son espace par défaut. Vous pouvez créer le pipeline dans un espace qui se trouve dans votre organisation.
 1. Si vous n'avez pas de chaînes d'outils, une chaîne d'outils portant le nom par défaut est créée pour vous. Si vous désirez utiliser un autre nom pour la chaîne d'outils, modifiez son nom. Grâce à la chaîne d'outils, vous pouvez étendre les capacités de votre pipeline par une intégration avec d'autres outils et services. Pour plus d'informations sur les chaînes d'outils, voir [Création de chaînes d'outils](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
 
  **Astuce **: les pipelines et les chaînes d'outils appartiennent à des organisations (orgs). Si vous appartenez à une organisation disposant de chaînes d'outils, vous pouvez être ajouté à la liste de contrôle d'accès de l'une de ses chaînes d'outils associées. Une fois que vous êtes ajouté à la liste de contrôle d'accès d'une chaîne d'outils,vous pouvez afficher cette chaîne d'outils et ses pipelines associés, même si vous ne les avez pas créés. Si vous disposez des droits administrateur, vous pouvez également modifier et supprimer la chaîne d'outils. Pour plus d'informations sur le contrôle d'accès pour les chaînes d'outils,  voir [Gestion de l'accès](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
@@ -78,7 +80,9 @@ Pour [créer un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg 
 Pour créer un [pipeline vide ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} sans étapes préconfigurées :
 
 1. Cliquez sur **Personnalisé**.
-1. Si vous désirez utiliser un nom différent pour le pipeline, modifiez son nom par défaut.
+1. Si vous souhaitez utiliser un nom différent pour le pipeline, modifiez son nom par défaut.
+1. Si vous souhaitez créer le pipeline dans une organisation différente, modifiez son organisation par défaut. Vous pouvez créer des pipelines dans des organisations auxquelles vous appartenez.
+1. Si vous souhaitez créer le pipeline dans un espace différent, modifiez son espace par défaut. Vous pouvez créer le pipeline dans un espace qui se trouve dans votre organisation.
 1. Si vous n'avez pas de chaînes d'outils, une chaîne d'outils portant le nom par défaut est créée pour vous. Si vous désirez utiliser un autre nom pour la chaîne d'outils, modifiez son nom. Grâce à la chaîne d'outils, vous pouvez étendre les capacités de votre pipeline par une intégration avec d'autres outils et services.
 1. Sélectionnez la chaîne d'outils que vous désirez utiliser ou entrez le nom de la nouvelle chaîne d'outils à créer.
 1. Cliquez sur **Créer**. Un pipeline vide est créé et représenté sous forme de carte sur la page Présentation de la chaîne d'outils.
@@ -89,4 +93,4 @@ A partir de {{site.data.keyword.deliverypipeline}}, modifiez votre configuration
 {: #pipeline-tutorial}
 
 Consultez le tutoriel suivant sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage){:new_window} :
-  * [Create a pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline?task=1){:new_window}
+  * [Création d'un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline?task=1){:new_window}

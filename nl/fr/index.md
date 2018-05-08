@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-5-19"
+  years: 2015, 2018
+lastupdated: "2018-1-15"
 
 ---
 
@@ -16,21 +16,16 @@ Adoptez une approche DevOps en utilisant {{site.data.keyword.contdelivery_full}}
 pouvez commencer en créant une chaîne d'outils de déploiement simple qui prend en charge les tâches de développement, de déploiement et les opérations.
 {: shortdesc}
 
-Après avoir créé une instance de {{site.data.keyword.contdelivery_short}} en la sélectionnant dans le catalogue {{site.data.keyword.Bluemix_notm}}, vous pouvez choisir la manière dont vous souhaitez démarrer avec le service.
- ![Page de bienvenue de Continuous Delivery](images/cd_landing_page.png)
+Après avoir créé une instance de {{site.data.keyword.contdelivery_short}} en la sélectionnant dans le catalogue {{site.data.keyword.Bluemix_notm}}, vous pouvez créer une chaîne d'outils Continuous Delivery à partir d'un modèle ou utiliser les chaînes d'outils existantes.
+ ![Page d'accueil de Continuous Delivery](images/cd_landing_page2.png)
 
-* Pour commencer rapidement et déployer votre application à l'aide d'un pipeline automatisé, dans la section
-"Démarrage avec un pipeline", cliquez sur **[Commencer ici](#starting_with_a_pipeline)**. Vous pourrez ajouter d'autres outils ultérieurement.
-* Pour créer et configurer une chaîne d'outils de distribution continue depuis un modèle, dans la section "Démarrage depuis un modèle de chaîne d'outils", cliquez sur **[Commencer ici](#starting_from_a_toolchain_template)**. La chaîne d'outils intègre des outils destinés à la planification, au développement, au déploiement de pipelines et à la gestion de vos applications. Vous pouvez toujours ajouter ou retirer des outils dans vos chaînes d'outils.
-* Si vous disposez déjà de chaînes d'outils, dans la section "Démarrage depuis un modèle de chaîne d'outils", cliquez sur **Afficher vos chaînes
-d'outils**. Pour plus d'informations sur l'utilisation des chaînes d'outils, voir [Utilisation de chaînes d'outils](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
-
-**Astuce** : Les pipelines sont gérés par des chaînes d'outils. Vous pouvez ajouter un pipeline à une chaîne d'outils existante. Si vous créez un pipeline et qu'il n'existe pas de chaînes d'outils, une chaîne d'outils avec un nom par défaut est automatiquement créée. Grâce à la chaîne d'outils, vous pouvez développer les capacités de votre pipeline par une intégration avec d'autres outils et services.
+* Pour créer et configurer une chaîne d'outils Continuous Delivery à partir d'un modèle, cliquez sur **[Démarrer ici](#starting_from_a_toolchain_template)**. La chaîne d'outils intègre des outils destinés à la planification, au développement, au déploiement de pipelines et à la gestion de vos applications. Vous pouvez toujours ajouter ou retirer des outils dans vos chaînes d'outils.
+* Si vous possédez déjà des chaînes d'outils, dans la section "Démarrer à partir d'un modèle de chaîne d'outils", cliquez sur **Affichez vos chaînes d'outils**. Pour plus d'informations sur l'utilisation des chaînes d'outils, voir [Utilisation de chaînes d'outils](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
 
 ##Présentation de {{site.data.keyword.contdelivery_short}}
 {: #cd_overview}
 
-Avec {{site.data.keyword.contdelivery_short}}, vous pouvez construire, tester et livrer des applications en suivant des pratiques DevOps et en utilisant des outils à la pointe du secteur.
+Avec {{site.data.keyword.contdelivery_short}}, vous pouvez construire, tester et livrer des applications en suivant des pratiques DevOps et en utilisant des outils de pointe.
 {:shortdesc}
 
 Le service {{site.data.keyword.contdelivery_short}} prend en charge vos flux de travaux DevOps :
@@ -38,6 +33,8 @@ Le service {{site.data.keyword.contdelivery_short}} prend en charge vos flux de 
  * Vous pouvez créer des [chaînes d'outils](/docs/services/ContinuousDelivery/toolchains_about.html){: new_window} ouvertes DevOps intégrées activant des intégrations d'outils prenant en charge vos tâches de développement, de déploiement et vos opérations.
 
   Une chaîne d'outils est un ensemble d'outils intégré que vous pouvez utiliser pour développer, construire, déployer, tester et gérer vos applications en collaborant avec d'autres utilisateurs, et pour faciliter la gestion des opérations reproductibles. Les chaînes d'outils peuvent inclure des outils open source, des services {{site.data.keyword.Bluemix_notm}}, comme [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window} et des outils tiers, comme GitHub, PagerDuty et Slack. 
+  
+  **Remarque** : {{site.data.keyword.DRA_short}} est uniquement disponible dans la région sud des Etats-Unis.
 
  * Distribution continue à l'aide de [pipelines](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window} automatisés.
 
@@ -52,46 +49,6 @@ le Web](/docs/services/ContinuousDelivery/web_ide.html){: new_window}.
 
   Gérez les référentiels Git via des contrôles d'accès à granularité fine qui permettent de sécuriser le code. Révisez le code et améliorez la collaboration via des demandes de fusion. Suivez les problèmes et partagez des idées via le dispositif de suivi de problèmes. Documentez des projets sur le système de wiki.
 
-##Démarrage avec un pipeline
-{: #starting_with_a_pipeline}
-
-Les pipelines automatisent les générations, les déploiements, etc. Pour commencer avec un pipeline automatisé, sélectionnez un modèle et indiquez l'emplacement de votre référentiel GitHub (repo).
-
-Pour [créer un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops/pipelines/dashboard/create){:new_window} configuré pour déployer une application Cloud Foundry, procédez comme suit :
-
-1. Cliquez sur **Cloud Foundry**.
-1. Si vous désirez utiliser un nom différent pour le pipeline, modifiez son nom par défaut. Le nom du pipeline l'identifie dans {{site.data.keyword.Bluemix_notm}}.
-1. Si vous désirez utiliser un nom différent pour l'application, modifiez son nom par défaut. Le nom de l'application l'identifie dans {{site.data.keyword.Bluemix_notm}}. Ce nom est celui de l'application où est déployé le pipeline.
-1. Si vous n'avez pas de chaînes d'outils, une chaîne d'outils portant le nom par défaut est créée pour vous. Si vous désirez utiliser un autre nom pour la chaîne d'outils, modifiez son nom. Les pipelines sont gérés par des chaînes d'outils. Grâce à la chaîne d'outils, vous pouvez étendre les capacités de votre pipeline par une intégration avec d'autres outils et services.
-
- **Astuce **: les pipelines et les chaînes d'outils appartiennent à des organisations (orgs). Si vous appartenez à une organisation disposant de chaînes d'outils, vous pouvez utiliser ces chaînes d'outils même si vous ne les avez pas créées.
-
-1. Sélectionnez la chaîne d'outils que vous désirez utiliser ou entrez le nom de la nouvelle chaîne d'outils à créer.
-1. Sélectionnez votre fournisseur Git.
-
- **Astuce** : si {{site.data.keyword.Bluemix_notm}} n'est pas autorisé à accéder à votre compte GitHub, vous êtes invité à cliquer sur **Autoriser** pour accéder au site Web de GitHub. Si vous n'avez pas de session GitHub active, vous êtes invité à vous connecter. Cliquez sur **Authorize Application** pour autoriser {{site.data.keyword.Bluemix_notm}} à accéder à votre compte GitHub.
-
- Si vous n'êtes pas autorisé à accéder au référentiel {{site.data.keyword.ghe_short}}, une personne disposant de droits d'administrateur pour le référentiel doit vous ajouter. Pour obtenir des instructions sur une autorisation avec {{site.data.keyword.Bluemix_notm}} Dédié pour {{site.data.keyword.ghe_short}}, voir [Initiation à {{site.data.keyword.Bluemix_notm}} Dédié pour {{site.data.keyword.ghe_short}}](/docs/services/ghededicated/index.html){: new_window}. Si vous devez accorder l'autorisation avec votre propre version gérée de {{site.data.keyword.ghe_short}}, suivez vos procédures internes.
-
-    * Si vous disposez d'un référentiel et désirez l'utiliser, sélectionnez **Lien** pour le type de référentiel. Recherchez l'emplacement du référentiel ou sélectionnez le référentiel dans la liste des référentiels disponibles.
-
-    * Si vous désirez créer un référentiel vide, sélectionnez **Nouveau** pour le type de référentiel. Entrez un nom pour le référentiel.
-
-    * Si vous désirez créer un clone d'un référentiel, sélectionnez **Copie** pour le type de référentiel. Recherchez l'emplacement du référentiel ou sélectionnez le référentiel dans la liste des référentiels disponibles.
-
-    * Si vous désirez dévier un référentiel pour pouvoir contribuer à des modifications via des demandes d'extraction, sélectionnez **Déviation**. Recherchez l'emplacement du référentiel ou sélectionnez le référentiel dans la liste des référentiels disponibles.
-
-1. Sélectionnez un référentiel ou entrez une URL de référentiel.
-1. Cliquez sur **Créer**. Le pipeline est créé, configuré et affiché sur la page Présentation de la chaîne d'outils.
- ![Carte de pipeline](images/cd_pipeline.png)
-
-Pour créer un [pipeline vide ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} sans étapes préconfigurées :
-
-1. Cliquez sur **Personnalisé**.
-1. Si vous désirez utiliser un nom différent pour le pipeline, modifiez son nom par défaut. Le nom du pipeline l'identifie dans {{site.data.keyword.Bluemix_notm}}.
-1. Si vous n'avez pas de chaînes d'outils, une chaîne d'outils portant le nom par défaut est créée pour vous. Si vous désirez utiliser un autre nom pour la chaîne d'outils, modifiez son nom. Les pipelines sont gérés par des chaînes d'outils. Grâce à la chaîne d'outils, vous pouvez étendre les capacités de votre pipeline par une intégration avec d'autres outils et services.
-1. Sélectionnez la chaîne d'outils que vous désirez utiliser ou entrez le nom de la nouvelle chaîne d'outils à créer.
-1. Cliquez sur **Créer**. Un pipeline vide est créé et représenté sous forme de carte sur la page Présentation de la chaîne d'outils.
 
 ##Démarrage depuis un modèle de chaîne d'outils
 {: #starting_from_a_toolchain_template}
@@ -103,10 +60,15 @@ Pour créer et configurer une chaîne d'outils de distribution continue depuis u
 
  **Astuce** : Quelques modèles de chaîne d'outils possèdent plusieurs instances d'intégration d'outils. Par exemple, le modèle de chaîne d'outils Microservices sur {{site.data.keyword.Bluemix_notm}} Public contient trois instances de GitHub et trois instances de Delivery Pipeline, une pour chacun des trois microservices.
 
- L'image suivante fournit un exemple de diagramme. Lorsque vous créez une chaîne d'outils, le diagramme représente chaque intégration d'outils faisant partie de la chaîne d'outils. ![Diagramme de chaîne d'outils](images/toolchain_diagram.png)
-1. Passez en revue les informations par défaut des paramètres de chaîne d'outils. Le nom de la chaîne d'outils l'identifie dans {{site.data.keyword.Bluemix_notm}}. Si vous désirez utiliser un nom différent, modifiez le nom de la chaîne d'outils.
+ L'image suivante fournit un exemple de diagramme. Lorsque vous créez une chaîne d'outils, le diagramme représente chaque intégration d'outils faisant partie de la chaîne d'outils. ![Diagramme de chaîne d'outils](images/toolchain_diagram2.png)
+1. Vérifiez les valeurs par défaut des paramètres de la chaîne d'outils :
+
+ * Le nom de la chaîne d'outils l'identifie dans {{site.data.keyword.Bluemix_notm}}. Si vous désirez utiliser un nom différent, modifiez le nom de la chaîne d'outils.
+ * La région de création de la chaîne d'outils. Si vous souhaitez utiliser une région différente, sélectionnez-la dans la liste des régions disponibles.
+ * L'organisation dans laquelle la chaîne d'outils doit être créée. Si vous souhaitez utiliser une organisation différente, sélectionnez-la dans la liste des organisations disponibles. 
+ 
 1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
-1. Cliquez sur **Créer**. Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient en fonction du modèle de chaîne d'outils que vous avez sélectionné et selon que vous utilisez {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dédié. Par exemple, lorsque vous créez une chaîne d'outils Microservices sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :
+1. Cliquez sur **Créer**. Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient en fonction du modèle de chaîne d'outils que vous avez sélectionné et selon que vous utilisez {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dedicated. Par exemple, lorsque vous créez une chaîne d'outils Microservices sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :
 
  * La chaîne d'outils est créée.
  * Si vous avez configuré Delivery Pipeline, les pipelines sont créés et exécutés.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-5-19"
+  years: 2015, 2018
+lastupdated: "2018-3-20"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-5-19"
 # Mise à niveau des projets IBM Confidentiel vers des chaînes d'outils 
 {: #upgrade_public_or_cio}
 
-{{site.data.keyword.jazzhub}} évolue vers IBM Bluemix {{site.data.keyword.contdelivery_short}}. Dans le cadre de cette modification, les projets sont mis à niveau vers des chaînes d'outils.
+{{site.data.keyword.jazzhub}} évolue vers {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.contdelivery_short}}. Dans le cadre de cette modification, les projets sont mis à niveau vers des chaînes d'outils.
 
 Lorsque votre projet est prêt pour la mise à niveau, un message s'affiche sur sa page Présentation. Vous pouvez alors le mettre à niveau vers une chaîne d'outils sur {{site.data.keyword.Bluemix_notm}} Public. La chaîne d'outils inclura un référentiel Whitewater {{site.data.keyword.ghe_short}} pour votre code source. Whitewater {{site.data.keyword.ghe_short}} est fourni aux équipes IBM dans un objectif de promotion et d'activation du codage social chez IBM. 
 {: shortdesc}

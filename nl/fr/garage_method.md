@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 
-lastupdated: "2017-6-5"
+lastupdated: "2018-3-23"
 
 ---
 <!-- Copyright info at top of file: REQUIRED
@@ -21,9 +21,9 @@ lastupdated: "2017-6-5"
 # Pratiques de distribution continue
 {: #gm_cd_best}
 
-![Phases de Garage Method](images/garage_method_phases.png) [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage){:new_window} est l'approche IBM qui permet de
-distribuer rapidement des applications d'engagement. Elle combine la distribution continue avec des pratiques agiles, IBM Design Thinking, lean et DevOps. Ces
-pratiques sont axées sur le cloud, mais peuvent profiter de tous les efforts déployés en matière de développement logiciel.
+
+
+Avec {{site.data.keyword.contdelivery_full}}, vous pouvez construire, tester et livrer des applications en suivant des pratiques DevOps et en utilisant des outils de pointe. Continuous Delivery prend en charge une grande variété de pratiques, mais quelle pratique devez-vous utiliser ? Il n'existe pas de réponse universelle. Les pratiques employées pour la livraison d'un logiciel varient d'un projet à un autre. [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage){:new_window} est l'approche d'IBM pour livrer rapidement des applications intéressantes. Elle combine la distribution continue avec des pratiques agiles, IBM Design Thinking, lean et DevOps. Ces pratiques sont axées sur le cloud, mais peuvent profiter à n'importe quel effort de développement logiciel.
 
 
 ## Adoption de pratiques de distribution continue
@@ -34,26 +34,20 @@ Pour découvrir comment adopter une approche de distribution continue dans votre
 ## Articles sur la distribution continue
 {: #gm_cd_articles}
 
-Le site Cloud Garage Method contient des articles décrivant la distribution continue à un niveau élevé. 
+Le site Cloud Garage Method contient des articles décrivant la distribution continue à un niveau élevé.
 
-La [distribution continue ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/deliver/tool_continuous_delivery/){:new_window} est une pratique dans laquelle vous générez et déployez vos logiciels afin qu'ils puissent être envoyés en production à tout moment. L'une des marques de fabrique de l'informatique consiste à raccourcir les divers temps de cycle au cours du processus d'opérations et de développement.
+La [distribution continue ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/deliver/practice_continuous_delivery/] ){:new_window} est une pratique dans laquelle vous générez et déployez vos logiciels afin qu'ils puissent être envoyés en production à tout moment. L'une des marques de fabrique de l'informatique consiste à raccourcir les divers temps de cycle au cours du processus d'opérations et de développement.
 
-[Delivery Pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:new_window}, qui est inclus dans IBM Bluemix Continuous Delivery, vous permet d'exécuter une distribution continue de façon fiable et cohérente en divisant le processus de distribution logicielle en étapes. Son objectif vise à faire passer le code par les différentes étapes avec une intervention humaine minimale.
+Avec [Delivery Pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:new_window}, qui est inclus dans {{site.data.keyword.Bluemix_notm}} Continuous Delivery, vous pouvez obtenir une distribution continue de manière cohérente et fiable en divisant le processus de distribution logicielle en plusieurs étapes. Son objectif vise à faire passer le code par les différentes étapes avec une intervention humaine minimale. Avec la [pratique qui consiste à utiliser des pipelines de distribution ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/deliver/practice_delivery_pipeline/){:new_window}, vous pouvez automatiser le déploiement continu de votre projet. 
 
 ## Tutoriels sur la distribution continue
 {: #gm_cd_tutorials}
 
-[Créez et utilisez votre première chaîne d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}. Apprenez à créer une chaîne d'outils ouverte à partir d'un modèle et utilisez-la pour distribuer en continu une application "Hello World".
+[Création et utilisation de votre propre chaîne d'outils à l'aide de la chaîne d'outils "Développer une application Cloud Foundry"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}. Apprenez à créer une chaîne d'outils ouverte à partir d'un modèle et utilisez-la pour distribuer en continu une application "Hello World".
 
-[Ajoutez une chaîne d'outils à une application ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain?=task1){:new_window}. Apprenez à ajouter une chaîne d'outils ouverte à une application et à utiliser la chaîne d'outils pour distribuer l'application de manière continue.
+[Ajout d'une chaîne d'outils à une application ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}. Apprenez à ajouter une chaîne d'outils ouverte à une application et à utiliser la chaîne d'outils pour distribuer l'application de manière continue.
 
-[Créez et utilisez une chaîne d'outils de microservices ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}. Apprenez à créer une chaîne d'outils à partir d'un modèle avec trois microservices et utilisez-la pour distribuer en continu une application "Hello World".
-
-[Créez et utilisez une chaîne d'outils de microservices avec {{site.data.keyword.DRA_short}} (v2) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}. Apprenez à configurer une chaîne d'outils ouverte qui développe et distribue de manière continue une application de microservices.
-
-[Créez une chaîne d'outils qui utilise {{site.data.keyword.gitrepos}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}. Créez une chaîne d'outils ouverte à partir d'un modèle qui inclut une application Cloud Foundry et utilise {{site.data.keyword.gitrepos}}. Utilisez ensuite la chaîne d'outils pour distribuer l'application de manière continue.
-
-[Créez un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline){:new_window}. Apprenez à démarrer avec un pipeline et à créer une chaîne d'outils ouverte qui inclut un référentiel GitHub et le pipeline.
+[Utilisation de la chaîne d'outils "Développer et tester des microservices sur Cloud Foundry" ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}. Apprenez à créer une chaîne d'outils à partir d'un modèle avec trois microservices et utilisez-la pour distribuer un magasin en ligne en continu.
 
 Pour accéder à plus de tutoriels, voir [Learning Lab ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/category/courses){:new_window}.
 

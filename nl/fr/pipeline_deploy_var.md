@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2017-7-10"
+  years: 2016, 2018
+lastupdated: "2018-1-23"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -15,6 +15,7 @@ lastupdated: "2017-7-10"
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
+{:tip:.tip}
 
 # Propriétés et ressources d'environnement
 {: #deliverypipeline_environment}
@@ -31,6 +32,8 @@ Vous pouvez ajouter quatre types de propriété à partir de votre onglet Propri
 * **Sécurisé** : Clé de propriété avec une valeur monoligne. La valeur apparaît sous la forme d'astérisques.
 * **Propriétés** : Fichier dans le référentiel du projet. Ce fichier peut contenir plusieurs propriétés. Chaque propriété doit figurer sur sa propre ligne. Pour distinguer des paires clé-valeur, utilisez le signe égal (=).
 
+Vous pouvez examiner les propriétés d'environnement pour un travail de pipeline en exécutant la commande `env` dans le script du travail.
+{:tip}
 
 Les propriétés et ressources suivantes sont disponibles par
 défaut dans les environnements de pipeline.
@@ -99,7 +102,7 @@ défaut dans les environnements de pipeline.
 | CF_ORGANIZATION_ID | Pour les déploiements, nom de l'organisation dans laquelle effectuer le déploiement. |
 | CF_SPACE | Pour les déploiements, nom de l'espace dans lequel effectuer le déploiement. |
 | CF_SPACE_ID | Pour les déploiements, ID de l'espace dans lequel effectuer le déploiement.  |
-| CF_TARGET_URL | Pour les déploiements, URL d'IBM Bluemix&reg; ou de Cloud Foundry. |
+| CF_TARGET_URL | Pour les déploiements, URL de {{site.data.keyword.Bluemix_short}} ou de Cloud Foundry. |
 | IDS_VERSION | Pour les déploiements, version de l'application qui est déployée ou identificateur source. |
 
 ## Ressources préinstallées

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-8-18"
+lastupdated: "2018-3-21"
 
 
 ---
@@ -17,7 +17,7 @@ lastupdated: "2017-8-18"
 Une *chaîne d'outils* est un ensemble d'intégrations d'outils prenant en charge des tâches de développement, de déploiement et d'opérations. La puissance collective d'une chaîne d'outils est supérieure à la somme de ses intégrations d'outils individuelles.
 {: shortdesc}
 
-Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dédié. Vous pouvez créer une chaîne d'outils de deux façons : à l'aide d'un modèle ou à partir d'une application.
+Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dedicated. Vous pouvez créer une chaîne d'outils de deux façons : à l'aide d'un modèle ou à partir d'une application.
 
 Chaque chaîne d'outils est associée à une organisation (org) spécifique, et tout membre de cette organisation peut être ajouté à la liste de contrôle d'accès de l'une de ses chaînes d'outils associées. Pour plus d'informations sur le contrôle d'accès pour les chaînes d'outils,  voir [Gestion de l'accès](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}. Avant de créer une chaîne d'outils, assurez-vous de travailler dans l'organisation dans laquelle vous voulez créer la chaîne d'outils. L'organisation au sein de laquelle vous travaillez s'affiche dans la barre de menus. Pour passer à une autre organisation, cliquez sur l'organisation dans la barre de menus, puis sélectionnez l'organisation souhaitée.
 
@@ -28,7 +28,7 @@ Chaque chaîne d'outils est associée à une organisation (org) spécifique, et 
 Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne d'outils![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/create){: new_window} incluant un ensemble spécifique d'intégrations d'outils. Pour en savoir plus sur l'utilisation des modèles, consultez [IBM Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/category/tools){:new_window}.
 
 1. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Public, connectez-vous à [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://console.bluemix.net){:new_window}.
-1. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dédié, connectez-vous à votre environnement Dédié sur {{site.data.keyword.Bluemix_notm}}.
+1. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dedicated, connectez-vous à votre environnement Dedicated sur {{site.data.keyword.Bluemix_notm}}.
 1. Dans le menu de la barre de menus {{site.data.keyword.Bluemix_notm}}, cliquez sur **DevOps**.
 1. Dans le tableau de bord DevOps, sur la page **Chaînes d'outils**, cliquez sur **Créer une chaîne d'outils**.
 1. Sur la page **Créer une chaîne d'outils**, cliquez sur un modèle de chaîne d'outils.
@@ -37,11 +37,16 @@ Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne 
  **Astuce** : Quelques modèles de chaîne d'outils possèdent plusieurs instances d'intégration d'outils. Par exemple, le modèle de chaîne d'outils Microservices sur {{site.data.keyword.Bluemix_notm}} Public contient trois instances de GitHub et trois instances de Delivery Pipeline, une pour chacun des trois microservices.
 
  L'image suivante fournit un exemple de diagramme. Lorsque vous créez une chaîne d'outils, le diagramme représente chaque intégration d'outils faisant partie de la chaîne d'outils.
-![Diagramme de chaîne d'outils](images/toolchain_diagram.png)
+![Diagramme de chaîne d'outils](images/toolchain_diagram2.png)
 
-1. Passez en revue les informations par défaut des paramètres de chaîne d'outils. Le nom de la chaîne d'outils l'identifie dans {{site.data.keyword.Bluemix_notm}}. Si vous désirez utiliser un nom différent, modifiez le nom de la chaîne d'outils.  
+1. Vérifiez les valeurs par défaut des paramètres de la chaîne d'outils :
+
+ * Le nom de la chaîne d'outils l'identifie dans {{site.data.keyword.Bluemix_notm}}. Si vous désirez utiliser un nom différent, modifiez le nom de la chaîne d'outils.
+ * La région de création de la chaîne d'outils. Si vous souhaitez utiliser une région différente, sélectionnez-la dans la liste des régions disponibles.
+ * L'organisation dans laquelle la chaîne d'outils doit être créée. Si vous souhaitez utiliser une organisation différente, sélectionnez-la dans la liste des organisations disponibles. 
+
 1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
-1. Cliquez sur **Créer**. Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient en fonction du modèle de chaîne d'outils que vous avez sélectionné et selon que vous utilisez {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dédié. Par exemple, lorsque vous créez une chaîne d'outils Microservices sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :
+1. Cliquez sur **Créer**. Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient en fonction du modèle de chaîne d'outils que vous avez sélectionné et selon que vous utilisez {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dedicated. Par exemple, lorsque vous créez une chaîne d'outils Microservices sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :
 
  * La chaîne d'outils est créée.
  * Si vous avez configuré Delivery Pipeline, les pipelines sont créés et déclenchés.
@@ -56,11 +61,11 @@ Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne 
 
 Vous pouvez créer une chaîne d'outils à partir de votre application. La chaîne d'outils peut prendre en charge le développement, le déploiement, la surveillance, etc. en continu, et elle est associée à votre application. Chaque application peut être associée à une chaîne d'outils. Lorsque vous envoyez des modifications au référentiel GitHub ou {{site.data.keyword.ghe_short}} de la chaîne d'outils, le pipeline génère et déploie automatiquement l'application.  
 
-1. Depuis la page de présentation de votre application, sur la carte Distribution continue, cliquez sur **Activer**. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Public, votre application est configurée pour la distribution continue depuis un nouveau référentiel GitHub rempli avec le code de démarrage d'application. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dédié, votre application est configurée pour la distribution continue depuis un nouveau référentiel GitHub ou {{site.data.keyword.ghe_short}} rempli avec le code de démarrage d'application.
+1. Depuis la page de présentation de votre application, sur la carte Distribution continue, cliquez sur **Activer**. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Public, votre application est configurée pour la distribution continue depuis un nouveau référentiel GitHub rempli avec le code de démarrage d'application. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dedicated, votre application est configurée pour la distribution continue depuis un nouveau référentiel GitHub ou {{site.data.keyword.ghe_short}} rempli avec le code de démarrage d'application.
 1. Sur la page de création de chaîne d'outils, passez en revue le diagramme de la chaîne d'outils que vous allez créer. Ce diagramme montre chaque intégration d'outils dans sa phase de cycle de vie au sein de la chaîne d'outils.
 1. Passez en revue les informations par défaut des paramètres de chaîne d'outils. Le nom de la chaîne d'outils l'identifie dans {{site.data.keyword.Bluemix_notm}}. Si vous désirez utiliser un nom différent, modifiez le nom de la chaîne d'outils.
 1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
-1. Cliquez sur **Créer**.  Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient selon que vous utilisez des chaînes d'outils sur {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dédié. Par exemple, lorsque vous créez une chaîne d'outils à partir d'une application sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :
+1. Cliquez sur **Créer**.  Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient selon que vous utilisez des chaînes d'outils sur {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dedicated. Par exemple, lorsque vous créez une chaîne d'outils à partir d'une application sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :
 
  * La chaîne d'outils est créée.
  * Si vous avez configuré Delivery Pipeline, les pipelines sont créés et déclenchés.
@@ -86,6 +91,9 @@ chacun des trois microservices dispose de son propre référentiel GitHub, {{sit
 {: #toolchain_tutorials}
 
 Consultez l'un des tutoriels suivants sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage){:new_window} :
-  * [Create and use your first toolchain (GitHub) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Create a toolchain that uses Git Repos and Issue Tracking ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [Add a toolchain to an app ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain?task=1){:new_window}
+
+  * [Création et utilisation de votre propre chaîne d'outils à l'aide de la chaîne d'outils "Développer une application Cloud Foundry"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+
+  * [Ajout d'une chaîne d'outils à une application ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+
+  * [Utilisation de la chaîne d'outils "Développer et tester des microservices sur Cloud Foundry" ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.

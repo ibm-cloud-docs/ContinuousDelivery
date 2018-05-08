@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2017
-lastupdated: "2017-09-20"
+  years: 2015，2018
+lastupdated: "2018-3-26"
 
 ---
 
@@ -13,11 +13,11 @@ lastupdated: "2017-09-20"
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#Bluemix Live Sync
+# {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
 
 
-Si vous construisez une application Node.js, vous pouvez utiliser {{site.data.keyword.Bluemix}} Live Sync pour mettre rapidement à jour l'instance d'application dans {{site.data.keyword.Bluemix_notm}} et procéder au développement sans avoir à effectuer un redéploiement manuel.    
+Si vous construisez une application Node.js, vous pouvez utiliser {{site.data.keyword.Bluemix}} Live Sync pour mettre rapidement à jour l'instance d'application dans {{site.data.keyword.Bluemix_notm}} et procéder au développement sans avoir à effectuer un redéploiement manuel.   
 {: shortdesc}
 
 Lorsque vous apportez une modification, vous pouvez immédiatement voir cette modification dans votre application
@@ -25,7 +25,7 @@ Lorsque vous apportez une modification, vous pouvez immédiatement voir cette mo
 <!--from both the command line and -->
 dans l'interface IDE Web Eclipse Orion. Vous pouvez déboguer des applications qui sont écrites dans Node.js à l'aide de {{site.data.keyword.Bluemix_notm}} Live Sync.  
 
-{{site.data.keyword.Bluemix_notm}} Live Sync se compose de deux fonctions. 
+{{site.data.keyword.Bluemix_notm}} Live Sync se compose de deux fonctions.
 <!--three -->
 
 <!--
@@ -58,22 +58,20 @@ La fonction Live Edit vous permet de prévisualiser rapidement les modifications
 votre code alors que la fonction Live Edit est activée, vous pouvez actualiser la fenêtre de navigateur de votre application Web pour afficher ces
 modifications quelques secondes après les avoir effectuées.
 
-<!--
-For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see the tutorial [Test and debug a Node.js app with Bluemix Live Sync![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/livesync){:new_window}.
--->
+Consultez le tutoriel sur l'utilisation de la fonction Live Edit de {{site.data.keyword.Bluemix_notm}} Live Sync sous [Utilisation de {{site.data.keyword.Bluemix_notm}} Live Sync pour développer, dégoguer et déployer votre application![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-live-sync-to-develop-debug-and-deploy-your-app){:new_window}.
 
-Lorsque vous modifiez les fichiers dans votre interface IDE Web, ils sont redéployés automatiquement sur votre instance d'application sur{{site.data.keyword.Bluemix_notm}}. Si vous devez redémarrer l'application de noeud, vous pouvez utiliser le bouton **Redémarrer** dans la barre d'exécution.
+Lorsque vous modifiez les fichiers dans votre interface IDE Web, ils sont redéployés automatiquement sur votre instance d'application sur {{site.data.keyword.Bluemix_notm}}. Si vous avez besoin de redémarrer l'application Node, cliquez sur le bouton **Redémarrer** dans la barre d'exécution.
 
-**Remarque :** pour une expérience cohérente lorsque vous utilisez la fonction Live Edit de {{site.data.keyword.Bluemix_notm}} Live Sync, 256 Mo de mémoire supplémentaire sont requis et ajoutés. 
+**Remarque :** pour que votre expérience soit plus cohérente lorsque vous utilisez la fonction Live Edit de {{site.data.keyword.Bluemix_notm}} Live Sync, 256 Mo de mémoire supplémentaire est requise et ajoutée.
 
-## Bluemix Live Debug
+## {{site.data.keyword.Bluemix_notm}} Live Debug
 {: #live-debug}
 
 {{site.data.keyword.Bluemix_notm}} Live Sync Debug utilise
 [Node Inspector ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/node-inspector/node-inspector){:new_window}
 pour fournir les fonctions de débogage. Vous devez utiliser la version 4 de l'application Node pour que le débogueur soit disponible puisque les versions ultérieures de Node.js n'incluent pas Node Inspector.
 
-Vous pouvez accéder à {{site.data.keyword.Bluemix_notm}} Live Debug lorsque {{site.data.keyword.Bluemix_notm}} Live Edit est activé pour votre application Node.js.   
+Vous pouvez accéder à {{site.data.keyword.Bluemix_notm}} Live Debug lorsque {{site.data.keyword.Bluemix_notm}} Live Edit est activé pour votre application Node.js.  
 
 La fonction debug permet d'éditer le code, d'insérer des points d'arrêt, de parcourir le code, de redémarrer le contexte d'exécution et d'effectuer d'autres opérations de manière dynamique, pendant que votre application est exécutée par {{site.data.keyword.Bluemix_notm}}. Vous pouvez développer votre application de façon incrémentielle avec agilité en effectuant votre choix dans une longue liste de services
 {{site.data.keyword.Bluemix_notm}}.
@@ -94,18 +92,18 @@ Lorsque vous développez votre application, vous pouvez choisir une action parmi
 * Procéder à un redémarrage rapide de l'application
 * Suspendre l'application avant l'exécution du code de l'application
 
-Une fois que vous êtes connecté, la page {{site.data.keyword.Bluemix_notm}} Live Debug s'ouvre. 
+Une fois que vous êtes connecté, la page {{site.data.keyword.Bluemix_notm}} Live Debug s'ouvre.
 
 ![Interface utilisateur Debug](images/live_sync_debug.png)
 
 
 ### Debug {: #debug}
 
-**Restriction :** Google Chrome est requis.  Node 4 est requis. 
+**Restriction :** Google Chrome et Node 4 sont requis.
 
 La fonction Debug inclut les capacités suivantes :  
 * Définir des points d'arrêt dans le code de l'application pour interrompre l'exécution à une ligne spécifique.
-  **Remarque :** les points d'arrêt ne sont pas pris en charge dans le programme principal, mais dans des points d'entrée. 
+  **Remarque :** les points d'arrêt ne sont pas pris en charge dans le programme principal, mais dans des points d'entrée.
 * Editer les conditions de point d'arrêt pour interrompre l'exécution uniquement lorsque certains critères sont remplis.
 * Inspecter l'état des zones et des variables locales.
 * Afficher immédiatement la sortie de débogage des appels de `console.log()`. Cette action est plus rapide que la surveillance des journaux cf.
@@ -114,18 +112,18 @@ La fonction Debug inclut les capacités suivantes :
 ### Shell {: #shell}
 
 Cet outil permet d'accéder au conteneur dans lequel votre application est en cours d'exécution via un shell. Avec ce terminal, vous pouvez
-exécuter des commandes shell de diagnostic à distance afin d'administrer votre application. Toutes les versions de Node.js prennent en charge la fonction Shell. 
+exécuter des commandes shell de diagnostic à distance afin d'administrer votre application. Toutes les versions de Node.js prennent en charge la fonction Shell.
 
 Surveillez l'utilisation de la mémoire et de l'unité centrale dans l'instance qui utilise des commandes Linux standard, comme
 **top**, **ps** et **kill**.
 
 ### Configuration d'une application pour activer {{site.data.keyword.Bluemix_notm}} Live Debug {: #configure_app_debug}
 
-1. Bluemix Live Debugger utilise Node Inspector. Vous devez utiliser Node version 4. Vous devez également autoriser le pack de construction à détecter la commande app start. La commande start doit être détectée automatiquement par
-le pack de construction et ne doit pas être définie dans le fichier manifest.yml.  
-  
+1. {{site.data.keyword.Bluemix_notm}} Live Debugger utilise Node Inspector. Vous devez utiliser Node version 4. Vous devez également autoriser le pack de construction à détecter la commande app start. La commande start doit être détectée automatiquement par
+le pack de construction et ne doit pas être définie dans le fichier manifest.yml.
+
    Un fichier `package.json` qui prend en charge {{site.data.keyword.Bluemix_notm}} Live Debug se présente comme suit :
-   
+
   ```
   {
       "scripts": {
@@ -139,25 +137,21 @@ le pack de construction et ne doit pas être définie dans le fichier manifest.y
 
 2. Augmentez la mémoire.  
 
-    a. Dans le fichier `manifest.yml` de l'application, ajoutez 128 M, ou plus, à la valeur spécifiée pour l'attribut de mémoire.
+    a. Dans le fichier `manifest.yml` de l'application, ajoutez 128 Mo ou plus à la valeur spécifiée pour l'attribut de mémoire.
 
 Une fois {{site.data.keyword.Bluemix_notm}} Live
 Debug installé, vous pouvez utiliser les outils de débogage.
 
-Transférez l'application, puis accéder à `https://_app-host.mybluemix.net_/bluemix-debug/manage` pour accéder à l'interface utilisateur {{site.data.keyword.Bluemix_notm}} Debug. Lorsque vous êtes invité à vous authentifier, entrez vos nom d'utilisateur et mot de passe IBMid ou un code d'accès à usage unique.    
+Transférez l'application, puis accéder à `https://_app-host.mybluemix.net_/bluemix-debug/manage` pour accéder à l'interface utilisateur {{site.data.keyword.Bluemix_notm}} Debug. Lorsque vous êtes invité à vous authentifier, entrez vos nom d'utilisateur et mot de passe IBM ou un code d'accès à usage unique.    
 
 **Remarque :** l'initialisation du débogueur peut durer environ une minute. 
 
-<!--
-   **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
-   -->
+### Restauration des configurations d'application et désactivation de {{site.data.keyword.Bluemix_notm}} Live Debug {: #restore_live_debug}
 
-### Restauration des configurations d'application et désactivation de {{site.data.keyword.Bluemix_notm}} Live Debug{: #restore_live_debug}
-
-1. Restaurez la version Node.js, la commande start et la valeur de mémoire d'origine de l'application. 
+1. Restaurez la version Node.js, la commande start et la valeur de mémoire d'origine de l'application.
 
 2. Déployez l'application.
 
 ### Informations complémentaires
 
-* Consultez [Eclipse tools for Bluemix ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
+* Voir [Eclipse tools for {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

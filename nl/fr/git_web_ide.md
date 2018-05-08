@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-6-1"
+  years: 2017, 2018
+lastupdated: "2018-3-23"
 ---
 
 {:new_window: target="_blank"}
@@ -16,12 +16,14 @@ lastupdated: "2017-6-1"
 
 Vous pouvez exécuter un grand nombre de commandes Git courantes dans Eclipse Orion {{site.data.keyword.webide}}.
 
-Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence rapide pour réaliser les tâches courantes. Lorsque cela est possible, les commandes Git sont affichées avec leurs équivalents dans l'interface IDE Web.  
+Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence rapide pour réaliser les tâches courantes. Lorsque cela est possible, les commandes Git sont affichées avec leurs équivalents dans l'interface IDE Web. 
 
 ## Création d'une branche locale
 {: #create_branch}
 
 ### Eclipse Orion Web IDE
+{: #create_branch_web}
+
 1. Cliquez sur la liste **Référence**.
 
 1. Cliquez sur **Nouvelle branche**.
@@ -29,12 +31,14 @@ Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence r
 2. Entrez votre nom de branche puis cliquez sur **Soumettre**.
 
 ### Terminal Git
+{: #create_branch_cmd}
 1. Tapez `git branch <branchname>` et appuyez sur Entrée.
 
 ## Utilisation d'une branche locale
 {: #start_working_on_branch}
 
 ### Eclipse Orion Web IDE
+{: #start_working_on_branch_web}
 1. Cliquez sur la liste **Référence** et développez **local**.
 
 2. Cliquez sur l'icône de réservation <img  class="inline" src="./images/checkout.png" alt="Icône de réservation"> de la branche à modifier.
@@ -42,6 +46,7 @@ Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence r
 1. Vérifiez que la branche sélectionnée s'affiche dans la liste **Référence**.
 
 ### Terminal Git
+{: #start_working_on_branch_cmd}
 1. Pour afficher vos branches locales, entrez `git branch -l` et appuyez sur Entrée.
 
 2. Tapez `git checkout <branchname>` et appuyez sur Entrée.
@@ -51,17 +56,22 @@ Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence r
 {: #update_branch}
 
 ### Eclipse Orion Web IDE
+{: #update_branch_web}
+
 1. Cliquez sur **Synchroniser**.
 
 1. Si vous rencontrez des conflits, [résolvez-les](#resolve_a_rebase_conflict).
 
 ### Terminal Git
+{: #update_branch_cmd}
+
 1. Entrez `git pull` et appuyez sur Entrée.
 
 ## Suppression d'une branche locale
 {: #delete_branch}
 
 ### Eclipse Orion Web IDE
+{: #delete_branch_web}
 1. Vérifiez que la branche à supprimer n'est pas réservée. Si cette branche est réservée, [réservez une autre branche](#start_working_on_branch).
 
 1. Cliquez sur la liste **Référence** et développez **local**.
@@ -69,6 +79,8 @@ Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence r
 2. Cliquez sur **Supprimer** <img class="inline"  src="./images/delete.png" alt="Icône Supprimer"> de la branche locale à supprimer.
 
 ### Terminal Git
+{: #delete_branch_cmd}
+
 1. Tapez `git branch -d <branchname>` et appuyez sur Entrée.
 
 ##Insertion forcée des modifications locales dans une banche distante
@@ -80,29 +92,37 @@ Ecrasez le contenu d'une branche distante référencée avec le contenu de votre
 distante.
 
 ### Eclipse Orion Web IDE
+{: #force_push_web}
 
 1. Dans la section Modifications du répertoire de travail, sous Sortant, cliquez sur la flèche située en regard de **Insérer**.
 2. Cliquez sur **Forcer l'insertion de branche**.
 3. Confirmez l'avertissement.
 
 ### Terminal Git
+{: #force_push_cmd}
 
-1. Tapez `git push <origin> <remote branch> -f` et appuyez sur Entrée. 
+1. Tapez `git push <origin> <remote branch> -f` et appuyez sur Entrée.
 
 ## Elimination des contenus retirés de l'index de la branche locale active
 {: #discard_changes}
 
 ### Eclipse Orion Web IDE
+{: #discard_changes_web}
+
 1. Dans la section Modifications du répertoire de travail, cochez la case pour chaque fichier modifié contenant des modifications que vous souhaitez éliminer.
 2. Cliquez sur l'icône de réservation <img class="inline"  src="./images/discard.png" alt="Réserver les fichiers sélectionnés en annulant tous les changements">.
 
 ### Terminal Git
+{: #discard_changes_cmd}
+
 1. Entrez `git checkout -- chemin/d'accès/au/fichier/nom_de_fichier` pour éliminer toutes les modifications apportées à un fichier.
 
 ## Validation des fichiers et envoi par commande push à la branche distante
 {: #commit}
 
 ### Eclipse Orion Web IDE
+{: #commit_web}
+
 1. Dans la section Modifications du répertoire de travail, cochez la case de chaque fichier à valider.
 
 3. Dans la zone **Entrez le message de validation**, tapez un message décrivant vos modifications.
@@ -116,6 +136,8 @@ validation doit contenir moins de 50 caractères. Ajoutez une ligne vierge avant
 5. Cliquez sur **Insérer**.
 
 ### Terminal Git
+{: #commit_cmd}
+
 1. Entrez `git status` et appuyez sur Entrée.
 
 2. Examinez les modifications à valider. Si tous vos fichiers à valider figurent dans la liste, vous pouvez continuer. Pour valider des fichiers avec retrait du contenu de l'index,
@@ -140,18 +162,22 @@ pour aider.
 {: #view_commit_history}
 
 ### Eclipse Orion Web IDE
+{: #view_commit_history_web}
+
 1. Dans la section Branche active, développez **Historique** pour afficher l'historique de validation de cette branche.
 
   L'historique de validation peut également être affiché en tant que graphique visuel connecté.
 
 1. Cliquez sur l'icône **bouton à bascule de représentation graphique** <img  class="inline" src="./images/graphicalhistoryicon.png" alt="Icône d'historique graphique">.
 
-  Lorsque le bouton est activé, l'historique de validation et toutes les modifications entrantes ou sortantes pour la branche active s'affichent en tant que graphique connecté. La
+  Lorsque le bouton est activé, l'historique de validation et toutes les modifications entrantes ou sortantes pour la branche active s'affichent en tant que graphique connecté.  La
 représentation visuelle montre toutes les validations et toutes les branches sur lesquelles elles ont été effectuées.
 
-  <img class="screen-shot" src="./images/visualhistoryexample.png" alt="Historique visuel des validations">
+  <img class="screen-shot" src="./images/visualhistoryexample.png" alt="Historique des validations visuelles">
 
 ### Terminal Git
+{: #view_commit_history_cmd}
+
 1. Entrez `git log` et appuyez sur Entrée.
 
 2. Parcourez les validations du valideur.
@@ -164,6 +190,8 @@ représentation visuelle montre toutes les validations et toutes les branches su
 {: #compare_changes}
 
 ### Eclipse Orion Web IDE
+{: #compare_changes_web}
+
 1. Affichez votre historique des validations et localisez la validation. Pour plus d'informations, voir [Afficher l'historique de validation](#view_commit_history).
 
 2. Affichez les détails de la validation en cliquant dessus.
@@ -173,6 +201,8 @@ représentation visuelle montre toutes les validations et toutes les branches su
   **Remarque :** si une validation a introduit une modification dans une ligne, la ligne d'origine est ombrée en rose et la nouvelle ligne est ombrée en vert.  De même, les lignes ajoutées par une validation sont ombrées en vert et les lignes supprimées par une validation sont ombrées en rose.
 
 ### Terminal Git
+{: #compare_changes_cmd}
+
 1. Entrez `git log -p` et appuyez sur Entrée.
 
   **Remarque :** pour afficher uniquement un certain nombre de validations, entrez `git log -p -<number_of_commits_to_view>`.
@@ -190,10 +220,11 @@ représentation visuelle montre toutes les validations et toutes les branches su
 ## Modification de la dernière validation
 {: #modify_last_commit}
 
-  **Remarque :** lorsque vous modifiez la dernière validation avant de l'insérer dans un référentiel distant, vous réécrivez l'historique des validations. Ceci peut
+  **Remarque :** lorsque vous modifiez la dernière validation avant de l'insérer dans un référentiel distant, vous réécrivez l'historique des validations. Cette modification peut
 causer des erreurs de validation et d'autres problèmes aux autres contributeurs de votre projet. Assurez-vous de ce que vous faîtes avant de modifier une validation envoyée par commande push à un référentiel distant.
 
 ### Eclipse Orion Web IDE
+{: #modify_last_commit_web}
 1. Cochez les cases correspondant aux éléments à ajouter à la validation.
 
 1. Cochez la case **Modifier la validation précédente**.
@@ -203,6 +234,8 @@ causer des erreurs de validation et d'autres problèmes aux autres contributeurs
 3. Cliquez sur **Valider**.
 
 ### Terminal Git
+{: #modify_last_commit_cmd}
+
 1. Vérifiez votre statut. Si nécessaire, ajoutez ou supprimez le contenu de l'index des fichiers.
 
 2. Entrez `git commit --amend` et appuyez sur Entrée.
@@ -216,6 +249,8 @@ causer des erreurs de validation et d'autres problèmes aux autres contributeurs
 {: #tag_commit}
 
 ### Eclipse Orion Web IDE
+{: #tag_commit_web}
+
 1. Affichez votre historique des validations et localisez la validation. Pour plus d'informations, voir [Afficher l'historique de validation](#view_commit_history).
 
 2. Affichez les détails de la validation en cliquant dessus.
@@ -225,6 +260,8 @@ causer des erreurs de validation et d'autres problèmes aux autres contributeurs
 3. Dans la zone de nom, entrez le texte de votre étiquette. Cliquez sur **Soumettre**.
 
 ### Terminal Git
+{: #tag_commit_cmd}
+
 1. Affichez l'historique de validation et obtenez l'ID de la validation à étiqueter. Pour plus d'informations, voir [Afficher l'historique de validation](#view_commit_history).
 
 2. Tapez `git tag -a <tag_text> <commit_id>` et appuyez sur Entrée.
@@ -233,22 +270,25 @@ causer des erreurs de validation et d'autres problèmes aux autres contributeurs
 {: #change_the_committer_name_and_email_address}
 
 ### Eclipse Orion Web IDE
+{: #change_info_web}
 1. Cliquez sur l'icône de configuration <img class="inline" src="./images/configurations.png" alt="Icône de configuration">.
 
 3. Modifiez l'adresse e-mail et le nom de l'utilisateur en mettant à jour les valeurs user.email et user.name. Cliquez sur **Soumettre** pour enregistrer les modifications.
 
 ### Terminal Git
+{: #change_info_cmd}
+
 Pour mettre à jour votre nom et votre adresse e-mail pour un référentiel spécifique :
 
-1. Tapez `git config user.email "<your@email.com>"` et appuyez sur Entrée. 
+1. Tapez `git config user.email "<your@email.com>"` et appuyez sur Entrée.
 
-2. Tapez `git config user.name "<Your Name>"` et appuyez sur Entrée. 
+2. Tapez `git config user.name "<Your Name>"` et appuyez sur Entrée.
 
 Pour mettre à jour votre nom et votre adresse e-mail pour tous les référentiels :
 
-1. Tapez `git config --global user.email "<your@email.com>"` et appuyez sur Entrée. 
+1. Tapez `git config --global user.email "<your@email.com>"` et appuyez sur Entrée.
 
-2. Tapez `git config --global user.name "<Your Name>"` et appuyez sur Entrée. 
+2. Tapez `git config --global user.name "<Your Name>"` et appuyez sur Entrée.
 
 ##Annulation d'une validation
 {: #revert}
@@ -256,12 +296,14 @@ Pour mettre à jour votre nom et votre adresse e-mail pour tous les référentie
 Annuler les modifications introduites par une validation dans votre branche active.
 
 ### Eclipse Orion Web IDE
+{: #revert_web}
 
 1. Sous historique, sélectionnez une validation.
 
 2. Cliquez sur l'icône Rétablir <img class="inline" src="./images/revert.png" alt="Icône Rétablir">.
 
 ### Terminal Git
+{: #revert_cmd}
 
 1. Tapez `git revert <commit ID>` et appuyez sur Entrée.
 
@@ -272,11 +314,13 @@ Si vous avez besoin de distribuer des modifications d'une branche source à une 
 est la branche dans laquelle vous avez effectué des changements et la branche de destination est votre branche maître.
 
 ### Eclipse Orion Web IDE
+{: #merge_changes_web}
+
 1. Sélectionnez les branches à fusionner.
 
 2. Réservez la branche de destination. Pour plus d'informations, voir [ Utilisation d'une branche locale](#start_working_on_branch).
 
- <img class="screen-shot" src="./images/destinationbranch.png" alt="Réservation d'une branche de destination">
+ <img class="screen-shot" src="./images/destinationbranch.png" alt="Réservation de la branche de destination">
 
 1. Cliquez sur la liste **Référence**, développez **local** et cliquez sur le nom de la branche source. Les modifications de la branche source
 s'affichent dans la section Entrant.
@@ -291,6 +335,8 @@ s'affichent dans la section Entrant.
 tout fonctionne comme prévu.
 
 ### Terminal Git
+{: #merge_changes_cmd}
+
 1. Sélectionnez les branches à fusionner.
 
 2. Réservez la branche de destination. Pour plus d'informations, voir [ Utilisation d'une branche locale](#start_working_on_branch).
@@ -302,6 +348,8 @@ tout fonctionne comme prévu.
 {: #resolve_a_merge_conflict}
 
 ### Eclipse Orion Web IDE
+{: #resolve_a_merge_conflict_web}
+
 1. Dans le panneau Fichiers modifiés, consultez la liste des fichiers contenant des conflits.
 
 2. Dans l'interface Web IDE, ouvrez chaque fichier contenant des conflits.
@@ -318,6 +366,8 @@ tout fonctionne comme prévu.
 4. Pour chaque fichier en conflit, cochez la case. Entrez un message de validation de fusion et cliquez sur **Valider**.
 
 ### Terminal Git
+{: #resolve_a_merge_conflict_cmd}
+
 1. Passez en revue le message Git pour connaître le nom des fichiers contenant des conflits.
 
 2. Dans un éditeur de texte, ouvrez un fichier contenant des conflits.
@@ -337,13 +387,15 @@ tout fonctionne comme prévu.
 {: #rebase_branches}
 
 ### Eclipse Orion Web IDE
+{: #rebase_branches_web}
+
 1. Sélectionnez les branches à resynchroniser. Vous allez resynchroniser le contenu de la branche source dans la branche de destination.
 
 2. Réservez la branche de destination. Pour plus d'informations, voir [ Utilisation d'une branche locale](#start_working_on_branch).
 
 1. Cliquez sur la liste **Référence**.
 
-1. Cliquez sur le nom de de la branche source.
+1. Cliquez sur le nom de la branche source.
 
 1. Dans la section Entrant, cliquez sur l'icône de resynchronisation <img  class="inline" src="./images/rebase.png" alt="Icône de resynchronisation">.
 
@@ -356,6 +408,8 @@ tout fonctionne comme prévu.
 1. Cliquez sur **Insérer**.
 
 ### Terminal Git
+{: #rebase_branches_cmd}
+
 1. Réservez la branche à mettre à jour en tapant `git checkout <destination_branchname>` et en appuyant sur Entrée.
 
 2. Tapez sur `git rebase <source_branchname>` et appuyez sur Entrée.
@@ -370,6 +424,8 @@ tout fonctionne comme prévu.
 {: #resolve_a_rebase_conflict}
 
 ### Eclipse Orion Web IDE
+{: #resolve_a_rebase_conflict_web}
+
 1. Dans la section Modifications du répertoire de travail, passez en revue la liste des fichiers en conflit.
 
 2. Dans l'interface Web IDE, ouvrez chaque fichier contenant des conflits.
@@ -386,6 +442,8 @@ tout fonctionne comme prévu.
 4. Dans le panneau de resynchronisation, cochez la case de tous les fichiers corrigés et cliquez sur **Continuer**.
 
 ### Terminal Git
+{: #resolve_a_rebase_conflict_cmd}
+
 1. Passez en revue le message Git pour connaître le nom des fichiers contenant des conflits.
 
 2. Dans un éditeur de texte, ouvrez un fichier contenant des conflits.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-8-18"
+  years: 2017, 2018
+lastupdated: "2018-2-26"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,12 +22,14 @@ lastupdated: "2017-8-18"
 La fonction de pipeline composite pour {{site.data.keyword.deliverypipeline}} vous permet de gérer des processus reproductibles d'intégration continue et de distribution continue pour des applications logicielles connexes.
 {:shortdesc}
 
+**Remarque** : cette fonction est uniquement disponible dans la région sud des Etats-Unis.
+
 Vous pouvez créer des pipelines composites pour gérer les applications dans une chaîne d'outils. Si votre chaîne d'outils contient des applications déployées par {{site.data.keyword.deliverypipeline}}, vous pouvez définir le pipeline composite à mettre à jour lorsque vous ajoutez ou retirez des pipelines de distribution de la chaîne d'outils. Vous pouvez également ajouter des applications au pipeline composite à partir de sources externes.
 
 ## Création d'un pipeline composite
 {: #compositepipeline_create_for_toolchain}
 
-1. Dans le menu de la barre de menus {{site.data.keyword.Bluemix_notm}}, cliquez sur **DevOps**.
+1. Dans le menu de la barre de menus {{site.data.keyword.Bluemix_notm}}, cliquez sur **Services** puis sur **DevOps**.
 
 2. Dans la barre de navigation de gauche, cliquez sur **Pipelines**.
 
@@ -47,7 +49,7 @@ Vous pouvez créer des pipelines composites pour gérer les applications dans un
 
 8. Pour mettre à jour le pipeline composite lorsque vous ajoutez des pipelines à la chaîne d'outils, retirez des pipelines de la chaîne d'outils ou modifiez les étapes des pipelines de la chaîne d'outils, sélectionnez **Synchroniser automatiquement ce pipeline composite avec la chaîne d'outils sélectionnée**.
 
-  **Remarque :** vous devez activer la synchronisation automatique avant de modifier les pipelines de la chaîne d'outils. Seules les modifications que vous apportez alors que la synchronisation automatique est activée sont incluses dans le pipeline composite. 
+  **Remarque :** vous devez activer la synchronisation automatique avant de modifier les pipelines de la chaîne d'outils. Seules les modifications que vous apportez alors que la synchronisation automatique est activée sont incluses dans le pipeline composite.
 
 9. Cliquez sur **Créer**.
 
@@ -91,11 +93,11 @@ Vous pouvez modifier des pipelines individuels à partir du pipeline composite.
 ## Exécution de travaux dans un pipeline composite
 {: #compositepipeline_run_jobs}
 
-Après avoir développé une application pour afficher ses travaux, vous pouvez exécuter manuellement tous ses travaux dans une étape. Cliquez sur l'icône **Déployer dans étape*stage*** dans l'espace d'une application. 
+Après avoir développé une application pour afficher ses travaux, vous pouvez exécuter manuellement tous ses travaux dans une étape. Cliquez sur l'icône **Déployer dans étape*stage*** dans l'espace d'une application.
 
 ![Exécution d'une étape dans une seule application](images/composite_run_stage.png)
 
-Pour exécuter chaque travail de chaque application d'un espace, cliquez sur l'icône **Déployer dans *espace*** dans l'espace du pipeline composite. 
+Pour exécuter chaque travail de chaque application d'un espace, cliquez sur l'icône **Déployer dans *espace*** dans l'espace du pipeline composite.
 
 ![Exécution d'une étape dans toutes les applications](images/composite_run_space.png)
 
@@ -104,21 +106,21 @@ Les travaux s'exécutent selon le plan de déploiement du plan directeur composi
 ##Ajout d'applications qui sont déployées par des pipelines de distribution
 {: #compositepipeline_add_apps}
 
-Vous pouvez ajouter des applications qui sont déployées par des pipelines de distribution uniquement en synchronisant le pipeline composite avec la chaîne d'outils. Etant donné qu'un pipeline composite est associé à une seule chaîne d'outils, vous pouvez inclure uniquement les applications dont les pipelines de distribution figurent dans cette chaîne d'outils. 
+Vous pouvez ajouter des applications qui sont déployées par des pipelines de distribution uniquement en synchronisant le pipeline composite avec la chaîne d'outils. Etant donné qu'un pipeline composite est associé à une seule chaîne d'outils, vous pouvez inclure uniquement les applications dont les pipelines de distribution figurent dans cette chaîne d'outils.
 
 Pour ajouter au pipeline composite une application qui est déployée par un pipeline de distribution, procédez comme suit :
 
-1. Ouvrez le pipeline composite. 
+1. Ouvrez le pipeline composite.
 
 2. Sélectionnez **Synchroniser automatiquement ce pipeline composite avec votre chaîne d'outils**.
 
-  **Remarque :** vous devez activer la synchronisation automatique avant de créer les pipelines de distribution. Seules les modifications que vous apportez alors que la synchronisation automatique est activée sont incluses dans le pipeline composite. 
+  **Remarque :** vous devez activer la synchronisation automatique avant de créer les pipelines de distribution. Seules les modifications que vous apportez alors que la synchronisation automatique est activée sont incluses dans le pipeline composite.
 
-3. Créez le pipeline de distribution pour l'application. Prenez soin d'affecter le pipeline de distribution à la même chaîne d'outils que le pipeline composite. 
+3. Créez le pipeline de distribution pour l'application. Prenez soin d'affecter le pipeline de distribution à la même chaîne d'outils que le pipeline composite.
 
-4. Configurez des étapes et des travaux pour le pipeline de distribution. 
+4. Configurez des étapes et des travaux pour le pipeline de distribution.
 
-L'application est ajoutée au pipeline composite et les plans de déploiement pour chaque étape contiennent des tâches d'exécution des travaux que vous avez configurés. 
+L'application est ajoutée au pipeline composite et les plans de déploiement pour chaque étape contiennent des tâches d'exécution des travaux que vous avez configurés.
 
 
 ##Mise à jour de pipelines de distribution dans le pipeline composite
@@ -126,7 +128,7 @@ L'application est ajoutée au pipeline composite et les plans de déploiement po
 
 Vous devez activer la synchronisation automatique dans le pipeline composite avant de pouvoir ajouter ou modifier les pipelines qui en font partie.
 
-1. Ouvrez le pipeline composite. 
+1. Ouvrez le pipeline composite.
 
 2. Sélectionnez **Synchroniser automatiquement ce pipeline composite avec votre chaîne d'outils**.
 
@@ -135,16 +137,16 @@ Vous devez activer la synchronisation automatique dans le pipeline composite ava
 
 Pour afficher les journaux d'un travail, développez l'application qui contient le travail, puis cliquez sur le travail.
 
-## Utilisation d'IBM Bluemix DevOps Connect pour l'intégration à IBM UrbanCode Deploy
+## Utilisation d'{{site.data.keyword.Bluemix_notm}} DevOps Connect pour l'intégration à IBM UrbanCode Deploy
 {: #compositepipeline_devops_connect}
 
-IBM Bluemix DevOps Connect coordonne les communications entre votre installation IBM UrbanCode Deploy sur site et {{site.data.keyword.contdelivery_short}}. Après avoir installé DevOps Connect, vous pouvez créer des intégrations que vous pouvez utiliser pour gérer des applications IBM UrbanCode Deploy avec des pipelines composites.
+{{site.data.keyword.Bluemix_notm}} DevOps Connect coordonne la communication entre votre installation IBM&reg; UrbanCode&reg; Deploy sur site et {{site.data.keyword.contdelivery_short}}. Après avoir installé DevOps Connect, vous pouvez créer des intégrations que vous pouvez utiliser pour gérer des applications IBM UrbanCode Deploy avec des pipelines composites.
 
 **Conditions préalables requises**
 
    * Pour enregistrer DevOps Connect, vous devez disposer d'un IBMid.
 
-   * Assurez-vous que [Java&trade; Runtime Environment version 8 mise à jour 121 ou suivante ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://java.com/en/download/){:new_window} se trouve sur le système hôte et que son emplacement a été affecté à la variable système PATH. 
+   * Assurez-vous que [Java&trade; Runtime Environment version 8 mise à jour 121 ou suivante ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://java.com/en/download/){:new_window} se trouve sur le système hôte et que son emplacement a été affecté à la variable système PATH.
 
    * Vous avez besoin d'un jeton d'autorisation administrateur d'IBM UrbanCode Deploy.
 
@@ -195,7 +197,7 @@ Si votre intégration a abouti, vous pouvez ajouter des applications IBM UrbanCo
 ## Ajout d'applications à partir d'IBM UrbanCode Deploy
 {: #compositepipeline_add_apps}
 
-Si vous êtes membre d'une organisation intégrée à IBM UrbanCode Deploy via DevOps Connect, vous pouvez ajouter au pipeline composite les applications auxquelles vous pouvez accéder dans UrbanCode Deploy. Pour obtenir des instructions d'installation, voir [Utilisation d'IBM Bluemix DevOps Connect pour l'intégration à IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
+Si vous êtes membre d'une organisation intégrée à IBM UrbanCode Deploy via DevOps Connect, vous pouvez ajouter au pipeline composite les applications auxquelles vous pouvez accéder dans UrbanCode Deploy. Pour obtenir des instructions d'installation, voir [Utilisation de {{site.data.keyword.Bluemix_notm}}DevOps Connect pour l'intégration à IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
 
 Si vous êtes membre d'une organisation qui est connectée à IBM UrbanCode Deploy, vous pouvez ajouter des applications UrbanCode Deploy à des pipelines composites, sélectionner les processus d'application à inclure dans le plan de déploiement et personnaliser le déploiement des applications.
 
@@ -225,4 +227,7 @@ Si vous êtes membre d'une organisation qui est connectée à IBM UrbanCode Depl
 {: #composite_pipeline-tutorial}
 
 Consultez le tutoriel suivant sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage){:new_window} :
-  * [Create and use a microservices toolchain with DevOps Insights (v2) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+
+  * [Utilisation de la chaîne d'outils "Développer et tester des microservices sur Cloud Foundry"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.
+
+  **Remarque** : {{site.data.keyword.DRA_short}} est uniquement disponible dans la région sud des Etats-Unis.

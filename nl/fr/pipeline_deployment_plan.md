@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-08-15"
+  years: 2017, 2018
+lastupdated: "2018-1-9"
 
 ---
 
@@ -17,6 +17,8 @@ lastupdated: "2017-08-15"
 Dans un plan de déploiement pour un pipeline composite, une tâche représente une activité métier pertinente qui est associée à un déploiement de logiciel. Les tâches sont définies dans des plans de déploiement.
 
 {:shortdesc}
+
+**Remarque** : cette fonction est uniquement disponible dans la région sud des Etats-Unis.
 
 La plupart des tâches comportent un point de départ, un point de fin et une durée mesurable. Une tâche peut être de l'un des types suivants :
 
@@ -37,7 +39,7 @@ Lorsque vous créez une tâche, vous sélectionnez le plan de déploiement auque
 
 Une fois que vous avez sauvegardé une tâche, des icônes d'action s'affichent pour cette tâche. Vous pouvez utilisez les icônes d'action pour modifier le statut de la tâche lors d'un déploiement. Toutes les tâches ont l'icône d'action **Ignorer**. D'autres icônes, comme **Démarrer**, s'affichent lorsque le contexte le nécessite.
 
-![](../UCCR/images/deploy-plan-intro.png "Typical deployment plan")
+![Plan de déploiement typique](../UCCR/images/deploy-plan-intro.png)
 
 *Figure 1. Un plan de déploiement simple avec des tâches et des icônes d'action*
 
@@ -177,7 +179,7 @@ Le groupe est correct et une barre de sélection de groupe est ajoutée au plan 
 
 La figure ci-dessous montre un groupe parallèle. La barre de sélection de groupe identifie le type de groupe : parallèle <img class="inline" src="../UCCR/images/para-select.png"  alt="parallel group select"> ou séquentiel <img class="inline" src="../UCCR/images/seq-select.png"  alt="sequential group select">.
 
-(![](../UCCR/images/group-select.png "Typical deployment plan"))
+![Plan de déploiement typique](../UCCR/images/group-select.png)
 
 *Figure 2. Un groupe parallèle*
 
@@ -208,7 +210,7 @@ Les étiquettes s'affichent sur les lignes de tâche de la page Deployment Plan 
 
 Les étiquettes qui sont utilisées par un plan de déploiement s'affichent sur l'onglet **Versions** de la page Deployment Plan Details. Pour rendre une tâche inapplicable à un déploiement, effacez ses étiquettes. Les tâches avec le statut "Not Applicable" ne peuvent pas être démarrées.  
 
-![](../UCCR/images/task-tag-labels.png "Typical deployment plan")
+![Plan de déploiement typique](../UCCR/images/task-tag-labels.png)
 
 *Figure 3. Etiquettes de tâche*
 
@@ -233,7 +235,7 @@ Les dépendances de tâche s'affichent dans la colonne Dependencies de la page D
 
 Dans la figure suivante, la première tâche ne contient pas de prérequis et deux tâches en dépendent. La seconde tâche contient une tâche prérequise et aucune tâche n'en dépend.
 
-(![](../UCCR/images/plan-w-depend.png "Typical deployment plan"))
+![Plan de déploiement typique](../UCCR/images/plan-w-depend.png)
 
 *Figure 4. Dépendances de tâche*
 

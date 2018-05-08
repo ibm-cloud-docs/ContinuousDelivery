@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-7-17"
+  years: 2015, 2018
+lastupdated: "2018-2-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-7-17"
 # Utilisation de chaînes d'outils
 {: #toolchains-using}
 
-Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dédié. Vous pouvez utiliser une chaîne d'outils pour améliorer la productivité de votre travail quotidien de développement, de déploiement et de vos opérations. Après avoir configuré une chaîne d'outils, vous pouvez ajouter, supprimer ou configurer des intégrations d'outils et gérer l'accès à la chaîne d'outils.
+Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dedicated. Vous pouvez utiliser une chaîne d'outils pour améliorer la productivité de votre travail quotidien de développement, de déploiement et de vos opérations. Après avoir configuré une chaîne d'outils, vous pouvez ajouter, supprimer ou configurer des intégrations d'outils et gérer l'accès à la chaîne d'outils.
 {: shortdesc}
 
 ## Configuration d'une intégration d'outils
@@ -39,7 +39,7 @@ d'ensemble correspondante. Vous pouvez également, depuis la page de présentati
 ## Ajout d'une intégration d'outils
 {: #adding_a_tool_integration}
 
-Vous pouvez ajouter et configurer des intégrations d'outils pour votre chaîne d'outils. Les intégrations d'outils disponibles varient selon que vous utilisez {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dédié.
+Vous pouvez ajouter et configurer des intégrations d'outils pour votre chaîne d'outils. Les intégrations d'outils disponibles varient selon que vous utilisez {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dedicated.
 
 1. Dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur une chaîne d'outils afin d'ouvrir la page Vue
 d'ensemble correspondante. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Distribution continue, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
@@ -83,24 +83,30 @@ plus d'informations, voir [Utilisation de Dedicated GitHub Enterprise](/docs/ser
 
 * Pour accorder un accès à un utilisateur qui n'est pas membre de l'organisation de la chaîne d'outils, procédez comme suit :
 
-   a. Dans la barre de menu, cliquez sur **Gérer > Compte > Organisations**.
+   a. Dans la barre de menus, cliquez sur **Gérer > Sécurité > Identité et accès**.
 
-   b. Cliquez sur **Inviter des membres d'équipe**.
+   b. Sur la ligne de l'utilisateur auquel vous voulez affecter un accès, sélectionnez le menu **Actions**, puis cliquez sur **Affecter un accès**.
 
-   c. Sélectionnez l'organisation dans laquelle vous souhaitez inviter l'utilisateur et cliquez sur **Suivant**.
+   c. Sélectionnez **Affecter l'accès à l'aide de Cloud Foundry**.
 
-   d. Sélectionnez les espaces auxquels vous souhaitez autoriser l'accès à l'utilisateur.
+   d. Sélectionnez **Affecter une organisation**.
 
-   e. Sélectionnez le rôle à affecter aux espaces sélectionnés dans l'organisation.
+   e. Affectez l'accès utilisateur :
+
+     * Sélectionnez l'organisation à laquelle vous souhaitez ajouter l'utilisateur.
+
+     * Affectez un rôle d'organisation.
+
+     * Sélectionnez une région.
+
+     * Sélectionnez un espace.
+
+     * Affectez un rôle pour l'espace sélectionné dans l'organisation.
 
      **Remarque :** Par défaut, les responsables de l'organisation disposent de privilèges d'administrateur complets pour toutes les chaînes d'outils qui sont associées à l'organisation. Pour accorder des privilèges d'administrateur complets à l'utilisateur, sélectionnez le rôle **Responsable**. Les rôles Responsable de la facturation et Auditeur n'ont pas d'impact sur l'accès à la chaîne d'outils. Vous pouvez changer les rôles
-ultérieurement dans la page Répertoire d'équipe. Pour plus d'informations, voir [Gestion des membres de l'équipe et des rôles](/docs/admin/users_roles.html){: new_window}.
+ultérieurement dans la page Répertoire d'équipe. Pour en savoir plus, voir [Rôles de Cloud Foundry](/docs/iam/cfaccess.html#cfaccess){: new_window}.
 
-   f. Sélectionnez l'option permettant de confirmer que vous prenez en charge tous les frais liés au compte.
-
-   g. Saisissez l'adresse électronique de l'utilisateur que vous souhaitez inviter et cliquez sur **Envoyer**.
-
-   h. Une fois que l'utilisateur est membre de l'organisation, retournez à la page Gérer de la chaîne d'outils et ajoutez l'utilisateur à la chaîne d'outils.  
+   Une fois que l'utilisateur est membre de l'organisation, retournez à la page Gérer de la chaîne d'outils et ajoutez l'utilisateur à la chaîne d'outils.  
 
 
 ## Suppression d'une chaîne d'outils
@@ -118,6 +124,10 @@ Vous pouvez supprimer une chaîne d'outils et spécifier les intégrations d'out
 ##Suivre un tutoriel : Utilisation de chaînes d'outils
 {: #toolchain-tutorial}
 
-Consultez le tutoriel suivant sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage){:new_window} :
-  * [Create and use your first toolchain (GitHub) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+Consultez les tutoriels suivants sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage){:new_window} :
+
+  * [Création et utilisation de votre propre chaîne d'outils à l'aide de la chaîne d'outils "Développer une application Cloud Foundry"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+
+  * [Ajout d'une chaîne d'outils à une application ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+
+  * [Utilisation de la chaîne d'outils "Développer et tester des microservices sur Cloud Foundry" ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.

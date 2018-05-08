@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-6-8"
+  years: 2015, 2018
+lastupdated: "2018-2-26"
 
 ---
 
@@ -23,7 +23,7 @@ L'intégration de l'outil {{site.data.keyword.gitrepos}} aide les équipes à g�
    * Suivi des problèmes et partage d'idées via le dispositif de suivi de problème
    * Documentation de projets sur le système wiki
 
-**Remarque :** cette intégration d'outils étant basée sur GitLab Community Edition et hébergée par IBM sur Bluemix, certaines options GitLab ne sont pas disponibles. Par exemple, Delivery Pipeline fournit une intégration et une distribution continues pour Bluemix ; par conséquent, les fonctions d'intégration continue dans GitLab ne sont pas prises en charge. En outre, les fonctions d'administration ne sont pas disponibles car elles sont gérées par IBM.
+**Remarque :** cette intégration d'outil étant basée sur GitLab Community Edition et hébergée par IBM sur la plateforme {{site.data.keyword.Bluemix_notm}}, certaines options de GitLab ne sont pas disponibles. Par exemple, Delivery Pipeline fournit une intégration continue et une distribution continue pour {{site.data.keyword.Bluemix_notm}}, par conséquent, les fonctions d'intégration continue dans GitLab ne sont pas prises en charge. En outre, les fonctions d'administration ne sont pas disponibles car elles sont gérées par IBM.
 
 ## Utilisation de {{site.data.keyword.gitrepos}} localement
 {: #git_local}
@@ -33,7 +33,7 @@ Vous pouvez accéder localement aux référentiels Git stockés dans {{site.data
 
 **Astuce** : {{site.data.keyword.gitrepos}} prend uniquement en charge les connexions HTTPS qui utilisent TLS1.2. Si vous utilisez Eclipse pour vous connecter, il se peut que vous deviez indiquer ce protocole pour votre version de Java&trade; en ajoutant `-Dhttps.protocols=TLSv1.2` à votre fichier eclipse.ini, puis en redémarrant Eclipse.
 
-## Authentification auprès de {{site.data.keyword.gitrepos}}  
+## Authentification avec {{site.data.keyword.gitrepos}}
 {: #git_authentication}
 
 Votre ID de connexion et votre mot de passe {{site.data.keyword.Bluemix_notm}} sont uniquement utilisés à des fins d'authentification auprès de{{site.data.keyword.gitrepos}} dans un navigateur Web. Vous ne pouvez pas utiliser vos données d'identification {{site.data.keyword.Bluemix_notm}} pour vous authentifier à partir de clients Git externes. Pour effectuer des opérations Git distantes, telles que `clone` ou `push`, à partir de votre référentiel Git local, vous devez utiliser un jeton d'accès personnel ou une clé SSH pour vous authentifier auprès de {{site.data.keyword.gitrepos}}.
@@ -41,7 +41,7 @@ Votre ID de connexion et votre mot de passe {{site.data.keyword.Bluemix_notm}} s
 ### Création d'un jeton d'accès personnel
 {: #create_pat}
 
-**Important** : pour vous authentifier auprès de votre référentiel Git via HTTPS, vous devez créer un jeton d'accès personnel. 
+**Important** : pour vous authentifier auprès de votre référentiel Git via HTTPS, vous devez créer un jeton d'accès personnel.
 
 1. Dans le tableau de bord {{site.data.keyword.gitrepos}} User Settings, sur la [page Access Tokens ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, entrez le nom de l'application pour laquelle vous souhaitez créer un jeton d'accès. Par exemple, `Git CLI`.
 1. Facultatif : choisissez une date d'expiration pour le jeton d'accès.
@@ -59,7 +59,7 @@ Pour créer une clé SSH, voir [How to create your SSH Keys ![Icône de lien ext
 
 Pour en savoir plus, voir [SSH ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/help/ssh/README){:new_window}.
 
-## Limites de taille de fichier et de référentiel
+## Limites de taille des référentiels et des fichiers physiques
 {: #git_limits}
 
 La taille des fichiers est strictement limitée à 100 Mo. La limite de taille suggérée pour les référentiels est 1 Go. Si votre référentiel dépasse 1 Go, vous risquez de recevoir un courrier électronique vous demandant de réduire sa taille.
@@ -69,5 +69,6 @@ La taille des fichiers est strictement limitée à 100 Mo. La limite de taille s
 
 Consultez l'un des tutoriels suivants sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage){:new_window} :
 
-  * [Create a toolchain that uses {{site.data.keyword.gitrepos}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
-  * [Create and use a microservices toolchain with DevOps Insights (v2) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Création et utilisation de votre propre chaîne d'outils à l'aide de la chaîne d'outils "Développer une application Cloud Foundry"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.Apprenez à créer une chaîne d'outils ouverte à partir d'un modèle et utilisez-la pour distribuer en continu une application "Hello World".
+
+  * [Utilisation de la chaîne d'outils "Développer et tester des microservices sur Cloud Foundry" ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.Apprenez à créer une chaîne d'outils à partir d'un modèle avec trois microservices et utilisez-la pour distribuer un magasin en ligne en continu.

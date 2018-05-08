@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-6-1"
+  years: 2016, 2018
+lastupdated: "2018-2-28"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -29,7 +29,7 @@ Pour créer et configurer un pipeline, procédez comme suit :
 
 1. Sur la page Pipeline, cliquez sur **Ajouter une étape**. La page Configuration d'étape s'ouvre.
 2. Configurez l'étape.
-  1. Sur l'onglet **Entrée**, sélectionnez une entrée pour l'étape.
+  1. Sur l'onglet **Entrée**, sélectionnez une entrée pour l'étape.  Pour l'étape de génération, l'onglet d'entrée inclut une zone **Branche** pour spécifier la branche dans le référentiel à utiliser pour l'entrée. 
   2. Sur l'onglet **Travaux**, ajoutez et configurez au moins un travail. Généralement, la première étape comporte au moins un travail de génération.
 3. Cliquez sur **SAUVEGARDER**.
 
@@ -74,7 +74,7 @@ sélectionner la révision d'entrée, l'étape suit les conditions ci-après :
 **Astuce :** Vous pouvez déployer une version précédente. A l'étape qui contient la version, cliquez sur **Afficher les journaux et l'historique**. Sur la page qui s'ouvre, cliquez pour développer le numéro d'exécution, puis cliquez sur le travail de génération. Cliquez sur **ENVOYER A** et sélectionnez une cible.
 
 ###Ajout de services à des applications
-Vous pouvez ajouter des services à vos applications et gérer ces services à partir de votre tableau de bord Bluemix ou de l'interface de ligne de commande Cloud Foundry. Vous pouvez également exécuter des commandes d'interface de ligne de commande Cloud Foundry dans des scripts pour les travaux de pipeline. Par exemple, vous pouvez ajouter un service à une application dans le script d'un travail de déploiement. Pour plus d'informations sur l'ajout de services, voir [Ajout d'un service à votre application](/docs/services/reqnsi.html#add_service).
+Vous pouvez ajouter des services à vos applications et gérer ces services à partir de votre tableau de bord {{site.data.keyword.Bluemix_notm}} ou de l'interface de ligne de commande Cloud Foundry. Vous pouvez également exécuter des commandes d'interface de ligne de commande Cloud Foundry dans des scripts pour les travaux de pipeline. Par exemple, vous pouvez ajouter un service à une application dans le script d'un travail de déploiement. Pour plus d'informations sur l'ajout de services, voir [Ajout d'un service à votre application](/docs/services/reqnsi.html#add_service).
 
 ## Affichage des journaux
 {: #deliverypipeline_view_logs}
@@ -89,7 +89,5 @@ Pour afficher le journal d'exécution d'une application déployée, cliquez sur 
 
 Outre les journaux des travaux, vous pouvez afficher les résultats de tests unitaires, les artefacts générés et les modifications de code pour n'importe quel travail de génération.
 
-Vous pouvez également exécuter, annuler ou configurer une étape à partir de la page Historique des étapes. Cliquez sur **EXECUTER** pour exécuter une étape ou sur **CONFIGURER** pour configurer une étape. Pendant qu'une étape est en exécution,
+Vous pouvez également exécuter, redéployer, annuler ou configurer une étape dans la page Historique des étapes. Cliquez sur **EXECUTER** pour exécuter l'étape, sur **REDEPLOYER** pour redéployer s'il s'agit d'un travail de déploiement ou sur **CONFIGURER** pour configurer une étape. Pendant qu'une étape est en exécution,
 vous pouvez l'annuler en cliquant sur son numéro, puis sur **Annuler**.
-
-
