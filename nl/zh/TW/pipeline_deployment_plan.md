@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-08-15"
+  years: 2017, 2018
+lastupdated: "2018-1-9"
 
 ---
 
@@ -17,6 +17,8 @@ lastupdated: "2017-08-15"
 在複合管線的部署方案中，作業代表與軟體部署相關聯的某個有意義的業務活動。作業定義於部署方案中。
 
 {:shortdesc}
+
+**附註**：此特性只能在美國南部地區使用。
 
 大部分作業都會有起點、結束點，以及可測量的持續時間。作業可以是下列其中一種類型：
 
@@ -37,7 +39,7 @@ lastupdated: "2017-08-15"
 
 儲存作業之後，即會顯示作業的動作圖示。您可以在部署期間使用動作圖示來變更作業的狀態。所有作業都會有**跳過**動作圖示。其他圖示（例如**啟動**）會在環境定義適合之時顯示。
 
-![](../UCCR/images/deploy-plan-intro.png "一般部署方案")
+![一般部署方案](../UCCR/images/deploy-plan-intro.png)
 
 *圖 1. 具有作業及動作圖示的簡單部署方案*
 
@@ -58,6 +60,8 @@ lastupdated: "2017-08-15"
 
 ---
 將作業新增至部署方案之後，您可以透過以下數種方式來進行管理：
+
+
 
    * 若要移動作業，請將它拖曳至新的位置。
 
@@ -175,7 +179,7 @@ lastupdated: "2017-08-15"
 
 下圖顯示平行群組。群組選取列會識別群組類型：平行 <img class="inline" src="../UCCR/images/para-select.png"  alt="平行群組選取"> 或循序 <img class="inline" src="../UCCR/images/seq-select.png"  alt="循序群組選取">。
 
-(![](../UCCR/images/group-select.png "一般部署方案"))
+![一般部署方案](../UCCR/images/group-select.png)
 
 *圖 2. 平行群組*
 
@@ -206,7 +210,7 @@ lastupdated: "2017-08-15"
 
 部署方案所使用的標籤會顯示在「部署方案詳細資料」頁面的**版本**標籤上。若要呈現不適用於部署的作業，請清除作業的標籤。無法啟動狀態為「不適用」的作業。  
 
-![](../UCCR/images/task-tag-labels.png "一般部署方案")
+![一般部署方案](../UCCR/images/task-tag-labels.png)
 
 *圖 3. 作業標籤*
 
@@ -231,7 +235,7 @@ lastupdated: "2017-08-15"
 
 在下圖中，第一個作業沒有任何必要條件，並且有兩個相依作業。第二個作業有一個必要作業，但沒有相依作業。
 
-(![](../UCCR/images/plan-w-depend.png "一般部署方案"))
+![一般部署方案](../UCCR/images/plan-w-depend.png)
 
 *圖 4. 作業相依關係*
 

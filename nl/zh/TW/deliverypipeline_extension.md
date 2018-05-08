@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-5-11"
+  years: 2015, 2018
+lastupdated: "2018-3-26"
 
 ---
 
@@ -152,13 +152,15 @@ To create the globalization stage and job:
 
   f. Determine whether to select the **Set up service and space for me** check box.
 
-    * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
+    * If you want the pipeline to check your {{site.data.keyword.Bluemix_notm}} space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
+    * If you configured the service and bound app in your {{site.data.keyword.Bluemix_notm}} space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
+
     **Tip:** Use the DevOps Services project name in the prefix so that the project can be identified easily in the Globalization Pipeline service.
+
 
   h. Click **SAVE**.
 
@@ -170,113 +172,114 @@ The machine translated files are placed in the same directory as the source `.pr
 
 After the stage is completed, you can review the translated files from the console output. You can also direct translators to the files so that they can review the machine-translation output and provide revisions to improve quality. The revisions are stored in a Cloudant™ database and take precedence over any future machine translations of the same strings.
 
-For more information about using the Globalization Pipeline service from the Bluemix Dashboard, [see the Globalization Pipeline service documentation](https://www.ng.bluemix.net/docs/services/GlobalizationPipeline/index.html).
+For more information about using the Globalization Pipeline service from the {{site.data.keyword.Bluemix_notm}} Dashboard, [see the Globalization Pipeline service documentation](https://www.ng.bluemix.net/docs/services/GlobalizationPipeline/index.html).
 
 -->
+<!--
 
-## 在管線中建立建置的 Slack 通知
+## Creating Slack notifications for builds in the pipeline
 {: #deliverypipeline_slack}
 
-您可以將 {{site.data.keyword.containerlong}}、{{site.data.keyword.staticanalyzershort}} 及 {{site.data.keyword.globalizationfull}} 建置結果的相關通知，從 Delivery Pipeline 傳送至 Slack 頻道。
+You can send notifications about {{site.data.keyword.containerlong}}, {{site.data.keyword.staticanalyzershort}}, and {{site.data.keyword.globalizationfull}} build results from your Delivery Pipeline to your Slack channels.
 
-開始之前，請建立或複製 Slack WebHook URL：
+Before you begin, create or copy a Slack WebHook URL:
 
-1. 開啟您團隊的「Slack 整合」頁面：`https://_project_name_.slack.com/services`
-2. 在整合清單中，尋找**送入的 WebHook**，然後按一下**新增**。
-3. 選取頻道，然後按一下**新增送入的 WebHook 整合**。
-4. 新增 **WebHook URL**，或複製現有項目。
+1. Open the Slack Integration page for your team: `https://_project_name_.slack.com/services`
+2. In the list of integrations, locate **Incoming WebHooks** and click **Add**.
+3. Select a channel and click **Add Incoming WebHooks Integration**.
+4. Add a **WebHook URL** or copy an existing one.
 
-如需相關資訊，請參閱 [Slack 文件中的送入 WebHook ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://api.slack.com/incoming-webhooks){: new_window}。
+For more information, see [Incoming WebHooks in the Slack documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){: new_window}.
 
-若要建立 Slack 通知，請執行下列動作：
+To create Slack notifications:
 
-1. 在管線中，開啟階段的配置。
-2. 在**環境內容**標籤中，按一下**新增內容**。
-3. 選取**文字內容**。
-4. 輸入環境內容的名稱及值。重複以建立多個環境內容。
+1. In the pipeline, open the configuration for a stage.
+2. In the **ENVIRONMENT PROPERTIES** tab, click **ADD PROPERTY**.
+3. Select **Text property**.
+4. Enter the name and a value for the environment property. Repeat to create multiple environment properties.
 
-  _表格 1. 用於配置 Slack 通知的環境內容_
+  _Table 1. Environment properties for configuring Slack notifications_
 
   <table>
   <tr>
-  <th>名稱</th>
-  <th>值</th>
-  <th>說明</th>
+  <th>Name</th>
+  <th>Value</th>
+  <th>Description</th>
   <tr/>
   <tr>
     <td><code>SLACK_WEBHOOK_PATH</code></td>
-    <td>URL</td>
-    <td>必要。設定中針對「Slack 專案」所儲存的 WebHook URL。</td>
+    <td>A URL</td>
+    <td>Required. The WebHook URL that is saved in the settings for your Slack Project.</td>
   </tr>
   <tr>
     <td><code>SLACK_COLOR</code></td>
-    <td>您可以輸入下列其中一個值：
+    <td>You can enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>warning</code></li>
       <li><code>danger</code></li>
-      <li>任何十六進位顏色（例如 #439FEO）</li></ul></td>
-    <td>選用。沿著 Slack 中的訊息部分所顯示的邊框顏色。預設顏色如下：綠色代表良好訊息、紅色代表錯誤訊息，而灰色代表參考訊息。</td>
+      <li>Any hexadecimal color, such as #439FEO</li></ul></td>
+    <td>Optional. The color of the border that is displayed along the side of the message in Slack. The default colors are green for good messages, red for bad messages, and gray for informational messages.</td>
   </tr>
   <tr>
     <td><code>NOTIFY_FILTER</code></td>
-    <td>若只要接收一部分的訊息類型，請輸入下列其中一個值：
+    <td>To receive only a subset of the message types, enter one of the following values:
       <ul>
-      <li><code>good</code>：只取得不明、良好及參考訊息。不會傳送錯誤訊息。</li>
-      <li><code>bad</code>：取得所有訊息。</li>
-      <li><code>info</code>：只取得參考訊息。不會傳送良好、錯誤及不明訊息。</li>
-      <li><code>unknown</code>：取得所有訊息。</li></ul>
-      範例：如果您設定 <code>NOTIFY_FILTER = bad</code>，則只會在「Slack 頻道」中顯示錯誤通知。</td>
-    <td>選用。決定哪些類型的訊息要傳送通知。根據預設值，會傳送良好及錯誤訊息，但不會傳送參考訊息。
-      <ul><li><code>good</code>：成功建置結果。</li>
-      <li><code>bad</code>：失敗建置結果。</li>
-      <li><code>info</code>：建置程序的參考訊息。</li>
-      <li><code>unknown</code>：不會將類型指派給不明訊息。</li></ul></td>
+      <li><code>good</code>: Get unknown, good and info messages only. Bad messages are not sent.</li>
+      <li><code>bad</code>: Get all messages.</li>
+      <li><code>info</code>: Get info messages only. Good, bad, and unknown messages are not sent.</li>
+      <li><code>unknown</code>: Get all messages.</li></ul>
+      Example: If you set <code>NOTIFY_FILTER = bad</code>, error notifications are only displayed in the Slack Channel.</td>
+    <td>Optional. Decide which type of messages to send notifications for. By default, good and bad messages are sent, but not informational messages.
+      <ul><li><code>good</code>: Successful build results.</li>
+      <li><code>bad</code>: Unsuccessful build results.</li>
+      <li><code>info</code>: Informational messages about the build process.</li>
+      <li><code>unknown</code>: Unknown messages are not assigned a type.</li></ul></td>
    </table>
 
-5. 按一下**儲存**。
+5. Click **Save**.
 
-6. 重複這些步驟，以針對包含 IBM Container Service、IBM Security Analyzer 及 IBM Globalization 工作的其他階段傳送 Slack 通知。
+6. Repeat these steps to send Slack notifications for other stages that include IBM Container Service, IBM Security Analyzer, and IBM Globalization jobs.
 
-Slack 中所顯示的建置通知，會包含專案的鏈結，可能還會包含專案儀表板的鏈結。為了讓 Slack 使用者開啟這些鏈結，必須在 Bluemix 中註冊使用者，而且使用者必須是管線配置所在專案的成員。
+The build notification that is displayed in Slack includes a link to the project and sometimes to the project's dashboard. For a Slack user to open these links, the user must be registered with {{site.data.keyword.Bluemix_notm}} and be a member of the organization that the pipeline is configured in.
 
-## 在管線中建立建置的 HipChat 通知
+## Creating HipChat notifications for builds in the pipeline
 {: #deliverypipeline_hipchat}
 
-您可以將 IBM Container Service、IBM Security Static Analyzer 及 IBM Globalization 建置結果的相關通知，從 Delivery Pipeline 傳送至 HipChat 會議室。
+You can send notifications about IBM Container Service, IBM Security Static Analyzer, and IBM Globalization build results from your Delivery Pipeline to your HipChat rooms.
 
-開始之前，請建立或複製現有 HipChat 記號：
+Before you begin, create or copy and existing HipChat token:
 
-1. 移至您團隊的「HipChat 帳戶」頁面：`https://_project_name_.hipchat.com/account/api`
-2. 建立新的記號，或使用現有記號。
+1. Go to your HipChat Account page for your team: `https://_project_name_.hipchat.com/account/api`
+2. Create a new token, or use an existing one.
 
-若要建立 HipChat 通知，請執行下列動作：
+To create HipChat notifications:
 
-1. 在管線中，開啟階段的配置。
-2. 在**環境內容**標籤中，按一下**新增內容**。
-3. 選取**文字內容**。
-4. 輸入環境內容的名稱及值。重複以建立多個環境內容。
+1. In the pipeline, open the configuration for a stage.
+2. In the **ENVIRONMENT PROPERTIES** tab, click **ADD PROPERTY**.
+3. Select **Text Property**.
+4. Enter the name and a value for the environment property. Repeat to create multiple environment properties.
 
-  _表格 2. 用於配置 HipChat 通知的環境內容_
+  _Table 2. Environment Properties for configuring HipChat notifications_
 
   <table>
   <tr>
-  <th>名稱</th>
-  <th>值</th>
-  <th>說明</th>
+  <th>Name</th>
+  <th>Value</th>
+  <th>Description</th>
   </tr>
   <tr>
     <td><code>HIP_CHAT_TOKEN</code></td>
-    <td>英數字串</td>
-    <td>必要。如需建立或複製現有 HipChat 記號的指示，請參閱「開始之前」。</td>
+    <td>Alphanumeric String</td>
+    <td>Required. See "Before you begin" for instructions on creating or copying an existing HipChat token.</td>
   </tr>
   <tr>
     <td><code>HIP_CHAT_ROOM_NAME</code></td>
-    <td>會議室名稱</td>
-    <td>必要。</td>
+    <td>Room name</td>
+    <td>Required.</td>
   </tr>
   <tr>
     <td><code>HIP_CHAT_COLOR</code></td>
-    <td>輸入下列其中一個值：
+    <td>Enter one of the following values:
       <ul><li><code>yellow</code></li>
       <li><code>red</code></li>
       <li><code>green</code></li>
@@ -284,50 +287,43 @@ Slack 中所顯示的建置通知，會包含專案的鏈結，可能還會包�
       <li><code>gray</code></li>
       <li><code>random</code></li></ul>
     </td>
-    <td>選用項目：指定 HipChat 通知的背景顏色及邊框顏色。如果您設定 <code>HIP_CHAT_COLOR</code>，則不需要在呼叫 Script 時指定顏色。
+    <td>Optional: Specify the background color and the border color of HipChat notifications. If you set <code>HIP_CHAT_COLOR</code>, you do not need to specify the color when you call the script.
      <p><code>-l notification_level</code></p> </td>
   </tr>
   <tr>
     <td><code>NOTIFICATION_COLOR</code></td>
-    <td>輸入下列其中一個值：
+    <td>Enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>danger</code></li>
       <li><code>info</code></li></ul>
-    此變數適用於 HipChat 和 Slack 通知顏色。如果您指定 <code>NOTIFICATION_COLOR</code>，則不需要指定 <code>HIP_CHAT_COLOR</code> 或 <code>SLACK_COLOR</code>。</td>
-    <td>選用項目：指定 HipChat 和 Slack 通知的背景顏色及邊框顏色。如果您設定 <code>NOTIFICATION_COLOR</code>，則不需要在呼叫 Script 時指定顏色。
+    This variable applies to both HipChat and Clack notification colors. If you specify <code>NOTIFICATION_COLOR</code>, you do not need to specify <code>HIP_CHAT_COLOR</code> or <code>SLACK_COLOR</code>.</td>
+    <td>Optional: Specify the background color and the border color of both HipChat and Slack notifications. If you set <code>NOTIFICATION_COLOR</code>, you do not need to specify the color when you call the script.
      <p><code>-l notification_level</code></p> </td>
   </tr>
   <tr>
     <td><code>NOTIFICATION_LEVEL</code></td>
-    <td>輸入下列其中一個值：
+    <td>Enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>info</code></li>
       <li><code>bad</code></li></ul></td>
-    <td>選用項目：指定通知層次。如需哪些項目觸發通知的詳細資料，請參閱 <code>NOTIFICATION_FILTER</code>。</td>
+    <td>Optional: Specify the notification level. See <code>NOTIFICATION_FILTER</code> for more detail on what triggers the notification.</td>
   </tr>
   <tr>
     <td><code>NOTIFICATION_FILTER</code></td>
-    <td>輸入下列其中一個值：
+    <td>Enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>info</code></li>
       <li><code>bad</code></li></ul>
-    <td>選用項目：指定通知過濾層次。符合下列參數時，會傳送通知：
-      <ul><li><code>NOTIFICATION_FILTER = good</code> 及 <code>NOTIFICATION_LEVEL = bad</code>、<code>good</code> 或 <code>unknown</code></li>
-      <li><code>NOTIFICATION_FILTER = info</code> 及 <code>NOTIFICATION_LEVEL = bad</code>、<code>good</code>、<code>info</code> 或 <code>unknown</code></li>
-      <li><code>NOTIFICATION_FILTER = bad</code> 及 <code>NOTIFICATION_LEVEL = bad</code> 或 <code>unknown</code></li>
-      <li><code>NOTIFICATION_FILTER = unknown</code> 及 <code>NOTIFICATION_LEVEL = bad</code>、<code>good</code> 或 <code>unknown</code></li></ul></td>
+    <td>Optional: Specify the notification filter level. Notifications are sent when the following parameters are met:
+      <ul><li><code>NOTIFICATION_FILTER = good</code> and <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, or <code>unknown</code></li>
+      <li><code>NOTIFICATION_FILTER = info</code> and <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, <code>info</code>, or <code>unknown</code></li>
+      <li><code>NOTIFICATION_FILTER = bad</code> and <code>NOTIFICATION_LEVEL = bad</code> or <code>unknown</code></li>
+      <li><code>NOTIFICATION_FILTER = unknown</code> and <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, or <code>unknown</code></li></ul></td>
     </tr>
   </table>
 
-5. 按一下**儲存**。
+5. Click **Save**.
 
-6. 重複這些步驟，以針對包含 IBM Container Service、IBM Security Static Analyzer 及 IBM Globalization 工作的其他階段傳送 HipChat 通知。
+6. Repeat these steps to send HipChat notifications for other stages that include IBM Container Service, IBM Security Static Analyzer, and IBM Globalization jobs.
 
-## 使用管線建置及部署容器映像檔
-{: #deliverypipeline_containers}
-
-使用 IBM Continuous Delivery Pipeline for Bluemix，即可自動進行 Bluemix 的應用程式建置及容器部署。Delivery Pipeline 服務支援：
-  - 建置 Docker 映像檔
-  - 將容器中的映像檔部署至 Bluemix
-
-如需開始使用的相關資訊，請參閱 [Delivery Pipeline 及容器概觀](/docs/containers/container_integrations.html#container_pipeline_ov){: new_window}。
+-->

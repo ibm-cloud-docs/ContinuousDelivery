@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 
-lastupdated: "2017-6-5"
+lastupdated: "2018-3-23"
 
 ---
 <!-- Copyright info at top of file: REQUIRED
@@ -21,7 +21,10 @@ lastupdated: "2017-6-5"
 # 持續交付作法
 {: #gm_cd_best}
 
-![Garage Method 階段](images/garage_method_phases.png) [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage){:new_window} 是 IBM 為了快速交付吸引人的應用程式所採用的方式。它結合了持續交付與 IBM Design Thinking、精實 (lean)、DevOps 及敏捷作法。這些作法著重在雲端，但有益於任何軟體開發工作。
+
+
+使用 {{site.data.keyword.contdelivery_full}} 時，您可以使用 DevOps 作法及業界領先工具來建置、測試及提供應用程式。
+Continuous Delivery 支援多種作法；但您應該使用哪些作法？沒有一體適用的答案。您採用的作法可能會根據軟體交付專案而不同。[IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage){:new_window} 是 IBM 為了快速交付吸引人的應用程式所採用的方式。它結合了持續交付與 IBM Design Thinking、精實 (lean)、DevOps 及敏捷作法。這些作法著重在雲端，但有益於任何軟體開發工作。
 
 
 ## 採用持續交付作法
@@ -34,24 +37,18 @@ lastupdated: "2017-6-5"
 
 Cloud Garage Method 網站包含高階說明持續交付的文章。
 
-[Continuous Delivery ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/deliver/tool_continuous_delivery/){:new_window} 是一種用來建置及部署軟體的作法，隨時都可以投入正式作業。其中一項電腦科學特徵是縮短開發及作業處理程序中的各種循環時間。
+[Continuous Delivery ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/deliver/practice_continuous_delivery/] ){:new_window} 是一種用來建置及部署軟體的作法，隨時都可以投入正式作業。其中一項電腦科學特徵是縮短開發及作業處理程序中的各種循環時間。
 
-使用 IBM Bluemix Continuous Delivery 中內含的 [Delivery Pipeline ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:new_window}，您可以透過將軟體交付處理程序分為數個階段，以一致且可靠的方式來達到持續交付。目標是讓程式碼自動經過每一個階段，並將人為介入降到最低。
+使用 {{site.data.keyword.Bluemix_notm}} Continuous Delivery 中內含的 [Delivery Pipeline ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:new_window}，您可以透過將軟體交付處理程序分為數個階段，以一致且可靠的方式來達到持續交付。目標是讓程式碼自動經過每一個階段，並將人為介入降到最低。使用 [Delivery Pipeline 使用作法 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/deliver/practice_delivery_pipeline/){:new_window}，您可以將專案的持續部署自動化。
 
 ## 持續交付指導教學
 {: #gm_cd_tutorials}
 
-[建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}。學習如何從範本建立開放式工具鏈，以及使用工具鏈來持續交付 "Hello World" 應用程式。
+[使用「開發 Cloud Foundry 應用程式」工具鏈建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。學習如何從範本建立開放式工具鏈，以及使用工具鏈來持續交付 "Hello World" 應用程式。
 
-[將工具鏈新增至應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain?=task1){:new_window}。學習如何將開放式工具鏈新增至應用程式，並使用工具鏈來持續交付應用程式。
+[將工具鏈新增至應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}。學習如何將開放式工具鏈新增至應用程式，並使用工具鏈來持續交付應用程式。
 
-[建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}。學習如何從具有三個微服務的範本建立工具鏈，以及使用工具鏈來持續交付 "Hello World" 應用程式。
-
-[使用 {{site.data.keyword.DRA_short}} (v2) 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}。瞭解如何設定開發並持續交付微服務應用程式的開放式工具鏈。
-
-[建立使用 {{site.data.keyword.gitrepos}} 的工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}。建立包含 Cloud Foundry 應用程式並使用 {{site.data.keyword.gitrepos}} 的範本建立開放式工具鏈。然後，使用工具鏈以持續交付應用程式。
-
-[建立管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline){:new_window}。學習如何開始使用管線及建立包含 GitHub 儲存庫和管線的開放式工具鏈。
+[使用「在 Cloud Foundry 上開發及測試微服務」工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。學習如何從具有三個微服務的範本建立工具鏈，以及使用工具鏈來持續交付線上商店。
 
 如需相關指導教學，請參閱 [Learning Lab ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/category/courses){:new_window}。
 

@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2017
-lastupdated: "2017-09-20"
+  years: 2015，2018
+lastupdated: "2018-3-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-09-20"
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#Bluemix Live Sync
+# {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
 
 
@@ -55,15 +55,13 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 
 「即時編輯」可讓您快速預覽在 {{site.data.keyword.Bluemix_notm}} 上執行之 Node.js 應用程式的變更。當您開啟「即時編輯」來更新程式碼時，可以重新整理 Web 應用程式的瀏覽器視窗，就能看到在進行變更幾秒後所反映的變更。
 
-<!--
-For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see the tutorial [Test and debug a Node.js app with Bluemix Live Sync![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/livesync){:new_window}.
--->
+如需使用 {{site.data.keyword.Bluemix_notm}} Live Sync 之「即時編輯」特性的指導教學，請參閱[使用 {{site.data.keyword.Bluemix_notm}} Live Sync 開發、除錯及部署應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/use-live-sync-to-develop-debug-and-deploy-your-app){:new_window}。
 
-當您變更 Web IDE 中的檔案時，會自動將其重新部署至 {{site.data.keyword.Bluemix_notm}} 上的應用程式實例。如果您需要重新啟動 Node 應用程式，可以使用執行列中的**重新啟動**按鈕。
+當您變更 Web IDE 中的檔案時，會自動將其重新部署至 {{site.data.keyword.Bluemix_notm}} 上的應用程式實例。如果您需要重新啟動 Node 應用程式，請按一下執行列中的**重新啟動**按鈕。
 
-**附註：**為達到使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性時更一致的體驗，需要且會新增 256MB 的額外記憶體。
+**附註：**為了在使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性時達到更一致的體驗，需要且會新增 256 MB 的額外記憶體。
 
-## Bluemix 即時除錯
+## {{site.data.keyword.Bluemix_notm}} 即時除錯
 {: #live-debug}
 
 「{{site.data.keyword.Bluemix_notm}} Live Sync 除錯」使用 [Node Inspector ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/node-inspector/node-inspector){:new_window} 來提供除錯特性。您需要使用 Node 第 4 版才能使用除錯器，因為 Node.js 後續版本不包括 Node Inspector。
@@ -94,7 +92,7 @@ For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_not
 
 ### 除錯 {: #debug}
 
-**限制：**需要使用 Google Chrome。需要使用 Node 4。
+**限制：**需要使用 Google Chrome 及 Node 4。
 
 「除錯」包括下列功能：  
 * 在應用程式碼中設定岔斷點，以在特定行暫停執行。**附註：**主程式中不支援岔斷點，但進入點中提供支援。
@@ -111,10 +109,10 @@ For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_not
 
 ### 配置應用程式，以啟用 {{site.data.keyword.Bluemix_notm}} 即時除錯 {: #configure_app_debug}
 
-1. 「Bluemix 即時除錯器」使用 Node Inspector。您需要使用 Node 第 4 版。您也需要容許建置套件偵測 app start 指令。start 指令必須由建置套件自動偵測，而不是設定在 manifest.yml 檔案中。 
-  
+1. 「{{site.data.keyword.Bluemix_notm}} 即時除錯器」使用 Node Inspector。您需要使用 Node 第 4 版。您也需要容許建置套件偵測 app start 指令。start 指令必須由建置套件自動偵測，而不是設定在 manifest.yml 檔案中。
+
    支援「{{site.data.keyword.Bluemix_notm}} 即時除錯」的 `package.json` 檔案如下：
-   
+
   ```
   {
       "scripts": {
@@ -128,17 +126,13 @@ For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_not
 
 2. 增加記憶體。  
 
-    a. 在應用程式 `manifest.yml` 檔案中，在為記憶體屬性指定的值加上 128M 以上。
+    a. 在應用程式 `manifest.yml` 檔案中，將所指定的記憶體屬性值加上 128 MB 以上。
 
 安裝「{{site.data.keyword.Bluemix_notm}} 即時除錯」之後，您可以使用除錯工具。
 
-推送應用程式，然後瀏覽至 `https://_app-host.mybluemix.net_/bluemix-debug/manage`，以存取 {{site.data.keyword.Bluemix_notm}} 除錯使用者介面。系統提示您進行鑑別時，請輸入 IBM ID 使用者名稱和密碼或一次性密碼。    
+推送應用程式，然後瀏覽至 `https://_app-host.mybluemix.net_/bluemix-debug/manage`，以存取 {{site.data.keyword.Bluemix_notm}} 除錯使用者介面。系統提示您進行鑑別時，請輸入 IBM ID 使用者名稱及密碼或一次性密碼。    
 
 **附註：**「除錯器」大約需要一分鐘才能起始設定。
-
-<!--
-   **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
-   -->
 
 ### 還原應用程式配置並停用 {{site.data.keyword.Bluemix_notm}} 即時除錯 {: #restore_live_debug}
 
@@ -148,4 +142,4 @@ For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_not
 
 ### 如需相關資訊
 
-* 請參閱 [Eclipse Tools for Bluemix ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
+* 請參閱 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

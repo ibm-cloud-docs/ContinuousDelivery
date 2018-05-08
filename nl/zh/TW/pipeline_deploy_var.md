@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2017-7-10"
+  years: 2016, 2018
+lastupdated: "2018-1-23"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -15,6 +15,7 @@ lastupdated: "2017-7-10"
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
+{:tip:.tip}
 
 # 環境內容及資源
 {: #deliverypipeline_environment}
@@ -30,6 +31,8 @@ lastupdated: "2017-7-10"
 * **安全**：具有單行值的內容索引鍵。值會顯示為星號。
 * **內容**：專案儲存庫中的檔案。此檔案可以包含多個內容。每一個內容都必須單獨一行。若要區隔索引鍵值組，請使用等號 (=)。
 
+您可以在工作 Script 中執行 `env` 指令，來檢查管線工作的環境內容。
+{:tip}
 
 根據預設值，下列內容及資源可用於管線環境中。
 
@@ -97,7 +100,7 @@ lastupdated: "2017-7-10"
 | CF_ORGANIZATION_ID| 若為部署，此為要部署到其中的組織 ID。|
 | CF_SPACE| 若為部署，此為要部署到其中的空間名稱。|
 | CF_SPACE_ID| 若為部署，此為要部署到其中的空間 ID。|
-| CF_TARGET_URL| 若為部署，此為 IBM Bluemix&reg; 或 Cloud Foundry 的 URL。|
+| CF_TARGET_URL| 若為部署，此為 {{site.data.keyword.Bluemix_short}} 或 Cloud Foundry 的 URL。|
 | IDS_VERSION| 若為部署，此為正在部署的應用程式版本或原始檔 ID。|
 
 ## 預先安裝的資源

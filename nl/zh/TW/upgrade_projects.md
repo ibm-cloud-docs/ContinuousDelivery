@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-7-24"
+  years: 2015, 2018
+lastupdated: "2018-3-21"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2017-7-24"
 - [當我升級至工具鏈時，我專案中的建置定義會發生什麼事？](#faq_build)
 - [我需要為將升級至工具鏈的專案建立組織。我瞭解我需要先新增信用卡到我的帳戶中，才能建立組織。我的信用卡會被收費嗎？](#faq_charges)
 - [我找不到或無法存取工具鏈。我該怎麼辦？](#faq_find)
-- [我的專案與英國地區相關聯。升級之後，我看到錯誤訊息、我的同事無法存取工具鏈，而且我在 Bluemix 的「工具鏈」頁面上看不到工具鏈。這是怎麼回事？](#faq_uk)
+- [我的專案與英國地區相關聯。升級之後，我看到錯誤訊息、我的同事無法存取工具鏈，而且我在「{{site.data.keyword.Bluemix_notm}} 平台」的「工具鏈」頁面上看不到工具鏈。這是怎麼回事？](#faq_uk)
 
 ## 工具鏈
 {: #compare_toolchains}
@@ -98,9 +98,9 @@ lastupdated: "2017-7-24"
 
    - 若要變更在其中建立工具鏈的 {{site.data.keyword.Bluemix_notm}} 組織，請從帳戶功能表中選取組織：
 
-      ![Bluemix 組織選擇器](images/bluemix-organization-chooser.png)
+      ![{{site.data.keyword.Bluemix_notm}} 組織選擇器](images/bluemix-organization-chooser.png)
 
-   因為工具鏈是在組織層次進行管理，所以請一定要選取已經有或可新增需要存取此工具鏈之專案成員的組織。
+   因為工具鏈是在組織層次進行管理，所以請一定要選取已存在或可新增需要存取此工具鏈之專案成員的組織。
 
 3. 如果您已在專案中使用「追蹤及計劃」，則可以將「追蹤及計劃」資料傳送至 GitHub Issues。
 
@@ -156,7 +156,7 @@ lastupdated: "2017-7-24"
     - 每一個團隊成員都必須具有有效的 {{site.data.keyword.Bluemix_notm}} 帳戶。沒有帳戶的團隊成員必須進行[註冊 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/registration){:new_window}。
     - 從工具鏈「管理」頁面中，將工具鏈存取權授與組織成員。在升級處理程序中，會將現有專案成員新增為工具鏈成員。如需工具鏈存取控制的相關資訊，請參閱[管理存取權 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}。
     - 如果使用者不是工具鏈所屬組織的成員，請從「管理組織」頁面中將他們新增至組織。
-    - 如果您的工具鏈使用 {{site.data.keyword.gitrepos}}，則會將所有具有有效 Bluemix ID 的 JazzHub 專案成員新增至 {{site.data.keyword.gitrepos}} 儲存庫，而他們對此儲存庫的專用權與在 JazzHub 專案中相同。如果您的 JazzHub 專案包括沒有有效 Bluemix ID 的成員，則他們可以登錄一個，並將其新增至儲存庫。
+    - 如果您的工具鏈使用 {{site.data.keyword.gitrepos}}，則會將所有具有有效 {{site.data.keyword.Bluemix_notm}} ID 的 JazzHub 專案成員新增至 {{site.data.keyword.gitrepos}} 儲存庫，而他們對此儲存庫的專用權與在 JazzHub 專案中相同。如果您的 JazzHub 專案包括沒有有效 {{site.data.keyword.Bluemix_notm}} ID 的成員，則他們可以登錄一個，並將其新增至儲存庫。
       如需管理組織的相關資訊，請參閱[管理組織及空間 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}。
 
 3. 使用工具鏈中的工具，而不是 {{site.data.keyword.jazzhub_short}} 專案中的工具。例如，若要從瀏覽器編輯程式碼，請使用工具鏈中的 Web IDE。
@@ -202,7 +202,7 @@ hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果�
 ### 當我升級時，Track &amp; Plan 中的工作項目和儀表板會發生什麼事？
 {: #faq_tp}
 
-{{site.data.keyword.contdelivery_short}} 服務透過 {{site.data.keyword.gitrepos}} 提供問題追蹤功能，{{site.data.keyword.gitrepos}} 是由 IBM 管理，並且是以 GitLab Community Edition 為基礎。{{site.data.keyword.contdelivery_short}} 也支援整合其他規劃及問題追蹤工具，例如 GitHub Issues 及 JIRA。
+{{site.data.keyword.contdelivery_short}} 服務透過 {{site.data.keyword.gitrepos}} 提供問題追蹤功能，這是由 IBM 管理，並且是以 GitLab Community Edition 為基礎。{{site.data.keyword.contdelivery_short}} 也支援整合其他規劃及問題追蹤工具，例如 GitHub Issues 及 JIRA。
 
 在升級過程期間，您可以選擇將 Track &amp; Plan 工作項目移轉至 Git Issues。GitHub Issues 和 {{site.data.keyword.gitrepos}} 提供看板與問題追蹤，以便進行規劃。若要進一步瞭解 Issue Board（這是 Git Repos and Issue Tracking 中的看板特性），請參閱 [Issue Board ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window}。
 
@@ -210,7 +210,7 @@ hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果�
 
 這項新的 IBM Track and Plan on Cloud 服務提供的功能遠比已淘汰的 JazzHub Track &amp; Plan 更豐富，並且支援處理程序自訂作業、專案階層、SAFe&reg; 以及許多其他敏捷式和混合式方法，也提供成長超越單一專案的可擴充性。它是根據最新版本的 Rational Team Concert 6.0.3，且在未來 60 天內將為 6.0.4 版，而 JazzHub Track &amp; Plan 則是根據 Rational Team Concert 5.x。您可以透過其他服務將資料移轉到 IBM Track and Plan on Cloud。您可以與 [Tom Hollowell ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](mailto:trhollow@us.ibm.com){:new_window}（Connected Products SaaS 業務主管）聯絡，以取得相關資訊。
 
-如需 IBM Track and Plan on Cloud 的相關資訊，或是想要線上購買，請造訪 [IBM Marketplace ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}。
+如需 IBM Track and Plan on Cloud 的相關資訊，或是想要線上購買，請移至 [IBM Marketplace ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}。
 
 若要額外購買 Build Automation 和 Source Code Management，可以選擇 [Rational Team Concert on Cloud ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window}。
 
@@ -238,25 +238,25 @@ hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果�
 ### 我需要為將升級至工具鏈的專案建立組織。我瞭解我需要先新增信用卡到我的帳戶中，才能建立組織。我的信用卡會被收費嗎？
 {: #faq_charges}
 
-身為[隨收隨付制客戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}，如果您使用超過 Bluemix 型錄中所列免費額度的任何運行環境、服務或元件，將會向您收費。如需用量預估，請參閱[定價單 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}。如需 Continuous Delivery 的現行定價，請參閱 [Bluemix 型錄 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}。
+身為[隨收隨付制客戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}，如果您使用的任何運行環境、服務或元件超過其在 {{site.data.keyword.Bluemix_notm}} 型錄中所列的免費額度，則會向您收費。如需用量預估，請參閱[定價單 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}。如需 Continuous Delivery 的現行定價，請參閱 [{{site.data.keyword.Bluemix_notm}} 型錄 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}。
 
 如果您是 IBM 員工，可以按照內部 IBM 專案將帳單計入部門，來代替個人信用卡。如果您需要使用超過 IBM 員工免費額度的資源，請建立支援問題單。
 
 ### 我找不到或無法存取工具鏈。我該怎麼辦？
 {: #faq_find}
 
-工具鏈是在 Bluemix 組織中進行管理。升級處理程序會將 JazzHub 專案的所有成員都新增至工具鏈。不過，除非 Bluemix 組織擁有者將那些使用者新增至組織，否則他們看不到工具鏈。
+工具鏈是在 {{site.data.keyword.Bluemix_notm}} 組織中進行管理。升級處理程序會將 JazzHub 專案的所有成員都新增至工具鏈。不過，除非 {{site.data.keyword.Bluemix_notm}} 組織的擁有者將那些使用者新增至組織，否則他們看不到工具鏈。
 
-若要存取您的工具鏈，請移至 Bluemix，按一下功能表圖示，然後按一下**服務 &gt; DevOps**。即會開啟「工具鏈」頁面。請確定您在美國南部地區，而且您在包含工具鏈的組織中。如果您的工具鏈未列在「工具鏈」頁面上，請參閱[此常見問題 (FAQ) 項目](#faq_uk)。
+若要存取您的工具鏈，請移至「{{site.data.keyword.Bluemix_notm}} 平台」，並按一下功能表圖示，然後按一下**服務 &gt; DevOps**。即會開啟「工具鏈」頁面。請確定您在美國南部地區，而且您在包含工具鏈的組織中。如果您的工具鏈未列在「工具鏈」頁面上，請參閱[此常見問題 (FAQ) 項目](#faq_uk)。
 
 或者，在 JazzHub 網站仍然可用時，您也可以按一下專案「概觀」頁面的橫幅中的鏈結以移至工具鏈。
 
-### 我的專案與英國地區相關聯。升級之後，我看到錯誤訊息、我的同事無法存取工具鏈，而且我在 Bluemix 的「工具鏈」頁面上看不到工具鏈。這是怎麼回事？
+### 我的專案與英國地區相關聯。升級之後，我看到錯誤訊息、我的同事無法存取工具鏈，而且我在 {{site.data.keyword.Bluemix_notm}} 的「工具鏈」頁面上看不到工具鏈。這是怎麼回事？
 {: #faq_uk}
 
 **完整問題：**
 
-根據專案設定，我的 JazzHub 專案與 {{site.data.keyword.Bluemix_notm}} 英國地區相關聯。我已驗證我的專案設定，方法是移至其 JazzHub 上的概觀頁面，按一下**設定**圖示（看起來像齒輪），然後按一下**選項 &gt; 將此設為 Bluemix 專案：地區**。在我將專案升級至美國中的工具鏈之後，發生下列問題：
+根據專案設定，我的 JazzHub 專案與 {{site.data.keyword.Bluemix_notm}} 英國地區相關聯。我已驗證我的專案設定，方法是移至其在 JazzHub 上的概觀頁面，並按一下**設定**圖示（看起來像齒輪），然後按一下**選項 &gt; 將此設為 {{site.data.keyword.Bluemix_notm}} 專案：地區**。在我將專案升級至美國中的工具鏈之後，發生下列問題：
 
    1. 當我選取美國組織時，看到一則訊息，指出組織在美國南部地區沒有空間，而且系統會提示我建立空間。我不要在美國執行任何作業。
    
@@ -276,7 +276,7 @@ hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果�
 
 如果您在美國切換至該 {{site.data.keyword.Bluemix_notm}} 組織，則可以找到工具鏈。如果您將同事新增至該組織，則他們會獲得存取權。此工具鏈可以繼續部署至您的非美國組織。唯一的問題是這兩個組織不同；您無法跨組織自動執行使用者管理。
 
-如果您要工具鏈位在符合非美國組織的美國組織中，請遵循下列步驟：
+如果您希望工具鏈位在符合非美國組織的美國組織中，則請遵循下列步驟：
 
    1. 登入 [https://console.bluemix.net ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net){: new_window}，然後選取您所來自的非美國地區及組織。
    
@@ -286,11 +286,10 @@ hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果�
    
    4. 刪除已透過升級處理程序建立的工具鏈。 
    
-      **附註：**不會自動刪除 Git 儲存庫。您可能要手動刪除它，或立即將它重新命名。如果您已對它進行變更，則可以切換未來的工具鏈，以在稍後使用。
+      **附註：**不會自動刪除 Git 儲存庫。您可能要手動刪除它，或立即將它重新命名。如果您已變更儲存庫，則可以切換未來的工具鏈，以在稍後使用。
 
    5. 回到 JazzHub 專案。它應該針對另一個升級嘗試自行重設。如果未重設，請聯絡 hub@jazz.net，並提供專案的 URL。
    
    6. 重新啟動升級處理程序，並務必選取美國的適當組織，並符合您在非美國地區的組織名稱。
    
    7. 如果您已從前一次工具鏈升級嘗試保留或重新命名 Git 儲存庫（請參閱步驟 4），則可以重新配置工具鏈中的 Git 卡片，以改為指向此 Git 儲存庫 URL。變更會自動反映在管線中。若要確認，請檢查「建置」階段上的「輸入」標籤。
-

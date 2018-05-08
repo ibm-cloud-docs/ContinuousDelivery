@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-18"
+  years: 2015, 2018
+lastupdated: "2018-3-26"
 
 ---
 
@@ -15,21 +15,27 @@ lastupdated: "2017-07-18"
 # 取得 {{site.data.keyword.contdelivery_short}} 的協助及支援    
 {: #cd_support}  
 
-{{site.data.keyword.contdelivery_full}} 團隊會主動監視 {{site.data.keyword.contdelivery_short}} 服務及 DevOps Insights 問題的 Stack Overflow 及 developerWorks 討論區。   
+{{site.data.keyword.contdelivery_full}} 團隊會主動監視 {{site.data.keyword.contdelivery_short}} 服務及工具鏈問題的 developerWorks 討論區。若要在討論區中提問，請按一下工具鏈及 {{site.data.keyword.contdelivery_short}} 頁面底端的**在討論區中取得協助**按鈕 ![**在討論區中取得協助**按鈕](images/get_help_in_the_forum.png)。
 
 <table>
- <td align="center">
- <strong>Stack Overflow</strong>
-  <p>
-   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,devops-services" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/ask-a-question.png" alt="提問"/></a></p>
-   <p>
-    <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="（在新分頁或視窗中開啟）">在 Stack Overflow 上顯示最新 <img class="image" src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services 問題。</p></td>
+<tr>
+<th style="width:20%"> &nbsp; &nbsp; &nbsp;</th>
+ <th style="text-align:center;width=60%">
+ <strong>提出問題</strong> </th>
+<th> &nbsp; &nbsp; &nbsp;</th>
+</tr>
+<tr>
+<td> </td>
   <td align="center">
-  <strong>dW Answers</strong>
+  <p>直接從 IBM {{site.data.keyword.contdelivery_short}} 及其他 DevOps Services 使用者快速取得協助。</p>
+  <b>dW Answers</b>
    <p>
    <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/ask-a-question.png" alt="提問"/></a></p>
    <p>
-    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="（在新分頁或視窗中開啟）">在 dW Answers 上顯示最新 <img class="image" src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services 問題。</p></td>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="（在新分頁或視窗中開啟）">在 dW Answers 上顯示最新 <img class="image" src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services 問題。</p>
+ </td>
+ <td></td>
+    </tr>
   </table>  
 
 
@@ -44,5 +50,5 @@ lastupdated: "2017-07-18"
 如需開立 IBM {{site.data.keyword.Bluemix_notm}} 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://console.bluemix.net/docs/support/index.html#contacting-support)。
 
 
-## Bluemix 支援
+## {{site.data.keyword.Bluemix_notm}} 的支援
 如需 {{site.data.keyword.Bluemix_notm}} 服務的其他問題或疑問，請參閱[取得客戶支援](https://www.{DomainName}/docs/support/index.html#getting-customer-support)。

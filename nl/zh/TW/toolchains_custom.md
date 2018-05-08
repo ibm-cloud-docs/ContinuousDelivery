@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-7-7"
+  years: 2017, 2018
+lastupdated: "2018-2-26"
 
 ---
 {:new_window: target="_blank"}
@@ -15,10 +15,10 @@ lastupdated: "2017-7-7"
 # 建立自訂工具鏈範本
 {: #toolchains_custom}
 
-建立自訂工具鏈範本，以改善 DevOps 工作流程。您可以快速開始使用現有工具鏈範本，或建立只包括所需整合的工具鏈。您隨時可以新增或移除工具鏈的整合。
+建立自訂工具鏈範本，以改善 DevOps 工作流程。您可以快速開始使用現有工具鏈範本，或建立只包括所需整合的工具鏈範本。您隨時可以新增或移除工具鏈的整合。
 {:shortdesc}
 
-您可以透過數種方式[建立及部署工具鏈](/docs/toolchains/toolchains_setup.html){: new_window}。在您建立自訂工具鏈之後，即可使用[部署至 {{site.data.keyword.Bluemix_notm}} 按鈕](/docs/develop/deploy_button.html){: new_window}進行共用。
+您可以透過數種方式[建立工具鏈](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}。在您建立自訂工具鏈範本之後，即可[建立部署至 {{site.data.keyword.Bluemix_notm}} 按鈕](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}進行共用。在 [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window} 中可以找到工具鏈範本 SDK 的詳細資料。在 [Garage Method 網站](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}上可以找到逐步指導教學。
 
 
 ## 開始使用
@@ -46,9 +46,9 @@ lastupdated: "2017-7-7"
 * 持續交付
 * 來源控制
 * 藍綠部署
-* 功能測試 
-* 問題追蹤 
-* 線上編輯 
+* 功能測試
+* 問題追蹤
+* 線上編輯
 * 傳訊
 
 不論您選擇哪一種範本，自訂所建立工具鏈的處理程序通常都相同。
@@ -62,19 +62,18 @@ lastupdated: "2017-7-7"
 ![定義工具鏈所需的最少檔案數](images/min_files_for_a_toolchain.png)
 
 
-下列各節說明上述每一個檔案。每一個小節都會包含您可在工具鏈發展時諮詢的配置資訊。 
-
+下列各節說明上述每一個檔案。每一個小節都會包含您可在工具鏈發展時諮詢的配置資訊。YAML 是一種資料序列化語言，其為 JSON 的嚴格超集，並新增了語法顯著換行及縮排。不過，YAML 根本不容許文字定位點字元。
 
 ## 瞭解配置檔
 {: #toolchains_custom_config_files}
 
 
 工具鏈範本配置檔主要包含 YAML 格式化檔案。每一個檔案都包含 meta 資料，可說明工具鏈的不同層面。meta 資料包括：
-* 工具鏈、GitHub 或 Git Repo and Issue Tracking 儲存庫的相關資訊。
+* 工具鏈及儲存庫的相關資訊。
 * 如何建置及部署程式碼的相關詳細資料。
-* 工具鏈中工具的配置內容。 
+* 工具鏈中工具的配置內容。
 
-在您的工具鏈變得更為複雜時，配置檔的複雜性也會變得更為複雜。 
+在您的工具鏈變得更為複雜時，配置檔的複雜性也會變得更為複雜。
 
 當您使用 YAML 檔案時，需要記住以下幾個準則：
 
@@ -83,8 +82,57 @@ lastupdated: "2017-7-7"
 * 所有索引鍵及內容都區分大小寫。
 
 請特別注意 YAML 檔案的格式，以減少發生錯誤的機會。
-若要檢查以尋找錯誤，您可能會想要使用簡單驗證器（如[此剖析器](http://wiki.ess3.net/yaml/){: new_window}）。
+若要檢查以尋找錯誤，您可能想要使用簡單驗證器（如[此剖析器](http://wiki.ess3.net/yaml/){: new_window}）。
 {: tip}
+
+## 規劃服務區段
+每一個服務子區段都包含下列資訊：
+
+* name - 使用者產生的字串，用來識別現行檔案之環境定義中的這個服務。此名稱可以用來將服務標示為必要。
+
+* service_id - 識別服務的唯一字串。此字串直接來自[服務型錄](https://github.com/open-toolchain/sdk/wiki/services.md){: new_window}。
+
+* parameters - 服務的零個以上配置參數。這些參數會根據服務而不同：使用者需要參照型錄，以瞭解特定服務所需的參數。
+
+### 包括其他檔案中的文字
+
+工具鏈的所有資訊都可以位在 `toolchain.yml` 檔案中。不過，您可能想要使用 `$text` 為每一個工具整合使用者介面建立不同的檔案。這樣可以更輕鬆地維護工具鏈，以及將編輯配置檔所需的時間降到最低。`toolchain.yml` 中的此範例 Snippet 顯示如何使用 `pipeline.yml` 檔案的內容作為 `content` 的值。
+
+```
+  configuration:
+    content:
+      $text: pipeline.yml
+```
+
+### 本地化工具鏈範本
+
+您可以本地化工具鏈，方法是將 `nls` 目錄中的使用者介面字串外部化，以使用者的偏好語言顯示工具鏈中的字串。
+您的 `toolchain.yml` 檔案需要包括 `$i18n` 參照。  
+下列範例顯示 `messages.yml` 檔案的 `$i18n` 參照：
+
+```
+messages:
+  $i18n: messages.yml
+```
+
+  英文字串是在 `messages.yml` 中，而其他語言會使用語言碼（例如 `messages_de.yml`）。在[用來識別語言的標籤](https://tools.ietf.org/html/rfc5646){: new_window}中，可以找到語言碼清單。
+
+   若要參照外部化字串，請使用 `$ref` 來擷取字串。例如，
+
+```
+  template:
+    name:
+      $ref: "#/messages/template.name"
+```
+
+  如果您未使用外部化字串，您可以使用：
+
+```
+  template:
+    name: my_template
+```
+
+若要進一步瞭解，請參閱 [Open Toolchain SDK 的訊息區段](https://github.com/open-toolchain/sdk/wiki/Template-File-Format#messages-section){: new_window}。
 
 ## 配置工具鏈檔案
 {: #toolchains_custom_toolchain_yml}
@@ -119,21 +167,21 @@ template
 
 在該範例中，Git URL 及 Git 分支適用於新的工具鏈範本。
 
-2\. **GitHub 儲存庫定義：**
+2\. **儲存庫定義：**
 
- 工具鏈可以持續交付任意數目的 GitHub 儲存庫。`toolchain.yml` 檔案的這個區段就是定義每一個儲存庫的位置。
+ 工具鏈可以持續交付任意數目的 Git 儲存庫（包括 GitHub、GitHub Enterprise、Git Repos and Issue Tracking 及 GitLab）。`toolchain.yml` 檔案的這個區段就是定義每一個儲存庫的位置。
 
- 對於新增至工具鏈的每一個 GitHub 及 Git Repo and Issue Tracking 儲存庫，使用下列內容來新增可代表 GitHub 儲存庫名稱的母項索引鍵：
+ 對於新增至工具鏈的每一個儲存庫，使用下列內容來新增可代表儲存庫名稱的母項索引鍵：
 
 | 項目 | 索引鍵/內容| 值| 說明|
 |------|--------------|-------|-------------|
 | repo-name | 索引鍵 |  | 儲存庫名稱。此索引鍵符合名稱 (sample-repo) |
-| service_id | 內容 | <`githubpublic`、`githubprivate`> | GitHub 儲存庫類型 |
+| service_id | 內容 | <`githubpublic`、`githubprivate`、`hostedgit`、`gitlab`> | 儲存庫類型 |
 | parameters: | 索引鍵 |  |  |
 | repo_name | 內容 |  | repo-name 的型樣。下列範例使用工具鏈名稱作為儲存庫名稱 |
-| repo_url | 內容 |  | GitHub 儲存庫的 URL |
-| type | 內容 | <`new`、`fork`、`clone`、`link`> | 儲存庫的建立方式 |
-| has_issues | 內容 | <`true`、`false`> | 使用 GitHub Issues |
+| repo_url | 內容 |  | 儲存庫的 URL |
+| type | 內容 | <`new`、`fork`、`clone`、`link`> | 如何建立新的儲存庫 |
+| has_issues | 內容 | <`true`、`false`> | 使用 Issues |
 | enable_traceability | properties
 |  <`true`、`false`> | 透過建立確定的標記、標籤及註解、取回要求及所參照問題，來判定是否追蹤程式碼變更的部署。|
 
@@ -167,12 +215,12 @@ template
 | service_id | 內容 | <`pipeline`> | 要使用的服務名稱 |
 | parameters | 索引鍵 |  |  |
 | name | 內容 | <`repo_name`> | 與 repos 區段中所定義的名稱相同 |
-| ui-pipeline | 內容 | <`true`、`false`> |  |
+| ui-pipeline | 內容 | <`true`、`false`> |如果此管線所部署的應用程式顯示在工具鏈頁面的**檢視應用程式**功能表中，則為 True |
 | configuration | 索引鍵 |  |  |
 | content | 內容 | <`$ref(pipeline.yml)`> | 可定義管線定義的檔案 |
 | env | 索引鍵 |  |  |
 | SAMPLE_REPO | 索引鍵 | <`repo-name-key`> | 與儲存庫母項索引鍵相同的名稱 |
-| CF_APP_NAME |  內容 | <`'{{form.pipeline.parameters.prod-app-name}}'`> | Cloud Foundry 所使用的名稱。請考量將 GitHub 儲存庫母項索引鍵名稱併入此內容。|
+| CF_APP_NAME |  內容 | <`'{{form.pipeline.parameters.prod-app-name}}'`> | Cloud Foundry 所使用的名稱。請考量將儲存庫母項索引鍵名稱併入此內容。|
 | PROD_SPACE_NAME | 內容 | <`'{{form.pipeline.parameters.prod-space}}'`> | 要部署至其中的 {{site.data.keyword.Bluemix_notm}} 空間名稱 |
 | PROD_ORG_NAME | 內容 | <`'{{form.pipeline.parameters.prod-organization}}'`> | 要部署至其中的 {{site.data.keyword.Bluemix_notm}} 組織名稱 |
 | PROD_REGION_ID | 內容 | <`'{{form.pipeline.parameters.prod-region}}'`> | 要部署至其中的 {{site.data.keyword.Bluemix_notm}} 地區名稱 |
@@ -186,7 +234,7 @@ template
 
  此 Snippet 顯示檔案的這個區段的範例：
 
- ```YAML
+ ```
  # Pipelines
   sample-build:
     service_id: pipeline
@@ -205,37 +253,38 @@ template
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
        execute: true 
-```
+```      
  {: codeblock}
 
-4\. **部署詳細資料：** - 需要驗證
+4\. **部署詳細資料：**
 
+ 在持續交付處理程序期間，您可以配置工具鏈，將應用程式部署至使用者可以存取的任何 {{site.data.keyword.Bluemix_notm}} 地區、組織或空間。您可以從工具鏈建立頁面中選取應用程式部署位置的特定詳細資料。
 
- 在持續交付處理程序期間，您可以配置工具鏈，將應用程式部署至使用者可以存取的任何 {{site.data.keyword.Bluemix_notm}} 地區、組織或空間。您可以從工具鏈建立頁面選取在何處部署應用程式的特定詳細資料。
-
- ![持續交付配置設定](images/deploy_configuration.png)
+ ![Delivery Pipeline 配置設定](images/deploy_configuration.png)
 
  `toolchain.yml` 檔案的這個區段定義可從工具鏈建立頁面配置的管線階段。
 
- 若要開始，使用母項索引鍵 `deploy` 來識別部署配置內容。下列內容構成區段的其餘部分：
+ 若要開始，母索引鍵 `deploy` 可用來識別部署配置內容。下列內容構成本區段的其餘部分：
 
-| 項目 | 索引鍵/內容 | 值 | 說明 |
+| 項目 | 索引鍵/內容| 值| 說明|
 |------|--------------|-------|-------------|
-| deploy | 索引鍵 |  | 部署區段的名稱 |
-| schema | 內容 | <`deploy.json`> | 定義用於配置部署詳細資料的使用者介面佈置的檔案 |
-| service-category | 內容 | <`pipeline`> | 使用部署配置的服務 |
+| deploy| 索引鍵 |  | 部署區段的名稱 |
+| schema| 內容 | <`deploy.json`> | 定義用於配置部署詳細資料的使用者介面佈置的檔案|
+| service-category| 內容 | <`pipeline`> | 使用部署配置的服務|
 | parameters | 索引鍵 |  |  |
-| prod-region | 內容 | <`"{{region}}"`> | 定義正式作業階段的 {{site.data.keyword.Bluemix_notm}} 地區 |
-| prod-organization | 內容 | <`"{{organization}}"`> | 定義正式作業階段的 {{site.data.keyword.Bluemix_notm}} 組織 |
-| prod-space | 內容 | <`prod`> | 定義正式作業階段的 {{site.data.keyword.Bluemix_notm}} 空間 |
-| github-repo-name | 內容 | <`"{{repo-name-key.parameters.repo_name}}"`> | 將 GitHub 儲存庫名稱傳遞至工具鏈建立頁面的變數 |
+| prod-region| 內容 | <`"{{region}}"`> | 定義正式作業階段的 {{site.data.keyword.Bluemix_notm}} 地區|
+| prod-organization| 內容 | <`"{{organization}}"`> | 定義正式作業階段的 {{site.data.keyword.Bluemix_notm}} 組織|
+| prod-space| 內容 | <`prod`> | 定義正式作業階段的 {{site.data.keyword.Bluemix_notm}} 空間|
+| github-repo-name| 內容 | <`"{{repo-name-key.parameters.repo_name}}"`> | 要將 GitHub 儲存庫名稱傳遞給工具鏈建立頁面的變數|
 
 如需建立 `deploy.json` 檔案的相關資訊，請參閱[本節] (#toolchains_custom_deploy_json)。
 
  下列範例定義可部署至正式作業環境的單一階段。
 
+ 
+
  ```
- ## 配置部署階段
+ ## Configuring a deployment stage
  deploy:
    schema: deploy.json
    service-category: pipeline
@@ -247,7 +296,7 @@ template
  ```
  {: codeblock}
 
- 程式碼範例大部分會依現狀使用，並且只需要進行稍微修改。若要自訂此區段，請將 `github-repo-name` 設為與儲存庫的名稱一致。也需要更新 [`deploy.json`](#toolchains_custom_deploy_json) 檔案中的詳細資料。
+ 程式碼範例大部分會依現狀使用，而且只需要稍微進行修改。若要自訂此區段，請將 `github-repo-name` 設為與儲存庫的名稱一致。也需要更新 [`deploy.json`](#toolchains_custom_deploy_json) 檔案中的詳細資料。
 
  若要建立包括 dev、QA 及 Prod 階段的更複雜管線，可以替換 `parameters` 索引鍵下的下列內容。
 
@@ -270,9 +319,11 @@ template
 
  `pipeline.yml` 檔案包含管線階段的所有配置詳細資料。您可以從現有 pipeline.yml 開始，並自訂它以符合需求。
 
- 如果您的工具鏈包含多個管線，請提供每一個 `pipeline.yml` 檔案的唯一名稱。
+ 
 
- 下列是 `pipeline.yml` 檔案的範例：
+ 如果您的工具鏈包含多個管線，請為每一個 `pipeline.yml` 檔案提供唯一的名稱。
+
+ 以下是 `pipeline.yml` 檔案範例：
 
  ```
  ---
@@ -312,12 +363,12 @@ stages:
     script: |
       #!/bin/bash
       # Push app
-      if ! cf app $CF_APP; then  
+      if ! cf app $CF_APP; then
         cf push $CF_APP
       else
         OLD_CF_APP=${CF_APP}-OLD-$(date +"%s")
         rollback() {
-          set +e  
+          set +e
           if cf app $OLD_CF_APP; then
             cf logs $CF_APP --recent
             cf delete $CF_APP -f
@@ -331,10 +382,10 @@ stages:
         cf push $CF_APP
         cf delete $OLD_CF_APP -f
       fi
-      # 匯出要在稍後管線工作中使用的應用程式名稱及 URL
+      # Export app name and URL for use in later Pipeline jobs
       export CF_APP_NAME="$CF_APP"
       export APP_URL=http://$(cf app $CF_APP_NAME | grep urls: | awk '{print $2}')
-      # 檢視日誌
+      # View logs
       #cf logs "${CF_APP}" --recent
  ```
  {: codeblock}		
@@ -350,16 +401,18 @@ stages:
 
 您可以針對每一個工具配置這些項目。
 
- ![持續交付配置設定](images/deploy_configuration.png)
+ 
+
+ ![Delivery Pipeline 配置設定](images/deploy_configuration.png)
 
  使用者介面中此區段的佈置是透過 `deploy.json` 綱目所定義。
 
- 在此綱目內，應該更新下列內容，以符合您應用程式的詳細資料：
+ 在此綱目內，更新下列內容以符合應用程式的詳細資料：
 
  	* Title
  	* Description
  	* LongDescription
- 	* 應該修改所有 `hello-world-name` 實例及關聯的詳細資料，以符合應用程式的實例及關聯的詳細資料。
+ 	* 應該修改所有 `hello-world-name` 實例及關聯的詳細資料，以符合應用程式的詳細資料。
 
  下列 Snippet 是 `deploy.json` 檔案的範例：
 
@@ -381,15 +434,15 @@ stages:
     "type": "object",
     "properties": {
         "prod-region": {
-            "description": "The bluemix region",
+            "description": "The {{site.data.keyword.Bluemix_notm}} region",
             "type": "string"
         },
         "prod-organization": {
-            "description": "The bluemix org",
+            "description": "The {{site.data.keyword.Bluemix_notm}} org",
             "type": "string"
         },
         "prod-space": {
-            "description": "The bluemix space",
+            "description": "The {{site.data.keyword.Bluemix_notm}} space",
             "type": "string"
         },
         "prod-app-name": {
@@ -409,8 +462,8 @@ stages:
     "form": [
         {
             "type": "validator",
-            "url": "/devops/setup/bm-helper/helper.html"
-        },
+          "url": "/devops/setup/bm-helper/helper.html"
+       },
         {
             "type": "text",
             "readonly": false,
@@ -480,55 +533,67 @@ stages:
 
 ## 其他工具配置
 
- 在您配置工具鏈的核心元件之後，可以包括將其他功能新增至工具鏈的其他工具整合。在 `toolchain.yml` 檔案中，所有其他工具都需要有自己的項目。部分工具也需要您將不同的 YAML 配置檔新增至 `.bluemix` 目錄。
+ 在您配置工具鏈的核心元件之後，可以包括將更多功能新增至工具鏈的其他工具整合。在 `toolchain.yml` 檔案中，所有其他工具都需要有自己的項目。部分工具也需要您將不同的 YAML 配置檔新增至 `.bluemix` 目錄。
 
  ![定義工具鏈所需的檔案](images/files_for_toolchain_with_additional_tools.png)
 
-若要查看可用的工具整合清單，請參閱<a ref="https://github.com/open-toolchain/sdk/wiki/services.md" target="_blank">工具鏈範本中可用的服務</a>。下列範例顯示如何格式化對工具鏈 YAML 檔案的新增。
+若要查看可用的工具整合清單，請參閱<a href="https://github.com/open-toolchain/sdk/wiki/services.md" target="_blank">工具鏈範本中可用的服務</a>。下列範例顯示如何格式化對工具鏈 YAML 檔案的新增。
 
- * **Slack**
+ 
 
-### toolchain.yml
-	```
-	messaging:
+### **Slack**
+
+#### toolchain.yml
+{: #slack_toolchain_yaml}
+
+```
+messaging:
 	  service_id: slack
 	  $ref: slack.yml
 	```
-	{: codeblock}
+{: codeblock}
 
-### slack.yml
-	```
-	---
-	parameters:
-	  api_token: ""
-	  channel_name: ""
-	```
-	{: codeblock}
+#### slack.yml
+{: #slack_slack_yaml}
 
- * **Sauce Labs**
-
-### toolchain.yml
+```
+---YAML
+parameters:
+  api_token: ""
+  channel_name: ""
 	```
-	test:
+{: codeblock}
+
+### **Sauce Labs**
+
+#### toolchain.yml
+{: #sauce_toolchain_yaml}
+
+```YAML
+test:
 	  service_id: saucelabs
 	  $ref: saucelabs.yml
 	```
-	{: codeblock}
+{: codeblock}
 
-### saucelabs.yml
-	```
-	---
+#### saucelabs.yml
+{: #sauce_slack_yaml}
+
+```YAML
+---
 	parameters:
 	  username: ""
 	  key: ""
 	```
-	{: codeblock}
+{: codeblock}
 
- * **Eclipse Orion Web IDE**
+### **Eclipse Orion Web IDE**
 
-###	toolchain.yml
-	```
-	webide:
+####	toolchain.yml
+{: #eclipse_toolchain_yaml}
+
+```YAML
+webide:
 	  service_id: orion
 	```
-	{: codeblock}
+{: codeblock}

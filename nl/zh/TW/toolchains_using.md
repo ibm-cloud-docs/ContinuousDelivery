@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-7-17"
+  years: 2015, 2018
+lastupdated: "2018-2-26"
 
 ---
 
@@ -79,23 +79,29 @@ lastupdated: "2017-7-17"
 
 * 若要將存取權授與不具有工具鏈組織成員身分的使用者，請遵循下列步驟：
 
-   a. 從功能表列中，按一下**管理 > 帳戶 > 組織**。
+   a. 從功能表列中，按一下**管理 > 安全 > 身分及存取**。
 
-   b. 按一下**邀請團隊成員**。
+   b. 從您要指派存取權之使用者的列中，選取**動作**功能表，然後按一下**指派存取權**。
 
-   c. 選取您要邀請使用者加入的組織，然後按**下一步**。
+   c. 選取**使用 Cloud Foundry 指派存取權**。
 
-   d. 選取您要容許使用者存取的空間。
+   d. 選取**指派組織**。
 
-   e. 選取要指派給組織中所選取空間的角色。
+   e. 指派使用者存取權：
 
-     **附註**：依預設，組織管理員會具有所有與組織相關聯之工具鏈的完整管理者專用權。若要將完整管理者專用權授與使用者，請選取**管理員**角色。「帳單管理員」及「審核員」角色不會影響工具鏈存取權。您稍後可以在「團隊目錄」頁面上變更角色。如需相關資訊，請參閱[管理團隊成員及角色](/docs/admin/users_roles.html){: new_window}。
+     * 選擇要在其中新增使用者的組織。
 
-   f. 選取確認您負責支付帳戶所造成之所有費用的選項。
+     * 指派組織角色。
 
-   g. 輸入您要邀請之使用者的電子郵件位址，然後按一下**傳送**。
+     * 選擇地區。
 
-   h. 使用者成為組織成員之後，請回到工具鏈的「管理」頁面，並將使用者新增至工具鏈。  
+     * 選擇空間。
+
+     * 指派組織中所選取空間的角色。
+
+     **附註**：依預設，組織管理員會具有所有與組織相關聯之工具鏈的完整管理者專用權。若要將完整管理者專用權授與使用者，請選取**管理員**角色。「帳單管理員」及「審核員」角色不會影響工具鏈存取權。您稍後可以在「團隊目錄」頁面上變更角色。如需相關資訊，請參閱 [Cloud Foundry 角色](/docs/iam/cfaccess.html#cfaccess){: new_window}。
+
+   使用者成為組織成員之後，請回到工具鏈的「管理」頁面，並將使用者新增至工具鏈。  
 
 
 ## 刪除工具鏈
@@ -113,6 +119,10 @@ lastupdated: "2017-7-17"
 ##使用指導教學：使用工具鏈
 {: #toolchain-tutorial}
 
-請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage){:new_window} 上的這個指導教學：
-  * [建立及使用您的第一個工具鏈 (GitHub) ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [使用 {{site.data.keyword.DRA_short}} (v2) 建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage){:new_window} 上的這些指導教學：
+
+  * [使用「開發 Cloud Foundry 應用程式」工具鏈建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。
+
+  * [將工具鏈新增至應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}。
+
+  * [使用「在 Cloud Foundry 上開發及測試微服務」工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。

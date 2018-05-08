@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-7-12"
+  years: 2015, 2018
+lastupdated: "2018-3-21"
 
 ---
 
@@ -28,7 +28,7 @@ lastupdated: "2017-7-12"
 
 | Git 類型  | HTTPS 設定 | HTTPS 使用 |  SSH 設定 |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [個人存取記號](/docs/ContinuousDelivery/git_working.html#create_pat) | Git Repos and Issue tracking 使用者名稱（非 IBM ID）及個人存取記號 | [配置 SSH 金鑰](/docs/ContinuousDelivery/git_working.html#create_ssh) |
+| Git Repos and Issue Tracking (git.ng.bluemix.com) | [個人存取記號](/docs/services/ContinuousDelivery/git_working.html#git_authentication) | Git Repos and Issue tracking 使用者名稱（非 IBM ID）及個人存取記號 | [配置 SSH 金鑰](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
 | 公用 GitHub (github.com) | 不需要個人存取記號，但您可以設定並使用它 | GitHub 使用者名稱和密碼，或 GitHub 使用者名稱及「個人存取記號」，或只是以個人存取記號作為使用者名稱 | [配置 GitHub SSH 金鑰](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
 | GitHub Enterprise | [個人存取記號](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | GitHub Enterprise 使用者名稱（非 IBM ID）及個人存取記號 | [配置 GitHub Enterprise SSH 金鑰](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
@@ -77,13 +77,13 @@ lastupdated: "2017-7-12"
 ## 使用 IBM Eclipse Tools 進行開發
 {: #git_eclipse_tools}
 
-您可以將 IBM Eclipse Tools for Bluemix 所提供的外掛程式安裝至 Eclipse 環境，以整合 IDE 與 Bluemix。
+您可以將 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 所提供的外掛程式安裝至 Eclipse 環境，以整合 IDE 與 {{site.data.keyword.Bluemix_notm}}。
 
-您可以使用這些工具，直接從 Eclipse IDE 或 IBM WebSphere&reg; Application Server Developer Tools (WDT) 將下列類型的檔案及伺服器部署至 Bluemix 伺服器：
+您可以使用這些工具，直接從 Eclipse IDE 或 IBM WebSphere&reg; Application Server Developer Tools (WDT) 將下列類型的檔案及伺服器部署至 {{site.data.keyword.Bluemix_notm}}：
 
 * JavaScript 檔案
 * WAR（Web 保存）檔案
 * EAR（企業保存）檔案
 * Liberty 設定檔包裝伺服器
 
-您也可以建立服務，並將它們鏈結至應用程式，並在部署期間定義環境變數。如需 IBM Eclipse Tools 的相關資訊，請參閱[使用 IBM Eclipse Tools for Bluemix 部署應用程式](../../manageapps/eclipsetools/eclipsetools.html)。
+您也可以建立服務，並將它們鏈結至應用程式，並在部署期間定義環境變數。如需 IBM Eclipse Tools 的相關資訊，請參閱[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署應用程式](../../manageapps/eclipsetools/eclipsetools.html)。

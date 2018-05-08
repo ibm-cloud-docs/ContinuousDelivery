@@ -1,26 +1,45 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-7-24"
----
-<!-- Copyright info at top of file: REQUIRED
-    The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be surrounded by 3 dashes.
-    The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
-    Indentation as per the previous template must be preserved.
--->
+  years: 2016, 2018
+lastupdated: "2018-4-18"
 
-{:new_window: target="_blank"}
+---
+
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
 
 # 方案限制與使用
-{: #deliverypipeline_plans}
-{: #free_deprecation}
+{: #limitations_usage}
 
 {{site.data.keyword.contdelivery_full}} 的使用，僅限於在 {{site.data.keyword.Bluemix_notm}} 平台或其他相容之平台即服務 (PaaS) 或基礎架構即服務 (IaaS) 供應項目上，建置、部署、測試及持續運作應用程式。
+
+## 授權使用者
+{: #authorized_users}
+
+{{site.data.keyword.contdelivery_short}} 服務方案是根據服務實例的授權使用者數目進行定義及定價。任何參與工作的人都必須計入授權使用者數目，包括：
+
+ * 與 {{site.data.keyword.gitrepos}} 儲存庫中的問題、問題板、原始碼或其他構件互動的使用者。
+ * 操作、觸發（直接在使用者介面中，或間接透過確定至儲存庫）或檢視交付管線狀態的使用者。
+ * 與 Eclipse Orion {{site.data.keyword.webide}} 互動的使用者。
+ 
+### 如何計算使用者數目？
+
+查看包含 {{site.data.keyword.contdelivery_short}} 服務之 Cloud 組織中的所有使用者，以計算授權使用者數目。 
+
+若要檢視組織中的使用者清單，請從功能表列中按一下**管理 > 帳戶 > Cloud Foundry 組織**。
+
+您也可以檢視帳戶中的所有 {{site.data.keyword.contdelivery_short}} 服務實例，以及對每一個實例所報告的使用者數目。
+
+1. 從功能表列中，按一下**管理 > 帳戶 > Cloud Foundry 組織**。
+2. 按一下**用量儀表板**。
+
+### 當您超過服務方案的限制時會發生什麼情況？ 
+
+有些服務方案可能會有其他限制（例如可執行的 Delivery Pipeline 工作數目或儲存空間耗用量）。如需相關資訊，請參閱型錄中的方案說明。如果在計費期間超過任何方案限制，則可能會暫停服務。例如，在計費期間的其餘時間，可能未執行 Delivery Pipeline 工作。
+
+## Delivery Pipeline 使用
+{: #pipeline_usage}
 
 可接受的使用行為，包括但不限於下列行為：
 
@@ -44,7 +63,6 @@ IBM 得自行決定對違反 {{site.data.keyword.contdelivery_short}} 服務或 
  * 由於 {{site.data.keyword.deliverypipeline}} 提供 {{site.data.keyword.Bluemix_notm}} 的持續整合及持續交付，因此不支援 GitLab 中的持續整合特性。
  * 無法使用 GitLab 功能，因為它們是由 IBM 所管理。
  * 可能無法完整存取 {{site.data.keyword.gitrepos}}。
-
 
 ## Git Repos and Issue Tracking 使用者資訊及內容
 {: #git_projects}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-6-8"
+  years: 2015, 2018
+lastupdated: "2018-2-26"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2017-6-8"
    * 透過問題追蹤器，來追蹤問題與共用構想
    * 在 Wiki 系統上記載專案
 
-**附註：**因為此工具整合是以 GitLab Community Edition 為建置基礎，並由 IBM 於 Bluemix 上進行管理，所以有一些 GitLab 選項無法使用。例如，Delivery Pipeline 提供 Bluemix 的持續整合及持續交付；因此，不支援 GitLab 中的持續整合特性。此外，無法使用管理功能，因為它們是由 IBM 所管理。
+**附註：**因為此工具整合是以 GitLab Community Edition 為建置基礎，並由 IBM 於「{{site.data.keyword.Bluemix_notm}} 平台」上進行管理，所以有一些 GitLab 選項無法使用。例如，Delivery Pipeline 提供 {{site.data.keyword.Bluemix_notm}} 的持續整合及持續交付；因此，不支援 GitLab 中的持續整合特性。此外，無法使用管理功能，因為它們是由 IBM 所管理。
 
 ## 在本端使用 {{site.data.keyword.gitrepos}}
 {: #git_local}
@@ -32,7 +32,7 @@ lastupdated: "2017-6-8"
 
 **提示**：{{site.data.keyword.gitrepos}} 只支援使用 TLS1.2 的 HTTPS 連線。如果您使用 Eclipse 來連接，您可能需要為您的 Java&trade; 版本指定此通訊協定，新增 `-Dhttps.protocols=TLSv1.2` 至 eclipse.ini 檔，然後重新啟動 Eclipse。
 
-## 向 {{site.data.keyword.gitrepos}} 進行鑑別 
+## 向 {{site.data.keyword.gitrepos}} 進行鑑別
 {: #git_authentication}
 
 在 Web 瀏覽器中，只會使用您的 {{site.data.keyword.Bluemix_notm}} 登入及密碼向 {{site.data.keyword.gitrepos}} 進行鑑別。您無法使用 {{site.data.keyword.Bluemix_notm}} 使用者認證從外部 Git 用戶端進行鑑別。若要從本端 Git 儲存庫完成遠端 Git 作業（例如 `clone` 或 `push`），您必須使用個人存取記號或 SSH 金鑰來向 {{site.data.keyword.gitrepos}} 進行鑑別。
@@ -58,7 +58,7 @@ lastupdated: "2017-6-8"
 
 若要進一步瞭解，請參閱 [SSH ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/ssh/README){:new_window}。
 
-## 檔案及儲存庫大小限制
+## 實體檔及儲存庫大小限制
 {: #git_limits}
 
 檔案嚴格限制為 100 MB。建議的儲存庫大小限制為 1 GB。如果您的儲存庫超出 1 GB，則可能會收到含有減少儲存庫大小要求的電子郵件。
@@ -68,5 +68,6 @@ lastupdated: "2017-6-8"
 
 請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage){:new_window} 上的其中一個指導教學：
 
-  * [建立使用 {{site.data.keyword.gitrepos}} 的工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
-  * [使用 DevOps Insights（第 2 版）建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [使用「開發 Cloud Foundry 應用程式」工具鏈建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。學習如何從範本建立開放式工具鏈，以及使用工具鏈來持續交付 "Hello World" 應用程式。
+
+  * [使用「在 Cloud Foundry 上開發及測試微服務」工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。學習如何從具有三個微服務的範本建立工具鏈，以及使用工具鏈來持續交付線上商店。

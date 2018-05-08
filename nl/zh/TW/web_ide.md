@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-6-9"
+  years: 2015, 2018
+lastupdated: "2018-3-20"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-6-9"
 # 使用 Eclipse Orion Web IDE 開發
 {: #web_ide}
 
-Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行開發的瀏覽器型開發環境。有了內容輔助、程式碼完成及錯誤檢查的協助，您就可以使用 JavaScript、HTML 及 CSS 進行開發。{{site.data.keyword.webide}} 幾乎可以搭配任何語言一起使用，並且提供大部分檔案類型的語法強調顯示。來源控制是內建的，而且您可以在本端部署程式碼來測試及除錯應用程式。
+Eclipse Orion {{site.data.keyword.webide}} 是一種瀏覽器型開發環境，在其中，憑藉內容輔助、程式碼完成及錯誤檢查的協助，您就可以使用 JavaScript、HTML 及 CSS 針對 Web 進行開發。{{site.data.keyword.webide}} 幾乎可以搭配任何語言一起使用，並且提供大部分檔案類型的語法強調顯示。來源控制是內建的，而且您可以在本端部署程式碼來測試及除錯應用程式。
 {:shortdesc}
 
 最好的一點是，{{site.data.keyword.webide}} 採用 Web 技術。您不必進行任何安裝、維護和擴充。您可以在具有網際網路連線的任何位置進行開發。
@@ -23,7 +23,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行�
 ## 設定 IDE
 {: #editorsetup}
 
-{{site.data.keyword.webide}} 可進行自訂，以選擇色系、技術工具，以及符合開發需求的設定。若要檢視及修改設定，請從左邊的功能表中，按一下**設定**圖示 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="「設定」圖示">。
+{{site.data.keyword.webide}} 可進行自訂，以選擇色系、技術工具，以及符合開發需求的設定。若要檢視及修改設定，請在左側的導覽資訊看板中按一下**設定**圖示 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="設定圖示">。
 
 如果您經常需要在編輯時變更特定設定，則可以從**本端編輯器設定**圖示 <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="「本端編輯器設定」圖示"> 快速存取這些設定。
 
@@ -69,10 +69,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行�
 ## 管理原始碼
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} 是與原始碼管理工具整合。若要使用 Git 儲存庫，請按一下 **Git 儲存庫**圖示 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="「Git 儲存庫」圖示">。
-
- **提示**：如果您要搭配使用 {{site.data.keyword.webide}} 與開放式工具鏈，則工作區會預先移入 GitHub、{{site.data.keyword.ghe_short}} 或 Git Repos and Issue Tracking 儲存庫。會強調顯示與現行工具鏈相關聯的儲存庫。
-
+{{site.data.keyword.webide}} 是與原始碼管理工具整合。若要使用 Git 儲存庫，請按一下 **Git 儲存庫**圖示 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="「Git 儲存庫」圖示">。如需相關資訊，請參閱[在 Eclipse Orion Web IDE 中使用 Git](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide)。
 
 ## 從工作區部署應用程式
 {: #deploy}
@@ -100,7 +97,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行�
 ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}.
+To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.Bluemix_short}}.
 
 ### Before you begin
 
@@ -212,6 +209,7 @@ Eclipse Orion {{site.data.keyword.webide}} 提供 JavaScript、HTML、CSS 及 Ma
 {: #toolchain_tutorials}
 
 請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage){:new_window} 上的其中一個指導教學：
-  * [建立及使用您的第一個工具鏈 (GitHub) ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [建立使用 Git Repos and Issue Tracking 的工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [使用 DevOps Insights（第 2 版）建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+
+  * [使用「開發 Cloud Foundry 應用程式」工具鏈建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。
+
+  * [使用「在 Cloud Foundry 上開發及測試微服務」工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。

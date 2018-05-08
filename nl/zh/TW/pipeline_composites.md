@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-8-18"
+  years: 2017, 2018
+lastupdated: "2018-2-26"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,12 +22,14 @@ lastupdated: "2017-8-18"
 使用 {{site.data.keyword.deliverypipeline}} 的複合管線特性，您可以管理相關軟體應用程式的可重複持續整合及持續交付處理程序。
 {:shortdesc}
 
+**附註**：此特性只能在美國南部地區使用。
+
 您可以建立複合管線來管理工具鏈中的應用程式。如果您的工具鏈包含 {{site.data.keyword.deliverypipeline}} 所部署的應用程式，則可以設定要在從工具鏈中新增或移除交付管線時更新的複合管線。您也可以將應用程式從外部來源新增至複合管線。
 
 ## 建立複合管線
 {: #compositepipeline_create_for_toolchain}
 
-1. 從 {{site.data.keyword.Bluemix_notm}} 功能表列的功能表中，按一下 **DevOps**。
+1. 從 {{site.data.keyword.Bluemix_notm}} 功能表列的功能表中，按一下**服務**，然後按一下 **DevOps**。
 
 2. 從左導覽中，按一下**管線**。
 
@@ -135,10 +137,10 @@ lastupdated: "2017-8-18"
 
 若要檢視工作的日誌，請展開包含工作的應用程式，然後按一下工作。
 
-## 使用 IBM Bluemix DevOps Connect 以與 IBM UrbanCode Deploy 整合
+## 使用 {{site.data.keyword.Bluemix_notm}} DevOps Connect 以與 IBM UrbanCode Deploy 整合
 {: #compositepipeline_devops_connect}
 
-IBM Bluemix DevOps Connect 會協調內部部署 IBM&reg; UrbanCode&reg; Deploy 安裝與 {{site.data.keyword.contdelivery_short}} 之間的通訊。在安裝 DevOps Connect 之後，您可以建立用來管理具有複合管線之 IBM UrbanCode Deploy 應用程式的整合。
+{{site.data.keyword.Bluemix_notm}} DevOps Connect 會協調內部部署 IBM&reg; UrbanCode&reg; Deploy 安裝與 {{site.data.keyword.contdelivery_short}} 之間的通訊。在安裝 DevOps Connect 之後，您可以建立用來管理具有複合管線之 IBM UrbanCode Deploy 應用程式的整合。
 
 **必要條件**
 
@@ -195,7 +197,7 @@ IBM Bluemix DevOps Connect 會協調內部部署 IBM&reg; UrbanCode&reg; Deploy 
 ## 從 IBM UrbanCode Deploy 新增應用程式
 {: #compositepipeline_add_apps}
 
-如果您是使用 DevOps Connect 與 IBM UrbanCode Deploy 整合之組織的成員，則可以將在 UrbanCode Deploy 中可存取的應用程式新增至複合管線。如需安裝指示，請參閱[使用 IBM Bluemix DevOps Connect 以與 IBM UrbanCode Deploy 整合](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)。
+如果您是使用 DevOps Connect 與 IBM UrbanCode Deploy 整合之組織的成員，則可以將在 UrbanCode Deploy 中可存取的應用程式新增至複合管線。如需安裝指示，請參閱[使用 {{site.data.keyword.Bluemix_notm}} DevOps Connect 以與 IBM UrbanCode Deploy 整合](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)。
 
 若您是連接至 IBM UrbanCode Deploy 之組織的成員，則可以將 UrbanCode Deploy 應用程式新增至複合管線、選取要包含在部署方案中的應用程式處理程序，以及自訂應用程式的部署。
 
@@ -225,4 +227,7 @@ IBM Bluemix DevOps Connect 會協調內部部署 IBM&reg; UrbanCode&reg; Deploy 
 {: #composite_pipeline-tutorial}
 
 請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage){:new_window} 上的這個指導教學：
-  * [使用 DevOps Insights（第 2 版）建立及使用微服務工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+
+  * [使用「在 Cloud Foundry 上開發及測試微服務」工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。
+
+  **附註**：{{site.data.keyword.DRA_short}} 只能在美國南部地區使用。
