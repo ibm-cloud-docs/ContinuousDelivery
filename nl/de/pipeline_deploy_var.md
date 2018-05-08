@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2017-7-10"
+  years: 2016, 2018
+lastupdated: "2018-1-23"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -15,6 +15,7 @@ lastupdated: "2017-7-10"
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
+{:tip:.tip}
 
 # Umgebungseigenschaften und Ressourcen
 {: #deliverypipeline_environment}
@@ -30,6 +31,8 @@ Sie können vier Typen von Eigenschaften von der Registerkarte 'Umgebungseigensc
 * **Secure** (Sicher): Ein Eigenschaftsschlüssel mit einem einzeiligen Wert. Der Wert wird in Form von Sternen angezeigt.
 * **Properties** (Eigenschaften): Eine Datei im Projektrepository. Diese Datei kann mehrere Eigenschaften enthalten. Jede Eigenschaft muss in einer eigenen Zeile stehen. Verwenden Sie Gleichheitszeichen (=), um Schlüssel und Werte der Paare zu trennen.
 
+Sie können die Umgebungseigenschaften für einen Pipeline-Job prüfen, indem Sie den Befehl `env` im Job-Script ausführen.
+{:tip}
 
 Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardmäßig verfügbar.
 
@@ -97,7 +100,7 @@ Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardm
 | CF_ORGANIZATION_ID | Bei Bereitstellungen die ID der Organisation, für die Bereitstellung durchgeführt wird. |
 | CF_SPACE | Bei Bereitstellungen der Name des Bereichs, für den die Bereitstellung durchgeführt wird. |
 | CF_SPACE_ID | Bei Bereitstellungen die ID des Bereichs, für den die Bereitstellung durchgeführt wird.  |
-| CF_TARGET_URL | Bei Bereitstellungen die URL von IBM Bluemix&reg; oder Cloud Foundry. |
+| CF_TARGET_URL | Bei Bereitstellungen die URL von {{site.data.keyword.Bluemix_short}} oder Cloud Foundry. |
 | IDS_VERSION | Bei Bereitstellungen die Version der App, die bereitgestellt wird, oder die Quellenkennung. |
 
 ## Vorinstallierte Ressourcen

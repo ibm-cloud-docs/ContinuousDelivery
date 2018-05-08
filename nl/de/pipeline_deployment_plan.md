@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-08-15"
+  years: 2017, 2018
+lastupdated: "2018-1-9"
 
 ---
 
@@ -17,6 +17,8 @@ lastupdated: "2017-08-15"
 In einem Bereitstellungsplan für eine Kombinationspipeline stellt eine Task eine unternehmensrelevante Aktivität dar, die mit einer Softwarebereitstellung verbunden ist. Tasks werden in Bereitstellungsplänen definiert.
 
 {:shortdesc}
+
+**Hinweis**: Dieses Feature ist nur in der Region 'Vereinigte Staaten (Süden)' verfügbar.
 
 Die meisten Tasks verfügen über einen Ausgangspunkt, einen Endpunkt und eine messbare Dauer. Eine Task kann einem der folgenden Typen angehören:
 
@@ -37,7 +39,7 @@ Wenn Sie eine Task erstellen, wählen Sie den Bereitstellungsplan aus, zu dem di
 
 Nach dem Speichern einer Task werden für diese Task Aktionssymbole angezeigt. Anhand dieser Aktionssymbole können Sie den Status der Task im Verlauf einer Bereitstellung ändern. Alle Tasks besitzen das Symbol für die Aktion **Überspringen**. Andere Symbole wie etwa das für die Aktion **Starten** werden angezeigt, wenn ihnen der jeweilige Kontext entspricht.
 
-![](../UCCR/images/deploy-plan-intro.png "Typischer Bereitstellungsplan")
+![Typischer Bereitstellungsplan](../UCCR/images/deploy-plan-intro.png)
 
 *Abbildung 1. Einfacher Bereitstellungsplan mit Tasks und Aktionssymbolen*
 
@@ -50,10 +52,10 @@ Jede Task in einem Bereitstellungsplan ist in einer separaten Zeile enthalten. W
 | Name               |Name der Task       |
 | Typ               |Typ von Task: Manuell, Continuous Delivery Pipeline, Verzögert, E-Mail, Header/Hinweis, UrbanCode Deploy|             
 | Status             |Taskstatus: Nicht gestartet, Abgeschlossen, Fehlgeschlagen, Übersprungen, Nicht zutreffend |
-| Eigner             |Person, der die Task zugewiesen ist                                                        |
+| Eigner              |Person, der die Task zugewiesen ist                                                        |
 | Startzeit          |Startzeit oder erwartete Startzeit basierend auf dem geplanten Start oder aber geschätzte Dauer anderer Tasks        |
-| Endzeit            |Zeit, zu der die Task aufgelöst wurde        |
-| Dauer              |Zeitraum (in Minuten) vom Start der Task bis zu ihrer Auflösung        |
+| Endzeitpunkt               |Zeit, zu der die Task aufgelöst wurde        |
+| Dauer               |Zeitraum (in Minuten) vom Start der Task bis zu ihrer Auflösung        |
 | Abhängigkeiten     |Anzahl der Tasks, die als Voraussetzungen für diese Task fungieren bzw. die von dieser Task abhängig sind        |
 
 ---
@@ -175,7 +177,7 @@ Die Gruppe wird gebildet und es wird eine Leiste für die Gruppenauswahl zum Ber
 
 Die folgende Abbildung stellt eine parallele Gruppe dar. An der Leiste für die Gruppenauswahl ist erkennbar, um welche Art von Gruppe es sich handelt - um eine Gruppe mit parallelem Ausführungsmuster <img class="inline" src="../UCCR/images/para-select.png"  alt="Auswahl von paralleler Gruppe"> oder um eine Gruppe mit sequenziellem Ausführungsmuster <img class="inline" src="../UCCR/images/seq-select.png"  alt="Auswahl von sequenzieller Gruppe">.
 
-(![](../UCCR/images/group-select.png "Typischer Bereitstellungsplan"))
+![Typischer Bereitstellungsplan](../UCCR/images/group-select.png)
 
 *Abbildung 2. Parallele Gruppe*
 
@@ -206,7 +208,7 @@ Tags werden in den Taskzeilen der Seite mit den Bereitstellungsplandetails angez
 
 Die Tags, die ein Bereitstellungsplan verwendet, werden auf der Seite mit den Bereitstellungsplandetails auf der Registerkarte **Versionen** angezeigt. Wenn Sie eine Task als nicht anwendbar für eine Bereitstellung definieren wollen, sie also für diese Bereitstellung nicht bereitstehen soll, entfernen Sie die Tags für die betreffende Task. Tasks mit dem Status 'Nicht zutreffend' können nicht gestartet werden.  
 
-![](../UCCR/images/task-tag-labels.png "Typischer Bereitstellungsplan")
+![Typischer Bereitstellungsplan](../UCCR/images/task-tag-labels.png)
 
 *Abbildung 3. Task-Tags*
 
@@ -231,7 +233,7 @@ Taskabhängigkeiten werden auf der Seite mit den Bereitstellungsplandetails in d
 
 Für die erste Task in der folgenden Abbildung sind keine Voraussetzungen festgelegt, doch sie weist zwei von ihr abhängige Tasks auf. Die zweite Task verfügt über eine vorausgesetzte Task, während sie keine abhängigen Tasks besitzt.
 
-(![](../UCCR/images/plan-w-depend.png "Typischer Bereitstellungsplan"))
+![Typischer Bereitstellungsplan](../UCCR/images/plan-w-depend.png)
 
 *Abbildung 4. Taskabhängigkeiten*
 

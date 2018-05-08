@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-6-9"
+  years: 2015, 2018
+lastupdated: "2018-3-20"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-6-9"
 # Mit der Eclipse Orion-Web-IDE entwickeln
 {: #web_ide}
 
-Die Eclipse Orion-{{site.data.keyword.webide}} ist eine browserbasierte Entwicklungsumgebung, in der Sie Anwendungen für das Web entwickeln können. Für die Entwicklung in JavaScript, HTML und CSS stehen Content-Assist-Funktionen, Codevervollständigung und Fehlerprüfung zur Verfügung. Die {{site.data.keyword.webide}} ist mit nahezu jeder Programmiersprache verwendbar und bietet Syntaxhervorhebung für die meisten Dateitypen. Die Quellcodeverwaltung ist integriert und Sie können Code lokal bereitstellen, um Ihre Apps zu testen und zu debuggen.
+Die Eclipse Orion-{{site.data.keyword.webide}} ist eine browserbasierte Entwicklungsumgebung, in der Sie mithilfe von Content-Assist-Funktionen, Codevervollständigung und Fehlerprüfung für das Web in JavaScript, HTML und CSS entwickeln können. Die {{site.data.keyword.webide}} ist mit nahezu jeder Programmiersprache verwendbar und bietet Syntaxhervorhebung für die meisten Dateitypen. Die Quellcodeverwaltung ist integriert und Sie können Code lokal bereitstellen, um Ihre Apps zu testen und zu debuggen.
 {:shortdesc}
 
 Als weiterer wesentlicher Vorteil kommt hinzu, dass {{site.data.keyword.webide}} auf der Webtechnologie basiert. Es entsteht keinerlei Installations-, Wartungs- und Skalierungsaufwand. Für die Codeentwicklung benötigen Sie lediglich einen Internetanschluss.
@@ -23,7 +23,7 @@ Als weiterer wesentlicher Vorteil kommt hinzu, dass {{site.data.keyword.webide}}
 ## IDE einrichten
 {: #editorsetup}
 
-Die {{site.data.keyword.webide}} ist konfigurierbar, d. h. Sie können Farbschemen, technische Tools und Einstellungen wählen, die Ihren Entwicklungsanforderungen entsprechen. Um die Einstellungen anzuzeigen und zu ändern, klicken Sie links im Menü auf das Symbol **Einstellungen** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="Symbol 'Einstellungen'">.
+Die {{site.data.keyword.webide}} ist konfigurierbar, d. h. Sie können Farbschemen, technische Tools und Einstellungen wählen, die Ihren Entwicklungsanforderungen entsprechen. Um die Einstellungen anzuzeigen und zu ändern, klicken Sie links im Menü auf das Symbol **Einstellungen** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="The settings icon"> in der linken Navigationsseitenleiste.
 
 Wenn Sie bestimmte Einstellungen beim Bearbeiten häufig ändern müssen, können Sie auf diese Einstellungen schnell über das Symbol **Lokale Einstellungen für Editor** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Symbol 'Lokale Einstellungen für Editor"> zugreifen.
 
@@ -69,10 +69,7 @@ Klicken Sie auf **Tools** > **Tasten anzeigen**, um eine Liste mit den Tastenbel
 ## Quellcode verwalten
 {: #sourcecontrol}
 
-Die {{site.data.keyword.webide}} ist mit Quellcodeverwaltungstools integriert. Um mit dem Git-Repository zu arbeiten, klicken Sie auf das Symbol **Git-Repository** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="Symbol 'Git-Repository'">.
-
- **Tipp**: Wenn Sie die {{site.data.keyword.webide}} in Verbindung mit offenen Toolchains verwenden, werden in Ihrem Arbeitsbereich bereits Ihre GitHub-, {{site.data.keyword.ghe_short}}- oder Git Repos and Issue Tracking-Repositorys angezeigt. Die Repositorys, die Ihrer aktuellen Toolchain zugeordnet sind, sind hervorgehoben.
-
+Die {{site.data.keyword.webide}} ist mit Quellcodeverwaltungstools integriert. Um mit dem Git-Repository zu arbeiten, klicken Sie auf das Symbol **Git-Repository** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="Symbol 'Git-Repository'">.  Weitere Informationen finden Sie in [Mit Git in der Eclipse Orion-Web-IDE arbeiten](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide).
 
 ## App vom Arbeitsbereich aus bereitstellen
 {: #deploy}
@@ -101,7 +98,7 @@ Wenn Sie eine Node.js-App entwickeln, aktivieren Sie den Modus 'Live Edit' für 
 ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}.
+To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.Bluemix_short}}.
 
 ### Before you begin
 
@@ -162,7 +159,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 ## Unterstützte Sprachen
 {: #supported_languages}
 
-Die Eclipse Orion {{site.data.keyword.webide}} bietet Content-Assist, QuickInfo, Vorschaufunktionen, Validierung und Syntaxhervorhebung für JavaScript-, HTML-, CSS- und Markdown-Dateien. Für die folgenden Dateitypen wird die Funktion der Syntaxhervorhebung ebenfalls unterstützt:
+Die Eclipse Orion-{{site.data.keyword.webide}} bietet Content-Assist, QuickInfo, Vorschaufunktionen, Validierung und Syntaxhervorhebung für JavaScript-, HTML-, CSS- und Markdown-Dateien. Für die folgenden Dateitypen wird die Funktion der Syntaxhervorhebung ebenfalls unterstützt:
 
 <table>
 <tr>
@@ -213,6 +210,7 @@ Die Eclipse Orion {{site.data.keyword.webide}} bietet Content-Assist, QuickInfo,
 {: #toolchain_tutorials}
 
 Informieren Sie sich in einem der Lernprogramme zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage){:new_window}:
-  * [Erste Toolchain erstellen und verwenden (GitHub) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Toolchain erstellen, die Git Repos and Issue Tracking verwendet ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [Microservice-Toolchain mit DevOps Insights (v2) erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+
+  * [Erstellen und verwenden Sie Ihre erste Toolchain mithilfe der Toolchain zum Entwickeln einer Cloud Foundry-App ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+
+  * [Verwenden Sie die Toolchain zum Entwickeln und Testen von Microservices auf Cloud Foundry ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.

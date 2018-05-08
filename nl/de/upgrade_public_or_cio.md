@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-5-19"
+  years: 2015, 2018
+lastupdated: "2018-3-20"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-5-19"
 # Upgrade für vertrauliche IBM Projekte auf Toolchains durchführen 
 {: #upgrade_public_or_cio}
 
-Aus {{site.data.keyword.jazzhub}} wird künftig IBM Bluemix {{site.data.keyword.contdelivery_short}}. Als Teil dieser Änderungen wird für Projekte ein Upgrade auf Toolchains durchgeführt.
+Aus {{site.data.keyword.jazzhub}} wird künftig {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.contdelivery_short}}. Als Teil dieser Änderungen wird für Projekte ein Upgrade auf Toolchains durchgeführt.
 
 Wenn Ihr Projekt bereit für das Upgrade ist, wird eine Nachricht auf seiner Übersichtsseite angezeigt. Dann können Sie für das Projekt das Upgrade auf eine Toolchain auf {{site.data.keyword.Bluemix_notm}} Public durchführen. Die Toolchain wird ein Whitewater {{site.data.keyword.ghe_short}}-Repository (repo) für Ihren Quellcode enthalten. Whitewater {{site.data.keyword.ghe_short}} wird IBM Teams bereitgestellt, um Social Coding innerhalb von IBM zu ermöglichen und zu fördern. 
 {: shortdesc}
@@ -31,8 +31,8 @@ Bei dem Versuch, das Ziel einer Pipeline-Entwicklungsstage ändern, kann sporadi
 
 Dieses Problem tritt normalerweise nur dann auf, wenn Sie das Ziel der Pipeline ändern, sodass die Pipeline, die während des Upgradeprozesses erstellt wird, ordnungsgemäß auf denselben Zielen wie zuvor bereitgestellt wird.
 
-Wenn Sie versuchen, das Ziel zu ändern, und im Zuge dieser Änderung dieses Problem auftritt, wechseln Sie einige Male zwischen den Zielen hin und her, bis die Felder **Organisation** und **Bereich** belegt sind.
+Wenn Sie versuchen, das Ziel zu ändern, und im Zuge dieser Änderung dieses Problem auftritt, wechseln Sie einige Male zwischen den Zielen hin und her, bis die Felder **Organisation** und **Bereich** ausgefüllt sind.
 
-Ein verwandtes Problem bewirkt gelegentlich, dass die Bereitstellung auf YS1-Zielen fehlschlägt. Dieser Fall ist selten, doch sollte falls er eintritt, führen Sie die Pipeline erneut aus.
+Ein verwandtes Problem bewirkt gelegentlich, dass die Bereitstellung auf YS1-Zielen fehlschlägt. Dieser Fall ist selten. Wenn er aber dennoch eintreten sollte, führen Sie die Pipeline erneut aus.
 
 Das IBM DevOps Services-Team arbeitet aktiv an der Behebung dieser Probleme.

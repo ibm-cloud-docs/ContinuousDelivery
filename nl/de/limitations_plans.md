@@ -1,26 +1,45 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-7-24"
----
-<!-- Copyright info at top of file: REQUIRED
-    The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be surrounded by 3 dashes.
-    The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
-    Indentation as per the previous template must be preserved.
--->
+  years: 2016, 2018
+lastupdated: "2018-4-18"
 
-{:new_window: target="_blank"}
+---
+
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
 
 # Einschränkungen beim Plan und bei der Nutzung
-{: #deliverypipeline_plans}
-{: #free_deprecation}
+{: #limitations_usage}
 
 Die Verwendung von {{site.data.keyword.contdelivery_full}} ist auf das Erstellen, Bereitstellen, Testen und auf den laufenden Betrieb von Anwendungen auf der {{site.data.keyword.Bluemix_notm}}-Plattform oder anderen kompatiblen Platform-as-a-Service- (PaaS) oder Infrastructure-as-a-Service-Angeboten (IaaS) beschränkt.
+
+## Berechtigte Benutzer
+{: #authorized_users}
+
+{{site.data.keyword.contdelivery_short}}-Servicepläne werden anhand der Anzahl der autorisierten Benutzer einer Serviceinstanz definiert und berechnet. Jeder Benutzer, der etwas zu einer Leistung beiträgt, zählt als berechtigter Benutzer, einschließlich:
+
+ * Benutzer, die mit Problemen, Issue-Boards, Quellcodes oder anderen Artefakten in einem {{site.data.keyword.gitrepos}}-Repository arbeiten.
+ * Benutzer, die Bearbeitungen oder Trigger (entweder direkt in der Benutzeroberfläche oder indirekt, indem sie einen Repository-Vorgang ausführen) durchführen oder den Status einer Delivery Pipeline anzeigen.
+ * Benutzer, die mit der Eclipse Orion-{{site.data.keyword.webide}} arbeiten.
+ 
+### Wie werden Benutzer gezählt?
+
+Berechtigte Benutzer werden gezählt, indem alle Benutzer in der Cloud-Organisation, die den {{site.data.keyword.contdelivery_short}}-Service enthält, berücksichtigt werden. 
+
+Um die Liste der Benutzer in Ihrer Organisation anzuzeigen, klicken Sie in der Menüleiste auf **Verwalten > Konto > Cloud Foundry-Organisationen**.
+
+Sie können auch alle Instanzen des {{site.data.keyword.contdelivery_short}}-Service in Ihrem Konto und die Anzahl der Benutzer anzeigen, die für jede Instanz gemeldet werden.
+
+1. Klicken Sie in der Menüleiste auf **Verwalten > Konto > Cloud Foundry-Organisationen**.
+2. Klicken Sie auf **Nutzungsdashboard**.
+
+### Was passiert, wenn Sie die Grenzwerte Ihres Serviceplans überschreiten? 
+
+Einige Servicepläne haben möglicherweise andere Einschränkungen, z. B. die Anzahl der auszuführenden Delivery Pipeline-Jobs oder die Speicherbelegung. Weitere Informationen finden Sie in der Planbeschreibung im Katalog. Wenn eine der Planbeschränkungen in einem Abrechnungszeitraum überschritten wird, kann der Service ausgesetzt werden. Beispiel: Aufträge für die Delivery Pipeline werden möglicherweise nicht für den Rest des Abrechnungszeitraums ausgeführt.
+
+## Delivery Pipeline-Verwendung
+{: #pipeline_usage}
 
 Das akzeptable Nutzungsverhalten umfasst die folgenden Verhaltensweisen, ist aber nicht auf diese beschränkt:
 
@@ -44,7 +63,6 @@ Nach dem Ermessen von IBM können Benutzer, die gegen das akzeptable Nutzungsver
  * Da {{site.data.keyword.deliverypipeline}} die kontinuierliche Integration und Continuous Delivery für {{site.data.keyword.Bluemix_notm}} bereitstellt, werden die Features für die kontinuierliche Integration in GitLab nicht unterstützt.
  * Die Administratorfunktionen von GitLab stehen nicht zur Verfügung, denn ihre Verwaltung erfolgt durch IBM.
  * {{site.data.keyword.gitrepos}} ist möglicherweise nicht uneingeschränkt für die behindertengerechte Bedienung geeignet.
-
 
 ## Benutzerinformationen zu Git Repos and Issue Tracking und Inhalt
 {: #git_projects}

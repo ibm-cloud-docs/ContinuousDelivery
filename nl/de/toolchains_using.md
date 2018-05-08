@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-7-17"
+  years: 2015, 2018
+lastupdated: "2018-2-26"
 
 ---
 
@@ -61,7 +61,7 @@ Wenn Sie eine Toolintegration aus Ihrer Toolchain löschen, kann diese Löschung
 
 Sie können Benutzern Zugriff auf eine Toolchain gewähren, indem Sie sie sowohl zu der Organisation (org) hinzufügen, der die Toolchain zugeordnet ist, als auch zu der Zugriffssteuerungsliste für die Toolchain. Jede Toolchain ist einer bestimmten Organisation zugeordnet und jeder Benutzer, der Mitglied dieser Organisation ist, kann für jede der zugeordneten Toolchains zu der Zugriffssteuerungsliste hinzugefügt werden. Die Organisation, in der Sie gegenwärtig arbeiten, wird auf der Menüleiste angezeigt. Wenn Sie auf andere Toolchains zugreifen wollen, wechseln Sie zu einer anderen Organisation.
 
-**Tipp:** Sie müssen Benutzer zur Organisation der Toolchain in der Region hinzufügen, in der die Toolchain gehostet wird. Da Toolchains derzeit nur in der Region 'Vereinigte Staaten (Süden)' gehostet werden, müssen Sie der Organisation die Benutzer in der Region 'Vereinigte Staaten (Süden)' hinzufügen. Wenn die Toolchain für die Bereitstellung von Apps in anderen Regionen konfiguriert ist, wird sie auch weiterhin Apps in diesen Regionen bereitstellen. 
+**Tipp:** Sie müssen Benutzer zur Organisation der Toolchain in der Region hinzufügen, in der die Toolchain gehostet wird. Da Toolchains derzeit nur in der Region 'Vereinigte Staaten (Süden)' gehostet werden, müssen Sie der Organisation die Benutzer in der Region 'Vereinigte Staaten (Süden)' hinzufügen. Wenn die Toolchain für die Bereitstellung von Apps in anderen Regionen konfiguriert ist, wird sie auch weiterhin Apps in diesen Regionen bereitstellen.
 
 Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated für {{site.data.keyword.ghe_short}} verwenden und Benutzer zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und deren Bereichen hinzufügen, so können sich die Benutzer mit ihrer {{site.data.keyword.Bluemix_notm}}-ID und dem zugehörigen Kennwort bei {{site.data.keyword.ghe_short}} anmelden. Wenn sich die Benutzer anmelden, werden Konten für sie erstellt. Wenn Sie Benutzer zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und deren Bereichen hinzufügen, werden sie nicht automatisch zum {{site.data.keyword.ghe_short}}-Repository hinzugefügt. Ein Benutzer mit Administratorberechtigungen für das Repository muss sie hinzufügen. Weitere Informationen finden Sie im Abschnitt zur Verwendung von [Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. Wenn Sie Ihre eigene verwaltete Version von {{site.data.keyword.ghe_short}} verwenden, gehen Sie gemäß Ihren eigenen internen Prozeduren vor.
 
@@ -79,23 +79,29 @@ Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated für {{site.data.keyword.g
 
 * Führen Sie die folgenden Schritte aus, um einem Benutzer, der nicht Mitglied der Organisation der Toolchain ist, Zugriff zu erteilen:
 
-   a. Klicken Sie in der Menüleiste auf **Verwalten > Konto > Organisationen**.
+   a. Klicken Sie in der Menüleiste auf **Verwalten>Sicherheit>Identität und Zugriff**. 
 
-   b. Klicken Sie auf **Teammitglieder einladen**.
+   b. Wählen Sie aus der Zeile für den Benutzer, dem Sie den Zugriff zuweisen möchten, das Menü **Aktionen** aus und klicken Sie auf **Zugriff zuweisen**.
 
-   c. Wählen Sie die Organisation aus, zu der Sie den Benutzer einladen wollen, und klicken Sie auf **Weiter**.
+   c. Wählen Sie **Zugriff mit Cloud Foundry zuweisen** aus.
 
-   d. Wählen Sie die Bereiche aus, auf die der Benutzer Zugriff erhalten soll.
+   d. Wählen Sie **Organisation zuweisen** aus.
 
-   e. Wählen Sie die Rolle aus, die Sie für die ausgewählten Bereiche in der Organisation zuweisen wollen.
+   e. Gehen Sie wie folgt vor, um den Benutzerzugriff zuzuweisen:
 
-     **Hinweis:** Standardmäßig verfügen Organisationsmanager über uneingeschränkte Administratorberechtigungen für alle Toolchains, die der Organisation zugeordnet sind. Um einem Benutzer die vollen Administratorberechtigungen zu erteilen, wählen Sie die Rolle **Manager** aus. Die Rollen 'Abrechnungsmanager' und 'Auditor' haben keinerlei Einfluss auf den Zugriff auf Toolchains. Sie können die Rollen später auf der Seite 'Teamverzeichnis' ändern. Weitere Information enthält [Teammitglieder und Rollen verwalten](/docs/admin/users_roles.html){: new_window}.
+     * Wählen Sie eine Organisation aus, zu der der Benutzer hinzugefügt werden soll.
 
-   f. Wählen Sie die Option zum Bestätigen aus, dass Sie die finanzielle Verantwortung für alle Gebühren übernehmen, die für das Konto anfallen.
+     * Weisen Sie eine Organisationsrolle zu.
 
-   g. Geben Sie die E-Mail-Adresse des Benutzers ein, den Sie einladen möchten, und klicken Sie auf **Senden**.
+     * Wählen Sie eine Region aus.
 
-   h. Nachdem der Benutzer nun zu einem Mitglied der Organisation geworden ist, kehren Sie zu der Verwaltungsseite der Toolchain zurück und fügen Sie den Benutzer zu der Toolchain hinzu.  
+     * Wählen Sie einen Bereich aus.
+
+     * Weisen Sie dem ausgewählten Bereich in der Organisation eine Rolle zu.
+
+     **Hinweis:** Standardmäßig verfügen Organisationsmanager über uneingeschränkte Administratorberechtigungen für alle Toolchains, die der Organisation zugeordnet sind. Um einem Benutzer die vollen Administratorberechtigungen zu erteilen, wählen Sie die Rolle **Manager** aus. Die Rollen 'Abrechnungsmanager' und 'Auditor' haben keinerlei Einfluss auf den Zugriff auf Toolchains. Sie können die Rollen später auf der Seite 'Teamverzeichnis' ändern. Weitere Informationen finden Sie in [Cloud Foundry-Rollen](/docs/iam/cfaccess.html#cfaccess){: new_window}.
+
+   Nachdem der Benutzer nun zu einem Mitglied der Organisation geworden ist, kehren Sie zu der Verwaltungsseite der Toolchain zurück und fügen Sie den Benutzer zu der Toolchain hinzu.  
 
 
 ## Toolchain löschen
@@ -113,6 +119,10 @@ Sie können eine Toolchain löschen und angeben, welche der zugehörigen Toolint
 ##Relevantes Lernprogramm: Toolchains verwenden
 {: #toolchain-tutorial}
 
-Informieren Sie sich in dem Lernprogramm zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage){:new_window}:
-  * [Create and use your first toolchain (GitHub) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Microservice-Toolchain mit {{site.data.keyword.DRA_short}} (Version 2) erstellen und verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+Informieren Sie sich in diesen Lernprogrammen zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage){:new_window}:
+
+  * [Erstellen und verwenden Sie Ihre erste Toolchain mithilfe der Toolchain zum Entwickeln einer Cloud Foundry-App ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+
+  * [Toolchain zu einer App hinzufügen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}
+
+  * [Verwenden Sie die Toolchain zum Entwickeln und Testen von Microservices auf Cloud Foundry ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.

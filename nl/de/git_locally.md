@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-7-12"
+  years: 2015, 2018
+lastupdated: "2018-3-21"
 
 ---
 
@@ -28,9 +28,9 @@ Sie können Ihren Quellcode in einem GitHub-, GitHub Enterprise- oder Git Repos 
 
 | Git-Typ  | HTTPS-Setup | HTTPS-Verwendung |  SSH-Setup |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Persönliches Zugriffstoken](/docs/ContinuousDelivery/git_working.html#create_pat) | Git Repos and Issue Tracking-Benutzername (nicht Ihre IBMid) und persönliches Zugriffstoken | [SSH-Schlüssel konfigurieren](/docs/ContinuousDelivery/git_working.html#create_ssh) |
+| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Persönliches Zugriffstoken](/docs/services/ContinuousDelivery/git_working.html#git_authentication) | Git Repos and Issue Tracking-Benutzername (nicht Ihre IBMid) und persönliches Zugriffstoken | [SSH-Schlüssel konfigurieren](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
 | Öffentlicher GitHub (github.com) | Kein persönliches Zugriffstoken erforderlich, aber Sie können eines einrichten und verwenden | GitHub-Benutzername und Kennwort oder GitHub-Benutzername und persönliches Zugriffstoken oder nur persönliches Zugriffstoken als Benutzername | [GitHub-SSH-Schlüssel konfigurieren](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-| GitHub Enterprise | [Persönliches Zugriffstoken](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | GitHub Enterprise-Benutzername (nicht Ihre IBMid) und persönliches Zugriffstoken| [GitHub Enterprise-SSH-Schlüssel konfigurieren](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
+| GitHub Enterprise | [Persönliches Zugriffstoken](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | GitHub Enterprise-Benutzername (nicht Ihre IBMid) und persönliches Zugriffstoken | [GitHub Enterprise-SSH-Schlüssel konfigurieren](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
 **Hinweis**: Wenn Sie lieber SSH verwenden möchten, können Sie einen einzigen Schlüssel für alle Git-Server verwenden. Erstellen oder suchen Sie Ihren Schlüssel und konfigurieren Sie ihn für jeden Server, wie dies in den vorherigen Links beschrieben ist. Wenn Sie Ihren Schlüssel mit einer Kennphrase erstellen, werden Sie zur Eingabe dieser Kennphrase aufgefordert, wenn Sie den Schlüssel verwenden.
 
@@ -52,7 +52,7 @@ Sie können eine lokale Kopie der Projektdateien erstellen, indem Sie das Git-Re
 
 2. Stellen Sie Ihre Repository-URL zusammen:
 
-   a. Klicken Sie in GitHub auf **Klonen oder herunterladen**. Wenn Sie HTTPS verwenden möchten, wählen Sie **HTTPS verwenden** aus. Wenn Sie SSH verwenden möchten, klicken Sie auf **SSH verwenden**. Klicken Sie auf das Symbol für die Zwischenablage, um die URL zu kopieren.
+   a. Klicken Sie in GitHub auf **Klonen oder herunterladen**. Wenn Sie HTTPS verwenden möchten, wählen Sie **HTTPS verwenden** aus.  Wenn Sie SSH verwenden möchten, klicken Sie auf **SSH verwenden**. Klicken Sie auf das Symbol für die Zwischenablage, um die URL zu kopieren.
 
    b. Wählen Sie in Git Repos and Issue Tracking entweder **HTTPS** oder **SSH** aus und kopieren Sie die URL in das Feld.
 
@@ -77,13 +77,13 @@ Wenn Sie Git Repos and Issue Tracking verwenden und es treten Probleme auf, find
 ## IBM Eclipse Tools für die Entwicklung verwenden
 {: #git_eclipse_tools}
 
-IBM Eclipse Tools for Bluemix bietet Plug-ins, die Sie in einer Eclipse-Umgebung installieren können, um Ihre IDE mit Bluemix zu integrieren.
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} bietet Plug-ins, die Sie in einer Eclipse-Umgebung installieren können, um Ihre IDE mit {{site.data.keyword.Bluemix_notm}} zu integrieren.
 
-Mit den Tools können Sie die folgenden Arten von Dateien und Servern direkt von Ihrer Eclipse IDE oder von IBM WebSphere&reg; Application Server Developer Tools (WDT) auf dem Bluemix-Server bereitstellen:
+Mit den Tools können Sie die folgenden Arten von Dateien und Servern direkt von Ihrer Eclipse IDE oder von IBM WebSphere&reg; Application Server Developer Tools (WDT) auf dem {{site.data.keyword.Bluemix_notm}} bereitstellen:
 
 * JavaScript-Dateien
 * WAR-Dateien (Webarchive)
 * EAR-Dateien (Unternehmensarchive)
 * Gepackte Liberty Profile-Server
 
-Sie können auch Services erstellen, sie mit Ihrer App verknüpfen und Umgebungsvariablen im Rahmen der Bereitstellung definieren. Weitere Informationen zu IBM Eclipse Tools finden Sie unter [Apps mit IBM Eclipse Tools for Bluemix bereitstellen](../../manageapps/eclipsetools/eclipsetools.html).
+Sie können auch Services erstellen, sie mit Ihrer App verknüpfen und Umgebungsvariablen im Rahmen der Bereitstellung definieren. Weitere Informationen zu IBM Eclipse Tools finden Sie unter [Apps mit IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../../manageapps/eclipsetools/eclipsetools.html) bereitstellen.

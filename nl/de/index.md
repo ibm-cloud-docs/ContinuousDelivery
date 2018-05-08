@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-5-19"
+  years: 2015, 2018
+lastupdated: "2018-1-15"
 
 ---
 
@@ -15,14 +15,11 @@ lastupdated: "2017-5-19"
 Nutzen Sie DevOps-Verfahren durch Verwendung von {{site.data.keyword.contdelivery_full}}, das offene Toolchains zur Automatisierung der Erstellung und Bereitstellung von Anwendungen enthält. Beginnen Sie mit der Erstellung einer einfachen Toolchain für die Bereitstellung, die Entwicklungs-, Bereitstellungs- und Operationstasks unterstützt.
 {: shortdesc}
 
-Nachdem Sie eine Instanz von {{site.data.keyword.contdelivery_short}} erstellt haben, indem Sie das Element im {{site.data.keyword.Bluemix_notm}}-Katalog ausgewählt haben, können Sie entscheiden, welches die ersten Schritte sind, die Sie mit dem Service ausführen wollen.
- ![Einführungsseite für Continuous Delivery](images/cd_landing_page.png)
+Nachdem Sie eine Instanz von {{site.data.keyword.contdelivery_short}} erstellt haben, indem Sie das Element im {{site.data.keyword.Bluemix_notm}}-Katalog ausgewählt haben, können Sie über eine Vorlage eine Continuous Delivery-Toolchain erstellen oder mit vorhandenen Toolchains arbeiten.
+ ![Einführungsseite für Continuous Delivery](images/cd_landing_page2.png)
 
-* Klicken Sie für einen schnellen Start durch Bereitstellung Ihrer Anwendung mithilfe einer automatisierten Pipeline im Abschnitt für den Start mit einer Pipeline auf **[Hier beginnen](#starting_with_a_pipeline)**. Sie können später weitere Tools hinzufügen.
-* Klicken Sie zum Erstellen und Konfigurieren einer Continuous Delivery-Toolchain anhand einer Vorlage im Abschnitt für den Start mit einer Toolchain-Vorlage auf **[Hier beginnen](#starting_from_a_toolchain_template)**. Die Toolchain integriert Tools für Planung, Entwicklung und Bereitstellung von Pipelines sowie für die Verwaltung Ihrer Anwendungen. Tools können jederzeit in eine Toolchain eingefügt oder daraus entfernt werden.
+* Um über eine Vorlage eine Continuous Delivery-Toolchain zu erstellen und zu konfigurieren, klicken Sie auf **[Hier starten](#starting_from_a_toolchain_template)**. Die Toolchain integriert Tools für Planung, Entwicklung und Bereitstellung von Pipelines sowie für die Verwaltung Ihrer Anwendungen. Tools können jederzeit in eine Toolchain eingefügt oder daraus entfernt werden.
 * Wenn Sie bereits über Toolchains verfügen, klicken Sie im Abschnitt 'Mit einer Toolchain-Vorlage beginnen' auf **Zeigen Sie Ihre Toolchains an**. Weitere Informationen zum Arbeiten mit Toolchains enthält [Toolchains verwenden](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
-
-**Tipp**: Pipelines werden von Toolchains verwaltet. Sie können eine Pipeline zu einer vorhandenen Toolchain hinzufügen. Wenn Sie eine Pipeline erstellen, nicht aber über bereits vorhandene Toolchains verfügen, so wird eine Toolchain mit einem Standardnamen für Sie erstellt. Mit der Toolchain können Sie die Funktionalität Ihrer Pipeline durch Integrieren mit anderen Tools und Services erweitern.
 
 ##Übersicht über {{site.data.keyword.contdelivery_short}}
 {: #cd_overview}
@@ -35,6 +32,8 @@ Der {{site.data.keyword.contdelivery_short}}-Service unterstützt Ihre DevOps-Wo
  * Sie können integrierte offene DevOps-[Toolchains](/docs/services/ContinuousDelivery/toolchains_about.html){: new_window} erstellen, um Toolintegrationen zu aktivieren, die Ihre Entwicklungs-, Bereitstellungs- und Betriebstasks unterstützen.
 
   Eine Toolchain ist eine integrierte Gruppe von Tools für das gemeinsame Entwickeln, Erstellen, Bereitstellen, Testen und Verwalten von Anwendungen. Diese Tools haben darüber hinaus die Aufgabe, die Wiederholbarkeit von Operationen sicherzustellen und die Verwaltung von Operationen zu vereinfachen. Toolchains können Open-Source-Tools, {{site.data.keyword.Bluemix_notm}}-Services wie [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window} und Tools von anderen Anbietern wie GitHub, PagerDuty und Slack enthalten. 
+  
+  **Hinweis**: {{site.data.keyword.DRA_short}} ist nur in der Region 'Vereinigte Staaten (Süden)' verfügbar.
 
  * Die Verwendung automatisierter [Pipelines](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window} ermöglicht die fortlaufende Bereitstellung.
 
@@ -48,46 +47,6 @@ Der {{site.data.keyword.contdelivery_short}}-Service unterstützt Ihre DevOps-Wo
 
   Verwalten Sie Git-Repositorys mittels differenzierter Zugriffssteuerungsmechanismen, durch die der Code geschützt bleibt. Überprüfen Sie den Code und verbessern Sie die Zusammenarbeit durch Zusammenführungsanforderungen (Merge). Verfolgen Sie Probleme und teilen Sie Ihre Ideen mittels Problemtracker mit anderen. Dokumentieren Sie Projekte auf dem Wiki-System.
 
-##Mit einer Pipeline beginnen
-{: #starting_with_a_pipeline}
-
-Mit Pipelines können beispielsweise Builds und Bereitstellungen automatisiert werden. Wählen Sie eine Vorlage aus und geben Sie die Position des GitHub-Repositorys an, um mit einer automatisierten Pipeline zu beginnen.
-
-Führen Sie zum [Erstellen einer Pipeline![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/devops/pipelines/dashboard/create){:new_window}, die für die Bereitstellung einer Cloud Foundry-Anwendung konfiguriert ist, die folgenden Schritte aus:
-
-1. Klicken Sie auf **Cloud Foundry**.
-1. Wenn Sie einen anderen Namen für die Pipeline verwenden möchten, ändern Sie den Standardnamen. Der Name der Pipeline macht sie in {{site.data.keyword.Bluemix_notm}} identifizierbar.
-1. Wenn Sie einen anderen Namen für die Anwendung verwenden möchten, ändern Sie den Standardnamen. Der Name der Anwendung macht sie in {{site.data.keyword.Bluemix_notm}} identifizierbar. Dieser Name ist der Name der Anwendung, in der die Bereitstellung durch die Pipeline erfolgt.
-1. Wenn Sie über keine Toolchain verfügen, wird eine Toolchain mit einem Standardnamen erstellt. Wenn Sie einen anderen Namen für die Toolchain verwenden möchten, ändern Sie den Namen entsprechend. Pipelines werden von Toolchains verwaltet. Durch die Integration anderer Tools und Services haben Sie mit der Toolchain die Möglichkeit, die Funktionalität Ihrer Pipeline zu erweitern.
-
- **Tipp**: Pipelines und Toolchains gehören zu Organisationen. Wenn Sie zu einer Organisation gehören, die über Toolchains verfügt, können Sie diese Toolchains verwenden, auch wenn Sie diese nicht erstellt haben.
-
-1. Wählen Sie entweder den Namen der gewünschten Toolchain aus oder geben Sie einen Namen für die neue Toolchain ein, die Sie erstellen möchten.
-1. Wählen Sie Ihren Git-Provider aus.
-
- **Tipp**: Falls {{site.data.keyword.Bluemix_notm}} nicht für den Zugriff auf Ihr GitHub-Konto autorisiert ist, klicken Sie auf **Autorisieren**, um zur GitHub-Website zu wechseln. Wenn keine aktive GitHub-Sitzung existiert, werden Sie aufgefordert, sich anzumelden. Klicken Sie auf **Anwendung autorisieren**, um {{site.data.keyword.Bluemix_notm}} den Zugriff auf Ihr GitHub-Konto zu erlauben.
-
- Wenn Sie nicht autorisiert sind, auf das {{site.data.keyword.ghe_short}}-Repository zuzugreifen, muss Sie jemand hinzufügen, der über Administratorberechtigungen für das Repository verfügt. Anweisungen zum Autorisieren bei {{site.data.keyword.Bluemix_notm}} Dedicated für {{site.data.keyword.ghe_short}} enthält [Einführung in {{site.data.keyword.Bluemix_notm}} Dedicated für {{site.data.keyword.ghe_short}}](/docs/services/ghededicated/index.html){: new_window}. Wenn Sie sich bei Ihrer eigenen verwalteten Version von {{site.data.keyword.ghe_short}} autorisieren müssen, gehen Sie gemäß Ihren eigenen internen Prozeduren vor.
-
-    * Falls Sie über ein Repository verfügen und dieses verwenden möchten, klicken Sie beim Repository-Typ auf **Verknüpfen**. Suchen Sie die Position des Repositorys oder wählen Sie das Repository aus der Liste der verfügbaren Repositorys aus.
-
-    * Wenn Sie ein leeres Repository erstellen möchten, klicken Sie beim Repository-Typ auf **Neu**. Geben Sie einen Namen für das Repository ein.
-
-    * Wenn Sie einen Klon eines Repositorys erstellen möchten, wählen Sie beim Repository-Typ **Kopieren** aus. Suchen Sie die Position des Repositorys oder wählen Sie das Repository aus der Liste der verfügbaren Repositorys aus.
-
-    * Wenn Sie ein Repository verzweigen möchten, sodass Sie Änderungen über Pull-Anforderungen beitragen können, klicken Sie auf **Verzweigen**. Suchen Sie die Position des Repositorys oder wählen Sie das Repository aus der Liste der verfügbaren Repositorys aus.
-
-1. Wählen Sie ein Repository aus oder geben Sie die URL für ein Repository ein.
-1. Klicken Sie auf **Erstellen**. Die Pipeline wird erstellt, konfiguriert und auf der Übersichtsseite der Toolchain angezeigt.
- ![Karte für Pipeline](images/cd_pipeline.png)
-
-Führen Sie zum Erstellen einer [leeren Pipeline ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} ohne jegliche vorkonfigurierten Stages die folgenden Schritte aus:
-
-1. Klicken Sie auf **Angepasst**.
-1. Wenn Sie einen anderen Namen für die Pipeline verwenden möchten, ändern Sie den Standardnamen. Der Name der Pipeline macht sie in {{site.data.keyword.Bluemix_notm}} identifizierbar.
-1. Wenn Sie über keine Toolchain verfügen, wird eine Toolchain mit einem Standardnamen erstellt. Wenn Sie einen anderen Namen für die Toolchain verwenden möchten, ändern Sie den Namen entsprechend. Pipelines werden von Toolchains verwaltet. Durch die Integration anderer Tools und Services haben Sie mit der Toolchain die Möglichkeit, die Funktionalität Ihrer Pipeline zu erweitern.
-1. Wählen Sie entweder den Namen der gewünschten Toolchain aus oder geben Sie einen Namen für die neue Toolchain ein, die Sie erstellen möchten.
-1. Klicken Sie auf **Erstellen**. Daraufhin wird eine leere Pipeline erstellt und auf der Übersichtsseite als Karte dargestellt.
 
 ##Mit einer Toolchain-Vorlage beginnen
 {: #starting_from_a_toolchain_template}
@@ -100,8 +59,13 @@ Gehen Sie zum Erstellen und Konfigurieren einer Continuous Delivery-Toolchain an
  **Tipp**: Für einige der Toolchain-Vorlagen sind mehrere Instanzen einer Toolintegration vorhanden. Die Vorlage für die Microservice-Toolchain unter {{site.data.keyword.Bluemix_notm}} Public enthält beispielsweise drei Instanzen von GitHub und drei Instanzen von Delivery Pipeline - jeweils eine Instanz für jeden der drei Microservices.
 
  Das Diagramm in der folgenden Abbildung ist ein Beispiel. Wenn Sie eine Toolchain erstellen, zeigt das Diagramm jede Toolintegration an, die Teil der Toolchain ist.
- ![Toolchain-Diagramm](images/toolchain_diagram.png)
-1. Überprüfen Sie die Standardinformationen für die Toolchain-Einstellungen. Der Name der Toolchain macht sie in {{site.data.keyword.Bluemix_notm}} identifizierbar. Wenn Sie einen anderen Namen verwenden möchten, ändern Sie den Namen der Toolchain.
+ ![Toolchain-Diagramm](images/toolchain_diagram2.png)
+1. Überprüfen Sie die Standardinformationen für die Toolchain-Einstellungen:
+
+ * Der Name der Toolchain macht sie in {{site.data.keyword.Bluemix_notm}} identifizierbar. Wenn Sie einen anderen Namen verwenden möchten, ändern Sie den Namen der Toolchain.
+ * Die Region, in der die Toolchain erstellt wird. Wenn Sie eine andere Region verwenden möchten, wählen Sie eine Region aus der Liste verfügbarer Regionen aus.
+ * Die Organisation, in der die Toolchain erstellt wird. Wenn Sie eine andere Organisation verwenden möchten, wählen Sie eine Organisation aus der Liste verfügbarer Organisationen aus.
+ 
 1. Wählen Sie im Abschnitt mit den Toolintegrationen jede Toolintegration aus, die Sie für Ihre Toolchain konfigurieren möchten. Einige Toolintegrationen erfordern keine Konfiguration. Informationen zum Konfigurieren der Toolintegrationen finden Sie unter [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Klicken Sie auf **Erstellen**. Zum Einrichten Ihrer Toolchain werden mehrere verschiedene Schritte automatisch ausgeführt. Die Toolintegrationen, die eingerichtet werden, unterscheiden sich voneinander, je nachdem, welche Toolchain-Vorlage Sie ausgewählt haben und ob Sie {{site.data.keyword.Bluemix_notm}} Public oder {{site.data.keyword.Bluemix_notm}} Dedicated verwenden. Wenn Sie eine Microservice-Toolchain unter {{site.data.keyword.Bluemix_notm}} Public erstellen, werden zum Beispiel die folgenden Schritte ausgeführt:
 
