@@ -1,26 +1,45 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-7-24"
----
-<!-- Copyright info at top of file: REQUIRED
-    The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be surrounded by 3 dashes.
-    The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
-    Indentation as per the previous template must be preserved.
--->
+  years: 2016, 2018
+lastupdated: "2018-4-18"
 
-{:new_window: target="_blank"}
+---
+
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
 
 # 计划限制和使用
-{: #deliverypipeline_plans}
-{: #free_deprecation}
+{: #limitations_usage}
 
 {{site.data.keyword.contdelivery_full}} 的使用限制为在 {{site.data.keyword.Bluemix_notm}} 平台或其他兼容平台即服务或基础架构即服务产品上，对应用程序进行构建、部署、测试和不间断的操作。
+
+## 授权用户
+{: #authorized_users}
+
+{{site.data.keyword.contdelivery_short}} 服务套餐基于服务实例的授权用户数来定义和定价。参与工作的任何人都必须计为一个授权用户，包括：
+
+ * 与 {{site.data.keyword.gitrepos}} 存储库中的问题、问题板、源代码或其他工件进行交互的用户。
+ * 操作、触发（在 UI 中直接触发或通过提交到存储库间接触发）交付管道或查看交付管道状态的用户。
+ * 与 Eclipse Orion {{site.data.keyword.webide}} 交互的用户。
+ 
+### 如何对用户计数？
+
+通过查看包含 {{site.data.keyword.contdelivery_short}} 服务的云组织中的所有用户来对授权用户计数。 
+
+要查看组织中的用户列表，请从菜单栏中，单击**管理 > 帐户 > Cloud Foundry 组织**。
+
+您还可以查看帐户中 {{site.data.keyword.contdelivery_short}} 服务的所有实例以及针对每个实例报告的用户数。
+
+1. 从菜单栏中，单击**管理 > 帐户 > Cloud Foundry 组织**。
+2. 单击**使用情况仪表板**。
+
+### 超出服务套餐的限制时会发生什么情况？ 
+
+某些服务套餐可能有其他限制，例如可以运行的 Delivery Pipeline 作业数或存储器消耗量。有关更多信息，请参阅目录中的套餐描述。如果在结算周期内超出任何套餐限制，那么该服务可能会暂挂。例如，Delivery Pipeline 作业可能不会在结算周期的剩余时间内运行。
+
+## Delivery Pipeline 使用情况
+{: #pipeline_usage}
 
 可接受的使用行为包括但不限于以下行为：
 
@@ -44,7 +63,6 @@ lastupdated: "2017-7-24"
  * 因为 {{site.data.keyword.deliverypipeline}} 为 {{site.data.keyword.Bluemix_notm}} 提供持续集成和持续交付，所以在 GitLab 中不支持持续集成功能。
  * GitLab 管理功能不可用，因为它们由 IBM 管理。
  * 可能无法完全访问 {{site.data.keyword.gitrepos}}。
-
 
 ## Git Repos and Issue Tracking 用户信息和内容
 {: #git_projects}

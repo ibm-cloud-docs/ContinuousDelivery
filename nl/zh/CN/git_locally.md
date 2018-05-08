@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-7-12"
+  years: 2015, 2018
+lastupdated: "2018-3-21"
 
 ---
 
@@ -28,7 +28,7 @@ lastupdated: "2017-7-12"
 
 | Git 类型| HTTPS 设置| HTTPS 使用|  SSH 设置|
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com)| [个人访问令牌](/docs/ContinuousDelivery/git_working.html#create_pat)| Git Repos and Issue Tracking 用户名（不是您的 IBM 标识）和个人访问令牌| [配置 SSH 密钥](/docs/ContinuousDelivery/git_working.html#create_ssh)|
+| Git Repos and Issue Tracking (git.ng.bluemix.com)| [个人访问令牌](/docs/services/ContinuousDelivery/git_working.html#git_authentication)| Git Repos and Issue Tracking 用户名（不是您的 IBM 标识）和个人访问令牌| [配置 SSH 密钥](/docs/services/ContinuousDelivery/git_working.html#git_authentication)|
 | 公共 GitHub (github.com)| 个人访问令牌不是必需的，但您可以设置并使用个人访问令牌| GitHub 用户名和密码，或 GitHub 用户名和个人访问令牌，或仅将个人访问令牌作为用户名| [配置 GitHub SSH 密钥](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)|
 | GitHub Enterprise| [个人访问令牌](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth)| GitHub Enterprise 用户名（不是您的 IBM 标识）和个人访问令牌| [配置 GitHub Enterprise SSH 密钥](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth)|
 
@@ -71,19 +71,19 @@ lastupdated: "2017-7-12"
 ## 使用 Eclipse 和 EGit 插件访问存储库
 {: #git_egit}
 
-如果使用的是 Eclipse，并且具有使用 Git 进行源代码控制的项目，那么可以使用 EGit 插件通过 Eclipse 来管理存储库。有关安装和配置 EGit 的指示信息，请参阅 [EGit 教程 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}。
+如果使用的是 Eclipse，并且具有使用 Git 进行源代码控制的项目，那么可以使用 EGit 插件通过 Eclipse 来管理存储库。有关安装和配置 EGit 的指示信息，请参阅 [EGit 教程 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
 如果使用的是 Git Repos and Issue Tracking，请参阅 [Git Repos and Issue Tracking](git_working.html#git_local)。
 
 ## 使用 IBM Eclipse Tools 进行开发
 {: #git_eclipse_tools}
 
-IBM Eclipse Tools for Bluemix 提供了可安装到 Eclipse 环境中的插件，用于将 IDE 与 Bluemix 集成。
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 提供了可安装到 Eclipse 环境中的插件，用于将 IDE 与 {{site.data.keyword.Bluemix_notm}} 集成。
 
-使用这些工具，可以直接从 Eclipse IDE 或 IBM WebSphere&reg; Application Server Developer Tools (WDT) 将以下类型的文件和服务器部署到 Bluemix 服务器：
+使用这些工具，可以直接从 Eclipse IDE 或 IBM WebSphere&reg; Application Server Developer Tools (WDT) 将以下类型的文件和服务器部署到 {{site.data.keyword.Bluemix_notm}}：
 
 * JavaScript 文件
 * WAR（Web 归档）文件
 * EAR（企业归档）文件
 * Liberty Profile 打包服务器
 
-还可以创建服务，将其链接到应用程序，以及在部署过程中定义环境变量。有关 IBM Eclipse Tools 的更多信息，请参阅[使用 IBM Eclipse Tools for Bluemix 部署应用程序](../../manageapps/eclipsetools/eclipsetools.html)。
+还可以创建服务，将其链接到应用程序，以及在部署过程中定义环境变量。有关 IBM Eclipse Tools 的更多信息，请参阅[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序](../../manageapps/eclipsetools/eclipsetools.html)。

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-6-9"
+  years: 2015, 2018
+lastupdated: "2018-3-20"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-6-9"
 # 使用 Eclipse Orion Web IDE 进行开发
 {: #web_ide}
 
-Eclipse Orion {{site.data.keyword.webide}} 是基于浏览器的开发环境，可在其中针对 Web 进行开发。您可以借助内容辅助、代码完成和错误检查功能，在 JavaScript、HTML 和 CSS 中进行开发。{{site.data.keyword.webide}} 使用几乎任何语言并为大部分文件类型提供语法突出显示。源代码控制功能内置其中，因此您可以在本地部署代码并调试应用程序。
+Eclipse Orion{{site.data.keyword.webide}} 是基于浏览器的开发环境，其中您可以借助内容辅助、代码完成和错误检查功能在 JavaScript、HTML 和 CSS 中针对 Web 进行开发。{{site.data.keyword.webide}} 使用几乎任何语言并为大部分文件类型提供语法突出显示。源代码控制功能内置其中，因此您可以在本地部署代码并调试应用程序。
 {:shortdesc}
 
 最重要的是，{{site.data.keyword.webide}} 由 Web 提供支持。您无需进行任何安装、维护和扩展。您可以在具有因特网连接的任何地方进行开发。
@@ -23,7 +23,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于浏览器的开发环境，�
 ## 设置 IDE
 {: #editorsetup}
 
-{{site.data.keyword.webide}} 可进行定制，因此您可以选择满足开发需要的颜色方案、技术工具和设置。要查看和修改设置，请从左侧菜单中，单击**设置**图标 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="“设置”图标">。
+{{site.data.keyword.webide}} 可进行定制，因此您可以选择满足开发需要的颜色方案、技术工具和设置。要查看和修改设置，请单击左侧导航侧边栏中的**设置**图标 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="“设置”图标">。
 
 如果在编辑时经常需要更改某些设置，可以从**本地编辑器设置**图标<img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="“本地编辑器设置”图标">快速访问这些设置。
 
@@ -69,10 +69,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于浏览器的开发环境，�
 ## 管理源代码
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} 与源代码管理工具相集成。要使用 Git 存储库，请单击 **Git 存储库**图标 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="“Git 存储库”图标">。
-
- **提示**：如果您使用 {{site.data.keyword.webide}} 与开放式工具链，那么您的工作空间会预先填入 GitHub、{{site.data.keyword.ghe_short}} 或 Git Repos and Issue Tracking 存储库。与您当前工具链相关联的存储库会突出显示。
-
+{{site.data.keyword.webide}} 与源代码管理工具相集成。要使用 Git 存储库，请单击 **Git 存储库**图标 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="“Git 存储库”图标">。有关更多信息，请参阅[在 Eclipse Orion Web IDE 中使用 Git](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide)。
 
 ## 从您的工作空间部署应用程序
 {: #deploy}
@@ -100,7 +97,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于浏览器的开发环境，�
 ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}.
+To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.Bluemix_short}}.
 
 ### Before you begin
 
@@ -212,6 +209,7 @@ Eclipse Orion {{site.data.keyword.webide}} 为 JavaScript、HTML、CSS 和 Markd
 {: #toolchain_tutorials}
 
 查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage){:new_window} 上的下列某个教程：
-  * [创建并使用第一个工具链 (GitHub) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [创建使用 Git Repos and Issue Tracking 的工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [创建并使用具有 DevOps Insights 的微服务工具链 (V2) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+
+  * [使用“开发 Cloud Foundry 应用程序”工具链来创建和使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。
+
+  * [使用“在 Cloud Foundry 上开发和测试微服务”工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。

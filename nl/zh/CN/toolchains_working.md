@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-8-18"
+lastupdated: "2018-3-21"
 
 
 ---
@@ -14,7 +14,7 @@ lastupdated: "2017-8-18"
 # 创建工具链
 {: #toolchains_getting_started}
 
-*工具链*是支持开发、部署和操作任务的一组工具集成。工具链将功能汇集起来，其能力要远大于单个工具集成的简单相加。
+*工具链*是支持开发、部署和操作任务的一组工具集成。工具链的整体能力大于其各个单独工具集成的总和。
 {: shortdesc}
 
 {{site.data.keyword.Bluemix}} 上的 Public 和 Dedicated 环境中可使用开放式工具链。您可以使用两种方法来创建工具链：使用模板创建工具链，或者通过应用程序创建工具链。
@@ -36,9 +36,14 @@ lastupdated: "2017-8-18"
 
  **提示**：有一些工具链模板具有工具集成的多个实例。例如，{{site.data.keyword.Bluemix_notm}} Public 上的微服务工具链模板包含三个 GitHub 实例和三个 Delivery Pipeline 实例，每个实例都对应于三个微服务中的一个。
 
- 以下图像中的图是示例。创建工具链时，该图显示属于工具链的每一个工具集成。![工具链图](images/toolchain_diagram.png)
+ 以下图像中的图是示例。创建工具链时，该图显示属于工具链的每一个工具集成。![工具链图](images/toolchain_diagram2.png)
 
-1. 复查工具链设置的缺省信息。工具链的名称在 {{site.data.keyword.Bluemix_notm}} 中起到标识符的作用。如果要使用其他名称，请更改工具链的名称。  
+1. 复查工具链设置的缺省信息：
+
+ * 工具链的名称在 {{site.data.keyword.Bluemix_notm}} 中起到标识符的作用。如果要使用其他名称，请更改工具链的名称。
+ * 要在其中创建工具链的区域。如果要使用其他区域，请从可用区域列表中选择该区域。
+ * 要在其中创建工具链的组织。如果要使用其他组织，请从可用组织列表中选择该组织。
+
 1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。
 1. 单击**创建**。此时将自动运行数个步骤，以设置工具链。设置的工具集成根据您所选的工具链模板以及您使用的是 {{site.data.keyword.Bluemix_notm}} Public 还是 {{site.data.keyword.Bluemix_notm}} Dedicated 而有所不同。例如，当您在 {{site.data.keyword.Bluemix_notm}} Public 上创建微服务工具链时，会运行以下步骤：
 
@@ -80,6 +85,9 @@ lastupdated: "2017-8-18"
 {: #toolchain_tutorials}
 
 查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage){:new_window} 上的下列某个教程：
-  * [创建并使用第一个工具链 (GitHub) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [创建使用 Git Repos and Issue Tracking 的工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [向应用程序添加工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain?task=1){:new_window}
+
+  * [使用“开发 Cloud Foundry 应用程序”工具链来创建和使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。
+
+  * [添加工具链至应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}。
+
+  * [使用“在 Cloud Foundry 上开发和测试微服务”工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。

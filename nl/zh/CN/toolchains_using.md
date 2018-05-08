@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-7-17"
+  years: 2015, 2018
+lastupdated: "2018-2-26"
 
 ---
 
@@ -79,23 +79,29 @@ lastupdated: "2017-7-17"
 
 * 要对非工具链组织成员的用户授权访问权，请遵循以下步骤：
 
-   a. 从菜单栏中单击**管理 > 帐户 > 组织**。
+   a. 从菜单栏中，单击**管理 > 安全 > 身份和访问权**。
 
-   b. 单击**邀请团队成员**。
+   b. 从要分配访问权的用户的行中，选择**操作**菜单，然后单击**分配访问权**。
 
-   c. 选择要邀请用户加入的组织，然后单击**下一步**。
+   c. 单击**使用 Cloud Foundry 分配访问权**。
 
-   d. 选择要允许用户访问的空间。
+   d. 选择**分配组织**。
 
-   e. 选择要为组织中所选空间分配的角色。
+   e. 分配用户访问权：
 
-     **注**：缺省情况下，组织管理员对与组织相关联的所有工具链具有完全的管理特权。要向用户授予完全的管理特权，请选择**管理员**角色。“记帐管理员”和“审计员”角色不会影响工具链访问权。您可以日后在“团队目录”页面上更改这些角色。有关更多信息，请参阅[管理团队成员和角色](/docs/admin/users_roles.html){: new_window}。
+     * 选择要将用户添加到的组织。
 
-   f. 选择相应选项以确认您负责支付该帐户发生的所有费用。
+     * 分配组织角色。
 
-   g. 输入您要邀请的用户的电子邮件地址，然后单击**发送**。
+     * 选择区域。
 
-   h. 在用户成为组织的成员后，返回到工具链的“管理”页面，并将用户添加到工具链。  
+     * 选择空间。
+
+     * 为组织中的所选空间分配角色。
+
+     **注**：缺省情况下，组织管理员对与组织相关联的所有工具链具有完全的管理特权。要向用户授予完全的管理特权，请选择**管理员**角色。“记帐管理员”和“审计员”角色不会影响工具链访问权。您可以日后在“团队目录”页面上更改这些角色。有关更多信息，请参阅 [Cloud Foundry 角色](/docs/iam/cfaccess.html#cfaccess){: new_window}。
+
+   在用户成为组织的成员后，返回到工具链的“管理”页面，并将用户添加到工具链。  
 
 
 ## 删除工具链
@@ -113,6 +119,10 @@ lastupdated: "2017-7-17"
 ##学习教程：使用工具链
 {: #toolchain-tutorial}
 
-查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage){:new_window} 上的本教程：
-  * [创建并使用第一个工具链 (GitHub) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [创建并使用具有 {{site.data.keyword.DRA_short}} 的微服务工具链 (V2) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+在 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage){:new_window} 上查阅以下教程：
+
+  * [使用“开发 Cloud Foundry 应用程序”工具链来创建和使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。
+
+  * [添加工具链至应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}。
+
+  * [使用“在 Cloud Foundry 上开发和测试微服务”工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。

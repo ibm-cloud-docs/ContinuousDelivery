@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-8-18"
+  years: 2017, 2018
+lastupdated: "2018-2-26"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,12 +22,14 @@ lastupdated: "2017-8-18"
 使用 {{site.data.keyword.deliverypipeline}} 的组合管道功能，您可以管理相关软件应用程序的可重复持续集成和持续交付流程。
 {:shortdesc}
 
+**注**：此功能仅在美国南部区域可用。
+
 您创建组合管道来管理工具链中的应用程序。如果工具链包含 {{site.data.keyword.deliverypipeline}} 部署的应用程序，那么在工具链中添加或除去 Delivery Pipeline 时，可以设置要更新的组合管道。您还可以将应用程序从外部源添加到组合管道。
 
 ## 创建组合管道
 {: #compositepipeline_create_for_toolchain}
 
-1. 从 {{site.data.keyword.Bluemix_notm}} 菜单栏上的菜单中，单击 **DevOps**。
+1. 从 {{site.data.keyword.Bluemix_notm}} 菜单栏上的菜单中，单击**服务**，然后单击 **DevOps**。
 
 2. 从左侧导航中，单击**管道**。
 
@@ -35,7 +37,7 @@ lastupdated: "2017-8-18"
 
 4. 单击**创建管道** > **组合管道**。
 
-5. 键入组合管道的名称。您还可以修改管道描述。
+5. 输入组合管道的名称。您还可以修改管道描述。
 
 6. 从**工具链**列表中，选择工具链。
 
@@ -76,10 +78,10 @@ lastupdated: "2017-8-18"
 
 有关修改部署计划的更多信息，请参阅[定制组合管道的部署计划](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html)。
 
-## 修改个别管道
+## 修改单个管道
 {: #compositepipeline_add_job}
 
-您可以从组合管道修改个别管道。
+您可以修改组合管道中的单个管道。
 
 1. 展开应用程序。
 
@@ -134,10 +136,10 @@ lastupdated: "2017-8-18"
 
 要查看某个作业的日志，请展开包含该作业的应用程序，然后单击该作业。
 
-## 使用 IBM Bluemix DevOps Connect 与 IBM UrbanCode Deploy 集成
+## 使用 {{site.data.keyword.Bluemix_notm}} DevOps Connect 与 IBM UrbanCode Deploy 集成
 {: #compositepipeline_devops_connect}
 
-IBM Bluemix DevOps Connect 协调内部部署 IBM&reg; UrbanCode&reg; Deploy 安装与 {{site.data.keyword.contdelivery_short}} 之间的通信。在您安装 DevOps Connect 后，可以创建集成，您可以使用这些集成来管理具有组合管道的 IBM UrbanCode Deploy 应用程序。
+{{site.data.keyword.Bluemix_notm}} DevOps Connect 协调内部部署 IBM&reg; UrbanCode&reg; Deploy 安装与 {{site.data.keyword.contdelivery_short}} 之间的通信。在您安装 DevOps Connect 后，可以创建集成，您可以使用这些集成来管理具有组合管道的 IBM UrbanCode Deploy 应用程序。
 
 **先决条件**
 
@@ -174,15 +176,15 @@ IBM Bluemix DevOps Connect 协调内部部署 IBM&reg; UrbanCode&reg; Deploy 安
 
     1. 在“集成”页面上，单击**添加新的**。
 
-    1. 在**名称**字段中，键入集成的名称。
+    1. 在**名称**字段中，输入集成的名称。
 
     1. 从**集成类型**列表中，选择 **IBM UrbanCode Deploy for DevOps Connect**。
 
-    1. 在**服务器 URI** 字段中，键入 IBM UrbanCode Deploy 服务器的公共 URL；例如，`https://my_UCD.example.com:8443`。
+    1. 在**服务器 URI** 字段中，输入 IBM UrbanCode Deploy 服务器的公共 URL；例如，`https://my_UCD.example.com:8443`。
 
-    1. 在**认证令牌**字段中，键入或粘贴 IBM UrbanCode Deploy 生成的认证令牌。
+    1. 在**认证令牌**字段中，输入或粘贴 IBM UrbanCode Deploy 生成的认证令牌。
 
-    1. 在**管理用户电子邮件**字段中，键入您的电子邮件地址。
+    1. 在**管理用户电子邮件**字段中，输入您的电子邮件地址。
 
     1. 要确认已成功集成，请单击**运行集成**。DevOps Connect 将连接至**服务器 URI** 字段中指定的 IBM UrbanCode Deploy 实例。DevOps Connect 由**认证令牌**字段中粘贴的令牌授权。
 
@@ -194,7 +196,7 @@ IBM Bluemix DevOps Connect 协调内部部署 IBM&reg; UrbanCode&reg; Deploy 安
 ## 从 IBM UrbanCode Deploy 添加应用程序
 {: #compositepipeline_add_apps}
 
-如果您是某组织的成员，而该组织使用 DevOps Connect 与 IBM UrbanCode Deploy 集成，那么您可以将 UrbanCode Deploy 中您有权访问的应用程序添加到组合管道中。有关安装指示信息，请参阅[使用 IBM Bluemix DevOps Connect 与 IBM UrbanCode Deploy 集成](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)。
+如果您是某组织的成员，而该组织使用 DevOps Connect 与 IBM UrbanCode Deploy 集成，那么您可以将 UrbanCode Deploy 中您有权访问的应用程序添加到组合管道中。有关安装指示信息，请参阅[使用 {{site.data.keyword.Bluemix_notm}} DevOps Connect 与 IBM UrbanCode Deploy 集成](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)。
 
 当您是连接到 IBM UrbanCode Deploy 的组织的成员时，您可以将 UrbanCode Deploy 应用程序添加到组合管道，选择要包含在部署计划中的应用程序流程，并定制应用程序的部署。
 
@@ -224,4 +226,7 @@ IBM Bluemix DevOps Connect 协调内部部署 IBM&reg; UrbanCode&reg; Deploy 安
 {: #composite_pipeline-tutorial}
 
 查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage){:new_window} 上的本教程：
-  * [创建并使用具有 DevOps Insights 的微服务工具链 (V2) ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+
+  * [使用“在 Cloud Foundry 上开发和测试微服务”工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。
+
+  **注**：{{site.data.keyword.DRA_short}} 仅在美国南部区域可用。

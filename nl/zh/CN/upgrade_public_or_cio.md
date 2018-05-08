@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-5-19"
+  years: 2015, 2018
+lastupdated: "2018-3-20"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-5-19"
 # 将 IBM 保密信息项目升级到工具链 
 {: #upgrade_public_or_cio}
 
-{{site.data.keyword.jazzhub}} 逐步发展到 IBM Bluemix {{site.data.keyword.contdelivery_short}}。作为该变化的一部分，项目将升级到工具链。
+{{site.data.keyword.jazzhub}} 逐步发展到 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.contdelivery_short}}。作为该变化的一部分，项目将升级到工具链。
 
 当项目已就绪可以进行升级时，在项目的“概述”页面上会显示消息。然后，您可以在 {{site.data.keyword.Bluemix_notm}} Public 上，将项目升级到工具链。工具链将针对您的源代码，包含 Whitewater {{site.data.keyword.ghe_short}} 存储库。Whitewater {{site.data.keyword.ghe_short}} 提供给 IBM 团队，用于在 IBM 内提升和启用社交代码。
 {: shortdesc}

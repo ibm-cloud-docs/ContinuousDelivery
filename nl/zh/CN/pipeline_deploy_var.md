@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2017-7-10"
+  years: 2016, 2018
+lastupdated: "2018-1-23"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -15,6 +15,7 @@ lastupdated: "2017-7-10"
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
+{:tip:.tip}
 
 # 环境属性和资源
 {: #deliverypipeline_environment}
@@ -30,6 +31,8 @@ lastupdated: "2017-7-10"
 * **安全**：具有单行值的属性关键字。该值显示为星号。
 * **属性**：项目存储库中的文件。此文件可以包含多个属性。每一个属性必须位于自己的行上。要分隔键值对，请使用等号 (=)。
 
+您可以通过在作业脚本中运行 `env` 命令来检查管道作业的环境属性。
+{:tip}
 
 缺省情况下，可以在管道环境中使用下列属性和资源。
 
@@ -97,7 +100,7 @@ lastupdated: "2017-7-10"
 | CF_ORGANIZATION_ID| 对于部署，它是要部署到的组织的标识。|
 | CF_SPACE| 对于部署，它是要部署到的空间的名称。|
 | CF_SPACE_ID| 对于部署，它是要部署到的空间的标识。|
-| CF_TARGET_URL| 对于部署，它是 IBM Bluemix&reg; 或 Cloud Foundry 的 URL。|
+| CF_TARGET_URL| 对于部署，它是 {{site.data.keyword.Bluemix_short}} 或 Cloud Foundry 的 URL。|
 | IDS_VERSION| 对于部署，它是要部署的应用程序的版本，或者是源标识。|
 
 ## 预安装的资源

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-6-1"
+  years: 2017, 2018
+lastupdated: "2018-3-23"
 ---
 
 {:new_window: target="_blank"}
@@ -22,6 +22,8 @@ lastupdated: "2017-6-1"
 {: #create_branch}
 
 ### Eclipse Orion Web IDE
+{: #create_branch_web}
+
 1. 单击**引用**列表。
 
 1. 单击**新建分支**。
@@ -29,12 +31,14 @@ lastupdated: "2017-6-1"
 2. 输入分支名称，然后单击**提交**。
 
 ### Git 终端
+{: #create_branch_cmd}
 1. 输入 `git branch <branchname>`，然后按 Enter 键。
 
 ## 使用本地分支
 {: #start_working_on_branch}
 
 ### Eclipse Orion Web IDE
+{: #start_working_on_branch_web}
 1. 单击**引用**列表，并展开**本地**。
 
 2. 针对要修改的分支，单击检出图标 <img  class="inline" src="./images/checkout.png" alt="检出图标">。
@@ -42,6 +46,7 @@ lastupdated: "2017-6-1"
 1. 确保所选分支显示在**引用**列表中。
 
 ### Git 终端
+{: #start_working_on_branch_cmd}
 1. 要查看本地分支，请输入 `git branch -l`，然后按 Enter 键。
 
 2. 输入 `git checkout <branchname>`，然后按 Enter 键。
@@ -51,17 +56,22 @@ lastupdated: "2017-6-1"
 {: #update_branch}
 
 ### Eclipse Orion Web IDE
+{: #update_branch_web}
+
 1. 单击**同步**。
 
 1. 如果遇到冲突，请[解决冲突](#resolve_a_rebase_conflict)。
 
 ### Git 终端
+{: #update_branch_cmd}
+
 1. 输入 `git pull`，然后按 Enter 键。
 
 ## 删除本地分支
 {: #delete_branch}
 
 ### Eclipse Orion Web IDE
+{: #delete_branch_web}
 1. 确保要删除的分支未检出。如果该分支已检出，请[检出其他分支](#start_working_on_branch)。
 
 1. 单击**引用**列表，并展开**本地**。
@@ -69,6 +79,8 @@ lastupdated: "2017-6-1"
 2. 针对要除去的本地分支，单击**删除** <img class="inline"  src="./images/delete.png" alt="删除图标">。
 
 ### Git 终端
+{: #delete_branch_cmd}
+
 1. 输入 `git branch -d <branchname>`，然后按 Enter 键。
 
 ##强制将本地更改推送到远程分支
@@ -79,12 +91,14 @@ lastupdated: "2017-6-1"
 **重要信息**：强制将本地分支推送到远程分支时，可能会丢失远程分支上的提交。
 
 ### Eclipse Orion Web IDE
+{: #force_push_web}
 
 1. 在“工作目录更改”部分的“出局”部分中，单击**推送**的箭头。
 2. 单击**强制推送分支**。
 3. 确认警告。
 
 ### Git 终端
+{: #force_push_cmd}
 
 1. 输入 `git push<origin> <remote branch> -f`，然后按 Enter 键。
 
@@ -92,16 +106,22 @@ lastupdated: "2017-6-1"
 {: #discard_changes}
 
 ### Eclipse Orion Web IDE
+{: #discard_changes_web}
+
 1. 在“工作目录更改”部分中，针对包含您要废弃的更改的每个已修改文件，选中对应的复选框。
 2. 单击“检出”图标 <img class="inline"  src="./images/discard.png" alt="检出所选文件并废弃所有更改">。
 
 ### Git 终端
+{: #discard_changes_cmd}
+
 1. 输入 `git checkout -- path/to/file/filename` 以废弃对文件的更改。
 
 ## 提交文件并推送到远程分支
 {: #commit}
 
 ### Eclipse Orion Web IDE
+{: #commit_web}
+
 1. 在“工作目录更改”部分中，针对要提交的每个文件，选中对应的复选框。
 
 3. 在**输入提交消息**字段中，输入描述更改的消息。
@@ -114,6 +134,8 @@ lastupdated: "2017-6-1"
 5. 单击**推送**。
 
 ### Git 终端
+{: #commit_cmd}
+
 1. 输入 `git status`，然后按 Enter 键。
 
 2. 复查要提交的更改。如果列出了所有文件以待提交，请继续。要提交未编译打包的文件，请先对这些文件执行编译打包。
@@ -134,6 +156,8 @@ lastupdated: "2017-6-1"
 {: #view_commit_history}
 
 ### Eclipse Orion Web IDE
+{: #view_commit_history_web}
+
 1. 在“活动分支”部分中，展开**历史记录**以查看该分支的提交历史记录。
 
   提交历史记录还可以作为可视的连通图查看。
@@ -145,6 +169,8 @@ lastupdated: "2017-6-1"
   <img class="screen-shot" src="./images/visualhistoryexample.png" alt="可视提交历史记录">
 
 ### Git 终端
+{: #view_commit_history_cmd}
+
 1. 输入 `git log`，然后按 Enter 键。
 
 2. 浏览提交者的提交。
@@ -157,6 +183,8 @@ lastupdated: "2017-6-1"
 {: #compare_changes}
 
 ### Eclipse Orion Web IDE
+{: #compare_changes_web}
+
 1. 查看提交历史记录，并找到提交。有关更多信息，请参阅[查看提交历史记录](#view_commit_history)。
 
 2. 通过单击提交来查看该提交的详细信息。
@@ -166,9 +194,11 @@ lastupdated: "2017-6-1"
   **注**：如果提交引入了对行的更改，那么原始行将为渐变粉，新行将为渐变绿。与此类似，通过提交所添加的行将为渐变绿，通过提交所除去的行将为渐变粉。
 
 ### Git 终端
+{: #compare_changes_cmd}
+
 1. 输入 `git log -p`，然后按 Enter 键。
 
-  **注**：要仅查看特定数量的提交，请输入 `git log -p -<number_of_commits_to_view>`。
+  **注**：要仅查看特定数量的提交，请输入 `git log -p -<number_of_commits_to_view>`.
 
 2. 浏览提交。
  * 要查看更多条目，请按 Page Down 键。
@@ -183,9 +213,10 @@ lastupdated: "2017-6-1"
 ## 修改上次的提交
 {: #modify_last_commit}
 
-  **注**：对已推送到远程存储库的上次提交进行修改时，将重写提交历史记录。这可能会导致提交失败以及对您项目中的其他贡献者造成其他问题。在修改已推送到远程存储库的提交之前，请务必明白自己要执行的操作会带来什么后果。
+  **注**：对已推送到远程存储库的上次提交进行修改时，将重写提交历史记录。此更改可能会对您项目中的其他参与者造成提交失败以及其他问题。在修改已推送到远程存储库的提交之前，请务必明白自己要执行的操作会带来什么后果。
 
 ### Eclipse Orion Web IDE
+{: #modify_last_commit_web}
 1. 针对要添加到提交的项，选中对应的复选框。
 
 1. 选中**修订先前的提交**复选框。
@@ -195,6 +226,8 @@ lastupdated: "2017-6-1"
 3. 单击**提交**。
 
 ### Git 终端
+{: #modify_last_commit_cmd}
+
 1. 检查您的状态。根据需要，对文件执行编译打包或取消编译打包操作。
 
 2. 输入 `git commit --amend`，然后按 Enter 键。
@@ -207,6 +240,8 @@ lastupdated: "2017-6-1"
 {: #tag_commit}
 
 ### Eclipse Orion Web IDE
+{: #tag_commit_web}
+
 1. 查看提交历史记录，并找到提交。有关更多信息，请参阅[查看提交历史记录](#view_commit_history)。
 
 2. 通过单击提交来查看该提交的详细信息。
@@ -216,6 +251,8 @@ lastupdated: "2017-6-1"
 3. 在“名称”字段中，输入标记的文本。单击**提交**。
 
 ### Git 终端
+{: #tag_commit_cmd}
+
 1. 查看提交历史记录，并获取要标记的提交的标识。有关更多信息，请参阅[查看提交历史记录](#view_commit_history)。
 
 2. 输入 `git tag -a <tag_text> <commit_id>`，然后按 Enter 键。
@@ -224,11 +261,14 @@ lastupdated: "2017-6-1"
 {: #change_the_committer_name_and_email_address}
 
 ### Eclipse Orion Web IDE
+{: #change_info_web}
 1. 单击“配置”图标 <img class="inline" src="./images/configurations.png" alt="“配置”图标">。
 
 3. 通过更新 user.email 和 user.name 值来更改用户电子邮件地址和姓名。单击**提交**以保存每个更改。
 
 ### Git 终端
+{: #change_info_cmd}
+
 要针对单个存储库更新您的姓名和电子邮件地址，请执行以下操作：
 
 1. 输入 `git config user.email "<your@email.com>"`，然后按 Enter 键。
@@ -247,12 +287,14 @@ lastupdated: "2017-6-1"
 还原由提交引入活动分支的更改。
 
 ### Eclipse Orion Web IDE
+{: #revert_web}
 
 1. 在“历史记录”下，选择提交。
 
 2. 单击还原图标 <img class="inline" src="./images/revert.png" alt="还原图标">。
 
 ### Git 终端
+{: #revert_cmd}
 
 1. 输入 `git revert <commit ID>`，然后按 Enter 键。
 
@@ -262,6 +304,8 @@ lastupdated: "2017-6-1"
 需要将源分支中的更改传递到目标分支时，必须首先进行合并。通常，源分支是在其中进行更改的分支，目标分支是主分支。
 
 ### Eclipse Orion Web IDE
+{: #merge_changes_web}
+
 1. 确定要合并的分支。
 
 2. 检出目标分支。有关更多信息，请参阅[使用本地分支](#start_working_on_branch)。
@@ -279,6 +323,8 @@ lastupdated: "2017-6-1"
 1. 如果要传递更改，请单击**推送**。否则，此时可以创建测试部署，以确保一切按预期运行。
 
 ### Git 终端
+{: #merge_changes_cmd}
+
 1. 确定要合并的分支。
 
 2. 检出目标分支。有关更多信息，请参阅[使用本地分支](#start_working_on_branch)。
@@ -290,6 +336,8 @@ lastupdated: "2017-6-1"
 {: #resolve_a_merge_conflict}
 
 ### Eclipse Orion Web IDE
+{: #resolve_a_merge_conflict_web}
+
 1. 在“更改的文件”窗格中，查看包含冲突的文件的列表。
 
 2. 在 Web IDE 中，打开包含冲突的每个文件。
@@ -306,6 +354,8 @@ lastupdated: "2017-6-1"
 4. 对于每个冲突文件，选中对应的复选框。输入合并提交消息，然后单击**提交**。
 
 ### Git 终端
+{: #resolve_a_merge_conflict_cmd}
+
 1. 对于包含冲突的文件，查看 Git 消息以获取相应的名称。
 
 2. 在文本编辑器中，打开包含冲突的文件。
@@ -325,6 +375,8 @@ lastupdated: "2017-6-1"
 {: #rebase_branches}
 
 ### Eclipse Orion Web IDE
+{: #rebase_branches_web}
+
 1. 确定要重定基底的分支。您要将源分支的内容重定为目标分支的基底。
 
 2. 检出目标分支。有关更多信息，请参阅[使用本地分支](#start_working_on_branch)。
@@ -344,6 +396,8 @@ lastupdated: "2017-6-1"
 1. 单击**推送**。
 
 ### Git 终端
+{: #rebase_branches_cmd}
+
 1. 通过输入 `git checkout <destination_branchname>` 并按 Enter 键，检出要更新的分支。
 
 2. 输入 `git rebase <source_branchname>`，然后按 Enter 键。
@@ -358,6 +412,8 @@ lastupdated: "2017-6-1"
 {: #resolve_a_rebase_conflict}
 
 ### Eclipse Orion Web IDE
+{: #resolve_a_rebase_conflict_web}
+
 1. 在“工作目录更改”部分中，查看冲突文件的列表。
 
 2. 在 Web IDE 中，打开包含冲突的每个文件。
@@ -374,6 +430,8 @@ lastupdated: "2017-6-1"
 4. 在“重定基底”窗格中，针对每个已更正的文件，选中对应的复选框，然后单击**继续**。
 
 ### Git 终端
+{: #resolve_a_rebase_conflict_cmd}
+
 1. 对于包含冲突的文件，查看 Git 消息以获取相应的名称。
 
 2. 在文本编辑器中，打开包含冲突的文件。

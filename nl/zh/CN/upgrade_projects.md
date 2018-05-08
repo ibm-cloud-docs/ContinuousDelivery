@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-7-24"
+  years: 2015, 2018
+lastupdated: "2018-3-21"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2017-7-24"
 - [升级到工具链时，项目中的构建定义将发生什么？](#faq_build)
 - [我需要为将升级到工具链的我的项目创建组织。我了解我需要先向我的帐户添加信用卡，然后才能创建组织。要对我的信用卡进行收费吗？](#faq_charges)
 - [我找不到或无法访问我的工具链。我该怎么做？](#faq_find)
-- [我的项目与英国区域相关联。升级后，我看到错误消息，我的同事无法访问工具链，在 Bluemix 的“工具链”页面上看不到我的工具链。出了什么问题？](#faq_uk)
+- [我的项目与英国区域相关联。升级后，我看到错误消息，我的同事无法访问工具链，并且我在 {{site.data.keyword.Bluemix_notm}} Platform 的“工具链”页面上看不到我的工具链。出了什么问题？](#faq_uk)
 
 ## 工具链
 {: #compare_toolchains}
@@ -100,9 +100,9 @@ lastupdated: "2017-7-24"
 
    - 要更改要在其中创建工具链的 {{site.data.keyword.Bluemix_notm}} 组织，请从帐户菜单中选择组织：
 
-      ![Bluemix 组织选择器](images/bluemix-organization-chooser.png)
+      ![{{site.data.keyword.Bluemix_notm}} 组织选择器](images/bluemix-organization-chooser.png)
 
-   因为工具链在组织级别管理，所以请确保选择需要访问工具链的项目成员已经存在或者可以添加的组织。
+   因为工具链在组织级别管理，所以请确保选择需要访问工具链的项目成员存在其中或者可以添加到其中的组织。
 
 3. 如果在项目中使用了 Track & Plan，那么可以将 Track & Plan 数据传输到 GitHub Issues。
 
@@ -158,7 +158,7 @@ lastupdated: "2017-7-24"
     - 每个团队成员都必须具有有效的 {{site.data.keyword.Bluemix_notm}} 帐户。没有帐户的团队成员必须进行[注册 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/registration){:new_window}。
     - 在工具链的“管理”页面中，授予组织成员对工具链的访问权。在升级过程中，会将现有项目成员添加为工具链的成员。有关工具链访问控制的更多信息，请参阅[管理访问权 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}。
     - 如果用户不是工具链所属的组织的成员，请通过“管理组织”页面将其添加到该组织。
-    - 如果工具链使用 {{site.data.keyword.gitrepos}}，那么具有有效 Bluemix 标识且具有与 JazzHub 项目中相同特权的所有 JazzHub 项目成员都将添加到 {{site.data.keyword.gitrepos}} 存储库。如果 JazzHub 项目包含的成员没有有效的 Bluemix 标识，那么这些成员应该注册 Bluemix 标识后，再添加到存储库。有关管理组织的更多信息，请参阅[管理组织和空间 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}。
+    - 如果工具链使用 {{site.data.keyword.gitrepos}}，那么具有有效 {{site.data.keyword.Bluemix_notm}} 标识的所有 JazzHub 项目成员将使用他们在 JazzHub 项目中拥有的相同特权添加到 {{site.data.keyword.gitrepos}} 存储库。如果 JazzHub 项目包含没有有效 {{site.data.keyword.Bluemix_notm}} 标识的成员，那么这些成员应该注册一个标识后，再添加到存储库。有关管理组织的更多信息，请参阅[管理组织和空间 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}。
 
 3. 从工具链使用工具而非从 {{site.data.keyword.jazzhub_short}} 项目使用工具。例如，要从浏览器编辑代码，请从工具链使用 Web IDE。
 
@@ -207,11 +207,11 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
 
 在升级过程中，您可以选择将 Track &amp; Plan 工作项迁移至 Git Issues。GitHub Issues 和 {{site.data.keyword.gitrepos}} 都提供看板和问题跟踪功能，以进行规划。要了解 Git Repos and Issue Tracking 中看板功能“问题板”的更多信息，请参阅[问题板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window}。
 
-对于需要与已弃用 JazzHub Track &amp; Plan 相同功能的客户来说，可以按月按用户在所选国家或地区个别购买新 IBM Track and Plan on Cloud 服务。使用此云服务，您将在单个租户云预订中，获得等同于 Rational Team Concert&trade; 内容添加者许可证的完整功能。
+对于需要与已弃用 JazzHub Track &amp; Plan 相同功能的客户来说，可以按月按用户在所选国家或地区单独购买新的 IBM Track and Plan on Cloud 服务。使用此云服务，您将在单个租户云预订中获得等同于 Rational Team Concert&trade; 参与者许可证的完整功能。
 
 此新 IBM Track and Plan on Cloud 服务提供比已弃用 JazzHub Track &amp; Plan 更丰富的功能，支持流程定制、项目层次结构、SAFe&reg; 和许多其他灵活的混合方法，以及可成长超过单个项目的可扩展性。它以最新版本的 Rational Team Concert 6.0.3 为基础，将在未来 60 天内升级为 V6.0.4，而 JazzHub Track &amp; Plan 以 Rational Team Concert 5.x 为基础。通过其他服务，IBM Track and Plan on Cloud 可进行数据迁移。您可以联系相关产品 SaaS 销售主管 [Tom Hollowell ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](mailto:trhollow@us.ibm.com){:new_window}，以获取更多信息。
 
-有关 IBM Track and Plan on Cloud 或在线购买的相关信息，请访问 [IBM Marketplace ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}。
+有关 IBM Track and Plan on Cloud 的信息，或要在线购买，请转至 [IBM Marketplace ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}。
 
 要额外购买 Build Automation 和 Source Code Management，可以选择 [Rational Team Concert on Cloud ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window}。
 
@@ -234,30 +234,31 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
 
 如果您使用 Jazz 而非 Delivery Pipeline 构建源代码，那么您必须手动将构建定义迁移到工具链的 Delivery Pipeline 中。
 
-如果您使用 Jazz SCM 作为源存储库并使用 Delivery Pipeline 构建代码，那么 Jazz SCM 中的源代码将会自动移至 Git 存储库。Delivery Pipeline 配置仍保持不变，只是它将从 Git 存储库使用源代码而非从 Jazz SCM 使用源代码。
+如果您使用 Jazz SCM 作为源存储库并使用 Delivery Pipeline 构建代码，那么 Jazz SCM 中的源代码将会自动移至 Git 存储库。Delivery Pipeline 配置仍保持不变，只是它将使用 Git 存储库中的源代码而非 Jazz SCM 中的源代码。
 
 ### 我需要为将升级到工具链的项目创建组织。我了解我需要先向我的帐户添加信用卡，然后才能创建组织。要对我的信用卡收费吗？
 {: #faq_charges}
 
-作为[现买现付客户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}，如果您使用任何运行时、服务或组件超过 Bluemix 目录中为其列出的免费限额，那么您需要付费。有关使用情况估算的信息，请参阅[价格表 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}。有关 Continuous Delivery 的当前定价，请参阅 [Bluemix 目录 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}。
+作为[现买现付客户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}，如果您使用任何运行时、服务或组件超过 {{site.data.keyword.Bluemix_notm}} 目录中为其列出的免费限额，那么您需要付费。有关使用情况估算的信息，请参阅[价格表 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}。有关 Continuous Delivery 的当前定价，请参阅 [{{site.data.keyword.Bluemix_notm}}“目录”![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}。
+
 
 如果您是 IBM 员工，内部 IBM 项目可以计入部门费用而非个人信用卡。如果您需要使用的资源超出 IBM 员工的免费限额，请创建支持凭单。
 
 ### 我找不到或无法访问我的工具链。我该怎么做？
 {: #faq_find}
 
-工具链在 Bluemix 组织中进行托管。升级过程会将 JazzHub 项目的所有成员添加到工具链。但是，除非 Bluemix 组织的所有者将这些用户添加到组织，否则这些用户将无法看到工具链。
+工具链在 {{site.data.keyword.Bluemix_notm}} 组织中托管。升级过程会将 JazzHub 项目的所有成员添加到工具链。但是，除非 {{site.data.keyword.Bluemix_notm}} 组织的所有者将这些用户添加到组织，否则这些用户将无法看到工具链。
 
-要访问工具链，请转至 Bluemix，单击“菜单”图标，然后单击**服务 &gt; DevOps**。这将打开“工具链”页面。确保您位于美国南部区域，并且您所属的组织中包含该工具链。如果工具链未在“工具链”页面上列出，请参阅[此常见问题解答条目](#faq_uk)。
+要访问工具链，请转至 {{site.data.keyword.Bluemix_notm}} Platform，单击“菜单”图标，然后单击**服务 &gt; DevOps**。这将打开“工具链”页面。确保您位于美国南部区域，并且您所属的组织中包含该工具链。如果工具链未在“工具链”页面上列出，请参阅[此常见问题解答条目](#faq_uk)。
 
 或者，在 JazzHub 站点仍可用期间，可以通过单击项目的“概述”页面上条幅中的链接转至工具链。
 
-### 我的项目与英国区域相关联。升级后，我看到错误消息，我的同事无法访问工具链，在 Bluemix 的“工具链”页面上看不到我的工具链。出了什么问题？
+### 我的项目与英国区域相关联。升级后，我看到错误消息，我的同事无法访问工具链，并且我在 {{site.data.keyword.Bluemix_notm}} 的“工具链”页面上看不到我的工具链。出了什么问题？
 {: #faq_uk}
 
 **完整问题：**
 
-我的 JazzHub 项目根据项目设置与 {{site.data.keyword.Bluemix_notm}} 英国区域相关联。我验证了项目设置，方法是转至 JazzHub 上的项目概述页面，单击**设置**图标（形似齿轮），然后单击**选项 &gt; 使此项成为 Bluemix 项目：区域**。但我将项目升级到位于美国的工具链后，发生了以下问题：
+我的 JazzHub 项目根据项目设置与 {{site.data.keyword.Bluemix_notm}} 英国区域相关联。我验证了我的项目设置，方法是转至其在 JazzHub 上的项目概述页面，单击**设置**图标（形似齿轮），然后单击**选项 &gt; 使此项成为 {{site.data.keyword.Bluemix_notm}} 项目：区域**。但我将项目升级到位于美国的工具链后，发生了以下问题：
 
    1. 我选择美国组织时，看到一条消息称，该组织在美国南部地区没有空间，并且系统提示我创建空间。我不想在美国运行任何内容。
    
@@ -273,11 +274,11 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
    
    * 从工具链的“概述”页面中，单击**管理**。在“访问控制”页面上，单击**组织管理员**链接。包含工具链的组织将列在主页面上。
 
-发生的情况是，在升级时，您的非美国组织在美国不存在，因此升级通过查找您刚好有权访问的另一个组织而为您选择了该组织。
+发生的情况是，在升级时，您的非美国组织在美国不存在，因此升级通过查找您刚好有权访问的另一个组织来为您选择了该组织。
 
 如果切换到美国的该 {{site.data.keyword.Bluemix_notm}} 组织，就可以找到工具链。如果您将同事添加到该组织，即授予他们相应的访问权。此工具链可以继续部署到您的非美国组织。唯一的问题是这两个组织是不同的；您无法自动执行对这两个组织的用户管理。
 
-如果希望工具链位于与非美国组织相匹配的美国组织中，请执行以下步骤：
+如果希望工具链位于与您的非美国组织相匹配的美国组织中，请执行以下步骤：
 
    1. 登录到 [https://console.bluemix.net ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net){: new_window}，然后选择您所属的非美国区域和组织。
    
@@ -287,11 +288,10 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
    
    4. 删除通过升级过程创建的工具链。 
    
-      **注：**不会自动删除 Git 存储库。目前，您可能希望手动将其删除或将其重命名。如果已经对其进行了更改，那么可以日后切换未来的工具链以使用该存储库。
+      **注：**不会自动删除 Git 存储库。目前，您可能希望手动将其删除或将其重命名。如果已经更改了存储库，那么日后可以切换未来的工具链以使用该存储库。
 
    5. 返回到 JazzHub 项目。此项目应该已自行重置以再次尝试升级。如果未重置，请联系 hub@jazz.net 并提供此项目的 URL。
    
    6. 重新启动升级过程，并确保在美国选择正确的组织，让该组织名称与非美国区域中的组织名称相匹配。
    
-   7. 如果保留或重命名先前工具链升级尝试的 Git 存储库（请参阅步骤 4），那么可以改为将工具链中的 Git 卡重新配置为指向此 Git 存储库 URL。更改会自动反映在管道中。要进行确认，请检查“构建”阶段上的“输入”选项卡。
-
+   7. 如果保留或重命名先前工具链升级尝试的 Git 存储库（请参阅步骤 4），那么可以改为将工具链中的 Git 卡重新配置为指向此 Git 存储库 URL。更改会自动反映在管道中。要进行确认，请检查构建阶段上的“输入”选项卡。
