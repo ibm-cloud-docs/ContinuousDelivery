@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-5-11"
+  years: 2015, 2018
+lastupdated: "2018-3-26"
 
 ---
 
@@ -45,7 +45,7 @@ lastupdated: "2017-5-11"
 
 ### 정적 코드 스캔 작성
 
-시작하기 전에 [서비스 이용 약관 검토![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}를 수행하십시오. 
+시작하기 전에 [서비스 이용 약관 검토![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window}를 수행하십시오.
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -57,7 +57,7 @@ lastupdated: "2017-5-11"
 
   c. 입력 유형으로 **빌드 아티팩트**를 선택하십시오.
 
-  d. 단계 및 작업에 대해 값을 확인하고 필요한 경우 업데이트하십시오. 
+  d. 단계 및 작업에 대해 값을 확인하고 필요한 경우 업데이트하십시오.
 
 2. 처리 단계에서 코드 스캔을 실행하는 빌드 작업을 추가하십시오.
 
@@ -83,7 +83,7 @@ lastupdated: "2017-5-11"
 
     * 이 선택란을 선택한 상태에서 작업이 실패하면 해당 단계의 나중 작업과 나중 단계가 실행되지 않습니다.
 
-    * 이 선택란을 선택 취소한 상태에서 작업이 실패하면 나중 작업 및 단계를 차단하지 않고 단계가 계속됩니다. 예를 들어, 보고서에 처리할 다수의 문제가 있음을 알고 있는 경우, 스캔에 오랜 시간이 소요될 수 있기 때문에 단계가 계속되도록 구성할 수 있습니다. 이러한 시나리오에서 스캔에 너무 오랜 시간이 소요된다는 이유만으로 나머지 작업 및 단계를 중지하고 싶지 않을 수도 있습니다. 
+    * 이 선택란을 선택 취소한 상태에서 작업이 실패하면 나중 작업 및 단계를 차단하지 않고 단계가 계속됩니다. 예를 들어, 보고서에 처리할 다수의 문제가 있음을 알고 있는 경우, 스캔에 오랜 시간이 소요될 수 있기 때문에 단계가 계속되도록 구성할 수 있습니다. 이러한 시나리오에서 스캔에 너무 오랜 시간이 소요된다는 이유만으로 나머지 작업 및 단계를 중지하고 싶지 않을 수도 있습니다.
 
   h. **저장**을 클릭하십시오.
 
@@ -92,13 +92,13 @@ lastupdated: "2017-5-11"
 4. 분석이 완료되기 전에 처리 단계를 다시 실행해야 하는 경우 이를 수행할 수 있습니다. 그러나 다음과 같은 상황에서는 새 분석이 다시 제출되지 않고 이전 결과가 사용됩니다.
   * 새 분석을 시작할 때 처리 단계가 계속 실행 중입니다.
   * 해당 빌드에 대한 스캔이 이미 제출되었습니다.
-  * 새 소스 빌드가 아직 실행되지 않았습니다. 
+  * 새 소스 빌드가 아직 실행되지 않았습니다.
 
-5. 새 분석을 시작하려면 다음 단계 중 하나를 완료하십시오. 
-  * 처리 단계에 입력을 제공하는 빌드 단계를 실행한 후 처리 단계를 다시 실행하십시오. 
-  * 스캔 결과의 URL을 열고 **휴지통** 아이콘을 클릭하십시오. 그런 다음 처리 단계를 다시 실행하십시오. 
+5. 새 분석을 시작하려면 다음 단계 중 하나를 완료하십시오.
+  * 처리 단계에 입력을 제공하는 빌드 단계를 실행한 후 처리 단계를 다시 실행하십시오.
+  * 스캔 결과의 URL을 열고 **휴지통** 아이콘을 클릭하십시오. 그런 다음 처리 단계를 다시 실행하십시오.
 
-콘솔 출력 예: 
+콘솔 출력 예:
 
 **성공적 스캔**
 ![성공적 스캔 예](images/analyzer_success.png)
@@ -106,7 +106,7 @@ lastupdated: "2017-5-11"
 **보류 중 스캔**
 ![보류 중 스캔 예](images/analyzer_pending.png)
 
-{{site.data.keyword.staticanalyzershort}} 서비스의 사용에 대한 자세한 정보는 [{{site.data.keyword.staticanalyzershort}}Static Analyzer 서비스 문서](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}를 참조하십시오. 
+{{site.data.keyword.staticanalyzershort}} 서비스의 사용에 대한 자세한 정보는 [{{site.data.keyword.staticanalyzershort}}Static Analyzer 서비스 문서](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}를 참조하십시오.
 
 <!--
 
@@ -152,13 +152,15 @@ To create the globalization stage and job:
 
   f. Determine whether to select the **Set up service and space for me** check box.
 
-    * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
+    * If you want the pipeline to check your {{site.data.keyword.Bluemix_notm}} space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
+    * If you configured the service and bound app in your {{site.data.keyword.Bluemix_notm}} space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
+
     **Tip:** Use the DevOps Services project name in the prefix so that the project can be identified easily in the Globalization Pipeline service.
+
 
   h. Click **SAVE**.
 
@@ -170,113 +172,114 @@ The machine translated files are placed in the same directory as the source `.pr
 
 After the stage is completed, you can review the translated files from the console output. You can also direct translators to the files so that they can review the machine-translation output and provide revisions to improve quality. The revisions are stored in a Cloudant™ database and take precedence over any future machine translations of the same strings.
 
-For more information about using the Globalization Pipeline service from the Bluemix Dashboard, [see the Globalization Pipeline service documentation](https://www.ng.bluemix.net/docs/services/GlobalizationPipeline/index.html).
+For more information about using the Globalization Pipeline service from the {{site.data.keyword.Bluemix_notm}} Dashboard, [see the Globalization Pipeline service documentation](https://www.ng.bluemix.net/docs/services/GlobalizationPipeline/index.html).
 
 -->
+<!--
 
-## 파이프라인에서 빌드에 대한 Slack 알림 작성
+## Creating Slack notifications for builds in the pipeline
 {: #deliverypipeline_slack}
 
-Delivery Pipeline에서 Slack 채널로 {{site.data.keyword.containerlong}}, {{site.data.keyword.staticanalyzershort}} 및 {{site.data.keyword.globalizationfull}} 빌드 결과에 대한 알림을 전송할 수 있습니다.
+You can send notifications about {{site.data.keyword.containerlong}}, {{site.data.keyword.staticanalyzershort}}, and {{site.data.keyword.globalizationfull}} build results from your Delivery Pipeline to your Slack channels.
 
-시작하기 전에 Slack 웹훅 URL을 작성하거나 복사하십시오.
+Before you begin, create or copy a Slack WebHook URL:
 
-1. 팀의 Slack 통합 페이지를 여십시오(`https://_project_name_.slack.com/services`).
-2. 통합 목록에서 **수신 웹훅**을 찾아 **추가**를 클릭하십시오.
-3. 채널을 선택하고 **수신 웹훅 통합 추가**를 클릭하십시오.
-4. **웹훅 URL**을 추가하거나 기존 URL을 복사하십시오.
+1. Open the Slack Integration page for your team: `https://_project_name_.slack.com/services`
+2. In the list of integrations, locate **Incoming WebHooks** and click **Add**.
+3. Select a channel and click **Add Incoming WebHooks Integration**.
+4. Add a **WebHook URL** or copy an existing one.
 
-자세한 정보는 [Slack의 수신 웹훅 문서![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://api.slack.com/incoming-webhooks){: new_window}를 참조하십시오. 
+For more information, see [Incoming WebHooks in the Slack documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){: new_window}.
 
-Slack 알림을 작성하려면 다음을 수행하십시오.
+To create Slack notifications:
 
-1. 파이프라인에서 단계의 구성을 여십시오.
-2. **환경 특성** 탭에서 **특성 추가**를 클릭하십시오.
-3. **텍스트 특성**을 선택하십시오.
-4. 환경 특성의 이름과 값을 입력하십시오. 여러 환경 특성을 작성하려면 단계를 반복하십시오.
+1. In the pipeline, open the configuration for a stage.
+2. In the **ENVIRONMENT PROPERTIES** tab, click **ADD PROPERTY**.
+3. Select **Text property**.
+4. Enter the name and a value for the environment property. Repeat to create multiple environment properties.
 
-  _표 1. Slack 알림 구성을 위한 환경 특성_
+  _Table 1. Environment properties for configuring Slack notifications_
 
   <table>
   <tr>
-  <th>이름</th>
-  <th>값</th>
-  <th>설명</th>
+  <th>Name</th>
+  <th>Value</th>
+  <th>Description</th>
   <tr/>
   <tr>
     <td><code>SLACK_WEBHOOK_PATH</code></td>
-    <td>URL</td>
-    <td>필수. Slack 프로젝트의 설정에 저장되는 웹훅 URL입니다.</td>
+    <td>A URL</td>
+    <td>Required. The WebHook URL that is saved in the settings for your Slack Project.</td>
   </tr>
   <tr>
     <td><code>SLACK_COLOR</code></td>
-    <td>다음 값 중 하나를 입력할 수 있습니다.
+    <td>You can enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>warning</code></li>
       <li><code>danger</code></li>
-      <li>16진 색상(예: #439FEO)</li></ul></td>
-    <td>선택사항. Slack에서 메시지의 측면을 따라 표시되는 경계의 색상입니다. 기본 색상은 좋은 메시지의 경우 초록색이고 나쁜 메시지의 경우 빨간색이며 정보 메시지의 경우 회색입니다. </td>
+      <li>Any hexadecimal color, such as #439FEO</li></ul></td>
+    <td>Optional. The color of the border that is displayed along the side of the message in Slack. The default colors are green for good messages, red for bad messages, and gray for informational messages.</td>
   </tr>
   <tr>
     <td><code>NOTIFY_FILTER</code></td>
-    <td>메시지 유형 서브세트만 수신하려면 다음 값 중 하나를 입력하십시오.
+    <td>To receive only a subset of the message types, enter one of the following values:
       <ul>
-      <li><code>good</code>: 알 수 없는 메시지, 좋은 메시지 및 정보 메시지만 가져옵니다. 나쁜 메시지는 전송되지 않습니다.</li>
-      <li><code>bad</code>: 모든 메시지를 가져옵니다.</li>
-      <li><code>info</code>: 정보 메시지만 가져옵니다. 좋은 메시지, 나쁜 메시지 및 알 수 없는 메시지는 전송되지 않습니다.</li>
-      <li><code>unknown</code>: 모든 메시지를 가져옵니다. </li></ul>
-      예: <code>NOTIFY_FILTER = bad</code>를 설정하면 Slack 채널에서 오류 알림만 표시됩니다. </td>
-    <td>선택사항. 알림을 전송할 메시지 유형을 결정하십시오. 기본적으로 좋은 메시지와 나쁜 메시지가 전송되고 정보 메시지는 전송되지 않습니다.
-      <ul><li><code>good</code>: 성공적 빌드 결과입니다. </li>
-      <li><code>bad</code>: 비성공적 빌드 결과입니다.</li>
-      <li><code>info</code>: 빌드 프로세스에 대한 정보 메시지입니다. </li>
-      <li><code>unknown</code>: 알 수 없는 메시지에는 유형이 지정되지 않습니다.</li></ul></td>
+      <li><code>good</code>: Get unknown, good and info messages only. Bad messages are not sent.</li>
+      <li><code>bad</code>: Get all messages.</li>
+      <li><code>info</code>: Get info messages only. Good, bad, and unknown messages are not sent.</li>
+      <li><code>unknown</code>: Get all messages.</li></ul>
+      Example: If you set <code>NOTIFY_FILTER = bad</code>, error notifications are only displayed in the Slack Channel.</td>
+    <td>Optional. Decide which type of messages to send notifications for. By default, good and bad messages are sent, but not informational messages.
+      <ul><li><code>good</code>: Successful build results.</li>
+      <li><code>bad</code>: Unsuccessful build results.</li>
+      <li><code>info</code>: Informational messages about the build process.</li>
+      <li><code>unknown</code>: Unknown messages are not assigned a type.</li></ul></td>
    </table>
 
-5. **저장**을 클릭하십시오.
+5. Click **Save**.
 
-6. IBM Container Service, IBM Security Analyzer 및 IBM Globalization 작업을 포함하는 다른 단계에 대한 Slack 알림을 전송하려면 이 단계를 반복하십시오. 
+6. Repeat these steps to send Slack notifications for other stages that include IBM Container Service, IBM Security Analyzer, and IBM Globalization jobs.
 
-Slack에서 표시되는 빌드 알림에는 프로젝트에 대한 링크와 함께 종종 프로젝트의 대시보드에 대한 링크가 포함됩니다. Slack 사용자가 이러한 링크를 열 수 있으려면 해당 사용자가 Bluemix에 등록되어 있어야 하며 파이프라인이 구성된 프로젝트의 구성원이어야 합니다. 
+The build notification that is displayed in Slack includes a link to the project and sometimes to the project's dashboard. For a Slack user to open these links, the user must be registered with {{site.data.keyword.Bluemix_notm}} and be a member of the organization that the pipeline is configured in.
 
-## 파이프라인에서 빌드에 대한 HipChat 알림 작성
+## Creating HipChat notifications for builds in the pipeline
 {: #deliverypipeline_hipchat}
 
-Delivery Pipeline에서 HipChat 룸으로 IBM Container Service, IBM Security Static Analyzer 및 IBM Globalization 빌드 결과에 대한 알림을 전송할 수 있습니다.
+You can send notifications about IBM Container Service, IBM Security Static Analyzer, and IBM Globalization build results from your Delivery Pipeline to your HipChat rooms.
 
-시작하기 전에 HipChat 토큰을 작성하거나 기존 HipChat 토큰을 복사하십시오.
+Before you begin, create or copy and existing HipChat token:
 
-1. 팀의 HipChat 계정 페이지로 이동하십시오(`https://_project_name_.hipchat.com/account/api`).
-2. 새 토큰을 작성하거나 기존 토큰을 사용하십시오. 
+1. Go to your HipChat Account page for your team: `https://_project_name_.hipchat.com/account/api`
+2. Create a new token, or use an existing one.
 
-HipChat 알림을 작성하려면 다음을 수행하십시오. 
+To create HipChat notifications:
 
-1. 파이프라인에서 단계의 구성을 여십시오.
-2. **환경 특성** 탭에서 **특성 추가**를 클릭하십시오.
-3. **텍스트 특성**을 선택하십시오.
-4. 환경 특성의 이름과 값을 입력하십시오. 여러 환경 특성을 작성하려면 단계를 반복하십시오.
+1. In the pipeline, open the configuration for a stage.
+2. In the **ENVIRONMENT PROPERTIES** tab, click **ADD PROPERTY**.
+3. Select **Text Property**.
+4. Enter the name and a value for the environment property. Repeat to create multiple environment properties.
 
-  _표 2. HipChat 알림 구성을 위한 환경 특성_
+  _Table 2. Environment Properties for configuring HipChat notifications_
 
   <table>
   <tr>
-  <th>이름</th>
-  <th>값</th>
-  <th>설명</th>
+  <th>Name</th>
+  <th>Value</th>
+  <th>Description</th>
   </tr>
   <tr>
     <td><code>HIP_CHAT_TOKEN</code></td>
-    <td>영숫자 문자열</td>
-    <td>필수. HipChat 토큰 작성 또는 기존의 HipChat 토큰 복사에 대한 지시사항은 "시작하기 전에"를 참조하십시오.</td>
+    <td>Alphanumeric String</td>
+    <td>Required. See "Before you begin" for instructions on creating or copying an existing HipChat token.</td>
   </tr>
   <tr>
     <td><code>HIP_CHAT_ROOM_NAME</code></td>
-    <td>룸 이름</td>
-    <td>필수. </td>
+    <td>Room name</td>
+    <td>Required.</td>
   </tr>
   <tr>
     <td><code>HIP_CHAT_COLOR</code></td>
-    <td>다음 값 중 하나를 입력하십시오.
+    <td>Enter one of the following values:
       <ul><li><code>yellow</code></li>
       <li><code>red</code></li>
       <li><code>green</code></li>
@@ -284,50 +287,43 @@ HipChat 알림을 작성하려면 다음을 수행하십시오.
       <li><code>gray</code></li>
       <li><code>random</code></li></ul>
     </td>
-    <td>선택사항: HipChat 알림의 배경색 및 경계색을 지정하십시오. <code>HIP_CHAT_COLOR</code>를 설정하는 경우, 스크립트를 호출할 때 색상을 지정하지 않아도 됩니다.
+    <td>Optional: Specify the background color and the border color of HipChat notifications. If you set <code>HIP_CHAT_COLOR</code>, you do not need to specify the color when you call the script.
      <p><code>-l notification_level</code></p> </td>
   </tr>
   <tr>
     <td><code>NOTIFICATION_COLOR</code></td>
-    <td>다음 값 중 하나를 입력하십시오.
+    <td>Enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>danger</code></li>
       <li><code>info</code></li></ul>
-    이 변수는 HipChat 및 Clack 알림 색상 모두에 적용됩니다. <code>NOTIFICATION_COLOR</code>를 지정하는 경우 <code>HIP_CHAT_COLOR</code> 또는 <code>SLACK_COLOR</code>를 지정하지 않아도 됩니다. </td>
-    <td>선택사항: HipChat 및 Slack 알림 둘 다의 배경색 및 경계색을 지정하십시오. <code>NOTIFICATION_COLOR</code>를 설정하는 경우, 스크립트를 호출할 때 색상을 지정하지 않아도 됩니다.
+    This variable applies to both HipChat and Clack notification colors. If you specify <code>NOTIFICATION_COLOR</code>, you do not need to specify <code>HIP_CHAT_COLOR</code> or <code>SLACK_COLOR</code>.</td>
+    <td>Optional: Specify the background color and the border color of both HipChat and Slack notifications. If you set <code>NOTIFICATION_COLOR</code>, you do not need to specify the color when you call the script.
      <p><code>-l notification_level</code></p> </td>
   </tr>
   <tr>
     <td><code>NOTIFICATION_LEVEL</code></td>
-    <td>다음 값 중 하나를 입력하십시오.
+    <td>Enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>info</code></li>
       <li><code>bad</code></li></ul></td>
-    <td>선택사항: 알림 레벨을 지정하십시오. 알림을 트리거하는 것에 대한 세부사항은 <code>NOTIFICATION_FILTER</code>를 참조하십시오. </td>
+    <td>Optional: Specify the notification level. See <code>NOTIFICATION_FILTER</code> for more detail on what triggers the notification.</td>
   </tr>
   <tr>
     <td><code>NOTIFICATION_FILTER</code></td>
-    <td>다음 값 중 하나를 입력하십시오.
+    <td>Enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>info</code></li>
       <li><code>bad</code></li></ul>
-    <td>선택사항: 알림 필터 레벨을 지정하십시오. 다음 매개변수가 충족될 때 알림이 전송됩니다.
-      <ul><li><code>NOTIFICATION_FILTER = good</code>이고 <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code> 또는 <code>unknown</code>입니다.</li>
-      <li><code>NOTIFICATION_FILTER = info</code>이고 <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, <code>info</code> 또는 <code>unknown</code>입니다.</li>
-      <li><code>NOTIFICATION_FILTER = bad</code>이고 <code>NOTIFICATION_LEVEL = bad</code> 또는 <code>unknown</code>입니다.</li>
-      <li><code>NOTIFICATION_FILTER = unknown</code>이고 <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code> 또는 <code>unknown</code>입니다.</li></ul></td>
+    <td>Optional: Specify the notification filter level. Notifications are sent when the following parameters are met:
+      <ul><li><code>NOTIFICATION_FILTER = good</code> and <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, or <code>unknown</code></li>
+      <li><code>NOTIFICATION_FILTER = info</code> and <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, <code>info</code>, or <code>unknown</code></li>
+      <li><code>NOTIFICATION_FILTER = bad</code> and <code>NOTIFICATION_LEVEL = bad</code> or <code>unknown</code></li>
+      <li><code>NOTIFICATION_FILTER = unknown</code> and <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, or <code>unknown</code></li></ul></td>
     </tr>
   </table>
 
-5. **저장**을 클릭하십시오.
+5. Click **Save**.
 
-6. IBM Container Service, IBM Security Analyzer 및 IBM Globalization 작업을 포함하는 다른 단계에 대한 HipChat 알림을 전송하려면 이 단계를 반복하십시오. 
+6. Repeat these steps to send HipChat notifications for other stages that include IBM Container Service, IBM Security Static Analyzer, and IBM Globalization jobs.
 
-## 파이프라인을 사용하여 컨테이너 이미지 빌드 및 배치
-{: #deliverypipeline_containers}
-
-IBM Continuous Delivery Pipeline for Bluemix를 사용하여 앱 빌드 및 Bluemix에 대한 컨테이너 배치를 자동화할 수 있습니다. Delivery Pipeline 서비스는 다음을 지원합니다. 
-  - Docker 이미지 빌드
-  - Bluemix에 컨테이너의 이미지 배치
-
-시작하기에 대한 자세한 정보는 [Delivery Pipeline 및 컨테이너 개요](/docs/containers/container_integrations.html#container_pipeline_ov){: new_window}를 참조하십시오. 
+-->

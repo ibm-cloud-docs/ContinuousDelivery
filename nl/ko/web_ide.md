@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-6-9"
+  years: 2015, 2018
+lastupdated: "2018-3-20"
 
 ---
 
@@ -15,27 +15,27 @@ lastupdated: "2017-6-9"
 # Eclipse Orion Web IDE를 사용하여 개발
 {: #web_ide}
 
-Eclipse Orion {{site.data.keyword.webide}}는 웹용으로 개발할 수 있는 브라우저 기반 개발 환경입니다. 컨텐츠 지원, 코드 자동 완성 및 오류 검사의 도움을 받아 JavaScript, HTML 및 CSS로 개발을 수행할 수 있습니다. {{site.data.keyword.webide}}는 거의 모든 언어에서 작동하며, 대부분의 파일 유형에 대해 구문 강조표시를 제공합니다. 소스 제어는 내장되어 있으며, 사용자는 로컬로 코드를 배치하여 앱을 테스트하고 디버그할 수 있습니다.
+Eclipse Orion {{site.data.keyword.webide}}는 브라우저 기반의 개발 환경이며 컨텐츠 지원, 코드 자동 완성 및 오류 검사 기능을 통해 JavaScript, HTML 및 CSS로 웹을 개발할 수 있습니다. {{site.data.keyword.webide}}는 거의 모든 언어에서 작동하며, 대부분의 파일 유형에 대해 구문 강조표시를 제공합니다. 소스 제어는 내장되어 있으며, 사용자는 로컬로 코드를 배치하여 앱을 테스트하고 디버그할 수 있습니다.
 {:shortdesc}
 
-특히 {{site.data.keyword.webide}}는 웹에서 구동됩니다. 설치, 관리 및 스케일링이 필요 없습니다. 인터넷이 연결되어 있으면 어디서든 개발할 수 있습니다. 
+특히 {{site.data.keyword.webide}}는 웹에서 구동됩니다. 설치, 관리 및 스케일링이 필요 없습니다. 인터넷이 연결되어 있으면 어디서든 개발할 수 있습니다.
 
 ## IDE 설정
 {: #editorsetup}
 
-{{site.data.keyword.webide}}는 사용자 정의할 수 있으므로 개발 요구사항에 맞는 색상 구성표, 기술 도구 및 설정을 선택할 수 있습니다. 설정을 보고 수정하려면 왼쪽에 있는 메뉴에서 **설정** 아이콘 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="설정 아이콘">을 클릭하십시오. 
+{{site.data.keyword.webide}}는 사용자 정의할 수 있으므로 개발 요구사항에 맞는 색상 구성표, 기술 도구 및 설정을 선택할 수 있습니다. 설정을 보고 수정하려면 왼쪽에 있는 메뉴에서 왼쪽 탐색 사이드바의 **설정** 아이콘 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="설정 아이콘">을 클릭하십시오. 
 
-편집 중에 종종 특정 설정을 변경해야 하는 경우에는 **로컬 편집기 설정** 아이콘 <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="로컬 편집기 설정 아이콘">에서 해당 설정에 바로 액세스할 수 있습니다. 
+편집 중에 종종 특정 설정을 변경해야 하는 경우에는 **로컬 편집기 설정** 아이콘 <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="로컬 편집기 설정 아이콘">에서 해당 설정에 바로 액세스할 수 있습니다.
 
 ![로컬 편집기 설정](images/webide_local_editor_settings_light.png)
 
-기본적으로 편집기 스타일 및 글꼴 크기 설정은 항상 표시됩니다. 메뉴에 다른 편집기 설정을 포함시키려면 다음 단계를 따르십시오. 
+기본적으로 편집기 스타일 및 글꼴 크기 설정은 항상 표시됩니다. 메뉴에 다른 편집기 설정을 포함시키려면 다음 단계를 따르십시오.
 
-1. **로컬 편집기 설정** 아이콘 <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="로컬 편집기 설정 아이콘">을 클릭하십시오. 
+1. **로컬 편집기 설정** 아이콘 <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="로컬 편집기 설정 아이콘">을 클릭하십시오.
 
-2. **편집기 설정**을 클릭하십시오. 
+2. **편집기 설정**을 클릭하십시오.
 
-3. **로컬 편집기 설정** 메뉴에서 설정을 포함하거나 제외하려면 각 설정에 대해 별표를 클릭하십시오. 
+3. **로컬 편집기 설정** 메뉴에서 설정을 포함하거나 제외하려면 각 설정에 대해 별표를 클릭하십시오.
 
 ![편집기 설정 토글](images/webide_editor_settings_toggle_light.png)
 
@@ -43,43 +43,40 @@ Eclipse Orion {{site.data.keyword.webide}}는 웹용으로 개발할 수 있는 
 ## 코드 편집
 {: #editcode}
 
-{{site.data.keyword.webide}}에는 두 개의 기본 섹션이 있습니다. 첫 번째 섹션은 트리 구조로 프로젝트 파일을 표시하는 파일 네비게이터입니다. 파일 네비게이터에서 파일 및 폴더를 작성, 이름 바꾸기, 삭제 및 관리할 수 있습니다. 
+{{site.data.keyword.webide}}에는 두 개의 기본 섹션이 있습니다. 첫 번째 섹션은 트리 구조로 프로젝트 파일을 표시하는 파일 네비게이터입니다. 파일 네비게이터에서 파일 및 폴더를 작성, 이름 바꾸기, 삭제 및 관리할 수 있습니다.
 
-**팁:** 파일 네비게이터에 파일을 업로드하려면 컴퓨터에서 파일 네비게이터로 파일을 끌어 오십시오. 
+**팁:** 파일 네비게이터에 파일을 업로드하려면 컴퓨터에서 파일 네비게이터로 파일을 끌어 오십시오.
 
-두 번째 섹션은 편집기 분할창입니다. 편집기는 컨텐츠 지원과 구문 유효성 검증을 포함하여 여러 코딩 기능을 제공합니다. 
+두 번째 섹션은 편집기 분할창입니다. 편집기는 컨텐츠 지원과 구문 유효성 검증을 포함하여 여러 코딩 기능을 제공합니다.
 
 ![Web IDE](images/webide_light.png)
 
 ### 여러 파일에 대한 작업
-1. 동시에 두 개의 파일로 작업하려면 **편집기 분할 모드 변경** 아이콘 <img class="inline" src="images/webide_split_editor_icon_light_small.png"  alt="편집기 분할 아이콘">을 클릭하십시오. 
-2. 메뉴가 열리면 보기를 선택하십시오. 
+1. 동시에 두 개의 파일로 작업하려면 **편집기 분할 모드 변경** 아이콘 <img class="inline" src="images/webide_split_editor_icon_light_small.png"  alt="편집기 분할 아이콘">을 클릭하십시오.
+2. 메뉴가 열리면 보기를 선택하십시오.
 
- 보기를 선택한 후 편집기에 파일이 이미 열려 있으면 해당 파일이 양쪽 편집기 보기에 표시됩니다. 
+ 보기를 선택한 후 편집기에 파일이 이미 열려 있으면 해당 파일이 양쪽 편집기 보기에 표시됩니다.
 
- 편집기 보기 중 하나에 표시되는 파일을 열거나 변경하려면 다음을 수행하십시오. 
- 1. 커서를 변경할 편집기 보기로 이동하십시오. 
- 2. 파일 네비게이터에서 파일을 클릭하십시오. 
+ 편집기 보기 중 하나에 표시되는 파일을 열거나 변경하려면 다음을 수행하십시오.
+ 1. 커서를 변경할 편집기 보기로 이동하십시오.
+ 2. 파일 네비게이터에서 파일을 클릭하십시오.
 
 ### 키보드 단축키
-{{site.data.keyword.webide}}에서 다수의 명령은 키보드 단축키를 통해 액세스할 수 있습니다. 
+{{site.data.keyword.webide}}에서 다수의 명령은 키보드 단축키를 통해 액세스할 수 있습니다.
 
 편집기에서 키보드 단축키 목록을 보려면 **도구** > **키 표시**를 누르십시오. 또는, Alt+Shift+?를 눌러 목록을 볼 수 있습니다(MacOS의 경우 Ctrl+Shift+?). 키 위로 마우스를 이동하고 연필을 클릭하고 새 키 바인딩을 입력하여 단축키를 사용자 정의할 수 있습니다.
 
 ## 소스 코드 관리
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}}는 소스 코드 관리 도구와 통합됩니다. Git 저장소에 대해 작업하려면 **Git 저장소** 아이콘 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="Git 저장소 아이콘">을 클릭하십시오. 
-
- **팁**: 오픈 도구 체인에서 {{site.data.keyword.webide}}를 사용 중이면 작업공간이 GitHub, {{site.data.keyword.ghe_short}} 또는 Git Repos and Issue Tracking 저장소로 미리 채워집니다. 현재 도구 체인과 연관된 저장소가 강조표시됩니다. 
-
+{{site.data.keyword.webide}}는 소스 코드 관리 도구와 통합됩니다. Git 저장소에 대해 작업하려면 **Git 저장소** 아이콘 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="Git 저장소 아이콘">을 클릭하십시오.  자세한 정보는 [Eclipse Orion Web IDE에서 Git에 대해 작업](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide)을 참조하십시오.
 
 ## 작업공간에서 앱 배치
 {: #deploy}
 
 1. 앱을 배치하려면 실행 표시줄에서 실행 구성을 선택하거나 작성하십시오.
    ![실행 표시줄](images/webide_runbar_light.png)   
-1. 배치 아이콘 <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="배치 아이콘">을 클릭하십시오. 작업공간의 현재 컨텐츠와 실행 구성에 정의된 환경을 사용하여 앱의 인스턴스가 배치됩니다. 
+1. 배치 아이콘 <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="배치 아이콘">을 클릭하십시오. 작업공간의 현재 컨텐츠와 실행 구성에 정의된 환경을 사용하여 앱의 인스턴스가 배치됩니다.
 2. 앱이 배치되면 실행 표시줄을 사용하여 앱을 중지, 다시 시작 또는 디버그하고 로그를 보는 등의 작업을 수행할 수 있습니다.
 
 <table>
@@ -101,7 +98,7 @@ Node.js 앱을 개발하는 경우, 라이브 편집 모드를 사용하십시�
 ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}.
+To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.Bluemix_short}}.
 
 ### Before you begin
 
@@ -162,7 +159,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 ## 지원 언어
 {: #supported_languages}
 
-Eclipse Orion {{site.data.keyword.webide}}는 컨텐츠 지원, 도구 팁, 미리보기, 유효성 검증 및 JavaScript, HTML, CSS, 마크다운 파일에 대한 구문 강조표시를 제공합니다. 구문 강조표시는 다음 파일 유형에 대해서도 지원됩니다. 
+Eclipse Orion {{site.data.keyword.webide}}는 컨텐츠 지원, 도구 팁, 미리보기, 유효성 검증 및 JavaScript, HTML, CSS, 마크다운 파일에 대한 구문 강조표시를 제공합니다. 구문 강조표시는 다음 파일 유형에 대해서도 지원됩니다.
 
 <table>
 <tr>
@@ -212,7 +209,8 @@ Eclipse Orion {{site.data.keyword.webide}}는 컨텐츠 지원, 도구 팁, 미�
 ## 튜토리얼 보기: Eclipse Orion Web IDE
 {: #toolchain_tutorials}
 
-[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage){:new_window}에 있는 다음 튜토리얼 중 하나를 확인하십시오. 
-  * [Create and use your first toolchain (GitHub)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Create a toolchain that uses Git Repos and Issue Tracking![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [Create and use a microservices toolchain with DevOps Insights (v2)![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+[IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage){:new_window}에 있는 다음 튜토리얼 중 하나를 확인하십시오.
+
+  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.
