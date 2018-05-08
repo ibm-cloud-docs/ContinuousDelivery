@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-08-15"
+  years: 2017, 2018
+lastupdated: "2018-1-9"
 
 ---
 
@@ -17,6 +17,8 @@ lastupdated: "2017-08-15"
 Em um plano de implementação para um pipeline composto, uma tarefa representa alguma atividade de negócios significativa que está associada a uma implementação de software. As tarefas são definidas em planos de implementação.
 
 {:shortdesc}
+
+**Nota**: esse recurso está disponível somente na região Sul dos EUA.
 
 A maioria das tarefas possui um ponto de início, um ponto final e uma duração mensurável. Uma tarefa pode ser de um dos tipos a seguir:
 
@@ -37,7 +39,7 @@ Ao criar uma tarefa, você seleciona o plano de implementação no qual deseja i
 
 Depois de salvar uma tarefa, ícones de ação são exibidos para a tarefa. É possível usar os ícones de ação para mudar o status da tarefa durante uma implementação. Todas as tarefas possuem o ícone de ação **Ignorar**. Outros ícones, como **Iniciar**, são exibidos quando o contexto é apropriado para eles.
 
-![](../UCCR/images/deploy-plan-intro.png "Plano de implementação típico")
+![Um plano de implementação típico](../UCCR/images/deploy-plan-intro.png)
 
 *Figura 1. Um plano de implementação simples com tarefas e ícones de ação*
 
@@ -175,7 +177,7 @@ O grupo é formado e uma barra de seleção de grupo é incluída no plano de im
 
 A figura a seguir mostra um grupo paralelo. A barra de seleção do grupo identifica o tipo de grupo: paralelo <img class="inline" src="../UCCR/images/para-select.png"  alt="seleção de grupo paralelo"> ou sequencial <img class="inline" src="../UCCR/images/seq-select.png"  alt="seleção de grupo sequencial">.
 
-(![](../UCCR/images/group-select.png "Plano de implementação típico"))
+![Um plano de implementação típico](../UCCR/images/group-select.png)
 
 *Figura 2. Um grupo paralelo*
 
@@ -206,7 +208,7 @@ As tags são exibidas nas linhas da tarefa da página Detalhes do plano de imple
 
 As tags que são usadas por um plano de implementação são exibidas na guia **Versões** da página Detalhes do plano de implementação. Para renderizar uma tarefa para que não seja aplicável a uma implementação, limpe as tags da tarefa. Tarefas com o status "Não aplicável" não podem ser iniciadas.  
 
-![](../UCCR/images/task-tag-labels.png "Plano de implementação típico")
+![Um plano de implementação típico](../UCCR/images/task-tag-labels.png)
 
 *Figura 3. Tags de tarefas*
 
@@ -231,7 +233,7 @@ As dependências de tarefas são mostradas na coluna Dependências na página De
 
 Na figura a seguir, a primeira tarefa não possui pré-requisitos e duas tarefas dependem dela. A segunda tarefa possui uma tarefa de pré-requisito e nenhuma tarefa depende dela.
 
-(![](../UCCR/images/plan-w-depend.png "Plano de implementação típico"))
+![Um plano de implementação típico](../UCCR/images/plan-w-depend.png)
 
 *Figura 4. Dependências de tarefa*
 

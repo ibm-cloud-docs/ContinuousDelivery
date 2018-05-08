@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-8-18"
+  years: 2017, 2018
+lastupdated: "2018-2-26"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,12 +22,14 @@ lastupdated: "2017-8-18"
 Com o recurso de pipeline composto para o {{site.data.keyword.deliverypipeline}}, é possível gerenciar processos repetidos de integração contínua e de entrega contínua para apps de software relacionados.
 {:shortdesc}
 
+**Nota**: esse recurso está disponível somente na região Sul dos EUA.
+
 Você cria pipelines compostos para gerenciar os apps em uma cadeia de ferramentas. Se sua cadeia de ferramentas contém apps que são implementados pelo {{site.data.keyword.deliverypipeline}}, é possível configurar o pipeline composto para ser atualizado quando você inclui ou remove pipelines de entrega da cadeia de ferramentas. Também é possível incluir apps de fontes externas no pipeline composto.
 
 ## Criando um pipeline composto
 {: #compositepipeline_create_for_toolchain}
 
-1. No menu na barra de menus do {{site.data.keyword.Bluemix_notm}}, clique em **DevOps**.
+1. No menu da barra de menus do {{site.data.keyword.Bluemix_notm}}, clique em **Serviços** e, em seguida, clique em **DevOps**.
 
 2. Na navegação esquerda, clique em **Pipelines**.
 
@@ -135,10 +137,12 @@ Deve-se ativar a sincronização automática no pipeline composto antes de poder
 
 Para visualizar os logs de uma tarefa, expanda o app que contém a tarefa e clique na tarefa.
 
-## Usando o IBM Bluemix DevOps Connect para se integrar ao IBM UrbanCode Deploy
+## Usando o {{site.data.keyword.Bluemix_notm}} DevOps Connect para integrar-se ao IBM UrbanCode
+Deploy
 {: #compositepipeline_devops_connect}
 
-O IBM Bluemix DevOps Connect coordena a comunicação entre a instalação local do IBM&reg; UrbanCode&reg; Deploy e o {{site.data.keyword.contdelivery_short}}. Após a instalação do DevOps Connect, é possível criar integrações que possam ser usadas para gerenciar apps IBM UrbanCode Deploy com pipelines compostos.
+O {{site.data.keyword.Bluemix_notm}} DevOps Connect coordena a comunicação entre sua instalação
+do IBM&reg; UrbanCode&reg; Deploy no local e o {{site.data.keyword.contdelivery_short}}. Após a instalação do DevOps Connect, é possível criar integrações que possam ser usadas para gerenciar apps IBM UrbanCode Deploy com pipelines compostos.
 
 **Pré-requisitos**
 
@@ -195,7 +199,10 @@ Se a sua integração tiver sido bem-sucedida, será possível incluir apps IBM 
 ## Incluindo apps do IBM UrbanCode Deploy
 {: #compositepipeline_add_apps}
 
-Se você for um membro de uma organização integrada ao IBM UrbanCode Deploy usando o DevOps Connect, será possível incluir os apps que podem ser acessados no UrbanCode Deploy no pipeline composto. Para obter instruções de instalação, veja [Usando o IBM Bluemix DevOps Connect para se integrar ao IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
+Se você for um membro de uma organização integrada ao IBM UrbanCode Deploy usando o DevOps Connect, será possível incluir os apps que podem ser acessados no UrbanCode Deploy no pipeline composto. 
+Para obter instruções de instalação, consulte
+[Usando
+o {{site.data.keyword.Bluemix_notm}}DevOps Connect para integrar-se ao IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
 
 Quando você for membro de uma organização que esteja conectada ao IBM UrbanCode Deploy, será possível incluir apps IBM UrbanCode Deploy aos pipeline compostos, selecionar os processos de app para incluir no plano de implementação e customizar a implementação dos apps.
 
@@ -225,4 +232,7 @@ Quando você for membro de uma organização que esteja conectada ao IBM UrbanCo
 {: #composite_pipeline-tutorial}
 
 Consulte este tutorial no [IBM&reg; Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage){:new_window}:
-  * [Crie e use uma cadeia de ferramentas de microsserviços com o DevOps Insights (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+
+  * [Usar a cadeia de ferramentas "Desenvolver e testar microsserviços no Cloud Foundry"![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.
+
+  **Nota**: o {{site.data.keyword.DRA_short}} está disponível somente na região Sul dos EUA.

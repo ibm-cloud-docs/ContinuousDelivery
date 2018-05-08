@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-9-25"
+  years: 2015, 2018
+lastupdated: "2018-3-21"
 
 ---
 
@@ -17,38 +17,42 @@ lastupdated: "2017-9-25"
 É possível configurar integrações de ferramentas que suportam tarefas de desenvolvimento, implementação e operações ao criar uma cadeia de ferramentas aberta ou é possível incluir e configurar integrações de ferramentas para customizar uma cadeia de ferramentas existente.  
 {:shortdesc}
 
-As integrações de ferramentas que estão disponíveis para incluir e configurar para a sua cadeia de ferramentas são diferentes, dependendo de você estar usando cadeias de ferramentas no {{site.data.keyword.Bluemix_notm}} Public ou no {{site.data.keyword.Bluemix_notm}} Dedicated. Se estiver usando cadeias de ferramentas no {{site.data.keyword.Bluemix_notm}} Dedicated, as integrações de ferramenta disponíveis para você dependerão de como o {{site.data.keyword.contdelivery_full}} foi configurado em seu ambiente específico.
+As integrações de ferramentas que estão disponíveis para incluir e configurar para a sua cadeia de ferramentas são diferentes, dependendo de você estar usando cadeias de ferramentas no {{site.data.keyword.Bluemix_notm}} Public ou no {{site.data.keyword.Bluemix_notm}} Dedicated. 
+Se você está usando cadeias de ferramentas no {{site.data.keyword.Bluemix_notm}} Public, as
+integrações de ferramentas que estão disponíveis para você dependem da região de sua cadeia de ferramentas e da
+disponibilidade das integrações de ferramentas nessa região. Se estiver usando cadeias de ferramentas no {{site.data.keyword.Bluemix_notm}} Dedicated, as integrações de ferramenta disponíveis para você dependerão de como o {{site.data.keyword.contdelivery_full}} foi configurado em seu ambiente específico.
 
 |Integração de ferramentas |Disponível no {{site.data.keyword.Bluemix_notm}} Public	|Disponível no {{site.data.keyword.Bluemix_notm}} Dedicated (ambiente dependente)|
 |:----------|:------------------------------|:------------------|
-|{{site.data.keyword.alertnotificationshort}}		|Sim		|Não		|
-|Application Security on Cloud		|Sim		|Não		|
-|Artifactory		|Sim		|Sim		|
-|Availability Monitoring		|Sim		|Não		|
-|Cloud Event Management		|Sim		|Não		|
-|{{site.data.keyword.deliverypipeline}} 		|Sim	   	|Sim  		|
-|{{site.data.keyword.DRA_short}} 		|Sim		|Não			|
-|Eclipse Orion {{site.data.keyword.webide}}		|Sim		|Sim			|
-|{{site.data.keyword.gitrepos}}	|Sim		|Não		|
-|GitHub and Issues		|Sim		|Sim		|
+|{{site.data.keyword.alertnotificationshort}}		|Sul dos EUA		|Não		|
+|Artifactory		|Sul dos EUA, Alemanha, Reino Unido		|Sim		|
+|Availability Monitoring		|Sul dos EUA		|Não		|
+|Bitbucket		|Sul dos EUA, Alemanha, Reino Unido		|Não		|
+|Cloud Event Management		|Sul dos EUA		|Não		|
+|{{site.data.keyword.deliverypipeline}} 		|Sul dos EUA, Alemanha, Reino Unido	   	|Sim  		|
+|{{site.data.keyword.DRA_short}} 		|Sul dos EUA		|Não			|
+|Eclipse Orion {{site.data.keyword.webide}}		|Sul dos EUA, Alemanha, Reino Unido		|Sim			|
+|{{site.data.keyword.gitrepos}}	|Sul dos EUA, Alemanha, Reino Unido		|Não		|
+|GitHub		|Sul dos EUA, Alemanha, Reino Unido		|Sim		|
 |Dedicated {{site.data.keyword.ghe_short}} and Issues			|Não		|Sim		|
-|GitLab		|Sim		|Não		|
-|Jenkins		|Sim		|Sim		|
-|JIRA		|Sim		|Sim		|
-|Nexus			|Sim		|Sim		|
-|Outra ferramenta			|Sim		|Sim		|
-|PagerDuty			|Sim		|Sim		|
+|GitLab		|Sul dos EUA, Alemanha, Reino Unido		|Não		|
+|Jenkins		|Sul dos EUA, Alemanha, Reino Unido		|Sim		|
+|JIRA		|Sul dos EUA, Alemanha, Reino Unido		|Sim		|
+|Nexus			|Sul dos EUA, Alemanha, Reino Unido		|Sim		|
+|Outra ferramenta			|Sul dos EUA, Alemanha, Reino Unido		|Sim		|
+|PagerDuty			|Sul dos EUA, Alemanha, Reino Unido		|Sim		|
 |Rational
-Team Concert			|Sim		|Sim		|
-|Sauce Labs		|Sim		|Não		|
-|Slack			|Sim		|Sim		|
-|SonarQube			|Sim		|Sim		|
+Team Concert			|Sul dos EUA, Alemanha, Reino Unido		|Sim		|
+|Sauce Labs		|Sul dos EUA, Alemanha, Reino Unido		|Não		|
+|Slack			|Sul dos EUA, Alemanha, Reino Unido		|Sim		|
+|SonarQube			|Sul dos EUA, Alemanha, Reino Unido		|Sim		|
+|UrbanCode Deploy			|Sul dos EUA		|Não		|
 {: caption="Tabela 1. Integrações de ferramenta disponíveis para cadeias de ferramentas no {{site.data.keyword.Bluemix_notm}} Public e Dedicated" caption-side="top"}
 
 **Dica:** se você deseja iniciar o desenvolvimento com o seu código-fonte no {{site.data.keyword.Bluemix_notm}} Public, configure a integração de ferramenta GitHub ou a integração de ferramenta {{site.data.keyword.gitrepos}} antes de configurar o {{site.data.keyword.deliverypipeline}}. Se você deseja começar a desenvolver com o seu código no {{site.data.keyword.Bluemix_notm}} Dedicated, configure a integração de ferramenta {{site.data.keyword.ghe_short}} ou a integração de ferramenta GitHub antes de configurar o {{site.data.keyword.deliverypipeline}}.
 
 
-## Configurando o Alert Notification (Experimental)
+## Configurando o Alert Notification
 {: #alertnotification}
 
 O {{site.data.keyword.alertnotificationfull}} é uma solução híbrida baseada em nuvem que pode ser usada para centralizar e simplificar sua estratégia de notificação. Ele funciona com outros aplicativos baseados em nuvem e no local. Os alertas são encaminhados para o {{site.data.keyword.alertnotificationshort}} usando uma API RESTful segura.
@@ -87,36 +91,11 @@ Configure o {{site.data.keyword.alertnotificationshort}} para receber notificaç
 
 ### Saiba mais sobre Notificação de alerta
 
-Para saber mais sobre o {{site.data.keyword.alertnotificationshort}}, veja o artigo [IBM {{site.data.keyword.alertnotificationshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/manage/tool_alert_notification/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
+Para saber mais sobre o {{site.data.keyword.alertnotificationshort}}, consulte o artigo [IBM {{site.data.keyword.alertnotificationshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/manage/tool_alert_notification/){: new_window} no IBM Cloud Garage Method ou execute estes tutoriais:
 
-  * [Incluir uma integração de ferramenta em uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_add_tool_integration_to_toolchain){:new_window}
-  * [Gerencie seu aplicativo do {{site.data.keyword.Bluemix_notm}} usando o Bluemix Availability Monitoring e o Alert Notification ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [Incluir uma integração de ferramenta em uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/add-a-tool-integration-to-a-toolchain){:new_window}
 
-
-## Configurando o Application Security on Cloud
-{: #appscan}
-
-O IBM&reg; Application Security on Cloud assegura os aplicativos de sua organização, detectando dezenas das vulnerabilidades de segurança publicadas mais disseminadas. É possível usá-lo para eliminar as vulnerabilidades de segurança de aplicativos antes que eles sejam implementados para produção. Com um relatório conveniente e detalhado, é possível direcionar as vulnerabilidades e finalmente permitir que os usuários de seu aplicativo se beneficiem de uma experiência mais segura.
-
-Configure o Application Security on Cloud para analisar continuamente seu código-fonte:
-
-1. No painel do DevOps, clique em **Cadeias de ferramentas**. Clique na cadeia de ferramentas em que você deseja incluir o Application Security on Cloud. Como alternativa, na página Visão geral do app, no cartão do Continuous Delivery, clique em **Visualizar cadeia de ferramentas**. Em seguida, clique em **Visão geral**.  
-
- a. Clique em **Incluir uma ferramenta**.
-
- b. Na seção Integrações de ferramentas, clique em **IBM Application Security on Cloud**.
-
-1. Digite um nome para essa instância da integração de ferramenta Application Security on Cloud.
-1. Digite a URL para a instância do Application Security on Cloud que você deseja abrir ao clicar no cartão do IBM Application Security on Cloud de sua cadeia de ferramentas.
-1. Digite o nome do usuário que você usa para se conectar ao servidor IBM Application Security on Cloud.
-1. Digite o token de autenticação que você usa para se conectar ao servidor IBM Application Security on Cloud.
-1. Clique em
-**Criar integração**.
-1. Em sua cadeia de ferramentas, clique em **IBM Application Security on Cloud** para visualizar o painel para a instância do IBM Application Security on Cloud à qual você se conectou.
-
-### Saiba mais sobre o Application Security on Cloud
-
-Para saber mais sobre o Application Security on Cloud, veja o artigo [Application Security on Cloud ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/manage/tool_ibm_security_appscan/){: new_window} no IBM Cloud Garage Method.
+  * [Gerenciar seu aplicativo {{site.data.keyword.Bluemix_notm}} usando o {{site.data.keyword.Bluemix_notm}} Availability Monitoring e o Alert Notification ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
 ## Configurando o Artifactory
@@ -157,7 +136,7 @@ Configure o gerenciador de repositório do Artifactory para armazenar artefatos 
 
 1. Clique em
 **Criar integração**.
-1. Clique no cartão do repositório do Artifactory com o qual deseja trabalhar. O website Artifactory é aberto, no qual é possível visualizar os conteúdos do repositório.
+1. Clique no cartão do repositório do Artifactory com o qual deseja trabalhar. O website do Artifactory é aberto, no qual é possível visualizar os conteúdos do repositório.
 1. Opcional: se você estiver usando uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Public e desejar construir seu app usando o Artifactory com npm, configure seu pipeline para incluir uma tarefa de construção npm. Para obter instruções para configurar a tarefa de construção, veja a seção [Configurando uma tarefa de construção npm do Artifactory em seu pipeline](#config_artifactory_npm).
 1. Opcional: se você estiver usando uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Public e desejar construir seu app usando o Artifactory com Maven, configure seu pipeline para incluir uma tarefa de construção Maven. Para obter instruções para configurar a tarefa de construção, veja a seção [Configurando uma tarefa de construção Maven do Artifactory em seu pipeline](#config_artifactory_maven).
 
@@ -224,7 +203,7 @@ Configure o {{site.data.keyword.deliverypipeline}} para incluir uma tarefa de co
 Para saber mais sobre o Artifactory, veja o [artigo Artifactory ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_artifactory/){: new_window} no IBM Cloud Garage Method.
 
 
-## Incluindo o Availability Monitoring
+## Incluindo monitoramento de disponibilidade
 {: #availabilitymonitoring}
 
 O {{site.data.keyword.prf_hublong}} isola problemas, identifica padrões e melhora o desempenho antes que os usuários sejam afetados. É possível testar seu app em locais ao redor do mundo, integrar com pipelines de entrega e obter insights sobre como otimizar continuamente seu código.
@@ -245,12 +224,51 @@ Para testar, monitorar e melhorar o funcionamento do app ao construí-lo, inclua
 
 ### Saiba mais sobre o Availability Monitoring
 
-Para saber mais sobre {{site.data.keyword.prf_hubshort}}, veja o artigo [{{site.data.keyword.prf_hublong}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window} no IBM Cloud Garage Method ou faça este tutorial:
+Para saber mais sobre o {{site.data.keyword.prf_hubshort}}, consulte o artigo [{{site.data.keyword.prf_hublong}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window} no IBM Cloud Garage Method ou execute este tutorial:
 
-  * [Gerencie seu aplicativo do {{site.data.keyword.Bluemix_notm}} usando o Bluemix Availability Monitoring e o Alert Notification ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [Gerenciar seu aplicativo {{site.data.keyword.Bluemix_notm}} usando o {{site.data.keyword.Bluemix_notm}} Availability Monitoring e o Alert Notification ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
 
-## Incluindo o Cloud Event Management (Experimental)
+## Configurando o Bitbucket
+{: #bitbucket}
+
+Armazene seu código-fonte em um repositório novo ou existente em bitbucket.org e participe da codificação social por meio de wikis, rastreamento de problemas e solicitações pull.
+
+Configure o Bitbucket para colaborar no código com sua equipe:
+
+1. No painel do DevOps, clique em **Cadeias de ferramentas**. Clique na cadeia de ferramentas na qual você deseja incluir o Bitbucket. Como alternativa, na página Visão geral do app, no cartão do Continuous Delivery, clique em **Visualizar cadeia de ferramentas** e, em seguida, em **Visão geral**.
+
+ a. Clique em **Incluir uma ferramenta**.
+
+ b. Na seção Integrações de ferramentas, clique em **Bitbucket**.
+
+   **Dica:** se você tiver configurando essa integração de ferramenta no {{site.data.keyword.Bluemix_notm}} Public e você não tiver autorizado o {{site.data.keyword.Bluemix_notm}} a acessar o Bitbucket, clique em **Autorizar** para acessar o website do Bitbucket. Se você não tiver uma sessão ativa do Bitbucket, será solicitado a efetuar login. Clique em **Autorizar aplicativo** para permitir que o {{site.data.keyword.Bluemix_notm}} acesse sua conta do Bitbucket. Se você tiver uma sessão do Bitbucket ativa, mas não tiver inserido sua senha recentemente, poderá ser solicitado a inserir sua senha do Bitbucket para confirmar.
+
+1. Clique no servidor Bitbucket que você deseja usar.
+1. Se você tiver um repositório do Bitbucket que deseja usar, digite a URL para o repositório. Para o tipo de repositório, clique em **Existente**.
+1. Se você desejar usar um novo repositório do Bitbucket, digite um nome para o repositório, digite a URL para o repositório que você está clonando ou bifurcando e selecione o tipo de repositório:
+
+ a. Para criar um repositório vazio, clique em **Novo**.
+
+ b. Para criar uma cópia de um repositório, clique em **Clonar**.
+
+ c. Para bifurcar um repositório para que seja possível contribuir com as mudanças por meio de solicitações pull, clique em **Bifurcar**.
+
+1. Para criar um repositório privado no servidor, marque a caixa de seleção **Tornar este repositório privado**.
+1. Para usar o Bitbucket Issues para rastreamento de problemas, marque a caixa de seleção **Ativar o Bitbucket Issues**.
+1. Para rastrear a implementação de mudanças de código criando tags e comentários sobre confirmações e rótulos e comentários sobre problemas que são referenciados pelas confirmações, marque a caixa de seleção **Rastrear implementação de mudança de código**. Para obter mais informações, veja [Rastrear onde seu código é implementado com cadeias de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Clique em **Criar integração**.
+1. Em sua cadeia de ferramentas, clique no cartão para o repositório Bitbucket com o qual você deseja trabalhar. O website do Bitbucket é aberto no qual é possível visualizar o conteúdo do repositório.
+1. Se você ativou o Bitbucket Issues, clique em **Bitbucket Issues** para abri-lo. É possível usar essa instância do Bitbucket Issues para toda a sua cadeia de ferramentas, mesmo se a cadeia de ferramentas contém múltiplos repositórios do Bitbucket.    
+
+**Nota:** se você não tiver privilégios de proprietário ou mestre para o repositório ao qual está se vinculando, sua integração será limitada porque não é possível usar um webhook. Webhooks são necessários para executar automaticamente um pipeline quando uma confirmação é enviada por push para o repositório. Sem um webhook, os pipelines deverão ser iniciados manualmente.
+
+### Saiba mais sobre o Bitbucket
+
+Para saber mais sobre o Bitbucket, consulte o [Artigo do Bitbucket ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/code/tool_bitbucket/){: new_window} no IBM Cloud Garage Method.
+
+
+## Incluindo o Cloud Event Management
 {: #cloudeventmanagement}
 
 O {{site.data.keyword.evtmgt_full}} fornece uma visualização consolidada de problemas que ocorrem com seus serviços, aplicativos e infraestrutura. É possível configurar o gerenciamento de incidente em tempo real para resolver os problemas de maneira mais eficiente.
@@ -301,11 +319,12 @@ Configure o {{site.data.keyword.deliverypipeline}} para automatizar a construç�
 
   **Dica:** Se você desejar que o pipeline seja executado automaticamente quando uma confirmação for enviada por push para o GitHub, {{site.data.keyword.ghe_short}} ou repositório Git (repo), siga estas etapas:
 
-   a. Configure o GitHub, {{site.data.keyword.ghe_short}} ou {{site.data.keyword.gitrepos}} para sua cadeia de ferramentas antes de definir os estágios para seu pipeline. Os estágios de pipeline precisam das URLs do Git para os seus repositórios. Cada estágio de pipeline pode se referir a somente um dos repositórios GitHub, {{site.data.keyword.ghe_short}} ou Git que estão associados à sua cadeia de ferramentas. Para obter instruções para configurar o GitHub, consulte a seção [GitHub](#github). Para obter instruções para configurar o Dedicated {{site.data.keyword.ghe_short}}, veja [Introdução ao {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. Para obter instruções para configurar o {{site.data.keyword.gitrepos}}, veja a seção [{{site.data.keyword.gitrepos}}](##gitbluemix).
+   a. Configure o GitHub, {{site.data.keyword.ghe_short}} ou {{site.data.keyword.gitrepos}} para sua cadeia de ferramentas antes de definir os estágios para seu pipeline. Os estágios de pipeline precisam das URLs do Git para os seus repositórios. Cada estágio de pipeline pode se referir a somente um dos repositórios GitHub, {{site.data.keyword.ghe_short}} ou Git que estão associados à sua cadeia de ferramentas. Para obter instruções para configurar o GitHub, consulte a seção [GitHub](#github). Para obter instruções para configurar o Dedicated {{site.data.keyword.ghe_short}}, veja [Introdução ao {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. Para obter instruções para configurar o {{site.data.keyword.gitrepos}}, consulte a seção [{{site.data.keyword.gitrepos}}](#gitbluemix).
 
-   b. Use um webhook. Sem um webhook, só será possível executar pipelines manualmente. Para usar um webhook ao vincular-se a um GitHub ou repositório {{site.data.keyword.ghe_short}}, você precisa de privilégios de administrador. Para vincular-se a um repositório do {{site.data.keyword.gitrepos}}, os privilégios Mestre ou Proprietário são necessários.
+   b. Use um webhook. Sem um webhook, só será possível executar pipelines manualmente. Para usar um webhook ao vincular-se a um repositório GitHub ou {{site.data.keyword.ghe_short}}, é preciso ter privilégios do administrador. Para vincular-se a um proprietário do {{site.data.keyword.gitrepos}}, é preciso ter privilégios de Principal ou Proprietário.
 
-1. Opcional: se você estiver usando uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Public e desejar que os Sauce Labs executem testes em seu aplicativo, configure o {{site.data.keyword.deliverypipeline}} para incluir uma tarefa de teste dos Sauce Labs. Para obter instruções para configurar a tarefa de teste, consulte a seção [Configurando uma tarefa de teste Sauce Labs em seu pipeline](#config_saucelabs).
+1. Opcional: se você estiver usando uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Public e desejar que os Sauce Labs sigam testes em seu aplicativo, configure o {{site.data.keyword.deliverypipeline}} para incluir uma tarefa de teste dos Sauce Labs. Para obter instruções para configurar a tarefa de teste, consulte a seção
+[Configurando uma tarefa de teste Sauce Labs em seu pipeline](#config_saucelabs).
 
 ### Configurando uma tarefa de teste Sauce Labs em seu pipeline
 {: #config_saucelabs}
@@ -321,7 +340,7 @@ Configure o {{site.data.keyword.deliverypipeline}} para incluir uma tarefa de te
 1. Configure o estágio. Na guia **PROPRIEDADES DO AMBIENTE**, crie a propriedade CF_APP_NAME.
 
   **Dica:** o nome do usuário e a chave de acesso do Sauce Labs estão disponíveis no script da tarefa de teste como as variáveis de ambiente SAUCE_USERNAME e SAUCE_ACCESS_KEY. Ao escrever seus testes, deve-se usar essas variáveis de ambiente para autenticar com Sauce Labs.
-  
+
 1. Configure a tarefa de implementação. No campo **Implementar script**, inclua esse comando: `export CF_APP_NAME="$CF_APP"`. Esse comando exporta o nome do app como uma propriedade do ambiente.
 1. Configure a tarefa de teste. Os valores na imagem a seguir são exemplos. Os campos **Instância de serviço**, **Destino**, **Organização** e **Espaço** são preenchidos com o nome do usuário, a região, a organização e o espaço dos Sauce Labs que você estiver usando.  
 ![Configurar tarefa](images/toolchain_configure_job.png)
@@ -332,7 +351,7 @@ Configure o {{site.data.keyword.deliverypipeline}} para incluir uma tarefa de te
 
    **Dica:** Para ver o nome do usuário e a chave de acesso que você usou quando configurou o Sauce Labs para sua cadeia de ferramentas, clique em **Configurar**.
 
-  c. No campo **Comando de execução de teste**, insira os comandos que instalam as dependências que são necessárias por seus testes e, em seguida, execute os testes. Por exemplo, para um aplicativo Node.js, você pode inserir esses comandos:
+  c. No campo **Comando de execução de teste**, insira os comandos que instalam as dependências que são requeridas por seus testes e, em seguida, execute os testes. Por exemplo, para um aplicativo Node.js, você pode inserir esses comandos:
      ```
      npm install
      node_modules/grunt-cli/bin/grunt test:sauce:parallel
@@ -344,10 +363,11 @@ Configure o {{site.data.keyword.deliverypipeline}} para incluir uma tarefa de te
 
 ### Saiba mais sobre o Delivery Pipeline
 
-Para saber mais sobre o {{site.data.keyword.deliverypipeline}}, veja o [artigo Delivery Pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
+Para saber mais sobre o {{site.data.keyword.deliverypipeline}}, consulte os artigos [Trabalhando com pipelines](/docs/services/ContinuousDelivery/pipeline_working.html){: new_window} e [Delivery Pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} no IBM Cloud Garage Method ou execute estes tutoriais:
 
-  * [Criar um pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_first_pipeline){:new_window}
-  * [Crie e use sua primeira cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}
+  * [Criar um pipeline ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:new_window}
+
+  * [Criar e usar sua primeira cadeia de ferramentas usando a cadeia de ferramentas "Desenvolver um app Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
 
 ## Incluindo o DevOps Insights (Beta)
@@ -370,13 +390,15 @@ Inclua o {{site.data.keyword.DRA_short}} para manter e melhorar a qualidade de s
 **Criar integração**.
 1. Clique no **{{site.data.keyword.DRA_short}}** e, em seguida, conclua as etapas de introdução: criar critérios, conectar os critérios ao pipeline e executar o pipeline.
 
-### Saiba mais sobre o Devops Insights
+### Saiba mais sobre o DevOps Insights
 
-Para saber mais sobre o {{site.data.keyword.DRA_short}}, veja o artigo [{{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
+Para saber mais sobre o {{site.data.keyword.DRA_short}}, consulte o artigo [{{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){: new_window} no IBM Cloud Garage Method ou execute estes tutoriais:
 
-  * [Criar uma cadeia de ferramentas que usa o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_devops_insights){:new_window}
-  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
-  * [Deployment Risk Analytics com GitHub e Jenkins ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
+  * [Usar a cadeia de ferramentas "Desenvolver e testar um app Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
+
+  * [Usar a cadeia de ferramentas "Desenvolver e testar microsserviços no Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+
+  * [Assegurar implementações de qualidade usando a cadeia de ferramentas "Deployment Risk Analytics com o GitHub e Jenkins" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
 
 
 ## Incluindo o Eclipse Orion Web IDE
@@ -401,10 +423,11 @@ Para concluir tarefas de controle de fonte, inclua a integração de ferramenta 
 
 ### Saiba mais sobre o Eclipse Orion Web IDE
 
-Para saber mais sobre o Eclipse Orion {{site.data.keyword.webide}}, veja [Editando código com o Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} e o artigo [Eclipse Orion {{site.data.keyword.webide}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} no IBM Cloud Garage Method ou use estes tutoriais:
+Para saber mais sobre o Eclipse Orion {{site.data.keyword.webide}}, consulte os artigos [Editando código com o Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} e [Eclipse Orion {{site.data.keyword.webide}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} no IBM Cloud Garage Method ou execute estes tutoriais:
 
-  * [Crie e use sua primeira cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window}
-  * [Use o {{site.data.keyword.Bluemix_notm}} Live Sync para desenvolver, depurar e implementar seu app ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_livesync){:new_window}
+  * [Criar e usar sua primeira cadeia de ferramentas usando a cadeia de ferramentas "Desenvolver um app Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
+
+  * [Usar a cadeia de ferramentas "Desenvolver e testar microsserviços no Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
 
 
 ## Configurando o Git Repos and Issue Tracking
@@ -415,11 +438,12 @@ A integração de ferramenta {{site.data.keyword.gitrepos}} baseia-se no GitLab 
 Se você estiver configurando o {{site.data.keyword.gitrepos}} enquanto estiver criando a cadeia de ferramentas, siga estas etapas:    
 
 1. Na seção Integrações configuráveis, clique em **Git Repos and Issue Tracking**.
-1. Revise os locais de destino padrão do repositório Git. Esses repos são clonados a partir dos mesmos repos de amostra. Se necessário, mude os nomes dos repos de destino.
+1. Revise os locais de destino padrão do repositório Git. Esses repos são clonados a partir dos mesmos
+repos de amostra. Se necessário, mude os nomes dos repos de destino.
 
 Se você tiver uma cadeia de ferramentas e desejar migrar um repositório Git em sua cadeia de ferramentas para o {{site.data.keyword.gitrepos}}, siga estas etapas:
 
-**Nota**: estas instruções se aplicam a cadeias de ferramentas que já contêm o repositório Git que você deseja migrar para o {{site.data.keyword.gitrepos}}. Para obter informações sobre como incluir diferentes tipos de repositórios Git em sua cadeia de ferramentas, veja as seções [Configurando o GitHub and Issues](#github), [Configurando o GitHub Enterprise and Issues no Bluemix Dedicated](#configghe) e [Configurando o GitLab](#gitlab).
+**Nota**: estas instruções se aplicam a cadeias de ferramentas que já contêm o repositório Git que você deseja migrar para o {{site.data.keyword.gitrepos}}. Para obter informações sobre como incluir diferentes tipos de repositórios Git em sua cadeia de ferramentas, consulte as seções [Configurando o GitHub](#github), [Configurando o GitHub Enterprise and Issues no {{site.data.keyword.Bluemix_notm}} Dedicated](#configghe) e [Configurando o GitLab](#gitlab).
 
 1. No painel do DevOps, na página Cadeias de ferramentas, clique na cadeia de ferramentas para abrir sua página Visão geral. Como alternativa, na página Visão geral do app, no cartão do Continuous Delivery, clique em **Visualizar cadeia de ferramentas** e, em seguida, em **Visão geral**.
 1. Clique em **Incluir uma ferramenta**.
@@ -430,7 +454,7 @@ Se você tiver uma cadeia de ferramentas e desejar migrar um repositório Git em
 1. Clique em
 **Criar integração**.
 
-**Dica:** depois de clonar o repositório Git, é possível removê-lo da sua cadeia de ferramentas. 
+**Dica:** depois de clonar o repositório Git, é possível removê-lo da sua cadeia de ferramentas.
 
 Se você tiver uma cadeia de ferramentas e estiver incluindo o {{site.data.keyword.gitrepos}} nela, siga estas etapas:    
 
@@ -454,44 +478,51 @@ Se você tiver uma cadeia de ferramentas e estiver incluindo o {{site.data.keywo
 
 ### Saiba mais sobre o Git Repos and Issue Tracking
 
-Para saber mais sobre o {{site.data.keyword.gitrepos}}, veja o [artigo {{site.data.keyword.gitrepos}}: codificação social hospedada pela IBM ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/code/tool_git_repos_and_issue_tracking/){: new_window} no IBM Cloud Garage Method ou faça este tutorial:
+Para saber mais sobre o {{site.data.keyword.gitrepos}}, consulte o artigo [{{site.data.keyword.gitrepos}}: codificação social hospedada pela IBM ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/code/tool_git_repos_and_issue_tracking/){: new_window} no IBM Cloud Garage Method ou execute este tutorial:
 
-  * [Criar uma cadeia de ferramentas que usa o {{site.data.keyword.gitrepos}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
+  * [Criar e usar sua primeira cadeia de ferramentas usando a cadeia de ferramentas "Desenvolver um app Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
 
-## Configurando o GitHub e Issues
+## Configurando o GitHub
 {: #github}
 
 O GitHub é um serviço de hospedagem baseado na web para repos Git. É possível ter ambas as cópias local e remota de seus repos, o que facilita a colaboração.
 
 O {{site.data.keyword.ghe_short}} é um serviço de hospedagem no local, baseado na web para repositórios Git.
 
-O GitHub Issues é uma ferramenta de controle que mantém seu trabalho e seus planos todos em um lugar. Ele é integrado a seu repo de desenvolvimento para que possa focar em tarefas importantes.
+O GitHub Issues é uma ferramenta de controle que mantém seu trabalho e seus planos todos em um lugar. Ele
+é integrado a seu repo de
+desenvolvimento para que possa focar em tarefas importantes.
 
 É possível configurar o GitHub como uma integração de ferramenta em sua cadeia de ferramentas para que seja possível gerenciar o código-fonte em um repositório novo ou existente em GitHub.com ou na instância do {{site.data.keyword.ghe_short}} de sua empresa. Envolva-se na codificação social por meio de wikis, rastreamento de problemas e solicitações pull.
 
 Se estiver configurando esta integração de ferramenta conforme estiver criando a cadeia de ferramentas, siga estas etapas:
 
 1. Se você estiver armazenando seu código-fonte em um repositório GitHub, na seção Integrações configuráveis, clique em **GitHub**. Se você estiver configurando essa integração de ferramenta no {{site.data.keyword.Bluemix_notm}} Public e não tiver autorizado o {{site.data.keyword.Bluemix_notm}} para acessar o GitHub, clique em **Autorizar** para acessar o website GitHub. Se você não tiver uma sessão GitHub ativa, será solicitado que efetue login. Clique em **Autorizar aplicativo** para permitir que o {{site.data.keyword.Bluemix_notm}} acesse sua conta GitHub. Se você tiver uma sessão GitHub ativa, mas não tiver inserido sua senha recentemente, poderá ser solicitado que insira sua senha GitHub para confirmar.
-1. Se você estiver usando um repositório em seu próprio servidor {{site.data.keyword.ghe_short}}, na seção Integrações configuráveis, clique em **Incluir servidor customizado**. Digite um título para seu servidor GitHub customizado e especifique a URL raiz para o servidor. Insira seu token de acesso pessoal e, em seguida, clique em **Salvar integração customizada**. 
- 
+1. Se você estiver usando um repositório em seu próprio servidor {{site.data.keyword.ghe_short}}, na seção Integrações configuráveis, clique em **Incluir servidor customizado**.
+
+ **Importante**: a rede deve estar apta para acessar o servidor Git de destino por meio de um ambiente do {{site.data.keyword.Bluemix_notm}} Dedicated. Se seu servidor GitHub não está disponível na Internet pública ou o nome do host não é resolvido no Servidor de Nomes de Domínio (DNS) público, [abra um chamado de suporte](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. É possível usar o chamado de suporte para enviar uma solicitação para abrir as rotas de rede ou atualizar as configurações de DNS.
+
+ Digite um título para seu servidor GitHub customizado e especifique a URL raiz para o servidor. Insira seu token de acesso pessoal e, em seguida, clique em **Salvar integração customizada**.
+
   **Dica**: se você não tiver um token de acesso pessoal, poderá criar um:
-  
+
      a. Em qualquer página do GitHub, clique em seu ícone do perfil e, em seguida, clique em **Configurações**.
-   
-     b. Na barra lateral, clique em **Tokens de acesso pessoal**. 
-   
+
+     b. Na barra lateral, clique em **Tokens de acesso pessoal**.
+
      c. Clique em **Gerar novo token**.
-   
+
      d. Inclua uma descrição para o token.
-     
+
      e. Marque as caixas de seleção **repositório** e **usuário** para definir o acesso para o token pessoal.
-     
+
      f. Clique em **Gerar token**.
-   
+
      g. Copie o token em um local seguro ou app de gerenciamento de senha. Por razões de segurança, após sair da página, você não pode mais ver o token.
 
-1. Revise os locais de repositório de destino padrão para os repositórios GitHub. Esses repos são clonados a partir dos mesmos repos de amostra. Se necessário, mude os nomes dos repositórios de destino.
+1. Revise os locais de repositório de destino padrão para os repositórios GitHub. Esses repos são clonados a partir dos mesmos
+repos de amostra. Se necessário, mude os nomes dos repositórios de destino.
 ![Locais de repositório de destino padrão](images/toolchain_github_config.png)
 
 Se você tiver uma cadeia de ferramentas e estiver incluindo esta integração de ferramenta nela, siga essas etapas:
@@ -522,15 +553,18 @@ Se você tiver uma cadeia de ferramentas e estiver incluindo esta integração d
 
 **Nota:** Se você não tiver privilégios de administrador para o repositório ao qual está se vinculando, sua integração será limitada porque você não pode usar um webhook. Webhooks são necessários para executar automaticamente um pipeline quando uma confirmação é enviada por push para o repositório. Sem um webhook, os pipelines deverão ser iniciados manualmente.
 
-### Saiba mais sobre o GitHub and Issues
+### Saiba mais sobre o GitHub
 
-Para saber mais sobre o GitHub and Issues, veja o [artigo do GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/code/tool_github/){: new_window} e o [artigo do GitHub Issues ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
+Para saber mais sobre o GitHub, consulte os artigos [GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/code/tool_github/){: new_window} e [GitHub Issues ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} no IBM Cloud Garage Method ou execute estes tutoriais:
 
-  * [Deployment Risk Analytics com GitHub e Jenkins ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
-  * [Criar uma cadeia de ferramentas customizada ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_custom){:new_window}
+ * [Usar a cadeia de ferramentas "Desenvolver e testar um app Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
+
+  * [Assegurar implementações de qualidade usando a cadeia de ferramentas "Deployment Risk Analytics com o GitHub e Jenkins" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+
+  * [Criar uma cadeia de ferramentas customizada ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
 
 
-## Configurando o GitHub Enterprise and Issues no Bluemix Dedicated
+## Configurando o GitHub Enterprise and Issues no {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #configghe}
 
  **Nota:** estas instruções se aplicam ao {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. Se você estiver usando sua própria versão gerenciada do {{site.data.keyword.ghe_short}}, algumas etapas poderão ser diferentes, dependendo de seus procedimentos internos.
@@ -580,30 +614,37 @@ selecione o tipo de repositório:
 ## Configurando o GitLab
 {: #gitlab}
 
-GitLab é um serviço de hospedagem baseado na web para repositórios Git. É possível ter ambas as cópias local e remota de seus repos, o que facilita a colaboração.
+GitLab é um serviço de hospedagem baseado na web para repositórios Git. É possível ter ambas as cópias local e remota de
+seus repos, o que
+facilita a colaboração.
 
 É possível configurar o GitLab como uma integração de ferramenta em sua cadeia de ferramentas para que seja possível gerenciar o código-fonte em um repositório novo ou existente em GitLab.com ou na instância do GitLab de sua empresa. Envolva-se na codificação social por meio de wikis, rastreamento de problemas e solicitações de mesclagem.
 
 Se estiver configurando esta integração de ferramenta conforme estiver criando a cadeia de ferramentas, siga estas etapas:
 
 1. Se você estiver armazenando seu código-fonte em um repositório GitLab, na seção Integrações configuráveis, clique em **GitLab**. Se você estiver configurando essa integração de ferramenta no {{site.data.keyword.Bluemix_notm}} Public e não tiver autorizado o {{site.data.keyword.Bluemix_notm}} a acessar o GitLab, clique em **Autorizar** para acessar o website GitLab. Se você não tiver uma sessão ativa do GitLab, será solicitado que efetue login. Clique em **Autorizar aplicativo** para permitir que o {{site.data.keyword.Bluemix_notm}} acesse sua conta do GitLab. Se você tiver uma sessão ativa do GitLab, mas não tiver inserido sua senha recentemente, poderá ser solicitado que insira sua senha do GitLab para confirmar.
-1. Se você estiver usando um repositório em seu próprio servidor GitLab, na seção Integrações configuráveis, clique em **Incluir servidor customizado**. Digite um título para seu servidor GitLab customizado e especifique a URL raiz para o servidor. Insira seu token de acesso pessoal e, em seguida, clique em **Salvar integração customizada**. 
- 
+1. Se você estiver usando um repositório em seu próprio servidor GitLab, na seção Integrações configuráveis, clique em **Incluir servidor customizado**.
+
+ **Importante**: a rede deve ser capaz de acessar o servidor GitLab de destino por meio de um ambiente do {{site.data.keyword.Bluemix_notm}} Dedicated.
+
+ Digite um título para seu servidor GitLab customizado e especifique a URL raiz para o servidor. Insira seu token de acesso pessoal e, em seguida, clique em **Salvar integração customizada**.
+
   **Dica**: se você não tiver um token de acesso pessoal, poderá criar um:
-  
+
      a. Em qualquer página do GitLab, clique em seu ícone do perfil e, em seguida, clique em **Configurações**.
-   
+
      b. Na página Tokens de acesso, digite o nome do aplicativo para o qual você deseja criar um token de acesso pessoal.
-     
+
      c. Opcional. Escolha uma data de validade para o token de acesso.
-     
+
      d. Marque a caixa de seleção **api** para definir o acesso para o token pessoal.
-     
+
      e. Clique em **Criar token de acesso pessoal**.
-   
+
      f. Copie o token em um local seguro ou app de gerenciamento de senha. Por razões de segurança, após sair da página, você não pode mais ver o token.
 
-1. Revise os locais de repositório de destino padrão para os repositórios GitLab. Esses repos são clonados a partir dos mesmos repos de amostra. Se necessário, mude os nomes dos repos de destino.
+1. Revise os locais de repositório de destino padrão para os repositórios GitLab. Esses repos são clonados a partir dos mesmos
+repos de amostra. Se necessário, mude os nomes dos repos de destino.
 
 Se você tiver uma cadeia de ferramentas e estiver incluindo esta integração de ferramenta nela, siga essas etapas:
 
@@ -645,7 +686,9 @@ Jenkins é uma ferramenta de software livre baseada no servidor que constrói e 
 
 **Importante:** Antes de criar uma integração de ferramenta Jenkins, deve-se ter um servidor Jenkins.
 
-Com a integração de ferramenta Jenkins, é possível enviar notificações de tarefas do Jenkins para outras ferramentas em sua cadeia de ferramentas, como Slack e PagerDuty. Para rastrear o código em implementações, é possível incluir mensagens de implementação nas confirmações do Git e seus problemas Git ou JIRA relacionados. É possível também visualizar suas implementações na página Conexões da cadeia de ferramentas. É possível alimentar resultados de teste para o {{site.data.keyword.DRA_short}}, incluir portas de qualidade automatizadas e rastrear seu risco de implementação.
+Com a integração de ferramenta Jenkins, é possível enviar notificações de tarefas do Jenkins para outras ferramentas em sua cadeia de ferramentas, como Slack e PagerDuty. 
+Para rastrear o código em implementações, é possível incluir mensagens de implementação nas confirmações do Git e
+em seus problemas Git ou JIRA relacionados. É possível também visualizar suas implementações na página Conexões da cadeia de ferramentas. É possível alimentar resultados de teste para o {{site.data.keyword.DRA_short}}, incluir portas de qualidade automatizadas e rastrear seu risco de implementação.
 
 Configure o Jenkins para automatizar a construção, o teste e a implementação contínuos de seus apps:
 
@@ -675,9 +718,8 @@ Configure o Jenkins para automatizar a construção, o teste e a implementação
 
 Para saber mais sobre o Jenkins, veja o [artigo Jenkins ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){: new_window} no IBM Cloud Garage Method ou faça este tutorial:
 
-  * [Deployment Risk Analytics com GitHub e Jenkins ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}
-  
-  
+  * [Assegurar implementações de qualidade usando a cadeia de ferramentas "Deployment Risk Analytics com o GitHub e Jenkins" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+
 ## Configurando o JIRA
 {: #jira}
 
@@ -726,7 +768,7 @@ Configure o JIRA para planejar, rastrear e entregar código de qualidade:
 
 Para saber mais sobre o JIRA, veja o [artigo JIRA ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/code/tool_jira/){: new_window} no IBM Cloud Garage Method ou faça este tutorial:
 
-  * [Obter insights de desenvolvedor e equipe em um projeto JIRA e GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_dev_insights_team_dynamics){:new_window}
+  * [Obter insights usando a cadeia de ferramentas "Developer Insights e Team Dynamics com o GitHub e o JIRA" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain){:new_window}
 
 
 ## Configurando o Nexus
@@ -768,7 +810,7 @@ Configure o Gerenciador de Repositório do Nexus para armazenar artefatos de con
 
 1. Clique em
 **Criar integração**.
-1. Na cadeia de ferramentas, clique no cartão do repositório Nexus com o qual deseja trabalhar. O website Nexus é aberto, no qual é possível visualizar os conteúdos do repositório.
+1. Na cadeia de ferramentas, clique no cartão do repositório Nexus com o qual deseja trabalhar. O website do Nexus é aberto, no qual é possível visualizar os conteúdos do repositório.
 1. Opcional: se você estiver usando uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Public e desejar construir seu app usando o Nexus com npm, configure seu pipeline para incluir uma tarefa de construção npm. Para obter instruções para configurar a tarefa de construção, veja a seção [Configurando uma tarefa de construção npm do Nexus em seu pipeline](#config_nexus_npm).
 1. Opcional: se você estiver usando uma cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Public e desejar construir seu app usando o Nexus com Maven, configure seu pipeline para incluir uma tarefa de construção Maven. Para obter instruções para configurar a tarefa de construção, veja a seção [Configurando uma tarefa de construção Maven do Nexus em seu pipeline](#config_nexus_maven).
 
@@ -863,7 +905,7 @@ Configure uma ferramenta customizada para que ela trabalhe com outras ferramenta
 
 Para saber mais sobre a ferramenta customizada, veja [Introduzindo a integração de ferramenta customizada para cadeias de ferramentas do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window} ou faça este tutorial:
 
-  * [Incluir uma integração de ferramenta customizada em uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_add_custom_tool){:new_window}
+  * [Incluir uma integração de ferramenta customizada em uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/add-a-custom-tool-integration-to-a-toolchain){:new_window}
 
 
 ## Configurando o PagerDuty
@@ -906,8 +948,9 @@ que você especificou quando configurou esta integração de ferramenta para sua
 
 Para saber mais sobre o PagerDuty, veja o [artigo do PagerDuty ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){: new_window} no IBM Cloud Garage Method ou faça este tutorial e o curso de advogado do Garage Method:
 
-  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices?task=5){:new_window}
-  * [Torne-se um advogado do Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
+  * [Usar a cadeia de ferramentas "Desenvolver e testar microsserviços no Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+
+  * [Tornar-se um porta-voz do Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
 
 
 ## Configurando o Rational Team Concert
@@ -929,18 +972,18 @@ Configure o Rational Team Concert para praticar uma abordagem DevOps e entrega c
 1. Digite a senha que você usa para acessar o servidor Rational Team Concert.
 1. Se você tiver uma área do projeto Rational Team Concert que deseja incluir em sua cadeia de ferramentas, siga estas etapas:
 
- a. Na lista **Tipo de área do projeto**, selecione **Área do projeto existente**. 
+ a. Na lista **Tipo de área do projeto**, selecione **Área do projeto existente**.
 
  b. Digite o nome da área do projeto para incluir em sua cadeia de ferramentas.
- 
+
 1. Se você desejar criar uma área do projeto do Rational Team Concert para incluir em sua cadeia de ferramentas, siga estas etapas:
- 
- a. Na lista **Tipo de área do projeto**, selecione **Nova área do projeto**. 
+
+ a. Na lista **Tipo de área do projeto**, selecione **Nova área do projeto**.
 
  b. Digite um nome para a nova área do projeto para incluir em sua cadeia de ferramentas.
- 
+
  c. Digite o nome do modelo de processo do Rational Team Concert a ser usado para criar o projeto.
- 
+
 1. Para rastrear a implementação de mudanças código para o projeto criando tags e comentários sobre itens de trabalho, selecione a caixa de seleção **Rastrear implementação de mudanças de código**.
 1. Clique em
 **Criar integração**.
@@ -954,10 +997,7 @@ Para saber mais sobre o Rational Team Concert, veja o [artigo IBM Rational Team 
 ## Configurando o Sauce Labs
 {: #saucelabs}
 
-O Sauce Labs executa testes de unidade funcional. Quando o suíte de testes do Sauce Labs é configurado como uma tarefa de teste no
-{{site.data.keyword.deliverypipeline}}, o suíte de testes pode executar testes em relação a seu app da web ou móvel como parte de seu
-processo de entrega contínua. Esses testes podem fornecer um controle de fluxo valioso para seus projetos, atuando como gates para impedir a
-implementação de um código ruim.
+O Sauce Labs executa testes de unidade funcional. Quando o suíte de testes do Sauce Labs é configurado como uma tarefa de teste no {{site.data.keyword.deliverypipeline}}, o suíte de testes pode executar testes em relação a seu app da web ou móvel como parte de seu processo de entrega contínua. Esses testes podem fornecer um controle de fluxo valioso para seus projetos, atuando como gates para impedir a implementação de um código ruim.
 
  **Nota:** Essa integração de ferramenta está disponível somente no {{site.data.keyword.Bluemix_notm}} Public.
 
@@ -981,10 +1021,10 @@ forma que um usuário pode usar um website ou um aplicativo:
 
 ### Saiba mais sobre o Sauce Labs
 
-Para saber mais sobre o Sauce Labs, veja o [artigo Sauce Labs ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais:
+Para saber mais sobre o Sauce Labs, consulte o artigo [Sauce Labs ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: new_window} no IBM Cloud Garage Method ou execute este tutorial:
 
-  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}
-  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Usar a cadeia de ferramentas "Desenvolver e testar microsserviços no Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+
 
 
 ## Configurando o Slack
@@ -1001,8 +1041,7 @@ canais são retidas para que seja possível procurá-las.
 Configure o Slack para recuperar notificações sobre sua cadeia de ferramentas a partir das integrações de ferramenta, como atividades de
 teste e de implementação:
 
-1. Se você estiver configurando esta integração de ferramenta conforme estiver criando a cadeia de ferramentas, na seção Integrações
-configuráveis, clique em **Slack**.
+1. Se você estiver configurando esta integração de ferramenta conforme estiver criando a cadeia de ferramentas, na seção Integrações configuráveis, clique em **Slack**.
 1. Se você tiver uma cadeia de ferramentas e estiver incluindo essa integração de ferramenta nela, no painel do DevOps, na página Cadeias de ferramentas, clique na cadeia de ferramentas para abrir sua página Visão geral. Como alternativa, na página Visão geral do app, no cartão do Continuous Delivery, clique em **Visualizar cadeia de ferramentas** e, em seguida, em **Visão geral**.
 
  a. Clique em **Incluir uma ferramenta**.
@@ -1024,11 +1063,11 @@ configuráveis, clique em **Slack**.
 
 ### Saiba mais sobre o Slack
 
-Para saber mais sobre o Slack, veja o [artigo Slack ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: new_window} no IBM Cloud Garage Method ou faça estes tutoriais e o curso de advogado do Garage Method:
+Para saber mais sobre o Slack, consulte o artigo [Slack ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: new_window} no IBM Cloud Garage Method ou execute este tutorial e o curso de defensor do Garage Method:
 
-  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window}
-  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
-  * [Torne-se um advogado do Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
+  * [Usar a cadeia de ferramentas "Desenvolver e testar microsserviços no Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+
+  * [Tornar-se um porta-voz do Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
 
 
 ## Configurando o SonarQube
@@ -1058,3 +1097,35 @@ Configure o SonarQube para continuamente analisar e medir a qualidade de seu có
 ### Saiba mais sobre o SonarQube
 
 Para saber mais sobre o SonarQube, veja o [artigo SonarQube ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window} no IBM Cloud Garage Method.
+
+
+## Incluindo o UrbanCode Deploy (Beta)
+{: #urbancodedeploy}
+
+O IBM UrbanCode Deploy simplifica e automatiza a implementação do aplicativo. Ele usa uma ferramenta
+gráfica de fluxograma para criar processos automatizados que implementam, fazem upgrade, recuperam e
+desinstalam aplicativos. Usando essas tarefas automatizadas, você move seus aplicativos através de cada
+estágio no pipeline de desenvolvimento, incluindo ambientes de desenvolvimento, teste e produção.
+
+**Nota:** Essa integração de ferramenta está disponível somente no {{site.data.keyword.Bluemix_notm}} Public. Ela é pré-configurada e não requer parâmetros de configuração. Não é possível reconfigurar essa integração de ferramenta.
+
+Para visualizar as tendências de implementação entre aplicativos, equipes e ambientes e localizar
+gargalos no pipeline de entrega e quais áreas são mais eficientes, inclua a integração de ferramenta UrbanCode
+Deploy.
+
+1. No painel do DevOps, clique em **Cadeias de ferramentas**. Clique na cadeia de
+ferramentas na qual você deseja incluir o UrbanCode Deploy. Como alternativa, na página Visão geral do app, no cartão do Continuous Delivery, clique em **Visualizar cadeia de ferramentas** e, em seguida, em **Visão geral**.
+
+ a. Clique em **Incluir uma ferramenta**.
+
+ b. Na seção Integrações de ferramentas, clique em **UrbanCode Deploy**.
+
+1. Clique em
+**Criar integração**.
+1. Em sua cadeia de ferramentas, clique em **UrbanCode Deploy**. Para ver dados de
+um servidor UrbanCode Deploy no Delivery Insights, deve-se configurar uma instância do DevOps Connect,
+instalar uma correção no servidor e, em seguida, conectar esse servidor ao DevOps Connect. Para obter mais informações, consulte [Mostrando dados de servidores do IBM UrbanCode Deploy](/docs/services/DevOpsInsights/uc_insights_connect_ucd.html){: new_window}.
+
+### Saiba mais sobre o UrbanCode Deploy
+
+Para saber mais sobre o UrbanCode Deploy, consulte o artigo [IBM UrbanCode Deploy ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_ibm_urbancode_deploy/){: new_window} no IBM Cloud Garage Method.

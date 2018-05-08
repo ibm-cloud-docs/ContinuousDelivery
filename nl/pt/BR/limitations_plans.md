@@ -1,26 +1,58 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-7-24"
----
-<!-- Copyright info at top of file: REQUIRED
-    The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be surrounded by 3 dashes.
-    The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
-    Indentation as per the previous template must be preserved.
--->
+  years: 2016, 2018
+lastupdated: "2018-4-18"
 
-{:new_window: target="_blank"}
+---
+
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
 
 # Limitações e uso do plano
-{: #deliverypipeline_plans}
-{: #free_deprecation}
+{: #limitations_usage}
 
 O uso do {{site.data.keyword.contdelivery_full}} está limitado a operações de construção, implementação, teste e em andamento de aplicativos na plataforma do {{site.data.keyword.Bluemix_notm}} ou em outras ofertas de plataforma como serviço ou infraestrutura como serviço compatíveis.
+
+## Usuários autorizados
+{: #authorized_users}
+
+Os planos de serviço do {{site.data.keyword.contdelivery_short}} são definidos e
+precificados com base no número de usuários autorizados de uma instância de serviço. Quem contribui para um
+esforço deve ser contado como um usuário autorizado, incluindo:
+
+ * Os usuários que interagem com problemas, conselhos de problemas, código-fonte ou outros artefatos em
+um repositório do {{site.data.keyword.gitrepos}}.
+ * Os usuários que manipulam, acionam (seja diretamente na UI ou indiretamente confirmando em um
+repositório) ou visualizam o status de um pipeline de entrega.
+ * Os usuários que interagem com o Eclipse Orion {{site.data.keyword.webide}}.
+ 
+### Como os usuários são contados?
+
+Os usuários autorizados são contados observando todos os usuários na organização do Cloud (org) que contém
+o serviço do {{site.data.keyword.contdelivery_short}}. 
+
+Para visualizar a lista de usuários em sua organização, na barra de menus, clique em
+**Gerenciar > Conta > Organizações do Cloud Foundry**.
+
+Também é possível visualizar todas as instâncias do
+serviço do {{site.data.keyword.contdelivery_short}}
+em sua conta e o número de usuários que são relatados em cada instância.
+
+1. Na barra de menus, clique em **Gerenciar > Conta > Organizações do Cloud
+Foundry**.
+2. Clique em **Painel de uso**.
+
+### O que acontece quando você excede os limites de seu plano de serviço? 
+
+Alguns planos de serviços podem ter outras limitações, como o número de tarefas do Delivery Pipeline que
+podem ser executadas ou o consumo de armazenamento. Para obter mais informações, consulte a descrição do plano
+no catálogo. Se quaisquer limitações do plano forem excedidas em um período de faturamento, o serviço poderá
+ser suspenso. Por exemplo, as tarefas do Delivery Pipeline podem não ser executadas para o restante do período
+de faturamento.
+
+## Uso do Delivery Pipeline
+{: #pipeline_usage}
 
 Os comportamentos de uso aceitáveis incluem, mas não estão limitados a estes comportamentos:
 
@@ -44,7 +76,6 @@ O {{site.data.keyword.gitrepos}} é construído no GitLab Community Edition e ho
  * Como o {{site.data.keyword.deliverypipeline}} fornece a integração contínua e entrega contínua para o {{site.data.keyword.Bluemix_notm}}, os recursos de integração contínua no GitLab não são suportados.
  * As funções de administração do GitLab não estão disponíveis porque elas são gerenciadas pela IBM.
  * O {{site.data.keyword.gitrepos}} pode não ser totalmente acessível.
-
 
 ## Informações sobre o usuário e conteúdo do Git Repos and Issue Tracking
 {: #git_projects}

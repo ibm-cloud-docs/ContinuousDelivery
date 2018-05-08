@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-7-17"
+  years: 2015, 2018
+lastupdated: "2018-2-26"
 
 ---
 
@@ -80,23 +80,31 @@ Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{sit
 
 * Para conceder acesso a um usuário que não é um membro da organização da cadeia de ferramentas, siga estas etapas:
 
-   a. Na barra de menus, clique em **Gerenciar > Conta > Organizações**.
+   a. Na barra de menus, clique em
+**Gerenciar>Segurança>Identidade e
+acesso**.
 
-   b. Clique em **Convidar membros da equipe**.
+   b. Na linha para o usuário que você deseja designar acesso, selecione o menu **Ações** e, em seguida, clique em **Designar acesso**.
 
-   c. Selecione a organização para a qual você deseja convidar o usuário e clique em **Avançar**.
+   c. Selecione **Designar acesso usando o Cloud Foundry**.
 
-   d. Selecione os espaços que você deseja permitir que o usuário acesse.
+   d. Selecione **Designar organização**.
 
-   e. Selecione a função para designar aos espaços selecionados na organização.
+   e. Designe o acesso de usuário:
 
-     **Nota:** por padrão, os gerenciadores da organização têm privilégios integrais de administrador para todas as cadeias de ferramentas que estão associadas à organização. Para conceder privilégios integrais de administrador ao usuário, selecione a função de **Gerenciador**. As funções Gerente de faturamento e Auditor não afetam o acesso da cadeia de ferramentas. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para obter mais informações, veja [Gerenciando membros da equipe e funções](/docs/admin/users_roles.html){: new_window}.
+     * Escolha uma organização na qual incluir o usuário.
 
-   f. Selecione a opção para confirmar que você assume a responsabilidade financeira por todos os encargos incorridos na conta.
+     * Designe uma função de organização.
 
-   g. Insira o endereço de e-mail do usuário que você deseja convidar e clique em **Enviar**.
+     * Escolha uma região.
 
-   h. Depois que o usuário for um membro da organização, retorne à página Gerenciar da cadeia de ferramentas e inclua o usuário na cadeia de ferramentas.  
+     * Escolha um espaço.
+
+     * Designe uma função para o espaço selecionado na organização.
+
+     **Nota:** por padrão, os gerenciadores da organização têm privilégios integrais de administrador para todas as cadeias de ferramentas que estão associadas à organização. Para conceder privilégios integrais de administrador ao usuário, selecione a função de **Gerenciador**. As funções Gerente de faturamento e Auditor não afetam o acesso da cadeia de ferramentas. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para obter mais informações, consulte [Funções do Cloud Foundry](/docs/iam/cfaccess.html#cfaccess){: new_window}.
+
+   Depois que o usuário for um membro da organização, retorne à página Gerenciar da cadeia de ferramentas e inclua o usuário na cadeia de ferramentas.  
 
 
 ## Excluindo uma cadeia de ferramentas
@@ -114,6 +122,10 @@ Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{sit
 ##Consulte o tutorial: Usando cadeias de ferramentas
 {: #toolchain-tutorial}
 
-Consulte este tutorial no [IBM&reg; Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage){:new_window}:
-  * [Crie e use sua primeira cadeia de ferramentas (GitHub) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Criar e usar uma cadeia de ferramentas de microsserviços com o {{site.data.keyword.DRA_short}} (v2) ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+Consulte os tutoriais no [IBM &reg; Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage){:new_window}:
+
+  * [Criar e usar sua primeira cadeia de ferramentas usando a cadeia de ferramentas "Desenvolver um app Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+
+  * [Incluir uma cadeia de ferramentas em um app ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+
+  * [Usar a cadeia de ferramentas "Desenvolver e testar microsserviços no Cloud Foundry"![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.

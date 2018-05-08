@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-6-1"
+  years: 2016, 2018
+lastupdated: "2018-2-28"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -29,7 +29,9 @@ Conclua as tarefas a seguir para criar e configurar um pipeline.
 
 1. Na página Pipeline, clique em **INCLUIR ESTÁGIO**. A página Configuração do estágio é aberta.
 2. Configure o estágio.
-  1. Na guia **ENTRADA**, selecione uma entrada para o estágio.
+  1. Na guia **ENTRADA**, selecione uma entrada para o estágio.  Para estágios de
+Construção, a guia de entrada inclui um campo **Ramificação** para especificar a
+ramificação no repositório a ser usada para entrada.
   2. Na guia **TAREFAS**, inclua e configure pelo menos uma
 tarefa. O primeiro estágio normalmente tem pelo menos uma tarefa de construção.
 3. Clique em **SALVAR**.
@@ -90,7 +92,10 @@ tarefa de construção. Clique em **ENVIAR PARA** e selecione um
 destino.
 
 ###Incluindo serviços em apps
-É possível incluir serviços nos apps e gerenciá-los no painel do Bluemix ou na interface da linha de comandos (CLI) do Cloud Foundry. Também é possível emitir comandos da CLI do Cloud Foundry em scripts para tarefas do pipeline. Por
+É possível incluir serviços em seus apps e gerenciar esses serviços por meio do
+seu painel do {{site.data.keyword.Bluemix_notm}} ou na interface da linha de comandos (CLI) do Cloud
+Foundry.
+Também é possível emitir comandos da CLI do Cloud Foundry em scripts para tarefas do pipeline. Por
 exemplo, é possível incluir um serviço em um app no script de uma tarefa de implementação. Para
 obter mais informações sobre como incluir serviços, consulte
 [Incluindo
@@ -111,9 +116,9 @@ Para visualizar o log de tempo de execução de um aplicativo implementado, cliq
 Além dos logs de tarefas, é possível visualizar resultados de testes, artefatos
 gerados e mudanças de código para qualquer tarefa de construção.
 
-É possível também executar, cancelar ou configurar um estágio na página Histórico
-de estágios. Clique em **EXECUTAR** para executar um estágio ou em **CONFIGURAR** para configurar um estágio. Enquanto um estágio está em
+Também é possível executar, reimplementar, cancelar ou configurar um estágio na página Histórico de
+estágios. Clique em **EXECUTAR** para executar o estágio,
+**REIMPLEMENTAR** para reimplementar, caso seja uma tarefa de implementação ou
+**CONFIGURAR** para configurar um estágio. Enquanto um estágio está em
 execução, é possível cancelá-lo clicando no número da execução e depois clicando em
 **CANCELAR**.
-
-

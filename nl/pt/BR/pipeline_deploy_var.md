@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2017-7-10"
+  years: 2016, 2018
+lastupdated: "2018-1-23"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -15,6 +15,7 @@ lastupdated: "2017-7-10"
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
+{:tip:.tip}
 
 # Propriedades e recursos do ambiente
 {: #deliverypipeline_environment}
@@ -34,6 +35,9 @@ estão disponíveis a cada tarefa de um estágio.
 arquivo pode conter diversas propriedades. Cada propriedade deve estar em sua própria
 linha. Para separar os pares de chave/valor, use o sinal de igual (=).
 
+É possível examinar as propriedades do ambiente para uma tarefa de pipeline executando o
+comando `env` no script da tarefa.
+{:tip}
 
 As propriedades e recursos a seguir estão disponíveis, por padrão, em ambientes de pipeline.
 
@@ -101,7 +105,8 @@ As propriedades e recursos a seguir estão disponíveis, por padrão, em ambient
 | CF_ORGANIZATION_ID | Para implementações, o ID da organização a ser implementada. |
 | CF_SPACE | Para implementações, o nome do espaço a ser implementado. |
 | CF_SPACE_ID | Para implementações, o ID do espaço a ser implementado.  |
-| CF_TARGET_URL | Para implementações, a URL do IBM Bluemix&reg; ou do Cloud Foundry. |
+| CF_TARGET_URL | Para implementações, a URL do {{site.data.keyword.Bluemix_short}} ou do Cloud
+Foundry. |
 | IDS_VERSION | Para implementações, a versão do app que está sendo implementado ou o identificador de origem. |
 
 ## Recursos pré-instalados

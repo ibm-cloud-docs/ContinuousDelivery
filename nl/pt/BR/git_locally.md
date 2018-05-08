@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-7-12"
+  years: 2015, 2018
+lastupdated: "2018-3-21"
 
 ---
 
@@ -26,9 +26,11 @@ lastupdated: "2017-7-12"
 
 1. Para acessar o servidor Git fora do navegador, pode ser necessário criar um token de acesso pessoal ou chave SSH para autenticação. A tabela a seguir mostra o que você precisa fazer para configurar a autenticação.
 
-| Tipo de Git | Configuração de HTTPS | Uso de HTTPS |  Configuração de SSH |
+| Tipo de Git  | Configuração de HTTPS | Uso de HTTPS |  Configuração de SSH |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Token de acesso pessoal](/docs/ContinuousDelivery/git_working.html#create_pat) | O nome do usuário (não seu IBMid) do Git Repos and Issue tracking e o token de acesso pessoal | [Configurar a chave SSH](/docs/ContinuousDelivery/git_working.html#create_ssh) |
+| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Token de acesso pessoal](/docs/services/ContinuousDelivery/git_working.html#git_authentication) | O nome do usuário (não seu IBMid) do Git Repos and Issue tracking e o token de acesso pessoal | 
+[Configurar a chave
+SSH](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
 | GitHub público (github.com) | O token de acesso pessoal não é necessário, mas é possível configurar um e usá-lo | O nome do usuário e senha do GitHub ou o nome do usuário do GitHub e token de acesso pessoal ou apenas o token de acesso pessoal como o nome do usuário | [Configurar uma chave SSH do GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
 | GitHub corporativo | [Token de acesso pessoal](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | O nome do usuário (não seu IBMid) do GitHub Enterprise e o token de acesso pessoal | [Configurar a chave SSH do GitHub Enterprise](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
@@ -52,7 +54,7 @@ Crie uma cópia local dos arquivos de projeto clonando o repositório Git para q
 
 2. Reúna sua URL do repositório:
 
-   a. No GitHub, clique em **Clonar ou fazer download**. Para usar HTTPS, selecione **Usar HTTPS**. Para usar SSH, clique em **Usar SSH**. Clique no ícone de área de transferência para copiar a URL.
+   a. No GitHub, clique em **Clonar ou fazer download**. Para usar HTTPS, selecione **Usar HTTPS**.  Para usar SSH, clique em **Usar SSH**. Clique no ícone de área de transferência para copiar a URL.
 
    b. No Git Repos and Issue Tracking, selecione **HTTPS** ou **SSH** e copie a URL no campo.
 
@@ -77,13 +79,19 @@ Se você usa o Git Repos and Issue Tracking e tem algum problema, veja [Git Repo
 ## Desenvolvendo com o IBM Eclipse Tools
 {: #git_eclipse_tools}
 
-O IBM Eclipse Tools for Bluemix fornece plug-ins que podem ser instalados em um ambiente Eclipse para integrar seu IDE ao Bluemix.
+O IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} fornece plug-ins que podem ser
+instalados em um ambiente do Eclipse para integrar seu IDE com o {{site.data.keyword.Bluemix_notm}}.
 
-Com as ferramentas, é possível implementar os tipos de arquivos e servidores a seguir para o servidor Bluemix diretamente de seu Eclipse IDE ou do IBM WebSphere&reg; Application Server Developer Tools (WDT):
+Com as ferramentas, é possível implementar os tipos de arquivos e servidores a seguir no
+{{site.data.keyword.Bluemix_notm}} diretamente de seu Eclipse IDE ou do IBM WebSphere&reg;
+Application Server Developer Tools (WDT):
 
 * Arquivos JavaScript
 * Arquivos WAR (archive web)
 * Arquivos EAR (archive corporativo)
 * Servidores empacotados do perfil Liberty
 
-Também é possível criar serviços e vinculá-los ao seu app e definir variáveis de ambiente como parte da implementação. Para obter mais informações sobre IBM Eclipse Tools, [veja Implementando apps com o IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html).
+Também é possível criar serviços e vinculá-los ao seu app e definir variáveis de ambiente como parte da implementação. 
+Para obter mais informações sobre o IBM Eclipse Tools, consulte
+[Implementando apps com o IBM Eclipse
+Tools for {{site.data.keyword.Bluemix_notm}}](../../manageapps/eclipsetools/eclipsetools.html).
