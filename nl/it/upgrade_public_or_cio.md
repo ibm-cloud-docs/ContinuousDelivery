@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-5-19"
+  years: 2015, 2018
+lastupdated: "2018-3-20"
 
 ---
 
@@ -12,9 +12,9 @@ lastupdated: "2017-5-19"
 # Upgrade dei progetti riservati di IBM alle toolchain 
 {: #upgrade_public_or_cio}
 
-{{site.data.keyword.jazzhub}} si sta evolvendo in IBM Bluemix {{site.data.keyword.contdelivery_short}}. Come parte di tale cambiamento, i progetti saranno aggiornati in toolchain.
+{{site.data.keyword.jazzhub}} si sta trasformando in {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.contdelivery_short}}. Come parte di tale cambiamento, i progetti saranno aggiornati in toolchain.
 
-Quando il tuo progetto è pronto per l'upgrade, viene visualizzato un messaggio nella relativa pagina di panoramica. Puoi quindi eseguire l'upgrade del progetto a una toolchain su {{site.data.keyword.Bluemix_notm}} pubblico. La toolchain includerà un repository (repo) Whitewater {{site.data.keyword.ghe_short}} per il tuo codice sorgente. Whitewater {{site.data.keyword.ghe_short}} viene fornito ai team IBM per promuovere e abilitare il social coding in IBM. 
+Quando il tuo progetto è pronto per l'upgrade, viene visualizzato un messaggio nella relativa pagina di panoramica. Puoi quindi eseguire l'upgrade del progetto a una toolchain su {{site.data.keyword.Bluemix_notm}} Pubblico. La toolchain includerà un repository (repo) Whitewater {{site.data.keyword.ghe_short}} per il tuo codice sorgente. Whitewater {{site.data.keyword.ghe_short}} viene fornito ai team IBM per promuovere e abilitare il social coding in IBM. 
 {: shortdesc}
 
 Le toolchain **{{site.data.keyword.contdelivery_short}} sono approvate per il materiale riservato di IBM quando vengono utilizzate con Whitewater {{site.data.keyword.ghe_short}}.** Le Delivery Pipeline che ricevono input dai repository Whitewater {{site.data.keyword.ghe_short}} possono eseguire la distribuzione agli ambienti di preparazione (YS1) e a quelli pubblici (YP).
@@ -31,7 +31,7 @@ A volte si verifica un problema intermittente quando provi a modificare la desti
 
 Questo problema di norma si verifica solo quando modifichi la destinazione dalla pipeline in modo che la pipeline creata durante l'upgrade verrà distribuita correttamente alle stesse destinazioni come faceva in precedenza.
 
-Se provi a modificare la destinazione e si verifica questo problema, passa da una destinazione all'altra diverse volte finché i campi **Organizzazione** e **Spazio** non verranno compilati.
+Se provi a modificare la destinazione e si verifica questo problema, passa da una destinazione all'altra diverse volte finché i campi **Organizzazione** e **Spazio** non verranno completati.
 
 Un problema correlato causa occasionalmente il malfunzionamento delle distribuzioni alle destinazioni YS1. Questa situazione è rara; se si verifica, esegui nuovamente la pipeline.
 

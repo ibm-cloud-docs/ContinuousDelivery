@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 
-lastupdated: "2017-8-18"
+lastupdated: "2018-3-21"
 
 
 ---
@@ -14,10 +14,10 @@ lastupdated: "2017-8-18"
 # Creazione delle toolchain
 {: #toolchains_getting_started}
 
-Una *toolchain* è una serie di integrazioni dello strumento che supporta le attività di operazioni, sviluppo e distribuzione. La potenza collettiva di una toolchain è superiore alla somma delle relative integrazioni dello strumento.
+Una *toolchain* è una serie di integrazioni dello strumento che supporta le attività operative, di sviluppo e di distribuzione. La potenza collettiva di una toolchain è superiore alla somma delle relative integrazioni dello strumento.
 {: shortdesc}
 
-Le toolchain aperte sono disponibili negli ambienti pubblico e dedicato in {{site.data.keyword.Bluemix}}. Puoi creare una toolchain in due modi: utilizzando un template o creandola da un'applicazione.
+Le toolchain aperte sono disponibili negli ambienti Pubblico e Dedicato in {{site.data.keyword.Bluemix}}. Puoi creare una toolchain in due modi: utilizzando un template o creandola da un'applicazione.
 
 Ogni toolchain è associata a un'organizzazione (org) specifica e ogni utente che è membro di tale organizzazione può essere aggiunto per accedere alle proprie toolchain associate. Per ulteriori informazioni sul controllo dell'accesso alle toolchain, consulta [Gestione dell'accesso](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}. Prima di creare una toolchain, assicurati di lavorare nell'organizzazione in cui desideri creare la toolchain. L'organizzazione con cui stai lavorando è visualizzata nella barra dei menu. Per passare a un'altra organizzazione, fai clic sull'organizzazione nella barra dei menu e seleziona quella a cui vuoi passare.
 
@@ -34,14 +34,19 @@ Puoi utilizzare un template come punto di partenza nella [creazione di una toolc
 1. Nella pagina **Create a Toolchain**, fai clic su un template di toolchain.
 1. Esamina il diagramma della toolchain che stai per creare. Il diagramma mostra ogni integrazione dello strumento nella fase del suo ciclo di vita nella toolchain.
 
- **Suggerimento**: alcuni modelli della toolchain dispongono di più istanze di un'integrazione dello strumento. Ad esempio, il modello della toolchain Microservizi su {{site.data.keyword.Bluemix_notm}} Pubblico contiene tre istanze di GitHub e tre di Delivery Pipeline, una per ognuno dei tre microservizi.
+ **Suggerimento**: alcuni template della toolchain dispongono di più istanze di un'integrazione dello strumento. Ad esempio, il template della toolchain Microservizi su {{site.data.keyword.Bluemix_notm}} Pubblico contiene tre istanze di GitHub e tre di Delivery Pipeline, una per ognuno dei tre microservizi.
 
  Il diagramma nella seguente immagine è un esempio. Quando crei una toolchain, il diagramma mostra ogni integrazione dello strumento che fa parte della toolchain.
-![Diagramma toolchain](images/toolchain_diagram.png)
+![Diagramma toolchain](images/toolchain_diagram2.png)
 
-1. Rivedi le informazioni predefinite per la configurazione della toolchain. Il nome della toolchain la identifica in {{site.data.keyword.Bluemix_notm}}. Se vuoi utilizzare un nome diverso, modifica il nome della toolchain.  
+1. Rivedi le informazioni predefinite per la configurazione della toolchain:
+
+ * Il nome della toolchain la identifica in {{site.data.keyword.Bluemix_notm}}. Se vuoi utilizzare un nome diverso, modifica il nome della toolchain.
+ * La regione in cui creare la toolchain. Se vuoi utilizzare una regione differente, selezionala dall'elenco delle regioni disponibili.
+ * L'organizzazione in cui creare la toolchain. Se vuoi utilizzare una organizzazione differente, selezionala dall'elenco di organizzazioni disponibili.
+
 1. Nella sezione Integrazioni dello strumento, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
-1. Fai clic su **Crea**. Diversi passi vengono eseguiti automaticamente per configurare la tua toolchain. Le integrazioni dello strumento configurate a seconda della toolchain selezionata e se stai utilizzando {{site.data.keyword.Bluemix_notm}} Pubblico o {{site.data.keyword.Bluemix_notm}} Dedicato. Ad esempio, quando crei una toolchain Microservizi in {{site.data.keyword.Bluemix_notm}} Pubblico, deve essere eseguita questa procedura:
+1. Fai clic su **Create**. Diversi passi vengono eseguiti automaticamente per configurare la tua toolchain. Le integrazioni dello strumento configurate a seconda della toolchain selezionata e se stai utilizzando {{site.data.keyword.Bluemix_notm}} Pubblico o {{site.data.keyword.Bluemix_notm}} Dedicato. Ad esempio, quando crei una toolchain Microservizi in {{site.data.keyword.Bluemix_notm}} Pubblico, deve essere eseguita questa procedura:
 
  * La toolchain viene creata.
  * Se hai configurato Delivery Pipeline, le pipeline vengono create e attivate.
@@ -60,7 +65,7 @@ Puoi creare una toolchain dalla tua applicazione. La toolchain può supportare i
 1. Nella pagina di creazione della toolchain, rivedi il diagramma della toolchain che stai per creare. Il diagramma mostra ogni integrazione dello strumento nella fase del suo ciclo di vita nella toolchain.
 1. Rivedi le informazioni predefinite per la configurazione della toolchain. Il nome della toolchain la identifica in {{site.data.keyword.Bluemix_notm}}. Se vuoi utilizzare un nome diverso, modifica il nome della toolchain.
 1. Nella sezione Integrazioni dello strumento, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
-1. Fai clic su **Crea**.  Diversi passi vengono eseguiti automaticamente per configurare la tua toolchain. Le integrazioni dello strumento configurate a seconda della toolchain selezionata e se stai utilizzando {{site.data.keyword.Bluemix_notm}} Pubblico o {{site.data.keyword.Bluemix_notm}} Dedicato. Ad esempio, quando crei una toolchain da un'applicazione su {{site.data.keyword.Bluemix_notm}} Pubblico, devono essere eseguiti questi passi:
+1. Fai clic su **Create**. Diversi passi vengono eseguiti automaticamente per configurare la tua toolchain. Le integrazioni dello strumento configurate a seconda della toolchain selezionata e se stai utilizzando {{site.data.keyword.Bluemix_notm}} Pubblico o {{site.data.keyword.Bluemix_notm}} Dedicato. Ad esempio, quando crei una toolchain da un'applicazione su {{site.data.keyword.Bluemix_notm}} Pubblico, devono essere eseguiti questi passi:
 
  * La toolchain viene creata.
  * Se hai configurato Delivery Pipeline, le pipeline vengono create e attivate.
@@ -81,6 +86,9 @@ Dopo aver configurato la toolchain e le sue integrazioni dello strumento, puoi v
 {: #toolchain_tutorials}
 
 Guarda una di queste esercitazioni su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window}:
-  * [Crea e utilizza la tua prima toolchain (GitHub) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Crea una toolchain che utilizza Repository Git e tracciamento del problema ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
-  * [Aggiungi una toolchain a un'applicazione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/tutorial_app_to_toolchain?task=1){:new_window}
+
+  * [Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app" ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+
+  * [Aggiungi una toolchain a un'applicazione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.

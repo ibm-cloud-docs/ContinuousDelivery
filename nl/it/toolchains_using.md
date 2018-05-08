@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-7-17"
+  years: 2015, 2018
+lastupdated: "2018-2-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-7-17"
 # Utilizzo delle toolchain
 {: #toolchains-using}
 
-Le toolchain aperte sono disponibili negli ambienti pubblico e dedicato in {{site.data.keyword.Bluemix}}. Puoi utilizzare una toolchain per essere produttivo nella tua attività di sviluppo, distribuzione e  nelle operazioni giornaliere. Dopo che hai configurato una toolchain, puoi aggiungere, eliminare o configurare le integrazioni dello strumento e gestire l'accesso alla toolchain.
+Le toolchain aperte sono disponibili negli ambienti Pubblico e Dedicato in {{site.data.keyword.Bluemix}}. Puoi utilizzare una toolchain per essere produttivo nella tua attività di sviluppo, distribuzione e  nelle operazioni giornaliere. Dopo che hai configurato una toolchain, puoi aggiungere, eliminare o configurare le integrazioni dello strumento e gestire l'accesso alla toolchain.
 {: shortdesc}
 
 ## Configurazione di un'integrazione dello strumento
@@ -20,7 +20,7 @@ Le toolchain aperte sono disponibili negli ambienti pubblico e dedicato in {{sit
 
 Se hai differito la configurazione di un'integrazione dello strumento quando hai creato una toolchain, viene visualizzato un pulsante **Configure** nella relativa scheda. Se hai configurato un'integrazione dello strumento quando hai creato una toolchain, puoi aggiornare le impostazioni di configurazione.
 
-1. Nel dashboard DevOps, nella pagina **Toolchain**, fai clic su una toolchain per aprirne la pagina di panoramica. In alternativa, nella pagina della panoramica dell'applicazione, nella scheda di fornitura continua, fai clic su **View Toolchain** e quindi su **Overview**.
+1. Nel dashboard DevOps, nella pagina **Toolchain**, fai clic su una toolchain per aprirne la pagina Panoramica. In alternativa, nella pagina della panoramica dell'applicazione, nella scheda di fornitura continua, fai clic su **View Toolchain** e quindi su **Overview**.
 1. Se hai bisogno di configurare un'integrazione dello strumento per la prima volta, nella sua scheda, fai clic su **Configure**.
 
   ![Pulsante Configure](images/toolchain_tile_configure.png)
@@ -41,7 +41,7 @@ Se hai differito la configurazione di un'integrazione dello strumento quando hai
 Puoi aggiungere e configurare le integrazioni dello strumento per la tua toolchain. Le integrazioni dello strumento disponibili sono diverse a seconda se utilizzi {{site.data.keyword.Bluemix_notm}} Pubblico o {{site.data.keyword.Bluemix_notm}} Dedicato.
 
 1. Nel dashboard DevOps, nella pagina **Toolchain**, fai clic su una toolchain per aprirne la pagina Panoramica. In alternativa, nella pagina della panoramica dell'applicazione, nella scheda di fornitura continua, fai clic su **View Toolchain** e quindi su **Overview**.
-1. Per visualizzare un elenco di integrazioni dello strumento da aggiungere, fai clic su **Aggiungi uno strumento**.
+1. Per visualizzare un elenco di integrazioni dello strumento da aggiungere, fai clic su **Add a tool**.
 1. Fai clic sull'integrazione dello strumento che desideri aggiungere.
 1. Immetti tutte le informazioni necessarie per configurare l'integrazione dello strumento.
 1. Fai clic su **Create Integration** per aggiungere l'integrazione dello strumento alla tua toolchain.
@@ -79,23 +79,29 @@ Se stai utilizzando {{site.data.keyword.Bluemix_notm}} Dedicato per {{site.data.
 
 * Per concedere l'accesso a un utente che non è membro dell'organizzazione della toolchain, completa la seguente procedura:
 
-   a. Dalla barra dei menu, fai clic su **Gestisci > Account > Organizzazioni**.
+   a. Dalla barra dei menu, fai clic su **Manage > Security > Identity and Access**.
 
-   b. Fai clic su **Invita membri del team**.
+   b. Dalla riga per l'utente a cui vuoi assegnare l'accesso, seleziona il menu **Actions** e fai quindi clic su **Assign access**.
 
-   c. Seleziona l'organizzazione a cui vuoi inviare l'utente e fai clic su **Avanti**.
+   c. Seleziona **Assign access by using Cloud Foundry**.
 
-   d. Seleziona gli spazi ai quali può accedere l'utente.
+   d. Seleziona **Assign organization**.
 
-   e. Seleziona il ruolo da assegnare agli spazi selezionati nell'organizzazione.
+   e. Assegna l'accesso utente:
 
-     **Nota:** per impostazione predefinita, i gestori dell'organizzazione hanno tutti i privilegi di amministratore per tutte le toolchain associate ad essa. Per concedere tutti i privilegi di amministratore all'utente, seleziona il ruolo **Gestore**. I ruoli Gestore della fatturazione e Revisore non influenzano l'accesso alla toolchain. Puoi modificare i ruoli successivamente nella pagina della directory del team. Per ulteriori informazioni, vedi [Gestione dei membri dei team e dei ruoli](/docs/admin/users_roles.html){: new_window}.
+     * Scegli un'organizzazione a cui aggiungere l'utente.
 
-   f. Seleziona l'opzione per confermare che ti assumi la responsabilità finanziaria per tutti gli addebiti che si verificano nell'account.
+     * Assegna un ruolo organizzazione.
 
-   g. Immetti l'indirizzo email dell'utente che desideri invitare e fai clic su **Invia**.
+     * Scegli una regione.
 
-   h. Dopo che l'utente è un membro dell'organizzazione, ritorna alla pagina di gestione della toolchain e aggiungi l'utente alla toolchain.  
+     * Scegli uno spazio.
+
+     * Assegna un ruolo per lo spazio selezionato nell'organizzazione.
+
+     **Nota:** per impostazione predefinita, i gestori dell'organizzazione hanno tutti i privilegi di amministratore per tutte le toolchain associate ad essa. Per concedere tutti i privilegi di amministratore all'utente, seleziona il ruolo **Gestore**. I ruoli Gestore della fatturazione e Revisore non influenzano l'accesso alla toolchain. Puoi modificare i ruoli successivamente nella pagina della directory del team. Per ulteriori informazioni, consulta [Ruoli Cloud Foundry](/docs/iam/cfaccess.html#cfaccess){: new_window}.
+
+   Dopo che l'utente è un membro dell'organizzazione, ritorna alla pagina di gestione della toolchain e aggiungi l'utente alla toolchain.  
 
 
 ## Eliminazione di una toolchain
@@ -113,6 +119,10 @@ Puoi eliminare una toolchain e specificare quali delle integrazioni dello strume
 ##Visualizza una esercitazione: utilizzo delle toolchain
 {: #toolchain-tutorial}
 
-Guarda questa esercitazione su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window}:
-  * [Crea e utilizza la tua prima toolchain (GitHub) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow?task=1){:new_window}
-  * [Crea e utilizza una toolchain microservizi con {{site.data.keyword.DRA_short}} (v2) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+Guarda queste esercitazioni in [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window}:
+
+  * [Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app" ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+
+  * [Aggiungi una toolchain a un'applicazione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.

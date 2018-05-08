@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-08-15"
+  years: 2017, 2018
+lastupdated: "2018-1-9"
 
 ---
 
@@ -17,6 +17,8 @@ lastupdated: "2017-08-15"
 In un piano di distribuzione di una pipeline composita, un'attività rappresenta alcune attività significative di business associate a una distribuzione software. Le attività sono definite nei piani di distribuzione.
 
 {:shortdesc}
+
+**Nota**: questa funzione è disponibile solo nella regione Stati Uniti Sud.
 
 Molte attività hanno un punto di partenza, un punto di fine e una durata misurabile. Un'attività può essere di uno dei seguenti tipi:
 
@@ -37,7 +39,7 @@ Quando crei un'attività, seleziona il piano di distribuzione in cui desideri ag
 
 Dopo aver salvato un'attività, vengono visualizzate le icone di azione per l'attività. Puoi utilizzare le icone di attività per modificare lo stato dell'attività durante una distribuzione. Tutte le attività hanno l'icona di azione **Skip**. Le altre icone, come **Start**, vengono visualizzate quando il contenuto è appropriato per esse.
 
-![](../UCCR/images/deploy-plan-intro.png "Piano di distribuzione tipico")
+![Un tipico piano di distribuzione](../UCCR/images/deploy-plan-intro.png)
 
 *Figura 1. Un piano di distribuzione con attività e icone di azione*
 
@@ -45,7 +47,7 @@ Ogni attività in un piano di distribuzione è contenuta in una riga separata. L
 
 ### Tabella 1. Proprietà attività
 
-| Proprietà  | Description  |
+| Proprietà  | Descrizione |
 | ------------------ | ------------------ |
 | Nome               |Nome attività       |
 | Tipo               |Tipo di attività: manuale, Continuous Delivery Pipeline, ritardata, email, intestazione / nota, UrbanCode Deploy|             
@@ -175,7 +177,7 @@ Il gruppo è formato e viene aggiunta una barra di selezione del gruppo al piano
 
 La seguente figura mostra un gruppo parallelo. La barra di selezione del gruppo identifica il tipo di gruppo: parallelo <img class="inline" src="../UCCR/images/para-select.png"  alt="selezione gruppo parallelo"> o sequenziale <img class="inline" src="../UCCR/images/seq-select.png"  alt="selezione gruppo sequenziale">.
 
-(![](../UCCR/images/group-select.png "Piano di distribuzione tipico"))
+![Un tipico piano di distribuzione](../UCCR/images/group-select.png)
 
 *Figura 2. Un gruppo parallelo*
 
@@ -206,7 +208,7 @@ Le tag vengono visualizzate nelle righe dell'attività della pagina Deployment P
 
 Le tag utilizzate da un piano di distribuzione vengono visualizzate nella scheda **Versions** della pagina Deployment Plan Details. Per rendere un'attività non applicabile per una distribuzione, cancella le tag dell'attività. Le attività con lo stato "Not Applicable" non possono essere avviate.  
 
-![](../UCCR/images/task-tag-labels.png "Piano di distribuzione tipico")
+![Un tipico piano di distribuzione](../UCCR/images/task-tag-labels.png)
 
 *Figura 3. Tag attività*
 
@@ -231,7 +233,7 @@ Le dipendenze dell'attività sono visualizzate nella colonna Dependencies nella 
 
 Nella seguente figura, la prima attività non ha alcun prerequisito e due attività dipendono da essa. La seconda attività ha un prerequisito e nessuna attività dipendente.
 
-(![](../UCCR/images/plan-w-depend.png "Piano di distribuzione tipico"))
+![Un tipico piano di distribuzione](../UCCR/images/plan-w-depend.png)
 
 *Figura 4. Dipendenze dell'attività*
 

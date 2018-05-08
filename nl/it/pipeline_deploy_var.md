@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2017-7-10"
+  years: 2016, 2018
+lastupdated: "2018-1-23"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -15,6 +15,7 @@ lastupdated: "2017-7-10"
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
+{:tip:.tip}
 
 # Risorse e proprietà dell'ambiente
 {: #deliverypipeline_environment}
@@ -30,6 +31,8 @@ Puoi aggiungere quattro tipi di proprietà dalla scheda Proprietà ambiente:
 * **Sicurezza**: una chiave della proprietà con un valore a singola riga. Il valore viene visualizzato come degli asterischi.
 * **Proprietà**: un file nel repository del progetto. Questo file può contenere più proprietà. Ogni proprietà deve essere sulla propria riga. Per coppie di valore-chiave separate, utilizzare il segno uguale (=).
 
+Puoi esaminare le proprietà dell'ambiente per un lavoro della pipeline eseguendo il comando `env` nello script del lavoro.
+{:tip}
 
 Le seguenti proprietà e risorse sono disponibili per impostazione predefinita negli ambienti della pipeline.
 
@@ -47,7 +50,7 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 
 ### Proprietà di ambito generale
 
-| Proprietà ambiente | Description |
+| Proprietà ambiente | Descrizione |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | ARCHIVE_DIR | La directory per archiviare o in cui scaricare gli archivi. |
 | BUILD_ID | L'ID univoco per l'esecuzione del lavoro corrente.  |
@@ -65,7 +68,7 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 | IDS_URL | L'URL della pipeline corrente. |
 | IDS_VERSION | Il numero per la build che sta venendo distribuita o dell'identificativo SCM. Questa proprietà è disponibile solo nei lavori di distribuzione.
 | JOB_NAME | L'ID del lavoro univoco nel contesto della pipeline corrente. |
-| PIPELINE_KUBERNETES_CLUSTER_NAME | Il nome del cluster Kubernetes selezionato nel lavoro corrente.|
+| PIPELINE_KUBERNETES_CLUSTER_NAME | Il nome del cluster Kubernetes selezionato nel lavoro corrente. |
 | PIPELINE_STAGE_INPUT_JOB_ID | L'ID del lavoro che è l'input della fase corrente. |
 | PIPELINE_STAGE_INPUT_REV | La revisione dell'input della fase corrente. |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | L'ID univoco per l'esecuzione della pipeline. |
@@ -75,7 +78,7 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 
 ### Proprietà di runtime e dello strumento
 
-| Proprietà ambiente | Description |
+| Proprietà ambiente | Descrizione |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | ANT_HOME | Il percorso a Apache Ant 1.9.2. |
 | ANT_JAVA8_HOME | Il percorso a una versione 1.10+ di Apache Ant che richiede Java 8. |
@@ -90,14 +93,14 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 
 ### Proprietà di distribuzione
 
-| Proprietà ambiente | Description |
+| Proprietà ambiente | Descrizione |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | CF_APP | Per le distribuzioni, il nome dell'applicazione da distribuire. Questa proprietà è obbligatoria per la distribuzione e può essere specificata nello script stesso, nell'interfaccia di configurazione del lavoro di distribuzione o nel file `manifest.yml` del progetto. |
 | CF_ORG | Per le distribuzioni, il nome dell'organizzazione (org) a cui distribuire. |
 | CF_ORGANIZATION_ID | Per le distribuzioni, l'ID dell'organizzazione a cui distribuire. |
 | CF_SPACE | Per le distribuzioni, il nome dello spazio a cui distribuire. |
 | CF_SPACE_ID | Per le distribuzioni, l'ID dello spazio a cui distribuire.  |
-| CF_TARGET_URL | Per le distribuzioni, l'URL di IBM Bluemix&reg; o Cloud Foundry. |
+| CF_TARGET_URL | Per le distribuzioni, l'URL di {{site.data.keyword.Bluemix_short}} o Cloud Foundry. |
 | IDS_VERSION | Per le distribuzioni, la versione dell'applicazione che sta venendo distribuita o dell'identificativo della risorsa. |
 
 ## Risorse preinstallate

@@ -1,26 +1,45 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-7-24"
----
-<!-- Copyright info at top of file: REQUIRED
-    The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be surrounded by 3 dashes.
-    The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
-    Indentation as per the previous template must be preserved.
--->
+  years: 2016, 2018
+lastupdated: "2018-4-18"
 
-{:new_window: target="_blank"}
+---
+
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
 
 # Utilizzo e limitazioni del piano
-{: #deliverypipeline_plans}
-{: #free_deprecation}
+{: #limitations_usage}
 
 L'utilizzo di {{site.data.keyword.contdelivery_full}} è limitato alla creazione, distribuzione, verifica e alle operazioni in corso delle applicazioni sulla piattaforma {{site.data.keyword.Bluemix_notm}} o su altre offerte platform-as-a-service o infrastructure-as-a-service compatibili.
+
+## Utenti autorizzati
+{: #authorized_users}
+
+I piani di servizio {{site.data.keyword.contdelivery_short}} definiti e il loro prezzo è determinato in base al numero di utenti autorizzati di un'istanza del servizio. Chiunque contribuisca a uno sforzo deve essere considerato un utente autorizzato, compresi:
+
+ * Gli utenti che interagiscono con i problemi, con i pannelli dei problemi, con il codice sorgente o altre risorse utente in un repository {{site.data.keyword.gitrepos}}.
+ * Gli utenti che manipolano, attivano (direttamente nell'IU o indirettamente eseguendo il commit a un repository) o visualizzano lo stato di una delivery pipeline.
+ * Gli utenti che interagiscono con Eclipse Orion {{site.data.keyword.webide}}.
+ 
+### Come vengono contati gli utenti?
+
+Gli utenti autorizzati vengono contati verificando tutti gli utenti nell'organizzazione (org) Cloud che contiene il servizio {{site.data.keyword.contdelivery_short}}. 
+
+Per visualizzare l'elenco di utenti nella tua organizzazione, dalla barra dei menu fai clic su **Manage > Account > Cloud Foundry Orgs**.
+
+Puoi anche visualizzare tutte le istanze del servizio {{site.data.keyword.contdelivery_short}} nel tuo account e il numero di utenti segnalati rispetto a ciascuna istanza.
+
+1. Dalla barra dei menu, fai clic su **Manage > Account > Cloud Foundry Orgs**.
+2. Fai clic su **Usage Dashboard**.
+
+### Cosa succede quando si superano i limiti del proprio piano di servizio? 
+
+Alcuni piani di servizio possono avere altre limitazioni, come ad esempio il numero di lavori Delivery Pipeline che possono essere eseguiti o il consumo di archiviazione. Per ulteriori informazioni, consulta la descrizione del piano nel catalogo. Se qualcuna delle limitazioni del piano viene superata in un periodo di fatturazione, il servizio potrebbe essere sospeso. Ad esempio, i lavori Delivery Pipeline potrebbero non essere eseguiti per il resto del periodo di fatturazione.
+
+## Utilizzo di Delivery Pipeline
+{: #pipeline_usage}
 
 Le modalità di utilizzo accettabili includono, ma non limitate a, i seguenti comportamenti:
 
@@ -36,7 +55,7 @@ Le modalità di utilizzo che non sono consentite includono, ma non sono limitate
 
 A discrezione di IBM, gli utenti che violano i comportamenti di utilizzo accettabili dei servizi {{site.data.keyword.contdelivery_short}} o le [Linee guida di condotta di business di IBM ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/investor/governance/business-conduct-guidelines.html){: new_window} possono essere disabilitati senza preavviso. A discrezione di IBM, alcuni servizi possono essere ripristinati se gli utenti correggono i loro comportamenti di utilizzo dopo che sono stati informati dell'azione offensiva. Altrimenti, gli account possono essere sospesi o terminati.
 
-## Limitazioni di Repository Git e tracciamento del problema
+## Limitazioni di Git Repos and Issue Tracking
 {: #git_limitations}
 
 {{site.data.keyword.gitrepos}} è sviluppato su GitLab Community Edition e ospitato da IBM su {{site.data.keyword.Bluemix_notm}}; tuttavia, alcune opzioni GitLab non sono disponibili:
@@ -45,8 +64,7 @@ A discrezione di IBM, gli utenti che violano i comportamenti di utilizzo accetta
  * Le funzioni di gestione GitLab non sono disponibili perché sono gestite da IBM.
  * {{site.data.keyword.gitrepos}} potrebbe non essere completamente accessibile.
 
-
-## Informazioni sugli utenti e contenuto di Repository Git e tracciamento del problema
+## Informazioni sugli utenti e contenuto di Git Repos and Issue Tracking
 {: #git_projects}
 
 Sono disponibili tre tipi di progetti {{site.data.keyword.gitrepos}}:

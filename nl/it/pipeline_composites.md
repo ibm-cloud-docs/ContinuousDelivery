@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-8-18"
+  years: 2017, 2018
+lastupdated: "2018-2-26"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,12 +22,14 @@ lastupdated: "2017-8-18"
 Con la funzione delle pipeline composite per {{site.data.keyword.deliverypipeline}}, puoi gestire i processi di fornitura continua e di integrazione continua ripetibili per le applicazioni software correlate.
 {:shortdesc}
 
+**Nota**: questa funzione è disponibile solo nella regione Stati Uniti Sud.
+
 Crea le pipeline composite per gestire le applicazioni in una toolchain. Se la tua toolchain contiene applicazioni distribuite da {{site.data.keyword.deliverypipeline}}, puoi impostare la pipeline composita in modo che venga aggiornata quando aggiungi o rimuovi le delivery pipeline dalla toolchain. Puoi anche aggiungere le applicazioni da origini esterne alla pipeline composita.
 
 ## Creazione di una pipeline composita
 {: #compositepipeline_create_for_toolchain}
 
-1. Dal menu sulla barra dei menu di {{site.data.keyword.Bluemix_notm}}, fai clic su **DevOps**.
+1. Dal menu nella barra dei menu {{site.data.keyword.Bluemix_notm}}, fai clic su **Servizi** e quindi su **DevOps**.
 
 2. Dal menu di navigazione di sinistra, fai clic su **Pipelines**.
 
@@ -49,7 +51,7 @@ Crea le pipeline composite per gestire le applicazioni in una toolchain. Se la t
 
   **Nota:** devi abilitare la sincronizzazione automatica prima di modificare le pipeline della toolchain. Nella pipeline composita vengono incluse solo le modifiche effettuate mentre la sincronizzazione automatica è abilitata.
 
-9. Fai clic su **Crea**.
+9. Fai clic su **Create**.
 
 Le fasi che hai configurato vengono automaticamente associate allo spazio appropriato nella tua organizzazione e viene creato un piano di distribuzione per la pipeline composita.
 
@@ -135,10 +137,10 @@ Devi abilitare la sincronizzazione automatica nella pipeline composta prima di p
 
 Per visualizzare i log di un lavoro, espandi l'applicazione che contiene il lavoro e fai clic su di esso.
 
-## Utilizzo di IBM Bluemix DevOps Connect per l'integrazione con IBM UrbanCode Deploy
+## Utilizzo di IBM {{site.data.keyword.Bluemix_notm}} DevOps Connect per l'integrazione con IBM UrbanCode Deploy
 {: #compositepipeline_devops_connect}
 
-IBM Bluemix DevOps Connect coordina la comunicazione tra la tua installazione di IBM&reg; UrbanCode&reg; Deploy in loco e {{site.data.keyword.contdelivery_short}}. Dopo aver installato DevOps Connect, puoi creare le integrazioni che puoi utilizzare per gestire le applicazioni IBM UrbanCode Deploy con le pipeline composite.
+{{site.data.keyword.Bluemix_notm}} DevOps Connect coordina la comunicazione tra la tua installazione di IBM&reg; UrbanCode&reg; Deploy in loco e {{site.data.keyword.contdelivery_short}}. Dopo aver installato DevOps Connect, puoi creare le integrazioni che puoi utilizzare per gestire le applicazioni IBM UrbanCode Deploy con le pipeline composite.
 
 **Prerequisiti**
 
@@ -195,7 +197,7 @@ Se la tua integrazione ha esito positivo, puoi aggiungere le applicazioni IBM Ur
 ## Aggiunta delle applicazioni da IBM UrbanCode Deploy
 {: #compositepipeline_add_apps}
 
-Se sei un membro di un'organizzazione che è stata integrata con IBM UrbanCode Deploy utilizzando DevOps Connect, puoi aggiungere le applicazioni a cui puoi accedere in UrbanCode Deploy alla pipeline composita. Per le istruzioni di installazione, consulta [Utilizzo di IBM Bluemix DevOps Connect per l'integrazione con IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
+Se sei un membro di un'organizzazione che è stata integrata con IBM UrbanCode Deploy utilizzando DevOps Connect, puoi aggiungere le applicazioni a cui puoi accedere in UrbanCode Deploy alla pipeline composita. Per le istruzioni di installazione, consulta [Utilizzo di IBM {{site.data.keyword.Bluemix_notm}} DevOps Connect per l'integrazione con IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
 
 Quando sei un membro di un'organizzazione collegata a IBM UrbanCode Deploy, puoi aggiungere le applicazioni UrbanCode Deploy alle pipeline composite, selezionare i processi dell'applicazione da includere nel piano di distribuzione e personalizzare la distribuzione delle applicazioni.
 
@@ -225,4 +227,7 @@ Quando sei un membro di un'organizzazione collegata a IBM UrbanCode Deploy, puoi
 {: #composite_pipeline-tutorial}
 
 Guarda questa esercitazione su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window}:
-  * [Crea e utilizza una toolchain microservizi con DevOps Insights (v2) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.
+
+  **Nota**: {{site.data.keyword.DRA_short}} è disponibile solo nella regione Stati Uniti Sud.

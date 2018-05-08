@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-6-8"
+  years: 2015, 2018
+lastupdated: "2018-2-26"
 
 ---
 
@@ -23,7 +23,7 @@ L'integrazione dello strumento {{site.data.keyword.gitrepos}} supporta i team pe
    * Tracciare i problemi e condividere le idee tramite il programma di traccia del problema
    * Documentare i progetti nel sistema wiki
 
-**Nota:** poiché questa integrazione dello strumento è creata in GitLab Community Edition e ospitata da IBM su Bluemix, sono disponibili alcune opzioni GitLab. Ad esempio, Delivery Pipeline fornisce l'integrazione e la fornitura continue per Bluemix; altrimenti, le funzioni di integrazione continua in GitLab non sono supportate. In aggiunta, le funzioni di gestione non sono disponibili perché sono gestite da IBM.
+**Nota:** poiché questa integrazione dello strumento è creata in GitLab Community Edition e ospitata da IBM sulla piattaforma {{site.data.keyword.Bluemix_notm}}, alcune opzioni GitLab non sono disponibili. Ad esempio, Delivery Pipeline fornisce l'integrazione e la fornitura continue per {{site.data.keyword.Bluemix_notm}}; altrimenti, le funzioni di integrazione continua in GitLab non sono supportate. In aggiunta, le funzioni di gestione non sono disponibili perché sono gestite da IBM.
 
 ## Utilizzo di {{site.data.keyword.gitrepos}} in locale
 {: #git_local}
@@ -32,7 +32,7 @@ Puoi accedere localmente ai repository Git memorizzati in {{site.data.keyword.gi
 
 **Suggerimento**: {{site.data.keyword.gitrepos}} supporta solo le connessioni HTTPS che utilizzano TLS1.2. Se usi Eclipse per stabilire una connessione, ti potrebbe essere richiesto di specificare questo protocollo per la tua versione di Java&trade; aggiungendo `-Dhttps.protocols=TLSv1.2` al tuo file eclipse.ini e riavviando quindi Eclipse.
 
-## Autenticazione con {{site.data.keyword.gitrepos}}  
+## Autenticazione presso {{site.data.keyword.gitrepos}}
 {: #git_authentication}
 
 I tuoi login e password {{site.data.keyword.Bluemix_notm}} sono utilizzati solo per l'autenticazione con {{site.data.keyword.gitrepos}} in un browser web. Non puoi utilizzare le tue credenziali utente {{site.data.keyword.Bluemix_notm}} per eseguire l'autenticazione da client Git esterni. Per completare le operazioni Git remote, come ad esempio `clone` o `push`, dal tuo repository Git locale, devi utilizzare un token di accesso personale o una chiave SSH per l'autenticazione con {{site.data.keyword.gitrepos}}.
@@ -58,7 +58,7 @@ Per creare una chiave SSH, consulta [How to create your SSH Keys ![Icona link es
 
 Per ulteriori informazioni, consulta [SSH ![icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git.ng.bluemix.net/help/ssh/README){:new_window}.
 
-## Limiti dimensione repository e file
+## Limiti dimensione repository e file fisici
 {: #git_limits}
 
 I file sono tassativamente limitati a 100 MB. Il limite di dimensione del repository consigliato è 1 GB. Se il tuo repository supera 1 GB, potresti ricevere un'email con una richiesta di riduzione della dimensione del repository.
@@ -68,5 +68,6 @@ I file sono tassativamente limitati a 100 MB. Il limite di dimensione del reposi
 
 Guarda una di queste esercitazioni su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window}:
 
-  * [Crea una toolchain che utilizza {{site.data.keyword.gitrepos}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window}
-  * [Crea e utilizza una toolchain microservizi con DevOps Insights (v2) ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd){:new_window}
+  * [Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app" ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.Impara come creare una toolchain aperta da un template e utilizzarla per la fornitura continua a un'applicazione "Hello World".
+
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}. Impara come creare una toolchain da un template con tre microservizi e utilizzare la toolchain per la fornitura continua di un negozio online.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-09-05"
+  years: 2015, 2018
+lastupdated: "2018-3-21"
 
 ---
 
@@ -43,6 +43,8 @@ Per [creare una pipeline ![Icona link esterno](../../icons/launch-glyph.svg "Ico
 1. Fai clic su **Cloud Foundry**.
 1. Se vuoi utilizzare un nome diverso per la pipeline, modifica il suo nome predefinito.
 1. Se vuoi utilizzare un nome diverso per l'applicazione, modifica il suo nome predefinito. Questo nome indica l'applicazione in cui distribuisce la pipeline.
+1. Se vuoi creare la pipeline in una organizzazione differente, modificane l'organizzazione (org) predefinita. Puoi creare le pipeline nelle organizzazioni a cui appartieni.
+1. Se vuoi creare la pipeline in uno spazio differente, modificane lo spazio predefinito. Puoi creare la pipeline in uno spazio che si trova nella tua organizzazione.
 1. Se non hai una toolchain, ne viene creata una con un nome predefinito. Se vuoi utilizzare un nome diverso per la toolchain, modifica il suo nome. Con la toolchain, puoi estendere le funzionalità della tua pipeline mediante l'integrazione con altri strumenti e servizi. Per ulteriori informazioni sulle toolchain, vedi [Creazione delle toolchain](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
 
  **Suggerimento**: le pipeline e le toolchain appartengono alle organizzazioni. Se fai parte di un'organizzazione che ha delle toolchain, puoi essere aggiunto al controllo dell'accesso per ogni toolchain associata. Dopo che sei stato aggiunto all'elenco del controllo dell'accesso per una toolchain, puoi visualizzare tale toolchain e tutte le pipeline associate, anche se non le hai create. Se ti vengono concessi i privilegi di amministratore, puoi anche modificare ed eliminare la toolchain. Per ulteriori informazioni sul controllo dell'accesso alle toolchain, consulta [Gestione dell'accesso](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
@@ -61,17 +63,19 @@ Per [creare una pipeline ![Icona link esterno](../../icons/launch-glyph.svg "Ico
    * Se vuoi biforcare un repository GitHub in modo da poter fornire le modifiche attraverso le richieste di importazione, seleziona **Fork**. Cerca la posizione del repository o selezionane uno dall'elenco di repository disponibili.
 
 1. Seleziona un repository o immetti un URL del repository.
-1. Fai clic su **Crea**. La pipeline viene creata, configurata e visualizzata nella pagina Panoramica della toolchain.
+1. Fai clic su **Create**. La pipeline viene creata, configurata e visualizzata nella pagina Panoramica della toolchain.
  ![Scheda pipeline](images/cd_pipeline.png)
-1. Se hai creato una pipeline nella toolchain che contiene una pipeline composita, la nuova pipeline viene aggiunta alla pipeline composita. Modifica il piano di distribuzione per includere le attività di distribuzione per la nuova pipeline. Consulta [Creazione di attività Delivery Pipeline](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}.
+1. Se hai creato una pipeline in una toolchain che contiene una pipeline composita, la nuova pipeline viene aggiunta alla pipeline composita. Modifica il piano di distribuzione per includere le attività di distribuzione per la nuova pipeline. Consulta [Creazione di attività Delivery Pipeline](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}.
 
 Per creare una [pipeline vuota ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} senza alcuna fase preconfigurata:
 
 1. Fai clic su **Personalizzato**.
 1. Se vuoi utilizzare un nome diverso per la pipeline, modifica il suo nome predefinito.
+1. Se vuoi creare la pipeline in una organizzazione differente, modificane l'organizzazione predefinita. Puoi creare le pipeline nelle organizzazioni a cui appartieni.
+1. Se vuoi creare la pipeline in uno spazio differente, modificane lo spazio predefinito. Puoi creare la pipeline in uno spazio che si trova nella tua organizzazione.
 1. Se non hai una toolchain, ne viene creata una con un nome predefinito. Se vuoi utilizzare un nome diverso per la toolchain, modifica il suo nome. Con la toolchain, puoi estendere le funzionalità della tua pipeline mediante l'integrazione con altri strumenti e servizi.
 1. Seleziona la toolchain che vuoi utilizzare o immetti un nome per la nuova toolchain da creare.
-1. Fai clic su **Crea**. Viene creata una pipeline vuota che viene rappresentata in forma di scheda nella pagina di panoramica della toolchain.
+1. Fai clic su **Create**. Viene creata una pipeline vuota che viene rappresentata in forma di scheda nella pagina di panoramica della toolchain.
 
 Da {{site.data.keyword.deliverypipeline}}, puoi modificare la tua configurazione, controllare lo stato delle creazioni, dell'applicazione distribuita e delle ultime distribuzioni, visualizzare i log più recenti e i dettagli di distribuzione oppure eliminare la tua pipeline.
 

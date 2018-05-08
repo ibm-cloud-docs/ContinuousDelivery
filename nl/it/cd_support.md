@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-18"
+  years: 2015, 2018
+lastupdated: "2018-3-26"
 
 ---
 
@@ -15,21 +15,27 @@ lastupdated: "2017-07-18"
 # Come ottenere aiuto e supporto per {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-Il team {{site.data.keyword.contdelivery_full}} monitora attivamente i forum Stack Overflow e developerWorks per le domande sul servizio {{site.data.keyword.contdelivery_short}} e DevOps Insights.   
+Il team {{site.data.keyword.contdelivery_full}} monitora attivamente il forum developerWorks per rilevare eventuali domande sulle toolchain e sul servizio {{site.data.keyword.contdelivery_short}}. Per fare una domanda nel forum, fai clic sul pulsante **Get help in the forum** ![Pulsante per ottenere assistenza nel forum](images/get_help_in_the_forum.png) in fondo alle pagine di {{site.data.keyword.contdelivery_short}} e toolchain.
 
 <table>
- <td align="center">
- <strong>Stack Overflow</strong>
-  <p>
-   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,devops-services" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
-   <p>
-    <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Si apre in una nuova scheda o finestra)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="Icona link esterno"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on Stack Overflow.</p></td>
+<tr>
+<th style="width:20%"> &nbsp; &nbsp; &nbsp;</th>
+ <th style="text-align:center;width=60%">
+ <strong>Fai una domanda</strong> </th>
+<th> &nbsp; &nbsp; &nbsp;</th>
+</tr>
+<tr>
+<td> </td>
   <td align="center">
-  <strong>dW Answers</strong>
+  <p>Ottieni assistenza rapidamente, direttamente da utenti di IBM {{site.data.keyword.contdelivery_short}} e altri servizi DevOps.</p>
+  <b>dW Answers</b>
+  <p>
+   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/ask-a-question.png" alt="Fai una domanda"/></a></p>
    <p>
-   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
-   <p>
-    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Si apre in una nuova scheda o finestra)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="Icona link esterno"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on dW Answers.</p></td>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Si apre in una nuova scheda o finestra)">Mostra le domande recenti <img class="image" src="../../icons/launch-glyph.svg" alt="Icona link esterno"/></a> sui servizi {{site.data.keyword.Bluemix_notm}} DevOps in dW Answers.</p>
+ </td>
+ <td></td>
+    </tr>
   </table>  
 
 
@@ -39,10 +45,10 @@ Se hai riscontrato problemi più gravi con il servizio {{site.data.keyword.contd
 
 1. Accedi a {{site.data.keyword.Bluemix_notm}}.
 1. Dalla barra del menu, fai clic su **Supporto** e quindi su **Aggiungi ticket**.
-1. Completa il modello per indicare di quale tipo di supporto hai bisogno.
+1. Completa il modulo per indicare di quale tipo di supporto hai bisogno.
 
 Per ulteriori informazioni su come aprire un ticket di supporto {{site.data.keyword.Bluemix_notm}} IBM o sui livelli di supporto e sulla gravità dei ticket, consulta [Come contattare il supporto](https://console.bluemix.net/docs/support/index.html#contacting-support).
 
 
-## Supporto per Bluemix
+## Supporto per {{site.data.keyword.Bluemix_notm}}
 Per altri problemi o domande sul tuo servizio {{site.data.keyword.Bluemix_notm}}, consulta [Come ottenere supporto cliente](https://www.{DomainName}/docs/support/index.html#getting-customer-support).
