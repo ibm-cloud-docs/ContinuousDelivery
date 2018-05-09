@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2015, 2017
-lastupdated: "2017-5-16"
+  years: 2015, 2018
+lastupdated: "2018-3-26"
 
 ---
 
@@ -12,57 +12,258 @@ lastupdated: "2017-5-16"
 {:codeblock:.codeblock}
 
 
-# ツールチェーンの提供とテンプレート  
+# ツールチェーンの使用可能状況、テンプレート、チュートリアル  
 {: #cd_about}  
 
-ツールチェーンは、{{site.data.keyword.Bluemix_notm}} Public と Dedicated で使用できます。ツールチェーンを作成するための開始点として、テンプレートを使用することができます。
+ツールチェーンは、{{site.data.keyword.Bluemix_notm}} Public と Dedicated で使用できます。 ツールチェーンを作成するための開始点として、テンプレートを使用することができます。
 {:shortdesc}
 
 ## {{site.data.keyword.Bluemix_notm}} Public と {{site.data.keyword.Bluemix_notm}} Dedicated で提供されているツールチェーンの比較
 {: #public_and_dedicated}
 
-{{site.data.keyword.Bluemix_notm}} Public は、[http://bluemix.net ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://bluemix.net){:new_window} によってアクセスされるアプリケーションを構築、実行、および管理するための、オープン・スタンダードのクラウド・ベース・プラットフォームです。{{site.data.keyword.Bluemix_notm}} Dedicated は、{{site.data.keyword.Bluemix_notm}} Public 環境とユーザーのネットワークの両方に安全に接続される専用 SoftLayer 環境で {{site.data.keyword.Bluemix_notm}} の機能を提供します。ユーザーの会社の {{site.data.keyword.Bluemix_notm}} Dedicated 環境には、{{site.data.keyword.Bluemix_notm}} Public サイトと同じツール統合が含まれていない可能性があります。
+{{site.data.keyword.Bluemix_notm}} Public は、[http://bluemix.net ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://bluemix.net){:new_window} によってアクセスされるアプリケーションを構築、実行、および管理するための、オープン・スタンダードのクラウド・ベース・プラットフォームです。 {{site.data.keyword.Bluemix_notm}} Dedicated は、{{site.data.keyword.Bluemix_notm}} Public 環境とユーザーのネットワークの両方に安全に接続される専用 SoftLayer 環境で {{site.data.keyword.Bluemix_notm}} の機能を提供します。 ユーザーの会社の {{site.data.keyword.Bluemix_notm}} Dedicated 環境には、{{site.data.keyword.Bluemix_notm}} Public サイトと同じツール統合が含まれていない可能性があります。
 
-ソース・コード管理と問題のトラッキングについて、{{site.data.keyword.Bluemix_notm}} Public では一般に github.com が使用されます。{{site.data.keyword.Bluemix_notm}} Dedicated でも github.com の使用は可能ですが、通常は、ユーザーの会社によってインストールされたか、IBM によって管理されている {{site.data.keyword.ghe_short}} が使用されます。
+ソース・コード管理と問題のトラッキングについては、{{site.data.keyword.Bluemix_notm}} Public では通常、{{site.data.keyword.gitrepos}} (IBM によってホストされ、[GitLab Community Edition ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://about.gitlab.com/){:new_window} 上に構築されている) または GitHub (github.com) を使用します。{{site.data.keyword.Bluemix_notm}} Dedicated でも github.com の使用は可能ですが、通常は、ユーザーの会社によってインストールされたか、IBM によって管理されている {{site.data.keyword.ghe_short}} が使用されます。
 
-{{site.data.keyword.contdelivery_short}} は、{{site.data.keyword.Bluemix_notm}} Public と {{site.data.keyword.Bluemix_notm}} Dedicated で使用可能です。ツールチェーンは、{{site.data.keyword.contdelivery_short}} を {{site.data.keyword.Bluemix_notm}} Public で使用しているか、それとも {{site.data.keyword.Bluemix_notm}} Dedicated で使用しているかによって異なります。
+{{site.data.keyword.contdelivery_short}} は、選択された地域内の {{site.data.keyword.Bluemix_notm}} Public と、{{site.data.keyword.Bluemix_notm}} Dedicated で使用できます。ツールチェーンは、{{site.data.keyword.contdelivery_short}} を {{site.data.keyword.Bluemix_notm}} Public で使用しているか、それとも {{site.data.keyword.Bluemix_notm}} Dedicated で使用しているかによって異なります。
 
-**ヒント**: ツールチェーンは米国南部地域でのみホストされます。異なる地域にアプリをデプロイするようにツールチェーンが構成されている場合でも、アプリは前述の地域にデプロイされます。
+**ヒント**: ツールチェーンは現在、すべての地域で使用できるわけではありませんが、お客様のアプリをすべての地域にデプロイするようにツールチェーンを構成することは可能です。詳しくは、<a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">複数の領域にわたるセキュアな Web アプリケーションのデプロイ</a>のチュートリアルを参照してください。
 
-|ツールチェーン|{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated|
+|ツールチェーン |{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
-|ツール統合|サポートされているツール統合のリストについては、[ツール統合の構成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}を参照してください。|使用可能なツール統合は、ご使用環境での {{site.data.keyword.contdelivery_short}} のセットアップ方法によって決まります。|
-|テンプレートからのツールチェーンの作成|[{{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://console.bluemix.net/devops){:new_window} にログインします。		|{{site.data.keyword.Bluemix_notm}} 上の Dedicated 環境にログインします。|
-|アプリからのツールチェーンの作成|アプリ・スターター・コードが取り込まれた新規 GitHub リポジトリーからアプリの継続的デリバリーが構成されます。|アプリ・スターター・コードが取り込まれた新規 GitHub または GitHub Enterprise リポジトリーからアプリの継続的デリバリーが構成されます。|  
-|Delivery Pipeline のデプロイメント領域|すべての {{site.data.keyword.Bluemix_notm}} Public 領域が Cloud Foundry デプロイメント・ジョブで使用可能です。|{{site.data.keyword.Bluemix_notm}} Dedicated 領域が使用可能です。特定の環境内での {{site.data.keyword.contdelivery_short}} のセットアップ方法に応じて、同じカスタマー・アカウント内のその他の Dedicated 領域または Local 領域も使用可能な可能性があります。|
-|Delivery Pipeline のデプロイメント・ジョブ|すべての[ジョブ・タイプ](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs)が使用可能です。|Dedicated 環境にインストールされていない {{site.data.keyword.Bluemix_notm}} サービスに依存するジョブ・タイプは、使用可能でない可能性があります。例えば、コンテナー・ビルドとコンテナー・デプロイのジョブ・タイプは、{{site.data.keyword.Bluemix_notm}} Container サービスがインストールされていない環境では使用できない可能性があります。|
+|ツール統合 		|サポートされているツール統合のリストについては、[ツール統合の構成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}を参照してください。 		|使用可能なツール統合は、ご使用環境での {{site.data.keyword.contdelivery_short}} のセットアップ方法によって決まります。			|
+|テンプレートからのツールチェーンの作成		|[{{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://console.bluemix.net/devops){:new_window} にログインします。		|{{site.data.keyword.Bluemix_notm}} 上の Dedicated 環境にログインします。			|
+|アプリからのツールチェーンの作成		|アプリ・スターター・コードが取り込まれた新規 GitHub リポジトリーからアプリの継続的デリバリーが構成されます。		|アプリ・スターター・コードが取り込まれた新規 GitHub または GitHub Enterprise リポジトリーからアプリの継続的デリバリーが構成されます。		|  
+|Delivery Pipeline のデプロイメント領域		|すべての {{site.data.keyword.Bluemix_notm}} Public 領域が Cloud Foundry デプロイメント・ジョブで使用可能です。 		|{{site.data.keyword.Bluemix_notm}} Dedicated 領域が使用可能です。 特定の環境内での {{site.data.keyword.contdelivery_short}} のセットアップ方法に応じて、同じカスタマー・アカウント内のその他の Dedicated 領域または Local 領域も使用可能な可能性があります。		|
+|Delivery Pipeline のデプロイメント・ジョブ		|すべての[ジョブ・タイプ](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs)が使用可能です。		|Dedicated 環境にインストールされていない {{site.data.keyword.Bluemix_notm}} サービスに依存するジョブ・タイプは、使用可能でない可能性があります。	例えば、コンテナー・ビルドとコンテナー・デプロイのジョブ・タイプは、{{site.data.keyword.Bluemix_notm}} Container サービスがインストールされていない環境では使用できない可能性があります。	|
 {: caption="表 1. {{site.data.keyword.Bluemix_notm}} Dedicated と {{site.data.keyword.Bluemix_notm}} Public のツールチェーンの違い" caption-side="top"}
 
 
 ## ツールチェーン・テンプレート
 {: #templates}
 
-[ツールチェーンを作成![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/create){: new_window}するための開始点としてテンプレートを使用することができます。ツールチェーン・テンプレートは、開発、デプロイメント、および運用の各タスクをサポートする特定のツール統合セットを含んでいます。
+[ツールチェーンを作成![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/create){: new_window}するための開始点としてテンプレートを使用することができます。 ツールチェーン・テンプレートは、開発、デプロイメント、および運用の各タスクをサポートする特定のツール統合セットを含んでいます。
 
-**ヒント**: ユーザーの会社の {{site.data.keyword.Bluemix_notm}} Dedicated 環境は、{{site.data.keyword.Bluemix_notm}} Public サイトと同じツールチェーン・テンプレートを含んでいない可能性があります。{{site.data.keyword.Bluemix_notm}} Public と {{site.data.keyword.Bluemix_notm}} Dedicated の両方で使用可能なツールチェーン・テンプレートは、{{site.data.keyword.Bluemix_notm}} Dedicated 上では異なるツール統合セットを含んでいる可能性があります。
+**ヒント**: ユーザーの会社の {{site.data.keyword.Bluemix_notm}} Dedicated 環境は、{{site.data.keyword.Bluemix_notm}} Public サイトと同じツールチェーン・テンプレートを含んでいない可能性があります。 {{site.data.keyword.Bluemix_notm}} Public と {{site.data.keyword.Bluemix_notm}} Dedicated の両方で使用可能なツールチェーン・テンプレートは、{{site.data.keyword.Bluemix_notm}} Dedicated 上では異なるツール統合セットを含んでいる可能性があります。
 
-一部のツールチェーン・テンプレートには、{{site.data.keyword.contdelivery_short}} サービスの一部であるツール統合が組み込まれています。そのサービスのインスタンスがまだ組織にない場合は、**「作成」**をクリックしてツールチェーンを作成した時に、無料で自動的にサービスが追加されます。詳細情報とご利用条件については、[Bluemix カタログ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/services/continuous-delivery/){:new_window}を参照してください。
+一部のツールチェーン・テンプレートには、{{site.data.keyword.contdelivery_short}} サービスの一部であるツール統合が組み込まれています。 そのサービスのインスタンスがまだ組織にない場合は、**「作成」**をクリックしてツールチェーンを作成すると、無料のライト・プランが選択されてサービスが自動的に追加されます。詳細情報とご利用条件については、[{{site.data.keyword.Bluemix_notm}} カタログ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/services/continuous-delivery/){:new_window} を参照してください。
 
-Microservices ツールチェーン・テンプレートは、Cloudant ストアによって支持されているカタログ API とオーダー API を使用してアプリをデプロイします。アプリのデプロイの一部として、無料の Cloudant サービス・インスタンスが作成されます。詳細情報とご利用条件については、[Bluemix カタログ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/services/cloudant-nosql-db/){:new_window}を参照してください。
+「Develop and test microservices on Cloud Foundry」ツールチェーンは、Cloudant ストアによってサポートされている Catalog API と Orders API を使用してアプリをデプロイします。アプリのデプロイの一部として、無料の Cloudant サービス・インスタンスが作成されます。 詳細情報とご利用条件については、[{{site.data.keyword.Bluemix_notm}} カタログ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/services/cloudant-nosql-db/){:new_window} を参照してください。
 
-|テンプレート|説明|チュートリアルを始める|
-|:----------|:------------------------------|:------------------|
-|[Garage Method cloud-native tutorial toolchain![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial){:new_window} 		|このツールチェーンは、Garage Method での特徴である DevOps プラクティスを示します。このツールチェーンは、継続的デリバリー、ソース管理、テストの自動化、および自動化されたモニタリングと運用について事前構成されています。このツールチェーンには、Node.js Express 4 で作成されたサンプル・アプリが付属しており、このアプリはさらなる拡張が可能です。![ツールチェーン内のツール](images/cloud-native-tc-tools.png)
-    |[Create and use your first toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window} 		|
-|[Microservices toolchain with {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Ftoolchain-demo){:new_window}    |このクラウド・ネイティブ・ツールチェーンでは、サンプルを使用して、3 つのマイクロサービス (Catalog API、Orders API、および両方の API を呼び出す UI) からなるオンライン・ストアを作成することができます。このツールチェーンは、継続的デリバリー、ソース管理、機能テスト、問題のトラッキング、オンライン編集、およびアラート通知用に事前構成されています。|[Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window} 		|
-|[Microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-toolchain-hosted){:new_window}  	 |このクラウド・ネイティブ・ツールチェーンでは、サンプルを使用して、3 つのマイクロサービス (Catalog API、Orders API、および両方の API を呼び出す UI) からなるオンライン・ストアを作成することができます。このツールチェーンは、継続的デリバリー、ソース管理、機能テスト、問題のトラッキング、オンライン編集、およびアラート通知用に事前構成されています。|[Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window} 		|
-|[Secure container toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsecure-container-toolchain){:new_window} 		|このツールチェーンを使用すると、セキュアな Docker コンテナー・アプリを開発およびデプロイできます。デフォルトで、このツールチェーンではサンプル Node.js の「Hello World」アプリが使用されますが、代わりにユーザー独自の GitHub リポジトリーにリンクすることもできます。このツールチェーンは、脆弱性アドバイザーを使用した継続的デリバリー、ソース管理、問題のトラッキング、およびオンライン編集用に事前構成されています。|[Create and use a secure container toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_secure_container){:new_window} 		|
-|[Simple Cloud Foundry toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain){:new_window}		|このツールチェーンを使用すると、Cloud Foundry アプリを開発およびデプロイできます。デフォルトで、このツールチェーンではサンプル Node.js の「Hello world」アプリが使用されますが、代わりにユーザー独自の GitHub リポジトリーにリンクすることもできます。このツールチェーンは、継続的デリバリー、ソース管理、問題のトラッキング、およびオンライン編集用に事前構成されています。|[Create and use your first toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window} 		|
-|[Simple Cloud Foundry toolchain	(v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain-hosted){:new_window}	|このツールチェーンを使用すると、Cloud Foundry アプリを開発およびデプロイできます。デフォルトで、このツールチェーンではサンプル Node.js の「Hello World」アプリが、IBM がホストする Git リポジトリーに複製されます。複製されたアプリは後から変更できます。このツールチェーンは、継続的デリバリー、ソース管理、問題のトラッキング、およびオンライン編集用に事前構成されています。|[Create a toolchain that uses {{site.data.keyword.gitrepos}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window} 		|
-|[Simple Cloud Foundry toolchain with {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdra-toolchain-demo){:new_window}		|このクラウド・ネイティブ・ツールチェーンでは、{{site.data.keyword.DRA_short}} を使用してシンプルな Cloud Foundry アプリのデプロイメントをゲート制御できます。デフォルトで、このツールチェーンではサンプル Node.js 気象アプリが使用されます。あるいは、ユーザー独自の GitHub リポジトリーにリンクすることもできます。|[Create a toolchain that uses {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_devops_insights){:new_window} 		|
-|[Simple Container toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-container-toolchain){:new_window}		|このツールチェーンを使用すると、Docker コンテナー・アプリを開発およびデプロイできます。デフォルトで、このツールチェーンではサンプル Node.js の「Hello World」アプリが使用されますが、代わりにユーザー独自の GitHub リポジトリーにリンクすることもできます。このツールチェーンは、継続的デリバリー、ソース管理、問題のトラッキング、およびオンライン編集用に事前構成されています。|[Create and use a simple container toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_container){:new_window} 		|
-|[Delivery Insights with IBM UrbanCode Deploy ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdeliveryinsights-toolchain){:new_window}		|このツールチェーンを使用すると、IBM UrbanCode Deploy からデプロイメント・メトリックを表示できます。{{site.data.keyword.DRA_short}} の「設定」ページから DevOps Connect をダウンロードして構成することにより IBM UrbanCode Deploy と通信するには、このツールチェーンを使用可能にします。|[View metrics from IBM UrbanCode Deploy servers in {{site.data.keyword.DRA_short}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_delivery_insights){:new_window} 		|
-|[Deployment Risk Analytics with GitHub and Jenkins ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain){:new_window}		|このツールチェーンを使用すると、継続的統合および継続的デリバリーのための Jenkins プロセスについての洞察を得ることができます。Jenkins サーバーを構成して、Jenkins によってジョブが実行されている時に {{site.data.keyword.DRA_short}} にデータを送信することができます。また、品質ゲートを実装して、ポリシーに基づいてデプロイメントをブロックすることもできます。結果は、{{site.data.keyword.DRA_short}} の「デプロイメント・リスク」ダッシュボードで見ることができます。Jenkins で使用されているソース・リポジトリーを示すように GitHub リポジトリーを構成すると、変更トレーサビリティーが使用可能になります。|[Deployment Risk Analytics with GitHub and Jenkins ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}		|
-|[Developer Insights and Team Dynamics with GitHub and JIRA ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain){:new_window}		|このツールチェーンを使用すると、プロジェクトの開発リスクを探り、ソーシャル・コーディング分析を使用して開発者間の対話パターンを理解することができます。GitHub のソース・コードを、GitHub の問題、JIRA の問題、またはそれら両方と併せて分析できます。Developer Insights を使用して、非常にエラーが発生しやすいファイルを識別し、プロジェクトがどのように DevOps プラクティスに従っているか確認します。Team Dynamics のソーシャル・コーディング分析は、チームが非生産的なプラクティスを修正できるように、チーム・メンバー間の対話レベルを識別します。|[Gain developer and team insights on a JIRA and GitHub project ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_dev_insights_team_dynamics){:new_window} 		|
-|[Build your own toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain){:new_window}		|このツールチェーンには、事前構成されたツールは含まれていません。ツールチェーンを既に熟知している場合、独自のツールチェーンをセットアップできます。|[Create a custom toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_custom){:new_window}
-{: caption="表 2. ツールチェーン・テンプレート" caption-side="top"}
+事前定義された DevOps ツールチェーン・テンプレートは現実世界の各種シナリオを解決する推奨例であり、各テンプレートにサンプル・アプリが含まれています。テンプレートからツールチェーンを作成するときに Git リポジトリーを指定することで、独自のアプリを使用できます。
+
+<table valign="top" padding="2px">
+  <caption>表 2. ツールチェーン・テンプレート</caption>
+  <tr>
+    <th style="width:25%; text-align:left; vertical-align:top">テンプレートおよび利用可能な地域</th>
+    <th style="width:50%; text-align:left; vertical-align:top">説明および参照できるチュートリアル</th>
+    <th style="text-align:left; vertical-align:top">含まれるツール</th>
+  </tr>
+  <tr><td>
+  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain" target="_blank">「Develop a Cloud Foundry app」ツールチェーン <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a><br><br>
+
+  米国南部、ドイツ、英国で利用可能
+
+  </td><td>
+  このツールチェーンを使用すると、Cloud Foundry アプリを開発およびデプロイできます。 デフォルトで、このツールチェーンではサンプル Node.js の「Hello world」アプリが使用されますが、代わりにユーザー独自の GitHub リポジトリーにリンクすることもできます。 このツールチェーンは、継続的デリバリー、ソース管理、問題のトラッキング、およびオンライン編集用に事前構成されています。	<br><br>
+
+  利用可能なチュートリアル: <a href="https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain" target="_blank">「Develop a Cloud Foundry app」ツールチェーンを使用したツールチェーンの入門<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a><br><br>
+  </td><td><ul><li>
+  {{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}
+  </li><li>GitHub and Issues
+  </li><li>{{site.data.keyword.Bluemix_notm}}
+  </li></ul>
+  </td></tr>
+
+  <tr><td>
+  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsecure-kube-toolchain" target="_blank">「Develop a Kubernetes app」ツールチェーン <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
+
+  米国南部、ドイツ、英国で利用可能
+
+  </td><td>
+このツールチェーンを使用して、アプリケーションを開発し、{{site.data.keyword.Bluemix_notm}} Container Service によって管理されている Kubernetes クラスターに安全にデプロイすることができます。デフォルトで、このツールチェーンではサンプル Node.js の「Hello World」アプリが使用されますが、代わりにユーザー独自の GitHub リポジトリーにリンクすることもできます。 このツールチェーンは、脆弱性アドバイザーを使用した継続的デリバリー、ソース管理、問題のトラッキング、およびオンライン編集用に事前構成されています。 <br><br>
+利用可能なチュートリアル: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain" target="_blank">「Develop a Kubernetes app」ツールチェーンを使用する <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>  
+  <br><br>
+  </td><td><ul><li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}
+  </li><li>GitHub and Issues
+  </li><li>{{site.data.keyword.Bluemix_notm}} Container (Kubernetes クラスター)
+  </li></ul>
+  </td></tr>
+
+  <tr><td>
+  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-helm-toolchain" target="_blank">「Develop a Kubernetes app with Helm」ツールチェーン
+   <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
+
+  米国南部、ドイツ、英国で利用可能
+
+  </td><td>
+このツールチェーンを使用して、Docker アプリケーションとその Helm Chart を一緒にソース管理で開発し、それを自動的にビルドして Kubernetes クラスターにデプロイすることができます。このツールチェーンは、ビルドとデプロイの前にスモーク・テストを実行し、コンテナー・レジストリーと Kubernetes クラスターのために専用コンテナー・レジストリーおよび名前空間を使用してプライバシーを確保します。また、このツールチェーンは、脆弱性アドバイザーを使用することで、セキュアなイメージだけがデプロイされるようにします。<br><br>
+利用可能なチュートリアル: <a href="https://www.ibm.com/cloud/garage/use-develop-kubernetes-app-with-helm-toolchain" target="_blank">「Develop a Kubernetes app with Helm」ツールチェーンを使用する <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>	 <br><br>
+  </td><td><ul>
+  <li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}
+  </li><li>Git Repos and Issue Tracking
+  </li><li>{{site.data.keyword.Bluemix}} Container (Kurbernetes クラスター) (Helm Chart を使用)
+  </li></ul>
+  </td></tr>
+
+  <tr><td>
+  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-helm-toolchain" target="_blank">「Develop and test a Cloud Foundry app」ツールチェーン
+   <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
+
+  米国南部、ドイツ、英国で利用可能
+
+  </td><td>
+  このクラウド・ネイティブ・ツールチェーンでは、DevOps Insights を使用してシンプルな Cloud Foundry アプリケーションのデプロイメントをゲート制御できます。 デフォルトで、このツールチェーンではサンプル Node.js 気象アプリが使用されます。あるいは、ユーザー独自の GitHub リポジトリーにリンクすることもできます。 このツールチェーンは、Mocha を使用して単体テストを実行し、Istanbul を使用してコード・カバレッジをチェックします。<br><br>
+利用可能なチュートリアル: <a href="https://www.ibm.com/cloud/garage/use-develop-test-cloud-foundry-app-toolchain" target="_blank">「Develop and test a Cloud Foundry app」ツールチェーンを使用する <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>  <br><br>
+  </td><td><ul>
+  <li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}
+  </li><li>Git Repos and Issue Tracking
+  </li><li>{{site.data.keyword.DRA_full}} (米国南部のみ)
+  </li></ul>
+  </td></tr>
+
+
+  <tr><td>
+  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-toolchain-hosted" target="_blank">
+  "Develop and test microservices on Cloud Foundry" toolchain <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
+
+  米国南部、ドイツ、英国で利用可能
+
+  </td><td>
+  このクラウド・ネイティブ・ツールチェーンでは、サンプルを使用して、3 つのマイクロサービス (Catalog API、Orders API、および両方の API を呼び出す UI) からなるオンライン・ストアを作成することができます。 このツールチェーンは、継続的デリバリー、ソース管理、機能テスト、問題のトラッキング、オンライン編集、およびアラート通知用に事前構成されています。 <br><br>
+利用可能なチュートリアル: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain" target="_blank">「Develop and test microservices on Cloud Foundry」ツールチェーンを使用する <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a><br><br>
+  </td><td>
+  <ul>
+  <li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}
+  </li><li>GitHub and Issues
+  </li><li>{{site.data.keyword.Bluemix_notm}}
+  </li><li>{{site.data.keyword.DRA_full}} (米国南部のみ)
+  </li><li>PagerDuty
+  </li><li>Sauce Labs
+  </li><li>Slack
+  </li></ul>
+ </td>
+</tr>
+
+  <tr>
+  <td><a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" targe="_blank">
+「Garage Method tutorial with Cloud Foundry」ツールチェーン <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
+
+  米国南部、ドイツ、英国で利用可能
+
+</td><td>
+このツールチェーンは、Garage Method での特徴である DevOps プラクティスを示します。 このツールチェーンは、継続的デリバリー、ソース管理、テストの自動化、および自動化されたモニタリングと運用について事前構成されています。 このツールチェーンには、Node.js Express 4 で作成されたサンプル・アプリが付属しており、このアプリはさらなる拡張が可能です。 <br><br>利用可能なコース: <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Garage Method Advocate バッジを獲得する <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>
+</td><td>
+<ul>
+<li>{{site.data.keyword.deliverypipeline}}
+</li><li>Eclipse Orion {{site.data.keyword.webide}}
+</li><li>GitHub and Issues
+</li><li>Google アナリティクス
+</li><li>{{site.data.keyword.Bluemix_notm}}
+</li><li>New Relic
+</li><li>PagerDuty
+  </li><li>Sauce Labs
+</li><li>Slack
+</li></ul>
+</td></tr>
+
+<tr><td>
+<a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain" target="_blank">「Deployment Risk Analytics with GitHub and Jenkins」ツールチェーン   <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
+
+  米国南部で利用可能
+
+</td><td>このツールチェーンを使用すると、継続的統合および継続的デリバリーのための Jenkins プロセスについての洞察を得ることができます。 Jenkins サーバーを構成して、Jenkins によってジョブが実行されている時に {{site.data.keyword.DRA_short}} にデータを送信することができます。 また、品質ゲートを実装して、ポリシーに基づいてデプロイメントをブロックすることもできます。 結果は、{{site.data.keyword.DRA_short}} の「デプロイメント・リスク」ダッシュボードで見ることができます。 Jenkins で使用されているソース・リポジトリーを示すように GitHub リポジトリーを構成すると、変更トレーサビリティーが使用可能になります。  
+<br><br>
+利用可能なチュートリアル: <a href="https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain" target="_blank">「Deployment Risk Analytics with GitHub and Jenkins」ツールチェーンを使用して高品質開発を保証する <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>  <br><br>
+</td><td><ul><li>
+GitHub and Issues
+</li><li>Jenkins
+</li><li>{{site.data.keyword.DRA_full}}
+</li><li>Slack
+</li></ul>
+</td></tr>
+
+<tr><td>
+<a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain" target="_blank">「Developer Insights and Team Dynamics with GitHub and JIRA」ツールチェーン <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
+
+  米国南部で利用可能
+
+</td><td>
+このツールチェーンを使用すると、プロジェクトの開発リスクを探り、ソーシャル・コーディング分析を使用して開発者間の対話パターンを理解することができます。 GitHub ソース・コードを、GitHub の問題または JIRA の問題、あるいはその両方と共に分析できます。Developer Insights を使用して、非常にエラーが発生しやすいファイルを識別し、プロジェクトがどのように DevOps プラクティスに従っているか確認します。 Team Dynamics のソーシャル・コーディング分析は、チームが非生産的なプラクティスを修正できるように、チーム・メンバー間の対話レベルを識別します。<br><br>
+利用可能なチュートリアル: <a href="https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain" target="_blank"> 「Developer Insights and Team Dynamics with GitHub and JIRA」ツールチェーンを使用して分析情報を得る <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
+</td><td><ul><li>
+GitHub and Issues
+</li><li>{{site.data.keyword.DRA_full}}
+</li><li>JIRA
+</li><li>Slack
+</li></ul>
+</td></tr>
+
+
+<tr><td>
+<a href="(https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdeliveryinsights-toolchain" target="_blank">「Delivery Insights with IBM UrbanCode Deploy」ツールチェーン  <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
+
+  米国南部で利用可能
+
+</td><td>このツールチェーンを使用すると、IBM UrbanCode Deploy からデプロイメント・メトリックを表示できます。 {{site.data.keyword.DRA_short}} の「設定」ページから DevOps Connect をダウンロードして構成することにより IBM UrbanCode Deploy と通信するには、このツールチェーンを使用可能にします。
+<br><br>
+利用可能なチュートリアル: <a href="https://www.ibm.com/cloud/garage/tutorials/view-metrics-delivery-insights-urbancode-deploy-toolchain" target="_blank">「Delivery Insights with IBM UrbanCode Deploy」ツールチェーンを使用してメトリックを表示する <img src="../../icons/launch-glyph.svg" alt=" 外部リンク・アイコン"></a> 	
+<br><br>
+</td><td><ul><li>{{site.data.keyword.DRA_full}}
+</li><li>UrbanCode Deploy
+</li></ul>
+</td></tr>
+
+<tr><td>
+<a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain" target="_blank">Build your own ツールチェーン <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
+
+  米国南部、ドイツ、英国で利用可能
+
+</td><td>
+このツールチェーンには、事前構成されたツールは含まれていません。 ツールチェーンを既に熟知している場合、独自のツールチェーンをセットアップできます。 <br><br>
+利用可能なチュートリアル: <a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">カスタム・ツールチェーンの作成 <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>
+</td><td> &nbsp;&nbsp; なし
+</td></tr>
+
+<tr><td>Continuous Delivery ツールチェーン<br><br>
+
+ 米国南部、ドイツ、英国で利用可能
+
+</td><td>
+このツールチェーンは、アプリの継続的デリバリーを有効にしている場合に使用できます。<br><br>
+利用可能なチュートリアル:
+
+<ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app" target="_blank">Add a toolchain to an app <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a></li>
+<li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Create a custom toolchain <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a></li>
+<li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">複数の領域にわたるセキュアな Web アプリケーションのデプロイ</a></li>
+</ul></td>
+<td><ul><li>{{site.data.keyword.deliverypipeline}}
+</li><li>Eclipse Orion {{site.data.keyword.webide}}
+</li><li>
+GitHub and Issues
+</li>
+<li>{{site.data.keyword.Bluemix_notm}}</li></ul>
+</td></tr>
+
+<tr><td>カスタム・ツールチェーン・テンプレート<br><br>
+
+ 米国南部、ドイツ、英国で利用可能
+
+</td><td>
+<br><br>
+他のユーザーが使用できるカスタム・ツールチェーン・テンプレートを作成できます。<br><br>
+
+参照資料:
+<a href="https://github.com/open-toolchain/sdk/wiki" target="_blank">カスタム・ツールチェーン・テンプレートの作成 <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>
+ <br><br>
+利用可能なチュートリアル:
+<a href="https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain" target="_blank">カスタム・ツールチェーンのテンプレートの作成 <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a></td>
+<td>なし
+</td></tr>
+
+</table>

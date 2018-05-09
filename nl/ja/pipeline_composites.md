@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-8-18"
+  years: 2017, 2018
+lastupdated: "2018-2-26"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,20 +22,22 @@ lastupdated: "2017-8-18"
 {{site.data.keyword.deliverypipeline}} の複合パイプライン・フィーチャーにより、関連ソフトウェア・アプリに対する反復可能な継続的統合および継続的デリバリーのプロセスを管理できます。
 {:shortdesc}
 
-複合パイプラインは、ツールチェーン内のアプリを管理するために作成します。{{site.data.keyword.deliverypipeline}} によってデプロイされているアプリがツールチェーンに含まれている場合、デリバリー・パイプラインをツールチェーンに追加したとき、またはツールチェーンから削除したときに更新されるように複合パイプラインを設定できます。また、外部ソースから複合パイプラインにアプリを追加することもできます。
+**注**: この機能は、米国南部地域でのみ利用可能です。
+
+複合パイプラインは、ツールチェーン内のアプリを管理するために作成します。 {{site.data.keyword.deliverypipeline}} によってデプロイされているアプリがツールチェーンに含まれている場合、デリバリー・パイプラインをツールチェーンに追加したとき、またはツールチェーンから削除したときに更新されるように複合パイプラインを設定できます。 また、外部ソースから複合パイプラインにアプリを追加することもできます。
 
 ## 複合パイプラインの作成
 {: #compositepipeline_create_for_toolchain}
 
-1. {{site.data.keyword.Bluemix_notm}} メニュー・バーのメニューから、**「DevOps」**をクリックします。
+1. {{site.data.keyword.Bluemix_notm}} メニュー・バーのメニューから、**「サービス」**をクリックして、**「DevOps」**をクリックします。
 
 2. 左側のナビゲーションから、**「パイプライン」**をクリックします。
 
-3. **「詳細はこちら」**をクリックし、次に**「有効化」**をクリックして、複合パイプライン・フィーチャーを有効にします。複合パイプラインはユーザーごとに有効化されるため、作成された複合パイプラインが表示されるのは、組織内でこの試験的フィーチャーを選択したメンバーのみになります。
+3. **「詳細はこちら」**をクリックし、次に**「有効化」**をクリックして、複合パイプライン・フィーチャーを有効にします。 複合パイプラインはユーザーごとに有効化されるため、作成された複合パイプラインが表示されるのは、組織内でこの試験的フィーチャーを選択したメンバーのみになります。
 
 4. **「パイプラインの作成 (Create pipeline)」**>**「複合パイプライン」**をクリックします。
 
-5. 複合パイプラインの名前を入力します。さらに、パイプラインの説明も変更できます。
+5. 複合パイプラインの名前を入力します。 さらに、パイプラインの説明も変更できます。
 
 6. **「ツールチェーン」**リストからツールチェーンを選択します。
 
@@ -43,19 +45,20 @@ lastupdated: "2017-8-18"
 
     b. いずれかのツールチェーン用の複合パイプラインを作成するには、そのツールチェーンの名前を選択します。
 
-7. 空のツールチェーンを作成したら、**「デフォルト環境の追加 (Add default environments)」**を選択します。これらのデフォルト論理環境を使用して、複合パイプラインを介したプロセス実行を制御します。
+7. 空のツールチェーンを作成したら、**「デフォルト環境の追加 (Add default environments)」**を選択します。 これらのデフォルト論理環境を使用して、複合パイプラインを介したプロセス実行を制御します。
 
 8. ツールチェーンにパイプラインを追加したとき、ツールチェーンからパイプラインを削除したとき、またはツールチェーンのパイプラインのステージを変更したときに複合パイプラインを更新するには、**「この複合パイプラインを、選択したツールチェーンと自動的に同期化する (Automatically synchronize this composite pipeline with the selected toolchain)」**を選択します。
 
-  **注:** ツールチェーンのパイプラインを変更する前に、自動同期を有効にする必要があります。自動同期が有効であるときに行った変更のみが、複合パイプラインに含められます。
+  **注:** ツールチェーンのパイプラインを変更する前に、自動同期を有効にする必要があります。 自動同期が有効であるときに行った変更のみが、複合パイプラインに含められます。
 
 9. **「作成」**をクリックします。
 
 構成したステージは組織内の適切なスペースに自動的にマップされ、複合パイプライン用のデプロイメント計画が作成されます。
 
-Delivery Pipeline を含むツールチェーン用の複合パイプラインを作成した場合は、そのツールチェーン内のすべてのパイプラインのアプリが複合パイプラインに追加されます。Delivery Pipeline 内で構成したステージは組織内の適切なスペースに自動的にマップされ、それらの状況が表示されます。アプリ内の各ジョブの状況を表示するには、アプリを展開してください。
+Delivery Pipeline を含むツールチェーン用の複合パイプラインを作成した場合は、そのツールチェーン内のすべてのパイプラインのアプリが複合パイプラインに追加されます。 Delivery Pipeline 内で構成したステージは組織内の適切なスペースに自動的にマップされ、それらの状況が表示されます。
+アプリ内の各ジョブの状況を表示するには、アプリを展開してください。
 
-複合パイプライン用のデプロイメント計画も作成されます。デフォルトで、スペースのすべてのアプリのジョブは並行して実行されますが、計画内でアプリのデプロイメント順序を変更することができます。
+複合パイプライン用のデプロイメント計画も作成されます。 デフォルトで、スペースのすべてのアプリのジョブは並行して実行されますが、計画内でアプリのデプロイメント順序を変更することができます。
 
 新しいツールチェーン用の複合パイプラインを作成した場合、カスタマイズ可能なデプロイメント計画が作成されます。
 
@@ -64,7 +67,7 @@ Delivery Pipeline を含むツールチェーン用の複合パイプライン�
 ## デプロイメント計画の変更
 {: #compositepipeline_modify_dp}
 
-デフォルトで、複合パイプライン用のデプロイメント計画が作成されます。このデプロイメント計画は、ツールチェーン内のすべての Delivery Pipeline のステージに関するすべての情報を収集します。各ステージのデプロイメント計画は表示および変更できます。
+デフォルトで、複合パイプライン用のデプロイメント計画が作成されます。 このデプロイメント計画は、ツールチェーン内のすべての Delivery Pipeline のステージに関するすべての情報を収集します。 各ステージのデプロイメント計画は表示および変更できます。
 
 デプロイメント計画を変更するステージで、メニューをクリックし、次に**「デプロイメント計画」**をクリックします。
 
@@ -85,12 +88,12 @@ Delivery Pipeline を含むツールチェーン用の複合パイプライン�
 
 2. ステージのメニューから、**「構成」**をクリックします。
 
-3. ステージに対し、ジョブの追加、変更、または削除を行います。詳しい手順については、[ジョブのステージへの追加](pipeline_build_deploy.html#deliverypipeline_add_job)を参照してください。
+3. ステージに対し、ジョブの追加、変更、または削除を行います。 詳しい手順については、[ジョブのステージへの追加](pipeline_build_deploy.html#deliverypipeline_add_job)を参照してください。
 
 ## 複合パイプラインでのジョブの実行
 {: #compositepipeline_run_jobs}
 
-アプリを展開してジョブを表示したら、ステージ内のすべてのジョブを手動で実行できます。アプリのスペース内の**「ステージにデプロイ (Deploy to *stage*)」**アイコンをクリックします。
+アプリを展開してジョブを表示したら、ステージ内のすべてのジョブを手動で実行できます。 アプリのスペース内の**「ステージにデプロイ (Deploy to *stage*)」**アイコンをクリックします。
 
 ![単一アプリでのステージの実行](images/composite_run_stage.png)
 
@@ -103,7 +106,7 @@ Delivery Pipeline を含むツールチェーン用の複合パイプライン�
 ##デリバリー・パイプラインによってデプロイされるアプリの追加
 {: #compositepipeline_add_apps}
 
-複合パイプラインをツールチェーンと同期させるだけで、デリバリー・パイプラインによってデプロイされるアプリを追加できます。複合パイプラインは単一のツールチェーンに関連付けられているため、そのツールチェーンにデリバリー・パイプラインが存在するアプリのみを含めることができます。
+複合パイプラインをツールチェーンと同期させるだけで、デリバリー・パイプラインによってデプロイされるアプリを追加できます。 複合パイプラインは単一のツールチェーンに関連付けられているため、そのツールチェーンにデリバリー・パイプラインが存在するアプリのみを含めることができます。
 
 デリバリー・パイプラインによってデプロイされるアプリを複合パイプラインに追加するには、以下のステップを実行します。
 
@@ -111,9 +114,9 @@ Delivery Pipeline を含むツールチェーン用の複合パイプライン�
 
 2. **「この複合パイプラインを、ご使用のツールチェーンと自動的に同期化する」**を選択します。
 
-  **注:** デリバリー・パイプラインを作成する前に、自動同期を使用可能にする必要があります。自動同期が有効であるときに行った変更のみが、複合パイプラインに含められます。
+  **注:** デリバリー・パイプラインを作成する前に、自動同期を使用可能にする必要があります。 自動同期が有効であるときに行った変更のみが、複合パイプラインに含められます。
 
-3. アプリ用のデリバリー・パイプラインを作成します。複合パイプラインと同じツールチェーンにデリバリー・パイプラインを割り当ててください。
+3. アプリ用のデリバリー・パイプラインを作成します。 複合パイプラインと同じツールチェーンにデリバリー・パイプラインを割り当ててください。
 
 4. デリバリー・パイプラインのステージとジョブを構成します。
 
@@ -134,10 +137,10 @@ Delivery Pipeline を含むツールチェーン用の複合パイプライン�
 
 ジョブのログを表示するには、そのジョブを含むアプリを展開し、ジョブをクリックします。
 
-## IBM Bluemix DevOps Connect を使用した IBM UrbanCode Deploy との統合
+## {{site.data.keyword.Bluemix_notm}} DevOps Connect を使用した IBM UrbanCode Deploy との統合
 {: #compositepipeline_devops_connect}
 
-IBM Bluemix DevOps Connect は、オンプレミスの IBM&reg; UrbanCode&reg; Deploy のインストール済み環境と {{site.data.keyword.contdelivery_short}} 間の通信を調整します。DevOps Connect をインストールしたら、複合パイプラインでの IBM UrbanCode Deploy アプリの管理に使用できる統合を作成することができます。
+{{site.data.keyword.Bluemix_notm}} DevOps Connect は、オンプレミスの IBM&reg; UrbanCode&reg; Deploy のインストール済み環境と {{site.data.keyword.contdelivery_short}} 間の通信を調整します。 DevOps Connect をインストールしたら、複合パイプラインでの IBM UrbanCode Deploy アプリの管理に使用できる統合を作成することができます。
 
 **前提条件**
 
@@ -151,13 +154,13 @@ DevOps Connect を使用して IBM UrbanCode Deploy と統合するには、以�
 
 1. DevOps Connect をインストールし、それを使用してユーザーの組織を IBM UrbanCode Deploy と統合します。
 
-  1. 複合パイプラインで、**「アプリの追加」**をクリックします。**「管理元」**リストから、**「IBM UrbanCode Deploy」**を選択します。
+  1. 複合パイプラインで、**「アプリの追加」**をクリックします。 **「管理元」**リストから、**「IBM UrbanCode Deploy」**を選択します。
 
-  1. 統合ステップを表示します。アプリのリストが表示されたら、最初に**「アプリ」**の横の情報アイコン (![情報アイコン](/images/info.png)) をクリックし、次に**「この組織に対する IBM UrbanCode Deploy の構成 (Configure IBM UrbanCode Deploy for this organization)」**をクリックします。
+  1. 統合ステップを表示します。 アプリのリストが表示されたら、最初に**「アプリ」**の横の情報アイコン (![情報アイコン](/images/info.png)) をクリックし、次に**「この組織に対する IBM UrbanCode Deploy の構成 (Configure IBM UrbanCode Deploy for this organization)」**をクリックします。
 
-  1. 「UrbanCode Deploy 統合の構成」ウィンドウで**「ダウンロード」**をクリックして DevOps Connect をダウンロードします。IBM UrbanCode Deploy にアクセスできるコンピューター上に JAR ファイルを置きます。
+  1. 「UrbanCode Deploy 統合の構成」ウィンドウで**「ダウンロード」**をクリックして DevOps Connect をダウンロードします。 IBM UrbanCode Deploy にアクセスできるコンピューター上に JAR ファイルを置きます。
 
-  1. ウィンドウから、DevOps Connect インストール・スクリプトをコピーします。このスクリプトには、DevOps Connect を開始するためのコマンドと、{{site.data.keyword.contdelivery_short}} サービスを識別するために必要な資格情報が含まれています。
+  1. ウィンドウから、DevOps Connect インストール・スクリプトをコピーします。 このスクリプトには、DevOps Connect を開始するためのコマンドと、{{site.data.keyword.contdelivery_short}} サービスを識別するために必要な資格情報が含まれています。
 
   1. DevOps Connect を置いたコンピューターでコマンド・シェルを開き、コピーしたスクリプトを貼り付けます。
 
@@ -165,10 +168,10 @@ DevOps Connect を使用して IBM UrbanCode Deploy と統合するには、以�
 
 1. DevOps Connect を登録します。
 
-  1.  DevOps Connect を置いたコンピューターで、Web ブラウザーを使用して DevOps Connect ダッシュボードを開きます。デフォルト URL は https://localhost:8443 です。URL を変更し、他の始動オプションの詳細を知るには、[DevOps Connect 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/urbancode/plugindoc/urbancode-sync/ibm-urbancode-sync-utility/1-2/){:new_window} を参照してください。
+  1.  DevOps Connect を置いたコンピューターで、Web ブラウザーを使用して DevOps Connect ダッシュボードを開きます。 デフォルト URL は https://localhost:8443 です。 URL を変更し、他の始動オプションの詳細を知るには、[DevOps Connect 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/urbancode/plugindoc/urbancode-sync/ibm-urbancode-sync-utility/1-2/){:new_window} を参照してください。
 
 
-1. 「IBM にサインイン」ページに IBM ID とパスワードを入力し、**「サインイン」**をクリックします。サインインは、DevOps Connect を開始するたびに行います。
+1. 「IBM にサインイン」ページに IBM ID とパスワードを入力し、**「サインイン」**をクリックします。 サインインは、DevOps Connect を開始するたびに行います。
 
 1. DevOps Connect で、IBM UrbanCode Deploy for DevOps Connect プラグインを使用して、組織と IBM UrbanCode Deploy 間の統合を作成します。
 
@@ -184,29 +187,29 @@ DevOps Connect を使用して IBM UrbanCode Deploy と統合するには、以�
 
     1. **「管理ユーザーの E メール (Admin User Email)」**フィールドに、ユーザーの E メール・アドレスを入力します。
 
-    1. 統合が成功したことを確認するために、**「統合の実行」**をクリックします。DevOps Connect が、**「サーバー URI」**フィールドに指定されている IBM UrbanCode Deploy インスタンスに接続します。**「認証トークン」**フィールドに貼り付けられているトークンによって DevOps Connect が許可されます。
+    1. 統合が成功したことを確認するために、**「統合の実行」**をクリックします。 DevOps Connect が、**「サーバー URI」**フィールドに指定されている IBM UrbanCode Deploy インスタンスに接続します。 **「認証トークン」**フィールドに貼り付けられているトークンによって DevOps Connect が許可されます。
 
     1. **「保存」**をクリックします。
 
-統合が成功した場合は、IBM UrbanCode Deploy アプリを複合パイプラインに追加できます。詳細情報については、[IBM UrbanCode Deploy からのアプリの追加](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_add_apps)を参照してください。
+統合が成功した場合は、IBM UrbanCode Deploy アプリを複合パイプラインに追加できます。 詳細情報については、[IBM UrbanCode Deploy からのアプリの追加](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_add_apps)を参照してください。
 
 
 ## IBM UrbanCode Deploy からのアプリの追加
 {: #compositepipeline_add_apps}
 
-DevOps Connect を使用して IBM UrbanCode Deploy と統合されている組織のメンバーは、UrbanCode Deploy でアクセスできるアプリを複合パイプラインに追加できます。インストール手順については、[IBM Bluemix DevOps Connect を使用した IBM UrbanCode Deploy との統合](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)を参照してください。
+DevOps Connect を使用して IBM UrbanCode Deploy と統合されている組織のメンバーは、UrbanCode Deploy でアクセスできるアプリを複合パイプラインに追加できます。 インストール手順については、[{{site.data.keyword.Bluemix_notm}} DevOps Connect を使用した IBM UrbanCode Deploy との統合](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)を参照してください。
 
 IBM UrbanCode Deploy に接続している組織のメンバーの場合、UrbanCode Deploy アプリを複合パイプラインに追加し、デプロイメント計画に組み込むアプリ・プロセスを選択し、アプリのデプロイメントをカスタマイズできます。
 
 1. 複合パイプラインから、**「アプリの追加」**をクリックします。
 
-2. **「管理元」**リストから、**「IBM UrbanCode Deploy」**を選択します。{{site.data.keyword.contdelivery_short}} と IBM UrbanCode Deploy との統合を最近行った場合は、サーバーを表示するためにブラウザーの最新表示が必要な可能性があります。
+2. **「管理元」**リストから、**「IBM UrbanCode Deploy」**を選択します。 {{site.data.keyword.contdelivery_short}} と IBM UrbanCode Deploy との統合を最近行った場合は、サーバーを表示するためにブラウザーの最新表示が必要な可能性があります。
 
-3. 追加するアプリを選択し、**「続行」**をクリックします。IBM UrbanCode Deploy アプリで使用可能なすべてのアプリ・プロセスが表示されます。選択したプロセスを実行するためのエントリーが、デプロイメント計画に追加されます。
+3. 追加するアプリを選択し、**「続行」**をクリックします。 IBM UrbanCode Deploy アプリで使用可能なすべてのアプリ・プロセスが表示されます。 選択したプロセスを実行するためのエントリーが、デプロイメント計画に追加されます。
 
-4. アプリで使用するアプリ・プロセスを選択します。プロセスを見つけるには、検索オプションとフィルター・オプションを使用します。
+4. アプリで使用するアプリ・プロセスを選択します。 プロセスを見つけるには、検索オプションとフィルター・オプションを使用します。
 
-5. **「保存」**をクリックします。選択した各 IBM UrbanCode Deploy アプリが、複合パイプライン内のアプリとして表示されます。
+5. **「保存」**をクリックします。 選択した各 IBM UrbanCode Deploy アプリが、複合パイプライン内のアプリとして表示されます。
 
 6. 以下のようにして、IBM UrbanCode Deploy アプリから複合パイプラインの論理環境に環境をマップします。
 
@@ -214,7 +217,7 @@ IBM UrbanCode Deploy に接続している組織のメンバーの場合、Urban
 
     ![論理環境の管理の選択](images/composite_logical_env.png)
 
-    2. 複合パイプライン内の各アプリに対して、IBM UrbanCode Deploy に定義した環境を選択します。選択したアプリ・プロセスは、そのアプリからの環境でのみ実行されます。
+    2. 複合パイプライン内の各アプリに対して、IBM UrbanCode Deploy に定義した環境を選択します。 選択したアプリ・プロセスは、そのアプリからの環境でのみ実行されます。
 
     3. **「保存」**をクリックします。
 
@@ -223,5 +226,8 @@ IBM UrbanCode Deploy に接続している組織のメンバーの場合、Urban
 ##チュートリアルを始める: 複合パイプライン
 {: #composite_pipeline-tutorial}
 
-[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage){:new_window} の次のチュートリアルを確認してください。
-  * [Create and use a microservices toolchain with DevOps Insights (v2) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage){:new_window} で次のチュートリアルを確認してください。
+
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。
+
+  **注**: {{site.data.keyword.DRA_short}} は米国南部地域でのみ利用可能です。

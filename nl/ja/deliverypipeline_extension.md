@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-5-11"
+  years: 2015, 2018
+lastupdated: "2018-3-26"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2017-5-11"
 # Delivery Pipeline の拡張
 {: #deliverypipeline_extending}
 
-サポートされるサービスを使用するようにジョブを構成することで、{{site.data.keyword.contdelivery_full}} の {{site.data.keyword.deliverypipeline}} の機能を拡張できます。例えば、テスト・ジョブで静的コード・スキャンを実行し、ビルド・ジョブで文字列をグローバル化できます。
+サポートされるサービスを使用するようにジョブを構成することで、{{site.data.keyword.contdelivery_full}} の {{site.data.keyword.deliverypipeline}} の機能を拡張できます。 例えば、テスト・ジョブで静的コード・スキャンを実行し、ビルド・ジョブで文字列をグローバル化できます。
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -32,7 +32,7 @@ lastupdated: "2017-5-11"
 
 {: #deliverypipeline_scan}
 
-コードをデプロイする前にコードのセキュリティー問題を検索したい場合、{{site.data.keyword.staticanalyzerfull}} をパイプラインの一部として使用すると、Java™ アプリの静的 `.war`、`.ear`、`.jar`、または `.class` ビルド・バイナリー・ファイルに対して自動化チェックを実行できます。
+コードをデプロイする前にコードのセキュリティー問題を検索したい場合、 {{site.data.keyword.staticanalyzerfull}} をパイプラインの一部として使用すると、Java™ アプリの静的 `.war`、`.ear`、`.jar`、または `.class` ビルド・バイナリー・ファイルに対して自動化チェックを実行できます。
 
 {{site.data.keyword.staticanalyzershort}} サービスを使用するパイプラインは、通常以下のステージを含みます。
 
@@ -71,32 +71,32 @@ lastupdated: "2017-5-11"
 
   e. 必要に応じて**「サービスとスペースの自動セットアップ」**チェック・ボックスを選択またはクリアします。
 
-    * サービス用の {{site.data.keyword.Bluemix_short}} のスペースと、サービスをコンテナーにバインドするアプリを、パイプラインで確認する場合は、このチェック・ボックスを選択します。サービスやバインドされたアプリが存在しない場合、パイプラインによって、このサービスの無料プランがご使用のスペースに追加されます。作成されたバインド済みアプリには、`pipeline_bridge_app` という名前が付けられます。その後、パイプラインは、pipeline_bridge_app からの資格情報を使用して、バインド済みサービスにアクセスします。
+    * サービス用の {{site.data.keyword.Bluemix_short}} のスペースと、サービスをコンテナーにバインドするアプリを、パイプラインで確認する場合は、このチェック・ボックスを選択します。 サービスやバインドされたアプリが存在しない場合、パイプラインによって、このサービスの無料プランがご使用のスペースに追加されます。 作成されたバインド済みアプリには、`pipeline_bridge_app` という名前が付けられます。 その後、パイプラインは、pipeline_bridge_app からの資格情報を使用して、バインド済みサービスにアクセスします。
 
     * サービスとバインド済みアプリを {{site.data.keyword.Bluemix_short}} のスペースで構成してある場合、または[これらの要件を手動で構成する](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}場合は、このチェック・ボックスをクリアします。
 
-  f. **「分析の完了を待機する時間」**フィールドで、0 から 59 分の値を入力します。デフォルト値は 5 分です。ジョブ終了時、{{site.data.keyword.staticanalyzershort}} ダッシュボードの URL がコンソール・ログに記録されます。
+  f. **「分析の完了を待機する時間」**フィールドで、0 から 59 分の値を入力します。 デフォルト値は 5 分です。 ジョブ終了時、{{site.data.keyword.staticanalyzershort}} ダッシュボードの URL がコンソール・ログに記録されます。
 
-     {{site.data.keyword.staticanalyzershort}} のスキャンが指定した時間までに終了しない場合は、ジョブは失敗します。しかし、スキャンの分析は実行を続行し、{{site.data.keyword.staticanalyzershort}} ダッシュボードで表示することができます。{{site.data.keyword.staticanalyzershort}} スキャンの完了後に、ジョブを再実行した場合、スキャン要求は再実行依頼されず、パイプライン・ジョブは完了できます。また、正常に終了したスキャン結果でパイプラインをブロックされないように構成することもできます。手順については、次のステップを参照してください。
+     {{site.data.keyword.staticanalyzershort}} のスキャンが指定した時間までに終了しない場合は、ジョブは失敗します。 しかし、スキャンの分析は実行を続行し、{{site.data.keyword.staticanalyzershort}} ダッシュボードで表示することができます。 {{site.data.keyword.staticanalyzershort}} スキャンの完了後に、ジョブを再実行した場合、スキャン要求は再実行依頼されず、パイプライン・ジョブは完了できます。 また、正常に終了したスキャン結果でパイプラインをブロックされないように構成することもできます。 手順については、次のステップを参照してください。
 
-  g. このジョブが失敗またはタイムアウトになる場合の対応に応じて、**「このジョブが失敗したらこのステージの実行を停止する (Stop running this stage if this job fails)」**チェック・ボックスを選択またはクリアします。脆弱性が高い場合、ジョブは失敗する可能性があります。
+  g. このジョブが失敗またはタイムアウトになる場合の対応に応じて、**「このジョブが失敗したらこのステージの実行を停止する (Stop running this stage if this job fails)」**チェック・ボックスを選択またはクリアします。 脆弱性が高い場合、ジョブは失敗する可能性があります。
 
     * このチェック・ボックスを選択した状態でジョブが失敗した場合、このステージ内の後続のジョブと後続のステージは実行されません。
 
-    * このチェック・ボックスをクリアした状態でジョブが失敗した場合、ステージは後続のジョブとステージをブロックせずに続行します。例えば、処理すべき多くの問題がレポートに含まれていることが分かっている場合、スキャンには長時間かかる可能性があるため、続行するようにステージを構成するという選択肢もありえます。こうしたシナリオでは、単にスキャンに時間がかかりすぎるという理由だけで残りのジョブとステージの実行を停止するのは避けたいと考えられます。
+    * このチェック・ボックスをクリアした状態でジョブが失敗した場合、ステージは後続のジョブとステージをブロックせずに続行します。 例えば、処理すべき多くの問題がレポートに含まれていることが分かっている場合、スキャンには長時間かかる可能性があるため、続行するようにステージを構成するという選択肢もありえます。 こうしたシナリオでは、単にスキャンに時間がかかりすぎるという理由だけで残りのジョブとステージの実行を停止するのは避けたいと考えられます。
 
   h. **「保存」**をクリックします。
 
-3. ジョブが終了したら、**「ログおよび履歴の表示」**をクリックして結果を表示します。分析が成功またはタイムアウトになった場合、スキャン結果に URL が表示されます。スキャン状況が処理中になっている場合は、スキャンが完了して全結果が表示されるまで待ちます。
+3. ジョブが終了したら、**「ログおよび履歴の表示」**をクリックして結果を表示します。 分析が成功またはタイムアウトになった場合、スキャン結果に URL が表示されます。 スキャン状況が処理中になっている場合は、スキャンが完了して全結果が表示されるまで待ちます。
 
-4. 分析が終了する前に再度処理ステージの実行が必要な場合は、実行可能です。しかし、次のような状況では、新しい分析は再実行依頼されず、前回の結果が使用されます。
+4. 分析が終了する前に再度処理ステージの実行が必要な場合は、実行可能です。 しかし、次のような状況では、新しい分析は再実行依頼されず、前回の結果が使用されます。
   * 新しい分析を始めたときに処理ステージが実行中だった場合
   * ビルドのスキャンがすでに実行依頼されている場合
   * 新しいソース・ビルドがまだ実行されていない場合
 
 5. 新しい分析を始動するには、次のいずれかの手順を実行します。
   * 処理ステージに入力するビルド・ステージを実行してから、処理ステージを再度実行します。
-  * スキャン結果の URL を開き、**「ごみ箱」**アイコンをクリックします。その後、処理ステージを再度実行します。
+  * スキャン結果の URL を開き、**「ごみ箱」**アイコンをクリックします。 その後、処理ステージを再度実行します。
 
 コンソール出力例:
 
@@ -152,13 +152,15 @@ To create the globalization stage and job:
 
   f. Determine whether to select the **Set up service and space for me** check box.
 
-    * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
+    * If you want the pipeline to check your {{site.data.keyword.Bluemix_notm}} space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
+    * If you configured the service and bound app in your {{site.data.keyword.Bluemix_notm}} space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
+
     **Tip:** Use the DevOps Services project name in the prefix so that the project can be identified easily in the Globalization Pipeline service.
+
 
   h. Click **SAVE**.
 
@@ -170,113 +172,114 @@ The machine translated files are placed in the same directory as the source `.pr
 
 After the stage is completed, you can review the translated files from the console output. You can also direct translators to the files so that they can review the machine-translation output and provide revisions to improve quality. The revisions are stored in a Cloudant™ database and take precedence over any future machine translations of the same strings.
 
-For more information about using the Globalization Pipeline service from the Bluemix Dashboard, [see the Globalization Pipeline service documentation](https://www.ng.bluemix.net/docs/services/GlobalizationPipeline/index.html).
+For more information about using the Globalization Pipeline service from the {{site.data.keyword.Bluemix_notm}} Dashboard, [see the Globalization Pipeline service documentation](https://www.ng.bluemix.net/docs/services/GlobalizationPipeline/index.html).
 
 -->
+<!--
 
-## パイプラインでのビルドの Slack 通知の作成
+## Creating Slack notifications for builds in the pipeline
 {: #deliverypipeline_slack}
 
-{{site.data.keyword.containerlong}}、{{site.data.keyword.staticanalyzershort}}、および {{site.data.keyword.globalizationfull}} のビルド結果に関する通知を Delivery Pipeline から Slack チャネルに送信できます。
+You can send notifications about {{site.data.keyword.containerlong}}, {{site.data.keyword.staticanalyzershort}}, and {{site.data.keyword.globalizationfull}} build results from your Delivery Pipeline to your Slack channels.
 
-始める前に、以下のように Slack WebHook URL を作成するかコピーします。
+Before you begin, create or copy a Slack WebHook URL:
 
-1. チームの Slack Integration ページを開きます。`https://_project_name_.slack.com/services`
-2. 統合のリストで、**「着信 WebHook (Incoming WebHooks)」**を見つけて**「追加 (Add)」**をクリックします。
-3. チャネルを選択し、**「着信 WebHook 統合の追加 (Add Incoming WebHooks Integration)」**をクリックします。
-4. **WebHook URL** を追加するか、既存のものをコピーします。
+1. Open the Slack Integration page for your team: `https://_project_name_.slack.com/services`
+2. In the list of integrations, locate **Incoming WebHooks** and click **Add**.
+3. Select a channel and click **Add Incoming WebHooks Integration**.
+4. Add a **WebHook URL** or copy an existing one.
 
-詳しくは、[Slack の Incoming WebHook 資料![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://api.slack.com/incoming-webhooks){: new_window}を参照してください。
+For more information, see [Incoming WebHooks in the Slack documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){: new_window}.
 
-Slack 通知を作成するには、次のようにします。
+To create Slack notifications:
 
-1. パイプラインで、ステージの構成を開きます。
-2. **「環境プロパティー」**タブで、**「プロパティーの追加」**をクリックします。
-3. **「文字プロパティー」**を選択します。
-4. 環境プロパティーの名前と値を入力します。操作を繰り返して、複数の環境プロパティーを作成します。
+1. In the pipeline, open the configuration for a stage.
+2. In the **ENVIRONMENT PROPERTIES** tab, click **ADD PROPERTY**.
+3. Select **Text property**.
+4. Enter the name and a value for the environment property. Repeat to create multiple environment properties.
 
-  _表 1. Slack 通知を構成する環境プロパティー_
+  _Table 1. Environment properties for configuring Slack notifications_
 
   <table>
   <tr>
-  <th>名前</th>
-  <th>値</th>
-  <th>説明</th>
+  <th>Name</th>
+  <th>Value</th>
+  <th>Description</th>
   <tr/>
   <tr>
     <td><code>SLACK_WEBHOOK_PATH</code></td>
-    <td>URL</td>
-    <td>必須。Slack プロジェクトの設定に保存される WebHook URL です。</td>
+    <td>A URL</td>
+    <td>Required. The WebHook URL that is saved in the settings for your Slack Project.</td>
   </tr>
   <tr>
     <td><code>SLACK_COLOR</code></td>
-    <td>以下のいずれかの値を入力できます。
+    <td>You can enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>warning</code></li>
       <li><code>danger</code></li>
-      <li>#439FEO などカラーの 16 進数</li></ul></td>
-    <td>オプション。Slack のメッセージの横に表示される境界線の色。デフォルトの色は、良いメッセージは緑、悪いメッセージは赤、情報メッセージは灰色です。</td>
+      <li>Any hexadecimal color, such as #439FEO</li></ul></td>
+    <td>Optional. The color of the border that is displayed along the side of the message in Slack. The default colors are green for good messages, red for bad messages, and gray for informational messages.</td>
   </tr>
   <tr>
     <td><code>NOTIFY_FILTER</code></td>
-    <td>メッセージ・タイプのサブセットのみを受け取るには、以下のいずれかの値を入力します。
+    <td>To receive only a subset of the message types, enter one of the following values:
       <ul>
-      <li><code>good</code>: 不明メッセージ、良いメッセージ、情報メッセージのみを取得します。悪いメッセージは送信されません。</li>
-      <li><code>bad</code>: すべてのメッセージを取得します。</li>
-      <li><code>info</code>: 情報メッセージのみを取得します。良いメッセージ、悪いメッセージ、不明メッセージは送信されません。</li>
-      <li><code>unknown</code>: すべてのメッセージを取得します。</li></ul>
-      例: <code>NOTIFY_FILTER = bad</code> と設定した場合、Slack チャネルでエラー通知のみが表示されます。</td>
-    <td>オプション。通知を送信するメッセージのタイプを決定します。デフォルトでは、良いメッセージと悪いメッセージが送信されますが、情報メッセージは送信されません。
-      <ul><li><code>good</code>: 成功したビルドの結果。</li>
-      <li><code>bad</code>: 失敗したビルドの結果。</li>
-      <li><code>info</code>: ビルド・プロセスに関する情報メッセージ。</li>
-      <li><code>unknown</code>: 不明メッセージには、タイプは割り当てられません。</li></ul></td>
+      <li><code>good</code>: Get unknown, good and info messages only. Bad messages are not sent.</li>
+      <li><code>bad</code>: Get all messages.</li>
+      <li><code>info</code>: Get info messages only. Good, bad, and unknown messages are not sent.</li>
+      <li><code>unknown</code>: Get all messages.</li></ul>
+      Example: If you set <code>NOTIFY_FILTER = bad</code>, error notifications are only displayed in the Slack Channel.</td>
+    <td>Optional. Decide which type of messages to send notifications for. By default, good and bad messages are sent, but not informational messages.
+      <ul><li><code>good</code>: Successful build results.</li>
+      <li><code>bad</code>: Unsuccessful build results.</li>
+      <li><code>info</code>: Informational messages about the build process.</li>
+      <li><code>unknown</code>: Unknown messages are not assigned a type.</li></ul></td>
    </table>
 
-5. **「保存」**をクリックします。
+5. Click **Save**.
 
-6. 上記ステップを繰り返し、IBM Container Service、IBM Security Analyzer、IBM Globalization ジョブが含まれる他のステージについて Slack 通知を送信するようにします。
+6. Repeat these steps to send Slack notifications for other stages that include IBM Container Service, IBM Security Analyzer, and IBM Globalization jobs.
 
-Slack で表示されるビルド通知には、プロジェクトへのリンクが含まれます。場合によっては、プロジェクトのダッシュボードへのリンクが含まれることもあります。Slack ユーザーがこれらのリンクを開くには、そのユーザーが Bluemix に登録されていて、かつパイプラインが構成されているプロジェクトのメンバーでなければなりません。
+The build notification that is displayed in Slack includes a link to the project and sometimes to the project's dashboard. For a Slack user to open these links, the user must be registered with {{site.data.keyword.Bluemix_notm}} and be a member of the organization that the pipeline is configured in.
 
-## パイプラインでのビルドの HipChat 通知の作成
+## Creating HipChat notifications for builds in the pipeline
 {: #deliverypipeline_hipchat}
 
-IBM Container Service、IBM Security Static Analyzer、IBM Globalization のビルド結果に関する通知を Delivery Pipeline から HipChat ルームに送信できます。
+You can send notifications about IBM Container Service, IBM Security Static Analyzer, and IBM Globalization build results from your Delivery Pipeline to your HipChat rooms.
 
-始める前に、以下のように HipChat トークンを作成するか既存のものをコピーします。
+Before you begin, create or copy and existing HipChat token:
 
-1. チームの HipChat アカウント・ページに移動します。`https://_project_name_.hipchat.com/account/api`
-2. 新しいトークンを作成するか、既存のトークンを使用します。
+1. Go to your HipChat Account page for your team: `https://_project_name_.hipchat.com/account/api`
+2. Create a new token, or use an existing one.
 
-HipChat 通知を作成するには、次のようにします。
+To create HipChat notifications:
 
-1. パイプラインで、ステージの構成を開きます。
-2. **「環境プロパティー」**タブで、**「プロパティーの追加」**をクリックします。
-3. **「文字プロパティー」**を選択します。
-4. 環境プロパティーの名前と値を入力します。操作を繰り返して、複数の環境プロパティーを作成します。
+1. In the pipeline, open the configuration for a stage.
+2. In the **ENVIRONMENT PROPERTIES** tab, click **ADD PROPERTY**.
+3. Select **Text Property**.
+4. Enter the name and a value for the environment property. Repeat to create multiple environment properties.
 
-  _表 2. HipChat 通知を構成する環境プロパティー_
+  _Table 2. Environment Properties for configuring HipChat notifications_
 
   <table>
   <tr>
-  <th>名前</th>
-  <th>値</th>
-  <th>説明</th>
+  <th>Name</th>
+  <th>Value</th>
+  <th>Description</th>
   </tr>
   <tr>
     <td><code>HIP_CHAT_TOKEN</code></td>
-    <td>英数字ストリング</td>
-    <td>必須。上の『始める前に』で、HipChat トークンの作成または既存トークンのコピーの手順を参照してください。</td>
+    <td>Alphanumeric String</td>
+    <td>Required. See "Before you begin" for instructions on creating or copying an existing HipChat token.</td>
   </tr>
   <tr>
     <td><code>HIP_CHAT_ROOM_NAME</code></td>
-    <td>ルームの名前</td>
-    <td>必須。</td>
+    <td>Room name</td>
+    <td>Required.</td>
   </tr>
   <tr>
     <td><code>HIP_CHAT_COLOR</code></td>
-    <td>以下のいずれかの値を入力します。
+    <td>Enter one of the following values:
       <ul><li><code>yellow</code></li>
       <li><code>red</code></li>
       <li><code>green</code></li>
@@ -284,50 +287,43 @@ HipChat 通知を作成するには、次のようにします。
       <li><code>gray</code></li>
       <li><code>random</code></li></ul>
     </td>
-    <td>オプション: HipChat 通知の背景色と枠のカラーを指定します。<code>HIP_CHAT_COLOR</code> を設定する場合、このスクリプトを呼び出すときに色を指定する必要はありません。
+    <td>Optional: Specify the background color and the border color of HipChat notifications. If you set <code>HIP_CHAT_COLOR</code>, you do not need to specify the color when you call the script.
      <p><code>-l notification_level</code></p> </td>
   </tr>
   <tr>
     <td><code>NOTIFICATION_COLOR</code></td>
-    <td>以下のいずれかの値を入力します。
+    <td>Enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>danger</code></li>
       <li><code>info</code></li></ul>
-    この変数は、HipChat 通知と Clack 通知の両方のカラーに適用されます。<code>NOTIFICATION_COLOR</code> を指定する場合、<code>HIP_CHAT_COLOR</code> も <code>SLACK_COLOR</code> も指定する必要はありません。</td>
-    <td>オプション: HipChat 通知と Slack 通知の両方の背景色と枠のカラーを指定します。<code>NOTIFICATION_COLOR</code> を設定する場合、このスクリプトを呼び出すときに色を指定する必要はありません。
+    This variable applies to both HipChat and Clack notification colors. If you specify <code>NOTIFICATION_COLOR</code>, you do not need to specify <code>HIP_CHAT_COLOR</code> or <code>SLACK_COLOR</code>.</td>
+    <td>Optional: Specify the background color and the border color of both HipChat and Slack notifications. If you set <code>NOTIFICATION_COLOR</code>, you do not need to specify the color when you call the script.
      <p><code>-l notification_level</code></p> </td>
   </tr>
   <tr>
     <td><code>NOTIFICATION_LEVEL</code></td>
-    <td>以下のいずれかの値を入力します。
+    <td>Enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>info</code></li>
       <li><code>bad</code></li></ul></td>
-    <td>オプション: 通知レベルを指定します。何が通知をトリガーするのかについて詳しくは、<code>NOTIFICATION_FILTER</code> を参照してください。</td>
+    <td>Optional: Specify the notification level. See <code>NOTIFICATION_FILTER</code> for more detail on what triggers the notification.</td>
   </tr>
   <tr>
     <td><code>NOTIFICATION_FILTER</code></td>
-    <td>以下のいずれかの値を入力します。
+    <td>Enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>info</code></li>
       <li><code>bad</code></li></ul>
-    <td>オプション: 通知フィルター・レベルを指定します。以下のパラメーターが一致するときに通知が送信されます。
-      <ul><li><code>NOTIFICATION_FILTER = good</code> および <code>NOTIFICATION_LEVEL = bad</code>、<code>good</code>、または <code>unknown</code></li>
-      <li><code>NOTIFICATION_FILTER = info</code> および <code>NOTIFICATION_LEVEL = bad</code>、<code>good</code>、<code>info</code>、または <code>unknown</code></li>
-      <li><code>NOTIFICATION_FILTER = bad</code> および <code>NOTIFICATION_LEVEL = bad</code> または <code>unknown</code></li>
-      <li><code>NOTIFICATION_FILTER = unknown</code> および <code>NOTIFICATION_LEVEL = bad</code>、<code>good</code>、または <code>unknown</code></li></ul></td>
+    <td>Optional: Specify the notification filter level. Notifications are sent when the following parameters are met:
+      <ul><li><code>NOTIFICATION_FILTER = good</code> and <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, or <code>unknown</code></li>
+      <li><code>NOTIFICATION_FILTER = info</code> and <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, <code>info</code>, or <code>unknown</code></li>
+      <li><code>NOTIFICATION_FILTER = bad</code> and <code>NOTIFICATION_LEVEL = bad</code> or <code>unknown</code></li>
+      <li><code>NOTIFICATION_FILTER = unknown</code> and <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, or <code>unknown</code></li></ul></td>
     </tr>
   </table>
 
-5. **「保存」**をクリックします。
+5. Click **Save**.
 
-6. 上記ステップを繰り返し、IBM Container Service、IBM Security Static Analyzer、IBM Globalization ジョブが含まれる他のステージについて HipChat 通知を送信するようにします。
+6. Repeat these steps to send HipChat notifications for other stages that include IBM Container Service, IBM Security Static Analyzer, and IBM Globalization jobs.
 
-## パイプラインでのコンテナー・イメージのビルドとデプロイ
-{: #deliverypipeline_containers}
-
-IBM Continuous Delivery Pipeline for Bluemix を使用して、Bluemix へのアプリのビルドとコンテナーのデプロイメントを自動化できます。Delivery Pipeline サービスは以下をサポートします。
-  - Docker イメージのビルド
-  - Bluemix へのコンテナーのイメージのデプロイ
-
-概要について詳しくは、[Delivery Pipeline とコンテナーの概要](/docs/containers/container_integrations.html#container_pipeline_ov){: new_window}を参照してください。
+-->
