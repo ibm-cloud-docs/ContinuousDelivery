@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-7-7"
+  years: 2017, 2018
+lastupdated: "2018-2-26"
 
 ---
 {:new_window: target="_blank"}
@@ -15,10 +15,10 @@ lastupdated: "2017-7-7"
 # Creación de plantillas de cadenas de herramientas personalizadas
 {: #toolchains_custom}
 
-Mejore su flujo de trabajo de DevOps creando una plantilla de cadena de herramientas personalizada. Puede empezar rápidamente con una plantilla de cadena de herramientas existente, o crear una cadena de herramientas que incluya sólo las integraciones que necesita. Puede añadir o eliminar las integraciones de la cadena de herramientas en cualquier momento.
+Mejore su flujo de trabajo de DevOps creando una plantilla de cadena de herramientas personalizada. Puede empezar rápidamente con una plantilla de cadena de herramientas existente, o crear una plantilla de cadena de herramientas que incluya sólo las integraciones que necesita. Puede añadir o eliminar las integraciones de la cadena de herramientas en cualquier momento.
 {:shortdesc}
 
-Puede [crear y desplegar una cadena de herramientas](/docs/toolchains/toolchains_setup.html){: new_window} de varias formas. Una vez que cree una cadena de herramientas personalizada, puede compartirla utilizando un botón [Desplegar en {{site.data.keyword.Bluemix_notm}}](/docs/develop/deploy_button.html){: new_window}.
+Puede [crear una cadena de herramientas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} de varias formas. Una vez que cree una plantilla de cadena de herramientas personalizada, puede compartirla [creando un botón de despliegue en {{site.data.keyword.Bluemix_notm}}](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}. Encontrará más detalles sobre el SDK de la plantilla de cadena de herramientas en el [SDK de Open Toolchain](https://github.com/open-toolchain/sdk/wiki/){:new_window}. En el [sitio de Garage Method](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window} hay disponible una guía de aprendizaje paso a paso.
 
 
 ## Iniciación
@@ -46,9 +46,9 @@ La plantilla de microservicios despliega un almacén en línea que se compone de
 * Entrega continua
 * Control de origen
 * Despliegues azul-verde
-* Pruebas funcionales 
-* Seguimiento de problemas 
-* Edición en línea 
+* Pruebas funcionales
+* Seguimiento de problemas
+* Edición en línea
 * Mensajería
 
 Independientemente de la plantilla que elija, el proceso para personalizar la cadena de herramientas que cree es generalmente el mismo.
@@ -62,19 +62,18 @@ Después de clonar la plantilla, tendrá un repositorio GitHub básico que conti
 ![Archivos mínimos necesarios para definir una cadena de herramientas](images/min_files_for_a_toolchain.png)
 
 
-Cada uno de estos archivos se explica en las secciones siguientes. Cada sección contiene información de configuración que puede consultar a medida que evoluciona la cadena de herramientas. 
-
+Cada uno de estos archivos se explica en las secciones siguientes. Cada sección contiene información de configuración que puede consultar a medida que evoluciona la cadena de herramientas.YAML es un lenguaje de serialización de datos que es un superconjunto estricto de JSON, con la adición de sangrías y saltos de línea sintácticamente significativos. Sin embargo, YAML no permite caracteres de tabulación literales.
 
 ## Visión general de los archivos de configuración
 {: #toolchains_custom_config_files}
 
 
 Los archivos de configuración de la cadena de herramientas se componen principalmente de archivos en formato YAML. Cada archivo contiene metadatos que describen distintos aspectos de la cadena de herramientas. Los metadatos incluyen:
-* Información sobre la cadena de herramientas, y los repositorios GitHub, o Git Repo e Issue Tracking.
+* Información sobre la cadena de herramientas y los repositorios.
 * Detalles sobre cómo se crea y despliega el código.
-* Propiedades de configuración para las herramientas que están en la cadena de herramientas. 
+* Propiedades de configuración para las herramientas que están en la cadena de herramientas.
 
-A medida que la cadena de herramientas pasa a ser más compleja, los archivos de configuración también pueden crecer en complejidad. 
+A medida que la cadena de herramientas pasa a ser más compleja, los archivos de configuración también pueden crecer en complejidad.
 
 Estas son algunas directrices a tener en cuenta al trabajar con archivos YAML:
 
@@ -83,8 +82,57 @@ Estas son algunas directrices a tener en cuenta al trabajar con archivos YAML:
 * Todas las claves y propiedades son sensibles a mayúsculas y minúsculas.
 
 Preste atención al formato del archivo YAML para reducir la posibilidad de encontrar errores.
-Para comprobar si hay errores, es posible que desee utilizar un validador sencillo, como [este analizador](http://wiki.ess3.net/yaml/){: new_window}.
+Para comprobar si hay errores, puede que desee utilizar un validador sencillo, como [este analizador](http://wiki.ess3.net/yaml/){: new_window}.
 {: tip}
+
+## Planificación de la sección de servicios
+Cada subsección de servicio contiene la información siguiente:
+
+* Nombre: una serie generada por el usuario que se utiliza para identificar este servicio en el contexto del archivo actual. Este nombre puede utilizarse para marcar un servicio como necesario.
+
+* Service_id: una serie exclusiva que identifica el servicio. Esta serie procede directamente del [catálogo de servicios](https://github.com/open-toolchain/sdk/wiki/services.md){: new_window}.
+
+* Parámetros: cero o más parámetros de configuración para el servicio. Estos parámetros varían entre servicios: los usuarios necesitan consultar el catálogo para averiguar qué parámetros necesita un servicio concreto.
+
+### Inclusión de texto de otros archivos
+
+Toda la información de la cadena de herramientas puede estar en el archivo `toolchain.yml`. Sin embargo, es posible que desee crear archivos independientes para cada interfaz de usuario de integración de herramientas mediante `$text`. De esta forma, se facilita el mantenimiento de las cadenas de herramientas y se minimiza el tiempo invertido en editar los archivos de configuración. Este fragmento de código de ejemplo de un `toolchain.yml` muestra cómo utilizar el contenido del archivo `pipeline.yml` como el valor de `content`.
+
+```
+  configuration:
+    content:
+      $text: pipeline.yml
+```
+
+### Localización de la plantilla de cadena de herramientas
+
+Puede localizar la cadena de herramientas externalizando las series de IU en el directorio `nls`, de modo que las series de la cadena de herramientas se visualicen en el idioma preferido del usuario.
+El archivo `toolchain.yml` debe incluir una referencia `$i18n`.  
+El ejemplo siguiente muestra una referencia `$i18n` a un archivo `messages.yml`:
+
+```
+messages:
+  $i18n: messages.yml
+```
+
+  Las series en inglés están en `messages.yml` y para otros idiomas se utiliza el código de idioma, por ejemplo `messages_de.yml`. La lista de códigos de idioma puede encontrarse en [Tags for Identifying Languages](https://tools.ietf.org/html/rfc5646){: new_window}.
+
+   Para hacer referencia a la serie de externalizar, utilice `$ref` para recuperar la serie. Por ejemplo,
+
+```
+  template:
+    name:
+      $ref: "#/messages/template.name"
+```
+
+  Si no utiliza series externalizadas, puede utilizar:
+
+```
+  template:
+    name: my_template
+```
+
+Para obtener más información, consulte la [sección de mensajes del SDK de Open Toolchain](https://github.com/open-toolchain/sdk/wiki/Template-File-Format#messages-section){: new_window}.
 
 ## Configuración del archivo de cadena de herramientas
 {: #toolchains_custom_toolchain_yml}
@@ -95,7 +143,7 @@ El archivo `toolchain.yml` es la base de la cadena de herramientas. Las caracter
 
  En esta sección del archivo se proporcionan detalles sobre la cadena de herramientas que el usuario puede ver en la página de creación de la cadena de herramientas. Incluya un nombre para su cadena de herramientas, junto con una descripción que explique la finalidad de la cadena de herramientas. También puede incluir una imagen, como un logotipo o una representación visual de la cadena de herramientas.
 
- Además de proporcionar contenido de introducción para su cadena de herramientas, esta sección también incluye una clave denominada `required` que define las herramientas que forman parte de la cadena de herramientas. El creador de la cadena de herramientas configura estas herramientas al crear la cadena de herramientas desde su plantilla. Para cada herramienta que se pueda configurar en la página de creación de la cadena de herramientas, añada la clave padre de la herramienta como está definida en el archivo `toolchain.yml` como una propiedad de la clave `required`.
+ Además de proporcionar contenido de introducción para su cadena de herramientas, esta sección también incluye una clave que se denomina `required` que define las herramientas que forman parte de la cadena de herramientas. El creador de la cadena de herramientas configura estas herramientas al crear la cadena de herramientas desde su plantilla. Para cada herramienta que se pueda configurar en la página de creación de la cadena de herramientas, añada la clave padre de la herramienta como está definida en el archivo `toolchain.yml` como una propiedad de la clave `required`.
 
  Este fragmento de código muestra un ejemplo de esta sección:
 
@@ -119,24 +167,24 @@ template
 
 En el ejemplo anterior, el URL de Git y la rama de Git son para una nueva plantilla de cadena de herramientas.
 
-2\. **Definiciones del repositorio GitHub:**
+2\. **Definiciones de repositorio:**
 
- Una cadena de herramientas puede proporcionar entrega continua para tantos repositorios GitHub como se desee. Esta sección del archivo `toolchain.yml` es donde está definido cada repositorio.
+ Una cadena de herramientas puede proporcionar entrega continua para tantos repositorios Git como se desee, incluidos GitHub, GitHub Enterprise, Git Repos, Issue Tracking y GitLab. Esta sección del archivo `toolchain.yml` es donde está definido cada repositorio.
 
- Para cada repositorio GitHub, Git Repo e Issue Tracking añadido a la cadena de herramientas, añada una clave padre que represente el nombre del repositorio GitHub con las propiedades siguientes:
+ Para cada repositorio añadido a la cadena de herramientas, añada una clave padre que represente el nombre del repositorio con las propiedades siguientes:
 
 | Elemento | Clave/propiedad | Valor | Descripción |
 |------|--------------|-------|-------------|
 | repo-name | clave |  | Nombre de repositorio. Esta clave coincide con el nombre (sample-repo) |
-| service_id | propiedad | <`githubpublic` , `githubprivate`> | Tipo repositorio GitHub |
+| service_id | propiedad | <`githubpublic`, `githubprivate`, `hostedgit`, `gitlab`> | Tipo de repositorio |
 | parameters: | clave |  |  |
 | repo_name | propiedad |  | Patrón para repo-name. El ejemplo siguiente utiliza el nombre de la cadena de herramientas como nombre de repositorio |
-| repo_url | propiedad |  | URL del reposit. GitHub |
-| type | propiedad | <`new` , `fork` , `clone` , `link`> | Cómo se crea el repositorio |
-| has_issues | propiedad | <`true` , `false`> | Problemas de uso de GitHub |
+| repo_url | propiedad |  | URL del repositorio |
+| type | propiedad | <`new` , `fork` , `clone` , `link`> | Cómo crear el repositorio nuevo |
+| has_issues | propiedad | <`true` , `false`> | Problemas de uso|
 | enable_traceability | properties |  <`true` , `false`> | Determina si se realiza el seguimiento del despliegue de cambios de código creando marcas, etiquetas y comentarios sobre las confirmaciones, solicitudes de extracción y problemas a los que se hace referencia.|
 
- **Nota:** Si define varios repositorios y los configura como `has_issues: true`, se añadirá una única instancia del rastreador de problemas de GitHub a la cadena de herramientas. El rastreador seguirá problemas para todos los repositorios establecidos en `true`.
+ **Nota:** Si define varios repositorios y los configura como `has_issues: true`, se añade una única instancia del rastreador de problemas de GitHub a la cadena de herramientas. El rastreador seguirá problemas para todos los repositorios establecidos en `true`.
 
  Este fragmento de código muestra un ejemplo de esta sección:
 
@@ -166,12 +214,12 @@ En el ejemplo anterior, el URL de Git y la rama de Git son para una nueva planti
 | service_id | propiedad | <`pipeline`> | Nombre del servicio que se va a utilizar |
 | parameters | clave |  |  |
 | name | propiedad | <`repo_name`> | Igual que el nombre definido en la sección repos |
-| ui-pipeline | propiedad | <`true` , `false`> |  |
+| ui-pipeline | propiedad | <`true` , `false`> |True si las aplicaciones que despliega este conducto se muestran en el menú **Ver app** de la página de la cadena de herramientas |
 | configuration | clave |  |  |
 | content | propiedad | <`$ref(pipeline.yml)`> | Archivo que contiene la definición del conducto |
 | env | clave |  |  |
 | SAMPLE_REPO | clave | <`repo-name-key`> | El mismo nombre que su clave padre del repositorio |
-| CF_APP_NAME |  propiedad | <`'{{form.pipeline.parameters.prod-app-name}}'`> | Nombre que utiliza Cloud Foundry. Considere la posibilidad de incorporar el nombre de clave padre del repositorio de GitHub en esta propiedad. |
+| CF_APP_NAME |  propiedad | <`'{{form.pipeline.parameters.prod-app-name}}'`> | Nombre que utiliza Cloud Foundry. Considere la posibilidad de incorporar el nombre de clave padre del repositorio en esta propiedad. |
 | PROD_SPACE_NAME | propiedad | <`'{{form.pipeline.parameters.prod-space}}'`> | Nombre del espacio de {{site.data.keyword.Bluemix_notm}} en el que se va a desplegar |
 | PROD_ORG_NAME | propiedad | <`'{{form.pipeline.parameters.prod-organization}}'`> | Nombre de la organización de {{site.data.keyword.Bluemix_notm}} en la que se va a desplegar |
 | PROD_REGION_ID | propiedad | <`'{{form.pipeline.parameters.prod-region}}'`> | Nombre de la región de {{site.data.keyword.Bluemix_notm}} en la que se va a desplegar |
@@ -185,7 +233,7 @@ En el ejemplo anterior, el URL de Git y la rama de Git son para una nueva planti
 
  Este fragmento de código muestra un ejemplo de esta sección del archivo:
 
- ```YAML
+ ```
  # Pipelines
   sample-build:
     service_id: pipeline
@@ -204,36 +252,38 @@ En el ejemplo anterior, el URL de Git y la rama de Git son para una nueva planti
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
        execute: true 
-```
+```      
  {: codeblock}
 
-4\. **Detalles del despliegue:** - se necesitan verificar
-
+4\. **Destalles del despliegue:**
 
  Como parte del proceso de entrega continua, puede configurar una cadena de herramientas para desplegar una aplicación en cualquier región, organización o espacio de {{site.data.keyword.Bluemix_notm}} al que tenga acceso el usuario. Los detalles específicos sobre dónde desplegar la aplicación se pueden puede seleccionar en la página de creación de la cadena de herramientas. 
 
- ![Valores de configuración de Delivery Pipeline](images/deploy_configuration.png)
+ ![Valores de configuración del conducto de entrega](images/deploy_configuration.png)
 
- Esta sección del archivo `toolchain.yml` define las etapas del conducto que están disponibles para configurarse desde la página de creación de cadenas de herramientas.
- Para empezar, se utilizará la clave padre `deploy` para identificar las propiedades de configuración del despliegue. Las siguientes propiedades componen el resto de la sección:
+ En esta sección del archivo `toolchain.yml` se definen las etapas del conducto que se puede configurar en la página de creación de la cadena de herramientas. 
 
-| Elemento | Clave/Propiedad | Valor | Descripción |
+ Para empezar, se utiliza la clave padre `deploy` para identificar las propiedades de configuración del despliegue. Las siguientes propiedades componen el resto de la sección:
+
+| Elemento | Clave/propiedad | Valor | Descripción |
 |------|--------------|-------|-------------|
-| deploy | clave |  | Nombre de la sección de despliegue |
-| schema | propiedad | <`deploy.json`> | Archivo que define el diseño de la IU para configurar los detalles del despliegue |
-| service-category | propiedad | <`pipeline`> | Servicio que utiliza las configuraciones de despliegue |
+| desplegar| clave |  | Nombre de la sección de despliegue |
+| schema| propiedad | <`deploy.json`> | Archivo que define el diseño de la IU para configurar los detalles del despliegue|
+| service-category| propiedad | <`pipeline`> | Servicio que utiliza las configuraciones de despliegue |
 | parameters | clave |  |  |
-| prod-region | propiedad | <`"{{region}}"`> | Define la región de {{site.data.keyword.Bluemix_notm}} para la etapa de producción |
-| prod-organization | propiedad | <`"{{organization}}"`> | Define la organización de {{site.data.keyword.Bluemix_notm}} para la etapa de producción |
-| prod-space | propiedad | <`prod`> | Define el espacio de {{site.data.keyword.Bluemix_notm}} para la etapa de producción |
-| github-repo-name | propiedad | <`"{{repo-name-key.parameters.repo_name}}"`> | Variable para pasar el nombre del repositorio de GitHub a la página de creación de la cadena de herramientas |
+| prod-region| propiedad | <`"{{region}}"`> | Define la región de {{site.data.keyword.Bluemix_notm}} para la etapa de producción|
+| prod-organization| propiedad | <`"{{organization}}"`> | Define la organización de {{site.data.keyword.Bluemix_notm}} para la etapa de producción|
+| prod-space| propiedad | <`prod`> | Define el espacio de {{site.data.keyword.Bluemix_notm}} para la etapa de producción|
+| github-repo-name| propiedad | <`"{{repo-name-key.parameters.repo_name}}"`> | Variable para pasar el nombre del repositorio GitHub a la página de creación de la cadena de herramientas|
 
 Para obtener más información sobre cómo crear un archivo `deploy.json`, consulte [esta sección] (#toolchains_custom_deploy_json).
 
  En el ejemplo siguiente se define una sola etapa que se despliega en un entorno de producción.
 
+ 
+
  ```
- ## Configuración de una etapa de despliegue
+ ## Configuring a deployment stage
  deploy:
    schema: deploy.json
    service-category: pipeline
@@ -245,9 +295,10 @@ Para obtener más información sobre cómo crear un archivo `deploy.json`, consu
  ```
  {: codeblock}
 
- El ejemplo de código se puede utilizar tal cual y sólo requiere una ligera modificación. Para personalizar esta sección, establezca `github-repo-name` para ser coherente con el nombre de su repositorio. Los detalles del archivo [`deploy.json`](#toolchains_custom_deploy_json) también se tienen que actualizar.
+ Básicamente el ejemplo de código se puede utilizar tal cual y sólo requiere una ligera modificación. Para personalizar esta sección, establezca `github-repo-name` para ser coherente con el nombre de su repositorio. También es necesario actualizar la información del archivo [`deploy.json`](#toolchains_custom_deploy_json).
 
  Para crear un conducto más complejo que incluya etapas de desarrollo, preguntas y respuestas y producción, se podrán sustituir las siguientes propiedades bajo la clave `parameters`.
+
  ```
    parameters:
  	dev-region: "{{region}}"
@@ -265,11 +316,13 @@ Para obtener más información sobre cómo crear un archivo `deploy.json`, consu
  ## Configuración de un conducto
  {: #toolchains_custom_pipeline_yml}
 
- El archivo `pipeline.yml` contiene todos los detalles de configuración para las etapas del conducto. Puede empezar con un pipeline.yml existente y personalizarlo para que se ajuste a sus necesidades.
+ El archivo `pipeline.yml` contiene todos los detalles de la configuración correspondientes a las etapas del conducto. Puede empezar con un pipeline.yml existente y personalizarlo para que se ajuste a sus necesidades.
 
- Si la cadena de herramientas contiene más de un conducto, proporcione nombres exclusivos para cada archivo `pipeline.yml`.
+ 
 
- A continuación se muestra un ejemplo de un archivo `pipeline.yml`:
+ Si la cadena de herramientas contiene más de un conducto, proporcione nombres exclusivos para cada archivo `pipeline.yml`. 
+
+ A continuación puede ver un ejemplo de archivo `pipeline.yml`:
 
  ```
  ---
@@ -308,7 +361,7 @@ stages:
       application: ${CF_APP_NAME}
     script: |
       #!/bin/bash
-      # Enviar la app por push
+      # Push app
       if ! cf app $CF_APP; then  
         cf push $CF_APP
       else
@@ -328,37 +381,39 @@ stages:
         cf push $CF_APP
         cf delete $OLD_CF_APP -f
       fi
-      # Exportar el nombre de la app y el URL para utilizarlo en trabajos posteriores del Conducto
+      # Export app name and URL for use in later Pipeline jobs
       export CF_APP_NAME="$CF_APP"
       export APP_URL=http://$(cf app $CF_APP_NAME | grep urls: | awk '{print $2}')
-      # Ver registros
+      # View logs
       #cf logs "${CF_APP}" --recent
  ```
  {: codeblock}		
 
 
- ## Configuración de la interfaz de conducto
+ ## Configuración de la interfaz del conducto
  {: #toolchains_custom_deploy_json}
 
- En la página de creación de la cadena de herramientas, cuando se seleccione Delivery Pipeline desde la sección Integraciones configurables, la sección se expandirá para mostrar los elementos siguientes:
+ En la página de creación de la cadena de herramientas, cuando se seleccionas Delivery Pipeline en la sección Integraciones configurables, la sección se expande para mostrar los siguientes elementos:
 
  	* El nombre de la aplicación
- 	* La Región, Organización y Espacio en el que se despliegan las etapas de conducto.
+ 	* La región, la organización y el espacio en los que se despliegan las etapas del conducto.
 
 Puede configurar dichos elementos para cada herramienta.
 
- ![Valores de configuración de Delivery Pipeline](images/deploy_configuration.png)
+ 
 
- El diseño de esta sección de la IU está definido por el esquema `deploy.json`.
+ ![Valores de configuración del conducto de entrega](images/deploy_configuration.png)
+
+ El diseño de esta sección en la interfaz de usuario se define mediante el esquema `deploy.json`. 
 
  Dentro del esquema, se deben actualizar las siguientes propiedades para que se ajusten a los detalles de la aplicación:
 
  	* Título
  	* Descripción
- 	* LongDescription
- 	* Todas las instancias de `hello-world-name` y los detalles asociados se deben modificar para que coincidan con los de la aplicación.
+ 	* Descripción larga
+ 	* Todas las instancias de `hello-world-name` y los detalles asociados se deben modificar para que se ajusten a la aplicación. 
 
- El siguiente fragmento de código es un ejemplo de un archivo `deploy.json`:
+ El siguiente fragmento de código es un ejemplo de archivo `deploy.json`:
 
  ```
  {
@@ -378,15 +433,15 @@ Puede configurar dichos elementos para cada herramienta.
     "type": "object",
     "properties": {
         "prod-region": {
-            "description": "The bluemix region",
+            "description": "The {{site.data.keyword.Bluemix_notm}} region",
             "type": "string"
         },
         "prod-organization": {
-            "description": "The bluemix org",
+            "description": "The {{site.data.keyword.Bluemix_notm}} org",
             "type": "string"
         },
        "prod-space": {
-            "description": "The bluemix space",
+            "description": "The {{site.data.keyword.Bluemix_notm}} space",
             "type": "string"
         },
         "prod-app-name": {
@@ -481,50 +536,62 @@ Puede configurar dichos elementos para cada herramienta.
 
  ![Archivos necesarios para definir una cadena de herramientas](images/files_for_toolchain_with_additional_tools.png)
 
-Para ver la lista de integraciones de herramientas disponibles, consulte <a ref="https://github.com/open-toolchain/sdk/wiki/services.md" target="_blank">Servicios disponibles en una plantilla de cadena de herramientas</a>. Los ejemplos siguientes muestran cómo dar formato a las adiciones a un archivo YAML de cadena de herramientas.
- * **Slack**
+Para ver la lista de integraciones de herramientas disponibles, consulte <a href="https://github.com/open-toolchain/sdk/wiki/services.md" target="_blank">Servicios disponibles en una plantilla de cadena de herramientas</a>. Los ejemplos siguientes muestran cómo dar formato a las adiciones a un archivo YAML de cadena de herramientas.
+ 
 
-### toolchain.yml
-	```
-	messaging:
+### **Slack**
+
+#### toolchain.yml
+{: #slack_toolchain_yaml}
+
+```
+messaging:
 	  service_id: slack
 	  $ref: slack.yml
 	```
-	{: codeblock}
+{: codeblock}
 
-### slack.yml
-	```
-	---
-	parameters:
-	  api_token: ""
-	  channel_name: ""
-	```
-	{: codeblock}
+#### slack.yml
+{: #slack_slack_yaml}
 
- * **Sauce Labs**
-
-### toolchain.yml
+```
+---YAML
+parameters:
+  api_token: ""
+  channel_name: ""
 	```
-	test:
+{: codeblock}
+
+### **Sauce Labs**
+
+#### toolchain.yml
+{: #sauce_toolchain_yaml}
+
+```YAML
+test:
 	  service_id: saucelabs
 	  $ref: saucelabs.yml
 	```
-	{: codeblock}
+{: codeblock}
 
-### saucelabs.yml
-	```
-	---
+#### saucelabs.yml
+{: #sauce_slack_yaml}
+
+```YAML
+---
 	parameters:
 	  username: ""
 	  key: ""
 	```
-	{: codeblock}
+{: codeblock}
 
- * **Eclipse Orion Web IDE**
+### **Eclipse Orion Web IDE**
 
-###	toolchain.yml
-	```
-	webide:
+####	toolchain.yml
+{: #eclipse_toolchain_yaml}
+
+```YAML
+webide:
 	  service_id: orion
 	```
-	{: codeblock}
+{: codeblock}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-7-12"
+  years: 2015, 2018
+lastupdated: "2018-3-21"
 
 ---
 
@@ -28,7 +28,7 @@ Puede gestionar y trabajar con el código fuente en un GitHub, GitHub Enterprise
 
 | Tipo de Git  | Configuración HTTPS | Uso de HTTPS |  Configuración de SSH |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Señal de acceso personal](/docs/ContinuousDelivery/git_working.html#create_pat) | Nombre de usuario de Git Repos and Issue Tracking (no su ID de IBM) y señal de acceso personal | [Configure la clave SSH](/docs/ContinuousDelivery/git_working.html#create_ssh) |
+| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Señal de acceso personal](/docs/services/ContinuousDelivery/git_working.html#git_authentication) | Nombre de usuario de Git Repos and Issue Tracking (no su ID de IBM) y señal de acceso personal | [Configure la clave SSH](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
 | GitHub pública (github.com) | La señal de acceso personal no es necesaria, pero puede configurar una y utilizarla | Nombre de usuario y contraseña de GitHub, o nombre de usuario de GitHub y señal de Acceso personal, o sólo la señal de acceso personal como nombre de usuario | [Configurar una clave SSH de GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
 | GitHub Enterprise | [Señal de acceso personal](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | Nombre de usuario de GitHub Enterprise (no su ID de IBM) y señal de acceso personal | [Configure la clave SSH de GitHub Enterprise](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
@@ -77,13 +77,13 @@ Si utiliza Git Repos and Issue Tracking y tiene algún problema, consulte [Git R
 ## Desarrollo con IBM Eclipse Tools
 {: #git_eclipse_tools}
 
-IBM Eclipse Tools for Bluemix proporciona plug-ins que puede instalar en un entorno de Eclipse para integrar el IDE con Bluemix.
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} proporciona plug-ins que puede instalar en un entorno de Eclipse para integrar el IDE con {{site.data.keyword.Bluemix_notm}}.
 
-Con las herramientas, puede desplegar los siguientes tipos de archivos y servidores en el servidor de Bluemix directamente desde el Eclipse IDE o desde IBM WebSphere&reg; Application Server Developer Tools (WDT):
+Con las herramientas, puede desplegar los siguientes tipos de archivos y servidores en {{site.data.keyword.Bluemix_notm}} directamente desde el Eclipse IDE o desde IBM WebSphere&reg; Application Server Developer Tools (WDT):
 
 * Archivos JavaScript
 * Archivos WAR (archivo web)
 * Archivos EAR (archivo empresarial)
 * Servidores de paquetes de Liberty Profile
 
-También puede crear servicios y enlazarlos a la app y definir variables de entorno como parte del despliegue. Para obtener más información sobre IBM Eclipse Tools, [consulte Despliegue de apps con IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html).
+También puede crear servicios y enlazarlos a la app y definir variables de entorno como parte del despliegue. Para obtener más información sobre IBM Eclipse Tools, [consulte Despliegue de apps con IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../../manageapps/eclipsetools/eclipsetools.html).

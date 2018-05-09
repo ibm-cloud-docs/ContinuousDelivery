@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-7-24"
+  years: 2015, 2018
+lastupdated: "2018-3-21"
 
 ---
 
@@ -25,7 +25,7 @@ Puede actualizar su proyecto o esperar a que se actualice automáticamente. Aseg
 - [¿Qué ocurrirá a mis definiciones de compilación en mi proyecto cuando actualice a una cadena de herramientas? ](#faq_build)
 - [Necesito crear una organización para mi proyecto que se actualizará a una cadena de herramientas. Entiendo que necesito añadir una tarjeta de crédito a mi cuenta antes de que pueda crear una organización. ¿Se realizarán cargos en mi tarjeta de crédito? ](#faq_charges)
 - [No puedo encontrar o acceder a mi cadena de herramientas. ¿Qué debo hacer?](#faq_find)
-- [Mi proyecto está asociado con la región Reino Unido. Después de la actualización, veo mensajes de error, mis colegas no pueden acceder a la cadena de herramientas, y no veo mi cadena de herramientas en la página Cadenas de herramientas en Bluemix. ¿Qué ocurre?](#faq_uk)
+- [Mi proyecto está asociado con la región Reino Unido. Después de la actualización, veo mensajes de error, mis colegas no pueden acceder a la cadena de herramientas, y no veo mi cadena de herramientas en la página Cadenas de herramientas de la plataforma {{site.data.keyword.Bluemix_notm}}. ¿Qué ocurre?](#faq_uk)
 
 ## Cadenas de herramientas
 {: #compare_toolchains}
@@ -43,7 +43,7 @@ Puede obtener información sobre cadenas de herramientas en [YouTube ![Icono de 
 {: #upgrade_prereqs}
 
 - Para acceder a la cadena de herramientas actualizada del proyecto, necesita un ID de {{site.data.keyword.Bluemix_notm}}. Antes de actualizar, debe verificar que tiene un ID de {{site.data.keyword.Bluemix_notm}} activo. Si no dispone de uno, [regístrese](https://console.ng.bluemix.net/registration/).
-- Asegúrese de que el propietario del proyecto de {{site.data.keyword.jazzhub_short}} sea correcto. La cadena de herramientas que se crea a partir del proyecto formará parte de la organización de {{site.data.keyword.Bluemix_notm}} de dicho propietario.
+- Asegúrese de que el propietario del proyecto de {{site.data.keyword.jazzhub_short}} sea correcto. La cadena de herramientas que se crea a partir del proyecto formará parte de la organización de {{site.data.keyword.Bluemix_notm}} de dicho propietario. 
 - Asegúrese de que la organización y el espacio donde desea crear la cadena de herramientas estén en {{site.data.keyword.Bluemix_notm}} Público en la región EE.UU. Sur. Para confirmar que tiene una organización y un espacio válidos en EE.UU. Sur, inicie sesión en [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window} y cree un espacio si se le solicita que cree uno.
 - Si está planeando iniciar la actualización, asegúrese de que es miembro de cada organización y espacio en el que se despliega el conducto. Cualquier administrador de proyecto puede iniciar la actualización. Sin embargo, si el administrador que inicia la actualización no es miembro de cada organización y espacio en el que se despliega el conducto, éste último no se podrá crear. La persona que inicia la actualización se convierte en el propietario del repositorio en la cadena de herramientas.
 - Eclipse Orion {{site.data.keyword.webide}} en la cadena de herramientas no es el {{site.data.keyword.webide}} asociado al proyecto. Si utiliza el {{site.data.keyword.webide}} y tiene cambios sin confirmar, confírmelos antes de actualizar.
@@ -64,9 +64,9 @@ Cuando el proyecto esté listo para actualizarse, se mostrará un mensaje en la 
 
 ![Imagen del elemento de menú Proyectos para actualizar](images/menu-projects-to-upgrade.png)
 
-Cuando inicia la actualización, las transmisiones de conducto del proyecto se bloquean. No podrá ejecutarlas ni modificarlas. Si revierte la actualización mediante la supresión de la cadena de herramientas, el conducto es desbloquea.
+Cuando inicia la actualización, las transmisiones de conducto del proyecto se bloquean. No podrá ejecutarlas ni modificarlas. Si revierte la actualización mediante la supresión de la cadena de herramientas, el conducto es desbloquea. 
 
-Si el proyecto utiliza un repositorio Git alojado en JazzHub, después de iniciar la actualización el repositorio se bloquea para garantizar la integridad de los datos que se mueven a la cadena de herramientas. Si revierte la actualización mediante la supresión de la cadena de herramientas, el repositorio de JazzHub es desbloquea.
+Si el proyecto utiliza un repositorio Git alojado en JazzHub, después de iniciar la actualización el repositorio se bloquea para garantizar la integridad de los datos que se mueven a la cadena de herramientas. Si revierte la actualización mediante la supresión de la cadena de herramientas, el repositorio de JazzHub es desbloquea. 
 
 Para ver detalles sobre cómo se trata cada tipo de repositorio en el proceso de actualización, consulte la siguiente tabla.
 
@@ -100,16 +100,16 @@ Para actualizar el proyecto a una cadena de herramientas, siga estos pasos:
 
    - Para cambiar la organización de {{site.data.keyword.Bluemix_notm}} en la que se creará la cadena de herramientas, seleccione la organización en el menú de la cuenta:
 
-      ![Selector de organización de Bluemix](images/bluemix-organization-chooser.png)
+      ![Selector de organización de {{site.data.keyword.Bluemix_notm}}](images/bluemix-organization-chooser.png)
 
-   Puesto que las cadenas de herramientas se gestionan a nivel de organización, asegúrese de seleccionar una organización donde los miembros del proyecto que necesiten acceder a la cadena de herramientas ya existan o se puedan añadir.
+   Puesto que las cadenas de herramientas se gestionan a nivel de organización, asegúrese de seleccionar una organización donde existan los miembros del proyecto que necesiten acceder a la cadena de herramientas, o se puedan añadir.
 
 3. Si ha utilizado Track & Plan en el proyecto, puede transferir datos de Track & Plan a GitHub Issues.
 
    ![Opciones de Track and Plan](images/upgrade-tutorial-track-and-plan.png)
 
-   - Indique si desea migrar los datos de Track & Plan.
-   - De forma predeterminada, se migran todos los datos de Track & Plan. Si prefiere migrar solo los elementos de trabajo que forman parte de una determinada consulta, especifique la consulta.
+   - Indique si desea migrar los datos de Track & Plan. 
+   - De forma predeterminada, se migran todos los datos de Track & Plan. Si prefiere migrar solo los elementos de trabajo que forman parte de una determinada consulta, especifique la consulta. 
    - Seleccione los atributos de elementos de trabajo que desea correlacionar con etiquetas en GitHub Issues.
 
 4. Pulse **Crear**. Se crea la nueva cadena de herramientas y se muestra su página Visión general.
@@ -120,7 +120,7 @@ Para actualizar el proyecto a una cadena de herramientas, siga estos pasos:
    - Para acceder al conducto, pulse **Conducto de entrega**.
    - Para acceder al {{site.data.keyword.webide}}, que aloja el contenido del repositorio que se ha extraído en el espacio de trabajo, pulse **Eclipse Orion {{site.data.keyword.webide}}**.
 
-   Si vuelve al proyecto durante la actualización, el mensaje de cabecera puede indicar que la actualización está en curso, especialmente si el proceso de actualización implica importar código fuente en un repositorio nuevo o importar elementos de trabajo de Track &amp; Plan como problemas.
+   Si vuelve al proyecto durante la actualización, el mensaje de cabecera puede indicar que la actualización está en curso, especialmente si el proceso de actualización implica importar código fuente en un repositorio nuevo o importar elementos de trabajo de Track &amp; Plan como problemas. 
 
    ![Mensaje sobre el proyecto que se actualiza a una cadena de herramientas](images/project-being-upgraded-banner.png)
 
@@ -137,11 +137,11 @@ Puede ver los que los proyectos que se han actualizado seleccionando **Proyectos
 
 ![Imagen del elemento de menú Proyectos actualizados](images/menu-upgraded-projects.png)
 
-Si tiene que revertir la actualización, suprima la cadena de herramientas. Puede suprimir su cadena de herramientas desde el menú **Más acciones** de la página visión general de la cadena de herramientas:
+Si tiene que revertir la actualización, suprima la cadena de herramientas. Puede suprimir su cadena de herramientas desde el menú **Más acciones** de la página visión general de la cadena de herramientas: 
 
 ![imagen de la acción Suprimir del menú Más acciones](images/upgrade-tutorial-delete-toolchain.png)
 
-Cuando vuelva al proyecto, se volverá a mostrar el mensaje de actualización y podrá volver a actualizar cuando esté preparado.
+Cuando vuelva al proyecto, se volverá a mostrar el mensaje de actualización y podrá volver a actualizar cuando esté preparado. 
 
 ## Siguientes pasos
 {: #upgrade_next_steps}
@@ -150,7 +150,7 @@ Cuando vuelva al proyecto, se volverá a mostrar el mensaje de actualización y 
 
    ![Mensaje de cabecera que indica que el proyecto se ha actualizado](images/banner-upgraded.png)
 
-   **Nota:** si el mensaje indica "actualice ahora", significa que la actualización ha fallado. Pulse el enlace **actualizar ahora** para volverlo a intentar.
+   **Nota:** si el mensaje indica "actualice ahora", significa que la actualización ha fallado. Pulse el enlace **actualizar ahora** para volverlo a intentar. 
 
    ![Mensaje de cabecera que indica que el proyecto está listo para la actualización](images/banner-ready-to-upgrade.png)
 
@@ -158,7 +158,7 @@ Cuando vuelva al proyecto, se volverá a mostrar el mensaje de actualización y 
     - Cada miembro del equipo debe tener una cuenta de {{site.data.keyword.Bluemix_notm}} válida. Los miembros del equipo que no tienen cuentas deben [registrarse ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/registration){:new_window}.
     - Otorgue acceso a los miembros de la organización a la cadena de herramientas desde la página Gestionar de la cadena de herramientas. Los miembros del proyecto existentes se añaden como miembros de la cadena de herramientas como parte del proceso de actualización. Para obtener más información sobre el control de accesos para cadenas de herramientas, consulte [Gestión de acceso ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
     - Si un usuario no es miembro de la organización a la que pertenece la cadena de herramientas, añádalo a la organización desde la página Gestionar organizaciones.
-    - Si la cadena de herramientas utiliza {{site.data.keyword.gitrepos}}, todos los miembros del proyecto de JazzHub que tengan un ID de Bluemix válido se añadirán al repositorio de {{site.data.keyword.gitrepos}} con los mismos privilegios que tenían en el proyecto de JazzHub. Si el proyecto de JazzHub incluye miembros que no tienen un ID de Bluemix válido, deberían registrarse para uno y ser añadidos al repositorio.
+    - Si la cadena de herramientas utiliza {{site.data.keyword.gitrepos}}, todos los miembros del proyecto de JazzHub que tengan un ID de {{site.data.keyword.Bluemix_notm}} válido se añadirán al repositorio de {{site.data.keyword.gitrepos}} con los mismos privilegios que tenían en el proyecto de JazzHub. Si el proyecto de JazzHub incluye miembros que no tienen un ID de {{site.data.keyword.Bluemix_notm}} válido, deberían registrarse para uno y ser añadidos al repositorio.
       Para obtener más información sobre la gestión de organizaciones, consulte [Gestión de organizaciones y espacios ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
 
 3. Utilice las herramientas de la cadena de herramientas en lugar de las herramientas del proyecto de {{site.data.keyword.jazzhub_short}}. Por ejemplo, para editar código desde un navegador, utilice el IDE Web de la cadena de herramientas.
@@ -167,16 +167,16 @@ Cuando vuelva al proyecto, se volverá a mostrar el mensaje de actualización y 
     1. Vaya a la [página Señales de acceso ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} de los valores de usuario de {{site.data.keyword.gitrepos}}.
     2. Cree una señal de acceso personal que utilice **api** como ámbito.
     3. Vaya a la [página Cuenta ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/account){:new_window} y busque su nombre de usuario correspondiente a {{site.data.keyword.gitrepos}}. El nombre de usuario aparece en la lista de la sección "Cambiar nombre de usuario" y se muestra como la primera parte del URL de cualquier repositorio personal que cree.
-    4. Para autenticarse con {{site.data.keyword.gitrepos}} desde un cliente Git externo a través de HTTPS, utilice su nombre de usuario y su señal de acceso personal.
+    4. Para autenticarse con {{site.data.keyword.gitrepos}} desde un cliente Git externo a través de HTTPS, utilice su nombre de usuario y su señal de acceso personal. 
     5. Si desea reutilizar el repositorio local de su repositorio Git JazzHub, haga que el repositorio apunte al nuevo repositorio en {{site.data.keyword.gitrepos}}. Desde un shell de un terminal, vaya al directorio en el que se ha clonado el repositorio Git JazzHub. Escriba el mandato `git remote set-url`: `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
         **Consejo:** para comprobar los URL definidos y sus nombres remotos, utilice el mandato `git remote -v`. El nombre remoto predeterminado es `origin`. Si tiene una configuración más avanzada, el formato del mandato es el siguiente: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-5. Cuando la cadena de herramientas esté configurada y haya empezado a utilizarla, tenga en cuenta la posibilidad de llevar a cabo alguno de los siguientes pasos, o todos ellos, para asegurarse de que nadie utilice su proyecto:
-    - Añada un sufijo al nombre del proyecto para indicar que no se debe utilizar. Puede añadir `_NO_UTILIZAR` al final del nombre del proyecto.
-    - Actualice la descripción del proyecto para indicar que ya no se utiliza y añada un puntero a la cadena de herramientas.
-    - Elimine los miembros del proyecto.
-    - Cuando ya no necesite el proyecto, suprímalo.
+5. Cuando la cadena de herramientas esté configurada y haya empezado a utilizarla, tenga en cuenta la posibilidad de llevar a cabo alguno de los siguientes pasos, o todos ellos, para asegurarse de que nadie utilice su proyecto: 
+    - Añada un sufijo al nombre del proyecto para indicar que no se debe utilizar. Puede añadir `_NO_UTILIZAR` al final del nombre del proyecto. 
+    - Actualice la descripción del proyecto para indicar que ya no se utiliza y añada un puntero a la cadena de herramientas. 
+    - Elimine los miembros del proyecto. 
+    - Cuando ya no necesite el proyecto, suprímalo. 
 
 6. Opcional: para ver la madurez del desarrollo de un proyecto, las prácticas del equipo y la calidad del código base, añada IBM Cloud {{site.data.keyword.DRA_short}} a la cadena de herramientas. {{site.data.keyword.DRA_short}} aplica analíticas de desarrollador, de equipo y de despliegue a los proyectos DevOps. Para obtener más información, consulte [Iniciación a {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html).
 
@@ -212,7 +212,7 @@ Para aquellos usuarios que necesiten la misma funcionalidad que la ofrecida por 
 
 Este nuevo servicio IBM Track and Plan on Cloud proporciona una mayor funcionalidad que JazzHub Track &amp; Plan, ahora en desuso, dando soporte a la personalización de procesos, a jerarquías de proceso, a SAFe o a muchos otros métodos híbridos y ágiles y además ofrece la escalabilidad para crecer más allá de un proyecto individual. Se basa en la última versión de Rational Team Concert 6.0.3 y en los próximos 60 días estará en la versión 6.0.4, mientras que JazzHub Track &amp; Plan se basaba en Rational Team Concert 5.x. Es posible una migración de datos a IBM Track and Plan on Cloud a través de servicios adicionales. Puede ponerse en contacto con [Tom Hollowell ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](mailto:trhollow@us.ibm.com){:new_window}, responsable de ventas de Connected Products SaaS para obtener más información.
 
-Para obtener información sobre IBM Track and Plan on Cloud, o para comprar en línea, visite [IBM Marketplace ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}.
+Para obtener información sobre IBM Track and Plan on Cloud, o para comprar en línea, vaya a [IBM Marketplace ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}.
 
 También es una opción comprar además software de automatización de compilaciones y gestión de código fuente, [Rational Team Concert on Cloud ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window}.
 
@@ -240,25 +240,25 @@ Si utiliza Jazz SCM como repositorio de código fuente y utiliza Delivery Pipeli
 ### Necesito crear una organización para mi proyecto que se actualizará a una cadena de herramientas. Entiendo que necesito añadir una tarjeta de crédito a mi cuenta antes de que pueda crear una organización. ¿Se realizarán cargos en mi tarjeta de crédito?
 {: #faq_charges}
 
-Como [cliente de Pago según uso ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}, si utiliza un tiempo de ejecución, servicio o componente más allá de las concesiones gratuitas que tiene en el catálogo de Bluemix, se le realizarán cargas. Para una estimación de la utilización, consulte la [hoja de cálculos de precios ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}. Para conocer los precios actuales para Continuous Delivery, consulte el [catálogo de Bluemix ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}.
+Como [cliente de Pago según uso ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}, si utiliza un tiempo de ejecución, servicio o componente más allá de las concesiones gratuitas que tiene en el catálogo de {{site.data.keyword.Bluemix_notm}}, se le cobrará por ello. Para una estimación de la utilización, consulte la [hoja de cálculos de precios ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}. Para conocer los precios actuales para Continuous Delivery, consulte el [catálogo de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}.
 
 Si es un empleado de IBM, los proyectos internos de IBM se pueden facturar a los departamentos en lugar de hacerlo a su tarjeta de crédito personal. Si necesita recursos más allá de los asignados de forma gratuita a los empleados de IBM, cree una incidencia de soporte.
 
 ### No puedo encontrar o acceder a mi cadena de herramientas. ¿Qué debo hacer?
 {: #faq_find}
 
-Las cadenas de herramientas están alojadas en organizaciones de Bluemix. El proceso de actualización añade todos los miembros del proyecto de JazzHub a la cadena de herramientas. Sin embargo, a menos que el propietario de la organización Bluemix añada dichos usuarios a la organización, no podrán ver la cadena de herramientas.
+Las cadenas de herramientas están alojadas en organizaciones de {{site.data.keyword.Bluemix_notm}}. El proceso de actualización añade todos los miembros del proyecto de JazzHub a la cadena de herramientas. Sin embargo, a menos que el propietario de la organización {{site.data.keyword.Bluemix_notm}} añada dichos usuarios a la organización, no podrán ver la cadena de herramientas.
 
-Para acceder a su cadena de herramientas, vaya a Bluemix, pulse el icono de menú y pulse **Servicios &gt; DevOps**. Se abrirá la página de Cadenas de herramientas. Asegúrese de que se encuentre en la región EE.UU. Sur y de que se encuentra en la organización que contiene la cadena de herramientas. Si la cadena de herramientas no está listada en la página Cadenas de herramientas, consulte [esta entrada de preguntas más frecuentes](#faq_uk).
+Para acceder a su cadena de herramientas, vaya a la plataforma {{site.data.keyword.Bluemix_notm}}, pulse el icono de menú y pulse **Servicios &gt; DevOps**. Se abrirá la página de Cadenas de herramientas. Asegúrese de que se encuentre en la región EE.UU. Sur y de que se encuentra en la organización que contiene la cadena de herramientas. Si la cadena de herramientas no está listada en la página Cadenas de herramientas, consulte [esta entrada de preguntas más frecuentes](#faq_uk).
 
 Como alternativa, mientras que el sitio JazzHub todavía esté disponible, puede ir a la cadena de herramientas pulsando el enlace en el banner de la página Visión general del proyecto.
 
-### Mi proyecto está asociado con la región Reino Unido. Después de la actualización, veo mensajes de error, mis colegas no pueden acceder a la cadena de herramientas, y no veo mi cadena de herramientas en la página Cadenas de herramientas en Bluemix. ¿Qué ocurre?
+### Mi proyecto está asociado con la región Reino Unido. Después de la actualización, veo mensajes de error, mis colegas no pueden acceder a la cadena de herramientas, y no veo mi cadena de herramientas en la página Cadenas de herramientas en {{site.data.keyword.Bluemix_notm}}. ¿Qué ocurre?
 {: #faq_uk}
 
 **Pregunta completa:**
 
-Mi proyecto de JazzHub está asociado con la región Reino Unido de {{site.data.keyword.Bluemix_notm}} según los valores del proyecto. He verificado los valores de mi proyecto yendo a su página de visión general en JazzHub, pulsando el icono **Valores**, que parece un engranaje, y pulsando **Opciones &gt; Convertir esto en un proyecto de Bluemix: Región**. Una vez que haya actualizado el proyecto a la cadena de herramientas de EE.UU., se producen estos problemas:
+Mi proyecto de JazzHub está asociado con la región Reino Unido de {{site.data.keyword.Bluemix_notm}} según los valores del proyecto. He verificado los valores de mi proyecto yendo a su página de visión general en JazzHub, pulsando el icono **Valores**, que parece un engranaje, y pulsando **Opciones &gt; Convertir esto en un proyecto de {{site.data.keyword.Bluemix_notm}}: Región**. Una vez que haya actualizado el proyecto a la cadena de herramientas de EE.UU., se producen estos problemas:
 
    1. Cuando selecciono la organización estadounidense, veo un mensaje que dice que la organización no tiene un espacio en la región EE.UU. Sur, y se me solicita que cree un espacio. No quiero ejecutar nada en Estados Unidos.
    
@@ -288,11 +288,10 @@ Si desea que la cadena de herramientas se encuentre en una organización de EE.U
    
    4. Suprima la cadena de herramientas que se ha creado mediante el proceso de actualización. 
    
-      **Nota:** El repositorio Git no se suprime automáticamente. Puede que desee suprimirlo manualmente o renombrarlo por ahora. Si ya ha realizado cambios en él, puede cambiar la cadena de herramientas futura para utilizarla más adelante.
+      **Nota:** El repositorio Git no se suprime automáticamente. Puede que desee suprimirlo manualmente o renombrarlo por ahora. Si ya ha modificado el repositorio, puede cambiar la cadena de herramientas futura para utilizarla más adelante.
 
    5. Vuelva al proyecto de JazzHub. Se debe restablecer a sí mismo para otro intento de actualización. Si no se restablece, póngase en contacto con hub@jazz.net y proporcione el URL del proyecto.
    
    6. Reinicie el proceso de actualización y asegúrese de seleccionar la organización correcta en EE.UU., que coincida con el nombre de la organización en la región que no sea EE.UU.
    
    7. Si mantiene o cambia el nombre del repositorio Git desde el intento de actualización de la cadena de herramientas anterior (consulte el paso 4), puede volver a configurar la tarjeta Git en su cadena de herramientas para que apunte a este URL de repositorio Git en su lugar. El cambio se reflejará automáticamente en el conducto. Para confirmar, compruebe el separador Entrada en la etapa de compilación.
-

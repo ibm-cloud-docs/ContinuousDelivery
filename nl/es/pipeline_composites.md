@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-8-18"
+  years: 2017, 2018
+lastupdated: "2018-2-26"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,12 +22,14 @@ lastupdated: "2017-8-18"
 Con la función de conductos compuestos para {{site.data.keyword.deliverypipeline}}, puede gestionar procesos de entrega continua e integración continua repetibles para apps de software relacionadas.
 {:shortdesc}
 
+**Nota**: esta característica está disponible solo en la región EE.UU. Sur.
+
 Puede crear conductos compuestos para gestionar las apps de una cadena de herramientas. Si la cadena de herramientas contiene apps desplegadas por {{site.data.keyword.deliverypipeline}}, puede establecer que el conducto compuesto se actualice cuando se añaden o retiran conductos de entrega de la cadena de herramientas. También puede añadir apps procedentes de fuentes externas al conducto compuesto.
 
 ## Creación de un conducto compuesto
 {: #compositepipeline_create_for_toolchain}
 
-1. En el menú de la barra de menús de {{site.data.keyword.Bluemix_notm}}, pulse **DevOps**.
+1. En el menú de la barra de menús de {{site.data.keyword.Bluemix_notm}}, pulse **Servicios** y luego pulse **DevOps**.
 
 2. En el menú de la izquierda, pulse **Conductos**.
 
@@ -135,14 +137,14 @@ Debe habilitar la sincronización automática en el conducto compuesto para pode
 
 Para ver los registros correspondientes a un trabajo, expanda la app que contiene el trabajo y pulse en el trabajo.
 
-## Utilización de IBM Bluemix DevOps Connect para integrar con IBM UrbanCode Deploy
+## Utilización de {{site.data.keyword.Bluemix_notm}} DevOps Connect para integrar con IBM UrbanCode Deploy
 {: #compositepipeline_devops_connect}
 
-IBM Bluemix DevOps Connect coordina la comunicación entre la instalación local de IBM&reg; UrbanCode&reg; Deploy y {{site.data.keyword.contdelivery_short}}. Después de instalar DevOps Connect, puede crear integraciones que puede utilizar para gestionar apps de IBM UrbanCode Deploy con conductos compuestos.
+{{site.data.keyword.Bluemix_notm}} DevOps Connect coordina la comunicación entre la instalación local de IBM&reg; UrbanCode&reg; Deploy y {{site.data.keyword.contdelivery_short}}. Después de instalar DevOps Connect, puede crear integraciones que puede utilizar para gestionar apps de IBM UrbanCode Deploy con conductos compuestos.
 
 **Requisitos previos**
 
-   * Para registrar DevOps Connect, debe tener un ID de IBM.
+   * Para registrar DevOps Connect, debe tener un IBMid.
 
    * Asegúrese de que [Java&trade; Runtime Environment versión 8 actualización 121 o posterior ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://java.com/en/download/){:new_window} esté en el sistema host y de que la variable del sistema PATH esté establecida en su ubicación.
 
@@ -169,7 +171,7 @@ Para utilizar DevOps Connect para integrar con IBM UrbanCode Deploy, siga estos 
   1.  En el sistema en el que ha colocado DevOps Connect, utilice un navegador web para abrir el panel de control de DevOps Connect. El URL predeterminado es https://localhost:8443. Para cambiar el URL y ver otras opciones de arranque, consulte la [documentación de DevOps Connect ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/urbancode/plugindoc/urbancode-sync/ibm-urbancode-sync-utility/1-2/){:new_window}.
 
 
-1. En la página "Registrarse en IBM", escriba su ID de IBM y su contraseña y pulse **Registrar**. Debe registrarse cada vez que inicie DevOps Connect.
+1. En la página "Iniciar sesión en IBM", escriba su IBMid y su contraseña y pulse **Iniciar sesión**. Debe iniciar la sesión cada vez que inicie DevOps Connect.
 
 1. Con DevOps Connect, utilice el plugin de IBM UrbanCode Deploy para DevOps Connect para crear una integración entre la organización e IBM UrbanCode Deploy.
 
@@ -195,7 +197,7 @@ Si la integración se ha realizado correctamente, puede añadir apps de IBM Urba
 ## Adición de apps de IBM UrbanCode Deploy
 {: #compositepipeline_add_apps}
 
-Si es miembro de una organización que se integra con IBM UrbanCode Deploy utilizando DevOps Connect, puede añadir las apps a las que ha podido acceder en UrbanCode Deploy al conducto compuesto. Para ver instrucciones de instalación, consulte [Utilización de IBM Bluemix DevOps Connect para integrar con IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
+Si es miembro de una organización que se integra con IBM UrbanCode Deploy utilizando DevOps Connect, puede añadir las apps a las que ha podido acceder en UrbanCode Deploy al conducto compuesto. Para ver instrucciones de instalación, consulte [Utilización de {{site.data.keyword.Bluemix_notm}} DevOps Connect para integrar con IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
 
 Si es miembro de una organización que está conectada a IBM UrbanCode Deploy, puede añadir apps de UrbanCode Deploy a conductos compuestos, seleccionar los procesos de apps que desea incluir en el plan de despliegue y personalizar el despliegue de las apps.
 
@@ -225,4 +227,7 @@ Si es miembro de una organización que está conectada a IBM UrbanCode Deploy, p
 {: #composite_pipeline-tutorial}
 
 Consulte esta guía de aprendizaje en [IBM&reg; Cloud Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage){:new_window}:
-  * [Cree y utilice una cadena de herramientas con DevOps Insights (v2) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
+
+  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.
+
+  **Nota**: {{site.data.keyword.DRA_short}} está disponible sólo en la región EE.UU. Sur.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-08-15"
+  years: 2017, 2018
+lastupdated: "2018-1-9"
 
 ---
 
@@ -17,6 +17,8 @@ lastupdated: "2017-08-15"
 En un plan de despliegue para un conducto compuesto, una tarea representa una actividad significativa para el negocio que está asociada al despliegue de software. Las tareas se definen en planes de despliegue.
 
 {:shortdesc}
+
+**Nota**: esta característica está disponible solo en la región EE.UU. Sur.
 
 La mayoría de las tareas tienen un punto de partida, un punto final y una duración que se puede medir. Una tarea puede ser de uno de los siguientes tipos:
 
@@ -37,7 +39,7 @@ Al crear una tarea, seleccione el plan de despliegue en el que desea añadir la 
 
 Después de guardar una tarea, se muestran iconos de acción para la tarea. Puede utilizar los iconos de acción para cambiar el estado de la tarea durante un despliegue. Todas las tareas tienen el icono de acción **Omitir**. Se muestran otros iconos, como por ejemplo **Iniciar**, cuando el contexto resulta adecuado.
 
-![](../UCCR/images/deploy-plan-intro.png "Plan de despliegue típico")
+![Un plan de despliegue típico](../UCCR/images/deploy-plan-intro.png)
 
 *Figura 1. Un plan de despliegue sencillo con tareas e iconos de acción*
 
@@ -58,6 +60,8 @@ Cada tarea de un plan de despliegue está contenida en una fila distinta. La inf
 
 ---
 Después de añadir tareas a planes de despliegue, puede gestionarlas de varias formas:
+
+
 
    * Para mover una tarea, arrástrela a una nueva ubicación.
 
@@ -82,7 +86,7 @@ Para crear una tarea manual, siga estos pasos:
 
 3. En el campo **Duración (minutos)**, escriba el número de minutos que cree que durará la ejecución de la tarea hasta que se complete. La duración estimada se utiliza para calcular los tiempos de despliegue previstos.
 
-3. En la lista **Etiquetas**, adjunte una etiqueta a la tarea. Puede seleccionar varias etiquetas. Para crear una etiqueta, escriba el nombre de la etiqueta en campo de la lista.
+3. En la lista **Etiquetas**, adjunte una etiqueta a la tarea. Puede seleccionar varias etiquetas. Para crear una etiqueta, escriba el nombre de la etiqueta en campo de la lista. 
 
 3. En la lista **Grupos y usuarios asignados**, asignar la tarea a un usuario o grupo. El usuario asignado ejecuta la tarea durante el despliegue.
 
@@ -175,7 +179,7 @@ El grupo se forma y se añade una barra de selección de grupo al plan de despli
 
 En la figura siguiente se muestra un grupo paralelo. La barra de selección de grupo identifica el tipo de grupo: paralelo <img class="inline" src="../UCCR/images/para-select.png" alt="selección de grupo paralelo"> o secuencial <img class="inline" src="../UCCR/images/seq-select.png" alt="selección de grupo secuencial">.
 
-(![](../UCCR/images/group-select.png "Plan de despliegue típico"))
+![Un plan de despliegue típico](../UCCR/images/group-select.png)
 
 *Figura 2. Un grupo paralelo*
 
@@ -206,7 +210,7 @@ Las etiquetas se muestran en las filas de las tareas en la página Detalles del 
 
 El plan de despliegue utiliza las etiquetas y se muestran en el separador **Versiones** de la página Detalles del plan de despliegue. Para representar una tarea que no se debe aplicar a un despliegue, quite las etiquetas de la tarea. Las tareas con el estado "No aplicable" no se pueden iniciar.  
 
-![](../UCCR/images/task-tag-labels.png "Plan de despliegue típico")
+![Un plan de despliegue típico](../UCCR/images/task-tag-labels.png)
 
 *Figura 3. Etiquetas de tareas*
 
@@ -233,7 +237,7 @@ Las dependencias de tareas se muestran en la columna Dependencias de la página 
 
 En la siguiente figura, la primera tarea no tiene ningún requisito previo y dos tareas dependen de ella. La segunda tarea tiene una tarea de requisito previo y ninguna tarea depende de ella.
 
-(![](../UCCR/images/plan-w-depend.png "Plan de despliegue típico"))
+![Un plan de despliegue típico](../UCCR/images/plan-w-depend.png)
 
 *Figura 4. Dependencias de tareas*
 

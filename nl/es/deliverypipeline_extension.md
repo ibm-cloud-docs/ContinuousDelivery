@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-5-11"
+  years: 2015, 2018
+lastupdated: "2018-3-26"
 
 ---
 
@@ -154,13 +154,15 @@ To create the globalization stage and job:
 
   f. Determine whether to select the **Set up service and space for me** check box.
 
-    * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
+    * If you want the pipeline to check your {{site.data.keyword.Bluemix_notm}} space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
+    * If you configured the service and bound app in your {{site.data.keyword.Bluemix_notm}} space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
+
     **Tip:** Use the DevOps Services project name in the prefix so that the project can be identified easily in the Globalization Pipeline service.
+
 
   h. Click **SAVE**.
 
@@ -172,164 +174,158 @@ The machine translated files are placed in the same directory as the source `.pr
 
 After the stage is completed, you can review the translated files from the console output. You can also direct translators to the files so that they can review the machine-translation output and provide revisions to improve quality. The revisions are stored in a Cloudant™ database and take precedence over any future machine translations of the same strings.
 
-For more information about using the Globalization Pipeline service from the Bluemix Dashboard, [see the Globalization Pipeline service documentation](https://www.ng.bluemix.net/docs/services/GlobalizationPipeline/index.html).
+For more information about using the Globalization Pipeline service from the {{site.data.keyword.Bluemix_notm}} Dashboard, [see the Globalization Pipeline service documentation](https://www.ng.bluemix.net/docs/services/GlobalizationPipeline/index.html).
 
 -->
+<!--
 
-## Creación de notificaciones de Slack para compilaciones en el conducto
+## Creating Slack notifications for builds in the pipeline
 {: #deliverypipeline_slack}
 
-Puede enviar notificaciones sobre los resultados de compilación de {{site.data.keyword.containerlong}}, {{site.data.keyword.staticanalyzershort}} e {{site.data.keyword.globalizationfull}} del Delivery Pipeline a los canales de Slack.
+You can send notifications about {{site.data.keyword.containerlong}}, {{site.data.keyword.staticanalyzershort}}, and {{site.data.keyword.globalizationfull}} build results from your Delivery Pipeline to your Slack channels.
 
-Antes de empezar, cree o copie un URL de WebHook de Slack:
+Before you begin, create or copy a Slack WebHook URL:
 
-1. Abra la página Integración de Slack para el equipo: `https://_nombre_proyecto_.slack.com/services`
-2. En la lista de integraciones, localice **WebHooks entrantes** y pulse **Añadir**.
-3. Seleccione un canal y pulse **Añadir integración de WebHooks entrantes**.
-4. Añada un **URL de WebHook** o copie uno existente.
+1. Open the Slack Integration page for your team: `https://_project_name_.slack.com/services`
+2. In the list of integrations, locate **Incoming WebHooks** and click **Add**.
+3. Select a channel and click **Add Incoming WebHooks Integration**.
+4. Add a **WebHook URL** or copy an existing one.
 
-Para obtener más información, consulte la [documentación de WebHooks entrantes en Slack ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://api.slack.com/incoming-webhooks){: new_window}.
+For more information, see [Incoming WebHooks in the Slack documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){: new_window}.
 
-Para crear notificaciones de Slack:
+To create Slack notifications:
 
-1. En el conducto, abra la configuración correspondiente a una etapa.
-2. En el separador **PROPIEDADES DE ENTORNO**, pulse **AÑADIR PROPIEDAD**.
-3. Seleccione **Propiedades de texto**.
-4. Especifique el nombre y un valor para la propiedad de entorno. Repita este paso para crear varias propiedades de entorno.
+1. In the pipeline, open the configuration for a stage.
+2. In the **ENVIRONMENT PROPERTIES** tab, click **ADD PROPERTY**.
+3. Select **Text property**.
+4. Enter the name and a value for the environment property. Repeat to create multiple environment properties.
 
-  _Tabla 1. Propiedades de entorno para configurar notificaciones de Slack_
+  _Table 1. Environment properties for configuring Slack notifications_
 
   <table>
   <tr>
-  <th>Nombre</th>
-  <th>Valor</th>
-  <th>Descripción</th>
+  <th>Name</th>
+  <th>Value</th>
+  <th>Description</th>
   <tr/>
   <tr>
     <td><code>SLACK_WEBHOOK_PATH</code></td>
-    <td>Un URL</td>
-    <td>Obligatorio. El URL de WebHook que se guarda en los valores para el Proyecto de Slack.</td>
+    <td>A URL</td>
+    <td>Required. The WebHook URL that is saved in the settings for your Slack Project.</td>
   </tr>
   <tr>
     <td><code>SLACK_COLOR</code></td>
-    <td>Puede introducir uno de los siguientes valores:
+    <td>You can enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>warning</code></li>
       <li><code>danger</code></li>
-      <li>Cualquier color hexadecimal, como por ejemplo #439FEO</li></ul></td>
-    <td>Opcional. El color del borde que se visualiza en un lado del mensaje en Slack. Los colores predeterminados son verde para los mensajes correctos, rojo para los mensajes incorrectos y gris para los mensajes informativos.</td>
+      <li>Any hexadecimal color, such as #439FEO</li></ul></td>
+    <td>Optional. The color of the border that is displayed along the side of the message in Slack. The default colors are green for good messages, red for bad messages, and gray for informational messages.</td>
   </tr>
   <tr>
     <td><code>NOTIFY_FILTER</code></td>
-    <td>Para recibir sólo un subconjunto de los tipos de mensajes, especifique uno de los valores siguientes:
+    <td>To receive only a subset of the message types, enter one of the following values:
       <ul>
-      <li><code>good</code>: recibir sólo mensajes desconocidos, correctos e informativos. Los mensajes incorrectos no se envían.</li>
-      <li><code>bad</code>: recibir todos los mensajes.</li>
-      <li><code>info</code>: recibir solo los mensajes informativos. Los mensajes correctos, incorrectos y desconocidos no se envían.</li>
-      <li><code>unknown</code>: recibir todos los mensajes.</li></ul>
-      Ejemplo: Si establece <code>NOTIFY_FILTER = bad</code>, las notificaciones de error sólo se visualizan en el Canal de Slack.</td>
-    <td>Opcional. Decida el tipo de mensajes para los que se enviarán notificaciones. De forma predeterminada, se envían los mensajes correctos e incorrectos, pero no los mensajes informativos.
-      <ul><li><code>good</code>: resultados de compilación correcta.</li>
-      <li><code>bad</code>: resultados de compilación incorrecta.</li>
-      <li><code>info</code>: mensajes informativos sobre el proceso de compilación.</li>
-      <li><code>unknown</code>: a los mensajes desconocidos no se les asigna ningún tipo.</li></ul></td>
+      <li><code>good</code>: Get unknown, good and info messages only. Bad messages are not sent.</li>
+      <li><code>bad</code>: Get all messages.</li>
+      <li><code>info</code>: Get info messages only. Good, bad, and unknown messages are not sent.</li>
+      <li><code>unknown</code>: Get all messages.</li></ul>
+      Example: If you set <code>NOTIFY_FILTER = bad</code>, error notifications are only displayed in the Slack Channel.</td>
+    <td>Optional. Decide which type of messages to send notifications for. By default, good and bad messages are sent, but not informational messages.
+      <ul><li><code>good</code>: Successful build results.</li>
+      <li><code>bad</code>: Unsuccessful build results.</li>
+      <li><code>info</code>: Informational messages about the build process.</li>
+      <li><code>unknown</code>: Unknown messages are not assigned a type.</li></ul></td>
    </table>
 
-5. Pulse **Guardar**.
+5. Click **Save**.
 
-6. Repita estos pasos para enviar notificaciones de Slack para otras etapas que incluyan trabajos de IBM Container Service, IBM Security Analyzer e IBM Globalization.
+6. Repeat these steps to send Slack notifications for other stages that include IBM Container Service, IBM Security Analyzer, and IBM Globalization jobs.
 
-La notificación de compilación que se visualiza en Slack incluye un enlace al proyecto y a veces al panel de control del proyecto. Para que un usuario de Slack abra estos enlaces, el usuario debe estar registrado con Bluemix y ser miembro del proyecto en el que está configurado el conducto.
+The build notification that is displayed in Slack includes a link to the project and sometimes to the project's dashboard. For a Slack user to open these links, the user must be registered with {{site.data.keyword.Bluemix_notm}} and be a member of the organization that the pipeline is configured in.
 
-## Creación de notificaciones de HipChat para compilaciones en el conducto
+## Creating HipChat notifications for builds in the pipeline
 {: #deliverypipeline_hipchat}
 
-Puede enviar notificaciones sobre los resultados de compilación de IBM Container Service, IBM Security Static Analyzer e IBM Globalization desde las salas de Delivery Pipeline a HipChat.
+You can send notifications about IBM Container Service, IBM Security Static Analyzer, and IBM Globalization build results from your Delivery Pipeline to your HipChat rooms.
 
-Antes de empezar, cree o copie una señal existente de HipChat:
+Before you begin, create or copy and existing HipChat token:
 
-1. Vaya a su página de Cuenta de HipChat para el equipo: `https://_nombre_proyecto_.hipchat.com/account/api`
-2. Cree una señal nueva, o bien utilice una existente.
+1. Go to your HipChat Account page for your team: `https://_project_name_.hipchat.com/account/api`
+2. Create a new token, or use an existing one.
 
-Para crear notificaciones de HipChat:
+To create HipChat notifications:
 
-1. En el conducto, abra la configuración correspondiente a una etapa.
-2. En el separador **PROPIEDADES DE ENTORNO**, pulse **AÑADIR PROPIEDAD**.
-3. Seleccione **Propiedades de texto**.
-4. Especifique el nombre y un valor para la propiedad de entorno. Repita este paso para crear varias propiedades de entorno.
+1. In the pipeline, open the configuration for a stage.
+2. In the **ENVIRONMENT PROPERTIES** tab, click **ADD PROPERTY**.
+3. Select **Text Property**.
+4. Enter the name and a value for the environment property. Repeat to create multiple environment properties.
 
-  _Tabla 2. Propiedades de entorno para configurar notificaciones de HipChat_
+  _Table 2. Environment Properties for configuring HipChat notifications_
 
   <table>
   <tr>
-  <th>Nombre</th>
-  <th>Valor</th>
-  <th>Descripción</th>
+  <th>Name</th>
+  <th>Value</th>
+  <th>Description</th>
   </tr>
   <tr>
     <td><code>HIP_CHAT_TOKEN</code></td>
-    <td>Serie alfanumérica</td>
-    <td>Obligatorio. Consulte "Antes de empezar" para obtener instrucciones sobre cómo crear o copiar una señal existente de HipChat.</td>
+    <td>Alphanumeric String</td>
+    <td>Required. See "Before you begin" for instructions on creating or copying an existing HipChat token.</td>
   </tr>
   <tr>
     <td><code>HIP_CHAT_ROOM_NAME</code></td>
-    <td>Nombre de sala</td>
-    <td>Obligatorio.</td>
+    <td>Room name</td>
+    <td>Required.</td>
   </tr>
   <tr>
     <td><code>HIP_CHAT_COLOR</code></td>
-    <td>Escriba uno de los valores siguientes:
-      <ul><li><code>amarillo</code></li>
-      <li><code>rojo</code></li>
-      <li><code>verde</code></li>
-      <li><code>púrpura</code></li>
-      <li><code>gris</code></li>
-      <li><code>aleatorio</code></li></ul>
+    <td>Enter one of the following values:
+      <ul><li><code>yellow</code></li>
+      <li><code>red</code></li>
+      <li><code>green</code></li>
+      <li><code>purple</code></li>
+      <li><code>gray</code></li>
+      <li><code>random</code></li></ul>
     </td>
-    <td>Opcional: Especifique el color de fondo y el color del borde de las notificaciones de HipChat. Si establece <code>HIP_CHAT_COLOR</code>, no tiene que especificar el color al invocar el script.
+    <td>Optional: Specify the background color and the border color of HipChat notifications. If you set <code>HIP_CHAT_COLOR</code>, you do not need to specify the color when you call the script.
      <p><code>-l notification_level</code></p> </td>
   </tr>
   <tr>
     <td><code>NOTIFICATION_COLOR</code></td>
-    <td>Escriba uno de los valores siguientes:
+    <td>Enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>danger</code></li>
       <li><code>info</code></li></ul>
-    Esta variable se aplica tanto al color de notificación de HipChat como de Clack. Si especifica <code>NOTIFICATION_COLOR</code>, no es necesario especificar <code>HIP_CHAT_COLOR</code> o <code>SLACK_COLOR</code>.</td>
-    <td>Opcional: Especifique el color de fondo y el color del borde de las notificaciones tanto HipChat como Slack. Si establece <code>NOTIFICATION_COLOR</code>, no tiene que especificar el color al invocar el script.
+    This variable applies to both HipChat and Clack notification colors. If you specify <code>NOTIFICATION_COLOR</code>, you do not need to specify <code>HIP_CHAT_COLOR</code> or <code>SLACK_COLOR</code>.</td>
+    <td>Optional: Specify the background color and the border color of both HipChat and Slack notifications. If you set <code>NOTIFICATION_COLOR</code>, you do not need to specify the color when you call the script.
      <p><code>-l notification_level</code></p> </td>
   </tr>
   <tr>
     <td><code>NOTIFICATION_LEVEL</code></td>
-    <td>Escriba uno de los valores siguientes:
+    <td>Enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>info</code></li>
       <li><code>bad</code></li></ul></td>
-    <td>Opcional: especifique el nivel de notificación. Consulte <code>NOTIFICATION_FILTER</code> para obtener información más detallada sobre qué desencadena la notificación.</td>
+    <td>Optional: Specify the notification level. See <code>NOTIFICATION_FILTER</code> for more detail on what triggers the notification.</td>
   </tr>
   <tr>
     <td><code>NOTIFICATION_FILTER</code></td>
-    <td>Escriba uno de los valores siguientes:
+    <td>Enter one of the following values:
       <ul><li><code>good</code></li>
       <li><code>info</code></li>
       <li><code>bad</code></li></ul>
-    <td>Opcional: especifique el nivel de filtro de notificación. Las notificaciones se envían cuando se cumplen los parámetros siguientes:
-      <ul><li><code>NOTIFICATION_FILTER = good</code> y <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, o <code>unknown</code></li>
-      <li><code>NOTIFICATION_FILTER = info</code> y <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, <code>info</code>, o <code>unknown</code></li>
-      <li><code>NOTIFICATION_FILTER = bad</code> y <code>NOTIFICATION_LEVEL = bad</code> o <code>unknown</code></li>
-      <li><code>NOTIFICATION_FILTER = unknown</code> y <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, o <code>unknown</code></li></ul></td>
+    <td>Optional: Specify the notification filter level. Notifications are sent when the following parameters are met:
+      <ul><li><code>NOTIFICATION_FILTER = good</code> and <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, or <code>unknown</code></li>
+      <li><code>NOTIFICATION_FILTER = info</code> and <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, <code>info</code>, or <code>unknown</code></li>
+      <li><code>NOTIFICATION_FILTER = bad</code> and <code>NOTIFICATION_LEVEL = bad</code> or <code>unknown</code></li>
+      <li><code>NOTIFICATION_FILTER = unknown</code> and <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, or <code>unknown</code></li></ul></td>
     </tr>
   </table>
 
-5. Pulse **Guardar**.
+5. Click **Save**.
 
-6. Repita estos pasos para enviar las notificaciones de HipChat para otras etapas que incluyan los trabajos de IBM Container Service, IBM Security Static Analyzer, e IBM Globalization.
+6. Repeat these steps to send HipChat notifications for other stages that include IBM Container Service, IBM Security Static Analyzer, and IBM Globalization jobs.
 
-## Compilación y despliegue de imágenes del contenedor con el conducto
-{: #deliverypipeline_containers}
-
-Puede automatizar las compilaciones de la app y los despliegues del contenedor en Bluemix mediante IBM Continuous Delivery Pipeline for Bluemix. El servicio de Delivery Pipeline da soporte a:
-  - Imágenes de creación de Docker
-  - Imágenes de despliegue en contenedores a Bluemix
-
-Para obtener más información sobre cómo empezar, consulte [Visión general de Delivery Pipeline y de los contenedores](/docs/containers/container_integrations.html#container_pipeline_ov){: new_window}.
+-->

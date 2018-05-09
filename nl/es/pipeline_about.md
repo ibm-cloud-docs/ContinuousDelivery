@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-4-4"
+  years: 2016, 2018
+lastupdated: "2018-3-22"
 ---
 
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-4-4"
 {:codeblock:.codeblock}
 
 
-# Acerca de Delivery Pipeline
+# Visión general de Delivery Pipeline
 {: #deliverypipeline_about}
 
 {{site.data.keyword.contdelivery_full}} incluye Delivery Pipeline para crear, probar y desplegar de manera repetitiva con una mínima intervención humana. En un conducto, las secuencias de etapas recuperan la entrada y los trabajos de ejecución, como compilaciones, pruebas y despliegues.
@@ -24,7 +24,9 @@ En las secciones siguientes se describen los detalles conceptuales que hay detr�
 
 Las etapas organizan la entrada y los trabajos a medida que se compila, se despliega y se prueba el código. Las etapas aceptan la entrada de repositorios de control de código fuente (repositorios SCM) o compilan trabajos (compilan artefactos) en otras etapas. Al crear la primera etapa, se establecerán los valores predeterminados en el separador **INPUT**.
 
-La entrada de una etapa se pasa a los trabajos que contiene la etapa, y a cada trabajo se le da un contenedor limpio para ejecutarla. Los trabajos de una etapa no se pueden pasar artefactos entre sí.
+La entrada de una etapa se pasa a los trabajos que contiene la etapa, y a cada trabajo se le da un contenedor limpio para ejecutarla. 
+
+**Importante**: Los trabajos de una etapa no se pueden pasar artefactos entre sí. Puesto que no puede pasar artefactos entre etapas, necesita una etapa de compilación independiente de la etapa de despliegue si la etapa de despliegue va a utilizar los artefactos de la etapa de compilación.
 
 Puede definir propiedades del entorno de etapas que se pueden utilizar en todos los trabajos. Por ejemplo, podría definir una propiedad `TEST_URL` que pasa un único URL para desplegar y probar trabajos en una sola etapa. El trabajo de despliegue podría desplegarse en dicho URL, y el trabajo de prueba podría probar la app en ejecución en el URL.
 
@@ -33,6 +35,32 @@ De forma predeterminada en una etapa, las compilaciones y los despliegues se eje
 Puede que desee un control más estricto de una etapa específica. Si no desea que se ejecute una etapa cada vez que se produzca un cambio en su entrada, puede inhabilitar la prestación. En el separador **ENTRADA**, en la sección Desencadenante de etapa, pulse **Ejecutar trabajos sólo cuando esta etapa se ejecute manualmente**.
 
 ![El separador ENTRADA](images/input_tab_only_execute.png)
+
+
+### Etapa de compilación
+{: #build_stage}
+
+<!-- Need the Pipeline team to fill out what each builder does and possible add an example -->
+En la etapa de compilación se especifica un **Tipo de compilador** para indicar cómo compilar los artefactos. Están disponibles los siguientes tipos de compilador:
+
+1. **Simple**. Si utiliza el tipo de compilador **Simple**, el código no se compilará ni se creará; se empaquetará y quedará disponible para futuras etapas.
+2. **Ant**
+3. **Container Registry**
+4. **Gradle**
+5. **Gradle (Artifactory, Nexus o SonarQube)**
+6. **Grunt**
+7. **IBM Globalization Pipeline**
+8. **Maven**
+9. **Maven (Artifactory, Nexus o SonarQube)**
+10. **npm**
+11. **npm (Artifactory o Nexus)**
+12. **Shell Script**
+
+### Fase de despliegue
+En la fase de despliegue se especifica la entrada de una etapa de compilación. En los trabajos de la etapa de despliegue se especifica un **Tipo de desplegador**. Están disponibles los siguientes tipos de desplegador:
+
+1. **Cloud Foundry**
+2. **Kubernetes**
 
 ## Trabajos
 {: #deliverypipeline_jobs}
@@ -44,6 +72,8 @@ Un trabajo es una unidad de ejecución dentro de una etapa. Una etapa puede cont
 Los trabajos se ejecutan en directorios de trabajo discretos dentro de los contenedores Docker creados para cada ejecución de conducto. Antes de que se ejecute un trabajo, su directorio de trabajo se rellena con la entrada definida en el nivel de etapa. Por ejemplo, es posible que tenga una etapa que contenga un trabajo de prueba y un trabajo de despliegue. Si instala dependencias en un trabajo, no estarán disponibles en el otro trabajo. Sin embargo, si convierte en disponibles las dependencias en la entrada de la etapa, estarán disponibles para ambos trabajos.
 
 Excepto para los trabajos de compilación simples, al configurar un trabajo, puede incluir scripts shell UNIX que incluyan mandatos de compilación, prueba o despliegue. Dado que los trabajos se ejecutan en contenedores ad hoc, las acciones de un trabajo no pueden afectar a los entornos de ejecución de otros trabajos, incluso aunque estos trabajos formen parte de la misma etapa.
+
+Encontrará ejemplos de cuerpos y scripts de despliegue en [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons).
 
 Además, los trabajos de conducto sólo pueden ejecutar los siguientes mandatos como `sudo`:
   * `/usr/sbin/service`
@@ -74,43 +104,40 @@ Los trabajos que toman entrada de trabajos de compilación deben hacer referenci
 
 Cuando se despliega utilizando Cloud Foundry, Cloud Foundry incluirá los artefactos correctos para permitir que se ejecute la app. Para obtener más información, consulte [Despliegue de apps mediante el mandato cf](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps). El conducto para una app de Cloud Foundry contiene una etapa de Despliegue que ejecuta un mandato cf.
 
-Cloud Foundry intenta [detectar el paquete de compilación para utilizar ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Puede especificar el [paquete de compilación](/docs/cfapps/byob.html#using-community-buildpacks) que se utilizará en el archivo de manifiesto en la carpeta raíz de la app. Los paquetes de compilación normalmente examinan los artefactos proporcionados por los usuarios para determinar qué dependencias se descargarán y cómo configurar las aplicaciones para que se comuniquen con servicios enlazados. Para obtener más información sobre los archivos de manifiesto, consulte [Manifiesto de aplicación](/docs/manageapps/depapps.html#appmanifest). 
-
-
-#### Propiedades de entorno para scripts de compilación
-Puede incluir propiedades de entorno dentro de los mandatos shell de compilación del trabajo de compilación. Las propiedades proporcionan acceso a información sobre el entorno de ejecución del trabajo. Para obtener más información, consulte [Propiedades y recursos del entorno para el servicio {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
+Cloud Foundry intenta [detectar el paquete de compilación para utilizar ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Puede especificar el [paquete de compilación](/docs/cfapps/byob.html#using-community-buildpacks) que se utilizará en el archivo de manifiesto en la carpeta raíz de la app. Los paquetes de compilación normalmente examinan los artefactos proporcionados por los usuarios para determinar qué dependencias se descargarán y cómo configurar las aplicaciones para que se comuniquen con servicios enlazados. Para obtener más información sobre los archivos de manifiesto, consulte [Manifiesto de aplicación](/docs/manageapps/depapps.html#appmanifest).
 
 ### Trabajos de despliegue
 
-Los trabajos de despliegue cargan el proyecto a Bluemix como una app y son accesibles desde un URL. Una vez que se despliegue un proyecto, puede encontrar la app desplegada en el panel de control de Bluemix.
+Los trabajos de despliegue cargan el proyecto a {{site.data.keyword.Bluemix_notm}} como una app y son accesibles desde un URL. Una vez que se despliegue un proyecto, puede encontrar la app desplegada en el panel de control de {{site.data.keyword.Bluemix_notm}}.
 
 Los trabajos de despliegue pueden desplegar nuevas apps o actualizar apps existentes. Incluso si despliega por primera vez una app utilizando otro método, como por ejemplo la interfaz de línea de mandatos de Cloud Foundry o la barra de ejecución en el IDE de web, puede actualizar la app utilizando un trabajo de despliegue. Para actualizar una app, en el trabajo de despliegue, utilice el nombre de dicha app.
 
 Puede desplegar en una o más regiones y servicios. Por ejemplo, puede configurar {{site.data.keyword.deliverypipeline}} para que utilice uno o varios servicios, realice pruebas en una región y despliegue a producción en varias regiones. Para obtener más información, consulte [Regiones](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}.
-
-#### Propiedades de entorno para los scripts de despliegue
-
-Puede incluir propiedades de entorno dentro de un script de despliegue del trabajo de despliegue. Estas propiedades proporcionan acceso a la información sobre el entorno de ejecución del trabajo. Para obtener más información, consulte [Propiedades y recursos del entorno para el servicio {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
 
 ### Trabajos de prueba
 Si desea solicitar que se cumplan las condiciones, incluya trabajos de prueba antes o después de los trabajos de compilación y despliegue. Puede personalizar trabajos de prueba para que sean tan simples o tan complejos como se necesite. Por ejemplo, puede emitir un mandato cURL y esperar una respuesta determinada. También puede ejecutar una suite de pruebas de unidad o ejecutar pruebas funcionales con servicios de prueba de terceros, como por ejemplo Sauce Labs.
 
 Si sus pruebas generan archivos de resultados en formato XML JUnit, se mostrará un informe basado en los archivos de resultados en el separador **Pruebas** de cada página de resultados de prueba. Si falla una prueba, el trabajo también fallará.
 
-#### Propiedades del entorno para los scripts de prueba
+## Propiedades de entorno (Variables de entorno)
+{: #environment_properties}
 
-Puede incluir propiedades de entorno en el script de un trabajo de prueba. Las propiedades proporcionan acceso a información sobre el entorno de ejecución del trabajo. Para obtener más información, consulte [Propiedades y recursos del entorno para el servicio {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
+Puede incluir propiedades de entorno dentro de los mandatos shell de un trabajo. Las propiedades proporcionan acceso a información sobre el entorno de ejecución del trabajo. Para obtener más información, consulte [Propiedades y recursos del entorno para el servicio {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).Las propiedades de entorno pueden pasarse entre trabajos en la misma etapa exportando las propiedades. Para pasar propiedades entre etapas, cree un archivo `build.properties` en el repositorio en la etapa y luego ejecute `build.properties` en la siguiente etapa. Por ejemplo, el trabajo de compilación podría incluir este mandato en el script de compilación:
 
-## Archivos de manifiesto
-{: #deliverypipeline_manifest}
+    `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
 
-Los archivos de manifiesto, que se denominan `manifest.yml` y se almacenan en el directorio raíz de un proyecto, controlan la forma en que se despliega el proyecto en Bluemix. Para obtener información sobre cómo crear archivos de manifiesto para un proyecto, consulte la [documentación de Bluemix sobre manifiestos de aplicaciones](/docs/manageapps/depapps.html#appmanifest). Para integrarse con Bluemix, el proyecto debe tener un archivo de manifiesto en su directorio raíz. Sin embargo, no es necesario que realice el despliegue en función de la información del archivo.
+    Todos los trabajos empiezan ejecutando el archivo `build.properties`, si existe.
 
-En el conducto, puede especificar todo lo que puede hacer un archivo de manifiesto utilizando argumentos del mandato `cf push`. Los argumentos del mandato `cf push` son útiles en los proyectos que tienen varios destinos de despliegue. Si varios trabajos de despliegue intentan utilizar la ruta especificada en el archivo de manifiesto del proyecto, se producirá un conflicto.
+## Creación y uso de artefactos
+{: #artifacts}
 
-Para evitar conflictos, puede especificar una ruta utilizando `cf push` seguido del argumento del nombre de host, `-n`, y un nombre de ruta. Al modificar el script de despliegue para etapas individuales, puede evitar conflictos de ruta al desplegar en varios destinos.
+Los trabajos de compilación captan automáticamente el contenido en la carpeta actual donde se ejecuta el script de usuario. Si no necesita todo el contenido del repositorio git todo para el despliegue posterior, es preferible que configure un directorio de salida explícito y se copien o se creen los artefactos relevantes allí. Los scripts de trabajos se ejecutan en el resultado de la compilación (directorio de salida).
 
-Para utilizar los argumentos del mandato `cf push`, abra los valores de configuración para un trabajo de despliegue y modifique el campo **Desplegar script**. Para obtener más información, consulte la [documentación de Push de Cloud Foundry ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}.
+En los trabajos de despliegue que se despliegan en Cloud Foundry, es necesario especificar la organización y el espacio en los que se deben desplegar los artefactos. Si se necesitan servicios adicionales para ejecutar la app, debe especificarlos en el archivo `manifest.yml`.
+
+Los trabajos de despliegue que se despliegan en IBM Cloud Container Service en un clúster de Kubernetes necesitan un Dockerfile y, opcionalmente, un diagrama de Helm.  
+
+El script del trabajo se ejecuta después de que el trabajo inicie sesión en el entorno de destino (para poder realizar mandatos `cf push` o `kubectl` en el script).
 
 ## Un conducto de ejemplo
 {: #deliverypipeline_example}
@@ -128,3 +155,14 @@ Este conducto se muestra en el siguiente diagrama conceptual:
 *Un modelo conceptual de un conducto de tres etapas*
 
 Las etapas toman su entrada de repositorios y trabajos de compilación, y los trabajos de una etapa se ejecutan de forma secuencial e independiente entre sí. En el conducto de ejemplo, las etapas se ejecutan secuencialmente, aunque las etapas de Prueba y de Producción tomen la salida de la etapa de Compilación como su entrada.
+
+## Archivos de manifiesto de Cloud Foundry
+{: #deliverypipeline_manifest}
+
+Los archivos de manifiesto, que se denominan `manifest.yml` y se almacenan en el directorio raíz de un proyecto, controlan la forma en que se despliega el proyecto en {{site.data.keyword.Bluemix_notm}}. Para obtener información sobre cómo crear archivos de manifiesto para un proyecto, consulte la [documentación de {{site.data.keyword.Bluemix_notm}} sobre manifiestos de aplicaciones](/docs/manageapps/depapps.html#appmanifest). Para integrarse con {{site.data.keyword.Bluemix_notm}}, el proyecto debe tener un archivo de manifiesto en su directorio raíz. Sin embargo, no es necesario que realice el despliegue en función de la información del archivo.
+
+En el conducto, puede especificar todo lo que puede hacer un archivo de manifiesto utilizando argumentos del mandato `cf push`. Los argumentos del mandato `cf push` son útiles en los proyectos que tienen varios destinos de despliegue. Si varios trabajos de despliegue intentan utilizar la ruta especificada en el archivo de manifiesto del proyecto, se producirá un conflicto.
+
+Para evitar conflictos, puede especificar una ruta utilizando `cf push` seguido del argumento del nombre de host, `-n`, y un nombre de ruta. Al modificar el script de despliegue para etapas individuales, puede evitar conflictos de ruta al desplegar en varios destinos.
+
+Para utilizar los argumentos del mandato `cf push`, abra los valores de configuración para un trabajo de despliegue y modifique el campo **Desplegar script**. Para obtener más información, consulte la [documentación de Push de Cloud Foundry ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}.

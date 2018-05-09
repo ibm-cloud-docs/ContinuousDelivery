@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-6-1"
+  years: 2016, 2018
+lastupdated: "2018-2-28"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -29,7 +29,7 @@ Complete las tareas siguientes para crear y configurar un conducto.
 
 1. En la página Conducto, pulse **AÑADIR ETAPA**. Se abrirá la página Configuración de etapa.
 2. Configurar la etapa.
-  1. En el separador **ENTRADA**, seleccione una entrada para la etapa.
+  1. En el separador **ENTRADA**, seleccione una entrada para la etapa. En las etapas de compilación, el separador de entrada incluye un campo **Rama** para especificar la rama del repositorio que se debe utilizar para la entrada.
   2. En el separador **TRABAJOS**, añada y configure al menos un trabajo. La primera etapa normalmente tiene como mínimo un trabajo de compilación.
 3. Pulse **GUARDAR**.
 
@@ -73,7 +73,7 @@ Al ejecutar una etapa manualmente, o si la ejecuta porque la etapa anterior se h
 **Consejo:** Puede desplegar una compilación anterior. En la etapa que contiene la compilación, pulse **Ver registros e historial**. En la página que se abre, pulse para expandir el número de ejecución y, a continuación, pulse el trabajo de compilación. Pulse **ENVIAR A**, y seleccione un destino.
 
 ###Adición de servicios a apps
-Puede añadir servicios a las apps y gestionar los servicios desde el panel de control de Bluemix o la interfaz de línea de mandatos (CLI) de Cloud Foundry. También puede emitir mandatos de CLI de Cloud Foundry en scripts para trabajos de conductos. Por ejemplo, puede añadir un servicio a una app en el script de un trabajo de despliegue. Para obtener más información sobre cómo añadir servicios, consulte [Adición de un servicio a la app](/docs/services/reqnsi.html#add_service).
+Puede añadir servicios a las apps y gestionar los servicios desde el panel de control de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos (CLI) de Cloud Foundry. También puede emitir mandatos de CLI de Cloud Foundry en scripts para trabajos de conductos. Por ejemplo, puede añadir un servicio a una app en el script de un trabajo de despliegue. Para obtener más información sobre cómo añadir servicios, consulte [Adición de un servicio a la app](/docs/services/reqnsi.html#add_service).
 
 ## Visualización de registros
 {: #deliverypipeline_view_logs}
@@ -88,6 +88,4 @@ Para ver el registro de tiempo de ejecución de una aplicación desplegada, puls
 
 Además de los registros de trabajos, puede ver resultados de pruebas de unidades, artefactos generados y cambios de códigos para cualquier trabajo de compilación.
 
-También puede ejecutar, cancelar o configurar una etapa desde la página Historial de etapas. Pulse **EJECUTAR** para ejecutar una etapa o **CONFIGURAR** para configurar una etapa. Mientras una etapa está en ejecución, puede cancelarla pulsando el número de ejecución y, a continuación, pulsando **CANCELAR**.
-
-
+También puede ejecutar, volver a desplegar, cancelar o configurar una etapa desde la página Historial de etapas. Pulse **EJECUTAR** para ejecutar la etapa, **VOLVER A DESPLEGAR** para volver a desplegar si se trata de un trabajo de despliegue o **CONFIGURAR** para configurar una etapa. Mientras una etapa está en ejecución, puede cancelarla pulsando el número de ejecución y, a continuación, pulsando **CANCELAR**.

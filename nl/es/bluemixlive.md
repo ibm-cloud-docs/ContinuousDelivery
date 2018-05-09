@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2017
-lastupdated: "2017-09-20"
+  years: 2015，2018
+lastupdated: "2018-3-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-09-20"
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#Bluemix Live Sync
+# {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
 
 
@@ -35,7 +35,7 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 
 **Edición en directo**
 
-Puede editar una aplicación Node.js que se ejecuta en {{site.data.keyword.Bluemix_notm}} y probarlos en el navegador inmediatamente. Los cambios que realice en Web IDE se propagarán inmediatamente al sistema de archivos de la aplicación.  
+Puede editar una aplicación Node.js que se ejecuta en {{site.data.keyword.Bluemix_notm}} y probarla en el navegador inmediatamente. Los cambios que realice en Web IDE se propagarán inmediatamente al sistema de archivos de la aplicación.  
 
 **Depurar**  
 
@@ -57,16 +57,13 @@ Edición en directo le permite obtener una vista previa rápida de los cambios e
 el código con la característica Edición en directo activada, puede renovar la ventana del navegador de su app web
 para ver dichos cambios reflejados pocos segundos después de efectuarlos.
 
-<!--
-For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see the tutorial [Test and debug a Node.js app with Bluemix Live Sync![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/livesync){:new_window}.
--->
+Para ver un tutorial sobre cómo utilizar la característica Edición en directo de {{site.data.keyword.Bluemix_notm}} Live Sync, consulte [Utilice {{site.data.keyword.Bluemix_notm}} Live Sync para desarrollar, depurar y desplegar la app ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-live-sync-to-develop-debug-and-deploy-your-app){:new_window}.
 
-Cuando modifique los archivos en Web IDE, se redesplegarán automáticamente a su instancia de aplicación en {{site.data.keyword.Bluemix_notm}}. Si tiene que reiniciar la app Node, puede utilizar el botón **Reiniciar**
-de la barra de ejecución.
+Cuando modifique los archivos en Web IDE, se redesplegarán automáticamente a su instancia de aplicación en {{site.data.keyword.Bluemix_notm}}. Si tiene que reiniciar la app Node, pulse el botón **Reiniciar** de la barra de ejecución.
 
-**NOTA:** Para obtener una experiencia más coherente al utilizar la característica Edición en directo de {{site.data.keyword.Bluemix_notm}} Live Sync, serán necesarios 256 MB de memoria adicional y se añadirán.
+**Nota:** Para obtener una experiencia más coherente al utilizar la característica Edición en directo de {{site.data.keyword.Bluemix_notm}} Live Sync, serán necesarios 256 MB de memoria adicional y se añadirán.
 
-## Bluemix Live Debug
+## {{site.data.keyword.Bluemix_notm}} Live Debug
 {: #live-debug}
 
 {{site.data.keyword.Bluemix_notm}} Live Sync Debug utiliza
@@ -101,7 +98,7 @@ Después de iniciar la sesión, se abrirá la página {{site.data.keyword.Bluemi
 
 ### Debug {: #debug}
 
-**Restricción:** Se necesita Google Chrome. Es necesario el Nodo 4.
+**Restricción:** Se necesita Google Chrome y Node 4.
 
 Debug incluye las siguientes funciones:  
 * Establecer puntos de interrupción en el código de la app para detener la ejecución en una línea específica.
@@ -120,10 +117,10 @@ Supervise el uso de la memoria y de la CPU en la instancia que utiliza mandatos 
 ### Configuración de una app para habilitar {{site.data.keyword.Bluemix_notm}} Live
 Debug {: #configure_app_debug}
 
-1. Bluemix Live Debugger utiliza Node Inspector. Debe utilizar la versión de Nodo 4. También necesita permitir el paquete de compilación para detectar el mandato de inicio de la app. El mandato de inicio debe detectarlo automáticamente el paquete de compilación, no definido en el archivo manifest.yml. 
-  
+1. {{site.data.keyword.Bluemix_notm}} Live Debugger utiliza Node Inspector. Debe utilizar la versión de Nodo 4. También necesita permitir el paquete de compilación para detectar el mandato de inicio de la app. El mandato de inicio debe detectarlo automáticamente el paquete de compilación, no definido en el archivo manifest.yml.
+
    Un archivo `package.json` que da soporte a {{site.data.keyword.Bluemix_notm}} Live Debug es:
-   
+
   ```
   {
       "scripts": {
@@ -137,7 +134,7 @@ Debug {: #configure_app_debug}
 
 2. Aumente la memoria.  
 
-    a. En el archivo `manifest.yml` de la app, añada 128M o más al valor especificado para el atributo memory.
+    a. En el archivo `manifest.yml` de la app, añada 128 MB o más al valor especificado para el atributo memory.
 
 Una vez instalado {{site.data.keyword.Bluemix_notm}} Live
 Debug, puede utilizar las herramientas de depuración.
@@ -145,10 +142,6 @@ Debug, puede utilizar las herramientas de depuración.
 Envíe la app y luego vaya a `https://_app-host.mybluemix.net_/bluemix-debug/manage` para acceder a la interfaz de usuario de depuración de {{site.data.keyword.Bluemix_notm}}. Cuando se le solicite que se autentique, especifique su nombre de usuario y contraseña del ID de IBM o un código de acceso puntual.    
 
 **Nota:** El depurador puede tardar aproximadamente un minuto en inicializarse.
-
-<!--
-   **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
-   -->
 
 ### Restauración de configuraciones de app e inhabilitación de {{site.data.keyword.Bluemix_notm}} Live Debug {: #restore_live_debug}
 
@@ -158,4 +151,4 @@ Envíe la app y luego vaya a `https://_app-host.mybluemix.net_/bluemix-debug/man
 
 ### Para obtener más información
 
-* Consulte [Herramientas de Eclipse para Bluemix ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
+* Consulte [Herramientas de Eclipse para {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-09-05"
+  years: 2015, 2018
+lastupdated: "2018-3-21"
 
 ---
 
@@ -40,6 +40,8 @@ Para [crear un conducto ![Icono de enlace externo](../../icons/launch-glyph.svg 
 1. Pulse **Cloud Foundry**.
 1. Si desea utilizar otro nombre para el conducto, cambie el nombre predeterminado.
 1. Si desea utilizar otro nombre para la aplicación, cambie el nombre predeterminado. Este es el nombre de la aplicación en la que se despliega el conducto.
+1. Si desea crear el conducto en una organización diferente (org), cambie la organización predeterminada. Puede crear conductos en organizaciones a las que pertenezca.
+1. Si desea crear el conducto en un espacio diferente, cambie el espacio predeterminado. Puede crear el conducto en un espacio incluido en la organización.
 1. Si no tiene una cadena de herramientas, se crea automáticamente una cadena de herramientas con un nombre predeterminado. Si desea utilizar otro nombre para la cadena de herramientas, cámbiele el nombre. Con la cadena de herramientas, puede ampliar las prestaciones del conducto integrándolo con otras herramientas y servicios. Para obtener más información sobre las cadenas de herramientas, consulte [Creación de cadenas de herramientas](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
 
  **Consejo**: Los conductos y las cadenas de herramientas pertenecen a las organizaciones (orgs). Si pertenece a una org que tiene cadenas de herramientas, se le puede añadir a la lista de control de accesos para cualquiera de sus cadenas de herramientas asociadas. Después de que se le haya añadido a la lista de control de accesos para una cadena de herramientas, puede visualizar dicha cadena de herramientas y los conductos asociados, aunque no los haya creado. Si se le han otorgado privilegios de administrador, también podrá modificar y suprimir cadenas de herramientas. Para obtener más información sobre el control de accesos para cadenas de herramientas, consulte [Gestión del acceso](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
@@ -66,6 +68,8 @@ Para crear un [conducto vacío ![Icono de enlace externo](../../icons/launch-gly
 
 1. Pulse **Personalizado**.
 1. Si desea utilizar otro nombre para el conducto, cambie el nombre predeterminado.
+1. Si desea crear el conducto en una organización diferente, cambie la organización predeterminada. Puede crear conductos en organizaciones a las que pertenezca.
+1. Si desea crear el conducto en un espacio diferente, cambie el espacio predeterminado. Puede crear el conducto en un espacio incluido en la organización.
 1. Si no tiene una cadena de herramientas, se crea automáticamente una cadena de herramientas con un nombre predeterminado. Si desea utilizar otro nombre para la cadena de herramientas, cámbiele el nombre. Con la cadena de herramientas, puede ampliar las prestaciones del conducto integrándolo con otras herramientas y servicios.
 1. Seleccione la cadena de herramientas que desea utilizar o escriba un nombre para la nueva cadena de herramientas que desea crear.
 1. Pulse **Crear**. Se crea un conducto vacío y se representa como una tarjeta en la página Visión general de la cadena de herramientas.

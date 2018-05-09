@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2017-7-10"
+  years: 2016, 2018
+lastupdated: "2018-1-23"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -15,6 +15,7 @@ lastupdated: "2017-7-10"
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
+{:tip:.tip}
 
 # Propiedades y recursos del entorno
 {: #deliverypipeline_environment}
@@ -30,6 +31,8 @@ Puede añadir cuatro tipos de propiedades desde el separador Propiedades de ento
 * **Seguro**: Una clave de propiedad con un valor de línea única. El valor se visualiza como asteriscos.
 * **Propiedades**: Un archivo del repositorio del proyecto. Este archivo puede contener varias propiedades. Cada propiedad debe estar en su propia línea. Para pares de clave-valor independientes, utilice el signo igual (=).
 
+Puede examinar las propiedades del entorno para un trabajo de conducto ejecutando el mandato `env` en el script del trabajo.
+{:tip}
 
 Las siguientes propiedades y recursos están disponibles de forma predeterminada en los entornos de conducto.
 
@@ -97,7 +100,7 @@ Las siguientes propiedades y recursos están disponibles de forma predeterminada
 | CF_ORGANIZATION_ID | Para despliegues, el ID de la org en la que se desplegará. |
 | CF_SPACE | Para despliegues, el nombre del espacio en el que se desplegará. |
 | CF_SPACE_ID | Para despliegues, el ID del espacio en el que se desplegará.  |
-| CF_TARGET_URL | Para despliegues, el URL de IBM Bluemix&reg; o Cloud Foundry. |
+| CF_TARGET_URL | Para despliegues, el URL de {{site.data.keyword.Bluemix_short}} o Cloud Foundry. |
 | IDS_VERSION | Para despliegues, la versión de la app que se está desplegando o el identificador de origen. |
 
 ## Recursos preinstalados

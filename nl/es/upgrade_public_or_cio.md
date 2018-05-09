@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-5-19"
+  years: 2015, 2018
+lastupdated: "2018-3-20"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-5-19"
 # Actualización de proyectos IBM Confidencial para cadenas de herramientas 
 {: #upgrade_public_or_cio}
 
-{{site.data.keyword.jazzhub}} está evolucionando a IBM Bluemix {{site.data.keyword.contdelivery_short}}. Como parte de este cambio, los proyectos se actualizarán a cadenas de herramientas.
+{{site.data.keyword.jazzhub}} está evolucionando hacia {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.contdelivery_short}}. Como parte de este cambio, los proyectos se actualizarán a cadenas de herramientas.
 
 Cuando el proyecto esté listo para ser actualizado, se mostrará un mensaje en la página de Visión general. Podrá, a continuación, actualizar el proyecto a una cadena de herramientas en {{site.data.keyword.Bluemix_notm}} público. La cadena de herramientas incluirá un repositorio Whitewater {{site.data.keyword.ghe_short}} para su código fuente. Se proporciona Whitewater {{site.data.keyword.ghe_short}} a los equipos de IBM para promocionar y habilitar la codificación social dentro de IBM. 
 {: shortdesc}
@@ -31,7 +31,7 @@ A veces se produce un problema intermitente al intentar cambiar el destino de un
 
 Este problema habitualmente se produce cuando cambia el destino desde el conducto de forma que el conducto que se crea durante la actualización desplegará correctamente a los mismos destinos que los utilizados con anterioridad.
 
-Si intenta cambiar el destino, y se produce este error, conmute entre destinos un par de veces hasta que se cumplimenten los campos **Organización** y **Espacio**.
+Si intenta cambiar el destino y se produce este error conmute entre destinos un par de veces hasta que se cumplimenten los campos **Organización** y **Espacio**.
 
 Un problema relacionado ocasionalmente hace que fallen los despliegues a destinos YS1. Este caso no es nada habitual y, si ocurre, vuelva a ejecutar el conducto.
 

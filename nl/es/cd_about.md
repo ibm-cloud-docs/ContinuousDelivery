@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2015, 2017
-lastupdated: "2017-5-16"
+  years: 2015, 2018
+lastupdated: "2018-3-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-5-16"
 {:codeblock:.codeblock}
 
 
-# Disponibilidad y plantillas de cadenas de herramientas  
+# Disponibilidad, plantillas y guías de aprendizaje de cadenas de herramientas  
 {: #cd_about}  
 
 Las cadenas de herramientas están disponibles en {{site.data.keyword.Bluemix_notm}} público y dedicado. Las plantillas sirven como punto de partida para crear una cadena de herramientas.
@@ -23,11 +23,11 @@ Las cadenas de herramientas están disponibles en {{site.data.keyword.Bluemix_no
 
 {{site.data.keyword.Bluemix_notm}} público es una plataforma basada en la nube de estándares abiertos con la que puede crear, ejecutar y gestionar aplicaciones a las que accede [http://bluemix.net ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://bluemix.net){:new_window}. {{site.data.keyword.Bluemix_notm}} dedicado ofrece las funciones de {{site.data.keyword.Bluemix_notm}} en un entorno SoftLayer dedicado conectado de forma segura tanto al entorno de {{site.data.keyword.Bluemix_notm}} público como a la red. Es posible que el entorno {{site.data.keyword.Bluemix_notm}} dedicado de la empresa no contenga las mismas integraciones de herramientas que el sitio de {{site.data.keyword.Bluemix_notm}} público.
 
-Para la gestión de código fuente y el seguimiento de problemas, {{site.data.keyword.Bluemix_notm}} público suele utilizar github.com. {{site.data.keyword.Bluemix_notm}} dedicado también puede utilizar github.com, aunque normalmente utiliza {{site.data.keyword.ghe_short}} instalado por la empresa o gestionado por IBM.
+Para la gestión de código fuente y el seguimiento de problemas, {{site.data.keyword.Bluemix_notm}} público utiliza generalmente {{site.data.keyword.gitrepos}} (alojado en IBM y basado en [GitLab Community Edition ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://about.gitlab.com/){:new_window}) o GitHub (github.com). {{site.data.keyword.Bluemix_notm}} dedicado también puede utilizar github.com, aunque normalmente utiliza {{site.data.keyword.ghe_short}} instalado por la empresa o gestionado por IBM.
 
-{{site.data.keyword.contdelivery_short}} está disponible en {{site.data.keyword.Bluemix_notm}} público y en {{site.data.keyword.Bluemix_notm}} dedicado. Las cadenas de herramientas difieren en función de si utiliza {{site.data.keyword.contdelivery_short}} en {{site.data.keyword.Bluemix_notm}} público o en {{site.data.keyword.Bluemix_notm}} dedicado.
+{{site.data.keyword.contdelivery_short}} está disponible en {{site.data.keyword.Bluemix_notm}} público determinadas regiones y en {{site.data.keyword.Bluemix_notm}} dedicado. Las cadenas de herramientas difieren en función de si utiliza {{site.data.keyword.contdelivery_short}} en {{site.data.keyword.Bluemix_notm}} público o en {{site.data.keyword.Bluemix_notm}} dedicado.
 
-**Consejo**: las cadenas de herramientas solo están alojadas en la región EE.UU. Sur. Si su cadena de herramientas se ha configurado para desplegar apps en otra región, seguirá desplegando apps en dicha región.
+**Sugerencia**: Aunque las cadenas de herramientas no están disponibles actualmente en todas las regiones, puede configurar la cadena de herramientas para que despliegue las apps en todas las regiones. Para obtener más información, consulte la guía de aprendizaje <a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Despliegue una aplicación web segura en varias regiones</a>.
 
 |Cadenas de herramientas |{{site.data.keyword.Bluemix_notm}} público	|{{site.data.keyword.Bluemix_notm}} dedicado |
 |:----------|:------------------------------|:------------------|
@@ -46,23 +46,196 @@ Puede utilizar una plantilla como punto de partida para [crear una cadena de her
 
 **Consejo**: Es posible que el entorno {{site.data.keyword.Bluemix_notm}} dedicado de la empresa no contenga las mismas plantillas de cadenas de herramientas que el sitio de {{site.data.keyword.Bluemix_notm}} público. Las plantillas de cadenas de herramientas que están disponibles tanto en {{site.data.keyword.Bluemix_notm}} público como en {{site.data.keyword.Bluemix_notm}} dedicado pueden contener un conjunto distinto de integraciones de herramientas en {{site.data.keyword.Bluemix_notm}} dedicado.
 
-Algunas plantillas de cadenas de herramientas incluyen integraciones que forman parte del servicio {{site.data.keyword.contdelivery_short}}. Si su organización aún no tiene ninguna instancia de dicho servicio, cuando pulse **Crear** para crear la cadena de herramientas, el servicio se añadirá automáticamente de forma gratuita. Para obtener más información y ver las condiciones, consulte el [Catálogo de Bluemix ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/catalog/services/continuous-delivery/){:new_window}.
+Algunas plantillas de cadenas de herramientas incluyen integraciones que forman parte del servicio {{site.data.keyword.contdelivery_short}}. Si su organización aún no tiene ninguna instancia de dicho servicio, cuando pulse **Crear** para crear la cadena de herramientas, el servicio se añade automáticamente con el plan Lite gratuito seleccionado. Para obtener más información y ver las condiciones, consulte el [Catálogo de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/catalog/services/continuous-delivery/){:new_window}.
 
-Las plantillas de cadenas de herramientas de microservicios despliegan una app con las API de catálogo y de pedidos que se han copiado en un almacén de Cloudant. Como parte del despliegue de la app, se crea una instancia del servicio Cloudant sin coste alguno. Para obtener más información y ver las condiciones, consulte el [Catálogo de Bluemix ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/catalog/services/cloudant-nosql-db/){:new_window}.
+La cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" despliega una app con las API de catálogo y de pedidos que se han copiado en un almacén de Cloudant. Como parte del despliegue de la app, se crea una instancia del servicio Cloudant sin coste alguno. Para obtener más información y ver las condiciones, consulte el [Catálogo de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/catalog/services/cloudant-nosql-db/){:new_window}.
 
-|Plantilla |Descripción	|Guía de aprendizaje |
-|:----------|:------------------------------|:------------------|
-|[Cadena de herramientas de guía de aprendizaje del método Garage nativo de la nube ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial){:new_window} 		|Esta cadena de herramientas muestra prácticas de DevOps integradas en el método Garage. La cadena de herramientas está preconfigurada para entrega continua, control de código fuente, automatización de pruebas y para supervisión y operaciones automatizadas. Se suministra con una app de ejemplo escrita en Node.js Express 4, que puede ampliar. ![Herramientas de la cadena de herramientas](images/cloud-native-tc-tools.png)
-    |[Cree y utilice su primera cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window} 		|
-|[Cadena de herramientas de microservicios con {{site.data.keyword.DRA_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Ftoolchain-demo){:new_window}    |Con esta cadena de herramientas nativa de la nube puede utilizar una muestra para crear un almacén en línea compuesto por tres microservicios: una API de catálogo, una API de pedidos y una IU que realiza llamadas a ambas API. La cadena de herramientas está preconfigurada para entrega continua, control de código fuente, pruebas funcionales, seguimiento de problemas, edición en línea y notificación de alertas.  	 |[Cree y utilice una cadena de herramientas con {{site.data.keyword.DRA_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices){:new_window} 		|
-|[Cadena de herramientas de microservicios con {{site.data.keyword.DRA_short}} (v2) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-toolchain-hosted){:new_window}  	 |Con esta cadena de herramientas nativa de la nube puede utilizar una muestra para crear un almacén en línea compuesto por tres microservicios: una API de catálogo, una API de pedidos y una IU que realiza llamadas a ambas API. La cadena de herramientas está preconfigurada para entrega continua, control de código fuente, pruebas funcionales, seguimiento de problemas, edición en línea y notificación de alertas. 		|[Crear y utilizar una cadena de herramientas de microservicios con {{site.data.keyword.DRA_short}} (v2) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window} 		|
-|[Cadena de herramientas de contenedor seguro ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsecure-container-toolchain){:new_window} 		|Con esta cadena de herramientas puede desarrollar y desplegar una app de contenedor Docker segura. De forma predeterminada, la cadena de herramientas utiliza una app Node.js "Hello World" de ejemplo, pero puede enlazar en su lugar con su propio repositorio GitHub. La cadena de herramientas está preconfigurada para entrega continua con Vulnerability Advisor, control de código fuente, seguimiento de problemas y edición en línea. 		|[Cree y utilice una cadena de herramientas de contenedor seguro ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_secure_container){:new_window} 		|
-|[Cadena de herramientas simple de Cloud Foundry ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain){:new_window}		|Con esta cadena de herramientas puede desarrollar y desplegar una app de Cloud Foundry. De forma predeterminada, esta cadena de herramientas utiliza una app Node.js "Hello world" de ejemplo, pero puede enlazar en su lugar con su propio repositorio GitHub. La cadena de herramientas está preconfigurada para entrega continua, control de código fuente, seguimiento de problemas y edición en línea. 		|[Cree y utilice su primera cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_flow){:new_window} 		|
-|[Cadena de herramientas simple de Cloud Foundry (v2) ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain-hosted){:new_window}	|Con esta cadena de herramientas puede desarrollar y desplegar una app de Cloud Foundry. De forma predeterminada, esta cadena de herramientas clona una app Node.js "Hello world" de ejemplo en un repositorio Git alojado por IBM, que luego puede modificar. La cadena de herramientas está preconfigurada para entrega continua, control de código fuente, seguimiento de problemas y edición en línea. 		|[Cree una cadena de herramientas que utilice {{site.data.keyword.gitrepos}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_cfv2){:new_window} 		|
-|[Cadena de herramientas simple de Cloud Foundry con {{site.data.keyword.DRA_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdra-toolchain-demo){:new_window}		|Con esta cadena de herramientas nativa de la nube puede utilizar {{site.data.keyword.DRA_short}} para llevar a cabo el despliegue de una app sencilla de Cloud Foundry. De forma predeterminada, esta cadena de herramientas utiliza una app de meteorología Node.js, pero puede enlazar con su propio repositorio GitHub. 		|[Cree una cadena de herramientas que utilice {{site.data.keyword.DRA_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_devops_insights){:new_window} 		|
-|[Cadena de herramientas simple de Container ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-container-toolchain){:new_window}		|Con esta cadena de herramientas puede desarrollar y desplegar una app de contenedor Docker. De forma predeterminada, la cadena de herramientas utiliza una app Node.js "Hello World" de ejemplo, pero puede enlazar en su lugar con su propio repositorio GitHub. La cadena de herramientas está preconfigurada para entrega continua, control de código fuente, seguimiento de problemas y edición en línea. 		|[Cree y utilice una cadena de herramientas simple de contenedor ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_container){:new_window} 		|
-|[Delivery Insights con despliegue de IBM UrbanCode ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdeliveryinsights-toolchain){:new_window}		|Con esta cadena de herramientas puede ver métricas de despliegue con IBM UrbanCode Deploy. Habilite esta cadena de herramientas para comunicarse con IBM UrbanCode Deploy mediante la descarga y configuración de DevOps Connect desde la página Valores de {{site.data.keyword.DRA_short}}. 		|[Visualice métricas desde los servidores de IBM UrbanCode Deploy en {{site.data.keyword.DRA_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_delivery_insights){:new_window} 		|
-|[Deployment Risk Analytics con GitHub y Jenkins ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain){:new_window}		|Con esta cadena de herramientas puede ver detalles del proceso Jenkins para la integración y entrega continua. Puede configurar el servidor Jenkins para que envíe datos a {{site.data.keyword.DRA_short}} cuando Jenkins ejecuta los trabajos. También puede implementar mejoras en la calidad para bloquear despliegues en función de políticas. Puede ver los resultados en el panel de control de Deployment Risk de {{site.data.keyword.DRA_short}}. Si configura un repositorio GitHub para indicar el repositorio de origen que utiliza Jenkins, puede cambiar el nivel de rastreo.  		|[Deployment Risk Analytics con GitHub y Jenkins ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_dra){:new_window}		|
-|[Developer Insights y Team Dynamics con GitHub y JIRA ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain){:new_window}		|Con esta cadena de herramientas, puede explorar el riesgo de despliegue de un proyecto y utilizar un análisis de codificación social para comprender los patrones de interacción entre los desarrolladores. Puede analizar el código fuente de GitHub junto con problemas de GitHub, problemas de JIRA o ambos. Utilice Developer Insights para identificar los archivos muy propensos a errores y para ver si el proyecto cumple con las prácticas de DevOps. El análisis de codificación social en Team Dynamics identifica el nivel de interacción entre miembros del equipo para que el equipo pueda solucionar las prácticas improductivas. 		|[Obtenga conocimientos de desarrollo individual y en equipo en un proyecto JIRA y GitHub ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_dev_insights_team_dynamics){:new_window} 		|
-|[Cree su propia cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain){:new_window}		|Esta cadena de herramientas no tiene herramientas preconfiguradas. Si ya está familiarizado con las cadenas de herramientas, puede configurar su propia cadena de herramientas. 		|[Cree una cadena de herramientas personalizada ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_toolchain_custom){:new_window}.
-{: caption="Tabla 2. Plantillas de cadenas de herramientas" caption-side="top"}
+Las plantillas de cadena de herramientas de DevOps predefinidas son ejemplos recomendados que resuelven situaciones del mundo real. Cada una contiene una app de ejemplo. Puede utilizar su propia app especificando el repositorio git al crear la cadena de herramientas a partir de la plantilla.
+
+<table valign="top" padding="2px">
+  <caption>Tabla 2. Plantillas de cadenas de herramientas</caption>
+  <tr>
+    <th style="width:25%; text-align:left; vertical-align:top">Plantilla y regiones disponibles</th>
+    <th style="width:50%; text-align:left; vertical-align:top">Descripción y guías de aprendizaje disponibles</th>
+    <th style="text-align:left; vertical-align:top">Herramientas incluidas</th>
+  </tr>
+  <tr><td>
+  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain" target="_blank">Cadena de herramientas “Desarrollar una app de Cloud Foundry” <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
+
+  Disponible en EE.UU. Sur, Alemania y Reino Unido
+
+  </td><td>
+Con esta cadena de herramientas puede desarrollar y desplegar una app de Cloud Foundry. De forma predeterminada, esta cadena de herramientas utiliza una app Node.js "Hello world" de ejemplo, pero puede enlazar en su lugar con su propio repositorio GitHub. La cadena de herramientas está preconfigurada para entrega continua, control de código fuente, seguimiento de problemas y edición en línea.<br><br>
+
+  Consulte la guía de aprendizaje: <a href="https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain" target="_blank">Incorpore cadenas de herramientas mediante la cadena de herramientas “Desarrollar una app de Cloud Foundry” <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
+  </td><td><ul><li>
+  {{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>GitHub y problemas		</li><li>{{site.data.keyword.Bluemix_notm}}
+  </li></ul>
+  </td></tr>
+
+  <tr><td>
+  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsecure-kube-toolchain" target="_blank">Cadena de herramientas "Desarrollar una app de Kubernetes" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
+
+  Disponible en EE.UU. Sur, Alemania y Reino Unido
+
+  </td><td>
+  Con esta cadena de herramientas, puede desarrollar y desplegar una aplicación de forma segura en un clúster de Kubernetes gestionado por {{site.data.keyword.Bluemix_notm}} Container Service. De forma predeterminada, la cadena de herramientas utiliza una app de muestra Node.js "Hello World", pero puede enlazar a su propio repositorio GitHub en su lugar. La cadena de herramientas está preconfigurada para la entrega continua con Vulnerability Advisor, control de origen, seguimiento de problemas y edición en línea. <br><br>
+  Consulte la guía de aprendizaje: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain" target="_blank">Utilice la cadena de herramientas "Desarrollar una app de Kubernetes" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>  
+  <br><br>
+  </td><td><ul><li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>GitHub y problemas		</li><li>{{site.data.keyword.Bluemix_notm}} Container (clúster de Kubernetes)</li></ul>
+  </td></tr>
+
+  <tr><td>
+  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-helm-toolchain" target="_blank">Cadena de herramientas "Desarrollar una app de Kubernetes con Helm"
+   <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
+
+  Disponible en EE.UU. Sur, Alemania y Reino Unido
+
+  </td><td>
+Con esta cadena de herramientas, puede desarrollar una aplicación Docker y su diagrama de Helm de forma conjunta en el control de origen y compilarlos y desplegarlos automáticamente en un clúster de Kubernetes. La cadena de herramientas realiza pruebas aleatorias antes de compilar o desplegar y garantiza la privacidad mediante un registro de contenedores privado y espacios de nombres para el registro de contenedores y el clúster de Kubernetes. Esta cadena también utiliza Vulnerability Advisor para garantizar que sólo se desplieguen imágenes seguras. <br><br>
+  Consulte la guía de aprendizaje: <a href="https://www.ibm.com/cloud/garage/use-develop-kubernetes-app-with-helm-toolchain" target="_blank">Utilice la cadena de herramientas "Desarrollar una app de Kubernetes con Helm" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>	 <br><br>
+  </td><td><ul>
+  <li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>Git Repos and Issue Tracking</li><li>{{site.data.keyword.Bluemix}} Container (clúster de Kurbernetes) con un diagrama de Helm
+  </li></ul>
+  </td></tr>
+
+  <tr><td>
+  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-helm-toolchain" target="_blank">Cadena de herramientas "Desarrollar y probar una app de Cloud Foundry"
+   <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
+
+  Disponible en EE.UU. Sur, Alemania y Reino Unido
+
+  </td><td>
+  Con esta cadena de herramientas nativa de la nube, puede utilizar DevOps Insights para controlar el despliegue de una aplicación sencilla de Cloud Foundry. De forma predeterminada, la cadena de herramientas utiliza una app de meteorología Node.js, pero puede enlazar con su propio repositorio GitHub. La cadena de herramientas ejecuta pruebas de unidad mediante Mocha y comprueba la cobertura de código mediante Istanbul.<br><br>
+  Consulte la guía de aprendizaje: <a href="https://www.ibm.com/cloud/garage/use-develop-test-cloud-foundry-app-toolchain" target="_blank">Utilice la cadena de herramientas "Desarrollar y probar una app de Cloud Foundry" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>  <br><br>
+  </td><td><ul>
+  <li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>Git Repos and Issue Tracking</li><li>{{site.data.keyword.DRA_full}} (Sólo EE.UU. Sur)
+  </li></ul>
+  </td></tr>
+
+
+  <tr><td>
+  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-toolchain-hosted" target="_blank">
+  Cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
+
+  Disponible en EE.UU. Sur, Alemania y Reino Unido
+
+  </td><td>
+Con esta cadena de herramientas nativa de la nube puede utilizar una muestra para crear un almacén en línea compuesto por tres microservicios: una API de catálogo, una API de pedidos y una IU que realiza llamadas a ambas API. La cadena de herramientas está preconfigurada para entrega continua, control de código fuente, pruebas funcionales, seguimiento de problemas, edición en línea y notificación de alertas.<br><br>
+  Consulte la guía de aprendizaje: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain" target="_blank">Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a><br><br>
+  </td><td>
+  <ul>
+  <li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>GitHub y problemas		</li><li>{{site.data.keyword.Bluemix_notm}}
+  </li><li>{{site.data.keyword.DRA_full}} (Sólo EE.UU. Sur)
+  </li><li>PagerDuty</li><li>Sauce Labs		</li><li>Slack</li></ul>
+ </td>
+</tr>
+
+  <tr>
+  <td><a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" targe="_blank">
+Cadena de herramientas "Guía de aprendizaje de Garage Method con Cloud Foundry" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
+
+  Disponible en EE.UU. Sur, Alemania y Reino Unido
+
+</td><td>
+Esta cadena de herramientas muestra prácticas de DevOps integradas en el método Garage. La cadena de herramientas está preconfigurada para entrega continua, control de código fuente, automatización de pruebas y para supervisión y operaciones automatizadas. Se suministra con una app de ejemplo escrita en Node.js Express 4, que puede ampliar.<br><br>Consulte la guía de aprendizaje: <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Conviértase en un defensor de Garage Method <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>.
+</td><td>
+<ul>
+<li>{{site.data.keyword.deliverypipeline}}
+</li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>GitHub y problemas		</li><li>Google Analytics
+</li><li>{{site.data.keyword.Bluemix_notm}}
+</li><li>New Relic
+</li><li>PagerDuty</li><li>Sauce Labs		</li><li>Slack</li></ul>
+</td></tr>
+
+<tr><td>
+<a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain" target="_blank">Cadena de herramientas "Deployment Risk Analytics con GitHub y Jenkins"   <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
+
+  Disponible en EE.UU. Sur
+
+</td><td>Con esta cadena de herramientas puede ver detalles del proceso Jenkins para la integración y entrega continua. Puede configurar el servidor Jenkins para que envíe datos a {{site.data.keyword.DRA_short}} cuando Jenkins ejecuta los trabajos. También puede implementar mejoras en la calidad para bloquear despliegues en función de políticas. Puede ver los resultados en el panel de control de Deployment Risk de {{site.data.keyword.DRA_short}}. Si configura un repositorio GitHub para indicar el repositorio de origen que utiliza Jenkins, puede cambiar el nivel de rastreo.  
+<br><br>
+Consulte la guía de aprendizaje: <a href="https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain" target="_blank">Garantice la calidad de los despliegues mediante la cadena de herramientas "Deployment Risk Analytics con GitHub y Jenkins"  <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>  <br><br>
+</td><td><ul><li>
+GitHub y problemas		</li><li>Jenkins</li><li>{{site.data.keyword.DRA_full}}
+</li><li>Slack</li></ul>
+</td></tr>
+
+<tr><td>
+<a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain" target="_blank">Cadena de herramientas "Developer Insights y Team Dynamics con GitHub y JIRA" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
+
+  Disponible en EE.UU. Sur
+
+</td><td>
+Con esta cadena de herramientas, puede explorar el riesgo de despliegue de un proyecto y utilizar un análisis de codificación social para comprender los patrones de interacción entre los desarrolladores. Puede analizar el código fuente de GitHub junto con problemas de GitHub, problemas de JIRA o ambos. Utilice Developer Insights para identificar los archivos muy propensos a errores y para ver si el proyecto cumple con las prácticas de DevOps. El análisis de codificación social en Team Dynamics identifica el nivel de interacción entre miembros del equipo para que el equipo pueda solucionar las prácticas improductivas.<br><br>
+Consulte la guía de aprendizaje: <a href="https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain" target="_blank">Obtenga información mediante la cadena de herramientas "Developer Insights y Team Dynamics con GitHub y JIRA" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
+</td><td><ul><li>
+GitHub y problemas		</li><li>{{site.data.keyword.DRA_full}}
+</li><li>JIRA</li><li>Slack</li></ul>
+</td></tr>
+
+
+<tr><td>
+<a href="(https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdeliveryinsights-toolchain" target="_blank">Cadena de herramientas "Delivery Insights con IBM UrbanCode Deploy"  <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
+
+  Disponible en EE.UU. Sur
+
+</td><td>Con esta cadena de herramientas puede ver métricas de despliegue con IBM UrbanCode Deploy. Habilite esta cadena de herramientas para comunicarse con IBM UrbanCode Deploy mediante la descarga y configuración de DevOps Connect desde la página Valores de {{site.data.keyword.DRA_short}}.<br><br>
+Consulte la guía de aprendizaje: <a href="https://www.ibm.com/cloud/garage/tutorials/view-metrics-delivery-insights-urbancode-deploy-toolchain" target="_blank">Visualice las métricas mediante la cadena de herramientas "Delivery Insights con IBM UrbanCode Deploy" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> 	
+<br><br>
+</td><td><ul><li>{{site.data.keyword.DRA_full}}
+</li><li>UrbanCode Deploy
+</li></ul>
+</td></tr>
+
+<tr><td>
+<a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain" target="_blank">Cree su propia cadena de herramientas <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
+
+  Disponible en EE.UU. Sur, Alemania y Reino Unido
+
+</td><td>
+Esta cadena de herramientas no tiene herramientas preconfiguradas. Si ya está familiarizado con las cadenas de herramientas, puede configurar su propia cadena de herramientas.<br><br>
+Consulte la guía de aprendizaje: <a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Cree una cadena de herramientas personalizada  <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>
+</td><td> &nbsp;&nbsp; Ninguna
+</td></tr>
+
+<tr><td>Cadena de herramientas de Continuous Delivery <br><br>
+
+ Disponible en EE.UU. Sur, Alemania y Reino Unido
+
+</td><td>
+Esta cadena se utiliza cuando se habilita la entrega continua en una app. <br><br>
+Consulte las guías de aprendizaje:
+
+<ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app" target="_blank">Añada una cadena de herramientas a una app <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a></li>
+<li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Cree una cadena de herramientas personalizada <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a></li>
+<li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Despliegue una aplicación web segura en varias regiones</a></li>
+</ul></td>
+<td><ul><li>{{site.data.keyword.deliverypipeline}}
+</li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>
+GitHub y problemas		</li>
+<li>{{site.data.keyword.Bluemix_notm}}</li></ul>
+</td></tr>
+
+<tr><td>Plantilla de cadena de herramientas personalizada <br><br>
+
+ Disponible en EE.UU. Sur, Alemania y Reino Unido
+
+</td><td>
+<br><br>
+Puede crear una plantilla de cadena de herramientas personalizada que pueden utilizar otros usuarios. <br><br>
+
+Consulte la documentación:
+<a href="https://github.com/open-toolchain/sdk/wiki" target="_blank">Creación de plantillas de cadenas de herramientas personalizadas <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>
+ <br><br>
+Consulte la guía de aprendizaje:
+<a href="https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain" target="_blank">Cree una plantilla para una cadena de herramientas personalizado <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a></td>
+<td>Ninguna
+</td></tr>
+
+</table>
