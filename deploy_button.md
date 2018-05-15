@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-5-15"
 
 ---
 
@@ -90,7 +90,7 @@ When you customize the snippet for your Deploy to {{site.data.keyword.Bluemix_no
 Review these considerations for the repo that you use in your Deploy to {{site.data.keyword.Bluemix_notm}} button.
 
 
-## Build file requirements
+### Build file requirements
 {: build_file}
 
 If the app must be built before it can be deployed, you must include a build file in your repo. If a build script file is detected in the root directory of the repo, an automated build of the code is triggered before deployment.
@@ -118,14 +118,13 @@ To deploy an app in a container by using IBM Containers, you must include a Dock
 
 The Dockerfile acts as a kind of build script for the app. If a Dockerfile is detected in the repo, the app is automatically built into an image before it is deployed in a container. If the app itself must be built before the app is built into an image, include a build script for the app and a Dockerfile.
 
-To learn more about creating Dockerfiles, see the [Docker documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.docker.com/reference/builder/){:new_window}.  To follow step-by-step instructions using a toolchain template to deploy to Kubernetes, see [Tutorial: Use the "Develop a Kubernetes app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window} or [Tutorial: Use the "Develop a Kubernetes app with Helm" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window}.  
-   To learn about port your Cloud Foundry app to a Kubernetes cluster, see [Tutorial: Port your Cloud Foundry app to deploy to Kubernetes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/port-an-app-from-cf-to-kubernetes-in-a-toolchain?task=0){:new_window}.  
+To learn more about creating Dockerfiles, see the [Docker documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.docker.com/reference/builder/){:new_window}. To follow step-by-step instructions using a toolchain template to deploy to Kubernetes, see [Tutorial: Use the "Develop a Kubernetes app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window} or [Tutorial: Use the "Develop a Kubernetes app with Helm" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window}.
 
-To create a `pipeline.yml` manually that is specifically for containers
+To learn about porting your Cloud Foundry app to a Kubernetes cluster, see [Tutorial: Port a Cloud Foundry app to deploy to Kubernetes in a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){:new_window}.  
 
 To create a `pipeline.yml` manually that is specifically for containers, see the [examples in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/Puquios/){:new_window}.
 
-## Manifest file requirements (for apps deployed to Cloud Foundry)
+### Manifest file requirements (for apps deployed to Cloud Foundry)
 {: #manifest_files}
 
 A `manifest.yml` file is not required to be in your repo. However, if your app requires other services to run, you must provide a manifest file that declares those services.
