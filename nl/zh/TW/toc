@@ -15,7 +15,7 @@ Continuous Delivery
     相關鏈結
 	    [IBM Cloud DevOps Insights](../DevOpsInsights/index.html#gettingstarted)
         [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage)
-  {: .navgroup-end}
+    {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
@@ -62,5 +62,5 @@ Continuous Delivery
     {: .navgroup id="help"}
     cd_support.md
     ts_index.md
-  {: .navgroup-end}
+    {: .navgroup-end}
     
