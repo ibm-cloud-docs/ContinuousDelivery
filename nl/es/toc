@@ -15,7 +15,7 @@ Entrega continua
     Enlaces relacionados
 	    [IBM Cloud DevOps Insights](../DevOpsInsights/index.html#gettingstarted)
         [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage)
-  {: .navgroup-end}
+    {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
@@ -62,5 +62,5 @@ Entrega continua
     {: .navgroup id="help"}
     cd_support.md
     ts_index.md
-  {: .navgroup-end}
+    {: .navgroup-end}
     
