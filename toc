@@ -35,8 +35,6 @@ Continuous Delivery
         pipeline_deploy_var.md
         pipeline_custom_docker_images.md
         deliverypipeline_extension.md
-        pipeline_composites.md
-        pipeline_deployment_plan.md
 
     {: .topicgroup}
     Eclipse Orion Web IDE
