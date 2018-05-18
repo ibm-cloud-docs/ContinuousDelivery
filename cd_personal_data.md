@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-4-13"
+lastupdated: "2018-5-18"
 
 ---
 
@@ -68,13 +68,13 @@ Regardless of what type of IBM Cloud account is used, if you have rights to the 
 
 Before you delete data from an account, determine whether it is a personal account or a corporate individual account.
 
-###Personal accounts
+###Personal account
 
 If you own a personal account, you can make changes and delete your data. If you share your account with another user, you own the data, but you might want to contact them about the shared work. 
 
 If you can't log in to your IBM Cloud account, [contact IBM Support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/support){:new_window}
  
-###Corporate individual accounts
+###Corporate individual account
 
 If you own a corporate individual account, you must coordinate any changes with both your corporation and other members of your team. Delete your personal data regardless of whether it is stored in a corporate account or a corporate individual account. Make sure that you don't delete work that you shared with other users.
 
