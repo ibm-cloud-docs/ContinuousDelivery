@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-20"
+lastupdated: "2018-5-18"
 
 ---
 
@@ -79,7 +79,7 @@ The {{site.data.keyword.webide}} is integrated with source code management tools
 1. Click the deploy icon <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="The deploy icon">. An instance of your app is deployed by using the current contents of your workspace and the environment that is defined in your launch configuration.
 2. After your app is deployed, you can use the run bar to stop, restart, or debug your app, view logs, and more.
 
-<table>
+<table role="presentation">
 <tr><td><img src="./images/stop_button.png"  alt="The stop icon"></td><td>Stop the app</td></tr>
 <tr><td> <img src="./images/open_app_url.png"  alt="The open app URL icon"></td><td> Open the deployed app</td></tr>
 <tr><td><img src="./images/view_logs.png"  alt="The view logs icon"></td><td>View the logs of the deployed app</td></tr>
@@ -88,7 +88,7 @@ The {{site.data.keyword.webide}} is integrated with source code management tools
 
 If you are developing a Node.js app, enable Live Edit mode:  <img  src="./images/enable_live_edit.png"  alt="The enable live edit slider">
 
-<table><tr><td><img src="./images/live_edit_restart.png"  alt="The Live Edit restart icon"></td><td>With Live Edit mode enabled, restart the app quickly, without redeployment</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="The Live Edit restart icon"></td><td>With Live Edit mode enabled, restart the app quickly, without redeployment</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="The debug icon"></td>
 <td>With Live Edit mode enabled, access the debugger
 </td></tr>
@@ -161,7 +161,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 The Eclipse Orion {{site.data.keyword.webide}} provides content assist, tooltips, previews, validation, and syntax highlighting for JavaScript, HTML, CSS, and Markdown files. Syntax highlighting is also supported for these file types:
 
-<table>
+<table role="presentation">
 <tr>
 <td>
 <ul><li>Arduino
