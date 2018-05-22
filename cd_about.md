@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-5-22"
 
 ---
 
@@ -100,7 +100,7 @@ The predefined DevOps toolchain templates are recommended examples that solve re
 
   </td><td>
   With this toolchain, you can develop a Docker application and its Helm chart together in source control and build and deploy it automatically to a Kubernetes cluster. The toolchain performs smoke tests before building or deploying and ensures privacy by using a private container registry and namespaces for the container registry and the Kubernetes cluster. This toolchain also uses Vulnerability Advisor to ensure only secure images get deployed. <br><br>
-  Try the tutorial: <a href="https://www.ibm.com/cloud/garage/use-develop-kubernetes-app-with-helm-toolchain" target="_blank">Use the "Develop a Kubernetes app with Helm" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>	 <br><br>
+  Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain" target="_blank">Use the "Develop a Kubernetes app with Helm" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>	 <br><br>
   </td><td><ul>
   <li>{{site.data.keyword.deliverypipeline}}
   </li><li>Eclipse Orion {{site.data.keyword.webide}}
@@ -110,14 +110,14 @@ The predefined DevOps toolchain templates are recommended examples that solve re
   </td></tr>
 
   <tr><td>
-  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-helm-toolchain" target="_blank">"Develop and test a Cloud Foundry app" toolchain
+  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdra-toolchain-demo" target="_blank">"Develop and test a Cloud Foundry app" toolchain
    <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
 
   Available in US South, Germany, and United Kingdom
 
   </td><td>
   With this cloud-native toolchain, you can use DevOps Insights to gate the deployment of a simple Cloud Foundry application. By default, the toolchain uses a sample Node.js weather app, or you can link to your own GitHub repository. The toolchain runs unit tests using Mocha and checks code coverage by using Istanbul.<br><br>
-  Try the tutorial: <a href="https://www.ibm.com/cloud/garage/use-develop-test-cloud-foundry-app-toolchain" target="_blank">Use the "Develop and test a Cloud Foundry app" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>  <br><br>
+  Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain" target="_blank">Use the "Develop and test a Cloud Foundry app" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>  <br><br>
   </td><td><ul>
   <li>{{site.data.keyword.deliverypipeline}}
   </li><li>Eclipse Orion {{site.data.keyword.webide}}
@@ -201,21 +201,6 @@ GitHub and Issues
 </li><li>{{site.data.keyword.DRA_full}}
 </li><li>JIRA
 </li><li>Slack
-</li></ul>
-</td></tr>
-
-
-<tr><td>
-<a href="(https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdeliveryinsights-toolchain" target="_blank">"Delivery Insights with IBM UrbanCode Deploy" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-
-  Available in US South
-
-</td><td>With this toolchain, you can view deployment metrics from IBM UrbanCode Deploy. Enable this toolchain to communicate with IBM UrbanCode Deploy by downloading and configuring DevOps Connect from the Settings page in {{site.data.keyword.DRA_short}}.
-<br><br>
-Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/view-metrics-delivery-insights-urbancode-deploy-toolchain" target="_blank">View metrics by using the Delivery Insights with IBM UrbanCode Deploy" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> 	
-<br><br>
-</td><td><ul><li>{{site.data.keyword.DRA_full}}
-</li><li>UrbanCode Deploy
 </li></ul>
 </td></tr>
 
