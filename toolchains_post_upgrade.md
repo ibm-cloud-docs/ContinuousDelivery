@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-4-27"
+lastupdated: "2018-5-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-4-27"
 
 {{site.data.keyword.jazzhub_short}} at hub.jazz.net is retired. 
 
-For your DevOps projects, use the [{{site.data.keyword.contdelivery_short}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops){:new_window}. If you're new to {{site.data.keyword.Bluemix_notm}}, be sure to check out the [{{site.data.keyword.Bluemix_notm}} overview](/docs/overview/whatisbluemix.html#bluemixoverview).
+For your DevOps projects, use the [{{site.data.keyword.contdelivery_short}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops){:new_window}. If you're new to {{site.data.keyword.Bluemix_notm}}, be sure to check out the [{{site.data.keyword.Bluemix_notm}} overview](/docs/overview/ibm-cloud.html#overview).
 
 {: shortdesc}
 
@@ -52,7 +52,7 @@ You can learn more about toolchains on [YouTube ![External link icon](../../icon
     - Grant org members access to the toolchain from the toolchain Manage page. Existing project members are added as members of the toolchain as part of the upgrade process. For more information about access control for toolchains, see [Managing access ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
     - If a user is not a member of the org that the toolchain belongs to, add them to the org from the Manage Organizations page.
     - If your toolchain uses {{site.data.keyword.gitrepos}}, all JazzHub project members that have a valid {{site.data.keyword.Bluemix_notm}} ID are added to the {{site.data.keyword.gitrepos}} repo with the same privileges as they had in the JazzHub project. If your JazzHub project includes members that do not have a valid {{site.data.keyword.Bluemix_notm}} ID, they can register for one. After they register, you can add them to the repo.
-      For more information about managing organizations, see [Managing organizations and spaces ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
+      For more information about managing organizations, see [Managing organizations and spaces ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window}.
 
 2. If you are using {{site.data.keyword.gitrepos}}, authenticate by using a personal access token or an SSH key. For more information about SSH keys, see [Creating a personal access token or SSH key for authentication](/docs/services/ContinuousDelivery/git_working.html#git_authentication). To authenticate from an external Git client through https, follow these steps:
     1. Go to the [Access Tokens page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} of your {{site.data.keyword.gitrepos}} user settings.
@@ -164,7 +164,7 @@ If you want your toolchain to be in the a US organization that matches your non-
    
    4. Delete the toolchain that was created through the upgrade process. 
    
-      **Note:** The Git repo is not automatically deleted. You might want to delete it manually or rename it for now. If you made changes to it already, you can switch the future toolchain to use it later.
+      **Note:** The Git repo is not automatically deleted. You might want to delete it manually or rename it for now. If you made changes to it already, you can update the future toolchain to use it later.
 
    5. Return to the JazzHub project. It should reset itself for another upgrade attempt. If it doesn't reset, contact hub@jazz.net and provide the URL of the project.
    
