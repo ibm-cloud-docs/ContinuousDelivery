@@ -2,7 +2,7 @@
 
 Copyright:
  years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-5-22"
 
 ---
 
@@ -25,7 +25,7 @@ An enterprise application developer can start building and deploying cloud-nativ
 
 As team members join a project, they need an integrated set of tools that span development, deployment, and production operations. IBM's Open Toolchain architecture enables a team to rapidly provision best-in-class DevOps tools from IBM, open source, and others. Integrations between these tools are configured automatically. Toolchains are a first class concept on the platform, so developers can quickly organize everything that they need in one place, and evolve the toolchain over time. IBM provides toolchain templates that support Garage Method best practices, which you can customize to promote proven toolchain patterns across your enterprise.
 
-{{site.data.keyword.contdelivery_full}} provides a core set of tools for any DevOps toolchain: Git repositories, issue tracking, delivery pipeline, and Web IDE. Git Repositories and Issue Tracking is based on GitLab Community Edition, and offers planning boards and source code collaboration through merge requests. The Delivery Pipeline orchestrates build, test, and deployment jobs across multiple environments as changes progress from the developer to production. Applications can be deployed in minutes to the Cloud Foundry environment or to a Kubernetes cluster on {{site.data.keyword.Bluemix_notm}}, to either public or private clouds. The Eclipse Orion Web IDE gives developers quick access to the code from any browser.
+{{site.data.keyword.contdelivery_full}} provides a core set of tools for any DevOps toolchain: {{site.data.keyword.gitrepos}}, Delivery Pipeline, and Eclipse Orion {{site.data.keyword.webide}}. {{site.data.keyword.gitrepos}} is based on the GitLab Community Edition, and offers planning boards and source code collaboration through merge requests. The Delivery Pipeline orchestrates build, test, and deployment jobs across multiple environments as changes progress from the developer to production. Applications can be deployed in minutes to the Cloud Foundry environment or to a Kubernetes cluster on {{site.data.keyword.Bluemix_notm}}, to either public or private clouds. The Eclipse Orion {{site.data.keyword.webide}} gives developers quick access to the code from any browser.
 
 Open toolchain integrates additional tools around {{site.data.keyword.contdelivery_short}} such as Slack, Atlassian JIRA, Sonatype Nexus, JFrog Artifactory, Sauce Labs, PagerDuty, IBM Cloud Availability Monitoring, IBM Cloud Alert Notification, IBM Vulnerability Advisor, and IBM Globalization Pipeline. You can also substitute other tools for the {{site.data.keyword.contdelivery_short}} capabilities, including GitHub, GitHub Enterprise, and Jenkins. Developers can also use their favorite IDEs and editors, such as Visual Studio Code, Eclipse, and more.
 
