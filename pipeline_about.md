@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-3-22"
+lastupdated: "2018-5-22"
 ---
 
 {:new_window: target="_blank"}
@@ -131,7 +131,7 @@ You can include environment properties within a job's shell commands. The proper
 ## Creating and using artifacts
 {: #artifacts}
 
-Build jobs automatically fetch the content is the current folder where the user script is executed.  If you do not need the entire git repo content for later deployment, it is preferable that you configure an explicit output directory and they copy or create the relevant artifacts there.  Job scripts are executed in the build result (output directory).
+Build jobs automatically fetch the content in the current folder where the user script is executed.  If you do not need the entire git repo content for later deployment, it is preferable that you configure an explicit output directory and they copy or create the relevant artifacts there.  Job scripts are executed in the build result (output directory).
 
 Deploy jobs that deploy to Cloud Foundry need to specify the org and space of where to deploy the artifacts.  If additional services are needed to run your app, you need to specify them in the `manifest.yml` file.
 
