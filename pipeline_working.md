@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-5-18"
+lastupdated: "2018-5-30"
 
 ---
 
@@ -17,11 +17,11 @@ lastupdated: "2018-5-18"
 To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use {{site.data.keyword.contdelivery_full}} pipelines.
 {: shortdesc}
 
-With pipelines, you can choose from several build types. You provide the build script, and {{site.data.keyword.contdelivery_short}} runs it; you don't need to set up build systems. Then, with one click, you can automatically deploy your app to one or many {{site.data.keyword.Bluemix_notm}} spaces, public Cloud Foundry servers, or Docker containers on IBM Containers for {{site.data.keyword.Bluemix_notm}}.
+With pipelines, you can choose from several build types. You provide the build script, and {{site.data.keyword.contdelivery_short}} runs it; you don't need to set up build systems. Then, with one click, you can automatically deploy your app to one or many {{site.data.keyword.Bluemix_notm}} spaces, public Cloud Foundry servers, or Docker containers on the {{site.data.keyword.containerlong}}.
 
-Build jobs compile and package your app source code from Git repositories. The build jobs produce deployable artifacts, such as WAR files or Docker containers for IBM Containers. In addition, you can run unit tests within your build automatically. You can set up your build jobs so that each time a commit is pushed, a build is triggered.
+Build jobs compile and package your app source code from Git repositories. The build jobs produce deployable artifacts, such as WAR files or Docker containers for the {{site.data.keyword.containerlong_notm}}. In addition, you can run unit tests within your build automatically. You can set up your build jobs so that each time a commit is pushed, a build is triggered.
 
-A deployment job takes output from a build job and deploys it to either IBM Containers or Cloud Foundry servers such as {{site.data.keyword.Bluemix_notm}}.
+A deployment job takes output from a build job and deploys it to either the {{site.data.keyword.containerlong_notm}} or Cloud Foundry servers such as {{site.data.keyword.Bluemix_notm}}.
 
 You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} to use one or more services, test in one region, and deploy to production in multiple regions. For more information, see [Regions](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}.
 
