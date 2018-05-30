@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-5-22"
+lastupdated: "2018-5-30"
 ---
 
 {:new_window: target="_blank"}
@@ -135,7 +135,7 @@ Build jobs automatically fetch the content in the current folder where the user 
 
 Deploy jobs that deploy to Cloud Foundry need to specify the org and space of where to deploy the artifacts.  If additional services are needed to run your app, you need to specify them in the `manifest.yml` file.
 
-Deploy jobs that deploy to the IBM Cloud Container Service to a Kubernetes cluster need a Dockerfile and optionally a Helm chart.  
+Deploy jobs that deploy to the {{site.data.keyword.containerlong_notm}} to run in a Kubernetes cluster need a Dockerfile, and optionally a Helm chart.  
 
 The job script runs after the job has logged in into the target environment (so you can perform `cf push`  or `kubectl` commands in the script).
 
