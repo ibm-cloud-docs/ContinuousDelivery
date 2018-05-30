@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-5-15"
+lastupdated: "2018-5-30"
 
 ---
 
@@ -31,7 +31,7 @@ When someone clicks your button, these actions occur:
 
 5. If a pipeline is configured for the build and deployment process, a `pipeline.yml` file is used to deploy the app.
 
-6. If the app requires a container, a `pipeline.yml` file that defines the IBM Containers service and a Dockerfile that defines an image are used to deploy the app in a {{site.data.keyword.Bluemix_notm}} container.
+6. If the app requires a container, a `pipeline.yml` file that defines the {{site.data.keyword.containerlong_notm}} and a Dockerfile that defines an image are used to deploy the app in the {{site.data.keyword.containerlong_notm}}.
 
 7. The app is deployed to the {{site.data.keyword.Bluemix_notm}} organization that the person selected.
 
@@ -114,7 +114,7 @@ To create a pipeline file, consult the example file in the [custom toolchain pip
 ### Container Dockerfile requirements
 {: container_dockerfile}
 
-To deploy an app in a container by using IBM Containers, you must include a Dockerfile in the root directory of the repo and, in a `.bluemix` directory, include a `pipeline.yml` file.
+To deploy an app in a container by using the {{site.data.keyword.containerlong_notm}}, you must include a Dockerfile in the root directory of the repo and, in a `.bluemix` directory, include a `pipeline.yml` file.
 
 The Dockerfile acts as a kind of build script for the app. If a Dockerfile is detected in the repo, the app is automatically built into an image before it is deployed in a container. If the app itself must be built before the app is built into an image, include a build script for the app and a Dockerfile.
 
