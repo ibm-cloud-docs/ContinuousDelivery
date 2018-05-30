@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2018
-lastupdated: "2018-5-22"
+lastupdated: "2018-5-30"
 
 ---
 
@@ -35,7 +35,7 @@ For source-code management and issue tracking, {{site.data.keyword.Bluemix_notm}
 |Creating a toolchain from a template		|Log in to [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://console.bluemix.net/devops){:new_window}		|Log in to your Dedicated environment on {{site.data.keyword.Bluemix_notm}}.			|
 |Creating a toolchain from an app		|The app is configured for continuous delivery from a new GitHub repo that is populated with app starter code.		|The app is configured for continuous delivery from a new GitHub or GitHub Enterprise repo that is populated with app starter code.		|  
 |Delivery pipeline deployment regions		|All {{site.data.keyword.Bluemix_notm}} Public regions are available for Cloud Foundry deployment jobs. 		|The {{site.data.keyword.Bluemix_notm}} Dedicated region is available. Other Dedicated or Local regions within the same customer account might also be available depending on how {{site.data.keyword.contdelivery_short}} was set up in your specific environment.		|
-|Delivery pipeline deployment jobs		|All [job types](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs) are available.		|Job types that depend on {{site.data.keyword.Bluemix_notm}} services that are not installed in the Dedicated environment might not be available.	For example, container build and deploy job types might not be available in environments that do not have the {{site.data.keyword.Bluemix_notm}} Container service.	|
+|Delivery pipeline deployment jobs		|All [job types](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs) are available.		|Job types that depend on {{site.data.keyword.Bluemix_notm}} services that are not installed in the Dedicated environment might not be available.	For example, container build and deploy job types might not be available in environments that do not have the {{site.data.keyword.containerlong_notm}}.	|
 {: caption="Table 1. Differences between toolchains on {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Public" caption-side="top"}
 
 
@@ -82,13 +82,13 @@ The predefined DevOps toolchain templates are recommended examples that solve re
   Available in US South, Germany, and United Kingdom
 
   </td><td>
-  With this toolchain, you can develop, and deploy an application securely into a Kubernetes cluster managed by the {{site.data.keyword.Bluemix_notm}} Container Service. By default, the toolchain uses a sample Node.js "Hello World" app, but you can link to your own GitHub repository instead. This toolchain is preconfigured for continuous delivery with Vulnerability Advisor, source control, issue tracking, and online editing. <br><br>
+  With this toolchain, you can develop, and deploy an application securely into a Kubernetes cluster managed by the {{site.data.keyword.containerlong_notm}}. By default, the toolchain uses a sample Node.js "Hello World" app, but you can link to your own GitHub repository instead. This toolchain is preconfigured for continuous delivery with Vulnerability Advisor, source control, issue tracking, and online editing. <br><br>
   Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain" target="_blank">Use the "Develop a Kubernetes app" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>  
   <br><br>
   </td><td><ul><li>{{site.data.keyword.deliverypipeline}}
   </li><li>Eclipse Orion {{site.data.keyword.webide}}
   </li><li>GitHub and Issues
-  </li><li>{{site.data.keyword.Bluemix_notm}} Container (Kubernetes cluster)
+  </li><li>{{site.data.keyword.containerlong_notm}} (Kubernetes cluster)
   </li></ul>
   </td></tr>
 
@@ -105,7 +105,7 @@ The predefined DevOps toolchain templates are recommended examples that solve re
   <li>{{site.data.keyword.deliverypipeline}}
   </li><li>Eclipse Orion {{site.data.keyword.webide}}
   </li><li>Git Repos and Issue Tracking
-  </li><li>{{site.data.keyword.Bluemix}} Container (Kurbernetes cluster) with a Helm chart
+  </li><li>{{site.data.keyword.containerlong_notm}} (Kurbernetes cluster) with a Helm chart
   </li></ul>
   </td></tr>
 
