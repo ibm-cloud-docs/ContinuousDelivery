@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-5-30"
+lastupdated: "2018-6-8"
 
 ---
 
@@ -54,26 +54,26 @@ To create a Deploy to {{site.data.keyword.Bluemix_notm}} button, copy and modify
 To create a button in HTML, copy this snippet and insert a public Git repository URL and branch.
 
 ```HTML
-<a href="https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"></a>
+<a href="https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://bluemix.net/deploy/button.png" alt="Deploy to IBM Cloud"></a>
 ```
 {: codeblock}
 
-If you don't include the `branch` parameter in your snippet's repository URL, the Deploy to Bluemix button defaults to the repository's master branch.
+If you don't include the `branch` parameter in your snippet's repository URL, the Deploy to {{site.data.keyword.Bluemix_notm}} button defaults to the repository's master branch.
 
 ### Creating a button in Markdown
 
 To create a button in Markdown, copy this snippet and insert a public Git repository URL and branch.
 
 ```Markdown
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>)
+[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>)
 ```
 {: codeblock}
 
-If you don't include the `branch` parameter in your snippet's repository URL, the Deploy to Bluemix button defaults to the repository's master branch.
+If you don't include the `branch` parameter in your snippet's repository URL, the Deploy to {{site.data.keyword.Bluemix_notm}} button defaults to the repository's master branch.
 
 ### Using the button snippets {: #button-snippet}
 
-After you create a Deploy to Bluemix button snippet, you can insert it into blogs, articles, wikis, readme files, or anywhere else you want to promote your app.
+After you create a Deploy to {{site.data.keyword.Bluemix_notm}} button snippet, you can insert it into blogs, articles, wikis, readme files, or anywhere else you want to promote your app.
 
 When you customize the snippet for your Deploy to {{site.data.keyword.Bluemix_notm}} button, consider that both of the templates use a default path to an external button image in PNG format and in English.
 
