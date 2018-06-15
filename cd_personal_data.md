@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-5-18"
+lastupdated: "2018-6-15"
 
 ---
 
@@ -146,7 +146,7 @@ You can delete your {{site.data.keyword.gitrepos}} account and everything that i
 
 **Important**: {{site.data.keyword.gitrepos}} uses a single sign-on mechanism that automatically creates a corresponding Git account for your IBM Cloud account the first time that you access the tool integration. After you delete your account, do not access {{site.data.keyword.gitrepos}}. If you access {{site.data.keyword.gitrepos}} again, a new account is automatically created that you must delete.
 
-## Modifying and deleting Continuous Delivery pipeline data
+## Modifying, exporting, and deleting Continuous Delivery pipeline data
 {: #managing_pipeline_data}
 
 {{site.data.keyword.contdelivery_short}} pipelines run scripts to build, test, and deploy your application to the IBM Cloud. To do this, pipelines provide stages, jobs, environment variables, and other objects that might contain personal data. You can delete these objects individually or you can delete an entire pipeline.
@@ -155,11 +155,11 @@ Make sure that you coordinate with other members of your team before you delete 
 
 **Tip**: A pipeline cannot exist outside of a toolchain. If you delete a toolchain, all of the pipelines that are associated with the toolchain are also deleted. If you plan to delete an entire toolchain, you do not need to delete each pipeline individually. Instead, skip to the "Modifying and deleting toolchains and tool integrations" section, and follow the steps to delete a toolchain.
 
-###Modifying and deleting pipeline stages
-
-Pipeline stages might include personal data such as credentials in the form of environment properties. Stages might also include scripts inside jobs that you want to modify or delete. Use the Configure Stage or Delete Stage actions to modify or delete a stage.
+Pipeline stages might include personal data such as credentials in the form of environment properties, and a pipeline definition that shows the current state of the pipeline. Stages might also include scripts inside jobs that you want to modify or delete, as well as artifacts and logs for the most recent pipeline runs that you want to export. Use the Configure Stage or Delete Stage actions to modify or delete a stage. Use the Download action to export artifacts or logs from a stage.
 
   ![Stages menu](images/pipeline_stages.png)
+
+###Modifying a pipeline stage
 
 To modify a pipeline stage:
 
@@ -172,6 +172,22 @@ To modify a pipeline stage:
   
 1. Delete a job from the pipeline stage. On the **JOBS** tab, select the job that you want to delete and click **Remove**.
  
+###Exporting a pipeline stage
+
+To export the definition for a pipeline stage, append `/yaml` to the pipeline URL:
+
+`http(s)://<DevOps Services domain>/pipeline/user/project/yaml`
+
+
+To export artifacts and logs for a pipeline stage:
+
+1. On the Pipeline page, click **View logs and history**.
+1. Click the build number that you want to export artifacts and logs for.
+1. Click **DOWNLOAD** > **Artifacts** to export the artifacts for the selected build.
+1. Click **DOWNLOAD** > **Logs** to export the logs for the selected build.  
+
+###Deleting a pipeline stage
+
 To delete a pipeline stage:
 
 1. On the Pipeline page, click the **Settings** icon.
@@ -219,7 +235,6 @@ To delete a tool integration:
 1. To delete a tool integration from your toolchain, click **Delete**.
 1. Confirm by clicking **Delete**.
 
-
 ###Deleting toolchains
 
 When you delete a toolchain, the deletion cannot be undone.
@@ -228,6 +243,8 @@ When you delete a toolchain, the deletion cannot be undone.
 1. Click the **More Actions** menu, which is next to **View app**.
 1. Click **Delete**. Deleting a toolchain removes all of its tool integrations, including pipelines, which might delete resources that are managed by those integrations.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**. 
+
+**Important**: When you delete a toolchain, the associated {{site.data.keyword.gitrepos}} repos are not deleted. Users who have access to those repos might have copies of the data if they performed a `git clone` or created a {{site.data.keyword.webide}} workspace. To make sure that all data is deleted, you must request that those users delete their copies of the data.
 
 ###Deleting all toolchains
 
