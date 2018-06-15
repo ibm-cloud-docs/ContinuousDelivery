@@ -52,7 +52,7 @@ Continuous Delivery
     {: .topicgroup}
     Security
         cd_data_security.md
-    {: .navgroup-end}
+    {: .navgroup-end} 
 
     {: .navgroup id="reference"}
     [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki)
