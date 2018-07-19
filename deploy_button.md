@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-6-8"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2018-6-8"
 
 # Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button {: #deploy-button}
 
-The Deploy to {{site.data.keyword.Bluemix_notm}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to IBM {{site.data.keyword.Bluemix_notm}} by using a toolchain. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository (repo) so that your original app remains unaffected.
+The Deploy to {{site.data.keyword.Bluemix_notm}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to {{site.data.keyword.Bluemix_notm}} by using a toolchain. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository (repo) so that your original app remains unaffected.
 {: shortdesc}
 
 When someone clicks your button, these actions occur:
 
 1. If the person does not have an active {{site.data.keyword.Bluemix_notm}} account, they must create an account. They can create a trial account or a real account.
 
-2. The person can select a region, organization, space, and app name by clicking the {{site.data.keyword.deliverypipeline}} icon. The suggested app name is the same as the toolchain name, which is constructed from the name of your original Git repo and the time. The toolchain name can also be edited.
+2. The person can select a region, resource group (available only in the US South region) or organization, space, and app name by clicking the {{site.data.keyword.deliverypipeline}} icon. The suggested app name is the same as the toolchain name, which is constructed from the name of your original Git repo and the time. The toolchain name can also be edited.
 
 3. A toolchain is created that includes a new private clone of your Git repo, a pipeline for building and deploying code changes, the Eclipse Orion {{site.data.keyword.webide}} for editing code on the Cloud, and an issue tracker.
 
