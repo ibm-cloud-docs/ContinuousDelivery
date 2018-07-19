@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-6-15"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -24,14 +24,14 @@ Personal data is any information that relates to or identifies a natural person.
  * [GitHub Enterprise on IBM Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/ghededicated/ghe_personal_data.html){: new_window}
  * [{{site.data.keyword.DRA_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
-{{site.data.keyword.contdelivery_short}} provides the appropriate permissions to manage data within a Cloud Foundry organization. Your company might have policies that limit these permissions. If you don't have the appropriate permissions, contact your organization's administrator.
+{{site.data.keyword.contdelivery_short}} provides the appropriate permissions to manage data within a resource group or Cloud Foundry organization. Your company might have policies that limit these permissions. If you don't have the appropriate permissions, contact the administrator for your {{site.data.keyword.Bluemix_notm}} account.
 
 To manage your personal data, you must understand IBM Cloud accounts, how these accounts are used, and their associated access rights.
  
 ## Accounts and access rights
 {: #accounts_access_rights}
 
-To work in IBM Cloud, you must log in with a user name and password. When you log in, IBM Cloud associates at least one IBM Cloud account with your user credentials. When you create resources such as Cloud Foundry organizations and {{site.data.keyword.contdelivery_short}} objects, they are associated with an IBM Cloud account.
+To work in IBM Cloud, you must log in with a user name and password. When you log in, IBM Cloud associates at least one IBM Cloud account with your user credentials. When you create resources such as Cloud Foundry organizations, resource groups, toolchains, and {{site.data.keyword.contdelivery_short}} objects, they are associated with an IBM Cloud account.
 
 The IBM Cloud login structure provides you with the option to work in different accounts. Using the IBM Cloud user interface, you can switch from one account to another. When you log in, any of the following types of accounts might be associated with your user credentials: 
 
@@ -193,20 +193,6 @@ To delete a pipeline stage:
 1. On the Pipeline page, click the **Settings** icon.
 1. Click **Delete Stage**.
 
-###Changing pipeline ownership
-
-You can transfer ownership of a pipeline that you own to another user; the new owner must perform the transfer operation. A user can take ownership of an existing pipeline, but they cannot assign ownership to another user. You must have ADMIN rights to take ownership of a pipeline.
-
-To take ownership of a pipeline, a user must complete the following steps:
-
-1. Log in to IBM Cloud.
-1. Click the menu to access the configuration options. 
-
-  ![Configuration menu](images/pipeline_ownership.png)
-
-1. Click **Modify Pipeline Owner**. 
-1. Select **MAKE ME OWNER**.
-
 ## Modifying and deleting toolchains and tool integrations
 {: #managing_toolchains}
 
@@ -248,6 +234,6 @@ When you delete a toolchain, the deletion cannot be undone.
 
 ###Deleting all toolchains
 
-You cannot delete all of the toolchains within an organization at the same time. You must delete each toolchain, one at a time.
+You cannot delete all of the toolchains within a resource group or organization at the same time. You must delete each toolchain, one at a time.
 
-**Important**: Toolchains are scoped by IBM Cloud region and Cloud Foundry organization. Make sure that you select each region and organization within the region to delete every toolchain that you created.
+**Important**: Toolchains are scoped by IBM Cloud region and resource group or Cloud Foundry organization. Make sure that you select each region and resource group or organization within the region to delete every toolchain that you created.
