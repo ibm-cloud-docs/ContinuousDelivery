@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-6-4"
+lastupdated: "2018-7-19"
 ---
 
 {:new_window: target="_blank"}
@@ -17,7 +17,7 @@ lastupdated: "2018-6-4"
 {{site.data.keyword.contdelivery_full}} includes Delivery Pipeline to build, test, and deploy in a repeatable way with minimal human intervention. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
 {:shortdesc}
 
-The following sections describe the conceptual details behind pipelines.
+**Tip**: Your permissions to view, modify, or run a pipeline are based on the access control for the toolchain that owns the pipeline. For more information about access control for toolchains, see [Managing access to toolchains in resource groups](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} and [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
 
 ## Stages
 {: #deliverypipeline_stages}
@@ -26,7 +26,7 @@ Stages organize input and jobs as your code is built, deployed, and tested. Stag
 
 A stage's input is passed to the jobs the stage contains, and each job is given a clean container to run in.
 
-**Important**: The jobs in a stage can't pass artifacts to each other. Because  you can't pass artifacts between stages, you need to have a separate Build stage from a Deploy stage if your deploy stage will use the build stage artifacts.
+**Important**: The jobs in a stage can't pass artifacts to each other. Because  you can't pass artifacts between jobs, you need to have a separate Build stage from a Deploy stage if your deploy stage will use the build stage artifacts.
 
 You can define stage environment properties that can be used in all jobs. For example, you might define a `TEST_URL` property that passes a single URL to deploy and test jobs in a single stage. The deploy job would deploy to that URL, and the test job would test the running app at the URL.
 
@@ -73,7 +73,7 @@ Jobs run in discrete working directories within Docker containers that are creat
 
 Except for Simple-type build jobs, when you configure a job, you can include UNIX shell scripts that include build, test, or deployment commands. Because jobs are run in ad hoc containers, the actions of one job cannot affect the run environments of other jobs, even if those jobs are part of the same stage.
 
-Sample bod and deploy scripts can be found in [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons).
+Sample build and deploy scripts can be found in [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons).
 
 Additionally, pipeline jobs can run only the following commands as `sudo`:
   * `/usr/sbin/service`
@@ -133,11 +133,11 @@ You can include environment properties within a job's shell commands. The proper
 
 Build jobs automatically fetch the content in the current folder where the user script is executed.  If you do not need the entire git repo content for later deployment, it is preferable that you configure an explicit output directory and they copy or create the relevant artifacts there.  Job scripts are executed in the build result (output directory).
 
-Deploy jobs that deploy to Cloud Foundry need to specify the org and space of where to deploy the artifacts.  If additional services are needed to run your app, you need to specify them in the `manifest.yml` file.
+Deploy jobs that deploy to Cloud Foundry need to specify the Platform API key of a user under whose authority jobs run, and the region, org, and space of where to deploy the artifacts. If additional services are needed to run your app, you need to specify them in the `manifest.yml` file.
 
-Deploy jobs that deploy to the {{site.data.keyword.containerlong_notm}} to run in a Kubernetes cluster need a Dockerfile, and optionally a Helm chart.  
+Deploy jobs that deploy to the {{site.data.keyword.containerlong_notm}} to run in a Kubernetes cluster need to specify the Platform API key of a user under whose authority jobs run, a Dockerfile, and optionally a Helm chart.  
 
-The job script runs after the job has logged in into the target environment (so you can perform `cf push`  or `kubectl` commands in the script).
+The job script runs after the job has logged in to the target environment by using the Platform API key that is assigned to it (so you can perform `cf push`  or `kubectl` commands in the script).
 
 ## An example pipeline
 {: #deliverypipeline_example}
