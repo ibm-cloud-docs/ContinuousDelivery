@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-2-28"
+lastupdated: "2018-7-19"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,7 +22,7 @@ lastupdated: "2018-2-28"
 {{site.data.keyword.contdelivery_full}} includes Delivery Pipeline, which you can use to implement a repeatable continuous integration and continuous delivery process.
 {:shortdesc}
 
-Complete the following tasks to create and configure a pipeline.
+Complete the following tasks to configure a pipeline.
 
 ## Adding a stage
 {: #deliverypipeline_add_stage}
