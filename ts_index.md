@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-7-19"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -41,10 +41,29 @@ If you already have a toolchain, update the GitHub tool integration's configurat
 ## I tried to create a toolchain, why am I getting an error?
 {: #cannot_create_toolchain}
 
-When trying to create a toolchain, if you get the following error message, remove one or more toolchains from your org and then create your toolchain again.
+When trying to create a toolchain in an org, if you get the following error message, remove one or more toolchains from your org and then create your toolchain again.
 
 `This organization contains 200 toolchains, which is the maximum limit. Before you can add another toolchain, remove one or more toolchains from the organization.`
 
+
+## Why does the Toolchains page show that the {{site.data.keyword.contdelivery_short}} service Lite plan is exceeded?
+
+{{site.data.keyword.contdelivery_short}} offers two plans: Lite and Professional. If you have the {{site.data.keyword.contdelivery_short}} Lite plan, you can use toolchains for free, up to the limits of the plan. The error message indicates that you exceeded one or more limits of the Lite plan. For example, you might exceed the plan if you have too many authorized users who are associated with the {{site.data.keyword.contdelivery_short}} service instance, or if you ran the maximum number of {{site.data.keyword.deliverypipeline}} jobs. For more information about the terms of your plan, see [Plan limitations and usage](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+
+
+## I created a toolchain, why does the Toolchains page show that a Continuous Delivery service is required?
+
+The terms of the plan for the {{site.data.keyword.contdelivery_short}} service instance that is in the same resource group or org as the toolchain manages the use of some of the tool integrations ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}}, and {{site.data.keyword.gitrepos}}) that are contained in the service. The error message indicates that the resource group or org doesn't contain the required instance of the {{site.data.keyword.contdelivery_short}} service. For more information about the terms of your plan, see [Plan limitations and usage](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+
+
+## I created a toolchain in a Cloud Foundry org, why does the Toolchains page show that a Continuous Delivery service is required?
+
+When you create a toolchain in a resource group or org that does not have an instance of the {{site.data.keyword.contdelivery_short}} service, the toolchain platform attempts to automatically create an instance of the service by using the Lite plan. The error message indicates that the toolchain platform couldn't create the service instance.
+
+This error might occur when you create a toolchain in the US South region and in a Cloud Foundry org that doesn't already have an instance of {{site.data.keyword.contdelivery_short}}. In the US South region, you must create all new instances of the {{site.data.keyword.contdelivery_short}} service in resource groups. 
+
+You can either create the toolchain in a resource group or create the toolchain in an org that already has an instance of {{site.data.keyword.contdelivery_short}}.
+  
 
 ## I tried to deploy an app to {{site.data.keyword.Bluemix_notm}}, why am I getting an error?
 {: #org_outofmemory}
