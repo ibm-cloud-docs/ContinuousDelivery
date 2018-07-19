@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -288,7 +288,7 @@ If you want your toolchain to be in a US organization that matches your non-US o
    
    4. Delete the toolchain that was created through the upgrade process. 
    
-      **Note:** The Git repo is not automatically deleted. You might want to delete it manually or rename it for now. If you already changed the repo, you can switch the future toolchain to use it later.
+      **Note:** The Git repo is not automatically deleted. You might want to delete it manually or rename it for now. If you already changed the repo, you can update the future toolchain to use it later.
 
    5. Return to the JazzHub project. It should reset itself for another upgrade attempt. If it doesn't reset, contact hub@jazz.net and provide the URL of the project.
    
