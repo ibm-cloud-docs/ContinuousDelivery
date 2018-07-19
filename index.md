@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-15"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -12,14 +12,13 @@ lastupdated: "2018-1-15"
 # Getting started with Continuous Delivery
 {: #cd_getting_started}
 
-Adopt a DevOps approach by using {{site.data.keyword.contdelivery_full}}, which includes open toolchains that automate the building and deployment of applications. You can get started by creating a simple deployment toolchain that supports development, deployment, and operations tasks.
+Adopt a DevOps approach by using {{site.data.keyword.contdelivery_full}}, which includes open toolchains that automate the building and deployment of applications. You can get started by creating a simple deployment toolchain that supports development, deployment, and operations tasks. 
 {: shortdesc}
 
-After you create an instance of {{site.data.keyword.contdelivery_short}} by selecting it from the {{site.data.keyword.Bluemix_notm}} catalog, you can create a continuous delivery toolchain from a template or work with existing toolchains.
- ![Continuous Delivery welcome page](images/cd_landing_page2.png)
+**Tip**: If you aleady have an instance of {{site.data.keyword.contdelivery_short}}, you can [create a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/create){: new_window} or [view existing toolchains](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}. 
 
-* To create and configure a continuous delivery toolchain from a template, click **[Start here](#starting_from_a_toolchain_template)**. The toolchain integrates tools for planning, developing, deploying pipelines, and managing your applications. You can always add or remove tools from your toolchains.
-* If you already have toolchains, in the "Start from a toolchain template" section, click **View your toolchains**. For more information about working with toolchains, see [Using toolchains](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
+After you create an instance of {{site.data.keyword.contdelivery_short}} by selecting it from the {{site.data.keyword.Bluemix_notm}} catalog, you can [create a continuous delivery toolchain from a template](#starting_from_a_toolchain_template). The toolchain integrates tools for planning, developing, deploying pipelines, and managing your applications. You can always add or remove tools from your toolchains. If you already have toolchains, you can [view existing toolchains](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}. For more information about working with toolchains, see [Using toolchains](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
+
 
 ##{{site.data.keyword.contdelivery_short}} overview
 {: #cd_overview}
@@ -64,7 +63,9 @@ To create and configure a continuous delivery toolchain from a [template ![Exter
 
  * The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you want to use a different name, change the toolchain's name.
  * The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
- * The organization to create the toolchain in. If you want to use a different org, select it from the list of available orgs.
+ * The resource group or organization to create the toolchain in. Click the link to switch between selecting resource groups and orgs. If you want to use a different resource group or org, select it from the list of available resource groups or orgs.
+ 
+   **Note**: Resource groups are available only in the US South region.
  
 1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For information about configuring the tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on which toolchain template you selected and whether you are using {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. For example, when you create a Microservices toolchain on {{site.data.keyword.Bluemix_notm}} Public, these steps are run:
