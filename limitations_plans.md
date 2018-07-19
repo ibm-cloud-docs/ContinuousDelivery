@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-4-18"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -23,16 +23,38 @@ The use of {{site.data.keyword.contdelivery_full}} is limited to the building, d
  * Users who manipulate, trigger (either directly in the UI or indirectly by committing to a repo), or view the status of a delivery pipeline.
  * Users who interact with the Eclipse Orion {{site.data.keyword.webide}}.
  
-### How are users counted?
+### How are users counted for instances of {{site.data.keyword.contdelivery_short}} in orgs?
 
 Authorized users are counted by looking at all of the users in the Cloud organization (org) that contains the {{site.data.keyword.contdelivery_short}} service. 
 
-To view the list of users in your org, from the menu bar, click **Manage > Account > Cloud Foundry Orgs**.
+To view the list of users in your org in an {{site.data.keyword.Bluemix_notm}} Public environment, from the menu bar, click **Manage > Account > Cloud Foundry Orgs**.
+
+To view the list of users in your org in an {{site.data.keyword.Bluemix_notm}} Dedicated environment, from the menu bar, click **Account > Manage Organizations**.
+
+You can also view all of the instances of the {{site.data.keyword.contdelivery_short}} service in your account and the number of users that are reported against each instance in an {{site.data.keyword.Bluemix_notm}} Public environment.
+
+1. From the menu bar, click **Manage > Billing and Usage > Usage**.
+2. Click **Usage Dashboard**.
+3. From the Account menu, click **Cloud Foundry Orgs**.
+4. Click the org that you want to view usage information for.
+
+To view all of the instances of the {{site.data.keyword.contdelivery_short}} service in your account and the number of users that are reported against each instance in an {{site.data.keyword.Bluemix_notm}} Dedicated environment:
+
+1. From the menu bar, click **Account > Manage Organizations**.
+2. Click **Usage Dashboard**.
+
+### How are users counted for instances of {{site.data.keyword.contdelivery_short}} in resource groups?
+
+Authorized users are counted by looking at the list of users on the Manage tab within the  {{site.data.keyword.contdelivery_short}} service instance. 
+
+To view the list of authorized users, open the service instance dashboard and click the Manage tab.
 
 You can also view all of the instances of the {{site.data.keyword.contdelivery_short}} service in your account and the number of users that are reported against each instance.
 
-1. From the menu bar, click **Manage > Account > Cloud Foundry Orgs**.
+1. From the menu bar, click **Manage > Billing and Usage > Usage**.
 2. Click **Usage Dashboard**.
+3. From the Account menu, click **Resource Groups**.
+4. Click the resource group that you want to view usage information for.
 
 ### What happens when you exceed the limits of your service plan? 
 
