@@ -2,7 +2,7 @@
 
 Copyright:
  years: 2015, 2018
-lastupdated: "2018-5-22"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -23,7 +23,7 @@ describes architectures, practices, and DevOps toolchains to allow enterprises t
 
 An enterprise application developer can start building and deploying cloud-native applications in minutes. They can use a full set of services to build cognitive, IoT, blockchain, mobile, and data-intensive applications. With the IBM Cloud App Service, an individual developer can create a project, pick an application starter kit, and deploy a production-ready application to {{site.data.keyword.Bluemix_notm}}. The platform's code generation technology creates a starter application in the developer's preferred language and framework, which is tailored to their needs and use case. Any services that are required in support of the use case, such as Watson Conversation, are provisioned automatically. Developers can debug and test on their local workstation or in the cloud, and use a DevOps toolchain to collaborate with others and automate the delivery process.
 
-As team members join a project, they need an integrated set of tools that span development, deployment, and production operations. IBM's Open Toolchain architecture enables a team to rapidly provision best-in-class DevOps tools from IBM, open source, and others. Integrations between these tools are configured automatically. Toolchains are a first class concept on the platform, so developers can quickly organize everything that they need in one place, and evolve the toolchain over time. IBM provides toolchain templates that support Garage Method best practices, which you can customize to promote proven toolchain patterns across your enterprise.
+As team members join a project, they need an integrated set of tools that span development, deployment, and production operations. IBM's Open Toolchain architecture enables a team to rapidly provision best-in-class DevOps tools from IBM, open source, and others. Integrations between these tools are configured automatically. Toolchains are a first class concept on the platform, so developers can quickly organize everything that they need in one place, and evolve the toolchain over time. Toolchains are adopting Identity and Access Management (IAM), initially in the US South Public region, to provide access control. IBM provides toolchain templates that support Garage Method best practices, which you can customize to promote proven toolchain patterns across your enterprise.
 
 {{site.data.keyword.contdelivery_full}} provides a core set of tools for any DevOps toolchain: {{site.data.keyword.gitrepos}}, Delivery Pipeline, and Eclipse Orion {{site.data.keyword.webide}}. {{site.data.keyword.gitrepos}} is based on the GitLab Community Edition, and offers planning boards and source code collaboration through merge requests. The Delivery Pipeline orchestrates build, test, and deployment jobs across multiple environments as changes progress from the developer to production. Applications can be deployed in minutes to the Cloud Foundry environment or to a Kubernetes cluster on {{site.data.keyword.Bluemix_notm}}, to either public or private clouds. The Eclipse Orion {{site.data.keyword.webide}} gives developers quick access to the code from any browser.
 
