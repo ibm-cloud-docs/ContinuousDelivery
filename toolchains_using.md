@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -14,6 +14,8 @@ lastupdated: "2018-2-26"
 
 Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain.
 {: shortdesc}
+
+**Tip**: You can manage toolchains in the US South Public region by using resource groups or Cloud Foundry organizations (orgs). Access control and authorized user management function differently for toolchains depending on whether they are contained in a resource group or a Cloud Foundry org.
 
 ## Configuring a tool integration
 {: #configuring_a_tool_integration}
@@ -56,12 +58,25 @@ If you delete a tool integration from your toolchain, the deletion cannot be und
 1. To delete the tool integration from your toolchain, click **Delete**.
 1. Confirm by clicking **Delete**.  
 
-## Managing access
-{: #managing_access}
+## Managing access to toolchains in resource groups
+{: #managing_access_resource_groups}
 
-You can grant users access to a toolchain by adding them to both the organization (org) that the toolchain is associated with and the access control list for the toolchain. Each toolchain is associated with a specific org, and any user that is a member of that org can be added to the access control list for any of the associated toolchains. The org that you are currently working in is displayed on the menu bar. To access a different set of toolchains, switch to a different org.
+You can use the Identity and Access Management (IAM) service to manage user access to toolchains. For more information about managing access control with IAM, see [Managing user access to toolchains with Identity and Access Management](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}. 
 
-**Tip:** You must add users to the toolchain's org in the region where the toolchain is hosted. Since toolchains are currently hosted in the US South region only, you must add users to the org in the US South region. If the toolchain is configured to deploy apps to a different region, it will still deploy apps to that region.
+Only users who are part of the authorized users list for the selected instance of {{site.data.keyword.contdelivery_short}} can use the Delivery Pipeline, Eclipse Orion {{site.data.keyword.webide}}, and {{site.data.keyword.gitrepos}} features of {{site.data.keyword.contdelivery_short}} toolchains. You can manage authorized user entitlement from the Manage tab of the selected instance of {{site.data.keyword.contdelivery_short}}, within the specified resource group.
+
+**Tips**:
+
+* To access the key features of {{site.data.keyword.contdelivery_short}} in a toolchain, such as Delivery Pipeline, a user must have access to the toolchain in IAM, and the user must also be part of the Authorized Users list of the {{site.data.keyword.contdelivery_short}} instance.
+
+* Authorized user entitlement applies to all toolchains that are contained in the same resource group as the instance of {{site.data.keyword.contdelivery_short}}.
+
+## Managing access to toolchains in Cloud Foundry orgs
+{: #managing_access_orgs}
+
+You can grant users access to a toolchain by adding them to both the org that the toolchain is associated with and the access control list for the toolchain. Each toolchain is associated with a specific org, and any user that is a member of that org can be added to the access control list for any of the associated toolchains. The org that you are currently working in is displayed on the menu bar. To access a different set of toolchains, switch to a different org.
+
+**Tip:** You must add users to the toolchain's org in the region where the toolchain is hosted. If the toolchain is configured to deploy apps to a different region, it will still deploy apps to that region.
 
 If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, when you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, the users can log in to {{site.data.keyword.ghe_short}} by using their {{site.data.keyword.Bluemix_notm}} ID and password. When the users log in, accounts are created for them. When you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, they are not automatically added to the {{site.data.keyword.ghe_short}} repo. Someone who has admin privileges for the repo must add them. For more information, see [Using Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, follow your internal procedures.
 
