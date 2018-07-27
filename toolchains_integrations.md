@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-7-27"
 
 ---
 
@@ -235,7 +235,23 @@ Configure Bitbucket to collaborate on code with your team:
 
  b. In the Tool Integrations section, click **Bitbucket**.
 
-   **Tip:** If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access Bitbucket, click **Authorize** to go to the Bitbucket website. If you don't have an active Bitbucket session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your Bitbucket account. If you have an active Bitbucket session but you haven't entered your password recently, you might be prompted to enter your Bitbucket password to confirm.
+   **Tip:** If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access Bitbucket, click **Authorize** to go to the Bitbucket website. If you don't have an active Bitbucket session, you are prompted to log in. Click **Grant access** to allow {{site.data.keyword.Bluemix_notm}} Toolchains to access the following parts of your Bitbucket account:
+   
+   * **Read your account information**. Get basic user information to populate the user interface.
+   
+   * **Read and modify your repositories' issues**. Allow {{site.data.keyword.contdelivery_short}} to update issues to indicate when the pipeline deploys commits that are attached to those issues. 
+   
+   * **Read your team's project settings and read repositories contained within your team's projects**. Allow {{site.data.keyword.contdelivery_short}} to integrate with repos that are owned by teams.
+   
+   * **Read and modify your repositories and their pull requests**. Allow {{site.data.keyword.contdelivery_short}} to push sample code into repos, when users request the code.
+   
+   * **Administer your repositories**. Allow {{site.data.keyword.contdelivery_short}} to create new repos, when requested by users.
+   
+   * **Read your team membership information**. Allow {{site.data.keyword.contdelivery_short}} to show a list of your teams in the **Owner** menu that is displayed when you create a new repo.
+   
+   * **Read and modify your repositories' webhooks**. Allow the pipeline to trigger builds when commits are pushed to a repo.
+   
+   If you have an active Bitbucket session but you haven't entered your password recently, you might be prompted to enter your Bitbucket password to confirm.
 
 1. Click the Bitbucket server that you want to use.
 1. If you have a Bitbucket repo that you want to use, type the URL for the repo. For the repository type, click **Existing**.
