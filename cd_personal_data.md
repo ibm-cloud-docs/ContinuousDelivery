@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-1"
+lastupdated: "2018-8-2"
 
 ---
 
@@ -24,7 +24,7 @@ Personal data is any information that relates to or identifies a natural person.
  * [GitHub Enterprise on IBM Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/ghededicated/ghe_personal_data.html){: new_window}
  * [{{site.data.keyword.DRA_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
-**Important**: IBM does not manage personal data in the {{site.data.keyword.contdelivery_short}} service. Before you leave the {{site.data.keyword.contdelivery_short}} service that is hosted in {{site.data.keyword.Bluemix_notm}} Public, you must delete your own data.
+**Important**: IBM does not manage data in the {{site.data.keyword.contdelivery_short}} service. Before you leave the {{site.data.keyword.contdelivery_short}} service that is hosted in {{site.data.keyword.Bluemix_notm}} Public, you must delete your own data.
 
 {{site.data.keyword.contdelivery_short}} provides the appropriate permissions to manage data within a resource group or Cloud Foundry organization. Your company might have policies that limit these permissions. If you don't have the appropriate permissions, contact the administrator for your {{site.data.keyword.Bluemix_notm}} account.
 
