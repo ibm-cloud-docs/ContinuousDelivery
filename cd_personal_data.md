@@ -8,6 +8,11 @@ lastupdated: "2018-8-2"
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Managing personal data in Continuous Delivery
 {: #cd_personal_data}
@@ -24,7 +29,8 @@ Personal data is any information that relates to or identifies a natural person.
  * [GitHub Enterprise on IBM Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/ghededicated/ghe_personal_data.html){: new_window}
  * [{{site.data.keyword.DRA_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
-**Important**: IBM does not manage data in the {{site.data.keyword.contdelivery_short}} service. Before you leave the {{site.data.keyword.contdelivery_short}} service that is hosted in {{site.data.keyword.Bluemix_notm}} Public, you must delete your own data.
+IBM does not manage data in the {{site.data.keyword.contdelivery_short}} service. Before you leave the {{site.data.keyword.contdelivery_short}} service that is hosted in {{site.data.keyword.Bluemix_notm}} Public, you must delete your own data.
+{: tip}
 
 {{site.data.keyword.contdelivery_short}} provides the appropriate permissions to manage data within a resource group or Cloud Foundry organization. Your company might have policies that limit these permissions. If you don't have the appropriate permissions, contact the administrator for your {{site.data.keyword.Bluemix_notm}} account.
 
@@ -84,14 +90,16 @@ Before you start to manage your personal data for the {{site.data.keyword.contde
 
 If you can't log in to your IBM Cloud account, contact your corporation and work with them to delete your personal data.
 
-**Important**: If you want to delete all of your personal data from {{site.data.keyword.contdelivery_short}}, the order in which you delete that data is important. First, delete all of your {{site.data.keyword.webide}} workspaces. Next, delete your {{site.data.keyword.gitrepos}} data, and then delete your {{site.data.keyword.gitrepos}} account. Finally, delete your delivery pipelines, tool integrations, and toolchains.
+If you want to delete all of your personal data from {{site.data.keyword.contdelivery_short}}, the order in which you delete that data is important. First, delete all of your {{site.data.keyword.webide}} workspaces. Next, delete your {{site.data.keyword.gitrepos}} data, and then delete your {{site.data.keyword.gitrepos}} account. Finally, delete your delivery pipelines, tool integrations, and toolchains.
+{: tip}
 
 ## Exporting and deleting Web IDE data
 {: #managing_web_ide_data}
 
 The {{site.data.keyword.webide}} provides a personal workspace in the cloud. You can use the {{site.data.keyword.webide}} to clone Git repositories and edit files. You own your {{site.data.keyword.webide}} workspace; it is not shared by any other account.
 
-**Tip**: Before you delete your {{site.data.keyword.webide}} data, you might want to export your work. After you delete your workspaces, they are removed from {{site.data.keyword.contdelivery_short}} and all files are deleted.
+Before you delete your {{site.data.keyword.webide}} data, you might want to export your work. After you delete your workspaces, they are removed from {{site.data.keyword.contdelivery_short}} and all files are deleted.
+{: tip}
 
 ###Exporting a Web IDE workspace
 
@@ -109,7 +117,8 @@ To delete your {{site.data.keyword.webide}} workspaces, including all of your pe
 1. Click **USER PROFILE**.
 1. Click **Delete** to remove all of your data from the {{site.data.keyword.webide}}.
 
-**Important**: The {{site.data.keyword.webide}} uses a single sign-on mechanism. The first time that you access this tool integration, a corresponding, but hidden, {{site.data.keyword.webide}} account is created for your IBM Cloud account. After you delete all of your workspaces, do not access the {{site.data.keyword.webide}}. If you access the {{site.data.keyword.webide}} again, a new account is automatically created that you must delete.
+The {{site.data.keyword.webide}} uses a single sign-on mechanism. The first time that you access this tool integration, a corresponding, but hidden, {{site.data.keyword.webide}} account is created for your IBM Cloud account. After you delete all of your workspaces, do not access the {{site.data.keyword.webide}}. If you access the {{site.data.keyword.webide}} again, a new account is automatically created that you must delete.
+{: tip}
 
 ## Modifying, exporting, and deleting Git Repos and Issue Tracking data
 {: #managing_grit_data}
@@ -120,7 +129,8 @@ To delete your {{site.data.keyword.webide}} workspaces, including all of your pe
 
 Your account profiles and settings, personal projects, groups, and snippets are associated with your Git account. If you delete your Git account, these objects are deleted. To delete personal data in another project, navigate to the project, and then modify it to remove your personal data, or delete the project entirely. Make sure that you coordinate with other members of your team before you delete shared projects.
 
-**Important**: Before you delete your Git account, delete your personal data from other projects. After you delete your Git account, it might be difficult or impossible to find all of the projects that you contributed to.
+Before you delete your Git account, delete your personal data from other projects. After you delete your Git account, it might be difficult or impossible to find all of the projects that you contributed to.
+{: tip}
 
 ###Personal and shared projects
 
@@ -144,9 +154,11 @@ You can delete your {{site.data.keyword.gitrepos}} account and everything that i
 1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, on the [Account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, in the Delete account section, click **Delete account**.
 1. All Git projects, including repositories and issues are deleted. You are also removed from any {{site.data.keyword.gitrepos}} groups that you belong to.
 
-**Tip**: After your account is deleted, some content will remain. This content is assigned to a system-wide Ghost User. For more information about deleting a {{site.data.keyword.gitrepos}} account, see [Deleting a user account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}.
+After your account is deleted, some content will remain. This content is assigned to a system-wide Ghost User. For more information about deleting a {{site.data.keyword.gitrepos}} account, see [Deleting a user account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}.
+{: tip}
 
-**Important**: {{site.data.keyword.gitrepos}} uses a single sign-on mechanism that automatically creates a corresponding Git account for your IBM Cloud account the first time that you access the tool integration. After you delete your account, do not access {{site.data.keyword.gitrepos}}. If you access {{site.data.keyword.gitrepos}} again, a new account is automatically created that you must delete.
+{{site.data.keyword.gitrepos}} uses a single sign-on mechanism that automatically creates a corresponding Git account for your IBM Cloud account the first time that you access the tool integration. After you delete your account, do not access {{site.data.keyword.gitrepos}}. If you access {{site.data.keyword.gitrepos}} again, a new account is automatically created that you must delete.
+{: tip}
 
 ## Modifying, exporting, and deleting Continuous Delivery pipeline data
 {: #managing_pipeline_data}
@@ -155,7 +167,8 @@ You can delete your {{site.data.keyword.gitrepos}} account and everything that i
 
 Make sure that you coordinate with other members of your team before you delete shared objects or pipelines. Deleting a stage might cause a pipeline to fail.
 
-**Tip**: A pipeline cannot exist outside of a toolchain. If you delete a toolchain, all of the pipelines that are associated with the toolchain are also deleted. If you plan to delete an entire toolchain, you do not need to delete each pipeline individually. Instead, skip to the "Modifying and deleting toolchains and tool integrations" section, and follow the steps to delete a toolchain.
+A pipeline cannot exist outside of a toolchain. If you delete a toolchain, all of the pipelines that are associated with the toolchain are also deleted. If you plan to delete an entire toolchain, you do not need to delete each pipeline individually. Instead, skip to the "Modifying and deleting toolchains and tool integrations" section, and follow the steps to delete a toolchain.
+{: tip}
 
 Pipeline stages might include personal data such as credentials in the form of environment properties, and a pipeline definition that shows the current state of the pipeline. Stages might also include scripts inside jobs that you want to modify or delete, as well as artifacts and logs for the most recent pipeline runs that you want to export. Use the Configure Stage or Delete Stage actions to modify or delete a stage. Use the Download action to export artifacts or logs from a stage.
 
@@ -232,10 +245,12 @@ When you delete a toolchain, the deletion cannot be undone.
 1. Click **Delete**. Deleting a toolchain removes all of its tool integrations, including pipelines, which might delete resources that are managed by those integrations.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**. 
 
-**Important**: When you delete a toolchain, the associated {{site.data.keyword.gitrepos}} repos are not deleted. Users who have access to those repos might have copies of the data if they performed a `git clone` or created a {{site.data.keyword.webide}} workspace. To make sure that all data is deleted, you must request that those users delete their copies of the data.
+When you delete a toolchain, the associated {{site.data.keyword.gitrepos}} repos are not deleted. Users who have access to those repos might have copies of the data if they performed a `git clone` or created a {{site.data.keyword.webide}} workspace. To make sure that all data is deleted, you must request that those users delete their copies of the data.
+{: tip}
 
 ###Deleting all toolchains
 
 You cannot delete all of the toolchains within a resource group or organization at the same time. You must delete each toolchain, one at a time.
 
-**Important**: Toolchains are scoped by IBM Cloud region and resource group or Cloud Foundry organization. Make sure that you select each region and resource group or organization within the region to delete every toolchain that you created.
+Toolchains are scoped by IBM Cloud region and resource group or Cloud Foundry organization. Make sure that you select each region and resource group or organization within the region to delete every toolchain that you created.
+{: tip}
