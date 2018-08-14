@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-7-19"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button {: #deploy-button}
@@ -25,7 +28,8 @@ When someone clicks your button, these actions occur:
 
 3. A toolchain is created that includes a new private clone of your Git repo, a pipeline for building and deploying code changes, the Eclipse Orion {{site.data.keyword.webide}} for editing code on the Cloud, and an issue tracker.
 
-  **Tip**: If the `.bluemix` directory contains a `toolchain.yml` file, the file is used to specify the tool integrations for the toolchain. For more information about the `toolchain.yml` file, see [Creating custom toolchains](/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom){: new_window}.
+  If the `.bluemix` directory contains a `toolchain.yml` file, the file is used to specify the tool integrations for the toolchain. For more information about the `toolchain.yml` file, see [Creating custom toolchains](/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom){: new_window}.
+  {: tip}
 
 4. If the app requires a build file, the build file is detected automatically and the app is built.
 
