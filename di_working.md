@@ -2,15 +2,17 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-3-23"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Working with {{site.data.keyword.DRA_short}} (Beta)
 {: #di_working}
@@ -18,7 +20,8 @@ lastupdated: "2018-3-23"
 With {{site.data.keyword.DRA_full}}, you can maintain and improve the quality of your code in {{site.data.keyword.Bluemix_notm}} by monitoring your deployments to identify risks before they are released, analyzing development changes for error probability or improving the interactions of your team.
 {:shortdesc}
 
-**Note**: {{site.data.keyword.DRA_short}} is available only in the US South region.
+{{site.data.keyword.DRA_short}} is available only in the US South region.
+{: tip}
 
 {{site.data.keyword.DRA_short}} collects and analyzes the results from unit tests, functional tests, and code coverage tools to determine whether your code meets predefined policies at specified gates in your deployment process. If your code does not meet or exceed a policy, the deployment is halted, preventing risks from being released. You can use {{site.data.keyword.DRA_short}} as a safety net for your continuous delivery environment or as a way to implement and improve quality standards. 
 
