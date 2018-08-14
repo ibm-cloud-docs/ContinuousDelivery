@@ -2,12 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-5-22"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Getting started with toolchains after your {{site.data.keyword.jazzhub_short}} project is upgraded
 {: #toolchains_post_upgrade}
@@ -37,7 +42,8 @@ Toolchains are like projects, with a few important differences:
 - Projects can have only one repository (repo) and pipeline. Toolchains can have as many repos and pipelines as you need.
 - Toolchains can include tools that aren't available in projects, such as Slack, Sauce Labs, PagerDuty, and {{site.data.keyword.DRA_full}}.
 
- **Note**: {{site.data.keyword.DRA_short}} is available only in the US South region.
+ {{site.data.keyword.DRA_short}} is available only in the US South region.
+ {: tip}
  
 - In projects, membership was maintained at the project level. Access to toolchains is managed by {{site.data.keyword.Bluemix_notm}} organization (org) and by toolchain. To work with a toolchain, you must be a member of the org that contains the toolchain. The toolchain owner has further control over who can access the toolchain and what they can do. For details, see step 2 in [Getting started with your toolchain](#upgrade_next_steps).
 - Depending on the type of repo you used in your project on hub.jazz.net, your toolchain might contain a GitHub.com repo or a {{site.data.keyword.gitrepos}} repo.
@@ -61,11 +67,13 @@ You can learn more about toolchains on [YouTube ![External link icon](../../icon
     4. To authenticate with {{site.data.keyword.gitrepos}} from an external Git client through HTTPS, use your username and your personal access token.
     5. If you want to reuse the local repo of your JazzHub Git repo, point the repo to the new repo in {{site.data.keyword.gitrepos}}. From a terminal shell, change to the directory where the JazzHub Git repo is cloned. Enter the `git remote set-url` command: `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        **Tip:** To check which remote URLs are set to which remote names, use the `git remote -v` command. The default remote name is `origin`. If you have a more advanced setup, the form of the command is as follows: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        To check which remote URLs are set to which remote names, use the `git remote -v` command. The default remote name is `origin`. If you have a more advanced setup, the form of the command is as follows: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        {: tip}
 
 3. Optional: To explore your project's development maturity, your team's practices, and the quality of your code base, add IBM Cloud {{site.data.keyword.DRA_short}} to your toolchain. {{site.data.keyword.DRA_short}} applies developer, team, and deployment analytics to DevOps projects. For more information, see [Getting started with {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html).
 
-  **Note**: {{site.data.keyword.DRA_short}} is available only in the US South region.
+  {{site.data.keyword.DRA_short}} is available only in the US South region.
+  {: tip}
 
 
 ## Troubleshooting
@@ -164,7 +172,8 @@ If you want your toolchain to be in the a US organization that matches your non-
    
    4. Delete the toolchain that was created through the upgrade process. 
    
-      **Note:** The Git repo is not automatically deleted. You might want to delete it manually or rename it for now. If you made changes to it already, you can update the future toolchain to use it later.
+      The Git repo is not automatically deleted. You might want to delete it manually or rename it for now. If you made changes to it already, you can update the future toolchain to use it later.
+      {: tip}
 
    5. Return to the JazzHub project. It should reset itself for another upgrade attempt. If it doesn't reset, contact hub@jazz.net and provide the URL of the project.
    
