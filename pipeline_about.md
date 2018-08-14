@@ -5,10 +5,13 @@ copyright:
 lastupdated: "2018-7-19"
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Delivery Pipeline overview
@@ -17,7 +20,8 @@ lastupdated: "2018-7-19"
 {{site.data.keyword.contdelivery_full}} includes Delivery Pipeline to build, test, and deploy in a repeatable way with minimal human intervention. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
 {:shortdesc}
 
-**Tip**: Your permissions to view, modify, or run a pipeline are based on the access control for the toolchain that owns the pipeline. For more information about access control for toolchains, see [Managing access to toolchains in resource groups](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} and [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
+Your permissions to view, modify, or run a pipeline are based on the access control for the toolchain that owns the pipeline. For more information about access control for toolchains, see [Managing access to toolchains in resource groups](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} and [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
+{: tip}
 
 ## Stages
 {: #deliverypipeline_stages}
@@ -26,7 +30,8 @@ Stages organize input and jobs as your code is built, deployed, and tested. Stag
 
 A stage's input is passed to the jobs the stage contains, and each job is given a clean container to run in.
 
-**Important**: The jobs in a stage can't pass artifacts to each other. Because  you can't pass artifacts between jobs, you need to have a separate Build stage from a Deploy stage if your deploy stage will use the build stage artifacts.
+The jobs in a stage can't pass artifacts to each other. Because  you can't pass artifacts between jobs, you need to have a separate Build stage from a Deploy stage if your deploy stage will use the build stage artifacts.
+{: tip}
 
 You can define stage environment properties that can be used in all jobs. For example, you might define a `TEST_URL` property that passes a single URL to deploy and test jobs in a single stage. The deploy job would deploy to that URL, and the test job would test the running app at the URL.
 
@@ -90,7 +95,8 @@ Additionally, pipeline jobs can run only the following commands as `sudo`:
 
 After a job runs, the container that was created for it is discarded. The results of a job run can persist, but the environment in which it ran does not.
 
-**Note:** Jobs can run for up to 60 minutes. When jobs exceed that limit, they fail. If a job is exceeding the limit, break it into multiple jobs. For example, if a job performs three tasks, you might break it into three jobs: one for each task.
+Jobs can run for up to 60 minutes. When jobs exceed that limit, they fail. If a job is exceeding the limit, break it into multiple jobs. For example, if a job performs three tasks, you might break it into three jobs: one for each task.
+{: tip}
 
 To learn how to add a job to a stage, see [Adding a job to a stage](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}.
 
@@ -100,7 +106,8 @@ Build jobs compile your project in preparation for deployment. They generate art
 
 Jobs that take input from build jobs must reference build artifacts in the same structure that they were created in. For example, if a build job archives build artifacts to an `output` directory, a deploy script would refer to the `output` directory rather than the project root directory to deploy the compiled project. You can specify the directory to archive by entering the directory name in the **Build Archive Directory** field. Leaving the field blank archives the root directory.
 
-**Note:** If you use the **Simple** builder type, your code is not compiled or built; it is packaged and made available for future stages.
+If you use the **Simple** builder type, your code is not compiled or built; it is packaged and made available for future stages.
+{: tip}
 
 When you deploy by using Cloud Foundry, Cloud Foundry includes the correct artifacts to allow your app to run. For more information, see [Deploying applications by using the cf command](/docs/cloud-foundry/deploy-apps.html#dep_apps). The pipeline for a Cloud Foundry app contains a Deploy stage that runs a cf command.
 
