@@ -2,14 +2,17 @@
 
 Copyright:
  years: 2015, 2018
-lastupdated: "2018-7-19"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # {{site.data.keyword.Bluemix_notm}} DevOps
@@ -31,6 +34,7 @@ Open toolchain integrates additional tools around {{site.data.keyword.contdelive
 
 Code repos, issue tracking systems, build systems, and deployment systems represent a wealth of data that can be used to help you deliver apps more efficiently and effectively. {{site.data.keyword.DRA_full}} uses big data analysis to provide valuable insights to executives, managers and developers. {{site.data.keyword.DRA_short}} aggregates and analyzes data from your DevOps toolchain to advise you about the risk of deploying specific changes, as well as areas to improve both your codebase and team productivity. The Delivery Pipeline can automatically gate deployment to an environment based on the risk of a change.
 
-**Note**: {{site.data.keyword.DRA_short}} is available only in the US South region.
+{{site.data.keyword.DRA_short}} is available only in the US South region.
+{: tip}
 
 {{site.data.keyword.Bluemix_notm}} DevOps provides concrete practices and architectures for cloud development, enables developers to get started quickly with new projects that employ the rich catalog of services on the {{site.data.keyword.Bluemix_notm}}, and provides developers an open and integrated set of tools for automating delivery with speed and control.
