@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-5-28"
+lastupdated: "2018-8-2"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -11,11 +11,13 @@ lastupdated: "2018-5-28"
     Indentation as per the previous template must be preserved.
 -->
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
-{:tip:.tip}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Environment properties and resources
 {: #deliverypipeline_environment}
@@ -89,7 +91,8 @@ The following properties and resources are available by default in pipeline envi
 | MAVEN_HOME | The path to Apache Maven 3.2.1. |
 | NODE_HOME | The path to Node.js 0.10.29. |
 
-**Tip**: You can use the 1.10+ version of Apache Ant in your pipeline's scripts by setting `ANT_HOME` to `$ANT_JAVA8_HOME` and `JAVA_HOME` to `$JAVA8_HOME`.
+You can use the 1.10+ version of Apache Ant in your pipeline's scripts by setting `ANT_HOME` to `$ANT_JAVA8_HOME` and `JAVA_HOME` to `$JAVA8_HOME`.
+{: tip}
 
 ### Deployment properties
 
@@ -110,7 +113,8 @@ Several runtimes, tools, and Node modules are preinstalled in every pipeline.
 
 ### Runtimes and tools
 
-*Note:* All links are in the home directory.
+All links are in the home directory.
+{: tip}
 
 | Resource | Link name | Path |
 |----------|-----------|-----------|
