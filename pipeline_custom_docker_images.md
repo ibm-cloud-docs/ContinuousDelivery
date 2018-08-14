@@ -2,14 +2,17 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-4-13"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Working with custom Docker images
@@ -28,7 +31,8 @@ Whether you are using a Build, Test, or Deploy job type, you can select a Custom
 
 The Docker image name in custom Docker image jobs is designed to work in the same way that image names work with the Docker CLI. The format of a Docker image name is: `[repository][:][tag]`. For example, for `docker run maven:3.5.3-ibmjava`, the Docker image name is `maven:3.5.3-ibmjava`, where `maven` is the repository and `3.5.3-ibmjava` is the tag. There are no restrictions on the Docker image name that you can use; any valid docker image works.
 
-**Tip**: If the **Docker image name** field is not completed, the standard pipeline base image is used. 
+If the **Docker image name** field is not completed, the standard pipeline base image is used. 
+{: tip}
 
 By default, your repository on [Docker Hub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://hub.docker.com/){: new_window} is searched. If you use another Docker registry, such as IBM Cloud Registry, you can use the full DNS name. You can also use the fully qualified name for images on Docker Hub. For example, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
 
@@ -55,6 +59,7 @@ For most registries, you can use the user name and password that were provided t
 You can use the **script** block in custom Docker image jobs to create a script file that runs in a task folder,
 similar to how regular pipeline jobs work. 
 
-**Important**: `ENTRYPOINT` and `CMD` from your Docker image's Dockerfile are overridden and are not called. In some cases that might mean that you need to add initialization steps to your script.
+`ENTRYPOINT` and `CMD` from your Docker image's Dockerfile are overridden and are not called. In some cases that might mean that you need to add initialization steps to your script.
+{: tip}
 
 Custom Docker image jobs give you greater flexibility over how to run your script; specifically, you can control the command interpreter. Typically, if the first line of the script begins with `#!` and the name of a command interpreter, that entry is used to run the commands in the job. If you do not specify a command interpreter, the default shell for the Docker image is used. Typically, `#!/bin/bash` or `#!/bin/sh` are used; image command interpreters for `awk`, `node`, and `ruby` also work if you specify an appropriate Docker image.
