@@ -4,14 +4,17 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
@@ -59,7 +62,8 @@ For a tutorial about using the Live Edit feature of {{site.data.keyword.Bluemix_
 
 When you change the files in your Web IDE, they are automatically redeployed to your application instance on {{site.data.keyword.Bluemix_notm}}. If you need to restart the Node application, click the **Restart** button in the run bar.
 
-**Note:** For a more consistent experience when you use the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, 256 MB of additional memory is required and is added.
+For a more consistent experience when you use the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, 256 MB of additional memory is required and is added.
+{: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} Live Debug
 {: #live-debug}
@@ -98,7 +102,8 @@ After you log in, the {{site.data.keyword.Bluemix_notm}} Live Debug page opens.
 
 Debug includes the following capabilities:  
 * Set breakpoints in the app code to pause execution at a specific line.
-  **Note:** Breakpoints are not supported in the main program, but are supported in entry points.
+  Breakpoints are not supported in the main program, but are supported in entry points.
+  {: tip}
 * Edit breakpoint conditions to pause execution only when certain criteria are met.
 * Inspect the state of local variables and fields.
 * View debug output from `console.log()` calls immediately. This action is faster than monitoring cf logs.
@@ -135,7 +140,8 @@ After the {{site.data.keyword.Bluemix_notm}} Live Debug is installed, you can us
 
 Push the app and then browse to `https://_app-host.mybluemix.net_/bluemix-debug/manage` to access the {{site.data.keyword.Bluemix_notm}} debug user interface. When you are prompted to authenticate, enter your IBM id username and password or a one-time passcode.    
 
-**Note:** The Debugger might take a minute or so to initialize.
+The Debugger might take a minute or so to initialize.
+{: tip}
 
 ### Restoring app configurations and disabling {{site.data.keyword.Bluemix_notm}} Live Debug {: #restore_live_debug}
 
