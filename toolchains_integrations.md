@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-7-27"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}    
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}   
 
 # Configuring tool integrations
 {: #integrations}
@@ -45,7 +48,8 @@ The tool integrations that are available to add and configure for your toolchain
 |UrbanCode Deploy			|US South		|No		|
 {: caption="Table 1. Tool integrations available for toolchains on {{site.data.keyword.Bluemix_notm}} Public and Dedicated" caption-side="top"}
 
-**Tip:** If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
+If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
+{: tip}
 
 
 ## Configuring Alert Notification
@@ -158,7 +162,8 @@ Configure {{site.data.keyword.deliverypipeline}} to add an npm build job:
      # or
      npm publish --registry "${NPM_RELEASE_URL}"
      ```
-  **Tip:** You can find the URL and user credentials that you used to connect to your registry in the configuration settings for the Artifactory tool integration.
+  You can find the URL and user credentials that you used to connect to your registry in the configuration settings for the Artifactory tool integration.
+  {: tip}
 
   e. If your build job publishes to the Artifactory registry and the format of your node module version is `x.y.z-SNAPSHOT.w`, select the **Increment snapshot module version** check box. The build job automatically updates the module version before the job publishes to the Artifactory registry. The job selects the highest version of the module from the npm registry and the local `package.json` file, and increments the module version by using semver. The build job does not deliver the changes to the SCM repo.
 
@@ -188,7 +193,8 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
      # or
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  **Tip:** You can find the URL and user credentials that you used to connect to your registry in the configuration settings for the Artifactory tool integration.
+  You can find the URL and user credentials that you used to connect to your registry in the configuration settings for the Artifactory tool integration.
+  {: tip}
 
 1. Click **SAVE**. Whenever your pipeline runs, this build job uses the configuration information from the Artifactory tool integration to connect to your Maven repo.
 
@@ -202,7 +208,8 @@ To learn more about Artifactory, see the [Artifactory article ![External link ic
 
 {{site.data.keyword.prf_hublong}} isolates problems, identifies patterns, and improves performance before users are affected. You can test your app from locations around the world, integrate with delivery pipelines, and gain insights about how to continuously optimize your code.
 
-**Note:** This tool integration is preconfigured and does not require any configuration parameters. You cannot reconfigure this tool integration.
+This tool integration is preconfigured and does not require any configuration parameters. You cannot reconfigure this tool integration.
+{: tip}
 
 To test, monitor, and improve your app's health as you build it, add the {{site.data.keyword.prf_hubshort}} tool integration:
 
@@ -235,7 +242,7 @@ Configure Bitbucket to collaborate on code with your team:
 
  b. In the Tool Integrations section, click **Bitbucket**.
 
-   **Tip:** If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access Bitbucket, click **Authorize** to go to the Bitbucket website. If you don't have an active Bitbucket session, you are prompted to log in. Click **Grant access** to allow {{site.data.keyword.Bluemix_notm}} Toolchains to access the following parts of your Bitbucket account:
+   If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access Bitbucket, click **Authorize** to go to the Bitbucket website. If you don't have an active Bitbucket session, you are prompted to log in. Click **Grant access** to allow {{site.data.keyword.Bluemix_notm}} Toolchains to access the following parts of your Bitbucket account:
    
    * **Read your account information**. Get basic user information to populate the user interface.
    
@@ -250,6 +257,7 @@ Configure Bitbucket to collaborate on code with your team:
    * **Read your team membership information**. Allow {{site.data.keyword.contdelivery_short}} to show a list of your teams in the **Owner** menu that is displayed when you create a new repo.
    
    * **Read and modify your repositories' webhooks**. Allow the pipeline to trigger builds when commits are pushed to a repo.
+   {: tip}
    
    If you have an active Bitbucket session but you haven't entered your password recently, you might be prompted to enter your Bitbucket password to confirm.
 
@@ -270,7 +278,8 @@ Configure Bitbucket to collaborate on code with your team:
 1. From your toolchain, click the card for the Bitbucket repo that you want to work with. The Bitbucket website opens where you can view the contents of the repo.
 1. If you enabled Bitbucket Issues, click **Bitbucket Issues** to open it. You can use this instance of Bitbucket Issues for your entire toolchain, even if the toolchain contains multiple Bitbucket repos.    
 
-**Note:** If you don't have owner or master privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+If you don't have owner or master privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+{: tip}
 
 ### Learn more about Bitbucket
 
@@ -282,7 +291,8 @@ To learn more about Bitbucket, see the [Bitbucket article ![External link icon](
 
 {{site.data.keyword.evtmgt_full}} provides a consolidated view of problems that occur with your services, applications, and infrastructure. You can set up real-time incident management to resolve the problems more efficiently.
 
-**Note:** This tool integration is preconfigured and does not require any configuration parameters. You cannot reconfigure it.
+This tool integration is preconfigured and does not require any configuration parameters. You cannot reconfigure it.
+{: tip}
 
 To help your DevOps team achieve reliable operational health, service quality, and continuous improvement goals, add Cloud Event Management to your toolchain:
 
@@ -325,7 +335,7 @@ Configure {{site.data.keyword.deliverypipeline}} to automate the continuous buil
 1. Click **Create Integration** to add the {{site.data.keyword.deliverypipeline}} to your toolchain.
 1. Click **{{site.data.keyword.deliverypipeline}}** to view the pipeline and configure it. To learn the basics of configuring a pipeline, see [Building and deploying pipelines](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}.
 
-  **Tip:** If you want the pipeline to automatically run when a commit is pushed to your GitHub, {{site.data.keyword.ghe_short}}, or Git repository (repo), follow these steps:
+  If you want the pipeline to automatically run when a commit is pushed to your GitHub, {{site.data.keyword.ghe_short}}, or Git repository (repo), follow these steps:
 
    a. Configure GitHub, {{site.data.keyword.ghe_short}}, or {{site.data.keyword.gitrepos}} for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub, {{site.data.keyword.ghe_short}}, or Git repos that are associated with your toolchain. For instructions to configure GitHub, see the [GitHub](#github) section. For instructions to configure Dedicated {{site.data.keyword.ghe_short}}, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. For instructions to configure {{site.data.keyword.gitrepos}}, see the [{{site.data.keyword.gitrepos}}](#gitbluemix) section.
 
@@ -346,7 +356,8 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 
 1. Configure the stage. On the **ENVIRONMENT PROPERTIES** tab, create the CF_APP_NAME property.
 
-  **Tip:** The Sauce Labs user name and access key are available in the test job script as the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables. When you write your tests, you must use these environment variables to authenticate with Sauce Labs.
+  The Sauce Labs user name and access key are available in the test job script as the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables. When you write your tests, you must use these environment variables to authenticate with Sauce Labs.
+  {: tip}
 
 1. Configure the deploy job. In the **Deploy Script** field, include this command: `export CF_APP_NAME="$CF_APP"`. That command exports the app name as an environment property.
 1. Configure the test job. The values in the following image are examples. The **Service Instance**, **Target**, **Organization**, and **Space** fields are populated with the Sauce Labs user name, region, org, and space that you are using.  
@@ -356,7 +367,8 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 
   b. For the service instance, select the Sauce Labs user name that you used when you configured Sauce Labs for your toolchain.
 
-   **Tip:** To see the user name and access key that you used when you configured Sauce Labs for your toolchain, click **Configure**.
+   To see the user name and access key that you used when you configured Sauce Labs for your toolchain, click **Configure**.
+   {: tip}
 
   c. In the **Test Execution Command** field, enter the commands that install the dependencies that are required by your tests and then run the tests. For example, for a Node.js app, you might enter these commands:
      ```
@@ -382,7 +394,8 @@ To learn more about {{site.data.keyword.deliverypipeline}}, see [Working with pi
 
 {{site.data.keyword.DRA_full}} collects and analyzes the results from unit tests, functional tests, and code coverage tools to determine whether your code meets predefined criteria at specified gates in your deployment process. If your code does not meet or exceed the criteria, the deployment is stopped to prevent risks from being released. You can use {{site.data.keyword.DRA_short}} as a safety net for your continuous delivery environment or as a way to implement and improve quality standards.
 
- **Note:** This tool integration is available only on {{site.data.keyword.Bluemix_notm}} Public. It is preconfigured and does not require any configuration parameters. You cannot reconfigure this tool integration.
+ This tool integration is available only on {{site.data.keyword.Bluemix_notm}} Public. It is preconfigured and does not require any configuration parameters. You cannot reconfigure this tool integration.
+ {: tip}
 
 Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your code in {{site.data.keyword.Bluemix_notm}} by monitoring your deployments to identify risks before they are released.
 
@@ -412,7 +425,8 @@ To learn more about {{site.data.keyword.DRA_short}}, see the [{{site.data.keywor
 
 The Eclipse Orion {{site.data.keyword.webide}} is an integrated web-based environment where you can create, edit, run, debug, and complete source control tasks. You can seamlessly move from editing to running to submitting to deploying.
 
- **Note:** This tool integration is preconfigured. It does not require any configuration parameters and you cannot reconfigure it.
+ This tool integration is preconfigured. It does not require any configuration parameters and you cannot reconfigure it.
+ {: tip}
 
 To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webide}} tool integration:
 
@@ -447,7 +461,8 @@ If you are configuring {{site.data.keyword.gitrepos}} as you are creating the to
 
 If you have a toolchain and want to migrate a Git repo in your toolchain to {{site.data.keyword.gitrepos}}, follow these steps:
 
-**Note**: These instructions apply to toolchains that already contain the Git repo that you want to migrate to {{site.data.keyword.gitrepos}}. For information about adding different types of Git repos to your toolchain, see the [Configuring GitHub](#github), [Configuring GitHub Enterprise and Issues on {{site.data.keyword.Bluemix_notm}} Dedicated](#configghe), and [Configuring GitLab](#gitlab) sections.
+These instructions apply to toolchains that already contain the Git repo that you want to migrate to {{site.data.keyword.gitrepos}}. For information about adding different types of Git repos to your toolchain, see the [Configuring GitHub](#github), [Configuring GitHub Enterprise and Issues on {{site.data.keyword.Bluemix_notm}} Dedicated](#configghe), and [Configuring GitLab](#gitlab) sections.
+{: tip}
 
 1. On the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
 1. Click **Add a Tool**.
@@ -457,7 +472,8 @@ If you have a toolchain and want to migrate a Git repo in your toolchain to {{si
 1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Click **Create Integration**.
 
-**Tip:** After you clone the Git repo, you can remove it from your toolchain.
+After you clone the Git repo, you can remove it from your toolchain.
+{: tip}
 
 If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, follow these steps:    
 
@@ -476,7 +492,8 @@ If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, fol
 1. Click **Create Integration**.
 1. Click the card for the Git repo that you want to work with. Your project overview page opens.    
 
-**Note:** If you don't have Master or Owner privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+If you don't have Master or Owner privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+{: tip}
 
 ### Learn more about Git Repos and Issue Tracking
 
@@ -501,11 +518,12 @@ If you are configuring this tool integration as you are creating the toolchain, 
 1. If you are storing your source code in a GitHub repo, in the Configurable Integrations section, click **GitHub**. If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
 1. If you are using a repo on your own {{site.data.keyword.ghe_short}} server, in the Configurable Integrations section, click **Add custom server**.
 
- **Important**: The network must be able to access the target Git server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment. If your GitHub server is not available on the public internet or the host name does not resolve on the public Domain Name Server (DNS), [open a support ticket](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. You can use the support ticket to submit a request to open the network routes or update the DNS settings.
+ The network must be able to access the target Git server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment. If your GitHub server is not available on the public internet or the host name does not resolve on the public Domain Name Server (DNS), [open a support ticket](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. You can use the support ticket to submit a request to open the network routes or update the DNS settings.
+ {: tip}
 
  Type a title for your custom GitHub server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**.
 
-  **Tip**: If you don't have a personal access token, you can create one:
+  If you don't have a personal access token, you can create one:
 
      a. On any GitHub page, click your profile icon and then click **Settings**.
 
@@ -545,11 +563,13 @@ If you have a toolchain and are adding this tool integration to it, follow these
 1. Click **Create Integration**.
 1. Click the card for the GitHub or {{site.data.keyword.ghe_short}} repo that you want to work with. Depending on the repo that you selected, either the GitHub website or your company's {{site.data.keyword.ghe_short}} repo opens, where you can view the contents of the repo.
 
-  **Tip:** You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the GitHub repo and deploy an app from your workspace.
+  You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the GitHub repo and deploy an app from your workspace.
+  {: tip}
 
 1. If you enabled GitHub Issues, click **GitHub Issues** to open it. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub or {{site.data.keyword.ghe_short}} repos.    
 
-**Note:** If you don't have admin privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+If you don't have admin privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+{: tip}
 
 ### Learn more about GitHub
 
@@ -565,7 +585,8 @@ To learn more about GitHub, see the [GitHub article ![External link icon](../../
 ## Configuring GitHub Enterprise and Issues on {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #configghe}
 
- **Note:** These instructions apply to {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, some steps might differ depending on your internal procedures.
+ These instructions apply to {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, some steps might differ depending on your internal procedures.
+ {: tip}
 
 {{site.data.keyword.ghe_long}} is an on-premises, web-based hosting service for Git repos. Dedicated {{site.data.keyword.ghe_short}} is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only. GitHub Issues is a tracking tool that keeps your work and your plans in one place. It is integrated with your development repo so that you can focus on important tasks. For more information about Dedicated {{site.data.keyword.ghe_short}} and GitHub Issues, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} and the [GitHub Issues article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} on the IBM Cloud Garage Method.
 
@@ -599,11 +620,13 @@ You can configure {{site.data.keyword.ghe_short}} as a tool integration in your 
 1. Click **Create Integration**.
 1. Click the card for the {{site.data.keyword.ghe_short}} repo that you want to work with. Your company's {{site.data.keyword.ghe_short}} repo opens.
 
-  **Tip:** You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the {{site.data.keyword.ghe_short}} repo and deploy an app from your workspace.
+  You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the {{site.data.keyword.ghe_short}} repo and deploy an app from your workspace.
+  {: tip}
 
 1. If you enabled GitHub Issues, click **GitHub Issues**. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub repos.    
 
-**Note:** If you don't have admin privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+If you don't have admin privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+{: tip}
 
 
 ## Configuring GitLab
@@ -618,11 +641,12 @@ If you are configuring this tool integration as you are creating the toolchain, 
 1. If you are storing your source code in a GitLab repo, in the Configurable Integrations section, click **GitLab**. If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitLab, click **Authorize** to go to the GitLab website. If you don't have an active GitLab session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitLab account. If you have an active GitLab session but you haven't entered your password recently, you might be prompted to enter your GitLab password to confirm.
 1. If you are using a repo on your own GitLab server, in the Configurable Integrations section, click **Add custom server**.
 
- **Important**: The network must be able to access the target GitLab server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment.
+ The network must be able to access the target GitLab server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment.
+ {: tip}
 
  Type a title for your custom GitLab server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**.
 
-  **Tip**: If you don't have a personal access token, you can create one:
+  If you don't have a personal access token, you can create one:
 
      a. On any GitLab page, click your profile icon and then click **Settings**.
 
@@ -659,11 +683,13 @@ If you have a toolchain and are adding this tool integration to it, follow these
 1. Click **Create Integration**.
 1. Click the card for the GitLab repo that you want to work with. Depending on the repo that you selected, either the GitLab website or your company's GitLab repo opens, where you can view the contents of the repo.
 
-  **Tip:** You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the GitLab repo and deploy an app from your workspace.
+  You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the GitLab repo and deploy an app from your workspace.
+  {: tip}
 
 1. If you enabled GitLab Issues, click **GitLab Issues** to open it. You can use this instance of GitLab Issues for your entire toolchain, even if the toolchain contains multiple GitLab repos.    
 
-**Note:** If you don't have owner or master privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+If you don't have owner or master privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+{: tip}
 
 ### Learn more about GitLab
 
@@ -675,7 +701,8 @@ To learn more about GitLab, see the [GitLab article ![External link icon](../../
 
 Jenkins is an open source, server-based tool that builds and tests software continuously, supporting the practices of continuous integration and continuous delivery.
 
-**Important:** Before you create a Jenkins tool integration, you must have a Jenkins server.
+Before you create a Jenkins tool integration, you must have a Jenkins server.
+{: tip}
 
 With the Jenkins tool integration, you can send your Jenkins job notifications to other tools in your toolchain, such as Slack and PagerDuty. To trace code in deployments, you can add deployment messages to your Git commits and your related Git or JIRA issues. You can also view your deployments on the Toolchain Connections page. You can feed test results to {{site.data.keyword.DRA_short}}, add automated quality gates, and track your deployment risk.
 
@@ -854,7 +881,8 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
      # or
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  **Tip:** You can find the URL and user credentials that you used to connect to your registry in the configuration settings for the Nexus tool integration.
+  You can find the URL and user credentials that you used to connect to your registry in the configuration settings for the Nexus tool integration.
+  {: tip}
 
 1. Click **SAVE**. Whenever your pipeline runs, this build job uses the configuration information from the Nexus tool integration to connect to your Maven repo.
 
@@ -980,7 +1008,8 @@ To learn more about Rational Team Concert, see the [IBM Rational Team Concert ar
 
 Sauce Labs runs functional unit tests. When a Sauce Labs test suite is configured as a test job in the {{site.data.keyword.deliverypipeline}}, the test suite can run tests against your web or mobile app as part of your continuous delivery process. These tests can provide valuable flow control for your projects, acting as gates to prevent the deployment of bad code.
 
- **Note:** This tool integration is available only on {{site.data.keyword.Bluemix_notm}} Public.
+ This tool integration is available only on {{site.data.keyword.Bluemix_notm}} Public.
+ {: tip}
 
 Configure Sauce Labs to run automated functional tests on multiple operating systems and browsers so that you can emulate the way that a user might use a website or an application:
 
@@ -996,7 +1025,8 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 1. Click **Create Integration**.
 1. Click **Sauce Labs** to go to saucelabs.com and view the test activity for the toolchain.
 
- **Tip:** If you added a Sauce Labs test job to the {{site.data.keyword.deliverypipeline}}, you can select the service instance. For instructions to configure a test job in your pipeline, see the [Configuring a Sauce Labs test job in your pipeline](#config_saucelabs) section.
+ If you added a Sauce Labs test job to the {{site.data.keyword.deliverypipeline}}, you can select the service instance. For instructions to configure a test job in your pipeline, see the [Configuring a Sauce Labs test job in your pipeline](#config_saucelabs) section.
+ {: tip}
 
 ### Learn more about Sauce Labs
 
@@ -1009,7 +1039,8 @@ To learn more about Sauce Labs, see the [Sauce Labs article ![External link icon
 ## Configuring Slack
 {: #slack}
 
-**Important:** Notifications that are posted to public Slack channels are visible to everyone on the team. Remember that you are responsible for the content that you post.
+Notifications that are posted to public Slack channels are visible to everyone on the team. Remember that you are responsible for the content that you post.
+{: tip}
 
 Slack is a cloud-based, real-time messaging and notification system. Slack provides persistent chat, which is a more interactive alternative to email for team collaboration. You can communicate with your team on a dedicated channel or on a set of channels that is directly related to your work. You can also share files and images through the channels or in direct messages between two or more people. The communications in direct messages and on channels are retained so that you can search them.
 
@@ -1024,13 +1055,15 @@ Configure Slack to receive notifications about your toolchain from the tool inte
 
 1. Type the Slack webhook URL, which is generated by Slack as an incoming webhook. You need a Slack webhook URL for a Slack channel to receive notifications about your toolchain from the tool integrations. For instructions to create or find your webhook, see [Incoming Webhooks ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){: new_window}.
 
- **Tip:** If you have been using an API key for your Slack channel to receive notifications about your toolchain from the tool integrations, you must update your configuration to use a webhook instead.
+ If you have been using an API key for your Slack channel to receive notifications about your toolchain from the tool integrations, you must update your configuration to use a webhook instead.
+ {: tip}
 
 1. Type the name of the Slack channel that you want notifications to be sent to. The channel must exist and be active in your Slack team.
 1. Type the URL host name for your Slack team, which is the word or phrase before `.slack.com` in your team URL. For example, if your team URL is `https://team.slack.com`, the host name is `team`.
 1. Click **Create Integration**.
 
- **Tip:** If the Slack channel and team that you specified cannot be reached, the `Setup Failed` error is displayed on the Slack card. Hover over the `Setup Failed` message and click **Reconfigure**. Make sure that you are using valid configuration parameters for the Slack webhook URL, Slack channel, and URL host name for your Slack team. Update the settings as required, and click **Save Integration**.
+ If the Slack channel and team that you specified cannot be reached, the `Setup Failed` error is displayed on the Slack card. Hover over the `Setup Failed` message and click **Reconfigure**. Make sure that you are using valid configuration parameters for the Slack webhook URL, Slack channel, and URL host name for your Slack team. Update the settings as required, and click **Save Integration**.
+ {: tip}
 
 1. Click **Slack**. You can view all of the activity for your toolchain in the configured Slack channel.
 
@@ -1060,7 +1093,8 @@ Configure SonarQube to continuously analyze and measure the quality of your sour
 1. Type the URL for the SonarQube instance that you want to open when you click the SonarQube card from your toolchain.
 1. Optional: Type the user name that you use to connect to the SonarQube server.
 
- **Tip:** You need to specify a user name only if you use a password to connect to the SonarQube server. If you use an authentication token to connect, leave this field empty.
+ You need to specify a user name only if you use a password to connect to the SonarQube server. If you use an authentication token to connect, leave this field empty.
+ {: tip}
 
 1. Type the password or authentication token that you use to connect to the SonarQube server.
 1. Click **Create Integration**.
@@ -1076,7 +1110,8 @@ To learn more about SonarQube, see the [SonarQube article ![External link icon](
 
 IBM UrbanCode Deploy simplifies and automates application deployment. It uses a graphical flowchart tool to create automated processes that deploy, upgrade, roll back, and uninstall applications. By using those automated tasks, you move your applications through each stage in the development pipeline, including development, testing, and production environments.
 
-**Note:** This tool integration is available only on {{site.data.keyword.Bluemix_notm}} Public. It is preconfigured and does not require any configuration parameters. You cannot reconfigure this tool integration.
+This tool integration is available only on {{site.data.keyword.Bluemix_notm}} Public. It is preconfigured and does not require any configuration parameters. You cannot reconfigure this tool integration.
+{: tip}
 
 To view deployment trends across applications, teams, and environments and find bottlenecks in the delivery pipeline and which areas are more efficient, add the UrbanCode Deploy tool integration.
 
