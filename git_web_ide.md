@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-3-23"
+lastupdated: "2018-8-2"
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Working with Git in the Eclipse Orion Web IDE
 {: #git_web_ide}
@@ -88,7 +90,8 @@ No matter where you code, you can use this quick reference to do common tasks. W
 
 Overwrite the contents of a referenced remote branch with the contents of your active local branch.
 
-**Important:** When you force push a local branch to a remote one, you might lose commits on the remote branch.
+When you force push a local branch to a remote one, you might lose commits on the remote branch.
+{: tip}
 
 ### Eclipse Orion Web IDE
 {: #force_push_web}
@@ -124,13 +127,14 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 
 1. In the Working Directory Changes section, select the check box for each file to commit.
 
-3. In the **Enter the commit message** field, type a message that describes your changes.
+2. In the **Enter the commit message** field, type a message that describes your changes.
 
-  **Tip**: Provide a detailed commit message. Your message should provide enough details for someone to understand why the change was necessary without more information. You can include a link to an item in your team's issue tracker to help. The first line of the commit message should contain fewer than 50 characters. Add a blank line before you add other text.
+  Provide a detailed commit message. Your message should provide enough details for someone to understand why the change was necessary without more information. You can include a link to an item in your team's issue tracker to help. The first line of the commit message should contain fewer than 50 characters. Add a blank line before you add other text.
+  {: tip}
 
-4. Click **Commit**.
+3. Click **Commit**.
 
-5. Click **Push**.
+4. Click **Push**.
 
 ### Git terminal
 {: #commit_cmd}
@@ -143,11 +147,13 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 
 4. Enter the commit summary, add a blank line, and add the commit description.
 
-  **Tip**: The commit summary should be fewer than 50 characters. The commit description should provide enough details for someone to understand why the change was necessary without more information. You can include a link to an item in your team's issue tracker to help.
+  The commit summary should be fewer than 50 characters. The commit description should provide enough details for someone to understand why the change was necessary without more information. You can include a link to an item in your team's issue tracker to help.
+  {: tip}
 
 5. Save the commit message.
 
-  **Note:** To save your commit message and close Vim, which might be your default text editor, press Esc, type `:wq`, and press Enter.
+  To save your commit message and close Vim, which might be your default text editor, press Esc, type `:wq`, and press Enter.
+  {: tip}
 
 4. Type `git push` and press Enter.
 
@@ -190,7 +196,8 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 
 3. To review a file's changes, click **>**.
 
-  **Note:** If a commit introduced a change to a line, the original line is shaded pink and the new line is shaded green.  Similarly, lines that were added by a commit are shaded green and lines that were removed by a commit are shaded pink.
+  If a commit introduced a change to a line, the original line is shaded pink and the new line is shaded green.  Similarly, lines that were added by a commit are shaded green and lines that were removed by a commit are shaded pink.
+  {: tip}
 
 ### Git terminal
 {: #compare_changes_cmd}
@@ -205,14 +212,16 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 
 3. Review the changes.
 
-  **Note:** If a commit introduced a change to a line, the original line is in red text and starts with a minus sign (-). The new line is in green text and starts with a plus sign (+).  Similarly, lines that were added by a commit are in green text and start with a +. Lines that were removed by a commit are in red text and start with a -.
+  If a commit introduced a change to a line, the original line is in red text and starts with a minus sign (-). The new line is in green text and starts with a plus sign (+).  Similarly, lines that were added by a commit are in green text and start with a +. Lines that were removed by a commit are in red text and start with a -.
+  {: tip}
 
 1. To stop viewing entries, press Q.
 
 ## Modify the last commit
 {: #modify_last_commit}
 
-  **Note:** When you modify the last commit after you push it to a remote repo, you rewrite the commit history. This change might cause commit failures and other problems for the other contributors in your project. Be sure that you know what you're doing before you modify a commit that you pushed to a remote repo.
+  When you modify the last commit after you push it to a remote repo, you rewrite the commit history. This change might cause commit failures and other problems for the other contributors in your project. Be sure that you know what you're doing before you modify a commit that you pushed to a remote repo.
+  {: tip}
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}
@@ -233,7 +242,8 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 
 3. In your text editor, accept or modify the commit message.
 
-  **Note:** To save your commit message and close Vim, which might be your default text editor, press Esc, type `:wq`, and press Enter.
+  To save your commit message and close Vim, which might be your default text editor, press Esc, type `:wq`, and press Enter.
+  {: tip}
 
 ## Tag a commit
 {: #tag_commit}
@@ -245,9 +255,9 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 
 2. View the details of the commit by clicking it.
 
-2. In the commit pane, click **Create a tag for the commit** <img class="inline"  src="./images/tag.png" alt="Create a tag for the commit">.
+3. In the commit pane, click **Create a tag for the commit** <img class="inline"  src="./images/tag.png" alt="Create a tag for the commit">.
 
-3. In the name field, type your tag text. Click **Submit**.
+4. In the name field, type your tag text. Click **Submit**.
 
 ### Git terminal
 {: #tag_commit_cmd}
@@ -263,7 +273,7 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 {: #change_info_web}
 1. Click the configuration icon <img class="inline" src="./images/configurations.png" alt="Configuration icon">.
 
-3. Change the user email address and name by updating the user.email and user.name values. Click **Submit** to save each change.
+2. Change the user email address and name by updating the user.email and user.name values. Click **Submit** to save each change.
 
 ### Git terminal
 {: #change_info_cmd}
@@ -341,15 +351,14 @@ When you need to deliver changes from a source branch to a destination branch, y
 
 2. In the Web IDE, open each file that contains conflicts.
 
-3. Resolve each conflicting change.
-
-  **Note:** Delete all of the text that you do not want to keep. Each conflict is in this format:
+3. Resolve each conflicting change. Delete all of the text that you do not want to keep. Each conflict is in this format:
 
 		<<<<<<< HEAD
 		Text in checked out branch.
 		=======
 		Text in merged branch.
 		>>>>>>> commit_ID_from_merged_branch
+		
 4. For each conflicting file, select the check box. Type a merge commit message, and click **Commit**.
 
 ### Git terminal
@@ -359,15 +368,14 @@ When you need to deliver changes from a source branch to a destination branch, y
 
 2. In a text editor, open a file that contains conflicts.
 
-3. Resolve each conflicting change, and then save the file.
-
-  **Note:** Delete all of the text that you do not want to keep. Each conflict is in this format:
+3. Resolve each conflicting change, and then save the file. Delete all of the text that you do not want to keep. Each conflict is in this format:
 
 		<<<<<<< HEAD
 		Text in checked out branch.
 		=======
 		Text in merged branch.
 		>>>>>>> merged_branch
+		
 4. Stage each file that you modified, and then commit the merge.
 
 ## Rebase branches
@@ -403,9 +411,10 @@ When you need to deliver changes from a source branch to a destination branch, y
 
 3. If you encounter conflicts, [resolve them](#resolve_a_rebase_conflict).
 
-5. Repeat the previous step as many times as necessary to complete the rebase operation.
+4. Repeat the previous step as many times as necessary to complete the rebase operation.
 
-  **Note:** To stop the rebase operation, type `git rebase --abort` and press Enter.
+  To stop the rebase operation, type `git rebase --abort` and press Enter.
+  {: tip}
 
 ## Resolve a rebase conflict
 {: #resolve_a_rebase_conflict}
@@ -417,15 +426,14 @@ When you need to deliver changes from a source branch to a destination branch, y
 
 2. In the Web IDE, open each file that contains conflicts.
 
-3. Resolve each conflicting change.
-
-  **Note:** Delete all of the text that you do not want to retain. Each conflict is in this format:
+3. Resolve each conflicting change. Delete all of the text that you do not want to retain. Each conflict is in this format:
 
 		<<<<<<< HEAD
 		Text in checked out branch.
 		=======
 		Text in merged branch.
 		>>>>>>> commit_ID_from_merged_branch
+		{: tip}
 4. In the rebase pane, select the check box for each corrected file and click **Continue**.
 
 ### Git terminal
@@ -435,15 +443,14 @@ When you need to deliver changes from a source branch to a destination branch, y
 
 2. In a text editor, open a file that contains conflicts.
 
-3. Resolve each conflicting change, and then save the file.
-
-  **Note:** Delete all of the text that you do not want to retain. Each conflict is in this format:
+3. Resolve each conflicting change, and then save the file. Delete all of the text that you do not want to retain. Each conflict is in this format:
 
 		<<<<<<< HEAD
 		Text in checked out branch.
 		=======
 		Text in merged branch.
 		>>>>>>> merged_branch
+		
 4. Stage each file that you modified.
 
 5. Resume the rebase operation by typing `git rebase --continue` and pressing Enter.
