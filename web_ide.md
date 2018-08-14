@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-5-22"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Developing with the Eclipse Orion Web IDE
 {: #web_ide}
@@ -45,7 +47,8 @@ By default, the settings for the editor style and font size are always shown. To
 
 The {{site.data.keyword.webide}} has two main sections. The first section is the file navigator, which shows your project files in a tree structure. From the file navigator, you can create, rename, delete, and manage your files and folders.
 
-**Tip:** To upload files to the file navigator, drag them from your computer to the file navigator.
+To upload files to the file navigator, drag them from your computer to the file navigator.
+{: tip}
 
 The second section is the editor pane. The editor provides several coding features, including content assist and syntax validation.
 
