@@ -2,12 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-7-19"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Upgrade your {{site.data.keyword.jazzhub_short}} project to a toolchain
 {: #upgrade_projects}
@@ -52,7 +57,8 @@ You can learn about toolchains on [YouTube ![External link icon](../../icons/lau
 ## Upgrading from a project to a toolchain
 {: #project_to_toolchain}
 
-**Important:** Projects at hub.jazz.net and toolchains are both hosted in the US South region. If your project was configured to deploy apps to a different region, it will still deploy apps to that region after it is upgraded to a toolchain.
+Projects at hub.jazz.net and toolchains are both hosted in the US South region. If your project was configured to deploy apps to a different region, it will still deploy apps to that region after it is upgraded to a toolchain.
+{: tip}
 
 When your project is ready to be upgraded, a message is displayed on the project's card and Overview page.
 
@@ -60,9 +66,10 @@ When your project is ready to be upgraded, a message is displayed on the project
 
 ![Time to Upgrade message](images/banner-ready-to-upgrade.png)
 
-**Tip:** You can find projects that are ready to upgrade from the menu on the My Projects page:
+You can find projects that are ready to upgrade from the menu on the My Projects page:
 
 ![Image of the Projects To Upgrade menu item](images/menu-projects-to-upgrade.png)
+{: tip}
 
 When you start the upgrade, the pipeline stages in your project are locked. You won't be able to run or modify them. If you revert the upgrade by deleting the toolchain, the pipeline is unlocked.
 
@@ -150,7 +157,8 @@ When you return to your project, the upgrade message is displayed again, and you
 
    ![Message in banner indicating the project was upgraded](images/banner-upgraded.png)
 
-   **Note:** If the message says "upgrade now," your upgrade failed. Click the **upgrade now** link to try again.
+   If the message says "upgrade now," your upgrade failed. Click the **upgrade now** link to try again.
+   {: tip}
 
    ![Message in banner indicating the project is ready to upgrade](images/banner-ready-to-upgrade.png)
 
@@ -170,7 +178,8 @@ When you return to your project, the upgrade message is displayed again, and you
     4. To authenticate with {{site.data.keyword.gitrepos}} from an external Git client through https, use your username and your personal access token.
     5. If you want to reuse the local repo of your JazzHub Git repo, point the repo to the new repo in {{site.data.keyword.gitrepos}}. From a shell in a terminal, change to the directory where the JazzHub Git repo is cloned. Enter the `git remote set-url` command: `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        **Tip:** To check which remote URLs are set to which remote names, use the `git remote -v` command. The default remote name is `origin`. If you have a more advanced setup, the form of the command is as follows: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        To check which remote URLs are set to which remote names, use the `git remote -v` command. The default remote name is `origin`. If you have a more advanced setup, the form of the command is as follows: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        {: tip}
 
 5. When your toolchain is set up and you have started to use it, consider taking all or any of these steps to ensure that no one uses your project:
     - Add a suffix to your project name to indicate that it must not be used. You might add `_DO_NOT_USE` to the end of the project name.
@@ -288,7 +297,8 @@ If you want your toolchain to be in a US organization that matches your non-US o
    
    4. Delete the toolchain that was created through the upgrade process. 
    
-      **Note:** The Git repo is not automatically deleted. You might want to delete it manually or rename it for now. If you already changed the repo, you can update the future toolchain to use it later.
+      The Git repo is not automatically deleted. You might want to delete it manually or rename it for now. If you already changed the repo, you can update the future toolchain to use it later.
+      {: tip}
 
    5. Return to the JazzHub project. It should reset itself for another upgrade attempt. If it doesn't reset, contact hub@jazz.net and provide the URL of the project.
    
