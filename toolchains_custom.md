@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-4-23"
+lastupdated: "2018-8-2"
 
 ---
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Creating custom toolchain templates
@@ -186,7 +188,8 @@ In that example, the Git URL and Git branch are for a new toolchain template.
 | has_issues | property | <`true` , `false`> | Use Issues |
 | enable_traceability | properties |  <`true` , `false`> | Determines whether to track the deployment of code changes by creating tags, labels and comments on commits, pull requests and referenced issues.|
 
- **Note:** If you define multiple repositories and configure them as `has_issues: true`, a single instance of GitHub Issue tracker is added to the toolchain. The tracker follows issues for all repositories that are set to `true`.
+ If you define multiple repositories and configure them as `has_issues: true`, a single instance of GitHub Issue tracker is added to the toolchain. The tracker follows issues for all repositories that are set to `true`.
+ {: tip}
 
  This snippet shows an example of this section:
 
