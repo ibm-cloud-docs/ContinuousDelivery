@@ -3,13 +3,18 @@
 copyright:
   years: 2015, 2018
 
-lastupdated: "2018-7-19"
+lastupdated: "2018-8-2"
 
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Creating toolchains
 {: #toolchains_getting_started}
@@ -33,7 +38,8 @@ You can use a template as a starting point to [create a toolchain ![External lin
 1. On the **Create a Toolchain** page, click a toolchain template.
 1. Review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
 
- **Tip**: A few of the toolchain templates have multiple instances of a tool integration. For example, the Microservices toolchain template on {{site.data.keyword.Bluemix_notm}} Public contains three instances of GitHub and three instances of Delivery Pipeline, one for each of the three microservices.
+ A few of the toolchain templates have multiple instances of a tool integration. For example, the Microservices toolchain template on {{site.data.keyword.Bluemix_notm}} Public contains three instances of GitHub and three instances of Delivery Pipeline, one for each of the three microservices.
+ {: tip}
 
  The diagram in the following image is an example. When you create a toolchain, the diagram shows each tool integration that is part of the toolchain.
 ![Toolchain diagram](images/toolchain_diagram2.png)
@@ -44,7 +50,8 @@ You can use a template as a starting point to [create a toolchain ![External lin
  * The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
  * The resource group or organization to create the toolchain in. Click the link to switch between selecting resource groups and orgs. If you want to use a different resource group or org, select it from the list of available resource groups or orgs.
  
-   **Note**: Resource groups are available only in the US South region.
+   Resource groups are available only in the US South region.
+   {: tip}
 
 1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For information about configuring the tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on which toolchain template you selected and whether you are using {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. For example, when you create a Microservices toolchain on {{site.data.keyword.Bluemix_notm}} Public, these steps are run:
@@ -81,7 +88,8 @@ After you configure the toolchain and its tool integrations, you can view a visu
 1. On the DevOps dashboard, on the **Toolchains** page, select a **RESOURCE GROUP** or **CLOUD FOUNDRY ORG**. All of the toolchains that are contained within the selected resource group or Cloud Foundry org are displayed. Click the toolchain that you want to view to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.
 2. To access a tool integration that is in your toolchain, click the tool.
 
- **Tip**: If you have more than one GitHub, {{site.data.keyword.ghe_short}}, or Git repo, you might have multiple cards for the same tool integration because each repo is represented by its own card. If you have more than one pipeline, you might have multiple cards for the same tool integration because each pipeline is represented by its own card. For example, when you create a Microservices toolchain, each of the three microservices has its own GitHub, {{site.data.keyword.ghe_short}}, or Git repo and its own pipeline.
+ If you have more than one GitHub, {{site.data.keyword.ghe_short}}, or Git repo, you might have multiple cards for the same tool integration because each repo is represented by its own card. If you have more than one pipeline, you might have multiple cards for the same tool integration because each pipeline is represented by its own card. For example, when you create a Microservices toolchain, each of the three microservices has its own GitHub, {{site.data.keyword.ghe_short}}, or Git repo and its own pipeline.
+ {: tip}
 
 ## Take a tutorial: Using toolchains
 {: #toolchain_tutorials}
