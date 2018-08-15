@@ -6,6 +6,7 @@ Continuous Delivery
 
     {: .navgroup id="learn"}
     index.md
+    cd_overview.md
     cd_about.md
     devops_intro.md
     garage_method.md
