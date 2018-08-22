@@ -41,7 +41,7 @@ The following table details actions that are mapped to platform management roles
 
 | Platform management role | Description of actions | Example actions|
 |:-----------------|:-----------------|:-----------------|
-| Viewer, Operator | View instances of the {{site.data.keyword.contdelivery_short}} service. | <ul><li>Click a {{site.data.keyword.contdelivery_short}} service instance to open its dashboard.</li>|
+| Viewer, Operator | View instances of the {{site.data.keyword.contdelivery_short}} service. | <ul><li>Click a {{site.data.keyword.contdelivery_short}} service instance to open its dashboard.</li>|</ul>
 | Editor, Administrator | Create, view, update, modify the plan for, and delete instances of the {{site.data.keyword.contdelivery_short}} service. |<ul><li>Provision an instance of {{site.data.keyword.contdelivery_short}} in a resource group.</li><li>Delete an instance of {{site.data.keyword.contdelivery_short}} from a resource group.</li><li>Change a {{site.data.keyword.contdelivery_short}} instance plan from Lite to Professional.</li></ul> |
 | Administrator | Update the Authorized Users list.| <ul><li>Add a user to the Authorized Users list.</li><li>Remove a user from the Authorized Users list.</li></ul> |
 {: caption="Table 1. IAM user roles and actions" caption-side="top"}
