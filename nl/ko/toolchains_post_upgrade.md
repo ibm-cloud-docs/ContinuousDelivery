@@ -2,21 +2,26 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-12"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.jazzhub_short}} 프로젝트 업그레이드 후 도구 체인 시작하기
 {: #toolchains_post_upgrade}
 
-hub.jazz.net의 {{site.data.keyword.jazzhub}} 프로젝트가 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.contdelivery_short}} 서비스에서 도구 체인으로 업그레이드되었습니다.  
+hub.jazz.net의 {{site.data.keyword.jazzhub}} 프로젝트가 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.contdelivery_short}} 서비스에서 도구 체인으로 업그레이드되었습니다. 
 
 hub.jazz.net의 {{site.data.keyword.jazzhub_short}}가 취소됩니다. 
 
-DevOps 프로젝트의 경우 [{{site.data.keyword.contdelivery_short}} 서비스![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/devops){:new_window}를 참조하십시오. {{site.data.keyword.Bluemix_notm}}를 처음 사용하는 경우 [{{site.data.keyword.Bluemix_notm}} 개요](/docs/overview/whatisbluemix.html#bluemixoverview)를 확인하십시오.
+DevOps 프로젝트의 경우 [{{site.data.keyword.contdelivery_short}} 서비스![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/devops){:new_window}를 참조하십시오. {{site.data.keyword.Bluemix_notm}}를 처음 사용하는 경우 [{{site.data.keyword.Bluemix_notm}} 개요](/docs/overview/ibm-cloud.html#overview)를 확인하십시오.
 
 {: shortdesc}
 
@@ -26,19 +31,19 @@ DevOps 프로젝트의 경우 [{{site.data.keyword.contdelivery_short}} 서비�
 [도구 체인 페이지![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/devops/toolchains){: new_window}로 이동하고 hub.jazz.net 프로젝트의 이름과 일치하는 이름으로 도구 체인이 표시되는지 확인하여 업그레이드가 완료되었음을 확인하십시오. 프로젝트가 자동으로 업그레이드된 경우 다음 제한사항에 유의하십시오.
    - 프로젝트가 업그레이드되기 전에 다른 도구 체인에서 이미 프로젝트의 이름을 사용한 경우 프로젝트에 대해 작성된 새 도구 체인의 이름은 프로젝트의 이름과 일치하면 안 됩니다. 
    - 프로젝트에 대한 도구 체인이 표시되지 않으면 속해 있는 다른 조직으로 전환하고 도구 체인을 확인하십시오.
-   - 프로젝트에 대한 도구 체인을 계속해서 찾을 수 없으면 업그레이드가 진행 중일 수 있습니다. 도구 체인에 즉시 액세스해야 하는 경우 [지원 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}에 문의하십시오.
-
+   
 ## 도구 체인 개요
 {: #compare_toolchains}
 
-hub.jazz.net에 하나 이상의 프로젝트가 있는 경우 업그레이드가 실패하지 않는 한 프로젝트는 {{site.data.keyword.contdelivery_short}} 서비스에서 도구 체인으로 자동 업그레이드됩니다. 올바르지 않은 IBM Cloud 계정 또는 조직으로 인해 업그레이드가 실패할 수 있습니다. 실패하는 경우 이러한 계정 및 조직 소유자에게 이메일이 발송되며 소유자는 이를 해결하기 위해 특정 조치를 수행해야 합니다. 프로젝트에 대한 도구 체인이 표시되지 않으며 도구 체인에 즉시 액세스해야 하는 경우 [지원![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}을 참조하십시오. 
+hub.jazz.net에 하나 이상의 프로젝트가 있는 경우 업그레이드가 실패하지 않는 한 프로젝트는 {{site.data.keyword.contdelivery_short}} 서비스에서 도구 체인으로 자동 업그레이드됩니다. 올바르지 않은 IBM Cloud 계정 또는 조직으로 인해 업그레이드가 실패할 수 있습니다. 실패하는 경우 이러한 계정 및 조직 소유자에게 이메일이 발송되며 소유자는 이를 해결하기 위해 특정 조치를 수행해야 합니다. 업그레이드한 프로젝트의 도구 체인을 찾는 데 도움이 필요한 경우 [지원 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}에 문의하십시오. 
 
 도구 체인은 프로젝트와 유사하지만 일부 중요한 차이점이 있습니다.
 
 - 프로젝트에는 오직 하나의 저장소(repo)와 파이프라인만 있을 수 있습니다. 도구 체인에는 필요한 수 만큼의 저장소와 파이프라인이 있을 수 있습니다.
 - 도구 체인에는 프로젝트에서 사용 가능하지 않은 도구가 포함될 수 있습니다(예: Slack, Sauce Labs, PagerDuty 및 {{site.data.keyword.DRA_full}}).
 
- **참고**: {{site.data.keyword.DRA_short}}는 미국 남부 지역에서만 사용 가능합니다. 
+ {{site.data.keyword.DRA_short}}는 미국 남부 지역에서만 사용 가능합니다.
+ {: tip}
  
 - 프로젝트에서 멤버십은 프로젝트 레벨로 유지됩니다. 도구 체인에 대한 액세스는 {{site.data.keyword.Bluemix_notm}} 조직 및 도구 체인으로 관리됩니다. 도구 체인에 대해 작업하려면 도구 체인이 포함된 조직의 구성원이어야 합니다. 도구 체인 소유자는 도구 체인에 액세스할 수 있는 사용자 및 수행할 수 있는 작업을 추가로 제어할 수 있습니다. 세부사항은 [도구 체인 시작하기](#upgrade_next_steps)에 있는 단계 2를 참조하십시오.
 - hub.jazz.net의 프로젝트에 사용한 저장소의 유형에 따라 도구 체인에는 GitHub.com 저장소 또는 {{site.data.keyword.gitrepos}} 저장소가 포함될 수 있습니다.
@@ -53,7 +58,7 @@ hub.jazz.net에 하나 이상의 프로젝트가 있는 경우 업그레이드�
     - 도구 체인 관리 페이지에서 조직 구성원에게 도구 체인에 액세스하는 권한을 부여하십시오. 기존 프로젝트 구성원은 업그레이드 프로세스의 일부로 도구 체인의 구성원으로 추가됩니다. 도구 체인의 액세스 제어에 대한 자세한 정보는 [액세스 관리![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}를 참조하십시오.
     - 사용자가 도구 체인이 속한 조직의 구성원이 아니면 조직 관리 페이지에서 조직에 사용자를 추가하십시오.
     - 도구 체인에서 {{site.data.keyword.gitrepos}}를 사용하는 경우 올바른 {{site.data.keyword.Bluemix_notm}} ID가 있는 모든 JazzHub 프로젝트 구성원은 JazzHub 프로젝트에서 보유한 동일한 권한으로 {{site.data.keyword.gitrepos}} 저장소에 추가됩니다. JazzHub 프로젝트에 올바른 {{site.data.keyword.Bluemix_notm}} ID가 없는 구성원이 포함되어 있는 경우 ID를 등록할 수 있습니다. 등록하면 저장소에 추가할 수 있습니다.
-      조직 관리에 대한 자세한 정보는 [조직 및 영역 관리![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}를 참조하십시오.
+      조직 관리에 대한 자세한 정보는 [조직 및 영역 관리![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window}를 참조하십시오.
 
 2. {{site.data.keyword.gitrepos}}를 사용하는 경우 개인 액세스 토큰 또는 SSH 키를 사용하여 인증하십시오. SSH 키에 대한 자세한 정보는 [인증을 위한 개인 액세스 토큰 또는 SSH 키 작성](/docs/services/ContinuousDelivery/git_working.html#git_authentication)을 참조하십시오. https를 통해 외부 Git 클라이언트에서 인증하려면 다음 단계를 따르십시오.
     1. {{site.data.keyword.gitrepos}} 사용자 설정의 [액세스 토큰 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window}로 이동하십시오.
@@ -62,11 +67,13 @@ hub.jazz.net에 하나 이상의 프로젝트가 있는 경우 업그레이드�
     4. HTTPS를 통해 외부 Git 클라이언트에서 {{site.data.keyword.gitrepos}}를 인증하려면 사용자 이름과 개인 액세스 토큰을 사용하십시오.
     5. JazzHub Git 저장소의 로컬 저장소를 재사용하려면 저장소가 {{site.data.keyword.gitrepos}}의 새 저장소를 가리키게 지정하십시오. 터미널 쉘에서 JazzHub Git 저장소가 복제된 디렉토리로 변경하십시오. `git remote set-url` 명령을 입력하십시오. `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        **팁:** 어떤 원격 URL이 어떤 원격 이름으로 설정되었는지 확인하려면 `git remote -v` 명령을 사용하십시오. 기본 원격 이름은 `origin`입니다. 고급 설정이 있으면 명령의 형식은 다음과 같습니다. `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        어떤 원격 URL이 어떤 원격 이름으로 설정되었는지 확인하려면 `git remote -v` 명령을 사용하십시오. 기본 원격 이름은 `origin`입니다. 고급 설정이 있으면 명령의 형식은 다음과 같습니다. `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        {: tip}
 
 3. 선택사항: 프로젝트의 개발 성숙도, 팀의 사례 및 코드 베이스 품질을 탐색하려면 IBM Cloud {{site.data.keyword.DRA_short}}를 도구 체인에 추가하십시오. {{site.data.keyword.DRA_short}}에서는 개발자, 팀 및 배치 분석을 DevOps 프로젝트에 적용합니다. 자세한 정보는 [{{site.data.keyword.DRA_short}} 시작하기](/docs/services/DevOpsInsights/index.html)를 참조하십시오.
 
-  **참고**: {{site.data.keyword.DRA_short}}는 미국 남부 지역에서만 사용 가능합니다. 
+  {{site.data.keyword.DRA_short}}는 미국 남부 지역에서만 사용 가능합니다.
+  {: tip}
 
 
 ## 문제점 해결
@@ -78,7 +85,7 @@ hub.jazz.net에 하나 이상의 프로젝트가 있는 경우 업그레이드�
 ## 자주 묻는 질문(FAQ)
 {: #upgrade_faq}
 
-### 내 JazzHub 프로젝트는 영국 지역과 연관되어 있지만 내 도구 체인은 미국 남부 지역에 있습니다. 어떻게 작동합니까? 
+### 내 JazzHub 프로젝트는 영국 지역과 연관되어 있지만 내 도구 체인은 미국 남부 지역에 있습니다. 어떻게 작동합니까?
 {: #faq_region}
 
 hub.jazz.net의 프로젝트와 도구 체인은 모두 미국 남부 지역에서 호스팅됩니다. 프로젝트가 영국 지역과 같은 다른 지역으로 앱을 배치하도록 구성된 경우 도구 체인은 해당 지역으로 계속 앱을 배치합니다. 따라서 데이터를 호스팅하고 있는 위치와 관련하여 아무 것도 바뀌지 않습니다. 미래에는 더 많은 지역에서 도구 체인을 사용할 수 있게 됩니다.
@@ -116,9 +123,9 @@ IBM Track and Plan on Cloud에 대한 정보가 필요하거나 온라인으로 
 ### 업그레이드 후 내 프로젝트의 빌드 정의에 무슨 일이 발생했습니까?
 {: #faq_build}
 
-Delivery Pipeline 대신 Jazz를 사용하여 소스 코드를 빌드한 경우 빌드 정의를 도구 체인의 Delivery Pipeline에 수동으로 마이그레이션해야 합니다. 
+Delivery Pipeline 대신 Jazz를 사용하여 소스 코드를 빌드한 경우 빌드 정의를 도구 체인의 Delivery Pipeline에 수동으로 마이그레이션해야 합니다.
 
-소스 저장소로 Jazz SCM을 사용하고 Delivery Pipeline을 사용하여 코드를 빌드하는 경우 Jazz SCM의 소스가 자동으로 Git 저장소로 이동됩니다. Delivery Pipeline 구성은 Jazz SCM의 소스 대신에 Git 저장소의 소스를 이용한다는 점을 제외하고 동일하게 유지됩니다. 
+소스 저장소로 Jazz SCM을 사용하고 Delivery Pipeline을 사용하여 코드를 빌드하는 경우 Jazz SCM의 소스가 자동으로 Git 저장소로 이동됩니다. Delivery Pipeline 구성은 Jazz SCM의 소스 대신에 Git 저장소의 소스를 이용한다는 점을 제외하고 동일하게 유지됩니다.
 
 ### 도구 체인으로 업그레이드된 내 프로젝트에 대한 조직을 작성해야 했습니다. 내 신용카드가 청구됩니까?
 {: #faq_charges}
@@ -130,7 +137,7 @@ IBM 직원인 경우, 내부 IBM 프로젝트는 개인 신용카드 대신에 �
 ### 내 도구 체인을 찾을 수 없거나 액세스할 수 없습니다. 어떻게 해야 합니까?
 {: #faq_find}
 
-도구 체인은 {{site.data.keyword.Bluemix_notm}} 조직에서 호스팅됩니다. 업그레이드 프로세스는 JazzHub 프로젝트의 모든 구성원을 도구 체인에 추가합니다. 그러나 {{site.data.keyword.Bluemix_notm}} 조직의 소유자가 해당 사용자를 조직에 추가하지 않는 한, 사용자는 도구 체인을 볼 수 없습니다. 
+도구 체인은 {{site.data.keyword.Bluemix_notm}} 조직에서 호스팅됩니다. 업그레이드 프로세스는 JazzHub 프로젝트의 모든 구성원을 도구 체인에 추가합니다. 그러나 {{site.data.keyword.Bluemix_notm}} 조직의 소유자가 해당 사용자를 조직에 추가하지 않는 한, 사용자는 도구 체인을 볼 수 없습니다.
 
 도구 체인에 액세스하려면 {{site.data.keyword.Bluemix_notm}}로 이동하여 메뉴 아이콘을 클릭하고 **서비스 &gt; DevOps**를 클릭하십시오. 도구 체인 페이지가 열립니다. 사용자가 미국 남부 지역에 있고 도구 체인이 포함된 조직에 속해 있는지 확인하십시오. 도구 체인이 도구 체인 페이지에 나열되지 않으면 [이 FAQ 항목](#faq_uk)을 참조하십시오.
 
@@ -149,7 +156,7 @@ IBM 직원인 경우, 내부 IBM 프로젝트는 개인 신용카드 대신에 �
 
 **답변:**
 
-미국 이외의 {{site.data.keyword.Bluemix_notm}} 조직의 구성원이고 업그레이드 전에 사용자의 조직을 미국 남부 지역으로 명시적으로 확장하지 않은 경우 문제가 발생할 수 있습니다. 도구 체인 페이지를 열어 이를 확인할 수 있습니다. 페이지의 처음에 지역 및 조직이 표시됩니다.  
+미국 이외의 {{site.data.keyword.Bluemix_notm}} 조직의 구성원이고 업그레이드 전에 사용자의 조직을 미국 남부 지역으로 명시적으로 확장하지 않은 경우 문제가 발생할 수 있습니다. 도구 체인 페이지를 열어 이를 확인할 수 있습니다. 페이지의 처음에 지역 및 조직이 표시됩니다. 
 
 업그레이드 시, 미국 이외의 조직이 미국에 존재하지 않으므로 업그레이드 중에 액세스 권한이 있는 다른 조직을 검색하여 사용자를 위해 다른 조직을 선택했습니다.
 
@@ -165,7 +172,8 @@ IBM 직원인 경우, 내부 IBM 프로젝트는 개인 신용카드 대신에 �
    
    4. 업그레이드 프로세스를 통해 작성된 도구 체인을 삭제하십시오. 
    
-      **참고:** Git 저장소는 자동으로 삭제되지 않습니다. Git 저장소를 수동으로 삭제하거나 우선 이름을 바꾸려고 할 수 있습니다. Git 저장소를 이미 변경한 경우 나중에 사용하도록 이후의 도구 체인을 전환할 수 있습니다.
+      Git 저장소는 자동으로 삭제되지 않습니다. Git 저장소를 수동으로 삭제하거나 우선 이름을 바꾸려고 할 수 있습니다. Git 저장소를 이미 변경한 경우 나중에 사용하도록 향후 도구 체인을 업데이트할 수 있습니다.
+      {: tip}
 
    5. JazzHub 프로젝트로 돌아가십시오. 다음 번 업그레이드 시도 중에 자체적으로 재설정해야 합니다. 재설정하지 않으면 hub@jazz.net에 문의하여 프로젝트의 URL을 제공하십시오.
    

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-4-18"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -14,29 +14,51 @@ lastupdated: "2018-4-18"
 
 {{site.data.keyword.contdelivery_full}}를 사용하는 것은 {{site.data.keyword.Bluemix_notm}} 플랫폼 또는 기타 호환 가능 PaaS(Platform as a Service) 또는 IaaS(Infrastructure as a Service)에서 애플리케이션의 빌드, 배치, 테스트 및 진행 조작으로 한정됩니다.
 
-## 권한이 부여된 사용자 
+## 권한이 부여된 사용자
 {: #authorized_users}
 
-{{site.data.keyword.contdelivery_short}} 서비스 플랜은 서비스 인스턴스의 권한이 부여된 사용자 수를 기준으로 정의되며 가격이 책정됩니다. 다음을 포함하여 노력에 기여한 사용자는 권한이 있는 사용자로 계산되어야 합니다. 
+{{site.data.keyword.contdelivery_short}} 서비스 플랜은 서비스 인스턴스의 권한이 부여된 사용자 수를 기준으로 정의되며 가격이 책정됩니다. 다음을 포함하여 노력에 기여한 사용자는 권한이 있는 사용자로 계산되어야 합니다.
 
  * {{site.data.keyword.gitrepos}} 저장소의 문제, 문제 보드, 소스 코드 또는 다른 아티팩트와 상호작용하는 사용자
  * Delivery Pipeline의 상태를 조작하고, 트리거(UI에서 직접적으로 또는 저장소에 커미트하여 간접적으로) 또는 보는 사용자
  * Eclipse Orion {{site.data.keyword.webide}}와 상호작용하는 사용자
  
-### 사용자를 어떻게 계산됩니까?
+### 조직의 {{site.data.keyword.contdelivery_short}} 인스턴스에 대한 사용자를 어떻게 계산합니까?
 
-권한이 부여된 사용자는 {{site.data.keyword.contdelivery_short}} 서비스를 포함하는 Cloud 조직의 모든 사용자를 확인하여 계산됩니다.  
+권한이 부여된 사용자는 {{site.data.keyword.contdelivery_short}} 서비스를 포함하는 Cloud 조직의 모든 사용자를 확인하여 계산됩니다. 
 
-메뉴 표시줄에서 조직의 사용자 목록을 보려면 **관리 > 계정 > Cloud Foundry 조직**을 클릭하십시오.
+{{site.data.keyword.Bluemix_notm}} 퍼블릭 환경에서 조직의 사용자 목록을 보려면 메뉴 표시줄에서 **관리 > 계정 > Cloud Foundry 조직**을 클릭하십시오.
 
-또한 사용자 계정의 {{site.data.keyword.contdelivery_short}} 서비스의 모든 인스턴스 및 각 인스턴스에 대해 보고되는 사용자 수를 볼 수 있습니다. 
+{{site.data.keyword.Bluemix_notm}} 데디케이티드 환경에서 조직의 사용자 목록을 보려면 메뉴 표시줄에서 **계정 > 조직 관리**를 클릭하십시오.
 
-1. 메뉴 표시줄에서 **관리 > 계정 > Cloud Foundry 조직**을 클릭하십시오. 
+또한 계정의 {{site.data.keyword.contdelivery_short}} 서비스의 모든 인스턴스 및 {{site.data.keyword.Bluemix_notm}} 퍼블릭 환경의 각 인스턴스에 대해 보고되는 사용자 수를 볼 수 있습니다.
+
+1. 메뉴 표시줄에서 ** 관리 > 청구 및 사용 > 사용**을 클릭하십시오.
+2. **사용량 대시보드**를 클릭하십시오.
+3. 계정 메뉴에서 **Cloud Foundry 조직**을 클릭하십시오.
+4. 사용 정보를 볼 조직을 클릭하십시오.
+
+또한 계정의 {{site.data.keyword.contdelivery_short}} 서비스의 모든 인스턴스 및 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경의 각 인스턴스에 대해 보고되는 사용자 수를 보려면 다음을 수행하십시오.
+
+1. 메뉴 표시줄에서 **계정 > 조직 관리**를 클릭하십시오.
 2. **사용량 대시보드**를 클릭하십시오.
 
-### 서비스 플랜의 한계를 초과하면 어떤 일이 발생합니까?  
+### 리소스 그룹의 {{site.data.keyword.contdelivery_short}} 인스턴스에 대한 사용자를 어떻게 계산합니까?
 
-일부 서비스 플랜은 실행할 수 있는 Delivery Pipeline 작업의 수 또는 스토리지 이용과 같은 다른 한계가 있을 수 있습니다. 자세한 정보는 카탈로그의 플랜 설명을 참조하십시오. 비용 청구 기간에 플랜 제한사항을 초과하는 경우 서비스가 일시중단될 수 있습니다. 예를 들어, Delivery Pipeline 작업이 나머지 비용 청구 기간 동안 실행되지 않을 수 있습니다. 
+권한이 부여된 사용자는 {{site.data.keyword.contdelivery_short}} 서비스 인스턴스 내 관리 탭에서 사용자 목록을 확인하여 계산됩니다. 
+
+권한 부여된 사용자 목록을 보려면 서비스 인스턴스 대시보드를 열고 관리 탭을 클릭하십시오.
+
+또한 사용자 계정의 {{site.data.keyword.contdelivery_short}} 서비스의 모든 인스턴스 및 각 인스턴스에 대해 보고되는 사용자 수를 볼 수 있습니다.
+
+1. 메뉴 표시줄에서 ** 관리 > 청구 및 사용 > 사용**을 클릭하십시오.
+2. **사용량 대시보드**를 클릭하십시오.
+3. 계정 메뉴에서 **리소스 그룹**을 클릭하십시오.
+4. 사용 정보를 볼 리소스 그룹을 클릭하십시오.
+
+### 서비스 플랜의 한계를 초과하면 어떤 일이 발생합니까? 
+
+일부 서비스 플랜은 실행할 수 있는 Delivery Pipeline 작업의 수 또는 스토리지 이용과 같은 다른 한계가 있을 수 있습니다. 자세한 정보는 카탈로그의 플랜 설명을 참조하십시오. 비용 청구 기간에 플랜 제한사항을 초과하는 경우 서비스가 일시중단될 수 있습니다. 예를 들어, Delivery Pipeline 작업이 나머지 비용 청구 기간 동안 실행되지 않을 수 있습니다.
 
 ## Delivery Pipeline 사용
 {: #pipeline_usage}

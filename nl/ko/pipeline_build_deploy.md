@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-2-28"
+lastupdated: "2018-8-2"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -11,10 +11,13 @@ lastupdated: "2018-2-28"
     Indentation as per the previous template must be preserved.
 -->
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 빌드 및 배치
 {: #deliverypipeline_build_deploy}
@@ -22,14 +25,14 @@ lastupdated: "2018-2-28"
 {{site.data.keyword.contdelivery_full}}에는 반복 가능한 지속적 통합 및 지속적 딜리버리 프로세스를 구현할 수 있는 Delivery Pipeline이 포함됩니다.
 {:shortdesc}
 
-파이프라인을 작성하고 구성하려면 다음 태스크를 완료하십시오.
+파이프라인을 구성하려면 다음 태스크를 완료하십시오.
 
 ## 단계 추가
 {: #deliverypipeline_add_stage}
 
 1. 파이프라인 페이지에서 **단계 추가**를 클릭하십시오. 단계 구성 페이지가 열립니다.
 2. 단계를 구성하십시오.
-  1. **입력** 탭에서 단계의 입력을 선택하십시오.  빌드 단계의 경우 입력 탭에는 저장소에 입력으로 사용할 분기를 지정하는 **분기** 필드가 포함되어 있습니다. 
+  1. **입력** 탭에서 단계의 입력을 선택하십시오.  빌드 단계의 경우 입력 탭에는 저장소에 입력으로 사용할 분기를 지정하는 **분기** 필드가 포함되어 있습니다.
   2. **작업** 탭에서 하나 이상의 작업을 추가하고 구성하십시오. 첫 번째 단계에는 주로 하나 이상의 빌드 작업이 있습니다.
 3. **저장**을 클릭하십시오.
 
@@ -70,7 +73,8 @@ lastupdated: "2018-2-28"
 * 특정 변경내용이 지정되어 있지 않으면 동일한 입력을 사용하는 단계를 찾을 때까지 이전 단계를 검색합니다. 성공적으로 실행된 해당 입력의 마지막 변경내용을 찾아 이를 사용합니다.
 * 특정 변경내용이 지정되어 있지 않고 지정된 소스를 입력으로 사용하는 다른 단계가 없으면 입력의 최신 변경내용을 사용합니다.
 
-**팁:** 이전 빌드를 배치할 수 있습니다. 빌드가 포함된 단계에서 **로그 및 히스토리 보기**를 클릭하십시오. 열린 페이지에서 클릭하여 실행 번호를 펼친 후 빌드 작업을 클릭하십시오. **받는 사람**을 클릭하고 대상을 선택하십시오.
+이전 빌드를 배치할 수 있습니다. 빌드가 포함된 단계에서 **로그 및 히스토리 보기**를 클릭하십시오. 열린 페이지에서 클릭하여 실행 번호를 펼친 후 빌드 작업을 클릭하십시오. **받는 사람**을 클릭하고 대상을 선택하십시오.
+{: tip}
 
 ###앱에 서비스 추가
 앱에 서비스를 추가하고 {{site.data.keyword.Bluemix_notm}} 대시보드 또는 Cloud Foundry CLI(Command Line Interface)에서 이러한 서비스를 관리할 수 있습니다. 또한 파이프라인 작업에 대해 스크립트에서 Cloud Foundry CLI 명령을 실행할 수도 있습니다. 예를 들어, 배치 작업의 스크립트에서 앱에 서비스를 추가할 수 있습니다. 서비스 추가에 대한 자세한 정보는 [애플리케이션에 서비스 추가](/docs/services/reqnsi.html#add_service)를 참조하십시오.

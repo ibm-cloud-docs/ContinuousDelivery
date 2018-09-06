@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-17"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}    
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}   
 
 # 도구 통합 구성
 {: #integrations}
@@ -21,31 +24,31 @@ lastupdated: "2018-3-21"
 
 |도구 통합 |{{site.data.keyword.Bluemix_notm}} 퍼블릭에서 사용 가능	|{{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용 가능(환경에 따라 다름)|
 |:----------|:------------------------------|:------------------|
-|{{site.data.keyword.alertnotificationshort}}		|미국 남부 |아니오		|
-|Artifactory		|미국 남부, 독일, 영국 |예		|
-|Availability Monitoring		|미국 남부 |아니오		|
-|Bitbucket		|미국 남부, 독일, 영국 |아니오		|
-|Cloud Event Management		|미국 남부 |아니오		|
-|{{site.data.keyword.deliverypipeline}} 		|미국 남부, 독일, 영국 |예  		|
-|{{site.data.keyword.DRA_short}} 		|미국 남부 |아니오			|
-|Eclipse Orion {{site.data.keyword.webide}}		|미국 남부, 독일, 영국 |예			|
-|{{site.data.keyword.gitrepos}}	|미국 남부, 독일, 영국 |아니오		|
-|GitHub		|미국 남부, 독일, 영국 |예		|
+|{{site.data.keyword.alertnotificationshort}}		|미국 남부		|아니오		|
+|Artifactory		|미국 남부, 독일, 영국		|예		|
+|Availability Monitoring		|미국 남부		|아니오		|
+|Bitbucket		|미국 남부, 독일, 영국		|아니오		|
+|Cloud Event Management		|미국 남부		|아니오		|
+|{{site.data.keyword.deliverypipeline}} 		|미국 남부, 독일, 영국	   	|예  		|
+|{{site.data.keyword.DRA_short}} 		|미국 남부		|아니오			|
+|Eclipse Orion {{site.data.keyword.webide}}		|미국 남부, 독일, 영국		|예			|
+|{{site.data.keyword.gitrepos}}	|미국 남부, 독일, 영국		|아니오		|
+|GitHub		|미국 남부, 독일, 영국		|예		|
 |Dedicated {{site.data.keyword.ghe_short}} and Issues			|아니오		|예		|
-|GitLab		|미국 남부, 독일, 영국 |아니오		|
-|Jenkins		|미국 남부, 독일, 영국 |예		|
-|JIRA		|미국 남부, 독일, 영국 |예		|
-|Nexus			|미국 남부, 독일, 영국 |예		|
-|기타 도구			|미국 남부, 독일, 영국 |예		|
-|PagerDuty			|미국 남부, 독일, 영국 |예		|
-|Rational Team Concert			|미국 남부, 독일, 영국 |예		|
-|Sauce Labs		|미국 남부, 독일, 영국 |아니오		|
-|Slack			|미국 남부, 독일, 영국 |예		|
-|SonarQube			|미국 남부, 독일, 영국 |예		|
-|UrbanCode Deploy			|미국 남부 |아니오		|
+|GitLab		|미국 남부, 독일, 영국		|아니오		|
+|Jenkins		|미국 남부, 독일, 영국		|예		|
+|JIRA		|미국 남부, 독일, 영국		|예		|
+|Nexus			|미국 남부, 독일, 영국		|예		|
+|기타 도구			|미국 남부, 독일, 영국		|예		|
+|PagerDuty			|미국 남부, 독일, 영국		|예		|
+|Rational Team Concert			|미국 남부, 독일, 영국		|예		|
+|Sauce Labs		|미국 남부, 독일, 영국		|아니오		|
+|Slack			|미국 남부, 독일, 영국		|예		|
+|SonarQube			|미국 남부, 독일, 영국		|예		|
 {: caption="표 1. {{site.data.keyword.Bluemix_notm}} 퍼블릭 및 데디케이티드에서 도구 체인에 사용 가능한 도구 통합" caption-side="top"}
 
-**팁:** {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 소스 코드로 개발을 시작하려는 경우, {{site.data.keyword.deliverypipeline}}을 구성하기 전에 GitHub 도구 통합 또는 {{site.data.keyword.gitrepos}} 도구 통합을 구성하십시오. {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 코드로 개발을 시작하려는 경우, {{site.data.keyword.deliverypipeline}}을 구성하기 전에 {{site.data.keyword.ghe_short}} 도구 통합 또는 GitHub 도구 통합을 구성하십시오.
+{{site.data.keyword.Bluemix_notm}} 퍼블릭에서 소스 코드로 개발을 시작하려는 경우, {{site.data.keyword.deliverypipeline}}을 구성하기 전에 GitHub 도구 통합 또는 {{site.data.keyword.gitrepos}} 도구 통합을 구성하십시오. {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 코드로 개발을 시작하려는 경우, {{site.data.keyword.deliverypipeline}}을 구성하기 전에 {{site.data.keyword.ghe_short}} 도구 통합 또는 GitHub 도구 통합을 구성하십시오.
+{: tip}
 
 
 ## Alert Notification 구성
@@ -158,7 +161,8 @@ npm 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을 �
      # or
      npm publish --registry "${NPM_RELEASE_URL}"
      ```
-  **팁:** Artifactory 도구 통합을 위한 구성 설정의 레지스트리에 연결하는 데 사용된 URL 및 사용자 신임 정보를 찾을 수 있습니다.
+  Artifactory 도구 통합을 위한 구성 설정의 레지스트리에 연결하는 데 사용된 URL 및 사용자 신임 정보를 찾을 수 있습니다.
+  {: tip}
 
   e. 빌드 작업이 Artifactory 레지스트리에 공개되며 노드 모듈 버전의 형식이 `x.y.z-SNAPSHOT.w`인 경우에는 **스냅샷 모듈 버전 올리기** 선택란을 선택하십시오. 빌드 작업은 해당 작업이 Artifactory 레지스트리에 공개되기 전에 모듈 버전을 자동으로 업데이트합니다. 작업은 로컬 `package.json` 파일 및 npm 레지스트리에서 모듈의 최상위 버전을 선택하며 semver을 사용하여 모듈 버전을 올립니다. 빌드 작업은 변경사항을 SCM 저장소에 전달하지 않습니다.
 
@@ -188,7 +192,8 @@ Maven 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을
      # or
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  **팁:** Artifactory 도구 통합을 위한 구성 설정의 레지스트리에 연결하는 데 사용된 URL 및 사용자 신임 정보를 찾을 수 있습니다.
+  Artifactory 도구 통합을 위한 구성 설정의 레지스트리에 연결하는 데 사용된 URL 및 사용자 신임 정보를 찾을 수 있습니다.
+  {: tip}
 
 1. **저장**을 클릭하십시오. 파이프라인이 실행될 때마다 이 빌드 작업은 Artifactory 도구 통합의 구성 정보를 사용하여 Maven 저장소에 연결합니다.
 
@@ -202,7 +207,8 @@ Artifactory에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [A
 
 {{site.data.keyword.prf_hublong}}은 사용자에게 영향을 주기 전에 문제점을 분리하고 패턴을 식별하며 성능을 개선합니다. 사용자는 전세계의 위치에서 앱을 테스트하고 딜리버리 파이프라인과 통합하며 지속적인 코드 최적화 방법에 대한 통찰을 얻을 수 있습니다.
 
-**참고:** 이 도구 통합은 사전 구성되어 있으며 구성 매개변수를 필요로 하지 않습니다. 이 도구 통합은 재구성할 수 없습니다.
+이 도구 통합은 사전 구성되어 있으며 구성 매개변수를 필요로 하지 않습니다. 이 도구 통합은 재구성할 수 없습니다.
+{: tip}
 
 빌드하면서 앱 상태를 테스트, 모니터하고 개선하려면 {{site.data.keyword.prf_hubshort}} 도구 통합을 추가하십시오.
 
@@ -225,9 +231,9 @@ Artifactory에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [A
 ## Bitbucket 구성
 {: #bitbucket}
 
-bitbucket.org의 기존 또는 새 저장소에 소스 코드를 저장하고 위키, 문제 추적 및 가져오기 요청을 통해 소셜 코딩에 참여합니다. 
+bitbucket.org의 기존 또는 새 저장소에 소스 코드를 저장하고 위키, 문제 추적 및 가져오기 요청을 통해 소셜 코딩에 참여합니다.
 
-팀과 코드에 대해 협업하도록 Bitbucket 구성: 
+팀과 코드에 대해 협업하도록 Bitbucket 구성:
 
 1. DevOps 대시보드에서 **도구 체인**을 클릭하십시오. Bitbucket을 추가하려는 도구 체인을 클릭하십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오.
 
@@ -235,11 +241,28 @@ bitbucket.org의 기존 또는 새 저장소에 소스 코드를 저장하고 �
 
  b. 도구 통합 섹션에서 **Bitbucket**을 클릭하십시오.
 
-   **팁:** {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 이 도구 통합을 구성 중이며 Bitbucket에 액세스하도록 {{site.data.keyword.Bluemix_notm}}에 권한이 부여되지 않은 경우 **권한 부여**를 클릭하여 Bitbucket 웹 사이트로 이동하십시오. 활성 상태의 Bitbucket 세션이 없는 경우 로그인하도록 프롬프트가 표시됩니다. **애플리케이션에 권한 부여**를 클릭하여 {{site.data.keyword.Bluemix_notm}}가 Bitbucket 계정에 액세스하도록 허용하십시오. 활성 Bitbucket 세션이 있지만 최근에 비밀번호를 입력하지 않은 경우, 확인을 위해 Bitbucket 비밀번호를 입력하도록 프롬프트가 표시될 수 있습니다. 
+   {{site.data.keyword.Bluemix_notm}} 퍼블릭에 이 도구 통합을 구성 중이고 Bitbucket에 액세스하는 권한을 {{site.data.keyword.Bluemix_notm}}에 부여하지 않은 경우 **권한 부여**를 클릭하여 Bitbucket 웹 사이트로 이동하십시오. 활성 상태의 Bitbucket 세션이 없는 경우 로그인하도록 프롬프트가 표시됩니다. **액세스 부여**를 클릭하여 {{site.data.keyword.Bluemix_notm}} 도구 체인이 Bitbucket 계정의 다음 파트에 액세스하도록 하십시오.
+   
+   * **계정 정보 읽기**. 기본 사용자 정보를 가져와 사용자 인터페이스를 채웁니다.
+   
+   * **저장소 문제 읽기 및 수정**. {{site.data.keyword.contdelivery_short}}가 파이프라인이 문제에 연결된 커미트를 배치할 때 표시하기 위해 문제를 업데이트할 수 있게 합니다. 
+   
+   * **팀의 프로젝트 설정 읽기 및 팀 프로젝트 내에 포함된 저장소 읽기**. {{site.data.keyword.contdelivery_short}}가 팀이 소유한 저장소와 통합할 수 있게 합니다.
+   
+   * **저장소 및 가져오기 요청 읽기 및 수정**. 사용자가 코드를 요청할 때 {{site.data.keyword.contdelivery_short}}가 샘플 코드를 저장소에 푸시할 수 있게 합니다.
+   
+   * **저장소 관리**. 사용자 요쳥 시 {{site.data.keyword.contdelivery_short}}가 새 저장소를 작성할 수 있게 합니다.
+   
+   * **팀 멤버십 정보 읽기**. {{site.data.keyword.contdelivery_short}}가 새 저장소 작성 시 표시되는 **소유자** 메뉴에 팀 목록을 표시할 수 있게 합니다.
+   
+   * **저장소의 웹훅 읽기 및 수정**. 커미트가 저장소에 푸시될 때 파이프라인이 빌드를 트리거할 수 있게 합니다.
+   {: tip}
+   
+   활성 Bitbucket 세션이 있지만 최근에 비밀번호를 입력하지 않은 경우, 확인을 위해 Bitbucket 비밀번호를 입력하도록 프롬프트가 표시될 수 있습니다.
 
 1. 사용하려는 Bitbucket 서버를 클릭하십시오.
 1. 사용하려는 Bitbucket 저장소가 있는 경우 해당 저장소의 URL을 입력하십시오. 저장소 유형으로 **기존**을 클릭하십시오.
-1. 새 Bitbucket 저장소를 사용하려는 경우, 해당 저장소의 이름을 입력하고 복제 또는 분기 중인 저장소의 URL을 입력한 후 저장소 유형을 선택하십시오. 
+1. 새 Bitbucket 저장소를 사용하려는 경우, 해당 저장소의 이름을 입력하고 복제 또는 분기 중인 저장소의 URL을 입력한 후 저장소 유형을 선택하십시오.
 
  a. 빈 저장소를 작성하려면 **새로 작성**을 클릭하십시오.
 
@@ -247,18 +270,19 @@ bitbucket.org의 기존 또는 새 저장소에 소스 코드를 저장하고 �
 
  c. 가져오기 요청을 통해 변경사항을 제공할 수 있도록 저장소를 분기하려면 **분기**를 클릭하십시오.
 
-1. 서버에 개인용 저장소를 작성하려면 **이 저장소를 개인용으로 설정** 선택란을 선택하십시오. 
-1. Bitbucket Issues를 문제 추적에 대해 사용하려면 **Bitbucket Issues 사용** 선택란을 선택하십시오. 
+1. 서버에 개인용 저장소를 작성하려면 **이 저장소를 개인용으로 설정** 선택란을 선택하십시오.
+1. Bitbucket Issues를 문제 추적에 대해 사용하려면 **Bitbucket Issues 사용** 선택란을 선택하십시오.
 1. 커미트에 태그 및 주석을 작성하고 커미트에서 참조하는 이슈에 대한 레이블과 주석을 작성하여 코드 변경사항의 배치를 추적하려면, **코드 변경사항의 배치 추적** 선택란을 선택하십시오. 자세한 정보는 [Track where your code is deployed with toolchains![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}를 참조하십시오.
 1. **통합 작성**을 클릭하십시오.
-1. 도구 체인에서 작업하려는 Bitbucket 저장소에 대한 카드를 클릭하십시오. Bitbucket 웹 사이트가 열리며 저장소의 컨텐츠를 볼 수 있습니다. 
-1. Bitbucket Issues가 사용으로 설정된 경우 **Bitbucket Issues**를 클릭하여 여십시오. 도구 체인에 여러 Bitbucket 저장소가 포함되어 있는 경우에도 전체 도구 체인에 대해 Bitbucket Issues의 이 인스턴스를 사용할 수 있습니다.     
+1. 도구 체인에서 작업하려는 Bitbucket 저장소에 대한 카드를 클릭하십시오. Bitbucket 웹 사이트가 열리며 저장소의 컨텐츠를 볼 수 있습니다.
+1. Bitbucket Issues가 사용으로 설정된 경우 **Bitbucket Issues**를 클릭하여 여십시오. 도구 체인에 여러 Bitbucket 저장소가 포함되어 있는 경우에도 전체 도구 체인에 대해 Bitbucket Issues의 이 인스턴스를 사용할 수 있습니다.    
 
-**참고:** 링크 중인 저장소에 대해 소유자 또는 마스터 권한이 없으면 웹훅을 사용할 수 없으므로 통합이 제한됩니다. 웹훅은 커미트가 저장소에 푸시될 때 파이프라인을 자동으로 실행하는 데 필요합니다. 웹훅이 없으면 파이프라인을 수동으로 시작해야 합니다.
+링크 중인 저장소에 대해 소유자 또는 마스터 권한이 없으면 웹훅을 사용할 수 없으므로 통합이 제한됩니다. 웹훅은 커미트가 저장소에 푸시될 때 파이프라인을 자동으로 실행하는 데 필요합니다. 웹훅이 없으면 파이프라인을 수동으로 시작해야 합니다.
+{: tip}
 
 ### Bitbucket에 대해 자세히 알아보기
 
-Bitbucket에 대해 자세히 알아보려면 IBM Cloud Garage Method의 [Bitbucket 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/code/tool_bitbucket/){: new_window}를 참조하십시오. 
+Bitbucket에 대해 자세히 알아보려면 IBM Cloud Garage Method의 [Bitbucket 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/code/tool_bitbucket/){: new_window}를 참조하십시오.
 
 
 ## Cloud Event Management 추가
@@ -266,7 +290,8 @@ Bitbucket에 대해 자세히 알아보려면 IBM Cloud Garage Method의 [Bitbuc
 
 {{site.data.keyword.evtmgt_full}}는 서비스, 애플리케이션 및 인프라에서 발생하는 문제점의 통합 보기를 제공합니다. 보다 효율적으로 문제점을 해결할 수 있도록 실시간 사건 관리를 설정할 수 있습니다.
 
-**참고:** 이 도구 통합은 사전 구성되어 있으며 구성 매개변수를 필요로 하지 않습니다. 이는 재구성할 수 없습니다.
+이 도구 통합은 사전 구성되어 있으며 구성 매개변수를 필요로 하지 않습니다. 이는 재구성할 수 없습니다.
+{: tip}
 
 DevOps 팀이 안정적 운영 상태, 서비스 품질 및 지속적 개선 목표를 달성하도록 도움을 주려면 도구 체인에 Cloud Event Management를 추가하십시오.
 
@@ -309,11 +334,11 @@ Cloud Event Management에 대해 자세히 알아보려면 IBM Cloud Garage Meth
 1. **통합 작성**을 클릭하여 도구 체인에 {{site.data.keyword.deliverypipeline}}을 추가하십시오.
 1. **{{site.data.keyword.deliverypipeline}}**을 클릭하여 파이프라인을 보고 이를 구성하십시오. 파이프라인 구성의 기본사항을 알아보려면 [파이프라인 빌드 및 배치](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}의 내용을 참조하십시오.
 
-  **팁:** 커미트를 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소(repo)에 푸시할 때 파이프라인을 자동으로 실행하려면 다음 단계를 따르십시오.
+  커미트를 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소에 푸시할 때 파이프라인을 자동으로 실행하려면 다음 단계를 따르십시오.
 
    a. 파이프라인의 스테이지를 정의하기 전에 도구 체인에 대해 GitHub, {{site.data.keyword.ghe_short}} 또는 {{site.data.keyword.gitrepos}}를 구성하십시오. 파이프라인 단계에는 사용하는 저장소의 Git URL이 필요합니다. 각 파이프라인 단계는 도구 체인과 연관된 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소 중 하나만 참조할 수 있습니다. GitHub 구성에 대한 지시사항은 [GitHub](#github) 섹션을 참조하십시오. 데디케이티드 {{site.data.keyword.ghe_short}} 구성에 대한 지시사항은 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated/index.html){: new_window}를 참조하십시오. {{site.data.keyword.gitrepos}} 구성에 대한 지시사항은 [{{site.data.keyword.gitrepos}}](#gitbluemix) 섹션을 참조하십시오.
 
-   b. 웹훅을 사용하십시오. 웹훅이 없으면 파이프라인을 수동으로만 실행할 수 있습니다. GitHub 또는 {{site.data.keyword.ghe_short}} 저장소에 연결할 때 웹훅을 사용하려면, 관리 권한이 필요합니다. {{site.data.keyword.gitrepos}} 저장소에 연결하려면 마스터 또는 소유자 권한이 있어야 합니다. 
+   b. 웹훅을 사용하십시오. 웹훅이 없으면 파이프라인을 수동으로만 실행할 수 있습니다. GitHub 또는 {{site.data.keyword.ghe_short}} 저장소에 연결할 때 웹훅을 사용하려면, 관리 권한이 필요합니다. {{site.data.keyword.gitrepos}} 저장소에 연결하려면 마스터 또는 소유자 권한이 있어야 합니다.
 
 1. 선택사항: {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 도구 체인을 사용 중이고 Sauce Labs에서 앱에 대한 테스트를 실행하도록 하려면 Sauce Labs 테스트 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을 구성하십시오. 테스트 작업을 구성하는 데 관한 지시사항은 [파이프라인에서 Sauce Labs 테스트 작업 구성](#config_saucelabs) 절을 참조하십시오.
 
@@ -330,7 +355,8 @@ Sauce Labs 테스트 작업을 추가하도록 {{site.data.keyword.deliverypipel
 
 1. 단계를 구성하십시오. **ENVIRONMENT PROPERTIES** 탭에서 CF_APP_NAME 특성을 작성하십시오.
 
-  **팁:** SAUCE_USERNAME 및 SAUCE_ACCESS_KEY 환경 변수로 테스트 작업 스크립트에서 Sauce Labs 사용자 이름 및 액세스 키를 사용할 수 있습니다. 테스트를 작성하는 경우 Sauce Labs로 인증하는 데 환경 변수를 사용해야 합니다.
+  SAUCE_USERNAME 및 SAUCE_ACCESS_KEY 환경 변수로 테스트 작업 스크립트에서 Sauce Labs 사용자 이름 및 액세스 키를 사용할 수 있습니다. 테스트를 작성하는 경우 Sauce Labs로 인증하는 데 환경 변수를 사용해야 합니다.
+  {: tip}
 
 1. 배치 작업을 구성하십시오. **배치 스크립트** 필드에 다음 명령을 포함시키십시오. `export CF_APP_NAME="$CF_APP"`. 이 명령은 앱 이름을 환경 특성으로서 내보냅니다.
 1. 테스트 작업을 구성하십시오. 다음 이미지의 값은 예입니다. **서비스 인스턴스**, **대상**, **조직** 및 **영역** 필드는 사용 중인 Sauce Labs 사용자 이름, 지역, 조직 및 영역으로 채워집니다.  
@@ -340,7 +366,8 @@ Sauce Labs 테스트 작업을 추가하도록 {{site.data.keyword.deliverypipel
 
   b. 서비스 인스턴스에 대해, 도구 체인에 Sauce Labs를 구성할 때 사용한 Sauce Labs 사용자 이름을 선택하십시오.
 
-   **팁:** 도구 체인에 Sauce Labs를 구성할 때 사용한 사용자 이름 및 액세스 키를 보려면 **구성**을 클릭하십시오.
+   도구 체인에 Sauce Labs를 구성할 때 사용한 사용자 이름 및 액세스 키를 보려면 **구성**을 클릭하십시오.
+   {: tip}
 
   c. **테스트 실행 명령** 필드에 테스트에 필요한 종속 항목을 설치하는 명령을 입력한 후 테스트를 실행하십시오. 예를 들어, Node.js 앱의 경우 다음 명령을 입력할 수 있습니다.
      ```
@@ -354,7 +381,7 @@ Sauce Labs 테스트 작업을 추가하도록 {{site.data.keyword.deliverypipel
 
 ### Delivery Pipeline에 대해 자세히 알아보기
 
-{{site.data.keyword.deliverypipeline}}에 대해 자세히 알아보려면 [파이프라인에 대한 작업](/docs/services/ContinuousDelivery/pipeline_working.html){: new_window} 및 IBM Cloud Garage Method의 [Delivery Pipeline 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window}를 참조하거나 다음 튜토리얼을 활용하십시오. 
+{{site.data.keyword.deliverypipeline}}에 대해 자세히 알아보려면 [파이프라인에 대한 작업](/docs/services/ContinuousDelivery/pipeline_working.html){: new_window} 및 IBM Cloud Garage Method의 [Delivery Pipeline 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window}를 참조하거나 다음 튜토리얼을 활용하십시오.
 
   * [파이프라인 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:new_window}
 
@@ -366,7 +393,8 @@ Sauce Labs 테스트 작업을 추가하도록 {{site.data.keyword.deliverypipel
 
 {{site.data.keyword.DRA_full}}는 단위 테스트, 기능 테스트 및 코드 검사 도구로부터의 결과를 수집하고 분석하여 코드가 배치 프로세스의 지정된 게이트에서 사전 정의된 기준을 충족하는지 여부를 판별합니다. 코드가 기준을 충족하지 않거나 기준을 초과하면 위험이 표출되지 않도록 배치가 중지됩니다. {{site.data.keyword.DRA_short}}를 Continuous Delivery 환경의 안전망으로서 또는 품질 표준을 구현하고 향상시키는 방법으로서 사용할 수 있습니다.
 
- **참고:** 이 도구 통합은 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서만 사용 가능합니다. 이는 사전 구성되어 있으며 구성 매개변수를 필요로 하지 않습니다. 이 도구 통합은 재구성할 수 없습니다.
+ 이 도구 통합은 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서만 사용 가능합니다. 이는 사전 구성되어 있으며 구성 매개변수를 필요로 하지 않습니다. 이 도구 통합은 재구성할 수 없습니다.
+ {: tip}
 
 {{site.data.keyword.DRA_short}}를 추가하여 배치를 모니터하고 위험이 표출되기 전에 위험을 식별함으로써 {{site.data.keyword.Bluemix_notm}}의 코드 품질을 유지하고 향상시킬 수 있습니다.
 
@@ -396,7 +424,8 @@ Sauce Labs 테스트 작업을 추가하도록 {{site.data.keyword.deliverypipel
 
 Eclipse Orion {{site.data.keyword.webide}}는 소스 제어 태스크를 작성, 편집, 실행, 디버그 및 완료할 수 있는 통합된 웹 기반 환경입니다. 편집에서 실행, 제출 및 배치까지 원활하게 이동할 수 있습니다.
 
- **참고:** 이 도구 통합은 사전 구성됩니다. 구성 매개변수가 필요 없으며 재구성할 수 없습니다.
+ 이 도구 통합은 사전 구성됩니다. 구성 매개변수가 필요 없으며 재구성할 수 없습니다.
+ {: tip}
 
 소스 제어 태스크를 완료하려면 Eclipse Orion {{site.data.keyword.webide}} 도구 통합을 추가하십시오.
 
@@ -412,7 +441,7 @@ Eclipse Orion {{site.data.keyword.webide}}는 소스 제어 태스크를 작성,
 
 ### Eclipse Orion Web IDE에 대해 자세히 알아보기
 
-Eclipse Orion {{site.data.keyword.webide}}에 대해 자세히 알아보려면, [Eclipse Orion {{site.data.keyword.webide}}로 코드 편집](/docs/services/ContinuousDelivery/web_ide.html){: new_window} 및 IBM Cloud Garage Method에서 [Eclipse Orion {{site.data.keyword.webide}} 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window}를 참조하거나 다음 튜토리얼을 활용하십시오. 
+Eclipse Orion {{site.data.keyword.webide}}에 대해 자세히 알아보려면, [Eclipse Orion {{site.data.keyword.webide}}로 코드 편집](/docs/services/ContinuousDelivery/web_ide.html){: new_window} 및 IBM Cloud Garage Method에서 [Eclipse Orion {{site.data.keyword.webide}} 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window}를 참조하거나 다음 튜토리얼을 활용하십시오.
 
   * ["Cloud Foundry 앱 개발" 도구 체인을 사용하여 첫 번째 도구 체인 작성 및 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
@@ -431,7 +460,8 @@ Eclipse Orion {{site.data.keyword.webide}}에 대해 자세히 알아보려면, 
 
 도구 체인이 있으며 도구 체인의 Git 저장소를 {{site.data.keyword.gitrepos}}에 마이그레이션하려면 다음 단계를 따르십시오.
 
-**참고**: 이 지시사항은 {{site.data.keyword.gitrepos}}에 마이그레이션하려는 Git 저장소에 이미 포함된 도구 체인에 적용됩니다. 도구 체인에 다른 유형의 Git 저장소 추가에 대한 자세한 정보는 [GitHub 구성](#github), [{{site.data.keyword.Bluemix_notm}} 데디케이티드에서 GitHub Enterprise 및 Issues 구성](#configghe) 및 [GitLab 구성](#gitlab) 섹션을 참조하십시오. 
+이 지시사항은 {{site.data.keyword.gitrepos}}에 마이그레이션할 Git 저장소에 이미 포함된 도구 체인에 적용됩니다. 도구 체인에 다른 유형의 Git 저장소 추가에 대한 자세한 정보는 [GitHub 구성](#github), [{{site.data.keyword.Bluemix_notm}} 데디케이티드에서 GitHub Enterprise 및 Issues 구성](#configghe) 및 [GitLab 구성](#gitlab) 섹션을 참조하십시오.
+{: tip}
 
 1. DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오.
 1. **도구 추가**를 클릭하십시오.
@@ -441,7 +471,8 @@ Eclipse Orion {{site.data.keyword.webide}}에 대해 자세히 알아보려면, 
 1. 커미트의 태그와 주석 및 커미트에서 참조하는 문제의 레이블과 주석을 작성하여 코드 변경사항의 배치를 추적하려면 **코드 변경사항의 배치 추적** 선택란을 선택하십시오. 자세한 정보는 [Track where your code is deployed with toolchains![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}를 참조하십시오.
 1. **통합 작성**을 클릭하십시오.
 
-**팁:** Git 저장소를 복제한 후 도구 체인에서 이를 제거할 수 있습니다.
+Git 저장소를 복제한 후 도구 체인에서 이를 제거할 수 있습니다.
+{: tip}
 
 도구 체인이 있고 여기에 {{site.data.keyword.gitrepos}}을 추가하는 경우 다음 단계를 따르십시오.    
 
@@ -460,7 +491,8 @@ Eclipse Orion {{site.data.keyword.webide}}에 대해 자세히 알아보려면, 
 1. **통합 작성**을 클릭하십시오.
 1. 작업할 Git 저장소의 카드를 클릭하십시오. 프로젝트 개요 페이지가 열립니다.    
 
-**참고:** 링크 중인 저장소에 대해 마스터 또는 소유자 권한이 없으면 웹훅을 사용할 수 없으므로 통합이 제한됩니다. 웹훅은 커미트가 저장소에 푸시될 때 파이프라인을 자동으로 실행하는 데 필요합니다. 웹훅이 없으면 파이프라인을 수동으로 시작해야 합니다.
+링크 중인 저장소에 대해 소유자 또는 마스터 권한이 없으면 웹훅을 사용할 수 없으므로 통합이 제한됩니다. 웹훅은 커미트가 저장소에 푸시될 때 파이프라인을 자동으로 실행하는 데 필요합니다. 웹훅이 없으면 파이프라인을 수동으로 시작해야 합니다.
+{: tip}
 
 ### Git Repos and Issue Tracking에 대해 자세히 알아보기
 
@@ -485,11 +517,12 @@ GitHub.com의 새 저장소 또는 기존 저장소에서 소스 코드를 관�
 1. GitHub 저장소에 소스 코드를 저장 중인 경우 구성 가능한 통합 섹션에서 **GitHub**를 클릭하십시오. {{site.data.keyword.Bluemix_notm}} 퍼블릭에 이 도구 통합을 구성 중이고 GitHub에 액세스하는 권한을 {{site.data.keyword.Bluemix_notm}}에 부여하지 않은 경우 **권한 부여**를 클릭하여 GitHub 웹 사이트로 이동하십시오. 활성 GitHub 세션이 없으면 로그인을 요구하는 프롬프트가 표시됩니다. **애플리케이션에 권한 부여**를 클릭하여 {{site.data.keyword.Bluemix_notm}}에서 사용자의 GitHub 계정에 액세스할 수 있도록 허용하십시오. 활성 GitHub 세션이 있지만 최근에 비밀번호를 입력하지 않은 경우 확인을 위해 GitHub 비밀번호 입력을 요구하는 프롬프트가 표시될 수 있습니다.
 1. 자체 {{site.data.keyword.ghe_short}} 서버의 저장소를 사용 중인 경우 구성 가능한 통합 섹션에서 **사용자 정의 서버 추가**를 클릭하십시오.
 
- **중요**: {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경에서 대상 Git 서버로 네트워크 액세스가 설정되어 있어야 합니다. 공용 인터넷에서 GitHub 서버를 사용할 수 없거나 호스트 이름을 공용 DNS(Domain Name Server)에서 해석할 수 없는 경우 [지원 티켓을 개설하십시오](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. 지원 티켓을 사용하여 네트워크 라우트를 열거나 DNS 설정을 업데이트하도록 요청을 제출할 수 있습니다. 
+ {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경에서 대상 Git 서버로 네트워크 액세스가 설정되어 있어야 합니다. 공용 인터넷에서 GitHub 서버를 사용할 수 없거나 호스트 이름을 공용 DNS(Domain Name Server)에서 해석할 수 없는 경우 [지원 티켓을 개설하십시오](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. 지원 티켓을 사용하여 네트워크 라우트를 열거나 DNS 설정을 업데이트하도록 요청을 제출할 수 있습니다.
+ {: tip}
 
  사용자 정의 GitHub 서버의 제목을 입력하고 서버의 루트 URL을 지정하십시오. 개인 액세스 토큰을 입력한 후 **사용자 정의 통합 저장**을 클릭하십시오.
 
-  **팁**: 개인 액세스 토큰이 없으면 작성할 수 있습니다.
+  개인 액세스 토큰이 없으면 작성할 수 있습니다.
 
      a. GitHub 페이지에서 프로파일 아이콘을 클릭한 후 **설정**을 클릭하십시오.
 
@@ -529,15 +562,17 @@ GitHub.com의 새 저장소 또는 기존 저장소에서 소스 코드를 관�
 1. **통합 작성**을 클릭하십시오.
 1. 작업할 GitHub 또는 {{site.data.keyword.ghe_short}} 저장소의 카드를 클릭하십시오. 선택한 저장소에 따라 저장소의 컨텐츠를 볼 수 있는 GitHub 웹 사이트 또는 회사의 {{site.data.keyword.ghe_short}} 저장소가 열립니다.
 
-  **팁:** Eclipse Orion {{site.data.keyword.webide}}의 통합된 소스 코드 관리 도구를 사용하여 GitHub 저장소를 편집하고 작업공간에서 앱을 배치할 수 있습니다.
+  Eclipse Orion {{site.data.keyword.webide}}의 통합된 소스 코드 관리 도구를 사용하여 GitHub 저장소를 편집하고 작업공간에서 앱을 배치할 수 있습니다.
+  {: tip}
 
 1. GitHub Issues를 사용한 경우에는 **GitHub Issues**를 클릭하여 이를 여십시오. 도구 체인에 여러 개의 GitHub 또는 {{site.data.keyword.ghe_short}} 저장소가 포함되어 있어도 전체 도구 체인에 대해 GitHub Issues의 이 인스턴스를 사용할 수 있습니다.    
 
-**참고:** 링크 중인 저장소에 대해 관리자 권한이 없으면 웹훅을 사용할 수 없으므로 통합이 제한됩니다. 웹훅은 커미트가 저장소에 푸시될 때 파이프라인을 자동으로 실행하는 데 필요합니다. 웹훅이 없으면 파이프라인을 수동으로 시작해야 합니다.
+링크 중인 저장소에 대해 관리자 권한이 없으면 웹훅을 사용할 수 없으므로 통합이 제한됩니다. 웹훅은 커미트가 저장소에 푸시될 때 파이프라인을 자동으로 실행하는 데 필요합니다. 웹훅이 없으면 파이프라인을 수동으로 시작해야 합니다.
+{: tip}
 
 ### GitHub에 대해 자세히 알아보기
 
-GitHub에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [GitHub 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/code/tool_github/){: new_window} 및 [GitHub Issues 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}를 참조하거나 다음 튜토리얼을 활용하십시오. 
+GitHub에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [GitHub 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/code/tool_github/){: new_window} 및 [GitHub Issues 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}를 참조하거나 다음 튜토리얼을 활용하십시오.
 
  * ["Cloud Foundry 앱 개발 및 테스트" 도구 체인 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
 
@@ -549,9 +584,10 @@ GitHub에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [GitHub
 ## {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 GitHub Enterprise 및 Issues 구성
 {: #configghe}
 
- **참고:** 다음 지시사항은 {{site.data.keyword.ghe_short}}용 {{site.data.keyword.Bluemix_notm}} 데디케이티드에 적용됩니다. {{site.data.keyword.ghe_short}}의 자체 관리 버전을 사용 중이면 일부 단계가 내부 프로시저에 따라 다를 수 있습니다.
+ 다음 지시사항은 {{site.data.keyword.ghe_short}}용 {{site.data.keyword.Bluemix_notm}} 데디케이티드에 적용됩니다. {{site.data.keyword.ghe_short}}의 자체 관리 버전을 사용 중이면 일부 단계가 내부 프로시저에 따라 다를 수 있습니다.
+ {: tip}
 
-{{site.data.keyword.ghe_long}}는 Git 저장소를 위한 온프레미스 웹 기반 호스팅 서비스입니다. 데디케이티드 {{site.data.keyword.ghe_short}}는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 고객 전용입니다. GitHub Issues는 작업과 플랜을 한 위치에 보관하는 추적 도구입니다. 개발 저장소에 통합되므로 중요한 태스크에 집중할 수 있습니다. 전용 {{site.data.keyword.ghe_short}} 및 GitHub Issues에 대한 자세한 정보는 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated/index.html){: new_window} 및 IBM Cloud Garage Method에서 [GitHub Issues 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}를 참조하십시오. 
+{{site.data.keyword.ghe_long}}는 Git 저장소를 위한 온프레미스 웹 기반 호스팅 서비스입니다. 데디케이티드 {{site.data.keyword.ghe_short}}는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 고객 전용입니다. GitHub Issues는 작업과 플랜을 한 위치에 보관하는 추적 도구입니다. 개발 저장소에 통합되므로 중요한 태스크에 집중할 수 있습니다. 전용 {{site.data.keyword.ghe_short}} 및 GitHub Issues에 대한 자세한 정보는 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated/index.html){: new_window} 및 IBM Cloud Garage Method에서 [GitHub Issues 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}를 참조하십시오.
 
 회사의 [{{site.data.keyword.Bluemix_notm}} 데디케이티드](/docs/dedicated/index.html#dedicated){: new_window} 인스턴스에서 소스 코드를 관리할 수 있도록 {{site.data.keyword.ghe_short}}를 도구 체인의 도구 통합으로 구성할 수 있습니다.
 
@@ -583,11 +619,13 @@ GitHub에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [GitHub
 1. **통합 작성**을 클릭하십시오.
 1. 작업할 {{site.data.keyword.ghe_short}} 저장소의 카드를 클릭하십시오. 회사의 {{site.data.keyword.ghe_short}} 저장소가 열립니다.
 
-  **팁:** Eclipse Orion {{site.data.keyword.webide}}의 통합된 소스 코드 관리 도구를 사용하여 {{site.data.keyword.ghe_short}} 저장소를 편집하고 작업공간에서 앱을 배치할 수 있습니다.
+  Eclipse Orion {{site.data.keyword.webide}}의 통합된 소스 코드 관리 도구를 사용하여 {{site.data.keyword.ghe_short}} 저장소를 편집하고 작업공간에서 앱을 배치할 수 있습니다.
+  {: tip}
 
 1. GitHub Issues를 사용한 경우에는 **GitHub Issues**를 클릭하십시오. 도구 체인에 여러 개의 GitHub 저장소가 포함되어 있어도 전체 도구 체인에 대해 GitHub Issues의 이 인스턴스를 사용할 수 있습니다.    
 
-**참고:** 링크 중인 저장소에 대해 관리자 권한이 없으면 웹훅을 사용할 수 없으므로 통합이 제한됩니다. 웹훅은 커미트가 저장소에 푸시될 때 파이프라인을 자동으로 실행하는 데 필요합니다. 웹훅이 없으면 파이프라인을 수동으로 시작해야 합니다.
+링크 중인 저장소에 대해 관리자 권한이 없으면 웹훅을 사용할 수 없으므로 통합이 제한됩니다. 웹훅은 커미트가 저장소에 푸시될 때 파이프라인을 자동으로 실행하는 데 필요합니다. 웹훅이 없으면 파이프라인을 수동으로 시작해야 합니다.
+{: tip}
 
 
 ## GitLab 구성
@@ -602,11 +640,12 @@ GitLab.com의 새 저장소 또는 기존 저장소에서 소스 코드를 관�
 1. GitLab 저장소에 소스 코드를 저장 중인 경우 구성 가능한 통합 섹션에서 **GitLab**을 클릭하십시오. {{site.data.keyword.Bluemix_notm}} 퍼블릭에 이 도구 통합을 구성 중이고 GitLab에 액세스하는 권한을 {{site.data.keyword.Bluemix_notm}}에 부여하지 않은 경우 **권한 부여**를 클릭하여 GitLab 웹 사이트로 이동하십시오. 활성 GitLab 세션이 없으면 로그인을 요구하는 프롬프트가 표시됩니다. **애플리케이션에 권한 부여**를 클릭하여 {{site.data.keyword.Bluemix_notm}}에서 사용자의 GitLab 계정에 액세스할 수 있도록 허용하십시오. 활성 GitLab 세션이 있지만 최근에 비밀번호를 입력하지 않은 경우 확인을 위해 GitLab 비밀번호 입력을 요구하는 프롬프트가 표시될 수 있습니다.
 1. 자체 GitLab 서버의 저장소를 사용 중인 경우 구성 가능한 통합 섹션에서 **사용자 정의 서버 추가**를 클릭하십시오.
 
- **중요**: {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경에서 대상 GitLab 서버로 네트워크 액세스가 설정되어 있어야 합니다. 
+ {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경에서 대상 GitLab 서버로 네트워크 액세스가 설정되어 있어야 합니다.
+ {: tip}
 
  사용자 정의 GitLab 서버의 제목을 입력하고 서버의 루트 URL을 지정하십시오. 개인 액세스 토큰을 입력한 후 **사용자 정의 통합 저장**을 클릭하십시오.
 
-  **팁**: 개인 액세스 토큰이 없으면 작성할 수 있습니다.
+  개인 액세스 토큰이 없으면 작성할 수 있습니다.
 
      a. GitLab 페이지에서 프로파일 아이콘을 클릭한 후 **설정**을 클릭하십시오.
 
@@ -643,11 +682,13 @@ GitLab.com의 새 저장소 또는 기존 저장소에서 소스 코드를 관�
 1. **통합 작성**을 클릭하십시오.
 1. 작업할 GitLab 저장소의 카드를 클릭하십시오. 선택한 저장소에 따라 저장소의 컨텐츠를 볼 수 있는 GitLab 웹 사이트 또는 회사의 GitLab 저장소가 열립니다.
 
-  **팁:** Eclipse Orion {{site.data.keyword.webide}}의 통합된 소스 코드 관리 도구를 사용하여 GitLab 저장소를 편집하고 작업공간에서 앱을 배치할 수 있습니다.
+  Eclipse Orion {{site.data.keyword.webide}}의 통합된 소스 코드 관리 도구를 사용하여 GitLab 저장소를 편집하고 작업공간에서 앱을 배치할 수 있습니다.
+  {: tip}
 
 1. GitLab Issues를 사용한 경우에는 **GitLab Issues**를 클릭하여 이를 여십시오. 도구 체인에 여러 개의 GitLab 저장소가 포함되어 있어도 전체 도구 체인에 대해 GitLab Issues의 이 인스턴스를 사용할 수 있습니다.    
 
-**참고:** 링크 중인 저장소에 대해 소유자 또는 마스터 권한이 없으면 웹훅을 사용할 수 없으므로 통합이 제한됩니다. 웹훅은 커미트가 저장소에 푸시될 때 파이프라인을 자동으로 실행하는 데 필요합니다. 웹훅이 없으면 파이프라인을 수동으로 시작해야 합니다.
+링크 중인 저장소에 대해 소유자 또는 마스터 권한이 없으면 웹훅을 사용할 수 없으므로 통합이 제한됩니다. 웹훅은 커미트가 저장소에 푸시될 때 파이프라인을 자동으로 실행하는 데 필요합니다. 웹훅이 없으면 파이프라인을 수동으로 시작해야 합니다.
+{: tip}
 
 ### GitLab에 대해 자세히 알아보기
 
@@ -659,7 +700,8 @@ GitLab에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [GitLab
 
 Jenkins는 지속적으로 소프트웨어를 빌드하고 테스트하는 오픈 소스, 서버 기반 도구이며, 지속적 통합 및 지속적 딜리버리의 사례를 지원합니다.
 
-**중요:** Jenkins 도구 통합을 작성하려면 우선 Jenkins 서버가 있어야 합니다.
+Jenkins 도구 통합을 작성하려면 먼저 Jenkins 서버가 있어야 합니다.
+{: tip}
 
 Jenkins 도구 통합을 사용하면 Slack 및 PagerDuty와 같은 도구 체인의 기타 도구에 Jenkins 작업 알림을 전송할 수 있습니다. 배치에서 코드를 추적하기 위해 배치 메시지를 Git 커미트 및 관련 Git 또는 JIRA issues에 추가할 수 있습니다. 또한 Toolchain Connections 페이지에서 배치를 볼 수도 있습니다. 사용자는 {{site.data.keyword.DRA_short}}에 테스트 결과를 피드하고 자동화된 품질 게이트를 추가하며 배치 위험성을 추적할 수 있습니다.
 
@@ -838,7 +880,8 @@ Maven 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을
      # or
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  **팁:** Nexus 도구 통합을 위한 구성 설정의 레지스트리에 연결하는 데 사용된 URL 및 사용자 신임 정보를 찾을 수 있습니다.
+  Nexus 도구 통합을 위한 구성 설정의 레지스트리에 연결하는 데 사용된 URL 및 사용자 신임 정보를 찾을 수 있습니다.
+  {: tip}
 
 1. **저장**을 클릭하십시오. 파이프라인이 실행될 때마다 이 빌드 작업은 Nexus 도구 통합의 구성 정보를 사용하여 Maven 저장소에 연결합니다.
 
@@ -924,7 +967,7 @@ PagerDuty에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Pag
 
 IBM Rational Team Concert&trade;는 반복 계획, 변경 관리, 결함 추적, 소스 제어, 빌드 자동화 및 보고를 포함하는 개발 태스크를 통합하는 팀 협업 도구입니다.
 
-개발 환경에서 DevOps 접근 방법 및 지속적 딜리버리의 사례로 Rational Team Concert를 구성하십시오. 
+개발 환경에서 DevOps 접근 방법 및 지속적 딜리버리의 사례로 Rational Team Concert를 구성하십시오.
 
 1. 도구 체인을 작성할 때 이 도구 통합을 구성하는 경우 구성 가능한 통합 섹션에서 **Rational Team Concert**를 클릭하십시오.
 1. 도구 체인이 있고 여기에 이 도구 통합을 추가하는 경우 DevOps 대시보드의 도구 체인 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.  
@@ -964,7 +1007,8 @@ Rational Team Concert에 대해 자세히 알아보려면 IBM Cloud Garage Metho
 
 Sauce Labs는 기능 단위 테스트를 실행합니다. {{site.data.keyword.deliverypipeline}}에서 Sauce Labs 테스트 스위트가 테스트 작업으로 구성되어 있는 경우, 이 테스트 스위트는 지속적 딜리버리 프로세스의 일부로 웹 또는 모바일 앱에 대해 테스트를 실행할 수 있습니다. 이러한 테스트는 프로젝트의 중요한 플로우 제어를 제공할 수 있으며 잘못된 코드의 배치를 방지하는 게이트 역할을 합니다.
 
- **참고:** 이 도구 통합은 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서만 사용 가능합니다.
+ 이 도구 통합은 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서만 사용 가능합니다.
+ {: tip}
 
 여러 운영 체제 및 브라우저에서 자동화된 기능 테스트를 실행하도록 Sauce Labs를 구성하십시오. 그러면 사용자가 웹 사이트 또는 애플리케이션을 사용할 가능성이 있는 방법을 에뮬레이트할 수 있습니다.
 
@@ -980,11 +1024,12 @@ Sauce Labs는 기능 단위 테스트를 실행합니다. {{site.data.keyword.de
 1. **통합 작성**을 클릭하십시오.
 1. **Sauce Labs**를 클릭하여 saucelabs.com으로 이동하고 도구 체인의 테스트 활동을 보십시오.
 
- **팁:** {{site.data.keyword.deliverypipeline}}에 Sauce Labs 테스트 작업을 추가한 경우 해당 서비스 인스턴스를 선택할 수 있습니다. 파이프라인에서 테스트 작업을 구성하기 위한 지시사항은 [파이프라인에서 Sauce Labs 테스트 작업 구성](#config_saucelabs) 절을 참조하십시오.
+ {{site.data.keyword.deliverypipeline}}에 Sauce Labs 테스트 작업을 추가한 경우 서비스 인스턴스를 선택할 수 있습니다. 파이프라인에서 테스트 작업을 구성하기 위한 지시사항은 [파이프라인에서 Sauce Labs 테스트 작업 구성](#config_saucelabs) 절을 참조하십시오.
+ {: tip}
 
 ### Sauce Labs에 대해 자세히 알아보기
 
-Sauce Labs에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Sauce Labs 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: new_window}를 참조하거나 다음 튜토리얼을 활용하십시오. 
+Sauce Labs에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Sauce Labs 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: new_window}를 참조하거나 다음 튜토리얼을 활용하십시오.
 
   * ["Cloud Foundry에서 마이크로서비스 개발 및 테스트" 도구 체인 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
 
@@ -993,7 +1038,8 @@ Sauce Labs에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Sa
 ## Slack 구성
 {: #slack}
 
-**중요:** 공용 Slack 채널에 게시되는 알림은 팀의 모든 구성원에게 표시됩니다. 컨텐츠를 게시한 사람이 해당 컨텐츠에 대한 책임을 집니다.
+공용 Slack 채널에 게시되는 알림은 팀의 모든 구성원에게 표시됩니다. 컨텐츠를 게시한 사람이 해당 컨텐츠에 대한 책임을 집니다.
+{: tip}
 
 Slack은 클라우드 기반의 실시간 메시징 및 알림 시스템입니다. Slack은 팀 협업을 위해 이메일 대신 사용할 수 있는 대화성이 뛰어난 지속적 대화를 제공합니다. 전용 채널이나 작업과 직접 관련이 있는 채널 세트에서 팀과 통신할 수 있습니다. 채널을 통해 또는 둘 이상의 사용자 간의 직접 메시지에서 파일 및 이미지를 공유할 수도 있습니다. 직접 메시지 및 채널에서의 통신은 검색이 가능하도록 유지됩니다.
 
@@ -1008,19 +1054,21 @@ Slack은 클라우드 기반의 실시간 메시징 및 알림 시스템입니�
 
 1. 수신 웹훅으로서 Slack에 의해 생성된 Slack 웹훅 URL을 수신하십시오. 도구 통합에서 도구 체인에 대한 알림을 받으려면 Slack 채널에 대한 Slack 웹훅 URL이 필요합니다. 웹훅 작성 또는 찾기에 대한 지시사항은 [Incoming Webhooks![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://api.slack.com/incoming-webhooks){: new_window}를 참조하십시오.
 
- **팁:** Slack 채널에 대한 API 키를 사용하여 도구 통합에서 도구 체인에 대한 알림을 받은 경우에는 웹훅을 대신 사용하도록 구성을 업데이트해야 합니다.
+ Slack 채널에 대한 API 키를 사용하여 도구 통합에서 도구 체인에 대한 알림을 받은 경우에는 웹훅을 대신 사용하도록 구성을 업데이트해야 합니다.
+ {: tip}
 
 1. 알림을 전송할 Slack 채널의 이름을 입력하십시오. 채널이 있어야 하며 Slack 팀에서 이를 사용 중이어야 합니다.
 1. 팀 URL에서 `.slack.com` 이전의 단어 또는 구문인 Slack 팀의 URL 호스트 이름을 입력하십시오. 예를 들어, 팀 URL이 `https://team.slack.com`이면 호스트 이름은 `team`입니다.
 1. **통합 작성**을 클릭하십시오.
 
- **팁:** 지정된 Slack 채널 및 팀에 도달할 수 없는 경우에는 `Setup Failed` 오류가 Slack 카드에 표시됩니다. `Setup Failed` 메시지 위에 마우스 커서를 올려놓고 **재구성**을 클릭하십시오. Slack 팀의 URL 호스트 이름 및 Slack 웹훅 URL, Slack 채널에 대해 올바른 구성 매개변수를 사용 중인지 확인하십시오. 필요하면 설정을 업데이트하고 **통합 저장**을 클릭하십시오.
+ 지정된 Slack 채널 및 팀에 도달할 수 없는 경우에는 `Setup Failed` 오류가 Slack 카드에 표시됩니다. `Setup Failed` 메시지 위에 마우스 커서를 올려놓고 **재구성**을 클릭하십시오. Slack 팀의 URL 호스트 이름 및 Slack 웹훅 URL, Slack 채널에 대해 올바른 구성 매개변수를 사용 중인지 확인하십시오. 필요하면 설정을 업데이트하고 **통합 저장**을 클릭하십시오.
+ {: tip}
 
 1. **Slack**을 클릭하십시오. 구성된 Slack 채널에서 도구 체인의 모든 활동을 볼 수 있습니다.
 
 ### Slack에 대해 자세히 알아보기
 
-Slack에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Slack 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: new_window}를 참조하거나 다음 튜토리얼 및 Garage Method advocate 코스를 활용하십시오. 
+Slack에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [Slack 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: new_window}를 참조하거나 다음 튜토리얼 및 Garage Method advocate 코스를 활용하십시오.
 
   * ["Cloud Foundry에서 마이크로서비스 개발 및 테스트" 도구 체인 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
 
@@ -1044,7 +1092,8 @@ SonarQube에서는 소스 코드의 전체 상태와 품질의 개요을 제공�
 1. 도구 체인에서 SonarQube 카드를 클릭할 때 열리는 SonarQube 인스턴스의 URL을 입력합니다.
 1. 선택사항: SonarQube 서버에 연결하는 데 사용할 사용자 이름을 입력하십시오.
 
- **팁:** SonarQube 서버에 연결하기 위해 비밀번호를 사용하는 경우에만 사용자 이름을 지정해야 합니다. 인증 토큰을 사용하여 연결하는 경우 이 필드를 공백으로 두십시오.
+ SonarQube 서버에 연결하기 위해 비밀번호를 사용하는 경우에만 사용자 이름을 지정해야 합니다. 인증 토큰을 사용하여 연결하는 경우 이 필드를 공백으로 두십시오.
+ {: tip}
 
 1. SonarQube 서버에 연결하는 데 사용할 비밀번호나 인증 토큰을 입력하십시오.
 1. **통합 작성**을 클릭하십시오.
@@ -1053,26 +1102,3 @@ SonarQube에서는 소스 코드의 전체 상태와 품질의 개요을 제공�
 ### SonarQube에 대해 자세히 알아보기
 
 SonarQube에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [SonarQube 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window}를 참조하십시오.
-
-
-## UrbanCode Deploy(베타) 추가
-{: #urbancodedeploy}
-
-IBM UrbanCode Deploy는 애플리케이션 배치를 간소화 및 자동화합니다. 그래픽 플로우차트 도구를 사용하여 애플리케이션 배치, 업그레이드, 롤백 및 설치 제거를 위한 자동화된 프로세스를 작성합니다. 자동화된 태스크를 사용하면 개발, 테스트 및 프로덕션 환경을 포함하여 개발 파이프라인의 각 단계를 통해 애플리케이션을 이동할 수 있습니다. 
-
-**참고:** 이 도구 통합은 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서만 사용 가능합니다. 이는 사전 구성되어 있으며 구성 매개변수를 필요로 하지 않습니다. 이 도구 통합은 재구성할 수 없습니다.
-
-애플리케이션, 팀 및 환경의 배치 동향을 확인하고 Delivery Pipeline에서 병목 현상과 보다 효율적인 위치를 찾으려면, UrbanCode Deploy 도구 통합을 추가하십시오. 
-
-1. DevOps 대시보드에서 **도구 체인**을 클릭하십시오. UrbanCode Deploy를 추가하려는 도구 체인을 클릭하십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하고 **개요**를 클릭하십시오.
-
- a. **도구 추가**를 클릭하십시오.
-
- b. 도구 통합 섹션에서 **UrbanCode 배치**를 클릭하십시오.
-
-1. **통합 작성**을 클릭하십시오.
-1. 도구 체인에서 **UrbanCode 배치**를 클릭하십시오. Delivery Insights의 UrbanCode Deploy 서버로부터 데이터를 보려면, DevOps Connect를 설정하고 서버에 모든 패치를 설치한 후 해당 서버를 DevOps Connect에 연결해야 합니다. 자세한 정보는 [IBM UrbanCode Deploy 서버에서 데이터 표시](/docs/services/DevOpsInsights/uc_insights_connect_ucd.html){: new_window}를 참조하십시오.
-
-### UrbanCode Deploy에 대해 자세히 알아보기
-
-UrbanCode Deploy에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [IBM UrbanCode Deploy 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/deliver/tool_ibm_urbancode_deploy/){: new_window}를 참조하십시오.

@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.gitrepos}}
 {: #git_working}
@@ -23,14 +26,16 @@ IBM에서 호스팅하고 [GitLab Community Edition ![외부 링크 아이콘](.
    * 문제 트래커를 통해 문제를 추적하고 아이디어를 공유함
    * 위키 시스템에서 프로젝트를 문서화함
 
-**참고:** 이 도구 통합은 GitLab Community Edition을 기반으로 구축되며 {{site.data.keyword.Bluemix_notm}} Platform에서 IBM에 의해 호스팅되므로 몇 가지 GitLab 옵션을 사용할 수 없습니다. 예를 들어, Delivery Pipeline은 {{site.data.keyword.Bluemix_notm}}에 대해 지속적 통합 및 지속적 딜리버리를 제공하므로 GitLab의 지속적 통합 기능은 지원되지 않습니다. 또한 IBM에서 관리하므로 관리자 기능은 사용할 수 없습니다.
+이 도구 통합은 GitLab Community Edition을 기반으로 빌드되며 {{site.data.keyword.Bluemix_notm}} Platform에서 IBM에 의해 호스팅되므로 몇 가지 GitLab 옵션을 사용할 수 없습니다. 예를 들어, Delivery Pipeline은 {{site.data.keyword.Bluemix_notm}}에 대해 지속적 통합 및 지속적 딜리버리를 제공하므로 GitLab의 지속적 통합 기능은 지원되지 않습니다. 또한 IBM에서 관리하므로 관리자 기능은 사용할 수 없습니다.
+{: tip}
 
 ## 로컬로 {{site.data.keyword.gitrepos}} 사용
 {: #git_local}
 
 {{site.data.keyword.gitrepos}}에 저장된 Git 저장소에 로컬로 액세스할 수 있습니다. 로컬에 Git를 설정하는 지시사항은 [Start using Git on the command line![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}을 참조하십시오.
 
-**팁**: {{site.data.keyword.gitrepos}}은 TLS1.2를 사용하는 HTTPS 연결만 지원합니다. 연결하기 위해 Eclipse를 사용하는 경우, `-Dhttps.protocols=TLSv1.2`를 eclipse.ini 파일에 추가하고 Eclipse를 다시 시작하여 사용자의 Java&trade; 버전에 이 프로토콜을 지정해야 할 수 있습니다.
+{{site.data.keyword.gitrepos}}는 TLS1.2를 사용하는 HTTPS 연결만 지원합니다. 연결하기 위해 Eclipse를 사용하는 경우, `-Dhttps.protocols=TLSv1.2`를 eclipse.ini 파일에 추가하고 Eclipse를 다시 시작하여 사용자의 Java&trade; 버전에 이 프로토콜을 지정해야 할 수 있습니다.
+{: tip}
 
 ## {{site.data.keyword.gitrepos}}에 인증
 {: #git_authentication}
@@ -40,7 +45,8 @@ IBM에서 호스팅하고 [GitLab Community Edition ![외부 링크 아이콘](.
 ### 개인 액세스 토큰 작성
 {: #create_pat}
 
-**중요**: HTTPS를 통해 Git 저장소로 인증하려면 개인 액세스 토큰을 작성해야 합니다.
+HTTPS를 통해 Git 저장소로 인증하려면 개인 액세스 토큰을 작성해야 합니다.
+{: tip}
 
 1. {{site.data.keyword.gitrepos}} 사용자 설정 대시보드의 [액세스 토큰 페이지에서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, 액세스 토큰을 작성하려는 애플리케이션의 이름을 입력하십시오. 예: `Git CLI`
 1. 선택사항: 액세스 토큰의 만료 날짜를 선택하십시오.
@@ -68,6 +74,6 @@ SSH 키를 작성하려면 [How to create your SSH Keys![외부 링크 아이콘
 
 [IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage){:new_window}에 있는 다음 튜토리얼 중 하나를 확인하십시오.
 
-  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.템플리트에서 오픈 도구 체인을 작성하고 이 도구 체인을 사용하여 "Hello World" 앱의 지속적 딜리버리를 제공하는 방법을 알아봅니다.
+  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}. 템플리트에서 오픈 도구 체인을 작성하고 이 도구 체인을 사용하여 "Hello World" 앱의 지속적 딜리버리를 제공하는 방법을 알아봅니다.
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}. 세 가지 마이크로서비스를 사용하여 템플리트에서 도구 체인을 작성하고 이 도구 체인을 사용하여 온라인 상점의 지속적 딜리버리를 제공하는 방법을 알아봅니다. 
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}. 세 가지 마이크로서비스를 사용하여 템플리트에서 도구 체인을 작성하고 이 도구 체인을 사용하여 온라인 상점의 지속적 딜리버리를 제공하는 방법을 알아봅니다.

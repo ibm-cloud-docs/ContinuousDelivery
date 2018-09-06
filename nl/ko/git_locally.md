@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Git 소스 제어에 대해 작업할 로컬 클라이언트 설정
 {: #git_local}
@@ -26,13 +28,14 @@ GitHub, GitHub Enterprise 또는 Git Repos and Issue Tracking 저장소, 로컬�
 
 1. 브라우저 외부에서 Git 서버에 액세스하기 위해 인증을 위한 개인 액세스 토큰 또는 SSH 키를 작성해야 할 수 있습니다. 다음 표는 인증 설정을 위해 수행해야 할 작업을 표시합니다.
 
-| Git 유형  | HTTPS 설정 | HTTPS 사용 |  SSH 설정 |
+|Git 유형  |HTTPS 설정 |HTTPS 사용 |SSH 설정 |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking(git.ng.bluemix.com) | [개인 액세스 토큰](/docs/services/ContinuousDelivery/git_working.html#git_authentication) | Git Repos and Issue Tracking 사용자 이름(IBM ID 아님) 및 개인 액세스 토큰 | [SSH 키 구성](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
-| 공용 GitHub(github.com) | 개인 액세스 토큰이 필요하지 않으나 개인 액세스 토큰을 설정하여 이를 사용할 수 있음 | GitHub 사용자 이름 및 비밀번호 또는 GitHub 사용자 이름 및 개인 액세스 토큰 또는 사용자 이름으로 된 개인 액세스 토큰 | [GitHub SSH 키 구성](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-| GitHub Enterprise | [개인 액세스 토큰](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | GitHub Enterprise 사용자 이름(IBM ID 아님) 및 개인 액세스 토큰 | [GitHub Enterprise SSH 키 구성](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
+|Git Repos and Issue Tracking(git.ng.bluemix.com) |[개인 액세스 토큰](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |Git Repos and Issue Tracking 사용자 이름(IBM ID 아님) 및 개인 액세스 토큰 |[SSH 키 구성](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
+|공용 GitHub(github.com) |개인 액세스 토큰이 필요하지 않으나 개인 액세스 토큰을 설정하여 이를 사용할 수 있음 |GitHub 사용자 이름 및 비밀번호 또는 GitHub 사용자 이름 및 개인 액세스 토큰 또는 사용자 이름으로 된 개인 액세스 토큰 |[GitHub SSH 키 구성](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
+|GitHub Enterprise |[개인 액세스 토큰](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |GitHub Enterprise 사용자 이름(IBM ID 아님) 및 개인 액세스 토큰 |[GitHub Enterprise SSH 키 구성](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
-**참고**: SSH를 사용하려는 경우 모든 Git 서버에 단일 키를 재사용할 수 있습니다. 키를 작성하거나 찾아 이전 링크에 설명된 대로 각 서버에 키를 구성하십시오. 비밀번호 문구를 사용하여 키를 작성하는 경우 키를 사용할 때 비밀번호 문구를 요구하는 프롬프트가 표시됩니다.
+SSH를 사용하려는 경우 모든 Git 서버에 단일 키를 재사용할 수 있습니다. 키를 작성하거나 찾아 이전 링크에 설명된 대로 각 서버에 키를 구성하십시오. 비밀번호 문구를 사용하여 키를 작성하는 경우 키를 사용할 때 비밀번호 문구를 요구하는 프롬프트가 표시됩니다.
+{: tip}
 
 2. Git 명령행을 사용할 경우 다음을 수행하십시오.
 
@@ -86,4 +89,4 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}는 IDE를 {{site.data.k
 * EAR(엔터프라이즈 아카이브) 파일
 * Liberty 프로파일의 패키지된 서버
 
-또한 서비스를 작성하고 앱에 서비스를 연결하며 배치의 일부로 환경 변수를 정의할 수 있습니다. IBM Eclipse Tools에 대한 자세한 정보는 [IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱 배치](../../manageapps/eclipsetools/eclipsetools.html)를 참조하십시오. 
+또한 서비스를 작성하고 앱에 서비스를 연결하며 배치의 일부로 환경 변수를 정의할 수 있습니다. IBM Eclipse Tools에 대한 자세한 정보는 [IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱 배치](/docs/manageapps/eclipsetools/eclipsetools.html)를 참조하십시오.

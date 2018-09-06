@@ -2,14 +2,17 @@
 
 Copyright:
   years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # 도구 체인 가용성, 템플리트 및 튜토리얼  
@@ -27,7 +30,8 @@ lastupdated: "2018-3-26"
 
 {{site.data.keyword.contdelivery_short}}는 {{site.data.keyword.Bluemix_notm}} 퍼블릭의 선택된 지역 및 {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용 가능합니다. 도구 체인은 사용자가 {{site.data.keyword.contdelivery_short}}를 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용하는지 여부에 따라 다릅니다.
 
-**팁**: 현재는 도구 체인을 모든 지역에서 사용할 수 없지만, 모든 지역에 앱을 배치하도록 도구 체인을 구성할 수 있습니다. 자세히 알아보려면 <a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">여러 지역에서 보안 웹 애플리케이션 배치</a> 튜토리얼을 활용하십시오. 
+현재는 도구 체인을 모든 지역에서 사용할 수 없지만, 모든 지역에 앱을 배치하도록 도구 체인을 구성할 수 있습니다. 자세히 알아보려면 <a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">여러 지역에서 보안 웹 애플리케이션 배치</a> 튜토리얼을 활용하십시오.
+{: tip}
 
 |도구 체인 |{{site.data.keyword.Bluemix_notm}} 퍼블릭	|{{site.data.keyword.Bluemix_notm}} 데디케이티드 |
 |:----------|:------------------------------|:------------------|
@@ -35,7 +39,7 @@ lastupdated: "2018-3-26"
 |템플리트에서 도구 체인 작성		|[{{site.data.keyword.Bluemix_notm}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://console.bluemix.net/devops){:new_window}에 로그인		|{{site.data.keyword.Bluemix_notm}}의 데디케이티드 환경에 로그인합니다.			|
 |앱에서 도구 체인 작성		|앱 스타터 코드로 채워진 새 GitHub 저장소에서 지속적 딜리버리를 위해 앱이 구성됩니다.		|앱 스타터 코드로 채워진 새 GitHub 또는 GitHub Enterprise 저장소에서 지속적 딜리버리를 위해 앱이 구성됩니다.		|  
 |딜리버리 파이프라인 배치 지역		|모든 {{site.data.keyword.Bluemix_notm}} 퍼블릭 지역이 Cloud Foundry 배치 작업에 사용 가능합니다. 		|{{site.data.keyword.Bluemix_notm}} 데디케이티드 지역이 사용 가능합니다. 또한 동일한 고객 계정 내의 기타 데디케이티드 또는 로컬 지역도 특정 환경에서 {{site.data.keyword.contdelivery_short}}가 설정된 방법에 따라 사용이 가능합니다.		|
-|딜리버리 파이프라인 배치 작업		|모든 [작업 유형](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs)이 사용 가능합니다.		|데디케이티드 환경에 설치되지 않은 {{site.data.keyword.Bluemix_notm}} 서비스에 의존하는 작업 유형은 사용 가능하지 않습니다.	예를 들어, 컨테이너 빌드 및 배치 작업 유형은 {{site.data.keyword.Bluemix_notm}} Container 서비스가 없는 환경에서는 사용 가능하지 않습니다.	|
+|딜리버리 파이프라인 배치 작업		|모든 [작업 유형](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs)이 사용 가능합니다.		|데디케이티드 환경에 설치되지 않은 {{site.data.keyword.Bluemix_notm}} 서비스에 의존하는 작업 유형은 사용 가능하지 않습니다.	예를 들어, 컨테이너 빌드 및 배치 작업 유형은 {{site.data.keyword.containerlong_notm}}가 없는 환경에서는 사용 가능하지 않습니다.	|
 {: caption="표 1: {{site.data.keyword.Bluemix_notm}} 데디케이티드 및 {{site.data.keyword.Bluemix_notm}} 퍼블릭의 도구 체인 간 차이점" caption-side="top"}
 
 
@@ -44,13 +48,14 @@ lastupdated: "2018-3-26"
 
 [도구 체인 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/devops/create){: new_window}에 대한 시작점으로 템플리트를 사용할 수 있습니다. 도구 체인 템플리트에는 개발, 배치 및 운영 태스크를 지원하는 특정 도구 통합 세트가 포함되어 있습니다.
 
-**팁**: 회사의 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경에 {{site.data.keyword.Bluemix_notm}} 퍼블릭 사이트와 동일한 도구 체인 템플리트가 포함되어 있지 않을 수 있습니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭 및 {{site.data.keyword.Bluemix_notm}} 데디케이티드 모두에서 사용 가능한 도구 체인 템플리트에 {{site.data.keyword.Bluemix_notm}} 데디케이티드의 다른 도구 통합 세트가 포함될 수 있습니다.
+회사의 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경에 {{site.data.keyword.Bluemix_notm}} 퍼블릭 사이트와 동일한 도구 체인 템플리트가 포함되지 않을 수 있습니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭 및 {{site.data.keyword.Bluemix_notm}} 데디케이티드 모두에서 사용 가능한 도구 체인 템플리트에 {{site.data.keyword.Bluemix_notm}} 데디케이티드의 다른 도구 통합 세트가 포함될 수 있습니다.
+{: tip}
 
-일부 도구 체인 템플리트에는 {{site.data.keyword.contdelivery_short}} 서비스의 일부인 도구 통합이 포함되어 있습니다. 해당 서비스의 인스턴스가 아직 조직에 없는 경우 도구 체인을 작성하기 위해 **작성**을 클릭하면 서비스가 선택한 무료 라이트 플랜으로 자동 추가됩니다. 자세한 정보 및 이용 약관은 [{{site.data.keyword.Bluemix_notm}} 카탈로그 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/services/continuous-delivery/){:new_window}를 참조하십시오.
+일부 도구 체인 템플리트에는 {{site.data.keyword.contdelivery_short}} 서비스의 일부인 도구 통합이 포함되어 있습니다. 해당 서비스의 인스턴스가 아직 리소스 그룹이나 조직에 없는 경우 도구 체인을 작성하기 위해 **작성**을 클릭하면 서비스가 선택된 무료 라이트 플랜으로 자동 추가됩니다. 자세한 정보 및 이용 약관은 [{{site.data.keyword.Bluemix_notm}} 카탈로그 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/services/continuous-delivery/){:new_window}를 참조하십시오.
 
 "Cloud Foundry에서 마이크로서비스 개발 및 테스트" 도구 체인은 Cloudant 저장소에서 지원하는 주문 API 및 카탈로그로 앱을 배치합니다. 앱 배치의 일부로서 무료 Cloudant 서비스 인스턴스가 작성됩니다. 자세한 정보 및 이용 약관은 [{{site.data.keyword.Bluemix_notm}} 카탈로그 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/services/cloudant-nosql-db/){:new_window}를 참조하십시오.
 
-사전 정의된 DevOps 도구 체인 템플리트는 실제 시나리오를 해결하는 권장 예제이며 각각 샘플 앱이 포함되어 있습니다. 템플리트에서 도구 체인을 작성하는 경우 Git 저장소를 지정하여 고유 앱을 사용할 수 있습니다. 
+사전 정의된 DevOps 도구 체인 템플리트는 실제 시나리오를 해결하는 권장 예제이며 각각 샘플 앱이 포함되어 있습니다.  템플리트에서 도구 체인을 작성하는 경우 Git 저장소를 지정하여 고유 앱을 사용할 수 있습니다.
 
 <table valign="top" padding="2px">
   <caption>표 2. 도구 체인 템플리트</caption>
@@ -82,13 +87,13 @@ lastupdated: "2018-3-26"
   미국 남부, 독일 및 영국에서 사용 가능합니다.
 
   </td><td>
-  이 도구 체인을 사용하여 애플리케이션을 개발하고 안전하게 {{site.data.keyword.Bluemix_notm}} Container Service에서 관리하는 Kubernetes 클러스터에 배치할 수 있습니다. 기본적으로 도구 체인은 샘플 Node.js "Hello World" 앱을 사용하지만, 대신 고유 GitHub 저장소에 연결할 수 있습니다. 이 도구 체인은 Vulnerability Advisor가 포함된 지속적 딜리버리, 소스 제어, 문제 추적 및 온라인 편집을 위해 사전 구성되었습니다. <br><br>
+  이 도구 체인을 사용하여 애플리케이션을 개발하고 {{site.data.keyword.containerlong_notm}}에서 관리하는 Kubernetes 클러스터에 안전하게 배치할 수 있습니다. 기본적으로 도구 체인은 샘플 Node.js "Hello World" 앱을 사용하지만, 대신 고유 GitHub 저장소에 연결할 수 있습니다. 이 도구 체인은 Vulnerability Advisor가 포함된 지속적 딜리버리, 소스 제어, 문제 추적 및 온라인 편집을 위해 사전 구성되었습니다. <br><br>
   튜토리얼 활용: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain" target="_blank">Use the "Develop a Kubernetes app" toolchain <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>  
   <br><br>
   </td><td><ul><li>{{site.data.keyword.deliverypipeline}}
   </li><li>Eclipse Orion {{site.data.keyword.webide}}
   </li><li>GitHub 및 Issues
-  </li><li>{{site.data.keyword.Bluemix_notm}} Container(Kubernetes 클러스터)
+  </li><li>{{site.data.keyword.containerlong_notm}}(Kubernetes 클러스터)
   </li></ul>
   </td></tr>
 
@@ -100,24 +105,24 @@ lastupdated: "2018-3-26"
 
   </td><td>
   이 도구 체인을 사용하여 Docker 애플리케이션 및 해당 Helm 차트를 함께 소스 제어로 개발할 수 있으며 빌드하여 자동으로 Kubernetes 클러스터에 배치할 수 있습니다. 도구 체인은 빌드 또는 배치하기 전에 스모크 테스트를 수행하며 컨테이너 레지스트리 및 Kubernetes 클러스터에 대한 개인 컨테이너 레지스트리 및 네임스페이스를 사용하여 개인정보 보호를 보장합니다. 이 도구 체인도 Vulnerability Advisor를 사용하여 안전한 이미지만 배치되도록 합니다. <br><br>
-  튜토리얼 활용: <a href="https://www.ibm.com/cloud/garage/use-develop-kubernetes-app-with-helm-toolchain" target="_blank">Use the "Develop a Kubernetes app with Helm" toolchain <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>	 <br><br>
+튜토리얼 활용: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain" target="_blank">Use the "Develop a Kubernetes app with Helm" toolchain <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>	 <br><br>
   </td><td><ul>
   <li>{{site.data.keyword.deliverypipeline}}
   </li><li>Eclipse Orion {{site.data.keyword.webide}}
   </li><li>Git Repos and Issue Tracking
-  </li><li>Helm 차트가 포함된 {{site.data.keyword.Bluemix}} Container
-(Kurbernetes 클러스터)</li></ul>
+  </li><li>Helm 차트가 포함된 {{site.data.keyword.containerlong_notm}}(Kurbernetes 클러스터)
+  </li></ul>
   </td></tr>
 
   <tr><td>
-  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-helm-toolchain" target="_blank">"Develop and test a Cloud Foundry app" toolchain
+  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdra-toolchain-demo" target="_blank">"Develop and test a Cloud Foundry app" toolchain
    <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a> <br><br>
 
   미국 남부, 독일 및 영국에서 사용 가능합니다.
 
   </td><td>
-  이 클라우드 네이티브 도구 체인을 사용하면 DevOps Insights를 통해 단순 Cloud Foundry 애플리케이션의 배치를 제공할 수 있습니다. 기본적으로 도구 체인은 샘플 Node.js 날씨 앱을 사용하거나 사용자가 고유 GitHub 저장소에 연결할 수 있습니다. 도구 체인은 Mocha를 사용하여 단위 테스트를 실행하고 Istanbul을 사용하여 코드 적용 범위를 검사합니다. <br><br>
-  튜토리얼 활용: <a href="https://www.ibm.com/cloud/garage/use-develop-test-cloud-foundry-app-toolchain" target="_blank">Use the "Develop and test a Cloud Foundry app" toolchain  <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>  <br><br>
+  이 클라우드 네이티브 도구 체인을 사용하면 DevOps Insights를 통해 단순 Cloud Foundry 애플리케이션의 배치를 제공할 수 있습니다. 기본적으로 도구 체인은 샘플 Node.js 날씨 앱을 사용하거나 사용자가 고유 GitHub 저장소에 연결할 수 있습니다. 도구 체인은 Mocha를 사용하여 단위 테스트를 실행하고 Istanbul을 사용하여 코드 적용 범위를 검사합니다.<br><br>
+튜토리얼 활용: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain" target="_blank">Use the "Develop and test a Cloud Foundry app" toolchain  <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>  <br><br>
   </td><td><ul>
   <li>{{site.data.keyword.deliverypipeline}}
   </li><li>Eclipse Orion {{site.data.keyword.webide}}
@@ -175,7 +180,7 @@ lastupdated: "2018-3-26"
 <tr><td>
 <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain" target="_blank">"GitHub 및 Jenkins를 사용하는 Deployment Risk Analytics" 도구 체인 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a> <br><br>
 
-  미국 남부에서 사용 가능합니다. 
+  미국 남부에서 사용 가능합니다.
 
 </td><td>이 도구 체인으로 사용자는 지속적 통합 및 딜리버리를 위한 Jenkins 프로세스에 대한 통찰을 얻을 수 있습니다. Jenkins에서 작업을 실행할 때 {{site.data.keyword.DRA_short}}에 데이터를 전송하도록 Jenkins 서버를 구성할 수 있습니다. 또한 정책에 따라 배치를 차단할 수 있도록 품질 게이트를 구현할 수도 있습니다. 사용자는 {{site.data.keyword.DRA_short}}의 배치 위험성 대시보드에서 결과를 볼 수 있습니다. Jenkins에서 사용하는 소스 저장소를 표시하도록 GitHub 저장소를 구성하는 경우에는 변경 추적성을 사용할 수 있습니다.  
 <br><br>
@@ -191,7 +196,7 @@ GitHub 및 Issues
 <tr><td>
 <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain" target="_blank">"GitHub 및 JIRA를 사용하는 Developer Insights 및 Team Dynamics" 도구 체인 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a> <br><br>
 
-  미국 남부에서 사용 가능합니다. 
+  미국 남부에서 사용 가능합니다.
 
 </td><td>
 이 도구 체인으로 사용자는 프로젝트의 개발 위험성을 탐색하고 소셜 코딩 분석을 사용하여 개발자 간의 상호작용 패턴을 파악할 수 있습니다. 사용자는 GitHub Issues, JIRA Issues 또는 두 가지 모두로 GitHub 소스 코드를 분석할 수 있습니다. Developer Insights를 사용하면 오류 발생 가능성이 높은 파일을 식별하고 프로젝트가 DevOps 사례를 준수하는 방법을 파악할 수 있습니다. Team Dynamics의 소셜 코딩 분석이 팀 구성원 간의 상호작용 레벨을 식별하므로, 팀은 비생산적인 사례를 수정할 수 있습니다.<br><br>
@@ -201,21 +206,6 @@ GitHub 및 Issues
 </li><li>{{site.data.keyword.DRA_full}}
 </li><li>JIRA
 </li><li>Slack
-</li></ul>
-</td></tr>
-
-
-<tr><td>
-<a href="(https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdeliveryinsights-toolchain" target="_blank">"IBM UrbanCode Deploy를 사용하는 Delivery Insights" 도구 체인 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a> <br><br>
-
-  미국 남부에서 사용 가능합니다. 
-
-</td><td>이 도구 체인으로 사용자는 IBM UrbanCode Deploy의 배치 메트릭을 볼 수 있습니다. 이 도구 체인을 사용하면 {{site.data.keyword.DRA_short}}의 설정 페이지에서 DevOps Connect를 다운로드하고 구성하여 IBM UrbanCode Deploy와 통신할 수 있습니다.
-<br><br>
-튜토리얼 활용: <a href="https://www.ibm.com/cloud/garage/tutorials/view-metrics-delivery-insights-urbancode-deploy-toolchain" target="_blank">View metrics by using the Delivery Insights with IBM UrbanCode Deploy" toolchain <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a> 	
-<br><br>
-</td><td><ul><li>{{site.data.keyword.DRA_full}}
-</li><li>UrbanCode Deploy
 </li></ul>
 </td></tr>
 
@@ -230,7 +220,7 @@ GitHub 및 Issues
 </td><td> &nbsp;&nbsp; 없음
 </td></tr>
 
-<tr><td>Continuous Delivery 도구 체인<br><br>
+<tr><td>Continuous Delivery 도구 체인 <br><br>
 
  미국 남부, 독일 및 영국에서 사용 가능합니다.
 
@@ -250,7 +240,7 @@ GitHub 및 Issues
 <li>{{site.data.keyword.Bluemix_notm}}</li></ul>
 </td></tr>
 
-<tr><td>사용자 정의 도구 체인 템플리트<br><br>
+<tr><td>사용자 정의 도구 체인 템플리트 <br><br>
 
  미국 남부, 독일 및 영국에서 사용 가능합니다.
 

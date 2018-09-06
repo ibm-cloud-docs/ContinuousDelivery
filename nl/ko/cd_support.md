@@ -15,7 +15,7 @@ lastupdated: "2018-3-26"
 # {{site.data.keyword.contdelivery_short}}에 대한 도움 및 지원 받기    
 {: #cd_support}  
 
-{{site.data.keyword.contdelivery_full}} 팀은 {{site.data.keyword.contdelivery_short}} 서비스 및 도구 체인에 대한 질문에 대해 developerWorks 포럼을 적극적으로 모니터링합니다. 포럼에 질문을 올리려면 도구 체인 맨 아래 및 {{site.data.keyword.contdelivery_short}} 페이지에서 **포럼에서 도움 받기** 단추 ![**포럼에서 도움 받기** 단추](images/get_help_in_the_forum.png)를 클릭하십시오. 
+{{site.data.keyword.contdelivery_full}} 팀은 {{site.data.keyword.contdelivery_short}} 서비스 및 도구 체인에 대한 질문에 대해 developerWorks 포럼을 적극적으로 모니터링합니다. 포럼에 질문을 올리려면 도구 체인 맨 아래 및 {{site.data.keyword.contdelivery_short}} 페이지에서 **포럼에서 도움 받기** 단추 ![**포럼에서 도움 받기** 단추](images/get_help_in_the_forum.png)를 클릭하십시오.
 
 <table>
 <tr>
@@ -27,7 +27,7 @@ lastupdated: "2018-3-26"
 <tr>
 <td> </td>
   <td align="center">
-  <p>IBM {{site.data.keyword.contdelivery_short}} 및 다른 DevOps 서비스 사용자로부터 빠르고 직접적으로 도움을 받습니다. </p>
+  <p>IBM {{site.data.keyword.contdelivery_short}} 및 다른 DevOps 서비스 사용자로부터 빠르고 직접적으로 도움을 받습니다.</p>
   <b>dW Answers</b>
   <p>
    <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(새 탭이나 창에서 열림)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>

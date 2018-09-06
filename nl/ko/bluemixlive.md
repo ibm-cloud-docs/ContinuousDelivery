@@ -4,14 +4,17 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
@@ -59,7 +62,8 @@ Live Edit를 사용하면 {{site.data.keyword.Bluemix_notm}}에서 실행되는 
 
 Web IDE에서 변경한 파일은 {{site.data.keyword.Bluemix_notm}}의 애플리케이션에 자동으로 재배치됩니다. 노드 애플리케이션을 다시 시작해야 하는 경우 실행 표시줄에 있는 **다시 시작** 단추를 클릭하십시오.
 
-**참고:** {{site.data.keyword.Bluemix_notm}} Live Sync의 Live Edit 기능을 사용할 때, 보다 일관된 경험을 위해서는 256MB의 추가 메모리가 필요하여 추가됩니다. 
+{{site.data.keyword.Bluemix_notm}} Live Sync의 Live Edit 기능을 사용할 때, 보다 일관된 경험을 위해서는 256MB의 추가 메모리가 필요하여 추가됩니다.
+{: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} Live Debug
 {: #live-debug}
@@ -98,7 +102,8 @@ Debug 기능을 제공할 수 있습니다. Node.js의 이후 버전에 노드 �
 
 Debug에는 다음과 같은 기능이 포함되어 있습니다.  
 * 특정 행에서 실행을 일시정지하도록 앱 코드에 중단점을 설정합니다.
-  **참고:** 중단점이 기본 프로그램에 지원되지 않지만 시작점에는 지원됩니다.
+  중단점이 기본 프로그램에 지원되지 않지만 시작점에는 지원됩니다.
+  {: tip}
 * 특정 기준이 충족되는 경우에만 실행을 일시정지하도록 중단점 조건을 편집합니다.
 * 로컬 변수 및 필드의 상태를 검사합니다.
 * `console.log()` 호출의 디버그 출력을 즉시 표시합니다. 이 조치는 cf 로그를 모니터링하는 것보다 빠릅니다.
@@ -129,13 +134,14 @@ Debug에는 다음과 같은 기능이 포함되어 있습니다.
 
 2. 메모리를 늘리십시오.  
 
-    a. 앱 `manifest.yml` 파일에서 메모리 속성에 지정되는 값에 128MB 이상을 추가하십시오. 
+    a. 앱 `manifest.yml` 파일에서 메모리 속성에 지정되는 값에 128MB 이상을 추가하십시오.
 
 {{site.data.keyword.Bluemix_notm}} Live Debug가 설치된 후 디버그 도구를 사용할 수 있습니다.
 
-앱을 푸시한 후 `https://_app-host.mybluemix.net_/bluemix-debug/manage`으로 이동하여 {{site.data.keyword.Bluemix_notm}} 디버그 사용자 인터페이스에 액세스하십시오. 인증하도록 프롬프트가 표시되는 경우 IBM ID 사용자 이름 및 비밀번호 또는 일회성 패스코드를 입력하십시오.     
+앱을 푸시한 후 `https://_app-host.mybluemix.net_/bluemix-debug/manage`으로 이동하여 {{site.data.keyword.Bluemix_notm}} 디버그 사용자 인터페이스에 액세스하십시오. 인증하도록 프롬프트가 표시되는 경우 IBM ID 사용자 이름 및 비밀번호 또는 일회성 패스코드를 입력하십시오.    
 
-**참고:** Debugger를 초기화하는 데 몇 분 정도 걸릴 수 있습니다. 
+Debugger를 초기화하는 데 몇 분 정도 걸릴 수 있습니다.
+{: tip}
 
 ### 앱 구성 복원 및 {{site.data.keyword.Bluemix_notm}} Live Debug 사용 안함 {: #restore_live_debug}
 

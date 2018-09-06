@@ -3,13 +3,18 @@
 copyright:
   years: 2015, 2018
 
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 도구 체인 작성
 {: #toolchains_getting_started}
@@ -19,8 +24,7 @@ lastupdated: "2018-3-21"
 
 오픈 도구 체인은 {{site.data.keyword.Bluemix}}의 퍼블릭 및 데디케이티드 환경에서 사용 가능합니다. 두 가지 방법으로 도구 체인을 작성할 수 있습니다. 즉, 템플리트를 사용하여 도구 체인을 작성하거나 앱에서 도구 체인을 작성할 수 있습니다.
 
-각 도구 체인은 특정 조직(org)과 연관되어 있으며, 해당 조직의 구성원인 사용자는 이와 연관된 도구 체인의 액세스 제어 목록에 추가될 수 있습니다. 도구 체인의 액세스 제어에 대한 자세한 정보는 [액세스 관리](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}를 참조하십시오. 도구 체인을 작성하기 전에 도구 체인을 작성하려는 조직에서 작업 중인지 확인하십시오. 작업 중인 조직은 메뉴 표시줄에 표시됩니다. 다른 조직으로 전환하려면 메뉴 표시줄에서 조직을 클릭하고 전환할 조직을 선택하십시오.
-
+각 도구 체인은 특정 리소스 그룹 또는 조직과 연관됩니다. 도구 체인이 리소스 그룹과 연관되어 있는 경우 도구 체인 리소스 또는 이 리소스가 포함된 리소스 그룹에 대한 Identity and Access Management(IAM) 뷰어 권한이 있는 사용자는 도구 체인에 액세스할 수 있습니다. 도구 체인은 하나의 조직과 연관되어 있으며 해당 조직의 구성원인 사용자는 이와 연관된 도구 체인의 액세스 제어 목록에 추가될 수 있습니다. Cloud Foundry 조직의 도구 체인에 대한 액세스 제어의 자세한 정보는 [Cloud Foundry 조직의 도구 체인에 대한 액세스 관리](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}를 참조하십시오. 리소스 그룹의 도구 체인에 대한 액세스 제어의 자세한 정보는 [리소스 그룹의 도구 체인에 대한 액세스 관리](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}를 참조하십시오.
 
 ##템플리트에서 도구 체인 작성   
 {: #creating_a_toolchain_from_a_template}
@@ -34,7 +38,8 @@ lastupdated: "2018-3-21"
 1. **도구 체인 작성** 페이지에서 도구 체인 템플리트를 클릭하십시오.
 1. 작성하려는 도구 체인의 다이어그램을 검토하십시오. 다이어그램은 도구 체인에서 해당 라이프사이클 단계(Phase)에 있는 각 도구 통합을 보여줍니다.
 
- **팁**: 일부 도구 체인 템플리트에는 도구 통합의 여러 인스턴스가 있습니다. 예를 들어, {{site.data.keyword.Bluemix_notm}} 퍼블릭의 마이크로서비스 도구 체인 템플리트에는 3개 마이크로서비스 각각에 대해 하나씩 GitHub의 3개 인스턴스와 Delivery Pipeline의 3개 인스턴스가 포함되어 있습니다.
+ 일부 도구 체인 템플리트에는 도구 통합의 여러 인스턴스가 있습니다. 예를 들어, {{site.data.keyword.Bluemix_notm}} 퍼블릭의 마이크로서비스 도구 체인 템플리트에는 3개 마이크로서비스 각각에 대해 하나씩 GitHub의 3개 인스턴스와 Delivery Pipeline의 3개 인스턴스가 포함되어 있습니다.
+ {: tip}
 
  다음 이미지의 다이어그램을 예로 들 수 있습니다. 도구 체인을 작성할 때 다이어그램은 도구 체인의 일부인 각 도구 통합을 표시합니다.
 ![도구 체인 다이어그램](images/toolchain_diagram2.png)
@@ -43,7 +48,10 @@ lastupdated: "2018-3-21"
 
  * 도구 체인의 이름은 {{site.data.keyword.Bluemix_notm}}에서 해당 도구 체인을 식별합니다. 다른 이름을 사용하려면 도구 체인의 이름을 변경하십시오.
  * 도구 체인을 작성할 지역입니다. 다른 지역을 사용하려는 경우 사용 가능한 지역의 목록에서 선택하십시오.
- * 도구 체인을 작성할 조직입니다. 다른 조직을 사용하려는 경우 사용 가능한 조직의 목록에서 선택하십시오.
+ * 도구 체인을 작성할 리소스 그룹 또는 조직입니다. 리소스 그룹 선택과 조직 선택 간에 전환하려면 링크를 클릭하십시오. 다른 리소스 그룹이나 조직을 사용하려는 경우 사용 가능한 리소스 그룹 또는 조직의 목록에서 선택하십시오.
+ 
+   리소스 그룹은 미국 남부 지역에서만 사용 가능합니다.
+   {: tip}
 
 1. 도구 통합 섹션에서 도구 체인에 대해 구성할 각 도구 통합을 선택하십시오. 몇몇 도구 통합에서는 구성이 필요 없습니다. 도구 통합 구성에 대한 정보는 [도구 통합 구성](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}의 내용을 참조하십시오.
 1. **작성**을 클릭하십시오. 여러 단계가 자동으로 실행되어 도구 체인을 설정합니다. 설정된 도구 통합은 선택된 도구 체인 템플리트 및 사용자가 {{site.data.keyword.Bluemix_notm}} 퍼블릭 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드를 사용 중인지 여부에 따라 다릅니다. 예를 들어, {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 마이크로서비스 도구 체인을 작성하면 다음 단계가 실행됩니다.
@@ -77,10 +85,11 @@ lastupdated: "2018-3-21"
 
 도구 체인과 해당 도구 통합을 구성한 후에는 도구 체인의 시각적 표시를 볼 수 있습니다.
 
-1. DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.
+1. DevOps 대시보드의 **도구 체인** 페이지에서 **리소스 그룹** 또는 **Cloud Foundry 조직**을 클릭하십시오. 선택된 리소스 그룹 또는 Cloud Foundry 조직 내에 포함된 모든 도구 체인이 표시됩니다. 보려는 도구 체인을 클릭하여 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.
 2. 도구 체인에 있는 도구 통합에 액세스하려면 도구를 클릭하십시오.
 
- **팁**: 둘 이상의 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소가 있는 경우, 각 저장소가 자체 카드에 의해 표시되므로 동일한 도구 통합에 대해 여러 개의 카드가 있을 수 있습니다. 둘 이상의 파이프라인이 있는 경우, 각 파이프라인이 자체 카드에 의해 표시되므로 동일한 도구 통합에 대해 여러 개의 카드가 있을 수 있습니다. 예를 들어, 사용자가 마이크로서비스 도구 체인을 작성하면 3개 마이크로서비스 각각에는 자체 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소 및 자체 파이프라인이 있습니다.
+ 둘 이상의 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소가 있는 경우, 각 저장소가 자체 카드에 의해 표시되므로 동일한 도구 통합에 대해 여러 개의 카드가 있을 수 있습니다. 둘 이상의 파이프라인이 있는 경우, 각 파이프라인이 자체 카드에 의해 표시되므로 동일한 도구 통합에 대해 여러 개의 카드가 있을 수 있습니다. 예를 들어, 사용자가 마이크로서비스 도구 체인을 작성하면 3개 마이크로서비스 각각에는 자체 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소 및 자체 파이프라인이 있습니다.
+ {: tip}
 
 ## 튜토리얼 보기: 도구 체인 사용
 {: #toolchain_tutorials}

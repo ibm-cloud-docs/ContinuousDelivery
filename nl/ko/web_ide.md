@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-20"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Eclipse Orion Web IDE를 사용하여 개발
 {: #web_ide}
@@ -23,7 +25,7 @@ Eclipse Orion {{site.data.keyword.webide}}는 브라우저 기반의 개발 환�
 ## IDE 설정
 {: #editorsetup}
 
-{{site.data.keyword.webide}}는 사용자 정의할 수 있으므로 개발 요구사항에 맞는 색상 구성표, 기술 도구 및 설정을 선택할 수 있습니다. 설정을 보고 수정하려면 왼쪽에 있는 메뉴에서 왼쪽 탐색 사이드바의 **설정** 아이콘 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="설정 아이콘">을 클릭하십시오. 
+{{site.data.keyword.webide}}는 사용자 정의할 수 있으므로 개발 요구사항에 맞는 색상 구성표, 기술 도구 및 설정을 선택할 수 있습니다. 설정을 보고 수정하려면 왼쪽 탐색 사이드바의 **설정** 아이콘 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="설정 아이콘">을 클릭하십시오.
 
 편집 중에 종종 특정 설정을 변경해야 하는 경우에는 **로컬 편집기 설정** 아이콘 <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="로컬 편집기 설정 아이콘">에서 해당 설정에 바로 액세스할 수 있습니다.
 
@@ -45,7 +47,8 @@ Eclipse Orion {{site.data.keyword.webide}}는 브라우저 기반의 개발 환�
 
 {{site.data.keyword.webide}}에는 두 개의 기본 섹션이 있습니다. 첫 번째 섹션은 트리 구조로 프로젝트 파일을 표시하는 파일 네비게이터입니다. 파일 네비게이터에서 파일 및 폴더를 작성, 이름 바꾸기, 삭제 및 관리할 수 있습니다.
 
-**팁:** 파일 네비게이터에 파일을 업로드하려면 컴퓨터에서 파일 네비게이터로 파일을 끌어 오십시오.
+파일 네비게이터에 파일을 업로드하려면 컴퓨터에서 파일 네비게이터로 파일을 끌어 오십시오.
+{: tip}
 
 두 번째 섹션은 편집기 분할창입니다. 편집기는 컨텐츠 지원과 구문 유효성 검증을 포함하여 여러 코딩 기능을 제공합니다.
 
@@ -79,7 +82,7 @@ Eclipse Orion {{site.data.keyword.webide}}는 브라우저 기반의 개발 환�
 1. 배치 아이콘 <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="배치 아이콘">을 클릭하십시오. 작업공간의 현재 컨텐츠와 실행 구성에 정의된 환경을 사용하여 앱의 인스턴스가 배치됩니다.
 2. 앱이 배치되면 실행 표시줄을 사용하여 앱을 중지, 다시 시작 또는 디버그하고 로그를 보는 등의 작업을 수행할 수 있습니다.
 
-<table>
+<table role="presentation">
 <tr><td><img src="./images/stop_button.png"  alt="중지 아이콘"></td><td>앱 중지</td></tr>
 <tr><td> <img src="./images/open_app_url.png"  alt="앱 URL 열기 아이콘"></td><td> 배치된 앱 열기</td></tr>
 <tr><td><img src="./images/view_logs.png"  alt="로그 보기 아이콘"></td><td>배치된 앱의 로그 보기</td></tr>
@@ -88,7 +91,7 @@ Eclipse Orion {{site.data.keyword.webide}}는 브라우저 기반의 개발 환�
 
 Node.js 앱을 개발하는 경우, 라이브 편집 모드를 사용하십시오. <img  src="./images/enable_live_edit.png"  alt="라이브 편집 슬라이더 사용">
 
-<table><tr><td><img src="./images/live_edit_restart.png"  alt="라이브 편집 다시 시작 아이콘"></td><td>라이브 편집 모드를 사용하여 재배치하지 않고 앱을 신속하게 다시 시작</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="라이브 편집 다시 시작 아이콘"></td><td>라이브 편집 모드를 사용하여 재배치하지 않고 앱을 신속하게 다시 시작</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="디버그 아이콘"></td>
 <td>라이브 편집 모드를 사용하여 디버거에 액세스
 </td></tr>
@@ -161,7 +164,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 Eclipse Orion {{site.data.keyword.webide}}는 컨텐츠 지원, 도구 팁, 미리보기, 유효성 검증 및 JavaScript, HTML, CSS, 마크다운 파일에 대한 구문 강조표시를 제공합니다. 구문 강조표시는 다음 파일 유형에 대해서도 지원됩니다.
 
-<table>
+<table role="presentation">
 <tr>
 <td>
 <ul><li>Arduino

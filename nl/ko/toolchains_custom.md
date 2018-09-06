@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # 사용자 정의 도구 체인 템플리트 작성
@@ -18,7 +20,7 @@ lastupdated: "2018-2-26"
 사용자 정의 도구 체인 템플리트를 작성하여 DevOps 워크플로우를 향상시키십시오. 기존의 도구 체인 템플리트로 빠르게 시작하거나 필요한 통합만 포함된 도구 체인 템플리트를 작성할 수 있습니다. 언제든지 도구 체인의 통합을 추가하거나 제거할 수 있습니다.
 {:shortdesc}
 
-여러 가지 방법으로 [도구 체인을 작성](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}할 수 있습니다. 사용자 정의 도구 체인 템플리트를 작성하고 나면 [{{site.data.keyword.Bluemix_notm}}로 배치 작성 단추](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}를 사용하여 공유할 수 있습니다. 도구 체인 템플리트 SDK에 대한 세부사항은 [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}를 참조하십시오. 단계별 튜토리얼은 [Garage Method 사이트](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}에서 확인할 수 있습니다.
+여러 가지 방법으로 [도구 체인을 작성](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}할 수 있습니다. 사용자 정의 도구 체인 템플리트를 작성하고 나면 [{{site.data.keyword.Bluemix_notm}}로 배치 작성 단추](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}를 사용하여 공유할 수 있습니다.   도구 체인 템플리트 SDK에 대한 세부사항은 [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}를 참조하십시오. 단계별 튜토리얼은 [Garage Method 사이트](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}에서 확인할 수 있습니다.
 
 
 ## 시작하기
@@ -63,7 +65,7 @@ lastupdated: "2018-2-26"
 
 
 다음 섹션에는 각 파일에 대한 설명이 있습니다. 각 섹션에는 도구 체인이 향상될 때 참조할 수 있는 구성 정보가 포함됩니다.
-YAML은 엄격한 JSON 수퍼 세트인 데이터 직렬화 언어로 구문론상 중요한 줄바꿈 및 들여쓰기가 추가되어 있습니다. 그러나 YAML은 리터럴 탭 문자를 전혀 허용하지 않습니다. 
+YAML은 엄격한 JSON 수퍼 세트인 데이터 직렬화 언어로 구문론상 중요한 줄바꿈 및 들여쓰기가 추가되어 있습니다. 그러나 YAML은 리터럴 탭 문자를 전혀 허용하지 않습니다.
 
 ## 구성 파일 이해
 {: #toolchains_custom_config_files}
@@ -87,17 +89,17 @@ YAML 파일을 작업할 때 다음 사항에 유의하십시오.
 {: tip}
 
 ## 서비스 섹션 계획
-각 서비스 하위 섹션에는 다음 정보가 포함되어 있습니다. 
+각 서비스 하위 섹션에는 다음 정보가 포함되어 있습니다.
 
-* name - 사용자가 생성한 문자열로 현재 파일의 컨텍스트에서 이 서비스를 식별하는 데 사용됩니다. 이 이름은 필요에 따라 서비스를 표시하는 데 사용할 수 있습니다. 
+* name - 사용자가 생성한 문자열로 현재 파일의 컨텍스트에서 이 서비스를 식별하는 데 사용됩니다. 이 이름은 필요에 따라 서비스를 표시하는 데 사용할 수 있습니다.
 
 * service_id - 서비스를 식별하는 고유 문자열입니다. 이 문자열은 [서비스 카탈로그](https://github.com/open-toolchain/sdk/wiki/services.md){: new_window}에서 직접 제공됩니다.
 
-* parameters - 서비스에 대한 제로(0) 또는 추가 구성 매개변수입니다. 이러한 매개변수는 서비스에 따라 달라집니다. 사용자는 특정 서비스에 어떤 매개변수가 필요한지 알아내기 위해 카탈로그를 참조해야 합니다. 
+* parameters - 서비스에 대한 제로(0) 또는 추가 구성 매개변수입니다. 이러한 매개변수는 서비스에 따라 달라집니다. 사용자는 특정 서비스에 어떤 매개변수가 필요한지 알아내기 위해 카탈로그를 참조해야 합니다.
 
 ### 다른 파일의 텍스트 포함
 
-도구 체인에 대한 모든 정보는 `toolchain.yml` 파일에 있을 수 있습니다. 그러나 `$text`를 사용하여 각 도구 통합 UI에 대한 별도의 파일을 작성하려고 할 수 있습니다. 이를 통해 도구 체인을 더 쉽게 유지보수할 뿐만 아니라 구성 파일을 편집하는 데 드는 시간을 최소화할 수 있습니다. `toolchain.yml`의 이 예제 스니펫은 `content`에 대한 값으로 `pipeline.yml` 파일의 컨텐츠를 사용하는 방법을 보여줍니다. 
+도구 체인에 대한 모든 정보는 `toolchain.yml` 파일에 있을 수 있습니다.  그러나 `$text`를 사용하여 각 도구 통합 UI에 대한 별도의 파일을 작성하려고 할 수 있습니다. 이를 통해 도구 체인을 더 쉽게 유지보수할 뿐만 아니라 구성 파일을 편집하는 데 드는 시간을 최소화할 수 있습니다.  `toolchain.yml`의 이 예제 스니펫은 `content`에 대한 값으로 `pipeline.yml` 파일의 컨텐츠를 사용하는 방법을 보여줍니다.
 
 ```
   configuration:
@@ -108,18 +110,18 @@ YAML 파일을 작업할 때 다음 사항에 유의하십시오.
 ### 도구 체인 템플리트 현지화
 
 도구 체인의 문자열이 사용자가 원하는 언어로 표시되도록 `nls` 디렉토리에서 UI 문자열을 구체화하여 도구 체인을 현지화할 수 있습니다.
-`toolchain.yml` 파일은 `$i18n` 참조를 포함해야 합니다.   
-다음 예제는 `messages.yml` 파일에 대한 `$i18n` 참조를 보여줍니다. 
+`toolchain.yml` 파일은 `$i18n` 참조를 포함해야 합니다.  
+다음 예제는 `messages.yml` 파일에 대한 `$i18n` 참조를 보여줍니다.
 
 ```
 messages:
   $i18n: messages.yml
 ```
 
-  영어 문자열은 `messages.yml`에 있으며 다른 언어는 `messages_de.yml`과 같이 언어 코드를 사용합니다. 언어 코드 목록은
+  영어 문자열은 `messages.yml`에 있으며 다른 언어는 `messages_de.yml`과 같이 언어 코드를 사용합니다.   언어 코드 목록은
   [언어 식별을 위한 태그](https://tools.ietf.org/html/rfc5646){: new_window}에서 찾을 수 있습니다.
 
-   구체화된 문자열을 참조하려면 `$ref`를 사용하여 문자열을 검색하십시오. 예를 들면, 다음과 같습니다.
+   구체화된 문자열을 참조하려면 `$ref`를 사용하여 문자열을 검색하십시오.  예를 들면, 다음과 같습니다.
 
 ```
   template:
@@ -127,7 +129,7 @@ messages:
       $ref: "#/messages/template.name"
 ```
 
-  구체화된 문자열을 사용하지 않는 경우에는 다음을 사용할 수 있습니다. 
+  구체화된 문자열을 사용하지 않는 경우에는 다음을 사용할 수 있습니다.
 
 ```
   template:
@@ -173,20 +175,21 @@ template
 
  도구 체인은 GitHub, GitHub 엔터프라이즈, Git 저장소와 문제 추적 및 GitLab을 포함하여 여러 Git 저장소를 위한 지속적 딜리버리를 제공할 수 있습니다. `toolchain.yml` 파일의 이 섹션에 각 저장소가 정의되어 있습니다.
 
- 도구 체인에 추가되는 각 저장소의 경우 다음 특성과 함께 저장소의 이름을 나타내는 상위 키를 추가하십시오. 
+ 도구 체인에 추가되는 각 저장소의 경우 다음 특성과 함께 저장소의 이름을 나타내는 상위 키를 추가하십시오.
 
-| 항목 | 키/특성 | 값 | 설명 |
+|항목 |키/특성 |값 |설명 |
 |------|--------------|-------|-------------|
-| repo-name | 키 |  | 조장소 이름. 이 키는 이름과 일치합니다(sample-repo). |
-| service_id | 특성 | <`githubpublic` , `githubprivate`, `hostedgit`, `gitlab`> | 저장소의 유형 |
-| parameters: | 키 |  |  |
-| repo_name | 특성 |  | repo-name의 패턴. 다음 예에서는 repo 이름으로 도구 체인 이름을 사용합니다. |
-| repo_url | 특성 |  | 저장소의 URL |
-| type | 특성 | <`new`, `fork`, `clone`, `link`> | 새 저장소를 작성하는 방법 |
-| has_issues | 특성 | <`true`, `false`> | 사용 문제 |
-| enable_traceability | properties |  <`true`, `false`> | 커미트, 가져오기 요청 및 참조된 문제에 대한 태그, 레이블 및 주석을 작성하여 코드 변경사항의 배치를 추적하는지 여부를 결정합니다.|
+|repo-name |키 |  |조장소 이름. 이 키는 이름과 일치합니다(sample-repo). |
+|service_id |특성 |<`githubpublic` , `githubprivate`, `hostedgit`, `gitlab`> |저장소의 유형 |
+|parameters: |키 |  |  |
+|repo_name |특성 |  |repo-name의 패턴. 다음 예에서는 repo 이름으로 도구 체인 이름을 사용합니다. |
+|repo_url |특성 |  |저장소의 URL |
+|type |특성 |<`new`, `fork`, `clone`, `link`> |새 저장소를 작성하는 방법 |
+|has_issues |특성 |<`true`, `false`> |사용 문제 |
+|enable_traceability |properties |<`true`, `false`> |커미트, 가져오기 요청 및 참조된 문제에 대한 태그, 레이블 및 주석을 작성하여 코드 변경사항의 배치를 추적하는지 여부를 결정합니다.|
 
- **참고:** 여러 저장소를 정의하고 `has_issues: true`로 저장소를 구성하는 경우 GitHub Issue 트래커의 단일 인스턴스가 도구 체인에 추가됩니다. 트래커는 `true`로 설정된 모든 저장소의 문제를 계속 다룹니다.
+ 여러 저장소를 정의하고 `has_issues: true`로 저장소를 구성하는 경우 GitHub Issue 트래커의 단일 인스턴스가 도구 체인에 추가됩니다. 트래커는 `true`로 설정된 모든 저장소의 문제를 계속 다룹니다.
+ {: tip}
 
  이 스니펫에는 이 섹션에 대한 예가 표시됩니다.
 
@@ -210,22 +213,22 @@ template
 
  시작하려면 도구 체인에 정의된 각 저장소에 파이프라인의 이름을 나타내는 상위 키를 추가하십시오. GitHub 또는 Git Repo and Issue Tracking 저장소의 이름에서 이 키를 가져올 것을 고려하십시오. 다음 특성을 추가하십시오.
 
-| 항목 | 키/특성 | 값 | 설명 |
+|항목 |키/특성 |값 |설명 |
 |------|--------------|-------|-------------|
-| pipeline-name | 키 |  | 파이프라인의 이름(sample-build) |
-| service_id | 특성 | <`pipeline`> | 사용될 서비스의 이름 |
-| parameters | 키 |  |  |
-| 이름 | 특성 | <`repo_name`> | repos 섹션에 정의된 이름과 동일 |
-| ui-pipeline | 특성 | <`true`, `false`> |이 파이프라인이 배치하는 애플리케이션이 도구 체인 페이지의 **앱 보기** 메뉴에 표시되는 경우 True |
-| configuration | 키 |  |  |
-| content | 특성 | <`$ref(pipeline.yml)`> | 파이프라인 정의를 정의하는 파일 |
-| env | 키 |  |  |
-| SAMPLE_REPO | 키 | <`repo-name-key`> | 저장소 상위 키와 동일한 이름 |
-| CF_APP_NAME |  특성 | <`'{{form.pipeline.parameters.prod-app-name}}'`> | Cloud Foundry에 사용되는 이름. 저장소 상위 키 이름을 이 특성에 포함시키는 것을 고려하십시오. |
-| PROD_SPACE_NAME | 특성 | <`'{{form.pipeline.parameters.prod-space}}'`> | 배치할 {{site.data.keyword.Bluemix_notm}} 영역의 이름 |
-| PROD_ORG_NAME | 특성 | <`'{{form.pipeline.parameters.prod-organization}}'`> | 배치할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 |
-| PROD_REGION_ID | 특성 | <`'{{form.pipeline.parameters.prod-region}}'`> | 배치할 {{site.data.keyword.Bluemix_notm}} 지역의 이름 |
-| execute | 특성 | <`true`, `false`> | 작성 후 파이프라인 시작 |
+|pipeline-name |키 |  |파이프라인의 이름(sample-build) |
+|service_id |특성 |<`pipeline`> |사용될 서비스의 이름 |
+|parameters |키 |  |  |
+|이름 |특성 |<`repo_name`> |repos 섹션에 정의된 이름과 동일 |
+|ui-pipeline |특성 |<`true`, `false`> |이 파이프라인이 배치하는 애플리케이션이 도구 체인 페이지의 **앱 보기** 메뉴에 표시되는 경우 True  |
+|configuration |키 |  |  |
+|content |특성 |<`$ref(pipeline.yml)`> |파이프라인 정의를 정의하는 파일 |
+|env |키 |  |  |
+|SAMPLE_REPO |키 |<`repo-name-key`> |저장소 상위 키와 동일한 이름 |
+|CF_APP_NAME |특성 | <`'{{form.pipeline.parameters.prod-app-name}}'`> |Cloud Foundry에 사용되는 이름. 저장소 상위 키 이름을 이 특성에 포함시키는 것을 고려하십시오. |
+|PROD_SPACE_NAME |특성 | <`'{{form.pipeline.parameters.prod-space}}'`> |배치할 {{site.data.keyword.Bluemix_notm}} 영역의 이름 |
+|PROD_ORG_NAME |특성 | <`'{{form.pipeline.parameters.prod-organization}}'`> |배치할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 |
+|PROD_REGION_ID |특성 | <`'{{form.pipeline.parameters.prod-region}}'`> |배치할 {{site.data.keyword.Bluemix_notm}} 지역의 이름 |
+|execute |특성 |<`true`, `false`> |작성 후 파이프라인 시작 |
 
 <!--| services | property | <`repo-name-key`> |  GitHub repository parent key |
 | hidden | property | <`[form, description]`> |  |
@@ -254,7 +257,7 @@ template
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
        execute: true
- ```      
+ ```
  {: codeblock}
 
 4\. **배치 세부사항:**
@@ -263,20 +266,20 @@ template
 
  ![Delivery Pipeline 구성 설정](images/deploy_configuration.png)
 
- `toolchain.yml` 파일의 이 섹션은 도구 체인 작성 페이지에서 구성될 수 있는 파이프라인 단계를 정의합니다. 
+ `toolchain.yml` 파일의 이 섹션은 도구 체인 작성 페이지에서 구성될 수 있는 파이프라인 단계를 정의합니다.
 
  시작하기 위해 상위 키 `deploy`가 배치 구성 특성을 식별하는 데 사용됩니다. 다음 특성은 섹션의 나머지 부분을 구성합니다.
 
-| 항목 | 키/특성 | 값 | 설명 |
+|항목 |키/특성 |값 |설명 |
 |------|--------------|-------|-------------|
-| deploy | 키 |  | 배치 섹션의 이름 |
-| schema | 특성 | <`deploy.json`> | 배치 세부사항 구성을 위한 UI의 레이아웃을 정의하는 파일 |
-| service-category | 특성 | <`pipeline`> | 배치 구성을 사용하는 서비스 |
-| parameters | 키 |  |  |
-| prod-region | 특성 | <`"{{region}}"`> | 프로덕션 단계에 대한 {{site.data.keyword.Bluemix_notm}} 지역을 정의합니다. |
-| prod-organization | 특성 | <`"{{organization}}"`> | 프로덕션 단계에 대한 {{site.data.keyword.Bluemix_notm}} 조직을 정의합니다. |
-| prod-space | 특성 | <`prod`> | 프로덕션 단계에 대한 {{site.data.keyword.Bluemix_notm}} 영역을 정의합니다. |
-| github-repo-name | 특성 | <`"{{repo-name-key.parameters.repo_name}}"`> | GitHub 저장소 이름을 도구 체인 작성 페이지에 전달하는 변수 |
+|deploy |키 |  |배치 섹션의 이름 |
+|schema |특성 |<`deploy.json`> |배치 세부사항 구성을 위한 UI의 레이아웃을 정의하는 파일 |
+|service-category |특성 |<`pipeline`> |배치 구성을 사용하는 서비스 |
+|parameters |키 |  |  |
+|prod-region |특성 | <`"{{region}}"`> |프로덕션 단계에 대한 {{site.data.keyword.Bluemix_notm}} 지역을 정의합니다. |
+|prod-organization |특성 | <`"{{organization}}"`> |프로덕션 단계에 대한 {{site.data.keyword.Bluemix_notm}} 조직을 정의합니다. |
+|prod-space |특성 |<`prod`> |프로덕션 단계에 대한 {{site.data.keyword.Bluemix_notm}} 영역을 정의합니다. |
+|github-repo-name |특성 | <`"{{repo-name-key.parameters.repo_name}}"`> |GitHub 저장소 이름을 도구 체인 작성 페이지에 전달하는 변수 |
 
 `deploy.json` 파일 작성에 대한 자세한 정보는 [이 섹션]을 참조하십시오. (#toolchains_custom_deploy_json)
 
@@ -295,12 +298,12 @@ template
  ```
  {: codeblock}
 
- 코드 예제를 대부분 그대로 사용할 수 있으며 약간의 수정만 필요합니다. 이 섹션을 사용자 정의하려면, `github-repo-name`을 저장소의 이름과 일치하도록 설정하십시오. [`deploy.json`](#toolchains_custom_deploy_json) 파일의 세부사항도 업데이트해야 합니다. 
+ 코드 예제를 대부분 그대로 사용할 수 있으며 약간의 수정만 필요합니다. 이 섹션을 사용자 정의하려면, `github-repo-name`을 저장소의 이름과 일치하도록 설정하십시오. [`deploy.json`](#toolchains_custom_deploy_json) 파일의 세부사항도 업데이트해야 합니다.
 
- dev, QA 및 Prod 단계를 포함하는 보다 복잡한 파이프라인을 작성하기 위해 `parameters` 키 아래에서 다음 특성을 대체할 수 있습니다. 
+ dev, QA 및 Prod 단계를 포함하는 보다 복잡한 파이프라인을 작성하기 위해 `parameters` 키 아래에서 다음 특성을 대체할 수 있습니다.
 
  ```
-parameters:
+   매개변수:
  	dev-region: "{{region}}"
  	qa-region: "{{region}}"
  	prod-region: "{{region}}"
@@ -318,9 +321,9 @@ parameters:
 
  `pipeline.yml` 파일에는 파이프라인의 단계에 대한 모든 구성 세부사항이 포함되어 있습니다. 기존의 pipeline.yml으로 시작할 수 있고 사용자의 필요에 맞게 사용자 정의할 수 있습니다.
 
- 도구 체인에 하나 이상의 파이프라인이 포함되어 있는 경우 각 `pipeline.yml` 파일에 대한 고유 이름을 제공하십시오. 
+ 도구 체인에 하나 이상의 파이프라인이 포함되어 있는 경우 각 `pipeline.yml` 파일에 대한 고유 이름을 제공하십시오.
 
- 다음은 `pipeline.yml` 파일의 예제입니다. 
+ 다음은 `pipeline.yml` 파일의 예제입니다.
 
  ```
  ---
@@ -391,7 +394,7 @@ stages:
  ## 파이프라인 인터페이스 구성
  {: #toolchains_custom_deploy_json}
 
- 도구 체인 작성 페이지에서 구성 가능한 통합 섹션에서 Delivery Pipeline을 선택하는 경우 섹션이 펼쳐지고 다음 항목이 표시됩니다. 
+ 도구 체인 작성 페이지에서 구성 가능한 통합 섹션에서 Delivery Pipeline을 선택하는 경우 섹션이 펼쳐지고 다음 항목이 표시됩니다.
 
  	* 애플리케이션의 이름
  	* 파이프라인 단계가 배치되는 지역, 조직 및 영역
@@ -400,16 +403,16 @@ stages:
 
  ![Delivery Pipeline 구성 설정](images/deploy_configuration.png)
 
- UI에서 이 섹션의 레이아웃은 `deploy.json` 스키마에 의해 정의됩니다. 
+ UI에서 이 섹션의 레이아웃은 `deploy.json` 스키마에 의해 정의됩니다.
 
- 스키마 내에서 다음 특성이 애플리케이션의 세부사항과 일치하도록 업데이트됩니다. 
+ 스키마 내에서 다음 특성이 애플리케이션의 세부사항과 일치하도록 업데이트됩니다.
 
  	* 제목
  	* 설명
  	* 긴 설명
  	* `hello-world-name`의 모든 인스턴스 및 연관된 세부사항을 애플리케이션의 정보와 일치하도록 수정해야 합니다.
 
- 다음 스니펫은 `deploy.json` 파일의 예제입니다. 
+ 다음 스니펫은 `deploy.json` 파일의 예제입니다.
 
  ```
  {
@@ -528,7 +531,7 @@ stages:
 
 ## 기타 도구 구성
 
- 도구 체인의 코어 컴포넌트를 구성하고 나면 도구 체인에 기능을 추가하는 다른 도구 통합을 포함할 수 있습니다. 모든 추가 도구는 `toolchain.yml` 파일에 고유 항목이 필요합니다. 일부 도구는 별도의 YAML 구성 파일을 `.bluemix` 디렉토리에 추가해야 합니다. 
+ 도구 체인의 코어 컴포넌트를 구성하고 나면 도구 체인에 기능을 추가하는 다른 도구 통합을 포함할 수 있습니다. 모든 추가 도구는 `toolchain.yml` 파일에 고유 항목이 필요합니다. 일부 도구는 별도의 YAML 구성 파일을 `.bluemix` 디렉토리에 추가해야 합니다.
 
  ![도구 체인을 정의하는 데 필요한 파일](images/files_for_toolchain_with_additional_tools.png)
 
