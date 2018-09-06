@@ -2,14 +2,17 @@
 
 Copyright:
   years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # 工具链可用性、模板和教程  
@@ -27,7 +30,8 @@ lastupdated: "2018-3-26"
 
 {{site.data.keyword.contdelivery_short}} 在所选区域中的 {{site.data.keyword.Bluemix_notm}} Public 上可用，也在 {{site.data.keyword.Bluemix_notm}} Dedicated 上可用。根据是在 {{site.data.keyword.Bluemix_notm}} Public 上还是在 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用 {{site.data.keyword.contdelivery_short}}，工具链有所不同。
 
-**提示**：尽管目前工具链并非在所有区域都可用，但您可以配置工具链以在所有区域中部署应用程序。要了解更多信息，请尝试<a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">在多个区域中部署安全 Web 应用程序</a>教程。
+尽管目前工具链并非在所有区域都可用，但您可以配置工具链以在所有区域中部署应用程序。要了解更多信息，请尝试<a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">在多个区域中部署安全 Web 应用程序</a>教程。
+{: tip}
 
 |工具链|{{site.data.keyword.Bluemix_notm}} Public|{{site.data.keyword.Bluemix_notm}} Dedicated|
 |:----------|:------------------------------|:------------------|
@@ -35,7 +39,7 @@ lastupdated: "2018-3-26"
 |通过模板创建工具链|登录到 [{{site.data.keyword.Bluemix_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://console.bluemix.net/devops){:new_window}|登录到 {{site.data.keyword.Bluemix_notm}} 上的 Dedicated 环境。|
 |通过应用程序创建工具链|此时，将会对应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 存储库，进行持续交付。|此时，将会对应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 或 GitHub Enterprise 存储库，进行持续交付。|  
 |Delivery Pipeline 部署区域|所有 {{site.data.keyword.Bluemix_notm}} Public 区域都可用于 Cloud Foundry 部署作业。|{{site.data.keyword.Bluemix_notm}} Dedicated 区域可用。根据 {{site.data.keyword.contdelivery_short}} 在特定环境中的设置方式，相同客户帐户中的其他 Dedicated 或 Local 区域也可能可用。|
-|Delivery Pipeline 部署作业|所有[作业类型](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs)都可用。|取决于未安装在 Dedicated 环境中的 {{site.data.keyword.Bluemix_notm}} 服务的作业类型可能不可用。例如，容器构建和部署作业类型在没有 {{site.data.keyword.Bluemix_notm}} Container 服务的环境中可能不可用。|
+|Delivery Pipeline 部署作业|所有[作业类型](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs)都可用。|取决于未安装在 Dedicated 环境中的 {{site.data.keyword.Bluemix_notm}} 服务的作业类型可能不可用。例如，容器构建和部署作业类型在没有 {{site.data.keyword.containerlong_notm}} 的环境中可能不可用。|
 {: caption="表 1. {{site.data.keyword.Bluemix_notm}} Dedicated 和 {{site.data.keyword.Bluemix_notm}} Public 上工具链的区别" caption-side="top"}
 
 
@@ -44,9 +48,10 @@ lastupdated: "2018-3-26"
 
 您可以使用模板作为起始点来[创建工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/devops/create){: new_window}。工具链模板包括支持开发、部署和操作任务的一组特定工具集成。
 
-**提示**：您公司的 {{site.data.keyword.Bluemix_notm}} Dedicated 环境可能未包含与 {{site.data.keyword.Bluemix_notm}} Public 站点相同的工具链模板。在 {{site.data.keyword.Bluemix_notm}} Public 和 {{site.data.keyword.Bluemix_notm}} Dedicated 上都可用的工具链模板可能在 {{site.data.keyword.Bluemix_notm}} Dedicated 上包含一组不同的工具集成。
+贵公司的 {{site.data.keyword.Bluemix_notm}} Dedicated 环境可能未包含与 {{site.data.keyword.Bluemix_notm}} Public 站点相同的工具链模板。在 {{site.data.keyword.Bluemix_notm}} Public 和 {{site.data.keyword.Bluemix_notm}} Dedicated 上都可用的工具链模板可能在 {{site.data.keyword.Bluemix_notm}} Dedicated 上包含一组不同的工具集成。
+{: tip}
 
-一些工具链模板包含属于 {{site.data.keyword.contdelivery_short}} 服务的工具集成。如果您的组织中还没有该服务的实例，那么当您单击**创建**以创建工具链时，该服务会自动随所选的免费轻量套餐一起添加。有关更多信息和条款，请参阅 [{{site.data.keyword.Bluemix_notm}} 目录 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/continuous-delivery/){:new_window}。
+一些工具链模板包含属于 {{site.data.keyword.contdelivery_short}} 服务的工具集成。如果您的资源组或组织中还没有该服务的实例，那么当您单击**创建**以创建工具链时，该服务会自动随所选的免费轻量套餐一起添加。有关更多信息和条款，请参阅 [{{site.data.keyword.Bluemix_notm}} 目录 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/continuous-delivery/){:new_window}。
 
 “在 Cloud Foundry 上开发和测试微服务”工具链会通过目录部署应用程序，并订购由 Cloudant 库支持的 API。在部署应用程序的过程中，会创建免费的 Cloudant 服务实例。有关更多信息和条款，请参阅 [{{site.data.keyword.Bluemix_notm}} 目录 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/cloudant-nosql-db/){:new_window}。
 
@@ -80,12 +85,11 @@ lastupdated: "2018-3-26"
   在美国南部、德国和英国可用
 
   </td><td>
-  有了此工具链，您可以开发应用程序并将其安全地部署到 {{site.data.keyword.Bluemix_notm}} Container Service 管理的 Kubernetes 集群中。缺省情况下，此工具链使用样本 Node.js“Hello World”应用程序，但是您可以改为链接到自己的 GitHub 存储库。此工具链已针对具有漏洞顾问程序的持续交付、源代码控制、问题跟踪和联机编辑进行了预配置。<br><br>
+有了此工具链，您可以开发应用程序并将其安全地部署到 {{site.data.keyword.containerlong_notm}} 管理的 Kubernetes 集群中。缺省情况下，此工具链使用样本 Node.js“Hello World”应用程序，但是您可以改为链接到自己的 GitHub 存储库。此工具链已针对具有漏洞顾问程序的持续交付、源代码控制、问题跟踪和联机编辑进行了预配置。<br><br>
   尝试以下教程：<a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain" target="_blank">使用“开发 Kubernetes 应用程序”工具链 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>  
   <br><br>
   </td><td><ul><li>{{site.data.keyword.deliverypipeline}}
-  </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>GitHub 和 Issues</li><li>{{site.data.keyword.Bluemix_notm}} 容器（Kubernetes 集群）
-  </li></ul>
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>GitHub 和 Issues</li><li>{{site.data.keyword.containerlong_notm}}（Kubernetes 集群）</li></ul>
   </td></tr>
 
   <tr><td>
@@ -95,21 +99,21 @@ lastupdated: "2018-3-26"
 
   </td><td>
   有了此工具链，您可以在源代码控制中同时开发 Docker 应用程序及其 Helm 图表，然后对其自动构建并部署到 Kubernetes 集群。此工具链在构建或部署之前会执行冒烟测试，并使用专用容器注册表以及该容器注册表和 Kubernetes 集群的名称空间来确保隐私。此工具链还会使用漏洞顾问程序来确保仅部署安全映像。<br><br>
-  尝试以下教程：<a href="https://www.ibm.com/cloud/garage/use-develop-kubernetes-app-with-helm-toolchain" target="_blank">使用“使用 Helm 开发 Kubernetes 应用程序”工具链 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a><br><br>
+尝试以下教程：<a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain" target="_blank">使用“使用 Helm 开发 Kubernetes 应用程序”工具链 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a><br><br>
   </td><td><ul>
   <li>{{site.data.keyword.deliverypipeline}}
-  </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>Git Repos and Issue Tracking</li><li>具有 Helm 图表的 {{site.data.keyword.Bluemix}} 容器（Kubernetes 集群）
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>Git Repos and Issue Tracking</li><li>具有 Helm 图表的 {{site.data.keyword.containerlong_notm}}（Kubernetes 集群）
   </li></ul>
   </td></tr>
 
   <tr><td>
-  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-helm-toolchain" target="_blank">“开发和测试 Cloud Foundry 应用程序”工具链 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a><br><br>
+  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdra-toolchain-demo" target="_blank">“开发和测试 Cloud Foundry 应用程序”工具链 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a><br><br>
 
   在美国南部、德国和英国可用
 
   </td><td>
   有了此云本机工具链，您可以使用 DevOps Insights 对简单 Cloud Foundry 应用程序的部署设置检测点。缺省情况下，此工具链使用样本 Node.js Weather 应用程序，或者您可以链接到自己的 GitHub 存储库。此工具链使用 Mocha 来运行单元测试，并使用 Istanbul 来检查代码覆盖范围。<br><br>
-  尝试以下教程：<a href="https://www.ibm.com/cloud/garage/use-develop-test-cloud-foundry-app-toolchain" target="_blank">使用“开发和测试 Cloud Foundry 应用程序”工具链 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a><br><br>
+尝试以下教程：<a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain" target="_blank">使用“开发和测试 Cloud Foundry 应用程序”工具链 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a><br><br>
   </td><td><ul>
   <li>{{site.data.keyword.deliverypipeline}}
   </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>Git Repos and Issue Tracking</li><li>{{site.data.keyword.DRA_full}}（仅限美国南部）
@@ -174,20 +178,6 @@ GitHub 和 Issues</li><li>Jenkins</li><li>{{site.data.keyword.DRA_full}}
 </td><td><ul><li>
 GitHub 和 Issues</li><li>{{site.data.keyword.DRA_full}}
 </li><li>JIRA</li><li>Slack</li></ul>
-</td></tr>
-
-
-<tr><td>
-<a href="(https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdeliveryinsights-toolchain" target="_blank">“使用 IBM UrbanCode Deploy 的 Delivery Insights”工具链 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a> <br><br>
-
-  在美国南部可用
-
-</td><td>有了此工具链，您可以从 IBM UrbanCode Deploy 查看部署度量值。通过从 {{site.data.keyword.DRA_short}} 的“设置”页面下载并配置 DevOps Connect，启用此工具链以与 IBM UrbanCode Deploy 进行通信。<br><br>
-尝试以下教程：<a href="https://www.ibm.com/cloud/garage/tutorials/view-metrics-delivery-insights-urbancode-deploy-toolchain" target="_blank">使用“使用 IBM UrbanCode Deploy 的 Delivery Insights”工具链来查看度量值 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a> 	
-<br><br>
-</td><td><ul><li>{{site.data.keyword.DRA_full}}
-</li><li>UrbanCode Deploy
-</li></ul>
 </td></tr>
 
 <tr><td>

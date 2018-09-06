@@ -2,13 +2,16 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-3-22"
+lastupdated: "2018-8-2"
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Delivery Pipeline 概述
@@ -17,7 +20,8 @@ lastupdated: "2018-3-22"
 {{site.data.keyword.contdelivery_full}} 包含 Delivery Pipeline，用于以可重复的方式进行构建、测试和部署，需要的人为干预最少。在管道中，阶段序列可检索输入并运行作业（例如，构建、测试和部署）。
 {:shortdesc}
 
-以下各节描述管道背后的概念性详细信息。
+查看、修改或运行管道的许可权基于拥有管道的工具链的访问控制。有关工具链的访问控制的更多信息，请参阅[管理对资源组中工具链的访问权](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}和[管理对 Cloud Foundry 组织中工具链的访问权](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}。
+{: tip}
 
 ## 阶段
 {: #deliverypipeline_stages}
@@ -26,7 +30,8 @@ lastupdated: "2018-3-22"
 
 阶段输入会传递到该阶段包含的作业中，并且会为每一个作业提供一个干净的运行容器。
 
-**要点**：阶段中的作业彼此之间无法传递工件。由于您无法在阶段之间传递工件，因此，如果部署阶段将使用构建阶段工件，那么需要有一个独立于部署阶段的构建阶段。
+阶段中的作业彼此之间无法传递工件。由于您无法在作业之间传递工件，因此，如果部署阶段将使用构建阶段工件，那么需要有一个独立于部署阶段的构建阶段。
+{: tip}
 
 您可以定义可在所有作业中使用的阶段环境属性。例如，您可以定义 `TEST_URL` 属性，该属性传递单个 URL 以在单个阶段中部署和测试作业。部署作业将部署到该 URL，而测试作业将在该 URL 测试正在运行的应用程序。
 
@@ -73,7 +78,7 @@ lastupdated: "2018-3-22"
 
 除了简单类型构建作业之外，当您配置作业时，可以包括内含构建、测试或部署命令的 UNIX shell 脚本。因为作业在特定容器中运行，所以一个作业的操作无法影响其他作业的运行环境，即使这些作业属于相同的阶段也是如此。
 
-bod 和部署脚本的样本可以在 [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons) 中找到。
+构建和部署脚本的样本可以在 [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons) 中找到。
 
 此外，管道作业仅可以 `sudo` 运行以下命令：
   * `/usr/sbin/service`
@@ -90,7 +95,8 @@ bod 和部署脚本的样本可以在 [https://github.com/open-toolchain/commons
 
 作业运行之后，即会废弃针对其创建的容器。可以持久存储作业运行的结果，但是不会持久存储其运行的环境。
 
-**注**：作业最长可以运行 60 分钟。当作业超过此限制时即会失败。如果作业会超过此限制，请将其分成多个作业。例如，如果作业执行三个任务，那么您可以将其分成三个作业：每个任务一个作业。
+作业最长可以运行 60 分钟。当作业超过此限制时即会失败。如果作业会超过此限制，请将其分成多个作业。例如，如果作业执行三个任务，那么您可以将其分成三个作业：每个任务一个作业。
+{: tip}
 
 要了解如何将作业添加到阶段，请参阅[将作业添加到阶段](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}。
 
@@ -100,11 +106,12 @@ bod 和部署脚本的样本可以在 [https://github.com/open-toolchain/commons
 
 从构建作业接受输入的作业必须参考与其采用相同结构创建的构建工件。例如，如果构建作业将构建工件归档至 `output` 目录，那么部署脚本会参考 `output` 目录而非项目根目录，以部署编译过的项目。可以通过在**构建归档目录**字段中输入目录名称来指定归档目录。使此字段保留为空白将归档根目录。
 
-**注**：如果使用**简单**构建器类型，那么不会编译或构建代码；而是将其打包，并使其可用于未来的阶段。
+如果使用**简单**构建器类型，那么不会编译或构建代码；而是将其打包，并使其可用于未来的阶段。
+{: tip}
 
-使用 Cloud Foundry 部署时，Cloud Foundry 会包含正确的工件以允许应用程序运行。有关更多信息，请参阅[使用 cf 命令部署应用程序](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps)。Cloud Foundry 应用程序的管道包含运行 cf 命令的部署阶段。
+使用 Cloud Foundry 部署时，Cloud Foundry 会包含正确的工件以允许应用程序运行。有关更多信息，请参阅[使用 cf 命令部署应用程序](/docs/cloud-foundry/deploy-apps.html#dep_apps)。Cloud Foundry 应用程序的管道包含运行 cf 命令的部署阶段。
 
-Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://docs.cloudfoundry.org/buildpacks/detection.html)。可以在应用程序根文件夹的清单文件中指定要使用的 [buildpack](/docs/cfapps/byob.html#using-community-buildpacks)。buildpack 通常会检查用户提供的工件，以确定要下载的依赖项以及如何配置应用程序以与绑定服务进行通信。有关清单文件的更多信息，请参阅[应用程序清单](/docs/manageapps/depapps.html#appmanifest)。
+Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://docs.cloudfoundry.org/buildpacks/detection.html)。可以在应用程序根文件夹的清单文件中指定要使用的 [buildpack](/docs/cfapps/byob.html#using-community-buildpacks)。buildpack 通常会检查用户提供的工件，以确定要下载的依赖项以及如何配置应用程序以与绑定服务进行通信。有关清单文件的更多信息，请参阅[应用程序清单](/docs/cloud-foundry/deploy-apps.html#appmanifest)。
 
 ### 部署作业
 
@@ -112,7 +119,7 @@ Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icon
 
 部署作业可以部署新的应用程序或更新现有的应用程序。即使您最初使用其他方法（如 Cloud Foundry 命令行界面或 Web IDE 中的运行栏）部署了应用程序，您也可以使用部署作业更新该应用程序。要更新应用程序，请在部署作业中，使用该应用程序的名称。
 
-可以部署到一个或多个区域和服务。例如，您可以设置 {{site.data.keyword.deliverypipeline}} 以使用一个或多个服务，在一个区域中进行测试，然后部署到多个区域中的生产环境。有关更多信息，请参阅[区域](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}。
+可以部署到一个或多个区域和服务。例如，您可以设置 {{site.data.keyword.deliverypipeline}} 以使用一个或多个服务，在一个区域中进行测试，然后部署到多个区域中的生产环境。有关更多信息，请参阅[区域](/docs/overview/ibm-cloud.html#ov_intro-reg){: new_window}。
 
 ### 测试作业
 如果您想要求满足某些条件，请在构建和部署作业之前或之后，包括测试作业。您可以定制测试作业，按您的需要定制为简单或复杂。例如，您可能会发出 cURL 命令并期望获得特定响应。您还可能使用第三方测试服务（如 Sauce Labs），运行一组单元测试或运行功能测试。
@@ -133,11 +140,11 @@ Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icon
 
 构建作业自动访存执行用户脚本的当前文件夹中的内容。如果不需要整个 Git 存储库内容以供将来部署，那么最好配置显式输出目录，然后在该目录中复制或创建相关工件。作业脚本在构建结果（输出目录）中执行。
 
-部署到 Cloud Foundry 的部署作业需要指定用于部署工件的组织和空间。如果需要其他服务来运行应用程序，那么需要在 `manifest.yml` 文件中指定这些服务。
+部署到 Cloud Foundry 的部署作业需要指定使用其权限运行作业的用户的 Platform API 密钥，以及用于部署工件的区域、组织和空间。如果需要其他服务来运行应用程序，那么需要在 `manifest.yml` 文件中指定这些服务。
 
-将部署到 Kubernetes 集群的 IBM Cloud Container Service 的部署作业需要 Dockerfile 和（可选）Helm 图表。  
+部署到 {{site.data.keyword.containerlong_notm}} 以在 Kubernetes 集群中运行的部署作业需要指定使用其权限运行作业的用户的 Platform API 密钥、Dockerfile 和可选的 Helm 图表。  
 
-作业脚本在作业登录到目标环境后运行（以便您可以在脚本中执行 `cf push` 或 `kubectl` 命令）。
+作业脚本在作业使用分配的 Platform API 密钥登录到目标环境后运行（以便您可以在脚本中执行 `cf push` 或 `kubectl` 命令）。
 
 ## 管道示例
 {: #deliverypipeline_example}
@@ -159,7 +166,7 @@ Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icon
 ## Cloud Foundry 清单文件
 {: #deliverypipeline_manifest}
 
-清单文件名为 `manifest.yml`，存储在项目的根目录中，用于控制如何将项目部署到 {{site.data.keyword.Bluemix_notm}}。有关创建项目清单文件的信息，请参阅[有关应用程序清单的 {{site.data.keyword.Bluemix_notm}} 文档](/docs/manageapps/depapps.html#appmanifest)。要与 {{site.data.keyword.Bluemix_notm}} 集成，项目的根目录中必须包含清单文件。但是，无需基于该文件中的信息进行部署。
+清单文件名为 `manifest.yml`，存储在项目的根目录中，用于控制如何将项目部署到 {{site.data.keyword.Bluemix_notm}}。有关创建项目清单文件的信息，请参阅[有关应用程序清单的 {{site.data.keyword.Bluemix_notm}} 文档](/docs/cloud-foundry/deploy-apps.html#appmanifest)。要与 {{site.data.keyword.Bluemix_notm}} 集成，项目的根目录中必须包含清单文件。但是，无需基于该文件中的信息进行部署。
 
 在管道中，您可以使用 `cf push` 命令自变量，指定清单文件可以执行的所有事项。`cf push` 命令自变量在具有多个部署目标的项目中非常有用。如果多个部署作业全部尝试使用项目清单文件中指定的路径，那么会发生冲突。
 

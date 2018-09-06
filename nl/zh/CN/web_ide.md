@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-20"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 使用 Eclipse Orion Web IDE 进行开发
 {: #web_ide}
@@ -23,7 +25,7 @@ Eclipse Orion{{site.data.keyword.webide}} 是基于浏览器的开发环境，�
 ## 设置 IDE
 {: #editorsetup}
 
-{{site.data.keyword.webide}} 可进行定制，因此您可以选择满足开发需要的颜色方案、技术工具和设置。要查看和修改设置，请单击左侧导航侧边栏中的**设置**图标 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="“设置”图标">。
+{{site.data.keyword.webide}} 可进行定制，因此您可以选择满足开发需要的颜色方案、技术工具和设置。要查看和修改设置，请从左侧导航侧边栏中，单击**设置**图标 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="“设置”图标">。
 
 如果在编辑时经常需要更改某些设置，可以从**本地编辑器设置**图标<img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="“本地编辑器设置”图标">快速访问这些设置。
 
@@ -45,7 +47,8 @@ Eclipse Orion{{site.data.keyword.webide}} 是基于浏览器的开发环境，�
 
 {{site.data.keyword.webide}} 包含两个主要部分。第一部分是文件导航器，以树状结构显示您的项目文件。在文件导航器中，可以创建、重命名、删除以及管理文件和文件夹。
 
-**提示：**要将文件上传到文件导航器中，请将文件从您的计算机拖动到文件导航器中。
+要将文件上传到文件导航器中，请将文件从您的计算机拖动到文件导航器中。
+{: tip}
 
 第二部分是编辑器窗格。编辑器提供多种编码功能，包括内容辅助和语法验证。
 
@@ -79,7 +82,7 @@ Eclipse Orion{{site.data.keyword.webide}} 是基于浏览器的开发环境，�
 2. 应用程序部署完成后，可使用运行栏停止、重新启动或调试应用程序，以及查看日志等等。
 
 
-<table>
+<table role="presentation">
 <tr><td><img src="./images/stop_button.png"  alt="停止图标"></td><td>停止应用程序</td></tr>
 <tr><td> <img src="./images/open_app_url.png"  alt="打开应用程序 URL 图标"></td><td> 打开已部署的应用程序</td></tr>
 <tr><td><img src="./images/view_logs.png"  alt="查看日志图标"></td><td>查看已部署应用程序的日志</td></tr>
@@ -88,7 +91,7 @@ Eclipse Orion{{site.data.keyword.webide}} 是基于浏览器的开发环境，�
 
 如果您是在开发 Node.js 应用程序，请启用“实时编辑”方式：<img  src="./images/enable_live_edit.png"  alt="启用实时编辑滑块">
 
-<table><tr><td><img src="./images/live_edit_restart.png"  alt="“实时编辑”重新启动图标"></td><td>在启用“实时编辑”方式的情况下，快速重新启动应用程序而不重新部署。</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="“实时编辑”重新启动图标"></td><td>在启用“实时编辑”方式的情况下，快速重新启动应用程序而不重新部署</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="调试图标"></td>
 <td>在启用“实时编辑”方式的情况下访问调试器</td></tr>
 </table>
@@ -160,7 +163,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 Eclipse Orion {{site.data.keyword.webide}} 为 JavaScript、HTML、CSS 和 Markdown 文件提供内容辅助、工具提示、预览、验证和语法突出显示。以下文件类型也支持语法突出显示：
 
-<table>
+<table role="presentation">
 <tr>
 <td>
 <ul><li>Arduino

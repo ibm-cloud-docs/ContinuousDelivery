@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-17"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}    
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}   
 
 # 配置工具集成
 {: #integrations}
@@ -42,10 +45,10 @@ lastupdated: "2018-3-21"
 |Sauce Labs|美国南部、德国和英国|否|
 |Slack|美国南部、德国和英国|是|
 |SonarQube|美国南部、德国和英国|是|
-|UrbanCode Deploy			|美国南部|否|
 {: caption="表 1. 在 {{site.data.keyword.Bluemix_notm}} Public 和 Dedicated 中，工具链可使用的工具集成" caption-side="top"}
 
-**提示**：如果您想要在 {{site.data.keyword.Bluemix_notm}} Public 中开始使用源代码进行开发，请先配置 GitHub 工具集成或 {{site.data.keyword.gitrepos}} 工具集成，然后再配置 {{site.data.keyword.deliverypipeline}}。如果要在 {{site.data.keyword.Bluemix_notm}} Dedicated 上开始使用您的代码进行开发，请先配置 {{site.data.keyword.ghe_short}} 工具集成或 GitHub 工具集成，然后再配置 {{site.data.keyword.deliverypipeline}}。
+如果您想要在 {{site.data.keyword.Bluemix_notm}} Public 中开始使用源代码进行开发，请先配置 GitHub 工具集成或 {{site.data.keyword.gitrepos}} 工具集成，然后再配置 {{site.data.keyword.deliverypipeline}}。如果要在 {{site.data.keyword.Bluemix_notm}} Dedicated 上开始使用您的代码进行开发，请先配置 {{site.data.keyword.ghe_short}} 工具集成或 GitHub 工具集成，然后再配置 {{site.data.keyword.deliverypipeline}}。
+{: tip}
 
 
 ## 配置 Alert Notification
@@ -157,9 +160,8 @@ lastupdated: "2018-3-21"
      # or
      npm publish --registry "${NPM_RELEASE_URL}"
      ```
-  **提示**：您可以在 Artifactory 工具集成的配置设置中，查找用于连接到注册表的 URL 和用户凭证。
-
-
+  您可以在 Artifactory 工具集成的配置设置中，查找用于连接到注册表的 URL 和用户凭证。
+  {: tip}
 
   e. 如果您的构建作业发布到 Artifactory 注册表且您节点模块版本的格式为 `x.y.z-SNAPSHOT.w`，请选中**增量快照模块版本**复选框。构建作业会在作业发布到 Artifactory 注册表之前，自动更新模块版本。作业会从 npm 注册表和本地 `package.json` 文件中选择最高的模块版本，并使用 semver 递增模块版本。 构建作业不会将更改交付到 SCM 存储库。
 
@@ -188,9 +190,8 @@ lastupdated: "2018-3-21"
      # or
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  **提示**：您可以在 Artifactory 工具集成的配置设置中，查找用于连接到注册表的 URL 和用户凭证。
-
-
+  您可以在 Artifactory 工具集成的配置设置中，查找用于连接到注册表的 URL 和用户凭证。
+  {: tip}
 
 1. 单击**保存**。管道无论何时运行，此构建作业都会使用 Artifactory 工具集成中的配置信息来连接到您的 Maven 存储库。
 
@@ -204,7 +205,8 @@ lastupdated: "2018-3-21"
 
 {{site.data.keyword.prf_hublong}} 可在问题影响到用户之前，隔离问题、识别模式并改进性能。您可以从世界各地测试您的应用程序、与 Delivery Pipeline 集成，以及深入了解如何持续优化代码。
 
-**注**：此工具集成是预配置的，不需要任何配置参数。无法对此工具集成进行重新配置。
+此工具集成是预配置的，不需要任何配置参数。无法对此工具集成进行重新配置。
+{: tip}
 
 要在构建应用程序时对应用程序的运行状况进行测试、监视和改进，请添加 {{site.data.keyword.prf_hubshort}} 工具集成：
 
@@ -237,7 +239,24 @@ lastupdated: "2018-3-21"
 
  b. 在“工具集成”部分中，单击 **Bitbucket**。
 
-   **提示：**如果要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具集成，而您尚未授权 {{site.data.keyword.Bluemix_notm}} 访问 Bitbucket，请单击**授权**以转至 Bitbucket Web 站点。如果您没有活动的 Bitbucket 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 Bitbucket 帐户。如果您有活动的 Bitbucket 会话，但最近未输入过密码，那么系统可能会提示您输入 Bitbucket 密码以进行确认。
+   如果要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具集成，但尚未授权 {{site.data.keyword.Bluemix_notm}} 访问 Bitbucket，请单击**授权**以转至 Bitbucket Web 站点。如果您没有活动的 Bitbucket 会话，那么系统会提示您登录。单击**授予访问权**以允许 {{site.data.keyword.Bluemix_notm}} 工具链访问 Bitbucket 帐户的以下部分：
+   
+   * **读取帐户信息**。获取基本用户信息以填充用户界面。
+   
+   * **读取和修改存储库的问题**。允许 {{site.data.keyword.contdelivery_short}} 更新问题以指示管道何时部署连接到这些问题的落实。 
+   
+   * **读取团队项目设置和读取团队项目中包含的存储库**。允许 {{site.data.keyword.contdelivery_short}} 与团队拥有的存储库相集成。
+   
+   * **读取和修改存储库及其拉取请求**。允许 {{site.data.keyword.contdelivery_short}} 在用户请求代码时将样本代码推送到存储库。
+   
+   * **管理存储库**。允许 {{site.data.keyword.contdelivery_short}} 在用户请求时创建新存储库。
+   
+   * **读取团队成员资格信息**。允许 {{site.data.keyword.contdelivery_short}} 在创建新存储库时显示的**所有者**菜单中显示团队列表。
+   
+   * **读取和修改存储库的 Webhook**。允许管道在将落实推送到存储库时触发构建。
+   {: tip}
+   
+   如果您有活动的 Bitbucket 会话，但最近未输入过密码，那么系统可能会提示您输入 Bitbucket 密码以进行确认。
 
 1. 单击要使用的 Bitbucket 服务器。
 1. 如果您有要使用的 Bitbucket 存储库，请输入该存储库的 URL。对于存储库类型，请单击**现有**。
@@ -256,7 +275,8 @@ lastupdated: "2018-3-21"
 1. 在工具链中，单击要使用的 Bitbucket 存储库的卡。这将打开 Bitbucket Web 站点，您可在其中查看存储库的内容。
 1. 如果您已启用 Bitbucket Issues，请单击 **Bitbucket Issues**，以将其打开。您可以对整个工具链使用此 Bitbucket Issues 实例，即使工具链包含多个 Bitbucket 存储库也不例外。    
 
-**注：**如果您对要链接到的存储库没有所有者或支配者特权，那么您的集成将受到限制，因为您无法使用 Webhook。将提交推送到存储库时，需要 Webhook 才能自动运行管道。没有 Webhook，您必须手动启动管道。
+如果您对要链接到的存储库没有所有者或支配者特权，那么您的集成将受到限制，因为您无法使用 Webhook。将提交推送到存储库时，需要 Webhook 才能自动运行管道。没有 Webhook，您必须手动启动管道。
+{: tip}
 
 ### 了解有关 Bitbucket 的更多信息
 
@@ -268,7 +288,8 @@ lastupdated: "2018-3-21"
 
 {{site.data.keyword.evtmgt_full}} 提供服务、应用程序和基础架构所发生问题的统一视图。您可以设置实时事件管理，以更高效地解决问题。
 
-**注**：此工具集成是预配置的，不需要任何配置参数。无法对其重新配置。
+此工具集成是预配置的，不需要任何配置参数。无法对其重新配置。
+{: tip}
 
 要帮助 DevOps 团队实现可靠的可操作运行状况、服务质量和持续改进目标，请向工具链添加 Cloud Event Management：
 
@@ -311,7 +332,7 @@ lastupdated: "2018-3-21"
 1. 单击**创建集成**，以向工具链添加 {{site.data.keyword.deliverypipeline}}。
 1. 单击 **{{site.data.keyword.deliverypipeline}}** 以查看管道并对其进行配置。要了解配置管道的基础知识，请参阅[构建和部署管道](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}。
 
-  **提示**：如果要在向 GitHub、{{site.data.keyword.ghe_short}} 或 Git 存储库推送提交时自动运行管道，请执行以下步骤：
+  如果要在向 GitHub、{{site.data.keyword.ghe_short}} 或 Git 存储库推送提交时自动运行管道，请执行以下步骤：
 
    a. 为工具链配置 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}}，然后再为管道定义阶段。管道阶段需要存储库的 Git URL。每一个管道阶段仅可以参考与工具链相关联的其中一个 GitHub、{{site.data.keyword.ghe_short}} 或 Git 存储库。有关配置 GitHub 的指示信息，请参阅 [GitHub](#github) 一节。有关配置 Dedicated {{site.data.keyword.ghe_short}} 的指示信息，请参阅 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated/index.html){: new_window}。有关配置 {{site.data.keyword.gitrepos}} 的指示信息，请参阅 [{{site.data.keyword.gitrepos}}](#gitbluemix) 一节。
 
@@ -333,7 +354,8 @@ lastupdated: "2018-3-21"
 
 1. 配置阶段。在**环境属性**选项卡上，创建 CF_APP_NAME 属性。
 
-  **提示：**Sauce Labs 用户名和访问密钥在测试作业脚本中作为 SAUCE_USERNAME 和 SAUCE_ACCESS_KEY 环境变量提供。编写测试时，必须使用这两个环境变量向 Sauce Labs 进行认证。
+  Sauce Labs 用户名和访问密钥在测试作业脚本中作为 SAUCE_USERNAME 和 SAUCE_ACCESS_KEY 环境变量提供。编写测试时，必须使用这两个环境变量向 Sauce Labs 进行认证。
+  {: tip}
 
 1. 配置部署作业。在**部署脚本**字段中，包括以下命令：`export CF_APP_NAME="$CF_APP"`。该命令会将应用程序名称导出为环境属性。
 1. 配置测试作业。以下图像中的值为示例。**服务实例**、**目标**、**组织**和**空间**字段中会填充您使用的 Sauce Labs 用户名、区域、组织和空间。
@@ -344,7 +366,8 @@ lastupdated: "2018-3-21"
 
   b. 对于服务实例，请选择您为工具链配置 Sauce Labs 时所使用的 Sauce Labs 用户名。
 
-   **提示**：要查看您为工具链配置 Sauce Labs 时所使用的用户名和访问密钥，请单击**配置**。
+   要查看您为工具链配置 Sauce Labs 时所使用的用户名和访问密钥，请单击**配置**。
+   {: tip}
 
   c. 在**测试执行命令**字段中，输入安装测试所需依赖项的命令，然后运行测试。例如，对于 Node.js 应用程序，您可能会输入以下命令：
      ```
@@ -370,7 +393,8 @@ npm install
 
 {{site.data.keyword.DRA_full}} 会从单元测试、功能测试和代码覆盖工具收集和分析结果，以确定您的代码是否符合部署过程中指定检测点的预定义条件。如果您的代码不符合条件或超出条件，那么会停止部署以防产生风险。您可以使用 {{site.data.keyword.DRA_short}} 作为持续交付环境的安全网，或用于实施和提高质量标准。
 
- **注**：此工具集成仅在 {{site.data.keyword.Bluemix_notm}} Public 上可用。它是预配置的，不需要任何配置参数。无法对此工具集成进行重新配置。
+ 此工具集成仅在 {{site.data.keyword.Bluemix_notm}} Public 上可用。它是预配置的，不需要任何配置参数。无法对此工具集成进行重新配置。
+ {: tip}
 
 添加 {{site.data.keyword.DRA_short}} 来监视部署以便在部署发布之前发现风险，从而保持和提高 {{site.data.keyword.Bluemix_notm}} 中代码的质量。
 
@@ -400,7 +424,8 @@ npm install
 
 Eclipse Orion {{site.data.keyword.webide}} 是基于 Web 的集成环境，您可以在其中创建、编辑、运行、调试和完成源代码控制任务。您可以无缝地完成从编辑到运行到提交再到部署的移动。
 
- **注**：此工具集成是预配置的。它不需要任何配置参数，您无法对其重新配置。
+ 此工具集成是预配置的。它不需要任何配置参数，您无法对其重新配置。
+ {: tip}
 
 要完成源代码控制任务，请添加 Eclipse Orion {{site.data.keyword.webide}} 工具集成：
 
@@ -436,7 +461,8 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于 Web 的集成环境，您�
 
 如果您有工具链，并且希望将工具链中的 Git 存储库迁移到 {{site.data.keyword.gitrepos}}，请执行以下步骤：
 
-**注**：这些指示信息适用于已包含要迁移到 {{site.data.keyword.gitrepos}} 的 Git 存储库的工具链。有关将不同类型的 Git 存储库添加到工具链的信息，请参阅[配置 GitHub](#github)、[在 {{site.data.keyword.Bluemix_notm}}Dedicated](#configghe) 中配置 GitHub Enterprise 和 Issues 以及[配置 GitHub](#gitlab) 部分。
+这些指示信息适用于已包含要迁移到 {{site.data.keyword.gitrepos}} 的 Git 存储库的工具链。有关将不同类型的 Git 存储库添加到工具链的信息，请参阅[配置 GitHub](#github)、[在 {{site.data.keyword.Bluemix_notm}}Dedicated](#configghe) 中配置 GitHub Enterprise 和 Issues 以及[配置 GitHub](#gitlab) 部分。
+{: tip}
 
 1. 在 DevOps 仪表板的“工具链”页面上，单击工具链，以打开其“概述”页面。或者，在应用程序“概述”页面的“持续交付”卡上，单击**查看工具链**，然后单击**概述**。
 1. 单击**添加工具**。
@@ -446,7 +472,8 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于 Web 的集成环境，您�
 1. 如果您要通过在提交上创建标记和注释，在提交所参考的问题上创建标签和注释，跟踪代码更改的部署，请选择**跟踪代码更改的部署**复选框。有关更多信息，请参阅[使用工具链跟踪代码部署位置 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}。
 1. 单击**创建集成**。
 
-**提示**：克隆 Git 存储库后，可以将其从工具链中除去。
+克隆 Git 存储库后，可以将其从工具链中除去。
+{: tip}
 
 如果您具有工具链且要向其添加 {{site.data.keyword.gitrepos}}，请遵循以下步骤：    
 
@@ -465,7 +492,8 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于 Web 的集成环境，您�
 1. 单击**创建集成**。
 1. 单击您要使用的 Git 存储库的卡。此时将打开项目概述页面。    
 
-**注：**如果您对要链接到的存储库没有支配者或所有者特权，那么您的集成将受到限制，因为您无法使用 Webhook。将提交推送到存储库时，需要 Webhook 才能自动运行管道。没有 Webhook，您必须手动启动管道。
+如果您对要链接到的存储库没有支配者或所有者特权，那么您的集成将受到限制，因为您无法使用 Webhook。将提交推送到存储库时，需要 Webhook 才能自动运行管道。没有 Webhook，您必须手动启动管道。
+{: tip}
 
 ### 了解有关 Git Repos and Issue Tracking 的更多信息
 
@@ -490,11 +518,12 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
 1. 如果要将源代码存储在 GitHub 存储库中，请在“可配置的集成”部分中，单击 **GitHub**。如果要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具集成，但尚未授权 {{site.data.keyword.Bluemix_notm}} 访问 GitHub，请单击**授权**以转至 GitHub Web 站点。如果您没有活动的 GitHub 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 GitHub 帐户。如果您有活动的 GitHub 会话但最近未输入过密码，那么系统可能会提示您输入 GitHub 密码以进行确认。
 1. 如果要使用您自己的 {{site.data.keyword.ghe_short}} 服务器上的存储库，请在“可配置的集成”部分中，单击**添加定制服务器**。
 
- **要点**：网络必须能够从 {{site.data.keyword.Bluemix_notm}} Dedicated 环境访问目标 Git 服务器。如果您的 GitHub 服务器在公用因特网上不可用，或者主机名在公共域名服务器 (DNS) 上无法解析，请[开具支持凭单](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}。您可以使用支持凭单来提交请求以打开网络路由或更新 DNS 设置。
+ 网络必须能够从 {{site.data.keyword.Bluemix_notm}} Dedicated 环境访问目标 Git 服务器。如果您的 GitHub 服务器在公用因特网上不可用，或者主机名在公共域名服务器 (DNS) 上无法解析，请[开具支持凭单](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}。您可以使用支持凭单来提交请求以打开网络路由或更新 DNS 设置。
+ {: tip}
 
  输入定制 GitHub 服务器的标题，并指定该服务器的根 URL。输入您的个人访问令牌，然后单击**保存定制集成**。
 
-  **提示**：如果您没有个人访问令牌，可以进行创建：
+  如果您没有个人访问令牌，可以进行创建：
 
      a. 在任何 GitHub 页面上，单击“概要文件”图标，然后单击**设置**。
 
@@ -534,11 +563,13 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
 1. 单击**创建集成**。
 1. 单击要使用的 GitHub 或 {{site.data.keyword.ghe_short}} 存储库的卡。根据您选择的存储库，将打开 GitHub Web 站点或您公司的 {{site.data.keyword.ghe_short}} 存储库，您可在其中查看存储库的内容。
 
-  **提示**：您可以在 Eclipse Orion {{site.data.keyword.webide}} 中使用集成的源代码管理工具，以编辑 GitHub 存储库，并从您的工作空间部署应用程序。
+  您可以在 Eclipse Orion {{site.data.keyword.webide}} 中使用集成的源代码管理工具，以编辑 GitHub 存储库，并从您的工作空间部署应用程序。
+  {: tip}
 
 1. 如果您已启用 GitHub Issues，请单击 **GitHub Issues**，以将其打开。您可以对整个工具链使用此 GitHub Issues 的实例，即使工具链包含多个 GitHub 或 {{site.data.keyword.ghe_short}} 存储库也是如此。    
 
-**注：**如果您对要链接到的存储库没有管理员特权，那么您的集成将受到限制，因为您无法使用 Webhook。将提交推送到存储库时，需要 Webhook 才能自动运行管道。没有 Webhook，您必须手动启动管道。
+如果您对要链接到的存储库没有管理员特权，那么您的集成将受到限制，因为您无法使用 Webhook。将提交推送到存储库时，需要 Webhook 才能自动运行管道。没有 Webhook，您必须手动启动管道。
+{: tip}
 
 ### 了解有关 GitHub 的更多信息
 
@@ -554,7 +585,8 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
 ## 在 {{site.data.keyword.Bluemix_notm}} Dedicated 上配置 GitHub Enterprise 和 Issues
 {: #configghe}
 
- **注：**以下指示信息仅适用于 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}。如果您使用自己的 {{site.data.keyword.ghe_short}} 受管版本，那么根据您的内部过程，有些步骤可能有所不同。
+ 以下指示信息仅适用于 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}。如果您使用自己的 {{site.data.keyword.ghe_short}} 受管版本，那么根据您的内部过程，有些步骤可能有所不同。
+ {: tip}
 
 {{site.data.keyword.ghe_long}} 是 Git 存储库基于 Web 的内部部署托管服务。Dedicated {{site.data.keyword.ghe_short}} 仅适用于 {{site.data.keyword.Bluemix_notm}} Dedicated 客户。GitHub Issues 是一种跟踪工具，可将您的工作和计划保留在一个地方。它与您的开发存储库相集成，以便您可将关注点放在重要的任务上。有关 Dedicated {{site.data.keyword.ghe_short}} 和 GitHub Issues 的更多信息，请参阅 IBM Cloud Garage Method 上的 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated/index.html){: new_window}和 [GitHub Issues 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}。
 
@@ -587,11 +619,13 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
 1. 单击**创建集成**。
 1. 单击您要使用的 {{site.data.keyword.ghe_short}} 存储库的卡。此时将打开您公司的 {{site.data.keyword.ghe_short}} 存储库。
 
-  **提示**：您可以在 Eclipse Orion {{site.data.keyword.webide}} 中使用集成的源代码管理工具，以编辑 {{site.data.keyword.ghe_short}} 存储库，并从您的工作空间部署应用程序。
+  您可以在 Eclipse Orion {{site.data.keyword.webide}} 中使用集成的源代码管理工具，以编辑 {{site.data.keyword.ghe_short}} 存储库，并从您的工作空间部署应用程序。
+  {: tip}
 
 1. 如果您已启用 GitHub Issues，请单击 **GitHub Issues**。您可以对整个工具链使用此 GitHub Issues 的实例，即使工具链包含多个 GitHub 存储库也是如此。    
 
-**注：**如果您对要链接到的存储库没有管理员特权，那么您的集成将受到限制，因为您无法使用 Webhook。将提交推送到存储库时，需要 Webhook 才能自动运行管道。没有 Webhook，您必须手动启动管道。
+如果您对要链接到的存储库没有管理员特权，那么您的集成将受到限制，因为您无法使用 Webhook。将提交推送到存储库时，需要 Webhook 才能自动运行管道。没有 Webhook，您必须手动启动管道。
+{: tip}
 
 
 ## 配置 GitLab
@@ -606,11 +640,12 @@ GitLab 是 Git 存储库基于 Web 的托管服务。您可以同时具有存储
 1. 如果要将源代码存储在 GitLab 存储库中，请在“可配置的集成”部分中，单击 **GitLab**。如果要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具集成，但尚未授权 {{site.data.keyword.Bluemix_notm}} 访问 GitLab，请单击**授权**以转至 GitLab Web 站点。如果您没有活动的 GitLab 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 GitLab 帐户。如果您有活动的 GitLab 会话但最近未输入过密码，那么系统可能会提示您输入 GitLab 密码以进行确认。
 1. 如果要使用您自己的 GitLab 服务器上的存储库，请在“可配置的集成”部分中，单击**添加定制服务器**。
 
- **要点**：网络必须能够从 {{site.data.keyword.Bluemix_notm}} Dedicated 环境访问目标 GitLab 服务器。
+ 网络必须能够从 {{site.data.keyword.Bluemix_notm}} Dedicated 环境访问目标 GitLab 服务器。
+ {: tip}
 
  输入定制 GitLab 服务器的标题，并指定该服务器的根 URL。输入您的个人访问令牌，然后单击**保存定制集成**。
 
-  **提示**：如果您没有个人访问令牌，可以进行创建：
+  如果您没有个人访问令牌，可以进行创建：
 
      a. 在任何 GitLab 页面上，单击“概要文件”图标，然后单击**设置**。
 
@@ -648,11 +683,13 @@ GitLab 是 Git 存储库基于 Web 的托管服务。您可以同时具有存储
 1. 单击**创建集成**。
 1. 单击要使用的 GitLab 存储库的卡。根据您选择的存储库，将打开 GitLab Web 站点或您公司的 GitLab 存储库，您可在其中查看存储库的内容。
 
-  **提示**：您可以在 Eclipse Orion {{site.data.keyword.webide}} 中使用集成的源代码管理工具来编辑 GitLab 存储库，并从您的工作空间部署应用程序。
+  您可以在 Eclipse Orion {{site.data.keyword.webide}} 中使用集成的源代码管理工具来编辑 GitLab 存储库，并从您的工作空间部署应用程序。
+  {: tip}
 
 1. 如果您已启用 GitLab Issues，请单击 **GitLab Issues**，以将其打开。即使工具链中包含多个 GitLab 存储库，也可以将此 GitLab Issues 实例用于整个工具链。    
 
-**注：**如果您对要链接到的存储库没有所有者或支配者特权，那么您的集成将受到限制，因为您无法使用 Webhook。将提交推送到存储库时，需要 Webhook 才能自动运行管道。没有 Webhook，您必须手动启动管道。
+如果您对要链接到的存储库没有所有者或支配者特权，那么您的集成将受到限制，因为您无法使用 Webhook。将提交推送到存储库时，需要 Webhook 才能自动运行管道。没有 Webhook，您必须手动启动管道。
+{: tip}
 
 ### 了解有关 GitLab 的更多信息
 
@@ -664,7 +701,8 @@ GitLab 是 Git 存储库基于 Web 的托管服务。您可以同时具有存储
 
 Jenkins 是基于服务器的开放式源代码工具，其可持续构建并测试软件，支持持续集成和持续交付的实践。
 
-**重要信息**：创建 Jenkins 工具集成之前，您必须具有 Jenkins 服务器。
+创建 Jenkins 工具集成之前，您必须具有 Jenkins 服务器。
+{: tip}
 
 使用 Jenkins 工具集成，您可以将 Jenkins 作业通知发送到工具链中的其他工具，如 Slack 和 PagerDuty。要跟踪部署中的代码，可以向 Git 落实及相关的 Git 或 JIRA 问题添加部署消息。您还可以在“工具链连接”页面上查看您的部署。您可以将测试结果提供给 {{site.data.keyword.DRA_short}}、添加自动化质量检测点并跟踪您的部署风险。
 
@@ -843,9 +881,8 @@ JIRA 是跟踪与软件相关的问题和错误的工具。JIRA 工具集成会�
      # or
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  **提示**：您可以在 Nexus 工具集成的配置设置中，查找用于连接到注册表的 URL 和用户凭证。
-
-
+  您可以在 Nexus 工具集成的配置设置中，查找用于连接到注册表的 URL 和用户凭证。
+  {: tip}
 
 1. 单击**保存**。管道无论何时运行，此构建作业都会使用 Nexus 工具集成中的配置信息来连接到您的 Maven 存储库。
 
@@ -971,7 +1008,8 @@ IBM Rational Team Concert&trade; 是集成开发任务的团队协作工具，�
 
 Sauce Labs 运行功能单元测试。如果将 Sauce Labs 测试套件配置为 {{site.data.keyword.deliverypipeline}} 中的测试作业，作为持续交付过程的一部分，该测试套件可对您的 Web 或移动应用程序运行测试。这些测试可为您的项目提供有价值的流程控制，充当防止部署错误代码的检测点。
 
- **注**：此工具集成仅在 {{site.data.keyword.Bluemix_notm}} Public 上可用。
+ 此工具集成仅在 {{site.data.keyword.Bluemix_notm}} Public 上可用。
+ {: tip}
 
 配置 Sauce Labs 在多个操作系统和浏览器上运行自动功能测试，以便您可以模拟用户可能使用 Web 站点或应用程序的方式：
 
@@ -987,7 +1025,8 @@ Sauce Labs 运行功能单元测试。如果将 Sauce Labs 测试套件配置为
 1. 单击**创建集成**。
 1. 单击 **Sauce Labs**，以转至 saucelabs.com 并查看工具链的测试活动。
 
- **提示**：如果您将 Sauce Labs 测试作业添加到 {{site.data.keyword.deliverypipeline}}，那么可以选择该服务实例。有关在管道中配置测试作业的指示信息，请参阅[在管道中配置 Sauce Labs 测试作业](#config_saucelabs)一节。
+ 如果您将 Sauce Labs 测试作业添加到 {{site.data.keyword.deliverypipeline}}，那么可以选择该服务实例。有关在管道中配置测试作业的指示信息，请参阅[在管道中配置 Sauce Labs 测试作业](#config_saucelabs)一节。
+ {: tip}
 
 ### 了解有关 Sauce Labs 的更多信息
 
@@ -1000,7 +1039,8 @@ Sauce Labs 运行功能单元测试。如果将 Sauce Labs 测试套件配置为
 ## 配置 Slack
 {: #slack}
 
-**重要信息**：团队中的每一个人都可以看到发布到公共 Slack 通道的通知。记住您要对发布的内容负责。
+团队中的每一个人都可以看到发布到公共 Slack 通道的通知。记住您要对发布的内容负责。
+{: tip}
 
 Slack 是基于云的实时消息传递和通知系统。Slack 提供持久交谈，可替代电子邮件用于团队协作，其互动性更高。您可以通过专用通道或与您工作直接相关的一组通道，与团队进行通信。您还可以通过通道或直接消息，在两人或多人之间共享文件和图像。直接消息和通道的通信会保留，以便您可以对它们进行搜索。
 
@@ -1015,13 +1055,15 @@ Slack 是基于云的实时消息传递和通知系统。Slack 提供持久交�
 
 1. 输入 Slack Webhook URL，其由 Slack 作为入局 Webhook 生成。您需要 Slack Webhook URL，Slack 通道才能从工具集成接收有关工具链的通知。有关创建或查找 Webhook 的指示信息，请参阅[入局 Webhook ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://api.slack.com/incoming-webhooks){: new_window}。
 
- **提示**：如果您一直在使用 API 密钥让 Slack 通道从工具集成接收有关工具链的通知，那么您必须更新配置以改用 Webhook。
+ 如果您一直在使用 API 密钥让 Slack 通道从工具集成接收有关工具链的通知，那么您必须更新配置以改用 Webhook。
+ {: tip}
 
 1. 输入您想要发送通知的目标 Slack 通道的名称。在 Slack 团队中，该通道必须已经存在且处于活动状态。
 1. 为 Slack 团队输入 URL 主机名，其为团队 URL 中 `.slack.com` 前的单词或短语。例如，如果团队 URL 为 `https://team.slack.com`，那么主机名为 `team`。
 1. 单击**创建集成**。
 
- **提示**：如果无法访问您指定的 Slack 通道和团队，那么在 Slack 卡上会显示`设置失败`错误。将鼠标悬停在`设置失败`消息上并单击**重新配置**。请确保为 Slack 团队的 Slack Webhook URL、Slack 通道和 URL 主机名，使用有效的配置参数。按需要更新设置并单击**保存集成**。
+ 如果无法访问您指定的 Slack 通道和团队，那么在 Slack 卡上会显示`设置失败`错误。将鼠标悬停在`设置失败`消息上并单击**重新配置**。请确保为 Slack 团队的 Slack Webhook URL、Slack 通道和 URL 主机名，使用有效的配置参数。按需要更新设置并单击**保存集成**。
+ {: tip}
 
 1. 单击 **Slack**。您可以在已配置的 Slack 通道中查看工具链的所有活动。
 
@@ -1051,7 +1093,8 @@ SonarQube 提供了源代码总体运行状况和质量的概述，并重点阐�
 1. 输入在您单击工具链中 SonarQube 卡时想要打开的 SonarQube 实例的 URL。
 1. 可选：输入用于连接到 SonarQube 服务器的用户名。
 
- **提示**：仅当使用密码连接到 SonarQube 服务器时，才需要指定用户名。如果是使用认证令牌进行连接，请将此字段保留为空。
+ 仅当使用密码连接到 SonarQube 服务器时，才需要指定用户名。如果是使用认证令牌进行连接，请将此字段保留为空。
+ {: tip}
 
 1. 输入用于连接到 SonarQube 服务器的密码或认证令牌。
 1. 单击**创建集成**。
@@ -1060,26 +1103,3 @@ SonarQube 提供了源代码总体运行状况和质量的概述，并重点阐�
 ### 了解有关 SonarQube 的更多信息
 
 要了解有关 SonarQube 的更多信息，请参阅 IBM Cloud Garage Method 上的 [SonarQube 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window}。
-
-
-## 添加 UrbanCode Deploy (Beta)
-{: #urbancodedeploy}
-
-IBM UrbanCode Deploy 简化并自动执行应用程序部署。它使用图形流程图工具来创建用于部署、升级、回滚和卸载应用程序的自动化流程。通过使用这些自动化任务，您可以将应用程序推进到开发管道中的各个阶段（包括开发、测试和生产环境）。
-
-**注**：此工具集成仅在 {{site.data.keyword.Bluemix_notm}} Public 上可用。它是预配置的，不需要任何配置参数。无法对此工具集成进行重新配置。
-
-要查看各个应用程序、团队和环境之间的部署趋势，并找到交付管道中的瓶颈，以及哪些区域更高效，请添加 UrbanCode Deploy 工具集成。
-
-1. 在 DevOps 仪表板上，单击**工具链**。单击要将 UrbanCode Deploy 添加到的工具链。或者，在应用程序“概述”页面的“持续交付”卡上，单击**查看工具链**，然后单击**概述**。
-
- a. 单击**添加工具**。
-
- b. 在“工具集成”部分中，单击 **UrbanCode Deploy**。
-
-1. 单击**创建集成**。
-1. 在工具链中，单击 **UrbanCode Deploy**。要在 Delivery Insights 中查看 UrbanCode Deploy 服务器中的数据，您必须设置 DevOps Connect 的实例，在服务器上安装补丁，然后将该服务器连接到 DevOps Connect。有关更多信息，请参阅[显示 IBM UrbanCode Deploy 服务器的数据](/docs/services/DevOpsInsights/uc_insights_connect_ucd.html){: new_window}。
-
-### 了解有关 UrbanCode Deploy 的更多信息
-
-要了解有关 UrbanCode Deploy 的更多信息，请参阅 IBM Cloud Garage Method 上的 [IBM UrbanCode Deploy 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/deliver/tool_ibm_urbancode_deploy/){: new_window}。

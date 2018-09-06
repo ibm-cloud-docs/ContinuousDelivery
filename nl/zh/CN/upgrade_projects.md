@@ -2,12 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 将 {{site.data.keyword.jazzhub_short}} 项目升级到工具链
 {: #upgrade_projects}
@@ -52,7 +57,8 @@ lastupdated: "2018-3-21"
 ## 从项目升级到工具链
 {: #project_to_toolchain}
 
-**重要信息**：hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。如果您的项目配置为将应用程序部署到其他区域，那么该项目升级到工具链后，仍会将应用程序部署到美国南部区域。
+hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。如果您的项目配置为将应用程序部署到其他区域，那么该项目升级到工具链后，仍会将应用程序部署到美国南部区域。
+{: tip}
 
 当项目已就绪可以进行升级时，在项目的卡上和“概述”页面上会显示消息。
 
@@ -60,9 +66,10 @@ lastupdated: "2018-3-21"
 
 ![升级时间消息](images/banner-ready-to-upgrade.png)
 
-**提示：**您可以在“我的项目”页面上，通过菜单查找准备升级的项目：
+您可以在“我的项目”页面上，通过菜单查找准备升级的项目：
 
 ![“要升级的项目”菜单项的图像](images/menu-projects-to-upgrade.png)
+{: tip}
 
 启动升级后，将锁定项目中的管道阶段。您将无法运行或修改这些阶段。如果通过删除工具链来还原升级，那么会解锁管道。
 
@@ -150,7 +157,8 @@ lastupdated: "2018-3-21"
 
    ![条幅中指示项目已升级的消息](images/banner-upgraded.png)
 
-   **注**：如果消息为“立即升级”，说明升级失败。请单击**立即升级**链接以重试。
+   如果消息为“立即升级”，说明升级失败。请单击**立即升级**链接以重试。
+   {: tip}
 
    ![条幅中指示项目准备好升级的消息](images/banner-ready-to-upgrade.png)
 
@@ -169,7 +177,8 @@ lastupdated: "2018-3-21"
     4. 要从外部 Git 客户机通过 HTTPS 向 {{site.data.keyword.gitrepos}} 进行认证，请使用您的用户名和个人访问令牌。
     5. 如果要复用 JazzHub Git 存储库的本地存储库，请将该存储库指向 {{site.data.keyword.gitrepos}} 中的新存储库。从终端的 shell 中，切换到在其中克隆 JazzHub Git 存储库的目录。输入 `git remote set-url` 命令：`git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        **提示**：要检查哪些远程 URL 设置为哪些远程名称，请使用 `git remote -v` 命令。缺省远程名称为 `origin`。如果您有更高级的设置，那么该命令的格式如下：`git remote set-url<remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        要检查哪些远程 URL 设置为哪些远程名称，请使用 `git remote -v` 命令。缺省远程名称为 `origin`。如果您有更高级的设置，那么该命令的格式如下：`git remote set-url<remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        {: tip}
 
 5. 已设置工具链并开始使用时，请考虑执行以下所有或任何步骤以确保没有任何人使用您的项目：
     - 向您的项目名称添加后缀，以指示不得使用此项目。您可在项目名称末尾添加 `_DO_NOT_USE`。
@@ -288,7 +297,8 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
    
    4. 删除通过升级过程创建的工具链。 
    
-      **注：**不会自动删除 Git 存储库。目前，您可能希望手动将其删除或将其重命名。如果已经更改了存储库，那么日后可以切换未来的工具链以使用该存储库。
+      不会自动删除 Git 存储库。目前，您可能希望手动将其删除或将其重命名。如果已经更改了存储库，那么以后可以升级未来的工具链以使用该存储库。
+      {: tip}
 
    5. 返回到 JazzHub 项目。此项目应该已自行重置以再次尝试升级。如果未重置，请联系 hub@jazz.net 并提供此项目的 URL。
    

@@ -4,14 +4,17 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
@@ -59,7 +62,8 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 
 在 Web IDE 中更改文件时，这些文件将自动重新部署到 {{site.data.keyword.Bluemix_notm}} 上的应用程序实例。如果需要重新启动 Node 应用程序，请单击运行栏中的**重新启动**按钮。
 
-**注**：为了在使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的“实时编辑”功能时获得更一致的体验，需要并且已添加额外 256 MB 内存。
+为了在使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的“实时编辑”功能时获得更一致的体验，需要并且已添加额外 256 MB 内存。
+{: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} 实时调试
 {: #live-debug}
@@ -95,7 +99,8 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 **限制：**需要 Google Chrome 和 Node 4。
 
 调试包括以下功能：  
-* 在应用程序代码中设置断点，以在特定行暂停执行。**注**：主程序不支持断点，但入口点支持。
+* 在应用程序代码中设置断点，以在特定行暂停执行。主程序不支持断点，但入口点支持。
+  {: tip}
 * 编辑断点条件以仅在满足特定条件时暂停执行。
 * 检查局部变量和字段的状态。
 * 立即查看 `console.log()` 调用的调试输出。此操作比监视 cf 日志速度更快。
@@ -132,7 +137,8 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 
 推送应用程序，然后浏览到 `https://_app-host.mybluemix.net_/bluemix-debug/manage` 以访问 {{site.data.keyword.Bluemix_notm}} 调试用户界面。当系统提示您进行认证时，请输入您的 IBM 标识用户名和密码或一次性密码。    
 
-**注**：调试器可能需要大约一分钟才能完成初始化。
+调试器可能需要大约一分钟才能完成初始化。
+{: tip}
 
 ### 复原应用程序配置并禁用 {{site.data.keyword.Bluemix_notm}} 实时调试 {: #restore_live_debug}
 

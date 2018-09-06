@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-4-18"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -23,16 +23,38 @@ lastupdated: "2018-4-18"
  * 操作、触发（在 UI 中直接触发或通过提交到存储库间接触发）交付管道或查看交付管道状态的用户。
  * 与 Eclipse Orion {{site.data.keyword.webide}} 交互的用户。
  
-### 如何对用户计数？
+### 如何针对组织中 {{site.data.keyword.contdelivery_short}} 的实例对用户计数？
 
 通过查看包含 {{site.data.keyword.contdelivery_short}} 服务的云组织中的所有用户来对授权用户计数。 
 
-要查看组织中的用户列表，请从菜单栏中，单击**管理 > 帐户 > Cloud Foundry 组织**。
+要查看 {{site.data.keyword.Bluemix_notm}} Public 环境的组织中的用户列表，请从菜单栏中，单击**管理 > 帐户 > Cloud Foundry 组织**。
+
+要查看 {{site.data.keyword.Bluemix_notm}} Dedicated 环境的组织中的用户列表，请从菜单栏中，单击**帐户 > 管理组织**。
+
+您还可以查看帐户中 {{site.data.keyword.contdelivery_short}} 服务的所有实例以及针对 {{site.data.keyword.Bluemix_notm}} Public 环境中的每个实例报告的用户数。
+
+1. 从菜单栏中，单击**管理 > 计费和使用情况 > 使用情况**。
+2. 单击**使用情况仪表板**。
+3. 从“帐户”菜单中，单击 **Cloud Foundry 组织**。
+4. 单击要查看其使用情况信息的组织。
+
+要查看帐户中 {{site.data.keyword.contdelivery_short}} 服务的所有实例以及针对 {{site.data.keyword.Bluemix_notm}} Dedicated 环境中的每个实例报告的用户数：
+
+1. 从菜单栏中，单击**帐户 > 管理组织**。
+2. 单击**使用情况仪表板**。
+
+### 如何针对资源组中 {{site.data.keyword.contdelivery_short}} 的实例对用户计数？
+
+通过查看 {{site.data.keyword.contdelivery_short}} 服务实例中“管理”选项卡上的用户列表，对授权用户计数。 
+
+要查看授权用户的列表，请打开服务实例仪表板，然后单击“管理”选项卡。
 
 您还可以查看帐户中 {{site.data.keyword.contdelivery_short}} 服务的所有实例以及针对每个实例报告的用户数。
 
-1. 从菜单栏中，单击**管理 > 帐户 > Cloud Foundry 组织**。
+1. 从菜单栏中，单击**管理 > 计费和使用情况 > 使用情况**。
 2. 单击**使用情况仪表板**。
+3. 从“帐户”菜单中，单击**资源组**。
+4. 单击要查看其使用情况信息的资源组。
 
 ### 超出服务套餐的限制时会发生什么情况？ 
 

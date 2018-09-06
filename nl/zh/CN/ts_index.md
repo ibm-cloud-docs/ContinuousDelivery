@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-7-19"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -41,10 +41,29 @@ lastupdated: "2018-3-21"
 ## 我尝试了创建工具链，为什么会遇到错误？
 {: #cannot_create_toolchain}
 
-尝试创建工具链时，如果收到以下错误消息，请从您的组织中除去一个或多个工具链，然后重新创建工具链。
+尝试在组织中创建工具链时，如果收到以下错误消息，请从您的组织中除去一个或多个工具链，然后重新创建工具链。
 
 `此组织包含 200 个工具链，其为最大限制。请从组织中除去一个或多个工具链，您才可以添加其他工具链。`
 
+
+## 为何“工具链”页面显示已超过 {{site.data.keyword.contdelivery_short}} 服务轻量套餐？
+
+{{site.data.keyword.contdelivery_short}} 提供两个套餐：轻量和专业。如果您有 {{site.data.keyword.contdelivery_short}} 轻量套餐，那么可以免费使用工具链，直至达到套餐限制的数量。错误消息指示您已超过轻量套餐的一个或多个限制。例如，如果有太多授权用户与 {{site.data.keyword.contdelivery_short}} 服务实例相关联或者如果运行了最大数量的 {{site.data.keyword.deliverypipeline}} 作业，那么可能超出套餐。有关套餐条款的更多信息，请参阅[套餐限制和使用情况](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}。
+
+
+## 我已创建工具链，为什么“工具链”页面显示需要 Continuous Delivery 服务？
+
+位于工具链的相同资源组或组织中的 {{site.data.keyword.contdelivery_short}} 服务实例的套餐条款管理服务中包含的某些工具集成的使用（{{site.data.keyword.deliverypipeline}}、Eclipse Orion {{site.data.keyword.webide}} 和 {{site.data.keyword.gitrepos}}）。错误消息指示资源组或组织不包含必需的 {{site.data.keyword.contdelivery_short}} 服务实例。有关套餐条款的更多信息，请参阅[套餐限制和使用情况](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}。
+
+
+## 我已在 Cloud Foundry 组织中创建工具链，为什么“工具链”页面显示需要 Continuous Delivery 服务？
+
+在没有 {{site.data.keyword.contdelivery_short}} 服务实例的资源组或组织中创建工具链时，工具链平台尝试使用轻量套餐自动创建服务实例。错误消息指示工具链平台无法创建服务实例。
+
+在美国南部区域和尚无 {{site.data.keyword.contdelivery_short}} 实例的 Cloud Foundry 组织中创建工具链时，可能发生此错误。在美国南部区域中，必须创建资源组中 {{site.data.keyword.contdelivery_short}} 服务的所有新实例。 
+
+您可以在资源组中创建工具链或者在已具有 {{site.data.keyword.contdelivery_short}} 实例的组织中创建工具链。
+  
 
 ## 我尝试了将应用程序部署到 {{site.data.keyword.Bluemix_notm}}，为什么会遇到错误？
 {: #org_outofmemory}

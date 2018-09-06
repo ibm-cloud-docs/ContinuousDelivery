@@ -2,14 +2,17 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-4-13"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # 使用定制 Docker 映像
@@ -27,7 +30,8 @@ lastupdated: "2018-4-13"
 
 定制 Docker 映像作业中的 Docker 映像名称旨在以映像名称用于 Docker CLI 的相同方式进行使用。Docker 映像名称的格式为：`[repository][:][tag]`。例如，对于 `docker run maven:3.5.3-ibmjava`，Docker 映像名称为 `maven:3.5.3-ibmjava`，其中 `maven` 是存储库，`3.5.3-ibmjava` 是标记。对于可以使用的 Docker 映像名称没有任何限制；任何有效的 Docker 映像都可使用。
 
-**提示**：如果未填写 **Docker 映像名称**字段，那么将使用标准管道基本映像。 
+如果未填写 **Docker 映像名称**字段，那么将使用标准管道基本映像。
+{: tip}
 
 缺省情况下，会在 [Docker Hub ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://hub.docker.com/){: new_window} 上搜索您的存储库。如果使用的是其他 Docker 注册表（如 IBM Cloud 注册表），那么可以使用完整的 DNS 名称。您还可以使用 Docker Hub 上映像的标准名称。例如，`registry.hub.docker.com/library/maven:3.5.3-ibmjava`。
 
@@ -53,6 +57,7 @@ Docker 映像的 `tag` 是可选的。如果未指定标记，那么缺省情况
 
 可以使用定制 Docker 映像作业中的 **script** 块来创建在任务文件夹中运行的脚本文件，类似于常规管道作业的工作方式。 
 
-**重要信息**：这将覆盖 Docker 映像的 Dockerfile 中的 `ENTRYPOINT` 和 `CMD`，并且不会调用这两项。在某些情况下，这可能意味着需要向脚本添加初始化步骤。
+这将覆盖 Docker 映像的 Dockerfile 中的 `ENTRYPOINT` 和 `CMD`，并且不会调用这两项。在某些情况下，这可能意味着需要向脚本添加初始化步骤。
+{: tip}
 
 通过定制 Docker 映像作业，可以更灵活地运行脚本；特别是，可以控制命令解释器。通常，如果脚本的第一行以 `#!` 和命令解释器名称开头，那么该条目会用于运行作业中的命令。如果未指定命令解释器，那么将使用 Docker 映像的缺省 shell。通常，会使用 `#!/bin/bash` 或 `#!/bin/sh`；如果指定相应的 Docker 映像，那么 `awk`、`node` 和 `ruby` 的映像命令解释器也会工作。

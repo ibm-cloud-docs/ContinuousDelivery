@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 设置本地客户机以使用 Git 源代码控制
 {: #git_local}
@@ -26,13 +28,14 @@ lastupdated: "2018-3-21"
 
 1. 要在浏览器外部访问 Git 服务器，可能需要创建个人访问令牌或 SSH 密钥来进行认证。下表显示了设置认证需要执行的操作。
 
-| Git 类型| HTTPS 设置| HTTPS 使用|  SSH 设置|
+|Git 类型|HTTPS 设置|HTTPS 使用|SSH 设置|
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com)| [个人访问令牌](/docs/services/ContinuousDelivery/git_working.html#git_authentication)| Git Repos and Issue Tracking 用户名（不是您的 IBM 标识）和个人访问令牌| [配置 SSH 密钥](/docs/services/ContinuousDelivery/git_working.html#git_authentication)|
-| 公共 GitHub (github.com)| 个人访问令牌不是必需的，但您可以设置并使用个人访问令牌| GitHub 用户名和密码，或 GitHub 用户名和个人访问令牌，或仅将个人访问令牌作为用户名| [配置 GitHub SSH 密钥](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)|
-| GitHub Enterprise| [个人访问令牌](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth)| GitHub Enterprise 用户名（不是您的 IBM 标识）和个人访问令牌| [配置 GitHub Enterprise SSH 密钥](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth)|
+|Git Repos and Issue Tracking (git.ng.bluemix.com)|[个人访问令牌](/docs/services/ContinuousDelivery/git_working.html#git_authentication)|Git Repos and Issue Tracking 用户名（不是您的 IBM 标识）和个人访问令牌|[配置 SSH 密钥](/docs/services/ContinuousDelivery/git_working.html#git_authentication)|
+|公共 GitHub (github.com)|个人访问令牌不是必需的，但您可以设置并使用个人访问令牌|GitHub 用户名和密码，或 GitHub 用户名和个人访问令牌，或仅将个人访问令牌作为用户名|[配置 GitHub SSH 密钥](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)|
+|GitHub Enterprise|[个人访问令牌](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth)|GitHub Enterprise 用户名（不是您的 IBM 标识）和个人访问令牌|[配置 GitHub Enterprise SSH 密钥](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth)|
 
-**注**：如果更愿意使用 SSH，那么可以在所有 Git 服务器中复用单个密钥。如先前链接中所述，创建或找到密钥并在每个服务器中对其进行配置。如果使用口令创建密钥，那么在使用该密钥时，系统将提示您输入口令。
+如果更愿意使用 SSH，那么可以在所有 Git 服务器中复用单个密钥。如先前链接中所述，创建或找到密钥并在每个服务器中对其进行配置。如果使用口令创建密钥，那么在使用该密钥时，系统将提示您输入口令。
+{: tip}
 
 2. 如果要使用 Git 命令行，请执行以下操作：
 
@@ -65,7 +68,7 @@ lastupdated: "2018-3-21"
 6. 如果系统提示您进行认证，请输入上表中定义的相应信息。
 
 
-下载完成后，在存储库中即有本地版本的文件。有关使用 Git 的更多信息，请参阅 [Git 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://git-scm.com/doc){: new_window}。
+下载完成后，在存储库中即有本地版本的文件。有关使用 Git 的更多信息，请参阅 [Git 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://git-scm.com/doc){: new_window}.
 
 
 ## 使用 Eclipse 和 EGit 插件访问存储库
@@ -86,4 +89,4 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 提供了可安装到 E
 * EAR（企业归档）文件
 * Liberty Profile 打包服务器
 
-还可以创建服务，将其链接到应用程序，以及在部署过程中定义环境变量。有关 IBM Eclipse Tools 的更多信息，请参阅[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序](../../manageapps/eclipsetools/eclipsetools.html)。
+还可以创建服务，将其链接到应用程序，以及在部署过程中定义环境变量。有关 IBM Eclipse Tools 的更多信息，请参阅[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序](/docs/manageapps/eclipsetools/eclipsetools.html)。

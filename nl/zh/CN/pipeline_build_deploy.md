@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-2-28"
+lastupdated: "2018-8-2"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -11,10 +11,13 @@ lastupdated: "2018-2-28"
     Indentation as per the previous template must be preserved.
 -->
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 构建和部署
 {: #deliverypipeline_build_deploy}
@@ -22,7 +25,7 @@ lastupdated: "2018-2-28"
 {{site.data.keyword.contdelivery_full}} 包含 Delivery Pipeline，可用于实现可重复的持续集成和持续交付过程。
 {:shortdesc}
 
-完成以下任务，以创建和配置管道。
+完成以下任务以配置管道。
 
 ## 添加阶段
 {: #deliverypipeline_add_stage}
@@ -69,7 +72,8 @@ lastupdated: "2018-2-28"
 * 如果未指定特定修订版，那么搜索之前的阶段直至找到使用相同输入的阶段。查找并使用该输入上次成功运行的修订版。
 * 如果未指定特定修订版且没有其他阶段使用指定的源作为输入，那么使用该输入的最新修订版。
 
-**提示：**您可以部署之前的构建。在包含该构建的阶段上，单击**查看日志和历史记录**。在打开的页面上，单击以展开运行号，然后单击构建作业。单击**发送到**，然后选择目标。
+您可以部署之前的构建。在包含该构建的阶段上，单击**查看日志和历史记录**。在打开的页面上，单击以展开运行号，然后单击构建作业。单击**发送到**，然后选择目标。
+{: tip}
 
 ###将服务添加到应用程序
 您可以通过 {{site.data.keyword.Bluemix_notm}} 仪表板或 Cloud Foundry 命令行界面 (CLI)，将服务添加到应用程序并管理这些服务。您还可以在管道作业的脚本中，发出 Cloud Foundry CLI 命令。例如，您可以在部署作业的脚本中，将服务添加到应用程序。有关添加服务的更多信息，请参阅[将服务添加到应用程序](/docs/services/reqnsi.html#add_service)。

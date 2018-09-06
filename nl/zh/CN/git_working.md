@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.gitrepos}}
 {: #git_working}
@@ -23,14 +26,16 @@ lastupdated: "2018-2-26"
    * 通过问题跟踪程序来跟踪问题并分享构想
    * 在 Wiki 系统上记录项目
 
-**注**：因为此工具集成以 GitLab Community Edition 为基础构建且由 IBM 在 {{site.data.keyword.Bluemix_notm}} 平台上托管，因此有一些 GitLab 选项不可用。例如，Delivery Pipeline 为 {{site.data.keyword.Bluemix_notm}} 提供持续集成和持续交付，因此不支持 GitLab 中的持续集成功能。此外，管理功能也不可用，因为它们由 IBM 管理。
+因为此工具集成以 GitLab Community Edition 为基础构建且由 IBM 在 {{site.data.keyword.Bluemix_notm}} Platform 上托管，因此有一些 GitLab 选项不可用。例如，Delivery Pipeline 为 {{site.data.keyword.Bluemix_notm}} 提供持续集成和持续交付，因此不支持 GitLab 中的持续集成功能。此外，管理功能也不可用，因为它们由 IBM 管理。
+{: tip}
 
 ## 在本地使用 {{site.data.keyword.gitrepos}}
 {: #git_local}
 
 可以在本地访问存储在 {{site.data.keyword.gitrepos}} 中的 Git 存储库。有关在本地设置 Git 的指示信息，请参阅[开始在命令行上使用 Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}。
 
-**提示**：{{site.data.keyword.gitrepos}} 仅支持使用 TLS1.2 的 HTTPS 连接。如果您使用 Eclipse 进行连接，那么您可能需要通过将`-Dhttps.protocols=TLSv1.2` 添加到 eclipse.ini 文件，然后重新启动 Eclipse，为您的 Java&trade; 版本指定此协议。
+{{site.data.keyword.gitrepos}} 仅支持使用 TLS1.2 的 HTTPS 连接。如果您使用 Eclipse 进行连接，那么您可能需要通过将`-Dhttps.protocols=TLSv1.2` 添加到 eclipse.ini 文件，然后重新启动 Eclipse，为您的 Java&trade; 版本指定此协议。
+{: tip}
 
 ## 向 {{site.data.keyword.gitrepos}} 进行认证
 {: #git_authentication}
@@ -40,7 +45,8 @@ lastupdated: "2018-2-26"
 ### 创建个人访问令牌
 {: #create_pat}
 
-**重要信息**：要通过 HTTPS 向 Git 存储库进行认证，您必须创建个人访问令牌。
+要通过 HTTPS 向 Git 存储库进行认证，您必须创建个人访问令牌。
+{: tip}
 
 1. 在 {{site.data.keyword.gitrepos}}“用户设置”仪表板的[访问令牌页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window} 上，输入要创建访问令牌的应用程序的名称。例如，`Git CLI`。
 1. 可选：选择访问令牌的到期日期。

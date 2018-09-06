@@ -2,12 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-12"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 在 {{site.data.keyword.jazzhub_short}} 项目升级后开始使用工具链
 {: #toolchains_post_upgrade}
@@ -16,7 +21,7 @@ hub.jazz.net 上的 {{site.data.keyword.jazzhub}} 项目已升级到 {{site.data
 
 hub.jazz.net 上的 {{site.data.keyword.jazzhub_short}} 已撤销。 
 
-对于 DevOps 项目，请使用 [{{site.data.keyword.contdelivery_short}} 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/devops){:new_window}。如果您是 {{site.data.keyword.Bluemix_notm}} 的新用户，请务必查看 [{{site.data.keyword.Bluemix_notm}} 概述](/docs/overview/whatisbluemix.html#bluemixoverview)。
+对于 DevOps 项目，请使用 [{{site.data.keyword.contdelivery_short}} 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/devops){:new_window}。如果您是 {{site.data.keyword.Bluemix_notm}} 的新用户，请务必查看 [{{site.data.keyword.Bluemix_notm}} 概述](/docs/overview/ibm-cloud.html#overview)。
 
 {: shortdesc}
 
@@ -26,19 +31,19 @@ hub.jazz.net 上的 {{site.data.keyword.jazzhub_short}} 已撤销。
 通过转至[工具链页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/devops/toolchains){: new_window}，并验证显示的工具链名称是否与 hub.jazz.net 项目的名称相匹配，从而确认升级是否完成。如果项目已自动升级，请谨记以下注意事项：
    - 如果在升级项目之前另一个工具链已使用该项目的名称，那么为该项目创建的新工具链的名称可能与项目名称不完全相同。 
    - 如果未看到项目的工具链，请切换到您所属的其他任何组织并检查其中的工具链。
-   - 如果依旧找不到某个项目的工具链，那么有可能升级仍在进行中。如果需要立即访问该工具链，请联系[支持人员 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}。
-
+   
 ## 工具链概述
 {: #compare_toolchains}
 
-如果您在 hub.jazz.net 上有一个或多个项目，那么这些项目已自动升级到 {{site.data.keyword.contdelivery_short}} 服务中的工具链，除非升级失败。IBM Cloud 帐户或组织无效时，可导致升级失败。已通过电子邮件向这些帐户和组织所有者发送通知，告知升级失败以及解决这些问题时他们需要采取的特定操作。如果未看到项目的工具链，并且需要立即访问该工具链，请联系[支持人员 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}。 
+如果您在 hub.jazz.net 上有一个或多个项目，那么这些项目已自动升级到 {{site.data.keyword.contdelivery_short}} 服务中的工具链，除非升级失败。IBM Cloud 帐户或组织无效时，可导致升级失败。已通过电子邮件向这些帐户和组织所有者发送通知，告知升级失败以及解决这些问题时他们需要采取的特定操作。如果需要帮助来查找已升级项目的工具链，请联系[支持人员 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}。 
 
 工具链与项目类似，但有以下几个重要的不同之处：
 
 - 项目只能具有一个储存库和管道。工具链可以具有您所需的任意多个存储库和管道。
 - 工具链可以包括项目中不可用的工具，如 Slack、Sauce Labs、PagerDuty 和 {{site.data.keyword.DRA_full}}。
 
- **注**：{{site.data.keyword.DRA_short}} 仅在美国南部区域可用。
+ {{site.data.keyword.DRA_short}} 仅在美国南部区域可用。
+ {: tip}
  
 - 在项目中，成员资格在项目级别进行维护。对工具链的访问通过 {{site.data.keyword.Bluemix_notm}} 组织和工具链进行管理。要使用工具链，您必须是包含该工具链的组织的成员。工具链所有者有权进一步控制谁可以访问工具链以及他们可以执行的操作。有关详细信息，请参阅[工具链入门](#upgrade_next_steps)中的步骤 2。
 - 根据在 hub.jazz.net 上您项目中使用的存储库的类型，工具链可能包含 GitHub.com 存储库或 {{site.data.keyword.gitrepos}} 存储库。
@@ -53,7 +58,7 @@ hub.jazz.net 上的 {{site.data.keyword.jazzhub_short}} 已撤销。
     - 每个团队成员都必须具有有效的 {{site.data.keyword.Bluemix_notm}} 帐户。没有帐户的团队成员必须进行[注册 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/registration){:new_window}。
     - 在工具链的“管理”页面中，授予组织成员对工具链的访问权。在升级过程中，会将现有项目成员添加为工具链的成员。有关工具链访问控制的更多信息，请参阅[管理访问权 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}。
     - 如果用户不是工具链所属的组织的成员，请通过“管理组织”页面将其添加到该组织。
-    - 如果工具链使用 {{site.data.keyword.gitrepos}}，那么具有有效 {{site.data.keyword.Bluemix_notm}} 标识的所有 JazzHub 项目成员将使用他们在 JazzHub 项目中拥有的相同特权添加到 {{site.data.keyword.gitrepos}} 存储库。如果 JazzHub 项目包含没有有效 {{site.data.keyword.Bluemix_notm}} 标识的成员，那么这些成员可以注册一个标识。这些成员注册后，就可以将其添加到存储库。有关管理组织的更多信息，请参阅[管理组织和空间 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}。
+    - 如果工具链使用 {{site.data.keyword.gitrepos}}，那么具有有效 {{site.data.keyword.Bluemix_notm}} 标识的所有 JazzHub 项目成员将使用他们在 JazzHub 项目中拥有的相同特权添加到 {{site.data.keyword.gitrepos}} 存储库。如果 JazzHub 项目包含没有有效 {{site.data.keyword.Bluemix_notm}} 标识的成员，那么这些成员可以注册一个标识。这些成员注册后，就可以将其添加到存储库。有关管理组织的更多信息，请参阅[管理组织和空间 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window}。
 
 2. 如果要使用 {{site.data.keyword.gitrepos}}，请通过个人访问令牌或 SSH 密钥进行认证。有关 SSH 密钥的更多信息，请参阅[创建个人访问令牌或 SSH 密钥以进行认证](/docs/services/ContinuousDelivery/git_working.html#git_authentication)。要从外部 Git 客户机通过 HTTPS 进行认证，请执行以下步骤：
     1. 转至 {{site.data.keyword.gitrepos}} 用户设置的[“访问令牌”页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window}。
@@ -62,11 +67,13 @@ hub.jazz.net 上的 {{site.data.keyword.jazzhub_short}} 已撤销。
     4. 要从外部 Git 客户机通过 HTTPS 向 {{site.data.keyword.gitrepos}} 进行认证，请使用您的用户名和个人访问令牌。
     5. 如果要复用 JazzHub Git 存储库的本地存储库，请将该存储库指向 {{site.data.keyword.gitrepos}} 中的新存储库。从终端 shell 中，切换到在其中克隆 JazzHub Git 存储库的目录。输入 `git remote set-url` 命令：`git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        **提示**：要检查哪些远程 URL 设置为哪些远程名称，请使用 `git remote -v` 命令。缺省远程名称为 `origin`。如果您有更高级的设置，那么该命令的格式如下：`git remote set-url<remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        要检查哪些远程 URL 设置为哪些远程名称，请使用 `git remote -v` 命令。缺省远程名称为 `origin`。如果您有更高级的设置，那么该命令的格式如下：`git remote set-url<remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        {: tip}
 
 3. 可选：要了解项目的开发成熟期、团队实践和代码库质量，请向工具链添加 IBM Cloud {{site.data.keyword.DRA_short}}。{{site.data.keyword.DRA_short}} 会将开发者、团队和部署分析应用于 DevOps 项目。有关更多信息，请参阅 [{{site.data.keyword.DRA_short}} 入门](/docs/services/DevOpsInsights/index.html)。
 
-  **注**：{{site.data.keyword.DRA_short}} 仅在美国南部区域可用。
+  {{site.data.keyword.DRA_short}} 仅在美国南部区域可用。
+  {: tip}
 
 
 ## 故障诊断
@@ -166,7 +173,8 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
    
    4. 删除通过升级过程创建的工具链。 
    
-      **注：**不会自动删除 Git 存储库。目前，您可能希望手动将其删除或将其重命名。如果已经对其进行了更改，那么可以日后切换未来的工具链以使用该存储库。
+      不会自动删除 Git 存储库。目前，您可能希望手动将其删除或将其重命名。如果已经对其进行了更改，那么可以以后升级未来的工具链以使用该存储库。
+      {: tip}
 
    5. 返回到 JazzHub 项目。此项目应该已自行重置以再次尝试升级。如果未重置，请联系 hub@jazz.net 并提供此项目的 URL。
    

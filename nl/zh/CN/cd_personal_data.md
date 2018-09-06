@@ -2,12 +2,17 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-4-13"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 在 Continuous Delivery 中管理个人数据
 {: #cd_personal_data}
@@ -24,14 +29,17 @@ lastupdated: "2018-4-13"
  * [GitHub Enterprise on IBM Cloud ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/ghededicated/ghe_personal_data.html){: new_window}
  * [{{site.data.keyword.DRA_full}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
-{{site.data.keyword.contdelivery_short}} 提供相应的许可权来管理 Cloud Foundry 组织内的数据。您的公司可能具有限制这些许可权的策略。如果您没有相应的许可权，请联系您组织的管理员。
+IBM 不管理 {{site.data.keyword.contdelivery_short}} 服务中的数据。在退出在 {{site.data.keyword.Bluemix_notm}} Public 中托管的 {{site.data.keyword.contdelivery_short}} 服务之前，必须删除自己的数据。
+{: tip}
+
+{{site.data.keyword.contdelivery_short}} 提供相应的许可权来管理资源组或 Cloud Foundry 组织内的数据。您的公司可能具有限制这些许可权的策略。如果您没有相应的许可权，请与您的 {{site.data.keyword.Bluemix_notm}} 帐户的管理员联系。
 
 要管理个人数据，您必须了解 IBM Cloud 帐户、这些帐户的使用方式及其关联的访问权。
  
 ## 帐户和访问权
 {: #accounts_access_rights}
 
-要在 IBM Cloud 中工作，您必须使用用户名和密码登录。登录后，IBM Cloud 将至少使一个 IBM Cloud 帐户与您的用户凭证相关联。创建资源（如 Cloud Foundry 组织和 {{site.data.keyword.contdelivery_short}} 对象）时，这些资源会与 IBM Cloud 帐户相关联。
+要在 IBM Cloud 中工作，您必须使用用户名和密码登录。登录后，IBM Cloud 将至少使一个 IBM Cloud 帐户与您的用户凭证相关联。创建资源（如 Cloud Foundry 组织、资源组、工具链和 {{site.data.keyword.contdelivery_short}} 对象）时，这些资源会与 IBM Cloud 帐户相关联。
 
 IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 IBM Cloud 用户界面，您可以从一个帐户切换到另一个帐户。登录时，以下任一类型的帐户都可能与您的用户凭证相关联： 
 
@@ -82,14 +90,16 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 
 如果您无法登录到 IBM Cloud 帐户，请联系您的公司，并与其合作来删除您的个人数据。
 
-**重要信息**：如果要从 {{site.data.keyword.contdelivery_short}} 中删除您的所有个人数据，那么删除这些数据的顺序非常重要。首先，删除所有 {{site.data.keyword.webide}} 工作空间。接下来，删除 {{site.data.keyword.gitrepos}} 数据，然后删除 {{site.data.keyword.gitrepos}} 帐户。最后，删除交付管道、工具集成和工具链。
+如果要从 {{site.data.keyword.contdelivery_short}} 中删除您的所有个人数据，那么删除这些数据的顺序非常重要。首先，删除所有 {{site.data.keyword.webide}} 工作空间。接下来，删除 {{site.data.keyword.gitrepos}} 数据，然后删除 {{site.data.keyword.gitrepos}} 帐户。最后，删除交付管道、工具集成和工具链。
+{: tip}
 
 ## 导出和删除 Web IDE 数据
 {: #managing_web_ide_data}
 
 {{site.data.keyword.webide}} 在云中提供个人工作空间。可以使用 {{site.data.keyword.webide}} 来克隆 Git 存储库并编辑文件。您拥有自己的 {{site.data.keyword.webide}} 工作空间；此工作空间不与其他任何帐户共享。
 
-**提示**：在删除 {{site.data.keyword.webide}} 数据之前，您可能希望导出工作。删除工作空间后，将从 {{site.data.keyword.contdelivery_short}} 中除去这些工作空间，并删除所有文件。
+在删除 {{site.data.keyword.webide}} 数据之前，您可能要导出工作。删除工作空间后，将从 {{site.data.keyword.contdelivery_short}} 中除去这些工作空间，并删除所有文件。
+{: tip}
 
 ###导出 Web IDE 工作空间
 
@@ -107,7 +117,8 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 1. 单击**用户个人档案**。
 1. 单击**删除**以从 {{site.data.keyword.webide}} 中除去您的所有数据。
 
-**重要信息**：{{site.data.keyword.webide}} 使用单点登录机制。首次访问此工具集成时，会为您的 IBM Cloud 帐户创建一个对应的 {{site.data.keyword.webide}} 帐户，但会隐藏该帐户。删除所有工作空间后，不要访问 {{site.data.keyword.webide}}。如果再次访问 {{site.data.keyword.webide}}，系统将自动创建一个新帐户，您必须将其删除。
+{{site.data.keyword.webide}} 使用单点登录机制。首次访问此工具集成时，会为您的 IBM Cloud 帐户创建一个对应的 {{site.data.keyword.webide}} 帐户，但会隐藏该帐户。删除所有工作空间后，不要访问 {{site.data.keyword.webide}}。如果再次访问 {{site.data.keyword.webide}}，系统将自动创建一个新帐户，您必须将其删除。
+{: tip}
 
 ## 修改、导出和删除 Git Repos and Issue Tracking 数据
 {: #managing_grit_data}
@@ -118,7 +129,8 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 
 您的帐户个人档案和设置、个人项目、组和片段都与 Git 帐户相关联。如果删除 Git 帐户，那么将删除这些对象。要删除其他项目中的个人数据，请浏览至该项目，然后对其进行修改以除去个人数据，或者删除整个项目。在删除共享项目之前，请确保与团队的其他成员进行协调。
 
-**重要信息**：在删除 Git 帐户之前，请从其他项目中删除您的个人数据。删除 Git 帐户后，可能很难或者无法查找您向其添加了内容的所有项目。
+在删除 Git 帐户之前，请从其他项目中删除您的个人数据。删除 Git 帐户后，可能很难或者无法查找您向其添加了内容的所有项目。
+{: tip}
 
 ###个人项目和共享项目
 
@@ -142,24 +154,27 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 1. 在 {{site.data.keyword.gitrepos}}“用户设置”仪表板的[“帐户”页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}的“删除帐户”部分中，单击**删除帐户**。
 1. 这将删除所有 Git 项目，包括存储库和问题。此外，还会从您所属的任何 {{site.data.keyword.gitrepos}} 组中将您除去。
 
-**提示**：删除帐户后，某些内容会保留。这些内容会分配给系统范围的 Ghost 用户。有关删除 {{site.data.keyword.gitrepos}} 帐户的更多信息，请参阅[删除用户帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}。
+删除帐户后，某些内容会保留。这些内容会分配给系统范围的 Ghost 用户。有关删除 {{site.data.keyword.gitrepos}} 帐户的更多信息，请参阅[删除用户帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}。
+{: tip}
 
-**重要信息**：{{site.data.keyword.gitrepos}} 使用单点登录机制，该机制会在您首次访问工具集成时，自动为您的 IBM Cloud 帐户创建相应的 Git 帐户。删除您的帐户后，不要访问 {{site.data.keyword.gitrepos}}。如果再次访问 {{site.data.keyword.gitrepos}}，系统将自动创建一个新帐户，您必须将其删除。
+{{site.data.keyword.gitrepos}} 使用单点登录机制，该机制会在您首次访问工具集成时，自动为您的 IBM Cloud 帐户创建相应的 Git 帐户。删除您的帐户后，不要访问 {{site.data.keyword.gitrepos}}。如果再次访问 {{site.data.keyword.gitrepos}}，系统将自动创建一个新帐户，您必须将其删除。
+{: tip}
 
-## 修改和删除 Continuous Delivery 管道数据
+## 修改、导出和删除 Continuous Delivery 管道数据
 {: #managing_pipeline_data}
 
 {{site.data.keyword.contdelivery_short}} 管道运行脚本来构建和测试应用程序，以及将应用程序部署到 IBM Cloud。为此，管道提供了阶段、作业、环境变量和其他可能包含个人数据的对象。您可以单独删除这些对象，也可以删除整个管道。
 
 在删除共享对象或管道之前，请确保与团队的其他成员进行协调。删除阶段可能会导致管道发生故障。
 
-**提示**：管道不能存在于工具链外部。如果删除工具链，与该工具链关联的所有管道也将一并删除。如果计划删除整个工具链，那么无需单独删除每个管道。请改为跳至“修改和删除工具链与工具集成”部分，然后执行相关步骤来删除工具链。
+管道不能存在于工具链外部。如果删除工具链，与该工具链关联的所有管道也将一并删除。如果计划删除整个工具链，那么无需单独删除每个管道。请改为跳至“修改和删除工具链与工具集成”部分，然后执行相关步骤来删除工具链。
+{: tip}
 
-###修改和删除管道阶段
-
-管道阶段可能包含个人数据，例如以环境属性形式提供的凭证。阶段还可能在要修改或删除的作业内包含脚本。使用“配置阶段”或“删除阶段”操作来修改或删除阶段。
+管道阶段可能包含个人数据，例如以环境属性形式提供的凭证以及显示管道的当前状态的管道定义。阶段还可能包含要修改或删除的作业中的脚本，以及要导出的最新管道运行的工件和日志。使用“配置阶段”或“删除阶段”操作来修改或删除阶段。使用“下载”操作可从阶段导出工件或日志。
 
   ![“阶段”菜单](images/pipeline_stages.png)
+
+###修改管道阶段
 
 要修改管道阶段，请执行以下操作：
 
@@ -172,24 +187,26 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
   
 1. 从管道阶段中删除作业。在**作业**选项卡上，选择要删除的作业，然后单击**除去**。
  
+###导出管道阶段
+
+要导出管道阶段的定义，请将 `/yaml` 附加到管道 URL：
+
+`http(s)://<DevOps Services domain>/pipeline/user/project/yaml`
+
+
+要导出管道阶段的工件和日志：
+
+1. 在“管道”页面上，单击**查看日志和历史记录**。
+1. 单击要导出其工件和日志的构建号。
+1. 单击**下载** > **工件**可导出所选构建的工件。
+1. 单击**下载** > **日志**可导出所选构建的日志。  
+
+###删除管道阶段
+
 要删除管道阶段，请执行以下操作：
 
 1. 在“管道”页面上，单击**设置**图标。
 1. 单击**删除阶段**。
-
-###更改管道所有权
-
-您可以将自己拥有的管道的所有权转移给其他用户；新的所有者必须执行转移操作。用户可以获取现有管道的所有权，但不能将所有权分配给其他用户。您必须具有管理权限才能获取管道的所有权。
-
-要获取管道的所有权，用户必须完成以下步骤：
-
-1. 登录到 IBM Cloud。
-1. 单击菜单以访问配置选项。 
-
-  ![“配置”菜单](images/pipeline_ownership.png)
-
-1. 单击**修改管道所有者**。 
-1. 选择**使我成为所有者**。
 
 ## 修改和删除工具链与工具集成
 {: #managing_toolchains}
@@ -219,7 +236,6 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 1. 要从工具链中删除工具集成，请单击**删除**。
 1. 单击**删除**以确认。
 
-
 ###删除工具链
 
 如果删除工具链，那么该删除操作无法撤销。
@@ -229,8 +245,12 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 1. 单击**删除**。删除工具链将除去其所有工具集成（包括管道），这可能会删除由这些集成管理的资源。
 1. 通过输入工具链的名称并单击**删除**，以确认删除。 
 
+在删除工具链时，不会删除关联的 {{site.data.keyword.gitrepos}} 存储库。有权访问这些存储库的用户如果执行过 `git clone` 或者创建过 {{site.data.keyword.webide}} 工作空间，就可能有数据的副本。要确保删除所有数据，必须请求这些用户删除其数据副本。
+{: tip}
+
 ###删除所有工具链
 
-无法同时删除组织内的所有工具链。您必须一次删除一个工具链。
+无法同时删除资源组或组织内的所有工具链。您必须一次删除一个工具链。
 
-**重要信息**：工具链是按 IBM Cloud 区域和 Cloud Foundry 组织分组的。请确保选择每个区域以及该区域内的组织，以删除已创建的每个工具链。
+工具链是按 IBM Cloud 区域和资源组或 Cloud Foundry 组织划分范围的。请确保选择每个区域以及该区域内的资源组或组织，以删除已创建的每个工具链。
+{: tip}

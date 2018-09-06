@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # 创建定制工具链模板
@@ -173,18 +175,19 @@ template
 
  对于添加到工具链的每个存储库，使用以下属性来添加表示存储库名称的父键：
 
-| 项| 键/属性| 值| 描述|
+|项|键/属性|值|描述|
 |------|--------------|-------|-------------|
-| repo-name| 键|  | 存储库名称。此键与名称 (sample-repo) 相匹配|
-| service_id| 属性| <`githubpublic`、`githubprivate`、`hostedgit`、`gitlab`> | 存储库类型|
-| parameters:| 键|  |  |
-| repo_name| 属性|  | repo-name 的模式。以下示例将工具链名称用作存储库名称|
-| repo_url| 属性|  | 存储库的 URL|
-| type| 属性| <`new`、`fork`、`clone` 或 `link`>| 如何新建存储库|
-| has_issues| 属性| <`true` 或 `false`>| 使用 Issues|
-| enable_traceability| 属性|  <`true` 或 `false`>| 通过对提交、拉取请求和所参考的问题创建标记、标签和注释，确定是否跟踪代码更改的部署。|
+|repo-name|键|  |存储库名称。此键与名称 (sample-repo) 相匹配|
+|service_id|属性|<`githubpublic`、`githubprivate`、`hostedgit`、`gitlab`> |存储库类型|
+|parameters:|键|  |  |
+|repo_name|属性|  |repo-name 的模式。以下示例将工具链名称用作存储库名称|
+|repo_url|属性|  |存储库的 URL|
+|type|属性|<`new`、`fork`、`clone` 或 `link`>|如何新建存储库|
+|has_issues|属性|<`true` 或 `false`>|使用 Issues|
+|enable_traceability|属性|<`true` 或 `false`>|通过对提交、拉取请求和所参考的问题创建标记、标签和注释，确定是否跟踪代码更改的部署。|
 
- **注：**如果定义了多个存储库，并将其配置为 `has_issues: true`，那么 GitHub Issues 跟踪程序的单个实例将添加到工具链。跟踪程序会跟踪已将此项设置为 `true` 的所有存储库的问题。
+ 如果定义了多个存储库，并将其配置为 `has_issues: true`，那么 GitHub Issues 跟踪程序的单个实例将添加到工具链。跟踪程序会跟踪已将此项设置为 `true` 的所有存储库的问题。
+ {: tip}
 
  以下片段显示了此部分的示例：
 
@@ -208,22 +211,22 @@ template
 
  首先，对于在工具链中定义的每个存储库，添加表示其管道名称的父键。请考虑从 GitHub 或 Git Repo and Issue Tracking 存储库的名称中派生此键。添加以下属性：
 
-| 项| 键/属性| 值| 描述|
+|项|键/属性|值|描述|
 |------|--------------|-------|-------------|
-| pipeline-name| 键|  | 管道的名称 (sample-build)|
-| service_id| 属性| <`pipeline`>| 要使用的服务的名称|
-| parameters| 键|  |  |
-| name| 属性| <`repo_name`>| 与“存储库”部分中定义的名称相同|
-| ui-pipeline| 属性| <`true` 或 `false`>|如果此管道部署的应用程序显示在工具链页面上的**查看应用程序**菜单中，那么该属性值为 True|
-| configuration| 键|  |  |
-| content| 属性| <`$ref(pipeline.yml)`>| 用于定义管道定义的文件|
-| env| 键|  |  |
-| SAMPLE_REPO| 键| <`repo-name-key`>| 与存储库父键的名称相同|
-| CF_APP_NAME|  属性| <`'{{form.pipeline.parameters.prod-app-name}}'`> | Cloud Foundry 使用的名称。请考虑将存储库父键名称合并到此属性中。|
-| PROD_SPACE_NAME| 属性| <`'{{form.pipeline.parameters.prod-space}}'`> | 要部署到的 {{site.data.keyword.Bluemix_notm}} 空间的名称|
-| PROD_ORG_NAME| 属性| <`'{{form.pipeline.parameters.prod-organization}}'`> | 要部署到的 {{site.data.keyword.Bluemix_notm}} 组织的名称|
-| PROD_REGION_ID| 属性| <`'{{form.pipeline.parameters.prod-region}}'`> | 要部署到的 {{site.data.keyword.Bluemix_notm}} 区域的名称|
-| execute| 属性| <`true` 或 `false`>| 创建后启动管道|
+|pipeline-name|键|  |管道的名称 (sample-build)|
+|service_id|属性|<`pipeline`>|要使用的服务的名称|
+|parameters|键|  |  |
+|name|属性|<`repo_name`>|与“存储库”部分中定义的名称相同|
+|ui-pipeline|属性|<`true` 或 `false`>|如果此管道部署的应用程序显示在工具链页面上的**查看应用程序**菜单中，那么该属性值为 True|
+|configuration|键|  |  |
+|content|属性|<`$ref(pipeline.yml)`>|用于定义管道定义的文件|
+|env|键|  |  |
+|SAMPLE_REPO|键|<`repo-name-key`>|与存储库父键的名称相同|
+|CF_APP_NAME|属性| <`'{{form.pipeline.parameters.prod-app-name}}'`> |Cloud Foundry 使用的名称。请考虑将存储库父键名称合并到此属性中。|
+|PROD_SPACE_NAME|属性| <`'{{form.pipeline.parameters.prod-space}}'`> |要部署到的 {{site.data.keyword.Bluemix_notm}} 空间的名称|
+|PROD_ORG_NAME|属性| <`'{{form.pipeline.parameters.prod-organization}}'`> |要部署到的 {{site.data.keyword.Bluemix_notm}} 组织的名称|
+|PROD_REGION_ID|属性| <`'{{form.pipeline.parameters.prod-region}}'`> |要部署到的 {{site.data.keyword.Bluemix_notm}} 区域的名称|
+|execute|属性|<`true` 或 `false`>|创建后启动管道|
 
 <!--| services | property | <`repo-name-key`> |  GitHub repository parent key |
 | hidden | property | <`[form, description]`> |  |
@@ -252,7 +255,7 @@ template
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
        execute: true 
-```      
+```
  {: codeblock}
 
 4\. **部署详细信息：**
@@ -269,16 +272,16 @@ template
 
 
 
-| 项| 键/属性| 值| 描述|
+|项|键/属性|值|描述|
 |------|--------------|-------|-------------|
-| deploy | 键|  | 部署部分的名称|
-| schema | 属性| <`deploy.json`> | 为用于配置部署详细信息的 UI 定义布局的文件|
-| service-category | 属性| <`pipeline`>| 使用部署配置的服务|
-| parameters| 键|  |  |
-| prod-region | 属性| <`"{{region}}"`> | 为生产阶段定义 {{site.data.keyword.Bluemix_notm}} 区域|
-| prod-organization | 属性| <`"{{organization}}"`> | 为生产阶段定义 {{site.data.keyword.Bluemix_notm}} 组织|
-| prod-space | 属性| <`prod`> | 为生产阶段定义 {{site.data.keyword.Bluemix_notm}} 空间|
-| github-repo-name | 属性| <`"{{repo-name-key.parameters.repo_name}}"`> | 用于将 GitHub 存储库名称传递到工具链创建页面的变量|
+|deploy |键|  |部署部分的名称|
+|schema |属性|<`deploy.json`> |为用于配置部署详细信息的 UI 定义布局的文件|
+|service-category |属性|<`pipeline`>|使用部署配置的服务|
+|parameters|键|  |  |
+|prod-region |属性| <`"{{region}}"`> |为生产阶段定义 {{site.data.keyword.Bluemix_notm}} 区域|
+|prod-organization |属性| <`"{{organization}}"`> |为生产阶段定义 {{site.data.keyword.Bluemix_notm}} 组织|
+|prod-space |属性|<`prod`> |为生产阶段定义 {{site.data.keyword.Bluemix_notm}} 空间|
+|github-repo-name |属性| <`"{{repo-name-key.parameters.repo_name}}"`> |用于将 GitHub 存储库名称传递到工具链创建页面的变量|
 
 有关创建 `deploy.json` 文件的更多信息，请参阅[此部分] (#toolchains_custom_deploy_json)。
 
