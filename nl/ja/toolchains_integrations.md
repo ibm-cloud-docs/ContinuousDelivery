@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-17"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}    
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}   
 
 # ツール統合の構成
 {: #integrations}
@@ -17,7 +20,7 @@ lastupdated: "2018-3-21"
 開発、デプロイメント、および運用の作業をサポートするツール統合をオープン・ツールチェーンの作成時に構成するか、ツール統合を追加および構成して既存のツールチェーンをカスタマイズすることができます。  
 {:shortdesc}
 
-ツールチェーンで追加および構成できるツール統合は、{{site.data.keyword.Bluemix_notm}} Public または {{site.data.keyword.Bluemix_notm}} Dedicated のどちらを使用しているかによって異なります。 {{site.data.keyword.Bluemix_notm}} Public でツールチェーンを使用している場合、利用できるツール統合は、ツールチェーンの地域と、その地域でツール統合を利用できるかどうかに応じて異なります。{{site.data.keyword.Bluemix_notm}} Dedicated でツールチェーンを使用している場合、利用できるツール統合は、特定の環境で {{site.data.keyword.contdelivery_full}} がどのように設定されたかに応じて異なります。
+ツールチェーンで追加および構成できるツール統合は、{{site.data.keyword.Bluemix_notm}} Public または {{site.data.keyword.Bluemix_notm}} Dedicated のどちらを使用しているかによって異なります。 {{site.data.keyword.Bluemix_notm}} Public でツールチェーンを使用している場合、利用できるツール統合は、ツールチェーンの地域と、その地域でツール統合を利用できるかどうかに応じて異なります。 {{site.data.keyword.Bluemix_notm}} Dedicated でツールチェーンを使用している場合、利用できるツール統合は、特定の環境で {{site.data.keyword.contdelivery_full}} がどのように設定されたかに応じて異なります。
 
 |ツール統合 |{{site.data.keyword.Bluemix_notm}} Public で利用可能	|{{site.data.keyword.Bluemix_notm}} Dedicated で利用可能 (環境依存)|
 |:----------|:------------------------------|:------------------|
@@ -42,10 +45,10 @@ lastupdated: "2018-3-21"
 |Sauce Labs		|米国南部、ドイツ、英国		|いいえ		|
 |Slack			|米国南部、ドイツ、英国		|はい		|
 |SonarQube			|米国南部、ドイツ、英国		|はい		|
-|UrbanCode Deploy			|米国南部		|いいえ		|
 {: caption="表 1. {{site.data.keyword.Bluemix_notm}} Public と Dedicated のツールチェーンで使用可能なツール統合" caption-side="top"}
 
-**ヒント:** {{site.data.keyword.Bluemix_notm}} Public でソース・コードを開発することから始める場合は、{{site.data.keyword.deliverypipeline}} を構成する前に GitHub ツール統合または {{site.data.keyword.gitrepos}} ツール統合を構成してください。 {{site.data.keyword.Bluemix_notm}} Dedicated でコードでの開発を開始する場合は、{{site.data.keyword.deliverypipeline}} を構成する前に {{site.data.keyword.ghe_short}} ツール統合を構成します。
+{{site.data.keyword.Bluemix_notm}} Public でソース・コードを開発することから始める場合は、{{site.data.keyword.deliverypipeline}} を構成する前に GitHub ツール統合または {{site.data.keyword.gitrepos}} ツール統合を構成してください。 {{site.data.keyword.Bluemix_notm}} Dedicated でコードでの開発を開始する場合は、{{site.data.keyword.deliverypipeline}} を構成する前に {{site.data.keyword.ghe_short}} ツール統合を構成します。
+{: tip}
 
 
 ## Alert Notification の構成
@@ -158,7 +161,8 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
      # or
      npm publish --registry "${NPM_RELEASE_URL}"
      ```
-  **ヒント:** レジストリーへの接続に使用した URL およびユーザー資格情報は、Artifactory ツール統合の構成設定で見つけることができます。
+  レジストリーへの接続に使用した URL およびユーザー資格情報は、Artifactory ツール統合の構成設定で見つけることができます。
+  {: tip}
 
   e. ビルド・ジョブが Artifactory レジストリーへのパブリッシュを行い、かつ、ノード・モジュール・バージョンのフォーマットが `x.y.z-SNAPSHOT.w` である場合、**「スナップショット・モジュール・バージョンのインクリメント (Increment snapshot module version)」**チェック・ボックスにチェック・マークを付けます。 ビルド・ジョブは、モジュール・バージョンを自動的に更新した後で、Artifactory レジストリーにパブリッシュします。 ジョブは、npm レジストリーおよびローカル `package.json` ファイルから最高バージョンのモジュールを選択し、semver を使用してモジュール・バージョンを増やします。 ビルド・ジョブは、変更を SCM リポジトリーに配信しません。
 
@@ -188,7 +192,8 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
      # or
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  **ヒント:** レジストリーへの接続に使用した URL およびユーザー資格情報は、Artifactory ツール統合の構成設定で見つけることができます。
+  レジストリーへの接続に使用した URL およびユーザー資格情報は、Artifactory ツール統合の構成設定で見つけることができます。
+  {: tip}
 
 1. **「保存」**をクリックします。 パイプラインが実行されると、このビルド・ジョブは Artifactory ツール統合からの構成情報を使用して Maven リポジトリーに接続します。
 
@@ -202,7 +207,8 @@ Artifactory について詳しくは、IBM Cloud Garage Method の[記事「Arti
 
 {{site.data.keyword.prf_hublong}} は、ユーザーに影響が及ぶ前に、問題を切り分け、パターンを識別し、パフォーマンスを改善します。 世界中の場所でアプリをテストし、Delivery Pipeline に統合し、コードを継続的に最適化する方法についての洞察を深めることができます。
 
-**注:** このツール統合は事前構成されているため、構成パラメーターは必要ありません。 このツール統合を再構成することはできません。
+このツール統合は事前構成されているため、構成パラメーターは必要ありません。 このツール統合を再構成することはできません。
+{: tip}
 
 アプリをビルドするときに、アプリの正常性をテスト、モニター、および改善するために、{{site.data.keyword.prf_hubshort}} ツール統合を追加します。
 
@@ -235,7 +241,23 @@ bitbucket.org の新規か既存のリポジトリーにソース・コードを
 
  b. 「ツール統合 (Tool Integrations)」セクションで、**「Bitbucket」**をクリックします。
 
-   **ヒント:** {{site.data.keyword.Bluemix_notm}} Public でこのツール統合を構成しており、Bitbucket へのアクセスを {{site.data.keyword.Bluemix_notm}} に許可していない場合は、**「認可 (Authorize)」**をクリックして Bitbucket Web サイトに移動します。 アクティブな Bitbucket セッションがない場合は、ログインするよう求められます。 **「アプリケーションを許可 (Authorize Application)」** をクリックして、{{site.data.keyword.Bluemix_notm}} が Bitbucket アカウントにアクセスできるようにします。 アクティブな Bitbucket セッションはあるものの、最近パスワードを入力していない場合は、確認のために Bitbucket パスワードの入力を求められることがあります。
+   {{site.data.keyword.Bluemix_notm}} Public でこのツール統合を構成しており、Bitbucket へのアクセスを {{site.data.keyword.Bluemix_notm}} に許可していない場合は、**「認可 (Authorize)」**をクリックして Bitbucket Web サイトに移動します。 アクティブな Bitbucket セッションがない場合は、ログインするよう求められます。 **「アクセス権限の付与 (Grant access)」**をクリックして、{{site.data.keyword.Bluemix_notm}} ツールチェーンが Bitbucket アカウントの以下の部分にアクセスできるようにします。
+   
+   * **アカウント情報をお読みください**。基本的なユーザー情報を取得して、ユーザー・インターフェースを設定します。
+   
+   * **リポジトリーの問題を読み取り、変更します**。{{site.data.keyword.contdelivery_short}} で問題を更新し、これらの問題にアタッチされているコミットをパイプラインがいつデプロイするかを示すことができるようにします。 
+   
+   * **チームのプロジェクト設定を読み、チームのプロジェクト内に含まれるリポジトリーを読み取ります**。{{site.data.keyword.contdelivery_short}} で、チームが所有するリポジトリーと統合できるようにします。
+   
+   * **リポジトリーとそのプル要求を読み取り、変更します**。ユーザーがコードを要求したときに、{{site.data.keyword.contdelivery_short}} でサンプル・コードをリポジトリーにプッシュできるようにします。
+   
+   * **リポジトリーを管理します**。ユーザーから要求された場合に、{{site.data.keyword.contdelivery_short}} で新規リポジトリーを作成できるようにします。
+   
+   * **チーム・メンバーシップ情報をお読みください**。{{site.data.keyword.contdelivery_short}} で、新規リポジトリーの作成時に表示される**「所有者」**メニューにチームのリストを表示できるようにします。
+   
+   * **リポジトリーの Web フックを読み取り、変更します**。コミットがリポジトリーにプッシュされたときに、パイプラインがビルドを起動できるようにします。{: tip}
+   
+   アクティブな Bitbucket セッションはあるものの、最近パスワードを入力していない場合は、確認のために Bitbucket パスワードの入力を求められることがあります。
 
 1. 使用する Bitbucket サーバーをクリックします。
 1. 既存の Bitbucket リポジトリーを使用する場合は、そのリポジトリーの URL を入力します。 リポジトリー・タイプには、**「既存」**をクリックします。
@@ -254,7 +276,8 @@ bitbucket.org の新規か既存のリポジトリーにソース・コードを
 1. 作業対象の Bitbucket リポジトリーのカードをツールチェーンからクリックします。 Bitbucket の Web サイトが開きます。そこでリポジトリーの内容を表示できます。
 1. Bitbucket Issues を使用可能にした場合、**「Bitbucket Issues」**をクリックして開きます。 ツールチェーンに複数の Bitbucket リポジトリーが含まれれている場合でも、Bitbucket Issues のこのインスタンスをツールチェーン全体に使用できます。    
 
-**注:** リンクしようとしているリポジトリーに対する所有者またはマスター特権がない場合は、Web フックを使用できないので統合は制限されます。 リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。 Web フックがない場合、パイプラインを手動で開始する必要があります。
+リンクしようとしているリポジトリーに対する所有者またはマスター特権がない場合は、Web フックを使用できないので統合は制限されます。 リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。 Web フックがない場合、パイプラインを手動で開始する必要があります。
+{: tip}
 
 ### Bitbucket に関する詳細
 
@@ -266,7 +289,8 @@ Bitbucket について詳しくは、IBM Cloud Garage Method の[記事「Bitbuc
 
 {{site.data.keyword.evtmgt_full}} は、ユーザーのサービス、アプリケーション、およびインフラストラクチャーで発生する問題の統合ビューを提供します。 問題をより効率的に解決できるよう、リアルタイムのインシデント管理をセットアップできます。
 
-**注:** このツール統合は事前構成されているため、構成パラメーターは必要ありません。 これを再構成することはできません。
+このツール統合は事前構成されているため、構成パラメーターは必要ありません。 これを再構成することはできません。
+{: tip}
 
 信頼できる運用正常性、サービス品質、および継続的改善という目標を DevOps チームが達成するのを助けるために、Cloud Event Management をツールチェーンに追加します。
 
@@ -309,7 +333,7 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 1. **「統合の作成 (Create Integration)」**をクリックして、{{site.data.keyword.deliverypipeline}} をツールチェーンに追加します。
 1. **「{{site.data.keyword.deliverypipeline}}」**をクリックして、パイプラインを表示し、構成します。 パイプラインの構成の基本を確認するには、『[パイプラインのビルドとデプロイ](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}』を参照してください。
 
-  **ヒント:** GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーにコミットがプッシュされるとパイプラインが自動的に実行されるようにしたい場合は、以下のステップを実行します。
+  GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーにコミットがプッシュされるとパイプラインが自動的に実行されるようにしたい場合は、以下のステップを実行します。
 
    a. パイプラインのステージを定義する前に、ツールチェーン用に GitHub、{{site.data.keyword.ghe_short}}、または {{site.data.keyword.gitrepos}} を構成します。 パイプラインのステージには、リポジトリーの Git URL が必要です。 各パイプライン・ステージは、ツールチェーンと関連付けられた、GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーのうち 1 つのみを参照できます。 GitHub の構成手順については、[GitHub](#github) のセクションを参照してください。 Dedicated {{site.data.keyword.ghe_short}} の構成方法については、『[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated/index.html){: new_window}』を参照してください。 {{site.data.keyword.gitrepos}} の構成手順については、[{{site.data.keyword.gitrepos}}](#gitbluemix) のセクションを参照してください。
 
@@ -331,7 +355,8 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 
 1. ステージを構成します。 **「環境プロパティー (ENVIRONMENT PROPERTIES)」**タブで、CF_APP_NAME プロパティーを作成します。
 
-  **ヒント:** Sauce Labs ユーザー名とアクセス・キーは、テスト・ジョブ・スクリプトでは SAUCE_USERNAME と SAUCE_ACCESS_KEY の各環境変数として使用可能です。 テストを記述する際は、これらの環境変数を使用して Sauce Labs の認証を受ける必要があります。
+  Sauce Labs ユーザー名とアクセス・キーは、テスト・ジョブ・スクリプトでは SAUCE_USERNAME と SAUCE_ACCESS_KEY の各環境変数として使用可能です。 テストを記述する際は、これらの環境変数を使用して Sauce Labs の認証を受ける必要があります。
+  {: tip}
 
 1. デプロイ・ジョブを構成します。 「デプロイ・スクリプト」**フィールドに、コマンド `export CF_APP_NAME="$CF_APP"` を含めます。** このコマンドは、アプリ名を環境プロパティーとしてエクスポートします。
 1. テスト・ジョブを構成します。 次の図は、値の例を示しています。 **「サービス・インスタンス」**、**「ターゲット」**、**「組織」**、**「スペース」**の各フィールドには、使用中の Sauce Labs のユーザー名、地域、組織、スペースが取り込まれます。  
@@ -341,7 +366,8 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 
   b. サービス・インスタンスでは、ツールチェーンに Sauce Labs を構成したときに使用した Sauce Labs のユーザー名を選択します。
 
-   **ヒント**: ツールチェーン用に Sauce Labs を構成したときに使用したユーザー名およびアクセス・キーを表示するには、**「構成」**をクリックします。
+   ツールチェーン用に Sauce Labs を構成したときに使用したユーザー名およびアクセス・キーを表示するには、**「構成」**をクリックします。
+   {: tip}
 
   c. **「テスト実行コマンド (Test Execution Command)」**フィールドに、テストに必要な依存関係をインストールしてテストを実行するコマンドを入力します。 例えば、Node.js アプリの場合、次のようなコマンドを入力します。
      ```
@@ -367,7 +393,8 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 
 {{site.data.keyword.DRA_full}} は、単体テスト、機能テスト、およびコード・カバレッジ・ツールからの結果を収集して分析し、コードがデプロイメント・プロセスの指定されたゲートで事前定義の基準を満たすかどうかを判断します。 コードが基準を満たしていない、または基準を超えていない場合、リスク回避のために、デプロイメントが停止されます。 {{site.data.keyword.DRA_short}} を、継続的デリバリー環境のセーフティー・ネットとして、または品質標準の実装および改善のための手段として使用することができます。
 
- **注:** このツール統合は {{site.data.keyword.Bluemix_notm}} Public でのみ使用可能です。 これは事前構成されているため、構成パラメーターは必要ありません。 このツール統合を再構成することはできません。
+ このツール統合は {{site.data.keyword.Bluemix_notm}} Public でのみ使用可能です。 これは事前構成されているため、構成パラメーターは必要ありません。 このツール統合を再構成することはできません。
+ {: tip}
 
 {{site.data.keyword.DRA_short}} を追加し、デプロイメントをモニタリングしてリリース前にリスクを洗い出すことで、{{site.data.keyword.Bluemix_notm}} のコードの品質を維持し、向上させることができます。
 
@@ -398,7 +425,8 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 
 Eclipse Orion {{site.data.keyword.webide}} は、ソース管理タスクを作成、編集、実行、デバッグ、完了できる Web ベースの統合環境です。 編集から実行、送信、そしてデプロイまで、シームレスに行うことができます。
 
- **注**: このツール統合は事前構成済みです。 構成パラメーターは不要で、再構成することはできません。
+ このツール統合は事前構成済みです。 構成パラメーターは不要で、再構成することはできません。
+ {: tip}
 
 ソース管理タスクを完了するには、次の手順で Eclipse Orion {{site.data.keyword.webide}} ツール統合を追加します。
 
@@ -433,7 +461,8 @@ Eclipse Orion {{site.data.keyword.webide}} について詳しくは、[Eclipse O
 
 ツールチェーンがあり、そのツールチェーン内の Git リポジトリーを {{site.data.keyword.gitrepos}} に移行する場合は、以下のステップを実行します。
 
-**注**: ここで説明する手順は、{{site.data.keyword.gitrepos}} に移行する Git リポジトリーが既に含まれているツールチェーンに適用されます。 ツールチェーンにさまざまなタイプの Git リポジトリーを追加する方法については、[GitHub の構成](#github)、[{{site.data.keyword.Bluemix_notm}} Dedicated での GitHub Enterprise および GitHub Issues の構成](#configghe)、[GitLab の構成](#gitlab)の各セクションを参照してください。
+ここで説明する手順は、{{site.data.keyword.gitrepos}} に移行する Git リポジトリーが既に含まれているツールチェーンに適用されます。 ツールチェーンにさまざまなタイプの Git リポジトリーを追加する方法については、[GitHub の構成](#github)、[{{site.data.keyword.Bluemix_notm}} Dedicated での GitHub Enterprise および GitHub Issues の構成](#configghe)、[GitLab の構成](#gitlab)の各セクションを参照してください。
+{: tip}
 
 1. DevOps ダッシュボードの「ツールチェーン」ページで、ツールチェーンをクリックしてその「概要」ページを開きます。 あるいは、アプリの「概要」ページの「継続的デリバリー」カードで、**「ツールチェーンの表示」**をクリックし、**「概要」**をクリックします。
 1. **「ツールの追加 (Add a Tool)」**をクリックします。
@@ -443,7 +472,8 @@ Eclipse Orion {{site.data.keyword.webide}} について詳しくは、[Eclipse O
 1. コミットに対するタグおよびコメントと、コミットで参照される問題に対するラベルおよびコメントを作成することによって、コード変更のデプロイメントをトラッキングしたい場合は、**「コード変更のデプロイメントを追跡する (Track deployment of code changes)」**チェック・ボックスにチェック・マークを付けます。 詳しくは、[Track where your code is deployed with toolchains ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window} を参照してください。
 1. **「統合の作成 (Create Integration)」**をクリックします。
 
-**ヒント:** Git リポジトリーのクローンを作成したら、ツールチェーンから削除できます。
+Git リポジトリーのクローンを作成したら、ツールチェーンから削除できます。
+{: tip}
 
 既存のツールチェーンに {{site.data.keyword.gitrepos}} を追加する場合は、以下の手順に従います。    
 
@@ -462,7 +492,8 @@ Eclipse Orion {{site.data.keyword.webide}} について詳しくは、[Eclipse O
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. 作業対象の Git リポジトリーのカードをクリックします。 プロジェクト概要のページが開きます。    
 
-**注:** リンクしようとしているリポジトリーに対する Master または Owner 特権をお持ちでない場合、Web フックを使用できないので統合は制限されます。 リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。 Web フックがない場合、パイプラインを手動で開始する必要があります。
+リンクしようとしているリポジトリーに対する Master または Owner 特権をお持ちでない場合、Web フックを使用できないので統合は制限されます。 リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。 Web フックがない場合、パイプラインを手動で開始する必要があります。
+{: tip}
 
 ### Git Repos and Issue Tracking に関する詳細
 
@@ -487,11 +518,12 @@ GitHub.com または会社の {{site.data.keyword.ghe_short}} インスタンス
 1. GitHub リポジトリーにソース・コードを格納している場合は、「構成可能な統合 (Configurable Integrations)」セクションで**「GitHub」**をクリックします。 {{site.data.keyword.Bluemix_notm}} Public でこのツール統合を構成しており、GitHub へのアクセスを {{site.data.keyword.Bluemix_notm}} に許可していない場合は、**「認可 (Authorize)」**をクリックして GitHub Web サイトに移動します。 アクティブな GitHub セッションがない場合は、ログインするよう求められます。 **「アプリケーションを許可 (Authorize Application)」** をクリックして、{{site.data.keyword.Bluemix_notm}} が GitHub アカウントにアクセスできるようにします。 アクティブな GitHub セッションはあるものの、最近パスワードを入力していない場合は、確認のために GitHub パスワードの入力を求められることがあります。
 1. 独自の {{site.data.keyword.ghe_short}} サーバー上でリポジトリーを使用している場合は、「構成可能な統合 (Configurable Integrations)」セクションで**「カスタム・サーバーの追加 (Add custom server)」**をクリックします。
 
- **重要**: ネットワークを介して {{site.data.keyword.Bluemix_notm}} Dedicated 環境からターゲット Git サーバーにアクセスできる必要があります。パブリック・インターネット上で GitHub サーバーを使用できない場合や、パブリック・ドメイン・ネーム・サーバー (DNS) 上でホスト名が解決しない場合は、[サポート・チケットを開きます](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}。サポート・チケットを使用して、ネットワーク経路を開く要求や、DNS 設定を更新する要求を送信できます。
+ ネットワークを介して {{site.data.keyword.Bluemix_notm}} Dedicated 環境からターゲット Git サーバーにアクセスできる必要があります。 パブリック・インターネット上で GitHub サーバーを使用できない場合や、パブリック・ドメイン・ネーム・サーバー (DNS) 上でホスト名が解決しない場合は、[サポート・チケットを開きます](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}。 サポート・チケットを使用して、ネットワーク経路を開く要求や、DNS 設定を更新する要求を送信できます。
+ {: tip}
 
  カスタム GitHub サーバーのタイトルを入力し、サーバーのルート URL を指定します。 個人用アクセス・トークンを入力してから、**「カスタム統合の保存 (Save custom integration)」**をクリックします。
 
-  **ヒント**: 個人用アクセス・トークンがない場合は作成できます。
+  個人用アクセス・トークンがない場合は作成できます。
 
      a. 任意の GitHub ページで、プロファイル・アイコンをクリックしてから**「設定」**をクリックします。
 
@@ -530,11 +562,13 @@ GitHub.com または会社の {{site.data.keyword.ghe_short}} インスタンス
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. 作業対象の GitHub または {{site.data.keyword.ghe_short}} リポジトリーのカードをクリックします。 選択したリポジトリーに応じて、GitHub Web サイトか会社の {{site.data.keyword.ghe_short}} リポジトリーが開きます。ここで、リポジトリーのコンテンツを表示できます。
 
-  **ヒント**: Eclipse Orion {{site.data.keyword.webide}} の統合ソース・コード管理ツールを使用して、GitHub リポジトリーを編集し、ワークスペースからアプリをデプロイすることができます。
+  Eclipse Orion {{site.data.keyword.webide}} の統合ソース・コード管理ツールを使用して、GitHub リポジトリーを編集し、ワークスペースからアプリをデプロイすることができます。
+  {: tip}
 
 1. GitHub Issues を使用可能にした場合、**「GitHub Issues」**をクリックして開きます。 ツールチェーンに複数の GitHub または {{site.data.keyword.ghe_short}} リポジトリーが含まれれている場合でも、GitHub Issues のこのインスタンスをツールチェーン全体に使用できます。    
 
-**注:** リンクしようとしているリポジトリーに対する管理特権をお持ちでない場合、Web フックを使用できないので統合は制限されます。 リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。 Web フックがない場合、パイプラインを手動で開始する必要があります。
+リンクしようとしているリポジトリーに対する管理特権をお持ちでない場合、Web フックを使用できないので統合は制限されます。 リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。 Web フックがない場合、パイプラインを手動で開始する必要があります。
+{: tip}
 
 ### GitHub に関する詳細
 
@@ -550,7 +584,8 @@ GitHub について詳しくは、IBM Cloud Garage Method の [GitHub に関す�
 ## {{site.data.keyword.Bluemix_notm}} Dedicated での GitHub Enterprise および GitHub Issues の構成
 {: #configghe}
 
- **注:** ここで説明する手順は、{{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} に適用されます。 独自の管理版の {{site.data.keyword.ghe_short}} を使用している場合、内部手順によっては一部のステップが異なることがあります。
+ ここで説明する手順は、{{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} に適用されます。 独自の管理版の {{site.data.keyword.ghe_short}} を使用している場合、内部手順によっては一部のステップが異なることがあります。
+ {: tip}
 
 {{site.data.keyword.ghe_long}} は、オンプレミス型の Web ベースの Git リポジトリー・ホスティング・サービスです。 Dedicated {{site.data.keyword.ghe_short}} は {{site.data.keyword.Bluemix_notm}} Dedicated ユーザー専用です。 GitHub Issues は、作業と計画を 1 つの場所に保持するトラッキング・ツールです。 これは、ユーザーが重要タスクに注力できるようにユーザーの開発リポジトリーと統合されます。 Dedicated {{site.data.keyword.ghe_short}} と GitHub Issues について詳しくは、[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated/index.html){: new_window}と IBM Cloud Garage Method の[記事「GitHub Issues」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} を参照してください。
 
@@ -584,11 +619,13 @@ GitHub について詳しくは、IBM Cloud Garage Method の [GitHub に関す�
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. 作業対象の {{site.data.keyword.ghe_short}} リポジトリーのカードをクリックします。 会社の {{site.data.keyword.ghe_short}} リポジトリーが開きます。
 
-  **ヒント**: Eclipse Orion {{site.data.keyword.webide}} の統合ソース・コード管理ツールを使用して、{{site.data.keyword.ghe_short}} リポジトリーを編集し、ワークスペースからアプリをデプロイすることができます。
+  Eclipse Orion {{site.data.keyword.webide}} の統合ソース・コード管理ツールを使用して、{{site.data.keyword.ghe_short}} リポジトリーを編集し、ワークスペースからアプリをデプロイすることができます。
+  {: tip}
 
 1. GitHub Issues を使用可能にした場合、**「GitHub Issues」**をクリックします。 ツールチェーンに複数の GitHub リポジトリーが含まれれている場合でも、GitHub Issues のこのインスタンスをツールチェーン全体に使用できます。    
 
-**注:** リンクしようとしているリポジトリーに対する管理特権をお持ちでない場合、Web フックを使用できないので統合は制限されます。 リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。 Web フックがない場合、パイプラインを手動で開始する必要があります。
+リンクしようとしているリポジトリーに対する管理特権をお持ちでない場合、Web フックを使用できないので統合は制限されます。 リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。 Web フックがない場合、パイプラインを手動で開始する必要があります。
+{: tip}
 
 
 ## GitLab の構成
@@ -603,11 +640,12 @@ GitLab.com または会社の GitLab インスタンスの新規または既存�
 1. GitLab リポジトリーにソース・コードを格納している場合は、「構成可能な統合 (Configurable Integrations)」セクションで**「GitLab」**をクリックします。 {{site.data.keyword.Bluemix_notm}} Public でこのツール統合を構成しており、GitLab へのアクセスを {{site.data.keyword.Bluemix_notm}} に許可していない場合は、**「認可 (Authorize)」**をクリックして GitLab Web サイトに移動します。 アクティブな GitLab セッションがない場合は、ログインするよう求められます。 **「アプリケーションを許可 (Authorize Application)」** をクリックして、{{site.data.keyword.Bluemix_notm}} が GitLab アカウントにアクセスできるようにします。 アクティブな GitLab セッションはあるものの、最近パスワードを入力していない場合は、確認のために GitLab パスワードの入力を求められることがあります。
 1. 独自の GitLab サーバー上でリポジトリーを使用している場合は、「構成可能な統合 (Configurable Integrations)」セクションで**「カスタム・サーバーの追加 (Add custom server)」**をクリックします。
 
- **重要**: ネットワークを介して {{site.data.keyword.Bluemix_notm}} Dedicated 環境からターゲット GitLab サーバーにアクセスできる必要があります。
+ ネットワークを介して {{site.data.keyword.Bluemix_notm}} Dedicated 環境からターゲット GitLab サーバーにアクセスできる必要があります。
+ {: tip}
 
  カスタム GitLab サーバーのタイトルを入力し、サーバーのルート URL を指定します。 個人用アクセス・トークンを入力してから、**「カスタム統合の保存 (Save custom integration)」**をクリックします。
 
-  **ヒント**: 個人用アクセス・トークンがない場合は作成できます。
+  個人用アクセス・トークンがない場合は作成できます。
 
      a. 任意の GitLab ページで、プロファイル・アイコンをクリックしてから**「設定」**をクリックします。
 
@@ -644,11 +682,13 @@ GitLab.com または会社の GitLab インスタンスの新規または既存�
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. 作業対象の GitLab リポジトリーのカードをクリックします。 選択したリポジトリーに応じて、GitLab Web サイトか会社の GitLab リポジトリーが開きます。ここで、リポジトリーのコンテンツを表示できます。
 
-  **ヒント**: Eclipse Orion {{site.data.keyword.webide}} の統合ソース・コード管理ツールを使用して、GitLab リポジトリーを編集し、ワークスペースからアプリをデプロイすることができます。
+  Eclipse Orion {{site.data.keyword.webide}} の統合ソース・コード管理ツールを使用して、GitLab リポジトリーを編集し、ワークスペースからアプリをデプロイすることができます。
+  {: tip}
 
 1. GitLab Issues を使用可能にした場合、**「GitLab Issues」**をクリックして開きます。 ツールチェーンに複数の GitLab リポジトリーが含まれれている場合でも、GitLab Issues のこのインスタンスをツールチェーン全体に使用できます。    
 
-**注:** リンクしようとしているリポジトリーに対する所有者またはマスター特権がない場合は、Web フックを使用できないので統合は制限されます。 リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。 Web フックがない場合、パイプラインを手動で開始する必要があります。
+リンクしようとしているリポジトリーに対する所有者またはマスター特権がない場合は、Web フックを使用できないので統合は制限されます。 リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。 Web フックがない場合、パイプラインを手動で開始する必要があります。
+{: tip}
 
 ### GitLab に関する詳細
 
@@ -660,7 +700,8 @@ GitLab について詳しくは、IBM Cloud Garage Method の[記事「GitLab」
 
 Jenkins は、ソフトウェアを継続的にビルドおよびテストする、サーバー・ベースのオープン・ソースのツールであり、継続的統合および継続的デリバリーの履行をサポートします。
 
-**重要**: Jenkins ツール統合を作成する前に、Jenkins サーバーを用意する必要があります。
+Jenkins ツール統合を作成する前に、Jenkins サーバーを用意する必要があります。
+{: tip}
 
 Jenkins ツール統合を使用すれば、Jenkins ジョブ通知をツールチェーン内の他のツール (Slack や PagerDuty など) に送信できます。 デプロイメントでコードをトレースするために、デプロイメント・メッセージを Git コミットや関連 Git/JIRA 問題に追加できます。 また、デプロイメントを「ツールチェーン接続」ページに表示することもできます。 テスト結果を {{site.data.keyword.DRA_short}} に送信し、自動化された品質ゲートを追加し、デプロイメント・リスクをトラッキングすることができます。
 
@@ -839,7 +880,8 @@ JIRA について詳しくは、IBM Cloud Garage Method の[記事「JIRA」![�
      # or
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  **ヒント:** レジストリーへの接続に使用した URL およびユーザー資格情報は、Nexus ツール統合の構成設定で見つけることができます。
+  レジストリーへの接続に使用した URL およびユーザー資格情報は、Nexus ツール統合の構成設定で見つけることができます。
+  {: tip}
 
 1. **「保存」**をクリックします。 パイプラインが実行されると、このビルド・ジョブは Nexus ツール統合からの構成情報を使用して Maven リポジトリーに接続します。
 
@@ -965,7 +1007,8 @@ Rational Team Concert について詳しくは、IBM Cloud Garage Method の[記
 
 Sauce Labs は、機能単体テストを実行します。 {{site.data.keyword.deliverypipeline}} 内のテスト・ジョブとして Sauce Labs テスト・スイートが構成されている場合、そのテスト・スイートは、継続的デリバリー・プロセスの一環として、Web アプリまたはモバイル・アプリに対するテストを実行できます。 これらのテストは、誤ったコードがデプロイされるのを防ぐためのゲートとして機能することで、プロジェクトに対して非常に有益なフロー制御を提供します。
 
- **注:** このツール統合は {{site.data.keyword.Bluemix_notm}} Public でのみ使用可能です。
+ このツール統合は {{site.data.keyword.Bluemix_notm}} Public でのみ使用可能です。
+ {: tip}
 
 複数のオペレーティング・システムおよびブラウザーで自動化された機能テストを実行するように Sauce Labs を構成することによって、ユーザーがどのように Web サイトやアプリケーションを使用するのかをエミュレートできます。
 
@@ -982,7 +1025,8 @@ Sauce Labs は、機能単体テストを実行します。 {{site.data.keyword.
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. **「Sauce Labs」**をクリックして saucelabs.com に移動し、ツールチェーンのテスト・アクティビティーを表示します。
 
- **ヒント**: Sauce Labs テスト・ジョブを {{site.data.keyword.deliverypipeline}} に追加した場合、サービス・インスタンスを選択できます。 パイプラインにテスト・ジョブを構成する手順については、『[パイプラインに Sauce Labs テスト・ジョブを構成する](#config_saucelabs)』セクションを参照してください。
+ Sauce Labs テスト・ジョブを {{site.data.keyword.deliverypipeline}} に追加した場合、サービス・インスタンスを選択できます。 パイプラインにテスト・ジョブを構成する手順については、『[パイプラインに Sauce Labs テスト・ジョブを構成する](#config_saucelabs)』セクションを参照してください。
+ {: tip}
 
 ### Sauce Labs に関する詳細
 
@@ -995,7 +1039,8 @@ Sauce Labs について詳しくは、IBM Cloud Garage Method の[記事「Sauce
 ## Slack の構成
 {: #slack}
 
-**重要**: パブリック Slack チャネルに送信される通知は、チームの全員が見ることができます。 投稿したコンテンツの責任は投稿者が負うことに注意してください。
+パブリック Slack チャネルに送信される通知は、チームの全員が見ることができます。 投稿したコンテンツの責任は投稿者が負うことに注意してください。
+{: tip}
 
 Slack は、クラウド・ベースのリアルタイムでのメッセージングおよび通知のシステムです。 Slack が提供する永続的なチャットは、E メールの代わりに使用できる対話性に優れたチームのコラボレーション手段になります。 専用チャネルまたは作業に直接関連する一連のチャネルで、チームと連絡を取ることができます。 さらに、2 人以上のメンバー間で、チャネルやダイレクト・メッセージを使用して、ファイルとイメージを共有することもできます。 ダイレクト・メッセージとチャネルでの通信は、検索できるように保存されます。
 
@@ -1010,13 +1055,15 @@ Slack は、クラウド・ベースのリアルタイムでのメッセージ�
 
 1. 着信 Web フックとして Slack によって生成された Slack Web フック URL を入力します。 Slack チャネルがツール統合からツールチェーンに関する通知を受け取るためには Slack Web フック URL が必要です。 Web フックを作成または確認する方法については、[Incoming Webhooks ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://api.slack.com/incoming-webhooks){: new_window} を参照してください。
 
- **ヒント:** Slack チャネルがツール統合からツールチェーンについての通知を受け取れるようにするために API キーを使用している場合は、代わりに Web フックを使用するように構成を更新する必要があります。
+ Slack チャネルがツール統合からツールチェーンについての通知を受け取れるようにするために API キーを使用している場合は、代わりに Web フックを使用するように構成を更新する必要があります。
+ {: tip}
 
 1. 通知を送信する Slack チャネルの名前を入力します。 このチャネルは存在していなければならず、Slack チームでアクティブである必要があります。
 1. Slack チームの URL ホスト名を入力します。これは、チーム URL 内の `.slack.com` の前にある語または句です。 例えば、チーム URL が `https://team.slack.com` の場合、ホスト名は `team` です。
 1. **「統合の作成 (Create Integration)」**をクリックします。
 
- **ヒント:** 指定した Slack チャネルおよびチームに到達できない場合、Slack カードに `Setup Failed` エラーが表示されます。 `Setup Failed` メッセージの上に移動し、**「再構成 (Reconfigure)」**をクリックしてください。 Slack Web フック URL、Slack チャネル、および Slack チームの URL ホスト名に、有効な構成パラメーターを使用していることを確認してください。 必要に応じて設定を更新し、**「統合の保存」**をクリックします。
+ 指定した Slack チャネルおよびチームに到達できない場合、Slack カードに `Setup Failed` エラーが表示されます。 `Setup Failed` メッセージの上に移動し、**「再構成 (Reconfigure)」**をクリックしてください。 Slack Web フック URL、Slack チャネル、および Slack チームの URL ホスト名に、有効な構成パラメーターを使用していることを確認してください。 必要に応じて設定を更新し、**「統合の保存」**をクリックします。
+ {: tip}
 
 1. **「Slack」**をクリックします。 構成した Slack チャネルでツールチェーンのアクティビティーをすべて表示できます。
 
@@ -1046,7 +1093,8 @@ SonarQube は、ソース・コードの全体的な正常性と品質の概要�
 1. ツールチェーンから SonarQube カードをクリックしたときに開くようにしたい SonarQube インスタンスの URL を入力します。
 1. オプション: SonarQube サーバーへの接続に使用するユーザー名を入力します。
 
- **ヒント:** ユーザー名の指定が必要なのは、SonarQube サーバーへの接続にパスワードを使用する場合のみです。 接続に認証トークンを使用する場合は、このフィールドを空のままにしてください。
+ ユーザー名の指定が必要なのは、SonarQube サーバーへの接続にパスワードを使用する場合のみです。 接続に認証トークンを使用する場合は、このフィールドを空のままにしてください。
+ {: tip}
 
 1. SonarQube サーバーへの接続に使用するパスワードまたは認証トークンを入力します。
 1. **「統合の作成 (Create Integration)」**をクリックします。
@@ -1055,26 +1103,3 @@ SonarQube は、ソース・コードの全体的な正常性と品質の概要�
 ### SonarQube に関する詳細
 
 SonarQube について詳しくは、IBM Cloud Garage Method の[記事「SonarQube」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window} を参照してください。
-
-
-## UrbanCode Deploy (ベータ版) の追加
-{: #urbancodedeploy}
-
-IBM UrbanCode Deploy は、アプリケーションのデプロイメントを単純化し、自動化します。グラフィカルなフローチャート・ツールを使用して、アプリケーションのデプロイ、アップグレード、ロールバック、アンインストールを行う自動のプロセスを作成します。これらの自動化タスクを使用して、開発環境、テスト環境、実稼働環境などの開発パイプライン内の各ステージにアプリケーションを移行します。
-
-**注:** このツール統合は {{site.data.keyword.Bluemix_notm}} Public でのみ使用可能です。 これは事前構成されているため、構成パラメーターは必要ありません。 このツール統合を再構成することはできません。
-
-アプリケーション、チーム、環境全体のデプロイメントの傾向を表示し、デリバリー・パイプラインのボトルネックを見つけたり、効率の高い領域を見極めたりするには、UrbanCode Deploy ツール統合を追加します。
-
-1. DevOps ダッシュボードから、**「ツールチェーン」**をクリックします。 UrbanCode Deploy を追加するツールチェーンをクリックします。 あるいは、アプリの「概要」ページの「継続的デリバリー」カードで、**「ツールチェーンの表示」**をクリックし、**「概要」**をクリックします。
-
- a. **「ツールの追加 (Add a Tool)」**をクリックします。
-
- b. 「ツール統合 (Tool Integrations)」セクションで、**「UrbanCode Deploy」**をクリックします。
-
-1. **「統合の作成 (Create Integration)」**をクリックします。
-1. ツールチェーンから、**「UrbanCode Deploy」**をクリックします。 UrbanCode Deploy サーバーにあるデータを Delivery Insights で表示するには、DevOps Connect のインスタンスをセットアップし、そのサーバー上にパッチをインストールした後、そのサーバーを DevOps Connect に接続する必要があります。詳しくは、[IBM UrbanCode Deploy サーバーにあるデータの表示](/docs/services/DevOpsInsights/uc_insights_connect_ucd.html){: new_window}を参照してください。
-
-### UrbanCode Deploy に関する詳細
-
-UrbanCode Deploy について詳しくは、IBM Cloud Garage Method の[記事「UrbanCode Deploy」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/deliver/tool_ibm_urbancode_deploy/){: new_window} を参照してください。

@@ -23,7 +23,7 @@ lastupdated: "2018-3-23"
 
 
 
-{{site.data.keyword.contdelivery_full}} は、DevOps プラクティスや業界最高レベルのツールを使用したアプリケーションのビルド、テスト、デリバリーを可能にします。 Continuous Delivery は、さまざまなプラクティスをサポートしていますが、採用すべきなのは、どのプラクティスでしょうか? その答えは状況に応じて異なります。採用すべきプラクティスは、ソフトウェア・デリバリー・プロジェクトごとに異なる可能性があります。[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage){:new_window} は、関与するアプリケーションを迅速にデリバリーするための IBM のアプローチです。 これは、継続的デリバリーを IBM Design Thinking、リーン、DevOps、およびアジャイルのプラクティスと結合します。 これらのプラクティスはクラウドに焦点を当てていますが、あらゆるソフトウェア開発の取り組みに役立つ可能性があります。
+{{site.data.keyword.contdelivery_full}} は、DevOps プラクティスや業界最高レベルのツールを使用したアプリケーションのビルド、テスト、デリバリーを可能にします。 Continuous Delivery は、さまざまなプラクティスをサポートしていますが、採用すべきなのは、どのプラクティスでしょうか? その答えは状況に応じて異なります。 採用すべきプラクティスは、ソフトウェア・デリバリー・プロジェクトごとに異なる可能性があります。  [IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage){:new_window} は、関与するアプリケーションを迅速にデリバリーするための IBM のアプローチです。 これは、継続的デリバリーを IBM Design Thinking、リーン、DevOps、およびアジャイルのプラクティスと結合します。 これらのプラクティスはクラウドに焦点を当てていますが、あらゆるソフトウェア開発の取り組みに役立つ可能性があります。
 
 
 ## 継続的デリバリー・プラクティスの採用
@@ -43,7 +43,7 @@ Cloud Garage Method サイトには、継続的デリバリーの概要を説明
 ## 継続的デリバリーのチュートリアル
 {: #gm_cd_tutorials}
 
-[ 「Develop a Cloud Foundry app」ツールチェーンを使用した初めてのツールチェーンの作成と使用 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン ")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。テンプレートからオープン・ツールチェーンを作成し、そのツールチェーンを使用して「Hello World」アプリの継続的デリバリーを行う方法を学習します。
+[ 「Develop a Cloud Foundry app」ツールチェーンを使用した初めてのツールチェーンの作成と使用 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン ")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。 テンプレートからオープン・ツールチェーンを作成し、そのツールチェーンを使用して「Hello World」アプリの継続的デリバリーを行う方法を学習します。
 
 [Add a toolchain to an app ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}。 オープン・ツールチェーンをアプリに追加し、そのツールチェーンを使用してアプリの継続的デリバリーを行う方法を学習します。
 

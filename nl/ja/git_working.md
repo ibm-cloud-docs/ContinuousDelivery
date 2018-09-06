@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.gitrepos}}
 {: #git_working}
@@ -23,14 +26,16 @@ IBM によってホストされ、[GitLab Community Edition ![外部リンク・
    * Issue Tracker を介して問題を追跡し、アイデアを共有する
    * Wiki システム上にプロジェクトを文書化する
 
-**注:** このツール統合は GitLab Community Edition 上に構築され、IBM によって {{site.data.keyword.Bluemix_notm}} プラットフォーム上でホストされているため、一部の GitLab オプションは使用できません。 例えば、Delivery Pipeline は、{{site.data.keyword.Bluemix_notm}} の継続的統合と継続的デリバリーを提供しているため、GitLab の継続的統合フィーチャーはサポートされません。 さらに、管理機能は、IBM によって管理されているため使用できません。
+このツール統合は GitLab Community Edition 上に構築され、IBM によって {{site.data.keyword.Bluemix_notm}} プラットフォーム上でホストされているため、一部の GitLab オプションは使用できません。 例えば、Delivery Pipeline は、{{site.data.keyword.Bluemix_notm}} の継続的統合と継続的デリバリーを提供しているため、GitLab の継続的統合フィーチャーはサポートされません。 さらに、管理機能は、IBM によって管理されているため使用できません。
+{: tip}
 
 ## {{site.data.keyword.gitrepos}} をローカルに使用する
 {: #git_local}
 
 {{site.data.keyword.gitrepos}} に保管されている Git リポジトリーに、ローカルからアクセスできます。 ローカルで Git をセットアップする手順については、[Start using Git on the command line (コマンド・ラインでの Git の使用の開始) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window} を参照してください。
 
-**ヒント**: {{site.data.keyword.gitrepos}} は、TLS1.2 を使用する HTTPS 接続のみをサポートします。 Eclipse を使用して接続する場合は、通常、使用する Java&trade; バージョンでこのプロトコルを指定する必要があります。そのためには、eclipse.ini ファイルに `-Dhttps.protocols=TLSv1.2` を追加してから Eclipse を再始動します。
+{{site.data.keyword.gitrepos}} は、TLS1.2 を使用する HTTPS 接続のみをサポートします。 Eclipse を使用して接続する場合は、通常、使用する Java&trade; バージョンでこのプロトコルを指定する必要があります。そのためには、eclipse.ini ファイルに `-Dhttps.protocols=TLSv1.2` を追加してから Eclipse を再始動します。
+{: tip}
 
 ## {{site.data.keyword.gitrepos}} での認証
 {: #git_authentication}
@@ -40,7 +45,8 @@ IBM によってホストされ、[GitLab Community Edition ![外部リンク・
 ### 個人用アクセス・トークンの作成
 {: #create_pat}
 
-**重要:** HTTPS 経由で Git リポジトリーの認証を受けるために、個人用アクセス・トークンを作成する必要があります。
+HTTPS 経由で Git リポジトリーの認証を受けるために、個人用アクセス・トークンを作成する必要があります。
+{: tip}
 
 1. {{site.data.keyword.gitrepos}} ユーザー設定ダッシュボードの[「アクセス・トークン」ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window} で、アクセス・トークンを作成するアプリケーションの名前を入力します。 例えば、`「Git CLI」`と入力します。
 1. オプション: アクセス・トークンの有効期限日を選択します。
@@ -68,6 +74,6 @@ SSH 鍵を作成するには、[How to create your SSH Keys ![外部リンク・
 
 [IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage){:new_window} の以下のチュートリアルのいずれかをチェックアウトします。
 
-  * [ 「Develop a Cloud Foundry app」ツールチェーンを使用した初めてのツールチェーンの作成と使用 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン ")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。テンプレートからオープン・ツールチェーンを作成し、そのツールチェーンを使用して「Hello World」アプリの継続的デリバリーを行う方法を学習します。
+  * [ 「Develop a Cloud Foundry app」ツールチェーンを使用した初めてのツールチェーンの作成と使用 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン ")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。 テンプレートからオープン・ツールチェーンを作成し、そのツールチェーンを使用して「Hello World」アプリの継続的デリバリーを行う方法を学習します。
 
   * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。 3 つのマイクロサービスを使用するテンプレートからツールチェーンを作成し、そのツールチェーンを使用してオンライン・ストアの継続的デリバリーを行う方法を説明します。

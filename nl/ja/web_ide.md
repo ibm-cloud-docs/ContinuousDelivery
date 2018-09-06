@@ -2,20 +2,22 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-20"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Eclipse Orion Web IDE での開発
 {: #web_ide}
 
-Eclipse Orion {{site.data.keyword.webide}} は、ブラウザー・ベースの開発環境であり、この開発環境では、コンテンツ・アシスト、コード補完、エラー・チェックによる支援を使用して、JavaScript、HTML、CSS で Web の開発を行うことができます。{{site.data.keyword.webide}} は、ほとんどすべての言語に対応しており、大部分のファイル・タイプに対して構文の強調表示を提供します。 ソース管理が組み込まれており、コードをローカルにデプロイしてアプリのテストとデバッグを行うことができます。
+Eclipse Orion {{site.data.keyword.webide}} は、ブラウザー・ベースの開発環境であり、この開発環境では、コンテンツ・アシスト、コード補完、エラー・チェックによる支援を使用して、JavaScript、HTML、CSS で Web の開発を行うことができます。 {{site.data.keyword.webide}} は、ほとんどすべての言語に対応しており、大部分のファイル・タイプに対して構文の強調表示を提供します。 ソース管理が組み込まれており、コードをローカルにデプロイしてアプリのテストとデバッグを行うことができます。
 {:shortdesc}
 
 何よりも良い点は、{{site.data.keyword.webide}} が Web ベースであるという点です。 インストールが必要なものは何もなく、保守や拡大縮小が必要なものも何もありません。 インターネット接続さえあれば、どこでも開発を行うことができます。
@@ -23,7 +25,7 @@ Eclipse Orion {{site.data.keyword.webide}} は、ブラウザー・ベースの�
 ## IDE のセットアップ
 {: #editorsetup}
 
-{{site.data.keyword.webide}} はカスタマイズ可能であり、開発ニーズに合わせて、カラー・スキーム、テクニカル・ツール、および設定を選択することができます。 これらの設定を表示したり変更したりするには、左側のメニューから、左側のナビゲーション・サイドバー内の**「設定」**アイコン <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="設定アイコン"> をクリックします。
+{{site.data.keyword.webide}} はカスタマイズ可能であり、開発ニーズに合わせて、カラー・スキーム、テクニカル・ツール、および設定を選択することができます。 これらの設定を表示および変更するには、左側のナビゲーション・サイドバーから、**「設定」**アイコン <img class="inline" src="images/webide_settings_icon_light_small.png" alt="設定アイコン"> をクリックします。
 
 編集中にしばしば設定を変更する必要がある場合は、**「ローカル・エディター設定」**アイコン <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="「ローカル・エディター設定」アイコン">から簡単に設定にアクセスできます。
 
@@ -45,7 +47,8 @@ Eclipse Orion {{site.data.keyword.webide}} は、ブラウザー・ベースの�
 
 {{site.data.keyword.webide}} には、2 つの主要セクションがあります。 1 つ目のセクションはファイル・ナビゲーターであり、プロジェクト・ファイルがツリー構造で表示されます。 ファイル・ナビゲーターから、ファイルとフォルダーの作成、名前変更、削除、管理を行うことができます。
 
-**ヒント:** ファイルをファイル・ナビゲーターにアップロードするには、対象のファイルをコンピューターからファイル・ナビゲーターにドラッグします。
+ファイルをファイル・ナビゲーターにアップロードするには、対象のファイルをコンピューターからファイル・ナビゲーターにドラッグします。
+{: tip}
 
 2 つ目のセクションはエディター・ペインです。 このエディターは、コンテンツ・アシストや構文検査など、いくつかのコーディング機能を備えています。
 
@@ -78,7 +81,7 @@ Eclipse Orion {{site.data.keyword.webide}} は、ブラウザー・ベースの�
 1. 「デプロイ」アイコン<img class="inline" src="images/webide_deploy_button_light_small.png"  alt="「デプロイ」アイコン">をクリックします。 ワークスペースの現在の内容と、起動構成に定義された環境を使用して、アプリのインスタンスがデプロイされます。
 2. アプリがデプロイされた後、実行バーを使用して、アプリの停止、再始動、デバッグ、ログの表示などを行うことができます。
 
-<table>
+<table role="presentation">
 <tr><td><img src="./images/stop_button.png"  alt="停止アイコン"></td><td>アプリを停止します</td></tr>
 <tr><td> <img src="./images/open_app_url.png"  alt="アプリ URL を開くアイコン"></td><td> デプロイされたアプリを開きます</td></tr>
 <tr><td><img src="./images/view_logs.png"  alt="ログ表示アイコン"></td><td>デプロイされたアプリのログを表示します</td></tr>
@@ -87,7 +90,7 @@ Eclipse Orion {{site.data.keyword.webide}} は、ブラウザー・ベースの�
 
 Node.js アプリを開発している場合は、ライブ編集モードを有効にします <img  src="./images/enable_live_edit.png"  alt="ライブ編集を有効にするスライダー">。
 
-<table><tr><td><img src="./images/live_edit_restart.png"  alt="ライブ編集再開アイコン"></td><td>ライブ編集モードを有効にして、再デプロイメントなしでアプリを素早く再始動します</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="ライブ編集再開アイコン"></td><td>ライブ編集モードを有効にして、再デプロイメントなしでアプリを素早く再始動します</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="デバッグ・アイコン"></td>
 <td>ライブ編集モードを有効にして、デバッガーにアクセスします
 </td></tr>
@@ -160,7 +163,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 Eclipse Orion {{site.data.keyword.webide}} では、JavaScript、HTML、CSS、Markdown の各ファイルでコンテンツ・アシスト、ツールチップ、プレビュー、妥当性検査、構文強調表示を利用できます。 構文強調表示は、以下のファイル・タイプでも使用できます。
 
-<table>
+<table role="presentation">
 <tr>
 <td>
 <ul><li>Arduino

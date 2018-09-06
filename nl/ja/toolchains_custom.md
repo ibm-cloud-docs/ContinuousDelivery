@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # カスタム・ツールチェーン・テンプレートの作成
@@ -18,7 +20,7 @@ lastupdated: "2018-2-26"
 カスタム・ツールチェーン・テンプレートを作成して DevOps ワークフローを改善します。 既存のツールチェーン・テンプレートを使用してすぐに始めるか、必要な統合のみを組み込んだツールチェーン・テンプレートを作成できます。 ツールチェーンの統合はいつでも追加したり削除したりできます。
 {:shortdesc}
 
-[ツールチェーンを作成](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}するには、いくつかの方法を使用できます。 カスタム・ツールチェーン・テンプレートを作成したら、[「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを作成](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}してこれを共有できます。ツールチェーン・テンプレート SDK の詳細については、[Open Toolchain Templates SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window} を参照してください。ステップバイステップのチュートリアルについては、[Garage Method サイト](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}を参照してください。
+[ツールチェーンを作成](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}するには、いくつかの方法を使用できます。 カスタム・ツールチェーン・テンプレートを作成したら、[「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを作成](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}してこれを共有できます。   ツールチェーン・テンプレート SDK の詳細については、[Open Toolchain Templates SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window} を参照してください。 ステップバイステップのチュートリアルについては、[Garage Method サイト](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}を参照してください。
 
 
 ## 概説
@@ -63,7 +65,7 @@ lastupdated: "2018-2-26"
 
 
 これらの各ファイルについては、以降のセクションで説明します。 各セクションには、ツールチェーンの展開に合わせて確認できる構成情報が含まれます。
-YAML は、JSON の厳密なスーパーセットに、構文的に有意な改行と字下げが追加された、データ・シリアライゼーション言語です。しかし、YAML ではリテラルのタブ文字は一切使用できません。
+YAML は、JSON の厳密なスーパーセットに、構文的に有意な改行と字下げが追加された、データ・シリアライゼーション言語です。 しかし、YAML ではリテラルのタブ文字は一切使用できません。
 
 ## 構成ファイルについて
 {: #toolchains_custom_config_files}
@@ -89,15 +91,15 @@ YAML ファイルのフォーマットに細心の注意を払い、エラーが
 ## サービス・セクションの計画
 各サービス・サブセクションには以下の情報が含まれています。
 
-* name - 現行ファイルのコンテキスト内でのこのサービスの識別に使用されるユーザー生成ストリング。必要に応じて、この名前を使用してサービスにマークを付けることができます。
+* name - 現行ファイルのコンテキスト内でのこのサービスの識別に使用されるユーザー生成ストリング。 必要に応じて、この名前を使用してサービスにマークを付けることができます。
 
-* service_id - サービスを識別する固有のストリング。このストリングの直接のソースは[サービス・カタログ](https://github.com/open-toolchain/sdk/wiki/services.md){: new_window}です。
+* service_id - サービスを識別する固有のストリング。 このストリングの直接のソースは[サービス・カタログ](https://github.com/open-toolchain/sdk/wiki/services.md){: new_window}です。
 
-* parameters - サービスのゼロ個以上の構成パラメーター。これらのパラメーターはサービスによって異なります。ユーザーは、カタログを調べて、特定のサービスにとって必要なパラメーターを確かめる必要があります。
+* parameters - サービスのゼロ個以上の構成パラメーター。 これらのパラメーターはサービスによって異なります。ユーザーは、カタログを調べて、特定のサービスにとって必要なパラメーターを確かめる必要があります。
 
 ### 他のファイルからのテキストの組み込み
 
-ツールチェーンに関するすべての情報を `toolchain.yml` ファイルに組み込むことができます。しかし、`$text` を使用して、ツール統合 UI ごとに別個のファイルを作成することもできます。こうすると、ツールチェーンの保守が容易になり、構成ファイルの編集に費やす時間を最小限に抑えることができます。`toolchain.yml` の以下のサンプル・スニペットは、`pipeline.yml` ファイルの内容を `content` の値として使用する方法を示しています。
+ツールチェーンに関するすべての情報を `toolchain.yml` ファイルに組み込むことができます。  しかし、`$text` を使用して、ツール統合 UI ごとに別個のファイルを作成することもできます。 こうすると、ツールチェーンの保守が容易になり、構成ファイルの編集に費やす時間を最小限に抑えることができます。  `toolchain.yml` の以下のサンプル・スニペットは、`pipeline.yml` ファイルの内容を `content` の値として使用する方法を示しています。
 
 ```
   configuration:
@@ -116,9 +118,9 @@ messages:
   $i18n: messages.yml
 ```
 
-  英語のストリングは `messages.yml` 内にあり、その他の言語は `messages_de.yml` などの言語コードを使用します。言語コードのリストについては、[言語を識別するためのタグ](https://tools.ietf.org/html/rfc5646){: new_window} を参照してください。
+  英語のストリングは `messages.yml` 内にあり、その他の言語は `messages_de.yml` などの言語コードを使用します。   言語コードのリストについては、[言語を識別するためのタグ](https://tools.ietf.org/html/rfc5646){: new_window} を参照してください。
 
-   外部化されたストリングを参照するには、`$ref` を使用してストリングを取り出します。以下に例を示します。
+   外部化されたストリングを参照するには、`$ref` を使用してストリングを取り出します。  以下に例を示します。
 
 ```
   template:
@@ -170,7 +172,7 @@ template
 
 2\. **リポジトリーの定義**
 
- ツールチェーンは、GitHub、GitHub Enterprise、Git Repos and Issue Tracking、GitLab などの任意の数の GitHub リポジトリーに継続的デリバリーを提供できます。`toolchain.yml` ファイルのこのセクションで、各リポジトリーが定義されます。
+ ツールチェーンは、GitHub、GitHub Enterprise、Git Repos and Issue Tracking、GitLab などの任意の数の GitHub リポジトリーに継続的デリバリーを提供できます。 `toolchain.yml` ファイルのこのセクションで、各リポジトリーが定義されます。
 
  ツールチェーンに追加されるリポジトリーそれぞれについて、リポジトリーの名前を表す親キーを次のプロパティーとともに追加します。
 
@@ -185,7 +187,8 @@ template
 | has_issues | プロパティー | <`true`、`false`> | Issue の使用 |
 | enable_traceability | properties |  <`true`、`false`> | コミット、プル要求、参照される問題に対するタグ、ラベル、コメントを作成することによって、コード変更のデプロイメントをトラッキングするかどかを判断します。|
 
- **注意:** 複数のリポジトリーを定義して `has_issues: true` として構成すると、GitHub Issue トラッカーの単一のインスタンスがツールチェーンに追加されます。トラッカーは、`true` に設定されているすべてのリポジトリーの問題をフォローします。
+ 複数のリポジトリーを定義して `has_issues: true` として構成すると、GitHub Issue トラッカーの単一のインスタンスがツールチェーンに追加されます。 トラッカーは、`true` に設定されているすべてのリポジトリーの問題をフォローします。
+ {: tip}
 
  次のスニペットは、このセクションの例を示しています。
 
@@ -253,7 +256,7 @@ template
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
        execute: true
- ```      
+ ```
  {: codeblock}
 
 4\. **デプロイメントの詳細:
@@ -528,7 +531,7 @@ stages:
 
 ## 他のツール構成
 
- ツールチェーンの中核となるコンポーネントを構成したら、ツールチェーンにさらに機能を追加する他のツール統合を組み込むことができます。追加するすべてのツールについて、`toolchain.yml` ファイルに独自のエントリーが必要です。 一部のツールの場合は、`.bluemix` ディレクトリーに個別の YAML 構成ファイルを追加することも必要になります。
+ ツールチェーンの中核となるコンポーネントを構成したら、ツールチェーンにさらに機能を追加する他のツール統合を組み込むことができます。 追加するすべてのツールについて、`toolchain.yml` ファイルに独自のエントリーが必要です。 一部のツールの場合は、`.bluemix` ディレクトリーに個別の YAML 構成ファイルを追加することも必要になります。
 
  ![ツールチェーンの定義に必要なファイル](images/files_for_toolchain_with_additional_tools.png)
 

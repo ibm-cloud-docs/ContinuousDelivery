@@ -15,7 +15,7 @@ lastupdated: "2018-3-26"
 # {{site.data.keyword.contdelivery_short}} のヘルプとサポートの入手    
 {: #cd_support}  
 
-{{site.data.keyword.contdelivery_full}} チームは、developerWorks フォーラムをアクティブに監視して、{{site.data.keyword.contdelivery_short}} のサービスとツールチェーンに関する質問を確認しています。フォーラムで質問するには、ツールチェーン・ページと {{site.data.keyword.contdelivery_short}} ページの下部にある、**「フォーラムでヘルプを利用 (Get help in the forum)」**ボタン ![**フォーラムでヘルプを利用 (Get help in the forum)** ボタン](images/get_help_in_the_forum.png) をクリックします。
+{{site.data.keyword.contdelivery_full}} チームは、developerWorks フォーラムをアクティブに監視して、{{site.data.keyword.contdelivery_short}} のサービスとツールチェーンに関する質問を確認しています。 フォーラムで質問するには、ツールチェーン・ページと {{site.data.keyword.contdelivery_short}} ページの下部にある、**「フォーラムでヘルプを利用 (Get help in the forum)」**ボタン ![**フォーラムでヘルプを利用 (Get help in the forum)** ボタン](images/get_help_in_the_forum.png) をクリックします。
 
 <table>
 <tr>

@@ -2,18 +2,25 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # ツールチェーンの使用
 {: #toolchains-using}
 
 {{site.data.keyword.Bluemix}} の Public 環境と Dedicated 環境で、オープンなツールチェーンが使用可能です。 ツールチェーンを使用して、日々の開発、デプロイメント、運用の作業における生産性を向上させることができます。 ツールチェーンをセットアップした後、ツール統合の追加、削除、構成と、ツールチェーンへのアクセスの管理を行うことができます。
 {: shortdesc}
+
+リソース・グループまたは Cloud Foundry 組織を使用して、米国南部パブリック領域でツールチェーンを管理できます。アクセス制御および許可ユーザー管理は、リソース・グループまたは Cloud Foundry 組織に含まれているかどうかに応じて、ツールチェーンに対して異なる方法で機能します。{: tip}
 
 ## ツール統合の構成
 {: #configuring_a_tool_integration}
@@ -31,7 +38,8 @@ lastupdated: "2018-2-26"
 
   ![構成メニュー](images/toolchain_tile_menu.png)
 
- **ヒント**: 一部のツール統合は事前構成済みであり、構成パラメーターは必要ありません。 ユーザー自身が構成したツール統合についてのみ、構成設定を更新できます。
+ 一部のツール統合は事前構成済みであり、構成パラメーターは必要ありません。 ユーザー自身が構成したツール統合についてのみ、構成設定を更新できます。
+ {: tip}
 
  設定の更新が完了したら、**「統合の保存」**をクリックします。 特定のツール統合の構成について詳しくは、[ツール統合の構成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}を参照してください。
 
@@ -56,12 +64,25 @@ lastupdated: "2018-2-26"
 1. ツールチェーンからツール統合を削除するには、**「削除」**をクリックします。
 1. **「削除」**をクリックして確認します。  
 
-## アクセスの管理
-{: #managing_access}
+## リソース・グループ内のツールチェーンへのアクセスの管理
+{: #managing_access_resource_groups}
+
+Identity and Access Management (IAM) サービスを使用して、ツールチェーンへのユーザー・アクセスを管理できます。IAM を使用したアクセス制御の管理について詳しくは、[Identity and Access Management を使用したツールチェーンへのユーザー・アクセス権限の管理](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}を参照してください。 
+
+{{site.data.keyword.contdelivery_short}} の選択されたインスタンスの許可ユーザー・リストの一部であるユーザーのみが、デリバリー・パイプライン、Eclipse Orion {{site.data.keyword.webide}}、および {{site.data.keyword.contdelivery_short}} ツールチェーンの {{site.data.keyword.gitrepos}} 機能を使用できます。指定されたリソース・グループ内で、{{site.data.keyword.contdelivery_short}} の選択されたインスタンスの「管理」タブから、許可ユーザー・ライセンスを管理できます。
+
+デリバリー・パイプラインなどのツールチェーンの {{site.data.keyword.contdelivery_short}} の主要機能にアクセスするには、ユーザーが IAM 内のツールチェーンにアクセスできる必要があります。また、ユーザーは、{{site.data.keyword.contdelivery_short}} インスタンスの許可ユーザー・リストにも含まれている必要があります。{: tip}
+
+許可ユーザー・ライセンスは、{{site.data.keyword.contdelivery_short}} のインスタンスと同じリソース・グループに含まれているすべてのツールチェーンに適用されます。{: tip}
+
+
+## Cloud Foundry の組織内のツールチェーンへのアクセスの管理
+{: #managing_access_orgs}
 
 ツールチェーンが関連付けられている組織とツールチェーンのアクセス制御リストの両方にユーザーを追加することによって、ツールチェーンへのアクセス権限をユーザーに付与できます。 各ツールチェーンは特定の組織と関連付けられており、その組織のメンバーであるユーザーであればどのユーザーでも、関連付けられたツールチェーンのうちの任意のツールチェーンのアクセス制御リストに追加できます。 現在作業している組織は、メニュー・バーに表示されています。 ツールチェーンの別のセットにアクセスするには、別の組織に切り替えます。
 
-**ヒント:** ツールチェーンがホストされる地域のツールチェーンの組織にユーザーを追加する必要があります。 ツールチェーンは現在米国南部地域でのみホストされているため、米国南部地域の組織にユーザーを追加する必要があります。 異なる地域にアプリをデプロイするようにツールチェーンが構成されている場合でも、アプリは前述の地域にデプロイされます。
+ツールチェーンがホストされる地域のツールチェーンの組織にユーザーを追加する必要があります。 異なる地域にアプリをデプロイするようにツールチェーンが構成されている場合でも、アプリは前述の地域にデプロイされます。
+{: tip}
 
 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} を使用している場合、{{site.data.keyword.Bluemix_notm}} 組織およびスペースにユーザーを追加すると、それらのユーザーは各自の {{site.data.keyword.Bluemix_notm}} ID およびパスワードを使用して {{site.data.keyword.ghe_short}} にログインできます。 ユーザーがログインするときに、ユーザーのためのアカウントが作成されます。 {{site.data.keyword.Bluemix_notm}} 組織およびスペースにユーザーを追加しても、それらのユーザーが {{site.data.keyword.ghe_short}} リポジトリーに自動的に追加されることはありません。 リポジトリーの管理者特権を持つ者がユーザーの追加を行う必要があります。 詳しくは、[Dedicated GitHub Enterprise の使用](/docs/services/ghededicated/index.html){: new_window}を参照してください。 独自の管理版の {{site.data.keyword.ghe_short}} を使用している場合は、内部手順に従ってください。
 
@@ -99,7 +120,8 @@ lastupdated: "2018-2-26"
 
      * 組織内の選択したスペースに関する役割を割り当てます。
 
-     **注:** デフォルトでは、組織の管理者は、組織に関連付けられたすべてのツールチェーンに対して完全な管理特権を持ちます。完全な管理特権をユーザーに付与するには、**「管理者」**役割を選択します。 請求管理者および監査員の役割は、ツールチェーンへのアクセスには影響しません。 後から、「チーム・ディレクトリー」ページで役割を変更できます。 詳しくは、[Cloud Foundry の役割](/docs/iam/cfaccess.html#cfaccess){: new_window}を参照してください。
+     デフォルトでは、組織の管理者は、組織に関連付けられたすべてのツールチェーンに対して完全な管理特権を持ちます。完全な管理特権をユーザーに付与するには、**「管理者」**役割を選択します。 請求管理者および監査員の役割は、ツールチェーンへのアクセスには影響しません。 後から、「チーム・ディレクトリー」ページで役割を変更できます。 詳しくは、[Cloud Foundry の役割](/docs/iam/cfaccess.html#cfaccess){: new_window}を参照してください。
+     {: tip}
 
    ユーザーがチームのメンバーになった後、ツールチェーンの「管理」ページに戻り、ユーザーをツールチェーンに追加します。  
 
@@ -114,7 +136,8 @@ lastupdated: "2018-2-26"
 1. **「削除」**をクリックします。 ツールチェーンを削除すると、そのツールチェーンのツール統合がすべて削除されます。結果として、その統合で管理されていたリソースが削除される可能性があります。
 1. ツールチェーンの名前を入力し、**「削除」**をクリックして、削除を確認します。  
 
- **ヒント**: GitHub、{{site.data.keyword.ghe_short}}、または {{site.data.keyword.gitrepos}} ツール統合を削除するときに、関連付けられているリポジトリーは GitHub、{{site.data.keyword.ghe_short}}、または {{site.data.keyword.gitrepos}} から削除されません。 リポジトリーを手動で削除する必要があります。
+ GitHub、{{site.data.keyword.ghe_short}}、または {{site.data.keyword.gitrepos}} ツール統合を削除するときに、関連付けられているリポジトリーは GitHub、{{site.data.keyword.ghe_short}}、または {{site.data.keyword.gitrepos}} から削除されません。 リポジトリーを手動で削除する必要があります。
+ {: tip}
 
 ##チュートリアルを始める: ツールチェーンの使用
 {: #toolchain-tutorial}

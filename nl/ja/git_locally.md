@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Git ソース管理と連携するようにローカル・クライアントをセットアップする
 {: #git_local}
@@ -32,7 +34,8 @@ GitHub、GitHub Enterprise、または Git Repos and Issue Tracking のリポジ
 | Public GitHub (github.com) | 個人用アクセス・トークンは不要、ただしセットアップして使用することも可能 | GitHub のユーザー名とパスワード、GitHub のユーザー名と個人用アクセス・トークン、またはユーザー名として指定する個人用アクセス・トークンのみ | [GitHub の SSH 鍵の構成](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
 | GitHub Enterprise | [個人用アクセス・トークン](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | GitHub Enterprise のユーザー名 (IBM id ではない) と個人用アクセス・トークン | [GitHub Enterprise の SSH 鍵の構成](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
-**注**: SSH を使用する場合は、すべての Git サーバーで単一の鍵を再利用できます。 前述のリンクで説明されているように、鍵を作成するか見つけ、それを各サーバーで構成します。 鍵をパスフレーズと一緒に作成すると、その鍵の使用時に、このパスフレーズを入力するよう求められます。
+SSH を使用する場合は、すべての Git サーバーで単一の鍵を再利用できます。 前述のリンクで説明されているように、鍵を作成するか見つけ、それを各サーバーで構成します。 鍵をパスフレーズと一緒に作成すると、その鍵の使用時に、このパスフレーズを入力するよう求められます。
+{: tip}
 
 2. Git コマンド・ラインを使用する場合は、以下のようにします。
 
@@ -87,4 +90,4 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} には、Eclipse 環境
 * EAR (エンタープライズ・アーカイブ) ファイル
 * Liberty Profile のパッケージ・サーバー
 
-さらにデプロイメントの一部として、サービスを作成してアプリにリンクしたり、環境変数を定義したりすることもできます。 IBM Eclipse Tools について詳しくは、[IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用したアプリのデプロイ](../../manageapps/eclipsetools/eclipsetools.html)を参照してください。
+さらにデプロイメントの一部として、サービスを作成してアプリにリンクしたり、環境変数を定義したりすることもできます。 IBM Eclipse Tools について詳しくは、[IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用したアプリのデプロイ](/docs/manageapps/eclipsetools/eclipsetools.html)を参照してください。

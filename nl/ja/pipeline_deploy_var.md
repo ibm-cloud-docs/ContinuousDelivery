@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-1-23"
+lastupdated: "2018-8-2"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -11,11 +11,13 @@ lastupdated: "2018-1-23"
     Indentation as per the previous template must be preserved.
 -->
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
-{:tip:.tip}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 環境プロパティーとリソース
 {: #deliverypipeline_environment}
@@ -29,7 +31,7 @@ lastupdated: "2018-1-23"
 * **「テキスト」**: 単一行の値を持つプロパティー・キー。
 * **「テキスト域 (Text Area)」**: 複数行の値を持つプロパティー・キー。
 * **「セキュア (Secure)」**: 単一行の値を持つプロパティー・キー。 値はアスタリスクとして表示されます。
-* **「プロパティー (Properties)」**: プロジェクトのリポジトリーにあるファイル。 このファイルには、複数のプロパティーを含めることができます。 プロパティーはそれぞれ独自の行で指定されている必要があります。 キー値のペアを区切るには、等号 (=) を使用します。
+* **「プロパティー (Properties)」**: プロジェクトのリポジトリーにあるファイル。 このファイルには、複数のプロパティーを含めることができます。 プロパティーはそれぞれ独自の行で指定されている必要があります。 キー値のペアを区切るには、等号 (=) を使用します。 すべてのストリング値を引用符で囲みます。例えば、MY_STRING="SOME STRING VALUE" のようにします。
 
 パイプライン・ジョブの環境プロパティーを調べるには、ジョブのスクリプトで `env` コマンドを実行します。
 {:tip}
@@ -89,7 +91,8 @@ lastupdated: "2018-1-23"
 | MAVEN_HOME | Apache Maven 3.2.1 のパス。 |
 | NODE_HOME | Node.js 0.10.29 のパス。 |
 
-**ヒント**: パイプラインのスクリプトで Apache Ant の 1.10+ バージョンを使用するには、`ANT_HOME` を `$ANT_JAVA8_HOME` に、`JAVA_HOME` を `$JAVA8_HOME` に設定します。
+パイプラインのスクリプトで Apache Ant の 1.10+ バージョンを使用するには、`ANT_HOME` を `$ANT_JAVA8_HOME` に、`JAVA_HOME` を `$JAVA8_HOME` に設定します。
+{: tip}
 
 ### デプロイメント・プロパティー
 
@@ -110,7 +113,8 @@ lastupdated: "2018-1-23"
 
 ### ランタイムとツール
 
-*注意:* すべてのリンクがホーム・ディレクトリー内にあります。
+すべてのリンクがホーム・ディレクトリー内にあります。
+{: tip}
 
 | リソース | リンク名 | パス |
 |----------|-----------|-----------|

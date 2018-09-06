@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-7-19"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -41,10 +41,29 @@ lastupdated: "2018-3-21"
 ## ツールチェーンを作成しようとしたときに、エラーが発生しました。
 {: #cannot_create_toolchain}
 
-ツールチェーンを作成しようとしたときに、以下のエラー・メッセージが表示された場合は、組織のツールチェーンを 1 つ以上削除してから、もう一度ツールチェーンを作成してください。
+組織でツールチェーンを作成しようとしたときに、以下のエラー・メッセージが表示された場合は、組織のツールチェーンを 1 つ以上削除してから、もう一度ツールチェーンを作成してください。
 
 `この組織には、200 個のツールチェーンが含まれています。これは上限です。 別のツールチェーンを追加する前に、この組織から 1 つ以上のツールチェーンを削除してください。`
 
+
+## ツールチェーン・ページで、{{site.data.keyword.contdelivery_short}} サービスの Lite プランを超えたと表示されるのはなぜですか?
+
+{{site.data.keyword.contdelivery_short}} には、Lite と Professional の 2 つのプランがあります。{{site.data.keyword.contdelivery_short}} Lite プランの場合、プランの制限まで無料でツールチェーンを使用できます。このエラー・メッセージは、ユーザーが Lite プランの制限を 1 つ以上超えたことを示します。例えば、{{site.data.keyword.contdelivery_short}} サービス・インスタンスに関連付けられている許可ユーザーが多すぎる場合、または {{site.data.keyword.deliverypipeline}} ジョブの最大数を実行した場合には、プランを超えてしまう可能性があります。プランの条件について詳しくは、 [プランの制限と使用法](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}を参照してください。
+
+
+## ツールチェーンを作成しましたが、ツールチェーン・ページには継続的デリバリー・サービスが必要であると表示されるのはなぜですか?
+
+ツールチェーンと同じリソース・グループまたは組織にある {{site.data.keyword.contdelivery_short}} サービス・インスタンスのプランのご利用条件は、サービスに含まれているツール統合の一部 ({{site.data.keyword.deliverypipeline}}、Eclipse Orion {{site.data.keyword.webide}}、および {{site.data.keyword.gitrepos}}) の使用を管理します。エラー・メッセージは、リソース・グループまたは組織に {{site.data.keyword.contdelivery_short}} サービスの必要なインスタンスが含まれていないことを示しています。プランの条件について詳しくは、 [プランの制限と使用法](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}を参照してください。
+
+
+## Cloud Foundry 組織内にツールチェーンを作成しました。ツールチェーン・ページに継続的デリバリー・サービスが必要であると表示されるのはなぜですか?
+
+{{site.data.keyword.contdelivery_short}} サービスのインスタンスが含まれていないリソース・グループまたは組織内にツールチェーンを作成すると、ツールチェーン・プラットフォームは、Lite プランを使用してサービスのインスタンスを自動的に作成しようとします。エラー・メッセージは、ツールチェーン・プラットフォームがサービス・インスタンスを作成できなかったことを示しています。
+
+このエラーは、米国南部地域や、{{site.data.keyword.contdelivery_short}} のインスタンスがまだ存在しない Cloud Foundry 組織でツールチェーンを作成すると発生することがあります。米国南部地域では、リソース・グループ内に {{site.data.keyword.contdelivery_short}} サービスの新規インスタンスをすべて作成する必要があります。 
+
+リソース・グループにツールチェーンを作成するか、すでに {{site.data.keyword.contdelivery_short}} のインスタンスが存在する組織にツールチェーンを作成することができます。
+  
 
 ## {{site.data.keyword.Bluemix_notm}} にアプリをデプロイしようとしたときに、エラーが発生しました。
 {: #org_outofmemory}

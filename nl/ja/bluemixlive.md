@@ -4,14 +4,17 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
@@ -58,7 +61,8 @@ Live Edit を使用すれば、{{site.data.keyword.Bluemix_notm}} で実行さ�
 
 Web IDE 内でファイルを変更すると、それらのファイルは {{site.data.keyword.Bluemix_notm}} 上のアプリケーション・インスタンスに自動的に再デプロイされます。 Node アプリケーションの再始動が必要な場合は、実行バーにある**「再始動」**ボタンをクリックします。
 
-**注:** {{site.data.keyword.Bluemix_notm}} Live Sync の Live Edit フィーチャーの使用時に、より一貫性のある動作をさせるためには、256 MB の追加メモリーが必要であり、メモリーが追加されます。
+{{site.data.keyword.Bluemix_notm}} Live Sync の Live Edit フィーチャーの使用時に、より一貫性のある動作をさせるためには、256 MB の追加メモリーが必要であり、メモリーが追加されます。
+{: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} Live Debug
 {: #live-debug}
@@ -95,7 +99,8 @@ Debug を使用すると、アプリが {{site.data.keyword.Bluemix_notm}} で�
 
 Debug には、以下の機能が含まれています。  
 * アプリ・コードにブレークポイントを設定して、特定の行で実行を一時停止する。
-  **注:** ブレークポイントはメインプログラムではサポートされませんが、エントリー・ポイントではサポートされます。
+  ブレークポイントはメインプログラムではサポートされませんが、エントリー・ポイントではサポートされます。
+  {: tip}
 * ブレークポイントの条件を編集して、特定の基準が満たされた場合にのみ実行を一時停止する。
 * ローカル変数やフィールドの状態を検査する。
 * `console.log()` 呼び出しからのデバッグ出力を即座に表示する。 cf ログをモニターするより、このアクションの方が迅速です。
@@ -132,7 +137,8 @@ Debug には、以下の機能が含まれています。
 
 アプリをプッシュしてから `https://_app-host.mybluemix.net_/bluemix-debug/manage` をブラウズして、{{site.data.keyword.Bluemix_notm}} Debug のユーザー・インターフェースにアクセスします。 認証するよう求められたら、IBM ID のユーザー名とパスワードか、ワンタイム・パスコードを入力します。    
 
-**注:** Debugger の初期化には 1 分程度かかることがあります。
+Debugger の初期化には 1 分程度かかることがあります。
+{: tip}
 
 ### アプリの構成の復元と {{site.data.keyword.Bluemix_notm}} Live Debug の無効化 {: #restore_live_debug}
 
