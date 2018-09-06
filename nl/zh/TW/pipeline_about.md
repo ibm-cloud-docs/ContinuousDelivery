@@ -2,13 +2,16 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-3-22"
+lastupdated: "2018-8-2"
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Delivery Pipeline 概觀
@@ -17,7 +20,8 @@ lastupdated: "2018-3-22"
 {{site.data.keyword.contdelivery_full}} 包括 Delivery Pipeline，以最少人為介入的可重複方式進行建置、測試及部署。在管線中，階段的序列會擷取輸入並執行工作（例如建置、測試及部署）。
 {:shortdesc}
 
-下列各節說明管線的概念性詳細資料。
+檢視、修改或執行管線的許可權是根據擁有管線的工具鏈的存取控制。如需工具鏈之存取控制的相關資訊，請參閱[管理對資源群組中工具鏈的存取](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}及[管理對 Cloud Foundry 組織中工具鏈的存取](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}。
+{: tip}
 
 ## 階段
 {: #deliverypipeline_stages}
@@ -26,7 +30,8 @@ lastupdated: "2018-3-22"
 
 階段的輸入會傳遞給階段所包含的工作，並且會提供每個工作一個全新的容器以便在其中執行。
 
-**重要事項**：階段中的工作無法將構件傳遞給彼此。因為您無法在階段之間傳遞構件，所以如果部署階段將使用建置階段構件，則需要具有與「部署」階段不同的「建置」階段。
+階段中的工作無法將構件傳遞給彼此。因為您無法在工作之間傳遞構件，所以如果部署階段將使用建置階段構件，則需要具有與「部署」階段不同的「建置」階段。
+{: tip}
 
 您可以定義可在所有工作中使用的階段環境內容。例如，您可能會定義 `TEST_URL` 內容，以傳遞用來在單一階段中部署及測試工作的單一 URL。部署工作會部署至該 URL，測試工作則會測試該 URL 上的執行中應用程式。
 
@@ -73,7 +78,7 @@ lastupdated: "2018-3-22"
 
 簡單類型的建置工作除外，當您配置工作時，可以納入含有建置、測試或部署指令的 UNIX Shell Script。因為工作是在特定容器中執行，所以某個工作的動作無法影響其他工作的執行環境，即使那些工作是相同階段的一部分也是一樣。
 
-在 [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons) 中可以找到範例 bod 及部署 Script。
+在 [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons) 中可以找到範例建置及部署 Script。
 
 此外，管線工作只能以 `sudo` 身分執行下列指令：
   * `/usr/sbin/service`
@@ -90,7 +95,8 @@ lastupdated: "2018-3-22"
 
 執行工作之後，會捨棄為它所建立的容器。工作執行的結果可以持續保存，但其執行環境則否。
 
-**附註：**工作最多可以執行 60 分鐘。工作超出此限制時，即會失敗。如果工作超出此限制，請將它分成多個工作。例如，如果工作執行三個作業，則可能會將它分成三個工作：一個作業一個工作。
+工作最多可以執行 60 分鐘。工作超出此限制時，即會失敗。如果工作超出此限制，請將它分成多個工作。例如，如果工作執行三個作業，則可能會將它分成三個工作：一個作業一個工作。
+{: tip}
 
 若要瞭解如何將工作新增至階段，請參閱[將工作新增至階段](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}。
 
@@ -100,11 +106,12 @@ lastupdated: "2018-3-22"
 
 從建置工作取得輸入的工作，必須參照在它們建立所在之相同結構中的建置構件。例如，如果建置工作會將建置構件保存至 `output` 目錄，則部署所編譯的專案時，部署 Script 會參照 `output` 目錄，而不是專案根目錄。您可以在**建置保存目錄**欄位中輸入目錄名稱，以指定要保存的目錄。將欄位空白，會保存根目錄。
 
-**附註：**如果您使用**簡單**建置器類型，則不會編譯或建置程式碼；會將它包裝並設為供未來階段使用。
+如果您使用**簡單**建置器類型，則不會編譯或建置程式碼；會將它包裝並設為供未來階段使用。
+{: tip}
 
-當您使用 Cloud Foundry 進行部署時，Cloud Foundry 會包括正確的構件來容許應用程式執行。如需相關資訊，請參閱[使用 cf 指令來部署應用程式](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps)。Cloud Foundry 應用程式的管線包含執行 cf 指令的「部署」階段。
+當您使用 Cloud Foundry 進行部署時，Cloud Foundry 會包括正確的構件來容許應用程式執行。如需相關資訊，請參閱[使用 cf 指令來部署應用程式](/docs/cloud-foundry/deploy-apps.html#dep_apps)。Cloud Foundry 應用程式的管線包含執行 cf 指令的「部署」階段。
 
-Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.cloudfoundry.org/buildpacks/detection.html)。您可以在應用程式根資料夾的資訊清單檔中指定要使用的[建置套件](/docs/cfapps/byob.html#using-community-buildpacks)。建置套件一般會檢查使用者提供的構件，來判定下載的相依關係以及如何配置應用程式以與連結服務進行通訊。如需資訊清單檔的相關資訊，請參閱[應用程式資訊清單](/docs/manageapps/depapps.html#appmanifest)。
+Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.cloudfoundry.org/buildpacks/detection.html)。您可以在應用程式根資料夾的資訊清單檔中指定要使用的[建置套件](/docs/cfapps/byob.html#using-community-buildpacks)。建置套件一般會檢查使用者提供的構件，來判定下載的相依關係以及如何配置應用程式以與連結服務進行通訊。如需資訊清單檔的相關資訊，請參閱[應用程式資訊清單](/docs/cloud-foundry/deploy-apps.html#appmanifest)。
 
 ### 部署工作
 
@@ -112,7 +119,7 @@ Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../
 
 部署工作可以部署新的應用程式，或更新現有的應用程式。即使您先使用另一種方法（例如 Cloud Foundry 指令行介面，或 Web IDE 中的執行列）來部署應用程式，還是可以使用部署工作來更新應用程式。若要更新應用程式，請在部署工作中使用該應用程式的名稱。
 
-您可以部署至一或多個地區及服務。例如，您可以設定 {{site.data.keyword.deliverypipeline}} 使用一個以上的服務、在一個地區中測試，以及部署至多個地區進行正式作業。如需相關資訊，請參閱[地區](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}。
+您可以部署至一或多個地區及服務。例如，您可以設定 {{site.data.keyword.deliverypipeline}} 使用一個以上的服務、在一個地區中測試，以及部署至多個地區進行正式作業。如需相關資訊，請參閱[地區](/docs/overview/ibm-cloud.html#ov_intro-reg){: new_window}。
 
 ### 測試工作
 如果您想要要求符合條件，請在建置及部署工作之前或之後包含測試工作。您可以視需要將測試工作自訂成簡單或複雜。例如，您可以發出 cURL 指令，並預期會有特定回應。也可以使用協力廠商測試服務（例如 Sauce Labs）來執行一組單元測試或執行功能測試。
@@ -131,13 +138,13 @@ Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../
 ## 建立及使用構件
 {: #artifacts}
 
-建置工作會自動提取使用者 Script 執行所在之現行資料夾的內容。如果您不需要整個 Git 儲存庫內容就能進行後續部署，則最好配置明確輸出目錄，它們會在該處複製或建立相關構件。工作 Script 是在建置結果（輸出目錄）中執行。
+建置工作會自動提取使用者 Script 執行所在之現行資料夾中的內容。如果您不需要整個 Git 儲存庫內容就能進行後續部署，則最好配置明確輸出目錄，它們會在該處複製或建立相關構件。工作 Script 是在建置結果（輸出目錄）中執行。
 
-部署至 Cloud Foundry 的部署工作需要指定要部署構件的組織及空間。如果需要其他服務才能執行您的應用程式，則需要在 `manifest.yml` 檔案中指定它們。
+部署至 Cloud Foundry 的部署工作需要指定用來執行權限工作之使用者的「平台 API 金鑰」，以及要部署構件的地區、組織及空間。如果需要其他服務才能執行您的應用程式，則需要在 `manifest.yml` 檔案中指定它們。
 
-部署至 IBM Cloud Container Service 再部署至 Kubernetes 叢集的部署工作需要 Dockerfile 以及選擇性地使用 Helm 圖表。  
+部署至 {{site.data.keyword.containerlong_notm}} 以在 Kubernetes 叢集中執行的部署工作，需要指定用來執行權限工作之使用者的「平台 API 金鑰」、Dockerfile 以及選擇性地使用 Helm 圖表。  
 
-在工作登入目標環境之後，會執行工作 Script（因此，您可以執行 Script 中的 `cf push` 或 `kubectl` 指令）。
+工作使用指派給它的「平台 API 金鑰」登入目標環境之後，會執行工作 Script（因此，您可以執行 Script 中的 `cf push` 或 `kubectl` 指令）。
 
 ## 範例管線
 {: #deliverypipeline_example}
@@ -159,7 +166,7 @@ Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../
 ## Cloud Foundry 資訊清單檔
 {: #deliverypipeline_manifest}
 
-資訊清單檔（名為 `manifest.yml` 並儲存在專案的根目錄中）控制如何將專案部署至 {{site.data.keyword.Bluemix_notm}}。如需建立專案資訊清單檔的相關資訊，請參閱[關於應用程式資訊清單的 {{site.data.keyword.Bluemix_notm}} 文件](/docs/manageapps/depapps.html#appmanifest)。若要與 {{site.data.keyword.Bluemix_notm}} 整合，您專案的根目錄中必須要有資訊清單檔。不過，您不需要根據檔案中的資訊來進行部署。
+資訊清單檔（名為 `manifest.yml` 並儲存在專案的根目錄中）控制如何將專案部署至 {{site.data.keyword.Bluemix_notm}}。如需建立專案資訊清單檔的相關資訊，請參閱[關於應用程式資訊清單的 {{site.data.keyword.Bluemix_notm}} 文件](/docs/cloud-foundry/deploy-apps.html#appmanifest)。若要與 {{site.data.keyword.Bluemix_notm}} 整合，您專案的根目錄中必須要有資訊清單檔。不過，您不需要根據檔案中的資訊來進行部署。
 
 在管線中，您可以使用 `cf push` 指令引數來指定資訊清單檔可執行的所有項目。`cf push` 指令引數有助於具有多個部署目標的專案。如果多個部署工作都嘗試使用專案資訊清單檔中所指定的路徑，則會發生衝突。
 

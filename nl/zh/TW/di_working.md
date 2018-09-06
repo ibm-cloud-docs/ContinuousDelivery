@@ -2,15 +2,17 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-3-23"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 使用 {{site.data.keyword.DRA_short}}（測試版）
 {: #di_working}
@@ -18,7 +20,8 @@ lastupdated: "2018-3-23"
 使用 {{site.data.keyword.DRA_full}}，您可以維護及改善您程式碼在 {{site.data.keyword.Bluemix_notm}} 中的品質，方法是在釋出風險之前監視部署來識別風險、分析開發變更的錯誤機率，或改善團隊互動。
 {:shortdesc}
 
-**附註**：{{site.data.keyword.DRA_short}} 只能在美國南部地區使用。
+{{site.data.keyword.DRA_short}} 只能在美國南部地區使用。
+{: tip}
 
 {{site.data.keyword.DRA_short}} 會收集並分析單元測試、功能測試及程式碼涵蓋面工具的結果，來判定您的程式碼是否符合部署程序中所指定閘門的預先定義原則。如果程式碼不符合或超出原則，則會停止部署，以防止釋出風險。您可以使用 {{site.data.keyword.DRA_short}} 作為持續交付環境的安全網，或作為實作並改善品質標準的方法。 
 

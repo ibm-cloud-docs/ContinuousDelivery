@@ -4,14 +4,17 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
@@ -59,7 +62,8 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 
 當您變更 Web IDE 中的檔案時，會自動將其重新部署至 {{site.data.keyword.Bluemix_notm}} 上的應用程式實例。如果您需要重新啟動 Node 應用程式，請按一下執行列中的**重新啟動**按鈕。
 
-**附註：**為了在使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性時達到更一致的體驗，需要且會新增 256 MB 的額外記憶體。
+為了在使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性時達到更一致的體驗，需要且會新增 256 MB 的額外記憶體。
+{: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} 即時除錯
 {: #live-debug}
@@ -95,7 +99,8 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 **限制：**需要使用 Google Chrome 及 Node 4。
 
 「除錯」包括下列功能：  
-* 在應用程式碼中設定岔斷點，以在特定行暫停執行。**附註：**主程式中不支援岔斷點，但進入點中提供支援。
+* 在應用程式碼中設定岔斷點，以在特定行暫停執行。主程式中不支援岔斷點，但進入點中提供支援。
+  {: tip}
 * 編輯岔斷點條件，只在符合特定準則時暫停執行。
 * 檢查區域變數及欄位的狀態。
 * 立即檢視來自 `console.log()` 呼叫的除錯輸出。此動作的速度比監視 cf logs 還要快。
@@ -132,7 +137,8 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 
 推送應用程式，然後瀏覽至 `https://_app-host.mybluemix.net_/bluemix-debug/manage`，以存取 {{site.data.keyword.Bluemix_notm}} 除錯使用者介面。系統提示您進行鑑別時，請輸入 IBM ID 使用者名稱及密碼或一次性密碼。    
 
-**附註：**「除錯器」大約需要一分鐘才能起始設定。
+「除錯器」大約需要一分鐘才能起始設定。
+{: tip}
 
 ### 還原應用程式配置並停用 {{site.data.keyword.Bluemix_notm}} 即時除錯 {: #restore_live_debug}
 

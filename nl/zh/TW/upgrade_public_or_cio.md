@@ -14,7 +14,7 @@ lastupdated: "2018-3-20"
 
 {{site.data.keyword.jazzhub}} 將會逐漸發展成 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.contdelivery_short}}。進行該變更時，會將專案升級至工具鏈。
 
-準備好升級專案時，會在專案的「概觀」頁面上顯示一則訊息。然後，您可以在「{{site.data.keyword.Bluemix_notm}} 公用」將專案升級至工具鏈。工具鏈會包含原始碼的 Whitewater {{site.data.keyword.ghe_short}} 儲存庫。Whitewater {{site.data.keyword.ghe_short}} 提供給 IBM 團隊以便在 IBM 內提倡和啟用社交編碼。
+準備好升級專案時，會在專案的「概觀」頁面上顯示一則訊息。然後，您可以在 {{site.data.keyword.Bluemix_notm}} Public 將專案升級至工具鏈。工具鏈會包含原始碼的 Whitewater {{site.data.keyword.ghe_short}} 儲存庫。Whitewater {{site.data.keyword.ghe_short}} 提供給 IBM 團隊以便在 IBM 內提倡和啟用社交編碼。
 {: shortdesc}
 
 **{{site.data.keyword.contdelivery_short}} 工具鏈搭配 Whitewater {{site.data.keyword.ghe_short}} 使用時，已經過核准用於 IBM 機密資料。**從 Whitewater {{site.data.keyword.ghe_short}} 儲存庫接收輸入的 Delivery Pipelines 可以部署至編譯打包 (YS1) 和公用 (YP) 環境。

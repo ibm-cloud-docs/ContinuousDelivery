@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-4-18"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -23,16 +23,38 @@ lastupdated: "2018-4-18"
  * 操作、觸發（直接在使用者介面中，或間接透過確定至儲存庫）或檢視交付管線狀態的使用者。
  * 與 Eclipse Orion {{site.data.keyword.webide}} 互動的使用者。
  
-### 如何計算使用者數目？
+### 如何計算組織中 {{site.data.keyword.contdelivery_short}} 實例的使用者數目？
 
 查看包含 {{site.data.keyword.contdelivery_short}} 服務之 Cloud 組織中的所有使用者，以計算授權使用者數目。 
 
-若要檢視組織中的使用者清單，請從功能表列中按一下**管理 > 帳戶 > Cloud Foundry 組織**。
+若要檢視 {{site.data.keyword.Bluemix_notm}} Public 環境之組織中的使用者清單，請從功能表列中按一下**管理 > 帳戶 > Cloud Foundry 組織**。
+
+若要檢視 {{site.data.keyword.Bluemix_notm}} Dedicated 環境之組織中的使用者清單，請從功能表列中按一下**帳戶 > 管理組織**。
+
+您也可以檢視帳戶中的所有 {{site.data.keyword.contdelivery_short}} 服務實例，以及對 {{site.data.keyword.Bluemix_notm}} Public 環境中每個實例所報告的使用者數目。
+
+1. 從功能表列中，按一下**管理 > 計費及用量 > 用量**。
+2. 按一下**用量儀表板**。
+3. 從「帳戶」功能表中，按一下 **Cloud Foundry 組織**。
+4. 按一下您要檢視用量資訊的組織。
+
+若要檢視帳戶中的所有 {{site.data.keyword.contdelivery_short}} 服務實例，以及對 {{site.data.keyword.Bluemix_notm}} Dedicated 環境中每個實例所報告的使用者數目：
+
+1. 從功能表列中，按一下**帳戶 > 管理組織**。
+2. 按一下**用量儀表板**。
+
+### 如何計算資源群組中 {{site.data.keyword.contdelivery_short}} 實例的使用者數目？
+
+查看 {{site.data.keyword.contdelivery_short}} 服務實例內「管理」標籤上的使用者清單，以計算授權使用者數目。 
+
+若要檢視授權使用者清單，請開啟服務實例儀表板，然後按一下「管理」標籤。
 
 您也可以檢視帳戶中的所有 {{site.data.keyword.contdelivery_short}} 服務實例，以及對每一個實例所報告的使用者數目。
 
-1. 從功能表列中，按一下**管理 > 帳戶 > Cloud Foundry 組織**。
+1. 從功能表列中，按一下**管理 > 計費及用量 > 用量**。
 2. 按一下**用量儀表板**。
+3. 從「帳戶」功能表中，按一下**資源群組**。
+4. 按一下您要檢視用量資訊的資源群組。
 
 ### 當您超過服務方案的限制時會發生什麼情況？ 
 

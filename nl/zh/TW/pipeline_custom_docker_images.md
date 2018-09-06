@@ -2,14 +2,17 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-4-13"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # 使用自訂 Docker 映像檔
@@ -27,7 +30,8 @@ lastupdated: "2018-4-13"
 
 自訂 Docker 映像檔工作中的 Docker 映像檔名稱，其設計目的是要以映像檔名稱與 Docker CLI 搭配運作的相同方式來運作。Docker 映像檔名稱的格式為：`[repository][:][tag]`。例如，針對 `docker run maven:3.5.3-ibmjava`，Docker 映像檔名稱是 `maven:3.5.3-ibmjava`，其中 `maven` 是儲存庫，而 `3.5.3-ibmjava` 是標籤。您可以使用的 Docker 映像檔名稱沒有限制；任何有效的 Docker 映像檔都會運作。
 
-**提示**：如果 **Docker 映像檔名稱**欄位未完成，則會使用標準管線基礎映像檔。 
+如果 **Docker 映像檔名稱**欄位未完成，則會使用標準管線基礎映像檔。
+{: tip}
 
 依預設，會在 [Docker Hub ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://hub.docker.com/){: new_window} 上搜尋您的儲存庫。如果您使用另一個 Docker 登錄（例如 IBM Cloud Registry），則可以使用完整 DNS 名稱。您也可以在 Docker Hub 上使用映像檔的完整名稱。例如，`registry.hub.docker.com/library/maven:3.5.3-ibmjava`。
 
@@ -53,6 +57,7 @@ Docker 映像檔的 `tag` 是選用項目。依預設，如果您未指定標籤
 
 您可以使用自訂 Docker 映像檔工作中的 **Script** 區塊，以建立作業資料夾中所執行的 Script 檔案，這類似於一般管線工作的運作方式。 
 
-**重要事項**：會置換但不會呼叫 Docker 映像檔之 Dockerfile 中的 `ENTRYPOINT` 及 `CMD`。在某些情況下，可能表示您需要將起始設定步驟新增至 Script。
+會置換但不會呼叫 Docker 映像檔之 Dockerfile 中的 `ENTRYPOINT` 及 `CMD`。在某些情況下，可能表示您需要將起始設定步驟新增至 Script。
+{: tip}
 
 自訂 Docker 映像檔工作可讓您對 Script 的執行方式具有更大的彈性；具體而言，您可以控制指令直譯器。一般而言，如果 Script 第一行的開頭為 `#!` 及指令直譯器名稱，則會使用該項目以在工作中執行指令。如果您未指定指令直譯器，則會使用 Docker 映像檔的預設 Shell。一般而言，會使用 `#!/bin/bash` 或 `#!/bin/sh`；如果您指定適當的 Docker 映像檔，則 `awk`、`node` 及 `ruby` 的映像檔指令直譯器也會運作。

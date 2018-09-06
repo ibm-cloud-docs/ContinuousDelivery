@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-20"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 使用 Eclipse Orion Web IDE 開發
 {: #web_ide}
@@ -23,7 +25,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種瀏覽器型開發環境，�
 ## 設定 IDE
 {: #editorsetup}
 
-{{site.data.keyword.webide}} 可進行自訂，以選擇色系、技術工具，以及符合開發需求的設定。若要檢視及修改設定，請在左側的導覽資訊看板中按一下**設定**圖示 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="設定圖示">。
+{{site.data.keyword.webide}} 可進行自訂，以選擇色系、技術工具，以及符合開發需求的設定。若要檢視及修改設定，請從左邊的導覽資訊看板中，按一下**設定**圖示 <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="「設定」圖示">。
 
 如果您經常需要在編輯時變更特定設定，則可以從**本端編輯器設定**圖示 <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="「本端編輯器設定」圖示"> 快速存取這些設定。
 
@@ -45,7 +47,8 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種瀏覽器型開發環境，�
 
 {{site.data.keyword.webide}} 有兩個主要區段。第一個區段是檔案導覽器，會以樹狀結構顯示專案檔。您可以從檔案導覽器中建立、重新命名、刪除及管理檔案和資料夾。
 
-**提示：**若要將檔案上傳至檔案導覽器，請將它們從您的電腦拖曳至檔案導覽器。
+若要將檔案上傳至檔案導覽器，請將它們從您的電腦拖曳至檔案導覽器。
+{: tip}
 
 第二個區段是編輯器窗格。編輯器提供數個程式碼特性，包括內容輔助及語法驗證。
 
@@ -79,7 +82,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種瀏覽器型開發環境，�
 2. 部署應用程式之後，即可使用執行列來停止、重新啟動或除錯應用程式、檢視日誌，以及執行其他作業。
 
 
-<table>
+<table role="presentation">
 <tr><td><img src="./images/stop_button.png"  alt="停止圖示"></td><td>停止應用程式</td></tr>
 <tr><td> <img src="./images/open_app_url.png"  alt="開啟應用程式 URL 圖示"></td><td> 開啟已部署的應用程式</td></tr>
 <tr><td><img src="./images/view_logs.png"  alt="檢視日誌圖示"></td><td>檢視已部署應用程式的日誌</td></tr>
@@ -88,7 +91,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種瀏覽器型開發環境，�
 
 如果您正在開發 Node.js 應用程式，請啟用「即時編輯」模式：<img  src="./images/enable_live_edit.png"  alt="啟用即時編輯調節器">
 
-<table><tr><td><img src="./images/live_edit_restart.png"  alt="「即時編輯」重新啟動圖示"></td><td>在啟用「即時編輯」模式的情況下，快速重新啟動應用程式，而不重新部署</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="「即時編輯」重新啟動圖示"></td><td>在啟用「即時編輯」模式的情況下，快速重新啟動應用程式，而不重新部署</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="除錯圖示"></td>
 <td>在啟用「即時編輯」模式的情況下，存取除錯器</td></tr>
 </table>
@@ -160,7 +163,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 Eclipse Orion {{site.data.keyword.webide}} 提供 JavaScript、HTML、CSS 及 Markdown 檔案的內容輔助、工具提示、預覽、驗證及語法強調顯示。也支援下列檔案類型的語法強調顯示：
 
-<table>
+<table role="presentation">
 <tr>
 <td>
 <ul><li>Arduino

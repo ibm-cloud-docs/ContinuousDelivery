@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # 建立自訂工具鏈範本
@@ -106,8 +108,7 @@ lastupdated: "2018-2-26"
 
 ### 本地化工具鏈範本
 
-您可以本地化工具鏈，方法是將 `nls` 目錄中的使用者介面字串外部化，以使用者的偏好語言顯示工具鏈中的字串。
-您的 `toolchain.yml` 檔案需要包括 `$i18n` 參照。  
+您可以本地化工具鏈，方法是將 `nls` 目錄中的使用者介面字串外部化，以使用者的偏好語言顯示工具鏈中的字串。您的 `toolchain.yml` 檔案需要包括 `$i18n` 參照。  
 下列範例顯示 `messages.yml` 檔案的 `$i18n` 參照：
 
 ```
@@ -173,19 +174,20 @@ template
 
  對於新增至工具鏈的每一個儲存庫，使用下列內容來新增可代表儲存庫名稱的母項索引鍵：
 
-| 項目 | 索引鍵/內容| 值| 說明|
+|項目 |索引鍵/內容|值|說明|
 |------|--------------|-------|-------------|
-| repo-name | 索引鍵 |  | 儲存庫名稱。此索引鍵符合名稱 (sample-repo) |
-| service_id | 內容 | <`githubpublic`、`githubprivate`、`hostedgit`、`gitlab`> | 儲存庫類型 |
-| parameters: | 索引鍵 |  |  |
-| repo_name | 內容 |  | repo-name 的型樣。下列範例使用工具鏈名稱作為儲存庫名稱 |
-| repo_url | 內容 |  | 儲存庫的 URL |
-| type | 內容 | <`new`、`fork`、`clone`、`link`> | 如何建立新的儲存庫 |
-| has_issues | 內容 | <`true`、`false`> | 使用 Issues |
-| enable_traceability | properties
-|  <`true`、`false`> | 透過建立確定的標記、標籤及註解、取回要求及所參照問題，來判定是否追蹤程式碼變更的部署。|
+|repo-name |索引鍵 |  |儲存庫名稱。此索引鍵符合名稱 (sample-repo) |
+|service_id |內容 |<`githubpublic`、`githubprivate`、`hostedgit`、`gitlab`> |儲存庫類型 |
+|parameters: |索引鍵 |  |  |
+|repo_name |內容 |  |repo-name 的型樣。下列範例使用工具鏈名稱作為儲存庫名稱 |
+|repo_url |內容 |  |儲存庫的 URL |
+|type |內容 |<`new`、`fork`、`clone`、`link`> |如何建立新的儲存庫 |
+|has_issues |內容 |<`true`、`false`> |使用 Issues |
+|enable_traceability |properties
+|<`true`、`false`> |透過建立確定的標記、標籤及註解、取回要求及所參照問題，來判定是否追蹤程式碼變更的部署。|
 
- **附註：**如果您定義多個儲存庫，並將它們配置為 `has_issues: true`，則會將單一 GitHub Issue 追蹤器實例新增至工具鏈。此追蹤器會追蹤所有設為 `true` 的儲存庫的問題。
+ 如果您定義多個儲存庫，並將它們配置為 `has_issues: true`，則會將單一 GitHub Issue 追蹤器實例新增至工具鏈。此追蹤器會追蹤所有設為 `true` 的儲存庫的問題。
+ {: tip}
 
  此 Snippet 顯示這個區段的範例：
 
@@ -209,22 +211,22 @@ template
 
  若要開始，請針對工具鏈中所定義的每一個儲存庫，新增代表其管線名稱的母項索引鍵。請考量從 GitHub 或 Git Repo and Issue Tracking 儲存庫名稱衍生此索引鍵。請新增下列內容：
 
-| 項目 | 索引鍵/內容| 值| 說明|
+|項目 |索引鍵/內容|值|說明|
 |------|--------------|-------|-------------|
-| pipeline-name | 索引鍵 |  | 管線的名稱 (sample-build) |
-| service_id | 內容 | <`pipeline`> | 要使用的服務名稱 |
-| parameters | 索引鍵 |  |  |
-| name | 內容 | <`repo_name`> | 與 repos 區段中所定義的名稱相同 |
-| ui-pipeline | 內容 | <`true`、`false`> |如果此管線所部署的應用程式顯示在工具鏈頁面的**檢視應用程式**功能表中，則為 True |
-| configuration | 索引鍵 |  |  |
-| content | 內容 | <`$ref(pipeline.yml)`> | 可定義管線定義的檔案 |
-| env | 索引鍵 |  |  |
-| SAMPLE_REPO | 索引鍵 | <`repo-name-key`> | 與儲存庫母項索引鍵相同的名稱 |
-| CF_APP_NAME |  內容 | <`'{{form.pipeline.parameters.prod-app-name}}'`> | Cloud Foundry 所使用的名稱。請考量將儲存庫母項索引鍵名稱併入此內容。|
-| PROD_SPACE_NAME | 內容 | <`'{{form.pipeline.parameters.prod-space}}'`> | 要部署至其中的 {{site.data.keyword.Bluemix_notm}} 空間名稱 |
-| PROD_ORG_NAME | 內容 | <`'{{form.pipeline.parameters.prod-organization}}'`> | 要部署至其中的 {{site.data.keyword.Bluemix_notm}} 組織名稱 |
-| PROD_REGION_ID | 內容 | <`'{{form.pipeline.parameters.prod-region}}'`> | 要部署至其中的 {{site.data.keyword.Bluemix_notm}} 地區名稱 |
-| execute | 內容 | <`true`、`false`> | 在建立之後開始管線 |
+|pipeline-name |索引鍵 |  |管線的名稱 (sample-build) |
+|service_id |內容 |<`pipeline`> |要使用的服務名稱 |
+|parameters |索引鍵 |  |  |
+|name |內容 |<`repo_name`> |與 repos 區段中所定義的名稱相同 |
+|ui-pipeline |內容 |<`true`、`false`> |如果此管線所部署的應用程式顯示在工具鏈頁面的**檢視應用程式**功能表中，則為 True |
+|configuration |索引鍵 |  |  |
+|content |內容 |<`$ref(pipeline.yml)`> |可定義管線定義的檔案 |
+|env |索引鍵 |  |  |
+|SAMPLE_REPO |索引鍵 |<`repo-name-key`> |與儲存庫母項索引鍵相同的名稱 |
+|CF_APP_NAME |內容 | <`'{{form.pipeline.parameters.prod-app-name}}'`> |Cloud Foundry 所使用的名稱。請考量將儲存庫母項索引鍵名稱併入此內容。|
+|PROD_SPACE_NAME |內容 | <`'{{form.pipeline.parameters.prod-space}}'`> |要部署至其中的 {{site.data.keyword.Bluemix_notm}} 空間名稱 |
+|PROD_ORG_NAME |內容 | <`'{{form.pipeline.parameters.prod-organization}}'`> |要部署至其中的 {{site.data.keyword.Bluemix_notm}} 組織名稱 |
+|PROD_REGION_ID |內容 | <`'{{form.pipeline.parameters.prod-region}}'`> |要部署至其中的 {{site.data.keyword.Bluemix_notm}} 地區名稱 |
+|execute |內容 |<`true`、`false`> |在建立之後開始管線 |
 
 <!--| services | property | <`repo-name-key`> |  GitHub repository parent key |
 | hidden | property | <`[form, description]`> |  |
@@ -253,7 +255,7 @@ template
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
        execute: true 
-```      
+```
  {: codeblock}
 
 4\. **部署詳細資料：**
@@ -266,16 +268,16 @@ template
 
  若要開始，母索引鍵 `deploy` 可用來識別部署配置內容。下列內容構成本區段的其餘部分：
 
-| 項目 | 索引鍵/內容| 值| 說明|
+|項目 |索引鍵/內容|值|說明|
 |------|--------------|-------|-------------|
-| deploy| 索引鍵 |  | 部署區段的名稱 |
-| schema| 內容 | <`deploy.json`> | 定義用於配置部署詳細資料的使用者介面佈置的檔案|
-| service-category| 內容 | <`pipeline`> | 使用部署配置的服務|
-| parameters | 索引鍵 |  |  |
-| prod-region| 內容 | <`"{{region}}"`> | 定義正式作業階段的 {{site.data.keyword.Bluemix_notm}} 地區|
-| prod-organization| 內容 | <`"{{organization}}"`> | 定義正式作業階段的 {{site.data.keyword.Bluemix_notm}} 組織|
-| prod-space| 內容 | <`prod`> | 定義正式作業階段的 {{site.data.keyword.Bluemix_notm}} 空間|
-| github-repo-name| 內容 | <`"{{repo-name-key.parameters.repo_name}}"`> | 要將 GitHub 儲存庫名稱傳遞給工具鏈建立頁面的變數|
+|deploy|索引鍵 |  |部署區段的名稱 |
+|schema|內容 |<`deploy.json`> |定義用於配置部署詳細資料的使用者介面佈置的檔案|
+|service-category|內容 |<`pipeline`> |使用部署配置的服務|
+|parameters |索引鍵 |  |  |
+|prod-region|內容 | <`"{{region}}"`> |定義正式作業階段的 {{site.data.keyword.Bluemix_notm}} 地區|
+|prod-organization|內容 | <`"{{organization}}"`> |定義正式作業階段的 {{site.data.keyword.Bluemix_notm}} 組織|
+|prod-space|內容 |<`prod`> |定義正式作業階段的 {{site.data.keyword.Bluemix_notm}} 空間|
+|github-repo-name|內容 | <`"{{repo-name-key.parameters.repo_name}}"`> |要將 GitHub 儲存庫名稱傳遞給工具鏈建立頁面的變數|
 
 如需建立 `deploy.json` 檔案的相關資訊，請參閱[本節] (#toolchains_custom_deploy_json)。
 

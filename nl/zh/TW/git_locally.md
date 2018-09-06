@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 設定本端用戶端使用 Git 來源控制
 {: #git_local}
@@ -26,13 +28,14 @@ lastupdated: "2018-3-21"
 
 1. 若要在瀏覽器外部存取 Git 伺服器，您可能需要建立個人存取記號或 SSH 金鑰來進行鑑別。下表顯示設定鑑別所需進行的作業。
 
-| Git 類型  | HTTPS 設定 | HTTPS 使用 |  SSH 設定 |
+|Git 類型  |HTTPS 設定 |HTTPS 使用 |SSH 設定 |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [個人存取記號](/docs/services/ContinuousDelivery/git_working.html#git_authentication) | Git Repos and Issue tracking 使用者名稱（非 IBM ID）及個人存取記號 | [配置 SSH 金鑰](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
-| 公用 GitHub (github.com) | 不需要個人存取記號，但您可以設定並使用它 | GitHub 使用者名稱和密碼，或 GitHub 使用者名稱及「個人存取記號」，或只是以個人存取記號作為使用者名稱 | [配置 GitHub SSH 金鑰](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-| GitHub Enterprise | [個人存取記號](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | GitHub Enterprise 使用者名稱（非 IBM ID）及個人存取記號 | [配置 GitHub Enterprise SSH 金鑰](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
+|Git Repos and Issue Tracking (git.ng.bluemix.com) |[個人存取記號](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |Git Repos and Issue tracking 使用者名稱（非 IBM ID）及個人存取記號 |[配置 SSH 金鑰](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
+| Public GitHub (github.com) |不需要個人存取記號，但您可以設定並使用它 |GitHub 使用者名稱和密碼，或 GitHub 使用者名稱及「個人存取記號」，或只是以個人存取記號作為使用者名稱 |[配置 GitHub SSH 金鑰](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
+|GitHub Enterprise |[個人存取記號](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |GitHub Enterprise 使用者名稱（非 IBM ID）及個人存取記號 |[配置 GitHub Enterprise SSH 金鑰](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
-**附註**：如果您偏好使用 SSH，則可以跨所有 Git 伺服器重複使用單一金鑰。建立或找到金鑰，並在每一部伺服器中進行配置（如先前鏈結所述）。如果您使用通行詞組來建立金鑰，則系統會在您使用金鑰時提示您輸入該通行詞組。
+如果您偏好使用 SSH，則可以跨所有 Git 伺服器重複使用單一金鑰。建立或找到金鑰，並在每一部伺服器中進行配置（如先前鏈結所述）。如果您使用通行詞組來建立金鑰，則系統會在您使用金鑰時提示您輸入該通行詞組。
+{: tip}
 
 2. 如果您要使用 Git 指令行，請執行下列動作：
 
@@ -86,4 +89,4 @@ lastupdated: "2018-3-21"
 * EAR（企業保存）檔案
 * Liberty 設定檔包裝伺服器
 
-您也可以建立服務，並將它們鏈結至應用程式，並在部署期間定義環境變數。如需 IBM Eclipse Tools 的相關資訊，請參閱[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署應用程式](../../manageapps/eclipsetools/eclipsetools.html)。
+您也可以建立服務，並將它們鏈結至應用程式，並在部署期間定義環境變數。如需 IBM Eclipse Tools 的相關資訊，請參閱[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署應用程式](/docs/manageapps/eclipsetools/eclipsetools.html)。

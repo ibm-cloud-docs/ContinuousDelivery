@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-7-19"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -27,7 +27,7 @@ lastupdated: "2018-3-21"
 如果您要在建立工具鏈時配置 GitHub 工具整合，請遵循下列步驟以使用 GitHub 進行授權：
 
   1. 在「可配置的整合」區段中，按一下 **GitHub**。
-  1. 如果您要在「{{site.data.keyword.Bluemix_notm}} 公用」上建立工具鏈，但未授權 {{site.data.keyword.Bluemix_notm}} 存取 GitHub，請按一下**授權**來移至 GitHub 網站。
+  1. 如果您要在 {{site.data.keyword.Bluemix_notm}} Public 上建立工具鏈，但未授權 {{site.data.keyword.Bluemix_notm}} 存取 GitHub，請按一下**授權**來移至 GitHub 網站。
   1. 如果您沒有作用中的 GitHub 階段作業，則系統會提示您登入。按一下**授權應用程式**，以容許 {{site.data.keyword.Bluemix_notm}} 存取 GitHub 帳戶。
 
 如果您已有工具鏈，請更新 GitHub 工具整合的配置：
@@ -41,10 +41,29 @@ lastupdated: "2018-3-21"
 ## 我嘗試建立工具鏈，但為什麼會收到錯誤？
 {: #cannot_create_toolchain}
 
-嘗試建立工具鏈時，如果您收到下列錯誤訊息，請從組織中移除一個以上的工具鏈，然後重新建立工具鏈。
+嘗試在組織中建立工具鏈時，如果您收到下列錯誤訊息，請從組織中移除一個以上的工具鏈，然後重新建立工具鏈。
 
 `This organization contains 200 toolchains, which is the maximum limit. Before you can add another toolchain, remove one or more toolchains from the organization.`
 
+
+## 「工具鏈」頁面為什麼顯示必須要有 {{site.data.keyword.contdelivery_short}} 服務精簡方案？
+
+{{site.data.keyword.contdelivery_short}} 提供兩種方案：「精簡」及「專業」。如果您有「{{site.data.keyword.contdelivery_short}} 精簡」方案，則可以免費使用工具鏈，最多為方案的限制。錯誤訊息指出您已超出「精簡」方案的一個以上限制。例如，如果您有太多授權使用者與 {{site.data.keyword.contdelivery_short}} 服務實例相關聯，或已執行 {{site.data.keyword.deliverypipeline}} 工作數目上限，則可能會超過方案。如需方案條款的相關資訊，請參閱[方案限制及用量](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}。
+
+
+## 我已建立工具鏈，「工具鏈」頁面為什麼顯示需要 Continuous Delivery 服務？
+
+位在與工具鏈相同之資源群組或組織中的 {{site.data.keyword.contdelivery_short}} 服務實例方案條款，可管理如何使用服務中所含的一些工具整合（{{site.data.keyword.deliverypipeline}}、Eclipse Orion {{site.data.keyword.webide}} 及 {{site.data.keyword.gitrepos}}）。錯誤訊息指出資源群組或組織未包含必要的 {{site.data.keyword.contdelivery_short}} 服務實例。如需方案條款的相關資訊，請參閱[方案限制及用量](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}。
+
+
+## 我已在 Cloud Foundry 組織中建立工具鏈，「工具鏈」頁面為什麼顯示需要 Continuous Delivery 服務？
+
+當您在資源群組或組織中建立沒有 {{site.data.keyword.contdelivery_short}} 服務實例的工具鏈時，工具鏈平台會使用「精簡」方案來嘗試自動建立服務實例。錯誤訊息指出工具鏈平台無法建立服務實例。
+
+當您在美國南部地區以及還沒有 {{site.data.keyword.contdelivery_short}} 實例的 Cloud Foundry 組織中建立工具鏈時，可能發生此錯誤。在美國南部地區中，您必須在資源群組中建立所有新的 {{site.data.keyword.contdelivery_short}} 服務實例。 
+
+您可以在資源群組中建立工具鏈，或在組織中建立已有 {{site.data.keyword.contdelivery_short}} 實例的工具鏈。
+  
 
 ## 我嘗試將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，但為什麼會收到錯誤？
 {: #org_outofmemory}

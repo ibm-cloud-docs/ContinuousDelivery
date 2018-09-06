@@ -2,12 +2,17 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-4-13"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 在 Continuous Delivery 中管理個人資料
 {: #cd_personal_data}
@@ -24,14 +29,17 @@ lastupdated: "2018-4-13"
  * [IBM Cloud 上的 GitHub Enterprise ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ghededicated/ghe_personal_data.html){: new_window}
  * [{{site.data.keyword.DRA_full}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
-{{site.data.keyword.contdelivery_short}} 提供管理 Cloud Foundry 組織內資料的適當許可權。您公司的原則可能會限制這些許可權。如果您沒有適當的許可權，請聯絡組織的管理者。
+IBM 不會管理 {{site.data.keyword.contdelivery_short}} 服務中的資料。在您離開 {{site.data.keyword.Bluemix_notm}} Public 中所管理的 {{site.data.keyword.contdelivery_short}} 服務之前，必須刪除您自己的資料。
+{: tip}
+
+{{site.data.keyword.contdelivery_short}} 提供管理資源群組或 Cloud Foundry 組織內資料的適當許可權。您公司的原則可能會限制這些許可權。如果您沒有適當的許可權，請聯絡 {{site.data.keyword.Bluemix_notm}} 帳戶的管理者。
 
 若要管理個人資料，您必須瞭解 IBM Cloud 帳戶、這些帳戶的使用方式，以及其相關聯的存取權。
  
 ## 帳戶及存取權
 {: #accounts_access_rights}
 
-若要在 IBM Cloud 中工作，您必須以使用者名稱及密碼登入。當您登入時，IBM Cloud 會至少關聯一個 IBM Cloud 帳戶與您的使用者認證。當您建立資源（例如 Cloud Foundry 組織及 {{site.data.keyword.contdelivery_short}} 物件）時，它們會與 IBM Cloud 帳戶相關聯。
+若要在 IBM Cloud 中工作，您必須以使用者名稱及密碼登入。當您登入時，IBM Cloud 會至少關聯一個 IBM Cloud 帳戶與您的使用者認證。當您建立資源（例如 Cloud Foundry 組織、資源群組、工具鏈及 {{site.data.keyword.contdelivery_short}} 物件）時，它們會與 IBM Cloud 帳戶相關聯。
 
 IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cloud 使用者介面，您可以將某個帳戶切換為另一個帳戶。當您登入時，下列任何類型的帳戶都可能會與您的使用者認證相關聯： 
 
@@ -82,14 +90,16 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 
 如果您無法登入 IBM Cloud 帳戶，請與您的公司聯絡，並與他們合作來刪除您的個人資料。
 
-**重要事項**：如果您要從 {{site.data.keyword.contdelivery_short}} 中刪除您的所有個人資料，則刪除該資料的順序十分重要。首先，請刪除所有 {{site.data.keyword.webide}} 工作區。接下來，刪除 {{site.data.keyword.gitrepos}} 資料，然後刪除 {{site.data.keyword.gitrepos}} 帳戶。最後，刪除交付管線、工具整合及工具鏈。
+如果您要從 {{site.data.keyword.contdelivery_short}} 中刪除您的所有個人資料，則刪除該資料的順序十分重要。首先，請刪除所有 {{site.data.keyword.webide}} 工作區。接下來，刪除 {{site.data.keyword.gitrepos}} 資料，然後刪除 {{site.data.keyword.gitrepos}} 帳戶。最後，刪除交付管線、工具整合及工具鏈。
+{: tip}
 
 ## 匯出及刪除 Web IDE 資料
 {: #managing_web_ide_data}
 
 {{site.data.keyword.webide}} 提供雲端中的個人工作區。您可以使用 {{site.data.keyword.webide}} 來複製 Git 儲存庫以及編輯檔案。您會擁有您的 {{site.data.keyword.webide}} 工作區；任何其他帳戶都不會共用它。
 
-**提示**：在您刪除 {{site.data.keyword.webide}} 資料之前，可能會想要匯出工作。在您刪除工作區之後，就會從 {{site.data.keyword.contdelivery_short}} 中移除它們，並刪除所有檔案。
+在您刪除 {{site.data.keyword.webide}} 資料之前，可能會想要匯出工作。在您刪除工作區之後，就會從 {{site.data.keyword.contdelivery_short}} 中移除它們，並刪除所有檔案。
+{: tip}
 
 ###匯出 Web IDE 工作區
 
@@ -107,7 +117,8 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 1. 按一下**使用者設定檔**。
 1. 按一下**刪除**，以移除 {{site.data.keyword.webide}} 中的所有資料。
 
-**重要事項**：{{site.data.keyword.webide}} 使用單一登入機制。第一次存取此工具整合時，會為 IBM Cloud 帳戶建立對應但隱藏的 {{site.data.keyword.webide}} 帳戶。刪除您的所有工作區之後，請不要存取 {{site.data.keyword.webide}}。如果您再次存取 {{site.data.keyword.webide}}，則會自動建立您必須刪除的新帳戶。
+{{site.data.keyword.webide}} 使用單一登入機制。第一次存取此工具整合時，會為 IBM Cloud 帳戶建立對應但隱藏的 {{site.data.keyword.webide}} 帳戶。刪除您的所有工作區之後，請不要存取 {{site.data.keyword.webide}}。如果您再次存取 {{site.data.keyword.webide}}，則會自動建立您必須刪除的新帳戶。
+{: tip}
 
 ## 修改、匯出及刪除 Git Repos and Issue Tracking 資料
 {: #managing_grit_data}
@@ -118,7 +129,8 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 
 您的帳戶設定檔與設定、個人專案、群組和 Snippet 都會與 Git 帳戶相關聯。如果您刪除 Git 帳戶，將會刪除這些物件。若要刪除另一個專案中的個人資料，請導覽至專案，然後修改它來移除個人資料，或刪除整個專案。請確定您先與其他團隊成員合作，再刪除共用專案。
 
-**重要事項**：在您刪除 Git 帳戶之前，請刪除其他專案中的個人資料。在您刪除 Git 帳戶之後，可能很難或無法找到您參與的所有專案。
+在您刪除 Git 帳戶之前，請刪除其他專案中的個人資料。在您刪除 Git 帳戶之後，可能很難或無法找到您參與的所有專案。
+{: tip}
 
 ###個人及共用專案
 
@@ -142,24 +154,27 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 1. 在「{{site.data.keyword.gitrepos}} 使用者設定」儀表板之[帳戶頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window} 的「刪除帳戶」區段中，按一下**刪除帳戶**。
 1. 即會刪除所有 Git 專案（包括儲存庫及問題）。也會從您所屬的任何 {{site.data.keyword.gitrepos}} 群組中將您移除。
 
-**提示**：在刪除您的帳戶之後，會保留部分內容。此內容會指派給系統層面的「Ghost 使用者」。如需刪除 {{site.data.keyword.gitrepos}} 帳戶的相關資訊，請參閱[刪除使用者帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}。
+在刪除您的帳戶之後，會保留部分內容。此內容會指派給系統層面的「Ghost 使用者」。如需刪除 {{site.data.keyword.gitrepos}} 帳戶的相關資訊，請參閱[刪除使用者帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}。
+{: tip}
 
-**重要事項**：{{site.data.keyword.gitrepos}} 使用單一登入機制，以在您第一次存取工具整合時自動建立 IBM Cloud 帳戶的對應 Git 帳戶。在您刪除帳戶之後，請不要存取 {{site.data.keyword.gitrepos}}。如果您再次存取 {{site.data.keyword.gitrepos}}，則會自動建立您必須刪除的新帳戶。
+{{site.data.keyword.gitrepos}} 使用單一登入機制，以在您第一次存取工具整合時自動建立 IBM Cloud 帳戶的對應 Git 帳戶。在您刪除帳戶之後，請不要存取 {{site.data.keyword.gitrepos}}。如果您再次存取 {{site.data.keyword.gitrepos}}，則會自動建立您必須刪除的新帳戶。
+{: tip}
 
-## 修改及刪除 Continuous Delivery 管線資料
+## 修改、匯出及刪除 Continuous Delivery 管線資料
 {: #managing_pipeline_data}
 
 {{site.data.keyword.contdelivery_short}} 管線會執行 Script，以對 IBM Cloud 建置、測試及部署應用程式。為了這麼做，管線提供階段、工作、環境變數，以及可能包含個人資料的其他物件。您可以個別刪除這些物件，也可以刪除整個管線。
 
 請確定您先與其他團隊成員合作，再刪除共用物件或管線。刪除階段可能會導致管線失敗。
 
-**提示**：管線不能存在於工具鏈外部。如果您刪除工具鏈，則會一併刪除與工具鏈相關聯的所有管線。如果您要刪除整個工具鏈，則不需要個別刪除每一個管線。相反地，請跳到「修改及刪除工具鏈和工具整合」小節，並遵循刪除工具鏈的步驟。
+管線不能存在於工具鏈外部。如果您刪除工具鏈，則會一併刪除與工具鏈相關聯的所有管線。如果您要刪除整個工具鏈，則不需要個別刪除每一個管線。相反地，請跳到「修改及刪除工具鏈和工具整合」小節，並遵循刪除工具鏈的步驟。
+{: tip}
 
-###修改及刪除管線階段
-
-管線階段可能包括個人資料（例如環境內容形式的認證）。階段也可能會包括工作內您要修改或刪除的 Script。使用「配置階段」或「刪除階段」動作，即可修改或刪除階段。
+管線階段可能包括個人資料（例如環境內容形式的認證），以及顯示管線現行狀態的管線定義。階段也可能會包括工作內您要修改或刪除的 Script，以及您要匯出之最新管線執行的構件及日誌。使用「配置階段」或「刪除階段」動作，即可修改或刪除階段。使用「下載」動作，以從階段中匯出構件或日誌。
 
   ![「階段」功能表](images/pipeline_stages.png)
+
+###修改管線階段
 
 若要修改管線階段，請執行下列動作：
 
@@ -172,24 +187,26 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
   
 1. 從管線階段中刪除工作。在**工作**標籤上，選取您要刪除的工作，然後按一下**移除**。
  
+###匯出管線階段
+
+若要匯出管線階段的定義，請將 `/yaml` 附加至管線 URL 後面：
+
+`http(s)://<DevOps Services domain>/pipeline/user/project/yaml`
+
+
+若要匯出管線階段的構件及日誌，請執行下列動作：
+
+1. 在「管線」頁面上，按一下**檢視日誌及歷程**。
+1. 按一下您要匯出構件及日誌的建置號碼。
+1. 按一下**下載** > **構件**，以匯出所選取建置的構件。
+1. 按一下**下載** > **日誌**，以匯出所選取建置的日誌。  
+
+###刪除管線階段
+
 若要刪除管線階段，請執行下列動作：
 
 1. 在「管線」頁面上，按一下**設定**圖示。
 1. 按一下**刪除階段**。
-
-###變更管線所有權
-
-您可以將您所擁有管線的所有權轉移給另一位使用者；新的擁有者必須執行轉移作業。使用者可以取得現有管線的所有權，但無法將所有權指派給另一位使用者。您必須具有 ADMIN 權限，才能取得管線的所有權。
-
-若要取得管線的所有權，使用者必須完成下列步驟：
-
-1. 登入 IBM Cloud。
-1. 按一下功能表以存取配置選項。 
-
-  ![「配置」功能表](images/pipeline_ownership.png)
-
-1. 按一下**修改管線擁有者**。 
-1. 選取**讓我成為擁有者**。
 
 ## 修改及刪除工具鏈和工具整合
 {: #managing_toolchains}
@@ -219,7 +236,6 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 1. 若要從工具鏈中刪除工具整合，請按一下**刪除**。
 1. 按一下**刪除**來進行確認。
 
-
 ###刪除工具鏈
 
 當您刪除工具鏈時，無法復原刪除。
@@ -229,8 +245,12 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 1. 按一下**刪除**。刪除工具鏈會移除其所有工具整合（包括管線），這樣可能會刪除那些整合所管理的資源。
 1. 鍵入工具鏈名稱，然後按一下**刪除**，來確認刪除。 
 
+當您刪除工具鏈時，不會刪除相關聯的 {{site.data.keyword.gitrepos}} 儲存庫。如果可存取這些儲存庫的使用者已執行 `git clone` 或建立 {{site.data.keyword.webide}} 工作區，則可能會有資料的副本。若要確定已刪除所有資料，您必須要求這些使用者刪除其資料副本。
+{: tip}
+
 ###刪除所有工具鏈
 
-您無法同時刪除組織內的所有工具鏈。您必須逐一刪除每一個工具鏈。
+您無法同時刪除資源群組或組織內的所有工具鏈。您必須逐一刪除每一個工具鏈。
 
-**重要事項**：工具鏈是以 IBM Cloud 地區及 Cloud Foundry 組織限定範圍。請確定您選取每一個地區及該地區內的組織，以刪除您建立的每一個工具鏈。
+工具鏈是以 IBM Cloud 地區及資源群組或 Cloud Foundry 組織限定範圍。請確定您選取每個地區及該地區內的資源群組或組織，以刪除您建立的每個工具鏈。
+{: tip}

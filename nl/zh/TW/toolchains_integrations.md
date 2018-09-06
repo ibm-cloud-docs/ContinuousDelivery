@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-17"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}    
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}   
 
 # 配置工具整合
 {: #integrations}
@@ -17,9 +20,9 @@ lastupdated: "2018-3-21"
 您可以在建立開放式工具鏈時配置可支援開發、部署及操作作業的工具整合，也可以新增及配置用來自訂現有工具鏈的工具整合。  
 {:shortdesc}
 
-可用來新增及配置工具鏈的工具整合，會視您是在「{{site.data.keyword.Bluemix_notm}} 公用」還是在「{{site.data.keyword.Bluemix_notm}} 專用」上使用工具鏈而改變。如果您在「{{site.data.keyword.Bluemix_notm}} 公用」上使用工具鏈，則可供您使用的工具整合取決於工具鏈的地區以及該地區中工具整合的可用性。如果您在「{{site.data.keyword.Bluemix_notm}} 專用」上使用工具鏈，則可供您使用的工具整合取決於 {{site.data.keyword.contdelivery_full}} 在特定環境上的設定方式。
+可用來新增及配置工具鏈的工具整合，會視您是在 {{site.data.keyword.Bluemix_notm}} Public 還是在 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用工具鏈而改變。如果您在 {{site.data.keyword.Bluemix_notm}} Public 上使用工具鏈，則可供您使用的工具整合取決於工具鏈的地區以及該地區中工具整合的可用性。如果您在 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用工具鏈，則可供您使用的工具整合取決於 {{site.data.keyword.contdelivery_full}} 在特定環境上的設定方式。
 
-|工具整合|可用於 {{site.data.keyword.Bluemix_notm}} 公用|可用於 {{site.data.keyword.Bluemix_notm}} 專用（環境相依）|
+|工具整合|可用於 {{site.data.keyword.Bluemix_notm}} Public|可用於 {{site.data.keyword.Bluemix_notm}} Dedicated（環境相依）|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.alertnotificationshort}}		|美國南部		|否		|
 |Artifactory		|美國南部、德國、英國		|是		|
@@ -31,7 +34,7 @@ lastupdated: "2018-3-21"
 |Eclipse Orion {{site.data.keyword.webide}}		|美國南部、德國、英國		|是			|
 |{{site.data.keyword.gitrepos}}	|美國南部、德國、英國		|否		|
 |GitHub		|美國南部、德國、英國		|是		|
-|專用 {{site.data.keyword.ghe_short}} 及 Issues|否		|是		|
+|Dedicated {{site.data.keyword.ghe_short}} 及 Issues|否		|是		|
 |GitLab		|美國南部、德國、英國		|否		|
 |Jenkins		|美國南部、德國、英國		|是		|
 |JIRA		|美國南部、德國、英國		|是		|
@@ -42,10 +45,10 @@ lastupdated: "2018-3-21"
 |Sauce Labs		|美國南部、德國、英國		|否		|
 |Slack			|美國南部、德國、英國		|是		|
 |SonarQube			|美國南部、德國、英國		|是		|
-|UrbanCode Deploy			|美國南部		|否		|
-{: caption="表 1.「{{site.data.keyword.Bluemix_notm}} 公用」及「專用」上工具鏈可用的工具整合" caption-side="top"}
+{: caption="表 1. {{site.data.keyword.Bluemix_notm}} Public 及 Dedicated 上工具鏈可用的工具整合" caption-side="top"}
 
-**提示：**如果您要在「{{site.data.keyword.Bluemix_notm}} 公用」上開始使用原始碼進行開發，請先配置 GitHub 工具整合或 {{site.data.keyword.gitrepos}} 工具整合，再配置 {{site.data.keyword.deliverypipeline}}。如果您要在「{{site.data.keyword.Bluemix_notm}} 專用」上開始使用程式碼進行開發，請先配置 {{site.data.keyword.ghe_short}} 工具整合或 GitHub 工作整合，再配置 {{site.data.keyword.deliverypipeline}}。
+如果您要在 {{site.data.keyword.Bluemix_notm}} Public 上開始使用原始碼進行開發，請先配置 GitHub 工具整合或 {{site.data.keyword.gitrepos}} 工具整合，再配置 {{site.data.keyword.deliverypipeline}}。如果您要在 {{site.data.keyword.Bluemix_notm}} Dedicated 上開始使用程式碼進行開發，請先配置 {{site.data.keyword.ghe_short}} 工具整合或 GitHub 工作整合，再配置 {{site.data.keyword.deliverypipeline}}。
+{: tip}
 
 
 ## 配置 Alert Notification
@@ -131,8 +134,8 @@ lastupdated: "2018-3-21"
 
 1. 按一下**建立整合**。
 1. 按一下您要使用的 Artifactory 儲存庫卡片。即會開啟 Artifactory 網站，您可以在其中檢視儲存庫的內容。
-1. 選用項目：如果您是在「{{site.data.keyword.Bluemix_notm}} 公用」上使用工具鏈，並且想要透過搭配使用 Artifactory 與 npm 來建置應用程式，請配置管線來新增 npm 建置工作。如需配置建置工作的指示，請參閱[在管線中配置 Artifactory npm 建置工作](#config_artifactory_npm)一節。
-1. 選用項目：如果您是在「{{site.data.keyword.Bluemix_notm}} 公用」上使用工具鏈，並且想要透過搭配使用 Artifactory 與 Maven 來建置應用程式，請配置管線來新增 Maven 建置工作。如需配置建置工作的指示，請參閱[在管線中配置 Artifactory Maven 建置工作](#config_artifactory_maven)一節。
+1. 選用項目：如果您是在 {{site.data.keyword.Bluemix_notm}} Public 上使用工具鏈，並且想要透過搭配使用 Artifactory 與 npm 來建置應用程式，請配置管線來新增 npm 建置工作。如需配置建置工作的指示，請參閱[在管線中配置 Artifactory npm 建置工作](#config_artifactory_npm)一節。
+1. 選用項目：如果您是在 {{site.data.keyword.Bluemix_notm}} Public 上使用工具鏈，並且想要透過搭配使用 Artifactory 與 Maven 來建置應用程式，請配置管線來新增 Maven 建置工作。如需配置建置工作的指示，請參閱[在管線中配置 Artifactory Maven 建置工作](#config_artifactory_maven)一節。
 
 ### 在管線中配置 Artifactory npm 建置工作
 {: #config_artifactory_npm}
@@ -157,9 +160,8 @@ lastupdated: "2018-3-21"
      # or
      npm publish --registry "${NPM_RELEASE_URL}"
      ```
-  **提示：**您可以在 Artifactory 工具整合的配置設定中，找到用來連接至登錄的 URL 及使用者認證。
-
-
+  您可以在 Artifactory 工具整合的配置設定中，找到用來連接至登錄的 URL 及使用者認證。
+  {: tip}
 
   e. 如果您的建置工作發佈至 Artifactory 登錄，而且 Node 模組版本的格式為 `x.y.z-SNAPSHOT.w`，請選取**增加 Snapshot 模組版本**勾選框。建置工作會自動更新模組版本，然後才將工作發佈至 Artifactory 登錄。工作會從 npm 登錄及本端 `package.json` 檔案中選取最高版本的模組，並使用 semver 來增加模組版本。建置工作不會將變更遞送至 SCM 儲存庫。
 
@@ -188,9 +190,8 @@ lastupdated: "2018-3-21"
      # or
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  **提示：**您可以在 Artifactory 工具整合的配置設定中，找到用來連接至登錄的 URL 及使用者認證。
-
-
+  您可以在 Artifactory 工具整合的配置設定中，找到用來連接至登錄的 URL 及使用者認證。
+  {: tip}
 
 1. 按一下**儲存**。只要管線執行，此建置工作就會使用 Artifactory 工具整合中的配置資訊來連接至 Maven 儲存庫。
 
@@ -204,7 +205,8 @@ lastupdated: "2018-3-21"
 
 {{site.data.keyword.prf_hublong}} 可在影響使用者之前隔離問題、識別型樣，以及改善效能。您可以從世界各地測試應用程式、與各交付管線整合，以及瞭解如何持續最佳化程式碼。
 
-**附註：**這是預先配置的工具整合，且不需要任何配置參數。您無法重新配置此工具整合。
+這是預先配置的工具整合，且不需要任何配置參數。您無法重新配置此工具整合。
+{: tip}
 
 若要在建置應用程式時測試、監視及改善應用程式的性能，請新增 {{site.data.keyword.prf_hubshort}} 工具整合：
 
@@ -237,7 +239,24 @@ lastupdated: "2018-3-21"
 
  b. 在「工具整合」區段中，按一下 **Bitbucket**。
 
-   **提示：**如果您要在「{{site.data.keyword.Bluemix_notm}} 公用」上配置此工具整合，但未授權 {{site.data.keyword.Bluemix_notm}} 存取 Bitbucket，請按一下**授權**來移至 Bitbucket 網站。如果您沒有作用中的 Bitbucket 階段作業，則系統會提示您登入。按一下**授權應用程式**，以容許 {{site.data.keyword.Bluemix_notm}} 存取 Bitbucket 帳戶。如果您有作用中的 Bitbucket 階段作業，但最近未輸入過密碼，則系統可能會提示您輸入 Bitbucket 密碼進行確認。
+   如果您要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具整合，但未授權 {{site.data.keyword.Bluemix_notm}} 存取 Bitbucket，請按一下**授權**來移至 Bitbucket 網站。如果您沒有作用中的 Bitbucket 階段作業，則系統會提示您登入。按一下**授與存取權**，以容許「{{site.data.keyword.Bluemix_notm}} 工具鏈」存取 Bitbucket 帳戶的下列部分：
+   
+   * **讀取帳戶資訊**。取得基本使用者資訊來移入使用者介面。
+   
+   * **讀取及修改儲存庫的問題**。容許 {{site.data.keyword.contdelivery_short}} 更新問題，指出管線何時部署連接至這些問題的確定。 
+   
+   * **讀取團隊專案設定，並讀取團隊專案內所含的儲存庫**。容許 {{site.data.keyword.contdelivery_short}} 與團隊所擁有的儲存庫整合。
+   
+   * **讀取及修改儲存庫和其取回要求**。容許 {{site.data.keyword.contdelivery_short}} 在使用者要求程式碼時將範例程式碼推送至儲存庫。
+   
+   * **管理儲存庫**。容許 {{site.data.keyword.contdelivery_short}} 在使用者要求時建立新的儲存庫。
+   
+   * **讀取團隊成員資格資訊**。容許 {{site.data.keyword.contdelivery_short}} 在建立新儲存庫時所顯示的**擁有者**功能表中顯示團隊清單。
+   
+   * **讀取及修改儲存庫的 Webhook**。容許管線在將確定推送至儲存庫時觸發建置。
+   {: tip}
+   
+   如果您有作用中的 Bitbucket 階段作業，但最近未輸入過密碼，則系統可能會提示您輸入 Bitbucket 密碼進行確認。
 
 1. 按一下您要使用的 Bitbucket 伺服器。
 1. 如果您有想要使用的 Bitbucket 儲存庫，請鍵入儲存庫的 URL。針對儲存庫類型，請按一下**現有**。
@@ -256,7 +275,8 @@ lastupdated: "2018-3-21"
 1. 從工具鏈中，按一下您要使用的 Bitbucket 儲存庫卡片。即會開啟 Bitbucket 網站，您可以在其中檢視儲存庫的內容。
 1. 如果您已啟用 Bitbucket Issues，請按一下 **Bitbucket Issues** 將它開啟。您可以將此 Bitbucket Issues 實例用於整個工具鏈，即使工具鏈包含多個 Bitbucket 儲存庫也是一樣。    
 
-**附註：**如果您沒有要鏈結之儲存庫的擁有者或主要專用權，則整合會受到限制，因為您無法使用 Webhook。需要有 Webhook，才能在將確定推送至儲存庫時自動執行管線。如果沒有 Webhook，您必須手動啟動管線。
+如果您沒有要鏈結之儲存庫的擁有者或主要專用權，則整合會受到限制，因為您無法使用 Webhook。需要有 Webhook，才能在將確定推送至儲存庫時自動執行管線。如果沒有 Webhook，您必須手動啟動管線。
+{: tip}
 
 ### 進一步瞭解 Bitbucket
 
@@ -268,7 +288,8 @@ lastupdated: "2018-3-21"
 
 {{site.data.keyword.evtmgt_full}} 提供服務、應用程式及基礎架構所發生問題的合併視圖。您可以設定即時突發事件管理，以更有效率地解決問題。
 
-**附註：**這是預先配置的工具整合，且不需要任何配置參數。您無法重新配置。
+這是預先配置的工具整合，且不需要任何配置參數。您無法重新配置。
+{: tip}
 
 若要協助 DevOps 團隊達成可靠的操作性能、服務品質及持續改善目標，請將 Cloud Event Management 新增至工具鏈：
 
@@ -311,13 +332,13 @@ lastupdated: "2018-3-21"
 1. 按一下**建立整合**，以將 {{site.data.keyword.deliverypipeline}} 新增至您的工具鏈。
 1. 按一下 **{{site.data.keyword.deliverypipeline}}**，以檢視管線並進行配置。若要瞭解如何配置管線的基本觀念，請參閱[建置及部署管線](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}。
 
-  **提示：**如果您要在將確定推送至 GitHub、{{site.data.keyword.ghe_short}} 或 Git 儲存庫時自動執行管線，請遵循下列步驟：
+  如果您要在將確定推送至 GitHub、{{site.data.keyword.ghe_short}} 或 Git 儲存庫時自動執行管線，請遵循下列步驟：
 
-   a. 先配置工具鏈的 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}}，然後再定義管線的階段。管線階段需要儲存庫的 Git URL。每一個管線階段都只能參照與您工具鏈相關聯的其中一個 GitHub、{{site.data.keyword.ghe_short}} 或 Git 儲存庫。如需配置 GitHub 的指示，請參閱 [GitHub](#github) 一節。如需配置「專用 {{site.data.keyword.ghe_short}}」的指示，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}。如需配置 {{site.data.keyword.gitrepos}} 的指示，請參閱 [{{site.data.keyword.gitrepos}}](#gitbluemix) 一節。
+   a. 先配置工具鏈的 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}}，然後再定義管線的階段。管線階段需要儲存庫的 Git URL。每一個管線階段都只能參照與您工具鏈相關聯的其中一個 GitHub、{{site.data.keyword.ghe_short}} 或 Git 儲存庫。如需配置 GitHub 的指示，請參閱 [GitHub](#github) 一節。如需配置 Dedicated {{site.data.keyword.ghe_short}} 的指示，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}。如需配置 {{site.data.keyword.gitrepos}} 的指示，請參閱 [{{site.data.keyword.gitrepos}}](#gitbluemix) 一節。
 
    b. 使用 Webhook。如果沒有 Webhook，您只能手動執行管線。若要在鏈結至 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫時使用 Webhook，您需要管理者專用權。若要鏈結至 {{site.data.keyword.gitrepos}} 儲存庫，您需要「主要」或「擁有者」專用權。
 
-1. 選用項目：如果您是在「{{site.data.keyword.Bluemix_notm}} 公用」上使用工具鏈，並且想要 Sauce Labs 對您的應用程式執行測試，請配置 {{site.data.keyword.deliverypipeline}} 來新增 Sauce Labs 測試工作。如需配置測試工作的指示，請參閱[在管線中配置 Sauce Labs 測試工作](#config_saucelabs)一節。
+1. 選用項目：如果您是在 {{site.data.keyword.Bluemix_notm}} Public 上使用工具鏈，並且想要 Sauce Labs 對您的應用程式執行測試，請配置 {{site.data.keyword.deliverypipeline}} 來新增 Sauce Labs 測試工作。如需配置測試工作的指示，請參閱[在管線中配置 Sauce Labs 測試工作](#config_saucelabs)一節。
 
 ### 在管線中配置 Sauce Labs 測試工作
 {: #config_saucelabs}
@@ -333,7 +354,8 @@ lastupdated: "2018-3-21"
 
 1. 配置階段。在**環境內容**標籤上，建立 CF_APP_NAME 內容。
 
-  **提示：**在與 SAUCE_USERNAME 及 SAUCE_ACCESS_KEY 環境變數相同的測試工作 Script 中，提供 Sauce Labs 使用者名稱及存取金鑰。當您撰寫測試時，必須使用這些環境變數向 Sauce Labs 進行鑑別。
+  在與 SAUCE_USERNAME 及 SAUCE_ACCESS_KEY 環境變數相同的測試工作 Script 中，提供 Sauce Labs 使用者名稱及存取金鑰。當您撰寫測試時，必須使用這些環境變數向 Sauce Labs 進行鑑別。
+  {: tip}
 
 1. 配置部署工作。在**部署 Script** 欄位中，納入下列指令：`export CF_APP_NAME="$CF_APP"`。該指令會將應用程式名稱匯出為環境內容。
 1. 配置測試工作。下列影像中的值是範例。**服務實例**、**目標**、**組織**及**空間**欄位會移入您正在使用的 Sauce Labs 使用者名稱、地區、組織及空間。
@@ -344,7 +366,8 @@ lastupdated: "2018-3-21"
 
   b. 針對服務實例，選取您為工具鏈配置 Sauce Labs 時所使用的 Sauce Labs 使用者名稱。
 
-   **提示：**若要查看您為工具鏈配置 Sauce Labs 時所使用的使用者名稱和存取金鑰，請按一下**配置**。
+   若要查看您為工具鏈配置 Sauce Labs 時所使用的使用者名稱和存取金鑰，請按一下**配置**。
+   {: tip}
 
   c. 在**測試執行指令**欄位中，輸入安裝測試所需相依關係的指令，然後執行測試。例如，針對 Node.js 應用程式，您可以輸入下列指令：
      ```
@@ -370,7 +393,8 @@ lastupdated: "2018-3-21"
 
 {{site.data.keyword.DRA_full}} 會收集並分析單元測試、功能測試及程式碼涵蓋面工具的結果，來判定您的程式碼是否符合部署程序中所指定閘門的預先定義準則。如果程式碼不符合或超出準則，則會停止部署，以防止釋出風險。您可以使用 {{site.data.keyword.DRA_short}} 作為持續交付環境的安全網，或作為實作並改善品質標準的方法。
 
- **附註：**此工具整合僅適用於「{{site.data.keyword.Bluemix_notm}} 公用」。它是預先配置的，且不需要任何配置參數。您無法重新配置此工具整合。
+ 此工具整合僅適用於 {{site.data.keyword.Bluemix_notm}} Public。它是預先配置的，且不需要任何配置參數。您無法重新配置此工具整合。
+ {: tip}
 
 新增 {{site.data.keyword.DRA_short}} 來維護及改善 {{site.data.keyword.Bluemix_notm}} 中的程式碼品質，方法是監視部署，以在釋出之前先找出風險。
 
@@ -400,7 +424,8 @@ lastupdated: "2018-3-21"
 
 Eclipse Orion {{site.data.keyword.webide}} 是一個整合的 Web 型環境，您可以在其中建立、編輯、執行、除錯以及完成來源控制作業。您可以平順地依序從編輯移至執行、提交、部署。
 
- **附註：**這是預先配置的工具整合。它不需要任何配置參數，而且您無法重新配置它。
+ 這是預先配置的工具整合。它不需要任何配置參數，而且您無法重新配置它。
+ {: tip}
 
 若要完成來源控制作業，請新增 Eclipse Orion {{site.data.keyword.webide}} 工具整合：
 
@@ -436,7 +461,8 @@ Eclipse Orion {{site.data.keyword.webide}} 是一個整合的 Web 型環境，�
 
 如果您有工具鏈，並且要將工具鏈中的 Git 儲存庫移轉至 {{site.data.keyword.gitrepos}}，請遵循下列步驟：
 
-**附註**：這些指示適用於已包含您要移轉至 {{site.data.keyword.gitrepos}} 的 Git 儲存庫的工具鏈。如需將不同類型的 Git 儲存庫新增至工具鏈的相關資訊，請參閱[配置 GitHub](#github)、[在 {{site.data.keyword.Bluemix_notm}} 專用上配置 GitHub Enterprise 及 Issues](#configghe) 及[配置 GitLab](#gitlab) 小節。
+這些指示適用於已包含您要移轉至 {{site.data.keyword.gitrepos}} 的 Git 儲存庫的工具鏈。如需將不同類型的 Git 儲存庫新增至工具鏈的相關資訊，請參閱[配置 GitHub](#github)、[在 {{site.data.keyword.Bluemix_notm}} Dedicated 上配置 GitHub Enterprise 及 Issues](#configghe) 及[配置 GitLab](#gitlab) 小節。
+{: tip}
 
 1. 在 DevOps 儀表板的「工具鏈」頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
 1. 按一下**新增工具**。
@@ -446,7 +472,8 @@ Eclipse Orion {{site.data.keyword.webide}} 是一個整合的 Web 型環境，�
 1. 如果您要透過建立確定的標籤和註解以及確定所參照之問題的標籤和註解來追蹤程式碼變更部署，請選取**追蹤程式碼變更部署**勾選框。如需相關資訊，請參閱[使用工具鏈追蹤程式碼的部署位置 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}。
 1. 按一下**建立整合**。
 
-**提示：**在您複製 Git 儲存庫之後，即可從工具鏈中將它移除。
+在您複製 Git 儲存庫之後，即可從工具鏈中將它移除。
+{: tip}
 
 如果您有工具鏈，並要向其新增 {{site.data.keyword.gitrepos}}，請遵循下列步驟：    
 
@@ -465,7 +492,8 @@ Eclipse Orion {{site.data.keyword.webide}} 是一個整合的 Web 型環境，�
 1. 按一下**建立整合**。
 1. 按一下您要使用的 Git 儲存庫卡片。即會開啟您的專案概觀頁面。    
 
-**附註：**如果您沒有要鏈結之儲存庫的「主要」或「擁有者」專用權，則整合會受到限制，因為您無法使用 Webhook。需要有 Webhook，才能在將確定推送至儲存庫時自動執行管線。如果沒有 Webhook，您必須手動啟動管線。
+如果您沒有要鏈結之儲存庫的「主要」或「擁有者」專用權，則整合會受到限制，因為您無法使用 Webhook。需要有 Webhook，才能在將確定推送至儲存庫時自動執行管線。如果沒有 Webhook，您必須手動啟動管線。
+{: tip}
 
 ### 進一步瞭解 Git Repos and Issue Tracking
 
@@ -487,14 +515,15 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
 
 如果您要在建立工具鏈時配置此工具整合，請遵循下列步驟：
 
-1. 如果您是將原始碼儲存至 GitHub 儲存庫，請按一下「可配置的整合」區段中的 **GitHub**。如果您要在「{{site.data.keyword.Bluemix_notm}} 公用」上配置此工具整合，但未授權 {{site.data.keyword.Bluemix_notm}} 存取 GitHub，請按一下**授權**來移至 GitHub 網站。如果您沒有作用中的 GitHub 階段作業，則系統會提示您登入。按一下**授權應用程式**，以容許 {{site.data.keyword.Bluemix_notm}} 存取 GitHub 帳戶。如果您有作用中的 GitHub 階段作業，但最近未輸入過密碼，則系統可能會提示您輸入 GitHub 密碼進行確認。
+1. 如果您是將原始碼儲存至 GitHub 儲存庫，請按一下「可配置的整合」區段中的 **GitHub**。如果您要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具整合，但未授權 {{site.data.keyword.Bluemix_notm}} 存取 GitHub，請按一下**授權**來移至 GitHub 網站。如果您沒有作用中的 GitHub 階段作業，則系統會提示您登入。按一下**授權應用程式**，以容許 {{site.data.keyword.Bluemix_notm}} 存取 GitHub 帳戶。如果您有作用中的 GitHub 階段作業，但最近未輸入過密碼，則系統可能會提示您輸入 GitHub 密碼進行確認。
 1. 如果您要在自己的 {{site.data.keyword.ghe_short}} 伺服器上使用儲存庫，請按一下「可配置的整合」區段中的**新增自訂伺服器**。
 
- **重要事項**：網路必須可以從「{{site.data.keyword.Bluemix_notm}} 專用」環境存取目標 Git 伺服器。如果您的 GitHub 伺服器無法在公用網際網路上使用，或在公用「網域名稱伺服器 (DNS)」上無法解析主機名稱，請[開立支援問題單](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}。您可以使用支援問題單來提交開啟網路路徑或更新 DNS 設定的要求。
+ 網路必須可以從 {{site.data.keyword.Bluemix_notm}} Dedicated 環境存取目標 Git 伺服器。如果您的 GitHub 伺服器無法在公用網際網路上使用，或在公用「網域名稱伺服器 (DNS)」上無法解析主機名稱，請[開立支援問題單](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}。您可以使用支援問題單來提交開啟網路路徑或更新 DNS 設定的要求。
+ {: tip}
 
  鍵入自訂 GitHub 伺服器的標題，然後指定伺服器的根 URL。輸入個人存取記號，然後按一下**儲存自訂整合**。
 
-  **提示**：如果您沒有個人存取記號，則可以建立一個：
+  如果您沒有個人存取記號，則可以建立個人存取記號：
 
      a. 在任何 GitHub 頁面上，按一下設定檔圖示，然後按一下**設定**。
 
@@ -533,11 +562,13 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
 1. 按一下**建立整合**。
 1. 按一下您要使用的 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫卡片。根據您已選取的儲存庫，會開啟 GitHub 網站或公司的 {{site.data.keyword.ghe_short}} 儲存庫，您可以在其中檢視儲存庫的內容。
 
-  **提示：**您可以使用 Eclipse Orion {{site.data.keyword.webide}} 中的整合原始碼管理工具來編輯 GitHub 儲存庫，以及從工作區中部署應用程式。
+  您可以使用 Eclipse Orion {{site.data.keyword.webide}} 中的整合原始碼管理工具來編輯 GitHub 儲存庫，以及從工作區中部署應用程式。
+  {: tip}
 
 1. 如果您已啟用 GitHub Issues，請按一下 **GitHub Issues** 將它開啟。您可以將此 GitHub Issues 實例用於整個工具鏈，即使工具鏈包含多個 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫。    
 
-**附註：**如果您沒有要鏈結之儲存庫的管理者專用權，則整合會受到限制，因為您無法使用 Webhook。需要有 Webhook，才能在將確定推送至儲存庫時自動執行管線。如果沒有 Webhook，您必須手動啟動管線。
+如果您沒有要鏈結之儲存庫的管理者專用權，則整合會受到限制，因為您無法使用 Webhook。需要有 Webhook，才能在將確定推送至儲存庫時自動執行管線。如果沒有 Webhook，您必須手動啟動管線。
+{: tip}
 
 ### 進一步瞭解 GitHub
 
@@ -548,18 +579,19 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
   * [使用「搭配 GitHub 和 Jenkins 的 Deployment Risk Analytics」工具鏈確定品質部署 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
 
   * [建立自訂工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
-## 在 {{site.data.keyword.Bluemix_notm}} 專用上配置 GitHub Enterprise 及 Issues
+## 在 {{site.data.keyword.Bluemix_notm}} Dedicated 上配置 GitHub Enterprise 及 Issues
 {: #configghe}
 
- **附註：**這些指示適用於 {{site.data.keyword.ghe_short}} 的「{{site.data.keyword.Bluemix_notm}} 專用」。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，則視內部程序而定，有些步驟可能會有所不同。
+ 這些指示適用於 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，則視內部程序而定，有些步驟可能會有所不同。
+ {: tip}
 
-{{site.data.keyword.ghe_long}} 是 Git 儲存庫的內部部署 Web 型管理服務。「專用 {{site.data.keyword.ghe_short}}」僅供「{{site.data.keyword.Bluemix_notm}} 專用」客戶使用。GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一個位置。它與您的開發儲存庫整合，因此您可以專注於重要作業。如需「專用 {{site.data.keyword.ghe_short}}」及 GitHub Issues 的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} 和 IBM Cloud Garage Method 上的 [GitHub Issues 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}。
+{{site.data.keyword.ghe_long}} 是 Git 儲存庫的內部部署 Web 型管理服務。Dedicated {{site.data.keyword.ghe_short}} 僅供 {{site.data.keyword.Bluemix_notm}} Dedicated 客戶使用。GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一個位置。它與您的開發儲存庫整合，因此您可以專注於重要作業。如需 Dedicated {{site.data.keyword.ghe_short}} 及 GitHub Issues 的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} 和 IBM Cloud Garage Method 上的 [GitHub Issues 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}。
 
-您可以將 {{site.data.keyword.ghe_short}} 配置為工具鏈中的工具整合，以在公司的 [{{site.data.keyword.Bluemix_notm}} 專用](/docs/dedicated/index.html#dedicated){: new_window}實例中管理原始碼。
+您可以將 {{site.data.keyword.ghe_short}} 配置為工具鏈中的工具整合，以在公司的 [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} 實例中管理原始碼。
 
 1. 如果您要在建立工具鏈時配置此工具整合，請遵循下列步驟：
 
- a. 第一次登入「專用 {{site.data.keyword.ghe_short}}」之前，請要求公司的地區管理者使用 LDAP 將您的使用者 ID 從公司的使用者登錄新增至「{{site.data.keyword.Bluemix_notm}} 專用」實例。如需設定 {{site.data.keyword.ghe_short}} 帳戶的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}。
+ a. 第一次登入 Dedicated {{site.data.keyword.ghe_short}} 之前，請要求公司的地區管理者使用 LDAP 將您的使用者 ID 從公司的使用者登錄新增至 {{site.data.keyword.Bluemix_notm}} Dedicated 實例。如需設定 {{site.data.keyword.ghe_short}} 帳戶的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}。
 
  b. 在「可配置的整合」區段中，按一下 **{{site.data.keyword.ghe_short}}**。    
 
@@ -584,11 +616,13 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
 1. 按一下**建立整合**。
 1. 按一下您要使用的 {{site.data.keyword.ghe_short}} 儲存庫卡片。即會開啟您公司的 {{site.data.keyword.ghe_short}} 儲存庫。
 
-  **提示：**您可以使用 Eclipse Orion {{site.data.keyword.webide}} 中的整合原始碼管理工具來編輯 {{site.data.keyword.ghe_short}} 儲存庫，以及從工作區中部署應用程式。
+  您可以使用 Eclipse Orion {{site.data.keyword.webide}} 中的整合原始碼管理工具來編輯 {{site.data.keyword.ghe_short}} 儲存庫，以及從工作區中部署應用程式。
+  {: tip}
 
 1. 如果您已啟用 GitHub Issues，請按一下 **GitHub Issues**。您可以將此 GitHub Issues 實例用於整個工具鏈，即使工具鏈包含多個 GitHub 儲存庫。    
 
-**附註：**如果您沒有要鏈結之儲存庫的管理者專用權，則整合會受到限制，因為您無法使用 Webhook。需要有 Webhook，才能在將確定推送至儲存庫時自動執行管線。如果沒有 Webhook，您必須手動啟動管線。
+如果您沒有要鏈結之儲存庫的管理者專用權，則整合會受到限制，因為您無法使用 Webhook。需要有 Webhook，才能在將確定推送至儲存庫時自動執行管線。如果沒有 Webhook，您必須手動啟動管線。
+{: tip}
 
 
 ## 配置 GitLab
@@ -600,14 +634,15 @@ GitLab 是 Git 儲存庫的 Web 型管理服務。您可以同時具有儲存庫
 
 如果您要在建立工具鏈時配置此工具整合，請遵循下列步驟：
 
-1. 如果您是將原始碼儲存至 GitLab 儲存庫，請按一下「可配置的整合」區段中的 **GitLab**。如果您要在「{{site.data.keyword.Bluemix_notm}} 公用」上配置此工具整合，但未授權 {{site.data.keyword.Bluemix_notm}} 存取 GitLab，請按一下**授權**來移至 GitLab 網站。如果您沒有作用中的 GitLab 階段作業，則系統會提示您登入。按一下**授權應用程式**，以容許 {{site.data.keyword.Bluemix_notm}} 存取 GitLab 帳戶。如果您有作用中的 GitLab 階段作業，但最近未輸入過密碼，則系統可能會提示您輸入 GitLab 密碼進行確認。
+1. 如果您是將原始碼儲存至 GitLab 儲存庫，請按一下「可配置的整合」區段中的 **GitLab**。如果您要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具整合，但未授權 {{site.data.keyword.Bluemix_notm}} 存取 GitLab，請按一下**授權**來移至 GitLab 網站。如果您沒有作用中的 GitLab 階段作業，則系統會提示您登入。按一下**授權應用程式**，以容許 {{site.data.keyword.Bluemix_notm}} 存取 GitLab 帳戶。如果您有作用中的 GitLab 階段作業，但最近未輸入過密碼，則系統可能會提示您輸入 GitLab 密碼進行確認。
 1. 如果您要在自己的 GitLab 伺服器上使用儲存庫，請按一下「可配置的整合」區段中的**新增自訂伺服器**。
 
- **重要事項**：網路必須可以從「{{site.data.keyword.Bluemix_notm}} 專用」環境存取目標 GitLab 伺服器。
+ 網路必須可以從 {{site.data.keyword.Bluemix_notm}} Dedicated 環境存取目標 GitLab 伺服器。
+ {: tip}
 
  鍵入自訂 GitLab 伺服器的標題，然後指定伺服器的根 URL。輸入個人存取記號，然後按一下**儲存自訂整合**。
 
-  **提示**：如果您沒有個人存取記號，則可以建立一個：
+  如果您沒有個人存取記號，則可以建立個人存取記號：
 
      a. 在任何 GitLab 頁面上，按一下設定檔圖示，然後按一下**設定**。
 
@@ -645,11 +680,13 @@ GitLab 是 Git 儲存庫的 Web 型管理服務。您可以同時具有儲存庫
 1. 按一下**建立整合**。
 1. 按一下您要使用的 GitLab 儲存庫卡片。根據您已選取的儲存庫，會開啟 GitLab 網站或公司的 GitLab 儲存庫，您可以在其中檢視儲存庫的內容。
 
-  **提示：**您可以使用 Eclipse Orion {{site.data.keyword.webide}} 中的整合原始碼管理工具來編輯 GitLab 儲存庫，以及從工作區中部署應用程式。
+  您可以使用 Eclipse Orion {{site.data.keyword.webide}} 中的整合原始碼管理工具來編輯 GitLab 儲存庫，以及從工作區中部署應用程式。
+  {: tip}
 
 1. 如果您已啟用 GitLab Issues，請按一下 **GitLab Issues** 將它開啟。您可以將此 GitLab Issues 實例用於整個工具鏈，即使工具鏈包含多個 GitLab 儲存庫。    
 
-**附註：**如果您沒有要鏈結之儲存庫的擁有者或主要專用權，則整合會受到限制，因為您無法使用 Webhook。需要有 Webhook，才能在將確定推送至儲存庫時自動執行管線。如果沒有 Webhook，您必須手動啟動管線。
+如果您沒有要鏈結之儲存庫的擁有者或主要專用權，則整合會受到限制，因為您無法使用 Webhook。需要有 Webhook，才能在將確定推送至儲存庫時自動執行管線。如果沒有 Webhook，您必須手動啟動管線。
+{: tip}
 
 ### 進一步瞭解 GitLab
 
@@ -661,7 +698,8 @@ GitLab 是 Git 儲存庫的 Web 型管理服務。您可以同時具有儲存庫
 
 Jenkins 是一種可持續建置及測試軟體的開放程式碼、伺服器型工具，並支援持續整合及持續交付的作法。
 
-**重要事項：**您必須先有 Jenkins 伺服器，才能建立 Jenkins 工具整合。
+您必須先有 Jenkins 伺服器，才能建立 Jenkins 工具整合。
+{: tip}
 
 使用 Jenkins 工具整合，您可以將 Jenkins 工作通知傳送至工具鏈中的其他工具（例如 Slack 及 PagerDuty）。若要在部署中追蹤程式碼，您可以將部署訊息新增至 Git 確定，以及相關的 Git 或 JIRA 問題。您也可以在「工具鏈連線」頁面上檢視部署。您可以將測試結果提供給 {{site.data.keyword.DRA_short}}，並新增自動化品質限制，然後追蹤部署風險。
 
@@ -783,8 +821,8 @@ JIRA 是一個工具，可追蹤與您軟體相關的問題及錯誤。只要 Je
 
 1. 按一下**建立整合**。
 1. 從工具鏈中，按一下您要使用的 Nexus 儲存庫卡片。即會開啟 Nexus 網站，您可以在其中檢視儲存庫的內容。
-1. 選用項目：如果您是在「{{site.data.keyword.Bluemix_notm}} 公用」上使用工具鏈，並且想要透過搭配使用 Nexus 與 npm 來建置應用程式，請配置管線來新增 npm 建置工作。如需配置建置工作的指示，請參閱[在管線中配置 Nexus npm 建置工作](#config_nexus_npm)一節。
-1. 選用項目：如果您是在「{{site.data.keyword.Bluemix_notm}} 公用」上使用工具鏈，並且想要透過搭配使用 Nexus 與 Maven 來建置應用程式，請配置管線來新增 Maven 建置工作。如需配置建置工作的指示，請參閱[在管線中配置 Nexus Maven 建置工作](#config_nexus_maven)一節。
+1. 選用項目：如果您是在 {{site.data.keyword.Bluemix_notm}} Public 上使用工具鏈，並且想要透過搭配使用 Nexus 與 npm 來建置應用程式，請配置管線來新增 npm 建置工作。如需配置建置工作的指示，請參閱[在管線中配置 Nexus npm 建置工作](#config_nexus_npm)一節。
+1. 選用項目：如果您是在 {{site.data.keyword.Bluemix_notm}} Public 上使用工具鏈，並且想要透過搭配使用 Nexus 與 Maven 來建置應用程式，請配置管線來新增 Maven 建置工作。如需配置建置工作的指示，請參閱[在管線中配置 Nexus Maven 建置工作](#config_nexus_maven)一節。
 
 ### 在管線中配置 Nexus npm 建置工作
 {: #config_nexus_npm}
@@ -840,9 +878,8 @@ JIRA 是一個工具，可追蹤與您軟體相關的問題及錯誤。只要 Je
      # or
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  **提示：**您可以在 Nexus 工具整合的配置設定中，找到用來連接至登錄的 URL 及使用者認證。
-
-
+  您可以在 Nexus 工具整合的配置設定中，找到用來連接至登錄的 URL 及使用者認證。
+  {: tip}
 
 1. 按一下**儲存**。只要管線執行，此建置工作就會使用 Nexus 工具整合中的配置資訊來連接至 Maven 儲存庫。
 
@@ -968,7 +1005,8 @@ IBM Rational Team Concert&trade; 是一種團隊協同作業工具，可整合�
 
 Sauce Labs 會執行功能單元測試。在 {{site.data.keyword.deliverypipeline}} 中將 Sauce Labs 測試套組配置為測試工作時，測試套組可以在持續交付處理程序期間對 Web 或行動應用程式執行測試。這些測試可以為專案提供寶貴的流程控制，作為防止部署不當程式碼的閘門。
 
- **附註：**此工具整合僅適用於「{{site.data.keyword.Bluemix_notm}} 公用」。
+ 此工具整合僅適用於 {{site.data.keyword.Bluemix_notm}} Public。
+ {: tip}
 
 配置 Sauce Labs 對多個作業系統和瀏覽器執行自動化功能測試，讓您模擬使用者可能使用網站或應用程式的方式：
 
@@ -984,7 +1022,8 @@ Sauce Labs 會執行功能單元測試。在 {{site.data.keyword.deliverypipelin
 1. 按一下**建立整合**。
 1. 按一下 **Sauce Labs** 以移至 saucelabs.com，然後檢視工具鏈的測試活動。
 
- **提示：**如果您已將 Sauce Labs 測試工作新增至 {{site.data.keyword.deliverypipeline}}，則可以選取服務實例。如需在管線中配置測試工作的指示，請參閱[在管線中配置 Sauce Labs 測試工作](#config_saucelabs)一節。
+ 如果您已將 Sauce Labs 測試工作新增至 {{site.data.keyword.deliverypipeline}}，則可以選取服務實例。如需在管線中配置測試工作的指示，請參閱[在管線中配置 Sauce Labs 測試工作](#config_saucelabs)一節。
+ {: tip}
 
 ### 進一步瞭解 Sauce Labs
 
@@ -997,7 +1036,8 @@ Sauce Labs 會執行功能單元測試。在 {{site.data.keyword.deliverypipelin
 ## 配置 Slack
 {: #slack}
 
-**重要事項：**團隊的所有人都可以看到張貼到公用 Slack 頻道的通知。請記住，您需要為您張貼的內容負責。
+團隊的所有人都可以看到張貼到公用 Slack 頻道的通知。請記住，您需要為您張貼的內容負責。
+{: tip}
 
 Slack 是一種雲端型、即時傳訊和通知系統。Slack 會提供持續性會談，這個替代方案在進行團隊協同作業時比電子郵件更具互動性。您可以透過專用頻道或與工作直接相關的一組頻道來與團隊進行通訊。您也可以透過頻道或兩位以上人員之間的直接訊息來共用檔案和影像。會保留透過直接訊息和頻道的通訊，讓您可以搜尋它們。
 
@@ -1012,13 +1052,15 @@ Slack 是一種雲端型、即時傳訊和通知系統。Slack 會提供持續�
 
 1. 鍵入 Slack Webhook URL，這是由 Slack 產生作為送入 Webhook。您需要 Slack 頻道的 Slack Webhook URL，以接收來自工具整合之工具鏈的通知。如需建立或尋找 Webhook 的指示，請參閱[送入 Webhook ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://api.slack.com/incoming-webhooks){: new_window}。
 
- **提示：**如果您已使用 API 金鑰，讓 Slack 頻道接收來自工具整合之工具鏈的通知，則必須更新配置以改用 Webhook。
+ 如果您已使用 API 金鑰，讓 Slack 頻道接收來自工具整合之工具鏈的通知，則必須更新配置以改用 Webhook。
+ {: tip}
 
 1. 鍵入您要傳送通知的目標 Slack 頻道名稱。此頻道必須存在，而且在 Slack 團隊中為作用中。
 1. 鍵入 Slack 團隊的 URL 主機名稱，這是團隊 URL 中 `.slack.com` 前面的單字或詞組。例如，如果團隊 URL 是 `https://team.slack.com`，則主機名稱是 `team`。
 1. 按一下**建立整合**。
 
- **提示：**如果無法到達所指定的 Slack 頻道及團隊，則會在 Slack 卡片上顯示 `Setup Failed` 錯誤。將游標移至 `Setup Failed` 訊息上方，然後按一下**重新配置**。請確定您是針對 Slack 團隊的 Slack Webhook URL、Slack 頻道及 URL 主機名稱，使用有效的配置參數。視需要更新設定，然後按一下**儲存整合**。
+ 如果無法到達所指定的 Slack 頻道及團隊，則會在 Slack 卡片上顯示 `Setup Failed` 錯誤。將游標移至 `Setup Failed` 訊息上方，然後按一下**重新配置**。請確定您是針對 Slack 團隊的 Slack Webhook URL、Slack 頻道及 URL 主機名稱，使用有效的配置參數。視需要更新設定，然後按一下**儲存整合**。
+ {: tip}
 
 1. 按一下 **Slack**。您可以在已配置的 Slack 頻道中檢視工具鏈的所有活動。
 
@@ -1048,7 +1090,8 @@ SonarQube 概述原始碼的整體性能及品質，以及強調顯示在新程�
 1. 鍵入當您從工具鏈按一下 SonarQube 卡片時所要開啟的 SonarQube 實例 URL。
 1. 選用項目：鍵入您用來連接至 SonarQube 伺服器的使用者名稱。
 
- **提示：**只有在您使用密碼來連接至 SonarQube 伺服器時，才需要指定使用者名稱。如果您使用鑑別記號進行連接，請讓此欄位保留為空欄位。
+ 只有在您使用密碼來連接至 SonarQube 伺服器時，才需要指定使用者名稱。如果您使用鑑別記號進行連接，請讓此欄位保留為空欄位。
+ {: tip}
 
 1. 鍵入您用來連接至 SonarQube 伺服器的密碼或鑑別記號。
 1. 按一下**建立整合**。
@@ -1057,26 +1100,3 @@ SonarQube 概述原始碼的整體性能及品質，以及強調顯示在新程�
 ### 進一步瞭解 SonarQube
 
 若要進一步瞭解 SonarQube，請參閱 IBM Cloud Garage Method 上的 [SonarQube 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window}。
-
-
-## 新增 UrbanCode Deploy（測試版）
-{: #urbancodedeploy}
-
-IBM UrbanCode Deploy 可簡化及自動化應用程式部署。它會使用圖形流程圖工具，以建立可部署、升級、回復及解除安裝應用程式的自動化處理程序。使用這些自動作業，您可以將應用程式移至開發管線中的每一個階段（包括開發、測試及正式作業環境）。
-
-**附註：**此工具整合僅適用於「{{site.data.keyword.Bluemix_notm}} 公用」。它是預先配置的，且不需要任何配置參數。您無法重新配置此工具整合。
-
-若要檢視應用程式、團隊及環境的部署趨勢，並尋找交付管線中的瓶頸以及較具效率的區域，請新增 UrbanCode Deploy 工具整合。
-
-1. 從 DevOps 儀表板中，按一下**工具鏈**。按一下要新增 UrbanCode Deploy 的工具鏈。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
-
- a. 按一下**新增工具**。
-
- b. 在「工具整合」區段中，按一下 **UrbanCode Deploy**。
-
-1. 按一下**建立整合**。
-1. 從工具鏈中，按一下 **UrbanCode Deploy**。若要在 Delivery Insights 中查看 UrbanCode Deploy 伺服器中的資料，您必須設定 DevOps Connect 實例，並在伺服器上安裝修補程式，然後將該伺服器連接至 DevOps Connect。如需相關資訊，請參閱[顯示 IBM UrbanCode Deploy 伺服器中的資料](/docs/services/DevOpsInsights/uc_insights_connect_ucd.html){: new_window}。
-
-### 進一步瞭解 UrbanCode Deploy
-
-若要進一步瞭解 UrbanCode Deploy，請參閱 IBM Cloud Garage Method 上的 [IBM UrbanCode Deploy 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/deliver/tool_ibm_urbancode_deploy/){: new_window}。

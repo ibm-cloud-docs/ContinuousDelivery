@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.gitrepos}}
 {: #git_working}
@@ -23,14 +26,16 @@ lastupdated: "2018-2-26"
    * 透過問題追蹤器，來追蹤問題與共用構想
    * 在 Wiki 系統上記載專案
 
-**附註：**因為此工具整合是以 GitLab Community Edition 為建置基礎，並由 IBM 於「{{site.data.keyword.Bluemix_notm}} 平台」上進行管理，所以有一些 GitLab 選項無法使用。例如，Delivery Pipeline 提供 {{site.data.keyword.Bluemix_notm}} 的持續整合及持續交付；因此，不支援 GitLab 中的持續整合特性。此外，無法使用管理功能，因為它們是由 IBM 所管理。
+因為此工具整合是以 GitLab Community Edition 為建置基礎，並由 IBM 於「{{site.data.keyword.Bluemix_notm}} 平台」上進行管理，所以有一些 GitLab 選項無法使用。例如，Delivery Pipeline 提供 {{site.data.keyword.Bluemix_notm}} 的持續整合及持續交付；因此，不支援 GitLab 中的持續整合特性。此外，無法使用管理功能，因為它們是由 IBM 所管理。
+{: tip}
 
 ## 在本端使用 {{site.data.keyword.gitrepos}}
 {: #git_local}
 
 您可以在本端存取 {{site.data.keyword.gitrepos}} 中所儲存的 Git 儲存庫。如需在本端設定 Git 的指示，請參閱[在指令行上開始使用 Git ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}。
 
-**提示**：{{site.data.keyword.gitrepos}} 只支援使用 TLS1.2 的 HTTPS 連線。如果您使用 Eclipse 來連接，您可能需要為您的 Java&trade; 版本指定此通訊協定，新增 `-Dhttps.protocols=TLSv1.2` 至 eclipse.ini 檔，然後重新啟動 Eclipse。
+{{site.data.keyword.gitrepos}} 只支援使用 TLS1.2 的 HTTPS 連線。如果您使用 Eclipse 來連接，您可能需要為您的 Java&trade; 版本指定此通訊協定，新增 `-Dhttps.protocols=TLSv1.2` 至 eclipse.ini 檔，然後重新啟動 Eclipse。
+{: tip}
 
 ## 向 {{site.data.keyword.gitrepos}} 進行鑑別
 {: #git_authentication}
@@ -40,7 +45,8 @@ lastupdated: "2018-2-26"
 ### 建立個人存取記號
 {: #create_pat}
 
-**重要事項**：若要透過 HTTPS 向 Git 儲存庫進行鑑別，您必須建立個人存取記號。
+若要透過 HTTPS 向 Git 儲存庫進行鑑別，您必須建立個人存取記號。
+{: tip}
 
 1. 在 {{site.data.keyword.gitrepos}} User Settings 儀表板上的 [Access Tokens 頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}，鍵入您要為其建立存取記號的應用程式名稱。例如 `Git CLI`。
 1. 選用項目：選擇存取記號的到期日期。

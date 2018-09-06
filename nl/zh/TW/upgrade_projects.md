@@ -2,12 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 將 {{site.data.keyword.jazzhub_short}} 專案升級至工具鏈
 {: #upgrade_projects}
@@ -43,7 +48,7 @@ lastupdated: "2018-3-21"
 
 - 若要存取已升級專案的工具鏈，您需要 {{site.data.keyword.Bluemix_notm}} ID。升級之前，您必須驗證您有作用中的 {{site.data.keyword.Bluemix_notm}} ID。如果您沒有，請[註冊](https://console.ng.bluemix.net/registration/)。
 - 確定 {{site.data.keyword.jazzhub_short}} 專案擁有者正確無誤。從您專案建立的工具鏈將是該擁有者之 {{site.data.keyword.Bluemix_notm}} 組織的一部分。
-- 確定您要建立工具鏈的組織及空間位在美國南部地區的「{{site.data.keyword.Bluemix_notm}} 公用」上。若要確認您具有美國南部的有效組織及空間，請登入 [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window}，並在系統提示時建立一個空間。
+- 確定您要建立工具鏈的組織及空間位在美國南部地區的 {{site.data.keyword.Bluemix_notm}} Public 上。若要確認您具有美國南部的有效組織及空間，請登入 [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window}，並在系統提示時建立一個空間。
 - 如果您規劃開始升級，請確定您是每個在其中部署管線的組織及空間的成員。任何專案管理者都可以開始升級。不過，如果開始升級的管理者不是每個在其中部署管線的組織及空間的成員，則無法建立管線。開始升級的人員會變成工具鏈中儲存庫的擁有者。
 - 工具鏈中的 Eclipse Orion {{site.data.keyword.webide}} 不同於與專案相關聯的 {{site.data.keyword.webide}}。如果您使用 {{site.data.keyword.webide}}，而且有未確定的變更，請先確定它們，再進行升級。
 
@@ -51,7 +56,8 @@ lastupdated: "2018-3-21"
 ## 從專案升級至工具鏈
 {: #project_to_toolchain}
 
-**重要事項：**hub.jazz.net 及工具鏈中的專案都是在美國南部地區進行管理。如果您的專案已配置成將應用程式部署至不同地區，則在將專案升級至工具鏈之後，仍會將應用程式部署至該地區。
+hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果您的專案已配置成將應用程式部署至不同地區，則在將專案升級至工具鏈之後，仍會將應用程式部署至該地區。
+{: tip}
 
 準備好升級專案時，會在專案的卡片及「概觀」頁面上顯示一則訊息。
 
@@ -59,9 +65,10 @@ lastupdated: "2018-3-21"
 
 ![升級時間訊息](images/banner-ready-to-upgrade.png)
 
-**提示：**您可以從「我的專案」頁面的功能表中找到準備好升級的專案：
+您可以從「我的專案」頁面的功能表中找到準備好升級的專案：
 
 ![「要升級的專案」功能表項目的影像](images/menu-projects-to-upgrade.png)
+{: tip}
 
 開始升級時，會鎖定您專案中的管線階段。您將無法執行或修改它們。如果您刪除工具鏈來回復升級，則會將管線解除鎖定。
 
@@ -71,8 +78,8 @@ lastupdated: "2018-3-21"
 
 |專案儲存庫|專案類型	|工具鏈儲存庫|
 |:----------|:------------------------------|:------------------|
-|github.com 		|專用或公用|具有「{{site.data.keyword.Bluemix_notm}} 公用」的相同 github.com 儲存庫。|
-|hub.jazz.net/git		|專用或公用|{{site.data.keyword.gitrepos}} 中具有「{{site.data.keyword.Bluemix_notm}} 公用」的新儲存庫。|
+|github.com 		|專用或公用|具有 {{site.data.keyword.Bluemix_notm}} Public 的相同 github.com 儲存庫。|
+|hub.jazz.net/git		|專用或公用|{{site.data.keyword.gitrepos}} 中具有 {{site.data.keyword.Bluemix_notm}} Public 的新儲存庫。|
 {: caption="表 1. 對映至工具鏈儲存庫的專案儲存庫" caption-side="top"}
 
 ## 開始升級處理程序
@@ -148,7 +155,8 @@ lastupdated: "2018-3-21"
 
    ![橫幅中指出專案已升級的訊息](images/banner-upgraded.png)
 
-   **附註：**如果訊息指出「立即升級」，則升級失敗。按一下**立即升級**鏈結，再試一次。
+   如果訊息指出「立即升級」，則升級失敗。按一下**立即升級**鏈結，再試一次。
+   {: tip}
 
    ![橫幅中指出專案已準備好進行升級的訊息](images/banner-ready-to-upgrade.png)
 
@@ -168,7 +176,8 @@ lastupdated: "2018-3-21"
     4. 若要從外部 Git 用戶端透過 https 向 {{site.data.keyword.gitrepos}} 進行鑑別，請使用您的使用者名稱及個人存取記號。
     5. 如果您要重複使用 JazzHub Git 儲存庫的本端儲存庫，請將儲存庫指向 {{site.data.keyword.gitrepos}} 中的新儲存庫。從終端機的 Shell 中，切換至在其中複製 JazzHub Git 儲存庫的目錄。輸入 `git remote set-url` 指令：`git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        **提示：**若要檢查哪些遠端 URL 設為哪些遠端名稱，請使用 `git remote -v` 指令。預設遠端名稱是 `origin`。如果您有更進階的安裝，則指令的形式如下：`git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        若要檢查哪些遠端 URL 設為哪些遠端名稱，請使用 `git remote -v` 指令。預設遠端名稱是 `origin`。如果您有更進階的安裝，則指令的形式如下：`git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        {: tip}
 
 5. 若已設定工具鏈，並且開始使用工具鏈，請考慮採取所有這些步驟或其中任何步驟，以確保沒有人使用您的專案：
     - 新增專案名稱的字尾，指出不得使用它。您可以在專案名稱尾端新增 `_DO_NOT_USE`。
@@ -223,8 +232,8 @@ hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果�
 
 |專案儲存庫|專案類型	|工具鏈儲存庫|
 |:----------|:------------------------------|:------------------|
-|github.com 		|專用或公用|具有「{{site.data.keyword.Bluemix_notm}} 公用」的相同 github.com 儲存庫。|
-|hub.jazz.net/git		|專用或公用|{{site.data.keyword.gitrepos}} 中具有「{{site.data.keyword.Bluemix_notm}} 公用」的新專用或公用儲存庫。|
+|github.com 		|專用或公用|具有 {{site.data.keyword.Bluemix_notm}} Public 的相同 github.com 儲存庫。|
+|hub.jazz.net/git		|專用或公用|{{site.data.keyword.gitrepos}} 中具有 {{site.data.keyword.Bluemix_notm}} Public 的新專用或公用儲存庫。|
 {: caption="表 1. 對映至工具鏈儲存庫的專案儲存庫" caption-side="top"}
 
 
@@ -286,7 +295,8 @@ hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果�
    
    4. 刪除已透過升級處理程序建立的工具鏈。 
    
-      **附註：**不會自動刪除 Git 儲存庫。您可能要手動刪除它，或立即將它重新命名。如果您已變更儲存庫，則可以切換未來的工具鏈，以在稍後使用。
+      不會自動刪除 Git 儲存庫。您可能要手動刪除它，或立即將它重新命名。如果您已變更儲存庫，則可以更新未來的工具鏈，以在稍後使用。
+      {: tip}
 
    5. 回到 JazzHub 專案。它應該針對另一個升級嘗試自行重設。如果未重設，請聯絡 hub@jazz.net，並提供專案的 URL。
    

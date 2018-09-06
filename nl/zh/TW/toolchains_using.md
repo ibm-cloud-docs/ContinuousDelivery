@@ -2,18 +2,26 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 使用工具鏈
 {: #toolchains-using}
 
 開放式工具鏈適用於 {{site.data.keyword.Bluemix}} 的「公用」及「專用」環境。您可以在日常的開發、部署及操作工作中，使用工具鏈來提高生產力。設定工具鏈之後，即可新增、刪除或配置工具整合，以及管理對工具鏈的存取權。
 {: shortdesc}
+
+您可以使用資源群組或 Cloud Foundry 組織來管理美國南部「公用」地區中的工具鏈。工具鏈的存取控制及授權使用者管理功能不同（視它們包含在資源群組還是 Cloud Foundry 組織而定）。
+{: tip}
 
 ## 配置工具整合
 {: #configuring_a_tool_integration}
@@ -31,14 +39,15 @@ lastupdated: "2018-2-26"
 
   ![「配置」功能表](images/toolchain_tile_menu.png)
 
- **提示**：有一些工具整合已預先配置，且不需要任何配置參數。您只能更新您所配置之工具整合的配置設定。
+ 有一些工具整合已預先配置，且不需要任何配置參數。您只能更新您所配置之工具整合的配置設定。
+ {: tip}
 
  完成設定的更新後，請按一下**儲存整合**。如需配置特定工具整合的相關資訊，請參閱[配置工具整合](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。
 
 ## 新增工具整合
 {: #adding_a_tool_integration}
 
-您可以新增及配置工具鏈的工具整合。視您是使用「{{site.data.keyword.Bluemix_notm}} 公用」還是「{{site.data.keyword.Bluemix_notm}} 專用」而定，可用的工具整合會有所不同。
+您可以新增及配置工具鏈的工具整合。視您是使用 {{site.data.keyword.Bluemix_notm}} Public 還是 {{site.data.keyword.Bluemix_notm}} Dedicated 而定，可用的工具整合會有所不同。
 
 1. 在 DevOps 儀表板的**工具鏈**頁面上，按一下工具鏈來開啟其「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**，然後按一下**概觀**。
 1. 若要查看要新增的工具整合清單，請按一下**新增工具**。
@@ -56,14 +65,29 @@ lastupdated: "2018-2-26"
 1. 若要從工具鏈中刪除工具整合，請按一下**刪除**。
 1. 按一下**刪除**來進行確認。  
 
-## 管理存取權
-{: #managing_access}
+## 管理對資源群組中工具鏈的存取
+{: #managing_access_resource_groups}
+
+您可以使用 Identity and Access Management (IAM) 服務，來管理使用者對工具鏈的存取。如需使用 IAM 管理存取控制的相關資訊，請參閱[使用 Identity and Access Management 管理使用者對工具鏈的存取](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}。 
+
+只有屬於所選取 {{site.data.keyword.contdelivery_short}} 實例之授權使用者清單的使用者，才能使用 {{site.data.keyword.contdelivery_short}} 工具鏈的 Delivery Pipeline、Eclipse Orion {{site.data.keyword.webide}} 及 {{site.data.keyword.gitrepos}} 特性。您可以從所指定資源群組內所選取 {{site.data.keyword.contdelivery_short}} 實例的「管理」標籤中管理授權使用者授權。
+
+若要存取工具鏈中 {{site.data.keyword.contdelivery_short}} 的主要特性（例如 Delivery Pipeline），使用者必須可存取 IAM 中的工具鏈，而使用者也必須屬於 {{site.data.keyword.contdelivery_short}} 實例的「授權使用者」清單。
+{: tip}
+
+授權使用者授權會套用至與 {{site.data.keyword.contdelivery_short}} 實例相同之資源群組中所含的所有工具鏈。
+{: tip}
+
+
+## 管理對 Cloud Foundry 組織中工具鏈的存取
+{: #managing_access_orgs}
 
 將使用者新增至與工具鏈相關聯的組織以及工具鏈的存取控制清單，即可將工具鏈存取權授與使用者。每一個工具鏈都會與特定組織相關聯，而且任何屬於該組織成員的使用者都可以新增至任何相關聯工具鏈的存取控制清單。您目前在其中工作的組織會顯示在功能表列上。若要存取一組不同的工具鏈，請切換至不同的組織。
 
-**提示：**您必須將使用者新增至工具鏈管理所在地區的工具鏈組織。因為工具鏈目前只在美國南部地區進行管理，所以您必須將使用者新增至美國南部地區的組織。如果工具鏈配置成將應用程式部署至不同地區，則仍會將應用程式部署至該地區。
+您必須將使用者新增至工具鏈管理所在地區的工具鏈組織。如果工具鏈配置成將應用程式部署至不同地區，則仍會將應用程式部署至該地區。
+{: tip}
 
-如果您使用的是 {{site.data.keyword.ghe_short}} 的「{{site.data.keyword.Bluemix_notm}} 專用」，則將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，使用者可以使用其 {{site.data.keyword.Bluemix_notm}} ID 及密碼來登入 {{site.data.keyword.ghe_short}}。使用者登入時，就會建立他們的帳戶。將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，並不會將他們自動新增至 {{site.data.keyword.ghe_short}} 儲存庫。必須由具有儲存庫管理專用權的人員來新增他們。如需相關資訊，請參閱[使用專用 GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，請遵循內部程序。
+如果您使用的是 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}，則將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，使用者可以使用其 {{site.data.keyword.Bluemix_notm}} ID 及密碼來登入 {{site.data.keyword.ghe_short}}。使用者登入時，就會建立他們的帳戶。將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，並不會將他們自動新增至 {{site.data.keyword.ghe_short}} 儲存庫。必須由具有儲存庫管理專用權的人員來新增他們。如需相關資訊，請參閱[使用 Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，請遵循內部程序。
 
 ###管理工具鏈存取權的提示
 
@@ -99,7 +123,8 @@ lastupdated: "2018-2-26"
 
      * 指派組織中所選取空間的角色。
 
-     **附註**：依預設，組織管理員會具有所有與組織相關聯之工具鏈的完整管理者專用權。若要將完整管理者專用權授與使用者，請選取**管理員**角色。「帳單管理員」及「審核員」角色不會影響工具鏈存取權。您稍後可以在「團隊目錄」頁面上變更角色。如需相關資訊，請參閱 [Cloud Foundry 角色](/docs/iam/cfaccess.html#cfaccess){: new_window}。
+     依預設，組織管理員會具有所有與組織相關聯之工具鏈的完整管理者專用權。若要將完整管理者專用權授與使用者，請選取**管理員**角色。「帳單管理員」及「審核員」角色不會影響工具鏈存取權。您稍後可以在「團隊目錄」頁面上變更角色。如需相關資訊，請參閱 [Cloud Foundry 角色](/docs/iam/cfaccess.html#cfaccess){: new_window}。
+     {: tip}
 
    使用者成為組織成員之後，請回到工具鏈的「管理」頁面，並將使用者新增至工具鏈。  
 
@@ -114,7 +139,8 @@ lastupdated: "2018-2-26"
 1. 按一下**刪除**。刪除工具鏈會移除其所有工具整合，這樣可能會刪除那些整合所管理的資源。
 1. 鍵入工具鏈名稱，然後按一下**刪除**，來確認刪除。  
 
- **提示**：當您刪除 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}} 工具整合時，不會從 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}} 刪除相關聯的儲存庫。您必須手動移除儲存庫。
+ 當您刪除 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}} 工具整合時，不會從 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}} 刪除相關聯的儲存庫。您必須手動移除儲存庫。
+ {: tip}
 
 ##使用指導教學：使用工具鏈
 {: #toolchain-tutorial}

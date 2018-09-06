@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-2-28"
+lastupdated: "2018-8-2"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -11,10 +11,13 @@ lastupdated: "2018-2-28"
     Indentation as per the previous template must be preserved.
 -->
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # 建置及部署
 {: #deliverypipeline_build_deploy}
@@ -22,7 +25,7 @@ lastupdated: "2018-2-28"
 {{site.data.keyword.contdelivery_full}} 包括 Delivery Pipeline，以用來實作可重複的持續整合及持續交付程序。
 {:shortdesc}
 
-請完成下列作業來建立及配置管線。
+請完成下列作業來配置管線。
 
 ## 新增階段
 {: #deliverypipeline_add_stage}
@@ -60,16 +63,17 @@ lastupdated: "2018-2-28"
 ## 部署應用程式
 {: #deliverypipeline_deploy}
 
-適當配置的部署工作一旦執行，就會將應用程式部署至目標。若要手動執行部署工作，請按一下工作所在階段的**執行階段**圖示。
+只要執行工作，適當配置的部署工作就會將應用程式部署至目標。若要手動執行部署工作，請按一下工作所在階段的**執行階段**圖示。
 
 ###輸入修訂
-當您手動執行階段，或者它是因為前面的階段已完成而執行時，執行中的階段會選取其輸入修訂。輸入修訂通常是建置號碼。為了選取輸入修訂，階段會遵循這些條件：
+當您手動執行階段時，或者它是在階段完成之前執行，則執行中階段會選取其輸入修訂。輸入修訂通常是建置號碼。為了選取輸入修訂，階段會遵循這些條件：
 
 * 如果已選取特定修訂，便會使用它。
 * 如果未指定特定修訂，則會搜尋先前的階段，直到找到使用相同輸入的階段。尋找並使用該輸入的最後成功執行修訂。
 * 如果未指定特定修訂，而且沒有其他階段使用所指定的來源作為輸入，則會使用輸入的最新修訂。
 
-**提示：**您可以部署前一個建置。在包含建置的階段上，按一下**檢視日誌及歷程**。在開啟的頁面上，按一下以展開執行號碼，然後按一下建置工作。按一下**傳送至**，然後選取目標。
+您可以部署前一個建置。在包含建置的階段上，按一下**檢視日誌及歷程**。在開啟的頁面上，按一下以展開執行號碼，然後按一下建置工作。按一下**傳送至**，然後選取目標。
+{: tip}
 
 ###將服務新增至應用程式
 您可以將服務新增至您的應用程式，以及從 {{site.data.keyword.Bluemix_notm}} 儀表板或 Cloud Foundry 指令行介面 (CLI) 來管理這些服務。您也可以在管線工作的 Script 中發出 Cloud Foundry CLI 指令。例如，您可以在部署工作的 Script 中將服務新增至應用程式。如需新增服務的相關資訊，請參閱[將服務新增至應用程式](/docs/services/reqnsi.html#add_service)。
