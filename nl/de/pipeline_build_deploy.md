@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-2-28"
+lastupdated: "2018-8-2"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -11,10 +11,13 @@ lastupdated: "2018-2-28"
     Indentation as per the previous template must be preserved.
 -->
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Builderstellung und Bereitstellung
 {: #deliverypipeline_build_deploy}
@@ -22,14 +25,14 @@ lastupdated: "2018-2-28"
 {{site.data.keyword.contdelivery_full}} enthält die Delivery Pipeline, die es Ihnen ermöglicht, einen reproduzierbaren, kontinuierlichen Integrationsprozess und einen Continuous Delivery-Prozess zu implementieren.
 {:shortdesc}
 
-Führen Sie die folgenden Aufgaben aus, um eine Pipeline zu erstellen und zu konfigurieren.
+Führen Sie die folgenden Tasks aus, um eine Pipeline zu konfigurieren.
 
 ## Eine Stage hinzufügen
 {: #deliverypipeline_add_stage}
 
 1. Klicken Sie auf der Seite 'Pipeline' auf **Stage hinzufügen**. Die Seite 'Stagekonfiguration' wird angezeigt.
 2. Konfigurieren Sie die Stage.
-  1. Wählen Sie auf der Registerkarte **EINGABE** eine Eingabe für die Stage aus. Für Build-Stages enthält die Eingabe-Registerkarte ein **Zweig**-Feld, um die Verzweigung im Repository anzugeben, das für die Eingabe verwendet werden soll.
+  1. Wählen Sie auf der Registerkarte **EINGABE** eine Eingabe für die Stage aus.  Für Build-Stages enthält die Eingabe-Registerkarte ein **Zweig**-Feld, um die Verzweigung im Repository anzugeben, das für die Eingabe verwendet werden soll.
   2. Fügen Sie auf der Registerkarte **JOBS** mindestens einen Job hinzu und konfigurieren Sie diesen. Die erste Stage verfügt in der Regel mindestens über einen Buildjob.
 3. Klicken Sie auf **Speichern**.
 
@@ -70,7 +73,8 @@ Wenn Sie eine Stage manuell ausführen, oder wenn sie ausgeführt wird, weil ein
 * Falls keine bestimmte Überarbeitung ausgewählt ist, werden vorherige Stages durchsucht, bis eine Stage gefunden wurde, die dieselbe Eingabe verwendet. Die letzte erfolgreich ausgeführte Überarbeitung dieser Eingabe wird gesucht und verwendet.
 * Falls keine bestimmte Überarbeitung angegeben ist und keine anderen Stages die angegebene Quelle als Eingabe verwenden, wird die letzte Überarbeitung der Eingabe verwendet.
 
-**Tipp:** Sie können einen vorherigen Build bereitstellen. Klicken Sie in der Stage, die den Build enthält, auf **Protokolle und Verlauf anzeigen**. Klicken Sie auf der Seite, die geöffnet wird, um die Ausführungsnummer zu erweitern, und klicken Sie anschließend auf den Buildjob. Klicken Sie auf **Senden an** und wählen Sie ein Ziel aus.
+Sie können einen vorherigen Build bereitstellen. Klicken Sie in der Stage, die den Build enthält, auf **Protokolle und Verlauf anzeigen**. Klicken Sie auf der Seite, die geöffnet wird, um die Ausführungsnummer zu erweitern, und klicken Sie anschließend auf den Buildjob. Klicken Sie auf **Senden an** und wählen Sie ein Ziel aus.
+{: tip}
 
 ###Services zu Apps hinzufügen
 Sie können Services zu Ihren Apps hinzufügen und diese Services von Ihrem {{site.data.keyword.Bluemix_notm}}-Dashboard aus oder über die Cloud Foundry-CLI (CLI = Befehlszeilenschnittstelle) verwalten. Sie können für Pipeline-Jobs auch Cloud Foundry-CLI-Befehle in Scripts ausgeben. Sie können zum Beispiel einen Service zu einer App im Script eines Bereitstellungsjobs hinzufügen. Weitere Informationen zum Hinzufügen von Services finden Sie unter [Hinzufügen eines Service zur Anwendung](/docs/services/reqnsi.html#add_service).

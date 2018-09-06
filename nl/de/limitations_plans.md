@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-4-18"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -23,16 +23,38 @@ Die Verwendung von {{site.data.keyword.contdelivery_full}} ist auf das Erstellen
  * Benutzer, die Bearbeitungen oder Trigger (entweder direkt in der Benutzeroberfläche oder indirekt, indem sie einen Repository-Vorgang ausführen) durchführen oder den Status einer Delivery Pipeline anzeigen.
  * Benutzer, die mit der Eclipse Orion-{{site.data.keyword.webide}} arbeiten.
  
-### Wie werden Benutzer gezählt?
+### Wie werden Benutzer für Instanzen von {{site.data.keyword.contdelivery_short}} in Organisationen gezählt?
 
 Berechtigte Benutzer werden gezählt, indem alle Benutzer in der Cloud-Organisation, die den {{site.data.keyword.contdelivery_short}}-Service enthält, berücksichtigt werden. 
 
-Um die Liste der Benutzer in Ihrer Organisation anzuzeigen, klicken Sie in der Menüleiste auf **Verwalten > Konto > Cloud Foundry-Organisationen**.
+Um die Liste der Benutzer in Ihrer Organisation in einer {{site.data.keyword.Bluemix_notm}} Public-Umgebung anzuzeigen, klicken Sie in der Menüleiste auf **Verwalten > Konto > Cloud Foundry-Organisationen**.
+
+Um die Liste der Benutzer in Ihrer Organisation in einer {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung anzuzeigen, klicken Sie in der Menüleiste auf **Konto > Organisationen verwalten**.
+
+Sie können auch alle Instanzen des Service {{site.data.keyword.contdelivery_short}} in Ihrem Konto und die Anzahl der Benutzer anzeigen, die für jede Instanz in einer {{site.data.keyword.Bluemix_notm}} Public-Umgebung gemeldet werden.
+
+1. Klicken Sie in der Menüleiste auf **Verwalten > Abrechnung und Nutzung > Nutzung**.
+2. Klicken Sie auf **Nutzungsdashboard**.
+3. Klicken Sie im Menü 'Konto' auf **Cloud Foundry-Organisationen**.
+4. Klicken Sie auf die Organisation, für die Sie Nutzungsinformationen anzeigen möchten.
+
+Um alle Instanzen des Service {{site.data.keyword.contdelivery_short}} in Ihrem Konto und die Anzahl der Benutzer anzuzeigen, die für jede Instanz in einer {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung gemeldet werden:
+
+1. Klicken Sie in der Menüleiste auf **Konto > Organisationen verwalten**.
+2. Klicken Sie auf **Nutzungsdashboard**.
+
+### Wie werden Benutzer für Instanzen von {{site.data.keyword.contdelivery_short}} in Ressourcengruppeen gezählt?
+
+Berechtigte Benutzer werden gezählt, indem Sie die Liste der Benutzer auf der Registerkarte 'Verwalten' in der Instanz des Service {{site.data.keyword.contdelivery_short}} anzeigen. 
+
+Um die Liste der berechtigten Benutzer anzuzeigen, öffnen Sie das Dashboard der Serviceinstanz und klicken Sie auf die Registerkarte 'Verwalten'.
 
 Sie können auch alle Instanzen des {{site.data.keyword.contdelivery_short}}-Service in Ihrem Konto und die Anzahl der Benutzer anzeigen, die für jede Instanz gemeldet werden.
 
-1. Klicken Sie in der Menüleiste auf **Verwalten > Konto > Cloud Foundry-Organisationen**.
+1. Klicken Sie in der Menüleiste auf **Verwalten > Abrechnung und Nutzung > Nutzung**.
 2. Klicken Sie auf **Nutzungsdashboard**.
+3. Klicken Sie im Menü 'Konto' auf **Ressourcengruppen**.
+4. Klicken Sie auf die Ressourcengruppe, für die Sie Nutzungsinformationen anzeigen möchten.
 
 ### Was passiert, wenn Sie die Grenzwerte Ihres Serviceplans überschreiten? 
 

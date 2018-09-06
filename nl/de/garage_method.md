@@ -23,7 +23,7 @@ lastupdated: "2018-3-23"
 
 
 
-Mit {{site.data.keyword.contdelivery_full}} können Anwendungen unter Verwendung bewährter DevOps-Verfahren und branchenführender Tools erstellt, getestet und bereitgestellt werden. Continuous Delivery unterstützt eine Vielzahl von Verfahren. Aber welche Verfahren sollten Sie anwenden? Darauf gibt es keine allgemeingültige Antwort. Die Verfahren, die Sie anwenden, sind vom Softwarebereitstellungsprojekt abhängig. Die [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage){:new_window} ist ein Ansatz von IBM, um schnell ansprechende Anwendungen bereitzustellen. Hierbei werden Continuous Delivery mit IBM Design Thinking, schlanken, DevOps- und agilen Verfahren kombiniert. Diese Verfahren konzentrieren sich zwar vorrangig auf die Cloud, können aber jedem Softwareentwicklungsaufwand zugutekommen.
+Mit {{site.data.keyword.contdelivery_full}} können Anwendungen unter Verwendung bewährter DevOps-Verfahren und branchenführender Tools erstellt, getestet und bereitgestellt werden. Continuous Delivery unterstützt eine Vielzahl von Verfahren. Aber welche Verfahren sollten Sie anwenden? Darauf gibt es keine allgemeingültige Antwort. Die Verfahren, die Sie anwenden, sind vom Softwarebereitstellungsprojekt abhängig.  Die [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage){:new_window} ist ein Ansatz von IBM, um schnell ansprechende Anwendungen bereitzustellen. Hierbei werden Continuous Delivery mit IBM Design Thinking, schlanken, DevOps- und agilen Verfahren kombiniert. Diese Verfahren konzentrieren sich zwar vorrangig auf die Cloud, können aber jedem Softwareentwicklungsaufwand zugutekommen.
 
 
 ## Continuous Delivery-Verfahren annehmen
@@ -43,11 +43,11 @@ Mit [Delivery Pipeline ![Symbol für externen Link](../../icons/launch-glyph.svg
 ## Continuous Delivery-Lernprogramme
 {: #gm_cd_tutorials}
 
-[Erstellen und verwenden Sie Ihre erste Toolchain mithilfe der Toolchain zum Entwickeln einer Cloud Foundry-App ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.Erfahren Sie, wie Sie eine offene Toolchain aus einer Vorlage erstellen und die Toolchain für die fortlaufende Bereitstellung einer 'Hello World'-App verwenden.
+[Erstellen und verwenden Sie Ihre erste Toolchain mithilfe der Toolchain zum Entwickeln einer Cloud Foundry-App ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}. Erfahren Sie, wie Sie eine offene Toolchain aus einer Vorlage erstellen und die Toolchain für die fortlaufende Bereitstellung einer 'Hello World'-App verwenden.
 
 [Toolchain zu einer App hinzufügen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window} Erfahren Sie, wie Sie eine offene Toolchain zu einer App hinzufügen und die Toolchain für die fortlaufende Bereitstellung der App verwenden.
 
-[Verwenden Sie die Toolchain zum Entwickeln und Testen von Microservices auf Cloud Foundry ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}. Erfahren Sie, wie Sie mithilfe einer Vorlage mit drei Microservices eine Toolchain erstellen und mithilfe der Toolchain ein Onlinegeschäft kontinuierlich bereitstellen. 
+[Verwenden Sie die Toolchain zum Entwickeln und Testen von Microservices auf Cloud Foundry ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}. Erfahren Sie, wie Sie mithilfe einer Vorlage mit drei Microservices eine Toolchain erstellen und mithilfe der Toolchain ein Onlinegeschäft kontinuierlich bereitstellen.
 
 Weitere Lernprogramme finden Sie im [Learning Lab ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/category/courses){:new_window}.
 

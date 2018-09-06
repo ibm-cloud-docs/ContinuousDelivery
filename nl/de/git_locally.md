@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Lokale Clients für die Git-Quellcodeverwaltung einrichten
 {: #git_local}
@@ -32,7 +34,8 @@ Sie können Ihren Quellcode in einem GitHub-, GitHub Enterprise- oder Git Repos 
 | Öffentlicher GitHub (github.com) | Kein persönliches Zugriffstoken erforderlich, aber Sie können eines einrichten und verwenden | GitHub-Benutzername und Kennwort oder GitHub-Benutzername und persönliches Zugriffstoken oder nur persönliches Zugriffstoken als Benutzername | [GitHub-SSH-Schlüssel konfigurieren](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
 | GitHub Enterprise | [Persönliches Zugriffstoken](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | GitHub Enterprise-Benutzername (nicht Ihre IBMid) und persönliches Zugriffstoken | [GitHub Enterprise-SSH-Schlüssel konfigurieren](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
-**Hinweis**: Wenn Sie lieber SSH verwenden möchten, können Sie einen einzigen Schlüssel für alle Git-Server verwenden. Erstellen oder suchen Sie Ihren Schlüssel und konfigurieren Sie ihn für jeden Server, wie dies in den vorherigen Links beschrieben ist. Wenn Sie Ihren Schlüssel mit einer Kennphrase erstellen, werden Sie zur Eingabe dieser Kennphrase aufgefordert, wenn Sie den Schlüssel verwenden.
+Wenn Sie lieber SSH verwenden möchten, können Sie einen einzigen Schlüssel für alle Git-Server verwenden. Erstellen oder suchen Sie Ihren Schlüssel und konfigurieren Sie ihn für jeden Server, wie dies in den vorherigen Links beschrieben ist. Wenn Sie Ihren Schlüssel mit einer Kennphrase erstellen, werden Sie zur Eingabe dieser Kennphrase aufgefordert, wenn Sie den Schlüssel verwenden.
+{: tip}
 
 2. Wenn Sie die Git-Befehlszeile verwenden möchten, gehen Sie wie folgt vor:
 
@@ -86,4 +89,4 @@ Mit den Tools können Sie die folgenden Arten von Dateien und Servern direkt von
 * EAR-Dateien (Unternehmensarchive)
 * Gepackte Liberty Profile-Server
 
-Sie können auch Services erstellen, sie mit Ihrer App verknüpfen und Umgebungsvariablen im Rahmen der Bereitstellung definieren. Weitere Informationen zu IBM Eclipse Tools finden Sie unter [Apps mit IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../../manageapps/eclipsetools/eclipsetools.html) bereitstellen.
+Sie können auch Services erstellen, sie mit Ihrer App verknüpfen und Umgebungsvariablen im Rahmen der Bereitstellung definieren. Weitere Informationen zu IBM Eclipse Tools finden Sie unter [Apps mit IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html) bereitstellen.

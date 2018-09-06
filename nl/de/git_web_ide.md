@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-3-23"
+lastupdated: "2018-8-2"
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Mit Git in der Eclipse Orion-Web-IDE arbeiten
 {: #git_web_ide}
@@ -89,8 +91,8 @@ Unabhängig von dem Standort, an dem Sie Code schreiben, können Sie diese Kurz�
 
 Überschreiben Sie den Inhalt eines referenzierten fernen Zweigs mit dem Inhalt Ihres aktiven lokalen Zweigs.
 
-**Wichtig:** Wenn Sie die Übertragung eines lokalen Zweigs per Push-Operation an einen fernen Zweig erzwingen,
-verlieren Sie im fernen Zweig möglicherweise Commitoperationen.
+Wenn Sie die Übertragung eines lokalen Zweigs per Push-Operation an einen fernen Zweig erzwingen, verlieren Sie im fernen Zweig möglicherweise Commitoperationen.
+{: tip}
 
 ### Eclipse Orion-Web-IDE
 {: #force_push_web}
@@ -127,16 +129,17 @@ Sie verwerfen wollen.
 
 1. Wählen Sie im Abschnitt 'Arbeitsverzeichnisänderungen' die Kontrollkästchen aller Dateien aus, die festgeschrieben werden sollen.
 
-3. Geben Sie im Feld **Commitnachricht eingeben** eine Nachricht ein, die Ihre Änderungen beschreibt.
+2. Geben Sie im Feld **Commitnachricht eingeben** eine Nachricht ein, die Ihre Änderungen beschreibt.
 
-  **Tipp**: Geben Sie eine detaillierte Commitnachricht an. Ihre Nachricht sollte ausreichend Details enthalten,
+  Geben Sie eine detaillierte Commitnachricht an. Ihre Nachricht sollte ausreichend Details enthalten,
 sodass eine andere Person ohne weitere Informationen versteht, weshalb die Änderung erforderlich war. Sie können in den zu Ihrem Team
 zugehörigen Tracker für Probleme einen Link zu einem Element einschließen, um Hilfe anzufordern. Die erste Zeile der Commitnachricht sollte weniger als 50 Zeichen enthalten. Fügen Sie eine leere Zeile hinzu, bevor Sie weiteren Text
 hinzufügen.
+  {: tip}
 
-4. Klicken Sie auf **Commit**.
+3. Klicken Sie auf **Commit**.
 
-5. Klicken Sie auf **Push-Operation durchführen**.
+4. Klicken Sie auf **Push-Operation durchführen**.
 
 ### Git-Terminal
 {: #commit_cmd}
@@ -151,14 +154,14 @@ fort. Um Dateien festzuschreiben, für die das Staging aufgehoben wurde, müssen
 4. Geben Sie die Commitzusammenfassung ein, fügen Sie eine leere Zeile hinzu und fügen Sie die Beschreibung für die Commitoperation
 hinzu.
 
-  **Tipp**: Die Commitzusammenfassung sollte weniger als 50 Zeichen umfassen. Die Commitbeschreibung sollte genügend
+  Die Commitzusammenfassung sollte weniger als 50 Zeichen umfassen. Die Commitbeschreibung sollte genügend
 Details bereitstellen, sodass auch eine andere Person ohne weitere Informationen versteht, warum die Änderung erforderlich war. Sie können in den zu Ihrem Team
 zugehörigen Tracker für Probleme einen Link zu einem Element einschließen, um Hilfe anzufordern.
+  {: tip}
 
 5. Commitnachricht speichern
 
-  **Hinweis:** Um Ihre Commitnachricht zu speichern und Vim zu schließen, der möglicherweise Ihr
-Standardtexteditor ist, drücken Sie die Escapetaste und geben Sie `:wq` ein; drücken Sie anschließend die Eingabetaste.
+  Um Ihre Commitnachricht zu speichern und Vim zu schließen, der möglicherweise Ihr Standardtexteditor ist, drücken Sie die Escapetaste, geben Sie `:wq` ein und drücken Sie die Eingabetaste. {: tip}
 
 4. Geben Sie `git push` ein und drücken Sie die Eingabetaste.
 
@@ -203,9 +206,9 @@ anzuzeigen.
 
 3. Klicken Sie zum Überprüfen der an einer Datei vorgenommenen Änderungen auf **>**.
 
-  **Hinweis:** Wenn durch eine Commitoperation die Änderung einer Zeile eingeführt wurde, wird die ursprüngliche
-Zeile rosa und die neue Zeile grün schattiert.  In gleicher Weise werden Zeilen, die durch eine Commitoperation hinzugefügt wurden, grün
+  Wenn durch eine Commitoperation die Änderung einer Zeile eingeführt wurde, wird die ursprüngliche Zeile rosa und die neue Zeile grün schattiert. In gleicher Weise werden Zeilen, die durch eine Commitoperation hinzugefügt wurden, grün
 schattiert, und Zeilen, die aus einer Commitoperation entfernt wurden, werden rosa schattiert.
+  {: tip}
 
 ### Git-Terminal
 {: #compare_changes_cmd}
@@ -220,20 +223,20 @@ schattiert, und Zeilen, die aus einer Commitoperation entfernt wurden, werden ro
 
 3. Überprüfen Sie die Änderungen.
 
-  **Hinweis:** Wenn durch eine Commitoperation die Änderung einer Zeile eingeführt wurde, wird die ursprüngliche
-Zeile in rotem Text angezeigt und beginnt mit einem Minuszeichen (-). Die neue Zeile wird in grünem Text angezeigt und beginnt mit einem
+  Wenn durch eine Commitoperation die Änderung einer Zeile eingeführt wurde, wird die ursprüngliche Zeile in rotem Text angezeigt und beginnt mit einem Minuszeichen (-). Die neue Zeile wird in grünem Text angezeigt und beginnt mit einem
 Pluszeichen (+).  In gleicher Weise werden Zeilen, die durch eine Commitoperation hinzugefügt wurden, in grünem Text angezeigt und beginnen
 mit einem Pluszeichen. Zeilen, die durch eine Commitoperation
 entfernt wurden, werden in rotem Text angezeigt und beginnen mit einem Minuszeichen.
+  {: tip}
 
 1. Drücken Sie die Taste 'Q', um die Anzeige von Einträgen zu stoppen.
 
 ## Letzte Commitoperation ändern
 {: #modify_last_commit}
 
-  **Hinweis:** Wenn Sie die letzte Commitoperation ändern, nachdem Sie sie mit einer Push-Operation
-an ein fernes Repository übertragen haben, erstellen Sie das Commitprotokoll erneut. Diese Änderung verursacht für die übrigen Bearbeiter in Ihrem Projekt möglicherweise Commitfehler und weitere Probleme. Seien Sie sich im Klaren darüber, welche Schritte Sie vornehmen, wenn Sie eine Commitoperation
+  Wenn Sie die letzte Commitoperation ändern, nachdem Sie sie mit einer Push-Operation an ein fernes Repository übertragen haben, erstellen Sie das Commitprotokoll erneut. Diese Änderung verursacht für die übrigen Bearbeiter in Ihrem Projekt möglicherweise Commitfehler und weitere Probleme. Seien Sie sich im Klaren darüber, welche Schritte Sie vornehmen, wenn Sie eine Commitoperation
 ändern, die mit einer Push-Operation an ein fernes Repository übertragen wurde.
+  {: tip}
 
 ### Eclipse Orion-Web-IDE
 {: #modify_last_commit_web}
@@ -254,8 +257,7 @@ an ein fernes Repository übertragen haben, erstellen Sie das Commitprotokoll er
 
 3. Akzeptieren Sie die Commitnachricht in Ihrem Texteditor oder ändern Sie sie.
 
-  **Hinweis:** Um Ihre Commitnachricht zu speichern und Vim zu schließen, der möglicherweise Ihr
-Standardtexteditor ist, drücken Sie die Escapetaste und geben Sie `:wq` ein; drücken Sie anschließend die Eingabetaste.
+  Um Ihre Commitnachricht zu speichern und Vim zu schließen, der möglicherweise Ihr Standardtexteditor ist, drücken Sie die Escapetaste, geben Sie `:wq` ein und drücken Sie die Eingabetaste. {: tip}
 
 ## Commit taggen
 {: #tag_commit}
@@ -267,10 +269,10 @@ Standardtexteditor ist, drücken Sie die Escapetaste und geben Sie `:wq` ein; dr
 
 2. Zeigen Sie die Details der Commitoperation an, indem Sie auf die Commitoperation klicken.
 
-2. Klicken Sie im Teilfenster 'Commit' auf **Tag für die Commitoperation erstellen**
+3. Klicken Sie im Teilfenster 'Commit' auf **Tag für die Commitoperation erstellen**
 <img class="inline"  src="./images/tag.png" alt="Tag für die Commitoperation erstellen">.
 
-3. Geben Sie Ihren Tagtext in das Namensfeld ein. Klicken Sie auf **Abschicken**.
+4. Geben Sie Ihren Tagtext in das Namensfeld ein. Klicken Sie auf **Abschicken**.
 
 ### Git-Terminal
 {: #tag_commit_cmd}
@@ -286,7 +288,7 @@ Standardtexteditor ist, drücken Sie die Escapetaste und geben Sie `:wq` ein; dr
 {: #change_info_web}
 1. Klicken Sie auf das Symbol für 'Konfiguration' <img class="inline" src="./images/configurations.png" alt="Symbol für Konfiguration">.
 
-3. Ändern Sie die Benutzer-E-Mail-Adresse und den Namen, indem Sie die Werte 'user.email' und 'user.name' aktualisieren. Klicken
+2. Ändern Sie die Benutzer-E-Mail-Adresse und den Namen, indem Sie die Werte 'user.email' und 'user.name' aktualisieren. Klicken
 Sie auf **Abschicken**, um die einzelnen Änderungen zu speichern.
 
 ### Git-Terminal
@@ -370,15 +372,14 @@ können Sie an diesem Zeitpunkt eine Testbereitstellung vornehmen, um sicherzust
 
 2. Öffnen Sie in der Web-IDE jede Datei, die Konflikte enthält.
 
-3. Beheben Sie alle in Konflikt stehenden Änderungen.
-
-  **Hinweis:** Löschen Sie jeglichen Text, den Sie nicht beibehalten möchten. Konflikte haben folgendes Format:
+3. Beheben Sie alle in Konflikt stehenden Änderungen. Löschen Sie jeglichen Text, den Sie nicht beibehalten möchten. Konflikte haben folgendes Format:
 
 		<<<<<<< KOPFZEILE
 		Text im ausgecheckten Zweig.
 		=======
 		Text im zusammengeführten Zweig.
 		>>>>>>> Commit-ID_des_zusammengeführten_Zweigs
+		
 4. Wählen Sie für jede der Dateien, in denen Konflikte vorhanden sind, das Kontrollkästchen aus. Geben Sie eine
 Commitnachricht für die Zusammenführung ein und klicken Sie auf **Commit**.
 
@@ -389,15 +390,14 @@ Commitnachricht für die Zusammenführung ein und klicken Sie auf **Commit**.
 
 2. Öffnen Sie in einem Texteditor eine Datei mit Konflikten.
 
-3. Beheben Sie alle in Konflikt stehenden Änderungen und speichern Sie anschließend die Datei.
-
-  **Hinweis:** Löschen Sie jeglichen Text, den Sie nicht beibehalten möchten. Konflikte haben folgendes Format:
+3. Beheben Sie alle in Konflikt stehenden Änderungen und speichern Sie anschließend die Datei. Löschen Sie jeglichen Text, den Sie nicht beibehalten möchten. Konflikte haben folgendes Format:
 
 		<<<<<<< KOPFZEILE
 		Text im ausgecheckten Zweig.
 		=======
 		Text im zusammengeführten Zweig.
 		>>>>>>> zusammengeführter_Zweig
+		
 4. Führen Sie für jede geänderte Datei ein Staging aus und schreiben Sie die Zusammenführung anschließend fest.
 
 ## Zweige mit Referenzversionen aktualisieren
@@ -437,11 +437,11 @@ Namen des als Quelle verwendeten Zweigs.
 
 3. Wenn Konflikte auftreten, [beheben Sie sie](#resolve_a_rebase_conflict).
 
-5. Wiederholen Sie die vorherigen Schritte so häufig wie erforderlich, um die Operation zum Aktualisieren mit Referenzversionen
+4. Wiederholen Sie die vorherigen Schritte so häufig wie erforderlich, um die Operation zum Aktualisieren mit Referenzversionen
 abzuschließen.
 
-  **Hinweis:** Geben Sie zum Stoppen der Operation zum Aktualisieren mit Referenzversionen
-`git rebase --abort` ein und drücken Sie die Eingabetaste.
+  Geben Sie zum Stoppen der Operation zum Aktualisieren mit Referenzversionen `git rebase --abort` ein und drücken Sie die Eingabetaste.
+  {: tip}
 
 ## Konflikt bei der Aktualisierung mit Referenzversionen beheben
 {: #resolve_a_rebase_conflict}
@@ -453,15 +453,14 @@ abzuschließen.
 
 2. Öffnen Sie in der Web-IDE jede Datei, die Konflikte enthält.
 
-3. Beheben Sie alle in Konflikt stehenden Änderungen.
-
-  **Hinweis:** Löschen Sie jeglichen Text, den Sie nicht beibehalten möchten. Konflikte haben folgendes Format:
+3. Beheben Sie alle in Konflikt stehenden Änderungen. Löschen Sie jeglichen Text, den Sie nicht beibehalten möchten. Konflikte haben folgendes Format:
 
 		<<<<<<< KOPFZEILE
 		Text im ausgecheckten Zweig.
 		=======
 		Text im zusammengeführten Zweig.
 		>>>>>>> Commit-ID_des_zusammengeführten_Zweigs
+		{: tip}
 4. Wählen Sie im Teilfenster für die Aktualisierung mit Referenzversionen für jede korrigierte Datei das Kontrollkästchen aus und
 klicken Sie auf **Weiter**.
 
@@ -472,15 +471,14 @@ klicken Sie auf **Weiter**.
 
 2. Öffnen Sie in einem Texteditor eine Datei mit Konflikten.
 
-3. Beheben Sie alle in Konflikt stehenden Änderungen und speichern Sie anschließend die Datei.
-
-  **Hinweis:** Löschen Sie jeglichen Text, den Sie nicht beibehalten möchten. Konflikte haben folgendes Format:
+3. Beheben Sie alle in Konflikt stehenden Änderungen und speichern Sie anschließend die Datei. Löschen Sie jeglichen Text, den Sie nicht beibehalten möchten. Konflikte haben folgendes Format:
 
 		<<<<<<< KOPFZEILE
 		Text im ausgecheckten Zweig.
 		=======
 		Text im zusammengeführten Zweig.
 		>>>>>>> zusammengeführter_Zweig
+		
 4. Führen Sie für jede geänderte Datei ein Staging durch.
 
 5. Nehmen Sie die Operation für das Aktualisieren mit Referenzversionen wieder auf, indem Sie

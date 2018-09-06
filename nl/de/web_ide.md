@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-20"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Mit der Eclipse Orion-Web-IDE entwickeln
 {: #web_ide}
@@ -23,7 +25,7 @@ Als weiterer wesentlicher Vorteil kommt hinzu, dass {{site.data.keyword.webide}}
 ## IDE einrichten
 {: #editorsetup}
 
-Die {{site.data.keyword.webide}} ist konfigurierbar, d. h. Sie können Farbschemen, technische Tools und Einstellungen wählen, die Ihren Entwicklungsanforderungen entsprechen. Um die Einstellungen anzuzeigen und zu ändern, klicken Sie links im Menü auf das Symbol **Einstellungen** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="The settings icon"> in der linken Navigationsseitenleiste.
+Die {{site.data.keyword.webide}} ist konfigurierbar, d. h. Sie können Farbschemen, technische Tools und Einstellungen wählen, die Ihren Entwicklungsanforderungen entsprechen. Um die Einstellungen von der Navigationsseitenleiste links aus anzuzeigen und zu ändern, klicken Sie auf das Symbol **Einstellungen** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="Das Einstellungssymbol">.
 
 Wenn Sie bestimmte Einstellungen beim Bearbeiten häufig ändern müssen, können Sie auf diese Einstellungen schnell über das Symbol **Lokale Einstellungen für Editor** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Symbol 'Lokale Einstellungen für Editor"> zugreifen.
 
@@ -45,7 +47,8 @@ Standardmäßig werden die Einstellungen für den Editorstil und die Schriftgrö
 
 Die {{site.data.keyword.webide}} setzt sich aus zwei Hauptabschnitten zusammen. Der erste Abschnitt ist der Dateinavigator, der Ihre Projektdateien in einer Baumstruktur anzeigt. Über den Dateinavigator können Sie Dateien und Ordner erstellen, umbenennen, löschen und verwalten.
 
-**Tipp:** Um Dateien in den Dateinavigator hochzuladen, ziehen Sie sie von Ihrem Computer in den Dateinavigator.
+Um Dateien in den Dateinavigator hochzuladen, ziehen Sie sie von Ihrem Computer in den Dateinavigator.
+{: tip}
 
 Der zweite Abschnitt ist das Editorteilfenster. Der Editor bietet verschiedene Codierungsfunktionen, einschließlich Content-Assist und Syntaxprüfung.
 
@@ -79,7 +82,7 @@ Die {{site.data.keyword.webide}} ist mit Quellcodeverwaltungstools integriert. U
 1. Klicken Sie auf das Symbol für die Bereitstellung <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="Symbol 'Bereitstellung'">. Bei der Bereitstellung einer Instanz Ihrer App werden der aktuelle Inhalt Ihres Arbeitsbereichs und die Umgebung verwendet, die in Ihrer Startkonfiguration definiert sind.
 2. Wenn Ihre App bereitgestellt wurde, können Sie die Ausführungsleiste verwenden, um Ihre App zu stoppen, erneut zu starten oder zu debuggen, um Protokolle anzuzeigen usw.
 
-<table>
+<table role="presentation">
 <tr><td><img src="./images/stop_button.png"  alt="Symbol 'Stoppen'"></td><td>Stoppt die App.</td></tr>
 <tr><td> <img src="./images/open_app_url.png"  alt="Symbol 'App-URL öffnen'"></td><td> Öffnet die bereitgestellte App.</td></tr>
 <tr><td><img src="./images/view_logs.png"  alt="Symbol 'Protokolle anzeigen'"></td><td>Zeigt die Protokolle der bereitgestellten App an.</td></tr>
@@ -88,7 +91,7 @@ Die {{site.data.keyword.webide}} ist mit Quellcodeverwaltungstools integriert. U
 
 Wenn Sie eine Node.js-App entwickeln, aktivieren Sie den Modus 'Live Edit' für die Livebearbeitung: <img  src="./images/enable_live_edit.png"  alt="Schieberegler für die Aktivierung des Modus 'Live Edit'">
 
-<table><tr><td><img src="./images/live_edit_restart.png"  alt="Symbol zum Neustarten im aktivierten Modus 'Live Edit'"></td><td>Der aktivierte Modus 'Live Edit' ermöglicht den raschen Neustart der App ohne erneute Bereitstellung.</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="Symbol zum Neustarten im aktivierten Modus 'Live Edit'"></td><td>Der aktivierte Modus 'Live Edit' ermöglicht den raschen Neustart der App ohne erneute Bereitstellung.</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="Symbol 'Debuggen'"></td>
 <td>Ermöglicht bei aktiviertem Modus 'Live Edit' den direkten Zugriff auf den Debugger.
 </td></tr>
@@ -161,7 +164,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 Die Eclipse Orion-{{site.data.keyword.webide}} bietet Content-Assist, QuickInfo, Vorschaufunktionen, Validierung und Syntaxhervorhebung für JavaScript-, HTML-, CSS- und Markdown-Dateien. Für die folgenden Dateitypen wird die Funktion der Syntaxhervorhebung ebenfalls unterstützt:
 
-<table>
+<table role="presentation">
 <tr>
 <td>
 <ul><li>Arduino

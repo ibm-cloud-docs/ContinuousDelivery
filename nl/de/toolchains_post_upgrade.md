@@ -2,12 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-12"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Einführung in Toolchains nach dem Upgrade Ihres {{site.data.keyword.jazzhub_short}}-Projekts
 {: #toolchains_post_upgrade}
@@ -16,7 +21,7 @@ Für {{site.data.keyword.jazzhub}}-Projekte unter hub.jazz.net wurde ein Upgrade
 
 {{site.data.keyword.jazzhub_short}} unter hub.jazz.net wurde zurückgezogen. 
 
-Verwenden Sie für Ihre DevOps-Projekte den [{{site.data.keyword.contdelivery_short}}-Service ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/devops){:new_window}. Wenn Sie noch nicht mit {{site.data.keyword.Bluemix_notm}} vertraut sind, informieren Sie sich anhand der [{{site.data.keyword.Bluemix_notm}}{{site.data.keyword.Bluemix_notm}}-Übersicht](/docs/overview/whatisbluemix.html#bluemixoverview).
+Verwenden Sie für Ihre DevOps-Projekte den [{{site.data.keyword.contdelivery_short}}-Service ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/devops){:new_window}. Wenn Sie noch nicht mit {{site.data.keyword.Bluemix_notm}} vertraut sind, informieren Sie sich anhand der [{{site.data.keyword.Bluemix_notm}}-Übersicht](/docs/overview/ibm-cloud.html#overview).
 
 {: shortdesc}
 
@@ -26,19 +31,19 @@ Verwenden Sie für Ihre DevOps-Projekte den [{{site.data.keyword.contdelivery_sh
 Vergewissern Sie sich über die [Seite 'Toolchains' ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") ](https://console.bluemix.net/devops/toolchains){: new_window}, dass das Upgrade vollständig durchgeführt wurde, und prüfen Sie, ob Toolchains mit Namen angezeigt werden, die den Namen Ihrer hub.jazz.net-Projekte entsprechen. Wenn Ihre Projekte automatisch aktualisiert wurden, müssen Sie diese Einschränkungen beachten:
    - Wenn eine Toolchain den Namen Ihres Projekts schon verwendet hat, bevor Ihr Projekt aktualisiert wurde, hat die neue Toolchain, die für Ihr Projekt erstellt wurde, möglicherweise nicht genau denselben Namen wie Ihr Projekt. 
    - Wenn Sie keine Toolchains für Ihre Projekte finden, wechseln Sie zu anderen Organisationen, zu denen Sie gehören, und überprüfen Sie die Toolchains dort.
-   - Wenn Sie die Toolchain für eines Ihrer Projekte immer noch nicht finden, wird das betreffende Upgrade möglicherweise gerade noch durchgeführt. Wenn Sie sofort auf diese Toolchain zugreifen müssen, wenden Sie sich an den [Support ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}.
-
+   
 ## Toolchains - Übersicht
 {: #compare_toolchains}
 
-Wenn Sie ein oder mehr Projekte unter hub.jazz.net hatten, wurde für diese ein Upgrade auf Toolchains im {{site.data.keyword.contdelivery_short}}-Service automatisch durchgeführt, es sei denn, das Upgrade ist fehlgeschlagen. Upgrades können aufgrund ungültiger IBM Cloud-Konten oder -Organisationen fehlschlagen. Diese Konto- und Organisationsinhaber wurden per E-Mail über die Fehler und spezifischen Maßnahmen informiert, die sie durchführen müssen, um die Fehler zu beheben. Wenn Sie die Toolchain nicht sehen, aber sofort auf sie zugreifen müssen, wenden Sie sich an den [Support ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}. 
+Wenn Sie ein oder mehr Projekte unter hub.jazz.net hatten, wurde für diese ein Upgrade auf Toolchains im {{site.data.keyword.contdelivery_short}}-Service automatisch durchgeführt, es sei denn, das Upgrade ist fehlgeschlagen. Upgrades können aufgrund ungültiger IBM Cloud-Konten oder -Organisationen fehlschlagen. Diese Konto- und Organisationsinhaber wurden per E-Mail über die Fehler und spezifischen Maßnahmen informiert, die sie durchführen müssen, um die Fehler zu beheben. Wenn Sie Hilfe beim Lokalisieren der Toolchain für Ihr aktualisiertes Projekt benötigen, wenden Sie sich an den [Support ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}. 
 
 Toolchains ähneln Projekten, weisen jedoch einige wichtige Unterschiede auf:
 
 - Projekte können nur über ein Repository (repo) und eine Pipeline verfügen. Toolchains können so viele Repositorys und Pipelines besitzen wie nötig.
 - Toolchains können Tools enthalten, die in Projekten nicht verfügbar sind, wie zum Beispiel Slack, Sauce Labs, PagerDuty und {{site.data.keyword.DRA_full}}.
 
- **Hinweis**: {{site.data.keyword.DRA_short}} ist nur in der Region 'Vereinigte Staaten (Süden)' verfügbar.
+ {{site.data.keyword.DRA_short}} ist nur in der Region 'Vereinigte Staaten (Süden)' verfügbar.
+ {: tip}
  
 - Bei Projekten erfolgte die Pflege von Mitgliedschaften auf Projektebene. Der Zugriff auf Toolchains wird durch die {{site.data.keyword.Bluemix_notm}}-Organisation und die Toolchain verwaltet. Um mit einer Toolchain arbeiten zu können, müssen Sie Mitglied der Organisation sein, die die Toolchain enthält. Der Toolchain-Eigner hat mehr Kontrolle darüber, wer auf die Toolchain zugreifen und welche Aktionen er ausführen kann. Weitere Informationen hierzu finden Sie unter Schritt 2 in [Einführung in Ihre Toolchain](#upgrade_next_steps).
 - Abhängig vom Typ des Repositorys, das Sie in Ihrem Projekt unter hub.jazz.net verwendet haben, kann Ihre Toolchain ein GitHub.com-Repository oder ein {{site.data.keyword.gitrepos}}-Repository enthalten.
@@ -54,7 +59,7 @@ Mehr zu Toolchains erfahren Sie in [YouTube ![Symbol für externen Link](../../i
     - Wenn ein Benutzer nicht Mitglied der Organisation ist, zu der die Toolchain gehört, fügen Sie ihn über die Seite 'Organisationen
 verwalten' der Organisation hinzu.
     - Wenn Ihre Toolchain {{site.data.keyword.gitrepos}} verwendet, werden alle JazzHub-Projektmitglieder mit gültiger {{site.data.keyword.Bluemix_notm}}-ID mit denselben Berechtigungen zum {{site.data.keyword.gitrepos}}-Repository hinzugefügt, die sie im JazzHub-Projekt hatten. Wenn Ihr JazzHub-Projekt Mitglieder enthält, die keine gültige {{site.data.keyword.Bluemix_notm}}-ID haben, können sie sich für eine ID registrieren lassen. Nachdem sie registriert wurden, können Sie sie zum Repository hinzufügen.
-      Weitere Informationen zum Verwalten von Organisationen finden Sie in [Organisationen und Bereiche verwalten![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
+      Weitere Informationen zum Verwalten von Organisationen finden Sie in [Organisationen und Bereiche verwalten![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window}.
 
 2. Wenn Sie {{site.data.keyword.gitrepos}} verwenden, führen Sie die Authentifizierung mithilfe eines persönlichen Zugriffstokens oder eines SSH-Schlüssels durch. Weitere Informationen zu SSH-Schlüsseln finden Sie in [Persönliches Zugriffstoken oder SSH-Schlüssel für die Authentifizierung erstellen](/docs/services/ContinuousDelivery/git_working.html#git_authentication). Um eine Authentifizierung von einem externen Git-Client über HTTPS durchzuführen, führen Sie folgende Schritte aus:
     1. Wechseln Sie zur [Seite 'Zugriffstoken' ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} in Ihren {{site.data.keyword.gitrepos}}-Benutzereinstellungen.
@@ -63,11 +68,13 @@ verwalten' der Organisation hinzu.
     4. Für die Authentifizierung mit {{site.data.keyword.gitrepos}} von einem externen Git-Client aus über HTTPS verwenden Sie Ihren Benutzernamen und Ihr persönliches Zugriffstoken.
     5. Wenn Sie das lokale Repository Ihres JazzHub Git-Repositorys wiederverwenden wollen, verweisen Sie von diesem Repository aus auf das neue Repository in {{site.data.keyword.gitrepos}}. Wechseln Sie von einer Terminal-Shell aus in das Verzeichnis, in dem das JazzHub Git-Repository geklont wird. Geben Sie den Befehl `git remote set-url` wie folgt ein: `git remote set-url origin https://git.ng.bluemix.net/<Benutzer-ID>/<Name_des_neuen_Repositorys>`
 
-        **Tipp:** Verwenden Sie den Befehl `git remote -v`, um zu überprüfen, welche fernen Namen für welche fernen URLs festgelegt sind. Der standardmäßig verwendete ferne Name lautet `origin`. Wenn Sie eine erweiterte Konfiguration haben, lautet das Format des Befehls wie folgt: `git remote set-url <ferner_Name_der_JazzHub_Repo_verwendet> https://git.ng.bluemix.net/<Benutzer-ID>/<Name_des_neuen_Repositorys>`
+        Verwenden Sie den Befehl `git remote -v`, um zu überprüfen, welche fernen Namen für welche fernen URLs festgelegt sind. Der standardmäßig verwendete ferne Name lautet `origin`. Wenn Sie eine erweiterte Konfiguration haben, lautet das Format des Befehls wie folgt: `git remote set-url <ferner_Name_der_JazzHub_Repo_verwendet> https://git.ng.bluemix.net/<Benutzer-ID>/<Name_des_neuen_Repositorys>`
+        {: tip}
 
 3. Optional: Um die Entwicklungsreife Ihres Projekts, die von Ihrem Team verwendeten Verfahren und die Qualität Ihrer Codebasis zu untersuchen, fügen Sie Ihrer Toolchain IBM Cloud {{site.data.keyword.DRA_short}} hinzu. {{site.data.keyword.DRA_short}} wendet auf DevOps-Projekte Verfahren für die Analyse der Entwickler, des Teams und der Bereitstellung an. Weitere Informationen finden Sie in [Einführung in {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html).
 
-  **Hinweis**: {{site.data.keyword.DRA_short}} ist nur in der Region 'Vereinigte Staaten (Süden)' verfügbar.
+  {{site.data.keyword.DRA_short}} ist nur in der Region 'Vereinigte Staaten (Süden)' verfügbar.
+  {: tip}
 
 
 ## Fehlerbehebung
@@ -166,7 +173,8 @@ Wenn sich Ihre Toolchain in einer US-Organisation befinden soll, die Ihrer Nicht
    
    4. Löschen Sie die Toolchain, die durch den Upgradeprozess erstellt wurde. 
    
-      **Hinweis:** Das Git-Repository wird nicht automatisch gelöscht. Möglicherweise möchten Sie es manuell löschen oder vorläufig umbenennen. Wenn Sie bereits Änderungen daran vorgenommen haben, können Sie zu der künftigen Toolchain wechseln, um sie zu einem späteren Zeitpunkt zu verwenden.
+      Das Git-Repository wird nicht automatisch gelöscht. Möglicherweise möchten Sie es manuell löschen oder vorläufig umbenennen. Wenn Sie bereits Änderungen daran vorgenommen haben, können Sie die zukünftige Toolchain aktualisieren, um es zu einem späteren Zeitpunkt zu verwenden.
+      {: tip}
 
    5. Kehren Sie zum JazzHub-Projekt zurück. Es sollte für einen weiteren Upgradeversuch zurückgesetzt werden. Wenn es nicht zurückgesetzt wird, wenden Sie sich an hub@jazz.net und geben Sie die URL des Projekts an.
    

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-1-23"
+lastupdated: "2018-8-2"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -11,11 +11,13 @@ lastupdated: "2018-1-23"
     Indentation as per the previous template must be preserved.
 -->
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
-{:tip:.tip}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Umgebungseigenschaften und Ressourcen
 {: #deliverypipeline_environment}
@@ -29,7 +31,7 @@ Sie können vier Typen von Eigenschaften von der Registerkarte 'Umgebungseigensc
 * **Text** (Text): Ein Eigenschaftsschlüssel mit einem einzeiligen Wert.
 * **Text Area** (Textbereich): Ein Eigenschaftsschlüssel mit einem mehrzeiligen Wert.
 * **Secure** (Sicher): Ein Eigenschaftsschlüssel mit einem einzeiligen Wert. Der Wert wird in Form von Sternen angezeigt.
-* **Properties** (Eigenschaften): Eine Datei im Projektrepository. Diese Datei kann mehrere Eigenschaften enthalten. Jede Eigenschaft muss in einer eigenen Zeile stehen. Verwenden Sie Gleichheitszeichen (=), um Schlüssel und Werte der Paare zu trennen.
+* **Properties** (Eigenschaften): Eine Datei im Projektrepository. Diese Datei kann mehrere Eigenschaften enthalten. Jede Eigenschaft muss in einer eigenen Zeile stehen. Verwenden Sie Gleichheitszeichen (=), um Schlüssel und Werte der Paare zu trennen. Schließen Sie alle Zeichenfolgewerte in Anführungszeichen ein. Beispiel: MEINE_ZEICHENFOLGE="EIN ZEICHENFOLGEWERT".
 
 Sie können die Umgebungseigenschaften für einen Pipeline-Job prüfen, indem Sie den Befehl `env` im Job-Script ausführen.
 {:tip}
@@ -89,7 +91,8 @@ Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardm
 | MAVEN_HOME | Der Pfad zu Apache Maven 3.2.1. |
 | NODE_HOME | Der Pfad zu Node.js 0.10.29. |
 
-**Tipp**: Sie können Apache Ant Version 1.10 oder höher in den Scripts Ihrer Pipeline verwenden, indem Sie `ANT_HOME` auf `$ANT_JAVA8_HOME` und `JAVA_HOME` auf `$JAVA8_HOME` setzen.
+Sie können Apache Ant Version 1.10 oder höher in den Scripts Ihrer Pipeline verwenden, indem Sie `ANT_HOME` auf `$ANT_JAVA8_HOME` und `JAVA_HOME` auf `$JAVA8_HOME` setzen.
+{: tip}
 
 ### Bereitstellungseigenschaften
 
@@ -110,7 +113,8 @@ In jeder Pipeline sind mehrere Laufzeiten, Tools und Node-Module vorinstalliert.
 
 ### Laufzeiten und Tools
 
-*Hinweis:* Alle Links befinden sich im Ausgangsverzeichnis.
+Alle Links befinden sich im Ausgangsverzeichnis.
+{: tip}
 
 | Ressource | Linkname | Pfad |
 |----------|-----------|-----------|

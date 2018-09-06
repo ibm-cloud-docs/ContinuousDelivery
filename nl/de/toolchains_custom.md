@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Angepasste Toolchain-Vorlagen erstellen
@@ -18,7 +20,7 @@ lastupdated: "2018-2-26"
 Verbessern Sie Ihren DevOps-Workflow durch das Erstellen einer angepassten Toolchain-Vorlage. Sie können Zeit sparen, indem Sie mit einer vorhandenen Toolchain-Vorlage beginnen, oder Sie können eine Toolchain-Vorlage erstellen, die nur die benötigten Toolintegrationen enthält. Sie können Toolchain-Integrationen jederzeit hinzufügen oder entfernen.
 {:shortdesc}
 
-Sie haben verschiedene Möglichkeiten, [eine Toolchain zu erstellen](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}. Wenn Sie eine angepasste Toolchain-Vorlage erstellt haben, können Sie sie über das [Erstellen einer Bereitstellung mit der {{site.data.keyword.Bluemix_notm}}-Schaltfläche](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window} für die gemeinsame Nutzung zur Verfügung stellen. Details zum Toolchain-Vorlagen-SDK finden Sie in [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Ein Schritt-für-Schritt-Tutorial finden Sie auf der [Garage Method-Website](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
+Sie haben verschiedene Möglichkeiten, [eine Toolchain zu erstellen](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}. Wenn Sie eine angepasste Toolchain-Vorlage erstellt haben, können Sie sie über das [Erstellen einer Bereitstellung mit der {{site.data.keyword.Bluemix_notm}}-Schaltfläche](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window} für die gemeinsame Nutzung zur Verfügung stellen.   Details zum Toolchain-Vorlagen-SDK finden Sie in [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Ein Schritt-für-Schritt-Tutorial finden Sie auf der [Garage Method-Website](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
 
 
 ## Einführung
@@ -63,7 +65,7 @@ Wenn Sie die Vorlage geklont haben, verfügen Sie über ein einfaches GitHub-Rep
 
 
 Alle diese Dateien werden in den folgenden Abschnitten erläutert. Jeder Abschnitt enthält die Konfigurationsinformationen, die Sie bei der Weiterentwicklung Ihrer Toolchain als Referenz verwenden können.
-YAML ist eine Datenserialisierungssprache, die eine strikte Obermenge von JSON mit syntaktisch signifikanten Zeilenumbrüchen und Einrückungen ist. YAML erlaubt jedoch keine literalen Tabulatorzeichen. 
+YAML ist eine Datenserialisierungssprache, die eine strikte Obermenge von JSON mit syntaktisch signifikanten Zeilenumbrüchen und Einrückungen ist. YAML erlaubt jedoch keine literalen Tabulatorzeichen.
 
 ## Erklärung der Konfigurationsdateien
 {: #toolchains_custom_config_files}
@@ -97,7 +99,7 @@ Jeder Service-Teilbereich enthält die folgenden Informationen:
 
 ### Text aus anderen Dateien einschließen
 
-Alle Informationen für Ihre Toolchain können sich in der Datei `toolchain.yml` befinden. Möglicherweise möchten Sie jedoch separate Dateien für jede Toolchain-Benutzeroberfläche mit `$text` erstellen. Dadurch können Sie Ihre Toolchains einfacher verwalten und den Zeitaufwand für die Bearbeitung von Konfigurationsdateien reduzieren. Dieses Beispielsnippet aus der Datei `toolchain.yml` zeigt, wie die Inhalte der Datei `pipeline.yml` als Wert für `content` verwendet werden.
+Alle Informationen für Ihre Toolchain können sich in der Datei `toolchain.yml` befinden.  Möglicherweise möchten Sie jedoch separate Dateien für jede Toolchain-Benutzeroberfläche mit `$text` erstellen. Dadurch können Sie Ihre Toolchains einfacher verwalten und den Zeitaufwand für die Bearbeitung von Konfigurationsdateien reduzieren.  Dieses Beispielsnippet aus der Datei `toolchain.yml` zeigt, wie die Inhalte der Datei `pipeline.yml` als Wert für `content` verwendet werden.
 
 ```
   configuration:
@@ -118,7 +120,7 @@ messages:
 
   Die Zeichenfolgen in englischer Sprache befinden sich in der Datei `messages.yml`. Für die anderen Sprachen wird ein Sprachencode verwendet, wie z. B. `messages_de.yml`.   Die Liste der Sprachencodes finden Sie in [Tags for Identifying Languages](https://tools.ietf.org/html/rfc5646){: new_window}.
 
-   Um die ausgelagerte Zeichenfolge zu referenzieren, verwenden Sie `$ref`, um die Zeichenfolge abzurufen. Beispiel:
+   Um die ausgelagerte Zeichenfolge zu referenzieren, verwenden Sie `$ref`, um die Zeichenfolge abzurufen.  Beispiel:
 
 ```
   template:
@@ -185,7 +187,8 @@ In diesem Beispiel werden die Git-URL und Git-Verzweigung für eine neue Toolcha
 | has_issues | Eigenschaft | <`true` , `false`> | Issues verwenden |
 | enable_traceability | Eigenschaften |  <`true` , `false`> | Bestimmt, ob die Bereitstellung von Codeänderungen bei Commits durch Erstellen von Tags und Kommentaren und bei Problemen, die über die Commits referenziert werden, mit Bezeichnungen und Kommentaren verfolgt werden sollen.|
 
- **Hinweis:** Wenn Sie mehrere Repositorys definieren und sie mit `has_issues: true` konfigurieren, wird eine einzelne Instanz des GitHub Issue-Trackers zur Toolchain hinzugefügt. Der Tracker verfolgt Probleme für alle Repositorys, die auf `true` gesetzt wurden.
+ Wenn Sie mehrere Repositorys definieren und sie mit `has_issues: true` konfigurieren, wird eine einzelne Instanz des GitHub Issue-Trackers der Toolchain hinzugefügt. Der Tracker verfolgt Probleme für alle Repositorys, die auf `true` gesetzt wurden.
+ {: tip}
 
  Dieses Snippet zeigt ein Beispiel für diesen Abschnitt:
 
@@ -207,7 +210,7 @@ In diesem Beispiel werden die Git-URL und Git-Verzweigung für eine neue Toolcha
 
  Sie können Ihr Projekt mit einer Pipeline fortlaufend bereitstellen (Continuous Delivery). In diesem Dateiabschnitt werden die Konfigurationsdetails definiert, die für die Erstellung und Bereitstellung des Codes in den einzelnen GitHub- und Git Repo and Issue Tracking-Repositorys verwendet werden.
 
- Fügen Sie zunächst für jedes in Ihrer Toolchain definierte Repository einen übergeordneten Schlüssel hinzu, der einen Namen der zugehörigen Pipeline angibt. Es empfiehlt sich möglicherweise, diesen Schlüssel vom Namen des GitHub- oder Git Repo and Issue Tracking-Repositorys abzuleiten. Fügen Sie die folgenden Eigenschaften hinzu: 
+ Fügen Sie zunächst für jedes in Ihrer Toolchain definierte Repository einen übergeordneten Schlüssel hinzu, der einen Namen der zugehörigen Pipeline angibt. Es empfiehlt sich möglicherweise, diesen Schlüssel vom Namen des GitHub- oder Git Repo and Issue Tracking-Repositorys abzuleiten. Fügen Sie die folgenden Eigenschaften hinzu:
 
 | Element | Schlüssel/Eigenschaft | Wert | Beschreibung |
 |------|--------------|-------|-------------|
@@ -215,7 +218,7 @@ In diesem Beispiel werden die Git-URL und Git-Verzweigung für eine neue Toolcha
 | service_id | Eigenschaft | <`pipeline`> | Name des zu verwendenden Service |
 | parameters | Schlüssel |  |  |
 | name | Eigenschaft | <`repo_name`> | Entspricht dem im Abschnitt 'repos' definierten Namen |
-| ui-pipeline | Eigenschaft | <`true` , `false`> |'True', wenn die von dieser Pipeline bereitgestellten Anwendungen im Menü **App anzeigen** auf der Toolchain-Seite angezeigt werden. |
+| ui-pipeline | Eigenschaft | <`true` , `false`> |'True', wenn die von dieser Pipeline bereitgestellten Anwendungen im Menü **App anzeigen** auf der Toolchain-Seite angezeigt werden.  |
 | configuration | Schlüssel |  |  |
 | content | Eigenschaft | <`$ref(pipeline.yml)`> | Datei, die Ihre Pipelinedefinition definiert |
 | env | Schlüssel |  |  |
@@ -253,7 +256,7 @@ In diesem Beispiel werden die Git-URL und Git-Verzweigung für eine neue Toolcha
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
        execute: true
- ```      
+ ```
  {: codeblock}
 
 4\. **Informationen zur Bereitstellung:**
@@ -270,7 +273,7 @@ In diesem Beispiel werden die Git-URL und Git-Verzweigung für eine neue Toolcha
 |------|--------------|-------|-------------|
 | deploy | Schlüssel |  | Name des Bereitstellungsabschnitts |
 | schema | Eigenschaft | <`deploy.json`> | Datei, die das Layout der Benutzerschnittstelle für die Konfiguration der Bereitstellungsdetails definiert. |
-| service-category | Eigenschaft | <`pipeline`> | Service, der die Bereitstellungskonfigurationen verwendet.|
+| service-category | Eigenschaft | <`pipeline`> | Service, der die Bereitstellungskonfigurationen verwendet. |
 | parameters | Schlüssel |  |  |
 | prod-region | Eigenschaft | <`"{{region}}"`> | Definiert die {{site.data.keyword.Bluemix_notm}}-Region für die Produktionsphase. |
 | prod-organization | Eigenschaft | <`"{{organization}}"`> | Definiert die {{site.data.keyword.Bluemix_notm}}-Organisation für die Produktionsphase. |

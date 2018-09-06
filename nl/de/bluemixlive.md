@@ -4,14 +4,17 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
@@ -59,7 +62,8 @@ Ein Lernprogramm zur Verwendung der Live Edit-Funktion von {{site.data.keyword.B
 
 Wenn Sie die Dateien in Ihrer Web-IDE ändern, werden sie automatisch für Ihre Anwendungsinstanz unter {{site.data.keyword.Bluemix_notm}} neu bereitgestellt. Wenn Sie die Node-Anwendung erneut starten müssen, klicken Sie in der Ausführungsleiste auf die Schaltfläche **Erneut starten**.
 
-**Hinweis:** Für ein möglichst konsistentes Verarbeitungsverhalten bei Verwendung des Live Edit-Features von {{site.data.keyword.Bluemix_notm}} Live Sync ist eine zusätzliche Speicherkapazität von 256 MB erforderlich und wird hinzugefügt.
+Für ein möglichst konsistentes Verarbeitungsverhalten bei Verwendung des Live Edit-Features von {{site.data.keyword.Bluemix_notm}} Live Sync ist eine zusätzliche Speicherkapazität von 256 MB erforderlich und wird hinzugefügt.
+{: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} Live Debug
 {: #live-debug}
@@ -92,11 +96,12 @@ Wenn Sie sich angemeldet haben, wird die {{site.data.keyword.Bluemix_notm}} Live
 
 ### Debugging {: #debug}
 
-**Voraussetzung:** Google Chrome und Node 4 sind erforderlich. 
+**Voraussetzung:** Google Chrome und Node 4 sind erforderlich.
 
 Das Debugging-Feature bietet folgende Funktionalität:  
 * Festlegen von Unterbrechungspunkten im App-Code, um die Ausführung in einer bestimmten Zeile anzuhalten.
-  **Hinweis:** Unterbrechungspunkte werden nicht im Hauptprogramm, sondern in den Einstiegspunkten unterstützt.
+  Unterbrechungspunkte werden nicht im Hauptprogramm, sondern in den Einstiegspunkten unterstützt.
+  {: tip}
 * Bearbeiten von Unterbrechungspunktbedingungen, um die Ausführung nur dann anzuhalten, wenn bestimmte Kriterien erfüllt sind.
 * Überprüfen des Status lokaler Variablen und Felder.
 * Sofortiges Anzeigen der Debugausgabe von `console.log()`-Aufrufen. Diese Aktion ist schneller als das Überwachen von cf-Protokollen.
@@ -133,7 +138,8 @@ Wenn {{site.data.keyword.Bluemix_notm}} Live Debug installiert wurde, können Si
 
 Übertragen Sie die App per Push-Operation und navigieren Sie anschließend zu `https://_app-host.mybluemix.net_/bluemix-debug/manage`, um auf die {{site.data.keyword.Bluemix_notm}}-Debug-Benutzerschnittstelle zuzugreifen. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie Ihren IBM ID-Benutzernamen und das Kennwort oder einen Einmalkenncode ein.    
 
-**Hinweis:** Es kann etwa eine Minute dauern, bis der Debugger initialisiert wird.
+Es kann etwa eine Minute dauern, bis der Debugger initialisiert ist.
+{: tip}
 
 ### App-Konfigurationen wiederherstellen und {{site.data.keyword.Bluemix_notm}} Live Debug inaktivieren {: #restore_live_debug}
 

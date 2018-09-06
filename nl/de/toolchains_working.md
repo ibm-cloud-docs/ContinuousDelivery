@@ -3,13 +3,18 @@
 copyright:
   years: 2015, 2018
 
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Toolchains erstellen
 {: #toolchains_getting_started}
@@ -19,8 +24,7 @@ Eine *Toolchain* ist eine Gruppe von Toolintegrationen, die Entwicklungs-, Berei
 
 Offene Toolchains stehen in den öffentlichen und den dedizierten Umgebungen von {{site.data.keyword.Bluemix}} (Public bzw. Dedicated) zur Verfügung. Sie können eine Toolchain auf zwei Arten erstellen: Entweder Sie verwenden eine Vorlage zum Erstellen einer Toolchain oder Sie erstellen eine Toolchain aus einer App.
 
-Jede Toolchain ist einer bestimmten Organisation (org) zugeordnet und jeder Benutzer, der Mitglied dieser Organisation ist, kann für jede der ihr zugeordneten Toolchains zu der Zugriffssteuerungsliste hinzugefügt werden. Weitere Informationen zur Zugriffssteuerung für Toolchains enthält [Zugriff verwalten](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}. Bevor Sie eine Toolchain erstellen, müssen Sie sicherstellen, dass Sie in der Organisation arbeiten, in der Sie die Toolchain erstellen wollen. Die Organisation, in der Sie gerade arbeiten, wird auf der Menüleiste angezeigt. Um zu einer anderen Organisation zu wechseln, klicken Sie in der Menüleiste auf die Organisation und wählen Sie dann die Organisation aus, zu der Sie wechseln möchten.
-
+Jede Toolchain ist einer bestimmten Ressourcengruppe oder Organisation zugeordnet. Wenn eine Toolchain einer Ressourcengruppe zugeordnet ist, kann jeder Benutzer mit einer IAM-Berechtigung (Identity and Access Management) als Anzeigeberechtigter für die Toolchain-Ressource oder die Ressourcengruppe, in der sie enthalten ist, auf die Toolchain zugreifen. Wenn die Toolchain einer Organisation zugeordnet ist, kann jeder Benutzer, der Mitglied dieser Organisation ist, der Zugriffssteuerungsliste für jede der ihr zugeordneten Toolchains hinzugefügt werden. Weitere Informationen zur Zugriffssteuerung für Toolchains in Cloud Foundry-Organisationen finden Sie im Abschnitt [Zugriff auf Toolchains in Cloud Foundry-Organisationen verwalten](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}. Weitere Informationen zur Zugriffssteuerung für Toolchains in Ressourcengruppen finden Sie im Abschnitt [Zugriff auf Toolchains in Ressourcengruppen verwalten](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}.
 
 ##Toolchain aus einer Vorlage erstellen   
 {: #creating_a_toolchain_from_a_template}
@@ -34,7 +38,8 @@ Sie können eine Vorlage als Ausgangspunkt zum [Erstellen einer Toolchain ![Symb
 1. Klicken Sie auf der Seite **Toolchain erstellen** auf eine Toolchain-Vorlage.
 1. Überprüfen Sie das Diagramm der Toolchain, die Sie gerade erstellen. In dem Diagramm wird jede Toolintegration in ihrer aktuellen Lebenszyklusphase in der Toolchain angezeigt.
 
- **Tipp**: Für einige der Toolchain-Vorlagen sind mehrere Instanzen einer Toolintegration vorhanden. Die Vorlage für die Microservice-Toolchain unter {{site.data.keyword.Bluemix_notm}} Public enthält beispielsweise drei Instanzen von GitHub und drei Instanzen von Delivery Pipeline - jeweils eine Instanz für jeden der drei Microservices.
+ Für einige der Toolchain-Vorlagen sind mehrere Instanzen einer Toolintegration vorhanden. Die Vorlage für die Microservice-Toolchain unter {{site.data.keyword.Bluemix_notm}} Public enthält beispielsweise drei Instanzen von GitHub und drei Instanzen von Delivery Pipeline - jeweils eine Instanz für jeden der drei Microservices.
+ {: tip}
 
  Das Diagramm in der folgenden Abbildung ist ein Beispiel. Wenn Sie eine Toolchain erstellen, zeigt das Diagramm jede Toolintegration an, die Teil der Toolchain ist.
 ![Toolchain-Diagramm](images/toolchain_diagram2.png)
@@ -43,7 +48,10 @@ Sie können eine Vorlage als Ausgangspunkt zum [Erstellen einer Toolchain ![Symb
 
  * Der Name der Toolchain macht sie in {{site.data.keyword.Bluemix_notm}} identifizierbar. Wenn Sie einen anderen Namen verwenden möchten, ändern Sie den Namen der Toolchain.
  * Die Region, in der die Toolchain erstellt wird. Wenn Sie eine andere Region verwenden möchten, wählen Sie eine Region aus der Liste verfügbarer Regionen aus.
- * Die Organisation, in der die Toolchain erstellt wird. Wenn Sie eine andere Organisation verwenden möchten, wählen Sie eine Organisation aus der Liste verfügbarer Organisationen aus.
+ * Die Ressourcengruppe oder Organisation, in der die Toolchain erstellt wird. Klicken Sie auf den Link, um zwischen der Auswahl von Ressourcengruppen und Organisationen zu wechseln. Wenn Sie eine andere Ressourcengruppe oder Organisation verwenden möchten, wählen Sie sie aus der Liste verfügbarer Ressourcengruppen bzw. Organisationen aus.
+ 
+   Ressourcengruppen sind nur in der Region 'Vereinigte Staaten (Süden)' verfügbar.
+   {: tip}
 
 1. Wählen Sie im Abschnitt mit den Toolintegrationen jede Toolintegration aus, die Sie für Ihre Toolchain konfigurieren möchten. Einige Toolintegrationen erfordern keine Konfiguration. Informationen zum Konfigurieren der Toolintegrationen finden Sie unter [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Klicken Sie auf **Erstellen**. Zum Einrichten Ihrer Toolchain werden mehrere verschiedene Schritte automatisch ausgeführt. Die Toolintegrationen, die eingerichtet werden, unterscheiden sich voneinander, je nachdem, welche Toolchain-Vorlage Sie ausgewählt haben und ob Sie {{site.data.keyword.Bluemix_notm}} Public oder {{site.data.keyword.Bluemix_notm}} Dedicated verwenden. Wenn Sie eine Microservice-Toolchain unter {{site.data.keyword.Bluemix_notm}} Public erstellen, werden zum Beispiel die folgenden Schritte ausgeführt:
@@ -77,10 +85,11 @@ Sie können eine Toolchain aus Ihrer App erstellen. Die Toolchain kann kontinuie
 
 Nachdem Sie die Toolchain und die zugehörigen Toolintegrationen konfiguriert haben, können Sie eine grafische Darstellung der Toolchain anzeigen.
 
-1. Klicken Sie im DevOps-Dashboard auf der Seite **Toolchains** auf die Toolchain, um die zugehörige Übersichtsseite zu öffnen. Alternativ können Sie auf der Übersichtsseite der App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** klicken. Klicken Sie anschließend auf **Übersicht**.
+1. Wählen Sie im DevOps-Dashboard auf der Seite **Toolchains** eine **RESSOURCENGRUPPE** oder **CLOUD FOUNDRY-ORGANISATION** aus. Alle Toolchains, die in der ausgewählten Ressourcengruppe bzw. Cloud Foundry-Organisation enthalten sind, werden angezeigt. Klicken Sie auf die Toolchain, die Sie anzeigen möchten, um die zugehörige Übersichtsseite zu öffnen. Alternativ können Sie auf der Übersichtsseite der App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** klicken. Klicken Sie anschließend auf **Übersicht**.
 2. Um auf eine Toolintegration in Ihrer Toolchain zuzugreifen, klicken Sie auf das entsprechende Tool.
 
- **Tipp**: Wenn Sie über mehr als ein GitHub-, {{site.data.keyword.ghe_short}}- oder Git-Repository verfügen, sind möglicherweise mehrere Karten für dieselbe Toolintegration vorhanden, da jedes Repository durch eine eigene Karte dargestellt wird. Wenn Sie über mehrere Pipelines verfügen, sind gegebenenfalls mehrere Karten für dieselbe Toolintegration vorhanden, da jede Pipeline durch ihre eigene Karte dargestellt wird. Wenn Sie eine Microservice-Toolchain erstellen, besitzt jeder dieser drei Microservices sein eigenes GitHub-, {{site.data.keyword.ghe_short}}- oder Git-Repository und seine eigene Pipeline.
+ Wenn Sie über mehr als ein GitHub-, {{site.data.keyword.ghe_short}}- oder Git-Repository verfügen, sind möglicherweise mehrere Karten für dieselbe Toolintegration vorhanden, da jedes Repository durch eine eigene Karte dargestellt wird. Wenn Sie über mehrere Pipelines verfügen, sind gegebenenfalls mehrere Karten für dieselbe Toolintegration vorhanden, da jede Pipeline durch ihre eigene Karte dargestellt wird. Wenn Sie eine Microservice-Toolchain erstellen, besitzt jeder dieser drei Microservices sein eigenes GitHub-, {{site.data.keyword.ghe_short}}- oder Git-Repository und seine eigene Pipeline.
+ {: tip}
 
 ## Relevantes Lernprogramm: Toolchains verwenden
 {: #toolchain_tutorials}

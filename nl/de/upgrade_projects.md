@@ -2,12 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Upgrade Ihres {{site.data.keyword.jazzhub_short}}-Projekts zu einer Toolchain durchführen
 {: #upgrade_projects}
@@ -56,9 +61,10 @@ gestartet werden. Wenn jedoch der Administrator, der die Durchführung des Upgra
 ## Upgrade eines Projekts zu einer Toolchain durchführen
 {: #project_to_toolchain}
 
-**Wichtig:** Projekte unter hub.jazz.net und Toolchains werden im Süden der Vereinigten Staaten gehostet. Wenn Ihr Projekt
+Projekte unter hub.jazz.net und Toolchains werden im Süden der USA gehostet. Wenn Ihr Projekt
 für die Bereitstellung von Apps in anderen Regionen konfiguriert wurde, wird es auch nach dem Upgrade auf eine Toolchain weiterhin Apps
 in diesen Regionen bereitstellen.
+{: tip}
 
 Wenn Ihr Projekt bereit für das Upgrade ist, wird eine Nachricht auf der Karte des Projekts und auf seiner Übersichtsseite angezeigt.
 
@@ -66,9 +72,10 @@ Wenn Ihr Projekt bereit für das Upgrade ist, wird eine Nachricht auf der Karte 
 
 ![Nachricht 'Es ist an der Zeit für das Upgrade'](images/banner-ready-to-upgrade.png)
 
-**Tipp:** Im Menü auf der Seite 'Meine Projekte' finden Sie Projekte, die bereit für das Upgrade sind:
+Im Menü auf der Seite 'Meine Projekte' finden Sie Projekte, die bereit für das Upgrade sind:
 
 ![Abbildung des Menüelements 'Projekte für Upgrade'](images/menu-projects-to-upgrade.png)
+{: tip}
 
 Wenn Sie die Durchführung des Upgrades starten, sind die Pipeline-Stages in Ihrem Projekt gesperrt. Sie können sie weder ausführen noch ändern. Wenn Sie das Upgrade durch Löschen der Toolchain zurücksetzen, wird die Pipeline entsperrt.
 
@@ -169,8 +176,8 @@ angezeigt wird:
 
    ![Nachricht im Banner, dass das Upgrade für das Projekt durchgeführt wurde](images/banner-upgraded.png)
 
-   **Hinweis:** Wenn in der Nachricht 'Jetzt Upgrade durchführen' steht, ist das Durchführen des Upgrades
-fehlgeschlagen. Klicken Sie auf den Link **Jetzt Upgrade durchführen**, um es erneut zu versuchen.
+   Wenn in der Nachricht 'Jetzt Upgrade durchführen' steht, ist das Durchführen des Upgrades fehlgeschlagen. Klicken Sie auf den Link **Jetzt Upgrade durchführen**, um es erneut zu versuchen.
+   {: tip}
 
    ![Nachricht im Banner, die angibt, dass das Projekt für die Durchführung eines Upgrades bereit ist](images/banner-ready-to-upgrade.png)
 
@@ -178,7 +185,8 @@ fehlgeschlagen. Klicken Sie auf den Link **Jetzt Upgrade durchführen**, um es e
     - Jedes Teammitglied muss über ein gültiges {{site.data.keyword.Bluemix_notm}}-Konto verfügen. Teammitglieder, die kein solches Konto besitzen, müssen sich entsprechend [anmelden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/registration){:new_window}.
     - Erteilen Sie Mitgliedern der Organisation Zugriff auf die Toolchain über die Toolchain-Seite 'Verwalten'. Vorhandene Projektmitglieder werden im Rahmen des Upgradeprozesses als Mitglieder der Toolchain hinzugefügt. Weitere Informationen zur Zugriffssteuerung für Toolchains finden Sie in [Zugriff verwalten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
     - Wenn ein Benutzer nicht Mitglied der Organisation ist, zu der die Toolchain gehört, fügen Sie ihn über die Seite 'Organisationen verwalten' der Organisation hinzu.
-    - Wenn Ihre Toolchain {{site.data.keyword.gitrepos}} verwendet, werden alle JazzHub-Projektmitglieder mit gültiger {{site.data.keyword.Bluemix_notm}}-ID mit denselben Berechtigungen zum {{site.data.keyword.gitrepos}}-Repository hinzugefügt, die sie im JazzHub-Projekt hatten. Wenn Ihr JazzHub-Projekt Mitglieder enthält, die keine gültige {{site.data.keyword.Bluemix_notm}}-ID haben, sollten sie für eine ID registriert und zum Repository hinzugefügt werden. Weitere Informationen zum Verwalten von Organisationen finden Sie in [Organisationen und Bereiche verwalten![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
+    - Wenn Ihre Toolchain {{site.data.keyword.gitrepos}} verwendet, werden alle JazzHub-Projektmitglieder mit gültiger {{site.data.keyword.Bluemix_notm}}-ID mit denselben Berechtigungen zum {{site.data.keyword.gitrepos}}-Repository hinzugefügt, die sie im JazzHub-Projekt hatten. Wenn Ihr JazzHub-Projekt Mitglieder enthält, die keine gültige {{site.data.keyword.Bluemix_notm}}-ID haben, sollten sie für eine ID registriert und zum Repository hinzugefügt werden.
+      Weitere Informationen zum Verwalten von Organisationen finden Sie in [Organisationen und Bereiche verwalten![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
 
 3. Verwenden Sie anstatt der Tools aus Ihrem {{site.data.keyword.jazzhub_short}}-Projekt die Tools aus Ihrer Toolchain. Verwenden Sie zum Bearbeiten von Code über einen Browser zum Beispiel die Web-IDE aus Ihrer Toolchain.
 
@@ -194,8 +202,8 @@ Schritte aus:
     4. Für die Authentifizierung bei {{site.data.keyword.gitrepos}} von einem externen Git-Client aus über HTTPS verwenden Sie Ihren Benutzernamen und Ihr persönliches Zugriffstoken.
     5. Wenn Sie das lokale Repository Ihres JazzHub Git-Repositorys wiederverwenden wollen, verweisen Sie von diesem Repository aus auf das neue Repository in {{site.data.keyword.gitrepos}}. Wechseln Sie von einer Shell in einem Terminal in das Verzeichnis, in dem das JazzHub Git-Repository geklont wird. Geben Sie den Befehl `git remote set-url` wie folgt ein: `git remote set-url origin https://git.ng.bluemix.net/<Benutzer-ID>/<Name_des_neuen_Repositorys>`
 
-        **Tipp:** Verwenden Sie den Befehl `git remote -v`, um zu überprüfen, welche fernen Namen
-für welche fernen URLs festgelegt sind. Der standardmäßig verwendete ferne Name lautet `origin`. Wenn Sie eine erweiterte Konfiguration haben, lautet das Format des Befehls wie folgt: `git remote set-url <ferner_Name_der_JazzHub_Repo_verwendet> https://git.ng.bluemix.net/<Benutzer-ID>/<Name_des_neuen_Repositorys>`
+        Verwenden Sie den Befehl `git remote -v`, um zu überprüfen, welche fernen Namen für welche fernen URLs festgelegt sind. Der standardmäßig verwendete ferne Name lautet `origin`. Wenn Sie eine erweiterte Konfiguration haben, lautet das Format des Befehls wie folgt: `git remote set-url <ferner_Name_der_JazzHub_Repo_verwendet> https://git.ng.bluemix.net/<Benutzer-ID>/<Name_des_neuen_Repositorys>`
+        {: tip}
 
 5. Überlegen Sie nach dem Einrichten und der anfänglichen Verwendung Ihrer Toolchain, ob Sie folgende Schritte ausführen wollen, damit sichergestellt ist, dass Ihr Projekt ausschließlich von Ihnen verwendet wird:
     - Fügen Sie Ihrem Projektnamen ein Suffix hinzu, um anzugeben, dass es nicht verwendet werden darf. Sie können beispielsweise `_DO_NOT_USE` (nicht verwenden) an das Ende des Projektnamens anfügen.
@@ -318,7 +326,8 @@ Wenn sich Ihre Toolchain in einer US-Organisation befinden soll, die Ihrer Nicht
    
    4. Löschen Sie die Toolchain, die durch den Upgradeprozess erstellt wurde. 
    
-      **Hinweis:** Das Git-Repository wird nicht automatisch gelöscht. Möglicherweise möchten Sie es manuell löschen oder vorläufig umbenennen. Wenn Sie bereits Änderungen am Repository vorgenommen haben, können Sie zu der künftigen Toolchain wechseln, um sie zu einem späteren Zeitpunkt zu verwenden.
+      Das Git-Repository wird nicht automatisch gelöscht. Möglicherweise möchten Sie es manuell löschen oder vorläufig umbenennen. Wenn Sie das Repository bereits geändert haben, können Sie die zukünftige Toolchain aktualisieren, um es zu einem späteren Zeitpunkt zu verwenden.
+      {: tip}
 
    5. Kehren Sie zum JazzHub-Projekt zurück. Es sollte für einen weiteren Upgradeversuch zurückgesetzt werden. Wenn es nicht zurückgesetzt wird, wenden Sie sich an hub@jazz.net und geben Sie die URL des Projekts an.
    

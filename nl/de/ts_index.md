@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-7-19"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -24,7 +24,6 @@ Hier erhalten Sie Antworten auf allgemeine Fragen zur Verwendung von {{site.data
 
 Wenn {{site.data.keyword.Bluemix_notm}} nicht für den Zugriff auf Ihr GitHub-Konto autorisiert ist, kann die Toolintegration nicht zur Toolchain hinzugefügt werden.
 
-
 Wenn Sie die GitHub-Toolintegration beim Erstellen Ihrer Toolchain konfigurieren, befolgen Sie diese Schritte, um eine Autorisierung mit GitHub durchzuführen:
 
   1. Klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **GitHub**.
@@ -42,10 +41,29 @@ Wenn Sie bereits über eine Toolchain verfügen, aktualisieren Sie die Konfigura
 ## Warum wird beim Versuch, eine Toolchain zu erstellen, eine Fehlernachricht angezeigt?
 {: #cannot_create_toolchain}
 
-Wenn Sie eine Toolchain erstellen möchten und eine Fehlernachricht erhalten, entfernen Sie mindestens eine Toolchain aus der Organisation und erstellen Sie dann Ihre Toolchain erneut.
+Wenn Sie eine Toolchain in einer Organisation erstellen möchten und die folgende Fehlernachricht erhalten, entfernen Sie mindestens eine Toolchain aus der Organisation und erstellen Sie dann Ihre Toolchain erneut.
 
 `Diese Organisation enthält 200 Toolchains, was dem Maximalwert entspricht. Bevor Sie eine weitere Toolchain hinzufügen können, müssen Sie zuvor eine oder mehrere Toolchain aus der Organisation entfernen.`
 
+
+## Warum wird auf der Seite 'Toolchains' angezeigt, dass der Lite-Plan des Service {{site.data.keyword.contdelivery_short}} überschritten wurde?
+
+{{site.data.keyword.contdelivery_short}} bietet zwei Pläne: Lite und Professional. Wenn Sie den {{site.data.keyword.contdelivery_short}}-Lite-Plan verwenden, können Sie Toolchains bis zu den Grenzwerten des Plans kostenlos verwenden. Die Fehlernachricht weist darauf hin, dass Sie einen oder mehrere Grenzwerte des Lite-Plans überschritten haben. Sie könnten den Plan beispielsweise überschreiten, wenn Sie zu viele berechtigte Benutzer haben, die der Instanz des Service {{site.data.keyword.contdelivery_short}} zugeordnet sind, oder wenn Sie die maximale Anzahl von {{site.data.keyword.deliverypipeline}}-Jobs ausgeführt haben. Weitere Informationen zu den Bedingungen Ihres Plans finden Sie unter [Einschränkungen beim Plan und bei der Nutzung](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+
+
+## Ich habe eine Toolchain erstellt. Warum zeigt die Seite 'Toolchains' an, dass ein Service Continuous Delivery erforderlich ist?
+
+Die Bedingungen des Plans für die Instanz des Service {{site.data.keyword.contdelivery_short}}, die sich in derselben Ressourcengruppe oder Organisation wie die Toolchain befindet, steuern die Verwendung einiger der Toolintegrationen ({{site.data.keyword.deliverypipeline}}, Eclipse Orion-{{site.data.keyword.webide}} und {{site.data.keyword.gitrepos}}), die im Service enthalten sind. Die Fehlernachricht gibt an, dass die Ressourcengruppe bzw. die Organisation die erforderliche Instanz des Service {{site.data.keyword.contdelivery_short}} nicht enthält. Weitere Informationen zu den Bedingungen Ihres Plans finden Sie unter [Einschränkungen beim Plan und bei der Nutzung](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+
+
+## Ich habe eine Toolchain in einer Cloud Foundry-Organisation erstellt. Warum zeigt die Seite 'Toolchains' an, dass ein Service Continuous Delivery erforderlich ist?
+
+Wenn Sie eine Toolchain in einer Ressourcengruppe oder Organisation erstellen, die keine Instanz des Service {{site.data.keyword.contdelivery_short}} enthält, versucht die Toolchain-Plattform, eine Instanz des Service mithilfe des Lite-Plans automatisch zu erstellen. Die Fehlernachricht weist darauf hin, dass die Toolchain-Plattform die Serviceinstanz nicht erstellen konnte.
+
+Dieser Fehler kann auftreten, wenn Sie eine Toolchain in der Region 'Vereinigte Staaten (Süden)' und in einer Cloud Foundry-Organisation erstellen, für die es noch keine Instanz von {{site.data.keyword.contdelivery_short}} gibt. In der Region 'Vereinigte Staaten (Süden)' müssen Sie alle neuen Instanzen des Service {{site.data.keyword.contdelivery_short}} in Ressourcengruppen erstellen. 
+
+Sie können entweder die Toolchain in einer Ressourcengruppe erstellen oder die Toolchain in einer Organisation erstellen, die bereits über eine Instanz von {{site.data.keyword.contdelivery_short}} verfügt.
+  
 
 ## Warum wird beim Versuch, eine App auf {{site.data.keyword.Bluemix_notm}} bereitzustellen, eine Fehlernachricht angezeigt?
 {: #org_outofmemory}
@@ -84,7 +102,6 @@ Führen Sie bei Verwendung der Befehlszeilenschnittstelle 'cf' die folgenden Sch
 ![Ausführungsleiste](images/webide_runbar_light.png)   
 
 Beim Bearbeiten einer Node.js-App in der Web-IDE sind die {{site.data.keyword.Bluemix_notm}}-Symbole für Live Edit, den schnellen Neustart und das Debugging in der Ausführungsleiste in folgenden Fällen nicht verfügbar:
-
 
 
 * Die Datei `manifest.yml` ist nicht auf der höchsten Ebene Ihres Projekts gespeichert.
