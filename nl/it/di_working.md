@@ -2,15 +2,17 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-3-23"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Utilizzo di {{site.data.keyword.DRA_short}} (beta)
 {: #di_working}
@@ -18,7 +20,8 @@ lastupdated: "2018-3-23"
 Con {{site.data.keyword.DRA_full}}, puoi mantenere e migliorare la qualità del tuo codice in {{site.data.keyword.Bluemix_notm}} monitorando le tue distribuzioni per identificare i rischi prima che vengano rilasciate, analizzare le modifiche dello sviluppo per determinare la probabilità di errori o migliorare le interazioni del tuo team.
 {:shortdesc}
 
-**Nota**: {{site.data.keyword.DRA_short}} è disponibile solo nella regione Stati Uniti Sud.
+{{site.data.keyword.DRA_short}} è disponibile solo nella regione Stati Uniti Sud.
+{: tip}
 
 {{site.data.keyword.DRA_short}} raccoglie e analizza i risultati dalle verifiche di unità, dalle verifiche funzionali e dagli strumenti di copertura del codice per determinare se il tuo codice soddisfa le politiche predefinite nei gate specificati nel tuo processo di distribuzione. Se il tuo codice non soddisfa o supera una politica, la distribuzione viene interrotta impedendo così il rilascio dei rischi. Puoi utilizzare {{site.data.keyword.DRA_short}} come una rete di sicurezza per il tuo ambiente di fornitura continua o come modo per implementare e migliorare gli standard di qualità. 
 

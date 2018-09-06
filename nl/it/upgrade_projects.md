@@ -2,12 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Aggiorna il tuo progetto {{site.data.keyword.jazzhub_short}} a una toolchain
 {: #upgrade_projects}
@@ -52,7 +57,8 @@ Puoi trovare informazioni sulle toolchain su [YouTube ![Icona link esterno](../.
 ## Aggiornamento da un progetto a una toolchain
 {: #project_to_toolchain}
 
-**Importante:** i progetti in hub.jazz.net e le toolchain sono entrambi ospitati nella regione Stati Uniti Sud. Se il tuo progetto è stato configurato per distribuire le applicazioni in una regione differente, le distribuirà comunque a tale regione dopo essere stato aggiornato a una toolchain.
+I progetti in hub.jazz.net e le toolchain sono entrambi ospitati nella regione degli Stati Uniti Sud. Se il tuo progetto è stato configurato per distribuire le applicazioni in una regione differente, le distribuirà comunque a tale regione dopo essere stato aggiornato a una toolchain.
+{: tip}
 
 Quando il tuo progetto è pronto per essere aggiornato, viene visualizzato un messaggio nella scheda del progetto e nella pagina della panoramica.
 
@@ -60,9 +66,10 @@ Quando il tuo progetto è pronto per essere aggiornato, viene visualizzato un me
 
 ![Ora del messaggio pronto per l'aggiornamento](images/banner-ready-to-upgrade.png)
 
-**Suggerimento:** puoi trovare i progetti che sono pronti per l'aggiornamento dal menu nella pagina dei progetti personali:
+Puoi trovare i progetti che sono pronti per l'aggiornamento dal menu nella pagina dei progetti personali:
 
 ![Immagine della voce del menu progetti per l'aggiornamento](images/menu-projects-to-upgrade.png)
+{: tip}
 
 Quando avvii l'aggiornamento, le fasi della pipeline nel tuo progetto vengono bloccate. Non potrai eseguirle o modificarle. Se ripristini l'aggiornamento eliminando la toolchain, la pipeline viene sbloccata.
 
@@ -150,7 +157,8 @@ Quando ritorni al tuo progetto, il messaggio di aggiornamento viene nuovamente v
 
    ![Messaggio nel banner che indica che il progetto è stato aggiornato](images/banner-upgraded.png)
 
-   **Nota:** se il messaggio indica "upgrade now," l'aggiornamento non è riuscito. Fai clic sul link **upgrade now** per riprovare.
+   Se il messaggio indica "upgrade now," l'aggiornamento non è riuscito. Fai clic sul link **upgrade now** per riprovare.
+   {: tip}
 
    ![Messaggio nel banner che indica che il progetto è pronto per l'aggiornamento](images/banner-ready-to-upgrade.png)
 
@@ -170,7 +178,8 @@ Quando ritorni al tuo progetto, il messaggio di aggiornamento viene nuovamente v
     4. Per effettuare l'autenticazione con {{site.data.keyword.gitrepos}} da un client Git esterno tramite https, utilizza il tuo nome utente e il token di accesso personale.
     5. Se vuoi riutilizzare il repository locale del tuo repository Git JazzHub, punta il repository al nuovo repository in {{site.data.keyword.gitrepos}}. Da una shell in un terminale, passa alla directory in cui viene clonato il repository Git JazzHub Git. Immetti il comando `git remote set-url`: `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        **Suggerimento:** per controllare su quali nomi remoti sono impostati determinati URL remoti, utilizza il comando `git remote -v`. Il nome remoto predefinito è `origin`. Se hai una configurazione più avanzata, il formato del comando è il seguente: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        Per controllare su quali nomi remoti sono impostati determinati URL remoti, utilizza il comando `git remote -v`. Il nome remoto predefinito è `origin`. Se hai una configurazione più avanzata, il formato del comando è il seguente: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        {: tip}
 
 5. Una volta che la tua toolchain è configurata e hai iniziato a utilizzarla, valuta la possibilità di effettuare tutti o una parte dei seguenti passi per garantire che nessuno utilizzi il tuo progetto:
     - Aggiungi un suffisso al nome del tuo progetto per indicare che non deve essere utilizzato. Potresti aggiungere `_DO_NOT_USE` alla fine del nome progetto.
@@ -288,7 +297,8 @@ Se desideri che la tua toolchain sia in un'organizzazione statunitense che corri
    
    4. Elimina la toolchain creata attraverso il processo di upgrade. 
    
-      **Nota:** il repository Git non viene eliminato automaticamente. Per ora potresti volerlo eliminare manualmente o rinominare. Se già hai modificato il repository, puoi passare alla futura toolchain per utilizzarla in seguito.
+      Il repository Git non viene eliminato automaticamente. Per ora potresti volerlo eliminare manualmente o rinominare. Se già hai modificato il repository, puoi aggiornare la futura toolchain per utilizzarla in seguito.
+      {: tip}
 
    5. Torna al progetto JazzHub. Questo viene ripristinato per un altro tentativo di upgrade. Se non viene ripristinato, contatta hub@jazz.net e fornisci l'URL del progetto.
    

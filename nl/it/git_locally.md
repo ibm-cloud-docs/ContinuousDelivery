@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Configurazione di client locali per operare con il controllo origine Git
 {: #git_local}
@@ -32,7 +34,8 @@ Puoi gestire e lavorare con il tuo codice sorgente in un repository GitHub, GitH
 | GitHub pubblico (github.com) | Il token di accesso personale non è obbligatorio, ma puoi configurarne uno e utilizzarlo | Nome utente e password GitHub o nome utente e token di accesso personale GitHub oppure solo token di accesso personale come nome utente | [Configura una chiave SSH GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
 | GitHub Enterprise | [Token di accesso personale](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | Nome utente di GitHub Enterprise (non il tuo ID IBM) e token di accesso personale | [Configura la chiave SSH GitHub Enterprise](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
-**Nota**: se preferisci usare SSH, puoi riutilizzare una singola chiave in tutti i server Git. Crea o individua la tua chiave e configurala in ogni server, come descritto nei precedenti link. Se crei la tua chiave con una passphrase, ti verrà richiesto di immettere questa passphrase quando utilizzi la chiave.
+Se preferisci usare SSH, puoi riutilizzare una singola chiave in tutti i server Git. Crea o individua la tua chiave e configurala in ogni server, come descritto nei precedenti link. Se crei la tua chiave con una passphrase, ti verrà richiesto di immettere questa passphrase quando utilizzi la chiave.
+{: tip}
 
 2. Se hai intenzione di utilizzare la riga di comando Git, procedi come segue:
 
@@ -86,4 +89,4 @@ Con gli strumenti, puoi distribuire i seguenti tipi di file e server a {{site.da
 * File EAR (enterprise archive)
 * Server in pacchetto di Liberty Profile
 
-Puoi anche creare dei servizi e collegarli alla tua applicazione e definire le variabili di ambiente come parte della distribuzione. Per ulteriori informazioni su IBM Eclipse Tools, [vedi Distribuzione di applicazioni con IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../../manageapps/eclipsetools/eclipsetools.html).
+Puoi anche creare dei servizi e collegarli alla tua applicazione e definire le variabili di ambiente come parte della distribuzione. Per ulteriori informazioni su IBM Eclipse Tools, [vedi Distribuzione di applicazioni con IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html).

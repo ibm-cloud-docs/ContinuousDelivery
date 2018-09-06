@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-3-23"
+lastupdated: "2018-8-2"
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Utilizzo di Git in Eclipse Orion Web IDE
 {: #git_web_ide}
@@ -88,7 +90,8 @@ Indipendentemente da dove esegui la codifica, puoi utilizzare questo riferimento
 
 Sovrascrivi il contenuto di un ramo remoto di riferimento con il contenuto del tuo ramo locale attivo.
 
-**Importante:** quando forzi il push di un ramo locale a uno remoto, potresti perdere i commit sul ramo remoto.
+Quando forzi il push di un ramo locale a uno remoto, potresti perdere i commit sul ramo remoto.
+{: tip}
 
 ### Eclipse Orion Web IDE
 {: #force_push_web}
@@ -124,13 +127,14 @@ Sovrascrivi il contenuto di un ramo remoto di riferimento con il contenuto del t
 
 1. Nella sezione Working Directory Changes, seleziona la casella di spunta per ogni file di cui eseguire il commit.
 
-3. Nel campo **Enter the commit message**, immetti un messaggio che descriva le tue modifiche.
+2. Nel campo **Enter the commit message**, immetti un messaggio che descriva le tue modifiche.
 
-  **Suggerimento**: fornisci un messaggio di commit dettagliato. Il tuo messaggio deve fornire dettagli sufficienti per capire perché la modifica è stata necessaria, senza ulteriori informazioni. Come ausilio, puoi includere un link a un elemento nel programma di traccia del problema del tuo team. La prima riga del messaggio di commit deve contenere meno di 50 caratteri. Aggiungi una riga vuota prima di aggiungere altro testo.
+  Fornisci un messaggio di commit dettagliato. Il tuo messaggio deve fornire dettagli sufficienti per capire perché la modifica è stata necessaria, senza ulteriori informazioni. Come ausilio, puoi includere un link a un elemento nel programma di traccia del problema del tuo team. La prima riga del messaggio di commit deve contenere meno di 50 caratteri. Aggiungi una riga vuota prima di aggiungere altro testo.
+  {: tip}
 
-4. Fai clic su **Commit**.
+3. Fai clic su **Commit**.
 
-5. Fai clic su **Push**.
+4. Fai clic su **Push**.
 
 ### Terminale Git
 {: #commit_cmd}
@@ -143,11 +147,13 @@ Sovrascrivi il contenuto di un ramo remoto di riferimento con il contenuto del t
 
 4. Immetti il riepilogo del commit, aggiungi una riga vuota e quindi aggiungi la descrizione del commit.
 
-  **Suggerimento**: il riepilogo del commit deve contenere meno di 50 caratteri. La descrizione del commit deve fornire dettagli sufficienti per capire perché la modifica è stata necessaria, senza ulteriori informazioni. Come ausilio, puoi includere un link a un elemento nel programma di traccia del problema del tuo team.
+  Il riepilogo del commit deve contenere meno di 50 caratteri. La descrizione del commit deve fornire dettagli sufficienti per capire perché la modifica è stata necessaria, senza ulteriori informazioni. Come ausilio, puoi includere un link a un elemento nel programma di traccia del problema del tuo team.
+  {: tip}
 
 5. Salva il messaggio di commit.
 
-  **Nota:** per salvare il messaggio di commit e chiudere Vim, che potrebbe essere il tuo editor di testo predefinito, premi Esc, digita `:wq` e premi Invio.
+  Per salvare il messaggio di commit e chiudere Vim, che potrebbe essere il tuo editor di testo predefinito, premi Esc, digita `:wq` e premi Invio.
+  {: tip}
 
 4. Immetti `git push` e premi Invio.
 
@@ -190,7 +196,8 @@ Sovrascrivi il contenuto di un ramo remoto di riferimento con il contenuto del t
 
 3. Per riesaminare le modifiche di un file, fai clic su **>**.
 
-  **Nota:** se un commit ha introdotto una modifica a una riga, la riga originale ha un'ombreggiatura rosa e la nuova riga ha un'ombreggiatura verde.  Allo stesso modo, le righe aggiunte da un commit hanno un'ombreggiatura verde e quelle rimosse da un commit hanno un'ombreggiatura rosa.
+  Se un commit ha introdotto una modifica a una riga, la riga originale ha un'ombreggiatura rosa e la nuova riga ha un'ombreggiatura verde.  Allo stesso modo, le righe aggiunte da un commit hanno un'ombreggiatura verde e quelle rimosse da un commit hanno un'ombreggiatura rosa.
+  {: tip}
 
 ### Terminale Git
 {: #compare_changes_cmd}
@@ -205,14 +212,16 @@ Sovrascrivi il contenuto di un ramo remoto di riferimento con il contenuto del t
 
 3. Rivedi le modifiche.
 
-  **Nota:** se un commit ha introdotto una modifica a una riga, la riga originale è scritta in rosso e inizia con un segno meno (-). La nuova riga è in verde e inizia con un segno più (+).  Allo stesso modo, le righe aggiunte da un commit sono in verde e iniziano con un segno +. Le righe che sono state rimosse da un commit sono in rosso e iniziano con un segno -.
+  Se un commit ha introdotto una modifica a una riga, la riga originale è scritta in rosso e inizia con un segno meno (-). La nuova riga è in verde e inizia con un segno più (+).  Allo stesso modo, le righe aggiunte da un commit sono in verde e iniziano con un segno +. Le righe che sono state rimosse da un commit sono in rosso e iniziano con un segno -.
+  {: tip}
 
 1. Per interrompere la visualizzazione degli elementi, premi Q.
 
 ## Modifica l'ultimo commit
 {: #modify_last_commit}
 
-  **Nota:** quando modifichi l'ultimo commit dopo averne eseguito il push a un repository remoto, sovrascrivi la cronologia di commit. Questa modifica potrebbe causare errori di commit e altri problemi per gli altri contributori del progetto. Assicurati di sapere cosa stai facendo prima di modificare un commit che hai distribuito tramite push a un repository remoto.
+  Quando modifichi l'ultimo commit dopo averne eseguito il push a un repository remoto, sovrascrivi la cronologia di commit. Questa modifica potrebbe causare errori di commit e altri problemi per gli altri contributori del progetto. Assicurati di sapere cosa stai facendo prima di modificare un commit che hai distribuito tramite push a un repository remoto.
+  {: tip}
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}
@@ -233,7 +242,8 @@ Sovrascrivi il contenuto di un ramo remoto di riferimento con il contenuto del t
 
 3. Nel tuo editor di testo, accetta o modifica il messaggio di commit.
 
-  **Nota:** per salvare il messaggio di commit e chiudere Vim, che potrebbe essere il tuo editor di testo predefinito, premi Esc, digita `:wq` e premi Invio.
+  Per salvare il messaggio di commit e chiudere Vim, che potrebbe essere il tuo editor di testo predefinito, premi Esc, digita `:wq` e premi Invio.
+  {: tip}
 
 ## Aggiungi una tag per un commit
 {: #tag_commit}
@@ -245,9 +255,9 @@ Sovrascrivi il contenuto di un ramo remoto di riferimento con il contenuto del t
 
 2. Visualizza i dettagli del commit facendo clic su di esso.
 
-2. Nel riquadro del commit, fai clic su **Create a tag for the commit** <img class="inline"  src="./images/tag.png" alt="Create a tag for the commit">.
+3. Nel riquadro del commit, fai clic su **Create a tag for the commit** <img class="inline"  src="./images/tag.png" alt="Create a tag for the commit">.
 
-3. Nel campo del nome, immetti il testo della tag. Fai clic su **Submit**.
+4. Nel campo del nome, immetti il testo della tag. Fai clic su **Submit**.
 
 ### Terminale Git
 {: #tag_commit_cmd}
@@ -263,7 +273,7 @@ Sovrascrivi il contenuto di un ramo remoto di riferimento con il contenuto del t
 {: #change_info_web}
 1. Fai clic sull'icona di configurazione <img class="inline" src="./images/configurations.png" alt="icona di configurazione">.
 
-3. Modifica l'indirizzo e-mail e il nome dell'utente aggiornando i valori user.email e user.name. Fai clic su **Submit** per salvare le modifiche.
+2. Modifica l'indirizzo e-mail e il nome dell'utente aggiornando i valori user.email e user.name. Fai clic su **Submit** per salvare le modifiche.
 
 ### Terminale Git
 {: #change_info_cmd}
@@ -341,15 +351,14 @@ Quando hai bisogno di trasmettere le modifiche da un ramo di origine a un ramo d
 
 2. Nel Web IDE, apri ogni file che contiene conflitti.
 
-3. Risolvi tutte le modifiche in conflitto.
-
-  **Nota:** elimina tutto il testo che non vuoi mantenere. Ogni conflitto è nel seguente formato:
+3. Risolvi tutte le modifiche in conflitto. Elimina tutto il testo che non vuoi mantenere. Ogni conflitto è nel seguente formato:
 
 		<<<<<<< HEAD
 		Testo nel ramo estratto.
 		=======
 		Testo nel ramo unito.
 		>>>>>>> commit_ID_from_merged_branch
+		
 4. Per ogni file in conflitto, seleziona la casella di spunta. Immetti un messaggio di commit di unione e fai clic su **Commit**.
 
 ### Terminale Git
@@ -359,15 +368,14 @@ Quando hai bisogno di trasmettere le modifiche da un ramo di origine a un ramo d
 
 2. In un editor di testo, apri un file che contiene conflitti.
 
-3. Risolvi tutte le modifiche in conflitto e quindi salva il file.
-
-  **Nota:** elimina tutto il testo che non vuoi mantenere. Ogni conflitto è nel seguente formato:
+3. Risolvi tutte le modifiche in conflitto e quindi salva il file. Elimina tutto il testo che non vuoi mantenere. Ogni conflitto è nel seguente formato:
 
 		<<<<<<< HEAD
 		Testo nel ramo estratto.
 		=======
 		Testo nel ramo unito.
 		>>>>>>> merged_branch
+		
 4. Prepara ogni file che hai modificato, quindi esegui il commit dell'unione.
 
 ## Riassegna i rami
@@ -403,9 +411,10 @@ Quando hai bisogno di trasmettere le modifiche da un ramo di origine a un ramo d
 
 3. Se rilevi dei conflitti, [risolvili](#resolve_a_rebase_conflict).
 
-5. Ripeti il passo precedente il numero di volte necessario per completare l'operazione di riassegnazione.
+4. Ripeti il passo precedente il numero di volte necessario per completare l'operazione di riassegnazione.
 
-  **Nota:** per interrompere l'operazione di riassegnazione, immetti `git rebase --abort` e premi Invio.
+  Per interrompere l'operazione di riassegnazione, immetti `git rebase --abort` e premi Invio.
+  {: tip}
 
 ## Risolvi un conflitto di riassegnazione
 {: #resolve_a_rebase_conflict}
@@ -417,15 +426,14 @@ Quando hai bisogno di trasmettere le modifiche da un ramo di origine a un ramo d
 
 2. Nel Web IDE, apri ogni file che contiene conflitti.
 
-3. Risolvi tutte le modifiche in conflitto.
-
-  **Nota:** elimina tutto il testo che non vuoi conservare. Ogni conflitto è nel seguente formato:
+3. Risolvi tutte le modifiche in conflitto. Elimina tutto il testo che non vuoi conservare. Ogni conflitto è nel seguente formato:
 
 		<<<<<<< HEAD
 		Testo nel ramo estratto.
 		=======
 		Testo nel ramo unito.
 		>>>>>>> commit_ID_from_merged_branch
+		{: tip}
 4. Nel riquadro Rebase, seleziona la casella di spunta per ogni file corretto e fai clic su **Continue**.
 
 ### Terminale Git
@@ -435,15 +443,14 @@ Quando hai bisogno di trasmettere le modifiche da un ramo di origine a un ramo d
 
 2. In un editor di testo, apri un file che contiene conflitti.
 
-3. Risolvi tutte le modifiche in conflitto e quindi salva il file.
-
-  **Nota:** elimina tutto il testo che non vuoi conservare. Ogni conflitto è nel seguente formato:
+3. Risolvi tutte le modifiche in conflitto e quindi salva il file. Elimina tutto il testo che non vuoi conservare. Ogni conflitto è nel seguente formato:
 
 		<<<<<<< HEAD
 		Testo nel ramo estratto.
 		=======
 		Testo nel ramo unito.
 		>>>>>>> merged_branch
+		
 4. Prepara ogni file che hai modificato.
 
 5. Riprendi l'operazione di riassegnazione immettendo `git rebase --continue` e premendo Invio.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-4-18"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -23,16 +23,38 @@ I piani di servizio {{site.data.keyword.contdelivery_short}} definiti e il loro 
  * Gli utenti che manipolano, attivano (direttamente nell'IU o indirettamente eseguendo il commit a un repository) o visualizzano lo stato di una delivery pipeline.
  * Gli utenti che interagiscono con Eclipse Orion {{site.data.keyword.webide}}.
  
-### Come vengono contati gli utenti?
+### Come vengono contati gli utenti per le istanze di {{site.data.keyword.contdelivery_short}} nelle organizzazioni?
 
 Gli utenti autorizzati vengono contati verificando tutti gli utenti nell'organizzazione (org) Cloud che contiene il servizio {{site.data.keyword.contdelivery_short}}. 
 
-Per visualizzare l'elenco di utenti nella tua organizzazione, dalla barra dei menu fai clic su **Manage > Account > Cloud Foundry Orgs**.
+Per visualizzare l'elenco di utenti nella tua organizzazione in un ambiente {{site.data.keyword.Bluemix_notm}} Pubblico, dalla barra dei menu fai clic su **Manage > Account > Cloud Foundry Orgs**.
+
+Per visualizzare l'elenco di utenti nella tua organizzazione in un ambiente {{site.data.keyword.Bluemix_notm}} Dedicato, dalla barra dei menu fai clic su **Account > Manage Organizations**.
+
+Puoi anche visualizzare tutte le istanze del servizio {{site.data.keyword.contdelivery_short}} nel tuo account e il numero di utenti segnalati rispetto a ciascuna istanza in un ambiente {{site.data.keyword.Bluemix_notm}} Pubblico.
+
+1. Dalla barra dei menu, fai clic su **Manage > Billing and Usage > Usage**.
+2. Fai clic su **Usage Dashboard**.
+3. Dal menu Account, fai clic su **Cloud Foundry Orgs**.
+4. Fai clic sull'organizzazione per cui desideri visualizzare le informazioni sull'utilizzo.
+
+Per visualizzare tutte le istanze del servizio {{site.data.keyword.contdelivery_short}} nel tuo account e il numero di utenti segnalati rispetto a ciascuna istanza in un ambiente {{site.data.keyword.Bluemix_notm}} Dedicato:
+
+1. Dalla barra dei menu, fai clic su **Account > Manage Organizations**.
+2. Fai clic su **Usage Dashboard**.
+
+### Come vengono contati gli utenti per le istanze di {{site.data.keyword.contdelivery_short}} nei gruppi di risorse?
+
+Gli utenti autorizzati vengono conteggiati osservando l'elenco di utenti nella scheda Manage all'interno dell'istanza del servizio {{site.data.keyword.contdelivery_short}}. 
+
+Per visualizzare l'elenco degli utenti autorizzati, apri il dashboard dell'istanza del servizio e fai clic sulla scheda Manage.
 
 Puoi anche visualizzare tutte le istanze del servizio {{site.data.keyword.contdelivery_short}} nel tuo account e il numero di utenti segnalati rispetto a ciascuna istanza.
 
-1. Dalla barra dei menu, fai clic su **Manage > Account > Cloud Foundry Orgs**.
+1. Dalla barra dei menu, fai clic su **Manage > Billing and Usage > Usage**.
 2. Fai clic su **Usage Dashboard**.
+3. Dal menu Account, fai clic su **Resource Groups**.
+4. Fai clic sul gruppo di risorse per cui desideri visualizzare le informazioni sull'utilizzo.
 
 ### Cosa succede quando si superano i limiti del proprio piano di servizio? 
 

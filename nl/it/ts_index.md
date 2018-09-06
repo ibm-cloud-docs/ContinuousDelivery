@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-7-19"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -41,10 +41,29 @@ Se già disponi di una toolchain, aggiorna la configurazione dell'integrazione d
 ## Ho provato a creare una toolchain, perché sto ottenendo un errore?
 {: #cannot_create_toolchain}
 
-Quando provi a creare una toolchain, se ottieni il seguente messaggio di errore, rimuovi una o più toolchain dalla tua organizzazione e quindi crea nuovamente la tua toolchain.
+Quando provi a creare una toolchain in un'organizzazione, se ottieni il seguente messaggio di errore, rimuovi una o più toolchain dalla tua organizzazione e quindi crea nuovamente la tua toolchain.
 
 `Questa organizzazione contiene 200 toolchain, che è il limite massimo. Prima di poter aggiungere un'altra toolchain, rimuovere una o più toolchain dall'organizzazione.`
 
+
+## Perché la pagina Toolchains mostra che il piano Lite del servizio {{site.data.keyword.contdelivery_short}} è stato superato?
+
+{{site.data.keyword.contdelivery_short}} offre due piani: Lite e Professional. Se hai il piano {{site.data.keyword.contdelivery_short}} Lite, puoi utilizzare le toolchain gratuitamente, fino ai limiti del piano. Il messaggio di errore indica che è stato superato uno o più limiti del piano Lite. Ad esempio, potresti aver superato il piano se hai troppi utenti autorizzati associati all'istanza del servizio {{site.data.keyword.contdelivery_short}} o se hai eseguito il numero massimo di lavori {{site.data.keyword.deliverypipeline}}. Per ulteriori informazioni sui termini del piano, consulta [Utilizzo e limitazioni del piano](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+
+
+## Ho creato una toolchain, perché la pagina Toolchains mostra che è necessario un servizio Continuous Delivery?
+
+I termini del piano per l'istanza del servizio {{site.data.keyword.contdelivery_short}} che si trova nello stesso gruppo di risorse o organizzazione della toolchain gestisce l'utilizzo di alcune integrazioni dello strumento ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} e {{site.data.keyword.gitrepos}}) contenute nel servizio. Il messaggio di errore indica che il gruppo di risorse o l'organizzazione non contiene l'istanza richiesta del servizio {{site.data.keyword.contdelivery_short}}. Per ulteriori informazioni sui termini del piano, consulta [Utilizzo e limitazioni del piano](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+
+
+## Ho creato una toolchain in un'organizzazione Cloud Foundry, perché la pagina Toolchains mostra che è necessario un servizio Continuous Delivery?
+
+Quando crei una toolchain in un gruppo di risorse o un'organizzazione che non dispone di un'istanza del servizio {{site.data.keyword.contdelivery_short}}, la piattaforma della toolchain tenta di creare automaticamente un'istanza del servizio utilizzando il piano Lite. Il messaggio di errore indica che la piattaforma della toolchain non è riuscita a creare l'istanza del servizio.
+
+Questo errore potrebbe verificarsi quando crei una toolchain nella regione Stati Uniti Sud e in un'organizzazione che non dispone ancora di un istanza di {{site.data.keyword.contdelivery_short}}. Nella regione Stati Uniti Sud, devi creare tutte le nuove istanze del servizio {{site.data.keyword.contdelivery_short}} nei gruppi di risorse. 
+
+Puoi creare la toolchain in un gruppo di risorse o in un'organizzazione che dispone già di un'istanza di {{site.data.keyword.contdelivery_short}}.
+  
 
 ## Ho provato a distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}}, perché sto ottenendo un errore?
 {: #org_outofmemory}

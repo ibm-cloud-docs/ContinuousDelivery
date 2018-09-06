@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-20"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Sviluppo con Eclipse Orion Web IDE
 {: #web_ide}
@@ -23,7 +25,7 @@ Cosa più importante, {{site.data.keyword.webide}} si avvale della tecnologia we
 ## Configurazione dell'IDE
 {: #editorsetup}
 
-{{site.data.keyword.webide}} è personalizzabile in modo che puoi scegliere gli schemi di colori, gli strumenti tecnici e le impostazioni che incontrano i tuoi bisogni di sviluppo. Per visualizzare e modificare le impostazioni, dalla barra laterale di navigazione sulla sinistra fai clic sull'icona **Settings** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="Icona delle impostazioni">.
+{{site.data.keyword.webide}} è personalizzabile in modo che puoi scegliere gli schemi di colori, gli strumenti tecnici e le impostazioni che incontrano i tuoi bisogni di sviluppo. Per visualizzare e modificare le impostazioni, dalla barra laterale di navigazione a sinistra, fai clic sull'icona **Impostazioni** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="Icona di impostazioni">.
 
 Se durante la modifica hai la necessità di cambiare spesso le impostazioni, puoi accedere rapidamente a esse utilizzando l'icona **Impostazioni dell'editor locali** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icona Impostazioni dell'editor locali">.
 
@@ -45,7 +47,8 @@ Per impostazione predefinita, le impostazioni per lo stile dell'editor e la dime
 
 {{site.data.keyword.webide}} ha due sezioni principali. La prima sezione è il navigator dei file, che mostra i tuoi file del progetto in tre strutture. Dal navigator dei file, puoi creare, ridenominare, eliminare e gestire i tuoi file e cartelle.
 
-**Suggerimento:** per caricare i file nel navigator dei file, trascinaceli dal tuo computer.
+Per caricare i file nel navigator dei file, trascinaceli dal tuo computer.
+{: tip}
 
 La seconda sezione è il pannello dell'editor. L'editor fornisce diverse funzioni di scrittura del codice, tra cui l'assistenza del contenuto e la convalida della sintassi.
 
@@ -79,7 +82,7 @@ Per visualizzare un elenco dei tasti di scelta rapida nell'editor, fai clic su *
 1. Fai clic sull'icona di distribuzione <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="Icona di distribuzione">. Viene distribuita un'istanza alla tua applicazione utilizzando i contenuti correnti del tuo spazio di lavoro e l'ambiente definito nella tua configurazione di avvio.
 2. Dopo che la tua applicazione è stata distribuita, puoi utilizzare la barra di esecuzione per arrestare, riavviare o eseguire il debug della applicazione, dei log di visualizzazione o di altro.
 
-<table>
+<table role="presentation">
 <tr><td><img src="./images/stop_button.png"  alt="Icona di arresto"></td><td>Arresta l'applicazione</td></tr>
 <tr><td> <img src="./images/open_app_url.png"  alt="Icona dell'URL di apertura dell'applicazione"></td><td> Apri l'applicazione distribuita</td></tr>
 <tr><td><img src="./images/view_logs.png"  alt="Icona di visualizzazione dei log"></td><td>Visualizza i log dell'applicazione distribuita</td></tr>
@@ -88,7 +91,7 @@ Per visualizzare un elenco dei tasti di scelta rapida nell'editor, fai clic su *
 
 Se stai sviluppando un'applicazione Node.js, abilita la modalità Live Edit:  <img  src="./images/enable_live_edit.png"  alt="Dispositivo a scorrimento di abilitazione di live edit">
 
-<table><tr><td><img src="./images/live_edit_restart.png"  alt="Icona di riavvio di Live Edit"></td><td>Con la modalità Live Edit abilitata, riavvia l'applicazione, senza rieseguire la distribuzione</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="Icona di riavvio di Live Edit"></td><td>Con la modalità Live Edit abilitata, riavvia l'applicazione, senza rieseguire la distribuzione</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="Icona di debug"></td>
 <td>Con la modalità Live Edit abilitata, accedi al debugger
 </td></tr>
@@ -161,7 +164,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 Eclipse Orion {{site.data.keyword.webide}} fornisce assistenza del contenuto, descrizioni dei comandi, anteprime, convalida ed evidenziazione della sintassi per i file JavaScript, HTML, CSS e Markdown. L'evidenziazione della sintassi è supportata anche per questi tipi di file:
 
-<table>
+<table role="presentation">
 <tr>
 <td>
 <ul><li>Arduino

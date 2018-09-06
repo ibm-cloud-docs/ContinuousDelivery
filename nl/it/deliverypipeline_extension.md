@@ -71,11 +71,11 @@ Prima di iniziare, [riesamina i Termini di utilizzo per il servizio ![Icona link
 
   e. Seleziona o deseleziona la casella di spunta **Set up service and space for me** come necessario.
 
-    * Se vuoi che la tua pipeline controlli il tuo spazio {{site.data.keyword.Bluemix_short}}  per trovare il servizio e un'applicazione che associ il servizio al contenitore, seleziona la casella di spunta. Se il servizio o l'applicazione associata non esistono, la pipeline aggiunge il piano gratuito del servizio al tuo spazio. L'applicazione associata che viene creata è denominata `pipeline_bridge_app`. Quindi, la pipeline utilizza le credenziali da pipeline_bridge_app per accedere ai servizi associati.
+    * Se vuoi che la tua pipeline controlli il tuo spazio {{site.data.keyword.Bluemix_short}} per trovare il servizio e un'applicazione che associ il servizio al contenitore, seleziona la casella di spunta. Se il servizio o l'applicazione associata non esistono, la pipeline aggiunge il piano gratuito del servizio al tuo spazio. L'applicazione associata che viene creata è denominata `pipeline_bridge_app`. Quindi, la pipeline utilizza le credenziali da pipeline_bridge_app per accedere ai servizi associati.
 
     * Se hai già configurato il servizio e associato l'applicazione nel tuo spazio {{site.data.keyword.Bluemix_short}} o se vuoi [configurare questi requisiti manualmente](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, lascia deselezionata la casella di spunta.
 
-  f. Nel campo **Minuti di attesa per il completamento dell'analisi**, immetti un valore compreso tra 0 e 59 minuti. Il valore predefinito è 5 minuti. Un URL al dashboard {{site.data.keyword.staticanalyzershort}}  è presente nei log della console alla fine del lavoro.
+  f. Nel campo **Minuti di attesa per il completamento dell'analisi**, immetti un valore compreso tra 0 e 59 minuti. Il valore predefinito è 5 minuti. Un URL al dashboard {{site.data.keyword.staticanalyzershort}} è presente nei log della console alla fine del lavoro.
 
      Se la scansione di {{site.data.keyword.staticanalyzershort}} non viene completata entro il tempo specificato, il lavoro ha esito negativo. Tuttavia, l'analisi della scansione continua ad essere eseguita e puoi visualizzarla nel dashboard di {{site.data.keyword.staticanalyzershort}}. Dopo che la scansione di {{site.data.keyword.staticanalyzershort}} è stata completata, se riesegui il lavoro, la richiesta di scansione non viene reinviata e il lavoro della pipeline può essere completato. In alternativa, puoi configurare la pipeline in modo da non venir bloccata da un risultato della scansione positivo. Per le istruzioni, consulta la seguente fase.
 

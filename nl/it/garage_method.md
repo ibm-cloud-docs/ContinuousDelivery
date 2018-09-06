@@ -23,7 +23,7 @@ lastupdated: "2018-3-23"
 
 
 
-Con {{site.data.keyword.contdelivery_full}}, puoi creare, testare e fornire applicazioni utilizzando le procedure e gli strumenti leader nel settore DevOps. Continuous Delivery supporta un'ampia gamma di prassi; quali sono però quelle che devo usare? Non c'è una sola risposta a questa domanda. Le prassi che adotti possono variare da un progetto di distribuzione di software all'altro. L'[IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window} è l'approccio di IBM per offrire in tempi brevi delle applicazioni coinvolgenti. Combina la fornitura continua con IBM Design Thinking, produzione snella, DevOps e le procedure snelle. Queste procedure si focalizzano sul cloud, ma possono fornire benefici per ogni tentativo di sviluppo software.
+Con {{site.data.keyword.contdelivery_full}}, puoi creare, testare e fornire applicazioni utilizzando le procedure e gli strumenti leader nel settore DevOps. Continuous Delivery supporta un'ampia gamma di prassi; quali sono però quelle che devo usare? Non c'è una sola risposta a questa domanda. Le prassi che adotti possono variare da un progetto di distribuzione di software all'altro.  L'[IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window} è l'approccio di IBM per offrire in tempi brevi delle applicazioni coinvolgenti. Combina la fornitura continua con IBM Design Thinking, produzione snella, DevOps e le procedure snelle. Queste procedure si focalizzano sul cloud, ma possono fornire benefici per ogni tentativo di sviluppo software.
 
 
 ## Utilizzo delle procedure della fornitura continua
@@ -43,11 +43,11 @@ Con [Delivery Pipeline ![Icona link esterno](../../icons/launch-glyph.svg "Icona
 ## Esercitazioni della fornitura continua
 {: #gm_cd_tutorials}
 
-[Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app" ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.Impara come creare una toolchain aperta da un template e utilizzarla per la fornitura continua a un'applicazione "Hello World".
+[Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app" ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}. Impara come creare una toolchain aperta da un template e utilizzarla per la fornitura continua a un'applicazione "Hello World".
 
 [Aggiungi una toolchain a un'applicazione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}. Scopri come aggiungere una toolchain aperta a un'applicazione e usare la toolchain per offrire in modo continuo l'applicazione.
 
-[Use the "Develop and test microservices on Cloud Foundry" toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.Impara come creare una toolchain da un template con tre microservizi e utilizzare la toolchain per la fornitura continua di un negozio online.
+[Use the "Develop and test microservices on Cloud Foundry" toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}. Impara come creare una toolchain da un template con tre microservizi e utilizzare la toolchain per la fornitura continua di un negozio online.
 
 Per ulteriori esercitazioni, consulta il [Laboratorio di apprendimento ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/category/courses){:new_window}.
 

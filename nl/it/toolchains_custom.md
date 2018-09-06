@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Creazione di template di toolchain personalizzate
@@ -97,7 +99,7 @@ Ogni sottosezione relativa a un servizio contiene le seguenti informazioni:
 
 ### Inclusione di testo da altri file
 
-Tutte le informazioni per la tua toolchain possono trovarsi nel file `toolchain.yml`. Tuttavia, potresti voler creare dei file separati per ogni IU di integrazione dello strumento utilizzando `$text`. Ciò può semplificare la gestione delle tue toolchain e ridurre al minimo il tempo da te dedicato a modificare i file di configurazione. Questo frammento di esempio da un `toolchain.yml` mostra come utilizzare il contenuto del file `pipeline.yml` come valore per `content`.
+Tutte le informazioni per la tua toolchain possono trovarsi nel file `toolchain.yml`.  Tuttavia, potresti voler creare dei file separati per ogni IU di integrazione dello strumento utilizzando `$text`. Ciò può semplificare la gestione delle tue toolchain e ridurre al minimo il tempo da te dedicato a modificare i file di configurazione.  Questo frammento di esempio da un `toolchain.yml` mostra come utilizzare il contenuto del file `pipeline.yml` come valore per `content`.
 
 ```
   configuration:
@@ -185,7 +187,8 @@ In questo esempio, l'URL Git e il ramo Git sono relativi a un nuovo template di 
 | has_issues | proprietà | <`true` , `false`> | Problemi di utilizzo |
 | enable_traceability | proprietà |  <`true` , `false`> | Determina se tracciare la distribuzione delle modifiche del codice creando tag, etichette e commenti sui commit, richieste di importazione e problemi segnalati.|
 
- **Nota:** se definisci più repository e li configuri come `has_issues: true`, alla toolchain viene aggiunta una singola istanza del programma di traccia dei problemi GitHub. Il programma di traccia segue i problemi relativi a tutti i repository impostati su `true`.
+ Se definisci più repository e li configuri come `has_issues: true`, alla toolchain viene aggiunta una singola istanza del programma di traccia dei problemi GitHub. Il programma di traccia segue i problemi relativi a tutti i repository impostati su `true`.
+ {: tip}
 
  Il seguente frammento mostra un esempio di questa sezione:
 
@@ -215,7 +218,7 @@ In questo esempio, l'URL Git e il ramo Git sono relativi a un nuovo template di 
 | service_id | proprietà | <`pipeline`> | Nome del servizio da utilizzare |
 | parameters | chiave |  |  |
 | name | proprietà | <`repo_name`> | Stesso nome definito nella sezione repos |
-| ui-pipeline | proprietà | <`true` , `false`> |True se le applicazioni distribuite da questa pipeline sono visualizzate nel menu **View app** nella pagina della toolchain |
+| ui-pipeline | proprietà | <`true` , `false`> |True se le applicazioni distribuite da questa pipeline sono visualizzate nel menu **View app** nella pagina della toolchain  |
 | configuration | chiave |  |  |
 | content | proprietà | <`$ref(pipeline.yml)`> | File che definisce la definizione della tua pipeline |
 | env | chiave |  |  |
@@ -253,7 +256,7 @@ In questo esempio, l'URL Git e il ramo Git sono relativi a un nuovo template di 
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
        execute: true
- ```      
+ ```
  {: codeblock}
 
 4\. **Dettagli di distribuzione:**

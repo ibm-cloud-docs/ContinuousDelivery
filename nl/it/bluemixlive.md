@@ -4,14 +4,17 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
@@ -59,7 +62,8 @@ Per un'esercitazione sull'utilizzo della funzione Live Edit di {{site.data.keywo
 
 Quando modifichi i file nel tuo Web IDE, questi vengono ridistribuiti automaticamente alla tua istanza dell'applicazione su {{site.data.keyword.Bluemix_notm}}. Se hai bisogno di riavviare l'applicazione Node, fai clic sul pulsante **Restart** nella barra di esecuzione.
 
-**Nota:** per un'esperienza più coerente quanto utilizzi la funzione Live Edit di {{site.data.keyword.Bluemix_notm}} Live Sync, sono richiesti e aggiunti 256 MB di memoria aggiuntiva.
+Per un'esperienza più coerente quanto utilizzi la funzione Live Edit di {{site.data.keyword.Bluemix_notm}} Live Sync, sono richiesti e aggiunti 256 MB di memoria aggiuntiva.
+{: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} Live Debug
 {: #live-debug}
@@ -98,7 +102,8 @@ Dopo aver eseguito l'accesso, viene visualizzata la pagina di Debug di {{site.da
 
 Debug include le seguenti funzionalità:  
 * Impostare dei punti di interruzione nel codice applicativo per mettere in pausa l'esecuzione a una specifica riga.
-  **Nota:** i punti di interruzione non sono supportati nel programma principale, ma sono supportati nei punti di ingresso.
+  I punti di interruzione non sono supportati nel programma principale, ma sono supportati nei punti di ingresso.
+  {: tip}
 * Modificare le condizioni del punto di interruzione per mettere in pausa l'esecuzione solo quando sono soddisfatti degli specifici criteri.
 * Esaminare lo stato di campi e variabili locali.
 * Visualizzare l'output di debug dalle chiamate `console.log()` immediatamente. Questa azione è più rapida del monitoraggio dei log cf.
@@ -135,7 +140,8 @@ Una volta installato Debug di {{site.data.keyword.Bluemix_notm}} Live, puoi util
 
 Distribuisci l'applicazione e vai quindi a `https://_app-host.mybluemix.net_/bluemix-debug/manage` per accedere all'interfaccia utente di debug di {{site.data.keyword.Bluemix_notm}}. Quando ti viene richiesto di autenticarti, immetti nome utente e password del tuo ID IBM o un passcode monouso.    
 
-**Nota:** l'inizializzazione del programma di debug potrebbe richiedere qualche minuto.
+L'inizializzazione del programma di debug potrebbe richiedere qualche minuto.
+{: tip}
 
 ### Ripristino delle configurazioni dell'applicazione e disabilitazione di Debug di {{site.data.keyword.Bluemix_notm}} Live {: #restore_live_debug}
 

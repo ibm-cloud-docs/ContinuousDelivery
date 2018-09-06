@@ -2,14 +2,17 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-4-13"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Utilizzo di immagini docker personalizzate
@@ -27,7 +30,8 @@ Indipendentemente dal fatto che tu stia utilizzando un tipo di lavoro di build, 
 
 Il nome dell'immagine Docker nei lavori dell'immagine Docker personalizzata è progettato per funzionare nello stesso modo in cui funzionano i nomi immagine con la CLI Docker. Il formato di un nome di immagine Docker è: `[repository][:][tag]`. Ad esempio, per `docker run maven:3.5.3-ibmjava`, il nome di immagine Docker è `maven:3.5.3-ibmjava`, dove `maven` è il repository e `3.5.3-ibmjava` è la tag. Non ci sono limitazioni sul nome di immagine Docker che puoi utilizzare; funziona qualsiasi immagine Docker valida.
 
-**Suggerimento**: se il campo **Docker image name** non viene completato, viene utilizzata l'immagine di base della pipeline standard. 
+Se il campo **Docker image name** non viene completato, viene utilizzata l'immagine di base della pipeline standard.
+{: tip}
 
 Per impostazione predefinita, viene eseguita una ricerca nel tuo repository su [Docker Hub ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://hub.docker.com/){: new_window}. Se utilizzi un altro registro Docker, come ad esempio IBM Cloud Registry, puoi utilizzare il nome DNS completo. Puoi anche utilizzare il nome completo per le immagini su Docker Hub. Ad esempio, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
 
@@ -53,6 +57,7 @@ Per la maggior parte dei registri, puoi utilizzare il nome utente e la password 
 
 Puoi utilizzare il blocco **script** nei lavori di immagine Docker personalizzata per creare un file di script che viene eseguito un una cartella attività, simile a come funzionano i normali lavori della pipeline. 
 
-**Importante**: `ENTRYPOINT` e `CMD` dal Dockerfile della tua immagine Docker vengono sovrascritti e non vengono richiamati. In alcuni casi, questo potrebbe significare che devi aggiungere dei passi di inizializzazione al tuo script.
+`ENTRYPOINT` e `CMD` dal Dockerfile della tua immagine Docker vengono sovrascritti e non vengono richiamati. In alcuni casi, questo potrebbe significare che devi aggiungere dei passi di inizializzazione al tuo script.
+{: tip}
 
 I lavori di immagine Docker personalizzata ti offrono una maggiore flessibilità per quanto riguarda la modalità di esecuzione del tuo script; specificamente, puoi controllare l'interprete dei comandi. Di norma, se la prima riga dello script inizia con `#!` e il nome di un interprete di comandi, tale voce viene utilizzata per eseguire i comandi nel lavoro. Se non specifichi un interprete dei comandi, viene utilizzata la shell predefinita per l'immagine Docker. Di norma, vengono utilizzati `#!/bin/bash` o `#!/bin/sh`; funzionano anche gli interpreti dei comandi immagine per `awk`, `node` e `ruby`, se specifichi un'immagine Docker appropriata.

@@ -2,19 +2,22 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.gitrepos}}
 {: #git_working}
 
-Collabora con il tuo team e gestisci il tuo codice sorgente con un repository (repo) Git e il programma di traccia dei problemi ospitato da IBM  e creato con [GitLab Community Edition ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://about.gitlab.com/){:new_window}.
+Collabora con il tuo team e gestisci il tuo codice sorgente con un repository (repo) Git e il programma di traccia dei problemi ospitato da IBM e creato con [GitLab Community Edition ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://about.gitlab.com/){:new_window}.
 {: shortdesc}
 
 L'integrazione dello strumento {{site.data.keyword.gitrepos}} supporta i team per gestire il codice e per la collaborazione in modi diversi:
@@ -23,14 +26,16 @@ L'integrazione dello strumento {{site.data.keyword.gitrepos}} supporta i team pe
    * Tracciare i problemi e condividere le idee tramite il programma di traccia del problema
    * Documentare i progetti nel sistema wiki
 
-**Nota:** poiché questa integrazione dello strumento è creata in GitLab Community Edition e ospitata da IBM sulla piattaforma {{site.data.keyword.Bluemix_notm}}, alcune opzioni GitLab non sono disponibili. Ad esempio, Delivery Pipeline fornisce l'integrazione e la fornitura continue per {{site.data.keyword.Bluemix_notm}}; altrimenti, le funzioni di integrazione continua in GitLab non sono supportate. In aggiunta, le funzioni di gestione non sono disponibili perché sono gestite da IBM.
+Poiché questa integrazione dello strumento è creata in GitLab Community Edition e ospitata da IBM sulla piattaforma {{site.data.keyword.Bluemix_notm}}, alcune opzioni GitLab non sono disponibili. Ad esempio, Delivery Pipeline fornisce l'integrazione e la fornitura continue per {{site.data.keyword.Bluemix_notm}}; altrimenti, le funzioni di integrazione continua in GitLab non sono supportate. In aggiunta, le funzioni di gestione non sono disponibili perché sono gestite da IBM.
+{: tip}
 
 ## Utilizzo di {{site.data.keyword.gitrepos}} in locale
 {: #git_local}
 
 Puoi accedere localmente ai repository Git memorizzati in {{site.data.keyword.gitrepos}}. Per istruzioni sulla configurazione di Git in locale, vedi [Start using Git on the command line ![icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
 
-**Suggerimento**: {{site.data.keyword.gitrepos}} supporta solo le connessioni HTTPS che utilizzano TLS1.2. Se usi Eclipse per stabilire una connessione, ti potrebbe essere richiesto di specificare questo protocollo per la tua versione di Java&trade; aggiungendo `-Dhttps.protocols=TLSv1.2` al tuo file eclipse.ini e riavviando quindi Eclipse.
+{{site.data.keyword.gitrepos}} supporta solo le connessioni HTTPS che utilizzano TLS1.2. Se usi Eclipse per stabilire una connessione, ti potrebbe essere richiesto di specificare questo protocollo per la tua versione di Java&trade; aggiungendo `-Dhttps.protocols=TLSv1.2` al tuo file eclipse.ini e riavviando quindi Eclipse.
+{: tip}
 
 ## Autenticazione presso {{site.data.keyword.gitrepos}}
 {: #git_authentication}
@@ -40,7 +45,8 @@ I tuoi login e password {{site.data.keyword.Bluemix_notm}} sono utilizzati solo 
 ### Creazione di un token di accesso personale
 {: #create_pat}
 
-**Importante**: per l'autenticazione con il tuo repository Git su HTTPS, devi creare un token di accesso personale.
+Per l'autenticazione con il tuo repository Git su HTTPS, devi creare un token di accesso personale.
+{: tip}
 
 1. Nel dashboard {{site.data.keyword.gitrepos}} User Settings, nella [pagina Access Tokens ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, immetti il nome dell'applicazione per cui vuoi creare un token di accesso. Ad esempio, `Git CLI`.
 1. Facoltativo: scegli una data di scadenza per il token di accesso.
@@ -68,6 +74,6 @@ I file sono tassativamente limitati a 100 MB. Il limite di dimensione del reposi
 
 Guarda una di queste esercitazioni su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window}:
 
-  * [Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app" ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.Impara come creare una toolchain aperta da un template e utilizzarla per la fornitura continua a un'applicazione "Hello World".
+  * [Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app" ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}. Impara come creare una toolchain aperta da un template e utilizzarla per la fornitura continua a un'applicazione "Hello World".
 
   * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}. Impara come creare una toolchain da un template con tre microservizi e utilizzare la toolchain per la fornitura continua di un negozio online.
