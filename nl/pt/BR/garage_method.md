@@ -23,7 +23,7 @@ lastupdated: "2018-3-23"
 
 
 
-Com o {{site.data.keyword.contdelivery_full}}, é possível construir, testar e entregar aplicativos usando práticas DevOps e ferramentas líderes de mercado. O Continuous Delivery suporta uma ampla variedade de práticas; mas que práticas você deveria usar? Não há uma resposta adequada a todas as situações. As práticas que podem ser empregadas podem variar de um projeto de entrega de software para outro. O [IBM &reg; Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage){:new_window} é a abordagem da IBM para entrega rápida de aplicativos envolventes. Ele combina a entrega contínua com as práticas do IBM Design Thinking, Lean, DevOps e práticas ágeis. Essas práticas concentram-se na nuvem, mas podem beneficiar qualquer esforço de desenvolvimento de software.
+Com o {{site.data.keyword.contdelivery_full}}, é possível construir, testar e entregar aplicativos usando práticas DevOps e ferramentas líderes de mercado. O Continuous Delivery suporta uma ampla variedade de práticas; mas que práticas você deveria usar? Não há uma resposta adequada a todas as situações. As práticas que podem ser empregadas podem variar de um projeto de entrega de software para outro.  O [IBM &reg; Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage){:new_window} é a abordagem da IBM para entrega rápida de aplicativos envolventes. Ele combina a entrega contínua com as práticas do IBM Design Thinking, Lean, DevOps e práticas ágeis. Essas práticas concentram-se na nuvem, mas podem beneficiar qualquer esforço de desenvolvimento de software.
 
 
 ## Adotando práticas de entrega contínua

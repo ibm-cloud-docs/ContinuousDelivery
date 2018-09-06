@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-4-18"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -27,21 +27,41 @@ um repositório do {{site.data.keyword.gitrepos}}.
 repositório) ou visualizam o status de um pipeline de entrega.
  * Os usuários que interagem com o Eclipse Orion {{site.data.keyword.webide}}.
  
-### Como os usuários são contados?
+### Como os usuários são contados para instâncias do {{site.data.keyword.contdelivery_short}} em organizações?
 
 Os usuários autorizados são contados observando todos os usuários na organização do Cloud (org) que contém
 o serviço do {{site.data.keyword.contdelivery_short}}. 
 
-Para visualizar a lista de usuários em sua organização, na barra de menus, clique em
-**Gerenciar > Conta > Organizações do Cloud Foundry**.
+Para visualizar a lista de usuários em sua organização em um ambiente do {{site.data.keyword.Bluemix_notm}} Public, na barra de menus, clique em **Gerenciar > Conta > Organizações do Cloud Foundry**.
+
+Para visualizar a lista de usuários em sua organização em um ambiente do {{site.data.keyword.Bluemix_notm}} Dedicated, na barra de menus, clique em **Conta > Gerenciar organizações**.
+
+Também é possível visualizar todas as instâncias do serviço {{site.data.keyword.contdelivery_short}} em sua conta e o número de usuários que são relatados com relação a cada instância em um ambiente do {{site.data.keyword.Bluemix_notm}} Public.
+
+1. Na barra de menus, clique em **Gerenciar > Faturamento e uso > Uso **.
+2. Clique em **Painel de uso**.
+3. No menu Conta, clique em **Organizações do Cloud Foundry**.
+4. Clique na organização para a qual você deseja visualizar informações de uso.
+
+Para visualizar todas as instâncias do serviço {{site.data.keyword.contdelivery_short}} em sua conta e o número de usuários que são relatados com relação a cada instância em um ambiente do {{site.data.keyword.Bluemix_notm}} Dedicated:
+
+1. Na barra de menus, clique em **Conta > Gerenciar organizações**.
+2. Clique em **Painel de uso**.
+
+### Como os usuários são contados para instâncias do {{site.data.keyword.contdelivery_short}} em grupos de recursos?
+
+Os usuários autorizados são contados examinando a lista de usuários na guia Gerenciar dentro da instância do serviço {{site.data.keyword.contdelivery_short}}. 
+
+Para visualizar a lista de usuários autorizados, abra o painel da instância de serviço e clique na guia Gerenciar.
 
 Também é possível visualizar todas as instâncias do
 serviço do {{site.data.keyword.contdelivery_short}}
 em sua conta e o número de usuários que são relatados em cada instância.
 
-1. Na barra de menus, clique em **Gerenciar > Conta > Organizações do Cloud
-Foundry**.
+1. Na barra de menus, clique em **Gerenciar > Faturamento e uso > Uso **.
 2. Clique em **Painel de uso**.
+3. No menu Conta, clique em **Grupos de recursos**.
+4. Clique no grupo de recursos para o qual você deseja visualizar informações de uso.
 
 ### O que acontece quando você excede os limites de seu plano de serviço? 
 

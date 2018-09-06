@@ -2,15 +2,17 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-3-23"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Trabalhando com o {{site.data.keyword.DRA_short}} (Beta)
 {: #di_working}
@@ -21,7 +23,8 @@ elas sejam liberadas, analisando mudanças de desenvolvimento para probabilidade
 interações de sua equipe.
 {:shortdesc}
 
-**Nota**: o {{site.data.keyword.DRA_short}} está disponível somente na região Sul dos EUA.
+O {{site.data.keyword.DRA_short}} está disponível somente na região Sul dos EUA.
+{: tip}
 
 O {{site.data.keyword.DRA_short}} coleta e analisa os resultados de testes de unidade, testes funcionais e ferramentas de cobertura de código para determinar se o código atende às políticas predefinidas nos gates especificados de seu processo de implementação. Se seu código não atender a uma política ou excedê-la, a implementação será
 interrompida, impedindo a liberação de riscos. É possível usar o {{site.data.keyword.DRA_short}} como uma rede de segurança para o seu ambiente de entrega contínua ou como uma forma de implementar e melhorar os padrões de qualidade. 

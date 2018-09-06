@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-3-23"
+lastupdated: "2018-8-2"
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Trabalhando com Git no Eclipse Orion Web IDE
 {: #git_web_ide}
@@ -92,8 +94,8 @@ ramificação](#start_working_on_branch).
 
 Substitua o conteúdo de uma ramificação remota referenciada pelo conteúdo de sua ramificação local ativa.
 
-**Importante:** Quando você forçar o push de uma ramificação
-local para uma remota, poderá perder as confirmações na ramificação remota.
+Quando você forçar o envio por push de uma ramificação local para um local remoto, poderá perder confirmações na ramificação remota.
+{: tip}
 
 ### Eclipse Orion Web IDE
 {: #force_push_web}
@@ -129,13 +131,14 @@ local para uma remota, poderá perder as confirmações na ramificação remota.
 
 1. Na seção Mudanças no diretório ativo, marque a caixa de seleção de cada arquivo a ser confirmado.
 
-3. No campo **Inserir a mensagem de confirmação**, digite uma mensagem que descreva suas mudanças.
+2. No campo **Inserir a mensagem de confirmação**, digite uma mensagem que descreva suas mudanças.
 
-  **Dica**: Forneça uma mensagem de confirmação detalhada. Sua mensagem deve fornecer detalhes suficientes para que alguém entenda por que a mudança foi necessária sem mais informações. É possível incluir um link para um item no rastreador de problemas da sua equipe para ajudar. A primeira linha da mensagem de confirmação deve conter menos de 50 caracteres. Inclua uma linha em branco antes de incluir outro texto.
+  Forneça uma mensagem de confirmação detalhada. Sua mensagem deve fornecer detalhes suficientes para que alguém entenda por que a mudança foi necessária sem mais informações. É possível incluir um link para um item no rastreador de problemas da sua equipe para ajudar. A primeira linha da mensagem de confirmação deve conter menos de 50 caracteres. Inclua uma linha em branco antes de incluir outro texto.
+  {: tip}
 
-4. Clique em **Confirmar**.
+3. Clique em **Confirmar**.
 
-5. Clique em **Enviar por push**.
+4. Clique em **Enviar por push**.
 
 ### Terminal do Git
 {: #commit_cmd}
@@ -149,16 +152,14 @@ local para uma remota, poderá perder as confirmações na ramificação remota.
 4. Insira o resumo da confirmação, inclua uma linha em branco e inclua a descrição
 da confirmação.
 
-  **Dica**: O resumo da confirmação deve ter menos de 50
-caracteres. A descrição da confirmação deve fornecer detalhes suficientes para que alguém
-entenda por que a mudança foi necessária sem mais informações. É possível incluir um link
-para um item no rastreador de problemas da sua equipe para ajudar.
+  O resumo de confirmação deve ter menos de 50 caracteres. A descrição da confirmação deve fornecer detalhes suficientes para que alguém
+entenda por que a mudança foi necessária sem mais informações. É possível incluir um link para um item no rastreador de problemas da sua equipe para ajudar.
+  {: tip}
 
 5. Salve a mensagem de confirmação.
 
-  **Nota:** Para salvar sua mensagem de confirmação e fechar o
-Vim, que pode ser seu editor de texto padrão, pressione Esc, digite
-`:wq` e pressione Enter.
+  Para salvar sua mensagem de confirmação e fechar o Vim, que pode ser o seu editor de texto padrão, pressione Esc, digite `:wq` e pressione Enter.
+  {: tip}
 
 4. Digite `git push` e pressione Enter.
 
@@ -205,8 +206,8 @@ mais informações, consulte [ Visualizar o histórico de confirmação](#view_c
 
 3. Para revisar as mudanças de um arquivo, clique em **>**.
 
-  **Nota:** Se uma confirmação introduziu uma mudança em uma
-linha, a linha original será sombreada de rosa e a nova linha será sombreada de verde.  Da mesma forma, as linhas que foram incluídas por uma confirmação são verde sombreado e as linhas que foram removidas são rosa sombreado.
+  Se uma confirmação tiver introduzido uma mudança em uma linha, a linha original será sombreada rosa e a nova linha será sombreada verde. Da mesma forma, as linhas que foram incluídas por uma confirmação são verde sombreado e as linhas que foram removidas são rosa sombreado.
+  {: tip}
 
 ### Terminal do Git
 {: #compare_changes_cmd}
@@ -221,19 +222,18 @@ linha, a linha original será sombreada de rosa e a nova linha será sombreada d
 
 3. Revise as mudanças.
 
-  **Nota:** Se uma confirmação introduziu uma mudança em uma
-linha, a linha original será em texto vermelho e iniciará com um sinal de menos (-). A nova linha será em texto verde e iniciará com um sinal de mais (+).  Da mesma forma, as linhas que foram incluídas por uma confirmação são em texto verde e iniciam com um +. As linhas que foram removidas por uma confirmação são em texto vermelho e iniciam com um -.
+  Se uma confirmação tiver introduzido uma mudança em uma linha, a linha original estará em texto vermelho e iniciará com um sinal de menos (-). A nova linha será em texto verde e iniciará com um sinal de mais (+).  Da mesma forma, as linhas que foram incluídas por uma confirmação são em texto verde e iniciam com um +. As linhas que foram removidas por uma confirmação são em texto vermelho e iniciam com um -.
+  {: tip}
 
 1. Para parar de visualizar entradas, pressione Q.
 
 ## Modificar a última confirmação
 {: #modify_last_commit}
 
-  **Nota:** Ao modificar a última confirmação depois
-que enviá-la por push para um repositório remoto, você grava novamente o histórico de
-confirmação. Essa mudança pode causar falhas de confirmação e outros problemas para os outros contribuidores
+  Ao modificar a última confirmação depois de enviá-la por push para um repositório remoto, você regravará o histórico de confirmação. Essa mudança pode causar falhas de confirmação e outros problemas para os outros contribuidores
 em seu projeto. Certifique-se de que você saiba o que está fazendo
 antes de modificar uma confirmação enviada por push para um repositório remoto.
+  {: tip}
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}
@@ -254,9 +254,8 @@ antes de modificar uma confirmação enviada por push para um repositório remot
 
 3. Em seu editor de texto, aceite ou modifique a mensagem de confirmação.
 
-  **Nota:** Para salvar sua mensagem de confirmação e fechar o
-Vim, que pode ser seu editor de texto padrão, pressione Esc, digite
-`:wq` e pressione Enter.
+  Para salvar sua mensagem de confirmação e fechar o Vim, que pode ser o seu editor de texto padrão, pressione Esc, digite `:wq` e pressione Enter.
+  {: tip}
 
 ## Identificar uma confirmação
 {: #tag_commit}
@@ -269,10 +268,10 @@ mais informações, consulte [ Visualizar o histórico de confirmação](#view_c
 
 2. Visualize os detalhes da confirmação clicando nela.
 
-2. Na área de janela de confirmação, clique em **Criar uma tag para a confirmação**
+3. Na área de janela de confirmação, clique em **Criar uma tag para a confirmação**
 <img class="inline"  src="./images/tag.png" alt="Criar uma tag para a confirmação">.
 
-3. No campo de nome, digite o texto da tag. Clique em
+4. No campo de nome, digite o texto da tag. Clique em
 **Enviar**.
 
 ### Terminal do Git
@@ -291,7 +290,7 @@ mais informações, consulte [ Visualizar o histórico de confirmação](#view_c
 {: #change_info_web}
 1. Clique no ícone de configuração <img class="inline" src="./images/configurations.png" alt="ícone Configuração">.
 
-3. Mude o endereço de e-mail e o nome do usuário atualizando os valores user.email
+2. Mude o endereço de e-mail e o nome do usuário atualizando os valores user.email
 e user.name. Clique em **Enviar** para salvar cada mudança.
 
 ### Terminal do Git
@@ -370,15 +369,14 @@ Quando precisar entregar mudanças de uma ramificação de origem para uma ramif
 
 2. No Web IDE, abra cada arquivo que contém conflitos.
 
-3. Resolva cada mudança em conflito.
-
-  **Nota:** Exclua todo o texto que você não deseja manter. Cada conflito está neste formato:
+3. Resolva cada mudança em conflito. Exclua todo o texto que você não deseja manter. Cada conflito está neste formato:
 
 		<<<<<<< HEAD
 		Texto na ramificação retirada.
 		=======
-		Texto na ramificação mesclada.
+		Text in merged branch.
 		>>>>>>> commit_ID_from_merged_branch
+		
 4. Para arquivo em conflito, selecione a caixa de seleção. Digite a mensagem
 de confirmação da mesclagem e clique em **Confirmar**.
 
@@ -389,15 +387,14 @@ de confirmação da mesclagem e clique em **Confirmar**.
 
 2. Em um editor de texto, abra um arquivo que contenha conflitos.
 
-3. Resolva cada mudança em conflito e, em seguida, salve o arquivo.
-
-  **Nota:** Exclua todo o texto que você não deseja manter. Cada conflito está neste formato:
+3. Resolva cada mudança em conflito e, em seguida, salve o arquivo. Exclua todo o texto que você não deseja manter. Cada conflito está neste formato:
 
 		<<<<<<< HEAD
 		Texto na ramificação retirada.
 		=======
-		Texto na ramificação mesclada.
+		Text in merged branch.
 		>>>>>>> merged_branch
+		
 4. Estagie cada arquivo modificado e, em seguida, confirme a mesclagem.
 
 ## Rebasear ramificações
@@ -434,10 +431,10 @@ de confirmação da mesclagem e clique em **Confirmar**.
 
 3. Se você encontrar conflitos, [resolva-os](#resolve_a_rebase_conflict).
 
-5. Repita a etapa anterior quantas vezes forem necessárias para concluir a operação de rebaseamento.
+4. Repita a etapa anterior quantas vezes forem necessárias para concluir a operação de rebaseamento.
 
-  **Nota:** Para parar a operação de rebaseamento, digite
-`git rebase --abort` e pressione Enter.
+  Para parar a operação de rebaseamento, digite `git rebase --abort` e pressione Enter.
+  {: tip}
 
 ## Resolva um conflito de rebaseamento
 {: #resolve_a_rebase_conflict}
@@ -449,15 +446,14 @@ de confirmação da mesclagem e clique em **Confirmar**.
 
 2. No Web IDE, abra cada arquivo que contém conflitos.
 
-3. Resolva cada mudança em conflito.
-
-  **Nota:** Exclua todo o texto que você não deseja reter. Cada conflito está neste formato:
+3. Resolva cada mudança em conflito. Exclua todo o texto que você não deseja reter. Cada conflito está neste formato:
 
 		<<<<<<< HEAD
 		Texto na ramificação retirada.
 		=======
-		Texto na ramificação mesclada.
+		Text in merged branch.
 		>>>>>>> commit_ID_from_merged_branch
+		{: tip}
 4. Na área de janela de rebaseamento, marque a caixa de seleção de cada arquivo corrigido e clique em **Continuar**.
 
 ### Terminal do Git
@@ -467,15 +463,14 @@ de confirmação da mesclagem e clique em **Confirmar**.
 
 2. Em um editor de texto, abra um arquivo que contenha conflitos.
 
-3. Resolva cada mudança em conflito e, em seguida, salve o arquivo.
-
-  **Nota:** Exclua todo o texto que você não deseja reter. Cada conflito está neste formato:
+3. Resolva cada mudança em conflito e, em seguida, salve o arquivo. Exclua todo o texto que você não deseja reter. Cada conflito está neste formato:
 
 		<<<<<<< HEAD
 		Texto na ramificação retirada.
 		=======
-		Texto na ramificação mesclada.
+		Text in merged branch.
 		>>>>>>> merged_branch
+		
 4. Estagie cada arquivo modificado.
 
 5. Continue a operação de rebaseamento digitando `git rebase --continue` e pressionando Enter.

@@ -17,8 +17,7 @@ lastupdated: "2018-3-26"
 
 A equipe do {{site.data.keyword.contdelivery_full}} monitora ativamente o fórum do
 developerWorks para perguntas sobre o serviço e cadeias de
-ferramentas do {{site.data.keyword.contdelivery_short}}.
-Para fazer uma pergunta no fórum, clique no botão **Obter ajuda no fórum**
+ferramentas do {{site.data.keyword.contdelivery_short}}. Para fazer uma pergunta no fórum, clique no botão **Obter ajuda no fórum**
 ![Botão **Obter ajuda no fórum**](images/get_help_in_the_forum.png) na parte
 inferior da cadeia de ferramentas e nas páginas do {{site.data.keyword.contdelivery_short}}.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-1-23"
+lastupdated: "2018-8-2"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -11,11 +11,13 @@ lastupdated: "2018-1-23"
     Indentation as per the previous template must be preserved.
 -->
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
-{:tip:.tip}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Propriedades e recursos do ambiente
 {: #deliverypipeline_environment}
@@ -33,7 +35,7 @@ estão disponíveis a cada tarefa de um estágio.
 * **Seguro**: uma chave de propriedade com um valor de linha única. O valor é exibido como asteriscos.
 * **Propriedades**: um arquivo no repositório do projeto. Esse
 arquivo pode conter diversas propriedades. Cada propriedade deve estar em sua própria
-linha. Para separar os pares de chave/valor, use o sinal de igual (=).
+linha. Para separar os pares de chave/valor, use o sinal de igual (=). Coloque todos os valores de cadeia entre aspas. Por exemplo, MY_STRING = "SOME STRING VALUE ".
 
 É possível examinar as propriedades do ambiente para uma tarefa de pipeline executando o
 comando `env` no script da tarefa.
@@ -94,7 +96,8 @@ As propriedades e recursos a seguir estão disponíveis, por padrão, em ambient
 | MAVEN_HOME | O caminho para o Apache Maven 3.2.1. |
 | NODE_HOME | O caminho para o Node.js 0.10.29. |
 
-**Dica**: é possível usar a versão 1.10+ do Apache Ant em scripts do seu pipeline configurando `ANT_HOME` para `$ANT_JAVA8_HOME` e `JAVA_HOME` para `$JAVA8_HOME`.
+É possível usar a versão 1.10+ do Apache Ant nos scripts do seu pipeline, configurando `ANT_HOME` como `$ANT_JAVA8_HOME` e `JAVA_HOME` como `$JAVA8_HOME`.
+{: tip}
 
 ### Propriedades de implementação
 
@@ -116,7 +119,8 @@ Vários tempos de execução, ferramentas e módulos de Nó são pré-instalados
 
 ### Tempos de execução e ferramentas
 
-*Observação:* todos os links estão no diretório inicial.
+Todos os links estão no diretório inicial.
+{: tip}
 
 | Recurso | Nome de link | Caminho |
 |----------|-----------|-----------|

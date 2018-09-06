@@ -2,13 +2,16 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-3-22"
+lastupdated: "2018-8-2"
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Visão geral do Delivery Pipeline
@@ -17,7 +20,8 @@ lastupdated: "2018-3-22"
 O {{site.data.keyword.contdelivery_full}} inclui o Delivery Pipeline para construir, testar e implementar de forma repetida com mínima intervenção humana. Em um pipeline, as sequências de estágios recuperam a entrada e executam tarefas, como construções, testes e implementações.
 {:shortdesc}
 
-As seções a seguir descrevem os detalhes conceituais por trás dos pipelines.
+As suas permissões para visualizar, modificar ou executar um pipeline são baseadas no controle de acesso para a cadeia de ferramentas que possui o pipeline. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas, consulte [Gerenciando acesso às cadeias de ferramentas em grupos de recursos](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} e [Gerenciando acesso a cadeias de ferramentas em organizações do Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
+{: tip}
 
 ## Estágios
 {: #deliverypipeline_stages}
@@ -26,9 +30,8 @@ Os estágios organizam a entrada e as tarefas conforme o código é construído,
 
 A entrada de um estágio é passada para as tarefas que ele contém e cada tarefa recebe um contêiner limpo no qual é executada.
 
-**Importante**: as tarefas em um estágio não podem transmitir artefatos entre si. 
-Como não é possível transmitir artefatos entre estágios, é necessário que você tenha um estágio de Construção
-separado de um estágio de Implementação, caso seu estágio de implementação use os artefatos do estágio de construção.
+As tarefas em um estágio não podem passar artefatos entre si. Como não é possível passar artefatos entre tarefas, será necessário ter um estágio de Construção separado de um estágio de Implementação se o seu estágio de implementação usar os artefatos do estágio de construção.
+{: tip}
 
 É possível definir as propriedades do ambiente do estágio que podem ser usadas em todas as tarefas. Por
 exemplo, é possível definir uma propriedade `TEST_URL` que transmita uma única URL para
@@ -99,8 +102,7 @@ incluir shell scripts do UNIX que incluam comandos de construção, teste ou imp
 as tarefas são executadas em contêineres ad hoc, as ações de uma não podem afetar os
 ambientes de execução das outras, mesmo que essas tarefas façam parte do mesmo estágio.
 
-Corpo de amostra e scripts de implementação podem ser localizadas em
-[https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons).
+Os scripts de construção e implementação de amostra podem ser localizados em [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons).
 
 Além disso, as tarefas de pipeline podem executar apenas os comandos a seguir como `sudo`:
   * `/usr/sbin/service`
@@ -117,7 +119,8 @@ Além disso, as tarefas de pipeline podem executar apenas os comandos a seguir c
 
 Após a execução de uma tarefa, o contêiner que foi criado para ela é descartado. Os resultados da execução de uma tarefa podem persistir, mas o ambiente no qual ela foi executada não.
 
-**Nota:** as tarefas podem ser executadas por até 60 minutos. Quando as tarefas excedem esse limite, elas falham. Se uma tarefa estiver excedendo o limite, divida-a em várias tarefas. Por exemplo, se uma tarefa executar três trabalhos, você poderá dividi-la em três tarefas: uma para cada trabalho.
+As tarefas podem ser executadas por até 60 minutos. Quando as tarefas excedem esse limite, elas falham. Se uma tarefa estiver excedendo o limite, divida-a em várias tarefas. Por exemplo, se uma tarefa executar três trabalhos, você poderá dividi-la em três tarefas: uma para cada trabalho.
+{: tip}
 
 Para saber como incluir uma tarefa em um estágio, veja [Incluindo uma tarefa em um estágio](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}.
 
@@ -127,11 +130,12 @@ As tarefas de construção compilam seu projeto em preparação para implementa�
 
 As tarefas que tomam a entrada das tarefas de construção devem referenciar os artefatos de construção na mesma estrutura em que eles foram criados. Por exemplo, se uma tarefa de construção arquivar artefatos de construção em um diretório `output`, um script de implementação consultaria o diretório `output` em vez do diretório-raiz do projeto para implementar o projeto compilado. É possível especificar o diretório para archive inserindo o nome do diretório no campo **Construir diretório de archive**. Deixar o campo em branco, arquiva o diretório raiz.
 
-**Nota:** se você usa o tipo de construtor **Simples**, seu código não é compilado ou construído; ele é empacotado e disponibilizado para estágios futuros.
+Se você usar o tipo de construtor **Simples**, o seu código não será compilado nem construído; ele será empacotado e disponibilizado para os estágios futuros.
+{: tip}
 
-Quando você implementa usando o Cloud Foundry, o Cloud Foundry inclui os artefatos corretos para permitir que seu app seja executado. Para obter mais informações, veja [Implementando aplicativos usando o comando cf](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps). O pipeline para um app Cloud Foundry contém um estágio de Implementação que executa um comando cf.
+Quando você implementa usando o Cloud Foundry, o Cloud Foundry inclui os artefatos corretos para permitir que seu app seja executado. Para obter mais informações, veja [Implementando aplicativos usando o comando cf](/docs/cloud-foundry/deploy-apps.html#dep_apps). O pipeline para um app Cloud Foundry contém um estágio de Implementação que executa um comando cf.
 
-O Cloud Foundry tenta [detectar o buildpack para uso do ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Você pode especificar o [Buildpack](/docs/cfapps/byob.html#using-community-buildpacks) para usar no arquivo manifest na pasta raiz de seu app. Os buildpacks geralmente examinam artefatos fornecidos pelo usuário para determinar quais dependências transferir por download e como configurar aplicativos para comunicação com os serviços de limite. Para obter mais informações sobre arquivos manifest, veja [Manifest do aplicativo](/docs/manageapps/depapps.html#appmanifest).
+O Cloud Foundry tenta [detectar o buildpack para uso do ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Você pode especificar o [Buildpack](/docs/cfapps/byob.html#using-community-buildpacks) para usar no arquivo manifest na pasta raiz de seu app. Os buildpacks geralmente examinam artefatos fornecidos pelo usuário para determinar quais dependências transferir por download e como configurar aplicativos para comunicação com os serviços de limite. Para obter mais informações sobre arquivos manifest, veja [Manifest do aplicativo](/docs/cloud-foundry/deploy-apps.html#appmanifest).
 
 ### Tarefas de implementação
 
@@ -146,7 +150,7 @@ implementação, use o nome desse app.
 É possível implementar para uma ou várias regiões e serviços. Por exemplo, é
 possível configurar seu {{site.data.keyword.deliverypipeline}} para usar um ou
 mais serviços, testar em uma região e implementar para produção em múltiplas regiões. Para obter informações adicionais, consulte
-[Regiões](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}.
+[Regiões](/docs/overview/ibm-cloud.html#ov_intro-reg){: new_window}.
 
 ### Tarefas de teste
 Para requerer que as condições sejam atendidas, inclua tarefas de teste antes ou
@@ -162,11 +166,8 @@ tarefa também falhará.
 ## Propriedades do ambiente (variáveis de ambiente)
 {: #environment_properties}
 
-É possível incluir propriedades do ambiente dentro dos comandos shell de uma tarefa. As propriedades fornecem acesso a informações sobre o ambiente de execução da tarefa. Para obter mais informações, veja [Propriedades e recursos do ambiente para o serviço {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).  
-As propriedades do ambiente podem ser transmitidas entre tarefas no mesmo estágio exportando as propriedades.  
-Para transmitir as propriedades do ambiente entre estágios, crie um arquivo `build.properties`
-no repositório no estágio e, em seguida, faça com que o próximo estágio execute o `build.properties`.
-Por exemplo, sua tarefa de construção pode incluir este comando no script de construção:
+É possível incluir propriedades do ambiente dentro dos comandos shell de uma tarefa. As propriedades fornecem acesso a informações sobre o ambiente de execução da tarefa. Para obter mais informações, veja [Propriedades e recursos do ambiente para o serviço {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).  As propriedades do ambiente podem ser transmitidas entre tarefas no mesmo estágio exportando as propriedades.  Para transmitir as propriedades do ambiente entre estágios, crie um arquivo `build.properties`
+no repositório no estágio e, em seguida, faça com que o próximo estágio execute o `build.properties`.  Por exemplo, sua tarefa de construção pode incluir este comando no script de construção:
 
     `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
 
@@ -176,21 +177,17 @@ existir.
 ## Criando e utilizando artefatos
 {: #artifacts}
 
-As tarefas de construção buscam automaticamente o conteúdo na pasta atual na qual o script de
-usuário é executado.  Caso você não precise do conteúdo do repositório Git inteiro para implementação
+As tarefas de construção buscam automaticamente o conteúdo na pasta atual em que o script do usuário é executado. Caso você não precise do conteúdo do repositório Git inteiro para implementação
 posterior, é preferível que configurar um diretório de saída explícito e, em seguida, copiar ou criar
 os artefatos relevantes lá.  Os scripts de tarefa são executados no resultado de construção (diretório de
 saída).
 
-As tarefas de implementação que são implementadas no Cloud Foundry precisam especificar a organização e o
-espaço do local para a implementação dos artefatos. Se serviços adicionais forem necessários para executar
+As tarefas de implementação que são implementadas no Cloud Foundry precisam especificar a chave API da Plataforma de um usuário sob cujas tarefas de autoridade são executadas e a região, a organização e o espaço do local no qual implementar os artefatos. Se serviços adicionais forem necessários para executar
 seu app, será necessário especificá-los no arquivo `manifest.yml`.
 
-As tarefas de implementação que são implementadas no IBM Cloud Container Service em um cluster do
-Kubernetes precisam de um Dockerfile e, opcionalmente, de um gráfico do Helm.  
+Na implementação de tarefas que são implementadas no {{site.data.keyword.containerlong_notm}} para execução em um cluster do Kubernetes é necessário especificar a chave API da Plataforma de um usuário sob cujas tarefas de autoridade são executadas, um Dockerfile e, opcionalmente, um gráfico de Helm.  
 
-O script da tarefa é executado depois que a tarefa efetua login no ambiente de destino (para que seja
-possível executar os comandos `cf push` ou `kubectl` no script).
+O script da tarefa é executado após a tarefa ter efetuado login no ambiente de destino usando a chave API da Plataforma designada a ela (portanto, é possível executar os comandos `cf push` ou `kubectl` no script).
 
 ## Um pipeline de exemplo
 {: #deliverypipeline_example}
@@ -220,7 +217,7 @@ diretório-raiz do projeto, controlam como seu projeto é implementado no
 {{site.data.keyword.Bluemix_notm}}. Para obter informações sobre a criação de arquivos manifest para
 um projeto, consulte a documentação do
 [{{site.data.keyword.Bluemix_notm}}
-sobre manifests de aplicativos](/docs/manageapps/depapps.html#appmanifest). Para integrar-se com o {{site.data.keyword.Bluemix_notm}}, seu
+sobre manifests de aplicativos](/docs/cloud-foundry/deploy-apps.html#appmanifest). Para integrar-se com o {{site.data.keyword.Bluemix_notm}}, seu
 projeto deve ter um arquivo manifest em seu diretório-raiz. No entanto, não é necessário implementar com base nas informações no arquivo.
 
 No pipeline, é possível especificar tudo que um arquivo manifest pode fazer usando os argumentos

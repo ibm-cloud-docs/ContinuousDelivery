@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-2-28"
+lastupdated: "2018-8-2"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -11,10 +11,13 @@ lastupdated: "2018-2-28"
     Indentation as per the previous template must be preserved.
 -->
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Construindo e implementando
 {: #deliverypipeline_build_deploy}
@@ -22,7 +25,7 @@ lastupdated: "2018-2-28"
 O {{site.data.keyword.contdelivery_full}} inclui o Delivery Pipeline, que é possível usar para implementar um processo repetido de integração contínua e entrega contínua.
 {:shortdesc}
 
-Conclua as tarefas a seguir para criar e configurar um pipeline.
+Conclua as tarefas a seguir para configurar um pipeline.
 
 ## Incluindo um estágio
 {: #deliverypipeline_add_stage}
@@ -85,17 +88,17 @@ estágio segue estas condições:
 * Se uma revisão específica não for especificada e nenhum outro estágio usar a
 origem especificada como entrada, use a revisão mais recente da entrada.
 
-**Dica:** é possível implementar uma construção anterior. No
+É possível implementar uma construção anterior. No
 estágio que contém a construção, clique em **Visualizar logs e histórico**. Na
 página que é aberta, clique para expandir o número da execução e, em seguida, clique na
 tarefa de construção. Clique em **ENVIAR PARA** e selecione um
 destino.
+{: tip}
 
 ###Incluindo serviços em apps
 É possível incluir serviços em seus apps e gerenciar esses serviços por meio do
 seu painel do {{site.data.keyword.Bluemix_notm}} ou na interface da linha de comandos (CLI) do Cloud
-Foundry.
-Também é possível emitir comandos da CLI do Cloud Foundry em scripts para tarefas do pipeline. Por
+Foundry. Também é possível emitir comandos da CLI do Cloud Foundry em scripts para tarefas do pipeline. Por
 exemplo, é possível incluir um serviço em um app no script de uma tarefa de implementação. Para
 obter mais informações sobre como incluir serviços, consulte
 [Incluindo

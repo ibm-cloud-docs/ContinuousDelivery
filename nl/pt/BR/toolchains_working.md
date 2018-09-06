@@ -3,13 +3,18 @@
 copyright:
   years: 2015, 2018
 
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Criando cadeias de ferramentas
 {: #toolchains_getting_started}
@@ -21,9 +26,7 @@ poder coletivo de uma cadeia de ferramentas é maior que a soma de suas integra�
 As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Dedicated no {{site.data.keyword.Bluemix}}. É possível criar uma cadeia de ferramentas de duas formas: usar um modelo para criar uma cadeia de ferramentas ou criar uma cadeia de
 ferramentas a partir de um app.
 
-Cada cadeia de ferramentas é associada a uma organização específica (org) e qualquer usuário que seja membro dessa organização poderá ser incluído na lista de controle de acesso de qualquer uma de suas cadeias de ferramentas associadas. Para obter mais informações sobre o controle de acesso de cadeias de ferramentas, veja [Gerenciando o acesso](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}. Antes de
-você criar uma cadeia de ferramentas, certifique-se de estar trabalhando na organização na qual deseja criar a cadeia de ferramentas. A organização na qual você está trabalhando é exibida na barra de menus. Para alternar para outra organização, clique na organização na barra de menus e selecione a organização para a qual você deseja alternar.
-
+Cada cadeia de ferramentas é associada a um grupo de recursos ou organização (org.) específicos. Se uma cadeia de ferramentas estiver associada a um grupo de recursos, qualquer usuário que tenha permissão de Visualizador do Identity and Access Management (IAM) para o recurso de cadeia de ferramentas ou o grupo de recursos que a contenha poderá acessar a cadeia de ferramentas. Se a cadeia de ferramentas estiver associada a uma organização, qualquer usuário que for um membro dessa organização poderá ser incluído na lista de controle de acesso para qualquer uma de suas cadeias de ferramentas associadas. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas em organizações do Cloud Foundry, consulte [Gerenciando o acesso às cadeias de ferramentas em organizações do Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas em grupos de recursos, consulte [Gerenciando o acesso às cadeias de ferramentas em grupos de recursos](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}.
 
 ##Criando uma cadeia de ferramentas com base em um modelo   
 {: #creating_a_toolchain_from_a_template}
@@ -39,7 +42,8 @@ modelo de cadeia de ferramentas.
 1. Revise o diagrama da cadeia de ferramentas que você está prestes a criar. O diagrama
 mostrará cada integração de ferramenta em sua fase de ciclo de vida na cadeia de ferramentas.
 
- **Dica**: alguns dos modelos de cadeia de ferramentas têm múltiplas instâncias de uma integração de ferramenta. Por exemplo, o modelo de cadeia de ferramentas de Microsserviços no {{site.data.keyword.Bluemix_notm}} Public contém três instâncias do GitHub e três instâncias do Delivery Pipeline, uma para cada um dos três microsserviços.
+ Alguns dos modelos de cadeia de ferramentas têm múltiplas instâncias de uma integração de ferramenta. Por exemplo, o modelo de cadeia de ferramentas de Microsserviços no {{site.data.keyword.Bluemix_notm}} Public contém três instâncias do GitHub e três instâncias do Delivery Pipeline, uma para cada um dos três microsserviços.
+ {: tip}
 
  O diagrama na imagem a seguir é um exemplo. Ao criar uma cadeia de ferramentas, o diagrama mostra cada integração de ferramenta que faz parte da cadeia de ferramentas.
  ![Diagrama de cadeia de ferramentas](images/toolchain_diagram2.png)
@@ -49,7 +53,10 @@ mostrará cada integração de ferramenta em sua fase de ciclo de vida na cadeia
  * O nome da cadeia de ferramentas as identifica em
 {{site.data.keyword.Bluemix_notm}}. Se você desejar usar um nome diferente, mude o nome da cadeia de ferramentas.
  * A região na qual criar a cadeia de ferramentas. Se você desejar usar uma região diferente, selecione-a na lista de regiões disponíveis.
- * A organização na qual criar a cadeia de ferramentas. Se você desejar usar uma organização diferente, selecione-a na lista de organizações disponíveis.
+ * A organização ou o grupo de recursos no qual criar a cadeia de ferramentas. Clique no link para alternar entre a seleção de grupos de recursos e de organizações. Se você desejar usar uma organização ou um grupo de recursos diferente, selecione essa opção diferente na lista de organizações ou de grupos de recursos disponíveis.
+ 
+   Os grupos de recursos estão disponíveis somente na região Sul dos EUA.
+   {: tip}
 
 1. Na seção Integrações de ferramentas, selecione cada integração de ferramenta que deseja configurar para sua cadeia de ferramentas. Algumas integrações de ferramentas não requerem configuração. Para obter informações sobre como configurar as integrações de ferramentas, consulte
 [Configurando
@@ -75,8 +82,7 @@ associado a uma cadeia de ferramentas. Quando você envia por push as mudanças 
 1. Na página de criação da cadeia de ferramentas, revise o diagrama da cadeia de ferramentas que estiver prestes a criar. O diagrama
 mostrará cada integração de ferramenta em sua fase de ciclo de vida na cadeia de ferramentas.
 1. Revise as informações padrão para as configurações da cadeia de ferramentas. O nome da cadeia de ferramentas as identifica em
-{{site.data.keyword.Bluemix_notm}}. Se você desejar usar um nome diferente, mude
-o nome da cadeia de ferramentas.
+{{site.data.keyword.Bluemix_notm}}. Se você desejar usar um nome diferente, mude o nome da cadeia de ferramentas.
 1. Na seção Integrações de ferramentas, selecione cada integração de ferramenta que deseja configurar para sua cadeia de ferramentas. Algumas integrações de ferramentas não requerem configuração. Para obter informações sobre como configurar as integrações de ferramentas, consulte
 [Configurando
 integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
@@ -92,10 +98,11 @@ integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integ
 
 Após configurar a cadeia de ferramentas e as suas integrações de ferramenta, é possível visualizar uma representação visual da cadeia de ferramentas.
 
-1. No painel do DevOps, na página **Cadeias de ferramentas**, clique na cadeia de ferramentas para abrir sua página Visão geral. Como alternativa, na página Visão geral do app, no cartão do Continuous Delivery, clique em **Visualizar cadeia de ferramentas**. Em seguida, clique em **Visão geral**.
+1. No painel DevOps, na página **Cadeias de ferramentas**, selecione um **RESOURCE GROUP** ou **CLOUD FOUNDRY ORG**. Todas as cadeias de ferramentas que estiverem contidas dentro do grupo de recursos selecionado ou na organização do Cloud Foundry serão exibidas. Clique na cadeia de ferramentas que você deseja visualizar para abrir a sua página Visão geral. Como alternativa, na página Visão geral do app, no cartão do Continuous Delivery, clique em **Visualizar cadeia de ferramentas**. Em seguida, clique em **Visão geral**.
 2. Para acessar uma integração de ferramenta que esteja em sua cadeia de ferramentas, clique na ferramenta.
 
- **Dica**: se você tiver mais de um GitHub, {{site.data.keyword.ghe_short}} ou repositório Git, poderá ter múltiplos cartões para a mesma integração de ferramenta porque cada repositório é representado por seu próprio cartão. Se você tiver mais de um pipeline, poderá ter múltiplos cartões para a mesma integração de ferramenta porque cada pipeline será representado por seu próprio cartão. Por exemplo, quando você cria uma cadeia de ferramentas de Microsserviços, cada um dos três microsserviços tem seu próprio GitHub, {{site.data.keyword.ghe_short}} ou repositório Git e seu próprio pipeline.
+ Se você tiver mais de um GitHub, {{site.data.keyword.ghe_short}} ou repositório do Git, poderá ter múltiplas placas para a mesma integração de ferramenta porque cada repositório é representado por sua própria placa. Se você tiver mais de um pipeline, poderá ter múltiplos cartões para a mesma integração de ferramenta porque cada pipeline será representado por seu próprio cartão. Por exemplo, quando você cria uma cadeia de ferramentas de Microsserviços, cada um dos três microsserviços tem seu próprio GitHub, {{site.data.keyword.ghe_short}} ou repositório Git e seu próprio pipeline.
+ {: tip}
 
 ## Consulte o tutorial: Usando cadeias de ferramentas
 {: #toolchain_tutorials}

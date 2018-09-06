@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.gitrepos}}
 {: #git_working}
@@ -23,18 +26,18 @@ A integração de ferramenta {{site.data.keyword.gitrepos}} suporta que as equip
    * Rastrear problemas e compartilhar ideias por meio do rastreador de problemas
    * Documentar projetos no sistema de wikis
 
-**Nota:** como essa integração de ferramenta é construída no GitLab Community Edition
-e hospedada pela IBM no {{site.data.keyword.Bluemix_notm}} Platform, algumas opções do GitLab não
-estão disponíveis. Por exemplo, o Delivery Pipeline fornece integração contínua e entrega contínua para
+Como essa integração de ferramenta é construída no GitLab Community Edition e hospedada pela IBM no {{site.data.keyword.Bluemix_notm}} Platform, algumas opções do GitLab não estão disponíveis. Por exemplo, o Delivery Pipeline fornece integração contínua e entrega contínua para
 o {{site.data.keyword.Bluemix_notm}}; portanto, os recursos de integração contínua no GitLab não são
 suportados. Além disso, as funções de administração não estão disponíveis porque são gerenciadas pela IBM.
+{: tip}
 
 ## Usando o {{site.data.keyword.gitrepos}} localmente
 {: #git_local}
 
 É possível acessar localmente os repositórios Git que são armazenados no {{site.data.keyword.gitrepos}}. Para obter instruções de como configurar o Git localmente, consulte [Iniciar o uso do Git na linha de comandos ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
 
-**Dica**: O {{site.data.keyword.gitrepos}} suporta somente conexões HTTPS que usam TLS1.2. Se você usa o Eclipse para se conectar, pode ser necessário especificar esse protocolo para sua versão Java&trade; incluindo `-Dhttps.protocols=TLSv1.2` em seu arquivo eclipse.ini e, em seguida, reiniciando o Eclipse.
+O {{site.data.keyword.gitrepos}} suporta apenas conexões de HTTPS que usem o TLS1.2. Se você usa o Eclipse para se conectar, pode ser necessário especificar esse protocolo para sua versão Java&trade; incluindo `-Dhttps.protocols=TLSv1.2` em seu arquivo eclipse.ini e, em seguida, reiniciando o Eclipse.
+{: tip}
 
 ## Autenticando com o {{site.data.keyword.gitrepos}}
 {: #git_authentication}
@@ -44,7 +47,8 @@ Seu login e senha do {{site.data.keyword.Bluemix_notm}} são usados somente para
 ### Criando um token de acesso pessoal
 {: #create_pat}
 
-**Importante**: para autenticar com o seu repositório Git sobre HTTPS, deve-se criar um token de acesso pessoal.
+Para autenticar com o seu repositório Git sobre HTTPS, deve-se criar um token de acesso pessoal.
+{: tip}
 
 1. No painel Configurações do usuário do {{site.data.keyword.gitrepos}}, na [página Tokens de acesso ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, digite o nome do aplicativo para o qual você deseja criar um token de acesso. Por exemplo, `Git CLI`.
 1. Opcional: escolha uma data de validade para o token de acesso.

@@ -4,14 +4,17 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
@@ -59,7 +62,8 @@ Para ver um tutorial sobre o uso do recurso Live Edit do {{site.data.keyword.Blu
 
 Quando você muda os arquivos em seu Web IDE, eles são reimplementados automaticamente em sua instância do aplicativo no {{site.data.keyword.Bluemix_notm}}. Se você precisar reiniciar o aplicativo Node, clique no botão **Reiniciar** na barra de execução.
 
-**Nota:** para obter uma experiência mais consistente ao usar o recurso Live Edit do {{site.data.keyword.Bluemix_notm}} Live Sync, 256 MB de memória adicional são necessários e estão incluídos. 
+Para obter uma experiência mais consistente ao usar o recurso Live Edit do {{site.data.keyword.Bluemix_notm}} Live Sync, 256 MB de memória adicional serão necessários e serão incluídos.
+{: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} Live Debug
 {: #live-debug}
@@ -98,7 +102,8 @@ Depois de efetuar login, a página {{site.data.keyword.Bluemix_notm}} Live Debug
 
 O Debug inclui os recursos a seguir:  
 * Veja os pontos de interrupção no código do app para pausar a execução em uma linha específica.
-  **Nota:** os pontos de interrupção não são suportados no programa principal, mas são suportados em pontos de entrada.
+  Os pontos de interrupção não são suportados no programa principal, mas são suportados em pontos de entrada.
+  {: tip}
 * Edite as condições do ponto de interrupção para pausar a execução somente quando determinados critérios forem atendidos.
 * Inspecione o estado das variáveis e dos campos locais.
 * Visualize a saída de depuração das chamadas `console.log()` imediatamente. Essa ação é mais rápida do que monitorar logs cf.
@@ -135,7 +140,8 @@ Após a instalação do {{site.data.keyword.Bluemix_notm}} Live Debug, é possí
 
 Envie por push o app e, em seguida, navegue para `https://_app-host.mybluemix.net_/bluemix-debug/manage` para acessar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} Debug. Quando for solicitado para autenticar-se, insira seu nome do usuário e senha do IBMid ou uma senha descartável.    
 
-**Nota:** o Debugger pode levar um minuto ou mais para ser inicializado.
+O Depurador pode levar um minuto ou mais para ser inicializado.
+{: tip}
 
 ### Restaurando configurações do app e desativando o {{site.data.keyword.Bluemix_notm}} Live Debug {: #restore_live_debug}
 

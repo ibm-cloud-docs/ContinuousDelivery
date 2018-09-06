@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-7-19"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -47,11 +47,29 @@ tiver uma sessão GitHub ativa, será solicitado que efetue login. Clique em **A
 ## Eu tentei criar uma cadeia de ferramentas, por que estou recebendo um erro?
 {: #cannot_create_toolchain}
 
-Ao tentar criar uma cadeia de ferramentas, se você receber a mensagem de erro a seguir, remova uma ou mais
-cadeias de ferramentas de sua organização e, em seguida, crie sua cadeia de ferramentas novamente.
+Ao tentar criar uma cadeia de ferramentas em uma organização, se você receber a mensagem de erro a seguir, remova uma ou mais cadeias de ferramentas de sua organização e, em seguida, crie a sua cadeia de ferramentas novamente.
 
 `Esta organização contém 200 cadeias de ferramentas, que é o limite máximo. Para poder incluir outra cadeia de ferramentas, remova uma ou mais cadeias de ferramentas da organização.`
 
+
+## Por que a página Cadeias de ferramentas mostra que o plano Lite do serviço {{site.data.keyword.contdelivery_short}} foi excedido?
+
+{{site.data.keyword.contdelivery_short}}  oferece dois planos: Lite e Professional. Se você tiver o plano Lite do {{site.data.keyword.contdelivery_short}}, será possível usar cadeias de ferramentas gratuitamente, até os limites do plano. A mensagem de erro indica que você excedeu um ou mais limites do plano Lite. Por exemplo, você poderá exceder o plano se você tiver muitos usuários autorizados que estiverem associados à instância do serviço {{site.data.keyword.contdelivery_short}} ou se você executou o número máximo de tarefas do {{site.data.keyword.deliverypipeline}}. Para obter mais informações sobre os termos de seu plano, veja [Limitações e uso do plano](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+
+
+## Eu criei uma cadeia de ferramentas; por que a página Cadeias de ferramentas mostra que um serviço de Entrega Contínua é necessário?
+
+Os termos do plano para a instância do serviço {{site.data.keyword.contdelivery_short}} que está no mesmo grupo de recursos ou organização, uma vez que a cadeia de ferramentas gerencia o uso de algumas das integrações de ferramenta ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} e {{site.data.keyword.gitrepos}}) que estão contidas no serviço. A mensagem de erro indica que o grupo de recursos ou a organização não contém a instância necessária do serviço {{site.data.keyword.contdelivery_short}}. Para obter mais informações sobre os termos de seu plano, veja [Limitações e uso do plano](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+
+
+## Eu criei uma cadeia de ferramentas em uma organização do Cloud Foundry; por que a página Cadeias de ferramentas mostra que um serviço de Entrega Contínua é necessário?
+
+Quando você criar uma cadeia de ferramentas em um grupo de recursos ou em uma organização que não tem uma instância do serviço {{site.data.keyword.contdelivery_short}}, a plataforma da cadeia de ferramentas tentará criar automaticamente uma instância do serviço usando o plano Lite. A mensagem de erro indica que a plataforma da cadeia de ferramentas não pôde criar a instância de serviço.
+
+Esse erro poderá ocorrer quando você criar uma cadeia de ferramentas na região Sul dos EUA e em uma organização do Cloud Foundry que ainda não tiver uma instância do {{site.data.keyword.contdelivery_short}}. Na região sul dos EUA, deve-se criar todas as novas instâncias do serviço {{site.data.keyword.contdelivery_short}} em grupos de recursos. 
+
+Será possível criar a cadeia de ferramentas em um grupo de recursos ou criar a cadeia de ferramentas em uma organização que já tiver uma instância do {{site.data.keyword.contdelivery_short}}.
+  
 
 ## Eu tentei implementar um app no {{site.data.keyword.Bluemix_notm}}, por que estou recebendo
 um erro?
@@ -61,7 +79,8 @@ Ao tentar implementar um app no {{site.data.keyword.Bluemix_notm}}, se você rec
 
 `Erro de Servidor COM FALHA, código de status: 400, código de erro: 100005, mensagem: Você excedeu seu limite de memória da organização.`
 
-É possível aumentar a cota de memória de sua conta ou reduzir a memória que seus apps usam. A cota máxima de memória para uma conta de avaliação é 2 GB. Para aumentar a cota de memória de sua conta, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Contas pagas](/docs/pricing/index.html#pay-accounts). Para reduzir a memória que seus apps usam, use o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos cf.
+É possível aumentar a cota de memória de sua conta ou reduzir a memória que seus apps usam. A cota máxima
+de memória para uma conta de avaliação é 2 GB. Para aumentar a cota de memória de sua conta, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Contas pagas](/docs/pricing/index.html#pay-accounts). Para reduzir a memória que seus apps usam, use o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos cf.
 
 Se você usar o console do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
 

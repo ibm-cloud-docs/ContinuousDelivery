@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Criando modelos customizados de cadeia de ferramentas
@@ -121,9 +123,9 @@ requer.
 ### Incluindo texto de outros arquivos
 
 Todas as informações para sua cadeia de ferramentas podem estar no
-arquivo `toolchain.yml`. No entanto, talvez você queira criar arquivos separados para cada
+arquivo `toolchain.yml`.  No entanto, talvez você queira criar arquivos separados para cada
 UI de integração de ferramenta utilizando `$text`. Isso pode facilitar a manutenção de suas
-cadeias de ferramentas, bem como minimizar o tempo gasto editando arquivos de configuração. Este
+cadeias de ferramentas, bem como minimizar o tempo gasto editando arquivos de configuração.  Este
 fragmento de exemplo de um `toolchain.yml` mostra como usar o conteúdo do
 arquivo `pipeline.yml` como o valor para `content`.
 
@@ -147,11 +149,10 @@ messages:
 ```
 
   As sequências em inglês estão em `messages.yml` e outros idiomas usam o código de
-idiomas, como `messages_de.yml`.  A lista de códigos de idioma pode ser localizada em
+idiomas, como `messages_de.yml`.   A lista de códigos de idioma pode ser localizada em
 [Tags para identificação de idiomas](https://tools.ietf.org/html/rfc5646){: new_window}.
 
-   Para referenciar a sequência de exteriorização, use `$ref` para recuperar a sequência.
-Por
+   Para referenciar a sequência de exteriorização, use `$ref` para recuperar a sequência.  Por
 exemplo,
 
 ```
@@ -220,19 +221,16 @@ nome de seu repositório com as propriedades a seguir:
 | Item | Chave/Propriedade | Valor | Descrição |
 |------|--------------|-------|-------------|
 | repo-name | principais |  | O nome do repositório. Essa chave corresponde ao nome (sample-repo) |
-| service_id | propriedades | <`githubpublic`, `githubprivate`, `hostedgit`, `gitlab`> | 
-Tipo de repositório |
+| service_id | propriedades | <`githubpublic`, `githubprivate`, `hostedgit`, `gitlab`> | Tipo de repositório |
 | parâmetros: | principais |  |  |
 | repo_name | propriedades |  | Padrão para o nome do repositório. O exemplo a seguir usa o nome da cadeia de ferramentas como o nome do repositório |
 | repo_url | propriedades |  | URL do repositório |
-| Tipo | propriedades | <`new`, `fork`, `clone`, `link`> | 
-Como criar o novo repositório |
+| Tipo | propriedades | <`new`, `fork`, `clone`, `link`> | Como criar o novo repositório |
 | has_issues | propriedades | <`true`, `false`> | Problemas de uso |
 | enable_traceability | de metadados |  <`true`, `false`> | Determina se deve rastrear a implementação de mudanças de código criando tags, rótulos e comentários em confirmações, solicitações pull e problemas referenciados.|
 
- **Nota:** se você definir múltiplos repositórios e configurá-los como
-`has_issues: true`, uma instância única do rastreador GitHub Issue será incluída na cadeia de
-ferramentas. O rastreador segue problemas para todos os repositórios que são configurados para `true`.
+ Se você definir múltiplos repositórios e configurá-los como `has_issues: true`, uma instância única do rastreador de Problemas do GitHub será incluída na cadeia de ferramentas. O rastreador segue problemas para todos os repositórios que são configurados para `true`.
+ {: tip}
 
  Este snippet mostra um exemplo dessa seção:
 
@@ -269,8 +267,7 @@ página de cadeia de ferramentas  |
 | conteúdo | propriedades | <`$ref(pipeline.yml)`> | Arquivo que estabelece a definição de pipeline |
 | env | principais |  |  |
 | SAMPLE_REPO | principais | <`repo-name-key`> | O mesmo nome que sua chave pai de repositório |
-| CF_APP_NAME |  propriedades | <`'{{form.pipeline.parameters.prod-app-name}}'`> | Nome que é usado pelo Cloud Foundry. 
-Considere incorporar o nome chave pai do repositório nesta propriedade. |
+| CF_APP_NAME |  propriedades | <`'{{form.pipeline.parameters.prod-app-name}}'`> | Nome que é usado pelo Cloud Foundry. Considere incorporar o nome chave pai do repositório nesta propriedade. |
 | PROD_SPACE_NAME | propriedades | <`'{{form.pipeline.parameters.prod-space}}'`> | Nome do espaço do {{site.data.keyword.Bluemix_notm}} no qual implementar |
 | PROD_ORG_NAME | propriedades | <`'{{form.pipeline.parameters.prod-organization}}'`> | Nome da organização {{site.data.keyword.Bluemix_notm}} na qual implementar |
 | PROD_REGION_ID | propriedades | <`'{{form.pipeline.parameters.prod-region}}'`> | Nome da região {{site.data.keyword.Bluemix_notm}} na qual implementar |
@@ -304,7 +301,7 @@ ser encontradas em uma [seção posterior.](#toolchains_custom_pipeline_yml)
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
        execute: true
- ```      
+ ```
  {: codeblock}
 
 4\. **Detalhes da implementação:**

@@ -2,12 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Fazer upgrade do projeto {{site.data.keyword.jazzhub_short}} para uma cadeia de ferramentas
 {: #upgrade_projects}
@@ -52,7 +57,8 @@ As cadeias de ferramentas são como projetos, com algumas diferenças importante
 ## Fazendo upgrade de um projeto para uma cadeia de ferramentas
 {: #project_to_toolchain}
 
-**Importante:** Os projetos no hub.jazz.net e nas cadeias de ferramentas são hospedados na região sul dos EUA. Se seu projeto foi configurado para implementar apps em uma região diferente, ele ainda implementará apps nessa região após o upgrade para uma cadeia de ferramentas.
+Os projetos no hub.jazz.net e as cadeias de ferramentas são ambos hospedados na região sul dos EUA. Se seu projeto foi configurado para implementar apps em uma região diferente, ele ainda implementará apps nessa região após o upgrade para uma cadeia de ferramentas.
+{: tip}
 
 Quando seu projeto estiver pronto para ser submetido a upgrade, uma mensagem será exibida no cartão do projeto e na página Visão geral.
 
@@ -60,9 +66,10 @@ Quando seu projeto estiver pronto para ser submetido a upgrade, uma mensagem ser
 
 ![Mensagem de horário para upgrade](images/banner-ready-to-upgrade.png)
 
-**Dica:** é possível localizar projetos que estão prontos para upgrade no menu na página Meus projetos:
+Será possível localizar projetos que estiverem prontos para upgrade por meio do menu na página Meus Projetos:
 
-![Imagem do item de menu Projetos para upgrade](images/menu-projects-to-upgrade.png)
+![Imagem do item de menu Projetos dos quais fazer upgrade](images/menu-projects-to-upgrade.png)
+{: tip}
 
 Ao iniciar o upgrade, os estágios do pipeline em seu projeto serão bloqueados. Você não conseguirá executá-los ou modificá-los. Se você reverter o upgrade excluindo a cadeia de ferramentas, o pipeline será desbloqueado.
 
@@ -150,7 +157,8 @@ Quando você retornar ao seu projeto, a mensagem de upgrade será exibida novame
 
    ![Mensagem no banner indicando que foi feito upgrade do projeto](images/banner-upgraded.png)
 
-   **Nota:** Se a mensagem disser "upgrade agora", seu upgrade falhou. Clique no link **upgrade agora** para tentar novamente.
+   Se a mensagem disser "Fazer upgrade agora", o seu upgrade falhou. Clique no link **upgrade agora** para tentar novamente.
+   {: tip}
 
    ![Mensagem no banner indicando que o projeto está pronto para upgrade](images/banner-ready-to-upgrade.png)
 
@@ -170,7 +178,8 @@ Quando você retornar ao seu projeto, a mensagem de upgrade será exibida novame
     4. Para autenticar com o {{site.data.keyword.gitrepos}} de um cliente Git externo por meio de https, use seu nome de usuário e seu token de acesso pessoal.
     5. Se você desejar reutilizar o repositório local de seu repositório Git JazzHub, aponte o repositório para o novo repositório no {{site.data.keyword.gitrepos}}. Em um shell em um terminal, mude para o diretório no qual o repositório Git JazzHub é clonado. Insira o comando `git remote set-url`: `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        **Dica:** Para verificar quais URLs remotas estão configuradas para quais nomes remotos, use o comando `git remote -v`. O nome remoto padrão é `origin`. Se você tiver uma configuração mais avançada, o formulário do comando será o seguinte: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        Para verificar quais URLs remotas estão configuradas para quais nomes remotos, use o comando `git remote -v`. O nome remoto padrão é `origin`. Se você tiver uma configuração mais avançada, o formulário do comando será o seguinte: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        {: tip}
 
 5. Quando sua cadeia de ferramentas estiver configurada e você tiver começado a usá-la, considere executar todas ou qualquer uma dessas etapas para assegurar que ninguém use seu projeto:
     - Inclua um sufixo no nome do projeto para indicar que ele não deve ser usado. Você poderá incluir `_DO_NOT_USE` no final do nome do projeto.
@@ -288,7 +297,8 @@ Se você deseja que sua cadeia de ferramentas esteja em uma organização dos EU
    
    4. Exclua a cadeia de ferramentas que foi criada por meio do processo de upgrade. 
    
-      **Nota:** o repositório Git não é excluído automaticamente. Você pode desejar excluí-lo manualmente ou renomeá-lo agora. Se você já mudou o repositório, será possível alternar a cadeia de ferramentas futura para usá-la posteriormente.
+      O repositório Git não é excluído automaticamente. Você pode desejar excluí-lo manualmente ou renomeá-lo agora. Se você já mudou o repositório, é possível atualizar a cadeia de ferramentas futura para usá-la posteriormente.
+      {: tip}
 
    5. Retorne ao projeto do JazzHub. Ele deve se reconfigurar para outra tentativa de upgrade. Se ele não for reconfigurado, entre em contato com hub@jazz.net e forneça a URL do projeto.
    

@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Configurando clientes locais para trabalhar com controle de fonte Git
 {: #git_local}
@@ -28,13 +30,13 @@ lastupdated: "2018-3-21"
 
 | Tipo de Git  | Configuração de HTTPS | Uso de HTTPS |  Configuração de SSH |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Token de acesso pessoal](/docs/services/ContinuousDelivery/git_working.html#git_authentication) | O nome do usuário (não seu IBMid) do Git Repos and Issue tracking e o token de acesso pessoal | 
-[Configurar a chave
+| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Token de acesso pessoal](/docs/services/ContinuousDelivery/git_working.html#git_authentication) | O nome do usuário (não seu IBMid) do Git Repos and Issue tracking e o token de acesso pessoal | [Configurar a chave
 SSH](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
 | GitHub público (github.com) | O token de acesso pessoal não é necessário, mas é possível configurar um e usá-lo | O nome do usuário e senha do GitHub ou o nome do usuário do GitHub e token de acesso pessoal ou apenas o token de acesso pessoal como o nome do usuário | [Configurar uma chave SSH do GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
 | GitHub corporativo | [Token de acesso pessoal](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | O nome do usuário (não seu IBMid) do GitHub Enterprise e o token de acesso pessoal | [Configurar a chave SSH do GitHub Enterprise](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
-**Nota**: se você preferir usar SSH, será possível reutilizar uma única chave em todos os servidores Git. Crie ou localize sua chave e configure-a em cada servidor, conforme descrito nos links anteriores. Se criar sua chave com uma passphrase, essa passphrase será solicitada quando você usar a chave.
+Se você preferir usar SSH, será possível reutilizar uma única chave ao longo de todos os servidores do Git. Crie ou localize sua chave e configure-a em cada servidor, conforme descrito nos links anteriores. Se criar sua chave com uma passphrase, essa passphrase será solicitada quando você usar a chave.
+{: tip}
 
 2. Se você for usar a linha de comandos do Git, faça o seguinte:
 
@@ -91,7 +93,6 @@ Application Server Developer Tools (WDT):
 * Arquivos EAR (archive corporativo)
 * Servidores empacotados do perfil Liberty
 
-Também é possível criar serviços e vinculá-los ao seu app e definir variáveis de ambiente como parte da implementação. 
-Para obter mais informações sobre o IBM Eclipse Tools, consulte
+Também é possível criar serviços e vinculá-los ao seu app e definir variáveis de ambiente como parte da implementação. Para obter mais informações sobre o IBM Eclipse Tools, consulte
 [Implementando apps com o IBM Eclipse
-Tools for {{site.data.keyword.Bluemix_notm}}](../../manageapps/eclipsetools/eclipsetools.html).
+Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html).

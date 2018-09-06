@@ -2,14 +2,17 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-4-13"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Trabalhando com imagens customizadas do Docker
@@ -35,7 +38,8 @@ script a ser executado. Por exemplo, use as opções a seguir para executar uma 
 
 O nome da imagem do Docker em tarefas de imagem customizada do Docker é projetado para funcionar na mesma maneira que os nomes de imagem funcionam com a CLI do Docker. O formato de um nome de imagem do Docker é: `[repository][:][tag]`. Por exemplo, para `docker run maven:3.5.3-ibmjava`, o nome da imagem do Docker é `maven:3.5.3-ibmjava`, em que `maven` é o repositório e `3.5.3-ibmjava` é a tag. Não há restrições sobre o nome da imagem do Docker que pode ser usado; qualquer imagem do docker válida funciona.
 
-**Dica**: se o campo **Nome da imagem do Docker** não for concluído, a imagem base do pipeline padrão será usada. 
+Se o campo **Nome da imagem do Docker** não estiver preenchido, a imagem base do pipeline padrão será usada.
+{: tip}
 
 Por padrão, seu repositório no [Docker Hub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://hub.docker.com/){: new_window} é procurado. Se você usa outro registro do Docker, como o IBM Cloud Registry, é possível usar o nome DNS completo. Também é possível usar o nome completo para imagens no Docker Hub. Por exemplo, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
 
@@ -61,6 +65,7 @@ Para a maioria dos registros, é possível usar o nome de usuário e a senha que
 
 É possível usar o bloco **script** em tarefas de imagem customizada do Docker para criar um arquivo de script que seja executado em uma pasta de tarefa, semelhante ao modo como as tarefas de pipeline normais funcionam. 
 
-**Importante**: o `ENTRYPOINT` e o `CMD` no Dockerfile de sua imagem do Docker são substituídos e não são chamados. Em alguns casos, isso pode significar a necessidade de incluir etapas de inicialização em seu script.
+`ENTRYPOINT` e `CMD` de seu Dockerfile da imagem do Docker são substituídos e não são chamados. Em alguns casos, isso pode significar a necessidade de incluir etapas de inicialização em seu script.
+{: tip}
 
 Tarefas de imagem customizada do Docker fornecem maior flexibilidade o modo de execução de seu script; especificamente, é possível controlar o interpretador de comandos. Normalmente, se a primeira linha do script começa com `#!` e com o nome de um interpretador de comandos, essa entrada é usada para executar os comandos na tarefa. Se você não especificar um interpretador de comandos, o shell padrão para a imagem do Docker será usado. Geralmente, `#!/bin/bash` ou `#!/bin/sh` são usados; interpretadores de comando de imagem para `awk`, `node` e `ruby` também funcionam, se você especifica uma imagem do Docker apropriada.

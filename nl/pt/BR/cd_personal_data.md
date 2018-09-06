@@ -2,12 +2,17 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-4-13"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Gerenciando dados pessoais no Continuous Delivery
 {: #cd_personal_data}
@@ -24,14 +29,17 @@ Dados pessoais são quaisquer informações relacionadas a uma pessoa física ou
  * [GitHub Enterprise on IBM Cloud ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/ghededicated/ghe_personal_data.html){: new_window}
  * [{{site.data.keyword.DRA_full}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
-O {{site.data.keyword.contdelivery_short}} fornece as permissões apropriadas para gerenciar dados dentro de uma organização do Cloud Foundry. Sua empresa pode ter políticas que limitam essas permissões. Se você não tiver as permissões apropriadas, entre em contato com o administrador da sua organização.
+A IBM não gerencia dados no serviço {{site.data.keyword.contdelivery_short}}. Antes de deixar o serviço {{site.data.keyword.contdelivery_short}} que está hospedado no {{site.data.keyword.Bluemix_notm}} Public, deve-se excluir os seus próprios dados.
+{: tip}
+
+O {{site.data.keyword.contdelivery_short}} fornece as permissões apropriadas para gerenciar dados dentro de um grupo de recursos ou de uma organização do Cloud Foundry. Sua empresa pode ter políticas que limitam essas permissões. Se você não tiver as permissões apropriadas, entre em contato com o administrador para a sua conta do {{site.data.keyword.Bluemix_notm}}.
 
 Para gerenciar seus dados pessoais, deve-se entender as contas do IBM Cloud, como essas contas são usadas e seus direitos de acesso associados.
  
 ## Contas e direitos de acesso
 {: #accounts_access_rights}
 
-Para trabalhar no IBM Cloud, deve-se efetuar login com um nome de usuário e uma senha. Ao efetuar login, o IBM Cloud associa pelo menos uma conta do IBM Cloud às suas credenciais do usuário. Ao criar recursos, como organizações do Cloud Foundry e objetos do {{site.data.keyword.contdelivery_short}}, eles serão associados a uma conta do IBM Cloud.
+Para trabalhar no IBM Cloud, deve-se efetuar login com um nome de usuário e uma senha. Ao efetuar login, o IBM Cloud associa pelo menos uma conta do IBM Cloud às suas credenciais do usuário. Quando você criar recursos como organizações do Cloud Foundry, grupos de recursos, cadeias de ferramentas e objetos do {{site.data.keyword.contdelivery_short}}, eles serão associados a uma conta do IBM Cloud.
 
 A estrutura de login do IBM Cloud fornece a opção de trabalhar em diferentes contas. Usando a interface com o usuário do IBM Cloud, é possível alternar de uma conta para outra. Ao efetuar login, qualquer um dos tipos de contas a seguir pode ser associado às suas credenciais do usuário: 
 
@@ -68,28 +76,30 @@ Independentemente do tipo de conta do IBM Cloud que é usado, se você tiver dir
 
 Antes de excluir dados de uma conta, determine se é uma conta pessoal ou uma conta individual corporativa.
 
-###Contas pessoais
+###Conta pessoal
 
 Se você possui uma conta pessoal, é possível fazer mudanças e excluir seus dados. Se você compartilha sua conta com outro usuário, você possui os dados, mas talvez você queira entrar em contato com esse usuário sobre o trabalho compartilhado. 
 
 Se você não pode efetuar login na sua conta do IBM Cloud, [entre em contato com o Suporte IBM ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/support){:new_window}
  
-###Contas corporativas individuais
+###Conta individual corporativa
 
 Se você possui uma conta individual corporativa, deve-se coordenar quaisquer mudanças com sua empresa e com outros membros de sua equipe. Exclua seus dados pessoais, independentemente se eles estão armazenados em uma conta corporativa ou em uma conta corporativa individual. Certifique-se de que você não exclua o trabalho que você compartilhou com outros usuários.
 
-Antes de começar a gerenciar seus dados pessoais para os componentes do {{site.data.keyword.contdelivery_short}}, certifique-se de que você está trabalhando em sua conta do IBM Cloud. Para visualizar a conta do IBM Cloud na qual você está trabalhando atualmente, na barra de menus, clique no avatar do seu perfil.  
+Antes de começar a gerenciar seus dados pessoais para os componentes do {{site.data.keyword.contdelivery_short}}, certifique-se de que você está trabalhando em sua conta do IBM Cloud. Para visualizar a conta do IBM Cloud na qual você está trabalhando atualmente, na barra de menus, clique no avatar do seu perfil. 
 
 Se não for possível efetuar login na sua conta do IBM Cloud, entre em contato com a empresa e trabalhe com eles para excluir seus dados pessoais.
 
-**Importante**: se você deseja excluir todos os seus dados pessoais do {{site.data.keyword.contdelivery_short}}, a ordem na qual você exclui esses dados é importante. Primeiramente, exclua todas as áreas de trabalho do {{site.data.keyword.webide}}. Em seguida, exclua seus dados do {{site.data.keyword.gitrepos}} e, então, exclua sua conta do {{site.data.keyword.gitrepos}}. Finalmente, exclua seus pipelines de entrega, suas integrações de ferramentas e suas cadeias de ferramentas.
+Se você desejar excluir todos os seus dados pessoais do {{site.data.keyword.contdelivery_short}}, a ordem na qual você excluir esses dados será importante. Primeiramente, exclua todas as áreas de trabalho do {{site.data.keyword.webide}}. Em seguida, exclua seus dados do {{site.data.keyword.gitrepos}} e, então, exclua sua conta do {{site.data.keyword.gitrepos}}. Finalmente, exclua seus pipelines de entrega, suas integrações de ferramentas e suas cadeias de ferramentas.
+{: tip}
 
 ## Exportando e excluindo dados do Web IDE
 {: #managing_web_ide_data}
 
 O {{site.data.keyword.webide}} fornece uma área de trabalho pessoal na nuvem. É possível usar o {{site.data.keyword.webide}} para clonar repositórios Git e arquivos de edição. Você possui a área de trabalho do {{site.data.keyword.webide}}; ela não é compartilhada por nenhuma outra conta.
 
-**Dica**: antes de excluir seus dados do {{site.data.keyword.webide}}, talvez você queira exportar seu trabalho. Depois de excluir suas áreas de trabalho, elas são removidas do {{site.data.keyword.contdelivery_short}} e todos os arquivos são excluídos.
+Antes de excluir os seus dados do {{site.data.keyword.webide}}, talvez você queira exportar o seu trabalho. Depois de excluir suas áreas de trabalho, elas são removidas do {{site.data.keyword.contdelivery_short}} e todos os arquivos são excluídos.
+{: tip}
 
 ###Exportando uma área de trabalho do Web IDE
 
@@ -107,9 +117,10 @@ Para excluir suas áreas de trabalho do {{site.data.keyword.webide}}, incluindo 
 1. Clique em **PERFIL DO USUÁRIO**.
 1. Clique em **Excluir** para remover todos os seus dados do {{site.data.keyword.webide}}.
 
-**Importante**: o {{site.data.keyword.webide}} usa um mecanismo de conexão única. Na primeira vez em que você acessa essa integração de ferramenta, uma conta do {{site.data.keyword.webide}} correspondente, porém oculta é criada para sua conta do IBM Cloud. Depois de excluir todas as suas áreas de trabalho, não acesse o {{site.data.keyword.webide}}. Se você acessar o {{site.data.keyword.webide}} novamente, uma nova conta será criada automaticamente, que deverá ser excluída. 
+O {{site.data.keyword.webide}} usa um mecanismo de conexão única. Na primeira vez em que você acessa essa integração de ferramenta, uma conta do {{site.data.keyword.webide}} correspondente, porém oculta é criada para sua conta do IBM Cloud. Depois de excluir todas as suas áreas de trabalho, não acesse o {{site.data.keyword.webide}}. Se você acessar o {{site.data.keyword.webide}} novamente, uma nova conta será criada automaticamente, que deverá ser excluída.
+{: tip}
 
-## Modificando, exportando e excluindo dados do Git Repos and Issue Tracking 
+## Modificando, exportando e excluindo dados do Git Repos and Issue Tracking
 {: #managing_grit_data}
 
 O {{site.data.keyword.gitrepos}} fornece um serviço Git hospedado na nuvem. Um mecanismo de conexão única é usado para associar sua conta do IBM Cloud a uma conta do Git. Um nome completo e um nome abreviado são criados para você na sua conta do Git. Outros usuários poderão usar seu nome abreviado para referir-se a você em um comentário dentro de um problema do Git. É possível customizar sua conta do Git e incluir dados pessoais, como uma descrição de si mesmo ou uma imagem. 
@@ -118,7 +129,8 @@ O {{site.data.keyword.gitrepos}} fornece um ambiente de codificação social pod
 
 Seus perfis e configurações da conta, projetos pessoais, grupos e fragmentos estão associados à sua conta do Git. Se você excluir sua conta do Git, esses objetos serão excluídos. Para excluir dados pessoais em outro projeto, navegue até o projeto e, em seguida, modifique-o para remover seus dados pessoais ou excluir o projeto inteiramente. Certifique-se de que você coordene com outros membros da sua equipe antes de excluir projetos compartilhados.
 
-**Importante**: antes de excluir sua conta do Git, excluir seus dados pessoais de outros projetos. Depois de excluir sua conta do Git, pode ser difícil ou impossível localizar todos os projetos para os quais você contribuiu.
+Antes de excluir a sua conta do Git, exclua os seus dados pessoais de outros projetos. Depois de excluir sua conta do Git, pode ser difícil ou impossível localizar todos os projetos para os quais você contribuiu.
+{: tip}
 
 ###Projetos pessoais e compartilhados
 
@@ -142,24 +154,27 @@ Depois que o projeto é arquivado, ele pode ser importado para outra instância 
 1. No painel Configurações do usuário do {{site.data.keyword.gitrepos}}, na página [Conta ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, na seção Excluir conta, clique em **Excluir conta**.
 1. Todos os projetos do Git, incluindo repositórios e problemas são excluídos. Você também é removido de quaisquer grupos do {{site.data.keyword.gitrepos}} aos quais você pertence.
 
-**Dica**: após sua conta ser excluída, algum conteúdo permanecerá. Esse conteúdo será designado para um Usuário fantasma em todo o sistema Para obter mais informações sobre como excluir uma conta do {{site.data.keyword.gitrepos}}, consulte [Excluindo uma conta do usuário ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}.
+Após a sua conta ser excluída, algum conteúdo permanecerá. Esse conteúdo será designado para um Usuário fantasma em todo o sistema Para obter mais informações sobre como excluir uma conta do {{site.data.keyword.gitrepos}}, consulte [Excluindo uma conta do usuário ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}.
+{: tip}
 
-**Importante**: o {{site.data.keyword.gitrepos}} usa um mecanismo de conexão única que cria automaticamente uma conta do Git correspondente para sua conta do IBM Cloud na primeira vez em que você acessa a integração de ferramenta. Depois de excluir sua conta, não acesse o {{site.data.keyword.gitrepos}}. Se você acessar o {{site.data.keyword.gitrepos}} novamente, uma nova conta será criada automaticamente, que deverá ser excluída. 
+O {{site.data.keyword.gitrepos}} usa um mecanismo de conexão única que cria automaticamente uma conta do Git correspondente para a sua conta do IBM Cloud na primeira vez que você acessar a integração da ferramenta. Depois de excluir sua conta, não acesse o {{site.data.keyword.gitrepos}}. Se você acessar o {{site.data.keyword.gitrepos}} novamente, uma nova conta será criada automaticamente, que deverá ser excluída.
+{: tip}
 
-## Modificando e excluindo dados contínuos do Delivery Pipeline
+## Modificando, exportando e excluindo dados do pipeline de Entrega contínua
 {: #managing_pipeline_data}
 
 Os pipelines do {{site.data.keyword.contdelivery_short}} executam scripts para construir, testar e implementar seu aplicativo no IBM Cloud. Para fazer isso, os pipelines fornecem estágios, tarefas, variáveis de ambiente e outros objetos que podem conter dados pessoais. É possível excluir esses objetos individualmente ou excluir um pipeline inteiro.
 
 Certifique-se de que você coordene com outros membros da sua equipe antes de excluir objetos ou pipelines compartilhados. A exclusão de um estágio pode fazer com que um pipeline falhe.
 
-**Dica**: um pipeline não pode existir fora de uma cadeia de ferramentas. Se você excluir uma cadeia de ferramentas, todos os pipelines que estiverem associados à cadeia de ferramentas também serão excluídos. Se você planeja excluir uma cadeia de ferramentas inteira, não é necessário excluir cada pipeline individualmente. Em vez disso, acesse a seção "Modificando e excluindo as cadeias de ferramentas e integrações de ferramentas" e siga as etapas para excluir uma cadeia de ferramentas.
+Um pipeline não pode existir fora de uma cadeia de ferramentas. Se você excluir uma cadeia de ferramentas, todos os pipelines que estiverem associados à cadeia de ferramentas também serão excluídos. Se você planeja excluir uma cadeia de ferramentas inteira, não é necessário excluir cada pipeline individualmente. Em vez disso, acesse a seção "Modificando e excluindo as cadeias de ferramentas e integrações de ferramentas" e siga as etapas para excluir uma cadeia de ferramentas.
+{: tip}
 
-###Modificando e excluindo estágios de pipeline
-
-Os estágios de pipeline podem incluir dados pessoais, como credenciais na forma de propriedades do ambiente. Os estágios também podem incluir scripts dentro de tarefas que você deseja modificar ou excluir. Use as ações Configurar Estágio ou Excluir Estágio para modificar ou excluir um estágio.
+Os estágios de pipeline podem incluir dados pessoais, como credenciais na forma de propriedades de ambiente e uma definição de pipeline que mostra o estado atual do pipeline. Estágios também podem incluir scripts dentro de tarefas que você deseja modificar ou excluir, bem como artefatos e logs para as execuções de pipeline mais recentes que você deseja exportar. Use as ações Configurar Estágio ou Excluir Estágio para modificar ou excluir um estágio. Use a ação Download para exportar artefatos ou logs de um estágio.
 
   ![Menu de estágios](images/pipeline_stages.png)
+
+###Modificando um Estágio de Pi
 
 Para modificar um estágio de pipeline:
 
@@ -172,24 +187,26 @@ Para modificar um estágio de pipeline:
   
 1. Excluir uma tarefa do estágio de pipeline. Na guia **TAREFAS**, selecione a tarefa que deseja excluir e clique em **Remover**.
  
+###Exportando um Estágio de Pipel
+
+Para exportar a definição para um estágio de pipeline, anexe `/yaml` à URL do pipeline:
+
+` http (s): //<DevOps Services domain>/pipeline/user/project/yaml `
+
+
+Para exportar artefatos e logs para um estágio de pipeline:
+
+1. Na página Pipeline, clique em **Visualizar logs e histórico**.
+1. Clique no número da construção para o qual você deseja exportar artefatos e logs.
+1. Clique em **DOWNLOAD** > **Artefatos** para exportar os artefatos para a compilação selecionada.
+1. Clique em **DOWNLOAD** > **Logs** para exportar os logs para a compilação selecionada.  
+
+###Excluindo um Estágio de Pipel
+
 Para excluir um estágio de pipeline:
 
 1. Na página Pipeline, clique no ícone **Configurações**.
 1. Clique em **Excluir estágio**.
-
-###Mudando a propriedade de pipeline
-
-É possível transferir a propriedade de um pipeline que você possui para outro usuário; o novo proprietário deve executar a operação de transferência. Um usuário pode assumir a propriedade de um pipeline existente, mas não pode designar a propriedade para outro usuário. Deve-se ter direitos de ADMINISTRADOR para assumir a propriedade de um pipeline.
-
-Para assumir a propriedade de um pipeline, um usuário deve concluir as etapas a seguir:
-
-1. Efetuar login no IBM Cloud.
-1. Clique no menu para acessar as opções de configuração. 
-
-  ![Menu Configuração](images/pipeline_ownership.png)
-
-1. Clique em **Modificar o proprietário do pipeline**. 
-1. Selecione **TORNAR-ME O PROPRIETÁRIO**.
 
 ## Modificando e excluindo cadeias de ferramentas e integrações de ferramentas
 {: #managing_toolchains}
@@ -219,7 +236,6 @@ Para excluir uma integração de ferramenta:
 1. Para excluir uma integração de ferramenta por meio de sua cadeia de ferramentas, clique em **Excluir**.
 1. Confirme clicando em **Excluir**.
 
-
 ###Excluindo cadeias de ferramentas
 
 Quando você excluir uma cadeia de ferramentas, a exclusão não poderá ser desfeita.
@@ -229,8 +245,12 @@ Quando você excluir uma cadeia de ferramentas, a exclusão não poderá ser des
 1. Clique em **Excluir**. A exclusão de uma cadeia de ferramentas remove todas as suas integrações de ferramenta, incluindo pipelines, podendo excluir recursos que sejam gerenciados por essas integrações.
 1. Confirme a exclusão digitando o nome da cadeia de ferramentas e clicando em **Excluir**. 
 
+Quando você excluir uma cadeia de ferramentas, os repositórios do {{site.data.keyword.gitrepos}} não serão excluídos. Os usuários que tiverem acesso àqueles repositórios poderão ter cópias dos dados se eles executaram um `git clone` ou criaram uma área de trabalho {{site.data.keyword.webide}}. Para certificar-se de que todos os dados sejam excluídos, deve-se solicitar que esses usuários excluam as suas cópias dos dados.
+{: tip}
+
 ###Excluindo todas as cadeias de ferramentas
 
-Não é possível excluir todas as cadeias de ferramentas dentro de uma organização ao mesmo tempo. Deve-se excluir cada cadeia de ferramentas por vez.
+Não é possível excluir todas as cadeias de ferramentas dentro de um grupo de recursos ou uma organização ao mesmo tempo. Deve-se excluir cada cadeia de ferramentas por vez.
 
-**Importante**: as cadeias de ferramentas têm o escopo definido por região do IBM Cloud e organização do Cloud Foundry. Certifique-se de selecionar cada região e organização dentro da região para excluir cada cadeia de ferramentas que você criou.
+As cadeias de ferramentas têm escopo definido por região do IBM Cloud e grupo de recursos ou organização do Cloud Foundry. Certifique-se de selecionar cada região e grupo de recursos ou organização dentro da região para excluir cada cadeia de ferramentas que você criou.
+{: tip}
