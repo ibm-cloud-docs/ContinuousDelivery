@@ -4,14 +4,17 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
@@ -20,7 +23,7 @@ lastupdated: "2018-3-26"
 Si está creando una aplicación Node.js, puede utilizar {{site.data.keyword.Bluemix}} Live Sync para actualizar rápidamente la instancia de aplicación en {{site.data.keyword.Bluemix_notm}} y desarrollar sin redesplegar manualmente.   
 {: shortdesc}
 
-Cuando realice un cambio, puede verlo de inmediato en la app {{site.data.keyword.Bluemix_notm}} en ejecución. {{site.data.keyword.Bluemix_notm}} Live Sync funciona
+Cuando realice un cambio, puede verlo de inmediato en la aplicación de {{site.data.keyword.Bluemix_notm}} en ejecución. {{site.data.keyword.Bluemix_notm}} Live Sync funciona
 <!--from both the command line and -->
 en Eclipse Orion Web IDE (Web IDE). Puede depurar aplicaciones que están escritas en Node.js utilizando {{site.data.keyword.Bluemix_notm}} Live Sync.  
 
@@ -54,14 +57,15 @@ En Eclipse Orion Web IDE (Web IDE), en la barra de ejecución, pulse **Edición 
 ![Imagen de la barra de Ejecución con la edición en directo](images/bluemix-live-sync-light.png)
 
 Edición en directo le permite obtener una vista previa rápida de los cambios en las aplicaciones Node.js que se ejecutan en {{site.data.keyword.Bluemix_notm}}. Al actualizar
-el código con la característica Edición en directo activada, puede renovar la ventana del navegador de su app web
+el código con la característica Edición en directo activada, puede renovar la ventana del navegador de su aplicación web
 para ver dichos cambios reflejados pocos segundos después de efectuarlos.
 
 Para ver un tutorial sobre cómo utilizar la característica Edición en directo de {{site.data.keyword.Bluemix_notm}} Live Sync, consulte [Utilice {{site.data.keyword.Bluemix_notm}} Live Sync para desarrollar, depurar y desplegar la app ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-live-sync-to-develop-debug-and-deploy-your-app){:new_window}.
 
-Cuando modifique los archivos en Web IDE, se redesplegarán automáticamente a su instancia de aplicación en {{site.data.keyword.Bluemix_notm}}. Si tiene que reiniciar la app Node, pulse el botón **Reiniciar** de la barra de ejecución.
+Cuando modifique los archivos en Web IDE, se redesplegarán automáticamente a su instancia de aplicación en {{site.data.keyword.Bluemix_notm}}. Si tiene que reiniciar la aplicación Node, pulse el botón **Reiniciar** de la barra de ejecución.
 
-**Nota:** Para obtener una experiencia más coherente al utilizar la característica Edición en directo de {{site.data.keyword.Bluemix_notm}} Live Sync, serán necesarios 256 MB de memoria adicional y se añadirán.
+Para obtener una experiencia más coherente al utilizar la característica de Live Edit de {{site.data.keyword.Bluemix_notm}} Live Sync, se necesitan 256 MB de memoria adicional y se añade.
+{: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} Live Debug
 {: #live-debug}
@@ -81,7 +85,7 @@ reiniciar el tiempo de ejecución de forma dinámica, entre otras característic
 * Depuración mediante [Inspector de nodos ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/node-inspector/node-inspector){:new_window}
 * Acceso a shell
 
-### Control del tiempo de ejecución de la aplicación{: #app-runtime}
+### Control del tiempo de ejecución de la aplicación {: #app-runtime}
 
 Con el control del tiempo de ejecución de la aplicación, puede utilizar Debug
 para inspeccionar el estado de la app en el momento inicial. Esta función resulta útil para solucionar los problemas de una app que falla al iniciarse.
@@ -102,7 +106,8 @@ Después de iniciar la sesión, se abrirá la página {{site.data.keyword.Bluemi
 
 Debug incluye las siguientes funciones:  
 * Establecer puntos de interrupción en el código de la app para detener la ejecución en una línea específica.
-  **Nota:** Los puntos de interrupción no están soportados en el programa principal, pero están soportados en puntos de entrada.
+  Los puntos de interrupción no están soportados en el programa principal, pero están soportados en puntos de entrada.
+  {: tip}
 * Editar las condiciones de los puntos de interrupción cuando se cumplan ciertos criterios.
 * Inspeccionar el estado de las variables locales y los campos.
 * Visualizar la salida de la depuración de manera inmediata desde las llamadas `console.log()`. Esta opción es más rápida que la supervisión de registros cf.
@@ -141,7 +146,8 @@ Debug, puede utilizar las herramientas de depuración.
 
 Envíe la app y luego vaya a `https://_app-host.mybluemix.net_/bluemix-debug/manage` para acceder a la interfaz de usuario de depuración de {{site.data.keyword.Bluemix_notm}}. Cuando se le solicite que se autentique, especifique su nombre de usuario y contraseña del ID de IBM o un código de acceso puntual.    
 
-**Nota:** El depurador puede tardar aproximadamente un minuto en inicializarse.
+El depurador puede tardar aproximadamente un minuto en inicializarse.
+{: tip}
 
 ### Restauración de configuraciones de app e inhabilitación de {{site.data.keyword.Bluemix_notm}} Live Debug {: #restore_live_debug}
 

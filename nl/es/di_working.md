@@ -2,15 +2,17 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-3-23"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Cómo trabajar con {{site.data.keyword.DRA_short}} (Beta)
 {: #di_working}
@@ -18,7 +20,8 @@ lastupdated: "2018-3-23"
 Con {{site.data.keyword.DRA_full}} puede mantener y mejorar la calidad del código en {{site.data.keyword.Bluemix_notm}} supervisando los despliegues para identificar los riesgos antes de que se propaguen, analizando los cambios de desarrollo en busca de probabilidad de errores o mejorando la interacción del equipo.
 {:shortdesc}
 
-**Nota**: {{site.data.keyword.DRA_short}} está disponible sólo en la región EE.UU. Sur.
+{{site.data.keyword.DRA_short}} solo está disponible en la región sur de Estados Unidos.
+{: tip}
 
 {{site.data.keyword.DRA_short}} recopila y analiza los resultados de pruebas de unidad, pruebas funcionales y herramientas de cobertura de código para determinar si el código cumple las políticas predefinidas en las puertas especificadas del proceso de despliegue. Si el código no cumple o supera una política, el despliegue se detiene para evitar la exposición a riesgos. Puede utilizar {{site.data.keyword.DRA_short}} como red de seguridad para el entorno de entrega continuada o como método para implementar y mejorar los estándares de calidad. 
 

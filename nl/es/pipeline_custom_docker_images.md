@@ -2,14 +2,17 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-4-13"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Cómo trabajar con imágenes de Docker personalizadas
@@ -27,7 +30,8 @@ Tanto si utiliza un tipo de trabajo de compilación, como si es de prueba o desp
 
 El nombre de imagen de Docker en trabajos de imagen de Docker personalizada está diseñado para funcionar de la misma forma que los nombres de imágenes con la CLI de Docker. El formato de un nombre de imagen de Docker es: `[repository][:][tag]`. Por ejemplo, para `docker run maven:3.5.3-ibmjava`, el nombre de imagen de Docker es `maven:3.5.3-ibmjava`, donde `maven` es el repositorio y `3.5.3-ibmjava` es la etiqueta. No hay restricciones sobre el nombre de imagen de Docker que puede utilizar; vale cualquier imagen de Docker válida.
 
-**Sugerencia:**: Si no se rellena el campo de **nombre de imagen de Docker**, se utiliza la imagen base del conducto estándar. 
+Si no se rellena el campo de **nombre de imagen de Docker**, se utiliza la imagen base del conjunto estándar. 
+{: tip}
 
 De forma predeterminada, se busca en el repositorio en [Docker Hub ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://hub.docker.com/){: new_window}. Si utiliza otro registro de Docker, como IBM Cloud Registry, puede utilizar el nombre de DNS completo. También puede utilizar el nombre completo para imágenes en Docker Hub. Por ejemplo, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
 
@@ -53,6 +57,7 @@ Para la mayoría de los registros, puede utilizar el nombre de usuario y la cont
 
 Puede utilizar el bloque de **script** en los trabajos de imagen de Docker personalizada para crear un archivo de script que se ejecute en una carpeta de tareas, de forma similar al funcionamiento de los trabajos normales de conducto. 
 
-**Importante**: los valores de `ENTRYPOINT` y `CMD` de la imagen de Docker se sustituyen y no se invocan. En algunos casos, esto podría significar que necesita añadir pasos de inicialización al script.
+Los valores `ENTRYPOINT` y `CMD` del Dockerfile de la imagen de Docker se sustituyen y no se invocan. En algunos casos, esto podría significar que necesita añadir pasos de inicialización al script.
+{: tip}
 
 Los trabajos de imagen de Docker personalizada aportan una mayor flexibilidad sobre cómo ejecutar el script; concretamente, puede controlar el intérprete de mandatos. Normalmente, si la primera línea del script empieza por `#!` seguido del nombre de un intérprete de mandatos, dicha entrada se utiliza para ejecutar los mandatos en el trabajo. Si no se especifica un intérprete de mandatos, se utiliza el shell predeterminado para la imagen de Docker. Normalmente, se utilizan `#!/bin/bash` o `#!/bin/sh`; los intérpretes de mandatos de imagen para `awk`, `node` y `ruby` también sirven si se especifica una imagen de Docker apropiada.

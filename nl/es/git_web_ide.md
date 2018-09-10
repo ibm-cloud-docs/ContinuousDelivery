@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-3-23"
+lastupdated: "2018-8-2"
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Cómo trabajar con Git en Eclipse Orion Web IDE
 {: #git_web_ide}
@@ -24,7 +26,7 @@ Independientemente de dónde escriba el código, puede utilizar esta consulta r�
 ### Eclipse Orion Web IDE
 {: #create_branch_web}
 
-1. Pulse la lista **Referencia**. 
+1. Pulse la lista **Referencia**.
 
 1. Pulse **Nueva rama**.
 
@@ -43,7 +45,7 @@ Independientemente de dónde escriba el código, puede utilizar esta consulta r�
 
 2. Pulse el icono de extraer <img  class="inline" src="./images/checkout.png" alt="Icono de extraer"> en la rama a modificar.
 
-1. Asegúrese de que la rama seleccionada se muestra en la lista **Referencia**. 
+1. Asegúrese de que la rama seleccionada se muestra en la lista **Referencia**.
 
 ### Terminal Git
 {: #start_working_on_branch_cmd}
@@ -86,16 +88,17 @@ Independientemente de dónde escriba el código, puede utilizar esta consulta r�
 ##Forzar la transmisión de cambios locales a una rama remota
 {: #force_push}
 
-Sustituya el contenido de una rama remota referenciada por el contenido de la rama local activa. 
+Sustituya el contenido de una rama remota referenciada por el contenido de la rama local activa.
 
-**Importante:** cuando fuerza la transmisión de una rama local a una remota, es posible que pierda confirmaciones en la rama remota. 
+Cuando fuerza la transmisión de una rama local a una remota, es posible que pierda confirmaciones en la rama remota.
+{: tip}
 
 ### Eclipse Orion Web IDE
 {: #force_push_web}
 
 1. En la sección Cambios del directorio de trabajo, en la sección Saliente, pulse la flecha para **Enviar**.
 2. Pulse **Forzar transmisión de rama**.
-3. Confirme el aviso. 
+3. Confirme el aviso.
 
 ### Terminal Git
 {: #force_push_cmd}
@@ -108,13 +111,13 @@ Sustituya el contenido de una rama remota referenciada por el contenido de la ra
 ### Eclipse Orion Web IDE
 {: #discard_changes_web}
 
-1. En la sección Cambios del directorio de trabajo, seleccione el recuadro de selección correspondiente a cada archivo modificado que tenga cambios que desea descartar. 
+1. En la sección Cambios del directorio de trabajo, seleccione el recuadro de selección correspondiente a cada archivo modificado que tenga cambios que desea descartar.
 2. Pulse el icono de extracción <img class="inline"  src="./images/discard.png" alt="Extraer los archivos seleccionados, descartando todos los cambios">.
 
 ### Terminal Git
 {: #discard_changes_cmd}
 
-1. Escriba `git checkout -- path/to/file/filename` para descartar los cambios en un archivo. 
+1. Escriba `git checkout -- path/to/file/filename` para descartar los cambios en un archivo.
 
 ## Confirmar archivos y enviarlos a la rama remota
 {: #commit}
@@ -122,35 +125,35 @@ Sustituya el contenido de una rama remota referenciada por el contenido de la ra
 ### Eclipse Orion Web IDE
 {: #commit_web}
 
-1. En la sección Cambios del directorio de trabajo, seleccione el recuadro de selección correspondiente a cada archivo que desee confirmar. 
+1. En la sección Cambios del directorio de trabajo, seleccione el recuadro de selección correspondiente a cada archivo que desee confirmar.
 
-3. En el campo **Especificar el mensaje de confirmación**, escriba un mensaje que describa los cambios.
+2. En el campo **Especificar el mensaje de confirmación**, escriba un mensaje que describa los cambios.
 
+  Especifique un mensaje de confirmación detallado. El mensaje debe proporcionar suficientes detalles como para que se entienda por qué era necesario realizar el cambio sin más información. Puede incluir un enlace con un elemento del rastreador de elementos de su equipo como ayuda. La primera línea del mensaje de confirmación no debe contener más de 50 caracteres. Añada una línea en blanco antes de añadir más texto.
+  {: tip}
 
-  **Consejo**: especifique un mensaje de confirmación detallado. El mensaje debe proporcionar suficientes detalles como para que se entienda por qué era necesario realizar el cambio sin más información. Puede incluir un enlace con un elemento del rastreador de elementos de su equipo como ayuda. La primera línea del mensaje de confirmación no debe contener más de 50 caracteres. Añada una línea en blanco antes de añadir más texto.
+3. Pulse **Confirmar**.
 
-4. Pulse **Confirmar**.
-
-5. Pulse **Enviar**.
+4. Pulse **Enviar**.
 
 ### Terminal Git
 {: #commit_cmd}
 
 1. Escriba `git status` y pulse Intro.
 
-2. Revise los cambios que va a confirmar.
-Si todos los archivos que desea confirmar están en la lista, continúe.
-Para confirmar archivos no transferidos, transfiéralos primero. 
+2. Revise los cambios que va a confirmar. Si todos los archivos que desea confirmar están en la lista, continúe. Para confirmar archivos no transferidos, transfiéralos primero.
 
 3. Escriba `git commit` y pulse Intro.
 
-4. Especifique el resumen de confirmación, añada una línea en blanco y añada la descripción de la confirmación. 
+4. Especifique el resumen de confirmación, añada una línea en blanco y añada la descripción de la confirmación.
 
-  **Consejo**: el resumen de confirmación debe tener menos de 50 caracteres. La descripción de la confirmación debe proporcionar suficientes detalles como para que se entienda por qué era necesario realizar el cambio sin más información. Puede incluir un enlace con un elemento del rastreador de elementos de su equipo como ayuda. 
+  El resumen de confirmación debe tener menos de 50 caracteres. La descripción de la confirmación debe proporcionar suficientes detalles como para que se entienda por qué era necesario realizar el cambio sin más información. Puede incluir un enlace con un elemento del rastreador de elementos de su equipo como ayuda.
+  {: tip}
 
-5. Guarde el mensaje de confirmación. 
+5. Guarde el mensaje de confirmación.
 
-  **Nota:** para guardar el mensaje de confirmación y cerrar Vim, que puede ser su editor de texto predeterminado, pulse Esc, escriba `:wq` y pulse Intro. 
+  Para guardar el mensaje de confirmación y cerrar Vim, que puede ser su editor de texto predeterminado, pulse Esc, escriba `:wq` y pulse Intro.
+  {: tip}
 
 4. Escriba `git push` y pulse Intro.
 
@@ -160,13 +163,13 @@ Para confirmar archivos no transferidos, transfiéralos primero.
 ### Eclipse Orion Web IDE
 {: #view_commit_history_web}
 
-1. En la sección Rama activa, amplíe **Historial** para ver historial de la rama. 
+1. En la sección Rama activa, amplíe **Historial** para ver historial de la rama.
 
-  El historial de confirmaciones también se puede ver como un gráfico visual conectado. 
+  El historial de confirmaciones también se puede ver como un gráfico visual conectado.
 
 1. Pulse el icono de **conmutación de representación gráfica** <img  class="inline" src="./images/graphicalhistoryicon.png" alt="Icono de historial gráfico">.
 
-  Una vez conmutado, el historial de confirmaciones y cualquier cambio entrante o saliente correspondiente a la rama activa se dibuja como un gráfico conectado. La representación visual muestra todas las confirmaciones y las ramas en las que se han realizado. 
+  Una vez conmutado, el historial de confirmaciones y cualquier cambio entrante o saliente correspondiente a la rama activa se dibuja como un gráfico conectado.  La representación visual muestra todas las confirmaciones y las ramas en las que se han realizado.
 
   <img class="screen-shot" src="./images/visualhistoryexample.png" alt="Historial de confirmaciones visual">
 
@@ -193,40 +196,38 @@ Para confirmar archivos no transferidos, transfiéralos primero.
 
 3. Pulse **>** para revisar los cambios a un archivo.
 
-  **Nota:** si una confirmación ha incorporado un cambio en una línea, la línea original aparece sombreada en rosa y la nueva línea sombreada en verde.
-Paralelamente, las líneas que ha añadido una confirmación aparecen sombreadas en verde y las que ha eliminado una confirmación, sombreadas en rosa.
+  Si una confirmación ha incorporado un cambio en una línea, la línea original aparece sombreada en rosa y la nueva línea sombreada en verde.  Paralelamente, las líneas que ha añadido una confirmación aparecen sombreadas en verde y las que ha eliminado una confirmación, sombreadas en rosa.
+  {: tip}
 
 ### Terminal Git
 {: #compare_changes_cmd}
 
 1. Escriba `git log -p` y pulse Intro.
 
-
   **Nota:** Para ver sólo un determinado número de confirmaciones, escriba `git log -p -<number_of_commits_to_view>`.
 
-2. Navegue por las confirmaciones. 
+2. Navegue por las confirmaciones.
  * Para ver más entradas, pulse AvPág.
  * Para ver entradas anteriores, pulse RePág.
 
 3. Revise los cambios.
 
-  **Nota:** si una confirmación ha incorporado un cambio en una línea, el texto de la línea original se muestra en rojo y comienza por un signo menos (-).
-El texto de la línea nueva se muestra en verde y comienza por un signo más (+).
-Paralelamente, el texto de las líneas que ha añadido una confirmación aparece en verde y comienza por un signo más.
-El texto de las líneas que ha eliminado una confirmación aparece en rojo y comienza por un signo menos.
+  Si una confirmación ha incorporado un cambio en una línea, el texto de la línea original se muestra en rojo y comienza por un signo menos (-). El texto de la línea nueva se muestra en verde y comienza por un signo más (+).  Paralelamente, el texto de las líneas que ha añadido una confirmación aparece en verde y comienza por un signo más. El texto de las líneas que ha eliminado una confirmación aparece en rojo y comienza por un signo menos.
+  {: tip}
 
 1. Para detener la visualización de entradas, pulse Q.
 
 ## Modificar la última confirmación
 {: #modify_last_commit}
 
-  **Nota:** si modifica la última confirmación después de enviarla a un repositorio remoto, vuelve a escribir en el historial de confirmaciones. Este cambio puede ocasionar errores de confirmación y otros problemas para otros colaboradores en el proyecto. Asegúrese de saber lo que hace antes de modificar una confirmación que ha enviado a un repositorio remoto. 
+  Si modifica la última confirmación después de enviarla a un repositorio remoto, vuelve a escribir en el historial de confirmaciones. Este cambio puede ocasionar errores de confirmación y otros problemas para otros colaboradores en el proyecto. Asegúrese de saber lo que hace antes de modificar una confirmación que ha enviado a un repositorio remoto.
+  {: tip}
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}
 1. Marque los recuadros de selección correspondientes a los elementos que desea añadir a la confirmación.
 
-1. Marque el recuadro de selección **Modificar confirmación anterior**. 
+1. Marque el recuadro de selección **Modificar confirmación anterior**.
 
 2. Si es necesario, escriba un nuevo mensaje de confirmación.
 
@@ -235,15 +236,14 @@ El texto de las líneas que ha eliminado una confirmación aparece en rojo y com
 ### Terminal Git
 {: #modify_last_commit_cmd}
 
-1. Compruebe el estado.
-Transfiera o anule la transferencia de archivos según sea necesario.
+1. Compruebe el estado. Transfiera o anule la transferencia de archivos según sea necesario.
 
-2. Escriba `git commit --amend` y pulse Intro. 
+2. Escriba `git commit --amend` y pulse Intro.
 
 3. En el editor de texto, acepte o modifique el mensaje de confirmación.
 
-
-  **Nota:** para guardar el mensaje de confirmación y cerrar Vim, que puede ser su editor de texto predeterminado, pulse Esc, escriba `:wq` y pulse Intro. 
+  Para guardar el mensaje de confirmación y cerrar Vim, que puede ser su editor de texto predeterminado, pulse Esc, escriba `:wq` y pulse Intro.
+  {: tip}
 
 ## Etiquetar una confirmación
 {: #tag_commit}
@@ -255,9 +255,9 @@ Transfiera o anule la transferencia de archivos según sea necesario.
 
 2. Vea los detalles de la confirmación pulsando sobre la misma.
 
-2. En el panel de confirmación, pulse **Cree una etiqueta para la confirmación** <img class="inline" src="./images/tag.png" alt="Crear una etiqueta para la confirmación">.
+3. En el panel de confirmación, pulse **Cree una etiqueta para la confirmación** <img class="inline" src="./images/tag.png" alt="Crear una etiqueta para la confirmación">.
 
-3. En el campo de nombre, escriba el texto de la etiqueta. Pulse **Enviar**.
+4. En el campo de nombre, escriba el texto de la etiqueta. Pulse **Enviar**.
 
 ### Terminal Git
 {: #tag_commit_cmd}
@@ -273,7 +273,7 @@ Transfiera o anule la transferencia de archivos según sea necesario.
 {: #change_info_web}
 1. Pulse el icono de configuración <img class="inline" src="./images/configurations.png" alt="Icono de configuración">.
 
-3. Cambie la dirección de correo electrónico y el nombre del usuario actualizando los valores user.email y user.name. Pulse **Enviar** para guardar el cambio.
+2. Cambie la dirección de correo electrónico y el nombre del usuario actualizando los valores user.email y user.name. Pulse **Enviar** para guardar el cambio.
 
 ### Terminal Git
 {: #change_info_cmd}
@@ -284,7 +284,7 @@ Para actualizar su nombre y dirección de correo electrónico para un solo repos
 
 2. Escriba `git config user.name "<Your Name>"` y pulse Intro.
 
-Para actualizar su nombre y dirección de correo electrónico para todos los repositorios: 
+Para actualizar su nombre y dirección de correo electrónico para todos los repositorios:
 
 1. Escriba `git config --global user.email "<your@email.com>"` y pulse Intro.
 
@@ -310,13 +310,12 @@ Revertir los cambios que ha introducido una confirmación en su rama activa.
 ## Fusionar cambios
 {: #merge_changes}
 
-Cuando tenga que distribuir cambios de una rama de origen a una de destino, primero debe fusionar. Normalmente, la rama de origen es la rama en la que ha realizado los cambios y la de destino rama es la rama maestra. 
+Cuando tenga que distribuir cambios de una rama de origen a una de destino, primero debe fusionar. Normalmente, la rama de origen es la rama en la que ha realizado los cambios y la de destino rama es la rama maestra.
 
 ### Eclipse Orion Web IDE
 {: #merge_changes_web}
 
 1. Decida las ramas que desea fusionar.
-
 
 2. Extraiga la rama de destino. Para obtener más información, consulte [Cómo trabajar en una rama local](#start_working_on_branch).
 
@@ -337,7 +336,6 @@ Cuando tenga que distribuir cambios de una rama de origen a una de destino, prim
 
 1. Decida las ramas que desea fusionar.
 
-
 2. Extraiga la rama de destino. Para obtener más información, consulte [Cómo trabajar en una rama local](#start_working_on_branch).
 
 3. Escriba `git merge <source_name>` y pulse Intro.
@@ -353,19 +351,15 @@ Cuando tenga que distribuir cambios de una rama de origen a una de destino, prim
 
 2. En Web IDE, abra cada archivo que contenga conflictos.
 
-3. Resuelva cada cambio conflictivo.
-
-
-  **Nota:** suprima todo el texto que no desee conservar.
-Cada conflicto tiene este formato: 
+3. Resuelva cada cambio conflictivo. Suprima todo el texto que no desee conservar. Cada conflicto tiene este formato:
 
 		<<<<<<< HEAD
 		Texto de la rama extraída.
 		=======
-		Testo de la rama fusionada.
+		Texto de la rama fusionada.
 		>>>>>>> commit_ID_from_merged_branch
-4. Para cada archivo conflictivo, marque el recuadro de selección.
-Escriba un mensaje de confirmación de fusión y pulse **Confirmar**.
+		
+4. Para cada archivo conflictivo, marque el recuadro de selección. Escriba un mensaje de confirmación de fusión y pulse **Confirmar**.
 
 ### Terminal Git
 {: #resolve_a_merge_conflict_cmd}
@@ -374,17 +368,14 @@ Escriba un mensaje de confirmación de fusión y pulse **Confirmar**.
 
 2. En el editor de texto, abra un archivo que contenga conflictos.
 
-3. Resuelva cada cambio conflictivo y guarde el archivo.
-
-
-  **Nota:** suprima todo el texto que no desee conservar.
-Cada conflicto tiene este formato: 
+3. Resuelva cada cambio conflictivo y guarde el archivo. Suprima todo el texto que no desee conservar. Cada conflicto tiene este formato:
 
 		<<<<<<< HEAD
 		Texto de la rama extraída.
 		=======
-		Testo de la rama fusionada.
+		Texto de la rama fusionada.
 		>>>>>>> merged_branch
+		
 4. Transfiera cada archivo que haya modificado y confirme la fusión.
 
 ## Cambio de base de las ramas
@@ -393,12 +384,11 @@ Cada conflicto tiene este formato:
 ### Eclipse Orion Web IDE
 {: #rebase_branches_web}
 
-1. Decida las ramas cuya base desea cambiar.
-Cambiará la base del contenido de la rama de origen y la colocará en la rama de destino.
+1. Decida las ramas cuya base desea cambiar. Cambiará la base del contenido de la rama de origen y la colocará en la rama de destino.
 
 2. Extraiga la rama de destino. Para obtener más información, consulte [Cómo trabajar en una rama local](#start_working_on_branch).
 
-1. Pulse la lista **Referencia**. 
+1. Pulse la lista **Referencia**.
 
 1. Pulse el nombre de la rama de origen.
 
@@ -408,7 +398,7 @@ Cambiará la base del contenido de la rama de origen y la colocará en la rama d
 
 6. Repita el paso anterior tantas veces como sea necesario para completar la operación de cambio de base.
 
-1. Pulse la lista **Referencia**, amplíe **origen** y pulse el nombre de la rama de origen. 
+1. Pulse la lista **Referencia**, amplíe **origen** y pulse el nombre de la rama de origen.
 
 1. Pulse **Enviar**.
 
@@ -421,9 +411,10 @@ Cambiará la base del contenido de la rama de origen y la colocará en la rama d
 
 3. Si detecta conflictos, [resuélvalos](#resolve_a_rebase_conflict).
 
-5. Repita el paso anterior tantas veces como sea necesario para completar la operación de cambio de base.
+4. Repita el paso anterior tantas veces como sea necesario para completar la operación de cambio de base.
 
-  **Nota:** para detener la operación de cambio de base, escriba `git rebase --abort` y pulse Intro.
+  Para detener la operación de cambio de base, escriba `git rebase --abort` y pulse Intro.
+  {: tip}
 
 ## Resolver un conflicto de cambio de base
 {: #resolve_a_rebase_conflict}
@@ -431,21 +422,18 @@ Cambiará la base del contenido de la rama de origen y la colocará en la rama d
 ### Eclipse Orion Web IDE
 {: #resolve_a_rebase_conflict_web}
 
-1. En la sección Cambios del directorio de trabajo, revise la lista de archivos conflictivos. 
+1. En la sección Cambios del directorio de trabajo, revise la lista de archivos conflictivos.
 
 2. En Web IDE, abra cada archivo que contenga conflictos.
 
-3. Resuelva cada cambio conflictivo.
-
-
-  **Nota:**: suprima todo el texto que no desee conservar.
-Cada conflicto tiene este formato: 
+3. Resuelva cada cambio conflictivo. Suprima todo el texto que no desee conservar. Cada conflicto tiene este formato:
 
 		<<<<<<< HEAD
 		Texto de la rama extraída.
 		=======
-		Testo de la rama fusionada.
+		Texto de la rama fusionada.
 		>>>>>>> commit_ID_from_merged_branch
+		{: tip}
 4. En el panel de cambio de base, marque el recuadro de selección correspondiente a cada archivo corregido y pulse **Continuar**.
 
 ### Terminal Git
@@ -455,17 +443,14 @@ Cada conflicto tiene este formato:
 
 2. En el editor de texto, abra un archivo que contenga conflictos.
 
-3. Resuelva cada cambio conflictivo y guarde el archivo.
-
-
-  **Nota:**: suprima todo el texto que no desee conservar.
-Cada conflicto tiene este formato: 
+3. Resuelva cada cambio conflictivo y guarde el archivo. Suprima todo el texto que no desee conservar. Cada conflicto tiene este formato:
 
 		<<<<<<< HEAD
 		Texto de la rama extraída.
 		=======
-		Testo de la rama fusionada.
+		Texto de la rama fusionada.
 		>>>>>>> merged_branch
+		
 4. Transfiera cada archivo que haya modificado.
 
 5. Reanude la operación de cambio de base escribiendo `git rebase --continue` y pulsando Intro.

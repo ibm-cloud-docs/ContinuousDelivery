@@ -2,12 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Actualice su proyecto {{site.data.keyword.jazzhub_short}} a una cadena de herramientas
 {: #upgrade_projects}
@@ -43,7 +48,7 @@ Puede obtener información sobre cadenas de herramientas en [YouTube ![Icono de 
 {: #upgrade_prereqs}
 
 - Para acceder a la cadena de herramientas actualizada del proyecto, necesita un ID de {{site.data.keyword.Bluemix_notm}}. Antes de actualizar, debe verificar que tiene un ID de {{site.data.keyword.Bluemix_notm}} activo. Si no dispone de uno, [regístrese](https://console.ng.bluemix.net/registration/).
-- Asegúrese de que el propietario del proyecto de {{site.data.keyword.jazzhub_short}} sea correcto. La cadena de herramientas que se crea a partir del proyecto formará parte de la organización de {{site.data.keyword.Bluemix_notm}} de dicho propietario. 
+- Asegúrese de que el propietario del proyecto de {{site.data.keyword.jazzhub_short}} sea correcto. La cadena de herramientas que se crea a partir del proyecto formará parte de la organización de {{site.data.keyword.Bluemix_notm}} de dicho propietario.
 - Asegúrese de que la organización y el espacio donde desea crear la cadena de herramientas estén en {{site.data.keyword.Bluemix_notm}} Público en la región EE.UU. Sur. Para confirmar que tiene una organización y un espacio válidos en EE.UU. Sur, inicie sesión en [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window} y cree un espacio si se le solicita que cree uno.
 - Si está planeando iniciar la actualización, asegúrese de que es miembro de cada organización y espacio en el que se despliega el conducto. Cualquier administrador de proyecto puede iniciar la actualización. Sin embargo, si el administrador que inicia la actualización no es miembro de cada organización y espacio en el que se despliega el conducto, éste último no se podrá crear. La persona que inicia la actualización se convierte en el propietario del repositorio en la cadena de herramientas.
 - Eclipse Orion {{site.data.keyword.webide}} en la cadena de herramientas no es el {{site.data.keyword.webide}} asociado al proyecto. Si utiliza el {{site.data.keyword.webide}} y tiene cambios sin confirmar, confírmelos antes de actualizar.
@@ -52,7 +57,8 @@ Puede obtener información sobre cadenas de herramientas en [YouTube ![Icono de 
 ## Actualización de un proyecto a una cadena de herramientas
 {: #project_to_toolchain}
 
-**Importante:** los proyectos de hub.jazz.net y de cadenas de herramientas están alojados en la región EE.UU. Sur. Si el proyecto se ha configurado para desplegar apps en otra región, seguirá desplegando apps en dicha región después de que se haya actualizado a una cadena de herramientas.
+Los proyectos de hub.jazz.net y de cadenas de herramientas están alojados en la región EE.UU. Sur. Si el proyecto se ha configurado para desplegar apps en otra región, seguirá desplegando apps en dicha región después de que se haya actualizado a una cadena de herramientas.
+{: tip}
 
 Cuando el proyecto esté listo para actualizarse, se mostrará un mensaje en la tarjeta del proyecto y en la página Visión general.
 
@@ -60,13 +66,14 @@ Cuando el proyecto esté listo para actualizarse, se mostrará un mensaje en la 
 
 ![Mensaje Momento de actualizar](images/banner-ready-to-upgrade.png)
 
-**Consejo:** Encontrará proyectos que están preparados para la actualización en el menú de la página Mis proyectos:
+Encontrará proyectos que están preparados para la actualización en el menú de la página Mis proyectos:
 
 ![Imagen del elemento de menú Proyectos para actualizar](images/menu-projects-to-upgrade.png)
+{: tip}
 
-Cuando inicia la actualización, las transmisiones de conducto del proyecto se bloquean. No podrá ejecutarlas ni modificarlas. Si revierte la actualización mediante la supresión de la cadena de herramientas, el conducto es desbloquea. 
+Cuando inicia la actualización, las transmisiones de conducto del proyecto se bloquean. No podrá ejecutarlas ni modificarlas. Si revierte la actualización mediante la supresión de la cadena de herramientas, el conducto es desbloquea.
 
-Si el proyecto utiliza un repositorio Git alojado en JazzHub, después de iniciar la actualización el repositorio se bloquea para garantizar la integridad de los datos que se mueven a la cadena de herramientas. Si revierte la actualización mediante la supresión de la cadena de herramientas, el repositorio de JazzHub es desbloquea. 
+Si el proyecto utiliza un repositorio Git alojado en JazzHub, después de iniciar la actualización el repositorio se bloquea para garantizar la integridad de los datos que se mueven a la cadena de herramientas. Si revierte la actualización mediante la supresión de la cadena de herramientas, el repositorio de JazzHub es desbloquea.
 
 Para ver detalles sobre cómo se trata cada tipo de repositorio en el proceso de actualización, consulte la siguiente tabla.
 
@@ -108,8 +115,8 @@ Para actualizar el proyecto a una cadena de herramientas, siga estos pasos:
 
    ![Opciones de Track and Plan](images/upgrade-tutorial-track-and-plan.png)
 
-   - Indique si desea migrar los datos de Track & Plan. 
-   - De forma predeterminada, se migran todos los datos de Track & Plan. Si prefiere migrar solo los elementos de trabajo que forman parte de una determinada consulta, especifique la consulta. 
+   - Indique si desea migrar los datos de Track & Plan.
+   - De forma predeterminada, se migran todos los datos de Track & Plan. Si prefiere migrar solo los elementos de trabajo que forman parte de una determinada consulta, especifique la consulta.
    - Seleccione los atributos de elementos de trabajo que desea correlacionar con etiquetas en GitHub Issues.
 
 4. Pulse **Crear**. Se crea la nueva cadena de herramientas y se muestra su página Visión general.
@@ -120,7 +127,7 @@ Para actualizar el proyecto a una cadena de herramientas, siga estos pasos:
    - Para acceder al conducto, pulse **Conducto de entrega**.
    - Para acceder al {{site.data.keyword.webide}}, que aloja el contenido del repositorio que se ha extraído en el espacio de trabajo, pulse **Eclipse Orion {{site.data.keyword.webide}}**.
 
-   Si vuelve al proyecto durante la actualización, el mensaje de cabecera puede indicar que la actualización está en curso, especialmente si el proceso de actualización implica importar código fuente en un repositorio nuevo o importar elementos de trabajo de Track &amp; Plan como problemas. 
+   Si vuelve al proyecto durante la actualización, el mensaje de cabecera puede indicar que la actualización está en curso, especialmente si el proceso de actualización implica importar código fuente en un repositorio nuevo o importar elementos de trabajo de Track &amp; Plan como problemas.
 
    ![Mensaje sobre el proyecto que se actualiza a una cadena de herramientas](images/project-being-upgraded-banner.png)
 
@@ -137,11 +144,11 @@ Puede ver los que los proyectos que se han actualizado seleccionando **Proyectos
 
 ![Imagen del elemento de menú Proyectos actualizados](images/menu-upgraded-projects.png)
 
-Si tiene que revertir la actualización, suprima la cadena de herramientas. Puede suprimir su cadena de herramientas desde el menú **Más acciones** de la página visión general de la cadena de herramientas: 
+Si tiene que revertir la actualización, suprima la cadena de herramientas. Puede suprimir su cadena de herramientas desde el menú **Más acciones** de la página visión general de la cadena de herramientas:
 
 ![imagen de la acción Suprimir del menú Más acciones](images/upgrade-tutorial-delete-toolchain.png)
 
-Cuando vuelva al proyecto, se volverá a mostrar el mensaje de actualización y podrá volver a actualizar cuando esté preparado. 
+Cuando vuelva al proyecto, se volverá a mostrar el mensaje de actualización y podrá volver a actualizar cuando esté preparado.
 
 ## Siguientes pasos
 {: #upgrade_next_steps}
@@ -150,7 +157,8 @@ Cuando vuelva al proyecto, se volverá a mostrar el mensaje de actualización y 
 
    ![Mensaje de cabecera que indica que el proyecto se ha actualizado](images/banner-upgraded.png)
 
-   **Nota:** si el mensaje indica "actualice ahora", significa que la actualización ha fallado. Pulse el enlace **actualizar ahora** para volverlo a intentar. 
+   Si el mensaje indica "actualice ahora", significa que la actualización ha fallado. Pulse el enlace **actualizar ahora** para volverlo a intentar.
+   {: tip}
 
    ![Mensaje de cabecera que indica que el proyecto está listo para la actualización](images/banner-ready-to-upgrade.png)
 
@@ -167,16 +175,17 @@ Cuando vuelva al proyecto, se volverá a mostrar el mensaje de actualización y 
     1. Vaya a la [página Señales de acceso ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} de los valores de usuario de {{site.data.keyword.gitrepos}}.
     2. Cree una señal de acceso personal que utilice **api** como ámbito.
     3. Vaya a la [página Cuenta ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/account){:new_window} y busque su nombre de usuario correspondiente a {{site.data.keyword.gitrepos}}. El nombre de usuario aparece en la lista de la sección "Cambiar nombre de usuario" y se muestra como la primera parte del URL de cualquier repositorio personal que cree.
-    4. Para autenticarse con {{site.data.keyword.gitrepos}} desde un cliente Git externo a través de HTTPS, utilice su nombre de usuario y su señal de acceso personal. 
+    4. Para autenticarse con {{site.data.keyword.gitrepos}} desde un cliente Git externo a través de HTTPS, utilice su nombre de usuario y su señal de acceso personal.
     5. Si desea reutilizar el repositorio local de su repositorio Git JazzHub, haga que el repositorio apunte al nuevo repositorio en {{site.data.keyword.gitrepos}}. Desde un shell de un terminal, vaya al directorio en el que se ha clonado el repositorio Git JazzHub. Escriba el mandato `git remote set-url`: `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        **Consejo:** para comprobar los URL definidos y sus nombres remotos, utilice el mandato `git remote -v`. El nombre remoto predeterminado es `origin`. Si tiene una configuración más avanzada, el formato del mandato es el siguiente: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        Para comprobar los URL definidos y sus nombres remotos, utilice el mandato `git remote -v`. El nombre remoto predeterminado es `origin`. Si tiene una configuración más avanzada, el formato del mandato es el siguiente: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        {: tip}
 
-5. Cuando la cadena de herramientas esté configurada y haya empezado a utilizarla, tenga en cuenta la posibilidad de llevar a cabo alguno de los siguientes pasos, o todos ellos, para asegurarse de que nadie utilice su proyecto: 
-    - Añada un sufijo al nombre del proyecto para indicar que no se debe utilizar. Puede añadir `_NO_UTILIZAR` al final del nombre del proyecto. 
-    - Actualice la descripción del proyecto para indicar que ya no se utiliza y añada un puntero a la cadena de herramientas. 
-    - Elimine los miembros del proyecto. 
-    - Cuando ya no necesite el proyecto, suprímalo. 
+5. Cuando la cadena de herramientas esté configurada y haya empezado a utilizarla, tenga en cuenta la posibilidad de llevar a cabo alguno de los siguientes pasos, o todos ellos, para asegurarse de que nadie utilice su proyecto:
+    - Añada un sufijo al nombre del proyecto para indicar que no se debe utilizar. Puede añadir `_NO_UTILIZAR` al final del nombre del proyecto.
+    - Actualice la descripción del proyecto para indicar que ya no se utiliza y añada un puntero a la cadena de herramientas.
+    - Elimine los miembros del proyecto.
+    - Cuando ya no necesite el proyecto, suprímalo.
 
 6. Opcional: para ver la madurez del desarrollo de un proyecto, las prácticas del equipo y la calidad del código base, añada IBM Cloud {{site.data.keyword.DRA_short}} a la cadena de herramientas. {{site.data.keyword.DRA_short}} aplica analíticas de desarrollador, de equipo y de despliegue a los proyectos DevOps. Para obtener más información, consulte [Iniciación a {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html).
 
@@ -288,7 +297,8 @@ Si desea que la cadena de herramientas se encuentre en una organización de EE.U
    
    4. Suprima la cadena de herramientas que se ha creado mediante el proceso de actualización. 
    
-      **Nota:** El repositorio Git no se suprime automáticamente. Puede que desee suprimirlo manualmente o renombrarlo por ahora. Si ya ha modificado el repositorio, puede cambiar la cadena de herramientas futura para utilizarla más adelante.
+      El repositorio Git no se suprime automáticamente. Puede que desee suprimirlo manualmente o renombrarlo por ahora. Si ya ha modificado el repositorio, puede actualizar la cadena de herramientas futura para utilizarla más adelante.
+      {: tip}
 
    5. Vuelva al proyecto de JazzHub. Se debe restablecer a sí mismo para otro intento de actualización. Si no se restablece, póngase en contacto con hub@jazz.net y proporcione el URL del proyecto.
    

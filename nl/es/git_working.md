@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.gitrepos}}
 {: #git_working}
@@ -23,14 +26,16 @@ La integración de la herramienta {{site.data.keyword.gitrepos}} permite a los e
    * Hacer un seguimiento de problemas y compartir ideas mediante el rastreador de problemas
    * Documentar proyectos en el sistema de wiki
 
-**Nota:** Dado que esta integración de herramientas se basa en GitLab Community Edition y está alojada en IBM en la plataforma {{site.data.keyword.Bluemix_notm}}, algunas opciones de GitLab no están disponibles. Por ejemplo, Delivery Pipeline proporciona integración continua y entrega continua para {{site.data.keyword.Bluemix_notm}}; por lo tanto, las funciones de integración continua de GitLab no reciben soporte. Además, las funciones de administración no están disponibles las gestiona IBM.
+Dado que esta integración de herramientas se basa en GitLab Community Edition y está alojada en IBM en la plataforma {{site.data.keyword.Bluemix_notm}}, algunas opciones de GitLab no están disponibles. Por ejemplo, Delivery Pipeline proporciona integración continua y entrega continua para {{site.data.keyword.Bluemix_notm}}; por lo tanto, las funciones de integración continua de GitLab no reciben soporte. Además, las funciones de administración no están disponibles las gestiona IBM.
+{: tip}
 
 ## Uso de {{site.data.keyword.gitrepos}} de forma local
 {: #git_local}
 
 Puede acceder localmente a los repositorios Git almacenados en {{site.data.keyword.gitrepos}}. Para ver instrucciones sobre cómo configurar Git localmente, consulte [Empezar a utilizar Git en la línea de mandatos ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
 
-**Sugerencia**: {{site.data.keyword.gitrepos}} da soporte únicamente a conexiones HTTPS que utilicen TLS1.2. Si utiliza Eclipse para conectarse, podría necesitar especificar este protocolo para su versión de Java añadiendo `-Dhttps.protocols=TLSv1.2` a su archivo eclipse.ini y, a continuación, reiniciar Eclipse.
+{{site.data.keyword.gitrepos}} da soporte únicamente a conexiones HTTPS que utilicen TLS1.2. Si utiliza Eclipse para conectarse, podría necesitar especificar este protocolo para su versión de Java añadiendo `-Dhttps.protocols=TLSv1.2` a su archivo eclipse.ini y, a continuación, reiniciar Eclipse.
+{: tip}
 
 ## Autenticación con {{site.data.keyword.gitrepos}}
 {: #git_authentication}
@@ -40,7 +45,8 @@ El inicio de sesión y la contraseña de {{site.data.keyword.Bluemix_notm}} sól
 ### Creación de una señal de acceso personal
 {: #create_pat}
 
-**Importante**: Para autenticarse en el repositorio Git a través de HTTPS, debe crear una señal de acceso personal.
+Para autenticarse en el repositorio Git a través de HTTPS, debe crear una señal de acceso personal.
+{: tip}
 
 1. En el panel de control de Valores de usuario de {{site.data.keyword.gitrepos}}, en la [página de Señales de acceso ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, escriba su nombre de su aplicación para la que desea crear una señal de acceso. Por ejemplo, `Git CLI`.
 1. Opcional: Elija una fecha de caducidad para la señal de acceso.

@@ -29,7 +29,7 @@ El equipo de {{site.data.keyword.contdelivery_full}} supervisa activamente el fo
   <td align="center">
   <p>Obtenga ayuda rápidamente, directamente de IBM {{site.data.keyword.contdelivery_short}} y otros usuarios de DevOps Services.</p>
   <b>dW Answers</b>
-   <p>
+  <p>
    <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(Se abre en un nuevo separador o ventana)"><img class="image" src="images/ask-a-question.png" alt="Formular una pregunta"/></a></p>
    <p>
     <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Se abre en un nuevo separador o ventana)">Mostrar preguntas recientes sobre <img class="image" src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services en dW Answers.</p>

@@ -2,12 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-12"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Iniciación a las cadenas de herramientas una vez que haya actualizado el proyecto de {{site.data.keyword.jazzhub_short}}
 {: #toolchains_post_upgrade}
@@ -16,7 +21,7 @@ Los proyectos de {{site.data.keyword.jazzhub}} en hub.jazz.net se han actualizad
 
 {{site.data.keyword.jazzhub_short}} en hub.jazz.net se ha retirado. 
 
-Para los proyectos de DevOps, utilice el [servicio de {{site.data.keyword.contdelivery_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops){:new_window}. Si es nuevo en {{site.data.keyword.Bluemix_notm}}, asegúrese de comprobar la [visión general de {{site.data.keyword.Bluemix_notm}}](/docs/overview/whatisbluemix.html#bluemixoverview).
+Para los proyectos de DevOps, utilice el [servicio de {{site.data.keyword.contdelivery_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops){:new_window}. Si es nuevo en {{site.data.keyword.Bluemix_notm}}, asegúrese de comprobar la [visión general de {{site.data.keyword.Bluemix_notm}}](/docs/overview/ibm-cloud.html#overview).
 
 {: shortdesc}
 
@@ -26,19 +31,19 @@ Para los proyectos de DevOps, utilice el [servicio de {{site.data.keyword.contde
 Confirme que la actualización se haya completado yendo a la [página de Cadenas de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/toolchains){: new_window} y verificando que ve cadenas de herramientas con nombres que coincidan con los de los proyectos de hub.jazz.net. Si se actualizan automáticamente sus proyectos, tenga en cuenta estas advertencias:
    - Si cadena de herramientas ya ha utilizado el nombre del proyecto antes de que éste se actualizara, la nueva cadena de herramientas que se ha creado para el proyecto podría no tener el nombre exacto del proyecto. 
    - Si no ve cadenas de herramientas para los proyectos, cambie a cualquier otra organización a la que pertenezca y compruebe las cadenas de herramientas allí.
-   - Si todavía no puede encontrar la cadena de herramientas para uno de los proyectos, la actualización para la misma podría estar todavía en curso. Si necesita acceso inmediato a dicha cadena de herramientas, póngase en contacto con el [soporte ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}.
-
+   
 ## Visión general de las cadenas de herramientas
 {: #compare_toolchains}
 
-Si tenía uno o varios proyectos en hub.jazz.net, se han actualizado automáticamente en las cadenas de herramientas en el servicio de {{site.data.keyword.contdelivery_short}}, a menos que la actualización haya fallado. Las actualizaciones pueden fallar debido a cuentas u organizaciones de IBM Cloud no válidas. A los propietarios de estas cuentas y organizaciones se les notifican por correo electrónico los errores y las acciones específicas necesarias por su parte para gestionarlos. Si no ve la cadena de herramientas para el proyecto y necesita acceso inmediato a la misma, póngase en contacto con el [soporte ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}. 
+Si tenía uno o varios proyectos en hub.jazz.net, se han actualizado automáticamente en las cadenas de herramientas en el servicio de {{site.data.keyword.contdelivery_short}}, a menos que la actualización haya fallado. Las actualizaciones pueden fallar debido a cuentas u organizaciones de IBM Cloud no válidas. A los propietarios de estas cuentas y organizaciones se les notifican por correo electrónico los errores y las acciones específicas necesarias por su parte para gestionarlos. Si necesita ayuda para localizar la cadena de herramientas para el proyecto actualizado, póngase en contacto con [soporte ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}. 
 
 Las cadenas de herramientas son como proyectos, con algunas diferencias importantes:
 
 - Los proyectos solo pueden tener un repositorio (repo) y un conducto. Las cadenas de herramientas pueden tener tantos repositorios y conductos como sea necesario.
 - Las cadenas de herramientas pueden incluir herramientas que no están disponibles en proyectos, como por ejemplo Slack, Sauce Labs, PagerDuty y {{site.data.keyword.DRA_full}}.
 
- **Nota**: {{site.data.keyword.DRA_short}} está disponible sólo en la región EE.UU. Sur.
+ {{site.data.keyword.DRA_short}} solo está disponible en la región sur de Estados Unidos.
+ {: tip}
  
 - En los proyectos, la pertenencia se ha mantenido a nivel de proyecto. El acceso a las cadenas de herramientas se gestiona mediante la organización (org) y la cadena de herramientas de {{site.data.keyword.Bluemix_notm}}. Para trabajar con una cadena de herramientas, debe ser un miembro de la organización que contiene la cadena de herramientas. El propietario de la cadena de herramientas tiene más control sobre quién puede acceder a la cadena de herramientas y lo que pueden hacer. Para obtener detalles, consulte el paso 2 in [Iniciación a la cadena de herramientas](#upgrade_next_steps).
 - En función del tipo de repositorio que haya utilizado en el proyecto en hub.jazz.net, la cadena de herramientas puede contener un repositorio de GitHub.com o un repositorio de {{site.data.keyword.gitrepos}}.
@@ -53,7 +58,7 @@ Puede obtener más información sobre las cadenas de herramientas en [YouTube ![
     - Otorgue acceso a los miembros de la organización a la cadena de herramientas desde la página Gestionar de la cadena de herramientas. Los miembros del proyecto existentes se añaden como miembros de la cadena de herramientas como parte del proceso de actualización. Para obtener más información sobre el control de accesos para cadenas de herramientas, consulte [Gestión de acceso ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
     - Si un usuario no es miembro de la organización a la que pertenece la cadena de herramientas, añádalo a la organización desde la página Gestionar organizaciones.
     - Si la cadena de herramientas utiliza {{site.data.keyword.gitrepos}}, todos los miembros del proyecto de JazzHub que tengan un ID de {{site.data.keyword.Bluemix_notm}} válido se añadirán al repositorio de {{site.data.keyword.gitrepos}} con los mismos privilegios que tenían en el proyecto de JazzHub. Si el proyecto de JazzHub incluye miembros que no tienen un ID de {{site.data.keyword.Bluemix_notm}} válido, pueden registrarse para obtenerlo. Una vez que se registren, podrá añadirlos al repositorio.
-      Para obtener más información sobre la gestión de organizaciones, consulte [Gestión de organizaciones y espacios ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
+      Para obtener más información sobre la gestión de organizaciones, consulte [Gestión de organizaciones y espacios ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window}.
 
 2. Si utiliza {{site.data.keyword.gitrepos}}, debe autenticarlo mediante una señal de acceso personal o una clave SSH. Para obtener más información sobre las claves SSH, consulte [Creación de una señal de acceso o clave SSH clave para la autenticación](/docs/services/ContinuousDelivery/git_working.html#git_authentication). Para autenticar desde un cliente Git externo a través de https, siga estos pasos:
     1. Vaya a la [página Señales de acceso ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} de los valores de usuario de {{site.data.keyword.gitrepos}}.
@@ -62,11 +67,13 @@ Puede obtener más información sobre las cadenas de herramientas en [YouTube ![
     4. Para autenticarse con {{site.data.keyword.gitrepos}} desde un cliente Git externo a través de HTTPS, utilice su nombre de usuario y su señal de acceso personal.
     5. Si desea reutilizar el repositorio local de su repositorio Git JazzHub, haga que el repositorio apunte al nuevo repositorio en {{site.data.keyword.gitrepos}}. Desde un shell de un terminal, cambie al directorio donde se clona el repositorio Git JazzHub. Escriba el mandato `git remote set-url`: `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        **Consejo:** para comprobar los URL definidos y sus nombres remotos, utilice el mandato `git remote -v`. El nombre remoto predeterminado es `origin`. Si tiene una configuración más avanzada, el formato del mandato es el siguiente: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        Para comprobar los URL definidos y sus nombres remotos, utilice el mandato `git remote -v`. El nombre remoto predeterminado es `origin`. Si tiene una configuración más avanzada, el formato del mandato es el siguiente: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        {: tip}
 
 3. Opcional: para ver la madurez del desarrollo de un proyecto, las prácticas del equipo y la calidad del código base, añada IBM Cloud {{site.data.keyword.DRA_short}} a la cadena de herramientas. {{site.data.keyword.DRA_short}} aplica analíticas de desarrollador, de equipo y de despliegue a los proyectos DevOps. Para obtener más información, consulte [Iniciación a {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html).
 
-  **Nota**: {{site.data.keyword.DRA_short}} está disponible sólo en la región EE.UU. Sur.
+  {{site.data.keyword.DRA_short}} solo está disponible en la región sur de Estados Unidos.
+  {: tip}
 
 
 ## Resolución de problemas
@@ -165,7 +172,8 @@ Si desea que la cadena de herramientas se encuentre en una organización de EE.U
    
    4. Suprima la cadena de herramientas que se ha creado mediante el proceso de actualización. 
    
-      **Nota:** El repositorio Git no se suprime automáticamente. Puede que desee suprimirlo manualmente o renombrarlo por ahora. Si ya ha realizado cambios en él, puede cambiar la cadena de herramientas futura para utilizarla más adelante.
+      El repositorio Git no se suprime automáticamente. Puede que desee suprimirlo manualmente o renombrarlo por ahora. Si ya ha realizado cambios en él, puede actualizar la cadena de herramientas futura para utilizarla más adelante.
+      {: tip}
 
    5. Vuelva al proyecto de JazzHub. Se debe restablecer a sí mismo para otro intento de actualización. Si no se restablece, póngase en contacto con hub@jazz.net y proporcione el URL del proyecto.
    

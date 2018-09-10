@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-17"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}    
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}   
 
 # Configuración de la integración de herramientas
 {: #integrations}
@@ -21,7 +24,7 @@ Las integraciones de herramientas que están disponibles para añadirse y config
 
 |Integración de herramientas |Disponible en {{site.data.keyword.Bluemix_notm}} Público	|Disponible en {{site.data.keyword.Bluemix_notm}} Dedicado (dependiente del entorno)|
 |:----------|:------------------------------|:------------------|
-|{{site.data.keyword.alertnotificationshort}}		|EE.UU. Sur |No		|
+|{{site.data.keyword.alertnotificationshort}}		|EE.UU. Sur		|No		|
 |Artifactory		|EE.UU. Sur, Alemania, Reino Unido		|Yes		|
 |Supervisión de disponibilidad		|EE.UU. Sur		|No		|
 |Bitbucket		|EE.UU. Sur, Alemania, Reino Unido		|No		|
@@ -42,10 +45,10 @@ Las integraciones de herramientas que están disponibles para añadirse y config
 |Sauce Labs		|EE.UU. Sur, Alemania, Reino Unido		|No		|
 |Slack			|EE.UU. Sur, Alemania, Reino Unido		|Yes		|
 |SonarQube			|EE.UU. Sur, Alemania, Reino Unido		|Yes		|
-|UrbanCode Deploy			|EE.UU. Sur		|No		|
 {: caption="Tabla 1. Integraciones de herramientas disponibles para cadenas de herramientas en {{site.data.keyword.Bluemix_notm}} público y dedicado" caption-side="top"}
 
-**Consejo:** si desea empezar a desarrollar su propio código en {{site.data.keyword.Bluemix_notm}} Público, configure la integración de herramientas GitHub y la integración de la herramienta {{site.data.keyword.gitrepos}} antes de configurar el {{site.data.keyword.deliverypipeline}}. Si desea empezar a desarrollar su propio código en {{site.data.keyword.Bluemix_notm}} Dedicado, configure la integración de herramientas {{site.data.keyword.ghe_short}} o la integración de herramientas GitHub antes de configurar el {{site.data.keyword.deliverypipeline}}.
+Si desea empezar a desarrollar su propio código en {{site.data.keyword.Bluemix_notm}} Público, configure la integración de herramientas GitHub o la integración de herramientas {{site.data.keyword.gitrepos}} antes de configurar el {{site.data.keyword.deliverypipeline}}. Si desea empezar a desarrollar su propio código en {{site.data.keyword.Bluemix_notm}} Dedicado, configure la integración de herramientas {{site.data.keyword.ghe_short}} o la integración de herramientas GitHub antes de configurar el {{site.data.keyword.deliverypipeline}}.
+{: tip}
 
 
 ## Configuración de Alert Notification
@@ -157,8 +160,8 @@ Configure el {{site.data.keyword.deliverypipeline}} para añadir un trabajo de c
      # or
      npm publish --registry "${NPM_RELEASE_URL}"
      ```
-  **Consejo:** encontrará el URL y las credenciales de usuario que ha utilizado para conectar con el registro en los valores de configuración correspondientes a la integración de herramientas de Artifactory.
-
+  Encontrará el URL y las credenciales de usuario que ha utilizado para conectar con el registro en los valores de configuración correspondientes a la integración de herramientas de Artifactory.
+  {: tip}
 
   e. Si el trabajo de compilación se publica en el registro de Artifactory y el formato de su versión del módulo de nodo es `x.y.z-SNAPSHOT.w`, marque el recuadro de selección **Incrementar versión del módulo de instantáneas**. El trabajo de compilación actualiza automáticamente la versión del módulo antes de que el trabajo publique en el registro de Artifactory. El trabajo selecciona la versión más alta del módulo a partir del registro de npm y el archivo `package.json` local e incrementa la versión del módulo utilizando semver. El trabajo de compilación no envía los cambios al repositorio SCM.
 
@@ -187,8 +190,8 @@ Configure {{site.data.keyword.deliverypipeline}} para añadir un trabajo de comp
      # or
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  **Consejo:** encontrará el URL y las credenciales de usuario que ha utilizado para conectar con el registro en los valores de configuración correspondientes a la integración de herramientas de Artifactory.
-
+  Encontrará el URL y las credenciales de usuario que ha utilizado para conectar con el registro en los valores de configuración correspondientes a la integración de herramientas de Artifactory.
+  {: tip}
 
 1. Pulse **GUARDAR**. Siempre que se ejecute el conducto, este trabajo de compilación utilizará la información de configuración de la integración de herramientas de Artifactory para conectar con el registro de Maven.
 
@@ -202,7 +205,8 @@ Para obtener más información sobre Artifactory, consulte el [artículo de Arti
 
 {{site.data.keyword.prf_hublong}} aísla problemas, identifica patrones y mejora el rendimiento antes de que los usuarios se vean afectados. Puede probar la app desde ubicaciones de todo el mundo, integrar con conductos de entrega y obtener información sobre cómo optimizar el código continuamente.
 
-**Nota:** esta integración de herramientas está preconfigurada y no requiere ningún parámetro de configuración. No puede volver a configurar esta integración de herramientas.
+Esta integración de herramientas está preconfigurada y no requiere ningún parámetro de configuración. No puede volver a configurar esta integración de herramientas.
+{: tip}
 
 Para probar, supervisar y mejorar el estado de la app a medida que la crea, añada la integración de herramientas de {{site.data.keyword.prf_hubshort}}:
 
@@ -235,7 +239,24 @@ Configure Bitbucket para colaborar con su equipo en código:
 
  b. En la sección Integraciones de herramientas, pulse **Bitbucket**.
 
-   **Sugerencia:** Si está configurando esta integración de herramientas en {{site.data.keyword.Bluemix_notm}} Público y no ha autorizado a {{site.data.keyword.Bluemix_notm}} para que acceda a Bitbucket, pulse **Autorizar** para ir al sitio web de Bitbucket. Si no tiene ninguna sesión de Bitbucket activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de Bitbucket. Si tiene una sesión de Bitbucket activa pero no ha especificado la contraseña recientemente, es posible que se le solicite que especifique su contraseña de Bitbucket para confirmar.
+   Si está configurando esta integración de herramientas en {{site.data.keyword.Bluemix_notm}} Público y no ha autorizado a {{site.data.keyword.Bluemix_notm}} para que acceda a Bitbucket, pulse **Autorizar** para ir al sitio web de Bitbucket. Si no tiene ninguna sesión de Bitbucket activa, se le solicitará que inicie sesión. Pulse **Otorgar acceso** para permitir que las Cadenas de herramientas de {{site.data.keyword.Bluemix_notm}} accedan a las siguientes partes de la cuenta de Bitbucket:
+   
+   * **Lea la información de su cuenta**. Obtenga información básica de usuario para llenar la interfaz de usuario.
+   
+   * **Lea y modifique los problemas de los repositorios**. Permita que {{site.data.keyword.contdelivery_short}} actualice los problemas para indicar cuándo despliega la interconexión confirmaciones que se adjuntan a dichos problemas. 
+   
+   * **Lea los valores del proyecto de su equipo y lea los repositorios contenidos en los proyectos de su equipo**. Permita que {{site.data.keyword.contdelivery_short}} se integre con los repositorios que son propiedad de los equipos.
+   
+   * **Lea y modifique los repositorios y sus solicitudes de extracción**. Permita que {{site.data.keyword.contdelivery_short}} envíe código de ejemplo a los repositorios, cuando los usuarios soliciten el código.
+   
+   * **Administre los repositorios**. Permita que {{site.data.keyword.contdelivery_short}} cree nuevos repositorios, cuando lo soliciten los usuarios.
+   
+   * **Lea la información de la pertenencia al equipo**. Permita que {{site.data.keyword.contdelivery_short}} muestre una lista de sus equipos en el menú **Propietario** que se visualiza al crear un nuevo repositorio.
+   
+   * **Lea y modifique los webhooks de sus repositorios**. Permita que la interconexión active las compilaciones cuando las confirmaciones se envíen a un repositorio.
+   {: tip}
+   
+   Si tiene una sesión de Bitbucket activa pero no ha especificado la contraseña recientemente, es posible que se le solicite que especifique su contraseña de Bitbucket para confirmar.
 
 1. Pulse el servidor de Bitbucket que desee utilizar.
 1. Si tiene un repositorio de Bitbucket que desea utilizar, escriba el URL para el repositorio. Para el tipo de repositorio, pulse **Existente**.
@@ -254,7 +275,8 @@ Configure Bitbucket para colaborar con su equipo en código:
 1. En la cadena de herramientas, pulse la tarjeta correspondiente al repositorio Bitbucket con el que desee trabajar. Se abrirá el sitio web de Bitbucket, donde puede ver el contenido del repositorio.
 1. Si ha habilitado Bitbucket Issues, pulse **Bitbucket Issues** para abrirlo. Puede utilizar esta instancia de Bitbucket Issues para toda la cadena de herramientas, aunque la cadena de herramientas contenga varios repositorios Bitbucket.    
 
-**Nota:** Si no tiene privilegios de propietario o maestro para el repositorio al que está enlazando, la integración estará limitada porque no puede utilizar un webhook. Los webhooks se necesitan para ejecutar automáticamente un conducto cuando se envía una confirmación al repositorio. Sin un webhook, debe iniciar los conductos manualmente.
+Si no tiene privilegios de propietario o maestro para el repositorio al que está enlazando, la integración estará limitada porque no puede utilizar un webhook. Los webhooks se necesitan para ejecutar automáticamente un conducto cuando se envía una confirmación al repositorio. Sin un webhook, debe iniciar los conductos manualmente.
+{: tip}
 
 ### Más información sobre Bitbucket
 
@@ -266,7 +288,8 @@ Para obtener más información sobre Bitbucket, consulte el [artículo de Bitbuc
 
 {{site.data.keyword.evtmgt_full}} proporciona una vista consolidada de los problemas que se producen con los servicios, las aplicaciones y la infraestructura. Puede configurar un sistema de gestión de incidentes en tiempo real para resolver los problemas de forma más eficiente.
 
-**Nota:** esta integración de herramientas está preconfigurada y no requiere ningún parámetro de configuración. No puede volverla a configurar.
+Esta integración de herramientas está preconfigurada y no requiere ningún parámetro de configuración. No puede volverla a configurar.
+{: tip}
 
 Para ayudar al equipo de DevOps a alcanzar un estado operativo fiable, calidad de servicio y mejora continua de objetivos, añada la función de gestión de sucesos de nube (Cloud Event Management) a su cadena de herramientas:
 
@@ -309,7 +332,7 @@ Configure {{site.data.keyword.deliverypipeline}} para automatizar la creación, 
 1. Pulse **Crear integración** para añadir el {{site.data.keyword.deliverypipeline}} a la cadena de herramientas.
 1. Pulse **{{site.data.keyword.deliverypipeline}}** para ver el conducto y configurarlo. Para obtener información básica sobre cómo configurar un conducto, consulte [Creación y despliegue de conductos](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}.
 
-  **Consejo:** si desea que el conducto se ejecute automáticamente cuando se envíe una confirmación a su repositorio GitHub, {{site.data.keyword.ghe_short}} o Git (repo), siga estos pasos:
+  Si desea que el conducto se ejecute automáticamente cuando se envíe una confirmación a su repositorio GitHub, {{site.data.keyword.ghe_short}} o Git (repo), siga estos pasos:
 
    a. Configure GitHub, {{site.data.keyword.ghe_short}} o {{site.data.keyword.gitrepos}} para la cadena de herramientas antes de definir las fases del conducto. Las etapas del conducto necesitan los URL Git para los repositorios. Cada etapa de conducto puede hacer referencia a un único repositorio de GitHub, {{site.data.keyword.ghe_short}} o Git que esté asociado con la cadena de herramientas. Para obtener instrucciones sobre cómo configurar GitHub, consulte la sección [GitHub](#github). Para obtener instrucciones sobre cómo configurar {{site.data.keyword.ghe_short}}, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. Para obtener instrucciones sobre cómo configurar {{site.data.keyword.gitrepos}}, consulte la sección [{{site.data.keyword.gitrepos}}](#gitbluemix).
 
@@ -330,7 +353,8 @@ Configure el {{site.data.keyword.deliverypipeline}} para añadir un trabajo de p
 
 1. Configurar la etapa. En el separador **PROPIEDADES DE ENTORNO**, cree la propiedad CF_APP_NAME.
 
-  **Sugerencia:** El nombre de usuario de Sauce Labs y la clave de acceso están disponibles en el script de trabajo de prueba como las variables de entorno SAUCE_USERNAME y SAUCE_ACCESS_KEY. Cuando escriba sus pruebas, debe utilizar estas variables de entorno para autenticarse con Sauce Labs.
+  El nombre de usuario de Sauce Labs y la clave de acceso están disponibles en el script de trabajo de prueba como las variables de entorno SAUCE_USERNAME y SAUCE_ACCESS_KEY. Cuando escriba sus pruebas, debe utilizar estas variables de entorno para autenticarse con Sauce Labs.
+  {: tip}
 
 1. Configure el trabajo de despliegue. En el campo **Desplegar script**, incluya este mandato: `export CF_APP_NAME="$CF_APP"`. Este mandato exporta el nombre de la app como propiedad del entorno.
 1. Configure el trabajo de prueba. Los valores de la imagen siguiente son ejemplos. Los campos **Instancia de servicio**, **Destino**, **Organización** y **Espacio** se rellenan con el nombre de usuario de Sauce Labs, la región, la organización y el espacio que se está utilizando.  
@@ -340,7 +364,8 @@ Configure el {{site.data.keyword.deliverypipeline}} para añadir un trabajo de p
 
   b. Para la instancia de servicio, seleccione el nombre de usuario de Sauce Labs que ha utilizado al configurar Sauce Labs para la cadena de herramientas.
 
-   **Consejo:** para ver el nombre de usuario y la clave de acceso que ha utilizado al configurar Sauce Labs para su cadena de herramientas, pulse **Configurar**.
+   Para ver el nombre de usuario y la clave de acceso que ha utilizado al configurar Sauce Labs para su cadena de herramientas, pulse **Configurar**.
+   {: tip}
 
   c. En el campo **Probar mandato de ejecución**, especifique los mandatos que instalan las dependencias necesarias para las pruebas y, a continuación, ejecute las pruebas. Por ejemplo, para una app Node.js, puede introducir estos mandatos:
      ```
@@ -366,7 +391,8 @@ Para obtener más información sobre {{site.data.keyword.deliverypipeline}}, con
 
 {{site.data.keyword.DRA_full}} recopila y analiza los resultados de las pruebas de unidad, de las pruebas funcionales y de las herramientas de cobertura de código para determinar si el código cumple los criterios predefinidos en las puertas especificadas del proceso de despliegue. Si el código no cumple o excede los criterios, el despliegue se detiene para evitar la exposición a riesgos. Puede utilizar {{site.data.keyword.DRA_short}} como red de seguridad para el entorno de entrega continuada o como método para implementar y mejorar los estándares de calidad.
 
- **Nota:** esta integración de herramientas solo está disponible en {{site.data.keyword.Bluemix_notm}} público. Está preconfigurada y no requiere ningún parámetro de configuración. No puede volver a configurar esta integración de herramientas.
+ Esta integración de herramientas solo está disponible en {{site.data.keyword.Bluemix_notm}} público. Está preconfigurada y no requiere ningún parámetro de configuración. No puede volver a configurar esta integración de herramientas.
+ {: tip}
 
 Añada {{site.data.keyword.DRA_short}} para mantener y mejorar la calidad de su código en {{site.data.keyword.Bluemix_notm}} supervisando las implementaciones para identificar los riesgos antes de distribuir la app.
 
@@ -396,7 +422,8 @@ Para obtener más información sobre {{site.data.keyword.DRA_short}}, consulte e
 
 Eclipse Orion {{site.data.keyword.webide}} es un entorno integrado basado en web en el que puede crear, editar, ejecutar, depurar y controlar las tareas de control del código fuente. Puede pasar sin problemas de editar a ejecutar, enviar y desplegar.
 
- **Nota:** esta integración de herramientas está preconfigurada. No es necesario configurar ningún parámetro y tampoco es posible modificar la configuración existente.
+ Esta integración de herramientas está preconfigurada. No es necesario configurar ningún parámetro y tampoco es posible modificar la configuración existente.
+ {: tip}
 
 Para completar las tareas de control del código fuente, añada la integración de herramientas Eclipse Orion {{site.data.keyword.webide}}:
 
@@ -431,7 +458,8 @@ Si configura {{site.data.keyword.gitrepos}} mientras crea la cadena de herramien
 
 Si tiene una cadena de herramientas y desea migrar un repositorio Git de la cadena de herramientas a {{site.data.keyword.gitrepos}}, siga estos pasos:
 
-**Nota**: Estas instrucciones se aplican a las cadenas de herramientas que ya contienen el repositorio Git que desea migrar a {{site.data.keyword.gitrepos}}. Para obtener información sobre la adición de distintos tipos de repositorios Git a la cadena de herramientas, consulte las secciones [Configuración de](#github), [Configuración de GitHub Enterprise and Issues en {{site.data.keyword.Bluemix_notm}} dedicado](#configghe) y [Configuración de GitLab](#gitlab).
+Estas instrucciones se aplican a las cadenas de herramientas que ya contienen el repositorio Git que desea migrar a {{site.data.keyword.gitrepos}}. Para obtener información sobre la adición de distintos tipos de repositorios Git a la cadena de herramientas, consulte las secciones [Configuración de](#github), [Configuración de GitHub Enterprise and Issues en {{site.data.keyword.Bluemix_notm}} dedicado](#configghe) y [Configuración de GitLab](#gitlab).
+{: tip}
 
 1. En el panel de control de DevOps, en la página Cadenas de herramientas, pulse sobre la cadena de herramientas para abrir la página Visión general correspondiente. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
 1. Pulse **Añadir una herramienta**.
@@ -441,7 +469,8 @@ Si tiene una cadena de herramientas y desea migrar un repositorio Git de la cade
 1. Si desea realizar un seguimiento del despliegue de cambios en el código mediante la creación de etiquetas y comentarios en las confirmaciones, y etiquetas y comentarios en los problemas a los que hacen referencia las confirmaciones, marque el recuadro de selección **Hacer un seguimiento del despliegue cambios de código**. Para obtener más información, consulte [Seguimiento de dónde se despliega el código con cadenas de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Pulse **Crear integración**.
 
-**Sugerencia:** Después de clonar el repositorio Git, puede eliminarlo de la cadena de herramientas.
+Después de clonar el repositorio Git, puede eliminarlo de la cadena de herramientas.
+{: tip}
 
 Si tiene una cadena de herramientas y le está añadiendo {{site.data.keyword.gitrepos}}, siga estos pasos:    
 
@@ -460,7 +489,8 @@ Si tiene una cadena de herramientas y le está añadiendo {{site.data.keyword.gi
 1. Pulse **Crear integración**.
 1. Pulse la tarjeta correspondiente al repositorio Git con el que desee trabajar. Se abrirá la página de visión general del proyecto.    
 
-**Nota:** Si no tiene privilegios de Maestro o de Propietario sobre el repositorio con el que va a enlazar, la integración estará limitada porque no podrá utilizar un webhook. Los webhooks se necesitan para ejecutar automáticamente un conducto cuando se envía una confirmación al repositorio. Sin un webhook, debe iniciar los conductos manualmente.
+Si no tiene privilegios de Maestro o de Propietario sobre el repositorio con el que va a enlazar, la integración estará limitada porque no podrá utilizar un webhook. Los webhooks se necesitan para ejecutar automáticamente un conducto cuando se envía una confirmación al repositorio. Sin un webhook, debe iniciar los conductos manualmente.
+{: tip}
 
 ### Más información sobre Git Repos and Issue Tracking
 
@@ -479,18 +509,19 @@ GitHub es un servicio de alojamiento basado en web para repositorios Git. Puede 
 GitHub
 Issues es una herramienta de seguimiento que mantiene todo su trabajo y sus planificaciones en un mismo lugar. Está integrado con el repositorio de desarrollo de modo que pueda centrarse en las tareas importantes.
 
-Puede configurar GitHub como una integración de herramientas de la cadena de herramientas para que pueda gestionar el código fuente en un repositorio nuevo o existente en GitHub.com o en la instancia de {{site.data.keyword.ghe_short}} de su empresa. Entre en la codificación social a través de wikis, seguimiento de problemas y solicitudes de extracción. 
+Puede configurar GitHub como una integración de herramientas de la cadena de herramientas para que pueda gestionar el código fuente en un repositorio nuevo o existente en GitHub.com o en la instancia de {{site.data.keyword.ghe_short}} de su empresa. Entre en la codificación social a través de wikis, seguimiento de problemas y solicitudes de extracción.
 
 Si configura la integración de esta herramienta mientras crea la cadena de herramientas, siga estos pasos:
 
 1. Si está almacenando el código fuente en un repositorio GitHub, en la sección Integraciones configurables, pulse **GitHub**. Si está configurando esta integración de herramientas en {{site.data.keyword.Bluemix_notm}} Público y no ha autorizado a {{site.data.keyword.Bluemix_notm}} para que acceda a GitHub, pulse **Autorizar** para ir al sitio web de GitHub. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub. Si tiene una sesión activa de GitHub pero no ha introducido recientemente su contraseña, es posible que se le solicite que introduzca la contraseña de GitHub para confirmarla.
-1. Si está utilizando un repositorio en su propio servidor de {{site.data.keyword.ghe_short}}, en la sección Integraciones configurables, pulse **Añadir servidor personalizado**. 
+1. Si está utilizando un repositorio en su propio servidor de {{site.data.keyword.ghe_short}}, en la sección Integraciones configurables, pulse **Añadir servidor personalizado**.
 
- **Importante**: La red debe poder acceder al servidor Git de destino desde un entorno de {{site.data.keyword.Bluemix_notm}} dedicado. Si el servidor de GitHub no está disponible en Internet público o el nombre de host no se resuelve en el Servidor de nombres de dominio (DNS) público, [abra una incidencia de soporte](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. Puede utilizar la incidencia de soporte para enviar una solicitud para abrir las rutas de red o actualizar los valores de DNS.
+ La red debe poder acceder al servidor Git de destino desde un entorno de {{site.data.keyword.Bluemix_notm}} dedicado. Si el servidor de GitHub no está disponible en Internet público o el nombre de host no se resuelve en el Servidor de nombres de dominio (DNS) público, [abra una incidencia de soporte](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. Puede utilizar la incidencia de soporte para enviar una solicitud para abrir las rutas de red o actualizar los valores de DNS.
+ {: tip}
 
  Escriba un título para el servidor de GitHub personalizado y especifique el URL raíz para el servidor. Escriba su señal de acceso personal y pulse **Guardar integración personalizada**.
 
-  **Sugerencia**: Si no tiene una señal de acceso personal, puede crear una:
+  Si no tiene una señal de acceso personal, puede crear una:
 
      a. En cualquier página de GitHub, pulse en el icono de su perfil y, a continuación, pulse **Valores**.
 
@@ -530,11 +561,13 @@ Si tiene una cadena de herramientas y le está añadiendo esta integración de h
 1. Pulse **Crear integración**.
 1. Pulse la tarjeta correspondiente al repositorio GitHub o {{site.data.keyword.ghe_short}} con el que desea trabajar. En función del repositorio seleccionado, se abrirá el sitio web de GitHub o el repositorio de {{site.data.keyword.ghe_short}} de su empresa, donde puede ver el contenido del repositorio.
 
-  **Consejo:** puede utilizar estas herramientas integradas de gestión del código fuente en Eclipse Orion {{site.data.keyword.webide}} para editar el repositorio de GitHub y desplegar una app desde su espacio de trabajo.
+  Puede utilizar estas herramientas integradas de gestión del código fuente en Eclipse Orion {{site.data.keyword.webide}} para editar el repositorio de GitHub y desplegar una app desde su espacio de trabajo.
+  {: tip}
 
 1. Si ha habilitado GitHub Issues, pulse **GitHub Issues** para abrirlo. Puede utilizar esta instancia de GitHub Issues para toda la cadena de herramientas, aunque la cadena de herramientas contenga varios repositorios GitHub o {{site.data.keyword.ghe_short}}.    
 
-**Nota:** Si no tiene privilegios de administrador sobre el repositorio con el que va a enlazar, la integración se verá limitada porque no podrá utilizar un webhook. Los webhooks se necesitan para ejecutar automáticamente un conducto cuando se envía una confirmación al repositorio. Sin un webhook, debe iniciar los conductos manualmente.
+Si no tiene privilegios de administrador sobre el repositorio con el que va a enlazar, la integración se verá limitada porque no podrá utilizar un webhook. Los webhooks se necesitan para ejecutar automáticamente un conducto cuando se envía una confirmación al repositorio. Sin un webhook, debe iniciar los conductos manualmente.
+{: tip}
 
 ### Más información sobre GitHub
 
@@ -544,11 +577,14 @@ Para obtener más información acerca de GitHub, consulte el [artículo de GitHu
 
   * [Garantice la calidad de los despliegues mediante la cadena de herramientas "Deployment Risk Analytics con GitHub y Jenkins" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
 
-  * [Cree una cadena de herramientas personalizada ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}.
+  * [Cree una cadena de herramientas personalizada ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
+
+
 ## Configuración de GitHub Enterprise and Issues en {{site.data.keyword.Bluemix_notm}} dedicado
 {: #configghe}
 
- **Nota:** Estas instrucciones se aplican a {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.ghe_short}}. Si utiliza su propia versión gestionada de {{site.data.keyword.ghe_short}}, algunos pasos pueden diferir en función de sus procedimientos internos.
+ Estas instrucciones se aplican a {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.ghe_short}}. Si utiliza su propia versión gestionada de {{site.data.keyword.ghe_short}}, algunos pasos pueden diferir en función de sus procedimientos internos.
+ {: tip}
 
 {{site.data.keyword.ghe_long}} es un servicio de alojamiento basado en web para repositorios Git. {{site.data.keyword.ghe_short}} dedicado es únicamente para clientes de {{site.data.keyword.Bluemix_notm}} dedicado. GitHub Issues es una herramienta de seguimiento que mantiene todo su trabajo y sus planificaciones en un mismo lugar. Está integrado con el repositorio de desarrollo de modo que pueda centrarse en las tareas importantes. Para obtener más información sobre {{site.data.keyword.ghe_short}} dedicado y GitHub Issues, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} y el [artículo GitHub Issues ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} en IBM Cloud Garage Method.
 
@@ -582,11 +618,13 @@ Puede configurar {{site.data.keyword.ghe_short}} como una integración de herram
 1. Pulse **Crear integración**.
 1. Pulse la tarjeta correspondiente al repositorio {{site.data.keyword.ghe_short}} con el que desee trabajar. Se abrirá el repositorio de {{site.data.keyword.ghe_short}} de la empresa.
 
-  **Consejo:** puede utilizar estas herramientas integradas de gestión del código fuente en Eclipse Orion {{site.data.keyword.webide}} para editar el repositorio {{site.data.keyword.ghe_short}} y desplegar una app desde su espacio de trabajo.
+  Puede utilizar estas herramientas integradas de gestión del código fuente en Eclipse Orion {{site.data.keyword.webide}} para editar el repositorio de {{site.data.keyword.ghe_short}} y desplegar una app desde su espacio de trabajo.
+  {: tip}
 
 1. Si ha habilitado GitHub Issues, pulse **GitHub Issues**. Puede utilizar esta instancia de GitHub Issues para toda la cadena de herramientas, aunque la cadena de herramientas contenga varios repositorios GitHub.    
 
-**Nota:** Si no tiene privilegios de administrador sobre el repositorio con el que va a enlazar, la integración se verá limitada porque no podrá utilizar un webhook. Los webhooks se necesitan para ejecutar automáticamente un conducto cuando se envía una confirmación al repositorio. Sin un webhook, debe iniciar los conductos manualmente.
+Si no tiene privilegios de administrador sobre el repositorio con el que va a enlazar, la integración se verá limitada porque no podrá utilizar un webhook. Los webhooks se necesitan para ejecutar automáticamente un conducto cuando se envía una confirmación al repositorio. Sin un webhook, debe iniciar los conductos manualmente.
+{: tip}
 
 
 ## Configuración de GitLab
@@ -599,13 +637,14 @@ Puede configurar GitLab como una integración de herramientas de la cadena de he
 Si configura la integración de esta herramienta mientras crea la cadena de herramientas, siga estos pasos:
 
 1. Si está almacenando el código fuente en un repositorio GitLab, en la sección Integraciones configurables, pulse **GitLab**. Si está configurando esta integración de herramientas en {{site.data.keyword.Bluemix_notm}} Público y no ha autorizado a {{site.data.keyword.Bluemix_notm}} para que acceda a GitLab, pulse **Autorizar** para ir al sitio web de GitLab. Si no tiene ninguna sesión de GitLab activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitLab. Si tiene una sesión de GitLab activa pero no ha especificado la contraseña recientemente, es posible que se le solicite que especifique su contraseña de GitLab para confirmar.
-1. Si está utilizando un repositorio en su propio servidor de GitLab, en la sección Integraciones configurables, pulse **Añadir servidor personalizado**. 
+1. Si está utilizando un repositorio en su propio servidor de GitLab, en la sección Integraciones configurables, pulse **Añadir servidor personalizado**.
 
- **Importante**: La red debe poder acceder al servidor GitLab de destino desde un entorno de {{site.data.keyword.Bluemix_notm}} dedicado.
+ La red debe poder acceder al servidor GitLab de destino desde un entorno de {{site.data.keyword.Bluemix_notm}} dedicado.
+ {: tip}
 
  Escriba un título para el servidor de GitLab personalizado y especifique el URL raíz para el servidor. Escriba su señal de acceso personal y pulse **Guardar integración personalizada**.
 
-  **Sugerencia**: Si no tiene una señal de acceso personal, puede crear una:
+  Si no tiene una señal de acceso personal, puede crear una:
 
      a. En cualquier página de GitLab, pulse el icono de su perfil y, a continuación, pulse **Valores**.
 
@@ -642,11 +681,13 @@ Si tiene una cadena de herramientas y le está añadiendo esta integración de h
 1. Pulse **Crear integración**.
 1. Pulse la tarjeta correspondiente al repositorio de GitLab con el que desee trabajar. En función del repositorio que haya seleccionado, ya sea que se abra el sitio web de GitLab o el repositorio de GitLab de la empresa, donde pueda visualizar el contenido del repositorio.
 
-  **Sugerencia:** Puede utilizar las herramientas integradas de gestión del código fuente en Eclipse Orion {{site.data.keyword.webide}} para editar el repositorio GitLab y desplegar una app desde su espacio de trabajo.
+  Puede utilizar estas herramientas integradas de gestión del código fuente en Eclipse Orion {{site.data.keyword.webide}} para editar el repositorio de GitLab y desplegar una app desde su espacio de trabajo.
+  {: tip}
 
 1. Si ha habilitado Problemas de GitLab, pulse **Problemas de GitLab** para abrirla. Puede utilizar esta instancia de Problemas de GitLab para toda la cadena de herramientas, incluso si la cadena de herramientas contiene varios repositorios de GitLab.    
 
-**Nota:** Si no tiene privilegios de propietario o maestro para el repositorio al que está enlazando, la integración estará limitada porque no puede utilizar un webhook. Los webhooks se necesitan para ejecutar automáticamente un conducto cuando se envía una confirmación al repositorio. Sin un webhook, debe iniciar los conductos manualmente.
+Si no tiene privilegios de propietario o maestro para el repositorio al que está enlazando, la integración estará limitada porque no puede utilizar un webhook. Los webhooks se necesitan para ejecutar automáticamente un conducto cuando se envía una confirmación al repositorio. Sin un webhook, debe iniciar los conductos manualmente.
+{: tip}
 
 ### Más información sobre GitLab
 
@@ -658,7 +699,8 @@ Para obtener más información sobre GitLab, consulte el [artículo de GitLab ![
 
 Jenkins es una herramienta de código abierto basada en la web que compila y prueba software continuamente, dando soporte a prácticas de integración continua y de entrega continua.
 
-**Importante:** antes de crear una integración de herramientas Jenkins, debe tener un servidor Jenkins. 
+Antes de crear una integración de herramientas Jenkins, debe tener un servidor Jenkins.
+{: tip}
 
 Con la integración de herramientas Jenkins, puede enviar notificaciones de trabajos Jenkins a otras herramientas de la cadena de herramientas, como por ejemplo Slack y PagerDuty. Para realizar un seguimiento del código en los despliegues, puede añadir mensajes de despliegue a sus confirmaciones Git y a los problemas de Git o JIRA relacionados. También puede ver los despliegues en la página Conexiones de cadena de herramientas. Puede enviar los resultados de las pruebas a {{site.data.keyword.DRA_short}}, añadir objetivos de calidad automatizados y realizar un seguimiento del riesgo del despliegue.
 
@@ -694,7 +736,7 @@ Para obtener más información sobre Jenkins, consulte el [artículo de Jenkins 
 ## Configuración de JIRA
 {: #jira}
 
-JIRA es una herramienta que realiza un seguimiento de problemas y errores relacionados con el software. La integración de herramientas JIRA actualiza los problemas del proyecto cuando Jenkins o {{site.data.keyword.deliverypipeline}} ejecutan un despliegue. Para que la integración de herramientas JIRA realice el seguimiento de los problemas, debe utilizar JIRA Smart Commits en los mensajes de confirmación. Para obtener más in formación sobre JIRA Smart Commits, consulte [Utilización de Smart Commits ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html){: new_window}.
+JIRA es una herramienta que realiza un seguimiento de problemas y errores relacionados con el software. La integración de herramientas JIRA actualiza los problemas del proyecto cuando Jenkins o {{site.data.keyword.deliverypipeline}} ejecutan un despliegue. Para que la integración de herramientas JIRA realice el seguimiento de los problemas, debe utilizar JIRA Smart Commits en los mensajes de confirmación. Para obtener más información sobre JIRA Smart Commits, consulte [Utilización de Smart Commits ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html){: new_window}.
 
 Configure JIRA de modo que planifique, realice un seguimiento y distribuya código de calidad:
 
@@ -808,7 +850,6 @@ Configure {{site.data.keyword.deliverypipeline}} para añadir un trabajo de comp
      ```
   **Consejo:** encontrará el URL y las credenciales de usuario que ha utilizado para conectar con el registro en los valores de configuración correspondientes a la integración de herramientas de Nexus.
 
-
   e. Si el trabajo de compilación publica en el registro de Nexus y el formato de su versión del módulo de nodo es `x.y.z-SNAPSHOT.w`, marque el recuadro de selección **Incrementar versión del módulo de instantánea**. El trabajo de compilación actualiza automáticamente la versión del módulo antes de que publique en el registro de Nexus. El trabajo de compilación selecciona la versión más alta del módulo a partir del registro de npm y el archivo `package.json` local e incrementa la versión del módulo utilizando semver. El trabajo de compilación no envía los cambios al repositorio SCM.
 
 1. Pulse **GUARDAR**. Siempre que se ejecute el conducto, este trabajo de compilación utilizará la información de configuración de la integración de herramientas de Nexus para conectar con el registro de npm.
@@ -836,8 +877,8 @@ Configure {{site.data.keyword.deliverypipeline}} para añadir un trabajo de comp
      # or
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  **Consejo:** encontrará el URL y las credenciales de usuario que ha utilizado para conectar con el registro en los valores de configuración correspondientes a la integración de herramientas de Nexus.
-
+  Encontrará el URL y las credenciales de usuario que ha utilizado para conectar con el registro en los valores de configuración correspondientes a la integración de herramientas de Nexus.
+  {: tip}
 
 1. Pulse **GUARDAR**. Siempre que se ejecute el conducto, este trabajo de compilación utilizará la información de configuración de la integración de herramientas de Nexus para conectar con el registro de Maven.
 
@@ -861,7 +902,7 @@ Configure una herramienta personalizada para que funcione con otras herramientas
 
 1. Escriba el nombre de la herramienta.
 1. Seleccione la fase del ciclo de vida que esté asociada de forma más cercana con la herramienta. Esta selección determina la categoría en la que se lista la herramienta en la página Visión general.
-1. Añada un URL de icono. El icono se muestra en la tarjeta de la integración de herramientas. 
+1. Añada un URL de icono. El icono se muestra en la tarjeta de la integración de herramientas.
 1. Añada un URL de documentación.
 1. Especifique un nombre de instancia de la herramienta. Por ejemplo: My Team Tool.
 1. Añada un URL de instancia de herramienta. Este URL se abre siempre que se pulsa en la tarjeta de la integración de herramientas.
@@ -963,7 +1004,8 @@ Para obtener más información sobre Rational Team Concert, consulte el [artícu
 
 Sauce Labs ejecuta pruebas de unidad funcionales. Cuando se configura una suite de pruebas de Sauce Labs como trabajo de pruebas en {{site.data.keyword.deliverypipeline}}, la suite de pruebas puede ejecutar pruebas para la app web o móvil como parte del proceso de entrega continuo. Estas pruebas pueden proporcionar un control de flujo muy valioso para los proyectos, y actuar como pasarelas para evitar el despliegue de código defectuoso.
 
- **Nota:** esta integración de herramientas solo está disponible en {{site.data.keyword.Bluemix_notm}} público. 
+ Esta integración de herramientas solo está disponible en {{site.data.keyword.Bluemix_notm}} público.
+ {: tip}
 
 Configure Sauce Labs para ejecutar pruebas funcionales automatizadas en varios sistemas operativos y navegadores a fin de poder emular el modo en que el usuario puede utilizar un sitio web o una aplicación:
 
@@ -974,12 +1016,13 @@ Configure Sauce Labs para ejecutar pruebas funcionales automatizadas en varios s
 
  b. En la sección Integraciones de herramientas, pulse **Sauce Labs**.
 
-1. Escriba el nombre de usuario asociado con su cuenta de Sauce Labs. Puede [encontrar su nombre de usuario len la página de bienvenida en la parte superior de la página de la cuenta de Sauce Labs ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://saucelabs.com/account){: new_window}.
+1. Escriba el nombre de usuario asociado con su cuenta de Sauce Labs. Puede [encontrar su nombre de usuario en la página de bienvenida en la parte superior de la página de la cuenta de Sauce Labs ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://saucelabs.com/account){: new_window}.
 1. Escriba la clave de acceso para su cuenta de Sauce Labs. Puede [encontrar la clave en la página de la cuenta de Sauce Labs ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://saucelabs.com/account){: new_window}.
 1. Pulse **Crear integración**.
 1. Pulse **Sauce Labs** para ir a saucelabs.com y ver la actividad de pruebas de la cadena de herramientas.
 
- **Consejo:** si ha añadido un trabajo de pruebas de Sauce Labs al {{site.data.keyword.deliverypipeline}}, puede seleccionar la instancia del servicio. Para obtener instrucciones sobre cómo configurar un trabajo de prueba en su conducto, consulte [Configuración de un trabajo de pruebas Sauce Labs en el conducto](#config_saucelabs).
+ Si ha añadido un trabajo de pruebas de Sauce Labs al {{site.data.keyword.deliverypipeline}}, puede seleccionar la instancia del servicio. Para obtener instrucciones sobre cómo configurar un trabajo de prueba en su conducto, consulte [Configuración de un trabajo de pruebas Sauce Labs en el conducto](#config_saucelabs).
+ {: tip}
 
 ### Más información sobre Sauce Labs
 
@@ -992,7 +1035,8 @@ Para obtener más información sobre Sauce Labs, consulte el [artículo de Sauce
 ## Configuración de Slack
 {: #slack}
 
-**Importante:** las notificaciones que se publican en canales Slack públicos son visibles para todas las personas del equipo. Recuerde que es responsable de todo el contenido que publique.
+Las notificaciones que se publican en canales Slack públicos son visibles para todas las personas del equipo. Recuerde que es responsable de todo el contenido que publique.
+{: tip}
 
 Slack es un sistema de notificaciones y mensajería en tiempo real y basado en la nube. Slack proporciona una función de chat permanente, que es una alternativa más interactiva que el correo electrónico para facilitar la colaboración del equipo. Puede comunicarse con su equipo en un canal dedicado o en un conjunto de canales directamente relacionados con su trabajo. Asimismo, puede compartir archivos e imágenes a través de los canales o a través de mensajes directos entre dos o más personas. Las comunicaciones en los mensajes directos y en los canales se conservan para poder realizar búsquedas.
 
@@ -1007,13 +1051,15 @@ Configure Slack para recibir notificaciones acerca de su cadena de herramientas 
 
 1. Escriba el URL del webhook de Slack, que genera Slack en forma de webhook de entrada. Necesita un URL de webhook de Slack para recibir notificaciones acerca de su cadena de herramientas desde las integraciones de herramientas. Para ver instrucciones sobre cómo crear o encontrar su webhook, consulte [Webhooks de entrada ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://api.slack.com/incoming-webhooks){: new_window}.
 
- **Consejo:** si ha estado utilizando una clave de API para el canal de Slack para recibir notificaciones acerca de la cadena de herramientas desde las integraciones de herramientas, debe actualizar la configuración para que utilice un webhook en su lugar.
+ Si ha estado utilizando una clave de API para el canal de Slack para recibir notificaciones acerca de la cadena de herramientas desde las integraciones de herramientas, debe actualizar la configuración para que utilice un webhook en su lugar.
+ {: tip}
 
-1. Escriba el nombre del canal Slack al que desea enviar las notificaciones. El canal debe existir y debe estar activo en el equipo de Slack. 
+1. Escriba el nombre del canal Slack al que desea enviar las notificaciones. El canal debe existir y debe estar activo en el equipo de Slack.
 1. Escriba el nombre de host del URL para el equipo de Slack, que es la palabra o frase que precede a `.slack.com` en el URL del equipo. Por ejemplo, si el URL del equipo es `https://team.slack.com`, el nombre de host es `team`.
 1. Pulse **Crear integración**.
 
- **Consejo:** si no se puede acceder al canal y al equipo de Slack que ha especificado, se muestra el error `Error de configuración` en la tarjeta de Slack. Mueva el cursor sobre el mensaje `Error de configuración` y pulse **Reconfigurar**. Asegúrese de utilizar parámetros de configuración válidos para el URL del webhook de Slack, el canal de Slack y el nombre de host del URL del equipo de Slack. Actualice los valores según sus necesidades y pulse **Guardar integración**.
+ Si no se puede acceder al canal ni al equipo de Slack que ha especificado, se muestra el error `Error de configuración` en la tarjeta de Slack. Mueva el cursor sobre el mensaje `Error de configuración` y pulse **Reconfigurar**. Asegúrese de utilizar parámetros de configuración válidos para el URL del webhook de Slack, el canal de Slack y el nombre de host del URL del equipo de Slack. Actualice los valores según sus necesidades y pulse **Guardar integración**.
+ {: tip}
 
 1. Pulse **Slack**. Puede ver toda la actividad de su cadena de herramientas en el canal Slack configurado.
 
@@ -1029,9 +1075,9 @@ Para obtener más información sobre Slack, consulte el [artículo de Slack ![Ic
 ## Configuración de SonarQube
 {: #sonarqube}
 
-SonarQube ofrece una visión general del estado general y de la calidad del código fuente e identifica los problemas del nuevo código. Los analizadores de código detectan errores complicados, como referencias a punteros nulos, errores de lógica y falta de recursos, para más de 20 lenguajes de codificación. 
+SonarQube ofrece una visión general del estado general y de la calidad del código fuente e identifica los problemas del nuevo código. Los analizadores de código detectan errores complicados, como referencias a punteros nulos, errores de lógica y falta de recursos, para más de 20 lenguajes de codificación.
 
-Configure SonarQube de modo que analice y evalúe continuamente la calidad del código fuente: 
+Configure SonarQube de modo que analice y evalúe continuamente la calidad del código fuente:
 
 1. En el panel de control de DevOps, pulse **Cadenas de herramientas**. Pulse la página Cadenas de herramientas a la que desea añadir SonarQube. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.  
 
@@ -1041,37 +1087,15 @@ Configure SonarQube de modo que analice y evalúe continuamente la calidad del c
 
 1. Escriba un nombre para esta instancia de la integración de herramientas SonarQube.
 1. Escriba el URL correspondiente a la instancia de SonarQube que desea abrir cuando pulse la tarjeta de SonarQube en la cadena de herramientas.
-1. Opcional: escriba el nombre de usuario que utiliza para conectarse al servidor de SonarQube. 
+1. Opcional: escriba el nombre de usuario que utiliza para conectarse al servidor de SonarQube.
 
- **Consejo:** solo es necesario especificar un nombre de usuario si utiliza una contraseña para conectar con el servidor de SonarQube. Si utiliza una señal de autenticación para conectar, deje este campo vacío.
+ Solo es necesario especificar un nombre de usuario si utiliza una contraseña para conectar con el servidor de SonarQube. Si utiliza una señal de autenticación para conectar, deje este campo vacío.
+ {: tip}
 
-1. Escriba la contraseña o la señal de autenticación que utiliza para conectarse al servidor de SonarQube. 
+1. Escriba la contraseña o la señal de autenticación que utiliza para conectarse al servidor de SonarQube.
 1. Pulse **Crear integración**.
 1. Desde la cadena de herramientas, pulse **SonarQube** para ver el panel de control de la instancia de SonarQube al que se ha conectado.
 
 ### Más información sobre SonarQube
 
 Para obtener más información sobre SonarQube, consulte el [artículo de SonarQube ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window} en el IBM Cloud Garage Method.
-
-
-## Adición de UrbanCode Deploy (Beta)
-{: #urbancodedeploy}
-
-IBM UrbanCode Deploy simplifica y automatiza el despliegue de aplicaciones. Utiliza una herramienta gráfica de diagrama de flujo para crear procesos automatizados que desplieguen, actualicen, retrotraigan y desinstalen aplicaciones. Mediante las tareas automáticas, las aplicaciones pasan de una etapa a otra en el conducto de desarrollo, incluido el desarrollo, las pruebas y los entornos de producción.
-
-**Nota:** esta integración de herramientas solo está disponible en {{site.data.keyword.Bluemix_notm}} público. Está preconfigurada y no requiere ningún parámetro de configuración. No puede volver a configurar esta integración de herramientas.
-
-Para ver las tendencias de despliegue en las aplicaciones, los equipos y los entornos, y buscar atascos en el conducto de entrega y áreas que son más eficaces, añada la integración de herramientas de UrbanCode Deploy.
-
-1. En el panel de control de DevOps, pulse **Cadenas de herramientas**. Pulse la página Cadenas de herramientas a la que desea añadir UrbanCode Deploy. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
-
- a. Pulse **Añadir una herramienta**.
-
- b. En la sección Integraciones de herramientas, pulse **UrbanCode Deploy**.
-
-1. Pulse **Crear integración**.
-1. En la cadena de herramientas, pulse **UrbanCode Deploy**. Para ver datos de un servidor de UrbanCode Deploy en Delivery Insights, debe configurar una instancia de DevOps Connect, instalar un parche en el servidor y luego conectar dicho servidor a DevOps Connect. Para obtener más información, consulte [Visualización de datos de servidores IBM UrbanCode Deploy](/docs/services/DevOpsInsights/uc_insights_connect_ucd.html){: new_window}.
-
-### Más información sobre UrbanCode Deploy
-
-Para obtener más información sobre UrbanCode Deploy, consulte el [artículo de IBM UrbanCode Deploy ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_ibm_urbancode_deploy/){: new_window} en el IBM Cloud Garage Method.

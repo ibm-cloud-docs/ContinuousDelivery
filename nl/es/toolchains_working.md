@@ -3,13 +3,18 @@
 copyright:
   years: 2015, 2018
 
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Creación de cadenas de herramientas
 {: #toolchains_getting_started}
@@ -19,8 +24,7 @@ Una *cadena de herramientas* es un conjunto de integraciones de herramientas que
 
 Las cadenas de herramientas abiertas están disponibles en los entornos Público y Dedicado en {{site.data.keyword.Bluemix}}. Una cadena de herramientas se puede crear de dos formas: mediante una plantilla o a partir de una app.
 
-Cada cadena de herramientas está asociada con una organización (org) específica y cualquier usuario que sea miembro de la organización se puede añadir a la lista de control de accesos correspondiente a las cadenas de herramientas asociadas. Para obtener más información sobre el control de accesos para cadenas de herramientas, consulte [Gestión del acceso](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}. Para poder crear una cadena de herramientas, asegúrese de que está trabajando en la organización donde desea crear la cadena de herramientas. La organización en la que está trabajando se muestra en la barra de menús. Para conmutar a otra organización, pulse la organización en la barra de menús y seleccione la organización a la que desea conmutar.
-
+Cada cadena de herramientas está asociada a un grupo de recursos u organización específico (org). Si una cadena de herramientas está asociada a un grupo de recursos, cualquier usuario que tenga permiso de Identity and Access Management (IAM) Viewer para el recurso de la cadena de herramientas o el grupo de recursos que lo contiene puede acceder a la cadena de herramientas. Si la cadena de herramientas está asociada con una organización, cualquier usuario que sea miembro de esa organización se puede añadir a la lista de control de accesos para cualquiera de sus cadenas de herramientas asociadas. Para obtener más información sobre el control de accesos para las cadenas de herramientas de organizaciones de Cloud Foundry, consulte [Gestión del acceso a cadenas de herramientas de las organizaciones de Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}. Para obtener más información sobre el control de accesos para las cadenas de herramientas de los grupos de recursos, consulte [Gestión del acceso a cadenas de herramientas de grupos de recursos](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}.
 
 ##Creación de una cadena de herramientas a partir de una plantilla   
 {: #creating_a_toolchain_from_a_template}
@@ -34,7 +38,8 @@ Puede utilizar una plantilla como punto de partida para [crear una cadena de her
 1. En la página **Crear una cadena de herramientas**, pulse una plantilla de cadena de herramientas.
 1. Revise el diagrama de la cadena de herramientas que se dispone a crear. El diagrama muestra cada integración de herramientas en la fase del ciclo de vida correspondiente en la cadena de herramientas.
 
- **Consejo**: Algunas de las plantillas de cadena de herramientas tienen varias instancias de una integración de herramientas. Por ejemplo, la plantilla de la cadena de herramientas de microservicios de {{site.data.keyword.Bluemix_notm}} público contiene tres instancias de GitHub y tres instancias de Delivery Pipeline, una para cada uno de los tres microservicios.
+ Algunas de las plantillas de cadena de herramientas tienen varias instancias de una integración de herramientas. Por ejemplo, la plantilla de la cadena de herramientas de microservicios de {{site.data.keyword.Bluemix_notm}} público contiene tres instancias de GitHub y tres instancias de Delivery Pipeline, una para cada uno de los tres microservicios.
+ {: tip}
 
  El diagrama de la imagen siguiente es un ejemplo. Cuando cree una cadena de herramientas, el diagrama mostrará cada integración de herramientas que forma parte de la cadena de herramientas.
 ![Diagrama de la cadena de herramientas](images/toolchain_diagram2.png)
@@ -43,7 +48,10 @@ Puede utilizar una plantilla como punto de partida para [crear una cadena de her
 
  * El nombre de la cadena de herramientas la identifica en {{site.data.keyword.Bluemix_notm}}. Si desea utilizar otro nombre, cambie el nombre de la cadena de herramientas.
  * La región en la que se va crear la cadena de herramientas. Si desea utilizar otra región, selecciónela en la lista de regiones disponibles.
- * La organización en la que se va crear la cadena de herramientas. Si desea utilizar una organización diferente, selecciónela en la lista de organizaciones disponibles.
+ * El grupo de recursos u organización en la que crear la cadena de herramientas. Pulse el enlace para conmutar entre la selección de grupos de recursos y organizaciones. Si desea utilizar un grupo de recursos u organización distinto, selecciónelo desde la lista de grupos de recursos u organizaciones disponibles.
+ 
+   Los grupos de recursos solo están disponibles en la región sur de Estados Unidos.
+   {: tip}
 
 1. En la sección Integraciones de herramientas, seleccione las integraciones de herramientas que desee configurar para su cadena de herramientas. Algunas integraciones de herramientas no necesitan configuración. Para obtener información sobre cómo configurar las integraciones de herramientas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Pulse **Crear**. Para configurar la cadena de herramientas, se ejecutan varios pasos automáticamente. Las integraciones de herramientas que se configuran varían en función de la plantilla de cadena de herramientas que haya seleccionado y de si utiliza {{site.data.keyword.Bluemix_notm}} público o {{site.data.keyword.Bluemix_notm}} dedicado. Por ejemplo, si crea una cadena de herramientas de microservicios en {{site.data.keyword.Bluemix_notm}} público, se ejecutan estos pasos:
@@ -77,10 +85,11 @@ Puede crear una cadena de herramientas desde su app. La cadena de herramientas p
 
 Una vez que se ha configurado la cadena de herramientas y sus integraciones de herramientas, es posible obtener una representación visual de la cadena de herramientas.
 
-1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse sobre la cadena de herramientas para abrir la página Visión general correspondiente. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.
+1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, seleccione un **GRUPO DE RECURSOS** u **ORGANIZACIÓN DE CLOUD FOUNDRY**. Se visualizan todas las cadenas de herramientas contenidas en el grupo de recursos seleccionado o en la organización de Cloud Foundry. Pulse la cadena de herramientas que desea ver para abrir su página Visión general. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.
 2. Para acceder a una integración de herramienta de su cadena de herramientas, pulse la herramienta.
 
- **Consejo**: si tiene más de un repositorio de GitHub, {{site.data.keyword.ghe_short}} o Git, puede tener varias tarjetas para la misma integración de herramientas porque cada repositorio se representa mediante su propia tarjeta. Si tiene más de un conducto, puede tener varias tarjetas para la misma integración de herramientas porque cada conducto se representa mediante su propia tarjeta. Por ejemplo, cuando se crea una cadena de herramientas de microservicios, cada uno de los tres microservicios tiene su propio repositorio GitHub, {{site.data.keyword.ghe_short}} o Git y su propio conducto.
+ Si tiene más de un repositorio de GitHub, {{site.data.keyword.ghe_short}} o Git, puede tener varias tarjetas para la misma integración de herramientas porque cada repositorio se representa mediante su propia tarjeta. Si tiene más de un conducto, puede tener varias tarjetas para la misma integración de herramientas porque cada conducto se representa mediante su propia tarjeta. Por ejemplo, cuando se crea una cadena de herramientas de microservicios, cada uno de los tres microservicios tiene su propio repositorio GitHub, {{site.data.keyword.ghe_short}} o Git y su propio conducto.
+ {: tip}
 
 ## Realice una guía de aprendizaje: Uso de las cadenas de herramientas
 {: #toolchain_tutorials}
@@ -89,6 +98,6 @@ Consulte uno de estas guías de aprendizaje en [IBM&reg; Cloud Garage Method ![I
 
   * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
 
-  * [Añada una cadena de herramientas para una app ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}. 
+  * [Añada una cadena de herramientas para una app ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
 
   * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-2-28"
+lastupdated: "2018-8-2"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -11,10 +11,13 @@ lastupdated: "2018-2-28"
     Indentation as per the previous template must be preserved.
 -->
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Compilación y despliegue
 {: #deliverypipeline_build_deploy}
@@ -22,14 +25,14 @@ lastupdated: "2018-2-28"
 {{site.data.keyword.contdelivery_full}} incluye Delivery Pipeline, que puede utilizar para implementar una integración continua repetible y un proceso de entrega continuo.
 {:shortdesc}
 
-Complete las tareas siguientes para crear y configurar un conducto.
+Complete las tareas siguientes para configurar una interconexión.
 
 ## Adición de una etapa
 {: #deliverypipeline_add_stage}
 
 1. En la página Conducto, pulse **AÑADIR ETAPA**. Se abrirá la página Configuración de etapa.
 2. Configurar la etapa.
-  1. En el separador **ENTRADA**, seleccione una entrada para la etapa. En las etapas de compilación, el separador de entrada incluye un campo **Rama** para especificar la rama del repositorio que se debe utilizar para la entrada.
+  1. En el separador **ENTRADA**, seleccione una entrada para la etapa.  En las etapas de compilación, el separador de entrada incluye un campo **Rama** para especificar la rama del repositorio que se debe utilizar para la entrada.
   2. En el separador **TRABAJOS**, añada y configure al menos un trabajo. La primera etapa normalmente tiene como mínimo un trabajo de compilación.
 3. Pulse **GUARDAR**.
 
@@ -70,10 +73,11 @@ Al ejecutar una etapa manualmente, o si la ejecuta porque la etapa anterior se h
 * Si no se especifica una revisión específica, busque etapas anteriores hasta que se encuentre una etapa que utilice la misma entrada. Busque y utilice la última revisión de ejecución correcta de dicha entrada.
 * Si no se especifica una revisión específica y ninguna otra etapa utiliza el origen especificado como entrada, utilice la revisión más reciente de la entrada.
 
-**Consejo:** Puede desplegar una compilación anterior. En la etapa que contiene la compilación, pulse **Ver registros e historial**. En la página que se abre, pulse para expandir el número de ejecución y, a continuación, pulse el trabajo de compilación. Pulse **ENVIAR A**, y seleccione un destino.
+Puede desplegar una compilación anterior. En la etapa que contiene la compilación, pulse **Ver registros e historial**. En la página que se abre, pulse para expandir el número de ejecución y, a continuación, pulse el trabajo de compilación. Pulse **ENVIAR A**, y seleccione un destino.
+{: tip}
 
 ###Adición de servicios a apps
-Puede añadir servicios a las apps y gestionar los servicios desde el panel de control de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos (CLI) de Cloud Foundry. También puede emitir mandatos de CLI de Cloud Foundry en scripts para trabajos de conductos. Por ejemplo, puede añadir un servicio a una app en el script de un trabajo de despliegue. Para obtener más información sobre cómo añadir servicios, consulte [Adición de un servicio a la app](/docs/services/reqnsi.html#add_service).
+Puede añadir servicios a las apps y gestionar los servicios desde el panel de control de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos (CLI) de Cloud Foundry. También puede emitir mandatos de CLI de Cloud Foundry en scripts para trabajos de conductos. Por ejemplo, puede añadir un servicio a una app en el script de un trabajo de despliegue. Para obtener más información sobre cómo añadir servicios, consulte [Adición de un servicio a la aplicación](/docs/services/reqnsi.html#add_service).
 
 ## Visualización de registros
 {: #deliverypipeline_view_logs}

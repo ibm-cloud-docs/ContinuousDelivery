@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-1-23"
+lastupdated: "2018-8-2"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -11,11 +11,13 @@ lastupdated: "2018-1-23"
     Indentation as per the previous template must be preserved.
 -->
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
-{:tip:.tip}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Propiedades y recursos del entorno
 {: #deliverypipeline_environment}
@@ -29,7 +31,7 @@ Puede añadir cuatro tipos de propiedades desde el separador Propiedades de ento
 * **Texto**: Una clave de propiedad con un valor de línea única.
 * **Área de texto**: Una clave de propiedad con un valor de varias líneas.
 * **Seguro**: Una clave de propiedad con un valor de línea única. El valor se visualiza como asteriscos.
-* **Propiedades**: Un archivo del repositorio del proyecto. Este archivo puede contener varias propiedades. Cada propiedad debe estar en su propia línea. Para pares de clave-valor independientes, utilice el signo igual (=).
+* **Propiedades**: Un archivo del repositorio del proyecto. Este archivo puede contener varias propiedades. Cada propiedad debe estar en su propia línea. Para pares de clave-valor independientes, utilice el signo igual (=). Encierre todos los valores de serie entre comillas. Por ejemplo, MY_STRING="SOME STRING VALUE".
 
 Puede examinar las propiedades del entorno para un trabajo de conducto ejecutando el mandato `env` en el script del trabajo.
 {:tip}
@@ -89,7 +91,8 @@ Las siguientes propiedades y recursos están disponibles de forma predeterminada
 | MAVEN_HOME | La vía de acceso para Apache Maven 3.2.1. |
 | NODE_HOME | La vía de acceso para Node.js 0.10.29. |
 
-**Sugerencia**: Puede utilizar la versión 1.10+ de Apache Ant en los scripts del conducto estableciendo `ANT_HOME` en `$ANT_JAVA8_HOME` y `JAVA_HOME` en `$JAVA8_HOME`.
+Puede utilizar la versión 1.10+ de Apache Ant en los scripts de la interconexión estableciendo `ANT_HOME` en `$ANT_JAVA8_HOME` y `JAVA_HOME` en `$JAVA8_HOME`.
+{: tip}
 
 ### Propiedades de despliegue
 
@@ -110,7 +113,8 @@ Varios tiempos de ejecución, herramientas y módulos de Nodos están preinstala
 
 ### Tiempos de ejecución y herramientas
 
-*Nota:* Todos los enlaces están en el directorio de inicio.
+Todos los enlaces están en el directorio de inicio.
+{: tip}
 
 | Recurso | Nombre de enlace | Vía de acceso |
 |----------|-----------|-----------|

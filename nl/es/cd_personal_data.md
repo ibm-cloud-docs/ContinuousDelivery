@@ -2,12 +2,17 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-4-13"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Gestión de datos personales en Continuous Delivery
 {: #cd_personal_data}
@@ -24,14 +29,17 @@ Los datos personales son cualquier información relacionada con una persona fís
  * [GitHub Enterprise on IBM Cloud ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/ghededicated/ghe_personal_data.html){: new_window}
  * [{{site.data.keyword.DRA_full}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
-{{site.data.keyword.contdelivery_short}} proporciona los permisos adecuados para gestionar datos dentro de una organización de Cloud Foundry. La empresa puede tener políticas que limitan estos permisos. Si no tiene los permisos adecuados, póngase en contacto con el administrador de su organización.
+IBM no gestiona los datos en el servicio de {{site.data.keyword.contdelivery_short}}. Antes de dejar el servicio de {{site.data.keyword.contdelivery_short}} que se aloja en {{site.data.keyword.Bluemix_notm}} Público, debe suprimir sus propios datos.
+{: tip}
+
+{{site.data.keyword.contdelivery_short}} proporciona los permisos adecuados para gestionar datos dentro de un grupo de recursos o una organización de Cloud Foundry. La empresa puede tener políticas que limitan estos permisos. Si no tiene los permisos adecuados, póngase en contacto con el administrador de la cuenta de {{site.data.keyword.Bluemix_notm}}.
 
 Para gestionar los datos personales, debe conocer las cuentas de IBM Cloud, cómo se utilizan estas cuentas y sus derechos de acceso asociados.
  
 ## Cuentas y derechos de acceso
 {: #accounts_access_rights}
 
-Para trabajar en IBM Cloud, debe iniciar sesión con un nombre de usuario y una contraseña. Cuando inicia la sesión, IBM Cloud asocia al menos una cuenta de IBM Cloud con las credenciales de usuario. Cuando crea recursos como organizaciones de Cloud Foundry y objetos de {{site.data.keyword.contdelivery_short}}, estos se asocian con una cuenta de IBM Cloud.
+Para trabajar en IBM Cloud, debe iniciar sesión con un nombre de usuario y una contraseña. Cuando inicia la sesión, IBM Cloud asocia al menos una cuenta de IBM Cloud con las credenciales de usuario. Cuando crea recursos como organizaciones de Cloud Foundry, grupos de recursos, cadenas de herramientas y objetos de {{site.data.keyword.contdelivery_short}}, estos se asocian con una cuenta de IBM Cloud.
 
 La estructura de inicio de sesión de IBM Cloud le proporciona la opción de trabajar en cuentas diferentes. Mediante la interfaz de usuario de IBM Cloud, puede cambiar de una cuenta a otra. Cuando inicia la sesión, cualquiera de los siguientes tipos de cuenta puede asociarse con sus credenciales de usuario: 
 
@@ -68,13 +76,13 @@ Independientemente del tipo de cuenta de IBM Cloud que se utiliza, si tiene dere
 
 Antes de suprimir datos de una cuenta, determine si se trata de una cuenta personal o de una cuenta corporativa individual.
 
-###Cuentas personales
+###Cuenta personal
 
 Si tiene una cuenta personal, puede hacer cambios y suprimir los datos. Si comparte la cuenta con otro usuario, es el propietario de los datos, pero es posible que desee ponerse en contacto con él en referencia al trabajo compartido. 
 
 Si no puede iniciar sesión en la cuenta de IBM Cloud, [póngase en contacto con el soporte de IBM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/support){:new_window}
  
-###Cuentas corporativas individuales
+###Cuenta corporativa individual
 
 Si tiene una cuenta corporativa individual, debe coordinar los cambios con la empresa y con los demás miembros del equipo. Suprima los datos personales tanto si están almacenados en una cuenta corporativa como si lo están en una cuenta corporativa individual. No suprima el trabajo que ha compartido con otros usuarios.
 
@@ -82,14 +90,16 @@ Antes de empezar a gestionar los datos personales para los componentes de {{site
 
 Si no puede iniciar sesión en la cuenta de IBM Cloud, póngase en contacto con su empresa y colabore con ellos para suprimir sus datos personales.
 
-**Importante**: Si desea suprimir todos los datos personales de {{site.data.keyword.contdelivery_short}}, es importante el orden en el que suprime los datos. Primero, suprima todos sus espacios de trabajo de {{site.data.keyword.webide}}. A continuación, suprima sus datos de {{site.data.keyword.gitrepos}}, y luego su cuenta de {{site.data.keyword.gitrepos}}. Finalmente, suprima los conductos de entrega, las integraciones de herramientas y las cadenas de herramientas.
+Si desea suprimir todos los datos personales de {{site.data.keyword.contdelivery_short}}, es importante el orden en el que suprimen los datos. Primero, suprima todos sus espacios de trabajo de {{site.data.keyword.webide}}. A continuación, suprima sus datos de {{site.data.keyword.gitrepos}}, y luego su cuenta de {{site.data.keyword.gitrepos}}. Finalmente, suprima los conductos de entrega, las integraciones de herramientas y las cadenas de herramientas.
+{: tip}
 
 ## Exportación y supresión de datos de Web IDE
 {: #managing_web_ide_data}
 
 {{site.data.keyword.webide}} proporciona un espacio de trabajo personal en la nube. Puede utilizar {{site.data.keyword.webide}} para clonar repositorios Git y editar archivos. Usted es el propietario de su espacio de trabajo de {{site.data.keyword.webide}}; no se comparte con ninguna otra cuenta.
 
-**Sugerencia**: Antes de suprimir los datos de {{site.data.keyword.webide}}, quizá desee exportar su trabajo. Después de suprimir los espacios de trabajo, se eliminan de {{site.data.keyword.contdelivery_short}} y todos los archivos se suprimen.
+Antes de suprimir los datos de {{site.data.keyword.webide}}, quizá desee exportar su trabajo. Después de suprimir los espacios de trabajo, se eliminan de {{site.data.keyword.contdelivery_short}} y todos los archivos se suprimen.
+{: tip}
 
 ###Exportación de un espacio de trabajo de Web IDE
 
@@ -107,7 +117,8 @@ Para suprimir sus espacios de trabajo de {{site.data.keyword.webide}}, incluidos
 1. Pulse **PERFIL DE USUARIO**.
 1. Pulse **Suprimir** para eliminar todos los datos de {{site.data.keyword.webide}}.
 
-**Importante**: {{site.data.keyword.webide}} utiliza un mecanismo de inicio de sesión único. La primera vez que accede a esta integración de herramientas, se crea una cuenta de {{site.data.keyword.webide}} correspondiente, pero oculta, de la cuenta de IBM Cloud. Después de suprimir todos los espacios de trabajo, no acceda a {{site.data.keyword.webide}}. Si accede a {{site.data.keyword.webide}} de nuevo, se crea automáticamente una nueva cuenta que debe suprimir.
+{{site.data.keyword.webide}} utiliza un mecanismo de inicio de sesión único. La primera vez que accede a esta integración de herramientas, se crea una cuenta de {{site.data.keyword.webide}} correspondiente, pero oculta, de la cuenta de IBM Cloud. Después de suprimir todos los espacios de trabajo, no acceda a {{site.data.keyword.webide}}. Si accede a {{site.data.keyword.webide}} de nuevo, se crea automáticamente una nueva cuenta que debe suprimir.
+{: tip}
 
 ## Modificación, exportación y supresión de datos de Git Repos and Issue Tracking
 {: #managing_grit_data}
@@ -118,7 +129,8 @@ Para suprimir sus espacios de trabajo de {{site.data.keyword.webide}}, incluidos
 
 Los perfiles y valores de cuenta, los proyectos personales, los grupos y los fragmentos de código están asociados con su cuenta de Git. Si suprime la cuenta de Git, estos objetos se suprimen. Para suprimir datos personales en otro proyecto, vaya al proyecto y luego modifíquelo para eliminar sus datos personales, o suprima todo el proyecto. Coordínese con los demás miembros del equipo antes de suprimir proyectos compartidos.
 
-**Importante**: Antes de suprimir la cuenta de Git, suprima sus datos personales de otros proyectos. Después de suprimir la cuenta de Git, podría ser difícil o imposible encontrar todos los proyectos a los que ha contribuido.
+Antes de suprimir la cuenta de Git, suprima sus datos personales de otros proyectos. Después de suprimir la cuenta de Git, podría ser difícil o imposible encontrar todos los proyectos a los que ha contribuido.
+{: tip}
 
 ###Proyectos personales y compartidos
 
@@ -142,24 +154,27 @@ Puede suprimir la cuenta de {{site.data.keyword.gitrepos}} y todo lo que posee d
 1. En el panel de control de Valores de usuario de {{site.data.keyword.gitrepos}}, en la [página Cuenta ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, en la sección Suprimir cuenta, pulse **Suprimir cuenta**.
 1. Se suprimen todos los proyectos de Git, incluidos los repositorios y los problemas. También se le elimina a usted de todos los grupos de {{site.data.keyword.gitrepos}} a los que pertenece.
 
-**Sugerencia**: Cuando se suprime la cuenta, algunos contenidos se mantienen. Este contenido se asigna a un usuario Ghost del sistema. Para obtener más información sobre la supresión de una cuenta de {{site.data.keyword.gitrepos}}, consulte [Supresión de una cuenta de usuario ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}.
+Cuando se suprime la cuenta, algunos contenidos se mantienen. Este contenido se asigna a un usuario Ghost del sistema. Para obtener más información sobre la supresión de una cuenta de {{site.data.keyword.gitrepos}}, consulte [Supresión de una cuenta de usuario ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}.
+{: tip}
 
-**Importante**: {{site.data.keyword.gitrepos}} utiliza un mecanismo de inicio de sesión único que crea automáticamente una cuenta de Git correspondiente a la cuenta de IBM Cloud la primera vez que accede a la integración de herramientas. Después de suprimir la cuenta, no acceda a {{site.data.keyword.gitrepos}}. Si accede a {{site.data.keyword.gitrepos}} de nuevo, se crea automáticamente una nueva cuenta que debe suprimir.
+{{site.data.keyword.gitrepos}} utiliza un mecanismo de inicio de sesión único que crea automáticamente una cuenta de Git correspondiente a la cuenta de IBM Cloud la primera vez que accede a la integración de herramientas. Después de suprimir la cuenta, no acceda a {{site.data.keyword.gitrepos}}. Si accede a {{site.data.keyword.gitrepos}} de nuevo, se crea automáticamente una nueva cuenta que debe suprimir.
+{: tip}
 
-## Modificación y supresión de datos de conducto de Continuous Delivery
+## Modificación, exportación y supresión de los datos de interconexión de Continuous Delivery
 {: #managing_pipeline_data}
 
 Los conductos de {{site.data.keyword.contdelivery_short}} ejecutan scripts para compilar, probar y desplegar su aplicación en IBM Cloud. Para ello, los conductos ofrecen etapas, trabajos, variables de entorno y otros objetos que pueden contener datos personales. Puede suprimir estos objetos individualmente o puede suprimir todo un conducto.
 
 Coordínese con los demás miembros del equipo antes de suprimir conductos u objetos compartidos. Suprimir una etapa puede provocar que falle un conducto.
 
-**Sugerencia**: Un conducto no puede existir fuera de una cadena de herramientas. Si suprime una cadena de herramientas, todos los conductos que están asociados con la cadena de herramientas también se suprimen. Si tiene previsto suprimir una cadena de herramientas completa, no es necesario suprimir individualmente cada conducto. En su lugar, vaya a la sección "Modificación y supresión de cadenas de herramientas e integraciones de herramientas" y siga los pasos para suprimir una cadena de herramientas.
+No puede existir una interconexión fuera de una cadena de herramientas. Si suprime una cadena de herramientas, todos los conductos que están asociados con la cadena de herramientas también se suprimen. Si tiene previsto suprimir una cadena de herramientas completa, no es necesario suprimir individualmente cada conducto. En su lugar, vaya a la sección "Modificación y supresión de cadenas de herramientas e integraciones de herramientas" y siga los pasos para suprimir una cadena de herramientas.
+{: tip}
 
-###Modificación y supresión de etapas de conducto
-
-Las etapas de conducto pueden incluir datos personales, como credenciales, en forma de propiedades de entorno. Las etapas también pueden incluir scripts dentro de los trabajos que desee modificar o suprimir. Utilice las acciones Configurar etapa o Suprimir etapa para modificar o suprimir una etapa.
+Las etapas de interconexión pueden incluir datos personales, como credenciales, en forma de propiedades de entorno, y una definición de interconexión que muestra el estado actual de la interconexión. Las etapas también pueden incluir scripts dentro de los trabajos que desee modificar o suprimir, así como artefactos y registros para las ejecuciones de interconexión más recientes que desea exportar. Utilice las acciones Configurar etapa o Suprimir etapa para modificar o suprimir una etapa. Utilice la acción Descargar para exportar artefactos o registros desde una etapa.
 
   ![Menú de etapas](images/pipeline_stages.png)
+
+###Modificación de una etapa de interconexión
 
 Para modificar una etapa de conducto:
 
@@ -172,24 +187,26 @@ Para modificar una etapa de conducto:
   
 1. Suprima un trabajo de la etapa de conducto. En el separador **TRABAJOS**, seleccione el trabajo que desea suprimir y pulse **Eliminar**.
  
+###Exportación de una etapa de interconexión
+
+Para exportar la definición para una etapa de interconexión, añada `/yaml` al URL de la interconexión:
+
+`http(s)://<DevOps Services domain>/pipeline/user/project/yaml`
+
+
+Para exportar artefactos y registros para una etapa de interconexión:
+
+1. En la página Interconexión, pulse **Ver registros e historial**.
+1. Pulse el número de compilación para el que desea exportar artefactos y registros.
+1. Pulse **DESCARGAR** > **Artefactos** para exportar los artefactos para la compilación seleccionada.
+1. Pulse **DESCARGAR** > **Registros** para exportar los registros para la compilación seleccionada.  
+
+###Supresión de una etapa de interconexión
+
 Para suprimir una etapa de conducto:
 
 1. En la página Conducto, pulse el icono **Valores**.
 1. Pulse **Suprimir etapa**.
-
-###Cambio de la propiedad del conducto
-
-Puede transferir la propiedad de un conducto a otro usuario; el nuevo propietario debe realizar la operación de transferencia. Un usuario puede adoptar la propiedad de un conducto existente, pero no puede asignar la propiedad a otro usuario. Para adoptar la propiedad de un conducto, debe tener derechos de administración.
-
-Para adoptar la propiedad de un conducto, un usuario debe completar los pasos siguientes:
-
-1. Iniciar sesión en IBM Cloud.
-1. Pulsar el menú para acceder a las opciones de configuración. 
-
-  ![Menú de configuración](images/pipeline_ownership.png)
-
-1. Pulsar **Modificar propietario de conducto**. 
-1. Seleccionar **CONVERTIRME EN PROPIETARIO**.
 
 ## Modificación y supresión de cadenas de herramientas e integraciones de herramientas
 {: #managing_toolchains}
@@ -219,7 +236,6 @@ Para suprimir una integración de herramientas:
 1. Para suprimir una integración de herramienta de su cadena de herramientas, pulse **Suprimir**.
 1. Confirme la acción pulsando **Suprimir**.
 
-
 ###Supresión de cadenas de herramientas
 
 Al suprimir una cadena de herramientas, la supresión no se podrá deshacer.
@@ -229,8 +245,12 @@ Al suprimir una cadena de herramientas, la supresión no se podrá deshacer.
 1. Pulse **Suprimir**. Cuando se suprime una cadena de herramientas, también se suprimen todas sus integraciones de herramienta, incluidos los conductos, lo que podría dar lugar a la supresión de los recursos que dichas integraciones gestionan.
 1. Para confirmar la eliminación, escriba el nombre de la cadena de herramientas y pulse **Suprimir**. 
 
+Al suprimir una cadena de herramientas, los repositorios de {{site.data.keyword.gitrepos}} asociados no se suprimirán. Los usuarios que tienen acceso a esos repositorios pueden tener copias de los datos si han realizado un `clon git` o han creado un espacio de trabajo de {{site.data.keyword.webide}}. Para asegurarse de que se suprimen todos los datos, debe solicitar que dichos usuarios supriman sus copias de los datos.
+{: tip}
+
 ###Supresión de todas las cadenas de herramientas
 
-No puede suprimir todas las cadenas de herramientas de una organización al mismo tiempo. Debe suprimir las cadenas de herramientas una por una.
+No puede suprimir todas las cadenas de herramientas de una organización o grupo de recursos al mismo tiempo. Debe suprimir las cadenas de herramientas una por una.
 
-**Importante**: Las cadenas de herramientas están acotadas por región de IBM Cloud y organización de Cloud Foundry. Seleccione todas las regiones y las organizaciones de cada región para suprimir las cadenas de herramientas que ha creado.
+Las cadenas de herramientas están delimitadas por la región de IBM Cloud y por el grupo de recursos u organización de Cloud Foundry. Asegúrese de seleccionar todas las regiones y el grupo de recursos u organización de cada región para suprimir las cadenas de herramientas que ha creado.
+{: tip}

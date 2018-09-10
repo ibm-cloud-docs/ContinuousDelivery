@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-20"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Desarrollo con Eclipse Orion Web IDE
 {: #web_ide}
@@ -23,7 +25,7 @@ Lo mejor de todo es que {{site.data.keyword.webide}} está basado en la web. No 
 ## Configuración del IDE
 {: #editorsetup}
 
-{{site.data.keyword.webide}} se puede personalizar para que pueda elegir los esquemas de colores, las herramientas técnicas y los valores que cumplan sus necesidades de desarrollo. Para ver y modificar los valores, desde el menú de la izquierda, pulse el icono **Valores** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="El icono de valores"> en la barra lateral de navegación de la izquierda.
+{{site.data.keyword.webide}} se puede personalizar para que pueda elegir los esquemas de colores, las herramientas técnicas y los valores que cumplan sus necesidades de desarrollo. Para ver y modificar los valores, desde la barra lateral de navegación de la izquierda, pulse el icono **Valores** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="El icono Valores">.
 
 Si necesita a menudo cambiar determinados valores mientras edita, puede acceder a dichos valores rápidamente desde el icono **Valores de editor local** <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icono Valores de editor local">.
 
@@ -45,7 +47,8 @@ De forma predeterminada, siempre se muestran los valores para el estilo del edit
 
 {{site.data.keyword.webide}} tiene dos secciones principales. La primera sección es el navegador de archivos, que muestra los archivos del proyecto en una estructura de árbol. Desde el navegador de archivos, puede crear, cambiar el nombre, suprimir y gestionar los archivos y carpetas.
 
-**Consejo:** para cargar archivos en el navegador de archivos, arrástrelos desde el sistema al navegador de archivos.
+Para cargar archivos en el navegador de archivos, arrástrelos desde el sistema al navegador de archivos.
+{: tip}
 
 La segunda sección es el panel del editor. El editor proporciona varias características de codificación, incluida la asistencia de contenido y la validación de sintaxis.
 
@@ -69,7 +72,7 @@ Para ver una lista de los atajos de teclado en el editor, pulse **Herramientas**
 ## Gestión del código fuente
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} se integra con herramientas de gestión de código fuente. Para trabajar con el repositorio de Git, pulse el icono **Repositorio de Git** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="El icono Repositorio de Git">.Para obtener más información, consulte [Cómo trabajar con Git en Eclipse Orion Web IDE](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide).
+{{site.data.keyword.webide}} se integra con herramientas de gestión de código fuente. Para trabajar con el repositorio de Git, pulse el icono **Repositorio de Git** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="El icono Repositorio de Git">.  Para obtener más información, consulte [Cómo trabajar con Git en Eclipse Orion Web IDE](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide).
 
 ## Despliegue de una app desde el espacio de trabajo
 {: #deploy}
@@ -79,7 +82,7 @@ Para ver una lista de los atajos de teclado en el editor, pulse **Herramientas**
 1. Pulse el icono de despliegue <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="icono de despliegue">. Se desplegará una instancia de la app utilizando el contenido actual del espacio de trabajo y del entorno definido en la configuración de lanzamiento.
 2. Una vez que se despliegue la app, puede utilizar la barra de ejecución para detener, reiniciar o depurar la app, ver registros, etc.
 
-<table>
+<table role="presentation">
 <tr><td><img src="./images/stop_button.png"  alt="Icono detener"></td><td>Detiene la app</td></tr>
 <tr><td> <img src="./images/open_app_url.png"  alt="Icono abrir URL de app"></td><td> Abre la app desplegada</td></tr>
 <tr><td><img src="./images/view_logs.png"  alt="Icono ver registros"></td><td>Visualiza los registros de la app desplegada</td></tr>
@@ -88,7 +91,7 @@ Para ver una lista de los atajos de teclado en el editor, pulse **Herramientas**
 
 Si está desarrollando una app Node.js, habilite la modalidad de Edición en directo: <img  src="./images/enable_live_edit.png"  alt="Graduador para habilitar edición en directo">
 
-<table><tr><td><img src="./images/live_edit_restart.png"  alt="Icono reiniciar edición en directo"></td><td>Con la modalidad de edición en directo, reinicia con rapidez la app, sin volver a desplegar</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="Icono reiniciar edición en directo"></td><td>Con la modalidad de edición en directo, reinicia con rapidez la app, sin volver a desplegar</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="Icono depurar"></td>
 <td>Con la modalidad de edición en directo, accede al depurador
 </td></tr>
@@ -161,7 +164,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 Eclipse Orion {{site.data.keyword.webide}} proporciona ayuda de contenido, ayudas contextuales, vistas previas, validación y resaltado de sintaxis para archivos JavaScript, HTML, CSS y Markdown. También se da soporte al resaltado de sintaxis para estos tipos de archivos:
 
-<table>
+<table role="presentation">
 <tr>
 <td>
 <ul><li>Arduino

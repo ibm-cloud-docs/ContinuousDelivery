@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-4-18"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -23,16 +23,38 @@ Los planes de servicio de {{site.data.keyword.contdelivery_short}} y sus precios
  * Los usuarios que manipulan, activan (directamente en la interfaz de usuario o indirectamente al confirmar un repositorio) o ven el estado de un conducto de entrega.
  * Los usuarios que interactúan con Eclipse Orion {{site.data.keyword.webide}}.
  
-### ¿Cómo se cuentan los usuarios?
+### ¿Cómo se cuentan los usuarios para instancias de {{site.data.keyword.contdelivery_short}} en organizaciones?
 
 Los usuarios autorizados se cuentan teniendo en cuenta todos los usuarios de la organización de la nube (org) que contiene el servicio de {{site.data.keyword.contdelivery_short}}. 
 
-Para ver la lista de usuarios de la organización, desde la barra de menús, pulse **Gestionar > Cuenta > Organizaciones de Cloud Foundry**.
+Para ver la lista de usuarios de la organización en un entorno de {{site.data.keyword.Bluemix_notm}} público, desde la barra de menús, pulse **Gestionar > Cuenta > Organizaciones de Cloud Foundry**.
+
+Para ver la lista de usuarios de su organización en un entorno dedicado de {{site.data.keyword.Bluemix_notm}}, desde la barra de menús, pulse **Cuenta > Gestionar organizaciones**.
+
+También puede ver todas las instancias del servicio de {{site.data.keyword.contdelivery_short}} de la cuenta y el número de usuarios que se notifican en cada instancia en un entorno de {{site.data.keyword.Bluemix_notm}} público.
+
+1. En la barra de menús, pulse **Gestionar > Facturación y uso > Uso**.
+2. Pulse **Panel de control de uso**.
+3. En el menú Cuenta, pulse **Organizaciones de Cloud Foundry**.
+4. Pulse la organización para la que desea ver información de uso.
+
+Para ver todas las instancias del servicio {{site.data.keyword.contdelivery_short}} en su cuenta y el número de usuarios que se notifican en cada instancia en un entorno dedicado de {{site.data.keyword.Bluemix_notm}}:
+
+1. En la barra de menús, pulse **Cuenta > Gestionar organizaciones**.
+2. Pulse **Panel de control de uso**.
+
+### ¿Cómo se cuentan los usuarios para las instancias de {{site.data.keyword.contdelivery_short}} en grupos de recursos?
+
+Los usuarios autorizados se cuentan teniendo en cuenta la lista de usuarios del separador Gestionar dentro de la instancia de servicio de {{site.data.keyword.contdelivery_short}}. 
+
+Para ver la lista de usuarios autorizados, abra el panel de control de la instancia de servicio y pulse el separador Gestionar.
 
 También puede ver todas las instancias del servicio de {{site.data.keyword.contdelivery_short}} de la cuenta y el número de usuarios notificados en cada instancia.
 
-1. En la barra de menús, pulse **Gestionar > Cuenta > Organizaciones de Cloud Foundry**.
+1. En la barra de menús, pulse **Gestionar > Facturación y uso > Uso**.
 2. Pulse **Panel de control de uso**.
+3. En el menú Cuenta, pulse **Grupos de recursos**.
+4. Pulse el grupo de recursos para el que desea ver información de uso.
 
 ### ¿Qué ocurre cuando se superan los límites del plan de servicio? 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-7-19"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -28,23 +28,42 @@ Si configura la integración de herramientas de GitHub mientras crea la cadena d
 
   1. En la sección Integraciones configurables, pulse **GitHub**.
   1. Si está creando la cadena de herramientas en {{site.data.keyword.Bluemix_notm}} Público y {{site.data.keyword.Bluemix_notm}} no está autorizado para acceder a GitHub, pulse **Autorizar** para ir al sitio web de GitHub.
-  1. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub. 
+  1. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub.
 
 Si ya tiene una cadena de herramientas, actualice la configuración de la integración de herramientas de GitHub:
 
  1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse sobre la cadena de herramientas para abrir la página Visión general correspondiente. Si lo prefiere, en la página Visión general de la app, tarjeta Entrega continua, pulse **Ver cadena de herramientas** y, a continuación, **Visión general**.
  1. En la tarjeta GitHub, pulse el menú y pulse **Configurar**.
- 1. Actualice los valores de configuración para autorizar a {{site.data.keyword.Bluemix_notm}} para acceder a GitHub. Pulse **Autorizar** para ir al sitio web de GitHub. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub. 
+ 1. Actualice los valores de configuración para autorizar a {{site.data.keyword.Bluemix_notm}} para acceder a GitHub. Pulse **Autorizar** para ir al sitio web de GitHub. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub.
  1. Cuando haya terminado de configurar los ajustes, pulse **Guardar integración**.
 
 
 ## He intentado crear una cadena de herramientas. ¿Por qué aparece un error?
 {: #cannot_create_toolchain}
 
-Al intentar crear una cadena, si aparece el siguiente mensaje de error, elimine una o varias cadenas de su organización y, a continuación, cree la cadena de herramientas de nuevo.
+Al intentar crear una cadena de herramientas en una organización, si aparece el siguiente mensaje de error, elimine una o varias cadenas de su organización y, a continuación, cree la cadena de herramientas de nuevo.
 
 `Esta organización contiene 200 cadenas de herramientas, que es el límite máximo. Antes de que pueda añadir otra cadena de herramientas, elimine una o varias cadenas de herramientas de la organización.`
 
+
+## ¿Por qué la página Cadenas de herramientas muestra que se ha excedido el plan Lite del servicio de {{site.data.keyword.contdelivery_short}}?
+
+{{site.data.keyword.contdelivery_short}} ofrece dos planes: Lite y Professional. Si tiene el plan Lite de {{site.data.keyword.contdelivery_short}}, puede utilizar cadenas de herramientas de forma gratuita, hasta los límites del plan. El mensaje de error indica que ha sobrepasado uno o más límites del plan Lite. Por ejemplo, puede superar el plan si tiene demasiados usuarios autorizados que están asociados a la instancia de servicio de {{site.data.keyword.contdelivery_short}}, o si ha ejecutado el número máximo de trabajos de {{site.data.keyword.deliverypipeline}}. Para obtener más información sobre los términos del plan, consulte [Limitaciones y uso del plan](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+
+
+## He creado una cadena de herramientas, ¿por qué la página Cadenas de herramientas muestra que se necesita un servicio de Continuous Delivery?
+
+Los términos del plan para la instancia de servicio de {{site.data.keyword.contdelivery_short}} que se encuentra en el mismo grupo de recursos u organización que la cadena de herramientas gestiona el uso de algunas de las integraciones de herramientas ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} y {{site.data.keyword.gitrepos}}) contenidas en el servicio. El mensaje de error indica que el grupo de recursos o la organización no contiene la instancia necesaria del servicio de {{site.data.keyword.contdelivery_short}}. Para obtener más información sobre los términos del plan, consulte [Limitaciones y uso del plan](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+
+
+## He creado una cadena de herramientas en una organización de Cloud Foundry, ¿por qué la página Cadenas de herramientas muestra que se necesita un servicio de Continuous Delivery?
+
+Cuando se crea una cadena de herramientas en un grupo de recursos u organización que no tiene una instancia del servicio de {{site.data.keyword.contdelivery_short}}, la plataforma de la cadena de herramientas intenta crear automáticamente una instancia del servicio utilizando el plan Lite. El mensaje de error indica que la plataforma de la cadena de herramientas no ha podido crear la instancia de servicio.
+
+Este error se puede producir al crear una cadena de herramientas en la región sur de Estados Unidos y en una organización de Cloud Foundry que no tenga todavía una instancia de {{site.data.keyword.contdelivery_short}}. En la región sur de Estados Unidos, debe crear todas las instancias nuevas del servicio de {{site.data.keyword.contdelivery_short}} en grupos de recursos. 
+
+Puede crear la cadena de herramientas en un grupo de recursos o crear la cadena de herramientas en una organización que ya tenga una instancia de {{site.data.keyword.contdelivery_short}}.
+  
 
 ## He intentado desplegar una app en {{site.data.keyword.Bluemix_notm}}. ¿Por qué aparece un error?
 {: #org_outofmemory}
@@ -53,7 +72,7 @@ Al intentar desplegar una app en {{site.data.keyword.Bluemix_notm}}, si obtiene 
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
-Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utilizan las apps. El máximo de cuota de memoria para una cuenta de prueba es de 2 GB. Para aumentar la cuota de memoria de su cuenta, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cuentas de pago](/docs/pricing/index.html#pay-accounts).Para reducir la memoria que utilizan las apps, utilice la consola de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos cf.
+Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utilizan las apps. El máximo de cuota de memoria para una cuenta de prueba es de 2 GB. Para aumentar la cuota de memoria de su cuenta, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cuentas de pago](/docs/pricing/index.html#pay-accounts). Para reducir la memoria que utilizan las apps, utilice la consola de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos cf.
 
 Si utiliza la consola de {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
 
@@ -90,7 +109,7 @@ Al editar una app de Node.js en Web IDE, los iconos de {{site.data.keyword.Bluem
 * La app no contiene un archivo `package.json`.
 
 
-Si el archivo `manifest.yml` no está almacenado en la raíz, almacénelo allí.Si la app está almacenada en un subdirectorio, especifique la vía de acceso al subdirectorio en el archivo `manifest.yml`.Si la app no contiene un archivo `package.json`, cree uno que esté en el mismo directorio que la app.
+Si el archivo `manifest.yml` no está almacenado en la raíz, almacénelo allí. Si la app está almacenada en un subdirectorio, especifique la vía de acceso al subdirectorio en el archivo `manifest.yml`. Si la app no contiene un archivo `package.json`, cree uno que esté en el mismo directorio que la app.
 
 
 ## He pulsado una cadena de herramientas para ver su página Visión general. ¿Por qué no se carga la cadena de herramientas?
@@ -111,7 +130,6 @@ Visualización del estado de {{site.data.keyword.Bluemix_notm}}](https://console
 {: #tool_integration_error}
 
 Cuando añade una integración de herramientas, la cadena de herramientas se comunica con la herramienta representada mediante la integración de herramientas para suministrar los recursos necesarios y asociarlos con la cadena de herramientas. Si se produce un error durante el proceso de configuración o si la comunicación entre la cadena de herramientas y la herramienta no se establece correctamente, la integración de herramientas se coloca en un estado de error.
-
 
  ![Error de configuración](images/tool_setup_failed.png)
 
