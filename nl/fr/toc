@@ -1,11 +1,12 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="ContinuousDelivery" audience="service" href="/docs/services/ContinuousDelivery/index.html"}
+{: .toc subcollection="ContinuousDelivery" audience="service" arm="1155710" href="/docs/services/ContinuousDelivery/index.html"}
 Continuous Delivery
 
     {: .navgroup id="learn"}
     index.md
+    cd_overview.md
     cd_about.md
     devops_intro.md
     garage_method.md
@@ -28,15 +29,13 @@ Continuous Delivery
 	      toolchains_custom.md
 
     {: .topicgroup}
-    Delivery Pipeline
+    Pipeline de distribution
         pipeline_about.md
         pipeline_working.md
         pipeline_build_deploy.md
         pipeline_deploy_var.md
         pipeline_custom_docker_images.md
         deliverypipeline_extension.md
-        pipeline_composites.md
-        pipeline_deployment_plan.md
 
     {: .topicgroup}
     Eclipse Orion Web IDE
@@ -49,10 +48,17 @@ Continuous Delivery
     di_working.md
     cd_personal_data.md
     toolchains_post_upgrade.md
-    {: .navgroup-end}
+    
+    {: .topicgroup}
+    Securité
+        cd_iam_security.md
+        toolchains_iam_security.md
+        cd_data_security.md
+    {: .navgroup-end} 
 
     {: .navgroup id="reference"}
     [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki)
+    at-events.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

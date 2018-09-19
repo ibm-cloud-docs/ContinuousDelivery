@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-20"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Développement avec l'interface Eclipse Orion Web IDE
 {: #web_ide}
@@ -23,7 +25,7 @@ Mais surtout, {{site.data.keyword.webide}} est basé sur le Web. Vous n'avez rie
 ## Configuration de l'interface IDE
 {: #editorsetup}
 
-{{site.data.keyword.webide}} est personnalisable : vous pouvez choisir les schémas de couleurs, les outils techniques et les paramètres correspondant à vos besoins de développement. Pour afficher et modifier les paramètres, dans le menu de gauche, cliquez sur l'icône **Paramètres** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="Icône Paramètres"> dans la barre latérale de navigation de gauche.
+{{site.data.keyword.webide}} est personnalisable : vous pouvez choisir les schémas de couleurs, les outils techniques et les paramètres correspondant à vos besoins de développement. Pour afficher et modifier les paramètres, dans la barre de navigation de gauche, cliquez sur l'icône **Paramètres** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="Icône Paramètres">.
 
 Si vous changez souvent certains paramètres au cours de l'édition, vous pouvez accéder à ces paramètres rapidement via l'icône **Paramètres de l'éditeur local**
 <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Icône Paramètres de l'éditeur local">.
@@ -46,7 +48,7 @@ Par défaut, les paramètres de style et de taille de police de l'éditeur sont 
 
 {{site.data.keyword.webide}} comporte deux sections principales. La première section correspond au navigateur de fichiers, qui affiche vos fichiers de projet dans une structure arborescente. Depuis le navigateur de fichiers, vous pouvez créer, renommer, supprimer et gérer vos fichiers et dossiers.
 
-**Astuce :** pour télécharger des fichiers dans le navigateur de fichiers, faites-les glisser depuis votre ordinateur vers le navigateur.
+Pour télécharger des fichiers dans le navigateur de fichiers, faites-les glisser depuis votre ordinateur vers le navigateur.{: tip}
 
 La seconde section correspond à la sous-fenêtre de l'éditeur. L'éditeur fournit plusieurs fonctions de codage, notamment l'assistant de contenu et la validation de la syntaxe.
 
@@ -82,7 +84,7 @@ Pour afficher la liste des raccourcis-clavier dans l'éditeur, cliquez sur **Out
 1. Cliquez sur l'icône de déploiement <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="Icône de déploiement">. Une instance de votre application est déployée à l'aide du contenu actuel de votre espace de travail et de l'environnement défini dans votre configuration de lancement.
 2. Une fois votre application déployée, vous pouvez utiliser la barre d'exécution pour arrêter, redémarrer ou déboguer votre application, consulter des journaux, etc.
 
-<table>
+<table role="presentation">
 <tr><td><img src="./images/stop_button.png"  alt="Icône d'arrêt"></td><td>Arrêtez l'application</td></tr>
 <tr><td> <img src="./images/open_app_url.png"  alt="Icône d'ouverture de l'URL de l'application"></td><td> Ouvrez l'application déployée</td></tr>
 <tr><td><img src="./images/view_logs.png"  alt="Icône d'affichage des journaux"></td><td>Affichez les journaux de l'application déployée</td></tr>
@@ -91,7 +93,7 @@ Pour afficher la liste des raccourcis-clavier dans l'éditeur, cliquez sur **Out
 
 Si vous développez une application Node.js, activez le mode Edition directe : <img  src="./images/enable_live_edit.png"  alt="Curseur d'activation de l'édition directe">
 
-<table><tr><td><img src="./images/live_edit_restart.png"  alt="Icône de redémarrage de l'édition directe"></td><td>En mode Edition directe, redémarrez rapidement l'application sans redéploiement</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="Icône de redémarrage de l'édition directe"></td><td>En mode Edition directe, redémarrez rapidement l'application sans redéploiement</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="Icône de débogage"></td>
 <td>En mode Edition directe, accédez au débogueur
 </td></tr>
@@ -164,7 +166,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 Eclipse Orion {{site.data.keyword.webide}} fournit un assistant de contenu, des infobulles, des aperçus et la mise en évidence de syntaxe pour les fichiers JavaScript, HTML, CSS et Markdown. La mise en évidence de syntaxe est également prise en charge pour les types de fichier suivants :
 
-<table>
+<table role="presentation">
 <tr>
 <td>
 <ul><li>Arduino

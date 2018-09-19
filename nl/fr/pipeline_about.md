@@ -2,13 +2,16 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-3-22"
+lastupdated: "2018-8-2"
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Présentation de Delivery Pipeline
@@ -17,7 +20,8 @@ lastupdated: "2018-3-22"
 {{site.data.keyword.contdelivery_full}} inclut Delivery Pipeline qui vous permet de générer, tester et déployer d'une manière reproductible avec un minimum d'intervention humaine. Dans un pipeline, des séquences d'étapes permettent d'extraire des entrées et d'exécuter des travaux, par exemple, des générations, des tests et des déploiements.
 {:shortdesc}
 
-Les sections ci-après décrivent les détails des concepts relatifs aux pipelines.
+Vos autorisations pour afficher, modifier ou exécuter un pipeline dépendent du contrôle d'accès de la chaîne d'outils propriétaire du pipeline. Pour plus d'informations sur le contrôle d'accès aux chaînes d'outils, voir [Gestion de l'accès aux chaînes d'outils dans les groupes de ressources](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} et [Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
+{: tip}
 
 ## Etapes
 {: #deliverypipeline_stages}
@@ -27,7 +31,7 @@ les référentiels de contrôle des sources (référentiels SCM) ou les travaux 
 
 Une entrée d'étape est transmise aux travaux qu'elle contient et chaque travail se voit attribuer un conteneur vide dans lequel il s'exécute.
 
-**Important** : les travaux d'une étape ne peuvent pas se transmettre des artefacts les uns aux autres. Etant donné que vous ne pouvez pas transmettre des artefacts entre les étapes, vous devez avoir une étape de génération séparée d'une étape de déploiement si votre étape de déploiement utilisera les artefacts de l'étape de génération.
+Les travaux d'une étape ne peuvent pas se transmettre des artefacts les uns aux autres. Etant donné que vous ne pouvez pas transmettre d'artefacts entre les travaux, vous devez disposer d'une étape de génération distincte à partir d'une étape de déploiement si votre étape de déploiement utilise les artefacts de l'étape de génération. {: tip}
 
 Vous pouvez définir des propriétés d'environnement d'étape qui peuvent être utilisées dans tous les travaux. Par exemple, vous pouvez définir une propriété `TEST_URL` qui transmet une URL unique pour déployer et tester des travaux dans une étape unique. Le travail de déploiement sera déployé sur cette URL et le travail de test testera l'application active au niveau de l'URL.
 
@@ -42,7 +46,7 @@ Vous souhaiterez peut-être avoir un contrôle plus strict d'une étape spécifi
 {: #build_stage}
 
 <!-- Need the Pipeline team to fill out what each builder does and possible add an example -->
-L'étape de génération spécifie un **type de générateur** pour indiquer comment générer les artefacts. Les types de générateurs suivants sont disponibles :
+L'étape de génération spécifie un **type de générateur** pour indiquer comment générer les artefacts.  Les types de générateurs suivants sont disponibles :
 
 1. **Simple** - Si vous utilisez le type de générateur **Simple**, votre code n'est pas compilé ni généré. Il est conditionné et mis à disposition pour les étapes futures.
 2. **Ant**
@@ -78,7 +82,7 @@ Les travaux s'exécutent dans des répertoires de travail discrets au sein de co
 
 A l'exception des travaux de génération de type simple, lorsque vous configurez un travail, vous pouvez inclure des scripts shell UNIX qui incluent des commandes de génération, de test ou de déploiement. Les travaux étant exécutés dans des conteneurs ad hoc, les actions sur un travail ne peuvent pas affecter les environnements d'exécution d'autres travaux, même si ces travaux font partie de la même étape.
 
-Des exemples de scripts de travail et de déploiement sont disponibles à l'adresse [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons).
+Des exemples de scripts de génération et de déploiement sont disponibles à l'adresse [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons).
 
 En outre, les travaux de pipeline peuvent exécuter uniquement les commandes suivantes en tant que `sudo` :
   * `/usr/sbin/service`
@@ -95,7 +99,8 @@ En outre, les travaux de pipeline peuvent exécuter uniquement les commandes sui
 
 Une fois qu'un travail est exécuté, le conteneur qui a été créé pour lui est supprimé. Les résultats de l'exécution d'un travail peuvent être conservés, mais l'environnement dans lequel ce travail a été exécuté n'est pas conservé.
 
-**Remarque** : l'exécution des travaux peut prendre jusqu'à 60 minutes. Lorsqu'un travail dépasse cette limite, il échoue. Si un travail dépasse la limite, scindez-le en plusieurs travaux. Par exemple, si un travail effectue trois tâches, vous pouvez le scinder en trois travaux, un pour chaque tâche.
+L'exécution des travaux peut prendre jusqu'à 60 minutes. Lorsqu'un travail dépasse cette limite, il échoue. Si un travail dépasse la limite, scindez-le en plusieurs travaux. Par exemple, si un travail effectue trois tâches, vous pouvez le scinder en trois travaux, un pour chaque tâche.
+{: tip}
 
 Pour savoir comment ajouter un travail à une étape, voir [Ajout d'un travail à une étape](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}.
 
@@ -106,11 +111,11 @@ Les travaux de génération compilent votre projet dans le cadre de la préparat
 Les travaux qui utilisent des entrées provenant de travaux de génération doivent faire référence à des artefacts de génération figurant dans la même structure que celle dans laquelle ils ont été créés. Par exemple, si un travail de génération procède à l'archivage d'artefacts de génération dans un répertoire `output`, un script de déploiement doit faire référence au répertoire `output` et non au répertoire cible de projet pour déployer le projet compilé. Vous pouvez spécifier le répertoire d'archivage en indiquant son nom dans la zone **Répertoire d'archivage de génération**. Si
 vous laissez la zone vide, l'archivage est effectué dans le répertoire racine.
 
-**Remarque :** si vous utilisez le type de générateur **Simple**, votre code n'est pas compilé ni généré ; il est conditionné et rendu disponible pour des étapes ultérieures.
+Si vous utilisez le type de générateur **Simple**, votre code n'est pas compilé ni généré ; il est conditionné et rendu disponible pour des étapes ultérieures.{: tip}
 
-Lorsque vous effectuez un déploiement à l'aide de la technologie Cloud Foundry, celle-ci inclut les artefacts appropriés permettant à votre application de s'exécuter. Pour plus d'informations, voir [Déploiement d'applications avec la commande cf](https://console.ng.bluemix.net/docs/manageapps/depapps.html#dep_apps). Le pipeline pour une application Cloud Foundry contient une étape de déploiement qui exécute une commande cf.
+Lorsque vous effectuez un déploiement à l'aide de la technologie Cloud Foundry, celle-ci inclut les artefacts appropriés permettant à votre application de s'exécuter. Pour plus d'informations, voir [Déploiement d'applications avec la commande cf](/docs/cloud-foundry/deploy-apps.html#dep_apps). Le pipeline pour une application Cloud Foundry contient une étape de déploiement qui exécute une commande cf.
 
-Cloud Foundry tente de [détecter le pack de construction à utiliser![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.cloudfoundry.org/buildpacks/detection.html). Vous pouvez spécifier le [pack de construction](/docs/cfapps/byob.html#using-community-buildpacks) à utiliser dans le fichier manifeste dans le dossier principal de votre application. En général, les packs de construction examinent les artefacts fournis par l'utilisateur afin d'identifier les dépendances à télécharger et de déterminer comment configurer les applications pour qu'elles communiquent avec des services liés. Pour plus d'informations sur les fichiers manifeste, voir [Manifeste d'application](/docs/manageapps/depapps.html#appmanifest).
+Cloud Foundry tente de [détecter le pack de construction à utiliser![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.cloudfoundry.org/buildpacks/detection.html). Vous pouvez spécifier le [pack de construction](/docs/cfapps/byob.html#using-community-buildpacks) à utiliser dans le fichier manifeste dans le dossier principal de votre application. En général, les packs de construction examinent les artefacts fournis par l'utilisateur afin d'identifier les dépendances à télécharger et de déterminer comment configurer les applications pour qu'elles communiquent avec des services liés. Pour plus d'informations sur les fichiers manifeste, voir [Manifeste d'application](/docs/cloud-foundry/deploy-apps.html#appmanifest).
 
 ### Travaux de déploiement
 
@@ -119,7 +124,7 @@ Les travaux de déploiement téléchargent votre projet vers {{site.data.keyword
 Les travaux de déploiement peuvent déployer de nouvelles applications ou mettre à jour des applications existantes. Même si vous déployez une application à l'aide d'une autre méthode, par exemple, l'interface de ligne de commande Cloud Foundry ou la barre d'exécution de l'interface IDE Web, vous pouvez mettre à jour l'application à l'aide d'un travail de déploiement. Pour mettre à jour une application, dans le travail de déploiement, utilisez le nom de cette application.
 
 Vous pouvez effectuer le déploiement dans une ou plusieurs régions et dans un ou plusieurs services. Par exemple, vous pouvez configurer votre {{site.data.keyword.deliverypipeline}} en vue d'utiliser un ou plusieurs services, le tester dans une région, et le déployer en production dans plusieurs régions. Pour plus d'informations, voir
-[Régions](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}.
+[Régions](/docs/overview/ibm-cloud.html#ov_intro-reg){: new_window}.
 
 ### Travaux de test
 Si vous voulez exiger que des conditions soient respectées, ajoutez des travaux de test avant ou après vos travaux de génération et de déploiement. Vous pouvez personnaliser des travaux de test pour qu'ils soient simples ou complexes selon vos besoins. Par exemple, vous pouvez exécuter une commande cURL et attendre une réponse spécifique. Vous pouvez également exécuter une suite de tests unitaires ou des tests fonctionnels avec des services de test tiers, tels que Sauce Labs.
@@ -130,7 +135,7 @@ résultats au format JUnit XML, un rapport qui s'appuie sur les fichiers de rés
 ## Propriétés d'environnement (variables d'environnement)
 {: #environment_properties}
 
-Vous pouvez inclure des propriétés d'environnement dans les commandes shell d'un travail. Les propriétés permettent d'accéder aux informations relatives à l'environnement d'exécution du travail. Pour plus d'informations, voir [Propriétés et ressources d'environnement pour le service {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html). Les propriétés d'environnement peuvent être transférées entre les travaux d'une même étape en exportant les propriétés.  Pour transmettre les propriétés entre les différentes étapes, créez un fichier `build.properties` dans le référentiel puis faites exécuter le fichier `build.properties` par l'étape suivante.  Par exemple, votre travail de génération peut inclure cette commande dans le script de génération : 
+Vous pouvez inclure des propriétés d'environnement dans les commandes shell d'un travail. Les propriétés permettent d'accéder aux informations relatives à l'environnement d'exécution du travail. Pour plus d'informations, voir [Propriétés et ressources d'environnement pour le service {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).  Les propriétés d'environnement peuvent être transférées entre les travaux d'une même étape en exportant les propriétés.  Pour transmettre les propriétés entre les différentes étapes, créez un fichier `build.properties` dans le référentiel puis faites exécuter le fichier `build.properties` par l'étape suivante.  Par exemple, votre travail de génération peut inclure cette commande dans le script de génération :
 
     `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
 
@@ -139,13 +144,13 @@ Vous pouvez inclure des propriétés d'environnement dans les commandes shell d'
 ## Création et utilisation d'artefacts
 {: #artifacts}
 
-Les travaux de génération récupèrent automatiquement le contenu du dossier dans lequel le script utilisateur est exécuté. Si vous n'avez pas besoin de tout le contenu du référentiel git pour un déploiement ultérieur, il est préférable de configurer un répertoire de sortie explicite et d'y copier ou d'y créer les artefacts pertinents. Les scripts de travaux sont exécutés dans le résultat de génération (répertoire de sortie).
+Les travaux de génération récupèrent automatiquement le contenu du dossier dans lequel le script utilisateur est exécuté. Si vous n'avez pas besoin de tout le contenu du référentiel git pour un déploiement ultérieur, il est préférable de configurer un répertoire de sortie explicite et d'y copier ou d'y créer les artefacts pertinents.  Les scripts de travaux sont exécutés dans le résultat de génération (répertoire de sortie).
 
-Les travaux de déploiement déployant dans Cloud Foundry doivent spécifier l'organisation et l'espace où les artefacts doivent être déployés. Si des services supplémentaires sont requis pour exécuter votre application, vous devez les spécifier dans le fichier `manifest.yml`.
+Les travaux de déploiement déployés sur Cloud Foundry doivent spécifier la clé d'API de plateforme d'un utilisateur sous l'autorité duquel les travaux sont exécutés, ainsi que la région, l'organisation et l'espace où déployer les artefacts. Si des services supplémentaires sont requis pour exécuter votre application, vous devez les spécifier dans le fichier `manifest.yml`.
 
-Les travaux de déploiement déployant dans IBM Cloud Container Service dans un cluster Kubernetes ont besoin d'un fichier Docker et éventuellement d'une charte Helm.  
+Les travaux de déploiement déployés sur {{site.data.keyword.containerlong_notm}} pour s'exécuter dans un cluster Kubernetes doivent spécifier la clé d'API de plateforme d'un utilisateur sous l'autorité duquel les travaux sont exécutés, un fichier Dockerfile et éventuellement une charte Helm.   
 
-Le script de travail s'exécute après que le travail se soit connecté à l'environnement cible (de sorte que vous pouvez effectuer les commandes `cf push` ou `kubectl` dans le script).
+Le script de travail s'exécute après la connexion du travail à l'environnement cible à l'aide de la clé d'API de plateforme qui lui est attribuée (vous pouvez donc exécuter des commandes `cf push` ou `kubectl` dans le script). 
 
 ## Exemple de pipeline
 {: #deliverypipeline_example}
@@ -167,7 +172,7 @@ Les étapes prennent leur entrée dans des référentiels et des travaux de gén
 ## Fichiers manifeste de Cloud Foundry
 {: #deliverypipeline_manifest}
 
-Les fichiers manifeste, qui sont appelés `manifest.yml` et sont stockés dans le répertoire racine d'un projet, contrôlent la façon dont votre projet est déployé dans {{site.data.keyword.Bluemix_notm}}. Pour obtenir des informations sur la création des fichiers manifeste pour un projet, consultez la documentation [{{site.data.keyword.Bluemix_notm}} sur les manifestes d'application](/docs/manageapps/depapps.html#appmanifest). Pour s'intégrer à {{site.data.keyword.Bluemix_notm}}, votre projet doit contenir un fichier manifeste dans son répertoire racine. Toutefois, vous n'êtes pas obligé d'effectuer le déploiement conformément aux informations du fichier.
+Les fichiers manifeste, qui sont appelés `manifest.yml` et sont stockés dans le répertoire racine d'un projet, contrôlent la façon dont votre projet est déployé dans {{site.data.keyword.Bluemix_notm}}. Pour obtenir des informations sur la création des fichiers manifeste pour un projet, consultez la documentation [{{site.data.keyword.Bluemix_notm}} sur les manifestes d'application](/docs/cloud-foundry/deploy-apps.html#appmanifest). Pour s'intégrer à {{site.data.keyword.Bluemix_notm}}, votre projet doit contenir un fichier manifeste dans son répertoire racine. Toutefois, vous n'êtes pas obligé d'effectuer le déploiement conformément aux informations du fichier.
 
 Dans le pipeline, vous pouvez spécifier tout ce qu'un fichier manifeste peut faire à l'aide des arguments de commande `cf push`. Les arguments de commande `cf push` sont utiles dans les projets qui possèdent plusieurs projets de déploiement. Si plusieurs travaux de déploiement tentent d'utiliser la route spécifiée dans le fichier manifeste du projet, un conflit se produit.
 

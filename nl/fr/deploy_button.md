@@ -2,36 +2,40 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Création d'un bouton Déployer dans {{site.data.keyword.Bluemix_notm}} {: #deploy-button}
 
-Le bouton Déployer dans {{site.data.keyword.Bluemix_notm}} est un moyen efficace de partager votre application Git publique avec d'autres personnes afin de permettre à ces dernières d'expérimenter le code et de le déployer dans IBM {{site.data.keyword.Bluemix_notm}} à l'aide d'une chaîne d'outils. Il nécessite une configuration minimale et vous pouvez l'insérer à n'importe quel emplacement prenant en charge le balisage. Lorsqu'une personne clique sur ce bouton, une copie clonée du code est créée dans un nouveau référentiel Git, et votre application d'origine n'est pas affectée.
+Le bouton Déployer dans {{site.data.keyword.Bluemix_notm}} est un moyen efficace de partager votre application Git publique avec d'autres personnes afin de permettre à ces dernières d'expérimenter le code et de le déployer dans {{site.data.keyword.Bluemix_notm}} à l'aide d'une chaîne d'outils. Il nécessite une configuration minimale et vous pouvez l'insérer à n'importe quel emplacement prenant en charge le balisage. Lorsqu'une personne clique sur ce bouton, une copie clonée du code est créée dans un nouveau référentiel Git, et votre application d'origine n'est pas affectée.
 {: shortdesc}
 
 Lorsqu'un utilisateur clique sur votre bouton, les actions suivantes se produisent :
 
 1. Si la personne ne dispose pas d'un compte {{site.data.keyword.Bluemix_notm}} actif, elle doit créer un compte. Il peut s'agir d'un compte d'essai ou d'un compte réel.
 
-2. La personne peut sélectionner une région, une organisation, un espace et un nom d'application en cliquant sur l'icône {{site.data.keyword.deliverypipeline}}. Le nom d'application suggéré est identique au nom de la chaîne d'outils, construit à partir du nom de votre référentiel Git d'origine et de l'heure. Le nom de la chaîne d'outils peut également être édité.
+2. La personne peut sélectionner une région, un groupe de ressources (disponible uniquement dans la région sud des Etats-Unis), une organisation, un espace et un nom d'application en cliquant sur l'icône {{site.data.keyword.deliverypipeline}}. Le nom d'application suggéré est identique au nom de la chaîne d'outils, construit à partir du nom de votre référentiel Git d'origine et de l'heure. Le nom de la chaîne d'outils peut également être édité.
 
 3. Une chaîne d'outils est créée. Elle inclut un nouveau clone privé de votre référentiel Git, un pipeline pour la génération et le déploiement des modifications de code, l'interface Eclipse Orion {{site.data.keyword.webide}} pour l'édition du code sur le cloud, et un dispositif de suivi de problèmes.
 
-  **Astuce** : si le répertoire `.bluemix` contient un fichier `toolchain.yml`, celui-ci est utilisé pour spécifier les intégrations d'outils pour la chaîne d'outils. Pour plus d'informations sur le fichier `toolchain.yml`, voir [Création de chaînes d'outils personnalisées](/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom){: new_window}.
+  Si le répertoire `.bluemix` contient un fichier `toolchain.yml`, celui-ci est utilisé pour spécifier les intégrations d'outils pour la chaîne d'outils. Pour plus d'informations sur le fichier `toolchain.yml`, voir [Création de chaînes d'outils personnalisées](/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom){: new_window}.
+  {: tip}
 
 4. Si l'application requiert un fichier de génération, celui-ci est détecté automatiquement et l'application est générée.
 
 5. Si un pipeline est configuré pour le processus de génération et de déploiement, un fichier `pipeline.yml` est utilisé pour déployer l'application.
 
-6. Si l'application requiert un conteneur, un fichier `pipeline.yml` qui définit le service IBM Containers et un fichier Dockerfile qui définit une image sont utilisés pour déployer l'application dans un conteneur {{site.data.keyword.Bluemix_notm}}.
+6. Si l'application nécessite un conteneur, un fichier `pipeline.yml` définissant le fichier {{site.data.keyword.containerlong_notm}} et un fichier Dockerfile qui définit une image sont utilisés pour déployer l'application dans un conteneur {{site.data.keyword.containerlong_notm}}. 
 
 7. L'application est déployée sur l'organisation {{site.data.keyword.Bluemix_notm}} que la personne a sélectionnée.
 
@@ -54,26 +58,26 @@ Pour créer un bouton Déployer dans {{site.data.keyword.Bluemix_notm}}, copiez 
 Pour créer un bouton en HTML, copiez ce fragment et insérez une URL et une branche de référentiel Git public.
 
 ```HTML
-<a href="https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"></a>
+<a href="https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://bluemix.net/deploy/button.png" alt="Deploy to IBM Cloud"></a>
 ```
 {: codeblock}
 
-Si vous n'incluez pas le paramètre `branch` dans l'URL de référentiel de votre fragment, la branche maître du référentiel est la cible par défaut du bouton Déployer dans Bluemix.
+Si vous n'incluez pas le paramètre `branch` dans l'URL de référentiel de votre fragment, la branche maître du référentiel est la cible par défaut du bouton {{site.data.keyword.Bluemix_notm}}.
 
 ### Création d'un bouton en Markdown
 
 Pour créer un bouton en Markdown, copiez ce fragment et insérez une URL et une branche de référentiel Git public.
 
 ```Markdown
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>)
+[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>)
 ```
 {: codeblock}
 
-Si vous n'incluez pas le paramètre `branch` dans l'URL de référentiel de votre fragment, la branche maître du référentiel est la cible par défaut du bouton Déployer dans Bluemix.
+Si vous n'incluez pas le paramètre `branch` dans l'URL de référentiel de votre fragment, la branche maître du référentiel est la cible par défaut du bouton {{site.data.keyword.Bluemix_notm}}.
 
 ### Utilisation des fragments de bouton {: #button-snippet}
 
-Après avoir créé un fragment du bouton Déployer dans Bluemix, vous pouvez l'insérer dans des blogues, des articles, des wikis, des fichiers Readme ou dans n'importe quel endroit où vous souhaitez promouvoir votre application.
+Après avoir créé un fragment du bouton Déployer dans {{site.data.keyword.Bluemix_notm}}, vous pouvez l'insérer dans des blogues, des articles, des wikis, des fichiers Readme ou dans n'importe quel endroit où vous souhaitez promouvoir votre application.
 
 Lorsque vous personnalisez le fragment pour votre bouton Déployer dans {{site.data.keyword.Bluemix_notm}}, tenez compte du fait que les deux modèles utilisent un chemin par défaut vers une image de bouton externe au format PNG et en anglais.
 
@@ -90,7 +94,7 @@ Lorsque vous personnalisez le fragment pour votre bouton Déployer dans {{site.d
 Passez en revue ces remarques pour le référentiel que vous utilisez dans votre bouton Déployer dans {{site.data.keyword.Bluemix_notm}}.
 
 
-## Exigences relatives au fichier de génération
+### Exigences relatives au fichier de génération
 {: build_file}
 
 Si l'application doit être générée avant de pouvoir être déployée, vous devez inclure un fichier de génération dans votre référentiel. Si un fichier script de génération est détecté dans le répertoire principal du référentiel, une génération automatique du code se déclenche avant le déploiement.
@@ -105,7 +109,7 @@ Les générateurs pris en charge sont les suivants :
 ### Exigences relatives au pipeline
 {: pipeline_file}
 
-Afin de configurer le pipeline pour la chaîne d'outils dans un répertoire `.bluemix`, ajoutez un fichier `pipeline.yml`. Pour chaque fichier`pipeline.yml` de ce répertoire, un pipeline est créé lorsque la chaîne d'outils est instanciée.
+Afin de configurer le pipeline pour la chaîne d'outils dans un répertoire `.bluemix`, ajoutez un fichier `pipeline.yml`. Pour chaque fichier `pipeline.yml` de ce répertoire, un pipeline est créé lorsque la chaîne d'outils est instanciée.
 
 Si vous n'avez pas de fichier `pipeline.yml` dans le répertoire `.bluemix`, le bouton Déployer dans {{site.data.keyword.Bluemix_notm}} créera un pipeline par défaut avec deux étapes : une étape de génération et une étape de déploiement déployant dans Cloud Foundry.
 
@@ -114,18 +118,17 @@ Pour créer un fichier de pipeline, examinez l'exemple de fichier dans la rubriq
 ### Exigences relative au fichier Dockerfile d'un conteneur
 {: container_dockerfile}
 
-Pour déployer une application dans un conteneur à l'aide d'IBM Containers, vous devez inclure un fichier Dockerfile dans le répertoire principal du référentiel et vous devez ajouter un fichier `pipeline.yml` dans un répertoire `.bluemix`.
+Pour déployer une application dans un conteneur à l'aide d'{{site.data.keyword.containerlong_notm}}, vous devez inclure un fichier Dockerfile dans le répertoire principal du référentiel et vous devez ajouter un fichier `pipeline.yml` dans un répertoire `.bluemix`.
 
 Le fichier Dockerfile agit comme une sorte de script de génération pour l'application. Si un fichier Dockerfile est détecté dans le référentiel, l'application est générée automatiquement dans une image avant d'être déployée dans un conteneur. Si l'application proprement dite doit être générée avant que l'application ne soit générée dans une image, ajoutez un script de génération pour l'application et un fichier Dockerfile.
 
-Pour en savoir plus sur la création de fichiers Dockerfile, voir la [documentation Docker ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.docker.com/reference/builder/){:new_window}.  Pour suivre les instructions étape par étape à l'aide d'un modèle de chaîne d'outils pour déployer vers Kubernetes, voir le [tutoriel Utilisation d'une chaîne d'outils "Développer une application Kubernetes"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window} ou le [tutoriel Utilisation de la chaîne d'outils "Développer une application Kubernetes avec Helm"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window}.  
-Pour en savoir plus sur le portage de votre application Cloud Foundry sur un cluster Kubernetes, voir le [tutoriel Portage de votre application Cloud Foundry pour un déploiement sur Kubernetes ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/port-an-app-from-cf-to-kubernetes-in-a-toolchain?task=0){:new_window}.  
+Pour en savoir plus sur la création de fichiers Dockerfile, voir la [documentation Docker ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.docker.com/reference/builder/){:new_window}. Pour suivre les instructions étape par étape à l'aide d'un modèle de chaîne d'outils pour déployer vers Kubernetes, voir le [tutoriel Utilisation d'une chaîne d'outils "Développer une application Kubernetes"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window} ou le [tutoriel Utilisation de la chaîne d'outils "Développer une application Kubernetes avec Helm"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window}.
 
-`` 
+Pour en savoir plus sur le portage de votre application Cloud Foundry sur un cluster Kubernetes, voir le [tutoriel Portage de votre application Cloud Foundry pour un déploiement sur Kubernetes ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){:new_window}.  
 
 Pour créer manuellement un fichier `pipeline.yml` spécifiquement pour les conteneurs, voir les [exemples dans GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/Puquios/){:new_window}.
 
-## Exigences relatives au fichier manifeste (pour les applications déployées dans Cloud Foundry)
+### Exigences relatives au fichier manifeste (pour les applications déployées dans Cloud Foundry)
 {: #manifest_files}
 
 La présence d'un fichier `manifest.yml` n'est pas requise dans votre référentiel. Toutefois, si votre application requiert l'exécution d'autres services, vous devez fournir un fichier manifeste qui déclare ces services.

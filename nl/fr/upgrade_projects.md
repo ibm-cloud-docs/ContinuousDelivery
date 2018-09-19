@@ -2,12 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Mise à niveau de votre projet {{site.data.keyword.jazzhub_short}} vers une chaîne d'outils
 {: #upgrade_projects}
@@ -58,8 +63,9 @@ projet. Si vous utilisez {{site.data.keyword.webide}} et que certaines modificat
 ## Mise à niveau d'un projet vers une chaîne d'outils
 {: #project_to_toolchain}
 
-**Important :** les projets sur hub.jazz.net et les chaînes d'outils sont hébergés dans la région sud des Etats-Unis. Si votre projet a été configuré pour déployer des
+Les projets sur hub.jazz.net et les chaînes d'outils sont hébergés dans la région Sud des Etats-Unis. Si votre projet a été configuré pour déployer des
 applications dans une autre région, il déploiera quand même les applications dans cette région après avoir été mis à niveau dans une chaîne d'outils.
+{: tip}
 
 Lorsque votre projet est prêt pour la mise à niveau, un message s'affiche sur la carte du projet et la page de présentation.
 
@@ -67,9 +73,10 @@ Lorsque votre projet est prêt pour la mise à niveau, un message s'affiche sur 
 
 ![Message indiquant que la mise à niveau peut être démarrée](images/banner-ready-to-upgrade.png)
 
-**Astuce :** Les projets prêts pour la mise à niveau se trouvent dans le menu de la page Mes projets :
+Les projets prêts pour la mise à niveau se trouvent dans le menu de la page Mes projets :
 
 ![Image illustrant l'élément de menu Projets à mettre à niveau](images/menu-projects-to-upgrade.png)
+{: tip}
 
 Lorsque vous démarrez la mise à niveau, les étapes du pipeline dans votre projet sont bloquées. Vous ne pourrez pas les exécuter ni les modifier. Si vous annulez la mise à jour en
 supprimant la chaîne d'outils, le pipeline est débloqué.
@@ -164,8 +171,9 @@ la page de présentation du projet :
 
    ![Message indiquant que le projet a été mis à niveau](images/banner-upgraded.png)
 
-   **Remarque :** si le message indique "mettre à niveau maintenant", votre mise à niveau a échoué. Cliquez sur le lien **mettre à niveau maintenant**
+   Si le message indique "mettre à niveau maintenant", votre mise à niveau a échoué. Cliquez sur le lien **mettre à niveau maintenant**
 pour faire une nouvelle tentative.
+   {: tip}
 
    ![Message indiquant que le projet est prêt à être mis à niveau](images/banner-ready-to-upgrade.png)
 
@@ -185,8 +193,8 @@ pour faire une nouvelle tentative.
     4. Pour vous authentifier avec {{site.data.keyword.gitrepos}} depuis un client Git externe via https, utilisez votre nom d'utilisateur et votre jeton d'accès personnel.
     5. Si vous souhaitez réutiliser le référentiel local de votre référentiel JazzHub Git, faites pointer le référentiel vers le nouveau référentiel dans {{site.data.keyword.gitrepos}}. Depuis un interpréteur de commande shell dans un terminal, accédez au répertoire dans lequel le référentiel JazzHub Git est cloné. Entrez la commande `git remote set-url` : `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        **Astuce :** pour vérifier quelles URL distantes sont définies sur quels noms distants, utilisez la commande `git remote -v`. Le nom distant
-par défaut est `origin`. Si vous disposez d'une configuration plus avancée, le format de la commande est le suivant : `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        Pour vérifier quelles URL distantes sont définies sur quels noms distants, utilisez la commande `git remote -v`. Le nom distant par défaut est `origin`. Si vous disposez d'une configuration plus avancée, le format de la commande est le suivant : `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        {: tip}
 
 5. Lorsque votre chaîne d'outils est configurée et vous avez commencé de l'utiliser, pensez à suivre toutes ou partie de ces étapes afin de vous assurer que personne n'utilise
 votre projet :
@@ -268,7 +276,7 @@ Si vous êtes un employé IBM, les projets IBM internes peuvent être facturés 
 ### Ma chaîne d'outils est introuvable ou inaccessible. Que dois-je faire ?
 {: #faq_find}
 
-Les chaînes d'outils sont hébergées dans les organisations {{site.data.keyword.Bluemix_notm}}. Le processus de mise à niveau ajoute tous les membres du projet JazzHub à la chaîne d'outils. Cela dit, si ces utilisateurs ne sont pas ajoutés à l'organisation {{site.data.keyword.Bluemix_notm}} par le propriétaire de cette dernière, ils ne peuvent pas voir la chaîne d'outils. 
+Les chaînes d'outils sont hébergées dans les organisations {{site.data.keyword.Bluemix_notm}}. Le processus de mise à niveau ajoute tous les membres du projet JazzHub à la chaîne d'outils. Cela dit, si ces utilisateurs ne sont pas ajoutés à l'organisation {{site.data.keyword.Bluemix_notm}} par le propriétaire de cette dernière, ils ne peuvent pas voir la chaîne d'outils.
 
 Pour accéder à votre chaîne d'outils, accédez à la plateforme {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône de menu, puis sur **Services &gt; DevOps**. La page Chaîne d'outils s'affiche. Vérifiez que vous vous trouvez dans la région Sud des Etats-Unis et que vous avez été ajouté à l'organisation qui contient la chaîne d'outils. Si votre chaîne d'outils n'apparaît pas sur la page Chaînes d'outils, consultez [cette entrée de FAQ](#faq_uk).
 
@@ -309,7 +317,8 @@ Si vous souhaitez que votre chaîne d'outils figure dans une organisation améri
    
    4. Supprimez la chaîne d'outils qui a été créée via le processus de mise à niveau. 
    
-      **Remarque :** le référentiel Git n'est pas supprimé automatiquement. Vous souhaiterez peut-être le supprimer manuellement ou le renommer pour le moment. Si vous avez déjà modifié le référentiel, vous pourrez passer à la future chaîne d'outils pour l'utiliser ultérieurement.
+      Le référentiel Git n'est pas supprimé automatiquement. Vous souhaiterez peut-être le supprimer manuellement ou le renommer pour le moment. Si vous avez déjà modifié le référentiel, vous pourrez mettre à jour la future chaîne d'outils pour l'utiliser ultérieurement.
+{: tip}
 
    5. Revenez au projet JazzHub. Normalement, il doit être automatiquement réinitialisé pour permettre une autre tentative de mise à niveau. Si tel n'est pas le cas, contactez hub@jazz.net en indiquant l'URL du projet.
    

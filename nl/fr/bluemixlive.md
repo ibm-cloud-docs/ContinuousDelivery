@@ -4,14 +4,17 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:screen: .screen}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # {{site.data.keyword.Bluemix_notm}} Live Sync
 {: #live-sync}
@@ -62,7 +65,7 @@ Consultez le tutoriel sur l'utilisation de la fonction Live Edit de {{site.data.
 
 Lorsque vous modifiez les fichiers dans votre interface IDE Web, ils sont redéployés automatiquement sur votre instance d'application sur {{site.data.keyword.Bluemix_notm}}. Si vous avez besoin de redémarrer l'application Node, cliquez sur le bouton **Redémarrer** dans la barre d'exécution.
 
-**Remarque :** pour que votre expérience soit plus cohérente lorsque vous utilisez la fonction Live Edit de {{site.data.keyword.Bluemix_notm}} Live Sync, 256 Mo de mémoire supplémentaire est requise et ajoutée.
+Pour que votre expérience soit plus cohérente lorsque vous utilisez la fonction Live Edit de {{site.data.keyword.Bluemix_notm}} Live Sync, 256 Mo de mémoire supplémentaire est requise et ajoutée.{: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} Live Debug
 {: #live-debug}
@@ -103,7 +106,7 @@ Une fois que vous êtes connecté, la page {{site.data.keyword.Bluemix_notm}} Li
 
 La fonction Debug inclut les capacités suivantes :  
 * Définir des points d'arrêt dans le code de l'application pour interrompre l'exécution à une ligne spécifique.
-  **Remarque :** les points d'arrêt ne sont pas pris en charge dans le programme principal, mais dans des points d'entrée.
+  Les points d'arrêt ne sont pas pris en charge dans le programme principal, mais dans des points d'entrée.{: tip}
 * Editer les conditions de point d'arrêt pour interrompre l'exécution uniquement lorsque certains critères sont remplis.
 * Inspecter l'état des zones et des variables locales.
 * Afficher immédiatement la sortie de débogage des appels de `console.log()`. Cette action est plus rapide que la surveillance des journaux cf.
@@ -144,7 +147,7 @@ Debug installé, vous pouvez utiliser les outils de débogage.
 
 Transférez l'application, puis accéder à `https://_app-host.mybluemix.net_/bluemix-debug/manage` pour accéder à l'interface utilisateur {{site.data.keyword.Bluemix_notm}} Debug. Lorsque vous êtes invité à vous authentifier, entrez vos nom d'utilisateur et mot de passe IBM ou un code d'accès à usage unique.    
 
-**Remarque :** l'initialisation du débogueur peut durer environ une minute. 
+L'initialisation du débogueur peut durer environ une minute. {: tip}
 
 ### Restauration des configurations d'application et désactivation de {{site.data.keyword.Bluemix_notm}} Live Debug {: #restore_live_debug}
 

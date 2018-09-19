@@ -3,13 +3,18 @@
 copyright:
   years: 2015, 2018
 
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Création de chaînes d'outils
 {: #toolchains_getting_started}
@@ -19,8 +24,7 @@ Une *chaîne d'outils* est un ensemble d'intégrations d'outils prenant en charg
 
 Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dedicated. Vous pouvez créer une chaîne d'outils de deux façons : à l'aide d'un modèle ou à partir d'une application.
 
-Chaque chaîne d'outils est associée à une organisation (org) spécifique, et tout membre de cette organisation peut être ajouté à la liste de contrôle d'accès de l'une de ses chaînes d'outils associées. Pour plus d'informations sur le contrôle d'accès pour les chaînes d'outils,  voir [Gestion de l'accès](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}. Avant de créer une chaîne d'outils, assurez-vous de travailler dans l'organisation dans laquelle vous voulez créer la chaîne d'outils. L'organisation au sein de laquelle vous travaillez s'affiche dans la barre de menus. Pour passer à une autre organisation, cliquez sur l'organisation dans la barre de menus, puis sélectionnez l'organisation souhaitée.
-
+Chaque chaîne d'outils est associée à un groupe de ressources ou à une organisation (org) spécifique. Si une chaîne d'outils est associée à un groupe de ressources, tout utilisateur disposant de l'autorisation d'Afficheur Identity and Access Management (IAM) pour la ressource de chaîne d'outils ou le groupe de ressources qui la contient peut accéder à la chaîne d'outils. Si la chaîne d'outils est associée à une organisation, tout utilisateur membre de cette organisation peut être ajouté à la liste de contrôle d'accès de l'une des chaînes d'outils associées. Pour plus d'informations sur le contrôle d'accès aux chaînes d'outils dans les organisations Cloud Foundry, voir [Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}. Pour plus d'informations sur le contrôle d'accès aux chaînes d'outils dans les groupes de ressources, voir [Gestion de l'accès aux chaînes d'outils dans les groupes de ressources](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}.
 
 ##Création d'une chaîne d'outils à partir d'un modèle   
 {: #creating_a_toolchain_from_a_template}
@@ -34,7 +38,8 @@ Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne 
 1. Sur la page **Créer une chaîne d'outils**, cliquez sur un modèle de chaîne d'outils.
 1. Examinez le diagramme de la chaîne d'outils que vous être sur le point de créer. Ce diagramme montre chaque intégration d'outils dans sa phase de cycle de vie au sein de la chaîne d'outils.
 
- **Astuce** : Quelques modèles de chaîne d'outils possèdent plusieurs instances d'intégration d'outils. Par exemple, le modèle de chaîne d'outils Microservices sur {{site.data.keyword.Bluemix_notm}} Public contient trois instances de GitHub et trois instances de Delivery Pipeline, une pour chacun des trois microservices.
+ Quelques modèles de chaîne d'outils possèdent plusieurs instances d'intégration d'outils. Par exemple, le modèle de chaîne d'outils Microservices sur {{site.data.keyword.Bluemix_notm}} Public contient trois instances de GitHub et trois instances de Delivery Pipeline, une pour chacun des trois microservices.
+ {: tip}
 
  L'image suivante fournit un exemple de diagramme. Lorsque vous créez une chaîne d'outils, le diagramme représente chaque intégration d'outils faisant partie de la chaîne d'outils.
 ![Diagramme de chaîne d'outils](images/toolchain_diagram2.png)
@@ -43,7 +48,10 @@ Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne 
 
  * Le nom de la chaîne d'outils l'identifie dans {{site.data.keyword.Bluemix_notm}}. Si vous désirez utiliser un nom différent, modifiez le nom de la chaîne d'outils.
  * La région de création de la chaîne d'outils. Si vous souhaitez utiliser une région différente, sélectionnez-la dans la liste des régions disponibles.
- * L'organisation dans laquelle la chaîne d'outils doit être créée. Si vous souhaitez utiliser une organisation différente, sélectionnez-la dans la liste des organisations disponibles. 
+ * Le groupe de ressources ou l'organisation dans laquelle créer la chaîne d'outils. Cliquez sur le lien pour basculer entre la sélection des groupes de ressources et celle des organisations. Si vous souhaitez utiliser un autre groupe de ressources ou une autre organisation, sélectionnez-le dans la liste des groupes de ressources ou des organisations disponibles. 
+ 
+   Les groupes de ressources sont disponibles uniquement dans la région Sud des États-Unis.
+   {: tip}
 
 1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Cliquez sur **Créer**. Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient en fonction du modèle de chaîne d'outils que vous avez sélectionné et selon que vous utilisez {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dedicated. Par exemple, lorsque vous créez une chaîne d'outils Microservices sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :
@@ -65,7 +73,7 @@ Vous pouvez créer une chaîne d'outils à partir de votre application. La chaî
 1. Sur la page de création de chaîne d'outils, passez en revue le diagramme de la chaîne d'outils que vous allez créer. Ce diagramme montre chaque intégration d'outils dans sa phase de cycle de vie au sein de la chaîne d'outils.
 1. Passez en revue les informations par défaut des paramètres de chaîne d'outils. Le nom de la chaîne d'outils l'identifie dans {{site.data.keyword.Bluemix_notm}}. Si vous désirez utiliser un nom différent, modifiez le nom de la chaîne d'outils.
 1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
-1. Cliquez sur **Créer**.  Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient selon que vous utilisez des chaînes d'outils sur {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dedicated. Par exemple, lorsque vous créez une chaîne d'outils à partir d'une application sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :
+1. Cliquez sur **Créer**. Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient selon que vous utilisez des chaînes d'outils sur {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dedicated. Par exemple, lorsque vous créez une chaîne d'outils à partir d'une application sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :
 
  * La chaîne d'outils est créée.
  * Si vous avez configuré Delivery Pipeline, les pipelines sont créés et déclenchés.
@@ -75,17 +83,13 @@ Vous pouvez créer une chaîne d'outils à partir de votre application. La chaî
 ##Affichage d'une chaîne d'outils
 {: #viewing_a_toolchain}
 
-Une fois que vous avez configuré la chaîne d'outils et ses intégrations d'outils, vous pouvez afficher une représentation visuelle de la
-chaîne
-d'outils.
+Une fois que vous avez configuré la chaîne d'outils et ses intégrations d'outils, vous pouvez afficher une représentation visuelle de la chaîne d'outils.
 
-1. Dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur la chaîne d'outils afin d'ouvrir sa page Vue
-d'ensemble. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Distribution continue, cliquer sur **Afficher la chaîne d'outils**. Ensuite, cliquez sur **Vue d'ensemble**.
+1. Dans le tableau de bord DevOps, sur la page **Chaînes d'outils**, sélectionnez un **GROUPE DE RESSOURCES** ou une **ORGANISATION CLOUD FOUNDRY**. Toutes les chaînes d’outils contenues dans le groupe de ressources sélectionné ou l’organisation Cloud Foundry sont affichées. Cliquez sur la chaîne d'outils à afficher pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Distribution continue, cliquer sur **Afficher la chaîne d'outils**. Ensuite, cliquez sur **Vue d'ensemble**.
 2. Pour accéder à une intégration d'outils de votre chaîne d'outils, cliquez sur l'outil.
 
- **Astuce **: si vous disposez de plusieurs référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git, plusieurs cartes peuvent être disponibles pour une
-même intégration d'outils car chaque référentiel dispose de sa propre carte. Si vous disposez de plusieurs pipelines, plusieurs cartes peuvent être disponibles pour la même intégration d'outils car chaque pipeline est représenté par sa propre carte. Par exemple, lorsque vous créez une chaîne d'outils Microservices,
-chacun des trois microservices dispose de son propre référentiel GitHub, {{site.data.keyword.ghe_short}} ou Git et de son propre pipeline.
+ Si vous disposez de plusieurs référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git, plusieurs cartes peuvent être disponibles pour une même intégration d'outils car chaque référentiel dispose de sa propre carte. Si vous disposez de plusieurs pipelines, plusieurs cartes peuvent être disponibles pour la même intégration d'outils car chaque pipeline est représenté par sa propre carte. Par exemple, lorsque vous créez une chaîne d'outils Microservices, chacun des trois microservices dispose de son propre référentiel GitHub, {{site.data.keyword.ghe_short}} ou Git et de son propre pipeline.
+{: tip}
 
 ## Suivre un tutoriel : Utilisation de chaînes d'outils
 {: #toolchain_tutorials}

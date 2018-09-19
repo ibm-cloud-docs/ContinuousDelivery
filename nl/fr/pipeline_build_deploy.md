@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-2-28"
+lastupdated: "2018-8-2"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -11,10 +11,13 @@ lastupdated: "2018-2-28"
     Indentation as per the previous template must be preserved.
 -->
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Génération et déploiement
 {: #deliverypipeline_build_deploy}
@@ -22,14 +25,14 @@ lastupdated: "2018-2-28"
 {{site.data.keyword.contdelivery_full}} inclut Delivery Pipeline, que vous pouvez utiliser pour implémenter un processus de distribution continue et d'intégration continue reproductibles.
 {:shortdesc}
 
-Pour créer et configurer un pipeline, procédez comme suit :
+Pour configurer un pipeline, procédez comme suit :
 
 ## Ajout d'une étape
 {: #deliverypipeline_add_stage}
 
 1. Sur la page Pipeline, cliquez sur **Ajouter une étape**. La page Configuration d'étape s'ouvre.
 2. Configurez l'étape.
-  1. Sur l'onglet **Entrée**, sélectionnez une entrée pour l'étape.  Pour l'étape de génération, l'onglet d'entrée inclut une zone **Branche** pour spécifier la branche dans le référentiel à utiliser pour l'entrée. 
+  1. Sur l'onglet **Entrée**, sélectionnez une entrée pour l'étape.  Pour l'étape de génération, l'onglet d'entrée inclut une zone **Branche** pour spécifier la branche dans le référentiel à utiliser pour l'entrée.
   2. Sur l'onglet **Travaux**, ajoutez et configurez au moins un travail. Généralement, la première étape comporte au moins un travail de génération.
 3. Cliquez sur **SAUVEGARDER**.
 
@@ -71,7 +74,8 @@ sélectionner la révision d'entrée, l'étape suit les conditions ci-après :
 * Si aucune révision n'est spécifiée, recherchez les étapes précédentes jusqu'à ce qu'une étape utilisant la même entrée soit trouvée. Recherchez et utilisez la dernière révision d'exécution réussie de cette entrée.
 * Si aucune révision n'est spécifiée ni aucune autre étape, utilisez la source indiquée comme entrée, utilisez la révision la plus récente comme entrée.
 
-**Astuce :** Vous pouvez déployer une version précédente. A l'étape qui contient la version, cliquez sur **Afficher les journaux et l'historique**. Sur la page qui s'ouvre, cliquez pour développer le numéro d'exécution, puis cliquez sur le travail de génération. Cliquez sur **ENVOYER A** et sélectionnez une cible.
+Vous pouvez déployer une version précédente. A l'étape qui contient la version, cliquez sur **Afficher les journaux et l'historique**. Sur la page qui s'ouvre, cliquez pour développer le numéro d'exécution, puis cliquez sur le travail de génération. Cliquez sur **ENVOYER A** et sélectionnez une cible.
+{: tip}
 
 ###Ajout de services à des applications
 Vous pouvez ajouter des services à vos applications et gérer ces services à partir de votre tableau de bord {{site.data.keyword.Bluemix_notm}} ou de l'interface de ligne de commande Cloud Foundry. Vous pouvez également exécuter des commandes d'interface de ligne de commande Cloud Foundry dans des scripts pour les travaux de pipeline. Par exemple, vous pouvez ajouter un service à une application dans le script d'un travail de déploiement. Pour plus d'informations sur l'ajout de services, voir [Ajout d'un service à votre application](/docs/services/reqnsi.html#add_service).

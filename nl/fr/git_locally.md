@@ -2,15 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-2"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Configuration de clients locaux pour l'utilisation du contrôle des sources Git
 {: #git_local}
@@ -32,7 +34,8 @@ Vous pouvez gérer votre code source dans un référentiel GitHub, GitHub Enterp
 | Public GitHub (github.com) | Le jeton d'accès personnel n'est pas requis, mais vous pouvez en configurer un et l'utiliser | Nom d'utilisateur et mot de passe GitHub ou nom d'utilisateur GitHub et jeton d'accès personnel ou simplement jeton d'accès personnel comme nom d'utilisateur | [Configurer  une clé SSH GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
 | GitHub Enterprise | [Jeton d'accès personnel](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | Nom d'utilisateur GitHub Enterprise (pas votre ID IBM) et jeton d'accès personnel | [Configurer la clé SSH GitHub Enterprise](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
-**Remarque** : si vous préférez utiliser SSH, vous pouvez réutiliser une seule et même clé sur tous les serveurs Git. Créez ou recherchez votre clé et configurez-la dans chaque serveur comme indiqué dans les liens précédents. Si vous créez votre clé avec une phrase passe, vous serez invité à la saisir cette phrase passe lorsque vous utiliserez la clé.
+Si vous préférez utiliser SSH, vous pouvez réutiliser une seule et même clé sur tous les serveurs Git. Créez ou recherchez votre clé et configurez-la dans chaque serveur comme indiqué dans les liens précédents. Si vous créez votre clé avec une phrase passe, vous serez invité à la saisir cette phrase passe lorsque vous utiliserez la clé.
+{: tip}
 
 2. Si vous avez l'intention d'utiliser la ligne de commande Git, procédez comme suit :
 
@@ -86,4 +89,4 @@ Avec les outils, vous pouvez déployer les types de fichiers et de serveurs suiv
 * Fichiers EAR (archive d'entreprise)
 * Serveurs de packages Liberty Profile
 
-Vous pouvez également créer des services et les lier à votre application, et définir des variables d'environnement dans le cadre du déploiement. Pour en savoir plus sur IBM Eclipse Tools, [voir Déploiement d'applications à l'aide d'IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../../manageapps/eclipsetools/eclipsetools.html).
+Vous pouvez également créer des services et les lier à votre application, et définir des variables d'environnement dans le cadre du déploiement. Pour en savoir plus sur IBM Eclipse Tools, [voir Déploiement d'applications à l'aide d'IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html).

@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-8-17"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}    
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}   
 
 # Configuration des intégrations d'outils
 {: #integrations}
@@ -31,12 +34,12 @@ votre environnement spécifique.
 |Availability Monitoring		|Sud des Etats-Unis		|Non		|
 |Bitbucket		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Non		|
 |Cloud Event Management		|Sud des Etats-Unis		|Non		|
-|{{site.data.keyword.deliverypipeline}} 		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui  		|
+|{{site.data.keyword.deliverypipeline}} 		|Sud des Etats-Unis, Allemagne, Royaume-Uni	   	|Oui  		|
 |{{site.data.keyword.DRA_short}} 		|Sud des Etats-Unis		|Non			|
 |Eclipse Orion {{site.data.keyword.webide}}		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui			|
 |{{site.data.keyword.gitrepos}}	|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Non		|
 |GitHub		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
-|{{site.data.keyword.ghe_short}} dédié et Issues			|Non		|Oui		|
+|Dedicated {{site.data.keyword.ghe_short}} and Issues			|Non		|Oui		|
 |GitLab		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Non		|
 |Jenkins		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
 |JIRA		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
@@ -47,14 +50,10 @@ votre environnement spécifique.
 |Sauce Labs		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Non		|
 |Slack			|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
 |SonarQube			|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
-|UrbanCode Deploy			|Sud des Etats-Unis		|Non		|
 {: caption="Tableau 1. Intégrations d'outils disponibles pour les chaînes d'outils sur {{site.data.keyword.Bluemix_notm}} Public et Dedicated" caption-side="top"}
 
-**Astuce :** si vous souhaitez commencer à développer avec votre code source sur {{site.data.keyword.Bluemix_notm}} public, configurez l'intégration d'outils GitHub ou l'intégration d'outils {{site.data.keyword.gitrepos}} avant de configurer {{site.data.keyword.deliverypipeline}}. Si vous souhaitez débuter le développement par votre code source sur
-{{site.data.keyword.Bluemix_notm}} dédié, configurez
-l'intégration d'outils {{site.data.keyword.ghe_short}} ou
-l'intégration d'outils GitHub avant
-de configurer {{site.data.keyword.deliverypipeline}}.
+Si vous souhaitez commencer à développer avec votre code source sur {{site.data.keyword.Bluemix_notm}} Public, configurez l'intégration d'outils GitHub ou l'intégration d'outils {{site.data.keyword.gitrepos}} avant de configurer {{site.data.keyword.deliverypipeline}}. Si vous souhaitez débuter le développement par votre code source sur {{site.data.keyword.Bluemix_notm}} Dedicated, configurez l'intégration d'outils {{site.data.keyword.ghe_short}} ou l'intégration d'outils GitHub avant de configurer {{site.data.keyword.deliverypipeline}}.
+{: tip}
 
 
 ## Configuration de l'application Alert Notification
@@ -167,8 +166,7 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de gé
      # ou
      npm publish --registry "${NPM_RELEASE_URL}"
      ```
-  **Astuce :** vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de
-configuration pour l'intégration des outils Artifactory.
+Vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de configuration pour l'intégration des outils Artifactory.{: tip}
 
   e. Si votre travail de génération est publié dans le registre Artifactory et que le format de votre version de module de noeud est `x.y.z-SNAPSHOT.w`, cochez la case **Increment snapshot module version**. Le travail de génération met automatiquement à jour la version du module avant que le travail ne soit publié dans le registre Artifactory. Le travail sélectionne la version la plus élevée du module à partir du registre npm et du fichier local `package.json`, et incrémente la version du module à l'aide de semver. Le travail de génération ne répercute pas les modifications dans le référentiel SCM.
 
@@ -198,8 +196,7 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de gé
      # ou
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  **Astuce :** vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de
-configuration pour l'intégration des outils Artifactory.
+Vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de configuration pour l'intégration des outils Artifactory.{: tip}
 
 1. Cliquez sur **SAUVEGARDER**. Lors de l'exécution de votre pipeline, ce travail de génération utilise les informations de configuration provenant de l'intégration d'outils pour la connexion à votre référentiel Maven.
 
@@ -213,7 +210,8 @@ Pour en savoir plus sur Artifactory, consultez l'article [Artifactory![Icône de
 
 {{site.data.keyword.prf_hublong}} isole les problèmes, identifie les masques et améliore les performances avant que les utilisateurs ne s'en trouvent affectés. Vous pouvez tester votre application depuis le monde entier, l'intégrer à des pipelines de distribution et gagner en connaissance sur la façon d'optimiser en permanence votre code.
 
-**Remarque :** Cette intégration d'outils est préconfigurée et ne nécessite aucun paramètre de configuration. Vous ne pouvez pas la reconfigurer.
+Cette intégration d'outils est préconfigurée et ne nécessite aucun paramètre de configuration. Vous ne pouvez pas la reconfigurer.
+{: tip}
 
 Pour tester, surveiller et améliorer la santé de votre application au fur et à mesure de sa création, ajoutez l'intégration d'outils {{site.data.keyword.prf_hubshort}}.
 
@@ -246,7 +244,24 @@ Configurez Bitbucket pour collaborer avec votre équipe sur le code :
 
  b. Dans la section Intégrations d'outils, cliquez sur **Bitbucket**.
 
-   **Astuce :** si vous configurez cette intégration d'outil sur {{site.data.keyword.Bluemix_notm}} Public et n'avez pas autorisé {{site.data.keyword.Bluemix_notm}} à accéder à Bitbucket, cliquez sur **Autoriser** pour accéder au site Web de Bitbucket. Si vous n'avez pas de session Bitbucket active, vous êtes invité à vous connecter. Cliquez sur **Authorize Application** pour autoriser {{site.data.keyword.Bluemix_notm}} à accéder à votre compte Bitbucket. Si vous disposez d'une session Bitbucket active mais n'avez pas saisi votre mot de passe récemment, vous êtes invité à entrer votre mot de passe Bitbucket pour confirmation.
+   Si vous configurez cette intégration d'outils sur {{site.data.keyword.Bluemix_notm}} Public et que vous n'avez pas autorisé {{site.data.keyword.Bluemix_notm}} à accéder à Bitbucket, cliquez sur **Autorisation** pour accéder au site Web Bitbucket. Si vous n'avez pas de session Bitbucket active, vous êtes invité à vous connecter. Cliquez sur **Accorder l'accès** pour autoriser {{site.data.keyword.Bluemix_notm}} Toolchains à accéder aux parties suivantes de votre compte Bitbucket : 
+   
+   * **Lisez vos informations de compte**. Obtenez des informations de base sur l'utilisateur pour remplir l'interface utilisateur. 
+   
+   * **Lisez et modifiez les problèmes des référentiels**. Autorisez {{site.data.keyword.contdelivery_short}} à mettre à jour les problèmes pour indiquer le moment où le pipeline déploie les validations associées à ces problèmes.  
+   
+   * **Lisez les paramètres de projet de votre équipe et lisez les référentiels contenus dans les projets de votre équipe.**. Autorisez {{site.data.keyword.contdelivery_short}} à intégrer les référentiels appartenant à des équipes. 
+   
+   * **Lisez et modifiez vos référentiels et leurs demandes d'extraction**. Autorisez {{site.data.keyword.contdelivery_short}} à envoyer un exemple de code dans des référentiels, lorsque les utilisateurs demandent le code. 
+   
+   * **Administrez vos référentiels**. Autorisez {{site.data.keyword.contdelivery_short}} à créer des référentiels, à la demande des utilisateurs. 
+   
+   * **Lisez les informations d'appartenance à votre équipe**. Autorisez {{site.data.keyword.contdelivery_short}} à afficher une liste de vos équipes dans le menu **Propriétaire** qui s'affiche lorsque vous créez un nouveau référentiel. 
+   
+   * **Lisez et modifiez les webhooks de vos référentiels**. Autorisez le pipeline à déclencher des générations lorsque des validations sont envoyées dans un référentiel.
+{: tip}
+   
+   Si vous disposez d'une session Bitbucket active mais n'avez pas saisi votre mot de passe récemment, vous êtes invité à entrer votre mot de passe Bitbucket pour confirmation.
 
 1. Cliquez sur le serveur Bitbucket que vous souhaitez utiliser.
 1. Si vous souhaitez utiliser un référentiel Bitbucket en particulier, entrez son URL. Pour le type de référentiel, cliquez sur **Existant**.
@@ -265,9 +280,8 @@ Configurez Bitbucket pour collaborer avec votre équipe sur le code :
 1. A partir de votre chaîne d'outils, cliquez sur la carte du référentiel Bitbucket que vous souhaitez utiliser. Le site Web de Bitbucket s'ouvre avec le contenu du référentiel.
 1. Si vous avez activé Bitbucket Issues, cliquez sur **Bitbucket Issues** pour l'ouvrir. Vous pouvez utiliser cette instance de Bitbucket Issues pour l'ensemble de votre chaîne d'outils, même si cette dernière contient plusieurs référentiels Bitbucket.    
 
-**Remarque :** si vous ne disposez pas d'un droit maître ou propriétaire sur le référentiel avec lequel vous établissez une liaison, votre intégration sera limitée car vous ne pouvez pas utiliser
-un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans
-webhook, vous devez démarrer manuellement vos pipelines.
+Si vous ne disposez pas d'un droit maître ou propriétaire sur le référentiel avec lequel vous établissez une liaison, votre intégration sera limitée car vous ne pouvez pas utiliser un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans webhook, vous devez démarrer manuellement vos pipelines.
+{: tip}
 
 ### Plus d'informations sur Bitbucket
 
@@ -279,7 +293,8 @@ Pour en savoir plus sur Bitbucket, consultez l'[article Bitbucket ![Icône de li
 
 {{site.data.keyword.evtmgt_full}} fournit une vue d'ensemble des problèmes qui surviennent dans vos services, vos applications et votre infrastructure. Vous pouvez configurer la gestion des incidents en temps réel pour résoudre les problèmes plus efficacement.
 
-**Remarque :** Cette intégration d'outils est préconfigurée et ne nécessite aucun paramètre de configuration. Vous ne pouvez pas la reconfigurer.
+Cette intégration d'outils est préconfigurée et ne nécessite aucun paramètre de configuration. Vous ne pouvez pas la reconfigurer.
+{: tip}
 
 Pour aider votre équipe DevOps à atteindre des objectifs fiables et opérationnels en matière de santé, de qualité de service et d'amélioration continue, ajoutez Cloud Event Management à votre chaîne d'outils :
 
@@ -324,8 +339,7 @@ Présentation de la chaîne d'outils.
 1. Cliquez sur **Créer une intégration** pour ajouter {{site.data.keyword.deliverypipeline}} à votre chaîne d'outils.
 1. Cliquez sur **{{site.data.keyword.deliverypipeline}}** pour afficher le pipeline et le configurer. Pour en savoir plus sur les notions de base et la configuration d'un pipeline, voir [Génération et déploiement de pipelines](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}.
 
-  **Astuce :** si vous souhaitez que le pipeline s'exécute automatiquement lorsqu'une validation est envoyée à votre référentiel GitHub,
-{{site.data.keyword.ghe_short}} ou Git, procédez comme suit :
+  Si vous souhaitez que le pipeline s'exécute automatiquement lorsqu'une validation est envoyée à votre référentiel GitHub, {{site.data.keyword.ghe_short}} ou Git, procédez comme suit :
 
    a. Configurez GitHub, {{site.data.keyword.ghe_short}} ou {{site.data.keyword.gitrepos}} pour votre chaîne d'outils avant de définir les étapes pour votre pipeline. Ces étapes requièrent les URL de vos référentiels. Chaque étape de pipeline peut faire référence à un seul des référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git associés à votre chaîne d'outils. Pour
 savoir comment configurer GitHub, voir la section [GitHub](#github). Pour la configuration de {{site.data.keyword.ghe_short}} Dedicated, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. Pour les instructions de configuration de {{site.data.keyword.gitrepos}}, voir la section [{{site.data.keyword.gitrepos}}](#gitbluemix).
@@ -348,7 +362,8 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de tes
 
 1. Configurez l'étape. Sur l'onglet **PROPRIETES D'ENVIRONNEMENT**, créez la propriété CF_APP_NAME.
 
-  **Astuce :** le nom d'utilisateur et la clé d'accès Sauce Labs sont disponibles dans le script de travail de test via les variables d'environnement SAUCE_USERNAME et SAUCE_ACCESS_KEY. Lorsque vous rédigez vos tests, vous devez utiliser ces variables d'environnement pour vous authentifier auprès de Sauce Labs.
+  Le nom d'utilisateur et la clé d'accès Sauce Labs sont disponibles dans le script de travail de test via les variables d'environnement SAUCE_USERNAME et SAUCE_ACCESS_KEY. Lorsque vous rédigez vos tests, vous devez utiliser ces variables d'environnement pour vous authentifier auprès de Sauce Labs.
+  {: tip}
 
 1. Configurez le travail de déploiement. Dans la zone **Script de déploiement**, ajoutez la commande suivante : `export CF_APP_NAME="$CF_APP"`. Cette commande exporte le nom d'application en tant que propriété d'environnement.
 1. Configurez le travail de test. Les valeurs figurant dans l'image suivante sont des exemples. Les zones d'**instance de service**, de **cible**, d'**organisation** et d'**espace** sont renseignées avec les informations Sauce Labs de nom d'utilisateur, région, organisation et espace que vous utilisez.  
@@ -358,8 +373,8 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de tes
 
   b. Pour l'instance de service, sélectionnez le nom d'utilisateur Sauce Labs utilisé lors de la configuration de Sauce Labs pour votre chaîne d'outils.
 
-   **Astuce :** pour afficher le nom d'utilisateur et la clé d'accès dont vous vous êtes servi lorsque vous avez configuré Sauce Labs pour votre chaîne d'outils,
-cliquez sur **Configurer**.
+   Pour afficher le nom d'utilisateur et la clé d'accès dont vous vous êtes servi lorsque vous avez configuré Sauce Labs pour votre chaîne d'outils, cliquez sur **Configurer**.
+{: tip}
 
   c. Dans la zone **Commande d'exécution de test**, entrez les commandes d'installation des dépendances qui sont requises par vos tests, puis exécutez les tests. Par exemple, pour une application Node.js, vous pourriez entrer les commandes suivantes :
      ```
@@ -385,7 +400,8 @@ Pour en savoir plus sur {{site.data.keyword.deliverypipeline}}, voir [Travailler
 
 {{site.data.keyword.DRA_full}} collecte et analyse les résultats provenant de tests unitaires, de tests fonctionnels et d'outils de couverture de code afin de déterminer si votre code satisfait les critères prédéfinis à certains stades de votre processus de déploiement. Si votre code ne satisfait pas ou dépasse les critères, le déploiement est interrompu afin de prévenir tout risque. Vous pouvez utiliser {{site.data.keyword.DRA_short}} comme filet de sécurité pour votre environnement de distribution continue ou comme moyen d'implémenter et d'améliorer les normes qualité.
 
- **Remarque :** cette intégration d'outils est uniquement disponible sur {{site.data.keyword.Bluemix_notm}} Public. Elle est préconfigurée et ne nécessite aucun paramètre de configuration. Vous ne pouvez pas la reconfigurer.
+ Cette intégration d'outils est uniquement disponible sur {{site.data.keyword.Bluemix_notm}} Public. Elle est préconfigurée et ne nécessite aucun paramètre de configuration. Vous ne pouvez pas la reconfigurer.
+ {: tip}
 
 Ajoutez {{site.data.keyword.DRA_short}} afin de gérer et d'améliorer la qualité de votre code dans {{site.data.keyword.Bluemix_notm}} en surveillant vos déploiements afin d'identifier les risques avant la publication.
 
@@ -415,7 +431,8 @@ Pour en savoir plus sur {{site.data.keyword.DRA_short}}, voir l'[article {{site.
 
 Eclipse Orion {{site.data.keyword.webide}} est un environnement de développement Web intégré dans lequel vous pouvez créer, éditer, exécuter, déboguer et terminer des tâches de contrôle des sources. Vous pouvez facilement passer de l'édition à l'exécution, à la soumission, puis au développement.
 
- **Remarque :** cette intégration d'outils est préconfigurée. Elle ne requiert aucun paramètre de configuration et vous ne pouvez pas la reconfigurer.
+ Cette intégration d'outils est préconfigurée. Elle ne requiert aucun paramètre de configuration et vous ne pouvez pas la reconfigurer.
+ {: tip}
 
 Pour effectuer des tâches de contrôle des sources, ajoutez l'intégration d'outils Eclipse Orion {{site.data.keyword.webide}} :
 
@@ -450,7 +467,8 @@ Si vous configurez {{site.data.keyword.gitrepos}} lors de la création de la cha
 
 Si vous disposez d'une chaîne d'outils et que vous souhaitez faire migrer un référentiel Git de votre chaîne d'outils vers {{site.data.keyword.gitrepos}}, procédez comme suit :
 
-**Remarque** : ces instructions s'appliquent aux chaînes d'outils qui contiennent déjà le référentiel Git que vous souhaitez faire migrer vers {{site.data.keyword.gitrepos}}. Pour savoir comment ajouter différents types de référentiels Git à votre chaîne d'outils, voir les sections [Configuration de GitHub](#github), [Configuration de GitHub Enterprise et Issues sur {{site.data.keyword.Bluemix_notm}} Dedicated](#configghe) et [Configuration de GitLab](#gitlab).
+Ces instructions s'appliquent aux chaînes d'outils qui contiennent déjà le référentiel Git que vous souhaitez faire migrer vers {{site.data.keyword.gitrepos}}. Pour savoir comment ajouter différents types de référentiels Git à votre chaîne d'outils, voir les sections [Configuration de GitHub](#github), [Configuration de GitHub Enterprise et Issues sur {{site.data.keyword.Bluemix_notm}} Dedicated](#configghe) et [Configuration de GitLab](#gitlab).
+{: tip}
 
 1. Dans le tableau de bord DevOps, dans la page Chaînes d'outils, cliquez sur la chaîne d'outils afin d'ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
 1. Cliquez sur **Ajouter un outil**.
@@ -460,7 +478,8 @@ Si vous disposez d'une chaîne d'outils et que vous souhaitez faire migrer un r�
 1. Si vous voulez suivre le déploiement des modifications du code en créant des étiquettes et des commentaires sur les validations, ainsi que des libellés et des commentaires sur les problèmes référencés par les validations, cochez la case **Suivi du déploiement des modifications du code**. Pour plus d'informations, voir [Suivi de l'emplacement du déploiement du code avec des chaînes d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Cliquez sur **Créer une intégration**.
 
-**Astuce :** après avoir cloné le référentiel Git, vous pouvez le retirer de votre chaîne d'outils.
+Après avoir cloné le référentiel Git, vous pouvez le retirer de votre chaîne d'outils.
+{: tip}
 
 Si vous disposez d'une chaîne d'outils et que vous lui ajoutez {{site.data.keyword.gitrepos}}, procédez comme suit :    
 
@@ -480,9 +499,8 @@ l'URL du référentiel source.
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur la carte du référentiel Git à utiliser. La page de présentation de votre projet s'ouvre.    
 
-**Remarque :** si vous ne disposez pas d'un droit Maître ou Propriétaire sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser
-un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans
-webhook, vous devez démarrer manuellement vos pipelines.
+Si vous ne disposez pas d'un droit Maître ou Propriétaire sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans webhook, vous devez démarrer manuellement vos pipelines.
+{: tip}
 
 ### Plus d'informations sur Git Repos and Issue Tracking
 
@@ -507,11 +525,12 @@ Si vous configurez cette intégration d'outils lors de la création de la chaîn
 1. Si vous stockez votre code source dans un référentiel GitHub, dans la section Intégrations configurables, cliquez sur **GitHub**. Si vous configurez cette intégration d'outils sur {{site.data.keyword.Bluemix_notm}} Public et que vous n'avez pas autorisé {{site.data.keyword.Bluemix_notm}} à accéder à GitHub, cliquez sur **Autorisation** pour accéder au site Web GitHub. Si vous n'avez pas de session GitHub active, vous êtes invité à vous connecter. Cliquez sur **Authorize Application** pour autoriser {{site.data.keyword.Bluemix_notm}} à accéder à votre compte GitHub. Si vous disposez d'une session GitHub active mais n'avez pas saisi votre mot de passe récemment, vous êtes invité à entrer votre mot de passe GitHub pour confirmation.
 1. Si vous utilisez un référentiel sur votre propre serveur {{site.data.keyword.ghe_short}}, dans la section Intégrations configurables, cliquez sur **Ajouter un serveur personnalisé**.
 
- **Important** : le réseau doit être capable d'accéder au serveur Git cible à partir d'un environnement {{site.data.keyword.Bluemix_notm}} Dedicated. Si votre serveur GitHub n'est pas disponible sur le réseau Internet public ou si le nom d'hôte n'est pas résolu sur le DNS public, [ouvrez un ticket de support](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. Vous pouvez utiliser le ticket de support pour soumettre une demande pour ouvrir les itinéraires réseau ou mettre à jour les paramètres DNS.
+ Le réseau doit être capable d'accéder au serveur Git cible à partir d'un environnement {{site.data.keyword.Bluemix_notm}} Dedicated. Si votre serveur GitHub n'est pas disponible sur le réseau Internet public ou si le nom d'hôte n'est pas résolu sur le DNS public, [ouvrez un ticket de support](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. Vous pouvez utiliser le ticket de support pour soumettre une demande pour ouvrir les itinéraires réseau ou mettre à jour les paramètres DNS.
+ {: tip}
 
  Entrez un titre pour votre serveur GitHub personnalisé et spécifiez l'URL racine de votre serveur. Entrez votre jeton d'accès personnel, puis cliquez sur **Enregistrer l'intégration personnalisée**.
 
-  **Astuce** : si vous ne possédez pas de jeton d'accès personnel, vous pouvez en créer un :
+  Si vous ne possédez pas de jeton d'accès personnel, vous pouvez en créer un :
 
      a. Sur n'importe quelle page GitHub, cliquez sur l'icône de votre profil, puis sur **Paramètres**.
 
@@ -551,14 +570,13 @@ Si vous disposez d'une chaîne d'outils et que vous lui ajoutez cette intégrati
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur la carte du référentiel GitHub ou {{site.data.keyword.ghe_short}} à utiliser. Selon le référentiel que vous avez sélectionné, le site Web GitHub ou le référentiel {{site.data.keyword.ghe_short}} de votre société s'ouvre afin de vous permettre de visualiser le contenu du référentiel.
 
-  **Astuce :** vous pouvez utiliser les outils de gestion des codes source intégrés dans Eclipse Orion {{site.data.keyword.webide}} pour éditer le référentiel
-GitHub et déployer une application depuis votre espace de travail.
+  Vous pouvez utiliser les outils de gestion des codes source intégrés dans Eclipse Orion {{site.data.keyword.webide}} pour éditer le référentiel GitHub et déployer une application depuis votre espace de travail.
+{: tip}
 
 1. Si vous avez activé GitHub Issues, cliquez sur **GitHub Issues** pour l'ouvrir. Vous pouvez utiliser cette instance de GitHub Issues pour l'ensemble de votre chaîne d'outils, même si cette dernière contient plusieurs référentiels GitHub ou {{site.data.keyword.ghe_short}}.    
 
-**Remarque :** si vous ne disposez pas d'un droit d'administrateur sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser un
-webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans
-webhook, vous devez démarrer manuellement vos pipelines.
+Si vous ne disposez pas d'un droit d'administrateur sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans webhook, vous devez démarrer manuellement vos pipelines.
+{: tip}
 
 ### Plus d'informations sur GitHub
 
@@ -574,7 +592,8 @@ Pour en savoir plus sur GitHub, voir l'[article GitHub ![Icône de lien externe]
 ## Configuration de GitHub Enterprise et Issues sur {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #configghe}
 
- **Remarque :** Ces instructions s'appliquent à {{site.data.keyword.Bluemix_notm}} Dedicated pour {{site.data.keyword.ghe_short}}. Si vous utilisez votre propre version gérée de {{site.data.keyword.ghe_short}}, certaines étapes peuvent varier en fonction de vos procédures internes.
+ Ces instructions s'appliquent à {{site.data.keyword.Bluemix_notm}} Dedicated pour {{site.data.keyword.ghe_short}}. Si vous utilisez votre propre version gérée de {{site.data.keyword.ghe_short}}, certaines étapes peuvent varier en fonction de vos procédures internes.
+ {: tip}
 
 {{site.data.keyword.ghe_long}} est un service d'hébergement Web sur site pour les référentiels Git. {{site.data.keyword.ghe_short}} Dedicated est destiné aux clients {{site.data.keyword.Bluemix_notm}} Dedicated uniquement. GitHub Issues est un outil de suivi qui conserve votre travail et vos plans à un seul et même emplacement. Il est intégré à votre référentiel de développement pour vous permettre de vous concentrer sur les tâches importantes. Pour plus d'informations sur Bluemix Dedicated pour {{site.data.keyword.ghe_short}} et GitHub Issues, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} et l'[article GitHub Issues ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} sur IBM Cloud Garage Method.
 
@@ -608,14 +627,13 @@ Vous pouvez configurer {{site.data.keyword.ghe_short}} en tant qu'intégration d
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur la carte du référentiel {{site.data.keyword.ghe_short}} à utiliser. Le référentiel {{site.data.keyword.ghe_short}} de votre société s'ouvre.
 
-  **Astuce :** vous pouvez utiliser les outils de gestion des codes source intégrés dans Eclipse Orion {{site.data.keyword.webide}}
-pour éditer le référentiel {{site.data.keyword.ghe_short}} et déployer une application depuis votre espace de travail.
+  Vous pouvez utiliser les outils de gestion des codes source intégrés dans Eclipse Orion {{site.data.keyword.webide}} pour éditer le référentiel {{site.data.keyword.ghe_short}} et déployer une application depuis votre espace de travail.
+{: tip}
 
 1. Si vous avez activé GitHub Issues, cliquez sur **GitHub Issues**. Vous pouvez utiliser cette instance de GitHub Issues pour l'ensemble de votre chaîne d'outils, même si cette dernière contient plusieurs référentiels GitHub.    
 
-**Remarque :** si vous ne disposez pas d'un droit d'administrateur sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser un
-webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans
-webhook, vous devez démarrer manuellement vos pipelines.
+Si vous ne disposez pas d'un droit d'administrateur sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans webhook, vous devez démarrer manuellement vos pipelines.
+{: tip}
 
 
 ## Configuration de GitLab
@@ -630,11 +648,12 @@ Si vous configurez cette intégration d'outils lors de la création de la chaîn
 1. Si vous stockez votre code source dans un référentiel GitLab, dans la section Intégrations configurables, cliquez sur **GitLab**. Si vous configurez cette intégration d'outils sur {{site.data.keyword.Bluemix_notm}} Public et que vous n'avez pas autorisé {{site.data.keyword.Bluemix_notm}} à accéder à GitLab, cliquez sur **Autorisation** pour accéder au site Web GitLab. Si vous n'avez pas de session GitLab active, vous êtes invité à vous connecter. Cliquez sur **Authorize Application** pour autoriser {{site.data.keyword.Bluemix_notm}} à accéder à votre compte GitLab. Si vous disposez d'une session GitLab active mais n'avez pas saisi votre mot de passe récemment, vous serez peut-être invité à entrer votre mot de passe GitLab pour confirmation.
 1. Si vous utilisez un référentiel sur votre propre serveur GitLab, dans la section Intégrations configurables, cliquez sur **Ajouter un serveur personnalisé**.
 
- **Important** : le réseau doit être capable d'accéder au serveur GitLab cible à partir d'un environnement {{site.data.keyword.Bluemix_notm}} Dedicated.
+ Le réseau doit être capable d'accéder au serveur GitLab cible à partir d'un environnement {{site.data.keyword.Bluemix_notm}} Dedicated.
+{: tip}
 
  Entrez un titre pour votre serveur GitLab personnalisé et spécifiez l'URL racine de votre serveur. Entrez votre jeton d'accès personnel, puis cliquez sur **Enregistrer l'intégration personnalisée**.
 
-  **Astuce** : si vous ne possédez pas de jeton d'accès personnel, vous pouvez en créer un :
+  Si vous ne possédez pas de jeton d'accès personnel, vous pouvez en créer un :
 
      a. Sur n'importe quelle page GitLab, cliquez sur l'icône de votre profil, puis sur **Paramètres**.
 
@@ -671,14 +690,14 @@ Si vous disposez d'une chaîne d'outils et que vous lui ajoutez cette intégrati
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur la carte du référentiel GitLab à utiliser. Selon le référentiel que vous avez sélectionné, le site Web GitLab ou le référentiel GitLab de votre société s'ouvre afin de vous permettre de visualiser le contenu du référentiel.
 
-  **Astuce :** vous pouvez utiliser les outils de gestion des codes source intégrés dans Eclipse Orion {{site.data.keyword.webide}}
-pour éditer le référentiel GitLab et déployer une application depuis votre espace de travail.
+  Vous pouvez utiliser les outils de gestion des codes source intégrés dans Eclipse Orion {{site.data.keyword.webide}} pour éditer le référentiel GitLab et déployer une application depuis votre espace de travail.
+{: tip}
 
 1. Si vous avez activé GitLab Issues, cliquez sur **GitLab Issues** pour l'ouvrir. Vous pouvez utiliser cette instance de GitLab Issues pour l'ensemble de votre chaîne d'outils, même si cette dernière contient plusieurs référentiels GitLab.    
 
-**Remarque :** si vous ne disposez pas d'un droit maître ou propriétaire sur le référentiel avec lequel vous établissez une liaison, votre intégration sera limitée car vous ne pouvez pas utiliser
-un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans
+Si vous ne disposez pas d'un droit maître ou propriétaire sur le référentiel avec lequel vous établissez une liaison, votre intégration sera limitée car vous ne pouvez pas utiliser un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans
 webhook, vous devez démarrer manuellement vos pipelines.
+{: tip}
 
 ### Plus d'informations sur GitLab
 
@@ -690,7 +709,8 @@ Pour en savoir plus sur GitLab, consultez l'article [GitLab![Icône de lien exte
 
 Jenkins est un outil open source basé sur un serveur, qui génère et teste des logiciels en continu, en prenant en charge les pratiques d'intégration et de distribution continues.
 
-**Important :** avant de créer une intégration d'outils Jenkins, vous devez disposer d'un serveur Jenkins.
+Avant de créer une intégration d'outils Jenkins, vous devez disposer d'un serveur Jenkins.
+{: tip}
 
 L'intégration d'outil Jenkins vous permet d'envoyer des notifications de travail Jenkins à d'autres outils de votre chaîne d'outils, comme Slack et PagerDuty. Pour tracer le code dans les déploiements, vous pouvez ajouter des messages de déploiement dans vos validations Git et les problèmes Git ou JIRA associés. Vous pouvez également visualiser vos déploiements dans la page Toolchain Connections. Vous pouvez fournir les résultats de test à {{site.data.keyword.DRA_short}}, ajouter des seuils de qualité automatisés et procéder au suivi des risques de déploiement.
 
@@ -872,8 +892,8 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de gé
      # ou
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  **Astuce :** vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de
-configuration pour l'intégration des outils Nexus.
+Vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de configuration pour l'intégration des outils Nexus.
+{: tip}
 
 1. Cliquez sur **SAUVEGARDER**. Lors de l'exécution de votre pipeline, ce travail de génération utilise les informations de configuration provenant de l'intégration d'outils Nexus pour la connexion à votre référentiel Maven.
 
@@ -1004,7 +1024,8 @@ Pour en savoir plus sur Rational Team Concert, consultez l'article [IBM Rational
 
 Sauce Labs exécute des tests unitaires fonctionnels. Quand une suite de tests Sauce Labs est configurée comme travail de test dans {{site.data.keyword.deliverypipeline}}, cette suite de tests peut exécuter des tests en fonction de votre application Web ou mobile dans le cadre de votre processus de distribution continue. Ces tests peuvent fournir un contrôle de flux de valeur pour vos projets, agissant comme des barrières pour empêcher le déploiement de code incorrect.
 
- **Remarque :** Cette intégration d'outils est uniquement disponible sur {{site.data.keyword.Bluemix_notm}} Public.
+ Cette intégration d'outils est uniquement disponible sur {{site.data.keyword.Bluemix_notm}} Public.
+{: tip}
 
 Configurez Sauce Labs pour l'exécution de tests fonctionnels automatisés sur plusieurs systèmes d'exploitation et navigateurs afin de pouvoir émuler la façon dont un utilisateur peut utiliser un site Web ou une application :
 
@@ -1020,7 +1041,8 @@ Configurez Sauce Labs pour l'exécution de tests fonctionnels automatisés sur p
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur **Sauce Labs** pour accéder à saucelabs.com et afficher l'activité de test pour la chaîne d'outils.
 
- **Astuce :** si vous avez ajouté une tâche test Sauce Labs à {{site.data.keyword.deliverypipeline}}, vous pouvez sélectionner l'instance de service. Pour connaître les instructions de configuration d'un travail de test dans votre pipeline, voir [Configuration d'un travail de test Sauce Labs sur votre pipeline](#config_saucelabs).
+ Si vous avez ajouté une tâche test Sauce Labs à {{site.data.keyword.deliverypipeline}}, vous pouvez sélectionner l'instance de service. Pour connaître les instructions de configuration d'un travail de test dans votre pipeline, voir [Configuration d'un travail de test Sauce Labs sur votre pipeline](#config_saucelabs).
+ {: tip}
 
 ### Plus d'informations sur Sauce Labs
 
@@ -1033,7 +1055,8 @@ Pour en savoir plus sur Sauce Labs, voir l'[article Sauce Labs![Icône de lien e
 ## Configuration de Slack
 {: #slack}
 
-**Important :** les notifications publiées sur les canaux Slack publics sont visibles par tous les membre de l'équipe. N'oubliez pas que vous êtes responsable du contenu de vos articles.
+Les notifications publiées sur les canaux Slack publics sont visibles par tous les membre de l'équipe. N'oubliez pas que vous êtes responsable du contenu de vos articles.
+{: tip}
 
 Slack est un système de messagerie et de notification en temps réel, basé sur le cloud. Slack fournit un système de discussion permanente, alternative plus interactive au courrier électronique pour la collaboration des équipes. Vous pouvez communiquer avec votre équipe sur un canal dédié ou sur un ensemble de canaux directement liés à votre travail. Vous pouvez également partager des fichiers et des images via ces canaux, ou dans des messages directs entre deux personnes ou plus. Les communications dans les messages directs ou sur les canaux sont conservées pour que vous puissiez y faire des recherches.
 
@@ -1049,16 +1072,15 @@ Configurez Slack pour la réception de notifications concernant votre chaîne d'
 1. Entrez l'URL de webhook Slack, qui est générée par Slack en tant que webhook entrant. Vous avez besoin d'une URL de webhook Slack pour un canal Slack afin de recevoir des notifications concernant votre chaîne d'outils depuis les intégrations d'outils. Pour
 savoir comment créer ou rechercher votre webhook, veuillez vous référer à [Incoming webhooks![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){: new_window}.
 
- **Astuce :** si vous avez utilisé une clé API pour que votre canal Slack reçoive des notifications sur votre chaîne d'outils depuis les intégrations d'outils, vous
-devez mettre à jour votre configuration pour utiliser un webhook à la place.
+ Si vous avez utilisé une clé API pour que votre canal Slack reçoive des notifications sur votre chaîne d'outils depuis les intégrations d'outils, vous devez mettre à jour votre configuration pour utiliser un webhook à la place.
+{: tip}
 
 1. Entrez le nom du canal Slack sur lequel vous souhaitez recevoir les notifications. La chaîne doit exister et être active dans votre équipe Slack.
 1. Saisissez le nom d'hôte d'URL pour votre équipe Slack, qui est le mot ou l'expression avant `.slack.com` dans l'URL de votre équipe. Par exemple, si l'URL de votre équipe est `https://team.slack.com`, le nom d'hôte est `team`.
 1. Cliquez sur **Créer une intégration**.
 
- **Astuce :** si le canal Slack et l'équipe que vous avez spécifiés ne sont pas accessibles, l'erreur `Echec de la configuration` s'affiche sur
-la carte Slack. Survolez le message `Echec de la configuration` et cliquez sur **Reconfigurer**. Assurez-vous
-que vous utilisez des paramètres de configuration valides pour l'URL de webhook Slack, le canal Slack et le nom d'hôte d'URL de votre équipe Slack. Mettez à jour les paramètres si nécessaire et cliquez sur **Sauvegarder l'intégration**.
+ Si le canal Slack et l'équipe que vous avez spécifiés ne sont pas accessibles, l'erreur `Echec de la configuration` s'affiche sur la carte Slack. Survolez le message `Echec de la configuration` et cliquez sur **Reconfigurer**. Assurez-vous que vous utilisez des paramètres de configuration valides pour l'URL de webhook Slack, le canal Slack et le nom d'hôte d'URL de votre équipe Slack. Mettez à jour les paramètres si nécessaire et cliquez sur **Sauvegarder l'intégration**.
+ {: tip}
 
 1. Cliquez sur **Slack**. Vous pouvez afficher toutes les activités de votre chaîne d'outils dans le canal Slack configuré.
 
@@ -1089,8 +1111,8 @@ Configurez SonarQube pour analyser et mesurer en continu la qualité de votre co
 1. Entrez l'URL de l'instance SonarQube que vous souhaitez ouvrir lorsque vous cliquez sur la carte SonarQube depuis votre chaîne d'outils.
 1. Facultatif : entrez le nom d'utilisateur que vous utilisez pour vous connecter au serveur SonarQube.
 
- **Astuce :** vous devez uniquement spécifier un nom d'utilisateur si vous utilisez un mot de passe pour vous connecter au serveur SonarQube. Si vous utilisez un jeton
-d'authentification pour la connexion, laissez cette zone vide.
+ Vous devez uniquement spécifier un nom d'utilisateur si vous utilisez un mot de passe pour vous connecter au serveur SonarQube. Si vous utilisez un jeton d'authentification pour la connexion, laissez cette zone vide.
+ {: tip}
 
 1. Entrez le mot de passe ou le jeton d'authentification que vous utilisez pour vous connecter au serveur SonarQube.
 1. Cliquez sur **Créer une intégration**.
@@ -1099,26 +1121,3 @@ d'authentification pour la connexion, laissez cette zone vide.
 ### Plus d'informations sur SonarQube
 
 Pour en savoir plus sur SonarQube, consultez l'article [SonarQube![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window} sur IBM Cloud Garage Method.
-
-
-## Ajout d'UrbanCode Deploy (bêta)
-{: #urbancodedeploy}
-
-IBM UrbanCode Deploy simplifie et automatise le déploiement d'application. Il utilise un outil d'organigramme graphique pour créer des processus automatisés qui déploient, mettent à niveau, réinstallent et désinstallent les applications. En utilisant ces tâches automatisées, vous déplacez vos applications à chaque étape du développement, y compris dans les environnements de développement, de test et de production.
-
-**Remarque :** cette intégration d'outils est uniquement disponible sur {{site.data.keyword.Bluemix_notm}} Public. Elle est préconfigurée et ne nécessite aucun paramètre de configuration. Vous ne pouvez pas la reconfigurer.
-
-Pour afficher les tendances de déploiement à travers les applications, les équipes et les environnements et identifier les goulots d'étranglement dans le pipeline de livraison et les zones les plus efficaces, ajoutez l'intégration d'outil UrbanCode Deploy.
-
-1. Sur le tableau de bord DevOps, cliquez sur **Chaînes d'outils**. Cliquez sur la chaîne d'outils à laquelle vous souhaitez ajouter UrbanCode Deploy. Vous pouvez également, depuis votre page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
-
- a. Cliquez sur **Ajouter un outil**.
-
- b. Dans la section Integrations d'outils, cliquez sur **UrbanCode Deploy**.
-
-1. Cliquez sur **Créer une intégration**.
-1. A partir de votre chaîne d'outils, cliquez sur **UrbanCode Deploy**. Pour afficher les données à partir d'un serveur UrbanCode Deploy dans Delivery Insights, vous devez configurer une instance de DevOps Connect, installer un correctif sur le serveur puis connecter ce serveur à DevOps Connect. Pour plus d'informations, voir [Showing data from IBM UrbanCode Deploy servers](/docs/services/DevOpsInsights/uc_insights_connect_ucd.html){: new_window}.
-
-### Plus d'informations sur UrbanCode Deploy
-
-Pour en savoir plus sur UrbanCode Deploy, voir l'[article IBM UrbanCode Deploy![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/deliver/tool_ibm_urbancode_deploy/){: new_window} sur IBM Cloud Garage Method.

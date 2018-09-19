@@ -2,12 +2,17 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-12"
+lastupdated: "2018-8-2"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Initiation aux chaînes d'outils après la mise à niveau de votre projet {{site.data.keyword.jazzhub_short}}
 {: #toolchains_post_upgrade}
@@ -16,7 +21,7 @@ Les projets {{site.data.keyword.jazzhub}} sur hub.jazz.net ont été convertis e
 
 {{site.data.keyword.jazzhub_short}} sur hub.jazz.net est retiré. 
 
-Pour vos projets DevOps, utilisez le [service {{site.data.keyword.contdelivery_short}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops){:new_window}. Si vous ne maîtrisez pas encore {{site.data.keyword.Bluemix_notm}}, prenez soin de lire la [présentation d'{{site.data.keyword.Bluemix_notm}}](/docs/overview/whatisbluemix.html#bluemixoverview).
+Pour vos projets DevOps, utilisez le [service {{site.data.keyword.contdelivery_short}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops){:new_window}. Si vous ne maîtrisez pas encore {{site.data.keyword.Bluemix_notm}}, prenez soin de lire la [présentation d'{{site.data.keyword.Bluemix_notm}}](/docs/overview/ibm-cloud.html#overview).
 
 {: shortdesc}
 
@@ -26,19 +31,19 @@ Pour vos projets DevOps, utilisez le [service {{site.data.keyword.contdelivery_s
 Vérifiez que la mise à niveau est terminée en vous rendant sur la [page Chaînes d'outils![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops/toolchains){: new_window} et en vérifiant que des chaînes d'outils  portant le même nom que vos projets hub.jazz.net sont affichées. Si vos projets ont été automatiquement mis à niveau, conservez les restrictions suivantes à l'esprit :
    - Si une autre chaîne d'outils avait déjà utilisé le nom de votre projet avant que celui-ci ne soit mis à niveau, la nouvelle chaîne d'outils qui a été créée pour votre projet peut ne pas porter le même nom que votre projet. 
    - Si vous ne voyez aucune chaîne d'outils pour votre projet, passez dans une autre organisation dont vous êtes membre et vérifiez les chaînes d'outils qu'elle contient.
-   - Si la chaîne d'outils de l'un de vos projets reste introuvable, il se peut que sa mise à niveau soit toujours en cours. Si vous avez besoin d'accéder immédiatement à cette chaîne d'outils, contactez le [support ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}.
-
+   
 ## Présentation des chaînes d'outils
 {: #compare_toolchains}
 
-Si vous possédiez un ou plusieurs projets sur hub.jazz.net, ils ont été automatiquement convertis en chaînes d'outils dans le service {{site.data.keyword.contdelivery_short}}, à moins que la mise à niveau ait échoué. Les mises à niveau peuvent échouer en raison de comptes IBM Cloud ou organisation non valides. Ces propriétaires de comptes et d'organisations ont été informés par courrier électronique des défaillances et des actions spécifiques requises de leur part pour y remédier. Si vous ne voyez pas la chaîne d'outils relative à votre projet et que vous avez besoin d'accéder immédiatement à cette chaîne d'outils, contactez le [support ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}. 
+Si vous possédiez un ou plusieurs projets sur hub.jazz.net, ils ont été automatiquement convertis en chaînes d'outils dans le service {{site.data.keyword.contdelivery_short}}, à moins que la mise à niveau ait échoué. Les mises à niveau peuvent échouer en raison de comptes IBM Cloud ou organisation non valides. Ces propriétaires de comptes et d'organisations ont été informés par courrier électronique des défaillances et des actions spécifiques requises de leur part pour y remédier. Si vous avez besoin d'aide pour localiser la chaîne d'outils pour votre projet mis à niveau, contactez le [support ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}. 
 
 Les chaînes d'outils sont semblables à des projets, à quelques différences importantes près :
 
 - Les projets ne peuvent avoir qu'un seul référentiel et qu'un seul pipeline. Les chaînes d'outils peuvent avoir autant de référentiels et de pipelines que nécessaire.
 - Les chaînes d'outils peuvent inclure des outils qui ne sont pas disponibles dans des projets, tels que Slack, Sauce Labs, PagerDuty et {{site.data.keyword.DRA_full}}.
 
- **Remarque** : {{site.data.keyword.DRA_short}} est uniquement disponible dans la région sud des Etats-Unis.
+ {{site.data.keyword.DRA_short}} est disponible uniquement dans la région sud des Etats-Unis.
+{: tip}
  
 - Dans les projets, l'appartenance est gérée au niveau du projet. L'accès aux chaînes d'outils est géré par l'organisation {{site.data.keyword.Bluemix_notm}} et par la chaîne d'outils. Pour gérer une chaîne d'outils, vous devez être membre de l'organisation qui la contient. Le propriétaire de la chaîne d'outils peut davantage contrôler qui peut accéder à la chaîne d'outils et ce que cette personne est autorisée à faire. Pour plus d'informations, voir l'étape 2 dans la rubrique [Initiation à votre chaîne d'outils](#upgrade_next_steps).
 - Selon le type de référentiel que vous avez utilisé dans votre projet sur hub.jazz.net, votre chaîne d'outils peut contenir un référentiel GitHub.com ou un référentiel {{site.data.keyword.gitrepos}}.
@@ -53,7 +58,7 @@ Pour en savoir plus sur les chaînes d'outils, consultez [YouTube ![Icône de li
     - Accordez aux membres de l'organisation un accès à la chaîne d'outils depuis la page Gérer de la chaîne d'outils. Des membres de projet existants sont ajoutés en tant que membres de la chaîne d'outils dans le cadre du processus de mise à niveau. Pour en savoir plus sur le contrôle d'accès aux chaînes d'outils, voir [Gestion des accès ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
     - Si un utilisateur n'est pas membre de l'organisation à laquelle appartient la chaîne d'outils, ajoutez-le à l'organisation depuis la page Gérer les organisations.
     - Si votre chaîne d'outils utilise {{site.data.keyword.gitrepos}}, tous les membres du projet JazzHub dotés d'un ID {{site.data.keyword.Bluemix_notm}} valide sont ajoutés au référentiel {{site.data.keyword.gitrepos}} avec les mêmes privilèges que ceux qu'ils avaient dans le projet JazzHub. Si votre projet JazzHub comprend des membres qui ne disposent pas d'un ID {{site.data.keyword.Bluemix_notm}} valides, ceux-ci peuvent s'inscrire pour en obtenir un. Une fois qu'ils se sont inscrits, vous pouvez les ajouter au référentiel.
-      Pour obtenir des informations complémentaires sur la gestion des organisations, voir [Gestion des organisations et des espaces ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
+      Pour obtenir des informations complémentaires sur la gestion des organisations, voir [Gestion des organisations et des espaces ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window}.
 
 2. Si vous utilisez {{site.data.keyword.gitrepos}}, authentifiez-vous à l'aide d'un jeton d'accès personnel ou d'une clé SSH. Pour en savoir plus sur les clés SSH, voir [Création d'un jeton d'accès personnel ou d'une clé SSH pour l'authentification](/docs/services/ContinuousDelivery/git_working.html#git_authentication). Pour s'authentifier depuis un client Git externe via https, procédez comme suit :
     1. Accédez à la page [Jetons d'accès ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} de vos paramètres utilisateurs {{site.data.keyword.gitrepos}}.
@@ -62,14 +67,16 @@ Pour en savoir plus sur les chaînes d'outils, consultez [YouTube ![Icône de li
     4. Pour vous authentifier auprès de {{site.data.keyword.gitrepos}} depuis un client Git externe via HTTPS, utilisez votre nom d'utilisateur et votre jeton d'accès personnel.
     5. Si vous souhaitez réutiliser le référentiel local de votre référentiel JazzHub Git, faites pointer le référentiel vers le nouveau référentiel dans {{site.data.keyword.gitrepos}}. Depuis un interpréteur de commande shell dans un terminal, accédez au répertoire dans lequel le référentiel JazzHub Git est cloné. Entrez la commande `git remote set-url` : `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        **Astuce :** pour vérifier quelles URL distantes sont définies sur quels noms distants, utilisez la commande `git remote -v`. Le nom distant
-par défaut est `origin`. Si vous disposez d'une configuration plus avancée, le format de la commande est le suivant : `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        Pour vérifier quelles URL distantes sont définies sur quels noms distants, utilisez la commande `git remote -v`. Le nom distant par défaut est `origin`. Si vous disposez d'une configuration plus avancée, le format de la commande est le suivant : `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        {: tip}
 
 3. Facultatif : pour explorer la maturité du développement de votre projet, les pratiques de votre équipe et la qualité de votre codebase, ajoutez IBM Cloud
 {{site.data.keyword.DRA_short}} à votre chaîne d'outils. {{site.data.keyword.DRA_short}} applique les analyses de déploiement, le développeur et l'équipe aux projets DevOps. Pour
 plus d'informations, voir [Initiation à {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html).
 
-  **Remarque** : {{site.data.keyword.DRA_short}} est uniquement disponible dans la région sud des Etats-Unis.
+  {{site.data.keyword.DRA_short}} est disponible uniquement dans la région sud des Etats-Unis.
+
+{: tip}
 
 
 ## Traitement des incidents
@@ -134,7 +141,7 @@ Si vous êtes un employé d'IBM, les projets IBM internes peuvent être facturé
 ### Ma chaîne d'outils est introuvable ou inaccessible. Que dois-je faire ?
 {: #faq_find}
 
-Les chaînes d'outils sont hébergées dans les organisations {{site.data.keyword.Bluemix_notm}}. Le processus de mise à niveau ajoute tous les membres du projet JazzHub à la chaîne d'outils. Cela dit, si ces utilisateurs ne sont pas ajoutés à l'organisation {{site.data.keyword.Bluemix_notm}} par le propriétaire de cette dernière, ils ne peuvent pas voir la chaîne d'outils. 
+Les chaînes d'outils sont hébergées dans les organisations {{site.data.keyword.Bluemix_notm}}. Le processus de mise à niveau ajoute tous les membres du projet JazzHub à la chaîne d'outils. Cela dit, si ces utilisateurs ne sont pas ajoutés à l'organisation {{site.data.keyword.Bluemix_notm}} par le propriétaire de cette dernière, ils ne peuvent pas voir la chaîne d'outils.
 
 Pour accéder à votre chaîne d'outils, accédez à {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône de menu, puis sur **Services &gt; DevOps**. La page Chaîne d'outils s'affiche. Vérifiez que vous vous trouvez dans la région Sud des Etats-Unis et que vous avez été ajouté à l'organisation qui contient la chaîne d'outils. Si votre chaîne d'outils n'apparaît pas sur la page Chaînes d'outils, consultez [cette entrée de FAQ](#faq_uk).
 
@@ -169,7 +176,8 @@ Si vous souhaitez que votre chaîne d'outils figure dans une organisation améri
    
    4. Supprimez la chaîne d'outils qui a été créée via le processus de mise à niveau. 
    
-      **Remarque :** le référentiel Git n'est pas supprimé automatiquement. Vous souhaiterez peut-être le supprimer manuellement ou le renommer pour le moment. Si vous l'avez déjà modifié, vous pourrez passer à la future chaîne d'outils pour l'utiliser ultérieurement.
+      Le référentiel Git n'est pas supprimé automatiquement. Vous souhaiterez peut-être le supprimer manuellement ou le renommer pour le moment. Si vous l'avez déjà modifié, vous pourrez mettre à jour la future chaîne d'outils pour l'utiliser ultérieurement.
+{: tip}
 
    5. Revenez au projet JazzHub. Normalement, il doit être automatiquement réinitialisé pour permettre une autre tentative de mise à niveau. Si tel n'est pas le cas, contactez hub@jazz.net en indiquant l'URL du projet.
    

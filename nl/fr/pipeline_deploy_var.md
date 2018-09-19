@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-1-23"
+lastupdated: "2018-8-2"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -11,11 +11,13 @@ lastupdated: "2018-1-23"
     Indentation as per the previous template must be preserved.
 -->
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
-{:tip:.tip}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Propriétés et ressources d'environnement
 {: #deliverypipeline_environment}
@@ -30,7 +32,7 @@ Vous pouvez ajouter quatre types de propriété à partir de votre onglet Propri
 * **Texte** : Clé de propriété avec une valeur monoligne.
 * **Zone de texte** : Clé de propriété avec une valeur multiligne.
 * **Sécurisé** : Clé de propriété avec une valeur monoligne. La valeur apparaît sous la forme d'astérisques.
-* **Propriétés** : Fichier dans le référentiel du projet. Ce fichier peut contenir plusieurs propriétés. Chaque propriété doit figurer sur sa propre ligne. Pour distinguer des paires clé-valeur, utilisez le signe égal (=).
+* **Propriétés** : Fichier dans le référentiel du projet. Ce fichier peut contenir plusieurs propriétés. Chaque propriété doit figurer sur sa propre ligne. Pour distinguer des paires clé-valeur, utilisez le signe égal (=). Placez toutes les valeurs de chaîne entre guillemets. Par exemple, MY_STRING="SOME STRING VALUE".
 
 Vous pouvez examiner les propriétés d'environnement pour un travail de pipeline en exécutant la commande `env` dans le script du travail.
 {:tip}
@@ -91,7 +93,8 @@ défaut dans les environnements de pipeline.
 | MAVEN_HOME | Chemin d'accès à Apache Maven 3.2.1. |
 | NODE_HOME | Chemin d'accès à Node.js 0.10.29. |
 
-**Astuce** : vous pouvez utiliser la version 1.10+ d'Apache Ant dans les scripts de votre pipeline en affectant à `ANT_HOME` la valeur `$ANT_JAVA8_HOME` et en affectant à `JAVA_HOME` la valeur `$JAVA8_HOME`.
+Vous pouvez utiliser la version 1.10+ d'Apache Ant dans les scripts de votre pipeline en affectant à `ANT_HOME` la valeur `$ANT_JAVA8_HOME` et en affectant à `JAVA_HOME` la valeur `$JAVA8_HOME`.
+{: tip}
 
 ### Propriétés de déploiement
 
@@ -112,7 +115,8 @@ Plusieurs environnements d'exécution, outils et modules de noeud sont préinsta
 
 ### Environnements d'exécution et outils
 
-*Remarque :* Tous les liens figurent dans le répertoire de base.
+Tous les liens figurent dans le répertoire de base.
+{: tip}
 
 | Ressource | Nom du lien | Chemin d'accès |
 |----------|-----------|-----------|

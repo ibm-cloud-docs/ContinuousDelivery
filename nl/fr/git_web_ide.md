@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-3-23"
+lastupdated: "2018-8-2"
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # Utilisation de Git dans Eclipse Orion Web IDE
 {: #git_web_ide}
@@ -83,13 +85,12 @@ Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence r
 
 1. Tapez `git branch -d <branchname>` et appuyez sur Entrée.
 
-##Insertion forcée des modifications locales dans une banche distante
+##Insertion forcée des modifications locales dans une branche distante
 {: #force_push}
 
 Ecrasez le contenu d'une branche distante référencée avec le contenu de votre branche locale active.
 
-**Important :** lorsque vous forcez l'insertion d'une branche locale dans une branche distante, il est possible que vous perdiez des validations sur la branche
-distante.
+Lorsque vous forcez l'insertion d'une branche locale dans une branche distante, il est possible que vous perdiez des validations sur la branche distante.{: tip}
 
 ### Eclipse Orion Web IDE
 {: #force_push_web}
@@ -125,36 +126,32 @@ distante.
 
 1. Dans la section Modifications du répertoire de travail, cochez la case de chaque fichier à valider.
 
-3. Dans la zone **Entrez le message de validation**, tapez un message décrivant vos modifications.
+2. Dans la zone **Entrez le message de validation**, tapez un message décrivant vos modifications.
 
-  **Astuce **: fournissez un message de validation détaillé. Votre message doit fournir suffisamment de détails pour que quelqu'un puisse comprendre pourquoi la
-modification était nécessaire sans information additionnelle. Vous pouvez inclure un lien vers un élément dans le dispositif de suivi de votre équipe pour aider. La première ligne du message de
-validation doit contenir moins de 50 caractères. Ajoutez une ligne vierge avant d'ajouter le reste du texte.
+  Fournissez un message de validation détaillé. Votre message doit fournir suffisamment de détails pour que quelqu'un puisse comprendre pourquoi la modification était nécessaire sans information additionnelle. Vous pouvez inclure un lien vers un élément dans le dispositif de suivi de votre équipe pour aider. La première ligne du message de validation doit contenir moins de 50 caractères. Ajoutez une ligne vierge avant d'ajouter le reste du texte.
+  {: tip}
 
-4. Cliquez sur **Valider**.
+3. Cliquez sur **Valider**.
 
-5. Cliquez sur **Insérer**.
+4. Cliquez sur **Insérer**.
 
 ### Terminal Git
 {: #commit_cmd}
 
 1. Entrez `git status` et appuyez sur Entrée.
 
-2. Examinez les modifications à valider. Si tous vos fichiers à valider figurent dans la liste, vous pouvez continuer. Pour valider des fichiers avec retrait du contenu de l'index,
-ajoutez-leur d'abord le contenu de l'index.
+2. Examinez les modifications à valider. Si tous vos fichiers à valider figurent dans la liste, vous pouvez continuer. Pour valider des fichiers avec retrait du contenu de l'index, ajoutez-leur d'abord le contenu de l'index.
 
 3. Entrez `git commit` et appuyez sur Entrée.
 
 4. Entrez le récapitulatif de la validation, ajoutez une ligne vierge, puis entrez une description de la validation.
 
-  **Astuce **: le récapitulatif de la validation ne doit pas dépasser 50 caractères. La description de la validation doit fournir suffisamment de détails pour que
-quelqu'un puisse comprendre pourquoi la modification était nécessaire sans information additionnelle. Vous pouvez inclure un lien vers un élément dans le dispositif de suivi de votre équipe
-pour aider.
+  Le récapitulatif de la validation ne doit pas dépasser 50 caractères. La description de la validation doit fournir suffisamment de détails pour que quelqu'un puisse comprendre pourquoi la modification était nécessaire sans information additionnelle. Vous pouvez inclure un lien vers un élément dans le dispositif de suivi de votre équipe pour aider.
+  {: tip}
 
 5. Sauvegardez le message de validation.
 
-  **Remarque :** pour sauvegarder votre message de validation et fermer Vim, qui est peut-être votre éditeur de texte par défaut, appuyez sur Echap, entrez
-`:wq` et appuyez sur Entrée.
+  Pour sauvegarder votre message de validation et fermer Vim, qui est peut-être votre éditeur de texte par défaut, appuyez sur Echap, entrez `:wq` et appuyez sur Entrée.{: tip}
 
 4. Entrez `git push` et appuyez sur Entrée.
 
@@ -198,7 +195,8 @@ représentation visuelle montre toutes les validations et toutes les branches su
 
 3. Pour vérifier les modifications d'un fichier, cliquez sur **>**.
 
-  **Remarque :** si une validation a introduit une modification dans une ligne, la ligne d'origine est ombrée en rose et la nouvelle ligne est ombrée en vert.  De même, les lignes ajoutées par une validation sont ombrées en vert et les lignes supprimées par une validation sont ombrées en rose.
+  Si une validation a introduit une modification dans une ligne, la ligne d'origine est ombrée en rose et la nouvelle ligne est ombrée en vert. De même, les lignes ajoutées par une validation sont ombrées en vert et les lignes supprimées par une validation sont ombrées en rose.
+  {: tip}
 
 ### Terminal Git
 {: #compare_changes_cmd}
@@ -213,15 +211,16 @@ représentation visuelle montre toutes les validations et toutes les branches su
 
 3. Passez en revue les modifications.
 
-  **Remarque :** si une validation a introduit un changement dans une ligne, le texte de la ligne d'origine apparaît en rouge et est précédé d'un signe moins (-). Le texte de la nouvelle ligne est affiché en vert et est précédé d'un signe plus (+).  De même, le texte des lignes ajoutées par une validation est affiché en vert et est précédé d'un signe plus (+). Le texte des lignes supprimées par une validation est affiché en rouge et est précédé d'un signe moins (-).
+  Si une validation a introduit un changement dans une ligne, le texte de la ligne d'origine apparaît en rouge et est précédé d'un signe moins (-). Le texte de la nouvelle ligne est affiché en vert et est précédé d'un signe plus (+). De même, le texte des lignes ajoutées par une validation est affiché en vert et est précédé d'un signe plus (+). Le texte des lignes supprimées par une validation est affiché en rouge et est précédé d'un signe moins (-).
+  {: tip}
 
 1. Pour arrêter l'affichage des entrées, appuyez sur Q.
 
 ## Modification de la dernière validation
 {: #modify_last_commit}
 
-  **Remarque :** lorsque vous modifiez la dernière validation avant de l'insérer dans un référentiel distant, vous réécrivez l'historique des validations. Cette modification peut
-causer des erreurs de validation et d'autres problèmes aux autres contributeurs de votre projet. Assurez-vous de ce que vous faîtes avant de modifier une validation envoyée par commande push à un référentiel distant.
+  Lorsque vous modifiez la dernière validation avant de l'insérer dans un référentiel distant, vous réécrivez l'historique des validations. Cette modification peut causer des erreurs de validation et d'autres problèmes aux autres contributeurs de votre projet. Assurez-vous de ce que vous faîtes avant de modifier une validation envoyée par commande push à un référentiel distant.
+  {: tip}
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}
@@ -242,8 +241,8 @@ causer des erreurs de validation et d'autres problèmes aux autres contributeurs
 
 3. Dans votre éditeur de texte, acceptez ou modifiez le message de validation.
 
-  **Remarque :** pour sauvegarder votre message de validation et fermer Vim, qui est peut-être votre éditeur de texte par défaut, appuyez sur Echap, entrez
-`:wq` et appuyez sur Entrée.
+  Pour sauvegarder votre message de validation et fermer Vim, qui est peut-être votre éditeur de texte par défaut, appuyez sur Echap, entrez `:wq` et appuyez sur Entrée.
+{: tip}
 
 ## Etiquetage d'une validation
 {: #tag_commit}
@@ -255,9 +254,9 @@ causer des erreurs de validation et d'autres problèmes aux autres contributeurs
 
 2. Affichez les détails de la validation en cliquant dessus.
 
-2. Dans le panneau de validation, cliquez sur **Créer une étiquette pour la validation** <img class="inline"  src="./images/tag.png" alt="Créer une étiquette pour la validation">.
+3. Dans le panneau de validation, cliquez sur **Créer une étiquette pour la validation** <img class="inline"  src="./images/tag.png" alt="Créer une étiquette pour la validation">.
 
-3. Dans la zone de nom, entrez le texte de votre étiquette. Cliquez sur **Soumettre**.
+4. Dans la zone de nom, entrez le texte de votre étiquette. Cliquez sur **Soumettre**.
 
 ### Terminal Git
 {: #tag_commit_cmd}
@@ -273,7 +272,7 @@ causer des erreurs de validation et d'autres problèmes aux autres contributeurs
 {: #change_info_web}
 1. Cliquez sur l'icône de configuration <img class="inline" src="./images/configurations.png" alt="Icône de configuration">.
 
-3. Modifiez l'adresse e-mail et le nom de l'utilisateur en mettant à jour les valeurs user.email et user.name. Cliquez sur **Soumettre** pour enregistrer les modifications.
+2. Modifiez l'adresse e-mail et le nom de l'utilisateur en mettant à jour les valeurs user.email et user.name. Cliquez sur **Soumettre** pour enregistrer les modifications.
 
 ### Terminal Git
 {: #change_info_cmd}
@@ -310,8 +309,7 @@ Annuler les modifications introduites par une validation dans votre branche acti
 ## Fusion des modifications
 {: #merge_changes}
 
-Si vous avez besoin de distribuer des modifications d'une branche source à une branche de destination, vous devez d'abord les faire fusionner. Généralement, la branche source
-est la branche dans laquelle vous avez effectué des changements et la branche de destination est votre branche maître.
+Si vous avez besoin de distribuer des modifications d'une branche source à une branche de destination, vous devez d'abord les faire fusionner. Généralement, la branche source est la branche dans laquelle vous avez effectué des changements et la branche de destination est votre branche maître.
 
 ### Eclipse Orion Web IDE
 {: #merge_changes_web}
@@ -322,8 +320,7 @@ est la branche dans laquelle vous avez effectué des changements et la branche d
 
  <img class="screen-shot" src="./images/destinationbranch.png" alt="Réservation de la branche de destination">
 
-1. Cliquez sur la liste **Référence**, développez **local** et cliquez sur le nom de la branche source. Les modifications de la branche source
-s'affichent dans la section Entrant.
+1. Cliquez sur la liste **Référence**, développez **local** et cliquez sur le nom de la branche source. Les modifications de la branche source s'affichent dans la section Entrant.
 
   <img class="screen-shot" src="./images/sourcebranch.png" alt="Modifications de la branche source affichées dans la section Entrant">
 
@@ -331,8 +328,7 @@ s'affichent dans la section Entrant.
 
 1. Dans la liste **Référence**, cliquez sur l'icône de réservation situé en regard de la branche dans laquelle vous venez de faire fusionner les modifications.
 
-1. Si vous souhaitez distribuer les modifications, cliquez sur **Insérer**. Sinon, vous pouvez maintenant créer un déploiement test afin de vous assurer que
-tout fonctionne comme prévu.
+1. Si vous souhaitez distribuer les modifications, cliquez sur **Insérer**. Sinon, vous pouvez maintenant créer un déploiement test afin de vous assurer que tout fonctionne comme prévu.
 
 ### Terminal Git
 {: #merge_changes_cmd}
@@ -354,15 +350,14 @@ tout fonctionne comme prévu.
 
 2. Dans l'interface Web IDE, ouvrez chaque fichier contenant des conflits.
 
-3. Résolvez chaque modification créant un conflit.
-
-  **Remarque :** supprimez tout le texte que vous ne souhaitez pas conserver. Chaque conflit a le format suivant :
+3. Résolvez chaque modification créant un conflit. Supprimez tout le texte que vous ne souhaitez pas conserver. Chaque conflit a le format suivant :
 
 		<<<<<<< EN-TETE
 		Texte dans la branche réservée.
 		=======
 		Texte dans la branche fusionnée.
 		>>>>>>> ID_validation_de_branche_fusionnée
+		
 4. Pour chaque fichier en conflit, cochez la case. Entrez un message de validation de fusion et cliquez sur **Valider**.
 
 ### Terminal Git
@@ -372,15 +367,14 @@ tout fonctionne comme prévu.
 
 2. Dans un éditeur de texte, ouvrez un fichier contenant des conflits.
 
-3. Résolvez chaque modification créant un conflit, puis enregistrez le fichier.
-
-  **Remarque :** supprimez tout le texte que vous ne souhaitez pas conserver. Chaque conflit a le format suivant :
+3. Résolvez chaque modification créant un conflit, puis enregistrez le fichier. Supprimez tout le texte que vous ne souhaitez pas conserver. Chaque conflit a le format suivant :
 
 		<<<<<<< EN-TETE
 		Texte dans la branche réservée.
 		=======
 		Texte dans la branche fusionnée.
 		>>>>>>> branche_fusionnée
+		
 4. Ajoutez le contenu de l'index de chaque fichier que vous avez modifié, puis validez la fusion.
 
 ## Resynchronisation des branches
@@ -416,9 +410,11 @@ tout fonctionne comme prévu.
 
 3. Si vous rencontrez des conflits, [résolvez-les](#resolve_a_rebase_conflict).
 
-5. Répétez l'étape précédente autant de fois que nécessaire afin de finaliser l'opération de resynchronisation.
+4. Répétez l'étape précédente autant de fois que nécessaire afin de finaliser l'opération de resynchronisation.
 
-  **Remarque :** Pour arrêter l'opération de resynchronisation, entrez `git rebase --abort` et appuyez sur Entrée.
+  Pour arrêter l'opération de resynchronisation, entrez `git rebase --abort` et appuyez sur Entrée.
+
+{: tip}
 
 ## Résolution d'un conflit de resynchronisation
 {: #resolve_a_rebase_conflict}
@@ -430,15 +426,14 @@ tout fonctionne comme prévu.
 
 2. Dans l'interface Web IDE, ouvrez chaque fichier contenant des conflits.
 
-3. Résolvez chaque modification créant un conflit.
-
-  **Remarque :** supprimez tout le texte que vous ne souhaitez pas conserver. Chaque conflit a le format suivant :
+3. Résolvez chaque modification créant un conflit. Supprimez tout le texte que vous ne souhaitez pas conserver. Chaque conflit a le format suivant :
 
 		<<<<<<< EN-TETE
 		Texte dans la branche réservée.
 		=======
 		Texte dans la branche fusionnée.
-		>>>>>>> ID_validation_de_branche_fusionnée
+		>>>>>>> commit_ID_from_merged_branch
+		{: tip}
 4. Dans le panneau de resynchronisation, cochez la case de tous les fichiers corrigés et cliquez sur **Continuer**.
 
 ### Terminal Git
@@ -448,15 +443,14 @@ tout fonctionne comme prévu.
 
 2. Dans un éditeur de texte, ouvrez un fichier contenant des conflits.
 
-3. Résolvez chaque modification créant un conflit, puis enregistrez le fichier.
-
-  **Remarque :** supprimez tout le texte que vous ne souhaitez pas conserver. Chaque conflit a le format suivant :
+3. Résolvez chaque modification créant un conflit, puis enregistrez le fichier. Supprimez tout le texte que vous ne souhaitez pas conserver. Chaque conflit a le format suivant :
 
 		<<<<<<< EN-TETE
 		Texte dans la branche réservée.
 		=======
 		Texte dans la branche fusionnée.
 		>>>>>>> branche_fusionnée
+		
 4. Ajoutez le contenu de l'index de chaque fichier que vous avez modifié.
 
 5. Reprenez l'opération de resynchronisation en tapant `git rebase --continue`, puis en appuyant sur Entrée.

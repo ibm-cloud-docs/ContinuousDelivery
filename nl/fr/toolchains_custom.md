@@ -2,14 +2,16 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-2-26"
+lastupdated: "2018-8-2"
 
 ---
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 
 # Création de modèles de chaîne d'outils personnalisés
@@ -18,7 +20,7 @@ lastupdated: "2018-2-26"
 Améliorez votre flux de travaux DevOps en créant un modèle de chaîne d'outils personnalisé. Vous pouvez démarrer rapidement avec un modèle de chaîne d'outils existant, ou créer un modèle de chaîne d'outils qui inclut uniquement les intégrations dont vous avez besoin. Vous pouvez ajouter ou retirer des intégrations de votre chaîne d'outils à tout moment.
 {:shortdesc}
 
-Il existe différentes façons de [créer une chaîne d'outils](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}. Après avoir créé un modèle de chaîne d'outil personnalisé, vous pouvez le partager en [créant un déploiement vers {{site.data.keyword.Bluemix_notm}}](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}. Vous trouverez des détails sur le kit de développement du modèle de chaîne d'outils sous [Open Toolchain Templates SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Vous trouverez un tutoriel étape par étape sur le [site Garage Method](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
+Il existe différentes façons de [créer une chaîne d'outils](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}. Après avoir créé un modèle de chaîne d'outil personnalisé, vous pouvez le partager en [créant un déploiement vers {{site.data.keyword.Bluemix_notm}}](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}.   Vous trouverez des détails sur le kit de développement du modèle de chaîne d'outils sous [Open Toolchain Templates SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Vous trouverez un tutoriel étape par étape sur le [site Garage Method](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
 
 
 ## Initiation
@@ -93,11 +95,11 @@ Chaque sous-section de service contient les informations suivantes :
 
 * service_id - Chaîne unique qui identifie le service. Cette chaîne vient directement du [catalogue des services](https://github.com/open-toolchain/sdk/wiki/services.md){: new_window}.
 
-* parameters - Zéro paramètre de configuration du service ou plus. Ces paramètres varient entre les services : les utilisateurs doivent consulter le catalogue afin de déterminer les paramètres dont un service particulier a besoin. 
+* parameters - Zéro paramètre de configuration du service ou plus. Ces paramètres varient entre les services : les utilisateurs doivent consulter le catalogue afin de déterminer les paramètres dont un service particulier a besoin.
 
 ### Inclure du texte provenant d'autres fichiers
 
-Toutes les informations de votre chaîne d'outils peuvent se trouver dans le fichier `toolchain.yml`. Cependant, vous pouvez créer des fichiers séparés pour chaque interface utilisateur d'intégration d'outil en utilisant `$text`. Cela peut faciliter la maintenance de vos chaînes d'outils et minimiser le temps que vous passez à éditer les fichiers de configuration. Cet exemple extrait d'un fichier `toolchain.yml` montre comment utiliser le contenu du fichier `pipeline.yml` comme valeur pour `content`.
+Toutes les informations de votre chaîne d'outils peuvent se trouver dans le fichier `toolchain.yml`.  Cependant, vous pouvez créer des fichiers séparés pour chaque interface utilisateur d'intégration d'outil en utilisant `$text`. Cela peut faciliter la maintenance de vos chaînes d'outils et minimiser le temps que vous passez à éditer les fichiers de configuration.  Cet exemple extrait d'un fichier `toolchain.yml` montre comment utiliser le contenu du fichier `pipeline.yml` comme valeur pour `content`.
 
 ```
   configuration:
@@ -116,7 +118,7 @@ messages:
   $i18n: messages.yml
 ```
 
-  Les chaînes en anglais utilisent le format `messages.yml` et les autres langues utilisent leurs codes de langue respectifs, par exemple `messages_de.yml`. La liste des codes de langue se trouve sous [Etiquettes d'identification des langues](https://tools.ietf.org/html/rfc5646){: new_window}.
+  Les chaînes en anglais utilisent le format `messages.yml` et les autres langues utilisent leurs codes de langue respectifs, par exemple `messages_de.yml`.   La liste des codes de langue se trouve sous [Etiquettes d'identification des langues](https://tools.ietf.org/html/rfc5646){: new_window}.
 
    Pour référencer une chaîne externalisée, utilisez `$ref` pour récupérer la chaîne.  Par exemple,
 
@@ -180,12 +182,13 @@ Dans cet exemple, l'URL Git et la branche Git s'appliquent à un nouveau modèle
 | service_id | Propriété | <`githubpublic`, `githubprivate`, `hostedgit`, `gitlab`> | Type de référentiel |
 | parameters: | Clé |  |  |
 | repo_name | Propriété |  | Modèle pour repo-name. L'exemple qui suit utilise le nom de la chaîne d'outils comme nom de référentiel |
-| repo_url | Propriété |  | URL du référentiel|
+| repo_url | Propriété |  | URL du référentiel |
 | type | Propriété | <`new` , `fork` , `clone` , `link`> | Comment créer le nouveau référentiel |
 | has_issues | Propriété | <`true` , `false`> | Utilisation de Issues |
 | enable_traceability | Propriété |  <`true` , `false`> | Indique s'il y a lieu de suivre le déploiement des modifications de code en créant des étiquettes, des libellés et des commentaires sur les validations, les demandes d'extraction et les problèmes référencés|
 
- **Remarque :** si vous définissez plusieurs référentiels et les configurez comme `has_issues: true`, une instance unique du dispositif de suivi GitHub Issue est ajoutée à la chaîne d'outils. Le dispositif de suivi trace les problèmes de tous les référentiels pour lesquels cette propriété a pour valeur `true`.
+ Si vous définissez plusieurs référentiels et les configurez comme `has_issues: true`, une instance unique du dispositif de suivi GitHub Issue est ajoutée à la chaîne d'outils. Le dispositif de suivi trace les problèmes de tous les référentiels pour lesquels cette propriété a pour valeur `true`.
+ {: tip}
 
  Ce fragment est un exemple qui illustre cette section :
 
@@ -215,7 +218,7 @@ Dans cet exemple, l'URL Git et la branche Git s'appliquent à un nouveau modèle
 | service_id | Propriété | <`pipeline`> | Nom du service à utiliser |
 | parameters | Clé |  |  |
 | name | Propriété | <`repo_name`> | Identique à la définition dans la section repos |
-| ui-pipeline | Propriété | <`true` , `false`> |La valeur est true si les applications que ce pipeline déploie s'affichent dans le menu **Afficher l'appli** sur la page de la chaîne d'outils |
+| ui-pipeline | Propriété | <`true` , `false`> |La valeur est true si les applications que ce pipeline déploie s'affichent dans le menu **Afficher l'appli** sur la page de la chaîne d'outils  |
 | configuration | Clé |  |  |
 | content | Propriété | <`$ref(pipeline.yml)`> | Fichier contenant votre définition de pipeline |
 | env | Clé |  |  |
@@ -253,7 +256,7 @@ Dans cet exemple, l'URL Git et la branche Git s'appliquent à un nouveau modèle
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
        execute: true
- ```      
+ ```
  {: codeblock}
 
 4\. **Détails du déploiement :**
@@ -392,7 +395,7 @@ stages:
 
  Sur la page de création de la chaîne d'outils, lorsque Delivery Pipeline est sélectionné dans la section Intégrations configurables, cette section est développée et affiche les éléments suivants :
 
- 	* Nom de l'application 
+ 	* Nom de l'application
  	* Région, organisation et espace dans lesquels vos phases de pipeline sont déployées.
 
 Vous pouvez configurer ces éléments pour chaque outil.
@@ -401,7 +404,7 @@ Vous pouvez configurer ces éléments pour chaque outil.
 
  L'agencement de cette section dans l'interface utilisateur est défini par le schéma `deploy.json`.
 
- Au sein du schéma, les propriétés suivantes doivent être mises à jour afin de correspondre aux détails de votre application :  	
+ Au sein du schéma, les propriétés suivantes doivent être mises à jour afin de correspondre aux détails de votre application :
 
  	* Titre
  	* Description

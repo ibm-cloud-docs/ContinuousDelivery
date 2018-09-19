@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-21"
+lastupdated: "2018-7-19"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -19,10 +19,10 @@ Obtenez des réponses aux questions fréquentes relatives à l'utilisation d'{{s
 {:shortdesc}
 
 
-## J'ai essayé d'ajouter l'intégration d'outil GitHub à ma chaîne d'outils, pourquoi l'intégration d'outil n'a-t-elle pas été ajoutée ?
+## J'ai essayé d'ajouter l'intégration d'outils GitHub à ma chaîne d'outils, pourquoi l'intégration d'outils n'a-t-elle pas été ajoutée ?
 {: #cannot_authorize_github}
 
-Si {{site.data.keyword.Bluemix_notm}} n'est pas autorisé à accéder à votre compte GitHub, l'intégration d'outil n'est pas ajoutée à votre chaîne d'outils.
+Si {{site.data.keyword.Bluemix_notm}} n'est pas autorisé à accéder à votre compte GitHub, l'intégration d'outils n'est pas ajoutée à votre chaîne d'outils.
 
 Si vous configurez l'intégration d'outils GitHub pendant que vous créez votre chaîne d'outils, suivez les étapes suivantes pour autoriser l'accès à GitHub :
 
@@ -42,10 +42,29 @@ d'ensemble. Vous pouvez également, depuis la page de présentation de l'applica
 ## J'ai essayé de créer une chaîne d'outils, pourquoi ai-je reçu une erreur ?
 {: #cannot_create_toolchain}
 
-Lorsque vous tentez de créer une chaîne d'outils, si vous obtenez le message d'erreur suivant, supprimez une ou plusieurs chaînes d'outils de votre organisation puis créez votre chaîne d'outils à nouveau.
+Lorsque vous tentez de créer une chaîne d'outils dans une organisation, si vous obtenez le message d'erreur suivant, supprimez une ou plusieurs chaînes d'outils de votre organisation puis créez votre chaîne d'outils à nouveau.
 
 `Cette organisation contient 200 chaînes d'outils, ce qui correspond au maximum. Pour pouvoir ajouter une autre chaîne d'outils, retirez une ou plusieurs chaînes d'outils de l'organisation.`
 
+
+## Pourquoi la page Chaînes d'outils indique-t-elle que le plan Lite du service {{site.data.keyword.contdelivery_short}} est dépassé ? 
+
+{{site.data.keyword.contdelivery_short}} propose deux plans : Lite et Professional. Si vous disposez du plan Lite {{site.data.keyword.contdelivery_short}}, vous pouvez utiliser les chaînes d'outils gratuitement, dans les limites du plan. Le message d'erreur indique que vous avez dépassé une ou plusieurs limites du plan Lite. Par exemple, vous pouvez dépasser le plan si un trop grand nombre d'utilisateurs autorisés sont associés à l'instance de service {{site.data.keyword.contdelivery_short}} ou si vous avez exécuté le nombre maximal de travaux {{site.data.keyword.deliverypipeline}}. Pour plus d'informations sur les conditions de votre plan, voir [Utilisations des plans et limitations](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+
+
+## J'ai créé une chaîne d'outils, pourquoi la page Chaînes d'outils indique-t-elle qu'un service Continuous Delivery est requis ? 
+
+Les dispositions du plan pour l'instance de service {{site.data.keyword.contdelivery_short}} qui se trouve dans le même groupe de ressources ou la même organisation que la chaîne d'outils gèrent l'utilisation de certaines des intégrations d'outils ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} et {{site.data.keyword.gitrepos}}) contenues dans le service. Le message d'erreur indique que le groupe de ressources ou l'organisation ne contient pas l'instance requise du service {{site.data.keyword.contdelivery_short}}. Pour plus d'informations sur les dispositions de votre plan, voir [Utilisations des plans et limitations](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+
+
+## J'ai créé une chaîne d'outils dans une organisation Cloud Foundry, pourquoi la page Chaînes d'outils indique-t-elle qu'un service Continuous Delivery est requis ? 
+
+Lorsque vous créez une chaîne d'outils dans un groupe de ressources ou une organisation qui ne possède pas d'instance du service {{site.data.keyword.contdelivery_short}}, la plateforme de chaîne d'outils tente de créer automatiquement une instance du service à l'aide du plan Lite. Le message d'erreur indique que la plateforme de chaîne d'outils n'a pas pu créer l'instance de service. 
+
+Cette erreur peut se produire lorsque vous créez une chaîne d'outils dans la région Sud des Etats-Unis et dans une organisation Cloud Foundry qui ne possède pas déjà une instance de {{site.data.keyword.contdelivery_short}}. Dans la région Sud des Etats-Unis, vous devez créer toutes les nouvelles instances du service {{site.data.keyword.contdelivery_short}} dans des groupes de ressources.  
+
+Vous pouvez créer la chaîne d'outils dans un groupe de ressources ou créer la chaîne d'outils dans une organisation qui possède déjà une instance de {{site.data.keyword.contdelivery_short}}.
+  
 
 ## J'ai essayé de déployer une application dans {{site.data.keyword.Bluemix_notm}}, pourquoi ai-je reçu une erreur ?
 {: #org_outofmemory}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-4-18"
+lastupdated: "2018-7-19"
 
 ---
 
@@ -23,16 +23,38 @@ Les plans de service de {{site.data.keyword.contdelivery_short}} sont définis e
  * Les utilisateurs qui manipulent, déclenchent (soit directement dans l'interface utilisateur, soit indirectement en s'engageant dans un référentiel), ou visualisent l'état d'un pipeline de distribution.
  * Les utilisateurs qui interagissent avec Eclipse Orion {{site.data.keyword.webide}}.
  
-### Comment les utilisateurs sont-ils comptés ?
+### Comment les utilisateurs sont-ils comptabilisés pour les instances de  {{site.data.keyword.contdelivery_short}} dans les organisations ? 
 
-Les utilisateurs autorisés sont comptés en contemplant tous les utilisateurs dans l'organisation Cloud contenus par le service {{site.data.keyword.contdelivery_short}}. 
+Les utilisateurs autorisés sont comptabilisés en consultant tous les utilisateurs dans l'organisation Cloud contenus par le service {{site.data.keyword.contdelivery_short}}. 
 
-Pour afficher la liste des utilisateurs de votre organisation, dans la barre de menus, cliquez sur **Gérer > Compte > Organisations Cloud Foundry**.
+Pour afficher la liste des utilisateurs de votre organisation dans un environnement {{site.data.keyword.Bluemix_notm}} Public, cliquez sur **Gérer > Compte > Organisations Cloud Foundry** dans la barre de menus. 
+
+Pour afficher la liste des utilisateurs de votre organisation dans un environnement {{site.data.keyword.Bluemix_notm}} Dedicated, cliquez sur **Compte > Gérer les organisations** dans la barre de menus. 
+
+Vous pouvez également afficher toutes les instances du service {{site.data.keyword.contdelivery_short}} dans votre compte ainsi que le nombre d'utilisateurs répertoriés dans chaque instance, dans un environnement {{site.data.keyword.Bluemix_notm}} Public.
+
+1. Dans la barre de menus, cliquez sur **Gérer > Facturation et utilisation > Utilisation**.
+2. Cliquez sur **Tableau de bord de l'utilisation**.
+3. Dans le menu Compte, cliquez sur **Organisations Cloud Foundry**.
+4. Cliquez sur l'organisation dont vous souhaitez afficher les informations d'utilisation. 
+
+Pour afficher toutes les instances du service {{site.data.keyword.contdelivery_short}} dans votre compte ainsi que le nombre d'utilisateurs répertoriés dans chaque instance, dans un environnement {{site.data.keyword.Bluemix_notm}} Dedicated :
+
+1. Dans la barre de menus, cliquez sur **Compte > Gérer les organisations**.
+2. Cliquez sur **Tableau de bord de l'utilisation**.
+
+### Comment les utilisateurs sont-ils comptabilisés pour les instances de {{site.data.keyword.contdelivery_short}} dans les groupes de ressources ? 
+
+Les utilisateurs autorisés sont comptabilisés en consultant la liste des utilisateurs de l'onglet Gérer de l'instance du service {{site.data.keyword.contdelivery_short}}. 
+
+Pour afficher la liste des utilisateurs autorisés, ouvrez le tableau de bord de l'instance de service et cliquez sur l'onglet Gérer. 
 
 Vous pouvez également afficher toutes les instances du service {{site.data.keyword.contdelivery_short}} dans votre compte ainsi que le nombre d'utilisateurs répertoriés dans chaque instance.
 
-1. Dans la barre de menus, cliquez sur **Gérer > Compte > Organisations Cloud Foundry**.
+1. Dans la barre de menus, cliquez sur **Gérer > Facturation et utilisation > Utilisation**.
 2. Cliquez sur **Tableau de bord de l'utilisation**.
+3. Dans le menu Compte, cliquez sur **Groupes de ressources**.
+4. Cliquez sur le groupe de ressources dont vous souhaitez afficher les informations d'utilisation. 
 
 ### Que se passe-t-il lorsque vous dépassez les limites de votre plan de service ? 
 
