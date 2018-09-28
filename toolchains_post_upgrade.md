@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-9-28"
 
 ---
 
@@ -42,7 +42,7 @@ Toolchains are like projects, with a few important differences:
 - Projects can have only one repository (repo) and pipeline. Toolchains can have as many repos and pipelines as you need.
 - Toolchains can include tools that aren't available in projects, such as Slack, Sauce Labs, PagerDuty, and {{site.data.keyword.DRA_full}}.
 
- {{site.data.keyword.DRA_short}} is available only in the US South region.
+ {{site.data.keyword.DRA_short}} is available in the US South, United Kingdom, and Germany regions.
  {: tip}
  
 - In projects, membership was maintained at the project level. Access to toolchains is managed by {{site.data.keyword.Bluemix_notm}} organization (org) and by toolchain. To work with a toolchain, you must be a member of the org that contains the toolchain. The toolchain owner has further control over who can access the toolchain and what they can do. For details, see step 2 in [Getting started with your toolchain](#upgrade_next_steps).
@@ -72,7 +72,7 @@ You can learn more about toolchains on [YouTube ![External link icon](../../icon
 
 3. Optional: To explore your project's development maturity, your team's practices, and the quality of your code base, add IBM Cloud {{site.data.keyword.DRA_short}} to your toolchain. {{site.data.keyword.DRA_short}} applies developer, team, and deployment analytics to DevOps projects. For more information, see [Getting started with {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html).
 
-  {{site.data.keyword.DRA_short}} is available only in the US South region.
+  {{site.data.keyword.DRA_short}} is available in the US South, United Kingdom, and Germany regions.
   {: tip}
 
 
