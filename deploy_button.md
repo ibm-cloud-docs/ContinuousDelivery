@@ -133,4 +133,4 @@ To create a `pipeline.yml` manually that is specifically for containers, see the
 
 A `manifest.yml` file is not required to be in your repo. However, if your app requires other services to run, you must provide a manifest file that declares those services.
 
-To learn more about manifest files, see [Application manifest](/docs/cfapps/depapps.html#appmanifest).
+To learn more about manifest files, see [Application manifest](/docs/cloud-foundry/deploy-apps.html#appmanifest).
