@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-8-31"
 
 ---
 
@@ -34,7 +34,7 @@ The Docker image name in custom Docker image jobs is designed to work in the sam
 If the **Docker image name** field is not completed, the standard pipeline base image is used. 
 {: tip}
 
-By default, your repository on [Docker Hub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://hub.docker.com/){: new_window} is searched. If you use another Docker registry, such as IBM Cloud Registry, you can use the full DNS name. You can also use the fully qualified name for images on Docker Hub. For example, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
+By default, your repository on [Docker Hub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://hub.docker.com/){: new_window} is searched. If you use another Docker registry, such as {{site.data.keyword.registrylong}}, you can use the full DNS name. You can also use the fully qualified name for images on Docker Hub. For example, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
 
 The `tag` for a Docker image is optional. If you do not specify a tag, by default it is set to `latest`. A default value of `latest` is just a tag name that the repository owner must manage. It does not mean that chronologically this Docker image is the latest image.
 
@@ -45,12 +45,12 @@ You can find a large community of repositories at Docker Hub. IBM hosts a number
 
 If you are using a private registry that requires authentication, you must set two extra stage environment properties: `DOCKER_USERNAME` and `DOCKER_PASSWORD`. You can use a secure property to mask your `DOCKER_PASSWORD`. Before your image is pulled, the custom Docker image job uses your user name and password credentials to complete a `docker login`.
 
-For most registries, you can use the user name and password that were provided to you. If you use IBM Cloud Registry to store your private images, you must use a platform API Key for authentication. 
+For most registries, you can use the user name and password that were provided to you. If you use {{site.data.keyword.registrylong_notm}} to store your private images, you must use a platform API Key for authentication. 
 
 1. [Request a platform API key ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/iam/#/apikeys){: new_window} and make sure that you save the key. 
 1. Create the two stage environment properties by using `iamapikey` for your `DOCKER_USERNAME` and the platform API Key that you saved for the `DOCKER_PASSWORD`.
 
- ![IBM Cloud Registry credentials](images/custom-image-private-repository.png)
+ ![{{site.data.keyword.registrylong_notm}} credentials](images/custom-image-private-repository.png)
 
 
 ## Specifying the script
