@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-10-9"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,20 +22,6 @@ lastupdated: "2018-8-2"
 # Environment properties and resources
 {: #deliverypipeline_environment}
 
-You can use environment properties and preinstalled resources to interact with {{site.data.keyword.contdelivery_full}}'s pipeline capability. For example, you might incorporate them into a job script or test command.
-{:shortdesc}
-
-You can add your own environment properties to a stage from its **ENVIRONMENT PROPERTIES** tab. Environment properties are available to every job in a stage.
-
-You can add four types of properties from the Environment Properties tab:
-* **Text**: A property key with a single-line value.
-* **Text Area**: A property key with a multi-line value.
-* **Secure**: A property key with a single-line value. The value is displayed as asterisks.
-* **Properties**: A file in the project's repository. This file can contain multiple properties. Each property must be on its own line. To separate key-value pairs, use the equals sign (=). Enclose all string values in quotes. For example, MY_STRING="SOME STRING VALUE".
-
-You can examine the environment properties for a pipeline job by running the `env` command in the job's script.
-{:tip}
-
 The following properties and resources are available by default in pipeline environments.
 
 <!--##Contents
@@ -50,7 +36,7 @@ The following properties and resources are available by default in pipeline envi
 ## Environment properties
 {: #deliverypipeline_envprop}
 
-### General purpose properties
+### General-purpose properties
 
 | Environment property | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -74,6 +60,7 @@ The following properties and resources are available by default in pipeline envi
 | PIPELINE_STAGE_INPUT_JOB_ID | The ID of the job that is input for the current stage. |
 | PIPELINE_STAGE_INPUT_REV | The revision of the input for the current stage. |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | The unique ID for the run of the pipeline. |
+| PIPELINE_TRIGGERING_USER | The current user for the pipeline job|
 | TASK_ID | The unique ID of the job's current run. |
 | TMPDIR | A directory location where temporary files are stored. |
 | WORKSPACE | The path for the current working directory. |
@@ -91,7 +78,7 @@ The following properties and resources are available by default in pipeline envi
 | MAVEN_HOME | The path to Apache Maven 3.2.1. |
 | NODE_HOME | The path to Node.js 0.10.29. |
 
-You can use the 1.10+ version of Apache Ant in your pipeline's scripts by setting `ANT_HOME` to `$ANT_JAVA8_HOME` and `JAVA_HOME` to `$JAVA8_HOME`.
+To use Apache Ant 1.10+ in your pipeline's scripts, set `ANT_HOME` to `$ANT_JAVA8_HOME` and `JAVA_HOME` to `$JAVA8_HOME`.
 {: tip}
 
 ### Deployment properties
@@ -129,13 +116,11 @@ All links are in the home directory.
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
 
-64-bit versions of IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2, and 6.7.0 are available in the pipeline environment. To choose a version, use the export command.
+The pipeline environment offers 64-bit versions of IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2, and 6.7.0. To choose a version, use the export command.
 
-For example, to use Node 0.12.7, enter this command:
-`export PATH=/opt/IBM/node-v0.12/bin:$PATH`
+For example, to use Node 0.12.7, type this command: `export PATH=/opt/IBM/node-v0.12/bin:$PATH`
 
-To use Node 4.2.2, enter this command:
-`export PATH=/opt/IBM/node-v4.2/bin:$PATH`
+To use Node 4.2.2, type this command: `export PATH=/opt/IBM/node-v4.2/bin:$PATH`
 
 ### Node modules
 
