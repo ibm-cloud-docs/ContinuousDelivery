@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-6-22"
+lastupdated: "2018-10-10"
 
 ---
 
@@ -34,10 +34,10 @@ The following table lists the actions that generate an event:
 
 | Action | Description | 
 |:-----------------|:-----------------|
-| Toolchain create | Create a toolchain | 
-| Toolchain delete | Delete a toolchain |
-| Tool create | Create a tool integration |
-| Tool delete | Delete a tool integration |
+| continuous-delivery.toolchain.create | Create a toolchain | 
+| continuous-delivery.toolchain.delete | Delete a toolchain |
+| toolchain.tool-instance.deploy | Create a tool integration |
+| toolchain.tool-instance.undeploy | Delete a tool integration |
 {: caption="Table 1. Actions that generate events" caption-side="top"}
 
 ## Where to view the events
