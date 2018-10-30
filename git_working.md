@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-10-3"
 
 ---
 
@@ -19,6 +19,9 @@ lastupdated: "2018-8-2"
 
 Collaborate with your team and manage your source code with a Git repository (repo) and issue tracker that is hosted by IBM and built on [GitLab Community Edition ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://about.gitlab.com/){:new_window}.
 {: shortdesc}
+
+Don't store regulated data in files or issues within Git repos. The procedures for regulated data are currently not in place.
+{: tip}
 
 The {{site.data.keyword.gitrepos}} tool integration supports teams to manage code and collaborate in many ways:
    * Manage Git repositories through fine-grained access controls that keep code secure
