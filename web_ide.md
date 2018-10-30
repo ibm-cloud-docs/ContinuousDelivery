@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-10-3"
 
 ---
 
@@ -21,6 +21,9 @@ The Eclipse Orion {{site.data.keyword.webide}} is a browser-based development en
 {:shortdesc}
 
 Best of all, the {{site.data.keyword.webide}} is powered by the web. You have nothing to install, nothing to maintain, and nothing to scale. You can develop anywhere that you have an internet connection.
+
+Don't store regulated data in files within the {{site.data.keyword.webide}}. The procedures for regulated data are currently not in place.
+{: tip}
 
 ## Setting up the IDE
 {: #editorsetup}
