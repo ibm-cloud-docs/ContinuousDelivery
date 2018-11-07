@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-3"
+lastupdated: "2018-10-25"
 
 ---
 
@@ -50,7 +50,7 @@ If you aleady have an instance of {{site.data.keyword.contdelivery_short}}, you 
  * The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
  * The resource group or organization to create the toolchain in. Click the link to switch between selecting resource groups and orgs. If you want to use a different resource group or org, select it from the list of available resource groups or orgs.
  
-   Resource groups are available in the US South, US East, United Kingdom, and Germany regions. Cloud Foundry orgs are supported in the US South, United Kingdom, and Germany regions.
+   Resource groups are available in the US South, US East, United Kingdom, Germany, and Tokyo regions. Cloud Foundry orgs are supported in the US South, United Kingdom, and Germany regions.
    {: tip}
  
 1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For information about configuring the tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
