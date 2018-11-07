@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2018
-lastupdated: "2018-9-28"
+lastupdated: "2018-10-25"
 
 ---
 
@@ -67,7 +67,7 @@ The predefined DevOps toolchain templates are recommended examples that solve re
   <tr><td>
   <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain" target="_blank">“Develop a Cloud Foundry app” toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
 
-  Available in US South, US East, Germany, and United Kingdom
+  Available in US South, US East, Germany, Tokyo, and United Kingdom
 
   </td><td>
   With this toolchain, you can develop and deploy a Cloud Foundry app. By default, this toolchain uses a sample Node.js "Hello world" app, but you can link to your own GitHub repo instead. The toolchain is preconfigured for continuous delivery, source control, issue tracking, and online editing.	<br><br>
@@ -84,7 +84,7 @@ The predefined DevOps toolchain templates are recommended examples that solve re
   <tr><td>
   <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsecure-kube-toolchain" target="_blank">"Develop a Kubernetes app" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
 
-  Available in US South, US East, Germany, and United Kingdom
+  Available in US South, US East, Germany, Tokyo, and United Kingdom
 
   </td><td>
   With this toolchain, you can develop, and deploy an application securely into a Kubernetes cluster managed by the {{site.data.keyword.containerlong_notm}}. By default, the toolchain uses a sample Node.js "Hello World" app, but you can link to your own GitHub repository instead. This toolchain is preconfigured for continuous delivery with Vulnerability Advisor, source control, issue tracking, and online editing. <br><br>
@@ -101,7 +101,7 @@ The predefined DevOps toolchain templates are recommended examples that solve re
   <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-helm-toolchain" target="_blank">"Develop a Kubernetes app with Helm" toolchain
    <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
 
-  Available in US South, US East, Germany, and United Kingdom
+  Available in US South, US East, Germany, Tokyo, and United Kingdom
 
   </td><td>
   With this toolchain, you can develop a Docker application and its Helm chart together in source control and build and deploy it automatically to a Kubernetes cluster. The toolchain performs smoke tests before building or deploying and ensures privacy by using a private container registry and namespaces for the container registry and the Kubernetes cluster. This toolchain also uses Vulnerability Advisor to ensure only secure images get deployed. <br><br>
@@ -159,7 +159,7 @@ The predefined DevOps toolchain templates are recommended examples that solve re
   <td><a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" targe="_blank">
 "Garage Method tutorial with Cloud Foundry" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
 
-  Available in US South, US East, Germany, and United Kingdom
+  Available in US South, US East, Germany, Tokyo, and United Kingdom
 
 </td><td>
 This toolchain demonstrates the DevOps practices that are featured in the Garage Method. The toolchain is preconfigured for continuous delivery, source control, test automation, and automated monitoring and operations. It comes with a sample app that is written in Node.js Express 4, which you can further extend. <br><br>Try the course: <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Become a Garage Method advocate <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.
@@ -212,7 +212,7 @@ GitHub and Issues
 <tr><td>
 <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain" target="_blank">Build your own toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
 
-  Available in US South, US East, Germany, and United Kingdom
+  Available in US South, US East, Germany, Tokyo, and United Kingdom
 
 </td><td>
 This toolchain has no preconfigured tools. If you are already familiar with toolchains, you can set up your own toolchain. <br><br>
@@ -222,7 +222,7 @@ Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/create-a-c
 
 <tr><td>Continuous Delivery Toolchain <br><br>
 
- Available in US South, US East, Germany, and United Kingdom
+ Available in US South, US East, Germany, Tokyo, and United Kingdom
 
 </td><td>
 This toolchain is used when you enable continuous delivery for an app. <br><br>
@@ -242,7 +242,7 @@ GitHub and Issues
 
 <tr><td>Custom toolchain template <br><br>
 
- Available in US South, US East, Germany, and United Kingdom
+ Available in US South, US East, Germany, Tokyo, and United Kingdom
 
 </td><td>
 <br><br>
