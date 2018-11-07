@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-9-28"
+lastupdated: "2018-10-25"
 
 ---
 
@@ -25,26 +25,26 @@ The tool integrations that are available to add and configure for your toolchain
 |Tool integration |Available on {{site.data.keyword.Bluemix_notm}} Public	|Available on {{site.data.keyword.Bluemix_notm}} Dedicated (environment dependent)|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.alertnotificationshort}}		|US South		|No		|
-|Artifactory		|US South, US East, Germany, United Kingdom		|Yes		|
+|Artifactory		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
 |Availability Monitoring		|US South		|No		|
-|Bitbucket		|US South, US East, Germany, United Kingdom		|No		|
+|Bitbucket		|US South, US East, Germany, Tokyo, United Kingdom		|No		|
 |Cloud Event Management		|US South		|No		|
-|{{site.data.keyword.deliverypipeline}} 		|US South, US East, Germany, United Kingdom	   	|Yes  		|
+|{{site.data.keyword.deliverypipeline}} 		|US South, US East, Germany, Tokyo, United Kingdom	   	|Yes  		|
 |{{site.data.keyword.DRA_short}} 		|US South, Germany, United Kingdom		|No			|
-|Eclipse Orion {{site.data.keyword.webide}}		|US South, US East, Germany, United Kingdom		|Yes			|
-|{{site.data.keyword.gitrepos}}	|US South, US East, Germany, United Kingdom		|No		|
-|GitHub		|US South, US East, Germany, United Kingdom		|Yes		|
+|Eclipse Orion {{site.data.keyword.webide}}		|US South, US East, Germany, Tokyo, United Kingdom		|Yes			|
+|{{site.data.keyword.gitrepos}}	|US South, US East, Germany, Tokyo, United Kingdom		|No		|
+|GitHub		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
 |Dedicated {{site.data.keyword.ghe_short}} and Issues			|No		|Yes		|
-|GitLab		|US South, US East, Germany, United Kingdom		|No		|
-|Jenkins		|US South, US East, Germany, United Kingdom		|Yes		|
-|JIRA		|US South, US East, Germany, United Kingdom		|Yes		|
-|Nexus			|US South, US East, Germany, United Kingdom		|Yes		|
-|Other Tool			|US South, US East, Germany, United Kingdom		|Yes		|
-|PagerDuty			|US South, US East, Germany, United Kingdom		|Yes		|
-|Rational Team Concert			|US South, US East, Germany, United Kingdom		|Yes		|
-|Sauce Labs		|US South, US East, Germany, United Kingdom		|No		|
-|Slack			|US South, US East, Germany, United Kingdom		|Yes		|
-|SonarQube			|US South, US East, Germany, United Kingdom		|Yes		|
+|GitLab		|US South, US East, Germany, Tokyo, United Kingdom		|No		|
+|Jenkins		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
+|JIRA		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
+|Nexus			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
+|Other Tool			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
+|PagerDuty			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
+|Rational Team Concert			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
+|Sauce Labs		|US South, US East, Germany, Tokyo, United Kingdom		|No		|
+|Slack			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
+|SonarQube			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
 {: caption="Table 1. Tool integrations available for toolchains on {{site.data.keyword.Bluemix_notm}} Public and Dedicated" caption-side="top"}
 
 If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
