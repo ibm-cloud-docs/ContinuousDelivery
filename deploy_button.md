@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-10-25"
 
 ---
 
@@ -24,7 +24,7 @@ When someone clicks your button, these actions occur:
 
 1. If the person does not have an active {{site.data.keyword.Bluemix_notm}} account, they must create an account. They can create a trial account or a real account.
 
-2. The person can select a region, resource group (available in the US South, US East, United Kingdom, and Germany regions) or organization and space (available in the US South, United Kingdom, and Germany regions), and app name by clicking the {{site.data.keyword.deliverypipeline}} icon. The suggested app name is the same as the toolchain name, which is constructed from the name of your original Git repo and the time. The toolchain name can also be edited.
+2. The person can select a region, resource group (available in the US South, US East, United Kingdom, Germany, and Tokyo regions) or organization and space (available in the US South, United Kingdom, and Germany regions), and app name by clicking the {{site.data.keyword.deliverypipeline}} icon. The suggested app name is the same as the toolchain name, which is constructed from the name of your original Git repo and the time. The toolchain name can also be edited.
 
 3. A toolchain is created that includes a new private clone of your Git repo, a pipeline for building and deploying code changes, the Eclipse Orion {{site.data.keyword.webide}} for editing code on the Cloud, and an issue tracker.
 
