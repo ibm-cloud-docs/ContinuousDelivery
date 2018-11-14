@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-9-28"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-9-28"
 # Getting started with toolchains after your {{site.data.keyword.jazzhub_short}} project is upgraded
 {: #toolchains_post_upgrade}
 
-{{site.data.keyword.jazzhub}} projects at hub.jazz.net have been upgraded to toolchains in the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.contdelivery_short}} service. 
+{{site.data.keyword.jazzhub}} projects at hub.jazz.net are upgraded to toolchains in the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.contdelivery_short}} service. 
 
 {{site.data.keyword.jazzhub_short}} at hub.jazz.net is retired. 
 
@@ -35,7 +35,7 @@ Confirm that the upgrade is complete by going to the [Toolchains page ![External
 ## Toolchains overview
 {: #compare_toolchains}
 
-If you had one or more projects on hub.jazz.net, they were automatically upgraded to toolchains in the {{site.data.keyword.contdelivery_short}} service, unless the upgrade failed. Upgrades can fail due to invalid IBM Cloud accounts or orgs. These account and org owners were notified by email about the failures and the specific actions required on their part to address them. If you need help to locate the toolchain for your upgraded project, contact [support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}. 
+If you had one or more projects on hub.jazz.net, they were automatically upgraded to toolchains in the {{site.data.keyword.contdelivery_short}} service, unless the upgrade failed. Upgrades can fail due to invalid IBM Cloud accounts or orgs. These account and org owners were notified by email about the failures and the specific actions that are required on their part to address them. If you need help to locate the toolchain for your upgraded project, contact [support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services){:new_window}. 
 
 Toolchains are like projects, with a few important differences:
 
@@ -45,7 +45,7 @@ Toolchains are like projects, with a few important differences:
  {{site.data.keyword.DRA_short}} is available in the US South, United Kingdom, and Germany regions.
  {: tip}
  
-- In projects, membership was maintained at the project level. Access to toolchains is managed by {{site.data.keyword.Bluemix_notm}} organization (org) and by toolchain. To work with a toolchain, you must be a member of the org that contains the toolchain. The toolchain owner has further control over who can access the toolchain and what they can do. For details, see step 2 in [Getting started with your toolchain](#upgrade_next_steps).
+- In projects, membership was maintained at the project level. Access to toolchains is managed by {{site.data.keyword.Bluemix_notm}} organization (org) and by toolchain. To work with a toolchain, you must be a member of the org that contains the toolchain. The toolchain owner has further control over who can access the toolchain and what they can do. For more information about access control, see step 2 in [Getting started with your toolchain](#upgrade_next_steps).
 - Depending on the type of repo you used in your project on hub.jazz.net, your toolchain might contain a GitHub.com repo or a {{site.data.keyword.gitrepos}} repo.
 
 You can learn more about toolchains on [YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/2SIPE1e7NJ4){: new_window} or from [Getting started with {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html).
@@ -63,7 +63,7 @@ You can learn more about toolchains on [YouTube ![External link icon](../../icon
 2. If you are using {{site.data.keyword.gitrepos}}, authenticate by using a personal access token or an SSH key. For more information about SSH keys, see [Creating a personal access token or SSH key for authentication](/docs/services/ContinuousDelivery/git_working.html#git_authentication). To authenticate from an external Git client through https, follow these steps:
     1. Go to the [Access Tokens page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} of your {{site.data.keyword.gitrepos}} user settings.
     2. Create a personal access token that uses **api** as the scope.
-    3. Go to the [Account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account){:new_window} and find your username for {{site.data.keyword.gitrepos}}. Your username is listed in the "Change username" section and it is shown as the first part of the URL for any personal repo that you create.
+    3. Go to the [Account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account){:new_window} and find your user name for {{site.data.keyword.gitrepos}}. Your user name is listed in the "Change username" section and it is shown as the first part of the URL for any personal repo that you create.
     4. To authenticate with {{site.data.keyword.gitrepos}} from an external Git client through HTTPS, use your username and your personal access token.
     5. If you want to reuse the local repo of your JazzHub Git repo, point the repo to the new repo in {{site.data.keyword.gitrepos}}. From a terminal shell, change to the directory where the JazzHub Git repo is cloned. Enter the `git remote set-url` command: `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
@@ -88,7 +88,7 @@ If you encounter problems that are related to the upgrade of your project, post 
 ### My JazzHub project was associated with the UK region, but my toolchain is in the US South region. How does this work?
 {: #faq_region}
 
-Projects at hub.jazz.net and toolchains are both hosted in the US South region. If your project was configured to deploy apps to a different region, such as the UK region, the toolchain will still deploy apps to that region, too. Therefore, nothing is really changing about where the data is hosted. Toolchains will be available in more regions in the future.
+Projects at hub.jazz.net and toolchains are both hosted in the US South region. If your project was configured to deploy apps to a different region, such as the UK region, the toolchain still deploys apps to that region, too. Therefore, nothing is really changing about where the data is hosted. Toolchains will be available in more regions in the future.
 
 ### What happened to my work items and dashboards in Track &amp; Plan after the upgrade?
 {: #faq_tp}
@@ -99,9 +99,9 @@ During the automated upgrade process, your Track & Plan work items were migrated
 
 If you require the same function as the deprecated JazzHub Track &amp; Plan, a new IBM Track and Plan service on Cloud is available for purchase in selected countries on a per user per month basis. With this cloud service, you get full function, equivalent to Rational Team Concert&trade; contributor licenses, in a single tenant cloud subscription.
 
-This new IBM Track and Plan on Cloud service provides much richer capability than the deprecated JazzHub Track &amp; Plan, supporting process customization, project hierarchies, SAFe&reg; and many other agile and hybrid methods, and scalability to grow beyond a single project. It is based on the latest version of Rational Team Concert 6.0.3 and will be at version 6.0.4 in the next 60 days, while JazzHub Track &amp; Plan was based on Rational Team Concert 5.x. A data migration is possible to IBM Track and Plan on Cloud through additional services. You can contact [Tom Hollowell ![External link icon](../../icons/launch-glyph.svg "External link icon")](mailto:trhollow@us.ibm.com){:new_window}, Connected Products SaaS Sales Leader, for more information.
+This new IBM Track and Plan on Cloud service provides much richer capability than the deprecated JazzHub Track &amp; Plan, supporting process customization, project hierarchies, SAFe&reg; and many other agile and hybrid methods, and scalability to grow beyond a single project. It is based on the latest version of Rational Team Concert 6.0.3 and will be at version 6.0.4 in the next 60 days, while JazzHub Track &amp; Plan was based on Rational Team Concert 5.x. A data migration is possible to IBM Track and Plan on Cloud through extra services. You can contact [Tom Hollowell ![External link icon](../../icons/launch-glyph.svg "External link icon")](mailto:trhollow@us.ibm.com){:new_window}, Connected Products SaaS Sales Leader, for more information.
 
-For information on IBM Track and Plan on Cloud, or to buy online, visit [IBM Marketplace ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}.
+For information on IBM Track and Plan on Cloud, or to buy online, see the [IBM Marketplace ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}.
 
 To purchase Build Automation and Source Code Management, [Rational Team Concert on Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window} is an option.
 
@@ -123,9 +123,9 @@ For more information about how each type of repo is treated in the upgrade proce
 ### What happened to my build definitions in my project after the upgrade?
 {: #faq_build}
 
-If you were building your source code by using Jazz instead of Delivery Pipeline, you must manually migrate your build definitions to Delivery Pipeline in your toolchain.
+If you built your source code by using Jazz instead of Delivery Pipeline, you must manually migrate your build definitions to Delivery Pipeline in your toolchain.
 
-If you were using Jazz SCM as a source repo and using Delivery Pipeline to build your code, the source in Jazz SCM was automatically moved to a Git repo. Your Delivery Pipeline configuration remains the same, except it consumes the source from the Git repo instead of the source from Jazz SCM.
+If you used Jazz SCM as a source repo and used Delivery Pipeline to build your code, the source in Jazz SCM was automatically moved to a Git repo. Your Delivery Pipeline configuration remains the same, except that it uses the source from the Git repo instead of the source from Jazz SCM.
 
 ### I had to create an organization for my project that was upgraded to a toolchain, so I added a credit card to my account. Will my credit card be charged?
 {: #faq_charges}
@@ -156,26 +156,26 @@ My JazzHub project is associated with the {{site.data.keyword.Bluemix_notm}} UK 
 
 **Answer:**
 
-These issues can occur if you came from a non-US {{site.data.keyword.Bluemix_notm}} organization and didn't explicitly expand your organization to the US South region before you upgraded. You can confirm this by opening the Toolchains page. You will see the region and organization at the beginning of the page. 
+These issues can occur if you came from a non-US {{site.data.keyword.Bluemix_notm}} organization and didn't explicitly expand your organization to the US South region before you upgraded. You can confirm this issue by opening the Toolchains page. You can see the region and organization at the beginning of the page. 
 
-What happened is that at the time of the upgrade, your non-US organization didn't exist in the US, so the upgrade selected another org for you by looking up an another one you happen to have access to.
+What happened is that at the time of the upgrade, your non-US organization didn't exist in the US, so the upgrade selected another org for you by looking up another org that you have access to.
 
-If you switch to that {{site.data.keyword.Bluemix_notm}} organization in the US, you can find the toolchain. If you add your colleagues to that organization, they will be granted access. This toolchain can continue to deploy to your non-US org. The only problem is that these two organizations are distinct; you can't perform user management across them both automatically.
+If you switch to that {{site.data.keyword.Bluemix_notm}} organization in the US, you can find the toolchain. If you add your colleagues to that organization, they are granted access. This toolchain can continue to deploy to your non-US org. The only problem is that these two organizations are distinct; you can't perform user management across them both automatically.
 
-If you want your toolchain to be in the a US organization that matches your non-US organization, follow these steps:
+If you want your toolchain to be in the US organization that matches your non-US organization, follow these steps:
 
-   1. Log into [https://console.bluemix.net ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} and select the non-US region and org that you are coming from.
+   1. Log in to [https://console.bluemix.net ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} and select the non-US region and org that you are coming from.
    
-   2. In the {{site.data.keyword.Bluemix_notm}} header, switch to the US South region. You will be prompted to create a space in that region.
+   2. In the {{site.data.keyword.Bluemix_notm}} header, switch to the US South region. You are prompted to create a space in that region.
    
    3. Create a space in the US South region to expand your organization into that region. 
    
    4. Delete the toolchain that was created through the upgrade process. 
    
-      The Git repo is not automatically deleted. You might want to delete it manually or rename it for now. If you made changes to it already, you can update the future toolchain to use it later.
+      The Git repo is not automatically deleted. You might want to delete it manually or rename it for now. If you already renamed the Git repo, you can update the future toolchain to use it later.
       {: tip}
 
-   5. Return to the JazzHub project. It should reset itself for another upgrade attempt. If it doesn't reset, contact hub@jazz.net and provide the URL of the project.
+   5. Return to the JazzHub project. The project resets itself for another upgrade attempt. If the project doesn't reset, contact hub@jazz.net and provide the URL of the project.
    
    6. Restart the upgrade process and be sure to select the proper organization in the US, matching the name of your organization in the non-US region.
    
