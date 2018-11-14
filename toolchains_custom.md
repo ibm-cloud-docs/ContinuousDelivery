@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 {:shortdesc: .shortdesc}
@@ -17,16 +17,16 @@ lastupdated: "2018-8-2"
 # Creating custom toolchain templates
 {: #toolchains_custom}
 
-Improve your DevOps workflow by creating a custom toolchain template. You can get started quickly with an existing toolchain template, or create a toolchain template that includes just the integrations you need. You can add or remove your toolchain's integrations at any time.
+Improve your DevOps workflow by creating a custom toolchain template. You can get started quickly with an existing toolchain template, or create a toolchain template that includes only the tool integrations that you need. You can add or remove integrations from your toolchain at any time.
 {:shortdesc}
 
-You can [create a toolchain](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} in several ways. After you create a custom toolchain template, you can share it by [creating a deploy to {{site.data.keyword.Bluemix_notm}} button](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}.   Details about the toolchain template SDK can be found in the [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. A step-by-step tutorial can be found on the [Garage Method site](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
+You can [create a toolchain](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} in several ways. After you create a custom toolchain template, you can share it by [creating a deploy to {{site.data.keyword.Bluemix_notm}} button](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}.   For more information about the toolchain template SDK, see [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. For a step-by-step tutorial, see the [Garage Method site](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
 
 
 ## Getting started
 {: #toolchains_custom_gettingstarted}
 
-To create a custom toolchain template, begin by cloning the Simple Cloud Foundry toolchain template. Cloning an existing template gives you starting point for your customized toolchain.
+To create a custom toolchain template, begin by cloning the Simple Cloud Foundry toolchain template. Cloning an existing template gives you a starting point for your customized toolchain.
 
 1. Using the Git client of your choice, enter the following command to clone the [Simple Toolchain](https://github.com/open-toolchain/simple-toolchain){: new_window} template in GitHub.
 
@@ -37,7 +37,7 @@ To create a custom toolchain template, begin by cloning the Simple Cloud Foundry
 
  This template deploys a basic Hello World application from a single GitHub repository and includes a simple toolchain that is preconfigured for continuous delivery, source control, issue tracking, and online editing.
 
-2. If you would prefer to start with a more complex toolchain template, you can start by cloning the [Cloud-native Toolchain for Microservices](https://github.com/open-toolchain/toolchain-demo){: new_window}.
+2. If you want to start with a more complex toolchain template, clone the [Cloud-native Toolchain for Microservices](https://github.com/open-toolchain/toolchain-demo){: new_window}.
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -53,9 +53,9 @@ The microservices template deploys an online store that is composed of three mic
 * Online editing
 * Messaging
 
-Regardless of which template you choose, the process for customizing the toolchain you create is generally the same.
+Regardless of which template you choose, the process for customizing the toolchain that you create is generally the same.
 
-After you clone the template, you will have a basic GitHub repository that contains a readme file and a `.bluemix` directory. The directory contains all of the configuration files that the toolchain requires to function. At a minimum, the `.bluemix` directory must contain the following files:
+After you clone the template, you have a basic GitHub repository that contains a readme file and a `.bluemix` directory. The directory contains all of the configuration files that the toolchain requires to function. At a minimum, the `.bluemix` directory must contain the following files:
 
 * `toolchain.yml`
 * `deploy.json`
@@ -65,41 +65,41 @@ After you clone the template, you will have a basic GitHub repository that conta
 
 
 Each of these files is explained in the following sections. Each section contains configuration information that you can consult as your toolchain evolves.
-YAML is a data serialization language that is a strict superset of JSON, with the addition of syntactically significant newlines and indentation. However, YAML doesn’t allow literal tab characters at all.
+YAML is a data serialization language that is a strict superset of JSON, with the addition of syntactically significant newlines and indentation. However, YAML doesn’t allow literal tab characters.
 
 ## Understanding the configuration files
 {: #toolchains_custom_config_files}
 
 
-The toolchain template configuration files are comprised primarily of YAML formatted files. Each file contains metadata that describes different aspects of the toolchain. The metadata includes
+The toolchain template configuration files are comprised primarily of YAML formatted files. Each file contains metadata that describes different aspects of the toolchain. The metadata includes:
 * Information about the toolchain and repositories.
 * Details about how code is built and deployed.
 * Configuration properties for the tools that are in the toolchain.
 
-As your toolchain becomes more complex, the configuration files might grow in complexity, too.
+As your toolchain becomes more complex, the configuration files might become more complex.
 
-A few guidelines to keep in mind when you work with YAML files:
+When you work with YAML files, follow these guidelines:
 
 * Only spaces use spaces. Tabs are not allowed.
 * All properties and lists must be indented with one or more spaces.
 * All keys and properties are case-sensitive.
 
 Pay careful attention to the YAML file's formatting to reduce your chance of encountering errors.
-To check for errors, you can want to use a simple validator, like [this parser](http://wiki.ess3.net/yaml/){: new_window}.
+To check for errors, use a simple validator such as [this parser](http://wiki.ess3.net/yaml/){: new_window}.
 {: tip}
 
-## Planning the services section
+## Planning the services
 Each service subsection contains the following information:
 
-* name - A user-generated string that is used to identify this service in the context of the current file. This name can be used to mark a service as required.
+* name - A user-generated string that is used to identify this service in the context of the current file. You can use this name to mark a service as required.
 
 * service_id - A unique string that identifies the service. This string comes directly from the [service catalog](https://github.com/open-toolchain/sdk/wiki/services.md){: new_window}.
 
-* parameters - Zero or more configuration parameters for the service. These parameters vary between services: users need to consult the catalog in order to figure out what parameters a particular service requires.
+* parameters - Zero or more configuration parameters for the service. These parameters vary between services. Users must consult the catalog to determine which parameters are required by a particular service.
 
 ### Including text from other files
 
-All the information for your toolchain can be in the `toolchain.yml` file.  However, you may want to create separate files for each tool integration UI using `$text`. This can make maintaining your toolchains easier, as well as minimize the time you spend editing configuration files.  This example snippet from a `toolchain.yml` shows how to use the contents of the `pipeline.yml` file as the value for `content`.
+All of the information for your toolchain can be stored in the `toolchain.yml` file. However, you might want to create separate files for each tool integration UI that uses `$text`. Using separate files can make maintaining your toolchains easier, and minimize the time that you spend editing configuration files. This example snippet from a `toolchain.yml` file shows how to use the contents of the `pipeline.yml` file as the value for `content`.
 
 ```
   configuration:
@@ -110,7 +110,7 @@ All the information for your toolchain can be in the `toolchain.yml` file.  Howe
 ### Localizing your toolchain template
 
 You can localize your toolchain by externalizing your UI strings in the `nls` directory so that the strings in the toolchain are displayed in the user's preferred language.
-Your `toolchain.yml` file needs to include an `$i18n` reference.  
+Your `toolchain.yml` file must include an `$i18n` reference.  
 The following example shows an `$i18n` reference to a `messages.yml` file:
 
 ```
@@ -118,7 +118,7 @@ messages:
   $i18n: messages.yml
 ```
 
-  The English strings are in `messages.yml` and other languages use the languages code, such as `messages_de.yml`.   The list of language codes can be found in
+  The English strings are in `messages.yml` and other languages use the languages code, such as `messages_de.yml`. You can find the list of language codes in
   [Tags for Identifying Languages](https://tools.ietf.org/html/rfc5646){: new_window}.
 
    To reference the externalize string, use `$ref` to retrieve the string.  For example,
@@ -136,16 +136,16 @@ messages:
     name: my_template
 ```
 
-To learn more, see the [Messages section of the Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/Template-File-Format#messages-section){: new_window}.
+For more information about UI strings, see the [Messages section of the Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/Template-File-Format#messages-section){: new_window}.
 
 ## Configuring the toolchain file
 {: #toolchains_custom_toolchain_yml}
 
-The `toolchain.yml` file is the heart of your toolchain. The specifics of your toolchain, including repositories to pull in, services to include, and build details are all outlined in this file. To make sense of its contents, it can be broken up into several sections.
+The `toolchain.yml` file is the heart of your toolchain. The specifics of your toolchain, including the repositories to pull in, the services to include, and the build details are all outlined in this file. To understand its contents, you can break down the file into several sections.
 
 1\. **Introductory toolchain information:**
 
- This section of the file provides simple details about your toolchain that the user can see on the toolchain creation page. Include a name for your toolchain, along with a description that explains the toolchain's purpose. You can also include an image, like a logo or a visual depiction of your toolchain.
+ This section of the file provides simple details about your toolchain that the user can see on the toolchain creation page. Include a name for your toolchain, along with a description that explains the toolchain's purpose. You can also include an image, such as a logo or a visual depiction of your toolchain.
 
  In addition to providing introductory content for your toolchain, this section also includes a key that is named `required` that defines the tools that are part of the toolchain. The toolchain's creator configures these tools when they create the toolchain from your template. For each tool that can be configured on the toolchain creation page, add the tool's parent key as it is defined in the `toolchain.yml` file as a property of the `required` key.
 
@@ -173,7 +173,7 @@ In that example, the Git URL and Git branch are for a new toolchain template.
 
 2\. **Repository definitions:**
 
- A toolchain can provide continuous delivery for any number of Git repositories include GitHub, GitHub Enterprise, Git Repos and Issue Tracking, and GitLab. This section of the `toolchain.yml` file is where each repository is defined.
+ A toolchain can provide continuous delivery for any number of Git repositories such as GitHub, GitHub Enterprise, Git Repos and Issue Tracking, and GitLab. The repository definitions section of the `toolchain.yml` file is where each repository is defined.
 
  For each repository that is added to the toolchain, add a parent key that represents the name of your repository with the following properties:
 
@@ -209,17 +209,17 @@ In that example, the Git URL and Git branch are for a new toolchain template.
 
 3\. **Pipeline information:**
 
- You can continuously deliver your project with a pipeline. This section of the file defines the configuration details that are used to build and deploy the code in each of your GitHub and Git Repo and Issue Tracking repositories.
+ You can continuously deliver your project with a pipeline. This section of the file defines the configuration details that are used to build and deploy the code in each of your GitHub and Git Repos and Issue Tracking repositories.
 
- To start, for each repository that is defined in your toolchain, add a parent key that represents a name of its pipeline. Consider deriving this key from the name of your GitHub or Git Repo and Issue Tracking repository. Add the following properties:
+ To start, for each repository that is defined in your toolchain, add a parent key that represents a name of its pipeline. Consider deriving this key from the name of your GitHub or Git Repos and Issue Tracking repository. Add the following properties:
 
 | Item | Key/Property | Value | Description |
 |------|--------------|-------|-------------|
 | pipeline-name | key |  | Name for the pipeline (sample-build) |
-| service_id | property | <`pipeline`> | Name of service to be used |
+| service_id | property | <`pipeline`> | Name of the service to use |
 | parameters | key |  |  |
-| name | property | <`repo_name`> | Same as name defined in the repos section |
-| ui-pipeline | property | <`true` , `false`> |True if the applications that this pipeline deploys are shown in the **View app** menu on the toolchain page  |
+| name | property | <`repo_name`> | Same as the name defined in the repos section |
+| ui-pipeline | property | <`true` , `false`> |True if the applications that this pipeline deploys are shown in the **View app** menu on the toolchains page  |
 | configuration | key |  |  |
 | content | property | <`$ref(pipeline.yml)`> | File that defines your pipeline definition |
 | env | key |  |  |
@@ -234,9 +234,9 @@ In that example, the Git URL and Git branch are for a new toolchain template.
 | hidden | property | <`[form, description]`> |  |
 -->
 
- Information about creating a `pipeline.yml` file can be found in a [later section.](#toolchains_custom_pipeline_yml)
+ More information about creating a `pipeline.yml` file can be found in a [later section.](#toolchains_custom_pipeline_yml)
 
- This snippet shows an example of this section of the file:
+ The following snippet shows an example of this section of the file:
 
  ```
  # Pipelines
@@ -262,13 +262,13 @@ In that example, the Git URL and Git branch are for a new toolchain template.
 
 4\. **Deployment details:**
 
- As part of the continuous delivery process, you can configure a toolchain to deploy an application to any {{site.data.keyword.Bluemix_notm}} Region, Organization, or Space to which a user has access. The specific details of where to deploy your application can be selected from the toolchain creation page.
+ As part of the continuous delivery process, you can configure a toolchain to deploy an application to any {{site.data.keyword.Bluemix_notm}} region, organization, or space to which a user has access. You can specify the details about where to deploy your application on the toolchain creation page.
 
  ![Delivery Pipeline Configuration settings](images/deploy_configuration.png)
 
- This section of the `toolchain.yml` file defines the pipeline stages that are available to be configured from the toolchain creation page.
+ This section of the `toolchain.yml` file defines the pipeline stages that are available to configure from the toolchain creation page.
 
- To start, the parent key `deploy` is used to identify the deployment configuration properties. The following properties make up the rest of the section:
+ The parent key `deploy` is used to identify the deployment configuration properties. The following properties comprise the rest of the section:
 
 | Item | Key/Property | Value | Description |
 |------|--------------|-------|-------------|
@@ -276,9 +276,9 @@ In that example, the Git URL and Git branch are for a new toolchain template.
 | schema | property | <`deploy.json`> | File that defines the layout of the UI for configuring your deployment details |
 | service-category | property | <`pipeline`> | Service that uses the deployment configurations |
 | parameters | key |  |  |
-| prod-region | property | <`"{{region}}"`> | Defines {{site.data.keyword.Bluemix_notm}} region for production stage |
-| prod-organization | property | <`"{{organization}}"`> | Defines {{site.data.keyword.Bluemix_notm}} organization for production stage |
-| prod-space | property | <`prod`> | Defines {{site.data.keyword.Bluemix_notm}} space for production stage |
+| prod-region | property | <`"{{region}}"`> | Defines the {{site.data.keyword.Bluemix_notm}} region for the production stage |
+| prod-organization | property | <`"{{organization}}"`> | Defines the {{site.data.keyword.Bluemix_notm}} organization for the production stage |
+| prod-space | property | <`prod`> | Defines the {{site.data.keyword.Bluemix_notm}} space for the production stage |
 | github-repo-name | property | <`"{{repo-name-key.parameters.repo_name}}"`> | Variable to pass the GitHub repository name to the toolchain creation page |
 
 For more information about creating a `deploy.json` file, see [this section] (#toolchains_custom_deploy_json).
@@ -298,9 +298,9 @@ For more information about creating a `deploy.json` file, see [this section] (#t
  ```
  {: codeblock}
 
- The code example can be used mostly as is and requires only slight modification. To customize this section, set `github-repo-name` to be consistent with your repository's name. Details in the [`deploy.json`](#toolchains_custom_deploy_json) file also need to be updated.
+ You can use the code example, with a few modifications. To customize this section, set `github-repo-name` to be consistent with your repository's name. You must also update details in the [`deploy.json`](#toolchains_custom_deploy_json) file.
 
- To create a more complex pipeline that includes dev, QA, and Prod stages, the following properties can be substituted under the `parameters` key.
+ To create a more complex pipeline that includes dev, QA, and Prod stages, you can substitue the following properties under the `parameters` key.
 
  ```
    parameters:
@@ -323,7 +323,7 @@ For more information about creating a `deploy.json` file, see [this section] (#t
 
  If your toolchain contains more than one pipeline, provide unique names for each `pipeline.yml` file.
 
- The following is an example of a `pipeline.yml` file:
+ The following example shows a `pipeline.yml` file:
 
  ```
  ---
@@ -397,7 +397,7 @@ stages:
  On the toolchain creation page, when Delivery Pipeline is selected from the Configurable Integrations section, the section expands to display the following items:
 
  	* The application's name
- 	* The Region, Organization, and Space that your pipeline stages deploy to.
+ 	* The region, organization, and space that your pipeline stages deploy to.
 
 You can configure those items for each tool.
 
@@ -405,12 +405,12 @@ You can configure those items for each tool.
 
  The layout of this section in the UI is defined by the `deploy.json` schema.
 
- Within the schema, the following properties are to be updated to match the details of your application:
+ Within the schema, update the following properties to match the details of your application:
 
  	* Title
  	* Description
  	* LongDescription
- 	* All instances of `hello-world-name` and associated details should be modified to match that of your application.
+ 	* All instances of `hello-world-name` and the associated details
 
  The following snippet is an example of a `deploy.json` file:
 
@@ -531,7 +531,7 @@ You can configure those items for each tool.
 
 ## Other tool configurations
 
- After you configure the core components of your toolchain, you can include other tool integrations that add more functions to your toolchain. All additional tools require their own entry in the `toolchain.yml` file. Some tools also require that you add a separate YAML configuration file to `.bluemix` directory.
+ After you configure the core components of your toolchain, you can include other tool integrations that add more functions to your toolchain. All additional tools require their own entry in the `toolchain.yml` file. Some tools also require that you add a separate YAML configuration file to the `.bluemix` directory.
 
  ![Files needed to define a toolchain](images/files_for_toolchain_with_additional_tools.png)
 
