@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 ---
 
 {:shortdesc: .shortdesc}
@@ -23,19 +23,23 @@ lastupdated: "2018-8-2"
 Your permissions to view, modify, or run a pipeline are based on the access control for the toolchain that owns the pipeline. For more information about access control for toolchains, see [Managing access to toolchains in resource groups](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} and [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
 {: tip}
 
+You can specify the scripts to run in many of the job types that are provided by the pipeline, giving you direct control over what is run by the job. These scripts run in a Docker image that contains a number of standard development tools, including tools that are required for interacting with the {{site.data.keyword.Bluemix_notm}} runtimes. For more information about what the standard Docker image contains, see [Preinstalled resources](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}. If your job requires development tools that are not available in the standard image, or you need different versions of those tools, you can use a custom image. For more information about custom images, see [Working with custom Docker images](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}.
+
+When the pipeline runs scripts, properties that describe the context where the job is running are passed to the script by using environment variables. For example, the URL of the repo that is the input to the stage, the name of the stage and the job that is being run, the parameters specified by the job type, and so on. To view a list of the available environment variables, see [Preinstalled resources](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}. 
+
+You can define properties at both the pipeline level and the stage level. Pipeline properties are shared across all stages and jobs in a pipeline. Stage properties are unique to a particular stage, and shared across all jobs in that stage. For more information about properties, see [Environment properties (Environment variables)](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties).
+
 ## Stages
 {: #deliverypipeline_stages}
 
-Stages organize input and jobs as your code is built, deployed, and tested. Stages accept input from either source control repositories (SCM repositories) or build jobs (build artifacts) in other stages. When you create your first stage, the default settings are set for you on the **INPUT** tab.
+Stages organize input and jobs as your code is built, deployed, and tested. Stages accept input from either source control repositories (SCM repositories) or build jobs in other stages. For SCM repositories, the input is the contents of a particular branch in the repository; for build jobs, the input is the artifacts that are produced by the job. When you create your first stage, the **INPUT** tab contains default settings.
 
-A stage's input is passed to the jobs the stage contains, and each job is given a clean container to run in.
-
-The jobs in a stage can't pass artifacts to each other. Because  you can't pass artifacts between jobs, you need to have a separate Build stage from a Deploy stage if your deploy stage will use the build stage artifacts.
+When a stage runs, the stage's input is passed to each of the jobs in the stage. Each job is given a clean container to run in. As a result, jobs within a stage cannot pass artifacts to each other. To pass artifacts between jobs, separate the jobs into two stages, and use the output from the job in the first stage as input to the second stage.
 {: tip}
 
-You can define stage environment properties that can be used in all jobs. For example, you might define a `TEST_URL` property that passes a single URL to deploy and test jobs in a single stage. The deploy job would deploy to that URL, and the test job would test the running app at the URL.
+Similar to how you can define pipeline properties, you can also define stage properties for use in all of the jobs in a particular stage. For example, you might define a `TEST_URL` property that passes a URL to the deploy and test jobs in a stage. The deploy job deploys to that URL and the test job tests the running app at the URL. Stage properties are also passed to job scripts by using environment variables. If the same property is defined at both the pipeline level and the stage level, the value of the stage property is used.
 
-By default in a stage, builds and deployments are run automatically every time that changes are delivered to a project's SCM repository. Stages and jobs run serially; they enable flow control for your work. For example, you might place a test stage before a deployment stage. If the tests in the test stage fail, the deployment stage won't run.
+By default in a stage, builds and deployments are run automatically every time that changes are delivered to a project's SCM repository. Stages and jobs run serially; they enable flow control for your work. For example, you might place a test stage before a deployment stage. If the tests in the test stage fail, the deployment stage does not run.
 
 You might want tighter control of a specific stage. If you do not want a stage to run every time that a change occurs at its input, you can disable the capability. On the **INPUT** tab, in the Stage Trigger section, click **Run jobs only when this stage is run manually**.
 
@@ -45,21 +49,27 @@ You might want tighter control of a specific stage. If you do not want a stage t
 ### Build stage
 {: #build_stage}
 
-<!-- Need the Pipeline team to fill out what each builder does and possible add an example -->
-The build stage specifies a **Builder type** to indicate how to build the artifacts.  The following Builder types are available:
+The build stage specifies a **Builder type** to indicate how to build the artifacts.  
 
-1. **Simple** - If you use the **Simple** builder type, your code is not compiled or built; it is packaged and made available for future stages.
-2. **Ant**
-3. **Container Registry**
-4. **Gradle**
-5. **Gradle (Artifactory, Nexus, or SonarQube)**
-6. **Grunt**
-7. **IBM Globalization Pipeline**
-8. **Maven**
-9. **Maven (Artifactory, Nexus, or SonarQube)**
-10. **npm**
-11. **npm (Artifactory or Nexus)**
-12. **Shell Script**
+Many of the fields that are available in Build jobs are common across multiple Builder types.
+{: tip}
+
+The following Builder types are available:
+
+* **Simple** - Jobs that use the **Simple** builder type take the current stage's input and without modifying it, archive it for use by future stages. Typically, the **Simple** builder type is only useful when the stage's input is from an SCM repository.
+* **Ant** - Use this builder type to use Apache Ant files to manage the build job.
+  * **Build script** - This builder type can be any valid build script. By default, this builder type is set to 'ant'.
+  * **Working directory** - Specifies the directory where the script is run.
+  * **Build archive directory** - Specifies the directory that contains the job's output to be archived for use by a subsequent stage.
+  * **Enable test report** - Select this check box to specify that the build job runs tests that produce result files in JUnit XML format. A report based on the result files is displayed on the Tests tab of the Job Results page. If any tests failed, the job is marked as failed.
+  * **Enable code coverage report** - Select this check box to show more fields that you can use for the code coverage report. You can specify the Coverage runner (such as Istanbul, JaCoCo, ore Cobertura), the location of the Coverage result file, and the Coverage result directory, relative to the Working directory.
+* **Container Registry**
+* **Gradle (Artifactory, Nexus, or SonarQube)**
+* **Grunt**
+* **IBM Globalization Pipeline**
+* **Maven (Artifactory, Nexus, or SonarQube)**
+* **npm (Artifactory or Nexus)**
+* **Shell Script**
 
 ### Deploy stage
 The deploy stage specifies input from a Build stage.  The jobs in the deploy stage specify a **Deployer type**.  The following Deployer types are available:
@@ -129,22 +139,54 @@ If your tests produce result files in JUnit XML format, a report that is based o
 ## Environment properties (Environment variables)
 {: #environment_properties}
 
-You can include environment properties within a job's shell commands. The properties provide access to information about the job's execution environment. For more information, see [Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).  Environment properties can be passed between jobs in the same stage by exporting the properties.  To pass environment properties between stages, create a `build.properties` file in the repo in the stage and then have the next stage execute the `build.properties`.  For example, your build job could include this command in the build script:
+A set of predefined environment properties provides access to information about the job's execution environment. For a complete list of the predefined environment properties, see [Environment properties and resources](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
 
-    `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
+You can also define your own environment properties. For example, you might define an `API_KEY` property that passes an API key that is used to access {{site.data.keyword.Bluemix_notm}} resources by all scripts in the pipeline.
 
-    All jobs start by executing the `build.properties` file, if it exists.
+You can add the following types of properties:
+
+* **Text**: A property key with a single-line value.
+* **Text Area**: A property key with a multi-line value.
+* **Secure**: A property key with a single-line value that is secured with AES-128 encryption. The value is displayed as asterisks.
+* **Properties**: A file in the project's repository. This file can contain multiple properties. Each property must be on its own line. To separate key-value pairs, use the equals sign (=). Enclose all string values in quotation marks. For example, `MY_STRING="SOME STRING VALUE"`.
+
+You can examine the environment properties for a pipeline job by running the `env` command in the job's script.
+{:tip}
+
+### Pipeline properties
+To define pipeline properties, from the overflow menu on the Pipeline page, select **Configure Pipeline**.
+
+![Pipeline overflow menu](images/OverflowMenu.png)
+
+From the **ENVIRONMENT PROPERTIES** tab on the Pipeline configuration page, set the pipeline-level environment properties.
+
+![Pipeline properties page](images/PipelineProperties.png)
+
+### Stage properties
+To define stage properties, open the Stage configuration page and click the **ENVIRONMENT PROPERTIES** tab.
+
+![Stage properties page](images/StageProperties.png)
+
+You can also pass environment properties between jobs in the same stage by exporting the properties. For example, you can include the following command to use the `$API_KEY` property in another job within the stage: `export API_KEY=<insert API key here>`
+{:tip}
+
+### Computed properties
+You can compute the environment property values that are shared across stages by creating a `build.properties` file while the stage is running, and then have the next stage run the file. For example, your build job might include the following command in the build script:
+
+  `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
+
+All jobs start by running the `build.properties` file, if it exists.
 
 ## Creating and using artifacts
 {: #artifacts}
 
-Build jobs automatically fetch the content in the current folder where the user script is executed.  If you do not need the entire git repo content for later deployment, it is preferable that you configure an explicit output directory and they copy or create the relevant artifacts there.  Job scripts are executed in the build result (output directory).
+Build jobs automatically fetch the content in the current folder where the user script is run.  If you do not need the entire git repo content for later deployment, it is preferable that you configure an explicit output directory and then copy or create the relevant artifacts there.  Job scripts are run in the build result (output directory).
 
-Deploy jobs that deploy to Cloud Foundry need to specify the Platform API key of a user under whose authority jobs run, and the region, org, and space of where to deploy the artifacts. If additional services are needed to run your app, you need to specify them in the `manifest.yml` file.
+Jobs that deploy to Cloud Foundry need to specify the Platform API key of a user under whose authority jobs run, and the region, org, and space of where to deploy the artifacts. If more services are required to run your app, you must specify them in the `manifest.yml` file.
 
-Deploy jobs that deploy to the {{site.data.keyword.containerlong_notm}} to run in a Kubernetes cluster need to specify the Platform API key of a user under whose authority jobs run, a Dockerfile, and optionally a Helm chart.  
+Deploy jobs that deploy to the {{site.data.keyword.containerlong_notm}} need to specify the Platform API key of a user under whose authority jobs run, a Dockerfile, and optionally a Helm chart.  
 
-The job script runs after the job has logged in to the target environment by using the Platform API key that is assigned to it (so you can perform `cf push`  or `kubectl` commands in the script).
+The job script runs after the job has logged in to the target environment by using the Platform API key that is assigned to it (so that you can run `cf push`  or `kubectl` commands in the script).
 
 ## An example pipeline
 {: #deliverypipeline_example}
