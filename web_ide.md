@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-3"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-10-3"
 # Developing with the Eclipse Orion Web IDE
 {: #web_ide}
 
-The Eclipse Orion {{site.data.keyword.webide}} is a browser-based development environment where you can develop for the web in JavaScript, HTML, and CSS with the help of content assist, code completion, and error checking. The {{site.data.keyword.webide}} works with nearly any language and offers syntax highlighting for most file types. Source control is built in, and you can deploy code locally to test and debug your apps.
+The Eclipse Orion {{site.data.keyword.webide}} is a browser-based development environment where you can develop for the web in JavaScript, HTML, and CSS with the help of content assist, code completion, and error checking. The {{site.data.keyword.webide}} works with nearly any language and you can highlight syntax for most file types. Source control is built in, and you can deploy code locally to test and debug your apps.
 {:shortdesc}
 
 Best of all, the {{site.data.keyword.webide}} is powered by the web. You have nothing to install, nothing to maintain, and nothing to scale. You can develop anywhere that you have an internet connection.
@@ -86,17 +86,17 @@ The {{site.data.keyword.webide}} is integrated with source code management tools
 2. After your app is deployed, you can use the run bar to stop, restart, or debug your app, view logs, and more.
 
 <table role="presentation">
-<tr><td><img src="./images/stop_button.png"  alt="The stop icon"></td><td>Stop the app</td></tr>
-<tr><td> <img src="./images/open_app_url.png"  alt="The open app URL icon"></td><td> Open the deployed app</td></tr>
-<tr><td><img src="./images/view_logs.png"  alt="The view logs icon"></td><td>View the logs of the deployed app</td></tr>
-<tr><td><img src="./images/open_dashboard.png"  alt="The open dashboard icon"></td><td>Open the app's Dashboard</td></tr>
+<tr><td><img src="./images/stop_button.png"  alt="The stop icon"></td><td>Stop the app.</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="The open app URL icon"></td><td> Open the deployed app.</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="The view logs icon"></td><td>View the logs of the deployed app.</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="The open dashboard icon"></td><td>Open the app's Dashboard.</td></tr>
 </table>
 
 If you are developing a Node.js app, enable Live Edit mode:  <img  src="./images/enable_live_edit.png"  alt="The enable live edit slider">
 
-<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="The Live Edit restart icon"></td><td>With Live Edit mode enabled, restart the app quickly, without redeployment</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="The Live Edit restart icon"></td><td>With Live Edit mode enabled, restart the app quickly, without redeployment.</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="The debug icon"></td>
-<td>With Live Edit mode enabled, access the debugger
+<td>With Live Edit mode enabled, access the debugger.
 </td></tr>
 </table>
 
@@ -165,7 +165,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 ## Supported languages
 {: #supported_languages}
 
-The Eclipse Orion {{site.data.keyword.webide}} provides content assist, tooltips, previews, validation, and syntax highlighting for JavaScript, HTML, CSS, and Markdown files. Syntax highlighting is also supported for these file types:
+The Eclipse Orion {{site.data.keyword.webide}} provides content assist, tooltips, previews, validation, and highlights syntax for JavaScript, HTML, CSS, and Markdown files. You can also highlight syntax for these file types:
 
 <table role="presentation">
 <tr>
