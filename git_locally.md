@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-8-2"
 {: #git_local}
 
 
-You can manage and work with your source code in a GitHub, GitHub Enterprise, or Git Repos and Issue Tracking repository (repo), locally or in the Eclipse Orion Web IDE. To work locally, clone your repo with a Git client such as the Git command-line interface, and edit your code with your favorite editor. If you work in Eclipse, you can install the EGit plug-in for version control.
+You can manage and work with your source code in a GitHub, GitHub Enterprise, or Git Repos and Issue Tracking repository (repo), locally or in the Eclipse Orion Web IDE. To work locally, clone your repo with a Git client such as the Git command line interface, and edit your code with your favorite editor. If you work in Eclipse, you can install the EGit plug-in for version control.
 
 ## Cloning your Git project from the command line
 
@@ -26,7 +26,7 @@ You can manage and work with your source code in a GitHub, GitHub Enterprise, or
 ## Before you begin
 {: #git_before_clone}
 
-1. To access the Git server outside the browser, you may need to create a personal access token or SSH key for authentication. The following table shows what you need to do to set up authentication.
+1. To access the Git server outside the browser, you might need to create a personal access token or SSH key for authentication. The following table shows what you need to do to set up authentication.
 
 | Git Type  | HTTPS Setup | HTTPS Use |  SSH Setup |
 |:-----------|:-------------|:------------|:-------------|
@@ -34,10 +34,10 @@ You can manage and work with your source code in a GitHub, GitHub Enterprise, or
 | Public GitHub (github.com) | Personal access token is not required, but you can set one up and use it | GitHub user name and password, or GitHub user name and Personal Access token, or just the personal access token as the user name | [Configure a GitHub SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
 | GitHub Enterprise | [Personal access token](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | GitHub Enterprise user name (not your IBM id) and personal access token | [Configure the GitHub Enterprise SSH key](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
-If you prefer to use SSH, you can reuse a single key across all Git servers. Create or locate your key and configure it in each server as described in the previous links. If you create your key with a passphrase, you will be prompted for that passphrase when you use the key.
+If you prefer to use SSH, you can reuse a single key across all Git servers. Create or locate your key and configure it in each server as described in the previous links. If you create your key with a passphrase, you are prompted for that passphrase when you use the key.
 {: tip}
 
-2. If you are going to use the Git command line, do the following:
+2. If you are going to use the Git command line, complete the following steps:
 
     a. Check whether Git is installed. On a command line, type `git version`. If Git is installed, the version number is shown and you can begin.
 
