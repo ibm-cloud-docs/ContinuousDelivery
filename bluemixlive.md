@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -48,7 +48,7 @@ While a Node.js application is in Live Edit mode, you can shell into it and debu
 ##Live Edit
 {: #live-edit}
 
-If you are building a Node.js application that runs on {{site.data.keyword.Bluemix_notm}}, the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync can quickly update the application instance. Live Edit is available in the Web IDE only. Live Edit allows you to develop as you would on the desktop without redeploying.
+If you are building a Node.js application that runs on {{site.data.keyword.Bluemix_notm}}, the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync can quickly update the application instance. Live Edit is available in the Web IDE only. You can use Live Edit to develop as you would on the desktop without redeploying.
 
 Live Edit is supported for Node.js applications only.
 
@@ -56,13 +56,13 @@ In the Eclipse Orion Web IDE (Web IDE), in the run bar, click **Live Edit**.
 
 ![Image of Run bar with live edit](images/bluemix-live-sync-light.png)
 
-Live Edit allows you to quickly preview changes to Node.js applications that run on {{site.data.keyword.Bluemix_notm}}. When you update your code with Live Edit turned on, you can refresh your web application's browser window to see those changes reflected seconds after you make them.
+Use Live Edit to quickly preview changes to Node.js applications that run on {{site.data.keyword.Bluemix_notm}}. When you update your code with Live Edit turned on, you can refresh your web application's browser window to see those changes reflected seconds after you make them.
 
 For a tutorial about using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see [Use {{site.data.keyword.Bluemix_notm}} Live Sync to develop, debug, and deploy your app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-live-sync-to-develop-debug-and-deploy-your-app){:new_window}.
 
 When you change the files in your Web IDE, they are automatically redeployed to your application instance on {{site.data.keyword.Bluemix_notm}}. If you need to restart the Node application, click the **Restart** button in the run bar.
 
-For a more consistent experience when you use the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, 256 MB of additional memory is required and is added.
+For a more consistent experience, when you use the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, 256 MB of extra memory is required and is added.
 {: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} Live Debug
@@ -74,7 +74,7 @@ to provide debug features. You need to use version 4 of Node for the debugger to
 
 You can access {{site.data.keyword.Bluemix_notm}} Live Debug when {{site.data.keyword.Bluemix_notm}} Live Edit is enabled for your Node.js app.  
 
-With debug, you can dynamically edit code, insert breakpoints, step through code, restart the runtime and more, all while your app is being served by {{site.data.keyword.Bluemix_notm}}. You can incrementally develop your app with agility while choosing from the large list of {{site.data.keyword.Bluemix_notm}} services.
+With debug, you can dynamically edit code, insert breakpoints, step through code, restart the runtime and more, all while your app is being served by {{site.data.keyword.Bluemix_notm}}. You can incrementally develop your app with agility while you choose from the large list of {{site.data.keyword.Bluemix_notm}} services.
 
 {{site.data.keyword.Bluemix_notm}} Live Debug includes the following features:
 
@@ -84,7 +84,7 @@ With debug, you can dynamically edit code, insert breakpoints, step through code
 
 ### Application runtime control {: #app-runtime}
 
-With the application runtime control, you can use Debug to inspect the app's state at start time. This capability is useful when you are troubleshooting an app that crashes on start.
+With the application runtime control, you can use Debug to inspect the app's state at start time. This capability is useful when you are troubleshooting an app that fails on start.
 
 While you are developing your app, you can select from the following actions:
 
@@ -138,7 +138,7 @@ Monitor memory and CPU usage within the instance that uses standard Linux comman
 
 After the {{site.data.keyword.Bluemix_notm}} Live Debug is installed, you can use the debug tools.
 
-Push the app and then browse to `https://_app-host.mybluemix.net_/bluemix-debug/manage` to access the {{site.data.keyword.Bluemix_notm}} debug user interface. When you are prompted to authenticate, enter your IBM id username and password or a one-time passcode.    
+Push the app and then browse to `https://_app-host.mybluemix.net_/bluemix-debug/manage` to access the {{site.data.keyword.Bluemix_notm}} debug user interface. When you are prompted to authenticate, enter your IBM ID user name and password or a one-time passcode.    
 
 The Debugger might take a minute or so to initialize.
 {: tip}
