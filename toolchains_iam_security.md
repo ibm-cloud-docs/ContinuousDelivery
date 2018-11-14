@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -28,7 +28,7 @@ Access to toolchains in resource groups for users in your account is controlled 
 
 Every user that accesses toolchains in your account must be assigned an access policy with an IAM user role defined. That policy determines what actions the user can perform within the context of the service or instance you select. The allowable actions are customized and defined by the {{site.data.keyword.Bluemix_notm}} service as operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles.
 
-Policies enable access to be granted at different levels. Some of the options include the following: 
+Policies enable access to be granted at different levels, including: 
 
 * Access across all instances of the service in your account
 * Access to an individual service instance in your account
