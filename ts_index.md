@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-7-19"
+lastupdated: "2018-11-15"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -11,6 +11,12 @@ lastupdated: "2018-7-19"
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:faq: data-hd-content-type='faq'}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:download: .download}
 
 # FAQs
 {: #ts_cd}
@@ -21,6 +27,7 @@ Get answers to frequently asked questions about using {{site.data.keyword.contde
 
 ## I tried to add the GitHub tool integration to my toolchain, why wasn't the tool integration added?
 {: #cannot_authorize_github}
+{: faq}
 
 If {{site.data.keyword.Bluemix_notm}} is not authorized to access your GitHub account, the tool integration is not added to your toolchain.
 
@@ -40,6 +47,7 @@ If you already have a toolchain, update the GitHub tool integration's configurat
 
 ## I tried to create a toolchain, why am I getting an error?
 {: #cannot_create_toolchain}
+{: faq}
 
 When trying to create a toolchain in an org, if you get the following error message, remove one or more toolchains from your org and then create your toolchain again.
 
@@ -47,16 +55,22 @@ When trying to create a toolchain in an org, if you get the following error mess
 
 
 ## Why does the Toolchains page show that the {{site.data.keyword.contdelivery_short}} service Lite plan is exceeded?
+{: #plan_exceeded}
+{: faq}
 
 {{site.data.keyword.contdelivery_short}} offers two plans: Lite and Professional. If you have the {{site.data.keyword.contdelivery_short}} Lite plan, you can use toolchains for free, up to the limits of the plan. The error message indicates that you exceeded one or more limits of the Lite plan. For example, you might exceed the plan if you have too many authorized users who are associated with the {{site.data.keyword.contdelivery_short}} service instance, or if you ran the maximum number of {{site.data.keyword.deliverypipeline}} jobs. For more information about the terms of your plan, see [Plan limitations and usage](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
 
 
 ## I created a toolchain, why does the Toolchains page show that a Continuous Delivery service is required?
+{: #service_required_resource_group}
+{: faq}
 
 The terms of the plan for the {{site.data.keyword.contdelivery_short}} service instance that is in the same resource group or org as the toolchain manages the use of some of the tool integrations ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}}, and {{site.data.keyword.gitrepos}}) that are contained in the service. The error message indicates that the resource group or org doesn't contain the required instance of the {{site.data.keyword.contdelivery_short}} service. For more information about the terms of your plan, see [Plan limitations and usage](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
 
 
 ## I created a toolchain in a Cloud Foundry org, why does the Toolchains page show that a Continuous Delivery service is required?
+{: #service_required_cloud_foundry}
+{: faq}
 
 When you create a toolchain in a resource group or org that does not have an instance of the {{site.data.keyword.contdelivery_short}} service, the toolchain platform attempts to automatically create an instance of the service by using the Lite plan. The error message indicates that the toolchain platform couldn't create the service instance.
 
@@ -67,6 +81,7 @@ You can either create the toolchain in a resource group or create the toolchain 
 
 ## I tried to deploy an app to {{site.data.keyword.Bluemix_notm}}, why am I getting an error?
 {: #org_outofmemory}
+{: faq}
 
 When trying to deploy an app to {{site.data.keyword.Bluemix_notm}}, if you get the following error message, the amount of memory that is remaining in your organization is less than the amount of memory that is required by the app that you want to deploy.
 
@@ -98,6 +113,7 @@ If you use the cf command line interface, complete the following steps:
 
 ## I created an app, why doesn't the run bar show {{site.data.keyword.Bluemix_notm}} Live Sync icons in the Eclipse Orion Web IDE?
 {: #ts_llz_lkb_3r}
+{: faq}
 
 ![Run bar](images/webide_runbar_light.png)   
 
@@ -114,6 +130,7 @@ If the `manifest.yml` file isn't stored at the root, store it there. If your app
 
 ## I clicked a toolchain to view its Overview page, why doesn't the toolchain load?
 {: #toolchains_load}
+{: faq}
 
 Check the {{site.data.keyword.Bluemix_notm}} Status page to determine whether known issues are affecting the {{site.data.keyword.Bluemix_notm}} platform and the major services in {{site.data.keyword.Bluemix_notm}}.
 
@@ -127,6 +144,7 @@ For more information about the {{site.data.keyword.Bluemix_notm}} Status page, s
 
 ## I configured a tool integration for my toolchain, why wasn't it configured?
 {: #tool_integration_error}
+{: faq}
 
 When you add a tool integration, the toolchain communicates with the tool that is represented by the tool integration to provision any necessary resources and associate them with the toolchain. If an error occurs during the setup process or if the communication between the toolchain and the tool does not complete properly, the tool integration is put into an error state.
 
