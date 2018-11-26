@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-26"
 
 ---
 
@@ -102,9 +102,9 @@ If the app must be built before it can be deployed, you must include a build fil
 Supported builders include:
 
 * [Ant ![External link icon](../../icons/launch-glyph.svg "External link icon"):](http://ant.apache.org/manual/using.html){:new_window} `build.xml`, which builds output to the `./output/` folder
-* [Gradle ![External link icon](../../icons/launch-glyph.svg "External link icon"):](http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle){:new_window} `/build.gradle`, which builds output to the `.` folder
+* [Gradle ![External link icon](../../icons/launch-glyph.svg "External link icon"):](https://docs.gradle.org/current/userguide/getting_started.html){:new_window} `/build.gradle`, which builds output to the `.` folder
 * [Grunt ![External link icon](../../icons/launch-glyph.svg "External link icon"):](http://gruntjs.com/getting-started#the-gruntfile){:new_window} `/Gruntfile.js`, which builds output to the `.` folder
-* [Maven ![External link icon](../../icons/launch-glyph.svg "External link icon"):](http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven){:new_window} `/pom.xml`, which builds output to the `./target/` folder
+* [Maven ![External link icon](../../icons/launch-glyph.svg "External link icon"):](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:new_window} `/pom.xml`, which builds output to the `./target/` folder
 
 ### Pipeline file requirements
 {: pipeline_file}
