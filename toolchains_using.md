@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2018-10-25"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
-{:download: .download}
+{:note: .note}
+{:tip: .tip}
+{:important: .important}
 
 # Using toolchains
 {: #toolchains-using}
@@ -21,7 +23,7 @@ Open toolchains are available in the Public and Dedicated environments on {{site
 {: shortdesc}
 
 You can manage toolchains in the US South, US East, United Kingdom, Germany, and Tokyo Public regions by using resource groups. You can use Cloud Foundry organizations (orgs) to manage toolchains in the US South, United Kingdom, and Germany Public regions. Access control and authorized user management function differently for toolchains depending on whether they are contained in a resource group or a Cloud Foundry org.
-{: tip}
+{: important}
 
 ## Configuring a tool integration
 {: #configuring_a_tool_integration}
@@ -73,7 +75,7 @@ You can use the Identity and Access Management (IAM) service to manage user acce
 Only users who are part of the authorized users list for the selected instance of {{site.data.keyword.contdelivery_short}} can use the Delivery Pipeline, Eclipse Orion {{site.data.keyword.webide}}, and {{site.data.keyword.gitrepos}} features of {{site.data.keyword.contdelivery_short}} toolchains. You can manage authorized user entitlement from the Manage tab of the selected instance of {{site.data.keyword.contdelivery_short}}, within the specified resource group.
 
 To access the key features of {{site.data.keyword.contdelivery_short}} in a toolchain, such as Delivery Pipeline, a user must have access to the toolchain in IAM, and the user must also be part of the Authorized Users list of the {{site.data.keyword.contdelivery_short}} instance.
-{: tip}
+{: important}
 
 Authorized user entitlement applies to all toolchains that are contained in the same resource group as the instance of {{site.data.keyword.contdelivery_short}}.
 {: tip}
@@ -85,7 +87,7 @@ Authorized user entitlement applies to all toolchains that are contained in the 
 You can grant users access to a toolchain by adding them to both the org that the toolchain is associated with and the access control list for the toolchain. Each toolchain is associated with a specific org, and any user that is a member of that org can be added to the access control list for any of the associated toolchains. The org that you are currently working in is displayed on the menu bar. To access a different set of toolchains, switch to a different org.
 
 You must add users to the toolchain's org in the region where the toolchain is hosted. If the toolchain is configured to deploy apps to a different region, it will still deploy apps to that region.
-{: tip}
+{: important}
 
 If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, when you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, the users can log in to {{site.data.keyword.ghe_short}} by using their {{site.data.keyword.Bluemix_notm}} ID and password. When the users log in, accounts are created for them. When you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, they are not automatically added to the {{site.data.keyword.ghe_short}} repo. Someone who has admin privileges for the repo must add them. For more information, see [Using Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, follow your internal procedures.
 
@@ -103,15 +105,17 @@ If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.ke
 
 * To grant access to a user who is not a member of the toolchain's org, follow these steps:
 
-   a. From the menu bar, click **Manage > Security > Identity and Access**.
+   a. From the menu bar, click **Manage > Access (IAM)**.
 
-   b. From the row for the user that you want to assign access, select the **Actions** menu, and then click **Assign access**.
+   b. Click **Access starts with the user**.
+   
+   c. From the row for the user that you want to assign access, select the **Actions** menu, and then click **Assign access**.
+   
+   d. Select **Assign access by using Cloud Foundry**.
 
-   c. Select **Assign access by using Cloud Foundry**.
+   e. Select **Assign organization**.
 
-   d. Select **Assign organization**.
-
-   e. Assign the user access:
+   f. Assign the user access:
 
      * Choose an organization to add the user to.
 
