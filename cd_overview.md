@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-15"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-15"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -28,7 +30,7 @@ The {{site.data.keyword.contdelivery_short}} service supports your DevOps workfl
   A toolchain is an integrated set of tools that you can use to collaboratively develop, build, deploy, test, and manage applications and make operations repeatable and easier to manage. Toolchains can include open source tools, {{site.data.keyword.Bluemix_notm}} services, such as [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window}, and third-party tools, such as GitHub, PagerDuty, and Slack. 
   
   {{site.data.keyword.DRA_short}} is available only in the US South region.
-  {: tip}
+  {: important}
 
  * Deliver continuously by using automated [pipelines](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window}.
 
