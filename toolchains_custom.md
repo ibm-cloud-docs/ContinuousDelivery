@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-14"
+lastupdated: "2018-11-29"
 
 ---
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-11-14"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -86,7 +88,7 @@ When you work with YAML files, follow these guidelines:
 
 Pay careful attention to the YAML file's formatting to reduce your chance of encountering errors.
 To check for errors, use a simple validator such as [this parser](http://wiki.ess3.net/yaml/){: new_window}.
-{: tip}
+{: important}
 
 ## Planning the services
 Each service subsection contains the following information:
