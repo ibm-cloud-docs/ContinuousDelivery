@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Managing personal data in Continuous Delivery
@@ -30,7 +32,7 @@ Personal data is any information that relates to or identifies a natural person.
  * [{{site.data.keyword.DRA_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
 IBM does not manage data in the {{site.data.keyword.contdelivery_short}} service. Before you leave the {{site.data.keyword.contdelivery_short}} service that is hosted in {{site.data.keyword.Bluemix_notm}} Public, you must delete your own data.
-{: tip}
+{: important}
 
 {{site.data.keyword.contdelivery_short}} provides the appropriate permissions to manage data within a resource group or Cloud Foundry organization. Your company might have policies that limit these permissions. If you don't have the appropriate permissions, contact the administrator for your {{site.data.keyword.Bluemix_notm}} account.
 
@@ -99,7 +101,7 @@ If you want to delete all of your personal data from {{site.data.keyword.contdel
 The {{site.data.keyword.webide}} provides a personal workspace in the cloud. You can use the {{site.data.keyword.webide}} to clone Git repositories and edit files. You own your {{site.data.keyword.webide}} workspace; it is not shared by any other account.
 
 Before you delete your {{site.data.keyword.webide}} data, you might want to export your work. After you delete your workspaces, they are removed from {{site.data.keyword.contdelivery_short}} and all files are deleted.
-{: tip}
+{: important}
 
 ###Exporting a Web IDE workspace
 
@@ -118,7 +120,7 @@ To delete your {{site.data.keyword.webide}} workspaces, including all of your pe
 1. Click **Delete** to remove all of your data from the {{site.data.keyword.webide}}.
 
 The {{site.data.keyword.webide}} uses a single sign-on mechanism. The first time that you access this tool integration, a corresponding, but hidden, {{site.data.keyword.webide}} account is created for your IBM Cloud account. After you delete all of your workspaces, do not access the {{site.data.keyword.webide}}. If you access the {{site.data.keyword.webide}} again, a new account is automatically created that you must delete.
-{: tip}
+{: important}
 
 ## Modifying, exporting, and deleting Git Repos and Issue Tracking data
 {: #managing_grit_data}
@@ -158,7 +160,7 @@ After your account is deleted, some content will remain. This content is assigne
 {: tip}
 
 {{site.data.keyword.gitrepos}} uses a single sign-on mechanism that automatically creates a corresponding Git account for your IBM Cloud account the first time that you access the tool integration. After you delete your account, do not access {{site.data.keyword.gitrepos}}. If you access {{site.data.keyword.gitrepos}} again, a new account is automatically created that you must delete.
-{: tip}
+{: important}
 
 ## Modifying, exporting, and deleting Continuous Delivery pipeline data
 {: #managing_pipeline_data}
@@ -168,7 +170,7 @@ After your account is deleted, some content will remain. This content is assigne
 Make sure that you coordinate with other members of your team before you delete shared objects or pipelines. Deleting a stage might cause a pipeline to fail.
 
 A pipeline cannot exist outside of a toolchain. If you delete a toolchain, all of the pipelines that are associated with the toolchain are also deleted. If you plan to delete an entire toolchain, you do not need to delete each pipeline individually. Instead, skip to the "Modifying and deleting toolchains and tool integrations" section, and follow the steps to delete a toolchain.
-{: tip}
+{: important}
 
 Pipeline stages might include personal data such as credentials in the form of environment properties, and a pipeline definition that shows the current state of the pipeline. Stages might also include scripts inside jobs that you want to modify or delete, as well as artifacts and logs for the most recent pipeline runs that you want to export. Use the Configure Stage or Delete Stage actions to modify or delete a stage. Use the Download action to export artifacts or logs from a stage.
 
