@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2018
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-10-25"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -49,7 +51,7 @@ Although toolchains are not currently available in all regions, you can configur
 You can use a template as a starting point to [create a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/create){: new_window}. Toolchain templates include specific sets of tool integrations that support development, deployment, and operations tasks.
 
 Your company's {{site.data.keyword.Bluemix_notm}} Dedicated environment might not contain the same toolchain templates as the {{site.data.keyword.Bluemix_notm}} Public site. Toolchain templates that are available on both {{site.data.keyword.Bluemix_notm}} Public and {{site.data.keyword.Bluemix_notm}} Dedicated might contain a different set of tool integrations on {{site.data.keyword.Bluemix_notm}} Dedicated.
-{: tip}
+{: note}
 
 Some toolchain templates include tool integrations that are part of the {{site.data.keyword.contdelivery_short}} service. If an instance of that service isn't already in your resource group or organization, when you click **Create** to create the toolchain, the service is automatically added with the selected free Lite plan. For more information and terms, see the [{{site.data.keyword.Bluemix_notm}} catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/continuous-delivery/){:new_window}.
 
