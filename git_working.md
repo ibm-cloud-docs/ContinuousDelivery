@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-3"
+lastupdated: "2018-12-5"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-10-3"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # {{site.data.keyword.gitrepos}}
@@ -20,11 +22,14 @@ lastupdated: "2018-10-3"
 Collaborate with your team and manage your source code with a Git repository (repo) and issue tracker that is hosted by IBM and built on [GitLab Community Edition ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://about.gitlab.com/){:new_window}.
 {: shortdesc}
 
+Invite only people that you have a personal or business relationship with to collaborate on a project. Users that use an invitation to a Git repo for purposes other than to collaborate on a project might have their access to the service suspended or revoked.
+{: important}
+
 Don't store regulated data in files or issues within Git repos. The procedures for regulated data are currently not in place.
 {: tip}
 
 The {{site.data.keyword.gitrepos}} tool integration supports teams to manage code and collaborate in many ways:
-   * Manage Git repositories through fine-grained access controls that keep code secure
+   * Manage Git repos through fine-grained access controls that keep code secure
    * Review code and enhance collaboration through merge requests
    * Track issues and share ideas through the issue tracker
    * Document projects on the wiki system
