@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-15"
+lastupdated: "2018-12-6"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -16,6 +16,8 @@ lastupdated: "2018-11-15"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # FAQs
@@ -137,9 +139,9 @@ Check the {{site.data.keyword.Bluemix_notm}} Status page to determine whether kn
 You can find the Status page by choosing either of the following options:
 
   * Log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click **Support** and select **Status**. Check the listed resources for the ![some issues](../../get-support/images/some_issues.svg) icon. This icon might indicate an outage.
-  * Access it directly at [{{site.data.keyword.Bluemix_notm}} - System Status ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/status){: new_window}.
+  * Access it directly at [{{site.data.keyword.Bluemix_notm}} - System Status ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/status){: new_window}.
 
-For more information about the {{site.data.keyword.Bluemix_notm}} Status page, see [Viewing {{site.data.keyword.Bluemix_notm}} status](https://console.bluemix.net/docs/get-support/ViewStatus.html#viewing-bluemix-status).
+For more information about the {{site.data.keyword.Bluemix_notm}} Status page, see [Viewing {{site.data.keyword.Bluemix_notm}} status](https://cloud.ibm.com/docs/get-support/ViewStatus.html#viewing-bluemix-status).
 
 
 ## I configured a tool integration for my toolchain, why wasn't it configured?
