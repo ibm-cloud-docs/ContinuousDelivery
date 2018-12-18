@@ -2,13 +2,16 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-14"
+lastupdated: "2018-12-6"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:codeblock:.codeblock}
 
 
@@ -47,7 +50,7 @@ If you have a more serious issue or encounter problems with the {{site.data.keyw
 1. From the menu bar, click **Support**, and then click **Add Ticket**.
 1. Complete the form to indicate what you need technical support for.
 
-For more information about opening an IBM {{site.data.keyword.Bluemix_notm}} support ticket, or about support levels and ticket severities, see [Contacting support](https://console.bluemix.net/docs/support/index.html#contacting-support).
+For more information about opening an IBM {{site.data.keyword.Bluemix_notm}} support ticket, or about support levels and ticket severities, see [Contacting support](https://cloud.ibm.com/docs/support/index.html#contacting-support).
 
 
 ## Support for {{site.data.keyword.Bluemix_notm}}
