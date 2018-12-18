@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-26"
+lastupdated: "2018-12-18"
 
 ---
 
@@ -43,11 +43,11 @@ When someone clicks your button, these actions occur:
 
 See an app button example for a public {{site.data.keyword.gitrepos}} repo:
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
 
 See an app button example for a public GitHub repo:
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
 
 ## Creating a button {: #create-button}
 
@@ -58,7 +58,7 @@ To create a Deploy to {{site.data.keyword.Bluemix_notm}} button, copy and modify
 To create a button in HTML, copy this snippet and insert a public Git repository URL and branch.
 
 ```HTML
-<a href="https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://bluemix.net/deploy/button.png" alt="Deploy to IBM Cloud"></a>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://cloud.ibm.com/devops/setup/deploy/button.png" alt="Deploy to IBM Cloud"></a>
 ```
 {: codeblock}
 
@@ -69,7 +69,7 @@ If you don't include the `branch` parameter in your snippet's repository URL, th
 To create a button in Markdown, copy this snippet and insert a public Git repository URL and branch.
 
 ```Markdown
-[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>)
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=<git_repository_URL>&branch=<git_branch>)
 ```
 {: codeblock}
 
@@ -81,9 +81,9 @@ After you create a Deploy to {{site.data.keyword.Bluemix_notm}} button snippet, 
 
 When you customize the snippet for your Deploy to {{site.data.keyword.Bluemix_notm}} button, consider that both of the templates use a default path to an external button image in PNG format and in English.
 
-* If you prefer to use an SVG image for the button instead of a PNG, change the path to the button image that is used in the snippet to `https://bluemix.net/deploy/button.svg`.
+* If you prefer to use an SVG image for the button instead of a PNG, change the path to the button image that is used in the snippet to `https://cloud.ibm.com/devops/setup/deploy/button.svg`.
 
-* If you prefer to use an image for the button, change the path of the button image that is used in the snippet to `https://bluemix.net/deploy/button_x2.png`. This image is twice the size of the default one.
+* If you prefer to use an image for the button, change the path of the button image that is used in the snippet to `https://cloud.ibm.com/devops/setup/deploy/button_x2.png`. This image is twice the size of the default one.
 
 * If you prefer to store the image locally, you can download the image and store it in your Git repo. Adjust the path to use the relative location of the image.
 
