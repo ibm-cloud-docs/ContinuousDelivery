@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-8-31"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-31"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -47,7 +49,7 @@ If you are using a private registry that requires authentication, you must set t
 
 For most registries, you can use the user name and password that were provided to you. If you use {{site.data.keyword.registrylong_notm}} to store your private images, you must use a platform API Key for authentication. 
 
-1. [Request a platform API key ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/iam/#/apikeys){: new_window} and make sure that you save the key. 
+1. [Request a platform API key ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/iam/#/apikeys){: new_window} and make sure that you save the key. 
 1. Create the two stage environment properties by using `iamapikey` for your `DOCKER_USERNAME` and the platform API Key that you saved for the `DOCKER_PASSWORD`.
 
  ![{{site.data.keyword.registrylong_notm}} credentials](images/custom-image-private-repository.png)
