@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-29"
+lastupdated: "2018-12-12"
 
 ---
 {:shortdesc: .shortdesc}
@@ -264,11 +264,9 @@ In that example, the Git URL and Git branch are for a new toolchain template.
 
 4\. **Deployment details:**
 
- As part of the continuous delivery process, you can configure a toolchain to deploy an application to any {{site.data.keyword.Bluemix_notm}} region, organization, or space to which a user has access. You can specify the details about where to deploy your application on the toolchain creation page.
+ As part of the continuous delivery process, you can configure a toolchain to deploy an application to any {{site.data.keyword.Bluemix_notm}} region, organization, or space to which a user has access. You can specify the details about where to deploy your application on the [toolchain creation](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} page.
 
- ![Delivery Pipeline Configuration settings](images/deploy_configuration.png)
-
- This section of the `toolchain.yml` file defines the pipeline stages that are available to configure from the toolchain creation page.
+This section of the `toolchain.yml` file defines the pipeline stages that are available to configure from the toolchain creation page.
 
  The parent key `deploy` is used to identify the deployment configuration properties. The following properties comprise the rest of the section:
 
@@ -396,14 +394,12 @@ stages:
  ## Configuring the pipeline interface
  {: #toolchains_custom_deploy_json}
 
- On the toolchain creation page, when Delivery Pipeline is selected from the Configurable Integrations section, the section expands to display the following items:
+ On the [toolchain creation](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} page, when Delivery Pipeline is selected from the Configurable Integrations section, the section expands to display the following items:
 
- 	* The application's name
+ 	* The application's name.
  	* The region, organization, and space that your pipeline stages deploy to.
 
 You can configure those items for each tool.
-
- ![Delivery Pipeline Configuration settings](images/deploy_configuration.png)
 
  The layout of this section in the UI is defined by the `deploy.json` schema.
 
