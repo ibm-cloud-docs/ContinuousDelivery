@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-11"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -84,11 +84,9 @@ You can add services to your apps and manage those services from your {{site.dat
 
 You can view the logs for jobs and view stages as they are running on the Stage History page.
 
-To view a job's log, click the job. Alternatively, on a stage, click **View logs and history**.
+1. To view a job's log, click the job. Alternatively, on a stage, click **View logs and history**.
 
-To view the runtime log of a deployed application, click **View runtime log**.
-
-![Areas in a stage tile that can be clicked to open relevant logs](images/view_logs_and_history.png)
+2. To view the runtime log of a deployed application, click **View runtime log**.
 
 In addition to job logs, you can view unit test results, generated artifacts, and code changes for any build job.
 
