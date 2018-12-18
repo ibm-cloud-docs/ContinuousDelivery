@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-29"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -28,13 +28,13 @@ Adopt a DevOps approach by using {{site.data.keyword.contdelivery_full}}, which 
 
 Before you can create a continuous delivery toolchain from a template, you must create an instance of {{site.data.keyword.contdelivery_short}} by selecting it from the {{site.data.keyword.Bluemix_notm}} catalog. The toolchain integrates tools for planning, developing, deploying pipelines, and managing your applications. You can always add or remove tools from your toolchains. If you already have toolchains, you can [view existing toolchains](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}. For more information about working with toolchains, see [Using toolchains](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
 
-If you aleady have an instance of {{site.data.keyword.contdelivery_short}}, you can [create a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/create){: new_window} or [view existing toolchains](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}.
+If you aleady have an instance of {{site.data.keyword.contdelivery_short}}, you can [create a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops/create){: new_window} or [view existing toolchains](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}.
 {: tip}
 
 ##Step 1: Select a toolchain template
 {: #select_a_toolchain_template}
 
-1. On the **Create a Toolchain** page, click a [toolchain template ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/create){: new_window}.
+1. On the **Create a Toolchain** page, click a [toolchain template ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops/create){: new_window}.
 1. Review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
 
  A few of the toolchain templates have multiple instances of a tool integration. For example, the Microservices toolchain template on {{site.data.keyword.Bluemix_notm}} Public contains three instances of GitHub and three instances of Delivery Pipeline, one for each of the three microservices.
