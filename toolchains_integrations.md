@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-29"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -361,8 +361,10 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
   {: tip}
 
 1. Configure the deploy job. In the **Deploy Script** field, include this command: `export CF_APP_NAME="$CF_APP"`. That command exports the app name as an environment property.
-1. Configure the test job. The values in the following image are examples. The **Service Instance**, **Target**, **Organization**, and **Space** fields are populated with the Sauce Labs user name, region, org, and space that you are using.  
-![Configure job](images/toolchain_configure_job.png)
+1. Configure the test job. 
+
+  The **Service Instance**, **Target**, **Organization**, and **Space** fields are populated with the Sauce Labs user name, region, org, and space that you are using.
+  {: tip}
 
   a. For the tester type, select **Sauce Labs**.
 
@@ -390,7 +392,7 @@ To learn more about {{site.data.keyword.deliverypipeline}}, see [Working with pi
   * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
 
-## Adding DevOps Insights (Beta)
+## Adding DevOps Insights
 {: #dra}
 
 {{site.data.keyword.DRA_full}} collects and analyzes the results from unit tests, functional tests, and code coverage tools to determine whether your code meets predefined criteria at specified gates in your deployment process. If your code does not meet or exceed the criteria, the deployment is stopped to prevent risks from being released. You can use {{site.data.keyword.DRA_short}} as a safety net for your continuous delivery environment or as a way to implement and improve quality standards.
