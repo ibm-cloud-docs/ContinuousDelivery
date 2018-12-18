@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-11-14"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -93,9 +93,6 @@ While you are developing your app, you can select from the following actions:
 
 After you log in, the {{site.data.keyword.Bluemix_notm}} Live Debug page opens.
 
-![Debug UI](images/live_sync_debug.png)
-
-
 ### Debug {: #debug}
 
 **Restriction:** Google Chrome and Node 4 are required.
@@ -151,4 +148,4 @@ The Debugger might take a minute or so to initialize.
 
 ### For more information
 
-* See [Eclipse tools for {{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
+* See [Eclipse tools for {{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
