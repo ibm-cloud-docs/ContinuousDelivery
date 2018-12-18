@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-14"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-11-14"
 
 {{site.data.keyword.jazzhub_short}} at hub.jazz.net is retired. 
 
-For your DevOps projects, use the [{{site.data.keyword.contdelivery_short}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops){:new_window}. If you're new to {{site.data.keyword.Bluemix_notm}}, be sure to check out the [{{site.data.keyword.Bluemix_notm}} overview](/docs/overview/ibm-cloud.html#overview).
+For your DevOps projects, use the [{{site.data.keyword.contdelivery_short}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops){:new_window}. If you're new to {{site.data.keyword.Bluemix_notm}}, be sure to check out the [{{site.data.keyword.Bluemix_notm}} overview](/docs/overview/ibm-cloud.html#overview).
 
 {: shortdesc}
 
@@ -54,7 +54,7 @@ You can learn more about toolchains on [YouTube ![External link icon](../../icon
 {: #upgrade_next_steps}
 
 1. Give your team members access to the toolchain.
-    - Each team member must have a valid {{site.data.keyword.Bluemix_notm}} account. Team members who don't have accounts must [sign up ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/registration){:new_window}.
+    - Each team member must have a valid {{site.data.keyword.Bluemix_notm}} account. Team members who don't have accounts must [sign up ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/registration){:new_window}.
     - Grant org members access to the toolchain from the toolchain Manage page. Existing project members are added as members of the toolchain as part of the upgrade process. For more information about access control for toolchains, see [Managing access ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
     - If a user is not a member of the org that the toolchain belongs to, add them to the org from the Manage Organizations page.
     - If your toolchain uses {{site.data.keyword.gitrepos}}, all JazzHub project members that have a valid {{site.data.keyword.Bluemix_notm}} ID are added to the {{site.data.keyword.gitrepos}} repo with the same privileges as they had in the JazzHub project. If your JazzHub project includes members that do not have a valid {{site.data.keyword.Bluemix_notm}} ID, they can register for one. After they register, you can add them to the repo.
@@ -130,7 +130,7 @@ If you used Jazz SCM as a source repo and used Delivery Pipeline to build your c
 ### I had to create an organization for my project that was upgraded to a toolchain, so I added a credit card to my account. Will my credit card be charged?
 {: #faq_charges}
 
-As a [Pay As You Go customer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}, if you use any runtime, service, or component beyond the free allotments that are listed for it in the {{site.data.keyword.Bluemix_notm}} catalog, you will be charged. For a usage estimate, see the [pricing sheet ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}. For current pricing for Continuous Delivery, see the [{{site.data.keyword.Bluemix_notm}} catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}.
+As a [Pay As You Go customer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}, if you use any runtime, service, or component beyond the free allotments that are listed for it in the {{site.data.keyword.Bluemix_notm}} catalog, you will be charged. For a usage estimate, see the [pricing sheet ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}. For current pricing for Continuous Delivery, see the [{{site.data.keyword.Bluemix_notm}} catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/services/continuous-delivery){: new_window}.
 
 If you are an IBM employee, internal IBM projects can be billed to departments in lieu of a personal credit card. If you need to use resources beyond the free allotments for IBM employees, create a support ticket.
 
@@ -152,7 +152,7 @@ My JazzHub project is associated with the {{site.data.keyword.Bluemix_notm}} UK 
    
    2. Some of my colleagues can't access it the toolchain, although they were listed as members in the original JazzHub project. If they try to open the toolchain from the app overview page in the UK region by clicking **View Toolchain**, they see an "access denied" message.
    
-   3. I don't see the toolchain listed on my Toolchains page at [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window}, although I can access the toolchain directly from the app overview page in the UK region by clicking **View Toolchain**. I either get an error that I cannot modify the toolchain or I get an error that I have no toolchain and I need to create one. 
+   3. I don't see the toolchain listed on my Toolchains page at [https://cloud.ibm.com/devops/toolchains?env_id=ibm:yp:us-south ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops/toolchains?env_id=ibm:yp:us-south){: new_window}, although I can access the toolchain directly from the app overview page in the UK region by clicking **View Toolchain**. I either get an error that I cannot modify the toolchain or I get an error that I have no toolchain and I need to create one. 
 
 **Answer:**
 
@@ -164,7 +164,7 @@ If you switch to that {{site.data.keyword.Bluemix_notm}} organization in the US,
 
 If you want your toolchain to be in the US organization that matches your non-US organization, follow these steps:
 
-   1. Log in to [https://console.bluemix.net ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){: new_window} and select the non-US region and org that you are coming from.
+   1. Log in to [https://cloud.ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com){: new_window} and select the non-US region and org that you are coming from.
    
    2. In the {{site.data.keyword.Bluemix_notm}} header, switch to the US South region. You are prompted to create a space in that region.
    
