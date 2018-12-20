@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-12-12"
+lastupdated: "2018-12-20"
 
 ---
 {:shortdesc: .shortdesc}
@@ -39,7 +39,7 @@ To create a custom toolchain template, begin by cloning the Simple Cloud Foundry
 
  This template deploys a basic Hello World application from a single GitHub repository and includes a simple toolchain that is preconfigured for continuous delivery, source control, issue tracking, and online editing.
 
-2. If you want to start with a more complex toolchain template, clone the [Cloud-native Toolchain for Microservices](https://github.com/open-toolchain/toolchain-demo){: new_window}.
+2. If you want to start with a more complex toolchain template, clone the [Cloud-native Toolchain for Microservices] template (https://github.com/open-toolchain/toolchain-demo){: new_window}.
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
