@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -24,7 +26,7 @@ Les chaînes d'outils sont disponibles sur {{site.data.keyword.Bluemix_notm}} Pu
 ## Disponibilité des chaînes d'outils sur {{site.data.keyword.Bluemix_notm}} Public et sur {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #public_and_dedicated}
 
-{{site.data.keyword.Bluemix_notm}} Public est une plateforme de cloud à norme ouverte qui vous permet de construire, d'exécuter et de gérer des applications accessibles via [http://bluemix.net ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://bluemix.net){:new_window}. {{site.data.keyword.Bluemix_notm}} Dedicated fournit les fonctionnalités de {{site.data.keyword.Bluemix_notm}} dans un environnement SoftLayer dédié qui établit une connexion sécurisée à la fois à l'environnement {{site.data.keyword.Bluemix_notm}} Public et à votre réseau. L'environnement {{site.data.keyword.Bluemix_notm}} Dedicated de votre société peut ne pas contenir les mêmes intégrations d'outils que le site {{site.data.keyword.Bluemix_notm}} Public.
+{{site.data.keyword.Bluemix_notm}} Public est une plateforme de cloud à norme ouverte qui vous permet de créer, d'exécuter et de gérer des applications accessibles via [http://cloud.ibm.com ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://cloud.ibm.com){:new_window}. {{site.data.keyword.Bluemix_notm}} Dedicated fournit les fonctionnalités d'{{site.data.keyword.Bluemix_notm}} dans un environnement SoftLayer dédié qui établit une connexion sécurisée à la fois à l'environnement {{site.data.keyword.Bluemix_notm}} Public et à votre réseau. L'environnement {{site.data.keyword.Bluemix_notm}} Dedicated de votre société peut ne pas contenir les mêmes intégrations d'outils que le site {{site.data.keyword.Bluemix_notm}} Public.
 
 Pour la gestion du code source et le suivi des problèmes, {{site.data.keyword.Bluemix_notm}} Public utilise généralement {{site.data.keyword.gitrepos}} (hébergé par IBM et basé sur [GitLab Community Edition ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://about.gitlab.com/){:new_window}) ou GitHub (github.com). {{site.data.keyword.Bluemix_notm}} Dedicated peut également utiliser github.com, mais se sert généralement de {{site.data.keyword.ghe_short}}, qui est installé par votre société ou géré par IBM.
 
@@ -36,7 +38,7 @@ Bien que les chaînes d'outils ne soient pas disponibles dans toutes les région
 |Chaînes d'outils |{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
 |Intégrations d'outils 		|Pour obtenir une liste des intégrations d'outils prises en charge, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}. 		|Les intégrations d'outils disponibles dépendent de la configuration de {{site.data.keyword.contdelivery_short}} dans votre environnement.			|
-|Création d'une chaîne d'outils à partir d'un modèle		|Connectez-vous à [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://console.bluemix.net/devops){:new_window}		|Connectez-vous à votre environnement Dedicated sur {{site.data.keyword.Bluemix_notm}}.			|
+|Création d'une chaîne d'outils à partir d'un modèle		|Connectez-vous à [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://cloud.ibm.com/devops){:new_window}		|Connectez-vous à votre environnement Dedicated sur {{site.data.keyword.Bluemix_notm}}.			|
 |Création d'une chaîne d'outils à partir d'une application		|L'application est configurée pour la distribution continue depuis un nouveau référentiel GitHub rempli avec le code de démarrage d'application.		|L'application est configurée pour la distribution continue depuis un nouveau référentiel GitHub ou GitHub Enterprise rempli avec le code de démarrage d'application.		|  
 |Régions de déploiement du pipeline de distribution		|Toutes les régions {{site.data.keyword.Bluemix_notm}} Public sont disponibles pour des travaux de déploiement Cloud Foundry. 		|La région {{site.data.keyword.Bluemix_notm}} Dedicated est disponible. D'autres régions dédiées ou locales au sein du même compte client peuvent également être disponibles en fonction de la configuration de {{site.data.keyword.contdelivery_short}} dans votre environnement spécifique.		|
 |Travaux de déploiement du pipeline de distribution		|Tous les [types de travaux](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs) sont disponibles.		|Les types de travaux dépendant de services {{site.data.keyword.Bluemix_notm}} qui ne sont pas installés dans l'environnement dédié risquent de ne pas être disponibles.	Par exemple, les types de travaux de génération et de déploiement de conteneur peuvent ne pas être disponibles dans les environnements ne disposant pas de {{site.data.keyword.containerlong_notm}}.	|
@@ -46,14 +48,14 @@ Bien que les chaînes d'outils ne soient pas disponibles dans toutes les région
 ## Modèles de chaîne d'outils
 {: #templates}
 
-Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/create){: new_window}. Les modèles de chaîne d'outils incluent des ensembles spécifiques d'intégrations d'outils prenant en charge des tâches de développement, de déploiement et d'opérations.
+Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops/create){: new_window}. Les modèles de chaîne d'outils incluent des ensembles spécifiques d'intégrations d'outils prenant en charge des tâches de développement, de déploiement et d'opérations.
 
 L'environnement {{site.data.keyword.Bluemix_notm}} Dedicated de votre société peut ne pas contenir les mêmes modèles de chaîne d'outils que le site {{site.data.keyword.Bluemix_notm}} Public. Les modèles de chaîne d'outils qui sont disponibles à la fois sur {{site.data.keyword.Bluemix_notm}} Public et {{site.data.keyword.Bluemix_notm}} Dedicated peuvent contenir un ensemble d'intégrations d'outils différent sur {{site.data.keyword.Bluemix_notm}} Dedicated.
-{: tip}
+{: note}
 
-Certains modèles de chaîne d'outils incluent des intégrations d'outils qui font partie du service {{site.data.keyword.contdelivery_short}}. Si une instance de ce service n'existe pas déjà dans votre groupe de ressources ou organisation, lorsque vous cliquez sur **Créer** pour créer la chaîne d'outils, le service est automatiquement ajouté avec le plan Lite gratuit sélectionné. Pour obtenir plus d'informations et pour consulter les dispositions légales, consultez le [catalogue {{site.data.keyword.Bluemix_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/catalog/services/continuous-delivery/){:new_window}.
+Certains modèles de chaîne d'outils incluent des intégrations d'outils qui font partie du service {{site.data.keyword.contdelivery_short}}. Si une instance de ce service n'existe pas déjà dans votre groupe de ressources ou organisation, lorsque vous cliquez sur **Créer** pour créer la chaîne d'outils, le service est automatiquement ajouté avec le plan Lite gratuit sélectionné. Pour obtenir plus d'informations et pour consulter les dispositions légales, consultez le [catalogue {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/catalog/services/continuous-delivery/){:new_window}.
 
-La chaîne d'outils "Développer et tester des microservices sur Cloud Foundry" déploie une application avec des API Catalogue et Commandes qui sont sauvegardées par un magasin Cloudant. Dans le cadre du déploiement de l'application, une instance de service Cloudant gratuite est créée. Pour obtenir plus d'informations et pour consulter les dispositions légales, consultez le [catalogue {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/catalog/services/cloudant-nosql-db/){:new_window}.
+La chaîne d'outils "Développer et tester des microservices sur Cloud Foundry" déploie une application avec des API Catalogue et Commandes qui sont sauvegardées par un magasin Cloudant. Dans le cadre du déploiement de l'application, une instance de service Cloudant gratuite est créée. Pour obtenir plus d'informations et pour connaître les dispositions légales, consultez le [catalogue {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/catalog/services/cloudant-nosql-db/){:new_window}.
 
 Les modèles prédéfinis de chaînes d'outils DevOps sont des exemples recommandés qui résolvent des scénarios réels et chacun contient un exemple d'application.  Vous pouvez utiliser votre propre application en spécifiant votre référentiel git lorsque vous créez la chaîne d'outils à partir du modèle.
 
@@ -65,9 +67,9 @@ Les modèles prédéfinis de chaînes d'outils DevOps sont des exemples recomman
     <th style="text-align:left; vertical-align:top">Outils inclus</th>
   </tr>
   <tr><td>
-  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain" target="_blank">Chaîne d'outils “Développer une application Cloud Foundry” <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
+  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain" target="_blank">Chaîne d'outils “Développer une application Cloud Foundry” <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
 
-  Disponible dans le sud des Etats-Unis, en Allemagne et au Royaume-Uni
+  Disponible dans les régions Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo et Royaume-Uni
 
   </td><td>
   Cette chaîne d'outils vous permet de développer et de déployer une application Cloud Foundry. Par défaut, cette chaîne d'outils utilise une application exemple Node.js "Hello World", mais vous pouvez établir une liaison vers votre propre référentiel GitHub à la place. La chaîne d'outils est préconfigurée pour la distribution continue, le contrôle des sources, le suivi des problèmes et l'édition en ligne.	<br><br>
@@ -82,12 +84,12 @@ Les modèles prédéfinis de chaînes d'outils DevOps sont des exemples recomman
   </td></tr>
 
   <tr><td>
-  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsecure-kube-toolchain" target="_blank">Chaîne d'outils "Développer une application Kubernetes"<img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
+  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsecure-kube-toolchain" target="_blank">Chaîne d'outils "Développer une application Kubernetes"<img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
 
-  Disponible dans le sud des Etats-Unis, en Allemagne et au Royaume-Uni
+  Disponible dans les régions Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo et Royaume-Uni
 
   </td><td>
-Cette chaîne d'outils vous permet de développer et de déployer une application de manière sûre dans un cluster Kubernetes géré par {{site.data.keyword.containerlong_notm}}. Par défaut, la chaîne d'outils utilise un exemple d'application Node.js "Hello World", mais vous pouvez établir une liaison vers votre propre référentiel GitHub à la place. Cette chaîne d'outils est préconfigurée pour la distribution continue avec Vulnerability Advisor, le contrôle des sources, le suivi des problèmes et l'édition en ligne. <br><br>
+  Cette chaîne d'outils vous permet de développer et de déployer une application de manière sûre dans un cluster Kubernetes géré par {{site.data.keyword.containerlong_notm}}. Par défaut, la chaîne d'outils utilise un exemple d'application Node.js "Hello World", mais vous pouvez établir une liaison vers votre propre référentiel GitHub à la place. Cette chaîne d'outils est préconfigurée pour la distribution continue avec Vulnerability Advisor, le contrôle des sources, le suivi des problèmes et l'édition en ligne. <br><br>
   Essayez le tutoriel : <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain" target="_blank">Utilisation de la chaîne d'outils "Développer une application Kubernetes" <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>  
   <br><br>
   </td><td><ul><li>{{site.data.keyword.deliverypipeline}}
@@ -98,9 +100,9 @@ Cette chaîne d'outils vous permet de développer et de déployer une applicatio
   </td></tr>
 
   <tr><td>
-  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-helm-toolchain" target="_blank">Chaîne d'outils "Développer une application Kubernetes avec Helm"<img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
+  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-helm-toolchain" target="_blank">Chaîne d'outils "Développer une application Kubernetes avec Helm"<img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
 
-  Disponible dans le sud des Etats-Unis, en Allemagne et au Royaume-Uni
+  Disponible dans les régions Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo et Royaume-Uni
 
   </td><td>
   Cette chaîne d'outils vous permet de développer une application Docker et sa charte Helm dans le contrôle des sources, puis de la générer et de la déployer automatiquement dans un cluster Kubernetes. La chaîne d'outils réalise des tests de fumée avant une génération o un déploiement et assure la confidentialité en utilisant un registre de conteneurs privé et des espaces de noms pour le registre de conteneurs et le cluster Kubernetes. Cette chaîne d'outils utilise également Vulnerability Advisor pour s'assurer que seules les images sécurisées sont déployées. <br><br>
@@ -114,7 +116,7 @@ Cette chaîne d'outils vous permet de développer et de déployer une applicatio
   </td></tr>
 
   <tr><td>
-  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdra-toolchain-demo" target="_blank">Chaîne d'outils "Développer et tester une application Cloud Foundry" <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
+  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdra-toolchain-demo" target="_blank">Chaîne d'outils "Développer et tester une application Cloud Foundry" <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
 
   Disponible dans le sud des Etats-Unis, en Allemagne et au Royaume-Uni
 
@@ -125,13 +127,13 @@ Cette chaîne d'outils vous permet de développer et de déployer une applicatio
   <li>{{site.data.keyword.deliverypipeline}}
   </li><li>Eclipse Orion {{site.data.keyword.webide}}
   </li><li>Git Repos and Issue Tracking
-  </li><li>{{site.data.keyword.DRA_full}} (Sud des Etats-Unis uniquement)
+  </li><li>{{site.data.keyword.DRA_full}}
   </li></ul>
   </td></tr>
 
 
   <tr><td>
-  <a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-toolchain-hosted" target="_blank">
+  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-toolchain-hosted" target="_blank">
   Chaîne d'outils "Développer et tester des microservices sur Cloud Foundry" <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
 
   Disponible dans le sud des Etats-Unis, en Allemagne et au Royaume-Uni
@@ -145,7 +147,7 @@ Cette chaîne d'outils vous permet de développer et de déployer une applicatio
   </li><li>Eclipse Orion {{site.data.keyword.webide}}
   </li><li>GitHub and Issues
   </li><li>{{site.data.keyword.Bluemix_notm}}
-  </li><li>{{site.data.keyword.DRA_full}} (Sud des Etats-Unis uniquement)
+  </li><li>{{site.data.keyword.DRA_full}}
   </li><li>PagerDuty
   </li><li>Sauce Labs
   </li><li>Slack
@@ -154,10 +156,10 @@ Cette chaîne d'outils vous permet de développer et de déployer une applicatio
 </tr>
 
   <tr>
-  <td><a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" targe="_blank">
+  <td><a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" targe="_blank">
 Chaîne d'outils "Tutoriel Garage Method avec Cloud Foundry" <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
 
-  Disponible dans le sud des Etats-Unis, en Allemagne et au Royaume-Uni
+  Disponible dans les régions Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo et Royaume-Uni
 
 </td><td>
 Cette chaîne d'outils illustre les pratiques DevOps qui sont appliquées dans la méthode Garage. Elle est préconfigurée pour la distribution continue, le contrôle des sources et l'automatisation des tests, ainsi que pour la surveillance et les opérations automatisées. Elle est fournie avec un modèle d'application écrit en Node.js Express 4, que vous pouvez continuer de développer. <br><br>Essayez le cours : <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Become a Garage Method advocate <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>.
@@ -176,7 +178,7 @@ Cette chaîne d'outils illustre les pratiques DevOps qui sont appliquées dans l
 </td></tr>
 
 <tr><td>
-<a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain" target="_blank">Chaîne d'outils "Analyse des risques de déploiement avec GitHub et Jenkins" <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain" target="_blank">Chaîne d'outils "Analyse des risques de déploiement avec GitHub et Jenkins" <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
 
   Disponible dans le sud des Etats-Unis
 
@@ -192,7 +194,7 @@ GitHub and Issues
 </td></tr>
 
 <tr><td>
-<a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain" target="_blank">Chaîne d'outils "Developer Insights et Team Dynamics avec GitHub et JIRA" <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain" target="_blank">Chaîne d'outils "Developer Insights et Team Dynamics avec GitHub et JIRA" <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
 
   Disponible dans le sud des Etats-Unis
 
@@ -208,9 +210,9 @@ GitHub and Issues
 </td></tr>
 
 <tr><td>
-<a href="https://console.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain" target="_blank">Construire sa propre chaîne d'outils <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain" target="_blank">Construire sa propre chaîne d'outils <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
 
-  Disponible dans le sud des Etats-Unis, en Allemagne et au Royaume-Uni
+  Disponible dans les régions Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo et Royaume-Uni
 
 </td><td>
 Cette chaîne d'outils ne comporte aucun outil préconfiguré. Si vous connaissez déjà les chaînes d'outils, vous pouvez configurer votre propre chaîne d'outils. <br><br>
@@ -220,7 +222,7 @@ Essayez le tutoriel : <a href="https://www.ibm.com/cloud/garage/tutorials/create
 
 <tr><td>Chaîne d'outils Continuous Delivery <br><br>
 
- Disponible dans le sud des Etats-Unis, en Allemagne et au Royaume-Uni
+ Disponible dans les régions Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo et Royaume-Uni
 
 </td><td>
 Cette chaîne d'outils est utilisée lorsque vous activez la distribution continue pour une application. <br><br>
@@ -240,7 +242,7 @@ GitHub and Issues
 
 <tr><td>Modèle de chaîne d'outils personnalisée <br><br>
 
- Disponible dans le sud des Etats-Unis, en Allemagne et au Royaume-Uni
+ Disponible dans les régions Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo et Royaume-Uni
 
 </td><td>
 <br><br>

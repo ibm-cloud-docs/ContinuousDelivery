@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-15"
+lastupdated: "2018-12-7"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-15"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -27,8 +29,8 @@ Le service {{site.data.keyword.contdelivery_short}} prend en charge vos flux de 
 
   Une chaîne d'outils est un ensemble d'outils intégré que vous pouvez utiliser pour développer, construire, déployer, tester et gérer vos applications en collaborant avec d'autres utilisateurs, et pour faciliter la gestion des opérations reproductibles. Les chaînes d'outils peuvent inclure des outils open source, des services {{site.data.keyword.Bluemix_notm}}, comme [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window} et des outils tiers, comme GitHub, PagerDuty et Slack. 
   
-  {{site.data.keyword.DRA_short}} est disponible uniquement dans la région sud des Etats-Unis.
-{: tip}
+  {{site.data.keyword.DRA_short}} est disponible dans les régions du Sud des Etats-Unis, du Royaume-Uni et de l'Allemagne.
+  {: important}
 
  * Distribution continue à l'aide de [pipelines](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window} automatisés.
 

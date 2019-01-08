@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Création de chaînes d'outils
@@ -29,9 +31,9 @@ Chaque chaîne d'outils est associée à un groupe de ressources ou à une organ
 ##Création d'une chaîne d'outils à partir d'un modèle   
 {: #creating_a_toolchain_from_a_template}
 
-Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne d'outils![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/create){: new_window} incluant un ensemble spécifique d'intégrations d'outils. Pour en savoir plus sur l'utilisation des modèles, consultez [IBM Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/category/tools){:new_window}.
+Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne d'outils![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops/create){: new_window} incluant un ensemble spécifique d'intégrations d'outils. Pour en savoir plus sur l'utilisation des modèles, consultez [IBM Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/category/tools){:new_window}.
 
-1. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Public, connectez-vous à [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://console.bluemix.net){:new_window}.
+1. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Public, connectez-vous à [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://cloud.ibm.com){:new_window}.
 1. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dedicated, connectez-vous à votre environnement Dedicated sur {{site.data.keyword.Bluemix_notm}}.
 1. Dans le menu de la barre de menus {{site.data.keyword.Bluemix_notm}}, cliquez sur **DevOps**.
 1. Dans le tableau de bord DevOps, sur la page **Chaînes d'outils**, cliquez sur **Créer une chaîne d'outils**.
@@ -48,10 +50,10 @@ Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne 
 
  * Le nom de la chaîne d'outils l'identifie dans {{site.data.keyword.Bluemix_notm}}. Si vous désirez utiliser un nom différent, modifiez le nom de la chaîne d'outils.
  * La région de création de la chaîne d'outils. Si vous souhaitez utiliser une région différente, sélectionnez-la dans la liste des régions disponibles.
- * Le groupe de ressources ou l'organisation dans laquelle créer la chaîne d'outils. Cliquez sur le lien pour basculer entre la sélection des groupes de ressources et celle des organisations. Si vous souhaitez utiliser un autre groupe de ressources ou une autre organisation, sélectionnez-le dans la liste des groupes de ressources ou des organisations disponibles. 
+ * Le groupe de ressources ou l'organisation dans laquelle créer la chaîne d'outils. Cliquez sur le lien pour basculer entre la sélection des groupes de ressources et celle des organisations. Si vous souhaitez utiliser un autre groupe de ressources ou une autre organisation, sélectionnez-le dans la liste des groupes de ressources ou des organisations disponibles.
  
-   Les groupes de ressources sont disponibles uniquement dans la région Sud des États-Unis.
-   {: tip}
+   Les groupes de ressources sont disponibles dans les régions Sud des Etats-Unis, Est des Etats-Unis, Royaume-Uni, Allemagne et Tokyo. Les organisations Cloud Foundry sont prises en charge dans les régions Sud des Etats-Unis, Royaume-Uni et Allemagne.
+   {: important}
 
 1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Cliquez sur **Créer**. Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient en fonction du modèle de chaîne d'outils que vous avez sélectionné et selon que vous utilisez {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dedicated. Par exemple, lorsque vous créez une chaîne d'outils Microservices sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :
@@ -67,9 +69,12 @@ Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne 
 ##Création d'une chaîne d'outils à partir d'une application
 {: #creating_a_toolchain_from_an_app}
 
-Vous pouvez créer une chaîne d'outils à partir de votre application. La chaîne d'outils peut prendre en charge le développement, le déploiement, la surveillance, etc. en continu, et elle est associée à votre application. Chaque application peut être associée à une chaîne d'outils. Lorsque vous envoyez des modifications au référentiel GitHub ou {{site.data.keyword.ghe_short}} de la chaîne d'outils, le pipeline génère et déploie automatiquement l'application.  
+Vous pouvez créer une chaîne d'outils à partir de votre application. La chaîne d'outils peut prendre en charge le développement, le déploiement, la surveillance, etc. en continu, et elle est associée à votre application. Chaque application peut être associée à une chaîne d'outils. Lorsque vous envoyez des modifications au référentiel GitHub ou {{site.data.keyword.ghe_short}} de la chaîne d'outils, le pipeline génère et déploie automatiquement l'application.
 
-1. Depuis la page de présentation de votre application, sur la carte Distribution continue, cliquez sur **Activer**. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Public, votre application est configurée pour la distribution continue depuis un nouveau référentiel GitHub rempli avec le code de démarrage d'application. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dedicated, votre application est configurée pour la distribution continue depuis un nouveau référentiel GitHub ou {{site.data.keyword.ghe_short}} rempli avec le code de démarrage d'application.
+Si vous avez créé votre application à l'aide de votre propre référentiel de code, cliquez sur **Se connecter à une chaîne d'outils DevOps** sur la page d'informations de votre application. Ensuite, suivez la procédure décrite dans [Création d'application à partir de votre propre référentiel de code](/docs/apps/tutorials/tutorial_byoc.html).
+{: note}
+
+1. Si vous avez créé votre application à l'aide d'un kit de démarrage, cliquez sur **Déployer dans le cloud** sur la page d'informations de votre application. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Public, votre application est configurée pour la distribution continue depuis un nouveau référentiel GitHub rempli avec le code de démarrage d'application. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dedicated, votre application est configurée pour la distribution continue depuis un nouveau référentiel GitHub ou {{site.data.keyword.ghe_short}} rempli avec le code de démarrage d'application.
 1. Sur la page de création de chaîne d'outils, passez en revue le diagramme de la chaîne d'outils que vous allez créer. Ce diagramme montre chaque intégration d'outils dans sa phase de cycle de vie au sein de la chaîne d'outils.
 1. Passez en revue les informations par défaut des paramètres de chaîne d'outils. Le nom de la chaîne d'outils l'identifie dans {{site.data.keyword.Bluemix_notm}}. Si vous désirez utiliser un nom différent, modifiez le nom de la chaîne d'outils.
 1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
@@ -85,11 +90,14 @@ Vous pouvez créer une chaîne d'outils à partir de votre application. La chaî
 
 Une fois que vous avez configuré la chaîne d'outils et ses intégrations d'outils, vous pouvez afficher une représentation visuelle de la chaîne d'outils.
 
+Vous pouvez afficher une chaîne d'outils à partir d'une application en cliquant sur **Afficher la chaîne d'outils** sur la page d'informations de votre application.
+{: tip}
+
 1. Dans le tableau de bord DevOps, sur la page **Chaînes d'outils**, sélectionnez un **GROUPE DE RESSOURCES** ou une **ORGANISATION CLOUD FOUNDRY**. Toutes les chaînes d’outils contenues dans le groupe de ressources sélectionné ou l’organisation Cloud Foundry sont affichées. Cliquez sur la chaîne d'outils à afficher pour ouvrir sa page Vue d'ensemble. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Distribution continue, cliquer sur **Afficher la chaîne d'outils**. Ensuite, cliquez sur **Vue d'ensemble**.
 2. Pour accéder à une intégration d'outils de votre chaîne d'outils, cliquez sur l'outil.
 
  Si vous disposez de plusieurs référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git, plusieurs cartes peuvent être disponibles pour une même intégration d'outils car chaque référentiel dispose de sa propre carte. Si vous disposez de plusieurs pipelines, plusieurs cartes peuvent être disponibles pour la même intégration d'outils car chaque pipeline est représenté par sa propre carte. Par exemple, lorsque vous créez une chaîne d'outils Microservices, chacun des trois microservices dispose de son propre référentiel GitHub, {{site.data.keyword.ghe_short}} ou Git et de son propre pipeline.
-{: tip}
+ {: tip}
 
 ## Suivre un tutoriel : Utilisation de chaînes d'outils
 {: #toolchain_tutorials}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
-{:download: .download}
+{:note: .note}
+{:tip: .tip}
+{:important: .important}
 
 # Utilisation de chaînes d'outils
 {: #toolchains-using}
@@ -20,7 +22,8 @@ lastupdated: "2018-8-2"
 Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dedicated. Vous pouvez utiliser une chaîne d'outils pour améliorer la productivité de votre travail quotidien de développement, de déploiement et de vos opérations. Après avoir configuré une chaîne d'outils, vous pouvez ajouter, supprimer ou configurer des intégrations d'outils et gérer l'accès à la chaîne d'outils.
 {: shortdesc}
 
-Vous pouvez gérer des chaînes d'outils dans la région publique du Sud des Etats-Unis en utilisant des groupes de ressources ou des organisations (orgs) Cloud Foundry. Le contrôle d'accès et la gestion des utilisateurs autorisés fonctionnent différemment pour les chaînes d'outils, selon qu'elles sont contenues dans un groupe de ressources ou une organisation Cloud Foundry. {: tip}
+Vous pouvez gérer les chaînes d'outils dans les régions publiques Sud des Etats-Unis, Est des Etats-Unis, Royaume-Uni, Allemagne et Tokyo à l'aide des groupes de ressources. Vous pouvez utiliser les organisations Cloud Foundry pour gérer les chaînes d'outils dans les régions publiques Sud des Etats-Unis, Royaume-Uni et Allemagne. Le contrôle d'accès et la gestion des utilisateurs autorisés fonctionnent différemment pour les chaînes d'outils, selon qu'elles sont contenues dans un groupe de ressources ou une organisation Cloud Foundry.
+{: important}
 
 ## Configuration d'une intégration d'outils
 {: #configuring_a_tool_integration}
@@ -64,26 +67,27 @@ Si vous supprimez une intégration d'outils de votre chaîne d'outils, la suppre
 1. Pour supprimer l'intégration d'outils de votre chaîne d'outils, cliquez sur **Supprimer**.
 1. Confirmez en cliquant sur **Supprimer**.  
 
-## Gestion de l'accès aux chaînes d'outils dans les groupes de ressources 
+## Gestion de l'accès aux chaînes d'outils dans les groupes de ressources
 {: #managing_access_resource_groups}
 
-Vous pouvez utiliser le service Identity and Access Management (IAM) pour gérer l'accès des utilisateurs aux chaînes d'outils. Pour plus d'informations sur la gestion du contrôle d'accès avec IAM, voir [Gestion de l'accès utilisateur aux chaînes d'outils avec Identity and Access Management](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}.  
+Vous pouvez utiliser le service Identity and Access Management (IAM) pour gérer l'accès des utilisateurs aux chaînes d'outils. Pour plus d'informations sur la gestion du contrôle d'accès avec IAM, voir [Gestion de l'accès utilisateur aux chaînes d'outils avec Identity and Access Management](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}. 
 
-Seuls les utilisateurs faisant partie de la liste des utilisateurs autorisés pour l'instance sélectionnée de {{site.data.keyword.contdelivery_short}} peuvent utiliser les fonctionnalités Delivery Pipeline, Eclipse Orion {{site.data.keyword.webide}} et {{site.data.keyword.gitrepos}} des chaînes d'outils {{site.data.keyword.contdelivery_short}}. Vous pouvez gérer les autorisations d'utilisation pour un utilisateur autorisé à partir de l'onglet Gérer de l'instance sélectionnée de {{site.data.keyword.contdelivery_short}}, dans le groupe de ressources spécifié. 
+Seuls les utilisateurs faisant partie de la liste des utilisateurs autorisés pour l'instance sélectionnée de {{site.data.keyword.contdelivery_short}} peuvent utiliser les fonctionnalités Delivery Pipeline, Eclipse Orion {{site.data.keyword.webide}} et {{site.data.keyword.gitrepos}} des chaînes d'outils {{site.data.keyword.contdelivery_short}}. Vous pouvez gérer les autorisations d'utilisation pour un utilisateur autorisé à partir de l'onglet Gérer de l'instance sélectionnée de {{site.data.keyword.contdelivery_short}}, dans le groupe de ressources spécifié.
 
-Pour accéder aux fonctionnalités clés de {{site.data.keyword.contdelivery_short}} dans une chaîne d'outils, telle que Delivery Pipeline, un utilisateur doit avoir accès à la chaîne d'outils dans IAM et il doit également faire partie de la liste des utilisateurs autorisés de l'instance {{site.data.keyword.contdelivery_short}}. {: tip}
+Pour accéder aux fonctionnalités clés de {{site.data.keyword.contdelivery_short}} dans une chaîne d'outils, telle que Delivery Pipeline, un utilisateur doit avoir accès à la chaîne d'outils dans IAM et il doit également faire partie de la liste des utilisateurs autorisés de l'instance {{site.data.keyword.contdelivery_short}}.
+{: important}
 
 L'autorisation d'utilisation pour un utilisateur autorisé s'applique à toutes les chaînes d'outils contenues dans le même groupe de ressources que l'instance de {{site.data.keyword.contdelivery_short}}.
 {: tip}
 
 
-## Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry 
+## Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry
 {: #managing_access_orgs}
 
 Vous pouvez accorder l'accès à une chaîne d'outils à des utilisateurs en les ajoutant à la fois à l'organisation à laquelle la chaîne d'outils est associée et à la liste de contrôle d'accès de la chaîne d'outils. Chaque chaîne d'outils est associée à une organisation spécifique, et tout membre de cette organisation peut être ajouté à la liste de contrôle d'accès de l'une des chaînes d'outils associées. L'organisation au sein de laquelle vous travaillez actuellement s'affiche dans la barre de menus. Pour accéder à un ensemble différent de chaînes d'outils, changez d'organisation.
 
 Vous devez ajouter des utilisateurs à l'organisation de la chaîne d'outils dans la région où la chaîne d'outils est hébergée. Si la chaîne d'outils est configurée pour déployer des applications dans une autre région, elle déploiera quand même les applications dans cette région.
-{: tip}
+{: important}
 
 Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dedicated pour {{site.data.keyword.ghe_short}}, lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix_notm}}, ces utilisateurs peuvent se connecter à {{site.data.keyword.ghe_short}} à l'aide de leurs ID et mot de passe {{site.data.keyword.Bluemix_notm}}. Lorsque les utilisateurs se connectent, les comptes correspondants sont créés. Lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix_notm}}, ils ne sont pas automatiquement ajoutés au référentiel {{site.data.keyword.ghe_short}}. Une personne dotée de privilèges d'administrateur pour le référentiel doit les ajouter. Pour
 plus d'informations, voir [Utilisation de Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. Si vous utilisez votre propre version gérée de {{site.data.keyword.ghe_short}}, suivez vos procédures internes.
@@ -102,15 +106,17 @@ plus d'informations, voir [Utilisation de Dedicated GitHub Enterprise](/docs/ser
 
 * Pour accorder un accès à un utilisateur qui n'est pas membre de l'organisation de la chaîne d'outils, procédez comme suit :
 
-   a. Dans la barre de menus, cliquez sur **Gérer > Sécurité > Identité et accès**.
+   a. Dans la barre de menus, cliquez sur **Gérer > Accès (IAM)**.
 
-   b. Sur la ligne de l'utilisateur auquel vous voulez affecter un accès, sélectionnez le menu **Actions**, puis cliquez sur **Affecter un accès**.
+   b. Cliquez sur **L'accès démarre avec l'utilisateur**.
+   
+   c. Sur la ligne de l'utilisateur auquel vous voulez affecter un accès, sélectionnez le menu **Actions**, puis cliquez sur **Affecter un accès**.
+   
+   d. Sélectionnez **Affecter l'accès à l'aide de Cloud Foundry**.
 
-   c. Sélectionnez **Affecter l'accès à l'aide de Cloud Foundry**.
+   e. Sélectionnez **Affecter une organisation**.
 
-   d. Sélectionnez **Affecter une organisation**.
-
-   e. Affectez l'accès utilisateur :
+   f. Affectez l'accès utilisateur :
 
      * Sélectionnez l'organisation à laquelle vous souhaitez ajouter l'utilisateur.
 

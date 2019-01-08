@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-8-2"
 {: #git_local}
 
 
-Vous pouvez gérer votre code source dans un référentiel GitHub, GitHub Enterprise ou Git Repos and Issue Tracking, localement ou dans Eclipse Orion Web IDE. Pour l'utiliser localement, clonez votre référentiel avec un client Git, tel que l'interface de ligne de commande Git, puis éditez votre code à l'aide de votre éditeur préféré. Si vous travaillez dans Eclipse, vous pouvez installer le plug-in EGit pour le contrôle des versions.
+Vous pouvez gérer votre code source dans un référentiel GitHub, GitHub Enterprise ou Git Repos and Issue Tracking, localement ou dans Eclipse Orion Web IDE. Pour travailler localement, clonez votre référentiel avec un client Git tel que l'interface de ligne de commande Git et éditez votre code avec l'éditeur de votre choix. Si vous travaillez dans Eclipse, vous pouvez installer le plug-in EGit pour le contrôle des versions.
 
 ## Clonage de votre projet Git à partir de la ligne de commande
 
@@ -26,7 +26,7 @@ Vous pouvez gérer votre code source dans un référentiel GitHub, GitHub Enterp
 ## Avant de commencer
 {: #git_before_clone}
 
-1. Pour accéder au serveur Git en dehors de votre navigateur, vous devez créer un jeton d'accès personnel ou une clé SSH à des fins d'authentification. Le tableau suivant répertorie ce que vous devez faire pour configurer l'authentification.
+1. Pour accéder au serveur Git en dehors du navigateur, il sera éventuellement nécessaire de créer un jeton d'accès personnel ou une clé SSH pour l'authentification. Le tableau suivant indique ce que vous devez faire pour configurer l'authentification.
 
 | Type Git  | Configuration HTTPS | Utilisation HTTPS |  Configuration SSH |
 |:-----------|:-------------|:------------|:-------------|
@@ -34,10 +34,10 @@ Vous pouvez gérer votre code source dans un référentiel GitHub, GitHub Enterp
 | Public GitHub (github.com) | Le jeton d'accès personnel n'est pas requis, mais vous pouvez en configurer un et l'utiliser | Nom d'utilisateur et mot de passe GitHub ou nom d'utilisateur GitHub et jeton d'accès personnel ou simplement jeton d'accès personnel comme nom d'utilisateur | [Configurer  une clé SSH GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
 | GitHub Enterprise | [Jeton d'accès personnel](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | Nom d'utilisateur GitHub Enterprise (pas votre ID IBM) et jeton d'accès personnel | [Configurer la clé SSH GitHub Enterprise](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
-Si vous préférez utiliser SSH, vous pouvez réutiliser une seule et même clé sur tous les serveurs Git. Créez ou recherchez votre clé et configurez-la dans chaque serveur comme indiqué dans les liens précédents. Si vous créez votre clé avec une phrase passe, vous serez invité à la saisir cette phrase passe lorsque vous utiliserez la clé.
+Si vous préférez utiliser SSH, vous pouvez réutiliser une seule et même clé sur tous les serveurs Git. Créez ou recherchez votre clé et configurez-la dans chaque serveur comme indiqué dans les liens précédents. Si vous créez votre clé avec une phrase passe, vous êtes invité à entrer cette phrase passe lorsque vous utilisez la clé.
 {: tip}
 
-2. Si vous avez l'intention d'utiliser la ligne de commande Git, procédez comme suit :
+2. Si vous allez utiliser la ligne de commande Git, procédez comme suit :
 
     a. Vérifiez si Git est installé. Sur une ligne de commande, tapez `git version`. Si Git est installé, le numéro de version est affiché et vous pouvez commencer.
 

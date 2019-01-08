@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Utilisation de Git dans Eclipse Orion Web IDE
@@ -90,7 +92,8 @@ Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence r
 
 Ecrasez le contenu d'une branche distante référencée avec le contenu de votre branche locale active.
 
-Lorsque vous forcez l'insertion d'une branche locale dans une branche distante, il est possible que vous perdiez des validations sur la branche distante.{: tip}
+Lorsque vous forcez l'insertion d'une branche locale dans une branche distante, il est possible que vous perdiez des validations sur la branche distante.
+{: important}
 
 ### Eclipse Orion Web IDE
 {: #force_push_web}
@@ -151,7 +154,8 @@ Lorsque vous forcez l'insertion d'une branche locale dans une branche distante, 
 
 5. Sauvegardez le message de validation.
 
-  Pour sauvegarder votre message de validation et fermer Vim, qui est peut-être votre éditeur de texte par défaut, appuyez sur Echap, entrez `:wq` et appuyez sur Entrée.{: tip}
+  Pour sauvegarder votre message de validation et fermer Vim, qui est peut-être votre éditeur de texte par défaut, appuyez sur Echap, entrez `:wq` et appuyez sur Entrée.
+  {: tip}
 
 4. Entrez `git push` et appuyez sur Entrée.
 
@@ -195,7 +199,7 @@ représentation visuelle montre toutes les validations et toutes les branches su
 
 3. Pour vérifier les modifications d'un fichier, cliquez sur **>**.
 
-  Si une validation a introduit une modification dans une ligne, la ligne d'origine est ombrée en rose et la nouvelle ligne est ombrée en vert. De même, les lignes ajoutées par une validation sont ombrées en vert et les lignes supprimées par une validation sont ombrées en rose.
+  Si une validation a introduit une modification dans une ligne, la ligne d'origine est ombrée en rose et la nouvelle ligne est ombrée en vert.  De même, les lignes ajoutées par une validation sont ombrées en vert et les lignes supprimées par une validation sont ombrées en rose.
   {: tip}
 
 ### Terminal Git
@@ -211,7 +215,7 @@ représentation visuelle montre toutes les validations et toutes les branches su
 
 3. Passez en revue les modifications.
 
-  Si une validation a introduit un changement dans une ligne, le texte de la ligne d'origine apparaît en rouge et est précédé d'un signe moins (-). Le texte de la nouvelle ligne est affiché en vert et est précédé d'un signe plus (+). De même, le texte des lignes ajoutées par une validation est affiché en vert et est précédé d'un signe plus (+). Le texte des lignes supprimées par une validation est affiché en rouge et est précédé d'un signe moins (-).
+  Si une validation a introduit un changement dans une ligne, le texte de la ligne d'origine apparaît en rouge et est précédé d'un signe moins (-). Le texte de la nouvelle ligne est affiché en vert et est précédé d'un signe plus (+).  De même, le texte des lignes ajoutées par une validation est affiché en vert et est précédé d'un signe plus (+). Le texte des lignes supprimées par une validation est affiché en rouge et est précédé d'un signe moins (-).
   {: tip}
 
 1. Pour arrêter l'affichage des entrées, appuyez sur Q.
@@ -220,7 +224,7 @@ représentation visuelle montre toutes les validations et toutes les branches su
 {: #modify_last_commit}
 
   Lorsque vous modifiez la dernière validation avant de l'insérer dans un référentiel distant, vous réécrivez l'historique des validations. Cette modification peut causer des erreurs de validation et d'autres problèmes aux autres contributeurs de votre projet. Assurez-vous de ce que vous faîtes avant de modifier une validation envoyée par commande push à un référentiel distant.
-  {: tip}
+  {: important}
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}
@@ -242,7 +246,7 @@ représentation visuelle montre toutes les validations et toutes les branches su
 3. Dans votre éditeur de texte, acceptez ou modifiez le message de validation.
 
   Pour sauvegarder votre message de validation et fermer Vim, qui est peut-être votre éditeur de texte par défaut, appuyez sur Echap, entrez `:wq` et appuyez sur Entrée.
-{: tip}
+  {: tip}
 
 ## Etiquetage d'une validation
 {: #tag_commit}
@@ -413,8 +417,7 @@ Si vous avez besoin de distribuer des modifications d'une branche source à une 
 4. Répétez l'étape précédente autant de fois que nécessaire afin de finaliser l'opération de resynchronisation.
 
   Pour arrêter l'opération de resynchronisation, entrez `git rebase --abort` et appuyez sur Entrée.
-
-{: tip}
+  {: tip}
 
 ## Résolution d'un conflit de resynchronisation
 {: #resolve_a_rebase_conflict}
@@ -431,8 +434,8 @@ Si vous avez besoin de distribuer des modifications d'une branche source à une 
 		<<<<<<< EN-TETE
 		Texte dans la branche réservée.
 		=======
-		Texte dans la branche fusionnée.
-		>>>>>>> commit_ID_from_merged_branch
+		Text in merged branch.
+		>>>>>>> ID_validation_de_la_branche_fusionnée
 		{: tip}
 4. Dans le panneau de resynchronisation, cochez la case de tous les fichiers corrigés et cliquez sur **Continuer**.
 

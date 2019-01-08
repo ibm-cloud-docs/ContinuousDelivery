@@ -2,20 +2,23 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-12-6"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:codeblock:.codeblock}
 
 
 # Aide et support pour {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-L'équipe {{site.data.keyword.contdelivery_full}} surveille activement les questions posées sur le forum developerWorks au sujet du service {{site.data.keyword.contdelivery_short}} et des chaînes d'outils. Pour poser une question sur le forum, cliquez sur le bouton **Get help in the forum** ![Bouton **Get help in the forum**](images/get_help_in_the_forum.png) au bas de la chaîne d'outils et des pages {{site.data.keyword.contdelivery_short}}.
+L'équipe {{site.data.keyword.contdelivery_full}} surveille activement les questions posées sur le forum developerWorks au sujet du service {{site.data.keyword.contdelivery_short}} et des chaînes d'outils. Pour poser une question sur le forum, sur la chaîne d'outils et les pages {{site.data.keyword.contdelivery_short}}, cliquez sur le bouton **Get help in the forum** ![bouton **Get help in the forum**](images/get_help_in_the_forum.png).
 
 <table>
 <tr>
@@ -47,7 +50,7 @@ Si vous avez un problème plus sérieux ou si vous rencontrez des difficultés a
 1. Dans la barre de menus, cliquez sur **Support**, puis sur **Add a ticket**.
 1. Complétez le formulaire pour indiquer le sujet pour lequel vous avez besoin d'un support technique.
 
-Pour plus d'informations sur l'ouverture d'un ticket de demande de service {{site.data.keyword.Bluemix_notm}}, ou sur les niveaux de support et les degrés de gravité des tickets, voir [Contacter le service de support](https://console.bluemix.net/docs/support/index.html#contacting-support).
+Pour plus d'informations sur l'ouverture d'un ticket de demande de service {{site.data.keyword.Bluemix_notm}}, ou sur les niveaux de support et les degrés de gravité des tickets, voir [Contacter le service de support](https://cloud.ibm.com/docs/support/index.html#contacting-support).
 
 
 ## Support d'{{site.data.keyword.Bluemix_notm}}

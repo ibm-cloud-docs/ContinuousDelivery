@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -17,10 +17,13 @@ lastupdated: "2018-8-2"
 # Développement avec l'interface Eclipse Orion Web IDE
 {: #web_ide}
 
-L'interface Eclipse Orion {{site.data.keyword.webide}} est un environnement de développement basé sur un navigateur dans lequel vous pouvez développer pour le Web en JavaScript, HTML et CSS en vous aidant de l'assistant de contenu, la validation de code et le contrôle des erreurs. L'interface {{site.data.keyword.webide}} fonctionne avec quasiment toutes les langues et propose la mise en évidence de syntaxe pour la plupart des types de fichier. Le contrôle des sources est intégré et vous pouvez déployer le code en local afin de tester et déboguer vos applications.
+L'interface Eclipse Orion {{site.data.keyword.webide}} est un environnement de développement basé sur un navigateur dans lequel vous pouvez développer pour le Web en JavaScript, HTML et CSS en vous aidant de l'assistant de contenu, la validation de code et le contrôle des erreurs. L'interface {{site.data.keyword.webide}} fonctionne avec presque toutes les langues et vous pouvez mettre en évidence la syntaxe pour la plupart des types de fichiers. Le contrôle des sources est intégré et vous pouvez déployer le code en local afin de tester et déboguer vos applications.
 {:shortdesc}
 
 Mais surtout, {{site.data.keyword.webide}} est basé sur le Web. Vous n'avez rien à installer, rien à gérer ni rien à mettre à l'échelle. Vous pouvez faire du développement depuis n'importe quel endroit, dans la mesure où vous disposez d'une connexion Internet.
+
+Ne stockez pas les données réglementées dans des fichiers situés dans l'interface {{site.data.keyword.webide}}. Les procédures relatives aux données réglementées ne sont pas encore en place.
+{: tip}
 
 ## Configuration de l'interface IDE
 {: #editorsetup}
@@ -48,7 +51,8 @@ Par défaut, les paramètres de style et de taille de police de l'éditeur sont 
 
 {{site.data.keyword.webide}} comporte deux sections principales. La première section correspond au navigateur de fichiers, qui affiche vos fichiers de projet dans une structure arborescente. Depuis le navigateur de fichiers, vous pouvez créer, renommer, supprimer et gérer vos fichiers et dossiers.
 
-Pour télécharger des fichiers dans le navigateur de fichiers, faites-les glisser depuis votre ordinateur vers le navigateur.{: tip}
+Pour télécharger des fichiers dans le navigateur de fichiers, faites-les glisser depuis votre ordinateur vers le navigateur.
+{: tip}
 
 La seconde section correspond à la sous-fenêtre de l'éditeur. L'éditeur fournit plusieurs fonctions de codage, notamment l'assistant de contenu et la validation de la syntaxe.
 
@@ -85,17 +89,17 @@ Pour afficher la liste des raccourcis-clavier dans l'éditeur, cliquez sur **Out
 2. Une fois votre application déployée, vous pouvez utiliser la barre d'exécution pour arrêter, redémarrer ou déboguer votre application, consulter des journaux, etc.
 
 <table role="presentation">
-<tr><td><img src="./images/stop_button.png"  alt="Icône d'arrêt"></td><td>Arrêtez l'application</td></tr>
-<tr><td> <img src="./images/open_app_url.png"  alt="Icône d'ouverture de l'URL de l'application"></td><td> Ouvrez l'application déployée</td></tr>
-<tr><td><img src="./images/view_logs.png"  alt="Icône d'affichage des journaux"></td><td>Affichez les journaux de l'application déployée</td></tr>
-<tr><td><img src="./images/open_dashboard.png"  alt="Icône d'ouverture du tableau de bord"></td><td>Ouvrez le tableau de bord de l'application</td></tr>
+<tr><td><img src="./images/stop_button.png"  alt="Icône d'arrêt"></td><td>Arrêter l'application.</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="Icône d'ouverture de l'URL de l'application"></td><td> Ouvrir l'application déployée.</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="Icône d'affichage des journaux"></td><td>Afficher les journaux de l'application déployée.</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="Icône d'ouverture du tableau de bord"></td><td>Ouvrir le tableau de bord de l'application.</td></tr>
 </table>
 
 Si vous développez une application Node.js, activez le mode Edition directe : <img  src="./images/enable_live_edit.png"  alt="Curseur d'activation de l'édition directe">
 
-<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="Icône de redémarrage de l'édition directe"></td><td>En mode Edition directe, redémarrez rapidement l'application sans redéploiement</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="Icône de redémarrage de l'édition directe"></td><td>Activez le mode Edition directe pour redémarrer l'application rapidement, sans nécessité de redéploiement. </td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="Icône de débogage"></td>
-<td>En mode Edition directe, accédez au débogueur
+<td>En mode Edition directe, accédez au débogueur.
 </td></tr>
 </table>
 
@@ -164,7 +168,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 ## Langages pris en charge
 {: #supported_languages}
 
-Eclipse Orion {{site.data.keyword.webide}} fournit un assistant de contenu, des infobulles, des aperçus et la mise en évidence de syntaxe pour les fichiers JavaScript, HTML, CSS et Markdown. La mise en évidence de syntaxe est également prise en charge pour les types de fichier suivants :
+Eclipse Orion {{site.data.keyword.webide}} fournit une aide au contenu, des infobulles, des prévisualisations, une validation et une syntaxe pour les fichiers JavaScript, HTML, CSS et Markdown. Vous pouvez également mettre en évidence la syntaxe pour ces types de fichiers :
 
 <table role="presentation">
 <tr>

@@ -1,8 +1,8 @@
----
+﻿---
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-17"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-17"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}   
 
 # Configuration des intégrations d'outils
@@ -30,26 +32,26 @@ votre environnement spécifique.
 |Intégration d'outils |Disponible sur {{site.data.keyword.Bluemix_notm}} Public	|Disponible sur {{site.data.keyword.Bluemix_notm}} Dedicated (dépendant de l'environnement)|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.alertnotificationshort}}		|Sud des Etats-Unis		|Non		|
-|Artifactory		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
+|Artifactory		|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Oui		|
 |Availability Monitoring		|Sud des Etats-Unis		|Non		|
-|Bitbucket		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Non		|
+|Bitbucket		|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Non		|
 |Cloud Event Management		|Sud des Etats-Unis		|Non		|
-|{{site.data.keyword.deliverypipeline}} 		|Sud des Etats-Unis, Allemagne, Royaume-Uni	   	|Oui  		|
-|{{site.data.keyword.DRA_short}} 		|Sud des Etats-Unis		|Non			|
-|Eclipse Orion {{site.data.keyword.webide}}		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui			|
-|{{site.data.keyword.gitrepos}}	|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Non		|
-|GitHub		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
+|{{site.data.keyword.deliverypipeline}} 		|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Oui  		|
+|{{site.data.keyword.DRA_short}} 		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Non			|
+|Eclipse Orion {{site.data.keyword.webide}}		|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Oui			|
+|{{site.data.keyword.gitrepos}}	|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Non		|
+|GitHub		|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Oui		|
 |Dedicated {{site.data.keyword.ghe_short}} and Issues			|Non		|Oui		|
-|GitLab		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Non		|
-|Jenkins		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
-|JIRA		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
-|Nexus			|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
-|Autre outil			|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
-|PagerDuty			|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
-|Rational Team Concert			|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
-|Sauce Labs		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Non		|
-|Slack			|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
-|SonarQube			|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Oui		|
+|GitLab		|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Non		|
+|Jenkins		|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Oui		|
+|JIRA		|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Oui		|
+|Nexus			|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Oui		|
+|Autre outil			|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Oui		|
+|PagerDuty			|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Oui		|
+|Rational Team Concert			|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Oui		|
+|Sauce Labs		|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Non		|
+|Slack			|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Oui		|
+|SonarQube			|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Oui		|
 {: caption="Tableau 1. Intégrations d'outils disponibles pour les chaînes d'outils sur {{site.data.keyword.Bluemix_notm}} Public et Dedicated" caption-side="top"}
 
 Si vous souhaitez commencer à développer avec votre code source sur {{site.data.keyword.Bluemix_notm}} Public, configurez l'intégration d'outils GitHub ou l'intégration d'outils {{site.data.keyword.gitrepos}} avant de configurer {{site.data.keyword.deliverypipeline}}. Si vous souhaitez débuter le développement par votre code source sur {{site.data.keyword.Bluemix_notm}} Dedicated, configurez l'intégration d'outils {{site.data.keyword.ghe_short}} ou l'intégration d'outils GitHub avant de configurer {{site.data.keyword.deliverypipeline}}.
@@ -71,7 +73,7 @@ Configurez {{site.data.keyword.alertnotificationshort}} pour recevoir des notifi
 
  b. Achetez un abonnement ou inscrivez-vous à l'essai gratuit pendant 90 jours.
 
-1. Une fois que votre compte {{site.data.keyword.alertnotificationshort}} est configuré, ouvrez votre [Tableau de bord IBM ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://myibm.ibm.com/dashboard/){: new_window}.
+1. Une fois que votre compte {{site.data.keyword.alertnotificationshort}} est configuré, ouvrez votre [Tableau de bord IBM ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://myibm.ibm.com/dashboard/){: new_window}.
 1. En regard d'IBM {{site.data.keyword.alertnotificationshort}}, cliquez sur **Lancer**.
 1. Cliquez sur **Gérer les clés d'API**, puis sur **Créer une clé d'API**.
 1. Dans la zone **Créer une clé d'API**, saisissez une description.
@@ -145,7 +147,7 @@ Configurez le gestionnaire de référentiels Artifactory afin de stocker les art
 ### Configuration d'un travail de génération npm Artifactory sur votre pipeline
 {: #config_artifactory_npm}
 
-Avant de configurer un travail de génération npm sur votre pipeline, vous devez disposer d'un pipeline opérationnel qui peut utiliser votre référentiel SCM de génération en entrée et vous devez configurer Artifactory pour votre chaîne d'outils. Pour les instructions de configuration d'Artifactory, voir la section [Artifactory](#artifactory).
+Avant de configurer un travail de génération npm dans votre pipeline, vous devez disposer d'un pipeline opérationnel qui peut utiliser votre référentiel SCM de génération en entrée. Vous devez également configurer Artifactory pour votre chaîne d'outils. Pour les instructions de configuration d'Artifactory, voir la section [Artifactory](#artifactory).
 
 Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de génération npm :
 
@@ -166,9 +168,10 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de gé
      # ou
      npm publish --registry "${NPM_RELEASE_URL}"
      ```
-Vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de configuration pour l'intégration des outils Artifactory.{: tip}
+  Vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de configuration pour l'intégration des outils Artifactory.
+  {: tip}
 
-  e. Si votre travail de génération est publié dans le registre Artifactory et que le format de votre version de module de noeud est `x.y.z-SNAPSHOT.w`, cochez la case **Increment snapshot module version**. Le travail de génération met automatiquement à jour la version du module avant que le travail ne soit publié dans le registre Artifactory. Le travail sélectionne la version la plus élevée du module à partir du registre npm et du fichier local `package.json`, et incrémente la version du module à l'aide de semver. Le travail de génération ne répercute pas les modifications dans le référentiel SCM.
+  e. Si votre travail de génération est publié dans le registre Artifactory et si le format de votre version de module de noeud est `x.y.z-SNAPSHOT.w`, cochez la case **Incrémenter la version du module d'instantané**. Le travail de génération met automatiquement à jour la version du module avant que le travail ne soit publié dans le registre Artifactory. Le travail sélectionne la version la plus élevée du module à partir du registre npm et du fichier local `package.json`, et incrémente la version du module à l'aide de semver. Le travail de génération ne répercute pas les modifications dans le référentiel SCM.
 
 1. Cliquez sur **SAUVEGARDER**. Lors de l'exécution de votre pipeline, ce travail de génération utilise les informations de configuration provenant de l'intégration d'outils pour la connexion à votre registre npm.
 
@@ -196,7 +199,8 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de gé
      # ou
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-Vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de configuration pour l'intégration des outils Artifactory.{: tip}
+  Vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de configuration pour l'intégration des outils Artifactory.
+  {: tip}
 
 1. Cliquez sur **SAUVEGARDER**. Lors de l'exécution de votre pipeline, ce travail de génération utilise les informations de configuration provenant de l'intégration d'outils pour la connexion à votre référentiel Maven.
 
@@ -244,22 +248,22 @@ Configurez Bitbucket pour collaborer avec votre équipe sur le code :
 
  b. Dans la section Intégrations d'outils, cliquez sur **Bitbucket**.
 
-   Si vous configurez cette intégration d'outils sur {{site.data.keyword.Bluemix_notm}} Public et que vous n'avez pas autorisé {{site.data.keyword.Bluemix_notm}} à accéder à Bitbucket, cliquez sur **Autorisation** pour accéder au site Web Bitbucket. Si vous n'avez pas de session Bitbucket active, vous êtes invité à vous connecter. Cliquez sur **Accorder l'accès** pour autoriser {{site.data.keyword.Bluemix_notm}} Toolchains à accéder aux parties suivantes de votre compte Bitbucket : 
+   Si vous configurez cette intégration d'outils sur {{site.data.keyword.Bluemix_notm}} Public et que vous n'avez pas autorisé {{site.data.keyword.Bluemix_notm}} à accéder à Bitbucket, cliquez sur **Autorisation** pour accéder au site Web Bitbucket. Si vous n'avez pas de session Bitbucket active, vous êtes invité à vous connecter. Cliquez sur **Accorder l'accès** pour autoriser {{site.data.keyword.Bluemix_notm}} Toolchains à accéder aux parties suivantes de votre compte Bitbucket :
    
-   * **Lisez vos informations de compte**. Obtenez des informations de base sur l'utilisateur pour remplir l'interface utilisateur. 
+   * **Lisez vos informations de compte**. Obtenez des informations de base sur l'utilisateur pour remplir l'interface utilisateur.
    
-   * **Lisez et modifiez les problèmes des référentiels**. Autorisez {{site.data.keyword.contdelivery_short}} à mettre à jour les problèmes pour indiquer le moment où le pipeline déploie les validations associées à ces problèmes.  
+   * **Lisez et modifiez les problèmes des référentiels**. Autorisez {{site.data.keyword.contdelivery_short}} à mettre à jour les problèmes pour indiquer le moment où le pipeline déploie les validations associées à ces problèmes. 
    
-   * **Lisez les paramètres de projet de votre équipe et lisez les référentiels contenus dans les projets de votre équipe.**. Autorisez {{site.data.keyword.contdelivery_short}} à intégrer les référentiels appartenant à des équipes. 
+   * **Lisez les paramètres de projet de votre équipe ainsi que les référentiels contenus dans les projets de votre équipe.**. Autorisez {{site.data.keyword.contdelivery_short}} à intégrer les référentiels appartenant à des équipes.
    
-   * **Lisez et modifiez vos référentiels et leurs demandes d'extraction**. Autorisez {{site.data.keyword.contdelivery_short}} à envoyer un exemple de code dans des référentiels, lorsque les utilisateurs demandent le code. 
+   * **Lisez et modifiez vos référentiels et leurs demandes d'extraction**. Autorisez {{site.data.keyword.contdelivery_short}} à envoyer un exemple de code dans des référentiels, lorsque les utilisateurs demandent le code.
    
-   * **Administrez vos référentiels**. Autorisez {{site.data.keyword.contdelivery_short}} à créer des référentiels, à la demande des utilisateurs. 
+   * **Administrez vos référentiels**. Autorisez {{site.data.keyword.contdelivery_short}} à créer des référentiels, à la demande des utilisateurs.
    
-   * **Lisez les informations d'appartenance à votre équipe**. Autorisez {{site.data.keyword.contdelivery_short}} à afficher une liste de vos équipes dans le menu **Propriétaire** qui s'affiche lorsque vous créez un nouveau référentiel. 
+   * **Lisez les informations d'appartenance à votre équipe**. Autorisez {{site.data.keyword.contdelivery_short}} à afficher une liste de vos équipes dans le menu **Propriétaire** qui s'affiche lorsque vous créez un nouveau référentiel.
    
    * **Lisez et modifiez les webhooks de vos référentiels**. Autorisez le pipeline à déclencher des générations lorsque des validations sont envoyées dans un référentiel.
-{: tip}
+   {: tip}
    
    Si vous disposez d'une session Bitbucket active mais n'avez pas saisi votre mot de passe récemment, vous êtes invité à entrer votre mot de passe Bitbucket pour confirmation.
 
@@ -275,12 +279,13 @@ Configurez Bitbucket pour collaborer avec votre équipe sur le code :
 
 1. Pour créer un référentiel privé sur le serveur, sélectionnez la case **Rendre ce référentiel privé**.
 1. Pour utiliser Bitbucket Issues pour le suivi des problèmes, sélectionnez la case **Activer Bitbucket Issues**.
-1. Pour suivre le déploiement des modifications du code en créant des étiquettes et des commentaires sur les validations, ainsi que des libellés et des commentaires sur les problèmes référencés par les validations, cochez la case **Suivi du déploiement des modifications du code**. Pour plus d'informations, voir [Suivi de l'emplacement du déploiement du code avec des chaînes d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Pour suivre le déploiement des modifications du code en créant des étiquettes et des commentaires sur les validations, ainsi que des libellés et des commentaires sur les problèmes référencés par les validations, cochez la case **Suivi du déploiement des modifications du code**. Pour plus d'informations, voir [Suivi de l'emplacement du déploiement du code avec des chaînes d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Cliquez sur **Créer une intégration**.
 1. A partir de votre chaîne d'outils, cliquez sur la carte du référentiel Bitbucket que vous souhaitez utiliser. Le site Web de Bitbucket s'ouvre avec le contenu du référentiel.
 1. Si vous avez activé Bitbucket Issues, cliquez sur **Bitbucket Issues** pour l'ouvrir. Vous pouvez utiliser cette instance de Bitbucket Issues pour l'ensemble de votre chaîne d'outils, même si cette dernière contient plusieurs référentiels Bitbucket.    
 
-Si vous ne disposez pas d'un droit maître ou propriétaire sur le référentiel avec lequel vous établissez une liaison, votre intégration sera limitée car vous ne pouvez pas utiliser un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans webhook, vous devez démarrer manuellement vos pipelines.
+Si vous ne disposez pas d'un droit maître ou propriétaire sur le référentiel avec lequel vous établissez une liaison, votre intégration sera limitée car vous ne pouvez pas utiliser un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans
+webhook, vous devez démarrer manuellement vos pipelines.
 {: tip}
 
 ### Plus d'informations sur Bitbucket
@@ -352,7 +357,7 @@ ou {{site.data.keyword.ghe_short}}, vous devez disposer d'un droit d'administrat
 ### Configuration d'un travail de test Sauce Labs sur votre pipeline
 {: #config_saucelabs}
 
-Avant de configurer un travail de test Sauce Labs sur votre pipeline, vous avez besoin d'un pipeline opérationnel qui comporte des étapes pour la génération et le déploiement de votre application et vous devez configurer Sauce Labs pour votre chaîne d'outils. Pour des instructions de configuration de Sauce Labs, voir la section [Configuration de Sauce Labs](#saucelabs).
+Avant de configurer un travail de test Sauce Labs sur votre pipeline, vous avez besoin d'un pipeline opérationnel qui comporte des étapes pour la génération et le déploiement de votre application. Vous devez également configurer Sauce Labs pour votre chaîne d'outils. Pour des instructions de configuration de Sauce Labs, voir la section [Configuration de Sauce Labs](#saucelabs).
 
 Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de test Sauce Labs.
 
@@ -366,15 +371,17 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de tes
   {: tip}
 
 1. Configurez le travail de déploiement. Dans la zone **Script de déploiement**, ajoutez la commande suivante : `export CF_APP_NAME="$CF_APP"`. Cette commande exporte le nom d'application en tant que propriété d'environnement.
-1. Configurez le travail de test. Les valeurs figurant dans l'image suivante sont des exemples. Les zones d'**instance de service**, de **cible**, d'**organisation** et d'**espace** sont renseignées avec les informations Sauce Labs de nom d'utilisateur, région, organisation et espace que vous utilisez.  
-![Configuration du travail](images/toolchain_configure_job.png)
+1. Configurez le travail de test. 
+
+  Les zones d'**instance de service**, de **cible**, d'**organisation** et d'**espace** sont renseignées avec les informations Sauce Labs de nom d'utilisateur, région, organisation et espace que vous utilisez.
+  {: tip}
 
   a. Pour le type d'outil de test, sélectionnez **Sauce Labs**.
 
   b. Pour l'instance de service, sélectionnez le nom d'utilisateur Sauce Labs utilisé lors de la configuration de Sauce Labs pour votre chaîne d'outils.
 
    Pour afficher le nom d'utilisateur et la clé d'accès dont vous vous êtes servi lorsque vous avez configuré Sauce Labs pour votre chaîne d'outils, cliquez sur **Configurer**.
-{: tip}
+   {: tip}
 
   c. Dans la zone **Commande d'exécution de test**, entrez les commandes d'installation des dépendances qui sont requises par vos tests, puis exécutez les tests. Par exemple, pour une application Node.js, vous pourriez entrer les commandes suivantes :
      ```
@@ -395,7 +402,7 @@ Pour en savoir plus sur {{site.data.keyword.deliverypipeline}}, voir [Travailler
   * [Création et utilisation de votre première chaîne d'outils à l'aide de la chaîne d'outils "Développer une application Cloud Foundry" ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
 
-## Ajout de DevOps Insights (bêta)
+## Ajout de DevOps Insights
 {: #dra}
 
 {{site.data.keyword.DRA_full}} collecte et analyse les résultats provenant de tests unitaires, de tests fonctionnels et d'outils de couverture de code afin de déterminer si votre code satisfait les critères prédéfinis à certains stades de votre processus de déploiement. Si votre code ne satisfait pas ou dépasse les critères, le déploiement est interrompu afin de prévenir tout risque. Vous pouvez utiliser {{site.data.keyword.DRA_short}} comme filet de sécurité pour votre environnement de distribution continue ou comme moyen d'implémenter et d'améliorer les normes qualité.
@@ -448,7 +455,7 @@ Pour effectuer des tâches de contrôle des sources, ajoutez l'intégration d'ou
 
 ### Plus d'informations sur Eclipse Orion Web IDE
 
-Pour en savoir plus sur Eclipse Orion {{site.data.keyword.webide}}, voir [Edition du code avec Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} et l'[article Eclipse Orion {{site.data.keyword.webide}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} sur IBM Cloud Garage Method ou suivez les tutoriels ci-dessous :
+Pour plus d'informations sur Eclipse Orion {{site.data.keyword.webide}}, voir [Edition du code avec Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window. Vous pouvez également lire l'[article Eclipse Orion {{site.data.keyword.webide}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} sur IBM Cloud Garage Method. Consultez ces tutoriels pour essayer d'utiliser Eclipse Orion {{site.data.keyword.webide}} :
 
   * [Création et utilisation de votre première chaîne d'outils à l'aide de la chaîne d'outils "Développer une application Cloud Foundry" ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
@@ -458,7 +465,7 @@ Pour en savoir plus sur Eclipse Orion {{site.data.keyword.webide}}, voir [Editio
 ## Configuration de Git Repos and Issue Tracking
 {: #gitbluemix}
 
-L'intégration d'outils {{site.data.keyword.gitrepos}} est basée sur GitLab Community Edition, un service d'hébergement Web pour les référentiels Git. Vous pouvez avoir des copies en local et à distance de vos référentiels. Pour en savoir plus, voir [{{site.data.keyword.gitrepos}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help){:new_window}.
+L'intégration d'outils {{site.data.keyword.gitrepos}} est basée sur GitLab Community Edition, un service d'hébergement Web pour les référentiels Git. Vous pouvez avoir des copies en local et à distance de vos référentiels. Pour en savoir plus, voir [{{site.data.keyword.gitrepos}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/help){:new_window}.
 
 Si vous configurez {{site.data.keyword.gitrepos}} lors de la création de la chaîne d'outils, procédez comme suit :    
 
@@ -475,7 +482,7 @@ Ces instructions s'appliquent aux chaînes d'outils qui contiennent déjà le r�
 1. A la section Intégrations d'outils, cliquez sur **Git Repos and Issue Tracking**.
 1. Pour créer une copie d'un référentiel Git, cliquez sur **Cloner** pour le type de référentiel. Saisissez un nouveau nom de référentiel et l'URL du référentiel source.
 1. Si vous souhaitez utiliser l'option Problèmes pour le suivi des problèmes, cochez la case **Activer les problèmes**.
-1. Si vous voulez suivre le déploiement des modifications du code en créant des étiquettes et des commentaires sur les validations, ainsi que des libellés et des commentaires sur les problèmes référencés par les validations, cochez la case **Suivi du déploiement des modifications du code**. Pour plus d'informations, voir [Suivi de l'emplacement du déploiement du code avec des chaînes d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Si vous voulez suivre le déploiement des modifications du code en créant des étiquettes et des commentaires sur les validations, ainsi que des libellés et des commentaires sur les problèmes référencés par les validations, cochez la case **Suivi du déploiement des modifications du code**. Pour plus d'informations, voir [Suivi de l'emplacement du déploiement du code avec des chaînes d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Cliquez sur **Créer une intégration**.
 
 Après avoir cloné le référentiel Git, vous pouvez le retirer de votre chaîne d'outils.
@@ -495,11 +502,12 @@ l'URL du référentiel source.
   d. Si vous disposez d'un référentiel Git et désirez l'utiliser, cliquez sur **Existant** pour le type de référentiel. Entrez l'adresse URL.    
 
 1. Si vous souhaitez utiliser l'option Problèmes pour le suivi des problèmes, cochez la case **Activer les problèmes**.
-1. Si vous voulez suivre le déploiement des modifications du code en créant des étiquettes et des commentaires sur les validations, ainsi que des libellés et des commentaires sur les problèmes référencés par les validations, cochez la case **Suivi du déploiement des modifications du code**. Pour plus d'informations, voir [Suivi de l'emplacement du déploiement du code avec des chaînes d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Si vous voulez suivre le déploiement des modifications du code en créant des étiquettes et des commentaires sur les validations, ainsi que des libellés et des commentaires sur les problèmes référencés par les validations, cochez la case **Suivi du déploiement des modifications du code**. Pour plus d'informations, voir [Suivi de l'emplacement du déploiement du code avec des chaînes d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur la carte du référentiel Git à utiliser. La page de présentation de votre projet s'ouvre.    
 
-Si vous ne disposez pas d'un droit Maître ou Propriétaire sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans webhook, vous devez démarrer manuellement vos pipelines.
+Si vous ne disposez pas d'un droit Maître ou Propriétaire sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans
+webhook, vous devez démarrer manuellement vos pipelines.
 {: tip}
 
 ### Plus d'informations sur Git Repos and Issue Tracking
@@ -526,7 +534,7 @@ Si vous configurez cette intégration d'outils lors de la création de la chaîn
 1. Si vous utilisez un référentiel sur votre propre serveur {{site.data.keyword.ghe_short}}, dans la section Intégrations configurables, cliquez sur **Ajouter un serveur personnalisé**.
 
  Le réseau doit être capable d'accéder au serveur Git cible à partir d'un environnement {{site.data.keyword.Bluemix_notm}} Dedicated. Si votre serveur GitHub n'est pas disponible sur le réseau Internet public ou si le nom d'hôte n'est pas résolu sur le DNS public, [ouvrez un ticket de support](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. Vous pouvez utiliser le ticket de support pour soumettre une demande pour ouvrir les itinéraires réseau ou mettre à jour les paramètres DNS.
- {: tip}
+ {: important}
 
  Entrez un titre pour votre serveur GitHub personnalisé et spécifiez l'URL racine de votre serveur. Entrez votre jeton d'accès personnel, puis cliquez sur **Enregistrer l'intégration personnalisée**.
 
@@ -566,16 +574,17 @@ Si vous disposez d'une chaîne d'outils et que vous lui ajoutez cette intégrati
 
 1. Si vous êtes un utilisateur GitHub.com avec un compte mis à niveau ou si vous avez sélectionné un serveur {{site.data.keyword.ghe_short}} et que vous souhaitez rendre un nouveau référentiel privé sur le serveur, cochez la case **Rendre ce référentiel privé**.
 1. Si vous souhaitez utiliser GitHub Issues pour le suivi des problèmes, sélectionnez la case **Activer GitHub Issues**.
-1. Si vous voulez suivre le déploiement des modifications du code en créant des étiquettes et des commentaires sur les validations, ainsi que des libellés et des commentaires sur les problèmes référencés par les validations, cochez la case **Suivi du déploiement des modifications du code**. Pour plus d'informations, voir [Suivi de l'emplacement du déploiement du code avec des chaînes d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Si vous voulez suivre le déploiement des modifications du code en créant des étiquettes et des commentaires sur les validations, ainsi que des libellés et des commentaires sur les problèmes référencés par les validations, cochez la case **Suivi du déploiement des modifications du code**. Pour plus d'informations, voir [Suivi de l'emplacement du déploiement du code avec des chaînes d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur la carte du référentiel GitHub ou {{site.data.keyword.ghe_short}} à utiliser. Selon le référentiel que vous avez sélectionné, le site Web GitHub ou le référentiel {{site.data.keyword.ghe_short}} de votre société s'ouvre afin de vous permettre de visualiser le contenu du référentiel.
 
   Vous pouvez utiliser les outils de gestion des codes source intégrés dans Eclipse Orion {{site.data.keyword.webide}} pour éditer le référentiel GitHub et déployer une application depuis votre espace de travail.
-{: tip}
+  {: tip}
 
 1. Si vous avez activé GitHub Issues, cliquez sur **GitHub Issues** pour l'ouvrir. Vous pouvez utiliser cette instance de GitHub Issues pour l'ensemble de votre chaîne d'outils, même si cette dernière contient plusieurs référentiels GitHub ou {{site.data.keyword.ghe_short}}.    
 
-Si vous ne disposez pas d'un droit d'administrateur sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans webhook, vous devez démarrer manuellement vos pipelines.
+Si vous ne disposez pas d'un droit d'administrateur sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans
+webhook, vous devez démarrer manuellement vos pipelines.
 {: tip}
 
 ### Plus d'informations sur GitHub
@@ -593,9 +602,9 @@ Pour en savoir plus sur GitHub, voir l'[article GitHub ![Icône de lien externe]
 {: #configghe}
 
  Ces instructions s'appliquent à {{site.data.keyword.Bluemix_notm}} Dedicated pour {{site.data.keyword.ghe_short}}. Si vous utilisez votre propre version gérée de {{site.data.keyword.ghe_short}}, certaines étapes peuvent varier en fonction de vos procédures internes.
- {: tip}
+ {: important}
 
-{{site.data.keyword.ghe_long}} est un service d'hébergement Web sur site pour les référentiels Git. {{site.data.keyword.ghe_short}} Dedicated est destiné aux clients {{site.data.keyword.Bluemix_notm}} Dedicated uniquement. GitHub Issues est un outil de suivi qui conserve votre travail et vos plans à un seul et même emplacement. Il est intégré à votre référentiel de développement pour vous permettre de vous concentrer sur les tâches importantes. Pour plus d'informations sur Bluemix Dedicated pour {{site.data.keyword.ghe_short}} et GitHub Issues, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} et l'[article GitHub Issues ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} sur IBM Cloud Garage Method.
+{{site.data.keyword.ghe_long}} est un service d'hébergement Web sur site pour les référentiels Git. {{site.data.keyword.ghe_short}} Dedicated est destiné aux clients {{site.data.keyword.Bluemix_notm}} Dedicated uniquement. GitHub Issues est un outil de suivi qui conserve votre travail et vos plans à un seul et même emplacement. Il est intégré à votre référentiel de développement pour vous permettre de vous concentrer sur les tâches importantes. Pour plus d'informations sur Bluemix Dedicated pour {{site.data.keyword.ghe_short}} et GitHub Issues, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} et l'[article GitHub Issues ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} sur IBM Cloud Garage Method.
 
 Vous pouvez configurer {{site.data.keyword.ghe_short}} en tant qu'intégration d'outils dans votre chaîne d'outils afin de pouvoir gérer le code source depuis l'instance de l'environnement [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} de votre société.
 
@@ -628,11 +637,12 @@ Vous pouvez configurer {{site.data.keyword.ghe_short}} en tant qu'intégration d
 1. Cliquez sur la carte du référentiel {{site.data.keyword.ghe_short}} à utiliser. Le référentiel {{site.data.keyword.ghe_short}} de votre société s'ouvre.
 
   Vous pouvez utiliser les outils de gestion des codes source intégrés dans Eclipse Orion {{site.data.keyword.webide}} pour éditer le référentiel {{site.data.keyword.ghe_short}} et déployer une application depuis votre espace de travail.
-{: tip}
+  {: tip}
 
 1. Si vous avez activé GitHub Issues, cliquez sur **GitHub Issues**. Vous pouvez utiliser cette instance de GitHub Issues pour l'ensemble de votre chaîne d'outils, même si cette dernière contient plusieurs référentiels GitHub.    
 
-Si vous ne disposez pas d'un droit d'administrateur sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans webhook, vous devez démarrer manuellement vos pipelines.
+Si vous ne disposez pas d'un droit d'administrateur sur le référentiel que vous liez, votre intégration sera limitée car vous ne pouvez pas utiliser un webhook. Les webhooks sont nécessaires pour exécuter un pipeline automatiquement lorsqu'une validation est envoyée par commande push au référentiel. Sans
+webhook, vous devez démarrer manuellement vos pipelines.
 {: tip}
 
 
@@ -645,11 +655,11 @@ Vous pouvez configurer GitLab en tant qu'intégration d'outils dans votre chaîn
 
 Si vous configurez cette intégration d'outils lors de la création de la chaîne d'outils, procédez comme suit :
 
-1. Si vous stockez votre code source dans un référentiel GitLab, dans la section Intégrations configurables, cliquez sur **GitLab**. Si vous configurez cette intégration d'outils sur {{site.data.keyword.Bluemix_notm}} Public et que vous n'avez pas autorisé {{site.data.keyword.Bluemix_notm}} à accéder à GitLab, cliquez sur **Autorisation** pour accéder au site Web GitLab. Si vous n'avez pas de session GitLab active, vous êtes invité à vous connecter. Cliquez sur **Authorize Application** pour autoriser {{site.data.keyword.Bluemix_notm}} à accéder à votre compte GitLab. Si vous disposez d'une session GitLab active mais n'avez pas saisi votre mot de passe récemment, vous serez peut-être invité à entrer votre mot de passe GitLab pour confirmation.
+1. Si vous stockez votre code source dans un référentiel GitLab, dans la section Intégrations configurables, cliquez sur **GitLab**. Si vous configurez cette intégration d'outils sur {{site.data.keyword.Bluemix_notm}} Public et que vous n'avez pas autorisé {{site.data.keyword.Bluemix_notm}} à accéder à GitLab, cliquez sur **Autorisation** pour accéder au site Web GitLab. Si vous n'avez pas de session GitLab active, vous êtes invité à vous connecter. Cliquez sur **Authorize Application** pour autoriser {{site.data.keyword.Bluemix_notm}} à accéder à votre compte GitLab. Si vous disposez d'une session GitLab active mais n'avez pas saisi votre mot de passe récemment, vous êtes invité à entrer votre mot de passe GitLab pour confirmation.
 1. Si vous utilisez un référentiel sur votre propre serveur GitLab, dans la section Intégrations configurables, cliquez sur **Ajouter un serveur personnalisé**.
 
  Le réseau doit être capable d'accéder au serveur GitLab cible à partir d'un environnement {{site.data.keyword.Bluemix_notm}} Dedicated.
-{: tip}
+ {: tip}
 
  Entrez un titre pour votre serveur GitLab personnalisé et spécifiez l'URL racine de votre serveur. Entrez votre jeton d'accès personnel, puis cliquez sur **Enregistrer l'intégration personnalisée**.
 
@@ -686,12 +696,12 @@ Si vous disposez d'une chaîne d'outils et que vous lui ajoutez cette intégrati
 
 1. Si vous souhaitez créer un référentiel public sur le serveur, désélectionnez la case **Rendre ce référentiel privé**.
 1. Si vous souhaitez utiliser GitLab Issues pour le suivi des problèmes, sélectionnez la case **Activer GitLab Issues**.
-1. Si vous voulez suivre le déploiement des modifications du code en créant des étiquettes et des commentaires sur les validations, ainsi que des libellés et des commentaires sur les problèmes référencés par les validations, cochez la case **Suivi du déploiement des modifications du code**. Pour plus d'informations, voir [Suivi de l'emplacement du déploiement du code avec des chaînes d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Si vous voulez suivre le déploiement des modifications du code en créant des étiquettes et des commentaires sur les validations, ainsi que des libellés et des commentaires sur les problèmes référencés par les validations, cochez la case **Suivi du déploiement des modifications du code**. Pour plus d'informations, voir [Suivi de l'emplacement du déploiement du code avec des chaînes d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur la carte du référentiel GitLab à utiliser. Selon le référentiel que vous avez sélectionné, le site Web GitLab ou le référentiel GitLab de votre société s'ouvre afin de vous permettre de visualiser le contenu du référentiel.
 
   Vous pouvez utiliser les outils de gestion des codes source intégrés dans Eclipse Orion {{site.data.keyword.webide}} pour éditer le référentiel GitLab et déployer une application depuis votre espace de travail.
-{: tip}
+  {: tip}
 
 1. Si vous avez activé GitLab Issues, cliquez sur **GitLab Issues** pour l'ouvrir. Vous pouvez utiliser cette instance de GitLab Issues pour l'ensemble de votre chaîne d'outils, même si cette dernière contient plusieurs référentiels GitLab.    
 
@@ -710,7 +720,7 @@ Pour en savoir plus sur GitLab, consultez l'article [GitLab![Icône de lien exte
 Jenkins est un outil open source basé sur un serveur, qui génère et teste des logiciels en continu, en prenant en charge les pratiques d'intégration et de distribution continues.
 
 Avant de créer une intégration d'outils Jenkins, vous devez disposer d'un serveur Jenkins.
-{: tip}
+{: important}
 
 L'intégration d'outil Jenkins vous permet d'envoyer des notifications de travail Jenkins à d'autres outils de votre chaîne d'outils, comme Slack et PagerDuty. Pour tracer le code dans les déploiements, vous pouvez ajouter des messages de déploiement dans vos validations Git et les problèmes Git ou JIRA associés. Vous pouvez également visualiser vos déploiements dans la page Toolchain Connections. Vous pouvez fournir les résultats de test à {{site.data.keyword.DRA_short}}, ajouter des seuils de qualité automatisés et procéder au suivi des risques de déploiement.
 
@@ -746,7 +756,7 @@ Pour en savoir plus sur Jenkins, consultez l'article [Jenkins![Icône de lien ex
 ## Configuration de JIRA
 {: #jira}
 
-JIRA est un outil qui assure le suivi des bogues et des problèmes liés à votre logiciel. L'intégration d'outils JIRA met à jour les problèmes de votre projet lorsque Jenkins ou {{site.data.keyword.deliverypipeline}} exécute un déploiement. Pour que l'intégration d'outils JIRA puisse assurer le suivi des problèmes, vous devez utiliser JIRA Smart Commits dans vos messages de validation. Pour en savoir plus sur JIRA Smart Commits, voir [Utilisation de Smart Commits ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html){: new_window}.
+JIRA est un outil qui assure le suivi des bogues et des problèmes liés à votre logiciel. L'intégration d'outils JIRA met à jour les problèmes de votre projet lorsque Jenkins ou {{site.data.keyword.deliverypipeline}} exécute un déploiement. Pour que l'intégration d'outils JIRA puisse assurer le suivi des problèmes, vous devez utiliser JIRA Smart Commits dans vos messages de validation. Pour en savoir plus sur JIRA Smart Commits, voir [Utilisation de Smart Commits ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html){: new_window}.
 
 Configurez JIRA pour planifier, suivre et distribuer un code de qualité :
 
@@ -864,7 +874,7 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de gé
   **Astuce :** vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de
 configuration pour l'intégration des outils Nexus.
 
-  e. Si votre travail de génération est publié dans le registre Nexus et que le format de votre version de module de noeud est `x.y.z-SNAPSHOT.w`, cochez la case **Increment snapshot module version**. Le travail de génération met automatiquement à jour la version du module avant qu'il ne soit publié dans le registre Nexus. Le travail de génération sélectionne la version la plus élevée du module à partir du registre npm et du fichier local `package.json`, et incrémente la version du module à l'aide de semver. Le travail de génération ne répercute pas les modifications dans le référentiel SCM.
+  e. Si votre travail de génération est publié dans le registre Nexus et si le format de votre version de module de noeud est `x.y.z-SNAPSHOT.w`, cochez la case **Incrémenter la version du module d'instantané**. Le travail de génération met automatiquement à jour la version du module avant qu'il ne soit publié dans le registre Nexus. Le travail de génération sélectionne la version la plus élevée du module à partir du registre npm et du fichier local `package.json`, et incrémente la version du module à l'aide de semver. Le travail de génération ne répercute pas les modifications dans le référentiel SCM.
 
 1. Cliquez sur **SAUVEGARDER**. Lors de l'exécution de votre pipeline, ce travail de génération utilise les informations de configuration provenant de l'intégration d'outils Nexus pour la connexion à votre registre npm.
 
@@ -892,8 +902,8 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de gé
      # ou
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-Vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de configuration pour l'intégration des outils Nexus.
-{: tip}
+  Vous pouvez trouver l'URL et les données d'identification de l'utilisateur dont vous vous êtes servi pour vous connecter à votre registre dans les paramètres de configuration pour l'intégration des outils Nexus.
+  {: tip}
 
 1. Cliquez sur **SAUVEGARDER**. Lors de l'exécution de votre pipeline, ce travail de génération utilise les informations de configuration provenant de l'intégration d'outils Nexus pour la connexion à votre référentiel Maven.
 
@@ -922,8 +932,7 @@ pour votre équipe :
 1. Sélectionnez la phase de cycle de vie qui est la plus étroitement associée à l'outil. Cette sélection détermine la catégorie sous laquelle votre outil est répertorié sur la page Vue d'ensemble.
 1. Ajoutez une URL d'icône. L'icône s'affiche dans la carte de votre intégration d'outils.
 1. Ajoutez une URL de documentation.
-1. Indiquez un nom d'instance d'outil. Par exemple : Outil de
-mon équipe.
+1. Indiquez un nom d'instance d'outil. Par exemple, Mon outil d'équipe.
 1. Ajoutez une URL d'instance de l'outil. Cette URL s'ouvre chaque fois que vous cliquez sur la carte d'intégration d'outils.
 1. Ajoutez une description de votre outil.
 1. (Avancé) Ajoutez des propriétés supplémentaires si besoin. Par exemple, indiquez les informations ou les attributs qui sont
@@ -940,7 +949,7 @@ Pour en savoir plus sur l'outil personnalisé, consultez le blogue [Introducing 
 ## Configuration de PagerDuty
 {: #pagerduty}
 
-PagerDuty intègre dans une vue unique les données provenant de plusieurs systèmes de surveillance. Quand un problème survient, PagerDuty s'assure que le membre d'équipe le plus à même de le résoudre reçoit une notification. Si le membre d'équipe ne résout pas le problème, il est possible de mettre en place des escalades afin de router le problème vers des ingénieurs de second niveau ou des gestionnaires des opérations.
+PagerDuty intègre dans une vue unique les données provenant de plusieurs systèmes de surveillance. Quand un problème survient, PagerDuty s'assure que le membre d'équipe le plus à même de le résoudre reçoit une notification. Si le membre d'équipe ne répond pas au problème, des remontées d'information peuvent être configurées pour l'acheminer aux représentants secondaires ou aux directeurs des opérations.
 
 Configurez PagerDuty pour l'envoi de notifications en cas d'échec d'étape de pipeline afin de pouvoir résoudre les problèmes plus rapidement et de réduire le temps d'indisponibilité.
 
@@ -953,7 +962,7 @@ Configurez PagerDuty pour l'envoi de notifications en cas d'échec d'étape de p
 
 1. Si vous souhaitez intégrer PagerDuty ay niveau de compte en utilisant une clé d'API, cliquez sur **Compte**:
 
- a. Entrez la clé d'accès d'API pour votre compte PagerDuty. Si vous ne disposez pas d'un compte PagerDuty, [inscrivez-vous pour en obtenir un ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://signup.pagerduty.com/accounts/new){: new_window}. Pour des instructions de recherche de la clé, voir [Génération d'une clé d'API ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
+ a. Entrez la clé d'accès d'API pour votre compte PagerDuty. Si vous ne disposez pas d'un compte PagerDuty, [inscrivez-vous pour en obtenir un ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://signup.pagerduty.com/accounts/new){: new_window}. Pour des instructions de recherche de la clé, voir [Génération d'une clé d'API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
 
  b. Entrez le nom de votre service PagerDuty.
 
@@ -1025,7 +1034,7 @@ Pour en savoir plus sur Rational Team Concert, consultez l'article [IBM Rational
 Sauce Labs exécute des tests unitaires fonctionnels. Quand une suite de tests Sauce Labs est configurée comme travail de test dans {{site.data.keyword.deliverypipeline}}, cette suite de tests peut exécuter des tests en fonction de votre application Web ou mobile dans le cadre de votre processus de distribution continue. Ces tests peuvent fournir un contrôle de flux de valeur pour vos projets, agissant comme des barrières pour empêcher le déploiement de code incorrect.
 
  Cette intégration d'outils est uniquement disponible sur {{site.data.keyword.Bluemix_notm}} Public.
-{: tip}
+ {: tip}
 
 Configurez Sauce Labs pour l'exécution de tests fonctionnels automatisés sur plusieurs systèmes d'exploitation et navigateurs afin de pouvoir émuler la façon dont un utilisateur peut utiliser un site Web ou une application :
 
@@ -1036,8 +1045,8 @@ Configurez Sauce Labs pour l'exécution de tests fonctionnels automatisés sur p
 
  b. Dans la section Intégrations d'outils, cliquez sur **Sauce Labs**.
 
-1. Entrez le nom d'utilisateur associé à votre compte Sauce Labs. Vous pouvez [trouver votre nom d'utilisateur dans le message d'accueil, en haut de la page de votre compte Sauce Labs ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://saucelabs.com/account){: new_window}.
-1. Entrez la clé d'accès de votre compte Sauce Labs. Vous pouvez [trouver la clé sur la page de votre compte Sauce Labs ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://saucelabs.com/account){: new_window}.
+1. Entrez le nom d'utilisateur associé à votre compte Sauce Labs. Vous [trouverez votre nom d'utilisateur dans le message de bienvenue figurant sur la page de votre compte Sauce Labs ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://saucelabs.com/account){: new_window}.
+1. Entrez la clé d'accès de votre compte Sauce Labs. Vous pouvez [trouver la clé sur la page de votre compte Sauce Labs ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://saucelabs.com/account){: new_window}.
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur **Sauce Labs** pour accéder à saucelabs.com et afficher l'activité de test pour la chaîne d'outils.
 
@@ -1055,8 +1064,8 @@ Pour en savoir plus sur Sauce Labs, voir l'[article Sauce Labs![Icône de lien e
 ## Configuration de Slack
 {: #slack}
 
-Les notifications publiées sur les canaux Slack publics sont visibles par tous les membre de l'équipe. N'oubliez pas que vous êtes responsable du contenu de vos articles.
-{: tip}
+Les notifications publiées sur les canaux Slack publics sont visibles par tous les membre de l'équipe. Vous êtes responsable du contenu que vous publiez.
+{: important}
 
 Slack est un système de messagerie et de notification en temps réel, basé sur le cloud. Slack fournit un système de discussion permanente, alternative plus interactive au courrier électronique pour la collaboration des équipes. Vous pouvez communiquer avec votre équipe sur un canal dédié ou sur un ensemble de canaux directement liés à votre travail. Vous pouvez également partager des fichiers et des images via ces canaux, ou dans des messages directs entre deux personnes ou plus. Les communications dans les messages directs ou sur les canaux sont conservées pour que vous puissiez y faire des recherches.
 
@@ -1070,10 +1079,10 @@ Configurez Slack pour la réception de notifications concernant votre chaîne d'
  b. Dans la section Intégrations d'outils, cliquez sur **Slack**.
 
 1. Entrez l'URL de webhook Slack, qui est générée par Slack en tant que webhook entrant. Vous avez besoin d'une URL de webhook Slack pour un canal Slack afin de recevoir des notifications concernant votre chaîne d'outils depuis les intégrations d'outils. Pour
-savoir comment créer ou rechercher votre webhook, veuillez vous référer à [Incoming webhooks![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks){: new_window}.
+savoir comment créer ou rechercher votre webhook, veuillez vous référer à [Incoming webhooks![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://api.slack.com/incoming-webhooks){: new_window}.
 
- Si vous avez utilisé une clé API pour que votre canal Slack reçoive des notifications sur votre chaîne d'outils depuis les intégrations d'outils, vous devez mettre à jour votre configuration pour utiliser un webhook à la place.
-{: tip}
+ Si vous utilisez une clé d'API pour que votre canal Slack reçoive des notifications sur votre chaîne d'outils depuis les intégrations d'outils, vous devez mettre à jour votre configuration pour utiliser un webhook à la place.
+ {: tip}
 
 1. Entrez le nom du canal Slack sur lequel vous souhaitez recevoir les notifications. La chaîne doit exister et être active dans votre équipe Slack.
 1. Saisissez le nom d'hôte d'URL pour votre équipe Slack, qui est le mot ou l'expression avant `.slack.com` dans l'URL de votre équipe. Par exemple, si l'URL de votre équipe est `https://team.slack.com`, le nom d'hôte est `team`.

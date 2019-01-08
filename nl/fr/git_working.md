@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-5"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # {{site.data.keyword.gitrepos}}
@@ -20,8 +22,14 @@ lastupdated: "2018-8-2"
 Collaborez avec votre équipe et gérez votre code source avec un référentiel Git et le dispositif de suivi des problèmes qui est hébergé par IBM et basé sur [GitLab Community Edition ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://about.gitlab.com/){:new_window}.
 {: shortdesc}
 
+Invitez uniquement les personnes avec qui vous avez une relation personnelle ou d'affaires à collaborer à un projet. Les utilisateurs qui utilisent une invitation à un référentiel Git à des fins autres que pour collaborer sur un projet peuvent voir leur accès au service suspendu ou révoqué.
+{: important}
+
+Ne stockez pas des données réglementées dans des fichiers ou des problèmes dans des référentiels Git. Les procédures relatives aux données réglementées ne sont pas encore en place.
+{: tip}
+
 L'intégration de l'outil {{site.data.keyword.gitrepos}} aide les équipes à gérer le code et à collaborer de diverses manières :
-   * Gestion de référentiels Git via des contrôles d'accès à granularité fine qui permettent de sécuriser le code
+   * Gestion des référentiels Git via des contrôles d'accès à granularité fine qui permettent de sécuriser le code
    * Révision du code et amélioration de la collaboration via des demandes de fusion
    * Suivi des problèmes et partage d'idées via le dispositif de suivi de problème
    * Documentation de projets sur le système wiki
@@ -46,7 +54,8 @@ Votre ID de connexion et votre mot de passe {{site.data.keyword.Bluemix_notm}} s
 ### Création d'un jeton d'accès personnel
 {: #create_pat}
 
-Pour vous authentifier auprès de votre référentiel Git via HTTPS, vous devez créer un jeton d'accès personnel.{: tip}
+Pour vous authentifier auprès de votre référentiel Git via HTTPS, vous devez créer un jeton d'accès personnel.
+{: tip}
 
 1. Dans le tableau de bord {{site.data.keyword.gitrepos}} User Settings, sur la [page Access Tokens ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, entrez le nom de l'application pour laquelle vous souhaitez créer un jeton d'accès. Par exemple, `Git CLI`.
 1. Facultatif : choisissez une date d'expiration pour le jeton d'accès.

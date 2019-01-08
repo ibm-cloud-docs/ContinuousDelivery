@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Gestion des données personnelles dans Continuous Delivery
@@ -30,16 +32,16 @@ Par données personnelles, on entend toute information qui concerne ou identifie
  * [{{site.data.keyword.DRA_full}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
 IBM ne gère pas les données dans le service {{site.data.keyword.contdelivery_short}}. Avant de quitter le service {{site.data.keyword.contdelivery_short}} hébergé dans {{site.data.keyword.Bluemix_notm}} Public, vous devez supprimer vos propres données.
-{: tip}
+{: important}
 
-{{site.data.keyword.contdelivery_short}} fournit les droits nécessaires pour gérer les données dans un groupe de ressources ou une organisation Cloud Foundry. Votre entreprise peut avoir des règles qui limitent ces droits. Si vous ne disposez pas des droits nécessaires, contactez l'administrateur pour votre compte {{site.data.keyword.Bluemix_notm}}. 
+{{site.data.keyword.contdelivery_short}} fournit les droits nécessaires pour gérer les données dans un groupe de ressources ou une organisation Cloud Foundry. Votre entreprise peut avoir des règles qui limitent ces droits. Si vous ne disposez pas des droits nécessaires, contactez l'administrateur pour votre compte {{site.data.keyword.Bluemix_notm}}.
 
 Pour gérer vos données personnelles, vous devez comprendre comment fonctionnent les comptes IBM Cloud, comment ils sont utilisés et connaître les droits d'accès associés.
  
 ## Comptes et droits d'accès
 {: #accounts_access_rights}
 
-Pour travailler dans IBM Cloud, vous devez vous connecter avec un nom d'utilisateur et un mot de passe. Lorsque vous vous connectez, IBM Cloud associe au moins un compte IBM Cloud à vos données d'identification d'utilisateur. Lorsque vous créez des ressources telles que des organisations Cloud Foundry, des groupes de ressources, des chaînes d'outils et des objets {{site.data.keyword.contdelivery_short}}, elles sont associées à un compte IBM Cloud. 
+Pour travailler dans IBM Cloud, vous devez vous connecter avec un nom d'utilisateur et un mot de passe. Lorsque vous vous connectez, IBM Cloud associe au moins un compte IBM Cloud à vos données d'identification d'utilisateur. Lorsque vous créez des ressources telles que des organisations Cloud Foundry, des groupes de ressources, des chaînes d'outils et des objets {{site.data.keyword.contdelivery_short}}, elles sont associées à un compte IBM Cloud.
 
 La structure de connexion d'IBM Cloud offre la possibilité de travailler dans différents comptes. L'interface utilisateur d'IBM Cloud vous permet de passer d'un compte à un autre. Lorsque vous vous connectez, l'un des types de comptes suivants peut être associé à vos données d'identification d'utilisateur : 
 
@@ -99,7 +101,7 @@ Si vous souhaitez supprimer toutes vos données personnelles de {{site.data.keyw
 L'interface {{site.data.keyword.webide}} fournit un espace de travail personnel dans le cloud. Vous pouvez utiliser l'interface {{site.data.keyword.webide}} pour cloner les référentiels Git et éditer les fichiers. Vous êtes propriétaire de votre espace de travail {{site.data.keyword.webide}} ; il n'est pas partagé avec un autre compte.
 
 Avant de supprimer vos données dans {{site.data.keyword.webide}}, pensez à exporter votre travail. Une fois supprimés, vos espaces de travail seront retirés de {{site.data.keyword.contdelivery_short}} et tous les fichiers seront supprimés.
-{: tip}
+{: important}
 
 ###Exportation d'un espace de travail de l'interface Web IDE
 
@@ -118,7 +120,7 @@ Pour supprimer vos espaces de travail de l'interface {{site.data.keyword.webide}
 1. Cliquez sur **Supprimer** pour supprimer toutes les données de l'interface {{site.data.keyword.webide}}.
 
 L'interface {{site.data.keyword.webide}} utilise un mécanisme de connexion unique. La première fois que vous accédez à cet outil d'intégration, un compte {{site.data.keyword.webide}} correspondant (masqué) est créé pour votre compte IBM Cloud. Après avoir supprimé tous les espaces de travail, n'accédez pas à l'interface {{site.data.keyword.webide}}. Si vous accédez à nouveau à l'interface {{site.data.keyword.webide}}, un nouveau compte sera automatiquement créé et vous devrez le supprimer.
-{: tip}
+{: important}
 
 ## Modification, exportation et suppression des données des Git Repos and Issue Tracking
 {: #managing_grit_data}
@@ -158,7 +160,7 @@ Une fois votre compte supprimé, certains contenus sont conservés. Ces contenus
 {: tip}
 
 {{site.data.keyword.gitrepos}} utilise un mécanisme de connexion unique qui crée automatiquement un compte Git correspondant pour votre compte IBM Cloud la première fois que vous accédez à l'intégration d'outils. Après avoir supprimé votre compte, n'accédez pas à {{site.data.keyword.gitrepos}}. Si vous accédez à {{site.data.keyword.gitrepos}} à nouveau, un nouveau compte sera automatiquement créé et vous devrez le supprimer.
-{: tip}
+{: important}
 
 ## Modification, exportation et suppression des données des pipelines Continuous Delivery
 {: #managing_pipeline_data}
@@ -168,13 +170,13 @@ Les pipelines {{site.data.keyword.contdelivery_short}} exécutent des scripts po
 Assurez-vous de vous coordonner avec les autres membres de votre équipe avant de supprimer des pipelines ou des objets partagés. La suppression d'une étape peut entraîner la défaillance d'un pipeline.
 
 Un pipeline ne peut pas exister en dehors d'une chaîne d'outils. Si vous supprimez une chaîne d'outils, tous les pipelines associés à la chaîne d'outils seront également supprimés. Si vous prévoyez de supprimer une chaîne d'outils entière, vous n'avez pas besoin de supprimer chaque pipeline individuellement. Passez plutôt à la section "Modification et suppression de chaînes d'outils et d'intégrations d'outil" et suivez les indications pour supprimer une chaîne d'outils.
-{: tip}
+{: important}
 
-Les étapes d'un pipeline peuvent inclure des données personnelles comme des données d'identification sous la forme de propriétés d'environnement et une définition de pipeline indiquant l'état actuel du pipeline. Les étapes peuvent également inclure des scripts dans les tâches que vous souhaitez modifier ou supprimer, ainsi que des artefacts et des journaux pour les dernières exécutions de pipeline à exporter. Utilisez les actions Configurer l'étape ou Supprimer l'étape pour modifier ou supprimer une étape. Utilisez l'action Télécharger pour exporter des artefacts ou des journaux à partir d'une étape. 
+Les étapes d'un pipeline peuvent inclure des données personnelles comme des données d'identification sous la forme de propriétés d'environnement et une définition de pipeline indiquant l'état actuel du pipeline. Les étapes peuvent également inclure des scripts dans les tâches que vous souhaitez modifier ou supprimer, ainsi que des artefacts et des journaux pour les dernières exécutions de pipeline à exporter. Utilisez les actions Configurer l'étape ou Supprimer l'étape pour modifier ou supprimer une étape. Utilisez l'action Télécharger pour exporter des artefacts ou des journaux à partir d'une étape.
 
   ![Menu Etapes](images/pipeline_stages.png)
 
-###Modification d'une étape de pipeline 
+###Modification d'une étape de pipeline
 
 Pour modifier une étape d'un pipeline :
 
@@ -187,21 +189,21 @@ Pour modifier une étape d'un pipeline :
   
 1. Supprimez un travail de l'étape du pipeline. Sur l'onglet **TRAVAUX**, sélectionnez le travail que vous souhaitez supprimer puis cliquez sur **Retirer**.
  
-###Exportation d'une étape de pipeline 
+###Exportation d'une étape de pipeline
 
-Pour exporter la définition d'une étape de pipeline, ajoutez `/yaml` à l'URL du pipeline : 
+Pour exporter la définition d'une étape de pipeline, ajoutez `/yaml` à l'URL du pipeline :
 
 `http(s)://<DevOps Services domain>/pipeline/user/project/yaml`
 
 
-Pour exporter des artefacts et des journaux pour une étape de pipeline : 
+Pour exporter des artefacts et des journaux pour une étape de pipeline :
 
-1. Sur la page Pipeline, cliquez sur **Afficher les journaux et l'historique**. 
-1. Cliquez sur le numéro de version pour lequel vous souhaitez exporter des artefacts et des journaux. 
+1. Sur la page Pipeline, cliquez sur **Afficher les journaux et l'historique**.
+1. Cliquez sur le numéro de version pour lequel vous souhaitez exporter des artefacts et des journaux.
 1. Cliquez sur **Télécharger** > **Artefacts** pour exporter les artefacts pour la version sélectionnée.
 1. Cliquez sur **Télécharger** > **Journaux** pour exporter les journaux pour la version sélectionnée.  
 
-###Suppression d'une étape de pipeline 
+###Suppression d'une étape de pipeline
 
 Pour supprimer une étape d'un pipeline :
 
@@ -245,10 +247,12 @@ Lorsque vous supprimez une chaîne d'outils, la suppression est irréversible.
 1. Cliquez sur **Supprimer**. La suppression d'une chaîne d'outils supprime toutes ses intégrations d'outils, y compris les pipelines et donc éventuellement les ressources gérées par ces intégrations.
 1. Confirmez la suppression en entrant le nom de la chaîne d'outils et en cliquant sur **Supprimer**. 
 
-Lorsque vous supprimez une chaîne d'outils, les référentiels {{site.data.keyword.gitrepos}} associés ne sont pas supprimés. Les utilisateurs ayant accès à ces référentiels peuvent disposer de copies des données s'ils ont exécuté une commande `git clone` ou créé un espace de travail {{site.data.keyword.webide}}. Pour vous assurer que toutes les données sont supprimées, vous devez demander à ces utilisateurs de supprimer leurs copies des données. {: tip}
+Lorsque vous supprimez une chaîne d'outils, les référentiels {{site.data.keyword.gitrepos}} associés ne sont pas supprimés. Les utilisateurs ayant accès à ces référentiels peuvent disposer de copies des données s'ils ont exécuté une commande `git clone` ou créé un espace de travail {{site.data.keyword.webide}}. Pour vous assurer que toutes les données sont supprimées, vous devez demander à ces utilisateurs de supprimer leurs copies des données.
+{: tip}
 
 ###Suppression de toutes les chaînes d'outils
 
 Vous ne pouvez pas supprimer toutes les chaînes d'outils d'un groupe de ressources ou d'une organisation en même temps. Vous devez supprimer les chaînes d'outils une par une.
 
-Les chaînes d'outils sont délimitées par région IBM Cloud, groupe de ressources et organisation Cloud Foundry. Assurez-vous de sélectionner chaque région et groupe de ressources ou organisation au sein de la région pour supprimer toutes les chaînes d'outils que vous avez créées. {: tip}
+Les chaînes d'outils sont délimitées par région IBM Cloud, groupe de ressources et organisation Cloud Foundry. Assurez-vous de sélectionner chaque région et groupe de ressources ou organisation au sein de la région pour supprimer toutes les chaînes d'outils que vous avez créées.
+{: tip}

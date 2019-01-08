@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -30,10 +32,10 @@ Que le travail soit de type Génération, Test ou Déploiement, vous pouvez sél
 
 Le nom de l'image Docker dans les travaux d'images Docker personnalisées est conçu pour fonctionner de la même manière que les noms d'image fonctionnent avec l'interface de ligne de commande Docker. Le format d'un nom d'image Docker est : `[repository][:][tag]`. Par exemple, pour `docker run maven:3.5.3-ibmjava`, le nom de l'image Docker est `maven:3.5.3-ibmjava`, où `maven` est le référentiel et `3.5.3-ibmjava` est l'étiquette. Il n'y a aucune restriction sur le nom de l'image Docker que vous pouvez utiliser ; n'importe quelle image Docker valide fonctionne.
 
-Si la zone **Nom d'image Docker** n'est pas renseignée, l'image de base du pipeline standard est utilisée.
+Si la zone **Nom d'image Docker** n'est pas renseignée, l'image de base du pipeline standard est utilisée. 
 {: tip}
 
-Par défaut, votre référentiel est recherché sur [Docker Hub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://hub.docker.com/){: new_window}. Si vous utilisez un autre registre Docker tel qu'IBM Cloud Registry, vous pouvez utiliser le nom DNS complet. Vous pouvez également utiliser le nom complet pour les images sur Docker Hub. Par exemple, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
+Par défaut, votre référentiel est recherché sur [Docker Hub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://hub.docker.com/){: new_window}. Si vous utilisez un autre registre Docker, tel que {{site.data.keyword.registrylong}}, vous pouvez utiliser le nom de DNS complet. Vous pouvez également utiliser le nom complet pour les images sur Docker Hub. Par exemple, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
 
 La balise (`tag`) d'une image Docker est facultative. Si vous ne spécifiez pas une balise, elle sera définie par défaut sur `latest`. Une valeur par défaut `latest` est juste un nom de balise que le propriétaire du référentiel doit gérer. Cela ne signifie pas que cette image Docker est la dernière image du point de vue chronologique.
 
@@ -44,12 +46,12 @@ Vous trouverez une vaste communauté de référentiels sur Docker Hub. IBM hébe
 
 Si vous utilisez un registre privé nécessitant une authentification, vous devez définir deux propriétés d'environnement d'étape supplémentaires : `DOCKER_USERNAME` et `DOCKER_PASSWORD`. Vous pouvez utiliser une propriété sécurisée pour masquer votre `DOCKER_PASSWORD`. Avant que votre image ne soit extraite, le travail d'image Docker personnalisée utilise votre nom d'utilisateur et votre mot de passe pour effectuer un `docker login`.
 
-Dans la plupart des registres, vous pouvez utiliser le nom d'utilisateur et le mot de passe qui vous ont été fournis. Si vous utilisez IBM Cloud Registry pour stocker vos images privées, vous devez utiliser une clé d'API de la plateforme pour l'authentification. 
+Dans la plupart des registres, vous pouvez utiliser le nom d'utilisateur et le mot de passe qui vous ont été fournis. Si vous utilisez {{site.data.keyword.registrylong_notm}} pour stocker vos images privées, vous devez utiliser une clé d'API de plateforme pour l'authentification. 
 
-1. [Demandez une clé d'API de la plateforme![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/iam/#/apikeys){: new_window} et sauvegardez la clé. 
-1. Créez les propriétés d'environnement en deux étapes en utilisant `iamapikey` comme votre `DOCKER_USERNAME` et la clé d'API de la plateforme sauvegardée comme `DOCKER_PASSWORD`.
+1. [Demandez une clé d'API de plateforme  ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/iam/#/apikeys){: new_window} et sauvegardez la clé. 
+1. Créez les propriétés d'environnement en deux étapes en utilisant `iamapikey` comme votre `DOCKER_USERNAME` et la clé d'API de plateforme sauvegardée comme `DOCKER_PASSWORD`.
 
- ![Données d'identification à IBM Cloud Registry](images/custom-image-private-repository.png)
+ Données d'identification ![{{site.data.keyword.registrylong_notm}}](images/custom-image-private-repository.png)
 
 
 ## Spécification du script

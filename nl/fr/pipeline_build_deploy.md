@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-11"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -85,11 +85,9 @@ Vous pouvez ajouter des services à vos applications et gérer ces services à p
 
 Vous pouvez afficher les journaux de travaux et consulter les étapes à mesure qu'elles s'exécutent sur la page Historique des étapes.
 
-Pour afficher le journal d'un travail, cliquez sur celui-ci. Sinon, sur une étape, cliquez sur **Afficher les journaux et l'historique**.
+1. Pour afficher le journal d'un travail, cliquez sur celui-ci. Sinon, sur une étape, cliquez sur **Afficher les journaux et l'historique**.
 
-Pour afficher le journal d'exécution d'une application déployée, cliquez sur **Afficher le journal d'exécution**.
-
-![Zones d'une mosaïque d'étapes dans lesquelles vous pouvez cliquer pour ouvrir les journaux pertinents](images/view_logs_and_history.png)
+2. Pour afficher le journal d'exécution d'une application déployée, cliquez sur **Afficher le journal d'exécution**.
 
 Outre les journaux des travaux, vous pouvez afficher les résultats de tests unitaires, les artefacts générés et les modifications de code pour n'importe quel travail de génération.
 
