@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -17,19 +17,19 @@ lastupdated: "2018-8-2"
 # Actualice su proyecto {{site.data.keyword.jazzhub_short}} a una cadena de herramientas
 {: #upgrade_projects}
 
-{{site.data.keyword.jazzhub}} está evolucionando hacia {{site.data.keyword.contdelivery_full}}. Como parte de este cambio, los proyectos se actualizarán a cadenas de herramientas.
+{{site.data.keyword.jazzhub}} está evolucionando hacia {{site.data.keyword.contdelivery_full}}. Como parte de este cambio, los proyectos se actualizan a cadenas de herramientas.
 
 Puede actualizar su proyecto o esperar a que se actualice automáticamente. Asegúrese de cumplir los [requisitos previos](#upgrade_prereqs) y de actualizar el proyecto lo antes posible para poder controlar el nombre de la cadena de herramientas y la organización para la que se crea.
 {: shortdesc}
 
 **Preguntas más frecuentes**
 
-- [Mi proyecto JazzHub está asociado a la región Reino Unido, pero mi cadena de herramientas estará en la región EE. UU. Sur. ¿Cómo se procederá?](#faq_region)
-- [¿Qué ocurrirá con mis paneles de control y elementos de trabajo en Track &amp; Plan cuando realice la actualización?](#faq_tp)
-- [¿Qué ocurrirá al código del repositorio cuando realice la actualización?](#faq_repo)
-- [¿Qué ocurrirá a mis definiciones de compilación en mi proyecto cuando actualice a una cadena de herramientas? ](#faq_build)
-- [Necesito crear una organización para mi proyecto que se actualizará a una cadena de herramientas. Entiendo que necesito añadir una tarjeta de crédito a mi cuenta antes de que pueda crear una organización. ¿Se realizarán cargos en mi tarjeta de crédito? ](#faq_charges)
-- [No puedo encontrar o acceder a mi cadena de herramientas. ¿Qué debo hacer?](#faq_find)
+- [Mi proyecto JazzHub está asociado a la región del Reino Unido, pero mi cadena de herramientas está en la región EE.UU. sur. ¿Cómo se procederá?](#faq_region)
+- [¿Qué ocurre con mis paneles de control y elementos de trabajo en Track &amp; Plan cuando realice la actualización?](#faq_tp)
+- [¿Qué le ocurre al código del repositorio cuando realice la actualización?](#faq_repo)
+- [¿Qué le ocurre a mis definiciones de compilación en mi proyecto cuando actualice a una cadena de herramientas? ](#faq_build)
+- [Necesito crear una organización para mi proyecto que se actualiza a una cadena de herramientas. Entiendo que necesito añadir una tarjeta de crédito a mi cuenta antes de que pueda crear una organización. ¿Se realizarán cargos en mi tarjeta de crédito? ](#faq_charges)
+- [No puedo encontrar o acceder a mi cadena de herramientas. ¿Qué puedo hacer?](#faq_find)
 - [Mi proyecto está asociado con la región Reino Unido. Después de la actualización, veo mensajes de error, mis colegas no pueden acceder a la cadena de herramientas, y no veo mi cadena de herramientas en la página Cadenas de herramientas de la plataforma {{site.data.keyword.Bluemix_notm}}. ¿Qué ocurre?](#faq_uk)
 
 ## Cadenas de herramientas
@@ -48,8 +48,8 @@ Puede obtener información sobre cadenas de herramientas en [YouTube ![Icono de 
 {: #upgrade_prereqs}
 
 - Para acceder a la cadena de herramientas actualizada del proyecto, necesita un ID de {{site.data.keyword.Bluemix_notm}}. Antes de actualizar, debe verificar que tiene un ID de {{site.data.keyword.Bluemix_notm}} activo. Si no dispone de uno, [regístrese](https://console.ng.bluemix.net/registration/).
-- Asegúrese de que el propietario del proyecto de {{site.data.keyword.jazzhub_short}} sea correcto. La cadena de herramientas que se crea a partir del proyecto formará parte de la organización de {{site.data.keyword.Bluemix_notm}} de dicho propietario.
-- Asegúrese de que la organización y el espacio donde desea crear la cadena de herramientas estén en {{site.data.keyword.Bluemix_notm}} Público en la región EE.UU. Sur. Para confirmar que tiene una organización y un espacio válidos en EE.UU. Sur, inicie sesión en [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window} y cree un espacio si se le solicita que cree uno.
+- Asegúrese de que el propietario del proyecto de {{site.data.keyword.jazzhub_short}} sea correcto. La cadena de herramientas que se crea a partir del proyecto forma parte de la organización de {{site.data.keyword.Bluemix_notm}} de dicho propietario.
+- Asegúrese de que la organización y el espacio donde desea crear la cadena de herramientas estén en {{site.data.keyword.Bluemix_notm}} Público en la región EE.UU. sur. Para confirmar que tiene una organización y un espacio válidos en EE.UU. sur, inicie sesión en [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window} y cree un espacio si se le solicita que cree uno.
 - Si está planeando iniciar la actualización, asegúrese de que es miembro de cada organización y espacio en el que se despliega el conducto. Cualquier administrador de proyecto puede iniciar la actualización. Sin embargo, si el administrador que inicia la actualización no es miembro de cada organización y espacio en el que se despliega el conducto, éste último no se podrá crear. La persona que inicia la actualización se convierte en el propietario del repositorio en la cadena de herramientas.
 - Eclipse Orion {{site.data.keyword.webide}} en la cadena de herramientas no es el {{site.data.keyword.webide}} asociado al proyecto. Si utiliza el {{site.data.keyword.webide}} y tiene cambios sin confirmar, confírmelos antes de actualizar.
 
@@ -57,7 +57,7 @@ Puede obtener información sobre cadenas de herramientas en [YouTube ![Icono de 
 ## Actualización de un proyecto a una cadena de herramientas
 {: #project_to_toolchain}
 
-Los proyectos de hub.jazz.net y de cadenas de herramientas están alojados en la región EE.UU. Sur. Si el proyecto se ha configurado para desplegar apps en otra región, seguirá desplegando apps en dicha región después de que se haya actualizado a una cadena de herramientas.
+Los proyectos de hub.jazz.net y de cadenas de herramientas están alojados en la región EE.UU. sur. Si el proyecto se ha configurado para desplegar apps en otra región, se siguen desplegando apps en dicha región después de que se haya actualizado a una cadena de herramientas.
 {: tip}
 
 Cuando el proyecto esté listo para actualizarse, se mostrará un mensaje en la tarjeta del proyecto y en la página Visión general.
@@ -71,7 +71,7 @@ Encontrará proyectos que están preparados para la actualización en el menú d
 ![Imagen del elemento de menú Proyectos para actualizar](images/menu-projects-to-upgrade.png)
 {: tip}
 
-Cuando inicia la actualización, las transmisiones de conducto del proyecto se bloquean. No podrá ejecutarlas ni modificarlas. Si revierte la actualización mediante la supresión de la cadena de herramientas, el conducto es desbloquea.
+Cuando inicia la actualización, las transmisiones de conducto del proyecto se bloquean. No puede ejecutarlas ni modificarlas. Si revierte la actualización mediante la supresión de la cadena de herramientas, el conducto es desbloquea.
 
 Si el proyecto utiliza un repositorio Git alojado en JazzHub, después de iniciar la actualización el repositorio se bloquea para garantizar la integridad de los datos que se mueven a la cadena de herramientas. Si revierte la actualización mediante la supresión de la cadena de herramientas, el repositorio de JazzHub es desbloquea.
 
@@ -95,9 +95,9 @@ Para actualizar el proyecto a una cadena de herramientas, siga estos pasos:
 
    ![Ejemplo de una página de actualización](images/project-upgrade-toolchain.png)
 
-   Para obtener una visión general del proceso de actualización, lea la descripción de esta página. La cadena de herramientas incluirá un nuevo conducto que contiene las mismas etapas y trabajos que el conducto del proyecto. Además, la cadena de herramientas contendrá un puntero a Eclipse Orion {{site.data.keyword.webide}} que se ejecuta en {{site.data.keyword.contdelivery_short}}.
+   Para obtener una visión general del proceso de actualización, lea la descripción de esta página. La cadena de herramientas incluye un nuevo conducto que contiene las mismas etapas y trabajos que el conducto del proyecto. Además, la cadena de herramientas contiene un puntero a Eclipse Orion {{site.data.keyword.webide}} que se ejecuta en {{site.data.keyword.contdelivery_short}}.
 
-   En este ejemplo, como el proyecto utiliza un repositorio público en github.com, la cadena de herramientas se conectará al mismo repositorio GitHub. Si el proyecto utiliza un repositorio Git que se aloja en JazzHub, el contenido de dicho repositorio se clonará en un repositorio nuevo en {{site.data.keyword.gitrepos}}, que forma parte de {{site.data.keyword.contdelivery_short}}.
+   En este ejemplo, como el proyecto utiliza un repositorio público en github.com, la cadena de herramientas se conecta al mismo repositorio GitHub. Si el proyecto utiliza un repositorio Git que se aloja en JazzHub, el contenido de dicho repositorio se clona en un repositorio nuevo en {{site.data.keyword.gitrepos}}, que forma parte de {{site.data.keyword.contdelivery_short}}.
 
 2. Para personalizar la cadena de herramientas, puede configurar algunos valores:
 
@@ -166,7 +166,7 @@ Cuando vuelva al proyecto, se volverá a mostrar el mensaje de actualización y 
     - Cada miembro del equipo debe tener una cuenta de {{site.data.keyword.Bluemix_notm}} válida. Los miembros del equipo que no tienen cuentas deben [registrarse ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/registration){:new_window}.
     - Otorgue acceso a los miembros de la organización a la cadena de herramientas desde la página Gestionar de la cadena de herramientas. Los miembros del proyecto existentes se añaden como miembros de la cadena de herramientas como parte del proceso de actualización. Para obtener más información sobre el control de accesos para cadenas de herramientas, consulte [Gestión de acceso ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
     - Si un usuario no es miembro de la organización a la que pertenece la cadena de herramientas, añádalo a la organización desde la página Gestionar organizaciones.
-    - Si la cadena de herramientas utiliza {{site.data.keyword.gitrepos}}, todos los miembros del proyecto de JazzHub que tengan un ID de {{site.data.keyword.Bluemix_notm}} válido se añadirán al repositorio de {{site.data.keyword.gitrepos}} con los mismos privilegios que tenían en el proyecto de JazzHub. Si el proyecto de JazzHub incluye miembros que no tienen un ID de {{site.data.keyword.Bluemix_notm}} válido, deberían registrarse para uno y ser añadidos al repositorio.
+    - Si la cadena de herramientas utiliza {{site.data.keyword.gitrepos}}, todos los miembros del proyecto de JazzHub que tengan un ID de {{site.data.keyword.Bluemix_notm}} válido se añadirán al repositorio de {{site.data.keyword.gitrepos}} con los mismos privilegios que tenían en el proyecto de JazzHub. Si el proyecto de JazzHub incluye miembros que no tienen un ID de {{site.data.keyword.Bluemix_notm}} válido, deben registrarse para uno y ser añadidos al repositorio.
       Para obtener más información sobre la gestión de organizaciones, consulte [Gestión de organizaciones y espacios ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}.
 
 3. Utilice las herramientas de la cadena de herramientas en lugar de las herramientas del proyecto de {{site.data.keyword.jazzhub_short}}. Por ejemplo, para editar código desde un navegador, utilice el IDE Web de la cadena de herramientas.
@@ -181,7 +181,7 @@ Cuando vuelva al proyecto, se volverá a mostrar el mensaje de actualización y 
         Para comprobar los URL definidos y sus nombres remotos, utilice el mandato `git remote -v`. El nombre remoto predeterminado es `origin`. Si tiene una configuración más avanzada, el formato del mandato es el siguiente: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
         {: tip}
 
-5. Cuando la cadena de herramientas esté configurada y haya empezado a utilizarla, tenga en cuenta la posibilidad de llevar a cabo alguno de los siguientes pasos, o todos ellos, para asegurarse de que nadie utilice su proyecto:
+5. Cuando la cadena de herramientas esté configurada y empiece a utilizarla, tenga en cuenta la posibilidad de llevar a cabo alguno de los siguientes pasos, o todos ellos, para asegurarse de que nadie utilice su proyecto:
     - Añada un sufijo al nombre del proyecto para indicar que no se debe utilizar. Puede añadir `_NO_UTILIZAR` al final del nombre del proyecto.
     - Actualice la descripción del proyecto para indicar que ya no se utiliza y añada un puntero a la cadena de herramientas.
     - Elimine los miembros del proyecto.
@@ -205,12 +205,12 @@ Si encuentra un problema durante el proceso de actualización, intente uno o var
 ## Preguntas más frecuentes
 {: #upgrade_faq}
 
-### Mi proyecto JazzHub está asociado a la región Reino Unido, pero mi cadena de herramientas estará en la región EE. UU. Sur. ¿Cómo se procederá?
+### Mi proyecto JazzHub está asociado a la región del Reino Unido, pero mi cadena de herramientas está en la región EE.UU. sur. ¿Cuál es el funcionamiento?
 {: #faq_region}
 
-Los proyectos de hub.jazz.net y de cadenas de herramientas están alojados en la región EE.UU. Sur. Si el proyecto se ha configurado para desplegar apps en otra región, por ejemplo el Reino Unido, las apps se seguirán desplegando en dicha región después de que se haya actualizado a una cadena de herramientas. Por lo tanto, nada cambia realmente con respecto a dónde se alojan los datos. En el futuro, las cadenas de herramientas estarán disponibles en más regiones.
+Los proyectos de hub.jazz.net y de cadenas de herramientas están alojados en la región EE.UU. sur. Si el proyecto está configurado para desplegar apps en otra región, por ejemplo el Reino Unido, seguirá desplegando apps en dicha región después de que se haya actualizado a una cadena de herramientas. Por lo tanto, nada cambia realmente con respecto a dónde se alojan los datos. En el futuro, las cadenas de herramientas estarán disponibles en más regiones.
 
-### ¿Qué ocurrirá con mis paneles de control y elementos de trabajo en Track &amp; Plan cuando realice la actualización?
+### ¿Qué ocurre con mis paneles de control y elementos de trabajo en Track &amp; Plan cuando realice la actualización?
 {: #faq_tp}
 
 El servicio {{site.data.keyword.contdelivery_short}} proporciona funcionalidades de seguimiento de problemas a través de {{site.data.keyword.gitrepos}}, que IBM aloja y se basa en GitLab Community Edition. {{site.data.keyword.contdelivery_short}} también da soporte a las integraciones con otras herramientas de seguimiento de problemas y planificación como, por ejemplo, GitHub Issues y JIRA.
@@ -223,12 +223,12 @@ Este nuevo servicio IBM Track and Plan on Cloud proporciona una mayor funcionali
 
 Para obtener información sobre IBM Track and Plan on Cloud, o para comprar en línea, vaya a [IBM Marketplace ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}.
 
-También es una opción comprar además software de automatización de compilaciones y gestión de código fuente, [Rational Team Concert on Cloud ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window}.
+Además, es una opción adquirir software de automatización de compilaciones y gestión de código fuente, [Rational Team Concert on Cloud ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window}.
 
-### ¿Qué ocurrirá al código del repositorio cuando realice la actualización?
+### ¿Qué le ocurre al código del repositorio cuando realice la actualización?
 {: #faq_repo}
 
-Después de la actualización, el nuevo servicio Git será comparable al que tenía con anterioridad. Si utilizó github.com con sus proyectos JazzHub, su cadena de herramientas se conectará al mismo repositorio GitHub. Si su proyecto JazzHub utilizaba repositorio Git alojado en IBM, el contenido de dicho repositorio se clonará en un nuevo repositorio en {{site.data.keyword.gitrepos}}, que es parte de {{site.data.keyword.contdelivery_short}} y que IBM aloja.
+Después de la actualización, el nuevo servicio Git es comparable al que tenía con anterioridad. Si ha utilizado github.com con el proyecto de JazzHub, su cadena de herramientas estará conectada con el mismo repositorio de GitHub. Si el proyecto JazzHub ha utilizado Git alojado en IBM, el contenido de dicho repositorio se clonará en un repositorio nuevo en {{site.data.keyword.gitrepos}}, que forma parte de {{site.data.keyword.contdelivery_short}} y está alojado por IBM.
 
 Para ver detalles sobre cómo se trata cada tipo de repositorio en el proceso de actualización, consulte la siguiente tabla.
 
@@ -239,12 +239,12 @@ Para ver detalles sobre cómo se trata cada tipo de repositorio en el proceso de
 {: caption="Tabla 1. Repositorios de proyecto correlacionados con repositorios de cadena de herramientas" caption-side="top"}
 
 
-### ¿Qué ocurrirá a mis definiciones de compilación en mi proyecto cuando actualice a una cadena de herramientas?
+### ¿Qué le ocurre a mis definiciones de compilación en mi proyecto cuando actualice a una cadena de herramientas?
 {: #faq_build}
 
 Si está compilando su código fuente utilizando Jazz en lugar de Delivery Pipeline, debe migrar de forma manual sus definiciones de compilación a Delivery Pipeline en su cadena de herramientas.
 
-Si utiliza Jazz SCM como repositorio de código fuente y utiliza Delivery Pipeline para compilar su código fuente, el código fuente en Jazz SCM se moverá de forma automática a un repositorio Git. Su configuración de Delivery Pipeline permanecerá inalterada excepto que consumirá el código fuente desde el repositorio Git en lugar de hacerlo desde Jazz SCM.
+Si utiliza Jazz SCM como repositorio de código fuente y utiliza Delivery Pipeline para compilar su código fuente, el código fuente en Jazz SCM se mueve de forma automática a un repositorio Git. Su configuración de Delivery Pipeline permanece inalterada, excepto que consume el código fuente desde el repositorio Git en lugar de hacerlo desde Jazz SCM.
 
 ### Necesito crear una organización para mi proyecto que se actualizará a una cadena de herramientas. Entiendo que necesito añadir una tarjeta de crédito a mi cuenta antes de que pueda crear una organización. ¿Se realizarán cargos en mi tarjeta de crédito?
 {: #faq_charges}
@@ -253,12 +253,12 @@ Como [cliente de Pago según uso ![Icono de enlace externo](../../icons/launch-g
 
 Si es un empleado de IBM, los proyectos internos de IBM se pueden facturar a los departamentos en lugar de hacerlo a su tarjeta de crédito personal. Si necesita recursos más allá de los asignados de forma gratuita a los empleados de IBM, cree una incidencia de soporte.
 
-### No puedo encontrar o acceder a mi cadena de herramientas. ¿Qué debo hacer?
+### No puedo encontrar o acceder a mi cadena de herramientas. ¿Qué puedo hacer?
 {: #faq_find}
 
 Las cadenas de herramientas están alojadas en organizaciones de {{site.data.keyword.Bluemix_notm}}. El proceso de actualización añade todos los miembros del proyecto de JazzHub a la cadena de herramientas. Sin embargo, a menos que el propietario de la organización {{site.data.keyword.Bluemix_notm}} añada dichos usuarios a la organización, no podrán ver la cadena de herramientas.
 
-Para acceder a su cadena de herramientas, vaya a la plataforma {{site.data.keyword.Bluemix_notm}}, pulse el icono de menú y pulse **Servicios &gt; DevOps**. Se abrirá la página de Cadenas de herramientas. Asegúrese de que se encuentre en la región EE.UU. Sur y de que se encuentra en la organización que contiene la cadena de herramientas. Si la cadena de herramientas no está listada en la página Cadenas de herramientas, consulte [esta entrada de preguntas más frecuentes](#faq_uk).
+Para acceder a su cadena de herramientas, vaya a la plataforma {{site.data.keyword.Bluemix_notm}}, pulse el icono de menú y pulse **Servicios &gt; DevOps**. Se abrirá la página de Cadenas de herramientas. Asegúrese de que se encuentre en la región EE.UU. sur y de que se encuentra en la organización que contiene la cadena de herramientas. Si la cadena de herramientas no está listada en la página Cadenas de herramientas, consulte [esta entrada de preguntas más frecuentes](#faq_uk).
 
 Como alternativa, mientras que el sitio JazzHub todavía esté disponible, puede ir a la cadena de herramientas pulsando el enlace en el banner de la página Visión general del proyecto.
 
@@ -269,7 +269,7 @@ Como alternativa, mientras que el sitio JazzHub todavía esté disponible, puede
 
 Mi proyecto de JazzHub está asociado con la región Reino Unido de {{site.data.keyword.Bluemix_notm}} según los valores del proyecto. He verificado los valores de mi proyecto yendo a su página de visión general en JazzHub, pulsando el icono **Valores**, que parece un engranaje, y pulsando **Opciones &gt; Convertir esto en un proyecto de {{site.data.keyword.Bluemix_notm}}: Región**. Una vez que haya actualizado el proyecto a la cadena de herramientas de EE.UU., se producen estos problemas:
 
-   1. Cuando selecciono la organización estadounidense, veo un mensaje que dice que la organización no tiene un espacio en la región EE.UU. Sur, y se me solicita que cree un espacio. No quiero ejecutar nada en Estados Unidos.
+   1. Cuando selecciono la organización estadounidense, veo un mensaje que dice que la organización no tiene un espacio en la región EE.UU. sur, y se me solicita que cree un espacio. No quiero ejecutar nada en Estados Unidos.
    
    2. Algunos de mis colegas no pueden acceder a la cadena de herramientas, aunque estaban listados como miembros en el proyecto de JazzHub original. Si intentan abrir la cadena de herramientas desde la página de visión general de la app en la región Reino Unido pulsando **Ver cadena de herramientas**, verán un mensaje "acceso denegado".
    
@@ -277,9 +277,9 @@ Mi proyecto de JazzHub está asociado con la región Reino Unido de {{site.data.
 
 **Respuesta:**
 
-Estos problemas se pueden producir si procede de una organización de {{site.data.keyword.Bluemix_notm}} que no sea de EE.UU. y si no ha expandido explícitamente su organización a la región EE.UU. Sur antes de actualizar. Puede confirmarlo de dos formas:
+Estos problemas se pueden producir si procede de una organización de {{site.data.keyword.Bluemix_notm}} que no sea de EE.UU. y si no ha expandido explícitamente su organización a la región EE.UU. sur antes de actualizar. Puede confirmar este caso de ejemplo de dos formas:
 
-   * Al abrir el URL de la cadena de herramientas, compruebe la cabecera de {{site.data.keyword.Bluemix_notm}}. Probablemente, verá el nombre de organización y no habrá indicado ningún espacio.
+   * Al abrir el URL de la cadena de herramientas, compruebe la cabecera de {{site.data.keyword.Bluemix_notm}}. Lo más probable es que vea el nombre de organización y no habrá indicado ningún espacio.
    
    * En la página Visión general de la cadena de herramientas, pulse **Gestionar**. En la página Control de acceso, pulse el enlace **Gestores de organización**. La organización que contiene la cadena de herramientas se lista en la página principal.
 
@@ -291,9 +291,9 @@ Si desea que la cadena de herramientas se encuentre en una organización de EE.U
 
    1. Inicie sesión en [https://console.bluemix.net ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net){: new_window} y seleccione la región que no sea EE.UU. y la organización de la que proviene.
    
-   2. En la cabecera {{site.data.keyword.Bluemix_notm}}, cambie a la región EE.UU. Sur. Se le solicitará que cree un espacio en dicha región.
+   2. En la cabecera {{site.data.keyword.Bluemix_notm}}, cambie a la región EE.UU. sur. Se le solicitará que cree un espacio en dicha región.
    
-   3. Cree un espacio en a región EE.UU. Sur para expandir su organización a esa región. 
+   3. Cree un espacio en a región EE.UU. sur para expandir su organización a esa región. 
    
    4. Suprima la cadena de herramientas que se ha creado mediante el proceso de actualización. 
    

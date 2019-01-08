@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-17"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-17"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}   
 
 # Configuración de la integración de herramientas
@@ -24,27 +26,27 @@ Las integraciones de herramientas que están disponibles para añadirse y config
 
 |Integración de herramientas |Disponible en {{site.data.keyword.Bluemix_notm}} Público	|Disponible en {{site.data.keyword.Bluemix_notm}} Dedicado (dependiente del entorno)|
 |:----------|:------------------------------|:------------------|
-|{{site.data.keyword.alertnotificationshort}}		|EE.UU. Sur		|No		|
-|Artifactory		|EE.UU. Sur, Alemania, Reino Unido		|Yes		|
-|Supervisión de disponibilidad		|EE.UU. Sur		|No		|
-|Bitbucket		|EE.UU. Sur, Alemania, Reino Unido		|No		|
-|Gestión de sucesos de nube		|EE.UU. Sur		|No		|
-|{{site.data.keyword.deliverypipeline}} 		|EE.UU. Sur, Alemania, Reino Unido	   	|Yes  		|
-|{{site.data.keyword.DRA_short}} 		|EE.UU. Sur		|No			|
-|Eclipse Orion {{site.data.keyword.webide}}		|EE.UU. Sur, Alemania, Reino Unido		|Yes			|
-|{{site.data.keyword.gitrepos}}	|EE.UU. Sur, Alemania, Reino Unido		|No		|
-|GitHub		|EE.UU. Sur, Alemania, Reino Unido		|Yes		|
-|{{site.data.keyword.ghe_short}} dedicado y problemas			|No		|Yes		|
-|GitLab		|EE.UU. Sur, Alemania, Reino Unido		|No		|
-|Jenkins		|EE.UU. Sur, Alemania, Reino Unido		|Yes		|
-|JIRA		|EE.UU. Sur, Alemania, Reino Unido		|Yes		|
-|Nexus			|EE.UU. Sur, Alemania, Reino Unido		|Yes		|
-|Otras herramientas			|EE.UU. Sur, Alemania, Reino Unido		|Yes		|
-|PagerDuty			|EE.UU. Sur, Alemania, Reino Unido		|Yes		|
-|Rational Team Concert			|EE.UU. Sur, Alemania, Reino Unido		|Yes		|
-|Sauce Labs		|EE.UU. Sur, Alemania, Reino Unido		|No		|
-|Slack			|EE.UU. Sur, Alemania, Reino Unido		|Yes		|
-|SonarQube			|EE.UU. Sur, Alemania, Reino Unido		|Yes		|
+|{{site.data.keyword.alertnotificationshort}}		|EE.UU. sur		|No		|
+|Artifactory		|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|Sí		|
+|Supervisión de disponibilidad		|EE.UU. sur		|No		|
+|Bitbucket		|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|No		|
+|Gestión de sucesos de nube		|EE.UU. sur		|No		|
+|{{site.data.keyword.deliverypipeline}} 		|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido	   	|Sí  		|
+|{{site.data.keyword.DRA_short}} 		|EE.UU. sur, Alemania, Reino Unido		|No			|
+|Eclipse Orion {{site.data.keyword.webide}}		|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|Sí			|
+|{{site.data.keyword.gitrepos}}	|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|No		|
+|GitHub		|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|Sí		|
+|{{site.data.keyword.ghe_short}} dedicado e Issues			|No		|Sí		|
+|GitLab		|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|No		|
+|Jenkins		|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|Sí		|
+|JIRA		|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|Sí		|
+|Nexus			|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|Sí		|
+|Otras herramientas			|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|Sí		|
+|PagerDuty			|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|Sí		|
+|Rational Team Concert			|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|Sí		|
+|Sauce Labs		|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|No		|
+|Slack			|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|Sí		|
+|SonarQube			|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|Sí		|
 {: caption="Tabla 1. Integraciones de herramientas disponibles para cadenas de herramientas en {{site.data.keyword.Bluemix_notm}} público y dedicado" caption-side="top"}
 
 Si desea empezar a desarrollar su propio código en {{site.data.keyword.Bluemix_notm}} Público, configure la integración de herramientas GitHub o la integración de herramientas {{site.data.keyword.gitrepos}} antes de configurar el {{site.data.keyword.deliverypipeline}}. Si desea empezar a desarrollar su propio código en {{site.data.keyword.Bluemix_notm}} Dedicado, configure la integración de herramientas {{site.data.keyword.ghe_short}} o la integración de herramientas GitHub antes de configurar el {{site.data.keyword.deliverypipeline}}.
@@ -140,7 +142,7 @@ Configure el gestor de repositorios Artifactory para que guarde los artefactos d
 ### Configuración de un trabajo de compilación de npm de Artifactory en el conducto
 {: #config_artifactory_npm}
 
-Antes de configurar un trabajo de compilación de npm en el conducto, necesita un conducto en funcionamiento que pueda utilizar para crear el repositorio SCM como entrada y debe configurar Artifactory Labs para su cadena de herramientas. Para obtener instrucciones sobre cómo configurar Artifactory, consulte la sección [Artifactory](#artifactory).
+Antes de configurar un trabajo de compilación de npm en el conducto, debe disponer de un conducto en funcionamiento que pueda utilizar para crear el repositorio SCM como entrada. También debe configurar Artifactory para la cadena de herramientas. Para obtener instrucciones sobre cómo configurar Artifactory, consulte la sección [Artifactory](#artifactory).
 
 Configure el {{site.data.keyword.deliverypipeline}} para añadir un trabajo de compilación de npm:
 
@@ -343,7 +345,7 @@ Configure {{site.data.keyword.deliverypipeline}} para automatizar la creación, 
 ### Configuración de un trabajo de pruebas Sauce Labs en el conducto
 {: #config_saucelabs}
 
-Antes de configurar un trabajo de pruebas Sauce Labs en el conducto, necesita un conducto de trabajo que incluya fases para crear y desplegar la app, y debe configurar Sauce Labs para su cadena de herramientas. Para obtener instrucciones sobre cómo configurar Sauce Labs, consulte la sección [Sauce Labs](#saucelabs).
+Antes de configurar un trabajo de pruebas Sauce Labs en el conducto, necesita un conducto de trabajo que incluya fases para crear y desplegar la app. También debe configurar Sauce Labs para la cadena de herramientas. Para obtener instrucciones sobre cómo configurar Sauce Labs, consulte la sección [Sauce Labs](#saucelabs).
 
 Configure el {{site.data.keyword.deliverypipeline}} para añadir un trabajo de pruebas Sauce Labs:
 
@@ -357,8 +359,10 @@ Configure el {{site.data.keyword.deliverypipeline}} para añadir un trabajo de p
   {: tip}
 
 1. Configure el trabajo de despliegue. En el campo **Desplegar script**, incluya este mandato: `export CF_APP_NAME="$CF_APP"`. Este mandato exporta el nombre de la app como propiedad del entorno.
-1. Configure el trabajo de prueba. Los valores de la imagen siguiente son ejemplos. Los campos **Instancia de servicio**, **Destino**, **Organización** y **Espacio** se rellenan con el nombre de usuario de Sauce Labs, la región, la organización y el espacio que se está utilizando.  
-![Trabajo de configuración](images/toolchain_configure_job.png)
+1. Configure el trabajo de prueba. 
+
+  Los campos **Instancia de servicio**, **Destino**, **Organización** y **Espacio** se rellenan con el nombre de usuario de Sauce Labs, la región, la organización y el espacio que se está utilizando.
+  {: tip}
 
   a. Para el tipo de probador, seleccione **Sauce Labs**.
 
@@ -386,7 +390,7 @@ Para obtener más información sobre {{site.data.keyword.deliverypipeline}}, con
   * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
 
-## Adición de DevOps Insights (Beta)
+## Adición de DevOps Insights
 {: #dra}
 
 {{site.data.keyword.DRA_full}} recopila y analiza los resultados de las pruebas de unidad, de las pruebas funcionales y de las herramientas de cobertura de código para determinar si el código cumple los criterios predefinidos en las puertas especificadas del proceso de despliegue. Si el código no cumple o excede los criterios, el despliegue se detiene para evitar la exposición a riesgos. Puede utilizar {{site.data.keyword.DRA_short}} como red de seguridad para el entorno de entrega continuada o como método para implementar y mejorar los estándares de calidad.
@@ -439,7 +443,8 @@ Para completar las tareas de control del código fuente, añada la integración 
 
 ### Más información sobre el Eclipse Orion Web IDE
 
-Para obtener más información sobre Eclipse Orion {{site.data.keyword.webide}}, consulte [Edición de código con Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} y el [artículo de Eclipse Orion {{site.data.keyword.webide}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} en el IBM Cloud Garage Method o realice estas guías de aprendizaje:
+Para obtener más información sobre Eclipse Orion {{site.data.keyword.webide}}, consulte el artículo [Edición de código con Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window. You can also read the [Eclipse Orion {{site.data.keyword.webide} en IBM Cloud Garage Method. Realice estas guías de aprendizaje para probar el uso de Eclipse Orion {{site.data.keyword.webide}}:
+'>{: new_window. También puede leer el artículo [Eclipse Orion {{site.data.keyword.webide}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} en IBM Cloud Garage Method. Realice estas guías de aprendizaje para probar el uso de Eclipse Orion {{site.data.keyword.webide}}:
 
   * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
@@ -513,11 +518,11 @@ Puede configurar GitHub como una integración de herramientas de la cadena de he
 
 Si configura la integración de esta herramienta mientras crea la cadena de herramientas, siga estos pasos:
 
-1. Si está almacenando el código fuente en un repositorio GitHub, en la sección Integraciones configurables, pulse **GitHub**. Si está configurando esta integración de herramientas en {{site.data.keyword.Bluemix_notm}} Público y no ha autorizado a {{site.data.keyword.Bluemix_notm}} para que acceda a GitHub, pulse **Autorizar** para ir al sitio web de GitHub. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub. Si tiene una sesión activa de GitHub pero no ha introducido recientemente su contraseña, es posible que se le solicite que introduzca la contraseña de GitHub para confirmarla.
+1. Si está almacenando el código fuente en un repositorio GitHub, en la sección Integraciones configurables, pulse **GitHub**. Si está configurando esta integración de herramientas en {{site.data.keyword.Bluemix_notm}} Público y no ha autorizado a {{site.data.keyword.Bluemix_notm}} para que acceda a GitHub, pulse **Autorizar** para ir al sitio web de GitHub. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub. Si tiene una sesión de GitHub activa pero no ha especificado la contraseña recientemente, es posible que se le solicite que especifique su contraseña de GitHub para confirmar.
 1. Si está utilizando un repositorio en su propio servidor de {{site.data.keyword.ghe_short}}, en la sección Integraciones configurables, pulse **Añadir servidor personalizado**.
 
  La red debe poder acceder al servidor Git de destino desde un entorno de {{site.data.keyword.Bluemix_notm}} dedicado. Si el servidor de GitHub no está disponible en Internet público o el nombre de host no se resuelve en el Servidor de nombres de dominio (DNS) público, [abra una incidencia de soporte](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. Puede utilizar la incidencia de soporte para enviar una solicitud para abrir las rutas de red o actualizar los valores de DNS.
- {: tip}
+ {: important}
 
  Escriba un título para el servidor de GitHub personalizado y especifique el URL raíz para el servidor. Escriba su señal de acceso personal y pulse **Guardar integración personalizada**.
 
@@ -584,7 +589,7 @@ Para obtener más información acerca de GitHub, consulte el [artículo de GitHu
 {: #configghe}
 
  Estas instrucciones se aplican a {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.ghe_short}}. Si utiliza su propia versión gestionada de {{site.data.keyword.ghe_short}}, algunos pasos pueden diferir en función de sus procedimientos internos.
- {: tip}
+ {: important}
 
 {{site.data.keyword.ghe_long}} es un servicio de alojamiento basado en web para repositorios Git. {{site.data.keyword.ghe_short}} dedicado es únicamente para clientes de {{site.data.keyword.Bluemix_notm}} dedicado. GitHub Issues es una herramienta de seguimiento que mantiene todo su trabajo y sus planificaciones en un mismo lugar. Está integrado con el repositorio de desarrollo de modo que pueda centrarse en las tareas importantes. Para obtener más información sobre {{site.data.keyword.ghe_short}} dedicado y GitHub Issues, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} y el [artículo GitHub Issues ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} en IBM Cloud Garage Method.
 
@@ -700,7 +705,7 @@ Para obtener más información sobre GitLab, consulte el [artículo de GitLab ![
 Jenkins es una herramienta de código abierto basada en la web que compila y prueba software continuamente, dando soporte a prácticas de integración continua y de entrega continua.
 
 Antes de crear una integración de herramientas Jenkins, debe tener un servidor Jenkins.
-{: tip}
+{: important}
 
 Con la integración de herramientas Jenkins, puede enviar notificaciones de trabajos Jenkins a otras herramientas de la cadena de herramientas, como por ejemplo Slack y PagerDuty. Para realizar un seguimiento del código en los despliegues, puede añadir mensajes de despliegue a sus confirmaciones Git y a los problemas de Git o JIRA relacionados. También puede ver los despliegues en la página Conexiones de cadena de herramientas. Puede enviar los resultados de las pruebas a {{site.data.keyword.DRA_short}}, añadir objetivos de calidad automatizados y realizar un seguimiento del riesgo del despliegue.
 
@@ -850,7 +855,7 @@ Configure {{site.data.keyword.deliverypipeline}} para añadir un trabajo de comp
      ```
   **Consejo:** encontrará el URL y las credenciales de usuario que ha utilizado para conectar con el registro en los valores de configuración correspondientes a la integración de herramientas de Nexus.
 
-  e. Si el trabajo de compilación publica en el registro de Nexus y el formato de su versión del módulo de nodo es `x.y.z-SNAPSHOT.w`, marque el recuadro de selección **Incrementar versión del módulo de instantánea**. El trabajo de compilación actualiza automáticamente la versión del módulo antes de que publique en el registro de Nexus. El trabajo de compilación selecciona la versión más alta del módulo a partir del registro de npm y el archivo `package.json` local e incrementa la versión del módulo utilizando semver. El trabajo de compilación no envía los cambios al repositorio SCM.
+  e. Si el trabajo de compilación se publica en el registro de Nexus y el formato de su versión del módulo de nodo es `x.y.z-SNAPSHOT.w`, marque el recuadro de selección **Incrementar versión del módulo de instantáneas**. El trabajo de compilación actualiza automáticamente la versión del módulo antes de que publique en el registro de Nexus. El trabajo de compilación selecciona la versión más alta del módulo a partir del registro de npm y el archivo `package.json` local e incrementa la versión del módulo utilizando semver. El trabajo de compilación no envía los cambios al repositorio SCM.
 
 1. Pulse **GUARDAR**. Siempre que se ejecute el conducto, este trabajo de compilación utilizará la información de configuración de la integración de herramientas de Nexus para conectar con el registro de npm.
 
@@ -904,7 +909,7 @@ Configure una herramienta personalizada para que funcione con otras herramientas
 1. Seleccione la fase del ciclo de vida que esté asociada de forma más cercana con la herramienta. Esta selección determina la categoría en la que se lista la herramienta en la página Visión general.
 1. Añada un URL de icono. El icono se muestra en la tarjeta de la integración de herramientas.
 1. Añada un URL de documentación.
-1. Especifique un nombre de instancia de la herramienta. Por ejemplo: My Team Tool.
+1. Especifique un nombre de instancia de la herramienta. Por ejemplo, My Team Tool.
 1. Añada un URL de instancia de herramienta. Este URL se abre siempre que se pulsa en la tarjeta de la integración de herramientas.
 1. Añada una descripción de la herramienta.
 1. (Avanzado) Añada propiedades adicionales si es necesario. Por ejemplo, liste cualquier información o atributos necesarios para que la herramienta se integre con otras herramientas en la cadena de herramientas.  
@@ -920,7 +925,7 @@ Para obtener más información sobre la herramienta personalizada, consulte [Int
 ## Configuración de PagerDuty
 {: #pagerduty}
 
-PagerDuty integra datos de varios sistemas de supervisión en una única vista. Cuando se produce un problema, PagerDuty se asegura de que el miembro del equipo más adecuado para corregirlo reciba una notificación. Si el miembro del equipo no responde al problema, pueden configurarse sistemas de escalado para pasar el problema a ingenieros o gestores de operaciones secundarios.
+PagerDuty integra datos de varios sistemas de supervisión en una única vista. Cuando se produce un problema, PagerDuty se asegura de que el miembro del equipo más adecuado para corregirlo reciba una notificación. Si el miembro del equipo no responde al problema, pueden configurarse sistemas de escalado para pasar el problema a representantes o gestores de operaciones secundarios.
 
 Configure PagerDuty para enviar notificaciones cuando se producen errores en la fase de conducto para que pueda corregir los problemas con mayor celeridad y reducir el tiempo de inactividad:
 
@@ -1016,7 +1021,7 @@ Configure Sauce Labs para ejecutar pruebas funcionales automatizadas en varios s
 
  b. En la sección Integraciones de herramientas, pulse **Sauce Labs**.
 
-1. Escriba el nombre de usuario asociado con su cuenta de Sauce Labs. Puede [encontrar su nombre de usuario en la página de bienvenida en la parte superior de la página de la cuenta de Sauce Labs ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://saucelabs.com/account){: new_window}.
+1. Escriba el nombre de usuario asociado con su cuenta de Sauce Labs. Puede [encontrar su nombre de usuario en el mensaje de bienvenida en la página de la cuenta de Sauce Labs ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://saucelabs.com/account){: new_window}.
 1. Escriba la clave de acceso para su cuenta de Sauce Labs. Puede [encontrar la clave en la página de la cuenta de Sauce Labs ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://saucelabs.com/account){: new_window}.
 1. Pulse **Crear integración**.
 1. Pulse **Sauce Labs** para ir a saucelabs.com y ver la actividad de pruebas de la cadena de herramientas.
@@ -1035,8 +1040,8 @@ Para obtener más información sobre Sauce Labs, consulte el [artículo de Sauce
 ## Configuración de Slack
 {: #slack}
 
-Las notificaciones que se publican en canales Slack públicos son visibles para todas las personas del equipo. Recuerde que es responsable de todo el contenido que publique.
-{: tip}
+Las notificaciones que se publican en canales Slack públicos son visibles para todas las personas del equipo. El usuario es responsable del contenido que publique.
+{: important}
 
 Slack es un sistema de notificaciones y mensajería en tiempo real y basado en la nube. Slack proporciona una función de chat permanente, que es una alternativa más interactiva que el correo electrónico para facilitar la colaboración del equipo. Puede comunicarse con su equipo en un canal dedicado o en un conjunto de canales directamente relacionados con su trabajo. Asimismo, puede compartir archivos e imágenes a través de los canales o a través de mensajes directos entre dos o más personas. Las comunicaciones en los mensajes directos y en los canales se conservan para poder realizar búsquedas.
 
@@ -1051,7 +1056,7 @@ Configure Slack para recibir notificaciones acerca de su cadena de herramientas 
 
 1. Escriba el URL del webhook de Slack, que genera Slack en forma de webhook de entrada. Necesita un URL de webhook de Slack para recibir notificaciones acerca de su cadena de herramientas desde las integraciones de herramientas. Para ver instrucciones sobre cómo crear o encontrar su webhook, consulte [Webhooks de entrada ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://api.slack.com/incoming-webhooks){: new_window}.
 
- Si ha estado utilizando una clave de API para el canal de Slack para recibir notificaciones acerca de la cadena de herramientas desde las integraciones de herramientas, debe actualizar la configuración para que utilice un webhook en su lugar.
+ Si utiliza una clave de API para el canal de Slack para recibir notificaciones acerca de la cadena de herramientas desde las integraciones de herramientas, debe actualizar la configuración para que utilice un webhook en su lugar.
  {: tip}
 
 1. Escriba el nombre del canal Slack al que desea enviar las notificaciones. El canal debe existir y debe estar activo en el equipo de Slack.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-15"
+lastupdated: "2018-12-7"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-15"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -27,8 +29,8 @@ El servicio {{site.data.keyword.contdelivery_short}} da soporte a los flujos de 
 
   Una cadena de herramientas es un conjunto integrado de herramientas que sirve para desarrollar, crear, desplegar, probar y gestionar aplicaciones para repetir estas operaciones de forma cíclica de forma que se fácil gestionarlas. Las cadenas de herramientas pueden incluir herramientas de código abierto, servicios {{site.data.keyword.Bluemix_notm}} como [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window} y herramientas de terceros como GitHub, PagerDuty o Slack. 
   
-  {{site.data.keyword.DRA_short}} solo está disponible en la región sur de Estados Unidos.
-  {: tip}
+  {{site.data.keyword.DRA_short}} está disponible en las regiones EE.UU. sur, Reino Unido y Alemania.
+  {: important}
 
  * Entrega continua mediante [conductos](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window} automatizados.
 

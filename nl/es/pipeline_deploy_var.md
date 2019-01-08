@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-10-9"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -21,20 +21,6 @@ lastupdated: "2018-8-2"
 
 # Propiedades y recursos del entorno
 {: #deliverypipeline_environment}
-
-Puede utilizar propiedades de entorno y recursos preinstalados para que interactúen con la capacidad de conducto de {{site.data.keyword.contdelivery_full}}. Por ejemplo, puede incorporarlos a un script de trabajo o a un mandato de prueba.
-{:shortdesc}
-
-Puede añadir sus propias propiedades de entorno a una etapa desde su separador **PROPIEDADES DE ENTORNO**. Las propiedades de entorno están disponibles para todos los trabajos en una etapa.
-
-Puede añadir cuatro tipos de propiedades desde el separador Propiedades de entorno:
-* **Texto**: Una clave de propiedad con un valor de línea única.
-* **Área de texto**: Una clave de propiedad con un valor de varias líneas.
-* **Seguro**: Una clave de propiedad con un valor de línea única. El valor se visualiza como asteriscos.
-* **Propiedades**: Un archivo del repositorio del proyecto. Este archivo puede contener varias propiedades. Cada propiedad debe estar en su propia línea. Para pares de clave-valor independientes, utilice el signo igual (=). Encierre todos los valores de serie entre comillas. Por ejemplo, MY_STRING="SOME STRING VALUE".
-
-Puede examinar las propiedades del entorno para un trabajo de conducto ejecutando el mandato `env` en el script del trabajo.
-{:tip}
 
 Las siguientes propiedades y recursos están disponibles de forma predeterminada en los entornos de conducto.
 
@@ -74,6 +60,7 @@ Las siguientes propiedades y recursos están disponibles de forma predeterminada
 | PIPELINE_STAGE_INPUT_JOB_ID | El ID del trabajo que se introduce para la etapa actual. |
 | PIPELINE_STAGE_INPUT_REV | La revisión de la entrada para la etapa actual. |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | El ID exclusivo para la ejecución del conducto. |
+| PIPELINE_TRIGGERING_USER | El usuario actual para el trabajo de conductos|
 | TASK_ID | El ID exclusivo de la ejecución actual del trabajo. |
 | TMPDIR | Una ubicación de directorio donde se almacenan los archivos temporales. |
 | WORKSPACE | La vía de acceso para el directorio de trabajo actual. |
@@ -91,7 +78,7 @@ Las siguientes propiedades y recursos están disponibles de forma predeterminada
 | MAVEN_HOME | La vía de acceso para Apache Maven 3.2.1. |
 | NODE_HOME | La vía de acceso para Node.js 0.10.29. |
 
-Puede utilizar la versión 1.10+ de Apache Ant en los scripts de la interconexión estableciendo `ANT_HOME` en `$ANT_JAVA8_HOME` y `JAVA_HOME` en `$JAVA8_HOME`.
+Para utilizar Apache Ant 1.10+ en los scripts de la interconexión, establezca `ANT_HOME` en `$ANT_JAVA8_HOME` y `JAVA_HOME` en `$JAVA8_HOME`.
 {: tip}
 
 ### Propiedades de despliegue
@@ -129,7 +116,7 @@ Todos los enlaces están en el directorio de inicio.
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
 
-Las versiones de 64 bits de IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2 y 6.7.0 están disponibles en el entorno de conducto. Para elegir una versión, utilice el mandato export.
+El entorno de interconexión ofrece versiones de 64 bits de IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2 y 6.7.0. Para elegir una versión, utilice el mandato export.
 
 Por ejemplo, para utilizar Node 0.12.7, especifique este mandato:
 `export PATH=/opt/IBM/node-v0.12/bin:$PATH`

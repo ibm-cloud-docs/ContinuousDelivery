@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -37,7 +37,7 @@ Puede gestionar y trabajar con el código fuente en un GitHub, GitHub Enterprise
 Si prefiere utilizar SSH, puede reutilizar una clave única en todos los servidores de Git. Cree o localice la clave y configúrela en cada servidor como se describe en los enlaces anteriores. Si crea su clave con una contraseña, se le solicitará cuando utilice la clave.
 {: tip}
 
-2. Si va a utilizar la línea de mandatos de Git, haga lo siguiente:
+2. Si va a utilizar la línea de mandatos de Git, efectúe los pasos siguientes:
 
     a. Compruebe si Git está instalado. En una línea de mandatos, escriba `git version`. Si Git está instalado, se mostrará el número de versión y puede empezar.
 

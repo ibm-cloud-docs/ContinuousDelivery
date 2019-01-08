@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -17,10 +17,13 @@ lastupdated: "2018-8-2"
 # Desarrollo con Eclipse Orion Web IDE
 {: #web_ide}
 
-Eclipse Orion {{site.data.keyword.webide}} es un entorno de desarrollo basado en navegador donde puede desarrollar para la web en JavaScript, HTML y CSS con la ayuda de asistencia de contenido, finalización del código y comprobación de errores. {{site.data.keyword.webide}} funciona con casi cualquier lenguaje y ofrece resaltado de la sintaxis para la mayoría de los tipos de archivos. El control de origen está integrado y puede desplegar código de forma local para probar y depurar las apps.
+Eclipse Orion {{site.data.keyword.webide}} es un entorno de desarrollo basado en navegador donde puede desarrollar para la web en JavaScript, HTML y CSS con la ayuda de asistencia de contenido, finalización del código y comprobación de errores. {{site.data.keyword.webide}} funciona con casi cualquier idioma y puede resaltar la sintaxis de la mayoría de los tipos de archivo. El control de origen está integrado y puede desplegar código de forma local para probar y depurar las apps.
 {:shortdesc}
 
 Lo mejor de todo es que {{site.data.keyword.webide}} está basado en la web. No tiene que instalar, mantener ni escalar nada. Puede desarrollar en cualquier lugar donde tenga conexión a Internet.
+
+No almacene datos regulados en archivos dentro de {{site.data.keyword.webide}}. Actualmente, los procedimientos para los datos regulados no están en vigor.
+{: tip}
 
 ## Configuración del IDE
 {: #editorsetup}
@@ -83,17 +86,17 @@ Para ver una lista de los atajos de teclado en el editor, pulse **Herramientas**
 2. Una vez que se despliegue la app, puede utilizar la barra de ejecución para detener, reiniciar o depurar la app, ver registros, etc.
 
 <table role="presentation">
-<tr><td><img src="./images/stop_button.png"  alt="Icono detener"></td><td>Detiene la app</td></tr>
-<tr><td> <img src="./images/open_app_url.png"  alt="Icono abrir URL de app"></td><td> Abre la app desplegada</td></tr>
-<tr><td><img src="./images/view_logs.png"  alt="Icono ver registros"></td><td>Visualiza los registros de la app desplegada</td></tr>
-<tr><td><img src="./images/open_dashboard.png"  alt="Icono abrir panel de control"></td><td>Abre el panel de control de la app</td></tr>
+<tr><td><img src="./images/stop_button.png"  alt="Icono detener"></td><td>Detiene la app.</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="Icono abrir URL de app"></td><td> Abre la app desplegada.</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="Icono ver registros"></td><td>Visualiza los registros de la app desplegada.</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="Icono abrir panel de control"></td><td>Abre el panel de control de la app.</td></tr>
 </table>
 
 Si está desarrollando una app Node.js, habilite la modalidad de Edición en directo: <img  src="./images/enable_live_edit.png"  alt="Graduador para habilitar edición en directo">
 
-<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="Icono reiniciar edición en directo"></td><td>Con la modalidad de edición en directo, reinicia con rapidez la app, sin volver a desplegar</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="Icono reiniciar edición en directo"></td><td>Con la modalidad de edición en directo, reinicia con rapidez la app, sin volver a desplegar.</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="Icono depurar"></td>
-<td>Con la modalidad de edición en directo, accede al depurador
+<td>Con la modalidad de edición en directo, accede al depurador.
 </td></tr>
 </table>
 
@@ -162,7 +165,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 ## Lenguajes soportados
 {: #supported_languages}
 
-Eclipse Orion {{site.data.keyword.webide}} proporciona ayuda de contenido, ayudas contextuales, vistas previas, validación y resaltado de sintaxis para archivos JavaScript, HTML, CSS y Markdown. También se da soporte al resaltado de sintaxis para estos tipos de archivos:
+Eclipse Orion {{site.data.keyword.webide}} proporciona ayuda de contenido, ayudas contextuales, vistas previas, validación y resaltado de sintaxis para archivos JavaScript, HTML, CSS y Markdown. También puede resultar la sintaxis de estos tipos de archivos:
 
 <table role="presentation">
 <tr>

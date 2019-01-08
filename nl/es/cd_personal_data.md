@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Gestión de datos personales en Continuous Delivery
@@ -30,7 +32,7 @@ Los datos personales son cualquier información relacionada con una persona fís
  * [{{site.data.keyword.DRA_full}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
 IBM no gestiona los datos en el servicio de {{site.data.keyword.contdelivery_short}}. Antes de dejar el servicio de {{site.data.keyword.contdelivery_short}} que se aloja en {{site.data.keyword.Bluemix_notm}} Público, debe suprimir sus propios datos.
-{: tip}
+{: important}
 
 {{site.data.keyword.contdelivery_short}} proporciona los permisos adecuados para gestionar datos dentro de un grupo de recursos o una organización de Cloud Foundry. La empresa puede tener políticas que limitan estos permisos. Si no tiene los permisos adecuados, póngase en contacto con el administrador de la cuenta de {{site.data.keyword.Bluemix_notm}}.
 
@@ -99,7 +101,7 @@ Si desea suprimir todos los datos personales de {{site.data.keyword.contdelivery
 {{site.data.keyword.webide}} proporciona un espacio de trabajo personal en la nube. Puede utilizar {{site.data.keyword.webide}} para clonar repositorios Git y editar archivos. Usted es el propietario de su espacio de trabajo de {{site.data.keyword.webide}}; no se comparte con ninguna otra cuenta.
 
 Antes de suprimir los datos de {{site.data.keyword.webide}}, quizá desee exportar su trabajo. Después de suprimir los espacios de trabajo, se eliminan de {{site.data.keyword.contdelivery_short}} y todos los archivos se suprimen.
-{: tip}
+{: important}
 
 ###Exportación de un espacio de trabajo de Web IDE
 
@@ -118,7 +120,7 @@ Para suprimir sus espacios de trabajo de {{site.data.keyword.webide}}, incluidos
 1. Pulse **Suprimir** para eliminar todos los datos de {{site.data.keyword.webide}}.
 
 {{site.data.keyword.webide}} utiliza un mecanismo de inicio de sesión único. La primera vez que accede a esta integración de herramientas, se crea una cuenta de {{site.data.keyword.webide}} correspondiente, pero oculta, de la cuenta de IBM Cloud. Después de suprimir todos los espacios de trabajo, no acceda a {{site.data.keyword.webide}}. Si accede a {{site.data.keyword.webide}} de nuevo, se crea automáticamente una nueva cuenta que debe suprimir.
-{: tip}
+{: important}
 
 ## Modificación, exportación y supresión de datos de Git Repos and Issue Tracking
 {: #managing_grit_data}
@@ -158,7 +160,7 @@ Cuando se suprime la cuenta, algunos contenidos se mantienen. Este contenido se 
 {: tip}
 
 {{site.data.keyword.gitrepos}} utiliza un mecanismo de inicio de sesión único que crea automáticamente una cuenta de Git correspondiente a la cuenta de IBM Cloud la primera vez que accede a la integración de herramientas. Después de suprimir la cuenta, no acceda a {{site.data.keyword.gitrepos}}. Si accede a {{site.data.keyword.gitrepos}} de nuevo, se crea automáticamente una nueva cuenta que debe suprimir.
-{: tip}
+{: important}
 
 ## Modificación, exportación y supresión de los datos de interconexión de Continuous Delivery
 {: #managing_pipeline_data}
@@ -168,7 +170,7 @@ Los conductos de {{site.data.keyword.contdelivery_short}} ejecutan scripts para 
 Coordínese con los demás miembros del equipo antes de suprimir conductos u objetos compartidos. Suprimir una etapa puede provocar que falle un conducto.
 
 No puede existir una interconexión fuera de una cadena de herramientas. Si suprime una cadena de herramientas, todos los conductos que están asociados con la cadena de herramientas también se suprimen. Si tiene previsto suprimir una cadena de herramientas completa, no es necesario suprimir individualmente cada conducto. En su lugar, vaya a la sección "Modificación y supresión de cadenas de herramientas e integraciones de herramientas" y siga los pasos para suprimir una cadena de herramientas.
-{: tip}
+{: important}
 
 Las etapas de interconexión pueden incluir datos personales, como credenciales, en forma de propiedades de entorno, y una definición de interconexión que muestra el estado actual de la interconexión. Las etapas también pueden incluir scripts dentro de los trabajos que desee modificar o suprimir, así como artefactos y registros para las ejecuciones de interconexión más recientes que desea exportar. Utilice las acciones Configurar etapa o Suprimir etapa para modificar o suprimir una etapa. Utilice la acción Descargar para exportar artefactos o registros desde una etapa.
 

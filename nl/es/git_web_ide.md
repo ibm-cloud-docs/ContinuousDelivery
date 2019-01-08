@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Cómo trabajar con Git en Eclipse Orion Web IDE
@@ -91,7 +93,7 @@ Independientemente de dónde escriba el código, puede utilizar esta consulta r�
 Sustituya el contenido de una rama remota referenciada por el contenido de la rama local activa.
 
 Cuando fuerza la transmisión de una rama local a una remota, es posible que pierda confirmaciones en la rama remota.
-{: tip}
+{: important}
 
 ### Eclipse Orion Web IDE
 {: #force_push_web}
@@ -221,7 +223,7 @@ Cuando fuerza la transmisión de una rama local a una remota, es posible que pie
 {: #modify_last_commit}
 
   Si modifica la última confirmación después de enviarla a un repositorio remoto, vuelve a escribir en el historial de confirmaciones. Este cambio puede ocasionar errores de confirmación y otros problemas para otros colaboradores en el proyecto. Asegúrese de saber lo que hace antes de modificar una confirmación que ha enviado a un repositorio remoto.
-  {: tip}
+  {: important}
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}

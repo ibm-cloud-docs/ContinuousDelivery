@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -28,7 +28,7 @@ El acceso a las cadenas de herramientas de los grupos de recursos para los usuar
 
 A cada usuario que acceda a las cadenas de herramientas de su cuenta se le debe asignar una política de acceso con un rol de usuario IAM definido. Esta política determina qué acciones puede realizar el usuario dentro del contexto del servicio o instancia que seleccione. Las acciones permitidas se personalizan y definen mediante el servicio {{site.data.keyword.Bluemix_notm}} como operaciones que se permiten que se realicen en el servicio. A continuación, las acciones se correlacionan con los roles de usuario de IAM.
 
-Las políticas permiten otorgar el acceso en distintos niveles. Algunas de las opciones son las siguientes: 
+Las políticas permiten otorgar acceso en distintos niveles, incluidos: 
 
 * Acceso en todas las instancias del servicio en su cuenta
 * Acceso a una instancia de servicio individual en su cuenta

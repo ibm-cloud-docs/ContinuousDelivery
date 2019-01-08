@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -48,7 +48,7 @@ Mientras una aplicación Node.js está en la modalidad de edición en directo pu
 ##Edición en directo
 {: #live-edit}
 
-Si está creando una aplicación Node.js que se ejecuta en {{site.data.keyword.Bluemix_notm}}, la característica Edición en directo de {{site.data.keyword.Bluemix_notm}} Live Sync puede actualizar rápidamente la instancia de aplicación. La característica Edición en directo solo está disponible en Web IDE. La edición en directo le permite desarrollar como lo haría en el escritorio sin tener que volver a desplegar.
+Si está creando una aplicación Node.js que se ejecuta en {{site.data.keyword.Bluemix_notm}}, la característica Edición en directo de {{site.data.keyword.Bluemix_notm}} Live Sync puede actualizar rápidamente la instancia de aplicación. La característica Edición en directo solo está disponible en Web IDE. Puede utilizar Edición en directo para desarrollar como lo haría en el escritorio sin tener que volver a desplegar.
 
 La característica Edición en directo solo se admite en las aplicaciones Node.js.
 
@@ -56,7 +56,7 @@ En Eclipse Orion Web IDE (Web IDE), en la barra de ejecución, pulse **Edición 
 
 ![Imagen de la barra de Ejecución con la edición en directo](images/bluemix-live-sync-light.png)
 
-Edición en directo le permite obtener una vista previa rápida de los cambios en las aplicaciones Node.js que se ejecutan en {{site.data.keyword.Bluemix_notm}}. Al actualizar
+Utilice Edición en directo para obtener una vista previa rápida de los cambios en las aplicaciones Node.js que se ejecutan en {{site.data.keyword.Bluemix_notm}}. Al actualizar
 el código con la característica Edición en directo activada, puede renovar la ventana del navegador de su aplicación web
 para ver dichos cambios reflejados pocos segundos después de efectuarlos.
 
@@ -96,9 +96,6 @@ Mientras esté desarrollando la app, puede elegir entre las siguientes acciones:
 * Suspender la app antes de que se ejecute ningún código de la app
 
 Después de iniciar la sesión, se abrirá la página {{site.data.keyword.Bluemix_notm}} Live Debug.
-
-![IU de Debug](images/live_sync_debug.png)
-
 
 ### Debug {: #debug}
 
@@ -157,4 +154,4 @@ El depurador puede tardar aproximadamente un minuto en inicializarse.
 
 ### Para obtener más información
 
-* Consulte [Herramientas de Eclipse para {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
+* Consulte [Herramientas de Eclipse para {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

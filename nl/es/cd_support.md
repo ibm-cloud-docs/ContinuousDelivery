@@ -2,20 +2,23 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-12-6"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:codeblock:.codeblock}
 
 
 # Obtener ayuda y soporte para {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-El equipo de {{site.data.keyword.contdelivery_full}} supervisa activamente el foro developerWorks para ver si hay preguntas sobre las cadenas de herramientas y el servicio de {{site.data.keyword.contdelivery_short}}. Para formular una pregunta en el foro, pulse el botón **Obtener ayuda en el foro** ![botón **Obtener ayuda en el foro**](images/get_help_in_the_forum.png) en la parte inferior de las páginas de {{site.data.keyword.contdelivery_short}} y la cadena de herramientas.
+El equipo de {{site.data.keyword.contdelivery_full}} supervisa activamente el foro developerWorks para ver si hay preguntas sobre las cadenas de herramientas y el servicio de {{site.data.keyword.contdelivery_short}}. Para formular una pregunta en el foro, en las páginas cadena de herramientas y {{site.data.keyword.contdelivery_short}}, pulse **Obtener ayuda en el foro** ![botón **Obtener ayuda en el foro**](images/get_help_in_the_forum.png).
 
 <table>
 <tr>
@@ -47,7 +50,7 @@ Si tiene un problema más serio o encuentra problemas con el servicio {{site.dat
 1. En el menú de la barra de menús, pulse **Soporte** y luego pulse **Añadir incidencia**.
 1. Rellene el formulario para indicar el tipo de soporte técnico que necesita.
 
-Para obtener información sobre cómo abrir una incidencia de soporte de IBM {{site.data.keyword.Bluemix_notm}}, o sobre los niveles de soporte y las gravedades de las incidencias, consulte [Cómo contactar con el servicio de soporte](https://console.bluemix.net/docs/support/index.html#contacting-support).
+Para obtener información sobre cómo abrir una incidencia de soporte de IBM {{site.data.keyword.Bluemix_notm}}, o sobre los niveles de soporte y las gravedades de las incidencias, consulte [Cómo contactar con el servicio de soporte](https://cloud.ibm.com/docs/support/index.html#contacting-support).
 
 
 ## Soporte para {{site.data.keyword.Bluemix_notm}}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-11"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -84,11 +84,9 @@ Puede añadir servicios a las apps y gestionar los servicios desde el panel de c
 
 Puede ver los registros para trabajos y ver etapas a medida que se ejecutan en la página Historial de etapas.
 
-Para ver el registro de un trabajo, pulse el trabajo. Como alternativa, en una etapa, pulse **Ver registros e historial**.
+1. Para ver el registro de un trabajo, pulse el trabajo. Como alternativa, en una etapa, pulse **Ver registros e historial**.
 
-Para ver el registro de tiempo de ejecución de una aplicación desplegada, pulse **Ver registro de tiempo de ejecución**.
-
-![Áreas de un icono de etapa que se pueden pulsar para abrir los registros relevantes](images/view_logs_and_history.png)
+2. Para ver el registro de tiempo de ejecución de una aplicación desplegada, pulse **Ver registro de tiempo de ejecución**.
 
 Además de los registros de trabajos, puede ver resultados de pruebas de unidades, artefactos generados y cambios de códigos para cualquier trabajo de compilación.
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Creación de cadenas de herramientas
@@ -29,9 +31,9 @@ Cada cadena de herramientas está asociada a un grupo de recursos u organizació
 ##Creación de una cadena de herramientas a partir de una plantilla   
 {: #creating_a_toolchain_from_a_template}
 
-Puede utilizar una plantilla como punto de partida para [crear una cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/create){: new_window} que incluya un conjunto específico de integraciones de herramientas. Obtenga más información sobre cómo utilizar las plantillas en el [Método IBM Cloud Garage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/category/tools){:new_window}.
+Puede utilizar una plantilla como punto de partida para [crear una cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/devops/create){: new_window} que incluya un conjunto específico de integraciones de herramientas. Obtenga más información sobre cómo utilizar las plantillas en el [Método IBM Cloud Garage ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/category/tools){:new_window}.
 
-1. Si utiliza {{site.data.keyword.Bluemix_notm}} público, inicie la sesión en [{{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://console.bluemix.net){:new_window}.
+1. Si utiliza {{site.data.keyword.Bluemix_notm}} público, inicie la sesión en [{{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://cloud.ibm.com){:new_window}.
 1. Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado, inicie la sesión en el entorno dedicado en {{site.data.keyword.Bluemix_notm}}.
 1. En el menú de la barra de menús de {{site.data.keyword.Bluemix_notm}}, pulse **DevOps**.
 1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse **Crear una cadena de herramientas**.
@@ -50,8 +52,8 @@ Puede utilizar una plantilla como punto de partida para [crear una cadena de her
  * La región en la que se va crear la cadena de herramientas. Si desea utilizar otra región, selecciónela en la lista de regiones disponibles.
  * El grupo de recursos u organización en la que crear la cadena de herramientas. Pulse el enlace para conmutar entre la selección de grupos de recursos y organizaciones. Si desea utilizar un grupo de recursos u organización distinto, selecciónelo desde la lista de grupos de recursos u organizaciones disponibles.
  
-   Los grupos de recursos solo están disponibles en la región sur de Estados Unidos.
-   {: tip}
+   Los grupos de recursos están disponibles en las regiones EE.UU. sur, EE.UU. este, Reino Unido, Alemania y Tokio. Las organizaciones de Cloud Foundry están soportadas en las regiones EE.UU. sur, EE.UU. este, Reino Unido y Alemania.
+   {: important}
 
 1. En la sección Integraciones de herramientas, seleccione las integraciones de herramientas que desee configurar para su cadena de herramientas. Algunas integraciones de herramientas no necesitan configuración. Para obtener información sobre cómo configurar las integraciones de herramientas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Pulse **Crear**. Para configurar la cadena de herramientas, se ejecutan varios pasos automáticamente. Las integraciones de herramientas que se configuran varían en función de la plantilla de cadena de herramientas que haya seleccionado y de si utiliza {{site.data.keyword.Bluemix_notm}} público o {{site.data.keyword.Bluemix_notm}} dedicado. Por ejemplo, si crea una cadena de herramientas de microservicios en {{site.data.keyword.Bluemix_notm}} público, se ejecutan estos pasos:
@@ -67,13 +69,16 @@ Puede utilizar una plantilla como punto de partida para [crear una cadena de her
 ##Creación de una cadena de herramientas desde una app
 {: #creating_a_toolchain_from_an_app}
 
-Puede crear una cadena de herramientas desde su app. La cadena de herramientas puede admitir tareas continuadas de desarrollo, despliegue, supervisión, etc., y está asociada con su app. Cada app puede asociarse a una cadena de herramientas. Cuando se envían los cambios al repositorio de GitHub o {{site.data.keyword.ghe_short}} de la cadena de herramientas, el conducto crea y despliega automáticamente la app.  
+Puede crear una cadena de herramientas desde su app. La cadena de herramientas puede admitir tareas continuadas de desarrollo, despliegue, supervisión, etc., y está asociada con su app. Cada app puede asociarse a una cadena de herramientas. Cuando se envían los cambios al repositorio de GitHub o {{site.data.keyword.ghe_short}} de la cadena de herramientas, el conducto crea y despliega automáticamente la app.
 
-1. En la página Visión general de la app, en la tarjeta de entrega continua, pulse **Habilitar**. Si utiliza {{site.data.keyword.Bluemix_notm}} público, la app se configura para una entrega continua desde un nuevo repositorio de GitHub que ya contiene el código de inicio de la app. Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado, la app se configura para una entrega continua desde un nuevo repositorio de GitHub o {{site.data.keyword.ghe_short}} que ya contiene el código de inicio de la app.
+Si ha creado la app utilizando su propio repositorio de código, pulse **Conectarse a la cadena de herramientas de DevOps** en la página de detalles de su app. A continuación, siga los pasos que se describen en [Creación de apps a partir de su propio repositorio de código](/docs/apps/tutorials/tutorial_byoc.html).
+{: note}
+
+1. Si ha creado la app utilizando un kit de iniciación, pulse **Desplegar en la nube** en la página de detalles de la app. Si utiliza {{site.data.keyword.Bluemix_notm}} público, la app se configura para una entrega continua desde un nuevo repositorio de GitHub que ya contiene el código de inicio de la app. Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado, la app se configura para una entrega continua desde un nuevo repositorio de GitHub o {{site.data.keyword.ghe_short}} que ya contiene el código de inicio de la app.
 1. En la página de creación de cadenas de herramientas, revise el diagrama de la cadena de herramientas que está a punto de crear. El diagrama muestra cada integración de herramientas en la fase del ciclo de vida correspondiente en la cadena de herramientas.
 1. Revise la información predeterminada para la configuración de la cadena de herramientas. El nombre de la cadena de herramientas la identifica en {{site.data.keyword.Bluemix_notm}}. Si desea utilizar otro nombre, cambie el nombre de la cadena de herramientas.
 1. En la sección Integraciones de herramientas, seleccione las integraciones de herramientas que desee configurar para su cadena de herramientas. Algunas integraciones de herramientas no necesitan configuración. Para obtener información sobre cómo configurar las integraciones de herramientas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
-1. Pulse **Crear**.  Para configurar la cadena de herramientas, se ejecutan varios pasos automáticamente. Las integraciones de herramientas que se configuran dependen de si utiliza cadenas de herramientas en {{site.data.keyword.Bluemix_notm}} Público o {{site.data.keyword.Bluemix_notm}} Dedicado. Por ejemplo, si crea una cadena de herramientas a partir de una app en {{site.data.keyword.Bluemix_notm}} público, se ejecutan estos pasos:
+1. Pulse **Crear**. Para configurar la cadena de herramientas, se ejecutan varios pasos automáticamente. Las integraciones de herramientas que se configuran dependen de si utiliza cadenas de herramientas en {{site.data.keyword.Bluemix_notm}} Público o {{site.data.keyword.Bluemix_notm}} Dedicado. Por ejemplo, si crea una cadena de herramientas a partir de una app en {{site.data.keyword.Bluemix_notm}} público, se ejecutan estos pasos:
 
  * Se crea la cadena de herramientas.
  * Si ha configurado Delivery Pipeline, los conductos se crean y se activan.
@@ -84,6 +89,9 @@ Puede crear una cadena de herramientas desde su app. La cadena de herramientas p
 {: #viewing_a_toolchain}
 
 Una vez que se ha configurado la cadena de herramientas y sus integraciones de herramientas, es posible obtener una representación visual de la cadena de herramientas.
+
+Puede visualizar una cadena de herramientas desde una app pulsando **Visualizar cadena de herramientas** desde la página de detalles de la app.
+{: tip}
 
 1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, seleccione un **GRUPO DE RECURSOS** u **ORGANIZACIÓN DE CLOUD FOUNDRY**. Se visualizan todas las cadenas de herramientas contenidas en el grupo de recursos seleccionado o en la organización de Cloud Foundry. Pulse la cadena de herramientas que desea ver para abrir su página Visión general. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.
 2. Para acceder a una integración de herramienta de su cadena de herramientas, pulse la herramienta.

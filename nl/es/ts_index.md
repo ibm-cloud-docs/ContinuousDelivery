@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-7-19"
+lastupdated: "2018-12-6"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -11,6 +11,14 @@ lastupdated: "2018-7-19"
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:faq: data-hd-content-type='faq'}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:download: .download}
 
 # Preguntas más frecuentes
 {: #ts_cd}
@@ -21,6 +29,7 @@ Aquí encontrará respuestas a preguntas más frecuentes sobre el uso de {{site.
 
 ## He intentado añadir la integración de herramientas de GitHub a la cadena de herramientas. ¿Por qué no se añade la integración de herramientas?
 {: #cannot_authorize_github}
+{: faq}
 
 Si {{site.data.keyword.Bluemix_notm}} no está autorizado para acceder a la cuenta de GitHub, la integración de herramientas no se añade a la cadena de herramientas.
 
@@ -40,6 +49,7 @@ Si ya tiene una cadena de herramientas, actualice la configuración de la integr
 
 ## He intentado crear una cadena de herramientas. ¿Por qué aparece un error?
 {: #cannot_create_toolchain}
+{: faq}
 
 Al intentar crear una cadena de herramientas en una organización, si aparece el siguiente mensaje de error, elimine una o varias cadenas de su organización y, a continuación, cree la cadena de herramientas de nuevo.
 
@@ -47,16 +57,22 @@ Al intentar crear una cadena de herramientas en una organización, si aparece el
 
 
 ## ¿Por qué la página Cadenas de herramientas muestra que se ha excedido el plan Lite del servicio de {{site.data.keyword.contdelivery_short}}?
+{: #plan_exceeded}
+{: faq}
 
 {{site.data.keyword.contdelivery_short}} ofrece dos planes: Lite y Professional. Si tiene el plan Lite de {{site.data.keyword.contdelivery_short}}, puede utilizar cadenas de herramientas de forma gratuita, hasta los límites del plan. El mensaje de error indica que ha sobrepasado uno o más límites del plan Lite. Por ejemplo, puede superar el plan si tiene demasiados usuarios autorizados que están asociados a la instancia de servicio de {{site.data.keyword.contdelivery_short}}, o si ha ejecutado el número máximo de trabajos de {{site.data.keyword.deliverypipeline}}. Para obtener más información sobre los términos del plan, consulte [Limitaciones y uso del plan](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
 
 
 ## He creado una cadena de herramientas, ¿por qué la página Cadenas de herramientas muestra que se necesita un servicio de Continuous Delivery?
+{: #service_required_resource_group}
+{: faq}
 
 Los términos del plan para la instancia de servicio de {{site.data.keyword.contdelivery_short}} que se encuentra en el mismo grupo de recursos u organización que la cadena de herramientas gestiona el uso de algunas de las integraciones de herramientas ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} y {{site.data.keyword.gitrepos}}) contenidas en el servicio. El mensaje de error indica que el grupo de recursos o la organización no contiene la instancia necesaria del servicio de {{site.data.keyword.contdelivery_short}}. Para obtener más información sobre los términos del plan, consulte [Limitaciones y uso del plan](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
 
 
 ## He creado una cadena de herramientas en una organización de Cloud Foundry, ¿por qué la página Cadenas de herramientas muestra que se necesita un servicio de Continuous Delivery?
+{: #service_required_cloud_foundry}
+{: faq}
 
 Cuando se crea una cadena de herramientas en un grupo de recursos u organización que no tiene una instancia del servicio de {{site.data.keyword.contdelivery_short}}, la plataforma de la cadena de herramientas intenta crear automáticamente una instancia del servicio utilizando el plan Lite. El mensaje de error indica que la plataforma de la cadena de herramientas no ha podido crear la instancia de servicio.
 
@@ -67,6 +83,7 @@ Puede crear la cadena de herramientas en un grupo de recursos o crear la cadena 
 
 ## He intentado desplegar una app en {{site.data.keyword.Bluemix_notm}}. ¿Por qué aparece un error?
 {: #org_outofmemory}
+{: faq}
 
 Al intentar desplegar una app en {{site.data.keyword.Bluemix_notm}}, si obtiene el siguiente mensaje de error, la cantidad de memoria que queda en la organización es menor que la cantidad de memoria que necesita la app que quiere desplegar.
 
@@ -98,6 +115,7 @@ Si utiliza la interfaz de la línea de mandatos cf, efectúe los pasos siguiente
 
 ## He creado una app. ¿Por qué no se muestran los iconos de {{site.data.keyword.Bluemix_notm}} Live Sync en la barra de ejecución de Eclipse Orion Web IDE?
 {: #ts_llz_lkb_3r}
+{: faq}
 
 ![Barra de ejecución](images/webide_runbar_light.png)   
 
@@ -114,20 +132,21 @@ Si el archivo `manifest.yml` no está almacenado en la raíz, almacénelo allí.
 
 ## He pulsado una cadena de herramientas para ver su página Visión general. ¿Por qué no se carga la cadena de herramientas?
 {: #toolchains_load}
+{: faq}
 
 Consulte la página Estado de {{site.data.keyword.Bluemix_notm}} para determinar si hay problemas conocidos que afecten a la plataforma {{site.data.keyword.Bluemix_notm}} y a los principales servicios en {{site.data.keyword.Bluemix_notm}}.
 
 Para ver la página Estado, seleccione una de las dos opciones siguientes:
 
   * Inicie la sesión en la consola de {{site.data.keyword.Bluemix_notm}}. En la barra de menús, pulse **Soporte** y seleccione **Estado**. Compruebe la lista de recursos en busca del icono ![algunos problemas](../../get-support/images/some_issues.svg). Este icono podría indicar una parada.
-  * Acceda directamente a [{{site.data.keyword.Bluemix_notm}} - Estado del sistema ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://console.bluemix.net/status){: new_window}.
+  * Acceda directamente a [{{site.data.keyword.Bluemix_notm}} - Estado del sistema ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://cloud.ibm.com/status){: new_window}.
 
-Para obtener más información sobre la página Estado de {{site.data.keyword.Bluemix_notm}}, consulte [
-Visualización del estado de {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/docs/get-support/ViewStatus.html#viewing-bluemix-status).
+Para obtener más información sobre la página Estado de {{site.data.keyword.Bluemix_notm}}, consulte [Visualización del estado de {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/docs/get-support/ViewStatus.html#viewing-bluemix-status).
 
 
 ## He configurado una integración de herramientas para mi cadena de herramientas. ¿Por qué no se ha configurado?
 {: #tool_integration_error}
+{: faq}
 
 Cuando añade una integración de herramientas, la cadena de herramientas se comunica con la herramienta representada mediante la integración de herramientas para suministrar los recursos necesarios y asociarlos con la cadena de herramientas. Si se produce un error durante el proceso de configuración o si la comunicación entre la cadena de herramientas y la herramienta no se establece correctamente, la integración de herramientas se coloca en un estado de error.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
-{:download: .download}
+{:note: .note}
+{:tip: .tip}
+{:important: .important}
 
 # Utilización de cadenas de herramientas
 {: #toolchains-using}
@@ -20,8 +22,8 @@ lastupdated: "2018-8-2"
 Las cadenas de herramientas abiertas están disponibles en los entornos Público y Dedicado en {{site.data.keyword.Bluemix}}. Puede utilizar una cadena de herramientas para que sea productiva en su trabajo diario de desarrollo, despliegue y operaciones. Una vez que se ha configurado una cadena de herramientas, es posible añadir, eliminar o configurar integraciones de herramientas y gestionar el acceso a la cadena de herramientas.
 {: shortdesc}
 
-Puede gestionar cadenas de herramientas en la región pública sur de Estados Unidos mediante grupos de recursos u organizaciones (orgs) de Cloud Foundry. El control de accesos y la gestión de usuarios autorizados funcionan de forma distinta para las cadenas de herramientas, en función de si están contenidas en un grupo de recursos o en una organización de Cloud Foundry.
-{: tip}
+Puede gestionar cadenas de herramientas en las regiones públicas EE.UU. sur, EE.UU. este, Reino Unido, Alemania y Tokio utilizando los grupos de recursos. Puede utilizar organizaciones de Cloud Foundry para gestionar cadenas de herramientas en las regiones públicas de EE.UU. sur, Reino Unido y Alemania. El control de accesos y la gestión de usuarios autorizados funcionan de forma distinta para las cadenas de herramientas, en función de si están contenidas en un grupo de recursos o en una organización de Cloud Foundry.
+{: important}
 
 ## Configuración de una integración de herramienta
 {: #configuring_a_tool_integration}
@@ -73,7 +75,7 @@ Puede utilizar el servicio de Identity and Access Management (IAM) para gestiona
 Solo los usuarios que forman parte de la lista de usuarios autorizados para la instancia seleccionada de {{site.data.keyword.contdelivery_short}} pueden utilizar las características de Delivery Pipeline, Eclipse Orion {{site.data.keyword.webide}} y {{site.data.keyword.gitrepos}} de las cadenas de herramientas de {{site.data.keyword.contdelivery_short}}. Puede gestionar la titularidad de usuario autorizado desde el separador Gestionar de la instancia seleccionada de {{site.data.keyword.contdelivery_short}}, dentro del grupo de recursos especificado.
 
 Para acceder a las características clave de {{site.data.keyword.contdelivery_short}} en una cadena de herramientas, como por ejemplo Delivery Pipeline, un usuario debe tener acceso a la cadena de herramientas en IAM, y el usuario también debe formar parte de la lista de Usuarios autorizados de la instancia de {{site.data.keyword.contdelivery_short}}.
-{: tip}
+{: important}
 
 La titularidad de usuario autorizado se aplica a todas las cadenas de herramientas contenidas en el mismo grupo de recursos que la instancia de {{site.data.keyword.contdelivery_short}}.
 {: tip}
@@ -85,7 +87,7 @@ La titularidad de usuario autorizado se aplica a todas las cadenas de herramient
 Puede otorgar a los usuarios acceso a una cadena de herramientas añadiéndolos a la organización con la que está asociada la cadena de herramientas y a la lista de control de accesos correspondiente a la cadena de herramientas. Cada cadena de herramientas está asociada con una organización específica y cualquier usuario que sea miembro de la organización se puede añadir a la lista de control de accesos correspondiente a las cadenas de herramientas asociadas. La organización en la que está trabajando actualmente se muestra en la barra de menús. Para acceder a un conjunto distinto de cadenas de herramientas, cambie a una organización distinta.
 
 Debe añadir usuarios a la organización de la cadena de herramientas en la región en la que se aloja la cadena de herramientas. Si la cadena de herramientas está configurada para desplegar apps en una región distinta, seguirá desplegando apps en dicha región.
-{: tip}
+{: important}
 
 Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.ghe_short}}, cuando añada usuarios a la organización y a los espacios de {{site.data.keyword.Bluemix_notm}}, los usuarios podrán iniciar una sesión en {{site.data.keyword.ghe_short}} con su ID y contraseña de {{site.data.keyword.Bluemix_notm}}. Cuando los usuarios inician sesión, se les crearán cuentas. Al añadir usuarios a la organización y a los espacios de {{site.data.keyword.Bluemix_notm}}, no se añadirán automáticamente al repositorio de {{site.data.keyword.ghe_short}}. Debe añadirlos alguien que tenga privilegios de administración para el repositorio. Para obtener más información, consulte [Utilización de GitHub Enterprise dedicado](/docs/services/ghededicated/index.html){: new_window}. Si utiliza su propia versión gestionada de {{site.data.keyword.ghe_short}}, siga los procedimientos internos.
 
@@ -103,15 +105,17 @@ Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.
 
 * Para otorgar acceso a un usuario que no es miembro de la organización de la cadena de herramientas, siga estos pasos:
 
-   a. En la barra de menús, pulse **Gestionar > Seguridad > Identidad y acceso**.
+   a. En la barra de menús, pulse **Gestionar > Acceso (IAM)**.
 
-   b. En la fila del usuario al que desea asignar acceso, seleccione el menú **Acciones** y pulse **Asignar acceso**.
+   b. Pulse **El acceso se inicia con el usuario**.
+   
+   c. En la fila del usuario al que desea asignar acceso, seleccione el menú **Acciones** y pulse **Asignar acceso**.
+   
+   d. Seleccione **Asignar acceso utilizando Cloud Foundry**.
 
-   c. Seleccione **Asignar acceso utilizando Cloud Foundry**.
+   e. Seleccione **Asignar organización**.
 
-   d. Seleccione **Asignar organización**.
-
-   e. Asigne el acceso de usuario:
+   f. Asigne el acceso de usuario:
 
      * Seleccione una organización a la que añadir el usuario.
 

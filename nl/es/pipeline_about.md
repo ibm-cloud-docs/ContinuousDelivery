@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -21,21 +23,25 @@ lastupdated: "2018-8-2"
 {:shortdesc}
 
 Los permisos para ver, modificar o ejecutar una interconexión se basan en el control de accesos de la cadena de herramientas que es propietaria de la interconexión. Para obtener más información sobre el control de accesos para las cadenas de herramientas, consulte [Gestión del acceso a cadenas de herramientas en grupos de recursos](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} y [Gestión del acceso a cadenas de herramientas en organizaciones de Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
-{: tip}
+{: important}
+
+Puede especificar los scripts para que se ejecute en muchos de los tipos de trabajo que proporciona el conducto, lo que le proporciona un control directo sobre lo que ejecuta el trabajo. Estos scripts se ejecutan en una imagen de Docker que contiene un número de herramientas de desarrollo estándar, incluidas las herramientas necesarias para interactuar con los tiempos de ejecución de {{site.data.keyword.Bluemix_notm}}. Para obtener más información sobre lo que contiene el Docker estándar, consulte [Recursos preinstalados](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}. Si el job requiere herramientas de desarrollo que no están disponibles en la imagen estándar o si necesita diferentes versiones de estas herramientas, puede utilizar una imagen personalizada. Para obtener más información sobre las imágenes personalizadas, consulte [Trabajar con imágenes de Docker personalizadas](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}.
+
+Cuando el conducto ejecuta scripts, las propiedades que describen el contexto en el que se ejecuta el trabajo se pasan al script utilizando variables de entorno. Por ejemplo, el URL del repo que es la entrada a la etapa, el nombre de la etapa y el trabajo que se está ejecutando, los parámetros especificados por el tipo de trabajo, etc. Para ver una lista de las variables de entorno disponibles, consulte [Recursos preinstalados](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}. 
+
+Puede definir propiedades tanto en el nivel de conducto como en el nivel de etapa. Las propiedades de conducto se comparten en todas las etapas y trabajos de un conducto. Las propiedades de la etapa son exclusivas de una determinada etapa y se comparten en todos los trabajos de dicha etapa. Para obtener más información sobre las propiedades, consulte [Propiedades de entorno (variables de entorno)](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties).
 
 ## Etapas
 {: #deliverypipeline_stages}
 
-Las etapas organizan la entrada y los trabajos a medida que se compila, se despliega y se prueba el código. Las etapas aceptan la entrada de repositorios de control de código fuente (repositorios SCM) o compilan trabajos (compilan artefactos) en otras etapas. Al crear la primera etapa, se establecerán los valores predeterminados en el separador **INPUT**.
+Las etapas organizan la entrada y los trabajos a medida que se compila, se despliega y se prueba el código. Las etapas aceptan la entrada de repositorios de control de origen (repositorios SCM) o compilan trabajos en otras etapas. Para repositorios SCM, la entrada es el contenido de una sucursal en concreto del repositorio; para los trabajos de compilación, la entrada son los artefactos producidos por el trabajo. Al crear la primera etapa, el separador **INPUT** contiene los valores predeterminados por defecto.
 
-La entrada de una etapa se pasa a los trabajos que contiene la etapa, y a cada trabajo se le da un contenedor limpio para ejecutarla.
-
-Los trabajos de una etapa no se pueden pasar artefactos entre sí. Puesto que no puede pasar artefactos entre trabajos, necesita una etapa de compilación independiente de la etapa de despliegue si la etapa de despliegue va a utilizar los artefactos de la etapa de compilación.
+Cuando se ejecuta una etapa, la entrada de la etapa se pasada a cada uno de los trabajos de la etapa. A cada trabajo se le proporciona un contenedor limpio en el que ejecutarse. Como resultado, los trabajos de una etapa no se pueden pasar artefactos entre sí. Para pasar artefactos entre trabajos, separe los trabajos en dos etapas y utilice la salida del trabajo en la primera etapa como entrada a la segunda etapa.
 {: tip}
 
-Puede definir propiedades del entorno de etapas que se pueden utilizar en todos los trabajos. Por ejemplo, podría definir una propiedad `TEST_URL` que pasa un único URL para desplegar y probar trabajos en una sola etapa. El trabajo de despliegue podría desplegarse en dicho URL, y el trabajo de prueba podría probar la app en ejecución en el URL.
+De forma similar a cómo puede definir las propiedades del conducto, también puede definir las propiedades de la etapa para su uso en todos los trabajos de una etapa determinada. Por ejemplo, podría definir una propiedad `TEST_URL` que pasa un URL a los trabajos de prueba y despliegue en una etapa. El trabajo de despliegue se despliega en dicho URL y el trabajo de prueba realiza una prueba de la app en ejecución en el URL. Las propiedades de etapa también se pasan a scripts de trabajo utilizando variables de entorno. Si se define la misma propiedad tanto en el nivel de conducto como en el nivel de etapa, se utiliza el valor de la propiedad de la etapa.
 
-De forma predeterminada en una etapa, las compilaciones y los despliegues se ejecutan automáticamente cada vez que se entreguen cambios a un repositorio SCM del proyecto. Las etapas y los trabajos se ejecutan en serie; permiten el control de flujo para el trabajo. Por ejemplo, puede situar una etapa de prueba antes de una etapa de despliegue. Si fallan las pruebas en la etapa de prueba, no se ejecutará la etapa de despliegue.
+De forma predeterminada en una etapa, las compilaciones y los despliegues se ejecutan automáticamente cada vez que se entreguen cambios a un repositorio SCM del proyecto. Las etapas y los trabajos se ejecutan en serie; permiten el control de flujo para el trabajo. Por ejemplo, puede situar una etapa de prueba antes de una etapa de despliegue. Si las pruebas de la etapa de pruebas fallan, la etapa de despliegue no se ejecuta.
 
 Puede que desee un control más estricto de una etapa específica. Si no desea que se ejecute una etapa cada vez que se produzca un cambio en su entrada, puede inhabilitar la prestación. En el separador **ENTRADA**, en la sección Desencadenante de etapa, pulse **Ejecutar trabajos sólo cuando esta etapa se ejecute manualmente**.
 
@@ -45,21 +51,27 @@ Puede que desee un control más estricto de una etapa específica. Si no desea q
 ### Etapa de compilación
 {: #build_stage}
 
-<!-- Need the Pipeline team to fill out what each builder does and possible add an example -->
-En la etapa de compilación se especifica un **Tipo de compilador** para indicar cómo compilar los artefactos.  Están disponibles los siguientes tipos de compilador:
+En la etapa de compilación se especifica un **Tipo de compilador** para indicar cómo compilar los artefactos.  
 
-1. **Simple**. Si utiliza el tipo de compilador **Simple**, el código no se compilará ni se creará; se empaquetará y quedará disponible para futuras etapas.
-2. **Ant**
-3. **Container Registry**
-4. **Gradle**
-5. **Gradle (Artifactory, Nexus o SonarQube)**
-6. **Grunt**
-7. **IBM Globalization Pipeline**
-8. **Maven**
-9. **Maven (Artifactory, Nexus o SonarQube)**
-10. **npm**
-11. **npm (Artifactory o Nexus)**
-12. **Shell Script**
+Muchos de los campos disponibles en trabajos de compilación son comunes en varios tipos de compilador.
+{: tip}
+
+Están disponibles los siguientes tipos de compilador:
+
+* **Simple** - Trabajos que utilizan el tipo de compilador **Simple** toman la entrada de la etapa actual y, sin modificarla, la archivan para su uso en etapas futuras. Normalmente, el tipo de compilador **Simple** solo es útil cuando la entrada de la etapa procede de un repositorio de SCM.
+* **Ant** - Utilice este tipo de compilador para utilizar archivos de Apache Ant para gestionar el trabajo de compilación.
+  * **Script de compilación** - Este tipo de compilador puede ser cualquier script de compilación válido. De forma predeterminada, el tipo de compilador se establece en 'ant'.
+  * **Directorio de trabajo** - Especifica el directorio en el que se ejecuta el script.
+  * **Directorio de archivado de compilación** - Especifica el directorio que contiene la salida del trabajo que se archivará para que la utilice una etapa posterior.
+  * **Habilitar informe de prueba** - Seleccione este recuadro de selección para especificar que el trabajo de compilación ejecuta pruebas que generan archivos de resultados en formato XML JUnit. Se visualiza un informe basado en los archivos de resultados en el separador Pruebas de la página Resultados del trabajo. Si ha fallado alguna prueba, el trabajo se marcará como fallido.
+  * **Habilitar informe de cobertura de código** - Seleccione este recuadro de selección para mostrar más campos que puede utilizar en el informe de cobertura de código. Puede especificar el ejecutor de cobertura (como la cobertura Istanbul, JaCoCo, ore), la ubicación del archivo de resultados de Cobertura y el directorio de resultados de Cobertura, con relación al directorio de trabajo.
+* **Container Registry**
+* **Gradle (Artifactory, Nexus o SonarQube)**
+* **Grunt**
+* **IBM Globalization Pipeline**
+* **Maven (Artifactory, Nexus o SonarQube)**
+* **npm (Artifactory o Nexus)**
+* **Shell Script**
 
 ### Fase de despliegue
 En la fase de despliegue se especifica la entrada de una etapa de compilación.  En los trabajos de la etapa de despliegue se especifica un **Tipo de desplegador**.  Están disponibles los siguientes tipos de desplegador:
@@ -129,22 +141,54 @@ Si sus pruebas generan archivos de resultados en formato XML JUnit, se mostrará
 ## Propiedades de entorno (Variables de entorno)
 {: #environment_properties}
 
-Puede incluir propiedades de entorno dentro de los mandatos shell de un trabajo. Las propiedades proporcionan acceso a información sobre el entorno de ejecución del trabajo. Para obtener más información, consulte [Propiedades y recursos del entorno para el servicio {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).  Las propiedades de entorno pueden pasarse entre trabajos en la misma etapa exportando las propiedades.  Para pasar propiedades entre etapas, cree un archivo `build.properties` en el repositorio en la etapa y luego ejecute `build.properties` en la siguiente etapa.  Por ejemplo, el trabajo de compilación podría incluir este mandato en el script de compilación:
+Un conjunto de propiedades de entorno predefinidas proporcionan acceso a información sobre el entorno de ejecución del trabajo. Para obtener una lista completa de propiedades de entorno predefinidas, consulte [Recursos y propiedades de entorno](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
 
-    `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
+También puede definir sus propias propiedades de entorno. Por ejemplo, puede definir una propiedad `API_KEY` que pase una clave API que se utiliza para que todos los scripts del conducto accedan a los recursos de {{site.data.keyword.Bluemix_notm}}.
 
-    Todos los trabajos empiezan ejecutando el archivo `build.properties`, si existe.
+Puede añadir los siguientes tipos de propiedades:
+
+* **Texto**: Una clave de propiedad con un valor de línea única.
+* **Área de texto**: Una clave de propiedad con un valor de varias líneas.
+* **Seguro**: Una clave de propiedad con un valor de línea única que esté protegido con cifrado AES-128. El valor se visualiza como asteriscos.
+* **Propiedades**: Un archivo del repositorio del proyecto. Este archivo puede contener varias propiedades. Cada propiedad debe estar en su propia línea. Para pares de clave-valor independientes, utilice el signo igual (=). Coloque todos los valores de serie entre comillas. Por ejemplo, `MY_STRING="SOME STRING VALUE"`.
+
+Puede examinar las propiedades del entorno para un trabajo de conducto ejecutando el mandato `env` en el script del trabajo.
+{:tip}
+
+### Propiedades de conducto
+Para definir las propiedades del conducto, desde el menú de desbordamiento de la página Conducto, seleccione **Configurar conducto**.
+
+![Menú de desbordamiento del conducto](images/OverflowMenu.png)
+
+En el separador **ENVIRONMENT PROPERTIES** en la página de configuración Conducto, establezca las propiedades del entorno a nivel de conducto.
+
+![Página de propiedades de conducto](images/PipelineProperties.png)
+
+### Propiedades de la etapa
+Para definir las propiedades de la etapa, abra la página de configuración Etapa y pulse el separador **ENVIRONMENT PROPERTIES**.
+
+![Página de propiedades de la etapa](images/StageProperties.png)
+
+También puede pasar propiedades de entorno entre trabajo en la misma etapa exportando las propiedades. Por ejemplo, puede incluir el mandato siguiente para utilizar la propiedad `$API_KEY` en otro trabajo de la etapa: `export API_KEY=<insert API key here>`
+{:tip}
+
+### Propiedades calculadas
+Puede calcular los valores de propiedad de entorno que se comparten entre etapas creado un archivo `build.properties` mientras se ejecuta la etapa y, a continuación, hacer que la etapa siguiente ejecute el archivo. Por ejemplo, el trabajo de compilación podría incluir el mandato siguiente en el script de compilación:
+
+  `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
+
+Todos los trabajos empiezan ejecutando el archivo `build.properties`, si existe.
 
 ## Creación y uso de artefactos
 {: #artifacts}
 
 Los trabajos de compilación captan automáticamente el contenido en la carpeta actual donde se ejecuta el script de usuario.  Si no necesita todo el contenido del repositorio git todo para el despliegue posterior, es preferible que configure un directorio de salida explícito y se copien o se creen los artefactos relevantes allí.  Los scripts de trabajos se ejecutan en el resultado de la compilación (directorio de salida).
 
-En los trabajos de despliegue que se despliegan en Cloud Foundry, es necesario especificar la clave de API de Plataforma de un usuario en donde se ejecutan los trabajos de autorización, y la región, la organización y el espacio en los que se deben desplegar los artefactos. Si se necesitan servicios adicionales para ejecutar la app, debe especificarlos en el archivo `manifest.yml`.
+Los trabajos que se despliegan en Cloud Foundry, es necesario especificar la clave de API de Plataforma de un usuario en donde se ejecutan los trabajos de autorización, y la región, la organización y el espacio en los que se deben desplegar los artefactos. Si se necesitan servicios adicionales para ejecutar la app, debe especificarlos en el archivo `manifest.yml`.
 
-En los trabajos de despliegue que se despliegan en el {{site.data.keyword.containerlong_notm}} para ejecutarse en un clúster de Kubernetes, es necesario especificar la clave de API de Plataforma de un usuario en donde se ejecutan los trabajos de autorización, un Dockerfile y, opcionalmente, un diagrama de Helm.  
+En los trabajos de despliegue que se despliegan en el {{site.data.keyword.containerlong_notm}} es necesario especificar la clave de API de Plataforma de un usuario en donde se ejecutan los trabajos de autorización, un Dockerfile y, opcionalmente, un diagrama de Helm.  
 
-El script del trabajo se ejecuta después de que el trabajo inicie sesión en el entorno de destino utilizando la clave de API de la Plataforma que se le ha asignado (por lo tanto, puede realizar mandatos `cf push` o `kubectl` en el script).
+El script del trabajo se ejecuta después de que el trabajo inicie sesión en el entorno de destino utilizando la clave de API de la Plataforma que se le ha asignado (por lo tanto, puede ejecutar mandatos `cf push` o `kubectl` en el script).
 
 ## Un conducto de ejemplo
 {: #deliverypipeline_example}

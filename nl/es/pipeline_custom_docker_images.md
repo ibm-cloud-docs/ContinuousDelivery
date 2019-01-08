@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -33,7 +35,7 @@ El nombre de imagen de Docker en trabajos de imagen de Docker personalizada est�
 Si no se rellena el campo de **nombre de imagen de Docker**, se utiliza la imagen base del conjunto estándar. 
 {: tip}
 
-De forma predeterminada, se busca en el repositorio en [Docker Hub ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://hub.docker.com/){: new_window}. Si utiliza otro registro de Docker, como IBM Cloud Registry, puede utilizar el nombre de DNS completo. También puede utilizar el nombre completo para imágenes en Docker Hub. Por ejemplo, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
+De forma predeterminada, se busca en el repositorio en [Docker Hub ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://hub.docker.com/){: new_window}. Si utiliza otro registro de Docker, como {{site.data.keyword.registrylong}}, puede utilizar el nombre de DNS completo. También puede utilizar el nombre completo para imágenes en Docker Hub. Por ejemplo, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
 
 La `etiqueta` de una imagen de Docker es opcional. Si no especifica una etiqueta, se establece de forma predeterminada en `latest`. El valor predeterminado `latest` es sólo un nombre de etiqueta que debe gestionar el propietario del repositorio. No significa que, cronológicamente, esta imagen de Docker sea la imagen más reciente.
 
@@ -44,12 +46,12 @@ En Docker Hub hay disponible una amplia comunidad de repositorios. IBM aloja una
 
 Si va a utilizar un registro privado que requiere autenticación, debe establecer dos propiedades de entorno de etapa adicionales: `DOCKER_USERNAME` y `DOCKER_PASSWORD`. Puede utilizar una propiedad segura para enmascarar su `DOCKER_PASSWORD`. Antes de extraer la imagen, el trabajo de imagen de Docker personalizada utiliza las credenciales de nombre de usuario y contraseña para realizar una operación de `docker login`.
 
-Para la mayoría de los registros, puede utilizar el nombre de usuario y la contraseña que se le han proporcionado. Si utiliza IBM Cloud Registry para almacenar las imágenes privadas, debe utilizar una clave de API de plataforma para la autenticación. 
+Para la mayoría de los registros, puede utilizar el nombre de usuario y la contraseña que se le han proporcionado. Si utiliza {{site.data.keyword.registrylong_notm}} para almacenar las imágenes privadas, debe utilizar una clave de API de plataforma para la autenticación. 
 
-1. [Solicite una clave de API de plataforma ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/iam/#/apikeys){: new_window} y asegúrese de guardar la clave. 
+1. [Solicite una clave de API de plataforma ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/iam/#/apikeys){: new_window} y asegúrese de guardar la clave. 
 1. Cree dos propiedades de entorno de etapa utilizando `iamapikey` para `DOCKER_USERNAME` y la clave de API de plataforma que ha guardado para `DOCKER_PASSWORD`.
 
- ![Credenciales de IBM Cloud Registry](images/custom-image-private-repository.png)
+ ![credenciales de {{site.data.keyword.registrylong_notm}}](images/custom-image-private-repository.png)
 
 
 ## Cómo especificar el script

@@ -41,7 +41,7 @@ En la tabla siguiente se detallan las acciones que se correlacionan con los role
 
 | Rol de gestión de plataforma | Descripción de acciones | Acciones de ejemplo|
 |:-----------------|:-----------------|:-----------------|
-| Visor, Operador | Ver instancias del servicio de {{site.data.keyword.contdelivery_short}}. | <ul><li>Pulse una instancia de servicio de {{site.data.keyword.contdelivery_short}} para abrir su panel de control.</li>|
+| Visor, Operador | Ver instancias del servicio de {{site.data.keyword.contdelivery_short}}. | <ul><li>Pulse una instancia de servicio de {{site.data.keyword.contdelivery_short}} para abrir su panel de control.</li>|</ul>
 | Editor, Administrador | Crear, ver, actualizar, modificar el plan y suprimir instancias del servicio de {{site.data.keyword.contdelivery_short}}. |<ul><li>Suministrar una instancia de {{site.data.keyword.contdelivery_short}} en un grupo de recursos.</li><li>Suprimir una instancia de {{site.data.keyword.contdelivery_short}} de un grupo de recursos.</li><li>Cambiar un plan de instancias de {{site.data.keyword.contdelivery_short}} de Lite a Professional.</li></ul> |
 | Administrador | Actualizar la lista Usuarios autorizados.| <ul><li>Añada un usuario a la lista Usuarios autorizados.</li><li>Eliminar un usuario de la lista Usuarios autorizados.</li></ul> |
 {: caption="Tabla 1. Roles y acciones de usuario IAM" caption-side="top"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-5"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # {{site.data.keyword.gitrepos}}
@@ -19,6 +21,12 @@ lastupdated: "2018-8-2"
 
 Colabore con su equipo y gestione su código fuente con un repositorio Git (repositorio) y un rastreador de problemas alojado en IBM que se basa en [GitLab Community Edition ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://about.gitlab.com/){:new_window}.
 {: shortdesc}
+
+Invitar solo a los usuarios con los que tiene una relación personal o empresarial para colaborar en un proyecto. Es posible que el acceso al servicio se suspenda o revoque para los usuarios que utilicen una invitación a un repositorio Git para fines que no sean colaborar en un proyecto.
+{: important}
+
+No almacene datos regulados en archivos o problemas en el repositorio Git. Actualmente, los procedimientos para los datos regulados no están en vigor.
+{: tip}
 
 La integración de la herramienta {{site.data.keyword.gitrepos}} permite a los equipos gestionar código y colaborar de varias formas:
    * Gestionar repositorios Git a través de controles de acceso que mantienen el código seguro

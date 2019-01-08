@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-15"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-15"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -26,13 +28,13 @@ Puede adoptar un enfoque DevOps mediante {{site.data.keyword.contdelivery_full}}
 
 Antes de poder crear una cadena de herramientas de entrega continua a partir de una plantilla, debe crear una instancia de {{site.data.keyword.contdelivery_short}} seleccionándola en el catálogo de {{site.data.keyword.Bluemix_notm}}. La cadena de herramientas integra herramientas para la planificación, despliegue de conductos y gestión de aplicaciones. Siempre puede añadir o eliminar herramientas de sus cadenas de herramientas. Si ya tiene cadenas de herramientas, puede [ver cadenas de herramientas existentes](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}. Para obtener más información sobre cómo trabajar con cadenas de herramientas, consulte el apartado sobre [Utilización de cadenas de herramientas](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
 
-Si ya tiene una instancia de {{site.data.keyword.contdelivery_short}}, puede [crear una cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/create){: new_window} o [ver cadenas de herramientas existentes](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}.
+Si ya tiene una instancia de {{site.data.keyword.contdelivery_short}}, puede [crear una cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/devops/create){: new_window} o [ver cadenas de herramientas existentes](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}.
 {: tip}
 
 ##Paso 1: Seleccionar una plantilla de cadena de herramientas
 {: #select_a_toolchain_template}
 
-1. En la página **Crear una cadena de herramientas**, pulse una [plantilla de cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/create){: new_window}.
+1. En la página **Crear una cadena de herramientas**, pulse una [plantilla de cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/devops/create){: new_window}.
 1. Revise el diagrama de la cadena de herramientas que se dispone a crear. El diagrama muestra cada integración de herramientas en la fase del ciclo de vida correspondiente en la cadena de herramientas.
 
  Algunas de las plantillas de cadena de herramientas tienen varias instancias de una integración de herramientas. Por ejemplo, la plantilla de la cadena de herramientas de microservicios de {{site.data.keyword.Bluemix_notm}} público contiene tres instancias de GitHub y tres instancias de Delivery Pipeline, una para cada uno de los tres microservicios.
@@ -50,8 +52,8 @@ Si ya tiene una instancia de {{site.data.keyword.contdelivery_short}}, puede [cr
  * La región en la que se va crear la cadena de herramientas. Si desea utilizar otra región, selecciónela en la lista de regiones disponibles.
  * El grupo de recursos u organización en la que crear la cadena de herramientas. Pulse el enlace para conmutar entre la selección de grupos de recursos y organizaciones. Si desea utilizar un grupo de recursos u organización distinto, selecciónelo desde la lista de grupos de recursos u organizaciones disponibles.
  
-   Los grupos de recursos solo están disponibles en la región sur de Estados Unidos.
-   {: tip}
+   Los grupos de recursos están disponibles en las regiones EE.UU. sur, EE.UU. este, Reino Unido, Alemania y Tokio. Las organizaciones de Cloud Foundry están soportadas en las regiones EE.UU. sur, EE.UU. este, Reino Unido y Alemania.
+   {: important}
  
 1. En la sección Integraciones de herramientas, seleccione las integraciones de herramientas que desee configurar para su cadena de herramientas. Algunas integraciones de herramientas no necesitan configuración. Para obtener información sobre cómo configurar las integraciones de herramientas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Pulse **Crear**. Para configurar la cadena de herramientas, se ejecutan varios pasos automáticamente. Las integraciones de herramientas que se configuran varían en función de la plantilla de cadena de herramientas que haya seleccionado y de si utiliza {{site.data.keyword.Bluemix_notm}} público o {{site.data.keyword.Bluemix_notm}} dedicado. Por ejemplo, si crea una cadena de herramientas de microservicios en {{site.data.keyword.Bluemix_notm}} público, se ejecutan estos pasos:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-6-22"
+lastupdated: "2018-10-10"
 
 ---
 
@@ -35,10 +35,10 @@ En la tabla siguiente se listan las acciones que generan un suceso:
 
 | Acción | Descripción | 
 |:-----------------|:-----------------|
-| Crear cadena de herramientas | Crear una cadena de herramientas | 
-| Suprimir la cadena de herramientas | Suprimir una cadena de herramientas |
-| Crear herramienta | Crear una integración de herramientas |
-| Suprimir herramienta | Suprimir una integración de herramientas |
+| continuous-delivery.toolchain.create | Crear una cadena de herramientas | 
+| continuous-delivery.toolchain.delete | Suprimir una cadena de herramientas |
+| toolchain.tool-instance.deploy | Crear una integración de herramientas |
+| toolchain.tool-instance.undeploy | Suprimir una integración de herramientas |
 {: caption="Tabla 1. Acciones que generan sucesos" caption-side="top"}
 
 ## Dónde ver los sucesos
