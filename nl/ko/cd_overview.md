@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-15"
+lastupdated: "2018-12-7"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-15"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -25,10 +27,10 @@ lastupdated: "2018-8-15"
 
  * 개발, 배치 및 운영 태스크를 지원하는 도구 통합을 사용할 수 있도록 통합된 DevOps 오픈 [도구 체인](/docs/services/ContinuousDelivery/toolchains_about.html){: new_window}을 작성할 수 있습니다.
 
-  도구 체인은 애플리케이션 개발, 빌드, 배치, 테스트 및 관리에 함께 사용할 수 있는 통합 도구 세트이며 오퍼레이션을 반복 가능하고 관리하기 더 쉽게 만듭니다. 도구 체인에는 오프 소스 도구, {{site.data.keyword.Bluemix_notm}} 서비스(예: [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window}) 및 써드파티 도구(예:GitHub, PagerDuty, Slack)가 포함될 수 있습니다. 
+  도구 체인은 애플리케이션 개발, 빌드, 배치, 테스트 및 관리에 함께 사용할 수 있는 통합 도구 세트이며 오퍼레이션을 반복 가능하고 관리하기 더 쉽게 만듭니다. 도구 체인에는 오프 소스 도구, {{site.data.keyword.Bluemix_notm}} 서비스(예: [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window}) 및 서드파티 도구(예:GitHub, PagerDuty, Slack)가 포함될 수 있습니다. 
   
-  {{site.data.keyword.DRA_short}}는 미국 남부 지역에서만 사용 가능합니다.
-  {: tip}
+  {{site.data.keyword.DRA_short}}는 미국 남부, 영국 및 독일 지역에서 사용 가능합니다.
+  {: important}
 
  * 자동화된 [파이프라인](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window}을 사용하여 지속적 딜리버리를 제공합니다.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Eclipse Orion Web IDE에서 Git에 대해 작업
@@ -91,7 +93,7 @@ lastupdated: "2018-8-2"
 참조된 원격 분기의 컨텐츠를 활성 로컬 분기의 컨텐츠로 겹쳐쓰십시오.
 
 원격 분기에 로컬 분기를 강제로 푸시하면 원격 분기에서 커미트를 유실할 수 있습니다.
-{: tip}
+{: important}
 
 ### Eclipse Orion Web IDE
 {: #force_push_web}
@@ -196,7 +198,7 @@ lastupdated: "2018-8-2"
 
 3. 파일의 변경사항을 검토하려면 **>**을 클릭하십시오.
 
-  커미트를 통해 행이 변경된 경우 원래 행은 음영 처리된 분홍색이 되고 새 행은 음영 처리된 초록색이 됩니다. 마찬가지로 커미트를 통해 추가된 행은 음영 처리된 초록색이고 커미트를 통해 제거된 행은 음영 처리된 분홍색입니다.
+  커미트를 통해 행이 변경된 경우 원래 행은 음영 처리된 분홍색이 되고 새 행은 음영 처리된 초록색이 됩니다.  마찬가지로 커미트를 통해 추가된 행은 음영 처리된 초록색이고 커미트를 통해 제거된 행은 음영 처리된 분홍색입니다.
   {: tip}
 
 ### Git 터미널
@@ -221,7 +223,7 @@ lastupdated: "2018-8-2"
 {: #modify_last_commit}
 
   원격 저장소에 푸시한 다음 마지막 커미트를 수정하면 커미트 히스토리를 다시 씁니다. 이 변경사항은 커미트에 실패하거나 프로젝트의 다른 기여자에 또 다른 문제점을 일으킬 수 있습니다. 원격 저장소에 푸시한 커미트를 수정하기 전에 수행하는 내용을 알고 있어야 합니다.
-  {: tip}
+  {: important}
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}

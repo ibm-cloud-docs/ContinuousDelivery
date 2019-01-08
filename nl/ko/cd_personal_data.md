@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Continuous Delivery의 개인 데이터 관리
@@ -30,7 +32,7 @@ lastupdated: "2018-8-2"
  * [{{site.data.keyword.DRA_full}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
 IBM은 {{site.data.keyword.contdelivery_short}} 서비스의 데이터를 관리하지 않습니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 호스팅되는 {{site.data.keyword.contdelivery_short}} 서비스를 종료하기 전에 고유 데이터를 삭제해야 합니다.
-{: tip}
+{: important}
 
 {{site.data.keyword.contdelivery_short}}는 리소스 그룹 또는 Cloud Foundry 조직 내에서 데이터를 관리하기 위한 적절한 권한을 제공합니다. 회사에는 이러한 권한을 제한하는 정책이 있을 수 있습니다. 적절한 권한이 없는 경우 {{site.data.keyword.Bluemix_notm}} 계정의 관리자에게 문의하십시오.
 
@@ -99,7 +101,7 @@ IBM Cloud 계정에 로그인할 수 없는 경우 회사 담당자에게 문의
 {{site.data.keyword.webide}}는 클라우드에 개인 작업공간을 제공합니다. {{site.data.keyword.webide}}를 사용하여 Git 저장소를 복제하고 파일을 편집할 수 있습니다. 사용자는 {{site.data.keyword.webide}} 작업공간을 소유하며 다른 계정에서 공유하지 않습니다.
 
 {{site.data.keyword.webide}} 데이터를 삭제하기 전에 작업을 내보낼 수 있습니다. 작업공간을 삭제하고 나면 {{site.data.keyword.contdelivery_short}}에서 제거되고 모든 파일이 삭제됩니다.
-{: tip}
+{: important}
 
 ###Web IDE 작업공간 내보내기
 
@@ -118,7 +120,7 @@ IBM Cloud 계정에 로그인할 수 없는 경우 회사 담당자에게 문의
 1. {{site.data.keyword.webide}}에서 모든 데이터를 제거하려면 **삭제**를 클릭하십시오.
 
 {{site.data.keyword.webide}}는 싱글 사인온 메커니즘을 사용합니다. 이 도구 통합에 처음 액세스하는 경우 IBM Cloud 계정에 대해 숨겨진 해당 {{site.data.keyword.webide}} 계정이 작성됩니다. 모든 작업공간을 삭제한 후에는 {{site.data.keyword.webide}}에 액세스하지 마십시오. 다시 {{site.data.keyword.webide}}에 액세스하는 경우 삭제해야 하는 새 계정이 자동으로 작성됩니다.
-{: tip}
+{: important}
 
 ## Git 저장소 및 문제 추적 데이터 수정, 내보내기 및 삭제
 {: #managing_grit_data}
@@ -158,7 +160,7 @@ Git 계정을 삭제하기 전에 다른 프로젝트의 개인 데이터를 삭
 {: tip}
 
 {{site.data.keyword.gitrepos}}는 도구 통합에 처음 액세스할 때 IBM Cloud 계정에 대한 해당 Git 계정을 자동으로 작성하는 싱글 사인온 메커니즘을 사용합니다. 계정을 삭제하고 나면 {{site.data.keyword.gitrepos}}에 액세스하지 마십시오. 다시 {{site.data.keyword.gitrepos}}에 액세스하는 경우 삭제해야 하는 새 계정이 자동으로 작성됩니다.
-{: tip}
+{: important}
 
 ## Continuous Delivery 파이프라인 데이터 수정, 내보내기 및 삭제
 {: #managing_pipeline_data}
@@ -168,7 +170,7 @@ Git 계정을 삭제하기 전에 다른 프로젝트의 개인 데이터를 삭
 공유 오브젝트 또는 파이프라인을 삭제하기 전에 팀의 다른 구성원과 조정해야 합니다. 단계를 삭제하면 파이프라인이 실패할 수 있습니다.
 
 파이프라인은 도구 체인 외부에 존재할 수 없습니다. 도구 체인을 삭제하는 경우 해당 도구 체인과 연관되는 모든 파이프라인도 삭제됩니다. 전체 도구 체인을 삭제할 계획이면 각 파이프라인을 개별적으로 삭제할 필요가 없습니다. 대신 "도구 체인 및 도구 통합 수정 및 삭제" 섹션으로 건너뛰어 해당 단계에 따라 도구 체인을 삭제하십시오.
-{: tip}
+{: important}
 
 파이프라인 단계는 신임 정보와 같은 개인 데이터를 환경 특성 양식으로 포함하고 파이프라인의 현재 상태를 표시하는 파이프라인 정의를 포함할 수 있습니다. 또한 단계에서는 내보낼 최근 파이프라인 실행에 대한 아티팩트 및 로그뿐만 아니라 수정하거나 삭제할 스크립트를 작업 안에 포함할 수 있습니다. 단계 구성 또는 단계 삭제 조치를 사용하여 단계를 수정하거나 삭제하십시오. 다운로드 조치를 사용하여 단계에서 아티팩트 또는 로그를 내보내십시오.
 

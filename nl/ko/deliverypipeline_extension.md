@@ -71,7 +71,7 @@ lastupdated: "2018-3-26"
 
   e. 필요에 따라 **서비스 및 영역 자동 설정** 선택란을 선택하거나 선택 취소하십시오.
 
-    * 파이프라인이 {{site.data.keyword.Bluemix_short}} 영역에서 서비스와 이 서비스를 컨테이너에 바인드하는 앱이 있는지 확인하도록 하려면 이 선택란을 선택하십시오. 서비스 또는 바인드된 앱이 없는 경우 파이프라인은 서비스의 무료 사용제를 영역에 추가합니다. 작성되는 바인드된 앱은 `pipeline_bridge_app`이라는 이름이 지정됩니다. 파이프라인은 pipeline_bridge_app의 신임 정보를 사용하여 바인드된 서비스에 액세스합니다.
+    * 파이프라인이 {{site.data.keyword.Bluemix_short}} 영역에서 서비스와 이 서비스를 컨테이너에 바인드하는 앱이 있는지 확인하도록 하려면 이 선택란을 선택하십시오. 서비스 또는 바인드된 앱이 없는 경우 파이프라인은 서비스의 무료 플랜을 영역에 추가합니다. 작성되는 바인드된 앱은 `pipeline_bridge_app`이라는 이름이 지정됩니다. 파이프라인은 pipeline_bridge_app의 신임 정보를 사용하여 바인드된 서비스에 액세스합니다.
 
     * {{site.data.keyword.Bluemix_short}} 영역에서 서비스와 바인드된 앱을 이미 구성했거나 [해당 요구사항을 수동으로 구성](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}하려는 경우 선택란을 선택 취소된 상태로 두십시오.
 

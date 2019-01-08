@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -17,10 +17,13 @@ lastupdated: "2018-8-2"
 # Eclipse Orion Web IDE를 사용하여 개발
 {: #web_ide}
 
-Eclipse Orion {{site.data.keyword.webide}}는 브라우저 기반의 개발 환경이며 컨텐츠 지원, 코드 자동 완성 및 오류 검사 기능을 통해 JavaScript, HTML 및 CSS로 웹을 개발할 수 있습니다. {{site.data.keyword.webide}}는 거의 모든 언어에서 작동하며, 대부분의 파일 유형에 대해 구문 강조표시를 제공합니다. 소스 제어는 내장되어 있으며, 사용자는 로컬로 코드를 배치하여 앱을 테스트하고 디버그할 수 있습니다.
+Eclipse Orion {{site.data.keyword.webide}}는 브라우저 기반의 개발 환경이며 컨텐츠 지원, 코드 자동 완성 및 오류 검사 기능을 통해 JavaScript, HTML 및 CSS로 웹을 개발할 수 있습니다. {{site.data.keyword.webide}}는 거의 모든 언어에서 작동하며, 대부분의 파일 유형에 대한 구문을 강조표시합니다. 소스 제어는 내장되어 있으며, 사용자는 로컬로 코드를 배치하여 앱을 테스트하고 디버그할 수 있습니다.
 {:shortdesc}
 
 특히 {{site.data.keyword.webide}}는 웹에서 구동됩니다. 설치, 관리 및 스케일링이 필요 없습니다. 인터넷이 연결되어 있으면 어디서든 개발할 수 있습니다.
+
+{{site.data.keyword.webide}} 내의 파일에 규제된 데이터를 저장하지 마십시오. 규제된 데이터에 대한 프로시저는 현재 시행되지 않고 있습니다.
+{: tip}
 
 ## IDE 설정
 {: #editorsetup}
@@ -83,17 +86,17 @@ Eclipse Orion {{site.data.keyword.webide}}는 브라우저 기반의 개발 환�
 2. 앱이 배치되면 실행 표시줄을 사용하여 앱을 중지, 다시 시작 또는 디버그하고 로그를 보는 등의 작업을 수행할 수 있습니다.
 
 <table role="presentation">
-<tr><td><img src="./images/stop_button.png"  alt="중지 아이콘"></td><td>앱 중지</td></tr>
-<tr><td> <img src="./images/open_app_url.png"  alt="앱 URL 열기 아이콘"></td><td> 배치된 앱 열기</td></tr>
-<tr><td><img src="./images/view_logs.png"  alt="로그 보기 아이콘"></td><td>배치된 앱의 로그 보기</td></tr>
-<tr><td><img src="./images/open_dashboard.png"  alt="대시보드 열기 아이콘"></td><td>앱의 대시보드 열기</td></tr>
+<tr><td><img src="./images/stop_button.png"  alt="중지 아이콘"></td><td>앱을 중지합니다.</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="앱 URL 열기 아이콘"></td><td> 배치된 앱을 엽니다.</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="로그 보기 아이콘"></td><td>배치된 앱의 로그를 봅니다.</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="대시보드 열기 아이콘"></td><td>앱의 대시보드를 엽니다.</td></tr>
 </table>
 
 Node.js 앱을 개발하는 경우, 라이브 편집 모드를 사용하십시오. <img  src="./images/enable_live_edit.png"  alt="라이브 편집 슬라이더 사용">
 
-<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="라이브 편집 다시 시작 아이콘"></td><td>라이브 편집 모드를 사용하여 재배치하지 않고 앱을 신속하게 다시 시작</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="라이브 편집 다시 시작 아이콘"></td><td>라이브 편집 모드를 사용하여 재배치하지 않고 앱을 신속하게 다시 시작합니다.</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="디버그 아이콘"></td>
-<td>라이브 편집 모드를 사용하여 디버거에 액세스
+<td>라이브 편집 모드를 사용하여 디버거에 액세스합니다.
 </td></tr>
 </table>
 
@@ -162,7 +165,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 ## 지원 언어
 {: #supported_languages}
 
-Eclipse Orion {{site.data.keyword.webide}}는 컨텐츠 지원, 도구 팁, 미리보기, 유효성 검증 및 JavaScript, HTML, CSS, 마크다운 파일에 대한 구문 강조표시를 제공합니다. 구문 강조표시는 다음 파일 유형에 대해서도 지원됩니다.
+Eclipse Orion {{site.data.keyword.webide}}는 컨텐츠 지원, 도구 팁, 미리보기, 유효성 검증을 제공하며 JavaScript, HTML, CSS, 마크다운 파일에 대한 구문을 강조표시합니다. 다음 파일 유형에 대한 구문을 강조표시할 수도 있습니다.
 
 <table role="presentation">
 <tr>

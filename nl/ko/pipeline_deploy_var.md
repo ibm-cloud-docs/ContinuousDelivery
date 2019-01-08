@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-10-9"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -21,20 +21,6 @@ lastupdated: "2018-8-2"
 
 # 환경 특성 및 리소스
 {: #deliverypipeline_environment}
-
-환경 특성 및 사전 설치된 리소스를 사용하여 {{site.data.keyword.contdelivery_full}}의 파이프라인 기능과 상호작용할 수 있습니다. 예를 들어, 이들을 작업 스크립트 또는 테스트 명령에 통합할 수 있습니다.
-{:shortdesc}
-
-해당 **환경 특성** 탭에서 단계에 고유의 환경 특성을 추가할 수 있습니다. 단계의 모든 작업에서 환경 특성을 사용할 수 있습니다.
-
-환경 특성 탭에서 다음 네 가지 유형의 특성을 추가할 수 있습니다.
-* **텍스트**: 단일 행 값을 갖는 특성 키입니다.
-* **텍스트 영역**: 다중 행 값을 갖는 특성 키입니다.
-* **소스**: 단일 행 값을 갖는 특성 키입니다. 이 값은 별표로 표시됩니다.
-* **특성**: 프로젝트의 저장소에 있는 파일입니다. 이 파일에는 여러 특성이 포함될 수 있습니다. 각 특성은 자체 고유의 행에 위치해야 합니다. 키-값 쌍을 구분하려면 등호 부호(=)를 사용하십시오. 모든 문자열 값을 따옴표로 묶으십시오. 예를 들어, MY_STRING="SOME STRING VALUE"입니다.
-
-작업 스크립트에서 `env` 명령을 실행하여 파이프라인 작업에 대한 환경 특성을 조사할 수 있습니다.
-{:tip}
 
 다음 특성과 리소스는 기본적으로 파이프라인 환경에서 사용할 수 있습니다.
 
@@ -74,6 +60,7 @@ lastupdated: "2018-8-2"
 |PIPELINE_STAGE_INPUT_JOB_ID |현재 단계의 입력인 작업의 ID입니다. |
 |PIPELINE_STAGE_INPUT_REV |현재 단계의 입력 변경내용입니다. |
 |PIPELINE_INITIAL_STAGE_EXECUTION_ID |파이프라인 실행의 고유 ID입니다. |
+|PIPELINE_TRIGGERING_USER | 파이프라인 작업의 현재 사용자 |
 |TASK_ID |작업의 현재 실행 고유 ID입니다. |
 |TMPDIR |임시 파일을 저장하는 디렉토리 위치입니다. |
 |WORKSPACE |현재 작업 디렉토리의 경로입니다. |
@@ -91,7 +78,7 @@ lastupdated: "2018-8-2"
 |MAVEN_HOME |Apache Maven 3.2.1의 경로입니다. |
 |NODE_HOME |Node.js 0.10.29의 경로입니다. |
 
-`ANT_HOME`을 `$ANT_JAVA8_HOME`으로 설정하고 `JAVA_HOME`을 `$JAVA8_HOME`으로 설정하여 파이프라인의 스크립트에서 Apache Ant의 1.10+ 버전을 사용할 수 있습니다.
+파이프라인의 스크립트에서 Apache Ant 1.10 이상 버전을 사용하려면 `ANT_HOME`을 `$ANT_JAVA8_HOME`으로 설정하고 `JAVA_HOME`을 `$JAVA8_HOME`으로 설정하십시오.
 {: tip}
 
 ### 배치 특성
@@ -129,13 +116,11 @@ lastupdated: "2018-8-2"
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
 
-파이프라인 환경에서 IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2, 6.7.0의 64비트 버전을 사용할 수 있습니다. 버전을 선택하려면 내보내기 명령을 사용하십시오.
+파이프라인 환경에서는 IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2, 6.7.0의 64비트 버전을 제공합니다. 버전을 선택하려면 내보내기 명령을 사용하십시오.
 
-예를 들어, Node 0.12.7을 사용하려면 다음 명령을 입력하십시오.
-`export PATH=/opt/IBM/node-v0.12/bin:$PATH`
+예를 들어, Node 0.12.7을 사용하려면 `export PATH=/opt/IBM/node-v0.12/bin:$PATH` 명령을 입력하십시오.
 
-Node 4.2.2를 사용하려면 다음 명령을 입력하십시오.
-`export PATH=/opt/IBM/node-v4.2/bin:$PATH`
+Node 4.2.2를 사용하려면 `export PATH=/opt/IBM/node-v4.2/bin:$PATH` 명령을 입력하십시오.
 
 ### 노드 모듈
 

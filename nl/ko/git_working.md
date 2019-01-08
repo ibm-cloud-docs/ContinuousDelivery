@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-5"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # {{site.data.keyword.gitrepos}}
@@ -19,6 +21,12 @@ lastupdated: "2018-8-2"
 
 IBM에서 호스팅하고 [GitLab Community Edition ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://about.gitlab.com/){:new_window}에서 빌드된 Git 저장소(repo) 및 문제 트래커를 사용하여 사용자의 팀과 협업하고 소스 코드를 관리합니다.
 {: shortdesc}
+
+프로젝트에 협업하도록 개인 또는 비즈니스 관계가 있는 사용자만 초대하십시오. 프로젝트에 대한 협업 이외의 목적으로 Git 저장소에 초대를 사용하는 사용자에게는 일시중단되거나 취소된 서비스에 대한 액세스 권한이 있습니다.
+{: important}
+
+Git 저장소 내의 파일 또는 문제에 규제된 데이터를 저장하지 마십시오. 규제된 데이터에 대한 프로시저는 현재 시행되지 않고 있습니다.
+{: tip}
 
 {{site.data.keyword.gitrepos}} 도구 통합은 코드를 관리하고 다양한 방법으로 협업할 수 있도록 팀을 지원합니다.
    * 코드의 보안을 유지하는 미세 조정된 액세스 제어를 통해 Git 저장소를 관리함

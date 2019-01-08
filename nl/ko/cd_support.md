@@ -2,20 +2,23 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-12-6"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:codeblock:.codeblock}
 
 
 # {{site.data.keyword.contdelivery_short}}에 대한 도움 및 지원 받기    
 {: #cd_support}  
 
-{{site.data.keyword.contdelivery_full}} 팀은 {{site.data.keyword.contdelivery_short}} 서비스 및 도구 체인에 대한 질문에 대해 developerWorks 포럼을 적극적으로 모니터링합니다. 포럼에 질문을 올리려면 도구 체인 맨 아래 및 {{site.data.keyword.contdelivery_short}} 페이지에서 **포럼에서 도움 받기** 단추 ![**포럼에서 도움 받기** 단추](images/get_help_in_the_forum.png)를 클릭하십시오.
+{{site.data.keyword.contdelivery_full}} 팀은 {{site.data.keyword.contdelivery_short}} 서비스 및 도구 체인에 대한 질문에 대해 developerWorks 포럼을 적극적으로 모니터링합니다. 포럼에 질문을 올리려면 도구 체인과 {{site.data.keyword.contdelivery_short}} 페이지에서 **포럼에서 도움 받기** ![**포럼에서 도움 받기** 단추](images/get_help_in_the_forum.png)를 클릭하십시오.
 
 <table>
 <tr>
@@ -47,7 +50,7 @@ lastupdated: "2018-3-26"
 1. 메뉴 표시줄에서 **지원**을 클릭한 후에 **티켓 추가**를 클릭하십시오.
 1. 기술 지원이 필요한 항목을 표시하는 양식을 채우십시오.
 
-IBM {{site.data.keyword.Bluemix_notm}} 지원 티켓 열기 또는 지원 레벨과 티켓 심각도에 대한 자세한 정보는 [지원 문의](https://console.bluemix.net/docs/support/index.html#contacting-support)를 참조하십시오.
+IBM {{site.data.keyword.Bluemix_notm}} 지원 티켓 열기 또는 지원 레벨과 티켓 심각도에 대한 자세한 정보는 [지원 문의](https://cloud.ibm.com/docs/support/index.html#contacting-support)를 참조하십시오.
 
 
 ## {{site.data.keyword.Bluemix_notm}} 지원

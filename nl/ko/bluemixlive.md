@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -48,7 +48,7 @@ Node.js 애플리케이션이 Live Edit 모드에 있는 경우 쉘로 전환하
 ##Live Edit
 {: #live-edit}
 
-{{site.data.keyword.Bluemix_notm}}에서 실행되는 Node.js 애플리케이션을 빌드 중인 경우 {{site.data.keyword.Bluemix_notm}} Live Sync의 Live Edit 기능으로 애플리케이션 인스턴스를 신속하게 업데이트할 수 있습니다. Live Edit는 Web IDE에서만 사용할 수 있습니다. Live Edit를 사용하면 재배치 없이 데스크탑에서처럼 개발할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}}에서 실행되는 Node.js 애플리케이션을 빌드 중인 경우 {{site.data.keyword.Bluemix_notm}} Live Sync의 Live Edit 기능으로 애플리케이션 인스턴스를 신속하게 업데이트할 수 있습니다. Live Edit는 Web IDE에서만 사용할 수 있습니다. Live Edit를 사용하여 재배치하지 않고 데스크탑에서와 같이 개발할 수 있습니다.
 
 Live Edit는 Node.js 애플리케이션에서만 지원됩니다.
 
@@ -56,13 +56,13 @@ Eclipse Orion Web IDE(Web IDE)의 실행 표시줄에서 **Live Edit**를 클릭
 
 ![Live Edit가 포함된 실행 표시줄의 이미지](images/bluemix-live-sync-light.png)
 
-Live Edit를 사용하면 {{site.data.keyword.Bluemix_notm}}에서 실행되는 Node.js 애플리케이션에 대한 변경사항을 신속하게 미리볼 수 있습니다. Live Edit를 켠 상태에서 코드를 업데이트하는 경우 웹 애플리케이션의 브라우저 창을 새로 고치면 변경 후 몇 초 이내에 변경사항이 적용되어 표시됩니다.
+Live Edit를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 실행되는 Node.js 애플리케이션에 대한 변경사항을 신속하게 미리보십시오. Live Edit를 켠 상태에서 코드를 업데이트하는 경우 웹 애플리케이션의 브라우저 창을 새로 고치면 변경 후 몇 초 이내에 변경사항이 적용되어 표시됩니다.
 
 {{site.data.keyword.Bluemix_notm}} Live Sync의 Live Edit 기능 사용에 대한 튜토리얼은 [Use {{site.data.keyword.Bluemix_notm}} Live Sync to develop, debug, and deploy your app ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/use-live-sync-to-develop-debug-and-deploy-your-app){:new_window}을 참조하십시오.
 
 Web IDE에서 변경한 파일은 {{site.data.keyword.Bluemix_notm}}의 애플리케이션에 자동으로 재배치됩니다. 노드 애플리케이션을 다시 시작해야 하는 경우 실행 표시줄에 있는 **다시 시작** 단추를 클릭하십시오.
 
-{{site.data.keyword.Bluemix_notm}} Live Sync의 Live Edit 기능을 사용할 때, 보다 일관된 경험을 위해서는 256MB의 추가 메모리가 필요하여 추가됩니다.
+{{site.data.keyword.Bluemix_notm}} Live Sync의 Live Edit 기능을 사용할 때, 보다 일관된 경험을 위해서 256MB의 추가 메모리가 필요함에 따라 추가됩니다.
 {: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} Live Debug
@@ -84,7 +84,7 @@ Debug 기능을 제공할 수 있습니다. Node.js의 이후 버전에 노드 �
 
 ### 애플리케이션 런타임 제어 {: #app-runtime}
 
-애플리케이션 런타임 제어를 사용하여 Debug 기능을 통해 시작 시 앱의 상태를 검사할 수 있습니다. 이 기능은 시작 시 충돌하는 앱의 문제점을 해결할 때 유용합니다.
+애플리케이션 런타임 제어를 사용하여 Debug 기능을 통해 시작 시 앱의 상태를 검사할 수 있습니다. 이 기능은 시작 시 오류가 발생한 앱의 문제점을 해결할 때 유용합니다.
 
 앱을 개발하는 중에 다음 조치 중에서 선택할 수 있습니다.
 
@@ -92,9 +92,6 @@ Debug 기능을 제공할 수 있습니다. Node.js의 이후 버전에 노드 �
 * 앱 코드 실행 전에 앱을 일시중단합니다.
 
 로그인하면 {{site.data.keyword.Bluemix_notm}} Live Debug 페이지가 열립니다.
-
-![Debug UI](images/live_sync_debug.png)
-
 
 ### Debug {: #debug}
 
@@ -151,4 +148,4 @@ Debugger를 초기화하는 데 몇 분 정도 걸릴 수 있습니다.
 
 ### 자세한 정보
 
-* [{{site.data.keyword.Bluemix_notm}}용 Eclipse 도구 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}를 참조하십시오.
+* [{{site.data.keyword.Bluemix_notm}}용 Eclipse 도구 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window} 참조

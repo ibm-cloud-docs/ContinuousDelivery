@@ -39,10 +39,10 @@ lastupdated: "2018-7-18"
 
 다음 표에는 플랫폼 관리 역할에 맵핑된 조치에 대한 자세한 설명이 있습니다. 플랫폼 관리 역할을 사용하면 사용자가 플랫폼 레벨에서 서비스 리소스에 대한 태스크를 수행할 수 있습니다(예: 서비스에 대한 사용자 액세스 지정, 서비스 ID 작성 또는 삭제, 인스턴스 작성 및 애플리케이션에 인스턴스 바인드).
 
-| 플랫폼 관리 역할 | 조치 설명 | 조치 예 |
+| 플랫폼 관리 역할 | 조치 설명 | 조치 예|
 |:-----------------|:-----------------|:-----------------|
-| 뷰어, 운영자 | {{site.data.keyword.contdelivery_short}} 서비스의 인스턴스를 봅니다. | <ul><li>{{site.data.keyword.contdelivery_short}} 서비스 인스턴스를 클릭하여 해당 대시보드를 엽니다.</li>|
-| 편집자, 관리자 | {{site.data.keyword.contdelivery_short}} 서비스에 대한 플랜을 작성하고, 보고, 업데이트하고, 수정하며, 이 서비스의 인스턴스를 삭제합니다. |<ul><li>리소스 그룹에서 {{site.data.keyword.contdelivery_short}}의 인스턴스를 프로비저닝합니다.</li><li>리소스 그룹에서 {{site.data.keyword.contdelivery_short}}의 인스턴스를 삭제합니다.</li><li>{{site.data.keyword.contdelivery_short}} 인스턴스 플랜을 라이트에서 프로페셔널로 변경합니다.</li></ul> |
+| 뷰어, 운영자 | {{site.data.keyword.contdelivery_short}} 서비스의 인스턴스를 봅니다. | <ul><li>{{site.data.keyword.contdelivery_short}} 서비스 인스턴스를 클릭하여 해당 대시보드를 엽니다.</li>|</ul>
+| 편집자, 관리자 | {{site.data.keyword.contdelivery_short}} 서비스에 대한 플랜을 작성하고, 보고, 업데이트하고, 수정하며, 이 서비스의 인스턴스를 삭제합니다. |<ul><li>리소스 그룹에서 {{site.data.keyword.contdelivery_short}}의 인스턴스를 프로비저닝합니다.</li><li>리소스 그룹에서 {{site.data.keyword.contdelivery_short}}의 인스턴스를 삭제합니다.</li><li>{{site.data.keyword.contdelivery_short}} 인스턴스 플랜을 Lite에서 프로페셔널로 변경합니다.</li></ul> |
 | 관리자 | 권한 부여된 사용자 목록을 업데이트합니다.| <ul><li>권한 부여된 사용자 목록에 사용자를 추가합니다.</li><li>권한 부여된 사용자 목록에서 사용자를 제거합니다.</li></ul> |
 {: caption="표 1. IAM 사용자 역할 및 조치" caption-side="top"}
 
@@ -61,7 +61,7 @@ lastupdated: "2018-7-18"
 
 다음 표에는 서비스 액세스 역할에 맵핑된 조치에 대한 자세한 설명이 있습니다. 서비스 액세스 역할을 사용하면 사용자가 {{site.data.keyword.contdelivery_short}} API 호출 기능뿐만 아니라 {{site.data.keyword.contdelivery_short}}에 액세스할 수 있습니다.
 
-| 서비스 액세스 역할 | 조치 설명 | 조치 예 |
+| 서비스 액세스 역할 | 조치 설명 | 조치 예|
 |:-----------------|:-----------------|:-----------------|
 | 작성자, 관리자 | {{site.data.keyword.contdelivery_short}} 서비스 인스턴스 내에서 관리 탭의 권한 부여된 사용자 목록에서 사용자를 추가하고 제거합니다. | <ul><li>권한 부여된 사용자를 추가합니다.</li><li>권한 부여된 사용자를 제거합니다.</li></ul>|
 {: caption="표 3. IAM 서비스 액세스 역할 및 조치" caption-side="top"}

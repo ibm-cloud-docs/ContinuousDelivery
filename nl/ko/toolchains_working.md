@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # 도구 체인 작성
@@ -29,9 +31,9 @@ lastupdated: "2018-8-2"
 ##템플리트에서 도구 체인 작성   
 {: #creating_a_toolchain_from_a_template}
 
-특정 도구 통합 세트가 포함된 [도구 체인 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/devops/create){: new_window}에 대한 시작점으로 템플리트를 사용할 수 있습니다. [IBM Cloud Garage Method ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/category/tools){:new_window}에서 템플리트 사용 방법에 대해 자세히 알아보십시오.
+특정 도구 통합 세트가 포함된 [도구 체인 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/devops/create){: new_window}에 대한 시작점으로 템플리트를 사용할 수 있습니다. [IBM Cloud Garage Method ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/category/tools){:new_window}에서 템플리트 사용 방법에 대해 자세히 알아보십시오.
 
-1. {{site.data.keyword.Bluemix_notm}} 퍼블릭을 사용 중이면 [{{site.data.keyword.Bluemix_notm}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://console.bluemix.net){:new_window}에 로그인하십시오.
+1. {{site.data.keyword.Bluemix_notm}} 퍼블릭을 사용 중이면 [{{site.data.keyword.Bluemix_notm}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://cloud.ibm.com){:new_window}에 로그인하십시오.
 1. {{site.data.keyword.Bluemix_notm}} 데디케이티드를 사용 중이면 {{site.data.keyword.Bluemix_notm}}의 데디케이티드 환경에 로그인하십시오.
 1. {{site.data.keyword.Bluemix_notm}} 메뉴 표시줄의 메뉴에서 **DevOps**를 클릭하십시오.
 1. DevOps 대시보드의 **도구 체인** 페이지에서 **도구 체인 작성**을 클릭하십시오.
@@ -50,8 +52,8 @@ lastupdated: "2018-8-2"
  * 도구 체인을 작성할 지역입니다. 다른 지역을 사용하려는 경우 사용 가능한 지역의 목록에서 선택하십시오.
  * 도구 체인을 작성할 리소스 그룹 또는 조직입니다. 리소스 그룹 선택과 조직 선택 간에 전환하려면 링크를 클릭하십시오. 다른 리소스 그룹이나 조직을 사용하려는 경우 사용 가능한 리소스 그룹 또는 조직의 목록에서 선택하십시오.
  
-   리소스 그룹은 미국 남부 지역에서만 사용 가능합니다.
-   {: tip}
+   리소스 그룹은 미국 남부, 미국 동부, 영국, 독일 및 도쿄 지역에서 사용할 수 있습니다. Cloud Foundry 조직은 미국 남부, 영국 및 독일 지역에서 지원됩니다.
+   {: important}
 
 1. 도구 통합 섹션에서 도구 체인에 대해 구성할 각 도구 통합을 선택하십시오. 몇몇 도구 통합에서는 구성이 필요 없습니다. 도구 통합 구성에 대한 정보는 [도구 통합 구성](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}의 내용을 참조하십시오.
 1. **작성**을 클릭하십시오. 여러 단계가 자동으로 실행되어 도구 체인을 설정합니다. 설정된 도구 통합은 선택된 도구 체인 템플리트 및 사용자가 {{site.data.keyword.Bluemix_notm}} 퍼블릭 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드를 사용 중인지 여부에 따라 다릅니다. 예를 들어, {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 마이크로서비스 도구 체인을 작성하면 다음 단계가 실행됩니다.
@@ -67,13 +69,16 @@ lastupdated: "2018-8-2"
 ##앱에서 도구 체인 작성
 {: #creating_a_toolchain_from_an_app}
 
-앱에서 도구 체인을 작성할 수 있습니다. 도구 체인은 연속 개발, 배치, 모니터링 등을 지원할 수 있으며 사용하는 앱과 연관됩니다. 각 앱은 하나의 도구 체인과 연관될 수 있습니다. 도구 체인의 GitHub 또는 {{site.data.keyword.ghe_short}} 저장소에 변경사항을 푸시하면 파이프라인이 자동으로 앱을 빌드하고 배치합니다.  
+앱에서 도구 체인을 작성할 수 있습니다. 도구 체인은 연속 개발, 배치, 모니터링 등을 지원할 수 있으며 사용하는 앱과 연관됩니다. 각 앱은 하나의 도구 체인과 연관될 수 있습니다. 도구 체인의 GitHub 또는 {{site.data.keyword.ghe_short}} 저장소에 변경사항을 푸시하면 파이프라인이 자동으로 앱을 빌드하고 배치합니다.
 
-1. 앱 개요 페이지의 Continuous Delivery 카드에서 **사용**을 클릭하십시오. {{site.data.keyword.Bluemix_notm}} 퍼블릭을 사용 중이면 앱 스타터 코드로 채워진 새 GitHub 저장소에서 지속적 딜리버리를 위해 앱이 구성됩니다. {{site.data.keyword.Bluemix_notm}} 데디케이티드를 사용 중이면 앱 스타터 코드로 채워진 새 GitHub 또는 {{site.data.keyword.ghe_short}} 저장소에서 지속적 딜리버리를 위해 앱이 구성됩니다.
+고유의 코드 저장소를 사용하여 앱을 작성한 경우 앱의 세부사항 페이지에서 **DevOps 도구 체인에 연결**을 클릭하십시오. 그런 다음 [고유의 코드 저장소에서 앱 작성](/docs/apps/tutorials/tutorial_byoc.html)에 설명된 단계를 수행하십시오.
+{: note}
+
+1. 스타터 킷을 사용하여 앱을 작성한 경우 앱의 세부사항 페이지에서 **클라우드에 배치**를 클릭하십시오. {{site.data.keyword.Bluemix_notm}} 퍼블릭을 사용 중이면 앱 스타터 코드로 채워진 새 GitHub 저장소에서 지속적 딜리버리를 위해 앱이 구성됩니다. {{site.data.keyword.Bluemix_notm}} 데디케이티드를 사용 중이면 앱 스타터 코드로 채워진 새 GitHub 또는 {{site.data.keyword.ghe_short}} 저장소에서 지속적 딜리버리를 위해 앱이 구성됩니다.
 1. 도구 체인 작성 페이지에서 작성하려는 도구 체인의 다이어그램을 검토하십시오. 다이어그램은 도구 체인에서 해당 라이프사이클 단계(Phase)에 있는 각 도구 통합을 보여줍니다.
 1. 도구 체인 설정에 대한 기본 정보를 검토하십시오. 도구 체인의 이름은 {{site.data.keyword.Bluemix_notm}}에서 해당 도구 체인을 식별합니다. 다른 이름을 사용하려면 도구 체인의 이름을 변경하십시오.
 1. 도구 통합 섹션에서 도구 체인에 대해 구성할 각 도구 통합을 선택하십시오. 몇몇 도구 통합에서는 구성이 필요 없습니다. 도구 통합 구성에 대한 정보는 [도구 통합 구성](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}의 내용을 참조하십시오.
-1. **작성**을 클릭하십시오.  여러 단계가 자동으로 실행되어 도구 체인을 설정합니다. 설정된 도구 통합은 사용자가 도구 체인을 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용하는지 여부에 따라 다릅니다. 예를 들어, {{site.data.keyword.Bluemix_notm}} 퍼블릭의 앱에서 도구 체인을 작성하면 다음 단계가 실행됩니다.
+1. **작성**을 클릭하십시오. 여러 단계가 자동으로 실행되어 도구 체인을 설정합니다. 설정된 도구 통합은 사용자가 도구 체인을 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용하는지 여부에 따라 다릅니다. 예를 들어, {{site.data.keyword.Bluemix_notm}} 퍼블릭의 앱에서 도구 체인을 작성하면 다음 단계가 실행됩니다.
 
  * 도구 체인이 작성됩니다.
  * Delivery Pipeline을 구성한 경우에는 파이프라인이 작성되고 트리거됩니다.
@@ -84,6 +89,9 @@ lastupdated: "2018-8-2"
 {: #viewing_a_toolchain}
 
 도구 체인과 해당 도구 통합을 구성한 후에는 도구 체인의 시각적 표시를 볼 수 있습니다.
+
+앱의 세부사항 페이지에서 **도구 체인 보기**를 클릭하여 앱에서 도구 체인을 볼 수 있습니다.
+{: tip}
 
 1. DevOps 대시보드의 **도구 체인** 페이지에서 **리소스 그룹** 또는 **Cloud Foundry 조직**을 클릭하십시오. 선택된 리소스 그룹 또는 Cloud Foundry 조직 내에 포함된 모든 도구 체인이 표시됩니다. 보려는 도구 체인을 클릭하여 개요 페이지를 여십시오. 또는 앱 개요 페이지의 Continuous Delivery 카드에서 **도구 체인 보기**를 클릭하십시오. 그런 다음 **개요**를 클릭하십시오.
 2. 도구 체인에 있는 도구 통합에 액세스하려면 도구를 클릭하십시오.

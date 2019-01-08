@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
-{:download: .download}
+{:note: .note}
+{:tip: .tip}
+{:important: .important}
 
 # 도구 체인 사용
 {: #toolchains-using}
@@ -20,8 +22,8 @@ lastupdated: "2018-8-2"
 오픈 도구 체인은 {{site.data.keyword.Bluemix}}의 퍼블릭 및 데디케이티드 환경에서 사용 가능합니다. 도구 체인을 사용하여 일상적인 개발, 배치 및 및 운영 작업의 생산성을 향상시킬 수 있습니다. 도구 체인을 설정한 후에는 도구 통합을 추가, 삭제 또는 구성하거나 도구 체인에 대한 액세스를 관리할 수 있습니다.
 {: shortdesc}
 
-리소스 그룹 또는 Cloud Foundry 조직을 사용하여 미국 남부 지역에서 도구 체인을 관리할 수 있습니다. 액세스 제어 및 권한 부여된 사용자 관리는 도구 체인이 리소스 그룹에 포함되었는지 아니면 Cloud Foundry 조직에 포함되었는지에 따라 도구 체인에 대해 다르게 작동합니다.
-{: tip}
+리소스 그룹을 사용하여 미국 남부, 미국 동부, 영국, 독일 및 도쿄 퍼블릭 지역에서 도구 체인을 관리할 수 있습니다. Cloud Foundry 조직을 사용하여 미국 남부, 영국 및 독일 퍼블릭 지역에서 도구 체인을 관리할 수 있습니다. 액세스 제어 및 권한 부여된 사용자 관리는 도구 체인이 리소스 그룹에 포함되었는지 아니면 Cloud Foundry 조직에 포함되었는지에 따라 도구 체인에 대해 다르게 작동합니다.
+{: important}
 
 ## 도구 통합 구성
 {: #configuring_a_tool_integration}
@@ -73,7 +75,7 @@ Identity and Access Management(IAM) 서비스를 사용하여 도구 체인에 �
 {{site.data.keyword.contdelivery_short}}의 선택된 인스턴스에 대한 권한 부여된 사용자 목록에 있는 사용자만 Delivery Pipeline, Eclipse Orion {{site.data.keyword.webide}} 및 {{site.data.keyword.contdelivery_short}} 도구 체인의 {{site.data.keyword.gitrepos}} 기능을 사용할 수 있습니다. 지정된 리소스 그룹 내에서 {{site.data.keyword.contdelivery_short}}의 선택된 인스턴스의 관리 탭을 사용하여 권한 부여된 사용자 자격을 관리할 수 있습니다.
 
 Delivery Pipeline과 같은 도구 체인에 있는 {{site.data.keyword.contdelivery_short}}의 주요 기능에 액세스하려면 사용자에게 IAM의 도구 체인에 대한 액세스 권한이 있어야 하고 사용자는 {{site.data.keyword.contdelivery_short}} 인스턴스의 권한 부여된 사용자 목록에 있어야 합니다.
-{: tip}
+{: important}
 
 권한 부여된 사용자 자격은 {{site.data.keyword.contdelivery_short}}의 인스턴스와 동일한 리소스 그룹에 포함된 모든 도구 체인에 적용됩니다.
 {: tip}
@@ -85,7 +87,7 @@ Delivery Pipeline과 같은 도구 체인에 있는 {{site.data.keyword.contdeli
 도구 체인이 연관된 조직 및 도구 체인의 액세스 제어 목록 모두에 사용자를 추가하여 도구 체인에 대한 액세스 권한을 해당 사용자에게 부여할 수 있습니다. 각 도구 체인은 특정 조직과 연관되어 있으며 해당 조직의 구성원인 사용자는 이와 연관된 도구 체인의 액세스 제어 목록에 추가될 수 있습니다. 현재 작업 중인 조직은 메뉴 표시줄에 표시됩니다. 다른 도구 체인 세트에 액세스하려면 다른 조직으로 전환하십시오.
 
 도구 체인이 호스팅되는 지역에 있는 도구 체인의 조직에 사용자를 추가해야 합니다. 앱을 다른 지역에 배치하도록 도구 체인이 구성된 경우 여전히 해당 지역에 앱을 배치합니다.
-{: tip}
+{: important}
 
 {{site.data.keyword.ghe_short}}용 {{site.data.keyword.Bluemix_notm}} 데디케이티드를 사용 중인 경우, {{site.data.keyword.Bluemix_notm}} 조직 및 영역에 사용자를 추가하면 해당 사용자가 자체 {{site.data.keyword.Bluemix_notm}} ID 및 비밀번호를 사용하여 {{site.data.keyword.ghe_short}}에 로그인할 수 있습니다. 사용자가 로그인할 때 사용자의 계정이 작성됩니다. {{site.data.keyword.Bluemix_notm}} 조직 및 영역에 사용자를 추가하는 경우, {{site.data.keyword.ghe_short}} 저장소에는 자동으로 추가되지 않습니다. 저장소에 대해 관리자 권한이 있는 사용자가 추가해야 합니다. 자세한 정보는 [Dedicated GitHub Enterprise 사용](/docs/services/ghededicated/index.html){: new_window}의 내용을 참조하십시오. {{site.data.keyword.ghe_short}}의 자체 관리 버전을 사용 중이면 내부 프로시저를 따르십시오.
 
@@ -103,15 +105,17 @@ Delivery Pipeline과 같은 도구 체인에 있는 {{site.data.keyword.contdeli
 
 * 도구 체인의 조직의 구성원이 아닌 사용자에게 액세스 권한을 부여하려면 다음 단계를 따르십시오.
 
-   a. 메뉴 표시줄에서 **관리 > 보안 > ID 및 액세스**를 클릭하십시오.
+   a. 메뉴 표시줄에서 **관리 > 액세스(IAM)**를 클릭하십시오.
 
-   b. 액세스 권한을 지정하려는 사용자에 대한 행에서 **조치** 메뉴를 선택한 후 **액세스 권한 지정**을 클릭하십시오.
+   b. **사용자로 액세스 시작**을 클릭하십시오.
+   
+   c. 액세스 권한을 지정하려는 사용자에 대한 행에서 **조치** 메뉴를 선택한 후 **액세스 권한 지정**을 클릭하십시오.
+   
+   d. **Cloud Foundry를 사용한 액세스 권한 지정**을 선택하십시오.
 
-   c. **Cloud Foundry를 사용한 액세스 권한 지정**을 선택하십시오.
+   e. **조직 지정**을 선택하십시오.
 
-   d. **조직 지정**을 선택하십시오.
-
-   e. 사용자 액세스 권한을 지정하십시오.
+   f. 사용자 액세스 권한을 지정하십시오.
 
      * 사용자를 추가할 조직을 선택하십시오.
 

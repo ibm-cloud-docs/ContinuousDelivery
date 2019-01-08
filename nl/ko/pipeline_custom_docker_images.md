@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -31,10 +33,10 @@ lastupdated: "2018-8-2"
 
 사용자 정의 Docker 이미지 작업의 Docker 이미지 이름은 이미지 이름이 Docker CLI와 작동하는 동일한 방식으로 작동하도록 설계되었습니다. Docker 이미지 이름의 형식은 `[repository][:][tag]`입니다. 예를 들어, `docker run maven:3.5.3-ibmjava`의 경우 Docker 이미지는 `maven:3.5.3-ibmjava`이며 여기서 `maven`은 저장소이며 `3.5.3-ibmjava`는 태그입니다. 사용할 수 있는 Docker 이미지 이름에 대한 제한사항은 없습니다. 올바른 Docker 이미지는 모두 작동합니다.
 
-**Docker 이미지 이름** 필드가 채워지지 않은 경우 표준 파이프라인 기본 이미지가 사용됩니다.
+**Docker 이미지 이름** 필드가 채워지지 않은 경우 표준 파이프라인 기본 이미지가 사용됩니다. 
 {: tip}
 
-기본적으로 [Docker 허브 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://hub.docker.com/){: new_window}의 저장소가 검색됩니다. IBM Cloud 레지스트리와 같은 다른 Docker 레지스트리를 사용하는 경우 전체 DNS 이름을 사용할 수 있습니다. 또한 Docker 허브의 이미지에 대한 완전한 이름을 사용할 수 있습니다. (예: `registry.hub.docker.com/library/maven:3.5.3-ibmjava`)
+기본적으로 [Docker 허브 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://hub.docker.com/){: new_window}의 저장소가 검색됩니다. {{site.data.keyword.registrylong}}와 같은 다른 Docker 레지스트리를 사용하는 경우 전체 DNS 이름을 사용할 수 있습니다. 또한 Docker 허브의 이미지에 대한 완전한 이름을 사용할 수 있습니다. (예: `registry.hub.docker.com/library/maven:3.5.3-ibmjava`)
 
 Docker 이미지에 대한 `tag`는 선택사항입니다. 태그를 지정하지 않는 경우 기본적으로 `latest`로 설정됩니다. 기본값 `latest`는 저장소 소유자가 관리해야 하는 태그 이름입니다. 이 Docker 이미지가 시간 순서대로 최신 이미지라는 것을 의미하지 않습니다.
 
@@ -45,12 +47,12 @@ Docker 허브에서 대규모의 저장소 커뮤니티를 찾을 수 있습니�
 
 인증이 필요한 개인용 레지스트리를 사용 중인 경우 `DOCKER_USERNAME` 및 `DOCKER_PASSWORD`의 두 가지 추가 단계 환경 특성을 설정해야 합니다. `DOCKER_PASSWORD`를 마스킹하기 위해 보안 특성을 사용할 수 있습니다. 이미지를 가져오기 전에 사용자 정의 Docker 이미지 작업은 사용자 이름 및 비밀번호 신임 정보를 사용하여 `docker login`을 완료합니다.
 
-대부분의 레지스트리의 경우 제공된 사용자 이름 및 비밀번호를 사용할 수 있습니다. IBM Cloud Registry를 사용하여 개인용 이미지를 저장하는 경우 인증을 위해 플랫폼 API 키를 사용해야 합니다. 
+대부분의 레지스트리의 경우 제공된 사용자 이름 및 비밀번호를 사용할 수 있습니다. {{site.data.keyword.registrylong_notm}}를 사용하여 개인용 이미지를 저장하는 경우 인증을 위해 플랫폼 API 키를 사용해야 합니다. 
 
-1. [플랫폼 API 키를 요청 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/iam/#/apikeys){: new_window}하고 키를 저장하십시오. 
+1. [플랫폼 API 키를 요청 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/iam/#/apikeys){: new_window}하고 키를 저장하십시오. 
 1. `DOCKER_USERNAME`에 `iamapikey`를 사용하고 `DOCKER_PASSWORD`에 대해 저장한 플랫폼 API 키를 사용하여 두 가지 단계 환경 특성을 작성하십시오.
 
- ![IBM Cloud 레지스트리 신임 정보](images/custom-image-private-repository.png)
+ ![{{site.data.keyword.registrylong_notm}} 신임 정보](images/custom-image-private-repository.png)
 
 
 ## 스크립트 지정

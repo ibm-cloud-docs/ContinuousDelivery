@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-11"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -84,11 +84,9 @@ lastupdated: "2018-8-2"
 
 단계 히스토리 페이지에서 작업에 대한 로그와 단계를 실행되는 대로 볼 수 있습니다.
 
-작업의 로그를 보려면 작업을 클릭하십시오. 또는 단계에서 **로그 및 히스토리 보기**를 클릭하십시오.
+1. 작업의 로그를 보려면 작업을 클릭하십시오. 또는 단계에서 **로그 및 히스토리 보기**를 클릭하십시오.
 
-배치된 애플리케이션의 런타임 로그를 보려면 **런타임 로그 보기**를 클릭하십시오.
-
-![클릭하여 관련 로그를 열 수 있는 단계 타일의 영역](images/view_logs_and_history.png)
+2. 배치된 애플리케이션의 런타임 로그를 보려면 **런타임 로그 보기**를 클릭하십시오.
 
 작업 로그 이외에, 단위 테스트 결과, 생성된 아티팩트 및 빌드 작업의 코드 변경사항을 볼 수 있습니다.
 

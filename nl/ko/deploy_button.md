@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-18"
 
 ---
 
@@ -17,14 +17,14 @@ lastupdated: "2018-8-2"
 
 # {{site.data.keyword.Bluemix_notm}}에 배치 단추 작성 {: #deploy-button}
 
-{{site.data.keyword.Bluemix_notm}}에 배치 단추는 도구 체인을 사용하여 다른 사람들이 코드를 실험하고 {{site.data.keyword.Bluemix_notm}}에 배치할 수 있도록 공용 Git 소스 앱을 공유하는 효율적인 방법입니다. 이 단추를 사용하려면 최소한의 구성이 필요하며 마크업을 지원하는 모든 위치에 이 단추를 삽입할 수 있습니다. 단추를 클릭하는 모든 사용자는 원래의 앱이 영향을 받지 않도록 새 Git 저장소에 코드의 복제된 사본을 작성합니다.
+{{site.data.keyword.Bluemix_notm}}에 배치 단추는 도구 체인을 사용하여 다른 사람들이 코드를 실험하고 {{site.data.keyword.Bluemix_notm}}에 배치할 수 있도록 공용 Git 소스 앱을 공유하는 효율적인 방법입니다. 이 단추를 사용하려면 최소한의 구성이 필요하며 마크업을 지원하는 모든 위치에 이 단추를 삽입할 수 있습니다. 단추를 클릭하는 모든 사용자는 원래의 앱이 영향을 받지 않도록 새 Git 저장소에 코드의 복제된 사본을 작성합니다.  
 {: shortdesc}
 
 사용자가 단추를 클릭하면 다음과 같은 조치가 수행됩니다.
 
 1. 사용자가 활성 {{site.data.keyword.Bluemix_notm}} 계정을 갖고 있지 않은 경우 계정을 작성해야 합니다. 평가판 계정 또는 실제 계정을 작성할 수 있습니다.
 
-2. 사용자는 {{site.data.keyword.deliverypipeline}} 아이콘을 클릭하여 지역, 리소스 그룹(미국 남부 지역에서만 사용 가능) 또는 조직, 영역 및 앱 이름을 선택할 수 있습니다. 제안된 앱 이름은 원래의 Git 저장소의 이름 및 시간으로 생성된 도구 체인 이름과 동일합니다. 도구 체인 이름도 편집할 수 있습니다.
+2. 사용자는 {{site.data.keyword.deliverypipeline}} 아이콘을 클릭하여 지역, 리소스 그룹(미국 남부, 미국 동부, 영국, 독일 및 도쿄 지역에서 사용 가능) 또는 조직, 영역(미국 남부, 영국 및 독일 지역에서 사용 가능) 및 앱 이름을 선택할 수 있습니다. 제안된 앱 이름은 원래의 Git 저장소의 이름 및 시간으로 생성된 도구 체인 이름과 동일합니다. 도구 체인 이름도 편집할 수 있습니다.
 
 3. Git 저장소의 새 개인용 복제본, 코드 변경사항 빌드 및 배치를 위한 파이프라인, Cloud에서 코드 편집을 위한 Eclipse Orion {{site.data.keyword.webide}} 및 문제 트래커를 포함한 도구 체인이 작성됩니다.
 
@@ -43,11 +43,11 @@ lastupdated: "2018-8-2"
 
 공용 {{site.data.keyword.gitrepos}} 저장소에 대한 앱 단추 예를 참조하십시오.
 
-[![Bluemix에 배치](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
 
 공용 GitHub 저장소에 대한 앱 단추 예를 참조하십시오.
 
-[![Bluemix에 배치](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
 
 ## 단추 작성 {: #create-button}
 
@@ -58,7 +58,7 @@ lastupdated: "2018-8-2"
 HTML에서 단추를 작성하려면 이 스니펫을 복사하여 공용 Git 저장소 URL 및 분기를 삽입하십시오.
 
 ```HTML
-<a href="https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://bluemix.net/deploy/button.png" alt="Deploy to IBM Cloud"></a>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://cloud.ibm.com/devops/setup/deploy/button.png" alt="Deploy to IBM Cloud"></a>
 ```
 {: codeblock}
 
@@ -69,7 +69,7 @@ HTML에서 단추를 작성하려면 이 스니펫을 복사하여 공용 Git �
 마크다운에서 단추를 작성하려면 이 스니펫을 복사하여 공용 Git 저장소 URL 및 분기를 삽입하십시오.
 
 ```Markdown
-[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>)
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=<git_repository_URL>&branch=<git_branch>)
 ```
 {: codeblock}
 
@@ -81,9 +81,9 @@ HTML에서 단추를 작성하려면 이 스니펫을 복사하여 공용 Git �
 
 {{site.data.keyword.Bluemix_notm}}에 배치 단추에 대한 스니펫을 사용자 정의하는 경우 두 템플리트 모두에서 외부 단추 이미지의 기본 경로를 PNG 형식 및 영어로 사용할 것을 고려하십시오.
 
-* 단추의 이미지를 PNG 대신 SVG로 사용하려는 경우 스니펫에 사용되는 단추 이미지의 경로를 `https://bluemix.net/deploy/button.svg`로 변경하십시오.
+* 단추의 이미지를 PNG 대신 SVG로 사용하려는 경우 스니펫에 사용되는 단추 이미지의 경로를 `https://cloud.ibm.com/devops/setup/deploy/button.svg`로 변경하십시오.
 
-* 단추의 이미지를 사용하려는 경우 스니펫에 사용되는 단추 이미지의 경로를 `https://bluemix.net/deploy/button_x2.png`로 변경하십시오. 이 이미지는 기본 이미지 크기의 두 배입니다.
+* 단추의 이미지를 사용하려는 경우 스니펫에 사용되는 단추 이미지의 경로를 `https://cloud.ibm.com/devops/setup/deploy/button_x2.png`로 변경하십시오. 이 이미지는 기본 이미지 크기의 두 배입니다.
 
 * 이미지를 로컬로 저장하려는 경우 이미지를 다운로드하여 Git 저장소에 저장할 수 있습니다. 이미지의 상대 위치를 사용하도록 경로를 조정하십시오.
 
@@ -102,9 +102,9 @@ HTML에서 단추를 작성하려면 이 스니펫을 복사하여 공용 Git �
 지원되는 빌더는 다음과 같습니다.
 
 * [Ant ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"):](http://ant.apache.org/manual/using.html){:new_window} `build.xml`. `./output/` 폴더에 출력을 빌드합니다.
-* [Gradle ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"):](http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle){:new_window} `/build.gradle`. `.` 폴더에 출력을 빌드합니다.
+* [Gradle ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"):](https://docs.gradle.org/current/userguide/getting_started.html){:new_window} `/build.gradle`. `.` 폴더에 출력을 빌드합니다.
 * [Grunt ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"):](http://gruntjs.com/getting-started#the-gruntfile){:new_window} `/Gruntfile.js`. `.` 폴더에 출력을 빌드합니다.
-* [Maven ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"):](http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven){:new_window} `/pom.xml`. `./target/` 폴더에 출력을 빌드합니다.
+* [Maven ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"):](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:new_window} `/pom.xml`. `./target/` 폴더에 출력을 빌드합니다.
 
 ### 파이프라인 파일 요구사항
 {: pipeline_file}
@@ -133,4 +133,4 @@ Kubernetes 클러스터에 Cloud Foundry 앱 포팅에 대해 자세히 살펴�
 
 `manifest.yml` 파일이 사용자의 저장소에 있지 않아도 됩니다. 그러나 앱에서 다른 서비스를 실행해야 하는 경우 해당 서비스를 선언하는 Manifest 파일을 제공해야 합니다.
 
-Manifest 파일에 대해 자세히 알아보려면 [애플리케이션 Manifest](/docs/cfapps/depapps.html#appmanifest)를 참조하십시오.
+Manifest 파일에 대해 자세히 알아보려면 [애플리케이션 Manifest](/docs/cloud-foundry/deploy-apps.html#appmanifest)를 참조하십시오.
