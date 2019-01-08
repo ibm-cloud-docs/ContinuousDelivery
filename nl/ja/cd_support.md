@@ -2,20 +2,23 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-12-6"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:codeblock:.codeblock}
 
 
 # {{site.data.keyword.contdelivery_short}} のヘルプとサポートの入手    
 {: #cd_support}  
 
-{{site.data.keyword.contdelivery_full}} チームは、developerWorks フォーラムをアクティブに監視して、{{site.data.keyword.contdelivery_short}} のサービスとツールチェーンに関する質問を確認しています。 フォーラムで質問するには、ツールチェーン・ページと {{site.data.keyword.contdelivery_short}} ページの下部にある、**「フォーラムでヘルプを利用 (Get help in the forum)」**ボタン ![**フォーラムでヘルプを利用 (Get help in the forum)** ボタン](images/get_help_in_the_forum.png) をクリックします。
+{{site.data.keyword.contdelivery_full}} チームは、developerWorks フォーラムをアクティブに監視して、{{site.data.keyword.contdelivery_short}} のサービスとツールチェーンに関する質問を確認しています。 フォーラムで質問するには、ツールチェーン・ページと {{site.data.keyword.contdelivery_short}} ページで、**「フォーラムでヘルプを利用 (Get help in the forum)」** ![**フォーラムでヘルプを利用 (Get help in the forum)** ボタン](images/get_help_in_the_forum.png) をクリックします。
 
 <table>
 <tr>
@@ -47,7 +50,7 @@ lastupdated: "2018-3-26"
 1. メニュー・バーで**「サポート」**をクリックし、次に**「チケットの追加」**をクリックします。
 1. フォームに記入して、技術サポートが必要な理由を示します。
 
-IBM {{site.data.keyword.Bluemix_notm}} サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポートへのお問い合わせ](https://console.bluemix.net/docs/support/index.html#contacting-support) を参照してください。
+IBM {{site.data.keyword.Bluemix_notm}} サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポートへのお問い合わせ](https://cloud.ibm.com/docs/support/index.html#contacting-support) を参照してください。
 
 
 ## {{site.data.keyword.Bluemix_notm}} のサポート

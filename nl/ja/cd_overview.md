@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-15"
+lastupdated: "2018-12-7"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-15"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -27,8 +29,8 @@ lastupdated: "2018-8-15"
 
   ツールチェーンとは、アプリケーションを共同で開発、ビルド、デプロイ、テスト、管理するために使用できる統合ツール・セットです。ツールチェーンを使用すると、操作を反復可能にして管理しやすくすることができます。 ツールチェーンには、オープン・ソース・ツール、{{site.data.keyword.Bluemix_notm}} サービス ([{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window} など)、およびサード・パーティー製のツール (GitHub、PagerDuty、Slack など) を含めることができます。 
   
-  {{site.data.keyword.DRA_short}} は米国南部地域でのみ利用可能です。
-  {: tip}
+  {{site.data.keyword.DRA_short}} は、米国南部、英国およびドイツ地域で利用可能です。
+  {: important}
 
  * 自動化された[パイプライン](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window}を使用すれば、継続的なデリバリーが可能になります。
 

@@ -30,7 +30,7 @@ lastupdated: "2018-7-19"
 
 以下のいずれかの方法を使用してパイプラインを作成できます。
 
-   * [既存の Cloud Foundry アプリケーションからツールチェーンを作成します](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app){: new_window}。作成されたツールチェーンにはパイプラインが含まれています。
+   * [既存の Cloud Foundry アプリケーションからツールチェーンを作成します](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app){: new_window}。 作成されたツールチェーンにはパイプラインが含まれています。
 
    * 少なくとも 1 つのパイプラインを含む [テンプレートからツールチェーンを作成します](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_a_template){: new_window}。
 

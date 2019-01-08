@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-6-22"
+lastupdated: "2018-10-10"
 
 ---
 
@@ -20,10 +20,10 @@ lastupdated: "2018-6-22"
 # {{site.data.keyword.cloudaccesstrailshort}} イベント
 {: #at_events}
 
-ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix}} 内の {{site.data.keyword.contdelivery_short}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull}} サービスを使用してトラッキングします。
+ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix}} 内の {{site.data.keyword.contdelivery_short}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull}} サービスを使用してトラッキングします。 
 {: shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。詳細については、[{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla) を参照してください。
+{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。 詳細については、[{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla) を参照してください。
 
 <!-- You can create different sections to group events by area. -->
 
@@ -34,10 +34,10 @@ lastupdated: "2018-6-22"
 
 | アクション | 説明 | 
 |:-----------------|:-----------------|
-| ツールチェーンの作成 | ツールチェーンを作成します | 
-| ツールチェーンの削除 | ツールチェーンを削除します |
-| ツールの作成 | ツール統合を作成します |
-| ツールの削除 | ツール統合を削除します |
+| continuous-delivery.toolchain.create | ツールチェーンを作成します | 
+| continuous-delivery.toolchain.delete | ツールチェーンを削除します |
+| toolchain.tool-instance.deploy | ツール統合を作成します |
+| toolchain.tool-instance.undeploy | ツール統合を削除します |
 {: caption="表 1. イベントを生成するアクション" caption-side="top"}
 
 ## イベントの表示先

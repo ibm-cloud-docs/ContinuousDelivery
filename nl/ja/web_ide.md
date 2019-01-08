@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -17,10 +17,13 @@ lastupdated: "2018-8-2"
 # Eclipse Orion Web IDE での開発
 {: #web_ide}
 
-Eclipse Orion {{site.data.keyword.webide}} は、ブラウザー・ベースの開発環境であり、この開発環境では、コンテンツ・アシスト、コード補完、エラー・チェックによる支援を使用して、JavaScript、HTML、CSS で Web の開発を行うことができます。 {{site.data.keyword.webide}} は、ほとんどすべての言語に対応しており、大部分のファイル・タイプに対して構文の強調表示を提供します。 ソース管理が組み込まれており、コードをローカルにデプロイしてアプリのテストとデバッグを行うことができます。
+Eclipse Orion {{site.data.keyword.webide}} は、ブラウザー・ベースの開発環境であり、この開発環境では、コンテンツ・アシスト、コード補完、エラー・チェックによる支援を使用して、JavaScript、HTML、CSS で Web の開発を行うことができます。 {{site.data.keyword.webide}} はほとんどすべての言語に対応しており、大部分のファイル・タイプの構文を強調表示できます。ソース管理が組み込まれており、コードをローカルにデプロイしてアプリのテストとデバッグを行うことができます。
 {:shortdesc}
 
 何よりも良い点は、{{site.data.keyword.webide}} が Web ベースであるという点です。 インストールが必要なものは何もなく、保守や拡大縮小が必要なものも何もありません。 インターネット接続さえあれば、どこでも開発を行うことができます。
+
+規制対象データを {{site.data.keyword.webide}} 内のファイルに保存しないでください。規制対象データ用の手順は現在機能していません。
+{: tip}
 
 ## IDE のセットアップ
 {: #editorsetup}
@@ -82,17 +85,17 @@ Eclipse Orion {{site.data.keyword.webide}} は、ブラウザー・ベースの�
 2. アプリがデプロイされた後、実行バーを使用して、アプリの停止、再始動、デバッグ、ログの表示などを行うことができます。
 
 <table role="presentation">
-<tr><td><img src="./images/stop_button.png"  alt="停止アイコン"></td><td>アプリを停止します</td></tr>
-<tr><td> <img src="./images/open_app_url.png"  alt="アプリ URL を開くアイコン"></td><td> デプロイされたアプリを開きます</td></tr>
-<tr><td><img src="./images/view_logs.png"  alt="ログ表示アイコン"></td><td>デプロイされたアプリのログを表示します</td></tr>
-<tr><td><img src="./images/open_dashboard.png"  alt="ダッシュボードを開くアイコン"></td><td>アプリのダッシュボードを開きます</td></tr>
+<tr><td><img src="./images/stop_button.png"  alt="停止アイコン"></td><td>アプリを停止します。</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="アプリ URL を開くアイコン"></td><td> デプロイされたアプリを開きます。</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="ログ表示アイコン"></td><td>デプロイされたアプリのログを表示します。</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="ダッシュボードを開くアイコン"></td><td>アプリのダッシュボードを開きます。</td></tr>
 </table>
 
 Node.js アプリを開発している場合は、ライブ編集モードを有効にします <img  src="./images/enable_live_edit.png"  alt="ライブ編集を有効にするスライダー">。
 
-<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="ライブ編集再開アイコン"></td><td>ライブ編集モードを有効にして、再デプロイメントなしでアプリを素早く再始動します</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="ライブ編集再開アイコン"></td><td>ライブ編集モードを有効にして、再デプロイメントなしでアプリを素早く再始動します。</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="デバッグ・アイコン"></td>
-<td>ライブ編集モードを有効にして、デバッガーにアクセスします
+<td>ライブ編集モードを有効にして、デバッガーにアクセスします。
 </td></tr>
 </table>
 
@@ -161,7 +164,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 ## サポートされる言語
 {: #supported_languages}
 
-Eclipse Orion {{site.data.keyword.webide}} では、JavaScript、HTML、CSS、Markdown の各ファイルでコンテンツ・アシスト、ツールチップ、プレビュー、妥当性検査、構文強調表示を利用できます。 構文強調表示は、以下のファイル・タイプでも使用できます。
+Eclipse Orion {{site.data.keyword.webide}} では、コンテンツ・アシスト、ツールチップ、プレビュー、妥当性検査を提供しており、JavaScript、HTML、CSS、Markdown の各ファイルの構文を構文強調します。また、以下のファイル・タイプの構文も強調表示できます。
 
 <table role="presentation">
 <tr>

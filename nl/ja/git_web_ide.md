@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Eclipse Orion Web IDE での Git の作業
@@ -91,7 +93,7 @@ Eclipse Orion {{site.data.keyword.webide}} で、多数の一般的な Git コ�
 参照されるリモート・ブランチの内容に、アクティブ・ローカル・ブランチの内容を上書きします。
 
 ローカル・ブランチをリモート・ブランチに強制的にプッシュすると、リモート・ブランチでのコミットが失われる可能性があります。
-{: tip}
+{: important}
 
 ### Eclipse Orion Web IDE
 {: #force_push_web}
@@ -221,7 +223,7 @@ Eclipse Orion {{site.data.keyword.webide}} で、多数の一般的な Git コ�
 {: #modify_last_commit}
 
   最後のコミットをリモート・リポジトリーにプッシュした後に変更すると、コミット履歴が書き換えられることになります。 この変更は、プロジェクト内で他のコントリビューターがコミットに失敗したりその他の問題に直面したりする原因になる可能性があります。 リモート・リポジトリーにプッシュしたコミットを変更する前に、その操作の意味をよく理解するようにしてください。
-  {: tip}
+  {: important}
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}

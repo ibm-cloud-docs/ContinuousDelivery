@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-12"
 
 ---
 {:shortdesc: .shortdesc}
@@ -11,16 +11,18 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
 # カスタム・ツールチェーン・テンプレートの作成
 {: #toolchains_custom}
 
-カスタム・ツールチェーン・テンプレートを作成して DevOps ワークフローを改善します。 既存のツールチェーン・テンプレートを使用してすぐに始めるか、必要な統合のみを組み込んだツールチェーン・テンプレートを作成できます。 ツールチェーンの統合はいつでも追加したり削除したりできます。
+カスタム・ツールチェーン・テンプレートを作成して DevOps ワークフローを改善します。 既存のツールチェーン・テンプレートを使用してすぐに始めるか、必要なツール統合のみを組み込んだツールチェーン・テンプレートを作成できます。ツールチェーンに対する統合の追加や削除はいつでも行えます。
 {:shortdesc}
 
-[ツールチェーンを作成](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}するには、いくつかの方法を使用できます。 カスタム・ツールチェーン・テンプレートを作成したら、[「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを作成](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}してこれを共有できます。   ツールチェーン・テンプレート SDK の詳細については、[Open Toolchain Templates SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window} を参照してください。 ステップバイステップのチュートリアルについては、[Garage Method サイト](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}を参照してください。
+[ツールチェーンを作成](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}するには、いくつかの方法を使用できます。 カスタム・ツールチェーン・テンプレートを作成したら、[「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを作成](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}してこれを共有できます。ツールチェーン・テンプレート SDK について詳しくは、[Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window} を参照してください。ステップバイステップのチュートリアルについては、[Garage Method サイト](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}を参照してください。
 
 
 ## 概説
@@ -37,7 +39,7 @@ lastupdated: "2018-8-2"
 
  このテンプレートは、基本的な Hello World アプリケーションを単一の GitHub リポジトリーからデプロイします。このテンプレートには、継続的デリバリー、ソース管理、問題のトラッキング、オンライン編集のための構成があらかじめ行われたシンプルなツールチェーンが含まれています。
 
-2. さらに複雑なツールチェーン・テンプレートから開始する場合は、[マイクロサービス用のクラウド・ネイティブのツールチェーン](https://github.com/open-toolchain/toolchain-demo){: new_window}のクローンを作成することから始めることができます。
+2. 最初からもっと複雑なツールチェーン・テンプレートを使用する場合は、[マイクロサービス用のクラウド・ネイティブのツールチェーン](https://github.com/open-toolchain/toolchain-demo){: new_window}を複製します。
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -55,7 +57,7 @@ lastupdated: "2018-8-2"
 
 いずれのテンプレートを選択するかに関係なく、作成するツールチェーンのカスタマイズ・プロセスは一般的に同じです。
 
-テンプレートのクローンを作成すると、Readme ファイルと `.bluemix` ディレクトリーを含んだ基本的な GitHub リポジトリーが作成されます。 このディレクトリーには、ツールチェーンの動作に必要なすべての構成ファイルが含まれます。 `.bluemix` ディレクトリーには、少なくとも次のファイルが含まれている必要があります。
+テンプレートのクローンを作成すると、Readme ファイルと `.bluemix` ディレクトリーを含んだ基本的な GitHub リポジトリーが作成されます。このディレクトリーには、ツールチェーンの動作に必要なすべての構成ファイルが含まれます。 `.bluemix` ディレクトリーには、少なくとも次のファイルが含まれている必要があります。
 
 * `toolchain.yml`
 * `deploy.json`
@@ -65,41 +67,41 @@ lastupdated: "2018-8-2"
 
 
 これらの各ファイルについては、以降のセクションで説明します。 各セクションには、ツールチェーンの展開に合わせて確認できる構成情報が含まれます。
-YAML は、JSON の厳密なスーパーセットに、構文的に有意な改行と字下げが追加された、データ・シリアライゼーション言語です。 しかし、YAML ではリテラルのタブ文字は一切使用できません。
+YAML は、JSON の厳密なスーパーセットに、構文的に有意な改行と字下げが追加された、データ・シリアライゼーション言語です。 しかし、YAML ではリテラルのタブ文字は使用できません。
 
 ## 構成ファイルについて
 {: #toolchains_custom_config_files}
 
 
-ツールチェーン・テンプレートの構成ファイルは、主に YAML 形式のファイルで構成されます。 各ファイルには、ツールチェーンの様々な側面を記述するメタデータが含まれます。 メタデータには次の情報が含まれます
+ツールチェーン・テンプレートの構成ファイルは、主に YAML 形式のファイルで構成されます。 各ファイルには、ツールチェーンの様々な側面を記述するメタデータが含まれます。 メタデータには次の情報が含まれます。
 * ツールチェーンとリポジトリーに関する情報。
 * コードのビルドとデプロイ方法に関する詳細。
 * ツールチェーンに含まれるツールの構成プロパティー。
 
 ツールチェーンが複雑になると、構成ファイルも同様に複雑になることがあります。
 
-YAML ファイルで作業する際に注意すべきガイドラインは次のとおりです。
+YAML ファイルを使用して作業する場合は、以下のガイドラインに従ってください。
 
 * スペースにはスペースだけを使用します。 タブは許可されません。
 * すべてのプロパティーとリストは、1 つ以上のスペースでインデントする必要があります。
 * すべてのキーとプロパティーは大/小文字が区別されます。
 
 YAML ファイルのフォーマットに細心の注意を払い、エラーが発生する可能性を低くします。
-エラーを確認するには、[このパーサー](http://wiki.ess3.net/yaml/){: new_window}のようなシンプルなバリデーターを使用できます。
-{: tip}
+エラーを確認するには、[このパーサー](http://wiki.ess3.net/yaml/){: new_window}のようなシンプルなバリデーターを使用します。
+{: important}
 
-## サービス・セクションの計画
+## サービスの計画
 各サービス・サブセクションには以下の情報が含まれています。
 
 * name - 現行ファイルのコンテキスト内でのこのサービスの識別に使用されるユーザー生成ストリング。 必要に応じて、この名前を使用してサービスにマークを付けることができます。
 
 * service_id - サービスを識別する固有のストリング。 このストリングの直接のソースは[サービス・カタログ](https://github.com/open-toolchain/sdk/wiki/services.md){: new_window}です。
 
-* parameters - サービスのゼロ個以上の構成パラメーター。 これらのパラメーターはサービスによって異なります。ユーザーは、カタログを調べて、特定のサービスにとって必要なパラメーターを確かめる必要があります。
+* parameters - サービスのゼロ個以上の構成パラメーター。 このパラメーターはサービスによって異なります。ユーザーはカタログを調べて、特定のサービスにどのパラメーターが必要かを見極める必要があります。
 
 ### 他のファイルからのテキストの組み込み
 
-ツールチェーンに関するすべての情報を `toolchain.yml` ファイルに組み込むことができます。  しかし、`$text` を使用して、ツール統合 UI ごとに別個のファイルを作成することもできます。 こうすると、ツールチェーンの保守が容易になり、構成ファイルの編集に費やす時間を最小限に抑えることができます。  `toolchain.yml` の以下のサンプル・スニペットは、`pipeline.yml` ファイルの内容を `content` の値として使用する方法を示しています。
+ツールチェーンに関するすべての情報を `toolchain.yml` ファイルに保管することができます。しかし、`$text` を使用して、ツール統合 UI ごとに別個のファイルを作成することもできます。 別個のファイルを使用すると、ツールチェーンの保守が容易になり、構成ファイルの編集に費やす時間を最小限に抑えることができます。`toolchain.yml` ファイルの以下のサンプル・スニペットは、`pipeline.yml` ファイルの内容を `content` の値として使用する方法を示しています。
 
 ```
   configuration:
@@ -118,7 +120,7 @@ messages:
   $i18n: messages.yml
 ```
 
-  英語のストリングは `messages.yml` 内にあり、その他の言語は `messages_de.yml` などの言語コードを使用します。   言語コードのリストについては、[言語を識別するためのタグ](https://tools.ietf.org/html/rfc5646){: new_window} を参照してください。
+  英語のストリングは `messages.yml` 内にあり、その他の言語は `messages_de.yml` などの言語コードを使用します。 言語コードのリストについては、[言語を識別するためのタグ](https://tools.ietf.org/html/rfc5646){: new_window}を参照してください。
 
    外部化されたストリングを参照するには、`$ref` を使用してストリングを取り出します。  以下に例を示します。
 
@@ -135,12 +137,12 @@ messages:
     name: my_template
 ```
 
-詳しくは、[Open Toolchain SDK のメッセージのセクション](https://github.com/open-toolchain/sdk/wiki/Template-File-Format#messages-section){: new_window}を参照してください。
+UI ストリングについて詳しくは、[Open Toolchain SDK のメッセージのセクション](https://github.com/open-toolchain/sdk/wiki/Template-File-Format#messages-section){: new_window}を参照してください。
 
 ## ツールチェーン・ファイルの構成
 {: #toolchains_custom_toolchain_yml}
 
-`toolchain.yml` ファイルは、ツールチェーンの中核です。 プルするリポジトリー、含めるサービス、ビルドの詳細などのツールチェーンの仕様が、すべてこのファイルに記述されます。 内容を分かりやすくするために、いくつかのセクションに分割することができます。
+`toolchain.yml` ファイルは、ツールチェーンの中核です。 プルするリポジトリー、含めるサービス、ビルドの詳細などのツールチェーンの仕様が、すべてこのファイルに記述されます。 このファイルをいくつかのセクションに分割して、その内容を理解しましょう。
 
 1\. **ツールチェーンの情報の概要**
 
@@ -172,7 +174,7 @@ template
 
 2\. **リポジトリーの定義**
 
- ツールチェーンは、GitHub、GitHub Enterprise、Git Repos and Issue Tracking、GitLab などの任意の数の GitHub リポジトリーに継続的デリバリーを提供できます。 `toolchain.yml` ファイルのこのセクションで、各リポジトリーが定義されます。
+ ツールチェーンは、GitHub、GitHub Enterprise、Git Repos and Issue Tracking、GitLab などの任意の数の GitHub リポジトリーに継続的デリバリーを提供できます。 `toolchain.yml` ファイルのリポジトリーの定義のセクションで、各リポジトリーが定義されます。
 
  ツールチェーンに追加されるリポジトリーそれぞれについて、リポジトリーの名前を表す親キーを次のプロパティーとともに追加します。
 
@@ -208,9 +210,9 @@ template
 
 3\. **パイプラインの情報:**
 
- パイプラインを使用してプロジェクトを継続的にデリバリーできます。 ファイルのこのセクションでは、各 GitHub と Git Repo and Issue Tracking リポジトリーでコードをビルドしてデプロイするために使用される構成の詳細を定義します。
+ パイプラインを使用してプロジェクトを継続的にデリバリーできます。 ファイルのこのセクションでは、各 GitHub と Git Repos and Issue Tracking リポジトリーでコードをビルドしてデプロイするために使用される構成の詳細を定義します。
 
- まず、ツールチェーンで定義されたリポジトリーごとに、そのパイプラインの名前を表す親キーを追加します。 このキーは、GitHub または Git Repo and Issue Tracking リポジトリーの名前に基づいたものにすることを検討していください。 次のプロパティーを追加します。
+ まず、ツールチェーンで定義されたリポジトリーごとに、そのパイプラインの名前を表す親キーを追加します。 このキーは、GitHub または Git Repos and Issue Tracking リポジトリーの名前に基づいたものにすることを検討していください。 次のプロパティーを追加します。
 
 | アイテム | キー/プロパティー | 値 | 説明 |
 |------|--------------|-------|-------------|
@@ -233,7 +235,7 @@ template
 | hidden | property | <`[form, description]`> |  |
 -->
 
- `pipeline.yml` ファイルの作成については、[後続のセクション](#toolchains_custom_pipeline_yml)を参照してください。
+ `pipeline.yml` ファイルの作成について詳しくは、[後続のセクション](#toolchains_custom_pipeline_yml)を参照してください。
 
  次のスニペットは、ファイルのこのセクションの例を示しています。
 
@@ -262,13 +264,11 @@ template
 4\. **デプロイメントの詳細:
 **
 
- 継続的デリバリー・プロセスの一部として、ユーザーがアクセスできる任意の {{site.data.keyword.Bluemix_notm}} の地域、組織、またはスペースにアプリケーションをデプロイするようにツールチェーンを構成できます。 アプリケーションをデプロイする場所の具体的な詳細を、ツールチェーンの作成ページから選択できます。
+ 継続的デリバリー・プロセスの一部として、ユーザーがアクセスできる任意の {{site.data.keyword.Bluemix_notm}} の地域、組織、またはスペースにアプリケーションをデプロイするようにツールチェーンを構成できます。 [ツールチェーンの作成](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}ページのどこにアプリケーションをデプロイするかに関する具体的な詳細を指定できます。
 
- ![Delivery Pipeline の構成設定](images/deploy_configuration.png)
+`toolchain.yml` ファイルのこのセクションでは、ツールチェーンの作成ページから構成できるパイプラインのステージを定義します。
 
- `toolchain.yml` ファイルのこのセクションでは、ツールチェーンの作成ページから構成できるパイプラインのステージを定義します。
-
- まず、親キー `deploy` を使用して、デプロイメントの構成プロパティーを特定します。 このセクションを構成するその他のプロパティーは次のとおりです。
+ 親キー `deploy` を使用して、デプロイメントの構成プロパティーを特定します。 このセクションを構成するその他のプロパティーは次のとおりです。
 
 | アイテム | キー/プロパティー | 値 | 説明 |
 |------|--------------|-------|-------------|
@@ -298,7 +298,7 @@ template
  ```
  {: codeblock}
 
- このサンプル・コードは、ほとんどの部分をそのまま使用することができますが、わずかな点だけを変更する必要があります。 このセクションをカスタマイズするには、リポジトリーの名前に合うように `github-repo-name` を設定します。 [`deploy.json`](#toolchains_custom_deploy_json) ファイル内の詳細を更新する必要もあります。
+ このコード例にいくらか修正を加えて使用することができます。このセクションをカスタマイズするには、リポジトリーの名前に合うように `github-repo-name` を設定します。 [`deploy.json`](#toolchains_custom_deploy_json) ファイルの細部も更新する必要があります。
 
  開発、QA、実動ステージを含むより複雑なパイプラインを作成する場合は、`parameters` キーの次のプロパティーを置き換えます。
 
@@ -323,7 +323,7 @@ template
 
  ツールチェーンに複数のパイプラインが含まれている場合、`pipeline.yml` ファイルごとに固有の名前を指定します。
 
- 以下は `pipeline.yml` ファイルの例です。
+ 以下は、`pipeline.yml` ファイルの例です。
 
  ```
  ---
@@ -394,23 +394,21 @@ stages:
  ## パイプライン・インターフェースの構成
  {: #toolchains_custom_deploy_json}
 
- ツールチェーンの作成ページで、「構成可能な統合 (Configurable Integrations)」セクションから「Delivery Pipeline」を選択すると、セクションが展開されて、次のアイテムが表示されます。
+ [ツールチェーンの作成](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}ページで、「構成可能な統合 (Configurable Integrations)」セクションから「Delivery Pipeline」を選択すると、セクションが展開されて、次のアイテムが表示されます。
 
  	* アプリケーションの名前。
  	* パイプラインのステージのデプロイ先の地域、組織、スペース。
 
 ツールごとにこれらのアイテムを構成できます。
 
- ![Delivery Pipeline の構成設定](images/deploy_configuration.png)
-
  UI のこのセクションのレイアウトは、`deploy.json` スキーマによって定義されます。
 
- スキーマ内で、アプリケーションの詳細と一致するように、次のプロパティーが更新されます。
+ スキーマ内で、アプリケーションの詳細と一致するように、次のプロパティーを更新します。
 
  	* Title
  	* Description
  	* LongDescription
- 	* `hello-world-name` のすべてのインスタンスと関連情報を、アプリケーションに合わせて変更する必要があります。
+ 	* `hello-world-name` のすべてのインスタンスと、関連する詳細
 
  以下のスニペットは `deploy.json` ファイルの例です。
 

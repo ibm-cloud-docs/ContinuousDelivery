@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -33,7 +35,7 @@ lastupdated: "2018-8-2"
 **「Docker イメージ名」**フィールドが入力されていない場合は、標準のパイプライン基本イメージが使用されます。 
 {: tip}
 
-デフォルトでは、[Docker Hub ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://hub.docker.com/){: new_window} 上のリポジトリーが検索されます。 IBM Cloud Registry などの別の Docker レジストリーを使用する場合は、完全な DNS 名を使用できます。 また、Docker Hub 上のイメージの完全修飾名を使用することもできます。 例えば、`registry.hub.docker.com/library/maven:3.5.3-ibmjava` です。
+デフォルトでは、[Docker Hub ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://hub.docker.com/){: new_window} 上のリポジトリーが検索されます。 {{site.data.keyword.registrylong}} などの別の Docker レジストリーを使用する場合は、完全な DNS 名を使用できます。 また、Docker Hub 上のイメージの完全修飾名を使用することもできます。 例えば、`registry.hub.docker.com/library/maven:3.5.3-ibmjava` です。
 
 Docker イメージの`「タグ」`はオプションです。 タグを指定しない場合、デフォルトで`「最新 (latest)」` に設定されます。 デフォルト値の`「最新 (latest)」`は、リポジトリー所有者が管理する必要があるタグ名です。 これは、この Docker イメージが発生順で最新のイメージであることを意味するものではありません。
 
@@ -44,12 +46,12 @@ Docker Hub には、リポジトリーの大規模なコミュニティーがあ
 
 認証を必要とするプライベート・レジストリーを使用している場合は、さらに 2 つのステージ環境プロパティー `DOCKER_USERNAME` および `DOCKER_PASSWORD` を設定する必要があります。 セキュア・プロパティーを使用して、`DOCKER_PASSWORD` をマスクできます。 イメージがプルされる前に、カスタム Docker イメージ・ジョブはユーザー名とパスワードの資格情報を使用して `Docker ログイン`を実行します。
 
-ほとんどのレジストリーでは、提供されたユーザー名とパスワードを使用できます。 IBM Cloud Registry を使用してプライベート・イメージを保管する場合は、認証にプラットフォーム API キーを使用する必要があります。 
+ほとんどのレジストリーでは、提供されたユーザー名とパスワードを使用できます。 {{site.data.keyword.registrylong_notm}} を使用してプライベート・イメージを保管する場合は、認証にプラットフォーム API キーを使用する必要があります。 
 
-1. [プラットフォーム API キーを要求![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/iam/#/apikeys){: new_window}し、鍵を保存したことを確認します。 
+1. [プラットフォーム API キーを要求![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/iam/#/apikeys){: new_window}し、鍵を保存したことを確認します。 
 1. `DOCKER_USERNAME` に `iamapikey` を使用し、また、`DOCKER_USERNAME` に保存したプラットフォーム API キーを使用して、2 つのステージ環境プロパティーを作成します。
 
- ![IBM Cloud Registry 資格情報](images/custom-image-private-repository.png)
+ ![{{site.data.keyword.registrylong_notm}} 資格情報](images/custom-image-private-repository.png)
 
 
 ## スクリプトの指定

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-10-9"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -21,20 +21,6 @@ lastupdated: "2018-8-2"
 
 # 環境プロパティーとリソース
 {: #deliverypipeline_environment}
-
-環境プロパティーとあらかじめインストールされたリソースを使用して、{{site.data.keyword.contdelivery_full}} のパイプライン機能と対話できます。 たとえば、ジョブ・スクリプトやテスト・コマンドを取り込むことができます。
-{:shortdesc}
-
-独自の環境プロパティーを、ステージの**「環境プロパティー (ENVIRONMENT PROPERTIES)」**タブからステージに追加します。 環境プロパティーは、ステージのすべてのジョブに使用可能です。
-
-「環境プロパティー (Environment Properties)」タブから、次の 4 つのタイプのプロパティーを追加できます。
-* **「テキスト」**: 単一行の値を持つプロパティー・キー。
-* **「テキスト域 (Text Area)」**: 複数行の値を持つプロパティー・キー。
-* **「セキュア (Secure)」**: 単一行の値を持つプロパティー・キー。 値はアスタリスクとして表示されます。
-* **「プロパティー (Properties)」**: プロジェクトのリポジトリーにあるファイル。 このファイルには、複数のプロパティーを含めることができます。 プロパティーはそれぞれ独自の行で指定されている必要があります。 キー値のペアを区切るには、等号 (=) を使用します。 すべてのストリング値を引用符で囲みます。例えば、MY_STRING="SOME STRING VALUE" のようにします。
-
-パイプライン・ジョブの環境プロパティーを調べるには、ジョブのスクリプトで `env` コマンドを実行します。
-{:tip}
 
 パイプライン環境では、デフォルトで次のプロパティーとリソースを利用できます。
 
@@ -74,6 +60,7 @@ lastupdated: "2018-8-2"
 | PIPELINE_STAGE_INPUT_JOB_ID | 現在のステージの入力のジョブの ID。 |
 | PIPELINE_STAGE_INPUT_REV | 現在のステージの入力のリビジョン。 |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | パイプラインの実行の固有 ID。 |
+| PIPELINE_TRIGGERING_USER | パイプライン・ジョブの現行ユーザー |
 | TASK_ID | ジョブの現在の実行の固有 ID。 |
 | TMPDIR | 一時ファイルが保存されるディレクトリーの場所。 |
 | WORKSPACE | 現行の作業ディレクトリーのパス。 |
@@ -91,7 +78,7 @@ lastupdated: "2018-8-2"
 | MAVEN_HOME | Apache Maven 3.2.1 のパス。 |
 | NODE_HOME | Node.js 0.10.29 のパス。 |
 
-パイプラインのスクリプトで Apache Ant の 1.10+ バージョンを使用するには、`ANT_HOME` を `$ANT_JAVA8_HOME` に、`JAVA_HOME` を `$JAVA8_HOME` に設定します。
+パイプラインのスクリプトで Apache Ant 1.10+ を使用するには、`ANT_HOME` を `$ANT_JAVA8_HOME` に、`JAVA_HOME` を `$JAVA8_HOME` に設定します。
 {: tip}
 
 ### デプロイメント・プロパティー
@@ -129,13 +116,11 @@ lastupdated: "2018-8-2"
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
 
-64 ビット・バージョンの IBM Node 0.10、0.10.48、0.12、0.12.17、4.2、4.4.5、4.6.0、6.2.2、6.7.0 がパイプライン環境で利用できます。 バージョンを選択するには、export コマンドを使用します。
+パイプライン環境は 64 ビット・バージョンの IBM Node 0.10、0.10.48、0.12、0.12.17、4.2、4.4.5、4.6.0、6.2.2、および 6.7.0 を提供しています。バージョンを選択するには、export コマンドを使用します。
 
-たとえば、Node 0.12.7 を使用するには、次のコマンドを入力します。
-`export PATH=/opt/IBM/node-v0.12/bin:$PATH`
+たとえば、Node 0.12.7 を使用するには、次のコマンドを入力します。`export PATH=/opt/IBM/node-v0.12/bin:$PATH`
 
-Node 4.2.2 を使用するには、次のコマンドを入力します。
-`export PATH=/opt/IBM/node-v4.2/bin:$PATH`
+Node 4.2.2 を使用するには、次のコマンドを入力します。`export PATH=/opt/IBM/node-v4.2/bin:$PATH`
 
 ### ノード・モジュール
 

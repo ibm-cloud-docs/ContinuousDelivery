@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-15"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-15"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -24,15 +26,15 @@ lastupdated: "2018-8-15"
 ##前提条件
 {: #cd_prereqs}
 
-テンプレートから継続的デリバリー・ツールチェーンを作成するには、その前に、{{site.data.keyword.contdelivery_short}} のインスタンスを {{site.data.keyword.Bluemix_notm}} カタログから選択して作成する必要があります。ツールチェーンは、パイプラインのプランニング、開発、デプロイと、アプリケーションの管理のためのツールを統合したものです。 ツールチェーンに対していつでもツールを追加したり削除したりできます。 ツールチェーンが既にある場合は、[既存のツールチェーンを表示](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}することができます。ツールチェーンの扱いについて詳しくは、[ツールチェーンの使用](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}を参照してください。
+テンプレートから継続的デリバリー・ツールチェーンを作成するには、その前に、{{site.data.keyword.contdelivery_short}} のインスタンスを {{site.data.keyword.Bluemix_notm}} カタログから選択して作成する必要があります。 ツールチェーンは、パイプラインのプランニング、開発、デプロイと、アプリケーションの管理のためのツールを統合したものです。 ツールチェーンに対していつでもツールを追加したり削除したりできます。 ツールチェーンが既にある場合は、[既存のツールチェーンを表示](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}することができます。 ツールチェーンの扱いについて詳しくは、[ツールチェーンの使用](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}を参照してください。
 
-{{site.data.keyword.contdelivery_short}} のインスタンスが既にある場合は、[ツールチェーンを作成 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/create){: new_window} するか、または [既存のツールチェーンを表示](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}することができます。
+{{site.data.keyword.contdelivery_short}} のインスタンスが既にある場合は、[ツールチェーンを作成 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/devops/create){: new_window} することも、[既存のツールチェーンを表示](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}することもできます。
 {: tip}
 
 ##ステップ 1: ツールチェーン・テンプレートを選択します
 {: #select_a_toolchain_template}
 
-1. **「ツールチェーンの作成」**ページで、[ツールチェーン・テンプレート ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/create){: new_window} をクリックします。
+1. **「ツールチェーンの作成」**ページで、[ツールチェーン・テンプレート ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/devops/create){: new_window} をクリックします。
 1. 作成しようとしているツールチェーンの図を確認します。 この図は、ツールチェーン内の各ツール統合とそのライフサイクル・フェーズを示しています。
 
  一部のツールチェーン・テンプレートには、同じツール統合の複数のインスタンスが含まれています。 例えば、{{site.data.keyword.Bluemix_notm}} Public の Microservices ツールチェーン・テンプレートには、GitHub の 3 つのインスタンスと Delivery Pipeline の 3 つのインスタンス (3 つのマイクロサービスのそれぞれに対して 1 つずつ) が含まれています。
@@ -47,10 +49,10 @@ lastupdated: "2018-8-15"
 
  * ツールチェーンの名前は、そのツールチェーンを {{site.data.keyword.Bluemix_notm}} 内で識別するためのものです。 別の名前を使用する場合は、ツールチェーンの名前を変更します。
  * ツールチェーンを作成する対象の地域。 別の地域を利用する場合は、選択可能な地域のリストから選んでください。
- * ツールチェーンを作成する対象のリソース・グループまたは組織。 リンクをクリックして、リソース・グループと組織の選択を切り替えます。別のリソース・グループまたは組織を利用する場合は、選択可能なリソース・グループまたは組織のリストから選んでください。
+ * ツールチェーンを作成する対象のリソース・グループまたは組織。 リンクをクリックして、リソース・グループと組織の選択を切り替えます。 別のリソース・グループまたは組織を利用する場合は、選択可能なリソース・グループまたは組織のリストから選んでください。
  
-   リソース・グループは米国南部地域でのみ利用可能です。
-   {: tip}
+   リソース・グループは、米国南部、米国東部、英国、ドイツ、および東京領域で利用可能です。 Cloud Foundry の組織は、米国南部、英国およびドイツ地域でサポートされています。
+   {: important}
  
 1. 「ツール統合 (Tool Integrations)」セクションで、ツールチェーンに構成する各ツール統合を選択します。 いくつかのツール統合は、構成を必要としません。 ツール統合の構成については、[ツール統合の構成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}を参照してください。
 1. **「作成」**をクリックします。 以下のようにいくつかのステップが自動的に実行されて、ツールチェーンがセットアップされます。 セットアップされるツール統合は、どのツールチェーン・テンプレートを選択したのか、また、{{site.data.keyword.Bluemix_notm}} Public と {{site.data.keyword.Bluemix_notm}} Dedicated のどちらを使用しているのかによって異なります。 例えば、Microservices ツールチェーンを {{site.data.keyword.Bluemix_notm}} Public で作成する場合、以下のステップが実行されます。

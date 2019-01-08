@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-5"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # {{site.data.keyword.gitrepos}}
@@ -19,6 +21,12 @@ lastupdated: "2018-8-2"
 
 IBM によってホストされ、[GitLab Community Edition ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://about.gitlab.com/){:new_window}上に構築されている Git リポジトリーおよび Issue Tracker を使用して、チームでの共同作業およびソース・コードの管理を行います。
 {: shortdesc}
+
+プロジェクトで共同作業する個人的関係やビジネス上の関係がある人だけを招待してください。プロジェクトで共同作業をする以外の目的で Git レポへの招待を使用するユーザーによるサービスへのアクセスは、中断されたり取り消されたりする場合があります。
+{: important}
+
+規制対象データを Git レポ内のファイルや問題に保存しないでください。規制対象データ用の手順は現在機能していません。
+{: tip}
 
 {{site.data.keyword.gitrepos}} ツール統合は、以下に示すさまざまな方法でチームのコード管理とコラボレーションをサポートします。
    * コードの安全性を保つ、きめ細かいアクセス制御を通じて Git リポジトリーを管理する

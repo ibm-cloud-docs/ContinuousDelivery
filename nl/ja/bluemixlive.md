@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -47,7 +47,7 @@ Node.js アプリケーションが Live Edit モードになっているとき�
 ##Live Edit
 {: #live-edit}
 
-{{site.data.keyword.Bluemix_notm}} 上で実行する Node.js アプリケーションを作成する場合、{{site.data.keyword.Bluemix_notm}} Live Sync の Live Edit フィーチャーを使用することにより、アプリケーション・インスタンスを素早く更新できます。 Live Edit は Web IDE 内でのみ使用できます。 Live Edit を使用すれば、再デプロイせずにデスクトップ版と同様の開発を行うことができます。
+{{site.data.keyword.Bluemix_notm}} 上で実行する Node.js アプリケーションを作成する場合、{{site.data.keyword.Bluemix_notm}} Live Sync の Live Edit フィーチャーを使用することにより、アプリケーション・インスタンスを素早く更新できます。 Live Edit は Web IDE 内でのみ使用できます。 Live Edit を使用して、再デプロイせずにデスクトップ版と同様の開発を行うことができます。
 
 Live Edit がサポートされるのは Node.js アプリケーションのみです。
 
@@ -81,7 +81,7 @@ Debug を使用すると、アプリが {{site.data.keyword.Bluemix_notm}} で�
 
 ### アプリケーション・ランタイム制御 {: #app-runtime}
 
-アプリケーション・ランタイム制御により、Debug を使用してアプリの開始時の状態を検査することができます。 この機能は、始動時に異常終了するアプリをトラブルシューティングする際に役立ちます。
+アプリケーション・ランタイム制御により、Debug を使用してアプリの開始時の状態を検査することができます。 この機能は、始動時に障害が起こるアプリをトラブルシューティングする際に役立ちます。
 
 アプリの開発中、次のアクションから選択できます。
 
@@ -89,9 +89,6 @@ Debug を使用すると、アプリが {{site.data.keyword.Bluemix_notm}} で�
 * アプリのコードが実行される前にアプリを一時停止する
 
 ログインすると、{{site.data.keyword.Bluemix_notm}} Live Debug ページが開きます。
-
-![Debug の UI](images/live_sync_debug.png)
-
 
 ### Debug {: #debug}
 
@@ -148,4 +145,4 @@ Debugger の初期化には 1 分程度かかることがあります。
 
 ### 詳細情報
 
-* [Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window} を参照してください
+* [Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window} を参照してください

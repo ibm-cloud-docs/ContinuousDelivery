@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -21,7 +21,7 @@ hub.jazz.net の {{site.data.keyword.jazzhub}} プロジェクトは {{site.data
 
 hub.jazz.net の {{site.data.keyword.jazzhub_short}} は廃止されます。 
 
-DevOps プロジェクトについては、[{{site.data.keyword.contdelivery_short}} サービス![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops){:new_window} を使用してください。 {{site.data.keyword.Bluemix_notm}} になじみがない場合は、[{{site.data.keyword.Bluemix_notm}} とは](/docs/overview/ibm-cloud.html#overview)をご確認ください。
+DevOps プロジェクトについては、[{{site.data.keyword.contdelivery_short}} サービス![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/devops){:new_window} を使用してください。 {{site.data.keyword.Bluemix_notm}} になじみがない場合は、[{{site.data.keyword.Bluemix_notm}} とは](/docs/overview/ibm-cloud.html#overview)をご確認ください。
 
 {: shortdesc}
 
@@ -42,10 +42,10 @@ hub.jazz.net に 1 つ以上のプロジェクトがあった場合、アップ�
 - プロジェクトは、1 つのリポジトリーとパイプラインしか持てません。 ツールチェーンは、必要に応じていくつでもリポジトリーとパイプラインを持つことができます。
 - ツールチェーンには、Slack、Sauce Labs、PagerDuty、および {{site.data.keyword.DRA_full}} などの、プロジェクトでは使用できないツールを組み込むことができます。
 
- {{site.data.keyword.DRA_short}} は米国南部地域でのみ利用可能です。
+ {{site.data.keyword.DRA_short}} は、米国南部、英国およびドイツ地域で利用可能です。
  {: tip}
  
-- プロジェクトでは、メンバーシップはプロジェクト・レベルで管理されていました。 ツールチェーンへのアクセスは、{{site.data.keyword.Bluemix_notm}} 組織とツールチェーンによって管理されます。 ツールチェーンで作業するには、ツールチェーンを含む組織のメンバーである必要があります。 ツールチェーンの所有者は、誰がツールチェーンにアクセスでき、何をすることができるかを制御できます。 詳しくは、[ツールチェーンの概説](#upgrade_next_steps)のステップ 2 を参照してください。
+- プロジェクトでは、メンバーシップはプロジェクト・レベルで管理されていました。 ツールチェーンへのアクセスは、{{site.data.keyword.Bluemix_notm}} 組織とツールチェーンによって管理されます。 ツールチェーンで作業するには、ツールチェーンを含む組織のメンバーである必要があります。 ツールチェーンの所有者は、誰がツールチェーンにアクセスでき、何をすることができるかを制御できます。 アクセス制御について詳しくは、[ツールチェーンの概説](#upgrade_next_steps)のステップ 2 を参照してください。
 - hub.jazz.net のプロジェクトで使用していたリポジトリーのタイプに応じて、ツールチェーンに GitHub.com リポジトリーまたは {{site.data.keyword.gitrepos}} リポジトリーが含まれる場合があります。
 
 ツールチェーンについて詳しくは、[YouTube ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://youtu.be/2SIPE1e7NJ4){: new_window} または [{{site.data.keyword.contdelivery_short}} 概説](/docs/services/ContinuousDelivery/index.html)で説明しています。
@@ -54,7 +54,7 @@ hub.jazz.net に 1 つ以上のプロジェクトがあった場合、アップ�
 {: #upgrade_next_steps}
 
 1. チーム・メンバーにツールチェーンへのアクセス権限を付与します。
-    - 各チーム・メンバーには、有効な {{site.data.keyword.Bluemix_notm}} アカウントが必要です。 アカウントを持っていないチーム・メンバーは、[登録![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/registration){:new_window}する必要があります。
+    - 各チーム・メンバーには、有効な {{site.data.keyword.Bluemix_notm}} アカウントが必要です。 アカウントを持っていないチーム・メンバーは、[登録![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/registration){:new_window}する必要があります。
     - ツールチェーンの「管理」ページから、ツールチェーンに対するアクセス権限を組織のメンバーに付与します。 既存のプロジェクト・メンバーは、アップグレード・プロセスの一部としてツールチェーンのメンバーに追加されます。 ツールチェーンのアクセス制御について詳しくは、[アクセスの管理 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window} を参照してください。
     - ユーザーがツールチェーンの属する組織のメンバーでない場合は、「組織の管理」ページから、そのユーザーを組織に追加します。
     - ツールチェーンで {{site.data.keyword.gitrepos}} が使用される場合、有効な {{site.data.keyword.Bluemix_notm}} ID を持つすべての JazzHub プロジェクト・メンバーは、JazzHub プロジェクトで持っていたものと同じ特権で {{site.data.keyword.gitrepos}} リポジトリーに追加されます。 JazzHub プロジェクトに有効な {{site.data.keyword.Bluemix_notm}} ID を持たないメンバーがいる場合、そのメンバーを登録することができます。 彼らを登録した後、リポジトリーに追加できます。
@@ -72,7 +72,7 @@ hub.jazz.net に 1 つ以上のプロジェクトがあった場合、アップ�
 
 3. オプション: プロジェクトの開発成熟度、チームのプラクティス、コード・ベースの品質を探るには、ツールチェーンに IBM Cloud {{site.data.keyword.DRA_short}} を追加します。 {{site.data.keyword.DRA_short}} は、開発者、チーム、デプロイメントの分析を DevOps プロジェクトに適用します。 詳しくは、[{{site.data.keyword.DRA_short}} 概説](/docs/services/DevOpsInsights/index.html)を参照してください。
 
-  {{site.data.keyword.DRA_short}} は米国南部地域でのみ利用可能です。
+  {{site.data.keyword.DRA_short}} は、米国南部、英国およびドイツ地域で利用可能です。
   {: tip}
 
 
@@ -101,7 +101,7 @@ hub.jazz.net のプロジェクトとツールチェーンはどちらも、米�
 
 この新しい IBM Track and Plan on Cloud サービスの機能は非推奨の JazzHub Track &amp; Plan よりも豊富で、プロセスのカスタマイズ、プロジェクトの階層、SAFe&reg; やその他の多くのアジャイルかつハイブリッドなメソッド、単一プロジェクトからのスケーラビリティーなどをサポートしています。 これは最新バージョンの Rational Team Concert 6.0.3 をベースとしていて、今後 60 日間以内にバージョン 6.0.4 になる予定です。一方、JazzHub Track &amp; Plan のベースは Rational Team Concert 5.x でした。 追加サービスを使用すると、IBM Track and Plan on Cloud へのデータ移行が可能です。 詳しくは、コネクティッド製品 SaaS のセールス・リーダーである [Tom Hollowell ![ 外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](mailto:trhollow@us.ibm.com){:new_window} にお問い合わせください。
 
-IBM Track and Plan on Cloud の詳細を確認したりオンラインで購入したりする場合には、[IBM マーケットプレイス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window} にアクセスしてください。
+IBM Track and Plan on Cloud の詳細を確認したりオンラインで購入したりする場合には、[IBM マーケットプレイス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window} を参照してください。
 
 ビルド自動化およびソース・コード管理を購入するには、[Rational Team Concert on Cloud ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window} を選択できます。
 
@@ -125,12 +125,12 @@ IBM Track and Plan on Cloud の詳細を確認したりオンラインで購入�
 
 Delivery Pipeline ではなく Jazz を使用してソース・コードを構築した場合は、ツールチェーンの Delivery Pipeline にビルド定義を手動で移行する必要があります。
 
-Jazz SCM をソース・リポジトリーとして使用し、Delivery Pipeline を使用してコードをビルドした場合は、Jazz SCM 内のソースが Git リポジトリーに自動的に移されています。 Jazz SCM のソースではなく Git リポジトリーのソースを消費している点を除けば、Delivery Pipeline の構成は同じままです。
+Jazz SCM をソース・リポジトリーとして使用し、Delivery Pipeline を使用してコードをビルドした場合は、Jazz SCM 内のソースが Git リポジトリーに自動的に移されています。Jazz SCM のソースではなく Git リポジトリーのソースを使用する点を除けば、Delivery Pipeline の構成は同じままです。
 
 ### ツールチェーンにアップグレードされたプロジェクト用の組織を作成する必要があったので、アカウントにクレジット・カードを追加しました。 クレジット・カードに課金されるのでしょうか。
 {: #faq_charges}
 
-[従量課金 (PAYG) のお客様 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window} が、{{site.data.keyword.Bluemix_notm}} カタログにリストされている無料割り当て分を超えたランタイム、サービス、コンポーネントを使用すると課金されます。 使用量の見積もりについては、[料金シート ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window} を参照してください。 継続的デリバリーの現在の料金については、[{{site.data.keyword.Bluemix_notm}} カタログ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window} を参照してください。
+[従量課金 (PAYG) のお客様 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window} が、{{site.data.keyword.Bluemix_notm}} カタログにリストされている無料割り当て分を超えたランタイム、サービス、コンポーネントを使用すると課金されます。 使用量の見積もりについては、[料金シート ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window} を参照してください。 継続的デリバリーの現在の料金については、[{{site.data.keyword.Bluemix_notm}} カタログ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/catalog/services/continuous-delivery){: new_window} を参照してください。
 
 IBM 社員の場合、内部 IBM プロジェクトは、個人のクレジット・カードではなく部門に対して課金されます。 IBM 社員に割り当てられている無料分を超えるリソースを使用する必要がある場合、サポート・チケットを作成してください。
 
@@ -152,19 +152,19 @@ IBM 社員の場合、内部 IBM プロジェクトは、個人のクレジッ�
    
    2. 同僚の何人かが、オリジナルの JazzHub プロジェクトのメンバーとしてリストされていたのに、ツールチェーンにアクセスできません。 彼らが**「ツールチェーンの表示」**をクリックして英国地域のアプリの概要ページからツールチェーンを開こうとすると、「アクセス拒否」のメッセージが表示されます。
    
-   3. **「ツールチェーンの表示」**をクリックして英国地域のアプリの概要ページからは直接ツールチェーンにアクセスできますが、[https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window}で私の「ツールチェーン」ページにリストされているツールチェーンは表示されません。 ツールチェーンを変更できないというエラーが表示されるか、ツールチェーンがないので作成する必要があるというエラーが表示されます。 
+   3. **「ツールチェーンの表示」**をクリックして英国地域のアプリの概要ページからは直接ツールチェーンにアクセスできますが、[https://cloud.ibm.com/devops/toolchains?env_id=ibm:yp:us-south ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/devops/toolchains?env_id=ibm:yp:us-south){: new_window} で私の「ツールチェーン」ページにリストされているツールチェーンは表示されません。 ツールチェーンを変更できないというエラーが表示されるか、ツールチェーンがないので作成する必要があるというエラーが表示されます。 
 
 **回答:**
 
-これらの問題は、米国以外の {{site.data.keyword.Bluemix_notm}} 組織に所属していて、アップグレードの前に明示的に米国南部地域に組織を拡張していなかった場合に発生します。 これについては「ツールチェーン」ページを開いて確認できます。 このページの先頭に地域と組織が表示されます。 
+これらの問題は、米国以外の {{site.data.keyword.Bluemix_notm}} 組織に所属していて、アップグレードの前に明示的に米国南部地域に組織を拡張していなかった場合に発生します。 この問題については「ツールチェーン」ページを開いて確認できます。このページの先頭に地域と組織が表示されます。 
 
-何が起こったかというと、アップグレード時に、所属の米国以外の組織が米国に存在しなかったので、たまたまアクセスしたことのある別の組織が検出されてそれがアップグレードで選択されたということです。
+何が起こったかというと、アップグレード時に、所属の米国以外の組織が米国に存在しなかったので、アクセスしたことのある別の組織が検出されてそれがアップグレードで選択されたということです。
 
 米国のその {{site.data.keyword.Bluemix_notm}} 組織に切り替えると、ツールチェーンを見つけることができます。 同僚をその組織に追加すれば、彼らにアクセス権限が付与されます。 このツールチェーンは、所属の米国以外の組織に引き続きデプロイできます。ただ問題になるのは、これらの 2 つの組織がまったく別物であり、ユーザー管理を自動的に両方に対して実行できない点です。
 
 所属の米国以外の組織に一致する米国の組織にツールチェーンを置きたい場合は、以下の手順に従ってください。
 
-   1. [https://console.bluemix.net ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net){: new_window} にログインし、所属している、米国以外の地域と組織を選択します。
+   1. [https://cloud.ibm.com ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com){: new_window} にログインし、所属している、米国以外の地域と組織を選択します。
    
    2. {{site.data.keyword.Bluemix_notm}} ヘッダーで、米国南部地域に切り替えます。 その地域でスペースを作成するよう求められます。
    
@@ -172,9 +172,10 @@ IBM 社員の場合、内部 IBM プロジェクトは、個人のクレジッ�
    
    4. アップグレード・プロセスで作成されたツールチェーンを削除します。 
    
-      Git リポジトリーは、自動的には削除されません。 手動で削除するか、該当する名前に変更することができます。 名前を変更した場合は、今後のツールチェーンでそれを使用するように更新できます。{: tip}
+      Git リポジトリーは、自動的には削除されません。 手動で削除するか、該当する名前に変更することができます。 Git リポジトリーの名前をすでに変更した場合は、今後のツールチェーンでそれを使用するように更新できます。
+ {: tip}
 
-   5. JazzHub プロジェクトに戻ります。 アップグレードのやり直しのため、リセットする必要があります。 リセットされない場合は、hub@jazz.net に連絡を取り、プロジェクトの URL を提供してください。
+   5. JazzHub プロジェクトに戻ります。 別のアップグレードを試行できるように、プロジェクトはリセットされます。プロジェクトがリセットされない場合は、hub@jazz.net に連絡を取り、プロジェクトの URL を提供してください。
    
    6. アップグレード・プロセスを再始動し、米国の適切な組織が選択されていることを確認し、所属の米国地域以外の組織の名前を一致させます。
    

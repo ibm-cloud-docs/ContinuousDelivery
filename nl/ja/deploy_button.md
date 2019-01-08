@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-18"
 
 ---
 
@@ -17,14 +17,14 @@ lastupdated: "2018-8-2"
 
 # 「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンの作成 {: #deploy-button}
 
-作成した公開アプリを Git で共有する場合、「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを用意しておくと、他のユーザーがそのコードを試し、ツールチェーンを使用して {{site.data.keyword.Bluemix_notm}} にデプロイできるので、効率的に共有できます。 このボタンは最小限の構成で済み、マークアップをサポートする場所ならどこにでも挿入できます。 他のユーザーがこのボタンをクリックすると、元のアプリには影響を与えることなく、新しい Git リポジトリーにそのコードのクローン・コピーが作成されます。
+作成した公開アプリを Git で共有する場合、「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを用意しておくと、他のユーザーがそのコードを試し、ツールチェーンを使用して {{site.data.keyword.Bluemix_notm}} にデプロイできるので、効率的に共有できます。 このボタンは最小限の構成で済み、マークアップをサポートする場所ならどこにでも挿入できます。 他のユーザーがこのボタンをクリックすると、元のアプリには影響を与えることなく、新しい Git リポジトリーにそのコードのクローン・コピーが作成されます。  
 {: shortdesc}
 
 他のユーザーがこのボタンをクリックすると、以下のアクションが発生します。
 
 1. そのユーザーがアクティブな {{site.data.keyword.Bluemix_notm}} アカウントを持っていなければ、アカウントを作成する必要があります。 トライアイル・アカウントまたは実アカウントを作成できます。
 
-2. そのユーザーは、{{site.data.keyword.deliverypipeline}} アイコンをクリックすることによって、地域、リソース・グループ (米国南部地域でのみ使用可能) または組織、スペース、アプリ名を選択できます。推奨アプリ名はツールチェーンと同じ名前であり、元の Git リポジトリー名と現在時刻で構成されます。 ツールチェーン名は編集することもできます。
+2. そのユーザーは、{{site.data.keyword.deliverypipeline}} アイコンをクリックすることによって、地域、リソース・グループ (米国南部、米国東部、英国、ドイツ地域で利用可能) または組織やスペース (米国南部、英国、ドイツ地域で利用可能)、およびアプリ名を選択できます。 推奨アプリ名はツールチェーンと同じ名前であり、元の Git リポジトリー名と現在時刻で構成されます。 ツールチェーン名は編集することもできます。
 
 3. ツールチェーンが作成されます。そこには、Git リポジトリーの新しいプライベート・クローン、コード変更をビルドしてデプロイするためのパイプライン、クラウド上でコードを編集するための Eclipse Orion {{site.data.keyword.webide}}、Issue Tracker が含まれます。
 
@@ -43,11 +43,11 @@ lastupdated: "2018-8-2"
 
 パブリック {{site.data.keyword.gitrepos}} リポジトリーのアプリ・ボタンの例を以下に示します。
 
-[![Bluemix にデプロイ](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
+[![IBM Cloud にデプロイ](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
 
 パブリック GitHub リポジトリーのアプリ・ボタンの例を以下に示します。
 
-[![Bluemix にデプロイ](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
+[![IBM Cloud にデプロイ](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
 
 ## ボタンの作成 {: #create-button}
 
@@ -58,7 +58,7 @@ lastupdated: "2018-8-2"
 HTML でボタンを作成するには、このスニペットをコピーして、パブリック Git リポジトリー URL とブランチを挿入します。
 
 ```HTML
-<a href="https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://bluemix.net/deploy/button.png" alt="IBM Cloud にデプロイ"></a>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://cloud.ibm.com/devops/setup/deploy/button.png" alt="IBM Cloud にデプロイ"></a>
 ```
 {: codeblock}
 
@@ -69,7 +69,7 @@ HTML でボタンを作成するには、このスニペットをコピーして
 Markdown でボタンを作成するには、このスニペットをコピーして、パブリック Git リポジトリー URL とブランチを挿入します。
 
 ```Markdown
-[![IBM Cloud にデプロイ](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>)
+[![IBM Cloud にデプロイ](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=<git_repository_URL>&branch=<git_branch>)
 ```
 {: codeblock}
 
@@ -81,9 +81,9 @@ Markdown でボタンを作成するには、このスニペットをコピー�
 
 「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンのスニペットをカスタマイズする際、PNG 形式で英語の外部ボタン・イメージのデフォルト・パスを両方のテンプレートで使用することを考慮してください。
 
-* PNG ではなく SVG イメージをボタンに使用する場合は、スニペットで使用されるボタン・イメージのパスを `https://bluemix.net/deploy/button.svg` に変更します。
+* PNG ではなく SVG イメージをボタンに使用する場合は、スニペットで使用されるボタン・イメージのパスを `https://cloud.ibm.com/devops/setup/deploy/button.svg` に変更します。
 
-* ボタンにイメージを使用する場合は、スニペットで使用されるボタン・イメージのパスを `https://bluemix.net/deploy/button_x2.png` に変更します。 このイメージのサイズは、デフォルト・イメージの 2 倍です。
+* ボタンにイメージを使用する場合は、スニペットで使用されるボタン・イメージのパスを `https://cloud.ibm.com/devops/setup/deploy/button_x2.png` に変更します。 このイメージのサイズは、デフォルト・イメージの 2 倍です。
 
 * イメージをローカルに保管する場合は、イメージをダウンロードし、Git リポジトリーに保管できます。 イメージの相対ロケーションを使用するようにパスを調整してください。
 
@@ -102,9 +102,9 @@ Markdown でボタンを作成するには、このスニペットをコピー�
 サポートされるビルダーとしては、以下のものがあります。
 
 * [Ant ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン"):](http://ant.apache.org/manual/using.html){:new_window} `build.xml`。ビルド出力は `./output/` フォルダーに置かれます
-* [Gradle ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン"):](http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle){:new_window} `/build.gradle`。ビルド出力は `.` フォルダーに置かれます
+* [Gradle ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン"):](https://docs.gradle.org/current/userguide/getting_started.html){:new_window} `/build.gradle`。ビルド出力は `.` フォルダーに置かれます
 * [Grunt ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン"):](http://gruntjs.com/getting-started#the-gruntfile){:new_window} `/Gruntfile.js`。ビルド出力は `.` フォルダーに置かれます
-* [Maven ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン"):](http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven){:new_window} `/pom.xml`。ビルド出力は `./target/` フォルダーに置かれます
+* [Maven ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン"):](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:new_window} `/pom.xml`。ビルド出力は `./target/` フォルダーに置かれます
 
 ### パイプライン・ファイルの要件
 {: pipeline_file}
@@ -133,4 +133,4 @@ Kubernetes クラスターへの Cloud Foundry アプリの移植について詳
 
 `manifest.yml` ファイルをリポジトリー内に用意しておく必要はありません。 ただし、アプリが他のサービスの実行を必要とする場合は、それらのサービスを宣言しているマニフェスト・ファイルを用意する必要があります。
 
-マニフェスト・ファイルについて詳しくは、[アプリケーション・マニフェスト](/docs/cfapps/depapps.html#appmanifest)を参照してください。
+マニフェスト・ファイルについて詳しくは、[アプリケーション・マニフェスト](/docs/cloud-foundry/deploy-apps.html#appmanifest)を参照してください。
