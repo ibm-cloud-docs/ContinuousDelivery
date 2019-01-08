@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-11"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -83,11 +83,9 @@ lastupdated: "2018-8-2"
 
 您可以在「階段歷程」頁面上檢視工作的日誌，以及檢視其執行的階段。
 
-若要檢視工作的日誌，請按一下工作。或者，在階段上按一下**檢視日誌及歷程**。
+1. 若要檢視工作的日誌，請按一下工作。或者，在階段上按一下**檢視日誌及歷程**。
 
-若要檢視所部署應用程式的運行環境日誌，請按一下**檢視運行環境日誌**。
-
-![階段磚中可按一下以開啟相關日誌的區域](images/view_logs_and_history.png)
+2. 若要檢視所部署應用程式的運行環境日誌，請按一下**檢視運行環境日誌**。
 
 除了工作日誌之外，您還可以檢視任何建置工作的單元測試結果、所產生的構件，以及程式碼變更。
 

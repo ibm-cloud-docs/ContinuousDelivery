@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-7-19"
+lastupdated: "2018-12-6"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -11,6 +11,14 @@ lastupdated: "2018-7-19"
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:faq: data-hd-content-type='faq'}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:download: .download}
 
 # 常見問題
 {: #ts_cd}
@@ -21,6 +29,7 @@ lastupdated: "2018-7-19"
 
 ## 我嘗試將 GitHub 工具整合新增至工具鏈，但為什麼未新增工具整合？
 {: #cannot_authorize_github}
+{: faq}
 
 如果 {{site.data.keyword.Bluemix_notm}} 未獲授權存取 GitHub 帳戶，則不會將工具整合新增至工具鏈。
 
@@ -40,6 +49,7 @@ lastupdated: "2018-7-19"
 
 ## 我嘗試建立工具鏈，但為什麼會收到錯誤？
 {: #cannot_create_toolchain}
+{: faq}
 
 嘗試在組織中建立工具鏈時，如果您收到下列錯誤訊息，請從組織中移除一個以上的工具鏈，然後重新建立工具鏈。
 
@@ -47,16 +57,22 @@ lastupdated: "2018-7-19"
 
 
 ## 「工具鏈」頁面為什麼顯示必須要有 {{site.data.keyword.contdelivery_short}} 服務精簡方案？
+{: #plan_exceeded}
+{: faq}
 
 {{site.data.keyword.contdelivery_short}} 提供兩種方案：「精簡」及「專業」。如果您有「{{site.data.keyword.contdelivery_short}} 精簡」方案，則可以免費使用工具鏈，最多為方案的限制。錯誤訊息指出您已超出「精簡」方案的一個以上限制。例如，如果您有太多授權使用者與 {{site.data.keyword.contdelivery_short}} 服務實例相關聯，或已執行 {{site.data.keyword.deliverypipeline}} 工作數目上限，則可能會超過方案。如需方案條款的相關資訊，請參閱[方案限制及用量](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}。
 
 
 ## 我已建立工具鏈，「工具鏈」頁面為什麼顯示需要 Continuous Delivery 服務？
+{: #service_required_resource_group}
+{: faq}
 
 位在與工具鏈相同之資源群組或組織中的 {{site.data.keyword.contdelivery_short}} 服務實例方案條款，可管理如何使用服務中所含的一些工具整合（{{site.data.keyword.deliverypipeline}}、Eclipse Orion {{site.data.keyword.webide}} 及 {{site.data.keyword.gitrepos}}）。錯誤訊息指出資源群組或組織未包含必要的 {{site.data.keyword.contdelivery_short}} 服務實例。如需方案條款的相關資訊，請參閱[方案限制及用量](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}。
 
 
 ## 我已在 Cloud Foundry 組織中建立工具鏈，「工具鏈」頁面為什麼顯示需要 Continuous Delivery 服務？
+{: #service_required_cloud_foundry}
+{: faq}
 
 當您在資源群組或組織中建立沒有 {{site.data.keyword.contdelivery_short}} 服務實例的工具鏈時，工具鏈平台會使用「精簡」方案來嘗試自動建立服務實例。錯誤訊息指出工具鏈平台無法建立服務實例。
 
@@ -67,6 +83,7 @@ lastupdated: "2018-7-19"
 
 ## 我嘗試將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，但為什麼會收到錯誤？
 {: #org_outofmemory}
+{: faq}
 
 嘗試將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，如果您收到下列錯誤訊息，則表示組織中的剩餘記憶體數量少於您要部署之應用程式所需的記憶體數量。
 
@@ -99,6 +116,7 @@ lastupdated: "2018-7-19"
 
 ## 我已建立應用程式，但為什麼執行列未在 Eclipse Orion Web IDE 中顯示 {{site.data.keyword.Bluemix_notm}} Live Sync 圖示？
 {: #ts_llz_lkb_3r}
+{: faq}
 
 ![執行列](images/webide_runbar_light.png)   
 
@@ -115,19 +133,21 @@ lastupdated: "2018-7-19"
 
 ## 我已按一下工具鏈以檢視其「概觀」頁面，但為什麼未載入工具鏈？
 {: #toolchains_load}
+{: faq}
 
 請檢查「{{site.data.keyword.Bluemix_notm}} 狀態」頁面，以確定是否有已知問題影響 {{site.data.keyword.Bluemix_notm}} 平台及 {{site.data.keyword.Bluemix_notm}} 中的主要服務。
 
 您可以選擇下列其中一個選項來尋找「狀態」頁面：
 
   * 登入 {{site.data.keyword.Bluemix_notm}} 主控台。從功能表列中，按一下**支援**，然後選取**狀態**。請檢查針對 ![部分問題](../../get-support/images/some_issues.svg) 圖示列出的資源。此圖示可能指出運作中斷。
-  * 直接在 [{{site.data.keyword.Bluemix_notm}} - 系統狀態 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/status){: new_window} 存取它。
+  * 直接在 [{{site.data.keyword.Bluemix_notm}} - 系統狀態 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/status){: new_window} 存取它。
 
-如需「{{site.data.keyword.Bluemix_notm}} 狀態」頁面的相關資訊，請參閱 [Viewing {{site.data.keyword.Bluemix_notm}} status](https://console.bluemix.net/docs/get-support/ViewStatus.html#viewing-bluemix-status)。
+如需「{{site.data.keyword.Bluemix_notm}} 狀態」頁面的相關資訊，請參閱 [Viewing {{site.data.keyword.Bluemix_notm}} status](https://cloud.ibm.com/docs/get-support/ViewStatus.html#viewing-bluemix-status)。
 
 
 ## 我已配置工具鏈的工具整合，但為什麼並未配置它？
 {: #tool_integration_error}
+{: faq}
 
 新增工具整合時，工具鏈會與工具整合所代表的工具進行通訊，來佈建任何必要資源，以及建立它們與工具鏈的關聯。如果在設定處理程序期間發生錯誤，或工具鏈與工具之間的通訊未適當地完成，則工具整合會進入錯誤狀態。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -17,10 +17,13 @@ lastupdated: "2018-8-2"
 # 使用 Eclipse Orion Web IDE 開發
 {: #web_ide}
 
-Eclipse Orion {{site.data.keyword.webide}} 是一種瀏覽器型開發環境，在其中，憑藉內容輔助、程式碼完成及錯誤檢查的協助，您就可以使用 JavaScript、HTML 及 CSS 針對 Web 進行開發。{{site.data.keyword.webide}} 幾乎可以搭配任何語言一起使用，並且提供大部分檔案類型的語法強調顯示。來源控制是內建的，而且您可以在本端部署程式碼來測試及除錯應用程式。
+Eclipse Orion {{site.data.keyword.webide}} 是一種瀏覽器型開發環境，在其中，憑藉內容輔助、程式碼完成及錯誤檢查的協助，您就可以使用 JavaScript、HTML 及 CSS 針對 Web 進行開發。{{site.data.keyword.webide}} 幾乎可以搭配任何語言一起使用，您可以強調顯示大部分檔案類型的語法。來源控制是內建的，而且您可以在本端部署程式碼來測試及除錯應用程式。
 {:shortdesc}
 
 最好的一點是，{{site.data.keyword.webide}} 採用 Web 技術。您不必進行任何安裝、維護和擴充。您可以在具有網際網路連線的任何位置進行開發。
+
+請不要將受法規規範的資料儲存在 {{site.data.keyword.webide}} 內的檔案。目前並沒有針對受法規規範之資料的程序。
+{: tip}
 
 ## 設定 IDE
 {: #editorsetup}
@@ -83,17 +86,18 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種瀏覽器型開發環境，�
 
 
 <table role="presentation">
-<tr><td><img src="./images/stop_button.png"  alt="停止圖示"></td><td>停止應用程式</td></tr>
-<tr><td> <img src="./images/open_app_url.png"  alt="開啟應用程式 URL 圖示"></td><td> 開啟已部署的應用程式</td></tr>
-<tr><td><img src="./images/view_logs.png"  alt="檢視日誌圖示"></td><td>檢視已部署應用程式的日誌</td></tr>
-<tr><td><img src="./images/open_dashboard.png"  alt="開啟儀表板圖示"></td><td>開啟應用程式的儀表板</td></tr>
+<tr><td><img src="./images/stop_button.png"  alt="停止圖示"></td><td>停止應用程式。</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="開啟應用程式 URL 圖示"></td><td> 開啟已部署的應用程式。</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="檢視日誌圖示"></td><td>檢視已部署應用程式的日誌。</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="開啟儀表板圖示"></td><td>開啟應用程式的儀表板。</td></tr>
 </table>
 
 如果您正在開發 Node.js 應用程式，請啟用「即時編輯」模式：<img  src="./images/enable_live_edit.png"  alt="啟用即時編輯調節器">
 
-<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="「即時編輯」重新啟動圖示"></td><td>在啟用「即時編輯」模式的情況下，快速重新啟動應用程式，而不重新部署</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="「即時編輯」重新啟動圖示"></td><td>在啟用「即時編輯」模式的情況下，快速重新啟動應用程式，而不重新部署。</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="除錯圖示"></td>
-<td>在啟用「即時編輯」模式的情況下，存取除錯器</td></tr>
+<td>在啟用「即時編輯」模式的情況下，存取除錯器。
+</td></tr>
 </table>
 
 <!-- 3/6/2016: bl commands don't work with V2/CD
@@ -161,7 +165,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 ## 支援的語言
 {: #supported_languages}
 
-Eclipse Orion {{site.data.keyword.webide}} 提供 JavaScript、HTML、CSS 及 Markdown 檔案的內容輔助、工具提示、預覽、驗證及語法強調顯示。也支援下列檔案類型的語法強調顯示：
+Eclipse Orion {{site.data.keyword.webide}} 提供內容輔助、工具提示、預覽、驗證，並且會強調顯示 JavaScript、HTML、CSS 及 Markdown 檔案的語法。您也可以強調顯示下列檔案類型的語法：
 
 <table role="presentation">
 <tr>

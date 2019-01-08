@@ -41,7 +41,7 @@ lastupdated: "2018-7-18"
 
 | 平台管理角色 | 動作的說明 | 範例動作 |
 |:-----------------|:-----------------|:-----------------|
-| 檢視者、操作員 | 檢視 {{site.data.keyword.contdelivery_short}} 服務實例。| <ul><li>按一下 {{site.data.keyword.contdelivery_short}} 服務實例以開啟其儀表板。</li>|
+| 檢視者、操作員 | 檢視 {{site.data.keyword.contdelivery_short}} 服務實例。| <ul><li>按一下 {{site.data.keyword.contdelivery_short}} 服務實例以開啟其儀表板。</li>|</ul>
 | 編輯者、管理者 | 建立、檢視、更新、修改 {{site.data.keyword.contdelivery_short}} 服務的方案，以及刪除該服務的實例。|<ul><li>在資源群組中佈建 {{site.data.keyword.contdelivery_short}} 實例。</li><li>從資源群組中刪除 {{site.data.keyword.contdelivery_short}} 實例。</li><li>將 {{site.data.keyword.contdelivery_short}} 實例方案從「精簡」變更為「專業」。</li></ul> |
 | 管理者 | 更新「授權使用者」清單。| <ul><li>將使用者新增至「授權使用者」清單。</li><li>從「授權使用者」清單移除使用者。</li></ul> |
 {: caption="表 1. IAM 使用者角色及動作" caption-side="top"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -24,12 +24,12 @@ lastupdated: "2018-8-2"
 
 **常見問題集**
 
-- [我的 JazzHub 專案與 UK 地區相關聯，但我的工具鏈將會在美國南部地區。這樣會如何運作？](#faq_region)
+- [我的 JazzHub 專案與英國地區相關聯，但我的工具鏈在美國南部地區。這樣會如何運作？](#faq_region)
 - [當我升級時，Track &amp; Plan 中的工作項目和儀表板會發生什麼事？](#faq_tp)
 - [當我升級時，我的程式碼儲存庫會發生什麼事？](#faq_repo)
 - [當我升級至工具鏈時，我專案中的建置定義會發生什麼事？](#faq_build)
 - [我需要為將升級至工具鏈的專案建立組織。我瞭解我需要先新增信用卡到我的帳戶中，才能建立組織。我的信用卡會被收費嗎？](#faq_charges)
-- [我找不到或無法存取工具鏈。我該怎麼辦？](#faq_find)
+- [我找不到或無法存取工具鏈。我該怎麼做？](#faq_find)
 - [我的專案與英國地區相關聯。升級之後，我看到錯誤訊息、我的同事無法存取工具鏈，而且我在「{{site.data.keyword.Bluemix_notm}} 平台」的「工具鏈」頁面上看不到工具鏈。這是怎麼回事？](#faq_uk)
 
 ## 工具鏈
@@ -70,7 +70,7 @@ hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果�
 ![「要升級的專案」功能表項目的影像](images/menu-projects-to-upgrade.png)
 {: tip}
 
-開始升級時，會鎖定您專案中的管線階段。您將無法執行或修改它們。如果您刪除工具鏈來回復升級，則會將管線解除鎖定。
+開始升級時，會鎖定您專案中的管線階段。您無法執行或修改它們。如果您刪除工具鏈來回復升級，則會將管線解除鎖定。
 
 如果您的專案使用在 JazzHub 上管理的 Git 儲存庫，則在開始升級之後，會鎖定儲存庫，確保移至工具鏈的資料的完整性。如果您刪除工具鏈來回復升級，則會將 JazzHub 上的儲存庫解除鎖定。
 
@@ -93,9 +93,9 @@ hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果�
 
    ![升級頁面範例](images/project-upgrade-toolchain.png)
 
-   如需升級處理程序的概觀，請閱讀該頁面上的說明。此工具鏈會包含新的管線，而這個管線包含與專案管線相同的階段及工作。此外，此工具鏈將包含 {{site.data.keyword.contdelivery_short}} 中所執行 Eclipse Orion {{site.data.keyword.webide}} 的指標。
+   如需升級處理程序的概觀，請閱讀該頁面上的說明。此工具鏈會包含新的管線，而這個管線包含與專案管線相同的階段及工作。此外，此工具鏈包含 {{site.data.keyword.contdelivery_short}} 中所執行 Eclipse Orion {{site.data.keyword.webide}} 的指標。
 
-   在此範例中，因為專案使用 github.com 上的公用儲存庫，所以工具鏈將會連接至相同的 GitHub 儲存庫。如果您的專案使用在 JazzHub 上管理的 Git 儲存庫，則該儲存庫的內容將會複製到 {{site.data.keyword.gitrepos}}（這是 {{site.data.keyword.contdelivery_short}} 的一部分）中的新儲存庫。
+   在此範例中，因為專案使用 github.com 上的公用儲存庫，所以工具鏈會連接至相同的 GitHub 儲存庫。如果您的專案使用在 JazzHub 上管理的 Git 儲存庫，則該儲存庫的內容會複製到 {{site.data.keyword.gitrepos}}（這是 {{site.data.keyword.contdelivery_short}} 的一部分）中的新儲存庫。
 
 2. 若要自訂工具鏈，您可以配置一些設定：
 
@@ -164,7 +164,7 @@ hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果�
     - 每一個團隊成員都必須具有有效的 {{site.data.keyword.Bluemix_notm}} 帳戶。沒有帳戶的團隊成員必須進行[註冊 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/registration){:new_window}。
     - 從工具鏈「管理」頁面中，將工具鏈存取權授與組織成員。在升級處理程序中，會將現有專案成員新增為工具鏈成員。如需工具鏈存取控制的相關資訊，請參閱[管理存取權 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}。
     - 如果使用者不是工具鏈所屬組織的成員，請從「管理組織」頁面中將他們新增至組織。
-    - 如果您的工具鏈使用 {{site.data.keyword.gitrepos}}，則會將所有具有有效 {{site.data.keyword.Bluemix_notm}} ID 的 JazzHub 專案成員新增至 {{site.data.keyword.gitrepos}} 儲存庫，而他們對此儲存庫的專用權與在 JazzHub 專案中相同。如果您的 JazzHub 專案包括沒有有效 {{site.data.keyword.Bluemix_notm}} ID 的成員，則他們可以登錄一個，並將其新增至儲存庫。
+    - 如果您的工具鏈使用 {{site.data.keyword.gitrepos}}，則會將所有具有有效 {{site.data.keyword.Bluemix_notm}} ID 的 JazzHub 專案成員新增至 {{site.data.keyword.gitrepos}} 儲存庫，而他們對此儲存庫的專用權與在 JazzHub 專案中相同。如果您的 JazzHub 專案包括沒有有效 {{site.data.keyword.Bluemix_notm}} ID 的成員，則他們必須登錄一個，並將其新增至儲存庫。
       如需管理組織的相關資訊，請參閱[管理組織及空間 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/admin/orgs_spaces.html#orgsspacesusers){:new_window}。
 
 3. 使用工具鏈中的工具，而不是 {{site.data.keyword.jazzhub_short}} 專案中的工具。例如，若要從瀏覽器編輯程式碼，請使用工具鏈中的 Web IDE。
@@ -203,10 +203,10 @@ hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果�
 ## 常見問題集
 {: #upgrade_faq}
 
-### 我的 JazzHub 專案與 UK 地區相關聯，但我的工具鏈將會在美國南部地區。這樣會如何運作？
+### 我的 JazzHub 專案與英國地區相關聯，但我的工具鏈在美國南部地區。如何執行此項程序？
 {: #faq_region}
 
-hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果您的專案已配置成將應用程式部署至不同地區，例如 UK 地區，則在將專案升級至工具鏈之後，仍會將應用程式部署至該地區。因此，關於資料的管理所在之處其實沒有什麼改變。工具鏈未來將可在更多地區使用。
+hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果您的專案已配置成將應用程式部署至不同地區，例如 UK 地區，則在將專案升級至工具鏈之後，仍會將應用程式部署至該地區。因此，資料管理所在位置其實沒有什麼改變。工具鏈未來將可在更多地區使用。
 
 ### 當我升級時，Track &amp; Plan 中的工作項目和儀表板會發生什麼事？
 {: #faq_tp}
@@ -221,12 +221,12 @@ hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果�
 
 如需 IBM Track and Plan on Cloud 的相關資訊，或是想要線上購買，請移至 [IBM Marketplace ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}。
 
-若要額外購買 Build Automation 和 Source Code Management，可以選擇 [Rational Team Concert on Cloud ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window}。
+此外，若要購買 Build Automation 及 Source Code Management，可以選擇 [Rational Team Concert on Cloud ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window}。
 
 ### 當我升級時，我的程式碼儲存庫會發生什麼事？
 {: #faq_repo}
 
-升級之後，新的 Git 服務將類似於您先前的服務。如果您使用 github.com 搭配 JazzHub 專案，您的工具鏈將連接至相同的 GitHub 儲存庫。如果您的 JazzHub 專案使用 IBM 管理的 Git，則該儲存庫的內容將會複製到 {{site.data.keyword.gitrepos}}（這是 {{site.data.keyword.contdelivery_short}} 的一部分且由 IBM 管理）中的新儲存庫。
+升級之後，新的 Git 服務會類似於您先前的服務。如果您已搭配使用 github.com 與 JazzHub 專案，則工具鏈會連接至相同的 GitHub 儲存庫。如果您的 JazzHub 專案使用 IBM Hosted Git，則會將該儲存庫的內容複製到 {{site.data.keyword.gitrepos}}（這是 {{site.data.keyword.contdelivery_short}} 的一部分且由 IBM 管理）中的新儲存庫。
 
 如需升級過程中，各種儲存庫處理方式的完整詳細資料，請參閱下表。
 
@@ -242,7 +242,7 @@ hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果�
 
 如果您使用 Jazz 而非 Delivery Pipeline 來建置原始碼，則必須手動移轉建置定義到工具鏈中的 Delivery Pipeline。
 
-如果您使用 Jazz SCM 作為來源儲存庫，且使用 Delivery Pipeline 建置程式碼，則 Jazz SCM 中的原始檔會自動移到 Git 儲存庫。您的 Delivery Pipeline 配置將維持相同，只除了它會使用來自 Git 儲存庫的原始檔，而不是來自 Jazz SCM 的原始檔。
+如果您使用 Jazz SCM 作為來源儲存庫，且使用 Delivery Pipeline 建置程式碼，則會將 Jazz SCM 中的原始檔自動移至 Git 儲存庫。您的 Delivery Pipeline 配置會維持相同，只除了它會使用來自 Git 儲存庫的原始檔，而不是來自 Jazz SCM 的原始檔。
 
 ### 我需要為將升級至工具鏈的專案建立組織。我瞭解我需要先新增信用卡到我的帳戶中，才能建立組織。我的信用卡會被收費嗎？
 {: #faq_charges}
@@ -251,7 +251,7 @@ hub.jazz.net 的專案和工具鏈都在美國南部地區進行管理。如果�
 
 如果您是 IBM 員工，可以按照內部 IBM 專案將帳單計入部門，來代替個人信用卡。如果您需要使用超過 IBM 員工免費額度的資源，請建立支援問題單。
 
-### 我找不到或無法存取工具鏈。我該怎麼辦？
+### 我找不到或無法存取工具鏈。我能執行哪些操作？
 {: #faq_find}
 
 工具鏈是在 {{site.data.keyword.Bluemix_notm}} 組織中進行管理。升級處理程序會將 JazzHub 專案的所有成員都新增至工具鏈。不過，除非 {{site.data.keyword.Bluemix_notm}} 組織的擁有者將那些使用者新增至組織，否則他們看不到工具鏈。

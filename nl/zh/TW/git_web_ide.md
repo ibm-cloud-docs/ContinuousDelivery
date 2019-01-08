@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # 在 Eclipse Orion Web IDE 中使用 Git
@@ -91,7 +93,7 @@ lastupdated: "2018-8-2"
 將所參照遠端分支的內容改寫為作用中本端分支的內容。
 
 當您將本端分支強制推送至遠端分支時，可能會遺失遠端分支上的確定。
-{: tip}
+{: important}
 
 ### Eclipse Orion Web IDE
 {: #force_push_web}
@@ -221,7 +223,7 @@ lastupdated: "2018-8-2"
 {: #modify_last_commit}
 
   如果您在將最後一個確定推送至遠端儲存庫之後對其進行修改，則會重寫確定歷程。這項變更可能會造成確定失敗，以及專案中其他貢獻者的其他問題。請確定您知道在修改您已推送至遠端儲存庫的確定之前所進行的作業。
-  {: tip}
+  {: important}
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}

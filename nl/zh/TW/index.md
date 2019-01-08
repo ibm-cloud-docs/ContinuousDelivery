@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-15"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-15"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -26,13 +28,13 @@ lastupdated: "2018-8-15"
 
 在您從範本建立持續交付工具鏈之前，必須先建立 {{site.data.keyword.contdelivery_short}} 實例，方法是從 {{site.data.keyword.Bluemix_notm}} 型錄選取它。工具鏈會整合用於規劃、開發、部署管線以及管理應用程式的工具。您隨時可以從工具鏈新增或移除工具。如果您已有工具鏈，則可以[檢視現有工具鏈](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}。如需使用工具鏈的相關資訊，請參閱[使用工具鏈](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}。
 
-如果您已有 {{site.data.keyword.contdelivery_short}} 實例，則可以[建立工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/devops/create){: new_window} 或[檢視現有工具鏈](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}。
+如果您已有 {{site.data.keyword.contdelivery_short}} 實例，則可以[建立工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/devops/create){: new_window} 或[檢視現有工具鏈](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}。
 {: tip}
 
 ##步驟 1：選取工具鏈範本
 {: #select_a_toolchain_template}
 
-1. 在**建立工具鏈**頁面上，按一下[工具鏈範本 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/devops/create){: new_window}。
+1. 在**建立工具鏈**頁面上，按一下[工具鏈範本 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/devops/create){: new_window}。
 1. 檢閱即將建立之工具鏈的圖表。此圖會顯示每個工具整合在工具鏈中的生命週期階段。
 
  有一些工具鏈範本會有多個工具整合實例。例如，{{site.data.keyword.Bluemix_notm}} Public 上的「微服務」工具鏈範本包含三個 GitHub 實例及三個 Delivery Pipeline 實例，三個微服務各有一個。
@@ -49,8 +51,8 @@ lastupdated: "2018-8-15"
  * 要在其中建立工具鏈的地區。如果您要使用不同的地區，請從可用地區清單中選取它。
  * 要在其中建立工具鏈的資源群組或組織。按一下鏈結，以切換選取資源群組與組織。如果您要使用不同的資源群組或組織，請從可用資源群組或組織清單中選取它。
  
-   資源群組只能在美國南部地區使用。
-   {: tip}
+   資源群組適用於美國南部、美國東部、英國、德國及東京地區。Cloud Foundry 組織在美國南部、英國及德國地區中受到支援。
+   {: important}
  
 1. 在「工具整合」區段中，選取您要配置給工具鏈的每一個工具整合。有些工具整合不需要進行配置。如需配置工具整合的相關資訊，請參閱[配置工具整合](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。
 1. 按一下**建立**。會自動執行數個步驟來設定工具鏈。視您選取的工具鏈範本以及使用的是 {{site.data.keyword.Bluemix_notm}} Public 還是 {{site.data.keyword.Bluemix_notm}} Dedicated 而定，設定的工具整合會有所不同。例如，當您在 {{site.data.keyword.Bluemix_notm}} Public 上建立「微服務」工具鏈時，會執行下列步驟：

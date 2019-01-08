@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # 在 Continuous Delivery 中管理個人資料
@@ -30,7 +32,7 @@ lastupdated: "2018-8-2"
  * [{{site.data.keyword.DRA_full}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
 IBM 不會管理 {{site.data.keyword.contdelivery_short}} 服務中的資料。在您離開 {{site.data.keyword.Bluemix_notm}} Public 中所管理的 {{site.data.keyword.contdelivery_short}} 服務之前，必須刪除您自己的資料。
-{: tip}
+{: important}
 
 {{site.data.keyword.contdelivery_short}} 提供管理資源群組或 Cloud Foundry 組織內資料的適當許可權。您公司的原則可能會限制這些許可權。如果您沒有適當的許可權，請聯絡 {{site.data.keyword.Bluemix_notm}} 帳戶的管理者。
 
@@ -99,7 +101,7 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 {{site.data.keyword.webide}} 提供雲端中的個人工作區。您可以使用 {{site.data.keyword.webide}} 來複製 Git 儲存庫以及編輯檔案。您會擁有您的 {{site.data.keyword.webide}} 工作區；任何其他帳戶都不會共用它。
 
 在您刪除 {{site.data.keyword.webide}} 資料之前，可能會想要匯出工作。在您刪除工作區之後，就會從 {{site.data.keyword.contdelivery_short}} 中移除它們，並刪除所有檔案。
-{: tip}
+{: important}
 
 ###匯出 Web IDE 工作區
 
@@ -118,7 +120,7 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 1. 按一下**刪除**，以移除 {{site.data.keyword.webide}} 中的所有資料。
 
 {{site.data.keyword.webide}} 使用單一登入機制。第一次存取此工具整合時，會為 IBM Cloud 帳戶建立對應但隱藏的 {{site.data.keyword.webide}} 帳戶。刪除您的所有工作區之後，請不要存取 {{site.data.keyword.webide}}。如果您再次存取 {{site.data.keyword.webide}}，則會自動建立您必須刪除的新帳戶。
-{: tip}
+{: important}
 
 ## 修改、匯出及刪除 Git Repos and Issue Tracking 資料
 {: #managing_grit_data}
@@ -158,7 +160,7 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 {: tip}
 
 {{site.data.keyword.gitrepos}} 使用單一登入機制，以在您第一次存取工具整合時自動建立 IBM Cloud 帳戶的對應 Git 帳戶。在您刪除帳戶之後，請不要存取 {{site.data.keyword.gitrepos}}。如果您再次存取 {{site.data.keyword.gitrepos}}，則會自動建立您必須刪除的新帳戶。
-{: tip}
+{: important}
 
 ## 修改、匯出及刪除 Continuous Delivery 管線資料
 {: #managing_pipeline_data}
@@ -168,7 +170,7 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 請確定您先與其他團隊成員合作，再刪除共用物件或管線。刪除階段可能會導致管線失敗。
 
 管線不能存在於工具鏈外部。如果您刪除工具鏈，則會一併刪除與工具鏈相關聯的所有管線。如果您要刪除整個工具鏈，則不需要個別刪除每一個管線。相反地，請跳到「修改及刪除工具鏈和工具整合」小節，並遵循刪除工具鏈的步驟。
-{: tip}
+{: important}
 
 管線階段可能包括個人資料（例如環境內容形式的認證），以及顯示管線現行狀態的管線定義。階段也可能會包括工作內您要修改或刪除的 Script，以及您要匯出之最新管線執行的構件及日誌。使用「配置階段」或「刪除階段」動作，即可修改或刪除階段。使用「下載」動作，以從階段中匯出構件或日誌。
 

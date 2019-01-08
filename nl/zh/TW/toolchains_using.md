@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
-{:download: .download}
+{:note: .note}
+{:tip: .tip}
+{:important: .important}
 
 # 使用工具鏈
 {: #toolchains-using}
@@ -20,8 +22,8 @@ lastupdated: "2018-8-2"
 開放式工具鏈適用於 {{site.data.keyword.Bluemix}} 的「公用」及「專用」環境。您可以在日常的開發、部署及操作工作中，使用工具鏈來提高生產力。設定工具鏈之後，即可新增、刪除或配置工具整合，以及管理對工具鏈的存取權。
 {: shortdesc}
 
-您可以使用資源群組或 Cloud Foundry 組織來管理美國南部「公用」地區中的工具鏈。工具鏈的存取控制及授權使用者管理功能不同（視它們包含在資源群組還是 Cloud Foundry 組織而定）。
-{: tip}
+您可以使用資源群組來管理美國南部、美國東部、英國、德國及東京公用地區中的工具鏈。您可以使用 Cloud Foundry 組織來管理美國南部、英國及德國公用地區中的工具鏈。工具鏈的存取控制及授權使用者管理功能不同（視它們包含在資源群組還是 Cloud Foundry 組織而定）。
+{: important}
 
 ## 配置工具整合
 {: #configuring_a_tool_integration}
@@ -73,7 +75,7 @@ lastupdated: "2018-8-2"
 只有屬於所選取 {{site.data.keyword.contdelivery_short}} 實例之授權使用者清單的使用者，才能使用 {{site.data.keyword.contdelivery_short}} 工具鏈的 Delivery Pipeline、Eclipse Orion {{site.data.keyword.webide}} 及 {{site.data.keyword.gitrepos}} 特性。您可以從所指定資源群組內所選取 {{site.data.keyword.contdelivery_short}} 實例的「管理」標籤中管理授權使用者授權。
 
 若要存取工具鏈中 {{site.data.keyword.contdelivery_short}} 的主要特性（例如 Delivery Pipeline），使用者必須可存取 IAM 中的工具鏈，而使用者也必須屬於 {{site.data.keyword.contdelivery_short}} 實例的「授權使用者」清單。
-{: tip}
+{: important}
 
 授權使用者授權會套用至與 {{site.data.keyword.contdelivery_short}} 實例相同之資源群組中所含的所有工具鏈。
 {: tip}
@@ -85,7 +87,7 @@ lastupdated: "2018-8-2"
 將使用者新增至與工具鏈相關聯的組織以及工具鏈的存取控制清單，即可將工具鏈存取權授與使用者。每一個工具鏈都會與特定組織相關聯，而且任何屬於該組織成員的使用者都可以新增至任何相關聯工具鏈的存取控制清單。您目前在其中工作的組織會顯示在功能表列上。若要存取一組不同的工具鏈，請切換至不同的組織。
 
 您必須將使用者新增至工具鏈管理所在地區的工具鏈組織。如果工具鏈配置成將應用程式部署至不同地區，則仍會將應用程式部署至該地區。
-{: tip}
+{: important}
 
 如果您使用的是 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}，則將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，使用者可以使用其 {{site.data.keyword.Bluemix_notm}} ID 及密碼來登入 {{site.data.keyword.ghe_short}}。使用者登入時，就會建立他們的帳戶。將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，並不會將他們自動新增至 {{site.data.keyword.ghe_short}} 儲存庫。必須由具有儲存庫管理專用權的人員來新增他們。如需相關資訊，請參閱[使用 Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，請遵循內部程序。
 
@@ -103,15 +105,17 @@ lastupdated: "2018-8-2"
 
 * 若要將存取權授與不具有工具鏈組織成員身分的使用者，請遵循下列步驟：
 
-   a. 從功能表列中，按一下**管理 > 安全 > 身分及存取**。
+   a. 從功能表列，按一下**管理 > 存取 (IAM)**。
 
-   b. 從您要指派存取權之使用者的列中，選取**動作**功能表，然後按一下**指派存取權**。
+   b. 按一下**從使用者開始存取**。
+   
+   c. 從您要指派存取權之使用者的列中，選取**動作**功能表，然後按一下**指派存取權**。
+   
+   d. 選取**使用 Cloud Foundry 指派存取權**。
 
-   c. 選取**使用 Cloud Foundry 指派存取權**。
+   e. 選取**指派組織**。
 
-   d. 選取**指派組織**。
-
-   e. 指派使用者存取權：
+   f. 指派使用者存取權：
 
      * 選擇要在其中新增使用者的組織。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-6-22"
+lastupdated: "2018-10-10"
 
 ---
 
@@ -34,10 +34,10 @@ lastupdated: "2018-6-22"
 
 | 動作 |說明| 
 |:-----------------|:-----------------|
-| 工具鏈建立 | 建立工具鏈 | 
-| 工具鏈刪除 | 刪除工具鏈 |
-| 工具建立 | 建立工具整合 |
-| 工具刪除 | 刪除工具整合 |
+| continuous-delivery.toolchain.create | 建立工具鏈 | 
+| continuous-delivery.toolchain.delete | 刪除工具鏈 |
+| toolchain.tool-instance.deploy | 建立工具整合 |
+| toolchain.tool-instance.undeploy | 刪除工具整合 |
 {: caption="表 1. 可產生事件的動作" caption-side="top"}
 
 ## 事件的檢視位置

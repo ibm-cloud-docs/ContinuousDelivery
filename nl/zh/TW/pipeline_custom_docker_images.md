@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -33,7 +35,7 @@ lastupdated: "2018-8-2"
 如果 **Docker 映像檔名稱**欄位未完成，則會使用標準管線基礎映像檔。
 {: tip}
 
-依預設，會在 [Docker Hub ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://hub.docker.com/){: new_window} 上搜尋您的儲存庫。如果您使用另一個 Docker 登錄（例如 IBM Cloud Registry），則可以使用完整 DNS 名稱。您也可以在 Docker Hub 上使用映像檔的完整名稱。例如，`registry.hub.docker.com/library/maven:3.5.3-ibmjava`。
+依預設，會在 [Docker Hub ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://hub.docker.com/){: new_window} 上搜尋您的儲存庫。如果您使用另一個 Docker 登錄（例如 {{site.data.keyword.registrylong}}），則可以使用完整 DNS 名稱。您也可以在 Docker Hub 上使用映像檔的完整名稱。例如，`registry.hub.docker.com/library/maven:3.5.3-ibmjava`。
 
 Docker 映像檔的 `tag` 是選用項目。依預設，如果您未指定標籤，則會設為 `latest`。預設值 `latest` 只是儲存庫擁有者必須管理的標籤名稱。這不表示依時間順序而言，此 Docker 映像檔是最新的映像檔。
 
@@ -44,12 +46,12 @@ Docker 映像檔的 `tag` 是選用項目。依預設，如果您未指定標籤
 
 如果您是使用需要鑑別的專用登錄，則必須設定兩個額外的階段環境內容：`DOCKER_USERNAME` 及 `DOCKER_PASSWORD`。您可以使用安全內容來遮罩 `DOCKER_PASSWORD`。取回您的映像檔之前，自訂 Docker 映像檔工作會使用您的使用者名稱及密碼認證來完成 `docker login`。
 
-針對大部分登錄，您可以使用已提供給您的使用者名稱及密碼。如果您使用 IBM Cloud Registry 來儲存專用映像檔，則必須使用平台「API 金鑰」來進行鑑別。 
+針對大部分登錄，您可以使用已提供給您的使用者名稱及密碼。如果您使用 {{site.data.keyword.registrylong_notm}} 來儲存專用映像檔，則必須使用平台「API 金鑰」來進行鑑別。 
 
-1. [要求平台 API 金鑰 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/iam/#/apikeys){: new_window}，並確定您已儲存金鑰。 
+1. [要求平台 API 金鑰 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/iam/#/apikeys){: new_window}，並確定您已儲存金鑰。 
 1. 針對 `DOCKER_USERNAME` 使用 `iamapikey` 並針對 `DOCKER_PASSWORD` 使用您所儲存的平台「API 金鑰」，來建立兩階段環境內容。
 
- ![IBM Cloud Registry 認證](images/custom-image-private-repository.png)
+ ![{{site.data.keyword.registrylong_notm}} 認證](images/custom-image-private-repository.png)
 
 
 ## 指定 Script

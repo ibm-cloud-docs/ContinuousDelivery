@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-12"
 
 ---
 {:shortdesc: .shortdesc}
@@ -11,16 +11,18 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
 # 建立自訂工具鏈範本
 {: #toolchains_custom}
 
-建立自訂工具鏈範本，以改善 DevOps 工作流程。您可以快速開始使用現有工具鏈範本，或建立只包括所需整合的工具鏈範本。您隨時可以新增或移除工具鏈的整合。
+建立自訂工具鏈範本，以改善 DevOps 工作流程。您可以快速開始使用現有工具鏈範本，或建立只包含所需工具整合的工具鏈範本。您隨時可以新增或移除工具鏈的整合。
 {:shortdesc}
 
-您可以透過數種方式[建立工具鏈](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}。在您建立自訂工具鏈範本之後，即可[建立部署至 {{site.data.keyword.Bluemix_notm}} 按鈕](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}進行共用。在 [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window} 中可以找到工具鏈範本 SDK 的詳細資料。在 [Garage Method 網站](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}上可以找到逐步指導教學。
+您可以透過數種方式[建立工具鏈](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}。在您建立自訂工具鏈範本之後，即可[建立部署至 {{site.data.keyword.Bluemix_notm}} 按鈕](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}進行共用。如需工具鏈範本 SDK 的相關資訊，請參閱 [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}。如需逐步指導教學，請參閱 [Garage Method 網站](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}。
 
 
 ## 開始使用
@@ -37,7 +39,7 @@ lastupdated: "2018-8-2"
 
  此範本會部署單一 GitHub 儲存庫中的基本 Hello World 應用程式，並包括已預先配置以進行持續交付、來源控制、問題追蹤及線上編輯的簡單工具鏈。
 
-2. 如果您偏好從較複雜的工具鏈範本開始，則可以從複製[微服務的雲端原生工具鏈](https://github.com/open-toolchain/toolchain-demo){: new_window}開始。
+2. 如果您想要從較複雜的工具鏈範本開始，請複製[微服務的雲端原生工具鏈](https://github.com/open-toolchain/toolchain-demo){: new_window}。
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -64,7 +66,7 @@ lastupdated: "2018-8-2"
 ![定義工具鏈所需的最少檔案數](images/min_files_for_a_toolchain.png)
 
 
-下列各節說明上述每一個檔案。每一個小節都會包含您可在工具鏈發展時諮詢的配置資訊。YAML 是一種資料序列化語言，其為 JSON 的嚴格超集，並新增了語法顯著換行及縮排。不過，YAML 根本不容許文字定位點字元。
+下列各節說明上述每一個檔案。每一個小節都會包含您可在工具鏈發展時諮詢的配置資訊。YAML 是一種資料序列化語言，其為 JSON 的嚴格超集，並新增了語法顯著換行及縮排。不過，YAML 不容許文字定位點字元。
 
 ## 瞭解配置檔
 {: #toolchains_custom_config_files}
@@ -75,30 +77,29 @@ lastupdated: "2018-8-2"
 * 如何建置及部署程式碼的相關詳細資料。
 * 工具鏈中工具的配置內容。
 
-在您的工具鏈變得更為複雜時，配置檔的複雜性也會變得更為複雜。
+在您的工具鏈變得更為複雜時，配置檔的複雜性會變得更為複雜。
 
-當您使用 YAML 檔案時，需要記住以下幾個準則：
+當您處理 YAML 檔案時，請遵循下列準則：
 
 * 只有空間才能使用空格。不容許定位點。
 * 所有內容及清單都必須使用一個以上的空格進行縮排。
 * 所有索引鍵及內容都區分大小寫。
 
-請特別注意 YAML 檔案的格式，以減少發生錯誤的機會。
-若要檢查以尋找錯誤，您可能想要使用簡單驗證器（如[此剖析器](http://wiki.ess3.net/yaml/){: new_window}）。
-{: tip}
+請特別注意 YAML 檔案的格式，以減少發生錯誤的機會。若要檢查以尋找錯誤，請使用簡單驗證器（例如[這個剖析器](http://wiki.ess3.net/yaml/){: new_window}）。
+{: important}
 
-## 規劃服務區段
+## 規劃服務
 每一個服務子區段都包含下列資訊：
 
-* name - 使用者產生的字串，用來識別現行檔案之環境定義中的這個服務。此名稱可以用來將服務標示為必要。
+* name - 使用者產生的字串，用來識別現行檔案之環境定義中的這個服務。您可以使用此名稱來將服務標示為必要。
 
 * service_id - 識別服務的唯一字串。此字串直接來自[服務型錄](https://github.com/open-toolchain/sdk/wiki/services.md){: new_window}。
 
-* parameters - 服務的零個以上配置參數。這些參數會根據服務而不同：使用者需要參照型錄，以瞭解特定服務所需的參數。
+* parameters - 服務的零個以上配置參數。這些參數會在服務之間改變。使用者必須參考型錄以判斷特定服務需要哪些參數。
 
 ### 包括其他檔案中的文字
 
-工具鏈的所有資訊都可以位在 `toolchain.yml` 檔案中。不過，您可能想要使用 `$text` 為每一個工具整合使用者介面建立不同的檔案。這樣可以更輕鬆地維護工具鏈，以及將編輯配置檔所需的時間降到最低。`toolchain.yml` 中的此範例 Snippet 顯示如何使用 `pipeline.yml` 檔案的內容作為 `content` 的值。
+工具鏈的所有資訊都可以儲存在 `toolchain.yml` 檔案中。不過，您可能想要為使用 `$text` 的每一個工具整合使用者介面建立不同的檔案。使用不同的檔案可以更輕鬆地維護工具鏈，並將編輯配置檔所需的時間縮到最短。`toolchain.yml` 檔案中的此範例 Snippet 顯示如何使用 `pipeline.yml` 檔案的內容作為 `content` 的值。
 
 ```
   configuration:
@@ -108,7 +109,7 @@ lastupdated: "2018-8-2"
 
 ### 本地化工具鏈範本
 
-您可以本地化工具鏈，方法是將 `nls` 目錄中的使用者介面字串外部化，以使用者的偏好語言顯示工具鏈中的字串。您的 `toolchain.yml` 檔案需要包括 `$i18n` 參照。  
+您可以本地化工具鏈，方法是將 `nls` 目錄中的使用者介面字串外部化，以使用者的偏好語言顯示工具鏈中的字串。您的 `toolchain.yml` 檔案必須包含 `$i18n` 參照。  
 下列範例顯示 `messages.yml` 檔案的 `$i18n` 參照：
 
 ```
@@ -116,7 +117,7 @@ messages:
   $i18n: messages.yml
 ```
 
-  英文字串是在 `messages.yml` 中，而其他語言會使用語言碼（例如 `messages_de.yml`）。在[用來識別語言的標籤](https://tools.ietf.org/html/rfc5646){: new_window}中，可以找到語言碼清單。
+  英文字串是在 `messages.yml` 中，而其他語言會使用語言碼（例如 `messages_de.yml`）。您可以在[用來識別語言的標籤](https://tools.ietf.org/html/rfc5646){: new_window}中，找到語言碼清單。
 
    若要參照外部化字串，請使用 `$ref` 來擷取字串。例如，
 
@@ -133,16 +134,16 @@ messages:
     name: my_template
 ```
 
-若要進一步瞭解，請參閱 [Open Toolchain SDK 的訊息區段](https://github.com/open-toolchain/sdk/wiki/Template-File-Format#messages-section){: new_window}。
+如需使用者介面字串的相關資訊，請參閱 [Open Toolchain SDK 的 Messages Section](https://github.com/open-toolchain/sdk/wiki/Template-File-Format#messages-section){: new_window}。
 
 ## 配置工具鏈檔案
 {: #toolchains_custom_toolchain_yml}
 
-`toolchain.yml` 檔案是工具鏈的核心。此檔案會概述工具鏈的所有特性（包括要取回的儲存庫、要包括的服務及建置詳細資料）。為了讓其內容有意義，則可以將它分成數個小節。
+`toolchain.yml` 檔案是工具鏈的核心。此檔案會概述工具鏈的所有特性（包括要取回的儲存庫、要包含的服務，以及建置詳細資料）。若要瞭解其內容，您可以將檔案分解成數個區段。
 
 1\. **介紹工具鏈資訊：**
 
- 檔案的這個區段提供使用者可以在工具鏈建立頁面上看到的工具鏈的簡單詳細資料。請包括工具鏈的名稱，以及可說明工具鏈用途的說明。您也可以包括影像（例如工具鏈的標誌或視覺化描述）。
+ 檔案的這個區段提供使用者可以在工具鏈建立頁面上看到的工具鏈的簡單詳細資料。請包括工具鏈的名稱，以及可說明工具鏈用途的說明。您也可以包含影像（例如工具鏈的標誌或視覺化描述）。
 
  除了提供工具鏈的介紹內容之外，這個區段也包括名為 `required` 的索引鍵，以定義屬於工具鏈一部分的工具。工具鏈的建立者從範本建立工具鏈時，會配置這些工具。對於可在工具鏈建立頁面上配置的每一個工具，將 `toolchain.yml` 檔案中所定義之工具的母項索引鍵新增為 `required` 索引鍵的內容。
 
@@ -170,7 +171,7 @@ template
 
 2\. **儲存庫定義：**
 
- 工具鏈可以持續交付任意數目的 Git 儲存庫（包括 GitHub、GitHub Enterprise、Git Repos and Issue Tracking 及 GitLab）。`toolchain.yml` 檔案的這個區段就是定義每一個儲存庫的位置。
+ 工具鏈可以持續交付任意數目的 Git 儲存庫（例如 GitHub、GitHub Enterprise、Git Repos and Issue Tracking 及 GitLab）。`toolchain.yml` 檔案的儲存庫定義區段就是定義每一個儲存庫的位置。
 
  對於新增至工具鏈的每一個儲存庫，使用下列內容來新增可代表儲存庫名稱的母項索引鍵：
 
@@ -207,9 +208,9 @@ template
 
 3\. **管線資訊：**
 
- 您可以使用管線來持續交付專案。檔案的這個區段定義配置詳細資料，以用來在每一個 GitHub 及 Git Repo and Issue Tracking 儲存庫中建置及部署程式碼。
+ 您可以使用管線來持續交付專案。檔案的這個區段定義配置詳細資料，以用來在每一個 GitHub 及 Git Repos and Issue Tracking 儲存庫中建置及部署程式碼。
 
- 若要開始，請針對工具鏈中所定義的每一個儲存庫，新增代表其管線名稱的母項索引鍵。請考量從 GitHub 或 Git Repo and Issue Tracking 儲存庫名稱衍生此索引鍵。請新增下列內容：
+ 若要開始，請針對工具鏈中所定義的每一個儲存庫，新增代表其管線名稱的母項索引鍵。請考量從 GitHub 或 Git Repos and Issue Tracking 儲存庫名稱衍生此索引鍵。請新增下列內容：
 
 |項目 |索引鍵/內容|值|說明|
 |------|--------------|-------|-------------|
@@ -234,7 +235,7 @@ template
 
  在[稍後區段](#toolchains_custom_pipeline_yml)中，可以找到建立 `pipeline.yml` 檔案的相關資訊。
 
- 此 Snippet 顯示檔案的這個區段的範例：
+ 下列 Snippet 顯示檔案的這個區段的範例：
 
  ```
  # Pipelines
@@ -254,19 +255,17 @@ template
           PROD_SPACE_NAME: '{{form.pipeline.parameters.prod-space}}'
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
-       execute: true 
-```
+       execute: true
+ ```
  {: codeblock}
 
 4\. **部署詳細資料：**
 
- 在持續交付處理程序期間，您可以配置工具鏈，將應用程式部署至使用者可以存取的任何 {{site.data.keyword.Bluemix_notm}} 地區、組織或空間。您可以從工具鏈建立頁面中選取應用程式部署位置的特定詳細資料。
+ 在持續交付處理程序期間，您可以配置工具鏈，將應用程式部署至使用者可以存取的任何 {{site.data.keyword.Bluemix_notm}} 地區、組織或空間。您可以在[工具鏈建立](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}頁面上指定在何處部署應用程式的詳細資料。
 
- ![Delivery Pipeline 配置設定](images/deploy_configuration.png)
+`toolchain.yml` 檔案的這個區段定義可從工具鏈建立頁面配置的管線階段。
 
- `toolchain.yml` 檔案的這個區段定義可從工具鏈建立頁面配置的管線階段。
-
- 若要開始，母索引鍵 `deploy` 可用來識別部署配置內容。下列內容構成本區段的其餘部分：
+ 母索引鍵 `deploy` 可用來識別部署配置內容。下列內容構成區段的其餘部分：
 
 |項目 |索引鍵/內容|值|說明|
 |------|--------------|-------|-------------|
@@ -298,7 +297,7 @@ template
  ```
  {: codeblock}
 
- 程式碼範例大部分會依現狀使用，而且只需要稍微進行修改。若要自訂此區段，請將 `github-repo-name` 設為與儲存庫的名稱一致。也需要更新 [`deploy.json`](#toolchains_custom_deploy_json) 檔案中的詳細資料。
+ 您可以使用程式碼範例並進行一些修改。若要自訂此區段，請將 `github-repo-name` 設為與儲存庫的名稱一致。您也必須在 [`deploy.json`](#toolchains_custom_deploy_json) 檔案中更新詳細資料。
 
  若要建立包括 dev、QA 及 Prod 階段的更複雜管線，可以替換 `parameters` 索引鍵下的下列內容。
 
@@ -396,16 +395,14 @@ stages:
  ## 配置管線介面
  {: #toolchains_custom_deploy_json}
 
- 在工具鏈建立頁面上，從「可配置的整合」區段中選取 Delivery Pipeline 時，會展開此區段以顯示下列項目：
+ 在[工具鏈建立](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}頁面上，從「可配置的整合」區段中選取 Delivery Pipeline 時，會展開此區段以顯示下列項目：
 
- 	* 應用程式的名稱
- 	* 在其中部署管線階段的「地區」、「組織」及「空間」。
+ 	* 應用程式的名稱。
+ 	* 在其中部署管線階段的地區、組織及空間。
 
 您可以針對每一個工具配置這些項目。
 
  
-
- ![Delivery Pipeline 配置設定](images/deploy_configuration.png)
 
  使用者介面中此區段的佈置是透過 `deploy.json` 綱目所定義。
 
@@ -414,7 +411,7 @@ stages:
  	* Title
  	* Description
  	* LongDescription
- 	* 應該修改所有 `hello-world-name` 實例及關聯的詳細資料，以符合應用程式的詳細資料。
+ 	* `hello-world-name` 的所有實例及相關聯的詳細資料
 
  下列 Snippet 是 `deploy.json` 檔案的範例：
 

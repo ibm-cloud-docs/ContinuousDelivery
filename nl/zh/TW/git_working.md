@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-5"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # {{site.data.keyword.gitrepos}}
@@ -19,6 +21,12 @@ lastupdated: "2018-8-2"
 
 使用 IBM 所管理並以 [GitLab Community Edition ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://about.gitlab.com/){:new_window} 為建置基礎的 Git 儲存庫及問題追蹤器，來與團隊分工合作並且管理原始碼。
 {: shortdesc}
+
+只邀請您有個人或業務關係的人，以合作進行一個專案。使用 Git 儲存庫邀請的使用者，如用途不是要合作進行專案，則其服務存取權可能會遭到暫停或撤銷。
+{: important}
+
+請不要將受法規規範的資料儲存在 Git 儲存庫內的檔案或問題。目前並沒有針對受法規規範之資料的程序。
+{: tip}
 
 {{site.data.keyword.gitrepos}} 工具整合可支援團隊使用多種方式來管理程式碼以及分工合作：
    * 透過讓程式碼更為安全的精密存取控制，來管理 Git 儲存庫

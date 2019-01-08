@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-10-9"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -21,20 +21,6 @@ lastupdated: "2018-8-2"
 
 # 環境內容及資源
 {: #deliverypipeline_environment}
-
-您可以使用環境內容及預先安裝的資源，以與 {{site.data.keyword.contdelivery_full}} 的管線功能互動。例如，您可以將它們包含在工作 Script 或測試指令中。
-{:shortdesc}
-
-您可以從階段的**環境內容**標籤中，將自己的環境內容新增至階段。階段中的每個工作都會有環境內容。
-
-您可以從「環境內容」標籤中新增四種類型的內容：
-* **文字**：具有單行值的內容索引鍵。
-* **文字區**：具有多行值的內容索引鍵。
-* **安全**：具有單行值的內容索引鍵。值會顯示為星號。
-* **內容**：專案儲存庫中的檔案。此檔案可以包含多個內容。每一個內容都必須單獨一行。若要區隔索引鍵值組，請使用等號 (=)。請使用引號括住所有字串值。例如，MY_STRING="SOME STRING VALUE"。
-
-您可以在工作 Script 中執行 `env` 指令，來檢查管線工作的環境內容。
-{:tip}
 
 根據預設值，下列內容及資源可用於管線環境中。
 
@@ -74,6 +60,7 @@ lastupdated: "2018-8-2"
 |PIPELINE_STAGE_INPUT_JOB_ID|現行階段的輸入工作 ID。|
 |PIPELINE_STAGE_INPUT_REV|現行階段的輸入修訂。|
 |PIPELINE_INITIAL_STAGE_EXECUTION_ID|管線執行作業的唯一 ID。|
+| PIPELINE_TRIGGERING_USER |管線工作的現行使用者|
 |TASK_ID|工作現行執行作業的唯一 ID。|
 |TMPDIR|儲存暫存檔的目錄位置。|
 |WORKSPACE|現行工作目錄的路徑。|
@@ -91,7 +78,7 @@ lastupdated: "2018-8-2"
 |MAVEN_HOME|Apache Maven 3.2.1 的路徑。|
 |NODE_HOME|Node.js 0.10.29 的路徑。|
 
-您可以將 `ANT_HOME` 設為 `$ANT_JAVA8_HOME` 並將 `JAVA_HOME` 設為 `$JAVA8_HOME`，以在管線 Script 中使用 Apache Ant 1.10+ 版。
+若要在管線的 Script 中使用 Apache Ant 1.10+，請將 `ANT_HOME` 設為 `$ANT_JAVA8_HOME` 並將 `JAVA_HOME` 設為 `$JAVA8_HOME`。
 {: tip}
 
 ### 部署內容
@@ -129,11 +116,11 @@ lastupdated: "2018-8-2"
 |IBM Node|node|/opt/IBM/node|
 |IBM Rational Team Concert&trade; SCM Tools|RTC-SCM-Tools|/opt/IBM/RTC-SCM-Tools|
 
-64 位元版本的 IBM Node 0.10、0.10.48、0.12、0.12.17、4.2、4.4.5、4.6.0、6.2.2 及 6.7.0 可用於管線環境。若要選擇版本，請使用 export 指令。
+管線環境提供 64 位元版本的 IBM Node 0.10、0.10.48、0.12、0.12.17、4.2、4.4.5、4.6.0、6.2.2 及 6.7.0。若要選擇版本，請使用 export 指令。
 
-例如，若要使用 Node 0.12.7，請輸入下列指令：`export PATH=/opt/IBM/node-v0.12/bin:$PATH`
+例如，若要使用 Node 0.12.7，請鍵入下列指令：`export PATH=/opt/IBM/node-v0.12/bin:$PATH`
 
-若要使用 Node 4.2.2，請輸入下列指令：`export PATH=/opt/IBM/node-v4.2/bin:$PATH`
+若要使用 Node 4.2.2，請鍵入下列指令：`export PATH=/opt/IBM/node-v4.2/bin:$PATH`
 
 ### Node 模組
 

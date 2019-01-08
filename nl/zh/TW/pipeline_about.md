@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -21,19 +23,23 @@ lastupdated: "2018-8-2"
 {:shortdesc}
 
 檢視、修改或執行管線的許可權是根據擁有管線的工具鏈的存取控制。如需工具鏈之存取控制的相關資訊，請參閱[管理對資源群組中工具鏈的存取](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}及[管理對 Cloud Foundry 組織中工具鏈的存取](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}。
-{: tip}
+{: important}
+
+您可以指定 Script 在管線提供的許多工作類型中執行，這樣能讓您直接控制工作執行的內容。這些 Script 會在 Docker 映像檔中執行，該映像檔包含許多標準開發工具，包括與 {{site.data.keyword.Bluemix_notm}} 運行環境互動所需的工具。如需標準 Docker 映像檔包含內容的相關資訊，請參閱[預先安裝的資源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}。如果您的工作需要標準映像檔中未提供的開發工具，或是您需要那些工具的不同版本，可以使用自訂映像檔。如需自訂映像檔的相關資訊，請參閱[使用自訂 Docker 映像檔](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}。
+
+當管線執行 Script 時，說明工作執行所在環境定義的內容，會藉由環境變數而被傳遞給 Script。例如，階段輸入儲存庫的 URL、正在執行的階段及工作名稱、工作類型指定的參數等等。若要檢視可用環境變數的清單，請參閱[預先安裝的資源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}。 
+
+您可以在管線層次以及階段層次定義內容。管線內容會在管線中的所有階段與工作之間共用。階段內容專屬於特定的階段，並且在該階段中的所有工作之間共用。如需內容的相關資訊，請參閱[環境內容（環境變數）](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties)。
 
 ## 階段
 {: #deliverypipeline_stages}
 
-建置、部署及測試程式碼時，階段會組織輸入及工作。階段可接受來自來源控制儲存庫（SCM 儲存庫）的輸入，或來自其他階段中之建置工作（建置構件）的輸入。當您建立第一個階段時，會在**輸入**標籤上自動設定預設值。
+建置、部署及測試程式碼時，階段會組織輸入及工作。階段可接受來自來源控制儲存庫（SCM 儲存庫）的輸入，或來自其他階段中之建置工作的輸入。針對 SCM 儲存庫，輸入是儲存庫中特定分支的內容；針對建置工作，輸入是工作產生的構件。當您建立第一個階段時，**輸入**標籤會包含設定預設值。
 
-階段的輸入會傳遞給階段所包含的工作，並且會提供每個工作一個全新的容器以便在其中執行。
-
-階段中的工作無法將構件傳遞給彼此。因為您無法在工作之間傳遞構件，所以如果部署階段將使用建置階段構件，則需要具有與「部署」階段不同的「建置」階段。
+階段執行時，階段的輸入會傳遞給階段中的每個工作。每個工作都會得到一個全新的容器以便在其中執行。因此，階段內的工作無法將構件傳遞給彼此。若要在工作之間傳遞構件，請將工作分成兩個階段，然後使用來自第一個階段之工作的輸出，作為第二個階段的輸入。
 {: tip}
 
-您可以定義可在所有工作中使用的階段環境內容。例如，您可能會定義 `TEST_URL` 內容，以傳遞用來在單一階段中部署及測試工作的單一 URL。部署工作會部署至該 URL，測試工作則會測試該 URL 上的執行中應用程式。
+類似於您定義管線內容的方法，您也可以定義階段內容，以便用於特定階段中的所有工作。例如，您可能會定義 `TEST_URL` 內容，以將 URL 傳遞給階段中的部署及測試工作。部署工作會部署至該 URL，測試工作則會測試該 URL 上的執行中應用程式。階段內容也會藉由使用環境變數傳遞給工作 Script。如果在管線層次及階段層次都定義了相同的內容，會使用階段內容的值。
 
 在階段中，每次將變更遞送給專案的 SCM 儲存庫時，依預設會自動執行建置及部署。階段及工作會依序執行；它們讓您能進行工作的流程控制。例如，您可以在部署階段之前放置測試階段。如果測試階段中的測試失敗，則不會執行部署階段。
 
@@ -45,21 +51,27 @@ lastupdated: "2018-8-2"
 ### 建置階段
 {: #build_stage}
 
-<!-- Need the Pipeline team to fill out what each builder does and possible add an example -->
-建置階段指定**建置器類型**，以指出如何建置構件。下列是可用的「建置器」類型：
+建置階段指定**建置器類型**，以指出如何建置構件。  
 
-1. **簡單** - 如果您使用**簡單**建置器類型，則不會編譯或建置程式碼；會將它包裝並設為供未來階段使用。
-2. **Ant**
-3. **Container Registry**
-4. **Gradle**
-5. **Gradle（Artifactory、Nexus 或 SonarQube）**
-6. **Grunt**
-7. **IBM Globalization Pipeline**
-8. **Maven**
-9. **Maven（Artifactory、Nexus 或 SonarQube）**
-10. **npm**
-11. **npm（Artifactory 或 Nexus）**
-12. **Shell Script**
+建置工作中可用的許多欄位，在多個建置器類型之間是共同的。
+{: tip}
+
+下列是可用的「建置器」類型：
+
+* **Simple** - 使用 **Simple** 建置器類型的工作會取得現行階段的輸入，然後在不修改它的情況下保存以供未來階段使用。通常 **Simple** 建置器類型只適用於階段的輸入來自 SCM 儲存庫之時。
+* **Ant** - 使用這個建置器類型，可以用 Apache Ant 檔案來管理建置工作。
+  * **Build script** - 這個建置器類型可以是任何有效的建置 Script。依預設，這個建置器類型會設為 'ant'。
+  * **Working directory** - 指定 Script 執行所在的目錄。
+  * **Build archive directory** - 指定包含要保存以供後續階段使用之工作輸出的目錄。
+  * **Enable test report** - 選取這個勾選框，可以指定建置工作會執行測試，以 JUnit XML 格式產生結果檔案。「工作結果」頁面的「測試」標籤上會顯示以結果檔案為基礎的報告。如果任何測試失敗，工作會標示為失敗。
+  * **Enable code coverage report** - 選取這個勾選框，可以顯示您能用於程式碼涵蓋面報告的更多欄位。您可以指定涵蓋面執行器（例如 Istanbul、JaCoCo、ore Cobertura）、涵蓋面結果檔案的位置，以及涵蓋面結果目錄（相對於工作目錄）。
+* **Container Registry**
+* **Gradle（Artifactory、Nexus 或 SonarQube）**
+* **Grunt**
+* **IBM Globalization Pipeline**
+* **Maven（Artifactory、Nexus 或 SonarQube）**
+* **npm（Artifactory 或 Nexus）**
+* **Shell Script**
 
 ### 部署階段
 部署階段指定「建置」階段的輸入。部署階段中的工作指定**部署人員類型**。下列是可用的「部署人員」類型：
@@ -129,22 +141,54 @@ Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../
 ## 環境內容（環境變數）
 {: #environment_properties}
 
-您可以在工作的 Shell 指令內包含環境內容。這些內容讓您能存取工作執行環境的相關資訊。如需相關資訊，請參閱 [{{site.data.keyword.deliverypipeline}} 服務的環境內容及資源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)。匯出環境內容，即可在相同階段的工作之間傳遞環境內容。若要在階段之間傳遞環境內容，請在階段中於儲存庫內建立 `build.properties` 檔案，然後讓下一個階段執行 `build.properties`。例如，您的建置工作可能會在建置 Script 中包括此指令：
+一組預先定義的環境內容讓您能存取工作執行環境的相關資訊。如需預先定義環境內容的完整清單，請參閱[環境內容及資源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)。
 
-    `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
+您也可以定義自己的環境內容。例如，您可能定義 `API_KEY` 內容，以傳遞管線中所有 Script 用來存取 {{site.data.keyword.Bluemix_notm}} 資源的 API 金鑰。
 
-    執行 `build.properties` 檔案（如果存在的話），即會啟動所有工作。
+您可以新增下列類型的內容：
+
+* **文字**：具有單行值的內容索引鍵。
+* **文字區**：具有多行值的內容索引鍵。
+* **安全**：具有單行值的內容索引鍵，並且以 AES-128 加密來保護。值會顯示為星號。
+* **內容**：專案儲存庫中的檔案。此檔案可以包含多個內容。每一個內容都必須單獨一行。若要區隔索引鍵值組，請使用等號 (=)。請使用引號括住所有字串值。例如，`MY_STRING="SOME STRING VALUE"`。
+
+您可以在工作 Script 中執行 `env` 指令，來檢查管線工作的環境內容。
+{:tip}
+
+### 管線內容
+若要定義管線內容，請從「管線」頁面的溢位功能表，選取**配置管線**。
+
+![管線溢位功能表](images/OverflowMenu.png)
+
+從「管線配置」頁面上的**環境內容**標籤，設定管線層次的環境內容。
+
+![管線內容頁面](images/PipelineProperties.png)
+
+### 階段內容
+若要定義階段內容，請開啟「階段配置」頁面，然後按一下**環境內容**標籤。
+
+![階段內容頁面](images/StageProperties.png)
+
+您也可以匯出內容，以便在相同階段的工作之間傳遞環境內容。例如，您可以包含下列指令，以在階段內的另一個工作中使用 `$API_KEY` 內容：`export API_KEY=<insert API key here>`
+{:tip}
+
+### 計算的內容
+您可以計算階段之間共用的環境內容值，方法是在階段執行時建立 `build.properties` 檔，然後讓下一個階段執行檔案。例如，您的建置工作可能會在建置 Script 中包含下列指令：
+
+  `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
+
+執行 `build.properties` 檔案（如果存在的話），即會啟動所有工作。
 
 ## 建立及使用構件
 {: #artifacts}
 
-建置工作會自動提取使用者 Script 執行所在之現行資料夾中的內容。如果您不需要整個 Git 儲存庫內容就能進行後續部署，則最好配置明確輸出目錄，它們會在該處複製或建立相關構件。工作 Script 是在建置結果（輸出目錄）中執行。
+建置工作會自動提取使用者 Script 執行所在之現行資料夾中的內容。如果您後續的部署不需要整個 Git 儲存庫內容，則最好配置明確輸出目錄，然後在該處複製或建立相關構件。工作 Script 是在建置結果（輸出目錄）中執行。
 
-部署至 Cloud Foundry 的部署工作需要指定用來執行權限工作之使用者的「平台 API 金鑰」，以及要部署構件的地區、組織及空間。如果需要其他服務才能執行您的應用程式，則需要在 `manifest.yml` 檔案中指定它們。
+部署至 Cloud Foundry 的工作需要指定用來執行權限工作之使用者的「平台 API 金鑰」，以及要部署構件的地區、組織及空間。如果需要其他服務才能執行您的應用程式，則必須在 `manifest.yml` 檔案中指定它們。
 
-部署至 {{site.data.keyword.containerlong_notm}} 以在 Kubernetes 叢集中執行的部署工作，需要指定用來執行權限工作之使用者的「平台 API 金鑰」、Dockerfile 以及選擇性地使用 Helm 圖表。  
+部署至 {{site.data.keyword.containerlong_notm}} 的部署工作，需要指定用來執行權限工作之使用者的「平台 API 金鑰」、Dockerfile 以及選擇性地使用 Helm 圖表。  
 
-工作使用指派給它的「平台 API 金鑰」登入目標環境之後，會執行工作 Script（因此，您可以執行 Script 中的 `cf push` 或 `kubectl` 指令）。
+工作使用指派給它的「平台 API 金鑰」登入目標環境之後，會執行工作 Script（以便您可以在 Script 中執行 `cf push` 或 `kubectl` 指令）。
 
 ## 範例管線
 {: #deliverypipeline_example}

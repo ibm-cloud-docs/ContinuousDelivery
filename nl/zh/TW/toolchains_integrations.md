@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-17"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-17"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}   
 
 # 配置工具整合
@@ -25,26 +27,26 @@ lastupdated: "2018-8-17"
 |工具整合|可用於 {{site.data.keyword.Bluemix_notm}} Public|可用於 {{site.data.keyword.Bluemix_notm}} Dedicated（環境相依）|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.alertnotificationshort}}		|美國南部		|否		|
-|Artifactory		|美國南部、德國、英國		|是		|
+|Artifactory		|美國南部、美國東部、德國、東京、英國|是		|
 |Availability Monitoring		|美國南部		|否		|
-|Bitbucket		|美國南部、德國、英國		|否		|
+|Bitbucket		|美國南部、美國東部、德國、東京、英國|否		|
 |Cloud Event Management		|美國南部		|否		|
-|{{site.data.keyword.deliverypipeline}} 		|美國南部、德國、英國		|是  		|
-|{{site.data.keyword.DRA_short}} 		|美國南部		|否			|
-|Eclipse Orion {{site.data.keyword.webide}}		|美國南部、德國、英國		|是			|
-|{{site.data.keyword.gitrepos}}	|美國南部、德國、英國		|否		|
-|GitHub		|美國南部、德國、英國		|是		|
+|{{site.data.keyword.deliverypipeline}} 		|美國南部、美國東部、德國、東京、英國|是  		|
+|{{site.data.keyword.DRA_short}} 		|美國南部、德國、英國		|否			|
+|Eclipse Orion {{site.data.keyword.webide}}		|美國南部、美國東部、德國、東京、英國|是			|
+|{{site.data.keyword.gitrepos}}	|美國南部、美國東部、德國、東京、英國|否		|
+|GitHub		|美國南部、美國東部、德國、東京、英國|是		|
 |Dedicated {{site.data.keyword.ghe_short}} 及 Issues|否		|是		|
-|GitLab		|美國南部、德國、英國		|否		|
-|Jenkins		|美國南部、德國、英國		|是		|
-|JIRA		|美國南部、德國、英國		|是		|
-|Nexus			|美國南部、德國、英國		|是		|
-|其他工具		|美國南部、德國、英國		|是		|
-|PagerDuty			|美國南部、德國、英國		|是		|
-|Rational Team Concert|美國南部、德國、英國		|是		|
-|Sauce Labs		|美國南部、德國、英國		|否		|
-|Slack			|美國南部、德國、英國		|是		|
-|SonarQube			|美國南部、德國、英國		|是		|
+|GitLab		|美國南部、美國東部、德國、東京、英國|否		|
+|Jenkins		|美國南部、美國東部、德國、東京、英國|是		|
+|JIRA		|美國南部、美國東部、德國、東京、英國|是		|
+|Nexus			|美國南部、美國東部、德國、東京、英國|是		|
+|其他工具		|美國南部、美國東部、德國、東京、英國|是		|
+|PagerDuty			|美國南部、美國東部、德國、東京、英國|是		|
+|Rational Team Concert|美國南部、美國東部、德國、東京、英國|是		|
+|Sauce Labs		|美國南部、美國東部、德國、東京、英國|否		|
+|Slack			|美國南部、美國東部、德國、東京、英國|是		|
+|SonarQube			|美國南部、美國東部、德國、東京、英國|是		|
 {: caption="表 1. {{site.data.keyword.Bluemix_notm}} Public 及 Dedicated 上工具鏈可用的工具整合" caption-side="top"}
 
 如果您要在 {{site.data.keyword.Bluemix_notm}} Public 上開始使用原始碼進行開發，請先配置 GitHub 工具整合或 {{site.data.keyword.gitrepos}} 工具整合，再配置 {{site.data.keyword.deliverypipeline}}。如果您要在 {{site.data.keyword.Bluemix_notm}} Dedicated 上開始使用程式碼進行開發，請先配置 {{site.data.keyword.ghe_short}} 工具整合或 GitHub 工作整合，再配置 {{site.data.keyword.deliverypipeline}}。
@@ -134,13 +136,13 @@ lastupdated: "2018-8-17"
 
 1. 按一下**建立整合**。
 1. 按一下您要使用的 Artifactory 儲存庫卡片。即會開啟 Artifactory 網站，您可以在其中檢視儲存庫的內容。
-1. 選用項目：如果您是在 {{site.data.keyword.Bluemix_notm}} Public 上使用工具鏈，並且想要透過搭配使用 Artifactory 與 npm 來建置應用程式，請配置管線來新增 npm 建置工作。如需配置建置工作的指示，請參閱[在管線中配置 Artifactory npm 建置工作](#config_artifactory_npm)一節。
-1. 選用項目：如果您是在 {{site.data.keyword.Bluemix_notm}} Public 上使用工具鏈，並且想要透過搭配使用 Artifactory 與 Maven 來建置應用程式，請配置管線來新增 Maven 建置工作。如需配置建置工作的指示，請參閱[在管線中配置 Artifactory Maven 建置工作](#config_artifactory_maven)一節。
+1. 選用項目：如果您是在「{{site.data.keyword.Bluemix_notm}} 公用」上使用工具鏈，並且想要透過搭配使用 Artifactory 與 npm 來建置應用程式，請配置管線來新增 npm 建置工作。如需配置建置工作的指示，請參閱[在管線中配置 Artifactory npm 建置工作](#config_artifactory_npm)一節。
+1. 選用項目：如果您是在「{{site.data.keyword.Bluemix_notm}} 公用」上使用工具鏈，並且想要透過搭配使用 Artifactory 與 Maven 來建置應用程式，請配置管線來新增 Maven 建置工作。如需配置建置工作的指示，請參閱[在管線中配置 Artifactory Maven 建置工作](#config_artifactory_maven)一節。
 
 ### 在管線中配置 Artifactory npm 建置工作
 {: #config_artifactory_npm}
 
-您必須具有可使用建置 SCM 儲存庫作為輸入的可運作管線，而且必須為工具鏈配置 Artifactory，然後才能在管線中配置 npm 建置工作。如需配置 Artifactory 的指示，請參閱 [Artifactory](#artifactory) 一節。
+您必須具有可使用建置 SCM 儲存庫作為輸入的可運作管線，然後才能在管線中配置 npm 建置工作。您也必須為工具鏈配置 Artifactory。如需配置 Artifactory 的指示，請參閱 [Artifactory](#artifactory) 一節。
 
 配置 {{site.data.keyword.deliverypipeline}} 來新增 npm 建置工作：
 
@@ -343,7 +345,7 @@ lastupdated: "2018-8-17"
 ### 在管線中配置 Sauce Labs 測試工作
 {: #config_saucelabs}
 
-您需要可運作的管線，其中包含階段可建置及部署應用程式，而且您必須為工具鏈配置 Sauce Labs，然後才在管線中配置 Sauce Labs 測試工作。如需配置 Sauce Labs 的指示，請參閱 [Sauce Labs](#saucelabs) 一節。
+您需要可運作的管線，其中包含階段可建置及部署應用程式，然後才在管線中配置 Sauce Labs 測試工作。您也必須為工具鏈配置 Sauce Labs。如需配置 Sauce Labs 的指示，請參閱 [Sauce Labs](#saucelabs) 一節。
 
 配置 {{site.data.keyword.deliverypipeline}} 來新增 Sauce Labs 測試工作：
 
@@ -358,9 +360,10 @@ lastupdated: "2018-8-17"
   {: tip}
 
 1. 配置部署工作。在**部署 Script** 欄位中，納入下列指令：`export CF_APP_NAME="$CF_APP"`。該指令會將應用程式名稱匯出為環境內容。
-1. 配置測試工作。下列影像中的值是範例。**服務實例**、**目標**、**組織**及**空間**欄位會移入您正在使用的 Sauce Labs 使用者名稱、地區、組織及空間。
-  
-![配置工作](images/toolchain_configure_job.png)
+1. 配置測試工作。 
+
+  **服務實例**、**目標**、**組織**及**空間**欄位會移入您正在使用的 Sauce Labs 使用者名稱、地區、組織及空間。
+  {: tip}
 
   a. 針對測試器類型，選取 **Sauce Labs**。
 
@@ -388,10 +391,10 @@ lastupdated: "2018-8-17"
   * [使用「開發 Cloud Foundry 應用程式」工具鏈建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
 
-## 新增 DevOps Insights（測試版）
+## 新增 DevOps Insights
 {: #dra}
 
-{{site.data.keyword.DRA_full}} 會收集並分析單元測試、功能測試及程式碼涵蓋面工具的結果，來判定您的程式碼是否符合部署程序中所指定閘門的預先定義準則。如果程式碼不符合或超出準則，則會停止部署，以防止釋出風險。您可以使用 {{site.data.keyword.DRA_short}} 作為持續交付環境的安全網，或作為實作並改善品質標準的方法。
+{{site.data.keyword.DRA_full}} 會收集並分析單元測試、功能測試及程式碼涵蓋面工具的結果，來判定您的程式碼是否符合部署程序中所指定關卡的預先定義準則。如果程式碼不符合或超出準則，則會停止部署，以防止釋出風險。您可以使用 {{site.data.keyword.DRA_short}} 作為持續交付環境的安全網，或作為實作並改善品質標準的方法。
 
  此工具整合僅適用於 {{site.data.keyword.Bluemix_notm}} Public。它是預先配置的，且不需要任何配置參數。您無法重新配置此工具整合。
  {: tip}
@@ -441,7 +444,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一個整合的 Web 型環境，�
 
 ### 進一步瞭解 Eclipse Orion Web IDE
 
-若要進一步瞭解 Eclipse Orion {{site.data.keyword.webide}}，請參閱[使用 Eclipse Orion {{site.data.keyword.webide}} 編輯程式碼](/docs/services/ContinuousDelivery/web_ide.html){: new_window}以及 IBM Cloud Garage Method 上的 [Eclipse Orion {{site.data.keyword.webide}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window}，或採用下列指導教學：
+若要進一步瞭解 Eclipse Orion {{site.data.keyword.webide}}，請參閱[使用 Eclipse Orion {{site.data.keyword.webide}} 編輯程式碼](/docs/services/ContinuousDelivery/web_ide.html){: new_window}。您也可以閱讀 IBM Cloud Garage Method 上的 [Eclipse Orion {{site.data.keyword.webide}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window}。請採用下列指導教學，以嘗試使用 Eclipse Orion {{site.data.keyword.webide}}：
 
   * [使用「開發 Cloud Foundry 應用程式」工具鏈建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
@@ -519,7 +522,7 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
 1. 如果您要在自己的 {{site.data.keyword.ghe_short}} 伺服器上使用儲存庫，請按一下「可配置的整合」區段中的**新增自訂伺服器**。
 
  網路必須可以從 {{site.data.keyword.Bluemix_notm}} Dedicated 環境存取目標 Git 伺服器。如果您的 GitHub 伺服器無法在公用網際網路上使用，或在公用「網域名稱伺服器 (DNS)」上無法解析主機名稱，請[開立支援問題單](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}。您可以使用支援問題單來提交開啟網路路徑或更新 DNS 設定的要求。
- {: tip}
+ {: important}
 
  鍵入自訂 GitHub 伺服器的標題，然後指定伺服器的根 URL。輸入個人存取記號，然後按一下**儲存自訂整合**。
 
@@ -579,11 +582,13 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
   * [使用「搭配 GitHub 和 Jenkins 的 Deployment Risk Analytics」工具鏈確定品質部署 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
 
   * [建立自訂工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
+
+
 ## 在 {{site.data.keyword.Bluemix_notm}} Dedicated 上配置 GitHub Enterprise 及 Issues
 {: #configghe}
 
  這些指示適用於 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，則視內部程序而定，有些步驟可能會有所不同。
- {: tip}
+ {: important}
 
 {{site.data.keyword.ghe_long}} 是 Git 儲存庫的內部部署 Web 型管理服務。Dedicated {{site.data.keyword.ghe_short}} 僅供 {{site.data.keyword.Bluemix_notm}} Dedicated 客戶使用。GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一個位置。它與您的開發儲存庫整合，因此您可以專注於重要作業。如需 Dedicated {{site.data.keyword.ghe_short}} 及 GitHub Issues 的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} 和 IBM Cloud Garage Method 上的 [GitHub Issues 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}。
 
@@ -699,7 +704,7 @@ GitLab 是 Git 儲存庫的 Web 型管理服務。您可以同時具有儲存庫
 Jenkins 是一種可持續建置及測試軟體的開放程式碼、伺服器型工具，並支援持續整合及持續交付的作法。
 
 您必須先有 Jenkins 伺服器，才能建立 Jenkins 工具整合。
-{: tip}
+{: important}
 
 使用 Jenkins 工具整合，您可以將 Jenkins 工作通知傳送至工具鏈中的其他工具（例如 Slack 及 PagerDuty）。若要在部署中追蹤程式碼，您可以將部署訊息新增至 Git 確定，以及相關的 Git 或 JIRA 問題。您也可以在「工具鏈連線」頁面上檢視部署。您可以將測試結果提供給 {{site.data.keyword.DRA_short}}，並新增自動化品質限制，然後追蹤部署風險。
 
@@ -905,7 +910,7 @@ JIRA 是一個工具，可追蹤與您軟體相關的問題及錯誤。只要 Je
 1. 選取與工具最密切關聯的生命週期階段。此選項可決定您的工具會列在「概觀」頁面的哪個種類下。
 1. 新增圖示 URL。此圖示會顯示在工具整合卡片上。
 1. 新增文件 URL。
-1. 指定工具實例名稱。例如：我的團隊工具。
+1. 指定工具實例名稱。例如，我的團隊工具。
 1. 新增工具實例 URL。只要按一下工具整合卡片，就會開啟此 URL。
 1. 新增工具的說明。
 1. （進階）必要的話，新增更多內容。例如，列出您的工具與工具鏈中的其他工具整合時所需的任何資訊或屬性。  
@@ -921,7 +926,7 @@ JIRA 是一個工具，可追蹤與您軟體相關的問題及錯誤。只要 Je
 ## 配置 PagerDuty
 {: #pagerduty}
 
-PagerDuty 會將多個監視系統中的資料整合至單一視圖。發生問題時，PagerDuty 可確保當時最有能力修正問題的團隊成員能收到通知。如果團隊成員未回應問題，則可以配置呈報，將它遞送給次要工程師或作業管理員。
+PagerDuty 會將多個監視系統中的資料整合至單一視圖。發生問題時，PagerDuty 可確保當時最有能力修正問題的團隊成員能收到通知。如果團隊成員未回應問題，則可以配置呈報，將它遞送給次級代表或作業管理員。
 
 配置 PagerDuty 在管線階段失敗時傳送通知，讓您可以更快速地修正問題，並減少關閉時間：
 
@@ -1003,7 +1008,7 @@ IBM Rational Team Concert&trade; 是一種團隊協同作業工具，可整合�
 ## 配置 Sauce Labs
 {: #saucelabs}
 
-Sauce Labs 會執行功能單元測試。在 {{site.data.keyword.deliverypipeline}} 中將 Sauce Labs 測試套組配置為測試工作時，測試套組可以在持續交付處理程序期間對 Web 或行動應用程式執行測試。這些測試可以為專案提供寶貴的流程控制，作為防止部署不當程式碼的閘門。
+Sauce Labs 會執行功能單元測試。在 {{site.data.keyword.deliverypipeline}} 中將 Sauce Labs 測試套組配置為測試工作時，測試套組可以在持續交付處理程序期間對 Web 或行動應用程式執行測試。這些測試可以為專案提供寶貴的流程控制，作為防止部署不當程式碼的關卡。
 
  此工具整合僅適用於 {{site.data.keyword.Bluemix_notm}} Public。
  {: tip}
@@ -1017,7 +1022,7 @@ Sauce Labs 會執行功能單元測試。在 {{site.data.keyword.deliverypipelin
 
  b. 在「工具整合」區段中，按一下 **Sauce Labs**。
 
-1. 鍵入與 Sauce Labs 帳戶相關聯的使用者名稱。您可以[在 Sauce Labs 帳戶頁面頂端的歡迎使用訊息中找到使用者名稱 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://saucelabs.com/account){: new_window}。
+1. 鍵入與 Sauce Labs 帳戶相關聯的使用者名稱。您可以[在 Sauce Labs 帳戶頁面的歡迎使用訊息中找到使用者名稱 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://saucelabs.com/account){: new_window}。
 1. 鍵入 Sauce Labs 帳戶的存取金鑰。您可以[在 Sauce Labs 帳戶頁面上找到金鑰 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://saucelabs.com/account){: new_window}。
 1. 按一下**建立整合**。
 1. 按一下 **Sauce Labs** 以移至 saucelabs.com，然後檢視工具鏈的測試活動。
@@ -1036,8 +1041,8 @@ Sauce Labs 會執行功能單元測試。在 {{site.data.keyword.deliverypipelin
 ## 配置 Slack
 {: #slack}
 
-團隊的所有人都可以看到張貼到公用 Slack 頻道的通知。請記住，您需要為您張貼的內容負責。
-{: tip}
+團隊的所有人都可以看到張貼到公用 Slack 頻道的通知。您需要為您張貼的內容負責。
+{: important}
 
 Slack 是一種雲端型、即時傳訊和通知系統。Slack 會提供持續性會談，這個替代方案在進行團隊協同作業時比電子郵件更具互動性。您可以透過專用頻道或與工作直接相關的一組頻道來與團隊進行通訊。您也可以透過頻道或兩位以上人員之間的直接訊息來共用檔案和影像。會保留透過直接訊息和頻道的通訊，讓您可以搜尋它們。
 
@@ -1052,7 +1057,7 @@ Slack 是一種雲端型、即時傳訊和通知系統。Slack 會提供持續�
 
 1. 鍵入 Slack Webhook URL，這是由 Slack 產生作為送入 Webhook。您需要 Slack 頻道的 Slack Webhook URL，以接收來自工具整合之工具鏈的通知。如需建立或尋找 Webhook 的指示，請參閱[送入 Webhook ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://api.slack.com/incoming-webhooks){: new_window}。
 
- 如果您已使用 API 金鑰，讓 Slack 頻道接收來自工具整合之工具鏈的通知，則必須更新配置以改用 Webhook。
+ 如果您使用 API 金鑰，讓 Slack 頻道接收來自工具整合之工具鏈的通知，則必須更新配置以改用 Webhook。
  {: tip}
 
 1. 鍵入您要傳送通知的目標 Slack 頻道名稱。此頻道必須存在，而且在 Slack 團隊中為作用中。

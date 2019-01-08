@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # 建立工具鏈
@@ -29,9 +31,9 @@ lastupdated: "2018-8-2"
 ##從範本建立工具鏈   
 {: #creating_a_toolchain_from_a_template}
 
-您可以使用範本作為起點來[建立工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/devops/create){: new_window}，而此工具鏈包含一組特定的工具整合。進一步瞭解如何使用 [IBM Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/category/tools){:new_window} 中的範本。
+您可以使用範本作為起點來[建立工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/devops/create){: new_window}，而此工具鏈包含一組特定的工具整合。進一步瞭解如何使用 [IBM Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/category/tools){:new_window} 中的範本。
 
-1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Public，請登入 [{{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://console.bluemix.net){:new_window}。
+1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Public，請登入 [{{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://cloud.ibm.com){:new_window}。
 1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，請登入 {{site.data.keyword.Bluemix_notm}} 的「專用」環境。
 1. 從 {{site.data.keyword.Bluemix_notm}} 功能表列的功能表中，按一下 **DevOps**。
 1. 在 DevOps 儀表板的**工具鏈**頁面上，按一下**建立工具鏈**。
@@ -49,8 +51,8 @@ lastupdated: "2018-8-2"
  * 要在其中建立工具鏈的地區。如果您要使用不同的地區，請從可用地區清單中選取它。
  * 要在其中建立工具鏈的資源群組或組織。按一下鏈結，以切換選取資源群組與組織。如果您要使用不同的資源群組或組織，請從可用資源群組或組織清單中選取它。
  
-   資源群組只能在美國南部地區使用。
-   {: tip}
+   資源群組適用於美國南部、美國東部、英國、德國及東京地區。Cloud Foundry 組織在美國南部、英國及德國地區中受到支援。
+   {: important}
 
 1. 在「工具整合」區段中，選取您要配置給工具鏈的每一個工具整合。有些工具整合不需要進行配置。如需配置工具整合的相關資訊，請參閱[配置工具整合](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。
 1. 按一下**建立**。會自動執行數個步驟來設定工具鏈。視您選取的工具鏈範本以及使用的是 {{site.data.keyword.Bluemix_notm}} Public 還是 {{site.data.keyword.Bluemix_notm}} Dedicated 而定，設定的工具整合會有所不同。例如，當您在 {{site.data.keyword.Bluemix_notm}} Public 上建立「微服務」工具鏈時，會執行下列步驟：
@@ -66,9 +68,12 @@ lastupdated: "2018-8-2"
 ##從應用程式建立工具鏈
 {: #creating_a_toolchain_from_an_app}
 
-您可以從應用程式建立工具鏈。工具鏈可支援持續開發、部署、監視及其他作業，且其與應用程式相關聯。每一個應用程式都可能與工具鏈相關聯。將變更推送至工具鏈的 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫時，管線會自動建置及部署應用程式。  
+您可以從應用程式建立工具鏈。工具鏈可支援持續開發、部署、監視及其他作業，且其與應用程式相關聯。每一個應用程式都可能與工具鏈相關聯。將變更推送至工具鏈的 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫時，管線會自動建置及部署應用程式。
 
-1. 在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**啟用**。如果您使用 {{site.data.keyword.Bluemix_notm}} Public，應用程式會配置成從已移入應用程式入門範本程式碼的新 GitHub 儲存庫進行持續交付。如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，應用程式會配置成從已移入應用程式入門範本程式碼的新 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫進行持續交付。
+如果您使用自己的程式碼儲存庫建立應用程式，請在應用程式的詳細資料頁面上按一下**連接至 DevOps 工具鏈**。然後遵循[從您自己的程式碼儲存庫建立應用程式](/docs/apps/tutorials/tutorial_byoc.html)中所述的步驟。
+{: note}
+
+1. 如果您使用入門範本套件建立應用程式，請在應用程式的詳細資料頁面上按一下**部署至雲端**。如果您使用 {{site.data.keyword.Bluemix_notm}} Public，應用程式會配置成從已移入應用程式入門範本程式碼的新 GitHub 儲存庫進行持續交付。如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，應用程式會配置成從已移入應用程式入門範本程式碼的新 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫進行持續交付。
 1. 在工具鏈建立頁面上，檢閱即將建立之工具鏈的圖表。此圖會顯示每個工具整合在工具鏈中的生命週期階段。
 1. 檢閱工具鏈設定的預設資訊。在 {{site.data.keyword.Bluemix_notm}} 中，可透過工具鏈名稱來識別工具鏈。如果您要使用不同的名稱，請變更工具鏈的名稱。
 1. 在「工具整合」區段中，選取您要配置給工具鏈的每一個工具整合。有些工具整合不需要進行配置。如需配置工具整合的相關資訊，請參閱[配置工具整合](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。
@@ -83,6 +88,9 @@ lastupdated: "2018-8-2"
 {: #viewing_a_toolchain}
 
 在您配置工具鏈及其工具整合之後，即可檢視工具鏈的視覺化呈現。
+
+您可以從應用程式的詳細資料頁面按一下**檢視工具鏈**，來檢視工具鏈。
+{: tip}
 
 1. 在 DevOps 儀表板的**工具鏈**頁面上，選取**資源群組**或 **Cloud Foundry 組織**。所選取資源群組或 Cloud Foundry 組織內所含的所有工具鏈隨即顯示。按一下您要檢視的工具鏈，以開啟「概觀」頁面。或者，在應用程式之「概觀」頁面的「持續交付」卡片上，按一下**檢視工具鏈**。然後，按一下**概觀**。
 2. 若要存取工具鏈中的工具整合，請按一下工具。

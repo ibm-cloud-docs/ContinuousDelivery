@@ -2,20 +2,23 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-12-6"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:codeblock:.codeblock}
 
 
 # 取得 {{site.data.keyword.contdelivery_short}} 的協助及支援    
 {: #cd_support}  
 
-{{site.data.keyword.contdelivery_full}} 團隊會主動監視 {{site.data.keyword.contdelivery_short}} 服務及工具鏈問題的 developerWorks 討論區。若要在討論區中提問，請按一下工具鏈及 {{site.data.keyword.contdelivery_short}} 頁面底端的**在討論區中取得協助**按鈕 ![**在討論區中取得協助**按鈕](images/get_help_in_the_forum.png)。
+{{site.data.keyword.contdelivery_full}} 團隊會主動監視 {{site.data.keyword.contdelivery_short}} 服務及工具鏈問題的 developerWorks 討論區。若要在討論區中提問，請在工具鏈及 {{site.data.keyword.contdelivery_short}} 頁面上，按一下**在討論區中取得協助** ![**在討論區中取得協助**按鈕](images/get_help_in_the_forum.png)。
 
 <table>
 <tr>
@@ -47,7 +50,7 @@ lastupdated: "2018-3-26"
 1. 從功能表列中，按一下**支援**，然後按一下**新增問題單**。
 1. 完成表單，指出您需要技術支援的部分。
 
-如需開立 IBM {{site.data.keyword.Bluemix_notm}} 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://console.bluemix.net/docs/support/index.html#contacting-support)。
+如需開立 IBM {{site.data.keyword.Bluemix_notm}} 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://cloud.ibm.com/docs/support/index.html#contacting-support)。
 
 
 ## {{site.data.keyword.Bluemix_notm}} 的支援

@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -48,7 +48,7 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 ##即時編輯
 {: #live-edit}
 
-如果您要建置在 {{site.data.keyword.Bluemix_notm}} 上執行的 Node.js 應用程式，{{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性可以快速更新應用程式實例。只有 Web IDE 中才提供「即時編輯」。「即時編輯」可讓您就像在桌面上開發一樣，而無需重新部署。
+如果您要建置在 {{site.data.keyword.Bluemix_notm}} 上執行的 Node.js 應用程式，{{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性可以快速更新應用程式實例。只有 Web IDE 中才提供「即時編輯」。您可以使用「即時編輯」進行開發，就像在桌面上開發一樣，而無需重新部署。
 
 僅 Node.js 應用程式才支援「即時編輯」。
 
@@ -56,13 +56,13 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 
 ![含有即時編輯的執行列影像](images/bluemix-live-sync-light.png)
 
-「即時編輯」可讓您快速預覽在 {{site.data.keyword.Bluemix_notm}} 上執行之 Node.js 應用程式的變更。當您開啟「即時編輯」來更新程式碼時，可以重新整理 Web 應用程式的瀏覽器視窗，就能看到在進行變更幾秒後所反映的變更。
+請使用「即時編輯」快速預覽在 {{site.data.keyword.Bluemix_notm}} 上執行之 Node.js 應用程式的變更。當您開啟「即時編輯」來更新程式碼時，可以重新整理 Web 應用程式的瀏覽器視窗，就能看到在進行變更幾秒後所反映的變更。
 
 如需使用 {{site.data.keyword.Bluemix_notm}} Live Sync 之「即時編輯」特性的指導教學，請參閱[使用 {{site.data.keyword.Bluemix_notm}} Live Sync 開發、除錯及部署應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/use-live-sync-to-develop-debug-and-deploy-your-app){:new_window}。
 
 當您變更 Web IDE 中的檔案時，會自動將其重新部署至 {{site.data.keyword.Bluemix_notm}} 上的應用程式實例。如果您需要重新啟動 Node 應用程式，請按一下執行列中的**重新啟動**按鈕。
 
-為了在使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性時達到更一致的體驗，需要且會新增 256 MB 的額外記憶體。
+為了達到更一致的體驗，在使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性時，需要且會新增 256 MB 的額外記憶體。
 {: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} 即時除錯
@@ -82,7 +82,7 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 
 ### 應用程式運行環境控制{: #app-runtime}
 
-使用應用程式運行環境控制，您可以使用「除錯」來檢查應用程式在啟動時的狀態。當您對啟動時造成當機的應用程式進行疑難排解時，此功能很有用。
+使用應用程式運行環境控制，您可以使用「除錯」來檢查應用程式在啟動時的狀態。當您對啟動時失敗的應用程式進行疑難排解時，此功能很有用。
 
 開發應用程式時，可以從下列動作選取：
 
@@ -90,9 +90,6 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 * 在任何應用程式碼執行之前先暫停應用程式
 
 登入之後，即會開啟「{{site.data.keyword.Bluemix_notm}} 即時除錯」頁面。
-
-![除錯使用者介面](images/live_sync_debug.png)
-
 
 ### 除錯 {: #debug}
 
@@ -148,4 +145,4 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 
 ### 如需相關資訊
 
-* 請參閱 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
+* 請參閱 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

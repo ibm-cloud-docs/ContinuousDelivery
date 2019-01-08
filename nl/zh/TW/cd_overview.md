@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-15"
+lastupdated: "2018-12-7"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-15"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -27,8 +29,8 @@ lastupdated: "2018-8-15"
 
   工具鏈是一組整合式工具，可用來協同開發、建置、部署、測試及管理應用程式，並且可以使作業能重複執行，也較容易管理。工具鏈可以包含開放程式碼工具、{{site.data.keyword.Bluemix_notm}} 服務（例如 [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window}）和協力廠商工具（例如 GitHub、PagerDuty 及 Slack）。 
   
-  {{site.data.keyword.DRA_short}} 只能在美國南部地區使用。
-  {: tip}
+  {{site.data.keyword.DRA_short}} 適用於美國南部、英國及德國地區。
+  {: important}
 
  * 使用自動化[管線](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window}進行持續交付。
 
