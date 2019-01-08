@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-10-9"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -21,20 +21,6 @@ lastupdated: "2018-8-2"
 
 # 环境属性和资源
 {: #deliverypipeline_environment}
-
-您可以使用环境属性和预安装的资源与 {{site.data.keyword.contdelivery_full}} 的管道功能进行交互。例如，您可能会将它们引入作业脚本或测试命令。
-{:shortdesc}
-
-您可以通过某个阶段的**环境属性**选项卡，将您自己的环境属性添加到阶段。环境属性可用于阶段中的每个作业。
-
-通过“环境属性”选项卡，可添加四种类型的属性：
-* **文本**：具有单行值的属性关键字。
-* **文本区域**：具有多行值的属性关键字。
-* **安全**：具有单行值的属性关键字。该值显示为星号。
-* **属性**：项目存储库中的文件。此文件可以包含多个属性。每一个属性必须位于自己的行上。要分隔键值对，请使用等号 (=)。用引号括起所有字符串值。例如，MY_STRING="SOME STRING VALUE"。
-
-您可以通过在作业脚本中运行 `env` 命令来检查管道作业的环境属性。
-{:tip}
 
 缺省情况下，可以在管道环境中使用下列属性和资源。
 
@@ -74,6 +60,7 @@ lastupdated: "2018-8-2"
 |PIPELINE_STAGE_INPUT_JOB_ID|作为当前阶段输入的作业的标识。|
 |PIPELINE_STAGE_INPUT_REV|当前阶段的输入的修订版。|
 |PIPELINE_INITIAL_STAGE_EXECUTION_ID|管道运行的唯一标识。|
+| PIPELINE_TRIGGERING_USER |管道作业的当前用户|
 |TASK_ID|作业当前运行的唯一标识。|
 |TMPDIR|存储临时文件的目录位置。|
 |WORKSPACE|当前工作目录的路径。|
@@ -91,7 +78,7 @@ lastupdated: "2018-8-2"
 |MAVEN_HOME|Apache Maven 3.2.1 的路径。|
 |NODE_HOME|Node.js 0.10.29 的路径。|
 
-在管道脚本中，通过将 `ANT_HOME` 设置为 `$ANT_JAVA8_HOME`，并将 `JAVA_HOME` 设置为 `$JAVA8_HOME`，可以使用 Apache Ant 1.10 以上的版本。
+要在管道脚本中使用 Apache Ant 1.10+，请将 `ANT_HOME` 设置为 `$ANT_JAVA8_HOME`，将 `JAVA_HOME` 设置为 `$JAVA8_HOME`。
 {: tip}
 
 ### 部署属性
@@ -129,7 +116,7 @@ lastupdated: "2018-8-2"
 |IBM Node|node|/opt/IBM/node|
 |IBM Rational Team Concert&trade; SCM Tools|RTC-SCM-Tools|/opt/IBM/RTC-SCM-Tools|
 
-64 位版本的 IBM Node 0.10、0.10.48、0.12、0.12.17、4.2, 4.4.5、4.6.0、6.2.2 和 6.7.0 在管道环境中可用。要选择版本，请使用导出命令。
+管道环境提供 64 位版本的 IBM Node 0.10、0.10.48、0.12、0.12.17、4.2、4.4.5、4.6.0、6.2.2 和 6.7.0。要选择版本，请使用导出命令。
 
 例如，要使用 Node 0.12.7，请输入此命令：`export PATH=/opt/IBM/node-v0.12/bin:$PATH`
 

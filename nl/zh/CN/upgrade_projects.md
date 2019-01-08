@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -24,12 +24,12 @@ lastupdated: "2018-8-2"
 
 **常见问题解答**
 
-- [我的 JazzHub 项目与英国区域相关联，但我的工具链将在美国南部区域。这将如何运作？](#faq_region)
-- [升级时，Track &amp; Plan 中的工作项和仪表板将发生什么？](#faq_tp)
-- [升级时，代码存储库将发生什么？](#faq_repo)
-- [升级到工具链时，项目中的构建定义将发生什么？](#faq_build)
+- [我的 JazzHub 项目与英国区域相关联，但我的工具链在美国南部区域。这将如何运作？](#faq_region)
+- [升级时，Track &amp; Plan 中的工作项和仪表板会发生什么？](#faq_tp)
+- [升级时，代码存储库会发生什么？](#faq_repo)
+- [升级到工具链时，项目中的构建定义会发生什么？](#faq_build)
 - [我需要为将升级到工具链的我的项目创建组织。我了解我需要先向我的帐户添加信用卡，然后才能创建组织。要对我的信用卡进行收费吗？](#faq_charges)
-- [我找不到或无法访问我的工具链。我该怎么做？](#faq_find)
+- [我找不到或无法访问我的工具链。我该怎么办？](#faq_find)
 - [我的项目与英国区域相关联。升级后，我看到错误消息，我的同事无法访问工具链，并且我在 {{site.data.keyword.Bluemix_notm}} Platform 的“工具链”页面上看不到我的工具链。出了什么问题？](#faq_uk)
 
 ## 工具链
@@ -95,7 +95,7 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
 
    ![升级页面的示例](images/project-upgrade-toolchain.png)
 
-   如需升级过程的概述，请阅读该页面上的描述。工具链将包含新的管道，其包含与项目管道相同的阶段和作业。此外，工具链还包含指向 {{site.data.keyword.contdelivery_short}} 中运行的 Eclipse Orion {{site.data.keyword.webide}} 的指针。
+   如需升级过程的概述，请阅读该页面上的描述。工具链会包含新的管道，其中包含与项目管道相同的阶段和作业。此外，工具链还包含指向 {{site.data.keyword.contdelivery_short}} 中运行的 Eclipse Orion {{site.data.keyword.webide}} 的指针。
 
    在此示例中，因为项目使用 github.com 上的公共存储库，所以工具链将连接到相同的 GitHub 存储库。如果项目使用的是在 JazzHub 上托管的 Git 存储库，那么会将该存储库的内容克隆到作为 {{site.data.keyword.contdelivery_short}} 一部分的 {{site.data.keyword.gitrepos}} 中的新存储库。
 
@@ -204,12 +204,12 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
 ## 常见问题解答
 {: #upgrade_faq}
 
-### 我的 JazzHub 项目与英国区域相关联，但我的工具链将在美国南部区域。这将如何运作？
+### 我的 JazzHub 项目与英国区域相关联，但我的工具链位于美国南部区域。这如何运作？
 {: #faq_region}
 
 hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。如果您的项目配置为将应用程序部署到其他区域（如英国区域），那么该项目升级到工具链后，仍会将应用程序部署到该区域。因此，关于数据的托管位置，实际上并没有发生变化。未来，工具链将在更多区域可用。
 
-### 升级时，Track &amp; Plan 中的工作项和仪表板将发生什么？
+### 升级时，Track &amp; Plan 中的工作项和仪表板会发生什么？
 {: #faq_tp}
 
 {{site.data.keyword.contdelivery_short}} 服务通过 {{site.data.keyword.gitrepos}} 提供问题跟踪功能，后者由 IBM 托管且以 GitLab Community Edition 为基础。{{site.data.keyword.contdelivery_short}} 还支持与其他规划和问题跟踪工具（如 GitHub Issues 和 JIRA）集成。
@@ -224,10 +224,10 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
 
 要额外购买 Build Automation 和 Source Code Management，可以选择 [Rational Team Concert on Cloud ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window}。
 
-### 升级时，代码存储库将发生什么？
+### 升级时，代码存储库会发生什么？
 {: #faq_repo}
 
-在您升级之后，新 Git 服务将可与您之前所拥有的服务相媲美。如果您搭配使用 github.com 和 JazzHub 项目，那么您的工具链将连接至相同的 GitHub 存储库。如果您的 JazzHub 项目使用 IBM 托管的 Git，那么该存储库的内容将会克隆到 {{site.data.keyword.gitrepos}} 中的新存储库，其由 IBM 托管且为 {{site.data.keyword.contdelivery_short}} 的一部分。
+升级之后，新 Git 服务可与您之前所拥有的服务相媲美。如果您搭配使用 github.com 和 JazzHub 项目，那么您的工具链将连接到相同的 GitHub 存储库。如果您的 JazzHub 项目使用 IBM 托管的 Git，那么该存储库的内容会克隆到 {{site.data.keyword.gitrepos}} 中的新存储库，它由 IBM 托管并且是 {{site.data.keyword.contdelivery_short}} 的一部分。
 
 有关如何在升级过程中处理每种类型的存储库的完整详细信息，请参阅下表。
 
@@ -238,12 +238,12 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
 {: caption="表 1. 映射到工具链存储库的项目存储库" caption-side="top"}
 
 
-### 升级到工具链时，项目中的构建定义将发生什么？
+### 升级到工具链时，项目中的构建定义会发生什么？
 {: #faq_build}
 
 如果您使用 Jazz 而非 Delivery Pipeline 构建源代码，那么您必须手动将构建定义迁移到工具链的 Delivery Pipeline 中。
 
-如果您使用 Jazz SCM 作为源存储库并使用 Delivery Pipeline 构建代码，那么 Jazz SCM 中的源代码将会自动移至 Git 存储库。Delivery Pipeline 配置仍保持不变，只是它将使用 Git 存储库中的源代码而非 Jazz SCM 中的源代码。
+如果您使用 Jazz SCM 作为源存储库并使用 Delivery Pipeline 构建代码，那么 Jazz SCM 中的源代码将会自动移至 Git 存储库。Delivery Pipeline 配置保持不变，只是它使用 Git 存储库而非 Jazz SCM 中的源代码。
 
 ### 我需要为将升级到工具链的项目创建组织。我了解我需要先向我的帐户添加信用卡，然后才能创建组织。要对我的信用卡收费吗？
 {: #faq_charges}
@@ -253,7 +253,7 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
 
 如果您是 IBM 员工，内部 IBM 项目可以计入部门费用而非个人信用卡。如果您需要使用的资源超出 IBM 员工的免费限额，请创建支持凭单。
 
-### 我找不到或无法访问我的工具链。我该怎么做？
+### 我找不到或无法访问我的工具链。我该怎么办？
 {: #faq_find}
 
 工具链在 {{site.data.keyword.Bluemix_notm}} 组织中托管。升级过程会将 JazzHub 项目的所有成员添加到工具链。但是，除非 {{site.data.keyword.Bluemix_notm}} 组织的所有者将这些用户添加到组织，否则这些用户将无法看到工具链。
@@ -277,7 +277,7 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
 
 **回答：**
 
-如果您来自非美国的 {{site.data.keyword.Bluemix_notm}} 组织，并且未在升级之前将组织显式扩展到美国南部区域，那么可能会发生这些问题。您可以通过以下两种方式来进行确认：
+如果您来自非美国的 {{site.data.keyword.Bluemix_notm}} 组织，并且未在升级之前将组织显式扩展到美国南部区域，那么可能会发生这些问题。您可以通过以下两种方式来确认此方案：
 
    * 打开工具链 URL 时，检查 {{site.data.keyword.Bluemix_notm}} 标题。最有可能的情况是，您将看到您的组织名称，但不会指示任何空间。
    

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-5"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # {{site.data.keyword.gitrepos}}
@@ -19,6 +21,12 @@ lastupdated: "2018-8-2"
 
 与您的团队协作，并使用由 IBM 托管且在 [GitLab Community Edition ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://about.gitlab.com/){:new_window} 上构建的 Git 存储库和问题跟踪程序来管理源代码。
 {: shortdesc}
+
+只邀请与您有私人或业务关系的人员来协作完成项目。如果用户使用 Git 存储库邀请的目的不是为了进行项目协作，那么这些用户的服务访问权可能会被暂挂或撤销。
+{: important}
+
+请勿将文件或问题中的监管数据存储在 Git 存储库中。监管数据的处理过程目前尚未就绪。
+{: tip}
 
 {{site.data.keyword.gitrepos}} 工具集成支持团队以多种方式管理代码并协作：
    * 通过可让代码保持安全的精细访问控制来管理 Git 存储库

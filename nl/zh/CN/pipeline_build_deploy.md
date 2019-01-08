@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-11"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -83,11 +83,9 @@ lastupdated: "2018-8-2"
 
 您可以查看作业的日志，并在阶段正在运行时，在“阶段历史记录”页面上查看阶段。
 
-要查看作业日志，请单击作业。或者在阶段上，单击**查看日志和历史记录**。
+1. 要查看作业日志，请单击作业。或者在阶段上，单击**查看日志和历史记录**。
 
-要查看已部署应用程序的运行时日志，请单击**查看运行时日志**。
-
-![“阶段”磁贴中可以单击以打开相关日志的区域](images/view_logs_and_history.png)
+2. 要查看已部署应用程序的运行时日志，请单击**查看运行时日志**。
 
 除了作业日志之外，您还可以查看任何构建作业的单元测试结果、生成的工件和代码更改。
 

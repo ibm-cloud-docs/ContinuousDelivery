@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -21,19 +23,23 @@ lastupdated: "2018-8-2"
 {:shortdesc}
 
 查看、修改或运行管道的许可权基于拥有管道的工具链的访问控制。有关工具链的访问控制的更多信息，请参阅[管理对资源组中工具链的访问权](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}和[管理对 Cloud Foundry 组织中工具链的访问权](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}。
-{: tip}
+{: important}
+
+您可以指定由管道提供的要在多个作业类型中运行的脚本，这样就可以直接控制作业运行内容。这些脚本在包含多个标准开发工具的 Docker 映像中运行，其中包括与 {{site.data.keyword.Bluemix_notm}} 运行时进行交互所需的工具。有关标准 Docker 映像中包含哪些内容的更多信息，请参阅[预安装的资源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}。如果作业需要的开发工具在标准映像中没有提供，或者您需要这些工具的不同版本，那么可以使用定制映像。有关定制映像的更多信息，请参阅[使用定制 Docker 映像](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}。
+
+当管道运行脚本时，会使用环境变量将描述作业运行位置上下文的属性传递到脚本。例如，作为阶段输入的存储库的 URL，要运行的阶段和作业的名称，作业类型所指定的参数，等等。要查看可用环境变量的列表，请参阅[预安装的资源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}。 
+
+您可以在管道级别和阶段级别定义属性。管道属性是跨管道中所有阶段和作业共享的。阶段属性对特定阶段来说是唯一的，并且在该阶段中是跨所有作业共享的。有关属性的更多信息，请参阅[环境属性（环境变量）](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties)。
 
 ## 阶段
 {: #deliverypipeline_stages}
 
-在构建、部署和测试代码时，阶段可用于组织输入和作业。阶段从源控制存储库（SCM 存储库）接受输入，或者在其他阶段中构建作业（构建工件）。当您创建第一个阶段时，会在**输入**选项卡上为您设置缺省设置。
+在构建、部署和测试代码时，阶段可用于组织输入和作业。阶段从源控制存储库（SCM 存储库）接受输入，或者在其他阶段中构建作业。对于 SCM 存储库，输入是存储库中特定分支的内容；对于构建作业，输入是作业所产生的工件。当您创建第一个阶段时，会在**输入**选项卡中包含缺省设置。
 
-阶段输入会传递到该阶段包含的作业中，并且会为每一个作业提供一个干净的运行容器。
-
-阶段中的作业彼此之间无法传递工件。由于您无法在作业之间传递工件，因此，如果部署阶段将使用构建阶段工件，那么需要有一个独立于部署阶段的构建阶段。
+当阶段运行时，该阶段的输入会传递到阶段中的每个作业。会为每一个作业提供一个干净的运行容器。结果是，阶段中的作业彼此之间无法传递工件。要在作业之间传递工件，请将作业分隔到两个阶段中，并使用第一阶段中作业的输出作为第二阶段的输入。
 {: tip}
 
-您可以定义可在所有作业中使用的阶段环境属性。例如，您可以定义 `TEST_URL` 属性，该属性传递单个 URL 以在单个阶段中部署和测试作业。部署作业将部署到该 URL，而测试作业将在该 URL 测试正在运行的应用程序。
+与定义管道属性的方法相似，您也可以定义阶段属性已用于特定阶段的所有作业中。例如，您可以定义 `TEST_URL` 属性，该属性传递 URL 以在阶段中部署和测试作业。部署作业将部署到该 URL，而测试作业将在该 URL 测试正在运行的应用程序。还会使用环境变量将阶段属性传递到作业脚本。如果在管道级别和阶段级别定义了相同的属性，那么会使用阶段属性的值。
 
 缺省情况下，在阶段中每当更改传递到项目的 SCM 存储库时，都会自动运行构建和部署操作。阶段和作业按顺序运行；它们为您的工作实现流程控制。例如，您可能将测试阶段置于部署阶段之前。如果测试阶段中的测试失败，部署阶段不会运行。
 
@@ -45,21 +51,28 @@ lastupdated: "2018-8-2"
 ### 构建阶段
 {: #build_stage}
 
-<!-- Need the Pipeline team to fill out what each builder does and possible add an example -->
-构建阶段指定**构建器类型**以指示如何构建工件。可用的构建器类型包括：
+构建阶段指定**构建器类型**以指示如何构建工件。  
 
-1. **简单** - 如果使用**简单**构建器类型，那么不会编译或构建代码；而是将其打包，并使其可用于未来的阶段。
-2. **Ant**
-3. **Container Registry**
-4. **Gradle**
-5. **Gradle（Artifactory、Nexus 或 SonarQube）**
-6. **Grunt**
-7. **IBM Globalization Pipeline**
-8. **Maven**
-9. **Maven（Artifactory、Nexus 或 SonarQube）**
-10. **npm**
-11. **npm（Artifactory 或 Nexus）**
-12. **Shell 脚本**
+在构建作业中可用的很多字段都是在多个构建器类型中很常见的。
+{: tip}
+
+可用的构建器类型包括：
+
+* **简单** - 使用**简单**构建器类型的作业采用当前阶段的输入，而不进行修改，将其归档以备后续阶段使用。通常，只有当阶段的输入是来自 SCM 存储库时，**简单**构建器类型才有用。
+* **Ant** - 使用此构建器以使用 Apache Ant 文件来管理构建作业。
+  * **构建脚本** - 此构建器类型可以是任何有效的构建脚本。缺省情况下，此构建器类型设置为“ant”。
+  * **工作目录** - 指定脚本在哪个目录中运行。
+  * **构建归档目录** - 指定包含后续阶段要用于归档的作业输出的目录。
+  * **启用测试报告** - 选中此复选框以指定构建作业运行生成 JUnit XML 格式结果文件的测试。基于结果文件的报告会显示在“作业结果”页面的“测试”选项卡上。如果任何测试失败，那么作业将标记为失败。
+
+  * **启用代码覆盖报告** - 选中此复选框以显示可用于代码覆盖报告的更多字段。您可以指定覆盖运行器（如 Istanbul、JaCoCo、ore Cobertura），覆盖结果文件的位置以及覆盖结果目录（相对于工作目录）。
+* **Container Registry**
+* **Gradle（Artifactory、Nexus 或 SonarQube）**
+* **Grunt**
+* **IBM Globalization Pipeline**
+* **Maven（Artifactory、Nexus 或 SonarQube）**
+* **npm（Artifactory 或 Nexus）**
+* **Shell 脚本**
 
 ### 部署阶段
 部署阶段指定来自构建阶段的输入。部署阶段中的作业指定**部署程序类型**。可用的部署程序类型包括：
@@ -129,22 +142,54 @@ Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icon
 ## 环境属性（环境变量）
 {: #environment_properties}
 
-您可以在作业的 shell 命令中包括环境属性。这些属性提供作业执行环境相关信息的访问权。有关更多信息，请参阅 [{{site.data.keyword.deliverypipeline}} 服务的环境属性和资源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)。可以通过导出属性在同一阶段的作业之间传递环境属性。要在阶段之间传递环境属性，请在阶段中的存储库中创建 `build.properties` 文件，然后让下一个阶段执行 `build.properties`。例如，构建作业可以在构建脚本中包括以下命令：
+一组预定义的环境属性提供作业执行环境相关信息的访问权。有关预定义环境属性的完整列表，请参阅[环境属性和资源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)。
 
-    `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
+也可以定义自己的环境属性。例如，可以定义 `API_KEY` 属性以传递管道中所有脚本用来访问 {{site.data.keyword.Bluemix_notm}} 资源的 API 密钥。
 
-    所有作业都通过执行 `build.properties` 文件（如果存在）来启动。
+可以添加以下类型的属性：
+
+* **文本**：具有单行值的属性关键字。
+* **文本区域**：具有多行值的属性关键字。
+* **安全**：具有单行值的属性关键字，使用 AES-128 加密来保护安全。该值显示为星号。
+* **属性**：项目存储库中的文件。此文件可以包含多个属性。每一个属性必须位于自己的行上。要分隔键值对，请使用等号 (=)。用引号括起所有字符串值。例如，`MY_STRING="SOME STRING VALUE"`。
+
+您可以通过在作业脚本中运行 `env` 命令来检查管道作业的环境属性。
+{:tip}
+
+### 管道属性
+要定义管道属性，请从“管道”页面上的溢出菜单中选择**配置管道**。
+
+![管道溢出菜单](images/OverflowMenu.png)
+
+在“管道”配置页面的**环境属性**选项卡中，设置管道级别环境属性。
+
+![管道属性页面](images/PipelineProperties.png)
+
+### 阶段属性
+要定义阶段属性，请打开“阶段”配置页面，然后单击**环境属性**选项卡。
+
+![阶段属性页面](images/StageProperties.png)
+
+还可以通过导出属性在同一阶段的作业之间传递环境属性。例如，您可以包含以下命令以便在该阶段的另一个作业中使用 `$API_KEY` 属性：`export API_KEY=<insert API key here>`
+{:tip}
+
+### 计算属性
+您可以计算跨各个阶段共享的环境属性值，方法是在运行该阶段时创建 `build.properties` 文件，然后让下一个阶段运行该文件。例如，构建作业可以在构建脚本中包括以下命令：
+
+  `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
+
+所有作业都通过运行 `build.properties` 文件（如果存在）来启动。
 
 ## 创建和使用工件
 {: #artifacts}
 
-构建作业自动访存执行用户脚本的当前文件夹中的内容。如果不需要整个 Git 存储库内容以供将来部署，那么最好配置显式输出目录，然后在该目录中复制或创建相关工件。作业脚本在构建结果（输出目录）中执行。
+构建作业自动访存运行用户脚本的当前文件夹中的内容。如果不需要整个 Git 存储库内容以供将来部署，那么最好配置显式输出目录，然后在该目录中复制或创建相关工件。作业脚本在构建结果（输出目录）中运行。
 
-部署到 Cloud Foundry 的部署作业需要指定使用其权限运行作业的用户的 Platform API 密钥，以及用于部署工件的区域、组织和空间。如果需要其他服务来运行应用程序，那么需要在 `manifest.yml` 文件中指定这些服务。
+部署到 Cloud Foundry 的作业需要指定使用其权限运行作业的用户的 Platform API 密钥，以及用于部署工件的区域、组织和空间。如果需要更多服务来运行应用程序，那么必须在 `manifest.yml` 文件中指定这些服务。
 
-部署到 {{site.data.keyword.containerlong_notm}} 以在 Kubernetes 集群中运行的部署作业需要指定使用其权限运行作业的用户的 Platform API 密钥、Dockerfile 和可选的 Helm 图表。  
+部署到 {{site.data.keyword.containerlong_notm}} 的部署作业需要指定使用其权限运行作业的用户的 Platform API 密钥、Dockerfile 和可选的 Helm 图表。  
 
-作业脚本在作业使用分配的 Platform API 密钥登录到目标环境后运行（以便您可以在脚本中执行 `cf push` 或 `kubectl` 命令）。
+作业脚本在作业使用分配的 Platform API 密钥登录到目标环境后运行（以便您可以在脚本中运行 `cf push` 或 `kubectl` 命令）。
 
 ## 管道示例
 {: #deliverypipeline_example}

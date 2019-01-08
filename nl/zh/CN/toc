@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="ContinuousDelivery" audience="service" arm="1155710" href="/docs/services/ContinuousDelivery/index.html" path="services/ContinuousDelivery"}
-Continuous Delivery
+持续交付
 
     {: .navgroup id="learn"}
     index.md
@@ -14,7 +14,7 @@ Continuous Delivery
 
     {: .topicgroup}
     相关链接
-        [IBM Cloud DevOps Insights](../DevOpsInsights/index.html#gettingstarted)
+        [IBM Cloud DevOps Insights](services/DevOpsInsights/index.html#gettingstarted)
         [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage)
     {: .navgroup-end}
 

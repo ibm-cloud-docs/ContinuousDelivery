@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -48,7 +48,7 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 ##实时编辑
 {: #live-edit}
 
-如果要构建在 {{site.data.keyword.Bluemix_notm}} 上运行的 Node.js 应用程序，那么 {{site.data.keyword.Bluemix_notm}} Live Sync 的“实时编辑”功能可快速更新应用程序实例。“实时编辑”仅在 Web IDE 中可用。通过“实时编辑”，无需重新部署即可像在桌面上一样进行开发。
+如果要构建在 {{site.data.keyword.Bluemix_notm}} 上运行的 Node.js 应用程序，那么 {{site.data.keyword.Bluemix_notm}} Live Sync 的“实时编辑”功能可快速更新应用程序实例。“实时编辑”仅在 Web IDE 中可用。您可以使用“实时编辑”，无需重新部署即可像在桌面上一样进行开发。
 
 “实时编辑”仅支持用于 Node.js 应用程序。
 
@@ -56,7 +56,7 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 
 ![带“实时编辑”的“运行”栏的图像](images/bluemix-live-sync-light.png)
 
-通过“实时编辑”，可以快速预览对在 {{site.data.keyword.Bluemix_notm}} 上运行的 Node.js 应用程序的更改。如果在开启“实时编辑”的情况下更新代码，那么在执行更改之后仅需几秒钟的时间，就可以通过刷新 Web 应用程序浏览器窗口看到这些更改反映出来。
+使用“实时编辑”，可以快速预览对在 {{site.data.keyword.Bluemix_notm}} 上运行的 Node.js 应用程序的更改。如果在开启“实时编辑”的情况下更新代码，那么在执行更改之后仅需几秒钟的时间，就可以通过刷新 Web 应用程序浏览器窗口看到这些更改反映出来。
 
 有关使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的“实时编辑”功能的教程，请参阅[使用 {{site.data.keyword.Bluemix_notm}} Live Sync 开发、调试和部署应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/use-live-sync-to-develop-debug-and-deploy-your-app){:new_window}。
 
@@ -82,7 +82,7 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 
 ### 应用程序运行时控件 {: #app-runtime}
 
-通过应用程序运行时控件，可以使用“调试”在启动时检测应用程序的状态。在对启动时崩溃的应用程序进行故障诊断时，此功能很有用。
+通过应用程序运行时控件，可以使用“调试”在启动时检测应用程序的状态。在对启动时失败的应用程序进行故障诊断时，此功能很有用。
 
 开发应用程序时，可以从以下操作中进行选择：
 
@@ -90,9 +90,6 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 * 运行任何应用程序代码之前暂挂应用程序
 
 登录后，将打开 {{site.data.keyword.Bluemix_notm}}“实时调试”页面。
-
-![调试 UI](images/live_sync_debug.png)
-
 
 ### 调试 {: #debug}
 
@@ -148,4 +145,4 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 
 ### 有关更多信息
 
-* 请参阅 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
+* 请参阅 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

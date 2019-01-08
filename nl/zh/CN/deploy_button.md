@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-18"
 
 ---
 
@@ -18,13 +18,14 @@ lastupdated: "2018-8-2"
 # 创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮 {: #deploy-button}
 
 “部署到 {{site.data.keyword.Bluemix_notm}}”按钮是共享公共 Git 源代码应用程序的有效方法，这样其他人就能使用工具链来试用代码并将其部署到 {{site.data.keyword.Bluemix_notm}}。此按钮不但需要的配置最少，而且可插入到支持标记的任何位置。任何用户单击此按钮后，都会在新的 Git 存储库中创建代码的克隆副本，这样原始应用程序始终不受影响。
+  
 {: shortdesc}
 
 当用户单击您的按钮时，会发生以下操作：
 
 1. 如果用户没有活动的 {{site.data.keyword.Bluemix_notm}} 帐户，那么必须创建帐户。用户可以创建试用帐户，也可以创建实际帐户。
 
-2. 用户可以通过单击 {{site.data.keyword.deliverypipeline}} 图标来选择区域、资源组（仅在美国南部区域中可用）、组织、空间和应用程序名称。建议让应用程序名称与工具链名称相同，该名称是由原始 Git 存储库的名称和时间构成的。也可以编辑工具链名称。
+2. 用户可以通过单击 {{site.data.keyword.deliverypipeline}} 图标来选择区域、资源组（在美国南部、美国东部、英国、德国和东京区域可用）或者组织和空间（在美国南部、英国和德国区域可用），以及应用程序名称。建议让应用程序名称与工具链名称相同，该名称是由原始 Git 存储库的名称和时间构成的。也可以编辑工具链名称。
 
 3. 将创建一个工具链，该工具链包含您的 Git 存储库的新专用克隆、用于构建和部署代码更改的管道、用于在云上编辑代码的 Eclipse Orion {{site.data.keyword.webide}} 以及问题跟踪程序。
 
@@ -43,12 +44,10 @@ lastupdated: "2018-8-2"
 
 下面是公共 {{site.data.keyword.gitrepos}} 存储库的应用程序按钮示例：
 
-[![部署到 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
-
+[![部署到 IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
 下面是公共 GitHub 存储库的应用程序按钮示例：
 
-[![部署到 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
-
+[![部署到 IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
 ## 创建按钮 {: #create-button}
 
 要创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮，请复制并修改下列某个片段模板。在 URL 中指定 Git 存储库和分支。
@@ -58,7 +57,7 @@ lastupdated: "2018-8-2"
 要创建 HTML 格式的按钮，请复制以下片段并插入公共 Git 存储库 URL 和分支。
 
 ```HTML
-<a href="https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://bluemix.net/deploy/button.png" alt="部署到 IBM Cloud"></a>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://cloud.ibm.com/devops/setup/deploy/button.png" alt="部署到 IBM Cloud"></a>
 ```
 {: codeblock}
 
@@ -69,7 +68,7 @@ lastupdated: "2018-8-2"
 要创建 Markdown 格式的按钮，请复制以下片段并插入公共 Git 存储库 URL 和分支。
 
 ```Markdown
-[![部署到 IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>)
+[![部署到 IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=<git_repository_URL>&branch=<git_branch>)
 ```
 {: codeblock}
 
@@ -81,9 +80,9 @@ lastupdated: "2018-8-2"
 
 定制“部署到 {{site.data.keyword.Bluemix_notm}}”按钮的片段时，请注意这两个模板使用的都是外部按钮图像的缺省路径，图像格式为 PNG 且为英语。
 
-* 如果您希望按钮使用 SVG 图像而不是 PNG 图像，请将此片段中使用的按钮图像的路径更改为 `https://bluemix.net/deploy/button.svg`。
+* 如果您希望按钮使用 SVG 图像而不是 PNG 图像，请将此片段中使用的按钮图像的路径更改为 `https://cloud.ibm.com/devops/setup/deploy/button.svg`。
 
-* 如果您希望按钮使用大图像，请将此片段中使用的按钮图像的路径更改为 `https://bluemix.net/deploy/button_x2.png`。此图像是缺省图像大小的两倍。
+* 如果您希望按钮使用大图像，请将此片段中使用的按钮图像的路径更改为 `https://cloud.ibm.com/devops/setup/deploy/button_x2.png`。此图像是缺省图像大小的两倍。
 
 * 如果您希望本地存储图像，那么可以下载图像并将其存储在 Git 存储库中。调整路径以使用图像的相对位置。
 
@@ -102,9 +101,9 @@ lastupdated: "2018-8-2"
 支持的构建器包括：
 
 * [Ant ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")：](http://ant.apache.org/manual/using.html){:new_window}`build.xml`，用于将输出构建到 `./output/` 文件夹
-* [Gradle ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")：](http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle){:new_window}`/build.gradle`，用于将输出构建到 `.` 文件夹
+* [Gradle ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")：](https://docs.gradle.org/current/userguide/getting_started.html){:new_window}`/build.gradle`，用于将输出构建到 `.` 文件夹
 * [Grunt ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")：](http://gruntjs.com/getting-started#the-gruntfile){:new_window}`/Gruntfile.js`，用于将输出构建到 `.` 文件夹
-* [Maven ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")：](http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven){:new_window}`/pom.xml`，用于将输出构建到 `./target/` 文件夹
+* [Maven ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")：](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:new_window}`/pom.xml`，用于将输出构建到 `./target/` 文件夹
 
 ### 管道文件需求
 {: pipeline_file}
@@ -133,4 +132,4 @@ Dockerfile 类似于某种应用程序构建脚本。如果在存储库中检测
 
 `manifest.yml` 文件无需位于存储库中。但是，如果应用程序需要运行其他服务，那么必须提供声明这些服务的清单文件。
 
-要了解有关清单文件的更多信息，请参阅[应用程序清单](/docs/cfapps/depapps.html#appmanifest)。
+要了解有关清单文件的更多信息，请参阅[应用程序清单](/docs/cloud-foundry/deploy-apps.html#appmanifest)。

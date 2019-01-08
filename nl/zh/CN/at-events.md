@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-6-22"
+lastupdated: "2018-10-10"
 
 ---
 
@@ -35,10 +35,10 @@ lastupdated: "2018-6-22"
 
 |操作|描述| 
 |:-----------------|:-----------------|
-|工具链创建|创建工具链| 
-|工具链删除|删除工具链|
-|工具创建|创建工具集成|
-|工具删除|删除工具集成|
+| continuous-delivery.toolchain.create |创建工具链| 
+| continuous-delivery.toolchain.delete |删除工具链|
+| toolchain.tool-instance.deploy |创建工具集成|
+| toolchain.tool-instance.undeploy |删除工具集成|
 {: caption="表 1. 生成事件的操作" caption-side="top"}
 
 ## 查看事件的位置

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-7-19"
+lastupdated: "2018-12-6"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -11,6 +11,14 @@ lastupdated: "2018-7-19"
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:faq: data-hd-content-type='faq'}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:download: .download}
 
 # 常见问题解答
 {: #ts_cd}
@@ -21,6 +29,7 @@ lastupdated: "2018-7-19"
 
 ## 我尝试向工具链添加 GitHub 工具集成，为什么未添加成功？
 {: #cannot_authorize_github}
+{: faq}
 
 如果 {{site.data.keyword.Bluemix_notm}} 无权访问您的 GitHub 帐户，那么工具集成不会添加到工具链中。
 
@@ -40,6 +49,7 @@ lastupdated: "2018-7-19"
 
 ## 我尝试了创建工具链，为什么会遇到错误？
 {: #cannot_create_toolchain}
+{: faq}
 
 尝试在组织中创建工具链时，如果收到以下错误消息，请从您的组织中除去一个或多个工具链，然后重新创建工具链。
 
@@ -47,16 +57,22 @@ lastupdated: "2018-7-19"
 
 
 ## 为何“工具链”页面显示已超过 {{site.data.keyword.contdelivery_short}} 服务轻量套餐？
+{: #plan_exceeded}
+{: faq}
 
 {{site.data.keyword.contdelivery_short}} 提供两个套餐：轻量和专业。如果您有 {{site.data.keyword.contdelivery_short}} 轻量套餐，那么可以免费使用工具链，直至达到套餐限制的数量。错误消息指示您已超过轻量套餐的一个或多个限制。例如，如果有太多授权用户与 {{site.data.keyword.contdelivery_short}} 服务实例相关联或者如果运行了最大数量的 {{site.data.keyword.deliverypipeline}} 作业，那么可能超出套餐。有关套餐条款的更多信息，请参阅[套餐限制和使用情况](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}。
 
 
 ## 我已创建工具链，为什么“工具链”页面显示需要 Continuous Delivery 服务？
+{: #service_required_resource_group}
+{: faq}
 
 位于工具链的相同资源组或组织中的 {{site.data.keyword.contdelivery_short}} 服务实例的套餐条款管理服务中包含的某些工具集成的使用（{{site.data.keyword.deliverypipeline}}、Eclipse Orion {{site.data.keyword.webide}} 和 {{site.data.keyword.gitrepos}}）。错误消息指示资源组或组织不包含必需的 {{site.data.keyword.contdelivery_short}} 服务实例。有关套餐条款的更多信息，请参阅[套餐限制和使用情况](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}。
 
 
 ## 我已在 Cloud Foundry 组织中创建工具链，为什么“工具链”页面显示需要 Continuous Delivery 服务？
+{: #service_required_cloud_foundry}
+{: faq}
 
 在没有 {{site.data.keyword.contdelivery_short}} 服务实例的资源组或组织中创建工具链时，工具链平台尝试使用轻量套餐自动创建服务实例。错误消息指示工具链平台无法创建服务实例。
 
@@ -67,6 +83,7 @@ lastupdated: "2018-7-19"
 
 ## 我尝试了将应用程序部署到 {{site.data.keyword.Bluemix_notm}}，为什么会遇到错误？
 {: #org_outofmemory}
+{: faq}
 
 尝试将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时，如果收到以下错误消息，那么组织中剩余的内存量低于您要部署的应用程序所需的内存量。
 
@@ -102,6 +119,7 @@ lastupdated: "2018-7-19"
 
 ## 我创建了一个应用程序，为什么在 Eclipse Orion Web IDE 中运行栏不显示 {{site.data.keyword.Bluemix_notm}} Live Sync 图标？
 {: #ts_llz_lkb_3r}
+{: faq}
 
 ![运行栏](images/webide_runbar_light.png)   
 
@@ -119,6 +137,7 @@ lastupdated: "2018-7-19"
 
 ## 我单击了工具链以查看其“概述”页面，为什么未装入工具链？
 {: #toolchains_load}
+{: faq}
 
 检查 {{site.data.keyword.Bluemix_notm}}“状态”页面，以确定 {{site.data.keyword.Bluemix_notm}} 中是否存在已知问题影响 {{site.data.keyword.Bluemix_notm}} 平台和主要服务。
 
@@ -126,14 +145,15 @@ lastupdated: "2018-7-19"
 可以通过选择以下两个选项之一来找到“状态”页面：
 
   * 登录到 {{site.data.keyword.Bluemix_notm}} 控制台。从菜单栏中单击**支持**，然后选择**状态**。检查列出的资源中是否存在 ![某些问题](../../get-support/images/some_issues.svg) 图标。此图标可能指示有中断情况。
-  * 通过“[{{site.data.keyword.Bluemix_notm}} - 系统状态”![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/status){: new_window} 直接访问。
+  * 通过“[{{site.data.keyword.Bluemix_notm}} - 系统状态”![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/status){: new_window} 直接访问。
 
 
-有关 {{site.data.keyword.Bluemix_notm}}“状态”页面的更多信息，请参阅[查看 {{site.data.keyword.Bluemix_notm}} 状态](https://console.bluemix.net/docs/get-support/ViewStatus.html#viewing-bluemix-status)。
+有关 {{site.data.keyword.Bluemix_notm}}“状态”页面的更多信息，请参阅[查看 {{site.data.keyword.Bluemix_notm}} 状态](https://cloud.ibm.com/docs/get-support/ViewStatus.html#viewing-bluemix-status)。
 
 
 ## 我为工具链配置了工具集成，为什么未配置成功？
 {: #tool_integration_error}
+{: faq}
 
 当您添加工具集成时，工具链会与工具集成所代表的工具进行通信，以供应任何必要资源，并将它们与工具链相关联。如果在设置过程中发生错误，或者工具链与工具之间的通信没有正确完成，那么工具集成会置于错误状态。
 

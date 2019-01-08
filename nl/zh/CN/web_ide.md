@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -17,10 +17,13 @@ lastupdated: "2018-8-2"
 # 使用 Eclipse Orion Web IDE 进行开发
 {: #web_ide}
 
-Eclipse Orion{{site.data.keyword.webide}} 是基于浏览器的开发环境，其中您可以借助内容辅助、代码完成和错误检查功能在 JavaScript、HTML 和 CSS 中针对 Web 进行开发。{{site.data.keyword.webide}} 使用几乎任何语言并为大部分文件类型提供语法突出显示。源代码控制功能内置其中，因此您可以在本地部署代码并调试应用程序。
+Eclipse Orion{{site.data.keyword.webide}} 是基于浏览器的开发环境，其中您可以借助内容辅助、代码完成和错误检查功能在 JavaScript、HTML 和 CSS 中针对 Web 进行开发。{{site.data.keyword.webide}} 使用几乎任何语言并为大部分文件类型突出显示语法。源代码控制功能内置其中，因此您可以在本地部署代码并调试应用程序。
 {:shortdesc}
 
 最重要的是，{{site.data.keyword.webide}} 由 Web 提供支持。您无需进行任何安装、维护和扩展。您可以在具有因特网连接的任何地方进行开发。
+
+请勿将文件中的监管数据存储在 {{site.data.keyword.webide}} 中。监管数据的处理过程目前尚未就绪。
+{: tip}
 
 ## 设置 IDE
 {: #editorsetup}
@@ -83,17 +86,17 @@ Eclipse Orion{{site.data.keyword.webide}} 是基于浏览器的开发环境，�
 
 
 <table role="presentation">
-<tr><td><img src="./images/stop_button.png"  alt="停止图标"></td><td>停止应用程序</td></tr>
-<tr><td> <img src="./images/open_app_url.png"  alt="打开应用程序 URL 图标"></td><td> 打开已部署的应用程序</td></tr>
-<tr><td><img src="./images/view_logs.png"  alt="查看日志图标"></td><td>查看已部署应用程序的日志</td></tr>
-<tr><td><img src="./images/open_dashboard.png"  alt="打开仪表板图标"></td><td>打开应用程序的仪表板</td></tr>
+<tr><td><img src="./images/stop_button.png"  alt="停止图标"></td><td>停止应用程序。</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="打开应用程序 URL 图标"></td><td> 打开已部署的应用程序。</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="查看日志图标"></td><td>查看已部署应用程序的日志。</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="打开仪表板图标"></td><td>打开应用程序的仪表板。</td></tr>
 </table>
 
 如果您是在开发 Node.js 应用程序，请启用“实时编辑”方式：<img  src="./images/enable_live_edit.png"  alt="启用实时编辑滑块">
 
-<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="“实时编辑”重新启动图标"></td><td>在启用“实时编辑”方式的情况下，快速重新启动应用程序而不重新部署</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="“实时编辑”重新启动图标"></td><td>在启用“实时编辑”方式的情况下，快速重新启动应用程序而不重新部署。</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="调试图标"></td>
-<td>在启用“实时编辑”方式的情况下访问调试器</td></tr>
+<td>在启用“实时编辑”方式的情况下访问调试器。</td></tr>
 </table>
 
 <!-- 3/6/2016: bl commands don't work with V2/CD
@@ -161,7 +164,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 ## 受支持的语言
 {: #supported_languages}
 
-Eclipse Orion {{site.data.keyword.webide}} 为 JavaScript、HTML、CSS 和 Markdown 文件提供内容辅助、工具提示、预览、验证和语法突出显示。以下文件类型也支持语法突出显示：
+Eclipse Orion {{site.data.keyword.webide}} 为 JavaScript、HTML、CSS 和 Markdown 文件提供内容辅助、工具提示、预览、验证和语法突出显示。还可以为以下文件类型突出显示语法：
 
 <table role="presentation">
 <tr>

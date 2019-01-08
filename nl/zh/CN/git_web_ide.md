@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # 在 Eclipse Orion Web IDE 中使用 Git
@@ -91,7 +93,7 @@ lastupdated: "2018-8-2"
 使用活动本地分支的内容覆盖所引用远程分支的内容。
 
 强制将本地分支推送到远程分支时，可能会丢失远程分支上的提交。
-{: tip}
+{: important}
 
 ### Eclipse Orion Web IDE
 {: #force_push_web}
@@ -221,7 +223,7 @@ lastupdated: "2018-8-2"
 {: #modify_last_commit}
 
   对已推送到远程存储库的上次提交进行修改时，将重写提交历史记录。此更改可能会对您项目中的其他参与者造成提交失败以及其他问题。在修改已推送到远程存储库的提交之前，请务必明白自己要执行的操作会带来什么后果。
-  {: tip}
+  {: important}
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}

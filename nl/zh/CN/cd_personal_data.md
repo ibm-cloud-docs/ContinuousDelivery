@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # 在 Continuous Delivery 中管理个人数据
@@ -30,7 +32,7 @@ lastupdated: "2018-8-2"
  * [{{site.data.keyword.DRA_full}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
 IBM 不管理 {{site.data.keyword.contdelivery_short}} 服务中的数据。在退出在 {{site.data.keyword.Bluemix_notm}} Public 中托管的 {{site.data.keyword.contdelivery_short}} 服务之前，必须删除自己的数据。
-{: tip}
+{: important}
 
 {{site.data.keyword.contdelivery_short}} 提供相应的许可权来管理资源组或 Cloud Foundry 组织内的数据。您的公司可能具有限制这些许可权的策略。如果您没有相应的许可权，请与您的 {{site.data.keyword.Bluemix_notm}} 帐户的管理员联系。
 
@@ -99,7 +101,7 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 {{site.data.keyword.webide}} 在云中提供个人工作空间。可以使用 {{site.data.keyword.webide}} 来克隆 Git 存储库并编辑文件。您拥有自己的 {{site.data.keyword.webide}} 工作空间；此工作空间不与其他任何帐户共享。
 
 在删除 {{site.data.keyword.webide}} 数据之前，您可能要导出工作。删除工作空间后，将从 {{site.data.keyword.contdelivery_short}} 中除去这些工作空间，并删除所有文件。
-{: tip}
+{: important}
 
 ###导出 Web IDE 工作空间
 
@@ -118,7 +120,7 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 1. 单击**删除**以从 {{site.data.keyword.webide}} 中除去您的所有数据。
 
 {{site.data.keyword.webide}} 使用单点登录机制。首次访问此工具集成时，会为您的 IBM Cloud 帐户创建一个对应的 {{site.data.keyword.webide}} 帐户，但会隐藏该帐户。删除所有工作空间后，不要访问 {{site.data.keyword.webide}}。如果再次访问 {{site.data.keyword.webide}}，系统将自动创建一个新帐户，您必须将其删除。
-{: tip}
+{: important}
 
 ## 修改、导出和删除 Git Repos and Issue Tracking 数据
 {: #managing_grit_data}
@@ -158,7 +160,7 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 {: tip}
 
 {{site.data.keyword.gitrepos}} 使用单点登录机制，该机制会在您首次访问工具集成时，自动为您的 IBM Cloud 帐户创建相应的 Git 帐户。删除您的帐户后，不要访问 {{site.data.keyword.gitrepos}}。如果再次访问 {{site.data.keyword.gitrepos}}，系统将自动创建一个新帐户，您必须将其删除。
-{: tip}
+{: important}
 
 ## 修改、导出和删除 Continuous Delivery 管道数据
 {: #managing_pipeline_data}
@@ -168,7 +170,7 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 在删除共享对象或管道之前，请确保与团队的其他成员进行协调。删除阶段可能会导致管道发生故障。
 
 管道不能存在于工具链外部。如果删除工具链，与该工具链关联的所有管道也将一并删除。如果计划删除整个工具链，那么无需单独删除每个管道。请改为跳至“修改和删除工具链与工具集成”部分，然后执行相关步骤来删除工具链。
-{: tip}
+{: important}
 
 管道阶段可能包含个人数据，例如以环境属性形式提供的凭证以及显示管道的当前状态的管道定义。阶段还可能包含要修改或删除的作业中的脚本，以及要导出的最新管道运行的工件和日志。使用“配置阶段”或“删除阶段”操作来修改或删除阶段。使用“下载”操作可从阶段导出工件或日志。
 

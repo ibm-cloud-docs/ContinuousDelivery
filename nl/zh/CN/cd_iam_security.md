@@ -42,7 +42,7 @@ lastupdated: "2018-7-18"
 
 |平台管理角色|操作描述|示例操作|
 |:-----------------|:-----------------|:-----------------|
-|查看者、操作员|查看 {{site.data.keyword.contdelivery_short}} 服务的实例。| <ul><li>单击 {{site.data.keyword.contdelivery_short}} 服务实例以打开其仪表板。</li>|
+|查看者、操作员|查看 {{site.data.keyword.contdelivery_short}} 服务的实例。| <ul><li>单击 {{site.data.keyword.contdelivery_short}} 服务实例以打开其仪表板。</li>|</ul>
 |编辑者、管理员|创建、查看、更新、修改 {{site.data.keyword.contdelivery_short}} 服务实例的套餐，以及删除该实例。|<ul><li>在资源组中供应 {{site.data.keyword.contdelivery_short}} 的实例。</li><li>从资源组删除 {{site.data.keyword.contdelivery_short}} 的实例。</li><li>将 {{site.data.keyword.contdelivery_short}} 实例套餐从轻量更改为专业。</li></ul> |
 |管理员|更新“授权用户”列表。| <ul><li>向“授权用户”列表添加用户。</li><li>从“授权用户”列表除去用户。</li></ul> |
 {: caption="表 1. IAM 用户角色和操作" caption-side="top"}

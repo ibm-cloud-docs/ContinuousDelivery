@@ -2,20 +2,23 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-12-6"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:codeblock:.codeblock}
 
 
 # 获取 {{site.data.keyword.contdelivery_short}} 的帮助和支持    
 {: #cd_support}  
 
-{{site.data.keyword.contdelivery_full}} 团队积极监视 developerWorks 论坛，以获取有关 {{site.data.keyword.contdelivery_short}} 服务和工具链的问题。要在论坛中提问，请单击工具链底部和 {{site.data.keyword.contdelivery_short}} 页面底部的**在论坛中获取帮助**按钮 ![**在论坛中获取帮助**按钮](images/get_help_in_the_forum.png)。
+{{site.data.keyword.contdelivery_full}} 团队积极监视 developerWorks 论坛，以获取有关 {{site.data.keyword.contdelivery_short}} 服务和工具链的问题。要在论坛中提问，请在工具链和 {{site.data.keyword.contdelivery_short}} 页面上单击**在论坛中获取帮助** ![**在论坛中获取帮助** 按钮](images/get_help_in_the_forum.png)。
 
 <table>
 <tr>
@@ -47,7 +50,7 @@ lastupdated: "2018-3-26"
 1. 从菜单栏中单击**支持**，然后单击**添加凭单**。
 1. 完成表单以指出您所需要的技术支持。
 
-有关开具 IBM {{site.data.keyword.Bluemix_notm}} 支持凭单或有关支持级别和凭单严重性的更多信息，请参阅[联系支持人员](https://console.bluemix.net/docs/support/index.html#contacting-support)。
+有关开具 IBM {{site.data.keyword.Bluemix_notm}} 支持凭单或有关支持级别和凭单严重性的更多信息，请参阅[联系支持人员](https://cloud.ibm.com/docs/support/index.html#contacting-support)。
 
 
 ## 对 {{site.data.keyword.Bluemix_notm}} 的支持

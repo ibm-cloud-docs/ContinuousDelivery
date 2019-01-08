@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-17"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-17"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}   
 
 # 配置工具集成
@@ -25,26 +27,26 @@ lastupdated: "2018-8-17"
 |工具集成|在 {{site.data.keyword.Bluemix_notm}} Public 中可用|在 {{site.data.keyword.Bluemix_notm}} Dedicated 中可用（具体取决于环境）|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.alertnotificationshort}}		|美国南部|否|
-|Artifactory|美国南部、德国和英国|是|
+|Artifactory|美国南部、美国东部、德国、东京、英国|是|
 |Availability Monitoring|美国南部|否|
-|Bitbucket		|美国南部、德国和英国|否|
+|Bitbucket		|美国南部、美国东部、德国、东京、英国|否|
 |Cloud Event Management|美国南部|否|
-|{{site.data.keyword.deliverypipeline}} 		|美国南部、德国和英国|是|
-|{{site.data.keyword.DRA_short}} 		|美国南部|否|
-|Eclipse Orion {{site.data.keyword.webide}}|美国南部、德国和英国|是|
-|{{site.data.keyword.gitrepos}}	|美国南部、德国和英国|否|
-|GitHub		|美国南部、德国和英国|是|
+|{{site.data.keyword.deliverypipeline}} 		|美国南部、美国东部、德国、东京、英国|是|
+|{{site.data.keyword.DRA_short}} 		|美国南部、德国和英国|否|
+|Eclipse Orion {{site.data.keyword.webide}}|美国南部、美国东部、德国、东京、英国|是|
+|{{site.data.keyword.gitrepos}}	|美国南部、美国东部、德国、东京、英国|否|
+|GitHub		|美国南部、美国东部、德国、东京、英国|是|
 |Dedicated {{site.data.keyword.ghe_short}} 和 Issues|否|是|
-|GitLab|美国南部、德国和英国|否|
-|Jenkins|美国南部、德国和英国|是|
-|JIRA|美国南部、德国和英国|是|
-|Nexus|美国南部、德国和英国|是|
-|其他工具|美国南部、德国和英国|是|
-|PagerDuty|美国南部、德国和英国|是|
-|Rational Team Concert|美国南部、德国和英国|是|
-|Sauce Labs|美国南部、德国和英国|否|
-|Slack|美国南部、德国和英国|是|
-|SonarQube|美国南部、德国和英国|是|
+|GitLab|美国南部、美国东部、德国、东京、英国|否|
+|Jenkins|美国南部、美国东部、德国、东京、英国|是|
+|JIRA|美国南部、美国东部、德国、东京、英国|是|
+|Nexus|美国南部、美国东部、德国、东京、英国|是|
+|其他工具|美国南部、美国东部、德国、东京、英国|是|
+|PagerDuty|美国南部、美国东部、德国、东京、英国|是|
+|Rational Team Concert|美国南部、美国东部、德国、东京、英国|是|
+|Sauce Labs|美国南部、美国东部、德国、东京、英国|否|
+|Slack|美国南部、美国东部、德国、东京、英国|是|
+|SonarQube|美国南部、美国东部、德国、东京、英国|是|
 {: caption="表 1. 在 {{site.data.keyword.Bluemix_notm}} Public 和 Dedicated 中，工具链可使用的工具集成" caption-side="top"}
 
 如果您想要在 {{site.data.keyword.Bluemix_notm}} Public 中开始使用源代码进行开发，请先配置 GitHub 工具集成或 {{site.data.keyword.gitrepos}} 工具集成，然后再配置 {{site.data.keyword.deliverypipeline}}。如果要在 {{site.data.keyword.Bluemix_notm}} Dedicated 上开始使用您的代码进行开发，请先配置 {{site.data.keyword.ghe_short}} 工具集成或 GitHub 工具集成，然后再配置 {{site.data.keyword.deliverypipeline}}。
@@ -140,7 +142,7 @@ lastupdated: "2018-8-17"
 ### 在管道中配置 Artifactory npm 构建作业
 {: #config_artifactory_npm}
 
-在管道中配置 npm 构建作业之前，您必须具有可使用构建 SCM 存储库作为输入的工作管道，并且您必须为工具链配置 Artifactory。有关配置 Artifactory 的指示信息，请参阅 [Artifactory](#artifactory) 一节。
+在管道中配置 npm 构建作业之前，您必须具有可使用构建 SCM 存储库作为输入的工作管道。还必须为工具链配置 Artifactory。有关配置 Artifactory 的指示信息，请参阅 [Artifactory](#artifactory) 一节。
 
 配置 {{site.data.keyword.deliverypipeline}} 以添加 npm 构建作业：
 
@@ -343,7 +345,7 @@ lastupdated: "2018-8-17"
 ### 在管道中配置 Sauce Labs 测试作业
 {: #config_saucelabs}
 
-在管道中配置 Sauce Labs 测试作业之前，您需要具有构建和部署应用程序阶段的工作管道，并且您必须为工具链配置 Sauce Labs。有关配置 Sauce Labs 的指示信息，请参阅 [Sauce Labs](#saucelabs) 一节。
+在管道中配置 Sauce Labs 测试作业之前，您需要具有构建和部署应用程序阶段的工作管道。还必须为工具链配置 Sauce Labs。有关配置 Sauce Labs 的指示信息，请参阅 [Sauce Labs](#saucelabs) 一节。
 
 配置 {{site.data.keyword.deliverypipeline}} 以添加 Sauce Labs 测试作业：
 
@@ -358,9 +360,10 @@ lastupdated: "2018-8-17"
   {: tip}
 
 1. 配置部署作业。在**部署脚本**字段中，包括以下命令：`export CF_APP_NAME="$CF_APP"`。该命令会将应用程序名称导出为环境属性。
-1. 配置测试作业。以下图像中的值为示例。**服务实例**、**目标**、**组织**和**空间**字段中会填充您使用的 Sauce Labs 用户名、区域、组织和空间。
-  
-![配置作业](images/toolchain_configure_job.png)
+1. 配置测试作业。 
+
+  **服务实例**、**目标**、**组织**和**空间**字段中会填充您使用的 Sauce Labs 用户名、区域、组织和空间。
+  {: tip}
 
   a. 对于测试器类型，请选择 **Sauce Labs**。
 
@@ -371,7 +374,7 @@ lastupdated: "2018-8-17"
 
   c. 在**测试执行命令**字段中，输入安装测试所需依赖项的命令，然后运行测试。例如，对于 Node.js 应用程序，您可能会输入以下命令：
      ```
-npm install
+     npm install
      node_modules/grunt-cli/bin/grunt test:sauce:parallel
      ```
 
@@ -388,7 +391,7 @@ npm install
   * [使用“开发 Cloud Foundry 应用程序”工具链来创建和使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
 
-## 添加 DevOps Insights (Beta)
+## 添加 DevOps Insights
 {: #dra}
 
 {{site.data.keyword.DRA_full}} 会从单元测试、功能测试和代码覆盖工具收集和分析结果，以确定您的代码是否符合部署过程中指定检测点的预定义条件。如果您的代码不符合条件或超出条件，那么会停止部署以防产生风险。您可以使用 {{site.data.keyword.DRA_short}} 作为持续交付环境的安全网，或用于实施和提高质量标准。
@@ -441,7 +444,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于 Web 的集成环境，您�
 
 ### 了解有关 Eclipse Orion Web IDE 的更多信息
 
-要了解有关 Eclipse Orion {{site.data.keyword.webide}} 的更多信息，请参阅 IBM Cloud Garage Method 上的[使用 Eclipse Orion {{site.data.keyword.webide}} 编辑代码](/docs/services/ContinuousDelivery/web_ide.html){: new_window}和 [Eclipse Orion {{site.data.keyword.webide}} 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window}，或者学习以下教程：
+要了解有关 Eclipse Orion {{site.data.keyword.webide}} 的更多信息，请参阅[使用 Eclipse Orion {{site.data.keyword.webide}} 编辑代码](/docs/services/ContinuousDelivery/web_ide.html){: new_window}。还可以阅读 IBM Cloud Garage Method 上的 [Eclipse Orion {{site.data.keyword.webide}} 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window}。根据这些教程尝试使用 Eclipse Orion {{site.data.keyword.webide}}：
 
   * [使用“开发 Cloud Foundry 应用程序”工具链来创建和使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
@@ -515,11 +518,11 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
 
 如果您在创建工具链时配置此工具集成，请遵循以下步骤：
 
-1. 如果要将源代码存储在 GitHub 存储库中，请在“可配置的集成”部分中，单击 **GitHub**。如果要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具集成，但尚未授权 {{site.data.keyword.Bluemix_notm}} 访问 GitHub，请单击**授权**以转至 GitHub Web 站点。如果您没有活动的 GitHub 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 GitHub 帐户。如果您有活动的 GitHub 会话但最近未输入过密码，那么系统可能会提示您输入 GitHub 密码以进行确认。
+1. 如果要将源代码存储在 GitHub 存储库中，请在“可配置的集成”部分中，单击 **GitHub**。如果要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具集成，但尚未授权 {{site.data.keyword.Bluemix_notm}} 访问 GitHub，请单击**授权**以转至 GitHub Web 站点。如果您没有活动的 GitHub 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 GitHub 帐户。如果您有活动的 GitHub 会话，但最近未输入过密码，那么系统可能会提示您输入 GitHub 密码以进行确认。
 1. 如果要使用您自己的 {{site.data.keyword.ghe_short}} 服务器上的存储库，请在“可配置的集成”部分中，单击**添加定制服务器**。
 
  网络必须能够从 {{site.data.keyword.Bluemix_notm}} Dedicated 环境访问目标 Git 服务器。如果您的 GitHub 服务器在公用因特网上不可用，或者主机名在公共域名服务器 (DNS) 上无法解析，请[开具支持凭单](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}。您可以使用支持凭单来提交请求以打开网络路由或更新 DNS 设置。
- {: tip}
+ {: important}
 
  输入定制 GitHub 服务器的标题，并指定该服务器的根 URL。输入您的个人访问令牌，然后单击**保存定制集成**。
 
@@ -586,7 +589,7 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
 {: #configghe}
 
  以下指示信息仅适用于 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}。如果您使用自己的 {{site.data.keyword.ghe_short}} 受管版本，那么根据您的内部过程，有些步骤可能有所不同。
- {: tip}
+ {: important}
 
 {{site.data.keyword.ghe_long}} 是 Git 存储库基于 Web 的内部部署托管服务。Dedicated {{site.data.keyword.ghe_short}} 仅适用于 {{site.data.keyword.Bluemix_notm}} Dedicated 客户。GitHub Issues 是一种跟踪工具，可将您的工作和计划保留在一个地方。它与您的开发存储库相集成，以便您可将关注点放在重要的任务上。有关 Dedicated {{site.data.keyword.ghe_short}} 和 GitHub Issues 的更多信息，请参阅 IBM Cloud Garage Method 上的 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated/index.html){: new_window}和 [GitHub Issues 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}。
 
@@ -637,7 +640,7 @@ GitLab 是 Git 存储库基于 Web 的托管服务。您可以同时具有存储
 
 如果您在创建工具链时配置此工具集成，请遵循以下步骤：
 
-1. 如果要将源代码存储在 GitLab 存储库中，请在“可配置的集成”部分中，单击 **GitLab**。如果要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具集成，但尚未授权 {{site.data.keyword.Bluemix_notm}} 访问 GitLab，请单击**授权**以转至 GitLab Web 站点。如果您没有活动的 GitLab 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 GitLab 帐户。如果您有活动的 GitLab 会话但最近未输入过密码，那么系统可能会提示您输入 GitLab 密码以进行确认。
+1. 如果要将源代码存储在 GitLab 存储库中，请在“可配置的集成”部分中，单击 **GitLab**。如果要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具集成，而您并未授权 {{site.data.keyword.Bluemix_notm}} 访问 GitLab，请单击**授权**以转至 GitLab Web 站点。如果您没有活动的 GitLab 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 GitLab 帐户。如果您有活动的 GitLab 会话，但最近未输入过密码，那么系统可能会提示您输入 GitLab 密码以进行确认。
 1. 如果要使用您自己的 GitLab 服务器上的存储库，请在“可配置的集成”部分中，单击**添加定制服务器**。
 
  网络必须能够从 {{site.data.keyword.Bluemix_notm}} Dedicated 环境访问目标 GitLab 服务器。
@@ -702,7 +705,7 @@ GitLab 是 Git 存储库基于 Web 的托管服务。您可以同时具有存储
 Jenkins 是基于服务器的开放式源代码工具，其可持续构建并测试软件，支持持续集成和持续交付的实践。
 
 创建 Jenkins 工具集成之前，您必须具有 Jenkins 服务器。
-{: tip}
+{: important}
 
 使用 Jenkins 工具集成，您可以将 Jenkins 作业通知发送到工具链中的其他工具，如 Slack 和 PagerDuty。要跟踪部署中的代码，可以向 Git 落实及相关的 Git 或 JIRA 问题添加部署消息。您还可以在“工具链连接”页面上查看您的部署。您可以将测试结果提供给 {{site.data.keyword.DRA_short}}、添加自动化质量检测点并跟踪您的部署风险。
 
@@ -924,7 +927,7 @@ JIRA 是跟踪与软件相关的问题和错误的工具。JIRA 工具集成会�
 ## 配置 PagerDuty
 {: #pagerduty}
 
-PagerDuty 可将多个监视系统的数据集成到单一视图。发生问题时，PagerDuty 可确保及时通知当时最有能力修正该问题的团队成员。如果该团队成员未响应该问题，就会配置呈报，以将该问题传递给第二顺位的工程师或操作管理员。
+PagerDuty 可将多个监视系统的数据集成到单一视图。发生问题时，PagerDuty 可确保及时通知当时最有能力修正该问题的团队成员。如果该团队成员未响应该问题，就会配置呈报，以将该问题传递给第二顺位的代表或操作管理员。
 
 配置 PagerDuty 在发生管道阶段失败时发送通知，以便您可以更快速地修正问题，并缩短停机时间：
 
@@ -1020,7 +1023,7 @@ Sauce Labs 运行功能单元测试。如果将 Sauce Labs 测试套件配置为
 
  b. 在“工具集成”部分中，单击 **Sauce Labs**。
 
-1. 输入与 Sauce Labs 帐户相关联的用户名。您可以[在 Sauce Labs 帐户页面顶部的欢迎消息中查找用户名 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://saucelabs.com/account){: new_window}。
+1. 输入与 Sauce Labs 帐户相关联的用户名。您可以[在 Sauce Labs 帐户页面的欢迎消息中查找用户名 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://saucelabs.com/account){: new_window}。
 1. 输入 Sauce Labs 帐户的访问密钥。您可以[在 Sauce Labs 帐户页面中查找密钥 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://saucelabs.com/account){: new_window}。
 1. 单击**创建集成**。
 1. 单击 **Sauce Labs**，以转至 saucelabs.com 并查看工具链的测试活动。
@@ -1039,8 +1042,8 @@ Sauce Labs 运行功能单元测试。如果将 Sauce Labs 测试套件配置为
 ## 配置 Slack
 {: #slack}
 
-团队中的每一个人都可以看到发布到公共 Slack 通道的通知。记住您要对发布的内容负责。
-{: tip}
+团队中的每一个人都可以看到发布到公共 Slack 通道的通知。您要对发布的内容负责。
+{: important}
 
 Slack 是基于云的实时消息传递和通知系统。Slack 提供持久交谈，可替代电子邮件用于团队协作，其互动性更高。您可以通过专用通道或与您工作直接相关的一组通道，与团队进行通信。您还可以通过通道或直接消息，在两人或多人之间共享文件和图像。直接消息和通道的通信会保留，以便您可以对它们进行搜索。
 
@@ -1055,7 +1058,7 @@ Slack 是基于云的实时消息传递和通知系统。Slack 提供持久交�
 
 1. 输入 Slack Webhook URL，其由 Slack 作为入局 Webhook 生成。您需要 Slack Webhook URL，Slack 通道才能从工具集成接收有关工具链的通知。有关创建或查找 Webhook 的指示信息，请参阅[入局 Webhook ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://api.slack.com/incoming-webhooks){: new_window}。
 
- 如果您一直在使用 API 密钥让 Slack 通道从工具集成接收有关工具链的通知，那么您必须更新配置以改用 Webhook。
+ 如果您使用 API 密钥让 Slack 通道从工具集成接收有关工具链的通知，那么您必须更新配置以改用 Webhook。
  {: tip}
 
 1. 输入您想要发送通知的目标 Slack 通道的名称。在 Slack 团队中，该通道必须已经存在且处于活动状态。

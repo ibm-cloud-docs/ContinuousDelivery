@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-12"
 
 ---
 {:shortdesc: .shortdesc}
@@ -11,16 +11,18 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
 # 创建定制工具链模板
 {: #toolchains_custom}
 
-通过创建定制工具链模板可改进 DevOps 工作流程。您可以使用现有工具链模板快速入门，也可以创建仅包含所需集成的工具链模板。您可以随时添加或除去工具链的集成。
+通过创建定制工具链模板可改进 DevOps 工作流程。您可以使用现有工具链模板快速入门，也可以创建仅包含所需工具集成的工具链模板。您可以随时添加或除去工具链中的集成。
 {:shortdesc}
 
-您可以通过多种方式[创建工具链](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}。创建定制工具链模板后，可以通过[创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}来共享该模板。可在 [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window} 中找到有关工具链模板 SDK 的详细信息。可以在 [Garage Method 站点](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}上找到分步教程。
+您可以通过多种方式[创建工具链](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}。创建定制工具链模板后，可以通过[创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}来共享该模板。有关工具链模板 SDK 的更多信息，请参阅 [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}。有关分步骤教程，请参阅 [Garage Method 站点](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}。
 
 
 ## 入门
@@ -37,7 +39,7 @@ lastupdated: "2018-8-2"
 
  此模板从单个 GitHub 存储库部署基本 Hello World 应用程序，并包含已针对持续交付、源代码控制、问题跟踪和联机编辑预配置的简单工具链。
 
-2. 如果您希望从更复杂的工具链模板开始，那么可以首先克隆[微服务的云本机工具链](https://github.com/open-toolchain/toolchain-demo){: new_window}。
+2. 如果您希望从更复杂的工具链模板开始，那么可以克隆[微服务的云本机工具链](https://github.com/open-toolchain/toolchain-demo){: new_window}。
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -64,7 +66,7 @@ lastupdated: "2018-8-2"
 ![定义工具链至少需要的文件](images/min_files_for_a_toolchain.png)
 
 
-以下各部分对其中每个文件进行了说明。每个部分都包含配置信息，您可以在定义工具链的过程中查询这些信息。YAML 是一种数据序列化语言，它是一个严格的 JSON 超集，新增了语法上重要的换行符和缩进符。但是，YAML 根本不允许使用字面形式的制表符。
+以下各部分对其中每个文件进行了说明。每个部分都包含配置信息，您可以在定义工具链的过程中查询这些信息。YAML 是一种数据序列化语言，它是一个严格的 JSON 超集，新增了语法上重要的换行符和缩进符。但是，YAML 不允许使用字面形式的制表符。
 
 ## 了解配置文件
 {: #toolchains_custom_config_files}
@@ -75,30 +77,30 @@ lastupdated: "2018-8-2"
 * 有关如何构建和部署代码的详细信息。
 * 工具链中工具的配置属性。
 
-随着工具链变得越来越复杂，配置文件也可能越来越复杂。
+随着工具链变得越来越复杂，配置文件也可能会变得越来越复杂。
 
-使用 YAML 文件时，须牢记下面几条准则：
+在使用 YAML 文件时，请遵循以下准则：
 
 * 空白处只使用空格。不允许使用跳格。
 * 所有属性和列表都必须缩进一个或多个空格。
 * 所有键和属性都是区分大小写的。
 
 请特别注意 YAML 文件的格式设置，以减少遇到错误的机会。
-要检查错误，可以使用简单的验证器，比如[此解析器](http://wiki.ess3.net/yaml/){: new_window}。
-{: tip}
+要检查错误，请使用简单的验证器，比如[此解析器](http://wiki.ess3.net/yaml/){: new_window}。
+{: important}
 
-## 规划服务部分
+## 规划服务
 每个服务子部分包含以下信息：
 
-* name - 用户生成的字符串，用于在当前文件的上下文中标识此服务。此名称可用于根据需要标记服务。
+* name - 用户生成的字符串，用于在当前文件的上下文中标识此服务。您可以使用此名称根据需要标记服务。
 
 * service_id - 用于标识服务的唯一字符串。此字符串直接来自[服务目录](https://github.com/open-toolchain/sdk/wiki/services.md){: new_window}。
 
-* parameters - 服务的零个或更多个配置参数。这些参数在不同服务中有所不同：用户需要查阅目录，以便确定特定服务需要哪些参数。
+* parameters - 服务的零个或更多个配置参数。在不同的服务中，这些参数有所不同。用户必须参考目录才能确定特定服务需要哪些参数。
 
 ### 包括其他文件的文本
 
-工具链的所有信息都可以位于 `toolchain.yml` 文件中。但是，您可能希望使用 `$text` 为每个工具集成 UI 创建单独的文件。这样可以更轻松地维护工具链，以及最大程度减少编辑配置文件所花的时间。来自 `toolchain.yml` 的这一示例片段显示如何使用 `pipeline.yml` 文件的内容作为 `content` 的值。
+工具链的所有信息都可以存储在 `toolchain.yml` 文件中。但是，您可能希望使用 `$text` 为每个工具集成 UI 创建单独的文件。使用单独的文件可以更轻松地维护工具链，以及最大程度减少编辑配置文件所花的时间。来自 `toolchain.yml` 文件的这一示例片段显示如何使用 `pipeline.yml` 文件的内容作为 `content` 的值。
 
 ```
   configuration:
@@ -109,7 +111,7 @@ lastupdated: "2018-8-2"
 ### 本地化工具链模板
 
 您可以通过外部化 `nls` 目录中的 UI 字符串，使工具链中的字符串以用户的首选语言显示，从而将工具链本地化。
-`toolchain.yml` 文件需要包含 `$i18n` 引用。  
+`toolchain.yml` 文件必须包含 `$i18n` 引用。  
 以下示例显示 `messages.yml` 文件的 `$i18n` 引用：
 
 ```
@@ -134,12 +136,12 @@ messages:
     name: my_template
 ```
 
-要了解更多信息，请参阅 [Messages section of the Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/Template-File-Format#messages-section){: new_window}。
+有关 UI 字符串的更多信息，请参阅 [Messages section of the Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/Template-File-Format#messages-section){: new_window}。
 
 ## 配置工具链文件
 {: #toolchains_custom_toolchain_yml}
 
-`toolchain.yml` 文件是工具链的核心。此文件中概述了完整的工具链细节，包括要拉入的存储库、要包含的服务和构建详细信息。为了理解此文件的内容，可以将其分解成若干部分。
+`toolchain.yml` 文件是工具链的核心。此文件中概述了完整的工具链细节，包括要插入的存储库、要包含的服务和构建详细信息。要理解其内容，可以将文件分解为几个部分。
 
 1\. **工具链介绍性信息：**
 
@@ -171,7 +173,7 @@ template
 
 2\. **存储库定义：**
 
- 工具链可以持续交付任意数量的 Git 存储库，包括 GitHub、GitHub Enterprise、Git Repos and Issue Tracking 以及 GitLab。`toolchain.yml` 文件的此部分中定义了每个存储库。
+ 工具链可以持续交付任意数量的 Git 存储库，如 GitHub、GitHub Enterprise、Git Repos and Issue Tracking 以及 GitLab。`toolchain.yml` 文件的存储库定义部分中定义了每个存储库。
 
  对于添加到工具链的每个存储库，使用以下属性来添加表示存储库名称的父键：
 
@@ -207,16 +209,16 @@ template
 
 3\. **管道信息：**
 
- 您可以通过管道持续交付项目。文件的此部分定义用于在每个 GitHub 和 Git Repo and Issue Tracking 存储库中构建和部署代码的配置详细信息。
+ 您可以通过管道持续交付项目。文件的此部分定义用于在每个 GitHub 和 Git Repos and Issue Tracking 存储库中构建和部署代码的配置详细信息。
 
- 首先，对于在工具链中定义的每个存储库，添加表示其管道名称的父键。请考虑从 GitHub 或 Git Repo and Issue Tracking 存储库的名称中派生此键。添加以下属性：
+ 首先，对于在工具链中定义的每个存储库，添加表示其管道名称的父键。请考虑从 GitHub 或 Git Repos and Issue Tracking 存储库的名称中派生此键。添加以下属性：
 
 |项|键/属性|值|描述|
 |------|--------------|-------|-------------|
 |pipeline-name|键|  |管道的名称 (sample-build)|
 |service_id|属性|<`pipeline`>|要使用的服务的名称|
 |parameters|键|  |  |
-|name|属性|<`repo_name`>|与“存储库”部分中定义的名称相同|
+|name|属性|<`repo_name`>|与存储库部分中定义的名称相同|
 |ui-pipeline|属性|<`true` 或 `false`>|如果此管道部署的应用程序显示在工具链页面上的**查看应用程序**菜单中，那么该属性值为 True|
 |configuration|键|  |  |
 |content|属性|<`$ref(pipeline.yml)`>|用于定义管道定义的文件|
@@ -232,7 +234,7 @@ template
 | hidden | property | <`[form, description]`> |  |
 -->
 
- 有关创建 `pipeline.yml` 文件的信息，请参阅[后面的部分](#toolchains_custom_pipeline_yml)。
+ 有关创建 `pipeline.yml` 文件的更多信息，请参阅[后面的部分](#toolchains_custom_pipeline_yml)。
 
  以下片段显示文件此部分的示例：
 
@@ -260,17 +262,11 @@ template
 
 4\. **部署详细信息：**
 
- 在持续交付过程中，工具链可以设置为将应用程序部署到用户有权访问的任何 {{site.data.keyword.Bluemix_notm}} 区域、组织或空间。工具链部署位置的具体详细信息可以从工具链创建页面中进行选择。
+ 在持续交付过程中，工具链可以设置为将应用程序部署到用户有权访问的任何 {{site.data.keyword.Bluemix_notm}} 区域、组织或空间。您可以在[工具链创建](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}页面上指定有关应用程序部署位置的详细信息。
 
- 
+本部分 `toolchain.yml` 文件定义可从工具链创建页面进行配置的管道阶段。
 
- ![“Delivery Pipeline 配置”设置](images/deploy_configuration.png)
-
- 本部分 `toolchain.yml` 文件定义可从工具链创建页面进行配置的管道阶段。
-
- 首先，父键 `deploy` 用于标识部署配置属性。以下属性构成了此部分的剩余内容：
-
-
+ 父键 `deploy` 用于标识部署配置属性。以下属性构成了此部分的剩余内容：
 
 |项|键/属性|值|描述|
 |------|--------------|-------|-------------|
@@ -302,11 +298,9 @@ template
  ```
  {: codeblock}
 
- 代码示例可以大部分按原样使用，只需略作修改。要定制此部分，请将 `github-repo-name` 设置为与存储库的名称一致。还需要更新 [`deploy.json`](#toolchains_custom_deploy_json) 文件中的详细信息。
+ 您可以使用代码示例，并进行少量修改。要定制此部分，请将 `github-repo-name` 设置为与存储库的名称一致。还必须更新 [`deploy.json`](#toolchains_custom_deploy_json) 文件中的详细信息。
 
- 要创建包含开发、QA 和生产阶段的更复杂管道，可以替换 `parameters` 键下的以下属性。
-
- 
+ 要创建包含开发、QA 和生产阶段的更复杂管道，可以替换 `parameters` 关键字下的以下属性。
 
  ```
    parameters:
@@ -402,27 +396,23 @@ stages:
  ## 配置管道接口
  {: #toolchains_custom_deploy_json}
 
- 从工具链创建页面上的“可配置的集成”部分中选择 Delivery Pipeline 时，此部分将展开以显示以下项：
+ 从[工具链创建](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}页面上的“可配置的集成”部分中选择 Delivery Pipeline 时，此部分将展开以显示以下项：
 
- 	* 应用程序的名称
+ 	* 应用程序的名称。
  	* 将部署管道阶段的区域、组织和空间。
 
 您可以为每个工具配置这些项。
 
  
 
- ![“Delivery Pipeline 配置”设置](images/deploy_configuration.png)
-
  UI 中此部分的布局由 `deploy.json` 模式进行定义。
 
- 在该模式内，将更新以下属性以便与应用程序的详细信息相匹配：
-
- 	
+ 在该模式内，更新以下属性以便与应用程序的详细信息相匹配：
 
  	* 标题
  	* 描述
  	* 详细描述
- 	* 应修改 `hello-world-name` 的所有实例及关联的详细信息，以便与应用程序的相应信息相匹配。
+ 	* `hello-world-name` 的所有实例以及关联的详细信息
 
  以下片段是 `deploy.json` 文件的示例：
  

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
-{:download: .download}
+{:note: .note}
+{:tip: .tip}
+{:important: .important}
 
 # 使用工具链
 {: #toolchains-using}
@@ -20,8 +22,8 @@ lastupdated: "2018-8-2"
 {{site.data.keyword.Bluemix}} 上的 Public 和 Dedicated 环境中可使用开放式工具链。您可以使用工具链，以使日常开发、部署和操作工作更富成效。设置工具链之后，您可以添加、删除或配置工具集成，并管理对工具链的访问。
 {: shortdesc}
 
-您可以使用资源组或 Cloud Foundry 组织管理美国南部公共区域中的工具链。根据工具链是包含在资源组还是 Cloud Foundry 组织中，工具链的访问控制和授权用户管理以不同方式运行。
-{: tip}
+您可以使用资源组在美国南部、美国东部、英国、德国和东京公共区域管理工具链。您可以使用 Cloud Foundry 组织在美国南部、英国和德国公共区域管理工具链。根据工具链是包含在资源组还是 Cloud Foundry 组织中，工具链的访问控制和授权用户管理以不同方式运行。
+{: important}
 
 ## 配置工具集成
 {: #configuring_a_tool_integration}
@@ -73,7 +75,7 @@ lastupdated: "2018-8-2"
 仅当用户存在于所选的 {{site.data.keyword.contdelivery_short}} 实例的授权用户列表中时，才能使用 Delivery Pipeline、Eclipse Orion {{site.data.keyword.webide}} 和 {{site.data.keyword.contdelivery_short}} 工具链的 {{site.data.keyword.gitrepos}} 功能。在指定的资源组中，您可以从所选 {{site.data.keyword.contdelivery_short}} 实例的“管理”选项卡来管理授权用户权利。
 
 要访问工具链中 {{site.data.keyword.contdelivery_short}} 的关键功能，例如，Delivery Pipeline，用户必须具有 IAM 中工具链的访问权，并且用户还必须属于 {{site.data.keyword.contdelivery_short}} 实例的“授权用户”列表。
-{: tip}
+{: important}
 
 授权用户权利应用于与 {{site.data.keyword.contdelivery_short}} 的实例的相同资源组中包含的所有工具链。
 {: tip}
@@ -85,7 +87,7 @@ lastupdated: "2018-8-2"
 您可以通过将用户添加到与工具链相关联的组织，以及工具链的访问控制表，对用户授予工具链的访问权。每一个工具链都与特定组织相关联，且属于该组织成员的任何用户都可以添加到任何相关联工具链的访问控制表中。您当前正为之工作的组织会显示在菜单栏上。要访问不同的工具链集，请切换到不同的组织。
 
 必须在托管工具链的区域中向工具链的组织添加用户。如果工具链配置为将应用程序部署到其他区域，那么它仍会将应用程序部署到美国南部区域。
-{: tip}
+{: important}
 
 将用户添加到 {{site.data.keyword.Bluemix_notm}} 组织和空间时，如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}，那么用户可以使用他们的 {{site.data.keyword.Bluemix_notm}} 标识和密码登录到 {{site.data.keyword.ghe_short}}。用户登录之后，将为他们创建帐户。将用户添加到 {{site.data.keyword.Bluemix_notm}} 组织和空间时，他们不会自动添加到 {{site.data.keyword.ghe_short}} 存储库。必须由具有存储库管理权限的人员进行添加。有关更多信息，请参阅[使用 Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}。如果您使用自己的 {{site.data.keyword.ghe_short}} 受管版本，请遵循内部过程。
 
@@ -103,15 +105,17 @@ lastupdated: "2018-8-2"
 
 * 要对非工具链组织成员的用户授权访问权，请遵循以下步骤：
 
-   a. 从菜单栏中，单击**管理 > 安全 > 身份和访问权**。
+   a. 从菜单栏中，单击**管理 > 访问权 (IAM)**。
 
-   b. 从要分配访问权的用户的行中，选择**操作**菜单，然后单击**分配访问权**。
+   b. 单击**访问权从该用户开始**。
+   
+   c. 从要分配访问权的用户的行中，选择**操作**菜单，然后单击**分配访问权**。
+   
+   d. 单击**使用 Cloud Foundry 分配访问权**。
 
-   c. 单击**使用 Cloud Foundry 分配访问权**。
+   e. 选择**分配组织**。
 
-   d. 选择**分配组织**。
-
-   e. 分配用户访问权：
+   f. 分配用户访问权：
 
      * 选择要将用户添加到的组织。
 

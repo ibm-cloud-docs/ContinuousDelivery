@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # 创建工具链
@@ -29,9 +31,9 @@ lastupdated: "2018-8-2"
 ##通过模板创建工具链   
 {: #creating_a_toolchain_from_a_template}
 
-您可以使用模板作为起始点来[创建工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/devops/create){: new_window}，其包含一组特定工具集成。了解如何通过 [IBM Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/category/tools){:new_window} 使用模板的更多信息。
+您可以使用模板作为起始点来[创建工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/devops/create){: new_window}，其包含一组特定工具集成。了解如何通过 [IBM Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/category/tools){:new_window} 使用模板的更多信息。
 
-1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Public，请登录到 [{{site.data.keyword.Bluemix_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://console.bluemix.net){:new_window}。
+1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Public，请登录到 [{{site.data.keyword.Bluemix_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://cloud.ibm.com){:new_window}。
 1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，请登录到 {{site.data.keyword.Bluemix_notm}} 上的 Dedicated 环境。
 1. 从 {{site.data.keyword.Bluemix_notm}} 菜单栏上的菜单中，单击 **DevOps**。
 1. 在 DevOps 仪表板的**工具链**页面上，单击**创建工具链**。
@@ -49,8 +51,8 @@ lastupdated: "2018-8-2"
  * 要在其中创建工具链的区域。如果要使用其他区域，请从可用区域列表中选择该区域。
  * 要在其中创建工具链的资源组或组织。单击链接以在选择资源组和组织之间进行切换。如果要使用其他资源组或组织，请从可用资源组或组织列表中选择该资源组或组织。
  
-   资源组仅在美国南部区域可用。
-   {: tip}
+   资源组在美国南部、美国东部、德国、东京和英国区域可用。在美国南部、英国和德国区域支持 Cloud Foundry 组织。
+   {: important}
 
 1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。
 1. 单击**创建**。此时将自动运行数个步骤，以设置工具链。设置的工具集成根据您所选的工具链模板以及您使用的是 {{site.data.keyword.Bluemix_notm}} Public 还是 {{site.data.keyword.Bluemix_notm}} Dedicated 而有所不同。例如，当您在 {{site.data.keyword.Bluemix_notm}} Public 上创建微服务工具链时，会运行以下步骤：
@@ -66,9 +68,12 @@ lastupdated: "2018-8-2"
 ##通过应用程序创建工具链
 {: #creating_a_toolchain_from_an_app}
 
-您可以从应用程序创建工具链。工具链可以支持持续开发、部署、监视等操作，且与应用程序相关联。每一个应用程序都可以与工具链相关联。当您将更改推送到工具链的 GitHub 或 {{site.data.keyword.ghe_short}} 存储库时，管道会自动构建和部署应用程序。  
+您可以从应用程序创建工具链。工具链可以支持持续开发、部署、监视等操作，且与应用程序相关联。每一个应用程序都可以与工具链相关联。当您将更改推送到工具链的 GitHub 或 {{site.data.keyword.ghe_short}} 存储库时，管道会自动构建和部署应用程序。
 
-1. 在应用程序“概述”页面的“持续交付”卡上，单击**启用**。如果您使用 {{site.data.keyword.Bluemix_notm}} Public，那么将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 存储库，进行持续交付。如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，那么将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 或 {{site.data.keyword.ghe_short}} 存储库，进行持续交付。
+如果使用自己的代码存储库创建了应用程序，那么请在应用程序的详细信息页面上单击**连接到 DevOps 工具链**。然后按照[从自己的代码存储库创建应用程序](/docs/apps/tutorials/tutorial_byoc.html)中描述的步骤进行操作。
+{: note}
+
+1. 如果使用初学者工具包创建了应用程序，那么请在应用程序的详细信息页面上单击**部署到云**。如果您使用 {{site.data.keyword.Bluemix_notm}} Public，那么将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 存储库，进行持续交付。如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，那么将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 或 {{site.data.keyword.ghe_short}} 存储库，进行持续交付。
 1. 在工具链创建页面上，复查您要创建的工具链的图。该图按生命周期阶段显示工具链中的每一个工具集成。
 1. 复查工具链设置的缺省信息。工具链的名称在 {{site.data.keyword.Bluemix_notm}} 中起到标识符的作用。如果要使用其他名称，请更改工具链的名称。
 1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。
@@ -83,6 +88,9 @@ lastupdated: "2018-8-2"
 {: #viewing_a_toolchain}
 
 配置工具链及其工具集成之后，您可以查看工具链的可视化表示。
+
+您可以通过在应用程序的详细信息页面上单击**查看工具链**从应用程序查看工具链。
+{: tip}
 
 1. 在 DevOps 仪表板的**工具链**页面上，选择**资源组**或 **CLOUD FOUNDRY 组织**。将显示选中的资源组或 Cloud Foundry 组织中包含的所有工具链。单击想要查看的工具链以打开其“概述”页面。或者，在应用程序“概述”页面的“持续交付”卡上，单击**查看工具链**。然后，单击**概述**。
 2. 要访问工具链中的工具集成，请单击工具。
