@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -26,7 +26,7 @@ lastupdated: "2018-8-2"
 ## Antes de Começar
 {: #git_before_clone}
 
-1. Para acessar o servidor Git fora do navegador, pode ser necessário criar um token de acesso pessoal ou chave SSH para autenticação. A tabela a seguir mostra o que você precisa fazer para configurar a autenticação.
+1. Para acessar o servidor Git fora do navegador, pode ser necessário criar um token de acesso pessoal ou uma chave SSH para autenticação. A tabela a seguir mostra o que você precisa fazer para configurar a autenticação.
 
 | Tipo de Git  | Configuração de HTTPS | Uso de HTTPS |  Configuração de SSH |
 |:-----------|:-------------|:------------|:-------------|
@@ -35,10 +35,10 @@ SSH](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
 | GitHub público (github.com) | O token de acesso pessoal não é necessário, mas é possível configurar um e usá-lo | O nome do usuário e senha do GitHub ou o nome do usuário do GitHub e token de acesso pessoal ou apenas o token de acesso pessoal como o nome do usuário | [Configurar uma chave SSH do GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
 | GitHub corporativo | [Token de acesso pessoal](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | O nome do usuário (não seu IBMid) do GitHub Enterprise e o token de acesso pessoal | [Configurar a chave SSH do GitHub Enterprise](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
-Se você preferir usar SSH, será possível reutilizar uma única chave ao longo de todos os servidores do Git. Crie ou localize sua chave e configure-a em cada servidor, conforme descrito nos links anteriores. Se criar sua chave com uma passphrase, essa passphrase será solicitada quando você usar a chave.
+Se você preferir usar SSH, será possível reutilizar uma única chave ao longo de todos os servidores do Git. Crie ou localize sua chave e configure-a em cada servidor, conforme descrito nos links anteriores. Se você criar sua chave com uma passphrase, essa passphrase será solicitada ao usar a chave.
 {: tip}
 
-2. Se você for usar a linha de comandos do Git, faça o seguinte:
+2. Se você for usar a linha de comandos do Git, conclua as etapas a seguir:
 
     a. Verifique se o Git está instalado. Em uma linha de comandos, digite `git version`. Se o Git estiver instalado, o número da versão será mostrado e será possível iniciar.
 

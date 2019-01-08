@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Gerenciando dados pessoais no Continuous Delivery
@@ -30,7 +32,7 @@ Dados pessoais são quaisquer informações relacionadas a uma pessoa física ou
  * [{{site.data.keyword.DRA_full}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
 A IBM não gerencia dados no serviço {{site.data.keyword.contdelivery_short}}. Antes de deixar o serviço {{site.data.keyword.contdelivery_short}} que está hospedado no {{site.data.keyword.Bluemix_notm}} Public, deve-se excluir os seus próprios dados.
-{: tip}
+{: important}
 
 O {{site.data.keyword.contdelivery_short}} fornece as permissões apropriadas para gerenciar dados dentro de um grupo de recursos ou de uma organização do Cloud Foundry. Sua empresa pode ter políticas que limitam essas permissões. Se você não tiver as permissões apropriadas, entre em contato com o administrador para a sua conta do {{site.data.keyword.Bluemix_notm}}.
 
@@ -99,7 +101,7 @@ Se você desejar excluir todos os seus dados pessoais do {{site.data.keyword.con
 O {{site.data.keyword.webide}} fornece uma área de trabalho pessoal na nuvem. É possível usar o {{site.data.keyword.webide}} para clonar repositórios Git e arquivos de edição. Você possui a área de trabalho do {{site.data.keyword.webide}}; ela não é compartilhada por nenhuma outra conta.
 
 Antes de excluir os seus dados do {{site.data.keyword.webide}}, talvez você queira exportar o seu trabalho. Depois de excluir suas áreas de trabalho, elas são removidas do {{site.data.keyword.contdelivery_short}} e todos os arquivos são excluídos.
-{: tip}
+{: important}
 
 ###Exportando uma área de trabalho do Web IDE
 
@@ -118,7 +120,7 @@ Para excluir suas áreas de trabalho do {{site.data.keyword.webide}}, incluindo 
 1. Clique em **Excluir** para remover todos os seus dados do {{site.data.keyword.webide}}.
 
 O {{site.data.keyword.webide}} usa um mecanismo de conexão única. Na primeira vez em que você acessa essa integração de ferramenta, uma conta do {{site.data.keyword.webide}} correspondente, porém oculta é criada para sua conta do IBM Cloud. Depois de excluir todas as suas áreas de trabalho, não acesse o {{site.data.keyword.webide}}. Se você acessar o {{site.data.keyword.webide}} novamente, uma nova conta será criada automaticamente, que deverá ser excluída.
-{: tip}
+{: important}
 
 ## Modificando, exportando e excluindo dados do Git Repos and Issue Tracking
 {: #managing_grit_data}
@@ -158,7 +160,7 @@ Após a sua conta ser excluída, algum conteúdo permanecerá. Esse conteúdo se
 {: tip}
 
 O {{site.data.keyword.gitrepos}} usa um mecanismo de conexão única que cria automaticamente uma conta do Git correspondente para a sua conta do IBM Cloud na primeira vez que você acessar a integração da ferramenta. Depois de excluir sua conta, não acesse o {{site.data.keyword.gitrepos}}. Se você acessar o {{site.data.keyword.gitrepos}} novamente, uma nova conta será criada automaticamente, que deverá ser excluída.
-{: tip}
+{: important}
 
 ## Modificando, exportando e excluindo dados do pipeline de Entrega contínua
 {: #managing_pipeline_data}
@@ -168,7 +170,7 @@ Os pipelines do {{site.data.keyword.contdelivery_short}} executam scripts para c
 Certifique-se de que você coordene com outros membros da sua equipe antes de excluir objetos ou pipelines compartilhados. A exclusão de um estágio pode fazer com que um pipeline falhe.
 
 Um pipeline não pode existir fora de uma cadeia de ferramentas. Se você excluir uma cadeia de ferramentas, todos os pipelines que estiverem associados à cadeia de ferramentas também serão excluídos. Se você planeja excluir uma cadeia de ferramentas inteira, não é necessário excluir cada pipeline individualmente. Em vez disso, acesse a seção "Modificando e excluindo as cadeias de ferramentas e integrações de ferramentas" e siga as etapas para excluir uma cadeia de ferramentas.
-{: tip}
+{: important}
 
 Os estágios de pipeline podem incluir dados pessoais, como credenciais na forma de propriedades de ambiente e uma definição de pipeline que mostra o estado atual do pipeline. Estágios também podem incluir scripts dentro de tarefas que você deseja modificar ou excluir, bem como artefatos e logs para as execuções de pipeline mais recentes que você deseja exportar. Use as ações Configurar Estágio ou Excluir Estágio para modificar ou excluir um estágio. Use a ação Download para exportar artefatos ou logs de um estágio.
 

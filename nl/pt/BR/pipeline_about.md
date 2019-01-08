@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -21,27 +23,28 @@ O {{site.data.keyword.contdelivery_full}} inclui o Delivery Pipeline para constr
 {:shortdesc}
 
 As suas permissões para visualizar, modificar ou executar um pipeline são baseadas no controle de acesso para a cadeia de ferramentas que possui o pipeline. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas, consulte [Gerenciando acesso às cadeias de ferramentas em grupos de recursos](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} e [Gerenciando acesso a cadeias de ferramentas em organizações do Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
-{: tip}
+{: important}
+
+É possível especificar os scripts a serem executados em muitos dos tipos de tarefas que são fornecidos pelo pipeline, fornecendo controle direto sobre o que é executado pela tarefa. Esses scripts são executados em uma imagem do Docker que contém uma série de ferramentas de desenvolvimento padrão, incluindo ferramentas que são necessárias para interagir com os tempos de execução do {{site.data.keyword.Bluemix_notm}}. Para obter mais informações sobre o que a imagem padrão do Docker contém, veja [Recursos pré-instalados](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}. Se a sua tarefa requer ferramentas de desenvolvimento que não estão disponíveis na imagem padrão ou se você precisa de versões diferentes dessas ferramentas, é possível usar uma imagem customizada. Para obter mais informações sobre imagens customizadas, veja [Trabalhando com imagens customizadas do Docker](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}.
+
+Quando o pipeline executa scripts, as propriedades que descrevem o contexto em que a tarefa está em execução são passadas para o script usando variáveis de ambiente. Por exemplo, a URL do repositório que é a entrada para o estágio, o nome do estágio e a tarefa que está sendo executada, os parâmetros especificados pelo tipo de tarefa e assim por diante. Para visualizar uma lista de variáveis de ambiente disponíveis, veja [Recursos pré-instalados](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}. 
+
+É possível definir propriedades no nível de pipeline e no nível de estágio. As propriedades de pipeline são compartilhadas em todos os estágios e tarefas em um pipeline. As propriedades do estágio são exclusivas para um estágio específico e compartilhadas em todas as tarefas nesse estágio. Para obter mais informações sobre as propriedades, veja [Propriedades do ambiente (variáveis de ambiente)](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties).
 
 ## Estágios
 {: #deliverypipeline_stages}
 
-Os estágios organizam a entrada e as tarefas conforme o código é construído, implementado e testado. Os estágios aceitam entrada de repositórios de controle de fonte (repositórios SCM) ou tarefas de construção (artefatos de construção) em outros estágios. Ao criar seu primeiro estágio, as configurações padrão são definidas para você na guia **ENTRADA**.
+Os estágios organizam a entrada e as tarefas conforme o código é construído, implementado e testado. Os estágios aceitam entrada de repositórios de controle de origem (repositórios SCM) ou de tarefas de construção em outros estágios. Para os repositórios SCM, a entrada são os conteúdos de uma ramificação específica no repositório; para as tarefas de construção, a entrada são os artefatos produzidos pela tarefa. Quando você cria seu primeiro estágio, a guia **ENTRADA** contém configurações padrão.
 
-A entrada de um estágio é passada para as tarefas que ele contém e cada tarefa recebe um contêiner limpo no qual é executada.
-
-As tarefas em um estágio não podem passar artefatos entre si. Como não é possível passar artefatos entre tarefas, será necessário ter um estágio de Construção separado de um estágio de Implementação se o seu estágio de implementação usar os artefatos do estágio de construção.
+Quando um estágio é executado, a entrada do estágio é passada para cada uma das tarefas no estágio. Cada tarefa recebe um contêiner limpo no qual executar. Como resultado, as tarefas em um estágio não podem passar artefatos umas para as outras. Para passar artefatos entre tarefas, separe as tarefas em dois estágios e use a saída da tarefa no primeiro estágio como entrada para o segundo estágio.
 {: tip}
 
-É possível definir as propriedades do ambiente do estágio que podem ser usadas em todas as tarefas. Por
-exemplo, é possível definir uma propriedade `TEST_URL` que transmita uma única URL para
-implementar e testar as tarefas em um único estágio. A tarefa de implementação seria implementada nessa URL e a tarefa de teste testaria o app de execução na URL.
+De maneira semelhante a como é possível definir propriedades de pipeline, também é possível definir propriedades de estágio para uso em todas as tarefas em um estágio específico. Por exemplo, é possível definir uma propriedade `TEST_URL` que passa uma URL para as tarefas de implementação e teste em um estágio. A tarefa de implementação implementa nessa URL e a tarefa de teste testa o app em execução na URL. As propriedades do estágio também são passadas para os scripts de tarefa usando variáveis de ambiente. Se a mesma propriedade for definida no nível de pipeline e no nível de estágio, o valor da propriedade do estágio será usado.
 
 Por padrão, em um estágio, as construções e implementações são executadas automaticamente toda vez que
 mudanças são entregues no repositório SCM de um projeto. Os estágios e as tarefas são executados em série; eles ativam o controle
 de fluxo para seu trabalho. Por exemplo, você poderá colocar um estágio de teste antes de
-um estágio de implementação. Se os testes no estágio de teste falharem, o estágio de
-implementação não será executado.
+um estágio de implementação. Se os testes no estágio de teste falharem, o estágio de implementação não será executado.
 
 Você talvez queira restringir o controle de um estágio específico. Se você não
 quiser que um estágio seja executado toda vez que uma mudança ocorrer na sua entrada,
@@ -55,23 +58,28 @@ for executado manualmente**.
 ### Estágio de Construção
 {: #build_stage}
 
-<!-- Need the Pipeline team to fill out what each builder does and possible add an example -->
 O estágio de Construção especifica um **Tipo Builder** para indicar como construir os
-artefatos.  Os tipos de Builder a seguir estão disponíveis:
+artefatos.  
 
-1. **Simple** - se você usa o tipo de construtor **Simples**,
-seu código não é compilado nem construído; ele é empacotado e disponibilizado para estágios futuros.
-2. **Ant**
-3. **Container Registry**
-4. **Gradle**
-5. **Gradle (Artifactory, Nexus ou SonarQube)**
-6. **Grunt**
-7. **IBM Globalization Pipeline**
-8. **Maven**
-9. **Maven (Artifactory, Nexus ou SonarQube)**
-10. **npm**
-11. **npm (Artifactory ou Nexus)**
-12. **Shell Script**
+Muitos dos campos que estão disponíveis em tarefas de Construção são comuns em múltiplos tipos de Construtor.
+{: tip}
+
+Os tipos de Builder a seguir estão disponíveis:
+
+* **Simples** - as tarefas que usam o tipo de construtor **Simples** assumem a entrada do estágio atual e, sem a modificar, arquivam a entrada para uso em estágios futuros. Geralmente, o tipo de construtor **Simples** é útil somente quando a entrada do estágio é de um repositório SCM.
+* **Ant** - use esse tipo de construtor para usar arquivos Apache Ant para gerenciar a tarefa de construção.
+  * **Script de construção** - esse tipo de construtor pode ser qualquer script de construção válido. Por padrão, esse tipo de construtor é configurado como 'ant'.
+  * **Diretório ativo** - especifica o diretório no qual o script é executado.
+  * **Diretório de archive de construção** - especifica o diretório que contém a saída da tarefa a ser arquivada para uso por um estágio subsequente.
+  * **Ativar relatório de teste** - marque essa caixa de seleção para especificar que a tarefa de construção executa testes que produzem arquivos de resultado no formato JUnit XML. Um relatório baseado nos arquivos de resultado é exibido na guia Testes da página Resultados da tarefa. Se algum teste falha, a tarefa é marcada como com falha.
+  * **Ativar relatório de cobertura de código** - marque essa caixa de seleção para mostrar mais campos que podem ser usados para o relatório de cobertura de código. É possível especificar o Executor de cobertura (como Istambul, JaCoCo, ore Cobertura), o local do Arquivo de resultado de cobertura e o Diretório de resultados de cobertura relativos ao Diretório ativo.
+* **Container Registry**
+* **Gradle (Artifactory, Nexus ou SonarQube)**
+* **Grunt**
+* **IBM Globalization Pipeline**
+* **Maven (Artifactory, Nexus ou SonarQube)**
+* **npm (Artifactory ou Nexus)**
+* **Shell Script**
 
 ### Estágio de Implementação
 O estágio de Implementação especifica a entrada de um estágio de Construção.  As tarefas no estágio de implementação
@@ -166,28 +174,57 @@ tarefa também falhará.
 ## Propriedades do ambiente (variáveis de ambiente)
 {: #environment_properties}
 
-É possível incluir propriedades do ambiente dentro dos comandos shell de uma tarefa. As propriedades fornecem acesso a informações sobre o ambiente de execução da tarefa. Para obter mais informações, veja [Propriedades e recursos do ambiente para o serviço {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).  As propriedades do ambiente podem ser transmitidas entre tarefas no mesmo estágio exportando as propriedades.  Para transmitir as propriedades do ambiente entre estágios, crie um arquivo `build.properties`
-no repositório no estágio e, em seguida, faça com que o próximo estágio execute o `build.properties`.  Por exemplo, sua tarefa de construção pode incluir este comando no script de construção:
+Um conjunto de propriedades do ambiente predefinidas fornece acesso a informações sobre o ambiente de execução da tarefa. Para obter uma lista completa das propriedades do ambiente predefinidas, veja [Propriedades e recursos do ambiente](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
 
-    `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
+Também é possível definir suas próprias propriedades do ambiente. Por exemplo, você pode definir uma propriedade `API_KEY` que passa uma chave de API que é usada para acessar recursos do {{site.data.keyword.Bluemix_notm}} por todos os scripts no pipeline.
 
-    Todas as tarefas começarão a executar o arquivo `build.properties`, se ele
-existir.
+É possível incluir os tipos de propriedades a seguir:
+
+* **Texto**: uma chave de propriedade com um valor de linha única.
+* **Área de texto**: uma chave de propriedade com um valor multilinhas.
+* **Seguro**: uma chave da propriedade com um valor de linha única que é protegida com criptografia AES-128. O valor é exibido como asteriscos.
+* **Propriedades**: um arquivo no repositório do projeto. Esse
+arquivo pode conter diversas propriedades. Cada propriedade deve estar em sua própria
+linha. Para separar os pares de chave/valor, use o sinal de igual (=). Coloque todos os valores de sequência entre aspas. Por exemplo, `MY_STRING="SOME STRING VALUE"`.
+
+É possível examinar as propriedades do ambiente para uma tarefa de pipeline executando o
+comando `env` no script da tarefa.
+{:tip}
+
+### Propriedades de pipeline
+Para definir propriedades de pipeline, no menu overflow na página Pipeline, selecione **Configurar pipeline**.
+
+![Menu overflow de pipeline](images/OverflowMenu.png)
+
+Na guia **PROPRIEDADES DO AMBIENTE** na página de configuração de Pipeline, configure as propriedades do ambiente de nível de pipeline.
+
+![Página de propriedades de pipeline](images/PipelineProperties.png)
+
+### Propriedades do estágio
+Para definir as propriedades do estágio, abra a página Configuração de estágio e clique na guia **PROPRIEDADES DO AMBIENTE**.
+
+![Página de propriedades do estágio](images/StageProperties.png)
+
+Também é possível passar propriedades do ambiente entre tarefas no mesmo estágio, exportando as propriedades. Por exemplo, é possível incluir o comando a seguir para usar a propriedade `$API_KEY` em outra tarefa dentro do estágio: `export API_KEY=<insert API key here>`
+{:tip}
+
+### Propriedades calculadas
+É possível calcular os valores da propriedade do ambiente que são compartilhados entre os estágios criando um arquivo `build.properties` enquanto o estágio está em execução e, então, deixar que o próximo estágio execute o arquivo. Por exemplo, sua tarefa de construção pode incluir o comando a seguir no script de construção:
+
+  `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
+
+Todas as tarefas iniciam executando o arquivo `build.properties`, caso ele exista.
 
 ## Criando e utilizando artefatos
 {: #artifacts}
 
-As tarefas de construção buscam automaticamente o conteúdo na pasta atual em que o script do usuário é executado. Caso você não precise do conteúdo do repositório Git inteiro para implementação
-posterior, é preferível que configurar um diretório de saída explícito e, em seguida, copiar ou criar
-os artefatos relevantes lá.  Os scripts de tarefa são executados no resultado de construção (diretório de
-saída).
+As tarefas de construção buscam automaticamente o conteúdo na pasta atual na qual o script do usuário é executado. Se você não precisar de todo o conteúdo do repositório git para implementação posterior, será preferível que configure um diretório de saída explícito e, em seguida, copie ou crie os artefatos relevantes nesse local. Os scripts da tarefa são executados no resultado de construção (diretório de saída).
 
-As tarefas de implementação que são implementadas no Cloud Foundry precisam especificar a chave API da Plataforma de um usuário sob cujas tarefas de autoridade são executadas e a região, a organização e o espaço do local no qual implementar os artefatos. Se serviços adicionais forem necessários para executar
-seu app, será necessário especificá-los no arquivo `manifest.yml`.
+As tarefas que são implementadas no Cloud Foundry precisam especificar a chave de API da Plataforma de um usuário sob cuja autoridade as tarefas são executadas e a região, a organização e o espaço no qual implementar os artefatos. Se mais serviços são necessários para executar seu app, deve-se especificá-los no arquivo `manifest.yml`.
 
-Na implementação de tarefas que são implementadas no {{site.data.keyword.containerlong_notm}} para execução em um cluster do Kubernetes é necessário especificar a chave API da Plataforma de um usuário sob cujas tarefas de autoridade são executadas, um Dockerfile e, opcionalmente, um gráfico de Helm.  
+As tarefas de implementação que implementam no {{site.data.keyword.containerlong_notm}} precisam especificar a chave de API da Plataforma de um usuário sob cuja autoridade as tarefas são executadas, um Dockerfile e, opcionalmente, um gráfico do Helm.  
 
-O script da tarefa é executado após a tarefa ter efetuado login no ambiente de destino usando a chave API da Plataforma designada a ela (portanto, é possível executar os comandos `cf push` ou `kubectl` no script).
+O script da tarefa é executado após a tarefa ter efetuado login no ambiente de destino usando a chave de API da Plataforma designada a ela (para que seja possível executar os comandos `cf push` ou `kubectl` no script).
 
 ## Um pipeline de exemplo
 {: #deliverypipeline_example}

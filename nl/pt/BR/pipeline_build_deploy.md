@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-11"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -110,11 +110,9 @@ um serviço em seu aplicativo](/docs/services/reqnsi.html#add_service).
 É possível visualizar os logs para tarefas e visualizar os estágios conforme eles
 estão sendo executados na página Histórico de estágios.
 
-Para visualizar o log de uma tarefa, clique na tarefa. Como alternativa, em um estágio, clique em **Visualizar logs e histórico**.
+1. Para visualizar o log de uma tarefa, clique na tarefa. Como alternativa, em um estágio, clique em **Visualizar logs e histórico**.
 
-Para visualizar o log de tempo de execução de um aplicativo implementado, clique em **Visualizar log de tempo de execução**.
-
-![Áreas no tile de estágio que podem ser clicadas para abrir logs relevantes](images/view_logs_and_history.png)
+2. Para visualizar o log de tempo de execução de um aplicativo implementado, clique em **Visualizar log de tempo de execução**.
 
 Além dos logs de tarefas, é possível visualizar resultados de testes, artefatos
 gerados e mudanças de código para qualquer tarefa de construção.

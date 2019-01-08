@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -28,7 +28,7 @@ O acesso às cadeias de ferramentas em grupos de recursos para usuários em sua 
 
 Cada usuário que acessa cadeias de ferramentas em sua conta deve ter uma política de acesso designada com uma função de usuário do IAM definida. Essa política determina quais ações o usuário pode executar dentro do contexto do serviço ou instância que você seleciona. As ações permitidas são customizadas e definidas pelo serviço {{site.data.keyword.Bluemix_notm}} como operações que têm permissão para serem executadas no serviço. As ações são, então, mapeadas para funções de usuário do IAM.
 
-As políticas permitem que o acesso seja concedido em diferentes níveis. Algumas das opções incluem o seguinte: 
+As políticas permitem que o acesso seja concedido em diferentes níveis, incluindo: 
 
 * Acesso em todas as instâncias do serviço em sua conta
 * Acesso a uma instância de serviço individual em sua conta

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -19,10 +19,13 @@ lastupdated: "2018-8-2"
 
 O Eclipse Orion {{site.data.keyword.webide}} é um ambiente de desenvolvimento baseado em
 navegador no qual é possível desenvolver para a web em JavaScript, HTML e CSS com a ajuda de assistência de
-conteúdo, conclusão de código e verificação de erro. O {{site.data.keyword.webide}} funciona com praticamente qualquer linguagem e oferece destaque da sintaxe para a maioria de tipos de arquivos. O controle de versão é construído e é possível implementar código localmente para testar e depurar os apps.
+conteúdo, conclusão de código e verificação de erro. O {{site.data.keyword.webide}} trabalha com quase qualquer idioma e é possível destacar a sintaxe para a maioria dos tipos de arquivo. O controle de versão é construído e é possível implementar código localmente para testar e depurar os apps.
 {:shortdesc}
 
 O melhor de tudo, o {{site.data.keyword.webide}} é desenvolvido com a web. Você não tem nada para instalar, nada para manter e nada para escalar. É possível desenvolver em qualquer lugar no qual haja uma conexão de Internet.
+
+Não armazene dados regulados em arquivos dentro do {{site.data.keyword.webide}}. Os procedimentos para os dados regulados não estão atualmente em vigor.
+{: tip}
 
 ## Configurando o IDE
 {: #editorsetup}
@@ -87,17 +90,17 @@ Orion Web IDE](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide).
 2. Após o seu aplicativo ser implementado, é possível usar a barra de execução para parar, reiniciar ou depurar o seu aplicativo, visualizar logs e mais.
 
 <table role="presentation">
-<tr><td><img src="./images/stop_button.png"  alt="O ícone de parada"></td><td>Parar o app</td></tr>
-<tr><td> <img src="./images/open_app_url.png"  alt="O ícone URL de abertura do app"></td><td> Abrir o app implementado</td></tr>
-<tr><td><img src="./images/view_logs.png"  alt="O ícone visualizar logs"></td><td>Visualize os logs do app implementado</td></tr>
-<tr><td><img src="./images/open_dashboard.png"  alt="O ícone abrir painel"></td><td>Abra o Painel do app</td></tr>
+<tr><td><img src="./images/stop_button.png"  alt="O ícone de parada"></td><td>Pare o app.</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="O ícone URL de abertura do app"></td><td> Abra o app implementado.</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="O ícone visualizar logs"></td><td>Visualize os logs do app implementado.</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="O ícone abrir painel"></td><td>Abra o Painel do app.</td></tr>
 </table>
 
-Se você estiver desenvolvendo um app Node.js, ative o modo de Edição em tempo real: <img  src="./images/enable_live_edit.png"  alt="A régua de controle de ativação de edição em tempo real">
+Se você estiver desenvolvendo um app Node.js, ative o modo Live Edit: <img  src="./images/enable_live_edit.png"  alt="A régua de controle de ativação do Live Edit">
 
-<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="O ícone de reinicialização de Edição em tempo real"></td><td>Com o modo de Edição em tempo real ativado, reinicie o app rapidamente, sem reimplementação</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="O ícone de reinicialização do Live Edit"></td><td>Com o modo Live Edit ativado, reinicie o app rapidamente, sem reimplementação.</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="O ícone de depuração"></td>
-<td>Com o modo de Edição em tempo real, acesse o depurador
+<td>Com o modo Live Edit ativado, acesse o depurador.
 </td></tr>
 </table>
 
@@ -166,7 +169,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 ## Idiomas suportados
 {: #supported_languages}
 
-O Eclipse Orion {{site.data.keyword.webide}} fornece assistência de conteúdo, dicas de ferramentas, visualizações, validação e destaque da sintaxe para arquivos JavaScript, HTML, CSS e Markdown. O destaque da sintaxe também é suportado para estes tipos de arquivos:
+O Eclipse Orion {{site.data.keyword.webide}} fornece assistente de conteúdo, dicas de ferramentas, visualizações, validação e destaca a sintaxe para os arquivos JavaScript, HTML, CSS e Markdown. Também é possível destacar a sintaxe para estes tipos de arquivo:
 
 <table role="presentation">
 <tr>

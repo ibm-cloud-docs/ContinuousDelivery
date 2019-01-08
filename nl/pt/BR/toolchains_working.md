@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Criando cadeias de ferramentas
@@ -31,9 +33,9 @@ Cada cadeia de ferramentas é associada a um grupo de recursos ou organização 
 ##Criando uma cadeia de ferramentas com base em um modelo   
 {: #creating_a_toolchain_from_a_template}
 
-É possível usar um modelo como um ponto de início para [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/create){: new_window} que inclua um conjunto específico de integrações de ferramenta. Saiba mais sobre como usar os modelos no [IBM Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/category/tools){:new_window}.
+É possível usar um modelo como um ponto de início para [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops/create){: new_window} que inclui um conjunto específico de integrações de ferramentas. Saiba mais sobre como usar os modelos no [IBM Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/category/tools){:new_window}.
 
-1. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, efetue login no [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://console.bluemix.net){:new_window}.
+1. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, efetue login no [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://cloud.ibm.com){:new_window}.
 1. Se você usar o {{site.data.keyword.Bluemix_notm}} Dedicated, efetue login no ambiente Dedicated no {{site.data.keyword.Bluemix_notm}}.
 1. No menu na barra de menus do {{site.data.keyword.Bluemix_notm}}, clique em **DevOps**.
 1. No painel DevOps, na página **Cadeias de ferramentas**, clique em **Criar uma cadeia de ferramentas**.
@@ -55,8 +57,8 @@ mostrará cada integração de ferramenta em sua fase de ciclo de vida na cadeia
  * A região na qual criar a cadeia de ferramentas. Se você desejar usar uma região diferente, selecione-a na lista de regiões disponíveis.
  * A organização ou o grupo de recursos no qual criar a cadeia de ferramentas. Clique no link para alternar entre a seleção de grupos de recursos e de organizações. Se você desejar usar uma organização ou um grupo de recursos diferente, selecione essa opção diferente na lista de organizações ou de grupos de recursos disponíveis.
  
-   Os grupos de recursos estão disponíveis somente na região Sul dos EUA.
-   {: tip}
+   Os grupos de recursos estão disponíveis nas regiões Sul dos EUA, Leste dos EUA, Reino Unido, Alemanha e Tóquio. As organizações do Cloud Foundry são suportadas nas regiões Sul dos EUA, Reino Unido e Alemanha.
+   {: important}
 
 1. Na seção Integrações de ferramentas, selecione cada integração de ferramenta que deseja configurar para sua cadeia de ferramentas. Algumas integrações de ferramentas não requerem configuração. Para obter informações sobre como configurar as integrações de ferramentas, consulte
 [Configurando
@@ -76,9 +78,12 @@ integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integ
 
 É possível criar uma cadeia de ferramentas a partir de seu aplicativo. A cadeia de
 ferramentas pode suportar desenvolvimento, implementação e monitoramento contínuos e mais, e é associada ao seu app. Cada app pode ser
-associado a uma cadeia de ferramentas. Quando você envia por push as mudanças para o GitHub ou o repositório {{site.data.keyword.ghe_short}} da cadeia de ferramentas, o pipeline constrói e implementa automaticamente o app.  
+associado a uma cadeia de ferramentas. Quando você envia por push as mudanças para o GitHub ou o repositório {{site.data.keyword.ghe_short}} da cadeia de ferramentas, o pipeline constrói e implementa automaticamente o app.
 
-1. Na página Visão geral de seu app, no cartão do Continuous Delivery, clique em **Ativar**. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, seu app será configurado para entrega contínua por meio de um novo repositório GitHub que é preenchido com o código de início do app. Se você usar o {{site.data.keyword.Bluemix_notm}} Dedicated, seu app será configurado para entrega contínua por meio de um novo GitHub ou repositório {{site.data.keyword.ghe_short}} que é preenchido com o código de início do app.
+Se você criou seu app usando seu próprio repositório de código, clique em **Conectar à cadeia de ferramentas do DevOps** na página de detalhes de seu app. Em seguida, siga as etapas descritas em [Criando apps por meio de seu próprio repositório de código](/docs/apps/tutorials/tutorial_byoc.html).
+{: note}
+
+1. Se você criou seu app usando um kit do iniciador, clique em **Implementar na nuvem** na página de detalhes do seu app. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, seu app será configurado para entrega contínua por meio de um novo repositório GitHub que é preenchido com o código de início do app. Se você usar o {{site.data.keyword.Bluemix_notm}} Dedicated, seu app será configurado para entrega contínua por meio de um novo GitHub ou repositório {{site.data.keyword.ghe_short}} que é preenchido com o código de início do app.
 1. Na página de criação da cadeia de ferramentas, revise o diagrama da cadeia de ferramentas que estiver prestes a criar. O diagrama
 mostrará cada integração de ferramenta em sua fase de ciclo de vida na cadeia de ferramentas.
 1. Revise as informações padrão para as configurações da cadeia de ferramentas. O nome da cadeia de ferramentas as identifica em
@@ -86,7 +91,7 @@ mostrará cada integração de ferramenta em sua fase de ciclo de vida na cadeia
 1. Na seção Integrações de ferramentas, selecione cada integração de ferramenta que deseja configurar para sua cadeia de ferramentas. Algumas integrações de ferramentas não requerem configuração. Para obter informações sobre como configurar as integrações de ferramentas, consulte
 [Configurando
 integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
-1. Clique em **Criar**.  Várias etapas são executadas automaticamente para configurar sua cadeia de ferramentas. As integrações de ferramentas configuradas são diferentes, dependendo de se você está usando cadeias de ferramentas no {{site.data.keyword.Bluemix_notm}} Public ou no {{site.data.keyword.Bluemix_notm}} Dedicated. Por exemplo, quando você cria uma cadeia de ferramentas de um app no {{site.data.keyword.Bluemix_notm}} Public, estas etapas são executadas:
+1. Clique em **Criar**. Várias etapas são executadas automaticamente para configurar sua cadeia de ferramentas. As integrações de ferramentas configuradas são diferentes, dependendo de se você está usando cadeias de ferramentas no {{site.data.keyword.Bluemix_notm}} Public ou no {{site.data.keyword.Bluemix_notm}} Dedicated. Por exemplo, quando você cria uma cadeia de ferramentas de um app no {{site.data.keyword.Bluemix_notm}} Public, estas etapas são executadas:
 
  * A cadeia de ferramentas é criada.
  * Se você tiver configurado o Delivery Pipeline, os pipelines serão criados e acionados.
@@ -97,6 +102,9 @@ integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integ
 {: #viewing_a_toolchain}
 
 Após configurar a cadeia de ferramentas e as suas integrações de ferramenta, é possível visualizar uma representação visual da cadeia de ferramentas.
+
+É possível visualizar uma cadeia de ferramentas por meio de um app clicando em **Visualizar cadeia de ferramentas** na página de detalhes de seu app.
+{: tip}
 
 1. No painel DevOps, na página **Cadeias de ferramentas**, selecione um **RESOURCE GROUP** ou **CLOUD FOUNDRY ORG**. Todas as cadeias de ferramentas que estiverem contidas dentro do grupo de recursos selecionado ou na organização do Cloud Foundry serão exibidas. Clique na cadeia de ferramentas que você deseja visualizar para abrir a sua página Visão geral. Como alternativa, na página Visão geral do app, no cartão do Continuous Delivery, clique em **Visualizar cadeia de ferramentas**. Em seguida, clique em **Visão geral**.
 2. Para acessar uma integração de ferramenta que esteja em sua cadeia de ferramentas, clique na ferramenta.

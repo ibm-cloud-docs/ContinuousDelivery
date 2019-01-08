@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
-{:download: .download}
+{:note: .note}
+{:tip: .tip}
+{:important: .important}
 
 # Usando uma cadeia de ferramentas
 {: #toolchains-using}
@@ -21,8 +23,8 @@ As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Ded
 configurar uma cadeia de ferramentas, é possível incluir, excluir ou configurar integrações de ferramenta e gerenciar acesso à cadeia de ferramentas.
 {: shortdesc}
 
-É possível gerenciar cadeias de ferramentas na região Pública do Sul dos EUA usando grupos de recursos ou organizações do Cloud Foundry (organizações). O controle de acesso e o gerenciamento de usuários autorizado funcionam de forma diferente para cadeias de ferramentas, dependendo se elas estiverem contidas em um grupo de recursos ou em uma organização do Cloud Foundry.
-{: tip}
+É possível gerenciar cadeias de ferramentas nas regiões Públicas do Sul dos EUA, Leste dos EUA, Reino Unido, Alemanha e Tóquio usando grupos de recursos. É possível usar as organizações (orgs) do Cloud Foundry para gerenciar cadeias de ferramentas nas regiões Públicas do Sul dos EUA, Reino Unido e Alemanha. O controle de acesso e o gerenciamento de usuários autorizado funcionam de forma diferente para cadeias de ferramentas, dependendo se elas estiverem contidas em um grupo de recursos ou em uma organização do Cloud Foundry.
+{: important}
 
 ## Configurando uma integração de ferramenta
 {: #configuring_a_tool_integration}
@@ -74,7 +76,7 @@ Se você excluir uma integração de ferramenta a partir de sua cadeia de ferram
 Apenas usuários que fazem parte da lista de usuários autorizados para a instância selecionada do {{site.data.keyword.contdelivery_short}} podem usar o Delivery Pipeline, o Eclipse Orion {{site.data.keyword.webide}} e os recursos do {{site.data.keyword.gitrepos}} de cadeias de ferramentas do {{site.data.keyword.contdelivery_short}}. É possível gerenciar a autorização de usuário autorizado por meio da guia Gerenciar da instância selecionada do {{site.data.keyword.contdelivery_short}}, dentro do grupo de recursos especificado.
 
 Para acessar os recursos-chaves do {{site.data.keyword.contdelivery_short}} em uma cadeia de ferramentas, como Delivery Pipeline, um usuário deve ter acesso à cadeia de ferramentas no IAM e o usuário também deve ser parte da lista de Usuários autorizados da instância do {{site.data.keyword.contdelivery_short}}.
-{: tip}
+{: important}
 
 A autorização de usuário autorizado se aplicará a todas as cadeias de ferramentas que estiverem contidas no mesmo grupo de recursos que a instância do {{site.data.keyword.contdelivery_short}}.
 {: tip}
@@ -86,7 +88,7 @@ A autorização de usuário autorizado se aplicará a todas as cadeias de ferram
 É possível conceder acesso de usuários a uma cadeia de ferramentas incluindo-as na organização à qual a cadeia de ferramentas está associada e na lista de controle de acesso para a cadeia de ferramentas. Cada cadeia de ferramentas é associada a uma organização específica e qualquer usuário que seja membro dessa organização poderá ser incluído na lista de controle de acesso de qualquer uma das cadeias de ferramentas associadas. A organização na qual você está trabalhando atualmente é exibida na barra de menus. Para acessar um conjunto diferente de cadeias de ferramentas, alterne para uma organização diferente.
 
 Deve-se incluir usuários na organização da cadeia de ferramentas na região em que a cadeia de ferramentas está hospedada. Se a cadeia de ferramentas estiver configurada para implementar apps em uma região diferente, ainda assim ela implementará apps nessa região.
-{: tip}
+{: important}
 
 Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, ao incluir usuários em sua organização e espaços do {{site.data.keyword.Bluemix_notm}}, os usuários poderão efetuar login no {{site.data.keyword.ghe_short}} usando seus IDs e senhas do {{site.data.keyword.Bluemix_notm}}. Quando os usuários efetuarem login, as contas serão criadas para eles. Quando você incluir usuários em sua organização e espaços do {{site.data.keyword.Bluemix_notm}}, eles não serão incluídos automaticamente no repositório {{site.data.keyword.ghe_short}}. Alguém com privilégio do administrador para o repositório deverá inclui-los. Para obter mais informações, consulte [Usando o Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. Se você estiver usando sua própria versão gerenciada do {{site.data.keyword.ghe_short}}, siga seus procedimentos internos.
 
@@ -104,17 +106,17 @@ Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{sit
 
 * Para conceder acesso a um usuário que não é um membro da organização da cadeia de ferramentas, siga estas etapas:
 
-   a. Na barra de menus, clique em
-**Gerenciar>Segurança>Identidade e
-acesso**.
+   a. Na barra de menus, clique em **Gerenciar > Acesso (IAM)**.
 
-   b. Na linha para o usuário que você deseja designar acesso, selecione o menu **Ações** e, em seguida, clique em **Designar acesso**.
+   b. Clique em **O acesso é iniciado com o usuário**.
+   
+   c. Na linha para o usuário que você deseja designar acesso, selecione o menu **Ações** e, em seguida, clique em **Designar acesso**.
+   
+   d. Selecione **Designar acesso usando o Cloud Foundry**.
 
-   c. Selecione **Designar acesso usando o Cloud Foundry**.
+   e. Selecione **Designar organização**.
 
-   d. Selecione **Designar organização**.
-
-   e. Designe o acesso de usuário:
+   f. Designe o acesso de usuário:
 
      * Escolha uma organização na qual incluir o usuário.
 

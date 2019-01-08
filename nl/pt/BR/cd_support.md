@@ -2,13 +2,16 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-12-6"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:codeblock:.codeblock}
 
 
@@ -17,9 +20,7 @@ lastupdated: "2018-3-26"
 
 A equipe do {{site.data.keyword.contdelivery_full}} monitora ativamente o fórum do
 developerWorks para perguntas sobre o serviço e cadeias de
-ferramentas do {{site.data.keyword.contdelivery_short}}. Para fazer uma pergunta no fórum, clique no botão **Obter ajuda no fórum**
-![Botão **Obter ajuda no fórum**](images/get_help_in_the_forum.png) na parte
-inferior da cadeia de ferramentas e nas páginas do {{site.data.keyword.contdelivery_short}}.
+ferramentas do {{site.data.keyword.contdelivery_short}}. Para fazer uma pergunta no fórum, nas páginas da cadeia de ferramentas e do {{site.data.keyword.contdelivery_short}}, clique em **Obter ajuda no fórum** ![Botão **Obter ajuda no fórum**](images/get_help_in_the_forum.png).
 
 <table>
 <tr>
@@ -52,7 +53,7 @@ Se você tiver um problema mais sério ou encontrar problemas com o serviço {{s
 1. Na barra de menus, clique em **Suporte** e, em seguida, clique em **Incluir chamado**.
 1. Conclua o formulário para indicar o que você precisa do suporte técnico.
 
-Para obter mais informações sobre como abrir um chamado de suporte IBM {{site.data.keyword.Bluemix_notm}} ou sobre os níveis de suporte e severidades de chamado, veja [Entrando em contato com o suporte](https://console.bluemix.net/docs/support/index.html#contacting-support).
+Para obter mais informações sobre como abrir um chamado de suporte IBM {{site.data.keyword.Bluemix_notm}} ou sobre os níveis de suporte e severidades de chamado, veja [Entrando em contato com o suporte](https://cloud.ibm.com/docs/support/index.html#contacting-support).
 
 
 ## Suporte para o {{site.data.keyword.Bluemix_notm}}

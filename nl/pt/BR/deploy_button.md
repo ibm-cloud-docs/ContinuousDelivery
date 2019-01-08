@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-18"
 
 ---
 
@@ -17,14 +17,14 @@ lastupdated: "2018-8-2"
 
 # Criando um botão Implementar no {{site.data.keyword.Bluemix_notm}} {: #deploy-button}
 
-O botão Implementar no {{site.data.keyword.Bluemix_notm}} é uma maneira eficiente de compartilhar o seu app público originado no Git para que outras pessoas possam ter experiência com o código e implementá-lo no {{site.data.keyword.Bluemix_notm}} usando uma cadeia de ferramentas. O botão requer configuração mínima e é possível inseri-lo em qualquer lugar que suporte marcação. Qualquer pessoa que clica no botão cria uma cópia clonada do código em um novo repositório Git (repositório) para que seu app original não seja afetado.
+O botão Implementar no {{site.data.keyword.Bluemix_notm}} é uma maneira eficiente de compartilhar o seu app público originado no Git para que outras pessoas possam ter experiência com o código e implementá-lo no {{site.data.keyword.Bluemix_notm}} usando uma cadeia de ferramentas. O botão requer configuração mínima e é possível inseri-lo em qualquer lugar que suporte marcação. Qualquer pessoa que clica no botão cria uma cópia clonada do código em um novo repositório Git (repositório) para que seu app original não seja afetado.  
 {: shortdesc}
 
 Quando alguém clica em seu botão, ocorrem estas ações:
 
 1. Se a pessoa não tiver uma conta ativa do {{site.data.keyword.Bluemix_notm}}, ela deverá criar uma conta. Ela pode criar uma conta para teste ou uma conta real.
 
-2. A pessoa pode selecionar uma região, um grupo de recursos (disponível apenas na região Sul dos EUA) ou uma organização, um espaço e um nome do app clicando no ícone {{site.data.keyword.deliverypipeline}}. O nome do app sugerido é o mesmo que o nome da cadeia de ferramentas, que é construído do nome de seu repositório Git original e a horário. O nome da cadeia de ferramentas também pode ser editado.
+2. A pessoa pode selecionar uma região, um grupo de recursos (disponível nas regiões Sul dos EUA, Leste dos EUA, Reino Unido, Alemanha e Tóquio) ou uma organização e um espaço (disponível nas regiões Sul dos EUA, Reino Unido e Alemanha) e o nome do app clicando no ícone {{site.data.keyword.deliverypipeline}}. O nome do app sugerido é o mesmo que o nome da cadeia de ferramentas, que é construído do nome de seu repositório Git original e a horário. O nome da cadeia de ferramentas também pode ser editado.
 
 3. É criada uma cadeia de ferramentas que inclui um novo clone privado de seu repositório Git, um pipeline para construir e implementar mudanças de código, o Eclipse Orion {{site.data.keyword.webide}} para editar código na Nuvem e um rastreador de problemas.
 
@@ -43,11 +43,11 @@ Quando alguém clica em seu botão, ocorrem estas ações:
 
 Veja um exemplo do botão de app para um repositório {{site.data.keyword.gitrepos}} público:
 
-[![Implementar no Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
+[![Implementar no IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
 
 Veja um exemplo do botão de app para um repositório GitHub público:
 
-[![Implementar no Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
+[![Implementar no IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
 
 ## Criando um botão {: #create-button}
 
@@ -58,7 +58,7 @@ Para criar um botão Implementar no {{site.data.keyword.Bluemix_notm}}, copie e 
 Para criar um botão em HTML, copie este fragmento e insira uma URL do repositório Git público e ramificação.
 
 ```HTML
-<a href="https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://bluemix.net/deploy/button.png" alt="Implementar no IBM Cloud"></a>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://cloud.ibm.com/devops/setup/deploy/button.png" alt="Implementar no IBM Cloud"></a>
 ```
 {: codeblock}
 
@@ -69,7 +69,7 @@ Se você não incluir o parâmetro `branch` na URL do repositório do seu snippe
 Para criar um botão em Markdown, copie este fragmento e insira uma URL do repositório Git público e ramificação.
 
 ```Markdown
-[![Implementar no IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<git_repository_URL>&branch=<git_branch>)
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=<git_repository_URL>&branch=<git_branch>)
 ```
 {: codeblock}
 
@@ -81,9 +81,9 @@ Após você criar um fragmento de botão Implementar no {{site.data.keyword.Blue
 
 Ao customizar o fragmento para o botão Implementar no {{site.data.keyword.Bluemix_notm}}, considere que ambos os modelos usam um caminho padrão para uma imagem de botão externo em formato PNG e em inglês.
 
-* Se você preferir usar uma imagem SVG para o botão em vez de PNG, mude o caminho para a imagem de botão que é usada no fragmento para `https://bluemix.net/deploy/button.svg`.
+* Se você preferir usar uma imagem SVG para o botão em vez de uma PNG, mude o caminho para a imagem do botão que é usada no fragmento para `https://cloud.ibm.com/devops/setup/deploy/button.svg`.
 
-* Se você preferir usar uma imagem para o botão, mude o caminho da imagem de botão que é usada no fragmento para `https://bluemix.net/deploy/button_x2.png`. Essa imagem é o dobro do tamanho de uma padrão.
+* Se você preferir usar uma imagem para o botão, mude o caminho da imagem do botão que é usada no fragmento para `https://cloud.ibm.com/devops/setup/deploy/button_x2.png`. Essa imagem é o dobro do tamanho de uma padrão.
 
 * Se você preferir armazenar a imagem localmente, será possível fazer download da imagem e armazená-la no repositório Git. Ajuste o caminho para usar o local relativo da imagem.
 
@@ -102,9 +102,9 @@ Se o app deve ser construído antes de poder ser implementado, deve-se incluir u
 Os construtores suportados incluem:
 
 * [Ant ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"):](http://ant.apache.org/manual/using.html){:new_window} `build.xml`, que constrói a saída para a pasta `./output/`
-* [Gradle ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"):](http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle){:new_window} `/build.gradle`, que constrói a saída para a pasta `.` .
+* [Gradle ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"):](https://docs.gradle.org/current/userguide/getting_started.html){:new_window} `/build.gradle`, que constrói a saída na pasta `.`
 * [Grunt ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"):](http://gruntjs.com/getting-started#the-gruntfile){:new_window} `/Gruntfile.js`, que constrói a saída para a pasta `.` .
-* [Maven ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"):](http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven){:new_window} `/pom.xml`, que constrói a saída para a pasta `./target/`
+* [Maven ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"):](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:new_window} `/pom.xml`, que constrói a saída na pasta `./target/`
 
 ### Requisitos do arquivo de pipeline
 {: pipeline_file}
@@ -135,4 +135,4 @@ Para criar um `pipeline.yml` manualmente que seja especificamente para contêine
 
 Um arquivo `manifest.yml` não precisa estar em seu repositório. No entanto, se seu app precisar que outros serviços sejam executados, deve fornecer um arquivo manifest que declare esses serviços.
 
-Para saber mais sobre arquivos manifest, consulte [Manifesto do aplicativo](/docs/cfapps/depapps.html#appmanifest).
+Para saber mais sobre arquivos manifest, consulte [Manifesto do aplicativo](/docs/cloud-foundry/deploy-apps.html#appmanifest).

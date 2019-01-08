@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-12"
 
 ---
 {:shortdesc: .shortdesc}
@@ -11,33 +11,28 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
 # Criando modelos customizados de cadeia de ferramentas
 {: #toolchains_custom}
 
-Melhore seu fluxo de trabalho do DevOps criando um modelo customizado de cadeia de ferramentas. É
-possível iniciar rapidamente com um modelo de cadeia de ferramentas existente ou criar um modelo de cadeia de
-ferramentas que inclua apenas as integrações de que você precisa. É possível incluir ou remover as integrações de sua cadeia de ferramentas a qualquer momento.
+Melhore seu fluxo de trabalho do DevOps criando um modelo customizado de cadeia de ferramentas. É possível iniciar rapidamente um modelo de cadeia de ferramentas existente ou criar um modelo de cadeia de ferramentas que inclua somente as integrações de ferramenta necessárias. É possível incluir ou remover integrações de sua cadeia de ferramentas a qualquer momento.
 {:shortdesc}
 
 É possível
 [criar uma
 cadeia de ferramentas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} em várias maneiras. Depois de criar um modelo customizado de cadeia de ferramentas, é possível compartilhá-lo
 [criando uma implementação para
-o botão {{site.data.keyword.Bluemix_notm}}](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}.   Detalhes sobre o SDK do modelo
-de cadeia de ferramentas podem ser localizados no
-[SDK de cadeia de ferramentas
-aberta](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Um tutorial passo a passo pode ser localizado no site do
-[Garage
-Method](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
+o botão {{site.data.keyword.Bluemix_notm}}](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}.   Para obter mais informações sobre o SDK do modelo de cadeia de ferramentas, veja [SDK da cadeia de ferramentas aberta](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Para obter um tutorial passo a passo, veja o [site Garage Method](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
 
 
 ## Introdução
 {: #toolchains_custom_gettingstarted}
 
-Para criar um modelo customizado de cadeia de ferramentas, inicie clonando o modelo de cadeia de ferramentas simples do Cloud Foundry. Clonar um modelo existente fornece a você o ponto de início para sua cadeia de ferramentas customizada.
+Para criar um modelo customizado de cadeia de ferramentas, inicie clonando o modelo de cadeia de ferramentas simples do Cloud Foundry. Clonar um modelo existente fornece um ponto de início para a sua cadeia de ferramentas customizada.
 
 1. Usando um cliente Git de sua escolha, insira o comando a seguir para clonar o modelo de [Cadeia de ferramentas simples](https://github.com/open-toolchain/simple-toolchain){: new_window} no GitHub.
 
@@ -50,7 +45,7 @@ Para criar um modelo customizado de cadeia de ferramentas, inicie clonando o mod
 repositório GitHub e inclui uma cadeia de ferramentas simples que está pré-configurada
 para entrega contínua, controle de fonte, rastreamento de problemas e edição on-line.
 
-2. Se você preferir iniciar com um modelo de cadeia de ferramentas mais complexa, será possível iniciar pela clonagem da [Cadeia de ferramentas nativa da nuvem para microsserviços](https://github.com/open-toolchain/toolchain-demo){: new_window}.
+2. Se você desejar iniciar com um modelo de cadeia de ferramentas mais complexo, clone a [Cadeia de ferramentas nativa da nuvem para microsserviços](https://github.com/open-toolchain/toolchain-demo){: new_window}.
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -66,9 +61,9 @@ O modelo de microsserviços implementa um armazenamento on-line que é composto 
 * Edição on-line
 * Sistema de mensagens
 
-Independentemente de qual modelo você escolher, o processo para customizar a cadeia de ferramentas criada geralmente será o mesmo.
+Independentemente de qual modelo você escolhe, o processo de customização da cadeia de ferramentas que você cria é geralmente o mesmo.
 
-Depois de clonar o modelo, você terá um repositório GitHub básico que contém um arquivo leia-me e um diretório `.bluemix`. O diretório contém todos os arquivos de configuração que a cadeia de ferramentas requer para funcionar. No mínimo, o diretório `.bluemix` deve conter os arquivos a seguir:
+Depois de clonar o modelo, você tem um repositório GitHub básico que contém um arquivo leia-me e um diretório `.bluemix`. O diretório contém todos os arquivos de configuração que a cadeia de ferramentas requer para funcionar. No mínimo, o diretório `.bluemix` deve conter os arquivos a seguir:
 
 * `toolchain.yml`
 * `deploy.json`
@@ -79,8 +74,7 @@ Depois de clonar o modelo, você terá um repositório GitHub básico que conté
 
 Cada um desses arquivos é explicado nas seções a seguir. Cada seção contém informações de configuração que podem ser consultadas conforme sua cadeia de ferramentas se desenvolve.
 O YAML é uma linguagem de serialização de dados que é um superconjunto estrito de JSON, com a adição de
-novas linhas e indentação sintaticamente significativas. No entanto, o YAML não permite caracteres de
-tabulação literal.
+novas linhas e indentação sintaticamente significativas. No entanto, o YAML não permite caracteres de tabulação literais.
 
 ## Entendendo os arquivos de configuração
 {: #toolchains_custom_config_files}
@@ -88,46 +82,38 @@ tabulação literal.
 
 Os arquivos de configuração de modelo de cadeia de ferramentas são compostos
 principalmente de arquivo de formato YAML. Cada arquivo contém metadados que descrevem
-diferentes aspectos da cadeia de ferramentas. Os metadados incluem
+diferentes aspectos da cadeia de ferramentas. Os metadados incluem:
 * Informações sobre a cadeia de ferramentas e repositórios.
 * Detalhes sobre como o código é construído e implementado.
 * Propriedades de configuração para as ferramentas que estão na cadeia de ferramentas.
 
-À medida que sua cadeia de ferramentas se torna mais complexa, os arquivos de configuração podem crescer em complexidade também.
+À medida que sua cadeia de ferramentas se torna mais complexa, os arquivos de configuração podem se tornar mais complexos.
 
-Algumas diretrizes para ter em mente ao trabalhar com arquivos YAML:
+Quando você trabalhar com arquivos YAML, siga estas diretrizes:
 
 * Use somente espaços. Não são permitidas tabulações.
 * Todas as propriedades e listas devem ser recuadas com um ou mais espaços.
 * Todas as chaves e propriedades fazem distinção entre maiúsculas e minúsculas.
 
 Preste atenção à formatação do arquivo YAML para reduzir sua chance de encontrar erros.
-Para verificar erros, talvez você queira usar um validador simples, como
-[este analisador](http://wiki.ess3.net/yaml/){: new_window}.
-{: tip}
+Para verificar se há erros, use um validador simples como [este analisador](http://wiki.ess3.net/yaml/){: new_window}.
+{: important}
 
-## Planejando a seção de serviços
+## Planejando os serviços
 Cada subseção de serviço contém as seguintes informações:
 
 * name - uma sequência gerada pelo usuário que é usada para identificar esse serviço no contexto do
-arquivo atual. Esse nome pode ser usado para marcar um serviço como obrigatório.
+arquivo atual. É possível usar esse nome para marcar um serviço como necessário.
 
 * service_id - uma cadeia exclusiva que identifica o serviço. Essa sequência vem diretamente do
 [catálogo de
 serviços](https://github.com/open-toolchain/sdk/wiki/services.md){: new_window}.
 
-* parameters - zero ou mais parâmetros de configuração para o serviço. Esses parâmetros variam entre
-os serviços: os usuários precisam consultar o catálogo para compreender quais parâmetros um serviço específico
-requer.
+* parameters - zero ou mais parâmetros de configuração para o serviço. Esses parâmetros variam entre os serviços. Os usuários devem consultar o catálogo para determinar quais parâmetros são necessários para um serviço específico.
 
 ### Incluindo texto de outros arquivos
 
-Todas as informações para sua cadeia de ferramentas podem estar no
-arquivo `toolchain.yml`.  No entanto, talvez você queira criar arquivos separados para cada
-UI de integração de ferramenta utilizando `$text`. Isso pode facilitar a manutenção de suas
-cadeias de ferramentas, bem como minimizar o tempo gasto editando arquivos de configuração.  Este
-fragmento de exemplo de um `toolchain.yml` mostra como usar o conteúdo do
-arquivo `pipeline.yml` como o valor para `content`.
+Todas as outras informações para sua cadeia de ferramentas podem estar armazenadas no arquivo `toolchain.yml`. No entanto, você pode desejar criar arquivos separados para cada IU de integração de ferramenta que usa `$text`. O uso de arquivos separados pode tornar mais fácil a manutenção de suas cadeias de ferramentas e minimizar o tempo gasto na edição de arquivos de configuração. Este fragmento de exemplo de um arquivo `toolchain.yml` mostra como usar os conteúdos do arquivo `pipeline.yml` como o valor para `content`.
 
 ```
   configuration:
@@ -140,7 +126,7 @@ arquivo `pipeline.yml` como o valor para `content`.
 É possível localizar sua cadeia de ferramentas exteriorizando suas sequências de UI no
 diretório `nls` para que as sequências na cadeia de ferramentas sejam exibidas no idioma
 preferido do usuário.
-Seu arquivo `toolchain.yml` precisa incluir uma referência a `$i18n`.  
+Seu arquivo `toolchain.yml` deve incluir uma referência `$i18n`.  
 O exemplo a seguir mostra uma referência `$i18n` a um arquivo `messages.yml`:
 
 ```
@@ -149,8 +135,8 @@ messages:
 ```
 
   As sequências em inglês estão em `messages.yml` e outros idiomas usam o código de
-idiomas, como `messages_de.yml`.   A lista de códigos de idioma pode ser localizada em
-[Tags para identificação de idiomas](https://tools.ietf.org/html/rfc5646){: new_window}.
+idiomas, como `messages_de.yml`. É possível localizar a lista de códigos de idioma em
+[Tags para identificar idiomas](https://tools.ietf.org/html/rfc5646){: new_window}.
 
    Para referenciar a sequência de exteriorização, use `$ref` para recuperar a sequência.  Por
 exemplo,
@@ -168,21 +154,17 @@ exemplo,
     name: my_template
 ```
 
-Para saber mais, consulte a
-[Seção
-de mensagens do SDK de cadeia de ferramentas aberta](https://github.com/open-toolchain/sdk/wiki/Template-File-Format#messages-section){: new_window}.
+Para obter mais informações sobre sequências de IU, veja a [seção Mensagens do SDK da cadeia de ferramentas aberta](https://github.com/open-toolchain/sdk/wiki/Template-File-Format#messages-section){: new_window}.
 
 ## Configurando o arquivo de cadeia de ferramentas
 {: #toolchains_custom_toolchain_yml}
 
 O arquivo `toolchain.yml` é o ponto central da cadeia de
-ferramentas. As especificações de sua cadeia de ferramentas, incluindo repositórios para
-pull, serviços a serem incluídos e detalhes de construção, estão todos descritos nesse
-arquivo. Para entender o conteúdo, ele pode ser dividido em várias seções.
+ferramentas. As especificidades da sua cadeia de ferramentas, incluindo os repositórios para fazer pull, os serviços a incluir e os detalhes da construção, são todas descritas nesse arquivo. Para entender seus conteúdos, é possível dividir o arquivo em várias seções.
 
 1\. **Informações introdutórias da cadeia de ferramentas:**
 
- Esta seção do arquivo fornece detalhes simples sobre sua cadeia de ferramentas que o usuário pode ver na página de criação de cadeia de ferramentas. Inclua um nome para sua cadeia de ferramentas, juntamente com uma descrição que explique o propósito da cadeia de ferramentas. Também é possível incluir uma imagem, como um logotipo ou uma representação visual da cadeia de ferramentas.
+ Esta seção do arquivo fornece detalhes simples sobre sua cadeia de ferramentas que o usuário pode ver na página de criação de cadeia de ferramentas. Inclua um nome para sua cadeia de ferramentas, juntamente com uma descrição que explique o propósito da cadeia de ferramentas. Também é possível incluir uma imagem, como um logotipo ou uma representação visual de sua cadeia de ferramentas.
 
  Além de fornecer o conteúdo introdutório para sua cadeia de ferramentas, esta seção também inclui uma
 chave que é denominada `required` que define as ferramentas que fazem parte da cadeia de
@@ -212,8 +194,7 @@ Nesse exemplo, a URL do Git e a ramificação do Git são para um novo modelo de
 
 2\. **Definições de repositório:**
 
- Uma cadeia de ferramentas pode fornecer entrega contínua para qualquer número de repositórios Git,
-incluindo o GitHub, GitHub Enterprise, Git Repos and Issue Tracking e GitLab. Esta seção do arquivo `toolchain.yml` é onde cada repositório está definido.
+ Uma cadeia de ferramentas pode fornecer entrega contínua para qualquer número de repositórios Git, tais como GitHub, GitHub Enterprise, Git Repos and Issue Tracking e GitLab. A seção de definições de repositório do arquivo `toolchain.yml` é o local em que cada repositório está definido.
 
  Para cada repositório que é incluído na cadeia de ferramentas, inclua uma chave pai que represente o
 nome de seu repositório com as propriedades a seguir:
@@ -250,19 +231,17 @@ nome de seu repositório com as propriedades a seguir:
 
 3\. **Informações do pipeline:**
 
- É possível entregar continuamente seu projeto com um pipeline. Esta seção do arquivo define os detalhes de configuração que são usados para construir e implementar o código em cada um de seus repositórios GitHub e Git Repo and Issue Tracking.
+ É possível entregar continuamente seu projeto com um pipeline. Essa seção do arquivo define os detalhes de configuração que são usados para construir e implementar o código em cada um dos repositórios GitHub e Git Repos and Issue Tracking.
 
- Para iniciar, para cada repositório que está definido em sua cadeia de ferramentas, inclua uma chave pai que representa um nome de seu pipeline. Considere derivar essa chave do nome de seu repositório GitHub ou Git Repo and Issue Tracking. Inclua as seguintes propriedades:
+ Para iniciar, para cada repositório que está definido em sua cadeia de ferramentas, inclua uma chave pai que representa um nome de seu pipeline. Considere derivar essa chave do nome de seu repositório GitHub ou Git Repos and Issue Tracking. Inclua as seguintes propriedades:
 
 | Item | Chave/Propriedade | Valor | Descrição |
 |------|--------------|-------|-------------|
 | pipeline-name | principais |  | Nome para o pipeline (sample-build) |
 | service_id | propriedades | <`pipeline`> | Nome do serviço a ser usado |
 | parâmetros | principais |  |  |
-| nome | propriedades | <`repo_name`> | O mesmo nome que está definido na seção repos |
-| ui-pipeline | propriedades | <`true`, `false`> |True se os
-aplicativos que esse pipeline implementa são mostrados no menu **Visualizar app** na
-página de cadeia de ferramentas  |
+| nome | propriedades | <`repo_name`> | O mesmo que o nome definido na seção de repositório |
+| ui-pipeline | propriedades | <`true`, `false`> |True se os aplicativos que esse pipeline implementa forem mostrados no menu **Visualizar app** na página de cadeias de ferramentas |
 | configuration | principais |  |  |
 | conteúdo | propriedades | <`$ref(pipeline.yml)`> | Arquivo que estabelece a definição de pipeline |
 | env | principais |  |  |
@@ -277,10 +256,9 @@ página de cadeia de ferramentas  |
 | hidden | property | <`[form, description]`> |  |
 -->
 
- As informações sobre a criação de um arquivo `pipeline.yml` podem
-ser encontradas em uma [seção posterior.](#toolchains_custom_pipeline_yml)
+ Mais informações sobre a criação de um arquivo `pipeline.yml` podem ser localizadas em uma [seção posterior](#toolchains_custom_pipeline_yml).
 
- Este fragmento mostra um exemplo dessa seção do arquivo:
+ O fragmento a seguir mostra um exemplo desta seção do arquivo:
 
  ```
  # Pipelines
@@ -306,18 +284,11 @@ ser encontradas em uma [seção posterior.](#toolchains_custom_pipeline_yml)
 
 4\. **Detalhes da implementação:**
 
- Como parte do processo de entrega contínua, é possível configurar uma cadeia de ferramentas para implementar um aplicativo para qualquer Região, Organização ou Espaço do {{site.data.keyword.Bluemix_notm}} ao qual um usuário tem acesso. Os detalhes específicos de onde implementar seu
-aplicativo podem ser selecionados na página de criação da cadeia de ferramentas.
+ Como parte do processo de entrega contínua, é possível configurar uma cadeia de ferramentas para implementar um aplicativo em qualquer região, organização ou espaço do {{site.data.keyword.Bluemix_notm}} ao qual um usuário tem acesso. É possível especificar os detalhes sobre onde implementar seu aplicativo na página [Criação de cadeia de ferramentas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}.
 
- ![Definições de configuração do Delivery Pipeline](images/deploy_configuration.png)
+Esta seção do arquivo `toolchain.yml` define os estágios de pipeline que estão disponíveis para serem configurados na página de criação da cadeia de ferramentas.
 
- Esta seção do arquivo `toolchain.yml` define os estágios do
-pipeline que estão disponíveis para serem configurados na página de criação da cadeia de
-ferramentas.
-
- Para iniciar, a chave-pai `deploy` é usada para identificar as
-propriedades de configuração de implementação. As propriedades a seguir compõem o
-restante da seção:
+ A chave pai `deploy` é usada para identificar as propriedades de configuração de implementação. As propriedades a seguir compõem o restante da seção:
 
 | Item | Chave/Propriedade | Valor | Descrição |
 |------|--------------|-------|-------------|
@@ -349,14 +320,10 @@ Para obter mais informações sobre como criar um arquivo `deploy.json`, consult
  ```
  {: codeblock}
 
- O exemplo de código pode ser usado na maioria das vezes no estado em que se
-encontra e requer pouca modificação somente. Para customizar essa seção, configure
-`github-repo-name` para que seja consistente com o nome de seu repositório. Os detalhes no
-arquivo [`deploy.json`](#toolchains_custom_deploy_json) também
-precisam ser atualizados.
+ É possível usar o exemplo de código, com algumas modificações. Para customizar essa seção, configure
+`github-repo-name` para que seja consistente com o nome de seu repositório. Deve-se também atualizar os detalhes no arquivo [`deploy.json`](#toolchains_custom_deploy_json).
 
- Para criar um pipeline mais complexo que inclua estágios dev, QA e Prod, as propriedades a seguir podem
-ser substituídas sob a chave `parameters`.
+ Para criar um pipeline mais complexo que inclua os estágios de desenvolvimento, QA e produção, é possível substituir as propriedades a seguir sob a chave `parameters`.
 
  ```
    parameters:
@@ -381,7 +348,7 @@ dos estágios de seu pipeline. É possível iniciar com um pipeline.yml existent
  Se a sua cadeia de ferramentas contiver mais de um pipeline, forneça nomes
 exclusivos para cada arquivo `pipeline.yml`.
 
- Veja a seguir o exemplo de um arquivo `pipeline.yml`:
+ O exemplo a seguir mostra um arquivo `pipeline.yml`:
 
  ```
  ---
@@ -452,26 +419,21 @@ stages:
  ## Configurando a interface do pipeline
  {: #toolchains_custom_deploy_json}
 
- Na página de criação da cadeia de ferramentas, quando o Delivery Pipeline é selecionado na seção
-Integrações configuráveis, a seção se expande para exibir os itens a seguir:
+ Na página [Criação da cadeia de ferramentas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}, quando o Delivery Pipeline é selecionado na seção Integrações configuráveis, a seção é expandida para exibir os itens a seguir:
 
- 	* O nome do aplicativo
- 	* A Região, a Organização e o Espaço em que seus estágios do pipeline são implementados.
+ 	* O nome do aplicativo.
+ 	* A região, a organização e o espaço nos quais seus estágios de pipeline são implementados.
 
 É possível configurar esses itens para cada ferramenta.
 
- ![Definições de configuração do Delivery Pipeline](images/deploy_configuration.png)
-
  O layout desta seção na IU é definido pelo esquema `deploy.json`.
 
- Dentro do esquema, as propriedades a seguir devem ser atualizadas para que correspondam aos detalhes de
-seu aplicativo:
+ Dentro do esquema, atualize as propriedades a seguir para que correspondam aos detalhes de seu aplicativo:
 
  	* Título
  	* Descrição
  	* LongDescription
- 	* Todas as instâncias de `hello-world-name` e os detalhes
-associados deverão ser modificados para corresponder aos do seu aplicativo.
+ 	* Todas as instâncias de `hello-world-name` e os detalhes associados
 
  O fragmento a seguir é um exemplo de um arquivo `deploy.json`:
 
@@ -590,9 +552,7 @@ associados deverão ser modificados para corresponder aos do seu aplicativo.
 
  Depois de configurar os componentes principais de sua cadeia de ferramentas, é possível incluir outras
 integrações de ferramentas que incluam mais funções na sua cadeia de ferramentas. Todas as ferramentas
-adicionais requerem suas próprias entradas no arquivo `toolchain.yml`. Algumas ferramentas
-também requerem que você inclua um arquivo de configuração YAML separado no diretório
-`.bluemix`.
+adicionais requerem suas próprias entradas no arquivo `toolchain.yml`. Algumas ferramentas também requerem que você inclua um arquivo de configuração YAML separado no diretório `.bluemix`.
 
  ![Arquivos necessários paradefinir uma cadeia de ferramentas](images/files_for_toolchain_with_additional_tools.png)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-15"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-15"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -29,13 +31,13 @@ cadeia de ferramentas integra ferramentas para planejar, desenvolver, implementa
 pipelines e gerenciar aplicativos. Sempre é possível incluir ou remover ferramentas de
 suas cadeias de ferramentas. Se você já tiver cadeias de ferramentas, será possível [visualizar as cadeias de ferramentas existentes](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}. Para obter mais informações sobre como trabalhar com cadeias de ferramentas, veja [Usando cadeias de ferramentas](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
 
-Se você já tiver uma instância do {{site.data.keyword.contdelivery_short}}, será possível [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/create){: new_window} ou [visualizar cadeias de ferramentas existentes](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}.
+Se você já tiver uma instância do {{site.data.keyword.contdelivery_short}}, será possível [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops/create){: new_window} ou [visualizar cadeias de ferramentas existentes](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}.
 {: tip}
 
 ##Etapa 1: Selecione um modelo de cadeia de ferramentas
 {: #select_a_toolchain_template}
 
-1. Na página **Criar uma cadeia de ferramentas**, clique em um [modelo de cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/create){: new_window}.
+1. Na página **Criar uma cadeia de ferramentas**, clique em um [modelo de cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops/create){: new_window}.
 1. Revise o diagrama da cadeia de ferramentas que você está prestes a criar. O diagrama
 mostrará cada integração de ferramenta em sua fase de ciclo de vida na cadeia de ferramentas.
 
@@ -56,8 +58,8 @@ o nome da cadeia de ferramentas.
  * A região na qual criar a cadeia de ferramentas. Se você desejar usar uma região diferente, selecione-a na lista de regiões disponíveis.
  * A organização ou o grupo de recursos no qual criar a cadeia de ferramentas. Clique no link para alternar entre a seleção de grupos de recursos e de organizações. Se você desejar usar uma organização ou um grupo de recursos diferente, selecione essa opção diferente na lista de organizações ou de grupos de recursos disponíveis.
  
-   Os grupos de recursos estão disponíveis somente na região Sul dos EUA.
-   {: tip}
+   Os grupos de recursos estão disponíveis nas regiões Sul dos EUA, Leste dos EUA, Reino Unido, Alemanha e Tóquio. As organizações do Cloud Foundry são suportadas nas regiões Sul dos EUA, Reino Unido e Alemanha.
+   {: important}
  
 1. Na seção Integrações de ferramentas, selecione cada integração de ferramenta que deseja configurar para sua cadeia de ferramentas. Algumas integrações de ferramentas não requerem configuração. Para obter informações sobre como configurar as integrações de ferramentas, consulte
 [Configurando

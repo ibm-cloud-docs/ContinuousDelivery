@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-6-22"
+lastupdated: "2018-10-10"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-6-22"
 # {{site.data.keyword.cloudaccesstrailshort}}  eventos
 {: #at_events}
 
-Use o serviço {{site.data.keyword.cloudaccesstrailfull}} para controlar como os usuários e aplicativos interagem com o serviço {{site.data.keyword.contdelivery_short}} no {{site.data.keyword.Bluemix}}.
+Use o serviço {{site.data.keyword.cloudaccesstrailfull}} para controlar como os usuários e aplicativos interagem com o serviço {{site.data.keyword.contdelivery_short}} no {{site.data.keyword.Bluemix}}. 
 {: shortdesc}
 
 O serviço {{site.data.keyword.cloudaccesstrailfull_notm}} registra atividades iniciadas pelo usuário que mudam o estado de um serviço no {{site.data.keyword.Bluemix_notm}}. Para obter mais informações, consulte o  [ {{site.data.keyword.cloudaccesstrailshort}} ](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
@@ -34,10 +34,10 @@ A tabela a seguir lista as ações que geram um evento:
 
 | Ação | Descrição | 
 |:-----------------|:-----------------|
-| Cadeia de ferramentas | Criar uma cadeia de ferramentas | 
-| Exclusão da cadeia de | Excluir uma cadeia de ferramentas |
-| Criação de ferramenta | Criar uma integração de ferramenta |
-| Exclusão de ferramenta | Excluir uma integração de ferramenta |
+| continuous-delivery.toolchain.create | Criar uma cadeia de ferramentas | 
+| continuous-delivery.toolchain.delete | Excluir uma cadeia de ferramentas |
+| toolchain.tool-instance.deploy | Criar uma integração de ferramenta |
+| toolchain.tool-instance.undeploy | Excluir uma integração de ferramenta |
 {: caption="Tabela 1. Ações que geram eventos" caption-side="top"}
 
 ## Onde visualizar os eventos

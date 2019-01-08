@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -48,7 +48,7 @@ Enquanto um aplicativo Node.js estiver no modo Live Edit, é possível executar 
 ##Live Edit
 {: #live-edit}
 
-Se você está construindo um aplicativo Node.js que é executado no {{site.data.keyword.Bluemix_notm}}, o recurso Live Edit do {{site.data.keyword.Bluemix_notm}} Live Sync pode atualizar rapidamente a instância do aplicativo. O Live Edit está disponível somente no Web IDE. O Live Edit permite desenvolver como faria no desktop sem reimplementação.
+Se você está construindo um aplicativo Node.js que é executado no {{site.data.keyword.Bluemix_notm}}, o recurso Live Edit do {{site.data.keyword.Bluemix_notm}} Live Sync pode atualizar rapidamente a instância do aplicativo. O Live Edit está disponível somente no Web IDE. É possível usar o Live Edit para desenvolver tal como você faria na área de trabalho sem reimplementar.
 
 O Live Edit é suportado para aplicativos Node.js apenas
 
@@ -56,13 +56,13 @@ No Eclipse Orion Web IDE (Web IDE), na barra de execução, clique em **Live Edi
 
 ![Imagem da barra de execução com edição em tempo real](images/bluemix-live-sync-light.png)
 
-O Live Edit permite visualizar rapidamente as mudanças nos aplicativos Node.js que são executados no {{site.data.keyword.Bluemix_notm}}. Ao atualizar seu código com o Live Edit ligado, é possível atualizar sua janela do navegador de aplicativo da Web para ver essas mudanças refletidas segundos após criá-los.
+Use o Live Edit para visualizar rapidamente as mudanças nos aplicativos Node.js que são executados no {{site.data.keyword.Bluemix_notm}}. Ao atualizar seu código com o Live Edit ligado, é possível atualizar sua janela do navegador de aplicativo da Web para ver essas mudanças refletidas segundos após criá-los.
 
 Para ver um tutorial sobre o uso do recurso Live Edit do {{site.data.keyword.Bluemix_notm}} Live Sync, consulte [Usar o {{site.data.keyword.Bluemix_notm}} Live Sync para desenvolver, depurar e implementar seu app ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/use-live-sync-to-develop-debug-and-deploy-your-app){:new_window}.
 
 Quando você muda os arquivos em seu Web IDE, eles são reimplementados automaticamente em sua instância do aplicativo no {{site.data.keyword.Bluemix_notm}}. Se você precisar reiniciar o aplicativo Node, clique no botão **Reiniciar** na barra de execução.
 
-Para obter uma experiência mais consistente ao usar o recurso Live Edit do {{site.data.keyword.Bluemix_notm}} Live Sync, 256 MB de memória adicional serão necessários e serão incluídos.
+Para obter uma experiência mais consistente, ao usar o recurso Live Edit do {{site.data.keyword.Bluemix_notm}} Live Sync, 256 MB de memória extra serão necessários e incluídos.
 {: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} Live Debug
@@ -74,7 +74,7 @@ para fornecer recursos de depuração. Você precisa usar a versão 4 do Nó par
 
 É possível acessar o {{site.data.keyword.Bluemix_notm}} Live Debug quando o {{site.data.keyword.Bluemix_notm}} Live Edit está ativado para o app Node.js.  
 
-Com o Debug, é possível editar código dinamicamente, inserir pontos de interrupção, percorrer o código, reiniciar o tempo de execução e muito mais, tudo enquanto seu app está sendo entregue pelo {{site.data.keyword.Bluemix_notm}}. É possível desenvolver incrementalmente seu app com agilidade ao escolher a partir da grande lista de serviços {{site.data.keyword.Bluemix_notm}}.
+Com o Debug, é possível editar código dinamicamente, inserir pontos de interrupção, percorrer o código, reiniciar o tempo de execução e muito mais, tudo enquanto seu app está sendo entregue pelo {{site.data.keyword.Bluemix_notm}}. É possível desenvolver incrementalmente seu app com agilidade enquanto você escolhe na grande lista de serviços do {{site.data.keyword.Bluemix_notm}}.
 
 O {{site.data.keyword.Bluemix_notm}} Live Debug inclui os recursos a seguir:
 
@@ -84,7 +84,7 @@ O {{site.data.keyword.Bluemix_notm}} Live Debug inclui os recursos a seguir:
 
 ### Controle de tempo de execução do aplicativo {: #app-runtime}
 
-Com o controle de tempo de execução do aplicativo, é possível usar o Debug para inspecionar o estado do app no horário de início. Esse recurso é útil quando você está solucionando problemas de um app que trava no início.
+Com o controle de tempo de execução do aplicativo, é possível usar o Debug para inspecionar o estado do app no horário de início. Esse recurso é útil quando você está solucionando problemas de um app que falha ao ser iniciado.
 
 Enquanto você está desenvolvendo seu app, é possível selecionar a partir das ações a seguir:
 
@@ -92,9 +92,6 @@ Enquanto você está desenvolvendo seu app, é possível selecionar a partir das
 * Suspender o app antes da execução de qualquer código de app
 
 Depois de efetuar login, a página {{site.data.keyword.Bluemix_notm}} Live Debug é aberta.
-
-![UI do Debug](images/live_sync_debug.png)
-
 
 ### Depurar {: #debug}
 
@@ -138,7 +135,7 @@ Monitore o uso de memória e CPU na instância que usa comandos Linux padrão, c
 
 Após a instalação do {{site.data.keyword.Bluemix_notm}} Live Debug, é possível usar as ferramentas de depuração.
 
-Envie por push o app e, em seguida, navegue para `https://_app-host.mybluemix.net_/bluemix-debug/manage` para acessar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} Debug. Quando for solicitado para autenticar-se, insira seu nome do usuário e senha do IBMid ou uma senha descartável.    
+Envie por push o app e, em seguida, navegue para `https://_app-host.mybluemix.net_/bluemix-debug/manage` para acessar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} Debug. Quando for solicitado a autenticar, insira seu nome do usuário do IBMid e a senha ou uma senha descartável.    
 
 O Depurador pode levar um minuto ou mais para ser inicializado.
 {: tip}
@@ -151,4 +148,4 @@ O Depurador pode levar um minuto ou mais para ser inicializado.
 
 ### Para obter mais informações
 
-* Consulte [Ferramentas do Eclipse para o {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
+* Veja [Ferramentas Eclipse para o {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

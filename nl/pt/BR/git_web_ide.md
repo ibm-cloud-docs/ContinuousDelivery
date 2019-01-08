@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Trabalhando com Git no Eclipse Orion Web IDE
@@ -95,7 +97,7 @@ ramificação](#start_working_on_branch).
 Substitua o conteúdo de uma ramificação remota referenciada pelo conteúdo de sua ramificação local ativa.
 
 Quando você forçar o envio por push de uma ramificação local para um local remoto, poderá perder confirmações na ramificação remota.
-{: tip}
+{: important}
 
 ### Eclipse Orion Web IDE
 {: #force_push_web}
@@ -206,7 +208,7 @@ mais informações, consulte [ Visualizar o histórico de confirmação](#view_c
 
 3. Para revisar as mudanças de um arquivo, clique em **>**.
 
-  Se uma confirmação tiver introduzido uma mudança em uma linha, a linha original será sombreada rosa e a nova linha será sombreada verde. Da mesma forma, as linhas que foram incluídas por uma confirmação são verde sombreado e as linhas que foram removidas são rosa sombreado.
+  Se uma confirmação tiver introduzido uma mudança em uma linha, a linha original será sombreada rosa e a nova linha será sombreada verde.  Da mesma forma, as linhas que foram incluídas por uma confirmação são verde sombreado e as linhas que foram removidas são rosa sombreado.
   {: tip}
 
 ### Terminal do Git
@@ -233,7 +235,7 @@ mais informações, consulte [ Visualizar o histórico de confirmação](#view_c
   Ao modificar a última confirmação depois de enviá-la por push para um repositório remoto, você regravará o histórico de confirmação. Essa mudança pode causar falhas de confirmação e outros problemas para os outros contribuidores
 em seu projeto. Certifique-se de que você saiba o que está fazendo
 antes de modificar uma confirmação enviada por push para um repositório remoto.
-  {: tip}
+  {: important}
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}

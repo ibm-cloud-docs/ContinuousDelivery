@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -38,10 +40,10 @@ script a ser executado. Por exemplo, use as opções a seguir para executar uma 
 
 O nome da imagem do Docker em tarefas de imagem customizada do Docker é projetado para funcionar na mesma maneira que os nomes de imagem funcionam com a CLI do Docker. O formato de um nome de imagem do Docker é: `[repository][:][tag]`. Por exemplo, para `docker run maven:3.5.3-ibmjava`, o nome da imagem do Docker é `maven:3.5.3-ibmjava`, em que `maven` é o repositório e `3.5.3-ibmjava` é a tag. Não há restrições sobre o nome da imagem do Docker que pode ser usado; qualquer imagem do docker válida funciona.
 
-Se o campo **Nome da imagem do Docker** não estiver preenchido, a imagem base do pipeline padrão será usada.
+Se o campo **Nome da imagem do Docker** não estiver preenchido, a imagem base do pipeline padrão será usada. 
 {: tip}
 
-Por padrão, seu repositório no [Docker Hub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://hub.docker.com/){: new_window} é procurado. Se você usa outro registro do Docker, como o IBM Cloud Registry, é possível usar o nome DNS completo. Também é possível usar o nome completo para imagens no Docker Hub. Por exemplo, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
+Por padrão, seu repositório no [Docker Hub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://hub.docker.com/){: new_window} é procurado. Se você usar outro registro do Docker, como {{site.data.keyword.registrylong}}, será possível usar o nome completo do DNS. Também é possível usar o nome completo para imagens no Docker Hub. Por exemplo, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
 
 A `tag` para uma imagem do Docker é opcional. Se você não especificar uma tag, ela será configurada como `latest`, por padrão. Um valor padrão de `latest` é apenas um nome de tag que o proprietário do repositório deve gerenciar. Isso não significa que, cronologicamente, essa imagem do Docker é a imagem mais recente.
 
@@ -52,12 +54,12 @@ A `tag` para uma imagem do Docker é opcional. Se você não especificar uma tag
 
 Se você está usando um registro privado que requer autenticação, deve-se configurar duas propriedades do ambiente de estágio adicionais: `DOCKER_USERNAME` e `DOCKER_PASSWORD`. É possível usar uma propriedade segura para mascarar seu `DOCKER_PASSWORD`. Antes que sua imagem seja puxada, a tarefa de imagem customizada do Docker usa suas credenciais de nome de usuário e senha para concluir um `docker login`.
 
-Para a maioria dos registros, é possível usar o nome de usuário e a senha que foram fornecidos a você. Se você usa o IBM Cloud Registry para armazenar suas imagens privadas, deve-se usar uma chave API de plataforma para a autenticação. 
+Para a maioria dos registros, é possível usar o nome de usuário e a senha que foram fornecidos a você. Se você usa o {{site.data.keyword.registrylong_notm}} para armazenar suas imagens privadas, deve-se usar uma chave de API da plataforma para autenticação. 
 
-1. [Solicite uma chave API de plataforma ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/iam/#/apikeys){: new_window} e certifique-se de salvar a chave. 
+1. [Solicite uma chave de API da plataforma ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/iam/#/apikeys){: new_window} e certifique-se de salvar a chave. 
 1. Crie as duas propriedades do ambiente do estágio usando `iamapikey` para seu `DOCKER_USERNAME` e a Chave API da plataforma que você salvou para `DOCKER_PASSWORD`.
 
- ![Credenciais do IBM Cloud Registry](images/custom-image-private-repository.png)
+ ![Credenciais do {{site.data.keyword.registrylong_notm}}](images/custom-image-private-repository.png)
 
 
 ## Especificando o script

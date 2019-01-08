@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-15"
+lastupdated: "2018-12-7"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-15"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -28,8 +30,8 @@ O serviço de {{site.data.keyword.contdelivery_short}} suporta seus fluxos de tr
 
   Uma cadeia de ferramentas é um conjunto integrado de ferramentas que podem ser usadas para desenvolver, construir, implementar, testar e gerenciar aplicativos de forma colaborativa e tornar as operações repetíveis e mais fáceis de gerenciar. As cadeias de ferramentas podem incluir ferramentas de software livre, serviços do {{site.data.keyword.Bluemix_notm}}, como [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window} e ferramentas de terceiros, como GitHub, PagerDuty e Slack. 
   
-  O {{site.data.keyword.DRA_short}} está disponível somente na região Sul dos EUA.
-  {: tip}
+  O {{site.data.keyword.DRA_short}} está disponível nas regiões sul dos EUA, Reino Unido e Alemanha.
+  {: important}
 
  * Entregue continuamente usando pipelines [pipelines](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window} automatizados.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-5"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # {{site.data.keyword.gitrepos}}
@@ -20,8 +22,14 @@ lastupdated: "2018-8-2"
 Colabore com a sua equipe e gerencie seu código-fonte com um repositório (repo) Git e um rastreador de problemas que seja hospedado pela IBM e construído no [GitLab Community Edition ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://about.gitlab.com/){:new_window}.
 {: shortdesc}
 
-A integração de ferramenta {{site.data.keyword.gitrepos}} suporta que as equipes gerenciem código e colaborem de várias maneiras:
-   * Gerenciar repositórios Git por meio de controles de acesso de baixa granularidade que mantém o código seguro
+Convide somente pessoas com as quais você tem um relacionamento pessoal ou de negócio para colaborar em um projeto. Os usuários que usam um convite para um repositório Git para propósitos diferentes de colaborar em um projeto podem ter seu acesso ao serviço suspenso ou revogado.
+{: important}
+
+Não armazene dados regulados em arquivos ou problemas dentro de repositórios Git. Os procedimentos para os dados regulados não estão atualmente em vigor.
+{: tip}
+
+A integração da ferramenta {{site.data.keyword.gitrepos}} suporta que as equipes gerenciem código e colaborem de várias maneiras:
+   * Gerenciar o repositório Git por meio de controles de acesso de baixa granularidade que mantêm o código seguro
    * Revisar o código e aprimorar a colaboração por meio de solicitações de mesclagem
    * Rastrear problemas e compartilhar ideias por meio do rastreador de problemas
    * Documentar projetos no sistema de wikis

@@ -41,7 +41,7 @@ A tabela a seguir detalha as ações que são mapeadas para funções de gerenci
 
 | Função de gerenciamento da plataforma | Descrição das acções | Ações de exemplo|
 |:-----------------|:-----------------|:-----------------|
-| Visualizador, Operador | Visualize instâncias do serviço do  {{site.data.keyword.contdelivery_short}} . | <ul><li>Clique em uma instância do serviço {{site.data.keyword.contdelivery_short}} para abrir o seu painel.</li>|
+| Visualizador, Operador | Visualize instâncias do serviço do  {{site.data.keyword.contdelivery_short}} . | <ul><li>Clique em uma instância do serviço {{site.data.keyword.contdelivery_short}} para abrir o seu painel.</li>|</ul>
 | Editor, Administrador | Crie, visualize, atualize, modifique o plano e exclua instâncias do serviço {{site.data.keyword.contdelivery_short}}. |<ul><li>Provisione uma instância do {{site.data.keyword.contdelivery_short}} em um grupo de recursos.</li><li>Exclua uma instância do {{site.data.keyword.contdelivery_short}} de um grupo de recursos.</li><li>Mude um plano de instância do {{site.data.keyword.contdelivery_short}} de Lite para Professional.</li></ul> |
 | Administrador | Atualize a lista de Usuários autorizados.| <ul><li>Inclua um usuário na lista de Usuários autorizados.</li><li>Remova um usuário da lista de Usuários autorizados.</li></ul> |
 {: caption="Tabela 1. Funções e ações do usuário do IAM" caption-side="top"}
@@ -54,7 +54,7 @@ A tabela a seguir detalha as ações que são mapeadas para funções de gerenci
 | atualizar | Atualize uma instância do serviço {{site.data.keyword.contdelivery_short}} em um grupo de recursos. Por exemplo, renomeie a instância de serviço. | Administrador, Editor |
 | update_plan | Mude o plano para a instância do serviço {{site.data.keyword.contdelivery_short}} em um grupo de recursos. | Administrador, Editor |
 | excluir | Exclua uma instância do serviço {{site.data.keyword.contdelivery_short}} de um grupo de recursos. | Administrador, Editor |
-| recuperar |Visualize uma instância do serviço {{site.data.keyword.contdelivery_short}} em um grupo de recursos. | Administrador, Editor, Operador, Visualizador |
+| recuperar | Visualize uma instância do serviço {{site.data.keyword.contdelivery_short}} em um grupo de recursos. | Administrador, Editor, Operador, Visualizador |
 | add-auth-users | Inclua entradas na lista de Usuários autorizados na guia Gerenciar dentro da instância do serviço {{site.data.keyword.contdelivery_short}}. | Administrador, Transcritor, Gerente |
 | remove-auth-users | Remova as entradas da lista de Usuários autorizados na guia Gerenciar dentro da instância do serviço {{site.data.keyword.contdelivery_short}}. | Administrador, Transcritor, Gerente |
 {: caption="Tabela 2. Operações e Operações de Serviço" caption-side="top"}
