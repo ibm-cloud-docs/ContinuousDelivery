@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Gestione dei dati personali in Continuous Delivery
@@ -30,7 +32,7 @@ I dati personali sono le informazioni correlate a una persona fisica o che la id
  * [{{site.data.keyword.DRA_full}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
 IBM non gestisce i dati nel servizio {{site.data.keyword.contdelivery_short}}. Prima di uscire dal servizio {{site.data.keyword.contdelivery_short}} che si trova in {{site.data.keyword.Bluemix_notm}} Pubblico, devi eliminare i tuoi dati.
-{: tip}
+{: important}
 
 {{site.data.keyword.contdelivery_short}} fornisce le autorizzazioni appropriate per gestire i dati all'interno di un'organizzazione Cloud Foundry o di un gruppo di risorse. La tua azienda potrebbe avere delle politiche che limitano queste autorizzazioni. Se non disponi delle le autorizzazioni appropriate, contatta l'amministratore del tuo account {{site.data.keyword.Bluemix_notm}}.
 
@@ -99,7 +101,7 @@ Se vuoi eliminare tutti i dati personali da {{site.data.keyword.contdelivery_sho
 {{site.data.keyword.webide}} fornisce uno spazio di lavoro personale nel cloud. Puoi utilizzare {{site.data.keyword.webide}} per clonare repository Git e modificare file. Sei il proprietario del tuo spazio di lavoro {{site.data.keyword.webide}}; non è condiviso da altri account.
 
 Prima di eliminare i tuoi dati {{site.data.keyword.webide}}, sarebbe opportuno esportare il tuo lavoro. Dopo che li hai eliminati, i tuoi spazi di lavoro vengono rimossi da {{site.data.keyword.contdelivery_short}} e vengono eliminati tutti i file.
-{: tip}
+{: important}
 
 ###Esportazione di uno spazio di lavoro Web IDE
 
@@ -118,7 +120,7 @@ Per eliminare i tuoi spazi di lavoro {{site.data.keyword.webide}}, compresi tutt
 1. Fai clic su **Delete** per rimuovere tutti i tuoi dati da {{site.data.keyword.webide}}.
 
 {{site.data.keyword.webide}} utilizza un meccanismo SSO (single sign-on). La prima volta che accedi a questa integrazione dello strumento, viene creato un account {{site.data.keyword.webide}} corrispondente ma nascosto per il tuo account IBM Cloud. Dopo che hai eliminato tutti i tuoi spazi di lavoro, non accedere a {{site.data.keyword.webide}}. Se accedi nuovamente a {{site.data.keyword.webide}}, viene creato automaticamente un nuovo account che devi eliminare.
-{: tip}
+{: important}
 
 ## Modifica, esportazione ed eliminazione di repository Git e dati di traccia dei problemi
 {: #managing_grit_data}
@@ -158,7 +160,7 @@ Dopo che il tuo account è stato eliminato, del contenuto continuerà a esistere
 {: tip}
 
 {{site.data.keyword.gitrepos}} utilizza un meccanismo SSO (single sign-on) che crea automaticamente un account Git corrispondente per il tuo account IBM Cloud la prima volta che accedi all'integrazione dello strumento. Dopo che hai eliminato il tuo account, non accedere a {{site.data.keyword.gitrepos}}. Se accedi nuovamente a {{site.data.keyword.gitrepos}}, viene creato automaticamente un nuovo account che devi eliminare.
-{: tip}
+{: important}
 
 ## Modifica, esportazione ed eliminazione dei dati delle pipeline Continuous Delivery
 {: #managing_pipeline_data}
@@ -168,7 +170,7 @@ Le pipeline {{site.data.keyword.contdelivery_short}} eseguono script per creare,
 Assicurati di coordinarti con gli altri membri del tuo team prima di eliminare oggetti condivisi o pipeline. L'eliminazione di una fase potrebbe causare la mancata riuscita di una pipeline.
 
 Una pipeline non può esistere al di fuori di una toolchain. Se elimini una toolchain, vengono eliminate anche tutte le pipeline ad essa associate. Se intendi eliminare un'intera toolchain, non hai bisogno di eliminare ciascuna pipeline singolarmente. Passa invece direttamente alla sezione "Modifica ed eliminazione delle toolchain e delle integrazioni dello strumento" e attieniti alla procedura per eliminare una toolchain.
-{: tip}
+{: important}
 
 Le fasi della pipeline possono includere dati personali quali le credenziali sotto forma di proprietà dell'ambiente e una definizione della pipeline che mostra il suo stato corrente. Le fasi possono anche includere degli script all'interno di lavori che vuoi modificare o eliminare, così come risorse utente e log delle esecuzione della pipeline più recenti che vuoi esportare. Utilizza le azioni Configure Stage o Delete Stage per modificare o eliminare una fase. Utilizza l'azione di scaricamento per esportare le risorse utente o i log da una fase.
 

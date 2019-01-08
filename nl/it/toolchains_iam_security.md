@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-8-2"
 {:download: .download}
 
 
-# Gestione dell'accesso utente alle toolchain con Identity and Access Management 
+# Gestione dell'accesso utente alle toolchain con Identity and Access Management
 
 L'accesso alle toolchain nei gruppi di risorse per gli utenti nel tuo account viene controllato da {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). 
 
@@ -28,7 +28,7 @@ L'accesso alle toolchain nei gruppi di risorse per gli utenti nel tuo account vi
 
 Ogni utente che accede alle toolchain nel tuo account deve avere assegnata una politica di accesso con un ruolo utente IAM definito. Tale politica determina quali azioni possono essere effettuate dall'utente all'interno del contesto del servizio o dell'istanza che selezioni. Le azioni consentite sono personalizzate e definite dal servizio {{site.data.keyword.Bluemix_notm}} come operazioni che è consentito eseguire sul servizio. Le azioni vengono poi associate ai ruoli utente IAM.
 
-Le politiche consentono di concedere l'accesso a diversi livelli. Alcune delle opzioni includono quanto segue: 
+Le politiche consentono di concedere l'accesso a diversi livelli, tra cui: 
 
 * Accesso a tutte le istanze del servizio nel tuo account
 * Accesso a una singola istanza del servizio nel tuo account

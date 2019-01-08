@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -21,21 +23,25 @@ lastupdated: "2018-8-2"
 {:shortdesc}
 
 Le tue autorizzazioni per visualizzare, modificare o eseguire una pipeline sono basate sul controllo dell'accesso per la toolchain che gestisce la pipeline. Per ulteriori informazioni sul controllo dell'accesso per le toolchain, fai riferimento a [Gestione dell'accesso alle toolchain nei gruppi di risorse](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} e [Gestione dell'accesso alle toolchain nelle organizzazioni Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
-{: tip}
+{: important}
+
+Puoi specificare gli script da eseguire in molti dei tipi di lavoro forniti dalla pipeline, dandoti un controllo diretto su quello che viene eseguito dal lavoro. Tali script vengono eseguiti in un'immagine Docker che contiene diversi strumenti di sviluppo standard, compresi gli strumenti necessari per interagire con i runtime {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni su quello che l'immagine Docker standard contiene, vedi [Risorse preinstallate](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}. Se il tuo lavoro richiede degli strumenti di sviluppo che non sono disponibili nell'immagine standard, o se hai bisogno di versioni differenti di tali strumenti, puoi utilizzare un'immagine personalizzata. Per ulteriori informazioni sulle immagini personalizzate, vedi [Utilizzo di immagini docker personalizzate](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}.
+
+Quando la pipeline esegue gli script, le proprietà che descrivono il contesto in cui il lavoro è in esecuzione vengono passate allo script utilizzando le variabili di ambiente. Ad esempio, l'URL del repository che è l'input alla fase, il nome della fase e il lavoro che si sta eseguendo, i parametri specificati dal tipo di lavoro e così via. Per visualizzare un elenco delle variabili di ambiente disponibili, vedi [Risorse preinstallate](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}. 
+
+Puoi definire le proprietà sia a livello di pipeline che a livello di fase. Le proprietà di pipeline vengono condivise in tutte le fasi e tutti i lavori in una pipeline. Le proprietà di fase sono univoche per una specifica fase e condivise in tutti i lavori in tale fase. Per ulteriori informazioni sulle proprietà, vedi [Proprietà dell'ambiente (variabili di ambiente)](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties).
 
 ## Fasi
 {: #deliverypipeline_stages}
 
-Le fasi organizzano l'input e i lavori e come il tuo codice viene generato, distribuito e verificato. Le fasi accettano l'input dai repository di controllo dell'origine (repository SCM) o dai lavori di creazione (risorse utente di creazione) in altri fasi. Quando crei la tua prima fase, vengono ti configurate le impostazioni predefinite nella scheda **INPUT**.
+Le fasi organizzano l'input e i lavori e come il tuo codice viene generato, distribuito e verificato. Le fasi accettano l'input dai repository di controllo dell'origine (repository SCM) o dai lavori di build in altre fasi. Per i repository SCM, l'input è il contenuto di uno specifico ramo nel repository; per i lavori di build, l'input consiste nelle risorse utente prodotte dal lavoro. Quando crei la tua prima fase, la scheda **INPUT** contiene le impostazioni predefinite.
 
-L'input di una fase viene trasmesso ai lavori contenuti nella fase e ad ogni lavoro viene assegnato un contenitore vuoto in cui essere eseguito.
-
-Il lavori in una fase non possono trasmettere le risorse utente tra di loro. Poiché non puoi passare le risorse utente tra i lavori, devi disporre di una fase di build separata da una fase di distribuzione, se la tua fase di distribuzione utilizzerà le risorse utente della fase di build.
+Quando una fase viene eseguita, il suo input viene passato a ciascuno dei lavori in essa contenuti. A ogni lavoro viene assegnato un contenitore pulito in cui essere eseguito. Di conseguenza, i lavori all'interno di una fase non possono passarsi le risorse utente tra di loro. Per passare le risorse utente tra i lavori, separa i lavori in due fasi e usa l'output dal lavoro nella prima fase come input alla seconda fase.
 {: tip}
 
-Puoi definire le proprietà dell'ambiente della fase che possono essere utilizzate in tutti i lavori. Ad esempio, puoi definire la proprietà `TEST_URL` che passa un singolo URL per distribuire e testare i lavori in una singola fase. Il lavoro di distribuzione sarà distribuito a tale URL e il lavoro di verifica verificherà l'applicazione in esecuzione in tale URL.
+Analogamente a come puoi definire le proprietà della pipeline, puoi anche definire le proprietà di fase per l'utilizzo in tutti i lavori in una specifica fase. Ad esempio, puoi definire una proprietà `TEST_URL` che passa un URL ai lavori di distribuzione e test in una fase. Il lavoro di distribuzione esegue la distribuzione a tale URL e il lavoro di test esegue un test dell'applicazione in esecuzione a tale URL. Le proprietà di fase vengono passate anche agli script di lavoro utilizzando le variabili di ambiente. Se qualche proprietà è definita sia al livello di pipeline che al livello di fase, viene utilizzato il valore della proprietà di fase.
 
-Per impostazione predefinita, in una fase le creazioni e le distribuzioni vengono eseguite automaticamente ogni volta che si distribuiscono delle modifiche al repository SCM di un progetto. Le fasi e i lavori vengono eseguiti serialmente; abilitano il controllo del flusso per il tuo lavoro. Ad esempio, puoi posizionare una fase di verifica prima di una fase di distribuzione. Se le verifiche nella fase di verifica hanno esito negativo, la fase di distribuzione non sarà eseguita.
+Per impostazione predefinita, in una fase le creazioni e le distribuzioni vengono eseguite automaticamente ogni volta che si distribuiscono delle modifiche al repository SCM di un progetto. Le fasi e i lavori vengono eseguiti serialmente; abilitano il controllo del flusso per il tuo lavoro. Ad esempio, puoi posizionare una fase di verifica prima di una fase di distribuzione. Se i test nella fase di test hanno esito negativo, la fase di distribuzione non viene eseguita.
 
 Potresti desiderare di avere maggiore controllo su una fase specifica. Se non desideri che una fase venga eseguita ogni volta che viene effettuata una modifica nel relativo input, puoi disabilitare tale funzionalità. Nella scheda **INPUT**, nella sezione Stage Trigger, fai clic su **Run jobs only when this stage is run manually**.
 
@@ -45,21 +51,27 @@ Potresti desiderare di avere maggiore controllo su una fase specifica. Se non de
 ### Fase di build
 {: #build_stage}
 
-<!-- Need the Pipeline team to fill out what each builder does and possible add an example -->
-La fase di build specifica un **tipo Builder** per indicare come creare le risorse utente.  Sono disponibili i seguenti tipi di Builder:
+La fase di build specifica un **tipo Builder** per indicare come creare le risorse utente.  
 
-1. **Simple** - se utilizzi il tipo di builder **Simple**, il codice non viene compilato o creato; invece viene inserito in un pacchetto e reso disponibile per le fasi future.
-2. **Ant**
-3. **Container Registry**
-4. **Gradle**
-5. **Gradle (Artifactory, Nexus o SonarQube)**
-6. **Grunt**
-7. **IBM Globalization Pipeline**
-8. **Maven**
-9. **Maven (Artifactory, Nexus o SonarQube)**
-10. **npm**
-11. **npm (Artifactory o Nexus)**
-12. **Script di shell**
+Molti dei campi disponibili nei lavori di build sono comuni in più tipi di Builder.
+{: tip}
+
+Sono disponibili i seguenti tipi di Builder:
+
+* **Simple** - i lavori che utilizzano il tipo di builder **Simple** prendono l'input della fase corrente e, senza modificarlo, ne eseguono l'archiviazione per un utilizzo da parte delle future fasi. Di norma, il tipo di builder **Simple** è utile solo quando l'input della fase proviene da un repository SCM.
+* **Ant** - utilizza questo tipo di builder per utilizzare i file Ant Apache per gestire il lavoro di build.
+  * **Build script** - questo tipo di builder può essere qualsiasi script di build valido. Per impostazione predefinita, questo tipo di builder è impostato su 'ant'.
+  * **Working directory** - specifica la directory dove viene eseguito lo script.
+  * **Build archive directory** - Specifica la directory che contiene l'output del lavoro da archiviare per un utilizzo da parte di una fase successiva.
+  * **Enable test report** - Seleziona questa casella di spunta per specificare che il lavoro di build esegue dei test che producono file di risultato in formato XML JUnit. Un report basato sui file dei risultati viene visualizzato nella scheda Test della pagina Job Results. Se un qualsiasi test ha esito negativo, il lavoro viene contrassegnato come non riuscito.
+  * **Enable code coverage report** - seleziona questa casella di spunta per visualizzare ulteriori campi che puoi utilizzare per il report di copertura del codice. Puoi specificare lo strumento di esecuzione della copertura (come Istanbul, JaCoCo o Cobertura), l'ubicazione del file di risultato della copertura e la directory del risultato della copertura, relativa alla directory di lavoro.
+* **Container Registry**
+* **Gradle (Artifactory, Nexus o SonarQube)**
+* **Grunt**
+* **IBM Globalization Pipeline**
+* **Maven (Artifactory, Nexus o SonarQube)**
+* **npm (Artifactory o Nexus)**
+* **Script di shell**
 
 ### Fase di distribuzione
 La fase di distribuzione specifica l'input da una fase di build.  I lavori nella fase di distribuzione specificano un **tipo Deployer**.  Sono disponibili i seguenti tipi Deployer:
@@ -129,22 +141,54 @@ Se le tue verifiche producono dei file dei risultati nel formato XML JUnit, vien
 ## Proprietà dell'ambiente (variabili di ambiente)
 {: #environment_properties}
 
-Puoi includere le proprietà dell'ambiente nei comandi shell di un lavoro. Le proprietà forniscono l'accesso alle informazioni sull'ambiente di esecuzione del lavoro. Per ulteriori informazioni, consulta [Risorse e proprietà dell'ambiente per il servizio {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).  Le proprietà dell'ambiente possono essere passate tra i lavori nella stessa fase esportando le proprietà.  Per passare le proprietà dell'ambiente tra le fasi, crea un file `build.properties` nel repository e fai quindi in modo che la fase successiva esegua `build.properties`.  Ad esempio, il tuo lavoro di build può includere questo comando nello script di build:
+Una serie di proprietà di ambiente predefinite fornisce l'accesso alle informazioni sull'ambiente di esecuzione del lavoro. Per un elenco completo delle proprietà dell'ambiente predefinite, vedi [Risorse e proprietà dell'ambiente](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
 
-    `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
+Puoi anche definire delle tue proprietà dell'ambiente. Ad esempio, puoi definire una proprietà `API_KEY` che passa una chiave API che viene utilizzata per accedere alle risorse {{site.data.keyword.Bluemix_notm}} da tutti gli script nella pipeline.
 
-    Tutti i lavori iniziano eseguendo il file `build.properties`, se esiste.
+Puoi aggiungere i seguenti tipi di proprietà:
+
+* **Text**: una chiave della proprietà con un valore a singola riga.
+* **Text Area**: una chiave della proprietà con un valore a più righe.
+* **Secure**: una chiave della proprietà con un valore a singola riga che è protetta con una crittografia AES-128. Il valore viene visualizzato come degli asterischi.
+* **Proprietà**: un file nel repository del progetto. Questo file può contenere più proprietà. Ogni proprietà deve essere sulla propria riga. Per coppie di valore-chiave separate, utilizzare il segno uguale (=). Racchiudi tutti i valori stringa tra virgolette. Ad esempio, `MY_STRING="SOME STRING VALUE"`.
+
+Puoi esaminare le proprietà dell'ambiente per un lavoro della pipeline eseguendo il comando `env` nello script del lavoro.
+{:tip}
+
+### Proprietà della pipeline
+Per definire le proprietà della pipeline, dal menu overflow nella pagina Pipeline, seleziona **Configure Pipeline**.
+
+![Menu overflow della pipeline](images/OverflowMenu.png)
+
+Dalla scheda **ENVIRONMENT PROPERTIES** nella pagina Pipeline configuration. imposta le proprietà dell'ambiente a livello della pipeline.
+
+![Pagina properties della pipeline](images/PipelineProperties.png)
+
+### Proprietà della fase
+Per definire le proprietà della fase, apri la pagina Stage configuration e fai clic sulla scheda **ENVIRONMENT PROPERTIES**.
+
+![Pagina properties della fase](images/StageProperties.png)
+
+Puoi anche passare le variabili di ambiente tra i lavori nella stessa fase esportando le proprietà. Ad esempio, puoi includere il seguente comando per utilizzare la proprietà `$API_KEY` in un altro lavoro all'interno della fase: `export API_KEY=<insert API key here>`
+{:tip}
+
+### Proprietà calcolate
+Puoi calcolare i valori delle proprietà di ambiente che sono condivisi nelle fasi creando un file `build.properties` mentre la fase è in esecuzione e lasciare quindi che la fase successiva esegua il file. Ad esempio, il tuo lavoro di build può includere il seguente comando nello script di build:
+
+  `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
+
+Tutti i lavori iniziano eseguendo il file `build.properties`, se esiste.
 
 ## Creazione e utilizzo di risorse utente
 {: #artifacts}
 
-I lavori di build recuperano automaticamente il contenuto nella cartella corrente dove viene eseguito lo script utente. Se non ti serve tutto il contenuto del repository git per la successiva distribuzione, è preferibile che configuri una directory di output esplicita e che copi o crei lì le risorse utente pertinenti.  Gli script del lavoro vengono eseguiti nel risultato della build (directory di output).
+I lavori di build recuperano automaticamente il contenuto nella cartella corrente dove viene eseguito lo script utente. Se non ti serve tutto il contenuto del repository git per la successiva distribuzione, è preferibile che configuri una directory di output esplicita e che quindi copi o crei lì le risorse utente pertinenti.  Gli script del lavoro vengono eseguiti nel risultato della build (directory di output).
 
-I lavori di distribuzione che eseguono la distribuzione a Cloud Foundry devono specificare la chiave API della piattaforma di un utente per cui tali lavori di autorità sono eseguiti e la regione, l'organizzazione e lo spazio di destinazione della distribuzione delle risorse utente. Se sono necessari dei servizi aggiuntivi per eseguire la tua applicazione, devi specificarli nel file `manifest.yml`.
+I lavori che eseguono la distribuzione a Cloud Foundry devono specificare la chiave API della piattaforma di un utente per cui tali lavori di autorità sono eseguiti e la regione, l'organizzazione e lo spazio dove distribuire le risorse utente. Se sono necessari ulteriori servizi per eseguire la tua applicazione, devi specificarli nel file `manifest.yml`.
 
-I lavori di distribuzione che distribuiscono {{site.data.keyword.containerlong_notm}} per l'esecuzione in un cluster Kubernetes hanno bisogno di specificare la chiave API della piattaforma di un utente per cui tali lavori di autorità sono eseguiti, un Dockerfile e facoltativamente un grafico Helm.  
+I lavori di distribuzione che eseguono la distribuzione a {{site.data.keyword.containerlong_notm}} hanno bisogno di specificare la chiave API della piattaforma di un utente per cui tali lavori di autorità sono eseguiti, un Dockerfile e, facoltativamente, un grafico Helm.  
 
-Lo script del lavoro viene eseguito dopo che il lavoro ha eseguito l'accesso all'ambiente di destinazione utilizzando la chiave API della piattaforma assegnato ad esso (in modo che puoi eseguire i comandi `cf push` o `kubectl` nello script).
+Lo script del lavoro viene eseguito dopo che il lavoro ha eseguito l'accesso all'ambiente di destinazione utilizzando la chiave API della piattaforma assegnata ad esso (in modo che tu possa eseguire i comandi `cf push` o `kubectl` nello script).
 
 ## Una pipeline di esempio
 {: #deliverypipeline_example}

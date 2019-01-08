@@ -41,7 +41,7 @@ La seguente tabella illustra le azioni che sono associate ai ruoli di gestione d
 
 | Ruolo di gestione della piattaforma | Descrizione delle azioni | Azioni di esempio|
 |:-----------------|:-----------------|:-----------------|
-| Visualizzatore, Operatore | Visualizza le istanze del servizio {{site.data.keyword.contdelivery_short}}. | <ul><li>Fa clic su un'istanza del servizio {{site.data.keyword.contdelivery_short}} per aprirne il dashboard.</li>|
+| Visualizzatore, Operatore | Visualizza le istanze del servizio {{site.data.keyword.contdelivery_short}}. | <ul><li>Fa clic su un'istanza del servizio {{site.data.keyword.contdelivery_short}} per aprirne il dashboard.</li>|</ul>
 | Editor, Amministratore | Crea, visualizza, aggiorna, modifica il piano ed elimina le istanze del servizio {{site.data.keyword.contdelivery_short}}. |<ul><li>Esegui il provisioning di un'istanza di {{site.data.keyword.contdelivery_short}} in un gruppo di risorse.</li><li>Elimina un'istanza di {{site.data.keyword.contdelivery_short}} da un gruppo di risorse.</li><li>Modifica un piano dell'istanza di {{site.data.keyword.contdelivery_short}} da Lite a Professional.</li></ul> |
 | Amministratore | Aggiorna l'elenco degli utenti autorizzati.| <ul><li>Aggiunge un utente all'elenco di utenti autorizzati.</li><li>Rimuove un utente dall'elenco di utenti autorizzati.</li></ul> |
 {: caption="Tabella 1. Azioni e ruoli utente IAM" caption-side="top"}

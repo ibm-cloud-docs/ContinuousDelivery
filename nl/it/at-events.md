@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-6-22"
+lastupdated: "2018-10-10"
 
 ---
 
@@ -17,10 +17,10 @@ lastupdated: "2018-6-22"
 
 <!-- Name your file `at-events.md` and include it in the Reference nav group in your toc file. -->
 
-# Eventi {{site.data.keyword.cloudaccesstrailshort}} 
+# Eventi {{site.data.keyword.cloudaccesstrailshort}}
 {: #at_events}
 
-Utilizza il servizio {{site.data.keyword.cloudaccesstrailfull}} per tenere traccia di come gli utenti e le applicazioni interagiscono con il servizio {{site.data.keyword.contdelivery_short}} in {{site.data.keyword.Bluemix}}.
+Utilizza il servizio {{site.data.keyword.cloudaccesstrailfull}} per tenere traccia di come gli utenti e le applicazioni interagiscono con il servizio {{site.data.keyword.contdelivery_short}} in {{site.data.keyword.Bluemix}}. 
 {: shortdesc}
 
 Il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} registra le attivit√† avviate dall'utente che modificano lo stato di un servizio in {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
@@ -30,17 +30,17 @@ Il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} registra le attivit√
 ## Elenco di eventi
 {: #events}
 
-La seguente tabella elenca le azioni che generano un evento: 
+La seguente tabella elenca le azioni che generano un evento:
 
 | Azione | Descrizione | 
 |:-----------------|:-----------------|
-| Crea toolchain | Crea una toolchain | 
-| Elimina toolchain | Elimina una toolchain |
-| Crea strumento | Crea un'integrazione dello strumento |
-| Elimina strumento | Elimina un'integrazione dello strumento |
-{: caption="Tabella 1. Azioni che generano eventi " caption-side="top"}
+| continuous-delivery.toolchain.create | Crea una toolchain | 
+| continuous-delivery.toolchain.delete | Elimina una toolchain |
+| toolchain.tool-instance.deploy | Crea un'integrazione dello strumento |
+| toolchain.tool-instance.undeploy | Elimina un'integrazione dello strumento |
+{: caption="Tabella 1. Azioni che generano eventi" caption-side="top"}
 
-## Dove visualizzare gli eventi 
+## Dove visualizzare gli eventi
 {: #ui}
 
 <!-- Option 2: Add the following sentence if your service sends events to the account domain. -->

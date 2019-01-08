@@ -2,20 +2,23 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-12-6"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:codeblock:.codeblock}
 
 
 # Come ottenere aiuto e supporto per {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-Il team {{site.data.keyword.contdelivery_full}} monitora attivamente il forum developerWorks per rilevare eventuali domande sulle toolchain e sul servizio {{site.data.keyword.contdelivery_short}}. Per fare una domanda nel forum, fai clic sul pulsante **Get help in the forum** ![Pulsante per ottenere assistenza nel forum](images/get_help_in_the_forum.png) in fondo alle pagine di {{site.data.keyword.contdelivery_short}} e toolchain.
+Il team {{site.data.keyword.contdelivery_full}} monitora attivamente il forum developerWorks per rilevare eventuali domande sulle toolchain e sul servizio {{site.data.keyword.contdelivery_short}}. Per fare una domanda nel forum, nelle pagine di toolchain e {{site.data.keyword.contdelivery_short}}, fai clic su **Get help in the forum** ![Pulsante **Get help in the forum**](images/get_help_in_the_forum.png).
 
 <table>
 <tr>
@@ -47,7 +50,7 @@ Se hai riscontrato problemi più gravi con il servizio {{site.data.keyword.contd
 1. Dalla barra del menu, fai clic su **Supporto** e quindi su **Aggiungi ticket**.
 1. Completa il modulo per indicare di quale tipo di supporto hai bisogno.
 
-Per ulteriori informazioni su come aprire un ticket di supporto {{site.data.keyword.Bluemix_notm}} IBM o sui livelli di supporto e sulla gravità dei ticket, consulta [Come contattare il supporto](https://console.bluemix.net/docs/support/index.html#contacting-support).
+Per ulteriori informazioni su come aprire un ticket di supporto {{site.data.keyword.Bluemix_notm}} IBM o sui livelli di supporto e sulla gravità dei ticket, consulta [Come contattare il supporto](https://cloud.ibm.com/docs/support/index.html#contacting-support).
 
 
 ## Supporto per {{site.data.keyword.Bluemix_notm}}

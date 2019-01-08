@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -34,10 +34,10 @@ Puoi gestire e lavorare con il tuo codice sorgente in un repository GitHub, GitH
 | GitHub pubblico (github.com) | Il token di accesso personale non è obbligatorio, ma puoi configurarne uno e utilizzarlo | Nome utente e password GitHub o nome utente e token di accesso personale GitHub oppure solo token di accesso personale come nome utente | [Configura una chiave SSH GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
 | GitHub Enterprise | [Token di accesso personale](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | Nome utente di GitHub Enterprise (non il tuo ID IBM) e token di accesso personale | [Configura la chiave SSH GitHub Enterprise](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
 
-Se preferisci usare SSH, puoi riutilizzare una singola chiave in tutti i server Git. Crea o individua la tua chiave e configurala in ogni server, come descritto nei precedenti link. Se crei la tua chiave con una passphrase, ti verrà richiesto di immettere questa passphrase quando utilizzi la chiave.
+Se preferisci usare SSH, puoi riutilizzare una singola chiave in tutti i server Git. Crea o individua la tua chiave e configurala in ogni server, come descritto nei precedenti link. Se crei la tua chiave con una passphrase, ti viene richiesto di immettere questa passphrase quando utilizzi la chiave.
 {: tip}
 
-2. Se hai intenzione di utilizzare la riga di comando Git, procedi come segue:
+2. Se utilizzerai la riga di comando Git, completa la seguente procedura:
 
     a. Controlla se Git è installato. In una riga di comandi, immetti `git version`. Se Git è installato, viene visualizzato il numero di versione e puoi iniziare.
 
@@ -51,11 +51,11 @@ Se preferisci usare SSH, puoi riutilizzare una singola chiave in tutti i server 
 
 Crea una copia locale dei file di progetto clonando il repository Git in modo da poter accedere ai contenuti del tuo repository al di fuori di Web IDE utilizzando un qualsiasi strumento desktop.
 
-1. Dalla pagina Panoramica della tua toolchain, fai clic sulla scheda del repository che vuoi clonare.
+1. Dalla pagina Overview della tua toolchain, fai clic sulla scheda del repository che vuoi clonare.
 
 2. Recupera l'URL del repository:
 
-   a. In GitHub, fai clic su **Clona o scarica**. Per utilizzare HTTPS, seleziona **Usa HTTPS**.  Per utilizzare, SSH, fai clic su **Usa SSH**. Fai clic sull'icona degli appunti per copiare l'URL.
+   a. In GitHub, fai clic su **Clone or download**. Per utilizzare HTTPS, seleziona **Use HTTPS**.  Per utilizzare, SSH, fai clic su **Use SSH**. Fai clic sull'icona degli appunti per copiare l'URL.
 
    b. In Git Repos and Issue Tracking, seleziona **HTTPS** o **SSH** e copia l'URL nel campo.
 

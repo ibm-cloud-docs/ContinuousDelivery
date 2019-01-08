@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-15"
+lastupdated: "2018-12-7"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-15"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -27,8 +29,8 @@ Il servizio {{site.data.keyword.contdelivery_short}} supporta i tuoi flussi di l
 
   Una toolchain è una serie di strumenti integrata che puoi utilizzare per sviluppare, creare, distribuire, verificare e gestire in modo collaborativo le applicazioni e per rendere le operazioni ripetibili e più facili da gestire. Le toolchain possono includere degli strumenti open source, servizi {{site.data.keyword.Bluemix_notm}}, quali[{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window}, e strumenti di terze parti, quali GitHub, PagerDuty e Slack. 
   
-  {{site.data.keyword.DRA_short}} è disponibile solo nella regione Stati Uniti Sud.
-  {: tip}
+  {{site.data.keyword.DRA_short}} è disponibile nelle regioni Stati Uniti Sud, Regno Unito e Germania.
+  {: important}
 
  * Fornitura continua mediante [pipeline](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window} automatizzate.
 

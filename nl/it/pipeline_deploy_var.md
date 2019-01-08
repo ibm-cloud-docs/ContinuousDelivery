@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-10-9"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,20 +22,6 @@ lastupdated: "2018-8-2"
 # Risorse e proprietà dell'ambiente
 {: #deliverypipeline_environment}
 
-Puoi utilizzare le proprietà dell'ambiente e le risorse preinstallate per interagire con la funzionalità della pipeline di {{site.data.keyword.contdelivery_full}}. Ad esempio, puoi incorporarle in uno script del lavoro o in un comando di verifica.
-{:shortdesc}
-
-Puoi aggiungere le tue proprie proprietà dell'ambiente a una fase dalla relativa scheda **PROPRIETÀ AMBIENTE**. Le proprietà dell'ambiente sono disponibili per ogni lavoro in una fase.
-
-Puoi aggiungere quattro tipi di proprietà dalla scheda Proprietà ambiente:
-* **Testo**: una chiave della proprietà con un valore a singola riga.
-* **Area di testo**: una chiave della proprietà con un valore a più righe.
-* **Sicurezza**: una chiave della proprietà con un valore a singola riga. Il valore viene visualizzato come degli asterischi.
-* **Proprietà**: un file nel repository del progetto. Questo file può contenere più proprietà. Ogni proprietà deve essere sulla propria riga. Per coppie di valore-chiave separate, utilizzare il segno uguale (=). Racchiudi tutti i valori strnga tra virgolette. Ad esempio, MY_STRING="SOME STRING VALUE".
-
-Puoi esaminare le proprietà dell'ambiente per un lavoro della pipeline eseguendo il comando `env` nello script del lavoro.
-{:tip}
-
 Le seguenti proprietà e risorse sono disponibili per impostazione predefinita negli ambienti della pipeline.
 
 <!--##Contents
@@ -50,7 +36,7 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 ## Proprietà dell'ambiente
 {: #deliverypipeline_envprop}
 
-### Proprietà di ambito generale
+### Proprietà per scopi generici
 
 | Proprietà ambiente | Descrizione |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -74,6 +60,7 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 | PIPELINE_STAGE_INPUT_JOB_ID | L'ID del lavoro che è l'input della fase corrente. |
 | PIPELINE_STAGE_INPUT_REV | La revisione dell'input della fase corrente. |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | L'ID univoco per l'esecuzione della pipeline. |
+| PIPELINE_TRIGGERING_USER | L'utente corrente per il lavoro di pipeline|
 | TASK_ID | L'ID univoco per l'esecuzione corrente del lavoro. |
 | TMPDIR | Un'ubicazione della directory in cui i file temporanei vengono archiviati. |
 | WORKSPACE | Il percorso della directory di lavoro corrente. |
@@ -91,7 +78,7 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 | MAVEN_HOME | Il percorso a Apache Maven 3.2.1. |
 | NODE_HOME | Il percorso a Node.js 0.10.29. |
 
-Puoi utilizzare la versione 1.10+ di Apache Ant negli script della tua pipeline impostando `ANT_HOME` su `$ANT_JAVA8_HOME` e `JAVA_HOME` su `$JAVA8_HOME`.
+Per utilizzare Apache Ant 1.10+ negli script della tua pipeline, imposta `ANT_HOME` su `$ANT_JAVA8_HOME` e `JAVA_HOME` su `$JAVA8_HOME`.
 {: tip}
 
 ### Proprietà di distribuzione
@@ -129,13 +116,11 @@ Tutti i link sono alla directory home.
 |IBM Node |node |/opt/IBM/node |
 |Strumenti IBM Rational Team Concert&trade; SCM |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
 
-Le versioni a 64 bit di IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2 e 6.7.0 sono disponibili nell'ambiente della pipeline. Per scegliere una versione, utilizza il comando export.
+L'ambiente pipeline offre versioni a 64 bit di IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2 e 6.7.0. Per scegliere una versione, utilizza il comando export.
 
-Ad esempio, per utilizzare Node 0.12.7, immetti questo comando:
-`export PATH=/opt/IBM/node-v0.12/bin:$PATH`
+Ad esempio, per utilizzare Node 0.12.7, digita questo comando: `export PATH=/opt/IBM/node-v0.12/bin:$PATH`
 
-Per utilizzare Node 4.2.2, immetti questo comando:
-`export PATH=/opt/IBM/node-v4.2/bin:$PATH`
+Per utilizzare Node 4.2.2, digita questo comando: `export PATH=/opt/IBM/node-v4.2/bin:$PATH`
 
 ### Moduli Node
 

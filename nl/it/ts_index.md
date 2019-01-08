@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-7-19"
+lastupdated: "2018-12-6"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -11,6 +11,14 @@ lastupdated: "2018-7-19"
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:faq: data-hd-content-type='faq'}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:download: .download}
 
 # Domande frequenti (FAQ)
 {: #ts_cd}
@@ -21,13 +29,14 @@ Ottieni le risposte alle domande frequenti sull'utilizzo di {{site.data.keyword.
 
 ## Ho provato ad aggiungere l'integrazione dello strumento GitHub alla mia toolchain, perché l'integrazione dello strumento non è stata aggiunta?
 {: #cannot_authorize_github}
+{: faq}
 
 Se {{site.data.keyword.Bluemix_notm}} non è autorizzato ad accedere al tuo account GitHub, l'integrazione dello strumento non viene aggiunta alla tua toolchain.
 
 Se stai configurando l'integrazione dello strumento GitHub mentre stai creando la tua toolchain, attieniti alla seguente procedura per eseguire l'autorizzazione presso GitHub:
 
   1. Nella sezione delle integrazioni configurabili, fai clic su **GitHub**.
-  1. Se stai creando la toolchain in {{site.data.keyword.Bluemix_notm}} Pubblico e {{site.data.keyword.Bluemix_notm}} non è autorizzato ad accedere a GitHub, fai clic su **Autorizza** per andare al sito web GitHub.
+  1. Se stai creando la toolchain in {{site.data.keyword.Bluemix_notm}} Pubblico e {{site.data.keyword.Bluemix_notm}} non è autorizzato ad accedere a GitHub, fai clic su **Authorize** per andare al sito web GitHub.
   1. Se non disponi di una sessione GitHub attiva, ti viene richiesto di accedere. Fai clic su **Authorize Application** per consentire a {{site.data.keyword.Bluemix_notm}} di accedere al tuo account GitHub.
 
 Se già disponi di una toolchain, aggiorna la configurazione dell'integrazione dello strumento GitHub:
@@ -40,6 +49,7 @@ Se già disponi di una toolchain, aggiorna la configurazione dell'integrazione d
 
 ## Ho provato a creare una toolchain, perché sto ottenendo un errore?
 {: #cannot_create_toolchain}
+{: faq}
 
 Quando provi a creare una toolchain in un'organizzazione, se ottieni il seguente messaggio di errore, rimuovi una o più toolchain dalla tua organizzazione e quindi crea nuovamente la tua toolchain.
 
@@ -47,16 +57,22 @@ Quando provi a creare una toolchain in un'organizzazione, se ottieni il seguente
 
 
 ## Perché la pagina Toolchains mostra che il piano Lite del servizio {{site.data.keyword.contdelivery_short}} è stato superato?
+{: #plan_exceeded}
+{: faq}
 
 {{site.data.keyword.contdelivery_short}} offre due piani: Lite e Professional. Se hai il piano {{site.data.keyword.contdelivery_short}} Lite, puoi utilizzare le toolchain gratuitamente, fino ai limiti del piano. Il messaggio di errore indica che è stato superato uno o più limiti del piano Lite. Ad esempio, potresti aver superato il piano se hai troppi utenti autorizzati associati all'istanza del servizio {{site.data.keyword.contdelivery_short}} o se hai eseguito il numero massimo di lavori {{site.data.keyword.deliverypipeline}}. Per ulteriori informazioni sui termini del piano, consulta [Utilizzo e limitazioni del piano](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
 
 
 ## Ho creato una toolchain, perché la pagina Toolchains mostra che è necessario un servizio Continuous Delivery?
+{: #service_required_resource_group}
+{: faq}
 
 I termini del piano per l'istanza del servizio {{site.data.keyword.contdelivery_short}} che si trova nello stesso gruppo di risorse o organizzazione della toolchain gestisce l'utilizzo di alcune integrazioni dello strumento ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} e {{site.data.keyword.gitrepos}}) contenute nel servizio. Il messaggio di errore indica che il gruppo di risorse o l'organizzazione non contiene l'istanza richiesta del servizio {{site.data.keyword.contdelivery_short}}. Per ulteriori informazioni sui termini del piano, consulta [Utilizzo e limitazioni del piano](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
 
 
 ## Ho creato una toolchain in un'organizzazione Cloud Foundry, perché la pagina Toolchains mostra che è necessario un servizio Continuous Delivery?
+{: #service_required_cloud_foundry}
+{: faq}
 
 Quando crei una toolchain in un gruppo di risorse o un'organizzazione che non dispone di un'istanza del servizio {{site.data.keyword.contdelivery_short}}, la piattaforma della toolchain tenta di creare automaticamente un'istanza del servizio utilizzando il piano Lite. Il messaggio di errore indica che la piattaforma della toolchain non è riuscita a creare l'istanza del servizio.
 
@@ -67,6 +83,7 @@ Puoi creare la toolchain in un gruppo di risorse o in un'organizzazione che disp
 
 ## Ho provato a distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}}, perché sto ottenendo un errore?
 {: #org_outofmemory}
+{: faq}
 
 Quando provi a distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}}, se ottieni il seguente messaggio di errore, la quantità di memoria residua nella tua organizzazione è inferiore a quella richiesta dall'applicazione che vuoi distribuire.
 
@@ -99,6 +116,7 @@ Se utilizzi l'interfaccia riga di comando cf, completa la seguente procedura:
 
 ## Ho creato un'applicazione, perché la barra di esecuzione non mostra le icone {{site.data.keyword.Bluemix_notm}} Live Sync in Eclipse Orion Web IDE?
 {: #ts_llz_lkb_3r}
+{: faq}
 
 ![Barra di esecuzione](images/webide_runbar_light.png)   
 
@@ -115,19 +133,21 @@ Se il file `manifest.yml` non è memorizzato nella root, memorizzalo lì. Se la 
 
 ## Ho fatto clic su una toolchain per visualizzare la relativa pagina di panoramica, perché la toolchain non viene caricata?
 {: #toolchains_load}
+{: faq}
 
 Controlla la pagina relativa allo stato di {{site.data.keyword.Bluemix_notm}} per determinare la presenza di problemi noti che interessano la piattaforma {{site.data.keyword.Bluemix_notm}} e i servizi principali in {{site.data.keyword.Bluemix_notm}}.
 
 Puoi individuare la pagina Stato scegliendo una delle seguenti opzioni:
 
   * Accedi alla console {{site.data.keyword.Bluemix_notm}}. Dalla barra dei menu, fai clic su **Supporto** e seleziona **Stato**. Controlla le risorse elencate per l'icona di ![alcuni problemi](../../get-support/images/some_issues.svg). Questa icona potrebbe indicare un'interruzione.
-  * Accedi ad essa direttamente nella pagina di [stato dei sistemi {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/status){: new_window}.
+  * Accedi ad essa direttamente nella pagina di [stato dei sistemi {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/status){: new_window}.
 
-Per ulteriori informazioni sulla pagina relativa allo stato di {{site.data.keyword.Bluemix_notm}}, consulta [Viewing {{site.data.keyword.Bluemix_notm}} status](https://console.bluemix.net/docs/get-support/ViewStatus.html#viewing-bluemix-status).
+Per ulteriori informazioni sulla pagina relativa allo stato di {{site.data.keyword.Bluemix_notm}}, consulta [Viewing {{site.data.keyword.Bluemix_notm}} status](https://cloud.ibm.com/docs/get-support/ViewStatus.html#viewing-bluemix-status).
 
 
 ## Ho configurato un'integrazione dello strumento per la mia toolchain, perché non è stata configurata?
 {: #tool_integration_error}
+{: faq}
 
 Quando aggiungi un'integrazione dello strumento, la toolchain comunica con lo strumento rappresentato dall'integrazione dello strumento per eseguire il provisioning di tutte le risorse e le associa alla toolchain. Se si verifica un errore nel processo di configurazione o se la comunicazione tra la toolchain e lo strumento non viene completata correttamente, l'integrazione dello strumento viene messa in uno stato di errore.
 

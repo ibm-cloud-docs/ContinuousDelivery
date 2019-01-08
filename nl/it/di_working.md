@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -14,16 +14,16 @@ lastupdated: "2018-8-2"
 {:tip: .tip}
 {:download: .download}
 
-# Utilizzo di {{site.data.keyword.DRA_short}} (beta)
+# Gestione di {{site.data.keyword.DRA_short}}
 {: #di_working}
 
-Con {{site.data.keyword.DRA_full}}, puoi mantenere e migliorare la qualità del tuo codice in {{site.data.keyword.Bluemix_notm}} monitorando le tue distribuzioni per identificare i rischi prima che vengano rilasciate, analizzare le modifiche dello sviluppo per determinare la probabilità di errori o migliorare le interazioni del tuo team.
+Con {{site.data.keyword.DRA_full}}, puoi gestire e migliorare la qualità del tuo codice in {{site.data.keyword.Bluemix_notm}}. Puoi monitorare le tue distribuzioni per identificare i rischi prima che vengano rilasciate, analizzare le modifiche dello sviluppo per determinarne la probabilità di errore e migliorare le interazioni del tuo team.
 {:shortdesc}
 
-{{site.data.keyword.DRA_short}} è disponibile solo nella regione Stati Uniti Sud.
+{{site.data.keyword.DRA_short}} è disponibile nelle regioni Stati Uniti Sud, Germania e Regno Unito.
 {: tip}
 
-{{site.data.keyword.DRA_short}} raccoglie e analizza i risultati dalle verifiche di unità, dalle verifiche funzionali e dagli strumenti di copertura del codice per determinare se il tuo codice soddisfa le politiche predefinite nei gate specificati nel tuo processo di distribuzione. Se il tuo codice non soddisfa o supera una politica, la distribuzione viene interrotta impedendo così il rilascio dei rischi. Puoi utilizzare {{site.data.keyword.DRA_short}} come una rete di sicurezza per il tuo ambiente di fornitura continua o come modo per implementare e migliorare gli standard di qualità. 
+{{site.data.keyword.DRA_short}} raccoglie e analizza i risultati dai test di unità, dai test funzionali e dagli strumenti di copertura del codice. Utilizza tali risultati per determinare se il codice soddisfa delle politiche predefinite a gate specifici nel tuo processo di distribuzione. Se il tuo codice non soddisfa o supera una politica, la distribuzione viene interrotta impedendo così il rilascio dei rischi. Puoi utilizzare {{site.data.keyword.DRA_short}} come una rete di sicurezza per il tuo ambiente di fornitura continua o come modo per implementare e migliorare gli standard di qualità. 
 
 Oltre ai **gate di distribuzione**, {{site.data.keyword.DRA_short}} fornisce ulteriori funzionalità per migliorare il tuo processo DevOps complessivo.  
 
@@ -31,4 +31,4 @@ Oltre ai **gate di distribuzione**, {{site.data.keyword.DRA_short}} fornisce ult
 	
 **Team Dynamics** utilizza l'analisi del social coding per aiutarti a comprendere come collabora il tuo team e come può lavorare meglio.
 
-Per ulteriori informazioni, vedi [Introduzione a {{site.data.keyword.DRA_short}} (beta)](/docs/services/DevOpsInsights/index.html).
+Per ulteriori informazioni, vedi l'[Esercitazione introduttiva](/docs/services/DevOpsInsights/index.html).

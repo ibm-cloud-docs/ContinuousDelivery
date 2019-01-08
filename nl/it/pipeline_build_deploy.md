@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-11"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -84,11 +84,9 @@ Puoi aggiungere i servizi alle tue applicazioni e gestirli dal tuo dashboard {{s
 
 Puoi visualizzare i log per i lavori e visualizzare le fasi poiché sono in esecuzione nella pagina della cronologia della fase.
 
-Per visualizzare un log del lavoro, fai clic sul lavoro. In alternativa, in una fase, fai clic su **View logs and history**.
+1. Per visualizzare un log del lavoro, fai clic sul lavoro. In alternativa, in una fase, fai clic su **View logs and history**.
 
-Per visualizzare il log di runtime di un'applicazione distribuita, fai clic su **View runtime log**.
-
-![Aree in un tile della fase su cui puoi fare clic per aprire i log pertinenti](images/view_logs_and_history.png)
+2. Per visualizzare il log di runtime di un'applicazione distribuita, fai clic su **View runtime log**.
 
 In aggiunta ai log del lavoro, puoi visualizzare i risultati della verifica dell'unità, le risorse utente generate e le modifiche al codice per ogni lavoro di creazione.
 

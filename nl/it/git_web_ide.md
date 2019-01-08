@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Utilizzo di Git in Eclipse Orion Web IDE
@@ -91,7 +93,7 @@ Indipendentemente da dove esegui la codifica, puoi utilizzare questo riferimento
 Sovrascrivi il contenuto di un ramo remoto di riferimento con il contenuto del tuo ramo locale attivo.
 
 Quando forzi il push di un ramo locale a uno remoto, potresti perdere i commit sul ramo remoto.
-{: tip}
+{: important}
 
 ### Eclipse Orion Web IDE
 {: #force_push_web}
@@ -221,7 +223,7 @@ Quando forzi il push di un ramo locale a uno remoto, potresti perdere i commit s
 {: #modify_last_commit}
 
   Quando modifichi l'ultimo commit dopo averne eseguito il push a un repository remoto, sovrascrivi la cronologia di commit. Questa modifica potrebbe causare errori di commit e altri problemi per gli altri contributori del progetto. Assicurati di sapere cosa stai facendo prima di modificare un commit che hai distribuito tramite push a un repository remoto.
-  {: tip}
+  {: important}
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
-{:download: .download}
+{:note: .note}
+{:tip: .tip}
+{:important: .important}
 
 # Utilizzo delle toolchain
 {: #toolchains-using}
@@ -20,15 +22,15 @@ lastupdated: "2018-8-2"
 Le toolchain aperte sono disponibili negli ambienti Pubblico e Dedicato in {{site.data.keyword.Bluemix}}. Puoi utilizzare una toolchain per essere produttivo nella tua attività di sviluppo, distribuzione e nelle operazioni giornaliere. Dopo che hai configurato una toolchain, puoi aggiungere, eliminare o configurare le integrazioni dello strumento e gestire l'accesso alla toolchain.
 {: shortdesc}
 
-Puoi gestire le toolchain nella regione pubblica Stati Uniti Sud utilizzando i gruppi di risorse o le organizzazioni (org) Cloud Foundry. Il controllo dell'accesso e la gestione dell'utente autorizzato funzionano in modo diverso per le toolchain a seconda se sono contenuti in un gruppo di risorse o in un'organizzazione Cloud Foundry.
-{: tip}
+Puoi gestire le toolchain nelle regioni pubbliche Stati Uniti Sud, Stati Uniti Est, Regno Unito, Germania e Tokyo utilizzando i gruppi di risorse. Puoi utilizzare le organizzazioni Cloud Foundry per gestire le toolchain nelle regioni pubbliche Stati Uniti Sud, Regno Unito e Germania. Il controllo dell'accesso e la gestione dell'utente autorizzato funzionano in modo diverso per le toolchain a seconda se sono contenuti in un gruppo di risorse o in un'organizzazione Cloud Foundry.
+{: important}
 
 ## Configurazione di un'integrazione dello strumento
 {: #configuring_a_tool_integration}
 
-Se hai differito la configurazione di un'integrazione dello strumento quando hai creato una toolchain, viene visualizzato un pulsante **Configure** nella relativa scheda. Se hai configurato un'integrazione dello strumento quando hai creato una toolchain, puoi aggiornare le impostazioni di configurazione.
+Se hai differito la configurazione di un'integrazione dello strumento quando hai creato una toolchain, viene visualizzato un pulsante **Configura** nella relativa scheda. Se hai configurato un'integrazione dello strumento quando hai creato una toolchain, puoi aggiornare le impostazioni di configurazione.
 
-1. Nel dashboard DevOps, nella pagina **Toolchain**, fai clic su una toolchain per aprirne la pagina Panoramica. In alternativa, nella pagina della panoramica dell'applicazione, nella scheda di fornitura continua, fai clic su **View Toolchain** e quindi su **Overview**.
+1. Nel dashboard DevOps, nella pagina **Toolchain**, fai clic su una toolchain per aprirne la pagina Overview. In alternativa, nella pagina della panoramica dell'applicazione, nella scheda di fornitura continua, fai clic su **View Toolchain** e quindi su **Overview**.
 1. Se hai bisogno di configurare un'integrazione dello strumento per la prima volta, nella sua scheda, fai clic su **Configure**.
 
   ![Pulsante Configure](images/toolchain_tile_configure.png)
@@ -49,7 +51,7 @@ Se hai differito la configurazione di un'integrazione dello strumento quando hai
 
 Puoi aggiungere e configurare le integrazioni dello strumento per la tua toolchain. Le integrazioni dello strumento disponibili sono diverse a seconda se utilizzi {{site.data.keyword.Bluemix_notm}} Pubblico o {{site.data.keyword.Bluemix_notm}} Dedicato.
 
-1. Nel dashboard DevOps, nella pagina **Toolchain**, fai clic su una toolchain per aprirne la pagina Panoramica. In alternativa, nella pagina della panoramica dell'applicazione, nella scheda di fornitura continua, fai clic su **View Toolchain** e quindi su **Overview**.
+1. Nel dashboard DevOps, nella pagina **Toolchain**, fai clic su una toolchain per aprirne la pagina Overview. In alternativa, nella pagina della panoramica dell'applicazione, nella scheda di fornitura continua, fai clic su **View Toolchain** e quindi su **Overview**.
 1. Per visualizzare un elenco di integrazioni dello strumento da aggiungere, fai clic su **Add a tool**.
 1. Fai clic sull'integrazione dello strumento che desideri aggiungere.
 1. Immetti tutte le informazioni necessarie per configurare l'integrazione dello strumento.
@@ -60,7 +62,7 @@ Puoi aggiungere e configurare le integrazioni dello strumento per la tua toolcha
 
 Se elimini un'integrazione dello strumento dalla tua toolchain, l'eliminazione non può essere annullata.
 
-1. Nel dashboard DevOps, nella pagina **Toolchain**, fai clic su una toolchain per aprirne la pagina Panoramica. In alternativa, nella pagina della panoramica dell'applicazione, nella scheda di fornitura continua, fai clic su **View Toolchain** e quindi su **Overview**.
+1. Nel dashboard DevOps, nella pagina **Toolchain**, fai clic su una toolchain per aprirne la pagina Overview. In alternativa, nella pagina della panoramica dell'applicazione, nella scheda di fornitura continua, fai clic su **View Toolchain** e quindi su **Overview**.
 1. Nella scheda per l'integrazione dello strumento che desideri eliminare, fai clic sul menu per accedere alle opzioni di configurazione.
 1. Per eliminare l'integrazione dello strumento dalla tua toolchain, fai clic su **Delete**.
 1. Conferma facendo clic su **Delete**.  
@@ -73,7 +75,7 @@ Puoi utilizzare il servizio IAM (Identity and Access Management) per gestire l'a
 Solo gli utenti che fanno parte dell'elenco di utenti autorizzati per l'istanza selezionata di {{site.data.keyword.contdelivery_short}} possono utilizzare le funzioni Delivery Pipeline, Eclipse Orion {{site.data.keyword.webide}} e {{site.data.keyword.gitrepos}} delle toolchain {{site.data.keyword.contdelivery_short}}. Puoi gestire la titolarità dell'utente autorizzato dalla scheda Manage dell'istanza selezionata di {{site.data.keyword.contdelivery_short}}, all'interno del gruppo di risorse specificato.
 
 Per accedere alle funzioni chiave di {{site.data.keyword.contdelivery_short}} in una toolchain, ad esempio Delivery Pipeline, un utente deve avere accesso alla toolchain in IAM e deve far parte anche dell'elenco di utenti autorizzati dell'istanza {{site.data.keyword.contdelivery_short}}.
-{: tip}
+{: important}
 
 La titolarità dell'utente autorizzato si applica a tutte le toolchain contenute nello stesso gruppo di risorse dell'istanza di {{site.data.keyword.contdelivery_short}}.
 {: tip}
@@ -85,9 +87,9 @@ La titolarità dell'utente autorizzato si applica a tutte le toolchain contenute
 Puoi consentire agli utenti di accedere alla toolchain aggiungendoli all'organizzazione a cui è associata la toolchain e all'elenco del controllo dell'accesso per la toolchain. Ogni toolchain è associata a un'organizzazione specifica e ogni utente che è membro di tale organizzazione può essere aggiunto per accedere alle toolchain associate. L'organizzazione con cui stai attualmente lavorando è visualizzata nella barra dei menu. Per accedere a un diversa serie di toolchain, passa a un'altra organizzazione.
 
 Devi aggiungere gli utenti all'organizzazione della toolchain nella regione in cui è ospitata la toolchain. Se la toolchain è stata configurata per distribuire le applicazioni in una regione differente, le distribuirà comunque a tale regione.
-{: tip}
+{: important}
 
-Se stai utilizzando {{site.data.keyword.Bluemix_notm}} Dedicato per {{site.data.keyword.ghe_short}}, quando aggiungi gli utenti alla tua organizzazione o ai tuoi spazi {{site.data.keyword.Bluemix_notm}}, gli utenti possono accedere a {{site.data.keyword.ghe_short}} utilizzando i loro ID e password {{site.data.keyword.Bluemix_notm}}. Quando gli utenti accedono, vengono creati degli account per loro. Quando aggiungi utenti ai tuoi spazi o organizzazioni {{site.data.keyword.Bluemix_notm}}, vengono automaticamente aggiunti al repository {{site.data.keyword.ghe_short}}. Qualcuno che dispone dei privilegi di amministratore per il repository li deve aggiungere. Per ulteriori informazioni, vedi [Using Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. Se stai utilizzando la tua propria versione gestita di {{site.data.keyword.ghe_short}}, segui le procedure interne.
+Se stai utilizzando {{site.data.keyword.Bluemix_notm}} Dedicato per {{site.data.keyword.ghe_short}}, quando aggiungi gli utenti alla tua organizzazione o ai tuoi spazi {{site.data.keyword.Bluemix_notm}}, gli utenti possono accedere a {{site.data.keyword.ghe_short}} utilizzando i loro ID e password {{site.data.keyword.Bluemix_notm}}. Quando gli utenti accedono, vengono creati degli account per loro. Quando aggiungi utenti ai tuoi spazi o organizzazioni {{site.data.keyword.Bluemix_notm}}, non vengono automaticamente aggiunti al repository {{site.data.keyword.ghe_short}}. Qualcuno che dispone dei privilegi di amministratore per il repository li deve aggiungere. Per ulteriori informazioni, vedi [Using Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. Se stai utilizzando la tua propria versione gestita di {{site.data.keyword.ghe_short}}, segui le procedure interne.
 
 ###Suggerimenti per la gestione dell'accesso a una toolchain
 
@@ -103,15 +105,17 @@ Se stai utilizzando {{site.data.keyword.Bluemix_notm}} Dedicato per {{site.data.
 
 * Per concedere l'accesso a un utente che non è membro dell'organizzazione della toolchain, completa la seguente procedura:
 
-   a. Dalla barra dei menu, fai clic su **Manage > Security > Identity and Access**.
+   a. Dalla barra dei menu, fai clic su **Gestisci > Accesso (IAM)**.
 
-   b. Dalla riga per l'utente a cui vuoi assegnare l'accesso, seleziona il menu **Actions** e fai quindi clic su **Assign access**.
+   b. Fai clic su **L'accesso inizia con l'utente**.
+   
+   c. Dalla riga per l'utente a cui vuoi assegnare l'accesso, seleziona il menu **Azioni** e fai quindi clic su **Assegna accesso**.
+   
+   d. Seleziona **Assegna l'accesso utilizzando Cloud Foundry**.
 
-   c. Seleziona **Assign access by using Cloud Foundry**.
+   e. Seleziona **Assegna organizzazione**.
 
-   d. Seleziona **Assign organization**.
-
-   e. Assegna l'accesso utente:
+   f. Assegna l'accesso utente:
 
      * Scegli un'organizzazione a cui aggiungere l'utente.
 

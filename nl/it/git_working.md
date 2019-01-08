@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-5"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # {{site.data.keyword.gitrepos}}
@@ -20,8 +22,14 @@ lastupdated: "2018-8-2"
 Collabora con il tuo team e gestisci il tuo codice sorgente con un repository (repo) Git e il programma di traccia dei problemi ospitato da IBM e creato con [GitLab Community Edition ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://about.gitlab.com/){:new_window}.
 {: shortdesc}
 
+Invita solo le persone con cui hai una relazione personale o di business per collaborare a un progetto. Gli utenti che utilizzano un invito a un repository Git per scopi diversi dalla collaborazione a un progetto potrebbero vedersi sospendere o revocare l'accesso al servizio.
+{: important}
+
+Non archiviare i dati regolamentati in file o elementi di lavoro all'interno dei repository Git. Le procedure per i dati regolamentati non sono attualmente implementate.
+{: tip}
+
 L'integrazione dello strumento {{site.data.keyword.gitrepos}} supporta i team per gestire il codice e per la collaborazione in modi diversi:
-   * Gestire i repository Git attraverso i controlli dell'accesso accurati che mantengono il codice sicuro
+   * Gestisci i repository Git tramite controlli di accesso dettagliato che mantengono il codice al sicuro
    * Rivedere il codice e migliorare la collaborazione tramite le richieste di unione
    * Tracciare i problemi e condividere le idee tramite il programma di traccia del problema
    * Documentare i progetti nel sistema wiki

@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -48,7 +48,7 @@ Mentre un'applicazione Node.js è in modalità Live Edit, puoi accedere a essa m
 ##Live Edit
 {: #live-edit}
 
-Se stai creando un'applicazione Node.js che viene eseguita su {{site.data.keyword.Bluemix_notm}}, la funzione Live Edit di {{site.data.keyword.Bluemix_notm}} Live Sync può aggiornare rapidamente l'istanza dell'applicazione. Live Edit è disponibile solo nel Web IDE. Live Edit ti consente di effettuare attività di sviluppo come faresti sul desktop senza eseguire nuovamente la distribuzione.
+Se stai creando un'applicazione Node.js che viene eseguita su {{site.data.keyword.Bluemix_notm}}, la funzione Live Edit di {{site.data.keyword.Bluemix_notm}} Live Sync può aggiornare rapidamente l'istanza dell'applicazione. Live Edit è disponibile solo nel Web IDE. Puoi utilizzare Live Edit per effettuare attività di sviluppo come faresti sul desktop senza eseguire nuovamente la distribuzione.
 
 Live Edit è supportato solo per le applicazioni Node.js.
 
@@ -56,13 +56,13 @@ In Eclipse Orion Web IDE (Web IDE), nella barra di esecuzione, fai clic su **Liv
 
 ![Immagine della bara di esecuzione con live edit](images/bluemix-live-sync-light.png)
 
-Live Edit ti consente di visualizzare rapidamente in anteprima le modifiche alle applicazioni Node.js in esecuzione su {{site.data.keyword.Bluemix_notm}}. Quando aggiorni il tuo codice con Live Edit attivato, puoi aggiornare la finestra del browser della tua applicazione web per vedere tali modifiche riflesse entro pochi secondi da quando le hai apportate.
+Utilizza Live Edit per visualizzare rapidamente in anteprima le modifiche alle applicazioni Node.js in esecuzione su {{site.data.keyword.Bluemix_notm}}. Quando aggiorni il tuo codice con Live Edit attivato, puoi aggiornare la finestra del browser della tua applicazione web per vedere tali modifiche riflesse entro pochi secondi da quando le hai apportate.
 
 Per un'esercitazione sull'utilizzo della funzione Live Edit di {{site.data.keyword.Bluemix_notm}} Live Sync, consulta [Use {{site.data.keyword.Bluemix_notm}} Live Sync to develop, debug, and deploy your app ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/use-live-sync-to-develop-debug-and-deploy-your-app){:new_window}.
 
 Quando modifichi i file nel tuo Web IDE, questi vengono ridistribuiti automaticamente alla tua istanza dell'applicazione su {{site.data.keyword.Bluemix_notm}}. Se hai bisogno di riavviare l'applicazione Node, fai clic sul pulsante **Restart** nella barra di esecuzione.
 
-Per un'esperienza più coerente quanto utilizzi la funzione Live Edit di {{site.data.keyword.Bluemix_notm}} Live Sync, sono richiesti e aggiunti 256 MB di memoria aggiuntiva.
+Per un'esperienza più coerente quanto utilizzi la funzione Live Edit di {{site.data.keyword.Bluemix_notm}} Live Sync, sono richiesti e aggiunti 256 MB di memoria supplementare.
 {: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} Live Debug
@@ -74,7 +74,7 @@ per fornire le funzioni di debug. Perché il programma di debug sia disponibile,
 
 Puoi accedere a Debug di {{site.data.keyword.Bluemix_notm}} Live quando {{site.data.keyword.Bluemix_notm}} Live Edit è abilitato per la tua applicazione Node.js.  
 
-Con la funzione di debug, puoi modificare il codice in modo dinamico, inserire dei punti di interruzione, analizzare in dettaglio il codice, riavviare il runtime e altro ancora, e tutto questo mentre la tua applicazione viene servita da {{site.data.keyword.Bluemix_notm}}. Puoi sviluppare in modo incrementale la tua applicazione in modo agile, grazie alla possibilità di scegliere da un ampio elenco di servizi {{site.data.keyword.Bluemix_notm}}.
+Con la funzione di debug, puoi modificare il codice in modo dinamico, inserire dei punti di interruzione, analizzare in dettaglio il codice, riavviare il runtime e altro ancora, e tutto questo mentre la tua applicazione viene servita da {{site.data.keyword.Bluemix_notm}}. Puoi sviluppare in modo incrementale la tua applicazione in modo agile mentre scegli dall'ampio elenco di servizi {{site.data.keyword.Bluemix_notm}}.
 
 Debug di {{site.data.keyword.Bluemix_notm}} Live include le seguenti funzioni:
 
@@ -84,7 +84,7 @@ Debug di {{site.data.keyword.Bluemix_notm}} Live include le seguenti funzioni:
 
 ### Controllo del runtime dell'applicazione {: #app-runtime}
 
-Con il controllo del runtime dell'applicazione, puoi utilizzare Debug per analizzare lo stato dell'applicazione in fase di avvio. Questa funzionalità è utile quando cerchi di risolvere il problema di un'applicazione che si arresta in modo anomalo all'avvio.
+Con il controllo del runtime dell'applicazione, puoi utilizzare Debug per analizzare lo stato dell'applicazione in fase di avvio. Questa funzionalità è utile quando cerchi di risolvere i problemi di un'applicazione di cui si verifica un malfunzionamento all'avvio.
 
 Mentre sviluppi la tua applicazione, puoi scegliere tra le seguenti azioni:
 
@@ -92,9 +92,6 @@ Mentre sviluppi la tua applicazione, puoi scegliere tra le seguenti azioni:
 * Sospendere l'applicazione prima di eventuali esecuzioni di codice
 
 Dopo aver eseguito l'accesso, viene visualizzata la pagina di Debug di {{site.data.keyword.Bluemix_notm}} Live.
-
-![UI di Debug](images/live_sync_debug.png)
-
 
 ### Debug {: #debug}
 
@@ -151,4 +148,4 @@ L'inizializzazione del programma di debug potrebbe richiedere qualche minuto.
 
 ### Per ulteriori informazioni
 
-* Consulta [Strumenti Eclipse per {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
+* Consulta [Strumenti Eclipse per {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

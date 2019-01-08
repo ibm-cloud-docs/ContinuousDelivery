@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-17"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-17"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}   
 
 # Configurazione delle integrazioni dello strumento
@@ -20,31 +22,31 @@ lastupdated: "2018-8-17"
 Puoi configurare le integrazioni dello strumento che supportano le attività di operazioni, sviluppo e distribuzione mentre crei una toolchain aperta o puoi aggiungere e configurare le integrazioni dello strumento per personalizzare una toolchain esistente.  
 {:shortdesc}
 
-Le integrazioni dello strumento disponibili per aggiungere e configurare la tua toolchain sono diverse a seconda se stai utilizzando le toolchain in {{site.data.keyword.Bluemix_notm}} Pubblico o {{site.data.keyword.Bluemix_notm}} Dedicato. Se stai utilizzando le toolchain in {{site.data.keyword.Bluemix_notm}} Pubblico, le integrazioni dello strumento a tua disposizioni dipendono dalla regione della tua toolchain e dalla disponibilità di integrazioni dello strumento in tale regione. Se stai utilizzando le toolchain in {{site.data.keyword.Bluemix_notm}} Dedicato, le integrazioni dello strumento disponibili dipendono dal modo in cui {{site.data.keyword.contdelivery_full}} è stato configurato nel tuo ambiente specifico.
+Le integrazioni dello strumento disponibili per aggiungere e configurare la tua toolchain sono diverse a seconda se stai utilizzando le toolchain in {{site.data.keyword.Bluemix_notm}} pubblico o {{site.data.keyword.Bluemix_notm}} dedicato. Se stai utilizzando le toolchain in {{site.data.keyword.Bluemix_notm}} Pubblico, le integrazioni dello strumento a tua disposizioni dipendono dalla regione della tua toolchain e dalla disponibilità di integrazioni dello strumento in tale regione. Se stai utilizzando le toolchain in {{site.data.keyword.Bluemix_notm}} Dedicato, le integrazioni dello strumento disponibili dipendono dal modo in cui {{site.data.keyword.contdelivery_full}} è stato configurato nel tuo ambiente specifico.
 
 |Integrazione strumento |Disponibile in {{site.data.keyword.Bluemix_notm}} Pubblico	|Disponibile in {{site.data.keyword.Bluemix_notm}} Dedicato (dipendente dall'ambiente)|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.alertnotificationshort}}		|Stati Uniti Sud		|No		|
-|Artifactory		|Stati Uniti Sud, Germania, Regno Unito		|Sì		|
+|Artifactory		|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|Sì		|
 |Monitoraggio della disponibilità		|Stati Uniti Sud		|No		|
-|Bitbucket		|Stati Uniti Sud, Germania, Regno Unito		|No		|
+|Bitbucket		|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|No		|
 |Gestione evento cloud		|Stati Uniti Sud		|No		|
-|{{site.data.keyword.deliverypipeline}} 		|Stati Uniti Sud, Germania, Regno Unito	   	|Sì  		|
-|{{site.data.keyword.DRA_short}} 		|Stati Uniti Sud		|No			|
-|Eclipse Orion {{site.data.keyword.webide}}		|Stati Uniti Sud, Germania, Regno Unito		|Sì			|
-|{{site.data.keyword.gitrepos}}	|Stati Uniti Sud, Germania, Regno Unito		|No		|
-|GitHub		|Stati Uniti Sud, Germania, Regno Unito		|Sì		|
+|{{site.data.keyword.deliverypipeline}} 		|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|Sì  		|
+|{{site.data.keyword.DRA_short}} 		|Stati Uniti Sud, Germania, Regno Unito		|No			|
+|Eclipse Orion {{site.data.keyword.webide}}		|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|Sì			|
+|{{site.data.keyword.gitrepos}}	|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|No		|
+|GitHub		|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|Sì		|
 |{{site.data.keyword.ghe_short}} Dedicato e problemi			|No		|Sì		|
-|GitLab		|Stati Uniti Sud, Germania, Regno Unito		|No		|
-|Jenkins		|Stati Uniti Sud, Germania, Regno Unito		|Sì		|
-|JIRA		|Stati Uniti Sud, Germania, Regno Unito		|Sì		|
-|Nexus			|Stati Uniti Sud, Germania, Regno Unito		|Sì		|
-|Altro strumento			|Stati Uniti Sud, Germania, Regno Unito		|Sì		|
-|PagerDuty			|Stati Uniti Sud, Germania, Regno Unito		|Sì		|
-|Rational Team Concert			|Stati Uniti Sud, Germania, Regno Unito		|Sì		|
-|Sauce Labs		|Stati Uniti Sud, Germania, Regno Unito		|No		|
-|Slack			|Stati Uniti Sud, Germania, Regno Unito		|Sì		|
-|SonarQube			|Stati Uniti Sud, Germania, Regno Unito		|Sì		|
+|GitLab		|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|No		|
+|Jenkins		|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|Sì		|
+|JIRA		|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|Sì		|
+|Nexus			|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|Sì		|
+|Altro strumento			|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|Sì		|
+|PagerDuty			|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|Sì		|
+|Rational Team Concert			|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|Sì		|
+|Sauce Labs		|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|No		|
+|Slack			|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|Sì		|
+|SonarQube			|Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo, Regno Unito		|Sì		|
 {: caption="Tabella 1. Integrazioni dello strumento disponibili per le toolchain in {{site.data.keyword.Bluemix_notm}} Pubblico e Dedicato" caption-side="top"}
 
 Se vuoi iniziare a sviluppare con il codice sorgente in {{site.data.keyword.Bluemix_notm}} Pubblico, configura l'integrazione dello strumento GitHub o l'integrazione dello strumento {{site.data.keyword.gitrepos}} prima di configurare la {{site.data.keyword.deliverypipeline}}. Se desideri avviare lo sviluppo con il codice in {{site.data.keyword.Bluemix_notm}} Dedicato, configura l'integrazione dello strumento {{site.data.keyword.ghe_short}} o l'integrazione dello strumento GitHub prima di configurare la {{site.data.keyword.deliverypipeline}}.
@@ -140,7 +142,7 @@ Configura il gestore del repository Artifactory per archiviare le risorse di bui
 ### Configurazione di un lavoro di build npm Artifactory nella tua pipeline
 {: #config_artifactory_npm}
 
-Prima di configurare un lavoro di build npm nella tua pipeline, devi disporre di una pipeline funzionante che utilizzi per creare il repository SCM come input e devi configurare Artifactory per la tua toolchain. Per istruzioni sulla configurazione di Artifactory, vedi la sezione [Artifactory](#artifactory).
+Prima di configurare un lavoro di build npm nella tua pipeline, devi disporre di una pipeline funzionante che utilizzi il tuo repository SCM di build come input. Devi configurare anche Artifactory per la tua toolchain. Per istruzioni sulla configurazione di Artifactory, vedi la sezione [Artifactory](#artifactory).
 
 Configura {{site.data.keyword.deliverypipeline}} per aggiungere un lavoro di build npm:
 
@@ -164,7 +166,7 @@ Configura {{site.data.keyword.deliverypipeline}} per aggiungere un lavoro di bui
   Puoi trovare l'URL e le credenziali utente che hai utilizzato per collegarti al tuo registro nelle impostazioni di configurazione per l'integrazione dello strumento Artifactory.
   {: tip}
 
-  e. Se il tuo lavoro di build viene pubblicato nel registro Artifactory e il formato della versione del modulo del tuo nodo è `x.y.z-SNAPSHOT.w`, seleziona la casella di spunta **Increment snapshot module version**. Il lavoro di build aggiorna automaticamente la versione del modulo prima che il lavoro venga pubblicato nel registro Artifactory. Il lavoro seleziona l'ultima versione del modulo dal registro npm e il file `package.json` locale e incrementa la versione del modulo utilizzando semver. Il lavoro di build non fornisce le modifiche al repository SCM.
+  e. Se il tuo lavoro di build viene pubblicato nel registro Artifactory, e il formato della versione del modulo del tuo nodo è `x.y.z-SNAPSHOT.w`, seleziona la casella di spunta **Increment snapshot module version**. Il lavoro di build aggiorna automaticamente la versione del modulo prima che il lavoro venga pubblicato nel registro Artifactory. Il lavoro seleziona l'ultima versione del modulo dal registro npm e il file `package.json` locale e incrementa la versione del modulo utilizzando semver. Il lavoro di build non fornisce le modifiche al repository SCM.
 
 1. Fai clic su **SAVE**. Se la tua pipeline è in esecuzione, questo lavoro di build utilizza le informazioni sulla configurazione dall'integrazione dello strumento Artifactory per collegarsi al tuo registro npm.
 
@@ -241,7 +243,7 @@ Configura Bitbucket per collaborare sul codice con il tuo team:
 
  b. Nella sezione Integrazioni strumento, fai clic su **Bitbucket**.
 
-   Se stai configurando questa integrazione dello strumento su {{site.data.keyword.Bluemix_notm}} Pubblico e non hai autorizzato {{site.data.keyword.Bluemix_notm}} ad accedere a Bitbucket, fai clic su **Autorizza** per andare al sito web Bitbucket. Se non hai una sessione di Bitbucket attiva, ti viene richiesto di eseguire l'accesso. Fai clic su **Grant access** per consentire alle toolchain {{site.data.keyword.Bluemix_notm}} di accedere alle seguenti parti del tuo account Bitbucket:
+   Se stai configurando questa integrazione dello strumento su {{site.data.keyword.Bluemix_notm}} Pubblico e non avevi autorizzato {{site.data.keyword.Bluemix_notm}} ad accedere a Bitbucket, fai clic su **Authorize** per andare al sito web Bitbucket. Se non hai una sessione di Bitbucket attiva, ti viene richiesto di eseguire l'accesso. Fai clic su **Grant access** per consentire alle toolchain {{site.data.keyword.Bluemix_notm}} di accedere alle seguenti parti del tuo account Bitbucket:
    
    * **Leggi le informazioni del tuo account**. Ottieni le informazioni sull'utente di base per popolare l'interfaccia utente.
    
@@ -258,7 +260,7 @@ Configura Bitbucket per collaborare sul codice con il tuo team:
    * **Leggi e modifica i webhook dei tuoi repository**. Consenti alla pipeline di attivare le build quando viene eseguito il push dei commit a un repository.
    {: tip}
    
-   Se hai una sessione di Bitbucket attiva ma non hai immesso la tua password recentemente, ti potrebbe essere richiesto di immettere la tua password Bitbucket per la conferma.
+   Se hai una sessione di Bitbucket attiva ma non avevi immesso la tua password recentemente, ti potrebbe essere richiesto di immettere la tua password Bitbucket per la conferma.
 
 1. Fai clic sul server Bitbucket che vuoi utilizzare.
 1. Se hai un repository Bitbucket che vuoi utilizzare, immetti l'URL per il repository. Per il tipo di repository, fai clic su **Existing**.
@@ -345,7 +347,7 @@ Configura {{site.data.keyword.deliverypipeline}} per automatizzare la distribuzi
 ### Configurazione di un lavoro di verifica Sauce Labs nella tua pipeline
 {: #config_saucelabs}
 
-Prima di configurare un lavoro di verifica Sauce Labs nella tua pipeline, devi disporre di una pipeline funzionante provvista di fasi per creare e distribuire la tua applicazione e devi configurare Sauce Labs per la tua toolchain. Per istruzioni sulla configurazione di Sauce Labs, consulta la sezione [Sauce Labs](#saucelabs).
+Prima di configurare un lavoro di test Sauce Labs nella tua pipeline, hai bisogno di una pipeline funzionante provvista di fasi per creare e distribuire la tua applicazione. Dei anche configurare Sauce Labs per la tua toolchain. Per istruzioni sulla configurazione di Sauce Labs, consulta la sezione [Sauce Labs](#saucelabs).
 
 Configura la {{site.data.keyword.deliverypipeline}} per aggiungere un lavoro di verifica Sauce Labs:
 
@@ -359,8 +361,10 @@ Configura la {{site.data.keyword.deliverypipeline}} per aggiungere un lavoro di 
   {: tip}
 
 1. Configura il lavoro di distribuzione. Nel campo **Deploy Script**, includi questo comando: `export CF_APP_NAME="$CF_APP"`. Questo comando esporta il nome dell'applicazione come una proprietà dell'ambiente.
-1. Configura il lavoro di verifica. I valori nella seguente immagine sono degli esempi. I campi **Service Instance**, **Target**, **Organization** e **Space** vengono popolati con il nome utente, la regione, l'organizzazione e lo spazio Sauce Labs che stai utilizzando.  
-![Configura lavoro](images/toolchain_configure_job.png)
+1. Configura il lavoro di verifica. 
+
+  I campi **Istanza del servizio**, **Destinazione**, **Organizzazione** e **Spazio** vengono popolati con il nome utente, la regione, l'organizzazione e lo spazio Sauce Labs che stai utilizzando.
+  {: tip}
 
   a. Per il tipo di tester, seleziona **Sauce Labs**.
 
@@ -388,12 +392,12 @@ Per ulteriori informazioni su {{site.data.keyword.deliverypipeline}}, consulta [
   * [Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app" ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
 
-## Aggiunta di DevOps Insights (Beta)
+## Aggiunta di DevOps Insights
 {: #dra}
 
 {{site.data.keyword.DRA_full}} raccoglie e analizza i risultati dalle verifiche di unità, dalle verifiche funzionali e dagli strumenti di copertura del codice per determinare se il tuo codice soddisfa i criteri predefiniti nei gate specificati nel tuo processo di distribuzione. Se il tuo codice non soddisfa o supera i criteri, la distribuzione viene arrestata per prevenire che vengano rilasciati dei rischi. Puoi utilizzare {{site.data.keyword.DRA_short}} come una rete di sicurezza per il tuo ambiente di fornitura continua o come modo per implementare e migliorare gli standard di qualità.
 
- Questa integrazione dello strumento è disponibile solo su {{site.data.keyword.Bluemix_notm}} Pubblico.È preconfigurata e non richiede alcun parametro di configurazione. Non puoi riconfigurare questa integrazione dello strumento.
+ Questa integrazione dello strumento è disponibile solo su {{site.data.keyword.Bluemix_notm}} Pubblico. È preconfigurata e non richiede alcun parametro di configurazione. Non puoi riconfigurare questa integrazione dello strumento.
  {: tip}
 
 Aggiungi {{site.data.keyword.DRA_short}} per mantenere e migliorare la qualità del tuo codice {{site.data.keyword.Bluemix_notm}} monitorando le tue distribuzioni per identificare i rischi prima che vangano rilasciati.
@@ -441,7 +445,8 @@ Aggiungi l'integrazione dello strumento Eclipse Orion {{site.data.keyword.webide
 
 ### Ulteriori informazioni su Eclipse Orion Web IDE
 
-Per ulteriori informazioni su Eclipse Orion {{site.data.keyword.webide}}, vedi [Modifica del codice con Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window} e l'articolo su [ Eclipse Orion {{site.data.keyword.webide}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} su IBM Cloud Garage Method o segui queste esercitazioni:
+Per ulteriori informazioni su Eclipse Orion {{site.data.keyword.webide}}, vedi [Modifica del codice con Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window. You can also read the [articolo Eclipse Orion {{site.data.keyword.webide} in IBM Cloud Garage Method. Svolgi le seguenti esercitazioni per provare a usare Eclipse Orion {{site.data.keyword.webide}}:
+'>{: new_window. Puoi anche leggere l'articolo [Eclipse Orion {{site.data.keyword.webide}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} in IBM Cloud Garage Method. Svolgi le seguenti esercitazioni per provare a usare Eclipse Orion {{site.data.keyword.webide}}:
 
   * [Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app" ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
@@ -514,11 +519,11 @@ Puoi configurare GitHub come una integrazione dello strumento nella tua toolchai
 
 Se stai configurando questa integrazione dello strumento mentre stai creando la toolchain, segui questi passi:
 
-1. Se memorizzi il tuo codice sorgente in un repository GitHub, nella sezione Integrazioni configurabili, fai clic su **GitHub**. Se stai configurando questa integrazione dello strumento su {{site.data.keyword.Bluemix_notm}} Pubblico e non hai autorizzato {{site.data.keyword.Bluemix_notm}} ad accedere a GitHub, fai clic su **Autorizza** per andare al sito web GitHub. Se non disponi di una sessione GitHub attiva, ti viene richiesto di accedere. Fai clic su **Authorize Application** per consentire a {{site.data.keyword.Bluemix_notm}} di accedere al tuo account GitHub. Se disponi di una sessione GitHub attiva ma non hai immesso la tua password recentemente, ti potrebbe essere richiesto di immettere la tua password GitHub per la conferma.
+1. Se memorizzi il tuo codice sorgente in un repository GitHub, nella sezione Integrazioni configurabili, fai clic su **GitHub**. Se stai configurando questa integrazione dello strumento su {{site.data.keyword.Bluemix_notm}} Pubblico e non avevi autorizzato {{site.data.keyword.Bluemix_notm}} ad accedere a GitHub, fai clic su **Authorize** per andare al sito web GitHub. Se non disponi di una sessione GitHub attiva, ti viene richiesto di accedere. Fai clic su **Authorize Application** per consentire a {{site.data.keyword.Bluemix_notm}} di accedere al tuo account GitHub. Se hai una sessione di GitHub attiva ma non avevi immesso la tua password recentemente, ti potrebbe essere richiesto di immettere la tua password GitHub per la conferma.
 1. Se utilizzi un repository sul tuo proprio server {{site.data.keyword.ghe_short}}, nella sezione Integrazioni configurabili, fai clic su **Add custom server**.
 
  La rete deve essere in grado di accedere al server Git di destinazione da un ambiente {{site.data.keyword.Bluemix_notm}} Dedicato. Se il tuo server GitHub non è disponibile su Internet pubblica o il nome host non viene risolto nel DNS (Domain Name Server) pubblico, [apri un ticket di supporto](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. Puoi utilizzare il ticket di supporto per inoltrare una richiesta per aprire gli instradamenti di rete o aggiornare le impostazioni DNS.
- {: tip}
+ {: important}
 
  Immetti un titolo per il tuo server GitHub personalizzato e specifica l'URL root del server. Immetti il token di accesso personale e fai clic su **Save custom integration**.
 
@@ -585,7 +590,7 @@ Per ulteriori informazioni su GitHub, consulta l'[articolo su GitHub ![Icona lin
 {: #configghe}
 
  Queste istruzioni si applicano a {{site.data.keyword.Bluemix_notm}} Dedicato per {{site.data.keyword.ghe_short}}. Se stai utilizzando la tua propria versione gestita di {{site.data.keyword.ghe_short}}, alcuni passi potrebbero essere diversi a seconda delle tue procedure interne.
- {: tip}
+ {: important}
 
 {{site.data.keyword.ghe_long}} è un servizio host basato sul web, in loco per i repository Git. {{site.data.keyword.ghe_short}} Dedicato è solo per i clienti {{site.data.keyword.Bluemix_notm}} Dedicato. GitHub Issues è uno strumento di traccia che ti permette di lavorare sui tuoi piani in un solo posto. È integrato con il tuo repository di sviluppo in modo che puoi focalizzarti sulle attività importanti. Per ulteriori informazioni su {{site.data.keyword.ghe_short}} dedicato e sui problemi GitHub, consulta [Introduzione a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} e l'[articolo su GitHub Issues ![Icona link esterno](../../icons/launch-glyph.svg "Icona di link esterno")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} in IBM Cloud Garage Method.
 
@@ -637,7 +642,7 @@ Puoi configurare GitLab come una integrazione dello strumento nella tua toolchai
 
 Se stai configurando questa integrazione dello strumento mentre stai creando la toolchain, segui questi passi:
 
-1. Se memorizzi il tuo codice sorgente in un repository GitLab, nella sezione Integrazioni configurabili, fai clic su **GitLab**. Se stai configurando questa integrazione dello strumento su {{site.data.keyword.Bluemix_notm}} Pubblico e non hai autorizzato {{site.data.keyword.Bluemix_notm}} ad accedere a GitLab, fai clic su **Autorizza** per andare al sito web GitLab. Se non disponi di una sessione GitLab attiva, ti viene richiesto di accedere. Fai clic su **Authorize Application** per consentire a {{site.data.keyword.Bluemix_notm}} di accedere al tuo account GitLab. Se disponi di una sessione GitLab attiva ma non hai immesso la tua password recentemente, ti potrebbe essere richiesto di immettere la tua password GitLab per la conferma.
+1. Se memorizzi il tuo codice sorgente in un repository GitLab, nella sezione Integrazioni configurabili, fai clic su **GitLab**. Se stai configurando questa integrazione dello strumento su {{site.data.keyword.Bluemix_notm}} Pubblico e non avevi autorizzato {{site.data.keyword.Bluemix_notm}} ad accedere a GitLab, fai clic su **Authorize** per andare al sito web GitLab. Se non disponi di una sessione GitLab attiva, ti viene richiesto di accedere. Fai clic su **Authorize Application** per consentire a {{site.data.keyword.Bluemix_notm}} di accedere al tuo account GitLab. Se hai una sessione di GitLab attiva ma non avevi immesso la tua password recentemente, ti potrebbe essere richiesto di immettere la tua password GitLab per la conferma.
 1. Se utilizzi un repository sul tuo proprio server GitLab, nella sezione Integrazioni configurabili, fai clic su **Add custom server**.
 
  La rete deve essere in grado di accedere al server GitLab di destinazione da un ambiente {{site.data.keyword.Bluemix_notm}} Dedicato.
@@ -701,7 +706,7 @@ Per ulteriori informazioni su GitLab, leggi l'[articolo su GitLab ![Icona link e
 Jenkins è uno strumento open source, basato sul server che crea e verifica il software continuamente, supportando le procedure di integrazione e fornitura continua.
 
 Prima di creare un'integrazione dello strumento Jenkins, devi disporre di un server Jenkins.
-{: tip}
+{: important}
 
 Con l'integrazione dello strumento Jenkins, puoi inviare le tue notifiche del lavoro Jenkins ad altri strumenti nella tua toolchain, come Slack e PagerDuty. Per tenere traccia del codice nelle distribuzioni, puoi aggiungere i messaggi di distribuzione ai commit Git e ai problemi Git o JIRA correlati. Puoi anche visualizzare le tue distribuzioni nella pagina delle connessioni della toolchain. Puoi fornire i risultati a {{site.data.keyword.DRA_short}}, aggiungere i gate di qualità automatizzati e tracciare il tuo rischio di distribuzione.
 
@@ -815,7 +820,7 @@ Configura il gestore del repository Nexus per archiviare le risorse di build nel
 
  b. Immetti la password associata al tuo repository.
 
- c. Immetti l'URL per il tuo repository della release Nexus, che corrisponde al tuo registro privato nel server Nexus.
+ c. Immetti l'URL per il tuo repository della release Nexus, che corrisponde al tuo repository della release privato nel server Nexus.
 
  d. Immetti l'URL del tuo repository delle istantanee Nexus, che corrisponde al tuo repository delle istantanee privato nel server Nexus.
 
@@ -852,7 +857,7 @@ Configura {{site.data.keyword.deliverypipeline}} per aggiungere un lavoro di bui
      ```
   **Suggerimento:** puoi trovare l'URL e le credenziali utente che hai utilizzato per collegarti al tuo registro nelle impostazioni di configurazione per l'integrazione dello strumento Nexus.
 
-  e. Se il tuo lavoro di build viene pubblicato nel registro Nexus e il formato della versione del modulo del tuo nodo è `x.y.z-SNAPSHOT.w`, seleziona la casella di spunta **Increment snapshot module version**. Il lavoro di build aggiorna automaticamente la versione del modulo prima che venga pubblicato nel registro Nexus. Il lavoro di build seleziona l'ultima versione del modulo dal registro npm e il file `package.json` locale e incrementa la versione del modulo utilizzando semver. Il lavoro di build non fornisce le modifiche al repository SCM.
+  e. Se il tuo lavoro di build viene pubblicato nel registro Nexus, e il formato della versione del modulo del tuo nodo è `x.y.z-SNAPSHOT.w`, seleziona la casella di spunta **Increment snapshot module version**. Il lavoro di build aggiorna automaticamente la versione del modulo prima che venga pubblicato nel registro Nexus. Il lavoro di build seleziona l'ultima versione del modulo dal registro npm e il file `package.json` locale e incrementa la versione del modulo utilizzando semver. Il lavoro di build non fornisce le modifiche al repository SCM.
 
 1. Fai clic su **SAVE**. Se la tua pipeline è in esecuzione, questo lavoro di build utilizza le informazioni sulla configurazione dall'integrazione dello strumento Nexus per collegarsi al tuo registro npm.
 
@@ -907,7 +912,7 @@ Configura uno strumento personalizzato in modo che funzioni con gli altri strume
 1. Seleziona la fase del ciclo di vita strettamente associata allo strumento. Questa selezione determina sotto quale categoria viene elencato lo strumento nella pagina di panoramica.
 1. Aggiungi un URL icona. L'icona viene visualizzata nella scheda della tua integrazione dello strumento.
 1. Aggiungi un URL documentazione.
-1. Specifica un nome per l'istanza dello strumento. Ad esempio: My Team Tool.
+1. Specifica un nome per l'istanza dello strumento. Ad esempio, My Team Tool.
 1. Aggiungi un URL istanza dello strumento. Questo URL si apre se viene fatto clic sulla scheda dell'integrazione dello strumento.
 1. Aggiungi una descrizione dello strumento.
 1. (Avanzate) Aggiungi ulteriori proprietà come necessario. Ad esempio, elenca eventuali informazioni o attributi richiesti per integrare il tuo strumento con gli altri strumenti della toolchain.  
@@ -923,7 +928,7 @@ Per ulteriori informazioni sullo strumento personalizzato, vedi [Introducing cus
 ## Configurazione di PagerDuty
 {: #pagerduty}
 
-PagerDuty integra i dati da più sistemi di monitoraggio in un singola vista. Quando si verifica un problema, PagerDuty si assicura che venga inviata una notifica al membro del team più adatto a risolverlo in quel momento. Se il membro del team non risponde al problema, possono essere configurate delle escalation per instradare il problema agli ingegneri secondari o ai gestori delle operazioni.
+PagerDuty integra i dati da più sistemi di monitoraggio in un singola vista. Quando si verifica un problema, PagerDuty si assicura che venga inviata una notifica al membro del team più adatto a risolverlo in quel momento. Se il membro del team non risponde al problema, possono essere configurate delle escalation per instradare il problema ai rappresentanti secondari o ai responsabili delle attività operative.
 
 Configura PagerDuty per inviare notifiche quando si verifica un problema nella fase della pipeline in modo che puoi risolvere i problemi più velocemente e ridurre il tempo di inattività:
 
@@ -1019,7 +1024,7 @@ Configura Sauce Labs per eseguire verifiche funzionali automatizzate su più sis
 
  b. Nella sezione Integrazioni strumento, fai clic su **Sauce Labs**.
 
-1. Digita il nome utente associato con il tuo account Sauce Labs. Puoi [trovare il tuo nome utente nel messaggio di benvenuto all'inizio della tua pagina account Sauce Labs ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://saucelabs.com/account){: new_window}.
+1. Digita il nome utente associato con il tuo account Sauce Labs. Puoi [trovare il tuo nome utente nel messaggio di benvenuto nella tua pagina dell'account Sauce Labs ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://saucelabs.com/account){: new_window}.
 1. Digita la chiave di accesso per il tuo account Sauce Labs. Puoi [trovare la chiave nella tua pagina account Sauce Labs ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://saucelabs.com/account){: new_window}.
 1. Fai clic su **Create Integration**.
 1. Fai clic su **Sauce Labs** per andare alla pagina saucelabs.com e visualizzare l'attività di verifica per la toolchain.
@@ -1038,8 +1043,8 @@ Per ulteriori informazioni su Sauce Labs, consulta l'[articolo su Sauce Labs ![I
 ## Configurazione di Slack
 {: #slack}
 
-Le notifiche che vengono pubblicate nei canali Slack pubblici sono visibili a tutti i membri del team. Ricorda che sei responsabile del contenuto che pubblichi.
-{: tip}
+Le notifiche che vengono pubblicate nei canali Slack pubblici sono visibili a tutti i membri del team. Sei responsabile del contenuto che pubblichi.
+{: important}
 
 Slack è un sistema di notifica e messaggistica in tempo reale basato sul cloud. Slack fornisce chat persistente, che è un'alternativa più interattiva alla email per la collaborazione del team. Puoi comunicare con il tuo team su un canale dedicato o su una serie di canali direttamente correlati al tuo lavoro. Puoi inoltre condividere file e immagini tramite i canali o con messaggi diretti tra due o più persone. Le comunicazioni nei messaggi diretti e sui canali vengono conservate in modo che puoi ricercarle.
 
@@ -1054,7 +1059,7 @@ Configura Slack per ricevere notifiche sulla tua toolchain dalle integrazioni de
 
 1. Immetti l'URL webhook Slack, che viene generato da Slack come un webhook in entrata. Hai bisogno di un URL webhook Slack per ricevere notifiche sulla tua toolchain dalle integrazioni delle strumento. Per istruzioni su come creare o trovare il tuo webhook, consulta [Incoming Webhooks ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://api.slack.com/incoming-webhooks){: new_window}.
 
- Se hai utilizzato una chiave API per il tuo canale Slack per ricevere notifiche relative alla tua toolchain dalle integrazioni dello strumento, devi aggiornare la tua configurazione per utilizzare invece un webhook.
+ Se utilizzi una chiave API per il tuo canale Slack per ricevere notifiche relative alla tua toolchain dalle integrazioni dello strumento, devi aggiornare la tua configurazione per utilizzare invece un webhook.
  {: tip}
 
 1. Digita il nome del canale Slack a cui desideri vengano inviate le notifiche. Il canale deve esistere ed essere attivo nel tuo team Slack.
@@ -1084,7 +1089,7 @@ Configura SonarQube per analizzare e misurare continuamente la qualità del tuo 
 
 1. Dal dashboard DevOps, fai clic su **Toolchains**. Fai clic sulla toolchain a cui desideri aggiungere SonarQube. In alternativa, nella pagina della panoramica della tua applicazione, nella scheda di fornitura continua, fai clic su **View Toolchain**. Fai quindi clic su **Overview**.  
 
- a. Fai clic su **Add a Tool**.
+ a. Fai clic su **Add a tool**.
 
  b. Nella sezione Integrazioni strumento, fai clic su **SonarQube**.
 

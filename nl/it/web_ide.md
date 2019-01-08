@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -17,10 +17,13 @@ lastupdated: "2018-8-2"
 # Sviluppo con Eclipse Orion Web IDE
 {: #web_ide}
 
-Eclipse Orion {{site.data.keyword.webide}} è un ambiente di sviluppo basato sul browser dove puoi eseguire attività di sviluppo per il web in JavaScript, HTML e CSS con l'aiuto dell'assistenza del contenuto, del completamento del codice e del controllo errori. {{site.data.keyword.webide}} utilizza quasi tutti i linguaggi e offre l'evidenziazione della sintassi per molti tipi di file. Il controllo di origine è integrato e può distribuire il codice localmente per verificare ed eseguire il debug delle tue applicazioni.
+Eclipse Orion {{site.data.keyword.webide}} è un ambiente di sviluppo basato sul browser dove puoi eseguire attività di sviluppo per il web in JavaScript, HTML e CSS con l'aiuto dell'assistenza del contenuto, del completamento del codice e del controllo errori. {{site.data.keyword.webide}} funziona con quasi tutti i linguaggi e puoi evidenziare la sintassi per la maggior parte dei tipi di file. Il controllo di origine è integrato e può distribuire il codice localmente per verificare ed eseguire il debug delle tue applicazioni.
 {:shortdesc}
 
 Cosa più importante, {{site.data.keyword.webide}} si avvale della tecnologia web. Non hai nulla da installare, da mantenere e da scalare. Puoi sviluppare ovunque tu abbia una connessione a internet.
+
+Non archiviare i dati regolamentati in file all'interno di {{site.data.keyword.webide}}. Le procedure per i dati regolamentati non sono attualmente implementate.
+{: tip}
 
 ## Configurazione dell'IDE
 {: #editorsetup}
@@ -83,17 +86,17 @@ Per visualizzare un elenco dei tasti di scelta rapida nell'editor, fai clic su *
 2. Dopo che la tua applicazione è stata distribuita, puoi utilizzare la barra di esecuzione per arrestare, riavviare o eseguire il debug della applicazione, dei log di visualizzazione o di altro.
 
 <table role="presentation">
-<tr><td><img src="./images/stop_button.png"  alt="Icona di arresto"></td><td>Arresta l'applicazione</td></tr>
-<tr><td> <img src="./images/open_app_url.png"  alt="Icona dell'URL di apertura dell'applicazione"></td><td> Apri l'applicazione distribuita</td></tr>
-<tr><td><img src="./images/view_logs.png"  alt="Icona di visualizzazione dei log"></td><td>Visualizza i log dell'applicazione distribuita</td></tr>
-<tr><td><img src="./images/open_dashboard.png"  alt="Icona di apertura del dashboard"></td><td>Apri il dashboard dell'applicazione</td></tr>
+<tr><td><img src="./images/stop_button.png"  alt="Icona di arresto"></td><td>Arresta l'applicazione.</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="Icona dell'URL di apertura dell'applicazione"></td><td> Apri l'applicazione distribuita.</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="Icona di visualizzazione dei log"></td><td>Visualizza i log dell'applicazione distribuita.</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="Icona di apertura del dashboard"></td><td>Apri il dashboard dell'applicazione.</td></tr>
 </table>
 
 Se stai sviluppando un'applicazione Node.js, abilita la modalità Live Edit:  <img  src="./images/enable_live_edit.png"  alt="Dispositivo a scorrimento di abilitazione di live edit">
 
-<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="Icona di riavvio di Live Edit"></td><td>Con la modalità Live Edit abilitata, riavvia l'applicazione, senza rieseguire la distribuzione</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="Icona di riavvio di Live Edit"></td><td>Con la modalità Live Edit abilitata, riavvia l'applicazione rapidamente, senza rieseguire la distribuzione</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="Icona di debug"></td>
-<td>Con la modalità Live Edit abilitata, accedi al debugger
+<td>Con la modalità Live Edit abilitata, accedi al debugger.
 </td></tr>
 </table>
 
@@ -162,7 +165,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 ## Linguaggi supportati
 {: #supported_languages}
 
-Eclipse Orion {{site.data.keyword.webide}} fornisce assistenza del contenuto, descrizioni dei comandi, anteprime, convalida ed evidenziazione della sintassi per i file JavaScript, HTML, CSS e Markdown. L'evidenziazione della sintassi è supportata anche per questi tipi di file:
+Eclipse Orion {{site.data.keyword.webide}} fornisce assistenza del contenuto, descrizioni a comparsa, anteprime e convalida ed evidenzia la sintassi per i file JavaScript, HTML, CSS e Markdown. Puoi anche evidenziare la sintassi per questi tipi di file:
 
 <table role="presentation">
 <tr>

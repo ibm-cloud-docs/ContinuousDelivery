@@ -27,33 +27,33 @@ I piani di servizio {{site.data.keyword.contdelivery_short}} definiti e il loro 
 
 Gli utenti autorizzati vengono contati verificando tutti gli utenti nell'organizzazione (org) Cloud che contiene il servizio {{site.data.keyword.contdelivery_short}}. 
 
-Per visualizzare l'elenco di utenti nella tua organizzazione in un ambiente {{site.data.keyword.Bluemix_notm}} Pubblico, dalla barra dei menu fai clic su **Manage > Account > Cloud Foundry Orgs**.
+Per visualizzare l'elenco di utenti nella tua organizzazione in un ambiente {{site.data.keyword.Bluemix_notm}} Pubblico, dalla barra dei menu fai clic su **Gestisci > Account > Organizzazioni Cloud Foundry**.
 
-Per visualizzare l'elenco di utenti nella tua organizzazione in un ambiente {{site.data.keyword.Bluemix_notm}} Dedicato, dalla barra dei menu fai clic su **Account > Manage Organizations**.
+Per visualizzare l'elenco di utenti nella tua organizzazione in un ambiente {{site.data.keyword.Bluemix_notm}} Dedicato, dalla barra dei menu fai clic su **Account > Gestisci organizzazioni**.
 
 Puoi anche visualizzare tutte le istanze del servizio {{site.data.keyword.contdelivery_short}} nel tuo account e il numero di utenti segnalati rispetto a ciascuna istanza in un ambiente {{site.data.keyword.Bluemix_notm}} Pubblico.
 
-1. Dalla barra dei menu, fai clic su **Manage > Billing and Usage > Usage**.
-2. Fai clic su **Usage Dashboard**.
-3. Dal menu Account, fai clic su **Cloud Foundry Orgs**.
+1. Dalla barra dei menu, fai clic su **Gestisci > Fatturazione e utilizzo > Utilizzo**.
+2. Fai clic su **Dashboard di utilizzo**.
+3. Dal menu Account, fai clic su **Organizzazioni Cloud Foundry**.
 4. Fai clic sull'organizzazione per cui desideri visualizzare le informazioni sull'utilizzo.
 
 Per visualizzare tutte le istanze del servizio {{site.data.keyword.contdelivery_short}} nel tuo account e il numero di utenti segnalati rispetto a ciascuna istanza in un ambiente {{site.data.keyword.Bluemix_notm}} Dedicato:
 
-1. Dalla barra dei menu, fai clic su **Account > Manage Organizations**.
-2. Fai clic su **Usage Dashboard**.
+1. Dalla barra dei menu, fai clic su **Account > Gestisci organizzazioni**.
+2. Fai clic su **Dashboard di utilizzo**.
 
 ### Come vengono contati gli utenti per le istanze di {{site.data.keyword.contdelivery_short}} nei gruppi di risorse?
 
-Gli utenti autorizzati vengono conteggiati osservando l'elenco di utenti nella scheda Manage all'interno dell'istanza del servizio {{site.data.keyword.contdelivery_short}}. 
+Gli utenti autorizzati vengono conteggiati osservando l'elenco di utenti nella scheda Gestisci all'interno dell'istanza del servizio {{site.data.keyword.contdelivery_short}}. 
 
-Per visualizzare l'elenco degli utenti autorizzati, apri il dashboard dell'istanza del servizio e fai clic sulla scheda Manage.
+Per visualizzare l'elenco degli utenti autorizzati, apri il dashboard dell'istanza del servizio e fai clic sulla scheda Gestisci.
 
 Puoi anche visualizzare tutte le istanze del servizio {{site.data.keyword.contdelivery_short}} nel tuo account e il numero di utenti segnalati rispetto a ciascuna istanza.
 
-1. Dalla barra dei menu, fai clic su **Manage > Billing and Usage > Usage**.
-2. Fai clic su **Usage Dashboard**.
-3. Dal menu Account, fai clic su **Resource Groups**.
+1. Dalla barra dei menu, fai clic su **Gestisci > Fatturazione e utilizzo > Utilizzo**.
+2. Fai clic su **Dashboard di utilizzo**.
+3. Dal menu Account, fai clic su **Gruppi di risorse**.
 4. Fai clic sul gruppo di risorse per cui desideri visualizzare le informazioni sull'utilizzo.
 
 ### Cosa succede quando si superano i limiti del proprio piano di servizio? 

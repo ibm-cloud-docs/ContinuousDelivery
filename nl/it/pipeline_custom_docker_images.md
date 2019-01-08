@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -30,10 +32,10 @@ Indipendentemente dal fatto che tu stia utilizzando un tipo di lavoro di build, 
 
 Il nome dell'immagine Docker nei lavori dell'immagine Docker personalizzata è progettato per funzionare nello stesso modo in cui funzionano i nomi immagine con la CLI Docker. Il formato di un nome di immagine Docker è: `[repository][:][tag]`. Ad esempio, per `docker run maven:3.5.3-ibmjava`, il nome di immagine Docker è `maven:3.5.3-ibmjava`, dove `maven` è il repository e `3.5.3-ibmjava` è la tag. Non ci sono limitazioni sul nome di immagine Docker che puoi utilizzare; funziona qualsiasi immagine Docker valida.
 
-Se il campo **Docker image name** non viene completato, viene utilizzata l'immagine di base della pipeline standard.
+Se il campo **Docker image name** non viene completato, viene utilizzata l'immagine di base della pipeline standard. 
 {: tip}
 
-Per impostazione predefinita, viene eseguita una ricerca nel tuo repository su [Docker Hub ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://hub.docker.com/){: new_window}. Se utilizzi un altro registro Docker, come ad esempio IBM Cloud Registry, puoi utilizzare il nome DNS completo. Puoi anche utilizzare il nome completo per le immagini su Docker Hub. Ad esempio, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
+Per impostazione predefinita, viene eseguita una ricerca nel tuo repository su [Docker Hub ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://hub.docker.com/){: new_window}. Se utilizzi un altro registro Docker, come ad esempio {{site.data.keyword.registrylong}}, puoi utilizzare il nome DNS completo. Puoi anche utilizzare il nome completo per le immagini su Docker Hub. Ad esempio, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
 
 La `tag` per un'immagine Docker è facoltativa. Se non specifichi una tag, viene automaticamente impostata su `latest`. Un valore predefinito `latest` è solo un nome di tag che il proprietario del repository deve gestire. Non significa che, cronologicamente parlando, questa immagine Docker sia quella più recente.
 
@@ -44,12 +46,12 @@ Puoi trovare una grande community di repository in Docker Hub. IBM ospita divers
 
 Se stai utilizzando un registro privato che richiede l'autenticazione, devi impostare due proprietà dell'ambiente della fase supplementari: `DOCKER_USERNAME` e `DOCKER_PASSWORD`. Puoi utilizzare una proprietà sicura per mascherare la tua `DOCKER_PASSWORD`. Prima che la tua immagine venga estratta, il lavoro dell'immagine Docker personalizzata utilizza le tue credenziali di nome utente e password per completare un `docker login`.
 
-Per la maggior parte dei registri, puoi utilizzare il nome utente e la password che ti sono stati forniti. Se utilizzi IBM Cloud Registry per archiviare le tue immagini private, devi utilizzare una chiave API della piattaforma per l'autenticazione. 
+Per la maggior parte dei registri, puoi utilizzare il nome utente e la password che ti sono stati forniti. Se utilizzi {{site.data.keyword.registrylong_notm}} per archiviare le tue immagini private, devi utilizzare una chiave API della piattaforma per l'autenticazione. 
 
-1. [Richiedi una chiave API della piattaforma ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/iam/#/apikeys){: new_window} e assicurati di salvare la chiave. 
+1. [Richiedi una chiave API della piattaforma ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/iam/#/apikeys){: new_window} e assicurati di salvare la chiave. 
 1. Crea le due proprietà dell'ambiente della fase utilizzando `iamapikey` per il tuo `DOCKER_USERNAME` e la chiave API della piattaforma che hai salvato per la `DOCKER_PASSWORD`.
 
- ![Credenziali di IBM Cloud Registry](images/custom-image-private-repository.png)
+ Credenziali di ![{{site.data.keyword.registrylong_notm}}](images/custom-image-private-repository.png)
 
 
 ## Specifica dello script
