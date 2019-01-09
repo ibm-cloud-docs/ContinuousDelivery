@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-17"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-17"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}   
 
 # Toolintegrationen konfigurieren
@@ -25,26 +27,26 @@ Die Toolintegrationen, die zum Hinzufügen und Konfigurieren für Ihre Toolchain
 |Toolintegration |Verfügbar unter {{site.data.keyword.Bluemix_notm}} Public	|Verfügbar unter {{site.data.keyword.Bluemix_notm}} Dedicated (umgebungsabhängig)|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.alertnotificationshort}}		|Vereinigte Staaten (Süden)		|Nein		|
-|Artifactory		|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Ja		|
+|Artifactory		|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Ja		|
 |Availability Monitoring		|Vereinigte Staaten (Süden)		|Nein		|
-|Bitbucket		|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Nein		|
+|Bitbucket		|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Nein		|
 |Cloud Event Management		|Vereinigte Staaten (Süden)		|Nein		|
-|{{site.data.keyword.deliverypipeline}} 		|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich	   	|Ja  		|
-|{{site.data.keyword.DRA_short}} 		|Vereinigte Staaten (Süden)		|Nein			|
-|Eclipse Orion-{{site.data.keyword.webide}}		|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Ja			|
-|{{site.data.keyword.gitrepos}}	|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Nein		|
-|GitHub		|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Ja		|
+|{{site.data.keyword.deliverypipeline}} 		|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Ja  		|
+|{{site.data.keyword.DRA_short}} 		|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Nein			|
+|Eclipse Orion-{{site.data.keyword.webide}}		|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Ja			|
+|{{site.data.keyword.gitrepos}}	|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Nein		|
+|GitHub		|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Ja		|
 |Dedicated {{site.data.keyword.ghe_short}} und Issues			|Nein		|Ja		|
-|GitLab		|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Nein		|
-|Jenkins		|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Ja		|
-|JIRA		|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Ja		|
-|Nexus			|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Ja		|
-|Anderes Tool			|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Ja		|
-|PagerDuty			|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Ja		|
-|Rational Team Concert			|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Ja		|
-|Sauce Labs		|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Nein		|
-|Slack			|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Ja		|
-|SonarQube			|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Ja		|
+|GitLab		|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Nein		|
+|Jenkins		|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Ja		|
+|JIRA		|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Ja		|
+|Nexus			|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Ja		|
+|Anderes Tool			|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Ja		|
+|PagerDuty			|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Ja		|
+|Rational Team Concert			|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Ja		|
+|Sauce Labs		|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Nein		|
+|Slack			|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Ja		|
+|SonarQube			|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Ja		|
 {: caption="Tabelle 1. Toolintegrationen, die für Toolchains unter {{site.data.keyword.Bluemix_notm}} Public und Dedicated verfügbar sind" caption-side="top"}
 
 Wenn Sie beginnen möchten, mit Ihrem Quellcode unter {{site.data.keyword.Bluemix_notm}} Public zu entwickeln, müssen Sie vor dem Konfigurieren von {{site.data.keyword.deliverypipeline}} die GitHub-Toolintegration oder die {{site.data.keyword.gitrepos}}-Toolintegration konfigurieren. Wenn Sie beginnen möchten, mit Ihrem eigenen Code unter {{site.data.keyword.Bluemix_notm}} Dedicated zu entwickeln, müssen Sie die {{site.data.keyword.ghe_short}}-Toolintegration oder die GitHub-Toolintegration vor der {{site.data.keyword.deliverypipeline}} konfigurieren.
@@ -140,7 +142,7 @@ Konfigurieren Sie den Repository-Manager von Artifactory zum Speichern von Build
 ### Artifactory-npm-Buildjob in Ihrer Pipeline konfigurieren
 {: #config_artifactory_npm}
 
-Bevor Sie einen npm-Buildjob in Ihrer Pipeline konfigurieren, müssen Sie über eine funktionstüchtige Pipeline verfügen, die Ihr SCM-Build-Repository als Eingabe verwenden kann. Außerdem müssen Sie Artifactory für Ihre Toolchain konfigurieren. Anweisungen zum Konfigurieren von Artifactory enthält der Abschnitt [Artifactory](#artifactory).
+Bevor Sie einen npm-Build-Job in Ihrer Pipeline konfigurieren, müssen Sie über eine funktionstüchtige Pipeline verfügen, die Ihr SCM-Build-Repository als Eingabe verwenden kann. Außerdem müssen Sie Artifactory für Ihre Toolchain konfigurieren. Anweisungen zum Konfigurieren von Artifactory enthält der Abschnitt [Artifactory](#artifactory).
 
 Konfigurieren Sie {{site.data.keyword.deliverypipeline}} durch Hinzufügen eines npm-Buildjobs. Gehen Sie dazu wie folgt vor:
 
@@ -161,7 +163,8 @@ Konfigurieren Sie {{site.data.keyword.deliverypipeline}} durch Hinzufügen eines
      # oder
      npm publish --registry "${NPM_RELEASE_URL}"
      ```
-  Sie finden die URL und die Benutzerberechtigungsnachweise, die Sie für die Verbindungsherstellung mit Ihrer Registry verwendet haben, in den Konfigurationseinstellungen für die Artifactory-Toolintegration.{: tip}
+  Sie finden die URL und die Benutzerberechtigungsnachweise, die Sie für die Verbindungsherstellung mit Ihrer Registry verwendet haben, in den Konfigurationseinstellungen für die Artifactory-Toolintegration.
+  {: tip}
 
   e. Wenn Ihr Buildjob in der Artifactory-Registry veröffentlicht wird und die Version Ihres Knotenmoduls das Format `x.y.z-SNAPSHOT.w` aufweist, wählen Sie das Kontrollkästchen **Versionsangabe für Snapshot-Modul inkrementieren** aus. Der Buildjob aktualisiert die Modulversion automatisch, bevor er die Veröffentlichung in der Artifactory-Registry ausführt. Der Job wählt die höchste Version des Moduls aus der npm-Registry und der lokalen `package.json`-Datei aus und erhöht den Wert für die Modulversion unter Verwendung von SemVer (Semantic Versioning). Der Buildjob übermittelt die Änderungen nicht an das SCM-Repository.
 
@@ -191,7 +194,8 @@ Konfigurieren Sie {{site.data.keyword.deliverypipeline}} durch Hinzufügen eines
      # oder
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  Sie finden die URL und die Benutzerberechtigungsnachweise, die Sie für die Verbindungsherstellung mit Ihrer Registry verwendet haben, in den Konfigurationseinstellungen für die Artifactory-Toolintegration.{: tip}
+  Sie finden die URL und die Benutzerberechtigungsnachweise, die Sie für die Verbindungsherstellung mit Ihrer Registry verwendet haben, in den Konfigurationseinstellungen für die Artifactory-Toolintegration.
+  {: tip}
 
 1. Klicken Sie auf **SPEICHERN**. Wann immer Ihre Pipeline ausgeführt wird, verwendet dieser Buildjob die Konfigurationsinformationen aus der Artifactory-Toolintegration, um eine Verbindung zu Ihrem Maven-Repository herzustellen.
 
@@ -344,7 +348,7 @@ Konfigurieren Sie {{site.data.keyword.deliverypipeline}}, um das kontinuierliche
 ### Sauce Labs-Testjob in Ihrer Pipeline konfigurieren
 {: #config_saucelabs}
 
-Bevor Sie einen Sauce Labs-Testjob in Ihrer Pipeline konfigurieren, brauchen Sie eine funktionstüchtige Pipeline, die Stages zum Erstellen und Bereitstellen Ihrer App umfasst, und Sie müssen Sauce Labs für Ihre Toolchain konfigurieren. Anweisungen zum Konfigurieren von Sauce Labs finden Sie im Abschnitt [Sauce Labs](#saucelabs).
+Bevor Sie einen Sauce Labs-Testjob in Ihrer Pipeline konfigurieren, brauchen Sie eine funktionstüchtige Pipeline, die Stages zum Erstellen und Bereitstellen Ihrer App umfasst. <ŢAußerdem müssen Sie Sauce Labs für Ihre Toolchain konfigurieren. Anweisungen zum Konfigurieren von Sauce Labs finden Sie im Abschnitt [Sauce Labs](#saucelabs).
 
 Konfigurieren Sie die {{site.data.keyword.deliverypipeline}}, um einen Sauce Labs-Testjob hinzuzufügen:
 
@@ -358,8 +362,10 @@ Konfigurieren Sie die {{site.data.keyword.deliverypipeline}}, um einen Sauce Lab
   {: tip}
 
 1. Konfigurieren Sie den Bereitstellungsjob. Schließen Sie im Feld **Bereitstellungsscript** diesen Befehl ein: `export CF_APP_NAME="$CF_APP"`. Der Befehl exportiert den Namen der App als Umgebungseigenschaft.
-1. Konfigurieren Sie den Testjob. Die Werte in der folgenden Abbildung sind Beispiele. In die Felder **Serviceinstanz**, **Ziel**, **Organisation** und **Bereich** werden der Sauce Labs-Benutzername, die Region, die Organisation und der Bereich eingetragen, die Sie verwenden.  
-![Job konfigurieren](images/toolchain_configure_job.png)
+1. Konfigurieren Sie den Testjob. 
+
+  In die Felder **Serviceinstanz**, **Ziel**, **Organisation** und **Bereich** werden der Sauce Labs-Benutzername, die Region, die Organisation und der Bereich eingetragen, die Sie verwenden.
+  {: tip}
 
   a. Wählen Sie als Testertyp **Sauce Labs** aus.
 
@@ -387,7 +393,7 @@ Weitere Informationen zu {{site.data.keyword.deliverypipeline}} finden Sie in [M
   * [Erstellen und verwenden Sie Ihre erste Toolchain mithilfe der Toolchain zum Entwickeln einer Cloud Foundry-App ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
 
 
-## DevOps Insights hinzufügen (Beta)
+## DevOps Insights hinzufügen
 {: #dra}
 
 {{site.data.keyword.DRA_full}} erfasst und analysiert die Ergebnisse von Komponententests, Funktionstests und Codeabdeckungstools, um zu bestimmen, ob Ihr Code vordefinierte Kriterien an angegebenen Punkten in Ihrem Bereitstellungsprozess erfüllt. Falls Ihr Code die Kriterien nicht erfüllt oder mehr als erfüllt, wird die Bereitstellung gestoppt, um keine Risiken einzuführen. Sie können {{site.data.keyword.DRA_short}} als Sicherheitsnetz für Ihre kontinuierliche Bereitstellungsumgebung oder als Methode zum Implementieren und Verbessern von Qualitätsstandards einsetzen.
@@ -428,20 +434,20 @@ Die Eclipse Orion-{{site.data.keyword.webide}} ist eine integrierte webbasierte 
 
 Fügen Sie die Toolintegration der Eclipse Orion-{{site.data.keyword.webide}} hinzu, um Quellcodeverwaltungstasks auszuführen:
 
-1. Wenn Sie diese Toolintegration konfigurieren, während Sie die Toolchain erstellen, klicken Sie im Abschnitt mit den konfigurierbaren
-Integrationen auf **Eclipse Orion-Web-IDE**.
+1. Wenn Sie diese Toolintegration konfigurieren, während Sie die Toolchain erstellen, klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **Eclipse Orion-{{site.data.keyword.webide}}**.
 1. Wenn Sie eine Toolchain haben und diese Toolintegration hinzufügen, klicken Sie im DevOps-Dashboard auf der Seite 'Toolchains' auf die Toolchain, um die zugehörige Übersichtsseite zu öffnen. Alternativ können Sie auf der Übersichtsseite der App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** und dann auf **Übersicht** klicken.
 
  a. Klicken Sie auf **Tool hinzufügen**.
 
- b. Klicken Sie im Abschnitt mit den Toolintegrationen auf die Option für die **Eclipse Orion-Web-IDE**.
+ b. Klicken Sie im Abschnitt mit den Toolintegrationen auf die Option für die **Eclipse Orion-{{site.data.keyword.webide}}**.
 
 1. Klicken Sie auf **Integration erstellen**.
-1. Klicken Sie auf **Eclipse Orion-Web-IDE**. In Ihrem Arbeitsbereich sind Ihre GitHub- oder {{site.data.keyword.ghe_short}}-Repositorys bereits aufgeführt. Die Repositorys, die Ihrer aktuellen Toolchain zugeordnet sind, sind hervorgehoben.
+1. Klicken Sie auf **Eclipse Orion-{{site.data.keyword.webide}}**. In Ihrem Arbeitsbereich sind Ihre GitHub- oder {{site.data.keyword.ghe_short}}-Repositorys bereits aufgeführt. Die Repositorys, die Ihrer aktuellen Toolchain zugeordnet sind, sind hervorgehoben.
 
 ### Weitere Informationen zur Eclipse Orion-Web-IDE
 
-Mehr zur Eclipse Orion-Web-IDE erfahren Sie unter [Code mit der {{site.data.keyword.webide}} für Eclipse Orion bearbeiten](/docs/services/ContinuousDelivery/web_ide.html){: new_window} und im Artikel zur [Eclipse Orion-Web-IDE ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} in IBM Cloud Garage Method oder in diesen Lernprogrammen:
+Weitere Informationen zur Eclipse Orion-{{site.data.keyword.webide}} finden Sie in [Code mit der Eclipse Orion-{{site.data.keyword.webide}} bearbeiten](/docs/services/ContinuousDelivery/web_ide.html){:new_window}. Führen Sie die folgenden Lernprogramme aus, um die Verwendung der Eclipse Orion-{{site.data.keyword.webide}} auszuprobieren:
+ Sie können auch den [Eclipse Orion-{{site.data.keyword.webide}}-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} zur IBM Cloud Garage Method lesen. Führen Sie die folgenden Lernprogramme aus, um die Verwendung der Eclipse Orion-{{site.data.keyword.webide}} auszuprobieren:
 
   * [Erstellen und verwenden Sie Ihre erste Toolchain mithilfe der Toolchain zum Entwickeln einer Cloud Foundry-App ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
 
@@ -455,7 +461,7 @@ Die {{site.data.keyword.gitrepos}}-Toolintegration basiert auf GitLab Community 
 
 Wenn Sie {{site.data.keyword.gitrepos}} konfigurieren, während Sie die Toolchain erstellen, führen Sie diese Schritte aus:    
 
-1. a. Klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **Git Repos and Issue Tracking**.
+1. Klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **Git Repos and Issue Tracking**.
 1. Überprüfen Sie die Standardzielspeicherorte für die Git-Repositorys. Diese Repositorys werden aus den Beispielrepositorys geklont. Ändern Sie gegebenenfalls die Namen der Zielrepositorys.
 
 Wenn Sie eine Toolchain haben und ein Git-Repository in Ihrer Toolchain auf {{site.data.keyword.gitrepos}} migrieren wollen, führen Sie die folgenden Schritte aus:
@@ -518,7 +524,7 @@ Wenn Sie diese Toolintegration konfigurieren, während Sie die Toolchain erstell
 1. Wenn Sie ein Repository auf Ihrem eigenen {{site.data.keyword.ghe_short}}-Server verwenden, klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **Angepassten Server hinzufügen**.
 
  Das Netz muss auf den Ziel-Git-Server von einer {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung aus zugreifen können. Wenn Ihr GitHub-Server nicht im öffentlichen Internet verfügbar ist oder der Hostname nicht auf dem Namen der öffentlichen Domäne (DNS) aufgelöst wird, [öffnen Sie ein Support-Ticket](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. Sie können das Support-Ticket verwenden, um eine Anfrage zum Öffnen der Netzrouten zu senden oder die DNS-Einstellungen zu aktualisieren.
- {: tip}
+ {: important}
 
  Geben Sie einen Titel für Ihren angepassten GitHub-Server ein und geben Sie die Stamm-URL für den Server an. Geben Sie Ihre persönlichen Zugriffstokens ein und klicken Sie dann auf **Angepasste Integration speichern**.
 
@@ -585,7 +591,7 @@ Mehr zu GitHub erfahren Sie im Artikel zu [GitHub ![Symbol für externen Link](.
 {: #configghe}
 
  Diese Anweisungen gelten für {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. Wenn Sie Ihre eigene verwaltete Version von {{site.data.keyword.ghe_short}} verwenden, kann es sein, dass sich die Vorgehensweise abhängig von Ihren internen Prozeduren in einigen Schritten unterscheidet.
- {: tip}
+ {: important}
 
 {{site.data.keyword.ghe_long}} ist ein lokaler webbasierter Hosting-Service für Git-Repositorys. Dedicated {{site.data.keyword.ghe_short}} ist nur für {{site.data.keyword.Bluemix_notm}} Dedicated-Kunden verfügbar. GitHub Issues ist ein Überwachungstool, das Ihre Arbeit und Ihre Pläne an einem zentralen Ort aufbewahrt. Es ist in Ihr Entwicklungsrepository integriert, damit Sie sich auf die wichtigen Aufgaben konzentrieren können. Mehr Informationen zu Dedicated {{site.data.keyword.ghe_short}} und GitHub Issues finden Sie in der [Einführung in {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} und im [GitHub Issues-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} in IBM Cloud Garage Method.
 
@@ -701,7 +707,7 @@ Mehr zu GitLab erfahren Sie im Artikel zu [GitLab ![Symbol für externen Link](.
 Jenkins ist ein serverbasiertes Open-Source-Tool, das Software fortlaufend erstellt und testet und dabei die Verfahren von kontinuierlicher Integration und Continuous Delivery unterstützt.
 
 Sie müssen über einen Jenkins-Server verfügen, bevor Sie eine Jenkins-Toolintegration erstellen können.
-{: tip}
+{: important}
 
 Mit der Jenkins-Toolintegration können Sie Ihre Jenkins-Jobbenachrichtigungen an andere Tools in Ihrer Toolchain senden, wie zum Beispiel an Slack und PagerDuty. Wenn Sie Code in Bereitstellungen verfolgen möchten, können Sie Bereitstellungsnachrichten zu Ihren Git-Commits und den zugehörigen Git- oder JIRA-Problemen hinzufügen. Außerdem können Sie Ihre Bereitstellungen auf der Seite für Toolchain-Verbindungen anzeigen. Sie können {{site.data.keyword.DRA_short}} Testergebnisse zuführen, automatisierte Qualitätsberichte hinzufügen und Ihr Bereitstellungsrisiko verfolgen.
 
@@ -710,7 +716,7 @@ Konfigurieren Sie Jenkins, um das kontinuierliche Erstellen, Testen und Bereitst
 1. Wenn Sie diese Toolintegration konfigurieren, während Sie die Toolchain erstellen, klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **Jenkins**.
 1. Wenn Sie eine Toolchain haben und diese Toolintegration hinzufügen, klicken Sie im DevOps-Dashboard auf der Seite 'Toolchains' auf die Toolchain, um die zugehörige Übersichtsseite zu öffnen. Alternativ können Sie auf der Übersichtsseite Ihrer App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** klicken. Klicken Sie anschließend auf **Übersicht**.  
 
- a. Klicken Sie auf **Tool hinzufügen**.
+ a. Klicken Sie auf 
 
  b. Klicken Sie im Abschnitt mit den Toolintegrationen auf **Jenkins**.
 
@@ -728,7 +734,7 @@ Konfigurieren Sie Jenkins, um das kontinuierliche Erstellen, Testen und Bereitst
 1. Klicken Sie auf **Integration erstellen**.
 1. Klicken Sie von Ihrer Toolchain aus auf **Jenkins**, um den Jenkins-Server anzuzeigen.  
 
-### Weitere Informationen zu Jenkins
+### Weitere Informationen zu Jenkins<B
 
 Mehr zu Jenkins erfahren Sie im Artikel zu [Jenkins ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){: new_window} in IBM Cloud Garage Method oder in diesem Lernprogramm:
 
@@ -884,7 +890,7 @@ Konfigurieren Sie {{site.data.keyword.deliverypipeline}} durch Hinzufügen eines
   Sie finden die URL und die Benutzerberechtigungsnachweise, die Sie für die Verbindungsherstellung mit Ihrer Registry verwendet haben, in den Konfigurationseinstellungen für die Nexus-Toolintegration.
   {: tip}
 
-1. Klicken Sie auf **SPEICHERN**. Wann immer Ihre Pipeline ausgeführt wird, verwendet dieser Buildjob die Konfigurationsinformationen aus der Nexus-Toolintegration, um eine Verbindung zu Ihrem Maven-Repository herzustellen.
+1. Klicken Sie auf **SPEICHERNWann immer Ihre Pipeline ausgeführt wird, verwendet dieser Buildjob die Konfigurationsinformationen aus der Nexus-Toolintegration, um eine Verbindung zu Ihrem Maven-Repository herzustellen.
 
 ### Weitere Informationen zu Nexus
 
@@ -924,7 +930,7 @@ Mehr zu dem angepassten Tool erfahren Sie in der [Einführung in die angepasste 
 ## PagerDuty konfigurieren
 {: #pagerduty}
 
-PagerDuty integriert Daten aus mehreren Überwachungssystemen in einer Gesamtansicht. Wenn ein Problem auftritt, stellt PagerDuty sicher, dass das Teammitglied, das zu diesem Zeitpunkt am besten geeignet ist, das Problem zu lösen, benachrichtigt wird. Falls das Teammitglied nicht auf das Problem reagiert, können Eskalationen konfiguriert werden, um es an sekundäre Entwickler oder Betriebsleiter weiterzuleiten.
+PagerDuty integriert Daten aus mehreren Überwachungssystemen in einer Gesamtansicht. Wenn ein Problem auftritt, stellt PagerDuty sicher, dass das Teammitglied, das zu diesem Zeitpunkt am besten geeignet ist, das Problem zu lösen, benachrichtigt wird. Falls das Teammitglied nicht auf das Problem reagiert, können Eskalationen konfiguriert werden, um es an sekundäre Ansprechpartner oder Betriebsleiter weiterzuleiten.
 
 Konfigurieren Sie PagerDuty, um Benachrichtigungen zu senden, wenn Pipeline-Stage-Fehler auftreten, damit Sie Probleme schneller beheben und Ausfallzeiten reduzieren können:
 
@@ -1020,7 +1026,7 @@ Konfigurieren Sie Sauce Labs, um automatische Funktionstests auf mehreren Betrie
 
  b. Klicken Sie im Abschnitt mit den Toolintegrationen auf **Sauce Labs**.
 
-1. Geben Sie den Benutzernamen ein, der Ihrem Sauce Labs-Konto zugeordnet ist. Sie finden [Ihren Benutzernamen in der Begrüßungsnachricht oben auf Ihrer Sauce Labs-Kontoseite ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://saucelabs.com/account){: new_window}.
+1. Geben Sie den Benutzernamen ein, der Ihrem Sauce Labs-Konto zugeordnet ist. Sie finden [Ihren Benutzernamen in der Begrüßungsnachricht auf Ihrer Sauce Labs-Kontoseite ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://saucelabs.com/account){: new_window}.
 1. Geben Sie den Zugriffsschlüssel für Ihr Sauce Labs-Konto ein. Sie finden [den Schlüssel auf der Sauce Labs-Kontoseite ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://saucelabs.com/account){: new_window}.
 1. Klicken Sie auf **Integration erstellen**.
 1. Klicken Sie auf **Sauce Labs**, um saucelabs.com zu öffnen und die Testaktivität für die Toolchain anzuzeigen.
@@ -1039,8 +1045,8 @@ Mehr zu Sauce Lab erfahren Sie im Artikel [Sauce Labs ![Symbol für externen Lin
 ## Slack konfigurieren
 {: #slack}
 
-Benachrichtigungen, die in öffentlichen Slack-Kanälen gepostet werden, sind für jeden im Team sichtbar. Denken Sie daran, dass Sie für den Inhalt, den Sie posten, verantwortlich sind.
-{: tip}
+Benachrichtigungen, die in öffentlichen Slack-Kanälen gepostet werden, sind für jeden im Team sichtbar. Sie sind für den Inhalt, den Sie posten, verantwortlich.
+{: important}
 
 Slack ist ein cloudbasiertes echtzeitorientiertes Messaging- und Benachrichtigungssystem. Slack stellt persistenten Chat bereit, wobei es sich um eine interaktionsintensivere Alternative zu E-Mail für die Teamzusammenarbeit handelt. Sie können mit Ihrem Team über einen dedizierten Kanal oder über eine Reihe von Kanälen kommunizieren, die in direktem Zusammenhang mit Ihrer Arbeit stehen. Sie können außerdem Dateien und Bilder über die Kanäle oder in direkten Nachrichten zwischen zwei oder mehr Personen teilen. Die Kommunikation in direkten Nachrichten und über die Kanäle wird aufbewahrt und kann durchsucht werden.
 

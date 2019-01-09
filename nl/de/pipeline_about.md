@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,6 +11,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -21,19 +23,23 @@ lastupdated: "2018-8-2"
 {:shortdesc}
 
 Ihre Berechtigungen zum Anzeigen, Ändern oder Ausführen einer Pipeline basieren auf der Zugriffssteuerung für die Toolchain, die Eigner der Pipeline ist. Weitere Informationen zur Zugriffssteuerung für Toolchains finden Sie in den Abschnitten [Zugriff auf Toolchains in Ressourcengruppen verwalten](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} und [Zugriff auf Toolchains in Cloud Foundry-Organisationen verwalten](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
-{: tip}
+{: important}
+
+Sie können die Scripts angeben, die in einer Vielzahl von Jobtypen ausgeführt werden sollen, die von der Pipeline bereitgestellt werden; Sie können darüber steuern, was durch den Job ausgeführt wird. Diese Scripts werden in einem Docker-Image ausgeführt, das eine Reihe von Standardentwicklungstools enthält; dazu gehören Tools, die für die Interaktion mit den {{site.data.keyword.Bluemix_notm}}-Laufzeiten erforderlich sind. Weitere Informationen darüber, was das Standard-Docker-Image enthält, finden Sie im Abschnitt [Vorinstallierte Ressourcen](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}. Wenn für Ihren Job Entwicklungstools erforderlich sind, die im Standardimage nicht verfügbar sind, oder Sie unterschiedliche Versionen dieser Tools benötigen, können Sie ein angepasstes Image verwenden. Weitere Informationen zu angepassten Images finden Sie im Abschnitt [Mit benutzerdefinierten Docker-Images arbeiten](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}.
+
+Wenn die Pipeline Scripts ausführt, werden die Eigenschaften, die den Kontext beschreiben, in dem der Job ausgeführt wird, an das Script übergeben, und zwar mithilfe von Umgebungsvariablen. Beispiel: Die URL des Repositorys, das die Eingabe für die Stage ist, der Name der Stage und der Job, der ausgeführt wird, die Parameter, die durch den Jobtyp angegeben werden, usw. Informationen zum Anzeigen einer Liste der verfügbaren Umgebungsvariablen finden Sie unter [Vorinstallierte Ressourcen](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}. 
+
+Sie können Eigenschaften sowohl auf der Pipeline- als auch auf der Stage-Ebene definieren. Pipeline-Eigenschaften werden über alle Stages und Jobs in einer Pipeline gemeinsam genutzt. Stage-Eigenschaften sind für eine bestimmte Stage eindeutig und werden von allen Jobs dieser Stage gemeinsam genutzt. Weitere Informationen zu Eigenschaften finden Sie unter [Umgebungseigenschaften (Umgebungsvariablen)](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties).
 
 ## Stages
 {: #deliverypipeline_stages}
 
-Stages organisieren Eingabe- und Ausgabejobs während ein Build für den Code erstellt, dieser implementiert und getestet wird. Stages akzeptieren Eingaben von den Quellcodeverwaltungsrepositorys (SCM-Repositorys) oder von Buildjobs (Buildartefakte) in anderen Stages. Wenn Sie Ihre erste Stage erstellen, werden die Einstellungen für Sie auf der Registerkarte **EINGABE** festgelegt.
+Stages organisieren Eingabe- und Ausgabejobs während ein Build für den Code erstellt, dieser implementiert und getestet wird. Stages akzeptieren Eingaben von den Quellcodeverwaltungsrepositorys (SCM-Repositorys) oder von Build-Jobs in anderen Stages. Bei SCM-Repositorys ist die Eingabe der Inhalt eines bestimmten Zweigs im Repository; bei Build-Jobs handelt es sich bei der Eingabe um die Artefakte, die der Job produziert. Wenn Sie Ihre erste Stage erstellen, sind auf der Registerkarte **EINGABE** die Standardeinstellungen festgelegt.
 
-Die Eingabe einer Stage wird an die darin enthaltenen Jobs übergeben und jeder Job wird in einem bereinigten Container ausgeführt.
-
-Die Jobs in einer Stage können einander keine Artefakte übergeben. Da Artefakte zwischen Jobs nicht übergeben werden können, müssen Sie von einer Stage für die Bereitstellung eine separate Build-Stage besitzen, wenn Ihre Stage für die Bereitstellung die Build-Stage-Artefakte verwenden soll.
+Wenn eine Stage ausgeführt wird, wird die Eingabe der Stage an die einzelnen Jobs in der Stage übergeben. Jeder Job wird in einem bereinigten Container ausgeführt. Daher können die Jobs in einer Stage einander keine Artefakte übergeben. Um Artefakte zwischen Jobs zu übergeben, unterteilen Sie die Jobs in zwei Stages und verwenden Sie die Ausgabe des Jobs in der ersten Stage als Eingabe für die zweite Stage.
 {: tip}
 
-Sie können Umgebungseigenschaften für eine Stage definieren, die in allen Jobs verwendet werden können. Sie könnten zum Beispiel die Eigenschaft `TEST_URL` definieren, die eine einzelne URL übergibt, um Jobs in einer einzelnen Stage bereitzustellen und zu testen. Der Bereitstellungsjob würde an dieser URL implementiert und der Testjob würde die App testen, die an dieser URL ausgeführt wird.
+Ähnlich wie Sie Pipeline-Eigenschaften definieren können, können Sie auch Stage-Eigenschaften definieren, die in allen Jobs in einer bestimmten Stage verwendet werden sollen. Sie könnten zum Beispiel die Eigenschaft `TEST_URL` definieren, die eine URL an die Bereitstellungs- und Testjobs in einer Stage übergibt. Der Bereitstellungsjob führt an dieser URL eine Bereitstellung aus und der Testjob testet die App, die an dieser URL ausgeführt wird. Stage-Eigenschaften werden außerdem mithilfe von Umgebungsvariablen an Job-Scripts übergeben. Wenn dieselbe Eigenschaft sowohl auf der Pipeline- als auch auf der Stage-Ebene definiert ist, wird der Wert der Stage-Eigenschaft verwendet.
 
 In einer Stage werden standardmäßig Builds und Bereitstellungen automatisch ausgeführt, sobald Änderungen an ein SCM-Repository des Projekts übermittelt werden. Phasen und Jobs werden seriell ausgeführt. Sie ermöglichen die Ablaufsteuerung für Ihre Arbeit. Sie können zum Beispiel eine Stage für den Test vor einer Stage für die Bereitstellung anordnen. Falls die Tests in der Stage für den Test fehlschlagen, wird die Stage für die Bereitstellung nicht ausgeführt.
 
@@ -45,21 +51,27 @@ Möglicherweise wünschen Sie eine engere Steuerung einer bestimmten Stage. Wenn
 ### Build-Stage
 {: #build_stage}
 
-<!-- Need the Pipeline team to fill out what each builder does and possible add an example -->
-Die Build-Stage gibt einen **Builder-Typ** an, um darzustellen, wie Artefakte erstellt werden sollen.  Folgende Builder-Typen sind verfügbar:
+Die Build-Stage gibt einen **Builder-Typ** an, um darzustellen, wie Artefakte erstellt werden sollen.  
 
-1. **Simple** - Wenn Sie den Erstellungsprogrammtyp **Simple** verwenden, wird Ihr Code nicht kompiliert oder erstellt; er wird gepackt und für zukünftige Stages zur Verfügung gestellt.
-2. **Ant**
-3. **Container-Registry**
-4. **Gradle**
-5. **Gradle (Artifactory, Nexus oder SonarQube)**
-6. **Grunt**
-7. **IBM Globalization Pipeline**
-8. **Maven**
-9. **Maven (Artifactory, Nexus oder SonarQube)**
-10. **npm**
-11. **npm (Artifactory oder Nexus)**
-12. **Shell-Script**
+Viele Felder, die in Build-Jobs verfügbar sind, treten buildertypunabhängig auf.
+{: tip}
+
+Folgende Builder-Typen sind verfügbar:
+
+* **Einfach** - Jobs, die den Builder-Typ **Einfach** verwenden, nehmen die Eingabe der aktuellen Stage unverändert und archivieren sie für die Verwendung durch zukünftige Stages. In der Regel ist der Buildertyp **Einfach** nur dann nützlich, wenn die Eingabe der Stage aus einem SCM-Repository erfolgt.
+* **Ant** - Verwenden Sie diesen Builder-Typ zur Nutzung von Apache Ant-Dateien für die Verwaltung des Build-Jobs.
+  * **Build-Script** - Dieser Builder-Typ kann ein beliebtes gültiges Build-Script sein. Standardmäßig ist dieser Builder-Typ auf 'ant' gesetzt.
+  * **Arbeitsverzeichnis** - Gibt das Verzeichnis an, in dem das Script ausgeführt wird.
+  * **Archivverzeichnis erstellen** - Gibt das Verzeichnis an, das die zu archivierende Ausgabe des Jobs enthält, die von einer nachfolgenden Stage verwendet werden soll.
+  * **Testbericht aktivieren** - Wählen Sie dieses Kontrollkästchen aus, um anzugeben, dass der Erstellungsjob Tests ausführt, die Ergebnisdateien im JUnit-XML-Format erzeugen. Auf der Registerkarte 'Tests' auf der Seite 'Jobergebnisse' wird ein Bericht auf der Basis der Ergebnisdateien angezeigt. Wenn ein Test fehlgeschlagen ist, wird der Job als fehlgeschlagen markiert.
+  * **Codeabdeckungsbericht aktivieren** - Wählen Sie dieses Kontrollkästchen aus, um weitere Felder anzuzeigen, die Sie für den Codeabdeckungsbericht verwenden können. Sie können den Coverage Runner (z. B. Istanbul, JaCoCo oder Cobertura), die Position der Abdeckungsergebnisdatei sowie das Abdeckungsergebnisverzeichnis angeben; dieses verhält sich zum Arbeitsverzeichnis relativ.
+* **Container-Registry**
+* **Gradle (Artifactory, Nexus oder SonarQube)**
+* **Grunt**
+* **IBM Globalization Pipeline**
+* **Maven (Artifactory, Nexus oder SonarQube)**
+* **npm (Artifactory oder Nexus)**
+* **Shell-Script**
 
 ### Stage für die Bereitstellung
 Die Stage für die Bereitstellung gibt die Eingabe von einer Build-Stage an.  Die Jobs in der Stage für die Bereitstellung geben einen **Deployer-Typ** an.  Folgende Deployer-Typen sind verfügbar:
@@ -129,20 +141,52 @@ Wenn Ihre Tests Ergebnisdateien im JUnit XML-Format erzeugen, wird ein Bericht a
 ## Umgebungseigenschaften (Umgebungsvariablen)
 {: #environment_properties}
 
-Sie können Umgebungseigenschaften innerhalb der Shellbefehle eines Jobs einbeziehen. Die Eigenschaften bieten Zugriff auf Informationen über die Ausführungsumgebung des Jobs. Weitere Informationen finden Sie unter [Umgebungseigenschaften und Ressourcen für den {{site.data.keyword.deliverypipeline}}-Service](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).  Die Umgebungseigenschaften können zwischen Jobs in derselben Stage übergeben werden, indem die Eigenschaften exportiert werden.  Um Umgebungseigenschaften zwischen den Stages zu übergeben, erstellen Sie die Datei `build.properties` im Repository in der Stage. Lassen Sie dann die nächste Stage die Datei `build.properties` ausführen.  Ihr Build-Job könnte beispielsweise diesen Befehl im Build-Script einbeziehen:
+Eine Reihe vordefinierter Umgebungseigenschaften bietet Zugriff auf Informationen zur Ausführungsumgebung des Jobs. Eine vollständige Liste der vordefinierten Umgebungseigenschaften finden Sie im Abschnitt zu [Umgebungseigenschaften und Ressourcen](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
 
-    `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
+Sie können auch Ihre eigenen Umgebungseigenschaften definieren. Sie können z. B. die Eigenschaft `API_KEY` definieren, mit der ein API-Schlüssel übergeben wird, der für den Zugriff auf {{site.data.keyword.Bluemix_notm}}-Ressourcen durch alle Scripts in der Pipeline verwendet wird.
 
-    Alle Jobs beginnen mit der Ausführung der Datei `build.properties`, wenn sie vorhanden ist.
+Sie können die folgenden Typen von Eigenschaften hinzufügen:
+
+* **Text** (Text): Ein Eigenschaftsschlüssel mit einem einzeiligen Wert.
+* **Text Area** (Textbereich): Ein Eigenschaftsschlüssel mit einem mehrzeiligen Wert.
+* **Secure** (Sicher): Ein Eigenschaftsschlüssel mit einem einzeiligen Wert, der mit der AES-128-Verschlüsselung gesichert ist. Der Wert wird in Form von Sternen angezeigt.
+* **Properties** (Eigenschaften): Eine Datei im Projektrepository. Diese Datei kann mehrere Eigenschaften enthalten. Jede Eigenschaft muss in einer eigenen Zeile stehen. Verwenden Sie Gleichheitszeichen (=), um Schlüssel und Werte der Paare zu trennen. Schließen Sie alle Zeichenfolgewerte in Anführungszeichen ein. Beispiel: `MY_STRING="SOME STRING VALUE"`.
+
+Sie können die Umgebungseigenschaften für einen Pipeline-Job prüfen, indem Sie den Befehl `env` im Job-Script ausführen.
+{:tip}
+
+### Pipeline-Eigenschaften
+Wählen Sie die Option **Pipeline konfigurieren** im Überlaufmenü auf der Seite 'Pipeline' aus, um Pipeline-Eigenschaften zu definieren.
+
+![Überlaufmenü 'Pipeline'](images/OverflowMenu.png)
+
+Geben Sie auf der Registerkarte **Umgebungseigenschaften** auf der Seite 'Pipelinekonfiguration' die Umgebungseigenschaften auf Pipeline-Ebene an.
+
+![Seite mit Pipeline-Eigenschaften](images/PipelineProperties.png)
+
+### Stage-Eigenschaften
+Öffnen Sie zur Definition der Stage-Eigenschaften die Seite für die Stage-Konfiguration und klicken Sie auf die Registerkarte **Umgebungseigenschaften**.
+
+![Seite mit Stage-Eigenschaften](images/StageProperties.png)
+
+Sie können die Umgebungseigenschaften auch zwischen Jobs in derselben Stage übergeben, indem Sie die Eigenschaften exportieren. Sie können beispielsweise den folgenden Befehl eingeben, um die Eigenschaft `$API_KEY` in einem weiteren Job in der Stage zu verwenden: `export API_KEY=<API-Schlüssel hier einfügen>`
+{:tip}
+
+### Berechnete Eigenschaften
+Sie können die Umgebungseigenschaftswerte berechnen, die von mehreren Stages gemeinsam genutzt werden, indem Sie während er Ausführung der Stage eine Datei des Typs `build.properties` erstellen und die nächste Stage diese Datei ausführen lassen. Ihr Build-Job könnte beispielsweise den folgenden Befehl im Build-Script einbeziehen:
+
+  `echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties`
+
+Alle Jobs beginnen mit der Ausführung der Datei `build.properties`, sofern sie vorhanden ist.
 
 ## Artefakte erstellen und verwenden
 {: #artifacts}
 
-Build-Jobs rufen automatisch den Inhalt in dem aktuellen Ordner ab, in dem das Benutzerscript ausgeführt wird. Wenn Sie nicht den gesamten Git-Repo-Inhalt für eine spätere Bereitstellung benötigen, sollten Sie ein explizites Ausgabeverzeichnis konfigurieren, damit die relevanten Artefakte dort kopiert oder erstellt werden.  Job-Scripts werden im Buildergebnis (Ausgabeverzeichnis) ausgeführt.
+Build-Jobs rufen automatisch den Inhalt in dem aktuellen Ordner ab, in dem das Benutzerscript ausgeführt wird.  Wenn Sie nicht den gesamten Git-Repo-Inhalt für eine spätere Bereitstellung benötigen, sollten Sie ein explizites Ausgabeverzeichnis konfigurieren und anschließend die relevanten Artefakte dort kopieren oder erstellen.  Job-Scripts werden im Buildergebnis (Ausgabeverzeichnis) ausgeführt.
 
-Bereitstellungsjobs, die Bereitstellungen auf Cloud Foundry ausführen, müssen den Plattform-API-Schlüssel eines Benutzers, mit dessen Berechtigung Jobs ausgeführt werden, sowie die Region, die Organisation und den Bereich angeben, wo die Artefakte bereitgestellt werden sollen. Wenn zur Ausführung Ihrer App weitere Services notwendig sind, müssen Sie sie in der Datei `manifest.yml` angeben.
+Jobs, die Bereitstellungen auf Cloud Foundry ausführen, müssen den Plattform-API-Schlüssel eines Benutzers, mit dessen Berechtigung Jobs ausgeführt werden, sowie die Region, die Organisation und den Bereich angeben, wo die Artefakte bereitgestellt werden sollen. Wenn zur Ausführung Ihrer App weitere Services notwendig sind, müssen Sie sie in der Datei `manifest.yml` angeben.
 
-Bereitstellungsjobs, die Bereitstellungen für den {{site.data.keyword.containerlong_notm}} für die Ausführung auf einem Kubernetes-Cluster bereitstellen, müssen den Plattform-API-Schlüssel eines Benutzers, mit dessen Berechtigung Jobs ausgeführt werden, sowie eine Dockerfile und optional ein Helm-Diagramm angeben.  
+Bereitstellungsjobs, die Bereitstellungen für den {{site.data.keyword.containerlong_notm}} ausführen, müssen den Plattform-API-Schlüssel eines Benutzers, mit dessen Berechtigung Jobs ausgeführt werden, sowie eine Dockerfile und optional ein Helm-Diagramm angeben.  
 
 Das Job-Script wird ausgeführt, nachdem sich der Job in der Zielumgebung unter Verwendung des ihm zugeordneten Plattform-API-Schlüssels angemeldet hat (damit Sie die Befehle `cf push` oder `kubectl` im Script ausführen können).
 

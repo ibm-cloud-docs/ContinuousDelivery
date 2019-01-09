@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-6-22"
+lastupdated: "2018-10-10"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-6-22"
 # {{site.data.keyword.cloudaccesstrailshort}}-Ereignisse
 {: #at_events}
 
-Verwenden Sie den Service {{site.data.keyword.cloudaccesstrailfull}}, um zu verfolgen, wie Benutzer und Anwendungen mit dem Service ?{{site.data.keyword.contdelivery_short}} in {{site.data.keyword.Bluemix}} interagieren.
+Verwenden Sie den Service {{site.data.keyword.cloudaccesstrailfull}}, um zu verfolgen, wie Benutzer und Anwendungen mit dem Service ?{{site.data.keyword.contdelivery_short}} in {{site.data.keyword.Bluemix}} interagieren. 
 {: shortdesc}
 
 Der Service {{site.data.keyword.cloudaccesstrailfull_notm}} zeichnet benutzerinitiierte Aktivitäten auf, die den Status eines Service in {{site.data.keyword.Bluemix_notm}} ändern. Weitere Informationen finden Sie unter [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
@@ -34,10 +34,10 @@ In der folgenden Tabelle sind die Aktionen aufgelistet, die ein Ereignis generie
 
 | Aktion | Beschreibung | 
 |:-----------------|:-----------------|
-| Toolchainerstellung | Toolchain erstellen | 
-| Toolchainlöschung | Toolchain löschen |
-| Toolerstellung | Toolintegration erstellen |
-| Toollöschung | Toolintegration löschen |
+| continuous-delivery.toolchain.create | Toolchain erstellen | 
+| continuous-delivery.toolchain.delete | Toolchain löschen |
+| toolchain.tool-instance.deploy | Toolintegration erstellen |
+| toolchain.tool-instance.undeploy | Toolintegration löschen |
 {: caption="Tabelle 1. Aktionen, die Ereignisse generieren" caption-side="top"}
 
 ## Wo die Ereignisse angezeigt werden

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,12 +11,14 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Mit Git in der Eclipse Orion-Web-IDE arbeiten
 {: #git_web_ide}
 
-Sie können viele allgemeine Git-Befehle in der Eclipse Orion-Web-IDE ausführen.
+Sie können viele allgemeine Git-Befehle in der Eclipse Orion-{{site.data.keyword.webide}} ausführen.
 
 Unabhängig von dem Standort, an dem Sie Code schreiben, können Sie diese Kurzübersicht verwenden, um allgemeine Tasks auszuführen. Wenn möglich werden die Git-Befehle mit ihren Entsprechungen in der Web-IDE gezeigt. 
 
@@ -92,7 +94,7 @@ Unabhängig von dem Standort, an dem Sie Code schreiben, können Sie diese Kurz�
 Überschreiben Sie den Inhalt eines referenzierten fernen Zweigs mit dem Inhalt Ihres aktiven lokalen Zweigs.
 
 Wenn Sie die Übertragung eines lokalen Zweigs per Push-Operation an einen fernen Zweig erzwingen, verlieren Sie im fernen Zweig möglicherweise Commitoperationen.
-{: tip}
+{: important}
 
 ### Eclipse Orion-Web-IDE
 {: #force_push_web}
@@ -161,7 +163,8 @@ zugehörigen Tracker für Probleme einen Link zu einem Element einschließen, um
 
 5. Commitnachricht speichern
 
-  Um Ihre Commitnachricht zu speichern und Vim zu schließen, der möglicherweise Ihr Standardtexteditor ist, drücken Sie die Escapetaste, geben Sie `:wq` ein und drücken Sie die Eingabetaste. {: tip}
+  Um Ihre Commitnachricht zu speichern und Vim zu schließen, der möglicherweise Ihr Standardtexteditor ist, drücken Sie die Escapetaste, geben Sie `:wq` ein und drücken Sie die Eingabetaste.
+  {: tip}
 
 4. Geben Sie `git push` ein und drücken Sie die Eingabetaste.
 
@@ -206,7 +209,7 @@ anzuzeigen.
 
 3. Klicken Sie zum Überprüfen der an einer Datei vorgenommenen Änderungen auf **>**.
 
-  Wenn durch eine Commitoperation die Änderung einer Zeile eingeführt wurde, wird die ursprüngliche Zeile rosa und die neue Zeile grün schattiert. In gleicher Weise werden Zeilen, die durch eine Commitoperation hinzugefügt wurden, grün
+  Wenn durch eine Commitoperation die Änderung einer Zeile eingeführt wurde, wird die ursprüngliche Zeile rosa und die neue Zeile grün schattiert.  In gleicher Weise werden Zeilen, die durch eine Commitoperation hinzugefügt wurden, grün
 schattiert, und Zeilen, die aus einer Commitoperation entfernt wurden, werden rosa schattiert.
   {: tip}
 
@@ -236,7 +239,7 @@ entfernt wurden, werden in rotem Text angezeigt und beginnen mit einem Minuszeic
 
   Wenn Sie die letzte Commitoperation ändern, nachdem Sie sie mit einer Push-Operation an ein fernes Repository übertragen haben, erstellen Sie das Commitprotokoll erneut. Diese Änderung verursacht für die übrigen Bearbeiter in Ihrem Projekt möglicherweise Commitfehler und weitere Probleme. Seien Sie sich im Klaren darüber, welche Schritte Sie vornehmen, wenn Sie eine Commitoperation
 ändern, die mit einer Push-Operation an ein fernes Repository übertragen wurde.
-  {: tip}
+  {: important}
 
 ### Eclipse Orion-Web-IDE
 {: #modify_last_commit_web}
@@ -257,7 +260,8 @@ entfernt wurden, werden in rotem Text angezeigt und beginnen mit einem Minuszeic
 
 3. Akzeptieren Sie die Commitnachricht in Ihrem Texteditor oder ändern Sie sie.
 
-  Um Ihre Commitnachricht zu speichern und Vim zu schließen, der möglicherweise Ihr Standardtexteditor ist, drücken Sie die Escapetaste, geben Sie `:wq` ein und drücken Sie die Eingabetaste. {: tip}
+  Um Ihre Commitnachricht zu speichern und Vim zu schließen, der möglicherweise Ihr Standardtexteditor ist, drücken Sie die Escapetaste, geben Sie `:wq` ein und drücken Sie die Eingabetaste.
+  {: tip}
 
 ## Commit taggen
 {: #tag_commit}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-5"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # {{site.data.keyword.gitrepos}}
@@ -19,6 +21,12 @@ lastupdated: "2018-8-2"
 
 Arbeiten Sie mit Ihrem Team zusammen und verwalten Sie Ihren Quellcode mit einem Git-Repository- und Problemtracker, der von IBM gehostet wird und auf [GitLab Community Edition ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://about.gitlab.com/){:new_window} basiert.
 {: shortdesc}
+
+Laden Sie nur Personen für eine Zusammenarbeit an einem Projekt ein, mit denen Sie eine persönliche oder geschäftlicher Beziehung haben. Benutzern, die eine Einladung zu einem Git-Repository nicht für eine Zusammenarbeit an einem Projekt verwenden, wurde der Zugriff auf den Service möglicherweise entzogen oder sie pausieren ihren Zugriff auf den Service.
+{: important}
+
+Speichern Sie keine regulierten Daten in Dateien oder Issues in Git-Repositorys. Derzeit sind keine Prozeduren für regulierte Daten in Kraft.
+{: tip}
 
 Die {{site.data.keyword.gitrepos}}-Toolintegration unterstützt Teams auf zahlreiche verschiedene Arten bei der Verwaltung von Code und der Zusammenarbeit:
    * Verwalten Sie Git-Repositorys mittels differenzierter Zugriffssteuerungsmechanismen, durch die der Code geschützt bleibt.

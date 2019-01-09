@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -27,12 +27,12 @@ Organisation sie erstellt wird.
 
 **Häufig gestellte Fragen**
 
-- [Mein JazzHub-Projekt ist Großbritannien (GB) als geografischer Region zugeordnet, die Toolchain wird sich jedoch im Süden der USA befinden. Wie wird das funktionieren?](#faq_region)
+- [Mein JazzHub-Projekt ist dem Vereinigten Königreich (UK) als geografischer Region zugeordnet, die Toolchain befindet sich jedoch im Süden der USA. Wie wird das funktionieren?](#faq_region)
 - [Was geschieht beim Durchführen eines Upgrades mit meinen Arbeitselementen und Dashboards in Track &amp; Plan?](#faq_tp)
 - [Was geschieht beim Durchführen eines Upgrades mit meinem Code-Repository?](#faq_repo)
 - [Was geschieht beim Durchführen eines Upgrades auf eine Toolchain mit den Builddefinitionen in meinem Projekt?](#faq_build)
 - [Ich muss für mein Projekt, für das ein Upgrade auf eine Toolchain durchgeführt wird, eine Organisation erstellen. Mir ist bewusst, dass ich eine Kreditkarte zu meinem Konto hinzufügen muss, bevor ich die Organisation erstellen kann. Wird diese Kreditkarte belastet?](#faq_charges)
-- [Ich kann meine Toolchain nicht finden oder auf sie zugreifen. Was soll ich tun? ](#faq_find)
+- [Ich kann meine Toolchain nicht finden oder auf sie zugreifen. Was kann ich tun?](#faq_find)
 - [Mein Projekt ist Großbritannien (GB) als geografischer Region zugeordnet. Nach dem Upgrade werden Fehlernachrichten angezeigt, meine Kollegen können nicht auf die Toolchain zugreifen und ich sehe meine Toolchain nicht auf der Seite 'Toolchains' in der {{site.data.keyword.Bluemix_notm}} Plattform. Was stimmt nicht?](#faq_uk)
 
 ## Toolchains
@@ -51,19 +51,17 @@ Mehr zu Toolchains erfahren Sie in [YouTube![Symbol für externen Link](../../ic
 {: #upgrade_prereqs}
 
 - Für den Zugriff auf die Toolchain Ihres aktualisierten Projekts benötigen Sie eine {{site.data.keyword.Bluemix_notm}}-ID. Vor der Durchführung des Upgrades müssen Sie daher sicherstellen, dass Sie über eine aktive {{site.data.keyword.Bluemix_notm}}-ID verfügen. Sollte das nicht der Fall sein, müssen Sie sich [anmelden](https://console.ng.bluemix.net/registration/).
-- tellen Sie sicher, dass die Angabe für Ihren {{site.data.keyword.jazzhub_short}}-Projekteigner richtig ist. Die Toolchain, die auf der Grundlage Ihres Projekts erstellt wird, ist künftig Teil der {{site.data.keyword.Bluemix_notm}}-Organisation dieses Eigners.
+- Stellen Sie sicher, dass die Angabe für Ihren {{site.data.keyword.jazzhub_short}}-Projekteigner richtig ist. Die Toolchain, die auf der Grundlage Ihres Projekts erstellt wird, ist Teil der {{site.data.keyword.Bluemix_notm}}-Organisation dieses Eigners.
 - Stellen Sie sicher, dass sich die Organisation und der Bereich, in der/dem Sie Ihre Toolchain erstellen wollen, unter {{site.data.keyword.Bluemix_notm}} Public in der Region 'Vereinigte Staaten (Süden)' befinden. Um zu bestätigen, dass Sie eine gültige Organisation und einen gültigen Bereich in der Region 'Vereinigte Staaten (Süden)' haben, melden Sie sich unter [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window} an und erstellen Sie einen Bereich, wenn Sie dazu aufgefordert werden.
 - Stellen Sie bei der Planung für den Start des Upgrades sicher, dass Sie in jeder Organisation und jedem Bereich, in dem die Bereitstellung durch die Pipeline erfolgt, Mitglied sind. Die Durchführung des Upgrades kann von einem beliebigen Projektadministrator
 gestartet werden. Wenn jedoch der Administrator, der die Durchführung des Upgrades startet, nicht Mitglied aller Organisationen und Bereiche ist, in denen die Bereitstellung durch die Pipeline erfolgt, kann die Pipeline nicht erstellt werden. Die Person, die die Durchführung des Upgrades startet, wird Eigner des Repositorys in der Toolchain.
-- Die Eclipse Orion-Web-IDE in der Toolchain funktioniert gesondert von der Web-IDE, die Ihrem Projekt zugeordnet ist. Wenn Sie die {{site.data.keyword.webide}} verwenden und nicht festgeschriebene Änderungen vorliegen, führen Sie einen Commit für diese Änderungen aus, bevor Sie das Upgrade durchführen.
+- Die Eclipse Orion-{{site.data.keyword.webide}} in der Toolchain funktioniert gesondert von der {{site.data.keyword.webide}}, die Ihrem Projekt zugeordnet ist. Wenn Sie die {{site.data.keyword.webide}} verwenden und nicht festgeschriebene Änderungen vorliegen, führen Sie einen Commit für diese Änderungen aus, bevor Sie das Upgrade durchführen.
 
 
 ## Upgrade eines Projekts zu einer Toolchain durchführen
 {: #project_to_toolchain}
 
-Projekte unter hub.jazz.net und Toolchains werden im Süden der USA gehostet. Wenn Ihr Projekt
-für die Bereitstellung von Apps in anderen Regionen konfiguriert wurde, wird es auch nach dem Upgrade auf eine Toolchain weiterhin Apps
-in diesen Regionen bereitstellen.
+Projekte unter hub.jazz.net und Toolchains werden im Süden der USA gehostet. Wenn Ihr Projekt für die Bereitstellung von Apps in anderen Regionen konfiguriert wurde, wird es auch nach dem Upgrade auf eine Toolchain weiterhin Apps in diesen Regionen bereitstellen.
 {: tip}
 
 Wenn Ihr Projekt bereit für das Upgrade ist, wird eine Nachricht auf der Karte des Projekts und auf seiner Übersichtsseite angezeigt.
@@ -104,13 +102,9 @@ Führen Sie die folgenden Schritte aus, um für Ihr Projekt das Upgrade auf eine
 
    ![Beispiel für eine Upgradeseite](images/project-upgrade-toolchain.png)
 
-   Einen Überblick über den Upgradeprozess können Sie sich verschaffen, indem Sie die Beschreibung auf dieser Seite lesen. Die Toolchain wird eine neue Pipeline enthalten, die dieselben Stages und Jobs wie die Pipeline des Projekts enthält. Außerdem enthält die Toolchain einen Verweis auf die Eclipse Orion-{{site.data.keyword.webide}}, die in {{site.data.keyword.contdelivery_short}} ausgeführt wird.
+   Einen Überblick über den Upgradeprozess können Sie sich verschaffen, indem Sie die Beschreibung auf dieser Seite lesen. Die Toolchain enthält eine neue Pipeline, die dieselben Stages und Jobs wie die Pipeline des Projekts enthält. Außerdem enthält die Toolchain einen Verweis auf die Eclipse Orion-{{site.data.keyword.webide}}, die in {{site.data.keyword.contdelivery_short}} ausgeführt wird.
 
-   Da das Projekt ein öffentliches Repository unter github.com verwendet, wird für die Toolchain in diesem Beispiel eine Verbindung zum
-selben
-GitHub-Repository hergestellt. Wenn Ihr Projekt ein Git-Repository verwendet, das unter JazzHub gehostet wird, werden die Inhalte dieses
-Repositorys durch Klonen in einem neuen Repository in {{site.data.keyword.gitrepos}} bereitgestellt, das Teil von
-{{site.data.keyword.contdelivery_short}} ist.
+   Da das Projekt ein öffentliches Repository unter github.com verwendet, wird für die Toolchain in diesem Beispiel eine Verbindung zum selben GitHub-Repository hergestellt. Wenn Ihr Projekt ein Git-Repository verwendet, das unter JazzHub gehostet wird, werden die Inhalte dieses Repositorys durch Klonen in einem neuen Repository in {{site.data.keyword.gitrepos}} bereitgestellt, das Teil von {{site.data.keyword.contdelivery_short}} ist.
 
 2. Durch Konfigurieren einiger Einstellungen können Sie die Toolchain anpassen:
 
@@ -233,10 +227,10 @@ Wenn während des Upgradeprozesses ein Problem auftritt, führen Sie einen oder 
 ## Häufig gestellte Fragen
 {: #upgrade_faq}
 
-### Mein JazzHub-Projekt ist Großbritannien (GB) als geografischer Region zugeordnet, die Toolchain wird sich jedoch im Süden der USA befinden. Wie wird das funktionieren?
+### Mein JazzHub-Projekt ist dem Vereinigten Königreich (UK) als geografischer Region zugeordnet, die Toolchain befindet sich jedoch im Süden der USA. Wie funktioniert das?
 {: #faq_region}
 
-Projekte unter hub.jazz.net und Toolchains werden im Süden der USA gehostet. Wenn Ihr Projekt für die Bereitstellung von Apps in anderen Regionen (wie zum Beispiel Großbritannien) konfiguriert wurde, wird es auch nach dem Upgrade auf eine Toolchain weiterhin Apps in diesen Regionen bereitstellen. Daher gibt es im Grunde genommen keine Änderungen, was den Ort des Hostings betrifft. Toolchains werden in Zukunft in mehr Regionen zur Verfügung stehen.
+Projekte unter hub.jazz.net und Toolchains werden im Süden der USA gehostet. Wenn Ihr Projekt für die Bereitstellung von Apps in anderen Regionen (wie zum Beispiel dem Vereinigten Königreich) konfiguriert wurde, wird es auch nach dem Upgrade auf eine Toolchain weiterhin Apps in diesen Regionen bereitstellen. Daher gibt es im Grunde genommen keine Änderungen, was den Ort des Hostings der Daten betrifft. Toolchains werden in Zukunft in mehr Regionen zur Verfügung stehen.
 
 ### Was geschieht beim Durchführen eines Upgrades mit meinen Arbeitselementen und Dashboards in Track &amp; Plan?
 {: #faq_tp}
@@ -251,12 +245,12 @@ Dieser neue Service - IBM Track and Plan on Cloud - stellt eine weitaus umfangre
 
 Wenn Sie Informationen zu IBM Track and Plan on Cloud suchen oder IBM Track and Plan on Cloud online kaufen möchten, gehen Sie zu [IBM Marketplace ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}.
 
-Wenn Sie zusätzlich Funktionen für die Buildautomation und die Quellcodeverwaltung erwerben möchten, stellt [Rational Team Concert on Cloud ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window} eine Option dar.
+Außerdem stellt der Erwerb der Funktionen für die Buildautomation und die Quellcodeverwaltung [Rational Team Concert on Cloud ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window} eine Option dar.
 
 ### Was geschieht beim Durchführen eines Upgrades mit meinem Code-Repository?
 {: #faq_repo}
 
-Nach dem Upgrade ist Ihr neuer Git-Service vergleichbar mit dem, was Sie bisher hatten. Wenn Sie github.com mit Ihrem JazzHub-Projekt verwendet haben, ist Ihre Toolchain mit demselben GitHub-Repository verbunden. Wenn Ihr JazzHub-Projekt jedoch IBM Hosted Git verwendet hat, so wird der Inhalt dieses Repositorys in ein neues Repository in {{site.data.keyword.gitrepos}} geklont, einer von IBM gehosteten Komponente von {{site.data.keyword.contdelivery_short}}.
+Nach dem Upgrade ist Ihr neuer Git-Service vergleichbar mit dem, was Sie bisher hatten. Wenn Sie github.com mit Ihrem JazzHub-Projekt verwendet haben, wird Ihre Toolchain mit demselben GitHub-Repository verbunden. Wenn Ihr JazzHub-Projekt jedoch IBM Hosted Git verwendet hat, so wird der Inhalt dieses Repositorys in ein neues Repository in {{site.data.keyword.gitrepos}} geklont, einer von IBM gehosteten Komponente von {{site.data.keyword.contdelivery_short}}.
 
 Vollständige Details zur Handhabung der einzelnen Repository-Typen im Rahmen des Upgradeprozesses finden Sie in der
 folgenden Tabelle.
@@ -268,12 +262,12 @@ folgenden Tabelle.
 {: caption="Tabelle 1. Zuordnung von Projektrepositorys zu Toolchain-Repositorys" caption-side="top"}
 
 
-### Was geschieht beim Durchführen eines Upgrades zu einer Toolchain mit den Builddefinitionen in meinem Projekt?
+### Was geschieht beim Durchführen eines Upgrades auf eine Toolchain mit den Builddefinitionen in meinem Projekt?
 {: #faq_build}
 
 Wenn Sie Ihren Quellcode mit Jazz anstatt mit Delivery Pipeline erstellen, müssen Sie Ihre Builddefinitionen manuell in Ihrer Toolchain auf Delivery Pipeline migrieren.
 
-Wenn Sie Jazz SCM als Quellenrepository einsetzen und Delivery Pipeline für die Erstellung von Code Delivery verwenden, wird die Quelle in Jazz SCM automatisch in ein Git-Repository verschoben. Ihre Delivery Pipeline-Konfiguration verwendet künftig die Quelle des Git-Repositorys anstatt der Quelle von Jazz SCM, bleibt aber ansonsten unverändert.
+Wenn Sie Jazz SCM als Quellenrepository einsetzen und Delivery Pipeline für die Codeerstellung verwenden, wird die Quelle in Jazz SCM automatisch in ein Git-Repository verschoben. Die Konfiguration Ihrer Delivery Pipeline bleibt unverändert. Es wird nur die Quelle aus dem Git-Repository statt der Jazz SCM-Quelle verwendet.
 
 ### Ich muss für mein Projekt, für das ein Upgrade auf eine Toolchain durchgeführt wird, eine Organisation erstellen. Mir ist bewusst, dass ich eine Kreditkarte zu meinem Konto hinzufügen muss, bevor ich die Organisation erstellen kann. Wird diese Kreditkarte belastet?
 {: #faq_charges}
@@ -282,7 +276,7 @@ Als [nutzungsabhängiger Kunde ![Symbol für externen Link](../../icons/launch-g
 
 Wenn Sie ein IBM Mitarbeiter sind, können interne IBM Projekte den entsprechenden Abteilungen in Rechnung gestellt werden, sodass keine privaten Kreditkarten erforderlich sind. Sollten Sie Ressourcen benötigen, die über die kostenlosen Zuteilungen für IBM Mitarbeiter hinausgehen, erstellen Sie ein Support-Ticket.
 
-### Ich kann meine Toolchain nicht finden oder auf sie zugreifen. Was soll ich tun?
+### Ich kann meine Toolchain nicht finden oder auf sie zugreifen. Was kann ich tun?
 {: #faq_find}
 
 Toolchains werden in {{site.data.keyword.Bluemix_notm}}-Organisationen gehostet. Der Upgradeprozess fügt alle Mitglieder des JazzHub-Projekts der Toolchain hinzu. Allerdings muss der Eigner der {{site.data.keyword.Bluemix_notm}}-Organisation die Benutzer zur Organisation hinzufügen, damit diese die Toolchain sehen können.
@@ -306,7 +300,7 @@ Mein JazzHub-Projekt ist entsprechend den Projekteinstellungen der {{site.data.k
 
 **Antwort:**
 
-Diese Probleme können auftreten, wenn Sie von einer {{site.data.keyword.Bluemix_notm}}-Organisation außerhalb der Vereinigten Staaten kommen und Ihre Organisation vor dem Upgrade nicht explizit auf die Region 'Vereinigte Staaten (Süden)' erweitert haben. Sie können dies auf zwei Arten bestätigen:
+Diese Probleme können auftreten, wenn Sie von einer {{site.data.keyword.Bluemix_notm}}-Organisation außerhalb der Vereinigten Staaten kommen und Ihre Organisation vor dem Upgrade nicht explizit auf die Region 'Vereinigte Staaten (Süden)' erweitert haben. Sie können dieses Szenario auf zwei Arten bestätigen:
 
    * Wenn Sie die Toolchain-URL öffnen, schauen Sie sich den {{site.data.keyword.Bluemix_notm}}-Header an. Sehr wahrscheinlich sehen Sie dort den Namen Ihrer Organisation und es ist kein Bereich angegeben.
    

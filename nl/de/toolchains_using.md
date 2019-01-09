@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,7 +12,9 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
-{:download: .download}
+{:note: .note}
+{:tip: .tip}
+{:important: .important}
 
 # Toolchains verwenden
 {: #toolchains-using}
@@ -20,8 +22,8 @@ lastupdated: "2018-8-2"
 Offene Toolchains stehen in den öffentlichen und den dedizierten Umgebungen von {{site.data.keyword.Bluemix}} (Public bzw. Dedicated) zur Verfügung. Mithilfe einer Toolchain können Sie Ihre täglichen Entwicklungs-, Bereitstellungs- und Systemaufgaben produktiv abwickeln. Nach dem Einrichten einer Toolchain können Sie Toolintegrationen hinzufügen, löschen oder konfigurieren sowie den Zugriff auf die Toolchain verwalten.
 {: shortdesc}
 
-In der Public-Region 'Vereinigte Staaten (Süden)' können Sie Toolchains verwalten, indem Sie Ressourcengruppen oder Cloud Foundry-Organisationen verwenden. Die Zugriffssteuerung und die Verwaltung berechtigter Benutzer für Toolchains ist unterschiedlich in Abhängigkeit davon, ob die Toolchain in einer Ressourcengruppe oder einer Cloud Foundry-Organisation enthalten ist.
-{: tip}
+In den Public-Regionen 'Vereinigte Staaten (Süden)', 'Vereinigte Staaten (Osten)', 'Vereinigtes Königreich', 'Deutschland' und 'Tokio' können Sie Toolchains verwalten, indem Sie Ressourcengruppen verwenden. In den Public-Regionen 'Vereinigte Staaten (Süden)', 'Vereinigtes Königreich' und 'Deutschland' können Sie Toolchains verwalten, indem Sie Cloud Foundry-Organisationen verwenden. Die Zugriffssteuerung und die Verwaltung berechtigter Benutzer für Toolchains ist unterschiedlich in Abhängigkeit davon, ob die Toolchain in einer Ressourcengruppe oder einer Cloud Foundry-Organisation enthalten ist.
+{: important}
 
 ## Toolintegration konfigurieren
 {: #configuring_a_tool_integration}
@@ -73,7 +75,7 @@ Sie können den Service Identity and Access Management (IAM) verwenden, um den B
 Nur Benutzer, die in der Liste der berechtigten Benutzer für die ausgewählte Instanz von {{site.data.keyword.contdelivery_short}} stehen, können die Features Delivery Pipeline, Eclipse Orion-{{site.data.keyword.webide}} und {{site.data.keyword.gitrepos}} von {{site.data.keyword.contdelivery_short}}-Toolchains verwenden. Sie können die Berechtigung für berechtigte Benutzer über die Registerkarte 'Verwalten' der ausgewählten Instanz von {{site.data.keyword.contdelivery_short}} in der angegebenen Ressourcengruppe verwalten.
 
 Um auf die Schlüsselfunktionen von {{site.data.keyword.contdelivery_short}} in einer Toolchain (z. B. Delivery Pipeline) zugreifen zu können, muss ein Benutzer Zugriff auf die Toolchain in IAM haben und in der Liste der berechtigten Benutzer der {{site.data.keyword.contdelivery_short}}-Instanz stehen.
-{: tip}
+{: important}
 
 Die Berechtigungen berechtigter Benutzer gelten für alle Toolchains, die in derselben Ressourcengruppe enthalten sind wie die Instanz von {{site.data.keyword.contdelivery_short}}.
 {: tip}
@@ -85,7 +87,7 @@ Die Berechtigungen berechtigter Benutzer gelten für alle Toolchains, die in der
 Sie können Benutzern Zugriff auf eine Toolchain gewähren, indem Sie sie sowohl der Organisation hinzufügen, der die Toolchain zugeordnet ist, als auch der Zugriffssteuerungsliste für die Toolchain. Jede Toolchain ist einer bestimmten Organisation zugeordnet und jeder Benutzer, der Mitglied dieser Organisation ist, kann für jede der zugeordneten Toolchains zu der Zugriffssteuerungsliste hinzugefügt werden. Die Organisation, in der Sie gegenwärtig arbeiten, wird auf der Menüleiste angezeigt. Wenn Sie auf andere Toolchains zugreifen wollen, wechseln Sie zu einer anderen Organisation.
 
 Sie müssen Benutzer der Organisation der Toolchain in der Region hinzufügen, in der die Toolchain gehostet wird. Wenn die Toolchain für die Bereitstellung von Apps in anderen Regionen konfiguriert ist, wird sie auch weiterhin Apps in diesen Regionen bereitstellen.
-{: tip}
+{: important}
 
 Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated für {{site.data.keyword.ghe_short}} verwenden und Benutzer zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und deren Bereichen hinzufügen, so können sich die Benutzer mit ihrer {{site.data.keyword.Bluemix_notm}}-ID und dem zugehörigen Kennwort bei {{site.data.keyword.ghe_short}} anmelden. Wenn sich die Benutzer anmelden, werden Konten für sie erstellt. Wenn Sie Benutzer zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und deren Bereichen hinzufügen, werden sie nicht automatisch zum {{site.data.keyword.ghe_short}}-Repository hinzugefügt. Ein Benutzer mit Administratorberechtigungen für das Repository muss sie hinzufügen. Weitere Informationen finden Sie im Abschnitt zur Verwendung von [Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. Wenn Sie Ihre eigene verwaltete Version von {{site.data.keyword.ghe_short}} verwenden, gehen Sie gemäß Ihren eigenen internen Prozeduren vor.
 
@@ -103,15 +105,17 @@ Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated für {{site.data.keyword.g
 
 * Führen Sie die folgenden Schritte aus, um einem Benutzer, der nicht Mitglied der Organisation der Toolchain ist, Zugriff zu erteilen:
 
-   a. Klicken Sie in der Menüleiste auf **Verwalten>Sicherheit>Identität und Zugriff**.
+   a. Klicken Sie in der Menüleiste auf **Verwalten > Zugriff (IAM)**.
 
-   b. Wählen Sie aus der Zeile für den Benutzer, dem Sie den Zugriff zuweisen möchten, das Menü **Aktionen** aus und klicken Sie auf **Zugriff zuweisen**.
+   b. Klicken Sie auf **Die Zugriffsverwaltung beginnt beim Benutzer**.
+   
+   c. Wählen Sie aus der Zeile für den Benutzer, dem Sie den Zugriff zuweisen möchten, das Menü **Aktionen** aus und klicken Sie auf **Zugriff zuweisen**.
+   
+   d. Wählen Sie **Zugriff mit Cloud Foundry zuweisen** aus.
 
-   c. Wählen Sie **Zugriff mit Cloud Foundry zuweisen** aus.
+   e. Wählen Sie **Organisation zuweisen** aus.
 
-   d. Wählen Sie **Organisation zuweisen** aus.
-
-   e. Gehen Sie wie folgt vor, um den Benutzerzugriff zuzuweisen:
+   f. Gehen Sie wie folgt vor, um den Benutzerzugriff zuzuweisen:
 
      * Wählen Sie eine Organisation aus, zu der der Benutzer hinzugefügt werden soll.
 

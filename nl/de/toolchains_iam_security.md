@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -28,7 +28,7 @@ Der Zugriff auf Toolchains in Ressourcengruppen für Benutzer in Ihrem Konto wir
 
 Jedem Benutzer, der auf Toolchains in Ihrem Konto zugreift, muss eine Zugriffsrichtlinie mit einer definierten IAM-Benutzerrolle zugeordnet werden. Diese Richtlinie bestimmt, welche Aktionen der Benutzer im Kontext des ausgewählten Service oder der ausgewählten Instanz ausführen kann. Die zulässigen Aktionen werden durch den {{site.data.keyword.Bluemix_notm}}-Service angepasst und als Operationen definiert, die für den Service ausgeführt werden dürfen. Die Aktionen werden dann IAM-Benutzerrollen zugeordnet.
 
-Richtlinien ermöglichen den Zugriff auf verschiedenen Ebenen. Einige der Optionen beinhalten Folgendes: 
+Richtlinien ermöglichen den Zugriff auf verschiedenen Ebenen; dazu gehören die folgenden: 
 
 * Zugriff auf alle Instanzen des Service in Ihrem Konto
 * Zugriff auf eine einzelne Serviceinstanz in Ihrem Konto

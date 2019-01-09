@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-10-9"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,20 +22,6 @@ lastupdated: "2018-8-2"
 # Umgebungseigenschaften und Ressourcen
 {: #deliverypipeline_environment}
 
-Sie können Umgebungseigenschaften und vorinstallierte Ressourcen verwenden, um mit der Pipelinefunktionalität von {{site.data.keyword.contdelivery_full}} zu interagieren. Möglicherweise integrieren Sie diese in ein Job-Script oder einen Testbefehl.
-{:shortdesc}
-
-Sie können auf der Registerkarte **Umgebungseigenschaften** Ihre eigenen Umgebungseigenschaften zu einer Stage hinzufügen. Umgebungseigenschaften stehen für jeden Job in einer Stage zur Verfügung.
-
-Sie können vier Typen von Eigenschaften von der Registerkarte 'Umgebungseigenschaften' hinzufügen:
-* **Text** (Text): Ein Eigenschaftsschlüssel mit einem einzeiligen Wert.
-* **Text Area** (Textbereich): Ein Eigenschaftsschlüssel mit einem mehrzeiligen Wert.
-* **Secure** (Sicher): Ein Eigenschaftsschlüssel mit einem einzeiligen Wert. Der Wert wird in Form von Sternen angezeigt.
-* **Properties** (Eigenschaften): Eine Datei im Projektrepository. Diese Datei kann mehrere Eigenschaften enthalten. Jede Eigenschaft muss in einer eigenen Zeile stehen. Verwenden Sie Gleichheitszeichen (=), um Schlüssel und Werte der Paare zu trennen. Schließen Sie alle Zeichenfolgewerte in Anführungszeichen ein. Beispiel: MEINE_ZEICHENFOLGE="EIN ZEICHENFOLGEWERT".
-
-Sie können die Umgebungseigenschaften für einen Pipeline-Job prüfen, indem Sie den Befehl `env` im Job-Script ausführen.
-{:tip}
-
 Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardmäßig verfügbar.
 
 <!--##Contents
@@ -50,7 +36,7 @@ Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardm
 ## Umgebungseigenschaften
 {: #deliverypipeline_envprop}
 
-### Eigenschaften mit allgemeinem Zweck
+### Vielseitig einsetzbare Eigenschaften
 
 | Umgebungseigenschaft | Beschreibung |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -74,6 +60,7 @@ Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardm
 | PIPELINE_STAGE_INPUT_JOB_ID | Die ID des Jobs, der als Eingabe für die aktuelle Stage dient. |
 | PIPELINE_STAGE_INPUT_REV | Die Überarbeitung der Eingabe für die aktuelle Stage. |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | Die eindeutige ID der Ausführung der Pipeline. |
+| PIPELINE_TRIGGERING_USER | Der aktuelle Benutzer für den Pipeline-Job.|
 | TASK_ID | Die eindeutige ID der aktuellen Jobausführung. |
 | TMPDIR | Eine Verzeichnisposition, an der temporäre Dateien gespeichert werden. |
 | WORKSPACE | Der Pfad zum aktuellen Arbeitsverzeichnis. |
@@ -91,7 +78,7 @@ Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardm
 | MAVEN_HOME | Der Pfad zu Apache Maven 3.2.1. |
 | NODE_HOME | Der Pfad zu Node.js 0.10.29. |
 
-Sie können Apache Ant Version 1.10 oder höher in den Scripts Ihrer Pipeline verwenden, indem Sie `ANT_HOME` auf `$ANT_JAVA8_HOME` und `JAVA_HOME` auf `$JAVA8_HOME` setzen.
+Wenn Sie Apache Ant 1.10+ in den Scripts Ihrer Pipeline verwenden möchten, setzen Sie `ANT_HOME` auf `$ANT_JAVA8_HOME` und `JAVA_HOME` auf `$JAVA8_HOME`.
 {: tip}
 
 ### Bereitstellungseigenschaften
@@ -129,13 +116,11 @@ Alle Links befinden sich im Ausgangsverzeichnis.
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
 
-64-Bit-Versionen von IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2 und 6.7.0 sind in der Pipeline-Umgebung verfügbar. Verwenden Sie zum Auswählen einer Version den Exportbefehl.
+Die Pipeline-Umgebung bietet 64-Bit-Versionen von IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2 und 6.7.0. Verwenden Sie zum Auswählen einer Version den Exportbefehl.
 
-Geben Sie beispielsweise für die Verwendung von Node 0.12.7 den folgenden Befehl ein:
-`export PATH=/opt/IBM/node-v0.12/bin:$PATH`
+Geben Sie beispielsweise für die Verwendung von Node 0.12.7 den folgenden Befehl ein: `export PATH=/opt/IBM/node-v0.12/bin:$PATH`
 
-Geben Sie für die Verwendung von Node 4.2.2 den folgenden Befehl ein:
-`export PATH=/opt/IBM/node-v4.2/bin:$PATH`
+Geben Sie für die Verwendung von Node 4.2.2 den folgenden Befehl ein: `export PATH=/opt/IBM/node-v4.2/bin:$PATH`
 
 ### Node-Module
 

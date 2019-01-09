@@ -41,7 +41,7 @@ In der folgenden Tabelle werden Aktionen aufgeführt, die Plattformmanagementrol
 
 | Plattformmanagementrolle | Beschreibung der Aktionen | Beispielaktionen|
 |:-----------------|:-----------------|:-----------------|
-| Anzeigeberechtigter, Operator (Bediener) | Instanzen des Service {{site.data.keyword.contdelivery_short}} anzeigen. | <ul><li>Anklicken einer {{site.data.keyword.contdelivery_short}}-Serviceinstanz, um das entsprechende Dashboard zu öffnen.</li></ul> |
+| Anzeigeberechtigter, Operator (Bediener) | Instanzen des Service {{site.data.keyword.contdelivery_short}} anzeigen. | <ul><li>Anklicken einer {{site.data.keyword.contdelivery_short}}-Serviceinstanz, um das entsprechende Dashboard zu öffnen.</li>|</ul>
 | Editor (Bearbeiter), Administrator | Den Plan für den Service {{site.data.keyword.contdelivery_short}} erstellen, anzeigen, aktualisieren oder ändern und Instanzen des Service löschen. |<ul><li>Bereitstellen einer Instanz von {{site.data.keyword.contdelivery_short}} in einer Ressourcengruppe.</li><li>Löschen einer Instanz von {{site.data.keyword.contdelivery_short}} aus einer Ressourcengruppe.</li><li>Ändern eines {{site.data.keyword.contdelivery_short}}-Instanzenplans von Lite in Professional.</li></ul> |
 | Administrator | Die Liste der berechtigten Benutzer aktualisieren.| <ul><li>Hinzufügen eines Benutzers zur Liste der berechtigten Benutzer.</li><li>Entfernen eines Benutzers aus der Liste der berechtigten Benutzer.</li></ul> |
 {: caption="Tabelle 1. IAM-Benutzerrollen und -aktionen" caption-side="top"}

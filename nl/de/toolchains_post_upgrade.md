@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -21,7 +21,7 @@ Für {{site.data.keyword.jazzhub}}-Projekte unter hub.jazz.net wurde ein Upgrade
 
 {{site.data.keyword.jazzhub_short}} unter hub.jazz.net wurde zurückgezogen. 
 
-Verwenden Sie für Ihre DevOps-Projekte den [{{site.data.keyword.contdelivery_short}}-Service ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/devops){:new_window}. Wenn Sie noch nicht mit {{site.data.keyword.Bluemix_notm}} vertraut sind, informieren Sie sich anhand der [{{site.data.keyword.Bluemix_notm}}-Übersicht](/docs/overview/ibm-cloud.html#overview).
+Verwenden Sie für Ihre DevOps-Projekte den [{{site.data.keyword.contdelivery_short}}-Service ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/devops){:new_window}. Wenn Sie noch nicht mit {{site.data.keyword.Bluemix_notm}} vertraut sind, informieren Sie sich anhand der [{{site.data.keyword.Bluemix_notm}}-Übersicht](/docs/overview/ibm-cloud.html#overview).
 
 {: shortdesc}
 
@@ -42,10 +42,10 @@ Toolchains ähneln Projekten, weisen jedoch einige wichtige Unterschiede auf:
 - Projekte können nur über ein Repository (repo) und eine Pipeline verfügen. Toolchains können so viele Repositorys und Pipelines besitzen wie nötig.
 - Toolchains können Tools enthalten, die in Projekten nicht verfügbar sind, wie zum Beispiel Slack, Sauce Labs, PagerDuty und {{site.data.keyword.DRA_full}}.
 
- {{site.data.keyword.DRA_short}} ist nur in der Region 'Vereinigte Staaten (Süden)' verfügbar.
+ {{site.data.keyword.DRA_short}} ist in den Regionen 'Vereinigten Staaten (Süden)', 'Vereinigtes Königreich' und 'Deutschland' verfügbar.
  {: tip}
  
-- Bei Projekten erfolgte die Pflege von Mitgliedschaften auf Projektebene. Der Zugriff auf Toolchains wird durch die {{site.data.keyword.Bluemix_notm}}-Organisation und die Toolchain verwaltet. Um mit einer Toolchain arbeiten zu können, müssen Sie Mitglied der Organisation sein, die die Toolchain enthält. Der Toolchain-Eigner hat mehr Kontrolle darüber, wer auf die Toolchain zugreifen und welche Aktionen er ausführen kann. Weitere Informationen hierzu finden Sie unter Schritt 2 in [Einführung in Ihre Toolchain](#upgrade_next_steps).
+- Bei Projekten erfolgte die Pflege von Mitgliedschaften auf Projektebene. Der Zugriff auf Toolchains wird durch die {{site.data.keyword.Bluemix_notm}}-Organisation und die Toolchain verwaltet. Um mit einer Toolchain arbeiten zu können, müssen Sie Mitglied der Organisation sein, die die Toolchain enthält. Der Toolchain-Eigner hat mehr Kontrolle darüber, wer auf die Toolchain zugreifen und welche Aktionen er ausführen kann. Weitere Informationen zur Zugriffssteuerung finden Sie unter Schritt 2 in [Einführung in Ihre Toolchain](#upgrade_next_steps).
 - Abhängig vom Typ des Repositorys, das Sie in Ihrem Projekt unter hub.jazz.net verwendet haben, kann Ihre Toolchain ein GitHub.com-Repository oder ein {{site.data.keyword.gitrepos}}-Repository enthalten.
 
 Mehr zu Toolchains erfahren Sie in [YouTube ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://youtu.be/2SIPE1e7NJ4){: new_window} oder in der [Einführung in {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html).
@@ -54,7 +54,7 @@ Mehr zu Toolchains erfahren Sie in [YouTube ![Symbol für externen Link](../../i
 {: #upgrade_next_steps}
 
 1. Erteilen Sie den Mitgliedern Ihres Teams Zugriff auf die Toolchain.
-    - Jedes Teammitglied muss über ein gültiges {{site.data.keyword.Bluemix_notm}}-Konto verfügen. Teammitglieder, die kein solches Konto besitzen, müssen sich entsprechend [anmelden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/registration){:new_window}.
+    - Jedes Teammitglied muss über ein gültiges {{site.data.keyword.Bluemix_notm}}-Konto verfügen. Teammitglieder, die kein solches Konto besitzen, müssen sich entsprechend [anmelden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/registration){:new_window}.
     - Erteilen Sie Mitgliedern der Organisation Zugriff auf die Toolchain über die Toolchain-Seite 'Verwalten'. Vorhandene Projektmitglieder werden im Rahmen des Upgradeprozesses als Mitglieder der Toolchain hinzugefügt. Weitere Informationen zur Zugriffssteuerung für Toolchains finden Sie in [Zugriff verwalten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
     - Wenn ein Benutzer nicht Mitglied der Organisation ist, zu der die Toolchain gehört, fügen Sie ihn über die Seite 'Organisationen
 verwalten' der Organisation hinzu.
@@ -73,7 +73,7 @@ verwalten' der Organisation hinzu.
 
 3. Optional: Um die Entwicklungsreife Ihres Projekts, die von Ihrem Team verwendeten Verfahren und die Qualität Ihrer Codebasis zu untersuchen, fügen Sie Ihrer Toolchain IBM Cloud {{site.data.keyword.DRA_short}} hinzu. {{site.data.keyword.DRA_short}} wendet auf DevOps-Projekte Verfahren für die Analyse der Entwickler, des Teams und der Bereitstellung an. Weitere Informationen finden Sie in [Einführung in {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html).
 
-  {{site.data.keyword.DRA_short}} ist nur in der Region 'Vereinigte Staaten (Süden)' verfügbar.
+  {{site.data.keyword.DRA_short}} ist in den Regionen 'Vereinigten Staaten (Süden)', 'Vereinigtes Königreich' und 'Deutschland' verfügbar.
   {: tip}
 
 
@@ -89,7 +89,7 @@ Wenn Probleme im Zusammenhang mit dem Upgrade Ihres Projekts auftreten, stellen 
 ### Mein JazzHub-Projekt wurde Großbritannien (GB) als geografischer Region zugeordnet, die Toolchain wird sich jedoch im Süden der USA befinden. Wie funktioniert das?
 {: #faq_region}
 
-Projekte unter hub.jazz.net und Toolchains werden im Süden der USA gehostet. Wenn Ihr Projekt für die Bereitstellung von Apps in anderen Regionen (wie zum Beispiel Großbritannien) konfiguriert wurde, wird die Toolchain auch weiterhin Apps in diesen Regionen bereitstellen. Daher gibt es im Grunde genommen keine Änderungen, was den Ort des Hostings der Daten betrifft. Toolchains werden in Zukunft in mehr Regionen zur Verfügung stehen.
+Projekte unter hub.jazz.net und Toolchains werden im Süden der USA gehostet. Wenn Ihr Projekt für die Bereitstellung von Apps in anderen Regionen (wie zum Beispiel 'Vereinigtes Königreich') konfiguriert wurde, wird die Toolchain auch weiterhin Apps in diesen Regionen bereitstellen. Daher gibt es im Grunde genommen keine Änderungen, was den Ort des Hostings der Daten betrifft. Toolchains werden in Zukunft in mehr Regionen zur Verfügung stehen.
 
 ### Was ist beim Durchführen eines Upgrades mit meinen Arbeitselementen und Dashboards in Track &amp; Plan geschehen?
 {: #faq_tp}
@@ -102,7 +102,7 @@ Wenn Sie die gleiche Funktion benötigen, die von dem veralteten Feature JazzHub
 
 Dieser neue Service - IBM Track and Plan on Cloud - stellt eine weitaus umfangreichere Funktionalität zur Verfügung als die veraltete Funktion JazzHub Track &amp; Plan und unterstützt die Anpassung von Prozessen, Projekthierarchien, SAFe&reg; sowie zahlreiche andere agile und Hybridmethoden. Seine Skalierbarkeit ermöglicht ein Wachstum über die Grenzen von Einzelprojekten hinaus. Er basiert auf der neuesten Version von Rational Team Concert 6.0.3 und wird in den kommenden 60 Tagen Version 6.0.4 erreichen, wohingegen JazzHub Track &amp; Plan auf Rational Team Concert 5.x basierte. Mittels zusätzlicher Services ist die Datenmigration auf IBM Track and Plan on Cloud möglich. Weitere Informationen erhalten Sie über [Tom Hollowell ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](mailto:trhollow@us.ibm.com){:new_window}, Connected Products SaaS Sales Leader.
 
-Wenn Sie Informationen zu IBM Track and Plan on Cloud suchen oder IBM Track and Plan on Cloud online kaufen möchten, besuchen Sie [IBM Marketplace ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}.
+Wenn Sie Informationen zu IBM Track and Plan on Cloud suchen oder IBM Track and Plan on Cloud online kaufen möchten, rufen Sie den [IBM Marketplace ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window} auf.
 
 Wenn Sie Funktionen für die Buildautomation und die Quellcodeverwaltung erwerben möchten, stellt [Rational Team Concert on Cloud ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window} eine Option dar.
 
@@ -124,14 +124,14 @@ Weitere Informationen zur Handhabung der einzelnen Repository-Typen im Rahmen de
 ### Was ist nach dem Upgrade mit den Builddefinitionen in meinem Projekt geschehen?
 {: #faq_build}
 
-Wenn Sie Ihren Quellcode mit Jazz anstatt mit Delivery Pipeline erstellen, müssen Sie Ihre Builddefinitionen manuell in Ihrer Toolchain auf Delivery Pipeline migrieren.
+Wenn Sie Ihren Quellcode mit Jazz anstatt mit Delivery Pipeline erstellt haben, müssen Sie Ihre Builddefinitionen manuell in Ihrer Toolchain auf Delivery Pipeline migrieren.
 
-Wenn Sie Jazz SCM als Quellenrepository einsetzen und Delivery Pipeline für die Erstellung von Code Delivery verwenden, wird die Quelle in Jazz SCM automatisch in ein Git-Repository verschoben. Die Konfiguration Ihrer Delivery Pipeline bleibt unverändert. Es wird nur die Quelle aus dem Git-Repository statt der Jazz SCM-Quelle verwendet.
+Wenn Sie Jazz SCM als Quellenrepository eingesetzt und Delivery Pipeline für die Codeerstellung verwendet haben, wird die Quelle in Jazz SCM automatisch in ein Git-Repository verschoben. Die Konfiguration Ihrer Delivery Pipeline bleibt unverändert. Es wird nur die Quelle aus dem Git-Repository statt der Jazz SCM-Quelle verwendet.
 
 ### Ich musste für mein Projekt, für das ein Upgrade auf eine Toolchain durchgeführt wurde, eine Organisation erstellen. Deshalb habe ich eine Kreditkarte zu meinem Konto hinzugefügt. Wird diese Kreditkarte belastet?
 {: #faq_charges}
 
-Als [nutzungsabhängiger Kunde ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window} werden Ihnen bei der Nutzung von Laufzeiten, Services oder Komponenten, die über die im {{site.data.keyword.Bluemix_notm}}-Katalog aufgeführten kostenlosen Zuteilungen hinausgehen, jeweils entsprechende Gebühren berechnet. Einen Voranschlag der Kosten für die Nutzung können Sie der [Preisliste ![Symbol für externen Link ](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window} entnehmen. Die aktuellen Preise für Continuous Delivery finden Sie im [{{site.data.keyword.Bluemix_notm}}-Katalog ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}.
+Als [nutzungsabhängiger Kunde ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window} werden Ihnen bei der Nutzung von Laufzeiten, Services oder Komponenten, die über die im {{site.data.keyword.Bluemix_notm}}-Katalog aufgeführten kostenlosen Zuteilungen hinausgehen, jeweils entsprechende Gebühren berechnet. Einen Voranschlag der Kosten für die Nutzung können Sie der [Preisliste ![Symbol für externen Link ](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window} entnehmen. Die aktuellen Preise für Continuous Delivery finden Sie im [{{site.data.keyword.Bluemix_notm}}-Katalog ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/catalog/services/continuous-delivery){: new_window}.
 
 Wenn Sie ein IBM Mitarbeiter sind, können interne IBM Projekte den entsprechenden Abteilungen in Rechnung gestellt werden, sodass keine privaten Kreditkarten erforderlich sind. Sollten Sie Ressourcen benötigen, die über die kostenlosen Zuteilungen für IBM Mitarbeiter hinausgehen, erstellen Sie ein Support-Ticket.
 
@@ -153,19 +153,19 @@ Mein JazzHub-Projekt ist entsprechend den Projekteinstellungen der {{site.data.k
    
    2. Einige meiner Kollegen können nicht auf die Toolchain zugreifen, obwohl sie als Mitglieder im ursprünglichen JazzHub-Projekt aufgeführt sind. Wenn sie versuchen, die Toolchain über die Seite mit der App-Übersicht in der Region 'Großbritannien' durch Anklicken von **Toolchain anzeigen** zu öffnen, wird die Nachricht "Zugriff verweigert" angezeigt.
    
-   3. Die Toolchain wird nicht auf meiner Seite 'Toolchains' unter [https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/devops/toolchains?env_id=ibm:yp:us-south){: new_window} angezeigt, obwohl ich direkt über die Seite mit der App-Übersicht in der Region 'Großbritannien' auf die Toolchain zugreifen kann, indem ich auf **Toolchain anzeigen** klicke. Es wird eine Fehlernachricht angezeigt, die besagt, dass ich die Toolchain nicht ändern kann oder dass ich keine Toolchain habe und eine erstellen muss. 
+   3. Die Toolchain wird nicht auf meiner Seite 'Toolchains' unter [https://cloud.ibm.com/devops/toolchains?env_id=ibm:yp:us-south ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/devops/toolchains?env_id=ibm:yp:us-south){: new_window} angezeigt, obwohl ich direkt über die Seite mit der App-Übersicht in der Region 'Großbritannien' auf die Toolchain zugreifen kann, indem ich auf **Toolchain anzeigen** klicke. Es wird eine Fehlernachricht angezeigt, die besagt, dass ich die Toolchain nicht ändern kann oder dass ich keine Toolchain habe und eine erstellen muss. 
 
 **Antwort:**
 
-Diese Probleme können auftreten, wenn Sie von einer {{site.data.keyword.Bluemix_notm}}-Organisation außerhalb der Vereinigten Staaten kommen und Ihre Organisation vor dem Upgrade nicht explizit auf die Region 'Vereinigte Staaten (Süden)' erweitert haben. Sie können dies bestätigen, indem Sie die Toolchains-Seite öffnen. Die Region und Organisation werden auf der Seite oben angezeigt. 
+Diese Probleme können auftreten, wenn Sie von einer {{site.data.keyword.Bluemix_notm}}-Organisation außerhalb der Vereinigten Staaten kommen und Ihre Organisation vor dem Upgrade nicht explizit auf die Region 'Vereinigte Staaten (Süden)' erweitert haben. Sie können dieses Problem bestätigen, indem Sie die Toolchains-Seite öffnen. Die Region und die Organisation werden auf der Seite oben angezeigt. 
 
-Zum Zeitpunkt des Upgrades war Ihre Nicht-US-Organisation nicht in den Vereinigten Staaten vorhanden. Deshalb wählte das Upgrade eine andere Organisation für Sie aus, auf die Sie zufällig Zugriff haben.
+Zum Zeitpunkt des Upgrades war Ihre Nicht-US-Organisation nicht in den Vereinigten Staaten vorhanden. Deshalb wählte das Upgrade eine andere Organisation für Sie aus, auf die Sie Zugriff haben.
 
 Wenn Sie zu dieser {{site.data.keyword.Bluemix_notm}}-Organisation in den USA wechseln, finden Sie die Toolchain. Wenn Sie Ihre Kollegen zu dieser Organisation hinzufügen, wird ihnen der Zugriff erteilt. Diese Toolchain kann weiterhin Bereitstellungsaktivitäten für Ihre Nicht-US-Organisation ausführen. Das einzige Problem ist, dass sich diese beiden Organisationen unterscheiden. Sie können die Benutzerverwaltung nicht automatisch für beide ausführen.
 
-Wenn sich Ihre Toolchain in einer US-Organisation befinden soll, die Ihrer Nicht-US-Organisation entspricht, führen Sie die folgenden Schritte aus:
+Wenn sich Ihre Toolchain in der US-Organisation befinden soll, die Ihrer Nicht-US-Organisation entspricht, führen Sie die folgenden Schritte aus:
 
-   1. Melden Sie sich bei [https://console.bluemix.net![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net){: new_window} an und wählen Sie die Nicht-US-Region und die Organisation aus, von der Sie kommen.
+   1. Melden Sie sich bei [https://cloud.ibm.com ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com){: new_window} an und wählen Sie die Nicht-US-Region und die Organisation aus, von der Sie kommen.
    
    2. Wechseln Sie im {{site.data.keyword.Bluemix_notm}}-Header zu der Region 'Vereinigte Staaten (Süden)'. Sie werden aufgefordert, einen Bereich in dieser Region zu erstellen.
    
@@ -173,10 +173,10 @@ Wenn sich Ihre Toolchain in einer US-Organisation befinden soll, die Ihrer Nicht
    
    4. Löschen Sie die Toolchain, die durch den Upgradeprozess erstellt wurde. 
    
-      Das Git-Repository wird nicht automatisch gelöscht. Möglicherweise möchten Sie es manuell löschen oder vorläufig umbenennen. Wenn Sie bereits Änderungen daran vorgenommen haben, können Sie die zukünftige Toolchain aktualisieren, um es zu einem späteren Zeitpunkt zu verwenden.
+      Das Git-Repository wird nicht automatisch gelöscht. Möglicherweise möchten Sie es manuell löschen oder vorläufig umbenennen. Wenn Sie das Git-Repository bereits umbenannt haben, können Sie die zukünftige Toolchain aktualisieren, um es zu einem späteren Zeitpunkt zu verwenden.
       {: tip}
 
-   5. Kehren Sie zum JazzHub-Projekt zurück. Es sollte für einen weiteren Upgradeversuch zurückgesetzt werden. Wenn es nicht zurückgesetzt wird, wenden Sie sich an hub@jazz.net und geben Sie die URL des Projekts an.
+   5. Kehren Sie zum JazzHub-Projekt zurück. Das Projekt setzt sich für einen weiteren Upgradeversuch zurück. Wenn das Projekt nicht zurückgesetzt wird, wenden Sie sich an hub@jazz.net und geben Sie die URL des Projekts an.
    
    6. Starten Sie den Upgradeprozess erneut und stellen Sie sicher, dass Sie die richtige Organisation in den Vereinigten Staaten auswählen, dem mit dem Namen Ihrer Organisation in der Nicht-US-Region übereinstimmt.
    

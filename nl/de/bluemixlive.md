@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -48,7 +48,7 @@ Während sich eine Node.js-Anwendung im Modus 'Live Edit' befindet, können Sie 
 ##Live Edit
 {: #live-edit}
 
-Wenn Sie eine Node.js-Anwendung erstellen, die unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird, kann das Live Edit-Feature von {{site.data.keyword.Bluemix_notm}} Live Sync die Anwendungsinstanz schnell aktualisieren. Live Edit steht nur in der Web-IDE zur Verfügung. Mit Live Edit können Sie Entwicklungsprozesse wie auf dem Desktop durchführen, ohne dass eine erneute Bereitstellung erforderlich ist.
+Wenn Sie eine Node.js-Anwendung erstellen, die unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird, kann das Live Edit-Feature von {{site.data.keyword.Bluemix_notm}} Live Sync die Anwendungsinstanz schnell aktualisieren. Live Edit steht nur in der Web-IDE zur Verfügung. Mithilfe von Live Edit können Sie Entwicklungsprozesse wie auf dem Desktop durchführen, ohne dass eine erneute Bereitstellung erforderlich ist.
 
 Live Edit wird nur für Node.js-Anwendungen unterstützt.
 
@@ -90,9 +90,6 @@ Bei der Entwicklung Ihrer App können Sie eine der folgenden Aktionen auswählen
 * Aussetzen der App, bevor App-Code ausgeführt wird
 
 Wenn Sie sich angemeldet haben, wird die {{site.data.keyword.Bluemix_notm}} Live Debug-Seite geöffnet.
-
-![Debug-Benutzerschnittstelle](images/live_sync_debug.png)
-
 
 ### Debugging {: #debug}
 
@@ -149,4 +146,4 @@ Es kann etwa eine Minute dauern, bis der Debugger initialisiert ist.
 
 ### Weitere Informationen
 
-* Siehe [Eclipse-Tools für {{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
+* Siehe [Eclipse-Tools für {{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

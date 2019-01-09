@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-6"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 
@@ -30,12 +32,12 @@ Unabhängig davon, ob Sie den Jobtyp "Erstellen", "Test" oder "Bereitstellen" ve
 
 Der Docker-Imagename in benutzerdefinierten Docker-Imagejobs funktioniert genauso wie Imagenamen mit der Docker-CLI. Das Format für einen Namen eines Docker-Images ist: `[repository][:][tag]`. Beispiel: Für `docker run maven:3.5.3-ibmjava` lautet der Name des Docker-Images `maven:3.5.3-ibmjava`, wobei `maven` das Repository und `3.5.3-ibmjava` das Tag ist. Für Docker-Imagenamen gibt es keine Einschränkungen. Jedes gültige Docker-Image funktioniert.
 
-Wenn das Feld **Docker-Imagename** nicht ausgefüllt wird, wird das standardmäßige Pipeline-Basisimage verwendet.
+Wenn das Feld **Docker-Imagename** nicht ausgefüllt wird, wird das standardmäßige Pipeline-Basisimage verwendet. 
 {: tip}
 
-Standardmäßig wird Ihr Repository auf [Docker Hub ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://hub.docker.com/){: new_window} durchsucht. Wenn Sie eine andere Docker-Registry verwenden, z. B. IBM Cloud Registry, können Sie den vollständigen DNS-Namen verwenden. Sie können auch den vollständig qualifizierten Namen für Images auf Docker Hub verwenden. Beispiel: `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
+Standardmäßig wird Ihr Repository auf [Docker Hub ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://hub.docker.com/){: new_window} durchsucht. Wenn Sie eine andere Docker-Registry verwenden, z. B. {{site.data.keyword.registrylong}}, können Sie den vollständigen DNS-Namen verwenden. Sie können auch den vollständig qualifizierten Namen für Images auf Docker Hub verwenden. Beispiel: `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
 
-Das `Tag` ist für ein Docker-Image optional. Wenn Sie kein Tag angeben, wird standardmäßig `latest` festgelegt. Der Standardwert von `latest` ist nur ein Tag-Name, den der Repository-Eigner verwalten muss. Dies bedeutet nicht, dass dieses Docker-Image chronologisch das neueste Image ist.
+Der `Tag` ist für ein Docker-Image optional. Wenn Sie keinen Tag angeben, wird standardmäßig `latest` festgelegt. Der Standardwert von `latest` ist nur ein Tag-Name, den der Repository-Eigner verwalten muss. Dies bedeutet nicht, dass dieses Docker-Image chronologisch das neueste Image ist.
 
 Eine riesige Community an Repositorys finden Sie unter Docker Hub. IBM hostet zahlreiche öffentliche Repositorys, die das IBM Cloud-Team unter [https://hub.docker.com/u/ibmcom/ ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://hub.docker.com/u/ibmcom/){: new_window} nutzt. Die Repositorys `ibmcom/ibmjava` und `ibmcom/ibmnode` sind gute Basis-Repositorys. 
 
@@ -44,12 +46,12 @@ Eine riesige Community an Repositorys finden Sie unter Docker Hub. IBM hostet za
 
 Wenn Sie eine private Registry verwenden, für die eine Authentifizierung erforderlich ist, müssen Sie zwei weitere Umgebungseigenschaften festlegen: `DOCKER_USERNAME` und `DOCKER_PASSWORD`. Sie können eine sichere Eigenschaft verwenden, um `DOCKER_PASSWORD` zu maskieren. Bevor Ihr Image abgerufen wird, verwendet der benutzerdefinierte Docker-Imagejob Ihren Benutzer- und Kennwortberechtigungsnachweis, um eine Docker-Anmeldung (`docker login`) abzuschließen.
 
-Für die meisten Registrys können Sie den Benutzernamen und das Passwort verwenden, die Ihnen zur Verfügung gestellt wurden. Wenn Sie IBM Cloud Registry zum Speichern Ihrer privaten Images verwenden, müssen Sie einen Plattform-API-Schlüssel für die Authentifizierung verwenden. 
+Für die meisten Registrys können Sie den Benutzernamen und das Passwort verwenden, die Ihnen zur Verfügung gestellt wurden. Wenn Sie {{site.data.keyword.registrylong_notm}} zum Speichern Ihrer privaten Images verwenden, müssen Sie einen Plattform-API-Schlüssel für die Authentifizierung verwenden. 
 
-1. [Fordern Sie einen Plattform-API-Schlüssel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/iam/#/apikeys){: new_window} an und speichern Sie den API-Schlüssel. 
+1. [Fordern Sie einen Plattform-API-Schlüssel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/iam/#/apikeys){: new_window} an und speichern Sie den API-Schlüssel. 
 1. Erstellen Sie zwei Stage-Umgebungseigenschaften, indem Sie `iamapikey` für `DOCKER_USERNAME` sowie den Plattform-API-Schlüssel verwenden, den Sie für `DOCKER_PASSWORD` gespeichert haben.
 
- ![Berechtigungsnachweise für IBM Cloud Registry](images/custom-image-private-repository.png)
+ ![{{site.data.keyword.registrylong_notm}}-Berechtigungsnachweise](images/custom-image-private-repository.png)
 
 
 ## Script angeben

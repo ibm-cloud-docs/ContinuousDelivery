@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -37,7 +37,7 @@ Sie können Ihren Quellcode in einem GitHub-, GitHub Enterprise- oder Git Repos 
 Wenn Sie lieber SSH verwenden möchten, können Sie einen einzigen Schlüssel für alle Git-Server verwenden. Erstellen oder suchen Sie Ihren Schlüssel und konfigurieren Sie ihn für jeden Server, wie dies in den vorherigen Links beschrieben ist. Wenn Sie Ihren Schlüssel mit einer Kennphrase erstellen, werden Sie zur Eingabe dieser Kennphrase aufgefordert, wenn Sie den Schlüssel verwenden.
 {: tip}
 
-2. Wenn Sie die Git-Befehlszeile verwenden möchten, gehen Sie wie folgt vor:
+2. Führen Sie bei Verwendung der Git-Befehlszeile die folgenden Schritte aus:
 
     a. Überprüfen Sie, ob Git installiert ist. Geben Sie in einer Befehlszeile `git version` ein. Wenn Git installiert ist, wird die Versionsnummer angezeigt und Sie können beginnen.
 

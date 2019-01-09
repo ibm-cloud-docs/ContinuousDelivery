@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-12-11"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -84,11 +84,9 @@ Sie können Services zu Ihren Apps hinzufügen und diese Services von Ihrem {{si
 
 Sie können die Protokolle für Jobs anzeigen und Stages, die gerade ausgeführt werden, auf der Seite mit dem Stageverlaufsprotokoll anzeigen.
 
-Um das Protokoll eines Jobs anzuzeigen, klicken Sie auf den Job. Alternativ können Sie in einer Stage auf **Protokolle und Verlauf anzeigen** klicken.
+1. Um das Protokoll eines Jobs anzuzeigen, klicken Sie auf den Job. Alternativ können Sie in einer Stage auf **Protokolle und Verlauf anzeigen** klicken.
 
-Um das Laufzeitprotokoll einer bereitgestellten Anwendung anzuzeigen, klicken Sie auf **Laufzeitprotokoll anzeigen**.
-
-![Bereiche in einer Stagekachel, auf die Sie klicken können, um relevante Protokolle zu öffnen](images/view_logs_and_history.png)
+2. Um das Laufzeitprotokoll einer bereitgestellten Anwendung anzuzeigen, klicken Sie auf **Laufzeitprotokoll anzeigen**.
 
 Zusätzlich zu den Jobprotokollen können Sie Komponententestergebnisse, generierte Artefakte und Codeänderungen für beliebige Buildjobs anzeigen.
 

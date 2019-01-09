@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-7-19"
+lastupdated: "2018-12-6"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -11,6 +11,14 @@ lastupdated: "2018-7-19"
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:faq: data-hd-content-type='faq'}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:download: .download}
 
 # Häufig gestellte Fragen
 {: #ts_cd}
@@ -21,6 +29,7 @@ Hier erhalten Sie Antworten auf allgemeine Fragen zur Verwendung von {{site.data
 
 ## Beim Versuch, die GitHub-Toolintegration zu meiner Toolchain hinzuzufügen, wurde die Toolintegration nicht hinzugefügt. Warum?
 {: #cannot_authorize_github}
+{: faq}
 
 Wenn {{site.data.keyword.Bluemix_notm}} nicht für den Zugriff auf Ihr GitHub-Konto autorisiert ist, kann die Toolintegration nicht zur Toolchain hinzugefügt werden.
 
@@ -40,6 +49,7 @@ Wenn Sie bereits über eine Toolchain verfügen, aktualisieren Sie die Konfigura
 
 ## Warum wird beim Versuch, eine Toolchain zu erstellen, eine Fehlernachricht angezeigt?
 {: #cannot_create_toolchain}
+{: faq}
 
 Wenn Sie eine Toolchain in einer Organisation erstellen möchten und die folgende Fehlernachricht erhalten, entfernen Sie mindestens eine Toolchain aus der Organisation und erstellen Sie dann Ihre Toolchain erneut.
 
@@ -47,16 +57,22 @@ Wenn Sie eine Toolchain in einer Organisation erstellen möchten und die folgend
 
 
 ## Warum wird auf der Seite 'Toolchains' angezeigt, dass der Lite-Plan des Service {{site.data.keyword.contdelivery_short}} überschritten wurde?
+{: #plan_exceeded}
+{: faq}
 
 {{site.data.keyword.contdelivery_short}} bietet zwei Pläne: Lite und Professional. Wenn Sie den {{site.data.keyword.contdelivery_short}}-Lite-Plan verwenden, können Sie Toolchains bis zu den Grenzwerten des Plans kostenlos verwenden. Die Fehlernachricht weist darauf hin, dass Sie einen oder mehrere Grenzwerte des Lite-Plans überschritten haben. Sie könnten den Plan beispielsweise überschreiten, wenn Sie zu viele berechtigte Benutzer haben, die der Instanz des Service {{site.data.keyword.contdelivery_short}} zugeordnet sind, oder wenn Sie die maximale Anzahl von {{site.data.keyword.deliverypipeline}}-Jobs ausgeführt haben. Weitere Informationen zu den Bedingungen Ihres Plans finden Sie unter [Einschränkungen beim Plan und bei der Nutzung](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
 
 
 ## Ich habe eine Toolchain erstellt. Warum zeigt die Seite 'Toolchains' an, dass ein Service Continuous Delivery erforderlich ist?
+{: #service_required_resource_group}
+{: faq}
 
 Die Bedingungen des Plans für die Instanz des Service {{site.data.keyword.contdelivery_short}}, die sich in derselben Ressourcengruppe oder Organisation wie die Toolchain befindet, steuern die Verwendung einiger der Toolintegrationen ({{site.data.keyword.deliverypipeline}}, Eclipse Orion-{{site.data.keyword.webide}} und {{site.data.keyword.gitrepos}}), die im Service enthalten sind. Die Fehlernachricht gibt an, dass die Ressourcengruppe bzw. die Organisation die erforderliche Instanz des Service {{site.data.keyword.contdelivery_short}} nicht enthält. Weitere Informationen zu den Bedingungen Ihres Plans finden Sie unter [Einschränkungen beim Plan und bei der Nutzung](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
 
 
 ## Ich habe eine Toolchain in einer Cloud Foundry-Organisation erstellt. Warum zeigt die Seite 'Toolchains' an, dass ein Service Continuous Delivery erforderlich ist?
+{: #service_required_cloud_foundry}
+{: faq}
 
 Wenn Sie eine Toolchain in einer Ressourcengruppe oder Organisation erstellen, die keine Instanz des Service {{site.data.keyword.contdelivery_short}} enthält, versucht die Toolchain-Plattform, eine Instanz des Service mithilfe des Lite-Plans automatisch zu erstellen. Die Fehlernachricht weist darauf hin, dass die Toolchain-Plattform die Serviceinstanz nicht erstellen konnte.
 
@@ -67,6 +83,7 @@ Sie können entweder die Toolchain in einer Ressourcengruppe erstellen oder die 
 
 ## Warum wird beim Versuch, eine App auf {{site.data.keyword.Bluemix_notm}} bereitzustellen, eine Fehlernachricht angezeigt?
 {: #org_outofmemory}
+{: faq}
 
 Wenn Sie eine App auf {{site.data.keyword.Bluemix_notm}} bereitstellen möchten und eine Fehlernachricht erhalten, ist die für Ihre Organisation verbleibende Speicherkapazität geringer als die Speichermenge, die für die App erforderlich ist, die Sie bereitstellen möchten.
 
@@ -98,6 +115,7 @@ Führen Sie bei Verwendung der Befehlszeilenschnittstelle 'cf' die folgenden Sch
 
 ## In der erstellten App werden in der Ausführungsleiste keine {{site.data.keyword.Bluemix_notm}} Live Sync-Symbole in der Eclipse Orion-Web-IDE angezeigt. Warum?
 {: #ts_llz_lkb_3r}
+{: faq}
 
 ![Ausführungsleiste](images/webide_runbar_light.png)   
 
@@ -114,19 +132,21 @@ Wenn die Datei `manifest.yml` nicht im Stammverzeichnis gespeichert ist, speiche
 
 ## Beim Klicken auf eine Toolchain zum Anzeigen der Übersichtsseite wird die Toolchain nicht geladen. Warum?
 {: #toolchains_load}
+{: faq}
 
 Prüfen Sie die {{site.data.keyword.Bluemix_notm}}-Statusseite auf bekannte Probleme, die sich auf die {{site.data.keyword.Bluemix_notm}}-Plattform und die wichtigsten Services in {{site.data.keyword.Bluemix_notm}} auswirken.
 
 Anhand einer der folgenden Optionen gelangen Sie zur Statusseite:
 
   * Melden Sie sich bei der {{site.data.keyword.Bluemix_notm}}-Konsole an. Klicken Sie in der Menüleiste auf **Support** und wählen Sie **Status** aus. Prüfen Sie die aufgelisteten Ressourcen auf das Symbol ![Probleme](../../get-support/images/some_issues.svg). Dieses Symbol kann auf einen Ausfall hinweisen.
-  * Greifen Sie direkt auf [{{site.data.keyword.Bluemix_notm}} - Systemstatus ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/status){: new_window} zu.
+  * Greifen Sie direkt auf [{{site.data.keyword.Bluemix_notm}} - Systemstatus ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/status){: new_window} zu.
 
-Weitere Informationen zur Statusseite für {{site.data.keyword.Bluemix_notm}} finden Sie in [{{site.data.keyword.Bluemix_notm}}-Status anzeigen](https://console.bluemix.net/docs/get-support/ViewStatus.html#viewing-bluemix-status).
+Weitere Informationen zur Statusseite für {{site.data.keyword.Bluemix_notm}} finden Sie in [{{site.data.keyword.Bluemix_notm}}-Status anzeigen](https://cloud.ibm.com/docs/get-support/ViewStatus.html#viewing-bluemix-status).
 
 
 ## Es wurde eine Toolintegration für meine Toolchain konfiguriert, aber die Konfiguration wird nicht angezeigt. Warum?
 {: #tool_integration_error}
+{: faq}
 
 Wenn Sie eine Toolintegration hinzufügen, kommuniziert die Toolchain mit dem Tool, das durch die Toolintegration dargestellt wird, um alle notwendigen Ressourcen bereitzustellen und diese der Toolchain zuzuordnen. Wenn während der Einrichtung ein Fehler auftritt oder die Kommunikation zwischen der Toolchain und dem Tool nicht ordnungsgemäß abgeschlossen wird, so wird die Toolintegration in einen Fehlerstatus versetzt.
 

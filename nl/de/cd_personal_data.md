@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -12,6 +12,8 @@ lastupdated: "2018-8-2"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Persönliche Daten in Continuous Delivery verwalten
@@ -30,7 +32,7 @@ Persönliche Daten sind Informationen, die sich auf eine natürliche Person bezi
  * [{{site.data.keyword.DRA_full}} ![Symbol zum externen Link](../../icons/launch-glyph.svg "Symbol zum externen Link")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
  
 IBM verwaltet keine Daten im Service {{site.data.keyword.contdelivery_short}}. Bevor Sie den Service {{site.data.keyword.contdelivery_short}}, der in {{site.data.keyword.Bluemix_notm}} Public gehostet wird, verlassen, müssen Sie Ihre eigenen Daten löschen.
-{: tip}
+{: important}
 
 {{site.data.keyword.contdelivery_short}} bietet die entsprechenden Berechtigungen zum Verwalten von Daten in einer Ressourcengruppe oder Cloud Foundry-Organisation. Ihr Unternehmen verfügt möglicherweise über Richtlinien, die diese Berechtigungen einschränken. Wenn Sie nicht über die entsprechenden Berechtigungen verfügen, wenden Sie sich an den Administrator Ihres {{site.data.keyword.Bluemix_notm}}-Kontos.
 
@@ -99,7 +101,7 @@ Wenn Sie alle Ihre persönlichen Daten aus {{site.data.keyword.contdelivery_shor
 Die {{site.data.keyword.webide}} stellt einen persönlichen Arbeitsbereich in der Cloud bereit. Mit der {{site.data.keyword.webide}} können Sie Git-Repositorys klonen und Dateien bearbeiten. Ihr {{site.data.keyword.webide}}-Arbeitsbereich gehört Ihnen und wird von keinem anderen Konto genutzt.
 
 Bevor Sie Ihre {{site.data.keyword.webide}}-Daten löschen, sollten Sie Ihre Arbeit exportieren. Wenn Sie Ihre Arbeitsbereiche gelöscht haben, werden Sie aus {{site.data.keyword.contdelivery_short}} entfernt und alle Dateien sind gelöscht.
-{: tip}
+{: important}
 
 ###Web-IDE-Arbeitsbereiche exportieren
 
@@ -118,7 +120,7 @@ Gehen Sie wie folgt vor, um Ihren {{site.data.keyword.webide}}-Arbeitsbereich un
 1. Klicken Sie auf **Löschen**, um alle Daten aus der {{site.data.keyword.webide}} zu entfernen.
 
 Die {{site.data.keyword.webide}} verwendet einen Single Sign-on. Wenn Sie das erste Mal auf diese Toolintegration zugreifen, wird ein entsprechendes ausgeblendetes {{site.data.keyword.webide}}-Konto für Ihr IBM Cloud-Konto erstellt. Wenn Sie alle Arbeitsbereiche gelöscht haben, greifen Sie nicht auf die {{site.data.keyword.webide}} zu. Denn wenn Sie erneut auf die {{site.data.keyword.webide}} zugreifen, wird automatisch ein neues Konto erstellt, das Sie dann wieder löschen müssen.
-{: tip}
+{: important}
 
 ## Git Repos and Issue Tracking-Daten ändern, exportieren und löschen
 {: #managing_grit_data}
@@ -158,7 +160,7 @@ Nachdem Ihr Konto gelöscht wurde, bleiben einige Inhalte erhalten. Dieser Inhal
 {: tip}
 
 {{site.data.keyword.gitrepos}} verwendet einen Single-Sign-On, der automatisch ein entsprechendes Git-Konto für Ihr IBM Cloud-Konto erstellt, wenn Sie das erste Mal auf die Toolintegration zugreifen. Wenn Sie Ihr Konto gelöscht haben, greifen Sie nicht auf {{site.data.keyword.gitrepos}} zu. Denn wenn Sie erneut auf {{site.data.keyword.gitrepos}} zugreifen, wird automatisch ein neues Konto erstellt, das Sie dann wieder löschen müssen.
-{: tip}
+{: important}
 
 ## Continuous Delivery-Pipeline-Daten ändern, exportieren und löschen
 {: #managing_pipeline_data}
@@ -168,7 +170,7 @@ Nachdem Ihr Konto gelöscht wurde, bleiben einige Inhalte erhalten. Dieser Inhal
 Sprechen Sie sich auf jeden Fall mit den anderen Mitgliedern Ihres Teams ab, bevor Sie gemeinsam genutzte Objekte oder Pipelines löschen. Das Löschen einer Stage kann dazu führen, dass eine Pipeline fehlschlägt.
 
 Eine Pipeline kann nicht außerhalb einer Toolchain existieren. Wenn Sie eine Toolchain löschen, werden auch alle Pipelines gelöscht, die der Toolchain zugeordnet sind. Wenn Sie eine gesamte Toolchain löschen möchten, muss nicht jede Pipeline einzeln gelöscht werden. Befolgen Sie stattdessen die Anweisungen im Abschnitt "Toolchains und Toolintegrationen ändern und löschen", um eine Toolchain zu löschen.
-{: tip}
+{: important}
 
 Pipeline-Stages können persönliche Daten enthalten wie Berechtigungsnachweise in der Form von Umgebungseigenschaften und eine Pipelinedefinition, die den aktuellen Status der Pipeline anzeigt. Stages können auch Scripts innerhalb von Jobs enthalten, die Sie ändern oder löschen möchten, sowie Artefakte und Protokolle für die aktuellsten Pipelineausführungen, die Sie exportieren möchten. Verwenden Sie die Aktionen zum Konfigurieren oder zum Löschen von Stages, um eine Stage zu ändern oder zu löschen. Verwenden Sie die Aktion 'Download', um Artefakte oder Protokolle aus einer Stage zu exportieren.
 

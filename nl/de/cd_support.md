@@ -2,20 +2,23 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-3-26"
+lastupdated: "2018-12-6"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:codeblock:.codeblock}
 
 
 # Hilfe und Unterstützung für {{site.data.keyword.contdelivery_short}} anfordern    
 {: #cd_support}  
 
-Das {{site.data.keyword.contdelivery_full}}-Team überwacht aktiv das developerWorks-Forum auf Fragen zum {{site.data.keyword.contdelivery_short}}-Service und zu Toolchains. Um im Forum eine Frage zu stellen, klicken Sie auf die Schaltfläche für **Unterstützung über das Forum** ![Schaltfläche **Unterstützung über das Forum**](images/get_help_in_the_forum.png), die sich in der Toolchain unten und auf den {{site.data.keyword.contdelivery_short}}-Seiten befindet.
+Das {{site.data.keyword.contdelivery_full}}-Team überwacht aktiv das developerWorks-Forum auf Fragen zum {{site.data.keyword.contdelivery_short}}-Service und zu Toolchains. Um im Forum eine Frage zu stellen, klicken Sie in der Toolchain sowie auf den {{site.data.keyword.contdelivery_short}}-Seiten auf die Schaltfläche für **Unterstützung über das Forum** ![**Unterstützung über das Forum**](images/get_help_in_the_forum.png).
 
 <table>
 <tr>
@@ -47,7 +50,7 @@ Wenn Sie ein ernsteres Problem haben oder Probleme mit dem {{site.data.keyword.c
 1. Klicken Sie in der Menüleiste auf **Support** und anschließend auf **Ticket hinzufügen**.
 1. Geben Sie im Formular an, wobei bzw. wofür Sie technische Unterstützung benötigen.
 
-Weitere Informationen zum Öffnen eines IBM {{site.data.keyword.Bluemix_notm}}-Support-Tickets oder zu den Supportebenen und Ticketprioritäten enthält [Unterstützung anfordern](https://console.bluemix.net/docs/support/index.html#contacting-support).
+Weitere Informationen zum Öffnen eines IBM {{site.data.keyword.Bluemix_notm}}-Support-Tickets oder zu den Supportebenen und Ticketprioritäten enthält [Unterstützung anfordern](https://cloud.ibm.com/docs/support/index.html#contacting-support).
 
 
 ## Support für {{site.data.keyword.Bluemix_notm}}

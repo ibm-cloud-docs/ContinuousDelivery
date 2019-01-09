@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-8-2"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -17,10 +17,13 @@ lastupdated: "2018-8-2"
 # Mit der Eclipse Orion-Web-IDE entwickeln
 {: #web_ide}
 
-Die Eclipse Orion-{{site.data.keyword.webide}} ist eine browserbasierte Entwicklungsumgebung, in der Sie mithilfe von Content-Assist-Funktionen, Codevervollständigung und Fehlerprüfung für das Web in JavaScript, HTML und CSS entwickeln können. Die {{site.data.keyword.webide}} ist mit nahezu jeder Programmiersprache verwendbar und bietet Syntaxhervorhebung für die meisten Dateitypen. Die Quellcodeverwaltung ist integriert und Sie können Code lokal bereitstellen, um Ihre Apps zu testen und zu debuggen.
+Die Eclipse Orion-{{site.data.keyword.webide}} ist eine browserbasierte Entwicklungsumgebung, in der Sie mithilfe von Content-Assist-Funktionen, Codevervollständigung und Fehlerprüfung für das Web in JavaScript, HTML und CSS entwickeln können. Die {{site.data.keyword.webide}} ist mit nahezu jeder Programmiersprache verwendbar und für die meisten Dateitypen gibt es eine Syntaxhervorhebung. Die Quellcodeverwaltung ist integriert und Sie können Code lokal bereitstellen, um Ihre Apps zu testen und zu debuggen.
 {:shortdesc}
 
 Als weiterer wesentlicher Vorteil kommt hinzu, dass {{site.data.keyword.webide}} auf der Webtechnologie basiert. Es entsteht keinerlei Installations-, Wartungs- und Skalierungsaufwand. Für die Codeentwicklung benötigen Sie lediglich einen Internetanschluss.
+
+Speichern Sie keine regulierten Daten in Dateien in der {{site.data.keyword.webide}}. Derzeit sind keine Prozeduren für regulierte Daten in Kraft.
+{: tip}
 
 ## IDE einrichten
 {: #editorsetup}
@@ -83,10 +86,10 @@ Die {{site.data.keyword.webide}} ist mit Quellcodeverwaltungstools integriert. U
 2. Wenn Ihre App bereitgestellt wurde, können Sie die Ausführungsleiste verwenden, um Ihre App zu stoppen, erneut zu starten oder zu debuggen, um Protokolle anzuzeigen usw.
 
 <table role="presentation">
-<tr><td><img src="./images/stop_button.png"  alt="Symbol 'Stoppen'"></td><td>Stoppt die App.</td></tr>
-<tr><td> <img src="./images/open_app_url.png"  alt="Symbol 'App-URL öffnen'"></td><td> Öffnet die bereitgestellte App.</td></tr>
-<tr><td><img src="./images/view_logs.png"  alt="Symbol 'Protokolle anzeigen'"></td><td>Zeigt die Protokolle der bereitgestellten App an.</td></tr>
-<tr><td><img src="./images/open_dashboard.png"  alt="Symbol 'Dashboard öffnen'"></td><td>Öffnet das Dashboard der App.</td></tr>
+<tr><td><img src="./images/stop_button.png"  alt="Symbol 'Stoppen'"></td><td>Zum Stoppen der App.</td></tr>
+<tr><td> <img src="./images/open_app_url.png"  alt="Symbol 'App-URL öffnen'"></td><td> Zum Öffnen der bereitgestellten App.</td></tr>
+<tr><td><img src="./images/view_logs.png"  alt="Symbol 'Protokolle anzeigen'"></td><td>Zum Anzeigen der Protokolle der bereitgestellten App.</td></tr>
+<tr><td><img src="./images/open_dashboard.png"  alt="Symbol 'Dashboard öffnen'"></td><td>Zum Öffnen des Dashboards der App.</td></tr>
 </table>
 
 Wenn Sie eine Node.js-App entwickeln, aktivieren Sie den Modus 'Live Edit' für die Livebearbeitung: <img  src="./images/enable_live_edit.png"  alt="Schieberegler für die Aktivierung des Modus 'Live Edit'">
@@ -162,7 +165,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 ## Unterstützte Sprachen
 {: #supported_languages}
 
-Die Eclipse Orion-{{site.data.keyword.webide}} bietet Content-Assist, QuickInfo, Vorschaufunktionen, Validierung und Syntaxhervorhebung für JavaScript-, HTML-, CSS- und Markdown-Dateien. Für die folgenden Dateitypen wird die Funktion der Syntaxhervorhebung ebenfalls unterstützt:
+Die Eclipse Orion-{{site.data.keyword.webide}} bietet Content-Assist, QuickInfo, Vorschaufunktionen, Validierung und Syntaxhervorhebung für JavaScript-, HTML-, CSS- und Markdown-Dateien. Für die folgenden Dateitypen gibt es eine Syntaxhervorhebung:
 
 <table role="presentation">
 <tr>
