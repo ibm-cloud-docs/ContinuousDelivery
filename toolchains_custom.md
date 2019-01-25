@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-20"
+  years: 2017, 2019
+lastupdated: "2019-1-25"
 
 ---
 {:shortdesc: .shortdesc}
@@ -281,7 +281,7 @@ This section of the `toolchain.yml` file defines the pipeline stages that are av
 | prod-space | property | <`prod`> | Defines the {{site.data.keyword.Bluemix_notm}} space for the production stage |
 | github-repo-name | property | <`"{{repo-name-key.parameters.repo_name}}"`> | Variable to pass the GitHub repository name to the toolchain creation page |
 
-For more information about creating a `deploy.json` file, see [this section] (#toolchains_custom_deploy_json).
+For more information about creating a `deploy.json` file, see [this section](#toolchains_custom_deploy_json).
 
  The following example defines a single stage that deploys to a production environment.
 
