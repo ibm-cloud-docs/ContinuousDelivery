@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-1-15"
+lastupdated: "2019-2-8"
 
 ---
 
@@ -76,17 +76,3 @@ After the download is complete, you have a local version of the files in your re
 
 If you use Eclipse and have a project that uses Git for source control, you can use the EGit plug-in to manage your repo from Eclipse. For instructions to install and configure EGit, see [EGit tutorial ![External link icon](../../icons/launch-glyph.svg "External link icon")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
 If you use Git Repos and Issue Tracking and have any problems, see [Git Repos and Issue Tracking](git_working.html#git_local).
-
-## Developing with IBM Eclipse Tools
-{: #git_eclipse_tools}
-
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} provides plug-ins that you can install into an Eclipse environment to integrate your IDE with {{site.data.keyword.Bluemix_notm}}.
-
-With the tools, you can deploy the following types of files and servers to {{site.data.keyword.Bluemix_notm}} directly from your Eclipse IDE or from IBM WebSphere&reg; Application Server Developer Tools (WDT):
-
-* JavaScript files
-* WAR (web archive) files
-* EAR (enterprise archive) files
-* Liberty Profile packaged servers
-
-You can also create services and link them to your app and define environment variables as part of the deployment.
