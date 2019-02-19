@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -21,14 +21,14 @@ lastupdated: "2018-12-11"
 
 {{site.data.keyword.jazzhub_short}} at hub.jazz.net is retired. 
 
-For your DevOps projects, use the [{{site.data.keyword.contdelivery_short}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops){:new_window}. If you're new to {{site.data.keyword.Bluemix_notm}}, be sure to check out the [{{site.data.keyword.Bluemix_notm}} overview](/docs/overview/ibm-cloud.html#overview).
+For your DevOps projects, use the [{{site.data.keyword.contdelivery_short}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops){:new_window}. If you're new to {{site.data.keyword.Bluemix_notm}}, be sure to check out the [{{site.data.keyword.Bluemix_notm}} overview](/docs/overview?topic=overview-whatis-platform).
 
 {: shortdesc}
 
 ## Find the toolchain that was created from your project
 {: #find_toolchain}
 
-Confirm that the upgrade is complete by going to the [Toolchains page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/toolchains){: new_window} and verifying that you see toolchains with names that match the names of your hub.jazz.net projects. If your projects were automatically upgraded, keep these caveats in mind:
+Confirm that the upgrade is complete by going to the [Toolchains page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops/toolchains){: new_window} and verifying that you see toolchains with names that match the names of your hub.jazz.net projects. If your projects were automatically upgraded, keep these caveats in mind:
    - If another toolchain already used your project's name before your project was upgraded, the new toolchain that was created for your project might not have the exact name of your project. 
    - If you don't see toolchains for your projects, switch to any other orgs that you belong to and check the toolchains there.
    
@@ -48,19 +48,19 @@ Toolchains are like projects, with a few important differences:
 - In projects, membership was maintained at the project level. Access to toolchains is managed by {{site.data.keyword.Bluemix_notm}} organization (org) and by toolchain. To work with a toolchain, you must be a member of the org that contains the toolchain. The toolchain owner has further control over who can access the toolchain and what they can do. For more information about access control, see step 2 in [Getting started with your toolchain](#upgrade_next_steps).
 - Depending on the type of repo you used in your project on hub.jazz.net, your toolchain might contain a GitHub.com repo or a {{site.data.keyword.gitrepos}} repo.
 
-You can learn more about toolchains on [YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/2SIPE1e7NJ4){: new_window} or from [Getting started with {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html).
+You can learn more about toolchains on [YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/2SIPE1e7NJ4){: new_window} or from [Getting started with {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started).
 
 ## Getting started with your toolchain
 {: #upgrade_next_steps}
 
 1. Give your team members access to the toolchain.
     - Each team member must have a valid {{site.data.keyword.Bluemix_notm}} account. Team members who don't have accounts must [sign up ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/registration){:new_window}.
-    - Grant org members access to the toolchain from the toolchain Manage page. Existing project members are added as members of the toolchain as part of the upgrade process. For more information about access control for toolchains, see [Managing access ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
+    - Grant org members access to the toolchain from the toolchain Manage page. Existing project members are added as members of the toolchain as part of the upgrade process. For more information about access control for toolchains, see [Managing access to toolchains in Cloud Foundry orgs ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){:new_window}.
     - If a user is not a member of the org that the toolchain belongs to, add them to the org from the Manage Organizations page.
     - If your toolchain uses {{site.data.keyword.gitrepos}}, all JazzHub project members that have a valid {{site.data.keyword.Bluemix_notm}} ID are added to the {{site.data.keyword.gitrepos}} repo with the same privileges as they had in the JazzHub project. If your JazzHub project includes members that do not have a valid {{site.data.keyword.Bluemix_notm}} ID, they can register for one. After they register, you can add them to the repo.
-      For more information about managing organizations, see [Managing organizations and spaces ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window}.
+      For more information about managing organizations, see [Managing organizations and spaces ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/account?topic=account-orgsspacesusers){:new_window}.
 
-2. If you are using {{site.data.keyword.gitrepos}}, authenticate by using a personal access token or an SSH key. For more information about SSH keys, see [Creating a personal access token or SSH key for authentication](/docs/services/ContinuousDelivery/git_working.html#git_authentication). To authenticate from an external Git client through https, follow these steps:
+2. If you are using {{site.data.keyword.gitrepos}}, authenticate by using a personal access token or an SSH key. For more information about SSH keys, see [Creating a personal access token or SSH key for authentication](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication). To authenticate from an external Git client through https, follow these steps:
     1. Go to the [Access Tokens page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} of your {{site.data.keyword.gitrepos}} user settings.
     2. Create a personal access token that uses **api** as the scope.
     3. Go to the [Account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account){:new_window} and find your user name for {{site.data.keyword.gitrepos}}. Your user name is listed in the "Change username" section and it is shown as the first part of the URL for any personal repo that you create.
@@ -70,7 +70,7 @@ You can learn more about toolchains on [YouTube ![External link icon](../../icon
         To check which remote URLs are set to which remote names, use the `git remote -v` command. The default remote name is `origin`. If you have a more advanced setup, the form of the command is as follows: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
         {: tip}
 
-3. Optional: To explore your project's development maturity, your team's practices, and the quality of your code base, add IBM Cloud {{site.data.keyword.DRA_short}} to your toolchain. {{site.data.keyword.DRA_short}} applies developer, team, and deployment analytics to DevOps projects. For more information, see [Getting started with {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html).
+3. Optional: To explore your project's development maturity, your team's practices, and the quality of your code base, add IBM Cloud {{site.data.keyword.DRA_short}} to your toolchain. {{site.data.keyword.DRA_short}} applies developer, team, and deployment analytics to DevOps projects. For more information, see [Getting started with {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).
 
   {{site.data.keyword.DRA_short}} is available in the US South, United Kingdom, and Germany regions.
   {: tip}
