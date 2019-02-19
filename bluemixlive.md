@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2018
-lastupdated: "2018-12-12"
+  years: 2015，2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -145,7 +145,3 @@ The Debugger might take a minute or so to initialize.
 1. Restore the app's original Node.js version, start command, and memory value.
 
 2. Push the app.
-
-### For more information
-
-* See [Eclipse tools for {{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
