@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-14"
+  years: 2016, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -31,4 +31,4 @@ In addition to **deployment gates** {{site.data.keyword.DRA_short}}, provides mo
 	
 **Team Dynamics** uses social coding analysis to help you learn how your team collaborates and understand how it can work better.
 
-For more information, see [Getting started tutorial](/docs/services/DevOpsInsights/index.html).
+For more information, see [Getting started tutorial](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).
