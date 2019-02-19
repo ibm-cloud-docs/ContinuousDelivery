@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2017-5-15"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -21,3 +21,5 @@ Open toolchains are available in the Public and Dedicated environments on {{site
 On {{site.data.keyword.Bluemix_notm}} Public, depending on the template or toolchain that you use, the toolchain might include a GitHub or Git repository (repo) that is populated with app starter code and a preconfigured delivery pipeline. When you push changes to the toolchain's repo, the delivery pipeline automatically builds and deploys the app to {{site.data.keyword.Bluemix_notm}}.
 
 On {{site.data.keyword.Bluemix_notm}} Dedicated, depending on the template or toolchain that you use, the toolchain might include a GitHub or GitHub Enterprise repo that is populated with app starter code and a preconfigured delivery pipeline. When you push changes to the toolchain's GitHub or GitHub Enterprise repo, the delivery pipeline automatically builds and deploys the apps to {{site.data.keyword.Bluemix_notm}}.
+
+To see which toolchains and tool integrations are available, see [Toolchain availability, templates, and tutorials](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_about).
