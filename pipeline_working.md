@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-7-19"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -12,7 +12,8 @@ lastupdated: "2018-7-19"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# Working with pipelines {: #pipeline-working}
+# Working with pipelines 
+{: #pipeline-working}
 
 To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use {{site.data.keyword.contdelivery_full}} pipelines.
 {: shortdesc}
@@ -23,16 +24,16 @@ Build jobs compile and package your app source code from Git repositories. The b
 
 A deployment job takes output from a build job and deploys it to either the {{site.data.keyword.containerlong_notm}} or Cloud Foundry servers such as {{site.data.keyword.Bluemix_notm}}.
 
-You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} to use one or more services, test in one region, and deploy to production in multiple regions. For more information, see [Regions](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}.
+You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} to use one or more services, test in one region, and deploy to production in multiple regions.
 
 ##Creating a pipeline
 
 You can use any of the following methods to create a pipeline:
 
-   * [Create a toolchain from an existing Cloud Foundry application](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app){: new_window}. The resulting toolchain contains a pipeline.
+   * [Create a toolchain from an existing Cloud Foundry application](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}. The resulting toolchain contains a pipeline.
 
-   * [Create a toolchain from a template](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_a_template){: new_window} that includes at least one pipeline.
+   * [Create a toolchain from a template](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window} that includes at least one pipeline.
 
-   * [Add the {{site.data.keyword.deliverypipeline}} tool integration](/docs/services/ContinuousDelivery/toolchains_integrations.html#deliverypipeline){: new_window} to an existing toolchain.
+   * [Add the {{site.data.keyword.deliverypipeline}} tool integration](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window} to an existing toolchain.
    
 From your {{site.data.keyword.deliverypipeline}}, change your configuration; check the status of builds, the deployed app, and recent deployments; see the most recent logs and deployment details; or delete your pipeline.
