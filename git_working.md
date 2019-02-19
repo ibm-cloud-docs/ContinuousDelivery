@@ -38,7 +38,7 @@ Because this tool integration is built on GitLab Community Edition and hosted by
 {: tip}
 
 ## Using {{site.data.keyword.gitrepos}} locally
-{: #git_local}
+{: #git_locally}
 
 You can locally access the Git repos that are stored in {{site.data.keyword.gitrepos}}. For instructions to set up Git locally, see [Start using Git on the command line ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
 
