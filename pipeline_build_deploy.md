@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-12-11"
+  years: 2016, 2019
+lastupdated: "2019-2-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -77,7 +77,7 @@ You can deploy a previous build. On the stage that contains the build, click **V
 {: tip}
 
 ###Adding services to apps
-You can add services to your apps and manage those services from your {{site.data.keyword.Bluemix_notm}} dashboard or the Cloud Foundry command line interface (CLI). You can also issue Cloud Foundry CLI commands in scripts for pipeline jobs. For example, you can add a service to an app in the script of a deploy job. For more information about adding services, see [Adding a service to your application](/docs/services/reqnsi.html#add_service).
+You can add services to your apps and manage those services from your {{site.data.keyword.Bluemix_notm}} dashboard or the Cloud Foundry command line interface (CLI). You can also issue Cloud Foundry CLI commands in scripts for pipeline jobs. For example, you can add a service to an app in the script of a deploy job. For more information about adding services, see [Connecting services to external apps](/docs/resources?topic=resources-externalapp).
 
 ## Viewing logs
 {: #deliverypipeline_view_logs}
