@@ -30,9 +30,9 @@ You can manage and work with your source code in a GitHub, GitHub Enterprise, or
 
 | Git Type  | HTTPS Setup | HTTPS Use |  SSH Setup |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Personal access token](/docs/services/ContinuousDelivery/git_working.html#git_authentication) | Git Repos and Issue tracking user name (not your IBM id) and personal access token | [Configure the SSH key](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
+| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Personal access token](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) | Git Repos and Issue tracking user name (not your IBM id) and personal access token | [Configure the SSH key](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |
 | Public GitHub (github.com) | Personal access token is not required, but you can set one up and use it | GitHub user name and password, or GitHub user name and Personal Access token, or just the personal access token as the user name | [Configure a GitHub SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-| GitHub Enterprise | [Personal access token](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | GitHub Enterprise user name (not your IBM id) and personal access token | [Configure the GitHub Enterprise SSH key](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
+| GitHub Enterprise | [Personal access token](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) | GitHub Enterprise user name (not your IBM id) and personal access token | [Configure the GitHub Enterprise SSH key](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |
 
 If you prefer to use SSH, you can reuse a single key across all Git servers. Create or locate your key and configure it in each server as described in the previous links. If you create your key with a passphrase, you are prompted for that passphrase when you use the key.
 {: tip}
@@ -75,4 +75,4 @@ After the download is complete, you have a local version of the files in your re
 {: #git_egit}
 
 If you use Eclipse and have a project that uses Git for source control, you can use the EGit plug-in to manage your repo from Eclipse. For instructions to install and configure EGit, see [EGit tutorial ![External link icon](../../icons/launch-glyph.svg "External link icon")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
-If you use Git Repos and Issue Tracking and have any problems, see [Git Repos and Issue Tracking](git_working.html#git_local).
+If you use Git Repos and Issue Tracking and have any problems, see [Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local).
