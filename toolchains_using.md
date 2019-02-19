@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -44,7 +44,7 @@ If you deferred the configuration of a tool integration when you created a toolc
  A few of the tool integrations are preconfigured and don't require any configuration parameters. You can update the configuration settings for only the tool integrations that you configured.
  {: tip}
 
- When you are finished updating the settings, click **Save Integration**. For more information about configuring specific tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+ When you are finished updating the settings, click **Save Integration**. For more information about configuring specific tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 
 ## Adding a tool integration
 {: #adding_a_tool_integration}
@@ -70,7 +70,7 @@ If you delete a tool integration from your toolchain, the deletion cannot be und
 ## Managing access to toolchains in resource groups
 {: #managing_access_resource_groups}
 
-You can use the Identity and Access Management (IAM) service to manage user access to toolchains. For more information about managing access control with IAM, see [Managing user access to toolchains with Identity and Access Management](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}. 
+You can use the Identity and Access Management (IAM) service to manage user access to toolchains. For more information about managing access control with IAM, see [Managing user access to toolchains with Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}. 
 
 Only users who are part of the authorized users list for the selected instance of {{site.data.keyword.contdelivery_short}} can use the Delivery Pipeline, Eclipse Orion {{site.data.keyword.webide}}, and {{site.data.keyword.gitrepos}} features of {{site.data.keyword.contdelivery_short}} toolchains. You can manage authorized user entitlement from the Manage tab of the selected instance of {{site.data.keyword.contdelivery_short}}, within the specified resource group.
 
@@ -89,7 +89,7 @@ You can grant users access to a toolchain by adding them to both the org that th
 You must add users to the toolchain's org in the region where the toolchain is hosted. If the toolchain is configured to deploy apps to a different region, it will still deploy apps to that region.
 {: important}
 
-If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, when you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, the users can log in to {{site.data.keyword.ghe_short}} by using their {{site.data.keyword.Bluemix_notm}} ID and password. When the users log in, accounts are created for them. When you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, they are not automatically added to the {{site.data.keyword.ghe_short}} repo. Someone who has admin privileges for the repo must add them. For more information, see [Using Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, follow your internal procedures.
+If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, when you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, the users can log in to {{site.data.keyword.ghe_short}} by using their {{site.data.keyword.Bluemix_notm}} ID and password. When the users log in, accounts are created for them. When you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, they are not automatically added to the {{site.data.keyword.ghe_short}} repo. Someone who has admin privileges for the repo must add them. For more information, see [Using Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, follow your internal procedures.
 
 ###Tips for managing access to a toolchain
 
@@ -127,7 +127,7 @@ If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.ke
 
      * Assign a role for the selected space in the organization.
 
-     By default, org managers have full admin privileges for all of the toolchains that are associated with the org. To grant full admin privileges to the user, select the **Manager** role. The Billing Manager and Auditor roles do not affect toolchain access. You can change the roles later on the Team Directory page. For more information, see [Cloud Foundry roles](/docs/iam/cfaccess.html#cfaccess){: new_window}.
+     By default, org managers have full admin privileges for all of the toolchains that are associated with the org. To grant full admin privileges to the user, select the **Manager** role. The Billing Manager and Auditor roles do not affect toolchain access. You can change the roles later on the Team Directory page. For more information, see [Cloud Foundry roles](/docs/iam?topic=iam-cfaccess#cfaccess){: new_window}.
      {: tip}
 
    After the user is a member of the org, return to the toolchain's Manage page and add the user to the toolchain.  
