@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-1-25"
+lastupdated: "2019-2-15"
 
 ---
 {:shortdesc: .shortdesc}
@@ -22,7 +22,7 @@ lastupdated: "2019-1-25"
 Improve your DevOps workflow by creating a custom toolchain template. You can get started quickly with an existing toolchain template, or create a toolchain template that includes only the tool integrations that you need. You can add or remove integrations from your toolchain at any time.
 {:shortdesc}
 
-You can [create a toolchain](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} in several ways. After you create a custom toolchain template, you can share it by [creating a deploy to {{site.data.keyword.Bluemix_notm}} button](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}.   For more information about the toolchain template SDK, see [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. For a step-by-step tutorial, see the [Garage Method site](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
+You can [create a toolchain](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window} in several ways. After you create a custom toolchain template, you can share it by [creating a deploy to {{site.data.keyword.Bluemix_notm}} button](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deploy-button){: new_window}. For more information about the toolchain template SDK, see [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. For a step-by-step tutorial, see the [Garage Method site](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
 
 
 ## Getting started
@@ -39,7 +39,7 @@ To create a custom toolchain template, begin by cloning the Simple Cloud Foundry
 
  This template deploys a basic Hello World application from a single GitHub repository and includes a simple toolchain that is preconfigured for continuous delivery, source control, issue tracking, and online editing.
 
-2. If you want to start with a more complex toolchain template, clone the [Cloud-native Toolchain for Microservices] template (https://github.com/open-toolchain/toolchain-demo){: new_window}.
+2. If you want to start with a more complex toolchain template, clone the [Cloud-native Toolchain for Microservices template](https://github.com/open-toolchain/toolchain-demo){: new_window}.
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -264,7 +264,7 @@ In that example, the Git URL and Git branch are for a new toolchain template.
 
 4\. **Deployment details:**
 
- As part of the continuous delivery process, you can configure a toolchain to deploy an application to any {{site.data.keyword.Bluemix_notm}} region, organization, or space to which a user has access. You can specify the details about where to deploy your application on the [toolchain creation](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} page.
+ As part of the continuous delivery process, you can configure a toolchain to deploy an application to any {{site.data.keyword.Bluemix_notm}} region, organization, or space to which a user has access. You can specify the details about where to deploy your application on the [toolchain creation](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window} page.
 
 This section of the `toolchain.yml` file defines the pipeline stages that are available to configure from the toolchain creation page.
 
@@ -394,7 +394,7 @@ stages:
  ## Configuring the pipeline interface
  {: #toolchains_custom_deploy_json}
 
- On the [toolchain creation](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} page, when Delivery Pipeline is selected from the Configurable Integrations section, the section expands to display the following items:
+ On the [toolchain creation](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window} page, when Delivery Pipeline is selected from the Configurable Integrations section, the section expands to display the following items:
 
  	* The application's name.
  	* The region, organization, and space that your pipeline stages deploy to.
