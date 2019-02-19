@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -32,16 +32,16 @@ For source-code management and issue tracking, {{site.data.keyword.Bluemix_notm}
 
 {{site.data.keyword.contdelivery_short}} is available on {{site.data.keyword.Bluemix_notm}} Public in selected regions, and on {{site.data.keyword.Bluemix_notm}} Dedicated. Toolchains differ depending on whether you use {{site.data.keyword.contdelivery_short}} on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-Although toolchains are not currently available in all regions, you can configure your toolchain to deploy your apps across all regions. To learn more, try the <a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Deploy a secure web application across multiple regions </a> tutorial.
+Although toolchains are not currently available in all regions, you can configure your toolchain to deploy your apps across all regions. To learn more, try the [Deploy a secure web application across multiple regions tutorial](/docs/tutorials?topic=solution-tutorials-multi-region-webapp){: new_window}.
 {: tip}
 
 |Toolchains |{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
-|Tool integrations 		|For a list of supported tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}. 		|The tool integrations that are available depend on how {{site.data.keyword.contdelivery_short}} was set up in your environment.			|
+|Tool integrations 		|For a list of supported tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}. 		|The tool integrations that are available depend on how {{site.data.keyword.contdelivery_short}} was set up in your environment.			|
 |Creating a toolchain from a template		|Log in to [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com/devops){:new_window}		|Log in to your Dedicated environment on {{site.data.keyword.Bluemix_notm}}.			|
 |Creating a toolchain from an app		|The app is configured for continuous delivery from a new GitHub repo that is populated with app starter code.		|The app is configured for continuous delivery from a new GitHub or GitHub Enterprise repo that is populated with app starter code.		|  
 |Delivery pipeline deployment regions		|All {{site.data.keyword.Bluemix_notm}} Public regions are available for Cloud Foundry deployment jobs. 		|The {{site.data.keyword.Bluemix_notm}} Dedicated region is available. Other Dedicated or Local regions within the same customer account might also be available depending on how {{site.data.keyword.contdelivery_short}} was set up in your specific environment.		|
-|Delivery pipeline deployment jobs		|All [job types](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs) are available.		|Job types that depend on {{site.data.keyword.Bluemix_notm}} services that are not installed in the Dedicated environment might not be available.	For example, container build and deploy job types might not be available in environments that do not have the {{site.data.keyword.containerlong_notm}}.	|
+|Delivery pipeline deployment jobs		|All [job types](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs) are available.		|Job types that depend on {{site.data.keyword.Bluemix_notm}} services that are not installed in the Dedicated environment might not be available.	For example, container build and deploy job types might not be available in environments that do not have the {{site.data.keyword.containerlong_notm}}.	|
 {: caption="Table 1. Differences between toolchains on {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Public" caption-side="top"}
 
 
@@ -232,7 +232,6 @@ Try the tutorials:
 
 <ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app" target="_blank">Add a toolchain to an app <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
 <li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Create a custom toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
-<li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Deploy a secure web application across multiple regions</a></li>
 </ul></td>
 <td><ul><li>{{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}
