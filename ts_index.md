@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-11"
+lastupdated: "2019-2-27"
+
+keywords: IBM Cloud Continuous Delivery, GitHub tool integration, error message
+
+subcollection: ContinuousDelivery
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
