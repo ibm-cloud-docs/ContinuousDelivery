@@ -2,7 +2,12 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-2-27"
+
+keywords: run jobs, sequences of stages, job types
+
+subcollection: ContinuousDelivery
+
 ---
 
 {:shortdesc: .shortdesc}
