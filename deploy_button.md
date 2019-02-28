@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-11"
+lastupdated: "2019-2-27"
+
+keywords: IBM Cloud button, yml file, build file
+
+subcollection: ContinuousDelivery
 
 ---
 
