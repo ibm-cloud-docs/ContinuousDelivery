@@ -1,9 +1,13 @@
 ---
 
 copyright:
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-3-23"
+lastupdated: "2019-2-27"
+
+keywords: Continuous delivery practices, {{site.data.keyword.contdelivery_full}}, IBM Cloud Garage Method
+
+subcollection: ContinuousDelivery
 
 ---
 <!-- Copyright info at top of file: REQUIRED
