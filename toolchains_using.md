@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-2-27"
+
+keywords: user management function, tool integrations, Cloud Foundry org
+
+subcollection: ContinuousDelivery
 
 ---
 
