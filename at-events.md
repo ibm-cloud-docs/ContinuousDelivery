@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-2-25"
+
+keywords: Activity Tracker events, tool-instance, List of events
+
+subcollection: ContinuousDelivery
 
 ---
 
