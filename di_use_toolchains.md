@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2017-12-8"
+  years: 2015, 2019
+lastupdated: "2019-2-27"
+
+keywords: DevOps approach, quality of your code, starting point
+
+subcollection: ContinuousDelivery
 
 ---
 
