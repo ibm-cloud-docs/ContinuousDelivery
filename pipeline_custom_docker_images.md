@@ -1,8 +1,12 @@
 ---
 
 Copyright:
-  years: 2018
-lastupdated: "2018-12-6"
+  years: 2018, 2019
+lastupdated: "2019-2-27"
+
+keywords: pipeline base image, custom Docker, IBM Cloud team uses
+
+subcollection: ContinuousDelivery
 
 ---
 
