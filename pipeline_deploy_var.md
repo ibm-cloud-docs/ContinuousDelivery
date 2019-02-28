@@ -1,8 +1,13 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-10-9"
+  years: 2016, 2019
+lastupdated: "2019-2-27"
+
+keywords: Environment properties, IBM Java, pipeline environments
+
+subcollection: ContinuousDelivery
+
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
