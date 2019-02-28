@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-2-25"
+
+keywords: secure environment, data, IBM Cloud Continuous Delivery, Data
+
+subcollection: ContinuousDelivery
 
 ---
 
