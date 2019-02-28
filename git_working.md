@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-5"
+  years: 2015, 2019
+lastupdated: "2019-2-27"
+
+keywords: Git Repos, Issue Tracking, Collaborate, Git repository
+
+subcollection: ContinuousDelivery
 
 ---
 
