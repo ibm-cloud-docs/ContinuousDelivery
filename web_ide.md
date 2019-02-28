@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-1-31"
+lastupdated: "2019-2-27"
+
+keywords: Eclipse Orion {{site.data.keyword.webide}}, file types, Local Editor Settings icon
+
+subcollection: ContinuousDelivery
 
 ---
 
