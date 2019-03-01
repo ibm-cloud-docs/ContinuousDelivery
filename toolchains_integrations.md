@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-27"
+lastupdated: "2019-3-1"
 
 keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
 
@@ -944,7 +944,7 @@ Configure PagerDuty to send notifications when pipeline stage failures occur so 
 
 1. If you want to integrate PagerDuty at the account level by using an API key, click **Account**:
 
- a. Type the API access key for your PagerDuty account. If you don't have a PagerDuty account, [register for one ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://signup.pagerduty.com/accounts/new){: new_window}. For instructions to find the key, see [Generating an API Key ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
+ a. Type the API access key for your PagerDuty account. If you don't have a PagerDuty account, [register for one ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.pagerduty.com/sign-up/){: new_window}. For instructions to find the key, see [Generating an API Key ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
 
  b. Type the name of your PagerDuty service.
 
