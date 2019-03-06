@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -79,7 +79,7 @@ Para ver uma lista dos atalhos de teclado no editor, clique em **Ferramentas** >
 
 O {{site.data.keyword.webide}} é integrado com ferramentas de gerenciamento de código-fonte. Para trabalhar com o repositório Git, clique no ícone **Repositório Git** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="O ícone Repositório Git">.  Para obter mais informações, consulte
 [Trabalhando com o Git no Eclipse
-Orion Web IDE](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide).
+Orion Web IDE](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_web_ide#git_web_ide).
 
 ## Implementando um aplicativo a partir de sua área de trabalho
 {: #deploy}
@@ -217,7 +217,7 @@ O Eclipse Orion {{site.data.keyword.webide}} fornece assistente de conteúdo, di
 </table>
 
 ## Fazer um tutorial: Eclipse Orion Web IDE
-{: #toolchain_tutorials}
+{: #toolchain_web_ide_tutorials}
 
 Consulte um desses tutoriais no [IBM&reg; Cloud Garage Method ![Ícon de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage){:new_window}:
 

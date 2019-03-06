@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-14"
+  years: 2016, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -34,4 +34,4 @@ desenvolvimento de seu projeto. É possível identificar arquivos com alta prope
 O **Team Dynamics** usa a análise de codificação social para ajudá-lo a saber como sua
 equipe colabora e entender como ela pode trabalhar melhor.
 
-Para obter mais informações, veja o [Tutorial de introdução](/docs/services/DevOpsInsights/index.html).
+Para obter mais informações, veja o [Tutorial de introdução](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).

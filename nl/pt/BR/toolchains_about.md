@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2017-5-15"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -23,3 +23,5 @@ conjunto específico de integrações de ferramentas ou uma cadeia de ferramenta
 No {{site.data.keyword.Bluemix_notm}} Public, dependendo do modelo ou da cadeia de ferramentas que você usar, a cadeia de ferramentas poderá incluir um repositório (repo) GitHub ou Git que será preenchido com o código de início do app e um pipeline de entrega pré-configurado. Quando você envia por push as mudanças no repositório da cadeia de ferramentas, o pipeline de entrega constrói e implementa automaticamente o app no {{site.data.keyword.Bluemix_notm}}.
 
 No {{site.data.keyword.Bluemix_notm}} Dedicated, dependendo do modelo ou da cadeia de ferramentas que você usar, a cadeia de ferramentas poderá incluir um repositório GitHub ou GitHub Enterprise que será preenchido com o código de início do app e um pipeline de entrega pré-configurado. Quando você envia por push as mudanças no repositório GitHub ou GitHub Enterprise da cadeia de ferramentas, o pipeline de entrega constrói e implementa automaticamente os apps no {{site.data.keyword.Bluemix_notm}}.
+
+Para ver quais cadeias de ferramentas e integrações de ferramentas estão disponíveis, consulte [Disponibilidade, modelos e tutoriais da cadeia de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_about).

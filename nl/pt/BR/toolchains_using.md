@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -45,7 +45,7 @@ Se você tiver adiado a configuração de uma integração de ferramenta quando 
  Algumas das integrações de ferramenta são pré-configuradas e não requerem nenhum parâmetro de configuração. É possível atualizar as definições de configuração para apenas as integrações de ferramenta configuradas.
  {: tip}
 
- Quando tiver finalizado a atualização das configurações, clique em **Salvar integração**. Para obter mais informações sobre como configurar integrações de ferramentas específicas, veja [Configurando integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+ Quando tiver finalizado a atualização das configurações, clique em **Salvar integração**. Para obter mais informações sobre como configurar integrações de ferramentas específicas, veja [Configurando integrações de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 
 ## Incluindo uma integração de ferramenta
 {: #adding_a_tool_integration}
@@ -71,7 +71,7 @@ Se você excluir uma integração de ferramenta a partir de sua cadeia de ferram
 ## Gerenciando o acesso às cadeias de ferramentas em grupos de recursos
 {: #managing_access_resource_groups}
 
-É possível usar o serviço Identity and Access Management (IAM) para gerenciar o acesso do usuário às cadeias de ferramentas. Para obter mais informações sobre como gerenciar o controle de acesso com o IAM, consulte [Gerenciando o acesso de usuário às cadeias de ferramentas com o Identity and Access Management](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}. 
+É possível usar o serviço Identity and Access Management (IAM) para gerenciar o acesso do usuário às cadeias de ferramentas. Para obter mais informações sobre como gerenciar o controle de acesso com o IAM, consulte [Gerenciando o acesso de usuário às cadeias de ferramentas com o Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}. 
 
 Apenas usuários que fazem parte da lista de usuários autorizados para a instância selecionada do {{site.data.keyword.contdelivery_short}} podem usar o Delivery Pipeline, o Eclipse Orion {{site.data.keyword.webide}} e os recursos do {{site.data.keyword.gitrepos}} de cadeias de ferramentas do {{site.data.keyword.contdelivery_short}}. É possível gerenciar a autorização de usuário autorizado por meio da guia Gerenciar da instância selecionada do {{site.data.keyword.contdelivery_short}}, dentro do grupo de recursos especificado.
 
@@ -90,7 +90,7 @@ A autorização de usuário autorizado se aplicará a todas as cadeias de ferram
 Deve-se incluir usuários na organização da cadeia de ferramentas na região em que a cadeia de ferramentas está hospedada. Se a cadeia de ferramentas estiver configurada para implementar apps em uma região diferente, ainda assim ela implementará apps nessa região.
 {: important}
 
-Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, ao incluir usuários em sua organização e espaços do {{site.data.keyword.Bluemix_notm}}, os usuários poderão efetuar login no {{site.data.keyword.ghe_short}} usando seus IDs e senhas do {{site.data.keyword.Bluemix_notm}}. Quando os usuários efetuarem login, as contas serão criadas para eles. Quando você incluir usuários em sua organização e espaços do {{site.data.keyword.Bluemix_notm}}, eles não serão incluídos automaticamente no repositório {{site.data.keyword.ghe_short}}. Alguém com privilégio do administrador para o repositório deverá inclui-los. Para obter mais informações, consulte [Usando o Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. Se você estiver usando sua própria versão gerenciada do {{site.data.keyword.ghe_short}}, siga seus procedimentos internos.
+Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, ao incluir usuários em sua organização e espaços do {{site.data.keyword.Bluemix_notm}}, os usuários poderão efetuar login no {{site.data.keyword.ghe_short}} usando seus IDs e senhas do {{site.data.keyword.Bluemix_notm}}. Quando os usuários efetuarem login, as contas serão criadas para eles. Quando você incluir usuários em sua organização e espaços do {{site.data.keyword.Bluemix_notm}}, eles não serão incluídos automaticamente no repositório {{site.data.keyword.ghe_short}}. Alguém com privilégio do administrador para o repositório deverá inclui-los. Para obter mais informações, consulte [Usando o Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}. Se você estiver usando sua própria versão gerenciada do {{site.data.keyword.ghe_short}}, siga seus procedimentos internos.
 
 ###Dicas para gerenciar o acesso a uma cadeia de ferramentas
 
@@ -128,7 +128,7 @@ Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{sit
 
      * Designe uma função para o espaço selecionado na organização.
 
-     Por padrão, os gerentes da organização têm privilégios do administrador integrais para todas as cadeias de ferramentas associadas à organização. Para conceder privilégios do administrador integrais para o usuário, selecione a função **Gerenciador**. As funções Gerente de faturamento e Auditor não afetam o acesso da cadeia de ferramentas. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para obter mais informações, consulte [Funções do Cloud Foundry](/docs/iam/cfaccess.html#cfaccess){: new_window}.
+     Por padrão, os gerentes da organização têm privilégios do administrador integrais para todas as cadeias de ferramentas associadas à organização. Para conceder privilégios do administrador integrais para o usuário, selecione a função **Gerenciador**. As funções Gerente de faturamento e Auditor não afetam o acesso da cadeia de ferramentas. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para obter mais informações, consulte [Funções do Cloud Foundry](/docs/iam?topic=iam-cfaccess#cfaccess){: new_window}.
      {: tip}
 
    Depois que o usuário for um membro da organização, retorne à página Gerenciar da cadeia de ferramentas e inclua o usuário na cadeia de ferramentas.  

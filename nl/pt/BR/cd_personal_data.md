@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-2-20"
 
 ---
 
@@ -28,8 +28,8 @@ Dados pessoais são quaisquer informações relacionadas a uma pessoa física ou
  * {{site.data.keyword.gitrepos}}
  * Pipelines do {{site.data.keyword.contdelivery_short}}
  * Cadeias de ferramentas e integrações de ferramentas
- * [GitHub Enterprise on IBM Cloud ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/ghededicated/ghe_personal_data.html){: new_window}
- * [{{site.data.keyword.DRA_full}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
+ * [GitHub Enterprise on IBM Cloud ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
+ * [{{site.data.keyword.DRA_full}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/DevOpsInsights?topic=DevOpsInsights-insights_personal_data){: new_window}
  
 A IBM não gerencia dados no serviço {{site.data.keyword.contdelivery_short}}. Antes de deixar o serviço {{site.data.keyword.contdelivery_short}} que está hospedado no {{site.data.keyword.Bluemix_notm}} Public, deve-se excluir os seus próprios dados.
 {: important}

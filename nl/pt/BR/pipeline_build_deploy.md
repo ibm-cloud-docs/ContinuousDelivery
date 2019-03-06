@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-12-11"
+  years: 2016, 2019
+lastupdated: "2019-2-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -99,10 +99,7 @@ destino.
 É possível incluir serviços em seus apps e gerenciar esses serviços por meio do
 seu painel do {{site.data.keyword.Bluemix_notm}} ou na interface da linha de comandos (CLI) do Cloud
 Foundry. Também é possível emitir comandos da CLI do Cloud Foundry em scripts para tarefas do pipeline. Por
-exemplo, é possível incluir um serviço em um app no script de uma tarefa de implementação. Para
-obter mais informações sobre como incluir serviços, consulte
-[Incluindo
-um serviço em seu aplicativo](/docs/services/reqnsi.html#add_service).
+exemplo, é possível incluir um serviço em um app no script de uma tarefa de implementação. Para obter mais informações sobre a inclusão de serviços, consulte [Conectando serviços a aplicativos externos](/docs/resources?topic=resources-externalapp).
 
 ## Exibindo logs
 {: #deliverypipeline_view_logs}

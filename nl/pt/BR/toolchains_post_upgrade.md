@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -21,14 +21,14 @@ Os projetos {{site.data.keyword.jazzhub}} em hub.jazz.net são submetidos a upgr
 
 O {{site.data.keyword.jazzhub_short}} no hub.jazz.net está obsoleto. 
 
-Para os projetos do DevOps, use o [serviço {{site.data.keyword.contdelivery_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops){:new_window}. Se você for novo no {{site.data.keyword.Bluemix_notm}}, certifique-se de verificar a visão geral do [{{site.data.keyword.Bluemix_notm}}](/docs/overview/ibm-cloud.html#overview).
+Para os projetos do DevOps, use o [serviço {{site.data.keyword.contdelivery_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops){:new_window}. Se for novo no {{site.data.keyword.Bluemix_notm}}, certifique-se de conferir a [visão geral do {{site.data.keyword.Bluemix_notm}}](/docs/overview?topic=overview-whatis-platform).
 
 {: shortdesc}
 
 ## Localizar a cadeia de ferramentas que foi criada de seu projeto
 {: #find_toolchain}
 
-Confirme se o upgrade está completo acessando a [página Cadeias de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/devops/toolchains){: new_window} e verificando se você vê as cadeias de ferramentas com nomes que correspondam aos nomes de seus projetos hub.jazz.net. Se foi feito upgrade de seus projetos automaticamente, lembre-se destas advertências:
+Confirme se o upgrade está completo acessando a [página Cadeias de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops/toolchains){: new_window} e verificando se você vê as cadeias de ferramentas com nomes que correspondam aos nomes de seus projetos hub.jazz.net. Se foi feito upgrade de seus projetos automaticamente, lembre-se destas advertências:
    - Se outra cadeia de ferramentas já usava o nome do seu projeto antes do upgrade do projeto, a nova cadeia de ferramentas que foi criada para seu projeto pode não ter o nome exato de seu projeto. 
    - Se você não vir cadeias de ferramentas para seus projetos, alterne para quaisquer outras organizações às quais você pertença e verifique as cadeias de ferramentas lá.
    
@@ -48,19 +48,19 @@ As cadeias de ferramentas são como projetos, com algumas diferenças importante
 - Em projetos, a associação era mantida no nível do projeto. O acesso a cadeias de ferramentas é gerenciado pela organização (org) do {{site.data.keyword.Bluemix_notm}} e por cadeia de ferramentas. Para trabalhar com uma cadeia de ferramentas, deve-se ser um membro da organização que contém a cadeia de ferramentas. O proprietário da cadeia de ferramentas tem mais controle sobre quem pode acessar a cadeia de ferramentas e o que eles podem fazer. Para obter mais informações sobre o controle de acesso, veja a etapa 2 em [Introdução à sua cadeia de ferramentas](#upgrade_next_steps).
 - Dependendo do tipo de repositório que você usou em seu projeto no hub.jazz.net, sua cadeia de ferramentas pode conter um repositório GitHub.com ou um repositório {{site.data.keyword.gitrepos}}.
 
-É possível aprender mais sobre cadeias de ferramentas no [YouTube ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://youtu.be/2SIPE1e7NJ4){: new_window} ou em [Introdução ao {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html).
+É possível aprender mais sobre cadeias de ferramentas no [YouTube ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://youtu.be/2SIPE1e7NJ4){: new_window} ou em [Introdução ao {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started).
 
 ## Introdução à sua cadeia de ferramentas
 {: #upgrade_next_steps}
 
 1. Dê aos membros da equipe acesso à cadeia de ferramentas.
     - Cada membro da equipe deve ter uma conta do {{site.data.keyword.Bluemix_notm}} válida. Os membros da equipe que não tiverem contas deverão [inscrever-se ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/registration){:new_window}.
-    - Conceda aos membros da organização acesso à cadeia de ferramentas na página Gerenciar da cadeia de ferramentas. Os membros existentes do projeto são incluídos como membros da cadeia de ferramentas como parte do processo de upgrade. Para obter mais informações sobre o controle de acesso de cadeias de ferramentas, consulte [Gerenciando o acesso ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
+    - Conceda aos membros da organização acesso à cadeia de ferramentas na página Gerenciar da cadeia de ferramentas. Os membros existentes do projeto são incluídos como membros da cadeia de ferramentas como parte do processo de upgrade. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas, consulte [Gerenciando o acesso às cadeias de ferramentas em organizações do Cloud Foundry![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){:new_window}.
     - Se um usuário não for membro da organização à qual a cadeia de ferramentas pertence, inclua-o na organização na página Gerenciar organizações.
     - Se sua cadeia de ferramentas usar {{site.data.keyword.gitrepos}}, todos os membros do projeto JazzHub que tenham um ID válido do {{site.data.keyword.Bluemix_notm}} serão incluídos no repositório {{site.data.keyword.gitrepos}} com os mesmos privilégios que eles tinham no projeto JazzHub. Se o seu projeto JazzHub inclui membros que não têm um ID válido do {{site.data.keyword.Bluemix_notm}}, eles podem se registrar para um. Após eles se registrarem, será possível incluí-los no repositório.
-      Para obter mais informações sobre como gerenciar organizações, consulte [Gerenciando organizações e espaços ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window}.
+      Para obter mais informações sobre como gerenciar organizações, consulte [Gerenciando organizações e espaços ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/account?topic=account-orgsspacesusers){:new_window}.
 
-2. Se você estiver usando o {{site.data.keyword.gitrepos}}, autentique usando um token de acesso pessoal ou uma chave SSH. Para obter mais informações sobre chaves SSH, consulte [Criando um token de acesso pessoal ou uma chave SSH para autenticação](/docs/services/ContinuousDelivery/git_working.html#git_authentication). Para autenticar de um cliente Git externo através de https, siga estas etapas:
+2. Se você estiver usando o {{site.data.keyword.gitrepos}}, autentique usando um token de acesso pessoal ou uma chave SSH. Para obter mais informações sobre chaves SSH, consulte [Criando um token de acesso pessoal ou uma chave SSH para autenticação](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication). Para autenticar de um cliente Git externo através de https, siga estas etapas:
     1. Acesse a [página Tokens de acesso ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} das configurações de usuário do {{site.data.keyword.gitrepos}}.
     2. Crie um token de acesso pessoal que use **api** como escopo.
     3. Acesse a [página Conta ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/profile/account){:new_window} e localize seu nome do usuário para o {{site.data.keyword.gitrepos}}. Seu nome do usuário é listado na seção "Mudar o nome do usuário" e é mostrado como a primeira parte da URL para qualquer repositório pessoal criado.
@@ -70,7 +70,7 @@ As cadeias de ferramentas são como projetos, com algumas diferenças importante
         Para verificar quais URLs remotas estão configuradas para quais nomes remotos, use o comando `git remote -v`. O nome remoto padrão é `origin`. Se você tiver uma configuração mais avançada, o formulário do comando será o seguinte: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
         {: tip}
 
-3. Opcional: para explorar a maturidade de desenvolvimento do projeto, as práticas da equipe e a qualidade do código base, inclua o IBM Cloud {{site.data.keyword.DRA_short}} na sua cadeia de ferramentas. O {{site.data.keyword.DRA_short}} aplica a análise de desenvolvedor, equipe e implementação aos projetos do DevOps. Para obter mais informações, consulte [Introdução ao {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html).
+3. Opcional: para explorar a maturidade de desenvolvimento do projeto, as práticas da equipe e a qualidade do código base, inclua o IBM Cloud {{site.data.keyword.DRA_short}} na sua cadeia de ferramentas. O {{site.data.keyword.DRA_short}} aplica a análise de desenvolvedor, equipe e implementação aos projetos do DevOps. Para obter mais informações, consulte [Introdução ao {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).
 
   O {{site.data.keyword.DRA_short}} está disponível nas regiões sul dos EUA, Reino Unido e Alemanha.
   {: tip}

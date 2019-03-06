@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-3-26"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -80,7 +80,7 @@ app vinculado que é criado se chama `pipeline_bridge_app`. Em
 seguida, o pipeline usa as credenciais do pipeline_bridge_app para acessar os serviços
 vinculados.
 
-    * Se você já configurou o serviço e ligou o app em seu espaço {{site.data.keyword.Bluemix_short}} ou se desejar [configurar esses requisitos manualmente](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, deixe a caixa de seleção limpa.
+    * Se você já configurou o serviço e o aplicativo de limite em seu espaço do {{site.data.keyword.Bluemix_short}} ou se desejar configurar esses requisitos manualmente, deixe a caixa de seleção desmarcada.
 
   f. No campo **Minutos de espera para a análise ser concluída**, digite um valor de 0 - 59 minutos. O valor padrão é de 5 minutos. Uma URL para o painel do {{site.data.keyword.staticanalyzershort}} está nos logs do console no término da tarefa.
 
@@ -130,8 +130,6 @@ console:
 
 **Varredura pendente**
 ![Exemplo de varredura pendente](images/analyzer_pending.png)
-
-Para obter mais informações sobre como usar o serviço {{site.data.keyword.staticanalyzershort}}, veja os [docs do serviço {{site.data.keyword.staticanalyzershort}}](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-7-19"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -12,7 +12,8 @@ lastupdated: "2018-7-19"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# Trabalhando com pipelines {: #pipeline-working}
+# Trabalhando com pipelines 
+{: #pipeline-working}
 
 Para automatizar suas construções e implementações para o {{site.data.keyword.Bluemix}}, use pipelines do {{site.data.keyword.contdelivery_full}}.
 {: shortdesc}
@@ -29,17 +30,16 @@ Uma tarefa de implementação obtém a saída de uma tarefa de compilação e im
 
 É possível implementar para uma ou várias regiões e serviços. Por exemplo, é
 possível configurar seu {{site.data.keyword.deliverypipeline}} para usar um ou
-mais serviços, testar em uma região e implementar para produção em múltiplas regiões. Para obter informações adicionais, consulte
-[Regiões](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}.
+mais serviços, testar em uma região e implementar para produção em múltiplas regiões.
 
 ##Criando um pipeline
 
 É possível usar qualquer um dos métodos a seguir para criar um pipeline:
 
-   * [Crie uma cadeia de ferramentas por meio de um aplicativo do Cloud Foundry existente](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app){: new_window}. A cadeia de ferramentas resultante contém um pipeline.
+   * [Crie uma cadeia de ferramentas por meio de um aplicativo do Cloud Foundry existente](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}. A cadeia de ferramentas resultante contém um pipeline.
 
-   * [Crie uma cadeia de ferramentas por meio de um modelo](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_a_template){: new_window} que inclua pelo menos um pipeline.
+   * [Crie uma cadeia de ferramentas por meio de um modelo](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window} que inclua pelo menos um pipeline.
 
-   * [Inclua a integração de ferramenta do {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/toolchains_integrations.html#deliverypipeline){: new_window} em uma cadeia de ferramentas existente.
+   * [Inclua a integração de ferramenta do {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window} em uma cadeia de ferramentas existente.
    
 No {{site.data.keyword.deliverypipeline}}, mude a configuração, verifique o status das construções, o app implementado e as implementações recentes; veja os logs mais recentes e os detalhes da implementação ou exclua seu pipeline.

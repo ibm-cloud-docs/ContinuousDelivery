@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -41,15 +41,13 @@ ferramentas, siga estas etapas para autorizar com o GitHub:
 
   1. Na seção Integrações configuráveis, clique em **GitHub**.
   1. Se você estiver criando a cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Public e o {{site.data.keyword.Bluemix_notm}} não estiver autorizado a acessar o GitHub, clique em **Autorizar** para acessar o website GitHub.
-  1. Se você não
-tiver uma sessão do GitHub ativa, será solicitado a efetuar login. Clique em **Autorizar aplicativo** para permitir que o {{site.data.keyword.Bluemix_notm}} acesse sua conta GitHub.
+  1. Se você não tiver uma sessão do GitHub ativa, será solicitado a efetuar login. Clique em **Autorizar aplicativo** para permitir que o {{site.data.keyword.Bluemix_notm}} acesse sua conta GitHub.
 
 Se você já tiver uma cadeia de ferramentas, atualize a configuração da integração de ferramenta GitHub:
 
  1. No painel do DevOps, na página **Cadeias de ferramentas**, clique na cadeia de ferramentas para abrir sua página Visão geral. Como alternativa, na página Visão geral do app, no cartão do Continuous Delivery, clique em **Visualizar cadeia de ferramentas** e, em seguida, clique em **Visão geral**.
  1. No cartão GitHub, clique no menu e, em seguida, em **Configurar**.
- 1. Atualize as definições de configuração para autorizar o {{site.data.keyword.Bluemix_notm}} a acessar o GitHub. Clique em **Autorizar** para acessar o website do GitHub. Se você não
-tiver uma sessão do GitHub ativa, será solicitado a efetuar login. Clique em **Autorizar aplicativo** para permitir que o {{site.data.keyword.Bluemix_notm}} acesse sua conta GitHub.
+ 1. Atualize as definições de configuração para autorizar o {{site.data.keyword.Bluemix_notm}} a acessar o GitHub. Clique em **Autorizar** para acessar o website do GitHub. Se você não tiver uma sessão do GitHub ativa, será solicitado a efetuar login. Clique em **Autorizar aplicativo** para permitir que o {{site.data.keyword.Bluemix_notm}} acesse sua conta GitHub.
  1. Quando tiver finalizado a atualização das configurações, clique em **Salvar integração**.
 
 
@@ -66,14 +64,14 @@ Ao tentar criar uma cadeia de ferramentas em uma organização, se você receber
 {: #plan_exceeded}
 {: faq}
 
-{{site.data.keyword.contdelivery_short}}  oferece dois planos: Lite e Professional. Se você tiver o plano Lite do {{site.data.keyword.contdelivery_short}}, será possível usar cadeias de ferramentas gratuitamente, até os limites do plano. A mensagem de erro indica que você excedeu um ou mais limites do plano Lite. Por exemplo, você poderá exceder o plano se você tiver muitos usuários autorizados que estiverem associados à instância do serviço {{site.data.keyword.contdelivery_short}} ou se você executou o número máximo de tarefas do {{site.data.keyword.deliverypipeline}}. Para obter mais informações sobre os termos de seu plano, veja [Limitações e uso do plano](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+{{site.data.keyword.contdelivery_short}}  oferece dois planos: Lite e Professional. Se você tiver o plano Lite do {{site.data.keyword.contdelivery_short}}, será possível usar cadeias de ferramentas gratuitamente, até os limites do plano. A mensagem de erro indica que você excedeu um ou mais limites do plano Lite. Por exemplo, você poderá exceder o plano se você tiver muitos usuários autorizados que estiverem associados à instância do serviço {{site.data.keyword.contdelivery_short}} ou se você executou o número máximo de tarefas do {{site.data.keyword.deliverypipeline}}. Para obter mais informações sobre os termos de seu plano, veja [Limitações e uso do plano](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
 
 
 ## Eu criei uma cadeia de ferramentas; por que a página Cadeias de ferramentas mostra que um serviço de Entrega Contínua é necessário?
 {: #service_required_resource_group}
 {: faq}
 
-Os termos do plano para a instância do serviço {{site.data.keyword.contdelivery_short}} que está no mesmo grupo de recursos ou organização, uma vez que a cadeia de ferramentas gerencia o uso de algumas das integrações de ferramenta ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} e {{site.data.keyword.gitrepos}}) que estão contidas no serviço. A mensagem de erro indica que o grupo de recursos ou a organização não contém a instância necessária do serviço {{site.data.keyword.contdelivery_short}}. Para obter mais informações sobre os termos de seu plano, veja [Limitações e uso do plano](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+Os termos do plano para a instância do serviço {{site.data.keyword.contdelivery_short}} que está no mesmo grupo de recursos ou organização, uma vez que a cadeia de ferramentas gerencia o uso de algumas das integrações de ferramenta ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} e {{site.data.keyword.gitrepos}}) que estão contidas no serviço. A mensagem de erro indica que o grupo de recursos ou a organização não contém a instância necessária do serviço {{site.data.keyword.contdelivery_short}}. Para obter mais informações sobre os termos de seu plano, veja [Limitações e uso do plano](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
 
 
 ## Eu criei uma cadeia de ferramentas em uma organização do Cloud Foundry; por que a página Cadeias de ferramentas mostra que um serviço de Entrega Contínua é necessário?
@@ -97,7 +95,7 @@ Ao tentar implementar um app no {{site.data.keyword.Bluemix_notm}}, se você rec
 `Erro de Servidor COM FALHA, código de status: 400, código de erro: 100005, mensagem: Você excedeu seu limite de memória da organização.`
 
 É possível aumentar a cota de memória de sua conta ou reduzir a memória que seus apps usam. A cota máxima
-de memória para uma conta de avaliação é 2 GB. Para aumentar a cota de memória de sua conta, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Contas pagas](/docs/pricing/index.html#pay-accounts). Para reduzir a memória que seus apps usam, use o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos cf.
+de memória para uma conta de avaliação é 2 GB. Para aumentar a cota de memória de sua conta, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta de avaliação em uma conta paga, consulte [Como faço upgrade ou mudo minha conta?](/docs/account?topic=account-accountfaqs#changeacct). Para reduzir a memória que seus apps usam, use o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos cf.
 
 Se você usar o console do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
 
@@ -149,7 +147,7 @@ Verifique a página Status do {{site.data.keyword.Bluemix_notm}} para determinar
   * Efetue login no console do {{site.data.keyword.Bluemix_notm}}. Na barra de menus, clique em **Suporte** e selecione **Status**. Verifique os recursos listados para o ícone ![alguns problemas](../../get-support/images/some_issues.svg). Esse ícone pode indicar uma indisponibilidade.
   * Acesse-a diretamente em [{{site.data.keyword.Bluemix_notm}} - Status do sistema ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/status){: new_window}.
 
-Para obter mais informações sobre a página Status do {{site.data.keyword.Bluemix_notm}}, veja [Visualizando o status do {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/docs/get-support/ViewStatus.html#viewing-bluemix-status).
+Para obter informações sobre a página Status do {{site.data.keyword.Bluemix_notm}}, consulte [Visualizando o status do {{site.data.keyword.Bluemix_notm}}](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}.
 
 
 ## Eu configurei uma integração de ferramenta para minha cadeia de ferramentas, por que ela não estava configurada?

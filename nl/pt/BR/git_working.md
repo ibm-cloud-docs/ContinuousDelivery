@@ -40,7 +40,7 @@ suportados. Além disso, as funções de administração não estão disponívei
 {: tip}
 
 ## Usando o {{site.data.keyword.gitrepos}} localmente
-{: #git_local}
+{: #git_locally}
 
 É possível acessar localmente os repositórios Git que são armazenados no {{site.data.keyword.gitrepos}}. Para obter instruções de como configurar o Git localmente, consulte [Iniciar o uso do Git na linha de comandos ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
 

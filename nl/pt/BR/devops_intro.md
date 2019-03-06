@@ -27,7 +27,7 @@ e práticas modernas do DevOps, adotam arquiteturas nativas de nuvem e montam ca
 de ponta para liberar a produtividade. Por tudo isso em prática rapidamente é uma vantagem competitiva
 chave.
 
-O  
+O 
 <a href="https://www.ibm.com/cloud/garage">IBM Cloud Garage Method <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>
 descreve arquiteturas, práticas e cadeias de ferramentas do DevOps para permitir que as empresas inovem em escala. Use o {{site.data.keyword.Bluemix_notm}} Garage Method para ajudá-lo a transformar sua cultura e usar as ferramentas de forma efetiva e rápida.
 

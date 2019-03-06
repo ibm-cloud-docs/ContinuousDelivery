@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-29"
+  years: 2016, 2019
+lastupdated: "2019-2-15"
 ---
 
 {:shortdesc: .shortdesc}
@@ -22,14 +22,14 @@ lastupdated: "2018-11-29"
 O {{site.data.keyword.contdelivery_full}} inclui o Delivery Pipeline para construir, testar e implementar de forma repetida com mínima intervenção humana. Em um pipeline, as sequências de estágios recuperam a entrada e executam tarefas, como construções, testes e implementações.
 {:shortdesc}
 
-As suas permissões para visualizar, modificar ou executar um pipeline são baseadas no controle de acesso para a cadeia de ferramentas que possui o pipeline. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas, consulte [Gerenciando acesso às cadeias de ferramentas em grupos de recursos](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} e [Gerenciando acesso a cadeias de ferramentas em organizações do Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
+As suas permissões para visualizar, modificar ou executar um pipeline são baseadas no controle de acesso para a cadeia de ferramentas que possui o pipeline. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas, consulte [Gerenciando acesso às cadeias de ferramentas em grupos de recursos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window} e [Gerenciando acesso a cadeias de ferramentas em organizações do Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
 {: important}
 
-É possível especificar os scripts a serem executados em muitos dos tipos de tarefas que são fornecidos pelo pipeline, fornecendo controle direto sobre o que é executado pela tarefa. Esses scripts são executados em uma imagem do Docker que contém uma série de ferramentas de desenvolvimento padrão, incluindo ferramentas que são necessárias para interagir com os tempos de execução do {{site.data.keyword.Bluemix_notm}}. Para obter mais informações sobre o que a imagem padrão do Docker contém, veja [Recursos pré-instalados](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}. Se a sua tarefa requer ferramentas de desenvolvimento que não estão disponíveis na imagem padrão ou se você precisa de versões diferentes dessas ferramentas, é possível usar uma imagem customizada. Para obter mais informações sobre imagens customizadas, veja [Trabalhando com imagens customizadas do Docker](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}.
+É possível especificar os scripts a serem executados em muitos dos tipos de tarefas que são fornecidos pelo pipeline, fornecendo controle direto sobre o que é executado pela tarefa. Esses scripts são executados em uma imagem do Docker que contém uma série de ferramentas de desenvolvimento padrão, incluindo ferramentas que são necessárias para interagir com os tempos de execução do {{site.data.keyword.Bluemix_notm}}. Para obter mais informações sobre o que a imagem padrão do Docker contém, veja [Recursos pré-instalados](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}. Se a sua tarefa requer ferramentas de desenvolvimento que não estão disponíveis na imagem padrão ou se você precisa de versões diferentes dessas ferramentas, é possível usar uma imagem customizada. Para obter mais informações sobre imagens customizadas, veja [Trabalhando com imagens customizadas do Docker](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}.
 
-Quando o pipeline executa scripts, as propriedades que descrevem o contexto em que a tarefa está em execução são passadas para o script usando variáveis de ambiente. Por exemplo, a URL do repositório que é a entrada para o estágio, o nome do estágio e a tarefa que está sendo executada, os parâmetros especificados pelo tipo de tarefa e assim por diante. Para visualizar uma lista de variáveis de ambiente disponíveis, veja [Recursos pré-instalados](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}. 
+Quando o pipeline executa scripts, as propriedades que descrevem o contexto em que a tarefa está em execução são passadas para o script usando variáveis de ambiente. Por exemplo, a URL do repositório que é a entrada para o estágio, o nome do estágio e a tarefa que está sendo executada, os parâmetros especificados pelo tipo de tarefa e assim por diante. Para visualizar uma lista de variáveis de ambiente disponíveis, veja [Recursos pré-instalados](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). 
 
-É possível definir propriedades no nível de pipeline e no nível de estágio. As propriedades de pipeline são compartilhadas em todos os estágios e tarefas em um pipeline. As propriedades do estágio são exclusivas para um estágio específico e compartilhadas em todas as tarefas nesse estágio. Para obter mais informações sobre as propriedades, veja [Propriedades do ambiente (variáveis de ambiente)](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties).
+É possível definir propriedades no nível de pipeline e no nível de estágio. As propriedades de pipeline são compartilhadas em todos os estágios e tarefas em um pipeline. As propriedades do estágio são exclusivas para um estágio específico e compartilhadas em todas as tarefas nesse estágio. Para obter mais informações sobre as propriedades, veja [Propriedades do ambiente (variáveis de ambiente)](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties).
 
 ## Estágios
 {: #deliverypipeline_stages}
@@ -130,7 +130,7 @@ Após a execução de uma tarefa, o contêiner que foi criado para ela é descar
 As tarefas podem ser executadas por até 60 minutos. Quando as tarefas excedem esse limite, elas falham. Se uma tarefa estiver excedendo o limite, divida-a em várias tarefas. Por exemplo, se uma tarefa executar três trabalhos, você poderá dividi-la em três tarefas: uma para cada trabalho.
 {: tip}
 
-Para saber como incluir uma tarefa em um estágio, veja [Incluindo uma tarefa em um estágio](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}.
+Para saber como incluir uma tarefa em um estágio, veja [Incluindo uma tarefa em um estágio](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}.
 
 ### Tarefas de construção
 
@@ -141,9 +141,9 @@ As tarefas que tomam a entrada das tarefas de construção devem referenciar os 
 Se você usar o tipo de construtor **Simples**, o seu código não será compilado nem construído; ele será empacotado e disponibilizado para os estágios futuros.
 {: tip}
 
-Quando você implementa usando o Cloud Foundry, o Cloud Foundry inclui os artefatos corretos para permitir que seu app seja executado. Para obter mais informações, veja [Implementando aplicativos usando o comando cf](/docs/cloud-foundry/deploy-apps.html#dep_apps). O pipeline para um app Cloud Foundry contém um estágio de Implementação que executa um comando cf.
+Quando você implementa usando o Cloud Foundry, o Cloud Foundry inclui os artefatos corretos para permitir que seu app seja executado. Para obter mais informações, veja [Implementando aplicativos usando o comando cf](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps). O pipeline para um app Cloud Foundry contém um estágio de Implementação que executa um comando cf.
 
-O Cloud Foundry tenta [detectar o buildpack para uso do ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Você pode especificar o [Buildpack](/docs/cfapps/byob.html#using-community-buildpacks) para usar no arquivo manifest na pasta raiz de seu app. Os buildpacks geralmente examinam artefatos fornecidos pelo usuário para determinar quais dependências transferir por download e como configurar aplicativos para comunicação com os serviços de limite. Para obter mais informações sobre arquivos manifest, veja [Manifest do aplicativo](/docs/cloud-foundry/deploy-apps.html#appmanifest).
+O Cloud Foundry tenta [detectar o buildpack para uso do ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Você pode especificar o [Buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) para usar no arquivo manifest na pasta raiz de seu app. Os buildpacks geralmente examinam artefatos fornecidos pelo usuário para determinar quais dependências transferir por download e como configurar aplicativos para comunicação com os serviços de limite. Para obter mais informações sobre arquivos manifest, veja [Manifest do aplicativo](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest).
 
 ### Tarefas de implementação
 
@@ -157,8 +157,7 @@ implementação, use o nome desse app.
 
 É possível implementar para uma ou várias regiões e serviços. Por exemplo, é
 possível configurar seu {{site.data.keyword.deliverypipeline}} para usar um ou
-mais serviços, testar em uma região e implementar para produção em múltiplas regiões. Para obter informações adicionais, consulte
-[Regiões](/docs/overview/ibm-cloud.html#ov_intro-reg){: new_window}.
+mais serviços, testar em uma região e implementar para produção em múltiplas regiões.
 
 ### Tarefas de teste
 Para requerer que as condições sejam atendidas, inclua tarefas de teste antes ou
@@ -174,7 +173,7 @@ tarefa também falhará.
 ## Propriedades do ambiente (variáveis de ambiente)
 {: #environment_properties}
 
-Um conjunto de propriedades do ambiente predefinidas fornece acesso a informações sobre o ambiente de execução da tarefa. Para obter uma lista completa das propriedades do ambiente predefinidas, veja [Propriedades e recursos do ambiente](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
+Um conjunto de propriedades do ambiente predefinidas fornece acesso a informações sobre o ambiente de execução da tarefa. Para obter uma lista completa das propriedades do ambiente predefinidas, veja [Propriedades e recursos do ambiente](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment).
 
 Também é possível definir suas próprias propriedades do ambiente. Por exemplo, você pode definir uma propriedade `API_KEY` que passa uma chave de API que é usada para acessar recursos do {{site.data.keyword.Bluemix_notm}} por todos os scripts no pipeline.
 
@@ -218,7 +217,7 @@ Todas as tarefas iniciam executando o arquivo `build.properties`, caso ele exist
 ## Criando e utilizando artefatos
 {: #artifacts}
 
-As tarefas de construção buscam automaticamente o conteúdo na pasta atual na qual o script do usuário é executado. Se você não precisar de todo o conteúdo do repositório git para implementação posterior, será preferível que configure um diretório de saída explícito e, em seguida, copie ou crie os artefatos relevantes nesse local. Os scripts da tarefa são executados no resultado de construção (diretório de saída).
+As tarefas de construção buscam automaticamente o conteúdo na pasta atual na qual o script do usuário é executado.  Se você não precisar de todo o conteúdo do repositório git para implementação posterior, será preferível que configure um diretório de saída explícito e, em seguida, copie ou crie os artefatos relevantes nesse local.  Os scripts da tarefa são executados no resultado de construção (diretório de saída).
 
 As tarefas que são implementadas no Cloud Foundry precisam especificar a chave de API da Plataforma de um usuário sob cuja autoridade as tarefas são executadas e a região, a organização e o espaço no qual implementar os artefatos. Se mais serviços são necessários para executar seu app, deve-se especificá-los no arquivo `manifest.yml`.
 
@@ -254,7 +253,7 @@ diretório-raiz do projeto, controlam como seu projeto é implementado no
 {{site.data.keyword.Bluemix_notm}}. Para obter informações sobre a criação de arquivos manifest para
 um projeto, consulte a documentação do
 [{{site.data.keyword.Bluemix_notm}}
-sobre manifests de aplicativos](/docs/cloud-foundry/deploy-apps.html#appmanifest). Para integrar-se com o {{site.data.keyword.Bluemix_notm}}, seu
+sobre manifests de aplicativos](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest). Para integrar-se com o {{site.data.keyword.Bluemix_notm}}, seu
 projeto deve ter um arquivo manifest em seu diretório-raiz. No entanto, não é necessário implementar com base nas informações no arquivo.
 
 No pipeline, é possível especificar tudo que um arquivo manifest pode fazer usando os argumentos

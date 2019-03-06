@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-12"
+  years: 2017, 2019
+lastupdated: "2019-2-15"
 
 ---
 {:shortdesc: .shortdesc}
@@ -24,9 +24,7 @@ Melhore seu fluxo de trabalho do DevOps criando um modelo customizado de cadeia 
 
 É possível
 [criar uma
-cadeia de ferramentas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} em várias maneiras. Depois de criar um modelo customizado de cadeia de ferramentas, é possível compartilhá-lo
-[criando uma implementação para
-o botão {{site.data.keyword.Bluemix_notm}}](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}.   Para obter mais informações sobre o SDK do modelo de cadeia de ferramentas, veja [SDK da cadeia de ferramentas aberta](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Para obter um tutorial passo a passo, veja o [site Garage Method](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
+cadeia de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window} em várias maneiras. Após a criação de um modelo de cadeia de ferramentas customizado, é possível compartilhá-lo ao [criar uma implementação no botão {{site.data.keyword.Bluemix_notm}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deploy-button){: new_window}. Para obter mais informações sobre o SDK do modelo de cadeia de ferramentas, veja [SDK da cadeia de ferramentas aberta](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Para obter um tutorial passo a passo, veja o [site Garage Method](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
 
 
 ## Introdução
@@ -45,7 +43,7 @@ Para criar um modelo customizado de cadeia de ferramentas, inicie clonando o mod
 repositório GitHub e inclui uma cadeia de ferramentas simples que está pré-configurada
 para entrega contínua, controle de fonte, rastreamento de problemas e edição on-line.
 
-2. Se você desejar iniciar com um modelo de cadeia de ferramentas mais complexo, clone a [Cadeia de ferramentas nativa da nuvem para microsserviços](https://github.com/open-toolchain/toolchain-demo){: new_window}.
+2. Se desejar começar com um modelo de cadeia de ferramentas mais complexo, clone o [modelo de Cadeia de Ferramentas nativa em nuvem para Microsserviços](https://github.com/open-toolchain/toolchain-demo){: new_window}.
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -241,7 +239,7 @@ nome de seu repositório com as propriedades a seguir:
 | service_id | propriedades | <`pipeline`> | Nome do serviço a ser usado |
 | parâmetros | principais |  |  |
 | nome | propriedades | <`repo_name`> | O mesmo que o nome definido na seção de repositório |
-| ui-pipeline | propriedades | <`true`, `false`> |True se os aplicativos que esse pipeline implementa forem mostrados no menu **Visualizar app** na página de cadeias de ferramentas |
+| ui-pipeline | propriedades | <`true`, `false`> |True se os aplicativos que esse pipeline implementa forem mostrados no menu **Visualizar app** na página de cadeias de ferramentas  |
 | configuration | principais |  |  |
 | conteúdo | propriedades | <`$ref(pipeline.yml)`> | Arquivo que estabelece a definição de pipeline |
 | env | principais |  |  |
@@ -284,7 +282,7 @@ nome de seu repositório com as propriedades a seguir:
 
 4\. **Detalhes da implementação:**
 
- Como parte do processo de entrega contínua, é possível configurar uma cadeia de ferramentas para implementar um aplicativo em qualquer região, organização ou espaço do {{site.data.keyword.Bluemix_notm}} ao qual um usuário tem acesso. É possível especificar os detalhes sobre onde implementar seu aplicativo na página [Criação de cadeia de ferramentas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}.
+ Como parte do processo de entrega contínua, é possível configurar uma cadeia de ferramentas para implementar um aplicativo em qualquer região, organização ou espaço do {{site.data.keyword.Bluemix_notm}} ao qual um usuário tem acesso. É possível especificar os detalhes sobre onde implementar seu aplicativo na página [Criação de cadeia de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}.
 
 Esta seção do arquivo `toolchain.yml` define os estágios de pipeline que estão disponíveis para serem configurados na página de criação da cadeia de ferramentas.
 
@@ -302,8 +300,7 @@ implementação |
 | prod-space | propriedades | <`prod`> | Define o espaço do {{site.data.keyword.Bluemix_notm}} para o estágio de produção |
 | github-repo-name | propriedades | <`"{{repo-name-key.parameters.repo_name}}"`> | Variável para passar o nome do repositório GitHub para a página de criação da cadeia de ferramentas |
 
-Para obter mais informações sobre como criar um arquivo `deploy.json`, consulte
-[esta seção] (#toolchains_custom_deploy_json).
+Para obter mais informações sobre a criação de um arquivo `deploy.json`, consulte [essa seção](#toolchains_custom_deploy_json).
 
  O exemplo a seguir define um único estágio que é implementado em um ambiente de produção.
 
@@ -419,7 +416,7 @@ stages:
  ## Configurando a interface do pipeline
  {: #toolchains_custom_deploy_json}
 
- Na página [Criação da cadeia de ferramentas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}, quando o Delivery Pipeline é selecionado na seção Integrações configuráveis, a seção é expandida para exibir os itens a seguir:
+ Na página [Criação da cadeia de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}, quando o Delivery Pipeline é selecionado na seção Integrações configuráveis, a seção é expandida para exibir os itens a seguir:
 
  	* O nome do aplicativo.
  	* A região, a organização e o espaço nos quais seus estágios de pipeline são implementados.

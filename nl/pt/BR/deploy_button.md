@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-18"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 
@@ -28,7 +28,7 @@ Quando alguém clica em seu botão, ocorrem estas ações:
 
 3. É criada uma cadeia de ferramentas que inclui um novo clone privado de seu repositório Git, um pipeline para construir e implementar mudanças de código, o Eclipse Orion {{site.data.keyword.webide}} para editar código na Nuvem e um rastreador de problemas.
 
-  Se o diretório `.bluemix` contiver um arquivo `toolchain.yml`, o arquivo será usado para especificar as integrações da ferramenta para a cadeia de ferramentas. Para obter mais informações sobre o arquivo `toolchain.yml`, veja [Criando cadeias de ferramentas customizadas](/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom){: new_window}.
+  Se o diretório `.bluemix` contiver um arquivo `toolchain.yml`, o arquivo será usado para especificar as integrações da ferramenta para a cadeia de ferramentas. Para obter mais informações sobre o arquivo `toolchain.yml`, veja [Criando cadeias de ferramentas customizadas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}.
   {: tip}
 
 4. Se o app requer um arquivo de construção, o arquivo de construção é detectado automaticamente e o app é construído.
@@ -102,7 +102,7 @@ Se o app deve ser construído antes de poder ser implementado, deve-se incluir u
 Os construtores suportados incluem:
 
 * [Ant ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"):](http://ant.apache.org/manual/using.html){:new_window} `build.xml`, que constrói a saída para a pasta `./output/`
-* [Gradle ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"):](https://docs.gradle.org/current/userguide/getting_started.html){:new_window} `/build.gradle`, que constrói a saída na pasta `.`
+* [Gradle ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"):](https://docs.gradle.org/current/userguide/getting_started.html){:new_window} `/build.gradle`, que constrói a saída para a pasta `.` .
 * [Grunt ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"):](http://gruntjs.com/getting-started#the-gruntfile){:new_window} `/Gruntfile.js`, que constrói a saída para a pasta `.` .
 * [Maven ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"):](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:new_window} `/pom.xml`, que constrói a saída na pasta `./target/`
 
@@ -115,7 +115,7 @@ Se você não tiver o arquivo `pipeline.yml` no diretório `.bluemix`,
 o botão Implementar no {{site.data.keyword.Bluemix_notm}} criará um pipeline padrão com dois
 estágios: um estágio de Construção e um estágio de Implementação que implementa no Cloud Foundry.
 
-Para criar um arquivo de pipeline, consulte o arquivo de exemplo nas [instruções de pipeline da cadeia de ferramentas customizada](toolchains_custom.html#toolchains_custom_pipeline_yml). Assim como quando define um pipeline na interface da web, você define um pipeline em texto criando estágios e tarefas, configurando entradas e variáveis de ambiente e incluindo scripts. Também é possível ver vários arquivos de pipeline mais complexo [neste projeto de demonstração](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix).
+Para criar um arquivo de pipeline, consulte o arquivo de exemplo nas [instruções de pipeline da cadeia de ferramentas customizada](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml). Assim como quando define um pipeline na interface da web, você define um pipeline em texto criando estágios e tarefas, configurando entradas e variáveis de ambiente e incluindo scripts. Também é possível ver vários arquivos de pipeline mais complexo [neste projeto de demonstração](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix).
 
 ### Requisitos do Container Dockerfile
 {: container_dockerfile}
@@ -135,4 +135,4 @@ Para criar um `pipeline.yml` manualmente que seja especificamente para contêine
 
 Um arquivo `manifest.yml` não precisa estar em seu repositório. No entanto, se seu app precisar que outros serviços sejam executados, deve fornecer um arquivo manifest que declare esses serviços.
 
-Para saber mais sobre arquivos manifest, consulte [Manifesto do aplicativo](/docs/cloud-foundry/deploy-apps.html#appmanifest).
+Para saber mais sobre arquivos manifest, consulte [Manifesto do aplicativo](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).

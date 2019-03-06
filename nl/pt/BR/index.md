@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-7"
 
 ---
 
@@ -29,9 +29,9 @@ Adote uma abordagem DevOps usando o {{site.data.keyword.contdelivery_full}}, que
 Antes de poder criar uma cadeia de ferramentas de entrega contínua por meio de um modelo, deve-se criar uma instância do {{site.data.keyword.contdelivery_short}} selecionando-a no catálogo do {{site.data.keyword.Bluemix_notm}}. A
 cadeia de ferramentas integra ferramentas para planejar, desenvolver, implementar
 pipelines e gerenciar aplicativos. Sempre é possível incluir ou remover ferramentas de
-suas cadeias de ferramentas. Se você já tiver cadeias de ferramentas, será possível [visualizar as cadeias de ferramentas existentes](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}. Para obter mais informações sobre como trabalhar com cadeias de ferramentas, veja [Usando cadeias de ferramentas](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
+suas cadeias de ferramentas. Se você já tiver cadeias de ferramentas, será possível [visualizar as cadeias de ferramentas existentes](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing_a_toolchain){: new_window}. Para obter mais informações sobre como trabalhar com cadeias de ferramentas, veja [Usando cadeias de ferramentas](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using){: new_window}.
 
-Se você já tiver uma instância do {{site.data.keyword.contdelivery_short}}, será possível [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops/create){: new_window} ou [visualizar cadeias de ferramentas existentes](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}.
+Se já tiver uma instância do {{site.data.keyword.contdelivery_short}}, será possível [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops/create){: new_window} ou [visualizar cadeias de ferramentas existentes ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops/toolchains){: new_window}.
 {: tip}
 
 ##Etapa 1: Selecione um modelo de cadeia de ferramentas
@@ -63,7 +63,7 @@ o nome da cadeia de ferramentas.
  
 1. Na seção Integrações de ferramentas, selecione cada integração de ferramenta que deseja configurar para sua cadeia de ferramentas. Algumas integrações de ferramentas não requerem configuração. Para obter informações sobre como configurar as integrações de ferramentas, consulte
 [Configurando
-integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+integrações de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Clique em **Criar**. Várias etapas são executadas automaticamente para configurar sua cadeia de ferramentas. As integrações de ferramentas configuradas são diferentes, dependendo de qual modelo de cadeia de ferramentas você selecionou e se está usando o {{site.data.keyword.Bluemix_notm}} Public ou o {{site.data.keyword.Bluemix_notm}} Dedicated. Por exemplo, quando você cria uma cadeia de ferramentas de Microsserviços no {{site.data.keyword.Bluemix_notm}} Public, estas etapas são executadas:
 
  * A cadeia de ferramentas é criada.

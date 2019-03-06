@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-8"
 
 ---
 
@@ -53,8 +53,8 @@ Se você tiver um problema mais sério ou encontrar problemas com o serviço {{s
 1. Na barra de menus, clique em **Suporte** e, em seguida, clique em **Incluir chamado**.
 1. Conclua o formulário para indicar o que você precisa do suporte técnico.
 
-Para obter mais informações sobre como abrir um chamado de suporte IBM {{site.data.keyword.Bluemix_notm}} ou sobre os níveis de suporte e severidades de chamado, veja [Entrando em contato com o suporte](https://cloud.ibm.com/docs/support/index.html#contacting-support).
+Para obter mais informações sobre a abertura de um chamado de suporte do IBM {{site.data.keyword.Bluemix_notm}} ou sobre os níveis de suporte e as severidades de chamado, consulte [Planos de suporte](/docs/get-support?topic=get-support-support-plans).
 
 
 ## Suporte para o {{site.data.keyword.Bluemix_notm}}
-Para outros problemas ou perguntas sobre o serviço {{site.data.keyword.Bluemix_notm}}, veja [Obtendo suporte ao cliente](https://www.{DomainName}/docs/support/index.html#getting-customer-support).
+Para outros problemas ou dúvidas sobre seu serviço {{site.data.keyword.Bluemix_notm}}, consulte [Obtendo o suporte](/docs/get-support?topic=get-support-getting-customer-support).

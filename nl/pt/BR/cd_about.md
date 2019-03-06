@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -32,16 +32,16 @@ Para gerenciamento de código-fonte e rastreamento de problemas, o {{site.data.k
 
 O {{site.data.keyword.contdelivery_short}} está disponível no {{site.data.keyword.Bluemix_notm}} Public em regiões selecionadas e no {{site.data.keyword.Bluemix_notm}} Dedicated. As cadeias de ferramentas são diferentes, dependendo de se você usa o {{site.data.keyword.contdelivery_short}} no {{site.data.keyword.Bluemix_notm}} Public ou no {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-Embora as cadeias de ferramentas não estejam atualmente disponíveis em todas as regiões, é possível configurar a sua cadeia de ferramentas para implementar os seus apps em todas as regiões. Para saber mais, veja o tutorial <a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Implementar um aplicativo da web seguro em múltiplas regiões</a>.
+Embora as cadeias de ferramentas não estejam atualmente disponíveis em todas as regiões, é possível configurar a sua cadeia de ferramentas para implementar os seus apps em todas as regiões. Para saber mais, experimente o [tutorial Implementar um aplicativo da web seguro em diversas regiões](/docs/tutorials?topic=solution-tutorials-multi-region-webapp){: new_window}.
 {: tip}
 
 |Cadeias de ferramentas |{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
-|Integrações de ferramenta 		|Para obter uma lista de integrações de ferramentas suportadas, veja [Configurando integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}. 		|As integrações de ferramentas que estão disponíveis dependem de como o {{site.data.keyword.contdelivery_short}} foi configurado em seu ambiente.			|
-|Criando uma cadeia de ferramentas com base em um modelo		|Efetue login no [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://cloud.ibm.com/devops){:new_window}	|Efetue login no ambiente Dedicated no {{site.data.keyword.Bluemix_notm}}.			|
+|Integrações de ferramenta 		|Para obter uma lista de integrações de ferramentas suportadas, veja [Configurando integrações de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}. 		|As integrações de ferramentas que estão disponíveis dependem de como o {{site.data.keyword.contdelivery_short}} foi configurado em seu ambiente.			|
+|Criando uma cadeia de ferramentas com base em um modelo		|Efetue login no [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://cloud.ibm.com/devops){:new_window}		|Efetue login no ambiente Dedicated no {{site.data.keyword.Bluemix_notm}}.			|
 |Criando uma cadeia de ferramentas com base em um aplicativo		|O app é configurado para entrega contínua por meio de um novo repositório GitHub que é preenchido com o código de início do app.		|O app é configurado para entrega contínua por meio de um novo repositório GitHub ou GitHub Enterprise que é preenchido com o código de início do app.		|  
 |Regiões de implementação do pipeline de entrega		|Todas as regiões do {{site.data.keyword.Bluemix_notm}} Public estão disponíveis para as tarefas de implementação do Cloud Foundry. 		|A região do {{site.data.keyword.Bluemix_notm}} Dedicated está disponível. Outras regiões Dedicated ou Local na mesma conta de cliente também poderão estar disponíveis, dependendo de como o {{site.data.keyword.contdelivery_short}} tiver sido configurado em seu ambiente específico.		|
-|Tarefas de implementação do pipeline de entrega		|Todos os [tipos de tarefas](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs) estão disponíveis.		|Os tipos de tarefas que dependem de serviços do {{site.data.keyword.Bluemix_notm}} que não estão instalados no ambiente Dedicated podem não estar disponíveis.	Por exemplo, os tipos de tarefa de construção e implementação de contêiner podem não estar disponíveis em ambientes que não têm o {{site.data.keyword.containerlong_notm}}.	|
+|Tarefas de implementação do pipeline de entrega		|Todos os [tipos de tarefas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs) estão disponíveis.		|Os tipos de tarefas que dependem de serviços do {{site.data.keyword.Bluemix_notm}} que não estão instalados no ambiente Dedicated podem não estar disponíveis.	Por exemplo, os tipos de tarefa de construção e implementação de contêiner podem não estar disponíveis em ambientes que não têm o {{site.data.keyword.containerlong_notm}}.	|
 {: caption="Tabela 1. Diferenças entre cadeias de ferramentas no {{site.data.keyword.Bluemix_notm}} Dedicated e {{site.data.keyword.Bluemix_notm}} Public" caption-side="top"}
 
 
@@ -232,7 +232,6 @@ Tente os tutoriais:
 
 <ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app" target="_blank">Incluir uma cadeia de ferramentas em um app <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a></li>
 <li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Criar uma cadeia de ferramentas customizada <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a></li>
-<li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Implementar um aplicativo da web seguro em múltiplas regiões</a></li>
 </ul></td>
 <td><ul><li>{{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}

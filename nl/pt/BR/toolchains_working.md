@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 
-lastupdated: "2018-12-6"
+lastupdated: "2019-2-8"
 
 
 ---
@@ -28,7 +28,7 @@ poder coletivo de uma cadeia de ferramentas é maior que a soma de suas integra�
 As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Dedicated no {{site.data.keyword.Bluemix}}. É possível criar uma cadeia de ferramentas de duas formas: usar um modelo para criar uma cadeia de ferramentas ou criar uma cadeia de
 ferramentas a partir de um app.
 
-Cada cadeia de ferramentas é associada a um grupo de recursos ou organização (org.) específicos. Se uma cadeia de ferramentas estiver associada a um grupo de recursos, qualquer usuário que tenha permissão de Visualizador do Identity and Access Management (IAM) para o recurso de cadeia de ferramentas ou o grupo de recursos que a contenha poderá acessar a cadeia de ferramentas. Se a cadeia de ferramentas estiver associada a uma organização, qualquer usuário que for um membro dessa organização poderá ser incluído na lista de controle de acesso para qualquer uma de suas cadeias de ferramentas associadas. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas em organizações do Cloud Foundry, consulte [Gerenciando o acesso às cadeias de ferramentas em organizações do Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas em grupos de recursos, consulte [Gerenciando o acesso às cadeias de ferramentas em grupos de recursos](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}.
+Cada cadeia de ferramentas é associada a um grupo de recursos ou organização (org.) específicos. Se uma cadeia de ferramentas estiver associada a um grupo de recursos, qualquer usuário que tenha permissão de Visualizador do Identity and Access Management (IAM) para o recurso de cadeia de ferramentas ou o grupo de recursos que a contenha poderá acessar a cadeia de ferramentas. Se a cadeia de ferramentas estiver associada a uma organização, qualquer usuário que for um membro dessa organização poderá ser incluído na lista de controle de acesso para qualquer uma de suas cadeias de ferramentas associadas. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas em organizações do Cloud Foundry, consulte [Gerenciando o acesso às cadeias de ferramentas em organizações do Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas em grupos de recursos, consulte [Gerenciando o acesso às cadeias de ferramentas em grupos de recursos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window}.
 
 ##Criando uma cadeia de ferramentas com base em um modelo   
 {: #creating_a_toolchain_from_a_template}
@@ -62,7 +62,7 @@ mostrará cada integração de ferramenta em sua fase de ciclo de vida na cadeia
 
 1. Na seção Integrações de ferramentas, selecione cada integração de ferramenta que deseja configurar para sua cadeia de ferramentas. Algumas integrações de ferramentas não requerem configuração. Para obter informações sobre como configurar as integrações de ferramentas, consulte
 [Configurando
-integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+integrações de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Clique em **Criar**. Várias etapas são executadas automaticamente para configurar sua cadeia de ferramentas. As integrações de ferramentas configuradas são diferentes, dependendo de qual modelo de cadeia de ferramentas você selecionou e se está usando o {{site.data.keyword.Bluemix_notm}} Public ou o {{site.data.keyword.Bluemix_notm}} Dedicated. Por exemplo, quando você cria uma cadeia de ferramentas de Microsserviços no {{site.data.keyword.Bluemix_notm}} Public, estas etapas são executadas:
 
  * A cadeia de ferramentas é criada.
@@ -80,7 +80,7 @@ integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integ
 ferramentas pode suportar desenvolvimento, implementação e monitoramento contínuos e mais, e é associada ao seu app. Cada app pode ser
 associado a uma cadeia de ferramentas. Quando você envia por push as mudanças para o GitHub ou o repositório {{site.data.keyword.ghe_short}} da cadeia de ferramentas, o pipeline constrói e implementa automaticamente o app.
 
-Se você criou seu app usando seu próprio repositório de código, clique em **Conectar à cadeia de ferramentas do DevOps** na página de detalhes de seu app. Em seguida, siga as etapas descritas em [Criando apps por meio de seu próprio repositório de código](/docs/apps/tutorials/tutorial_byoc.html).
+Se você criou seu app usando seu próprio repositório de código, clique em **Conectar à cadeia de ferramentas do DevOps** na página de detalhes de seu app. Em seguida, siga as etapas descritas em [Criando apps por meio de seu próprio repositório de código](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc).
 {: note}
 
 1. Se você criou seu app usando um kit do iniciador, clique em **Implementar na nuvem** na página de detalhes do seu app. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, seu app será configurado para entrega contínua por meio de um novo repositório GitHub que é preenchido com o código de início do app. Se você usar o {{site.data.keyword.Bluemix_notm}} Dedicated, seu app será configurado para entrega contínua por meio de um novo GitHub ou repositório {{site.data.keyword.ghe_short}} que é preenchido com o código de início do app.
@@ -90,7 +90,7 @@ mostrará cada integração de ferramenta em sua fase de ciclo de vida na cadeia
 {{site.data.keyword.Bluemix_notm}}. Se você desejar usar um nome diferente, mude o nome da cadeia de ferramentas.
 1. Na seção Integrações de ferramentas, selecione cada integração de ferramenta que deseja configurar para sua cadeia de ferramentas. Algumas integrações de ferramentas não requerem configuração. Para obter informações sobre como configurar as integrações de ferramentas, consulte
 [Configurando
-integrações de ferramentas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+integrações de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Clique em **Criar**. Várias etapas são executadas automaticamente para configurar sua cadeia de ferramentas. As integrações de ferramentas configuradas são diferentes, dependendo de se você está usando cadeias de ferramentas no {{site.data.keyword.Bluemix_notm}} Public ou no {{site.data.keyword.Bluemix_notm}} Dedicated. Por exemplo, quando você cria uma cadeia de ferramentas de um app no {{site.data.keyword.Bluemix_notm}} Public, estas etapas são executadas:
 
  * A cadeia de ferramentas é criada.
