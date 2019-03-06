@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-12"
+  years: 2017, 2019
+lastupdated: "2019-2-15"
 
 ---
 {:shortdesc: .shortdesc}
@@ -22,7 +22,7 @@ lastupdated: "2018-12-12"
 Mejore su flujo de trabajo de DevOps creando una plantilla de cadena de herramientas personalizada. Puede empezar rápidamente con una plantilla de cadena de herramientas existente, o crear una plantilla de cadena de herramientas que incluya sólo las integraciones de herramientas que necesita. Puede añadir o eliminar las integraciones de la cadena de herramientas en cualquier momento.
 {:shortdesc}
 
-Puede [crear una cadena de herramientas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} de varias formas. Una vez que cree una plantilla de cadena de herramientas personalizada, puede compartirla [creando un botón de despliegue en {{site.data.keyword.Bluemix_notm}}](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}.   Para obtener más información sobre el SDK de la plantilla de la cadena de herramientas, consulte [SDK de Open Toolchain](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Para ver una guía de aprendizaje paso a paso, consulte [Sitio de Garage Method](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
+Puede [crear una cadena de herramientas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window} de varias formas. Una vez que cree una plantilla de cadena de herramientas personalizada, puede compartirla [creando un botón de despliegue en {{site.data.keyword.Bluemix_notm}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deploy-button){: new_window}. Para obtener más información sobre el SDK de la plantilla de la cadena de herramientas, consulte [SDK de Open Toolchain](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Para ver una guía de aprendizaje paso a paso, consulte [Sitio de Garage Method](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
 
 
 ## Iniciación
@@ -39,7 +39,7 @@ Para crear una plantilla de cadena de herramientas personalizada, comience por c
 
  Esta plantilla despliega una aplicación Hello World básica desde un único repositorio GitHub e incluye una cadena de herramientas simple preconfigurada para entrega continuada, control de código fuente, seguimiento de problemas y edición en línea.
 
-2. Si desea comenzar con una plantilla de cadena de herramientas más compleja, clone la [Cadena de herramientas nativa de Microservices](https://github.com/open-toolchain/toolchain-demo){: new_window}.
+2. Si desea comenzar con una plantilla de cadena de herramientas más compleja, clone la [Cadena de herramientas nativa para plantilla de Microservices](https://github.com/open-toolchain/toolchain-demo){: new_window}.
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -208,7 +208,7 @@ En el ejemplo anterior, el URL de Git y la rama de Git son para una nueva planti
  ```
  {: codeblock}
 
-3\. **Información del conducto: **
+3\. **Información del conducto:**
 
  Puede entregar continuamente el proyecto con un conducto. Esta sección del archivo define los detalles de configuración que se utilizan para crear y desplegar el código en cada uno de los repositorios de GitHub, Git Repos e Issue Tracking.
 
@@ -263,7 +263,7 @@ En el ejemplo anterior, el URL de Git y la rama de Git son para una nueva planti
 
 4\. **Destalles del despliegue:**
 
- Como parte del proceso de entrega continua, puede configurar una cadena de herramientas para desplegar una aplicación en cualquier región, organización o espacio de {{site.data.keyword.Bluemix_notm}} al que tenga acceso el usuario. Puede especificar los detalles sobre dónde desplegar la aplicación en la página [creación de cadena de herramientas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}.
+ Como parte del proceso de entrega continua, puede configurar una cadena de herramientas para desplegar una aplicación en cualquier región, organización o espacio de {{site.data.keyword.Bluemix_notm}} al que tenga acceso el usuario. Puede especificar los detalles sobre dónde desplegar la aplicación en la página [creación de cadena de herramientas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}.
 
 En esta sección del archivo `toolchain.yml` se definen las etapas del conducto que se puede configurar en la página de creación de la cadena de herramientas.
 
@@ -280,7 +280,7 @@ En esta sección del archivo `toolchain.yml` se definen las etapas del conducto 
 | prod-space | propiedad | <`prod`> | Define el espacio de {{site.data.keyword.Bluemix_notm}} para la etapa de producción |
 | github-repo-name | propiedad | <`"{{repo-name-key.parameters.repo_name}}"`> | Variable para pasar el nombre del repositorio GitHub a la página de creación de la cadena de herramientas |
 
-Para obtener más información sobre cómo crear un archivo `deploy.json`, consulte [esta sección] (#toolchains_custom_deploy_json).
+Para obtener más información sobre la creación de un archivo `deploy.json`, consulte [esta sección](#toolchains_custom_deploy_json).
 
  En el ejemplo siguiente se define una sola etapa que se despliega en un entorno de producción.
 
@@ -393,7 +393,7 @@ stages:
  ## Configuración de la interfaz del conducto
  {: #toolchains_custom_deploy_json}
 
- En la página de [creación de la cadena de herramientas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}, cuando se seleccionas Delivery Pipeline en la sección Integraciones configurables, la sección se expande para mostrar los siguientes elementos:
+ En la página de [creación de la cadena de herramientas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}, cuando se seleccionas Delivery Pipeline en la sección Integraciones configurables, la sección se expande para mostrar los siguientes elementos:
 
  	* El nombre de la aplicación.
  	* La región, la organización y el espacio en los que se despliegan las etapas del conducto.

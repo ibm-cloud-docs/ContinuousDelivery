@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2018
-lastupdated: "2018-12-12"
+  years: 2015，2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -151,7 +151,3 @@ El depurador puede tardar aproximadamente un minuto en inicializarse.
 1. Restaurar la versión original de la app Node.js, del mandato de inicio del valor de memoria.
 
 2. Envíe la app por push.
-
-### Para obtener más información
-
-* Consulte [Herramientas de Eclipse para {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

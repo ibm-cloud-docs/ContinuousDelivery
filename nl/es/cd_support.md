@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-8"
 
 ---
 
@@ -50,8 +50,8 @@ Si tiene un problema más serio o encuentra problemas con el servicio {{site.dat
 1. En el menú de la barra de menús, pulse **Soporte** y luego pulse **Añadir incidencia**.
 1. Rellene el formulario para indicar el tipo de soporte técnico que necesita.
 
-Para obtener información sobre cómo abrir una incidencia de soporte de IBM {{site.data.keyword.Bluemix_notm}}, o sobre los niveles de soporte y las gravedades de las incidencias, consulte [Cómo contactar con el servicio de soporte](https://cloud.ibm.com/docs/support/index.html#contacting-support).
+Para obtener información sobre cómo abrir una incidencia de soporte de IBM {{site.data.keyword.Bluemix_notm}}, o sobre los niveles de soporte y las gravedades de las incidencias, consulte [Planes de soporte](/docs/get-support?topic=get-support-support-plans).
 
 
 ## Soporte para {{site.data.keyword.Bluemix_notm}}
-Para otros problemas o preguntas acerca del servicio {{site.data.keyword.Bluemix_notm}}, consulte [Obtención el soporte al cliente](https://www.{DomainName}/docs/support/index.html#getting-customer-support).
+Para otros problemas o preguntas acerca del servicio {{site.data.keyword.Bluemix_notm}}, consulte [Obtención de soporte](/docs/get-support?topic=get-support-getting-customer-support).

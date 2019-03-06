@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 
-lastupdated: "2018-12-6"
+lastupdated: "2019-2-8"
 
 
 ---
@@ -26,7 +26,7 @@ Una *cadena de herramientas* es un conjunto de integraciones de herramientas que
 
 Las cadenas de herramientas abiertas están disponibles en los entornos Público y Dedicado en {{site.data.keyword.Bluemix}}. Una cadena de herramientas se puede crear de dos formas: mediante una plantilla o a partir de una app.
 
-Cada cadena de herramientas está asociada a un grupo de recursos u organización específico (org). Si una cadena de herramientas está asociada a un grupo de recursos, cualquier usuario que tenga permiso de Identity and Access Management (IAM) Viewer para el recurso de la cadena de herramientas o el grupo de recursos que lo contiene puede acceder a la cadena de herramientas. Si la cadena de herramientas está asociada con una organización, cualquier usuario que sea miembro de esa organización se puede añadir a la lista de control de accesos para cualquiera de sus cadenas de herramientas asociadas. Para obtener más información sobre el control de accesos para las cadenas de herramientas de organizaciones de Cloud Foundry, consulte [Gestión del acceso a cadenas de herramientas de las organizaciones de Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}. Para obtener más información sobre el control de accesos para las cadenas de herramientas de los grupos de recursos, consulte [Gestión del acceso a cadenas de herramientas de grupos de recursos](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}.
+Cada cadena de herramientas está asociada a un grupo de recursos u organización específico (org). Si una cadena de herramientas está asociada a un grupo de recursos, cualquier usuario que tenga permiso de Identity and Access Management (IAM) Viewer para el recurso de la cadena de herramientas o el grupo de recursos que lo contiene puede acceder a la cadena de herramientas. Si la cadena de herramientas está asociada con una organización, cualquier usuario que sea miembro de esa organización se puede añadir a la lista de control de accesos para cualquiera de sus cadenas de herramientas asociadas. Para obtener más información sobre el control de accesos para las cadenas de herramientas de organizaciones de Cloud Foundry, consulte [Gestión del acceso a cadenas de herramientas de las organizaciones de Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}. Para obtener más información sobre el control de accesos para las cadenas de herramientas de los grupos de recursos, consulte [Gestión del acceso a cadenas de herramientas de grupos de recursos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window}.
 
 ##Creación de una cadena de herramientas a partir de una plantilla   
 {: #creating_a_toolchain_from_a_template}
@@ -55,7 +55,7 @@ Puede utilizar una plantilla como punto de partida para [crear una cadena de her
    Los grupos de recursos están disponibles en las regiones EE.UU. sur, EE.UU. este, Reino Unido, Alemania y Tokio. Las organizaciones de Cloud Foundry están soportadas en las regiones EE.UU. sur, EE.UU. este, Reino Unido y Alemania.
    {: important}
 
-1. En la sección Integraciones de herramientas, seleccione las integraciones de herramientas que desee configurar para su cadena de herramientas. Algunas integraciones de herramientas no necesitan configuración. Para obtener información sobre cómo configurar las integraciones de herramientas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+1. En la sección Integraciones de herramientas, seleccione las integraciones de herramientas que desee configurar para su cadena de herramientas. Algunas integraciones de herramientas no necesitan configuración. Para obtener información sobre cómo configurar las integraciones de herramientas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Pulse **Crear**. Para configurar la cadena de herramientas, se ejecutan varios pasos automáticamente. Las integraciones de herramientas que se configuran varían en función de la plantilla de cadena de herramientas que haya seleccionado y de si utiliza {{site.data.keyword.Bluemix_notm}} público o {{site.data.keyword.Bluemix_notm}} dedicado. Por ejemplo, si crea una cadena de herramientas de microservicios en {{site.data.keyword.Bluemix_notm}} público, se ejecutan estos pasos:
 
  * Se crea la cadena de herramientas.
@@ -71,13 +71,13 @@ Puede utilizar una plantilla como punto de partida para [crear una cadena de her
 
 Puede crear una cadena de herramientas desde su app. La cadena de herramientas puede admitir tareas continuadas de desarrollo, despliegue, supervisión, etc., y está asociada con su app. Cada app puede asociarse a una cadena de herramientas. Cuando se envían los cambios al repositorio de GitHub o {{site.data.keyword.ghe_short}} de la cadena de herramientas, el conducto crea y despliega automáticamente la app.
 
-Si ha creado la app utilizando su propio repositorio de código, pulse **Conectarse a la cadena de herramientas de DevOps** en la página de detalles de su app. A continuación, siga los pasos que se describen en [Creación de apps a partir de su propio repositorio de código](/docs/apps/tutorials/tutorial_byoc.html).
+Si ha creado la app utilizando su propio repositorio de código, pulse **Conectarse a la cadena de herramientas de DevOps** en la página de detalles de su app. A continuación, siga los pasos que se describen en [Creación de apps a partir de su propio repositorio de código](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc).
 {: note}
 
-1. Si ha creado la app utilizando un kit de iniciación, pulse **Desplegar en la nube** en la página de detalles de la app. Si utiliza {{site.data.keyword.Bluemix_notm}} público, la app se configura para una entrega continua desde un nuevo repositorio de GitHub que ya contiene el código de inicio de la app. Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado, la app se configura para una entrega continua desde un nuevo repositorio de GitHub o {{site.data.keyword.ghe_short}} que ya contiene el código de inicio de la app.
+1. Si ha creado la app utilizando un kit de inicio, pulse **Desplegar en la nube** en la página de detalles de la app. Si utiliza {{site.data.keyword.Bluemix_notm}} público, la app se configura para una entrega continua desde un nuevo repositorio de GitHub que ya contiene el código de inicio de la app. Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado, la app se configura para una entrega continua desde un nuevo repositorio de GitHub o {{site.data.keyword.ghe_short}} que ya contiene el código de inicio de la app.
 1. En la página de creación de cadenas de herramientas, revise el diagrama de la cadena de herramientas que está a punto de crear. El diagrama muestra cada integración de herramientas en la fase del ciclo de vida correspondiente en la cadena de herramientas.
 1. Revise la información predeterminada para la configuración de la cadena de herramientas. El nombre de la cadena de herramientas la identifica en {{site.data.keyword.Bluemix_notm}}. Si desea utilizar otro nombre, cambie el nombre de la cadena de herramientas.
-1. En la sección Integraciones de herramientas, seleccione las integraciones de herramientas que desee configurar para su cadena de herramientas. Algunas integraciones de herramientas no necesitan configuración. Para obtener información sobre cómo configurar las integraciones de herramientas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+1. En la sección Integraciones de herramientas, seleccione las integraciones de herramientas que desee configurar para su cadena de herramientas. Algunas integraciones de herramientas no necesitan configuración. Para obtener información sobre cómo configurar las integraciones de herramientas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Pulse **Crear**. Para configurar la cadena de herramientas, se ejecutan varios pasos automáticamente. Las integraciones de herramientas que se configuran dependen de si utiliza cadenas de herramientas en {{site.data.keyword.Bluemix_notm}} Público o {{site.data.keyword.Bluemix_notm}} Dedicado. Por ejemplo, si crea una cadena de herramientas a partir de una app en {{site.data.keyword.Bluemix_notm}} público, se ejecutan estos pasos:
 
  * Se crea la cadena de herramientas.

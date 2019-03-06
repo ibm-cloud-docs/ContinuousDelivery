@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-2-20"
 
 ---
 
@@ -28,10 +28,10 @@ Los datos personales son cualquier información relacionada con una persona fís
  * {{site.data.keyword.gitrepos}}
  * Conductos de {{site.data.keyword.contdelivery_short}}
  * Cadenas de herramientas e integraciones de herramientas
- * [GitHub Enterprise on IBM Cloud ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/ghededicated/ghe_personal_data.html){: new_window}
- * [{{site.data.keyword.DRA_full}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
+ * [GitHub Enterprise on IBM Cloud ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
+ * [{{site.data.keyword.DRA_full}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/DevOpsInsights?topic=DevOpsInsights-insights_personal_data){: new_window}
  
-IBM no gestiona los datos en el servicio de {{site.data.keyword.contdelivery_short}}. Antes de dejar el servicio de {{site.data.keyword.contdelivery_short}} que se aloja en {{site.data.keyword.Bluemix_notm}} Público, debe suprimir sus propios datos.
+IBM no gestiona los datos del servicio {{site.data.keyword.contdelivery_short}}. Antes de dejar el servicio {{site.data.keyword.contdelivery_short}} que se aloja en {{site.data.keyword.Bluemix_notm}} Público, debe suprimir sus propios datos.
 {: important}
 
 {{site.data.keyword.contdelivery_short}} proporciona los permisos adecuados para gestionar datos dentro de un grupo de recursos o una organización de Cloud Foundry. La empresa puede tener políticas que limitan estos permisos. Si no tiene los permisos adecuados, póngase en contacto con el administrador de la cuenta de {{site.data.keyword.Bluemix_notm}}.
@@ -162,21 +162,21 @@ Cuando se suprime la cuenta, algunos contenidos se mantienen. Este contenido se 
 {{site.data.keyword.gitrepos}} utiliza un mecanismo de inicio de sesión único que crea automáticamente una cuenta de Git correspondiente a la cuenta de IBM Cloud la primera vez que accede a la integración de herramientas. Después de suprimir la cuenta, no acceda a {{site.data.keyword.gitrepos}}. Si accede a {{site.data.keyword.gitrepos}} de nuevo, se crea automáticamente una nueva cuenta que debe suprimir.
 {: important}
 
-## Modificación, exportación y supresión de los datos de interconexión de Continuous Delivery
+## Modificación, exportación y supresión de los datos de conducto de Continuous Delivery
 {: #managing_pipeline_data}
 
 Los conductos de {{site.data.keyword.contdelivery_short}} ejecutan scripts para compilar, probar y desplegar su aplicación en IBM Cloud. Para ello, los conductos ofrecen etapas, trabajos, variables de entorno y otros objetos que pueden contener datos personales. Puede suprimir estos objetos individualmente o puede suprimir todo un conducto.
 
 Coordínese con los demás miembros del equipo antes de suprimir conductos u objetos compartidos. Suprimir una etapa puede provocar que falle un conducto.
 
-No puede existir una interconexión fuera de una cadena de herramientas. Si suprime una cadena de herramientas, todos los conductos que están asociados con la cadena de herramientas también se suprimen. Si tiene previsto suprimir una cadena de herramientas completa, no es necesario suprimir individualmente cada conducto. En su lugar, vaya a la sección "Modificación y supresión de cadenas de herramientas e integraciones de herramientas" y siga los pasos para suprimir una cadena de herramientas.
+No puede existir un conducto fuera de una cadena de herramientas. Si suprime una cadena de herramientas, todos los conductos que están asociados con la cadena de herramientas también se suprimen. Si tiene previsto suprimir una cadena de herramientas completa, no es necesario suprimir individualmente cada conducto. En su lugar, vaya a la sección "Modificación y supresión de cadenas de herramientas e integraciones de herramientas" y siga los pasos para suprimir una cadena de herramientas.
 {: important}
 
-Las etapas de interconexión pueden incluir datos personales, como credenciales, en forma de propiedades de entorno, y una definición de interconexión que muestra el estado actual de la interconexión. Las etapas también pueden incluir scripts dentro de los trabajos que desee modificar o suprimir, así como artefactos y registros para las ejecuciones de interconexión más recientes que desea exportar. Utilice las acciones Configurar etapa o Suprimir etapa para modificar o suprimir una etapa. Utilice la acción Descargar para exportar artefactos o registros desde una etapa.
+Las etapas de conducto pueden incluir datos personales, como credenciales, en forma de propiedades de entorno, y una definición de conducto que muestra el estado actual del conducto. Las etapas también pueden incluir scripts dentro de los trabajos que desee modificar o suprimir, así como artefactos y registros para las ejecuciones de conducto más recientes que desea exportar. Utilice las acciones Configurar etapa o Suprimir etapa para modificar o suprimir una etapa. Utilice la acción Descargar para exportar artefactos o registros desde una etapa.
 
   ![Menú de etapas](images/pipeline_stages.png)
 
-###Modificación de una etapa de interconexión
+###Modificación de una etapa de conducto
 
 Para modificar una etapa de conducto:
 
@@ -189,21 +189,21 @@ Para modificar una etapa de conducto:
   
 1. Suprima un trabajo de la etapa de conducto. En el separador **TRABAJOS**, seleccione el trabajo que desea suprimir y pulse **Eliminar**.
  
-###Exportación de una etapa de interconexión
+###Exportación de una etapa de conducto
 
-Para exportar la definición para una etapa de interconexión, añada `/yaml` al URL de la interconexión:
+Para exportar la definición para una etapa de conducto, añada `/yaml` al URL del conducto:
 
 `http(s)://<DevOps Services domain>/pipeline/user/project/yaml`
 
 
-Para exportar artefactos y registros para una etapa de interconexión:
+Para exportar artefactos y registros para una etapa de conducto:
 
-1. En la página Interconexión, pulse **Ver registros e historial**.
+1. En la página Conducto, pulse **Ver registros e historial**.
 1. Pulse el número de compilación para el que desea exportar artefactos y registros.
 1. Pulse **DESCARGAR** > **Artefactos** para exportar los artefactos para la compilación seleccionada.
 1. Pulse **DESCARGAR** > **Registros** para exportar los registros para la compilación seleccionada.  
 
-###Supresión de una etapa de interconexión
+###Supresión de una etapa de conducto
 
 Para suprimir una etapa de conducto:
 
@@ -245,7 +245,7 @@ Al suprimir una cadena de herramientas, la supresión no se podrá deshacer.
 1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse sobre la cadena de herramientas que desea suprimir. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**.
 1. Pulse el menú **Más acciones**, que se encuentra junto a **Ver app**.
 1. Pulse **Suprimir**. Cuando se suprime una cadena de herramientas, también se suprimen todas sus integraciones de herramienta, incluidos los conductos, lo que podría dar lugar a la supresión de los recursos que dichas integraciones gestionan.
-1. Para confirmar la eliminación, escriba el nombre de la cadena de herramientas y pulse **Suprimir**. 
+1. Para confirmar la supresión, escriba el nombre de la cadena de herramientas y pulse **Suprimir**. 
 
 Al suprimir una cadena de herramientas, los repositorios de {{site.data.keyword.gitrepos}} asociados no se suprimirán. Los usuarios que tienen acceso a esos repositorios pueden tener copias de los datos si han realizado un `clon git` o han creado un espacio de trabajo de {{site.data.keyword.webide}}. Para asegurarse de que se suprimen todos los datos, debe solicitar que dichos usuarios supriman sus copias de los datos.
 {: tip}

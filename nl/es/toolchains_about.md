@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2017-5-15"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -21,3 +21,5 @@ Las cadenas de herramientas abiertas están disponibles en los entornos Público
 En {{site.data.keyword.Bluemix_notm}} Público, en función de la plantilla o cadena de herramientas que se utilice, es posible que la cadena de herramientas incluya un repositorio de GitHub o Git que contenga código de inicio de la app y un conducto de entrega ya configurado. Cuando se envían los cambios al repositorio de la cadena de herramientas, el conducto de entrega crea y despliega automáticamente la app en {{site.data.keyword.Bluemix_notm}}.
 
 En {{site.data.keyword.Bluemix_notm}} Dedicado, en función de la plantilla o cadena de herramientas que se utilice, es posible que la cadena de herramientas incluya un repositorio de GitHub o GitHub Enterprise que contenga código de inicio de la app y un conducto de entrega ya configurado. Cuando se envían los cambios al repositorio de GitHub o GitHub Enterprise de la cadena de herramientas, el conducto de entrega crea y despliega automáticamente las apps en {{site.data.keyword.Bluemix_notm}}.
+
+Para ver qué cadenas de herramientas e integraciones de herramientas están disponibles, consulte [Disponibilidad de cadenas de herramientas, plantillas y guías de aprendizaje](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_about).

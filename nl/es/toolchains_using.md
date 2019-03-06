@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-11-29"
 # Utilización de cadenas de herramientas
 {: #toolchains-using}
 
-Las cadenas de herramientas abiertas están disponibles en los entornos Público y Dedicado en {{site.data.keyword.Bluemix}}. Puede utilizar una cadena de herramientas para que sea productiva en su trabajo diario de desarrollo, despliegue y operaciones. Una vez que se ha configurado una cadena de herramientas, es posible añadir, eliminar o configurar integraciones de herramientas y gestionar el acceso a la cadena de herramientas.
+Las cadenas de herramientas abiertas están disponibles en los entornos Público y Dedicado en {{site.data.keyword.Bluemix}}. Puede utilizar una cadena de herramientas para que sea productiva en su trabajo diario de desarrollo, despliegue y operaciones. Una vez que se ha configurado una cadena de herramientas, es posible añadir, suprimir o configurar integraciones de herramientas y gestionar el acceso a la cadena de herramientas.
 {: shortdesc}
 
 Puede gestionar cadenas de herramientas en las regiones públicas EE.UU. sur, EE.UU. este, Reino Unido, Alemania y Tokio utilizando los grupos de recursos. Puede utilizar organizaciones de Cloud Foundry para gestionar cadenas de herramientas en las regiones públicas de EE.UU. sur, Reino Unido y Alemania. El control de accesos y la gestión de usuarios autorizados funcionan de forma distinta para las cadenas de herramientas, en función de si están contenidas en un grupo de recursos o en una organización de Cloud Foundry.
@@ -44,7 +44,7 @@ Si ha aplazado la configuración de una integración de herramientas al crear un
  Algunas de las integraciones de herramientas están preconfiguradas y no requieren ningún parámetro de configuración. Puede actualizar los valores de configuración sólo para las integraciones de herramientas que ha configurado.
  {: tip}
 
- Cuando haya terminado de configurar los ajustes, pulse **Guardar integración**. Para obtener más información sobre cómo configurar las integraciones de herramientas específicas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+ Cuando haya terminado de configurar los ajustes, pulse **Guardar integración**. Para obtener más información sobre cómo configurar las integraciones de herramientas específicas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 
 ## Adición de una integración de herramienta
 {: #adding_a_tool_integration}
@@ -57,20 +57,20 @@ Puede añadir y configurar integraciones de herramientas para su cadena de herra
 1. Introduzca la información necesaria para configurar la integración de la herramienta.
 1. Pulse **Crear integración** para añadir la integración de la herramienta en su cadena de herramientas.
 
-## Eliminación de una integración de herramienta
+## Supresión de una integración de herramienta
 {: #deleting_a_tool_integration}
 
-Si suprime una integración de herramientas desde su cadena de herramientas, la supresión no se podrá deshacer.
+Si suprime una integración de herramientas de la cadena de herramientas, la supresión no se puede deshacer.
 
 1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse una cadena de herramientas para abrir la página Visión general correspondiente. Si lo prefiere, en la página Visión general de la app, tarjeta Entrega continua, pulse **Ver cadena de herramientas** y, a continuación, **Visión general**.
-1. En la tarjeta de la integración de herramientas que desea eliminar, pulse el menú para acceder a las opciones de configuración.
-1. Para eliminar la integración de herramienta de su cadena de herramientas, pulse **Suprimir**.
+1. En la tarjeta de la integración de herramientas que desea suprimir, pulse el menú para acceder a las opciones de configuración.
+1. Para suprimir la integración de herramienta de su cadena de herramientas, pulse **Suprimir**.
 1. Confirme la acción pulsando **Suprimir**.  
 
 ## Gestión del acceso a las cadenas de herramientas de los grupos de recursos
 {: #managing_access_resource_groups}
 
-Puede utilizar el servicio de Identity and Access Management (IAM) para gestionar el acceso de usuario a las cadenas de herramientas. Para obtener más información sobre la gestión del control de accesos con IAM, consulte [Gestión del acceso de usuario a cadenas de herramientas con Identity and Access Management](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}. 
+Puede utilizar el servicio de Identity and Access Management (IAM) para gestionar el acceso de usuario a las cadenas de herramientas. Para obtener más información sobre la gestión del control de accesos con IAM, consulte [Gestión del acceso de usuario a cadenas de herramientas con Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}. 
 
 Solo los usuarios que forman parte de la lista de usuarios autorizados para la instancia seleccionada de {{site.data.keyword.contdelivery_short}} pueden utilizar las características de Delivery Pipeline, Eclipse Orion {{site.data.keyword.webide}} y {{site.data.keyword.gitrepos}} de las cadenas de herramientas de {{site.data.keyword.contdelivery_short}}. Puede gestionar la titularidad de usuario autorizado desde el separador Gestionar de la instancia seleccionada de {{site.data.keyword.contdelivery_short}}, dentro del grupo de recursos especificado.
 
@@ -89,7 +89,7 @@ Puede otorgar a los usuarios acceso a una cadena de herramientas añadiéndolos 
 Debe añadir usuarios a la organización de la cadena de herramientas en la región en la que se aloja la cadena de herramientas. Si la cadena de herramientas está configurada para desplegar apps en una región distinta, seguirá desplegando apps en dicha región.
 {: important}
 
-Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.ghe_short}}, cuando añada usuarios a la organización y a los espacios de {{site.data.keyword.Bluemix_notm}}, los usuarios podrán iniciar una sesión en {{site.data.keyword.ghe_short}} con su ID y contraseña de {{site.data.keyword.Bluemix_notm}}. Cuando los usuarios inician sesión, se les crearán cuentas. Al añadir usuarios a la organización y a los espacios de {{site.data.keyword.Bluemix_notm}}, no se añadirán automáticamente al repositorio de {{site.data.keyword.ghe_short}}. Debe añadirlos alguien que tenga privilegios de administración para el repositorio. Para obtener más información, consulte [Utilización de GitHub Enterprise dedicado](/docs/services/ghededicated/index.html){: new_window}. Si utiliza su propia versión gestionada de {{site.data.keyword.ghe_short}}, siga los procedimientos internos.
+Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.ghe_short}}, cuando añada usuarios a la organización y a los espacios de {{site.data.keyword.Bluemix_notm}}, los usuarios podrán iniciar una sesión en {{site.data.keyword.ghe_short}} con su ID y contraseña de {{site.data.keyword.Bluemix_notm}}. Cuando los usuarios inician sesión, se les crearán cuentas. Al añadir usuarios a la organización y a los espacios de {{site.data.keyword.Bluemix_notm}}, no se añadirán automáticamente al repositorio de {{site.data.keyword.ghe_short}}. Debe añadirlos alguien que tenga privilegios de administración para el repositorio. Para obtener más información, consulte [Utilización de GitHub Enterprise dedicado](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}. Si utiliza su propia versión gestionada de {{site.data.keyword.ghe_short}}, siga los procedimientos internos.
 
 ###Consejos para gestionar el acceso a una cadena de herramientas
 
@@ -127,21 +127,21 @@ Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.
 
      * Asigne un rol para el espacio seleccionado en la organización.
 
-     De forma predeterminada, los gestores de una organización tienen privilegios completos de administrador sobre todas las cadenas de herramientas asociadas a la organización. Para otorgar privilegios completos de administrador al usuario, seleccione el rol **Gestor**. Los roles Gestor de facturación y Auditor no afectan al acceso a la cadena de herramientas. Puede cambiar los roles más adelante en la página Directorio del equipo. Para obtener más información, consulte [Roles de Cloud Foundry](/docs/iam/cfaccess.html#cfaccess){: new_window}.
+     De forma predeterminada, los gestores de una organización tienen privilegios completos de administrador sobre todas las cadenas de herramientas asociadas a la organización. Para otorgar privilegios completos de administrador al usuario, seleccione el rol **Gestor**. Los roles Gestor de facturación y Auditor no afectan al acceso a la cadena de herramientas. Puede cambiar los roles más adelante en la página Directorio del equipo. Para obtener más información, consulte [Roles de Cloud Foundry](/docs/iam?topic=iam-cfaccess#cfaccess){: new_window}.
      {: tip}
 
    Una vez que el usuario sea miembro de la organización, vuelva a la página Gestionar de la cadena de herramientas y añada el usuario a la cadena de herramientas.  
 
 
-## Eliminación de una cadena de herramientas
+## Supresión de una cadena de herramientas
 {: #deleting_a_toolchain}
 
-Puede eliminar una cadena de herramientas y especificar qué integraciones de herramienta asociadas desea eliminar. Al suprimir una cadena de herramientas, la supresión no se podrá deshacer.
+Puede suprimir una cadena de herramientas y especificar qué integraciones de herramienta asociadas desea suprimir. Al suprimir una cadena de herramientas, la supresión no se podrá deshacer.
 
 1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse sobre la cadena de herramientas que desea suprimir. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**.
 1. Pulse el menú **Más acciones**, que se encuentra junto a **Ver app**.
 1. Pulse **Suprimir**. Cuando se suprime una cadena de herramientas, también se suprimen todas sus integraciones de herramienta, lo que podría dar lugar a la supresión de los recursos que dichas integraciones gestionan.
-1. Para confirmar la eliminación, escriba el nombre de la cadena de herramientas y pulse **Suprimir**.  
+1. Para confirmar la supresión, escriba el nombre de la cadena de herramientas y pulse **Suprimir**.  
 
  Cuando suprime GitHub, {{site.data.keyword.ghe_short}} o la integración de herramientas de {{site.data.keyword.gitrepos}}, el repositorio asociado no se suprime de GitHub, {{site.data.keyword.ghe_short}} ni {{site.data.keyword.gitrepos}}. Debe eliminar manualmente el repositorio.
  {: tip}

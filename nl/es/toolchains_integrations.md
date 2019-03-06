@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-15"
 
 ---
 
@@ -243,19 +243,19 @@ Configure Bitbucket para colaborar con su equipo en código:
 
    Si está configurando esta integración de herramientas en {{site.data.keyword.Bluemix_notm}} Público y no ha autorizado a {{site.data.keyword.Bluemix_notm}} para que acceda a Bitbucket, pulse **Autorizar** para ir al sitio web de Bitbucket. Si no tiene ninguna sesión de Bitbucket activa, se le solicitará que inicie sesión. Pulse **Otorgar acceso** para permitir que las Cadenas de herramientas de {{site.data.keyword.Bluemix_notm}} accedan a las siguientes partes de la cuenta de Bitbucket:
    
-   * **Lea la información de su cuenta**. Obtenga información básica de usuario para llenar la interfaz de usuario.
+   * **Leer la información de su cuenta**. Obtener información básica de usuario para llenar la interfaz de usuario.
    
-   * **Lea y modifique los problemas de los repositorios**. Permita que {{site.data.keyword.contdelivery_short}} actualice los problemas para indicar cuándo despliega la interconexión confirmaciones que se adjuntan a dichos problemas. 
+   * **Leer y modificar los problemas de los repositorios**. Permitir que {{site.data.keyword.contdelivery_short}} actualice los problemas para indicar cuándo despliega el conducto confirmaciones que se adjuntan a dichos problemas. 
    
-   * **Lea los valores del proyecto de su equipo y lea los repositorios contenidos en los proyectos de su equipo**. Permita que {{site.data.keyword.contdelivery_short}} se integre con los repositorios que son propiedad de los equipos.
+   * **Leer los valores del proyecto de su equipo y leer los repositorios contenidos en los proyectos de su equipo**. Permitir que {{site.data.keyword.contdelivery_short}} se integre con los repositorios que son propiedad de los equipos.
    
-   * **Lea y modifique los repositorios y sus solicitudes de extracción**. Permita que {{site.data.keyword.contdelivery_short}} envíe código de ejemplo a los repositorios, cuando los usuarios soliciten el código.
+   * **Leer y modificar los repositorios y sus solicitudes de extracción**. Permitir que {{site.data.keyword.contdelivery_short}} envíe código de ejemplo a los repositorios, cuando los usuarios soliciten el código.
    
-   * **Administre los repositorios**. Permita que {{site.data.keyword.contdelivery_short}} cree nuevos repositorios, cuando lo soliciten los usuarios.
+   * **Administrar los repositorios**. Permitir que {{site.data.keyword.contdelivery_short}} cree nuevos repositorios, cuando lo soliciten los usuarios.
    
-   * **Lea la información de la pertenencia al equipo**. Permita que {{site.data.keyword.contdelivery_short}} muestre una lista de sus equipos en el menú **Propietario** que se visualiza al crear un nuevo repositorio.
+   * **Leer la información de la pertenencia al equipo**. Permitir que {{site.data.keyword.contdelivery_short}} muestre una lista de sus equipos en el menú **Propietario** que se visualiza al crear un nuevo repositorio.
    
-   * **Lea y modifique los webhooks de sus repositorios**. Permita que la interconexión active las compilaciones cuando las confirmaciones se envíen a un repositorio.
+   * **Leer y modificar los webhooks de sus repositorios**. Permitir que el conducto active las compilaciones cuando las confirmaciones se envíen a un repositorio.
    {: tip}
    
    Si tiene una sesión de Bitbucket activa pero no ha especificado la contraseña recientemente, es posible que se le solicite que especifique su contraseña de Bitbucket para confirmar.
@@ -332,11 +332,11 @@ Configure {{site.data.keyword.deliverypipeline}} para automatizar la creación, 
 1. Especifique un nombre para el nuevo conducto.
 1. Si tiene previsto utilizar el conducto para desplegar una interfaz de usuario, seleccione el recuadro de selección **Mostrar apps en el menú VER APP**. Todas las apps creadas por el conducto se muestran en la lista **Ver app** de la página de visión general de la cadena de herramientas.
 1. Pulse **Crear integración** para añadir el {{site.data.keyword.deliverypipeline}} a la cadena de herramientas.
-1. Pulse **{{site.data.keyword.deliverypipeline}}** para ver el conducto y configurarlo. Para obtener información básica sobre cómo configurar un conducto, consulte [Creación y despliegue de conductos](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}.
+1. Pulse **{{site.data.keyword.deliverypipeline}}** para ver el conducto y configurarlo. Para obtener información básica sobre cómo configurar un conducto, consulte [Creación y despliegue de conductos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy){: new_window}.
 
   Si desea que el conducto se ejecute automáticamente cuando se envíe una confirmación a su repositorio GitHub, {{site.data.keyword.ghe_short}} o Git (repo), siga estos pasos:
 
-   a. Configure GitHub, {{site.data.keyword.ghe_short}} o {{site.data.keyword.gitrepos}} para la cadena de herramientas antes de definir las fases del conducto. Las etapas del conducto necesitan los URL Git para los repositorios. Cada etapa de conducto puede hacer referencia a un único repositorio de GitHub, {{site.data.keyword.ghe_short}} o Git que esté asociado con la cadena de herramientas. Para obtener instrucciones sobre cómo configurar GitHub, consulte la sección [GitHub](#github). Para obtener instrucciones sobre cómo configurar {{site.data.keyword.ghe_short}}, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. Para obtener instrucciones sobre cómo configurar {{site.data.keyword.gitrepos}}, consulte la sección [{{site.data.keyword.gitrepos}}](#gitbluemix).
+   a. Configure GitHub, {{site.data.keyword.ghe_short}} o {{site.data.keyword.gitrepos}} para la cadena de herramientas antes de definir las fases del conducto. Las etapas del conducto necesitan los URL Git para los repositorios. Cada etapa de conducto puede hacer referencia a un único repositorio de GitHub, {{site.data.keyword.ghe_short}} o Git que esté asociado con la cadena de herramientas. Para obtener instrucciones sobre cómo configurar GitHub, consulte la sección [GitHub](#github). Para obtener instrucciones sobre cómo configurar {{site.data.keyword.ghe_short}}, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}. Para obtener instrucciones sobre cómo configurar {{site.data.keyword.gitrepos}}, consulte la sección [{{site.data.keyword.gitrepos}}](#gitbluemix).
 
    b. Utilice un webhook. Sin un webhook, solo podrá ejecutar los conductos manualmente. Para utilizar un webhook cuando enlaza con un repositorio GitHub o {{site.data.keyword.ghe_short}}, necesita privilegios de administración. Para enlazar un repositorio de {{site.data.keyword.gitrepos}}, necesita privilegios de maestro o de propietario.
 
@@ -383,7 +383,7 @@ Configure el {{site.data.keyword.deliverypipeline}} para añadir un trabajo de p
 
 ### Más información acerca de Delivery Pipeline
 
-Para obtener más información sobre {{site.data.keyword.deliverypipeline}}, consulte [Cómo trabajar con conductos](/docs/services/ContinuousDelivery/pipeline_working.html){: new_window} y el [artículo de Delivery Pipeline ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} en IBM Cloud Garage Method o realice estas guías de aprendizaje:
+Para obtener más información sobre {{site.data.keyword.deliverypipeline}}, consulte [Cómo trabajar con conductos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working){: new_window} y el [artículo de Delivery Pipeline ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} en IBM Cloud Garage Method o realice estas guías de aprendizaje:
 
   * [Crear un conducto ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:new_window}
 
@@ -443,8 +443,7 @@ Para completar las tareas de control del código fuente, añada la integración 
 
 ### Más información sobre el Eclipse Orion Web IDE
 
-Para obtener más información sobre Eclipse Orion {{site.data.keyword.webide}}, consulte el artículo [Edición de código con Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window. You can also read the [Eclipse Orion {{site.data.keyword.webide} en IBM Cloud Garage Method. Realice estas guías de aprendizaje para probar el uso de Eclipse Orion {{site.data.keyword.webide}}:
-'>{: new_window. También puede leer el artículo [Eclipse Orion {{site.data.keyword.webide}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} en IBM Cloud Garage Method. Realice estas guías de aprendizaje para probar el uso de Eclipse Orion {{site.data.keyword.webide}}:
+Para obtener más información sobre el {{site.data.keyword.webide}} de Eclipse Orión, consulte [Edición de código con Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide). También puede leer el artículo [Eclipse Orion {{site.data.keyword.webide}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} en IBM Cloud Garage Method. Realice estas guías de aprendizaje para probar el uso de Eclipse Orion {{site.data.keyword.webide}}:
 
   * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
@@ -521,7 +520,7 @@ Si configura la integración de esta herramienta mientras crea la cadena de herr
 1. Si está almacenando el código fuente en un repositorio GitHub, en la sección Integraciones configurables, pulse **GitHub**. Si está configurando esta integración de herramientas en {{site.data.keyword.Bluemix_notm}} Público y no ha autorizado a {{site.data.keyword.Bluemix_notm}} para que acceda a GitHub, pulse **Autorizar** para ir al sitio web de GitHub. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub. Si tiene una sesión de GitHub activa pero no ha especificado la contraseña recientemente, es posible que se le solicite que especifique su contraseña de GitHub para confirmar.
 1. Si está utilizando un repositorio en su propio servidor de {{site.data.keyword.ghe_short}}, en la sección Integraciones configurables, pulse **Añadir servidor personalizado**.
 
- La red debe poder acceder al servidor Git de destino desde un entorno de {{site.data.keyword.Bluemix_notm}} dedicado. Si el servidor de GitHub no está disponible en Internet público o el nombre de host no se resuelve en el Servidor de nombres de dominio (DNS) público, [abra una incidencia de soporte](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. Puede utilizar la incidencia de soporte para enviar una solicitud para abrir las rutas de red o actualizar los valores de DNS.
+ La red debe poder acceder al servidor Git de destino desde un entorno de {{site.data.keyword.Bluemix_notm}} dedicado. Si el servidor de GitHub no está disponible en Internet público o el nombre de host no se resuelve en el Servidor de nombres de dominio (DNS) público, [abra una incidencia de soporte](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_support#support-ticket){: new_window}. Puede utilizar la incidencia de soporte para enviar una solicitud para abrir las rutas de red o actualizar los valores de DNS.
  {: important}
 
  Escriba un título para el servidor de GitHub personalizado y especifique el URL raíz para el servidor. Escriba su señal de acceso personal y pulse **Guardar integración personalizada**.
@@ -530,9 +529,9 @@ Si configura la integración de esta herramienta mientras crea la cadena de herr
 
      a. En cualquier página de GitHub, pulse en el icono de su perfil y, a continuación, pulse **Valores**.
 
-     b. En la barra lateral, pulse **Personal access tokens**.
+     b. En la barra lateral, pulse **Señales de acceso personales**.
 
-     c. Pulse **Generate new token**.
+     c. Pulse **Generar señal nueva**.
 
      d. Añada una descripción para la señal.
 
@@ -580,9 +579,9 @@ Para obtener más información acerca de GitHub, consulte el [artículo de GitHu
 
  * [Utilice la cadena de herramientas "Desarrollar y probar una app de Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
 
-  * [Garantice la calidad de los despliegues mediante la cadena de herramientas "Deployment Risk Analytics con GitHub y Jenkins" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+ * [Garantice la calidad de los despliegues mediante la cadena de herramientas "Deployment Risk Analytics con GitHub y Jenkins" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
 
-  * [Cree una cadena de herramientas personalizada ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
+ * [Cree una cadena de herramientas personalizada ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
 
 
 ## Configuración de GitHub Enterprise and Issues en {{site.data.keyword.Bluemix_notm}} dedicado
@@ -591,13 +590,13 @@ Para obtener más información acerca de GitHub, consulte el [artículo de GitHu
  Estas instrucciones se aplican a {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.ghe_short}}. Si utiliza su propia versión gestionada de {{site.data.keyword.ghe_short}}, algunos pasos pueden diferir en función de sus procedimientos internos.
  {: important}
 
-{{site.data.keyword.ghe_long}} es un servicio de alojamiento basado en web para repositorios Git. {{site.data.keyword.ghe_short}} dedicado es únicamente para clientes de {{site.data.keyword.Bluemix_notm}} dedicado. GitHub Issues es una herramienta de seguimiento que mantiene todo su trabajo y sus planificaciones en un mismo lugar. Está integrado con el repositorio de desarrollo de modo que pueda centrarse en las tareas importantes. Para obtener más información sobre {{site.data.keyword.ghe_short}} dedicado y GitHub Issues, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} y el [artículo GitHub Issues ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} en IBM Cloud Garage Method.
+{{site.data.keyword.ghe_long}} es un servicio de alojamiento basado en web para repositorios Git. {{site.data.keyword.ghe_short}} dedicado es únicamente para clientes de {{site.data.keyword.Bluemix_notm}} dedicado. GitHub Issues es una herramienta de seguimiento que mantiene todo su trabajo y sus planificaciones en un mismo lugar. Está integrado con el repositorio de desarrollo de modo que pueda centrarse en las tareas importantes. Para obtener más información sobre {{site.data.keyword.ghe_short}} dedicado y GitHub Issues, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window} y el [artículo GitHub Issues ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} en IBM Cloud Garage Method.
 
-Puede configurar {{site.data.keyword.ghe_short}} como una integración de herramientas de la cadena de herramientas para que pueda gestionar el código fuente en la instancia de [{{site.data.keyword.Bluemix_notm}} Dedicado de la empresa](/docs/dedicated/index.html#dedicated){: new_window}.
+Puede configurar {{site.data.keyword.ghe_short}} como una integración de herramientas de la cadena de herramientas para que pueda gestionar el código fuente en la instancia de [{{site.data.keyword.Bluemix_notm}} Dedicado](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} de la empresa.
 
 1. Si configura la integración de esta herramienta mientras crea la cadena de herramientas, siga estos pasos:
 
- a. Antes de iniciar sesión en Dedicated {{site.data.keyword.ghe_short}} por primera vez, solicite al administrador de la zona de su empresa que añada el ID de usuario a la instancia de {{site.data.keyword.Bluemix_notm}} Dedicated desde el registro de usuarios de su empresa utilizando LDAP. Para obtener información sobre cómo configurar la cuenta de {{site.data.keyword.ghe_short}}, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}.
+ a. Antes de iniciar sesión en Dedicated {{site.data.keyword.ghe_short}} por primera vez, solicite al administrador de la zona de su empresa que añada el ID de usuario a la instancia de {{site.data.keyword.Bluemix_notm}} Dedicated desde el registro de usuarios de su empresa utilizando LDAP. Para obtener información sobre cómo configurar la cuenta de {{site.data.keyword.ghe_short}}, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}.
 
  b. En la sección Integraciones configurables, pulse **{{site.data.keyword.ghe_short}}**.    
 

@@ -27,8 +27,8 @@ Puede actualizar su proyecto o esperar a que se actualice automáticamente. Aseg
 - [Mi proyecto JazzHub está asociado a la región del Reino Unido, pero mi cadena de herramientas está en la región EE.UU. sur. ¿Cómo se procederá?](#faq_region)
 - [¿Qué ocurre con mis paneles de control y elementos de trabajo en Track &amp; Plan cuando realice la actualización?](#faq_tp)
 - [¿Qué le ocurre al código del repositorio cuando realice la actualización?](#faq_repo)
-- [¿Qué le ocurre a mis definiciones de compilación en mi proyecto cuando actualice a una cadena de herramientas? ](#faq_build)
-- [Necesito crear una organización para mi proyecto que se actualiza a una cadena de herramientas. Entiendo que necesito añadir una tarjeta de crédito a mi cuenta antes de que pueda crear una organización. ¿Se realizarán cargos en mi tarjeta de crédito? ](#faq_charges)
+- [¿Qué les ocurre a mis definiciones de compilación en mi proyecto cuando actualice a una cadena de herramientas?](#faq_build)
+- [Necesito crear una organización para mi proyecto que se actualiza a una cadena de herramientas. Entiendo que necesito añadir una tarjeta de crédito a mi cuenta antes de que pueda crear una organización. ¿Se realizarán cargos en mi tarjeta de crédito?](#faq_charges)
 - [No puedo encontrar o acceder a mi cadena de herramientas. ¿Qué puedo hacer?](#faq_find)
 - [Mi proyecto está asociado con la región Reino Unido. Después de la actualización, veo mensajes de error, mis colegas no pueden acceder a la cadena de herramientas, y no veo mi cadena de herramientas en la página Cadenas de herramientas de la plataforma {{site.data.keyword.Bluemix_notm}}. ¿Qué ocurre?](#faq_uk)
 
@@ -217,7 +217,7 @@ El servicio {{site.data.keyword.contdelivery_short}} proporciona funcionalidades
 
 Durante el proceso de actualización, puede elegir migrar sus elementos de Track &amp; Plan a Git Issues. Tanto GitHub Issues como {{site.data.keyword.gitrepos}} proporcionan paneles kanban y seguimiento de problemas para realizar la planificación. Para obtener más información sobre los Paneles de problemas, una característica kanban en Git Repos and Issue Tracking, consulte [Paneles de problemas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window}.
 
-Para aquellos usuarios que necesiten la misma funcionalidad que la ofrecida por JazzHub Track &amp; Plan, ahora en desuso, hay disponible el nuevo servicio IBM Track and Plan on Cloud para comprar aparte en algunos países en base a un uso por usuario y por mes. Con este servicio en la nube, obtendrá la funcionalidad completa, equivalente a la que se ofrece para licencias de contribuidor de Rational Team Concert, en una suscripción en la nube de arrendatario único.
+Para aquellos usuarios que necesiten la misma funcionalidad que la ofrecida por JazzHub Track &amp; Plan, ahora en desuso, hay disponible el nuevo servicio IBM Track and Plan on Cloud para comprar aparte en algunos países basándose en un uso por usuario y por mes. Con este servicio en la nube, obtendrá la funcionalidad completa, equivalente a la que se ofrece para licencias de contribuidor de Rational Team Concert, en una suscripción en la nube de arrendatario único.
 
 Este nuevo servicio IBM Track and Plan on Cloud proporciona una mayor funcionalidad que JazzHub Track &amp; Plan, ahora en desuso, dando soporte a la personalización de procesos, a jerarquías de proceso, a SAFe o a muchos otros métodos híbridos y ágiles y además ofrece la escalabilidad para crecer más allá de un proyecto individual. Se basa en la última versión de Rational Team Concert 6.0.3 y en los próximos 60 días estará en la versión 6.0.4, mientras que JazzHub Track &amp; Plan se basaba en Rational Team Concert 5.x. Es posible una migración de datos a IBM Track and Plan on Cloud a través de servicios adicionales. Puede ponerse en contacto con [Tom Hollowell ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](mailto:trhollow@us.ibm.com){:new_window}, responsable de ventas de Connected Products SaaS para obtener más información.
 
@@ -239,7 +239,7 @@ Para ver detalles sobre cómo se trata cada tipo de repositorio en el proceso de
 {: caption="Tabla 1. Repositorios de proyecto correlacionados con repositorios de cadena de herramientas" caption-side="top"}
 
 
-### ¿Qué le ocurre a mis definiciones de compilación en mi proyecto cuando actualice a una cadena de herramientas?
+### ¿Qué les ocurre a mis definiciones de compilación en mi proyecto cuando actualice a una cadena de herramientas?
 {: #faq_build}
 
 Si está compilando su código fuente utilizando Jazz en lugar de Delivery Pipeline, debe migrar de forma manual sus definiciones de compilación a Delivery Pipeline en su cadena de herramientas.

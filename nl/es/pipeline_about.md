@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-29"
+  years: 2016, 2019
+lastupdated: "2019-2-15"
 ---
 
 {:shortdesc: .shortdesc}
@@ -22,14 +22,14 @@ lastupdated: "2018-11-29"
 {{site.data.keyword.contdelivery_full}} incluye Delivery Pipeline para crear, probar y desplegar de manera repetitiva con una mínima intervención humana. En un conducto, las secuencias de etapas recuperan la entrada y los trabajos de ejecución, como compilaciones, pruebas y despliegues.
 {:shortdesc}
 
-Los permisos para ver, modificar o ejecutar una interconexión se basan en el control de accesos de la cadena de herramientas que es propietaria de la interconexión. Para obtener más información sobre el control de accesos para las cadenas de herramientas, consulte [Gestión del acceso a cadenas de herramientas en grupos de recursos](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} y [Gestión del acceso a cadenas de herramientas en organizaciones de Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
+Los permisos para ver, modificar o ejecutar un conducto se basan en el control de accesos de la cadena de herramientas que es propietaria del conducto. Para obtener más información sobre el control de accesos para las cadenas de herramientas, consulte [Gestión del acceso a cadenas de herramientas en grupos de recursos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window} y [Gestión del acceso a cadenas de herramientas en organizaciones de Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
 {: important}
 
-Puede especificar los scripts para que se ejecute en muchos de los tipos de trabajo que proporciona el conducto, lo que le proporciona un control directo sobre lo que ejecuta el trabajo. Estos scripts se ejecutan en una imagen de Docker que contiene un número de herramientas de desarrollo estándar, incluidas las herramientas necesarias para interactuar con los tiempos de ejecución de {{site.data.keyword.Bluemix_notm}}. Para obtener más información sobre lo que contiene el Docker estándar, consulte [Recursos preinstalados](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}. Si el job requiere herramientas de desarrollo que no están disponibles en la imagen estándar o si necesita diferentes versiones de estas herramientas, puede utilizar una imagen personalizada. Para obtener más información sobre las imágenes personalizadas, consulte [Trabajar con imágenes de Docker personalizadas](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}.
+Puede especificar los scripts para que se ejecute en muchos de los tipos de trabajo que proporciona el conducto, lo que le proporciona un control directo sobre lo que ejecuta el trabajo. Estos scripts se ejecutan en una imagen de Docker que contiene un número de herramientas de desarrollo estándar, incluidas las herramientas necesarias para interactuar con los tiempos de ejecución de {{site.data.keyword.Bluemix_notm}}. Para obtener más información sobre lo que contiene el Docker estándar, consulte [Recursos preinstalados](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}. Si el job requiere herramientas de desarrollo que no están disponibles en la imagen estándar o si necesita diferentes versiones de estas herramientas, puede utilizar una imagen personalizada. Para obtener más información sobre las imágenes personalizadas, consulte [Trabajar con imágenes de Docker personalizadas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}.
 
-Cuando el conducto ejecuta scripts, las propiedades que describen el contexto en el que se ejecuta el trabajo se pasan al script utilizando variables de entorno. Por ejemplo, el URL del repo que es la entrada a la etapa, el nombre de la etapa y el trabajo que se está ejecutando, los parámetros especificados por el tipo de trabajo, etc. Para ver una lista de las variables de entorno disponibles, consulte [Recursos preinstalados](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}. 
+Cuando el conducto ejecuta scripts, las propiedades que describen el contexto en el que se ejecuta el trabajo se pasan al script utilizando variables de entorno. Por ejemplo, el URL del repo que es la entrada a la etapa, el nombre de la etapa y el trabajo que se está ejecutando, los parámetros especificados por el tipo de trabajo, etc. Para ver una lista de las variables de entorno disponibles, consulte [Recursos preinstalados](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). 
 
-Puede definir propiedades tanto en el nivel de conducto como en el nivel de etapa. Las propiedades de conducto se comparten en todas las etapas y trabajos de un conducto. Las propiedades de la etapa son exclusivas de una determinada etapa y se comparten en todos los trabajos de dicha etapa. Para obtener más información sobre las propiedades, consulte [Propiedades de entorno (variables de entorno)](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties).
+Puede definir propiedades tanto en el nivel de conducto como en el nivel de etapa. Las propiedades de conducto se comparten en todas las etapas y trabajos de un conducto. Las propiedades de la etapa son exclusivas de una determinada etapa y se comparten en todos los trabajos de dicha etapa. Para obtener más información sobre las propiedades, consulte [Propiedades de entorno (variables de entorno)](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties).
 
 ## Etapas
 {: #deliverypipeline_stages}
@@ -110,7 +110,7 @@ Una vez que se ejecute un trabajo, el contenedor creado para él se descartará.
 Los trabajos se pueden ejecutar durante un máximo de 60 minutos. Cuando los trabajos superan dicho límite, fallarán. Si un trabajo está superando el límite, divídalo en varios trabajos. Por ejemplo, si un trabajo lleva a cabo tres tareas, puede dividirlo en tres trabajos: uno para cada tarea.
 {: tip}
 
-Para obtener más información sobre cómo añadir un trabajo a una etapa, consulte [Adición de un trabajo a una etapa](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}.
+Para obtener más información sobre cómo añadir un trabajo a una etapa, consulte [Adición de un trabajo a una etapa](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}.
 
 ### Trabajos de compilación
 
@@ -121,9 +121,9 @@ Los trabajos que toman entrada de trabajos de compilación deben hacer referenci
 Si utiliza el tipo de constructor **Simple**, el código no se compilará ni creará; se empaquetará y quedará disponible para futuras etapas.
 {: tip}
 
-Cuando se despliega utilizando Cloud Foundry, Cloud Foundry incluirá los artefactos correctos para permitir que se ejecute la app. Para obtener más información, consulte [Despliegue de apps mediante el mandato cf](/docs/cloud-foundry/deploy-apps.html#dep_apps). El conducto para una app de Cloud Foundry contiene una etapa de Despliegue que ejecuta un mandato cf.
+Cuando se despliega utilizando Cloud Foundry, Cloud Foundry incluirá los artefactos correctos para permitir que se ejecute la app. Para obtener más información, consulte [Despliegue de apps mediante el mandato cf](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps). El conducto para una app de Cloud Foundry contiene una etapa de Despliegue que ejecuta un mandato cf.
 
-Cloud Foundry intenta [detectar el paquete de compilación para utilizar ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Puede especificar el [paquete de compilación](/docs/cfapps/byob.html#using-community-buildpacks) que se utilizará en el archivo de manifiesto en la carpeta raíz de la app. Los paquetes de compilación normalmente examinan los artefactos proporcionados por los usuarios para determinar qué dependencias se descargarán y cómo configurar las aplicaciones para que se comuniquen con servicios enlazados. Para obtener más información sobre los archivos de manifiesto, consulte [Manifiesto de aplicación](/docs/cloud-foundry/deploy-apps.html#appmanifest).
+Cloud Foundry intenta [detectar el paquete de compilación para utilizar ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Puede especificar el [paquete de compilación](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) que se utilizará en el archivo de manifiesto en la carpeta raíz de la app. Los paquetes de compilación normalmente examinan los artefactos proporcionados por los usuarios para determinar qué dependencias se descargarán y cómo configurar las aplicaciones para que se comuniquen con servicios enlazados. Para obtener más información sobre los archivos de manifiesto, consulte [Manifiesto de aplicación](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest).
 
 ### Trabajos de despliegue
 
@@ -131,7 +131,7 @@ Los trabajos de despliegue cargan el proyecto a {{site.data.keyword.Bluemix_notm
 
 Los trabajos de despliegue pueden desplegar nuevas apps o actualizar apps existentes. Incluso si despliega por primera vez una app utilizando otro método, como por ejemplo la interfaz de línea de mandatos de Cloud Foundry o la barra de ejecución en el IDE de web, puede actualizar la app utilizando un trabajo de despliegue. Para actualizar una app, en el trabajo de despliegue, utilice el nombre de dicha app.
 
-Puede desplegar en una o más regiones y servicios. Por ejemplo, puede configurar {{site.data.keyword.deliverypipeline}} para que utilice uno o varios servicios, realice pruebas en una región y despliegue a producción en varias regiones. Para obtener más información, consulte [Regiones](/docs/overview/ibm-cloud.html#ov_intro-reg){: new_window}.
+Puede desplegar en una o más regiones y servicios. Por ejemplo, puede configurar {{site.data.keyword.deliverypipeline}} para que utilice uno o varios servicios, realice pruebas en una región y despliegue a producción en varias regiones.
 
 ### Trabajos de prueba
 Si desea solicitar que se cumplan las condiciones, incluya trabajos de prueba antes o después de los trabajos de compilación y despliegue. Puede personalizar trabajos de prueba para que sean tan simples o tan complejos como se necesite. Por ejemplo, puede emitir un mandato cURL y esperar una respuesta determinada. También puede ejecutar una suite de pruebas de unidad o ejecutar pruebas funcionales con servicios de prueba de terceros, como por ejemplo Sauce Labs.
@@ -141,9 +141,9 @@ Si sus pruebas generan archivos de resultados en formato XML JUnit, se mostrará
 ## Propiedades de entorno (Variables de entorno)
 {: #environment_properties}
 
-Un conjunto de propiedades de entorno predefinidas proporcionan acceso a información sobre el entorno de ejecución del trabajo. Para obtener una lista completa de propiedades de entorno predefinidas, consulte [Recursos y propiedades de entorno](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
+Un conjunto de propiedades de entorno predefinidas proporcionan acceso a información sobre el entorno de ejecución del trabajo. Para obtener una lista completa de propiedades de entorno predefinidas, consulte [Recursos y propiedades de entorno](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment).
 
-También puede definir sus propias propiedades de entorno. Por ejemplo, puede definir una propiedad `API_KEY` que pase una clave API que se utiliza para que todos los scripts del conducto accedan a los recursos de {{site.data.keyword.Bluemix_notm}}.
+También puede definir sus propias propiedades de entorno. Por ejemplo, puede definir una propiedad `API_KEY` que pase una clave de API que se utiliza para que todos los scripts del conducto accedan a los recursos de {{site.data.keyword.Bluemix_notm}}.
 
 Puede añadir los siguientes tipos de propiedades:
 
@@ -210,7 +210,7 @@ Las etapas toman su entrada de repositorios y trabajos de compilación, y los tr
 ## Archivos de manifiesto de Cloud Foundry
 {: #deliverypipeline_manifest}
 
-Los archivos de manifiesto, que se denominan `manifest.yml` y se almacenan en el directorio raíz de un proyecto, controlan la forma en que se despliega el proyecto en {{site.data.keyword.Bluemix_notm}}. Para obtener información sobre cómo crear archivos de manifiesto para un proyecto, consulte la [documentación de {{site.data.keyword.Bluemix_notm}} sobre manifiestos de aplicaciones](/docs/cloud-foundry/deploy-apps.html#appmanifest). Para integrarse con {{site.data.keyword.Bluemix_notm}}, el proyecto debe tener un archivo de manifiesto en su directorio raíz. Sin embargo, no es necesario que realice el despliegue en función de la información del archivo.
+Los archivos de manifiesto, que se denominan `manifest.yml` y se almacenan en el directorio raíz de un proyecto, controlan la forma en que se despliega el proyecto en {{site.data.keyword.Bluemix_notm}}. Para obtener información sobre cómo crear archivos de manifiesto para un proyecto, consulte la [documentación de {{site.data.keyword.Bluemix_notm}} sobre manifiestos de aplicaciones](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest). Para integrarse con {{site.data.keyword.Bluemix_notm}}, el proyecto debe tener un archivo de manifiesto en su directorio raíz. Sin embargo, no es necesario que realice el despliegue en función de la información del archivo.
 
 En el conducto, puede especificar todo lo que puede hacer un archivo de manifiesto utilizando argumentos del mandato `cf push`. Los argumentos del mandato `cf push` son útiles en los proyectos que tienen varios destinos de despliegue. Si varios trabajos de despliegue intentan utilizar la ruta especificada en el archivo de manifiesto del proyecto, se producirá un conflicto.
 

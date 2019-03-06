@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-3-26"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -73,7 +73,7 @@ Antes de empezar, [revise las Condiciones de uso para el servicio ![Icono de enl
 
     * Si desea que el conducto compruebe el espacio de {{site.data.keyword.Bluemix_short}} para el servicio y una app que enlaza el servicio al contenedor, marque el recuadro de selección. Si el servicio o la app enlazada no existen, el conducto añadirá el plan gratuito del servicio a su espacio. La app enlazada que se crea se denomina `pipeline_bridge_app`. A continuación, el conducto utilizará las credenciales de pipeline_bridge_app para acceder a los servicios enlazados.
 
-    * Si ya ha configurado el servicio y ha enlazado la app en el espacio de {{site.data.keyword.Bluemix_short}}, o si desea [configurar estos requisitos manualmente](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, deje el recuadro de selección sin marcar.
+    * Si ya ha configurado el servicio y ha enlazado la app en el espacio de {{site.data.keyword.Bluemix_short}}, o si desea configurar estos requisitos manualmente, deje el recuadro de selección sin marcar.
 
   f. En el campo **Minutos que se debe esperar para que el análisis se complete**, escriba un valor de 0 a 59 minutos. El valor predeterminado es 5 minutos. Un URL al panel de control de {{site.data.keyword.staticanalyzershort}} se encuentra en los registros de consola al final del trabajo.
 
@@ -107,8 +107,6 @@ Ejemplos de salida de la consola:
 
 **Exploración pendiente**
 ![Exploración pendiente de ejemplo](images/analyzer_pending.png)
-
-Para obtener más información sobre cómo utilizar el servicio de {{site.data.keyword.staticanalyzershort}}, consulte la [documentación del servicio {{site.data.keyword.staticanalyzershort}}](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 

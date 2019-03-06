@@ -78,7 +78,7 @@ Las siguientes propiedades y recursos están disponibles de forma predeterminada
 | MAVEN_HOME | La vía de acceso para Apache Maven 3.2.1. |
 | NODE_HOME | La vía de acceso para Node.js 0.10.29. |
 
-Para utilizar Apache Ant 1.10+ en los scripts de la interconexión, establezca `ANT_HOME` en `$ANT_JAVA8_HOME` y `JAVA_HOME` en `$JAVA8_HOME`.
+Para utilizar Apache Ant 1.10+ en los scripts del conducto, establezca `ANT_HOME` en `$ANT_JAVA8_HOME` y `JAVA_HOME` en `$JAVA8_HOME`.
 {: tip}
 
 ### Propiedades de despliegue
@@ -116,7 +116,7 @@ Todos los enlaces están en el directorio de inicio.
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
 
-El entorno de interconexión ofrece versiones de 64 bits de IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2 y 6.7.0. Para elegir una versión, utilice el mandato export.
+El entorno de conducto ofrece versiones de 64 bits de IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2 y 6.7.0. Para elegir una versión, utilice el mandato export.
 
 Por ejemplo, para utilizar Node 0.12.7, especifique este mandato:
 `export PATH=/opt/IBM/node-v0.12/bin:$PATH`

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-7-19"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -12,7 +12,8 @@ lastupdated: "2018-7-19"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# Cómo trabajar con conductos {: #pipeline-working}
+# Cómo trabajar con conductos 
+{: #pipeline-working}
 
 Para automatizar las compilaciones y los despliegues en {{site.data.keyword.Bluemix}}, utilice los conductos de {{site.data.keyword.contdelivery_full}}.
 {: shortdesc}
@@ -23,16 +24,16 @@ Los trabajos de compilación compilan y empaquetan el código fuente de su app d
 
 Un trabajo de despliegue toma la salida de un trabajo de compilación y lo despliega en el {{site.data.keyword.containerlong_notm}} o en servidores de Cloud Foundry como {{site.data.keyword.Bluemix_notm}}.
 
-Puede desplegar en una o más regiones y servicios. Por ejemplo, puede configurar {{site.data.keyword.deliverypipeline}} para que utilice uno o varios servicios, realice pruebas en una región y despliegue a producción en varias regiones. Para obtener más información, consulte [Regiones](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}.
+Puede desplegar en una o más regiones y servicios. Por ejemplo, puede configurar {{site.data.keyword.deliverypipeline}} para que utilice uno o varios servicios, realice pruebas en una región y despliegue a producción en varias regiones.
 
-##Creación de una interconexión
+##Creación de un conducto
 
-Puede utilizar cualquiera de los métodos siguientes para crear una interconexión:
+Puede utilizar cualquiera de los métodos siguientes para crear un conducto:
 
-   * [Crear una cadena de herramientas a partir de una aplicación Cloud Foundry existente](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app){: new_window}. La cadena de herramientas resultante contiene una interconexión.
+   * [Crear una cadena de herramientas a partir de una aplicación Cloud Foundry existente](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}. La cadena de herramientas resultante contiene un conducto.
 
-   * [Crear una cadena de herramientas a partir de una plantilla](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_a_template){: new_window} que incluya al menos una interconexión.
+   * [Crear una cadena de herramientas a partir de una plantilla](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window} que incluya al menos un conducto.
 
-   * [Añadir la integración de herramientas de {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/toolchains_integrations.html#deliverypipeline){: new_window} a una cadena de herramientas existente.
+   * [Añadir la integración de herramientas de {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window} a una cadena de herramientas existente.
    
 En {{site.data.keyword.deliverypipeline}}, puede cambiar la configuración, comprobar el estado de las compilaciones, la app desplegada y los despliegues recientes, consultar los registros y detalles de despliegue más recientes o suprimir el conducto.

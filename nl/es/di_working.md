@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-14"
+  years: 2016, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -31,4 +31,4 @@ Además de **puertas de despliegue**, {{site.data.keyword.DRA_short}} proporcion
 	
 **Team Dynamics** utiliza análisis de codificación social para ayudarle a comprender cómo colabora entre sí el equipo y cómo puede hacerlo mejor.
 
-Para obtener más información, consulte [Guía de aprendizaje de iniciación](/docs/services/DevOpsInsights/index.html).
+Para obtener más información, consulte [Guía de aprendizaje de iniciación](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).

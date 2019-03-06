@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-12-11"
+  years: 2016, 2019
+lastupdated: "2019-2-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -25,7 +25,7 @@ lastupdated: "2018-12-11"
 {{site.data.keyword.contdelivery_full}} incluye Delivery Pipeline, que puede utilizar para implementar una integración continua repetible y un proceso de entrega continuo.
 {:shortdesc}
 
-Complete las tareas siguientes para configurar una interconexión.
+Complete las tareas siguientes para configurar un conducto.
 
 ## Adición de una etapa
 {: #deliverypipeline_add_stage}
@@ -77,7 +77,7 @@ Puede desplegar una compilación anterior. En la etapa que contiene la compilaci
 {: tip}
 
 ###Adición de servicios a apps
-Puede añadir servicios a las apps y gestionar los servicios desde el panel de control de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos (CLI) de Cloud Foundry. También puede emitir mandatos de CLI de Cloud Foundry en scripts para trabajos de conductos. Por ejemplo, puede añadir un servicio a una app en el script de un trabajo de despliegue. Para obtener más información sobre cómo añadir servicios, consulte [Adición de un servicio a la aplicación](/docs/services/reqnsi.html#add_service).
+Puede añadir servicios a las apps y gestionar los servicios desde el panel de control de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos (CLI) de Cloud Foundry. También puede emitir mandatos de CLI de Cloud Foundry en scripts para trabajos de conductos. Por ejemplo, puede añadir un servicio a una app en el script de un trabajo de despliegue. Para obtener más información sobre cómo añadir servicios, consulte [Conexión de servicios a apps externas.](/docs/resources?topic=resources-externalapp).
 
 ## Visualización de registros
 {: #deliverypipeline_view_logs}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-18"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 
@@ -28,7 +28,7 @@ Cuando el usuario pulsa el botón tienen lugar las siguientes acciones:
 
 3. Se crea una cadena de herramientas que incluye un nuevo clon privado del repositorio Git, un conducto para crear y desplegar cambios de código, Eclipse Orion {{site.data.keyword.webide}} para editar código en la nube y un rastreador de problemas.
 
-  Si el directorio `.bluemix` contiene un archivo `toolchain.yml`, el archivo se utilizará para especificar las integraciones de herramientas para la cadena de herramientas. Para obtener más información sobre el archivo `toolchain.yml`, consulte [Creación de cadenas de herramientas personalizadas](/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom){: new_window}.
+  Si el directorio `.bluemix` contiene un archivo `toolchain.yml`, el archivo se utilizará para especificar las integraciones de herramientas para la cadena de herramientas. Para obtener más información sobre el archivo `toolchain.yml`, consulte [Creación de cadenas de herramientas personalizadas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}.
   {: tip}
 
 4. Si la app requiere un archivo de compilación, este se detectará automáticamente y se compilará la app.
@@ -113,7 +113,7 @@ Para configurar el conducto para la cadena de herramientas en un directorio `.bl
 
 Si no tiene el archivo `pipeline.yml` en el directorio `.bluemix`, el botón Desplegar en {{site.data.keyword.Bluemix_notm}} creará un conducto predeterminado con dos etapas: una etapa de compilación y una etapa de despliegue que se despliega en Cloud Foundry.
 
-Para crear un archivo de conducto, consulte el archivo de ejemplo en las [instrucciones de conducto de la cadena de herramientas personalizada](toolchains_custom.html#toolchains_custom_pipeline_yml). En el momento en que defina un conducto en la interfaz web, defina un conducto en el texto creando etapas y trabajos, estableciendo entradas y variables de entorno y añadiendo scripts. También puede ver varios archivos de conducto más complejos en [este proyecto de demostración](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix).
+Para crear un archivo de conducto, consulte el archivo de ejemplo en las [instrucciones de conducto de la cadena de herramientas personalizada](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml). En el momento en que defina un conducto en la interfaz web, defina un conducto en el texto creando etapas y trabajos, estableciendo entradas y variables de entorno y añadiendo scripts. También puede ver varios archivos de conducto más complejos en [este proyecto de demostración](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix).
 
 ### Requisitos del Dockerfile del contenedor
 {: container_dockerfile}
@@ -133,4 +133,4 @@ Para crear un `pipeline.yml` manualmente que sea específicamente para contenedo
 
 No es necesario que haya un archivo `manifest.yml` en el repositorio. Sin embargo, deberá proporcionar un archivo de manifiesto que declare otros servicios en el caso de que la app los necesite para ejecutarse.
 
-Para obtener más información sobre los archivos de manifiesto, consulte [Manifiesto de aplicación](/docs/cloud-foundry/deploy-apps.html#appmanifest).
+Para obtener más información sobre los archivos de manifiesto, consulte [Manifiesto de aplicación](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).

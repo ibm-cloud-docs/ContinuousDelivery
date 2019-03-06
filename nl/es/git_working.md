@@ -38,7 +38,7 @@ Dado que esta integración de herramientas se basa en GitLab Community Edition y
 {: tip}
 
 ## Uso de {{site.data.keyword.gitrepos}} de forma local
-{: #git_local}
+{: #git_locally}
 
 Puede acceder localmente a los repositorios Git almacenados en {{site.data.keyword.gitrepos}}. Para ver instrucciones sobre cómo configurar Git localmente, consulte [Empezar a utilizar Git en la línea de mandatos ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
 
@@ -63,7 +63,7 @@ Para autenticarse en el repositorio Git a través de HTTPS, debe crear una seña
 1. En la [página de Cuenta ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, en la sección de Cambiar nombre de usuario, busque su nombre de usuario de {{site.data.keyword.gitrepos}}. El nombre de usuario también se visualiza como el primer segmento del URL para cualquier repositorio Git personal que cree.
 1. Utilice su nombre de usuario y contraseña de {{site.data.keyword.gitrepos}} y la señal de acceso personal con su repositorio Git desde un cliente Git externo.
 
-Para obtener más información, consulte [Señales de acceso personal ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}.
+Para obtener más información, consulte [Señales de acceso personales ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}.
 
 ### Creación de una clave SSH  
 {:create_ssh }

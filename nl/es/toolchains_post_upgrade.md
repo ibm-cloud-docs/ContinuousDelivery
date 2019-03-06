@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -21,14 +21,14 @@ Los proyectos de {{site.data.keyword.jazzhub}} en hub.jazz.net se han actualizad
 
 {{site.data.keyword.jazzhub_short}} en hub.jazz.net se ha retirado. 
 
-Para los proyectos de DevOps, utilice el servicio de [{{site.data.keyword.contdelivery_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/devops){:new_window}. Si es nuevo en {{site.data.keyword.Bluemix_notm}}, asegúrese de comprobar la [visión general de {{site.data.keyword.Bluemix_notm}}](/docs/overview/ibm-cloud.html#overview).
+Para los proyectos de DevOps, utilice el servicio de [{{site.data.keyword.contdelivery_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/devops){:new_window}. Si es nuevo en {{site.data.keyword.Bluemix_notm}}, asegúrese de comprobar la [visión general de {{site.data.keyword.Bluemix_notm}}](/docs/overview?topic=overview-whatis-platform).
 
 {: shortdesc}
 
 ## Busque la cadena de herramientas que se ha creado desde el proyecto
 {: #find_toolchain}
 
-Confirme que la actualización se haya completado yendo a la [página de Cadenas de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/devops/toolchains){: new_window} y verificando que ve cadenas de herramientas con nombres que coincidan con los de los proyectos de hub.jazz.net. Si se actualizan automáticamente sus proyectos, tenga en cuenta estas advertencias:
+Confirme que la actualización se haya completado yendo a la [página de Cadenas de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/devops/toolchains){: new_window} y verificando que ve cadenas de herramientas con nombres que coincidan con los de los proyectos de hub.jazz.net. Si se actualizan automáticamente sus proyectos, tenga en cuenta estas advertencias:
    - Si cadena de herramientas ya ha utilizado el nombre del proyecto antes de que éste se actualizara, la nueva cadena de herramientas que se ha creado para el proyecto podría no tener el nombre exacto del proyecto. 
    - Si no ve cadenas de herramientas para los proyectos, cambie a cualquier otra organización a la que pertenezca y compruebe las cadenas de herramientas allí.
    
@@ -48,19 +48,19 @@ Las cadenas de herramientas son como proyectos, con algunas diferencias importan
 - En los proyectos, la pertenencia se ha mantenido a nivel de proyecto. El acceso a las cadenas de herramientas se gestiona mediante la organización (org) y la cadena de herramientas de {{site.data.keyword.Bluemix_notm}}. Para trabajar con una cadena de herramientas, debe ser un miembro de la organización que contiene la cadena de herramientas. El propietario de la cadena de herramientas tiene más control sobre quién puede acceder a la cadena de herramientas y lo que pueden hacer. Para obtener más información sobre el control de acceso, consulte el paso 2 en [Iniciación a la cadena de herramientas](#upgrade_next_steps).
 - En función del tipo de repositorio que haya utilizado en el proyecto en hub.jazz.net, la cadena de herramientas puede contener un repositorio de GitHub.com o un repositorio de {{site.data.keyword.gitrepos}}.
 
-Puede obtener más información sobre las cadenas de herramientas en [YouTube ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://youtu.be/2SIPE1e7NJ4){: new_window} o desde [Iniciación a {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html).
+Puede obtener más información sobre las cadenas de herramientas en [YouTube ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://youtu.be/2SIPE1e7NJ4){: new_window} o desde [Iniciación a {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started).
 
 ## Iniciación a la cadena de herramientas
 {: #upgrade_next_steps}
 
 1. Asigne a los miembros del equipo acceso a la cadena de herramientas.
     - Cada miembro del equipo debe tener una cuenta de {{site.data.keyword.Bluemix_notm}} válida. Los miembros del equipo que no tienen cuentas deben [registrarse ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/registration){:new_window}.
-    - Otorgue acceso a los miembros de la organización a la cadena de herramientas desde la página Gestionar de la cadena de herramientas. Los miembros del proyecto existentes se añaden como miembros de la cadena de herramientas como parte del proceso de actualización. Para obtener más información sobre el control de accesos para cadenas de herramientas, consulte [Gestión de acceso ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
+    - Otorgue acceso a los miembros de la organización a la cadena de herramientas desde la página Gestionar de la cadena de herramientas. Los miembros del proyecto existentes se añaden como miembros de la cadena de herramientas como parte del proceso de actualización. Para obtener más información sobre el control de accesos para cadenas de herramientas, consulte [Gestión de acceso a cadenas de herramientas en organizaciones de Cloud Foundry ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){:new_window}.
     - Si un usuario no es miembro de la organización a la que pertenece la cadena de herramientas, añádalo a la organización desde la página Gestionar organizaciones.
     - Si la cadena de herramientas utiliza {{site.data.keyword.gitrepos}}, todos los miembros del proyecto de JazzHub que tengan un ID de {{site.data.keyword.Bluemix_notm}} válido se añadirán al repositorio de {{site.data.keyword.gitrepos}} con los mismos privilegios que tenían en el proyecto de JazzHub. Si el proyecto de JazzHub incluye miembros que no tienen un ID de {{site.data.keyword.Bluemix_notm}} válido, pueden registrarse para obtenerlo. Una vez que se registren, podrá añadirlos al repositorio.
-      Para obtener más información sobre la gestión de organizaciones, consulte [Gestión de organizaciones y espacios ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window}.
+      Para obtener más información sobre la gestión de organizaciones, consulte [Gestión de organizaciones y espacios ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/account?topic=account-orgsspacesusers){:new_window}.
 
-2. Si utiliza {{site.data.keyword.gitrepos}}, debe autenticarlo mediante una señal de acceso personal o una clave SSH. Para obtener más información sobre las claves SSH, consulte [Creación de una señal de acceso o clave SSH clave para la autenticación](/docs/services/ContinuousDelivery/git_working.html#git_authentication). Para autenticar desde un cliente Git externo a través de https, siga estos pasos:
+2. Si utiliza {{site.data.keyword.gitrepos}}, debe autenticarlo mediante una señal de acceso personal o una clave SSH. Para obtener más información sobre las claves SSH, consulte [Creación de una señal de acceso o clave SSH clave para la autenticación](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication). Para autenticar desde un cliente Git externo a través de https, siga estos pasos:
     1. Vaya a la [página Señales de acceso ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} de los valores de usuario de {{site.data.keyword.gitrepos}}.
     2. Cree una señal de acceso personal que utilice **api** como ámbito.
     3. Vaya a la página [Cuenta ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/account){:new_window} y busque el nombre de usuario de {{site.data.keyword.gitrepos}}. El nombre de usuario aparece en la lista de la sección "Cambiar nombre de usuario" y se muestra como la primera parte del URL de cualquier repositorio personal que cree.
@@ -70,7 +70,7 @@ Puede obtener más información sobre las cadenas de herramientas en [YouTube ![
         Para comprobar los URL definidos y sus nombres remotos, utilice el mandato `git remote -v`. El nombre remoto predeterminado es `origin`. Si tiene una configuración más avanzada, el formato del mandato es el siguiente: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
         {: tip}
 
-3. Opcional: para ver la madurez del desarrollo de un proyecto, las prácticas del equipo y la calidad del código base, añada IBM Cloud {{site.data.keyword.DRA_short}} a la cadena de herramientas. {{site.data.keyword.DRA_short}} aplica analíticas de desarrollador, de equipo y de despliegue a los proyectos DevOps. Para obtener más información, consulte [Iniciación a {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html).
+3. Opcional: para ver la madurez del desarrollo de un proyecto, las prácticas del equipo y la calidad del código base, añada IBM Cloud {{site.data.keyword.DRA_short}} a la cadena de herramientas. {{site.data.keyword.DRA_short}} aplica analíticas de desarrollador, de equipo y de despliegue a los proyectos DevOps. Para obtener más información, consulte [Iniciación a {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).
 
   {{site.data.keyword.DRA_short}} está disponible en las regiones EE.UU. sur, Reino Unido y Alemania.
   {: tip}
@@ -97,7 +97,7 @@ El servicio {{site.data.keyword.contdelivery_short}} proporciona funcionalidades
 
 Durante el proceso de actualización automática, los elementos de Track & Plan se migran a Git Issues. Tanto GitHub Issues como {{site.data.keyword.gitrepos}} proporcionan paneles kanban y seguimiento de problemas para realizar la planificación. Para obtener más información sobre los Paneles de problemas, una característica kanban en Git Repos and Issue Tracking, consulte [Paneles de problemas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window}.
 
-Si necesita la misma funcionalidad que la ofrecida por JazzHub Track &amp; Plan, ahora en desuso, hay disponible el nuevo servicio IBM Track and Plan on Cloud para comprar aparte en algunos países en base a un uso por usuario y por mes. Con este servicio en la nube, obtendrá la funcionalidad completa, equivalente a la que se ofrece para licencias de contribuidor de Rational Team Concert, en una suscripción en la nube de arrendatario único.
+Si necesita la misma funcionalidad que la ofrecida por JazzHub Track &amp; Plan, ahora en desuso, hay disponible el nuevo servicio IBM Track and Plan on Cloud para comprar aparte en algunos países basándose en un uso por usuario y por mes. Con este servicio en la nube, obtendrá la funcionalidad completa, equivalente a la que se ofrece para licencias de contribuidor de Rational Team Concert, en una suscripción en la nube de arrendatario único.
 
 Este nuevo servicio IBM Track and Plan on Cloud proporciona una mayor funcionalidad que JazzHub Track &amp; Plan, ahora en desuso, dando soporte a la personalización de procesos, a jerarquías de proceso, a SAFe o a muchos otros métodos híbridos y ágiles y además ofrece la escalabilidad para crecer más allá de un proyecto individual. Se basa en la última versión de Rational Team Concert 6.0.3 y en los próximos 60 días estará en la versión 6.0.4, mientras que JazzHub Track &amp; Plan se basaba en Rational Team Concert 5.x. Es posible una migración de datos a IBM Track and Plan on Cloud a través de servicios adicionales. Puede ponerse en contacto con [Tom Hollowell ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](mailto:trhollow@us.ibm.com){:new_window}, responsable de ventas de Connected Products SaaS para obtener más información.
 

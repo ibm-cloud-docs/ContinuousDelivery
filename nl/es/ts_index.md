@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -23,7 +23,7 @@ lastupdated: "2018-12-6"
 # Preguntas más frecuentes
 {: #ts_cd}
 
-Aquí encontrará respuestas a preguntas más frecuentes sobre el uso de {{site.data.keyword.contdelivery_full}}.
+Aquí encontrará respuestas a las preguntas más frecuentes sobre el uso de {{site.data.keyword.contdelivery_full}}.
 {:shortdesc}
 
 
@@ -60,14 +60,14 @@ Al intentar crear una cadena de herramientas en una organización, si aparece el
 {: #plan_exceeded}
 {: faq}
 
-{{site.data.keyword.contdelivery_short}} ofrece dos planes: Lite y Professional. Si tiene el plan Lite de {{site.data.keyword.contdelivery_short}}, puede utilizar cadenas de herramientas de forma gratuita, hasta los límites del plan. El mensaje de error indica que ha sobrepasado uno o más límites del plan Lite. Por ejemplo, puede superar el plan si tiene demasiados usuarios autorizados que están asociados a la instancia de servicio de {{site.data.keyword.contdelivery_short}}, o si ha ejecutado el número máximo de trabajos de {{site.data.keyword.deliverypipeline}}. Para obtener más información sobre los términos del plan, consulte [Limitaciones y uso del plan](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+{{site.data.keyword.contdelivery_short}} ofrece dos planes: Lite y Professional. Si tiene el plan Lite de {{site.data.keyword.contdelivery_short}}, puede utilizar cadenas de herramientas de forma gratuita, hasta los límites del plan. El mensaje de error indica que ha sobrepasado uno o más límites del plan Lite. Por ejemplo, puede superar el plan si tiene demasiados usuarios autorizados que están asociados a la instancia de servicio de {{site.data.keyword.contdelivery_short}}, o si ha ejecutado el número máximo de trabajos de {{site.data.keyword.deliverypipeline}}. Para obtener más información sobre los términos del plan, consulte [Limitaciones y uso del plan](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
 
 
 ## He creado una cadena de herramientas, ¿por qué la página Cadenas de herramientas muestra que se necesita un servicio de Continuous Delivery?
 {: #service_required_resource_group}
 {: faq}
 
-Los términos del plan para la instancia de servicio de {{site.data.keyword.contdelivery_short}} que se encuentra en el mismo grupo de recursos u organización que la cadena de herramientas gestiona el uso de algunas de las integraciones de herramientas ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} y {{site.data.keyword.gitrepos}}) contenidas en el servicio. El mensaje de error indica que el grupo de recursos o la organización no contiene la instancia necesaria del servicio de {{site.data.keyword.contdelivery_short}}. Para obtener más información sobre los términos del plan, consulte [Limitaciones y uso del plan](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+Los términos del plan para la instancia de servicio de {{site.data.keyword.contdelivery_short}} que se encuentra en el mismo grupo de recursos u organización que la cadena de herramientas gestiona el uso de algunas de las integraciones de herramientas ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} y {{site.data.keyword.gitrepos}}) contenidas en el servicio. El mensaje de error indica que el grupo de recursos o la organización no contiene la instancia necesaria del servicio de {{site.data.keyword.contdelivery_short}}. Para obtener más información sobre los términos del plan, consulte [Limitaciones y uso del plan](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
 
 
 ## He creado una cadena de herramientas en una organización de Cloud Foundry, ¿por qué la página Cadenas de herramientas muestra que se necesita un servicio de Continuous Delivery?
@@ -76,7 +76,7 @@ Los términos del plan para la instancia de servicio de {{site.data.keyword.cont
 
 Cuando se crea una cadena de herramientas en un grupo de recursos u organización que no tiene una instancia del servicio de {{site.data.keyword.contdelivery_short}}, la plataforma de la cadena de herramientas intenta crear automáticamente una instancia del servicio utilizando el plan Lite. El mensaje de error indica que la plataforma de la cadena de herramientas no ha podido crear la instancia de servicio.
 
-Este error se puede producir al crear una cadena de herramientas en la región sur de Estados Unidos y en una organización de Cloud Foundry que no tenga todavía una instancia de {{site.data.keyword.contdelivery_short}}. En la región sur de Estados Unidos, debe crear todas las instancias nuevas del servicio de {{site.data.keyword.contdelivery_short}} en grupos de recursos. 
+Este error se puede producir al crear una cadena de herramientas en la región EE.UU. sur y en una organización de Cloud Foundry que no tenga todavía una instancia de {{site.data.keyword.contdelivery_short}}. En la región EE.UU. sur, debe crear todas las instancias nuevas del servicio {{site.data.keyword.contdelivery_short}} en grupos de recursos. 
 
 Puede crear la cadena de herramientas en un grupo de recursos o crear la cadena de herramientas en una organización que ya tenga una instancia de {{site.data.keyword.contdelivery_short}}.
   
@@ -89,7 +89,7 @@ Al intentar desplegar una app en {{site.data.keyword.Bluemix_notm}}, si obtiene 
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
-Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utilizan las apps. El máximo de cuota de memoria para una cuenta de prueba es de 2 GB. Para aumentar la cuota de memoria de su cuenta, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cuentas de pago](/docs/pricing/index.html#pay-accounts). Para reducir la memoria que utilizan las apps, utilice la consola de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos cf.
+Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utilizan las apps. El máximo de cuota de memoria para una cuenta de prueba es de 2 GB. Para aumentar la cuota de memoria de su cuenta, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [¿Cómo actualizo o cambio mi cuenta?](/docs/account?topic=account-accountfaqs#changeacct). Para reducir la memoria que utilizan las apps, utilice la consola de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos cf.
 
 Si utiliza la consola de {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
 
@@ -141,7 +141,7 @@ Para ver la página Estado, seleccione una de las dos opciones siguientes:
   * Inicie la sesión en la consola de {{site.data.keyword.Bluemix_notm}}. En la barra de menús, pulse **Soporte** y seleccione **Estado**. Compruebe la lista de recursos en busca del icono ![algunos problemas](../../get-support/images/some_issues.svg). Este icono podría indicar una parada.
   * Acceda directamente a [{{site.data.keyword.Bluemix_notm}} - Estado del sistema ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://cloud.ibm.com/status){: new_window}.
 
-Para obtener más información sobre la página Estado de {{site.data.keyword.Bluemix_notm}}, consulte [Visualización del estado de {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/docs/get-support/ViewStatus.html#viewing-bluemix-status).
+Para obtener más información sobre la página Estado de {{site.data.keyword.Bluemix_notm}}, consulte [Visualización del estado de {{site.data.keyword.Bluemix_notm}}](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}.
 
 
 ## He configurado una integración de herramientas para mi cadena de herramientas. ¿Por qué no se ha configurado?
