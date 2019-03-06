@@ -60,7 +60,7 @@ lastupdated: "2018-10-9"
 | PIPELINE_STAGE_INPUT_JOB_ID | 現在のステージの入力のジョブの ID。 |
 | PIPELINE_STAGE_INPUT_REV | 現在のステージの入力のリビジョン。 |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | パイプラインの実行の固有 ID。 |
-| PIPELINE_TRIGGERING_USER | パイプライン・ジョブの現行ユーザー |
+| PIPELINE_TRIGGERING_USER | パイプライン・ジョブの現行ユーザー|
 | TASK_ID | ジョブの現在の実行の固有 ID。 |
 | TMPDIR | 一時ファイルが保存されるディレクトリーの場所。 |
 | WORKSPACE | 現行の作業ディレクトリーのパス。 |
@@ -116,7 +116,7 @@ lastupdated: "2018-10-9"
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
 
-パイプライン環境は 64 ビット・バージョンの IBM Node 0.10、0.10.48、0.12、0.12.17、4.2、4.4.5、4.6.0、6.2.2、および 6.7.0 を提供しています。バージョンを選択するには、export コマンドを使用します。
+パイプライン環境は 64 ビット・バージョンの IBM Node 0.10、0.10.48、0.12、0.12.17、4.2、4.4.5、4.6.0、6.2.2、および 6.7.0 を提供しています。 バージョンを選択するには、export コマンドを使用します。
 
 たとえば、Node 0.12.7 を使用するには、次のコマンドを入力します。`export PATH=/opt/IBM/node-v0.12/bin:$PATH`
 

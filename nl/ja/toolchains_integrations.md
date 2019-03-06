@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-15"
 
 ---
 
@@ -243,7 +243,7 @@ bitbucket.org の新規か既存のリポジトリーにソース・コードを
 
  b. 「ツール統合」セクションで、**「Bitbucket」**をクリックします。
 
-   {{site.data.keyword.Bluemix_notm}} Public でこのツール統合を構成しており、Bitbucket へのアクセスを {{site.data.keyword.Bluemix_notm}} に許可していない場合は、**「許可」**をクリックして Bitbucket Web サイトに移動します。アクティブな Bitbucket セッションがない場合は、ログインするよう求められます。 **「アクセス権限の付与 (Grant access)」**をクリックして、{{site.data.keyword.Bluemix_notm}} ツールチェーンが Bitbucket アカウントの以下の部分にアクセスできるようにします。
+   {{site.data.keyword.Bluemix_notm}} Public でこのツール統合を構成しており、Bitbucket へのアクセスを {{site.data.keyword.Bluemix_notm}} に許可していない場合は、**「許可」**をクリックして Bitbucket Web サイトに移動します。 アクティブな Bitbucket セッションがない場合は、ログインするよう求められます。 **「アクセス権限の付与 (Grant access)」**をクリックして、{{site.data.keyword.Bluemix_notm}} ツールチェーンが Bitbucket アカウントの以下の部分にアクセスできるようにします。
    
    * **アカウント情報をお読みください**。 基本的なユーザー情報を取得して、ユーザー・インターフェースを設定します。
    
@@ -324,7 +324,7 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 
 アプリの継続的なビルド、テスト、デプロイメントを自動化するように {{site.data.keyword.deliverypipeline}}を構成します。
 
-1. ツールチェーン作成時にこのツール統合を構成する場合は、「構成可能な統合」セクションで**「{{site.data.keyword.deliverypipeline}}」**をクリックします。使用するテンプレートに応じて、使用できるフィールドは異なります。 デフォルトのフィールド値を確認し、必要に応じてそれらの設定を変更します。
+1. ツールチェーン作成時にこのツール統合を構成する場合は、「構成可能な統合」セクションで**「{{site.data.keyword.deliverypipeline}}」**をクリックします。 使用するテンプレートに応じて、使用できるフィールドは異なります。 デフォルトのフィールド値を確認し、必要に応じてそれらの設定を変更します。
 1. 既存のツールチェーンにこのツール統合を追加する場合は、DevOps ダッシュボードの「ツールチェーン」ページでそのツールチェーンをクリックして「概要」ページを開きます。 あるいは、アプリの「概要」ページの「継続的デリバリー」カードで、**「ツールチェーンの表示」**をクリックし、**「概要」**をクリックします。
 
  a. **「ツールの追加」**をクリックします。
@@ -334,11 +334,11 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 1. 新しいパイプラインの名前を指定します。
 1. パイプラインを使用してユーザー・インターフェースをデプロイするよう計画している場合は、**「アプリケーションの表示メニューでアプリケーションを表示する (Show apps in the VIEW APP  menu)」**チェック・ボックスを選択します。 パイプラインが作成するすべてのアプリケーションが、ツールチェーンの「概要」ページの**「アプリケーションの表示 (View App)」**リストに表示されます。
 1. **「統合の作成」**をクリックして、{{site.data.keyword.deliverypipeline}} をツールチェーンに追加します。
-1. **「{{site.data.keyword.deliverypipeline}}」**をクリックして、パイプラインを表示し、構成します。 パイプラインの構成の基本を確認するには、『[パイプラインのビルドとデプロイ](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}』を参照してください。
+1. **「{{site.data.keyword.deliverypipeline}}」**をクリックして、パイプラインを表示し、構成します。 パイプラインの構成の基本を確認するには、『[パイプラインのビルドとデプロイ](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy){: new_window}』を参照してください。
 
   GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーにコミットがプッシュされるとパイプラインが自動的に実行されるようにしたい場合は、以下のステップを実行します。
 
-   a. パイプラインのステージを定義する前に、ツールチェーン用に GitHub、{{site.data.keyword.ghe_short}}、または {{site.data.keyword.gitrepos}} を構成します。 パイプラインのステージには、リポジトリーの Git URL が必要です。 各パイプライン・ステージは、ツールチェーンと関連付けられた、GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーのうち 1 つのみを参照できます。 GitHub の構成手順については、[GitHub](#github) のセクションを参照してください。 Dedicated {{site.data.keyword.ghe_short}} の構成方法については、『[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated/index.html){: new_window}』を参照してください。 {{site.data.keyword.gitrepos}} の構成手順については、[{{site.data.keyword.gitrepos}}](#gitbluemix) のセクションを参照してください。
+   a. パイプラインのステージを定義する前に、ツールチェーン用に GitHub、{{site.data.keyword.ghe_short}}、または {{site.data.keyword.gitrepos}} を構成します。 パイプラインのステージには、リポジトリーの Git URL が必要です。 各パイプライン・ステージは、ツールチェーンと関連付けられた、GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーのうち 1 つのみを参照できます。 GitHub の構成手順については、[GitHub](#github) のセクションを参照してください。 Dedicated {{site.data.keyword.ghe_short}} の構成方法については、『[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}』を参照してください。{{site.data.keyword.gitrepos}} の構成手順については、[{{site.data.keyword.gitrepos}}](#gitbluemix) のセクションを参照してください。
 
    b. Web フックを使用します。 Web フックを使用しない場合、パイプラインは手動でのみ実行できます。 GitHub リポジトリーまたは {{site.data.keyword.ghe_short}} リポジトリーにリンクする場合に Web フックを使用するには、管理特権が必要です。 {{site.data.keyword.gitrepos}} リポジトリーにリンクするには、Master または Owner 特権が必要です。
 
@@ -347,7 +347,7 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 ### パイプラインに Sauce Labs テスト・ジョブを構成する
 {: #config_saucelabs}
 
-パイプラインに Sauce Labs テスト・ジョブを構成する前に、アプリをビルドしてデプロイするためのステージを含む、正常に機能するパイプラインが存在していなければなりません。また、ツールチェーンに Sauce Labs を構成しておく必要もあります。 Sauce Labs の構成手順については、[Sauce Labs](#saucelabs) のセクションを参照してください。
+パイプラインに Sauce Labs テスト・ジョブを構成する前に、アプリをビルドしてデプロイするためのステージを含む、正常に機能するパイプラインが存在していなければなりません。 また、ツールチェーンに Sauce Labs を構成しておく必要もあります。 Sauce Labs の構成手順については、[Sauce Labs](#saucelabs) のセクションを参照してください。
 
 {{site.data.keyword.deliverypipeline}} を構成して Sauce Labs テスト・ジョブを追加します。
 
@@ -385,7 +385,7 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 
 ### Delivery Pipeline に関する詳細
 
-{{site.data.keyword.deliverypipeline}} について詳しくは、[パイプラインでの作業](/docs/services/ContinuousDelivery/pipeline_working.html){: new_window}および IBM Cloud Garage Method の[記事「Delivery Pipeline」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} を参照するか、これらのチュートリアルを始めてください。
+{{site.data.keyword.deliverypipeline}} について詳しくは、[パイプラインでの作業](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working){: new_window}および IBM Cloud Garage Method の[記事「Delivery Pipeline」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} を参照するか、これらのチュートリアルを始めてください。
 
   * [Create a pipeline ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:new_window}
 
@@ -445,8 +445,7 @@ Eclipse Orion {{site.data.keyword.webide}} は、ソース管理タスクを作�
 
 ### Eclipse Orion Web IDE に関する詳細
 
-Eclipse Orion {{site.data.keyword.webide}} について詳しくは、IBM Cloud Garage Method の [Eclipse Orion によるコードの編集 {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window. You can also read the [Eclipse Orion {{site.data.keyword.webide} を参照してください。これらのチュートリアルを参照して、Eclipse Orion {{site.data.keyword.webide}} を使用してください。
-'>{: new_window. IBM Cloud Garage Method の [Eclipse Orion {{site.data.keyword.webide}} の記事 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} もお読みになれます。これらのチュートリアルを参照して、Eclipse Orion {{site.data.keyword.webide}} を使用してください。
+Eclipse Orion {{site.data.keyword.webide}} の詳細については、『[Eclipse Orion {{site.data.keyword.webide}} でのコード編集](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide)』を参照してください。IBM Cloud Garage Method の [Eclipse Orion {{site.data.keyword.webide}} の記事 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} もお読みになれます。 これらのチュートリアルを参照して、Eclipse Orion {{site.data.keyword.webide}} を使用してください。
 
   * [「Develop a Cloud Foundry app」ツールチェーンを使用した初めてのツールチェーンの作成と使用 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
@@ -519,10 +518,10 @@ GitHub.com または会社の {{site.data.keyword.ghe_short}} インスタンス
 
 ツールチェーンの作成時にこのツール統合を構成する場合は、次の手順を実行します。
 
-1. GitHub リポジトリーにソース・コードを格納している場合は、「構成可能な統合」セクションで**「GitHub」**をクリックします。 {{site.data.keyword.Bluemix_notm}} Public でこのツール統合を構成しており、GitHub へのアクセスを {{site.data.keyword.Bluemix_notm}} に許可していない場合は、**「許可」**をクリックして GitHub Web サイトに移動します。アクティブな GitHub セッションがない場合は、ログインするよう求められます。 **「アプリケーションを許可 (Authorize Application)」** をクリックして、{{site.data.keyword.Bluemix_notm}} が GitHub アカウントにアクセスできるようにします。 アクティブな GitHub セッションはあるものの、最近パスワードを入力していない場合は、確認のために GitHub パスワードの入力を求められることがあります。
+1. GitHub リポジトリーにソース・コードを格納している場合は、「構成可能な統合」セクションで**「GitHub」**をクリックします。 {{site.data.keyword.Bluemix_notm}} Public でこのツール統合を構成しており、GitHub へのアクセスを {{site.data.keyword.Bluemix_notm}} に許可していない場合は、**「許可」**をクリックして GitHub Web サイトに移動します。 アクティブな GitHub セッションがない場合は、ログインするよう求められます。 **「アプリケーションを許可 (Authorize Application)」** をクリックして、{{site.data.keyword.Bluemix_notm}} が GitHub アカウントにアクセスできるようにします。 アクティブな GitHub セッションはあるものの、最近パスワードを入力していない場合は、確認のために GitHub パスワードの入力を求められることがあります。
 1. 独自の {{site.data.keyword.ghe_short}} サーバー上でリポジトリーを使用している場合は、「構成可能な統合」セクションで**「カスタム・サーバーの追加」**をクリックします。
 
- ネットワークを介して {{site.data.keyword.Bluemix_notm}} Dedicated 環境からターゲット Git サーバーにアクセスできる必要があります。 パブリック・インターネット上で GitHub サーバーを使用できない場合や、パブリック・ドメイン・ネーム・サーバー (DNS) 上でホスト名が解決しない場合は、[サポート・チケットを開きます](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}。 サポート・チケットを使用して、ネットワーク経路を開く要求や、DNS 設定を更新する要求を送信できます。
+ ネットワークを介して {{site.data.keyword.Bluemix_notm}} Dedicated 環境からターゲット Git サーバーにアクセスできる必要があります。 パブリック・インターネット上で GitHub サーバーを使用できない場合や、パブリック・ドメイン・ネーム・サーバー (DNS) 上でホスト名が解決しない場合は、[サポート・チケットを開きます](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_support#support-ticket){: new_window}。 サポート・チケットを使用して、ネットワーク経路を開く要求や、DNS 設定を更新する要求を送信できます。
  {: important}
 
  カスタム GitHub サーバーのタイトルを入力し、サーバーのルート URL を指定します。 個人用アクセス・トークンを入力してから、**「カスタム統合の保存 (Save custom integration)」**をクリックします。
@@ -580,9 +579,9 @@ GitHub について詳しくは、IBM Cloud Garage Method の [GitHub に関す�
 
  * [Use the "Develop and test a Cloud Foundry app" toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
 
-  * [「Deployment Risk Analytics with GitHub and Jenkins」ツールチェーンを使用して高品質開発を保証する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+ * [「Deployment Risk Analytics with GitHub and Jenkins」ツールチェーンを使用して高品質開発を保証する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
 
-  * [Create a custom toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
+ * [Create a custom toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
 
 
 ## {{site.data.keyword.Bluemix_notm}} Dedicated での GitHub Enterprise および GitHub Issues の構成
@@ -591,13 +590,13 @@ GitHub について詳しくは、IBM Cloud Garage Method の [GitHub に関す�
  ここで説明する手順は、{{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} に適用されます。 独自の管理版の {{site.data.keyword.ghe_short}} を使用している場合、内部手順によっては一部のステップが異なることがあります。
  {: important}
 
-{{site.data.keyword.ghe_long}} は、オンプレミス型の Web ベースの Git リポジトリー・ホスティング・サービスです。 Dedicated {{site.data.keyword.ghe_short}} は {{site.data.keyword.Bluemix_notm}} Dedicated ユーザー専用です。 GitHub Issues は、作業と計画を 1 つの場所に保持するトラッキング・ツールです。 これは、ユーザーが重要タスクに注力できるようにユーザーの開発リポジトリーと統合されます。 Dedicated {{site.data.keyword.ghe_short}} と GitHub Issues について詳しくは、[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated/index.html){: new_window}と IBM Cloud Garage Method の[記事「GitHub Issues」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} を参照してください。
+{{site.data.keyword.ghe_long}} は、オンプレミス型の Web ベースの Git リポジトリー・ホスティング・サービスです。 Dedicated {{site.data.keyword.ghe_short}} は {{site.data.keyword.Bluemix_notm}} Dedicated ユーザー専用です。 GitHub Issues は、作業と計画を 1 つの場所に保持するトラッキング・ツールです。 これは、ユーザーが重要タスクに注力できるようにユーザーの開発リポジトリーと統合されます。 Dedicated {{site.data.keyword.ghe_short}} と GitHub Issues について詳しくは、[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}と IBM Cloud Garage Method の[記事「GitHub Issues」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} を参照してください。
 
-{{site.data.keyword.ghe_short}}  をツールチェーン内の 1 つのツール統合として構成して、会社の [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} インスタンス内でソース・コードを管理できるようにすることができます。
+{{site.data.keyword.ghe_short}}  をツールチェーン内の 1 つのツール統合として構成して、会社の [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} インスタンス内でソース・コードを管理できるようにすることができます。
 
 1. ツールチェーンの作成時にこのツール統合を構成する場合は、次の手順を実行します。
 
- a. Dedicated {{site.data.keyword.ghe_short}} に初めてログインするときは、まずその前に LDAP を使用して会社のユーザー・レジストリーから自分のユーザー ID を {{site.data.keyword.Bluemix_notm}} Dedicated インスタンスに追加するよう、会社の地域管理者に依頼してください。 {{site.data.keyword.ghe_short}} アカウントの設定の詳細については、「[{{site.data.keyword.ghe_long}}の概説](/docs/services/ghededicated/index.html){: new_window}」を参照してください。
+ a. Dedicated {{site.data.keyword.ghe_short}} に初めてログインするときは、まずその前に LDAP を使用して会社のユーザー・レジストリーから自分のユーザー ID を {{site.data.keyword.Bluemix_notm}} Dedicated インスタンスに追加するよう、会社の地域管理者に依頼してください。 {{site.data.keyword.ghe_short}} アカウントの設定の詳細については、「[{{site.data.keyword.ghe_long}}の概説](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}」を参照してください。
 
  b. 「構成可能な統合」セクションで**「{{site.data.keyword.ghe_short}}」**をクリックします。    
 
@@ -641,7 +640,7 @@ GitLab.com または会社の GitLab インスタンスの新規または既存�
 
 ツールチェーンの作成時にこのツール統合を構成する場合は、次の手順を実行します。
 
-1. GitLab リポジトリーにソース・コードを格納している場合は、「構成可能な統合」セクションで**「GitLab」**をクリックします。{{site.data.keyword.Bluemix_notm}} Public でこのツール統合を構成しており、GitLab へのアクセスを {{site.data.keyword.Bluemix_notm}} に許可していない場合は、**「許可」**をクリックして GitLab Web サイトに移動します。アクティブな GitLab セッションがない場合は、ログインするよう求められます。 **「アプリケーションを許可 (Authorize Application)」** をクリックして、{{site.data.keyword.Bluemix_notm}} が GitLab アカウントにアクセスできるようにします。 アクティブな GitLab セッションはあるものの、最近パスワードを入力していない場合は、確認のために GitLab パスワードの入力を求められることがあります。
+1. GitLab リポジトリーにソース・コードを格納している場合は、「構成可能な統合」セクションで**「GitLab」**をクリックします。 {{site.data.keyword.Bluemix_notm}} Public でこのツール統合を構成しており、GitLab へのアクセスを {{site.data.keyword.Bluemix_notm}} に許可していない場合は、**「許可」**をクリックして GitLab Web サイトに移動します。 アクティブな GitLab セッションがない場合は、ログインするよう求められます。 **「アプリケーションを許可 (Authorize Application)」** をクリックして、{{site.data.keyword.Bluemix_notm}} が GitLab アカウントにアクセスできるようにします。 アクティブな GitLab セッションはあるものの、最近パスワードを入力していない場合は、確認のために GitLab パスワードの入力を求められることがあります。
 1. 独自の GitLab サーバー上でリポジトリーを使用している場合は、「構成可能な統合」セクションで**「カスタム・サーバーの追加」**をクリックします。
 
  ネットワークを介して {{site.data.keyword.Bluemix_notm}} Dedicated 環境からターゲット GitLab サーバーにアクセスできる必要があります。

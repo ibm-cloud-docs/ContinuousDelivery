@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-3-26"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -73,7 +73,7 @@ lastupdated: "2018-3-26"
 
     * サービス用の {{site.data.keyword.Bluemix_short}} のスペースと、サービスをコンテナーにバインドするアプリを、パイプラインで確認する場合は、このチェック・ボックスを選択します。 サービスやバインドされたアプリが存在しない場合、パイプラインによって、このサービスの無料プランがご使用のスペースに追加されます。 作成されたバインド済みアプリには、`pipeline_bridge_app` という名前が付けられます。 その後、パイプラインは、pipeline_bridge_app からの資格情報を使用して、バインド済みサービスにアクセスします。
 
-    * サービスとバインド済みアプリを {{site.data.keyword.Bluemix_short}} のスペースで構成してある場合、または[これらの要件を手動で構成する](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}場合は、このチェック・ボックスをクリアします。
+    * サービスとバインド済みアプリを {{site.data.keyword.Bluemix_short}} のスペースで構成してある場合、またはこれらの要件を手動で構成する場合は、このチェック・ボックスをクリアします。
 
   f. **「分析の完了を待機する時間」**フィールドで、0 から 59 分の値を入力します。 デフォルト値は 5 分です。 ジョブ終了時、{{site.data.keyword.staticanalyzershort}} ダッシュボードの URL がコンソール・ログに記録されます。
 
@@ -105,8 +105,6 @@ lastupdated: "2018-3-26"
 
 **保留中のスキャン**
 ![保留中のスキャンの例](images/analyzer_pending.png)
-
-{{site.data.keyword.staticanalyzershort}} サービスの使用について詳しくは、[{{site.data.keyword.staticanalyzershort}} サービスの資料](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}を参照してください。
 
 <!--
 

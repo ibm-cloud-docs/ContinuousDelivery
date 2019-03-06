@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-11-29"
 {{site.data.keyword.Bluemix}} の Public 環境と Dedicated 環境で、オープンなツールチェーンが使用可能です。 ツールチェーンを使用して、日々の開発、デプロイメント、運用の作業における生産性を向上させることができます。 ツールチェーンをセットアップした後、ツール統合の追加、削除、構成と、ツールチェーンへのアクセスの管理を行うことができます。
 {: shortdesc}
 
-リソース・グループを使用して、米国南部、米国東部、英国、ドイツ、および東京パブリック領域でツールチェーンを管理できます。 Cloud Foundry 組織を使用して、米国南部、英国、およびドイツのパブリック領域でツールチェーンを管理できます。アクセス制御および許可ユーザー管理は、対象となるツールチェーンがリソース・グループと Cloud Foundry 組織のどちらに含まれているかに応じて、異なる方法で機能します。
+リソース・グループを使用して、米国南部、米国東部、英国、ドイツ、および東京パブリック領域でツールチェーンを管理できます。 Cloud Foundry 組織を使用して、米国南部、英国、およびドイツのパブリック領域でツールチェーンを管理できます。 アクセス制御および許可ユーザー管理は、対象となるツールチェーンがリソース・グループと Cloud Foundry 組織のどちらに含まれているかに応じて、異なる方法で機能します。
 {: important}
 
 ## ツール統合の構成
@@ -44,7 +44,7 @@ lastupdated: "2018-11-29"
  一部のツール統合は事前構成済みであり、構成パラメーターは必要ありません。 ユーザー自身が構成したツール統合についてのみ、構成設定を更新できます。
  {: tip}
 
- 設定の更新が完了したら、**「統合の保存」**をクリックします。 特定のツール統合の構成について詳しくは、[ツール統合の構成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}を参照してください。
+ 設定の更新が完了したら、**「統合の保存」**をクリックします。 特定のツール統合の構成について詳しくは、[ツール統合の構成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}を参照してください。
 
 ## ツール統合の追加
 {: #adding_a_tool_integration}
@@ -70,7 +70,7 @@ lastupdated: "2018-11-29"
 ## リソース・グループ内のツールチェーンへのアクセスの管理
 {: #managing_access_resource_groups}
 
-Identity and Access Management (IAM) サービスを使用して、ツールチェーンへのユーザー・アクセスを管理できます。 IAM を使用したアクセス制御の管理について詳しくは、[Identity and Access Management を使用したツールチェーンへのユーザー・アクセス権限の管理](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}を参照してください。 
+Identity and Access Management (IAM) サービスを使用して、ツールチェーンへのユーザー・アクセスを管理できます。 IAM を使用したアクセス制御の管理について詳しくは、[Identity and Access Management を使用したツールチェーンへのユーザー・アクセス権限の管理](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}を参照してください。 
 
 {{site.data.keyword.contdelivery_short}} の選択されたインスタンスの許可ユーザー・リストに含まれるユーザーのみが、デリバリー・パイプライン、Eclipse Orion {{site.data.keyword.webide}}、および {{site.data.keyword.contdelivery_short}} ツールチェーンの {{site.data.keyword.gitrepos}} 機能を使用できます。 指定されたリソース・グループ内で、{{site.data.keyword.contdelivery_short}} の選択されたインスタンスの「管理」タブから、許可ユーザー・ライセンスを管理できます。
 
@@ -89,7 +89,7 @@ Identity and Access Management (IAM) サービスを使用して、ツールチ�
 ツールチェーンがホストされる地域のツールチェーンの組織にユーザーを追加する必要があります。 異なる地域にアプリをデプロイするようにツールチェーンが構成されている場合でも、アプリは前述の地域にデプロイされます。
 {: important}
 
-{{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} を使用している場合、{{site.data.keyword.Bluemix_notm}} 組織およびスペースにユーザーを追加すると、それらのユーザーは各自の {{site.data.keyword.Bluemix_notm}} ID およびパスワードを使用して {{site.data.keyword.ghe_short}} にログインできます。 ユーザーがログインするときに、ユーザーのためのアカウントが作成されます。 {{site.data.keyword.Bluemix_notm}} 組織およびスペースにユーザーを追加しても、それらのユーザーが {{site.data.keyword.ghe_short}} リポジトリーに自動的に追加されることはありません。 リポジトリーの管理者特権を持つ者がユーザーの追加を行う必要があります。 詳しくは、[Dedicated GitHub Enterprise の使用](/docs/services/ghededicated/index.html){: new_window}を参照してください。 独自の管理版の {{site.data.keyword.ghe_short}} を使用している場合は、内部手順に従ってください。
+{{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} を使用している場合、{{site.data.keyword.Bluemix_notm}} 組織およびスペースにユーザーを追加すると、それらのユーザーは各自の {{site.data.keyword.Bluemix_notm}} ID およびパスワードを使用して {{site.data.keyword.ghe_short}} にログインできます。 ユーザーがログインするときに、ユーザーのためのアカウントが作成されます。 {{site.data.keyword.Bluemix_notm}} 組織およびスペースにユーザーを追加しても、それらのユーザーが {{site.data.keyword.ghe_short}} リポジトリーに自動的に追加されることはありません。 リポジトリーの管理者特権を持つ者がユーザーの追加を行う必要があります。 詳しくは、[Dedicated GitHub Enterprise の使用](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}を参照してください。 独自の管理版の {{site.data.keyword.ghe_short}} を使用している場合は、内部手順に従ってください。
 
 ###ツールチェーンへのアクセス権限の管理に関するヒント
 
@@ -127,7 +127,7 @@ Identity and Access Management (IAM) サービスを使用して、ツールチ�
 
      * 組織内の選択したスペースに関する役割を割り当てます。
 
-     デフォルトでは、組織の管理者は、組織に関連付けられたすべてのツールチェーンに対して完全な管理特権を持ちます。完全な管理特権をユーザーに付与するには、**「管理者」**役割を選択します。 請求管理者および監査員の役割は、ツールチェーンへのアクセスには影響しません。 後から、「チーム・ディレクトリー」ページで役割を変更できます。 詳しくは、[Cloud Foundry の役割](/docs/iam/cfaccess.html#cfaccess){: new_window}を参照してください。
+     デフォルトでは、組織の管理者は、組織に関連付けられたすべてのツールチェーンに対して完全な管理特権を持ちます。完全な管理特権をユーザーに付与するには、**「管理者」**役割を選択します。 請求管理者および監査員の役割は、ツールチェーンへのアクセスには影響しません。 後から、「チーム・ディレクトリー」ページで役割を変更できます。 詳しくは、[Cloud Foundry の役割](/docs/iam?topic=iam-cfaccess#cfaccess){: new_window}を参照してください。
      {: tip}
 
    ユーザーがチームのメンバーになった後、ツールチェーンの「管理」ページに戻り、ユーザーをツールチェーンに追加します。  

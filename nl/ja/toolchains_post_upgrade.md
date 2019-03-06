@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -21,14 +21,14 @@ hub.jazz.net の {{site.data.keyword.jazzhub}} プロジェクトは {{site.data
 
 hub.jazz.net の {{site.data.keyword.jazzhub_short}} は廃止されます。 
 
-DevOps プロジェクトについては、[{{site.data.keyword.contdelivery_short}} サービス![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/devops){:new_window} を使用してください。 {{site.data.keyword.Bluemix_notm}} になじみがない場合は、[{{site.data.keyword.Bluemix_notm}} とは](/docs/overview/ibm-cloud.html#overview)をご確認ください。
+DevOps プロジェクトについては、[{{site.data.keyword.contdelivery_short}} サービス![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/devops){:new_window} を使用してください。 {{site.data.keyword.Bluemix_notm}} になじみがない場合は、[{{site.data.keyword.Bluemix_notm}} とは](/docs/overview?topic=overview-whatis-platform)をご確認ください。
 
 {: shortdesc}
 
 ## プロジェクトから作成されたツールチェーンの検索
 {: #find_toolchain}
 
-[ツールチェーンのページ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/devops/toolchains){: new_window}に移動して、hub.jazz.net プロジェクトの名前と一致する名前のツールチェーンが表示されることを確認し、アップグレードが完了したことを確認します。 プロジェクトが自動的にアップグレードされた場合は、以下の点に注意してください。
+[ツールチェーンのページ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/devops/toolchains){: new_window}に移動して、hub.jazz.net プロジェクトの名前と一致する名前のツールチェーンが表示されることを確認し、アップグレードが完了したことを確認します。 プロジェクトが自動的にアップグレードされた場合は、以下の点に注意してください。
    - プロジェクトがアップグレードされる前に、そのプロジェクトの名前が別のツールチェーンで既に使用されている場合、プロジェクトのために作成された新規ツールチェーンは、プロジェクトと完全に一致する名前ではないことがあります。 
    - プロジェクトのツールチェーンが表示されない場合、所属する他の組織に切り替えてツールチェーンを確認してください。
    
@@ -48,19 +48,19 @@ hub.jazz.net に 1 つ以上のプロジェクトがあった場合、アップ�
 - プロジェクトでは、メンバーシップはプロジェクト・レベルで管理されていました。 ツールチェーンへのアクセスは、{{site.data.keyword.Bluemix_notm}} 組織とツールチェーンによって管理されます。 ツールチェーンで作業するには、ツールチェーンを含む組織のメンバーである必要があります。 ツールチェーンの所有者は、誰がツールチェーンにアクセスでき、何をすることができるかを制御できます。 アクセス制御について詳しくは、[ツールチェーンの概説](#upgrade_next_steps)のステップ 2 を参照してください。
 - hub.jazz.net のプロジェクトで使用していたリポジトリーのタイプに応じて、ツールチェーンに GitHub.com リポジトリーまたは {{site.data.keyword.gitrepos}} リポジトリーが含まれる場合があります。
 
-ツールチェーンについて詳しくは、[YouTube ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://youtu.be/2SIPE1e7NJ4){: new_window} または [{{site.data.keyword.contdelivery_short}} 概説](/docs/services/ContinuousDelivery/index.html)で説明しています。
+ツールチェーンについて詳しくは、[YouTube ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://youtu.be/2SIPE1e7NJ4){: new_window} または [{{site.data.keyword.contdelivery_short}} 概説](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started)で説明しています。
 
 ## ツールチェーンの概説
 {: #upgrade_next_steps}
 
 1. チーム・メンバーにツールチェーンへのアクセス権限を付与します。
     - 各チーム・メンバーには、有効な {{site.data.keyword.Bluemix_notm}} アカウントが必要です。 アカウントを持っていないチーム・メンバーは、[登録![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/registration){:new_window}する必要があります。
-    - ツールチェーンの「管理」ページから、ツールチェーンに対するアクセス権限を組織のメンバーに付与します。 既存のプロジェクト・メンバーは、アップグレード・プロセスの一部としてツールチェーンのメンバーに追加されます。 ツールチェーンのアクセス制御について詳しくは、[アクセスの管理 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window} を参照してください。
+    - ツールチェーンの「管理」ページから、ツールチェーンに対するアクセス権限を組織のメンバーに付与します。 既存のプロジェクト・メンバーは、アップグレード・プロセスの一部としてツールチェーンのメンバーに追加されます。 ツールチェーンのアクセス制御について詳しくは、[Cloud Foundry の組織内のツールチェーンへのアクセスの管理 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){:new_window} を参照してください。
     - ユーザーがツールチェーンの属する組織のメンバーでない場合は、「組織の管理」ページから、そのユーザーを組織に追加します。
     - ツールチェーンで {{site.data.keyword.gitrepos}} が使用される場合、有効な {{site.data.keyword.Bluemix_notm}} ID を持つすべての JazzHub プロジェクト・メンバーは、JazzHub プロジェクトで持っていたものと同じ特権で {{site.data.keyword.gitrepos}} リポジトリーに追加されます。 JazzHub プロジェクトに有効な {{site.data.keyword.Bluemix_notm}} ID を持たないメンバーがいる場合、そのメンバーを登録することができます。 彼らを登録した後、リポジトリーに追加できます。
-      組織の管理について詳しくは、[組織とスペースの管理 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window} を参照してください。
+      組織の管理について詳しくは、[組織とスペースの管理 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/account?topic=account-orgsspacesusers){:new_window} を参照してください。
 
-2. {{site.data.keyword.gitrepos}}を使用する場合は、個人用アクセス・トークンまたは SSH 鍵を使用して認証します。 SSH 鍵について詳しくは、[認証のための個人用アクセス・トークンまたは SSH 鍵の作成](/docs/services/ContinuousDelivery/git_working.html#git_authentication)を参照してください。 外部 Git クライアントから https を使用して認証するには、以下のステップを実行します。
+2. {{site.data.keyword.gitrepos}}を使用する場合は、個人用アクセス・トークンまたは SSH 鍵を使用して認証します。 SSH 鍵について詳しくは、[認証のための個人用アクセス・トークンまたは SSH 鍵の作成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication)を参照してください。 外部 Git クライアントから https を使用して認証するには、以下のステップを実行します。
     1. {{site.data.keyword.gitrepos}}・ユーザー設定の[「Access Tokens」ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} にアクセスします。
     2. スコープとして **api** を使用する個人用アクセス・トークンを作成します。
     3. [「Account」ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/profile/account){:new_window} にアクセスして、{{site.data.keyword.gitrepos}}に使用しているユーザー名を見つけます。 ご使用のユーザー名は「Change username」セクションにリストされ、作成する個人用リポジトリーの URL の最初の部分として示されます。
@@ -70,7 +70,7 @@ hub.jazz.net に 1 つ以上のプロジェクトがあった場合、アップ�
         どのリモート URL がどのリモート名に設定されているかを確認するには、`git remote -v` コマンドを使用します。 デフォルトのリモート名は `origin` です。 より高度なセットアップの場合、コマンドの形式は `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo> のようになります。`
         {: tip}
 
-3. オプション: プロジェクトの開発成熟度、チームのプラクティス、コード・ベースの品質を探るには、ツールチェーンに IBM Cloud {{site.data.keyword.DRA_short}} を追加します。 {{site.data.keyword.DRA_short}} は、開発者、チーム、デプロイメントの分析を DevOps プロジェクトに適用します。 詳しくは、[{{site.data.keyword.DRA_short}} 概説](/docs/services/DevOpsInsights/index.html)を参照してください。
+3. オプション: プロジェクトの開発成熟度、チームのプラクティス、コード・ベースの品質を探るには、ツールチェーンに IBM Cloud {{site.data.keyword.DRA_short}} を追加します。 {{site.data.keyword.DRA_short}} は、開発者、チーム、デプロイメントの分析を DevOps プロジェクトに適用します。 詳しくは、[{{site.data.keyword.DRA_short}} 概説](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started)を参照してください。
 
   {{site.data.keyword.DRA_short}} は、米国南部、英国およびドイツ地域で利用可能です。
   {: tip}
@@ -125,7 +125,7 @@ IBM Track and Plan on Cloud の詳細を確認したりオンラインで購入�
 
 Delivery Pipeline ではなく Jazz を使用してソース・コードを構築した場合は、ツールチェーンの Delivery Pipeline にビルド定義を手動で移行する必要があります。
 
-Jazz SCM をソース・リポジトリーとして使用し、Delivery Pipeline を使用してコードをビルドした場合は、Jazz SCM 内のソースが Git リポジトリーに自動的に移されています。Jazz SCM のソースではなく Git リポジトリーのソースを使用する点を除けば、Delivery Pipeline の構成は同じままです。
+Jazz SCM をソース・リポジトリーとして使用し、Delivery Pipeline を使用してコードをビルドした場合は、Jazz SCM 内のソースが Git リポジトリーに自動的に移されています。 Jazz SCM のソースではなく Git リポジトリーのソースを使用する点を除けば、Delivery Pipeline の構成は同じままです。
 
 ### ツールチェーンにアップグレードされたプロジェクト用の組織を作成する必要があったので、アカウントにクレジット・カードを追加しました。 クレジット・カードに課金されるのでしょうか。
 {: #faq_charges}
@@ -156,7 +156,7 @@ IBM 社員の場合、内部 IBM プロジェクトは、個人のクレジッ�
 
 **回答:**
 
-これらの問題は、米国以外の {{site.data.keyword.Bluemix_notm}} 組織に所属していて、アップグレードの前に明示的に米国南部地域に組織を拡張していなかった場合に発生します。 この問題については「ツールチェーン」ページを開いて確認できます。このページの先頭に地域と組織が表示されます。 
+これらの問題は、米国以外の {{site.data.keyword.Bluemix_notm}} 組織に所属していて、アップグレードの前に明示的に米国南部地域に組織を拡張していなかった場合に発生します。 この問題については「ツールチェーン」ページを開いて確認できます。 このページの先頭に地域と組織が表示されます。 
 
 何が起こったかというと、アップグレード時に、所属の米国以外の組織が米国に存在しなかったので、アクセスしたことのある別の組織が検出されてそれがアップグレードで選択されたということです。
 
@@ -173,9 +173,9 @@ IBM 社員の場合、内部 IBM プロジェクトは、個人のクレジッ�
    4. アップグレード・プロセスで作成されたツールチェーンを削除します。 
    
       Git リポジトリーは、自動的には削除されません。 手動で削除するか、該当する名前に変更することができます。 Git リポジトリーの名前をすでに変更した場合は、今後のツールチェーンでそれを使用するように更新できます。
- {: tip}
+      {: tip}
 
-   5. JazzHub プロジェクトに戻ります。 別のアップグレードを試行できるように、プロジェクトはリセットされます。プロジェクトがリセットされない場合は、hub@jazz.net に連絡を取り、プロジェクトの URL を提供してください。
+   5. JazzHub プロジェクトに戻ります。 別のアップグレードを試行できるように、プロジェクトはリセットされます。 プロジェクトがリセットされない場合は、hub@jazz.net に連絡を取り、プロジェクトの URL を提供してください。
    
    6. アップグレード・プロセスを再始動し、米国の適切な組織が選択されていることを確認し、所属の米国地域以外の組織の名前を一致させます。
    

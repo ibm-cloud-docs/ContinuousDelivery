@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-12-11"
+  years: 2016, 2019
+lastupdated: "2019-2-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -76,7 +76,7 @@ lastupdated: "2018-12-11"
 {: tip}
 
 ###アプリへのサービスの追加
-アプリにサービスを追加し、{{site.data.keyword.Bluemix_notm}} ダッシュボードまたは Cloud Foundry コマンド・ライン・インターフェース (CLI) からそれらのサービスを管理することができます。 パイプライン・ジョブでは、スクリプトで Cloud Foundry CLI コマンドを発行することもできます。 例えば、デプロイ・ジョブのスクリプトでアプリにサービスを追加することができます。 サービスの追加について詳しくは、[アプリケーションへのサービスの追加](/docs/services/reqnsi.html#add_service)を参照してください。
+アプリにサービスを追加し、{{site.data.keyword.Bluemix_notm}} ダッシュボードまたは Cloud Foundry コマンド・ライン・インターフェース (CLI) からそれらのサービスを管理することができます。 パイプライン・ジョブでは、スクリプトで Cloud Foundry CLI コマンドを発行することもできます。 例えば、デプロイ・ジョブのスクリプトでアプリにサービスを追加することができます。 詳しくは、『[外部アプリへのサービスの接続](/docs/resources?topic=resources-externalapp)』を参照してください。
 
 ## ログの表示
 {: #deliverypipeline_view_logs}

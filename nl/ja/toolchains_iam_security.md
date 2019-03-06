@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018
-lastupdated: "2018-11-14"
+  years:  2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -17,14 +17,15 @@ lastupdated: "2018-11-14"
 
 
 # Identity and Access Management を使用したツールチェーンへのユーザー・アクセス権限の管理
+{: #toolchains-iam-security}
 
 アカウント内のユーザーのリソース・グループのツールチェーンへのアクセスは、{{site.data.keyword.Bluemix_notm}}Identity and Access Management (IAM) によって制御されます。 
 
 **注**: 
 
-* ツールチェーン・インスタンスおよび {{site.data.keyword.contdelivery_short}} サービス・インスタンスのユーザー・アクセスは、個別に管理されます。 リソース・グループ内の {{site.data.keyword.contdelivery_short}} サービス・インスタンスへのユーザー・アクセスの管理について詳しくは、[Identity and Access Management を使用した {{site.data.keyword.contdelivery_short}} ユーザー・アクセスの管理](/docs/services/ContinuousDelivery/cd_iam_security.html){: new_window}を参照してください。
+* ツールチェーン・インスタンスおよび {{site.data.keyword.contdelivery_short}} サービス・インスタンスのユーザー・アクセスは、個別に管理されます。 リソース・グループ内の {{site.data.keyword.contdelivery_short}} サービス・インスタンスへのユーザー・アクセスの管理について詳しくは、[Identity and Access Management を使用した {{site.data.keyword.contdelivery_short}} ユーザー・アクセスの管理](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security){: new_window}を参照してください。
 
-* Cloud Foundry の組織のツールチェーンのユーザー・アクセスは、リソース・グループ内の {{site.data.keyword.contdelivery_short}} サービス・インスタンスへのユーザー・アクセスとは異なる方法で管理されます。 Cloud Foundry 組織内のツールチェーンへのユーザー・アクセスの管理について詳しくは、[Cloud Foundry の組織内のツールチェーンへのアクセスの管理](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs.html){: new_window}を参照してください。
+* Cloud Foundry の組織のツールチェーンのユーザー・アクセスは、リソース・グループ内の {{site.data.keyword.contdelivery_short}} サービス・インスタンスへのユーザー・アクセスとは異なる方法で管理されます。 Cloud Foundry 組織内のツールチェーンへのユーザー・アクセスの管理について詳しくは、[Cloud Foundry の組織内のツールチェーンへのアクセスの管理](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}を参照してください。
 
 ご使用のアカウント内のツールチェーンにアクセスするすべてのユーザーには、IAM ユーザー役割が定義されたアクセス・ポリシーを割り当てる必要があります。 そのポリシーによって、選択したサービスまたはインスタンスのコンテキスト内でユーザーが実行できるアクションが決まります。 許可されるアクションは、サービス上で実行できる操作として、{{site.data.keyword.Bluemix_notm}} サービスによってカスタマイズされて定義されます。 その後、アクションは IAM ユーザー役割にマップされます。
 
@@ -59,6 +60,6 @@ lastupdated: "2018-11-14"
 | delete-bindings | リソース・グループ内のツールチェーンからツール統合を削除します。 | 管理者、エディター |
 {: caption="表 2. サービスのアクションおよび操作" caption-side="top"}
 
-UI でのユーザー役割の割り当てについては、[IAM アクセス権限の管理](/docs/iam/mngiam.html#iammanidaccser)を参照してください。
+UI でのユーザー役割の割り当てについては、[IAM アクセス権限の管理](/docs/iam?topic=iam-iammanidaccser)を参照してください。
 
 <!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

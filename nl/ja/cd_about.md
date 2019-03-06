@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -32,16 +32,16 @@ lastupdated: "2018-12-6"
 
 {{site.data.keyword.contdelivery_short}} は、選択された地域内の {{site.data.keyword.Bluemix_notm}} Public と、{{site.data.keyword.Bluemix_notm}} Dedicated で使用できます。 ツールチェーンは、{{site.data.keyword.contdelivery_short}} を {{site.data.keyword.Bluemix_notm}} Public で使用しているか、それとも {{site.data.keyword.Bluemix_notm}} Dedicated で使用しているかによって異なります。
 
-ツールチェーンは現在、すべての地域で使用できるわけではありませんが、お客様のアプリをすべての地域にデプロイするようにツールチェーンを構成することは可能です。 詳しくは、<a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">複数の領域にわたるセキュアな Web アプリケーションのデプロイ</a>のチュートリアルを参照してください。
+ツールチェーンは現在、すべての地域で使用できるわけではありませんが、お客様のアプリをすべての地域にデプロイするようにツールチェーンを構成することは可能です。 詳しくは、[複数の領域にわたるセキュアな Web アプリケーションのデプロイのチュートリアル](/docs/tutorials?topic=solution-tutorials-multi-region-webapp){: new_window}を参照してください。
 {: tip}
 
 |ツールチェーン |{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
-|ツール統合 		|サポートされているツール統合のリストについては、[ツール統合の構成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}を参照してください。 		|使用可能なツール統合は、ご使用環境での {{site.data.keyword.contdelivery_short}} のセットアップ方法によって決まります。			|
+|ツール統合 		|サポートされているツール統合のリストについては、[ツール統合の構成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}を参照してください。 		|使用可能なツール統合は、ご使用環境での {{site.data.keyword.contdelivery_short}} のセットアップ方法によって決まります。			|
 |テンプレートからのツールチェーンの作成		|[{{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://cloud.ibm.com/devops){:new_window} にログインします。		|{{site.data.keyword.Bluemix_notm}} 上の Dedicated 環境にログインします。			|
 |アプリからのツールチェーンの作成		|アプリ・スターター・コードが取り込まれた新規 GitHub リポジトリーからアプリの継続的デリバリーが構成されます。		|アプリ・スターター・コードが取り込まれた新規 GitHub または GitHub Enterprise リポジトリーからアプリの継続的デリバリーが構成されます。		|  
 |Delivery Pipeline のデプロイメント領域		|すべての {{site.data.keyword.Bluemix_notm}} Public 領域が Cloud Foundry デプロイメント・ジョブで使用可能です。 		|{{site.data.keyword.Bluemix_notm}} Dedicated 領域が使用可能です。 特定の環境内での {{site.data.keyword.contdelivery_short}} のセットアップ方法に応じて、同じカスタマー・アカウント内のその他の Dedicated 領域または Local 領域も使用可能な可能性があります。		|
-|Delivery Pipeline のデプロイメント・ジョブ		|すべての[ジョブ・タイプ](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs)が使用可能です。		|Dedicated 環境にインストールされていない {{site.data.keyword.Bluemix_notm}} サービスに依存するジョブ・タイプは、使用可能でない可能性があります。	例えば、コンテナー・ビルドとコンテナー・デプロイのジョブ・タイプは、{{site.data.keyword.containerlong_notm}} がインストールされていない環境では使用できない可能性があります。	|
+|Delivery Pipeline のデプロイメント・ジョブ		|すべての[ジョブ・タイプ](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs)が使用可能です。		|Dedicated 環境にインストールされていない {{site.data.keyword.Bluemix_notm}} サービスに依存するジョブ・タイプは、使用可能でない可能性があります。	例えば、コンテナー・ビルドとコンテナー・デプロイのジョブ・タイプは、{{site.data.keyword.containerlong_notm}} がインストールされていない環境では使用できない可能性があります。	|
 {: caption="表 1. {{site.data.keyword.Bluemix_notm}} Dedicated と {{site.data.keyword.Bluemix_notm}} Public のツールチェーンの違い" caption-side="top"}
 
 
@@ -232,7 +232,6 @@ GitHub and Issues
 
 <ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app" target="_blank">Add a toolchain to an app <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a></li>
 <li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Create a custom toolchain <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a></li>
-<li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">複数の領域にわたるセキュアな Web アプリケーションのデプロイ</a></li>
 </ul></td>
 <td><ul><li>{{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}

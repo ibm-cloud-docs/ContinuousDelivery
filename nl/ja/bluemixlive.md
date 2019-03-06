@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2018
-lastupdated: "2018-12-12"
+  years: 2015，2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -142,7 +142,3 @@ Debugger の初期化には 1 分程度かかることがあります。
 1. アプリの元の Node.js バージョン、start コマンド、メモリー値を復元します。
 
 2. アプリをプッシュします。
-
-### 詳細情報
-
-* [Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window} を参照してください

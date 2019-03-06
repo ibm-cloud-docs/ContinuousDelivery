@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-8"
 
 ---
 
@@ -50,8 +50,8 @@ lastupdated: "2018-12-6"
 1. メニュー・バーで**「サポート」**をクリックし、次に**「チケットの追加」**をクリックします。
 1. フォームに記入して、技術サポートが必要な理由を示します。
 
-IBM {{site.data.keyword.Bluemix_notm}} サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポートへのお問い合わせ](https://cloud.ibm.com/docs/support/index.html#contacting-support) を参照してください。
+IBM {{site.data.keyword.Bluemix_notm}} サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポート・プラン](/docs/get-support?topic=get-support-support-plans)を参照してください。
 
 
 ## {{site.data.keyword.Bluemix_notm}} のサポート
-{{site.data.keyword.Bluemix_notm}} サービスに関するその他の問題またはご質問については、[お客様サポートの入手](https://www.{DomainName}/docs/support/index.html#getting-customer-support)を参照してください。
+{{site.data.keyword.Bluemix_notm}}サービスに関するその他の問題またはご質問については、[サポートの入手](/docs/get-support?topic=get-support-getting-customer-support)を参照してください。

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-2-8"
 
 ---
 
@@ -30,9 +30,9 @@ GitHub、GitHub Enterprise、または Git Repos and Issue Tracking のリポジ
 
 | Git タイプ  | HTTPS のセットアップ | HTTPS で使用するもの |  SSH のセットアップ |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [個人用アクセス・トークン](/docs/services/ContinuousDelivery/git_working.html#git_authentication) | Git Repos and Issue Tracking のユーザー名 (IBM id ではない) と個人用アクセス・トークン | [SSH 鍵の構成](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
+| Git Repos and Issue Tracking (git.ng.bluemix.com) | [個人用アクセス・トークン](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) | Git Repos and Issue Tracking のユーザー名 (IBM id ではない) と個人用アクセス・トークン | [SSH 鍵の構成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |
 | Public GitHub (github.com) | 個人用アクセス・トークンは不要、ただしセットアップして使用することも可能 | GitHub のユーザー名とパスワード、GitHub のユーザー名と個人用アクセス・トークン、またはユーザー名として指定する個人用アクセス・トークンのみ | [GitHub の SSH 鍵の構成](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-| GitHub Enterprise | [個人用アクセス・トークン](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | GitHub Enterprise のユーザー名 (IBM id ではない) と個人用アクセス・トークン | [GitHub Enterprise の SSH 鍵の構成](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
+| GitHub Enterprise | [個人用アクセス・トークン](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) | GitHub Enterprise のユーザー名 (IBM id ではない) と個人用アクセス・トークン | [GitHub Enterprise の SSH 鍵の構成](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |
 
 SSH を使用する場合は、すべての Git サーバーで単一の鍵を再利用できます。 前述のリンクで説明されているように、鍵を作成するか見つけ、それを各サーバーで構成します。 鍵をパスフレーズと一緒に作成すると、その鍵の使用時に、このパスフレーズを入力するよう求められます。
 {: tip}
@@ -76,18 +76,4 @@ Web IDE を使用せずに任意のデスクトップ・ツールを使用して
 
 ソース管理に Git を使用するプロジェクトがあり、Eclipse を使用している場合は、EGit プラグインを使用して Eclipse からリポジトリーを管理できます。 EGit をインストールして構成する手順については、
 [EGit チュートリアル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window} を参照してください。
-Git Repos and Issue Tracking を使用しており、問題が生じている場合は、[Git Repos and Issue Tracking](git_working.html#git_local) を参照してください。
-
-## IBM Eclipse Tools を使用した開発
-{: #git_eclipse_tools}
-
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} には、Eclipse 環境にインストールして IDE と {{site.data.keyword.Bluemix_notm}} を統合できるプラグインが用意されています。
-
-このツールを使用すると、以下のタイプのファイルとサーバーを Eclipse IDE または IBM WebSphere&reg; Application Server Developer Tools (WDT) から直接 {{site.data.keyword.Bluemix_notm}} にデプロイできます。
-
-* JavaScript ファイル
-* WAR (Web アーカイブ) ファイル
-* EAR (エンタープライズ・アーカイブ) ファイル
-* Liberty Profile のパッケージ・サーバー
-
-さらにデプロイメントの一部として、サービスを作成してアプリにリンクしたり、環境変数を定義したりすることもできます。 IBM Eclipse Tools について詳しくは、[IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用したアプリのデプロイ](/docs/manageapps/eclipsetools/eclipsetools.html)を参照してください。
+Git Repos and Issue Tracking を使用しており、問題が生じている場合は、[Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local) を参照してください。

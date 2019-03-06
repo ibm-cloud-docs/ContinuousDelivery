@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-18"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 
@@ -28,7 +28,7 @@ lastupdated: "2018-12-18"
 
 3. ツールチェーンが作成されます。そこには、Git リポジトリーの新しいプライベート・クローン、コード変更をビルドしてデプロイするためのパイプライン、クラウド上でコードを編集するための Eclipse Orion {{site.data.keyword.webide}}、Issue Tracker が含まれます。
 
-  `.bluemix` ディレクトリーに `toolchain.yml` ファイルが含まれていれば、ツールチェーンのツール統合を指定するためにそのファイルが使用されます。 `toolchain.yml` ファイルについて詳しくは、[カスタム・ツールチェーンの作成](/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom){: new_window}を参照してください。
+  `.bluemix` ディレクトリーに `toolchain.yml` ファイルが含まれていれば、ツールチェーンのツール統合を指定するためにそのファイルが使用されます。 `toolchain.yml` ファイルについて詳しくは、[カスタム・ツールチェーンの作成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}を参照してください。
   {: tip}
 
 4. アプリがビルド・ファイルを必要とする場合、ビルド・ファイルが自動的に検出されて、アプリがビルドされます。
@@ -113,7 +113,7 @@ Markdown でボタンを作成するには、このスニペットをコピー�
 
 `.bluemix` ディレクトリーに `pipeline.yml` ファイルがない場合は、「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを使用すると、「ビルド」ステージと「デプロイ」ステージ (Cloud Foundry へのデプロイが行われる) という 2 つのステージを含むデフォルトのパイプラインが作成されます。
 
-パイプライン・ファイルを作成する際は、[カスタム・ツールチェーン・パイプラインに関する説明](toolchains_custom.html#toolchains_custom_pipeline_yml)に記載されているサンプル・ファイルを参照してください。 Web インターフェースでパイプラインを定義する場合と同様に、ステージとジョブを作成し、入力と環境変数を設定し、スクリプトを追加することによって、テキストでパイプラインを定義します。 さらに[このデモンストレーション・プロジェクト](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix)に、より複雑なパイプライン・ファイルがいくつか用意されています。
+パイプライン・ファイルを作成する際は、[カスタム・ツールチェーン・パイプラインに関する説明](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml)に記載されているサンプル・ファイルを参照してください。 Web インターフェースでパイプラインを定義する場合と同様に、ステージとジョブを作成し、入力と環境変数を設定し、スクリプトを追加することによって、テキストでパイプラインを定義します。 さらに[このデモンストレーション・プロジェクト](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix)に、より複雑なパイプライン・ファイルがいくつか用意されています。
 
 ### コンテナー Dockerfile の要件
 {: container_dockerfile}
@@ -133,4 +133,4 @@ Kubernetes クラスターへの Cloud Foundry アプリの移植について詳
 
 `manifest.yml` ファイルをリポジトリー内に用意しておく必要はありません。 ただし、アプリが他のサービスの実行を必要とする場合は、それらのサービスを宣言しているマニフェスト・ファイルを用意する必要があります。
 
-マニフェスト・ファイルについて詳しくは、[アプリケーション・マニフェスト](/docs/cloud-foundry/deploy-apps.html#appmanifest)を参照してください。
+マニフェスト・ファイルについて詳しくは、[アプリケーション・マニフェスト](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)を参照してください。

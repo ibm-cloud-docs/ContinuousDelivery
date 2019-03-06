@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -60,14 +60,14 @@ lastupdated: "2018-12-6"
 {: #plan_exceeded}
 {: faq}
 
-{{site.data.keyword.contdelivery_short}} には、Lite と Professional の 2 つのプランがあります。 {{site.data.keyword.contdelivery_short}} Lite プランの場合、プランの制限まで無料でツールチェーンを使用できます。 このエラー・メッセージは、ユーザーが Lite プランの制限を 1 つ以上超えたことを示します。 例えば、{{site.data.keyword.contdelivery_short}} サービス・インスタンスに関連付けられている許可ユーザーが多すぎる場合、または {{site.data.keyword.deliverypipeline}} ジョブの最大数を実行した場合には、プランを超えてしまう可能性があります。 プランの条件について詳しくは、 [プランの制限と使用法](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}を参照してください。
+{{site.data.keyword.contdelivery_short}} には、Lite と Professional の 2 つのプランがあります。 {{site.data.keyword.contdelivery_short}} Lite プランの場合、プランの制限まで無料でツールチェーンを使用できます。 このエラー・メッセージは、ユーザーが Lite プランの制限を 1 つ以上超えたことを示します。 例えば、{{site.data.keyword.contdelivery_short}} サービス・インスタンスに関連付けられている許可ユーザーが多すぎる場合、または {{site.data.keyword.deliverypipeline}} ジョブの最大数を実行した場合には、プランを超えてしまう可能性があります。 プランの条件について詳しくは、 [プランの制限と使用法](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}を参照してください。
 
 
 ## ツールチェーンを作成しましたが、ツールチェーン・ページには継続的デリバリー・サービスが必要であると表示されるのはなぜですか?
 {: #service_required_resource_group}
 {: faq}
 
-ツールチェーンと同じリソース・グループまたは組織にある {{site.data.keyword.contdelivery_short}} サービス・インスタンスのプランのご利用条件は、サービスに含まれているツール統合の一部 ({{site.data.keyword.deliverypipeline}}、Eclipse Orion {{site.data.keyword.webide}}、および {{site.data.keyword.gitrepos}}) の使用を管理します。 エラー・メッセージは、リソース・グループまたは組織に {{site.data.keyword.contdelivery_short}} サービスの必要なインスタンスが含まれていないことを示しています。 プランの条件について詳しくは、 [プランの制限と使用法](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}を参照してください。
+ツールチェーンと同じリソース・グループまたは組織にある {{site.data.keyword.contdelivery_short}} サービス・インスタンスのプランのご利用条件は、サービスに含まれているツール統合の一部 ({{site.data.keyword.deliverypipeline}}、Eclipse Orion {{site.data.keyword.webide}}、および {{site.data.keyword.gitrepos}}) の使用を管理します。 エラー・メッセージは、リソース・グループまたは組織に {{site.data.keyword.contdelivery_short}} サービスの必要なインスタンスが含まれていないことを示しています。 プランの条件について詳しくは、 [プランの制限と使用法](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}を参照してください。
 
 
 ## Cloud Foundry 組織内にツールチェーンを作成しました。ツールチェーン・ページに継続的デリバリー・サービスが必要であると表示されるのはなぜですか?
@@ -89,7 +89,7 @@ lastupdated: "2018-12-6"
 
 `失敗 サーバー・エラー、状況コード: 400、エラー・コード: 100005、メッセージ: 組織のメモリー上限を超過しました。`
 
-アカウントのメモリー割り当て量を増やすか、アプリが使用するメモリーを減らします。 トライアル・アカウントの最大メモリー割り当て量は 2 GB です。 アカウントのメモリー割り当て量を増やすには、トライアル・アカウントを支払アカウントに移行してください。 トライアル・アカウントを支払アカウントに移行する方法については、[支払アカウント](/docs/pricing/index.html#pay-accounts)を参照してください。 アプリが使用するメモリーを減らすには、{{site.data.keyword.Bluemix_notm}} コンソールまたは CF コマンド・ライン・インターフェースのいずれかを使用します。
+アカウントのメモリー割り当て量を増やすか、アプリが使用するメモリーを減らします。 トライアル・アカウントの最大メモリー割り当て量は 2 GB です。 アカウントのメモリー割り当て量を増やすには、トライアル・アカウントを支払アカウントに移行してください。 トライアル・アカウントを支払アカウントに切り替える方法については、『[アカウントをアップグレードまたは変更するには、どのようにすればよいですか?](/docs/account?topic=account-accountfaqs#changeacct)』を参照してください。アプリが使用するメモリーを減らすには、{{site.data.keyword.Bluemix_notm}} コンソールまたは CF コマンド・ライン・インターフェースのいずれかを使用します。
 
 {{site.data.keyword.Bluemix_notm}} コンソールを使用する場合は、以下の手順を実行します。
 
@@ -141,7 +141,7 @@ CF コマンド・ライン・インターフェースを使用する場合は�
   * {{site.data.keyword.Bluemix_notm}} コンソールにログインします。 メニュー・バーで、**「サポート」**をクリックして**「状況」**を選択します。 リストされたリソースについて ![問題](../../get-support/images/some_issues.svg) アイコンがないか確認してください。 このアイコンは、障害があることを示している可能性があります。
   * [{{site.data.keyword.Bluemix_notm}} - システム状況 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/status){: new_window} で直接アクセスします。
 
-{{site.data.keyword.Bluemix_notm}} の「状況」ページについて詳しくは、[Viewing {{site.data.keyword.Bluemix_notm}} status](https://cloud.ibm.com/docs/get-support/ViewStatus.html#viewing-bluemix-status) を参照してください。
+{{site.data.keyword.Bluemix_notm}} の「状況」ページについて詳しくは、[Viewing {{site.data.keyword.Bluemix_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window} を参照してください。
 
 
 ## ツールチェーン用にツール統合を構成しようとしましたが、構成されませんでした。

@@ -22,10 +22,10 @@ lastupdated: "2018-12-5"
 IBM によってホストされ、[GitLab Community Edition ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://about.gitlab.com/){:new_window}上に構築されている Git リポジトリーおよび Issue Tracker を使用して、チームでの共同作業およびソース・コードの管理を行います。
 {: shortdesc}
 
-プロジェクトで共同作業する個人的関係やビジネス上の関係がある人だけを招待してください。プロジェクトで共同作業をする以外の目的で Git レポへの招待を使用するユーザーによるサービスへのアクセスは、中断されたり取り消されたりする場合があります。
+プロジェクトで共同作業する個人的関係やビジネス上の関係がある人だけを招待してください。 プロジェクトで共同作業をする以外の目的で Git レポへの招待を使用するユーザーによるサービスへのアクセスは、中断されたり取り消されたりする場合があります。
 {: important}
 
-規制対象データを Git レポ内のファイルや問題に保存しないでください。規制対象データ用の手順は現在機能していません。
+規制対象データを Git レポ内のファイルや問題に保存しないでください。 規制対象データ用の手順は現在機能していません。
 {: tip}
 
 {{site.data.keyword.gitrepos}} ツール統合は、以下に示すさまざまな方法でチームのコード管理とコラボレーションをサポートします。
@@ -38,7 +38,7 @@ IBM によってホストされ、[GitLab Community Edition ![外部リンク・
 {: tip}
 
 ## {{site.data.keyword.gitrepos}} をローカルに使用する
-{: #git_local}
+{: #git_locally}
 
 {{site.data.keyword.gitrepos}} に保管されている Git リポジトリーに、ローカルからアクセスできます。 ローカルで Git をセットアップする手順については、[Start using Git on the command line (コマンド・ラインでの Git の使用の開始) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window} を参照してください。
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018
-lastupdated: "2018-7-18"
+  years:  2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -17,14 +17,15 @@ lastupdated: "2018-7-18"
 
 
 # Identity and Access Management を使用した Continuous Delivery へのユーザー・アクセス権限の管理
+{: #cd-iam-security}
 
 リソース・グループ内の {{site.data.keyword.contdelivery_full}} サービス・インスタンスに対する、アカウントのユーザーのアクセス権限は、{{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) によって制御されます。 
 
 **注**: 
 
-* {{site.data.keyword.contdelivery_short}} のサービス・インスタンスに対するユーザー・アクセス権限と、ツールチェーン・インスタンスに対するユーザー・アクセス権限は別々に管理されます。 リソース・グループ内のツールチェーンに対するユーザー・アクセス権限の管理について詳しくは、[Identity and Access Management を使用したツールチェーンへのユーザー・アクセス権限の管理](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}を参照してください。
+* {{site.data.keyword.contdelivery_short}} のサービス・インスタンスに対するユーザー・アクセス権限と、ツールチェーン・インスタンスに対するユーザー・アクセス権限は別々に管理されます。 リソース・グループ内のツールチェーンに対するユーザー・アクセス権限の管理について詳しくは、[Identity and Access Management を使用したツールチェーンへのユーザー・アクセス権限の管理](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}を参照してください。
 
-* Cloud Foundry 組織内のツールチェーンに対するユーザー・アクセス権限は、リソース・グループ内のツールチェーンに対するユーザー・アクセス権限と異なる方法で管理されます。 Cloud Foundry 組織内のツールチェーンに対するユーザー・アクセス権限の管理について詳しくは、[Cloud Foundry の組織内のツールチェーンへのアクセスの管理](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}を参照してください。
+* Cloud Foundry 組織内のツールチェーンに対するユーザー・アクセス権限は、リソース・グループ内のツールチェーンに対するユーザー・アクセス権限と異なる方法で管理されます。 Cloud Foundry 組織内のツールチェーンへのユーザー・アクセスの管理について詳しくは、[Cloud Foundry の組織内のツールチェーンへのアクセスの管理](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}を参照してください。
 
 ご使用のアカウント内の {{site.data.keyword.contdelivery_short}} サービスにアクセスするすべてのユーザーには、IAM ユーザー役割が定義されたアクセス・ポリシーを割り当てる必要があります。 そのポリシーによって、選択したサービスまたはインスタンスのコンテキスト内でユーザーが実行できるアクションが決まります。 許可されるアクションは、サービス上で実行できる操作として、{{site.data.keyword.Bluemix_notm}} サービスによってカスタマイズされて定義されます。 その後、アクションは IAM ユーザー役割にマップされます。
 
@@ -41,7 +42,7 @@ lastupdated: "2018-7-18"
 
 | プラットフォーム管理役割 | アクションの説明 | アクションの例|
 |:-----------------|:-----------------|:-----------------|
-| ビューアー、オペレーター | {{site.data.keyword.contdelivery_short}} サービスのインスタンスを表示します。 | <ul><li>{{site.data.keyword.contdelivery_short}} サービス・インスタンスをクリックして、ダッシュボードを開く。</li>|</ul>
+| ビューアー、オペレーター | {{site.data.keyword.contdelivery_short}} サービスのインスタンスを表示します。 | <ul><li>{{site.data.keyword.contdelivery_short}} サービス・インスタンスをクリックして、ダッシュボードを開く。</li></ul>|
 | エディター、管理者 | {{site.data.keyword.contdelivery_short}} サービスのインスタンスの作成、表示、更新、プラン変更、削除を行います。 |<ul><li>リソース・グループに {{site.data.keyword.contdelivery_short}} のインスタンスをプロビジョンする。</li><li>リソース・グループから {{site.data.keyword.contdelivery_short}} のインスタンスを削除する。</li><li>{{site.data.keyword.contdelivery_short}} インスタンスのプランをライトからプロフェッショナルに変更する。</li></ul> |
 | 管理者 | 許可ユーザー・リストを更新します。| <ul><li>許可ユーザー・リストにユーザーを追加する。</li><li>許可ユーザー・リストからユーザーを削除する。</li></ul> |
 {: caption="表 1. IAM ユーザーの役割とアクション" caption-side="top"}
@@ -66,6 +67,6 @@ lastupdated: "2018-7-18"
 | ライター、管理者 | {{site.data.keyword.contdelivery_short}} サービス・インスタンス内の「管理」タブで、許可ユーザー・リストのユーザーを追加および削除します。 | <ul><li>許可ユーザーを追加する。</li><li>許可ユーザーを削除する。</li></ul>|
 {: caption="表 3. IAM のサービス・アクセス役割とアクション" caption-side="top"}
 
-UI でのユーザー役割の割り当てについては、[IAM アクセス権限の管理](/docs/iam/mngiam.html#iammanidaccser)を参照してください。
+UI でのユーザー役割の割り当てについては、[IAM アクセス権限の管理](/docs/iam?topic=iam-iammanidaccser)を参照してください。
 
 <!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

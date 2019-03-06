@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -17,12 +17,12 @@ lastupdated: "2018-11-14"
 # Eclipse Orion Web IDE での開発
 {: #web_ide}
 
-Eclipse Orion {{site.data.keyword.webide}} は、ブラウザー・ベースの開発環境であり、この開発環境では、コンテンツ・アシスト、コード補完、エラー・チェックによる支援を使用して、JavaScript、HTML、CSS で Web の開発を行うことができます。 {{site.data.keyword.webide}} はほとんどすべての言語に対応しており、大部分のファイル・タイプの構文を強調表示できます。ソース管理が組み込まれており、コードをローカルにデプロイしてアプリのテストとデバッグを行うことができます。
+Eclipse Orion {{site.data.keyword.webide}} は、ブラウザー・ベースの開発環境であり、この開発環境では、コンテンツ・アシスト、コード補完、エラー・チェックによる支援を使用して、JavaScript、HTML、CSS で Web の開発を行うことができます。 {{site.data.keyword.webide}} はほとんどすべての言語に対応しており、大部分のファイル・タイプの構文を強調表示できます。 ソース管理が組み込まれており、コードをローカルにデプロイしてアプリのテストとデバッグを行うことができます。
 {:shortdesc}
 
 何よりも良い点は、{{site.data.keyword.webide}} が Web ベースであるという点です。 インストールが必要なものは何もなく、保守や拡大縮小が必要なものも何もありません。 インターネット接続さえあれば、どこでも開発を行うことができます。
 
-規制対象データを {{site.data.keyword.webide}} 内のファイルに保存しないでください。規制対象データ用の手順は現在機能していません。
+規制対象データを {{site.data.keyword.webide}} 内のファイルに保存しないでください。 規制対象データ用の手順は現在機能していません。
 {: tip}
 
 ## IDE のセットアップ
@@ -75,7 +75,7 @@ Eclipse Orion {{site.data.keyword.webide}} は、ブラウザー・ベースの�
 ## ソース・コードの管理
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} は、ソース・コード管理ツールと統合されています。 Git リポジトリーに関する作業を行うには、**「Git リポジトリー」**アイコン<img class="inline" src="images/webide_git_icon_light_small.png"  alt="「Git リポジトリー」アイコン">をクリックします。  詳しくは、[Eclipse Orion Web IDE での Git の作業](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide)を参照してください。
+{{site.data.keyword.webide}} は、ソース・コード管理ツールと統合されています。 Git リポジトリーに関する作業を行うには、**「Git リポジトリー」**アイコン<img class="inline" src="images/webide_git_icon_light_small.png"  alt="「Git リポジトリー」アイコン">をクリックします。  詳しくは、[Eclipse Orion Web IDE での Git の作業](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_web_ide#git_web_ide)を参照してください。
 
 ## ワークスペースからのアプリのデプロイ
 {: #deploy}
@@ -164,7 +164,7 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 ## サポートされる言語
 {: #supported_languages}
 
-Eclipse Orion {{site.data.keyword.webide}} では、コンテンツ・アシスト、ツールチップ、プレビュー、妥当性検査を提供しており、JavaScript、HTML、CSS、Markdown の各ファイルの構文を構文強調します。また、以下のファイル・タイプの構文も強調表示できます。
+Eclipse Orion {{site.data.keyword.webide}} では、コンテンツ・アシスト、ツールチップ、プレビュー、妥当性検査を提供しており、JavaScript、HTML、CSS、Markdown の各ファイルの構文を構文強調します。 また、以下のファイル・タイプの構文も強調表示できます。
 
 <table role="presentation">
 <tr>
@@ -212,7 +212,7 @@ Eclipse Orion {{site.data.keyword.webide}} では、コンテンツ・アシス�
 </table>
 
 ## チュートリアルを始める: Eclipse Orion Web IDE
-{: #toolchain_tutorials}
+{: #toolchain_web_ide_tutorials}
 
 [IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage){:new_window} の以下のチュートリアルのいずれかをチェックアウトします。
 

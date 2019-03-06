@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-12"
+  years: 2017, 2019
+lastupdated: "2019-2-15"
 
 ---
 {:shortdesc: .shortdesc}
@@ -19,10 +19,10 @@ lastupdated: "2018-12-12"
 # カスタム・ツールチェーン・テンプレートの作成
 {: #toolchains_custom}
 
-カスタム・ツールチェーン・テンプレートを作成して DevOps ワークフローを改善します。 既存のツールチェーン・テンプレートを使用してすぐに始めるか、必要なツール統合のみを組み込んだツールチェーン・テンプレートを作成できます。ツールチェーンに対する統合の追加や削除はいつでも行えます。
+カスタム・ツールチェーン・テンプレートを作成して DevOps ワークフローを改善します。 既存のツールチェーン・テンプレートを使用してすぐに始めるか、必要なツール統合のみを組み込んだツールチェーン・テンプレートを作成できます。 ツールチェーンに対する統合の追加や削除はいつでも行えます。
 {:shortdesc}
 
-[ツールチェーンを作成](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}するには、いくつかの方法を使用できます。 カスタム・ツールチェーン・テンプレートを作成したら、[「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを作成](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}してこれを共有できます。ツールチェーン・テンプレート SDK について詳しくは、[Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window} を参照してください。ステップバイステップのチュートリアルについては、[Garage Method サイト](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}を参照してください。
+[ツールチェーンを作成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}するには、いくつかの方法を使用できます。 カスタム・ツールチェーン・テンプレートを作成したら、[「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを作成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deploy-button){: new_window}してこれを共有できます。 ツールチェーン・テンプレート SDK について詳しくは、[Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window} を参照してください。 ステップバイステップのチュートリアルについては、[Garage Method サイト](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}を参照してください。
 
 
 ## 概説
@@ -39,7 +39,7 @@ lastupdated: "2018-12-12"
 
  このテンプレートは、基本的な Hello World アプリケーションを単一の GitHub リポジトリーからデプロイします。このテンプレートには、継続的デリバリー、ソース管理、問題のトラッキング、オンライン編集のための構成があらかじめ行われたシンプルなツールチェーンが含まれています。
 
-2. 最初からもっと複雑なツールチェーン・テンプレートを使用する場合は、[マイクロサービス用のクラウド・ネイティブのツールチェーン](https://github.com/open-toolchain/toolchain-demo){: new_window}を複製します。
+2. 最初からもっと複雑なツールチェーン・テンプレートを使用する場合は、[マイクロサービス用のクラウド・ネイティブのツールチェーンのテンプレート](https://github.com/open-toolchain/toolchain-demo){: new_window}を複製します。
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -57,7 +57,7 @@ lastupdated: "2018-12-12"
 
 いずれのテンプレートを選択するかに関係なく、作成するツールチェーンのカスタマイズ・プロセスは一般的に同じです。
 
-テンプレートのクローンを作成すると、Readme ファイルと `.bluemix` ディレクトリーを含んだ基本的な GitHub リポジトリーが作成されます。このディレクトリーには、ツールチェーンの動作に必要なすべての構成ファイルが含まれます。 `.bluemix` ディレクトリーには、少なくとも次のファイルが含まれている必要があります。
+テンプレートのクローンを作成すると、Readme ファイルと `.bluemix` ディレクトリーを含んだ基本的な GitHub リポジトリーが作成されます。 このディレクトリーには、ツールチェーンの動作に必要なすべての構成ファイルが含まれます。 `.bluemix` ディレクトリーには、少なくとも次のファイルが含まれている必要があります。
 
 * `toolchain.yml`
 * `deploy.json`
@@ -97,11 +97,11 @@ YAML ファイルのフォーマットに細心の注意を払い、エラーが
 
 * service_id - サービスを識別する固有のストリング。 このストリングの直接のソースは[サービス・カタログ](https://github.com/open-toolchain/sdk/wiki/services.md){: new_window}です。
 
-* parameters - サービスのゼロ個以上の構成パラメーター。 このパラメーターはサービスによって異なります。ユーザーはカタログを調べて、特定のサービスにどのパラメーターが必要かを見極める必要があります。
+* parameters - サービスのゼロ個以上の構成パラメーター。 このパラメーターはサービスによって異なります。 ユーザーはカタログを調べて、特定のサービスにどのパラメーターが必要かを見極める必要があります。
 
 ### 他のファイルからのテキストの組み込み
 
-ツールチェーンに関するすべての情報を `toolchain.yml` ファイルに保管することができます。しかし、`$text` を使用して、ツール統合 UI ごとに別個のファイルを作成することもできます。 別個のファイルを使用すると、ツールチェーンの保守が容易になり、構成ファイルの編集に費やす時間を最小限に抑えることができます。`toolchain.yml` ファイルの以下のサンプル・スニペットは、`pipeline.yml` ファイルの内容を `content` の値として使用する方法を示しています。
+ツールチェーンに関するすべての情報を `toolchain.yml` ファイルに保管することができます。 しかし、`$text` を使用して、ツール統合 UI ごとに別個のファイルを作成することもできます。 別個のファイルを使用すると、ツールチェーンの保守が容易になり、構成ファイルの編集に費やす時間を最小限に抑えることができます。 `toolchain.yml` ファイルの以下のサンプル・スニペットは、`pipeline.yml` ファイルの内容を `content` の値として使用する方法を示しています。
 
 ```
   configuration:
@@ -264,7 +264,7 @@ template
 4\. **デプロイメントの詳細:
 **
 
- 継続的デリバリー・プロセスの一部として、ユーザーがアクセスできる任意の {{site.data.keyword.Bluemix_notm}} の地域、組織、またはスペースにアプリケーションをデプロイするようにツールチェーンを構成できます。 [ツールチェーンの作成](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}ページのどこにアプリケーションをデプロイするかに関する具体的な詳細を指定できます。
+ 継続的デリバリー・プロセスの一部として、ユーザーがアクセスできる任意の {{site.data.keyword.Bluemix_notm}} の地域、組織、またはスペースにアプリケーションをデプロイするようにツールチェーンを構成できます。 [ツールチェーンの作成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}ページのどこにアプリケーションをデプロイするかに関する具体的な詳細を指定できます。
 
 `toolchain.yml` ファイルのこのセクションでは、ツールチェーンの作成ページから構成できるパイプラインのステージを定義します。
 
@@ -281,7 +281,7 @@ template
 | prod-space | プロパティー | <`prod`> | 実動ステージの {{site.data.keyword.Bluemix_notm}} スペースを定義します |
 | github-repo-name | プロパティー | <`"{{repo-name-key.parameters.repo_name}}"`> | ツールチェーンの作成ページに GitHub リポジトリーの名前を渡す変数 |
 
-`deploy.json` ファイルの作成について詳しくは、[このセクション](#toolchains_custom_deploy_json) を参照してください。
+`deploy.json` ファイルの作成について詳しくは、[このセクション](#toolchains_custom_deploy_json)を参照してください。
 
  次の例では、実稼働環境にデプロイする単一のステージを定義しています。
 
@@ -298,7 +298,7 @@ template
  ```
  {: codeblock}
 
- このコード例にいくらか修正を加えて使用することができます。このセクションをカスタマイズするには、リポジトリーの名前に合うように `github-repo-name` を設定します。 [`deploy.json`](#toolchains_custom_deploy_json) ファイルの細部も更新する必要があります。
+ このコード例にいくらか修正を加えて使用することができます。 このセクションをカスタマイズするには、リポジトリーの名前に合うように `github-repo-name` を設定します。 [`deploy.json`](#toolchains_custom_deploy_json) ファイルの細部も更新する必要があります。
 
  開発、QA、実動ステージを含むより複雑なパイプラインを作成する場合は、`parameters` キーの次のプロパティーを置き換えます。
 
@@ -394,7 +394,7 @@ stages:
  ## パイプライン・インターフェースの構成
  {: #toolchains_custom_deploy_json}
 
- [ツールチェーンの作成](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}ページで、「構成可能な統合 (Configurable Integrations)」セクションから「Delivery Pipeline」を選択すると、セクションが展開されて、次のアイテムが表示されます。
+ [ツールチェーンの作成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}ページで、「構成可能な統合 (Configurable Integrations)」セクションから「Delivery Pipeline」を選択すると、セクションが展開されて、次のアイテムが表示されます。
 
  	* アプリケーションの名前。
  	* パイプラインのステージのデプロイ先の地域、組織、スペース。
