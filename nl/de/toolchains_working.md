@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 
-lastupdated: "2018-12-6"
+lastupdated: "2019-2-8"
 
 
 ---
@@ -26,7 +26,7 @@ Eine *Toolchain* ist eine Gruppe von Toolintegrationen, die Entwicklungs-, Berei
 
 Offene Toolchains stehen in den öffentlichen und den dedizierten Umgebungen von {{site.data.keyword.Bluemix}} (Public bzw. Dedicated) zur Verfügung. Sie können eine Toolchain auf zwei Arten erstellen: Entweder Sie verwenden eine Vorlage zum Erstellen einer Toolchain oder Sie erstellen eine Toolchain aus einer App.
 
-Jede Toolchain ist einer bestimmten Ressourcengruppe oder Organisation zugeordnet. Wenn eine Toolchain einer Ressourcengruppe zugeordnet ist, kann jeder Benutzer mit einer IAM-Berechtigung (Identity and Access Management) als Anzeigeberechtigter für die Toolchain-Ressource oder die Ressourcengruppe, in der sie enthalten ist, auf die Toolchain zugreifen. Wenn die Toolchain einer Organisation zugeordnet ist, kann jeder Benutzer, der Mitglied dieser Organisation ist, der Zugriffssteuerungsliste für jede der ihr zugeordneten Toolchains hinzugefügt werden. Weitere Informationen zur Zugriffssteuerung für Toolchains in Cloud Foundry-Organisationen finden Sie im Abschnitt [Zugriff auf Toolchains in Cloud Foundry-Organisationen verwalten](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}. Weitere Informationen zur Zugriffssteuerung für Toolchains in Ressourcengruppen finden Sie im Abschnitt [Zugriff auf Toolchains in Ressourcengruppen verwalten](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}.
+Jede Toolchain ist einer bestimmten Ressourcengruppe oder Organisation zugeordnet. Wenn eine Toolchain einer Ressourcengruppe zugeordnet ist, kann jeder Benutzer mit einer IAM-Berechtigung (Identity and Access Management) als Anzeigeberechtigter für die Toolchain-Ressource oder die Ressourcengruppe, in der sie enthalten ist, auf die Toolchain zugreifen. Wenn die Toolchain einer Organisation zugeordnet ist, kann jeder Benutzer, der Mitglied dieser Organisation ist, der Zugriffssteuerungsliste für jede der ihr zugeordneten Toolchains hinzugefügt werden. Weitere Informationen zur Zugriffssteuerung für Toolchains in Cloud Foundry-Organisationen finden Sie im Abschnitt [Zugriff auf Toolchains in Cloud Foundry-Organisationen verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}. Weitere Informationen zur Zugriffssteuerung für Toolchains in Ressourcengruppen finden Sie im Abschnitt [Zugriff auf Toolchains in Ressourcengruppen verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window}.
 
 ##Toolchain aus einer Vorlage erstellen   
 {: #creating_a_toolchain_from_a_template}
@@ -55,7 +55,7 @@ Sie können eine Vorlage als Ausgangspunkt zum [Erstellen einer Toolchain ![Symb
    Ressourcengruppen sind in den Regionen 'Vereinigte Staaten (Süden)', 'Vereinigte Staaten (Osten)', 'Vereinigtes Königreich', 'Deutschland' und 'Tokio' verfügbar. Cloud Foundry-Organisationen werden in den Regionen 'Vereinigten Staaten (Süden)', 'Vereinigtes Königreich' und 'Deutschland' unterstützt.
    {: important}
 
-1. Wählen Sie im Abschnitt mit den Toolintegrationen jede Toolintegration aus, die Sie für Ihre Toolchain konfigurieren möchten. Einige Toolintegrationen erfordern keine Konfiguration. Informationen zum Konfigurieren der Toolintegrationen finden Sie unter [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+1. Wählen Sie im Abschnitt mit den Toolintegrationen jede Toolintegration aus, die Sie für Ihre Toolchain konfigurieren möchten. Einige Toolintegrationen erfordern keine Konfiguration. Informationen zum Konfigurieren der Toolintegrationen finden Sie unter [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Klicken Sie auf **Erstellen**. Zum Einrichten Ihrer Toolchain werden mehrere verschiedene Schritte automatisch ausgeführt. Die Toolintegrationen, die eingerichtet werden, unterscheiden sich voneinander, je nachdem, welche Toolchain-Vorlage Sie ausgewählt haben und ob Sie {{site.data.keyword.Bluemix_notm}} Public oder {{site.data.keyword.Bluemix_notm}} Dedicated verwenden. Wenn Sie eine Microservice-Toolchain unter {{site.data.keyword.Bluemix_notm}} Public erstellen, werden zum Beispiel die folgenden Schritte ausgeführt:
 
  * Die Toolchain wird erstellt.
@@ -71,13 +71,13 @@ Sie können eine Vorlage als Ausgangspunkt zum [Erstellen einer Toolchain ![Symb
 
 Sie können eine Toolchain aus Ihrer App erstellen. Die Toolchain kann kontinuierliche Entwicklung, Bereitstellung, Überwachung und mehr unterstützen und sie ist Ihrer App zugeordnet. Jede App kann einer Toolchain zugeordnet sein. Wenn Sie Änderungen per Push-Operation an das GitHub- oder das {{site.data.keyword.ghe_short}}-Repository der Toolchain übertragen, erstellt die Pipeline automatisch Builds der App und stellt die App bereit.
 
-Wenn Sie Ihre App unter Verwendung Ihres eigenen Code-Repositorys erstellt haben, klicken Sie auf der Detailseite Ihrer App auf **Verbindung zu DevOps-Toolchain herstellen**. Führen Sie anschließend die Schritte aus, die im Abschnitt zur [Erstellung von Apps aus Ihrem eigenen Code-Repository](/docs/apps/tutorials/tutorial_byoc.html) beschrieben sind.
+Wenn Sie Ihre App unter Verwendung Ihres eigenen Code-Repositorys erstellt haben, klicken Sie auf der Detailseite Ihrer App auf **Verbindung zu DevOps-Toolchain herstellen**. Führen Sie anschließend die Schritte aus, die im Abschnitt zur [Erstellung von Apps aus Ihrem eigenen Code-Repository](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc) beschrieben sind.
 {: note}
 
 1. Wenn Sie Ihre App unter Verwendung eines Starter-Kits erstellt haben, klicken Sie auf der Detailseite Ihrer App auf **In Cloud bereitstellen**. Wenn Sie {{site.data.keyword.Bluemix_notm}} Public verwenden, wird Ihre App für die kontinuierliche Bereitstellung aus einem neuen GitHub-Repository konfiguriert, das den Startcode für die App enthält. Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated verwenden, wird Ihre App für die kontinuierliche Bereitstellung aus einem neuen GitHub- oder {{site.data.keyword.ghe_short}}-Repository konfiguriert, das den Startcode für die App enthält.
 1. Überprüfen Sie auf der Seite zum Erstellen der Toolchain das Diagramm der Toolchain, die Sie gerade erstellen. In dem Diagramm wird jede Toolintegration in ihrer aktuellen Lebenszyklusphase in der Toolchain angezeigt.
 1. Überprüfen Sie die Standardinformationen für die Toolchain-Einstellungen. Der Name der Toolchain macht sie in {{site.data.keyword.Bluemix_notm}} identifizierbar. Wenn Sie einen anderen Namen verwenden möchten, ändern Sie den Namen der Toolchain.
-1. Wählen Sie im Abschnitt mit den Toolintegrationen jede Toolintegration aus, die Sie für Ihre Toolchain konfigurieren möchten. Einige Toolintegrationen erfordern keine Konfiguration. Informationen zum Konfigurieren der Toolintegrationen finden Sie unter [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+1. Wählen Sie im Abschnitt mit den Toolintegrationen jede Toolintegration aus, die Sie für Ihre Toolchain konfigurieren möchten. Einige Toolintegrationen erfordern keine Konfiguration. Informationen zum Konfigurieren der Toolintegrationen finden Sie unter [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Klicken Sie auf **Erstellen**. Zum Einrichten Ihrer Toolchain werden mehrere verschiedene Schritte automatisch ausgeführt. Die Toolintegrationen, die eingerichtet werden, unterscheiden sich voneinander, je nachdem, ob Sie Toolchains unter {{site.data.keyword.Bluemix_notm}} Public oder unter {{site.data.keyword.Bluemix_notm}} Dedicated verwenden. Wenn Sie eine Toolchain aus einer App unter {{site.data.keyword.Bluemix_notm}} Public erstellen, werden zum Beispiel die folgenden Schritte ausgeführt:
 
  * Die Toolchain wird erstellt.

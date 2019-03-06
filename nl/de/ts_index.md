@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -60,14 +60,14 @@ Wenn Sie eine Toolchain in einer Organisation erstellen möchten und die folgend
 {: #plan_exceeded}
 {: faq}
 
-{{site.data.keyword.contdelivery_short}} bietet zwei Pläne: Lite und Professional. Wenn Sie den {{site.data.keyword.contdelivery_short}}-Lite-Plan verwenden, können Sie Toolchains bis zu den Grenzwerten des Plans kostenlos verwenden. Die Fehlernachricht weist darauf hin, dass Sie einen oder mehrere Grenzwerte des Lite-Plans überschritten haben. Sie könnten den Plan beispielsweise überschreiten, wenn Sie zu viele berechtigte Benutzer haben, die der Instanz des Service {{site.data.keyword.contdelivery_short}} zugeordnet sind, oder wenn Sie die maximale Anzahl von {{site.data.keyword.deliverypipeline}}-Jobs ausgeführt haben. Weitere Informationen zu den Bedingungen Ihres Plans finden Sie unter [Einschränkungen beim Plan und bei der Nutzung](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+{{site.data.keyword.contdelivery_short}} bietet zwei Pläne: Lite und Professional. Wenn Sie den {{site.data.keyword.contdelivery_short}}-Lite-Plan verwenden, können Sie Toolchains bis zu den Grenzwerten des Plans kostenlos verwenden. Die Fehlernachricht weist darauf hin, dass Sie einen oder mehrere Grenzwerte des Lite-Plans überschritten haben. Sie könnten den Plan beispielsweise überschreiten, wenn Sie zu viele berechtigte Benutzer haben, die der Instanz des Service {{site.data.keyword.contdelivery_short}} zugeordnet sind, oder wenn Sie die maximale Anzahl von {{site.data.keyword.deliverypipeline}}-Jobs ausgeführt haben. Weitere Informationen zu den Bedingungen Ihres Plans finden Sie unter [Einschränkungen beim Plan und bei der Nutzung](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
 
 
 ## Ich habe eine Toolchain erstellt. Warum zeigt die Seite 'Toolchains' an, dass ein Service Continuous Delivery erforderlich ist?
 {: #service_required_resource_group}
 {: faq}
 
-Die Bedingungen des Plans für die Instanz des Service {{site.data.keyword.contdelivery_short}}, die sich in derselben Ressourcengruppe oder Organisation wie die Toolchain befindet, steuern die Verwendung einiger der Toolintegrationen ({{site.data.keyword.deliverypipeline}}, Eclipse Orion-{{site.data.keyword.webide}} und {{site.data.keyword.gitrepos}}), die im Service enthalten sind. Die Fehlernachricht gibt an, dass die Ressourcengruppe bzw. die Organisation die erforderliche Instanz des Service {{site.data.keyword.contdelivery_short}} nicht enthält. Weitere Informationen zu den Bedingungen Ihres Plans finden Sie unter [Einschränkungen beim Plan und bei der Nutzung](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+Die Bedingungen des Plans für die Instanz des Service {{site.data.keyword.contdelivery_short}}, die sich in derselben Ressourcengruppe oder Organisation wie die Toolchain befindet, steuern die Verwendung einiger der Toolintegrationen ({{site.data.keyword.deliverypipeline}}, Eclipse Orion-{{site.data.keyword.webide}} und {{site.data.keyword.gitrepos}}), die im Service enthalten sind. Die Fehlernachricht gibt an, dass die Ressourcengruppe bzw. die Organisation die erforderliche Instanz des Service {{site.data.keyword.contdelivery_short}} nicht enthält. Weitere Informationen zu den Bedingungen Ihres Plans finden Sie unter [Einschränkungen beim Plan und bei der Nutzung](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
 
 
 ## Ich habe eine Toolchain in einer Cloud Foundry-Organisation erstellt. Warum zeigt die Seite 'Toolchains' an, dass ein Service Continuous Delivery erforderlich ist?
@@ -89,7 +89,7 @@ Wenn Sie eine App auf {{site.data.keyword.Bluemix_notm}} bereitstellen möchten 
 
 `FEHLGESCHLAGEN - Serverfehler, Statuscode: 400, Fehlercode: 100005, Nachricht: Sie haben die Speicherbegrenzung Ihres Unternehmens überschritten.`
 
-Wahlweise können Sie das Speicherkontingent Ihres Kontos heraufsetzen oder den durch Ihre Apps belegten Speicher verringern. Das maximale Speicherkontingent für ein Testkonto beläuft sich auf 2 GB. Wenn Sie das Speicherkontingent Ihres Kontos heraufsetzen möchten, müssen Sie Ihr Testkonto in ein zahlungspflichtiges Konto umwandeln. Informationen dazu, wie Sie Ihr Testkonto in ein zahlungspflichtiges Konto umwandeln, können Sie unter [Zahlkonten](/docs/pricing/index.html#pay-accounts) nachlesen. Wenn Sie den durch Ihre Apps belegten Speicher verringern möchten, verwenden Sie hierzu entweder die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle 'cf'.
+Wahlweise können Sie das Speicherkontingent Ihres Kontos heraufsetzen oder den durch Ihre Apps belegten Speicher verringern. Das maximale Speicherkontingent für ein Testkonto beläuft sich auf 2 GB. Wenn Sie das Speicherkontingent Ihres Kontos heraufsetzen möchten, müssen Sie Ihr Testkonto in ein zahlungspflichtiges Konto umwandeln. Informationen zum Konvertieren des Testkontos in ein kostenpflichtiges Konto finden Sie in [Wie kann ich ein Upgrade meines Kontotyps durchführen oder das Konto ändern?](/docs/account?topic=account-accountfaqs#changeacct). Wenn Sie den durch Ihre Apps belegten Speicher verringern möchten, verwenden Sie hierzu entweder die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle 'cf'.
 
 Führen Sie bei Verwendung der {{site.data.keyword.Bluemix_notm}}-Konsole die folgenden Schritte aus:
 
@@ -141,7 +141,7 @@ Anhand einer der folgenden Optionen gelangen Sie zur Statusseite:
   * Melden Sie sich bei der {{site.data.keyword.Bluemix_notm}}-Konsole an. Klicken Sie in der Menüleiste auf **Support** und wählen Sie **Status** aus. Prüfen Sie die aufgelisteten Ressourcen auf das Symbol ![Probleme](../../get-support/images/some_issues.svg). Dieses Symbol kann auf einen Ausfall hinweisen.
   * Greifen Sie direkt auf [{{site.data.keyword.Bluemix_notm}} - Systemstatus ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/status){: new_window} zu.
 
-Weitere Informationen zur Statusseite für {{site.data.keyword.Bluemix_notm}} finden Sie in [{{site.data.keyword.Bluemix_notm}}-Status anzeigen](https://cloud.ibm.com/docs/get-support/ViewStatus.html#viewing-bluemix-status).
+Weitere Informationen zur {{site.data.keyword.Bluemix_notm}}-Statusseite finden Sie in [{{site.data.keyword.Bluemix_notm}}-Status anzeigen](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}. 
 
 
 ## Es wurde eine Toolintegration für meine Toolchain konfiguriert, aber die Konfiguration wird nicht angezeigt. Warum?

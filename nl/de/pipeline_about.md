@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-29"
+  years: 2016, 2019
+lastupdated: "2019-2-15"
 ---
 
 {:shortdesc: .shortdesc}
@@ -22,14 +22,14 @@ lastupdated: "2018-11-29"
 {{site.data.keyword.contdelivery_full}} enthält die Delivery Pipeline, die reproduzierbare Builds, Tests und Bereitstellungen ermöglicht und nur geringe manuelle Eingriffe erfordert. In einer Pipeline rufen Abfolgen von Stages Eingabe- und Ausgabejobs wie Builds, Tests und Bereitstellungen ab.
 {:shortdesc}
 
-Ihre Berechtigungen zum Anzeigen, Ändern oder Ausführen einer Pipeline basieren auf der Zugriffssteuerung für die Toolchain, die Eigner der Pipeline ist. Weitere Informationen zur Zugriffssteuerung für Toolchains finden Sie in den Abschnitten [Zugriff auf Toolchains in Ressourcengruppen verwalten](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} und [Zugriff auf Toolchains in Cloud Foundry-Organisationen verwalten](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
+Ihre Berechtigungen zum Anzeigen, Ändern oder Ausführen einer Pipeline basieren auf der Zugriffssteuerung für die Toolchain, die Eigner der Pipeline ist. Weitere Informationen zur Zugriffssteuerung für Toolchains finden Sie in den Abschnitten [Zugriff auf Toolchains in Ressourcengruppen verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window} und [Zugriff auf Toolchains in Cloud Foundry-Organisationen verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
 {: important}
 
-Sie können die Scripts angeben, die in einer Vielzahl von Jobtypen ausgeführt werden sollen, die von der Pipeline bereitgestellt werden; Sie können darüber steuern, was durch den Job ausgeführt wird. Diese Scripts werden in einem Docker-Image ausgeführt, das eine Reihe von Standardentwicklungstools enthält; dazu gehören Tools, die für die Interaktion mit den {{site.data.keyword.Bluemix_notm}}-Laufzeiten erforderlich sind. Weitere Informationen darüber, was das Standard-Docker-Image enthält, finden Sie im Abschnitt [Vorinstallierte Ressourcen](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}. Wenn für Ihren Job Entwicklungstools erforderlich sind, die im Standardimage nicht verfügbar sind, oder Sie unterschiedliche Versionen dieser Tools benötigen, können Sie ein angepasstes Image verwenden. Weitere Informationen zu angepassten Images finden Sie im Abschnitt [Mit benutzerdefinierten Docker-Images arbeiten](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}.
+Sie können die Scripts angeben, die in einer Vielzahl von Jobtypen ausgeführt werden sollen, die von der Pipeline bereitgestellt werden; Sie können darüber steuern, was durch den Job ausgeführt wird. Diese Scripts werden in einem Docker-Image ausgeführt, das eine Reihe von Standardentwicklungstools enthält; dazu gehören Tools, die für die Interaktion mit den {{site.data.keyword.Bluemix_notm}}-Laufzeiten erforderlich sind. Weitere Informationen darüber, was das Standard-Docker-Image enthält, finden Sie im Abschnitt [Vorinstallierte Ressourcen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}. Wenn für Ihren Job Entwicklungstools erforderlich sind, die im Standardimage nicht verfügbar sind, oder Sie unterschiedliche Versionen dieser Tools benötigen, können Sie ein angepasstes Image verwenden. Weitere Informationen zu angepassten Images finden Sie im Abschnitt [Mit benutzerdefinierten Docker-Images arbeiten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}.
 
-Wenn die Pipeline Scripts ausführt, werden die Eigenschaften, die den Kontext beschreiben, in dem der Job ausgeführt wird, an das Script übergeben, und zwar mithilfe von Umgebungsvariablen. Beispiel: Die URL des Repositorys, das die Eingabe für die Stage ist, der Name der Stage und der Job, der ausgeführt wird, die Parameter, die durch den Jobtyp angegeben werden, usw. Informationen zum Anzeigen einer Liste der verfügbaren Umgebungsvariablen finden Sie unter [Vorinstallierte Ressourcen](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}. 
+Wenn die Pipeline Scripts ausführt, werden die Eigenschaften, die den Kontext beschreiben, in dem der Job ausgeführt wird, an das Script übergeben, und zwar mithilfe von Umgebungsvariablen. Beispiel: Die URL des Repositorys, das die Eingabe für die Stage ist, der Name der Stage und der Job, der ausgeführt wird, die Parameter, die durch den Jobtyp angegeben werden, usw. Informationen zum Anzeigen einer Liste der verfügbaren Umgebungsvariablen finden Sie unter [Vorinstallierte Ressourcen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). 
 
-Sie können Eigenschaften sowohl auf der Pipeline- als auch auf der Stage-Ebene definieren. Pipeline-Eigenschaften werden über alle Stages und Jobs in einer Pipeline gemeinsam genutzt. Stage-Eigenschaften sind für eine bestimmte Stage eindeutig und werden von allen Jobs dieser Stage gemeinsam genutzt. Weitere Informationen zu Eigenschaften finden Sie unter [Umgebungseigenschaften (Umgebungsvariablen)](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties).
+Sie können Eigenschaften sowohl auf der Pipeline- als auch auf der Stage-Ebene definieren. Pipeline-Eigenschaften werden über alle Stages und Jobs in einer Pipeline gemeinsam genutzt. Stage-Eigenschaften sind für eine bestimmte Stage eindeutig und werden von allen Jobs dieser Stage gemeinsam genutzt. Weitere Informationen zu Eigenschaften finden Sie unter [Umgebungseigenschaften (Umgebungsvariablen)](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties).
 
 ## Stages
 {: #deliverypipeline_stages}
@@ -110,7 +110,7 @@ Nachdem ein Job ausgeführt wurde, wird der Container, der für ihn erstellt wor
 Jobs können für eine Dauer von bis zu 60 Minuten ausgeführt werden. Wenn Jobs diesen Grenzwert überschreiten, schlagen sie fehl. Falls ein Job den Grenzwert überschreitet, teilen Sie ihn in mehrere Jobs auf. Wenn ein Job zum Beispiel drei Aufgaben ausführt, können Sie ihn möglicherweise in drei Jobs aufteilen: Ein Job für jede Aufgabe.
 {: tip}
 
-Informationen dazu, wie Sie einen Job zu einer Stage hinzufügen, enthält das Thema [Einen Job zu einer Stage hinzufügen](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}.
+Informationen dazu, wie Sie einen Job zu einer Stage hinzufügen, enthält das Thema [Einen Job zu einer Stage hinzufügen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}.
 
 ### Buildjobs
 
@@ -121,9 +121,9 @@ Jobs, die Eingaben von Buildjobs erhalten, müssen Buildartefakte in derselben S
 Wenn Sie den Buildertyp **Simple** verwenden, wird Ihr Code nicht kompiliert oder erstellt; er wird gepackt und für zukünftige Stages zur Verfügung gestellt.
 {: tip}
 
-Wenn Sie die Bereitstellung mithilfe von Cloud Foundry durchführen, enthält Cloud Foundry die richtigen Artefakte, damit Ihre App ausgeführt werden kann. Weitere Informationen finden Sie unter [Bereitstellung von Anwendungen mit dem Befehl 'cf'](/docs/cloud-foundry/deploy-apps.html#dep_apps). Die Pipeline für eine Cloud Foundry-App enthält eine Stage für die Bereitstellung, die einen Befehl 'cf' ausführt.
+Wenn Sie die Bereitstellung mithilfe von Cloud Foundry durchführen, enthält Cloud Foundry die richtigen Artefakte, damit Ihre App ausgeführt werden kann. Weitere Informationen finden Sie unter [Bereitstellung von Anwendungen mit dem Befehl 'cf'](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps). Die Pipeline für eine Cloud Foundry-App enthält eine Stage für die Bereitstellung, die einen Befehl 'cf' ausführt.
 
-Cloud Foundry versucht, das zu [verwendende Buildpack zu erkennen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.cloudfoundry.org/buildpacks/detection.html). Sie können das [Buildpack](/docs/cfapps/byob.html#using-community-buildpacks) angeben, das in der Manifestdatei im Stammordner Ihrer App verwendet werden soll. Buildpacks prüfen in der Regel die vom Benutzer bereitgestellten Artefakte, um festzustellen, welche Abhängigkeiten heruntergeladen werden müssen und wie die Anwendungen für die Kommunikation mit gebundenen Services konfiguriert werden müssen. Weitere Informationen zu Anwendungsmanifesten finden Sie unter [Anwendungsmanifest](/docs/cloud-foundry/deploy-apps.html#appmanifest).
+Cloud Foundry versucht, das zu [verwendende Buildpack zu erkennen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.cloudfoundry.org/buildpacks/detection.html). Sie können das [Buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) angeben, das in der Manifestdatei im Stammordner Ihrer App verwendet werden soll. Buildpacks prüfen in der Regel die vom Benutzer bereitgestellten Artefakte, um festzustellen, welche Abhängigkeiten heruntergeladen werden müssen und wie die Anwendungen für die Kommunikation mit gebundenen Services konfiguriert werden müssen. Weitere Informationen zu Anwendungsmanifesten finden Sie unter [Anwendungsmanifest](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest).
 
 ### Bereitstellungsjobs
 
@@ -131,7 +131,7 @@ Bereitstellungsjobs laden Ihr Projekt als eine App in {{site.data.keyword.Bluemi
 
 Bereitstellungsjobs können neue Apps bereitstellen oder vorhandene Apps aktualisieren. Auch wenn Sie eine App zuerst mit einer anderen Methode wie beispielsweise über die Cloud Foundry-Befehlszeilenschnittstelle oder die Ausführungsleiste in der Web IDE bereitgestellt haben, können Sie die App mithilfe eines Bereitstellungsjobs aktualisieren. Verwenden Sie den Namen der App, um eine App in einem Bereitstellungsjob zu aktualisieren.
 
-Es ist eine Bereitstellung für eine oder mehrere Regionen bzw. einen oder mehrere Services möglich. Sie können Ihre {{site.data.keyword.deliverypipeline}} beispielsweise so einrichten, dass sie mindestens einen Service verwendet, in einer einzigen Region getestet oder und in mehreren Regionen für die Produktion bereitgestellt wird. Weitere Informationen hierzu finden Sie unter [Regionen](/docs/overview/ibm-cloud.html#ov_intro-reg){: new_window}.
+Es ist eine Bereitstellung für eine oder mehrere Regionen bzw. einen oder mehrere Services möglich. Sie können Ihre {{site.data.keyword.deliverypipeline}} beispielsweise so einrichten, dass sie mindestens einen Service verwendet, in einer einzigen Region getestet oder und in mehreren Regionen für die Produktion bereitgestellt wird.
 
 ### Testjobs
 Wenn Bedingungen eingehalten werden sollen, schließen Sie Testjobs vor oder nach Ihren Build- und Bereitstellungsjobs ein. Sie können Testjobs anpassen, damit diese so einfach oder so komplex wie erforderlich sind. Möglicherweise erwarten Sie eine bestimmte Antwort auf die Ausgabe eine cURL-Befehls. Möglicherweise möchten Sie eine Reihe von Komponententests ausführen oder Funktionstests mit Testservices Dritter wie beispielsweise Sauce Labs ausführen.
@@ -141,7 +141,7 @@ Wenn Ihre Tests Ergebnisdateien im JUnit XML-Format erzeugen, wird ein Bericht a
 ## Umgebungseigenschaften (Umgebungsvariablen)
 {: #environment_properties}
 
-Eine Reihe vordefinierter Umgebungseigenschaften bietet Zugriff auf Informationen zur Ausführungsumgebung des Jobs. Eine vollständige Liste der vordefinierten Umgebungseigenschaften finden Sie im Abschnitt zu [Umgebungseigenschaften und Ressourcen](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
+Eine Reihe vordefinierter Umgebungseigenschaften bietet Zugriff auf Informationen zur Ausführungsumgebung des Jobs. Eine vollständige Liste der vordefinierten Umgebungseigenschaften finden Sie im Abschnitt zu [Umgebungseigenschaften und Ressourcen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment).
 
 Sie können auch Ihre eigenen Umgebungseigenschaften definieren. Sie können z. B. die Eigenschaft `API_KEY` definieren, mit der ein API-Schlüssel übergeben wird, der für den Zugriff auf {{site.data.keyword.Bluemix_notm}}-Ressourcen durch alle Scripts in der Pipeline verwendet wird.
 
@@ -211,7 +211,7 @@ der Stage für den Build als Eingabe verwenden.
 ## Cloud Foundry-Manifestdateien
 {: #deliverypipeline_manifest}
 
-Manifestdateien, die den Namen `manifest.yml` tragen und in einem Projektstammverzeichnis gespeichert sind, steuern, wie Ihr Projekt in {{site.data.keyword.Bluemix_notm}} implementiert ist. Informationen zur Erstellung von Manifestdateien für ein Projekt enthält die [{{site.data.keyword.Bluemix_notm}}-Dokumentation zu Anwendungsmanifesten](/docs/cloud-foundry/deploy-apps.html#appmanifest). Für die Integration in {{site.data.keyword.Bluemix_notm}} muss Ihr Projekt über eine Manifestdatei im Stammverzeichnis verfügen. Es ist jedoch nicht erforderlich, dass Sie eine Bereitstellung auf Grundlage der Informationen in der Datei vornehmen.
+Manifestdateien, die den Namen `manifest.yml` tragen und in einem Projektstammverzeichnis gespeichert sind, steuern, wie Ihr Projekt in {{site.data.keyword.Bluemix_notm}} implementiert ist. Informationen zur Erstellung von Manifestdateien für ein Projekt enthält die [{{site.data.keyword.Bluemix_notm}}-Dokumentation zu Anwendungsmanifesten](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest). Für die Integration in {{site.data.keyword.Bluemix_notm}} muss Ihr Projekt über eine Manifestdatei im Stammverzeichnis verfügen. Es ist jedoch nicht erforderlich, dass Sie eine Bereitstellung auf Grundlage der Informationen in der Datei vornehmen.
 
 Sie können in der Pipeline alles angeben, was eine Manifestdatei bei `cf push`-Befehlsargumenten verwenden kann. Die `cf push`-Befehlsargumente sind bei Projekten hilfreich, die über mehrere Bereitstellungsziele verfügen. Falls mehrere Implementierungsjobs versuchen, die Route zu verwenden, die in der Manifestdatei des Projekts angegeben ist, tritt ein Konflikt auf.
 

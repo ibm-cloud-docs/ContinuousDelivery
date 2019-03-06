@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-12"
+  years: 2017, 2019
+lastupdated: "2019-2-15"
 
 ---
 {:shortdesc: .shortdesc}
@@ -22,7 +22,7 @@ lastupdated: "2018-12-12"
 Verbessern Sie Ihren DevOps-Workflow durch das Erstellen einer angepassten Toolchain-Vorlage. Sie können Zeit sparen, indem Sie mit einer vorhandenen Toolchain-Vorlage beginnen, oder Sie können eine Toolchain-Vorlage erstellen, die nur die von Ihnen benötigten Toolintegrationen enthält. Sie können Toolchain-Integrationen jederzeit hinzufügen oder entfernen.
 {:shortdesc}
 
-Sie haben verschiedene Möglichkeiten, [eine Toolchain zu erstellen](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}. Wenn Sie eine angepasste Toolchain-Vorlage erstellt haben, können Sie sie über das [Erstellen einer Bereitstellung mit der {{site.data.keyword.Bluemix_notm}}-Schaltfläche](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window} für die gemeinsame Nutzung zur Verfügung stellen.   Weitere Informationen zum Toolchain-Vorlagen-SDK finden Sie unter [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Ein Schritt-für-Schritt-Lernprogramm finden Sie auf der [Garage Method-Website](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
+Sie haben verschiedene Möglichkeiten, [eine Toolchain zu erstellen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}. Wenn Sie eine angepasste Toolchain-Vorlage erstellt haben, können Sie sie über das [Erstellen einer Bereitstellung mit der {{site.data.keyword.Bluemix_notm}}-Schaltfläche](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deploy-button){: new_window} für die gemeinsame Nutzung zur Verfügung stellen. Weitere Informationen zum Toolchain-Vorlagen-SDK finden Sie unter [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Ein Schritt-für-Schritt-Lernprogramm finden Sie auf der [Garage Method-Website](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
 
 
 ## Einführung
@@ -39,7 +39,7 @@ Um eine angepasste Toolchain-Vorlage zu erstellen, klonen Sie zunächst die einf
 
  Diese Vorlage stellt eine einfache Hello World-Anwendung aus einem einzelnen GitHub-Repository bereit und enthält eine einfache Toolchain, die für Continuous Delivery, Quellcodeverwaltung, Problemverfolgung und Onlinebearbeitung vorkonfiguriert ist.
 
-2. Wenn Sie lieber mit einer komplexeren Toolchain-Vorlage beginnen möchten, können Sie die [cloudnative Toolchain für Microservices](https://github.com/open-toolchain/toolchain-demo){: new_window} klonen.
+2. Wenn Sie mit einer komplexeren Toolchain-Vorlage beginnen möchten, klonen Sie die [Vorlage für die cloud-native Toolchain für Microservices](https://github.com/open-toolchain/toolchain-demo){: new_window}. 
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -221,7 +221,7 @@ In diesem Beispiel werden die Git-URL und Git-Verzweigung für eine neue Toolcha
 | service_id | Eigenschaft | <`pipeline`> | Name des zu verwendenden Service |
 | parameters | Schlüssel |  |  |
 | name | Eigenschaft | <`repo_name`> | Entspricht dem im Abschnitt 'repos' definierten Namen |
-| ui-pipeline | Eigenschaft | <`true` , `false`> |'True', wenn die von dieser Pipeline bereitgestellten Anwendungen im Menü **App anzeigen** auf der Toolchain-Seite angezeigt werden |
+| ui-pipeline | Eigenschaft | <`true` , `false`> |'True', wenn die von dieser Pipeline bereitgestellten Anwendungen im Menü **App anzeigen** auf der Toolchain-Seite angezeigt werden  |
 | configuration | Schlüssel |  |  |
 | content | Eigenschaft | <`$ref(pipeline.yml)`> | Datei, die Ihre Pipelinedefinition definiert |
 | env | Schlüssel |  |  |
@@ -264,7 +264,7 @@ In diesem Beispiel werden die Git-URL und Git-Verzweigung für eine neue Toolcha
 
 4\. **Informationen zur Bereitstellung:**
 
- Im Rahmen des Continuous Delivery-Prozesses können Sie eine Toolchain konfigurieren, um eine Anwendung für jede Region, jede Organisation und jeden Bereich unter {{site.data.keyword.Bluemix_notm}} bereitzustellen, auf die ein Benutzer zugreifen kann. Sie können die Details dazu, wo Ihre Anwendung bereitgestellt werden soll, auf der Seite zur [Toolchain-Erstellung](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} angeben.
+ Im Rahmen des Continuous Delivery-Prozesses können Sie eine Toolchain konfigurieren, um eine Anwendung für jede Region, jede Organisation und jeden Bereich unter {{site.data.keyword.Bluemix_notm}} bereitzustellen, auf die ein Benutzer zugreifen kann. Sie können die Details dazu, wo Ihre Anwendung bereitgestellt werden soll, auf der Seite zur [Toolchain-Erstellung](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window} angeben.
 
 Dieser Abschnitt der Datei `toolchain.yml` definiert die Pipeline-Stages, die auf der Seite zum Erstellen der Toolchain konfiguriert werden können.
 
@@ -281,7 +281,7 @@ Dieser Abschnitt der Datei `toolchain.yml` definiert die Pipeline-Stages, die au
 | prod-space | Eigenschaft | <`prod`> | Definiert den {{site.data.keyword.Bluemix_notm}}-Bereich für die Produktionsstage. |
 | github-repo-name | Eigenschaft | <`"{{repo-name-key.parameters.repo_name}}"`> | Variable zum Übergeben des GitHub-Repository-Namens an die Seite zum Erstellen der Toolchain. |
 
-Weitere Informationen zum Erstellen der Datei `deploy.json` finden Sie in [diesem Abschnitt] (#toolchains_custom_deploy_json).
+Weitere Informationen zum Erstellen der Datei `deploy.json` finden Sie in [diesem Abschnitt](#toolchains_custom_deploy_json). 
 
  Das folgende Beispiel definiert eine einzelne Stage, die die Bereitstellung in eine Produktionsumgebung vornimmt.
 
@@ -394,7 +394,7 @@ stages:
  ## Pipeline-Schnittstelle konfigurieren
  {: #toolchains_custom_deploy_json}
 
- Auf der Seite zum [Erstellen der Toolchain](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} wird bei Auswahl von 'Delivery Pipeline' im Abschnitt 'Konfigurierbare Integrationen' der Abschnitt erweitert, um die folgenden Elemente anzuzeigen:
+ Auf der Seite zum [Erstellen der Toolchain](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window} wird bei Auswahl von 'Delivery Pipeline' im Abschnitt 'Konfigurierbare Integrationen' der Abschnitt erweitert, um die folgenden Elemente anzuzeigen:
 
  	* Name der Anwendung.
  	* Region, Organisation und Bereich, für die die Bereitstellung der Pipeline-Stages erfolgt.

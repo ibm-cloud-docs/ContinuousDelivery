@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2018
-lastupdated: "2018-12-12"
+  years: 2015，2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -143,7 +143,3 @@ Es kann etwa eine Minute dauern, bis der Debugger initialisiert ist.
 1. Stellen Sie die ursprüngliche Node.js-Version, den Startbefehl und Speicherwert der App wieder her.
 
 2. Übertragen Sie die App per Push-Operation.
-
-### Weitere Informationen
-
-* Siehe [Eclipse-Tools für {{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

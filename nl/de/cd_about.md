@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -32,16 +32,16 @@ Für die Quellcodeverwaltung und Problemverfolgung verwendet {{site.data.keyword
 
 {{site.data.keyword.contdelivery_short}} ist auf {{site.data.keyword.Bluemix_notm}} Public in ausgewählten Regionen sowie auf {{site.data.keyword.Bluemix_notm}} Dedicated verfügbar. Die einzelnen Toolchains unterscheiden sich je nachdem, ob Sie {{site.data.keyword.contdelivery_short}} auf {{site.data.keyword.Bluemix_notm}} Public oder auf {{site.data.keyword.Bluemix_notm}} Dedicated verwenden.
 
-Obwohl Toolchains derzeit nicht in allen Regionen verfügbar sind, können Sie Ihre Toolchain so konfigurieren, dass Ihre Apps in allen Regionen bereitgestellt werden. Weitere Informationen dazu erfahren Sie im Lernprogramm zur <a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Bereitstellung einer sicheren Webanwendung in mehreren Regionen</a>.
+Obwohl Toolchains derzeit nicht in allen Regionen verfügbar sind, können Sie Ihre Toolchain so konfigurieren, dass Ihre Apps in allen Regionen bereitgestellt werden. Einen detaillierteren Einblick vermittelt das [Lernprogramm zur Bereitstellung einer sicheren Webanwendung in mehreren Regionen](/docs/tutorials?topic=solution-tutorials-multi-region-webapp){: new_window}.
 {: tip}
 
 |Toolchains |{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
-|Toolintegrationen 		|Eine Liste der unterstützten Toolintegrationen enthält [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}. 		|Welche Toolintegrationen verfügbar sind, richtet sich danach, wie {{site.data.keyword.contdelivery_short}} in Ihrer Umgebung eingerichtet wurde.			|
+|Toolintegrationen 		|Eine Liste der unterstützten Toolintegrationen enthält [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}. 		|Welche Toolintegrationen verfügbar sind, richtet sich danach, wie {{site.data.keyword.contdelivery_short}} in Ihrer Umgebung eingerichtet wurde.			|
 |Toolchain aus einer Vorlage erstellen		|Melden Sie sich bei [{{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://cloud.ibm.com/devops){:new_window} an.		|Melden Sie sich bei Ihrer dedizierten Umgebung (Dedicated) auf {{site.data.keyword.Bluemix_notm}} an.			|
 |Toolchain aus einer App erstellen		|Die App wird für die kontinuierliche Bereitstellung aus einem neuen GitHub-Repository konfiguriert, das den Startcode für die App enthält.		|Die App wird für die kontinuierliche Bereitstellung aus einem neuen GitHub oder GitHub Enterprise-Repository konfiguriert, das den Startcode für die App enthält.		|  
 |Delivery Pipeline-Bereitstellungsregionen		|Alle {{site.data.keyword.Bluemix_notm}} Public-Regionen stehen Cloud Foundry-Bereitstellungsjobs zur Verfügung. 		|Die {{site.data.keyword.Bluemix_notm}} Dedicated-Region ist verfügbar. Gegebenenfalls sind weitere dedizierte oder lokale Regionen innerhalb desselben Kundenkontos verfügbar, je nachdem, wie {{site.data.keyword.contdelivery_short}} für Ihre spezielle Umgebung eingerichtet wurde.		|
-|Delivery Pipeline-Bereitstellungsjobs		|Es sind alle [Jobtypen](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs) verfügbar.		|Jobtypen, die von {{site.data.keyword.Bluemix_notm}}-Services abhängen, die nicht in der dedizierten Umgebung installiert sind, stehen möglicherweise nicht zur Verfügung.	Beispielsweise stehen in Umgebungen, die nicht über den {{site.data.keyword.containerlong_notm}} verfügen, die Jobtypen zum Ausführen eines Container-Builds und zum Bereitstellen möglicherweise nicht zur Verfügung.	|
+|Delivery Pipeline-Bereitstellungsjobs		|Es sind alle [Jobtypen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs) verfügbar.		|Jobtypen, die von {{site.data.keyword.Bluemix_notm}}-Services abhängen, die nicht in der dedizierten Umgebung installiert sind, stehen möglicherweise nicht zur Verfügung.	Beispielsweise stehen in Umgebungen, die nicht über den {{site.data.keyword.containerlong_notm}} verfügen, die Jobtypen zum Ausführen eines Container-Builds und zum Bereitstellen möglicherweise nicht zur Verfügung.	|
 {: caption="Tabelle 1. Unterschiede zwischen Toolchains unter {{site.data.keyword.Bluemix_notm}} Dedicated und {{site.data.keyword.Bluemix_notm}} Public" caption-side="top"}
 
 
@@ -232,7 +232,6 @@ Verwenden Sie diese Lernprogramme:
 
 <ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app" target="_blank">Toolchain zu einer App hinzufügen <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a></li>
 <li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Eigene benutzerdefinierte Toolchain erstellen <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a></li>
-<li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Sichere Webanwendung in mehreren Regionen bereitstellen</a></li>
 </ul></td>
 <td><ul><li>{{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion-{{site.data.keyword.webide}}

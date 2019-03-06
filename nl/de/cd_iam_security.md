@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018
-lastupdated: "2018-7-18"
+  years:  2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -17,14 +17,15 @@ lastupdated: "2018-7-18"
 
 
 # Benutzerzugriff auf Continuous Delivery mit Identity and Access Management verwalten
+{: #cd-iam-security}
 
 Der Zugriff auf {{site.data.keyword.contdelivery_full}}-Serviceinstanzen in Ressourcengruppen für Benutzer in Ihrem Konto wird von {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) gesteuert. 
 
 **Hinweise**: 
 
-* Der Benutzerzugriff für {{site.data.keyword.contdelivery_short}}-Serviceinstanzen und Toolchaininstanzen wird separat verwaltet. Weitere Informationen zum Verwalten des Benutzerzugriffs auf Toolchains in Ressourcengruppen finden Sie im Abschnitt [Benutzerzugriff auf Toolchains mit Identity and Access Management verwalten](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}.
+* Der Benutzerzugriff für {{site.data.keyword.contdelivery_short}}-Serviceinstanzen und Toolchaininstanzen wird separat verwaltet. Weitere Informationen zum Verwalten des Benutzerzugriffs auf Toolchains in Ressourcengruppen finden Sie im Abschnitt [Benutzerzugriff auf Toolchains mit Identity and Access Management verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}.
 
-* Der Benutzerzugriff für Toolchains in Cloud Foundry-Organisationen wird anders verwaltet als der Benutzerzugriff auf Toolchains in Ressourcengruppen. Weitere Informationen zum Verwalten des Benutzerzugriffs auf Toolchains in Cloud Foundry-Organisationen finden Sie im Abschnitt [Zugriff auf Toolchains in Cloud Foundry-Organisationen verwalten](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
+* Der Benutzerzugriff für Toolchains in Cloud Foundry-Organisationen wird anders verwaltet als der Benutzerzugriff auf Toolchains in Ressourcengruppen. Weitere Informationen zum Verwalten des Benutzerzugriffs auf Toolchains in Cloud Foundry-Organisationen finden Sie im Abschnitt [Zugriff auf Toolchains in Cloud Foundry-Organisationen verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
 
 Jedem Benutzer, der auf den Service {{site.data.keyword.contdelivery_short}} in Ihrem Konto zugreift, muss eine Zugriffsrichtlinie mit einer definierten IAM-Benutzerrolle zugeordnet werden. Diese Richtlinie bestimmt, welche Aktionen der Benutzer im Kontext des ausgewählten Service oder der ausgewählten Instanz ausführen kann. Die zulässigen Aktionen werden durch den {{site.data.keyword.Bluemix_notm}}-Service angepasst und als Operationen definiert, die für den Service ausgeführt werden dürfen. Die Aktionen werden dann IAM-Benutzerrollen zugeordnet.
 
@@ -41,7 +42,7 @@ In der folgenden Tabelle werden Aktionen aufgeführt, die Plattformmanagementrol
 
 | Plattformmanagementrolle | Beschreibung der Aktionen | Beispielaktionen|
 |:-----------------|:-----------------|:-----------------|
-| Anzeigeberechtigter, Operator (Bediener) | Instanzen des Service {{site.data.keyword.contdelivery_short}} anzeigen. | <ul><li>Anklicken einer {{site.data.keyword.contdelivery_short}}-Serviceinstanz, um das entsprechende Dashboard zu öffnen.</li>|</ul>
+| Anzeigeberechtigter, Operator (Bediener) | Instanzen des Service {{site.data.keyword.contdelivery_short}} anzeigen. | <ul><li>Anklicken einer {{site.data.keyword.contdelivery_short}}-Serviceinstanz, um das entsprechende Dashboard zu öffnen.</li></ul>|
 | Editor (Bearbeiter), Administrator | Den Plan für den Service {{site.data.keyword.contdelivery_short}} erstellen, anzeigen, aktualisieren oder ändern und Instanzen des Service löschen. |<ul><li>Bereitstellen einer Instanz von {{site.data.keyword.contdelivery_short}} in einer Ressourcengruppe.</li><li>Löschen einer Instanz von {{site.data.keyword.contdelivery_short}} aus einer Ressourcengruppe.</li><li>Ändern eines {{site.data.keyword.contdelivery_short}}-Instanzenplans von Lite in Professional.</li></ul> |
 | Administrator | Die Liste der berechtigten Benutzer aktualisieren.| <ul><li>Hinzufügen eines Benutzers zur Liste der berechtigten Benutzer.</li><li>Entfernen eines Benutzers aus der Liste der berechtigten Benutzer.</li></ul> |
 {: caption="Tabelle 1. IAM-Benutzerrollen und -aktionen" caption-side="top"}
@@ -66,6 +67,6 @@ In der folgenden Tabelle werden Aktionen aufgeführt, die Servicezugriffsrollen 
 | Schreibberechtigter, Manager | In der Liste der berechtigten Benutzer auf der Registerkarte 'Verwalten' in einer {{site.data.keyword.contdelivery_short}}-Serviceinstanz Benutzer hinzufügen und entfernen. | <ul><li>Hinzufügen eines berechtigten Benutzers.</li><li>Entfernen eines berechtigten Benutzers.</li></ul>|
 {: caption="Tabelle 3. IAM-Servicezugriffsrollen und -aktionen" caption-side="top"}
 
-Weitere Informationen zum Zuordnen von Benutzerrollen in der Benutzerschnittstelle finden Sie im Abschnitt [IAM-Zugriff verwalten](/docs/iam/mngiam.html#iammanidaccser).
+Weitere Informationen zum Zuordnen von Benutzerrollen in der Benutzerschnittstelle finden Sie im Abschnitt [IAM-Zugriff verwalten](/docs/iam?topic=iam-iammanidaccser).
 
 <!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

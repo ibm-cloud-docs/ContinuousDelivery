@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-14"
+  years: 2016, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -31,4 +31,4 @@ Zusätzlich zu den **Deployment-Gates** bietet {{site.data.keyword.DRA_short}} w
 	
 **Team Dynamics** nutzt Social-Coding-Analysen, um zu lernen, wie Ihr Team zusammenarbeitet und wie es besser arbeiten kann.
 
-Weitere Informationen finden Sie im [Lernprogramm 'Einführung'](/docs/services/DevOpsInsights/index.html).
+Weitere Informationen finden Sie im [Lernprogramm 'Einführung'](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).

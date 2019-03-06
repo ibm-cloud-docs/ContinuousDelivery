@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-12-11"
+  years: 2016, 2019
+lastupdated: "2019-2-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -77,7 +77,7 @@ Sie können einen vorherigen Build bereitstellen. Klicken Sie in der Stage, die 
 {: tip}
 
 ###Services zu Apps hinzufügen
-Sie können Services zu Ihren Apps hinzufügen und diese Services von Ihrem {{site.data.keyword.Bluemix_notm}}-Dashboard aus oder über die Cloud Foundry-CLI (CLI = Befehlszeilenschnittstelle) verwalten. Sie können für Pipeline-Jobs auch Cloud Foundry-CLI-Befehle in Scripts ausgeben. Sie können zum Beispiel einen Service zu einer App im Script eines Bereitstellungsjobs hinzufügen. Weitere Informationen zum Hinzufügen von Services finden Sie unter [Hinzufügen eines Service zur Anwendung](/docs/services/reqnsi.html#add_service).
+Sie können Services zu Ihren Apps hinzufügen und diese Services von Ihrem {{site.data.keyword.Bluemix_notm}}-Dashboard aus oder über die Cloud Foundry-CLI (CLI = Befehlszeilenschnittstelle) verwalten. Sie können für Pipeline-Jobs auch Cloud Foundry-CLI-Befehle in Scripts ausgeben. Sie können zum Beispiel einen Service zu einer App im Script eines Bereitstellungsjobs hinzufügen. Weitere Informationen zum Hinzufügen von Services finden Sie in [Services mit externen Apps verbinden](/docs/resources?topic=resources-externalapp). 
 
 ## Protokolle anzeigen
 {: #deliverypipeline_view_logs}

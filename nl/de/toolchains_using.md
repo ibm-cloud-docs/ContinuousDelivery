@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -44,7 +44,7 @@ Wenn Sie die Konfiguration einer Toolintegration beim Erstellen einer Toolchain 
  Einige Toolintegrationen sind vorkonfiguriert und erfordern keinerlei Konfigurationsparameter. Sie können die Konfigurationseinstellungen nur für die von Ihnen konfigurierten Toolintegrationen aktualisieren.
  {: tip}
 
- Wenn Sie die Aktualisierung der Einstellungen abgeschlossen haben, klicken Sie auf **Integration speichern**. Informationen zum Konfigurieren spezifischer Toolintegrationen finden Sie in [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+ Wenn Sie die Aktualisierung der Einstellungen abgeschlossen haben, klicken Sie auf **Integration speichern**. Informationen zum Konfigurieren spezifischer Toolintegrationen finden Sie in [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 
 ## Toolintegration hinzufügen
 {: #adding_a_tool_integration}
@@ -70,7 +70,7 @@ Wenn Sie eine Toolintegration aus Ihrer Toolchain löschen, kann diese Löschung
 ## Zugriff auf Toolchains in Ressourcengruppen verwalten
 {: #managing_access_resource_groups}
 
-Sie können den Service Identity and Access Management (IAM) verwenden, um den Benutzerzugriff auf Toolchains zu verwalten. Weitere Informationen zum Verwalten der Zugriffssteuerung mit IAM finden Sie im Abschnitt [Benutzerzugriff auf Toolchains mit Identity and Access Management verwalten](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}. 
+Sie können den Service Identity and Access Management (IAM) verwenden, um den Benutzerzugriff auf Toolchains zu verwalten. Weitere Informationen zum Verwalten der Zugriffssteuerung mit IAM finden Sie im Abschnitt [Benutzerzugriff auf Toolchains mit Identity and Access Management verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}. 
 
 Nur Benutzer, die in der Liste der berechtigten Benutzer für die ausgewählte Instanz von {{site.data.keyword.contdelivery_short}} stehen, können die Features Delivery Pipeline, Eclipse Orion-{{site.data.keyword.webide}} und {{site.data.keyword.gitrepos}} von {{site.data.keyword.contdelivery_short}}-Toolchains verwenden. Sie können die Berechtigung für berechtigte Benutzer über die Registerkarte 'Verwalten' der ausgewählten Instanz von {{site.data.keyword.contdelivery_short}} in der angegebenen Ressourcengruppe verwalten.
 
@@ -89,7 +89,7 @@ Sie können Benutzern Zugriff auf eine Toolchain gewähren, indem Sie sie sowohl
 Sie müssen Benutzer der Organisation der Toolchain in der Region hinzufügen, in der die Toolchain gehostet wird. Wenn die Toolchain für die Bereitstellung von Apps in anderen Regionen konfiguriert ist, wird sie auch weiterhin Apps in diesen Regionen bereitstellen.
 {: important}
 
-Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated für {{site.data.keyword.ghe_short}} verwenden und Benutzer zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und deren Bereichen hinzufügen, so können sich die Benutzer mit ihrer {{site.data.keyword.Bluemix_notm}}-ID und dem zugehörigen Kennwort bei {{site.data.keyword.ghe_short}} anmelden. Wenn sich die Benutzer anmelden, werden Konten für sie erstellt. Wenn Sie Benutzer zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und deren Bereichen hinzufügen, werden sie nicht automatisch zum {{site.data.keyword.ghe_short}}-Repository hinzugefügt. Ein Benutzer mit Administratorberechtigungen für das Repository muss sie hinzufügen. Weitere Informationen finden Sie im Abschnitt zur Verwendung von [Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. Wenn Sie Ihre eigene verwaltete Version von {{site.data.keyword.ghe_short}} verwenden, gehen Sie gemäß Ihren eigenen internen Prozeduren vor.
+Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated für {{site.data.keyword.ghe_short}} verwenden und Benutzer zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und deren Bereichen hinzufügen, so können sich die Benutzer mit ihrer {{site.data.keyword.Bluemix_notm}}-ID und dem zugehörigen Kennwort bei {{site.data.keyword.ghe_short}} anmelden. Wenn sich die Benutzer anmelden, werden Konten für sie erstellt. Wenn Sie Benutzer zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und deren Bereichen hinzufügen, werden sie nicht automatisch zum {{site.data.keyword.ghe_short}}-Repository hinzugefügt. Ein Benutzer mit Administratorberechtigungen für das Repository muss sie hinzufügen. Weitere Informationen finden Sie im Abschnitt zur Verwendung von [Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}. Wenn Sie Ihre eigene verwaltete Version von {{site.data.keyword.ghe_short}} verwenden, gehen Sie gemäß Ihren eigenen internen Prozeduren vor.
 
 ###Tipps für die Verwaltung des Zugriffs auf eine Toolchain
 
@@ -127,7 +127,7 @@ Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated für {{site.data.keyword.g
 
      * Weisen Sie dem ausgewählten Bereich in der Organisation eine Rolle zu.
 
-     Standardmäßig verfügen Organisationsmanager über uneingeschränkte Administratorberechtigungen für alle Toolchains, die der Organisation zugeordnet sind. Um dem Benutzer die uneingeschränkten Administratorberechtigungen zu erteilen, wählen Sie die Rolle **Manager** aus. Die Rollen 'Abrechnungsmanager' und 'Auditor' haben keinerlei Einfluss auf den Zugriff auf Toolchains. Sie können die Rollen später auf der Seite 'Teamverzeichnis' ändern. Weitere Informationen finden Sie in [Cloud Foundry-Rollen](/docs/iam/cfaccess.html#cfaccess){: new_window}.
+     Standardmäßig verfügen Organisationsmanager über uneingeschränkte Administratorberechtigungen für alle Toolchains, die der Organisation zugeordnet sind. Um dem Benutzer die uneingeschränkten Administratorberechtigungen zu erteilen, wählen Sie die Rolle **Manager** aus. Die Rollen 'Abrechnungsmanager' und 'Auditor' haben keinerlei Einfluss auf den Zugriff auf Toolchains. Sie können die Rollen später auf der Seite 'Teamverzeichnis' ändern. Weitere Informationen finden Sie in [Cloud Foundry-Rollen](/docs/iam?topic=iam-cfaccess#cfaccess){: new_window}.
      {: tip}
 
    Nachdem der Benutzer nun zu einem Mitglied der Organisation geworden ist, kehren Sie zu der Verwaltungsseite der Toolchain zurück und fügen Sie den Benutzer zu der Toolchain hinzu.  

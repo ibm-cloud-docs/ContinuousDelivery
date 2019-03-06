@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018
-lastupdated: "2018-11-14"
+  years:  2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -17,14 +17,15 @@ lastupdated: "2018-11-14"
 
 
 # Benutzerzugriff auf Toolchains mit Identity and Access Management verwalten
+{: #toolchains-iam-security}
 
 Der Zugriff auf Toolchains in Ressourcengruppen für Benutzer in Ihrem Konto wird von {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) gesteuert. 
 
 **Hinweise**: 
 
-* Der Benutzerzugriff für Toolchaininstanzen und Instanzen des Service {{site.data.keyword.contdelivery_short}} wird separat verwaltet. Weitere Informationen zum Verwalten des Benutzerzugriffs auf Instanzen des Service {{site.data.keyword.contdelivery_short}} in Ressourcengruppen finden Sie im Abschnitt [Benutzerzugriff auf {{site.data.keyword.contdelivery_short}} mit Identity and Access Management verwalten](/docs/services/ContinuousDelivery/cd_iam_security.html){: new_window}.
+* Der Benutzerzugriff für Toolchaininstanzen und Instanzen des Service {{site.data.keyword.contdelivery_short}} wird separat verwaltet. Weitere Informationen zum Verwalten des Benutzerzugriffs auf Instanzen des Service {{site.data.keyword.contdelivery_short}} in Ressourcengruppen finden Sie im Abschnitt [Benutzerzugriff auf {{site.data.keyword.contdelivery_short}} mit Identity and Access Management verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security){: new_window}.
 
-* Der Benutzerzugriff für Toolchains in Cloud Foundry-Organisationen wird anders verwaltet als der Benutzerzugriff auf Instanzen des Service {{site.data.keyword.contdelivery_short}} in Ressourcengruppen. Weitere Informationen zum Verwalten des Benutzerzugriffs auf Toolchains in Cloud Foundry-Organisationen finden Sie im Abschnitt [Zugriff auf Toolchains in Cloud Foundry-Organisationen verwalten](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs.html){: new_window}.
+* Der Benutzerzugriff für Toolchains in Cloud Foundry-Organisationen wird anders verwaltet als der Benutzerzugriff auf Instanzen des Service {{site.data.keyword.contdelivery_short}} in Ressourcengruppen. Weitere Informationen zum Verwalten des Benutzerzugriffs auf Toolchains in Cloud Foundry-Organisationen finden Sie im Abschnitt [Zugriff auf Toolchains in Cloud Foundry-Organisationen verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
 
 Jedem Benutzer, der auf Toolchains in Ihrem Konto zugreift, muss eine Zugriffsrichtlinie mit einer definierten IAM-Benutzerrolle zugeordnet werden. Diese Richtlinie bestimmt, welche Aktionen der Benutzer im Kontext des ausgewählten Service oder der ausgewählten Instanz ausführen kann. Die zulässigen Aktionen werden durch den {{site.data.keyword.Bluemix_notm}}-Service angepasst und als Operationen definiert, die für den Service ausgeführt werden dürfen. Die Aktionen werden dann IAM-Benutzerrollen zugeordnet.
 
@@ -59,6 +60,6 @@ In der folgenden Tabelle werden Aktionen aufgeführt, die Plattformmanagementrol
 | delete-bindings | Eine Toolintegration aus einer Toolchain in einer Ressourcengruppe entfernen. | Administrator, Editor (Bearbeiter) |
 {: caption="Tabelle 2. Serviceaktionen und -operationen" caption-side="top"}
 
-Weitere Informationen zum Zuordnen von Benutzerrollen in der Benutzerschnittstelle finden Sie im Abschnitt [IAM-Zugriff verwalten](/docs/iam/mngiam.html#iammanidaccser).
+Weitere Informationen zum Zuordnen von Benutzerrollen in der Benutzerschnittstelle finden Sie im Abschnitt [IAM-Zugriff verwalten](/docs/iam?topic=iam-iammanidaccser).
 
 <!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-3-26"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -73,7 +73,7 @@ Bevor Sie mit den nachfolgenden Schritten beginnen, lesen Sie zunächst die [Nut
 
     * Wenn Sie möchten, dass die Pipeline Ihren {{site.data.keyword.Bluemix_short}}-Bereich auf den Service und eine App überprüft, die den Service an den Container bindet, wählen Sie das Kontrollkästchen aus. Wenn der Service oder die gebundene App nicht vorhanden sind, fügt die Pipeline den freien Plan des Service zu Ihrem Bereich hinzu. Die gebundene App, die erstellt wird, hat den Namen `pipeline_bridge_app`. Anschließend verwendet die Pipeline die Berechtigungsnachweise von der Datei 'pipeline_bridge_app', um auf die gebundenen Services zuzugreifen.
 
-    * Wenn Sie den Service und die gebundene App in Ihrem {{site.data.keyword.Bluemix_short}}-Bereich konfiguriert haben oder wenn Sie [diese Anforderungen manuell konfigurieren](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window} möchten, heben Sie die Markierung für das Kontrollkästchen auf.
+    * Wenn Sie den Service und die gebundene App in Ihrem {{site.data.keyword.Bluemix_short}}-Bereich bereits konfiguriert haben oder wenn Sie diese Anforderungen manuell konfigurieren möchten, wählen Sie das Kontrollkästchen nicht aus. 
 
   f. Geben Sie im Feld **Anzahl der Minuten für die Durchführung der Analyse** einen Wert zwischen 0 und 59 Minuten ein. Der Standardwert beträgt 5 Minuten. Eine URL zu dem Dashboard von {{site.data.keyword.staticanalyzershort}} befindet sich in den Konsolenprotokollen am Ende des Jobs.
 
@@ -105,8 +105,6 @@ Beispiele für die Konsolenausgabe:
 
 **Anstehender Scan**
 ![Beispiel für anstehenden Scan](images/analyzer_pending.png)
-
-Weitere Informationen zur Verwendung des Service {{site.data.keyword.staticanalyzershort}} enthält die [Dokumentation zum Service {{site.data.keyword.staticanalyzershort}}](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 

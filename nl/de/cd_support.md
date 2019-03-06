@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-8"
 
 ---
 
@@ -50,8 +50,8 @@ Wenn Sie ein ernsteres Problem haben oder Probleme mit dem {{site.data.keyword.c
 1. Klicken Sie in der Menüleiste auf **Support** und anschließend auf **Ticket hinzufügen**.
 1. Geben Sie im Formular an, wobei bzw. wofür Sie technische Unterstützung benötigen.
 
-Weitere Informationen zum Öffnen eines IBM {{site.data.keyword.Bluemix_notm}}-Support-Tickets oder zu den Supportebenen und Ticketprioritäten enthält [Unterstützung anfordern](https://cloud.ibm.com/docs/support/index.html#contacting-support).
+Weitere Informationen zum Öffnen eines IBM {{site.data.keyword.Bluemix_notm}}-Support-Tickets oder zu den Supportebenen und Ticketprioritäten enthält [Supportpläne](/docs/get-support?topic=get-support-support-plans). 
 
 
 ## Support für {{site.data.keyword.Bluemix_notm}}
-Bei anderen Problemen oder Fragen zu Ihrem {{site.data.keyword.Bluemix_notm}}-Service können Sie die [Kundenunterstützung abrufen](https://www.{DomainName}/docs/support/index.html#getting-customer-support).
+Bei anderen Problemen oder Fragen zu Ihrem {{site.data.keyword.Bluemix_notm}}-Service können Sie [Unterstützung anfordern](/docs/get-support?topic=get-support-getting-customer-support). 

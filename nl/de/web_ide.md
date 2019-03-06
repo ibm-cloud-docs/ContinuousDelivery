@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -75,7 +75,7 @@ Klicken Sie auf **Tools** > **Tasten anzeigen**, um eine Liste mit den Tastenbel
 ## Quellcode verwalten
 {: #sourcecontrol}
 
-Die {{site.data.keyword.webide}} ist mit Quellcodeverwaltungstools integriert. Um mit dem Git-Repository zu arbeiten, klicken Sie auf das Symbol **Git-Repository** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="Symbol 'Git-Repository'">.  Weitere Informationen finden Sie in [Mit Git in der Eclipse Orion-Web-IDE arbeiten](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide).
+Die {{site.data.keyword.webide}} ist mit Quellcodeverwaltungstools integriert. Um mit dem Git-Repository zu arbeiten, klicken Sie auf das Symbol **Git-Repository** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="Symbol 'Git-Repository'">.  Weitere Informationen finden Sie in [Mit Git in der Eclipse Orion-Web-IDE arbeiten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_web_ide#git_web_ide).
 
 ## App vom Arbeitsbereich aus bereitstellen
 {: #deploy}
@@ -213,7 +213,7 @@ Die Eclipse Orion-{{site.data.keyword.webide}} bietet Content-Assist, QuickInfo,
 </table>
 
 ## Relevantes Lernprogramm: Eclipse Orion-Web-IDE
-{: #toolchain_tutorials}
+{: #toolchain_web_ide_tutorials}
 
 Informieren Sie sich in einem der Lernprogramme zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage){:new_window}:
 

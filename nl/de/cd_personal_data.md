@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-2-20"
 
 ---
 
@@ -28,8 +28,8 @@ Persönliche Daten sind Informationen, die sich auf eine natürliche Person bezi
  * {{site.data.keyword.gitrepos}}
  * {{site.data.keyword.contdelivery_short}}-Pipelines
  * Toolchains und Toolintegrationen
- * [GitHub Enterprise on IBM Cloud ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/ghededicated/ghe_personal_data.html){: new_window}
- * [{{site.data.keyword.DRA_full}} ![Symbol zum externen Link](../../icons/launch-glyph.svg "Symbol zum externen Link")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
+ * [GitHub Enterprise on IBM Cloud ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
+ * [{{site.data.keyword.DRA_full}} ![Symbol zum externen Link](../../icons/launch-glyph.svg "Symbol zum externen Link")](/docs/services/DevOpsInsights?topic=DevOpsInsights-insights_personal_data){: new_window}
  
 IBM verwaltet keine Daten im Service {{site.data.keyword.contdelivery_short}}. Bevor Sie den Service {{site.data.keyword.contdelivery_short}}, der in {{site.data.keyword.Bluemix_notm}} Public gehostet wird, verlassen, müssen Sie Ihre eigenen Daten löschen.
 {: important}

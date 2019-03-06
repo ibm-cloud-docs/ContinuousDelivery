@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-18"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 
@@ -28,7 +28,7 @@ Wenn ein Benutzer auf die Schaltfläche klickt, werden die folgenden Aktionen au
 
 3. Es wird eine Toolchain erstellt, die einen neuen privaten Klon Ihres Git-Repositorys, eine Pipeline für das Erstellen und Bereitstellen von Änderungen, die Eclipse Orion-{{site.data.keyword.webide}} für die Codebearbeitung in der Cloud und einen Tracker für Probleme umfasst.
 
-  Wenn das Verzeichnis `.bluemix` eine Datei `toolchain.yml` enthält, wird die Datei verwendet, um die Toolintegrationen für die Toolchain anzugeben. Weitere Informationen zur Datei `toolchain.yml` finden Sie unter [Angepasste Toolchains erstellen](/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom){: new_window}.
+  Wenn das Verzeichnis `.bluemix` eine Datei `toolchain.yml` enthält, wird die Datei verwendet, um die Toolintegrationen für die Toolchain anzugeben. Weitere Informationen zur Datei `toolchain.yml` finden Sie unter [Angepasste Toolchains erstellen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}.
   {: tip}
 
 4. Wenn für die App eine Builddatei erforderlich ist, wird die Builddatei automatisch erkannt und die App wird erstellt.
@@ -113,7 +113,7 @@ Um die Pipeline für die Toolchain in einem Verzeichnis `.bluemix` zu konfigurie
 
 Wenn die Datei `pipeline.yml` sich nicht im `.bluemix`-Verzeichnis befindet, erstellt die Schaltfläche für die Bereitstellung zu {{site.data.keyword.Bluemix_notm}} eine Standard-Pipeline mit zwei Stages: eine Build-Stage und eine Stage für eine Bereitstellung auf Cloud Foundry.
 
-Beim Erstellen einer Pipelinedatei können Sie sich an dem Beispiel bei den [Anweisungen zum Erstellen einer angepassten Toolchain-Pipeline](toolchains_custom.html#toolchains_custom_pipeline_yml) orientieren. Genau wie beim Definieren einer Pipeline in der Webschnittstelle definieren Sie eine Pipeline im Text, indem Sie Stages und Jobs erstellen, Eingaben und Umgebungsvariablen festlegen und Scripts hinzufügen. In [diesem Demonstrationsprojekt](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix) wird auch eine Reihe komplexerer Pipelinedateien angezeigt.
+Beim Erstellen einer Pipelinedatei können Sie sich an dem Beispiel bei den [Anweisungen zum Erstellen einer angepassten Toolchain-Pipeline](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml) orientieren. Genau wie beim Definieren einer Pipeline in der Webschnittstelle definieren Sie eine Pipeline im Text, indem Sie Stages und Jobs erstellen, Eingaben und Umgebungsvariablen festlegen und Scripts hinzufügen. In [diesem Demonstrationsprojekt](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix) wird auch eine Reihe komplexerer Pipelinedateien angezeigt.
 
 ### Erfordernis einer Container-Dockerfile
 {: container_dockerfile}
@@ -133,4 +133,4 @@ Informationen zum manuellen Erstellen einer Datei `pipeline.yml` speziell für C
 
 In Ihrem Repository muss keine Datei `manifest.yml` enthalten sein. Wenn Ihre App aber die Ausführung anderer Services voraussetzt, müssen Sie eine Manifestdatei zur Verfügung stellen, die diese Services deklariert.
 
-Mehr zu Manifestdateien erfahren Sie unter [Anwendungsmanifest](/docs/cloud-foundry/deploy-apps.html#appmanifest).
+Mehr zu Manifestdateien erfahren Sie unter [Anwendungsmanifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).

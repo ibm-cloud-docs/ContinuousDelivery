@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-7-19"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -12,7 +12,8 @@ lastupdated: "2018-7-19"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# Mit Pipelines arbeiten {: #pipeline-working}
+# Mit Pipelines arbeiten 
+{: #pipeline-working}
 
 Um Ihre Builds und Bereitstellungen für {{site.data.keyword.Bluemix}} zu automatisieren, verwenden Sie {{site.data.keyword.contdelivery_full}}-Pipelines.
 {: shortdesc}
@@ -23,16 +24,16 @@ Bei Pipelines können Sie unter verschiedenen Buildtypen auswählen. Sie stellen
 
 Ein Bereitstellungsjob erhält Output von einem Build-Job und stellt ihn entweder im {{site.data.keyword.containerlong_notm}} oder auf Cloud Foundry-Servern bereit, z. B. {{site.data.keyword.Bluemix_notm}}.
 
-Es ist eine Bereitstellung für eine oder mehrere Regionen bzw. einen oder mehrere Services möglich. Sie können Ihre {{site.data.keyword.deliverypipeline}} beispielsweise so einrichten, dass sie mindestens einen Service verwendet, in einer einzigen Region getestet oder und in mehreren Regionen für die Produktion bereitgestellt wird. Weitere Informationen hierzu finden Sie unter [Regionen](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}.
+Es ist eine Bereitstellung für eine oder mehrere Regionen bzw. einen oder mehrere Services möglich. Sie können Ihre {{site.data.keyword.deliverypipeline}} beispielsweise so einrichten, dass sie mindestens einen Service verwendet, in einer einzigen Region getestet oder und in mehreren Regionen für die Produktion bereitgestellt wird.
 
 ##Eine Pipeline erstellen
 
 Sie können jede der folgenden Methoden zum Erstellen einer Pipeline verwenden:
 
-   * [Erstellen einer Toolchain aus einer vorhandenen Cloud Foundry-Anwendung](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app){: new_window}. Die resultierende Toolchain enthält eine Pipeline.
+   * [Erstellen einer Toolchain aus einer vorhandenen Cloud Foundry-Anwendung](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}. Die resultierende Toolchain enthält eine Pipeline.
 
-   * [Erstellen einer Toolchain aus einer Vorlage](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_a_template){: new_window}, die mindestens eine Pipeline enthält.
+   * [Erstellen einer Toolchain aus einer Vorlage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window}, die mindestens eine Pipeline enthält.
 
-   * [Hinzufügen der {{site.data.keyword.deliverypipeline}}-Toolintegration](/docs/services/ContinuousDelivery/toolchains_integrations.html#deliverypipeline){: new_window} zu einer vorhandenen Toolchain.
+   * [Hinzufügen der {{site.data.keyword.deliverypipeline}}-Toolintegration](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window} zu einer vorhandenen Toolchain.
    
 Von {{site.data.keyword.deliverypipeline}} aus können Sie Ihre Konfiguration ändern, den Status von Builds, der bereitgestellten App und von kürzlich erfolgten Bereitstellungen überprüfen, die aktuellen Protokolle und Bereitstellungsdetails anzeigen und Ihre Pipeline löschen.

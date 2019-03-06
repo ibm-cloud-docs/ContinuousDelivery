@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-7"
 
 ---
 
@@ -26,9 +26,9 @@ Nutzen Sie DevOps-Verfahren durch Verwendung von {{site.data.keyword.contdeliver
 ##Voraussetzungen
 {: #cd_prereqs}
 
-Bevor Sie eine Continuous Delivery-Toolchain aus einer Vorlage erstellen können, müssen Sie eine Instanz von {{site.data.keyword.contdelivery_short}} erstellen, indem Sie sie aus dem {{site.data.keyword.Bluemix_notm}}-Katalog auswählen. Die Toolchain integriert Tools für Planung, Entwicklung und Bereitstellung von Pipelines sowie für die Verwaltung Ihrer Anwendungen. Tools können jederzeit in eine Toolchain eingefügt oder daraus entfernt werden. Wenn Sie bereits Toolchains haben, können Sie [vorhandene Toolchains anzeigen](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}. Weitere Informationen zum Arbeiten mit Toolchains enthält [Toolchains verwenden](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
+Bevor Sie eine Continuous Delivery-Toolchain aus einer Vorlage erstellen können, müssen Sie eine Instanz von {{site.data.keyword.contdelivery_short}} erstellen, indem Sie sie aus dem {{site.data.keyword.Bluemix_notm}}-Katalog auswählen. Die Toolchain integriert Tools für Planung, Entwicklung und Bereitstellung von Pipelines sowie für die Verwaltung Ihrer Anwendungen. Tools können jederzeit in eine Toolchain eingefügt oder daraus entfernt werden. Wenn Sie bereits Toolchains haben, können Sie [vorhandene Toolchains anzeigen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing_a_toolchain){: new_window}. Weitere Informationen zum Arbeiten mit Toolchains enthält [Toolchains verwenden](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using){: new_window}.
 
-Wenn Sie bereits eine Instanz von {{site.data.keyword.contdelivery_short}} haben, können Sie [eine Toolchain erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/devops/create){: new_window} oder [vorhandene Toolchains anzeigen](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}.
+Wenn Sie bereits über eine Instanz von {{site.data.keyword.contdelivery_short}} verfügen, können Sie [eine Toolchain erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/devops/create){: new_window} oder [vorhandene Toolchains anzeigen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/devops/toolchains){: new_window}.
 {: tip}
 
 ##Schritt 1: Eine Toolchain-Vorlage auswählen
@@ -55,7 +55,7 @@ Wenn Sie bereits eine Instanz von {{site.data.keyword.contdelivery_short}} haben
    Ressourcengruppen sind in den Regionen 'Vereinigte Staaten (Süden)', 'Vereinigte Staaten (Osten)', 'Vereinigtes Königreich', 'Deutschland' und 'Tokio' verfügbar. Cloud Foundry-Organisationen werden in den Regionen 'Vereinigten Staaten (Süden)', 'Vereinigtes Königreich' und 'Deutschland' unterstützt.
    {: important}
  
-1. Wählen Sie im Abschnitt mit den Toolintegrationen jede Toolintegration aus, die Sie für Ihre Toolchain konfigurieren möchten. Einige Toolintegrationen erfordern keine Konfiguration. Informationen zum Konfigurieren der Toolintegrationen finden Sie unter [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+1. Wählen Sie im Abschnitt mit den Toolintegrationen jede Toolintegration aus, die Sie für Ihre Toolchain konfigurieren möchten. Einige Toolintegrationen erfordern keine Konfiguration. Informationen zum Konfigurieren der Toolintegrationen finden Sie unter [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Klicken Sie auf **Erstellen**. Zum Einrichten Ihrer Toolchain werden mehrere verschiedene Schritte automatisch ausgeführt. Die Toolintegrationen, die eingerichtet werden, unterscheiden sich voneinander, je nachdem, welche Toolchain-Vorlage Sie ausgewählt haben und ob Sie {{site.data.keyword.Bluemix_notm}} Public oder {{site.data.keyword.Bluemix_notm}} Dedicated verwenden. Wenn Sie eine Microservice-Toolchain unter {{site.data.keyword.Bluemix_notm}} Public erstellen, werden zum Beispiel die folgenden Schritte ausgeführt:
 
  * Die Toolchain wird erstellt.

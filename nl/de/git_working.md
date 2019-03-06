@@ -38,7 +38,7 @@ Da diese Toolintegration auf GitLab Community Edition basiert und von IBM auf de
 {: tip}
 
 ## {{site.data.keyword.gitrepos}} lokal verwenden
-{: #git_local}
+{: #git_locally}
 
 Sie können auf die Git-Repositorys, die in {{site.data.keyword.gitrepos}} gespeichert sind, lokal zugreifen. Anweisungen zum lokalen Einrichten von Git finden Sie in [Mit der Verwendung von Git über die Befehlszeile beginnen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
 

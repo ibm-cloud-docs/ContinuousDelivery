@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-10-10"
+  years: 2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-10-10"
 Verwenden Sie den Service {{site.data.keyword.cloudaccesstrailfull}}, um zu verfolgen, wie Benutzer und Anwendungen mit dem Service ?{{site.data.keyword.contdelivery_short}} in {{site.data.keyword.Bluemix}} interagieren. 
 {: shortdesc}
 
-Der Service {{site.data.keyword.cloudaccesstrailfull_notm}} zeichnet benutzerinitiierte Aktivitäten auf, die den Status eines Service in {{site.data.keyword.Bluemix_notm}} ändern. Weitere Informationen finden Sie unter [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
+Der Service {{site.data.keyword.cloudaccesstrailfull_notm}} zeichnet benutzerinitiierte Aktivitäten auf, die den Status eines Service in {{site.data.keyword.Bluemix_notm}} ändern. Weitere Informationen finden Sie unter [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla).
 
 <!-- You can create different sections to group events by area. -->
 

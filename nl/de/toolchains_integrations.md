@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-15"
 
 ---
 
@@ -31,7 +31,7 @@ Die Toolintegrationen, die zum Hinzufügen und Konfigurieren für Ihre Toolchain
 |Availability Monitoring		|Vereinigte Staaten (Süden)		|Nein		|
 |Bitbucket		|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Nein		|
 |Cloud Event Management		|Vereinigte Staaten (Süden)		|Nein		|
-|{{site.data.keyword.deliverypipeline}} 		|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Ja  		|
+|{{site.data.keyword.deliverypipeline}} 		|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich	   	|Ja  		|
 |{{site.data.keyword.DRA_short}} 		|Vereinigte Staaten (Süden), Deutschland, Vereinigtes Königreich		|Nein			|
 |Eclipse Orion-{{site.data.keyword.webide}}		|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Ja			|
 |{{site.data.keyword.gitrepos}}	|Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio, Vereinigtes Königreich		|Nein		|
@@ -335,11 +335,11 @@ Konfigurieren Sie {{site.data.keyword.deliverypipeline}}, um das kontinuierliche
 1. Geben Sie einen Namen für Ihre neue Pipeline an.
 1. Wenn Sie mithilfe Ihrer Pipeline eine Benutzerschnittstelle bereitstellen möchten, wählen Sie das Kontrollkästchen **Apps im Menü 'App anzeigen' anzeigen** aus. Alle Apps, die Ihre Pipeline erstellt, werden in der Liste **App anzeigen** auf der Übersichtsseite der Toolchain angezeigt.
 1. Klicken Sie auf **Integration erstellen**, um die {{site.data.keyword.deliverypipeline}} zu Ihrer Toolchain hinzuzufügen.
-1. Klicken Sie auf **{{site.data.keyword.deliverypipeline}}**, um die Pipeline anzuzeigen und zu konfigurieren. Die Grundlagen des Konfigurierens einer Pipeline finden Sie unter [Pipelines erstellen und bereitstellen](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}.
+1. Klicken Sie auf **{{site.data.keyword.deliverypipeline}}**, um die Pipeline anzuzeigen und zu konfigurieren. Die Grundlagen des Konfigurierens einer Pipeline finden Sie unter [Pipelines erstellen und bereitstellen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy){: new_window}.
 
   Wenn die Pipeline automatisch ausgeführt werden soll, wenn ein Commit per Push-Operation an Ihr GitHub-, {{site.data.keyword.ghe_short}}- oder Git-Repository übertragen wird, führen Sie folgende Schritte aus:
 
-   a. Konfigurieren Sie GitHub, {{site.data.keyword.ghe_short}} oder {{site.data.keyword.gitrepos}} für Ihre Toolchain, bevor Sie die Stages für Ihre Pipeline definieren. Die Pipeline-Stages benötigen die Git-URLs für Ihre Repositorys. Jede Pipeline-Stage kann nur auf eines der GitHub-, {{site.data.keyword.ghe_short}}- oder Git-Repositorys verweisen, die Ihrer Toolchain zugeordnet sind. Anweisungen zum Konfigurieren von GitHub finden Sie im Abschnitt [GitHub](#github). Anweisungen zum Konfigurieren von Dedicated {{site.data.keyword.ghe_short}} enthält die [Einführung in {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. Anweisungen zum Konfigurieren von {{site.data.keyword.gitrepos}} finden Sie im [{{site.data.keyword.gitrepos}}](#gitbluemix)-Abschnitt.
+   a. Konfigurieren Sie GitHub, {{site.data.keyword.ghe_short}} oder {{site.data.keyword.gitrepos}} für Ihre Toolchain, bevor Sie die Stages für Ihre Pipeline definieren. Die Pipeline-Stages benötigen die Git-URLs für Ihre Repositorys. Jede Pipeline-Stage kann nur auf eines der GitHub-, {{site.data.keyword.ghe_short}}- oder Git-Repositorys verweisen, die Ihrer Toolchain zugeordnet sind. Anweisungen zum Konfigurieren von GitHub finden Sie im Abschnitt [GitHub](#github). Anweisungen zum Konfigurieren von Dedicated {{site.data.keyword.ghe_short}} enthält die [Einführung in {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}. Anweisungen zum Konfigurieren von {{site.data.keyword.gitrepos}} finden Sie im [{{site.data.keyword.gitrepos}}](#gitbluemix)-Abschnitt.
 
    b. Verwenden Sie einen Web-Hook. Ohne Web-Hook können Sie Pipelines nur manuell ausführen. Damit Sie einen Web-Hook verwenden können, wenn Sie eine Verbindung zu einem GitHub- oder {{site.data.keyword.ghe_short}}-Repository herstellen, benötigen Sie Administratorberechtigungen. Zum Herstellen einer Verbindung zu einem {{site.data.keyword.gitrepos}}-Repository benötigen Sie Berechtigungen als Master oder Eigner.
 
@@ -348,7 +348,7 @@ Konfigurieren Sie {{site.data.keyword.deliverypipeline}}, um das kontinuierliche
 ### Sauce Labs-Testjob in Ihrer Pipeline konfigurieren
 {: #config_saucelabs}
 
-Bevor Sie einen Sauce Labs-Testjob in Ihrer Pipeline konfigurieren, brauchen Sie eine funktionstüchtige Pipeline, die Stages zum Erstellen und Bereitstellen Ihrer App umfasst. <ŢAußerdem müssen Sie Sauce Labs für Ihre Toolchain konfigurieren. Anweisungen zum Konfigurieren von Sauce Labs finden Sie im Abschnitt [Sauce Labs](#saucelabs).
+Bevor Sie einen Sauce Labs-Testjob in Ihrer Pipeline konfigurieren, brauchen Sie eine funktionstüchtige Pipeline, die Stages zum Erstellen und Bereitstellen Ihrer App umfasst. <Ţ Außerdem müssen Sie Sauce Labs für Ihre Toolchain konfigurieren. Anweisungen zum Konfigurieren von Sauce Labs finden Sie im Abschnitt [Sauce Labs](#saucelabs).
 
 Konfigurieren Sie die {{site.data.keyword.deliverypipeline}}, um einen Sauce Labs-Testjob hinzuzufügen:
 
@@ -386,7 +386,7 @@ Konfigurieren Sie die {{site.data.keyword.deliverypipeline}}, um einen Sauce Lab
 
 ### Weitere Informationen zu Delivery Pipeline
 
-Weitere Informationen zu {{site.data.keyword.deliverypipeline}} finden Sie in [Mit Pipelines arbeiten](/docs/services/ContinuousDelivery/pipeline_working.html){: new_window} und im Artikel zu [Delivery-Pipeline ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} in IBM Cloud Garage Method oder in den folgenden Lernprogrammen:
+Weitere Informationen zu {{site.data.keyword.deliverypipeline}} finden Sie in [Mit Pipelines arbeiten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working){: new_window} und im Artikel zu [Delivery-Pipeline ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} in IBM Cloud Garage Method oder in den folgenden Lernprogrammen:
 
   * [Erstellen Sie eine Pipeline ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:new_window}
 
@@ -446,8 +446,7 @@ Fügen Sie die Toolintegration der Eclipse Orion-{{site.data.keyword.webide}} hi
 
 ### Weitere Informationen zur Eclipse Orion-Web-IDE
 
-Weitere Informationen zur Eclipse Orion-{{site.data.keyword.webide}} finden Sie in [Code mit der Eclipse Orion-{{site.data.keyword.webide}} bearbeiten](/docs/services/ContinuousDelivery/web_ide.html){:new_window}. Führen Sie die folgenden Lernprogramme aus, um die Verwendung der Eclipse Orion-{{site.data.keyword.webide}} auszuprobieren:
- Sie können auch den [Eclipse Orion-{{site.data.keyword.webide}}-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} zur IBM Cloud Garage Method lesen. Führen Sie die folgenden Lernprogramme aus, um die Verwendung der Eclipse Orion-{{site.data.keyword.webide}} auszuprobieren:
+Weitere Informationen zur Eclipse Orion-{{site.data.keyword.webide}} finden Sie in [Code mit der Eclipse Orion-{{site.data.keyword.webide}} bearbeiten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide). Sie können auch den [Eclipse Orion-{{site.data.keyword.webide}}-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} zur IBM Cloud Garage Method lesen. Führen Sie die folgenden Lernprogramme aus, um die Verwendung der Eclipse Orion-{{site.data.keyword.webide}} auszuprobieren:
 
   * [Erstellen und verwenden Sie Ihre erste Toolchain mithilfe der Toolchain zum Entwickeln einer Cloud Foundry-App ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
 
@@ -523,7 +522,7 @@ Wenn Sie diese Toolintegration konfigurieren, während Sie die Toolchain erstell
 1. Wenn Sie Ihren Quellcode in einem GitHub-Repository speichern, klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **GitHub**. Wenn Sie diese Toolintegration unter {{site.data.keyword.Bluemix_notm}} Public konfigurieren und {{site.data.keyword.Bluemix_notm}} nicht für den Zugriff auf GitHub autorisiert haben, klicken Sie auf **Autorisieren**, um zur GitHub-Website zu wechseln. Wenn keine aktive GitHub-Sitzung existiert, werden Sie aufgefordert, sich anzumelden. Klicken Sie auf **Anwendung autorisieren**, um {{site.data.keyword.Bluemix_notm}} den Zugriff auf Ihr GitHub-Konto zu erlauben. Falls eine aktive GitHub-Sitzung existiert, Sie Ihr Kennwort aber bereits vor einiger Zeit eingegeben haben, werden Sie möglicherweise aufgefordert, Ihr GitHub-Kennwort durch erneute Eingabe zu bestätigen.
 1. Wenn Sie ein Repository auf Ihrem eigenen {{site.data.keyword.ghe_short}}-Server verwenden, klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **Angepassten Server hinzufügen**.
 
- Das Netz muss auf den Ziel-Git-Server von einer {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung aus zugreifen können. Wenn Ihr GitHub-Server nicht im öffentlichen Internet verfügbar ist oder der Hostname nicht auf dem Namen der öffentlichen Domäne (DNS) aufgelöst wird, [öffnen Sie ein Support-Ticket](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. Sie können das Support-Ticket verwenden, um eine Anfrage zum Öffnen der Netzrouten zu senden oder die DNS-Einstellungen zu aktualisieren.
+ Das Netz muss auf den Ziel-Git-Server von einer {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung aus zugreifen können. Wenn Ihr GitHub-Server nicht im öffentlichen Internet verfügbar ist oder der Hostname nicht auf dem Namen der öffentlichen Domäne (DNS) aufgelöst wird, [öffnen Sie ein Support-Ticket](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_support#support-ticket){: new_window}. Sie können das Support-Ticket verwenden, um eine Anfrage zum Öffnen der Netzrouten zu senden oder die DNS-Einstellungen zu aktualisieren.
  {: important}
 
  Geben Sie einen Titel für Ihren angepassten GitHub-Server ein und geben Sie die Stamm-URL für den Server an. Geben Sie Ihre persönlichen Zugriffstokens ein und klicken Sie dann auf **Angepasste Integration speichern**.
@@ -582,9 +581,9 @@ Mehr zu GitHub erfahren Sie im Artikel zu [GitHub ![Symbol für externen Link](.
 
  * [Verwenden Sie die Toolchain zum Entwickeln und Testen einer Cloud Foundry-App ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}.
 
-  * [Qualitativ hochwertige Bereitstellungen mit der Toolchain für Deployment Risk Analytics mit GitHub und Jenkins ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+ * [Qualitativ hochwertige Bereitstellungen mit der Toolchain für Deployment Risk Analytics mit GitHub und Jenkins ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
 
-  * [Benutzerdefinierte Toolchain erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
+ * [Benutzerdefinierte Toolchain erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
 
 
 ## GitHub Enterprise und GitHub Issues unter {{site.data.keyword.Bluemix_notm}} Dedicated konfigurieren
@@ -593,13 +592,13 @@ Mehr zu GitHub erfahren Sie im Artikel zu [GitHub ![Symbol für externen Link](.
  Diese Anweisungen gelten für {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. Wenn Sie Ihre eigene verwaltete Version von {{site.data.keyword.ghe_short}} verwenden, kann es sein, dass sich die Vorgehensweise abhängig von Ihren internen Prozeduren in einigen Schritten unterscheidet.
  {: important}
 
-{{site.data.keyword.ghe_long}} ist ein lokaler webbasierter Hosting-Service für Git-Repositorys. Dedicated {{site.data.keyword.ghe_short}} ist nur für {{site.data.keyword.Bluemix_notm}} Dedicated-Kunden verfügbar. GitHub Issues ist ein Überwachungstool, das Ihre Arbeit und Ihre Pläne an einem zentralen Ort aufbewahrt. Es ist in Ihr Entwicklungsrepository integriert, damit Sie sich auf die wichtigen Aufgaben konzentrieren können. Mehr Informationen zu Dedicated {{site.data.keyword.ghe_short}} und GitHub Issues finden Sie in der [Einführung in {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} und im [GitHub Issues-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} in IBM Cloud Garage Method.
+{{site.data.keyword.ghe_long}} ist ein lokaler webbasierter Hosting-Service für Git-Repositorys. Dedicated {{site.data.keyword.ghe_short}} ist nur für {{site.data.keyword.Bluemix_notm}} Dedicated-Kunden verfügbar. GitHub Issues ist ein Überwachungstool, das Ihre Arbeit und Ihre Pläne an einem zentralen Ort aufbewahrt. Es ist in Ihr Entwicklungsrepository integriert, damit Sie sich auf die wichtigen Aufgaben konzentrieren können. Mehr Informationen zu Dedicated {{site.data.keyword.ghe_short}} und GitHub Issues finden Sie in der [Einführung in {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window} und im [GitHub Issues-Artikel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} in IBM Cloud Garage Method.
 
-Sie können {{site.data.keyword.ghe_short}} als Toolintegration in Ihrer Toolchain konfigurieren, sodass Sie Quellcode in der Instanz von [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} Ihres Unternehmens verwalten können.
+Sie können {{site.data.keyword.ghe_short}} als Toolintegration in Ihrer Toolchain konfigurieren, sodass Sie Quellcode in der Instanz von [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} Ihres Unternehmens verwalten können.
 
 1. Wenn Sie diese Toolintegration konfigurieren, während Sie die Toolchain erstellen, führen Sie diese Schritte aus:
 
- a. Bevor Sie sich zum ersten Mal bei Dedicated {{site.data.keyword.ghe_short}} anmelden, bitten Sie den Regionsadministrator Ihres Unternehmens, Ihre Benutzer-ID aus der Benutzerregistry Ihres Unternehmens unter Verwendung von LDAP zu der {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz hinzuzufügen. Informationen zum Einrichten Ihres {{site.data.keyword.ghe_short}}-Kontos finden Sie unter [Einführung in {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}.
+ a. Bevor Sie sich zum ersten Mal bei Dedicated {{site.data.keyword.ghe_short}} anmelden, bitten Sie den Regionsadministrator Ihres Unternehmens, Ihre Benutzer-ID aus der Benutzerregistry Ihres Unternehmens unter Verwendung von LDAP zu der {{site.data.keyword.Bluemix_notm}} Dedicated-Instanz hinzuzufügen. Informationen zum Einrichten Ihres {{site.data.keyword.ghe_short}}-Kontos finden Sie unter [Einführung in {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}.
 
  b. Klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **{{site.data.keyword.ghe_short}}**.    
 
@@ -716,7 +715,7 @@ Konfigurieren Sie Jenkins, um das kontinuierliche Erstellen, Testen und Bereitst
 1. Wenn Sie diese Toolintegration konfigurieren, während Sie die Toolchain erstellen, klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **Jenkins**.
 1. Wenn Sie eine Toolchain haben und diese Toolintegration hinzufügen, klicken Sie im DevOps-Dashboard auf der Seite 'Toolchains' auf die Toolchain, um die zugehörige Übersichtsseite zu öffnen. Alternativ können Sie auf der Übersichtsseite Ihrer App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** klicken. Klicken Sie anschließend auf **Übersicht**.  
 
- a. Klicken Sie auf 
+ a. Klicken Sie auf **Tool hinzufügen**.
 
  b. Klicken Sie im Abschnitt mit den Toolintegrationen auf **Jenkins**.
 
@@ -734,7 +733,7 @@ Konfigurieren Sie Jenkins, um das kontinuierliche Erstellen, Testen und Bereitst
 1. Klicken Sie auf **Integration erstellen**.
 1. Klicken Sie von Ihrer Toolchain aus auf **Jenkins**, um den Jenkins-Server anzuzeigen.  
 
-### Weitere Informationen zu Jenkins<B
+### Weitere Informationen zu Jenkins
 
 Mehr zu Jenkins erfahren Sie im Artikel zu [Jenkins ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){: new_window} in IBM Cloud Garage Method oder in diesem Lernprogramm:
 
@@ -890,7 +889,7 @@ Konfigurieren Sie {{site.data.keyword.deliverypipeline}} durch Hinzufügen eines
   Sie finden die URL und die Benutzerberechtigungsnachweise, die Sie für die Verbindungsherstellung mit Ihrer Registry verwendet haben, in den Konfigurationseinstellungen für die Nexus-Toolintegration.
   {: tip}
 
-1. Klicken Sie auf **SPEICHERNWann immer Ihre Pipeline ausgeführt wird, verwendet dieser Buildjob die Konfigurationsinformationen aus der Nexus-Toolintegration, um eine Verbindung zu Ihrem Maven-Repository herzustellen.
+1. Klicken Sie auf **SPEICHERN**. Wann immer Ihre Pipeline ausgeführt wird, verwendet dieser Buildjob die Konfigurationsinformationen aus der Nexus-Toolintegration, um eine Verbindung zu Ihrem Maven-Repository herzustellen.
 
 ### Weitere Informationen zu Nexus
 
