@@ -37,7 +37,7 @@ défaut dans les environnements de pipeline.
 ## Propriétés d'environnement
 {: #deliverypipeline_envprop}
 
-### Propriétés générales 
+### Propriétés générales
 
 | Propriété d'environnement | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|

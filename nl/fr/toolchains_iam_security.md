@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018
-lastupdated: "2018-11-14"
+  years:  2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -17,18 +17,19 @@ lastupdated: "2018-11-14"
 
 
 # Gestion de l'accès utilisateur aux chaînes d'outils avec Identity and Access Management
+{: #toolchains-iam-security}
 
 L'accès aux chaînes d'outils des groupes de ressources pour les utilisateurs de votre compte est contrôlé par {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). 
 
 **Remarques **: 
 
-* L'accès utilisateur pour les instances de chaîne d'outils et les instances de service {{site.data.keyword.contdelivery_short}} est géré séparément. Pour plus d'informations sur la gestion de l'accès utilisateur aux instances de service {{site.data.keyword.contdelivery_short}} dans les groupes de ressources, voir [Gestion de l'accès utilisateur à {{site.data.keyword.contdelivery_short}} avec Identity and Access Management](/docs/services/ContinuousDelivery/cd_iam_security.html){: new_window}.
+* L'accès utilisateur pour les instances de chaîne d'outils et les instances de service {{site.data.keyword.contdelivery_short}} est géré séparément. Pour plus d'informations sur la gestion de l'accès utilisateur aux instances de service {{site.data.keyword.contdelivery_short}} dans les groupes de ressources, voir [Gestion de l'accès utilisateur à {{site.data.keyword.contdelivery_short}} avec Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security){: new_window}.
 
-* L'accès des utilisateurs aux chaînes d'outils dans les organisations Cloud Foundry est géré différemment de l'accès utilisateur aux instances de service {{site.data.keyword.contdelivery_short}} dans les groupes de ressources. Pour plus d'informations sur la gestion de l'accès utilisateur aux chaînes d'outils dans les organisations Cloud Foundry, voir [Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs.html){: new_window}.
+* L'accès des utilisateurs aux chaînes d'outils dans les organisations Cloud Foundry est géré différemment de l'accès utilisateur aux instances de service {{site.data.keyword.contdelivery_short}} dans les groupes de ressources. Pour plus d'informations sur la gestion de l'accès utilisateur aux chaînes d'outils dans les organisations Cloud Foundry, voir [Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
 
 Chaque utilisateur qui accède aux chaînes d'outils de votre compte doit se voir attribuer une règle d'accès avec un rôle d'utilisateur IAM défini. Cette règle détermine les actions que l'utilisateur peut effectuer dans le contexte du service ou de l'instance que vous sélectionnez. Les actions autorisées sont personnalisées et définies par le service {{site.data.keyword.Bluemix_notm}} en tant qu'opérations pouvant être réalisées sur le service. Les actions sont ensuite mappées à des rôles utilisateur IAM.
 
-Les règles permettent d'activer les accès à différents niveaux, notamment :  
+Les règles permettent d'activer les accès à différents niveaux, notamment : 
 
 * Accès à l'ensemble des instances du service sur votre compte
 * Accès à une instance de service individuelle de votre compte
@@ -60,6 +61,6 @@ d'ensemble.</li><li>Dans le tableau de bord DevOps, dans la page **Chaînes d'ou
 | delete-bindings | Supprimer une intégration d'outils d'une chaîne d'outils dans un groupe de ressources. | Administrateur, Editeur |
 {: caption="Tableau 2. Actions et opérations de service" caption-side="top"}
 
-Pour plus d'informations sur l'affectation de rôles utilisateur dans l'interface utilisateur, voir [Gestion de l'accès IAM](/docs/iam/mngiam.html#iammanidaccser).
+Pour plus d'informations sur l'affectation de rôles utilisateur dans l'interface utilisateur, voir [Gestion de l'accès IAM](/docs/iam?topic=iam-iammanidaccser).
 
 <!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

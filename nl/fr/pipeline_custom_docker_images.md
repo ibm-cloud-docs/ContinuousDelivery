@@ -48,7 +48,7 @@ Si vous utilisez un registre privé nécessitant une authentification, vous deve
 
 Dans la plupart des registres, vous pouvez utiliser le nom d'utilisateur et le mot de passe qui vous ont été fournis. Si vous utilisez {{site.data.keyword.registrylong_notm}} pour stocker vos images privées, vous devez utiliser une clé d'API de plateforme pour l'authentification. 
 
-1. [Demandez une clé d'API de plateforme  ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/iam/#/apikeys){: new_window} et sauvegardez la clé. 
+1. [Demandez une clé d'API de plateforme ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/iam/#/apikeys){: new_window} et sauvegardez la clé. 
 1. Créez les propriétés d'environnement en deux étapes en utilisant `iamapikey` comme votre `DOCKER_USERNAME` et la clé d'API de plateforme sauvegardée comme `DOCKER_PASSWORD`.
 
  Données d'identification ![{{site.data.keyword.registrylong_notm}}](images/custom-image-private-repository.png)

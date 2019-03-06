@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2018
-lastupdated: "2018-12-12"
+  years: 2015，2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -49,7 +49,7 @@ Lorsqu'une application Node.js est en mode édition directe, vous pouvez ouvrir 
 ##Edition directe
 {: #live-edit}
 
-Si vous générez une application Node.js qui s'exécute sur {{site.data.keyword.Bluemix_notm}}, la fonction Edition directe d'{{site.data.keyword.Bluemix_notm}} Live Sync peut mettre rapidement à jour l'instance d'application. La fonction Edition directe est uniquement disponible dans l'interface IDE Web. Vous pouvez utiliser le mode Edition directe pour développer comme vous le feriez sur le bureau, sans avoir à redéployer. 
+Si vous générez une application Node.js qui s'exécute sur {{site.data.keyword.Bluemix_notm}}, la fonction Edition directe d'{{site.data.keyword.Bluemix_notm}} Live Sync peut mettre rapidement à jour l'instance d'application. La fonction Edition directe est uniquement disponible dans l'interface IDE Web. Vous pouvez utiliser le mode Edition directe pour développer comme vous le feriez sur le bureau, sans avoir à redéployer.
 
 La fonction Edition directe est uniquement prise en charge pour les applications Node.js.
 
@@ -151,7 +151,3 @@ L'initialisation du débogueur peut durer environ une minute.
 1. Restaurez la version Node.js, la commande start et la valeur de mémoire d'origine de l'application.
 
 2. Déployez l'application.
-
-### Informations complémentaires
-
-* Voir [Eclipse tools for {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-18"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 
@@ -28,7 +28,7 @@ Lorsqu'un utilisateur clique sur votre bouton, les actions suivantes se produise
 
 3. Une chaîne d'outils est créée. Elle inclut un nouveau clone privé de votre référentiel Git, un pipeline pour la génération et le déploiement des modifications de code, l'interface Eclipse Orion {{site.data.keyword.webide}} pour l'édition du code sur le cloud, et un dispositif de suivi de problèmes.
 
-  Si le répertoire `.bluemix` contient un fichier `toolchain.yml`, celui-ci est utilisé pour spécifier les intégrations d'outils pour la chaîne d'outils. Pour plus d'informations sur le fichier `toolchain.yml`, voir [Création de chaînes d'outils personnalisées](/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom){: new_window}.
+  Si le répertoire `.bluemix` contient un fichier `toolchain.yml`, celui-ci est utilisé pour spécifier les intégrations d'outils pour la chaîne d'outils. Pour plus d'informations sur le fichier `toolchain.yml`, voir [Création de chaînes d'outils personnalisées](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}.
   {: tip}
 
 4. Si l'application requiert un fichier de génération, celui-ci est détecté automatiquement et l'application est générée.
@@ -113,7 +113,7 @@ Afin de configurer le pipeline pour la chaîne d'outils dans un répertoire `.bl
 
 Si vous n'avez pas de fichier `pipeline.yml` dans le répertoire `.bluemix`, le bouton Déployer dans {{site.data.keyword.Bluemix_notm}} créera un pipeline par défaut avec deux étapes : une étape de génération et une étape de déploiement déployant dans Cloud Foundry.
 
-Pour créer un fichier de pipeline, examinez l'exemple de fichier dans la rubrique [Création de modèles de chaîne d'outils personnalisés](toolchains_custom.html#toolchains_custom_pipeline_yml). Tout comme vous définissez un pipeline dans l'interface Web, vous définissez un pipeline dans du texte en créant des étapes et des travaux, en définissant des entrées et des variables d'environnement et en ajoutant des scripts. Vous pouvez également visualiser un certain nombre de fichiers de pipeline plus complexes dans [ce projet de démonstration](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix).
+Pour créer un fichier de pipeline, examinez l'exemple de fichier dans la rubrique [Création de modèles de chaîne d'outils personnalisés](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml). Tout comme vous définissez un pipeline dans l'interface Web, vous définissez un pipeline dans du texte en créant des étapes et des travaux, en définissant des entrées et des variables d'environnement et en ajoutant des scripts. Vous pouvez également visualiser un certain nombre de fichiers de pipeline plus complexes dans [ce projet de démonstration](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix).
 
 ### Exigences relative au fichier Dockerfile d'un conteneur
 {: container_dockerfile}
@@ -133,4 +133,4 @@ Pour créer manuellement un fichier `pipeline.yml` spécifiquement pour les cont
 
 La présence d'un fichier `manifest.yml` n'est pas requise dans votre référentiel. Toutefois, si votre application requiert l'exécution d'autres services, vous devez fournir un fichier manifeste qui déclare ces services.
 
-Pour en savoir plus sur les fichiers manifeste, voir [Manifeste d'application](/docs/cloud-foundry/deploy-apps.html#appmanifest).
+Pour en savoir plus sur les fichiers manifeste, voir [Manifeste d'application](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).

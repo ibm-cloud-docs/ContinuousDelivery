@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-2-8"
 
 ---
 
@@ -30,9 +30,9 @@ Vous pouvez gérer votre code source dans un référentiel GitHub, GitHub Enterp
 
 | Type Git  | Configuration HTTPS | Utilisation HTTPS |  Configuration SSH |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Jeton d'accès personnel](/docs/services/ContinuousDelivery/git_working.html#git_authentication) | Nom d'utilisateur Git Repos and Issue Tracking (pas votre ID IBM) et jeton d'accès personnel | [Configurer la clé SSH](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
-| Public GitHub (github.com) | Le jeton d'accès personnel n'est pas requis, mais vous pouvez en configurer un et l'utiliser | Nom d'utilisateur et mot de passe GitHub ou nom d'utilisateur GitHub et jeton d'accès personnel ou simplement jeton d'accès personnel comme nom d'utilisateur | [Configurer  une clé SSH GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-| GitHub Enterprise | [Jeton d'accès personnel](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | Nom d'utilisateur GitHub Enterprise (pas votre ID IBM) et jeton d'accès personnel | [Configurer la clé SSH GitHub Enterprise](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
+| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Jeton d'accès personnel](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) | Nom d'utilisateur Git Repos and Issue Tracking (pas votre ID IBM) et jeton d'accès personnel | [Configurer la clé SSH](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |
+| Public GitHub (github.com) | Le jeton d'accès personnel n'est pas requis, mais vous pouvez en configurer un et l'utiliser | Nom d'utilisateur et mot de passe GitHub ou nom d'utilisateur GitHub et jeton d'accès personnel ou simplement jeton d'accès personnel comme nom d'utilisateur | [Configurer une clé SSH GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
+| GitHub Enterprise | [Jeton d'accès personnel](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) | Nom d'utilisateur GitHub Enterprise (pas votre ID IBM) et jeton d'accès personnel | [Configurer la clé SSH GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |
 
 Si vous préférez utiliser SSH, vous pouvez réutiliser une seule et même clé sur tous les serveurs Git. Créez ou recherchez votre clé et configurez-la dans chaque serveur comme indiqué dans les liens précédents. Si vous créez votre clé avec une phrase passe, vous êtes invité à entrer cette phrase passe lorsque vous utilisez la clé.
 {: tip}
@@ -55,7 +55,7 @@ Créez une copie locale des fichiers de projet en clonant le référentiel Git d
 
 2. Constituez l'URL de votre référentiel :
 
-   a. Dans GitHub, cliquez sur **Clone or download**. Pour utiliser HTTPS, sélectionnez **Use HTTPS**.  Pour utiliser SSH, cliquez sur  **Use SSH**. Cliquez sur l'icône représentant un presse-papiers pour copier l'URL.
+   a. Dans GitHub, cliquez sur **Clone or download**. Pour utiliser HTTPS, sélectionnez **Use HTTPS**.  Pour utiliser SSH, cliquez sur **Use SSH**. Cliquez sur l'icône représentant un presse-papiers pour copier l'URL.
 
    b. Dans Git Repos and Issue Tracking, sélectionnez **HTTPS** ou **SSH** et copiez l'URL dans la zone.
 
@@ -75,18 +75,4 @@ Une fois le téléchargement terminé, vous disposez d'une version locale des fi
 {: #git_egit}
 
 Si vous utilisez Eclipse et possédez un projet qui utilise Git pour le contrôle des sources, vous pouvez utiliser le plug-in EGit pour gérer votre référentiel à partir d'Eclipse. Pour savoir comment installer et configurer EGit, voir le [tutoriel EGit ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
-Si vous rencontrez des difficultés lors de l'utilisation de Git Repos and Issue Tracking, voir [Git Repos and Issue Tracking](git_working.html#git_local).
-
-## Développement à l'aide d'IBM Eclipse Tools
-{: #git_eclipse_tools}
-
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} fournit des plug-in que vous pouvez installer dans un environnement Eclipse pour intégrer votre IDE à {{site.data.keyword.Bluemix_notm}}.
-
-Avec les outils, vous pouvez déployer les types de fichiers et de serveurs suivants dans {{site.data.keyword.Bluemix_notm}} directement à partir de votre interface Eclipse IDE ou d'IBM WebSphere&reg; Application Server Developer Tools (WDT) :
-
-* Fichiers JavaScript
-* Fichiers WAR (archive Web)
-* Fichiers EAR (archive d'entreprise)
-* Serveurs de packages Liberty Profile
-
-Vous pouvez également créer des services et les lier à votre application, et définir des variables d'environnement dans le cadre du déploiement. Pour en savoir plus sur IBM Eclipse Tools, [voir Déploiement d'applications à l'aide d'IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html).
+Si vous rencontrez des difficultés lors de l'utilisation de Git Repos and Issue Tracking, voir [Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local).

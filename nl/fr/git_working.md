@@ -38,7 +38,7 @@ Cette intégration d'outil étant basée sur GitLab Community Edition et héberg
 {: tip}
 
 ## Utilisation de {{site.data.keyword.gitrepos}} localement
-{: #git_local}
+{: #git_locally}
 
 Vous pouvez accéder localement aux référentiels Git stockés dans {{site.data.keyword.gitrepos}}. Pour savoir comment configurer un référentiel Git localement, voir [Start using Git on the command line ![Icône delien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
 

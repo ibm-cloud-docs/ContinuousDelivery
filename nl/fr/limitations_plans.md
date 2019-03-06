@@ -23,7 +23,7 @@ Les plans de service de {{site.data.keyword.contdelivery_short}} sont définis e
  * Les utilisateurs qui manipulent, déclenchent (soit directement dans l'interface utilisateur, soit indirectement en s'engageant dans un référentiel), ou visualisent l'état d'un pipeline de distribution.
  * Les utilisateurs qui interagissent avec Eclipse Orion {{site.data.keyword.webide}}.
  
-### Comment les utilisateurs sont-ils comptabilisés pour les instances de  {{site.data.keyword.contdelivery_short}} dans les organisations ?
+### Comment les utilisateurs sont-ils comptabilisés pour les instances de {{site.data.keyword.contdelivery_short}} dans les organisations ?
 
 Les utilisateurs autorisés sont comptabilisés en consultant tous les utilisateurs dans l'organisation Cloud contenus par le service {{site.data.keyword.contdelivery_short}}. 
 

@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -32,16 +32,16 @@ Pour la gestion du code source et le suivi des problèmes, {{site.data.keyword.B
 
 {{site.data.keyword.contdelivery_short}} est disponible sur {{site.data.keyword.Bluemix_notm}} Public dans des régions sélectionnées et sur {{site.data.keyword.Bluemix_notm}} Dedicated. Les chaînes d'outils varient selon que vous utilisez {{site.data.keyword.contdelivery_short}} sur {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-Bien que les chaînes d'outils ne soient pas disponibles dans toutes les régions actuellement, vous pouvez configurer votre chaîne d'outils pour déployer vos applications dans toutes les régions. Pour en savoir plus, essayez le tutoriel <a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Déploiement d'une application Web sécurisée dans plusieurs régions</a>.
+Bien que les chaînes d'outils ne soient pas disponibles dans toutes les régions actuellement, vous pouvez configurer votre chaîne d'outils pour déployer vos applications dans toutes les régions. Pour en savoir plus, essayez le tutoriel [Déploiement d'une application Web sécurisée dans plusieurs régions](/docs/tutorials?topic=solution-tutorials-multi-region-webapp){: new_window}.
 {: tip}
 
 |Chaînes d'outils |{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
-|Intégrations d'outils 		|Pour obtenir une liste des intégrations d'outils prises en charge, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}. 		|Les intégrations d'outils disponibles dépendent de la configuration de {{site.data.keyword.contdelivery_short}} dans votre environnement.			|
+|Intégrations d'outils 		|Pour obtenir une liste des intégrations d'outils prises en charge, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}. 		|Les intégrations d'outils disponibles dépendent de la configuration de {{site.data.keyword.contdelivery_short}} dans votre environnement.			|
 |Création d'une chaîne d'outils à partir d'un modèle		|Connectez-vous à [{{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://cloud.ibm.com/devops){:new_window}		|Connectez-vous à votre environnement Dedicated sur {{site.data.keyword.Bluemix_notm}}.			|
 |Création d'une chaîne d'outils à partir d'une application		|L'application est configurée pour la distribution continue depuis un nouveau référentiel GitHub rempli avec le code de démarrage d'application.		|L'application est configurée pour la distribution continue depuis un nouveau référentiel GitHub ou GitHub Enterprise rempli avec le code de démarrage d'application.		|  
 |Régions de déploiement du pipeline de distribution		|Toutes les régions {{site.data.keyword.Bluemix_notm}} Public sont disponibles pour des travaux de déploiement Cloud Foundry. 		|La région {{site.data.keyword.Bluemix_notm}} Dedicated est disponible. D'autres régions dédiées ou locales au sein du même compte client peuvent également être disponibles en fonction de la configuration de {{site.data.keyword.contdelivery_short}} dans votre environnement spécifique.		|
-|Travaux de déploiement du pipeline de distribution		|Tous les [types de travaux](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs) sont disponibles.		|Les types de travaux dépendant de services {{site.data.keyword.Bluemix_notm}} qui ne sont pas installés dans l'environnement dédié risquent de ne pas être disponibles.	Par exemple, les types de travaux de génération et de déploiement de conteneur peuvent ne pas être disponibles dans les environnements ne disposant pas de {{site.data.keyword.containerlong_notm}}.	|
+|Travaux de déploiement du pipeline de distribution		|Tous les [types de travaux](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs) sont disponibles.		|Les types de travaux dépendant de services {{site.data.keyword.Bluemix_notm}} qui ne sont pas installés dans l'environnement dédié risquent de ne pas être disponibles.	Par exemple, les types de travaux de génération et de déploiement de conteneur peuvent ne pas être disponibles dans les environnements ne disposant pas de {{site.data.keyword.containerlong_notm}}.	|
 {: caption="Tableau 1. Différences entre les chaînes d'outils sur {{site.data.keyword.Bluemix_notm}} Dedicated et {{site.data.keyword.Bluemix_notm}} Public" caption-side="top"}
 
 
@@ -230,7 +230,6 @@ Essayez les tutoriels :
 
 <ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app" target="_blank">Ajouter une chaîne d'outils à une application <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a></li>
 <li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Créer une chaîne d'outils personnalisée <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a></li>
-<li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Déployer une application Web sécurisée dans plusieurs régions</a></li>
 </ul></td>
 <td><ul><li>{{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}

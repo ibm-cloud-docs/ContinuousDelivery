@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-29"
+  years: 2016, 2019
+lastupdated: "2019-2-15"
 ---
 
 {:shortdesc: .shortdesc}
@@ -22,14 +22,14 @@ lastupdated: "2018-11-29"
 {{site.data.keyword.contdelivery_full}} inclut Delivery Pipeline qui vous permet de générer, tester et déployer d'une manière reproductible avec un minimum d'intervention humaine. Dans un pipeline, des séquences d'étapes permettent d'extraire des entrées et d'exécuter des travaux, par exemple, des générations, des tests et des déploiements.
 {:shortdesc}
 
-Vos autorisations pour afficher, modifier ou exécuter un pipeline dépendent du contrôle d'accès de la chaîne d'outils propriétaire du pipeline. Pour plus d'informations sur le contrôle d'accès des chaînes d'outils, voir [Gestion de l'accès aux chaînes d'outils dans les groupes de ressources](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} et [Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
+Vos autorisations pour afficher, modifier ou exécuter un pipeline dépendent du contrôle d'accès de la chaîne d'outils propriétaire du pipeline. Pour plus d'informations sur le contrôle d'accès des chaînes d'outils, voir [Gestion de l'accès aux chaînes d'outils dans les groupes de ressources](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window} et [Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
 {: important}
 
-Vous pouvez spécifier l'exécution de scripts dans plusieurs types de travaux fournis par le pipeline pour obtenir un contrôle direct de ce qui est exécuté par le travail. Ces scripts s'exécutent dans une image Docker contenant une série d'outils de développement standard, y compris les outils requis pour interagir avec les environnements d'exécution {{site.data.keyword.Bluemix_notm}}. Pour en savoir plus sur ce que contient l'image Docker standard, voir [Ressources préinstallées](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}. Si votre travail requiert des outils de développement qui ne sont pas disponibles dans l'image standard ou si vous avez besoin de versions différentes de ces outils, vous pouvez utiliser une image personnalisée. Pour en savoir plus sur les images personnalisées, voir [Utilisation des images Docker personnalisées](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}.
+Vous pouvez spécifier l'exécution de scripts dans plusieurs types de travaux fournis par le pipeline pour obtenir un contrôle direct de ce qui est exécuté par le travail. Ces scripts s'exécutent dans une image Docker contenant une série d'outils de développement standard, y compris les outils requis pour interagir avec les environnements d'exécution {{site.data.keyword.Bluemix_notm}}. Pour en savoir plus sur ce que contient l'image Docker standard, voir [Ressources préinstallées](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}. Si votre travail requiert des outils de développement qui ne sont pas disponibles dans l'image standard ou si vous avez besoin de versions différentes de ces outils, vous pouvez utiliser une image personnalisée. Pour en savoir plus sur les images personnalisées, voir [Utilisation des images Docker personnalisées](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}.
 
-Lorsque le pipeline exécute les scripts, les propriétés qui décrivent le contexte où le travail s'exécute sont transmises au script à l'aide des variables d'environnement. Par exemple, l'URL du référentiel qui est l'entrée de l'étape, le nom de l'étape et le travail qui est exécuté, les paramètres spécifiés par le type de travail, etc. Pour afficher une liste des variables d'environnement disponibles, voir [Ressources préinstallées](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}. 
+Lorsque le pipeline exécute les scripts, les propriétés qui décrivent le contexte où le travail s'exécute sont transmises au script à l'aide des variables d'environnement. Par exemple, l'URL du référentiel qui est l'entrée de l'étape, le nom de l'étape et le travail qui est exécuté, les paramètres spécifiés par le type de travail, etc. Pour afficher une liste des variables d'environnement disponibles, voir [Ressources préinstallées](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). 
 
-Vous pouvez définir les propriétés au niveau du pipeline et au niveau de l'étape. Les propriétés d'un pipeline sont partagées entre toutes les étapes et tous les travaux d'un pipeline. Les propriétés d'étape sont spécifiques à une étape particulière et sont partagées entre tous les travaux de cette étape. Pour en savoir plus sur les propriétés, voir [Propriétés d'environnement (variables d'environnement)](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties).
+Vous pouvez définir les propriétés au niveau du pipeline et au niveau de l'étape. Les propriétés d'un pipeline sont partagées entre toutes les étapes et tous les travaux d'un pipeline. Les propriétés d'étape sont spécifiques à une étape particulière et sont partagées entre tous les travaux de cette étape. Pour en savoir plus sur les propriétés, voir [Propriétés d'environnement (variables d'environnement)](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties).
 
 ## Etapes
 {: #deliverypipeline_stages}
@@ -63,7 +63,7 @@ Les types de générateurs suivants sont disponibles :
   * **Script de génération** - Ce type de générateur peut être n'importe quel script de génération valide. Par défaut, ce type de générateur est défini sur 'ant'.
   * **Répertoire de travail** - Spécifie le répertoire où le script s'exécute.
   * **Répertoire d'archivage de génération** - Spécifie le répertoire qui contient la sortie du travail à archiver pour être utilisé par une étape ultérieure.
-  * **Activer le rapport de test** - Sélectionnez cette case pour spécifier que le travail de génération exécute des tests qui produisent des fichiers de résultat au format JUnit XML. Un rapport basé sur les fichiers de résultats est affiché sur l'onglet Tests de la page de résultat de travail. Si un test échoue, le travail est marqué comme ayant échoué. 
+  * **Activer le rapport de test** - Sélectionnez cette case pour spécifier que le travail de génération exécute des tests qui produisent des fichiers de résultat au format JUnit XML. Un rapport basé sur les fichiers de résultats est affiché sur l'onglet Tests de la page de résultat de travail. Si un test échoue, le travail est marqué comme ayant échoué.
   * **Activer le rapport de couverture du code** - Sélectionnez cette case pour afficher plus de zones que vous pouvez utiliser pour le rapport de couverture du code. Vous pouvez spécifier le module d'exécution de couverture (comme Istanbul, JaCoCo ou Cobertura), l'emplacement du fichier de résultat de couverture et le répertoire de résultat de couverture, par rapport au répertoire de travail.
 * **Container Registry**
 * **Gradle (Artifactory, Nexus ou SonarQube)
@@ -113,7 +113,7 @@ Une fois qu'un travail est exécuté, le conteneur qui a été créé pour lui e
 L'exécution des travaux peut prendre jusqu'à 60 minutes. Lorsqu'un travail dépasse cette limite, il échoue. Si un travail dépasse la limite, scindez-le en plusieurs travaux. Par exemple, si un travail effectue trois tâches, vous pouvez le scinder en trois travaux, un pour chaque tâche.
 {: tip}
 
-Pour savoir comment ajouter un travail à une étape, voir [Ajout d'un travail à une étape](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}.
+Pour savoir comment ajouter un travail à une étape, voir [Ajout d'un travail à une étape](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}.
 
 ### Travaux de génération
 
@@ -125,9 +125,9 @@ vous laissez la zone vide, l'archivage est effectué dans le répertoire racine.
 Si vous utilisez le type de générateur **Simple**, votre code n'est pas compilé ni généré ; il est conditionné et rendu disponible pour des étapes ultérieures.
 {: tip}
 
-Lorsque vous effectuez un déploiement à l'aide de la technologie Cloud Foundry, celle-ci inclut les artefacts appropriés permettant à votre application de s'exécuter. Pour plus d'informations, voir [Déploiement d'applications avec la commande cf](/docs/cloud-foundry/deploy-apps.html#dep_apps). Le pipeline pour une application Cloud Foundry contient une étape de déploiement qui exécute une commande cf.
+Lorsque vous effectuez un déploiement à l'aide de la technologie Cloud Foundry, celle-ci inclut les artefacts appropriés permettant à votre application de s'exécuter. Pour plus d'informations, voir [Déploiement d'applications avec la commande cf](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps). Le pipeline pour une application Cloud Foundry contient une étape de déploiement qui exécute une commande cf.
 
-Cloud Foundry tente de [détecter le pack de construction à utiliser![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.cloudfoundry.org/buildpacks/detection.html). Vous pouvez spécifier le [pack de construction](/docs/cfapps/byob.html#using-community-buildpacks) à utiliser dans le fichier manifeste dans le dossier principal de votre application. En général, les packs de construction examinent les artefacts fournis par l'utilisateur afin d'identifier les dépendances à télécharger et de déterminer comment configurer les applications pour qu'elles communiquent avec des services liés. Pour plus d'informations sur les fichiers manifeste, voir [Manifeste d'application](/docs/cloud-foundry/deploy-apps.html#appmanifest).
+Cloud Foundry tente de [détecter le pack de construction à utiliser![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.cloudfoundry.org/buildpacks/detection.html). Vous pouvez spécifier le [pack de construction](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) à utiliser dans le fichier manifeste dans le dossier principal de votre application. En général, les packs de construction examinent les artefacts fournis par l'utilisateur afin d'identifier les dépendances à télécharger et de déterminer comment configurer les applications pour qu'elles communiquent avec des services liés. Pour plus d'informations sur les fichiers manifeste, voir [Manifeste d'application](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest).
 
 ### Travaux de déploiement
 
@@ -135,8 +135,7 @@ Les travaux de déploiement téléchargent votre projet vers {{site.data.keyword
 
 Les travaux de déploiement peuvent déployer de nouvelles applications ou mettre à jour des applications existantes. Même si vous déployez une application à l'aide d'une autre méthode, par exemple, l'interface de ligne de commande Cloud Foundry ou la barre d'exécution de l'interface IDE Web, vous pouvez mettre à jour l'application à l'aide d'un travail de déploiement. Pour mettre à jour une application, dans le travail de déploiement, utilisez le nom de cette application.
 
-Vous pouvez effectuer le déploiement dans une ou plusieurs régions et dans un ou plusieurs services. Par exemple, vous pouvez configurer votre {{site.data.keyword.deliverypipeline}} en vue d'utiliser un ou plusieurs services, le tester dans une région, et le déployer en production dans plusieurs régions. Pour plus d'informations, voir
-[Régions](/docs/overview/ibm-cloud.html#ov_intro-reg){: new_window}.
+Vous pouvez effectuer le déploiement dans une ou plusieurs régions et dans un ou plusieurs services. Par exemple, vous pouvez configurer votre {{site.data.keyword.deliverypipeline}} en vue d'utiliser un ou plusieurs services, le tester dans une région, et le déployer en production dans plusieurs régions.
 
 ### Travaux de test
 Si vous voulez exiger que des conditions soient respectées, ajoutez des travaux de test avant ou après vos travaux de génération et de déploiement. Vous pouvez personnaliser des travaux de test pour qu'ils soient simples ou complexes selon vos besoins. Par exemple, vous pouvez exécuter une commande cURL et attendre une réponse spécifique. Vous pouvez également exécuter une suite de tests unitaires ou des tests fonctionnels avec des services de test tiers, tels que Sauce Labs.
@@ -147,7 +146,7 @@ résultats au format JUnit XML, un rapport qui s'appuie sur les fichiers de rés
 ## Propriétés d'environnement (variables d'environnement)
 {: #environment_properties}
 
-Un ensemble de propriétés d'environnement prédéfinies donne accès à des informations sur l'environnement d'exécution du travail. Pour obtenir une liste complète des propriétés d'environnement prédéfinies, voir [Propriétés et ressources d'environnement](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
+Un ensemble de propriétés d'environnement prédéfinies donne accès à des informations sur l'environnement d'exécution du travail. Pour obtenir une liste complète des propriétés d'environnement prédéfinies, voir [Propriétés et ressources d'environnement](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment).
 
 Vous pouvez également définir vos propres propriétés d'environnement. Par exemple, vous pouvez définir une propriété `API_KEY` qui transmet une clé d'API qui est utilisée pour accéder aux ressources {{site.data.keyword.Bluemix_notm}} par tous les scripts du pipeline.
 
@@ -188,13 +187,13 @@ Tous les travaux commencent à exécuter le fichier `build.properties`, s'il exi
 ## Création et utilisation d'artefacts
 {: #artifacts}
 
-Les travaux de génération extraient automatiquement le contenu du dossier en cours dans lequel le script utilisateur est exécuté. Si vous n'avez pas besoin de tout le contenu du référentiel git pour un déploiement ultérieur, il est préférable de configurer un répertoire de sortie explicite puis de copier ou créer les artefacts pertinents. Les scripts de travail sont exécutés dans le résultat de génération (répertoire de sortie).
+Les travaux de génération extraient automatiquement le contenu du dossier en cours dans lequel le script utilisateur est exécuté.  Si vous n'avez pas besoin de tout le contenu du référentiel git pour un déploiement ultérieur, il est préférable de configurer un répertoire de sortie explicite puis de copier ou créer les artefacts pertinents.  Les scripts de travail sont exécutés dans le résultat de génération (répertoire de sortie).
 
 Les travaux qui sont déployés sur Cloud Foundry doivent spécifier la clé d'API de plateforme d'un utilisateur sous l'autorité duquel les travaux sont exécutés, ainsi que la région, l'organisation et l'espace où les artefacts doivent être déployés. Si d'autres services sont requis pour exécuter votre application, vous devez les spécifier dans le fichier `manifest.yml`.
 
-Les travaux de déploiement déployés sur {{site.data.keyword.containerlong_notm}} doivent spécifier la clé d'API de plateforme d'un utilisateur sous l'autorité duquel les travaux sont exécutés, un fichier Dockerfile et éventuellement une charte Helm.   
+Les travaux de déploiement déployés sur {{site.data.keyword.containerlong_notm}} doivent spécifier la clé d'API de plateforme d'un utilisateur sous l'autorité duquel les travaux sont exécutés, un fichier Dockerfile et éventuellement une charte Helm.  
 
-Le script de travail s'exécute après la connexion du travail à l'environnement cible à l'aide de la clé d'API de plateforme qui lui est attribuée (vous pouvez donc exécuter des commandes `cf push` ou `kubectl` dans le script). 
+Le script de travail s'exécute après la connexion du travail à l'environnement cible à l'aide de la clé d'API de plateforme qui lui est attribuée (vous pouvez donc exécuter des commandes `cf push` ou `kubectl` dans le script).
 
 ## Exemple de pipeline
 {: #deliverypipeline_example}
@@ -216,7 +215,7 @@ Les étapes prennent leur entrée dans des référentiels et des travaux de gén
 ## Fichiers manifeste de Cloud Foundry
 {: #deliverypipeline_manifest}
 
-Les fichiers manifeste, qui sont appelés `manifest.yml` et sont stockés dans le répertoire racine d'un projet, contrôlent la façon dont votre projet est déployé dans {{site.data.keyword.Bluemix_notm}}. Pour obtenir des informations sur la création des fichiers manifeste pour un projet, consultez la documentation [{{site.data.keyword.Bluemix_notm}} sur les manifestes d'application](/docs/cloud-foundry/deploy-apps.html#appmanifest). Pour s'intégrer à {{site.data.keyword.Bluemix_notm}}, votre projet doit contenir un fichier manifeste dans son répertoire racine. Toutefois, vous n'êtes pas obligé d'effectuer le déploiement conformément aux informations du fichier.
+Les fichiers manifeste, qui sont appelés `manifest.yml` et sont stockés dans le répertoire racine d'un projet, contrôlent la façon dont votre projet est déployé dans {{site.data.keyword.Bluemix_notm}}. Pour obtenir des informations sur la création des fichiers manifeste pour un projet, consultez la documentation [{{site.data.keyword.Bluemix_notm}} sur les manifestes d'application](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest). Pour s'intégrer à {{site.data.keyword.Bluemix_notm}}, votre projet doit contenir un fichier manifeste dans son répertoire racine. Toutefois, vous n'êtes pas obligé d'effectuer le déploiement conformément aux informations du fichier.
 
 Dans le pipeline, vous pouvez spécifier tout ce qu'un fichier manifeste peut faire à l'aide des arguments de commande `cf push`. Les arguments de commande `cf push` sont utiles dans les projets qui possèdent plusieurs projets de déploiement. Si plusieurs travaux de déploiement tentent d'utiliser la route spécifiée dans le fichier manifeste du projet, un conflit se produit.
 

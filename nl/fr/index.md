@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-7"
 
 ---
 
@@ -27,9 +27,9 @@ pouvez commencer en créant une chaîne d'outils de déploiement simple qui pren
 ##Conditions préalables requises
 {: #cd_prereqs}
 
-Pour créer une chaîne d’outils de distribution continue à partir d’un modèle, vous devez d'abord créer une instance de {{site.data.keyword.contdelivery_short}} en la sélectionnant dans le catalogue {{site.data.keyword.Bluemix_notm}}. La chaîne d'outils intègre des outils destinés à la planification, au développement, au déploiement de pipelines et à la gestion de vos applications. Vous pouvez toujours ajouter ou retirer des outils dans vos chaînes d'outils. Si vous disposez déjà de chaînes d'outils, vous pouvez [afficher les chaînes d'outils existantes](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}. Pour plus d'informations sur l'utilisation des chaînes d'outils, voir [Utilisation des chaînes d'outils](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
+Pour créer une chaîne d’outils de distribution continue à partir d’un modèle, vous devez d'abord créer une instance de {{site.data.keyword.contdelivery_short}} en la sélectionnant dans le catalogue {{site.data.keyword.Bluemix_notm}}. La chaîne d'outils intègre des outils destinés à la planification, au développement, au déploiement de pipelines et à la gestion de vos applications. Vous pouvez toujours ajouter ou retirer des outils dans vos chaînes d'outils. Si vous disposez déjà de chaînes d'outils, vous pouvez [afficher les chaînes d'outils existantes](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing_a_toolchain){: new_window}. Pour plus d'informations sur l'utilisation des chaînes d'outils, voir [Utilisation des chaînes d'outils](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using){: new_window}.
 
-Si vous disposez déjà d'une instance de {{site.data.keyword.contdelivery_short}}, vous pouvez [créer une chaîne d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops/create){: new_window} ou [afficher les chaînes d'outils existantes](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}.
+Si vous disposez déjà d'une instance de {{site.data.keyword.contdelivery_short}}, vous pouvez [créer une chaîne d'outils ![External link icon](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops/create){: new_window} ou [afficher les chaînes d'outils existantes ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops/toolchains){: new_window}.
 {: tip}
 
 ##Etape 1 : Sélectionner un modèle de chaîne d'outils
@@ -55,7 +55,7 @@ Si vous disposez déjà d'une instance de {{site.data.keyword.contdelivery_short
    Les groupes de ressources sont disponibles dans les régions Sud des Etats-Unis, Est des Etats-Unis, Royaume-Uni, Allemagne et Tokyo. Les organisations Cloud Foundry sont prises en charge dans les régions Sud des Etats-Unis, Royaume-Uni et Allemagne.
    {: important}
  
-1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Cliquez sur **Créer**. Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient en fonction du modèle de chaîne d'outils que vous avez sélectionné et selon que vous utilisez {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dedicated. Par exemple, lorsque vous créez une chaîne d'outils Microservices sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :
 
  * La chaîne d'outils est créée.

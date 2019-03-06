@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -61,14 +61,14 @@ Lorsque vous tentez de créer une chaîne d'outils dans une organisation, si vou
 {: #plan_exceeded}
 {: faq}
 
-{{site.data.keyword.contdelivery_short}} propose deux plans : Lite et Professional. Si vous disposez du plan Lite {{site.data.keyword.contdelivery_short}}, vous pouvez utiliser les chaînes d'outils gratuitement, dans les limites du plan. Le message d'erreur indique que vous avez dépassé une ou plusieurs limites du plan Lite. Par exemple, vous pouvez dépasser le plan si un trop grand nombre d'utilisateurs autorisés sont associés à l'instance de service {{site.data.keyword.contdelivery_short}} ou si vous avez exécuté le nombre maximal de travaux {{site.data.keyword.deliverypipeline}}. Pour plus d'informations sur les conditions de votre plan, voir [Utilisations des plans et limitations](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+{{site.data.keyword.contdelivery_short}} propose deux plans : Lite et Professional. Si vous disposez du plan Lite {{site.data.keyword.contdelivery_short}}, vous pouvez utiliser les chaînes d'outils gratuitement, dans les limites du plan. Le message d'erreur indique que vous avez dépassé une ou plusieurs limites du plan Lite. Par exemple, vous pouvez dépasser le plan si un trop grand nombre d'utilisateurs autorisés sont associés à l'instance de service {{site.data.keyword.contdelivery_short}} ou si vous avez exécuté le nombre maximal de travaux {{site.data.keyword.deliverypipeline}}. Pour plus d'informations sur les conditions de votre plan, voir [Utilisations des plans et limitations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
 
 
 ## J'ai créé une chaîne d'outils, pourquoi la page Chaînes d'outils indique-t-elle qu'un service Continuous Delivery est requis ?
 {: #service_required_resource_group}
 {: faq}
 
-Les dispositions du plan pour l'instance de service {{site.data.keyword.contdelivery_short}} qui se trouve dans le même groupe de ressources ou la même organisation que la chaîne d'outils gèrent l'utilisation de certaines des intégrations d'outils ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} et {{site.data.keyword.gitrepos}}) contenues dans le service. Le message d'erreur indique que le groupe de ressources ou l'organisation ne contient pas l'instance requise du service {{site.data.keyword.contdelivery_short}}. Pour plus d'informations sur les conditions de votre plan, voir [Utilisations des plans et limitations](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}.
+Les dispositions du plan pour l'instance de service {{site.data.keyword.contdelivery_short}} qui se trouve dans le même groupe de ressources ou la même organisation que la chaîne d'outils gèrent l'utilisation de certaines des intégrations d'outils ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} et {{site.data.keyword.gitrepos}}) contenues dans le service. Le message d'erreur indique que le groupe de ressources ou l'organisation ne contient pas l'instance requise du service {{site.data.keyword.contdelivery_short}}. Pour plus d'informations sur les conditions de votre plan, voir [Utilisations des plans et limitations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
 
 
 ## J'ai créé une chaîne d'outils dans une organisation Cloud Foundry, pourquoi la page Chaînes d'outils indique-t-elle qu'un service Continuous Delivery est requis ?
@@ -90,7 +90,7 @@ Lorsque vous essayez de déployer une application dans {{site.data.keyword.Bluem
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
-Vous pouvez soit augmenter le quota de mémoire de votre compte ou réduire la mémoire utilisée par vos applications. Le quota de mémoire maximal pour un compte d'essai est 2 Go. Pour augmenter le quota de mémoire de votre compte, convertissez votre compte d'essai en compte payant. Pour obtenir des informations sur la conversion de votre compte d'essai en compte payant, voir [Comptes payants](/docs/pricing/index.html#pay-accounts). Pour réduire la mémoire utilisée par vos applications, utilisez la console {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande cf.
+Vous pouvez soit augmenter le quota de mémoire de votre compte ou réduire la mémoire utilisée par vos applications. Le quota de mémoire maximal pour un compte d'essai est 2 Go. Pour augmenter le quota de mémoire de votre compte, convertissez votre compte d'essai en compte payant. Pour obtenir des informations sur la conversion de votre compte d'essai en compte payant, voir [Comment mettre à niveau ou modifier mon compte ?](/docs/account?topic=account-accountfaqs#changeacct). Pour réduire la mémoire utilisée par vos applications, utilisez la console {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande cf.
 
 Si vous utilisez la console {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
 
@@ -146,7 +146,7 @@ Vous pouvez afficher la page Statut en choisissant l'une des options suivantes :
   * Connectez vous à la console {{site.data.keyword.Bluemix_notm}}. Dans la barre de menus, cliquez sur **Support** et sélectionnez **Statut**. Recherchez dans les ressources répertoriées l'icône signalant ![des problèmes](../../get-support/images/some_issues.svg). Celle-ci peut indiquer une indisponibilité.
   * Accédez directement à [{{site.data.keyword.Bluemix_notm}} - Statut du système ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/status){: new_window}.
 
-Pour plus d'informations sur la page Statut d'{{site.data.keyword.Bluemix_notm}}, voir [Viewing {{site.data.keyword.Bluemix_notm}} status](https://cloud.ibm.com/docs/get-support/ViewStatus.html#viewing-bluemix-status).
+Pour plus d'informations sur la page Statut d'{{site.data.keyword.Bluemix_notm}}, voir [Viewing {{site.data.keyword.Bluemix_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}.
 
 
 ## J'ai configuré une intégration d'outil pour ma chaîne d'outils, pourquoi n'a-t-elle pas été configurée ?

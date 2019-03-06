@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -21,14 +21,14 @@ Les projets {{site.data.keyword.jazzhub}} sur hub.jazz.net sont convertis en cha
 
 {{site.data.keyword.jazzhub_short}} sur hub.jazz.net est retiré. 
 
-Pour vos projets DevOps, utilisez le service [{{site.data.keyword.contdelivery_short}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops){:new_window}. Si vous ne maîtrisez pas encore {{site.data.keyword.Bluemix_notm}}, prenez soin de lire la [présentation d'{{site.data.keyword.Bluemix_notm}}](/docs/overview/ibm-cloud.html#overview).
+Pour vos projets DevOps, utilisez le service [{{site.data.keyword.contdelivery_short}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops){:new_window}. Si vous ne maîtrisez pas encore {{site.data.keyword.Bluemix_notm}}, prenez soin de lire la [présentation d'{{site.data.keyword.Bluemix_notm}}](/docs/overview?topic=overview-whatis-platform).
 
 {: shortdesc}
 
 ## Recherche de la chaîne d'outils qui a été créée à partir de votre projet
 {: #find_toolchain}
 
-Vérifiez que la mise à niveau est terminée en vous rendant sur la [page Chaînes d'outils![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/devops/toolchains){: new_window} et en vérifiant que des chaînes d'outils  portant le même nom que vos projets hub.jazz.net sont affichées. Si vos projets ont été automatiquement mis à niveau, conservez les restrictions suivantes à l'esprit :
+Vérifiez que la mise à niveau est terminée en vous rendant sur la [page Chaînes d'outils![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops/toolchains){: new_window} et en vérifiant que des chaînes d'outils  portant le même nom que vos projets hub.jazz.net sont affichées. Si vos projets ont été automatiquement mis à niveau, conservez les restrictions suivantes à l'esprit :
    - Si une autre chaîne d'outils avait déjà utilisé le nom de votre projet avant que celui-ci ne soit mis à niveau, la nouvelle chaîne d'outils qui a été créée pour votre projet peut ne pas porter le même nom que votre projet. 
    - Si vous ne voyez aucune chaîne d'outils pour votre projet, passez dans une autre organisation dont vous êtes membre et vérifiez les chaînes d'outils qu'elle contient.
    
@@ -48,19 +48,19 @@ Les chaînes d'outils sont semblables à des projets, à quelques différences i
 - Dans les projets, l'appartenance est gérée au niveau du projet. L'accès aux chaînes d'outils est géré par l'organisation {{site.data.keyword.Bluemix_notm}} et par la chaîne d'outils. Pour gérer une chaîne d'outils, vous devez être membre de l'organisation qui la contient. Le propriétaire de la chaîne d'outils peut davantage contrôler qui peut accéder à la chaîne d'outils et ce que cette personne est autorisée à faire. Pour en savoir plus sur le contrôle d'accès, voir l'étape 2 dans la rubrique [Initiation à votre chaîne d'outils](#upgrade_next_steps).
 - Selon le type de référentiel que vous avez utilisé dans votre projet sur hub.jazz.net, votre chaîne d'outils peut contenir un référentiel GitHub.com ou un référentiel {{site.data.keyword.gitrepos}}.
 
-Pour en savoir plus sur les chaînes d'outils, consultez [YouTube ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://youtu.be/2SIPE1e7NJ4){: new_window} ou [Initiation à {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html).
+Pour en savoir plus sur les chaînes d'outils, consultez [YouTube ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://youtu.be/2SIPE1e7NJ4){: new_window} ou [Initiation à {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started).
 
 ## Initiation à votre chaîne d'outils
 {: #upgrade_next_steps}
 
 1. Accordez l'accès à la chaîne d'outils aux membres de votre équipe.
     - Chaque membre d'équipe doit disposer d'un compte {{site.data.keyword.Bluemix_notm}} valide. Les membres de l'équipe qui ne possèdent pas de comptes doivent [s'enregistrer![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/registration){:new_window}.
-    - Accordez aux membres de l'organisation un accès à la chaîne d'outils depuis la page Gérer de la chaîne d'outils. Des membres de projet existants sont ajoutés en tant que membres de la chaîne d'outils dans le cadre du processus de mise à niveau. Pour en savoir plus sur le contrôle d'accès aux chaînes d'outils, voir [Gestion des accès ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
+    - Accordez aux membres de l'organisation un accès à la chaîne d'outils depuis la page Gérer de la chaîne d'outils. Des membres de projet existants sont ajoutés en tant que membres de la chaîne d'outils dans le cadre du processus de mise à niveau. Pour en savoir plus sur le contrôle d'accès aux chaînes d'outils, voir [Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){:new_window}.
     - Si un utilisateur n'est pas membre de l'organisation à laquelle appartient la chaîne d'outils, ajoutez-le à l'organisation depuis la page Gérer les organisations.
     - Si votre chaîne d'outils utilise {{site.data.keyword.gitrepos}}, tous les membres du projet JazzHub dotés d'un ID {{site.data.keyword.Bluemix_notm}} valide sont ajoutés au référentiel {{site.data.keyword.gitrepos}} avec les mêmes privilèges que ceux qu'ils avaient dans le projet JazzHub. Si votre projet JazzHub comprend des membres qui ne disposent pas d'un ID {{site.data.keyword.Bluemix_notm}} valides, ceux-ci peuvent s'inscrire pour en obtenir un. Une fois qu'ils se sont inscrits, vous pouvez les ajouter au référentiel.
-      Pour obtenir des informations complémentaires sur la gestion des organisations, voir [Gestion des organisations et des espaces ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window}.
+      Pour obtenir des informations complémentaires sur la gestion des organisations, voir [Gestion des organisations et des espaces ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/account?topic=account-orgsspacesusers){:new_window}.
 
-2. Si vous utilisez {{site.data.keyword.gitrepos}}, authentifiez-vous à l'aide d'un jeton d'accès personnel ou d'une clé SSH. Pour en savoir plus sur les clés SSH, voir [Création d'un jeton d'accès personnel ou d'une clé SSH pour l'authentification](/docs/services/ContinuousDelivery/git_working.html#git_authentication). Pour s'authentifier depuis un client Git externe via https, procédez comme suit :
+2. Si vous utilisez {{site.data.keyword.gitrepos}}, authentifiez-vous à l'aide d'un jeton d'accès personnel ou d'une clé SSH. Pour en savoir plus sur les clés SSH, voir [Création d'un jeton d'accès personnel ou d'une clé SSH pour l'authentification](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication). Pour s'authentifier depuis un client Git externe via https, procédez comme suit :
     1. Accédez à la page [Jetons d'accès ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} de vos paramètres utilisateurs {{site.data.keyword.gitrepos}}.
     2. Créez un jeton d'accès personnel utilisant **api** comme portée.
     3. Accédez à la page [Compte ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/profile/account){:new_window} et recherchez votre nom d'utilisateur de {{site.data.keyword.gitrepos}}. Votre nom d'utilisateur est répertorié dans la section "Changer le nom d'utilisateur" et apparaît dans la première partie de l'URL des référentiels personnels que vous créez.
@@ -72,7 +72,7 @@ Pour en savoir plus sur les chaînes d'outils, consultez [YouTube ![Icône de li
 
 3. Facultatif : pour explorer la maturité du développement de votre projet, les pratiques de votre équipe et la qualité de votre codebase, ajoutez IBM Cloud
 {{site.data.keyword.DRA_short}} à votre chaîne d'outils. {{site.data.keyword.DRA_short}} applique les analyses de déploiement, le développeur et l'équipe aux projets DevOps. Pour
-plus d'informations, voir [Initiation à {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html).
+plus d'informations, voir [Initiation à {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).
 
   {{site.data.keyword.DRA_short}} est disponible dans les régions du Sud des Etats-Unis, du Royaume-Uni et de l'Allemagne.
   {: tip}

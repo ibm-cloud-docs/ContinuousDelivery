@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-3-26"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -75,12 +75,11 @@ conditions d'utilisation du service ![Icône de lien externe](../../icons/launch
     * Si vous souhaitez que le pipeline vérifie dans votre espace {{site.data.keyword.Bluemix_short}} l'existence du service et d'une application qui établit une liaison entre le service et le conteneur, sélectionnez la case à cocher. Si le service ou l'application liée n'existe pas, il est créé par le pipeline pour ajouter le forfait gratuit du service à votre espace. L'application liée est créée avec le nom `pipeline_bridge_app`. Ensuite, le pipeline utilise les données d'identification de pipeline_bridge_app pour accéder aux services liés.
 
     * Si vous avez déjà configuré le service et lié l'application dans votre espace {{site.data.keyword.Bluemix_short}}, ou si vous désirez
-[configurer manuellement ces exigences](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window},
-ne cochez pas cette case.
+configurer manuellement ces exigences, ne cochez pas cette case.
 
   f. Dans la zone **Temps d'attente en minutes pour l'achèvement de l'analyse**, tapez une valeur comprise entre 0 et 59 minutes. La valeur par défaut est 5 minutes. Une URL vers le tableau de bord {{site.data.keyword.staticanalyzershort}} figure dans les journaux de console à la fin du travail.
 
-     Si l'analyse  {{site.data.keyword.staticanalyzershort}} n'est pas terminée avant l'heure que vous avez spécifiée, le travail échoue. Toutefois, l'analyse de l'examen continue de s'exécuter et vous pouvez l'afficher sur le tableau de bord {{site.data.keyword.staticanalyzershort}}. Une fois l'examen {{site.data.keyword.staticanalyzershort}} terminé, si vous relancez l'exécution du travail, la demande d'examen n'est pas soumise à nouveau et le travail de pipeline peut être effectué. Sinon, vous pouvez configurer le pipeline pour qu'il ne soit pas bloqué si l'analyse aboutit. Pour obtenir des instructions, voir l'étape suivante.
+     Si l'analyse {{site.data.keyword.staticanalyzershort}} n'est pas terminée avant l'heure que vous avez spécifiée, le travail échoue. Toutefois, l'analyse de l'examen continue de s'exécuter et vous pouvez l'afficher sur le tableau de bord {{site.data.keyword.staticanalyzershort}}. Une fois l'examen {{site.data.keyword.staticanalyzershort}} terminé, si vous relancez l'exécution du travail, la demande d'examen n'est pas soumise à nouveau et le travail de pipeline peut être effectué. Sinon, vous pouvez configurer le pipeline pour qu'il ne soit pas bloqué si l'analyse aboutit. Pour obtenir des instructions, voir l'étape suivante.
 
   g. Sélectionnez ou désélectionnez la case à cocher **Arrêter d'exécuter cette étape si ce travail échoue** selon ce qui doit se produire si ce travail échoue ou dépasse le délai d'attente prévu. Les travaux peuvent échouer lorsque les vulnérabilités sont élevées.
 
@@ -110,8 +109,6 @@ Exemples de sortie dans la console :
 
 **Examen en attente**
 ![Exemple d'examen en attente](images/analyzer_pending.png)
-
-Pour plus d'informations sur l'utilisation du service {{site.data.keyword.staticanalyzershort}}, voir les [documents sur le service {{site.data.keyword.staticanalyzershort}}](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 

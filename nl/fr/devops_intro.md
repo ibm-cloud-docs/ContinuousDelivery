@@ -22,7 +22,7 @@ lastupdated: "2018-11-29"
 
 Pour pouvoir fournir des logiciels et des services à la vitesse exigée par le marché, les équipes doivent pouvoir itérer et expérimenter rapidement. Elles doivent déployer de nouvelles versions de manière fréquente, en fonction des retours et des données. Les équipes de développement de cloud les plus performantes adoptent la culture et les pratiques modernes de DevOps, utilisent des architectures natives du cloud et assemblent des chaînes d'outils à partir des meilleurs outils de leur catégorie afin de maximiser leur productivité. Ici, la rapidité est primordiale pour se démarquer de la concurrence.
 
-La méthode  
+La méthode 
 <a href="https://www.ibm.com/cloud/garage">IBM Cloud Garage Method <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>
 décrit les architectures, les pratiques et les chaînes d'outils DevOps conçues pour permettre aux entreprises d'innover à grande échelle. Utilisez {{site.data.keyword.Bluemix_notm}} Garage Method pour transformer votre culture et utiliser les outils efficacement et rapidement.
 

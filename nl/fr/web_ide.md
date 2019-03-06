@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -78,7 +78,7 @@ Pour afficher la liste des raccourcis-clavier dans l'éditeur, cliquez sur **Out
 {: #sourcecontrol}
 
 {{site.data.keyword.webide}} est intégré aux outils de gestion du code source. Pour utiliser votre référentiel Git, cliquez sur l'icône **Référentiel Git**
-<img class="inline" src="images/webide_git_icon_light_small.png"  alt="Icône Référentiel Git">.  Pour en savoir plus, voir [Utilisation de Git dans Eclipse Orion Web IDE](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide).
+<img class="inline" src="images/webide_git_icon_light_small.png"  alt="Icône Référentiel Git">.  Pour en savoir plus, voir [Utilisation de Git dans Eclipse Orion Web IDE](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_web_ide#git_web_ide).
 
 ## Déploiement d'une application depuis votre espace de travail
 {: #deploy}
@@ -97,7 +97,7 @@ Pour afficher la liste des raccourcis-clavier dans l'éditeur, cliquez sur **Out
 
 Si vous développez une application Node.js, activez le mode Edition directe : <img  src="./images/enable_live_edit.png"  alt="Curseur d'activation de l'édition directe">
 
-<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="Icône de redémarrage de l'édition directe"></td><td>Activez le mode Edition directe pour redémarrer l'application rapidement, sans nécessité de redéploiement. </td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="Icône de redémarrage de l'édition directe"></td><td>Activez le mode Edition directe pour redémarrer l'application rapidement, sans nécessité de redéploiement.</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="Icône de débogage"></td>
 <td>En mode Edition directe, accédez au débogueur.
 </td></tr>
@@ -216,7 +216,7 @@ Eclipse Orion {{site.data.keyword.webide}} fournit une aide au contenu, des info
 </table>
 
 ## Suivre un tutoriel : Eclipse Orion Web IDE
-{: #toolchain_tutorials}
+{: #toolchain_web_ide_tutorials}
 
 Consultez l'un des tutoriels suivants sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage){:new_window} :
 

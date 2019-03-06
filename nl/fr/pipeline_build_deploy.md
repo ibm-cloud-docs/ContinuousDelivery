@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-12-11"
+  years: 2016, 2019
+lastupdated: "2019-2-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -78,7 +78,7 @@ Vous pouvez déployer une version précédente. A l'étape qui contient la versi
 {: tip}
 
 ###Ajout de services à des applications
-Vous pouvez ajouter des services à vos applications et gérer ces services à partir de votre tableau de bord {{site.data.keyword.Bluemix_notm}} ou de l'interface de ligne de commande Cloud Foundry. Vous pouvez également exécuter des commandes d'interface de ligne de commande Cloud Foundry dans des scripts pour les travaux de pipeline. Par exemple, vous pouvez ajouter un service à une application dans le script d'un travail de déploiement. Pour plus d'informations sur l'ajout de services, voir [Ajout d'un service à votre application](/docs/services/reqnsi.html#add_service).
+Vous pouvez ajouter des services à vos applications et gérer ces services à partir de votre tableau de bord {{site.data.keyword.Bluemix_notm}} ou de l'interface de ligne de commande Cloud Foundry. Vous pouvez également exécuter des commandes d'interface de ligne de commande Cloud Foundry dans des scripts pour les travaux de pipeline. Par exemple, vous pouvez ajouter un service à une application dans le script d'un travail de déploiement. Pour plus d'informations sur l'ajout de services, voir [Connexion de services à des applications externes](/docs/resources?topic=resources-externalapp).
 
 ## Affichage des journaux
 {: #deliverypipeline_view_logs}

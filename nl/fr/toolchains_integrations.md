@@ -1,8 +1,8 @@
-﻿---
+---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-15"
 
 ---
 
@@ -36,7 +36,7 @@ votre environnement spécifique.
 |Availability Monitoring		|Sud des Etats-Unis		|Non		|
 |Bitbucket		|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Non		|
 |Cloud Event Management		|Sud des Etats-Unis		|Non		|
-|{{site.data.keyword.deliverypipeline}} 		|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Oui  		|
+|{{site.data.keyword.deliverypipeline}} 		|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni	   	|Oui  		|
 |{{site.data.keyword.DRA_short}} 		|Sud des Etats-Unis, Allemagne, Royaume-Uni		|Non			|
 |Eclipse Orion {{site.data.keyword.webide}}		|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Oui			|
 |{{site.data.keyword.gitrepos}}	|Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo, Royaume-Uni		|Non		|
@@ -342,12 +342,12 @@ Configurez {{site.data.keyword.deliverypipeline}} afin d'automatiser la généra
 L'APPLICATION**. Toutes les applications créées par votre pipeline sont affichées dans la liste **Afficher l'application** de la page
 Présentation de la chaîne d'outils.
 1. Cliquez sur **Créer une intégration** pour ajouter {{site.data.keyword.deliverypipeline}} à votre chaîne d'outils.
-1. Cliquez sur **{{site.data.keyword.deliverypipeline}}** pour afficher le pipeline et le configurer. Pour en savoir plus sur les notions de base et la configuration d'un pipeline, voir [Génération et déploiement de pipelines](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}.
+1. Cliquez sur **{{site.data.keyword.deliverypipeline}}** pour afficher le pipeline et le configurer. Pour en savoir plus sur les notions de base et la configuration d'un pipeline, voir [Génération et déploiement de pipelines](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy){: new_window}.
 
   Si vous souhaitez que le pipeline s'exécute automatiquement lorsqu'une validation est envoyée à votre référentiel GitHub, {{site.data.keyword.ghe_short}} ou Git, procédez comme suit :
 
    a. Configurez GitHub, {{site.data.keyword.ghe_short}} ou {{site.data.keyword.gitrepos}} pour votre chaîne d'outils avant de définir les étapes pour votre pipeline. Ces étapes requièrent les URL de vos référentiels. Chaque étape de pipeline peut faire référence à un seul des référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git associés à votre chaîne d'outils. Pour
-savoir comment configurer GitHub, voir la section [GitHub](#github). Pour la configuration de {{site.data.keyword.ghe_short}} Dedicated, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. Pour les instructions de configuration de {{site.data.keyword.gitrepos}}, voir la section [{{site.data.keyword.gitrepos}}](#gitbluemix).
+savoir comment configurer GitHub, voir la section [GitHub](#github). Pour la configuration de {{site.data.keyword.ghe_short}} Dedicated, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}. Pour les instructions de configuration de {{site.data.keyword.gitrepos}}, voir la section [{{site.data.keyword.gitrepos}}](#gitbluemix).
 
    b. Utilisez un webhook. Sans webhook, vous pouvez seulement exécuter les pipelines manuellement. Pour utiliser un webhook lorsque vous vous connectez à un référentiel GitHub
 ou {{site.data.keyword.ghe_short}}, vous devez disposer d'un droit d'administrateur. Pour associer un référentiel {{site.data.keyword.gitrepos}}, vous devez disposer d'un droit Maître ou Propriétaire.
@@ -395,7 +395,7 @@ Configurez {{site.data.keyword.deliverypipeline}} pour ajouter un travail de tes
 
 ### Plus d'informations sur Delivery Pipeline
 
-Pour en savoir plus sur {{site.data.keyword.deliverypipeline}}, voir [Travailler avec des pipelines](/docs/services/ContinuousDelivery/pipeline_working.html){: new_window} et l'[article Delivery Pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} sur IBM Cloud Garage Method ou suivez les tutoriels ci-dessous :
+Pour en savoir plus sur {{site.data.keyword.deliverypipeline}}, voir [Travailler avec des pipelines](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working){: new_window} et l'[article Delivery Pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} sur IBM Cloud Garage Method ou suivez les tutoriels ci-dessous :
 
   * [Création d'un pipeline ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:new_window}
 
@@ -405,7 +405,7 @@ Pour en savoir plus sur {{site.data.keyword.deliverypipeline}}, voir [Travailler
 ## Ajout de DevOps Insights
 {: #dra}
 
-{{site.data.keyword.DRA_full}} collecte et analyse les résultats provenant de tests unitaires, de tests fonctionnels et d'outils de couverture de code afin de déterminer si votre code satisfait les critères prédéfinis à certains stades de votre processus de déploiement. Si votre code ne satisfait pas ou dépasse les critères, le déploiement est interrompu afin de prévenir tout risque. Vous pouvez utiliser {{site.data.keyword.DRA_short}} comme filet de sécurité pour votre environnement de distribution continue ou comme moyen d'implémenter et d'améliorer les normes qualité.
+{{site.data.keyword.DRA_full}} collecte et analyse les résultats provenant de tests unitaires, de tests fonctionnels et d'outils de couverture de code afin de déterminer si votre code satisfait les critères prédéfinis à certains stades de votre processus de déploiement. Si votre code ne satisfait pas ou dépasse les critères, le déploiement est interrompu afin de prévenir tout risque. Vous pouvez utiliser {{site.data.keyword.DRA_short}} comme filet de sécurité pour votre environnement de distribution continue ou comme moyen d'implémenter et d'améliorer les normes de qualité.
 
  Cette intégration d'outils est uniquement disponible sur {{site.data.keyword.Bluemix_notm}} Public. Elle est préconfigurée et ne nécessite aucun paramètre de configuration. Vous ne pouvez pas la reconfigurer.
  {: tip}
@@ -455,7 +455,7 @@ Pour effectuer des tâches de contrôle des sources, ajoutez l'intégration d'ou
 
 ### Plus d'informations sur Eclipse Orion Web IDE
 
-Pour plus d'informations sur Eclipse Orion {{site.data.keyword.webide}}, voir [Edition du code avec Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window. Vous pouvez également lire l'[article Eclipse Orion {{site.data.keyword.webide}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} sur IBM Cloud Garage Method. Consultez ces tutoriels pour essayer d'utiliser Eclipse Orion {{site.data.keyword.webide}} :
+Pour en savoir plus sur Eclipse Orion {{site.data.keyword.webide}}, voir [Edition de code avec Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide). Vous pouvez également lire l'article [Eclipse Orion {{site.data.keyword.webide}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} sur IBM Cloud Garage Method. Consultez ces tutoriels pour essayer d'utiliser Eclipse Orion {{site.data.keyword.webide}} :
 
   * [Création et utilisation de votre première chaîne d'outils à l'aide de la chaîne d'outils "Développer une application Cloud Foundry" ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
@@ -533,7 +533,7 @@ Si vous configurez cette intégration d'outils lors de la création de la chaîn
 1. Si vous stockez votre code source dans un référentiel GitHub, dans la section Intégrations configurables, cliquez sur **GitHub**. Si vous configurez cette intégration d'outils sur {{site.data.keyword.Bluemix_notm}} Public et que vous n'avez pas autorisé {{site.data.keyword.Bluemix_notm}} à accéder à GitHub, cliquez sur **Autorisation** pour accéder au site Web GitHub. Si vous n'avez pas de session GitHub active, vous êtes invité à vous connecter. Cliquez sur **Authorize Application** pour autoriser {{site.data.keyword.Bluemix_notm}} à accéder à votre compte GitHub. Si vous disposez d'une session GitHub active mais n'avez pas saisi votre mot de passe récemment, vous êtes invité à entrer votre mot de passe GitHub pour confirmation.
 1. Si vous utilisez un référentiel sur votre propre serveur {{site.data.keyword.ghe_short}}, dans la section Intégrations configurables, cliquez sur **Ajouter un serveur personnalisé**.
 
- Le réseau doit être capable d'accéder au serveur Git cible à partir d'un environnement {{site.data.keyword.Bluemix_notm}} Dedicated. Si votre serveur GitHub n'est pas disponible sur le réseau Internet public ou si le nom d'hôte n'est pas résolu sur le DNS public, [ouvrez un ticket de support](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. Vous pouvez utiliser le ticket de support pour soumettre une demande pour ouvrir les itinéraires réseau ou mettre à jour les paramètres DNS.
+ Le réseau doit être capable d'accéder au serveur Git cible à partir d'un environnement {{site.data.keyword.Bluemix_notm}} Dedicated. Si votre serveur GitHub n'est pas disponible sur le réseau Internet public ou si le nom d'hôte n'est pas résolu sur le DNS public, [ouvrez un ticket de support](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_support#support-ticket){: new_window}. Vous pouvez utiliser le ticket de support pour soumettre une demande pour ouvrir les itinéraires réseau ou mettre à jour les paramètres DNS.
  {: important}
 
  Entrez un titre pour votre serveur GitHub personnalisé et spécifiez l'URL racine de votre serveur. Entrez votre jeton d'accès personnel, puis cliquez sur **Enregistrer l'intégration personnalisée**.
@@ -593,9 +593,9 @@ Pour en savoir plus sur GitHub, voir l'[article GitHub ![Icône de lien externe]
 
  * [Utilisation de la chaîne d'outils "Développer et tester une application Cloud Foundry" ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
 
-  * [Garantir des déploiements de qualité à l'aide de la chaîne d'outils "Déployer Risks Analytics avec GitHub et Jenkins" ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+ * [Garantir des déploiements de qualité à l'aide de la chaîne d'outils "Déployer Risks Analytics avec GitHub et Jenkins" ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
 
-  * [Créer une chaîne d'outils personnalisée ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
+ * [Créer une chaîne d'outils personnalisée ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
 
 
 ## Configuration de GitHub Enterprise et Issues sur {{site.data.keyword.Bluemix_notm}} Dedicated
@@ -604,13 +604,13 @@ Pour en savoir plus sur GitHub, voir l'[article GitHub ![Icône de lien externe]
  Ces instructions s'appliquent à {{site.data.keyword.Bluemix_notm}} Dedicated pour {{site.data.keyword.ghe_short}}. Si vous utilisez votre propre version gérée de {{site.data.keyword.ghe_short}}, certaines étapes peuvent varier en fonction de vos procédures internes.
  {: important}
 
-{{site.data.keyword.ghe_long}} est un service d'hébergement Web sur site pour les référentiels Git. {{site.data.keyword.ghe_short}} Dedicated est destiné aux clients {{site.data.keyword.Bluemix_notm}} Dedicated uniquement. GitHub Issues est un outil de suivi qui conserve votre travail et vos plans à un seul et même emplacement. Il est intégré à votre référentiel de développement pour vous permettre de vous concentrer sur les tâches importantes. Pour plus d'informations sur Bluemix Dedicated pour {{site.data.keyword.ghe_short}} et GitHub Issues, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} et l'[article GitHub Issues ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} sur IBM Cloud Garage Method.
+{{site.data.keyword.ghe_long}} est un service d'hébergement Web sur site pour les référentiels Git. {{site.data.keyword.ghe_short}} Dedicated est destiné aux clients {{site.data.keyword.Bluemix_notm}} Dedicated uniquement. GitHub Issues est un outil de suivi qui conserve votre travail et vos plans à un seul et même emplacement. Il est intégré à votre référentiel de développement pour vous permettre de vous concentrer sur les tâches importantes. Pour plus d'informations sur Bluemix Dedicated pour {{site.data.keyword.ghe_short}} et GitHub Issues, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window} et l'[article GitHub Issues ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} sur IBM Cloud Garage Method.
 
-Vous pouvez configurer {{site.data.keyword.ghe_short}} en tant qu'intégration d'outils dans votre chaîne d'outils afin de pouvoir gérer le code source depuis l'instance de l'environnement [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} de votre société.
+Vous pouvez configurer {{site.data.keyword.ghe_short}} en tant qu'intégration d'outils dans votre chaîne d'outils afin de pouvoir gérer le code source depuis l'instance de l'environnement [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} de votre société.
 
 1. Si vous configurez cette intégration d'outils lors de la création de la chaîne d'outils, procédez comme suit :
 
- a. Avant de vous connecter à {{site.data.keyword.ghe_short}} Dedicated pour la première fois, demandez à l'administrateur régional de votre société d'ajouter votre ID utilisateur à votre instance {{site.data.keyword.Bluemix_notm}} Dedicated à partir du registre d'utilisateurs de la société, via LDAP. Pour plus d'informations sur la configuration de votre compte {{site.data.keyword.ghe_short}}, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}.
+ a. Avant de vous connecter à {{site.data.keyword.ghe_short}} Dedicated pour la première fois, demandez à l'administrateur régional de votre société d'ajouter votre ID utilisateur à votre instance {{site.data.keyword.Bluemix_notm}} Dedicated à partir du registre d'utilisateurs de la société, via LDAP. Pour plus d'informations sur la configuration de votre compte {{site.data.keyword.ghe_short}}, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}.
 
  b. Dans la section Intégrations configurables, cliquez sur **{{site.data.keyword.ghe_short}}**.    
 
@@ -673,7 +673,7 @@ Si vous configurez cette intégration d'outils lors de la création de la chaîn
 
      d. Cochez la case **api** afin de définir l'accès pour le jeton personnel.
 
-     e. Cliquez sur **Créer une jeton d'accès personnel**.
+     e. Cliquez sur **Créer un jeton d'accès personnel**.
 
      f. Copiez le jeton dans un endroit sûr ou dans l'application de gestion de mot de passe. Pour des raisons de sécurité, lorsque vous quittez la page, le jeton disparaît.
 

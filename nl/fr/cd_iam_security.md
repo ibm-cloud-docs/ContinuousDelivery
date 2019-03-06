@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018
-lastupdated: "2018-7-18"
+  years:  2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -17,14 +17,15 @@ lastupdated: "2018-7-18"
 
 
 # Gestion de l'accès utilisateur à la Distribution continue avec Identity and Access Management
+{: #cd-iam-security}
 
 L'accès aux instances de service {{site.data.keyword.contdelivery_full}} dans les groupes de ressources pour les utilisateurs de votre compte est contrôlé par {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). 
 
 **Remarques **: 
 
-* L'accès utilisateur pour les instances de service {{site.data.keyword.contdelivery_short}} et les instances de chaîne d'outils est géré séparément. Pour plus d'informations sur la gestion de l'accès utilisateur aux chaînes d'outils dans les groupes de ressources, voir [Gestion de l'accès utilisateur aux chaînes d'outils avec Identity and Access Management](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}.
+* L'accès utilisateur pour les instances de service {{site.data.keyword.contdelivery_short}} et les instances de chaîne d'outils est géré séparément. Pour plus d'informations sur la gestion de l'accès utilisateur aux chaînes d'outils dans les groupes de ressources, voir [Gestion de l'accès utilisateur aux chaînes d'outils avec Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}.
 
-* L'accès utilisateurs aux chaînes d'outils dans les organisations Cloud Foundry est géré différemment de l'accès utilisateur aux chaînes d'outils dans les groupes de ressources. Pour plus d'informations sur la gestion de l'accès utilisateur aux chaînes d'outils dans les organisations Cloud Foundry, voir [Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
+* L'accès utilisateurs aux chaînes d'outils dans les organisations Cloud Foundry est géré différemment de l'accès utilisateur aux chaînes d'outils dans les groupes de ressources. Pour plus d'informations sur la gestion de l'accès utilisateur aux chaînes d'outils dans les organisations Cloud Foundry, voir [Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
 
 Une règle d'accès avec un rôle utilisateur IAM doit être affectée à chaque utilisateur disposant d'un accès au service {{site.data.keyword.contdelivery_short}} sur votre compte. Cette règle détermine les actions que l'utilisateur peut effectuer dans le contexte du service ou de l'instance que vous sélectionnez. Les actions autorisées sont personnalisées et définies par le service {{site.data.keyword.Bluemix_notm}} en tant qu'opérations pouvant être réalisées sur le service. Les actions sont ensuite mappées à des rôles utilisateur IAM.
 
@@ -41,7 +42,7 @@ Le tableau suivant détaille les actions mappées sur les rôles de gestion de p
 
 | Rôle Gestion de plateforme | Description des actions | Exemples d'action|
 |:-----------------|:-----------------|:-----------------|
-| Afficher, Opérateur | Afficher les instances du service {{site.data.keyword.contdelivery_short}}. | <ul><li>Cliquer sur une instance de service {{site.data.keyword.contdelivery_short}} pour ouvrir son tableau de bord.</li>|</ul>
+| Afficheur, Opérateur | Afficher les instances du service {{site.data.keyword.contdelivery_short}}. | <ul><li>Cliquer sur une instance de service {{site.data.keyword.contdelivery_short}} pour ouvrir son tableau de bord.</li></ul>|
 | Editeur, Administrateur | Créer, afficher, mettre à jour, modifier le plan et supprimer des instances du service {{site.data.keyword.contdelivery_short}}. |<ul><li>Mettre à disposition une instance de {{site.data.keyword.contdelivery_short}} dans un groupe de ressources.</li><li>Supprimer une instance de {{site.data.keyword.contdelivery_short}} dans un groupe de ressources.</li><li>Modifier un plan d'instance {{site.data.keyword.contdelivery_short}} de Lite à Professional.</li></ul> |
 | Administrateur | Mettre à jour la liste des utilisateurs autorisés.| <ul><li>Ajouter un utilisateur à la liste des utilisateurs autorisés.</li><li>Supprimer un utilisateur de la liste des utilisateurs autorisés.</li></ul> |
 {: caption="Tableau 1. Rôles et actions des utilisateurs IAM" caption-side="top"}
@@ -66,6 +67,6 @@ Le tableau ci-dessous détaille les actions qui sont mappées aux rôles d'accè
 | Rédacteur, gestionnaire | Ajouter et supprimer des utilisateurs de la liste Utilisateurs autorisés de l'onglet Gérer d'une instance de service {{site.data.keyword.contdelivery_short}}. | <ul><li>Ajouter un utilisateur autorisé.</li><li>Retirer l'utilisateur autorisé.</li></ul>|
 {: caption="Tableau 3. Rôles et actions d'accès au service IAM" caption-side="top"}
 
-Pour plus d'informations sur l'affectation de rôles utilisateur dans l'interface utilisateur, voir [Gestion de l'accès IAM](/docs/iam/mngiam.html#iammanidaccser).
+Pour plus d'informations sur l'affectation de rôles utilisateur dans l'interface utilisateur, voir [Gestion de l'accès IAM](/docs/iam?topic=iam-iammanidaccser).
 
 <!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

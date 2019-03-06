@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-12"
+  years: 2017, 2019
+lastupdated: "2019-2-15"
 
 ---
 {:shortdesc: .shortdesc}
@@ -22,7 +22,7 @@ lastupdated: "2018-12-12"
 Améliorez votre flux de travaux DevOps en créant un modèle de chaîne d'outils personnalisée. Vous pouvez démarrer rapidement en utilisant un modèle de chaîne d'outils existant, ou créer un modèle de chaîne d'outils comprenant uniquement les intégrations d'outils dont vous avez besoin. Vous pouvez ajouter ou supprimer des intégrations dans votre chaîne d'outils à tout moment.
 {:shortdesc}
 
-Il existe différentes façons de [créer une chaîne d'outils](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}. Après avoir créé un modèle de chaîne d'outils personnalisée, vous pouvez le partager en [créant un déploiement vers {{site.data.keyword.Bluemix_notm}}](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}. Pour en savoir plus sur le kit de développement logiciel du modèle de chaîne d'outils, consultez [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Vous trouverez un tutoriel étape par étape sur le [site de Garage Method](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
+Il existe différentes façons de [créer une chaîne d'outils](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}. Après avoir créé un modèle de chaîne d'outils personnalisée, vous pouvez le partager en [créant un déploiement vers {{site.data.keyword.Bluemix_notm}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deploy-button){: new_window}. Pour en savoir plus sur le kit de développement logiciel du modèle de chaîne d'outils, consultez [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Vous trouverez un tutoriel étape par étape sur le [site de Garage Method](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
 
 
 ## Initiation
@@ -39,7 +39,7 @@ Pour créer un modèle de chaîne d'outils personnalisée, commencez par cloner 
 
  Ce modèle déploie une application Hello World de base à partir d'un référentiel GitHub unique et inclut une chaîne d'outils simple qui est préconfigurée pour la distribution continue, le contrôle des sources, le suivi des problèmes et l'édition en ligne.
 
-2. Si vous souhaitez utiliser un modèle de chaîne d'outils plus complexe, clonez la [chaîne d'outils native pour le cloud pour les microservices](https://github.com/open-toolchain/toolchain-demo){: new_window}.
+2. Si vous souhaitez utiliser un modèle de chaîne d'outils plus complexe, clonez la [chaîne d'outils native pour le cloud pour le modèle de microservices](https://github.com/open-toolchain/toolchain-demo){: new_window}.
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -263,7 +263,7 @@ Dans cet exemple, l'URL Git et la branche Git s'appliquent à un nouveau modèle
 
 4\. **Détails du déploiement :**
 
- Dans le cadre du processus de distribution continue, vous pouvez configurer une chaîne d'outils pour déployer une application dans n'importe quelle région, organisation ou espace {{site.data.keyword.Bluemix_notm}} auquel l'utilisateur a accès. Vous pouvez indiquer où vous souhaitez déployer votre application sur la page [de création de la chaîne d'outils](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}.
+ Dans le cadre du processus de distribution continue, vous pouvez configurer une chaîne d'outils pour déployer une application dans n'importe quelle région, organisation ou espace {{site.data.keyword.Bluemix_notm}} auquel l'utilisateur a accès. Vous pouvez indiquer où vous souhaitez déployer votre application sur la page [de création de la chaîne d'outils](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}.
 
 Cette section du fichier `toolchain.yml` définit les étapes du pipeline qui peuvent être configurées sur la page de création de la chaîne d'outils.
 
@@ -280,7 +280,7 @@ Cette section du fichier `toolchain.yml` définit les étapes du pipeline qui pe
 | prod-space | Propriété | <`prod`> | Définit l'espace {{site.data.keyword.Bluemix_notm}} de l'étape de production |
 | github-repo-name | Propriété | <`"{{repo-name-key.parameters.repo_name}}"`> | Variable servant à transférer le nom de référentiel GitHub à la page de création de la chaîne d'outils |
 
-Pour en savoir plus sur la création d'un fichier `deploy.json`, voir [dans cette section] (#toolchains_custom_deploy_json).
+Pour en savoir plus sur la création d'un fichier `deploy.json`, voir [cette section](#toolchains_custom_deploy_json).
 
  L'exemple suivant définit une étape de déploiement unique dans un environnement de production :
 
@@ -393,7 +393,7 @@ stages:
  ## Configuration de l'interface de pipeline
  {: #toolchains_custom_deploy_json}
 
- Sur la page de [création de la chaîne d'outil](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}, lorsque Delivery Pipeline est sélectionné dans la section Intégrations configurables, la section est développée et affiche les éléments suivants :
+ Sur la page de [création de la chaîne d'outil](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}, lorsque Delivery Pipeline est sélectionné dans la section Intégrations configurables, la section est développée et affiche les éléments suivants :
 
  	* Le nom de l'application.
  	* La région, l'organisation et l'espace sur lesquels vos étapes de pipeline sont déployées.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -44,7 +44,7 @@ Si vous avez différé la configuration d'une intégration d'outils lors de la c
  Quelques intégrations d'outils sont préconfigurées et ne requièrent aucun paramètre de configuration. Vous pouvez mettre à jour les paramètres de configuration uniquement pour les intégrations d'outils que vous avez configurées.
  {: tip}
 
- Lorsque vous avez terminé la mise à jour des paramètres, cliquez sur **Sauvegarder l'intégration**. Pour plus d'informations sur la configuration des intégrations d'outils spécifiques, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+ Lorsque vous avez terminé la mise à jour des paramètres, cliquez sur **Sauvegarder l'intégration**. Pour plus d'informations sur la configuration des intégrations d'outils spécifiques, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 
 ## Ajout d'une intégration d'outils
 {: #adding_a_tool_integration}
@@ -70,7 +70,7 @@ Si vous supprimez une intégration d'outils de votre chaîne d'outils, la suppre
 ## Gestion de l'accès aux chaînes d'outils dans les groupes de ressources
 {: #managing_access_resource_groups}
 
-Vous pouvez utiliser le service Identity and Access Management (IAM) pour gérer l'accès des utilisateurs aux chaînes d'outils. Pour plus d'informations sur la gestion du contrôle d'accès avec IAM, voir [Gestion de l'accès utilisateur aux chaînes d'outils avec Identity and Access Management](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}. 
+Vous pouvez utiliser le service Identity and Access Management (IAM) pour gérer l'accès des utilisateurs aux chaînes d'outils. Pour plus d'informations sur la gestion du contrôle d'accès avec IAM, voir [Gestion de l'accès utilisateur aux chaînes d'outils avec Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}. 
 
 Seuls les utilisateurs faisant partie de la liste des utilisateurs autorisés pour l'instance sélectionnée de {{site.data.keyword.contdelivery_short}} peuvent utiliser les fonctionnalités Delivery Pipeline, Eclipse Orion {{site.data.keyword.webide}} et {{site.data.keyword.gitrepos}} des chaînes d'outils {{site.data.keyword.contdelivery_short}}. Vous pouvez gérer les autorisations d'utilisation pour un utilisateur autorisé à partir de l'onglet Gérer de l'instance sélectionnée de {{site.data.keyword.contdelivery_short}}, dans le groupe de ressources spécifié.
 
@@ -90,7 +90,7 @@ Vous devez ajouter des utilisateurs à l'organisation de la chaîne d'outils dan
 {: important}
 
 Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dedicated pour {{site.data.keyword.ghe_short}}, lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix_notm}}, ces utilisateurs peuvent se connecter à {{site.data.keyword.ghe_short}} à l'aide de leurs ID et mot de passe {{site.data.keyword.Bluemix_notm}}. Lorsque les utilisateurs se connectent, les comptes correspondants sont créés. Lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix_notm}}, ils ne sont pas automatiquement ajoutés au référentiel {{site.data.keyword.ghe_short}}. Une personne dotée de privilèges d'administrateur pour le référentiel doit les ajouter. Pour
-plus d'informations, voir [Utilisation de Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}. Si vous utilisez votre propre version gérée de {{site.data.keyword.ghe_short}}, suivez vos procédures internes.
+plus d'informations, voir [Utilisation de Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}. Si vous utilisez votre propre version gérée de {{site.data.keyword.ghe_short}}, suivez vos procédures internes.
 
 ###Conseils pour la gestion de l'accès à une chaîne d'outils
 
@@ -129,7 +129,7 @@ plus d'informations, voir [Utilisation de Dedicated GitHub Enterprise](/docs/ser
      * Affectez un rôle pour l'espace sélectionné dans l'organisation.
 
      Par défaut, les responsables de l'organisation disposent de privilèges d'administrateur complets pour toutes les chaînes d'outils qui sont associées à l'organisation. Pour accorder des privilèges d'administrateur complets à l'utilisateur, sélectionnez le rôle **Responsable**. Les rôles Responsable de la facturation et Auditeur n'ont pas d'impact sur l'accès à la chaîne d'outils. Vous pouvez changer les rôles
-ultérieurement dans la page Répertoire d'équipe. Pour en savoir plus, voir [Rôles de Cloud Foundry](/docs/iam/cfaccess.html#cfaccess){: new_window}.
+ultérieurement dans la page Répertoire d'équipe. Pour en savoir plus, voir [Rôles de Cloud Foundry](/docs/iam?topic=iam-cfaccess#cfaccess){: new_window}.
      {: tip}
 
    Une fois que l'utilisateur est membre de l'organisation, retournez à la page Gérer de la chaîne d'outils et ajoutez l'utilisateur à la chaîne d'outils.  

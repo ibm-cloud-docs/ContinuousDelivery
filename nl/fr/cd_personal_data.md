@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-2-20"
 
 ---
 
@@ -28,8 +28,8 @@ Par données personnelles, on entend toute information qui concerne ou identifie
  * {{site.data.keyword.gitrepos}}
  * Les pipelines {{site.data.keyword.contdelivery_short}}
  * Les chaînes d'outils et intégrations d'outils
- * [GitHub Enterprise sur IBM Cloud ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/ghededicated/ghe_personal_data.html){: new_window}
- * [{{site.data.keyword.DRA_full}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
+ * [GitHub Enterprise sur IBM Cloud ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
+ * [{{site.data.keyword.DRA_full}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/DevOpsInsights?topic=DevOpsInsights-insights_personal_data){: new_window}
  
 IBM ne gère pas les données dans le service {{site.data.keyword.contdelivery_short}}. Avant de quitter le service {{site.data.keyword.contdelivery_short}} hébergé dans {{site.data.keyword.Bluemix_notm}} Public, vous devez supprimer vos propres données.
 {: important}
@@ -67,7 +67,7 @@ Les équipes de personnes qui travaillent pour une entreprise collaborent souven
 
 Lorsque vous travaillez pour une société, le travail contenu dans votre compte peut appartenir légalement à la société. Beaucoup d'utilisateurs travaillant pour une entreprise possèdent un compte d'entreprise individuel. Si vous vous connectez à votre compte en utilisant des données d'identification qui contiennent le nom de votre société et possédez également une sorte de compte personnel, le travail contenu dans votre compte personnel pourrait appartenir à la société.
 
-Un compte d'entreprise individuel n'est pas différent d'un autre compte. Vous pouvez inviter des utilisateurs à  un compte d'entreprise individuel et les objets qui sont créés dans un compte d'entreprise individuel appartiennent au compte.
+Un compte d'entreprise individuel n'est pas différent d'un autre compte. Vous pouvez inviter des utilisateurs à un compte d'entreprise individuel et les objets qui sont créés dans un compte d'entreprise individuel appartiennent au compte.
 
 Si vous travaillez pour une société qui est propriétaire de votre travail, un compte personnel qui contient habituellement votre nom est considéré comme un compte d'entreprise individuel. 
 

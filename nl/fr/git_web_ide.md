@@ -360,7 +360,7 @@ Si vous avez besoin de distribuer des modifications d'une branche source à une 
 		Texte dans la branche réservée.
 		=======
 		Texte dans la branche fusionnée.
-		>>>>>>> ID_validation_de_branche_fusionnée
+		>>>>>>> ID_validation_de_la_branche_fusionnée
 		
 4. Pour chaque fichier en conflit, cochez la case. Entrez un message de validation de fusion et cliquez sur **Valider**.
 
@@ -434,7 +434,7 @@ Si vous avez besoin de distribuer des modifications d'une branche source à une 
 		<<<<<<< EN-TETE
 		Texte dans la branche réservée.
 		=======
-		Text in merged branch.
+		Texte dans la branche fusionnée.
 		>>>>>>> ID_validation_de_la_branche_fusionnée
 		{: tip}
 4. Dans le panneau de resynchronisation, cochez la case de tous les fichiers corrigés et cliquez sur **Continuer**.

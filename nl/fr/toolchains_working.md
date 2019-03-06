@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 
-lastupdated: "2018-12-6"
+lastupdated: "2019-2-8"
 
 
 ---
@@ -26,7 +26,7 @@ Une *chaîne d'outils* est un ensemble d'intégrations d'outils prenant en charg
 
 Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dedicated. Vous pouvez créer une chaîne d'outils de deux façons : à l'aide d'un modèle ou à partir d'une application.
 
-Chaque chaîne d'outils est associée à un groupe de ressources ou à une organisation (org) spécifique. Si une chaîne d'outils est associée à un groupe de ressources, tout utilisateur disposant de l'autorisation d'Afficheur Identity and Access Management (IAM) pour la ressource de chaîne d'outils ou le groupe de ressources qui la contient peut accéder à la chaîne d'outils. Si la chaîne d'outils est associée à une organisation, tout utilisateur membre de cette organisation peut être ajouté à la liste de contrôle d'accès de l'une des chaînes d'outils associées. Pour plus d'informations sur le contrôle d'accès aux chaînes d'outils dans les organisations Cloud Foundry, voir [Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}. Pour plus d'informations sur le contrôle d'accès aux chaînes d'outils dans les groupes de ressources, voir [Gestion de l'accès aux chaînes d'outils dans les groupes de ressources](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}.
+Chaque chaîne d'outils est associée à un groupe de ressources ou à une organisation (org) spécifique. Si une chaîne d'outils est associée à un groupe de ressources, tout utilisateur disposant de l'autorisation d'Afficheur Identity and Access Management (IAM) pour la ressource de chaîne d'outils ou le groupe de ressources qui la contient peut accéder à la chaîne d'outils. Si la chaîne d'outils est associée à une organisation, tout utilisateur membre de cette organisation peut être ajouté à la liste de contrôle d'accès de l'une des chaînes d'outils associées. Pour plus d'informations sur le contrôle d'accès aux chaînes d'outils dans les organisations Cloud Foundry, voir [Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}. Pour plus d'informations sur le contrôle d'accès aux chaînes d'outils dans les groupes de ressources, voir [Gestion de l'accès aux chaînes d'outils dans les groupes de ressources](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window}.
 
 ##Création d'une chaîne d'outils à partir d'un modèle   
 {: #creating_a_toolchain_from_a_template}
@@ -55,7 +55,7 @@ Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne 
    Les groupes de ressources sont disponibles dans les régions Sud des Etats-Unis, Est des Etats-Unis, Royaume-Uni, Allemagne et Tokyo. Les organisations Cloud Foundry sont prises en charge dans les régions Sud des Etats-Unis, Royaume-Uni et Allemagne.
    {: important}
 
-1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Cliquez sur **Créer**. Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient en fonction du modèle de chaîne d'outils que vous avez sélectionné et selon que vous utilisez {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dedicated. Par exemple, lorsque vous créez une chaîne d'outils Microservices sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :
 
  * La chaîne d'outils est créée.
@@ -71,13 +71,13 @@ Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne 
 
 Vous pouvez créer une chaîne d'outils à partir de votre application. La chaîne d'outils peut prendre en charge le développement, le déploiement, la surveillance, etc. en continu, et elle est associée à votre application. Chaque application peut être associée à une chaîne d'outils. Lorsque vous envoyez des modifications au référentiel GitHub ou {{site.data.keyword.ghe_short}} de la chaîne d'outils, le pipeline génère et déploie automatiquement l'application.
 
-Si vous avez créé votre application à l'aide de votre propre référentiel de code, cliquez sur **Se connecter à une chaîne d'outils DevOps** sur la page d'informations de votre application. Ensuite, suivez la procédure décrite dans [Création d'application à partir de votre propre référentiel de code](/docs/apps/tutorials/tutorial_byoc.html).
+Si vous avez créé votre application à l'aide de votre propre référentiel de code, cliquez sur **Se connecter à une chaîne d'outils DevOps** sur la page d'informations de votre application. Ensuite, suivez la procédure décrite dans [Création d'application à partir de votre propre référentiel de code](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc).
 {: note}
 
 1. Si vous avez créé votre application à l'aide d'un kit de démarrage, cliquez sur **Déployer dans le cloud** sur la page d'informations de votre application. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Public, votre application est configurée pour la distribution continue depuis un nouveau référentiel GitHub rempli avec le code de démarrage d'application. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dedicated, votre application est configurée pour la distribution continue depuis un nouveau référentiel GitHub ou {{site.data.keyword.ghe_short}} rempli avec le code de démarrage d'application.
 1. Sur la page de création de chaîne d'outils, passez en revue le diagramme de la chaîne d'outils que vous allez créer. Ce diagramme montre chaque intégration d'outils dans sa phase de cycle de vie au sein de la chaîne d'outils.
 1. Passez en revue les informations par défaut des paramètres de chaîne d'outils. Le nom de la chaîne d'outils l'identifie dans {{site.data.keyword.Bluemix_notm}}. Si vous désirez utiliser un nom différent, modifiez le nom de la chaîne d'outils.
-1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Cliquez sur **Créer**. Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient selon que vous utilisez des chaînes d'outils sur {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dedicated. Par exemple, lorsque vous créez une chaîne d'outils à partir d'une application sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :
 
  * La chaîne d'outils est créée.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-14"
+  years: 2016, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -31,4 +31,4 @@ Outre les **points de contrôle de déploiement**, {{site.data.keyword.DRA_short
 	
 **Team Dynamics** utilise l'analyse du codage social pour vous aider à comprendre comment votre équipe collabore et ce qui peut être modifié pour améliorer son travail.
 
-Pour en savoir plus, consultez le [tutoriel d'initiation](/docs/services/DevOpsInsights/index.html).
+Pour en savoir plus, consultez le [tutoriel d'initiation](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).

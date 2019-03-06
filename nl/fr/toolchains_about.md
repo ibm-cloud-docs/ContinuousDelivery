@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2017-5-15"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -21,3 +21,5 @@ Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.d
 Sur {{site.data.keyword.Bluemix_notm}} Public, selon le modèle ou la chaîne d'outils que vous utilisez, il est possible que la chaîne d'outils inclue un référentiel GitHub ou Git rempli avec le code de démarrage d'application et un pipeline de distribution préconfiguré. Lorsque vous envoyez des modifications au référentiel de la chaîne d'outils, le pipeline de distribution génère et déploie automatiquement l'application sur {{site.data.keyword.Bluemix_notm}}.
 
 Sur {{site.data.keyword.Bluemix_notm}} Dedicated, selon la chaîne d'outils ou le modèle utilisé, il est possible que la chaîne d'outils inclue un référentiel GitHub ou GitHub Enterprise rempli avec le code de démarrage d'application et un pipeline de distribution préconfiguré. Lorsque vous envoyez des modifications au référentiel GitHub ou GitHub Enterprise de la chaîne d'outils, le pipeline de distribution génère et déploie automatiquement les applications sur {{site.data.keyword.Bluemix_notm}}.
+
+Pour savoir quelles sont les chaînes d'outils et intégrations d'outils disponibles, voir [Disponibilité, modèles et tutoriels de chaîne d'outils](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_about).
