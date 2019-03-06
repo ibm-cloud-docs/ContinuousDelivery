@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-18"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 
@@ -29,7 +29,7 @@ lastupdated: "2018-12-18"
 
 3. 将创建一个工具链，该工具链包含您的 Git 存储库的新专用克隆、用于构建和部署代码更改的管道、用于在云上编辑代码的 Eclipse Orion {{site.data.keyword.webide}} 以及问题跟踪程序。
 
-  如果 `.bluemix` 目录包含 `toolchain.yml` 文件，那么该文件用于指定工具链的工具集成。有关 `toolchain.yml` 文件的更多信息，请参阅[创建定制工具链](/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom){: new_window}。
+  如果 `.bluemix` 目录包含 `toolchain.yml` 文件，那么该文件用于指定工具链的工具集成。有关 `toolchain.yml` 文件的更多信息，请参阅[创建定制工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}。
   {: tip}
 
 4. 如果应用程序需要构建文件，那么会自动检测构建文件并构建应用程序。
@@ -112,7 +112,7 @@ lastupdated: "2018-12-18"
 
 如果在 `.bluemix` 目录中没有 `pipeline.yml` 文件，那么“部署到 {{site.data.keyword.Bluemix_notm}}”按钮将创建具有两个阶段的缺省管道：“构建”阶段和用于部署到 Cloud Foundry 的“部署”阶段。
 
-要创建管道文件，请查阅[定制工具链管道指示信息](toolchains_custom.html#toolchains_custom_pipeline_yml)中的示例文件。与在 Web 界面中定义管道一样，可以使用文本通过创建阶段和作业，设置输入和环境变量以及添加脚本来定义管道。您还可以在[此演示项目](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix)中查看大量更复杂的管道文件。
+要创建管道文件，请查阅[定制工具链管道指示信息](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml)中的示例文件。与在 Web 界面中定义管道一样，可以使用文本通过创建阶段和作业，设置输入和环境变量以及添加脚本来定义管道。您还可以在[此演示项目](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix)中查看大量更复杂的管道文件。
 
 ### 容器 Dockerfile 需求
 {: container_dockerfile}
@@ -132,4 +132,4 @@ Dockerfile 类似于某种应用程序构建脚本。如果在存储库中检测
 
 `manifest.yml` 文件无需位于存储库中。但是，如果应用程序需要运行其他服务，那么必须提供声明这些服务的清单文件。
 
-要了解有关清单文件的更多信息，请参阅[应用程序清单](/docs/cloud-foundry/deploy-apps.html#appmanifest)。
+要了解有关清单文件的更多信息，请参阅[应用程序清单](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)。

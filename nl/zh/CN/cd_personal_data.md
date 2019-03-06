@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-2-20"
 
 ---
 
@@ -28,8 +28,8 @@ lastupdated: "2018-11-29"
  * {{site.data.keyword.gitrepos}}
  * {{site.data.keyword.contdelivery_short}} 管道
  * 工具链和工具集成
- * [GitHub Enterprise on IBM Cloud ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/ghededicated/ghe_personal_data.html){: new_window}
- * [{{site.data.keyword.DRA_full}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
+ * [GitHub Enterprise on IBM Cloud ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
+ * [{{site.data.keyword.DRA_full}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/DevOpsInsights?topic=DevOpsInsights-insights_personal_data){: new_window}
  
 IBM 不管理 {{site.data.keyword.contdelivery_short}} 服务中的数据。在退出在 {{site.data.keyword.Bluemix_notm}} Public 中托管的 {{site.data.keyword.contdelivery_short}} 服务之前，必须删除自己的数据。
 {: important}
@@ -82,7 +82,7 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 
 如果您拥有个人帐户，那么可以更改和删除数据。如果您与其他用户共享您的帐户，那么您拥有这些数据，但您可能希望就共享工作与其他用户联系。 
 
-如果您无法登录到 IBM Cloud 帐户，请[联系 IBM 支持 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/support){:new_window}
+如果您无法登录到 IBM Cloud 帐户，请[联系 IBM 支持人员 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/support){:new_window}
  
 ###公司个人帐户
 

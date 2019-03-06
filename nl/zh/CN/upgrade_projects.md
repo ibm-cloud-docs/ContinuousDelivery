@@ -248,7 +248,7 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
 ### 我需要为将升级到工具链的项目创建组织。我了解我需要先向我的帐户添加信用卡，然后才能创建组织。要对我的信用卡收费吗？
 {: #faq_charges}
 
-作为[现买现付客户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}，如果您使用任何运行时、服务或组件超过 {{site.data.keyword.Bluemix_notm}} 目录中为其列出的免费限额，那么您需要付费。有关使用情况估算的信息，请参阅[价格表 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}。有关 Continuous Delivery 的当前定价，请参阅 [{{site.data.keyword.Bluemix_notm}}“目录”![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}。
+作为[现收现付客户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}，如果您使用任何运行时、服务或组件超过 {{site.data.keyword.Bluemix_notm}} 目录中为其列出的免费限额，那么您需要付费。有关使用情况估算的信息，请参阅[价格表 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}。有关 Continuous Delivery 的当前定价，请参阅 [{{site.data.keyword.Bluemix_notm}}“目录”![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}。
 
 
 如果您是 IBM 员工，内部 IBM 项目可以计入部门费用而非个人信用卡。如果您需要使用的资源超出 IBM 员工的免费限额，请创建支持凭单。
@@ -281,7 +281,7 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
 
    * 打开工具链 URL 时，检查 {{site.data.keyword.Bluemix_notm}} 标题。最有可能的情况是，您将看到您的组织名称，但不会指示任何空间。
    
-   * 从工具链的“概述”页面中，单击**管理**。在“访问控制”页面上，单击**组织管理员**链接。包含工具链的组织将列在主页面上。
+   * 从工具链的“概述”页面中，单击**管理**。在“访问控制”页面上，单击**组织管理者**链接。包含工具链的组织将列在主页面上。
 
 发生的情况是，在升级时，您的非美国组织在美国不存在，因此升级通过查找您刚好有权访问的另一个组织来为您选择了该组织。
 

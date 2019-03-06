@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2018
-lastupdated: "2018-12-12"
+  years: 2015，2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -101,13 +101,13 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 * 编辑断点条件以仅在满足特定条件时暂停执行。
 * 检查局部变量和字段的状态。
 * 立即查看 `console.log()` 调用的调试输出。此操作比监视 cf 日志速度更快。
-* 使用内置源代码编辑器对正在运行的应用程序代码立即执行临时更改。
+* 使用内置源代码编辑器对运行中应用程序代码立即执行临时更改。
 
 ### Shell {: #shell}
 
 使用此工具，可以通过 shell 访问正在运行应用程序的容器。通过使用此终端，可以远程运行诊断 shell 命令来管理应用程序。所有版本的 Node.js 都支持 Shell 功能。
 
-使用标准 Linux 命令（例如，**top**、**ps** 和 **kill**），监视实例中的内存和 CPU 使用量。
+使用标准 Linux 命令（例如，**top**、**ps** 和 **kill**），监视实例中的内存和 CPU 使用率。
 
 ### 将应用程序配置为启用 {{site.data.keyword.Bluemix_notm}} 实时调试 {: #configure_app_debug}
 
@@ -142,7 +142,3 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 1. 复原应用程序的原始 Node.js 版本、start 命令和内存值。
 
 2. 推送应用程序。
-
-### 有关更多信息
-
-* 请参阅 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

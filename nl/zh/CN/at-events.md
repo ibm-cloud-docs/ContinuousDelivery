@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-10-10"
+  years: 2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-10-10"
 使用 {{site.data.keyword.cloudaccesstrailfull}} 服务来跟踪用户和应用程序如何与 {{site.data.keyword.Bluemix}} 中的 {{site.data.keyword.contdelivery_short}} 服务交互。
 {: shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 服务记录 {{site.data.keyword.Bluemix_notm}} 中更改服务状态的用户启动的活动。有关更多信息，请参阅[{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)。
+{{site.data.keyword.cloudaccesstrailfull_notm}} 服务记录 {{site.data.keyword.Bluemix_notm}} 中更改服务状态的用户启动的活动。有关更多信息，请参阅[{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla)。
 
 
 <!-- You can create different sections to group events by area. -->

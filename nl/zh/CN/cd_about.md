@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -32,16 +32,16 @@ lastupdated: "2018-12-6"
 
 {{site.data.keyword.contdelivery_short}} 在所选区域中的 {{site.data.keyword.Bluemix_notm}} Public 上可用，也在 {{site.data.keyword.Bluemix_notm}} Dedicated 上可用。根据是在 {{site.data.keyword.Bluemix_notm}} Public 上还是在 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用 {{site.data.keyword.contdelivery_short}}，工具链有所不同。
 
-尽管目前工具链并非在所有区域都可用，但您可以配置工具链以在所有区域中部署应用程序。要了解更多信息，请尝试<a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">在多个区域中部署安全 Web 应用程序</a>教程。
+尽管目前工具链并非在所有区域都可用，但您可以配置工具链以在所有区域中部署应用程序。要了解更多信息，请阅读[跨多个区域部署安全 Web 应用程序教程](/docs/tutorials?topic=solution-tutorials-multi-region-webapp){: new_window}。
 {: tip}
 
 |工具链|{{site.data.keyword.Bluemix_notm}} Public|{{site.data.keyword.Bluemix_notm}} Dedicated|
 |:----------|:------------------------------|:------------------|
-|工具集成|有关受支持工具集成的列表，请参阅[配置工具集成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。|可用的工具集成取决于 {{site.data.keyword.contdelivery_short}} 在您环境中的设置方式。|
+|工具集成|有关受支持工具集成的列表，请参阅[配置工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。|可用的工具集成取决于 {{site.data.keyword.contdelivery_short}} 在您环境中的设置方式。|
 |通过模板创建工具链|登录到 [{{site.data.keyword.Bluemix_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://cloud.ibm.com/devops){:new_window}|登录到 {{site.data.keyword.Bluemix_notm}} 上的 Dedicated 环境。|
 |通过应用程序创建工具链|此时，将会对应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 存储库，进行持续交付。|此时，将会对应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 或 GitHub Enterprise 存储库，进行持续交付。|  
 |Delivery Pipeline 部署区域|所有 {{site.data.keyword.Bluemix_notm}} Public 区域都可用于 Cloud Foundry 部署作业。|{{site.data.keyword.Bluemix_notm}} Dedicated 区域可用。根据 {{site.data.keyword.contdelivery_short}} 在特定环境中的设置方式，相同客户帐户中的其他 Dedicated 或 Local 区域也可能可用。|
-|Delivery Pipeline 部署作业|所有[作业类型](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs)都可用。|取决于未安装在 Dedicated 环境中的 {{site.data.keyword.Bluemix_notm}} 服务的作业类型可能不可用。例如，容器构建和部署作业类型在没有 {{site.data.keyword.containerlong_notm}} 的环境中可能不可用。|
+|Delivery Pipeline 部署作业|所有[作业类型](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs)都可用。|取决于未安装在 Dedicated 环境中的 {{site.data.keyword.Bluemix_notm}} 服务的作业类型可能不可用。例如，容器构建和部署作业类型在没有 {{site.data.keyword.containerlong_notm}} 的环境中可能不可用。|
 {: caption="表 1. {{site.data.keyword.Bluemix_notm}} Dedicated 和 {{site.data.keyword.Bluemix_notm}} Public 上工具链的区别" caption-side="top"}
 
 
@@ -100,11 +100,11 @@ lastupdated: "2018-12-6"
   在美国南部、美国东部、德国、东京和英国可用
 
   </td><td>
-  有了此工具链，您可以在源代码控制中同时开发 Docker 应用程序及其 Helm 图表，然后对其自动构建并部署到 Kubernetes 集群。此工具链在构建或部署之前会执行冒烟测试，并使用专用容器注册表以及该容器注册表和 Kubernetes 集群的名称空间来确保隐私。此工具链还会使用漏洞顾问程序来确保仅部署安全映像。<br><br>
+  有了此工具链，您可以在源代码控制中同时开发 Docker 应用程序及其 Helm chart，然后对其自动构建并部署到 Kubernetes 集群。此工具链在构建或部署之前会执行冒烟测试，并使用专用容器注册表以及该容器注册表和 Kubernetes 集群的名称空间来确保隐私。此工具链还会使用漏洞顾问程序来确保仅部署安全映像。<br><br>
 尝试以下教程：<a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain" target="_blank">使用“使用 Helm 开发 Kubernetes 应用程序”工具链 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a><br><br>
   </td><td><ul>
   <li>{{site.data.keyword.deliverypipeline}}
-  </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>Git Repos and Issue Tracking</li><li>具有 Helm 图表的 {{site.data.keyword.containerlong_notm}}（Kubernetes 集群）
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>Git Repos and Issue Tracking</li><li>具有 Helm chart 的 {{site.data.keyword.containerlong_notm}}（Kubernetes 集群）
   </li></ul>
   </td></tr>
 
@@ -175,7 +175,7 @@ GitHub 和 Issues</li><li>Jenkins</li><li>{{site.data.keyword.DRA_full}}
   在美国南部可用
 
 </td><td>
-有了此工具链，您可以浏览项目的开发风险并使用社交编码分析，了解开发人员之间的交互模式。您可以与 GitHub Issues 和/或 JIRA Issues 一起分析 GitHub 源代码。使用 Developer Insights 以识别很容易出错的文件，并查看项目如何符合 DevOps 实践。Team Dynamics 中的社交编码分析可识别团队成员之间的交互程度，以便团队可以改正生产率不高的做法。<br><br>
+有了此工具链，您可以浏览项目的开发风险并使用社交编码分析，了解开发者之间的交互模式。您可以与 GitHub Issues 和/或 JIRA Issues 一起分析 GitHub 源代码。使用 Developer Insights 以识别很容易出错的文件，并查看项目如何符合 DevOps 实践。Team Dynamics 中的社交编码分析可识别团队成员之间的交互程度，以便团队可以改正生产率不高的做法。<br><br>
 尝试以下教程：<a href="https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain" target="_blank">使用“使用 GitHub 和 JIRA 的 Developer Insights 与 Team Dynamics”工具链来获取深入见解 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a><br><br>
 </td><td><ul><li>
 GitHub 和 Issues</li><li>{{site.data.keyword.DRA_full}}
@@ -203,7 +203,6 @@ GitHub 和 Issues</li><li>{{site.data.keyword.DRA_full}}
 
 <ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app" target="_blank">向应用程序添加工具链 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a></li>
 <li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">创建定制工具链 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a></li>
-<li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">在多个区域中部署安全 Web 应用程序</a></li>
 </ul></td>
 <td><ul><li>{{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>

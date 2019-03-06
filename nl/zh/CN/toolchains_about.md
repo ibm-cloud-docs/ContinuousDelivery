@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2017-5-15"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -22,3 +22,5 @@ lastupdated: "2017-5-15"
 
 
 在 {{site.data.keyword.Bluemix_notm}} Dedicated 中，根据您所使用的模板或工具链，工具链可能包括已经填充了应用程序入门模板代码的 GitHub 或 GitHub Enterprise 存储库和预配置的 Delivery Pipeline。当您将更改推送到工具链的 GitHub 或 GitHub Enterprise 存储库时，Delivery Pipeline 会自动构建应用程序，并将其部署到 {{site.data.keyword.Bluemix_notm}}。
+
+要查看哪些工具链和工具集成可用，请参阅[工具链可用性、模板和教程](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_about)。

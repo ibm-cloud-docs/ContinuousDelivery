@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-29"
+  years: 2016, 2019
+lastupdated: "2019-2-15"
 ---
 
 {:shortdesc: .shortdesc}
@@ -22,14 +22,14 @@ lastupdated: "2018-11-29"
 {{site.data.keyword.contdelivery_full}} 包含 Delivery Pipeline，用于以可重复的方式进行构建、测试和部署，需要的人为干预最少。在管道中，阶段序列可检索输入并运行作业（例如，构建、测试和部署）。
 {:shortdesc}
 
-查看、修改或运行管道的许可权基于拥有管道的工具链的访问控制。有关工具链的访问控制的更多信息，请参阅[管理对资源组中工具链的访问权](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}和[管理对 Cloud Foundry 组织中工具链的访问权](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}。
+查看、修改或运行管道的许可权基于拥有管道的工具链的访问控制。有关工具链的访问控制的更多信息，请参阅[管理对资源组中工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window}和[管理对 Cloud Foundry 组织中工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}。
 {: important}
 
-您可以指定由管道提供的要在多个作业类型中运行的脚本，这样就可以直接控制作业运行内容。这些脚本在包含多个标准开发工具的 Docker 映像中运行，其中包括与 {{site.data.keyword.Bluemix_notm}} 运行时进行交互所需的工具。有关标准 Docker 映像中包含哪些内容的更多信息，请参阅[预安装的资源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}。如果作业需要的开发工具在标准映像中没有提供，或者您需要这些工具的不同版本，那么可以使用定制映像。有关定制映像的更多信息，请参阅[使用定制 Docker 映像](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}。
+您可以指定由管道提供的要在多个作业类型中运行的脚本，这样就可以直接控制作业运行内容。这些脚本在包含多个标准开发工具的 Docker 映像中运行，其中包括与 {{site.data.keyword.Bluemix_notm}} 运行时进行交互所需的工具。有关标准 Docker 映像中包含哪些内容的更多信息，请参阅[预安装的资源](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}。如果作业需要的开发工具在标准映像中没有提供，或者您需要这些工具的不同版本，那么可以使用定制映像。有关定制映像的更多信息，请参阅[使用定制 Docker 映像](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}。
 
-当管道运行脚本时，会使用环境变量将描述作业运行位置上下文的属性传递到脚本。例如，作为阶段输入的存储库的 URL，要运行的阶段和作业的名称，作业类型所指定的参数，等等。要查看可用环境变量的列表，请参阅[预安装的资源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}。 
+当管道运行脚本时，会使用环境变量将描述作业运行位置上下文的属性传递到脚本。例如，作为阶段输入的存储库的 URL，要运行的阶段和作业的名称，作业类型所指定的参数，等等。要查看可用环境变量的列表，请参阅[预安装的资源](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)。 
 
-您可以在管道级别和阶段级别定义属性。管道属性是跨管道中所有阶段和作业共享的。阶段属性对特定阶段来说是唯一的，并且在该阶段中是跨所有作业共享的。有关属性的更多信息，请参阅[环境属性（环境变量）](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties)。
+您可以在管道级别和阶段级别定义属性。管道属性是跨管道中所有阶段和作业共享的。阶段属性对特定阶段来说是唯一的，并且在该阶段中是跨所有作业共享的。有关属性的更多信息，请参阅[环境属性（环境变量）](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties)。
 
 ## 阶段
 {: #deliverypipeline_stages}
@@ -39,7 +39,7 @@ lastupdated: "2018-11-29"
 当阶段运行时，该阶段的输入会传递到阶段中的每个作业。会为每一个作业提供一个干净的运行容器。结果是，阶段中的作业彼此之间无法传递工件。要在作业之间传递工件，请将作业分隔到两个阶段中，并使用第一阶段中作业的输出作为第二阶段的输入。
 {: tip}
 
-与定义管道属性的方法相似，您也可以定义阶段属性已用于特定阶段的所有作业中。例如，您可以定义 `TEST_URL` 属性，该属性传递 URL 以在阶段中部署和测试作业。部署作业将部署到该 URL，而测试作业将在该 URL 测试正在运行的应用程序。还会使用环境变量将阶段属性传递到作业脚本。如果在管道级别和阶段级别定义了相同的属性，那么会使用阶段属性的值。
+与定义管道属性的方法相似，您也可以定义阶段属性已用于特定阶段的所有作业中。例如，您可以定义 `TEST_URL` 属性，该属性传递 URL 以在阶段中部署和测试作业。部署作业将部署到该 URL，而测试作业将在该 URL 测试运行中应用程序。还会使用环境变量将阶段属性传递到作业脚本。如果在管道级别和阶段级别定义了相同的属性，那么会使用阶段属性的值。
 
 缺省情况下，在阶段中每当更改传递到项目的 SCM 存储库时，都会自动运行构建和部署操作。阶段和作业按顺序运行；它们为您的工作实现流程控制。例如，您可能将测试阶段置于部署阶段之前。如果测试阶段中的测试失败，部署阶段不会运行。
 
@@ -111,7 +111,7 @@ lastupdated: "2018-11-29"
 作业最长可以运行 60 分钟。当作业超过此限制时即会失败。如果作业会超过此限制，请将其分成多个作业。例如，如果作业执行三个任务，那么您可以将其分成三个作业：每个任务一个作业。
 {: tip}
 
-要了解如何将作业添加到阶段，请参阅[将作业添加到阶段](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}。
+要了解如何将作业添加到阶段，请参阅[将作业添加到阶段](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}。
 
 ### 构建作业
 
@@ -122,9 +122,9 @@ lastupdated: "2018-11-29"
 如果使用**简单**构建器类型，那么不会编译或构建代码；而是将其打包，并使其可用于未来的阶段。
 {: tip}
 
-使用 Cloud Foundry 部署时，Cloud Foundry 会包含正确的工件以允许应用程序运行。有关更多信息，请参阅[使用 cf 命令部署应用程序](/docs/cloud-foundry/deploy-apps.html#dep_apps)。Cloud Foundry 应用程序的管道包含运行 cf 命令的部署阶段。
+使用 Cloud Foundry 部署时，Cloud Foundry 会包含正确的工件以允许应用程序运行。有关更多信息，请参阅[使用 cf 命令部署应用程序](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps)。Cloud Foundry 应用程序的管道包含运行 cf 命令的部署阶段。
 
-Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://docs.cloudfoundry.org/buildpacks/detection.html)。可以在应用程序根文件夹的清单文件中指定要使用的 [buildpack](/docs/cfapps/byob.html#using-community-buildpacks)。buildpack 通常会检查用户提供的工件，以确定要下载的依赖项以及如何配置应用程序以与绑定服务进行通信。有关清单文件的更多信息，请参阅[应用程序清单](/docs/cloud-foundry/deploy-apps.html#appmanifest)。
+Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://docs.cloudfoundry.org/buildpacks/detection.html)。可以在应用程序根文件夹的清单文件中指定要使用的 [buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)。buildpack 通常会检查用户提供的工件，以确定要下载的依赖项以及如何配置应用程序以与绑定服务进行通信。有关清单文件的更多信息，请参阅[应用程序清单](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest)。
 
 ### 部署作业
 
@@ -132,7 +132,7 @@ Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icon
 
 部署作业可以部署新的应用程序或更新现有的应用程序。即使您最初使用其他方法（如 Cloud Foundry 命令行界面或 Web IDE 中的运行栏）部署了应用程序，您也可以使用部署作业更新该应用程序。要更新应用程序，请在部署作业中，使用该应用程序的名称。
 
-可以部署到一个或多个区域和服务。例如，您可以设置 {{site.data.keyword.deliverypipeline}} 以使用一个或多个服务，在一个区域中进行测试，然后部署到多个区域中的生产环境。有关更多信息，请参阅[区域](/docs/overview/ibm-cloud.html#ov_intro-reg){: new_window}。
+可以部署到一个或多个区域和服务。例如，您可以设置 {{site.data.keyword.deliverypipeline}} 以使用一个或多个服务，在一个区域中进行测试，然后部署到多个区域中的生产环境。
 
 ### 测试作业
 如果您想要求满足某些条件，请在构建和部署作业之前或之后，包括测试作业。您可以定制测试作业，按您的需要定制为简单或复杂。例如，您可能会发出 cURL 命令并期望获得特定响应。您还可能使用第三方测试服务（如 Sauce Labs），运行一组单元测试或运行功能测试。
@@ -142,7 +142,7 @@ Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icon
 ## 环境属性（环境变量）
 {: #environment_properties}
 
-一组预定义的环境属性提供作业执行环境相关信息的访问权。有关预定义环境属性的完整列表，请参阅[环境属性和资源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)。
+一组预定义的环境属性提供作业执行环境相关信息的访问权。有关预定义环境属性的完整列表，请参阅[环境属性和资源](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment)。
 
 也可以定义自己的环境属性。例如，可以定义 `API_KEY` 属性以传递管道中所有脚本用来访问 {{site.data.keyword.Bluemix_notm}} 资源的 API 密钥。
 
@@ -187,7 +187,7 @@ Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icon
 
 部署到 Cloud Foundry 的作业需要指定使用其权限运行作业的用户的 Platform API 密钥，以及用于部署工件的区域、组织和空间。如果需要更多服务来运行应用程序，那么必须在 `manifest.yml` 文件中指定这些服务。
 
-部署到 {{site.data.keyword.containerlong_notm}} 的部署作业需要指定使用其权限运行作业的用户的 Platform API 密钥、Dockerfile 和可选的 Helm 图表。  
+部署到 {{site.data.keyword.containerlong_notm}} 的部署作业需要指定使用其权限运行作业的用户的 Platform API 密钥、Dockerfile 和可选的 Helm chart。  
 
 作业脚本在作业使用分配的 Platform API 密钥登录到目标环境后运行（以便您可以在脚本中运行 `cf push` 或 `kubectl` 命令）。
 
@@ -211,7 +211,7 @@ Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icon
 ## Cloud Foundry 清单文件
 {: #deliverypipeline_manifest}
 
-清单文件名为 `manifest.yml`，存储在项目的根目录中，用于控制如何将项目部署到 {{site.data.keyword.Bluemix_notm}}。有关创建项目清单文件的信息，请参阅[有关应用程序清单的 {{site.data.keyword.Bluemix_notm}} 文档](/docs/cloud-foundry/deploy-apps.html#appmanifest)。要与 {{site.data.keyword.Bluemix_notm}} 集成，项目的根目录中必须包含清单文件。但是，无需基于该文件中的信息进行部署。
+清单文件名为 `manifest.yml`，存储在项目的根目录中，用于控制如何将项目部署到 {{site.data.keyword.Bluemix_notm}}。有关创建项目清单文件的信息，请参阅[有关应用程序清单的 {{site.data.keyword.Bluemix_notm}} 文档](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest)。要与 {{site.data.keyword.Bluemix_notm}} 集成，项目的根目录中必须包含清单文件。但是，无需基于该文件中的信息进行部署。
 
 在管道中，您可以使用 `cf push` 命令自变量，指定清单文件可以执行的所有事项。`cf push` 命令自变量在具有多个部署目标的项目中非常有用。如果多个部署作业全部尝试使用项目清单文件中指定的路径，那么会发生冲突。
 

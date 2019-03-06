@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-7-19"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -12,7 +12,8 @@ lastupdated: "2018-7-19"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# 使用工具链 {: #pipeline-working}
+# 使用工具链  
+{: #pipeline-working}
 
 要自动执行构建并部署到 {{site.data.keyword.Bluemix}}，请使用 {{site.data.keyword.contdelivery_full}} 管道。
 {: shortdesc}
@@ -23,16 +24,16 @@ lastupdated: "2018-7-19"
 
 部署作业从构建作业中获取输出，并将其部署到 {{site.data.keyword.containerlong_notm}} 或 Cloud Foundry 服务器，如 {{site.data.keyword.Bluemix_notm}}。
 
-可以部署到一个或多个区域和服务。例如，您可以设置 {{site.data.keyword.deliverypipeline}} 以使用一个或多个服务，在一个区域中进行测试，然后部署到多个区域中的生产环境。有关更多信息，请参阅[区域](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}。
+可以部署到一个或多个区域和服务。例如，您可以设置 {{site.data.keyword.deliverypipeline}} 以使用一个或多个服务，在一个区域中进行测试，然后部署到多个区域中的生产环境。
 
 ##创建管道
 
 您可以使用以下任一方法来创建管道：
 
-   * [从现有 Cloud Foundry 应用程序创建工具链](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app){: new_window}。生成的工具链包含管道。
+   * [从现有 Cloud Foundry 应用程序创建工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}。生成的工具链包含管道。
 
-   * [从模板创建工具链](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_a_template){: new_window}（模板至少包含一个管道）。
+   * [从模板创建工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window}（模板至少包含一个管道）。
 
-   * 向现有工具链[添加 {{site.data.keyword.deliverypipeline}} 工具集成](/docs/services/ContinuousDelivery/toolchains_integrations.html#deliverypipeline){: new_window}。
+   * 向现有工具链[添加 {{site.data.keyword.deliverypipeline}} 工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window}。
    
 通过 {{site.data.keyword.deliverypipeline}}，可更改配置，检查构建、已部署应用程序和最近部署的状态，查看最新日志和部署详细信息，也可以删除管道。

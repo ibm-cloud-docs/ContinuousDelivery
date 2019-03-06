@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018
-lastupdated: "2018-11-14"
+  years:  2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -17,14 +17,15 @@ lastupdated: "2018-11-14"
 
 
 # 使用 Identity and Access Management 管理用户对工具链的访问权
+{: #toolchains-iam-security}
 
 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 针对帐户中的用户控制对资源组中工具链的访问权。 
 
 **注**： 
 
-* 用户对工具链实例和 {{site.data.keyword.contdelivery_short}} 服务实例的访问权是单独管理的。有关管理用户对资源组中 {{site.data.keyword.contdelivery_short}} 服务实例的访问权的更多信息，请参阅[使用 Identity and Access Management 管理用户对 {{site.data.keyword.contdelivery_short}} 的访问权](/docs/services/ContinuousDelivery/cd_iam_security.html){: new_window}。
+* 用户对工具链实例和 {{site.data.keyword.contdelivery_short}} 服务实例的访问权是单独管理的。有关管理用户对资源组中 {{site.data.keyword.contdelivery_short}} 服务实例的访问权的更多信息，请参阅[使用 Identity and Access Management 管理用户对 {{site.data.keyword.contdelivery_short}} 的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security){: new_window}。
 
-* 用户对 Cloud Foundry 组织中工具链的访问权的管理方式与用户对资源组中 {{site.data.keyword.contdelivery_short}} 服务实例的访问权的管理方式不同。有关管理用户对 Cloud Foundry 组织中工具链访问权的更多信息，请参阅[管理对 Cloud Foundry 组织中工具链的访问权](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs.html){: new_window}。
+* 用户对 Cloud Foundry 组织中工具链的访问权的管理方式与用户对资源组中 {{site.data.keyword.contdelivery_short}} 服务实例的访问权的管理方式不同。有关管理用户对 Cloud Foundry 组织中工具链访问权的更多信息，请参阅[管理对 Cloud Foundry 组织中工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}。
 
 对于访问您帐户中的工具链的每个用户，必须向其分配定义了 IAM 用户角色的访问策略。该策略确定用户可在您所选服务或实例的上下文中执行的操作。
 {{site.data.keyword.Bluemix_notm}} 服务作为允许在服务上执行的操作来定制和定义允许的操作。然后，这些操作将映射到 IAM 用户角色。
@@ -60,6 +61,6 @@ lastupdated: "2018-11-14"
 | delete-bindings |从资源组中的工具链除去工具集成。|管理员、编辑者 |
 {: caption="表 2. 服务操作" caption-side="top"}
 
-有关在 UI 中分配用户角色的信息，请参阅[管理 IAM 访问权](/docs/iam/mngiam.html#iammanidaccser)。
+有关在 UI 中分配用户角色的信息，请参阅[管理 IAM 访问权](/docs/iam?topic=iam-iammanidaccser)。
 
 <!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

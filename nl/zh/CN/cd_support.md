@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-8"
 
 ---
 
@@ -50,8 +50,8 @@ lastupdated: "2018-12-6"
 1. 从菜单栏中单击**支持**，然后单击**添加凭单**。
 1. 完成表单以指出您所需要的技术支持。
 
-有关开具 IBM {{site.data.keyword.Bluemix_notm}} 支持凭单或有关支持级别和凭单严重性的更多信息，请参阅[联系支持人员](https://cloud.ibm.com/docs/support/index.html#contacting-support)。
+有关开具 IBM {{site.data.keyword.Bluemix_notm}} 支持凭单或有关支持级别和凭单严重性的更多信息，请参阅[支持套餐](/docs/get-support?topic=get-support-support-plans)。
 
 
 ## 对 {{site.data.keyword.Bluemix_notm}} 的支持
-有关 {{site.data.keyword.Bluemix_notm}} 服务的其他问题或疑问，请参阅[获取客户支持](https://www.{DomainName}/docs/support/index.html#getting-customer-support)。
+有关 {{site.data.keyword.Bluemix_notm}} 服务的其他问题或疑问，请参阅[获取支持](/docs/get-support?topic=get-support-getting-customer-support)。

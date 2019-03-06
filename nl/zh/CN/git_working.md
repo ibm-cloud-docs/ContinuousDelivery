@@ -38,7 +38,7 @@ lastupdated: "2018-12-5"
 {: tip}
 
 ## 在本地使用 {{site.data.keyword.gitrepos}}
-{: #git_local}
+{: #git_locally}
 
 可以在本地访问存储在 {{site.data.keyword.gitrepos}} 中的 Git 存储库。有关在本地设置 Git 的指示信息，请参阅[开始在命令行上使用 Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}。
 

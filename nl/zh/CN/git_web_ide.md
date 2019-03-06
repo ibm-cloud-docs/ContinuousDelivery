@@ -180,7 +180,7 @@ lastupdated: "2018-11-29"
 
 1. 输入 `git log`，然后按 Enter 键。
 
-2. 浏览提交者的提交。
+2. 浏览提交节点的提交。
  * 要查看更多条目，请按 Page Down 键。
  * 要查看先前条目，请按 Page Up 键。
 
@@ -268,7 +268,7 @@ lastupdated: "2018-11-29"
 
 2. 输入 `git tag -a <tag_text> <commit_id>`，然后按 Enter 键。
 
-## 更改提交者名称和电子邮件地址
+## 更改提交节点名称和电子邮件地址
 {: #change_the_committer_name_and_email_address}
 
 ### Eclipse Orion Web IDE

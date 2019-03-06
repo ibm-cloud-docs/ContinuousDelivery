@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -60,14 +60,14 @@ lastupdated: "2018-12-6"
 {: #plan_exceeded}
 {: faq}
 
-{{site.data.keyword.contdelivery_short}} 提供两个套餐：轻量和专业。如果您有 {{site.data.keyword.contdelivery_short}} 轻量套餐，那么可以免费使用工具链，直至达到套餐限制的数量。错误消息指示您已超过轻量套餐的一个或多个限制。例如，如果有太多授权用户与 {{site.data.keyword.contdelivery_short}} 服务实例相关联或者如果运行了最大数量的 {{site.data.keyword.deliverypipeline}} 作业，那么可能超出套餐。有关套餐条款的更多信息，请参阅[套餐限制和使用情况](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}。
+{{site.data.keyword.contdelivery_short}} 提供两个套餐：轻量和专业。如果您有 {{site.data.keyword.contdelivery_short}} 轻量套餐，那么可以免费使用工具链，直至达到套餐限制的数量。错误消息指示您已超过轻量套餐的一个或多个限制。例如，如果有太多授权用户与 {{site.data.keyword.contdelivery_short}} 服务实例相关联或者如果运行了最大数量的 {{site.data.keyword.deliverypipeline}} 作业，那么可能超出套餐。有关套餐条款的更多信息，请参阅[套餐限制和使用情况](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}。
 
 
 ## 我已创建工具链，为什么“工具链”页面显示需要 Continuous Delivery 服务？
 {: #service_required_resource_group}
 {: faq}
 
-位于工具链的相同资源组或组织中的 {{site.data.keyword.contdelivery_short}} 服务实例的套餐条款管理服务中包含的某些工具集成的使用（{{site.data.keyword.deliverypipeline}}、Eclipse Orion {{site.data.keyword.webide}} 和 {{site.data.keyword.gitrepos}}）。错误消息指示资源组或组织不包含必需的 {{site.data.keyword.contdelivery_short}} 服务实例。有关套餐条款的更多信息，请参阅[套餐限制和使用情况](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}。
+位于工具链的相同资源组或组织中的 {{site.data.keyword.contdelivery_short}} 服务实例的套餐条款管理服务中包含的某些工具集成的使用（{{site.data.keyword.deliverypipeline}}、Eclipse Orion {{site.data.keyword.webide}} 和 {{site.data.keyword.gitrepos}}）。错误消息指示资源组或组织不包含必需的 {{site.data.keyword.contdelivery_short}} 服务实例。有关套餐条款的更多信息，请参阅[套餐限制和使用情况](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}。
 
 
 ## 我已在 Cloud Foundry 组织中创建工具链，为什么“工具链”页面显示需要 Continuous Delivery 服务？
@@ -91,7 +91,7 @@ lastupdated: "2018-12-6"
 
 您可以增加帐户的内存配额，或者减少应用程序使用的内存。
 试用帐户的最大内存配额为 2 GB。
-要增加帐户的内存配额，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅 [付费帐户](/docs/pricing/index.html#pay-accounts)。要减少应用程序使用的内存，请使用 {{site.data.keyword.Bluemix_notm}} 控制台或 cf 命令行界面。
+要增加帐户的内存配额，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅[如何升级或更改我的帐户？](/docs/account?topic=account-accountfaqs#changeacct)。要减少应用程序使用的内存，请使用 {{site.data.keyword.Bluemix_notm}} 控制台或 cf 命令行界面。
     
 
 如果使用 {{site.data.keyword.Bluemix_notm}} 控制台，请完成以下步骤：
@@ -148,7 +148,7 @@ lastupdated: "2018-12-6"
   * 通过“[{{site.data.keyword.Bluemix_notm}} - 系统状态”![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/status){: new_window} 直接访问。
 
 
-有关 {{site.data.keyword.Bluemix_notm}}“状态”页面的更多信息，请参阅[查看 {{site.data.keyword.Bluemix_notm}} 状态](https://cloud.ibm.com/docs/get-support/ViewStatus.html#viewing-bluemix-status)。
+有关 {{site.data.keyword.Bluemix_notm}}“状态”页面的更多信息，请参阅[查看 {{site.data.keyword.Bluemix_notm}} 状态](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}。
 
 
 ## 我为工具链配置了工具集成，为什么未配置成功？

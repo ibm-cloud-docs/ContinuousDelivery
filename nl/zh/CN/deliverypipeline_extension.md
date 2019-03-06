@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-3-26"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -71,9 +71,9 @@ lastupdated: "2018-3-26"
 
   e. 根据需要，选中或清除**为我设置服务和空间**复选框。
 
-    * 如果要让管道检查 {{site.data.keyword.Bluemix_short}} 空间中是否有该服务以及将该服务绑定到容器的应用程序，请选中此复选框。如果不存在该服务或绑定的应用程序，那么管道会将该服务的免费套餐添加到空间。所创建的绑定应用程序名为 `pipeline_bridge_app`。之后，管道会使用 pipeline_bridge_app 中的凭证来访问绑定的服务。
+    * 如果要让管道检查 {{site.data.keyword.Bluemix_short}} 空间中是否有该服务以及将该服务绑定到容器的应用程序，请选中此复选框。如果不存在该服务或绑定的应用程序，那么管道会将该服务的免费套餐添加到空间。所创建的绑定的应用程序名为 `pipeline_bridge_app`。之后，管道会使用 pipeline_bridge_app 中的凭证来访问绑定的服务。
 
-    * 如果您已在 {{site.data.keyword.Bluemix_short}} 空间中配置该服务和绑定的应用程序，或者如果您想要[手动配置这些需求](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}，请使该复选框保留清除状态。
+    * 如果您已在 {{site.data.keyword.Bluemix_short}} 空间中配置了服务并绑定应用程序，或者如果您想要手动配置这些需求，请将该复选框保持清除状态。
 
   f. 在**等待分析完成的时间（分钟）**字段中，输入 0 到 59 分钟之间的值。缺省值为 5 分钟。作业结束时 {{site.data.keyword.staticanalyzershort}} 仪表板的 URL 会显示在控制台日志中。
 
@@ -105,8 +105,6 @@ lastupdated: "2018-3-26"
 
 **暂挂扫描**
 ![暂挂扫描示例](images/analyzer_pending.png)
-
-有关使用 {{site.data.keyword.staticanalyzershort}} 服务的更多信息，请参阅 [{{site.data.keyword.staticanalyzershort}}Static Analyzer 服务文档](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}。
 
 <!--
 

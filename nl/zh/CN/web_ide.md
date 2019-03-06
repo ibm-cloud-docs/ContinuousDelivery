@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-11-14"
 Eclipse Orion{{site.data.keyword.webide}} 是基于浏览器的开发环境，其中您可以借助内容辅助、代码完成和错误检查功能在 JavaScript、HTML 和 CSS 中针对 Web 进行开发。{{site.data.keyword.webide}} 使用几乎任何语言并为大部分文件类型突出显示语法。源代码控制功能内置其中，因此您可以在本地部署代码并调试应用程序。
 {:shortdesc}
 
-最重要的是，{{site.data.keyword.webide}} 由 Web 提供支持。您无需进行任何安装、维护和扩展。您可以在具有因特网连接的任何地方进行开发。
+最重要的是，{{site.data.keyword.webide}} 由 Web 提供支持。您无需进行任何安装、维护和缩放。您可以在具有因特网连接的任何地方进行开发。
 
 请勿将文件中的监管数据存储在 {{site.data.keyword.webide}} 中。监管数据的处理过程目前尚未就绪。
 {: tip}
@@ -75,7 +75,7 @@ Eclipse Orion{{site.data.keyword.webide}} 是基于浏览器的开发环境，�
 ## 管理源代码
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} 与源代码管理工具相集成。要使用 Git 存储库，请单击 **Git 存储库**图标 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="“Git 存储库”图标">。有关更多信息，请参阅[在 Eclipse Orion Web IDE 中使用 Git](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide)。
+{{site.data.keyword.webide}} 与源代码管理工具相集成。要使用 Git 存储库，请单击 **Git 存储库**图标 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="“Git 存储库”图标">。有关更多信息，请参阅[在 Eclipse Orion Web IDE 中使用 Git](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_web_ide#git_web_ide)。
 
 ## 从您的工作空间部署应用程序
 {: #deploy}
@@ -212,7 +212,7 @@ Eclipse Orion {{site.data.keyword.webide}} 为 JavaScript、HTML、CSS 和 Markd
 </table>
 
 ## 学习教程：Eclipse Orion Web IDE
-{: #toolchain_tutorials}
+{: #toolchain_web_ide_tutorials}
 
 查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage){:new_window} 上的下列某个教程：
 

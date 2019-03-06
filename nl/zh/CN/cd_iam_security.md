@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018
-lastupdated: "2018-7-18"
+  years:  2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -17,14 +17,15 @@ lastupdated: "2018-7-18"
 
 
 # 使用 Identity and Access Management 管理用户对 Continuous Delivery 的访问权
+{: #cd-iam-security}
 
 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 针对帐户中的用户控制对资源组中 {{site.data.keyword.contdelivery_full}} 服务实例的访问权。 
 
 **注**： 
 
-* 单独管理用户对 {{site.data.keyword.contdelivery_short}} 服务实例和工具链实例的访问权。有关管理用户对资源组中工具链的访问权的更多信息，请参阅[使用 Identity and Access Management 管理用户对工具链的访问权](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}。
+* 单独管理用户对 {{site.data.keyword.contdelivery_short}} 服务实例和工具链实例的访问权。有关管理用户对资源组中工具链的访问权的更多信息，请参阅[使用 Identity and Access Management 管理用户对工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}。
 
-* 用户对 Cloud Foundry 组织中工具链的访问权的管理方式与用户对资源组中工具链的访问权的管理方式不同。有关管理用户对 Cloud Foundry 组织中工具链访问权的更多信息，请参阅[管理对 Cloud Foundry 组织中工具链的访问权](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}。
+* 用户对 Cloud Foundry 组织中工具链的访问权的管理方式与用户对资源组中工具链的访问权的管理方式不同。有关管理用户对 Cloud Foundry 组织中工具链访问权的更多信息，请参阅[管理对 Cloud Foundry 组织中工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}。
 
 对于访问您帐户中的 {{site.data.keyword.contdelivery_short}} 服务的每个用户，必须向其分配定义了 IAM 用户角色的访问策略。该策略确定用户可在您所选服务或实例的上下文中执行的操作。
 {{site.data.keyword.Bluemix_notm}} 服务作为允许在服务上执行的操作来定制和定义允许的操作。然后，这些操作将映射到 IAM 用户角色。
@@ -42,7 +43,7 @@ lastupdated: "2018-7-18"
 
 |平台管理角色|操作描述|示例操作|
 |:-----------------|:-----------------|:-----------------|
-|查看者、操作员|查看 {{site.data.keyword.contdelivery_short}} 服务的实例。| <ul><li>单击 {{site.data.keyword.contdelivery_short}} 服务实例以打开其仪表板。</li>|</ul>
+|查看者、操作员|查看 {{site.data.keyword.contdelivery_short}} 服务的实例。| <ul><li>单击 {{site.data.keyword.contdelivery_short}} 服务实例以打开其仪表板。</li></ul>|
 |编辑者、管理员|创建、查看、更新、修改 {{site.data.keyword.contdelivery_short}} 服务实例的套餐，以及删除该实例。|<ul><li>在资源组中供应 {{site.data.keyword.contdelivery_short}} 的实例。</li><li>从资源组删除 {{site.data.keyword.contdelivery_short}} 的实例。</li><li>将 {{site.data.keyword.contdelivery_short}} 实例套餐从轻量更改为专业。</li></ul> |
 |管理员|更新“授权用户”列表。| <ul><li>向“授权用户”列表添加用户。</li><li>从“授权用户”列表除去用户。</li></ul> |
 {: caption="表 1. IAM 用户角色和操作" caption-side="top"}
@@ -56,17 +57,17 @@ lastupdated: "2018-7-18"
 | update_plan |更改资源组中 {{site.data.keyword.contdelivery_short}} 服务实例的套餐。|管理员、编辑者 |
 | delete |从资源组删除 {{site.data.keyword.contdelivery_short}} 服务实例。|管理员、编辑者 |
 | retrieve |查看资源组中的 {{site.data.keyword.contdelivery_short}} 服务实例。|管理员、编辑者、操作员、查看者|
-| add-auth-users |在 {{site.data.keyword.contdelivery_short}} 服务实例中的“管理”选项卡上向“授权用户”列表添加条目。|管理员、作者、管理者|
-| remove-auth-users |在 {{site.data.keyword.contdelivery_short}} 服务实例中的“管理”选项卡上除去“授权用户”列表中的条目。|管理员、作者、管理者|
+| add-auth-users |在 {{site.data.keyword.contdelivery_short}} 服务实例中的“管理”选项卡上向“授权用户”列表添加条目。|管理者、写入者、管理者|
+| remove-auth-users |在 {{site.data.keyword.contdelivery_short}} 服务实例中的“管理”选项卡上除去“授权用户”列表中的条目。|管理者、写入者、管理者|
 {: caption="表 2. 服务操作" caption-side="top"}
 
 下表详细描述了映射到服务访问角色的操作。服务访问角色支持用户访问 {{site.data.keyword.contdelivery_short}} 以及调用 {{site.data.keyword.contdelivery_short}} API。
 
 |服务访问角色 |操作描述|示例操作|
 |:-----------------|:-----------------|:-----------------|
-|作者、管理员|在 {{site.data.keyword.contdelivery_short}} 服务实例中的“管理”选项卡上向“授权用户”列表添加用户和除去其中的用户。| <ul><li>添加授权用户。</li><li>除去授权用户。</li></ul>|
+|写入者、管理者|在 {{site.data.keyword.contdelivery_short}} 服务实例中的“管理”选项卡上向“授权用户”列表添加用户和除去其中的用户。| <ul><li>添加授权用户。</li><li>除去授权用户。</li></ul>|
 {: caption="表T 3. IAM 服务访问角色和操作" caption-side="top"}
 
-有关在 UI 中分配用户角色的信息，请参阅[管理 IAM 访问权](/docs/iam/mngiam.html#iammanidaccser)。
+有关在 UI 中分配用户角色的信息，请参阅[管理 IAM 访问权](/docs/iam?topic=iam-iammanidaccser)。
 
 <!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

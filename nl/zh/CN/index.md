@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-7"
 
 ---
 
@@ -26,9 +26,9 @@ lastupdated: "2018-12-6"
 ##先决条件
 {: #cd_prereqs}
 
-必须先在 {{site.data.keyword.Bluemix_notm}}“目录”中选择 {{site.data.keyword.contdelivery_short}} 的实例以创建该实例，然后才能从模板创建持续交付工具链。工具链将集成用于规划、开发、部署管道和管理应用程序的工具。您可以随时在工具链中添加或除去工具。如果已有工具链，那么可[查看现有工具链](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}。有关使用工具链的更多信息，请参阅[使用工具链](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}。
+必须先在 {{site.data.keyword.Bluemix_notm}}“目录”中选择 {{site.data.keyword.contdelivery_short}} 的实例以创建该实例，然后才能从模板创建持续交付工具链。工具链将集成用于规划、开发、部署管道和管理应用程序的工具。您可以随时在工具链中添加或除去工具。如果已有工具链，那么可[查看现有工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing_a_toolchain){: new_window}。有关使用工具链的更多信息，请参阅[使用工具链](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using){: new_window}。
 
-如果已有 {{site.data.keyword.contdelivery_short}} 的实例，那么可[创建工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/devops/create){: new_window} 或[查看现有工具链](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}。
+如果已有{{site.data.keyword.contdelivery_short}}的实例，那么可以[创建工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/devops/create){: new_window} 或[查看现有工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/devops/toolchains){: new_window}。
 {: tip}
 
 ##步骤 1：选择工具链模板
@@ -54,7 +54,7 @@ lastupdated: "2018-12-6"
    资源组在美国南部、美国东部、德国、东京和英国区域可用。在美国南部、英国和德国区域支持 Cloud Foundry 组织。
    {: important}
  
-1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。
+1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。
 1. 单击**创建**。此时将自动运行数个步骤，以设置工具链。设置的工具集成根据您所选的工具链模板以及您使用的是 {{site.data.keyword.Bluemix_notm}} Public 还是 {{site.data.keyword.Bluemix_notm}} Dedicated 而有所不同。例如，当您在 {{site.data.keyword.Bluemix_notm}} Public 上创建微服务工具链时，会运行以下步骤：
 
  * 将创建工具链。

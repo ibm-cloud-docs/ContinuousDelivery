@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -44,7 +44,7 @@ lastupdated: "2018-11-29"
  有一些工具集成已经过预配置，不需要任何配置参数。您仅可以针对您所配置的工具集成更新配置设置。
  {: tip}
 
- 完成更新设置时，单击**保存集成**。有关配置特定工具集成的更多信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。
+ 完成更新设置时，单击**保存集成**。有关配置特定工具集成的更多信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。
 
 ## 添加工具集成
 {: #adding_a_tool_integration}
@@ -70,7 +70,7 @@ lastupdated: "2018-11-29"
 ## 管理对资源组中工具链的访问权
 {: #managing_access_resource_groups}
 
-您可以使用 Identity and Access Management (IAM) 服务来管理用户对工具链的访问权。有关使用 IAM 管理访问控制的更多信息，请参阅[使用 Identity and Access Management 管理用户对工具链的访问权](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}。 
+您可以使用 Identity and Access Management (IAM) 服务来管理用户对工具链的访问权。有关使用 IAM 管理访问控制的更多信息，请参阅[使用 Identity and Access Management 管理用户对工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}。 
 
 仅当用户存在于所选的 {{site.data.keyword.contdelivery_short}} 实例的授权用户列表中时，才能使用 Delivery Pipeline、Eclipse Orion {{site.data.keyword.webide}} 和 {{site.data.keyword.contdelivery_short}} 工具链的 {{site.data.keyword.gitrepos}} 功能。在指定的资源组中，您可以从所选 {{site.data.keyword.contdelivery_short}} 实例的“管理”选项卡来管理授权用户权利。
 
@@ -89,7 +89,7 @@ lastupdated: "2018-11-29"
 必须在托管工具链的区域中向工具链的组织添加用户。如果工具链配置为将应用程序部署到其他区域，那么它仍会将应用程序部署到美国南部区域。
 {: important}
 
-将用户添加到 {{site.data.keyword.Bluemix_notm}} 组织和空间时，如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}，那么用户可以使用他们的 {{site.data.keyword.Bluemix_notm}} 标识和密码登录到 {{site.data.keyword.ghe_short}}。用户登录之后，将为他们创建帐户。将用户添加到 {{site.data.keyword.Bluemix_notm}} 组织和空间时，他们不会自动添加到 {{site.data.keyword.ghe_short}} 存储库。必须由具有存储库管理权限的人员进行添加。有关更多信息，请参阅[使用 Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html){: new_window}。如果您使用自己的 {{site.data.keyword.ghe_short}} 受管版本，请遵循内部过程。
+将用户添加到 {{site.data.keyword.Bluemix_notm}} 组织和空间时，如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}，那么用户可以使用他们的 {{site.data.keyword.Bluemix_notm}} 标识和密码登录到 {{site.data.keyword.ghe_short}}。用户登录之后，将为他们创建帐户。将用户添加到 {{site.data.keyword.Bluemix_notm}} 组织和空间时，他们不会自动添加到 {{site.data.keyword.ghe_short}} 存储库。必须由具有存储库管理权限的人员进行添加。有关更多信息，请参阅[使用 Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}。如果您使用自己的 {{site.data.keyword.ghe_short}} 受管版本，请遵循内部过程。
 
 ###管理工具链访问权的提示
 
@@ -127,7 +127,7 @@ lastupdated: "2018-11-29"
 
      * 为组织中的所选空间分配角色。
 
-     缺省情况下，组织管理员对与组织相关联的所有工具链具有完全的管理特权。要向用户授予完全的管理特权，请选择**管理员**角色。“记帐管理员”和“审计员”角色不会影响工具链访问权。您可以日后在“团队目录”页面上更改这些角色。有关更多信息，请参阅 [Cloud Foundry 角色](/docs/iam/cfaccess.html#cfaccess){: new_window}。
+     缺省情况下，组织管理者对与组织相关联的所有工具链具有完全的管理特权。要向用户授予完全的管理特权，请选择**管理者**角色。“记帐管理者”和“审计员”角色不会影响工具链访问权。您可以日后在“团队目录”页面上更改这些角色。有关更多信息，请参阅 [Cloud Foundry 角色](/docs/iam?topic=iam-cfaccess#cfaccess){: new_window}。
      {: tip}
 
    在用户成为组织的成员后，返回到工具链的“管理”页面，并将用户添加到工具链。  

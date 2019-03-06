@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-15"
 
 ---
 
@@ -332,11 +332,11 @@ lastupdated: "2018-12-11"
 1. 指定新管道的名称。
 1. 如果您计划使用管道来部署用户界面，请选中**在“查看应用程序”菜单中显示应用程序**复选框。管道所创建的所有应用程序都会显示在工具链“概述”页面上的**查看应用程序**列表中。
 1. 单击**创建集成**，以向工具链添加 {{site.data.keyword.deliverypipeline}}。
-1. 单击 **{{site.data.keyword.deliverypipeline}}** 以查看管道并对其进行配置。要了解配置管道的基础知识，请参阅[构建和部署管道](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}。
+1. 单击 **{{site.data.keyword.deliverypipeline}}** 以查看管道并对其进行配置。要了解配置管道的基础知识，请参阅[构建和部署管道](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy){: new_window}。
 
   如果要在向 GitHub、{{site.data.keyword.ghe_short}} 或 Git 存储库推送提交时自动运行管道，请执行以下步骤：
 
-   a. 为工具链配置 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}}，然后再为管道定义阶段。管道阶段需要存储库的 Git URL。每一个管道阶段仅可以参考与工具链相关联的其中一个 GitHub、{{site.data.keyword.ghe_short}} 或 Git 存储库。有关配置 GitHub 的指示信息，请参阅 [GitHub](#github) 一节。有关配置 Dedicated {{site.data.keyword.ghe_short}} 的指示信息，请参阅 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated/index.html){: new_window}。有关配置 {{site.data.keyword.gitrepos}} 的指示信息，请参阅 [{{site.data.keyword.gitrepos}}](#gitbluemix) 一节。
+   a. 为工具链配置 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}}，然后再为管道定义阶段。管道阶段需要存储库的 Git URL。每一个管道阶段仅可以参考与工具链相关联的其中一个 GitHub、{{site.data.keyword.ghe_short}} 或 Git 存储库。有关配置 GitHub 的指示信息，请参阅 [GitHub](#github) 一节。有关配置 Dedicated {{site.data.keyword.ghe_short}} 的指示信息，请参阅 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}。有关配置 {{site.data.keyword.gitrepos}} 的指示信息，请参阅 [{{site.data.keyword.gitrepos}}](#gitbluemix) 一节。
 
    b. 使用 Webhook。没有 Webhook，您只能手动运行管道。要在链接至 GitHub 或{{site.data.keyword.ghe_short}} 存储库时使用 Webhook，需要管理员特权。要链接到 {{site.data.keyword.gitrepos}} 存储库，您需要支配者或所有者特权。
 
@@ -384,7 +384,7 @@ lastupdated: "2018-12-11"
 
 ### 了解有关 Delivery Pipeline 的更多信息
 
-要了解有关 {{site.data.keyword.deliverypipeline}} 的更多信息，请参阅 IBM Cloud Garage Method 上的[使用管道](/docs/services/ContinuousDelivery/pipeline_working.html){: new_window}和 [Delivery Pipeline 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window}，或学习以下教程：
+要了解有关 {{site.data.keyword.deliverypipeline}} 的更多信息，请参阅 IBM Cloud Garage Method 上的[使用管道](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working){: new_window}和 [Delivery Pipeline 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window}，或学习以下教程：
 
   * [创建管道 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:new_window}
 
@@ -444,7 +444,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于 Web 的集成环境，您�
 
 ### 了解有关 Eclipse Orion Web IDE 的更多信息
 
-要了解有关 Eclipse Orion {{site.data.keyword.webide}} 的更多信息，请参阅[使用 Eclipse Orion {{site.data.keyword.webide}} 编辑代码](/docs/services/ContinuousDelivery/web_ide.html){: new_window}。还可以阅读 IBM Cloud Garage Method 上的 [Eclipse Orion {{site.data.keyword.webide}} 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window}。根据这些教程尝试使用 Eclipse Orion {{site.data.keyword.webide}}：
+要了解有关 Eclipse Orion {{site.data.keyword.webide}} 的更多信息，请参阅[使用 Eclipse Orion {{site.data.keyword.webide}} 编辑代码](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide)。还可以阅读 IBM Cloud Garage Method 上的 [Eclipse Orion {{site.data.keyword.webide}} 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window}。根据这些教程尝试使用 Eclipse Orion {{site.data.keyword.webide}}：
 
   * [使用“开发 Cloud Foundry 应用程序”工具链来创建和使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
@@ -521,7 +521,7 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
 1. 如果要将源代码存储在 GitHub 存储库中，请在“可配置的集成”部分中，单击 **GitHub**。如果要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具集成，但尚未授权 {{site.data.keyword.Bluemix_notm}} 访问 GitHub，请单击**授权**以转至 GitHub Web 站点。如果您没有活动的 GitHub 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 GitHub 帐户。如果您有活动的 GitHub 会话，但最近未输入过密码，那么系统可能会提示您输入 GitHub 密码以进行确认。
 1. 如果要使用您自己的 {{site.data.keyword.ghe_short}} 服务器上的存储库，请在“可配置的集成”部分中，单击**添加定制服务器**。
 
- 网络必须能够从 {{site.data.keyword.Bluemix_notm}} Dedicated 环境访问目标 Git 服务器。如果您的 GitHub 服务器在公用因特网上不可用，或者主机名在公共域名服务器 (DNS) 上无法解析，请[开具支持凭单](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}。您可以使用支持凭单来提交请求以打开网络路由或更新 DNS 设置。
+ 网络必须能够从 {{site.data.keyword.Bluemix_notm}} Dedicated 环境访问目标 Git 服务器。如果您的 GitHub 服务器在公用因特网上不可用，或者主机名在公共域名服务器 (DNS) 上无法解析，请[开具支持凭单](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_support#support-ticket){: new_window}。您可以使用支持凭单来提交请求以打开网络路由或更新 DNS 设置。
  {: important}
 
  输入定制 GitHub 服务器的标题，并指定该服务器的根 URL。输入您的个人访问令牌，然后单击**保存定制集成**。
@@ -580,9 +580,9 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
 
  * [使用“开发和测试 Cloud Foundry 应用程序”工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
 
-  * [通过使用“具有 GitHub 和 Jenkins 的 Deployment Risk Analytics”工具链来确保部署质量 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+ * [通过使用“具有 GitHub 和 Jenkins 的 Deployment Risk Analytics”工具链来确保部署质量 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
 
-  * [创建定制工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
+ * [创建定制工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
 
 
 ## 在 {{site.data.keyword.Bluemix_notm}} Dedicated 上配置 GitHub Enterprise 和 Issues
@@ -591,13 +591,13 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
  以下指示信息仅适用于 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}。如果您使用自己的 {{site.data.keyword.ghe_short}} 受管版本，那么根据您的内部过程，有些步骤可能有所不同。
  {: important}
 
-{{site.data.keyword.ghe_long}} 是 Git 存储库基于 Web 的内部部署托管服务。Dedicated {{site.data.keyword.ghe_short}} 仅适用于 {{site.data.keyword.Bluemix_notm}} Dedicated 客户。GitHub Issues 是一种跟踪工具，可将您的工作和计划保留在一个地方。它与您的开发存储库相集成，以便您可将关注点放在重要的任务上。有关 Dedicated {{site.data.keyword.ghe_short}} 和 GitHub Issues 的更多信息，请参阅 IBM Cloud Garage Method 上的 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated/index.html){: new_window}和 [GitHub Issues 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}。
+{{site.data.keyword.ghe_long}} 是 Git 存储库基于 Web 的内部部署托管服务。Dedicated {{site.data.keyword.ghe_short}} 仅适用于 {{site.data.keyword.Bluemix_notm}} Dedicated 客户。GitHub Issues 是一种跟踪工具，可将您的工作和计划保留在一个地方。它与您的开发存储库相集成，以便您可将关注点放在重要的任务上。有关 Dedicated {{site.data.keyword.ghe_short}} 和 GitHub Issues 的更多信息，请参阅 IBM Cloud Garage Method 上的 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}和 [GitHub Issues 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}。
 
-您可以将 {{site.data.keyword.ghe_short}} 配置为工具链中的工具集成，以便您可以管理公司 [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} 实例中的源代码。
+您可以将 {{site.data.keyword.ghe_short}} 配置为工具链中的工具集成，以便您可以管理公司 [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} 实例中的源代码。
 
 1. 如果您在创建工具链时配置此工具集成，请遵循以下步骤：
 
- a. 首次登录到 Dedicated {{site.data.keyword.ghe_short}} 之前，请要求公司的区域管理员使用 LDAP，将您在公司的用户注册表中的用户标识添加到 {{site.data.keyword.Bluemix_notm}} Dedicated 实例。有关设置 {{site.data.keyword.ghe_short}} 帐户的信息，请参阅 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated/index.html){: new_window}。
+ a. 首次登录到 Dedicated {{site.data.keyword.ghe_short}} 之前，请要求公司的区域管理员使用 LDAP，将您在公司的用户注册表中的用户标识添加到 {{site.data.keyword.Bluemix_notm}} Dedicated 实例。有关设置 {{site.data.keyword.ghe_short}} 帐户的信息，请参阅 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}。
 
  b. 在“可配置的集成”部分中，单击 **{{site.data.keyword.ghe_short}}**。    
 
@@ -927,7 +927,7 @@ JIRA 是跟踪与软件相关的问题和错误的工具。JIRA 工具集成会�
 ## 配置 PagerDuty
 {: #pagerduty}
 
-PagerDuty 可将多个监视系统的数据集成到单一视图。发生问题时，PagerDuty 可确保及时通知当时最有能力修正该问题的团队成员。如果该团队成员未响应该问题，就会配置呈报，以将该问题传递给第二顺位的代表或操作管理员。
+PagerDuty 可将多个监视系统的数据集成到单一视图。发生问题时，PagerDuty 可确保及时通知当时最有能力修正该问题的团队成员。如果该团队成员未响应该问题，就会配置呈报，以将该问题传递给第二顺位的代表或操作管理者。
 
 配置 PagerDuty 在发生管道阶段失败时发送通知，以便您可以更快速地修正问题，并缩短停机时间：
 

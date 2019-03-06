@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
+  years: 2015, 2019
 
-lastupdated: "2018-12-6"
+lastupdated: "2019-2-8"
 
 
 ---
@@ -26,7 +26,7 @@ lastupdated: "2018-12-6"
 
 {{site.data.keyword.Bluemix}} 上的 Public 和 Dedicated 环境中可使用开放式工具链。您可以使用两种方法来创建工具链：使用模板创建工具链，或者通过应用程序创建工具链。
 
-每个工具链都与特定资源组或组织相关联。如果工具链与资源组相关联，那么只要用户对工具链资源具有 Identity and Access Management (IAM) 查看者许可权，或者对包含该工具链的资源组具有该许可权，就可以访问该工具链。如果工具链与组织相关联，那么只要是该组织的成员，任何用户都可以被添加到与该组织相关联的工具链的访问控制表中。有关 Cloud Foundry 组织中工具链的访问控制的更多信息，请参阅[管理对 Cloud Foundry 组织中工具链的访问权](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}。有关资源组中工具链的访问控制的更多信息，请参阅[管理对资源组中工具链的访问权](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}。
+每个工具链都与特定资源组或组织相关联。如果工具链与资源组相关联，那么只要用户对工具链资源具有 Identity and Access Management (IAM) 查看者许可权，或者对包含该工具链的资源组具有该许可权，就可以访问该工具链。如果工具链与组织相关联，那么只要是该组织的成员，任何用户都可以被添加到与该组织相关联的工具链的访问控制表中。有关 Cloud Foundry 组织中工具链的访问控制的更多信息，请参阅[管理对 Cloud Foundry 组织中工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}。有关资源组中工具链的访问控制的更多信息，请参阅[管理对资源组中工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window}。
 
 ##通过模板创建工具链   
 {: #creating_a_toolchain_from_a_template}
@@ -54,7 +54,7 @@ lastupdated: "2018-12-6"
    资源组在美国南部、美国东部、德国、东京和英国区域可用。在美国南部、英国和德国区域支持 Cloud Foundry 组织。
    {: important}
 
-1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。
+1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。
 1. 单击**创建**。此时将自动运行数个步骤，以设置工具链。设置的工具集成根据您所选的工具链模板以及您使用的是 {{site.data.keyword.Bluemix_notm}} Public 还是 {{site.data.keyword.Bluemix_notm}} Dedicated 而有所不同。例如，当您在 {{site.data.keyword.Bluemix_notm}} Public 上创建微服务工具链时，会运行以下步骤：
 
  * 将创建工具链。
@@ -70,13 +70,13 @@ lastupdated: "2018-12-6"
 
 您可以从应用程序创建工具链。工具链可以支持持续开发、部署、监视等操作，且与应用程序相关联。每一个应用程序都可以与工具链相关联。当您将更改推送到工具链的 GitHub 或 {{site.data.keyword.ghe_short}} 存储库时，管道会自动构建和部署应用程序。
 
-如果使用自己的代码存储库创建了应用程序，那么请在应用程序的详细信息页面上单击**连接到 DevOps 工具链**。然后按照[从自己的代码存储库创建应用程序](/docs/apps/tutorials/tutorial_byoc.html)中描述的步骤进行操作。
+如果使用自己的代码存储库创建了应用程序，那么请在应用程序的详细信息页面上单击**连接到 DevOps 工具链**。然后按照[从自己的代码存储库创建应用程序](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc)中描述的步骤进行操作。
 {: note}
 
-1. 如果使用初学者工具包创建了应用程序，那么请在应用程序的详细信息页面上单击**部署到云**。如果您使用 {{site.data.keyword.Bluemix_notm}} Public，那么将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 存储库，进行持续交付。如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，那么将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 或 {{site.data.keyword.ghe_short}} 存储库，进行持续交付。
+1. 如果使用入门模板工具包创建了应用程序，那么请在应用程序的详细信息页面上单击**部署到云**。如果您使用 {{site.data.keyword.Bluemix_notm}} Public，那么将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 存储库，进行持续交付。如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，那么将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 或 {{site.data.keyword.ghe_short}} 存储库，进行持续交付。
 1. 在工具链创建页面上，复查您要创建的工具链的图。该图按生命周期阶段显示工具链中的每一个工具集成。
 1. 复查工具链设置的缺省信息。工具链的名称在 {{site.data.keyword.Bluemix_notm}} 中起到标识符的作用。如果要使用其他名称，请更改工具链的名称。
-1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。
+1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。
 1. 单击**创建**。此时将自动运行数个步骤，以设置工具链。设置的工具集成根据您是在 {{site.data.keyword.Bluemix_notm}} Public 上还是在 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用工具链而有所不同。例如，当您在 {{site.data.keyword.Bluemix_notm}} Public 上通过应用程序创建工具链时，会运行以下步骤：
 
  * 将创建工具链。

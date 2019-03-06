@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -21,14 +21,14 @@ hub.jazz.net 上的 {{site.data.keyword.jazzhub}} 项目已升级到 {{site.data
 
 hub.jazz.net 上的 {{site.data.keyword.jazzhub_short}} 已撤销。 
 
-对于 DevOps 项目，请使用 [{{site.data.keyword.contdelivery_short}} 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/devops){:new_window}。如果您是 {{site.data.keyword.Bluemix_notm}} 的新用户，请务必查看 [{{site.data.keyword.Bluemix_notm}} 概述](/docs/overview/ibm-cloud.html#overview)。
+对于 DevOps 项目，请使用 [{{site.data.keyword.contdelivery_short}} 服务 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/devops){:new_window}。如果您是 {{site.data.keyword.Bluemix_notm}} 的新用户，请务必查看 [{{site.data.keyword.Bluemix_notm}} 概述](/docs/overview?topic=overview-whatis-platform)。
 
 {: shortdesc}
 
 ## 查找基于项目创建的工具链
 {: #find_toolchain}
 
-通过转至[工具链页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/devops/toolchains){: new_window}，并验证显示的工具链名称是否与 hub.jazz.net 项目的名称相匹配，从而确认升级是否完成。如果项目已自动升级，请谨记以下注意事项：
+通过转至[工具链页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/devops/toolchains){: new_window}，并验证显示的工具链名称是否与 hub.jazz.net 项目的名称相匹配，从而确认升级是否完成。如果项目已自动升级，请谨记以下注意事项：
    - 如果在升级项目之前另一个工具链已使用该项目的名称，那么为该项目创建的新工具链的名称可能与项目名称不完全相同。 
    - 如果未看到项目的工具链，请切换到您所属的其他任何组织并检查其中的工具链。
    
@@ -48,19 +48,18 @@ hub.jazz.net 上的 {{site.data.keyword.jazzhub_short}} 已撤销。
 - 在项目中，成员资格在项目级别进行维护。对工具链的访问通过 {{site.data.keyword.Bluemix_notm}} 组织和工具链进行管理。要使用工具链，您必须是包含该工具链的组织的成员。工具链所有者有权进一步控制谁可以访问工具链以及他们可以执行的操作。有关访问控制的更多信息，请参阅[工具链入门](#upgrade_next_steps)中的步骤 2。
 - 根据在 hub.jazz.net 上您项目中使用的存储库的类型，工具链可能包含 GitHub.com 存储库或 {{site.data.keyword.gitrepos}} 存储库。
 
-您可以在 [YouTube ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://youtu.be/2SIPE1e7NJ4){: new_window} 上或从 [{{site.data.keyword.contdelivery_short}} 入门](/docs/services/ContinuousDelivery/index.html)中了解工具链的更多信息。
-
+您可以在 [YouTube ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://youtu.be/2SIPE1e7NJ4){: new_window} 上或从 [{{site.data.keyword.contdelivery_short}} 入门](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started)中了解有关工具链的更多信息。
 
 ## 工具链入门
 {: #upgrade_next_steps}
 
 1. 为团队成员提供工具链的访问权。
     - 每个团队成员都必须具有有效的 {{site.data.keyword.Bluemix_notm}} 帐户。没有帐户的团队成员必须进行[注册 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/registration){:new_window}。
-    - 在工具链的“管理”页面中，授予组织成员对工具链的访问权。在升级过程中，会将现有项目成员添加为工具链的成员。有关工具链访问控制的更多信息，请参阅[管理访问权 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}。
+    - 在工具链的“管理”页面中，授予组织成员对工具链的访问权。在升级过程中，会将现有项目成员添加为工具链的成员。有关工具链访问控制的更多信息，请参阅[管理对 Cloud Foundry 组织中工具链的访问权 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){:new_window}。
     - 如果用户不是工具链所属的组织的成员，请通过“管理组织”页面将其添加到该组织。
-    - 如果工具链使用 {{site.data.keyword.gitrepos}}，那么具有有效 {{site.data.keyword.Bluemix_notm}} 标识的所有 JazzHub 项目成员将使用他们在 JazzHub 项目中拥有的相同特权添加到 {{site.data.keyword.gitrepos}} 存储库。如果 JazzHub 项目包含没有有效 {{site.data.keyword.Bluemix_notm}} 标识的成员，那么这些成员可以注册一个标识。这些成员注册后，就可以将其添加到存储库。有关管理组织的更多信息，请参阅[管理组织和空间 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window}。
+    - 如果工具链使用 {{site.data.keyword.gitrepos}}，那么具有有效 {{site.data.keyword.Bluemix_notm}} 标识的所有 JazzHub 项目成员将使用他们在 JazzHub 项目中拥有的相同特权添加到 {{site.data.keyword.gitrepos}} 存储库。如果 JazzHub 项目包含没有有效 {{site.data.keyword.Bluemix_notm}} 标识的成员，那么这些成员可以注册一个标识。这些成员注册后，就可以将其添加到存储库。有关管理组织的更多信息，请参阅[管理组织和空间 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/account?topic=account-orgsspacesusers){:new_window}。
 
-2. 如果要使用 {{site.data.keyword.gitrepos}}，请通过个人访问令牌或 SSH 密钥进行认证。有关 SSH 密钥的更多信息，请参阅[创建个人访问令牌或 SSH 密钥以进行认证](/docs/services/ContinuousDelivery/git_working.html#git_authentication)。要从外部 Git 客户机通过 HTTPS 进行认证，请执行以下步骤：
+2. 如果要使用 {{site.data.keyword.gitrepos}}，请通过个人访问令牌或 SSH 密钥进行认证。有关 SSH 密钥的更多信息，请参阅[创建个人访问令牌或 SSH 密钥以进行认证](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication)。要从外部 Git 客户机通过 HTTPS 进行认证，请执行以下步骤：
     1. 转至 {{site.data.keyword.gitrepos}} 用户设置的[“访问令牌”页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window}。
     2. 创建将 **api** 用作作用域的个人访问令牌。
     3. 转至[“帐户”页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/profile/account){:new_window} 并找到您用于 {{site.data.keyword.gitrepos}} 的用户名。您的用户名会列在“更改用户名”部分中，并且显示为所创建的任何个人存储库的 URL 的第一部分。
@@ -70,7 +69,7 @@ hub.jazz.net 上的 {{site.data.keyword.jazzhub_short}} 已撤销。
         要检查哪些远程 URL 设置为哪些远程名称，请使用 `git remote -v` 命令。缺省远程名称为 `origin`。如果您有更高级的设置，那么该命令的格式如下：`git remote set-url<remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
         {: tip}
 
-3. 可选：要了解项目的开发成熟期、团队实践和代码库质量，请向工具链添加 IBM Cloud {{site.data.keyword.DRA_short}}。{{site.data.keyword.DRA_short}} 会将开发者、团队和部署分析应用于 DevOps 项目。有关更多信息，请参阅 [{{site.data.keyword.DRA_short}} 入门](/docs/services/DevOpsInsights/index.html)。
+3. 可选：要了解项目的开发成熟期、团队实践和代码库质量，请向工具链添加 IBM Cloud {{site.data.keyword.DRA_short}}。{{site.data.keyword.DRA_short}} 会将开发者、团队和部署分析应用于 DevOps 项目。有关更多信息，请参阅 [{{site.data.keyword.DRA_short}} 入门](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started)。
 
   {{site.data.keyword.DRA_short}} 在美国南部、英国和德国区域可用。
   {: tip}
@@ -130,7 +129,7 @@ hub.jazz.net 上的项目以及工具链均在美国南部区域进行托管。�
 ### 我必须为已升级到工具链的项目创建组织，所以我向帐户添加了信用卡。要对我的信用卡收费吗？
 {: #faq_charges}
 
-作为[现买现付客户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}，如果您使用任何运行时、服务或组件超过 {{site.data.keyword.Bluemix_notm}} 目录中为其列出的免费限额，那么您需要付费。有关使用情况估算的信息，请参阅[价格表 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}。有关 Continuous Delivery 的当前定价，请参阅 [{{site.data.keyword.Bluemix_notm}}“目录”![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/catalog/services/continuous-delivery){: new_window}。
+作为[现收现付客户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}，如果您使用任何运行时、服务或组件超过 {{site.data.keyword.Bluemix_notm}} 目录中为其列出的免费限额，那么您需要付费。有关使用情况估算的信息，请参阅[价格表 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}。有关 Continuous Delivery 的当前定价，请参阅 [{{site.data.keyword.Bluemix_notm}}“目录”![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/catalog/services/continuous-delivery){: new_window}。
 
 
 如果您是 IBM 员工，内部 IBM 项目可以计入部门费用而非个人信用卡。如果您需要使用的资源超出 IBM 员工的免费限额，请创建支持凭单。

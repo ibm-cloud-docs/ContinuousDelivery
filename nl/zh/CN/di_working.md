@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-14"
+  years: 2016, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -31,4 +31,4 @@ lastupdated: "2018-11-14"
 	
 **Team Dynamics** 使用社交编码分析来帮助您了解团队如何协作，并了解可以如何对其进行改进。
 
-有关更多信息，请参阅[入门教程](/docs/services/DevOpsInsights/index.html)。
+有关更多信息，请参阅[入门教程](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started)。
