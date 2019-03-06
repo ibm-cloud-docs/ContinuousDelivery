@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -60,14 +60,14 @@ lastupdated: "2018-12-6"
 {: #plan_exceeded}
 {: faq}
 
-{{site.data.keyword.contdelivery_short}} 提供兩種方案：「精簡」及「專業」。如果您有「{{site.data.keyword.contdelivery_short}} 精簡」方案，則可以免費使用工具鏈，最多為方案的限制。錯誤訊息指出您已超出「精簡」方案的一個以上限制。例如，如果您有太多授權使用者與 {{site.data.keyword.contdelivery_short}} 服務實例相關聯，或已執行 {{site.data.keyword.deliverypipeline}} 工作數目上限，則可能會超過方案。如需方案條款的相關資訊，請參閱[方案限制及用量](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}。
+{{site.data.keyword.contdelivery_short}} 提供兩種方案：「精簡」及「專業」。如果您有「{{site.data.keyword.contdelivery_short}} 精簡」方案，則可以免費使用工具鏈，最多為方案的限制。錯誤訊息指出您已超出「精簡」方案的一個以上限制。例如，如果您有太多授權使用者與 {{site.data.keyword.contdelivery_short}} 服務實例相關聯，或已執行 {{site.data.keyword.deliverypipeline}} 工作數目上限，則可能會超過方案。如需方案條款的相關資訊，請參閱[方案限制及用量](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}。
 
 
 ## 我已建立工具鏈，「工具鏈」頁面為什麼顯示需要 Continuous Delivery 服務？
 {: #service_required_resource_group}
 {: faq}
 
-位在與工具鏈相同之資源群組或組織中的 {{site.data.keyword.contdelivery_short}} 服務實例方案條款，可管理如何使用服務中所含的一些工具整合（{{site.data.keyword.deliverypipeline}}、Eclipse Orion {{site.data.keyword.webide}} 及 {{site.data.keyword.gitrepos}}）。錯誤訊息指出資源群組或組織未包含必要的 {{site.data.keyword.contdelivery_short}} 服務實例。如需方案條款的相關資訊，請參閱[方案限制及用量](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}。
+位在與工具鏈相同之資源群組或組織中的 {{site.data.keyword.contdelivery_short}} 服務實例方案條款，可管理如何使用服務中所含的一些工具整合（{{site.data.keyword.deliverypipeline}}、Eclipse Orion {{site.data.keyword.webide}} 及 {{site.data.keyword.gitrepos}}）。錯誤訊息指出資源群組或組織未包含必要的 {{site.data.keyword.contdelivery_short}} 服務實例。如需方案條款的相關資訊，請參閱[方案限制及用量](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}。
 
 
 ## 我已在 Cloud Foundry 組織中建立工具鏈，「工具鏈」頁面為什麼顯示需要 Continuous Delivery 服務？
@@ -89,8 +89,7 @@ lastupdated: "2018-12-6"
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
-您可以增加帳戶的記憶體配額，或減少應用程式所使用的記憶體。試用帳戶的記憶體配額上限為 2 GB。
-若要增加帳戶的記憶體配額，請將試用帳戶轉換為付費帳戶。如需如何將試用帳戶轉換成付費帳戶的相關資訊，請參閱[付費帳戶](/docs/pricing/index.html#pay-accounts)。若要減少應用程式所使用的記憶體，請使用 {{site.data.keyword.Bluemix_notm}} 主控台或 cf 指令行介面。
+您可以增加帳戶的記憶體配額，或減少應用程式所使用的記憶體。試用帳戶的記憶體配額上限為 2 GB。若要增加帳戶的記憶體配額，請將試用帳戶轉換為付費帳戶。如需如何將試用帳戶轉換成付費帳戶的相關資訊，請參閱[如何升級或變更帳戶？](/docs/account?topic=account-accountfaqs#changeacct)。若要減少應用程式所使用的記憶體，請使用 {{site.data.keyword.Bluemix_notm}} 主控台或 cf 指令行介面。
 
 如果您使用 {{site.data.keyword.Bluemix_notm}} 主控台，請完成下列步驟：
 
@@ -142,7 +141,7 @@ lastupdated: "2018-12-6"
   * 登入 {{site.data.keyword.Bluemix_notm}} 主控台。從功能表列中，按一下**支援**，然後選取**狀態**。請檢查針對 ![部分問題](../../get-support/images/some_issues.svg) 圖示列出的資源。此圖示可能指出運作中斷。
   * 直接在 [{{site.data.keyword.Bluemix_notm}} - 系統狀態 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/status){: new_window} 存取它。
 
-如需「{{site.data.keyword.Bluemix_notm}} 狀態」頁面的相關資訊，請參閱 [Viewing {{site.data.keyword.Bluemix_notm}} status](https://cloud.ibm.com/docs/get-support/ViewStatus.html#viewing-bluemix-status)。
+如需「{{site.data.keyword.Bluemix_notm}} 狀態」頁面的相關資訊，請參閱 [Viewing {{site.data.keyword.Bluemix_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}。
 
 
 ## 我已配置工具鏈的工具整合，但為什麼並未配置它？

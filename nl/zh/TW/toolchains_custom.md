@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-12"
+  years: 2017, 2019
+lastupdated: "2019-2-15"
 
 ---
 {:shortdesc: .shortdesc}
@@ -22,7 +22,7 @@ lastupdated: "2018-12-12"
 建立自訂工具鏈範本，以改善 DevOps 工作流程。您可以快速開始使用現有工具鏈範本，或建立只包含所需工具整合的工具鏈範本。您隨時可以新增或移除工具鏈的整合。
 {:shortdesc}
 
-您可以透過數種方式[建立工具鏈](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}。在您建立自訂工具鏈範本之後，即可[建立部署至 {{site.data.keyword.Bluemix_notm}} 按鈕](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}進行共用。如需工具鏈範本 SDK 的相關資訊，請參閱 [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}。如需逐步指導教學，請參閱 [Garage Method 網站](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}。
+您可以透過數種方式[建立工具鏈](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}。在您建立自訂工具鏈範本之後，即可[建立部署至 {{site.data.keyword.Bluemix_notm}} 按鈕](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deploy-button){: new_window}進行共用。如需工具鏈範本 SDK 的相關資訊，請參閱 [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}。如需逐步指導教學，請參閱 [Garage Method 網站](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}。
 
 
 ## 開始使用
@@ -39,7 +39,7 @@ lastupdated: "2018-12-12"
 
  此範本會部署單一 GitHub 儲存庫中的基本 Hello World 應用程式，並包括已預先配置以進行持續交付、來源控制、問題追蹤及線上編輯的簡單工具鏈。
 
-2. 如果您想要從較複雜的工具鏈範本開始，請複製[微服務的雲端原生工具鏈](https://github.com/open-toolchain/toolchain-demo){: new_window}。
+2. 如果您想要從較複雜的工具鏈範本開始，請複製[微服務的雲端原生工具鏈範本](https://github.com/open-toolchain/toolchain-demo){: new_window}。
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -261,7 +261,7 @@ template
 
 4\. **部署詳細資料：**
 
- 在持續交付處理程序期間，您可以配置工具鏈，將應用程式部署至使用者可以存取的任何 {{site.data.keyword.Bluemix_notm}} 地區、組織或空間。您可以在[工具鏈建立](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}頁面上指定在何處部署應用程式的詳細資料。
+ 在持續交付處理程序期間，您可以配置工具鏈，將應用程式部署至使用者可以存取的任何 {{site.data.keyword.Bluemix_notm}} 地區、組織或空間。您可以在[工具鏈建立](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}頁面上指定在何處部署應用程式的詳細資料。
 
 `toolchain.yml` 檔案的這個區段定義可從工具鏈建立頁面配置的管線階段。
 
@@ -278,7 +278,7 @@ template
 |prod-space|內容 |<`prod`> |定義正式作業階段的 {{site.data.keyword.Bluemix_notm}} 空間|
 |github-repo-name|內容 | <`"{{repo-name-key.parameters.repo_name}}"`> |要將 GitHub 儲存庫名稱傳遞給工具鏈建立頁面的變數|
 
-如需建立 `deploy.json` 檔案的相關資訊，請參閱[本節] (#toolchains_custom_deploy_json)。
+如需建立 `deploy.json` 檔案的相關資訊，請參閱[本節](#toolchains_custom_deploy_json)。
 
  下列範例定義可部署至正式作業環境的單一階段。
 
@@ -395,7 +395,7 @@ stages:
  ## 配置管線介面
  {: #toolchains_custom_deploy_json}
 
- 在[工具鏈建立](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}頁面上，從「可配置的整合」區段中選取 Delivery Pipeline 時，會展開此區段以顯示下列項目：
+ 在[工具鏈建立](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}頁面上，從「可配置的整合」區段中選取 Delivery Pipeline 時，會展開此區段以顯示下列項目：
 
  	* 應用程式的名稱。
  	* 在其中部署管線階段的地區、組織及空間。

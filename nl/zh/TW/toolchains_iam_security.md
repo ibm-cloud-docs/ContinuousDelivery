@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018
-lastupdated: "2018-11-14"
+  years:  2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -17,14 +17,15 @@ lastupdated: "2018-11-14"
 
 
 # 使用 Identity and Access Management 管理使用者對工具鏈的存取
+{: #toolchains-iam-security}
 
 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 控制對帳戶內使用者資源群組中之工具鏈的存取。 
 
 **附註**： 
 
-* 工具鏈實例及 {{site.data.keyword.contdelivery_short}} 服務實例的使用者存取會分開進行管理。如需管理使用者對資源群組中 {{site.data.keyword.contdelivery_short}} 服務實例之存取的相關資訊，請參閱[使用 Identity and Access Management 管理使用者對 {{site.data.keyword.contdelivery_short}} 的存取](/docs/services/ContinuousDelivery/cd_iam_security.html){: new_window}。
+* 工具鏈實例及 {{site.data.keyword.contdelivery_short}} 服務實例的使用者存取會分開進行管理。如需管理使用者對資源群組中 {{site.data.keyword.contdelivery_short}} 服務實例之存取的相關資訊，請參閱[使用 Identity and Access Management 管理使用者對 {{site.data.keyword.contdelivery_short}} 的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security){: new_window}。
 
-* Cloud Foundry 組織中工具鏈的使用者存取，其管理方式與使用者對資源群組中 {{site.data.keyword.contdelivery_short}} 服務實例的存取不同。如需管理使用者對 Cloud Foundry 組織中工具鏈之存取的相關資訊，請參閱[管理對 Cloud Foundry 組織中工具鏈的存取](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs.html){: new_window}。
+* Cloud Foundry 組織中工具鏈的使用者存取，其管理方式與使用者對資源群組中 {{site.data.keyword.contdelivery_short}} 服務實例的存取不同。如需管理使用者對 Cloud Foundry 組織中工具鏈之存取的相關資訊，請參閱[管理對 Cloud Foundry 組織中工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}。
 
 在您的帳戶中存取工具鏈的每位使用者，都必須獲指派已定義 IAM 使用者角色的存取原則。該原則會決定使用者可以在您選取之服務或實例的環境定義中執行哪些動作。{{site.data.keyword.Bluemix_notm}} 服務會將可容許的動作自訂及定義為容許對服務執行的作業。然後，這些動作會對映至 IAM 使用者角色。
 
@@ -59,6 +60,6 @@ lastupdated: "2018-11-14"
 | delete-bindings | 從資源群組的工具鏈中移除工具整合。| 管理者、編輯者 |
 {: caption="表 2. 服務動作及作業" caption-side="top"}
 
-如需在使用者介面中指派使用者角色的相關資訊，請參閱[管理 IAM 存取](/docs/iam/mngiam.html#iammanidaccser)。
+如需在使用者介面中指派使用者角色的相關資訊，請參閱[管理 IAM 存取](/docs/iam?topic=iam-iammanidaccser)。
 
 <!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

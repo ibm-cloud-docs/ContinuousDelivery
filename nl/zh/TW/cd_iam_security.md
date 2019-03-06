@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018
-lastupdated: "2018-7-18"
+  years:  2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -17,14 +17,15 @@ lastupdated: "2018-7-18"
 
 
 # 使用 Identity and Access Management 管理使用者對 Continuous Delivery 的存取
+{: #cd-iam-security}
 
 帳戶內使用者對於資源群組中 {{site.data.keyword.contdelivery_full}} 服務實例的存取，受到 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 控制。 
 
 **附註**： 
 
-* {{site.data.keyword.contdelivery_short}} 服務實例及工具鏈實例的使用者存取會分開進行管理。如需管理使用者對資源群組中工具鏈之存取的相關資訊，請參閱[使用 Identity and Access Management 管理使用者對工具鏈的存取](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}。
+* {{site.data.keyword.contdelivery_short}} 服務實例及工具鏈實例的使用者存取會分開進行管理。如需管理使用者對資源群組中工具鏈之存取的相關資訊，請參閱[使用 Identity and Access Management 管理使用者對工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}。
 
-* Cloud Foundry 組織中工具鏈的使用者存取，其管理方式與使用者對資源群組中工具鏈的存取不同。如需管理使用者對 Cloud Foundry 組織中工具鏈之存取的相關資訊，請參閱[管理對 Cloud Foundry 組織中工具鏈的存取](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}。
+* Cloud Foundry 組織中工具鏈的使用者存取，其管理方式與使用者對資源群組中工具鏈的存取不同。如需管理使用者對 Cloud Foundry 組織中工具鏈之存取的相關資訊，請參閱[管理對 Cloud Foundry 組織中工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}。
 
 在您的帳戶中存取 {{site.data.keyword.contdelivery_short}} 服務的每位使用者，都必須獲指派已定義 IAM 使用者角色的存取原則。該原則會決定使用者可以在您選取之服務或實例的環境定義中執行哪些動作。{{site.data.keyword.Bluemix_notm}} 服務會將可容許的動作自訂及定義為容許對服務執行的作業。然後，這些動作會對映至 IAM 使用者角色。
 
@@ -41,7 +42,7 @@ lastupdated: "2018-7-18"
 
 | 平台管理角色 | 動作的說明 | 範例動作 |
 |:-----------------|:-----------------|:-----------------|
-| 檢視者、操作員 | 檢視 {{site.data.keyword.contdelivery_short}} 服務實例。| <ul><li>按一下 {{site.data.keyword.contdelivery_short}} 服務實例以開啟其儀表板。</li>|</ul>
+| 檢視者、操作員 | 檢視 {{site.data.keyword.contdelivery_short}} 服務實例。| <ul><li>按一下 {{site.data.keyword.contdelivery_short}} 服務實例以開啟其儀表板。</li></ul>|
 | 編輯者、管理者 | 建立、檢視、更新、修改 {{site.data.keyword.contdelivery_short}} 服務的方案，以及刪除該服務的實例。|<ul><li>在資源群組中佈建 {{site.data.keyword.contdelivery_short}} 實例。</li><li>從資源群組中刪除 {{site.data.keyword.contdelivery_short}} 實例。</li><li>將 {{site.data.keyword.contdelivery_short}} 實例方案從「精簡」變更為「專業」。</li></ul> |
 | 管理者 | 更新「授權使用者」清單。| <ul><li>將使用者新增至「授權使用者」清單。</li><li>從「授權使用者」清單移除使用者。</li></ul> |
 {: caption="表 1. IAM 使用者角色及動作" caption-side="top"}
@@ -66,6 +67,6 @@ lastupdated: "2018-7-18"
 | 作者、管理員 | 在 {{site.data.keyword.contdelivery_short}} 服務實例內「管理」標籤的「授權使用者」清單中新增及移除使用者。| <ul><li>新增授權使用者。</li><li>移除授權使用者。</li></ul>|
 {: caption="表 3. IAM 服務存取角色及動作" caption-side="top"}
 
-如需在使用者介面中指派使用者角色的相關資訊，請參閱[管理 IAM 存取](/docs/iam/mngiam.html#iammanidaccser)。
+如需在使用者介面中指派使用者角色的相關資訊，請參閱[管理 IAM 存取](/docs/iam?topic=iam-iammanidaccser)。
 
 <!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

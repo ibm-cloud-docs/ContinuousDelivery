@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -32,16 +32,16 @@ lastupdated: "2018-12-6"
 
 在所選取地區的 {{site.data.keyword.Bluemix_notm}} Public 上以及 {{site.data.keyword.Bluemix_notm}} Dedicated 上可以使用 {{site.data.keyword.contdelivery_short}}。視您是在 {{site.data.keyword.Bluemix_notm}} Public 還是 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用 {{site.data.keyword.contdelivery_short}} 而定，工具鏈會有所不同。
 
-雖然工具鏈目前無法在所有地區中使用，但是您可以配置工具鏈將應用程式部署至所有地區。若要進一步瞭解，請嘗試<a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">將安全 Web 應用程式部署至多個地區</a>指導教學。
+雖然工具鏈目前無法在所有地區中使用，但是您可以配置工具鏈將應用程式部署至所有地區。若要進一步瞭解，請嘗試[將安全 Web 應用程式部署至多個地區指導教學](/docs/tutorials?topic=solution-tutorials-multi-region-webapp){: new_window}。
 {: tip}
 
 |工具鏈|{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
-|工具整合|如需所支援工具整合的清單，請參閱[配置工具整合](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}。|可用的工具整合取決於 {{site.data.keyword.contdelivery_short}} 在您環境中的設定方式。|
+|工具整合|如需所支援工具整合的清單，請參閱[配置工具整合](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。|可用的工具整合取決於 {{site.data.keyword.contdelivery_short}} 在您環境中的設定方式。|
 |從範本建立工具鏈|登入 [{{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://cloud.ibm.com/devops){:new_window}|登入 {{site.data.keyword.Bluemix_notm}} 的「專用」環境。|
 |從應用程式建立工具鏈|應用程式會配置成從已移入應用程式入門範本程式碼的新 GitHub 儲存庫進行持續交付。|應用程式會配置成從已移入應用程式入門範本程式碼的新 GitHub 或 GitHub Enterprise 儲存庫進行持續交付。|  
 |交付管線部署地區|Cloud Foundry 部署工作可以使用所有 {{site.data.keyword.Bluemix_notm}} Public 地區。|{{site.data.keyword.Bluemix_notm}} Dedicated 地區可供使用。視 {{site.data.keyword.contdelivery_short}} 在您特定環境中的設定方式而定，也可使用相同客戶帳戶內的其他「專用」或「本端」地區。|
-|交付管線部署工作|所有[工作類型](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs)都可供使用。|可能無法使用與「專用」環境中未安裝之 {{site.data.keyword.Bluemix_notm}} 服務相依的工作類型。例如，在沒有 {{site.data.keyword.containerlong_notm}} 的環境中，可能無法使用容器建置及部署工作類型。|
+|交付管線部署工作|所有[工作類型](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs)都可供使用。|可能無法使用與「專用」環境中未安裝之 {{site.data.keyword.Bluemix_notm}} 服務相依的工作類型。例如，在沒有 {{site.data.keyword.containerlong_notm}} 的環境中，可能無法使用容器建置及部署工作類型。|
 {: caption="表 1. {{site.data.keyword.Bluemix_notm}} Dedicated 及 {{site.data.keyword.Bluemix_notm}} Public 上的工具鏈差異" caption-side="top"}
 
 
@@ -208,7 +208,6 @@ GitHub 及 GitHub Issues</li><li>{{site.data.keyword.DRA_full}}
 
 <ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app" target="_blank">將工具鏈新增至應用程式 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a></li>
 <li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">建立自訂工具鏈 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a></li>
-<li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">將安全 Web 應用程式部署至多個地區</a></li>
 </ul></td>
 <td><ul><li>{{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>

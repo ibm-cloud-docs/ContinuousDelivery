@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-12-11"
+  years: 2016, 2019
+lastupdated: "2019-2-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -76,7 +76,7 @@ lastupdated: "2018-12-11"
 {: tip}
 
 ###將服務新增至應用程式
-您可以將服務新增至您的應用程式，以及從 {{site.data.keyword.Bluemix_notm}} 儀表板或 Cloud Foundry 指令行介面 (CLI) 來管理這些服務。您也可以在管線工作的 Script 中發出 Cloud Foundry CLI 指令。例如，您可以在部署工作的 Script 中將服務新增至應用程式。如需新增服務的相關資訊，請參閱[將服務新增至應用程式](/docs/services/reqnsi.html#add_service)。
+您可以將服務新增至您的應用程式，以及從 {{site.data.keyword.Bluemix_notm}} 儀表板或 Cloud Foundry 指令行介面 (CLI) 來管理這些服務。您也可以在管線工作的 Script 中發出 Cloud Foundry CLI 指令。例如，您可以在部署工作的 Script 中將服務新增至應用程式。如需新增服務的相關資訊，請參閱[將服務連接至外部應用程式](/docs/resources?topic=resources-externalapp)。
 
 ## 檢視日誌
 {: #deliverypipeline_view_logs}

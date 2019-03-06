@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-29"
+  years: 2016, 2019
+lastupdated: "2019-2-15"
 ---
 
 {:shortdesc: .shortdesc}
@@ -22,14 +22,14 @@ lastupdated: "2018-11-29"
 {{site.data.keyword.contdelivery_full}} 包括 Delivery Pipeline，以最少人為介入的可重複方式進行建置、測試及部署。在管線中，階段的序列會擷取輸入並執行工作（例如建置、測試及部署）。
 {:shortdesc}
 
-檢視、修改或執行管線的許可權是根據擁有管線的工具鏈的存取控制。如需工具鏈之存取控制的相關資訊，請參閱[管理對資源群組中工具鏈的存取](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window}及[管理對 Cloud Foundry 組織中工具鏈的存取](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}。
+檢視、修改或執行管線的許可權是根據擁有管線的工具鏈的存取控制。如需工具鏈之存取控制的相關資訊，請參閱[管理對資源群組中工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window}及[管理對 Cloud Foundry 組織中工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}。
 {: important}
 
-您可以指定 Script 在管線提供的許多工作類型中執行，這樣能讓您直接控制工作執行的內容。這些 Script 會在 Docker 映像檔中執行，該映像檔包含許多標準開發工具，包括與 {{site.data.keyword.Bluemix_notm}} 運行環境互動所需的工具。如需標準 Docker 映像檔包含內容的相關資訊，請參閱[預先安裝的資源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}。如果您的工作需要標準映像檔中未提供的開發工具，或是您需要那些工具的不同版本，可以使用自訂映像檔。如需自訂映像檔的相關資訊，請參閱[使用自訂 Docker 映像檔](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}。
+您可以指定 Script 在管線提供的許多工作類型中執行，這樣能讓您直接控制工作執行的內容。這些 Script 會在 Docker 映像檔中執行，該映像檔包含許多標準開發工具，包括與 {{site.data.keyword.Bluemix_notm}} 運行環境互動所需的工具。如需標準 Docker 映像檔包含內容的相關資訊，請參閱[預先安裝的資源](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}。如果您的工作需要標準映像檔中未提供的開發工具，或是您需要那些工具的不同版本，可以使用自訂映像檔。如需自訂映像檔的相關資訊，請參閱[使用自訂 Docker 映像檔](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}。
 
-當管線執行 Script 時，說明工作執行所在環境定義的內容，會藉由環境變數而被傳遞給 Script。例如，階段輸入儲存庫的 URL、正在執行的階段及工作名稱、工作類型指定的參數等等。若要檢視可用環境變數的清單，請參閱[預先安裝的資源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}。 
+當管線執行 Script 時，說明工作執行所在環境定義的內容，會藉由環境變數而被傳遞給 Script。例如，階段輸入儲存庫的 URL、正在執行的階段及工作名稱、工作類型指定的參數等等。若要檢視可用環境變數的清單，請參閱[預先安裝的資源](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)。 
 
-您可以在管線層次以及階段層次定義內容。管線內容會在管線中的所有階段與工作之間共用。階段內容專屬於特定的階段，並且在該階段中的所有工作之間共用。如需內容的相關資訊，請參閱[環境內容（環境變數）](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties)。
+您可以在管線層次以及階段層次定義內容。管線內容會在管線中的所有階段與工作之間共用。階段內容專屬於特定的階段，並且在該階段中的所有工作之間共用。如需內容的相關資訊，請參閱[環境內容（環境變數）](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties)。
 
 ## 階段
 {: #deliverypipeline_stages}
@@ -110,7 +110,7 @@ lastupdated: "2018-11-29"
 工作最多可以執行 60 分鐘。工作超出此限制時，即會失敗。如果工作超出此限制，請將它分成多個工作。例如，如果工作執行三個作業，則可能會將它分成三個工作：一個作業一個工作。
 {: tip}
 
-若要瞭解如何將工作新增至階段，請參閱[將工作新增至階段](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}。
+若要瞭解如何將工作新增至階段，請參閱[將工作新增至階段](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}。
 
 ### 建置工作
 
@@ -121,9 +121,9 @@ lastupdated: "2018-11-29"
 如果您使用**簡單**建置器類型，則不會編譯或建置程式碼；會將它包裝並設為供未來階段使用。
 {: tip}
 
-當您使用 Cloud Foundry 進行部署時，Cloud Foundry 會包括正確的構件來容許應用程式執行。如需相關資訊，請參閱[使用 cf 指令來部署應用程式](/docs/cloud-foundry/deploy-apps.html#dep_apps)。Cloud Foundry 應用程式的管線包含執行 cf 指令的「部署」階段。
+當您使用 Cloud Foundry 進行部署時，Cloud Foundry 會包括正確的構件來容許應用程式執行。如需相關資訊，請參閱[使用 cf 指令來部署應用程式](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps)。Cloud Foundry 應用程式的管線包含執行 cf 指令的「部署」階段。
 
-Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.cloudfoundry.org/buildpacks/detection.html)。您可以在應用程式根資料夾的資訊清單檔中指定要使用的[建置套件](/docs/cfapps/byob.html#using-community-buildpacks)。建置套件一般會檢查使用者提供的構件，來判定下載的相依關係以及如何配置應用程式以與連結服務進行通訊。如需資訊清單檔的相關資訊，請參閱[應用程式資訊清單](/docs/cloud-foundry/deploy-apps.html#appmanifest)。
+Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.cloudfoundry.org/buildpacks/detection.html)。您可以在應用程式根資料夾的資訊清單檔中指定要使用的[建置套件](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)。建置套件一般會檢查使用者提供的構件，來判定下載的相依關係以及如何配置應用程式以與連結服務進行通訊。如需資訊清單檔的相關資訊，請參閱[應用程式資訊清單](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest)。
 
 ### 部署工作
 
@@ -131,7 +131,7 @@ Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../
 
 部署工作可以部署新的應用程式，或更新現有的應用程式。即使您先使用另一種方法（例如 Cloud Foundry 指令行介面，或 Web IDE 中的執行列）來部署應用程式，還是可以使用部署工作來更新應用程式。若要更新應用程式，請在部署工作中使用該應用程式的名稱。
 
-您可以部署至一或多個地區及服務。例如，您可以設定 {{site.data.keyword.deliverypipeline}} 使用一個以上的服務、在一個地區中測試，以及部署至多個地區進行正式作業。如需相關資訊，請參閱[地區](/docs/overview/ibm-cloud.html#ov_intro-reg){: new_window}。
+您可以部署至一或多個地區及服務。例如，您可以設定 {{site.data.keyword.deliverypipeline}} 使用一個以上的服務、在一個地區中測試，以及部署至多個地區進行正式作業。
 
 ### 測試工作
 如果您想要要求符合條件，請在建置及部署工作之前或之後包含測試工作。您可以視需要將測試工作自訂成簡單或複雜。例如，您可以發出 cURL 指令，並預期會有特定回應。也可以使用協力廠商測試服務（例如 Sauce Labs）來執行一組單元測試或執行功能測試。
@@ -141,7 +141,7 @@ Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../
 ## 環境內容（環境變數）
 {: #environment_properties}
 
-一組預先定義的環境內容讓您能存取工作執行環境的相關資訊。如需預先定義環境內容的完整清單，請參閱[環境內容及資源](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)。
+一組預先定義的環境內容讓您能存取工作執行環境的相關資訊。如需預先定義環境內容的完整清單，請參閱[環境內容及資源](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment)。
 
 您也可以定義自己的環境內容。例如，您可能定義 `API_KEY` 內容，以傳遞管線中所有 Script 用來存取 {{site.data.keyword.Bluemix_notm}} 資源的 API 金鑰。
 
@@ -210,7 +210,7 @@ Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../
 ## Cloud Foundry 資訊清單檔
 {: #deliverypipeline_manifest}
 
-資訊清單檔（名為 `manifest.yml` 並儲存在專案的根目錄中）控制如何將專案部署至 {{site.data.keyword.Bluemix_notm}}。如需建立專案資訊清單檔的相關資訊，請參閱[關於應用程式資訊清單的 {{site.data.keyword.Bluemix_notm}} 文件](/docs/cloud-foundry/deploy-apps.html#appmanifest)。若要與 {{site.data.keyword.Bluemix_notm}} 整合，您專案的根目錄中必須要有資訊清單檔。不過，您不需要根據檔案中的資訊來進行部署。
+資訊清單檔（名為 `manifest.yml` 並儲存在專案的根目錄中）控制如何將專案部署至 {{site.data.keyword.Bluemix_notm}}。如需建立專案資訊清單檔的相關資訊，請參閱[關於應用程式資訊清單的 {{site.data.keyword.Bluemix_notm}} 文件](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest)。若要與 {{site.data.keyword.Bluemix_notm}} 整合，您專案的根目錄中必須要有資訊清單檔。不過，您不需要根據檔案中的資訊來進行部署。
 
 在管線中，您可以使用 `cf push` 指令引數來指定資訊清單檔可執行的所有項目。`cf push` 指令引數有助於具有多個部署目標的專案。如果多個部署工作都嘗試使用專案資訊清單檔中所指定的路徑，則會發生衝突。
 

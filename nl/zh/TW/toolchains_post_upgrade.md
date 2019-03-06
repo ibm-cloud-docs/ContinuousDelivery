@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -21,14 +21,14 @@ lastupdated: "2018-12-11"
 
 hub.jazz.net 中的 {{site.data.keyword.jazzhub_short}} 已遭淘汰。 
 
-對於 DevOps 專案，使用 [{{site.data.keyword.contdelivery_short}} 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/devops){:new_window}。如果您是 {{site.data.keyword.Bluemix_notm}} 新手，請務必參閱 [{{site.data.keyword.Bluemix_notm}} 概觀](/docs/overview/ibm-cloud.html#overview)。
+對於 DevOps 專案，使用 [{{site.data.keyword.contdelivery_short}} 服務 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/devops){:new_window}。如果您是 {{site.data.keyword.Bluemix_notm}} 新手，請務必參閱 [{{site.data.keyword.Bluemix_notm}} 概觀](/docs/overview?topic=overview-whatis-platform)。
 
 {: shortdesc}
 
 ## 尋找已從專案中建立的工具鏈
 {: #find_toolchain}
 
-確認升級完成，方法是移至[工具鏈頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/devops/toolchains){: new_window}，並驗證您看到的工具鏈名稱符合 hub.jazz.net 專案的名稱。如果已自動升級您的專案，請記住下列警告：
+確認升級完成，方法是移至[工具鏈頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/devops/toolchains){: new_window}，並驗證您看到的工具鏈名稱符合 hub.jazz.net 專案的名稱。如果已自動升級您的專案，請記住下列警告：
    - 如果另一個工具鏈已在升級專案之前使用您專案的名稱，則為您的專案所建立的新工具鏈可能不會有您專案的確切名稱。 
    - 如果您看不到專案的工具鏈，請切換至您所屬的任何其他組織，並在該處檢查工具鏈。
    
@@ -48,19 +48,18 @@ hub.jazz.net 中的 {{site.data.keyword.jazzhub_short}} 已遭淘汰。
 - 在專案中，成員資格是在專案層次進行維護。工具鏈的存取權是透過 {{site.data.keyword.Bluemix_notm}} 組織及工具鏈進行管理。若要使用工具鏈，您必須是包含該工具鏈的組織成員。工具鏈擁有者可以進一步控制誰可以存取工具鏈及其可執行的作業。如需存取控制的相關資訊，請參閱[開始使用工具鏈](#upgrade_next_steps)中的步驟 2。
 - 根據您在 hub.jazz.net 的專案中使用的儲存庫類型，工具鏈可以包含 GitHub.com 儲存庫或 {{site.data.keyword.gitrepos}} 儲存庫。
 
-您可以在 [YouTube ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://youtu.be/2SIPE1e7NJ4){: new_window} 上或從[開始使用 {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html) 中進一步瞭解工具鏈。
+您可以在 [YouTube ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://youtu.be/2SIPE1e7NJ4){: new_window} 上或從[開始使用 {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started) 中進一步瞭解工具鏈。
 
 ## 開始使用工具鏈
 {: #upgrade_next_steps}
 
 1. 將工具鏈的存取權授與團隊成員。
     - 每一個團隊成員都必須具有有效的 {{site.data.keyword.Bluemix_notm}} 帳戶。沒有帳戶的團隊成員必須進行[註冊 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/registration){:new_window}。
-    - 從工具鏈「管理」頁面中，將工具鏈存取權授與組織成員。在升級處理程序中，會將現有專案成員新增為工具鏈成員。如需工具鏈存取控制的相關資訊，請參閱[管理存取權 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}。
+    - 從工具鏈「管理」頁面中，將工具鏈存取權授與組織成員。在升級處理程序中，會將現有專案成員新增為工具鏈成員。如需工具鏈存取控制的相關資訊，請參閱[管理對 Cloud Foundry 組織中工具鏈的存取 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){:new_window}。
     - 如果使用者不是工具鏈所屬組織的成員，請從「管理組織」頁面中將他們新增至組織。
-      
-    - 如果您的工具鏈使用 {{site.data.keyword.gitrepos}}，則會將所有具有有效 {{site.data.keyword.Bluemix_notm}} ID 的 JazzHub 專案成員新增至 {{site.data.keyword.gitrepos}} 儲存庫，而他們對此儲存庫的專用權與在 JazzHub 專案中相同。如果您的 JazzHub 專案包括沒有有效 {{site.data.keyword.Bluemix_notm}} ID 的成員，則他們可以登錄一個。在他們登錄之後，您就可以將他們新增至儲存庫。如需管理組織的相關資訊，請參閱[管理組織及空間 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window}。
+    - 如果您的工具鏈使用 {{site.data.keyword.gitrepos}}，則會將所有具有有效 {{site.data.keyword.Bluemix_notm}} ID 的 JazzHub 專案成員新增至 {{site.data.keyword.gitrepos}} 儲存庫，而他們對此儲存庫的專用權與在 JazzHub 專案中相同。如果您的 JazzHub 專案包括沒有有效 {{site.data.keyword.Bluemix_notm}} ID 的成員，則他們可以登錄一個。在他們登錄之後，您就可以將他們新增至儲存庫。如需管理組織的相關資訊，請參閱[管理組織及空間 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/account?topic=account-orgsspacesusers){:new_window}。
 
-2. 如果您使用的是 {{site.data.keyword.gitrepos}}，請使用個人存取記號或 SSH 金鑰進行鑑別。如需 SSH 金鑰的相關資訊，請參閱[建立個人存取記號或 SSH 金鑰來進行鑑別](/docs/services/ContinuousDelivery/git_working.html#git_authentication)。若要從外部 Git 用戶端透過 https 進行鑑別，請遵循下列步驟：
+2. 如果您使用的是 {{site.data.keyword.gitrepos}}，請使用個人存取記號或 SSH 金鑰進行鑑別。如需 SSH 金鑰的相關資訊，請參閱[建立個人存取記號或 SSH 金鑰來進行鑑別](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication)。若要從外部 Git 用戶端透過 https 進行鑑別，請遵循下列步驟：
     1. 移至 {{site.data.keyword.gitrepos}} 使用者設定的[存取記號頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window}。
     2. 建立使用 **api** 作為範圍的個人存取記號。
     3. 移至[帳戶頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/profile/account){:new_window}，並針對 {{site.data.keyword.gitrepos}} 尋找您的使用者名稱。您的使用者名稱會列在「變更使用者名稱」區段中，並顯示為任何您建立的個人儲存庫的 URL 的第一個部分。
@@ -70,7 +69,7 @@ hub.jazz.net 中的 {{site.data.keyword.jazzhub_short}} 已遭淘汰。
         若要檢查哪些遠端 URL 設為哪些遠端名稱，請使用 `git remote -v` 指令。預設遠端名稱是 `origin`。如果您有更進階的安裝，則指令的形式如下：`git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
         {: tip}
 
-3. 選用項目：若要探索您專案的開發成熟度、團隊的作法，以及程式碼庫的品質，請將 IBM Cloud {{site.data.keyword.DRA_short}} 新增至工具鏈。{{site.data.keyword.DRA_short}} 會將開發人員、團隊及部署分析人員套用至 DevOps 專案。如需相關資訊，請參閱[開始使用 {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html)。
+3. 選用項目：若要探索您專案的開發成熟度、團隊的作法，以及程式碼庫的品質，請將 IBM Cloud {{site.data.keyword.DRA_short}} 新增至工具鏈。{{site.data.keyword.DRA_short}} 會將開發人員、團隊及部署分析人員套用至 DevOps 專案。如需相關資訊，請參閱[開始使用 {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started)。
 
   {{site.data.keyword.DRA_short}} 適用於美國南部、英國及德國地區。
   {: tip}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-8"
 
 ---
 
@@ -50,8 +50,8 @@ lastupdated: "2018-12-6"
 1. 從功能表列中，按一下**支援**，然後按一下**新增問題單**。
 1. 完成表單，指出您需要技術支援的部分。
 
-如需開立 IBM {{site.data.keyword.Bluemix_notm}} 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://cloud.ibm.com/docs/support/index.html#contacting-support)。
+如需開立 IBM {{site.data.keyword.Bluemix_notm}} 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[支援方案](/docs/get-support?topic=get-support-support-plans)。
 
 
 ## {{site.data.keyword.Bluemix_notm}} 的支援
-如需 {{site.data.keyword.Bluemix_notm}} 服務的其他問題或疑問，請參閱[取得客戶支援](https://www.{DomainName}/docs/support/index.html#getting-customer-support)。
+如需 {{site.data.keyword.Bluemix_notm}} 服務的其他問題或疑問，請參閱[取得支援](/docs/get-support?topic=get-support-getting-customer-support)。

@@ -38,7 +38,7 @@ lastupdated: "2018-12-5"
 {: tip}
 
 ## 在本端使用 {{site.data.keyword.gitrepos}}
-{: #git_local}
+{: #git_locally}
 
 您可以在本端存取 {{site.data.keyword.gitrepos}} 中所儲存的 Git 儲存庫。如需在本端設定 Git 的指示，請參閱[在指令行上開始使用 Git ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}。
 

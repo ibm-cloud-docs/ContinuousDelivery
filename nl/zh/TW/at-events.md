@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-10-10"
+  years: 2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-10-10"
 使用 {{site.data.keyword.cloudaccesstrailfull}} 服務，以追蹤使用者及應用程式如何與 {{site.data.keyword.Bluemix}} 中的 {{site.data.keyword.contdelivery_short}} 服務互動。
 {: shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 服務會記錄由使用者起始並且會變更 {{site.data.keyword.Bluemix_notm}} 中服務狀態的活動。如需相關資訊，請參閱 [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)。
+{{site.data.keyword.cloudaccesstrailfull_notm}} 服務會記錄由使用者起始並且會變更 {{site.data.keyword.Bluemix_notm}} 中服務狀態的活動。如需相關資訊，請參閱 [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla)。
 
 <!-- You can create different sections to group events by area. -->
 
@@ -40,7 +40,7 @@ lastupdated: "2018-10-10"
 | toolchain.tool-instance.undeploy | 刪除工具整合 |
 {: caption="表 1. 可產生事件的動作" caption-side="top"}
 
-## 事件的檢視位置
+## 在哪裡檢視事件
 {: #ui}
 
 <!-- Option 2: Add the following sentence if your service sends events to the account domain. -->

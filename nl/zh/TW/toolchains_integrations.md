@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-15"
 
 ---
 
@@ -332,11 +332,11 @@ lastupdated: "2018-12-11"
 1. 指定新管線的名稱。
 1. 如果您計劃使用管線來部署使用者介面，請選取**在「檢視應用程式」功能表中顯示應用程式**勾選框。管線所建立的所有應用程式都會顯示在工具鏈之「概觀」頁面的**檢視應用程式**清單中。
 1. 按一下**建立整合**，以將 {{site.data.keyword.deliverypipeline}} 新增至您的工具鏈。
-1. 按一下 **{{site.data.keyword.deliverypipeline}}**，以檢視管線並進行配置。若要瞭解如何配置管線的基本觀念，請參閱[建置及部署管線](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}。
+1. 按一下 **{{site.data.keyword.deliverypipeline}}**，以檢視管線並進行配置。若要瞭解如何配置管線的基本觀念，請參閱[建置及部署管線](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy){: new_window}。
 
   如果您要在將確定推送至 GitHub、{{site.data.keyword.ghe_short}} 或 Git 儲存庫時自動執行管線，請遵循下列步驟：
 
-   a. 先配置工具鏈的 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}}，然後再定義管線的階段。管線階段需要儲存庫的 Git URL。每一個管線階段都只能參照與您工具鏈相關聯的其中一個 GitHub、{{site.data.keyword.ghe_short}} 或 Git 儲存庫。如需配置 GitHub 的指示，請參閱 [GitHub](#github) 一節。如需配置 Dedicated {{site.data.keyword.ghe_short}} 的指示，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}。如需配置 {{site.data.keyword.gitrepos}} 的指示，請參閱 [{{site.data.keyword.gitrepos}}](#gitbluemix) 一節。
+   a. 先配置工具鏈的 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}}，然後再定義管線的階段。管線階段需要儲存庫的 Git URL。每一個管線階段都只能參照與您工具鏈相關聯的其中一個 GitHub、{{site.data.keyword.ghe_short}} 或 Git 儲存庫。如需配置 GitHub 的指示，請參閱 [GitHub](#github) 一節。如需配置 Dedicated {{site.data.keyword.ghe_short}} 的指示，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}。如需配置 {{site.data.keyword.gitrepos}} 的指示，請參閱 [{{site.data.keyword.gitrepos}}](#gitbluemix) 一節。
 
    b. 使用 Webhook。如果沒有 Webhook，您只能手動執行管線。若要在鏈結至 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫時使用 Webhook，您需要管理者專用權。若要鏈結至 {{site.data.keyword.gitrepos}} 儲存庫，您需要「主要」或「擁有者」專用權。
 
@@ -384,7 +384,7 @@ lastupdated: "2018-12-11"
 
 ### 進一步瞭解 Delivery Pipeline
 
-若要進一步瞭解 {{site.data.keyword.deliverypipeline}}，請參閱[使用管線](/docs/services/ContinuousDelivery/pipeline_working.html){: new_window}以及 IBM Cloud Garage Method 上的 [Delivery Pipeline 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window}，或採用下列指導教學：
+若要進一步瞭解 {{site.data.keyword.deliverypipeline}}，請參閱[使用管線](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working){: new_window}以及 IBM Cloud Garage Method 上的 [Delivery Pipeline 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window}，或採用下列指導教學：
 
   * [建立管線 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:new_window}
 
@@ -444,7 +444,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一個整合的 Web 型環境，�
 
 ### 進一步瞭解 Eclipse Orion Web IDE
 
-若要進一步瞭解 Eclipse Orion {{site.data.keyword.webide}}，請參閱[使用 Eclipse Orion {{site.data.keyword.webide}} 編輯程式碼](/docs/services/ContinuousDelivery/web_ide.html){: new_window}。您也可以閱讀 IBM Cloud Garage Method 上的 [Eclipse Orion {{site.data.keyword.webide}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window}。請採用下列指導教學，以嘗試使用 Eclipse Orion {{site.data.keyword.webide}}：
+若要進一步瞭解 Eclipse Orion {{site.data.keyword.webide}}，請參閱[使用 Eclipse Orion {{site.data.keyword.webide}} 編輯程式碼](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide)。您也可以閱讀 IBM Cloud Garage Method 上的 [Eclipse Orion {{site.data.keyword.webide}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window}。請採用下列指導教學，以嘗試使用 Eclipse Orion {{site.data.keyword.webide}}：
 
   * [使用「開發 Cloud Foundry 應用程式」工具鏈建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
@@ -521,7 +521,7 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
 1. 如果您是將原始碼儲存至 GitHub 儲存庫，請按一下「可配置的整合」區段中的 **GitHub**。如果您要在 {{site.data.keyword.Bluemix_notm}} Public 上配置此工具整合，但未授權 {{site.data.keyword.Bluemix_notm}} 存取 GitHub，請按一下**授權**來移至 GitHub 網站。如果您沒有作用中的 GitHub 階段作業，則系統會提示您登入。按一下**授權應用程式**，以容許 {{site.data.keyword.Bluemix_notm}} 存取 GitHub 帳戶。如果您有作用中的 GitHub 階段作業，但最近未輸入過密碼，則系統可能會提示您輸入 GitHub 密碼進行確認。
 1. 如果您要在自己的 {{site.data.keyword.ghe_short}} 伺服器上使用儲存庫，請按一下「可配置的整合」區段中的**新增自訂伺服器**。
 
- 網路必須可以從 {{site.data.keyword.Bluemix_notm}} Dedicated 環境存取目標 Git 伺服器。如果您的 GitHub 伺服器無法在公用網際網路上使用，或在公用「網域名稱伺服器 (DNS)」上無法解析主機名稱，請[開立支援問題單](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}。您可以使用支援問題單來提交開啟網路路徑或更新 DNS 設定的要求。
+ 網路必須可以從 {{site.data.keyword.Bluemix_notm}} Dedicated 環境存取目標 Git 伺服器。如果您的 GitHub 伺服器無法在公用網際網路上使用，或在公用「網域名稱伺服器 (DNS)」上無法解析主機名稱，請[開立支援問題單](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_support#support-ticket){: new_window}。您可以使用支援問題單來提交開啟網路路徑或更新 DNS 設定的要求。
  {: important}
 
  鍵入自訂 GitHub 伺服器的標題，然後指定伺服器的根 URL。輸入個人存取記號，然後按一下**儲存自訂整合**。
@@ -579,9 +579,9 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
 
  * [使用「開發及測試 Cloud Foundry 應用程式」工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
 
-  * [使用「搭配 GitHub 和 Jenkins 的 Deployment Risk Analytics」工具鏈確定品質部署 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+ * [使用「搭配 GitHub 和 Jenkins 的 Deployment Risk Analytics」工具鏈確定品質部署 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
 
-  * [建立自訂工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
+ * [建立自訂工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
 
 
 ## 在 {{site.data.keyword.Bluemix_notm}} Dedicated 上配置 GitHub Enterprise 及 Issues
@@ -590,13 +590,13 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
  這些指示適用於 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，則視內部程序而定，有些步驟可能會有所不同。
  {: important}
 
-{{site.data.keyword.ghe_long}} 是 Git 儲存庫的內部部署 Web 型管理服務。Dedicated {{site.data.keyword.ghe_short}} 僅供 {{site.data.keyword.Bluemix_notm}} Dedicated 客戶使用。GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一個位置。它與您的開發儲存庫整合，因此您可以專注於重要作業。如需 Dedicated {{site.data.keyword.ghe_short}} 及 GitHub Issues 的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} 和 IBM Cloud Garage Method 上的 [GitHub Issues 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}。
+{{site.data.keyword.ghe_long}} 是 Git 儲存庫的內部部署 Web 型管理服務。Dedicated {{site.data.keyword.ghe_short}} 僅供 {{site.data.keyword.Bluemix_notm}} Dedicated 客戶使用。GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一個位置。它與您的開發儲存庫整合，因此您可以專注於重要作業。如需 Dedicated {{site.data.keyword.ghe_short}} 及 GitHub Issues 的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window} 和 IBM Cloud Garage Method 上的 [GitHub Issues 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}。
 
-您可以將 {{site.data.keyword.ghe_short}} 配置為工具鏈中的工具整合，以在公司的 [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} 實例中管理原始碼。
+您可以將 {{site.data.keyword.ghe_short}} 配置為工具鏈中的工具整合，以在公司的 [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} 實例中管理原始碼。
 
 1. 如果您要在建立工具鏈時配置此工具整合，請遵循下列步驟：
 
- a. 第一次登入 Dedicated {{site.data.keyword.ghe_short}} 之前，請要求公司的地區管理者使用 LDAP 將您的使用者 ID 從公司的使用者登錄新增至 {{site.data.keyword.Bluemix_notm}} Dedicated 實例。如需設定 {{site.data.keyword.ghe_short}} 帳戶的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}。
+ a. 第一次登入 Dedicated {{site.data.keyword.ghe_short}} 之前，請要求公司的地區管理者使用 LDAP 將您的使用者 ID 從公司的使用者登錄新增至 {{site.data.keyword.Bluemix_notm}} Dedicated 實例。如需設定 {{site.data.keyword.ghe_short}} 帳戶的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}。
 
  b. 在「可配置的整合」區段中，按一下 **{{site.data.keyword.ghe_short}}**。    
 

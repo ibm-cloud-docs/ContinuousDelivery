@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -75,7 +75,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種瀏覽器型開發環境，�
 ## 管理原始碼
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} 是與原始碼管理工具整合。若要使用 Git 儲存庫，請按一下 **Git 儲存庫**圖示 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="「Git 儲存庫」圖示">。如需相關資訊，請參閱[在 Eclipse Orion Web IDE 中使用 Git](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide)。
+{{site.data.keyword.webide}} 是與原始碼管理工具整合。若要使用 Git 儲存庫，請按一下 **Git 儲存庫**圖示 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="「Git 儲存庫」圖示">。如需相關資訊，請參閱[在 Eclipse Orion Web IDE 中使用 Git](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_web_ide#git_web_ide)。
 
 ## 從工作區部署應用程式
 {: #deploy}
@@ -213,7 +213,7 @@ Eclipse Orion {{site.data.keyword.webide}} 提供內容輔助、工具提示、�
 </table>
 
 ## 使用指導教學：Eclipse Orion Web IDE
-{: #toolchain_tutorials}
+{: #toolchain_web_ide_tutorials}
 
 請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage){:new_window} 上的其中一個指導教學：
 

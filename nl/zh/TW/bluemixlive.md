@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2018
-lastupdated: "2018-12-12"
+  years: 2015，2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -142,7 +142,3 @@ You can synchronize any desktop directory tree with a cloud-based project worksp
 1. 還原應用程式的原始 Node.js 版本、start 指令及記憶體值。
 
 2. 推送應用程式。
-
-### 如需相關資訊
-
-* 請參閱 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

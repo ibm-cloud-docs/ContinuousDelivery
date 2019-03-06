@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-2-8"
 
 ---
 
@@ -30,9 +30,9 @@ lastupdated: "2018-11-14"
 
 |Git 類型  |HTTPS 設定 |HTTPS 使用 |SSH 設定 |
 |:-----------|:-------------|:------------|:-------------|
-|Git Repos and Issue Tracking (git.ng.bluemix.com) |[個人存取記號](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |Git Repos and Issue tracking 使用者名稱（非 IBM ID）及個人存取記號 |[配置 SSH 金鑰](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
+|Git Repos and Issue Tracking (git.ng.bluemix.com) |[個人存取記號](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |Git Repos and Issue tracking 使用者名稱（非 IBM ID）及個人存取記號 |[配置 SSH 金鑰](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |
 | Public GitHub (github.com) |不需要個人存取記號，但您可以設定並使用它 |GitHub 使用者名稱和密碼，或 GitHub 使用者名稱及「個人存取記號」，或只是以個人存取記號作為使用者名稱 |[配置 GitHub SSH 金鑰](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-|GitHub Enterprise |[個人存取記號](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |GitHub Enterprise 使用者名稱（非 IBM ID）及個人存取記號 |[配置 GitHub Enterprise SSH 金鑰](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
+|GitHub Enterprise |[個人存取記號](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |GitHub Enterprise 使用者名稱（非 IBM ID）及個人存取記號 |[配置 GitHub Enterprise SSH 金鑰](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |
 
 如果您偏好使用 SSH，則可以跨所有 Git 伺服器重複使用單一金鑰。建立或找到金鑰，並在每一部伺服器中進行配置（如先前鏈結所述）。如果您使用通行詞組來建立金鑰，則系統會在您使用金鑰時提示您輸入該通行詞組。
 {: tip}
@@ -75,18 +75,4 @@ lastupdated: "2018-11-14"
 {: #git_egit}
 
 如果您使用 Eclipse，並且具有使用 Git 進行來源控制的專案，則可以使用 EGit 外掛程式，以從 Eclipse 管理儲存庫。如需安裝及配置 EGit 的指示，請參閱 [EGit 指導教學 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
-如果您使用 Git Repos and Issue Tracking 並且發生任何問題，請參閱 [Git Repos and Issue Tracking](git_working.html#git_local)。
-
-## 使用 IBM Eclipse Tools 進行開發
-{: #git_eclipse_tools}
-
-您可以將 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 所提供的外掛程式安裝至 Eclipse 環境，以整合 IDE 與 {{site.data.keyword.Bluemix_notm}}。
-
-您可以使用這些工具，直接從 Eclipse IDE 或 IBM WebSphere&reg; Application Server Developer Tools (WDT) 將下列類型的檔案及伺服器部署至 {{site.data.keyword.Bluemix_notm}}：
-
-* JavaScript 檔案
-* WAR（Web 保存）檔案
-* EAR（企業保存）檔案
-* Liberty 設定檔包裝伺服器
-
-您也可以建立服務，並將它們鏈結至應用程式，並在部署期間定義環境變數。如需 IBM Eclipse Tools 的相關資訊，請參閱[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署應用程式](/docs/manageapps/eclipsetools/eclipsetools.html)。
+如果您使用 Git Repos and Issue Tracking 並且發生任何問題，請參閱 [Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local)。

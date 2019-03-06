@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-2-20"
 
 ---
 
@@ -28,8 +28,8 @@ lastupdated: "2018-11-29"
  * {{site.data.keyword.gitrepos}}
  * {{site.data.keyword.contdelivery_short}} 管線
  * 工具鏈及工具整合
- * [IBM Cloud 上的 GitHub Enterprise ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ghededicated/ghe_personal_data.html){: new_window}
- * [{{site.data.keyword.DRA_full}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
+ * [IBM Cloud 上的 GitHub Enterprise ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
+ * [{{site.data.keyword.DRA_full}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/DevOpsInsights?topic=DevOpsInsights-insights_personal_data){: new_window}
  
 IBM 不會管理 {{site.data.keyword.contdelivery_short}} 服務中的資料。在您離開 {{site.data.keyword.Bluemix_notm}} Public 中所管理的 {{site.data.keyword.contdelivery_short}} 服務之前，必須刪除您自己的資料。
 {: important}

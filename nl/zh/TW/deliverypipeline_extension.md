@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-3-26"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -73,7 +73,7 @@ lastupdated: "2018-3-26"
 
     * 如果您要管線檢查 {{site.data.keyword.Bluemix_short}} 空間來尋找服務以及將服務連結至容器的應用程式，請選取此勾選框。如果服務或所連結的應用程式不存在，則管線會將服務的免費方案新增至您的空間。建立的已連結應用程式命名為 `pipeline_bridge_app`。然後，管線會使用來自 pipeline_bridge_app 的認證，以存取連結的服務。
 
-    * 如果您已在 {{site.data.keyword.Bluemix_short}} 空間中配置服務及連結的應用程式，或者要[手動配置這些需求](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}，請清除此勾選框。
+    * 如果您已在 {{site.data.keyword.Bluemix_short}} 空間中配置服務及連結的應用程式，或者要手動配置這些需求，請清除此勾選框。
 
   f. 在**等待分析完成的分鐘數**欄位中，鍵入 0 - 59 分鐘的值。預設值為 5 分鐘。在工作結束時，{{site.data.keyword.staticanalyzershort}} 儀表板的 URL 是在主控台日誌中。
 
@@ -105,8 +105,6 @@ lastupdated: "2018-3-26"
 
 **擱置掃描**
 ![範例擱置掃描](images/analyzer_pending.png)
-
-如需使用 {{site.data.keyword.staticanalyzershort}} 服務的相關資訊，請參閱 [{{site.data.keyword.staticanalyzershort}} 服務文件](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}。
 
 <!--
 

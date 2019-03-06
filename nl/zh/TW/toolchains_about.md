@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2017-5-15"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -21,3 +21,5 @@ lastupdated: "2017-5-15"
 在 {{site.data.keyword.Bluemix_notm}} Public 上，視您使用的範本或工具鏈而定，工具鏈可能包含已移入應用程式入門範本程式碼和預先配置交付管線的 GitHub 或 Git 儲存庫。將變更推送至工具鏈的儲存庫時，交付管線會自動建置應用程式，並將它部署至 {{site.data.keyword.Bluemix_notm}}。
 
 在 {{site.data.keyword.Bluemix_notm}} Dedicated 上，視您使用的範本或工具鏈而定，工具鏈可能包含已移入應用程式入門範本程式碼和預先配置交付管線的 GitHub 或 GitHub Enterprise 儲存庫。將變更推送至工具鏈的 GitHub 或 GitHub Enterprise 儲存庫時，交付管線會自動建置應用程式，並將它部署至 {{site.data.keyword.Bluemix_notm}}。
+
+若要查看有哪些可用的工具鏈及工具整合，請參閱[工具鏈可用性、範本及指導教學](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_about)。
