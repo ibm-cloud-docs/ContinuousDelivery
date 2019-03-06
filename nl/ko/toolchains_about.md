@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2017-5-15"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -21,3 +21,5 @@ lastupdated: "2017-5-15"
 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서는 사용하는 템플리트 또는 도구 체인에 따라 사전 구성된 딜리버리 파이프라인 및 앱 스타터 코드로 채워진 GitHub 또는 Git 저장소(repo)가 도구 체인에 포함될 수 있습니다. 도구 체인의 저장소에 변경사항을 푸시하면 딜리버리 파이프라인이 자동으로 앱을 빌드하고 이를 {{site.data.keyword.Bluemix_notm}}에 배치합니다.
 
 {{site.data.keyword.Bluemix_notm}} 데디케이티드에서는 사용하는 템플리트 또는 도구 체인에 따라 사전 구성된 딜리버리 파이프라인 및 앱 스타터 코드로 채워진 GitHub 또는 GitHub Enterprise 저장소가 도구 체인에 포함될 수 있습니다. 도구 체인의 GitHub 또는 GitHub Enterprise 저장소에 변경사항을 푸시하면 딜리버리 파이프라인이 자동으로 앱을 빌드하고 이를 {{site.data.keyword.Bluemix_notm}}에 배치합니다.
+
+사용 가능한 도구 체인 및 도구 통합을 보려면 [도구 체인 가용성, 템플리트 및 튜토리얼](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_about)을 참조하십시오. 

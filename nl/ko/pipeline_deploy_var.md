@@ -60,7 +60,7 @@ lastupdated: "2018-10-9"
 |PIPELINE_STAGE_INPUT_JOB_ID |현재 단계의 입력인 작업의 ID입니다. |
 |PIPELINE_STAGE_INPUT_REV |현재 단계의 입력 변경내용입니다. |
 |PIPELINE_INITIAL_STAGE_EXECUTION_ID |파이프라인 실행의 고유 ID입니다. |
-|PIPELINE_TRIGGERING_USER | 파이프라인 작업의 현재 사용자 |
+|PIPELINE_TRIGGERING_USER | 파이프라인 작업의 현재 사용자|
 |TASK_ID |작업의 현재 실행 고유 ID입니다. |
 |TMPDIR |임시 파일을 저장하는 디렉토리 위치입니다. |
 |WORKSPACE |현재 작업 디렉토리의 경로입니다. |

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-15"
 
 ---
 
@@ -27,26 +27,26 @@ lastupdated: "2018-12-11"
 |도구 통합 |{{site.data.keyword.Bluemix_notm}} 퍼블릭에서 사용 가능	|{{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용 가능(환경에 따라 다름)|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.alertnotificationshort}}		|미국 남부		|아니오		|
-|Artifactory		|미국 남부, 미국 동부, 독일, 도쿄, 영국	|예		|
+|Artifactory		|미국 남부, 미국 동부, 독일, 도쿄, 영국		|예		|
 |Availability Monitoring		|미국 남부		|아니오		|
-|Bitbucket		|미국 남부, 미국 동부, 독일, 도쿄, 영국	|아니오		|
+|Bitbucket		|미국 남부, 미국 동부, 독일, 도쿄, 영국		|아니오		|
 |Cloud Event Management		|미국 남부		|아니오		|
-|{{site.data.keyword.deliverypipeline}} 		|미국 남부, 미국 동부, 독일, 도쿄, 영국	|예  		|
+|{{site.data.keyword.deliverypipeline}} 		|미국 남부, 미국 동부, 독일, 도쿄, 영국	   	|예  		|
 |{{site.data.keyword.DRA_short}} 		|미국 남부, 독일, 영국		|아니오			|
-|Eclipse Orion {{site.data.keyword.webide}}		|미국 남부, 미국 동부, 독일, 도쿄, 영국	|예			|
-|{{site.data.keyword.gitrepos}}	|미국 남부, 미국 동부, 독일, 도쿄, 영국	|아니오		|
-|GitHub		|미국 남부, 미국 동부, 독일, 도쿄, 영국	|예		|
+|Eclipse Orion {{site.data.keyword.webide}}		|미국 남부, 미국 동부, 독일, 도쿄, 영국		|예			|
+|{{site.data.keyword.gitrepos}}	|미국 남부, 미국 동부, 독일, 도쿄, 영국		|아니오		|
+|GitHub		|미국 남부, 미국 동부, 독일, 도쿄, 영국		|예		|
 |Dedicated {{site.data.keyword.ghe_short}} and Issues			|아니오		|예		|
-|GitLab		|미국 남부, 미국 동부, 독일, 도쿄, 영국	|아니오		|
-|Jenkins		|미국 남부, 미국 동부, 독일, 도쿄, 영국	|예		|
-|JIRA		|미국 남부, 미국 동부, 독일, 도쿄, 영국	|예		|
-|Nexus			|미국 남부, 미국 동부, 독일, 도쿄, 영국	|예		|
-|기타 도구			|미국 남부, 미국 동부, 독일, 도쿄, 영국	|예		|
-|PagerDuty			|미국 남부, 미국 동부, 독일, 도쿄, 영국	|예		|
-|Rational Team Concert			|미국 남부, 미국 동부, 독일, 도쿄, 영국	|예		|
-|Sauce Labs		|미국 남부, 미국 동부, 독일, 도쿄, 영국	|아니오		|
-|Slack			|미국 남부, 미국 동부, 독일, 도쿄, 영국	|예		|
-|SonarQube			|미국 남부, 미국 동부, 독일, 도쿄, 영국	|예		|
+|GitLab		|미국 남부, 미국 동부, 독일, 도쿄, 영국		|아니오		|
+|Jenkins		|미국 남부, 미국 동부, 독일, 도쿄, 영국		|예		|
+|JIRA		|미국 남부, 미국 동부, 독일, 도쿄, 영국		|예		|
+|Nexus			|미국 남부, 미국 동부, 독일, 도쿄, 영국		|예		|
+|기타 도구			|미국 남부, 미국 동부, 독일, 도쿄, 영국		|예		|
+|PagerDuty			|미국 남부, 미국 동부, 독일, 도쿄, 영국		|예		|
+|Rational Team Concert			|미국 남부, 미국 동부, 독일, 도쿄, 영국		|예		|
+|Sauce Labs		|미국 남부, 미국 동부, 독일, 도쿄, 영국		|아니오		|
+|Slack			|미국 남부, 미국 동부, 독일, 도쿄, 영국		|예		|
+|SonarQube			|미국 남부, 미국 동부, 독일, 도쿄, 영국		|예		|
 {: caption="표 1. {{site.data.keyword.Bluemix_notm}} 퍼블릭 및 데디케이티드에서 도구 체인에 사용 가능한 도구 통합" caption-side="top"}
 
 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 소스 코드로 개발을 시작하려는 경우, {{site.data.keyword.deliverypipeline}}을 구성하기 전에 GitHub 도구 통합 또는 {{site.data.keyword.gitrepos}} 도구 통합을 구성하십시오. {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 코드로 개발을 시작하려는 경우, {{site.data.keyword.deliverypipeline}}을 구성하기 전에 {{site.data.keyword.ghe_short}} 도구 통합 또는 GitHub 도구 통합을 구성하십시오.
@@ -163,7 +163,7 @@ npm 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을 �
      # or
      npm publish --registry "${NPM_RELEASE_URL}"
      ```
-  Artifactory 도구 통합을 위한 구성 설정의 레지스트리에 연결하는 데 사용된 URL 및 사용자 신임 정보를 찾을 수 있습니다.
+  Artifactory 도구 통합을 위한 구성 설정의 레지스트리에 연결하는 데 사용된 URL 및 사용자 인증 정보를 찾을 수 있습니다.
   {: tip}
 
   e. 빌드 작업이 Artifactory 레지스트리에 공개되며 노드 모듈 버전의 형식이 `x.y.z-SNAPSHOT.w`인 경우에는 **스냅샷 모듈 버전 올리기** 선택란을 선택하십시오. 빌드 작업은 해당 작업이 Artifactory 레지스트리에 공개되기 전에 모듈 버전을 자동으로 업데이트합니다. 작업은 로컬 `package.json` 파일 및 npm 레지스트리에서 모듈의 최상위 버전을 선택하며 semver을 사용하여 모듈 버전을 올립니다. 빌드 작업은 변경사항을 SCM 저장소에 전달하지 않습니다.
@@ -194,7 +194,7 @@ Maven 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을
      # or
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  Artifactory 도구 통합을 위한 구성 설정의 레지스트리에 연결하는 데 사용된 URL 및 사용자 신임 정보를 찾을 수 있습니다.
+  Artifactory 도구 통합을 위한 구성 설정의 레지스트리에 연결하는 데 사용된 URL 및 사용자 인증 정보를 찾을 수 있습니다.
   {: tip}
 
 1. **저장**을 클릭하십시오. 파이프라인이 실행될 때마다 이 빌드 작업은 Artifactory 도구 통합의 구성 정보를 사용하여 Maven 저장소에 연결합니다.
@@ -334,11 +334,11 @@ Cloud Event Management에 대해 자세히 알아보려면 IBM Cloud Garage Meth
 1. 새 파이프라인의 이름을 지정하십시오.
 1. 파이프라인을 사용하여 사용자 인터페이스를 배치하려는 경우 **앱 보기 메뉴에 앱 표시** 선택란을 선택하십시오. 파이프라인에서 작성하는 모든 앱이 도구 체인의 개요 페이지에 있는 **앱 보기** 목록에 표시됩니다.
 1. **통합 작성**을 클릭하여 도구 체인에 {{site.data.keyword.deliverypipeline}}을 추가하십시오.
-1. **{{site.data.keyword.deliverypipeline}}**을 클릭하여 파이프라인을 보고 이를 구성하십시오. 파이프라인 구성의 기본사항을 알아보려면 [파이프라인 빌드 및 배치](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}의 내용을 참조하십시오.
+1. **{{site.data.keyword.deliverypipeline}}**을 클릭하여 파이프라인을 보고 이를 구성하십시오. 파이프라인 구성의 기본사항을 알아보려면 [파이프라인 빌드 및 배치](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy){: new_window}를 참조하십시오.
 
   커미트를 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소에 푸시할 때 파이프라인을 자동으로 실행하려면 다음 단계를 따르십시오.
 
-   a. 파이프라인의 스테이지를 정의하기 전에 도구 체인에 대해 GitHub, {{site.data.keyword.ghe_short}} 또는 {{site.data.keyword.gitrepos}}를 구성하십시오. 파이프라인 단계에는 사용하는 저장소의 Git URL이 필요합니다. 각 파이프라인 단계는 도구 체인과 연관된 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소 중 하나만 참조할 수 있습니다. GitHub 구성에 대한 지시사항은 [GitHub](#github) 섹션을 참조하십시오. 데디케이티드 {{site.data.keyword.ghe_short}} 구성에 대한 지시사항은 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated/index.html){: new_window}를 참조하십시오. {{site.data.keyword.gitrepos}} 구성에 대한 지시사항은 [{{site.data.keyword.gitrepos}}](#gitbluemix) 섹션을 참조하십시오.
+   a. 파이프라인의 스테이지를 정의하기 전에 도구 체인에 대해 GitHub, {{site.data.keyword.ghe_short}} 또는 {{site.data.keyword.gitrepos}}를 구성하십시오. 파이프라인 단계에는 사용하는 저장소의 Git URL이 필요합니다. 각 파이프라인 단계는 도구 체인과 연관된 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소 중 하나만 참조할 수 있습니다. GitHub 구성에 대한 지시사항은 [GitHub](#github) 섹션을 참조하십시오. 데디케이티드 {{site.data.keyword.ghe_short}} 구성에 대한 지시사항은 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}를 참조하십시오. {{site.data.keyword.gitrepos}} 구성에 대한 지시사항은 [{{site.data.keyword.gitrepos}}](#gitbluemix) 섹션을 참조하십시오.
 
    b. 웹훅을 사용하십시오. 웹훅이 없으면 파이프라인을 수동으로만 실행할 수 있습니다. GitHub 또는 {{site.data.keyword.ghe_short}} 저장소에 연결할 때 웹훅을 사용하려면, 관리 권한이 필요합니다. {{site.data.keyword.gitrepos}} 저장소에 연결하려면 마스터 또는 소유자 권한이 있어야 합니다.
 
@@ -385,7 +385,7 @@ Sauce Labs 테스트 작업을 추가하도록 {{site.data.keyword.deliverypipel
 
 ### Delivery Pipeline에 대해 자세히 알아보기
 
-{{site.data.keyword.deliverypipeline}}에 대해 자세히 알아보려면 [파이프라인에 대한 작업](/docs/services/ContinuousDelivery/pipeline_working.html){: new_window} 및 IBM Cloud Garage Method의 [Delivery Pipeline 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window}를 참조하거나 다음 튜토리얼을 활용하십시오.
+{{site.data.keyword.deliverypipeline}}에 대해 자세히 알아보려면 [파이프라인에 대한 작업](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working){: new_window} 및 IBM Cloud Garage Method의 [Delivery Pipeline 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window}를 참조하거나 다음 튜토리얼을 활용하십시오.
 
   * [파이프라인 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:new_window}
 
@@ -445,7 +445,7 @@ Eclipse Orion {{site.data.keyword.webide}}는 소스 제어 태스크를 작성,
 
 ### Eclipse Orion Web IDE에 대해 자세히 알아보기
 
-Eclipse Orion {{site.data.keyword.webide}}에 대해 자세히 알아보려면 [Eclipse Orion {{site.data.keyword.webide}}로 코드 편집](/docs/services/ContinuousDelivery/web_ide.html){: new_window}을 참조하십시오. IBM Cloud Garage Method에서 [Eclipse Orion {{site.data.keyword.webide}} 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window}를 참조할 수도 있습니다. 다음 튜토리얼을 사용하여 Eclipse Orion {{site.data.keyword.webide}}를 시도하십시오.
+Eclipse Orion {{site.data.keyword.webide}}에 대해 자세히 알아보려면 [Eclipse Orion {{site.data.keyword.webide}}로 코드 편집](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide)을 참조하십시오. IBM Cloud Garage Method에서 [Eclipse Orion {{site.data.keyword.webide}} 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window}를 참조할 수도 있습니다. 다음 튜토리얼을 사용하여 Eclipse Orion {{site.data.keyword.webide}}를 사용해 보십시오.
 
   * ["Cloud Foundry 앱 개발" 도구 체인을 사용하여 첫 번째 도구 체인 작성 및 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
@@ -521,7 +521,7 @@ GitHub.com의 새 저장소 또는 기존 저장소에서 소스 코드를 관�
 1. GitHub 저장소에 소스 코드를 저장 중인 경우 구성 가능한 통합 섹션에서 **GitHub**를 클릭하십시오. {{site.data.keyword.Bluemix_notm}} 퍼블릭에 이 도구 통합을 구성 중이고 GitHub에 액세스하는 권한을 {{site.data.keyword.Bluemix_notm}}에 부여하지 않은 경우 **권한 부여**를 클릭하여 GitHub 웹 사이트로 이동하십시오. 활성 GitHub 세션이 없으면 로그인을 요구하는 프롬프트가 표시됩니다. **애플리케이션에 권한 부여**를 클릭하여 {{site.data.keyword.Bluemix_notm}}에서 사용자의 GitHub 계정에 액세스할 수 있도록 허용하십시오. 활성 GitHub 세션이 있지만 최근에 비밀번호를 입력하지 않은 경우, 확인을 위해 GitHub 비밀번호를 입력하도록 프롬프트가 표시될 수 있습니다.
 1. 자체 {{site.data.keyword.ghe_short}} 서버의 저장소를 사용 중인 경우 구성 가능한 통합 섹션에서 **사용자 정의 서버 추가**를 클릭하십시오.
 
- {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경에서 대상 Git 서버로 네트워크 액세스가 설정되어 있어야 합니다. 공용 인터넷에서 GitHub 서버를 사용할 수 없거나 호스트 이름을 공용 DNS(Domain Name Server)에서 해석할 수 없는 경우 [지원 티켓을 개설하십시오](/docs/services/ContinuousDelivery/cd_support.html#support-ticket){: new_window}. 지원 티켓을 사용하여 네트워크 라우트를 열거나 DNS 설정을 업데이트하도록 요청을 제출할 수 있습니다.
+ {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경에서 대상 Git 서버로 네트워크 액세스가 설정되어 있어야 합니다. 공용 인터넷에서 GitHub 서버를 사용할 수 없거나 호스트 이름을 공용 DNS(Domain Name Server)에서 해석할 수 없는 경우 [지원 티켓을 개설하십시오](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_support#support-ticket){: new_window}. 지원 티켓을 사용하여 네트워크 라우트를 열거나 DNS 설정을 업데이트하도록 요청을 제출할 수 있습니다.
  {: important}
 
  사용자 정의 GitHub 서버의 제목을 입력하고 서버의 루트 URL을 지정하십시오. 개인 액세스 토큰을 입력한 후 **사용자 정의 통합 저장**을 클릭하십시오.
@@ -580,9 +580,9 @@ GitHub에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [GitHub
 
  * ["Cloud Foundry 앱 개발 및 테스트" 도구 체인 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
 
-  * ["GitHub 및 Jenkins를 사용하는 Deployment Risk Analytics" 도구 체인을 사용하여 품질 배치 보장 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+ * ["GitHub 및 Jenkins를 사용하는 Deployment Risk Analytics" 도구 체인을 사용하여 품질 배치 보장 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
 
-  * [Create a custom toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
+ * [Create a custom toolchain ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
 
 
 ## {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 GitHub Enterprise 및 Issues 구성
@@ -591,13 +591,13 @@ GitHub에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [GitHub
  다음 지시사항은 {{site.data.keyword.ghe_short}}용 {{site.data.keyword.Bluemix_notm}} 데디케이티드에 적용됩니다. {{site.data.keyword.ghe_short}}의 자체 관리 버전을 사용 중이면 일부 단계가 내부 프로시저에 따라 다를 수 있습니다.
  {: important}
 
-{{site.data.keyword.ghe_long}}는 Git 저장소를 위한 온프레미스 웹 기반 호스팅 서비스입니다. 데디케이티드 {{site.data.keyword.ghe_short}}는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 고객 전용입니다. GitHub Issues는 작업과 플랜을 한 위치에 보관하는 추적 도구입니다. 개발 저장소에 통합되므로 중요한 태스크에 집중할 수 있습니다. 전용 {{site.data.keyword.ghe_short}} 및 GitHub Issues에 대한 자세한 정보는 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated/index.html){: new_window} 및 IBM Cloud Garage Method에서 [GitHub Issues 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}를 참조하십시오.
+{{site.data.keyword.ghe_long}}는 Git 저장소를 위한 온프레미스 웹 기반 호스팅 서비스입니다. 데디케이티드 {{site.data.keyword.ghe_short}}는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 고객 전용입니다. GitHub Issues는 작업과 플랜을 한 위치에 보관하는 추적 도구입니다. 개발 저장소에 통합되므로 중요한 태스크에 집중할 수 있습니다. 전용 {{site.data.keyword.ghe_short}} 및 GitHub Issues에 대한 자세한 정보는 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window} 및 IBM Cloud Garage Method에서 [GitHub Issues 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}를 참조하십시오. 
 
-회사의 [{{site.data.keyword.Bluemix_notm}} 데디케이티드](/docs/dedicated/index.html#dedicated){: new_window} 인스턴스에서 소스 코드를 관리할 수 있도록 {{site.data.keyword.ghe_short}}를 도구 체인의 도구 통합으로 구성할 수 있습니다.
+회사의 [{{site.data.keyword.Bluemix_notm}} 데디케이티드](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} 인스턴스에서 소스 코드를 관리할 수 있도록 {{site.data.keyword.ghe_short}}를 도구 체인의 도구 통합으로 구성할 수 있습니다.
 
 1. 도구 체인을 작성할 때 이 도구 통합을 구성하는 경우 다음 단계를 따르십시오.
 
- a. 데디케이티드 {{site.data.keyword.ghe_short}}에 처음으로 로그인하기 전에, LDAP을 사용하여 회사 사용자 레지스트리의 {{site.data.keyword.Bluemix_notm}} 데디케이티드 인스턴스에 사용자 ID를 추가하도록 회사의 지역 관리자에게 요청하십시오. {{site.data.keyword.ghe_short}} 계정 설정에 대한 정보는 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated/index.html){: new_window}의 내용을 참조하십시오.
+ a. 데디케이티드 {{site.data.keyword.ghe_short}}에 처음으로 로그인하기 전에, LDAP을 사용하여 회사 사용자 레지스트리의 {{site.data.keyword.Bluemix_notm}} 데디케이티드 인스턴스에 사용자 ID를 추가하도록 회사의 지역 관리자에게 요청하십시오. {{site.data.keyword.ghe_short}} 계정 설정에 대한 정보는 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}를 참조하십시오. 
 
  b. 구성 가능한 통합 섹션에서 **{{site.data.keyword.ghe_short}}**을 클릭하십시오.    
 
@@ -854,7 +854,7 @@ npm 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을 �
      # or
      npm publish --registry "${NPM_RELEASE_URL}"
      ```
-  **팁:** Nexus 도구 통합을 위한 구성 설정의 레지스트리에 연결하는 데 사용된 URL 및 사용자 신임 정보를 찾을 수 있습니다.
+  **팁:** Nexus 도구 통합을 위한 구성 설정의 레지스트리에 연결하는 데 사용된 URL 및 사용자 인증 정보를 찾을 수 있습니다.
 
   e. 빌드 작업이 Nexus 레지스트리에 공개되며 노드 모듈 버전의 형식이 `x.y.z-SNAPSHOT.w`인 경우에는 **스냅샷 모듈 버전 올리기** 선택란을 선택하십시오. 빌드 작업은 Nexus 레지스트리에 공개되기 전에 모듈 버전을 자동으로 업데이트합니다. 빌드 작업은 로컬 `package.json` 파일 및 npm 레지스트리에서 모듈의 최상위 버전을 선택하며 semver을 사용하여 모듈 버전을 올립니다. 빌드 작업은 변경사항을 SCM 저장소에 전달하지 않습니다.
 
@@ -884,7 +884,7 @@ Maven 빌드 작업을 추가하도록 {{site.data.keyword.deliverypipeline}}을
      # or
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
-  Nexus 도구 통합을 위한 구성 설정의 레지스트리에 연결하는 데 사용된 URL 및 사용자 신임 정보를 찾을 수 있습니다.
+  Nexus 도구 통합을 위한 구성 설정의 레지스트리에 연결하는 데 사용된 URL 및 사용자 인증 정보를 찾을 수 있습니다.
   {: tip}
 
 1. **저장**을 클릭하십시오. 파이프라인이 실행될 때마다 이 빌드 작업은 Nexus 도구 통합의 구성 정보를 사용하여 Maven 저장소에 연결합니다.

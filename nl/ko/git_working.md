@@ -38,7 +38,7 @@ Git 저장소 내의 파일 또는 문제에 규제된 데이터를 저장하지
 {: tip}
 
 ## 로컬로 {{site.data.keyword.gitrepos}} 사용
-{: #git_local}
+{: #git_locally}
 
 {{site.data.keyword.gitrepos}}에 저장된 Git 저장소에 로컬로 액세스할 수 있습니다. 로컬에 Git를 설정하는 지시사항은 [Start using Git on the command line![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}을 참조하십시오.
 
@@ -48,7 +48,7 @@ Git 저장소 내의 파일 또는 문제에 규제된 데이터를 저장하지
 ## {{site.data.keyword.gitrepos}}에 인증
 {: #git_authentication}
 
-{{site.data.keyword.Bluemix_notm}} 로그인 및 비밀번호는 웹 브라우저에서 {{site.data.keyword.gitrepos}}를 인증하는 경우에만 사용됩니다. 외부 Git 클라이언트에서 인증하기 위해 {{site.data.keyword.Bluemix_notm}} 사용자 신임 정보를 사용할 수 없습니다.  `clone` 또는 `push` 등의 원격 Git 조작을 완료하려면, 로컬 Git 저장소에서 개인 액세스 토큰 또는 SSH 키를 사용하여 {{site.data.keyword.gitrepos}}을 인증해야 합니다.
+{{site.data.keyword.Bluemix_notm}} 로그인 및 비밀번호는 웹 브라우저에서 {{site.data.keyword.gitrepos}}를 인증하는 경우에만 사용됩니다. 외부 Git 클라이언트에서 인증하기 위해 {{site.data.keyword.Bluemix_notm}} 사용자 인증 정보를 사용할 수 없습니다.  `clone` 또는 `push` 등의 원격 Git 조작을 완료하려면, 로컬 Git 저장소에서 개인 액세스 토큰 또는 SSH 키를 사용하여 {{site.data.keyword.gitrepos}}을 인증해야 합니다.
 
 ### 개인 액세스 토큰 작성
 {: #create_pat}

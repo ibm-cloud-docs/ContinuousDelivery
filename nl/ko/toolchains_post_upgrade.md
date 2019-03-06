@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -21,14 +21,14 @@ hub.jazz.net의 {{site.data.keyword.jazzhub}} 프로젝트가 {{site.data.keywor
 
 hub.jazz.net의 {{site.data.keyword.jazzhub_short}}가 취소됩니다. 
 
-DevOps 프로젝트의 경우 [{{site.data.keyword.contdelivery_short}} 서비스![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/devops){:new_window}를 참조하십시오. {{site.data.keyword.Bluemix_notm}}를 처음 사용하는 경우 [{{site.data.keyword.Bluemix_notm}} 개요](/docs/overview/ibm-cloud.html#overview)를 확인하십시오.
+DevOps 프로젝트의 경우 [{{site.data.keyword.contdelivery_short}} 서비스![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/devops){:new_window}를 참조하십시오. {{site.data.keyword.Bluemix_notm}}를 처음 사용하는 경우 [{{site.data.keyword.Bluemix_notm}} 개요](/docs/overview?topic=overview-whatis-platform)를 확인하십시오.
 
 {: shortdesc}
 
 ## 프로젝트에서 작성된 도구 체인 찾기
 {: #find_toolchain}
 
-[도구 체인 페이지![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/devops/toolchains){: new_window}로 이동하고 hub.jazz.net 프로젝트의 이름과 일치하는 이름으로 도구 체인이 표시되는지 확인하여 업그레이드가 완료되었음을 확인하십시오. 프로젝트가 자동으로 업그레이드된 경우 다음 제한사항에 유의하십시오.
+[도구 체인 페이지![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/devops/toolchains){: new_window}로 이동하고 hub.jazz.net 프로젝트의 이름과 일치하는 이름으로 도구 체인이 표시되는지 확인하여 업그레이드가 완료되었음을 확인하십시오. 프로젝트가 자동으로 업그레이드된 경우 다음 제한사항에 유의하십시오.
    - 프로젝트가 업그레이드되기 전에 다른 도구 체인에서 이미 프로젝트의 이름을 사용한 경우 프로젝트에 대해 작성된 새 도구 체인의 이름은 프로젝트의 이름과 일치하면 안 됩니다. 
    - 프로젝트에 대한 도구 체인이 표시되지 않으면 속해 있는 다른 조직으로 전환하고 도구 체인을 확인하십시오.
    
@@ -48,19 +48,19 @@ hub.jazz.net에 하나 이상의 프로젝트가 있는 경우 업그레이드�
 - 프로젝트에서 멤버십은 프로젝트 레벨로 유지됩니다. 도구 체인에 대한 액세스는 {{site.data.keyword.Bluemix_notm}} 조직 및 도구 체인으로 관리됩니다. 도구 체인에 대해 작업하려면 도구 체인이 포함된 조직의 구성원이어야 합니다. 도구 체인 소유자는 도구 체인에 액세스할 수 있는 사용자 및 수행할 수 있는 작업을 추가로 제어할 수 있습니다. 액세스 제어에 대한 자세한 정보는 [도구 체인 시작하기](#upgrade_next_steps)의 단계 2를 참조하십시오.
 - hub.jazz.net의 프로젝트에 사용한 저장소의 유형에 따라 도구 체인에는 GitHub.com 저장소 또는 {{site.data.keyword.gitrepos}} 저장소가 포함될 수 있습니다.
 
-[YouTube ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://youtu.be/2SIPE1e7NJ4){: new_window}에서 또는 [{{site.data.keyword.contdelivery_short}} 시작하기](/docs/services/ContinuousDelivery/index.html)에서 도구 체인에 대해 자세히 알아볼 수 있습니다.
+[YouTube ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://youtu.be/2SIPE1e7NJ4){: new_window} 또는 [{{site.data.keyword.contdelivery_short}} 시작하기](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started)에서 도구 체인에 대해 자세히 알아볼 수 있습니다. 
 
 ## 도구 체인 시작하기
 {: #upgrade_next_steps}
 
 1. 팀 구성원에게 도구 체인에 대한 액세스 권한을 부여하십시오.
     - 각 팀 구성원은 유효한 {{site.data.keyword.Bluemix_notm}} 계정을 보유해야 합니다. 계정이 없는 팀 구성원은 [등록 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/registration){:new_window}이 필요합니다.
-    - 도구 체인 관리 페이지에서 조직 구성원에게 도구 체인에 액세스하는 권한을 부여하십시오. 기존 프로젝트 구성원은 업그레이드 프로세스의 일부로 도구 체인의 구성원으로 추가됩니다. 도구 체인의 액세스 제어에 대한 자세한 정보는 [액세스 관리![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}를 참조하십시오.
+    - 도구 체인 관리 페이지에서 조직 구성원에게 도구 체인에 액세스하는 권한을 부여하십시오. 기존 프로젝트 구성원은 업그레이드 프로세스의 일부로 도구 체인의 구성원으로 추가됩니다. 도구 체인의 액세스 제어에 대한 자세한 정보는 [Cloud Foundry 조직의 도구 체인에 대한 액세스 관리 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){:new_window}를 참조하십시오. 
     - 사용자가 도구 체인이 속한 조직의 구성원이 아니면 조직 관리 페이지에서 조직에 사용자를 추가하십시오.
     - 도구 체인에서 {{site.data.keyword.gitrepos}}를 사용하는 경우 올바른 {{site.data.keyword.Bluemix_notm}} ID가 있는 모든 JazzHub 프로젝트 구성원은 JazzHub 프로젝트에서 보유한 동일한 권한으로 {{site.data.keyword.gitrepos}} 저장소에 추가됩니다. JazzHub 프로젝트에 올바른 {{site.data.keyword.Bluemix_notm}} ID가 없는 구성원이 포함되어 있는 경우 ID를 등록할 수 있습니다. 등록하면 저장소에 추가할 수 있습니다.
-      조직 관리에 대한 자세한 정보는 [조직 및 영역 관리![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window}를 참조하십시오.
+      조직 관리에 대한 자세한 정보는 [조직 및 영역 관리![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/account?topic=account-orgsspacesusers){:new_window}를 참조하십시오.
 
-2. {{site.data.keyword.gitrepos}}를 사용하는 경우 개인 액세스 토큰 또는 SSH 키를 사용하여 인증하십시오. SSH 키에 대한 자세한 정보는 [인증을 위한 개인 액세스 토큰 또는 SSH 키 작성](/docs/services/ContinuousDelivery/git_working.html#git_authentication)을 참조하십시오. https를 통해 외부 Git 클라이언트에서 인증하려면 다음 단계를 따르십시오.
+2. {{site.data.keyword.gitrepos}}를 사용하는 경우 개인 액세스 토큰 또는 SSH 키를 사용하여 인증하십시오. SSH 키에 대한 자세한 정보는 [인증을 위한 개인 액세스 토큰 또는 SSH 키 작성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication)을 참조하십시오. https를 통해 외부 Git 클라이언트에서 인증하려면 다음 단계를 따르십시오.
     1. {{site.data.keyword.gitrepos}} 사용자 설정의 [액세스 토큰 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window}로 이동하십시오.
     2. **api**를 범위로 사용하는 개인 액세스 토큰을 작성하십시오.
     3. [계정 페이지![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/profile/account){:new_window}로 이동하고 {{site.data.keyword.gitrepos}}의 사용자 이름을 찾으십시오. 사용자 이름이 "사용자 이름 변경" 섹션에 나열되며 사용자가 작성한 개인 저장소 URL의 첫 번째 부분으로 표시됩니다.
@@ -70,7 +70,7 @@ hub.jazz.net에 하나 이상의 프로젝트가 있는 경우 업그레이드�
         어떤 원격 URL이 어떤 원격 이름으로 설정되었는지 확인하려면 `git remote -v` 명령을 사용하십시오. 기본 원격 이름은 `origin`입니다. 고급 설정이 있으면 명령의 형식은 다음과 같습니다. `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
         {: tip}
 
-3. 선택사항: 프로젝트의 개발 성숙도, 팀의 사례 및 코드 베이스 품질을 탐색하려면 IBM Cloud {{site.data.keyword.DRA_short}}를 도구 체인에 추가하십시오. {{site.data.keyword.DRA_short}}에서는 개발자, 팀 및 배치 분석을 DevOps 프로젝트에 적용합니다. 자세한 정보는 [{{site.data.keyword.DRA_short}} 시작하기](/docs/services/DevOpsInsights/index.html)를 참조하십시오.
+3. 선택사항: 프로젝트의 개발 성숙도, 팀의 사례 및 코드 베이스 품질을 탐색하려면 IBM Cloud {{site.data.keyword.DRA_short}}를 도구 체인에 추가하십시오. {{site.data.keyword.DRA_short}}에서는 개발자, 팀 및 배치 분석을 DevOps 프로젝트에 적용합니다. 자세한 정보는 [{{site.data.keyword.DRA_short}} 시작하기](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started)를 참조하십시오. 
 
   {{site.data.keyword.DRA_short}}는 미국 남부, 영국 및 독일 지역에서 사용 가능합니다.
   {: tip}

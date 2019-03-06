@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -44,7 +44,7 @@ lastupdated: "2018-11-29"
  일부 도구 통합은 사전 구성되어 있으며 구성 매개변수를 필요로 하지 않습니다. 자신이 구성한 도구 통합에 대해서만 구성 설정을 업데이트할 수 있습니다.
  {: tip}
 
- 설정 업데이트를 완료하면 **통합 저장**을 클릭하십시오. 특정 도구 통합 구성에 대한 자세한 정보는 [도구 통합 구성](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}을 참조하십시오.
+ 설정 업데이트를 완료하면 **통합 저장**을 클릭하십시오. 특정 도구 통합 구성에 대한 자세한 정보는 [도구 통합 구성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}을 참조하십시오.
 
 ## 도구 통합 추가
 {: #adding_a_tool_integration}
@@ -70,7 +70,7 @@ lastupdated: "2018-11-29"
 ## 리소스 그룹의 도구 체인에 대한 액세스 관리
 {: #managing_access_resource_groups}
 
-Identity and Access Management(IAM) 서비스를 사용하여 도구 체인에 대한 사용자 액세스를 관리할 수 있습니다. IAM을 사용한 액세스 제어 관리에 대한 자세한 정보는 [Identity and Access Management를 사용하여 도구 체인에 대한 사용자 액세스 관리](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}를 참조하십시오. 
+Identity and Access Management(IAM) 서비스를 사용하여 도구 체인에 대한 사용자 액세스를 관리할 수 있습니다. IAM을 사용한 액세스 제어 관리에 대한 자세한 정보는 [Identity and Access Management를 사용하여 도구 체인에 대한 사용자 액세스 관리](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}를 참조하십시오. 
 
 {{site.data.keyword.contdelivery_short}}의 선택된 인스턴스에 대한 권한 부여된 사용자 목록에 있는 사용자만 Delivery Pipeline, Eclipse Orion {{site.data.keyword.webide}} 및 {{site.data.keyword.contdelivery_short}} 도구 체인의 {{site.data.keyword.gitrepos}} 기능을 사용할 수 있습니다. 지정된 리소스 그룹 내에서 {{site.data.keyword.contdelivery_short}}의 선택된 인스턴스의 관리 탭을 사용하여 권한 부여된 사용자 자격을 관리할 수 있습니다.
 
@@ -89,7 +89,7 @@ Delivery Pipeline과 같은 도구 체인에 있는 {{site.data.keyword.contdeli
 도구 체인이 호스팅되는 지역에 있는 도구 체인의 조직에 사용자를 추가해야 합니다. 앱을 다른 지역에 배치하도록 도구 체인이 구성된 경우 여전히 해당 지역에 앱을 배치합니다.
 {: important}
 
-{{site.data.keyword.ghe_short}}용 {{site.data.keyword.Bluemix_notm}} 데디케이티드를 사용 중인 경우, {{site.data.keyword.Bluemix_notm}} 조직 및 영역에 사용자를 추가하면 해당 사용자가 자체 {{site.data.keyword.Bluemix_notm}} ID 및 비밀번호를 사용하여 {{site.data.keyword.ghe_short}}에 로그인할 수 있습니다. 사용자가 로그인할 때 사용자의 계정이 작성됩니다. {{site.data.keyword.Bluemix_notm}} 조직 및 영역에 사용자를 추가하는 경우, {{site.data.keyword.ghe_short}} 저장소에는 자동으로 추가되지 않습니다. 저장소에 대해 관리자 권한이 있는 사용자가 추가해야 합니다. 자세한 정보는 [Dedicated GitHub Enterprise 사용](/docs/services/ghededicated/index.html){: new_window}의 내용을 참조하십시오. {{site.data.keyword.ghe_short}}의 자체 관리 버전을 사용 중이면 내부 프로시저를 따르십시오.
+{{site.data.keyword.ghe_short}}용 {{site.data.keyword.Bluemix_notm}} 데디케이티드를 사용 중인 경우, {{site.data.keyword.Bluemix_notm}} 조직 및 영역에 사용자를 추가하면 해당 사용자가 자체 {{site.data.keyword.Bluemix_notm}} ID 및 비밀번호를 사용하여 {{site.data.keyword.ghe_short}}에 로그인할 수 있습니다. 사용자가 로그인할 때 사용자의 계정이 작성됩니다. {{site.data.keyword.Bluemix_notm}} 조직 및 영역에 사용자를 추가하는 경우, {{site.data.keyword.ghe_short}} 저장소에는 자동으로 추가되지 않습니다. 저장소에 대해 관리자 권한이 있는 사용자가 추가해야 합니다. 자세한 정보는 [Dedicated GitHub Enterprise 사용](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}을 참조하십시오. {{site.data.keyword.ghe_short}}의 자체 관리 버전을 사용 중이면 내부 프로시저를 따르십시오.
 
 ###도구 체인에 대한 액세스 관리를 위한 팁
 
@@ -127,7 +127,7 @@ Delivery Pipeline과 같은 도구 체인에 있는 {{site.data.keyword.contdeli
 
      * 조직의 선택된 영역에 대한 역할을 지정하십시오.
 
-     기본적으로 조직 관리자에게는 조직과 연관된 모든 도구 체인에 대한 전체 관리자 권한이 있습니다. 사용자에게 전체 관리자 권한을 부여하려면 **관리자** 역할을 선택하십시오. 청구 관리자 및 감사자 역할은 도구 체인 액세스에 영향을 주지 않습니다. 나중에 팀 디렉토리 페이지에서 역할을 변경할 수 있습니다. 자세한 정보는 [Cloud Foundry 역할](/docs/iam/cfaccess.html#cfaccess){: new_window}을 참조하십시오.
+     기본적으로 조직 관리자에게는 조직과 연관된 모든 도구 체인에 대한 전체 관리자 권한이 있습니다. 사용자에게 전체 관리자 권한을 부여하려면 **관리자** 역할을 선택하십시오. 청구 관리자 및 감사자 역할은 도구 체인 액세스에 영향을 주지 않습니다. 나중에 팀 디렉토리 페이지에서 역할을 변경할 수 있습니다. 자세한 정보는 [Cloud Foundry 역할](/docs/iam?topic=iam-cfaccess#cfaccess){: new_window}을 참조하십시오.
      {: tip}
 
    사용자가 조직의 구성원이 된 후에는 도구 체인의 관리 페이지로 돌아가서 사용자를 도구 체인에 추가하십시오.  

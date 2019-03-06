@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2018
-lastupdated: "2018-12-12"
+  years: 2015，2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -145,7 +145,3 @@ Debugger를 초기화하는 데 몇 분 정도 걸릴 수 있습니다.
 1. 앱의 원래 Node.js 버전, 시작 명령 및 메모리 값을 복원하십시오.
 
 2. 앱을 푸시하십시오.
-
-### 자세한 정보
-
-* [{{site.data.keyword.Bluemix_notm}}용 Eclipse 도구 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window} 참조

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-29"
+  years: 2016, 2019
+lastupdated: "2019-2-15"
 ---
 
 {:shortdesc: .shortdesc}
@@ -22,14 +22,14 @@ lastupdated: "2018-11-29"
 {{site.data.keyword.contdelivery_full}}에는 사용자 개입을 최소화하여 반복할 수 있는 방식으로 빌드, 테스트, 배치를 수행하는 Delivery Pipeline이 포함됩니다. 파이프라인에서는 일련의 단계에서 입력을 검색하고 작업(예: 빌드, 테스트 및 배치)을 실행합니다.
 {:shortdesc}
 
-파이프라인을 보거나 수정하거나 실행할 권한은 파이프라인을 소유한 도구 체인의 액세스 제어를 기반으로 합니다. 도구 체인의 액세스 제어에 대한 자세한 정보는 [리소스 그룹의 도구 체인에 대한 액세스 관리](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} 및 [Cloud Foundry 조직의 도구 체인에 대한 액세스 관리](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}를 참조하십시오.
+파이프라인을 보거나 수정하거나 실행할 권한은 파이프라인을 소유한 도구 체인의 액세스 제어를 기반으로 합니다. 도구 체인의 액세스 제어에 대한 자세한 정보는 [리소스 그룹의 도구 체인에 대한 액세스 관리](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window} 및 [Cloud Foundry 조직의 도구 체인에 대한 액세스 관리](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}를 참조하십시오.
 {: important}
 
-파이프라인에서 제공하는 다수의 작업 유형에서 실행될 스크립트를 지정하여 작업에 의해 실행되는 작업을 직접 제어할 수 있습니다. 이러한 스크립트는 {{site.data.keyword.Bluemix_notm}} 런타임과 상호작용하는데 필요한 도구를 포함한 많은 표준 개발 도구를 포함하고 있는 Docker 이미지에서 실행됩니다. 표준 Docker 이미지에 포함된 항목에 대한 자세한 정보는 [사전 설치된 리소스](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}의 내용을 참조하십시오. 작업에 표준 이미지에서 사용할 수 없는 개발 도구가 필요하거나 해당 도구의 다른 버전이 필요한 경우 사용자 정의 이미지를 사용할 수 있습니다. 사용자 정의 이미지에 대한 자세한 정보는 [사용자 정의 Docker 이미지에 대한 작업](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}을 참조하십시오.
+파이프라인에서 제공하는 다수의 작업 유형에서 실행될 스크립트를 지정하여 작업에 의해 실행되는 작업을 직접 제어할 수 있습니다. 이러한 스크립트는 {{site.data.keyword.Bluemix_notm}} 런타임과 상호작용하는데 필요한 도구를 포함한 많은 표준 개발 도구를 포함하고 있는 Docker 이미지에서 실행됩니다. 표준 Docker 이미지에 포함된 항목에 대한 자세한 정보는 [사전 설치된 리소스](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}를 참조하십시오. 작업에 표준 이미지에서 사용할 수 없는 개발 도구가 필요하거나 해당 도구의 다른 버전이 필요한 경우 사용자 정의 이미지를 사용할 수 있습니다. 사용자 정의 이미지에 대한 자세한 정보는 [사용자 정의 Docker 이미지에 대한 작업](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}을 참조하십시오.
 
-파이프라인에서 스크립트를 실행하면 작업이 실행되고 있는 컨텍스트를 설명하는 특성은 환경 변수를 사용하여 스크립트에 전달됩니다. 예를 들면, 단계에 대한 입력인 저장소의 URL, 실행되고 있는 단계와 작업의 이름, 작업 유형에 의해 지정된 매개변수 등입니다. 사용 가능한 환경 변수 목록을 보려면 [사전 설치된 리소스](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}를 참조하십시오. 
+파이프라인에서 스크립트를 실행하면 작업이 실행되고 있는 컨텍스트를 설명하는 특성은 환경 변수를 사용하여 스크립트에 전달됩니다. 예를 들면, 단계에 대한 입력인 저장소의 URL, 실행되고 있는 단계와 작업의 이름, 작업 유형에 의해 지정된 매개변수 등입니다. 사용 가능한 환경 변수 목록을 보려면 [사전 설치된 리소스](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)를 참조하십시오. 
 
-파이프라인 레벨과 단계 레벨 모두에 특성을 정의할 수 있습니다. 파이프라인 특성은 파이프라인의 모든 단계와 작업에서 공유됩니다. 단계 특성은 특정 단계에 고유하며 해당 단계의 모든 작업에서 공유됩니다. 특성에 대한 자세한 정보는 [환경 특성(환경 변수)](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties)을 참조하십시오.
+파이프라인 레벨과 단계 레벨 모두에 특성을 정의할 수 있습니다. 파이프라인 특성은 파이프라인의 모든 단계와 작업에서 공유됩니다. 단계 특성은 특정 단계에 고유하며 해당 단계의 모든 작업에서 공유됩니다. 특성에 대한 자세한 정보는 [환경 특성(환경 변수)](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties)을 참조하십시오.
 
 ## 단계
 {: #deliverypipeline_stages}
@@ -110,7 +110,7 @@ lastupdated: "2018-11-29"
 작업은 최대 60분 동안 실행될 수 있습니다. 작업이 이 한계를 초과하면 작업이 실패합니다. 하나의 작업이 이 한계를 초과하는 경우에는 작업을 여러 개의 작업으로 나누십시오. 예를 들어, 작업이 세 개의 태스크를 수행하는 경우 이 작업을 세 개의 작업(태스크당 하나의 작업)으로 나눌 수 있습니다.
 {: tip}
 
-단계에 작업을 추가하는 방법을 알아보려면 [단계에 작업 추가](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}를 참조하십시오.
+단계에 작업을 추가하는 방법을 알아보려면 [단계에 작업 추가](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}를 참조하십시오.
 
 ### 빌드 작업
 
@@ -121,9 +121,9 @@ lastupdated: "2018-11-29"
 **단순** 빌더 유형을 사용하는 경우 코드가 컴파일되거나 빌드되지 않습니다. 다음 단계를 위해 패키지되고 사용 가능하도록 설정됩니다.
 {: tip}
 
-Cloud Foundry를 사용하여 배치할 때 Cloud Foundry에는 올바른 아티팩트가 포함되어 앱을 실행할 수 있습니다. 자세한 정보는 [cf 명령을 사용하여 애플리케이션 배치](/docs/cloud-foundry/deploy-apps.html#dep_apps)를 참조하십시오. Cloud Foundry 앱의 파이프라인에는 cf 명령을 실행하는 배치 단계가 포함됩니다.
+Cloud Foundry를 사용하여 배치할 때 Cloud Foundry에는 올바른 아티팩트가 포함되어 앱을 실행할 수 있습니다. 자세한 정보는 [cf 명령을 사용하여 애플리케이션 배치](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps)를 참조하십시오. Cloud Foundry 앱의 파이프라인에는 cf 명령을 실행하는 배치 단계가 포함됩니다.
 
-Cloud Foundry는 [사용할 빌드팩을 발견하려고 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.cloudfoundry.org/buildpacks/detection.html) 시도합니다. 앱의 루트 폴더에 있는 Manifest 파일에 사용할 [빌드팩](/docs/cfapps/byob.html#using-community-buildpacks)을 지정할 수 있습니다. 일반적으로 빌드팩은 사용자 제공 아티팩트를 확인하여 다운로드할 종속 항목 및 바인딩 서비스와 통신하기 위한 애플리케이션 구성 방법을 결정할 수 있습니다. Manifest 파일에 대한 자세한 정보는 [Application Manifest](/docs/cloud-foundry/deploy-apps.html#appmanifest)를 참조하십시오.
+Cloud Foundry는 [사용할 빌드팩을 발견하려고 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.cloudfoundry.org/buildpacks/detection.html) 시도합니다. 앱의 루트 폴더에 있는 Manifest 파일에 사용할 [빌드팩](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)을 지정할 수 있습니다. 일반적으로 빌드팩은 사용자 제공 아티팩트를 확인하여 다운로드할 종속 항목 및 바인딩 서비스와 통신하기 위한 애플리케이션 구성 방법을 결정할 수 있습니다. Manifest 파일에 대한 자세한 정보는 [Application Manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest)를 참조하십시오.
 
 ### 배치 작업
 
@@ -131,7 +131,7 @@ Cloud Foundry는 [사용할 빌드팩을 발견하려고 ![외부 링크 아이�
 
 배치 작업은 새 앱을 배치하거나 기존 앱을 업데이트할 수 있습니다. 처음에 다른 방법(예: Cloud Foundry 명령행 인터페이스 또는 Web IDE의 실행 표시줄)을 사용하여 앱을 배치한 경우에도 배치 작업을 사용하여 앱을 업데이트할 수 있습니다. 앱을 업데이트하려면 배치 작업에서 해당 앱의 이름을 사용하십시오.
 
-하나 또는 다수의 지역과 서비스에 배치할 수 있습니다. 예를 들면, {{site.data.keyword.deliverypipeline}}이 하나 이상의 서비스를 사용하고 한 지역에서 테스트되며 여러 지역의 프로덕션에 배치되도록 설정할 수 있습니다. 자세한 정보는 [지역](/docs/overview/ibm-cloud.html#ov_intro-reg){: new_window}을 참조하십시오.
+하나 또는 다수의 지역과 서비스에 배치할 수 있습니다. 예를 들면, {{site.data.keyword.deliverypipeline}}이 하나 이상의 서비스를 사용하고 한 지역에서 테스트되며 여러 지역의 프로덕션에 배치되도록 설정할 수 있습니다.
 
 ### 테스트 작업
 조건이 충족되도록 하려면 빌드 및 배치 작업의 앞이나 뒤에 테스트 작업을 포함시키십시오. 필요에 따라 단순하거나 복잡하도록 테스트 작업을 사용자 정의할 수 있습니다. 예를 들어, cURL 명령을 실행하고 특정 응답을 예상할 수 있습니다. 또한 단위 테스트 스위트를 실행하거나 서드파티 서비스(예: Sauce Labs)로 기능 테스트를 실행할 수도 있습니다.
@@ -141,7 +141,7 @@ Cloud Foundry는 [사용할 빌드팩을 발견하려고 ![외부 링크 아이�
 ## 환경 특성(환경 변수)
 {: #environment_properties}
 
-사전정의된 환경 특성 세트를 통해 작업 실행 환경에 대한 정보에 액세스할 수 있습니다. 사전정의된 환경 특성의 전체 목록은 [환경 특성 및 리소스](/docs/services/ContinuousDelivery/pipeline_deploy_var.html)를 참조하십시오.
+사전정의된 환경 특성 세트를 통해 작업 실행 환경에 대한 정보에 액세스할 수 있습니다. 사전정의된 환경 특성의 전체 목록은 [환경 특성 및 리소스](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment)를 참조하십시오.
 
 사용자 고유의 환경 특성을 정의할 수도 있습니다. 예를 들면, 파이프라인의 모든 스크립트에서 {{site.data.keyword.Bluemix_notm}} 리소스에 액세스하는 데 사용하는 API 키를 전달하는 `API_KEY` 특성을 정의합니다.
 
@@ -169,7 +169,7 @@ Cloud Foundry는 [사용할 빌드팩을 발견하려고 ![외부 링크 아이�
 
 ![단계 특성 페이지](images/StageProperties.png)
 
-특성을 내보내서 동일한 단계의 작업 간에 환경 특성을 전달할 수도 있습니다.  예를 들면 다음 단계 내의 다른 작업에서 `$API_KEY` 특성을 사용하려면 다음 명령을 포함할 수 있습니다. `export API_KEY=<insert API key here>`
+특성을 내보내서 동일한 단계의 작업 간에 환경 특성을 전달할 수도 있습니다. 예를 들면 다음 단계 내의 다른 작업에서 `$API_KEY` 특성을 사용하려면 다음 명령을 포함할 수 있습니다. `export API_KEY=<insert API key here>`
 {:tip}
 
 ### 계산된 특성
@@ -182,7 +182,7 @@ Cloud Foundry는 [사용할 빌드팩을 발견하려고 ![외부 링크 아이�
 ## 아티팩트 작성 및 사용
 {: #artifacts}
 
-빌드 작업은 사용자 스크립트가 실행되는 현재 폴더에 컨텐츠를 자동으로 페치합니다. 나중에 배치하기 위해 전체 Git 저장소 컨텐츠가 필요하지 않은 경우 명시적 출력 디렉토리를 구성한 다음 관련 아티팩트를 해당 디렉토리에 복사 또는 작성하는 것이 좋습니다. 작업 스크립트가 빌드 결과에서 실행됩니다(출력 디렉토리).
+빌드 작업은 사용자 스크립트가 실행되는 현재 폴더에 컨텐츠를 자동으로 페치합니다. 나중에 배치하기 위해 전체 Git 저장소 컨텐츠가 필요하지 않은 경우 명시적 출력 디렉토리를 구성한 다음 관련 아티팩트를 해당 디렉토리에 복사 또는 작성하는 것이 좋습니다.  작업 스크립트가 빌드 결과에서 실행됩니다(출력 디렉토리).
 
 Cloud Foundry에 배치하는 작업은 권한 작업이 실행되는 사용자의 플랫폼 API 키 및 아티팩트를 배치할 지역, 조직 및 영역을 지정해야 합니다. 앱을 실행하기 위해 추가 서비스가 필요한 경우 `manifest.yml` 파일에 지정해야 합니다.
 
@@ -210,7 +210,7 @@ Cloud Foundry에 배치하는 작업은 권한 작업이 실행되는 사용자�
 ## Cloud Foundry Manifest 파일
 {: #deliverypipeline_manifest}
 
-프로젝트 루트 디렉토리에 저장되어 있는 `manifest.yml`이라는 이름의 Manifest 파일은 프로젝트가 {{site.data.keyword.Bluemix_notm}}에 배치되는 방법을 제어합니다. 프로젝트의 Manifest 파일 작성에 대한 정보는 [애플리케이션 Manifest에 대한 {{site.data.keyword.Bluemix_notm}} 문서](/docs/cloud-foundry/deploy-apps.html#appmanifest)를 참조하십시오. {{site.data.keyword.Bluemix_notm}}와 통합하려면 프로젝트의 루트 디렉토리에 Manifest 파일이 있어야 합니다. 그러나 이 파일의 정보를 기반으로 배치하지 않아도 됩니다.
+프로젝트 루트 디렉토리에 저장되어 있는 `manifest.yml`이라는 이름의 Manifest 파일은 프로젝트가 {{site.data.keyword.Bluemix_notm}}에 배치되는 방법을 제어합니다. 프로젝트의 Manifest 파일 작성에 대한 정보는 [애플리케이션 Manifest에 대한 {{site.data.keyword.Bluemix_notm}} 문서](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest)를 참조하십시오. {{site.data.keyword.Bluemix_notm}}와 통합하려면 프로젝트의 루트 디렉토리에 Manifest 파일이 있어야 합니다. 그러나 이 파일의 정보를 기반으로 배치하지 않아도 됩니다.
 
 파이프라인에서 `cf push` 명령 인수를 사용하여 Manifest 파일이 할 수 있는 모든 작업을 지정할 수 있습니다. `cf push` 명령 인수는 배치 대상이 여러 개인 프로젝트에서 유용합니다. 여러 배치 작업이 모두 프로젝트 Manifest 파일에 지정된 라우트를 사용하려 하면 충돌이 발생합니다.
 

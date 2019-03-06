@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -75,7 +75,7 @@ Eclipse Orion {{site.data.keyword.webide}}는 브라우저 기반의 개발 환�
 ## 소스 코드 관리
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}}는 소스 코드 관리 도구와 통합됩니다. Git 저장소에 대해 작업하려면 **Git 저장소** 아이콘 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="Git 저장소 아이콘">을 클릭하십시오.  자세한 정보는 [Eclipse Orion Web IDE에서 Git에 대해 작업](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide)을 참조하십시오.
+{{site.data.keyword.webide}}는 소스 코드 관리 도구와 통합됩니다. Git 저장소에 대해 작업하려면 **Git 저장소** 아이콘 <img class="inline" src="images/webide_git_icon_light_small.png"  alt="Git 저장소 아이콘">을 클릭하십시오.  자세한 정보는 [Eclipse Orion Web IDE에서 Git에 대해 작업](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_web_ide#git_web_ide)을 참조하십시오.
 
 ## 작업공간에서 앱 배치
 {: #deploy}
@@ -213,7 +213,7 @@ Eclipse Orion {{site.data.keyword.webide}}는 컨텐츠 지원, 도구 팁, 미�
 </table>
 
 ## 튜토리얼 보기: Eclipse Orion Web IDE
-{: #toolchain_tutorials}
+{: #toolchain_web_ide_tutorials}
 
 [IBM&reg; Cloud Garage Method![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage){:new_window}에 있는 다음 튜토리얼 중 하나를 확인하십시오.
 

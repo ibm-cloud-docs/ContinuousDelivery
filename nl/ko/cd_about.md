@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -32,16 +32,16 @@ lastupdated: "2018-12-6"
 
 {{site.data.keyword.contdelivery_short}}는 {{site.data.keyword.Bluemix_notm}} 퍼블릭의 선택된 지역 및 {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용 가능합니다. 도구 체인은 사용자가 {{site.data.keyword.contdelivery_short}}를 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용하는지 여부에 따라 다릅니다.
 
-현재는 도구 체인을 모든 지역에서 사용할 수 없지만, 모든 지역에 앱을 배치하도록 도구 체인을 구성할 수 있습니다. 자세히 알아보려면 <a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">여러 지역에서 보안 웹 애플리케이션 배치</a> 튜토리얼을 활용하십시오.
+현재는 도구 체인을 모든 지역에서 사용할 수 없지만, 모든 지역에 앱을 배치하도록 도구 체인을 구성할 수 있습니다. 더 자세히 알아보려면 [여러 지역에서 보안 웹 애플리케이션 배치](/docs/tutorials?topic=solution-tutorials-multi-region-webapp){: new_window} 튜토리얼을 활용하십시오.
 {: tip}
 
 |도구 체인 |{{site.data.keyword.Bluemix_notm}} 퍼블릭	|{{site.data.keyword.Bluemix_notm}} 데디케이티드 |
 |:----------|:------------------------------|:------------------|
-|도구 통합 		|지원되는 도구 통합의 목록은 [도구 통합 구성](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}을 참조하십시오. 		|사용 가능한 도구 통합은 {{site.data.keyword.contdelivery_short}}가 사용자 환경에서 설정된 방법에 따라 다릅니다.			|
+|도구 통합 		|지원되는 도구 통합의 목록은 [도구 통합 구성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}을 참조하십시오. 		|사용 가능한 도구 통합은 {{site.data.keyword.contdelivery_short}}가 사용자 환경에서 설정된 방법에 따라 다릅니다.			|
 |템플리트에서 도구 체인 작성		|[{{site.data.keyword.Bluemix_notm}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://cloud.ibm.com/devops){:new_window}에 로그인		|{{site.data.keyword.Bluemix_notm}}의 데디케이티드 환경에 로그인합니다.			|
 |앱에서 도구 체인 작성		|앱 스타터 코드로 채워진 새 GitHub 저장소에서 지속적 딜리버리를 위해 앱이 구성됩니다.		|앱 스타터 코드로 채워진 새 GitHub 또는 GitHub Enterprise 저장소에서 지속적 딜리버리를 위해 앱이 구성됩니다.		|  
 |딜리버리 파이프라인 배치 지역		|모든 {{site.data.keyword.Bluemix_notm}} 퍼블릭 지역이 Cloud Foundry 배치 작업에 사용 가능합니다. 		|{{site.data.keyword.Bluemix_notm}} 데디케이티드 지역이 사용 가능합니다. 또한 동일한 고객 계정 내의 기타 데디케이티드 또는 로컬 지역도 특정 환경에서 {{site.data.keyword.contdelivery_short}}가 설정된 방법에 따라 사용이 가능합니다.		|
-|딜리버리 파이프라인 배치 작업		|모든 [작업 유형](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs)이 사용 가능합니다.		|데디케이티드 환경에 설치되지 않은 {{site.data.keyword.Bluemix_notm}} 서비스에 의존하는 작업 유형은 사용 가능하지 않습니다.	예를 들어, 컨테이너 빌드 및 배치 작업 유형은 {{site.data.keyword.containerlong_notm}}가 없는 환경에서는 사용 가능하지 않습니다.	|
+|딜리버리 파이프라인 배치 작업		|모든 [작업 유형](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs)이 사용 가능합니다.		|데디케이티드 환경에 설치되지 않은 {{site.data.keyword.Bluemix_notm}} 서비스에 의존하는 작업 유형은 사용 가능하지 않습니다.	예를 들어, 컨테이너 빌드 및 배치 작업 유형은 {{site.data.keyword.containerlong_notm}}가 없는 환경에서는 사용 가능하지 않습니다.	|
 {: caption="표 1: {{site.data.keyword.Bluemix_notm}} 데디케이티드 및 {{site.data.keyword.Bluemix_notm}} 퍼블릭의 도구 체인 간 차이점" caption-side="top"}
 
 
@@ -232,7 +232,6 @@ GitHub 및 Issues
 
 <ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app" target="_blank">Add a toolchain to an app <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a></li>
 <li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Create a custom toolchain <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a></li>
-<li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">여러 지역에서 보안 웹 애플리케이션 배치</a></li>
 </ul></td>
 <td><ul><li>{{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}

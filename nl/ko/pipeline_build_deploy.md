@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-12-11"
+  years: 2016, 2019
+lastupdated: "2019-2-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -77,7 +77,7 @@ lastupdated: "2018-12-11"
 {: tip}
 
 ###앱에 서비스 추가
-앱에 서비스를 추가하고 {{site.data.keyword.Bluemix_notm}} 대시보드 또는 Cloud Foundry CLI(Command Line Interface)에서 이러한 서비스를 관리할 수 있습니다. 또한 파이프라인 작업에 대해 스크립트에서 Cloud Foundry CLI 명령을 실행할 수도 있습니다. 예를 들어, 배치 작업의 스크립트에서 앱에 서비스를 추가할 수 있습니다. 서비스 추가에 대한 자세한 정보는 [애플리케이션에 서비스 추가](/docs/services/reqnsi.html#add_service)를 참조하십시오.
+앱에 서비스를 추가하고 {{site.data.keyword.Bluemix_notm}} 대시보드 또는 Cloud Foundry CLI(Command Line Interface)에서 이러한 서비스를 관리할 수 있습니다. 또한 파이프라인 작업에 대해 스크립트에서 Cloud Foundry CLI 명령을 실행할 수도 있습니다. 예를 들어, 배치 작업의 스크립트에서 앱에 서비스를 추가할 수 있습니다. 서비스 추가에 대한 자세한 정보는 [외부 앱에 서비스 연결](/docs/resources?topic=resources-externalapp)을 참조하십시오. 
 
 ## 로그 보기
 {: #deliverypipeline_view_logs}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-3-26"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -71,9 +71,9 @@ lastupdated: "2018-3-26"
 
   e. 필요에 따라 **서비스 및 영역 자동 설정** 선택란을 선택하거나 선택 취소하십시오.
 
-    * 파이프라인이 {{site.data.keyword.Bluemix_short}} 영역에서 서비스와 이 서비스를 컨테이너에 바인드하는 앱이 있는지 확인하도록 하려면 이 선택란을 선택하십시오. 서비스 또는 바인드된 앱이 없는 경우 파이프라인은 서비스의 무료 플랜을 영역에 추가합니다. 작성되는 바인드된 앱은 `pipeline_bridge_app`이라는 이름이 지정됩니다. 파이프라인은 pipeline_bridge_app의 신임 정보를 사용하여 바인드된 서비스에 액세스합니다.
+    * 파이프라인이 {{site.data.keyword.Bluemix_short}} 영역에서 서비스와 이 서비스를 컨테이너에 바인드하는 앱이 있는지 확인하도록 하려면 이 선택란을 선택하십시오. 서비스 또는 바인드된 앱이 없는 경우 파이프라인은 서비스의 무료 플랜을 영역에 추가합니다. 작성되는 바인드된 앱은 `pipeline_bridge_app`이라는 이름이 지정됩니다. 파이프라인은 pipeline_bridge_app의 인증 정보를 사용하여 바인드된 서비스에 액세스합니다.
 
-    * {{site.data.keyword.Bluemix_short}} 영역에서 서비스와 바인드된 앱을 이미 구성했거나 [해당 요구사항을 수동으로 구성](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}하려는 경우 선택란을 선택 취소된 상태로 두십시오.
+    * {{site.data.keyword.Bluemix_short}} 영역에서 서비스와 바인드된 앱을 이미 구성했거나 해당 요구사항을 수동으로 구성하려는 경우 선택란을 선택 취소된 상태로 두십시오. 
 
   f. **분석이 완료될 때까지의 대기 시간(분)** 필드에 0 - 59분 값을 입력하십시오. 기본값은 5분입니다. 작업 마지막에 {{site.data.keyword.staticanalyzershort}} 대시보드로의 URL이 콘솔 로그에 표시됩니다.
 
@@ -105,8 +105,6 @@ lastupdated: "2018-3-26"
 
 **보류 중 스캔**
 ![보류 중 스캔 예](images/analyzer_pending.png)
-
-{{site.data.keyword.staticanalyzershort}} 서비스의 사용에 대한 자세한 정보는 [{{site.data.keyword.staticanalyzershort}}Static Analyzer 서비스 문서](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}를 참조하십시오.
 
 <!--
 

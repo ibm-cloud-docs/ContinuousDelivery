@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-18"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 
@@ -28,7 +28,7 @@ lastupdated: "2018-12-18"
 
 3. Git 저장소의 새 개인용 복제본, 코드 변경사항 빌드 및 배치를 위한 파이프라인, Cloud에서 코드 편집을 위한 Eclipse Orion {{site.data.keyword.webide}} 및 문제 트래커를 포함한 도구 체인이 작성됩니다.
 
-  `.bluemix` 디렉토리에 `toolchain.yml` 파일이 포함된 경우 파일은 도구 체인에 대한 도구 통합을 지정하는 데 사용됩니다. `toolchain.yml` 파일에 대한 자세한 정보는 [사용자 정의 도구 체인 작성](/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom){: new_window}을 참조하십시오.
+  `.bluemix` 디렉토리에 `toolchain.yml` 파일이 포함된 경우 파일은 도구 체인에 대한 도구 통합을 지정하는 데 사용됩니다. `toolchain.yml` 파일에 대한 자세한 정보는 [사용자 정의 도구 체인 작성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}을 참조하십시오.
   {: tip}
 
 4. 앱에 빌드 파일이 필요한 경우 빌드 파일이 자동으로 발견되어 앱을 빌드합니다.
@@ -113,7 +113,7 @@ HTML에서 단추를 작성하려면 이 스니펫을 복사하여 공용 Git �
 
 `pipeline.yml` 파일이 `.bluemix` 디렉토리에 없는 경우 {{site.data.keyword.Bluemix_notm}}에 배치 단추를 누르면 빌드 단계와 Cloud Foundry에 배치하는 배치 단계의 두 가지 단계로 기본 파이프라인을 작성합니다.
 
-파이프라인 파일을 작성하려면 [사용자 정의 도구 체인 파이프라인 지시사항](toolchains_custom.html#toolchains_custom_pipeline_yml)에 있는 예제 파일을 참조하십시오. 웹 인터페이스의 파이프라인을 정의할 때 단계 및 작업을 작성하고 입력 및 환경 변수를 설정하며 스크립트를 추가하여 텍스트의 파이프라인을 정의합니다. 또한 [이 데모 프로젝트](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix)에서 좀 더 복잡한 다수의 파이프라인을 볼 수 있습니다.
+파이프라인 파일을 작성하려면 [사용자 정의 도구 체인 파이프라인 지시사항](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml)에 있는 예제 파일을 참조하십시오. 웹 인터페이스의 파이프라인을 정의할 때 단계 및 작업을 작성하고 입력 및 환경 변수를 설정하며 스크립트를 추가하여 텍스트의 파이프라인을 정의합니다. 또한 [이 데모 프로젝트](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix)에서 좀 더 복잡한 다수의 파이프라인을 볼 수 있습니다.
 
 ### 컨테이너 Dockerfile 요구사항
 {: container_dockerfile}
@@ -133,4 +133,4 @@ Kubernetes 클러스터에 Cloud Foundry 앱 포팅에 대해 자세히 살펴�
 
 `manifest.yml` 파일이 사용자의 저장소에 있지 않아도 됩니다. 그러나 앱에서 다른 서비스를 실행해야 하는 경우 해당 서비스를 선언하는 Manifest 파일을 제공해야 합니다.
 
-Manifest 파일에 대해 자세히 알아보려면 [애플리케이션 Manifest](/docs/cloud-foundry/deploy-apps.html#appmanifest)를 참조하십시오.
+Manifest 파일에 대해 자세히 알아보려면 [애플리케이션 Manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)를 참조하십시오.

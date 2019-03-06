@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-2-8"
 
 ---
 
@@ -30,9 +30,9 @@ GitHub, GitHub Enterprise 또는 Git Repos and Issue Tracking 저장소, 로컬�
 
 |Git 유형  |HTTPS 설정 |HTTPS 사용 |SSH 설정 |
 |:-----------|:-------------|:------------|:-------------|
-|Git Repos and Issue Tracking(git.ng.bluemix.com) |[개인 액세스 토큰](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |Git Repos and Issue Tracking 사용자 이름(IBM ID 아님) 및 개인 액세스 토큰 |[SSH 키 구성](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
+|Git Repos and Issue Tracking(git.ng.bluemix.com) |[개인 액세스 토큰](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |Git Repos and Issue Tracking 사용자 이름(IBM ID 아님) 및 개인 액세스 토큰 |[SSH 키 구성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |
 |공용 GitHub(github.com) |개인 액세스 토큰이 필요하지 않으나 개인 액세스 토큰을 설정하여 이를 사용할 수 있음 |GitHub 사용자 이름 및 비밀번호 또는 GitHub 사용자 이름 및 개인 액세스 토큰 또는 사용자 이름으로 된 개인 액세스 토큰 |[GitHub SSH 키 구성](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-|GitHub Enterprise |[개인 액세스 토큰](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |GitHub Enterprise 사용자 이름(IBM ID 아님) 및 개인 액세스 토큰 |[GitHub Enterprise SSH 키 구성](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
+|GitHub Enterprise |[개인 액세스 토큰](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |GitHub Enterprise 사용자 이름(IBM ID 아님) 및 개인 액세스 토큰 |[GitHub Enterprise SSH 키 구성](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |
 
 SSH를 사용하려는 경우 모든 Git 서버에 단일 키를 재사용할 수 있습니다. 키를 작성하거나 찾아 이전 링크에 설명된 대로 각 서버에 키를 구성하십시오. 비밀번호 문구를 사용하여 키를 작성하는 경우 키를 사용할 때 비밀번호 문구를 요구하는 프롬프트가 표시됩니다.
 {: tip}
@@ -74,19 +74,5 @@ SSH를 사용하려는 경우 모든 Git 서버에 단일 키를 재사용할 �
 ## Eclipse 및 EGit 플러그인을 사용하여 저장소에 액세스
 {: #git_egit}
 
-Eclipse를 사용하고 소스 제어를 위해 Git를 사용하는 프로젝트를 보유하고 있는 경우 EGit 플러그인을 사용하여 Eclipse에서 저장소를 관리할 수 있습니다. EGit 설치 및 구성에 대한 지시사항은 [EGit 튜토리얼 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://eclipsesource.com/blogs/tutorials/egit-tutorial/)을 참조하십시오.{: new_window}.
-Git Repos and Issue Tracking을 사용하는 중에 문제점이 발생하면 [Git Repos and Issue Tracking](git_working.html#git_local)을 참조하십시오.
-
-## IBM Eclipse Tools를 사용하여 개발
-{: #git_eclipse_tools}
-
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}는 IDE를 {{site.data.keyword.Bluemix_notm}}와 통합하기 위해 Eclipse 환경에 설치할 수 있는 플러그인을 제공합니다.
-
-이 도구를 사용하면 다음 유형의 파일 및 서버를 Eclipse IDE 또는 IBM WebSphere&reg; Application Server Developer Tools(WDT)에서 {{site.data.keyword.Bluemix_notm}}로 직접 배치할 수 있습니다.
-
-* JavaScript 파일
-* WAR(웹 아카이브) 파일
-* EAR(엔터프라이즈 아카이브) 파일
-* Liberty 프로파일의 패키지된 서버
-
-또한 서비스를 작성하고 앱에 서비스를 연결하며 배치의 일부로 환경 변수를 정의할 수 있습니다. IBM Eclipse Tools에 대한 자세한 정보는 [IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱 배치](/docs/manageapps/eclipsetools/eclipsetools.html)를 참조하십시오.
+Eclipse를 사용하고 소스 제어를 위해 Git를 사용하는 프로젝트를 보유하고 있는 경우 EGit 플러그인을 사용하여 Eclipse에서 저장소를 관리할 수 있습니다. EGit 설치 및 구성에 대한 지시사항은 [EGit 튜토리얼 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}을 참조하십시오.
+Git Repos and Issue Tracking을 사용하는 중에 문제점이 발생하면 [Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local)을 참조하십시오.

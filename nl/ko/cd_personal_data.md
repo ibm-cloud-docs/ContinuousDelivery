@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-2-20"
 
 ---
 
@@ -28,8 +28,8 @@ lastupdated: "2018-11-29"
  * {{site.data.keyword.gitrepos}}
  * {{site.data.keyword.contdelivery_short}} Pipelines
  * 도구 체인 및 도구 통합
- * [GitHub Enterprise on IBM Cloud ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/ghededicated/ghe_personal_data.html){: new_window}
- * [{{site.data.keyword.DRA_full}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/DevOpsInsights/insights_personal_data.html){: new_window}
+ * [GitHub Enterprise on IBM Cloud ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
+ * [{{site.data.keyword.DRA_full}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/DevOpsInsights?topic=DevOpsInsights-insights_personal_data){: new_window}
  
 IBM은 {{site.data.keyword.contdelivery_short}} 서비스의 데이터를 관리하지 않습니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 호스팅되는 {{site.data.keyword.contdelivery_short}} 서비스를 종료하기 전에 고유 데이터를 삭제해야 합니다.
 {: important}
@@ -41,9 +41,9 @@ IBM은 {{site.data.keyword.contdelivery_short}} 서비스의 데이터를 관리
 ## 계정 및 액세스 권한
 {: #accounts_access_rights}
 
-IBM Cloud에서 작업하려면 사용자 이름과 비밀번호를 사용하여 로그인해야 합니다. 로그인하는 경우 IBM Cloud는 사용자 신임 정보를 사용하여 하나 이상의 IBM Cloud 계정과 연관됩니다. Cloud Foundry 조직, 리소스 그룹, 도구 체인 및 {{site.data.keyword.contdelivery_short}} 오브젝트와 같은 리소스를 작성하면 IBM Cloud 계정과 연관됩니다.
+IBM Cloud에서 작업하려면 사용자 이름과 비밀번호를 사용하여 로그인해야 합니다. 로그인하는 경우 IBM Cloud는 사용자 인증 정보를 사용하여 하나 이상의 IBM Cloud 계정과 연관됩니다. Cloud Foundry 조직, 리소스 그룹, 도구 체인 및 {{site.data.keyword.contdelivery_short}} 오브젝트와 같은 리소스를 작성하면 IBM Cloud 계정과 연관됩니다.
 
-IBM Cloud 로그인 구조는 다른 계정에서 작업하기 위한 옵션을 제공합니다. IBM Cloud 사용자 인터페이스를 사용하여 하나의 계정에서 다른 계정으로 전환할 수 있습니다. 로그인하는 경우 다음 유형의 계정이 사용자 신임 정보와 연관될 수 있습니다. 
+IBM Cloud 로그인 구조는 다른 계정에서 작업하기 위한 옵션을 제공합니다. IBM Cloud 사용자 인터페이스를 사용하여 하나의 계정에서 다른 계정으로 전환할 수 있습니다. 로그인하는 경우 다음 유형의 계정이 사용자 인증 정보와 연관될 수 있습니다. 
 
  * 개인 계정
  * 회사 계정
@@ -65,7 +65,7 @@ IBM Cloud 로그인 구조는 다른 계정에서 작업하기 위한 옵션을 
 
 ###회사 개인 계정
 
-회사에 근무하는 경우 사용자 계정에서 이뤄지는 작업은 법적으로 회사에서 소유할 수 있습니다. 회사에 다니는 많은 사용자들은 회사 개인 계정이 있습니다. 회사 이름이 포함되고 개인 계정으로 표시되는 내용이 들어 있는 신임 정보를 사용하여 계정에 로그인하는 경우 개인 계정 내에서 하는 작업은 회사 소유일 수 있습니다.
+회사에 근무하는 경우 사용자 계정에서 이뤄지는 작업은 법적으로 회사에서 소유할 수 있습니다. 회사에 다니는 많은 사용자들은 회사 개인 계정이 있습니다. 회사 이름이 포함되고 개인 계정으로 표시되는 내용이 들어 있는 인증 정보를 사용하여 계정에 로그인하는 경우 개인 계정 내에서 하는 작업은 회사 소유일 수 있습니다.
 
 회사 개인 계정은 다른 계정과 다르지 않습니다. 회사 개인 계정에 사용자를 초대할 수 있으며 회사 개인 계정에 작성되는 오브젝트는 계정에 속합니다.
 
@@ -172,7 +172,7 @@ Git 계정을 삭제하기 전에 다른 프로젝트의 개인 데이터를 삭
 파이프라인은 도구 체인 외부에 존재할 수 없습니다. 도구 체인을 삭제하는 경우 해당 도구 체인과 연관되는 모든 파이프라인도 삭제됩니다. 전체 도구 체인을 삭제할 계획이면 각 파이프라인을 개별적으로 삭제할 필요가 없습니다. 대신 "도구 체인 및 도구 통합 수정 및 삭제" 섹션으로 건너뛰어 해당 단계에 따라 도구 체인을 삭제하십시오.
 {: important}
 
-파이프라인 단계는 신임 정보와 같은 개인 데이터를 환경 특성 양식으로 포함하고 파이프라인의 현재 상태를 표시하는 파이프라인 정의를 포함할 수 있습니다. 또한 단계에서는 내보낼 최근 파이프라인 실행에 대한 아티팩트 및 로그뿐만 아니라 수정하거나 삭제할 스크립트를 작업 안에 포함할 수 있습니다. 단계 구성 또는 단계 삭제 조치를 사용하여 단계를 수정하거나 삭제하십시오. 다운로드 조치를 사용하여 단계에서 아티팩트 또는 로그를 내보내십시오.
+파이프라인 단계는 인증 정보와 같은 개인 데이터를 환경 특성 양식으로 포함하고 파이프라인의 현재 상태를 표시하는 파이프라인 정의를 포함할 수 있습니다. 또한 단계에서는 내보낼 최근 파이프라인 실행에 대한 아티팩트 및 로그뿐만 아니라 수정하거나 삭제할 스크립트를 작업 안에 포함할 수 있습니다. 단계 구성 또는 단계 삭제 조치를 사용하여 단계를 수정하거나 삭제하십시오. 다운로드 조치를 사용하여 단계에서 아티팩트 또는 로그를 내보내십시오.
 
   ![단계 메뉴](images/pipeline_stages.png)
 
@@ -223,7 +223,7 @@ Git 계정을 삭제하기 전에 다른 프로젝트의 개인 데이터를 삭
 
 ###도구 통합 수정 및 삭제
 
-도구 통합을 작성할 때 사용자 신임 정보 및 통합과 관련된 다른 계정 정보를 제공해야 합니다. 고유 개인 신임 정보 및 계정 정보를 사용한 경우 이 정보를 다른 값으로 대체하거나 도구 통합을 삭제하십시오.
+도구 통합을 작성할 때 사용자 인증 정보 및 통합과 관련된 다른 계정 정보를 제공해야 합니다. 고유 개인 인증 정보 및 계정 정보를 사용한 경우 이 정보를 다른 값으로 대체하거나 도구 통합을 삭제하십시오.
 
 도구 통합을 수정하려면 다음을 수행하십시오.
 

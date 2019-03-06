@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018
-lastupdated: "2018-11-14"
+  years:  2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -17,14 +17,15 @@ lastupdated: "2018-11-14"
 
 
 # Identity and Access Management를 사용하여 도구 체인에 대한 사용자 액세스 관리
+{: #toolchains-iam-security}
 
 계정에 있는 사용자의 리소스 그룹에서 도구 체인에 대한 액세스는 {{site.data.keyword.Bluemix_notm}} Identity and Access Management(IAM)를 사용하여 제어됩니다. 
 
 **참고**: 
 
-* {{site.data.keyword.contdelivery_short}} 서비스 인스턴스 및 도구 체인 인스턴스의 사용자 액세스는 별도로 관리됩니다. 리소스 그룹의 {{site.data.keyword.contdelivery_short}} 서비스 인스턴스에 대한 사용자 액세스 관리의 자세한 정보는 [Identity and Access Management를 사용하여 {{site.data.keyword.contdelivery_short}}에 대한 사용자 액세스 관리](/docs/services/ContinuousDelivery/cd_iam_security.html){: new_window}를 참조하십시오.
+* {{site.data.keyword.contdelivery_short}} 서비스 인스턴스 및 도구 체인 인스턴스의 사용자 액세스는 별도로 관리됩니다. 리소스 그룹의 {{site.data.keyword.contdelivery_short}} 서비스 인스턴스에 대한 사용자 액세스 관리의 자세한 정보는 [Identity and Access Management를 사용하여 {{site.data.keyword.contdelivery_short}}에 대한 사용자 액세스 관리](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security){: new_window}를 참조하십시오.
 
-* Cloud Foundry 조직의 도구 체인에 대한 사용자 액세스는 리소스 그룹의 {{site.data.keyword.contdelivery_short}} 서비스 인스턴스에 대한 사용자 액세스와는 다르게 관리됩니다. Cloud Foundry 조직의 도구 체인에 대한 사용자 액세스 관리의 자세한 정보는 [Cloud Foundry 조직의 도구 체인에 대한 액세스 관리](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs.html){: new_window}를 참조하십시오.
+* Cloud Foundry 조직의 도구 체인에 대한 사용자 액세스는 리소스 그룹의 {{site.data.keyword.contdelivery_short}} 서비스 인스턴스에 대한 사용자 액세스와는 다르게 관리됩니다. Cloud Foundry 조직의 도구 체인에 대한 사용자 액세스 관리의 자세한 정보는 [Cloud Foundry 조직의 도구 체인에 대한 액세스 관리](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}를 참조하십시오.
 
 계정의 도구 체인에 액세스하는 모든 사용자에게 IAM 사용자 역할이 정의된 액세스 정책을 지정해야 합니다. 이 정책은 선택한 서비스 또는 인스턴스의 컨텍스트 내에서 사용자가 수행할 수 있는 조치를 판별합니다. 허용 가능한 조치는 서비스에서 수행할 수 있는 오퍼레이션으로서 {{site.data.keyword.Bluemix_notm}} 서비스에서 정의되고 사용자 정의됩니다. 그런 다음 조치는 IAM 사용자 역할에 맵핑됩니다.
 
@@ -59,6 +60,6 @@ lastupdated: "2018-11-14"
 | delete-bindings | 리소스 그룹의 도구 체인에서 도구 통합을 제거합니다. | 관리자, 편집자 |
 {: caption="표 2. 서비스 조치 및 오퍼레이션" caption-side="top"}
 
-UI에서 사용자 역할 지정에 대한 정보는 [IAM 액세스 관리](/docs/iam/mngiam.html#iammanidaccser)를 참조하십시오.
+UI에서 사용자 역할 지정에 대한 정보는 [IAM 액세스 관리](/docs/iam?topic=iam-iammanidaccser)를 참조하십시오.
 
 <!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

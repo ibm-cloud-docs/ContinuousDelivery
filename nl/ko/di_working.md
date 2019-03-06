@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-14"
+  years: 2016, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -31,4 +31,4 @@ lastupdated: "2018-11-14"
 	
 **Team Dynamics**는 소셜 코딩 및 분석을 사용하여 팀에서 어떻게 협업하는지를 학습하고 어떻게 작업의 능률을 높일 수 있는지 파악하는 데 도움을 줍니다.
 
-자세한 정보는 [시작하기 튜토리얼](/docs/services/DevOpsInsights/index.html)을 참조하십시오.
+자세한 정보는 [시작하기 튜토리얼](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started)을 참조하십시오.

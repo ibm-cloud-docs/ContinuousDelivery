@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -60,14 +60,14 @@ lastupdated: "2018-12-6"
 {: #plan_exceeded}
 {: faq}
 
-{{site.data.keyword.contdelivery_short}}는 Lite와 프로페셔널이라는 두 가지 플랜을 제공합니다. {{site.data.keyword.contdelivery_short}} Lite 플랜을 사용하는 경우 플랜의 한계까지 도구 체인을 무료로 사용할 수 있습니다. 오류 메시지에 하나 이상의 Lite 플랜 한계를 초과했다고 표시됩니다. 예를 들어, {{site.data.keyword.contdelivery_short}} 서비스 인스턴스와 연관된 권한 부여된 사용자가 너무 많거나 최대 수의 {{site.data.keyword.deliverypipeline}} 작업을 실행한 경우 플랜을 초과할 수 있습니다. 플랜의 조항에 대한 자세한 정보는 [플랜 한계 및 사용](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}을 참조하십시오.
+{{site.data.keyword.contdelivery_short}}는 Lite와 프로페셔널이라는 두 가지 플랜을 제공합니다. {{site.data.keyword.contdelivery_short}} Lite 플랜을 사용하는 경우 플랜의 한계까지 도구 체인을 무료로 사용할 수 있습니다. 오류 메시지에 하나 이상의 Lite 플랜 한계를 초과했다고 표시됩니다. 예를 들어, {{site.data.keyword.contdelivery_short}} 서비스 인스턴스와 연관된 권한 부여된 사용자가 너무 많거나 최대 수의 {{site.data.keyword.deliverypipeline}} 작업을 실행한 경우 플랜을 초과할 수 있습니다. 플랜의 조항에 대한 자세한 정보는 [플랜 한계 및 사용](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}을 참조하십시오.
 
 
 ## 도구 체인을 작성했습니다. 도구 체인 페이지에 Continuous Delivery 서비스가 필요하다고 표시되는 이유는 무엇입니까?
 {: #service_required_resource_group}
 {: faq}
 
-도구 체인과 동일한 리소스 그룹 또는 조직에 있는 {{site.data.keyword.contdelivery_short}} 서비스 인스턴스에 대한 플랜의 조항을 통해 서비스에 포함된 몇 가지 도구 통합({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} 및 {{site.data.keyword.gitrepos}}) 사용을 관리합니다. 오류 메시지에 리소스 그룹 또는 조직에 {{site.data.keyword.contdelivery_short}} 서비스의 필수 인스턴스가 없다고 표시됩니다. 플랜의 조항에 대한 자세한 정보는 [플랜 한계 및 사용](/docs/services/ContinuousDelivery/limitations_plans.html){: new_window}을 참조하십시오.
+도구 체인과 동일한 리소스 그룹 또는 조직에 있는 {{site.data.keyword.contdelivery_short}} 서비스 인스턴스에 대한 플랜의 조항을 통해 서비스에 포함된 몇 가지 도구 통합({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} 및 {{site.data.keyword.gitrepos}}) 사용을 관리합니다. 오류 메시지에 리소스 그룹 또는 조직에 {{site.data.keyword.contdelivery_short}} 서비스의 필수 인스턴스가 없다고 표시됩니다. 플랜의 조항에 대한 자세한 정보는 [플랜 한계 및 사용](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}을 참조하십시오.
 
 
 ## Cloud Foundry 조직에서 도구 체인을 작성했습니다. 도구 체인 페이지에 Continuous Delivery 서비스가 필요하다고 표시되는 이유는 무엇입니까?
@@ -89,7 +89,7 @@ lastupdated: "2018-12-6"
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
-계정의 메모리 할당량을 늘리거나 앱이 사용하는 메모리를 줄일 수 있습니다. 평가판 계정의 최대 메모리 할당량은 2GB입니다. 계정의 메모리 할당량을 늘리려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법은 [유료 계정](/docs/pricing/index.html#pay-accounts)을 참조하십시오. 앱이 사용하는 메모리를 줄이려면 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 cf 명령행 인터페이스를 사용하십시오.
+계정의 메모리 할당량을 늘리거나 앱이 사용하는 메모리를 줄일 수 있습니다. 평가판 계정의 최대 메모리 할당량은 2GB입니다. 계정의 메모리 할당량을 늘리려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법에 대한 정보는 [내 계정을 업그레이드하거나 변경하려면 어떻게 해야 합니까?](/docs/account?topic=account-accountfaqs#changeacct)를 참조하십시오. 앱이 사용하는 메모리를 줄이려면 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 cf 명령행 인터페이스를 사용하십시오.
 
 {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하는 경우 다음 단계를 완료하십시오.
 
@@ -141,7 +141,7 @@ Web ID에서 Node.js 앱을 편집하는 경우 {{site.data.keyword.Bluemix_notm
   * {{site.data.keyword.Bluemix_notm}} 콘솔에 로그인하십시오. 메뉴 표시줄에서 **지원**을 클릭하고 **상태**를 선택하십시오. ![몇 가지 문제](../../get-support/images/some_issues.svg) 아이콘에 대해 나열된 리소스를 확인하십시오. 이 아이콘은 가동 중단을 표시합니다.
   * [{{site.data.keyword.Bluemix_notm}} - 시스템 상태 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/status){: new_window}에서 직접 액세스하십시오.
 
-{{site.data.keyword.Bluemix_notm}} 상태 페이지에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 상태 보기](https://cloud.ibm.com/docs/get-support/ViewStatus.html#viewing-bluemix-status)를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} 상태 페이지에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 상태 보기](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}를 참조하십시오. 
 
 
 ## 내 도구 체인에 대해 도구 통합을 구성했습니다. 왜 구성되지 않습니까?

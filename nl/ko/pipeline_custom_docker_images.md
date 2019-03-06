@@ -45,14 +45,14 @@ Docker 허브에서 대규모의 저장소 커뮤니티를 찾을 수 있습니�
 ## 개인용 이미지 레지스트리 사용
 {: #private_image_registry}
 
-인증이 필요한 개인용 레지스트리를 사용 중인 경우 `DOCKER_USERNAME` 및 `DOCKER_PASSWORD`의 두 가지 추가 단계 환경 특성을 설정해야 합니다. `DOCKER_PASSWORD`를 마스킹하기 위해 보안 특성을 사용할 수 있습니다. 이미지를 가져오기 전에 사용자 정의 Docker 이미지 작업은 사용자 이름 및 비밀번호 신임 정보를 사용하여 `docker login`을 완료합니다.
+인증이 필요한 개인용 레지스트리를 사용 중인 경우 `DOCKER_USERNAME` 및 `DOCKER_PASSWORD`의 두 가지 추가 단계 환경 특성을 설정해야 합니다. `DOCKER_PASSWORD`를 마스킹하기 위해 보안 특성을 사용할 수 있습니다. 이미지를 가져오기 전에 사용자 정의 Docker 이미지 작업은 사용자 이름 및 비밀번호 인증 정보를 사용하여 `docker login`을 완료합니다.
 
 대부분의 레지스트리의 경우 제공된 사용자 이름 및 비밀번호를 사용할 수 있습니다. {{site.data.keyword.registrylong_notm}}를 사용하여 개인용 이미지를 저장하는 경우 인증을 위해 플랫폼 API 키를 사용해야 합니다. 
 
 1. [플랫폼 API 키를 요청 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/iam/#/apikeys){: new_window}하고 키를 저장하십시오. 
 1. `DOCKER_USERNAME`에 `iamapikey`를 사용하고 `DOCKER_PASSWORD`에 대해 저장한 플랫폼 API 키를 사용하여 두 가지 단계 환경 특성을 작성하십시오.
 
- ![{{site.data.keyword.registrylong_notm}} 신임 정보](images/custom-image-private-repository.png)
+ ![{{site.data.keyword.registrylong_notm}} 인증 정보](images/custom-image-private-repository.png)
 
 
 ## 스크립트 지정

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-12"
+  years: 2017, 2019
+lastupdated: "2019-2-15"
 
 ---
 {:shortdesc: .shortdesc}
@@ -22,7 +22,7 @@ lastupdated: "2018-12-12"
 사용자 정의 도구 체인 템플리트를 작성하여 DevOps 워크플로우를 향상시키십시오. 기존의 도구 체인 템플리트로 빠르게 시작하거나 필요한 도구 통합만 포함된 도구 체인 템플리트를 작성할 수 있습니다. 언제든지 도구 체인에서 통합을 추가하거나 제거할 수 있습니다.
 {:shortdesc}
 
-여러 가지 방법으로 [도구 체인을 작성](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}할 수 있습니다. 사용자 정의 도구 체인 템플리트를 작성하고 나면 [{{site.data.keyword.Bluemix_notm}}로 배치 작성 단추](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}를 사용하여 공유할 수 있습니다.   도구 체인 템플리트 SDK에 대한 자세한 정보는 [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}를 참조하십시오. 단계별 튜토리얼은 [Garage Method 사이트](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}를 참조하십시오.
+여러 가지 방법으로 [도구 체인을 작성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}할 수 있습니다. 사용자 정의 도구 체인 템플리트를 작성하고 나면 [{{site.data.keyword.Bluemix_notm}}에 배치 단추 작성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deploy-button){: new_window}을 통해 이를 공유할 수 있습니다. 도구 체인 템플리트 SDK에 대한 자세한 정보는 [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}를 참조하십시오. 단계별 튜토리얼은 [Garage Method 사이트](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}를 참조하십시오.
 
 
 ## 시작하기
@@ -39,7 +39,7 @@ lastupdated: "2018-12-12"
 
  이 템플리트는 단일 GitHub 저장소에서 기본 Hello World 애플리케이션을 배치하고 지속적 딜리버리, 소스 제어, 문제 추적 및 온라인 제어를 위해 사전 구성된 단순 도구 체인을 포함합니다.
 
-2. 좀 더 복잡한 도구 체인 템플리트로 시작하려면 [마이크로서비스용 클라우드 네이티브 도구 체인](https://github.com/open-toolchain/toolchain-demo){: new_window}을 복제하십시오.
+2. 좀 더 복잡한 도구 체인 템플리트로 시작하려면 [마이크로서비스용 클라우드 네이티브 도구 체인 템플리트](https://github.com/open-toolchain/toolchain-demo){: new_window}를 복제하십시오. 
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -221,7 +221,7 @@ template
 |service_id |특성 |<`pipeline`> | 사용할 서비스의 이름 |
 |parameters |키 |  |  |
 |이름 |특성 |<`repo_name`> | 저장소 섹션에 정의된 이름과 동일 |
-|ui-pipeline |특성 |<`true`, `false`> |이 파이프라인이 배치하는 애플리케이션이 도구 체인 페이지의 **앱 보기** 메뉴에 표시되는 경우 True |
+|ui-pipeline |특성 |<`true`, `false`> |이 파이프라인이 배치하는 애플리케이션이 도구 체인 페이지의 **앱 보기** 메뉴에 표시되는 경우 True  |
 |configuration |키 |  |  |
 |content |특성 |<`$ref(pipeline.yml)`> |파이프라인 정의를 정의하는 파일 |
 |env |키 |  |  |
@@ -264,7 +264,7 @@ template
 
 4\. **배치 세부사항:**
 
- Continuous Delivery 프로세스의 일부로 사용자에게 액세스 권한이 있는 {{site.data.keyword.Bluemix_notm}} 지역, 조직 또는 영역에 애플리케이션을 배치하도록 도구 체인을 구성할 수 있습니다. 애플리케이션을 배치하는 위치에 대한 세부사항은 [도구 체인 작성](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} 페이지에서 지정할 수 있습니다.
+ Continuous Delivery 프로세스의 일부로 사용자에게 액세스 권한이 있는 {{site.data.keyword.Bluemix_notm}} 지역, 조직 또는 영역에 애플리케이션을 배치하도록 도구 체인을 구성할 수 있습니다. 애플리케이션을 배치하는 위치에 대한 세부사항은 [도구 체인 작성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window} 페이지에서 지정할 수 있습니다.
 
 `toolchain.yml` 파일의 이 섹션에서는 도구 체인 작성 페이지에서 구성할 수 있는 파이프라인 단계를 정의합니다.
 
@@ -281,7 +281,7 @@ template
 |prod-space |특성 |<`prod`> | 프로덕션 단계에 대한 {{site.data.keyword.Bluemix_notm}} 영역을 정의합니다. |
 |github-repo-name |특성 | <`"{{repo-name-key.parameters.repo_name}}"`> |GitHub 저장소 이름을 도구 체인 작성 페이지에 전달하는 변수 |
 
-`deploy.json` 파일 작성에 대한 자세한 정보는 [이 섹션]을 참조하십시오. (#toolchains_custom_deploy_json)
+`deploy.json` 파일 작성에 대한 자세한 정보는 [이 섹션](#toolchains_custom_deploy_json)을 참조하십시오. 
 
  다음 예에서는 프로덕션 환경에 배치하는 단일 단계를 정의합니다.
 
@@ -394,7 +394,7 @@ stages:
  ## 파이프라인 인터페이스 구성
  {: #toolchains_custom_deploy_json}
 
- [도구 체인 작성](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} 페이지에서 구성 가능한 통합 섹션에서 Delivery Pipeline을 선택하는 경우 섹션이 펼쳐지고 다음 항목이 표시됩니다.
+ [도구 체인 작성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window} 페이지에서 구성 가능한 통합 섹션에서 Delivery Pipeline을 선택하는 경우 섹션이 펼쳐지고 다음 항목이 표시됩니다.
 
  	* 애플리케이션의 이름.
  	* 파이프라인 단계가 배치되는 지역, 조직 및 영역.

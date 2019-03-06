@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-8"
 
 ---
 
@@ -50,8 +50,8 @@ lastupdated: "2018-12-6"
 1. 메뉴 표시줄에서 **지원**을 클릭한 후에 **티켓 추가**를 클릭하십시오.
 1. 기술 지원이 필요한 항목을 표시하는 양식을 채우십시오.
 
-IBM {{site.data.keyword.Bluemix_notm}} 지원 티켓 열기 또는 지원 레벨과 티켓 심각도에 대한 자세한 정보는 [지원 문의](https://cloud.ibm.com/docs/support/index.html#contacting-support)를 참조하십시오.
+IBM {{site.data.keyword.Bluemix_notm}} 지원 티켓 열기, 또는 지원 레벨 및 티켓 심각도에 대한 자세한 정보는 [지원 플랜](/docs/get-support?topic=get-support-support-plans)을 참조하십시오. 
 
 
 ## {{site.data.keyword.Bluemix_notm}} 지원
-{{site.data.keyword.Bluemix_notm}} 서비스에 대한 기타 문제점이나 질문이 있으면 [고객 지원 받기](https://www.{DomainName}/docs/support/index.html#getting-customer-support)를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} 서비스에 대한 기타 문제점이나 질문이 있으면 [지원 받기](/docs/get-support?topic=get-support-getting-customer-support)를 참조하십시오. 
