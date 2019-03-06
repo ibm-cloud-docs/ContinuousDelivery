@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -32,16 +32,16 @@ per la gestione del codice sorgente e la traccia dei problemi, {{site.data.keywo
 
 {{site.data.keyword.contdelivery_short}} è disponibile su {{site.data.keyword.Bluemix_notm}} Pubblico in specifiche regioni e in {{site.data.keyword.Bluemix_notm}} Dedicato. Le toolchain sono diverse a seconda se utilizzi {{site.data.keyword.contdelivery_short}} su {{site.data.keyword.Bluemix_notm}} Pubblico o {{site.data.keyword.Bluemix_notm}} Dedicato.
 
-Anche se le toolchain non sono attualmente disponibili in tutte le regioni, puoi configurare la tua toolchain per distribuire le tue applicazioni in tutte le regioni. Per ulteriori informazioni, prova l'esercitazione <a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Deploy a secure web application across multiple regions </a>.
+Anche se le toolchain non sono attualmente disponibili in tutte le regioni, puoi configurare la tua toolchain per distribuire le tue applicazioni in tutte le regioni. Per ulteriori informazioni, prova l'esercitazione [Deploy a secure web application across multiple regions](/docs/tutorials?topic=solution-tutorials-multi-region-webapp){: new_window}.
 {: tip}
 
 |Toolchain |{{site.data.keyword.Bluemix_notm}} Pubblico	|{{site.data.keyword.Bluemix_notm}} Dedicato |
 |:----------|:------------------------------|:------------------|
-|Integrazioni dello strumento 		|Per un elenco di integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}. 		|Le integrazioni dello strumento sono disponibili a seconda di come {{site.data.keyword.contdelivery_short}} è stato impostato nel tuo ambiente.			|
+|Integrazioni dello strumento 		|Per un elenco di integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}. 		|Le integrazioni dello strumento sono disponibili a seconda di come {{site.data.keyword.contdelivery_short}} è stato impostato nel tuo ambiente.			|
 |Creazione di una toolchain da un template		|Accedi a [{{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://cloud.ibm.com/devops){:new_window}		|Accedi al tuo ambiente dedicato su {{site.data.keyword.Bluemix_notm}}.			|
 |Creazione di una toolchain da un applicazione		|L'applicazione è configurata per la fornitura continua da un nuovo repository GitHub che viene popolato con il codice starter dell'applicazione.		|L'applicazione è configurata per la fornitura continua da un nuovo repository GitHub o GitHub Enterprise che viene popolato con il codice starter dell'applicazione.		|  
 |Regioni di distribuzione di Delivery pipeline		|Tutte le regioni di {{site.data.keyword.Bluemix_notm}} Pubblico sono disponibili per i lavori di distribuzione Cloud Foundry. 		|La regione di {{site.data.keyword.Bluemix_notm}} Dedicato è disponibile. Altre regioni dedicate o locali nello stesso account del cliente potrebbero essere disponibili a seconda di come {{site.data.keyword.contdelivery_short}} è stato configurato nel tuo ambiente specifico.		|
-|Lavori di distribuzione di Delivery pipeline		|Tutti i [tipi di lavoro](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs) sono disponibili.		|I tipi di lavoro che dipendono dai servizi {{site.data.keyword.Bluemix_notm}} non installati nell'ambiente dedicato potrebbero non essere disponibili.	Ad esempio, il contenitore che crea e distribuisce i tipi di lavoro potrebbe non essere disponibile negli ambienti che non dispongono di {{site.data.keyword.containerlong_notm}}.	|
+|Lavori di distribuzione di Delivery pipeline		|Tutti i [tipi di lavoro](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs) sono disponibili.		|I tipi di lavoro che dipendono dai servizi {{site.data.keyword.Bluemix_notm}} non installati nell'ambiente dedicato potrebbero non essere disponibili.	Ad esempio, il contenitore che crea e distribuisce i tipi di lavoro potrebbe non essere disponibile negli ambienti che non dispongono di {{site.data.keyword.containerlong_notm}}.	|
 {: caption="Tabella 1. Differenze tra le toolchain su {{site.data.keyword.Bluemix_notm}} Dedicato e {{site.data.keyword.Bluemix_notm}} pubblico" caption-side="top"}
 
 
@@ -232,7 +232,6 @@ Prova le esercitazioni:
 
 <ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app" target="_blank">Add a toolchain to an app <img src="../../icons/launch-glyph.svg" alt="Icona link esterno"></a></li>
 <li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Create a custom toolchain <img src="../../icons/launch-glyph.svg" alt="Icona link esterno"></a></li>
-<li><a href="/docs/tutorials/multi-region-webapp.html#deploy-a-secure-web-application-across-multiple-regions" target="_blank">Deploy a secure web application across multiple regions</a></li>
 </ul></td>
 <td><ul><li>{{site.data.keyword.deliverypipeline}}
 </li><li>Eclipse Orion {{site.data.keyword.webide}}
@@ -242,13 +241,13 @@ GitHub e problemi
 <li>{{site.data.keyword.Bluemix_notm}}</li></ul>
 </td></tr>
 
-<tr><td>Template di toolchain personalizzato <br><br>
+<tr><td>Template di toolchain personalizzata <br><br>
 
  Disponibile in Stati Uniti Sud, Stati Uniti Est, Germania, Tokyo e Regno Unito
 
 </td><td>
 <br><br>
-Puoi creare un template di toolchain personalizzato che può essere utilizzato da altri. <br><br>
+Puoi creare un template di toolchain personalizzata che può essere utilizzato da altri. <br><br>
 
 Vedi la documentazione:
 <a href="https://github.com/open-toolchain/sdk/wiki" target="_blank">Creazione di template di toolchain personalizzate <img src="../../icons/launch-glyph.svg" alt="Icona link esterno"></a>

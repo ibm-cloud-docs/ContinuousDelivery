@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-7"
 
 ---
 
@@ -26,9 +26,9 @@ Adotta un approccio DevOps utilizzando {{site.data.keyword.contdelivery_full}}, 
 ##Prerequisiti
 {: #cd_prereqs}
 
-Prima di poter creare una toolchain di fornitura continua da un template, devi creare un'istanza di {{site.data.keyword.contdelivery_short}} selezionandola dal catalogo {{site.data.keyword.Bluemix_notm}}. La toolchain integra gli strumenti per la pianificazione, lo sviluppo, la distribuzione di pipeline e la gestione delle tue applicazioni. Puoi sempre aggiungere o rimuovere strumenti dalla toolchain. Se già disponi di una toolchain, puoi [visualizzare le toolchain esistenti](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}. Per ulteriori informazioni sull'utilizzo delle toolchain, vedi [Gestione delle toolchain](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
+Prima di poter creare una toolchain di fornitura continua da un template, devi creare un'istanza di {{site.data.keyword.contdelivery_short}} selezionandola dal catalogo {{site.data.keyword.Bluemix_notm}}. La toolchain integra gli strumenti per la pianificazione, lo sviluppo, la distribuzione di pipeline e la gestione delle tue applicazioni. Puoi sempre aggiungere o rimuovere strumenti dalla toolchain. Se già disponi di una toolchain, puoi [visualizzare le toolchain esistenti](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing_a_toolchain){: new_window}. Per ulteriori informazioni sull'utilizzo delle toolchain, vedi [Gestione delle toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using){: new_window}.
 
-Se già disponi di un'istanza di {{site.data.keyword.contdelivery_short}}, puoi [creare una toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/devops/create){: new_window} o [visualizzare le toolchain esistenti](/docs/services/ContinuousDelivery/toolchains_working.html#viewing_a_toolchain){: new_window}.
+Se già disponi di un'istanza di {{site.data.keyword.contdelivery_short}}, puoi [creare una toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/devops/create){: new_window} o [visualizzare le toolchain esistenti ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/devops/toolchains){: new_window}.
 {: tip}
 
 ##Passo 1: seleziona un template di toolchain
@@ -55,7 +55,7 @@ Se già disponi di un'istanza di {{site.data.keyword.contdelivery_short}}, puoi 
    I gruppi di risorse sono disponibili nelle regioni Stati Uniti Sud, Stati Uniti Est, Regno Unito, Germania e Tokyo. Le organizzazioni Cloud Foundry sono supportate nelle regioni Stati Uniti Sud, Regno Unito e Germania.
    {: important}
  
-1. Nella sezione Integrazioni dello strumento, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
+1. Nella sezione Integrazioni dello strumento, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Fai clic su **Create**. Diversi passi vengono eseguiti automaticamente per configurare la tua toolchain. Le integrazioni dello strumento configurate a seconda della toolchain selezionata e se stai utilizzando {{site.data.keyword.Bluemix_notm}} Pubblico o {{site.data.keyword.Bluemix_notm}} Dedicato. Ad esempio, quando crei una toolchain Microservizi in {{site.data.keyword.Bluemix_notm}} Pubblico, deve essere eseguita questa procedura:
 
  * La toolchain viene creata.

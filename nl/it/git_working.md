@@ -38,7 +38,7 @@ Poiché questa integrazione dello strumento è creata in GitLab Community Editio
 {: tip}
 
 ## Utilizzo di {{site.data.keyword.gitrepos}} in locale
-{: #git_local}
+{: #git_locally}
 
 Puoi accedere localmente ai repository Git memorizzati in {{site.data.keyword.gitrepos}}. Per istruzioni sulla configurazione di Git in locale, vedi [Start using Git on the command line ![icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
 

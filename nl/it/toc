@@ -14,7 +14,7 @@ Continuous Delivery
 
     {: .topicgroup}
     Link correlati
-	    [IBM Cloud DevOps Insights](services/DevOpsInsights/index.html#gettingstarted)
+	    [IBM Cloud DevOps Insights](/services/DevOpsInsights/DevOpsInsights-getting-started)
         [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage)
     {: .navgroup-end}
 
@@ -34,6 +34,7 @@ Continuous Delivery
         pipeline_working.md
         pipeline_build_deploy.md
         pipeline_deploy_var.md
+        pipeline_versioned_base_images.md
         pipeline_custom_docker_images.md
         deliverypipeline_extension.md
 

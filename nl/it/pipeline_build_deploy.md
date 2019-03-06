@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-12-11"
+  years: 2016, 2019
+lastupdated: "2019-2-1"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -30,7 +30,7 @@ Completa le seguenti attività per configurare una pipeline.
 ## Aggiunta di una fase
 {: #deliverypipeline_add_stage}
 
-1. Nella pagina Pipeline, fai clic su **AGGIUNGI FASE**. Viene aperta la pagina di configurazione della fase.
+1. Nella pagina Pipeline, fai clic su **ADD STAGE**. Viene aperta la pagina di configurazione della fase.
 2. Configura la fase.
   1. Nella scheda **INPUT**, seleziona un input per la fase.  Per le fasi di build, la scheda di input include un campo **Branch** per specificare il ramo nel repository da utilizzare per l'input.
   2. Nella scheda **JOBS**, aggiungi e configura almeno un lavoro. La prima fase normalmente dispone di almeno un lavoro di creazione.
@@ -77,7 +77,7 @@ Puoi distribuire una creazione precedente. Nella fase che contiene la generazion
 {: tip}
 
 ###Aggiunta di servizi alle applicazioni
-Puoi aggiungere i servizi alle tue applicazioni e gestirli dal tuo dashboard {{site.data.keyword.Bluemix_notm}} o dalla CLI (command line interface) Cloud Foundry. Puoi anche immettere i comandi della CLI Foundry negli script per i lavori della pipeline. Ad esempio, puoi aggiungere un servizio a un'applicazione nello script di un lavoro di distribuzione. Per ulteriori informazioni sull'aggiunta dei servizi, consulta [Aggiunta di un servizio alla tua applicazione](/docs/services/reqnsi.html#add_service).
+Puoi aggiungere i servizi alle tue applicazioni e gestirli dal tuo dashboard {{site.data.keyword.Bluemix_notm}} o dalla CLI (command line interface) Cloud Foundry. Puoi anche immettere i comandi della CLI Foundry negli script per i lavori della pipeline. Ad esempio, puoi aggiungere un servizio a un'applicazione nello script di un lavoro di distribuzione. Per ulteriori informazioni sull'aggiunta dei servizi, consulta [Connessione dei servizi alle applicazioni esterne](/docs/resources?topic=resources-externalapp).
 
 ## Visualizzazione dei log
 {: #deliverypipeline_view_logs}

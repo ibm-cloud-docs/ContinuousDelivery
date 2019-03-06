@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-7-19"
+  years: 2015, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -12,7 +12,8 @@ lastupdated: "2018-7-19"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# Gestione delle pipeline {: #pipeline-working}
+# Gestione delle pipeline 
+{: #pipeline-working}
 
 Per automatizzare le tue creazioni e le tue distribuzioni in {{site.data.keyword.Bluemix}}, utilizza le pipeline {{site.data.keyword.contdelivery_full}}.
 {: shortdesc}
@@ -23,16 +24,16 @@ I lavori di creazione compilano e impacchettano il codice sorgente della tua app
 
 Un lavoro di distribuzione prende l'output da un lavoro di creazione e lo distribuisce ai server {{site.data.keyword.containerlong_notm}} o Cloud Foundry come {{site.data.keyword.Bluemix_notm}}.
 
-Puoi eseguire la distribuzione a uno o più regioni e servizi. Ad esempio, puoi impostare il tuo {{site.data.keyword.deliverypipeline}} per utilizzare uno o più servizi, eseguire verifiche in una regione e distribuire in produzione in più regioni. Per ulteriori informazioni, consulta [Regioni](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}.
+Puoi eseguire la distribuzione a uno o più regioni e servizi. Ad esempio, puoi impostare il tuo {{site.data.keyword.deliverypipeline}} per utilizzare uno o più servizi, eseguire verifiche in una regione e distribuire in produzione in più regioni.
 
 ##Creazione di una pipeline
 
 Puoi utilizzare uno qualsiasi dei seguenti metodi per creare una pipeline:
 
-   * [Crea una toolchain da un'applicazione Cloud Foundry esistente](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app){: new_window}. La toolchain risultante contiene una pipeline.
+   * [Crea una toolchain da un'applicazione Cloud Foundry esistente](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}. La toolchain risultante contiene una pipeline.
 
-   * [Crea una toolchain da un template](/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_a_template){: new_window} che include almeno una pipeline.
+   * [Crea una toolchain da un template](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window} che include almeno una pipeline.
 
-   * [Aggiungi l'integrazione dello strumento {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery/toolchains_integrations.html#deliverypipeline){: new_window} a una toolchain esistente.
+   * [Aggiungi l'integrazione dello strumento {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window} a una toolchain esistente.
    
 Da {{site.data.keyword.deliverypipeline}}, puoi modificare la tua configurazione, controllare lo stato delle creazioni, dell'applicazione distribuita e delle ultime distribuzioni, visualizzare i log più recenti e i dettagli di distribuzione oppure eliminare la tua pipeline.

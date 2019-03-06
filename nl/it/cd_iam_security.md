@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018
-lastupdated: "2018-7-18"
+  years:  2018, 2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -17,14 +17,15 @@ lastupdated: "2018-7-18"
 
 
 # Gestione dell'accesso utente per la fornitura continua con Identity and Access Management
+{: #cd-iam-security}
 
 L'accesso alle risorse del servizio {{site.data.keyword.contdelivery_full}} nei gruppi di risorse per gli utenti nel tuo account viene controllato da {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). 
 
 **Note**: 
 
-* L'accesso utente per le istanze del servizio {{site.data.keyword.contdelivery_short}} e le istanze della toolchain viene gestito separatamente. Per ulteriori informazioni sulla gestione dell'accesso utente alle toolchain nei gruppi di risorse, consulta [Gestione dell'accesso utente alle toolchain con Identity and Access Management](/docs/services/ContinuousDelivery/toolchains_iam_security.html){: new_window}.
+* L'accesso utente per le istanze del servizio {{site.data.keyword.contdelivery_short}} e le istanze della toolchain viene gestito separatamente. Per ulteriori informazioni sulla gestione dell'accesso utente alle toolchain nei gruppi di risorse, consulta [Gestione dell'accesso utente alle toolchain con Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}.
 
-* L'accesso utente alle toolchain nelle organizzazioni Cloud Foundry viene gestito in modo diverso rispetto a quello nei gruppi di risorse. Per ulteriori informazioni sulla gestione dell'accesso utente alle toolchain nelle organizzazioni Cloud Foundry, consulta [Gestione dell'accesso utente alle toolchain nelle organizzazioni Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
+* L'accesso utente alle toolchain nelle organizzazioni Cloud Foundry viene gestito in modo diverso rispetto a quello nei gruppi di risorse. Per ulteriori informazioni sulla gestione dell'accesso utente alle toolchain nelle organizzazioni Cloud Foundry, consulta [Gestione dell'accesso utente alle toolchain nelle organizzazioni Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
 
 Ogni utente che accede al servizio {{site.data.keyword.contdelivery_short}} nel tuo account deve avere assegnata una politica di accesso con un ruolo utente IAM definito. Tale politica determina quali azioni possono essere effettuate dall'utente all'interno del contesto del servizio o dell'istanza che selezioni. Le azioni consentite sono personalizzate e definite dal servizio {{site.data.keyword.Bluemix_notm}} come operazioni che è consentito eseguire sul servizio. Le azioni vengono poi associate ai ruoli utente IAM.
 
@@ -41,7 +42,7 @@ La seguente tabella illustra le azioni che sono associate ai ruoli di gestione d
 
 | Ruolo di gestione della piattaforma | Descrizione delle azioni | Azioni di esempio|
 |:-----------------|:-----------------|:-----------------|
-| Visualizzatore, Operatore | Visualizza le istanze del servizio {{site.data.keyword.contdelivery_short}}. | <ul><li>Fa clic su un'istanza del servizio {{site.data.keyword.contdelivery_short}} per aprirne il dashboard.</li>|</ul>
+| Visualizzatore, Operatore | Visualizza le istanze del servizio {{site.data.keyword.contdelivery_short}}. | <ul><li>Fa clic su un'istanza del servizio {{site.data.keyword.contdelivery_short}} per aprirne il dashboard.</li></ul>|
 | Editor, Amministratore | Crea, visualizza, aggiorna, modifica il piano ed elimina le istanze del servizio {{site.data.keyword.contdelivery_short}}. |<ul><li>Esegui il provisioning di un'istanza di {{site.data.keyword.contdelivery_short}} in un gruppo di risorse.</li><li>Elimina un'istanza di {{site.data.keyword.contdelivery_short}} da un gruppo di risorse.</li><li>Modifica un piano dell'istanza di {{site.data.keyword.contdelivery_short}} da Lite a Professional.</li></ul> |
 | Amministratore | Aggiorna l'elenco degli utenti autorizzati.| <ul><li>Aggiunge un utente all'elenco di utenti autorizzati.</li><li>Rimuove un utente dall'elenco di utenti autorizzati.</li></ul> |
 {: caption="Tabella 1. Azioni e ruoli utente IAM" caption-side="top"}
@@ -66,6 +67,6 @@ La seguente tabella illustra le azioni che sono associate ai ruoli di accesso al
 | Scrittore, Gestore | Aggiunge e rimuove gli utenti autorizzati nella scheda di gestione all'interno di un'istanza del servizio {{site.data.keyword.contdelivery_short}}. | <ul><li>Aggiunge l'utente autorizzato.</li><li>Rimuove l'utente autorizzato.</li></ul>|
 {: caption="Tabella 3. Azioni e ruoli di accesso al servizio IAM" caption-side="top"}
 
-Per informazioni sull'assegnazione dei ruoli utente nell'IU, consulta [Gestione accesso IAM](/docs/iam/mngiam.html#iammanidaccser).
+Per informazioni sull'assegnazione dei ruoli utente nell'IU, consulta [Gestione accesso IAM](/docs/iam?topic=iam-iammanidaccser).
 
 <!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

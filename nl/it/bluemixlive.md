@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2018
-lastupdated: "2018-12-12"
+  years: 2015，2019
+lastupdated: "2019-2-1"
 
 ---
 
@@ -145,7 +145,3 @@ L'inizializzazione del programma di debug potrebbe richiedere qualche minuto.
 1. Ripristina la versione Node.js, il comando di avvio e il valore di memoria originale dell'applicazione.
 
 2. Distribuisci l'applicazione.
-
-### Per ulteriori informazioni
-
-* Consulta [Strumenti Eclipse per {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.cloud.ibm.com/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-12"
+  years: 2017, 2019
+lastupdated: "2019-2-15"
 
 ---
 {:shortdesc: .shortdesc}
@@ -22,7 +22,7 @@ lastupdated: "2018-12-12"
 Migliora il tuo flusso di lavoro DevOps creando un template di toolchain personalizzata. Puoi iniziare rapidamente con un template di toolchain esistente oppure creare un template di toolchain che includa solo le integrazioni dello strumento che ti servono. Puoi aggiungere o rimuovere integrazioni dalla tua toolchain in qualsiasi momento.
 {:shortdesc}
 
-Puoi [creare una toolchain](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window} in diversi modi. Dopo che hai creato un template di toolchain personalizzato, puoi condividerlo [creando un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}](/docs/services/ContinuousDelivery/deploy_button.html#deploy-button){: new_window}.   Per ulteriori informazioni sull'SDK del template di toolchain, vedi [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Per un'esercitazione dettagliata, consulta il [sito di Garage Method](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
+Puoi [creare una toolchain](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window} in diversi modi. Dopo aver creato un template di toolchain personalizzata, puoi condividerlo [creando un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deploy-button){: new_window}. Per ulteriori informazioni sull'SDK del template di toolchain, vedi [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){:new_window}. Per un'esercitazione dettagliata, consulta il [sito di Garage Method](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
 
 
 ## Introduzione
@@ -39,7 +39,7 @@ Per creare un template di toolchain personalizzata, inizia a clonare il template
 
  Questo template distribuisce un'applicazione Hello World di base da un unico repository GitHub e include una toolchain semplice che è preconfigurata per la fornitura continua, il controllo dell'origine, la traccia dei problemi e la modifica in linea.
 
-2. Se vuoi iniziare con un template di toolchain più complesso, clona il template [Cloud-native Toolchain for Microservices](https://github.com/open-toolchain/toolchain-demo){: new_window}.
+2. Se vuoi iniziare con un template di toolchain più complessa, clona il [template Cloud-native Toolchain for Microservices](https://github.com/open-toolchain/toolchain-demo){: new_window}.
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -101,7 +101,7 @@ Ogni sottosezione relativa a un servizio contiene le seguenti informazioni:
 
 ### Inclusione di testo da altri file
 
-Tutte le informazioni per la tua toolchain possono essere archiviate nel file `toolchain.yml`.  Tuttavia, potresti voler creare dei file separati per ogni IU di integrazione dello strumento che utilizza `$text`. L'utilizzo di file separati può semplificare la gestione della tua toolchain e ridurre al minimo il tempo che dedichi alla modifica dei file di configurazione. Questo frammento di codice di esempio da un file `toolchain.yml` mostra come utilizzare il contenuto dl file `pipeline.yml` come valore per `content`.
+Tutte le informazioni per la tua toolchain possono essere archiviate nel file `toolchain.yml`. Tuttavia, potresti voler creare dei file separati per ogni IU di integrazione dello strumento che utilizza `$text`. L'utilizzo di file separati può semplificare la gestione della tua toolchain e ridurre al minimo il tempo che dedichi alla modifica dei file di configurazione. Questo frammento di codice di esempio da un file `toolchain.yml` mostra come utilizzare il contenuto dl file `pipeline.yml` come valore per `content`.
 
 ```
   configuration:
@@ -264,7 +264,7 @@ In questo esempio, l'URL Git e il ramo Git sono relativi a un nuovo template di 
 
 4\. **Dettagli di distribuzione:**
 
- Come parte del processo di fornitura continua, puoi configurare una toolchain per distribuire un'applicazione a qualsiasi regione, organizzazione o spazio {{site.data.keyword.Bluemix_notm}} a cui un utente ha accesso. Puoi specificare i dettagli relativi a dove distribuire la tua applicazione nella pagina relativa alla [creazione della toolchain](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}.
+ Come parte del processo di fornitura continua, puoi configurare una toolchain per distribuire un'applicazione a qualsiasi regione, organizzazione o spazio {{site.data.keyword.Bluemix_notm}} a cui un utente ha accesso. Puoi specificare i dettagli relativi a dove distribuire la tua applicazione nella pagina relativa alla [creazione della toolchain](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}.
 
 Questa sezione del file `toolchain.yml` definisce le fasi della pipeline che sono disponibili per la configurazione dalla pagina di creazione della toolchain.
 
@@ -277,11 +277,11 @@ Questa sezione del file `toolchain.yml` definisce le fasi della pipeline che son
 | service-category | proprietà | <`pipeline`> | Servizio che utilizza le configurazioni di distribuzione |
 | parameters | chiave |  |  |
 | prod-region | proprietà | <`"{{region}}"`> | Definisce la regione {{site.data.keyword.Bluemix_notm}} per la fase di produzione. |
-| prod-organization | proprietà | <`"{{organization}}"`> | Definisce l'organizzazione {{site.data.keyword.Bluemix_notm}} per la fase di produzione|
+| prod-organization | proprietà | <`"{{organization}}"`> | Definisce l'organizzazione {{site.data.keyword.Bluemix_notm}} per la fase di produzione |
 | prod-space | proprietà | <`prod`> | Definisce lo spazio {{site.data.keyword.Bluemix_notm}} per la fase di produzione |
 | github-repo-name | proprietà | <`"{{repo-name-key.parameters.repo_name}}"`> | Variabile per passare il nome del repository GitHub alla pagina di creazione della toolchain |
 
-Per ulteriori informazioni sulla creazione di un file `deploy.json`, vedi [questa sezione] (#toolchains_custom_deploy_json).
+Per ulteriori informazioni sulla creazione di un file `deploy.json`, vedi [questa sezione](#toolchains_custom_deploy_json).
 
  Il seguente esempio definisce una singola fase che esegue la distribuzione in un ambiente di produzione.
 
@@ -394,7 +394,7 @@ stages:
  ## Configurazione dell'interfaccia della pipeline
  {: #toolchains_custom_deploy_json}
 
- Nella pagina di [creazione della toolchain](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started){: new_window}, quando si seleziona Delivery Pipeline nella sezione delle integrazioni configurabili, la sezione viene espansa per visualizzare i seguenti elementi:
+ Nella pagina di [creazione della toolchain](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window}, quando si seleziona Delivery Pipeline nella sezione delle integrazioni configurabili, la sezione viene espansa per visualizzare i seguenti elementi:
 
  	* Il nome dell'applicazione.
  	* La regione, l'organizzazione e lo spazio in cui vengono distribuite le fasi della pipeline.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-14"
+  years: 2016, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -31,4 +31,4 @@ Oltre ai **gate di distribuzione**, {{site.data.keyword.DRA_short}} fornisce ult
 	
 **Team Dynamics** utilizza l'analisi del social coding per aiutarti a comprendere come collabora il tuo team e come può lavorare meglio.
 
-Per ulteriori informazioni, vedi l'[Esercitazione introduttiva](/docs/services/DevOpsInsights/index.html).
+Per ulteriori informazioni, vedi l'[Esercitazione introduttiva](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).

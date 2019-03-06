@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-1-31"
 
 ---
 
@@ -72,10 +72,10 @@ Molti dei comandi in {{site.data.keyword.webide}} sono accessibili tramite dei t
 
 Per visualizzare un elenco dei tasti di scelta rapida nell'editor, fai clic su **Tools** > **Show keys**. In alternativa, puoi vedere l'elenco premendo Alt+Maiusc+? oppure Ctrl+Maiusc+? su MacOS. Puoi personalizzare una scelta rapida spostando il mouse sul tasto, facendo clic sulla matita e digitando la nuova associazione di tasti.
 
-## Gestione del codice sorgente
+## Gestione del codice di origine
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} è integrata con gli strumenti di gestione del codice sorgente. Per lavorare con il repository Git, fai clic sull'icona **Repository Git** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="Icona Repository Git">.  Per ulteriori informazioni, consulta [Utilizzo di Git in Eclipse Orion Web ID](/docs/services/ContinuousDelivery/git_web_ide.html#git_web_ide).
+{{site.data.keyword.webide}} è integrata con gli strumenti di gestione del codice di origine. Per lavorare con il repository Git, fai clic sull'icona **Repository Git** <img class="inline" src="images/webide_git_icon_light_small.png"  alt="Icona Repository Git">.  Per ulteriori informazioni, consulta [Utilizzo di Git in Eclipse Orion Web ID](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_web_ide#git_web_ide).
 
 ## Distribuzione di un'applicazione dal tuo spazio di lavoro
 {: #deploy}
@@ -213,7 +213,7 @@ Eclipse Orion {{site.data.keyword.webide}} fornisce assistenza del contenuto, de
 </table>
 
 ## Visualizza una esercitazione: Eclipse Orion Web IDE
-{: #toolchain_tutorials}
+{: #toolchain_web_ide_tutorials}
 
 Guarda una di queste esercitazioni su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window}:
 

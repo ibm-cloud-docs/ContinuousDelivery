@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-6"
+  years: 2015, 2019
+lastupdated: "2019-2-8"
 
 ---
 
@@ -50,8 +50,8 @@ Se hai riscontrato problemi più gravi con il servizio {{site.data.keyword.contd
 1. Dalla barra del menu, fai clic su **Supporto** e quindi su **Aggiungi ticket**.
 1. Completa il modulo per indicare di quale tipo di supporto hai bisogno.
 
-Per ulteriori informazioni su come aprire un ticket di supporto {{site.data.keyword.Bluemix_notm}} IBM o sui livelli di supporto e sulla gravità dei ticket, consulta [Come contattare il supporto](https://cloud.ibm.com/docs/support/index.html#contacting-support).
+Per ulteriori informazioni su come aprire un ticket di supporto IBM {{site.data.keyword.Bluemix_notm}} o sui livelli di supporto e sulla gravità dei ticket, consulta [Piani di supporto](/docs/get-support?topic=get-support-support-plans).
 
 
 ## Supporto per {{site.data.keyword.Bluemix_notm}}
-Per altri problemi o domande sul tuo servizio {{site.data.keyword.Bluemix_notm}}, consulta [Come ottenere supporto cliente](https://www.{DomainName}/docs/support/index.html#getting-customer-support).
+Per altri problemi o domande sul tuo servizio {{site.data.keyword.Bluemix_notm}}, vedi [Come ottenere supporto](/docs/get-support?topic=get-support-getting-customer-support).

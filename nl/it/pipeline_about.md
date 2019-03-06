@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-11-29"
+  years: 2016, 2019
+lastupdated: "2019-2-15"
 ---
 
 {:shortdesc: .shortdesc}
@@ -22,14 +22,14 @@ lastupdated: "2018-11-29"
 {{site.data.keyword.contdelivery_full}} include Delivery Pipeline per creare , testare e distribuire in modo ripetibile con un minimo intervento umano. In una pipeline, le sequenze di fasi richiamano l'input ed eseguono i lavori, come le build, i test e le distribuzioni.
 {:shortdesc}
 
-Le tue autorizzazioni per visualizzare, modificare o eseguire una pipeline sono basate sul controllo dell'accesso per la toolchain che gestisce la pipeline. Per ulteriori informazioni sul controllo dell'accesso per le toolchain, fai riferimento a [Gestione dell'accesso alle toolchain nei gruppi di risorse](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_resource_groups){: new_window} e [Gestione dell'accesso alle toolchain nelle organizzazioni Cloud Foundry](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access_orgs){: new_window}.
+Le tue autorizzazioni per visualizzare, modificare o eseguire una pipeline sono basate sul controllo dell'accesso per la toolchain che gestisce la pipeline. Per ulteriori informazioni sul controllo dell'accesso per le toolchain, fai riferimento a [Gestione dell'accesso alle toolchain nei gruppi di risorse](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window} e [Gestione dell'accesso alle toolchain nelle organizzazioni Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
 {: important}
 
-Puoi specificare gli script da eseguire in molti dei tipi di lavoro forniti dalla pipeline, dandoti un controllo diretto su quello che viene eseguito dal lavoro. Tali script vengono eseguiti in un'immagine Docker che contiene diversi strumenti di sviluppo standard, compresi gli strumenti necessari per interagire con i runtime {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni su quello che l'immagine Docker standard contiene, vedi [Risorse preinstallate](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_resources){: new_window}. Se il tuo lavoro richiede degli strumenti di sviluppo che non sono disponibili nell'immagine standard, o se hai bisogno di versioni differenti di tali strumenti, puoi utilizzare un'immagine personalizzata. Per ulteriori informazioni sulle immagini personalizzate, vedi [Utilizzo di immagini docker personalizzate](/docs/services/ContinuousDelivery/pipeline_custom_docker_images.html#custom_docker_images){: new_window}.
+Puoi specificare gli script da eseguire in molti dei tipi di lavoro forniti dalla pipeline, dandoti un controllo diretto su quello che viene eseguito dal lavoro. Tali script vengono eseguiti in un'immagine Docker che contiene diversi strumenti di sviluppo standard, compresi gli strumenti necessari per interagire con i runtime {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni su quello che l'immagine Docker standard contiene, vedi [Risorse preinstallate](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}. Se il tuo lavoro richiede degli strumenti di sviluppo che non sono disponibili nell'immagine standard, o se hai bisogno di versioni differenti di tali strumenti, puoi utilizzare un'immagine personalizzata. Per ulteriori informazioni sulle immagini personalizzate, vedi [Utilizzo di immagini docker personalizzate](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}.
 
-Quando la pipeline esegue gli script, le proprietà che descrivono il contesto in cui il lavoro è in esecuzione vengono passate allo script utilizzando le variabili di ambiente. Ad esempio, l'URL del repository che è l'input alla fase, il nome della fase e il lavoro che si sta eseguendo, i parametri specificati dal tipo di lavoro e così via. Per visualizzare un elenco delle variabili di ambiente disponibili, vedi [Risorse preinstallate](/docs/services/ContinuousDelivery/pipeline_deploy_var.html#deliverypipeline_envprop){: new_window}. 
+Quando la pipeline esegue gli script, le proprietà che descrivono il contesto in cui il lavoro è in esecuzione vengono passate allo script utilizzando le variabili di ambiente. Ad esempio, l'URL del repository che è l'input alla fase, il nome della fase e il lavoro che si sta eseguendo, i parametri specificati dal tipo di lavoro e così via. Per visualizzare un elenco delle variabili di ambiente disponibili, vedi [Risorse preinstallate](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). 
 
-Puoi definire le proprietà sia a livello di pipeline che a livello di fase. Le proprietà di pipeline vengono condivise in tutte le fasi e tutti i lavori in una pipeline. Le proprietà di fase sono univoche per una specifica fase e condivise in tutti i lavori in tale fase. Per ulteriori informazioni sulle proprietà, vedi [Proprietà dell'ambiente (variabili di ambiente)](/docs/services/ContinuousDelivery/pipeline_about.html#environment_properties).
+Puoi definire le proprietà sia a livello di pipeline che a livello di fase. Le proprietà di pipeline vengono condivise in tutte le fasi e tutti i lavori in una pipeline. Le proprietà di fase sono univoche per una specifica fase e condivise in tutti i lavori in tale fase. Per ulteriori informazioni sulle proprietà, vedi [Proprietà dell'ambiente (variabili di ambiente)](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties).
 
 ## Fasi
 {: #deliverypipeline_stages}
@@ -110,7 +110,7 @@ Dopo l'esecuzione di un lavoro, il contenitore creato per esso viene eliminato. 
 I lavori possono essere eseguiti fino a un massimo di 60 minuti. Quando i lavori superano tale limite, vengono considerati con esito negativo. Se un lavoro sta per superare il limite, suddividilo in più lavori. Ad esempio, se un lavoro esegue tre attività, puoi suddividerlo in tre lavori: uno per ogni attività.
 {: tip}
 
-Per maggiori informazioni su come aggiungere un lavoro a una fase, consulta [Aggiunta di un lavoro a una fase](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_add_job){: new_window}.
+Per maggiori informazioni su come aggiungere un lavoro a una fase, consulta [Aggiunta di un lavoro a una fase](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}.
 
 ### Lavori di creazione
 
@@ -121,9 +121,9 @@ I lavori che ricevono l'input dai lavori di creazione devono far riferimento all
 Se utilizzi il tipo di builder **Simple**, il codice non viene compilato o creato; invece viene inserito in un pacchetto e reso disponibile per le fasi future.
 {: tip}
 
-Quando distribuisci utilizzando Cloud Foundry, Cloud Foundry include le risorse corrette per consentire l'esecuzione della tua applicazione. Per ulteriori informazioni, vedi [Distribuzione delle applicazioni mediante il comando cf](/docs/cloud-foundry/deploy-apps.html#dep_apps). La pipeline per un'applicazione Cloud Foundry contiene una fase di distribuzione che esegue un comando cf.
+Quando distribuisci utilizzando Cloud Foundry, Cloud Foundry include le risorse corrette per consentire l'esecuzione della tua applicazione. Per ulteriori informazioni, vedi [Distribuzione delle applicazioni mediante il comando cf](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps). La pipeline per un'applicazione Cloud Foundry contiene una fase di distribuzione che esegue un comando cf.
 
-Cloud Foundry tenta di [rilevare il pacchetto di build da utilizzare ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://docs.cloudfoundry.org/buildpacks/detection.html). Puoi specificare il [pacchetto di build](/docs/cfapps/byob.html#using-community-buildpacks) da utilizzare nel file manifest all'interno della cartella root della tua applicazione. I pacchetti di build generalmente esaminano le risorse fornite dall'utente per determinare quali dipendenze scaricare e come configurare le applicazioni per comunicare con i servizi associati. Per ulteriori informazioni sui file manifest, vedi [Manifest dell'applicazione](/docs/cloud-foundry/deploy-apps.html#appmanifest).
+Cloud Foundry tenta di [rilevare il pacchetto di build da utilizzare ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://docs.cloudfoundry.org/buildpacks/detection.html). Puoi specificare il [pacchetto di build](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) da utilizzare nel file manifest all'interno della cartella root della tua applicazione. I pacchetti di build generalmente esaminano le risorse fornite dall'utente per determinare quali dipendenze scaricare e come configurare le applicazioni per comunicare con i servizi associati. Per ulteriori informazioni sui file manifest, vedi [Manifest dell'applicazione](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest).
 
 ### Lavori di distribuzione
 
@@ -131,7 +131,7 @@ I lavori di distribuzione caricano il tuo progetto in {{site.data.keyword.Bluemi
 
 I lavori di distribuzione possono distribuire nuove applicazioni o aggiornare applicazioni esistenti. Anche se hai prima distribuito un'applicazione utilizzando un altro metodo, come l'interfaccia della riga di comando Cloud Foundry o la barra di esecuzione nell'IDE web, puoi aggiornare l'applicazione utilizzando un lavoro di distribuzione. Per aggiornare un'applicazione, nel lavoro di distribuzione, utilizza il nome dell'applicazione.
 
-Puoi eseguire la distribuzione a uno o più regioni e servizi. Ad esempio, puoi impostare il tuo {{site.data.keyword.deliverypipeline}} per utilizzare uno o più servizi, eseguire verifiche in una regione e distribuire in produzione in più regioni. Per ulteriori informazioni, consulta [Regioni](/docs/overview/ibm-cloud.html#ov_intro-reg){: new_window}.
+Puoi eseguire la distribuzione a uno o più regioni e servizi. Ad esempio, puoi impostare il tuo {{site.data.keyword.deliverypipeline}} per utilizzare uno o più servizi, eseguire verifiche in una regione e distribuire in produzione in più regioni.
 
 ### Lavori di verifica
 Se desideri richiedere che vengano rispettate le condizioni, includi i lavori di verifica prima o dopo i tuoi lavori di distribuzione o di creazione. Puoi personalizzare i lavori di verifica in modo che siano semplici o complessi a secondo dei tuoi bisogni. Ad esempio, puoi immettere un comando cURL e attendere una risposta particolare. Puoi anche eseguire una suite di verifiche dell'unità o di verifiche funzionali dell'esecuzione con servizi di verifica di terze parti, come ad esempio Sauce Labs.
@@ -141,7 +141,7 @@ Se le tue verifiche producono dei file dei risultati nel formato XML JUnit, vien
 ## Proprietà dell'ambiente (variabili di ambiente)
 {: #environment_properties}
 
-Una serie di proprietà di ambiente predefinite fornisce l'accesso alle informazioni sull'ambiente di esecuzione del lavoro. Per un elenco completo delle proprietà dell'ambiente predefinite, vedi [Risorse e proprietà dell'ambiente](/docs/services/ContinuousDelivery/pipeline_deploy_var.html).
+Una serie di proprietà di ambiente predefinite fornisce l'accesso alle informazioni sull'ambiente di esecuzione del lavoro. Per un elenco completo delle proprietà dell'ambiente predefinite, vedi [Risorse e proprietà dell'ambiente](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment).
 
 Puoi anche definire delle tue proprietà dell'ambiente. Ad esempio, puoi definire una proprietà `API_KEY` che passa una chiave API che viene utilizzata per accedere alle risorse {{site.data.keyword.Bluemix_notm}} da tutti gli script nella pipeline.
 
@@ -160,7 +160,7 @@ Per definire le proprietà della pipeline, dal menu overflow nella pagina Pipeli
 
 ![Menu overflow della pipeline](images/OverflowMenu.png)
 
-Dalla scheda **ENVIRONMENT PROPERTIES** nella pagina Pipeline configuration. imposta le proprietà dell'ambiente a livello della pipeline.
+Dalla scheda **ENVIRONMENT PROPERTIES** nella pagina Pipeline configuration, imposta le proprietà dell'ambiente a livello della pipeline.
 
 ![Pagina properties della pipeline](images/PipelineProperties.png)
 
@@ -182,7 +182,7 @@ Tutti i lavori iniziano eseguendo il file `build.properties`, se esiste.
 ## Creazione e utilizzo di risorse utente
 {: #artifacts}
 
-I lavori di build recuperano automaticamente il contenuto nella cartella corrente dove viene eseguito lo script utente. Se non ti serve tutto il contenuto del repository git per la successiva distribuzione, è preferibile che configuri una directory di output esplicita e che quindi copi o crei lì le risorse utente pertinenti.  Gli script del lavoro vengono eseguiti nel risultato della build (directory di output).
+I lavori di build recuperano automaticamente il contenuto nella cartella corrente dove viene eseguito lo script utente.  Se non ti serve tutto il contenuto del repository git per la successiva distribuzione, è preferibile che configuri una directory di output esplicita e che quindi copi o crei lì le risorse utente pertinenti.  Gli script del lavoro vengono eseguiti nel risultato della build (directory di output).
 
 I lavori che eseguono la distribuzione a Cloud Foundry devono specificare la chiave API della piattaforma di un utente per cui tali lavori di autorità sono eseguiti e la regione, l'organizzazione e lo spazio dove distribuire le risorse utente. Se sono necessari ulteriori servizi per eseguire la tua applicazione, devi specificarli nel file `manifest.yml`.
 
@@ -210,7 +210,7 @@ Le fasi ricevono i loro input dai repository e dai lavori di creazione e i lavor
 ## File manifest di Cloud Foundry
 {: #deliverypipeline_manifest}
 
-I file manifest, denominati `manifest.yml` sono archiviati nella directory root del progetto e controllano come il tuo progetto viene distribuito a {{site.data.keyword.Bluemix_notm}}. Per informazioni sulla creazione dei file manifest per un progetto, consulta la [documentazione {{site.data.keyword.Bluemix_notm}} sui manifest dell'applicazione](/docs/cloud-foundry/deploy-apps.html#appmanifest). Per l'integrazione con {{site.data.keyword.Bluemix_notm}}, il tuo progetto deve disporre di un file manifest nella relativa directory root. Tuttavia, non è obbligatorio eseguire la distribuzione in base alle informazioni nel file.
+I file manifest, denominati `manifest.yml` sono archiviati nella directory root del progetto e controllano come il tuo progetto viene distribuito a {{site.data.keyword.Bluemix_notm}}. Per informazioni sulla creazione dei file manifest per un progetto, consulta la [documentazione {{site.data.keyword.Bluemix_notm}} sui manifest dell'applicazione](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest). Per l'integrazione con {{site.data.keyword.Bluemix_notm}}, il tuo progetto deve disporre di un file manifest nella relativa directory root. Tuttavia, non è obbligatorio eseguire la distribuzione in base alle informazioni nel file.
 
 Nella pipeline, puoi specificare tutto quanto può fare un file manifest utilizzando gli argomenti del comando `cf push`. Gli argomenti del comando `cf push` sono utili nei progetti con più destinazioni di distribuzione. Se più lavori di distribuzione tentano tutti di utilizzare la rotta specificata nel file manifest del progetto, si verifica un conflitto.
 

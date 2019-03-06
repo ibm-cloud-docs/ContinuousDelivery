@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-2-8"
 
 ---
 
@@ -30,9 +30,9 @@ Puoi gestire e lavorare con il tuo codice sorgente in un repository GitHub, GitH
 
 | Tipo Git  | Configurazione HTTPS | Utilizzo di HTTPS |  Configurazione SSH |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Token di accesso personale](/docs/services/ContinuousDelivery/git_working.html#git_authentication) | Nome utente di Git Repos and Issue Tracking (non il tuo ID IBM) e token di accesso personale | [Configura la chiave SSH](/docs/services/ContinuousDelivery/git_working.html#git_authentication) |
+| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Token di accesso personale](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) | Nome utente di Git Repos and Issue Tracking (non il tuo ID IBM) e token di accesso personale | [Configura la chiave SSH](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |
 | GitHub pubblico (github.com) | Il token di accesso personale non è obbligatorio, ma puoi configurarne uno e utilizzarlo | Nome utente e password GitHub o nome utente e token di accesso personale GitHub oppure solo token di accesso personale come nome utente | [Configura una chiave SSH GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-| GitHub Enterprise | [Token di accesso personale](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) | Nome utente di GitHub Enterprise (non il tuo ID IBM) e token di accesso personale | [Configura la chiave SSH GitHub Enterprise](/docs/services/ghededicated/index.html#gheded_getting_started#ghe_auth) |
+| GitHub Enterprise | [Token di accesso personale](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) | Nome utente di GitHub Enterprise (non il tuo ID IBM) e token di accesso personale | [Configura la chiave SSH GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |
 
 Se preferisci usare SSH, puoi riutilizzare una singola chiave in tutti i server Git. Crea o individua la tua chiave e configurala in ogni server, come descritto nei precedenti link. Se crei la tua chiave con una passphrase, ti viene richiesto di immettere questa passphrase quando utilizzi la chiave.
 {: tip}
@@ -75,18 +75,4 @@ Una volta completato il download, avrai una versione dei file nel tuo repository
 {: #git_egit}
 
 Se utilizzi Eclipse e hai un progetto che utilizza Git per il controllo sorgente, puoi utilizzare il plug-in EGit per gestire il tuo repository da Eclipse. Per istruzioni per l'installazione e la configurazione di EGit, vedi [Esercitazione di EGit ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
-Se utilizzi Git Repos and Issue Tracking e riscontri dei problemi, vedi [Git Repos and Issue Tracking](git_working.html#git_local).
-
-## Sviluppo con IBM Eclipse Tools
-{: #git_eclipse_tools}
-
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} fornisce dei plug-in che puoi installare in un ambiente Eclipse per integrare il tuo IDE con {{site.data.keyword.Bluemix_notm}}.
-
-Con gli strumenti, puoi distribuire i seguenti tipi di file e server a {{site.data.keyword.Bluemix_notm}} direttamente dal tuo ID Eclipse IDE o da IBM WebSphere&reg; Application Server Developer Tools (WDT):
-
-* File JavaScript
-* File WAR (archivio web)
-* File EAR (enterprise archive)
-* Server in pacchetto di Liberty Profile
-
-Puoi anche creare dei servizi e collegarli alla tua applicazione e definire le variabili di ambiente come parte della distribuzione. Per ulteriori informazioni su IBM Eclipse Tools, [vedi Distribuzione di applicazioni con IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html).
+Se utilizzi Git Repos and Issue Tracking e riscontri dei problemi, vedi [Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local).

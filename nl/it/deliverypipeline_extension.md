@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-3-26"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -73,7 +73,7 @@ Prima di iniziare, [riesamina i Termini di utilizzo per il servizio ![Icona link
 
     * Se vuoi che la tua pipeline controlli il tuo spazio {{site.data.keyword.Bluemix_short}} per trovare il servizio e un'applicazione che associ il servizio al contenitore, seleziona la casella di spunta. Se il servizio o l'applicazione associata non esistono, la pipeline aggiunge il piano gratuito del servizio al tuo spazio. L'applicazione associata che viene creata è denominata `pipeline_bridge_app`. Quindi, la pipeline utilizza le credenziali da pipeline_bridge_app per accedere ai servizi associati.
 
-    * Se hai già configurato il servizio e associato l'applicazione nel tuo spazio {{site.data.keyword.Bluemix_short}} o se vuoi [configurare questi requisiti manualmente](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}, lascia deselezionata la casella di spunta.
+    * Se hai già configurato il servizio e associato l'applicazione nel tuo spazio {{site.data.keyword.Bluemix_short}} o se vuoi configurare manualmente questi requisiti, lascia deselezionata la casella di spunta.
 
   f. Nel campo **Minuti di attesa per il completamento dell'analisi**, immetti un valore compreso tra 0 e 59 minuti. Il valore predefinito è 5 minuti. Un URL al dashboard {{site.data.keyword.staticanalyzershort}} è presente nei log della console alla fine del lavoro.
 
@@ -105,8 +105,6 @@ Esempi di output della console:
 
 **Scansione in attesa**
 ![Esempio di scansione in attesa](images/analyzer_pending.png)
-
-Per ulteriori informazioni sull'utilizzo del servizio {{site.data.keyword.staticanalyzershort}}, consulta la [documentazione del servizio {{site.data.keyword.staticanalyzershort}}](/docs/services/ApplicationSecurityonCloud/index.html){: new_window}.
 
 <!--
 

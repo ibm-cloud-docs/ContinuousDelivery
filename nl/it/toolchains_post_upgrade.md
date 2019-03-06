@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-11"
+  years: 2015, 2019
+lastupdated: "2019-2-5"
 
 ---
 
@@ -21,14 +21,14 @@ Dei progetti {{site.data.keyword.jazzhub}} in hub.jazz.net viene eseguito l'upgr
 
 {{site.data.keyword.jazzhub_short}} in hub.jazz.net è stato ritirato. 
 
-Per i tuoi progetti DevOps, utilizza il servizio [{{site.data.keyword.contdelivery_short}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/devops){:new_window}. Se sei un nuovo utente di {{site.data.keyword.Bluemix_notm}}, assicurati di controllare la [Panoramica su {{site.data.keyword.Bluemix_notm}}](/docs/overview/ibm-cloud.html#overview).
+Per i tuoi progetti DevOps, utilizza il servizio [{{site.data.keyword.contdelivery_short}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/devops){:new_window}. Se sei un nuovo utente di {{site.data.keyword.Bluemix_notm}}, assicurati di controllare la [Panoramica di {{site.data.keyword.Bluemix_notm}}](/docs/overview?topic=overview-whatis-platform).
 
 {: shortdesc}
 
 ## Trova la toolchain che è stata creata dal tuo progetto
 {: #find_toolchain}
 
-Conferma che l'aggiornamento è completo andando alla [pagina Toolchains ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/devops/toolchains){: new_window} e verificando che vengano visualizzate le toolchain con nomi che corrispondono ai nomi dei tuoi progetti hub.jazz.net. Se i tuoi progetti sono stati aggiornati automaticamente, tiene a mente questi avvertimenti:
+Conferma che l'aggiornamento è completo andando alla [pagina Toolchains ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/devops/toolchains){: new_window} e verificando che vengano visualizzate le toolchain con nomi che corrispondono ai nomi dei tuoi progetti hub.jazz.net. Se i tuoi progetti sono stati aggiornati automaticamente, tiene a mente questi avvertimenti:
    - Se un'altra toolchain ha già utilizzato il nome del tuo progetto prima che il progetto venisse aggiornato, la nuova toolchain creata per il tuo progetto potrebbe non avere il nome esatto del progetto. 
    - Se non vedi le toolchain per i tuoi progetti, passa a qualsiasi altra organizzazione a cui appartieni e controlla lì le toolchain.
    
@@ -43,24 +43,24 @@ Le toolchain sono simili ai progetti, con alcune importanti differenze:
 - Le toolchain possono includere gli strumenti che non sono disponibili nei progetti, come Slack, Sauce Labs, PagerDuty e {{site.data.keyword.DRA_full}}.
 
  {{site.data.keyword.DRA_short}} è disponibile nelle regioni Stati Uniti Sud, Regno Unito e Germania.
-  {: tip}
+ {: tip}
  
 - Nei progetti, l'appartenenza era mantenuta al livello del progetto. L'accesso alle toolchain è gestito dall'organizzazione {{site.data.keyword.Bluemix_notm}} e dalla toolchain. Per lavorare con una toolchain, devi essere un membro dell'organizzazione che contiene la toolchain. Il proprietario della toolchain ha un ulteriore controllo su chi può accedere alla toolchain e cosa può fare. Per ulteriori informazioni sul controllo dell'accesso, vedi il Passo 2 in [Introduzione alla tua toolchain](#upgrade_next_steps).
 - A seconda del tipo di repository utilizzato nel tuo progetto su hub.jazz.net, la toolchain potrebbe contenere un repository GitHub.com o un repository {{site.data.keyword.gitrepos}}.
 
-Puoi trovare ulteriori informazioni sulle toolchain su [YouTube ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://youtu.be/2SIPE1e7NJ4){: new_window} o in [Introduzione a {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html)
+Puoi trovare ulteriori informazioni sulle toolchain su [YouTube ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://youtu.be/2SIPE1e7NJ4){: new_window} o in [Introduzione a {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started)
 
 ## Introduzione alla tua toolchain
 {: #upgrade_next_steps}
 
 1. Fornisci ai tuoi membri del team l'accesso alla toolchain.
     - Ogni membro del team deve avere un account {{site.data.keyword.Bluemix_notm}} valido. I membri del team che non hanno un account valido devono [registrarsi ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/registration){:new_window}.
-    - Concedi l'accesso alla toolchain ai membri dell'organizzazione dalla pagina di gestione della toolchain. I membri del progetto esistente vengono aggiunti come membri della toolchain come parte del processo di aggiornamento. Per ulteriori informazioni sul controllo dell'accesso alle toolchain, consulta [Gestione dell'accesso ![icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){:new_window}.
+    - Concedi l'accesso alla toolchain ai membri dell'organizzazione dalla pagina di gestione della toolchain. I membri del progetto esistente vengono aggiunti come membri della toolchain come parte del processo di aggiornamento. Per ulteriori informazioni sul controllo dell'accesso per le toolchain, consulta [Gestione dell'accesso alle toolchain nelle organizzazioni Cloud Foundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){:new_window}.
     - Se un utente non è un membro dell'organizzazione a cui appartiene la toolchain, aggiungilo all'organizzazione utilizzando la pagina Gestisci organizzazioni.
     - Se la tua toolchain utilizza {{site.data.keyword.gitrepos}}, tutti i membri del progetto JazzHub che dispongono di un ID {{site.data.keyword.Bluemix_notm}} valido vengono aggiunti al repository {{site.data.keyword.gitrepos}} con gli stessi privilegi che avevano nel progetto JazzHub. Se il tuo progetto JazzHub include membri che non dispongono di un ID {{site.data.keyword.Bluemix_notm}} valido, possono registrarne uno. Dopo la registrazione, puoi aggiungerli al repository.
-      Per ulteriori informazioni sulla gestione delle organizzazioni, consulta [Gestione di organizzazioni e spazi ![icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/account/orgs_spaces.html#orgsspacesusers){:new_window}.
+      Per ulteriori informazioni sulla gestione delle organizzazioni, consulta [Gestione di organizzazioni e spazi ![icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/account?topic=account-orgsspacesusers){:new_window}.
 
-2. Se stai utilizzando {{site.data.keyword.gitrepos}}, effettua l'autenticazione utilizzando il token di accesso personale o una chiave SSH. Per ulteriori informazioni sulle chiavi SSH, vedi [Creazione di un token di accesso personale o di una chiave SSH per l'autenticazione](/docs/services/ContinuousDelivery/git_working.html#git_authentication). Per effettuare l'autenticazione da un client Git esterno tramite https, segui questa procedura:
+2. Se stai utilizzando {{site.data.keyword.gitrepos}}, effettua l'autenticazione utilizzando il token di accesso personale o una chiave SSH. Per ulteriori informazioni sulle chiavi SSH, vedi [Creazione di un token di accesso personale o di una chiave SSH per l'autenticazione](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication). Per effettuare l'autenticazione da un client Git esterno tramite https, segui questa procedura:
     1. Vai alla pagina [Access Tokens ![icona link esterno ](../../icons/launch-glyph.svg "Icona link esterno")](https://git.ng.bluemix.net/profile/personal_access_tokens){:new_window} delle tue impostazioni utente {{site.data.keyword.gitrepos}}.
     2. Crea un token di accesso personale che utilizzi come ambito **api**.
     3. Vai alla pagina [Account ![icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git.ng.bluemix.net/profile/account){:new_window} e cerca il tuo nome utente per {{site.data.keyword.gitrepos}}. Il tuo nome utente è elencato nella sezione "Change username" e viene mostrato come prima parte dell'URL per ogni repository personale che crei.
@@ -70,7 +70,7 @@ Puoi trovare ulteriori informazioni sulle toolchain su [YouTube ![Icona link est
         Per controllare su quali nomi remoti sono impostati determinati URL remoti, utilizza il comando `git remote -v`. Il nome remoto predefinito è `origin`. Se hai una configurazione più avanzata, il formato del comando è il seguente: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
         {: tip}
 
-3. Facoltativo: per esplorare la maturità di sviluppo del progetto, le procedure del tuo team e la qualità del tuo codice di base, aggiungi IBM Cloud {{site.data.keyword.DRA_short}} alla toolchain. {{site.data.keyword.DRA_short}} applica le analisi di sviluppatori, dei team e di distribuzione ai progetti DevOps. Per ulteriori informazioni, vedi [Introduzione a {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights/index.html).
+3. Facoltativo: per esplorare la maturità di sviluppo del progetto, le procedure del tuo team e la qualità del tuo codice di base, aggiungi IBM Cloud {{site.data.keyword.DRA_short}} alla toolchain. {{site.data.keyword.DRA_short}} applica le analisi di sviluppatori, dei team e di distribuzione ai progetti DevOps. Per ulteriori informazioni, vedi [Introduzione a {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).
 
   {{site.data.keyword.DRA_short}} è disponibile nelle regioni Stati Uniti Sud, Regno Unito e Germania.
   {: tip}

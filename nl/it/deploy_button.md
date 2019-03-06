@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-18"
+  years: 2015, 2019
+lastupdated: "2019-2-11"
 
 ---
 
@@ -28,7 +28,7 @@ Quando qualcuno fa clic sul tuo pulsante, si verificano le seguenti azioni:
 
 3. Viene creata una toolchain che include un nuovo clone privato del tuo repository Git, una pipeline per la creazione e distribuzione delle modifiche di codice, Eclipse Orion {{site.data.keyword.webide}} per la modifica del codice sul Cloud e un programma di traccia dei problemi.
 
-  Se la directory `.bluemix` contiene un file `toolchain.yml`, questo file viene utilizzato per specificare le integrazioni dello strumento per la toolchain. Per ulteriori informazioni sul file `toolchain.yml`, vedi [Creazione di toolchain personalizzate](/docs/services/ContinuousDelivery/toolchains_custom.html#toolchains_custom){: new_window}.
+  Se la directory `.bluemix` contiene un file `toolchain.yml`, questo file viene utilizzato per specificare le integrazioni dello strumento per la toolchain. Per ulteriori informazioni sul file `toolchain.yml`, vedi [Creazione di toolchain personalizzate](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}.
   {: tip}
 
 4. Se l'applicazione richiede un file di build, esso viene rilevato automaticamente e l'applicazione viene creata.
@@ -113,7 +113,7 @@ Per configurare la pipeline per la toolchain in una directory `.bluemix`, includ
 
 Se non hai il file `pipeline.yml` nella directory `.bluemix`, il pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}} creerà una pipeline predefinita con due fasi: una fase di build e una fase di distribuzione che esegue la distribuzione a Cloud Foundry.
 
-Per creare un file pipeline, vedi il file di esempio nelle [istruzioni sulla pipeline di toolchain personalizzata](toolchains_custom.html#toolchains_custom_pipeline_yml). Come quando definisci una pipeline nell'interfaccia web, definisci una pipeline in testo creando fasi e lavori, impostando input e variabili di ambiente e aggiungendo script. Puoi anche vedere alcuni file di pipeline più complessi in [questo progetto di dimostrazione](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix).
+Per creare un file pipeline, vedi il file di esempio nelle [istruzioni sulla pipeline di toolchain personalizzata](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml). Come quando definisci una pipeline nell'interfaccia web, definisci una pipeline in testo creando fasi e lavori, impostando input e variabili di ambiente e aggiungendo script. Puoi anche vedere alcuni file di pipeline più complessi in [questo progetto di dimostrazione](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix).
 
 ### Requisiti dei Dockerfile di contenitore
 {: container_dockerfile}
@@ -133,4 +133,4 @@ Per creare manualmente un file `pipeline.yml` che sia specifico per i contenitor
 
 Un file `manifest.yml` non è richiesto all'interno del tuo repository. Tuttavia, se la tua applicazione richiede che siano eseguiti degli altri servizi, devi fornire un file manifest che dichiara tali servizi.
 
-Per ulteriori informazioni sui file manifest, consulta [Manifest dell'applicazione](/docs/cloud-foundry/deploy-apps.html#appmanifest).
+Per ulteriori informazioni sui file manifest, consulta [Manifest dell'applicazione](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
