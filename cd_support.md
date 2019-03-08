@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-27"
+lastupdated: "2019-3-8"
 
 keywords: Continuous Delivery, Support tickets, Continuous Delivery service
 
@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 # Getting help and support for {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-The {{site.data.keyword.contdelivery_full}} team actively monitors the developerWorks forum for questions about the {{site.data.keyword.contdelivery_short}} service and toolchains. To ask a question in the forum, on toolchain and {{site.data.keyword.contdelivery_short}} pages, click **Get help in the forum** ![**Get help in the forum** button](images/get_help_in_the_forum.png).
+The {{site.data.keyword.contdelivery_full}} team actively monitors the developerWorks forum for questions about the {{site.data.keyword.contdelivery_short}} service and toolchains.
 
 <table>
 <tr>
