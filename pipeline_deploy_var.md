@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-27"
+lastupdated: "2019-3-12"
 
 keywords: Environment properties, IBM Java, pipeline environments
 
@@ -114,6 +114,7 @@ All links are in the home directory.
 |Cloud Foundry CLI 6.14 |cf | /opt/IBM/cf |
 |Gradle 1.12|gradle |/opt/IBM/gradle |
 |Gradle 2.9 |gradle2 |/opt/IBM/gradle2 |
+|IBM Cloud CLI (bx) 0.13.0 |ibmcloud |/usr/local/ibmcloud/bin/ibmcloud |
 |IBM Java (default)|java |/opt/IBM/java |
 |IBM Java 7 x86_64-71 |java7 |/opt/IBM/java7 |
 |IBM Java 8 x86_64-80|java8 |/opt/IBM/java8 |
