@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-3-1"
+lastupdated: "2019-3-12"
 
 keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
 
