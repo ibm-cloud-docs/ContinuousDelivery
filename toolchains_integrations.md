@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-3-1"
+lastupdated: "2019-3-12"
 
 keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
 
@@ -1027,8 +1027,8 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 
  b. In the Tool Integrations section, click **Sauce Labs**.
 
-1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message on your Sauce Labs account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://saucelabs.com/account){: new_window}.
-1. Type the access key for your Sauce Labs account. You can [find the key on your Sauce Labs account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://saucelabs.com/account){: new_window}.
+1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message on your Sauce Labs account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://app.saucelabs.com/user-settings){: new_window}.
+1. Type the access key for your Sauce Labs account. You can [find the key on your Sauce Labs account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://app.saucelabs.com/user-settings){: new_window}.
 1. Click **Create Integration**.
 1. Click **Sauce Labs** to go to saucelabs.com and view the test activity for the toolchain.
 
