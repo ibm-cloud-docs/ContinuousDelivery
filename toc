@@ -64,5 +64,6 @@ Continuous Delivery
     {: .navgroup id="help"}
     cd_support.md
     ts_index.md
+    troubleshoot_cd.md
     {: .navgroup-end}
     
