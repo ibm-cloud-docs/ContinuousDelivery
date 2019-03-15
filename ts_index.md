@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-27"
+lastupdated: "2019-3-15"
 
 keywords: IBM Cloud Continuous Delivery, GitHub tool integration, error message
 
@@ -30,36 +30,6 @@ subcollection: ContinuousDelivery
 Get answers to frequently asked questions about using {{site.data.keyword.contdelivery_full}}.
 {:shortdesc}
 
-
-## I tried to add the GitHub tool integration to my toolchain, why wasn't the tool integration added?
-{: #cannot_authorize_github}
-{: faq}
-
-If {{site.data.keyword.Bluemix_notm}} is not authorized to access your GitHub account, the tool integration is not added to your toolchain.
-
-If you are configuring the GitHub tool integration while you are creating your toolchain, follow these steps to authorize with GitHub:
-
-  1. In the Configurable Integrations section, click **GitHub**.
-  1. If you are creating the toolchain on {{site.data.keyword.Bluemix_notm}} Public and {{site.data.keyword.Bluemix_notm}} is not authorized to access GitHub, click **Authorize** to go to the GitHub website.
-  1. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account.
-
-If you already have a toolchain, update the GitHub tool integration's configuration:
-
- 1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**, and then click **Overview**.
- 1. On the GitHub card, click the menu and click **Configure**.
- 1. Update the configuration settings to authorize {{site.data.keyword.Bluemix_notm}} to access GitHub. Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account.
- 1. When you are finished updating the settings, click **Save Integration**.
-
-
-## I tried to create a toolchain, why am I getting an error?
-{: #cannot_create_toolchain}
-{: faq}
-
-When trying to create a toolchain in an org, if you get the following error message, remove one or more toolchains from your org and then create your toolchain again.
-
-`This organization contains 200 toolchains, which is the maximum limit. Before you can add another toolchain, remove one or more toolchains from the organization.`
-
-
 ## Why does the Toolchains page show that the {{site.data.keyword.contdelivery_short}} service Lite plan is exceeded?
 {: #plan_exceeded}
 {: faq}
@@ -72,6 +42,13 @@ When trying to create a toolchain in an org, if you get the following error mess
 {: faq}
 
 The terms of the plan for the {{site.data.keyword.contdelivery_short}} service instance that is in the same resource group or org as the toolchain manages the use of some of the tool integrations ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}}, and {{site.data.keyword.gitrepos}}) that are contained in the service. The error message indicates that the resource group or org doesn't contain the required instance of the {{site.data.keyword.contdelivery_short}} service. For more information about the terms of your plan, see [Plan limitations and usage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
+
+
+## I updated information for a toolchain from a Cloud Foundry org, why don't I see my changes in the toolchain?
+{: #updates_in_cloud_foundry}
+{: faq}
+
+When you update the toolchain information directly from Cloud Foundry, it might take a few minutes for the {{site.data.keyword.contdelivery_short}} service to refresh and show your changes. For example, if you add or remove a user from a Cloud Foundry org, it might take a few minutes for {{site.data.keyword.contdelivery_short}} to discover that there is a new user and to allow that user to access the toolchain.
 
 
 ## I created a toolchain in a Cloud Foundry org, why does the Toolchains page show that a Continuous Delivery service is required?
@@ -117,13 +94,13 @@ If you use the cf command line interface, complete the following steps:
 1. Restart your app for the changes to take effect.
 
 
-## I created an app, why doesn't the run bar show {{site.data.keyword.Bluemix_notm}} Live Sync icons in the Eclipse Orion Web IDE?
+## I created an app, why doesn't the run bar show {{site.data.keyword.Bluemix_notm}} Live Sync icons in the Eclipse Orion {{site.data.keyword.webide}}?
 {: #ts_llz_lkb_3r}
 {: faq}
 
 ![Run bar](images/webide_runbar_light.png)   
 
-When you edit a Node.js app in the Web IDE, the {{site.data.keyword.Bluemix_notm}} live edit, quick restart, and debug icons aren't available in the run bar in these circumstances:
+When you edit a Node.js app in the {{site.data.keyword.webide}}, the {{site.data.keyword.Bluemix_notm}} live edit, quick restart, and debug icons aren't available in the run bar in these circumstances:
 
 
 * The `manifest.yml` file isn't stored at the top level of your project.
@@ -134,7 +111,30 @@ When you edit a Node.js app in the Web IDE, the {{site.data.keyword.Bluemix_notm
 If the `manifest.yml` file isn't stored at the root, store it there. If your app is stored in a subdirectory, specify the path to the subdirectory in the `manifest.yml` file. If the app doesn't contain a `package.json` file, create one that is in the same directory as your app.
 
 
-## I clicked a toolchain to view its Overview page, why doesn't the toolchain load?
+## I clicked the {{site.data.keyword.webide}} run button, where are the log files? 
+{: #web_ide_log_files}
+{: faq}  
+
+When you click the Run button, the contents of your workspace are pushed to Cloud Foundry in the same way that they are deployed if you type `cf push` from your desktop. You can find the log files from the Cloud Foundry dashboard.
+
+For more information about deploying the contents of your workspace, see [Deploying an app from your workspace](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide#deploy).
+
+
+## How do I prevent the {{site.data.keyword.webide}} from automatically selecting all of the changes in the Git view? 
+{: #web_ide_git_view}
+{: faq} 
+
+The {{site.data.keyword.webide}} assumes by default that you want to push outgoing changes to your code repository each time that you go to the Git page. If you want to manually select which resources to commit, sync, reset, and replace, from the GIT preference page, clear the **Always select changed files** check box.
+
+
+## Why doesn't the {{site.data.keyword.webide}} support the language that I use? 
+{: #web_ide_language_support}
+{: faq}  
+
+The {{site.data.keyword.webide}} provides extensive tools and support for JavaScript, HTML, and CSS. It also provides syntax highlighting for most popular languages. You can't extend the {{site.data.keyword.webide}} to support a particular language. To view a complete list of the languages that the {{site.data.keyword.webide}} supports, see [Supported languages](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide#supported_languages).
+
+
+## How do I find the status of {{site.data.keyword.Bluemix_notm}} and the {{site.data.keyword.contdelivery_short}} service?
 {: #toolchains_load}
 {: faq}
 
@@ -148,19 +148,15 @@ You can find the Status page by choosing either of the following options:
 For more information about the {{site.data.keyword.Bluemix_notm}} Status page, see [Viewing {{site.data.keyword.Bluemix_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}.
 
 
-## I configured a tool integration for my toolchain, why wasn't it configured?
-{: #tool_integration_error}
+## How do I pass artifacts between pipeline jobs?
+{: #artifacts_pipeline_jobs}
 {: faq}
 
-When you add a tool integration, the toolchain communicates with the tool that is represented by the tool integration to provision any necessary resources and associate them with the toolchain. If an error occurs during the setup process or if the communication between the toolchain and the tool does not complete properly, the tool integration is put into an error state.
+Because all pipeline jobs in a stage receive the same stage input, you cannot pass artifacts between jobs that are in the same stage. However, build jobs generate artifacts that jobs in other stages can use. To pass artifacts between two jobs, move each job into a separate stage. For more information about pipeline jobs, see [Jobs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs).
 
- ![Setup failed error](images/tool_setup_failed.png)
 
-You can try to configure the tool integration again:
+## Is there a maximum time limit that my pipeline jobs can run?
+{: #pipeline_jobs_time_limit}
+{: faq}
 
-1. On its tool card, hover over the `Setup failed` message and click **Reconfigure**.
-
- ![Reconfigure button](images/tool_reconfigure.png)
-
-1. Make sure that you are using valid configuration parameters. If the error was caused by an invalid configuration, an error message is displayed; for example, `The integration could not be set up. Check the settings and try again. Reason: Invalid api_key:fakeKey`. Update the settings for the tool integration and click **Save integration**.
-1. If the error was caused by a communication problem, click **Save integration** to try again.
+Each pipeline job can run for a maximum of 60 minutes. If a job exceeds this time limit, the job fails. Examine whether the work that the pipeline job does can be divided into smaller steps. You can divide the pipeline job into several shorter pipeline jobs that run for less than 60 minutes.
