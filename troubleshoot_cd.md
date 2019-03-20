@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-3-15"
+lastupdated: "2019-3-20"
 
 keywords: troubleshoot, IBM Cloud Continuous Delivery
 
@@ -153,6 +153,26 @@ Use any of the following methods to resolve this issue:
 `GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git`
 
 `GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+
+
+## I tried adding a user to my GitLab project by way of email, but they didn't receive the invitation. How do I add them to my project?
+{: #troubleshoot-gitlab-add-user}
+{: troubleshoot}
+
+The invitation might be blocked by the user's email.
+
+I invited a user to my GitLab project by using their email address that is listed in {{site.data.keyword.gitrepos}}, but they didn't receive the email.
+{: tsSymptoms}
+   
+The email might be blocked from the user's inbox by spam filters. 
+{: tsCauses}
+
+You can use any of the following methods to resolve this problem:
+{: tsResolve}
+
+* Check your email spam folder to determine whether the email invitation was marked as spam. Emails are sent from a noreply@ address. Update your spam filters to allow emails from this address.
+
+* Investigate whether corporate spam filters that are outside of the user's control are blocking the email. Ask the user to log in to the {{site.data.keyword.gitrepos}} user interface and send you their user ID. You can add the user to the GitLab project by using their user ID.
 
 
 ## Why isn't the pipeline created properly when I create a toolchain from the template that I'm writing? 
