@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-3-15"
+lastupdated: "2019-3-20"
 
 keywords: IBM Cloud Continuous Delivery, GitHub tool integration, error message
 
@@ -37,6 +37,13 @@ Get answers to frequently asked questions about using {{site.data.keyword.contde
 {{site.data.keyword.contdelivery_short}} offers two plans: Lite and Professional. If you have the {{site.data.keyword.contdelivery_short}} Lite plan, you can use toolchains for free, up to the limits of the plan. The error message indicates that you exceeded one or more limits of the Lite plan. For example, you might exceed the plan if you have too many authorized users who are associated with the {{site.data.keyword.contdelivery_short}} service instance, or if you ran the maximum number of {{site.data.keyword.deliverypipeline}} jobs. For more information about the terms of your plan, see [Plan limitations and usage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
 
 
+## My {{site.data.keyword.contdelivery_short}} service states that Lite plan services are deleted after 30 days of inactivity. What does inactivity mean?
+{: #plan_inactivity}
+{: faq}
+
+An instance of the {{site.data.keyword.contdelivery_short}} service is considered active when one or more of the toolchains within the same resource group or Cloud Foundry organization (org) are active. A toolchain is considered active if users interact with it by way of the user interface, delivery pipeline jobs are triggered, repositories that are managed by {{site.data.keyword.gitrepos}} are accessed, or Eclipse Orion {{site.data.keyword.webide}} workspaces are in use. To be considered inactive, all of these conditions must be absent for all of the toolchains that are associated with the {{site.data.keyword.contdelivery_short}} service, for 30 days.
+
+
 ## I created a toolchain, why does the Toolchains page show that a Continuous Delivery service is required?
 {: #service_required_resource_group}
 {: faq}
@@ -61,6 +68,13 @@ This error might occur when you create a toolchain in the US South region and in
 
 You can either create the toolchain in a resource group or create the toolchain in an org that already has an instance of {{site.data.keyword.contdelivery_short}}.
   
+
+## How do I move my toolchain from a Cloud Foundry org to a resource group?
+{: #toolchain_move_to_resource_group}
+{: faq}
+
+A feature to automatically migrate toolchains from a Cloud Foundry org to a resource group is not available yet. Instead, you can manually create the toolchain again in a resource group, and then remove the original toolchain from the Cloud Foundry org.
+
 
 ## I tried to deploy an app to {{site.data.keyword.Bluemix_notm}}, why am I getting an error?
 {: #org_outofmemory}
@@ -94,7 +108,7 @@ If you use the cf command line interface, complete the following steps:
 1. Restart your app for the changes to take effect.
 
 
-## I created an app, why doesn't the run bar show {{site.data.keyword.Bluemix_notm}} Live Sync icons in the Eclipse Orion {{site.data.keyword.webide}}?
+## I created an app, why doesn't the run bar show {{site.data.keyword.Bluemix_notm}} Live Sync icons in the {{site.data.keyword.webide}}?
 {: #ts_llz_lkb_3r}
 {: faq}
 
@@ -160,3 +174,10 @@ Because all pipeline jobs in a stage receive the same stage input, you cannot pa
 {: faq}
 
 Each pipeline job can run for a maximum of 60 minutes. If a job exceeds this time limit, the job fails. Examine whether the work that the pipeline job does can be divided into smaller steps. You can divide the pipeline job into several shorter pipeline jobs that run for less than 60 minutes.
+
+
+## How secure are the pipeline secure properties?
+{: #pipeline_secure_properties}
+{: faq}
+
+Pipeline secure properties are encrypted by using AES-128, and decrypted immediately before they are passed to your pipeline script. These properties are also masked by using asterisks in the properties user interface and in your pipeline log files. Before data is written to the log file for your pipeline job, it is scanned for exact matches to all of the values in the pipeline secure properties. If a match is found, it is masked by using asterisks. Be careful when you are working with secure properties and log files since only exact matches are masked. 
