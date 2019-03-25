@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-2-27"
+lastupdated: "2019-3-25"
 
 keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
 
@@ -195,9 +195,13 @@ To modify a pipeline stage:
  
 ###Exporting a pipeline stage
 
-To export the definition for a pipeline stage, append `/yaml` to the pipeline URL:
+To export the definition for an entire pipeline, append `/yaml` to the pipeline URL:
 
-`http(s)://<DevOps Services domain>/pipeline/user/project/yaml`
+`https://cloud.ibm.com/devops/pipelines/<pipeline id>/yaml?env_id=<region id>`
+
+Where `<pipeline id>` and `<region id>` are the values that are displayed in the pipeline page URL.
+
+The resulting yaml file includes definitions of all of the pipeline stages.
 
 
 To export artifacts and logs for a pipeline stage:
