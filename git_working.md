@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-27"
+lastupdated: "2019-3-28"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository
 
@@ -40,6 +40,9 @@ The {{site.data.keyword.gitrepos}} tool integration supports teams to manage cod
 
 Because this tool integration is built on GitLab Community Edition and hosted by IBM on the {{site.data.keyword.Bluemix_notm}} Platform, a few GitLab options are not available. For example, Delivery Pipeline provides continuous integration and continuous delivery for {{site.data.keyword.Bluemix_notm}}; therefore, the continuous integration features in GitLab are not supported. In addition, the admin functions are not available because they are managed by IBM.
 {: tip}
+
+GitHub is an accessible compliant alternative to GitLab.
+{: note}
 
 ## Using {{site.data.keyword.gitrepos}} locally
 {: #git_locally}
