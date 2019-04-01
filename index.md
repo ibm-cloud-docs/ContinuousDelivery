@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-27"
+lastupdated: "2019-4-1"
 
 keywords: IBM Cloud Continuous Delivery, tool integration, toolchain template
 
@@ -27,13 +27,16 @@ subcollection: ContinuousDelivery
 Adopt a DevOps approach by using {{site.data.keyword.contdelivery_full}}, which includes open toolchains that automate the building and deployment of applications. You can get started by creating a simple deployment toolchain that supports development, deployment, and operations tasks. 
 {: shortdesc}
 
+
+If you already have an instance of {{site.data.keyword.contdelivery_short}}, you can [create a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops/create){: new_window} or [view existing toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops/toolchains){: new_window}.
+{: tip}
+
+
 ##Prerequisites
 {: #cd_prereqs}
 
 Before you can create a continuous delivery toolchain from a template, you must create an instance of {{site.data.keyword.contdelivery_short}} by selecting it from the {{site.data.keyword.Bluemix_notm}} catalog. The toolchain integrates tools for planning, developing, deploying pipelines, and managing your applications. You can always add or remove tools from your toolchains. If you already have toolchains, you can [view existing toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing_a_toolchain){: new_window}. For more information about working with toolchains, see [Using toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using){: new_window}.
 
-If you aleady have an instance of {{site.data.keyword.contdelivery_short}}, you can [create a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops/create){: new_window} or [view existing toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops/toolchains){: new_window}.
-{: tip}
 
 ##Step 1: Select a toolchain template
 {: #select_a_toolchain_template}
