@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-3-28"
+lastupdated: "2019-4-1"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository
 
@@ -29,6 +29,9 @@ Collaborate with your team and manage your source code with a Git repository (re
 Invite only people that you have a personal or business relationship with to collaborate on a project. Users that use an invitation to a Git repo for purposes other than to collaborate on a project might have their access to the service suspended or revoked.
 {: important}
 
+Both GitHub and the Git command line are accessible alternatives to GitLab.
+{: note}
+
 Don't store regulated data in files or issues within Git repos. The procedures for regulated data are currently not in place.
 {: tip}
 
@@ -41,8 +44,6 @@ The {{site.data.keyword.gitrepos}} tool integration supports teams to manage cod
 Because this tool integration is built on GitLab Community Edition and hosted by IBM on the {{site.data.keyword.Bluemix_notm}} Platform, a few GitLab options are not available. For example, Delivery Pipeline provides continuous integration and continuous delivery for {{site.data.keyword.Bluemix_notm}}; therefore, the continuous integration features in GitLab are not supported. In addition, the admin functions are not available because they are managed by IBM.
 {: tip}
 
-GitHub is an accessible compliant alternative to GitLab.
-{: note}
 
 ## Using {{site.data.keyword.gitrepos}} locally
 {: #git_locally}
