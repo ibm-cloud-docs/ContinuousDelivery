@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-3-28"
+lastupdated: "2019-4-1"
 
 keywords: Eclipse Orion {{site.data.keyword.webide}}, file types, Local Editor Settings icon
 
@@ -31,8 +31,8 @@ Best of all, the {{site.data.keyword.webide}} is powered by the web. You have no
 Don't store regulated data in files within the {{site.data.keyword.webide}}. The procedures for regulated data are currently not in place.
 {: tip}
 
-The {{site.data.keyword.webide}} is accessible by using a keyboard, but there are currently issues when you are using a screen reader. Until fixes are available for the screen reader issues, you can edit code by using your favorite code editor or text editor. You can use the Git command line or github.com to access the Git capabilities.
-{: important}
+The {{site.data.keyword.webide}} is keyboard accessible and works well with a screen reader. You can use the {{site.data.keyword.webide}} to edit code or, if you prefer, you can edit code by using your favorite code editor or text editor. You can also use the Git capabilities that are provided with the {{site.data.keyword.webide}}; alternatively, you can use the Git command line or github.com to access the {{site.data.keyword.webide}} Git capabilities.
+{: note}
 
 ## Setting up the IDE
 {: #editorsetup}
