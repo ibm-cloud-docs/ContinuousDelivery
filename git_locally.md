@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-27"
+lastupdated: "2019-04-05"
 
 keywords: Git source control, personal access token, Git repos
 
@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #git_local}
 
 
-You can manage and work with your source code in a GitHub, GitHub Enterprise, or Git Repos and Issue Tracking repository (repo), locally or in the Eclipse Orion Web IDE. To work locally, clone your repo with a Git client such as the Git command line interface, and edit your code with your favorite editor. If you work in Eclipse, you can install the EGit plug-in for version control.
+You can manage and work with source code in a GitHub, GitHub Enterprise, or {{site.data.keyword.gitrepos}} repository (repo), locally or in the Eclipse Orion {{site.data.keyword.webide}}. To work locally, clone your repo with a Git client such as the Git command line interface, and edit the code with your favorite editor. If you work in Eclipse, you can install the EGit plug-in for version control.
 
 ## Cloning your Git project from the command line
 
@@ -30,11 +30,11 @@ You can manage and work with your source code in a GitHub, GitHub Enterprise, or
 ## Before you begin
 {: #git_before_clone}
 
-1. To access the Git server outside the browser, you might need to create a personal access token or SSH key for authentication. The following table shows what you need to do to set up authentication.
+1. To access the Git server outside the browser, you must create a personal access token or SSH key for authentication. The following table shows what you need to do to set up authentication.
 
 | Git Type  | HTTPS Setup | HTTPS Use |  SSH Setup |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Personal access token](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) | Git Repos and Issue tracking user name (not your IBM id) and personal access token | [Configure the SSH key](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |
+| Git Repos and Issue Tracking  | [Personal access token](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat) | Git Repos and Issue tracking user name (not your IBM id) and personal access token | [Configure the SSH key](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key) |
 | Public GitHub (github.com) | Personal access token is not required, but you can set one up and use it | GitHub user name and password, or GitHub user name and Personal Access token, or just the personal access token as the user name | [Configure a GitHub SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
 | GitHub Enterprise | [Personal access token](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) | GitHub Enterprise user name (not your IBM id) and personal access token | [Configure the GitHub Enterprise SSH key](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |
 
@@ -72,11 +72,12 @@ Create a local copy of the project files by cloning the Git repo so that you can
 6. If you are prompted for authentication, enter the appropriate information, as defined in the previous table.
 
 
-After the download is complete, you have a local version of the files in your repo. For more information about using Git, [see the Git documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")]](http://git-scm.com/doc){: new_window}.
+After the download is complete, you have a local version of the files in your repo. For more information about using Git, see the [Git documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")]](http://git-scm.com/doc){: new_window}.
 
 
 ## Accessing your repo by using Eclipse and the EGit plug-in
 {: #git_egit}
 
-If you use Eclipse and have a project that uses Git for source control, you can use the EGit plug-in to manage your repo from Eclipse. For instructions to install and configure EGit, see [EGit tutorial ![External link icon](../../icons/launch-glyph.svg "External link icon")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
-If you use Git Repos and Issue Tracking and have any problems, see [Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local).
+If you use Eclipse and have a project that uses Git for source control, you can use the EGit plug-in to manage your repo from Eclipse. For more information about how to install and configure EGit, see the [EGit tutorial ![External link icon](../../icons/launch-glyph.svg "External link icon")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
+
+If you use {{site.data.keyword.gitrepos}} and have any problems, see the [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local) documentation.
