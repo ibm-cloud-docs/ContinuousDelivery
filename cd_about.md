@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-3-27"
+lastupdated: "2019-03-27"
 
 keywords: IBM Cloud Public, Use Developer Insights, US South
 
