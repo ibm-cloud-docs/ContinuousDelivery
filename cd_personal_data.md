@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-3-25"
+lastupdated: "2019-03-25"
 
 keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
 
