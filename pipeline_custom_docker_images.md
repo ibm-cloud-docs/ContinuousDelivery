@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018, 2019
-lastupdated: "2019-2-27"
+lastupdated: "2019-02-27"
 
 keywords: pipeline base image, custom Docker, IBM Cloud team uses
 
