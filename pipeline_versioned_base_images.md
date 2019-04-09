@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-2-27"
+lastupdated: "2019-02-27"
 
 keywords: pipeline versioned base image, image version, IBM Cloud team uses
 
