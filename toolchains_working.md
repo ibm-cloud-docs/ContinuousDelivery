@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-3-7"
+lastupdated: "2019-03-07"
 
 keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
 
