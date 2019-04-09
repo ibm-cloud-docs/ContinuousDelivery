@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-4-1"
+lastupdated: "2019-04-01"
 
 keywords: IBM Cloud Continuous Delivery, tool integration, toolchain template
 
