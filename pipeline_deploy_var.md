@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-3-12"
+lastupdated: "2019-03-12"
 
 keywords: Environment properties, IBM Java, pipeline environments
 
