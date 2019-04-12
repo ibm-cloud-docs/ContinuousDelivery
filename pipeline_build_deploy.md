@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-04-12"
 
 keywords: ADD STAGE, Run Stage icon, JOBS tab
 
@@ -71,7 +71,9 @@ To cancel a running stage, on the stage, click **View logs and history**. In the
 
 A properly configured deploy job deploys your app to your target whenever the job is run. To manually run a deploy job, click the **Run Stage** icon of the stage that the job is in.
 
-###Input revisions
+### Input revisions
+{: #deliverypipeline_input_revisions}
+
 When you run a stage manually, or if it runs because the stage before it is completed, the running stage selects its input revision. Usually, the input revision is a build number. To select the input revision, the stage follows these conditions:
 
 * If a specific revision is selected, use it.
@@ -81,7 +83,9 @@ When you run a stage manually, or if it runs because the stage before it is comp
 You can deploy a previous build. On the stage that contains the build, click **View logs and history**. On the page that opens, click to expand the run number and then click the build job. Click **SEND TO**, and select a target.
 {: tip}
 
-###Adding services to apps
+### Adding services to apps
+{: #deliverypipeline_add_services}
+
 You can add services to your apps and manage those services from your {{site.data.keyword.Bluemix_notm}} dashboard or the Cloud Foundry command line interface (CLI). You can also issue Cloud Foundry CLI commands in scripts for pipeline jobs. For example, you can add a service to an app in the script of a deploy job. For more information about adding services, see [Connecting services to external apps](/docs/resources?topic=resources-externalapp).
 
 ## Viewing logs
@@ -96,3 +100,77 @@ You can view the logs for jobs and view stages as they are running on the Stage 
 In addition to job logs, you can view unit test results, generated artifacts, and code changes for any build job.
 
 You can also run, redeploy, cancel, or configure a stage from the Stage History page. Click **RUN** to run the stage, **REDEPLOY** to redeploy if it is a deployment job, or **CONFIGURE** to configure a stage. While a stage is running, you can cancel it by clicking the run number and then clicking **CANCEL**.
+
+### Downloading logs from a script
+{: #deliverypipeline_download_logs}
+
+You can download the log file for a pipeline job from a script and save the `PIPELINE_LOG_URL` that is provided while the pipeline job is running. The following example shows the steps to upload the pipeline job's log file to a different system.
+
+
+1. Set up a `JOB_LOG` environment property for your stage.
+
+1. In your pipeline job, save the `PIPELINE_LOG_URL`.
+
+   ```shell
+   export JOB_LOG="$PIPELINE_LOG_URL"
+   ```
+1. Use the `PIPELINE_LOG_URL` in a later job within the same stage to download the log file to export it to a different system. Use an IBM Cloud bearer token to access the log file.
+
+   ```shell
+   ibmcloud login -a api.ng.bluemix.net \
+     --apikey <INSERT API KEY HERE>
+
+   BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
+
+   curl -H "Authorization: Bearer $BEARER"  \
+     -H "Accept: text/plain" \
+     -D /tmp/headers.txt \
+     -o job_log.txt \
+     "$JOB_LOG"
+   ```
+1. Check the `X-More-Data` header. If the header is set to `true`, the log file is being generated or processed. If the header is set to `false`, the log file is ready for use.
+
+   ```shell
+   grep X-More-Data /tmp/headers.txt
+   X-More-Data: false
+   ```
+1. Upload the log file to your system.
+
+   ```shell
+   scp job_log.txt user@example.org:/job1/logs
+   ```
+
+
+### Downloading artifacts from a script
+{: #deliverypipeline_download_artifacts}
+
+You can download the artifacts for a pipeline Build job from a script and save the `PIPELINE_ARTIFACT_URL` that is provided while the pipeline job is running. The following example shows the steps to upload the pipeline job's artifacts to a different system.
+
+
+1. Set up a `JOB_ARTIFACT` environment property for your stage.
+
+1. In your pipeline job, save the `PIPELINE_ARTIFACT_URL`.
+
+   ```shell
+   export JOB_ARTIFACT="$PIPELINE_ARTIFACT_URL"
+   ```
+   
+1. Use the `PIPELINE_ARTIFACT_URL` in a later job within the same stage to download the artifacts to export them to a different system. Use an IBM Cloud bearer token to access the artifacts.
+
+   ```shell
+   ibmcloud login -a api.ng.bluemix.net \
+     --apikey <INSERT API KEY HERE>
+
+   BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
+
+   DOWNLOAD_URL=$( curl -H "Authorization: Bearer $BEARER"  \
+     "$JOB_ARTIFACT" )
+
+   curl -O  "$DOWNLOAD_URL"
+   ```
+   
+1. Upload the artifacts to your system.
+
+   ```shell
+   scp $(basename "$DOWNLOAD_URL") user@example.org:/job1/artifacts
+   ```
