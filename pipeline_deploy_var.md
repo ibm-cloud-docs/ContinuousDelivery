@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-12"
 
 keywords: Environment properties, IBM Java, pipeline environments
 
@@ -61,10 +61,12 @@ The following properties and resources are available by default in pipeline envi
 | IDS_URL | The URL for the current pipeline. |
 | IDS_VERSION | The number for the build that is being deployed or the SCM identifier. This property is available only in deploy jobs.
 | JOB_NAME | The unique job ID in the context of the current pipeline. |
+| PIPELINE_ARTIFACT_URL | The URL that you can use to download the artifacts of the current Build job after the job completes. You must use a valid Bearer token to access the artifacts. |
+| PIPELINE_INITIAL_STAGE_EXECUTION_ID | The unique ID for the run of the pipeline. |
 | PIPELINE_KUBERNETES_CLUSTER_NAME | The name of the Kubernetes cluster that is selected in the current job. |
+| PIPELINE_LOG_URL | The URL that you can use to download the log file of the current job after the job completes. You must use a valid Bearer token to access the log files. |
 | PIPELINE_STAGE_INPUT_JOB_ID | The ID of the job that is input for the current stage. |
 | PIPELINE_STAGE_INPUT_REV | The revision of the input for the current stage. |
-| PIPELINE_INITIAL_STAGE_EXECUTION_ID | The unique ID for the run of the pipeline. |
 | PIPELINE_TRIGGERING_USER | The current user for the pipeline job|
 | TASK_ID | The unique ID of the job's current run. |
 | TMPDIR | A directory location where temporary files are stored. |
