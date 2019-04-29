@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-04-26"
 
 keywords: DevOps Services project, Issue Tracking repo, Git Repos
 
@@ -52,7 +52,7 @@ Toolchains are like projects, with a few important differences:
 - In projects, membership was maintained at the project level. Access to toolchains is managed by {{site.data.keyword.Bluemix_notm}} organization (org) and by toolchain. To work with a toolchain, you must be a member of the org that contains the toolchain. The toolchain owner has further control over who can access the toolchain and what they can do. For more information about access control, see step 2 in [Getting started with your toolchain](#upgrade_next_steps).
 - Depending on the type of repo you used in your project on hub.jazz.net, your toolchain might contain a GitHub.com repo or a {{site.data.keyword.gitrepos}} repo.
 
-You can learn more about toolchains on [YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/2SIPE1e7NJ4){: new_window} or from [Getting started with {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started).
+You can learn more about toolchains on [YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/2SIPE1e7NJ4){: new_window} or from [Getting started with {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).
 
 ## Getting started with your toolchain
 {: #upgrade_next_steps}
