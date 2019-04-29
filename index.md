@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 
 
 # Getting started tutorial
-{: #cd_getting_started}
+{: #getting-started}
 
 Adopt a DevOps approach by using {{site.data.keyword.contdelivery_full}}, which includes open toolchains that automate the building and deployment of applications. You can get started by creating a simple deployment toolchain that supports development, deployment, and operations tasks. 
 {: shortdesc}
@@ -80,4 +80,4 @@ Check out one of these tutorials on the [IBM&reg; Cloud Garage Method ![External
   * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
 
   * [Add a toolchain to an app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
-  
+ 
