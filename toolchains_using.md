@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-04-26"
 
 keywords: user management function, tool integrations, Cloud Foundry org
 
@@ -93,7 +93,7 @@ You can grant users access to a toolchain by adding them to both the org that th
 You must add users to the toolchain's org in the region where the toolchain is hosted. If the toolchain is configured to deploy apps to a different region, it will still deploy apps to that region.
 {: important}
 
-If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, when you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, the users can log in to {{site.data.keyword.ghe_short}} by using their {{site.data.keyword.Bluemix_notm}} ID and password. When the users log in, accounts are created for them. When you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, they are not automatically added to the {{site.data.keyword.ghe_short}} repo. Someone who has admin privileges for the repo must add them. For more information, see [Using Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, follow your internal procedures.
+If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, when you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, the users can log in to {{site.data.keyword.ghe_short}} by using their {{site.data.keyword.Bluemix_notm}} ID and password. When the users log in, accounts are created for them. When you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, they are not automatically added to the {{site.data.keyword.ghe_short}} repo. Someone who has admin privileges for the repo must add them. For more information, see [Using Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, follow your internal procedures.
 
 ###Tips for managing access to a toolchain
 
