@@ -65,5 +65,3 @@ The following table details actions that are mapped to platform management roles
 {: caption="Table 2. Service actions and operations" caption-side="top"}
 
 For information about assigning user roles in the UI, see [Managing IAM access](/docs/iam?topic=iam-iammanidaccser).
-
-<!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->
