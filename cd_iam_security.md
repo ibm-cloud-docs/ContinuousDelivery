@@ -72,5 +72,3 @@ The following table details actions that are mapped to service access roles. Ser
 {: caption="Table 3. IAM service access roles and actions" caption-side="top"}
 
 For information about assigning user roles in the UI, see [Managing IAM access](/docs/iam?topic=iam-iammanidaccser).
-
-<!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->
