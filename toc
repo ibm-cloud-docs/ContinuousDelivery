@@ -47,7 +47,6 @@ Continuous Delivery
     git_locally.md
     di_working.md
     cd_personal_data.md
-    toolchains_post_upgrade.md
     
     {: .topicgroup}
     Security
