@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-04-29"
 
 keywords: run jobs, sequences of stages, job types
 
@@ -32,7 +32,7 @@ Your permissions to view, modify, or run a pipeline are based on the access cont
 
 You can specify the scripts to run in many of the job types that are provided by the pipeline, giving you direct control over what is run by the job. These scripts run in a Docker image that contains a number of standard development tools, including tools that are required for interacting with the {{site.data.keyword.Bluemix_notm}} runtimes. For more information about what the standard Docker image contains, see [Preinstalled resources](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}. If your job requires development tools that are not available in the standard image, or you need different versions of those tools, you can use a custom image. For more information about custom images, see [Working with custom Docker images](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}.
 
-When the pipeline runs scripts, properties that describe the context where the job is running are passed to the script by using environment variables. For example, the URL of the repo that is the input to the stage, the name of the stage and the job that is being run, the parameters specified by the job type, and so on. To view a list of the available environment variables, see [Preinstalled resources](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). 
+When the pipeline runs scripts, properties that describe the context where the job is running are passed to the script by using environment variables. For example, the URL of the repo that is the input to the stage, the name of the stage and the job that is being run, the parameters specified by the job type, and so on. To view a list of the available environment variables, see [Preinstalled resources](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources).
 
 You can define properties at both the pipeline level and the stage level. Pipeline properties are shared across all stages and jobs in a pipeline. Stage properties are unique to a particular stage, and shared across all jobs in that stage. For more information about properties, see [Environment properties (Environment variables)](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties).
 
@@ -52,6 +52,20 @@ You might want tighter control of a specific stage. If you do not want a stage t
 
 ![The INPUT tab](images/input_tab_only_execute.png)
 
+More stage trigger options are available for stages that use the Git repository input type. For example, you can choose to run jobs automatically for Git events on the chosen branch. When you choose this trigger type, you must select one or more of the following event types:
+
+*	**When a commit is pushed** triggers when a push is made to the selected repo branch.
+*	**When a pull/merge request is opened or updated** triggers when a pull request or merge request is opened or edited.
+*	**When a pull/merge request is closed** triggers when a pull request or merge request is closed, even without an associated commit.
+
+![The INPUT tab triggers](images/input_tab_only_triggers.png)
+
+If you select the **When a pull/merge request is opened or updated** check box, the status of the pipeline is returned to the Git repo. When a pull request or merge request triggers your pipeline, an inline status check is displayed on the page. A status check is displayed for each of the stages that are run in your pipeline, and links to the logs and history for each stage are provided. As the status check runs, it updates from pending to either successful or failed. If your pipeline contains multiple stages, each stage reports its status in the check list.
+
+This status feedback is also supported by the IBM hosted GitLab Community Edition tool for merge requests.
+{: tip}
+
+You can also restrict merging based on the results of the status checks by using Git branch protection rules. After a branch protection rule is created, all merging is blocked until all of the required status checks are successful. 
 
 ### Build stage
 {: #build_stage}
