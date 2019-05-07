@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-03-27"
+lastupdated: "2019-05-07"
 
 keywords: IBM Cloud Public, Use Developer Insights, US South
 
@@ -117,6 +117,43 @@ The predefined DevOps toolchain templates are recommended examples that solve re
   </li><li>Eclipse Orion {{site.data.keyword.webide}}
   </li><li>Git Repos and Issue Tracking
   </li><li>{{site.data.keyword.containerlong_notm}} (Kurbernetes cluster) with a Helm chart
+  </li></ul>
+  </td></tr>
+  
+  <tr><td>
+  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-helm-toolchain" target="_blank">"Develop and test microservices on Kubernetes with Helm" toolchain
+   <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
+
+  Available in US South, Germany, and United Kingdom
+
+  </td><td>
+  With this cloud-native toolchain, you can use a combination of continuous integration and continuous deployment pipelines to coordinate individually developed microservices into releases that are promoted across environments. This toolchain uses a sample online store app that consists of three microservices: a Catalog API, an Orders API, and a user interface that calls both of these APIs. The toolchain is preconfigured for continuous delivery, source control, functional testing, issue tracking, online editing, and alert notification. <br><br>
+  Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-with-kubernetes-and-helm-toolchain" target="_blank">Use the "Develop and test microservices with Kubernetes and Helm" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>	 <br><br>
+  </td><td><ul>
+  <li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}
+  </li><li>Git Repos and Issue Tracking
+  </li><li>{{site.data.keyword.DRA_full}}
+  </li><li>PagerDuty
+  </li><li>Sauce Labs
+  </li><li>{{site.data.keyword.containerlong_notm}} (Kurbernetes cluster) with a Helm chart
+  </li></ul>
+  </td></tr>
+  
+  <tr><td>
+  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcanary-testing-istio-toolchain" target="_blank">"Canary testing in Kubernetes using Istio" toolchain
+   <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
+
+  Available in US South, US East, Germany, Tokyo, and United Kingdom
+
+  </td><td>
+  With this toolchain, you can securely develop, A/B test, and deploy an app into a Kubernetes cluster that is managed by the {{site.data.keyword.containerlong_notm}}. Although the toolchain uses a sample Node.js Hello World app by default, you can link to your own GitHub repo instead. This toolchain is preconfigured for continuous delivery with A/B testing, Vulnerability Advisor, source control, issue tracking, and online editing. <br><br>
+  Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-canary-testing-in-kubernetes-using-istio-toolchain" target="_blank">Use the "Run your first canary test in Kubernetes using the Istio toolchain" <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>	 <br><br>
+  </td><td><ul>
+  <li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}
+  </li><li>Git Repos and Issue Tracking
+    </li><li>{{site.data.keyword.containerlong_notm}} (Kurbernetes cluster)
   </li></ul>
   </td></tr>
 
