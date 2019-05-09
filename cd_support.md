@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-08"
+lastupdated: "2019-05-09"
 
 keywords: Continuous Delivery, Support tickets, Continuous Delivery service
 
@@ -37,7 +37,7 @@ The {{site.data.keyword.contdelivery_full}} team actively monitors the developer
   <p>Get help fast, directly from IBM {{site.data.keyword.contdelivery_short}} and other DevOps Services users.</p>
   <b>dW Answers</b>
   <p>
-   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
+   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,ibm-cloud" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
     <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Opens in a new tab or window)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on dW Answers.</p>
  </td>
