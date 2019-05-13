@@ -2,7 +2,12 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-08"
+
+keywords: run jobs, sequences of stages, job types
+
+subcollection: ContinuousDelivery
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -122,9 +127,9 @@ lastupdated: "2019-2-15"
 如果使用**简单**构建器类型，那么不会编译或构建代码；而是将其打包，并使其可用于未来的阶段。
 {: tip}
 
-使用 Cloud Foundry 部署时，Cloud Foundry 会包含正确的工件以允许应用程序运行。有关更多信息，请参阅[使用 cf 命令部署应用程序](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps)。Cloud Foundry 应用程序的管道包含运行 cf 命令的部署阶段。
+使用 Cloud Foundry 部署时，Cloud Foundry 会包含正确的工件以允许应用程序运行。有关更多信息，请参阅[使用 cf 命令部署应用程序](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps)。Cloud Foundry 应用程序的管道包含运行 cf 命令的部署阶段。
 
-Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://docs.cloudfoundry.org/buildpacks/detection.html)。可以在应用程序根文件夹的清单文件中指定要使用的 [buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)。buildpack 通常会检查用户提供的工件，以确定要下载的依赖项以及如何配置应用程序以与绑定服务进行通信。有关清单文件的更多信息，请参阅[应用程序清单](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest)。
+Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://docs.cloudfoundry.org/buildpacks/detection.html)。可以在应用程序根文件夹的清单文件中指定要使用的 [buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)。buildpack 通常会检查用户提供的工件，以确定要下载的依赖项以及如何配置应用程序以与绑定服务进行通信。有关清单文件的更多信息，请参阅[应用程序清单](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)。
 
 ### 部署作业
 
@@ -211,7 +216,7 @@ Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icon
 ## Cloud Foundry 清单文件
 {: #deliverypipeline_manifest}
 
-清单文件名为 `manifest.yml`，存储在项目的根目录中，用于控制如何将项目部署到 {{site.data.keyword.Bluemix_notm}}。有关创建项目清单文件的信息，请参阅[有关应用程序清单的 {{site.data.keyword.Bluemix_notm}} 文档](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest)。要与 {{site.data.keyword.Bluemix_notm}} 集成，项目的根目录中必须包含清单文件。但是，无需基于该文件中的信息进行部署。
+清单文件名为 `manifest.yml`，存储在项目的根目录中，用于控制如何将项目部署到 {{site.data.keyword.Bluemix_notm}}。有关创建项目清单文件的信息，请参阅[有关应用程序清单的 {{site.data.keyword.Bluemix_notm}} 文档](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)。要与 {{site.data.keyword.Bluemix_notm}} 集成，项目的根目录中必须包含清单文件。但是，无需基于该文件中的信息进行部署。
 
 在管道中，您可以使用 `cf push` 命令自变量，指定清单文件可以执行的所有事项。`cf push` 命令自变量在具有多个部署目标的项目中非常有用。如果多个部署作业全部尝试使用项目清单文件中指定的路径，那么会发生冲突。
 

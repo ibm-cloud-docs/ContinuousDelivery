@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-5"
+lastupdated: "2019-04-26"
+
+keywords: DevOps Services project, Issue Tracking repo, Git Repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -48,7 +52,7 @@ hub.jazz.net 上的 {{site.data.keyword.jazzhub_short}} 已撤销。
 - 在项目中，成员资格在项目级别进行维护。对工具链的访问通过 {{site.data.keyword.Bluemix_notm}} 组织和工具链进行管理。要使用工具链，您必须是包含该工具链的组织的成员。工具链所有者有权进一步控制谁可以访问工具链以及他们可以执行的操作。有关访问控制的更多信息，请参阅[工具链入门](#upgrade_next_steps)中的步骤 2。
 - 根据在 hub.jazz.net 上您项目中使用的存储库的类型，工具链可能包含 GitHub.com 存储库或 {{site.data.keyword.gitrepos}} 存储库。
 
-您可以在 [YouTube ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://youtu.be/2SIPE1e7NJ4){: new_window} 上或从 [{{site.data.keyword.contdelivery_short}} 入门](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started)中了解有关工具链的更多信息。
+您可以在 [YouTube ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://youtu.be/2SIPE1e7NJ4){: new_window} 上或从 [{{site.data.keyword.contdelivery_short}} 入门](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started)中了解有关工具链的更多信息。
 
 ## 工具链入门
 {: #upgrade_next_steps}
@@ -66,7 +70,7 @@ hub.jazz.net 上的 {{site.data.keyword.jazzhub_short}} 已撤销。
     4. 要从外部 Git 客户机通过 HTTPS 向 {{site.data.keyword.gitrepos}} 进行认证，请使用您的用户名和个人访问令牌。
     5. 如果要复用 JazzHub Git 存储库的本地存储库，请将该存储库指向 {{site.data.keyword.gitrepos}} 中的新存储库。从终端 shell 中，切换到在其中克隆 JazzHub Git 存储库的目录。输入 `git remote set-url` 命令：`git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        要检查哪些远程 URL 设置为哪些远程名称，请使用 `git remote -v` 命令。缺省远程名称为 `origin`。如果您有更高级的设置，那么该命令的格式如下：`git remote set-url<remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        要检查哪些远程 URL 设置为哪些远程名称，请使用 `git remote -v` 命令。缺省远程名称为 `origin`。如果您有更高级的设置，那么该命令的格式如下：`git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
         {: tip}
 
 3. 可选：要了解项目的开发成熟期、团队实践和代码库质量，请向工具链添加 IBM Cloud {{site.data.keyword.DRA_short}}。{{site.data.keyword.DRA_short}} 会将开发者、团队和部署分析应用于 DevOps 项目。有关更多信息，请参阅 [{{site.data.keyword.DRA_short}} 入门](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started)。

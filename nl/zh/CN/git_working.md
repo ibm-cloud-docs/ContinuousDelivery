@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-5"
+  years: 2015, 2019
+lastupdated: "2019-04-01"
+
+keywords: Git Repos, Issue Tracking, Collaborate, Git repository
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -25,6 +29,9 @@ lastupdated: "2018-12-5"
 只邀请与您有私人或业务关系的人员来协作完成项目。如果用户使用 Git 存储库邀请的目的不是为了进行项目协作，那么这些用户的服务访问权可能会被暂挂或撤销。
 {: important}
 
+GitHub 和 Git 命令行都是 GitLab 的可访问替代项。
+{: note}
+
 请勿将文件或问题中的监管数据存储在 Git 存储库中。监管数据的处理过程目前尚未就绪。
 {: tip}
 
@@ -36,6 +43,7 @@ lastupdated: "2018-12-5"
 
 因为此工具集成以 GitLab Community Edition 为基础构建且由 IBM 在 {{site.data.keyword.Bluemix_notm}} Platform 上托管，因此有一些 GitLab 选项不可用。例如，Delivery Pipeline 为 {{site.data.keyword.Bluemix_notm}} 提供持续集成和持续交付，因此不支持 GitLab 中的持续集成功能。此外，管理功能也不可用，因为它们由 IBM 管理。
 {: tip}
+
 
 ## 在本地使用 {{site.data.keyword.gitrepos}}
 {: #git_locally}

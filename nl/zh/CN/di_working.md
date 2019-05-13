@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-1-31"
+lastupdated: "2019-02-27"
+
+keywords: DevOps Insights, interactions of your team, {{site.data.keyword.DRA_full}}
+
+subcollection: ContinuousDelivery
 
 ---
 

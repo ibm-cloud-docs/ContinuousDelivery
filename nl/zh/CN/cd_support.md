@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-8"
+lastupdated: "2019-03-08"
+
+keywords: Continuous Delivery, Support tickets, Continuous Delivery service
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -18,7 +22,7 @@ lastupdated: "2019-2-8"
 # 获取 {{site.data.keyword.contdelivery_short}} 的帮助和支持    
 {: #cd_support}  
 
-{{site.data.keyword.contdelivery_full}} 团队积极监视 developerWorks 论坛，以获取有关 {{site.data.keyword.contdelivery_short}} 服务和工具链的问题。要在论坛中提问，请在工具链和 {{site.data.keyword.contdelivery_short}} 页面上单击**在论坛中获取帮助** ![**在论坛中获取帮助** 按钮](images/get_help_in_the_forum.png)。
+{{site.data.keyword.contdelivery_full}} 团队积极监视 developerWorks 论坛，以获取有关 {{site.data.keyword.contdelivery_short}} 服务和工具链的问题。
 
 <table>
 <tr>

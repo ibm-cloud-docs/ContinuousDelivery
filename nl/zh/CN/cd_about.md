@@ -2,7 +2,11 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-2-5"
+lastupdated: "2019-03-27"
+
+keywords: IBM Cloud Public, Use Developer Insights, US South
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -146,7 +150,7 @@ lastupdated: "2019-2-5"
   在美国南部、美国东部、德国、东京和英国可用
 
 </td><td>
-此工具链示范 Garage Method 中配备的 DevOps 实践。该工具链已针对持续交付、源代码控制、测试自动化和自动化监视和操作进行了预配置。它随附以 Node.js Express 4 编写的样本应用程序，您可以进行进一步扩展。<br><br>尝试以下课程：<a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">成为 Garage Method 支持者 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>。
+此工具链示范 Garage Method 中配备的 DevOps 实践。该工具链已针对持续交付、源代码控制、测试自动化和自动化监视和操作进行了预配置。它随附以 Node.js Express 4 编写的样本应用程序，您可以进行进一步扩展。<br><br>尝试以下课程：<a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Become an IBM Cloud Innovate method advocate <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a>
 </td><td>
 <ul>
 <li>{{site.data.keyword.deliverypipeline}}
@@ -157,29 +161,16 @@ lastupdated: "2019-2-5"
 </td></tr>
 
 <tr><td>
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain" target="_blank">“使用 GitHub 和 Jenkins 的 Deployment Risk Analytics”工具链 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a> <br><br>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fdevops-insights%2FDevOpsInsights_Demo_Toolchain_Template" target="_blank">“DevOps Insights 快速入门演示”工具链 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a><br><br>
 
-  在美国南部可用
-
-</td><td>有了此工具链，您可以深入了解 Jenkins 流程，以实现持续集成和交付。您可以配置 Jenkins 服务器，以在 Jenkins 运行作业时，将数据发送到 {{site.data.keyword.DRA_short}}。您还可以实施质量检测点，以根据策略阻止部署。您可以在 {{site.data.keyword.DRA_short}} 的“部署风险”仪表板上查看结果。如果您配置 GitHub 存储库以指示 Jenkins 所使用的源存储库，那么可以使用更改可跟踪性。  
-<br><br>
-尝试以下教程：<a href="https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain" target="_blank">使用“使用 GitHub 和 Jenkins 的 Deployment Risk Analytics”工具链来确保部署质量 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a><br><br>
-</td><td><ul><li>
-GitHub 和 Issues</li><li>Jenkins</li><li>{{site.data.keyword.DRA_full}}
-</li><li>Slack</li></ul>
-</td></tr>
-
-<tr><td>
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain" target="_blank">“使用 GitHub 和 JIRA 的 Developer Insights 与 Team Dynamics”工具链 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a> <br><br>
-
-  在美国南部可用
+  在美国南部、德国和英国可用
 
 </td><td>
-有了此工具链，您可以浏览项目的开发风险并使用社交编码分析，了解开发者之间的交互模式。您可以与 GitHub Issues 和/或 JIRA Issues 一起分析 GitHub 源代码。使用 Developer Insights 以识别很容易出错的文件，并查看项目如何符合 DevOps 实践。Team Dynamics 中的社交编码分析可识别团队成员之间的交互程度，以便团队可以改正生产率不高的做法。<br><br>
-尝试以下教程：<a href="https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain" target="_blank">使用“使用 GitHub 和 JIRA 的 Developer Insights 与 Team Dynamics”工具链来获取深入见解 <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a><br><br>
+有了此工具链，您无需进行任何设置就可以探索 {{site.data.keyword.DRA_short}}。首先，请登录到 {{site.data.keyword.Bluemix}}。此演示包含来自参考工具链和三个 GitHub 存储库的数据。了解如何在质量仪表板中组织、测试、构建和部署来自所有团队的所有应用程序的数据。评估趋势并了解需要改进的方面，以便确定应该将资源重点用于哪里。查看团队成员如何在 Team Dynamics 中按发布进行协作。<br><br>
+尝试以下教程：<a href="https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights" target="_blank">Explore {{site.data.keyword.DRA_full}} <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a><br><br>
 </td><td><ul><li>
 GitHub 和 Issues</li><li>{{site.data.keyword.DRA_full}}
-</li><li>JIRA</li><li>Slack</li></ul>
+</li></ul>
 </td></tr>
 
 <tr><td>

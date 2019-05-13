@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-11"
+lastupdated: "2019-03-20"
+
+keywords: IBM Cloud Continuous Delivery, GitHub tool integration, error message
+
+subcollection: ContinuousDelivery
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -26,36 +30,6 @@ lastupdated: "2019-2-11"
 获取有关使用 {{site.data.keyword.contdelivery_full}} 的常见问题的解答。
 {:shortdesc}
 
-
-## 我尝试向工具链添加 GitHub 工具集成，为什么未添加成功？
-{: #cannot_authorize_github}
-{: faq}
-
-如果 {{site.data.keyword.Bluemix_notm}} 无权访问您的 GitHub 帐户，那么工具集成不会添加到工具链中。
-
-如果创建工具链时要配置 GitHub 工具集成，请遵循以下步骤授权 GitHub 访问权：
-
-  1. 在“可配置的集成”部分中，单击 **GitHub**。
-  1. 如果要在 {{site.data.keyword.Bluemix_notm}} Public 上创建工具链，但尚未授权 {{site.data.keyword.Bluemix_notm}} 访问 GitHub，请单击**授权**以转至 GitHub Web 站点。
-  1. 如果您没有活动的 GitHub 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 GitHub 帐户。
-
-如果已经具有工具链，请更新 GitHub 工具集成的配置：
-
- 1. 在 DevOps 仪表板的**工具链**页面上，单击工具链，以打开其“概述”页面。或者，在应用程序“概述”页面的“持续交付”卡上，单击**查看工具链**，然后单击**概述**。
- 1. 在 GitHub 卡上，单击菜单并单击**配置**。
- 1. 更新配置设置以授权 {{site.data.keyword.Bluemix_notm}} 访问 GitHub。单击**授权**以转至 GitHub Web 站点。如果您没有活动的 GitHub 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 GitHub 帐户。
- 1. 完成更新设置时，单击**保存集成**。
-
-
-## 我尝试了创建工具链，为什么会遇到错误？
-{: #cannot_create_toolchain}
-{: faq}
-
-尝试在组织中创建工具链时，如果收到以下错误消息，请从您的组织中除去一个或多个工具链，然后重新创建工具链。
-
-`此组织包含 200 个工具链，其为最大限制。请从组织中除去一个或多个工具链，您才可以添加其他工具链。`
-
-
 ## 为何“工具链”页面显示已超过 {{site.data.keyword.contdelivery_short}} 服务轻量套餐？
 {: #plan_exceeded}
 {: faq}
@@ -63,11 +37,25 @@ lastupdated: "2019-2-11"
 {{site.data.keyword.contdelivery_short}} 提供两个套餐：轻量和专业。如果您有 {{site.data.keyword.contdelivery_short}} 轻量套餐，那么可以免费使用工具链，直至达到套餐限制的数量。错误消息指示您已超过轻量套餐的一个或多个限制。例如，如果有太多授权用户与 {{site.data.keyword.contdelivery_short}} 服务实例相关联或者如果运行了最大数量的 {{site.data.keyword.deliverypipeline}} 作业，那么可能超出套餐。有关套餐条款的更多信息，请参阅[套餐限制和使用情况](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}。
 
 
+## {{site.data.keyword.contdelivery_short}} 服务声明，轻量套餐在 30 天不活动后会被删除。不活动是什么意思？
+{: #plan_inactivity}
+{: faq}
+
+同一资源组或 Cloud Foundry 组织中有一个或多个工具链处于活动状态时，就会将 {{site.data.keyword.contdelivery_short}} 服务实例视为处于活动状态。如果用户通过用户界面与工具链交互，触发了交付管道作业，访问由 {{site.data.keyword.gitrepos}} 管理的存储库，或者正在使用 Eclipse Orion {{site.data.keyword.webide}} 工作空间，那么会将工具链视为处于活动状态。与 {{site.data.keyword.contdelivery_short}} 服务关联的所有工具链中必须不存在所有这些条件并且此情况持续 30 天，这时才会视为处于不活动状态。
+
+
 ## 我已创建工具链，为什么“工具链”页面显示需要 Continuous Delivery 服务？
 {: #service_required_resource_group}
 {: faq}
 
 位于工具链的相同资源组或组织中的 {{site.data.keyword.contdelivery_short}} 服务实例的套餐条款管理服务中包含的某些工具集成的使用（{{site.data.keyword.deliverypipeline}}、Eclipse Orion {{site.data.keyword.webide}} 和 {{site.data.keyword.gitrepos}}）。错误消息指示资源组或组织不包含必需的 {{site.data.keyword.contdelivery_short}} 服务实例。有关套餐条款的更多信息，请参阅[套餐限制和使用情况](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}。
+
+
+## 我更新了 Cloud Foundry 组织中工具链的信息，为什么在工具链中看不到这些更改？
+{: #updates_in_cloud_foundry}
+{: faq}
+
+直接在 Cloud Foundry 中更新工具链信息时，{{site.data.keyword.contdelivery_short}} 服务可能需要几分钟时间才会刷新并显示您的更改。例如，如果在 Cloud Foundry 组织中添加或除去了用户，那么 {{site.data.keyword.contdelivery_short}} 可能需要几分钟时间才会发现有新用户，并允许该用户访问工具链。
 
 
 ## 我已在 Cloud Foundry 组织中创建工具链，为什么“工具链”页面显示需要 Continuous Delivery 服务？
@@ -80,6 +68,13 @@ lastupdated: "2019-2-11"
 
 您可以在资源组中创建工具链或者在已具有 {{site.data.keyword.contdelivery_short}} 实例的组织中创建工具链。
   
+
+## 如何将工具链从 Cloud Foundry 组织移至资源组？
+{: #toolchain_move_to_resource_group}
+{: faq}
+
+尚未提供将工具链从 Cloud Foundry 组织自动迁移到资源组的功能。您可以改为在资源组中再次手动创建工具链，然后从 Cloud Foundry 组织中除去原始工具链。
+
 
 ## 我尝试了将应用程序部署到 {{site.data.keyword.Bluemix_notm}}，为什么会遇到错误？
 {: #org_outofmemory}
@@ -117,14 +112,13 @@ lastupdated: "2019-2-11"
 1. 重新启动应用程序以使更改生效。
 
 
-## 我创建了一个应用程序，为什么在 Eclipse Orion Web IDE 中运行栏不显示 {{site.data.keyword.Bluemix_notm}} Live Sync 图标？
+## 我创建了一个应用程序，为什么在 {{site.data.keyword.webide}} 中运行栏不显示 {{site.data.keyword.Bluemix_notm}} Live Sync 图标？
 {: #ts_llz_lkb_3r}
 {: faq}
 
 ![运行栏](images/webide_runbar_light.png)   
 
-在 Web IDE 中编辑 Node.js 应用程序时，{{site.data.keyword.Bluemix_notm}} 的“实时编辑”、“快速重新启动”和“调试”图标在以下情况下不会显示在运行栏中：
-
+在 {{site.data.keyword.webide}} 中编辑 Node.js 应用程序时，{{site.data.keyword.Bluemix_notm}} 的“实时编辑”、“快速重新启动”和“调试”图标在以下情况下不会显示在运行栏中：
 
 
 * `manifest.yml` 文件未存储在项目的顶层。
@@ -135,7 +129,30 @@ lastupdated: "2019-2-11"
 如果 `manifest.yml` 文件未存储在根目录中，请将其存储在那里。如果应用程序存储在子目录中，请在 `manifest.yml` 文件中指定该子目录的路径。如果应用程序不包含 `package.json` 文件，请在应用程序所在的目录中创建一个文件。
 
 
-## 我单击了工具链以查看其“概述”页面，为什么未装入工具链？
+## 我单击了 {{site.data.keyword.webide}} 的“运行”按钮，日志文件在哪里？ 
+{: #web_ide_log_files}
+{: faq}  
+
+单击“运行”按钮时，工作空间的内容会推送到 Cloud Foundry，就像在桌面中输入 `cf push` 来部署这些内容的方式一样。您可以在 Cloud Foundry 仪表板中找到日志文件。
+
+有关部署工作空间内容的更多信息，请参阅[从您的工作空间部署应用程序](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide#deploy)。
+
+
+## 如何阻止 {{site.data.keyword.webide}} 自动选择 Git 视图中的所有更改？ 
+{: #web_ide_git_view}
+{: faq} 
+
+缺省情况下，{{site.data.keyword.webide}} 假定您每次转至 Git 页面时，都要将传出更改推送到代码存储库。如果要在 GIT 首选项页面中手动选择要提交、同步、重置和替换的资源，请清除**始终选择更改的文件**复选框。
+
+
+## 为什么 {{site.data.keyword.webide}} 不支持我使用的语言？ 
+{: #web_ide_language_support}
+{: faq}  
+
+{{site.data.keyword.webide}} 为 JavaScript、HTML 和 CSS 提供了大量工具和支持。此外，还为大多数常用语言提供了语法突出显示功能。您无法扩展 {{site.data.keyword.webide}} 来支持特定语言。要查看 {{site.data.keyword.webide}} 支持的语言的完整列表，请参阅[受支持的语言](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide#supported_languages)。
+
+
+## 如何查找 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.contdelivery_short}} 服务的状态？
 {: #toolchains_load}
 {: faq}
 
@@ -151,21 +168,22 @@ lastupdated: "2019-2-11"
 有关 {{site.data.keyword.Bluemix_notm}}“状态”页面的更多信息，请参阅[查看 {{site.data.keyword.Bluemix_notm}} 状态](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}。
 
 
-## 我为工具链配置了工具集成，为什么未配置成功？
-{: #tool_integration_error}
+## 如何在管道作业之间传递工件？
+{: #artifacts_pipeline_jobs}
 {: faq}
 
-当您添加工具集成时，工具链会与工具集成所代表的工具进行通信，以供应任何必要资源，并将它们与工具链相关联。如果在设置过程中发生错误，或者工具链与工具之间的通信没有正确完成，那么工具集成会置于错误状态。
+由于一个阶段中的所有管道作业都会收到相同的阶段输入，因此无法在同一阶段的作业之间传递工件。但是，构建作业会生成其他阶段中的作业可以使用的工件。要在两个作业之间传递工件，请将这两个作业分别移入不同的阶段。有关管道作业的更多信息，请参阅[作业](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs)。
 
 
- ![设置失败错误](images/tool_setup_failed.png)
+## 对于管道作业可以运行的最长时间有限制吗？
+{: #pipeline_jobs_time_limit}
+{: faq}
 
-您可以再次尝试配置工具集成：
+每个管道作业最长可运行 60 分钟。如果作业超过此时间限制，该作业会失败。检查管道作业执行的工作是否可以划分成更小的步骤。您可以将管道作业划分成若干个运行时间更短的管道作业，使其运行时间短于 60 分钟。
 
-1. 在其工具卡上，将鼠标悬停在`设置失败`消息上并单击**重新配置**。
 
- ![“重新配置”按钮](images/tool_reconfigure.png)
+## 管道安全属性有多安全？
+{: #pipeline_secure_properties}
+{: faq}
 
-1. 请确保您使用有效的配置参数。如果错误由无效的配置引起，那么会显示错误消息；例如，`无法设置集成。请检查设置并重试。
-原因：api_key:fakeKey 无效`。请更新工具集成的设置并单击**保存集成**。
-1. 如果错误由通信问题引起，请单击**保存集成**，然后重试。
+管道安全属性使用 AES-128 进行加密，并在传递给管道脚本之前的那一刻才会解密。在属性用户界面和管道日志文件中，这些属性还会使用星号进行掩蔽。在将数据写入管道作业的日志文件之前，会扫描这些数据以查找与管道安全属性中的所有值完全匹配的内容。如果找到匹配项，将使用星号对其进行掩蔽。使用安全属性和日志文件时要小心，因为只有完全匹配项才会掩蔽。 

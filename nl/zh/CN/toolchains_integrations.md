@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-26"
+
+keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -223,7 +227,7 @@ lastupdated: "2019-2-15"
 
 ### 了解有关 Availability Monitoring 的更多信息
 
-要了解有关 {{site.data.keyword.prf_hubshort}} 的更多信息，请参阅 IBM Cloud Garage Method 上的 [{{site.data.keyword.prf_hublong}} 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window} 或学习以下教程：
+要了解有关 {{site.data.keyword.prf_hubshort}} 的更多信息，请参阅 IBM Cloud Garage Method 上的 [{{site.data.keyword.prf_hublong}} 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/practices/manage/tool_bluemix_availability_monitoring/){: new_window} 或学习以下教程：
 
   * [使用 {{site.data.keyword.Bluemix_notm}} Availability Monitoring 和 Alert Notification 来管理 {{site.data.keyword.Bluemix_notm}} 应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
@@ -336,7 +340,7 @@ lastupdated: "2019-2-15"
 
   如果要在向 GitHub、{{site.data.keyword.ghe_short}} 或 Git 存储库推送提交时自动运行管道，请执行以下步骤：
 
-   a. 为工具链配置 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}}，然后再为管道定义阶段。管道阶段需要存储库的 Git URL。每一个管道阶段仅可以参考与工具链相关联的其中一个 GitHub、{{site.data.keyword.ghe_short}} 或 Git 存储库。有关配置 GitHub 的指示信息，请参阅 [GitHub](#github) 一节。有关配置 Dedicated {{site.data.keyword.ghe_short}} 的指示信息，请参阅 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}。有关配置 {{site.data.keyword.gitrepos}} 的指示信息，请参阅 [{{site.data.keyword.gitrepos}}](#gitbluemix) 一节。
+   a. 为工具链配置 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}}，然后再为管道定义阶段。管道阶段需要存储库的 Git URL。每一个管道阶段仅可以参考与工具链相关联的其中一个 GitHub、{{site.data.keyword.ghe_short}} 或 Git 存储库。有关配置 GitHub 的指示信息，请参阅 [GitHub](#github) 一节。有关配置 Dedicated {{site.data.keyword.ghe_short}} 的指示信息，请参阅 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}。有关配置 {{site.data.keyword.gitrepos}} 的指示信息，请参阅 [{{site.data.keyword.gitrepos}}](#gitbluemix) 一节。
 
    b. 使用 Webhook。没有 Webhook，您只能手动运行管道。要在链接至 GitHub 或{{site.data.keyword.ghe_short}} 存储库时使用 Webhook，需要管理员特权。要链接到 {{site.data.keyword.gitrepos}} 存储库，您需要支配者或所有者特权。
 
@@ -419,7 +423,7 @@ lastupdated: "2019-2-15"
 
   * [使用“在 Cloud Foundry 上开发和测试微服务”工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
 
-  * [通过使用“具有 GitHub 和 Jenkins 的 Deployment Risk Analytics”工具链来确保部署质量 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+  * [Explore {{site.data.keyword.DRA_full}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){:new_window}
 
 
 ## 添加 Eclipse Orion Web IDE
@@ -591,13 +595,13 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
  以下指示信息仅适用于 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}。如果您使用自己的 {{site.data.keyword.ghe_short}} 受管版本，那么根据您的内部过程，有些步骤可能有所不同。
  {: important}
 
-{{site.data.keyword.ghe_long}} 是 Git 存储库基于 Web 的内部部署托管服务。Dedicated {{site.data.keyword.ghe_short}} 仅适用于 {{site.data.keyword.Bluemix_notm}} Dedicated 客户。GitHub Issues 是一种跟踪工具，可将您的工作和计划保留在一个地方。它与您的开发存储库相集成，以便您可将关注点放在重要的任务上。有关 Dedicated {{site.data.keyword.ghe_short}} 和 GitHub Issues 的更多信息，请参阅 IBM Cloud Garage Method 上的 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}和 [GitHub Issues 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}。
+{{site.data.keyword.ghe_long}} 是 Git 存储库基于 Web 的内部部署托管服务。Dedicated {{site.data.keyword.ghe_short}} 仅适用于 {{site.data.keyword.Bluemix_notm}} Dedicated 客户。GitHub Issues 是一种跟踪工具，可将您的工作和计划保留在一个地方。它与您的开发存储库相集成，以便您可将关注点放在重要的任务上。有关 Dedicated {{site.data.keyword.ghe_short}} 和 GitHub Issues 的更多信息，请参阅 IBM Cloud Garage Method 上的 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}和 [GitHub Issues 文章 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}。
 
 您可以将 {{site.data.keyword.ghe_short}} 配置为工具链中的工具集成，以便您可以管理公司 [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} 实例中的源代码。
 
 1. 如果您在创建工具链时配置此工具集成，请遵循以下步骤：
 
- a. 首次登录到 Dedicated {{site.data.keyword.ghe_short}} 之前，请要求公司的区域管理员使用 LDAP，将您在公司的用户注册表中的用户标识添加到 {{site.data.keyword.Bluemix_notm}} Dedicated 实例。有关设置 {{site.data.keyword.ghe_short}} 帐户的信息，请参阅 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}。
+ a. 首次登录到 Dedicated {{site.data.keyword.ghe_short}} 之前，请要求公司的区域管理员使用 LDAP，将您在公司的用户注册表中的用户标识添加到 {{site.data.keyword.Bluemix_notm}} Dedicated 实例。有关设置 {{site.data.keyword.ghe_short}} 帐户的信息，请参阅 [{{site.data.keyword.ghe_long}} 入门](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}。
 
  b. 在“可配置的集成”部分中，单击 **{{site.data.keyword.ghe_short}}**。    
 
@@ -940,7 +944,7 @@ PagerDuty 可将多个监视系统的数据集成到单一视图。发生问题�
 
 1. 如果要使用 API 密钥在帐户级别集成 PagerDuty，请单击**帐户**：
 
- a. 输入 PagerDuty 帐户的 API 访问密钥。如果您没有 PagerDuty 帐户，请[注册帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://signup.pagerduty.com/accounts/new){: new_window}。有关查找密钥的指示信息，请参阅[生成 API 密钥 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}。
+ a. 输入 PagerDuty 帐户的 API 访问密钥。如果您没有 PagerDuty 帐户，请[注册帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.pagerduty.com/sign-up/){: new_window}。有关查找密钥的指示信息，请参阅[生成 API 密钥 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}。
 
  b. 输入 PagerDuty 服务的名称。
 
@@ -1023,8 +1027,8 @@ Sauce Labs 运行功能单元测试。如果将 Sauce Labs 测试套件配置为
 
  b. 在“工具集成”部分中，单击 **Sauce Labs**。
 
-1. 输入与 Sauce Labs 帐户相关联的用户名。您可以[在 Sauce Labs 帐户页面的欢迎消息中查找用户名 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://saucelabs.com/account){: new_window}。
-1. 输入 Sauce Labs 帐户的访问密钥。您可以[在 Sauce Labs 帐户页面中查找密钥 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://saucelabs.com/account){: new_window}。
+1. 输入与 Sauce Labs 帐户相关联的用户名。您可以[在 Sauce Labs 帐户页面的欢迎消息中查找用户名 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://app.saucelabs.com/user-settings){: new_window}。
+1. 输入 Sauce Labs 帐户的访问密钥。您可以[在 Sauce Labs 帐户页面中查找密钥 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://app.saucelabs.com/user-settings){: new_window}。
 1. 单击**创建集成**。
 1. 单击 **Sauce Labs**，以转至 saucelabs.com 并查看工具链的测试活动。
 

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-8"
+lastupdated: "2019-04-26"
+
+keywords: Git source control, personal access token, Git repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -18,7 +22,7 @@ lastupdated: "2019-2-8"
 {: #git_local}
 
 
-您可以在本地或在 Eclipse Orion Web IDE 中，管理和使用 GitHub、GitHub Enterprise 或 Git Repos and Issue Tracking 存储库中的源代码。要在本地工作，请使用 Git 客户机（例如，Git 命令行界面）克隆存储库，然后使用您喜欢的编辑器来编辑代码。如果是在 Eclipse 中工作，那么可以安装用于版本控制的 EGit 插件。
+您可以在本地或在 Eclipse Orion {{site.data.keyword.webide}} 中，管理和使用 GitHub、GitHub Enterprise 或 {{site.data.keyword.gitrepos}} 存储库中的源代码。要在本地工作，请使用 Git 客户机（例如，Git 命令行界面）克隆存储库，然后使用您喜欢的编辑器来编辑代码。如果是在 Eclipse 中工作，那么可以安装用于版本控制的 EGit 插件。
 
 ## 从命令行克隆 Git 项目
 
@@ -26,13 +30,13 @@ lastupdated: "2019-2-8"
 ## 开始之前
 {: #git_before_clone}
 
-1. 要在浏览器外部访问 Git 服务器，可能需要创建个人访问令牌或 SSH 密钥来进行认证。下表显示了设置认证需要执行的操作。
+1. 要在浏览器外部访问 Git 服务器，您必须创建个人访问令牌或 SSH 密钥来进行认证。下表显示了设置认证需要执行的操作。
 
 |Git 类型|HTTPS 设置|HTTPS 使用|SSH 设置|
 |:-----------|:-------------|:------------|:-------------|
-|Git Repos and Issue Tracking (git.ng.bluemix.com)|[个人访问令牌](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication)|Git Repos and Issue Tracking 用户名（不是您的 IBM 标识）和个人访问令牌|[配置 SSH 密钥](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication)|
+|Git Repos and Issue Tracking|[个人访问令牌](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat)|Git Repos and Issue Tracking 用户名（不是您的 IBM 标识）和个人访问令牌|[配置 SSH 密钥](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key)|
 |公共 GitHub (github.com)|个人访问令牌不是必需的，但您可以设置并使用个人访问令牌|GitHub 用户名和密码，或 GitHub 用户名和个人访问令牌，或仅将个人访问令牌作为用户名|[配置 GitHub SSH 密钥](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)|
-|GitHub Enterprise|[个人访问令牌](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth)|GitHub Enterprise 用户名（不是您的 IBM 标识）和个人访问令牌|[配置 GitHub Enterprise SSH 密钥](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth)|
+|GitHub Enterprise|[个人访问令牌](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth)|GitHub Enterprise 用户名（不是您的 IBM 标识）和个人访问令牌|[配置 GitHub Enterprise SSH 密钥](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth)|
 
 如果更愿意使用 SSH，那么可以在所有 Git 服务器中复用单个密钥。如先前链接中所述，创建或找到密钥并在每个服务器中对其进行配置。如果使用口令创建密钥，那么在使用该密钥时，系统将提示您输入口令。
 {: tip}
@@ -68,11 +72,12 @@ lastupdated: "2019-2-8"
 6. 如果系统提示您进行认证，请输入上表中定义的相应信息。
 
 
-下载完成后，在存储库中即有本地版本的文件。有关使用 Git 的更多信息，请参阅 [Git 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://git-scm.com/doc){: new_window}.
+下载完成后，在存储库中即有本地版本的文件。有关使用 Git 的更多信息，请参阅 [Git 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")]](http://git-scm.com/doc){: new_window}。
 
 
 ## 使用 Eclipse 和 EGit 插件访问存储库
 {: #git_egit}
 
-如果使用的是 Eclipse，并且具有使用 Git 进行源代码控制的项目，那么可以使用 EGit 插件通过 Eclipse 来管理存储库。有关安装和配置 EGit 的指示信息，请参阅 [EGit 教程 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
-如果使用的是 Git Repos and Issue Tracking，请参阅 [Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local)。
+如果使用的是 Eclipse，并且具有使用 Git 进行源代码控制的项目，那么可以使用 EGit 插件通过 Eclipse 来管理存储库。有关安装和配置 EGit 的更多信息，请参阅 [EGit 教程 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}。
+
+如果使用的是 {{site.data.keyword.gitrepos}} 并且发生任何问题，请参阅 [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local) 文档。

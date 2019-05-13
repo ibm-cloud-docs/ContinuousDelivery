@@ -3,8 +3,11 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-2-8"
+lastupdated: "2019-03-07"
 
+keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -70,11 +73,11 @@ lastupdated: "2019-2-8"
 
 您可以从应用程序创建工具链。工具链可以支持持续开发、部署、监视等操作，且与应用程序相关联。每一个应用程序都可以与工具链相关联。当您将更改推送到工具链的 GitHub 或 {{site.data.keyword.ghe_short}} 存储库时，管道会自动构建和部署应用程序。
 
-如果使用自己的代码存储库创建了应用程序，那么请在应用程序的详细信息页面上单击**连接到 DevOps 工具链**。然后按照[从自己的代码存储库创建应用程序](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc)中描述的步骤进行操作。
+如果使用您自己的代码存储库创建了应用程序，请在应用程序的详细信息页面上单击**配置持续交付**。然后按照[从自己的代码存储库创建应用程序](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc)中描述的步骤进行操作。
 {: note}
 
-1. 如果使用入门模板工具包创建了应用程序，那么请在应用程序的详细信息页面上单击**部署到云**。如果您使用 {{site.data.keyword.Bluemix_notm}} Public，那么将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 存储库，进行持续交付。如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，那么将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 或 {{site.data.keyword.ghe_short}} 存储库，进行持续交付。
-1. 在工具链创建页面上，复查您要创建的工具链的图。该图按生命周期阶段显示工具链中的每一个工具集成。
+1. 如果使用入门模板工具包创建了应用程序，请在应用程序的详细信息页面上单击**配置持续交付**。接下来，选择部署目标。如果您使用 {{site.data.keyword.Bluemix_notm}} Public，那么将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 存储库，进行持续交付。如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，那么将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 或 {{site.data.keyword.ghe_short}} 存储库，进行持续交付。
+1. 在工具链配置页面上，复查您即将创建的工具链的图。该图按生命周期阶段显示工具链中的每一个工具集成。
 1. 复查工具链设置的缺省信息。工具链的名称在 {{site.data.keyword.Bluemix_notm}} 中起到标识符的作用。如果要使用其他名称，请更改工具链的名称。
 1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。
 1. 单击**创建**。此时将自动运行数个步骤，以设置工具链。设置的工具集成根据您是在 {{site.data.keyword.Bluemix_notm}} Public 上还是在 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用工具链而有所不同。例如，当您在 {{site.data.keyword.Bluemix_notm}} Public 上通过应用程序创建工具链时，会运行以下步骤：

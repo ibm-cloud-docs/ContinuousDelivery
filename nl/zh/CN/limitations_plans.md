@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-7-19"
+  years: 2016, 2019
+lastupdated: "2019-03-25"
+
+keywords: users of a service instance, a-service, Git Repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -22,21 +26,22 @@ lastupdated: "2018-7-19"
  * 与 {{site.data.keyword.gitrepos}} 存储库中的问题、问题板、源代码或其他工件进行交互的用户。
  * 操作、触发（在 UI 中直接触发或通过提交到存储库间接触发）交付管道或查看交付管道状态的用户。
  * 与 Eclipse Orion {{site.data.keyword.webide}} 交互的用户。
- 
+
 ### 如何针对组织中 {{site.data.keyword.contdelivery_short}} 的实例对用户计数？
 
-通过查看包含 {{site.data.keyword.contdelivery_short}} 服务的云组织中的所有用户来对授权用户计数。 
+通过查看包含 {{site.data.keyword.contdelivery_short}} 服务的云组织中的所有用户来对授权用户计数。
 
-要查看 {{site.data.keyword.Bluemix_notm}} Public 环境的组织中的用户列表，请从菜单栏中，单击**管理 > 帐户 > Cloud Foundry 组织**。
+要查看 {{site.data.keyword.Bluemix_notm}} Public 环境的组织中的用户列表，请从菜单栏中，单击**管理 > 帐户**。然后，单击 **Cloud Foundry 组织**。
 
 要查看 {{site.data.keyword.Bluemix_notm}} Dedicated 环境的组织中的用户列表，请从菜单栏中，单击**帐户 > 管理组织**。
 
 您还可以查看帐户中 {{site.data.keyword.contdelivery_short}} 服务的所有实例以及针对 {{site.data.keyword.Bluemix_notm}} Public 环境中的每个实例报告的用户数。
 
-1. 从菜单栏中，单击**管理 > 计费和使用情况 > 使用情况**。
-2. 单击**使用情况仪表板**。
-3. 从“帐户”菜单中，单击 **Cloud Foundry 组织**。
-4. 单击要查看其使用情况信息的组织。
+1. 从菜单栏中，单击**管理 > 计费和使用情况**。
+2. 单击**使用情况**。
+3. 在**服务**部分中，对于 {{site.data.keyword.contdelivery_short}} 服务，单击**查看套餐**。
+4. 对于要查看其信息的套餐，单击**查看详细信息**。
+5. 对于要查看其使用情况信息的 {{site.data.keyword.contdelivery_short}} 实例，单击**查看实例详细信息**。
 
 要查看帐户中 {{site.data.keyword.contdelivery_short}} 服务的所有实例以及针对 {{site.data.keyword.Bluemix_notm}} Dedicated 环境中的每个实例报告的用户数：
 
@@ -45,18 +50,19 @@ lastupdated: "2018-7-19"
 
 ### 如何针对资源组中 {{site.data.keyword.contdelivery_short}} 的实例对用户计数？
 
-通过查看 {{site.data.keyword.contdelivery_short}} 服务实例中“管理”选项卡上的用户列表，对授权用户计数。 
+通过查看 {{site.data.keyword.contdelivery_short}} 服务实例中“管理”选项卡上的用户列表，对授权用户计数。
 
 要查看授权用户的列表，请打开服务实例仪表板，然后单击“管理”选项卡。
 
 您还可以查看帐户中 {{site.data.keyword.contdelivery_short}} 服务的所有实例以及针对每个实例报告的用户数。
 
-1. 从菜单栏中，单击**管理 > 计费和使用情况 > 使用情况**。
-2. 单击**使用情况仪表板**。
-3. 从“帐户”菜单中，单击**资源组**。
-4. 单击要查看其使用情况信息的资源组。
+1. 从菜单栏中，单击**管理 > 计费和使用情况**。
+2. 单击**使用情况**。
+3. 在**服务**部分中，对于 {{site.data.keyword.contdelivery_short}} 服务，单击**查看套餐**。
+4. 对于要查看其信息的套餐，单击**查看详细信息**。
+5. 对于要查看其使用情况信息的资源组，单击**查看实例详细信息**。
 
-### 超出服务套餐的限制时会发生什么情况？ 
+### 超出服务套餐的限制时会发生什么情况？
 
 某些服务套餐可能有其他限制，例如可以运行的 Delivery Pipeline 作业数或存储器消耗量。有关更多信息，请参阅目录中的套餐描述。如果在结算周期内超出任何套餐限制，那么该服务可能会暂挂。例如，Delivery Pipeline 作业可能不会在结算周期的剩余时间内运行。
 
@@ -92,7 +98,7 @@ lastupdated: "2018-7-19"
 可以使用三种 {{site.data.keyword.gitrepos}} 项目类型：
 
   1. 公共项目对所有站点访问者可见。公共项目中的内容对可访问 {{site.data.keyword.contdelivery_short}} 的所有人可见，即使他们未受邀加入该项目也是如此。
-  2. 专用项目仅对选择的用户可见。有关授予用户项目访问权的详细信息，请参阅[项目用户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){: new_window}。
+  2. 专用项目仅对选择的用户可见。有关授予用户项目访问权的更多信息，请参阅[项目用户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){: new_window}。
   3. 内部项目对所有登录的用户可见。具有 {{site.data.keyword.Bluemix_notm}} 帐户的任何用户都可以查看这些项目。
 
 您可以在项目的设置中修改项目类型。有关更多信息，请参阅[如何更改项目可视性 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/public_access/public_access#how-to-change-project-visibility){: new_window}。

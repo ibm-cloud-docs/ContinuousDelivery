@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-7"
+lastupdated: "2019-04-01"
+
+keywords: IBM Cloud Continuous Delivery, tool integration, toolchain template
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -18,18 +22,21 @@ lastupdated: "2019-2-7"
 
 
 # 入门教程
-{: #cd_getting_started}
+{: #getting-started}
 
 使用 {{site.data.keyword.contdelivery_full}} 以采用 DevOps 方法，这包括用于自动构建和部署应用程序的开放式工具链。首先，可以创建简单部署工具链来支持开发、部署和操作任务。
 {: shortdesc}
+
+
+如果已有 {{site.data.keyword.contdelivery_short}} 的实例，那么可以[创建工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/devops/create){: new_window} 或[查看现有工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/devops/toolchains){: new_window}。
+{: tip}
+
 
 ##先决条件
 {: #cd_prereqs}
 
 必须先在 {{site.data.keyword.Bluemix_notm}}“目录”中选择 {{site.data.keyword.contdelivery_short}} 的实例以创建该实例，然后才能从模板创建持续交付工具链。工具链将集成用于规划、开发、部署管道和管理应用程序的工具。您可以随时在工具链中添加或除去工具。如果已有工具链，那么可[查看现有工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing_a_toolchain){: new_window}。有关使用工具链的更多信息，请参阅[使用工具链](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using){: new_window}。
 
-如果已有{{site.data.keyword.contdelivery_short}}的实例，那么可以[创建工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/devops/create){: new_window} 或[查看现有工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/devops/toolchains){: new_window}。
-{: tip}
 
 ##步骤 1：选择工具链模板
 {: #select_a_toolchain_template}
@@ -72,3 +79,4 @@ lastupdated: "2019-2-7"
   * [使用“开发 Cloud Foundry 应用程序”工具链来创建和使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。
 
   * [添加工具链至应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}。
+ 

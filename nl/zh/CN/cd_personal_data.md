@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-2-20"
+lastupdated: "2019-04-25"
+
+keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -29,7 +33,7 @@ lastupdated: "2019-2-20"
  * {{site.data.keyword.contdelivery_short}} 管道
  * 工具链和工具集成
  * [GitHub Enterprise on IBM Cloud ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
- * [{{site.data.keyword.DRA_full}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/DevOpsInsights?topic=DevOpsInsights-insights_personal_data){: new_window}
+ * [{{site.data.keyword.DRA_full}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data){: new_window}
  
 IBM 不管理 {{site.data.keyword.contdelivery_short}} 服务中的数据。在退出在 {{site.data.keyword.Bluemix_notm}} Public 中托管的 {{site.data.keyword.contdelivery_short}} 服务之前，必须删除自己的数据。
 {: important}
@@ -191,9 +195,13 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
  
 ###导出管道阶段
 
-要导出管道阶段的定义，请将 `/yaml` 附加到管道 URL：
+要导出整个管道的定义，请将 `/yaml` 附加到管道 URL：
 
-`http(s)://<DevOps Services domain>/pipeline/user/project/yaml`
+`https://cloud.ibm.com/devops/pipelines/<pipeline id>/yaml?env_id=<region id>`
+
+其中，`<pipeline id>` 和 `<region id>` 是管道页面 URL 中显示的值。
+
+生成的 yaml 文件包含所有管道阶段的定义。
 
 
 要导出管道阶段的工件和日志：
