@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-26"
+
+keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -225,7 +229,7 @@ Artifactory에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [A
 
 ### Availability Monitoring에 대해 자세히 알아보기
 
-{{site.data.keyword.prf_hubshort}}에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [{{site.data.keyword.prf_hublong}} 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오.
+{{site.data.keyword.prf_hubshort}}에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [{{site.data.keyword.prf_hublong}} 기사![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/practices/manage/tool_bluemix_availability_monitoring/){: new_window}를 참조하거나 이 튜토리얼을 수행하십시오.
 
   * [Manage your {{site.data.keyword.Bluemix_notm}} application by using {{site.data.keyword.Bluemix_notm}} Availability Monitoring and Alert Notification ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
@@ -338,7 +342,7 @@ Cloud Event Management에 대해 자세히 알아보려면 IBM Cloud Garage Meth
 
   커미트를 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소에 푸시할 때 파이프라인을 자동으로 실행하려면 다음 단계를 따르십시오.
 
-   a. 파이프라인의 스테이지를 정의하기 전에 도구 체인에 대해 GitHub, {{site.data.keyword.ghe_short}} 또는 {{site.data.keyword.gitrepos}}를 구성하십시오. 파이프라인 단계에는 사용하는 저장소의 Git URL이 필요합니다. 각 파이프라인 단계는 도구 체인과 연관된 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소 중 하나만 참조할 수 있습니다. GitHub 구성에 대한 지시사항은 [GitHub](#github) 섹션을 참조하십시오. 데디케이티드 {{site.data.keyword.ghe_short}} 구성에 대한 지시사항은 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}를 참조하십시오. {{site.data.keyword.gitrepos}} 구성에 대한 지시사항은 [{{site.data.keyword.gitrepos}}](#gitbluemix) 섹션을 참조하십시오.
+   a. 파이프라인의 스테이지를 정의하기 전에 도구 체인에 대해 GitHub, {{site.data.keyword.ghe_short}} 또는 {{site.data.keyword.gitrepos}}를 구성하십시오. 파이프라인 단계에는 사용하는 저장소의 Git URL이 필요합니다. 각 파이프라인 단계는 도구 체인과 연관된 GitHub, {{site.data.keyword.ghe_short}} 또는 Git 저장소 중 하나만 참조할 수 있습니다. GitHub 구성에 대한 지시사항은 [GitHub](#github) 섹션을 참조하십시오. 전용 {{site.data.keyword.ghe_short}} 구성에 대한 지시사항은 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}를 참조하십시오. {{site.data.keyword.gitrepos}} 구성에 대한 지시사항은 [{{site.data.keyword.gitrepos}}](#gitbluemix) 섹션을 참조하십시오.
 
    b. 웹훅을 사용하십시오. 웹훅이 없으면 파이프라인을 수동으로만 실행할 수 있습니다. GitHub 또는 {{site.data.keyword.ghe_short}} 저장소에 연결할 때 웹훅을 사용하려면, 관리 권한이 필요합니다. {{site.data.keyword.gitrepos}} 저장소에 연결하려면 마스터 또는 소유자 권한이 있어야 합니다.
 
@@ -420,7 +424,7 @@ Sauce Labs 테스트 작업을 추가하도록 {{site.data.keyword.deliverypipel
 
   * ["Cloud Foundry에서 마이크로서비스 개발 및 테스트" 도구 체인 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
 
-  * ["GitHub 및 Jenkins를 사용하는 Deployment Risk Analytics" 도구 체인을 사용하여 품질 배치 보장 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+  * [탐색 {{site.data.keyword.DRA_full}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){:new_window}
 
 
 ## Eclipse Orion Web IDE 추가
@@ -591,13 +595,13 @@ GitHub에 대해 자세히 알아보려면 IBM Cloud Garage Method에서 [GitHub
  다음 지시사항은 {{site.data.keyword.ghe_short}}용 {{site.data.keyword.Bluemix_notm}} 데디케이티드에 적용됩니다. {{site.data.keyword.ghe_short}}의 자체 관리 버전을 사용 중이면 일부 단계가 내부 프로시저에 따라 다를 수 있습니다.
  {: important}
 
-{{site.data.keyword.ghe_long}}는 Git 저장소를 위한 온프레미스 웹 기반 호스팅 서비스입니다. 데디케이티드 {{site.data.keyword.ghe_short}}는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 고객 전용입니다. GitHub Issues는 작업과 플랜을 한 위치에 보관하는 추적 도구입니다. 개발 저장소에 통합되므로 중요한 태스크에 집중할 수 있습니다. 전용 {{site.data.keyword.ghe_short}} 및 GitHub Issues에 대한 자세한 정보는 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window} 및 IBM Cloud Garage Method에서 [GitHub Issues 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}를 참조하십시오. 
+{{site.data.keyword.ghe_long}}는 Git 저장소를 위한 온프레미스 웹 기반 호스팅 서비스입니다. 데디케이티드 {{site.data.keyword.ghe_short}}는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 고객 전용입니다. GitHub Issues는 작업과 플랜을 한 위치에 보관하는 추적 도구입니다. 개발 저장소에 통합되므로 중요한 태스크에 집중할 수 있습니다. 전용 {{site.data.keyword.ghe_short}} 및 GitHub Issues에 대한 자세한 정보는 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window} 및 IBM Cloud Garage Method의 [GitHub Issues 기사 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}를 참조하십시오. 
 
 회사의 [{{site.data.keyword.Bluemix_notm}} 데디케이티드](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} 인스턴스에서 소스 코드를 관리할 수 있도록 {{site.data.keyword.ghe_short}}를 도구 체인의 도구 통합으로 구성할 수 있습니다.
 
 1. 도구 체인을 작성할 때 이 도구 통합을 구성하는 경우 다음 단계를 따르십시오.
 
- a. 데디케이티드 {{site.data.keyword.ghe_short}}에 처음으로 로그인하기 전에, LDAP을 사용하여 회사 사용자 레지스트리의 {{site.data.keyword.Bluemix_notm}} 데디케이티드 인스턴스에 사용자 ID를 추가하도록 회사의 지역 관리자에게 요청하십시오. {{site.data.keyword.ghe_short}} 계정 설정에 대한 정보는 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}를 참조하십시오. 
+ a. 데디케이티드 {{site.data.keyword.ghe_short}}에 처음으로 로그인하기 전에, LDAP을 사용하여 회사 사용자 레지스트리의 {{site.data.keyword.Bluemix_notm}} 데디케이티드 인스턴스에 사용자 ID를 추가하도록 회사의 지역 관리자에게 요청하십시오. {{site.data.keyword.ghe_short}} 계정 설정에 대한 정보는 [{{site.data.keyword.ghe_long}} 시작하기](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}를 참조하십시오. 
 
  b. 구성 가능한 통합 섹션에서 **{{site.data.keyword.ghe_short}}**을 클릭하십시오.    
 
@@ -940,7 +944,7 @@ PagerDuty는 여러 모니터링 시스템의 데이터를 단일 보기로 통�
 
 1. API 키를 사용하여 계정 레벨에서 PagerDuty를 통합하려면 **계정**을 클릭하십시오.
 
- a. PagerDuty 계정의 API 액세스 키를 입력하십시오. PagerDuty 계정이 없으면 [register for one ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://signup.pagerduty.com/accounts/new){: new_window}을 수행하십시오. 키 찾기에 대한 지시사항은 [Generating an API Key![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}를 참조하십시오.
+ a. PagerDuty 계정의 API 액세스 키를 입력하십시오. PagerDuty 계정이 없으면 [register for one ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.pagerduty.com/sign-up/){: new_window}을 수행하십시오. 키 찾기에 대한 지시사항은 [Generating an API Key![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}를 참조하십시오.
 
  b. 사용하는 PagerDuty 서비스의 이름을 입력하십시오.
 
@@ -1023,8 +1027,8 @@ Sauce Labs는 기능 단위 테스트를 실행합니다. {{site.data.keyword.de
 
  b. 도구 통합 섹션에서 **Sauce Labs**를 클릭하십시오.
 
-1. 사용하는 Sauce Labs 계정과 연관된 사용자 이름을 입력하십시오. [Sauce Labs 계정 페이지의 환영 메시지에서 사용자 이름 찾기![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://saucelabs.com/account){: new_window}를 수행할 수 있습니다.
-1. Sauce Labs 계정의 액세스 키를 입력하십시오. [Sauce Labs 계정 페이지에서 키 찾기![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://saucelabs.com/account){: new_window}를 수행할 수 있습니다.
+1. 사용하는 Sauce Labs 계정과 연관된 사용자 이름을 입력하십시오. [Sauce Labs 계정 페이지의 환영 메시지에서 사용자 이름 찾기![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://app.saucelabs.com/user-settings){: new_window}를 수행할 수 있습니다.
+1. Sauce Labs 계정의 액세스 키를 입력하십시오. [Sauce Labs 계정 페이지에서 키 찾기![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://app.saucelabs.com/user-settings){: new_window}를 수행할 수 있습니다.
 1. **통합 작성**을 클릭하십시오.
 1. **Sauce Labs**를 클릭하여 saucelabs.com으로 이동하고 도구 체인의 테스트 활동을 보십시오.
 

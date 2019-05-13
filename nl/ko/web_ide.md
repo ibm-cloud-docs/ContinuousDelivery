@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-1-31"
+lastupdated: "2019-04-01"
+
+keywords: Eclipse Orion {{site.data.keyword.webide}}, file types, Local Editor Settings icon
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -11,6 +15,8 @@ lastupdated: "2019-1-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
 {:download: .download}
 
@@ -24,6 +30,9 @@ Eclipse Orion {{site.data.keyword.webide}}는 브라우저 기반의 개발 환�
 
 {{site.data.keyword.webide}} 내의 파일에 규제된 데이터를 저장하지 마십시오. 규제된 데이터에 대한 프로시저는 현재 시행되지 않고 있습니다.
 {: tip}
+
+{{site.data.keyword.webide}}는 키보드에서 액세스 가능하며 스크린 리더와 함께 사용해도 잘 작동합니다. {{site.data.keyword.webide}}를 사용하여 코드를 편집할 수 있으며, 원하는 경우에는 다른 선호하는 코드 편집기 또는 텍스트 편집기를 사용하여 코드를 편집할 수도 있습니다. {{site.data.keyword.webide}}와 함께 제공되는 Git 기능을 사용할 수도 있으며, 또는 Git 명령행 또는 github.com을 사용하여 {{site.data.keyword.webide}} Git 기능에 액세스할 수도 있습니다.
+{: note}
 
 ## IDE 설정
 {: #editorsetup}
@@ -92,11 +101,11 @@ Eclipse Orion {{site.data.keyword.webide}}는 브라우저 기반의 개발 환�
 <tr><td><img src="./images/open_dashboard.png"  alt="대시보드 열기 아이콘"></td><td>앱의 대시보드를 엽니다.</td></tr>
 </table>
 
-Node.js 앱을 개발하는 경우, 라이브 편집 모드를 사용하십시오. <img  src="./images/enable_live_edit.png"  alt="라이브 편집 슬라이더 사용">
+Node.js 앱을 개발하는 경우, Live Edit 모드를 사용하십시오. <img  src="./images/enable_live_edit.png"  alt="Live Edit 슬라이더 사용">
 
-<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="라이브 편집 다시 시작 아이콘"></td><td>라이브 편집 모드를 사용하여 재배치하지 않고 앱을 신속하게 다시 시작합니다.</td></tr>
+<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="Live Edit 다시 시작 아이콘"></td><td>Live Edit 모드를 사용하여 재배치하지 않고 앱을 신속하게 다시 시작합니다.</td></tr>
 <tr><td> <img src="./images/debug_icon.png"  alt="디버그 아이콘"></td>
-<td>라이브 편집 모드를 사용하여 디버거에 액세스합니다.
+<td>Live Edit 모드를 사용하여 디버거에 액세스합니다.
 </td></tr>
 </table>
 

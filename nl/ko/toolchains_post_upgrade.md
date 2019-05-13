@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-5"
+lastupdated: "2019-04-26"
+
+keywords: DevOps Services project, Issue Tracking repo, Git Repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -48,14 +52,14 @@ hub.jazz.net에 하나 이상의 프로젝트가 있는 경우 업그레이드�
 - 프로젝트에서 멤버십은 프로젝트 레벨로 유지됩니다. 도구 체인에 대한 액세스는 {{site.data.keyword.Bluemix_notm}} 조직 및 도구 체인으로 관리됩니다. 도구 체인에 대해 작업하려면 도구 체인이 포함된 조직의 구성원이어야 합니다. 도구 체인 소유자는 도구 체인에 액세스할 수 있는 사용자 및 수행할 수 있는 작업을 추가로 제어할 수 있습니다. 액세스 제어에 대한 자세한 정보는 [도구 체인 시작하기](#upgrade_next_steps)의 단계 2를 참조하십시오.
 - hub.jazz.net의 프로젝트에 사용한 저장소의 유형에 따라 도구 체인에는 GitHub.com 저장소 또는 {{site.data.keyword.gitrepos}} 저장소가 포함될 수 있습니다.
 
-[YouTube ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://youtu.be/2SIPE1e7NJ4){: new_window} 또는 [{{site.data.keyword.contdelivery_short}} 시작하기](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started)에서 도구 체인에 대해 자세히 알아볼 수 있습니다. 
+[YouTube ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://youtu.be/2SIPE1e7NJ4){: new_window} 또는 [{{site.data.keyword.contdelivery_short}} 시작하기](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started)에서 도구 체인에 대해 자세히 알아볼 수 있습니다. 
 
 ## 도구 체인 시작하기
 {: #upgrade_next_steps}
 
 1. 팀 구성원에게 도구 체인에 대한 액세스 권한을 부여하십시오.
     - 각 팀 구성원은 유효한 {{site.data.keyword.Bluemix_notm}} 계정을 보유해야 합니다. 계정이 없는 팀 구성원은 [등록 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/registration){:new_window}이 필요합니다.
-    - 도구 체인 관리 페이지에서 조직 구성원에게 도구 체인에 액세스하는 권한을 부여하십시오. 기존 프로젝트 구성원은 업그레이드 프로세스의 일부로 도구 체인의 구성원으로 추가됩니다. 도구 체인의 액세스 제어에 대한 자세한 정보는 [Cloud Foundry 조직의 도구 체인에 대한 액세스 관리 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){:new_window}를 참조하십시오. 
+    - 도구 체인 관리 페이지에서 조직 구성원에게 도구 체인에 액세스하는 권한을 부여하십시오. 기존 프로젝트 구성원은 업그레이드 프로세스의 일부로 도구 체인의 구성원으로 추가됩니다. 도구 체인의 액세스 제어에 대한 자세한 정보는 [Cloud Foundry 조직의 도구 체인에 대한 액세스 관리 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){:new_window}를 참조하십시오.
     - 사용자가 도구 체인이 속한 조직의 구성원이 아니면 조직 관리 페이지에서 조직에 사용자를 추가하십시오.
     - 도구 체인에서 {{site.data.keyword.gitrepos}}를 사용하는 경우 올바른 {{site.data.keyword.Bluemix_notm}} ID가 있는 모든 JazzHub 프로젝트 구성원은 JazzHub 프로젝트에서 보유한 동일한 권한으로 {{site.data.keyword.gitrepos}} 저장소에 추가됩니다. JazzHub 프로젝트에 올바른 {{site.data.keyword.Bluemix_notm}} ID가 없는 구성원이 포함되어 있는 경우 ID를 등록할 수 있습니다. 등록하면 저장소에 추가할 수 있습니다.
       조직 관리에 대한 자세한 정보는 [조직 및 영역 관리![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/account?topic=account-orgsspacesusers){:new_window}를 참조하십시오.
@@ -67,10 +71,10 @@ hub.jazz.net에 하나 이상의 프로젝트가 있는 경우 업그레이드�
     4. HTTPS를 통해 외부 Git 클라이언트에서 {{site.data.keyword.gitrepos}}를 인증하려면 사용자 이름과 개인 액세스 토큰을 사용하십시오.
     5. JazzHub Git 저장소의 로컬 저장소를 재사용하려면 저장소가 {{site.data.keyword.gitrepos}}의 새 저장소를 가리키게 지정하십시오. 터미널 쉘에서 JazzHub Git 저장소가 복제된 디렉토리로 변경하십시오. `git remote set-url` 명령을 입력하십시오. `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        어떤 원격 URL이 어떤 원격 이름으로 설정되었는지 확인하려면 `git remote -v` 명령을 사용하십시오. 기본 원격 이름은 `origin`입니다. 고급 설정이 있으면 명령의 형식은 다음과 같습니다. `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        어떤 원격 URL이 어떤 원격 이름으로 설정되었는지 확인하려면 `git remote -v` 명령을 사용하십시오. 기본 원격 이름은 `origin`입니다. 고급 설정이 있는 경우 명령의 형식은 다음과 같습니다. `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
         {: tip}
 
-3. 선택사항: 프로젝트의 개발 성숙도, 팀의 사례 및 코드 베이스 품질을 탐색하려면 IBM Cloud {{site.data.keyword.DRA_short}}를 도구 체인에 추가하십시오. {{site.data.keyword.DRA_short}}에서는 개발자, 팀 및 배치 분석을 DevOps 프로젝트에 적용합니다. 자세한 정보는 [{{site.data.keyword.DRA_short}} 시작하기](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started)를 참조하십시오. 
+3. 선택사항: 프로젝트의 개발 성숙도, 팀의 사례 및 코드 베이스 품질을 탐색하려면 IBM Cloud {{site.data.keyword.DRA_short}}를 도구 체인에 추가하십시오. {{site.data.keyword.DRA_short}}에서는 개발자, 팀 및 배치 분석을 DevOps 프로젝트에 적용합니다. 자세한 정보는 [{{site.data.keyword.DRA_short}} 시작하기](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started)를 참조하십시오.
 
   {{site.data.keyword.DRA_short}}는 미국 남부, 영국 및 독일 지역에서 사용 가능합니다.
   {: tip}

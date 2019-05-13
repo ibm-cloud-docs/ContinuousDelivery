@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-04-26"
+
+keywords: user management function, tool integrations, Cloud Foundry org
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -89,7 +93,7 @@ Delivery Pipeline과 같은 도구 체인에 있는 {{site.data.keyword.contdeli
 도구 체인이 호스팅되는 지역에 있는 도구 체인의 조직에 사용자를 추가해야 합니다. 앱을 다른 지역에 배치하도록 도구 체인이 구성된 경우 여전히 해당 지역에 앱을 배치합니다.
 {: important}
 
-{{site.data.keyword.ghe_short}}용 {{site.data.keyword.Bluemix_notm}} 데디케이티드를 사용 중인 경우, {{site.data.keyword.Bluemix_notm}} 조직 및 영역에 사용자를 추가하면 해당 사용자가 자체 {{site.data.keyword.Bluemix_notm}} ID 및 비밀번호를 사용하여 {{site.data.keyword.ghe_short}}에 로그인할 수 있습니다. 사용자가 로그인할 때 사용자의 계정이 작성됩니다. {{site.data.keyword.Bluemix_notm}} 조직 및 영역에 사용자를 추가하는 경우, {{site.data.keyword.ghe_short}} 저장소에는 자동으로 추가되지 않습니다. 저장소에 대해 관리자 권한이 있는 사용자가 추가해야 합니다. 자세한 정보는 [Dedicated GitHub Enterprise 사용](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}을 참조하십시오. {{site.data.keyword.ghe_short}}의 자체 관리 버전을 사용 중이면 내부 프로시저를 따르십시오.
+{{site.data.keyword.ghe_short}}용 {{site.data.keyword.Bluemix_notm}} 데디케이티드를 사용 중인 경우, {{site.data.keyword.Bluemix_notm}} 조직 및 영역에 사용자를 추가하면 해당 사용자가 자체 {{site.data.keyword.Bluemix_notm}} ID 및 비밀번호를 사용하여 {{site.data.keyword.ghe_short}}에 로그인할 수 있습니다. 사용자가 로그인할 때 사용자의 계정이 작성됩니다. {{site.data.keyword.Bluemix_notm}} 조직 및 영역에 사용자를 추가하는 경우, {{site.data.keyword.ghe_short}} 저장소에는 자동으로 추가되지 않습니다. 저장소에 대해 관리자 권한이 있는 사용자가 추가해야 합니다. 자세한 정보는 [Dedicated GitHub Enterprise 사용](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}을 참조하십시오. {{site.data.keyword.ghe_short}}의 자체 관리 버전을 사용 중이면 내부 프로시저를 따르십시오.
 
 ###도구 체인에 대한 액세스 관리를 위한 팁
 

@@ -2,7 +2,12 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-04-12"
+
+keywords: ADD STAGE, Run Stage icon, JOBS tab
+
+subcollection: ContinuousDelivery
+
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -66,7 +71,9 @@ lastupdated: "2019-2-1"
 
 적절히 구성된 배치 작업은 실행될 때마다 대상에 앱을 배치합니다. 배치 작업을 수동으로 실행하려면 작업이 있는 단계의 **단계 실행** 아이콘을 클릭하십시오.
 
-###입력 변경내용
+### 입력 변경내용
+{: #deliverypipeline_input_revisions}
+
 단계를 수동으로 실행하거나 이전 단계가 완료되었기 때문에 단계가 실행되는 경우, 실행 단계는 해당 입력 변경내용을 선택합니다. 주로 입력 변경내용은 빌드 번호입니다. 입력 변경내용을 선택하기 위해 단계에서 다음 조건을 따릅니다.
 
 * 특정 변경내용이 선택되어 있으면 이를 사용합니다.
@@ -76,8 +83,10 @@ lastupdated: "2019-2-1"
 이전 빌드를 배치할 수 있습니다. 빌드가 포함된 단계에서 **로그 및 히스토리 보기**를 클릭하십시오. 열린 페이지에서 클릭하여 실행 번호를 펼친 후 빌드 작업을 클릭하십시오. **받는 사람**을 클릭하고 대상을 선택하십시오.
 {: tip}
 
-###앱에 서비스 추가
-앱에 서비스를 추가하고 {{site.data.keyword.Bluemix_notm}} 대시보드 또는 Cloud Foundry CLI(Command Line Interface)에서 이러한 서비스를 관리할 수 있습니다. 또한 파이프라인 작업에 대해 스크립트에서 Cloud Foundry CLI 명령을 실행할 수도 있습니다. 예를 들어, 배치 작업의 스크립트에서 앱에 서비스를 추가할 수 있습니다. 서비스 추가에 대한 자세한 정보는 [외부 앱에 서비스 연결](/docs/resources?topic=resources-externalapp)을 참조하십시오. 
+### 앱에 서비스 추가
+{: #deliverypipeline_add_services}
+
+앱에 서비스를 추가하고 {{site.data.keyword.Bluemix_notm}} 대시보드 또는 Cloud Foundry CLI(Command Line Interface)에서 이러한 서비스를 관리할 수 있습니다. 또한 파이프라인 작업에 대해 스크립트에서 Cloud Foundry CLI 명령을 실행할 수도 있습니다. 예를 들어, 배치 작업의 스크립트에서 앱에 서비스를 추가할 수 있습니다. 서비스 추가에 대한 자세한 정보는 [외부 앱에 서비스 연결](/docs/resources?topic=resources-externalapp)을 참조하십시오.
 
 ## 로그 보기
 {: #deliverypipeline_view_logs}
@@ -91,3 +100,77 @@ lastupdated: "2019-2-1"
 작업 로그 이외에, 단위 테스트 결과, 생성된 아티팩트 및 빌드 작업의 코드 변경사항을 볼 수 있습니다.
 
 또한 단계 히스토리 페이지에서 단계를 실행, 재배치, 취소 또는 구성할 수 있습니다. 단계를 실행하려면 **실행**을 클릭하고, 배치 작업인 경우 재배치하려면 **재배치**를 클릭하며 단계를 구성하려는 경우 **구성**을 클릭하십시오. 단계가 실행 중인 동안 실행 번호를 클릭한 후 **취소**를 클릭하여 단계를 취소할 수 있습니다.
+
+### 스크립트에서 로그 다운로드
+{: #deliverypipeline_download_logs}
+
+스크립트에서 파이프라인 작업에 대한 로그 파일을 다운로드하고 파이프라인 작업 실행 중에 제공된 `PIPELINE_LOG_URL`을 저장할 수 있습니다. 다음 예는 파이프라인 작업의 로그 파일을 다른 시스템에 업로드하는 단계를 보여줍니다. 
+
+
+1. 단계에 대한 `JOB_LOG` 환경 변수를 설정하십시오. 
+
+1. 파이프라인 작업에서 `PIPELINE_LOG_URL`을 저장하십시오. 
+
+   ```shell
+   export JOB_LOG="$PIPELINE_LOG_URL"
+   ```
+1. 동일한 단계 내의 이후 작업에서 `PIPELINE_LOG_URL`을 사용해 로그 파일을 다운로드하여 다른 시스템으로 내보내십시오. IBM Cloud 베어러 토큰을 사용하여 로그 파일에 액세스하십시오. 
+
+   ```shell
+   ibmcloud login -a api.ng.bluemix.net \
+     --apikey <INSERT API KEY HERE>
+
+   BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
+
+   curl -H "Authorization: Bearer $BEARER"  \
+     -H "Accept: text/plain" \
+     -D /tmp/headers.txt \
+     -o job_log.txt \
+     "$JOB_LOG"
+   ```
+1. `X-More-Data` 헤더를 확인하십시오. 이 헤더가 `true`로 설정된 경우에는 로그 파일이 생성되거나 처리되는 중입니다. 이 헤더가 `false`로 설정된 경우에는 로그 파일이 사용할 준비가 된 것입니다. 
+
+   ```shell
+   grep X-More-Data /tmp/headers.txt
+   X-More-Data: false
+   ```
+1. 로그 파일을 시스템에 업로드하십시오. 
+
+   ```shell
+   scp job_log.txt user@example.org:/job1/logs
+   ```
+
+
+### 스크립트에서 아티팩트 다운로드
+{: #deliverypipeline_download_artifacts}
+
+스크립트에서 파이프라인 빌드 작업에 대한 아티팩트를 다운로드하고 파이프라인 작업 실행 중에 제공된 `PIPELINE_ARTIFACT_URL`을 저장할 수 있습니다. 다음 예는 파이프라인 작업의 아티팩트를 다른 시스템에 업로드하는 단계를 보여줍니다. 
+
+
+1. 단계에 대한 `JOB_ARTIFACT` 환경 변수를 설정하십시오. 
+
+1. 파이프라인 작업에서 `PIPELINE_ARTIFACT_URL`을 저장하십시오. 
+
+   ```shell
+   export JOB_ARTIFACT="$PIPELINE_ARTIFACT_URL"
+   ```
+   
+1. 동일한 단계 내의 이후 작업에서 `PIPELINE_ARTIFACT_URL`을 사용해 아티팩트를 다운로드하여 다른 시스템으로 내보내십시오. IBM Cloud 베어러 토큰을 사용하여 아티팩트에 액세스하십시오. 
+
+   ```shell
+   ibmcloud login -a api.ng.bluemix.net \
+     --apikey <INSERT API KEY HERE>
+
+   BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
+
+   DOWNLOAD_URL=$( curl -H "Authorization: Bearer $BEARER"  \
+     "$JOB_ARTIFACT" )
+
+   curl -O  "$DOWNLOAD_URL"
+   ```
+   
+1. 아티팩트를 시스템에 업로드하십시오. 
+
+   ```shell
+   scp $(basename "$DOWNLOAD_URL") user@example.org:/job1/artifacts
+   ```

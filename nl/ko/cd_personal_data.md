@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-2-20"
+lastupdated: "2019-04-25"
+
+keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -29,7 +33,7 @@ lastupdated: "2019-2-20"
  * {{site.data.keyword.contdelivery_short}} Pipelines
  * 도구 체인 및 도구 통합
  * [GitHub Enterprise on IBM Cloud ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
- * [{{site.data.keyword.DRA_full}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/DevOpsInsights?topic=DevOpsInsights-insights_personal_data){: new_window}
+ * [{{site.data.keyword.DRA_full}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data){: new_window}
  
 IBM은 {{site.data.keyword.contdelivery_short}} 서비스의 데이터를 관리하지 않습니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 호스팅되는 {{site.data.keyword.contdelivery_short}} 서비스를 종료하기 전에 고유 데이터를 삭제해야 합니다.
 {: important}
@@ -191,9 +195,13 @@ Git 계정을 삭제하기 전에 다른 프로젝트의 개인 데이터를 삭
  
 ###파이프라인 단계 내보내기
 
-파이프라인 단계에 대한 정의를 내보내려면 파이프라인 URL에 `/yaml`을 추가하십시오.
+전체 파이프라인에 대한 정의를 내보내려면 파이프라인 URL에 `/yaml`을 추가하십시오. 
 
-`http(s)://<DevOps Services domain>/pipeline/user/project/yaml`
+`https://cloud.ibm.com/devops/pipelines/<pipeline id>/yaml?env_id=<region id>`
+
+여기서 `<pipeline id>` 및 `<region id>`는 파이프라인 페이지 URL에 표시된 값입니다. 
+
+결과 yaml 파일은 모든 파이프라인 단계의 정의를 포함합니다. 
 
 
 파이프라인 단계에 대한 아티팩트 및 로그를 내보내려면 다음을 수행하십시오.

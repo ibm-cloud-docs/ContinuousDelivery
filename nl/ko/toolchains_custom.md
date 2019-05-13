@@ -2,7 +2,11 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-02-27"
+
+keywords: toolchain template, Configuration properties, readme file
+
+subcollection: ContinuousDelivery
 
 ---
 {:shortdesc: .shortdesc}
@@ -39,7 +43,7 @@ lastupdated: "2019-2-15"
 
  이 템플리트는 단일 GitHub 저장소에서 기본 Hello World 애플리케이션을 배치하고 지속적 딜리버리, 소스 제어, 문제 추적 및 온라인 제어를 위해 사전 구성된 단순 도구 체인을 포함합니다.
 
-2. 좀 더 복잡한 도구 체인 템플리트로 시작하려면 [마이크로서비스용 클라우드 네이티브 도구 체인 템플리트](https://github.com/open-toolchain/toolchain-demo){: new_window}를 복제하십시오. 
+2. 좀 더 복잡한 도구 체인 템플리트로 시작하려면 [마이크로서비스용 클라우드 네이티브 도구 체인 템플리트](https://github.com/open-toolchain/toolchain-demo){: new_window}를 복제하십시오.
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -281,7 +285,7 @@ template
 |prod-space |특성 |<`prod`> | 프로덕션 단계에 대한 {{site.data.keyword.Bluemix_notm}} 영역을 정의합니다. |
 |github-repo-name |특성 | <`"{{repo-name-key.parameters.repo_name}}"`> |GitHub 저장소 이름을 도구 체인 작성 페이지에 전달하는 변수 |
 
-`deploy.json` 파일 작성에 대한 자세한 정보는 [이 섹션](#toolchains_custom_deploy_json)을 참조하십시오. 
+`deploy.json` 파일 작성에 대한 자세한 정보는 [이 섹션](#toolchains_custom_deploy_json)을 참조하십시오.
 
  다음 예에서는 프로덕션 환경에 배치하는 단일 단계를 정의합니다.
 

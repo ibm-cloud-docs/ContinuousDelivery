@@ -1,8 +1,13 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-10-9"
+  years: 2016, 2019
+lastupdated: "2019-04-12"
+
+keywords: Environment properties, IBM Java, pipeline environments
+
+subcollection: ContinuousDelivery
+
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -56,10 +61,12 @@ lastupdated: "2018-10-9"
 |IDS_URL |현재 파이프라인의 URL입니다. |
 |IDS_VERSION |배치 중인 빌드 번호 또는 SCM ID입니다. 이 특성은 배치 작업에만 사용할 수 있습니다.
 |JOB_NAME |현재 파이프라인 컨텍스트의 고유 작업 ID입니다. |
+| PIPELINE_ARTIFACT_URL | 현재 빌드 작업이 완료된 후 이 작업의 아티팩트를 다운로드하기 위해 사용할 수 있는 URL입니다. 해당 아티팩트에 액세스하려면 유효한 베어러 토큰을 사용해야 합니다. |
+|PIPELINE_INITIAL_STAGE_EXECUTION_ID |파이프라인 실행의 고유 ID입니다. |
 |PIPELINE_KUBERNETES_CLUSTER_NAME |현재 작업에서 선택된 Kubernetes 클러스터의 이름입니다. |
+| PIPELINE_LOG_URL | 현재 작업이 완료된 후 이 작업의 로그 파일을 다운로드하기 위해 사용할 수 있는 URL입니다. 해당 로그 파일에 액세스하려면 유효한 베어러 토큰을 사용해야 합니다. |
 |PIPELINE_STAGE_INPUT_JOB_ID |현재 단계의 입력인 작업의 ID입니다. |
 |PIPELINE_STAGE_INPUT_REV |현재 단계의 입력 변경내용입니다. |
-|PIPELINE_INITIAL_STAGE_EXECUTION_ID |파이프라인 실행의 고유 ID입니다. |
 |PIPELINE_TRIGGERING_USER | 파이프라인 작업의 현재 사용자|
 |TASK_ID |작업의 현재 실행 고유 ID입니다. |
 |TMPDIR |임시 파일을 저장하는 디렉토리 위치입니다. |
@@ -109,6 +116,7 @@ lastupdated: "2018-10-9"
 |Cloud Foundry CLI 6.14 |cf |/opt/IBM/cf |
 |Gradle 1.12|gradle |/opt/IBM/gradle |
 |Gradle 2.9 |gradle2 |/opt/IBM/gradle2 |
+|IBM Cloud CLI (bx) 0.13.0 |ibmcloud |/usr/local/ibmcloud/bin/ibmcloud |
 |IBM Java (default)|java |/opt/IBM/java |
 |IBM Java 7 x86_64-71 |java7 |/opt/IBM/java7 |
 |IBM Java 8 x86_64-80|java8 |/opt/IBM/java8 |

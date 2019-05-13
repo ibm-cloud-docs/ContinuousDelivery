@@ -2,7 +2,11 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-2-5"
+lastupdated: "2019-03-27"
+
+keywords: IBM Cloud Public, Use Developer Insights, US South
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -164,7 +168,7 @@ lastupdated: "2019-2-5"
   미국 남부, 미국 동부, 독일, 도쿄 및 영국에서 사용 가능
 
 </td><td>
-이 도구 체인은 Garage Method에서 제공하는 DevOps 사례를 보여줍니다. 이 도구 체인은 지속적 딜리버리, 소스 제어, 테스트 자동화, 그리고 자동화된 모니터링 및 운영을 위해 사전 구성되어 있습니다. 이는 추가로 확장이 가능한 Node.js Express 4로 작성된 샘플 앱과 함께 제공됩니다. <br><br>강좌 활용: <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Become a Garage Method advocate <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>.
+이 도구 체인은 Garage Method에서 제공하는 DevOps 사례를 보여줍니다. 이 도구 체인은 지속적 딜리버리, 소스 제어, 테스트 자동화, 그리고 자동화된 모니터링 및 운영을 위해 사전 구성되어 있습니다. 이는 추가로 확장이 가능한 Node.js Express 4로 작성된 샘플 앱과 함께 제공됩니다. <br><br>강좌 활용: <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Become an IBM Cloud Innovate method advocate <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>
 </td><td>
 <ul>
 <li>{{site.data.keyword.deliverypipeline}}
@@ -180,34 +184,16 @@ lastupdated: "2019-2-5"
 </td></tr>
 
 <tr><td>
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain" target="_blank">"GitHub 및 Jenkins를 사용하는 Deployment Risk Analytics" 도구 체인 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a> <br><br>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fdevops-insights%2FDevOpsInsights_Demo_Toolchain_Template" target="_blank">"DevOps Insights 빠른 실행 데모" 도구 체인 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a> <br><br>
 
-  미국 남부에서 사용 가능합니다.
-
-</td><td>이 도구 체인으로 사용자는 지속적 통합 및 딜리버리를 위한 Jenkins 프로세스에 대한 통찰을 얻을 수 있습니다. Jenkins에서 작업을 실행할 때 {{site.data.keyword.DRA_short}}에 데이터를 전송하도록 Jenkins 서버를 구성할 수 있습니다. 또한 정책에 따라 배치를 차단할 수 있도록 품질 게이트를 구현할 수도 있습니다. 사용자는 {{site.data.keyword.DRA_short}}의 배치 위험성 대시보드에서 결과를 볼 수 있습니다. Jenkins에서 사용하는 소스 저장소를 표시하도록 GitHub 저장소를 구성하는 경우에는 변경 추적성을 사용할 수 있습니다.  
-<br><br>
-튜토리얼 활용: <a href="https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain" target="_blank">Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain  <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>  <br><br>
-</td><td><ul><li>
-GitHub 및 Issues
-</li><li>Jenkins
-</li><li>{{site.data.keyword.DRA_full}}
-</li><li>Slack
-</li></ul>
-</td></tr>
-
-<tr><td>
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain" target="_blank">"GitHub 및 JIRA를 사용하는 Developer Insights 및 Team Dynamics" 도구 체인 <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a> <br><br>
-
-  미국 남부에서 사용 가능합니다.
+  미국 남부, 독일 및 영국에서 사용 가능합니다.
 
 </td><td>
-이 도구 체인으로 사용자는 프로젝트의 개발 위험성을 탐색하고 소셜 코딩 분석을 사용하여 개발자 간의 상호작용 패턴을 파악할 수 있습니다. 사용자는 GitHub Issues, JIRA Issues 또는 두 가지 모두로 GitHub 소스 코드를 분석할 수 있습니다. Developer Insights를 사용하면 오류 발생 가능성이 높은 파일을 식별하고 프로젝트가 DevOps 사례를 준수하는 방법을 파악할 수 있습니다. Team Dynamics의 소셜 코딩 분석이 팀 구성원 간의 상호작용 레벨을 식별하므로, 팀은 비생산적인 사례를 수정할 수 있습니다.<br><br>
-튜토리얼 활용: <a href="https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain" target="_blank">Gain insights by using the "Developer Insights and Team Dynamics with GitHub and JIRA" toolchain <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a> <br><br>
+이 도구 체인을 사용하면 설치 없이 {{site.data.keyword.DRA_short}}를 탐색할 수 있습니다. 시작하려면 {{site.data.keyword.Bluemix}}에 로그인하십시오. 이 문서는 참조 도구 체인 및 세 가지 GitHub 저장소의 데이터를 포함합니다. 품질 대시보드 내에서 모든 팀의 모든 애플리케이션의 데이터를 정리하고, 테스트하고, 빌드하고, 배치하는 방법을 탐색하십시오. 리소스를 집중할 부분을 알아볼 수 있도록 동향을 평가하고 개선이 필요한 영역을 파악하십시오. Team Dynamics 내에서 각 릴리스에 대해 팀 구성원이 어떻게 협력하고 있는지 검토하십시오. <br><br>
+튜토리얼 활용: <a href="https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights" target="_blank">탐색 {{site.data.keyword.DRA_full}} <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a> <br><br>
 </td><td><ul><li>
 GitHub 및 Issues
 </li><li>{{site.data.keyword.DRA_full}}
-</li><li>JIRA
-</li><li>Slack
 </li></ul>
 </td></tr>
 

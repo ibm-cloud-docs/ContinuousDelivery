@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-7-19"
+  years: 2016, 2019
+lastupdated: "2019-03-25"
+
+keywords: users of a service instance, a-service, Git Repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -22,21 +26,22 @@ lastupdated: "2018-7-19"
  * {{site.data.keyword.gitrepos}} 저장소의 문제, 문제 보드, 소스 코드 또는 다른 아티팩트와 상호작용하는 사용자
  * Delivery Pipeline의 상태를 조작하고, 트리거(UI에서 직접적으로 또는 저장소에 커미트하여 간접적으로) 또는 보는 사용자
  * Eclipse Orion {{site.data.keyword.webide}}와 상호작용하는 사용자
- 
+
 ### 조직의 {{site.data.keyword.contdelivery_short}} 인스턴스에 대한 사용자를 어떻게 계산합니까?
 
-권한이 부여된 사용자는 {{site.data.keyword.contdelivery_short}} 서비스를 포함하는 Cloud 조직의 모든 사용자를 확인하여 계산됩니다. 
+권한이 부여된 사용자는 {{site.data.keyword.contdelivery_short}} 서비스를 포함하는 Cloud 조직의 모든 사용자를 확인하여 계산됩니다.
 
-{{site.data.keyword.Bluemix_notm}} 퍼블릭 환경에서 조직의 사용자 목록을 보려면 메뉴 표시줄에서 **관리 > 계정 > Cloud Foundry 조직**을 클릭하십시오.
+{{site.data.keyword.Bluemix_notm}} 퍼블릭 환경에서 조직의 사용자 목록을 보려면 메뉴 표시줄에서 **관리 > 계정**을 클릭하십시오. 그 후 **Cloud Foundry 조직**을 클릭하십시오. 
 
 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경에서 조직의 사용자 목록을 보려면 메뉴 표시줄에서 **계정 > 조직 관리**를 클릭하십시오.
 
 또한 계정의 {{site.data.keyword.contdelivery_short}} 서비스의 모든 인스턴스 및 {{site.data.keyword.Bluemix_notm}} 퍼블릭 환경의 각 인스턴스에 대해 보고되는 사용자 수를 볼 수 있습니다.
 
-1. 메뉴 표시줄에서 ** 관리 > 청구 및 사용 > 사용**을 클릭하십시오.
-2. **사용량 대시보드**를 클릭하십시오.
-3. 계정 메뉴에서 **Cloud Foundry 조직**을 클릭하십시오.
-4. 사용 정보를 볼 조직을 클릭하십시오.
+1. 메뉴 표시줄에서 **관리 > 청구 및 사용**을 클릭하십시오. 
+2. **사용**을 클릭하십시오. 
+3. **서비스** 섹션에서 {{site.data.keyword.contdelivery_short}} 서비스에 대해 **플랜 보기**를 클릭하십시오. 
+4. 정보를 볼 플랜에 대해 **세부사항 보기**를 클릭하십시오. 
+5. 사용 정보를 볼 {{site.data.keyword.contdelivery_short}}의 인스턴스에 대해 **인스턴스 세부사항 보기**를 클릭하십시오. 
 
 또한 계정의 {{site.data.keyword.contdelivery_short}} 서비스의 모든 인스턴스 및 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경의 각 인스턴스에 대해 보고되는 사용자 수를 보려면 다음을 수행하십시오.
 
@@ -45,18 +50,19 @@ lastupdated: "2018-7-19"
 
 ### 리소스 그룹의 {{site.data.keyword.contdelivery_short}} 인스턴스에 대한 사용자를 어떻게 계산합니까?
 
-권한이 부여된 사용자는 {{site.data.keyword.contdelivery_short}} 서비스 인스턴스 내 관리 탭에서 사용자 목록을 확인하여 계산됩니다. 
+권한이 부여된 사용자는 {{site.data.keyword.contdelivery_short}} 서비스 인스턴스 내 관리 탭에서 사용자 목록을 확인하여 계산됩니다.
 
 권한 부여된 사용자 목록을 보려면 서비스 인스턴스 대시보드를 열고 관리 탭을 클릭하십시오.
 
 또한 사용자 계정의 {{site.data.keyword.contdelivery_short}} 서비스의 모든 인스턴스 및 각 인스턴스에 대해 보고되는 사용자 수를 볼 수 있습니다.
 
-1. 메뉴 표시줄에서 ** 관리 > 청구 및 사용 > 사용**을 클릭하십시오.
-2. **사용량 대시보드**를 클릭하십시오.
-3. 계정 메뉴에서 **리소스 그룹**을 클릭하십시오.
-4. 사용 정보를 볼 리소스 그룹을 클릭하십시오.
+1. 메뉴 표시줄에서 **관리 > 청구 및 사용**을 클릭하십시오. 
+2. **사용**을 클릭하십시오. 
+3. **서비스** 섹션에서 {{site.data.keyword.contdelivery_short}} 서비스에 대해 **플랜 보기**를 클릭하십시오. 
+4. 정보를 볼 플랜에 대해 **세부사항 보기**를 클릭하십시오. 
+5. 사용 정보를 볼 리소스 그룹에 대해 **인스턴스 세부사항 보기**를 클릭하십시오. 
 
-### 서비스 플랜의 한계를 초과하면 어떤 일이 발생합니까? 
+### 서비스 플랜의 한계를 초과하면 어떤 일이 발생합니까?
 
 일부 서비스 플랜은 실행할 수 있는 Delivery Pipeline 작업의 수 또는 스토리지 이용과 같은 다른 한계가 있을 수 있습니다. 자세한 정보는 카탈로그의 플랜 설명을 참조하십시오. 비용 청구 기간에 플랜 제한사항을 초과하는 경우 서비스가 일시중단될 수 있습니다. 예를 들어, Delivery Pipeline 작업이 나머지 비용 청구 기간 동안 실행되지 않을 수 있습니다.
 
@@ -92,7 +98,7 @@ IBM의 재량에 따라, {{site.data.keyword.contdelivery_short}} 서비스의 �
 다음 세 가지 유형의 {{site.data.keyword.gitrepos}} 프로젝트가 사용 가능합니다.
 
   1. 공용 프로젝트는 모든 사이트 방문자에게 표시됩니다. 공용 프로젝트의 컨텐츠는 프로젝트에 초대되지 않은 경우라도 {{site.data.keyword.contdelivery_short}}에 액세스하는 모든 사용자에게 표시됩니다.
-  2. 개인용 프로젝트는 선택한 사용자에게만 표시됩니다. 프로젝트에 사용자 액세스 권한 부여하기에 대한 세부사항은 [프로젝트 사용자![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){: new_window}를 참조하십시오.
+  2. 개인용 프로젝트는 선택한 사용자에게만 표시됩니다. 프로젝트에 대한 사용자 액세스 권한 부여에 관한 자세한 정보는 [프로젝트 사용자 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){: new_window}를 참조하십시오. 
   3. 내부 프로젝트는 로그인한 모든 사용자들에게 표시됩니다. {{site.data.keyword.Bluemix_notm}} 계정이 있는 사용자는 해당 프로젝트를 볼 수 있습니다.
 
 프로젝트의 설정에서 프로젝트 유형을 수정할 수 있습니다. 자세한 정보는 [How to change project visibility![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/help/public_access/public_access#how-to-change-project-visibility){: new_window}를 참조하십시오.

@@ -1,8 +1,13 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-29"
+  years: 2017, 2019
+lastupdated: "2019-02-27"
+
+keywords: commit message field, terminal Type git branch, Eclipse Orion {{site.data.keyword.webide}}
+
+subcollection: ContinuousDelivery
+
 ---
 
 {:shortdesc: .shortdesc}

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-02-27"
+
+keywords: IBM Cloud, build types, build script
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -34,6 +38,6 @@ lastupdated: "2019-2-1"
 
    * 하나 이상의 파이프라인이 포함된 [도구 체인을 템플리트에서 작성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window}.
 
-   * 기존 도구 체인에 [{{site.data.keyword.deliverypipeline}} 도구 통합 추가](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window}. 
+   * 기존 도구 체인에 [{{site.data.keyword.deliverypipeline}} 도구 통합 추가](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window}.
    
 {{site.data.keyword.deliverypipeline}}에서 구성을 변경하십시오. 빌드 상태, 배치된 앱 및 최근 배치를 확인하십시오. 최신 로그와 배치 세부사항을 확인하거나 파이프라인을 삭제하십시오.

@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-5"
+  years: 2015, 2019
+lastupdated: "2019-04-01"
+
+keywords: Git Repos, Issue Tracking, Collaborate, Git repository
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -25,6 +29,9 @@ IBM에서 호스팅하고 [GitLab Community Edition ![외부 링크 아이콘](.
 프로젝트에 협업하도록 개인 또는 비즈니스 관계가 있는 사용자만 초대하십시오. 프로젝트에 대한 협업 이외의 목적으로 Git 저장소에 초대를 사용하는 사용자에게는 일시중단되거나 취소된 서비스에 대한 액세스 권한이 있습니다.
 {: important}
 
+GitHub 및 Git 명령행은 둘 다 GitLab의 액세스 가능한 대체 항목입니다.
+{: note}
+
 Git 저장소 내의 파일 또는 문제에 규제된 데이터를 저장하지 마십시오. 규제된 데이터에 대한 프로시저는 현재 시행되지 않고 있습니다.
 {: tip}
 
@@ -36,6 +43,7 @@ Git 저장소 내의 파일 또는 문제에 규제된 데이터를 저장하지
 
 이 도구 통합은 GitLab Community Edition을 기반으로 빌드되며 {{site.data.keyword.Bluemix_notm}} Platform에서 IBM에 의해 호스팅되므로 몇 가지 GitLab 옵션을 사용할 수 없습니다. 예를 들어, Delivery Pipeline은 {{site.data.keyword.Bluemix_notm}}에 대해 지속적 통합 및 지속적 딜리버리를 제공하므로 GitLab의 지속적 통합 기능은 지원되지 않습니다. 또한 IBM에서 관리하므로 관리자 기능은 사용할 수 없습니다.
 {: tip}
+
 
 ## 로컬로 {{site.data.keyword.gitrepos}} 사용
 {: #git_locally}

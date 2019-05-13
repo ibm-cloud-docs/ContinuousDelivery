@@ -2,7 +2,12 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-08"
+
+keywords: run jobs, sequences of stages, job types
+
+subcollection: ContinuousDelivery
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -121,9 +126,9 @@ lastupdated: "2019-2-15"
 **단순** 빌더 유형을 사용하는 경우 코드가 컴파일되거나 빌드되지 않습니다. 다음 단계를 위해 패키지되고 사용 가능하도록 설정됩니다.
 {: tip}
 
-Cloud Foundry를 사용하여 배치할 때 Cloud Foundry에는 올바른 아티팩트가 포함되어 앱을 실행할 수 있습니다. 자세한 정보는 [cf 명령을 사용하여 애플리케이션 배치](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps)를 참조하십시오. Cloud Foundry 앱의 파이프라인에는 cf 명령을 실행하는 배치 단계가 포함됩니다.
+Cloud Foundry를 사용하여 배치할 때 Cloud Foundry에는 올바른 아티팩트가 포함되어 앱을 실행할 수 있습니다. 자세한 정보는 [cf 명령을 사용하여 애플리케이션 배치](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps)를 참조하십시오. Cloud Foundry 앱의 파이프라인에는 cf 명령을 실행하는 배치 단계가 포함됩니다.
 
-Cloud Foundry는 [사용할 빌드팩을 발견하려고 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.cloudfoundry.org/buildpacks/detection.html) 시도합니다. 앱의 루트 폴더에 있는 Manifest 파일에 사용할 [빌드팩](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)을 지정할 수 있습니다. 일반적으로 빌드팩은 사용자 제공 아티팩트를 확인하여 다운로드할 종속 항목 및 바인딩 서비스와 통신하기 위한 애플리케이션 구성 방법을 결정할 수 있습니다. Manifest 파일에 대한 자세한 정보는 [Application Manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest)를 참조하십시오.
+Cloud Foundry는 [사용할 빌드팩을 발견하려고 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.cloudfoundry.org/buildpacks/detection.html) 시도합니다. 앱의 루트 폴더에 있는 Manifest 파일에 사용할 [빌드팩](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)을 지정할 수 있습니다. 일반적으로 빌드팩은 사용자 제공 아티팩트를 확인하여 다운로드할 종속 항목 및 바인딩 서비스와 통신하기 위한 애플리케이션 구성 방법을 결정할 수 있습니다. Manifest 파일에 대한 자세한 정보는 [Application Manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)를 참조하십시오.
 
 ### 배치 작업
 
@@ -169,7 +174,7 @@ Cloud Foundry는 [사용할 빌드팩을 발견하려고 ![외부 링크 아이�
 
 ![단계 특성 페이지](images/StageProperties.png)
 
-특성을 내보내서 동일한 단계의 작업 간에 환경 특성을 전달할 수도 있습니다. 예를 들면 다음 단계 내의 다른 작업에서 `$API_KEY` 특성을 사용하려면 다음 명령을 포함할 수 있습니다. `export API_KEY=<insert API key here>`
+특성을 내보내서 동일한 단계의 작업 간에 환경 특성을 전달할 수도 있습니다. 예를 들면, 다음 명령을 포함시켜 `$API_KEY` 특성을 단계 내의 다른 작업에서 사용할 수 있습니다. `export API_KEY=<insert API key here>`
 {:tip}
 
 ### 계산된 특성
@@ -182,7 +187,7 @@ Cloud Foundry는 [사용할 빌드팩을 발견하려고 ![외부 링크 아이�
 ## 아티팩트 작성 및 사용
 {: #artifacts}
 
-빌드 작업은 사용자 스크립트가 실행되는 현재 폴더에 컨텐츠를 자동으로 페치합니다. 나중에 배치하기 위해 전체 Git 저장소 컨텐츠가 필요하지 않은 경우 명시적 출력 디렉토리를 구성한 다음 관련 아티팩트를 해당 디렉토리에 복사 또는 작성하는 것이 좋습니다.  작업 스크립트가 빌드 결과에서 실행됩니다(출력 디렉토리).
+빌드 작업은 사용자 스크립트가 실행되는 현재 폴더에 컨텐츠를 자동으로 페치합니다.  나중에 배치하기 위해 전체 Git 저장소 컨텐츠가 필요하지 않은 경우 명시적 출력 디렉토리를 구성한 다음 관련 아티팩트를 해당 디렉토리에 복사 또는 작성하는 것이 좋습니다.  작업 스크립트가 빌드 결과에서 실행됩니다(출력 디렉토리).
 
 Cloud Foundry에 배치하는 작업은 권한 작업이 실행되는 사용자의 플랫폼 API 키 및 아티팩트를 배치할 지역, 조직 및 영역을 지정해야 합니다. 앱을 실행하기 위해 추가 서비스가 필요한 경우 `manifest.yml` 파일에 지정해야 합니다.
 
@@ -210,7 +215,7 @@ Cloud Foundry에 배치하는 작업은 권한 작업이 실행되는 사용자�
 ## Cloud Foundry Manifest 파일
 {: #deliverypipeline_manifest}
 
-프로젝트 루트 디렉토리에 저장되어 있는 `manifest.yml`이라는 이름의 Manifest 파일은 프로젝트가 {{site.data.keyword.Bluemix_notm}}에 배치되는 방법을 제어합니다. 프로젝트의 Manifest 파일 작성에 대한 정보는 [애플리케이션 Manifest에 대한 {{site.data.keyword.Bluemix_notm}} 문서](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest)를 참조하십시오. {{site.data.keyword.Bluemix_notm}}와 통합하려면 프로젝트의 루트 디렉토리에 Manifest 파일이 있어야 합니다. 그러나 이 파일의 정보를 기반으로 배치하지 않아도 됩니다.
+프로젝트 루트 디렉토리에 저장되어 있는 `manifest.yml`이라는 이름의 Manifest 파일은 프로젝트가 {{site.data.keyword.Bluemix_notm}}에 배치되는 방법을 제어합니다. 프로젝트의 Manifest 파일 작성에 대한 정보는 [애플리케이션 Manifest에 대한 {{site.data.keyword.Bluemix_notm}} 문서](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)를 참조하십시오. {{site.data.keyword.Bluemix_notm}}와 통합하려면 프로젝트의 루트 디렉토리에 Manifest 파일이 있어야 합니다. 그러나 이 파일의 정보를 기반으로 배치하지 않아도 됩니다.
 
 파이프라인에서 `cf push` 명령 인수를 사용하여 Manifest 파일이 할 수 있는 모든 작업을 지정할 수 있습니다. `cf push` 명령 인수는 배치 대상이 여러 개인 프로젝트에서 유용합니다. 여러 배치 작업이 모두 프로젝트 Manifest 파일에 지정된 라우트를 사용하려 하면 충돌이 발생합니다.
 
