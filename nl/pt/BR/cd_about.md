@@ -2,7 +2,11 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-2-5"
+lastupdated: "2019-03-27"
+
+keywords: IBM Cloud Public, Use Developer Insights, US South
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -164,7 +168,7 @@ Os modelos de cadeia de ferramentas predefinidos do DevOps são exemplos recomen
   Disponível no Sul dos EUA, no Leste dos EUA, na Alemanha, em Tóquio e no Reino Unido
 
 </td><td>
-Essa cadeia de ferramentas demonstra as práticas de DevOps apresentadas no Garage Method. A cadeia de ferramentas é pré-configurada para entrega contínua, controle de fonte, automação de teste, bem como monitoramento e operações automatizados. Ela vem com um app de amostra que é escrito em Node.js Express 4, que pode ser ampliado posteriormente. <br><br>Tente o curso: <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Tornar-se um defensor do Garage Method <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>.
+Essa cadeia de ferramentas demonstra as práticas de DevOps apresentadas no Garage Method. A cadeia de ferramentas é pré-configurada para entrega contínua, controle de fonte, automação de teste, bem como monitoramento e operações automatizados. Ela vem com um app de amostra que é escrito em Node.js Express 4, que pode ser ampliado posteriormente. <br><br>Experimente o curso: <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Torne-se um porta-voz do Garage Method <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>
 </td><td>
 <ul>
 <li>{{site.data.keyword.deliverypipeline}}
@@ -180,34 +184,16 @@ Essa cadeia de ferramentas demonstra as práticas de DevOps apresentadas no Gara
 </td></tr>
 
 <tr><td>
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain" target="_blank">Cadeia de ferramentas "Deployment Risk Analytics com o GitHub e o Jenkins" <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a> <br><br>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fdevops-insights%2FDevOpsInsights_Demo_Toolchain_Template" target="_blank">Cadeia de ferramentas da "Demo de iniciação rápida do DevOps Insights" <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a> <br><br>
 
-  Disponível no Sul dos EUA
-
-</td><td>Com essa cadeia de ferramentas, é possível obter insights sobre seu processo Jenkins para integração e entrega contínuas. É possível configurar o servidor Jenkins para enviar dados para o {{site.data.keyword.DRA_short}} quando as tarefas são executadas por Jenkins. É possível também implementar portas de qualidade para bloquear implementações com base em políticas. É possível visualizar resultados no painel do Deployment Risk no {{site.data.keyword.DRA_short}}. Se você configurar um repositório GitHub para indicar o repositório de origem usado por Jenkins, a rastreabilidade de mudança ficará disponível.  
-<br><br>
-Veja o tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain" target="_blank">Assegurar as implementações de qualidade usando a cadeia de ferramentas "Deployment Risk Analytics com o GitHub e o Jenkins" <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>  <br><br>
-</td><td><ul><li>
-GitHub and Issues
-</li><li>Jenkins
-</li><li>{{site.data.keyword.DRA_full}}
-</li><li>Slack
-</li></ul>
-</td></tr>
-
-<tr><td>
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain" target="_blank">Cadeia de ferramentas "Developer Insights e Team Dynamics com o GitHub e o JIRA" <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a> <br><br>
-
-  Disponível no Sul dos EUA
+  Disponível no Sul dos EUA, na Alemanha e no Reino Unido
 
 </td><td>
-Com essa cadeia de ferramentas, é possível explorar o risco de desenvolvimento de seu projeto e usar a análise de codificação social para entender os padrões de interação entre os desenvolvedores. É possível analisar o código-fonte do GitHub juntamente com os problemas do GitHub, do JIRA ou de ambos. Use o Developer Insights para identificar arquivos que são altamente propensos a erros e ver como o projeto obedece às práticas do DevOps. A análise de codificação social no Team Dynamics identifica o nível de interação entre os membros da equipe para que a equipe possa corrigir práticas não produtivas.<br><br>
-Veja o tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain" target="_blank">Obter insights usando a cadeia de ferramentas "Developer Insights e Team Dynamics com o GitHub e o JIRA" <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a> <br><br>
+Com essa cadeia de ferramentas, é possível explorar o {{site.data.keyword.DRA_short}}, sem a necessidade de configuração. Para iniciar, efetue login no {{site.data.keyword.Bluemix}}. Esta demonstração contém dados de uma cadeia de ferramentas de referência e três repositórios do GitHub. Explore como organizar, testar, construir e implementar dados para todos os aplicativos, de todas as equipes, dentro do Painel de qualidade. Avalie as tendências e entenda as áreas que precisam de melhorias para que você saiba onde focar seus recursos. Revise como os membros da equipe colaboram por liberação dentro do Team Dynamics.<br><br>
+Experimente o tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights" target="_blank">Explore o {{site.data.keyword.DRA_full}} <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a> <br><br>
 </td><td><ul><li>
 GitHub and Issues
 </li><li>{{site.data.keyword.DRA_full}}
-</li><li>JIRA
-</li><li>Slack
 </li></ul>
 </td></tr>
 

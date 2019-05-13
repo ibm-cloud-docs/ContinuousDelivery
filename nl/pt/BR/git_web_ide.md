@@ -1,8 +1,13 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-29"
+  years: 2017, 2019
+lastupdated: "2019-02-27"
+
+keywords: commit message field, terminal Type git branch, Eclipse Orion {{site.data.keyword.webide}}
+
+subcollection: ContinuousDelivery
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -216,7 +221,7 @@ mais informações, consulte [ Visualizar o histórico de confirmação](#view_c
 
 1. Digite `git log -p` e pressione Enter.
 
-  **Nota:** para visualizar somente um determinado número de confirmações, digite `git log -p -<number_of_commits_to_view>`.
+  **Nota:** para visualizar apenas um determinado número de confirmações, digite `git log -p -<number_of_commits_to_view>`.
 
 2. Navegue pelas confirmações.
  * Para visualizar mais entradas, pressione Page Down.
@@ -427,7 +432,7 @@ de confirmação da mesclagem e clique em **Confirmar**.
 ### Terminal do Git
 {: #rebase_branches_cmd}
 
-1. Efetue check-out da ramificação a ser atualizada digitando `git checkout <destination_branchname>` e pressionando Enter.
+1. Efetue check-out da ramificação para atualizar, digitando `git checkout <destination_branchname>` e pressionando Enter.
 
 2. Digite `git rebase <source_branchname>` e pressione Enter.
 

@@ -2,7 +2,11 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-02-25"
+
+keywords: Administrator Create, Administrator Update, Editor Update, Update
+
+subcollection: ContinuousDelivery
 
 ---
 

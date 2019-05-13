@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-26"
+
+keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -231,7 +235,7 @@ Para testar, monitorar e melhorar o funcionamento do app ao construí-lo, inclua
 
 ### Saiba mais sobre o Availability Monitoring
 
-Para saber mais sobre o {{site.data.keyword.prf_hubshort}}, consulte o artigo [{{site.data.keyword.prf_hublong}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window} no IBM Cloud Garage Method ou execute este tutorial:
+Para saber mais sobre o {{site.data.keyword.prf_hubshort}}, consulte o [ artigo do {{site.data.keyword.prf_hublong}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/practices/manage/tool_bluemix_availability_monitoring/){: new_window} no IBM Cloud Garage Method ou acompanhe este tutorial:
 
   * [Gerenciar seu aplicativo {{site.data.keyword.Bluemix_notm}} usando o {{site.data.keyword.Bluemix_notm}} Availability Monitoring e o Alert Notification ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
@@ -346,7 +350,7 @@ Configure o {{site.data.keyword.deliverypipeline}} para automatizar a construç�
 
   Se você desejar que o pipeline seja executado automaticamente quando uma confirmação for enviada por push para o seu GitHub, o {{site.data.keyword.ghe_short}} ou o repositório do Git (repositório), siga estas etapas:
 
-   a. Configure o GitHub, {{site.data.keyword.ghe_short}} ou {{site.data.keyword.gitrepos}} para sua cadeia de ferramentas antes de definir os estágios para seu pipeline. Os estágios de pipeline precisam das URLs do Git para os seus repositórios. Cada estágio de pipeline pode se referir a somente um dos repositórios GitHub, {{site.data.keyword.ghe_short}} ou Git que estão associados à sua cadeia de ferramentas. Para obter instruções para configurar o GitHub, consulte a seção [GitHub](#github). Para obter instruções para configurar o Dedicated {{site.data.keyword.ghe_short}}, veja [Introdução ao {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}. Para obter instruções para configurar o {{site.data.keyword.gitrepos}}, consulte a seção [{{site.data.keyword.gitrepos}}](#gitbluemix).
+   a. Configure o GitHub, {{site.data.keyword.ghe_short}} ou {{site.data.keyword.gitrepos}} para sua cadeia de ferramentas antes de definir os estágios para seu pipeline. Os estágios de pipeline precisam das URLs do Git para os seus repositórios. Cada estágio de pipeline pode se referir a somente um dos repositórios GitHub, {{site.data.keyword.ghe_short}} ou Git que estão associados à sua cadeia de ferramentas. Para obter instruções para configurar o GitHub, consulte a seção [GitHub](#github). Para obter instruções para configurar o Dedicated {{site.data.keyword.ghe_short}}, veja [Introdução ao {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}. Para obter instruções para configurar o {{site.data.keyword.gitrepos}}, consulte a seção [{{site.data.keyword.gitrepos}}](#gitbluemix).
 
    b. Use um webhook. Sem um webhook, só será possível executar pipelines manualmente. Para usar um webhook ao vincular-se a um repositório GitHub ou {{site.data.keyword.ghe_short}}, é preciso ter privilégios do administrador. Para vincular-se a um proprietário do {{site.data.keyword.gitrepos}}, é preciso ter privilégios de Principal ou Proprietário.
 
@@ -430,7 +434,7 @@ Para saber mais sobre o {{site.data.keyword.DRA_short}}, consulte o artigo [{{si
 
   * [Usar a cadeia de ferramentas "Desenvolver e testar microsserviços no Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
 
-  * [Assegurar implementações de qualidade usando a cadeia de ferramentas "Deployment Risk Analytics com o GitHub e Jenkins" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+  * [Explore o {{site.data.keyword.DRA_full}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){:new_window}
 
 
 ## Incluindo o Eclipse Orion Web IDE
@@ -611,13 +615,13 @@ Para saber mais sobre o GitHub, consulte os artigos [GitHub ![Ícone de link ext
  Estas instruções se aplicam a  {{site.data.keyword.Bluemix_notm}}  Dedicado para  {{site.data.keyword.ghe_short}}. Se você estiver usando sua própria versão gerenciada do {{site.data.keyword.ghe_short}}, algumas etapas poderão ser diferentes, dependendo de seus procedimentos internos.
  {: important}
 
-O {{site.data.keyword.ghe_long}} é um serviço de hospedagem no local, baseado na web para repositórios Git. O Dedicated {{site.data.keyword.ghe_short}} é para clientes {{site.data.keyword.Bluemix_notm}} Dedicated somente. O GitHub Issues é uma ferramenta de rastreamento que mantém o seu trabalho e os seus planos em um local. Ele é integrado a seu repo de desenvolvimento para que possa focar em tarefas importantes. Para obter mais informações sobre o Dedicated {{site.data.keyword.ghe_short}} e o GitHub Issues, veja [Introdução ao {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window} e o [artigo Problemas do GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} no IBM Cloud Garage Method.
+O {{site.data.keyword.ghe_long}} é um serviço de hospedagem no local, baseado na web para repositórios Git. O Dedicated {{site.data.keyword.ghe_short}} é para clientes {{site.data.keyword.Bluemix_notm}} Dedicated somente. O GitHub Issues é uma ferramenta de rastreamento que mantém o seu trabalho e os seus planos em um local. Ele é integrado a seu repo de desenvolvimento para que possa focar em tarefas importantes. Para obter mais informações sobre o Dedicated {{site.data.keyword.ghe_short}} e o GitHub Issues, veja [Introdução ao {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window} e o [artigo Problemas do GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} no IBM Cloud Garage Method.
 
 É possível configurar o {{site.data.keyword.ghe_short}} como uma integração de ferramenta em sua cadeia de ferramentas para que você possa gerenciar o código-fonte na instância do [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} de sua empresa.
 
 1. Se estiver configurando esta integração de ferramenta conforme estiver criando a cadeia de ferramentas, siga estas etapas:
 
- a. Antes de efetuar login no Dedicated {{site.data.keyword.ghe_short}} pela primeira vez, peça ao administrador de região de sua empresa para incluir o seu ID do usuário em sua instância do {{site.data.keyword.Bluemix_notm}} Dedicated por meio do registro do usuário de sua empresa usando LDAP. Para obter informações sobre como configurar sua conta do {{site.data.keyword.ghe_short}}, consulte [Introdução ao {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}.
+ a. Antes de efetuar login no Dedicated {{site.data.keyword.ghe_short}} pela primeira vez, peça ao administrador de região de sua empresa para incluir o seu ID do usuário em sua instância do {{site.data.keyword.Bluemix_notm}} Dedicated por meio do registro do usuário de sua empresa usando LDAP. Para obter informações sobre como configurar sua conta do {{site.data.keyword.ghe_short}}, consulte [Introdução ao {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}.
 
  b. Na seção Integrações configuráveis, clique em **{{site.data.keyword.ghe_short}}**.    
 
@@ -972,7 +976,7 @@ Configure o PagerDuty para enviar notificações quando as falhas de estágio de
 
 1. Se você deseja integrar o PagerDuty no nível de conta usando uma chave API, clique em **Conta**:
 
- a. Digite a chave de acesso API para sua conta PagerDuty. Se você não tiver uma conta do PagerDuty, [registre-se para uma ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://signup.pagerduty.com/accounts/new){: new_window}. Para obter instruções para localizar a chave, veja [Gerando uma chave API ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
+ a. Digite a chave de acesso API para sua conta PagerDuty. Se você não tiver uma conta do PagerDuty, [registre-se para uma ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.pagerduty.com/sign-up/){: new_window}. Para obter instruções para localizar a chave, veja [Gerando uma chave API ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
 
  b. Digite o nome de seu serviço PagerDuty.
 
@@ -1059,8 +1063,8 @@ forma que um usuário pode usar um website ou um aplicativo:
 
  b. Na seção Integrações de ferramenta, clique em **Sauce Labs**.
 
-1. Digite o nome de usuário associado à sua conta Sauce Labs. É possível [localizar seu nome do usuário na mensagem de boas-vindas na página de conta do Sauce Labs ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://saucelabs.com/account){: new_window}.
-1. Digite a chave de acesso para sua conta Sauce Labs. É possível [localizar a chave na página da sua conta Sauce Labs ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://saucelabs.com/account){: new_window}.
+1. Digite o nome de usuário associado à sua conta Sauce Labs. É possível [localizar seu nome do usuário na mensagem de boas-vindas na página de conta do Sauce Labs ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://app.saucelabs.com/user-settings){: new_window}.
+1. Digite a chave de acesso para sua conta Sauce Labs. É possível [localizar a chave na página da sua conta Sauce Labs ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://app.saucelabs.com/user-settings){: new_window}.
 1. Clique em
 **Criar integração**.
 1. Clique em **Sauce Labs** para acessar saucelabs.com e visualizar a atividade de teste da cadeia de ferramentas.

@@ -3,8 +3,11 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-2-8"
+lastupdated: "2019-03-07"
 
+keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -80,11 +83,11 @@ integrações de ferramentas](/docs/services/ContinuousDelivery?topic=Continuous
 ferramentas pode suportar desenvolvimento, implementação e monitoramento contínuos e mais, e é associada ao seu app. Cada app pode ser
 associado a uma cadeia de ferramentas. Quando você envia por push as mudanças para o GitHub ou o repositório {{site.data.keyword.ghe_short}} da cadeia de ferramentas, o pipeline constrói e implementa automaticamente o app.
 
-Se você criou seu app usando seu próprio repositório de código, clique em **Conectar à cadeia de ferramentas do DevOps** na página de detalhes de seu app. Em seguida, siga as etapas descritas em [Criando apps por meio de seu próprio repositório de código](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc).
+Se você criou seu aplicativo usando seu próprio repositório de código, clique em **Configurar entrega contínua** na página de detalhes do aplicativo. Em seguida, siga as etapas descritas em [Criando apps por meio de seu próprio repositório de código](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc).
 {: note}
 
-1. Se você criou seu app usando um kit do iniciador, clique em **Implementar na nuvem** na página de detalhes do seu app. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, seu app será configurado para entrega contínua por meio de um novo repositório GitHub que é preenchido com o código de início do app. Se você usar o {{site.data.keyword.Bluemix_notm}} Dedicated, seu app será configurado para entrega contínua por meio de um novo GitHub ou repositório {{site.data.keyword.ghe_short}} que é preenchido com o código de início do app.
-1. Na página de criação da cadeia de ferramentas, revise o diagrama da cadeia de ferramentas que estiver prestes a criar. O diagrama
+1. Se você criou seu aplicativo usando um kit do iniciador, clique em **Configurar entrega contínua** na página de detalhes do aplicativo. Em seguida, selecione um destino de implementação. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, seu app será configurado para entrega contínua por meio de um novo repositório GitHub que é preenchido com o código de início do app. Se você usar o {{site.data.keyword.Bluemix_notm}} Dedicated, seu app será configurado para entrega contínua por meio de um novo GitHub ou repositório {{site.data.keyword.ghe_short}} que é preenchido com o código de início do app.
+1. Na página de configuração da cadeia de ferramentas, revise o diagrama da cadeia de ferramentas que você está prestes a criar. O diagrama
 mostrará cada integração de ferramenta em sua fase de ciclo de vida na cadeia de ferramentas.
 1. Revise as informações padrão para as configurações da cadeia de ferramentas. O nome da cadeia de ferramentas as identifica em
 {{site.data.keyword.Bluemix_notm}}. Se você desejar usar um nome diferente, mude o nome da cadeia de ferramentas.

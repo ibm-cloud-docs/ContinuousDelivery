@@ -1,8 +1,13 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-10-9"
+  years: 2016, 2019
+lastupdated: "2019-04-12"
+
+keywords: Environment properties, IBM Java, pipeline environments
+
+subcollection: ContinuousDelivery
+
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -56,10 +61,12 @@ As propriedades e recursos a seguir estão disponíveis, por padrão, em ambient
 | IDS_URL | A URL para o pipeline atual. |
 | IDS_VERSION | O número da construção que está sendo implementada ou o identificador do SCM. Essa propriedade está disponível somente em tarefas de implementação.
 | JOB_NAME | O ID exclusivo da tarefa no contexto do pipeline atual. |
+| PIPELINE_ARTIFACT_URL | A URL que pode ser usada para fazer download dos artefatos da tarefa de Compilação atual após a conclusão da tarefa. Deve-se usar um token de acesso válido para acessar os artefatos. |
+| PIPELINE_INITIAL_STAGE_EXECUTION_ID | O ID exclusivo para a execução do pipeline. |
 | PIPELINE_KUBERNETES_CLUSTER_NAME | O nome do cluster do Kubernetes que é selecionado na tarefa atual. |
+| PIPELINE_LOG_URL | A URL que pode ser usada para fazer download do arquivo de log da tarefa atual após a conclusão da tarefa. Deve-se usar um token de acesso válido para acessar os arquivos de log. |
 | PIPELINE_STAGE_INPUT_JOB_ID | O ID da tarefa que é a entrada para o estágio atual. |
 | PIPELINE_STAGE_INPUT_REV | A revisão da entrada para o estágio atual. |
-| PIPELINE_INITIAL_STAGE_EXECUTION_ID | O ID exclusivo para a execução do pipeline. |
 | PIPELINE_TRIGGERING_USER | O usuário atual para a tarefa de pipeline|
 | TASK_ID | O ID exclusivo da execução atual da tarefa. |
 | TMPDIR | Uma localização de diretório em que os arquivos temporários são armazenados. |
@@ -110,6 +117,7 @@ Todos os links estão no diretório inicial.
 |Cloud Foundry CLI 6.14 |cf | /opt/IBM/cf |
 |Gradle 1.12|gradle |/opt/IBM/gradle |
 |Gradle 2.9 |gradle2 |/opt/IBM/gradle2 |
+|IBM Cloud CLI (bx) 0.13.0 |ibmcloud |/usr/local/ibmcloud/bin/ibmcloud |
 |IBM Java (default)|java |/opt/IBM/java |
 |IBM Java 7 x86_64-71 |java7 |/opt/IBM/java7 |
 |IBM Java 8 x86_64-80|java8 |/opt/IBM/java8 |

@@ -2,7 +2,12 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-08"
+
+keywords: run jobs, sequences of stages, job types
+
+subcollection: ContinuousDelivery
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -141,9 +146,9 @@ As tarefas que tomam a entrada das tarefas de construção devem referenciar os 
 Se você usar o tipo de construtor **Simples**, o seu código não será compilado nem construído; ele será empacotado e disponibilizado para os estágios futuros.
 {: tip}
 
-Quando você implementa usando o Cloud Foundry, o Cloud Foundry inclui os artefatos corretos para permitir que seu app seja executado. Para obter mais informações, veja [Implementando aplicativos usando o comando cf](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps). O pipeline para um app Cloud Foundry contém um estágio de Implementação que executa um comando cf.
+Quando você implementa usando o Cloud Foundry, o Cloud Foundry inclui os artefatos corretos para permitir que seu app seja executado. Para obter mais informações, veja [Implementando aplicativos usando o comando cf](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps). O pipeline para um app Cloud Foundry contém um estágio de Implementação que executa um comando cf.
 
-O Cloud Foundry tenta [detectar o buildpack para uso do ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Você pode especificar o [Buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) para usar no arquivo manifest na pasta raiz de seu app. Os buildpacks geralmente examinam artefatos fornecidos pelo usuário para determinar quais dependências transferir por download e como configurar aplicativos para comunicação com os serviços de limite. Para obter mais informações sobre arquivos manifest, veja [Manifest do aplicativo](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest).
+O Cloud Foundry tenta [detectar o buildpack para uso do ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Você pode especificar o [Buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) para usar no arquivo manifest na pasta raiz de seu app. Os buildpacks geralmente examinam artefatos fornecidos pelo usuário para determinar quais dependências transferir por download e como configurar aplicativos para comunicação com os serviços de limite. Para obter mais informações sobre arquivos manifest, veja [Manifest do aplicativo](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
 
 ### Tarefas de implementação
 
@@ -204,7 +209,7 @@ Para definir as propriedades do estágio, abra a página Configuração de está
 
 ![Página de propriedades do estágio](images/StageProperties.png)
 
-Também é possível passar propriedades do ambiente entre tarefas no mesmo estágio, exportando as propriedades. Por exemplo, é possível incluir o comando a seguir para usar a propriedade `$API_KEY` em outra tarefa dentro do estágio: `export API_KEY=<insert API key here>`
+Também é possível passar propriedades do ambiente entre tarefas no mesmo estágio, exportando as propriedades. Por exemplo, é possível incluir o comando a seguir para usar a propriedade `$API_KEY` em outra tarefa no estágio: `export API_KEY=<insert API key here>`
 {:tip}
 
 ### Propriedades calculadas
@@ -253,7 +258,7 @@ diretório-raiz do projeto, controlam como seu projeto é implementado no
 {{site.data.keyword.Bluemix_notm}}. Para obter informações sobre a criação de arquivos manifest para
 um projeto, consulte a documentação do
 [{{site.data.keyword.Bluemix_notm}}
-sobre manifests de aplicativos](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest). Para integrar-se com o {{site.data.keyword.Bluemix_notm}}, seu
+sobre manifests de aplicativos](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest). Para integrar-se com o {{site.data.keyword.Bluemix_notm}}, seu
 projeto deve ter um arquivo manifest em seu diretório-raiz. No entanto, não é necessário implementar com base nas informações no arquivo.
 
 No pipeline, é possível especificar tudo que um arquivo manifest pode fazer usando os argumentos

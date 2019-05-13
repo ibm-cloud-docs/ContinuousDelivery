@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-7"
+lastupdated: "2019-04-01"
+
+keywords: IBM Cloud Continuous Delivery, tool integration, toolchain template
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -18,10 +22,15 @@ lastupdated: "2019-2-7"
 
 
 # Tutorial de Introdução
-{: #cd_getting_started}
+{: #getting-started}
 
 Adote uma abordagem DevOps usando o {{site.data.keyword.contdelivery_full}}, que inclui cadeias de ferramentas abertas que automatizam a construção e a implementação de aplicativos. É possível começar criando uma cadeia de ferramentas de implementação simples que suporte as tarefas de desenvolvimento, implementação e operações. 
 {: shortdesc}
+
+
+Se você já tem uma instância do {{site.data.keyword.contdelivery_short}}, é possível [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops/create){: new_window} ou [visualizar as cadeias de ferramentas existentes ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops/toolchains){: new_window}.
+{: tip}
+
 
 ##Pré-requisitos
 {: #cd_prereqs}
@@ -31,8 +40,6 @@ cadeia de ferramentas integra ferramentas para planejar, desenvolver, implementa
 pipelines e gerenciar aplicativos. Sempre é possível incluir ou remover ferramentas de
 suas cadeias de ferramentas. Se você já tiver cadeias de ferramentas, será possível [visualizar as cadeias de ferramentas existentes](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing_a_toolchain){: new_window}. Para obter mais informações sobre como trabalhar com cadeias de ferramentas, veja [Usando cadeias de ferramentas](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using){: new_window}.
 
-Se já tiver uma instância do {{site.data.keyword.contdelivery_short}}, será possível [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops/create){: new_window} ou [visualizar cadeias de ferramentas existentes ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops/toolchains){: new_window}.
-{: tip}
 
 ##Etapa 1: Selecione um modelo de cadeia de ferramentas
 {: #select_a_toolchain_template}
@@ -81,3 +88,4 @@ Consulte um desses tutoriais no [IBM&reg; Cloud Garage Method ![Ícon de link ex
   * [Criar e usar sua primeira cadeia de ferramentas usando a cadeia de ferramentas "Desenvolver um app Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
 
   * [Incluir uma cadeia de ferramentas em um app ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+ 

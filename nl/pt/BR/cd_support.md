@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-8"
+lastupdated: "2019-03-08"
+
+keywords: Continuous Delivery, Support tickets, Continuous Delivery service
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -20,7 +24,7 @@ lastupdated: "2019-2-8"
 
 A equipe do {{site.data.keyword.contdelivery_full}} monitora ativamente o fórum do
 developerWorks para perguntas sobre o serviço e cadeias de
-ferramentas do {{site.data.keyword.contdelivery_short}}. Para fazer uma pergunta no fórum, nas páginas da cadeia de ferramentas e do {{site.data.keyword.contdelivery_short}}, clique em **Obter ajuda no fórum** ![Botão **Obter ajuda no fórum**](images/get_help_in_the_forum.png).
+ferramentas do {{site.data.keyword.contdelivery_short}}.
 
 <table>
 <tr>

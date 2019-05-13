@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-7-19"
+  years: 2016, 2019
+lastupdated: "2019-03-25"
+
+keywords: users of a service instance, a-service, Git Repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -26,22 +30,23 @@ um repositório do {{site.data.keyword.gitrepos}}.
  * Os usuários que manipulam, acionam (seja diretamente na UI ou indiretamente confirmando em um
 repositório) ou visualizam o status de um pipeline de entrega.
  * Os usuários que interagem com o Eclipse Orion {{site.data.keyword.webide}}.
- 
+
 ### Como os usuários são contados para instâncias do {{site.data.keyword.contdelivery_short}} em organizações?
 
 Os usuários autorizados são contados observando todos os usuários na organização do Cloud (org) que contém
-o serviço do {{site.data.keyword.contdelivery_short}}. 
+o serviço do {{site.data.keyword.contdelivery_short}}.
 
-Para visualizar a lista de usuários em sua organização em um ambiente do {{site.data.keyword.Bluemix_notm}} Public, na barra de menus, clique em **Gerenciar > Conta > Organizações do Cloud Foundry**.
+Para visualizar a lista de usuários em sua organização em um ambiente público do {{site.data.keyword.Bluemix_notm}}, na barra de menus, clique em **Gerenciar > Conta**. Em seguida, clique em **Organizações do Cloud Foundry**.
 
 Para visualizar a lista de usuários em sua organização em um ambiente do {{site.data.keyword.Bluemix_notm}} Dedicated, na barra de menus, clique em **Conta > Gerenciar organizações**.
 
 Também é possível visualizar todas as instâncias do serviço {{site.data.keyword.contdelivery_short}} em sua conta e o número de usuários que são relatados com relação a cada instância em um ambiente do {{site.data.keyword.Bluemix_notm}} Public.
 
-1. Na barra de menus, clique em **Gerenciar > Faturamento e uso > Uso **.
-2. Clique em **Painel de uso**.
-3. No menu Conta, clique em **Organizações do Cloud Foundry**.
-4. Clique na organização para a qual você deseja visualizar informações de uso.
+1. Na barra de menus, clique em **Gerenciar > Faturamento e uso**.
+2. Clique em **Uso**.
+3. Na seção **Serviços**, clique em **Visualizar planos** para o serviço {{site.data.keyword.contdelivery_short}}.
+4. Clique em **Visualizar detalhes** para o plano sobre o qual você deseja visualizar informações.
+5. Clique em **Visualizar detalhes da instância** para a instância do {{site.data.keyword.contdelivery_short}} para a qual você deseja visualizar informações de uso.
 
 Para visualizar todas as instâncias do serviço {{site.data.keyword.contdelivery_short}} em sua conta e o número de usuários que são relatados com relação a cada instância em um ambiente do {{site.data.keyword.Bluemix_notm}} Dedicated:
 
@@ -50,7 +55,7 @@ Para visualizar todas as instâncias do serviço {{site.data.keyword.contdeliver
 
 ### Como os usuários são contados para instâncias do {{site.data.keyword.contdelivery_short}} em grupos de recursos?
 
-Os usuários autorizados são contados examinando a lista de usuários na guia Gerenciar dentro da instância do serviço {{site.data.keyword.contdelivery_short}}. 
+Os usuários autorizados são contados examinando a lista de usuários na guia Gerenciar dentro da instância do serviço {{site.data.keyword.contdelivery_short}}.
 
 Para visualizar a lista de usuários autorizados, abra o painel da instância de serviço e clique na guia Gerenciar.
 
@@ -58,12 +63,13 @@ Também é possível visualizar todas as instâncias do
 serviço do {{site.data.keyword.contdelivery_short}}
 em sua conta e o número de usuários que são relatados em cada instância.
 
-1. Na barra de menus, clique em **Gerenciar > Faturamento e uso > Uso **.
-2. Clique em **Painel de uso**.
-3. No menu Conta, clique em **Grupos de recursos**.
-4. Clique no grupo de recursos para o qual você deseja visualizar informações de uso.
+1. Na barra de menus, clique em **Gerenciar > Faturamento e uso**.
+2. Clique em **Uso**.
+3. Na seção **Serviços**, clique em **Visualizar planos** para o serviço {{site.data.keyword.contdelivery_short}}.
+4. Clique em **Visualizar detalhes** para o plano sobre o qual você deseja visualizar informações.
+5. Clique em **Visualizar detalhes da instância** para o grupo de recursos do qual você deseja visualizar informações de uso.
 
-### O que acontece quando você excede os limites de seu plano de serviço? 
+### O que acontece quando você excede os limites de seu plano de serviço?
 
 Alguns planos de serviços podem ter outras limitações, como o número de tarefas do Delivery Pipeline que
 podem ser executadas ou o consumo de armazenamento. Para obter mais informações, consulte a descrição do plano
@@ -103,7 +109,7 @@ O {{site.data.keyword.gitrepos}} é construído no GitLab Community Edition e ho
 Três tipos de projetos do {{site.data.keyword.gitrepos}} estão disponíveis:
 
   1. Os projetos públicos são visíveis para todos os visitantes do site. O conteúdo em um projeto público está visível para todos que acessam o {{site.data.keyword.contdelivery_short}}, mesmo se eles não forem convidados para o projeto.
-  2. Os projetos privados são visíveis somente para usuários selecionados. Para obter detalhes sobre como conceder acesso de usuário a um projeto, veja [Usuários do projeto ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){: new_window}.
+  2. Os projetos privados são visíveis somente para usuários selecionados. Para obter mais informações sobre como conceder aos usuários acesso a um projeto, consulte [Usuários do projeto ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){: new_window}.
   3. Os projetos internos são visíveis para todos os usuários com login efetuado. Qualquer usuário que tenha uma conta do {{site.data.keyword.Bluemix_notm}} pode visualizar esses projetos.
 
 É possível modificar o tipo de projeto nas configurações do projeto. Para obter mais informações, veja [Como mudar a visibilidade do projeto ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/help/public_access/public_access#how-to-change-project-visibility){: new_window}.

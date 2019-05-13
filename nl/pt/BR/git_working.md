@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-5"
+  years: 2015, 2019
+lastupdated: "2019-04-01"
+
+keywords: Git Repos, Issue Tracking, Collaborate, Git repository
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -25,6 +29,9 @@ Colabore com a sua equipe e gerencie seu código-fonte com um repositório (repo
 Convide somente pessoas com as quais você tem um relacionamento pessoal ou de negócio para colaborar em um projeto. Os usuários que usam um convite para um repositório Git para propósitos diferentes de colaborar em um projeto podem ter seu acesso ao serviço suspenso ou revogado.
 {: important}
 
+Tanto o GitHub quanto a linha de comandos do Git são alternativas acessíveis para o GitLab.
+{: note}
+
 Não armazene dados regulados em arquivos ou problemas dentro de repositórios Git. Os procedimentos para os dados regulados não estão atualmente em vigor.
 {: tip}
 
@@ -38,6 +45,7 @@ Como essa integração de ferramenta é construída no GitLab Community Edition 
 o {{site.data.keyword.Bluemix_notm}}; portanto, os recursos de integração contínua no GitLab não são
 suportados. Além disso, as funções de administração não estão disponíveis porque são gerenciadas pela IBM.
 {: tip}
+
 
 ## Usando o {{site.data.keyword.gitrepos}} localmente
 {: #git_locally}

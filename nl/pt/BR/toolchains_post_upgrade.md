@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-5"
+lastupdated: "2019-04-26"
+
+keywords: DevOps Services project, Issue Tracking repo, Git Repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -48,7 +52,7 @@ As cadeias de ferramentas são como projetos, com algumas diferenças importante
 - Em projetos, a associação era mantida no nível do projeto. O acesso a cadeias de ferramentas é gerenciado pela organização (org) do {{site.data.keyword.Bluemix_notm}} e por cadeia de ferramentas. Para trabalhar com uma cadeia de ferramentas, deve-se ser um membro da organização que contém a cadeia de ferramentas. O proprietário da cadeia de ferramentas tem mais controle sobre quem pode acessar a cadeia de ferramentas e o que eles podem fazer. Para obter mais informações sobre o controle de acesso, veja a etapa 2 em [Introdução à sua cadeia de ferramentas](#upgrade_next_steps).
 - Dependendo do tipo de repositório que você usou em seu projeto no hub.jazz.net, sua cadeia de ferramentas pode conter um repositório GitHub.com ou um repositório {{site.data.keyword.gitrepos}}.
 
-É possível aprender mais sobre cadeias de ferramentas no [YouTube ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://youtu.be/2SIPE1e7NJ4){: new_window} ou em [Introdução ao {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started).
+É possível aprender mais sobre cadeias de ferramentas no [YouTube ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://youtu.be/2SIPE1e7NJ4){: new_window} ou em [Introdução ao {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).
 
 ## Introdução à sua cadeia de ferramentas
 {: #upgrade_next_steps}
@@ -67,7 +71,7 @@ As cadeias de ferramentas são como projetos, com algumas diferenças importante
     4. Para autenticar-se no {{site.data.keyword.gitrepos}} de um cliente Git externo por meio de HTTPS, use seu nome do usuário e seu token de acesso pessoal.
     5. Se você desejar reutilizar o repositório local de seu repositório Git JazzHub, aponte o repositório para o novo repositório no {{site.data.keyword.gitrepos}}. Em um shell de terminal, mude para o diretório no qual o repositório Git JazzHub é clonado. Insira o comando `git remote set-url`: `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
 
-        Para verificar quais URLs remotas estão configuradas para quais nomes remotos, use o comando `git remote -v`. O nome remoto padrão é `origin`. Se você tiver uma configuração mais avançada, o formulário do comando será o seguinte: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
+        Para verificar quais URLs remotas estão configuradas para quais nomes remotos, use o comando `git remote -v`. O nome remoto padrão é `origin`. Se você tiver uma configuração mais avançada, o formato do comando será como a seguir: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
         {: tip}
 
 3. Opcional: para explorar a maturidade de desenvolvimento do projeto, as práticas da equipe e a qualidade do código base, inclua o IBM Cloud {{site.data.keyword.DRA_short}} na sua cadeia de ferramentas. O {{site.data.keyword.DRA_short}} aplica a análise de desenvolvedor, equipe e implementação aos projetos do DevOps. Para obter mais informações, consulte [Introdução ao {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).
