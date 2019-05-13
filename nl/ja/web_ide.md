@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-1-31"
+lastupdated: "2019-04-01"
+
+keywords: Eclipse Orion {{site.data.keyword.webide}}, file types, Local Editor Settings icon
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -11,6 +15,8 @@ lastupdated: "2019-1-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
 {:download: .download}
 
@@ -24,6 +30,9 @@ Eclipse Orion {{site.data.keyword.webide}} は、ブラウザー・ベースの�
 
 規制対象データを {{site.data.keyword.webide}} 内のファイルに保存しないでください。 規制対象データ用の手順は現在機能していません。
 {: tip}
+
+{{site.data.keyword.webide}} は、キーボードでアクセスすることができますが、スクリーン・リーダーでも良好に動作します。{{site.data.keyword.webide}} を使用してコードを編集することができますが、必要に応じて、任意のコード・エディターまたはテキスト・エディターを使用してコードを編集することもできます。{{site.data.keyword.webide}} で提供されている Git 機能を使用することもできます。あるいは、Git コマンド・ラインまたは github.com を使用して {{site.data.keyword.webide}} Git 機能にアクセスすることもできます。
+{: note}
 
 ## IDE のセットアップ
 {: #editorsetup}

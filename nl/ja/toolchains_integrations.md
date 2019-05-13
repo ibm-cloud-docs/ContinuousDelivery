@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-26"
+
+keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -225,7 +229,7 @@ Artifactory について詳しくは、IBM Cloud Garage Method の[記事「Arti
 
 ### Availability Monitoring に関する詳細
 
-{{site.data.keyword.prf_hubshort}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.prf_hublong}}」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window} を参照するか、このチュートリアルを始めてください。
+{{site.data.keyword.prf_hubshort}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.prf_hublong}}」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/practices/manage/tool_bluemix_availability_monitoring/){: new_window} を参照するか、このチュートリアルを始めてください。
 
   * [{{site.data.keyword.Bluemix_notm}} Availability Monitoring と Alert Notification を使用した {{site.data.keyword.Bluemix_notm}} アプリケーションの管理 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
@@ -338,7 +342,7 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 
   GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーにコミットがプッシュされるとパイプラインが自動的に実行されるようにしたい場合は、以下のステップを実行します。
 
-   a. パイプラインのステージを定義する前に、ツールチェーン用に GitHub、{{site.data.keyword.ghe_short}}、または {{site.data.keyword.gitrepos}} を構成します。 パイプラインのステージには、リポジトリーの Git URL が必要です。 各パイプライン・ステージは、ツールチェーンと関連付けられた、GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーのうち 1 つのみを参照できます。 GitHub の構成手順については、[GitHub](#github) のセクションを参照してください。 Dedicated {{site.data.keyword.ghe_short}} の構成方法については、『[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}』を参照してください。{{site.data.keyword.gitrepos}} の構成手順については、[{{site.data.keyword.gitrepos}}](#gitbluemix) のセクションを参照してください。
+   a. パイプラインのステージを定義する前に、ツールチェーン用に GitHub、{{site.data.keyword.ghe_short}}、または {{site.data.keyword.gitrepos}} を構成します。 パイプラインのステージには、リポジトリーの Git URL が必要です。 各パイプライン・ステージは、ツールチェーンと関連付けられた、GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーのうち 1 つのみを参照できます。 GitHub の構成手順については、[GitHub](#github) のセクションを参照してください。 Dedicated {{site.data.keyword.ghe_short}} の構成方法については、[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}を参照してください。{{site.data.keyword.gitrepos}} の構成手順については、[{{site.data.keyword.gitrepos}}](#gitbluemix) のセクションを参照してください。
 
    b. Web フックを使用します。 Web フックを使用しない場合、パイプラインは手動でのみ実行できます。 GitHub リポジトリーまたは {{site.data.keyword.ghe_short}} リポジトリーにリンクする場合に Web フックを使用するには、管理特権が必要です。 {{site.data.keyword.gitrepos}} リポジトリーにリンクするには、Master または Owner 特権が必要です。
 
@@ -420,7 +424,7 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 
   * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
 
-  * [「Deployment Risk Analytics with GitHub and Jenkins」ツールチェーンを使用して高品質開発を保証する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+  * [{{site.data.keyword.DRA_full}} の探索![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){:new_window}
 
 
 ## Eclipse Orion Web IDE の追加
@@ -445,7 +449,7 @@ Eclipse Orion {{site.data.keyword.webide}} は、ソース管理タスクを作�
 
 ### Eclipse Orion Web IDE に関する詳細
 
-Eclipse Orion {{site.data.keyword.webide}} の詳細については、『[Eclipse Orion {{site.data.keyword.webide}} でのコード編集](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide)』を参照してください。IBM Cloud Garage Method の [Eclipse Orion {{site.data.keyword.webide}} の記事 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} もお読みになれます。 これらのチュートリアルを参照して、Eclipse Orion {{site.data.keyword.webide}} を使用してください。
+Eclipse Orion {{site.data.keyword.webide}} の詳細については、『[Eclipse Orion {{site.data.keyword.webide}} でのコード編集](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide)』を参照してください。 IBM Cloud Garage Method の [Eclipse Orion {{site.data.keyword.webide}} の記事 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} もお読みになれます。 これらのチュートリアルを参照して、Eclipse Orion {{site.data.keyword.webide}} を使用してください。
 
   * [「Develop a Cloud Foundry app」ツールチェーンを使用した初めてのツールチェーンの作成と使用 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
 
@@ -590,13 +594,13 @@ GitHub について詳しくは、IBM Cloud Garage Method の [GitHub に関す�
  ここで説明する手順は、{{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} に適用されます。 独自の管理版の {{site.data.keyword.ghe_short}} を使用している場合、内部手順によっては一部のステップが異なることがあります。
  {: important}
 
-{{site.data.keyword.ghe_long}} は、オンプレミス型の Web ベースの Git リポジトリー・ホスティング・サービスです。 Dedicated {{site.data.keyword.ghe_short}} は {{site.data.keyword.Bluemix_notm}} Dedicated ユーザー専用です。 GitHub Issues は、作業と計画を 1 つの場所に保持するトラッキング・ツールです。 これは、ユーザーが重要タスクに注力できるようにユーザーの開発リポジトリーと統合されます。 Dedicated {{site.data.keyword.ghe_short}} と GitHub Issues について詳しくは、[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}と IBM Cloud Garage Method の[記事「GitHub Issues」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} を参照してください。
+{{site.data.keyword.ghe_long}} は、オンプレミス型の Web ベースの Git リポジトリー・ホスティング・サービスです。 Dedicated {{site.data.keyword.ghe_short}} は {{site.data.keyword.Bluemix_notm}} Dedicated ユーザー専用です。 GitHub Issues は、作業と計画を 1 つの場所に保持するトラッキング・ツールです。 これは、ユーザーが重要タスクに注力できるようにユーザーの開発リポジトリーと統合されます。 Dedicated {{site.data.keyword.ghe_short}} と GitHub Issues について詳しくは、[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}と IBM Cloud Garage Method の[記事「GitHub Issues」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} を参照してください。
 
 {{site.data.keyword.ghe_short}}  をツールチェーン内の 1 つのツール統合として構成して、会社の [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} インスタンス内でソース・コードを管理できるようにすることができます。
 
 1. ツールチェーンの作成時にこのツール統合を構成する場合は、次の手順を実行します。
 
- a. Dedicated {{site.data.keyword.ghe_short}} に初めてログインするときは、まずその前に LDAP を使用して会社のユーザー・レジストリーから自分のユーザー ID を {{site.data.keyword.Bluemix_notm}} Dedicated インスタンスに追加するよう、会社の地域管理者に依頼してください。 {{site.data.keyword.ghe_short}} アカウントの設定の詳細については、「[{{site.data.keyword.ghe_long}}の概説](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}」を参照してください。
+ a. Dedicated {{site.data.keyword.ghe_short}} に初めてログインするときは、まずその前に LDAP を使用して会社のユーザー・レジストリーから自分のユーザー ID を {{site.data.keyword.Bluemix_notm}} Dedicated インスタンスに追加するよう、会社の地域管理者に依頼してください。 {{site.data.keyword.ghe_short}} アカウントのセットアップについては、[{{site.data.keyword.ghe_long}} の概説](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}を参照してください。
 
  b. 「構成可能な統合」セクションで**「{{site.data.keyword.ghe_short}}」**をクリックします。    
 
@@ -939,7 +943,7 @@ PagerDuty は、複数のモニタリング・システムのデータを単一�
 
 1. API キーを使用してアカウント・レベルで PagerDuty を統合する場合は、**「アカウント」**をクリックします。
 
- a. PagerDuty アカウントの API アクセス・キーを入力します。 PagerDuty アカウントをお持ちでない場合は、[登録して取得 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://signup.pagerduty.com/accounts/new){: new_window} してください。 キーを確認する方法については、[Generating an API Key ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window} を参照してください。
+ a. PagerDuty アカウントの API アクセス・キーを入力します。 PagerDuty アカウントをお持ちでない場合は、[登録して取得してください ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.pagerduty.com/sign-up/){: new_window}。 キーを確認する方法については、[Generating an API Key ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window} を参照してください。
 
  b. PagerDuty サービスの名前を入力します。
 
@@ -1022,8 +1026,8 @@ Sauce Labs は、機能単体テストを実行します。 {{site.data.keyword.
 
  b. 「ツール統合」セクションで、**「Sauce Labs」**をクリックします。
 
-1. Sauce Labs アカウントと関連付けられたユーザー名を入力します。 [ Sauce Labs アカウント・ページにあるウェルカム・メッセージでユーザー名を確認できます ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://saucelabs.com/account){: new_window}。
-1. Sauce Labs アカウントのアクセス・キーを入力します。 [Sauce Labs アカウント・ページでキーを確認できます ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://saucelabs.com/account){: new_window}。
+1. Sauce Labs アカウントと関連付けられたユーザー名を入力します。 [ Sauce Labs アカウント・ページにあるウェルカム・メッセージでユーザー名を確認できます ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://app.saucelabs.com/user-settings){: new_window}。
+1. Sauce Labs アカウントのアクセス・キーを入力します。 [Sauce Labs アカウント・ページでキーを確認できます ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://app.saucelabs.com/user-settings){: new_window}。
 1. **「統合の作成」**をクリックします。
 1. **「Sauce Labs」**をクリックして saucelabs.com に移動し、ツールチェーンのテスト・アクティビティーを表示します。
 

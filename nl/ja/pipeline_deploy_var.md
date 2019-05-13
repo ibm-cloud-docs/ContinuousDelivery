@@ -1,8 +1,13 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-10-9"
+  years: 2016, 2019
+lastupdated: "2019-04-12"
+
+keywords: Environment properties, IBM Java, pipeline environments
+
+subcollection: ContinuousDelivery
+
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -56,10 +61,12 @@ lastupdated: "2018-10-9"
 | IDS_URL | 現在のパイプラインの URL。 |
 | IDS_VERSION | デプロイ中のビルドの番号、または SCM ID。 このプロパティーは、デプロイ・ジョブでのみ利用できます。
 | JOB_NAME | 現在のパイプラインのコンテキストの固有ジョブ ID。 |
+| PIPELINE_ARTIFACT_URL | ジョブの完了後に現在のビルド・ジョブの成果物をダウンロードするために使用できる URL。成果物にアクセスするには、有効なベアラー・トークンを使用する必要があります。|
+| PIPELINE_INITIAL_STAGE_EXECUTION_ID | パイプラインの実行の固有 ID。 |
 | PIPELINE_KUBERNETES_CLUSTER_NAME | 現在のジョブで選択されている Kubernetes クラスターの名前。 |
+| PIPELINE_LOG_URL | ジョブの完了後に現在のジョブのログ・ファイルをダウンロードするために使用できる URL。ログ・ファイルにアクセスするには、有効なベアラー・トークンを使用する必要があります。|
 | PIPELINE_STAGE_INPUT_JOB_ID | 現在のステージの入力のジョブの ID。 |
 | PIPELINE_STAGE_INPUT_REV | 現在のステージの入力のリビジョン。 |
-| PIPELINE_INITIAL_STAGE_EXECUTION_ID | パイプラインの実行の固有 ID。 |
 | PIPELINE_TRIGGERING_USER | パイプライン・ジョブの現行ユーザー|
 | TASK_ID | ジョブの現在の実行の固有 ID。 |
 | TMPDIR | 一時ファイルが保存されるディレクトリーの場所。 |
@@ -109,6 +116,7 @@ lastupdated: "2018-10-9"
 |Cloud Foundry CLI 6.14 |cf | /opt/IBM/cf |
 |Gradle 1.12|gradle |/opt/IBM/gradle |
 |Gradle 2.9 |gradle2 |/opt/IBM/gradle2 |
+|IBM Cloud CLI (bx) 0.13.0 |ibmcloud |/usr/local/ibmcloud/bin/ibmcloud |
 |IBM Java (デフォルト)|java |/opt/IBM/java |
 |IBM Java 7 x86_64-71 |java7 |/opt/IBM/java7 |
 |IBM Java 8 x86_64-80|java8 |/opt/IBM/java8 |

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-5"
+lastupdated: "2019-04-26"
+
+keywords: DevOps Services project, Issue Tracking repo, Git Repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -48,7 +52,7 @@ hub.jazz.net に 1 つ以上のプロジェクトがあった場合、アップ�
 - プロジェクトでは、メンバーシップはプロジェクト・レベルで管理されていました。 ツールチェーンへのアクセスは、{{site.data.keyword.Bluemix_notm}} 組織とツールチェーンによって管理されます。 ツールチェーンで作業するには、ツールチェーンを含む組織のメンバーである必要があります。 ツールチェーンの所有者は、誰がツールチェーンにアクセスでき、何をすることができるかを制御できます。 アクセス制御について詳しくは、[ツールチェーンの概説](#upgrade_next_steps)のステップ 2 を参照してください。
 - hub.jazz.net のプロジェクトで使用していたリポジトリーのタイプに応じて、ツールチェーンに GitHub.com リポジトリーまたは {{site.data.keyword.gitrepos}} リポジトリーが含まれる場合があります。
 
-ツールチェーンについて詳しくは、[YouTube ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://youtu.be/2SIPE1e7NJ4){: new_window} または [{{site.data.keyword.contdelivery_short}} 概説](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started)で説明しています。
+ツールチェーンについて詳しくは、[YouTube ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://youtu.be/2SIPE1e7NJ4){: new_window} または [{{site.data.keyword.contdelivery_short}} 概説](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started)で説明しています。
 
 ## ツールチェーンの概説
 {: #upgrade_next_steps}
@@ -65,9 +69,9 @@ hub.jazz.net に 1 つ以上のプロジェクトがあった場合、アップ�
     2. スコープとして **api** を使用する個人用アクセス・トークンを作成します。
     3. [「Account」ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/profile/account){:new_window} にアクセスして、{{site.data.keyword.gitrepos}}に使用しているユーザー名を見つけます。 ご使用のユーザー名は「Change username」セクションにリストされ、作成する個人用リポジトリーの URL の最初の部分として示されます。
     4. 外部 Git クライアントから HTTPS を使用して {{site.data.keyword.gitrepos}}に対する認証を行うには、ユーザー名と個人用アクセス・トークンを使用します。
-    5. JazzHub Git リポジトリーのローカル・リポジトリーを再使用する場合は、そのリポジトリーを {{site.data.keyword.gitrepos}}内の新しいリポジトリーに複製します。 端末のシェルから、JazzHub Git リポジトリーが複製されているディレクトリーに移動します。 `git remote set-url` コマンド `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo> を入力します。`
+    5. JazzHub Git リポジトリーのローカル・リポジトリーを再使用する場合は、そのリポジトリーを {{site.data.keyword.gitrepos}}内の新しいリポジトリーに複製します。 端末のシェルから、JazzHub Git リポジトリーが複製されているディレクトリーに移動します。 `git remote set-url` コマンド `git remote set-url origin https://git.ng.bluemix.net/<userid>/<name-of-new-repo>` を入力します。
 
-        どのリモート URL がどのリモート名に設定されているかを確認するには、`git remote -v` コマンドを使用します。 デフォルトのリモート名は `origin` です。 より高度なセットアップの場合、コマンドの形式は `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo> のようになります。`
+        どのリモート URL がどのリモート名に設定されているかを確認するには、`git remote -v` コマンドを使用します。 デフォルトのリモート名は `origin` です。 より高度なセットアップの場合、コマンドの形式は次のようになります: `git remote set-url <remote-name-that-uses-jazzhub-repo> https://git.ng.bluemix.net/<userid>/<name-of-new-repo>`
         {: tip}
 
 3. オプション: プロジェクトの開発成熟度、チームのプラクティス、コード・ベースの品質を探るには、ツールチェーンに IBM Cloud {{site.data.keyword.DRA_short}} を追加します。 {{site.data.keyword.DRA_short}} は、開発者、チーム、デプロイメントの分析を DevOps プロジェクトに適用します。 詳しくは、[{{site.data.keyword.DRA_short}} 概説](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started)を参照してください。

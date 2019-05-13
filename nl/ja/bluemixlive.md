@@ -4,7 +4,11 @@
 
 copyright:
   years: 2015，2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-02-25"
+
+keywords: IBM Cloud Live Synch, Use IBM Cloud Live Sync
+
+subcollection: ContinuousDelivery
 
 ---
 

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-2-20"
+lastupdated: "2019-04-25"
+
+keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -29,7 +33,7 @@ lastupdated: "2019-2-20"
  * {{site.data.keyword.contdelivery_short}} Pipeline
  * ツールチェーンおよびツール統合
  * [GitHub Enterprise on IBM Cloud ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
- * [{{site.data.keyword.DRA_full}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/DevOpsInsights?topic=DevOpsInsights-insights_personal_data){: new_window}
+ * [{{site.data.keyword.DRA_full}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data){: new_window}
  
 IBM は、{{site.data.keyword.contdelivery_short}} サービスのデータを管理しません。 {{site.data.keyword.Bluemix_notm}} Public でホストされる {{site.data.keyword.contdelivery_short}} サービスの利用を停止する前に、お客様はご自分のデータを削除する必要があります。
 {: important}
@@ -191,9 +195,13 @@ Git アカウントを削除する前に、他のプロジェクトからも個�
  
 ###パイプライン・ステージのエクスポート
 
-パイプライン・ステージの定義をエクスポートするには、以下のように、`/yaml` をパイプライン URL に付加します。
+パイプライン全体の定義をエクスポートするには、パイプライン URL に `/yaml` を追加します。
 
-`http(s)://<DevOps Services domain>/pipeline/user/project/yaml`
+`https://cloud.ibm.com/devops/pipelines/<pipeline id>/yaml?env_id=<region id>`
+
+ここで、`<pipeline id>` と `<region id>` は、パイプライン・ページの URL に表示される値です。
+
+結果として生成される yaml ファイルには、すべてのパイプライン・ステージの定義が含まれます。
 
 
 パイプライン・ステージの成果物とログをエクスポートするには、以下のようにします。

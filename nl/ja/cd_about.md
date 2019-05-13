@@ -2,7 +2,11 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-2-5"
+lastupdated: "2019-03-27"
+
+keywords: IBM Cloud Public, Use Developer Insights, US South
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -180,34 +184,16 @@ lastupdated: "2019-2-5"
 </td></tr>
 
 <tr><td>
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain" target="_blank">「Deployment Risk Analytics with GitHub and Jenkins」ツールチェーン   <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fdevops-insights%2FDevOpsInsights_Demo_Toolchain_Template" target="_blank">「DevOps Insights Quick Start Demo」ツールチェーン <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
 
-  米国南部で利用可能
-
-</td><td>このツールチェーンを使用すると、継続的統合および継続的デリバリーのための Jenkins プロセスについての洞察を得ることができます。 Jenkins サーバーを構成して、Jenkins によってジョブが実行されている時に {{site.data.keyword.DRA_short}} にデータを送信することができます。 また、品質ゲートを実装して、ポリシーに基づいてデプロイメントをブロックすることもできます。 結果は、{{site.data.keyword.DRA_short}} の「デプロイメント・リスク」ダッシュボードで見ることができます。 Jenkins で使用されているソース・リポジトリーを示すように GitHub リポジトリーを構成すると、変更トレーサビリティーが使用可能になります。  
-<br><br>
-利用可能なチュートリアル: <a href="https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain" target="_blank">「Deployment Risk Analytics with GitHub and Jenkins」ツールチェーンを使用して高品質開発を保証する <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>  <br><br>
-</td><td><ul><li>
-GitHub and Issues
-</li><li>Jenkins
-</li><li>{{site.data.keyword.DRA_full}}
-</li><li>Slack
-</li></ul>
-</td></tr>
-
-<tr><td>
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain" target="_blank">「Developer Insights and Team Dynamics with GitHub and JIRA」ツールチェーン <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
-
-  米国南部で利用可能
+  米国南部、ドイツ、英国で利用可能
 
 </td><td>
-このツールチェーンを使用すると、プロジェクトの開発リスクを探り、ソーシャル・コーディング分析を使用して開発者間の対話パターンを理解することができます。 GitHub ソース・コードを、GitHub の問題または JIRA の問題、あるいはその両方と共に分析できます。 Developer Insights を使用して、非常にエラーが発生しやすいファイルを識別し、プロジェクトがどのように DevOps プラクティスに従っているか確認します。 Team Dynamics のソーシャル・コーディング分析は、チームが非生産的なプラクティスを修正できるように、チーム・メンバー間の対話レベルを識別します。<br><br>
-利用可能なチュートリアル: <a href="https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain" target="_blank"> 「Developer Insights and Team Dynamics with GitHub and JIRA」ツールチェーンを使用して分析情報を得る <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
+このツールチェーンを使用すると、セットアップしなくても {{site.data.keyword.DRA_short}} の機能を探索することができます。始めに、{{site.data.keyword.Bluemix}} にログインします。このデモンストレーションには、参照ツールチェーンと 3 つの GitHub リポジトリーから取得したデータが含まれています。品質ダッシュボードの中で、全チームの全アプリケーションのデータを整理、テスト、構築、およびデプロイする方法を探索してください。トレンドを評価し、改善が必要な分野を理解すると、自分のリソースをどこに集中させるべきかが分かります。Team Dynamics 内のリリースごとに、チーム・メンバーがどのようにコラボレーションしているかを確認できます。<br><br>
+利用可能なチュートリアル: <a href="https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights" target="_blank">{{site.data.keyword.DRA_full}} の探索 <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> <br><br>
 </td><td><ul><li>
 GitHub and Issues
 </li><li>{{site.data.keyword.DRA_full}}
-</li><li>JIRA
-</li><li>Slack
 </li></ul>
 </td></tr>
 

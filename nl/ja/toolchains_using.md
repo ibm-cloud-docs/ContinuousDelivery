@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-04-26"
+
+keywords: user management function, tool integrations, Cloud Foundry org
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -89,7 +93,7 @@ Identity and Access Management (IAM) サービスを使用して、ツールチ�
 ツールチェーンがホストされる地域のツールチェーンの組織にユーザーを追加する必要があります。 異なる地域にアプリをデプロイするようにツールチェーンが構成されている場合でも、アプリは前述の地域にデプロイされます。
 {: important}
 
-{{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} を使用している場合、{{site.data.keyword.Bluemix_notm}} 組織およびスペースにユーザーを追加すると、それらのユーザーは各自の {{site.data.keyword.Bluemix_notm}} ID およびパスワードを使用して {{site.data.keyword.ghe_short}} にログインできます。 ユーザーがログインするときに、ユーザーのためのアカウントが作成されます。 {{site.data.keyword.Bluemix_notm}} 組織およびスペースにユーザーを追加しても、それらのユーザーが {{site.data.keyword.ghe_short}} リポジトリーに自動的に追加されることはありません。 リポジトリーの管理者特権を持つ者がユーザーの追加を行う必要があります。 詳しくは、[Dedicated GitHub Enterprise の使用](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}を参照してください。 独自の管理版の {{site.data.keyword.ghe_short}} を使用している場合は、内部手順に従ってください。
+{{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} を使用している場合、{{site.data.keyword.Bluemix_notm}} 組織およびスペースにユーザーを追加すると、それらのユーザーは各自の {{site.data.keyword.Bluemix_notm}} ID およびパスワードを使用して {{site.data.keyword.ghe_short}} にログインできます。 ユーザーがログインするときに、ユーザーのためのアカウントが作成されます。 {{site.data.keyword.Bluemix_notm}} 組織およびスペースにユーザーを追加しても、それらのユーザーが {{site.data.keyword.ghe_short}} リポジトリーに自動的に追加されることはありません。 リポジトリーの管理者特権を持つ者がユーザーの追加を行う必要があります。 詳しくは、[Dedicated GitHub Enterprise の使用](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}を参照してください。 独自の管理版の {{site.data.keyword.ghe_short}} を使用している場合は、内部手順に従ってください。
 
 ###ツールチェーンへのアクセス権限の管理に関するヒント
 

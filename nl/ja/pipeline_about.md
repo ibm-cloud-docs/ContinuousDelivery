@@ -2,7 +2,12 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-08"
+
+keywords: run jobs, sequences of stages, job types
+
+subcollection: ContinuousDelivery
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -126,9 +131,9 @@ lastupdated: "2019-2-15"
 **シンプル**・ビルダー・タイプを使用する場合は、コードのコンパイルはビルドは行われません。パッケージ化され、今後のステージで使用できる状態になります。
 {: tip}
 
-Cloud Foundry を使用してデプロイするとき、アプリを実行できるようにするための適切な成果物が Cloud Foundry に含まれています。 詳しくは、[cf コマンドを使用してのアプリケーションのデプロイ](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps)を参照してください。 Cloud Foundry アプリ用パイプラインには、cf コマンドを実行するデプロイ・ステージが含まれています。
+Cloud Foundry を使用してデプロイするとき、アプリを実行できるようにするための適切な成果物が Cloud Foundry に含まれています。 詳しくは、[cf コマンドを使用してのアプリケーションのデプロイ](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps)を参照してください。 Cloud Foundry アプリ用パイプラインには、cf コマンドを実行するデプロイ・ステージが含まれています。
 
-Cloud Foundry は、[使用するビルドパックを検出 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.cloudfoundry.org/buildpacks/detection.html) しようとします。 使用する[ビルドパック](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)は、アプリのルート・フォルダー内のマニフェスト・ファイルで指定できます。 ビルドパックは通常、ユーザー提供の成果物を調べることにより、どの依存関係をダウンロードするか、バインド済みサービスと通信するためにアプリケーションをどのように構成するかを判別します。 マニフェスト・ファイルについて詳しくは、[アプリケーション・マニフェスト](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest)を参照してください。
+Cloud Foundry は、[使用するビルドパックを検出 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.cloudfoundry.org/buildpacks/detection.html) しようとします。 使用する[ビルドパック](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)は、アプリのルート・フォルダー内のマニフェスト・ファイルで指定できます。 ビルドパックは通常、ユーザー提供の成果物を調べることにより、どの依存関係をダウンロードするか、バインド済みサービスと通信するためにアプリケーションをどのように構成するかを判別します。 マニフェスト・ファイルについて詳しくは、[アプリケーション・マニフェスト](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)を参照してください。
 
 ### デプロイ・ジョブ
 
@@ -136,7 +141,7 @@ Cloud Foundry は、[使用するビルドパックを検出 ![外部リンク�
 
 デプロイ・ジョブは、新規アプリをデプロイすることも、既存アプリを更新することもできます。 Cloud Foundry コマンド・ライン・インターフェースや Web IDE の実行バーなどの別の方法で最初にアプリをデプロイしていても、デプロイ・ジョブを使用してアプリを更新することができます。 デプロイ・ジョブでアプリを更新するには、アプリの名前を使用します。
 
-1 つ以上の地域やサービスにデプロイできます。 例えば、1 つ以上のサービスを使用して、1 つの地域でテストし、複数の地域で実動にデプロイするよう {{site.data.keyword.deliverypipeline}} をセットアップできます。 
+1 つ以上の地域やサービスにデプロイできます。 例えば、1 つ以上のサービスを使用して、1 つの地域でテストし、複数の地域で実動にデプロイするよう {{site.data.keyword.deliverypipeline}} をセットアップできます。
 
 ### テスト・ジョブ
 条件を満たすことが必要な場合は、ビルド・ジョブおよびデプロイ・ジョブの前または後にテスト・ジョブを組み込みます。 必要に応じて、テスト・ジョブを単純タイプまた
@@ -216,7 +221,7 @@ Cloud Foundry にデプロイするジョブでは、権限ジョブが実行さ
 ## Cloud Foundry マニフェスト・ファイル
 {: #deliverypipeline_manifest}
 
-マニフェスト・ファイルは、`manifest.yml` という名前でプロジェクトのルート・ディレクトリーに格納されます。このファイルは、プロジェクトの {{site.data.keyword.Bluemix_notm}} へのデプロイ方法を制御します。 プロジェクト用のマニフェスト・ファイルの作成について詳しくは、[アプリケーション・マニフェストに関する {{site.data.keyword.Bluemix_notm}} の資料](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest)を参照してください。プロジェクトを {{site.data.keyword.Bluemix_notm}} と統合するには、そのプロジェクトのルート・ディレクトリーにマニフェスト・ファイルが必要です。 ただし、そのファイルの情報に基づいてデプロイする必要はありません。
+マニフェスト・ファイルは、`manifest.yml` という名前でプロジェクトのルート・ディレクトリーに格納されます。このファイルは、プロジェクトの {{site.data.keyword.Bluemix_notm}} へのデプロイ方法を制御します。 プロジェクト用のマニフェスト・ファイルの作成について詳しくは、[アプリケーション・マニフェストに関する {{site.data.keyword.Bluemix_notm}} の資料](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)を参照してください。プロジェクトを {{site.data.keyword.Bluemix_notm}} と統合するには、そのプロジェクトのルート・ディレクトリーにマニフェスト・ファイルが必要です。 ただし、そのファイルの情報に基づいてデプロイする必要はありません。
 
 パイプラインでは、`cf push` コマンド引数を使用して、マニフェスト・ファイルで指定可能なすべての設定を指定できます。 `cf push` コマンド引数は、複数のデプロイメント・ターゲットがあるプロジェクトで有用です。 複数のデプロイ・ジョブがすべてプロジェクト・マニフェスト・ファイルで指定されるルートを使用しようとすると、競合が発生します。
 

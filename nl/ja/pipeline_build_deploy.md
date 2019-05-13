@@ -2,7 +2,12 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-04-12"
+
+keywords: ADD STAGE, Run Stage icon, JOBS tab
+
+subcollection: ContinuousDelivery
+
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -65,7 +70,9 @@ lastupdated: "2019-2-1"
 
 デプロイ・ジョブが適切に構成されていれば、いつでもそのジョブが実行されるときに、アプリがターゲットにデプロイされます。 デプロイ・ジョブを手動で実行するには、ジョブがあるステージの**「ステージの実行」**アイコンをクリックします。
 
-###入力の改訂
+### 入力の改訂
+{: #deliverypipeline_input_revisions}
+
 ステージを手動で実行するか、その前のステージが完了したために実行される場合、実行中のステージはその入力の改訂を選択します。 通常、入力の改訂はビルド番号です。 入力の改訂を選択するには、ステージは以下の条件に従う必要があります。
 
 * 特定の改訂が選択されている場合は、それを使用する。
@@ -75,7 +82,9 @@ lastupdated: "2019-2-1"
 前のビルドをデプロイすることができます。 ビルドが含まれるステージで、**「ログおよび履歴の表示」**をクリックします。 ページが開いたら、実行番号をクリックして展開し、ビルド・ジョブをクリックします。 **「送信先」**をクリックし、ターゲットを選択します。
 {: tip}
 
-###アプリへのサービスの追加
+### アプリへのサービスの追加
+{: #deliverypipeline_add_services}
+
 アプリにサービスを追加し、{{site.data.keyword.Bluemix_notm}} ダッシュボードまたは Cloud Foundry コマンド・ライン・インターフェース (CLI) からそれらのサービスを管理することができます。 パイプライン・ジョブでは、スクリプトで Cloud Foundry CLI コマンドを発行することもできます。 例えば、デプロイ・ジョブのスクリプトでアプリにサービスを追加することができます。 詳しくは、『[外部アプリへのサービスの接続](/docs/resources?topic=resources-externalapp)』を参照してください。
 
 ## ログの表示
@@ -90,3 +99,77 @@ lastupdated: "2019-2-1"
 ジョブ・ログに加えて、ビルド・ジョブの単体テストの結果、生成された成果物、コードの変更も表示できます。
 
 「ステージ履歴」ページからステージを実行、再デプロイ、取り消し、または構成することもできます。 ステージを実行するには**「実行」**を、デプロイメント・ジョブの場合に再デプロイを行うには**「再デプロイ」**を、ステージを構成するには**「構成」**をクリックします。 ステージの実行中に実行番号をクリックして**「キャンセル」**をクリックすることにより、そのステージをキャンセルできます。
+
+### スクリプトからのログのダウンロード
+{: #deliverypipeline_download_logs}
+
+パイプライン・ジョブのログ・ファイルをスクリプトからダウンロードして、パイプライン・ジョブの実行中に提供される `PIPELINE_LOG_URL` を保存できます。次の例は、パイプライン・ジョブのログ・ファイルを別のシステムにアップロードする手順を示しています。
+
+
+1. ステージの `JOB_LOG` 環境プロパティーをセットアップします。
+
+1. パイプライン・ジョブで、`PIPELINE_LOG_URL` を保存します。
+
+   ```shell
+   export JOB_LOG="$PIPELINE_LOG_URL"
+   ```
+1. 同じステージ内の後のジョブで `PIPELINE_LOG_URL` を使用してログ・ファイルをダウンロードし、それを別のシステムにエクスポートします。IBM Cloud ベアラー・トークンを使用して、ログ・ファイルにアクセスします。
+
+   ```shell
+   ibmcloud login -a api.ng.bluemix.net \
+     --apikey <INSERT API KEY HERE>
+
+   BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
+
+   curl -H "Authorization: Bearer $BEARER"  \
+     -H "Accept: text/plain" \
+     -D /tmp/headers.txt \
+     -o job_log.txt \
+     "$JOB_LOG"
+   ```
+1. `X-More-Data` ヘッダーを確認します。ヘッダーが `true` に設定されている場合、ログ・ファイルは生成中または処理中です。ヘッダーが `false` に設定されている場合、ログ・ファイルはすぐに使用できます。
+
+   ```shell
+   grep X-More-Data /tmp/headers.txt
+   X-More-Data: false
+   ```
+1. ログ・ファイルをシステムにアップロードします。
+
+   ```shell
+   scp job_log.txt user@example.org:/job1/logs
+   ```
+
+
+### スクリプトからの成果物のダウンロード
+{: #deliverypipeline_download_artifacts}
+
+パイプライン・ビルド・ジョブの成果物をスクリプトからダウンロードして、パイプライン・ジョブの実行中に提供される `PIPELINE_ARTIFACT_URL` を保存できます。次の例は、パイプライン・ジョブの成果物を別のシステムにアップロードする手順を示しています。
+
+
+1. ステージの `JOB_ARTIFACT` 環境プロパティーをセットアップします。
+
+1. パイプライン・ジョブで、`PIPELINE_ARTIFACT_URL` を保存します。
+
+   ```shell
+   export JOB_ARTIFACT="$PIPELINE_ARTIFACT_URL"
+   ```
+   
+1. 同じステージ内の後のジョブで `PIPELINE_ARTIFACT_URL` を使用して成果物をダウンロードし、それを別のシステムにエクスポートします。IBM Cloud ベアラー・トークンを使用して、成果物にアクセスします。
+
+   ```shell
+   ibmcloud login -a api.ng.bluemix.net \
+     --apikey <INSERT API KEY HERE>
+
+   BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
+
+   DOWNLOAD_URL=$( curl -H "Authorization: Bearer $BEARER"  \
+     "$JOB_ARTIFACT" )
+
+   curl -O  "$DOWNLOAD_URL"
+   ```
+   
+1. 成果物をシステムにアップロードします。
+
+   ```shell
+   scp $(basename "$DOWNLOAD_URL") user@example.org:/job1/artifacts
+   ```

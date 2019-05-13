@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-5"
+  years: 2015, 2019
+lastupdated: "2019-04-01"
+
+keywords: Git Repos, Issue Tracking, Collaborate, Git repository
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -25,6 +29,9 @@ IBM によってホストされ、[GitLab Community Edition ![外部リンク・
 プロジェクトで共同作業する個人的関係やビジネス上の関係がある人だけを招待してください。 プロジェクトで共同作業をする以外の目的で Git レポへの招待を使用するユーザーによるサービスへのアクセスは、中断されたり取り消されたりする場合があります。
 {: important}
 
+GitLab の代替機能として、GitHub と Git コマンド・ラインを利用できます。
+{: note}
+
 規制対象データを Git レポ内のファイルや問題に保存しないでください。 規制対象データ用の手順は現在機能していません。
 {: tip}
 
@@ -36,6 +43,7 @@ IBM によってホストされ、[GitLab Community Edition ![外部リンク・
 
 このツール統合は GitLab Community Edition 上に構築され、IBM によって {{site.data.keyword.Bluemix_notm}} プラットフォーム上でホストされているため、一部の GitLab オプションは使用できません。 例えば、Delivery Pipeline は、{{site.data.keyword.Bluemix_notm}} の継続的統合と継続的デリバリーを提供しているため、GitLab の継続的統合フィーチャーはサポートされません。 さらに、管理機能は、IBM によって管理されているため使用できません。
 {: tip}
+
 
 ## {{site.data.keyword.gitrepos}} をローカルに使用する
 {: #git_locally}

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-02-27"
+
+keywords: IBM Cloud, build types, build script
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -12,7 +16,7 @@ lastupdated: "2019-2-1"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# パイプラインでの作業  
+# パイプラインでの作業 
 {: #pipeline-working}
 
 ビルドと {{site.data.keyword.Bluemix}} へのデプロイメントを自動化するには、{{site.data.keyword.contdelivery_full}} パイプラインを使用します。
@@ -25,7 +29,7 @@ lastupdated: "2019-2-1"
 
 デプロイメント・ジョブは、出力をビルド・ジョブから取得して、{{site.data.keyword.containerlong_notm}} や Cloud Foundry サーバー ({{site.data.keyword.Bluemix_notm}} など) にデプロイします。
 
-1 つ以上の地域やサービスにデプロイできます。 例えば、1 つ以上のサービスを使用して、1 つの地域でテストし、複数の地域で実動にデプロイするよう {{site.data.keyword.deliverypipeline}} をセットアップできます。 
+1 つ以上の地域やサービスにデプロイできます。 例えば、1 つ以上のサービスを使用して、1 つの地域でテストし、複数の地域で実動にデプロイするよう {{site.data.keyword.deliverypipeline}} をセットアップできます。
 
 ##パイプラインの作成
 

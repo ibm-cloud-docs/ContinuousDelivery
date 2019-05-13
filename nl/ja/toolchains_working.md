@@ -3,8 +3,11 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-2-8"
+lastupdated: "2019-03-07"
 
+keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -70,11 +73,11 @@ lastupdated: "2019-2-8"
 
 アプリからツールチェーンを作成することができます。 ツールチェーンは、継続的な開発、デプロイメント、モニターなどをサポートすることができ、アプリと関連付けられます。 各アプリをツールチェーンと関連付けることができます。 ツールチェーンの GitHub リポジトリーまたは {{site.data.keyword.ghe_short}} リポジトリーに変更をプッシュすると、パイプラインは自動的にアプリをビルドしてデプロイします。
 
-独自のコード・リポジトリーを使用してアプリを作成した場合は、アプリの詳細ページで**「DevOps ツールチェーンへの接続 (Connect to DevOps toolchain)」**をクリックします。 次いで、[独自のコード・リポジトリーからアプリを作成する](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc)に記載されている手順を実行します。
+独自のコード・リポジトリーを使用してアプリを作成した場合は、アプリの詳細ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。次いで、[独自のコード・リポジトリーからアプリを作成する](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc)に記載されている手順を実行します。
 {: note}
 
-1. スターター・キットを使用をしてアプリを作成した場合は、アプリの詳細ページで**「クラウドにデプロイ (Deploy to cloud)」**をクリックします。 {{site.data.keyword.Bluemix_notm}} Public を使用する場合、アプリは、アプリ・スターター・コードが取り込まれた新規 GitHub リポジトリーからの継続的デリバリー用に構成されます。 {{site.data.keyword.Bluemix_notm}} Dedicated を使用する場合、アプリは、アプリ・スターター・コードが取り込まれた新規 GitHub リポジトリーまたは {{site.data.keyword.ghe_short}} リポジトリーからの継続的デリバリー用に構成されます。
-1. ツールチェーン作成ページで、作成しようとしているツールチェーンの図を確認します。 この図は、ツールチェーン内の各ツール統合とそのライフサイクル・フェーズを示しています。
+1. スターター・キットを使用してアプリを作成した場合は、アプリの詳細ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。次に、デプロイメント・ターゲットを選択します。{{site.data.keyword.Bluemix_notm}} Public を使用する場合、アプリは、アプリ・スターター・コードが取り込まれた新規 GitHub リポジトリーからの継続的デリバリー用に構成されます。 {{site.data.keyword.Bluemix_notm}} Dedicated を使用する場合、アプリは、アプリ・スターター・コードが取り込まれた新規 GitHub リポジトリーまたは {{site.data.keyword.ghe_short}} リポジトリーからの継続的デリバリー用に構成されます。
+1. ツールチェーン構成ページで、作成しようとしているツールチェーンの図を確認します。この図は、ツールチェーン内の各ツール統合とそのライフサイクル・フェーズを示しています。
 1. ツールチェーン設定のデフォルト情報を確認します。 ツールチェーンの名前は、そのツールチェーンを {{site.data.keyword.Bluemix_notm}} 内で識別するためのものです。 別の名前を使用する場合は、ツールチェーンの名前を変更します。
 1. 「ツール統合 (Tool Integrations)」セクションで、ツールチェーンに構成する各ツール統合を選択します。 いくつかのツール統合は、構成を必要としません。 ツール統合の構成については、[ツール統合の構成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}を参照してください。
 1. **「作成」**をクリックします。 以下のようにいくつかのステップが自動的に実行されて、ツールチェーンがセットアップされます。 セットアップされるツール統合は、{{site.data.keyword.Bluemix_notm}} Public と {{site.data.keyword.Bluemix_notm}} Dedicated のどちらでツールチェーンを使用するのかによって異なります。 例えば、{{site.data.keyword.Bluemix_notm}} Public でアプリからツールチェーンを作成する場合、以下のステップが実行されます。

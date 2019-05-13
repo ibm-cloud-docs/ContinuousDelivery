@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-8"
+lastupdated: "2019-04-26"
+
+keywords: Git source control, personal access token, Git repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -18,7 +22,7 @@ lastupdated: "2019-2-8"
 {: #git_local}
 
 
-GitHub、GitHub Enterprise、または Git Repos and Issue Tracking のリポジトリーにあるソース・コードを、ローカルで、または Eclipse Orion Web IDE で管理したり処理したりできます。 ローカルで作業するには、Git コマンド・ライン・インターフェースなどの Git クライアントを使用してリポジトリーを複製し、任意のエディターを使用してコードを編集します。 Eclipse で作業する場合は、バージョン管理用の EGit プラグインをインストールできます。
+GitHub、GitHub Enterprise、または {{site.data.keyword.gitrepos}} のリポジトリーにあるソース・コードを、ローカルで、または Eclipse Orion {{site.data.keyword.webide}} で管理したり処理したりできます。ローカルで作業するには、Git コマンド・ライン・インターフェースなどの Git クライアントを使用してリポジトリーを複製し、任意のエディターを使用してコードを編集します。Eclipse で作業する場合は、バージョン管理用の EGit プラグインをインストールできます。
 
 ## コマンド・ラインからの Git プロジェクトの複製
 
@@ -26,13 +30,13 @@ GitHub、GitHub Enterprise、または Git Repos and Issue Tracking のリポジ
 ## 始めに
 {: #git_before_clone}
 
-1. ブラウザー以外から Git サーバーにアクセスするには、認証用に個人用アクセス・トークンか SSH 鍵を作成する必要が生じることがあります。 以下の表に、認証のセットアップに必要な作業が示されています。
+1. ブラウザー以外から Git サーバーにアクセスするには、認証用に個人用アクセス・トークンか SSH 鍵を作成する必要があります。以下の表に、認証のセットアップに必要な作業が示されています。
 
 | Git タイプ  | HTTPS のセットアップ | HTTPS で使用するもの |  SSH のセットアップ |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [個人用アクセス・トークン](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) | Git Repos and Issue Tracking のユーザー名 (IBM id ではない) と個人用アクセス・トークン | [SSH 鍵の構成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |
+| Git Repos and Issue Tracking  | [個人用アクセス・トークン](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat) | Git Repos and Issue Tracking のユーザー名 (IBM id ではない) と個人用アクセス・トークン | [SSH 鍵の構成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key) |
 | Public GitHub (github.com) | 個人用アクセス・トークンは不要、ただしセットアップして使用することも可能 | GitHub のユーザー名とパスワード、GitHub のユーザー名と個人用アクセス・トークン、またはユーザー名として指定する個人用アクセス・トークンのみ | [GitHub の SSH 鍵の構成](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-| GitHub Enterprise | [個人用アクセス・トークン](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) | GitHub Enterprise のユーザー名 (IBM id ではない) と個人用アクセス・トークン | [GitHub Enterprise の SSH 鍵の構成](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |
+| GitHub Enterprise | [個人用アクセス・トークン](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) | GitHub Enterprise のユーザー名 (IBM id ではない) と個人用アクセス・トークン | [GitHub Enterprise の SSH 鍵の構成](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) |
 
 SSH を使用する場合は、すべての Git サーバーで単一の鍵を再利用できます。 前述のリンクで説明されているように、鍵を作成するか見つけ、それを各サーバーで構成します。 鍵をパスフレーズと一緒に作成すると、その鍵の使用時に、このパスフレーズを入力するよう求められます。
 {: tip}
@@ -74,6 +78,6 @@ Web IDE を使用せずに任意のデスクトップ・ツールを使用して
 ## Eclipse と EGit プラグインを使用してリポジトリーにアクセスする
 {: #git_egit}
 
-ソース管理に Git を使用するプロジェクトがあり、Eclipse を使用している場合は、EGit プラグインを使用して Eclipse からリポジトリーを管理できます。 EGit をインストールして構成する手順については、
-[EGit チュートリアル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window} を参照してください。
-Git Repos and Issue Tracking を使用しており、問題が生じている場合は、[Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local) を参照してください。
+ソース管理に Git を使用するプロジェクトがあり、Eclipse を使用している場合は、EGit プラグインを使用して Eclipse からリポジトリーを管理できます。 EGit をインストールして構成する方法について詳しく、[EGit チュートリアル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window} を参照してください。
+
+{{site.data.keyword.gitrepos}} を使用していて何か問題が発生した場合は、[{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local) の資料を参照してください。
