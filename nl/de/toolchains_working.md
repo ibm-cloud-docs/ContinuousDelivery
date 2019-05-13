@@ -3,8 +3,11 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-2-8"
+lastupdated: "2019-03-07"
 
+keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -71,11 +74,11 @@ Sie können eine Vorlage als Ausgangspunkt zum [Erstellen einer Toolchain ![Symb
 
 Sie können eine Toolchain aus Ihrer App erstellen. Die Toolchain kann kontinuierliche Entwicklung, Bereitstellung, Überwachung und mehr unterstützen und sie ist Ihrer App zugeordnet. Jede App kann einer Toolchain zugeordnet sein. Wenn Sie Änderungen per Push-Operation an das GitHub- oder das {{site.data.keyword.ghe_short}}-Repository der Toolchain übertragen, erstellt die Pipeline automatisch Builds der App und stellt die App bereit.
 
-Wenn Sie Ihre App unter Verwendung Ihres eigenen Code-Repositorys erstellt haben, klicken Sie auf der Detailseite Ihrer App auf **Verbindung zu DevOps-Toolchain herstellen**. Führen Sie anschließend die Schritte aus, die im Abschnitt zur [Erstellung von Apps aus Ihrem eigenen Code-Repository](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc) beschrieben sind.
+Wenn Sie Ihre App unter Verwendung Ihres eigenen Code-Repositorys erstellt haben, klicken Sie auf der Detailseite Ihrer App auf **Continuous Delivery konfigurieren**. Führen Sie anschließend die Schritte aus, die im Abschnitt zur [Erstellung von Apps aus Ihrem eigenen Code-Repository](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc) beschrieben sind.
 {: note}
 
-1. Wenn Sie Ihre App unter Verwendung eines Starter-Kits erstellt haben, klicken Sie auf der Detailseite Ihrer App auf **In Cloud bereitstellen**. Wenn Sie {{site.data.keyword.Bluemix_notm}} Public verwenden, wird Ihre App für die kontinuierliche Bereitstellung aus einem neuen GitHub-Repository konfiguriert, das den Startcode für die App enthält. Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated verwenden, wird Ihre App für die kontinuierliche Bereitstellung aus einem neuen GitHub- oder {{site.data.keyword.ghe_short}}-Repository konfiguriert, das den Startcode für die App enthält.
-1. Überprüfen Sie auf der Seite zum Erstellen der Toolchain das Diagramm der Toolchain, die Sie gerade erstellen. In dem Diagramm wird jede Toolintegration in ihrer aktuellen Lebenszyklusphase in der Toolchain angezeigt.
+1. Wenn Sie Ihre App unter Verwendung eines Starter-Kits erstellt haben, klicken Sie auf der Detailseite Ihrer App auf **Continuous Delivery konfigurieren**. Wählen Sie anschließend ein Bereitstellungsziel aus. Wenn Sie {{site.data.keyword.Bluemix_notm}} Public verwenden, wird Ihre App für die kontinuierliche Bereitstellung aus einem neuen GitHub-Repository konfiguriert, das den Startcode für die App enthält. Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated verwenden, wird Ihre App für die kontinuierliche Bereitstellung aus einem neuen GitHub- oder {{site.data.keyword.ghe_short}}-Repository konfiguriert, das den Startcode für die App enthält.
+1. Überprüfen Sie auf der Seite zum Konfigurieren der Toolchain das Diagramm der Toolchain, die Sie gerade erstellen. In dem Diagramm wird jede Toolintegration in ihrer aktuellen Lebenszyklusphase in der Toolchain angezeigt.
 1. Überprüfen Sie die Standardinformationen für die Toolchain-Einstellungen. Der Name der Toolchain macht sie in {{site.data.keyword.Bluemix_notm}} identifizierbar. Wenn Sie einen anderen Namen verwenden möchten, ändern Sie den Namen der Toolchain.
 1. Wählen Sie im Abschnitt mit den Toolintegrationen jede Toolintegration aus, die Sie für Ihre Toolchain konfigurieren möchten. Einige Toolintegrationen erfordern keine Konfiguration. Informationen zum Konfigurieren der Toolintegrationen finden Sie unter [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Klicken Sie auf **Erstellen**. Zum Einrichten Ihrer Toolchain werden mehrere verschiedene Schritte automatisch ausgeführt. Die Toolintegrationen, die eingerichtet werden, unterscheiden sich voneinander, je nachdem, ob Sie Toolchains unter {{site.data.keyword.Bluemix_notm}} Public oder unter {{site.data.keyword.Bluemix_notm}} Dedicated verwenden. Wenn Sie eine Toolchain aus einer App unter {{site.data.keyword.Bluemix_notm}} Public erstellen, werden zum Beispiel die folgenden Schritte ausgeführt:

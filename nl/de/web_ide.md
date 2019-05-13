@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-1-31"
+lastupdated: "2019-04-01"
+
+keywords: Eclipse Orion {{site.data.keyword.webide}}, file types, Local Editor Settings icon
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -11,6 +15,8 @@ lastupdated: "2019-1-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
 {:download: .download}
 
@@ -24,6 +30,9 @@ Als weiterer wesentlicher Vorteil kommt hinzu, dass {{site.data.keyword.webide}}
 
 Speichern Sie keine regulierten Daten in Dateien in der {{site.data.keyword.webide}}. Derzeit sind keine Prozeduren für regulierte Daten in Kraft.
 {: tip}
+
+Die {{site.data.keyword.webide}} kann über die Tastatur bedient werden und funktioniert auch gut mit einem Sprachausgabeprogramm. Sie können die {{site.data.keyword.webide}} verwenden, um Code zu bearbeiten, oder Sie können Code mit Ihrem bevorzugten Codeeditor bzw. Texteditor bearbeiten. Sie können auch die Git-Funktionen verwenden, die mit der {{site.data.keyword.webide}} bereitgestellt werden. Alternativ können Sie die Git-Befehlszeile oder 'github.com' verwenden, um auf die Git-Funktionen der {{site.data.keyword.webide}} zuzugreifen.
+{: note}
 
 ## IDE einrichten
 {: #editorsetup}

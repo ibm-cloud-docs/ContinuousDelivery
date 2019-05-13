@@ -2,7 +2,11 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-2-14"
+lastupdated: "2019-02-27"
+
+keywords: pipeline versioned base image, image version, IBM Cloud team uses
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -20,7 +24,7 @@ lastupdated: "2019-2-14"
 # Mit versionsbasierten Images arbeiten
 {: #pipeline_versioned_base_images}
 
-Bei der Entwicklung von Anwendungen für {{site.data.keyword.Bluemix_notm}} können Sie versionsbasierte Images für die Ausführung von Pipelinejobs verwenden, um sicherzustellen, dass die korrekten Tools, Bibliotheken und Laufzeiten verwendet werden. Mithilfe versionsbasierter Images können Sie sicherstellen, dass die Komponenten, aus denen die Anwendung besteht, und die Umgebung, in der Sie die Anwendung bereitstellen, konsistent sind. Sie können steuern, wann die Tools, Bibliotheken oder Laufzeiten für die Anwendung geändert werden, und diese zu einem sinnvollen Zeitpunkt während des Entwicklungszyklus aktualisieren. 
+Bei der Entwicklung von Anwendungen für {{site.data.keyword.Bluemix_notm}} können Sie versionsbasierte Images für die Ausführung von Pipelinejobs verwenden, um sicherzustellen, dass die korrekten Tools, Bibliotheken und Laufzeiten verwendet werden. Mithilfe versionsbasierter Images können Sie sicherstellen, dass die Komponenten, aus denen die Anwendung besteht, und die Umgebung, in der Sie die Anwendung bereitstellen, konsistent sind. Sie können steuern, wann die Tools, Bibliotheken oder Laufzeiten für die Anwendung geändert werden, und diese zu einem sinnvollen Zeitpunkt während des Entwicklungszyklus aktualisieren.
 
 Darüber hinaus können Sie [angepasste Docker-Images](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images) verwenden, um sowohl die Tools als auch die Versionen dieser Tools, die für den Build und die Bereitstellung von Anwendungen verwendet werden, zu steuern. Zur Verwendung dieser Methode müssen Sie jedoch mit Docker vertraut sein und das erstellte Image verwalten und aktualisieren.
 {: tip}
@@ -28,9 +32,9 @@ Darüber hinaus können Sie [angepasste Docker-Images](/docs/services/Continuous
 ## Imageversion angeben
 {: #specify_base_image_version}
 
-1. Klicken Sie auf der Seite 'Pipeline' auf ![Überlaufsymbol](images/overflow-icon-2.svg), um auf die Liste der Optionen zuzugreifen. 
-2. Klicken Sie auf **Pipeline konfigurieren**. 
-3. Wählen Sie auf der Registerkarte **Imageversion** die Standardimageversion aus, die für alle Jobs in der Pipeline verwendet werden soll.  
+1. Klicken Sie auf der Seite 'Pipeline' auf ![Überlaufsymbol](images/overflow-icon-2.svg), um auf die Liste der Optionen zuzugreifen.
+2. Klicken Sie auf **Pipeline konfigurieren**.
+3. Wählen Sie auf der Registerkarte **Imageversion** die Standardimageversion aus, die für alle Jobs in der Pipeline verwendet werden soll. 
 
 Wenn Sie die Option `Neueste` auswählen, werden die Pipelinejobs mit der aktuellen Imageversion ausgeführt. Die aktuelle Imageversion wird in eckigen Klammern nach der Option `Neueste` angezeigt. Wenn eine neue Imageversion verfügbar ist, ändert sich das verwendete Image. Sie müssen möglicherweise die Pipeline so ändern, dass sie gegebenenfalls neuere Tools unterstützt, die im neuen Image enthalten sind.
 {: tip}
@@ -40,7 +44,7 @@ Wenn Sie die Option `Neueste` auswählen, werden die Pipelinejobs mit der aktuel
  
  Die folgenden Imageversionen sind verfügbar:
 
-* **Version 1.0**: Dieses frühere Image entspricht der Umgebung, in der Pipelinejobs ausgeführt wurden, bevor versionsbasierte Images verfügbar waren. Dieses Image enthält alle Versionen der Tools, die bei der Erstellung des Images verfügbar waren, wird jedoch nicht mehr aktualisiert. Für den Zugriff auf neue Versionen der Tools müssen Sie eine Aktualisierung auf die aktuelle Imageversion durchführen. Weitere Informationen zum Inhalt der Imageversion 1.0 finden Sie in [Vorinstallierte Ressourcen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). 
+* **Version 1.0**: Dieses frühere Image entspricht der Umgebung, in der Pipelinejobs ausgeführt wurden, bevor versionsbasierte Images verfügbar waren. Dieses Image enthält alle Versionen der Tools, die bei der Erstellung des Images verfügbar waren, wird jedoch nicht mehr aktualisiert. Für den Zugriff auf neue Versionen der Tools müssen Sie eine Aktualisierung auf die aktuelle Imageversion durchführen. Weitere Informationen zum Inhalt der Imageversion 1.0 finden Sie in [Vorinstallierte Ressourcen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources).
 
 * **Version 2.0**: Zum Anzeigen des Inhalts von Version 2.0 geben Sie im aktiven Image `default_versions.sh` ein. Dieses Image enthält die folgenden Tools:
 
@@ -70,7 +74,7 @@ Wenn Sie die Option `Neueste` auswählen, werden die Pipelinejobs mit der aktuel
 	Plugin-Name                            Version   Status
 	cloud-functions/wsk/functions/fn       1.0.29
 	container-registry                     0.1.365
-	container-service/kubernetes-service   0.2.44
+	container-service/kubernetes-service   0.2.44       
 	
 	# java -version
 	java version "1.8.0_191"
@@ -122,11 +126,12 @@ Wenn Sie die Option `Neueste` auswählen, werden die Pipelinejobs mit der aktuel
  ## Image für einen bestimmten Pipelinejob konfigurieren
  {: #configure_image_for_job}
  
- Im Allgemeinen wird nicht empfohlen, das für einzelne Pipelinejobs zu verwendende Image zu konfigurieren. Dies erhöht den Aufwand eines Upgrades auf eine neue Imageversion, da hierfür jeder Pipelinejob aktualisiert werden muss. In bestimmten Situationen kann es jedoch erforderlich sein, das Image für einen bestimmten Pipelinejob zu konfigurieren. {: important}
+ Im Allgemeinen wird nicht empfohlen, das für einzelne Pipelinejobs zu verwendende Image zu konfigurieren. Dies erhöht den Aufwand eines Upgrades auf eine neue Imageversion, da hierfür jeder Pipelinejob aktualisiert werden muss. In bestimmten Situationen kann es jedoch erforderlich sein, das Image für einen bestimmten Pipelinejob zu konfigurieren.
+ {: important}
  
  1. Klicken Sie in der Stage auf das Symbol **Phasenkonfiguration** und dann auf **Phase konfigurieren**.
- 2. Klicken Sie auf der Registerkarte **Jobs** auf den zu ändernden Job. 
- 3. Mit der Option **Pipeline-Imageversion** werden die verfügbare aktuelle Imageversion und die für den ausgewählten Pipelinejob verwendete Version angezeigt. Wählen Sie **Neueste** aus, um die Imageversion so zu ändern, dass für die Ausführung des Pipelinejobs die aktuelle Version verwendet wird. 
+ 2. Klicken Sie auf der Registerkarte **Jobs** auf den zu ändernden Job.
+ 3. Mit der Option **Pipeline-Imageversion** werden die verfügbare aktuelle Imageversion und die für den ausgewählten Pipelinejob verwendete Version angezeigt. Wählen Sie **Neueste** aus, um die Imageversion so zu ändern, dass für die Ausführung des Pipelinejobs die aktuelle Version verwendet wird.
 
 Wenn Sie Pipelinejobs mit dem Image ausführen möchten, das Sie auf der Pipelinekonfigurationsseite ausgewählt haben, wählen Sie **Standardeinstellung für Pipeline** aus.
 {: tip}

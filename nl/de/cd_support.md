@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-8"
+lastupdated: "2019-03-08"
+
+keywords: Continuous Delivery, Support tickets, Continuous Delivery service
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -18,7 +22,7 @@ lastupdated: "2019-2-8"
 # Hilfe und Unterstützung für {{site.data.keyword.contdelivery_short}} anfordern    
 {: #cd_support}  
 
-Das {{site.data.keyword.contdelivery_full}}-Team überwacht aktiv das developerWorks-Forum auf Fragen zum {{site.data.keyword.contdelivery_short}}-Service und zu Toolchains. Um im Forum eine Frage zu stellen, klicken Sie in der Toolchain sowie auf den {{site.data.keyword.contdelivery_short}}-Seiten auf die Schaltfläche für **Unterstützung über das Forum** ![**Unterstützung über das Forum**](images/get_help_in_the_forum.png).
+Das {{site.data.keyword.contdelivery_full}}-Team überwacht aktiv das developerWorks-Forum auf Fragen zum {{site.data.keyword.contdelivery_short}}-Service und zu Toolchains.
 
 <table>
 <tr>
@@ -50,8 +54,8 @@ Wenn Sie ein ernsteres Problem haben oder Probleme mit dem {{site.data.keyword.c
 1. Klicken Sie in der Menüleiste auf **Support** und anschließend auf **Ticket hinzufügen**.
 1. Geben Sie im Formular an, wobei bzw. wofür Sie technische Unterstützung benötigen.
 
-Weitere Informationen zum Öffnen eines IBM {{site.data.keyword.Bluemix_notm}}-Support-Tickets oder zu den Supportebenen und Ticketprioritäten enthält [Supportpläne](/docs/get-support?topic=get-support-support-plans). 
+Weitere Informationen zum Öffnen eines IBM {{site.data.keyword.Bluemix_notm}}-Support-Tickets oder zu den Supportebenen und Ticketprioritäten enthält [Supportpläne](/docs/get-support?topic=get-support-support-plans).
 
 
 ## Support für {{site.data.keyword.Bluemix_notm}}
-Bei anderen Problemen oder Fragen zu Ihrem {{site.data.keyword.Bluemix_notm}}-Service können Sie [Unterstützung anfordern](/docs/get-support?topic=get-support-getting-customer-support). 
+Bei anderen Problemen oder Fragen zu Ihrem {{site.data.keyword.Bluemix_notm}}-Service können Sie [Unterstützung anfordern](/docs/get-support?topic=get-support-getting-customer-support).

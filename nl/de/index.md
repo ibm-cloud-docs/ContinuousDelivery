@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-7"
+lastupdated: "2019-04-01"
+
+keywords: IBM Cloud Continuous Delivery, tool integration, toolchain template
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -18,18 +22,21 @@ lastupdated: "2019-2-7"
 
 
 # Lernprogramm zur Einführung
-{: #cd_getting_started}
+{: #getting-started}
 
 Nutzen Sie DevOps-Verfahren durch Verwendung von {{site.data.keyword.contdelivery_full}}, das offene Toolchains zur Automatisierung der Erstellung und Bereitstellung von Anwendungen enthält. Beginnen Sie mit der Erstellung einer einfachen Toolchain für die Bereitstellung, die Entwicklungs-, Bereitstellungs- und Operationstasks unterstützt. 
 {: shortdesc}
+
+
+Wenn Sie bereits über eine Instanz von {{site.data.keyword.contdelivery_short}} verfügen, können Sie [eine Toolchain erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/devops/create){: new_window} oder [vorhandene Toolchains anzeigen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/devops/toolchains){: new_window}.
+{: tip}
+
 
 ##Voraussetzungen
 {: #cd_prereqs}
 
 Bevor Sie eine Continuous Delivery-Toolchain aus einer Vorlage erstellen können, müssen Sie eine Instanz von {{site.data.keyword.contdelivery_short}} erstellen, indem Sie sie aus dem {{site.data.keyword.Bluemix_notm}}-Katalog auswählen. Die Toolchain integriert Tools für Planung, Entwicklung und Bereitstellung von Pipelines sowie für die Verwaltung Ihrer Anwendungen. Tools können jederzeit in eine Toolchain eingefügt oder daraus entfernt werden. Wenn Sie bereits Toolchains haben, können Sie [vorhandene Toolchains anzeigen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing_a_toolchain){: new_window}. Weitere Informationen zum Arbeiten mit Toolchains enthält [Toolchains verwenden](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using){: new_window}.
 
-Wenn Sie bereits über eine Instanz von {{site.data.keyword.contdelivery_short}} verfügen, können Sie [eine Toolchain erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/devops/create){: new_window} oder [vorhandene Toolchains anzeigen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/devops/toolchains){: new_window}.
-{: tip}
 
 ##Schritt 1: Eine Toolchain-Vorlage auswählen
 {: #select_a_toolchain_template}
@@ -73,3 +80,4 @@ Informieren Sie sich in einem der Lernprogramme zu [IBM&reg; Cloud Garage Method
   * [Erstellen und verwenden Sie Ihre erste Toolchain mithilfe der Toolchain zum Entwickeln einer Cloud Foundry-App ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
 
   * [Toolchain zu einer App hinzufügen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}
+ 

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-11"
+lastupdated: "2019-03-20"
+
+keywords: IBM Cloud Continuous Delivery, GitHub tool integration, error message
+
+subcollection: ContinuousDelivery
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -26,36 +30,6 @@ lastupdated: "2019-2-11"
 Hier erhalten Sie Antworten auf allgemeine Fragen zur Verwendung von {{site.data.keyword.contdelivery_full}}.
 {:shortdesc}
 
-
-## Beim Versuch, die GitHub-Toolintegration zu meiner Toolchain hinzuzufügen, wurde die Toolintegration nicht hinzugefügt. Warum?
-{: #cannot_authorize_github}
-{: faq}
-
-Wenn {{site.data.keyword.Bluemix_notm}} nicht für den Zugriff auf Ihr GitHub-Konto autorisiert ist, kann die Toolintegration nicht zur Toolchain hinzugefügt werden.
-
-Wenn Sie die GitHub-Toolintegration beim Erstellen Ihrer Toolchain konfigurieren, befolgen Sie diese Schritte, um eine Autorisierung mit GitHub durchzuführen:
-
-  1. Klicken Sie im Abschnitt mit den konfigurierbaren Integrationen auf **GitHub**.
-  1. Wenn Sie die Toolchain unter {{site.data.keyword.Bluemix_notm}} Public erstellen und {{site.data.keyword.Bluemix_notm}} nicht für den Zugriff auf GitHub autorisiert ist, klicken Sie auf **Autorisieren**, um zur GitHub-Website zu wechseln.
-  1. Wenn keine aktive GitHub-Sitzung existiert, werden Sie aufgefordert, sich anzumelden. Klicken Sie auf **Anwendung autorisieren**, um {{site.data.keyword.Bluemix_notm}} den Zugriff auf Ihr GitHub-Konto zu erlauben.
-
-Wenn Sie bereits über eine Toolchain verfügen, aktualisieren Sie die Konfiguration der GitHub-Toolintegration wie folgt:
-
- 1. Klicken Sie im DevOps-Dashboard auf der Seite **Toolchains** auf die Toolchain, um die zugehörige Übersichtsseite zu öffnen. Alternativ können Sie auf der Übersichtsseite der App auf der Karte für Continuous Delivery auf **Toolchain anzeigen** und dann auf **Übersicht** klicken.
- 1. Klicken Sie auf der Karte für GitHub auf das Menü und klicken Sie dann auf **Konfigurieren**.
- 1. Aktualisieren Sie die Konfigurationseinstellungen so, dass {{site.data.keyword.Bluemix_notm}} die Autorisierung für den Zugriff auf GitHub erhält. Klicken Sie auf **Autorisieren**, um zur GitHub-Website zu wechseln. Wenn keine aktive GitHub-Sitzung existiert, werden Sie aufgefordert, sich anzumelden. Klicken Sie auf **Anwendung autorisieren**, um {{site.data.keyword.Bluemix_notm}} den Zugriff auf Ihr GitHub-Konto zu erlauben.
- 1. Wenn Sie die Aktualisierung der Einstellungen abgeschlossen haben, klicken Sie auf **Integration speichern**.
-
-
-## Warum wird beim Versuch, eine Toolchain zu erstellen, eine Fehlernachricht angezeigt?
-{: #cannot_create_toolchain}
-{: faq}
-
-Wenn Sie eine Toolchain in einer Organisation erstellen möchten und die folgende Fehlernachricht erhalten, entfernen Sie mindestens eine Toolchain aus der Organisation und erstellen Sie dann Ihre Toolchain erneut.
-
-`Diese Organisation enthält 200 Toolchains, was dem Maximalwert entspricht. Bevor Sie eine weitere Toolchain hinzufügen können, müssen Sie zuvor eine oder mehrere Toolchain aus der Organisation entfernen.`
-
-
 ## Warum wird auf der Seite 'Toolchains' angezeigt, dass der Lite-Plan des Service {{site.data.keyword.contdelivery_short}} überschritten wurde?
 {: #plan_exceeded}
 {: faq}
@@ -63,11 +37,25 @@ Wenn Sie eine Toolchain in einer Organisation erstellen möchten und die folgend
 {{site.data.keyword.contdelivery_short}} bietet zwei Pläne: Lite und Professional. Wenn Sie den {{site.data.keyword.contdelivery_short}}-Lite-Plan verwenden, können Sie Toolchains bis zu den Grenzwerten des Plans kostenlos verwenden. Die Fehlernachricht weist darauf hin, dass Sie einen oder mehrere Grenzwerte des Lite-Plans überschritten haben. Sie könnten den Plan beispielsweise überschreiten, wenn Sie zu viele berechtigte Benutzer haben, die der Instanz des Service {{site.data.keyword.contdelivery_short}} zugeordnet sind, oder wenn Sie die maximale Anzahl von {{site.data.keyword.deliverypipeline}}-Jobs ausgeführt haben. Weitere Informationen zu den Bedingungen Ihres Plans finden Sie unter [Einschränkungen beim Plan und bei der Nutzung](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
 
 
+## Mein {{site.data.keyword.contdelivery_short}}-Service gibt an, dass Service des Lite-Plans nach 30 Tagen der Inaktivität gelöscht werden. Was bedeutet Inaktivität hier? 
+{: #plan_inactivity}
+{: faq}
+
+Eine Instanz des {{site.data.keyword.contdelivery_short}}-Service wird als aktiv betrachtet, wenn eine oder mehrere der Toolchains in derselben Ressourcengruppe oder Cloud Foundry-Organisation aktiv sind. Eine Toolchain wird als aktiv betrachtet, wenn die Benutzer über die Benutzerschnittstelle mit ihr interagieren, wenn Delivery Pipeline-Jobs getriggert werden, wenn auf von {{site.data.keyword.gitrepos}} verwaltete Repositorys zugegriffen wird, oder wenn {{site.data.keyword.webide}}-Arbeitsbereiche von Eclipse Orion verwendet werden. Damit eine Instanz als inaktiv betrachtet wird, müssen alle diese Bedingungen für alle Toolchains, die dem {{site.data.keyword.contdelivery_short}}-Service zugeordnet sind, 30 Tage lang nicht erfüllt werden. 
+
+
 ## Ich habe eine Toolchain erstellt. Warum zeigt die Seite 'Toolchains' an, dass ein Service Continuous Delivery erforderlich ist?
 {: #service_required_resource_group}
 {: faq}
 
 Die Bedingungen des Plans für die Instanz des Service {{site.data.keyword.contdelivery_short}}, die sich in derselben Ressourcengruppe oder Organisation wie die Toolchain befindet, steuern die Verwendung einiger der Toolintegrationen ({{site.data.keyword.deliverypipeline}}, Eclipse Orion-{{site.data.keyword.webide}} und {{site.data.keyword.gitrepos}}), die im Service enthalten sind. Die Fehlernachricht gibt an, dass die Ressourcengruppe bzw. die Organisation die erforderliche Instanz des Service {{site.data.keyword.contdelivery_short}} nicht enthält. Weitere Informationen zu den Bedingungen Ihres Plans finden Sie unter [Einschränkungen beim Plan und bei der Nutzung](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
+
+
+## Ich habe Informationen für eine Toolchain aus einer Cloud Foundry-Organisation aktualisiert, warum kann ich meine Änderungen nicht in der Toolchain sehen?
+{: #updates_in_cloud_foundry}
+{: faq}
+
+Wenn Sie die Toolchaininformationen direkt aus Cloud Foundry aktualisieren, kann es einige Minuten dauern, bis der {{site.data.keyword.contdelivery_short}}-Service aktualisiert wurde und Ihre Änderungen anzeigt. Wenn Sie beispielsweise einen Benutzer zu einer Cloud Foundry-Organisation hinzufügen oder daraus entfernen, kann es einige Minuten dauern, bis {{site.data.keyword.contdelivery_short}} feststellt, dass es einen neuen Benutzer gibt und dass dieser Benutzer auf die Toolchain zugreifen darf. 
 
 
 ## Ich habe eine Toolchain in einer Cloud Foundry-Organisation erstellt. Warum zeigt die Seite 'Toolchains' an, dass ein Service Continuous Delivery erforderlich ist?
@@ -80,6 +68,13 @@ Dieser Fehler kann auftreten, wenn Sie eine Toolchain in der Region 'Vereinigte 
 
 Sie können entweder die Toolchain in einer Ressourcengruppe erstellen oder die Toolchain in einer Organisation erstellen, die bereits über eine Instanz von {{site.data.keyword.contdelivery_short}} verfügt.
   
+
+## Wie verschiebe ich meine Toolchain aus einer Cloud Foundry-Organisation zu einer Ressourcengruppe? 
+{: #toolchain_move_to_resource_group}
+{: faq}
+
+Derzeit gibt es keine Möglichkeit, Toolchains aus einer Cloud Foundry-Organisation zu einer Ressourcengruppe zu migrieren. Stattdessen können Sie die Toolchain manuell in einer Ressourcengruppe erstellen und dann die ursprüngliche Toolchain aus der Cloud Foundry-Organisation entfernen. 
+
 
 ## Warum wird beim Versuch, eine App auf {{site.data.keyword.Bluemix_notm}} bereitzustellen, eine Fehlernachricht angezeigt?
 {: #org_outofmemory}
@@ -113,13 +108,13 @@ Führen Sie bei Verwendung der Befehlszeilenschnittstelle 'cf' die folgenden Sch
 1. Führen Sie für Ihre App einen Neustart durch, damit die Änderungen in Kraft treten.
 
 
-## In der erstellten App werden in der Ausführungsleiste keine {{site.data.keyword.Bluemix_notm}} Live Sync-Symbole in der Eclipse Orion-Web-IDE angezeigt. Warum?
+## In der erstellten App werden in der Ausführungsleiste keine {{site.data.keyword.Bluemix_notm}} Live Sync-Symbole in der {{site.data.keyword.webide}} angezeigt. Warum?
 {: #ts_llz_lkb_3r}
 {: faq}
 
 ![Ausführungsleiste](images/webide_runbar_light.png)   
 
-Beim Bearbeiten einer Node.js-App in der Web-IDE sind die {{site.data.keyword.Bluemix_notm}}-Symbole für Live Edit, den schnellen Neustart und das Debugging in der Ausführungsleiste in folgenden Fällen nicht verfügbar:
+Beim Bearbeiten einer Node.js-App in der {{site.data.keyword.webide}} sind die {{site.data.keyword.Bluemix_notm}}-Symbole für Live Edit, den schnellen Neustart und das Debugging in der Ausführungsleiste in folgenden Fällen nicht verfügbar: 
 
 
 * Die Datei `manifest.yml` ist nicht auf der höchsten Ebene Ihres Projekts gespeichert.
@@ -130,7 +125,30 @@ Beim Bearbeiten einer Node.js-App in der Web-IDE sind die {{site.data.keyword.Bl
 Wenn die Datei `manifest.yml` nicht im Stammverzeichnis gespeichert ist, speichern Sie sie dort. Wenn Ihre App in einem Unterverzeichnis gespeichert ist, geben Sie den Pfad zum Unterverzeichnis in der Datei `manifest.yml` an. Wenn die App die Datei `package.json` nicht enthält, erstellen Sie sie im selben Verzeichnis, in der sich Ihre App befindet.
 
 
-## Beim Klicken auf eine Toolchain zum Anzeigen der Übersichtsseite wird die Toolchain nicht geladen. Warum?
+## Ich habe auf die {{site.data.keyword.webide}}-Schaltfläche 'Ausführen' geklickt. Wo sind die Protokolldateien?  
+{: #web_ide_log_files}
+{: faq}  
+
+Wenn Sie auf die Schaltfläche 'Ausführen' klicken, wird der Inhalt Ihres Arbeitsbereichs auf dieselbe Weise nach Cloud Foundry übertragen, wie wenn Sie auf Ihrem Desktop den Befehl `cf push` eingeben. Sie können die Protokolldateien über das Cloud Foundry-Dashboard finden. 
+
+Weitere Informationen zum Bereitstellen der Inhalte Ihres Arbeitsbereichs finden Sie unter [App vom Arbeitsbereich aus bereitstellen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide#deploy). 
+
+
+## Wie kann ich verhindern, dass die {{site.data.keyword.webide}} alle Änderungen in der Git-Ansicht automatisch auswählt? 
+{: #web_ide_git_view}
+{: faq} 
+
+Die {{site.data.keyword.webide}} setzt voraus, dass Sie jedes Mal, wenn Sie die GIT-Seite öffnen, ausgehende Änderungen an Ihr Code-Repository übertragen möchten. Wenn Sie manuell auswählen möchten, welche Ressourcen festgeschrieben, synchronisiert, zurückgesetzt und ersetzt werden sollen, deaktivieren Sie auf der GIT-Vorgabenseite das Kontrollkästchen **Geänderte Dateien immer auswählen**. 
+
+
+## Warum unterstützt die {{site.data.keyword.webide}} meine Sprache nicht? 
+{: #web_ide_language_support}
+{: faq}  
+
+Die {{site.data.keyword.webide}} stellt umfangreiche Tools sowie Unterstützung für JavaScript, HTML und CSS bereit. Sie bietet auch eine Syntaxhervorhebung für die gängigsten Sprachen. Sie können die {{site.data.keyword.webide}} um die Unterstützung einer bestimmten Sprache erweitern. Eine vollständige Liste der Sprachen, die von der {{site.data.keyword.webide}} unterstützt werden, finden Sie unter [Unterstützte Sprachen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide#supported_languages). 
+
+
+## Wie finde ich den Status von {{site.data.keyword.Bluemix_notm}} und des {{site.data.keyword.contdelivery_short}}-Service?
 {: #toolchains_load}
 {: faq}
 
@@ -141,22 +159,25 @@ Anhand einer der folgenden Optionen gelangen Sie zur Statusseite:
   * Melden Sie sich bei der {{site.data.keyword.Bluemix_notm}}-Konsole an. Klicken Sie in der Menüleiste auf **Support** und wählen Sie **Status** aus. Prüfen Sie die aufgelisteten Ressourcen auf das Symbol ![Probleme](../../get-support/images/some_issues.svg). Dieses Symbol kann auf einen Ausfall hinweisen.
   * Greifen Sie direkt auf [{{site.data.keyword.Bluemix_notm}} - Systemstatus ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/status){: new_window} zu.
 
-Weitere Informationen zur {{site.data.keyword.Bluemix_notm}}-Statusseite finden Sie in [{{site.data.keyword.Bluemix_notm}}-Status anzeigen](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}. 
+Weitere Informationen zur {{site.data.keyword.Bluemix_notm}}-Statusseite finden Sie in [{{site.data.keyword.Bluemix_notm}}-Status anzeigen](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}.
 
 
-## Es wurde eine Toolintegration für meine Toolchain konfiguriert, aber die Konfiguration wird nicht angezeigt. Warum?
-{: #tool_integration_error}
+## Wie übergebe ich Artefakte zwischen Pipelinejobs?
+{: #artifacts_pipeline_jobs}
 {: faq}
 
-Wenn Sie eine Toolintegration hinzufügen, kommuniziert die Toolchain mit dem Tool, das durch die Toolintegration dargestellt wird, um alle notwendigen Ressourcen bereitzustellen und diese der Toolchain zuzuordnen. Wenn während der Einrichtung ein Fehler auftritt oder die Kommunikation zwischen der Toolchain und dem Tool nicht ordnungsgemäß abgeschlossen wird, so wird die Toolintegration in einen Fehlerstatus versetzt.
+Da alle Pipelinejobs in einer Stage die gleiche Stage-Eingabe empfangen, können Sie keine Artefakte zwischen Jobs übergeben, die sich in derselben Stage befinden. Buildjobs generieren jedoch Artefakte, die Jobs in anderen Stages verwenden können. Um Artefakte zwischen zwei Jobs zu übergeben, verschieben Sie die einzelnen Jobs in eine separate Stage. Weitere Informationen zu Pipelinejobs finden Sie unter [Jobs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs). 
 
- ![Fehler 'Einrichtung fehlgeschlagen'](images/tool_setup_failed.png)
 
-Versuchen Sie, die Toolintegration erneut zu konfigurieren:
+## Gibt es ein maximales Zeitlimit für die Ausführung meiner Pipelinejobs?
+{: #pipeline_jobs_time_limit}
+{: faq}
 
-1. Bewegen Sie auf der Karte des Tools den Mauszeiger über die Nachricht `Einrichtung fehlgeschlagen` und klicken Sie auf **Neu konfigurieren**.
+Ein Pipelinejob kann maximal 60 Minuten ausgeführt werden. Wenn ein Job dieses Limit überschreitet, schlägt er fehl. Untersuchen Sie, ob die Arbeit, die der Pipelinejob ausführt, in kleinere Schritte unterteilt werden kann. Sie können den Pipelinejob in verschiedene kürzere Pipelinejobs unterteilen, die jeweils weniger als 60 Minuten dauern. 
 
- ![Schaltfläche 'Neu konfigurieren'](images/tool_reconfigure.png)
 
-1. Stellen Sie sicher, dass Sie gültige Konfigurationsparameter verwenden. Wenn der Fehler durch eine ungültige Konfiguration verursacht wurde, wird eine Fehlermeldung angezeigt, wie zum Beispiel `Die Integration konnte nicht eingerichtet werden. Überprüfen Sie die Einstellungen und wiederholen Sie die Operation. Ursache: Ungültiger api_key:fakeKey`. Aktualisieren Sie die Einstellungen für die Toolintegration und klicken Sie auf **Integration speichern**.
-1. Wenn der Fehler durch einen Kommunikationsfehler verursacht wurde, klicken Sie auf **Integration speichern**, um einen erneuten Versuch zu starten.
+## Wie sicher sind die sicheren Pipeline-Eigenschaften?
+{: #pipeline_secure_properties}
+{: faq}
+
+Sichere Pipeline-Eigenschaften werden mit AES-128 verschlüsselt und sie werden unmittelbar vor der Übertragung an Ihr Pipeline-Script entschlüsselt. Diese Eigenschaften werden außerdem mithilfe von Sternen in der Eigenschaften-Benutzerschnittstelle und in Ihren Pipelineprotokolldateien maskiert. Bevor Daten für Ihren Pipelinejob in die Protokolldatei geschrieben werden, wird sie nach exakten Übereinstimmungen mit allen Werten in den sicheren Pipeline-Eigenschaften durchsucht. Wird eine Übereinstimmung gefunden, wird sie mithilfe von Sternen maskiert. Gehen Sie vorsichtig vor, wenn Sie mit sicheren Eigenschaften und Protokolldateien arbeiten, da nur exakte Übereinstimmungen maskiert werden.  

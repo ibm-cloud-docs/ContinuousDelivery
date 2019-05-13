@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-02-27"
+
+keywords: Open toolchains, starting point, IBM Cloud
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -22,4 +26,4 @@ Abhängig von der verwendeten Vorlage oder Toolchain umfasst die Toolchain in de
 
 Abhängig von der verwendeten Vorlage oder Toolchain umfasst die Toolchain in der öffentlichen {{site.data.keyword.Bluemix_notm}}-Umgebung (Bluemix Dedicated) unter Umständen ein GitHub- oder GitHub Enterprise-Repository, das App-Startcode und eine vorkonfigurierte Delivery Pipeline enthält. Wenn Sie Änderungen per Push-Operation an das GitHub- oder GitHub Enterprise-Repository der Toolchain übertragen, erstellt die Delivery Pipeline automatisch Builds der Apps und stellt die Apps in {{site.data.keyword.Bluemix_notm}} bereit.
 
-Informationen zu den verfügbaren Toolchains und Toolintegrationen finden Sie in [Verfügbarkeit von Toolchains, Toolchain-Vorlagen und -Lernprogramme](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_about). 
+Informationen zu den verfügbaren Toolchains und Toolintegrationen finden Sie in [Verfügbarkeit von Toolchains, Toolchain-Vorlagen und -Lernprogramme](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_about).

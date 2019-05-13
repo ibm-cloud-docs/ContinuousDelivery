@@ -2,7 +2,11 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-2-5"
+lastupdated: "2019-03-27"
+
+keywords: IBM Cloud Public, Use Developer Insights, US South
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -53,7 +57,7 @@ Als Ausgangspunkt zum [Erstellen einer Toolchain ![Symbol für externen Link](..
 Die {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung Ihres Unternehmens enthält möglicherweise nicht dieselben Toolchain-Vorlagen wie die {{site.data.keyword.Bluemix_notm}} Public-Site. Toolchain-Vorlagen, die sowohl auf {{site.data.keyword.Bluemix_notm}} Public als auch auf {{site.data.keyword.Bluemix_notm}} Dedicated verfügbar sind, enthalten möglicherweise jeweils verschiedene Gruppen von Toolintegrationen auf {{site.data.keyword.Bluemix_notm}} Dedicated.
 {: note}
 
-Manche Toolchain-Vorlagen beinhalten Toolintegrationen, die Teil des {{site.data.keyword.contdelivery_short}}-Service sind. Falls Ihre Ressourcengruppe oder Organisation nicht bereits eine Instanz dieses Service enthält, wenn Sie zum Erstellen der Toolchain auf **Erstellen** klicken, wird der Service automatisch mit dem ausgewählten kostenlosen Lite-Plan hingezufügt. Weitere Informationen und die Bedingungen enthält der [{{site.data.keyword.Bluemix_notm}}-Katalog ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/catalog/services/continuous-delivery/){:new_window}.
+Manche Toolchain-Vorlagen beinhalten Toolintegrationen, die Teil des {{site.data.keyword.contdelivery_short}}-Service sind. Falls Ihre Ressourcengruppe oder Organisation nicht bereits eine Instanz dieses Service enthält, wenn Sie zum Erstellen der Toolchain auf **Erstellen** klicken, wird der Service automatisch mit dem ausgewählten kostenlosen Lite-Plan hinzugefügt. Weitere Informationen und die Bedingungen enthält der [{{site.data.keyword.Bluemix_notm}}-Katalog ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/catalog/services/continuous-delivery/){:new_window}.
 
 Die Toolchain zum Entwickeln und Testen von Microservices auf Cloud Foundry bietet eine App mit Katalog- und Bestell-APIs, die von einem Cloudant Store unterstützt werden. Im Rahmen der Bereitstellung der App wird eine kostenlose Instanz des Cloudant-Service erstellt. Weitere Informationen und die Bedingungen enthält der [{{site.data.keyword.Bluemix_notm}}-Katalog ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/catalog/services/cloudant-nosql-db/){:new_window}.
 
@@ -164,7 +168,7 @@ Toolchain für das Garage Method-Lernprogramm mit Cloud Foundry <img src="../../
   Verfügbar in: Vereinigte Staaten (Süden), Vereinigte Staaten (Osten), Deutschland, Tokio und Vereinigtes Königreich
 
 </td><td>
-Diese Toolchain veranschaulicht die DevOps-Verfahren, die Garage Method bietet. Die Toolchain ist für Continuous Delivery, Quellcodeverwaltung, Testautomatisierung, automatisierte Überwachung und automatisierten Betrieb vorkonfiguriert. Sie wird mit einer Beispielapp bereitgestellt, die in Node.js Express 4 geschrieben ist und von Ihnen weiter erweitert werden kann. <br><br>Verwenden Sie den Kurs: <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Garage Method Advocate-Kurs <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>.
+Diese Toolchain veranschaulicht die DevOps-Verfahren, die Garage Method bietet. Die Toolchain ist für Continuous Delivery, Quellcodeverwaltung, Testautomatisierung, automatisierte Überwachung und automatisierten Betrieb vorkonfiguriert. Sie wird mit einer Beispielapp bereitgestellt, die in Node.js Express 4 geschrieben ist und von Ihnen weiter erweitert werden kann. <br><br>Verwenden Sie den <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Garage Method Advocate-Kurs <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>.
 </td><td>
 <ul>
 <li>{{site.data.keyword.deliverypipeline}}
@@ -180,34 +184,16 @@ Diese Toolchain veranschaulicht die DevOps-Verfahren, die Garage Method bietet. 
 </td></tr>
 
 <tr><td>
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain" target="_blank">Toolchain für Deployment Risk Analytics mit GitHub und Jenkins <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> <br><br>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fdevops-insights%2FDevOpsInsights_Demo_Toolchain_Template" target="_blank">Toolchain "Demo zum Schnelleinstieg in DevOps Insights" <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>. <br><br>
 
-  Verfügbar in Region 'US South'
-
-</td><td>Mit dieser Toolchain können Sie sich Einblicke in Ihren Jenkins-Prozess für kontinuierliche Integration und Lieferung verschaffen. Sie können den Jenkins-Server so konfigurieren, dass er Daten an {{site.data.keyword.DRA_short}} sendet, wenn die Jobs von Jenkins ausgeführt werden. Sie können auch Qualitätsgateways implementieren, um Bereitstellungen richtlinienbasiert zu blockieren. Ergebnis können Sie im Deployment Risk-Dashboard in {{site.data.keyword.DRA_short}} anzeigen. Wenn Sie ein GitHub-Repository konfigurieren, um das Quellenrepository anzugeben, das Jenkins verwendet, so steht die Verfolgbarkeit von Änderungen zur Verfügung.  
-<br><br>
-Verwenden Sie das Lernprogramm: <a href="https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain" target="_blank">Qualitativ hochwertige Bereitstellungen mit der Toolchain für Deployment Risk Analytics mit GitHub und Jenkins <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>  <br><br>
-</td><td><ul><li>
-GitHub Issues
-</li><li>Jenkins
-</li><li>{{site.data.keyword.DRA_full}}
-</li><li>Slack
-</li></ul>
-</td></tr>
-
-<tr><td>
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain" target="_blank">Toolchain für Developer Insights und Team Dynamics mit GitHub und JIRA <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> <br><br>
-
-  Verfügbar in Region 'US South'
+  Verfügbar in den Vereinigten Staaten (Süden), in Deutschland, im Vereinigten Königreich
 
 </td><td>
-Mit dieser Toolchain können Sie das Entwicklungsrisiko für Ihr Projekt untersuchen und die Analyse für Social Coding nutzen, um Interaktionsmuster zwischen den Entwicklern zu verstehen. Sie können GitHub-Quellcode along Verbindung mit GitHub-Problemen, JIRA-Problemen oder beidem analysieren. Verwenden Sie Developer Insights, um diejenigen Dateien ausfindig zu machen, die hochgradig fehlerträchtig sind, und erfahren Sie, inwieweit das Projekt mit DevOps-Verfahren konform ist. Die Analyse für Social Coding in Team Dynamics ermittelt den Grad der Interaktion zwischen Teammitgliedern, sodass das Team bei unproduktiven Verfahren entsprechend korrigierend eingreifen kann.<br><br>
-Verwenden Sie das Lernprogramm: <a href="https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain" target="_blank">Einblicke erhalten mit der Toolchain für Developer Insights und Team Dynamics mit GitHub und JIRA <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> <br><br>
+Mit dieser Toolchain können Sie {{site.data.keyword.DRA_short}} ohne weitere Konfiguration erkunden. Melden Sie sich zunächst bei {{site.data.keyword.Bluemix}} an. Diese Demonstration enthält Daten aus einer Referenz-Toolchain und drei GitHub-Repositorys. Finden Sie heraus, wie Sie Daten für alle Anwendungen, aus allen Teams im Qualitätsdashboard organisieren, testen, erstellen und bereitstellen. Werten Sie Trends aus und lernen Sie verbesserungsbedürftige Bereiche kennen, sodass Sie wissen, welchen Fokus Ihre Ressource haben sollte. Überprüfen Sie, wie Teammitglieder in den einzelnen Releases von Team Dynamics zusammenarbeiten. <br><br>
+Verwenden Sie das Lernprogramm: <a href="https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights" target="_blank">{{site.data.keyword.DRA_full}} erkunden <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>. <br><br>
 </td><td><ul><li>
 GitHub Issues
 </li><li>{{site.data.keyword.DRA_full}}
-</li><li>JIRA
-</li><li>Slack
 </li></ul>
 </td></tr>
 

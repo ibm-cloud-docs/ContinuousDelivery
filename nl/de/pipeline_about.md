@@ -2,7 +2,12 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-08"
+
+keywords: run jobs, sequences of stages, job types
+
+subcollection: ContinuousDelivery
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -121,9 +126,9 @@ Jobs, die Eingaben von Buildjobs erhalten, müssen Buildartefakte in derselben S
 Wenn Sie den Buildertyp **Simple** verwenden, wird Ihr Code nicht kompiliert oder erstellt; er wird gepackt und für zukünftige Stages zur Verfügung gestellt.
 {: tip}
 
-Wenn Sie die Bereitstellung mithilfe von Cloud Foundry durchführen, enthält Cloud Foundry die richtigen Artefakte, damit Ihre App ausgeführt werden kann. Weitere Informationen finden Sie unter [Bereitstellung von Anwendungen mit dem Befehl 'cf'](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps). Die Pipeline für eine Cloud Foundry-App enthält eine Stage für die Bereitstellung, die einen Befehl 'cf' ausführt.
+Wenn Sie die Bereitstellung mithilfe von Cloud Foundry durchführen, enthält Cloud Foundry die richtigen Artefakte, damit Ihre App ausgeführt werden kann. Weitere Informationen finden Sie unter [Bereitstellung von Anwendungen mit dem Befehl 'cf'](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps). Die Pipeline für eine Cloud Foundry-App enthält eine Stage für die Bereitstellung, die einen Befehl 'cf' ausführt.
 
-Cloud Foundry versucht, das zu [verwendende Buildpack zu erkennen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.cloudfoundry.org/buildpacks/detection.html). Sie können das [Buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) angeben, das in der Manifestdatei im Stammordner Ihrer App verwendet werden soll. Buildpacks prüfen in der Regel die vom Benutzer bereitgestellten Artefakte, um festzustellen, welche Abhängigkeiten heruntergeladen werden müssen und wie die Anwendungen für die Kommunikation mit gebundenen Services konfiguriert werden müssen. Weitere Informationen zu Anwendungsmanifesten finden Sie unter [Anwendungsmanifest](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest).
+Cloud Foundry versucht, das zu [verwendende Buildpack zu erkennen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.cloudfoundry.org/buildpacks/detection.html). Sie können das [Buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) angeben, das in der Manifestdatei im Stammordner Ihrer App verwendet werden soll. Buildpacks prüfen in der Regel die vom Benutzer bereitgestellten Artefakte, um festzustellen, welche Abhängigkeiten heruntergeladen werden müssen und wie die Anwendungen für die Kommunikation mit gebundenen Services konfiguriert werden müssen. Weitere Informationen zu Anwendungsmanifesten finden Sie unter [Anwendungsmanifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
 
 ### Bereitstellungsjobs
 
@@ -169,7 +174,7 @@ Geben Sie auf der Registerkarte **Umgebungseigenschaften** auf der Seite 'Pipeli
 
 ![Seite mit Stage-Eigenschaften](images/StageProperties.png)
 
-Sie können die Umgebungseigenschaften auch zwischen Jobs in derselben Stage übergeben, indem Sie die Eigenschaften exportieren. Sie können beispielsweise den folgenden Befehl eingeben, um die Eigenschaft `$API_KEY` in einem weiteren Job in der Stage zu verwenden: `export API_KEY=<API-Schlüssel hier einfügen>`
+Sie können die Umgebungseigenschaften auch zwischen Jobs in derselben Stage übergeben, indem Sie die Eigenschaften exportieren. Sie können beispielsweise den folgenden Befehl eingeben, um die Eigenschaft `$API_KEY` in einem weiteren Job in der Stage zu verwenden: `export API_KEY=<insert API key here>`.
 {:tip}
 
 ### Berechnete Eigenschaften
@@ -211,7 +216,7 @@ der Stage für den Build als Eingabe verwenden.
 ## Cloud Foundry-Manifestdateien
 {: #deliverypipeline_manifest}
 
-Manifestdateien, die den Namen `manifest.yml` tragen und in einem Projektstammverzeichnis gespeichert sind, steuern, wie Ihr Projekt in {{site.data.keyword.Bluemix_notm}} implementiert ist. Informationen zur Erstellung von Manifestdateien für ein Projekt enthält die [{{site.data.keyword.Bluemix_notm}}-Dokumentation zu Anwendungsmanifesten](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest). Für die Integration in {{site.data.keyword.Bluemix_notm}} muss Ihr Projekt über eine Manifestdatei im Stammverzeichnis verfügen. Es ist jedoch nicht erforderlich, dass Sie eine Bereitstellung auf Grundlage der Informationen in der Datei vornehmen.
+Manifestdateien, die den Namen `manifest.yml` tragen und in einem Projektstammverzeichnis gespeichert sind, steuern, wie Ihr Projekt in {{site.data.keyword.Bluemix_notm}} implementiert ist. Informationen zur Erstellung von Manifestdateien für ein Projekt enthält die [{{site.data.keyword.Bluemix_notm}}-Dokumentation zu Anwendungsmanifesten](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest). Für die Integration in {{site.data.keyword.Bluemix_notm}} muss Ihr Projekt über eine Manifestdatei im Stammverzeichnis verfügen. Es ist jedoch nicht erforderlich, dass Sie eine Bereitstellung auf Grundlage der Informationen in der Datei vornehmen.
 
 Sie können in der Pipeline alles angeben, was eine Manifestdatei bei `cf push`-Befehlsargumenten verwenden kann. Die `cf push`-Befehlsargumente sind bei Projekten hilfreich, die über mehrere Bereitstellungsziele verfügen. Falls mehrere Implementierungsjobs versuchen, die Route zu verwenden, die in der Manifestdatei des Projekts angegeben ist, tritt ein Konflikt auf.
 

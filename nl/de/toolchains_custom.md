@@ -2,7 +2,11 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-02-27"
+
+keywords: toolchain template, Configuration properties, readme file
+
+subcollection: ContinuousDelivery
 
 ---
 {:shortdesc: .shortdesc}
@@ -39,7 +43,7 @@ Um eine angepasste Toolchain-Vorlage zu erstellen, klonen Sie zunächst die einf
 
  Diese Vorlage stellt eine einfache Hello World-Anwendung aus einem einzelnen GitHub-Repository bereit und enthält eine einfache Toolchain, die für Continuous Delivery, Quellcodeverwaltung, Problemverfolgung und Onlinebearbeitung vorkonfiguriert ist.
 
-2. Wenn Sie mit einer komplexeren Toolchain-Vorlage beginnen möchten, klonen Sie die [Vorlage für die cloud-native Toolchain für Microservices](https://github.com/open-toolchain/toolchain-demo){: new_window}. 
+2. Wenn Sie mit einer komplexeren Toolchain-Vorlage beginnen möchten, klonen Sie die [Vorlage für die cloud-native Toolchain für Microservices](https://github.com/open-toolchain/toolchain-demo){: new_window}.
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -281,7 +285,7 @@ Dieser Abschnitt der Datei `toolchain.yml` definiert die Pipeline-Stages, die au
 | prod-space | Eigenschaft | <`prod`> | Definiert den {{site.data.keyword.Bluemix_notm}}-Bereich für die Produktionsstage. |
 | github-repo-name | Eigenschaft | <`"{{repo-name-key.parameters.repo_name}}"`> | Variable zum Übergeben des GitHub-Repository-Namens an die Seite zum Erstellen der Toolchain. |
 
-Weitere Informationen zum Erstellen der Datei `deploy.json` finden Sie in [diesem Abschnitt](#toolchains_custom_deploy_json). 
+Weitere Informationen zum Erstellen der Datei `deploy.json` finden Sie in [diesem Abschnitt](#toolchains_custom_deploy_json).
 
  Das folgende Beispiel definiert eine einzelne Stage, die die Bereitstellung in eine Produktionsumgebung vornimmt.
 

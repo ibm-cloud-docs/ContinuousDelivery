@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-8"
+lastupdated: "2019-04-26"
+
+keywords: Git source control, personal access token, Git repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -18,7 +22,7 @@ lastupdated: "2019-2-8"
 {: #git_local}
 
 
-Sie können Ihren Quellcode in einem GitHub-, GitHub Enterprise- oder Git Repos and Issue Tracking-Repository verwalten und mit ihm arbeiten (lokal oder in der Eclipse Orion-Web-IDE). Wenn Sie lokal arbeiten möchten, klonen Sie Ihr Repository mit einem Git-Client (z. B. mit der Git-Befehlszeilenschnittstelle) und bearbeiten Sie den Code mit Ihrem bevorzugten Editor. Wenn Sie in Eclipse arbeiten, können Sie das EGit-Plug-in für die Versionssteuerung installieren.
+Sie können Ihren Quellcode in einem GitHub-, GitHub Enterprise- oder {{site.data.keyword.gitrepos}}-Repository verwalten und damit arbeiten (lokal oder in der {{site.data.keyword.webide}} von Eclipse Orion). Wenn Sie lokal arbeiten möchten, klonen Sie Ihr Repository mit einem Git-Client (z. B. mit der Git-Befehlszeilenschnittstelle) und bearbeiten Sie den Code mit Ihrem bevorzugten Editor. Wenn Sie in Eclipse arbeiten, können Sie das EGit-Plug-in für die Versionssteuerung installieren.
 
 ## Git-Projekt über die Befehlszeile klonen
 
@@ -30,9 +34,9 @@ Sie können Ihren Quellcode in einem GitHub-, GitHub Enterprise- oder Git Repos 
 
 | Git-Typ  | HTTPS-Setup | HTTPS-Verwendung |  SSH-Setup |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Persönliches Zugriffstoken](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) | Git Repos and Issue Tracking-Benutzername (nicht Ihre IBMid) und persönliches Zugriffstoken | [SSH-Schlüssel konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |
+| Git Repos and Issue Tracking  | [Persönliches Zugriffstoken](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat) | Git Repos and Issue Tracking-Benutzername (nicht Ihre IBMid) und persönliches Zugriffstoken | [SSH-Schlüssel konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key) |
 | Öffentlicher GitHub (github.com) | Kein persönliches Zugriffstoken erforderlich, aber Sie können eines einrichten und verwenden | GitHub-Benutzername und Kennwort oder GitHub-Benutzername und persönliches Zugriffstoken oder nur persönliches Zugriffstoken als Benutzername | [GitHub-SSH-Schlüssel konfigurieren](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-| GitHub Enterprise | [Persönliches Zugriffstoken](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) | GitHub Enterprise-Benutzername (nicht Ihre IBMid) und persönliches Zugriffstoken | [GitHub Enterprise-SSH-Schlüssel konfigurieren](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |
+| GitHub Enterprise | [Persönliches Zugriffstoken](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) | GitHub Enterprise-Benutzername (nicht Ihre IBMid) und persönliches Zugriffstoken | [GitHub Enterprise-SSH-Schlüssel konfigurieren](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) |
 
 Wenn Sie lieber SSH verwenden möchten, können Sie einen einzigen Schlüssel für alle Git-Server verwenden. Erstellen oder suchen Sie Ihren Schlüssel und konfigurieren Sie ihn für jeden Server, wie dies in den vorherigen Links beschrieben ist. Wenn Sie Ihren Schlüssel mit einer Kennphrase erstellen, werden Sie zur Eingabe dieser Kennphrase aufgefordert, wenn Sie den Schlüssel verwenden.
 {: tip}
@@ -74,5 +78,6 @@ Wenn der Download abgeschlossen ist, haben Sie eine lokale Version der Dateien i
 ## Mit Eclipse und dem EGit-Plug-in auf das Repository zugreifen
 {: #git_egit}
 
-Wenn Sie Eclipse verwenden und ein Projekt haben, das Git für die Quellcodeverwaltung verwendet, können Sie das EGit-Plug-in verwenden, um Ihre Repositorys von Eclipse aus zu verwalten. Anweisungen zur Installation und Konfiguration von EGit finden Sie im [EGit-Lernprogramm ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
-Wenn Sie Git Repos and Issue Tracking verwenden und es treten Probleme auf, finden Sie weitere Informationen hierzu unter [Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local).
+Wenn Sie Eclipse verwenden und ein Projekt haben, das Git für die Quellcodeverwaltung verwendet, können Sie das EGit-Plug-in verwenden, um Ihre Repositorys von Eclipse aus zu verwalten. Weitere Informationen zur Installation und Konfiguration von EGit finden Sie im [EGit-Lernprogramm ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
+
+Wenn Sie bei der Verwendung von {{site.data.keyword.gitrepos}} auf Probleme stoßen, finden Sie weitere Informationen in der [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local)-Dokumentation. 

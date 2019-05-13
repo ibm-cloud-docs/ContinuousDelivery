@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-7-19"
+  years: 2016, 2019
+lastupdated: "2019-03-25"
+
+keywords: users of a service instance, a-service, Git Repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -22,41 +26,43 @@ Die Verwendung von {{site.data.keyword.contdelivery_full}} ist auf das Erstellen
  * Benutzer, die mit Problemen, Issue-Boards, Quellcodes oder anderen Artefakten in einem {{site.data.keyword.gitrepos}}-Repository arbeiten.
  * Benutzer, die Bearbeitungen oder Trigger (entweder direkt in der Benutzeroberfläche oder indirekt, indem sie einen Repository-Vorgang ausführen) durchführen oder den Status einer Delivery Pipeline anzeigen.
  * Benutzer, die mit der Eclipse Orion-{{site.data.keyword.webide}} arbeiten.
- 
+
 ### Wie werden Benutzer für Instanzen von {{site.data.keyword.contdelivery_short}} in Organisationen gezählt?
 
-Berechtigte Benutzer werden gezählt, indem alle Benutzer in der Cloud-Organisation, die den {{site.data.keyword.contdelivery_short}}-Service enthält, berücksichtigt werden. 
+Berechtigte Benutzer werden gezählt, indem alle Benutzer in der Cloud-Organisation, die den {{site.data.keyword.contdelivery_short}}-Service enthält, berücksichtigt werden.
 
-Um die Liste der Benutzer in Ihrer Organisation in einer {{site.data.keyword.Bluemix_notm}} Public-Umgebung anzuzeigen, klicken Sie in der Menüleiste auf **Verwalten > Konto > Cloud Foundry-Organisationen**.
+Um die Liste der Benutzer in Ihrer Organisation in einer {{site.data.keyword.Bluemix_notm}} Public-Umgebung anzuzeigen, klicken Sie in der Menüleiste auf **Verwalten > Konto**. Klicken Sie dann auf **Cloud Foundry-Organisationen**. 
 
 Um die Liste der Benutzer in Ihrer Organisation in einer {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung anzuzeigen, klicken Sie in der Menüleiste auf **Konto > Organisationen verwalten**.
 
 Sie können auch alle Instanzen des Service {{site.data.keyword.contdelivery_short}} in Ihrem Konto und die Anzahl der Benutzer anzeigen, die für jede Instanz in einer {{site.data.keyword.Bluemix_notm}} Public-Umgebung gemeldet werden.
 
-1. Klicken Sie in der Menüleiste auf **Verwalten > Abrechnung und Nutzung > Nutzung**.
-2. Klicken Sie auf **Nutzungsdashboard**.
-3. Klicken Sie im Menü 'Konto' auf **Cloud Foundry-Organisationen**.
-4. Klicken Sie auf die Organisation, für die Sie Nutzungsinformationen anzeigen möchten.
+1. Klicken Sie in der Menüleiste auf **Verwalten > Abrechnung und Nutzung**. 
+2. Klicken Sie auf **Nutzung**. 
+3. Klicken Sie im Abschnitt **Services** für den {{site.data.keyword.contdelivery_short}}-Service auf **Pläne anzeigen**. 
+4. Klicken Sie für den Plan, zu dem Sie Informationen anzeigen möchten, auf **Details anzeigen**. 
+5. Klicken Sie für die Instanz von {{site.data.keyword.contdelivery_short}}, zu der Sie Nutzungsinformationen anzeigen möchten, auf **Instanzdetails anzeigen**. 
 
 Um alle Instanzen des Service {{site.data.keyword.contdelivery_short}} in Ihrem Konto und die Anzahl der Benutzer anzuzeigen, die für jede Instanz in einer {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung gemeldet werden:
 
 1. Klicken Sie in der Menüleiste auf **Konto > Organisationen verwalten**.
 2. Klicken Sie auf **Nutzungsdashboard**.
 
-### Wie werden Benutzer für Instanzen von {{site.data.keyword.contdelivery_short}} in Ressourcengruppeen gezählt?
+### Wie werden Benutzer für Instanzen von {{site.data.keyword.contdelivery_short}} in Ressourcengruppen gezählt?
 
-Berechtigte Benutzer werden gezählt, indem Sie die Liste der Benutzer auf der Registerkarte 'Verwalten' in der Instanz des Service {{site.data.keyword.contdelivery_short}} anzeigen. 
+Berechtigte Benutzer werden gezählt, indem Sie die Liste der Benutzer auf der Registerkarte 'Verwalten' in der Instanz des Service {{site.data.keyword.contdelivery_short}} anzeigen.
 
 Um die Liste der berechtigten Benutzer anzuzeigen, öffnen Sie das Dashboard der Serviceinstanz und klicken Sie auf die Registerkarte 'Verwalten'.
 
 Sie können auch alle Instanzen des {{site.data.keyword.contdelivery_short}}-Service in Ihrem Konto und die Anzahl der Benutzer anzeigen, die für jede Instanz gemeldet werden.
 
-1. Klicken Sie in der Menüleiste auf **Verwalten > Abrechnung und Nutzung > Nutzung**.
-2. Klicken Sie auf **Nutzungsdashboard**.
-3. Klicken Sie im Menü 'Konto' auf **Ressourcengruppen**.
-4. Klicken Sie auf die Ressourcengruppe, für die Sie Nutzungsinformationen anzeigen möchten.
+1. Klicken Sie in der Menüleiste auf **Verwalten > Abrechnung und Nutzung**. 
+2. Klicken Sie auf **Nutzung**. 
+3. Klicken Sie im Abschnitt **Services** für den {{site.data.keyword.contdelivery_short}}-Service auf **Pläne anzeigen**. 
+4. Klicken Sie für den Plan, zu dem Sie Informationen anzeigen möchten, auf **Details anzeigen**. 
+5. Klicken Sie für die Ressourcengruppe, zu der Sie Nutzungsinformationen anzeigen möchten, auf **Instanzdetails anzeigen**. 
 
-### Was passiert, wenn Sie die Grenzwerte Ihres Serviceplans überschreiten? 
+### Was passiert, wenn Sie die Grenzwerte Ihres Serviceplans überschreiten?
 
 Einige Servicepläne haben möglicherweise andere Einschränkungen, z. B. die Anzahl der auszuführenden Delivery Pipeline-Jobs oder die Speicherbelegung. Weitere Informationen finden Sie in der Planbeschreibung im Katalog. Wenn eine der Planbeschränkungen in einem Abrechnungszeitraum überschritten wird, kann der Service ausgesetzt werden. Beispiel: Aufträge für die Delivery Pipeline werden möglicherweise nicht für den Rest des Abrechnungszeitraums ausgeführt.
 
@@ -92,7 +98,7 @@ Nach dem Ermessen von IBM können Benutzer, die gegen das akzeptable Nutzungsver
 Es stehen drei Typen von {{site.data.keyword.gitrepos}}-Projekten zur Verfügung:
 
   1. Öffentliche Projekte, die für alle Websitebesucher sichtbar sind. Der Inhalt eines öffentlichen Projekts ist für jeden Benutzer sichtbar, der auf {{site.data.keyword.contdelivery_short}} zugreift, selbst wenn der betreffende Benutzer nicht zu dem Projekt eingeladen wurde.
-  2. Private Projekte, die nur für ausgewählte Benutzer sichtbar sind. Detaillierte Informationen dazu, wie Sie Benutzern den Zugriff auf ein Projekt erteilen, finden Sie in [Projektbenutzer ![Symbol für externen Link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){: new_window}.
+  2. Private Projekte, die nur für ausgewählte Benutzer sichtbar sind. Weitere Informationen dazu, wie Sie Benutzern den Zugriff auf ein Projekt erteilen, finden Sie unter [Projektbenutzer ![Symbol für externen Link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){: new_window}. 
   3. Interne Projekte, die für alle angemeldeten Benutzer sichtbar sind. Alle Benutzer, die über ein {{site.data.keyword.Bluemix_notm}}-Konto verfügen, können derartige Projekte anzeigen.
 
 In den Projekteinstellungen können Sie den jeweiligen Projekttyp ändern. Weitere Informationen enthält [Vorgehensweise zum Ändern der Projektsichtbarkeit ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git.ng.bluemix.net/help/public_access/public_access#how-to-change-project-visibility){: new_window}.
