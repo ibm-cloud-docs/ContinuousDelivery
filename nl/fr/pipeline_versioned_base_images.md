@@ -2,7 +2,11 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-2-14"
+lastupdated: "2019-02-27"
+
+keywords: pipeline versioned base image, image version, IBM Cloud team uses
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -20,7 +24,7 @@ lastupdated: "2019-2-14"
 # Utilisation des images de base versionnées
 {: #pipeline_versioned_base_images}
 
-Lorsque vous développez des applications pour {{site.data.keyword.Bluemix_notm}}, vous pouvez utiliser des images de base versionnées afin d'exécuter des travaux de pipeline et être certain d'utiliser les outils, bibliothèques et modules d'exécution en cours. Les images de base versionnées vous permettent de vous assurer que les bits qui constituent l'application et l'environnement sur lequel vous déployez l'application sont cohérents. Vous pouvez contrôler à quel moment les outils, les bibliothèques ou les modules d'exécution pour votre application sont modifiés et les mettre à jour au moment qui vous paraît opportun durant le cycle de développement. 
+Lorsque vous développez des applications pour {{site.data.keyword.Bluemix_notm}}, vous pouvez utiliser des images de base versionnées afin d'exécuter des travaux de pipeline et être certain d'utiliser les outils, bibliothèques et modules d'exécution en cours. Les images de base versionnées vous permettent de vous assurer que les bits qui constituent l'application et l'environnement sur lequel vous déployez l'application sont cohérents. Vous pouvez contrôler à quel moment les outils, les bibliothèques ou les modules d'exécution pour votre application sont modifiés et les mettre à jour au moment qui vous paraît opportun durant le cycle de développement.
 
 Vous pouvez également utiliser des [images Docker personnalisées](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images) pour contrôler à la fois les outils et les versions de ces outils qui sont utilisés pour créer et déployer des applications. Toutefois, cette méthode nécessite de maîtriser Docker et de gérer et mettre à jour l'image créée.
 {: tip}
@@ -28,7 +32,7 @@ Vous pouvez également utiliser des [images Docker personnalisées](/docs/servic
 ## Spécification de la version d'image
 {: #specify_base_image_version}
 
-1. Sur la page Pipeline, cliquez sur ![icône de flux de travaux](images/overflow-icon-2.svg) pour accéder à la liste d'options. 
+1. Sur la page Pipeline, cliquez sur ![icône de flux de travaux](images/overflow-icon-2.svg) pour accéder à la liste d'options.
 2. Cliquez sur **Configurer le pipeline**.
 3. Sur l'onglet **Version d'image**, sélectionnez la version d'image par défaut à utiliser pour tous les travaux de votre pipeline. 
 
@@ -42,7 +46,7 @@ Si vous choisissez l'option `Dernière`, les travaux de pipeline sont exécutés
 
 * **Version 1.0** : cette image antérieure correspond à l'environnement dans lequel les travaux de pipeline étaient exécutés avant la mise à disposition des images de base versionnées. Cette image contient toutes les versions des outils qui étaient disponibles lorsque l'image a été créée, mais elle n'est plus mise à jour. Pour accéder aux nouvelles versions d'outils, effectuez une mise à jour vers la version d'image en cours. Pour plus d'informations sur le contenu de la version d'image 1.0, voir [Ressources préinstallées](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources).
 
-* **Version 2.0** : pour afficher le contenu de la version 2.0, à partir de l'image en cours, tapez `default_versions.sh`. Cette image inclut les outils suivants : 
+* **Version 2.0** : pour afficher le contenu de la version 2.0, à partir de l'image en cours, tapez `default_versions.sh`. Cette image inclut les outils suivants :
 
 ```
 	# node --version
@@ -126,7 +130,7 @@ Si vous choisissez l'option `Dernière`, les travaux de pipeline sont exécutés
  {: important}
  
  1. Sur l'étape, cliquez sur l'icône **Configuration de l'étape**, puis sur **Configurer l'étape**.
- 2. Dans l'onglet **TRAVAUX**, cliquez sur le travail que vous souhaitez modifier. 
+ 2. Dans l'onglet **TRAVAUX**, cliquez sur le travail que vous souhaitez modifier.
  3. L'option **Version d'image Pipeline** affiche la version d'image en cours qui est disponible et la version que vous utilisez pour le travail de pipeline sélectionné. Pour modifier la version d'image et utiliser la version en cours pour exécuter le travail de pipeline, sélectionnez **Dernière**.
 
 Pour exécuter des travaux de pipeline avec l'image que vous avez sélectionnée sur la page de configuration de pipeline, sélectionnez **Valeur par défaut de pipeline**.

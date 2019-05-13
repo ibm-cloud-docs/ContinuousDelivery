@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-5"
+lastupdated: "2019-04-26"
+
+keywords: DevOps Services project, Issue Tracking repo, Git Repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -28,7 +32,7 @@ Pour vos projets DevOps, utilisez le service [{{site.data.keyword.contdelivery_s
 ## Recherche de la chaîne d'outils qui a été créée à partir de votre projet
 {: #find_toolchain}
 
-Vérifiez que la mise à niveau est terminée en vous rendant sur la [page Chaînes d'outils![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops/toolchains){: new_window} et en vérifiant que des chaînes d'outils  portant le même nom que vos projets hub.jazz.net sont affichées. Si vos projets ont été automatiquement mis à niveau, conservez les restrictions suivantes à l'esprit :
+Vérifiez que la mise à niveau est terminée en vous rendant sur la [page Chaînes d'outils![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops/toolchains){: new_window} et en vérifiant que des chaînes d'outils portant le même nom que vos projets hub.jazz.net sont affichées. Si vos projets ont été automatiquement mis à niveau, conservez les restrictions suivantes à l'esprit :
    - Si une autre chaîne d'outils avait déjà utilisé le nom de votre projet avant que celui-ci ne soit mis à niveau, la nouvelle chaîne d'outils qui a été créée pour votre projet peut ne pas porter le même nom que votre projet. 
    - Si vous ne voyez aucune chaîne d'outils pour votre projet, passez dans une autre organisation dont vous êtes membre et vérifiez les chaînes d'outils qu'elle contient.
    
@@ -48,7 +52,7 @@ Les chaînes d'outils sont semblables à des projets, à quelques différences i
 - Dans les projets, l'appartenance est gérée au niveau du projet. L'accès aux chaînes d'outils est géré par l'organisation {{site.data.keyword.Bluemix_notm}} et par la chaîne d'outils. Pour gérer une chaîne d'outils, vous devez être membre de l'organisation qui la contient. Le propriétaire de la chaîne d'outils peut davantage contrôler qui peut accéder à la chaîne d'outils et ce que cette personne est autorisée à faire. Pour en savoir plus sur le contrôle d'accès, voir l'étape 2 dans la rubrique [Initiation à votre chaîne d'outils](#upgrade_next_steps).
 - Selon le type de référentiel que vous avez utilisé dans votre projet sur hub.jazz.net, votre chaîne d'outils peut contenir un référentiel GitHub.com ou un référentiel {{site.data.keyword.gitrepos}}.
 
-Pour en savoir plus sur les chaînes d'outils, consultez [YouTube ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://youtu.be/2SIPE1e7NJ4){: new_window} ou [Initiation à {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started).
+Pour en savoir plus sur les chaînes d'outils, consultez [YouTube ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://youtu.be/2SIPE1e7NJ4){: new_window} ou [Initiation à {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).
 
 ## Initiation à votre chaîne d'outils
 {: #upgrade_next_steps}
@@ -133,7 +137,7 @@ Si vous avez utilisé Jazz SCM comme référentiel source et Delivery Pipeline p
 ### J'ai dû créer une organisation pour mon projet qui a été mis à jour vers une chaîne d'outils. Pour cela, j'ai ajouté une carte de crédit à mon compte. Ma carte de crédit sera-t-elle débitée ?
 {: #faq_charges}
 
-En tant que [client de type Paiement à la carte ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}, si vous utilisez un contexte d'exécution, un service ou un composant au-delà des allocations gratuites répertoriées dans le catalogue {{site.data.keyword.Bluemix_notm}}, vous êtes facturé. Pour avoir une estimation de votre utilisation, reportez-vous à la  [fiche de prix ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}. Pour connaître la tarification en cours de Continuous Delivery, voir le [catalogue {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/services/continuous-delivery){: new_window}.
+En tant que [client de type Paiement à la carte ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}, si vous utilisez un contexte d'exécution, un service ou un composant au-delà des allocations gratuites répertoriées dans le catalogue {{site.data.keyword.Bluemix_notm}}, vous êtes facturé. Pour avoir une estimation de votre utilisation, reportez-vous à la [fiche de prix ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}. Pour connaître la tarification en cours de Continuous Delivery, voir le [catalogue {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/catalog/services/continuous-delivery){: new_window}.
 
 Si vous êtes un employé d'IBM, les projets IBM internes peuvent être facturés aux départements, à la place d'une carte de crédit personnelle. Si vous avez besoin d'utiliser des ressources au-delà des allocations gratuites destinées aux employés IBM, créez un ticket de demande de service.
 
@@ -153,7 +157,7 @@ Mon projet JazzHub est associé à la région Royaume-Uni de {{site.data.keyword
 
    1. Lorsque je sélectionne l'organisation américaine, un message indiquant que cette organisation ne comporte pas d'espace dans la région Sud des Etats-Unis s'affiche et je suis invité à créer un espace. Je ne veux rien exécuter aux Etats-Unis.
    
-   2. Certains de mes collègues ne peuvent pas accéder à la chaîne d'outils, pourtant ils apparaissaient en tant que membres dans le projet JazzHub initial. S'ils tentent d'ouvrir la chaîne d'outils à partir de la page de présentation de l'application dans la région Etats-Unis en cliquant sur **Afficher la chaîne d'outils**, un message "accès refusé"  s'affiche.
+   2. Certains de mes collègues ne peuvent pas accéder à la chaîne d'outils, pourtant ils apparaissaient en tant que membres dans le projet JazzHub initial. S'ils tentent d'ouvrir la chaîne d'outils à partir de la page de présentation de l'application dans la région Etats-Unis en cliquant sur **Afficher la chaîne d'outils**, un message "accès refusé" s'affiche.
    
    3. La chaîne d'outils répertoriée sur ma page Chaînes d'outils n'apparaît pas sur [https://cloud.ibm.com/devops/toolchains?env_id=ibm:yp:us-south ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops/toolchains?env_id=ibm:yp:us-south){: new_window}, en revanche, je peux y accéder directement à partir de la page de présentation de l'application dans la région Etats-Unis en cliquant sur **Afficher la chaîne d'outils**. J'obtiens un message d'erreur indiquant que je ne peux pas modifier la chaîne d'outils ou que je ne possède pas de chaîne d'outils et que je dois en créer une. 
 

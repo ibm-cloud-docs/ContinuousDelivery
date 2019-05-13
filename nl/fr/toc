@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="ContinuousDelivery" audience="service" arm="1155710" href="/docs/services/ContinuousDelivery/index.html" path="services/ContinuousDelivery"}
+{: .toc subcollection="ContinuousDelivery" audience="service" arm="1155710" href="/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started" path="services/ContinuousDelivery"}
 Continuous Delivery
 
     {: .navgroup id="learn"}
@@ -20,7 +20,7 @@ Continuous Delivery
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    Toolchains
+    Chaînes d'outils
         toolchains_about.md
         toolchains_working.md
         toolchains_using.md
@@ -36,7 +36,6 @@ Continuous Delivery
         pipeline_deploy_var.md
         pipeline_versioned_base_images.md
         pipeline_custom_docker_images.md
-        deliverypipeline_extension.md
 
     {: .topicgroup}
     Eclipse Orion Web IDE
@@ -65,5 +64,6 @@ Continuous Delivery
     {: .navgroup id="help"}
     cd_support.md
     ts_index.md
+    troubleshoot_cd.md
     {: .navgroup-end}
     

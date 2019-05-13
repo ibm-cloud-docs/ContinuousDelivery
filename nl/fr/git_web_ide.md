@@ -1,8 +1,13 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-29"
+  years: 2017, 2019
+lastupdated: "2019-02-27"
+
+keywords: commit message field, terminal Type git branch, Eclipse Orion {{site.data.keyword.webide}}
+
+subcollection: ContinuousDelivery
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -36,7 +41,7 @@ Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence r
 
 ### Terminal Git
 {: #create_branch_cmd}
-1. Tapez `git branch <branchname>` et appuyez sur Entrée.
+1. Entrez `git branch <branchname>` et appuyez sur Entrée.
 
 ## Utilisation d'une branche locale
 {: #start_working_on_branch}
@@ -53,7 +58,7 @@ Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence r
 {: #start_working_on_branch_cmd}
 1. Pour afficher vos branches locales, entrez `git branch -l` et appuyez sur Entrée.
 
-2. Tapez `git checkout <branchname>` et appuyez sur Entrée.
+2. Entrez `git checkout <branchname>` et appuyez sur Entrée.
 
 
 ## Mise à jour d'une branche locale pour inclure des modifications de la branche distante
@@ -85,7 +90,7 @@ Quel que soit l'endroit où vous codez, vous pouvez utiliser cette référence r
 ### Terminal Git
 {: #delete_branch_cmd}
 
-1. Tapez `git branch -d <branchname>` et appuyez sur Entrée.
+1. Entrez `git branch -d <branchname>` et appuyez sur Entrée.
 
 ##Insertion forcée des modifications locales dans une branche distante
 {: #force_push}
@@ -105,7 +110,7 @@ Lorsque vous forcez l'insertion d'une branche locale dans une branche distante, 
 ### Terminal Git
 {: #force_push_cmd}
 
-1. Tapez `git push <origin> <remote branch> -f` et appuyez sur Entrée.
+1. Entrez `git push <origin> <remote branch> -f` et appuyez sur Entrée.
 
 ## Elimination des contenus retirés de l'index de la branche locale active
 {: #discard_changes}
@@ -207,7 +212,7 @@ représentation visuelle montre toutes les validations et toutes les branches su
 
 1. Entrez `git log -p` et appuyez sur Entrée.
 
-  **Remarque :** pour afficher uniquement un certain nombre de validations, entrez `git log -p -<number_of_commits_to_view>`.
+  **Remarque :** Pour afficher uniquement un certain nombre de validations, entrez `git log -p -<number_of_commits_to_view>`.
 
 2. Parcourez les validations.
  * Pour afficher plus d'entrées, appuyez sur Page avant.
@@ -267,7 +272,7 @@ représentation visuelle montre toutes les validations et toutes les branches su
 
 1. Affichez l'historique de validation et obtenez l'ID de la validation à étiqueter. Pour plus d'informations, voir [Afficher l'historique de validation](#view_commit_history).
 
-2. Tapez `git tag -a <tag_text> <commit_id>` et appuyez sur Entrée.
+2. Entrez `git tag -a <tag_text> <commit_id>` et appuyez sur Entrée.
 
 ## Modification du nom et de l'adresse e-mail du valideur
 {: #change_the_committer_name_and_email_address}
@@ -283,15 +288,15 @@ représentation visuelle montre toutes les validations et toutes les branches su
 
 Pour mettre à jour votre nom et votre adresse e-mail pour un référentiel spécifique :
 
-1. Tapez `git config user.email "<your@email.com>"` et appuyez sur Entrée.
+1. Entrez `git config user.email "<your@email.com>"` et appuyez sur Entrée.
 
-2. Tapez `git config user.name "<Your Name>"` et appuyez sur Entrée.
+2. Entrez `git config user.name "<Your Name>"` et appuyez sur Entrée.
 
 Pour mettre à jour votre nom et votre adresse e-mail pour tous les référentiels :
 
-1. Tapez `git config --global user.email "<your@email.com>"` et appuyez sur Entrée.
+1. Entrez `git config --global user.email "<your@email.com>"` et appuyez sur Entrée.
 
-2. Tapez `git config --global user.name "<Your Name>"` et appuyez sur Entrée.
+2. Entrez `git config --global user.name "<Your Name>"` et appuyez sur Entrée.
 
 ##Annulation d'une validation
 {: #revert}
@@ -308,7 +313,7 @@ Annuler les modifications introduites par une validation dans votre branche acti
 ### Terminal Git
 {: #revert_cmd}
 
-1. Tapez `git revert <commit ID>` et appuyez sur Entrée.
+1. Entrez `git revert <commit ID>` et appuyez sur Entrée.
 
 ## Fusion des modifications
 {: #merge_changes}
@@ -341,7 +346,7 @@ Si vous avez besoin de distribuer des modifications d'une branche source à une 
 
 2. Réservez la branche de destination. Pour plus d'informations, voir [ Utilisation d'une branche locale](#start_working_on_branch).
 
-3. Tapez `git merge <source_name>` et appuyez sur Entrée.
+3. Entrez `git merge <source_name>` et appuyez sur Entrée.
 
 
 ## Résolution d'un conflit de fusion
@@ -410,7 +415,7 @@ Si vous avez besoin de distribuer des modifications d'une branche source à une 
 
 1. Réservez la branche à mettre à jour en tapant `git checkout <destination_branchname>` et en appuyant sur Entrée.
 
-2. Tapez sur `git rebase <source_branchname>` et appuyez sur Entrée.
+2. Entrez `git rebase <source_branchname>` et appuyez sur Entrée.
 
 3. Si vous rencontrez des conflits, [résolvez-les](#resolve_a_rebase_conflict).
 

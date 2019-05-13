@@ -2,7 +2,12 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-04-12"
+
+keywords: ADD STAGE, Run Stage icon, JOBS tab
+
+subcollection: ContinuousDelivery
+
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -66,7 +71,9 @@ Pour annuler une étape d'exécution, sur l'étape, cliquez sur **Afficher les j
 
 Un travail de déploiement correctement configuré déploie votre application sur votre cible chaque fois que le travail est exécuté. Pour exécuter manuellement un travail de déploiement, cliquez sur l'icône **Exécuter une étape** de l'étape dans laquelle se trouve le travail.
 
-###Révisions d'entrée
+### Révisions d'entrée
+{: #deliverypipeline_input_revisions}
+
 Lorsque vous exécutez une étape manuellement, ou si elle s'exécute car l'étape qui la précède est terminée, l'étape en cours d'exécution sélectionne sa révision d'entrée. Généralement, la révision d'entrée est un numéro de version. Pour
 sélectionner la révision d'entrée, l'étape suit les conditions ci-après :
 
@@ -77,7 +84,9 @@ sélectionner la révision d'entrée, l'étape suit les conditions ci-après :
 Vous pouvez déployer une version précédente. A l'étape qui contient la version, cliquez sur **Afficher les journaux et l'historique**. Sur la page qui s'ouvre, cliquez pour développer le numéro d'exécution, puis cliquez sur le travail de génération. Cliquez sur **ENVOYER A** et sélectionnez une cible.
 {: tip}
 
-###Ajout de services à des applications
+### Ajout de services à des applications
+{: #deliverypipeline_add_services}
+
 Vous pouvez ajouter des services à vos applications et gérer ces services à partir de votre tableau de bord {{site.data.keyword.Bluemix_notm}} ou de l'interface de ligne de commande Cloud Foundry. Vous pouvez également exécuter des commandes d'interface de ligne de commande Cloud Foundry dans des scripts pour les travaux de pipeline. Par exemple, vous pouvez ajouter un service à une application dans le script d'un travail de déploiement. Pour plus d'informations sur l'ajout de services, voir [Connexion de services à des applications externes](/docs/resources?topic=resources-externalapp).
 
 ## Affichage des journaux
@@ -93,3 +102,77 @@ Outre les journaux des travaux, vous pouvez afficher les résultats de tests uni
 
 Vous pouvez également exécuter, redéployer, annuler ou configurer une étape dans la page Historique des étapes. Cliquez sur **EXECUTER** pour exécuter l'étape, sur **REDEPLOYER** pour redéployer s'il s'agit d'un travail de déploiement ou sur **CONFIGURER** pour configurer une étape. Pendant qu'une étape est en exécution,
 vous pouvez l'annuler en cliquant sur son numéro, puis sur **Annuler**.
+
+### Téléchargement des journaux à partir d'un script
+{: #deliverypipeline_download_logs}
+
+Vous pouvez télécharger le fichier journal d'un travail de pipeline à partir d'un script et enregistrer le `PIPELINE_LOG_URL` qui est fourni lors de l'exécution du travail de pipeline. L'exemple suivant montre les étapes à suivre pour télécharger le fichier journal du travail de pipeline vers un système différent.
+
+
+1. Configurez une propriété d'environnement `JOB_LOG` pour votre étape.
+
+1. Dans votre travail de pipeline, enregistrez le `PIPELINE_LOG_URL`.
+
+   ```shell
+   export JOB_LOG="$PIPELINE_LOG_URL"
+   ```
+1. Utilisez le `PIPELINE_LOG_URL` dans un travail ultérieur de la même étape pour télécharger le fichier journal afin de l'exporter vers un système différent. Utilisez un jeton bearer IBM Cloud pour accéder au fichier journal.
+
+   ```shell
+   ibmcloud login -a api.ng.bluemix.net \
+     --apikey <INSERT API KEY HERE>
+
+   BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
+
+   curl -H "Authorization: Bearer $BEARER"  \
+     -H "Accept: text/plain" \
+     -D /tmp/headers.txt \
+     -o job_log.txt \
+     "$JOB_LOG"
+   ```
+1. Vérifiez l'en-tête `X-More-Data`. Si l'en-tête est défini sur `true`, le fichier journal est en cours de génération ou de traitement. Si l'en-tête est défini sur `false`, le fichier journal est prêt a être utilisé.
+
+   ```shell
+   grep X-More-Data /tmp/headers.txt
+   X-More-Data: false
+   ```
+1. Téléchargez le fichier journal vers votre système.
+
+   ```shell
+   scp job_log.txt user@example.org:/job1/logs
+   ```
+
+
+### Téléchargement des artefacts à partir d'un script
+{: #deliverypipeline_download_artifacts}
+
+Vous pouvez télécharger les artefacts pour un travail de génération de pipeline à partir d'un script et enregistrer le `PIPELINE_ARTIFACT_URL` qui est fourni lors de l'exécution du travail de pipeline. L'exemple suivant montre les étapes à suivre pour télécharger les artefacts du travail de pipeline vers un système différent.
+
+
+1. Configurez une propriété d'environnement `JOB_ARTIFACT` pour votre étape.
+
+1. Dans votre travail de pipeline, enregistrez le `PIPELINE_ARTIFACT_URL`.
+
+   ```shell
+   export JOB_ARTIFACT="$PIPELINE_ARTIFACT_URL"
+   ```
+   
+1. Utilisez le `PIPELINE_ARTIFACT_URL` dans un travail ultérieur de la même étape pour télécharger les artefacts afin de les exporter vers un système différent. Utilisez un jeton bearer IBM Cloud pour accéder aux artefacts.
+
+   ```shell
+   ibmcloud login -a api.ng.bluemix.net \
+     --apikey <INSERT API KEY HERE>
+
+   BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
+
+   DOWNLOAD_URL=$( curl -H "Authorization: Bearer $BEARER"  \
+     "$JOB_ARTIFACT" )
+
+   curl -O  "$DOWNLOAD_URL"
+   ```
+   
+1. Téléchargez les artefacts vers votre système.
+
+   ```shell
+   scp $(basename "$DOWNLOAD_URL") user@example.org:/job1/artifacts
+   ```

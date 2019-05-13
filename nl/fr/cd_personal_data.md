@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-2-20"
+lastupdated: "2019-04-25"
+
+keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -29,7 +33,7 @@ Par données personnelles, on entend toute information qui concerne ou identifie
  * Les pipelines {{site.data.keyword.contdelivery_short}}
  * Les chaînes d'outils et intégrations d'outils
  * [GitHub Enterprise sur IBM Cloud ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
- * [{{site.data.keyword.DRA_full}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/DevOpsInsights?topic=DevOpsInsights-insights_personal_data){: new_window}
+ * [{{site.data.keyword.DRA_full}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data){: new_window}
  
 IBM ne gère pas les données dans le service {{site.data.keyword.contdelivery_short}}. Avant de quitter le service {{site.data.keyword.contdelivery_short}} hébergé dans {{site.data.keyword.Bluemix_notm}} Public, vous devez supprimer vos propres données.
 {: important}
@@ -191,9 +195,13 @@ Pour modifier une étape d'un pipeline :
  
 ###Exportation d'une étape de pipeline
 
-Pour exporter la définition d'une étape de pipeline, ajoutez `/yaml` à l'URL du pipeline :
+Pour exporter la définition d'un pipeline entier, ajoutez `/yaml` à l'adresse URL du pipeline :
 
-`http(s)://<DevOps Services domain>/pipeline/user/project/yaml`
+`https://cloud.ibm.com/devops/pipelines/<pipeline id>/yaml?env_id=<region id>`
+
+où `<pipeline id>` et `<region id>` sont les valeurs qui sont affichées dans l'URL de la page du pipeline.
+
+Le fichier yaml obtenu inclut des définitions de toutes les étapes du pipeline.
 
 
 Pour exporter des artefacts et des journaux pour une étape de pipeline :

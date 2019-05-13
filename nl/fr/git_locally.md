@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-8"
+lastupdated: "2019-04-26"
+
+keywords: Git source control, personal access token, Git repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -18,7 +22,7 @@ lastupdated: "2019-2-8"
 {: #git_local}
 
 
-Vous pouvez gérer votre code source dans un référentiel GitHub, GitHub Enterprise ou Git Repos and Issue Tracking, localement ou dans Eclipse Orion Web IDE. Pour travailler localement, clonez votre référentiel avec un client Git tel que l'interface de ligne de commande Git et éditez votre code avec l'éditeur de votre choix. Si vous travaillez dans Eclipse, vous pouvez installer le plug-in EGit pour le contrôle des versions.
+Vous pouvez gérer et travailler avec le code source dans un référentiel GitHub, GitHub Enterprise ou {{site.data.keyword.gitrepos}} localement ou dans Eclipse Orion {{site.data.keyword.webide}}. Pour travailler localement, clonez votre référentiel avec un client Git tel que l'interface de ligne de commande Git et éditez le code avec l'éditeur de votre choix. Si vous travaillez dans Eclipse, vous pouvez installer le plug-in EGit pour le contrôle des versions.
 
 ## Clonage de votre projet Git à partir de la ligne de commande
 
@@ -26,13 +30,13 @@ Vous pouvez gérer votre code source dans un référentiel GitHub, GitHub Enterp
 ## Avant de commencer
 {: #git_before_clone}
 
-1. Pour accéder au serveur Git en dehors du navigateur, il sera éventuellement nécessaire de créer un jeton d'accès personnel ou une clé SSH pour l'authentification. Le tableau suivant indique ce que vous devez faire pour configurer l'authentification.
+1. Pour accéder au serveur Git en dehors du navigateur, vous devez créer un jeton d'accès personnel ou une clé SSH pour l'authentification. Le tableau suivant indique ce que vous devez faire pour configurer l'authentification.
 
 | Type Git  | Configuration HTTPS | Utilisation HTTPS |  Configuration SSH |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Jeton d'accès personnel](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) | Nom d'utilisateur Git Repos and Issue Tracking (pas votre ID IBM) et jeton d'accès personnel | [Configurer la clé SSH](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |
+| Git Repos and Issue Tracking  | [Jeton d'accès personnel](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat) | Nom d'utilisateur Git Repos and Issue Tracking (pas votre ID IBM) et jeton d'accès personnel | [Configurer la clé SSH](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key) |
 | Public GitHub (github.com) | Le jeton d'accès personnel n'est pas requis, mais vous pouvez en configurer un et l'utiliser | Nom d'utilisateur et mot de passe GitHub ou nom d'utilisateur GitHub et jeton d'accès personnel ou simplement jeton d'accès personnel comme nom d'utilisateur | [Configurer une clé SSH GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-| GitHub Enterprise | [Jeton d'accès personnel](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) | Nom d'utilisateur GitHub Enterprise (pas votre ID IBM) et jeton d'accès personnel | [Configurer la clé SSH GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |
+| GitHub Enterprise | [Jeton d'accès personnel](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) | Nom d'utilisateur GitHub Enterprise (pas votre ID IBM) et jeton d'accès personnel | [Configurer la clé SSH GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) |
 
 Si vous préférez utiliser SSH, vous pouvez réutiliser une seule et même clé sur tous les serveurs Git. Créez ou recherchez votre clé et configurez-la dans chaque serveur comme indiqué dans les liens précédents. Si vous créez votre clé avec une phrase passe, vous êtes invité à entrer cette phrase passe lorsque vous utilisez la clé.
 {: tip}
@@ -68,11 +72,12 @@ Créez une copie locale des fichiers de projet en clonant le référentiel Git d
 6. Si vous êtes invité à vous authentifier, entrez les informations appropriées, comme indiqué dans le tableau précédent.
 
 
-Une fois le téléchargement terminé, vous disposez d'une version locale des fichiers dans votre référentiel. Pour plus d'informations sur l'utilisation de Git, [voir la documentation de Git ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")]](http://git-scm.com/doc){: new_window}.
+Une fois le téléchargement terminé, vous disposez d'une version locale des fichiers dans votre référentiel. Pour plus d'informations sur l'utilisation de Git, voir la [documentation de Git ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")]](http://git-scm.com/doc){: new_window}.
 
 
 ## Accès à votre référentiel à l'aide d'Eclipse et du plug-in EGit
 {: #git_egit}
 
-Si vous utilisez Eclipse et possédez un projet qui utilise Git pour le contrôle des sources, vous pouvez utiliser le plug-in EGit pour gérer votre référentiel à partir d'Eclipse. Pour savoir comment installer et configurer EGit, voir le [tutoriel EGit ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
-Si vous rencontrez des difficultés lors de l'utilisation de Git Repos and Issue Tracking, voir [Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local).
+Si vous utilisez Eclipse et possédez un projet qui utilise Git pour le contrôle des sources, vous pouvez utiliser le plug-in EGit pour gérer votre référentiel à partir d'Eclipse. Pour en savoir plus sur l'installation et la configuration d'EGit, voir le [tutoriel d'EGit ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
+
+Si vous rencontrez des problèmes lors de l'utilisation de {{site.data.keyword.gitrepos}}, consultez la [documentation de {{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local).

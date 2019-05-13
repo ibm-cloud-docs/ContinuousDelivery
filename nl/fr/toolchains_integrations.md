@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-26"
+
+keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -230,7 +234,7 @@ Pour tester, surveiller et améliorer la santé de votre application au fur et �
 
 ### Plus d'informations sur Availability Monitoring
 
-Pour en savoir plus sur {{site.data.keyword.prf_hubshort}}, voir l'[article {{site.data.keyword.prf_hublong}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window} sur IBM Cloud Garage Method ou suivez ce tutoriel :
+Pour en savoir plus sur {{site.data.keyword.prf_hubshort}}, voir l'article [{{site.data.keyword.prf_hublong}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/practices/manage/tool_bluemix_availability_monitoring/){: new_window} sur IBM Cloud Garage Method ou consultez ce tutoriel :
 
   * [Gestion de votre application {{site.data.keyword.Bluemix_notm}} à l'aide des fonctions {{site.data.keyword.Bluemix_notm}} Availability Monitoring et Alert Notification ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
@@ -320,7 +324,7 @@ Pour aider votre équipe DevOps à atteindre des objectifs fiables et opération
 
 ### Plus d'informations sur Cloud Event Management
 
-Pour en savoir plus sur Cloud Event Management, consultez l'article [Cloud Event Management  ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/manage/tool_cloud_event_mgt/){: new_window} sur IBM Cloud Garage Method.
+Pour en savoir plus sur Cloud Event Management, consultez l'article [Cloud Event Management ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/manage/tool_cloud_event_mgt/){: new_window} sur IBM Cloud Garage Method.
 
 
 ## Configuration de Delivery Pipeline
@@ -347,7 +351,7 @@ Présentation de la chaîne d'outils.
   Si vous souhaitez que le pipeline s'exécute automatiquement lorsqu'une validation est envoyée à votre référentiel GitHub, {{site.data.keyword.ghe_short}} ou Git, procédez comme suit :
 
    a. Configurez GitHub, {{site.data.keyword.ghe_short}} ou {{site.data.keyword.gitrepos}} pour votre chaîne d'outils avant de définir les étapes pour votre pipeline. Ces étapes requièrent les URL de vos référentiels. Chaque étape de pipeline peut faire référence à un seul des référentiels GitHub, {{site.data.keyword.ghe_short}} ou Git associés à votre chaîne d'outils. Pour
-savoir comment configurer GitHub, voir la section [GitHub](#github). Pour la configuration de {{site.data.keyword.ghe_short}} Dedicated, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}. Pour les instructions de configuration de {{site.data.keyword.gitrepos}}, voir la section [{{site.data.keyword.gitrepos}}](#gitbluemix).
+savoir comment configurer GitHub, voir la section [GitHub](#github). Pour la configuration de {{site.data.keyword.ghe_short}} Dedicated, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}. Pour les instructions de configuration de {{site.data.keyword.gitrepos}}, voir la section [{{site.data.keyword.gitrepos}}](#gitbluemix).
 
    b. Utilisez un webhook. Sans webhook, vous pouvez seulement exécuter les pipelines manuellement. Pour utiliser un webhook lorsque vous vous connectez à un référentiel GitHub
 ou {{site.data.keyword.ghe_short}}, vous devez disposer d'un droit d'administrateur. Pour associer un référentiel {{site.data.keyword.gitrepos}}, vous devez disposer d'un droit Maître ou Propriétaire.
@@ -430,7 +434,7 @@ Pour en savoir plus sur {{site.data.keyword.DRA_short}}, voir l'[article {{site.
 
   * [Utilisation de la chaîne d'outils "Développer et tester des microservices sur Cloud Foundry" ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
 
-  * [Garantir des déploiements de qualité à l'aide de la chaîne d'outils "Déployer Risks Analytics avec GitHub et Jenkins" ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+  * [Exploration d'{{site.data.keyword.DRA_full}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){:new_window}
 
 
 ## Ajout d'Eclipse Orion Web IDE
@@ -604,13 +608,13 @@ Pour en savoir plus sur GitHub, voir l'[article GitHub ![Icône de lien externe]
  Ces instructions s'appliquent à {{site.data.keyword.Bluemix_notm}} Dedicated pour {{site.data.keyword.ghe_short}}. Si vous utilisez votre propre version gérée de {{site.data.keyword.ghe_short}}, certaines étapes peuvent varier en fonction de vos procédures internes.
  {: important}
 
-{{site.data.keyword.ghe_long}} est un service d'hébergement Web sur site pour les référentiels Git. {{site.data.keyword.ghe_short}} Dedicated est destiné aux clients {{site.data.keyword.Bluemix_notm}} Dedicated uniquement. GitHub Issues est un outil de suivi qui conserve votre travail et vos plans à un seul et même emplacement. Il est intégré à votre référentiel de développement pour vous permettre de vous concentrer sur les tâches importantes. Pour plus d'informations sur Bluemix Dedicated pour {{site.data.keyword.ghe_short}} et GitHub Issues, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window} et l'[article GitHub Issues ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} sur IBM Cloud Garage Method.
+{{site.data.keyword.ghe_long}} est un service d'hébergement Web sur site pour les référentiels Git. {{site.data.keyword.ghe_short}} Dedicated est destiné aux clients {{site.data.keyword.Bluemix_notm}} Dedicated uniquement. GitHub Issues est un outil de suivi qui conserve votre travail et vos plans à un seul et même emplacement. Il est intégré à votre référentiel de développement pour vous permettre de vous concentrer sur les tâches importantes. Pour plus d'informations sur Bluemix Dedicated pour {{site.data.keyword.ghe_short}} et GitHub Issues, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window} et l'[article GitHub Issues ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} sur IBM Cloud Garage Method.
 
 Vous pouvez configurer {{site.data.keyword.ghe_short}} en tant qu'intégration d'outils dans votre chaîne d'outils afin de pouvoir gérer le code source depuis l'instance de l'environnement [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} de votre société.
 
 1. Si vous configurez cette intégration d'outils lors de la création de la chaîne d'outils, procédez comme suit :
 
- a. Avant de vous connecter à {{site.data.keyword.ghe_short}} Dedicated pour la première fois, demandez à l'administrateur régional de votre société d'ajouter votre ID utilisateur à votre instance {{site.data.keyword.Bluemix_notm}} Dedicated à partir du registre d'utilisateurs de la société, via LDAP. Pour plus d'informations sur la configuration de votre compte {{site.data.keyword.ghe_short}}, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}.
+ a. Avant de vous connecter à {{site.data.keyword.ghe_short}} Dedicated pour la première fois, demandez à l'administrateur régional de votre société d'ajouter votre ID utilisateur à votre instance {{site.data.keyword.Bluemix_notm}} Dedicated à partir du registre d'utilisateurs de la société, via LDAP. Pour plus d'informations sur la configuration de votre compte {{site.data.keyword.ghe_short}}, voir [Initiation à {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}.
 
  b. Dans la section Intégrations configurables, cliquez sur **{{site.data.keyword.ghe_short}}**.    
 
@@ -962,7 +966,7 @@ Configurez PagerDuty pour l'envoi de notifications en cas d'échec d'étape de p
 
 1. Si vous souhaitez intégrer PagerDuty ay niveau de compte en utilisant une clé d'API, cliquez sur **Compte**:
 
- a. Entrez la clé d'accès d'API pour votre compte PagerDuty. Si vous ne disposez pas d'un compte PagerDuty, [inscrivez-vous pour en obtenir un ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://signup.pagerduty.com/accounts/new){: new_window}. Pour des instructions de recherche de la clé, voir [Génération d'une clé d'API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
+ a. Entrez la clé d'accès d'API pour votre compte PagerDuty. Si vous ne disposez pas d'un compte PagerDuty, [inscrivez-vous pour en obtenir un ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.pagerduty.com/sign-up/){: new_window}. Pour des instructions de recherche de la clé, voir [Génération d'une clé d'API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
 
  b. Entrez le nom de votre service PagerDuty.
 
@@ -1045,8 +1049,8 @@ Configurez Sauce Labs pour l'exécution de tests fonctionnels automatisés sur p
 
  b. Dans la section Intégrations d'outils, cliquez sur **Sauce Labs**.
 
-1. Entrez le nom d'utilisateur associé à votre compte Sauce Labs. Vous [trouverez votre nom d'utilisateur dans le message de bienvenue figurant sur la page de votre compte Sauce Labs ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://saucelabs.com/account){: new_window}.
-1. Entrez la clé d'accès de votre compte Sauce Labs. Vous pouvez [trouver la clé sur la page de votre compte Sauce Labs ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://saucelabs.com/account){: new_window}.
+1. Entrez le nom d'utilisateur associé à votre compte Sauce Labs. Vous [trouverez votre nom d'utilisateur dans le message de bienvenue figurant sur la page de votre compte Sauce Labs ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://app.saucelabs.com/user-settings){: new_window}.
+1. Entrez la clé d'accès de votre compte Sauce Labs. Vous pouvez [trouver la clé sur la page de votre compte Sauce Labs ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://app.saucelabs.com/user-settings){: new_window}.
 1. Cliquez sur **Créer une intégration**.
 1. Cliquez sur **Sauce Labs** pour accéder à saucelabs.com et afficher l'activité de test pour la chaîne d'outils.
 
@@ -1129,4 +1133,4 @@ Configurez SonarQube pour analyser et mesurer en continu la qualité de votre co
 
 ### Plus d'informations sur SonarQube
 
-Pour en savoir plus sur SonarQube, consultez l'article [SonarQube![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window} sur IBM Cloud Garage Method.
+Pour en savoir plus sur SonarQube, consultez l'article [SonarQube ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window} sur IBM Cloud Garage Method.

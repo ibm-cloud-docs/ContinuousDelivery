@@ -3,8 +3,11 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-2-8"
+lastupdated: "2019-03-07"
 
+keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -71,11 +74,11 @@ Vous pouvez utiliser un modèle comme point de départ pour [créer une chaîne 
 
 Vous pouvez créer une chaîne d'outils à partir de votre application. La chaîne d'outils peut prendre en charge le développement, le déploiement, la surveillance, etc. en continu, et elle est associée à votre application. Chaque application peut être associée à une chaîne d'outils. Lorsque vous envoyez des modifications au référentiel GitHub ou {{site.data.keyword.ghe_short}} de la chaîne d'outils, le pipeline génère et déploie automatiquement l'application.
 
-Si vous avez créé votre application à l'aide de votre propre référentiel de code, cliquez sur **Se connecter à une chaîne d'outils DevOps** sur la page d'informations de votre application. Ensuite, suivez la procédure décrite dans [Création d'application à partir de votre propre référentiel de code](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc).
+Si vous avez créé votre application à l'aide de votre propre référentiel de code, cliquez sur **Configurer la distribution continue** sur la page d'information de votre application. Ensuite, suivez la procédure décrite dans [Création d'application à partir de votre propre référentiel de code](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc).
 {: note}
 
-1. Si vous avez créé votre application à l'aide d'un kit de démarrage, cliquez sur **Déployer dans le cloud** sur la page d'informations de votre application. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Public, votre application est configurée pour la distribution continue depuis un nouveau référentiel GitHub rempli avec le code de démarrage d'application. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dedicated, votre application est configurée pour la distribution continue depuis un nouveau référentiel GitHub ou {{site.data.keyword.ghe_short}} rempli avec le code de démarrage d'application.
-1. Sur la page de création de chaîne d'outils, passez en revue le diagramme de la chaîne d'outils que vous allez créer. Ce diagramme montre chaque intégration d'outils dans sa phase de cycle de vie au sein de la chaîne d'outils.
+1. Si vous avez créé votre application à l'aide d'un kit de démarrage, cliquez sur **Configurer la distribution continue** sur la page d'informations de votre application. Sélectionnez ensuite une cible de déploiement. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Public, votre application est configurée pour la distribution continue depuis un nouveau référentiel GitHub rempli avec le code de démarrage d'application. Si vous utilisez {{site.data.keyword.Bluemix_notm}} Dedicated, votre application est configurée pour la distribution continue depuis un nouveau référentiel GitHub ou {{site.data.keyword.ghe_short}} rempli avec le code de démarrage d'application.
+1. Sur la page de configuration des chaînes d'outils, passez en revue le diagramme de la chaîne d'outils que vous êtes sur le point de créer. Ce diagramme montre chaque intégration d'outils dans sa phase de cycle de vie au sein de la chaîne d'outils.
 1. Passez en revue les informations par défaut des paramètres de chaîne d'outils. Le nom de la chaîne d'outils l'identifie dans {{site.data.keyword.Bluemix_notm}}. Si vous désirez utiliser un nom différent, modifiez le nom de la chaîne d'outils.
 1. Dans la section Intégrations d'outils, sélectionnez chaque intégration d'outils à configurer pour votre chaîne d'outils. Quelques intégrations d'outils ne nécessitent pas de configuration. Pour des informations sur la configuration des intégrations d'outils, voir [Configuration d'intégrations d'outils](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Cliquez sur **Créer**. Plusieurs étapes s'exécutent automatiquement pour configurer votre chaîne d'outils. Les intégrations d'outils configurées varient selon que vous utilisez des chaînes d'outils sur {{site.data.keyword.Bluemix_notm}} Public ou {{site.data.keyword.Bluemix_notm}} Dedicated. Par exemple, lorsque vous créez une chaîne d'outils à partir d'une application sur {{site.data.keyword.Bluemix_notm}} Public, les étapes suivantes sont exécutées :

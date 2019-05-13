@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-1-31"
+lastupdated: "2019-04-01"
+
+keywords: Eclipse Orion {{site.data.keyword.webide}}, file types, Local Editor Settings icon
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -11,6 +15,8 @@ lastupdated: "2019-1-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
 {:download: .download}
 
@@ -24,6 +30,9 @@ Mais surtout, {{site.data.keyword.webide}} est basé sur le Web. Vous n'avez rie
 
 Ne stockez pas les données réglementées dans des fichiers situés dans l'interface {{site.data.keyword.webide}}. Les procédures relatives aux données réglementées ne sont pas encore en place.
 {: tip}
+
+L'interface {{site.data.keyword.webide}} est accessible avec le clavier et fonctionne bien avec un lecteur d'écran. Vous pouvez utiliser {{site.data.keyword.webide}} pour éditer le code ou, si vous le préférez, vous pouvez éditer le code à l'aide de votre éditeur de code ou de texte favori. Vous pouvez également utiliser les fonctionnalités Git qui sont fournies avec {{site.data.keyword.webide}} ou bien utiliser la ligne de commande Git ou github.com pour accéder aux fonctionnalités Git de {{site.data.keyword.webide}}.
+{: note}
 
 ## Configuration de l'interface IDE
 {: #editorsetup}

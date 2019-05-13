@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-7"
+lastupdated: "2019-04-01"
+
+keywords: IBM Cloud Continuous Delivery, tool integration, toolchain template
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -18,19 +22,22 @@ lastupdated: "2019-2-7"
 
 
 # Tutoriel d'initiation
-{: #cd_getting_started}
+{: #getting-started}
 
 Adoptez une approche DevOps en utilisant {{site.data.keyword.contdelivery_full}}, qui inclut une chaîne d'outils ouverte automatisant la génération et le déploiement d'applications. Vous
 pouvez commencer en créant une chaîne d'outils de déploiement simple qui prend en charge les tâches de développement, de déploiement et les opérations. 
 {: shortdesc}
+
+
+Si vous avez déjà une instance de {{site.data.keyword.contdelivery_short}}, vous pouvez [créer une chaîne d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops/create){: new_window} ou [afficher les chaînes d'outils existantes ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops/toolchains){: new_window}.
+{: tip}
+
 
 ##Conditions préalables requises
 {: #cd_prereqs}
 
 Pour créer une chaîne d’outils de distribution continue à partir d’un modèle, vous devez d'abord créer une instance de {{site.data.keyword.contdelivery_short}} en la sélectionnant dans le catalogue {{site.data.keyword.Bluemix_notm}}. La chaîne d'outils intègre des outils destinés à la planification, au développement, au déploiement de pipelines et à la gestion de vos applications. Vous pouvez toujours ajouter ou retirer des outils dans vos chaînes d'outils. Si vous disposez déjà de chaînes d'outils, vous pouvez [afficher les chaînes d'outils existantes](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing_a_toolchain){: new_window}. Pour plus d'informations sur l'utilisation des chaînes d'outils, voir [Utilisation des chaînes d'outils](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using){: new_window}.
 
-Si vous disposez déjà d'une instance de {{site.data.keyword.contdelivery_short}}, vous pouvez [créer une chaîne d'outils ![External link icon](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops/create){: new_window} ou [afficher les chaînes d'outils existantes ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/devops/toolchains){: new_window}.
-{: tip}
 
 ##Etape 1 : Sélectionner un modèle de chaîne d'outils
 {: #select_a_toolchain_template}
@@ -73,3 +80,4 @@ Consultez l'un des tutoriels suivants sur [IBM&reg; Cloud Garage Method ![Icône
   * [Création et utilisation de votre propre chaîne d'outils à l'aide de la chaîne d'outils "Développer une application Cloud Foundry"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
 
   * [Ajout d'une chaîne d'outils à une application ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+ 

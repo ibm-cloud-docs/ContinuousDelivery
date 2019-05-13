@@ -2,7 +2,12 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-08"
+
+keywords: run jobs, sequences of stages, job types
+
+subcollection: ContinuousDelivery
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -125,9 +130,9 @@ vous laissez la zone vide, l'archivage est effectué dans le répertoire racine.
 Si vous utilisez le type de générateur **Simple**, votre code n'est pas compilé ni généré ; il est conditionné et rendu disponible pour des étapes ultérieures.
 {: tip}
 
-Lorsque vous effectuez un déploiement à l'aide de la technologie Cloud Foundry, celle-ci inclut les artefacts appropriés permettant à votre application de s'exécuter. Pour plus d'informations, voir [Déploiement d'applications avec la commande cf](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps). Le pipeline pour une application Cloud Foundry contient une étape de déploiement qui exécute une commande cf.
+Lorsque vous effectuez un déploiement à l'aide de la technologie Cloud Foundry, celle-ci inclut les artefacts appropriés permettant à votre application de s'exécuter. Pour plus d'informations, voir [Déploiement d'applications avec la commande cf](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps). Le pipeline pour une application Cloud Foundry contient une étape de déploiement qui exécute une commande cf.
 
-Cloud Foundry tente de [détecter le pack de construction à utiliser![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.cloudfoundry.org/buildpacks/detection.html). Vous pouvez spécifier le [pack de construction](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) à utiliser dans le fichier manifeste dans le dossier principal de votre application. En général, les packs de construction examinent les artefacts fournis par l'utilisateur afin d'identifier les dépendances à télécharger et de déterminer comment configurer les applications pour qu'elles communiquent avec des services liés. Pour plus d'informations sur les fichiers manifeste, voir [Manifeste d'application](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest).
+Cloud Foundry tente de [détecter le pack de construction à utiliser![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://docs.cloudfoundry.org/buildpacks/detection.html). Vous pouvez spécifier le [pack de construction](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) à utiliser dans le fichier manifeste dans le dossier principal de votre application. En général, les packs de construction examinent les artefacts fournis par l'utilisateur afin d'identifier les dépendances à télécharger et de déterminer comment configurer les applications pour qu'elles communiquent avec des services liés. Pour plus d'informations sur les fichiers manifeste, voir [Manifeste d'application](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
 
 ### Travaux de déploiement
 
@@ -215,7 +220,7 @@ Les étapes prennent leur entrée dans des référentiels et des travaux de gén
 ## Fichiers manifeste de Cloud Foundry
 {: #deliverypipeline_manifest}
 
-Les fichiers manifeste, qui sont appelés `manifest.yml` et sont stockés dans le répertoire racine d'un projet, contrôlent la façon dont votre projet est déployé dans {{site.data.keyword.Bluemix_notm}}. Pour obtenir des informations sur la création des fichiers manifeste pour un projet, consultez la documentation [{{site.data.keyword.Bluemix_notm}} sur les manifestes d'application](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest). Pour s'intégrer à {{site.data.keyword.Bluemix_notm}}, votre projet doit contenir un fichier manifeste dans son répertoire racine. Toutefois, vous n'êtes pas obligé d'effectuer le déploiement conformément aux informations du fichier.
+Les fichiers manifeste, qui sont appelés `manifest.yml` et sont stockés dans le répertoire racine d'un projet, contrôlent la façon dont votre projet est déployé dans {{site.data.keyword.Bluemix_notm}}. Pour obtenir des informations sur la création des fichiers manifeste pour un projet, consultez la documentation [{{site.data.keyword.Bluemix_notm}} sur les manifestes d'application](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest). Pour s'intégrer à {{site.data.keyword.Bluemix_notm}}, votre projet doit contenir un fichier manifeste dans son répertoire racine. Toutefois, vous n'êtes pas obligé d'effectuer le déploiement conformément aux informations du fichier.
 
 Dans le pipeline, vous pouvez spécifier tout ce qu'un fichier manifeste peut faire à l'aide des arguments de commande `cf push`. Les arguments de commande `cf push` sont utiles dans les projets qui possèdent plusieurs projets de déploiement. Si plusieurs travaux de déploiement tentent d'utiliser la route spécifiée dans le fichier manifeste du projet, un conflit se produit.
 

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-11"
+lastupdated: "2019-02-27"
+
+keywords: IBM Cloud button, yml file, build file
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -122,7 +126,7 @@ Pour déployer une application dans un conteneur à l'aide d'{{site.data.keyword
 
 Le fichier Dockerfile agit comme une sorte de script de génération pour l'application. Si un fichier Dockerfile est détecté dans le référentiel, l'application est générée automatiquement dans une image avant d'être déployée dans un conteneur. Si l'application proprement dite doit être générée avant que l'application ne soit générée dans une image, ajoutez un script de génération pour l'application et un fichier Dockerfile.
 
-Pour en savoir plus sur la création de fichiers Dockerfile, voir la [documentation Docker ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.docker.com/reference/builder/){:new_window}. Pour suivre les instructions étape par étape à l'aide d'un modèle de chaîne d'outils pour déployer vers Kubernetes, voir le [tutoriel Utilisation d'une chaîne d'outils "Développer une application Kubernetes"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window} ou le [tutoriel Utilisation de la chaîne d'outils "Développer une application Kubernetes avec Helm"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window}.
+Pour en savoir plus sur la création de fichiers Docker, voir la [documentation Docker ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.docker.com/reference/builder/){:new_window}. Pour suivre les instructions étape par étape à l'aide d'un modèle de chaîne d'outils pour déployer vers Kubernetes, voir le [tutoriel Utilisation d'une chaîne d'outils "Développer une application Kubernetes"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window} ou le [tutoriel Utilisation de la chaîne d'outils "Développer une application Kubernetes avec Helm"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window}.
 
 Pour en savoir plus sur le portage de votre application Cloud Foundry sur un cluster Kubernetes, voir le [tutoriel Portage de votre application Cloud Foundry pour un déploiement sur Kubernetes ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){:new_window}.  
 

@@ -2,7 +2,11 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-2-5"
+lastupdated: "2019-03-27"
+
+keywords: IBM Cloud Public, Use Developer Insights, US South
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -162,7 +166,7 @@ Chaîne d'outils "Tutoriel Garage Method avec Cloud Foundry" <img src="../../ico
   Disponible dans les régions Sud des Etats-Unis, Est des Etats-Unis, Allemagne, Tokyo et Royaume-Uni
 
 </td><td>
-Cette chaîne d'outils illustre les pratiques DevOps qui sont appliquées dans la méthode Garage. Elle est préconfigurée pour la distribution continue, le contrôle des sources et l'automatisation des tests, ainsi que pour la surveillance et les opérations automatisées. Elle est fournie avec un modèle d'application écrit en Node.js Express 4, que vous pouvez continuer de développer. <br><br>Essayez le cours : <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Become a Garage Method advocate <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>.
+Cette chaîne d'outils illustre les pratiques DevOps qui sont appliquées dans la méthode Garage. Elle est préconfigurée pour la distribution continue, le contrôle des sources et l'automatisation des tests, ainsi que pour la surveillance et les opérations automatisées. Elle est fournie avec un modèle d'application écrit en Node.js Express 4, que vous pouvez continuer de développer. <br><br>Essayez le cours : <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Become a Garage Method advocate <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>
 </td><td>
 <ul>
 <li>{{site.data.keyword.deliverypipeline}}
@@ -178,34 +182,16 @@ Cette chaîne d'outils illustre les pratiques DevOps qui sont appliquées dans l
 </td></tr>
 
 <tr><td>
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain" target="_blank">Chaîne d'outils "Analyse des risques de déploiement avec GitHub et Jenkins" <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fdevops-insights%2FDevOpsInsights_Demo_Toolchain_Template" target="_blank">Chaîne d'outils "Démonstration rapide de DevOps Insights" <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
 
-  Disponible dans le sud des Etats-Unis
-
-</td><td>Cette chaîne d'outils vous permet d'analyser votre processus Jenkins en vue d'une intégration et d'une distribution continues. Vous pouvez configurer le serveur Jenkins pour qu'il envoie des données à {{site.data.keyword.DRA_short}} lorsque les travaux sont exécutés par Jenkins. Vous pouvez également implémenter des seuils de qualité afin de bloquer des déploiements en fonction de règles. Vous pouvez afficher les résultats sur le tableau de bord Deployment Risk de {{site.data.keyword.DRA_short}}. Si vous configurez un référentiel GitHub pour qu'il indique le référentiel source utilisé par Jenkins, la traçabilité des modifications est disponible.  
-<br><br>
-Essayez le tutoriel : <a href="https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain" target="_blank">Garantir des déploiements de qualité à l'aide de la chaîne d'outils "Analyse des risques de déploiement avec GitHub et Jenkins" <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>  <br><br>
-</td><td><ul><li>
-GitHub and Issues
-</li><li>Jenkins
-</li><li>{{site.data.keyword.DRA_full}}
-</li><li>Slack
-</li></ul>
-</td></tr>
-
-<tr><td>
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain" target="_blank">Chaîne d'outils "Developer Insights et Team Dynamics avec GitHub et JIRA" <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
-
-  Disponible dans le sud des Etats-Unis
+  Disponible dans le sud des Etats-Unis, en Allemagne et au Royaume-Uni
 
 </td><td>
-Cette chaîne d'outils vous permet d'explorer les risques liés au développement de votre projet et d'utiliser une analyse du codage social afin de comprendre les modèles d'interaction entre les développeurs. Vous pouvez analyser le code source GitHub ainsi que les problèmes de GitHub, les problèmes JIRA ou les deux. Utilisez Developer Insights pour identifier les fichiers plus susceptibles de générer des erreurs et examiner la conformité du projet avec les pratiques DevOps. L'analyse du codage social dans Team Dynamics identifie le niveau d'interaction entre les membres d'une équipe pour leur permettre de remédier à des pratiques non productives.<br><br>
-Essayez le tutoriel : <a href="https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain" target="_blank">Obtenez des informations en utilisant la chaîne d'outils "Developer Insights et Team Dynamics avec GitHub et JIRA" <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
+Avec cette chaîne d'outils, vous pouvez explorer {{site.data.keyword.DRA_short}}, sans qu'aucune configuration ne soit nécessaire. Pour commencer, connectez-vous à {{site.data.keyword.Bluemix}}. Cette démonstration contient les données d'une chaîne d'outils de référence et de trois référentiels GitHub. Explorez comment organiser, tester, générer et déployer des données pour toutes les applications et de toutes les équipes dans le tableau de bord Qualité. Evaluez les tendances et identifiez les domaines qui nécessitent des améliorations afin de savoir sur quoi concentrer vos ressources. Examinez comment les membres de l'équipe collaborent dans chaque version au sein de Team Dynamics.<br><br>
+Essayez le tutoriel : <a href="https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights" target="_blank">Explore {{site.data.keyword.DRA_full}} <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a> <br><br>
 </td><td><ul><li>
 GitHub and Issues
 </li><li>{{site.data.keyword.DRA_full}}
-</li><li>JIRA
-</li><li>Slack
 </li></ul>
 </td></tr>
 

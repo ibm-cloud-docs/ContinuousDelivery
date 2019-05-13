@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-02-27"
+
+keywords: IBM Cloud, build types, build script
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -37,6 +41,6 @@ Vous pouvez utiliser l'une des méthodes suivantes pour créer un pipeline :
 
    * [Créer une chaîne d'outils à partir d'un modèle](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window} comprenant au moins un pipeline.
 
-   * [Ajouter l'intégration d'outils {{site.data.keyword.deliverypipeline}} ](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window} à une chaîne d'outils existante. 
+   * [Ajouter l'intégration d'outils {{site.data.keyword.deliverypipeline}} ](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window} à une chaîne d'outils existante.
    
 A partir de {{site.data.keyword.deliverypipeline}}, modifiez votre configuration, vérifiez le statut des générations, l'application déployée et les déploiements récents, examinez les journaux les plus récents et les détails du déploiement, ou supprimez votre pipeline.

@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-5"
+  years: 2015, 2019
+lastupdated: "2019-04-01"
+
+keywords: Git Repos, Issue Tracking, Collaborate, Git repository
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -25,6 +29,9 @@ Collaborez avec votre équipe et gérez votre code source avec un référentiel 
 Invitez uniquement les personnes avec qui vous avez une relation personnelle ou d'affaires à collaborer à un projet. Les utilisateurs qui utilisent une invitation à un référentiel Git à des fins autres que pour collaborer sur un projet peuvent voir leur accès au service suspendu ou révoqué.
 {: important}
 
+GitHub et la ligne de commande Git sont deux alternatives à GitLab auxquelles vous pouvez accéder.
+{: note}
+
 Ne stockez pas des données réglementées dans des fichiers ou des problèmes dans des référentiels Git. Les procédures relatives aux données réglementées ne sont pas encore en place.
 {: tip}
 
@@ -36,6 +43,7 @@ L'intégration de l'outil {{site.data.keyword.gitrepos}} aide les équipes à g�
 
 Cette intégration d'outil étant basée sur GitLab Community Edition et hébergée par IBM sur la plateforme {{site.data.keyword.Bluemix_notm}}, certaines options de GitLab ne sont pas disponibles. Par exemple, Delivery Pipeline fournit une intégration continue et une distribution continue pour {{site.data.keyword.Bluemix_notm}}, par conséquent, les fonctions d'intégration continue dans GitLab ne sont pas prises en charge. En outre, les fonctions d'administration ne sont pas disponibles car elles sont gérées par IBM.
 {: tip}
+
 
 ## Utilisation de {{site.data.keyword.gitrepos}} localement
 {: #git_locally}
