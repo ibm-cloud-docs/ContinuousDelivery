@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-5"
+lastupdated: "2019-04-26"
+
+keywords: DevOps Services project, Issue Tracking repo, Git Repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -48,7 +52,7 @@ Las cadenas de herramientas son como proyectos, con algunas diferencias importan
 - En los proyectos, la pertenencia se ha mantenido a nivel de proyecto. El acceso a las cadenas de herramientas se gestiona mediante la organización (org) y la cadena de herramientas de {{site.data.keyword.Bluemix_notm}}. Para trabajar con una cadena de herramientas, debe ser un miembro de la organización que contiene la cadena de herramientas. El propietario de la cadena de herramientas tiene más control sobre quién puede acceder a la cadena de herramientas y lo que pueden hacer. Para obtener más información sobre el control de acceso, consulte el paso 2 en [Iniciación a la cadena de herramientas](#upgrade_next_steps).
 - En función del tipo de repositorio que haya utilizado en el proyecto en hub.jazz.net, la cadena de herramientas puede contener un repositorio de GitHub.com o un repositorio de {{site.data.keyword.gitrepos}}.
 
-Puede obtener más información sobre las cadenas de herramientas en [YouTube ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://youtu.be/2SIPE1e7NJ4){: new_window} o desde [Iniciación a {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started).
+Puede obtener más información sobre las cadenas de herramientas en [YouTube ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://youtu.be/2SIPE1e7NJ4){: new_window} o desde [Iniciación a {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).
 
 ## Iniciación a la cadena de herramientas
 {: #upgrade_next_steps}

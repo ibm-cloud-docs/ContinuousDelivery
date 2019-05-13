@@ -3,8 +3,11 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-2-8"
+lastupdated: "2019-03-07"
 
+keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -71,11 +74,11 @@ Puede utilizar una plantilla como punto de partida para [crear una cadena de her
 
 Puede crear una cadena de herramientas desde su app. La cadena de herramientas puede admitir tareas continuadas de desarrollo, despliegue, supervisión, etc., y está asociada con su app. Cada app puede asociarse a una cadena de herramientas. Cuando se envían los cambios al repositorio de GitHub o {{site.data.keyword.ghe_short}} de la cadena de herramientas, el conducto crea y despliega automáticamente la app.
 
-Si ha creado la app utilizando su propio repositorio de código, pulse **Conectarse a la cadena de herramientas de DevOps** en la página de detalles de su app. A continuación, siga los pasos que se describen en [Creación de apps a partir de su propio repositorio de código](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc).
+Si ha creado la app utilizando su propio repositorio de código, pulse **Configurar entrega continua** en la página de detalles de su app. A continuación, siga los pasos que se describen en [Creación de apps a partir de su propio repositorio de código](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc).
 {: note}
 
-1. Si ha creado la app utilizando un kit de inicio, pulse **Desplegar en la nube** en la página de detalles de la app. Si utiliza {{site.data.keyword.Bluemix_notm}} público, la app se configura para una entrega continua desde un nuevo repositorio de GitHub que ya contiene el código de inicio de la app. Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado, la app se configura para una entrega continua desde un nuevo repositorio de GitHub o {{site.data.keyword.ghe_short}} que ya contiene el código de inicio de la app.
-1. En la página de creación de cadenas de herramientas, revise el diagrama de la cadena de herramientas que está a punto de crear. El diagrama muestra cada integración de herramientas en la fase del ciclo de vida correspondiente en la cadena de herramientas.
+1. Si ha creado la app utilizando un kit de inicio, pulse **Configurar entrega continua** en la página de detalles de la app. A continuación, seleccione un destino de despliegue. Si utiliza {{site.data.keyword.Bluemix_notm}} público, la app se configura para una entrega continua desde un nuevo repositorio de GitHub que ya contiene el código de inicio de la app. Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado, la app se configura para una entrega continua desde un nuevo repositorio de GitHub o {{site.data.keyword.ghe_short}} que ya contiene el código de inicio de la app.
+1. En la página de configuración de cadenas de herramientas, revise el diagrama de la cadena de herramientas que está a punto de crear. El diagrama muestra cada integración de herramientas en la fase del ciclo de vida correspondiente en la cadena de herramientas.
 1. Revise la información predeterminada para la configuración de la cadena de herramientas. El nombre de la cadena de herramientas la identifica en {{site.data.keyword.Bluemix_notm}}. Si desea utilizar otro nombre, cambie el nombre de la cadena de herramientas.
 1. En la sección Integraciones de herramientas, seleccione las integraciones de herramientas que desee configurar para su cadena de herramientas. Algunas integraciones de herramientas no necesitan configuración. Para obtener información sobre cómo configurar las integraciones de herramientas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Pulse **Crear**. Para configurar la cadena de herramientas, se ejecutan varios pasos automáticamente. Las integraciones de herramientas que se configuran dependen de si utiliza cadenas de herramientas en {{site.data.keyword.Bluemix_notm}} Público o {{site.data.keyword.Bluemix_notm}} Dedicado. Por ejemplo, si crea una cadena de herramientas a partir de una app en {{site.data.keyword.Bluemix_notm}} público, se ejecutan estos pasos:

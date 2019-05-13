@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-25"
+
+keywords: secure environment, data, IBM Cloud Continuous Delivery, Data
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -16,6 +20,6 @@ lastupdated: "2018-11-14"
 {: #cd_data_security}  
 
 {{site.data.keyword.contdelivery_full}} aloja las bases de datos en un entorno seguro y de alta disponibilidad:
-   * Los datos se cifran en reposo (GPFS, LUKS y Softlayer) y en curso (HTTPS y SSH). Las credenciales de cliente y sistema se almacenan en discos cifrados.
+   * Los datos se cifran en reposo (GPFS, LUKS y Softlayer) y en curso (HTTPS y SSH). Las credenciales de sistema y de cliente se almacenan en discos cifrados.
    * La aplicación y los datos están configurados para la alta disponibilidad.
    * El acceso a los datos está limitado a solo aquellos usuarios que necesitan los datos para dar soporte y mantener el servicio.

@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-7-19"
+  years: 2016, 2019
+lastupdated: "2019-03-25"
+
+keywords: users of a service instance, a-service, Git Repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -22,21 +26,22 @@ Los planes de servicio de {{site.data.keyword.contdelivery_short}} y sus precios
  * Los usuarios que interactúan con problemas, paneles de problemas, código fuente u otros artefactos en un repositorio de {{site.data.keyword.gitrepos}}.
  * Los usuarios que manipulan, activan (directamente en la interfaz de usuario o indirectamente al confirmar un repositorio) o ven el estado de un conducto de entrega.
  * Los usuarios que interactúan con Eclipse Orion {{site.data.keyword.webide}}.
- 
+
 ### ¿Cómo se cuentan los usuarios para instancias de {{site.data.keyword.contdelivery_short}} en organizaciones?
 
-Los usuarios autorizados se cuentan teniendo en cuenta todos los usuarios de la organización de la nube (org) que contiene el servicio de {{site.data.keyword.contdelivery_short}}. 
+Los usuarios autorizados se cuentan teniendo en cuenta todos los usuarios de la organización de la nube (org) que contiene el servicio de {{site.data.keyword.contdelivery_short}}.
 
-Para ver la lista de usuarios de la organización en un entorno de {{site.data.keyword.Bluemix_notm}} público, desde la barra de menús, pulse **Gestionar > Cuenta > Organizaciones de Cloud Foundry**.
+Para ver la lista de usuarios de la organización en un entorno de {{site.data.keyword.Bluemix_notm}} público, desde la barra de menús, pulse **Gestionar > Cuenta**. A continuación, pulse **Organizaciones de Cloud Foundry**.
 
 Para ver la lista de usuarios de su organización en un entorno dedicado de {{site.data.keyword.Bluemix_notm}}, desde la barra de menús, pulse **Cuenta > Gestionar organizaciones**.
 
 También puede ver todas las instancias del servicio de {{site.data.keyword.contdelivery_short}} de la cuenta y el número de usuarios que se notifican en cada instancia en un entorno de {{site.data.keyword.Bluemix_notm}} público.
 
-1. En la barra de menús, pulse **Gestionar > Facturación y uso > Uso**.
-2. Pulse **Panel de control de uso**.
-3. En el menú Cuenta, pulse **Organizaciones de Cloud Foundry**.
-4. Pulse la organización para la que desea ver información de uso.
+1. En la barra de menús, pulse **Gestionar > Facturación y uso**.
+2. Pulse **Uso**.
+3. En la sección **Servicios**, pulse **Ver planes** para el servicio de {{site.data.keyword.contdelivery_short}}.
+4. Pulse **Ver detalles** para ver el plan sobre el que desea ver información.
+5. Pulse **Ver detalles de instancia** para ver la instancia de {{site.data.keyword.contdelivery_short}} cuya información de uso desea ver.
 
 Para ver todas las instancias del servicio {{site.data.keyword.contdelivery_short}} en su cuenta y el número de usuarios que se notifican en cada instancia en un entorno dedicado de {{site.data.keyword.Bluemix_notm}}:
 
@@ -45,18 +50,19 @@ Para ver todas las instancias del servicio {{site.data.keyword.contdelivery_shor
 
 ### ¿Cómo se cuentan los usuarios para las instancias de {{site.data.keyword.contdelivery_short}} en grupos de recursos?
 
-Los usuarios autorizados se cuentan teniendo en cuenta la lista de usuarios del separador Gestionar dentro de la instancia de servicio de {{site.data.keyword.contdelivery_short}}. 
+Los usuarios autorizados se cuentan teniendo en cuenta la lista de usuarios del separador Gestionar dentro de la instancia de servicio de {{site.data.keyword.contdelivery_short}}.
 
 Para ver la lista de usuarios autorizados, abra el panel de control de la instancia de servicio y pulse el separador Gestionar.
 
 También puede ver todas las instancias del servicio de {{site.data.keyword.contdelivery_short}} de la cuenta y el número de usuarios notificados en cada instancia.
 
-1. En la barra de menús, pulse **Gestionar > Facturación y uso > Uso**.
-2. Pulse **Panel de control de uso**.
-3. En el menú Cuenta, pulse **Grupos de recursos**.
-4. Pulse el grupo de recursos para el que desea ver información de uso.
+1. En la barra de menús, pulse **Gestionar > Facturación y uso**.
+2. Pulse **Uso**.
+3. En la sección **Servicios**, pulse **Ver planes** para el servicio de {{site.data.keyword.contdelivery_short}}.
+4. Pulse **Ver detalles** para ver el plan sobre el que desea ver información.
+5. Pulse **Ver detalles de instancia** para ver el grupo de recursos cuya información de uso desea ver.
 
-### ¿Qué ocurre cuando se superan los límites del plan de servicio? 
+### ¿Qué ocurre cuando se superan los límites del plan de servicio?
 
 Algunos planes de servicio podrían tener otras limitaciones, como por ejemplo el número de trabajos de Delivery Pipeline que pueden ejecutarse o el consumo de almacenamiento. Para obtener más información, consulte la descripción del plan en el catálogo. Si se supera cualquiera de las limitaciones del plan en un período de facturación, el servicio se puede suspender. Por ejemplo, los trabajos de Delivery Pipeline podrían no ejecutarse durante el resto del período de facturación.
 
@@ -92,7 +98,7 @@ A discreción de IBM, los usuarios que vulneren los comportamientos aceptables d
 Hay disponibles tres tipos de proyectos {{site.data.keyword.gitrepos}}:
 
   1. Los proyectos públicos son visibles a todos los visitantes del sitio. El contenido en un proyecto público es visible para todo el mundo que acceda a {{site.data.keyword.contdelivery_short}}, incluso si no han sido invitados al proyecto.
-  2. Los proyectos privados únicamente son visibles a usuarios seleccionados. Para obtener información detallada sobre cómo otorgar acceso al proyecto a los usuarios, consulte [Usuarios de proyecto ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){: new_window}.
+  2. Los proyectos privados únicamente son visibles a usuarios seleccionados. Para obtener más información sobre cómo otorgar acceso al proyecto a los usuarios, consulte [Usuarios de proyecto ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){: new_window}.
   3. Los proyectos internos son visibles a todos los usuarios que han iniciado una sesión. Cualquier usuario con una cuenta de {{site.data.keyword.Bluemix_notm}} podrá ver estos proyectos.
 
 Puede modificar el tipo de proyecto en los valores del proyecto. Para obtener más información, consulte [Cómo cambiar la visibilidad de un proyecto ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/public_access/public_access#how-to-change-project-visibility){: new_window}.

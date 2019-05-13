@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-7"
+lastupdated: "2019-04-01"
+
+keywords: IBM Cloud Continuous Delivery, tool integration, toolchain template
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -18,18 +22,21 @@ lastupdated: "2019-2-7"
 
 
 # Guía de aprendizaje de iniciación
-{: #cd_getting_started}
+{: #getting-started}
 
 Puede adoptar un enfoque DevOps mediante {{site.data.keyword.contdelivery_full}}, que incluye cadenas de herramientas abiertas que automatizan la creación y despliegue de aplicaciones. Puede empezar creando una sencilla cadena de herramientas que dé soporte a las tareas de desarrollo, despliegue y operaciones. 
 {: shortdesc}
+
+
+Si ya tiene una instancia de {{site.data.keyword.contdelivery_short}}, puede [crear una cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/devops/create){: new_window} o [visualizar cadenas de herramientas existentes ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/devops/toolchains){: new_window}.
+{: tip}
+
 
 ##Requisitos previos
 {: #cd_prereqs}
 
 Antes de poder crear una cadena de herramientas de entrega continua a partir de una plantilla, debe crear una instancia de {{site.data.keyword.contdelivery_short}} seleccionándola en el catálogo de {{site.data.keyword.Bluemix_notm}}. La cadena de herramientas integra herramientas para la planificación, despliegue de conductos y gestión de aplicaciones. Siempre puede añadir o eliminar herramientas de sus cadenas de herramientas. Si ya tiene cadenas de herramientas, puede [ver cadenas de herramientas existentes](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing_a_toolchain){: new_window}. Para obtener más información sobre cómo trabajar con cadenas de herramientas, consulte el apartado sobre [Utilización de cadenas de herramientas](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using){: new_window}.
 
-Si ya tiene una instancia de {{site.data.keyword.contdelivery_short}}, puede [crear una cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/devops/create){: new_window} o [visualizar cadenas de herramientas existentes ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/devops/toolchains){: new_window}.
-{: tip}
 
 ##Paso 1: Seleccionar una plantilla de cadena de herramientas
 {: #select_a_toolchain_template}
@@ -73,3 +80,4 @@ Consulte uno de estas guías de aprendizaje en [IBM&reg; Cloud Garage Method ![I
   * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
 
   * [Añada una cadena de herramientas para una app ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+ 

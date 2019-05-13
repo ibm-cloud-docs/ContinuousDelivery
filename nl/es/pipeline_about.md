@@ -2,7 +2,12 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-08"
+
+keywords: run jobs, sequences of stages, job types
+
+subcollection: ContinuousDelivery
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -36,7 +41,7 @@ Puede definir propiedades tanto en el nivel de conducto como en el nivel de etap
 
 Las etapas organizan la entrada y los trabajos a medida que se compila, se despliega y se prueba el código. Las etapas aceptan la entrada de repositorios de control de origen (repositorios SCM) o compilan trabajos en otras etapas. Para repositorios SCM, la entrada es el contenido de una sucursal en concreto del repositorio; para los trabajos de compilación, la entrada son los artefactos producidos por el trabajo. Al crear la primera etapa, el separador **INPUT** contiene los valores predeterminados por defecto.
 
-Cuando se ejecuta una etapa, la entrada de la etapa se pasada a cada uno de los trabajos de la etapa. A cada trabajo se le proporciona un contenedor limpio en el que ejecutarse. Como resultado, los trabajos de una etapa no se pueden pasar artefactos entre sí. Para pasar artefactos entre trabajos, separe los trabajos en dos etapas y utilice la salida del trabajo en la primera etapa como entrada a la segunda etapa.
+Cuando se ejecuta una etapa, la entrada de la etapa se pasa a cada uno de los trabajos de la etapa. A cada trabajo se le proporciona un contenedor limpio en el que ejecutarse. Como resultado, los trabajos de una etapa no se pueden pasar artefactos entre sí. Para pasar artefactos entre trabajos, separe los trabajos en dos etapas y utilice la salida del trabajo en la primera etapa como entrada a la segunda etapa.
 {: tip}
 
 De forma similar a cómo puede definir las propiedades del conducto, también puede definir las propiedades de la etapa para su uso en todos los trabajos de una etapa determinada. Por ejemplo, podría definir una propiedad `TEST_URL` que pasa un URL a los trabajos de prueba y despliegue en una etapa. El trabajo de despliegue se despliega en dicho URL y el trabajo de prueba realiza una prueba de la app en ejecución en el URL. Las propiedades de etapa también se pasan a scripts de trabajo utilizando variables de entorno. Si se define la misma propiedad tanto en el nivel de conducto como en el nivel de etapa, se utiliza el valor de la propiedad de la etapa.
@@ -121,9 +126,9 @@ Los trabajos que toman entrada de trabajos de compilación deben hacer referenci
 Si utiliza el tipo de constructor **Simple**, el código no se compilará ni creará; se empaquetará y quedará disponible para futuras etapas.
 {: tip}
 
-Cuando se despliega utilizando Cloud Foundry, Cloud Foundry incluirá los artefactos correctos para permitir que se ejecute la app. Para obtener más información, consulte [Despliegue de apps mediante el mandato cf](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps). El conducto para una app de Cloud Foundry contiene una etapa de Despliegue que ejecuta un mandato cf.
+Cuando se despliega utilizando Cloud Foundry, Cloud Foundry incluirá los artefactos correctos para permitir que se ejecute la app. Para obtener más información, consulte [Despliegue de apps mediante el mandato cf](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps). El conducto para una app de Cloud Foundry contiene una etapa de Despliegue que ejecuta un mandato cf.
 
-Cloud Foundry intenta [detectar el paquete de compilación para utilizar ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Puede especificar el [paquete de compilación](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) que se utilizará en el archivo de manifiesto en la carpeta raíz de la app. Los paquetes de compilación normalmente examinan los artefactos proporcionados por los usuarios para determinar qué dependencias se descargarán y cómo configurar las aplicaciones para que se comuniquen con servicios enlazados. Para obtener más información sobre los archivos de manifiesto, consulte [Manifiesto de aplicación](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest).
+Cloud Foundry intenta [detectar el paquete de compilación para utilizar ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Puede especificar el [paquete de compilación](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) que se utilizará en el archivo de manifiesto en la carpeta raíz de la app. Los paquetes de compilación normalmente examinan los artefactos proporcionados por los usuarios para determinar qué dependencias se descargarán y cómo configurar las aplicaciones para que se comuniquen con servicios enlazados. Para obtener más información sobre los archivos de manifiesto, consulte [Manifiesto de aplicación](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
 
 ### Trabajos de despliegue
 
@@ -210,7 +215,7 @@ Las etapas toman su entrada de repositorios y trabajos de compilación, y los tr
 ## Archivos de manifiesto de Cloud Foundry
 {: #deliverypipeline_manifest}
 
-Los archivos de manifiesto, que se denominan `manifest.yml` y se almacenan en el directorio raíz de un proyecto, controlan la forma en que se despliega el proyecto en {{site.data.keyword.Bluemix_notm}}. Para obtener información sobre cómo crear archivos de manifiesto para un proyecto, consulte la [documentación de {{site.data.keyword.Bluemix_notm}} sobre manifiestos de aplicaciones](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest). Para integrarse con {{site.data.keyword.Bluemix_notm}}, el proyecto debe tener un archivo de manifiesto en su directorio raíz. Sin embargo, no es necesario que realice el despliegue en función de la información del archivo.
+Los archivos de manifiesto, que se denominan `manifest.yml` y se almacenan en el directorio raíz de un proyecto, controlan la forma en que se despliega el proyecto en {{site.data.keyword.Bluemix_notm}}. Para obtener información sobre cómo crear archivos de manifiesto para un proyecto, consulte la [documentación de {{site.data.keyword.Bluemix_notm}} sobre manifiestos de aplicaciones](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest). Para integrarse con {{site.data.keyword.Bluemix_notm}}, el proyecto debe tener un archivo de manifiesto en su directorio raíz. Sin embargo, no es necesario que realice el despliegue en función de la información del archivo.
 
 En el conducto, puede especificar todo lo que puede hacer un archivo de manifiesto utilizando argumentos del mandato `cf push`. Los argumentos del mandato `cf push` son útiles en los proyectos que tienen varios destinos de despliegue. Si varios trabajos de despliegue intentan utilizar la ruta especificada en el archivo de manifiesto del proyecto, se producirá un conflicto.
 

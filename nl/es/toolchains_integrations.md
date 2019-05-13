@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-26"
+
+keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -77,7 +81,7 @@ Configure {{site.data.keyword.alertnotificationshort}} de modo que reciba notifi
 ### Configuración de Alert Notification
 
 1. Si configura la integración de esta herramienta al crear la cadena de herramientas, en la sección Integraciones configurables, pulse **{{site.data.keyword.alertnotificationshort}}**.
-1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de instrumentos de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.  
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.  
 
  a. Pulse **Añadir una herramienta**.
 
@@ -104,7 +108,7 @@ Para obtener más información sobre {{site.data.keyword.alertnotificationshort}
 Configure el gestor de repositorios Artifactory para que guarde los artefactos de compilación en el repositorio de Artifactory (repositorio):
 
 1. Si configura la integración de esta herramienta al crear la cadena de herramientas, en la sección Integraciones configurables, pulse **Artifactory**.
-1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de instrumentos de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.  
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.  
 
  a. Pulse **Añadir una herramienta**.
 
@@ -223,7 +227,7 @@ Para probar, supervisar y mejorar el estado de la app a medida que la crea, aña
 
 ### Más información acerca de Availability Monitoring
 
-Para obtener más información sobre {{site.data.keyword.prf_hubshort}}, consulte el [artículo de {{site.data.keyword.prf_hublong}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window} en el IBM Cloud Garage Method o realice esta guía de aprendizaje:
+Para obtener más información sobre {{site.data.keyword.prf_hubshort}}, consulte el [artículo de {{site.data.keyword.prf_hublong}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/practices/manage/tool_bluemix_availability_monitoring/){: new_window} en el IBM Cloud Garage Method o realice esta guía de aprendizaje:
 
   * [Gestionar su aplicación {{site.data.keyword.Bluemix_notm}} utilizando {{site.data.keyword.Bluemix_notm}} Availability Monitoring and Alert Notification ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
@@ -323,7 +327,7 @@ Para obtener más información sobre Cloud Event Management, consulte el [artíc
 Configure {{site.data.keyword.deliverypipeline}} para automatizar la creación, las pruebas y el despliegue automáticos de sus apps:
 
 1. Si configura la integración de esta herramienta al crear la cadena de herramientas, en la sección Integraciones configurables, pulse **{{site.data.keyword.deliverypipeline}}**. En función de la plantilla que utilice, los campos disponibles serán distintos. Revise los valores del campo predeterminado y, si es necesario, realice cambios.
-1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de instrumentos de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
 
  a. Pulse **Añadir una herramienta**.
 
@@ -336,7 +340,7 @@ Configure {{site.data.keyword.deliverypipeline}} para automatizar la creación, 
 
   Si desea que el conducto se ejecute automáticamente cuando se envíe una confirmación a su repositorio GitHub, {{site.data.keyword.ghe_short}} o Git (repo), siga estos pasos:
 
-   a. Configure GitHub, {{site.data.keyword.ghe_short}} o {{site.data.keyword.gitrepos}} para la cadena de herramientas antes de definir las fases del conducto. Las etapas del conducto necesitan los URL Git para los repositorios. Cada etapa de conducto puede hacer referencia a un único repositorio de GitHub, {{site.data.keyword.ghe_short}} o Git que esté asociado con la cadena de herramientas. Para obtener instrucciones sobre cómo configurar GitHub, consulte la sección [GitHub](#github). Para obtener instrucciones sobre cómo configurar {{site.data.keyword.ghe_short}}, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}. Para obtener instrucciones sobre cómo configurar {{site.data.keyword.gitrepos}}, consulte la sección [{{site.data.keyword.gitrepos}}](#gitbluemix).
+   a. Configure GitHub, {{site.data.keyword.ghe_short}} o {{site.data.keyword.gitrepos}} para la cadena de herramientas antes de definir las fases del conducto. Las etapas del conducto necesitan los URL Git para los repositorios. Cada etapa de conducto puede hacer referencia a un único repositorio de GitHub, {{site.data.keyword.ghe_short}} o Git que esté asociado con la cadena de herramientas. Para obtener instrucciones sobre cómo configurar GitHub, consulte la sección [GitHub](#github). Para obtener instrucciones sobre cómo configurar {{site.data.keyword.ghe_short}}, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}. Para obtener instrucciones sobre cómo configurar {{site.data.keyword.gitrepos}}, consulte la sección [{{site.data.keyword.gitrepos}}](#gitbluemix).
 
    b. Utilice un webhook. Sin un webhook, solo podrá ejecutar los conductos manualmente. Para utilizar un webhook cuando enlaza con un repositorio GitHub o {{site.data.keyword.ghe_short}}, necesita privilegios de administración. Para enlazar un repositorio de {{site.data.keyword.gitrepos}}, necesita privilegios de maestro o de propietario.
 
@@ -345,7 +349,7 @@ Configure {{site.data.keyword.deliverypipeline}} para automatizar la creación, 
 ### Configuración de un trabajo de pruebas Sauce Labs en el conducto
 {: #config_saucelabs}
 
-Antes de configurar un trabajo de pruebas Sauce Labs en el conducto, necesita un conducto de trabajo que incluya fases para crear y desplegar la app. También debe configurar Sauce Labs para la cadena de herramientas. Para obtener instrucciones sobre cómo configurar Sauce Labs, consulte la sección [Sauce Labs](#saucelabs).
+Antes de configurar un trabajo de pruebas Sauce Labs en el conducto, necesita un conducto funcional que incluya fases para crear y desplegar la app. También debe configurar Sauce Labs para la cadena de herramientas. Para obtener instrucciones sobre cómo configurar Sauce Labs, consulte la sección [Sauce Labs](#saucelabs).
 
 Configure el {{site.data.keyword.deliverypipeline}} para añadir un trabajo de pruebas Sauce Labs:
 
@@ -401,7 +405,7 @@ Para obtener más información sobre {{site.data.keyword.deliverypipeline}}, con
 Añada {{site.data.keyword.DRA_short}} para mantener y mejorar la calidad de su código en {{site.data.keyword.Bluemix_notm}} supervisando las implementaciones para identificar los riesgos antes de distribuir la app.
 
 1. Si configura la integración de esta herramienta al crear la cadena de herramientas, en la sección Integraciones configurables, pulse **{{site.data.keyword.DRA_short}}**.
-1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de instrumentos de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
 
  a. Pulse **Añadir una herramienta**.
 
@@ -418,7 +422,7 @@ Para obtener más información sobre {{site.data.keyword.DRA_short}}, consulte e
 
   * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
 
-  * [Garantice la calidad de los despliegues mediante la cadena de herramientas "Deployment Risk Analytics con GitHub y Jenkins" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+  * [Explore {{site.data.keyword.DRA_full}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){:new_window}
 
 
 ## Adición del IDE Eclipse Orion Web
@@ -432,7 +436,7 @@ Eclipse Orion {{site.data.keyword.webide}} es un entorno integrado basado en web
 Para completar las tareas de control del código fuente, añada la integración de herramientas Eclipse Orion {{site.data.keyword.webide}}:
 
 1. Si configura la integración de esta herramienta al crear la cadena de herramientas, en la sección Integraciones configurables, pulse **Eclipse Orion {{site.data.keyword.webide}}**.
-1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de instrumentos de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
 
  a. Pulse **Añadir una herramienta**.
 
@@ -527,7 +531,7 @@ Si configura la integración de esta herramienta mientras crea la cadena de herr
 
   Si no tiene una señal de acceso personal, puede crear una:
 
-     a. En cualquier página de GitHub, pulse en el icono de su perfil y, a continuación, pulse **Valores**.
+     a. En cualquier página de GitHub, pulse el icono de su perfil y, a continuación, pulse **Valores**.
 
      b. En la barra lateral, pulse **Señales de acceso personales**.
 
@@ -590,20 +594,20 @@ Para obtener más información acerca de GitHub, consulte el [artículo de GitHu
  Estas instrucciones se aplican a {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.ghe_short}}. Si utiliza su propia versión gestionada de {{site.data.keyword.ghe_short}}, algunos pasos pueden diferir en función de sus procedimientos internos.
  {: important}
 
-{{site.data.keyword.ghe_long}} es un servicio de alojamiento basado en web para repositorios Git. {{site.data.keyword.ghe_short}} dedicado es únicamente para clientes de {{site.data.keyword.Bluemix_notm}} dedicado. GitHub Issues es una herramienta de seguimiento que mantiene todo su trabajo y sus planificaciones en un mismo lugar. Está integrado con el repositorio de desarrollo de modo que pueda centrarse en las tareas importantes. Para obtener más información sobre {{site.data.keyword.ghe_short}} dedicado y GitHub Issues, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window} y el [artículo GitHub Issues ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} en IBM Cloud Garage Method.
+{{site.data.keyword.ghe_long}} es un servicio de alojamiento basado en web para repositorios Git. {{site.data.keyword.ghe_short}} Dedicado es solo para los clientes de {{site.data.keyword.Bluemix_notm}} Dedicado. GitHub Issues es una herramienta de seguimiento que mantiene todo su trabajo y sus planificaciones en un mismo lugar. Está integrado con el repositorio de desarrollo de modo que pueda centrarse en las tareas importantes. Para obtener más información sobre {{site.data.keyword.ghe_short}} dedicado y GitHub Issues, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window} y el [artículo GitHub Issues ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} en IBM Cloud Garage Method.
 
 Puede configurar {{site.data.keyword.ghe_short}} como una integración de herramientas de la cadena de herramientas para que pueda gestionar el código fuente en la instancia de [{{site.data.keyword.Bluemix_notm}} Dedicado](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} de la empresa.
 
 1. Si configura la integración de esta herramienta mientras crea la cadena de herramientas, siga estos pasos:
 
- a. Antes de iniciar sesión en Dedicated {{site.data.keyword.ghe_short}} por primera vez, solicite al administrador de la zona de su empresa que añada el ID de usuario a la instancia de {{site.data.keyword.Bluemix_notm}} Dedicated desde el registro de usuarios de su empresa utilizando LDAP. Para obtener información sobre cómo configurar la cuenta de {{site.data.keyword.ghe_short}}, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}.
+ a. Antes de iniciar sesión en Dedicated {{site.data.keyword.ghe_short}} por primera vez, solicite al administrador de la zona de su empresa que añada el ID de usuario a la instancia de {{site.data.keyword.Bluemix_notm}} Dedicated desde el registro de usuarios de su empresa utilizando LDAP. Para obtener información sobre cómo configurar la cuenta de {{site.data.keyword.ghe_short}}, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}.
 
  b. En la sección Integraciones configurables, pulse **{{site.data.keyword.ghe_short}}**.    
 
  c. Revise el nombre predeterminado para el nuevo repositorio de {{site.data.keyword.ghe_short}}. Si es necesario, cambie el nombre del repositorio nuevo. La siguiente imagen muestra un ejemplo de un repositorio clonado desde un repositorio de ejemplo. Puede utilizar un repositorio existente o uno nuevo. Para utilizar un repositorio nuevo, puede crear un repositorio vacío, clonarlo o bifurcarlo.
  ![Ubicaciones de repositorio predeterminado](images/toolchain_ghe_config.png)
 
-1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de instrumentos de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
 
  a. Pulse **Añadir una herramienta**.
 
@@ -671,7 +675,7 @@ Si tiene una cadena de herramientas y le está añadiendo esta integración de h
 1. En la sección Integraciones de herramientas, pulse **GitLab**.
 1. Pulse el servidor de GitLab que desee utilizar.
 1. Si tiene un repositorio de GitLab y desea utilizarlo, para el tipo de repositorio, pulse **Existente** y escriba el URL.
-1. Si desea utilizar un repositorio de GitLab nuevo, escriba un nombre para el repositorio, escriba el URL para el repositorio que esté colando o bifurcando, y seleccione el tipo de repositorio:
+1. Si desea utilizar un repositorio de GitLab nuevo, escriba un nombre para el repositorio, escriba el URL para el repositorio que esté clonando o bifurcando, y seleccione el tipo de repositorio:
 
  a. Para crear un repositorio vacío, pulse **Nuevo**.
 
@@ -711,7 +715,7 @@ Con la integración de herramientas Jenkins, puede enviar notificaciones de trab
 Configure Jenkins para automatizar la creación, las pruebas y el despliegue automáticos de sus apps:
 
 1. Si configura la integración de esta herramienta al crear la cadena de herramientas, en la sección Integraciones configurables, pulse **Jenkins**.
-1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de instrumentos de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.  
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.  
 
  a. Pulse **Añadir una herramienta**.
 
@@ -745,7 +749,7 @@ JIRA es una herramienta que realiza un seguimiento de problemas y errores relaci
 Configure JIRA de modo que planifique, realice un seguimiento y distribuya código de calidad:
 
 1. Si configura la integración de esta herramienta al crear la cadena de herramientas, en la sección Integraciones configurables, pulse **JIRA**.
-1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de instrumentos de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.  
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.  
 
  a. Pulse **Añadir una herramienta**.
 
@@ -793,7 +797,7 @@ Para obtener más información sobre JIRA, consulte el [artículo de JIRA ![Icon
 Configure el gestor de repositorios Nexus para que guarde los artefactos de compilación en el repositorio de Nexus (repo):
 
 1. Si configura la integración de esta herramienta al crear la cadena de herramientas, en la sección Integraciones configurables, pulse **Nexus**.
-1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de instrumentos de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.  
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.  
 
  a. Pulse **Añadir una herramienta**.
 
@@ -898,7 +902,7 @@ Si el equipo utiliza una herramienta no incluida en la lista de integraciones de
 
 Configure una herramienta personalizada para que funcione con otras herramientas de la cadena de herramientas y que esté disponible para el equipo:
 
-1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de instrumentos de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
 
  a. Pulse **Añadir una herramienta**.
 
@@ -929,7 +933,7 @@ PagerDuty integra datos de varios sistemas de supervisión en una única vista. 
 Configure PagerDuty para enviar notificaciones cuando se producen errores en la fase de conducto para que pueda corregir los problemas con mayor celeridad y reducir el tiempo de inactividad:
 
 1. Si configura la integración de esta herramienta al crear la cadena de herramientas, en la sección Integraciones configurables, pulse **PagerDuty**.
-1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de instrumentos de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
 
  a. Pulse **Añadir una herramienta**.
 
@@ -937,7 +941,7 @@ Configure PagerDuty para enviar notificaciones cuando se producen errores en la 
 
 1. Si desea integrar PagerDuty en el nivel de cuenta utilizando una clave de API, pulse **Cuenta**:
 
- a. Escriba la clave de acceso de API para su cuenta de PagerDuty. Si no dispone de una cuenta de PagerDuty, [regístrese para obtener una ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://signup.pagerduty.com/accounts/new){: new_window}. Para ver instrucciones para localizar la clave, consulte [Generación de una clave de API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
+ a. Escriba la clave de acceso de API para su cuenta de PagerDuty. Si no dispone de una cuenta de PagerDuty, [regístrese para obtener una ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.pagerduty.com/sign-up/){: new_window}. Para ver instrucciones para localizar la clave, consulte [Generación de una clave de API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
 
  b. Escriba el nombre del servicio PagerDuty.
 
@@ -971,7 +975,7 @@ IBM Rational Team Concert es una herramienta de colaboración en equipo que inte
 Configure Rational Team Concert para la entrega continua y seguir la aproximación que DevOps ofrece en su entorno de desarrollo:
 
 1. Si configura la integración de esta herramienta al crear la cadena de herramientas, en la sección Integraciones configurables, pulse **Rational Team Concert**.
-1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de instrumentos de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.  
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Como alternativa, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas**. A continuación, pulse **Visión general**.  
 
  a. Pulse **Añadir una herramienta**.
 
@@ -1014,14 +1018,14 @@ Sauce Labs ejecuta pruebas de unidad funcionales. Cuando se configura una suite 
 Configure Sauce Labs para ejecutar pruebas funcionales automatizadas en varios sistemas operativos y navegadores a fin de poder emular el modo en que el usuario puede utilizar un sitio web o una aplicación:
 
 1. Si configura la integración de esta herramienta al crear la cadena de herramientas, en la sección Integraciones configurables, pulse **Sauce Labs**.
-1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de instrumentos de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
 
  a. Pulse **Añadir una herramienta**.
 
  b. En la sección Integraciones de herramientas, pulse **Sauce Labs**.
 
-1. Escriba el nombre de usuario asociado con su cuenta de Sauce Labs. Puede [encontrar su nombre de usuario en el mensaje de bienvenida en la página de la cuenta de Sauce Labs ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://saucelabs.com/account){: new_window}.
-1. Escriba la clave de acceso para su cuenta de Sauce Labs. Puede [encontrar la clave en la página de la cuenta de Sauce Labs ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://saucelabs.com/account){: new_window}.
+1. Escriba el nombre de usuario asociado con su cuenta de Sauce Labs. Puede [encontrar su nombre de usuario en el mensaje de bienvenida en la página de la cuenta de Sauce Labs ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://app.saucelabs.com/user-settings){: new_window}.
+1. Escriba la clave de acceso para su cuenta de Sauce Labs. Puede [encontrar la clave en la página de la cuenta de Sauce Labs ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://app.saucelabs.com/user-settings){: new_window}.
 1. Pulse **Crear integración**.
 1. Pulse **Sauce Labs** para ir a saucelabs.com y ver la actividad de pruebas de la cadena de herramientas.
 
@@ -1047,7 +1051,7 @@ Slack es un sistema de notificaciones y mensajería en tiempo real y basado en l
 Configure Slack para recibir notificaciones acerca de su cadena de herramientas desde las integraciones de herramientas, como actividades de prueba y de despliegue:
 
 1. Si configura la integración de esta herramienta al crear la cadena de herramientas, en la sección Integraciones configurables, pulse **Slack**.
-1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de instrumentos de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
 
  a. Pulse **Añadir una herramienta**.
 

@@ -2,7 +2,11 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-02-25"
+
+keywords: Administrator Create, Administrator Update, Editor Update, Update
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -31,10 +35,10 @@ Todos los usuarios que acceden al servicio de {{site.data.keyword.contdelivery_s
 
 Las políticas permiten otorgar el acceso en distintos niveles. Algunas de las opciones son las siguientes: 
 
-* Acceso en todas las instancias del servicio en su cuenta
-* Acceso a una instancia de servicio individual en su cuenta
+* Acceso a todas las instancias del servicio de su cuenta
+* Acceso a una instancia de servicio individual de su cuenta
 * Acceso a un recurso específico dentro de una instancia
-* Acceso a todos los servicios habilitados para IAM en su cuenta
+* Acceso a todos los servicios habilitados para IAM de su cuenta
 
 Después de definir el ámbito de la política de acceso, debe asignar un rol. Revise las tablas siguientes que describen las acciones que cada rol permite dentro del servicio de {{site.data.keyword.contdelivery_short}}.
 
@@ -45,7 +49,7 @@ En la tabla siguiente se detallan las acciones que se correlacionan con los role
 | Visor, Operador | Ver instancias del servicio de {{site.data.keyword.contdelivery_short}}. | <ul><li>Pulse una instancia de servicio de {{site.data.keyword.contdelivery_short}} para abrir su panel de control.</li></ul>|
 | Editor, Administrador | Crear, ver, actualizar, modificar el plan y suprimir instancias del servicio de {{site.data.keyword.contdelivery_short}}. |<ul><li>Suministrar una instancia de {{site.data.keyword.contdelivery_short}} en un grupo de recursos.</li><li>Suprimir una instancia de {{site.data.keyword.contdelivery_short}} de un grupo de recursos.</li><li>Cambiar un plan de instancias de {{site.data.keyword.contdelivery_short}} de Lite a Professional.</li></ul> |
 | Administrador | Actualizar la lista Usuarios autorizados.| <ul><li>Añada un usuario a la lista Usuarios autorizados.</li><li>Eliminar un usuario de la lista Usuarios autorizados.</li></ul> |
-{: caption="Tabla 1. Roles y acciones de usuario IAM" caption-side="top"}
+{: caption="Tabla 1. Roles de usuario y acciones de IAM" caption-side="top"}
 
  Para {{site.data.keyword.contdelivery_short}}, existen las acciones siguientes:
 
@@ -60,13 +64,13 @@ En la tabla siguiente se detallan las acciones que se correlacionan con los role
 | remove-auth-users | Eliminar entradas de la lista Usuarios autorizados en el separador Gestionar dentro de la instancia de servicio de {{site.data.keyword.contdelivery_short}}. | Administrador, Escritor, Gestor |
 {: caption="Tabla 2. Acciones y operaciones de servicio" caption-side="top"}
 
-En la tabla siguiente se detallan las acciones que se correlacionan con los roles de acceso de servicio. Los roles de acceso de servicio permiten a los usuarios acceder a {{site.data.keyword.contdelivery_short}} así como a la posibilidad de llamar a la API de {{site.data.keyword.contdelivery_short}}.
+En la tabla siguiente se detallan las acciones que se correlacionan con los roles de acceso al servicio. Los roles de acceso al servicio permiten a los usuarios acceder a {{site.data.keyword.contdelivery_short}} así como a la posibilidad de llamar a la API de {{site.data.keyword.contdelivery_short}}.
 
-| Rol de acceso de servicio | Descripción de acciones | Acciones de ejemplo|
+| Rol de acceso al servicio | Descripción de acciones | Acciones de ejemplo|
 |:-----------------|:-----------------|:-----------------|
 | Escritor, Gestor | Añadir y eliminar usuarios de la lista Usuarios autorizados en el separador Gestionar dentro de una instancia de servicio de {{site.data.keyword.contdelivery_short}}. | <ul><li>Añadir usuario autorizado.</li><li>Eliminar usuario autorizado.</li></ul>|
-{: caption="Tabla 3. Roles y acciones de acceso de servicio de IAM" caption-side="top"}
+{: caption="Tabla 3. Acciones y roles de acceso al servicio de IAM" caption-side="top"}
 
-Para obtener información sobre la asignación de roles de usuario en la IU, consulte [Gestión del acceso IAM](/docs/iam?topic=iam-iammanidaccser).
+Para obtener información sobre la asignación de roles de usuario en la interfaz de usuario, consulte [Gestión del acceso de IAM](/docs/iam?topic=iam-iammanidaccser).
 
 <!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

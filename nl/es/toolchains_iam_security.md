@@ -2,7 +2,11 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-02-27"
+
+keywords: Administrator Create, Editor Update, Update, user access
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -31,10 +35,10 @@ A cada usuario que acceda a las cadenas de herramientas de su cuenta se le debe 
 
 Las políticas permiten otorgar acceso en distintos niveles, incluidos: 
 
-* Acceso en todas las instancias del servicio en su cuenta
-* Acceso a una instancia de servicio individual en su cuenta
+* Acceso a todas las instancias del servicio de su cuenta
+* Acceso a una instancia de servicio individual de su cuenta
 * Acceso a un recurso específico dentro de una instancia
-* Acceso a todos los servicios habilitados para IAM en su cuenta
+* Acceso a todos los servicios habilitados para IAM de su cuenta
 
 Después de definir el ámbito de la política de acceso, debe asignar un rol. Revise las tablas siguientes que describen las acciones que cada rol permite dentro de las cadenas de herramientas.
 
@@ -44,7 +48,7 @@ En la tabla siguiente se detallan las acciones que se correlacionan con los role
 |:-----------------|:-----------------|:-----------------|
 | Visor, Operador | Ver las cadenas de herramientas y los conductos de entrega. Ejecutar conductos de entrega. | <ul><li>Pulse en una cadena de herramientas para abrir su página Visión general.</li><li>Pulse el icono **Etapa de ejecución** de la etapa en la que se encuentra el trabajo de conducto.</li></ul> |
 | Editor, Administrador | Crear, visualizar, actualizar y suprimir las cadenas de herramientas y los conductos de entrega. |<ul><li>En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse **Crear una cadena de herramientas**.</li><li>En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse sobre la cadena de herramientas para abrir la página Visión general correspondiente.</li><li>En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse sobre la cadena de herramientas que desea suprimir. Pulse el menú **Más acciones**, que se encuentra junto a **Ver app**. Pulse **Suprimir**.</li></ul> |
-{: caption="Tabla 1. Roles y acciones de usuario IAM" caption-side="top"}
+{: caption="Tabla 1. Roles de usuario y acciones de IAM" caption-side="top"}
 
  Para las cadenas de herramientas, existen las acciones siguientes:
 
@@ -60,6 +64,6 @@ En la tabla siguiente se detallan las acciones que se correlacionan con los role
 | delete-bindings | Eliminar una integración de herramientas de una cadena de herramientas en un grupo de recursos. | Administrador, Editor |
 {: caption="Tabla 2. Acciones y operaciones de servicio" caption-side="top"}
 
-Para obtener información sobre la asignación de roles de usuario en la IU, consulte [Gestión del acceso IAM](/docs/iam?topic=iam-iammanidaccser).
+Para obtener información sobre la asignación de roles de usuario en la interfaz de usuario, consulte [Gestión del acceso de IAM](/docs/iam?topic=iam-iammanidaccser).
 
 <!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

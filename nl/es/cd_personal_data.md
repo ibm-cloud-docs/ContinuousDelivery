@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-2-20"
+lastupdated: "2019-04-25"
+
+keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -29,7 +33,7 @@ Los datos personales son cualquier información relacionada con una persona fís
  * Conductos de {{site.data.keyword.contdelivery_short}}
  * Cadenas de herramientas e integraciones de herramientas
  * [GitHub Enterprise on IBM Cloud ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
- * [{{site.data.keyword.DRA_full}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/DevOpsInsights?topic=DevOpsInsights-insights_personal_data){: new_window}
+ * [{{site.data.keyword.DRA_full}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data){: new_window}
  
 IBM no gestiona los datos del servicio {{site.data.keyword.contdelivery_short}}. Antes de dejar el servicio {{site.data.keyword.contdelivery_short}} que se aloja en {{site.data.keyword.Bluemix_notm}} Público, debe suprimir sus propios datos.
 {: important}
@@ -191,9 +195,13 @@ Para modificar una etapa de conducto:
  
 ###Exportación de una etapa de conducto
 
-Para exportar la definición para una etapa de conducto, añada `/yaml` al URL del conducto:
+Para exportar la definición para todo un conducto, añada `/yaml` al URL del conducto:
 
-`http(s)://<DevOps Services domain>/pipeline/user/project/yaml`
+`https://cloud.ibm.com/devops/pipelines/<pipeline id>/yaml?env_id=<region id>`
+
+Donde `<pipeline id>` y `<region id>` son los valores que se muestran en el URL de página de conducto.
+
+El archivo yaml resultante incluye definiciones de todas las etapas de conducto.
 
 
 Para exportar artefactos y registros para una etapa de conducto:

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-11"
+lastupdated: "2019-03-20"
+
+keywords: IBM Cloud Continuous Delivery, GitHub tool integration, error message
+
+subcollection: ContinuousDelivery
 
 ---
 <!-- Common attributes used in the template are defined as follows: -->
@@ -26,36 +30,6 @@ lastupdated: "2019-2-11"
 Aquí encontrará respuestas a las preguntas más frecuentes sobre el uso de {{site.data.keyword.contdelivery_full}}.
 {:shortdesc}
 
-
-## He intentado añadir la integración de herramientas de GitHub a la cadena de herramientas. ¿Por qué no se añade la integración de herramientas?
-{: #cannot_authorize_github}
-{: faq}
-
-Si {{site.data.keyword.Bluemix_notm}} no está autorizado para acceder a la cuenta de GitHub, la integración de herramientas no se añade a la cadena de herramientas.
-
-Si configura la integración de herramientas de GitHub mientras crea la cadena de herramientas, siga estos pasos para autorizar a GitHub:
-
-  1. En la sección Integraciones configurables, pulse **GitHub**.
-  1. Si está creando la cadena de herramientas en {{site.data.keyword.Bluemix_notm}} Público y {{site.data.keyword.Bluemix_notm}} no está autorizado para acceder a GitHub, pulse **Autorizar** para ir al sitio web de GitHub.
-  1. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub.
-
-Si ya tiene una cadena de herramientas, actualice la configuración de la integración de herramientas de GitHub:
-
- 1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse sobre la cadena de herramientas para abrir la página Visión general correspondiente. Si lo prefiere, en la página Visión general de la app, tarjeta Entrega continua, pulse **Ver cadena de herramientas** y, a continuación, **Visión general**.
- 1. En la tarjeta GitHub, pulse el menú y pulse **Configurar**.
- 1. Actualice los valores de configuración para autorizar a {{site.data.keyword.Bluemix_notm}} para acceder a GitHub. Pulse **Autorizar** para ir al sitio web de GitHub. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub.
- 1. Cuando haya terminado de configurar los ajustes, pulse **Guardar integración**.
-
-
-## He intentado crear una cadena de herramientas. ¿Por qué aparece un error?
-{: #cannot_create_toolchain}
-{: faq}
-
-Al intentar crear una cadena de herramientas en una organización, si aparece el siguiente mensaje de error, elimine una o varias cadenas de su organización y, a continuación, cree la cadena de herramientas de nuevo.
-
-`Esta organización contiene 200 cadenas de herramientas, que es el límite máximo. Antes de que pueda añadir otra cadena de herramientas, elimine una o varias cadenas de herramientas de la organización.`
-
-
 ## ¿Por qué la página Cadenas de herramientas muestra que se ha excedido el plan Lite del servicio de {{site.data.keyword.contdelivery_short}}?
 {: #plan_exceeded}
 {: faq}
@@ -63,11 +37,25 @@ Al intentar crear una cadena de herramientas en una organización, si aparece el
 {{site.data.keyword.contdelivery_short}} ofrece dos planes: Lite y Professional. Si tiene el plan Lite de {{site.data.keyword.contdelivery_short}}, puede utilizar cadenas de herramientas de forma gratuita, hasta los límites del plan. El mensaje de error indica que ha sobrepasado uno o más límites del plan Lite. Por ejemplo, puede superar el plan si tiene demasiados usuarios autorizados que están asociados a la instancia de servicio de {{site.data.keyword.contdelivery_short}}, o si ha ejecutado el número máximo de trabajos de {{site.data.keyword.deliverypipeline}}. Para obtener más información sobre los términos del plan, consulte [Limitaciones y uso del plan](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
 
 
+## El servicio My {{site.data.keyword.contdelivery_short}} indica que los servicios de plan Lite se suprimen después de 30 días de inactividad. ¿Qué significa inactividad?
+{: #plan_inactivity}
+{: faq}
+
+Una instancia del servicio de {{site.data.keyword.contdelivery_short}} se considera activa cuando una o varias de las cadenas de herramientas dentro del mismo grupo de recursos o la organización (org) de Cloud Foundry están activas. Se considera que una cadena de herramientas está activa si los usuarios interactúan con ella mediante la interfaz de usuario, se desencadenan trabajos de conducto de entrega, se accede a repositorios gestionados por {{site.data.keyword.gitrepos}} o hay espacios de trabajo de Eclipse Orion {{site.data.keyword.webide}} en uso. Para que se considere como inactiva, todas estas condiciones deben estar ausentes para todas las cadenas de herramientas asociadas con el servicio de {{site.data.keyword.contdelivery_short}}, durante 30 días.
+
+
 ## He creado una cadena de herramientas, ¿por qué la página Cadenas de herramientas muestra que se necesita un servicio de Continuous Delivery?
 {: #service_required_resource_group}
 {: faq}
 
 Los términos del plan para la instancia de servicio de {{site.data.keyword.contdelivery_short}} que se encuentra en el mismo grupo de recursos u organización que la cadena de herramientas gestiona el uso de algunas de las integraciones de herramientas ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} y {{site.data.keyword.gitrepos}}) contenidas en el servicio. El mensaje de error indica que el grupo de recursos o la organización no contiene la instancia necesaria del servicio de {{site.data.keyword.contdelivery_short}}. Para obtener más información sobre los términos del plan, consulte [Limitaciones y uso del plan](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
+
+
+## He actualizado información de una cadena de herramientas desde una organización de Cloud Foundry. ¿Por qué no veo mis cambios en la cadena de herramientas?
+{: #updates_in_cloud_foundry}
+{: faq}
+
+Cuando actualiza la información de la cadena de herramientas directamente desde Cloud Foundry, el servicio de {{site.data.keyword.contdelivery_short}} puede tardar unos minutos en renovarse y mostrar los cambios. Por ejemplo, si añade o elimina un usuario desde una organización de Cloud Foundry, {{site.data.keyword.contdelivery_short}} puede tardar unos minutos en descubrir que hay un nuevo usuario y permitir que el usuario acceda a la cadena de herramientas.
 
 
 ## He creado una cadena de herramientas en una organización de Cloud Foundry, ¿por qué la página Cadenas de herramientas muestra que se necesita un servicio de Continuous Delivery?
@@ -80,6 +68,13 @@ Este error se puede producir al crear una cadena de herramientas en la región E
 
 Puede crear la cadena de herramientas en un grupo de recursos o crear la cadena de herramientas en una organización que ya tenga una instancia de {{site.data.keyword.contdelivery_short}}.
   
+
+## ¿Cómo puedo mover mi cadena de herramientas desde una organización de Cloud Foundry a un grupo de recursos?
+{: #toolchain_move_to_resource_group}
+{: faq}
+
+Todavía no hay disponible ninguna característica para migrar automáticamente las cadenas de herramientas desde una organización de Cloud Foundry a un grupo de recursos. En su lugar, puede volver a crear manualmente la cadena de herramientas en un grupo de recursos y, a continuación, eliminar la cadena de herramientas original de la organización de Cloud Foundry.
+
 
 ## He intentado desplegar una app en {{site.data.keyword.Bluemix_notm}}. ¿Por qué aparece un error?
 {: #org_outofmemory}
@@ -113,13 +108,13 @@ Si utiliza la interfaz de la línea de mandatos cf, efectúe los pasos siguiente
 1. Reinicie la app para que se apliquen los cambios.
 
 
-## He creado una app. ¿Por qué no se muestran los iconos de {{site.data.keyword.Bluemix_notm}} Live Sync en la barra de ejecución de Eclipse Orion Web IDE?
+## He creado una app. ¿Por qué no se muestran los iconos de {{site.data.keyword.Bluemix_notm}} Live Sync en la barra de ejecución de {{site.data.keyword.webide}}?
 {: #ts_llz_lkb_3r}
 {: faq}
 
 ![Barra de ejecución](images/webide_runbar_light.png)   
 
-Al editar una app de Node.js en Web IDE, los iconos de {{site.data.keyword.Bluemix_notm}} de edición en directo, reinicio rápido y depuración no están disponibles en la barra de ejecución en estas circunstancias:
+Al editar una app de Node.js en {{site.data.keyword.webide}}, los iconos de {{site.data.keyword.Bluemix_notm}} de edición en directo, reinicio rápido y depuración no están disponibles en la barra de ejecución en estas circunstancias:
 
 
 * El archivo `manifest.yml` no está almacenado en el nivel superior del proyecto.
@@ -130,7 +125,30 @@ Al editar una app de Node.js en Web IDE, los iconos de {{site.data.keyword.Bluem
 Si el archivo `manifest.yml` no está almacenado en la raíz, almacénelo allí. Si la app está almacenada en un subdirectorio, especifique la vía de acceso al subdirectorio en el archivo `manifest.yml`. Si la app no contiene un archivo `package.json`, cree uno que esté en el mismo directorio que la app.
 
 
-## He pulsado una cadena de herramientas para ver su página Visión general. ¿Por qué no se carga la cadena de herramientas?
+## He pulsado el botón de ejecución de {{site.data.keyword.webide}}. ¿Dónde están los archivos de registro? 
+{: #web_ide_log_files}
+{: faq}  
+
+Cuando pulsa el botón Ejecutar, el contenido del espacio de trabajo se envía por push a Cloud Foundry de la misma forma en la que se despliega si escribe `cf push` desde el escritorio. Puede encontrar los archivos de registro desde el panel de control de Cloud Foundry.
+
+Para obtener más información sobre el despliegue del contenido del espacio de trabajo, consulte [Despliegue de una app desde el espacio de trabajo](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide#deploy).
+
+
+## ¿Cómo puedo evitar que {{site.data.keyword.webide}} seleccione automáticamente todos los cambios en la vista de Git? 
+{: #web_ide_git_view}
+{: faq} 
+
+{{site.data.keyword.webide}} presupone de forma predeterminada que desea enviar por push los cambios salientes al repositorio de código cada vez que va a la página de Git. Si desea seleccionar manualmente qué recursos se van a confirmar, sincronizar, restablecer y sustituir, en la página de preferencias de GIT, desmarque el recuadro de selección **Seleccionar siempre archivos modificados**.
+
+
+## ¿Por qué {{site.data.keyword.webide}} no soporta el idioma que utilizo? 
+{: #web_ide_language_support}
+{: faq}  
+
+{{site.data.keyword.webide}} proporciona amplias herramientas y soporte para JavaScript, HTML y CSS. También proporciona realce de la sintaxis para los idiomas más populares. No se puede ampliar {{site.data.keyword.webide}} para dar soporte a un idioma determinado. Para ver una lista completa de los idiomas a los que da soporte {{site.data.keyword.webide}}, consulte [Idiomas soportados](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide#supported_languages).
+
+
+## ¿Cómo puedo encontrar el estado de {{site.data.keyword.Bluemix_notm}} y el servicio de {{site.data.keyword.contdelivery_short}}?
 {: #toolchains_load}
 {: faq}
 
@@ -144,19 +162,22 @@ Para ver la página Estado, seleccione una de las dos opciones siguientes:
 Para obtener más información sobre la página Estado de {{site.data.keyword.Bluemix_notm}}, consulte [Visualización del estado de {{site.data.keyword.Bluemix_notm}}](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}.
 
 
-## He configurado una integración de herramientas para mi cadena de herramientas. ¿Por qué no se ha configurado?
-{: #tool_integration_error}
+## ¿Cómo puedo pasar artefactos entre trabajos de conducto?
+{: #artifacts_pipeline_jobs}
 {: faq}
 
-Cuando añade una integración de herramientas, la cadena de herramientas se comunica con la herramienta representada mediante la integración de herramientas para suministrar los recursos necesarios y asociarlos con la cadena de herramientas. Si se produce un error durante el proceso de configuración o si la comunicación entre la cadena de herramientas y la herramienta no se establece correctamente, la integración de herramientas se coloca en un estado de error.
+Puesto que todos los trabajos de conducto de una etapa reciben la misma entrada de etapa, no se pueden pasar artefactos entre trabajos que se encuentran en la misma etapa. Sin embargo, los trabajos de compilación generan artefactos que pueden utilizar los trabajos en otras etapas. Para pasar artefactos entre dos trabajos, mueva cada trabajo a una etapa distinta. Para obtener más información sobre los trabajos de conducto, consulte [Trabajos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs).
 
- ![Error de configuración](images/tool_setup_failed.png)
 
-Puede intentar configurar de nuevo la integración de herramientas:
+## ¿Hay un límite de tiempo máximo durante el que se pueden ejecutar los trabajos de conducto?
+{: #pipeline_jobs_time_limit}
+{: faq}
 
-1. En su tarjeta de herramienta, mueva el cursor sobre el mensaje `Error de configuración` y pulse **Volver a configurar**.
+Cada trabajo de conducto se puede ejecutar durante un máximo de 60 minutos. Si un trabajo supera este límite de tiempo, el trabajo falla. Examine si el trabajo que realiza el trabajo de conducto se puede dividir en pasos más pequeños. Puede dividir el trabajo de conducto en varios trabajos de conducto más cortos que se ejecuten durante menos de 60 minutos.
 
- ![Botón Volver a configurar](images/tool_reconfigure.png)
 
-1. Asegúrese de utilizar parámetros de configuración válidos. Si el error está causado por una configuración no válida, se muestra un mensaje de error; por ejemplo, `La integración se ha podido configurar. Compruebe la configuración y vuelva a intentarlo. Razón: api_key:fakeKey no válido`. Actualice los valores de la integración de herramientas y pulse **Guardar integración**.
-1. Si el error está causado por un problema de comunicación, pulse **Guardar integración** para intentarlo de nuevo.
+## ¿Qué grado de seguridad tienen las propiedades seguras de conducto?
+{: #pipeline_secure_properties}
+{: faq}
+
+Las propiedades seguras de conducto se cifran mediante AES-128 y se descifran inmediatamente antes de pasarse al script de conducto. Estas propiedades también se ocultan utilizando asteriscos en la interfaz de usuario de propiedades y en los archivos de registro de conducto. Antes de que se escriban los datos en el archivo de registro del trabajo de conducto, se explora para buscar coincidencias exactas con todos los valores de las propiedades seguras de conducto. Si se encuentra una coincidencia, se oculta utilizando asteriscos. Tenga cuidado al trabajar con archivos de registro y propiedades seguras, ya que sólo se ocultan las coincidencias exactas. 
