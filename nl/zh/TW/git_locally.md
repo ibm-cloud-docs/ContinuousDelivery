@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-8"
+lastupdated: "2019-04-26"
+
+keywords: Git source control, personal access token, Git repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -18,7 +22,7 @@ lastupdated: "2019-2-8"
 {: #git_local}
 
 
-您可以在 GitHub、GitHub Enterprise 或 Git Repos and Issue Tracking 儲存庫中、在本端或在 Eclipse Orion Web IDE 中管理及使用原始碼。若要在本端運作，請使用 Git 用戶端（例如 Git 指令行介面）來複製儲存庫，並使用您最愛的編輯器來編輯程式碼。如果您在 Eclipse 中運作，則可以安裝 EGit 外掛程式來進行版本控制。
+您可以在 GitHub、GitHub Enterprise 或 {{site.data.keyword.gitrepos}} 儲存庫中、在本端或者在 Eclipse Orion {{site.data.keyword.webide}} 中管理及使用原始碼。若要在本端運作，請使用 Git 指令行介面這類 Git 用戶端來複製儲存庫，並使用您最愛的編輯器來編輯程式碼。如果您在 Eclipse 中運作，則可以安裝 EGit 外掛程式來進行版本控制。
 
 ## 從指令行複製 Git 專案
 
@@ -26,13 +30,13 @@ lastupdated: "2019-2-8"
 ## 開始之前
 {: #git_before_clone}
 
-1. 若要在瀏覽器外部存取 Git 伺服器，您可能需要建立個人存取記號或 SSH 金鑰來進行鑑別。下表顯示設定鑑別所需進行的作業。
+1. 若要在瀏覽器外部存取 Git 伺服器，您必須建立個人存取記號或 SSH 金鑰來進行鑑別。下表顯示設定鑑別所需進行的作業。
 
 |Git 類型  |HTTPS 設定 |HTTPS 使用 |SSH 設定 |
 |:-----------|:-------------|:------------|:-------------|
-|Git Repos and Issue Tracking (git.ng.bluemix.com) |[個人存取記號](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |Git Repos and Issue tracking 使用者名稱（非 IBM ID）及個人存取記號 |[配置 SSH 金鑰](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |
+|Git Repos and Issue Tracking|[個人存取記號](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat) |Git Repos and Issue tracking 使用者名稱（非 IBM ID）及個人存取記號 |[配置 SSH 金鑰](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key) |
 | Public GitHub (github.com) |不需要個人存取記號，但您可以設定並使用它 |GitHub 使用者名稱和密碼，或 GitHub 使用者名稱及「個人存取記號」，或只是以個人存取記號作為使用者名稱 |[配置 GitHub SSH 金鑰](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-|GitHub Enterprise |[個人存取記號](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |GitHub Enterprise 使用者名稱（非 IBM ID）及個人存取記號 |[配置 GitHub Enterprise SSH 金鑰](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |
+|GitHub Enterprise |[個人存取記號](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) |GitHub Enterprise 使用者名稱（非 IBM ID）及個人存取記號 |[配置 GitHub Enterprise SSH 金鑰](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) |
 
 如果您偏好使用 SSH，則可以跨所有 Git 伺服器重複使用單一金鑰。建立或找到金鑰，並在每一部伺服器中進行配置（如先前鏈結所述）。如果您使用通行詞組來建立金鑰，則系統會在您使用金鑰時提示您輸入該通行詞組。
 {: tip}
@@ -68,11 +72,12 @@ lastupdated: "2019-2-8"
 6. 如果系統提示您進行鑑別，請輸入適當的資訊（如上表所定義）。
 
 
-完成下載之後，儲存庫中就會有檔案的本端版本。如需使用 Git 的相關資訊，請參閱 [Git 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")]](http://git-scm.com/doc){: new_window}.
+完成下載之後，儲存庫中就會有檔案的本端版本。如需使用 Git 的相關資訊，請參閱 [Git 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://git-scm.com/doc){: new_window}。
 
 
 ## 使用 Eclipse 及 EGit 外掛程式存取儲存庫
 {: #git_egit}
 
-如果您使用 Eclipse，並且具有使用 Git 進行來源控制的專案，則可以使用 EGit 外掛程式，以從 Eclipse 管理儲存庫。如需安裝及配置 EGit 的指示，請參閱 [EGit 指導教學 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
-如果您使用 Git Repos and Issue Tracking 並且發生任何問題，請參閱 [Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local)。
+如果您使用 Eclipse，並且具有使用 Git 進行來源控制的專案，則可以使用 EGit 外掛程式，以從 Eclipse 管理儲存庫。如需如何安裝及配置 EGit 的相關資訊，請參閱 [EGit 指導教學 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}。
+
+如果您使用 {{site.data.keyword.gitrepos}} 並且發生任何問題，則請參閱 [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local) 文件。

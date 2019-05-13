@@ -2,7 +2,12 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-04-12"
+
+keywords: ADD STAGE, Run Stage icon, JOBS tab
+
+subcollection: ContinuousDelivery
+
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -65,7 +70,9 @@ lastupdated: "2019-2-1"
 
 只要執行工作，適當配置的部署工作就會將應用程式部署至目標。若要手動執行部署工作，請按一下工作所在階段的**執行階段**圖示。
 
-###輸入修訂
+### 輸入修訂
+{: #deliverypipeline_input_revisions}
+
 當您手動執行階段時，或者它是在階段完成之前執行，則執行中階段會選取其輸入修訂。輸入修訂通常是建置號碼。為了選取輸入修訂，階段會遵循這些條件：
 
 * 如果已選取特定修訂，便會使用它。
@@ -75,7 +82,9 @@ lastupdated: "2019-2-1"
 您可以部署前一個建置。在包含建置的階段上，按一下**檢視日誌及歷程**。在開啟的頁面上，按一下以展開執行號碼，然後按一下建置工作。按一下**傳送至**，然後選取目標。
 {: tip}
 
-###將服務新增至應用程式
+### 將服務新增至應用程式
+{: #deliverypipeline_add_services}
+
 您可以將服務新增至您的應用程式，以及從 {{site.data.keyword.Bluemix_notm}} 儀表板或 Cloud Foundry 指令行介面 (CLI) 來管理這些服務。您也可以在管線工作的 Script 中發出 Cloud Foundry CLI 指令。例如，您可以在部署工作的 Script 中將服務新增至應用程式。如需新增服務的相關資訊，請參閱[將服務連接至外部應用程式](/docs/resources?topic=resources-externalapp)。
 
 ## 檢視日誌
@@ -90,3 +99,77 @@ lastupdated: "2019-2-1"
 除了工作日誌之外，您還可以檢視任何建置工作的單元測試結果、所產生的構件，以及程式碼變更。
 
 您也可以從「階段歷程」頁面中執行、重新部署、取消或配置階段。按一下**執行**以執行階段、**重新部署**以在它是部署工作時重新部署，或**配置**以配置階段。在階段執行時，按一下執行號碼，然後按一下**取消**，即可予以取消。
+
+### 從 Script 下載日誌
+{: #deliverypipeline_download_logs}
+
+您可以從 Script 下載管線工作的日誌檔，並儲存管線工作執行時所提供的 `PIPELINE_LOG_URL`。下列範例顯示將管線工作日誌檔上傳至不同系統的步驟。
+
+
+1. 設定階段的 `JOB_LOG` 環境內容。
+
+1. 在管線工作中，儲存 `PIPELINE_LOG_URL`。
+
+   ```shell
+   export JOB_LOG="$PIPELINE_LOG_URL"
+   ```
+1. 在相同階段的後面工作中使用 `PIPELINE_LOG_URL` 來下載日誌檔，以將它匯出至不同的系統。使用 IBM Cloud Bearer 記號來存取日誌檔。
+
+   ```shell
+   ibmcloud login -a api.ng.bluemix.net \
+     --apikey <INSERT API KEY HERE>
+
+   BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
+
+   curl -H "Authorization: Bearer $BEARER"  \
+     -H "Accept: text/plain" \
+     -D /tmp/headers.txt \
+     -o job_log.txt \
+     "$JOB_LOG"
+   ```
+1. 檢查 `X-More-Data` 標頭。如果標頭設為 `true`，則會產生或處理日誌檔。如果標頭設為 `false`，則日誌檔已備妥可供使用。
+
+   ```shell
+   grep X-More-Data /tmp/headers.txt
+   X-More-Data: false
+   ```
+1. 將日誌檔上傳至系統。
+
+   ```shell
+   scp job_log.txt user@example.org:/job1/logs
+   ```
+
+
+### 從 Script 下載構件
+{: #deliverypipeline_download_artifacts}
+
+您可以從 Script 下載管線「建置」工作的構件，並儲存管線工作執行時所提供的 `PIPELINE_ARTIFACT_URL`。下列範例顯示將管線工作構件上傳至不同系統的步驟。
+
+
+1. 設定階段的 `JOB_ARTIFACT` 環境內容。
+
+1. 在管線工作中，儲存 `PIPELINE_ARTIFACT_URL`。
+
+   ```shell
+   export JOB_ARTIFACT="$PIPELINE_ARTIFACT_URL"
+   ```
+   
+1. 在相同階段的後面工作中使用 `PIPELINE_ARTIFACT_URL` 來下載構件，以將它們匯出至不同的系統。使用 IBM Cloud Bearer 記號來存取構件。
+
+   ```shell
+   ibmcloud login -a api.ng.bluemix.net \
+     --apikey <INSERT API KEY HERE>
+
+   BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
+
+   DOWNLOAD_URL=$( curl -H "Authorization: Bearer $BEARER"  \
+     "$JOB_ARTIFACT" )
+
+   curl -O  "$DOWNLOAD_URL"
+   ```
+   
+1. 將構件上傳至系統。
+
+   ```shell
+   scp $(basename "$DOWNLOAD_URL") user@example.org:/job1/artifacts
+   ```

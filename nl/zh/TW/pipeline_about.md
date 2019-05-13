@@ -2,7 +2,12 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-08"
+
+keywords: run jobs, sequences of stages, job types
+
+subcollection: ContinuousDelivery
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -121,9 +126,9 @@ lastupdated: "2019-2-15"
 如果您使用**簡單**建置器類型，則不會編譯或建置程式碼；會將它包裝並設為供未來階段使用。
 {: tip}
 
-當您使用 Cloud Foundry 進行部署時，Cloud Foundry 會包括正確的構件來容許應用程式執行。如需相關資訊，請參閱[使用 cf 指令來部署應用程式](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps)。Cloud Foundry 應用程式的管線包含執行 cf 指令的「部署」階段。
+當您使用 Cloud Foundry 進行部署時，Cloud Foundry 會包括正確的構件來容許應用程式執行。如需相關資訊，請參閱[使用 cf 指令來部署應用程式](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps)。Cloud Foundry 應用程式的管線包含執行 cf 指令的「部署」階段。
 
-Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.cloudfoundry.org/buildpacks/detection.html)。您可以在應用程式根資料夾的資訊清單檔中指定要使用的[建置套件](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)。建置套件一般會檢查使用者提供的構件，來判定下載的相依關係以及如何配置應用程式以與連結服務進行通訊。如需資訊清單檔的相關資訊，請參閱[應用程式資訊清單](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest)。
+Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.cloudfoundry.org/buildpacks/detection.html)。您可以在應用程式根資料夾的資訊清單檔中指定要使用的[建置套件](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)。建置套件一般會檢查使用者提供的構件，來判定下載的相依關係以及如何配置應用程式以與連結服務進行通訊。如需資訊清單檔的相關資訊，請參閱[應用程式資訊清單](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)。
 
 ### 部署工作
 
@@ -210,7 +215,7 @@ Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../
 ## Cloud Foundry 資訊清單檔
 {: #deliverypipeline_manifest}
 
-資訊清單檔（名為 `manifest.yml` 並儲存在專案的根目錄中）控制如何將專案部署至 {{site.data.keyword.Bluemix_notm}}。如需建立專案資訊清單檔的相關資訊，請參閱[關於應用程式資訊清單的 {{site.data.keyword.Bluemix_notm}} 文件](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest)。若要與 {{site.data.keyword.Bluemix_notm}} 整合，您專案的根目錄中必須要有資訊清單檔。不過，您不需要根據檔案中的資訊來進行部署。
+資訊清單檔（名為 `manifest.yml` 並儲存在專案的根目錄中）控制如何將專案部署至 {{site.data.keyword.Bluemix_notm}}。如需建立專案資訊清單檔的相關資訊，請參閱[關於應用程式資訊清單的 {{site.data.keyword.Bluemix_notm}} 文件](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)。若要與 {{site.data.keyword.Bluemix_notm}} 整合，您專案的根目錄中必須要有資訊清單檔。不過，您不需要根據檔案中的資訊來進行部署。
 
 在管線中，您可以使用 `cf push` 指令引數來指定資訊清單檔可執行的所有項目。`cf push` 指令引數有助於具有多個部署目標的專案。如果多個部署工作都嘗試使用專案資訊清單檔中所指定的路徑，則會發生衝突。
 

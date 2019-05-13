@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-2-20"
+lastupdated: "2019-04-25"
+
+keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -29,7 +33,7 @@ lastupdated: "2019-2-20"
  * {{site.data.keyword.contdelivery_short}} 管線
  * 工具鏈及工具整合
  * [IBM Cloud 上的 GitHub Enterprise ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
- * [{{site.data.keyword.DRA_full}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/DevOpsInsights?topic=DevOpsInsights-insights_personal_data){: new_window}
+ * [{{site.data.keyword.DRA_full}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data){: new_window}
  
 IBM 不會管理 {{site.data.keyword.contdelivery_short}} 服務中的資料。在您離開 {{site.data.keyword.Bluemix_notm}} Public 中所管理的 {{site.data.keyword.contdelivery_short}} 服務之前，必須刪除您自己的資料。
 {: important}
@@ -191,9 +195,13 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
  
 ###匯出管線階段
 
-若要匯出管線階段的定義，請將 `/yaml` 附加至管線 URL 後面：
+若要匯出整個管線的定義，請將 `/yaml` 附加至管線 URL 後面：
 
-`http(s)://<DevOps Services domain>/pipeline/user/project/yaml`
+`https://cloud.ibm.com/devops/pipelines/<pipeline id>/yaml?env_id=<region id>`
+
+其中 `<pipeline id>` 及 `<region id>` 是管線頁面 URL 中所顯示的值。
+
+產生的 yaml 檔案包含所有管線階段的定義。
 
 
 若要匯出管線階段的構件及日誌，請執行下列動作：

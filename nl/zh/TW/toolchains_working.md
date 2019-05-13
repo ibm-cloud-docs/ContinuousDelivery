@@ -3,8 +3,11 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-2-8"
+lastupdated: "2019-03-07"
 
+keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -70,11 +73,11 @@ lastupdated: "2019-2-8"
 
 您可以從應用程式建立工具鏈。工具鏈可支援持續開發、部署、監視及其他作業，且其與應用程式相關聯。每一個應用程式都可能與工具鏈相關聯。將變更推送至工具鏈的 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫時，管線會自動建置及部署應用程式。
 
-如果您使用自己的程式碼儲存庫建立應用程式，請在應用程式的詳細資料頁面上按一下**連接至 DevOps 工具鏈**。然後遵循[從您自己的程式碼儲存庫建立應用程式](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc)中所述的步驟。
+如果您使用自己的程式碼儲存庫建立應用程式，請在應用程式的詳細資料頁面上按一下**配置持續交付**。然後遵循[從您自己的程式碼儲存庫建立應用程式](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc)中所述的步驟。
 {: note}
 
-1. 如果您使用入門範本套件建立應用程式，請在應用程式的詳細資料頁面上按一下**部署至雲端**。如果您使用 {{site.data.keyword.Bluemix_notm}} Public，應用程式會配置成從已移入應用程式入門範本程式碼的新 GitHub 儲存庫進行持續交付。如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，應用程式會配置成從已移入應用程式入門範本程式碼的新 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫進行持續交付。
-1. 在工具鏈建立頁面上，檢閱即將建立之工具鏈的圖表。此圖會顯示每個工具整合在工具鏈中的生命週期階段。
+1. 如果您使用入門範本套件建立應用程式，請在應用程式的詳細資料頁面上按一下**配置持續交付**。接下來，選取部署目標。如果您使用 {{site.data.keyword.Bluemix_notm}} Public，應用程式會配置成從已移入應用程式入門範本程式碼的新 GitHub 儲存庫進行持續交付。如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，應用程式會配置成從已移入應用程式入門範本程式碼的新 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫進行持續交付。
+1. 在工具鏈配置頁面上，檢閱即將建立之工具鏈的圖表。此圖會顯示每個工具整合在工具鏈中的生命週期階段。
 1. 檢閱工具鏈設定的預設資訊。在 {{site.data.keyword.Bluemix_notm}} 中，可透過工具鏈名稱來識別工具鏈。如果您要使用不同的名稱，請變更工具鏈的名稱。
 1. 在「工具整合」區段中，選取您要配置給工具鏈的每一個工具整合。有些工具整合不需要進行配置。如需配置工具整合的相關資訊，請參閱[配置工具整合](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。
 1. 按一下**建立**。會自動執行數個步驟來設定工具鏈。視您是在 {{site.data.keyword.Bluemix_notm}} Public 還是 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用工具鏈而定，設定的工具整合會有所不同。例如，當您從 {{site.data.keyword.Bluemix_notm}} Public 的應用程式建立工具鏈時，會執行下列步驟：

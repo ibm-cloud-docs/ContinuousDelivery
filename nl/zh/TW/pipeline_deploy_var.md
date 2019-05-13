@@ -1,8 +1,13 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-10-9"
+  years: 2016, 2019
+lastupdated: "2019-04-12"
+
+keywords: Environment properties, IBM Java, pipeline environments
+
+subcollection: ContinuousDelivery
+
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -56,10 +61,12 @@ lastupdated: "2018-10-9"
 |IDS_URL|現行管線的 URL。|
 |IDS_VERSION|正在部署的建置號碼，或 SCM ID。此內容僅適用於部署工作。
 |JOB_NAME|現行管線環境定義中的唯一工作 ID。|
+|PIPELINE_ARTIFACT_URL|在工作完成之後，可用來下載現行「建置」工作構件的 URL。您必須使用有效的 Bearer 記號來存取構件。|
+|PIPELINE_INITIAL_STAGE_EXECUTION_ID|管線執行作業的唯一 ID。|
 |PIPELINE_KUBERNETES_CLUSTER_NAME |現行工作中所選取 Kubernetes 叢集的名稱。|
+|PIPELINE_LOG_URL|在工作完成之後，可用來下載現行工作日誌檔的 URL。您必須使用有效的 Bearer 記號來存取日誌檔。|
 |PIPELINE_STAGE_INPUT_JOB_ID|現行階段的輸入工作 ID。|
 |PIPELINE_STAGE_INPUT_REV|現行階段的輸入修訂。|
-|PIPELINE_INITIAL_STAGE_EXECUTION_ID|管線執行作業的唯一 ID。|
 | PIPELINE_TRIGGERING_USER |管線工作的現行使用者|
 |TASK_ID|工作現行執行作業的唯一 ID。|
 |TMPDIR|儲存暫存檔的目錄位置。|
@@ -109,6 +116,7 @@ lastupdated: "2018-10-9"
 |Cloud Foundry CLI 6.14|cf|/opt/IBM/cf|
 |Gradle 1.12|gradle|/opt/IBM/gradle|
 |Gradle 2.9|gradle2|/opt/IBM/gradle2|
+|IBM Cloud CLI (bx) 0.13.0|ibmcloud |/usr/local/ibmcloud/bin/ibmcloud|
 |IBM Java（預設）|java|/opt/IBM/java|
 |IBM Java 7 x86_64-71|java7|/opt/IBM/java7|
 |IBM Java 8 x86_64-80|java8|/opt/IBM/java8|

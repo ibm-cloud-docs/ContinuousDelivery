@@ -2,7 +2,11 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-02-27"
+
+keywords: toolchain template, Configuration properties, readme file
+
+subcollection: ContinuousDelivery
 
 ---
 {:shortdesc: .shortdesc}

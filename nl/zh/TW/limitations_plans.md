@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-7-19"
+  years: 2016, 2019
+lastupdated: "2019-03-25"
+
+keywords: users of a service instance, a-service, Git Repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -22,21 +26,22 @@ lastupdated: "2018-7-19"
  * 與 {{site.data.keyword.gitrepos}} 儲存庫中的問題、問題板、原始碼或其他構件互動的使用者。
  * 操作、觸發（直接在使用者介面中，或間接透過確定至儲存庫）或檢視交付管線狀態的使用者。
  * 與 Eclipse Orion {{site.data.keyword.webide}} 互動的使用者。
- 
+
 ### 如何計算組織中 {{site.data.keyword.contdelivery_short}} 實例的使用者數目？
 
-查看包含 {{site.data.keyword.contdelivery_short}} 服務之 Cloud 組織中的所有使用者，以計算授權使用者數目。 
+查看包含 {{site.data.keyword.contdelivery_short}} 服務之 Cloud 組織中的所有使用者，以計算授權使用者數目。
 
-若要檢視 {{site.data.keyword.Bluemix_notm}} Public 環境之組織中的使用者清單，請從功能表列中按一下**管理 > 帳戶 > Cloud Foundry 組織**。
+若要檢視 {{site.data.keyword.Bluemix_notm}} Public 環境之組織中的使用者清單，請從功能表列中按一下**管理 > 帳戶**。然後，按一下 **Cloud Foundry 組織**。
 
 若要檢視 {{site.data.keyword.Bluemix_notm}} Dedicated 環境之組織中的使用者清單，請從功能表列中按一下**帳戶 > 管理組織**。
 
 您也可以檢視帳戶中的所有 {{site.data.keyword.contdelivery_short}} 服務實例，以及對 {{site.data.keyword.Bluemix_notm}} Public 環境中每個實例所報告的使用者數目。
 
-1. 從功能表列中，按一下**管理 > 計費及用量 > 用量**。
-2. 按一下**用量儀表板**。
-3. 從「帳戶」功能表中，按一下 **Cloud Foundry 組織**。
-4. 按一下您要檢視用量資訊的組織。
+1. 從功能表列中，按一下**管理 > 計費及用量**。
+2. 按一下**用量**。
+3. 在**服務**區段中，按一下 {{site.data.keyword.contdelivery_short}} 服務的**檢視方案**。
+4. 按一下您要檢視相關資訊的方案的**檢視詳細資料**。
+5. 按一下您要檢視用量資訊的 {{site.data.keyword.contdelivery_short}} 實例的**檢視實例詳細資料**。
 
 若要檢視帳戶中的所有 {{site.data.keyword.contdelivery_short}} 服務實例，以及對 {{site.data.keyword.Bluemix_notm}} Dedicated 環境中每個實例所報告的使用者數目：
 
@@ -45,18 +50,19 @@ lastupdated: "2018-7-19"
 
 ### 如何計算資源群組中 {{site.data.keyword.contdelivery_short}} 實例的使用者數目？
 
-查看 {{site.data.keyword.contdelivery_short}} 服務實例內「管理」標籤上的使用者清單，以計算授權使用者數目。 
+查看 {{site.data.keyword.contdelivery_short}} 服務實例內「管理」標籤上的使用者清單，以計算授權使用者數目。
 
 若要檢視授權使用者清單，請開啟服務實例儀表板，然後按一下「管理」標籤。
 
 您也可以檢視帳戶中的所有 {{site.data.keyword.contdelivery_short}} 服務實例，以及對每一個實例所報告的使用者數目。
 
-1. 從功能表列中，按一下**管理 > 計費及用量 > 用量**。
-2. 按一下**用量儀表板**。
-3. 從「帳戶」功能表中，按一下**資源群組**。
-4. 按一下您要檢視用量資訊的資源群組。
+1. 從功能表列中，按一下**管理 > 計費及用量**。
+2. 按一下**用量**。
+3. 在**服務**區段中，按一下 {{site.data.keyword.contdelivery_short}} 服務的**檢視方案**。
+4. 按一下您要檢視相關資訊的方案的**檢視詳細資料**。
+5. 按一下您要檢視用量資訊的資源群組的**檢視實例詳細資料**。
 
-### 當您超過服務方案的限制時會發生什麼情況？ 
+### 當您超過服務方案的限制時會發生什麼情況？
 
 有些服務方案可能會有其他限制（例如可執行的 Delivery Pipeline 工作數目或儲存空間耗用量）。如需相關資訊，請參閱型錄中的方案說明。如果在計費期間超過任何方案限制，則可能會暫停服務。例如，在計費期間的其餘時間，可能未執行 Delivery Pipeline 工作。
 
@@ -92,7 +98,7 @@ IBM 得自行決定對違反 {{site.data.keyword.contdelivery_short}} 服務或 
 可用的 {{site.data.keyword.gitrepos}} 專案類型有三種：
 
   1. 所有網站造訪者都看得到公用專案。每個存取 {{site.data.keyword.contdelivery_short}} 的人都看得到公用專案中的內容，即使他們未受邀加入該專案。
-  2. 僅選取的使用者看得到專用專案。如需授與使用者對專案之存取權的詳細資料，請參閱 [Project users ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){: new_window}。
+  2. 僅選取的使用者看得到專用專案。如需授與使用者對專案之存取權的相關資訊，請參閱[專案使用者 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){: new_window}。
   3. 所有已登入的使用者都看得到內部專案。具有 {{site.data.keyword.Bluemix_notm}} 帳戶的任何使用者都可以檢視這些專案。
 
 您可以在專案設定中修改專案類型。如需相關資訊，請參閱 [How to change project visibility ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/public_access/public_access#how-to-change-project-visibility){: new_window}。

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-04-26"
+
+keywords: user management function, tool integrations, Cloud Foundry org
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -89,7 +93,7 @@ lastupdated: "2019-2-1"
 您必須將使用者新增至工具鏈管理所在地區的工具鏈組織。如果工具鏈配置成將應用程式部署至不同地區，則仍會將應用程式部署至該地區。
 {: important}
 
-如果您使用的是 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}，則將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，使用者可以使用其 {{site.data.keyword.Bluemix_notm}} ID 及密碼來登入 {{site.data.keyword.ghe_short}}。使用者登入時，就會建立他們的帳戶。將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，並不會將他們自動新增至 {{site.data.keyword.ghe_short}} 儲存庫。必須由具有儲存庫管理專用權的人員來新增他們。如需相關資訊，請參閱[使用 Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，請遵循內部程序。
+如果您使用的是 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}，則將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，使用者可以使用其 {{site.data.keyword.Bluemix_notm}} ID 及密碼來登入 {{site.data.keyword.ghe_short}}。使用者登入時，就會建立他們的帳戶。將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，並不會將他們自動新增至 {{site.data.keyword.ghe_short}} 儲存庫。必須由具有儲存庫管理專用權的人員來新增他們。如需相關資訊，請參閱[使用 Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，請遵循內部程序。
 
 ###管理工具鏈存取權的提示
 

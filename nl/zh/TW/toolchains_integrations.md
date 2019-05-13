@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-26"
+
+keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -22,9 +26,9 @@ lastupdated: "2019-2-15"
 您可以在建立開放式工具鏈時配置可支援開發、部署及操作作業的工具整合，也可以新增及配置用來自訂現有工具鏈的工具整合。  
 {:shortdesc}
 
-可用來新增及配置工具鏈的工具整合，會視您是在 {{site.data.keyword.Bluemix_notm}} Public 還是在 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用工具鏈而改變。如果您在 {{site.data.keyword.Bluemix_notm}} Public 上使用工具鏈，則可供您使用的工具整合取決於工具鏈的地區以及該地區中工具整合的可用性。如果您在 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用工具鏈，則可供您使用的工具整合取決於 {{site.data.keyword.contdelivery_full}} 在特定環境上的設定方式。
+可用來新增及配置工具鏈的工具整合，會根據是在「{{site.data.keyword.Bluemix_notm}} 公用」還是在「{{site.data.keyword.Bluemix_notm}} 專用」上使用工具鏈而不同。如果您在 {{site.data.keyword.Bluemix_notm}} Public 上使用工具鏈，則可供您使用的工具整合取決於工具鏈的地區以及該地區中工具整合的可用性。如果您在 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用工具鏈，則可供您使用的工具整合取決於 {{site.data.keyword.contdelivery_full}} 在特定環境上的設定方式。
 
-|工具整合|可用於 {{site.data.keyword.Bluemix_notm}} Public|可用於 {{site.data.keyword.Bluemix_notm}} Dedicated（環境相依）|
+|工具整合|可用於 {{site.data.keyword.Bluemix_notm}} Public|可用於 {{site.data.keyword.Bluemix_notm}} 專用（環境相依）|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.alertnotificationshort}}		|美國南部		|否		|
 |Artifactory		|美國南部、美國東部、德國、東京、英國|是		|
@@ -223,7 +227,7 @@ lastupdated: "2019-2-15"
 
 ### 進一步瞭解 Availability Monitoring
 
-若要進一步瞭解 {{site.data.keyword.prf_hubshort}}，請參閱 IBM Cloud Garage Method 上的 [{{site.data.keyword.prf_hublong}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/manage/tool_bluemix_availability_monitoring/){: new_window}，或採用下列指導教學：
+若要進一步瞭解 {{site.data.keyword.prf_hubshort}}，請參閱 IBM Cloud Garage Method 上的 [{{site.data.keyword.prf_hublong}} 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/practices/manage/tool_bluemix_availability_monitoring/){: new_window}，或採用下列指導教學：
 
   * [使用 {{site.data.keyword.Bluemix_notm}} Availability Monitoring 及 Alert Notification 來管理 {{site.data.keyword.Bluemix_notm}} 應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
 
@@ -336,7 +340,7 @@ lastupdated: "2019-2-15"
 
   如果您要在將確定推送至 GitHub、{{site.data.keyword.ghe_short}} 或 Git 儲存庫時自動執行管線，請遵循下列步驟：
 
-   a. 先配置工具鏈的 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}}，然後再定義管線的階段。管線階段需要儲存庫的 Git URL。每一個管線階段都只能參照與您工具鏈相關聯的其中一個 GitHub、{{site.data.keyword.ghe_short}} 或 Git 儲存庫。如需配置 GitHub 的指示，請參閱 [GitHub](#github) 一節。如需配置 Dedicated {{site.data.keyword.ghe_short}} 的指示，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}。如需配置 {{site.data.keyword.gitrepos}} 的指示，請參閱 [{{site.data.keyword.gitrepos}}](#gitbluemix) 一節。
+   a. 先配置工具鏈的 GitHub、{{site.data.keyword.ghe_short}} 或 {{site.data.keyword.gitrepos}}，然後再定義管線的階段。管線階段需要儲存庫的 Git URL。每一個管線階段都只能參照與您工具鏈相關聯的其中一個 GitHub、{{site.data.keyword.ghe_short}} 或 Git 儲存庫。如需配置 GitHub 的指示，請參閱 [GitHub](#github) 一節。如需配置 Dedicated {{site.data.keyword.ghe_short}} 的指示，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}。如需配置 {{site.data.keyword.gitrepos}} 的指示，請參閱 [{{site.data.keyword.gitrepos}}](#gitbluemix) 一節。
 
    b. 使用 Webhook。如果沒有 Webhook，您只能手動執行管線。若要在鏈結至 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫時使用 Webhook，您需要管理者專用權。若要鏈結至 {{site.data.keyword.gitrepos}} 儲存庫，您需要「主要」或「擁有者」專用權。
 
@@ -419,7 +423,7 @@ lastupdated: "2019-2-15"
 
   * [使用「在 Cloud Foundry 上開發及測試微服務」工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
 
-  * [使用「搭配 GitHub 和 Jenkins 的 Deployment Risk Analytics」工具鏈確定品質部署 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+  * [Explore {{site.data.keyword.DRA_full}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){:new_window}
 
 
 ## 新增 Eclipse Orion Web IDE
@@ -590,13 +594,13 @@ GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一
  這些指示適用於 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，則視內部程序而定，有些步驟可能會有所不同。
  {: important}
 
-{{site.data.keyword.ghe_long}} 是 Git 儲存庫的內部部署 Web 型管理服務。Dedicated {{site.data.keyword.ghe_short}} 僅供 {{site.data.keyword.Bluemix_notm}} Dedicated 客戶使用。GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一個位置。它與您的開發儲存庫整合，因此您可以專注於重要作業。如需 Dedicated {{site.data.keyword.ghe_short}} 及 GitHub Issues 的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window} 和 IBM Cloud Garage Method 上的 [GitHub Issues 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}。
+{{site.data.keyword.ghe_long}} 是 Git 儲存庫的內部部署 Web 型管理服務。Dedicated {{site.data.keyword.ghe_short}} 僅供 {{site.data.keyword.Bluemix_notm}} Dedicated 客戶使用。GitHub Issues 是一項追蹤工具，可將您的工作和方案都保留在一個位置。它與您的開發儲存庫整合，因此您可以專注於重要作業。如需 Dedicated {{site.data.keyword.ghe_short}} 及 GitHub Issues 的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window} 和 IBM Cloud Garage Method 上的 [GitHub Issues 文章 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window}。
 
 您可以將 {{site.data.keyword.ghe_short}} 配置為工具鏈中的工具整合，以在公司的 [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} 實例中管理原始碼。
 
 1. 如果您要在建立工具鏈時配置此工具整合，請遵循下列步驟：
 
- a. 第一次登入 Dedicated {{site.data.keyword.ghe_short}} 之前，請要求公司的地區管理者使用 LDAP 將您的使用者 ID 從公司的使用者登錄新增至 {{site.data.keyword.Bluemix_notm}} Dedicated 實例。如需設定 {{site.data.keyword.ghe_short}} 帳戶的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}。
+ a. 第一次登入 Dedicated {{site.data.keyword.ghe_short}} 之前，請要求公司的地區管理者使用 LDAP 將您的使用者 ID 從公司的使用者登錄新增至 {{site.data.keyword.Bluemix_notm}} Dedicated 實例。如需設定 {{site.data.keyword.ghe_short}} 帳戶的相關資訊，請參閱[開始使用 {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}。
 
  b. 在「可配置的整合」區段中，按一下 **{{site.data.keyword.ghe_short}}**。    
 
@@ -939,7 +943,7 @@ PagerDuty 會將多個監視系統中的資料整合至單一視圖。發生問�
 
 1. 如果您要使用 API 金鑰整合帳戶層次的 PagerDuty，請按一下**帳戶**：
 
- a. 鍵入 PagerDuty 帳戶的 API 存取金鑰。如果您沒有 PagerDuty 帳戶，請[註冊一個帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://signup.pagerduty.com/accounts/new){: new_window}。如需尋找金鑰的指示，請參閱[產生 API 金鑰 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}。
+ a. 鍵入 PagerDuty 帳戶的 API 存取金鑰。如果您沒有 PagerDuty 帳戶，請[註冊一個帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.pagerduty.com/sign-up/){: new_window}。如需尋找金鑰的指示，請參閱[產生 API 金鑰 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}。
 
  b. 鍵入 PagerDuty 服務的名稱。
 
@@ -1022,8 +1026,8 @@ Sauce Labs 會執行功能單元測試。在 {{site.data.keyword.deliverypipelin
 
  b. 在「工具整合」區段中，按一下 **Sauce Labs**。
 
-1. 鍵入與 Sauce Labs 帳戶相關聯的使用者名稱。您可以[在 Sauce Labs 帳戶頁面的歡迎使用訊息中找到使用者名稱 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://saucelabs.com/account){: new_window}。
-1. 鍵入 Sauce Labs 帳戶的存取金鑰。您可以[在 Sauce Labs 帳戶頁面上找到金鑰 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://saucelabs.com/account){: new_window}。
+1. 鍵入與 Sauce Labs 帳戶相關聯的使用者名稱。您可以[在 Sauce Labs 帳戶頁面的歡迎使用訊息中找到使用者名稱 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://app.saucelabs.com/user-settings){: new_window}。
+1. 鍵入 Sauce Labs 帳戶的存取金鑰。您可以[在 Sauce Labs 帳戶頁面上找到金鑰 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://app.saucelabs.com/user-settings){: new_window}。
 1. 按一下**建立整合**。
 1. 按一下 **Sauce Labs** 以移至 saucelabs.com，然後檢視工具鏈的測試活動。
 

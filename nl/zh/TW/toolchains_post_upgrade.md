@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-5"
+lastupdated: "2019-04-26"
+
+keywords: DevOps Services project, Issue Tracking repo, Git Repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -48,7 +52,7 @@ hub.jazz.net 中的 {{site.data.keyword.jazzhub_short}} 已遭淘汰。
 - 在專案中，成員資格是在專案層次進行維護。工具鏈的存取權是透過 {{site.data.keyword.Bluemix_notm}} 組織及工具鏈進行管理。若要使用工具鏈，您必須是包含該工具鏈的組織成員。工具鏈擁有者可以進一步控制誰可以存取工具鏈及其可執行的作業。如需存取控制的相關資訊，請參閱[開始使用工具鏈](#upgrade_next_steps)中的步驟 2。
 - 根據您在 hub.jazz.net 的專案中使用的儲存庫類型，工具鏈可以包含 GitHub.com 儲存庫或 {{site.data.keyword.gitrepos}} 儲存庫。
 
-您可以在 [YouTube ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://youtu.be/2SIPE1e7NJ4){: new_window} 上或從[開始使用 {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started) 中進一步瞭解工具鏈。
+您可以在 [YouTube ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://youtu.be/2SIPE1e7NJ4){: new_window} 上或從[開始使用 {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started) 中進一步瞭解工具鏈。
 
 ## 開始使用工具鏈
 {: #upgrade_next_steps}

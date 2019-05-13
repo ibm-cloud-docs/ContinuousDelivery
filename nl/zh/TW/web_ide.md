@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-1-31"
+lastupdated: "2019-04-01"
+
+keywords: Eclipse Orion {{site.data.keyword.webide}}, file types, Local Editor Settings icon
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -11,6 +15,8 @@ lastupdated: "2019-1-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
 {:download: .download}
 
@@ -24,6 +30,9 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種瀏覽器型開發環境，�
 
 請不要將受法規規範的資料儲存在 {{site.data.keyword.webide}} 內的檔案。目前並沒有針對受法規規範之資料的程序。
 {: tip}
+
+{{site.data.keyword.webide}} 可透過鍵盤存取，並且與螢幕閱讀器搭配運作良好。您可以使用 {{site.data.keyword.webide}} 來編輯程式碼，或者，如果喜歡的話，您可以使用最愛的程式碼編輯器或文字編輯器來編輯程式碼。您也可以使用 {{site.data.keyword.webide}} 隨附的 Git 功能；或者，您可以使用 Git 指令行或 github.com 來存取 {{site.data.keyword.webide}} Git 功能。
+{: note}
 
 ## 設定 IDE
 {: #editorsetup}
