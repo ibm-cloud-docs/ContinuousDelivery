@@ -1,8 +1,13 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-10-9"
+  years: 2016, 2019
+lastupdated: "2019-04-12"
+
+keywords: Environment properties, IBM Java, pipeline environments
+
+subcollection: ContinuousDelivery
+
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -56,10 +61,12 @@ Le seguenti proprietà e risorse sono disponibili per impostazione predefinita n
 | IDS_URL | L'URL della pipeline corrente. |
 | IDS_VERSION | Il numero per la build che sta venendo distribuita o dell'identificativo SCM. Questa proprietà è disponibile solo nei lavori di distribuzione.
 | JOB_NAME | L'ID del lavoro univoco nel contesto della pipeline corrente. |
+| PIPELINE_ARTIFACT_URL | L'URL che puoi utilizzare per scaricare le risorse del lavoro di build corrente dopo il completamento del lavoro. Devi utilizzare un token Bearer valido per accedere alle risorse. |
+| PIPELINE_INITIAL_STAGE_EXECUTION_ID | L'ID univoco per l'esecuzione della pipeline. |
 | PIPELINE_KUBERNETES_CLUSTER_NAME | Il nome del cluster Kubernetes selezionato nel lavoro corrente. |
+| PIPELINE_LOG_URL | L'URL che puoi utilizzare per scaricare il file di log del lavoro corrente dopo il completamento del lavoro. Devi utilizzare un token Bearer valido per accedere ai file di log. |
 | PIPELINE_STAGE_INPUT_JOB_ID | L'ID del lavoro che è l'input della fase corrente. |
 | PIPELINE_STAGE_INPUT_REV | La revisione dell'input della fase corrente. |
-| PIPELINE_INITIAL_STAGE_EXECUTION_ID | L'ID univoco per l'esecuzione della pipeline. |
 | PIPELINE_TRIGGERING_USER | L'utente corrente per il lavoro di pipeline|
 | TASK_ID | L'ID univoco per l'esecuzione corrente del lavoro. |
 | TMPDIR | Un'ubicazione della directory in cui i file temporanei vengono archiviati. |
@@ -109,6 +116,7 @@ Tutti i link sono alla directory home.
 |CLI Cloud Foundry 6.14 |cf | /opt/IBM/cf |
 |Gradle 1.12|gradle |/opt/IBM/gradle |
 |Gradle 2.9 |gradle2 |/opt/IBM/gradle2 |
+|CLI IBM Cloud (bx) 0.13.0 |ibmcloud |/usr/local/ibmcloud/bin/ibmcloud |
 |IBM Java (predefinito)|java |/opt/IBM/java |
 |IBM Java 7 x86_64-71 |java7 |/opt/IBM/java7 |
 |IBM Java 8 x86_64-80|java8 |/opt/IBM/java8 |

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-1"
+lastupdated: "2019-04-26"
+
+keywords: user management function, tool integrations, Cloud Foundry org
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -89,7 +93,7 @@ Puoi consentire agli utenti di accedere alla toolchain aggiungendoli all'organiz
 Devi aggiungere gli utenti all'organizzazione della toolchain nella regione in cui è ospitata la toolchain. Se la toolchain è stata configurata per distribuire le applicazioni in una regione differente, le distribuirà comunque a tale regione.
 {: important}
 
-Se stai utilizzando {{site.data.keyword.Bluemix_notm}} Dedicato per {{site.data.keyword.ghe_short}}, quando aggiungi gli utenti alla tua organizzazione o ai tuoi spazi {{site.data.keyword.Bluemix_notm}}, gli utenti possono accedere a {{site.data.keyword.ghe_short}} utilizzando i loro ID e password {{site.data.keyword.Bluemix_notm}}. Quando gli utenti accedono, vengono creati degli account per loro. Quando aggiungi utenti ai tuoi spazi o organizzazioni {{site.data.keyword.Bluemix_notm}}, non vengono automaticamente aggiunti al repository {{site.data.keyword.ghe_short}}. Qualcuno che dispone dei privilegi di amministratore per il repository li deve aggiungere. Per ulteriori informazioni, vedi [Using Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started){: new_window}. Se stai utilizzando la tua propria versione gestita di {{site.data.keyword.ghe_short}}, segui le procedure interne.
+Se stai utilizzando {{site.data.keyword.Bluemix_notm}} Dedicato per {{site.data.keyword.ghe_short}}, quando aggiungi gli utenti alla tua organizzazione o ai tuoi spazi {{site.data.keyword.Bluemix_notm}}, gli utenti possono accedere a {{site.data.keyword.ghe_short}} utilizzando i loro ID e password {{site.data.keyword.Bluemix_notm}}. Quando gli utenti accedono, vengono creati degli account per loro. Quando aggiungi utenti ai tuoi spazi o organizzazioni {{site.data.keyword.Bluemix_notm}}, non vengono automaticamente aggiunti al repository {{site.data.keyword.ghe_short}}. Qualcuno che dispone dei privilegi di amministratore per il repository li deve aggiungere. Per ulteriori informazioni, vedi [Using Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}. Se stai utilizzando la tua propria versione gestita di {{site.data.keyword.ghe_short}}, segui le procedure interne.
 
 ###Suggerimenti per la gestione dell'accesso a una toolchain
 

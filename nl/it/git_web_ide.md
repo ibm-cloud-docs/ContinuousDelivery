@@ -1,8 +1,13 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-29"
+  years: 2017, 2019
+lastupdated: "2019-02-27"
+
+keywords: commit message field, terminal Type git branch, Eclipse Orion {{site.data.keyword.webide}}
+
+subcollection: ContinuousDelivery
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -36,7 +41,7 @@ Indipendentemente da dove esegui la codifica, puoi utilizzare questo riferimento
 
 ### Terminale Git
 {: #create_branch_cmd}
-1. Immetti `git branch <branchname>` e premi Invio.
+1. Immetti `git branch<branchname>` e premi Invio.
 
 ## Lavora su un ramo locale
 {: #start_working_on_branch}
@@ -53,7 +58,7 @@ Indipendentemente da dove esegui la codifica, puoi utilizzare questo riferimento
 {: #start_working_on_branch_cmd}
 1. Per visualizzare i tuoi rami locali, immetti `git branch -l` e premi Invio.
 
-2. Immetti `git checkout <branchname>` e premi Invio.
+2. Immetti `git checkout<branchname>` e premi Invio.
 
 
 ## Aggiorna un ramo locale per includere le modifiche dal ramo remoto
@@ -85,7 +90,7 @@ Indipendentemente da dove esegui la codifica, puoi utilizzare questo riferimento
 ### Terminale Git
 {: #delete_branch_cmd}
 
-1. Immetti `git branch -d <branchname>` e premi Invio.
+1. Immetti `git branch -d<branchname>` e premi Invio.
 
 ##Forza il push delle modifiche locali a un ramo remoto
 {: #force_push}
@@ -206,7 +211,7 @@ Quando forzi il push di un ramo locale a uno remoto, potresti perdere i commit s
 
 1. Immetti `git log -p` e premi Invio.
 
-  **Nota:** per visualizzare solo un certo numero di commit, immetti `git log -p -<number_of_commits_to_view>`.
+  **Nota:** per visualizzare solo uno specifico numero di commit, immetti `git log -p -<number_of_commits_to_view>`.
 
 2. Esplora i commit.
  * Per visualizzare più elementi, premi Pagina giù.
@@ -266,7 +271,7 @@ Quando forzi il push di un ramo locale a uno remoto, potresti perdere i commit s
 
 1. Visualizza la cronologia di commit e ottieni l'ID del commit a cui aggiungere la tag. Per ulteriori informazioni, vedi [ Visualizza la cronologia di commit](#view_commit_history).
 
-2. Immetti `git tag -a <tag_text> <commit_id>` e premi Invio.
+2. Immetti `git tag -a<tag_text> <commit_id>` e premi Invio.
 
 ## Modifica il nome e l'indirizzo e-mail del committer
 {: #change_the_committer_name_and_email_address}
@@ -307,7 +312,7 @@ Ripristina le modifiche introdotte da un commit nel tuo ramo attivo.
 ### Terminale Git
 {: #revert_cmd}
 
-1. Immetti `git revert <commit ID>` e premi Invio.
+1. Immetti `git revert<commit ID>` e premi Invio.
 
 ## Unisci le modifiche
 {: #merge_changes}
@@ -340,7 +345,7 @@ Quando hai bisogno di trasmettere le modifiche da un ramo di origine a un ramo d
 
 2. Estrai il ramo di destinazione. Per ulteriori informazioni, vedi [ Lavora su un ramo locale](#start_working_on_branch).
 
-3. Immetti `git merge <source_name>` e premi Invio.
+3. Immetti `git merge<source_name>` e premi Invio.
 
 
 ## Risolvi un conflitto di unione
@@ -409,7 +414,7 @@ Quando hai bisogno di trasmettere le modifiche da un ramo di origine a un ramo d
 
 1. Estrai il ramo da aggiornare immettendo `git checkout <destination_branchname>` e premendo Invio.
 
-2. Immetti `git rebase <source_branchname>` e premi Invio.
+2. Immetti `git rebase<source_branchname>` e premi Invio.
 
 3. Se rilevi dei conflitti, [risolvili](#resolve_a_rebase_conflict).
 

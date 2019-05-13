@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-8"
+lastupdated: "2019-03-08"
+
+keywords: Continuous Delivery, Support tickets, Continuous Delivery service
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -18,7 +22,7 @@ lastupdated: "2019-2-8"
 # Come ottenere aiuto e supporto per {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-Il team {{site.data.keyword.contdelivery_full}} monitora attivamente il forum developerWorks per rilevare eventuali domande sulle toolchain e sul servizio {{site.data.keyword.contdelivery_short}}. Per fare una domanda nel forum, nelle pagine di toolchain e {{site.data.keyword.contdelivery_short}}, fai clic su **Get help in the forum** ![Pulsante **Get help in the forum**](images/get_help_in_the_forum.png).
+Il team {{site.data.keyword.contdelivery_full}} monitora attivamente il forum developerWorks per rilevare eventuali domande sulle toolchain e sul servizio {{site.data.keyword.contdelivery_short}}.
 
 <table>
 <tr>

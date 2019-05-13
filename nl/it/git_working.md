@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-5"
+  years: 2015, 2019
+lastupdated: "2019-04-01"
+
+keywords: Git Repos, Issue Tracking, Collaborate, Git repository
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -25,6 +29,9 @@ Collabora con il tuo team e gestisci il tuo codice sorgente con un repository (r
 Invita solo le persone con cui hai una relazione personale o di business per collaborare a un progetto. Gli utenti che utilizzano un invito a un repository Git per scopi diversi dalla collaborazione a un progetto potrebbero vedersi sospendere o revocare l'accesso al servizio.
 {: important}
 
+Sia GitHub che la riga di comando Git sono alternative accessibili a GitLab.
+{: note}
+
 Non archiviare i dati regolamentati in file o elementi di lavoro all'interno dei repository Git. Le procedure per i dati regolamentati non sono attualmente implementate.
 {: tip}
 
@@ -36,6 +43,7 @@ L'integrazione dello strumento {{site.data.keyword.gitrepos}} supporta i team pe
 
 Poiché questa integrazione dello strumento è creata in GitLab Community Edition e ospitata da IBM sulla piattaforma {{site.data.keyword.Bluemix_notm}}, alcune opzioni GitLab non sono disponibili. Ad esempio, Delivery Pipeline fornisce l'integrazione e la fornitura continue per {{site.data.keyword.Bluemix_notm}}; altrimenti, le funzioni di integrazione continua in GitLab non sono supportate. In aggiunta, le funzioni di gestione non sono disponibili perché sono gestite da IBM.
 {: tip}
+
 
 ## Utilizzo di {{site.data.keyword.gitrepos}} in locale
 {: #git_locally}

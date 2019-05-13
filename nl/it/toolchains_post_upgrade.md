@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-5"
+lastupdated: "2019-04-26"
+
+keywords: DevOps Services project, Issue Tracking repo, Git Repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -48,7 +52,7 @@ Le toolchain sono simili ai progetti, con alcune importanti differenze:
 - Nei progetti, l'appartenenza era mantenuta al livello del progetto. L'accesso alle toolchain è gestito dall'organizzazione {{site.data.keyword.Bluemix_notm}} e dalla toolchain. Per lavorare con una toolchain, devi essere un membro dell'organizzazione che contiene la toolchain. Il proprietario della toolchain ha un ulteriore controllo su chi può accedere alla toolchain e cosa può fare. Per ulteriori informazioni sul controllo dell'accesso, vedi il Passo 2 in [Introduzione alla tua toolchain](#upgrade_next_steps).
 - A seconda del tipo di repository utilizzato nel tuo progetto su hub.jazz.net, la toolchain potrebbe contenere un repository GitHub.com o un repository {{site.data.keyword.gitrepos}}.
 
-Puoi trovare ulteriori informazioni sulle toolchain su [YouTube ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://youtu.be/2SIPE1e7NJ4){: new_window} o in [Introduzione a {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started)
+Puoi trovare ulteriori informazioni sulle toolchain su [YouTube ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://youtu.be/2SIPE1e7NJ4){: new_window} o in [Introduzione a {{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started)
 
 ## Introduzione alla tua toolchain
 {: #upgrade_next_steps}

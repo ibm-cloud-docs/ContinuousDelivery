@@ -3,8 +3,11 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-2-8"
+lastupdated: "2019-03-07"
 
+keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -71,11 +74,11 @@ Puoi utilizzare un template come punto di partenza nella [creazione di una toolc
 
 Puoi creare una toolchain dalla tua applicazione. La toolchain può supportare il monitoraggio, la distribuzione e lo sviluppo continuo ed anche altro, e viene associata alla tua applicazione. Ogni applicazione può essere associata con una toolchain. Quando esegui il push delle modifiche a un repository {{site.data.keyword.ghe_short}} o GitHub della toolchain, la pipeline automaticamente crea e distribuisce l'applicazione.
 
-Se hai creato la tua applicazione utilizzando il tuo repository di codice, fai clic su **Connect to DevOps toolchain** nella pagina dei dettagli della tua applicazione. Attieniti quindi alla procedura descritta in [Creazione di applicazioni dal tuo repository di codice](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc).
+Se hai creato la tua applicazione utilizzando il tuo repository di codice, fai clic su **Configure continuous delivery** nella pagina dei dettagli della tua applicazione. Attieniti quindi alla procedura descritta in [Creazione di applicazioni dal tuo repository di codice](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc).
 {: note}
 
-1. Se hai creato la tua applicazione utilizzando un kit starter, fai clic su **Deploy to cloud** nella pagina dei dettagli della tua applicazione. Se utilizzi {{site.data.keyword.Bluemix_notm}} Pubblico, la tua applicazione è configurata per la distribuzione continua da un nuovo repository GitHub che viene popolato con il codice starter dell'applicazione. Se utilizzi {{site.data.keyword.Bluemix_notm}} Dedicato, la tua applicazione è configurata per la distribuzione continua da un nuovo repository GitHub o {{site.data.keyword.ghe_short}} che viene popolato con il codice starter dell'applicazione.
-1. Nella pagina di creazione della toolchain, rivedi il diagramma della toolchain che stai per creare. Il diagramma mostra ogni integrazione dello strumento nella fase del suo ciclo di vita nella toolchain.
+1. Se hai creato la tua applicazione utilizzando un kit starter, fai clic su **Configure continuous delivery** nella pagina dei dettagli della tua applicazione. Seleziona quindi una destinazione di distribuzione. Se utilizzi {{site.data.keyword.Bluemix_notm}} Pubblico, la tua applicazione è configurata per la distribuzione continua da un nuovo repository GitHub che viene popolato con il codice starter dell'applicazione. Se utilizzi {{site.data.keyword.Bluemix_notm}} Dedicato, la tua applicazione è configurata per la distribuzione continua da un nuovo repository GitHub o {{site.data.keyword.ghe_short}} che viene popolato con il codice starter dell'applicazione.
+1. Nella pagina di configurazione della toolchain, esamina il diagramma della toolchain che stai per creare. Il diagramma mostra ogni integrazione dello strumento nella fase del suo ciclo di vita nella toolchain.
 1. Rivedi le informazioni predefinite per la configurazione della toolchain. Il nome della toolchain la identifica in {{site.data.keyword.Bluemix_notm}}. Se vuoi utilizzare un nome diverso, modifica il nome della toolchain.
 1. Nella sezione Integrazioni dello strumento, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
 1. Fai clic su **Create**. Diversi passi vengono eseguiti automaticamente per configurare la tua toolchain. Le integrazioni dello strumento configurate sono diverse a seconda che tu stia utilizzando {{site.data.keyword.Bluemix_notm}} Pubblico o {{site.data.keyword.Bluemix_notm}} Dedicato. Ad esempio, quando crei una toolchain da un'applicazione su {{site.data.keyword.Bluemix_notm}} Pubblico, devono essere eseguiti questi passi:

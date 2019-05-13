@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-2-8"
+lastupdated: "2019-04-26"
+
+keywords: Git source control, personal access token, Git repos
+
+subcollection: ContinuousDelivery
 
 ---
 
@@ -18,7 +22,7 @@ lastupdated: "2019-2-8"
 {: #git_local}
 
 
-Puoi gestire e lavorare con il tuo codice sorgente in un repository GitHub, GitHub Enterprise o Git Repos and Issue Tracking, in locale o in Eclipse Orion Web IDE. Per lavorare in locale, clona il tuo repository con un client Git, come l'interfaccia della riga di comando Git, e modifica il codice attraverso il tuo editor favorito. Se lavori in Eclipse, puoi installare il plug-in EGit per il controllo della versione.
+Puoi gestire e lavorare con il tuo codice sorgente in un repository (repo) GitHub, GitHub Enterprise o {{site.data.keyword.gitrepos}}, localmente o in Eclipse Orion {{site.data.keyword.webide}}. Per lavorare in locale, clona il tuo repository con un client Git, come l'interfaccia della riga di comando Git, e modifica il codice con il tuo editor favorito. Se lavori in Eclipse, puoi installare il plug-in EGit per il controllo della versione.
 
 ## Clonazione del tuo progetto Git dalla riga di comando
 
@@ -26,13 +30,13 @@ Puoi gestire e lavorare con il tuo codice sorgente in un repository GitHub, GitH
 ## Attività preliminari
 {: #git_before_clone}
 
-1. Per accedere al server Git al di fuori del browser, potresti dover creare un token di accesso personale o una chiave SSH per effettuare l'autenticazione. La seguente tabella mostra le operazioni che devi eseguire per configurare l'autenticazione.
+1. Per accedere al server Git al di fuori del browser, devi creare un token di accesso personale o una chiave SSH per l'autenticazione. La seguente tabella mostra le operazioni che devi eseguire per configurare l'autenticazione.
 
 | Tipo Git  | Configurazione HTTPS | Utilizzo di HTTPS |  Configurazione SSH |
 |:-----------|:-------------|:------------|:-------------|
-| Git Repos and Issue Tracking (git.ng.bluemix.com) | [Token di accesso personale](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) | Nome utente di Git Repos and Issue Tracking (non il tuo ID IBM) e token di accesso personale | [Configura la chiave SSH](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) |
+| Git Repos and Issue Tracking  | [Token di accesso personale](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat) | Nome utente di Git Repos and Issue Tracking (non il tuo ID IBM) e token di accesso personale | [Configura la chiave SSH](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key) |
 | GitHub pubblico (github.com) | Il token di accesso personale non è obbligatorio, ma puoi configurarne uno e utilizzarlo | Nome utente e password GitHub o nome utente e token di accesso personale GitHub oppure solo token di accesso personale come nome utente | [Configura una chiave SSH GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
-| GitHub Enterprise | [Token di accesso personale](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) | Nome utente di GitHub Enterprise (non il tuo ID IBM) e token di accesso personale | [Configura la chiave SSH GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-gheded_getting_started#ghe_auth) |
+| GitHub Enterprise | [Token di accesso personale](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) | Nome utente di GitHub Enterprise (non il tuo ID IBM) e token di accesso personale | [Configura la chiave SSH GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) |
 
 Se preferisci usare SSH, puoi riutilizzare una singola chiave in tutti i server Git. Crea o individua la tua chiave e configurala in ogni server, come descritto nei precedenti link. Se crei la tua chiave con una passphrase, ti viene richiesto di immettere questa passphrase quando utilizzi la chiave.
 {: tip}
@@ -68,11 +72,12 @@ Crea una copia locale dei file di progetto clonando il repository Git in modo da
 6. Se ti viene richiesta l'autenticazione, immetti le informazioni appropriate, come definito nella tabella precedente
 
 
-Una volta completato il download, avrai una versione dei file nel tuo repository. Per ulteriori informazioni sull'utilizzo di Git, [consulta la documentazione di Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")]](http://git-scm.com/doc){: new_window}.
+Una volta completato il download, avrai una versione dei file nel tuo repository. Per ulteriori informazioni sull'utilizzo di Git, vedi la [documentazione di Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")]](http://git-scm.com/doc){: new_window}.
 
 
 ## Accesso al tuo repository utilizzando Eclipse e il plug-in EGit
 {: #git_egit}
 
-Se utilizzi Eclipse e hai un progetto che utilizza Git per il controllo sorgente, puoi utilizzare il plug-in EGit per gestire il tuo repository da Eclipse. Per istruzioni per l'installazione e la configurazione di EGit, vedi [Esercitazione di EGit ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
-Se utilizzi Git Repos and Issue Tracking e riscontri dei problemi, vedi [Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local).
+Se utilizzi Eclipse e hai un progetto che utilizza Git per il controllo sorgente, puoi utilizzare il plug-in EGit per gestire il tuo repository da Eclipse. Per ulteriori informazioni su come installare e configurare EGit, vedi l'[esercitazione di EGit ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
+
+Se utilizzi {{site.data.keyword.gitrepos}} e riscontri qualche problema, vedi la documentazione di [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local).

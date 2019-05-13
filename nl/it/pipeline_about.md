@@ -2,7 +2,12 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-2-15"
+lastupdated: "2019-04-08"
+
+keywords: run jobs, sequences of stages, job types
+
+subcollection: ContinuousDelivery
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -121,9 +126,9 @@ I lavori che ricevono l'input dai lavori di creazione devono far riferimento all
 Se utilizzi il tipo di builder **Simple**, il codice non viene compilato o creato; invece viene inserito in un pacchetto e reso disponibile per le fasi future.
 {: tip}
 
-Quando distribuisci utilizzando Cloud Foundry, Cloud Foundry include le risorse corrette per consentire l'esecuzione della tua applicazione. Per ulteriori informazioni, vedi [Distribuzione delle applicazioni mediante il comando cf](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#dep_apps). La pipeline per un'applicazione Cloud Foundry contiene una fase di distribuzione che esegue un comando cf.
+Quando distribuisci utilizzando Cloud Foundry, Cloud Foundry include le risorse corrette per consentire l'esecuzione della tua applicazione. Per ulteriori informazioni, vedi [Distribuzione delle applicazioni mediante il comando cf](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps). La pipeline per un'applicazione Cloud Foundry contiene una fase di distribuzione che esegue un comando cf.
 
-Cloud Foundry tenta di [rilevare il pacchetto di build da utilizzare ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://docs.cloudfoundry.org/buildpacks/detection.html). Puoi specificare il [pacchetto di build](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) da utilizzare nel file manifest all'interno della cartella root della tua applicazione. I pacchetti di build generalmente esaminano le risorse fornite dall'utente per determinare quali dipendenze scaricare e come configurare le applicazioni per comunicare con i servizi associati. Per ulteriori informazioni sui file manifest, vedi [Manifest dell'applicazione](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest).
+Cloud Foundry tenta di [rilevare il pacchetto di build da utilizzare ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://docs.cloudfoundry.org/buildpacks/detection.html). Puoi specificare il [pacchetto di build](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) da utilizzare nel file manifest all'interno della cartella root della tua applicazione. I pacchetti di build generalmente esaminano le risorse fornite dall'utente per determinare quali dipendenze scaricare e come configurare le applicazioni per comunicare con i servizi associati. Per ulteriori informazioni sui file manifest, vedi [Manifest dell'applicazione](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
 
 ### Lavori di distribuzione
 
@@ -160,7 +165,7 @@ Per definire le proprietà della pipeline, dal menu overflow nella pagina Pipeli
 
 ![Menu overflow della pipeline](images/OverflowMenu.png)
 
-Dalla scheda **ENVIRONMENT PROPERTIES** nella pagina Pipeline configuration, imposta le proprietà dell'ambiente a livello della pipeline.
+Dalla scheda **ENVIRONMENT PROPERTIES** nella pagina Pipeline configuration. imposta le proprietà dell'ambiente a livello della pipeline.
 
 ![Pagina properties della pipeline](images/PipelineProperties.png)
 
@@ -169,7 +174,7 @@ Per definire le proprietà della fase, apri la pagina Stage configuration e fai 
 
 ![Pagina properties della fase](images/StageProperties.png)
 
-Puoi anche passare le variabili di ambiente tra i lavori nella stessa fase esportando le proprietà. Ad esempio, puoi includere il seguente comando per utilizzare la proprietà `$API_KEY` in un altro lavoro all'interno della fase: `export API_KEY=<insert API key here>`
+Puoi anche passare le variabili di ambiente tra i lavori nella stessa fase esportando le proprietà. Ad esempio, puoi includere il seguente comando per utilizzare la proprietà `$API_KEY` in un altro lavoro all'interno della fase:`export API_KEY=<insert API key here>`
 {:tip}
 
 ### Proprietà calcolate
@@ -210,7 +215,7 @@ Le fasi ricevono i loro input dai repository e dai lavori di creazione e i lavor
 ## File manifest di Cloud Foundry
 {: #deliverypipeline_manifest}
 
-I file manifest, denominati `manifest.yml` sono archiviati nella directory root del progetto e controllano come il tuo progetto viene distribuito a {{site.data.keyword.Bluemix_notm}}. Per informazioni sulla creazione dei file manifest per un progetto, consulta la [documentazione {{site.data.keyword.Bluemix_notm}} sui manifest dell'applicazione](/docs/cloud-foundry?topic=cloud-foundry-deploy-apps#appmanifest). Per l'integrazione con {{site.data.keyword.Bluemix_notm}}, il tuo progetto deve disporre di un file manifest nella relativa directory root. Tuttavia, non è obbligatorio eseguire la distribuzione in base alle informazioni nel file.
+I file manifest, denominati `manifest.yml` sono archiviati nella directory root del progetto e controllano come il tuo progetto viene distribuito a {{site.data.keyword.Bluemix_notm}}. Per informazioni sulla creazione dei file manifest per un progetto, consulta la [documentazione {{site.data.keyword.Bluemix_notm}} sui manifest dell'applicazione](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest). Per l'integrazione con {{site.data.keyword.Bluemix_notm}}, il tuo progetto deve disporre di un file manifest nella relativa directory root. Tuttavia, non è obbligatorio eseguire la distribuzione in base alle informazioni nel file.
 
 Nella pipeline, puoi specificare tutto quanto può fare un file manifest utilizzando gli argomenti del comando `cf push`. Gli argomenti del comando `cf push` sono utili nei progetti con più destinazioni di distribuzione. Se più lavori di distribuzione tentano tutti di utilizzare la rotta specificata nel file manifest del progetto, si verifica un conflitto.
 
