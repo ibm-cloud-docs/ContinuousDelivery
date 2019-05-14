@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-05-14"
 
 keywords: IBM Cloud button, yml file, build file
 
@@ -90,8 +90,6 @@ When you customize the snippet for your Deploy to {{site.data.keyword.Bluemix_no
 * If you prefer to use an image for the button, change the path of the button image that is used in the snippet to `https://cloud.ibm.com/devops/setup/deploy/button_x2.png`. This image is twice the size of the default one.
 
 * If you prefer to store the image locally, you can download the image and store it in your Git repo. Adjust the path to use the relative location of the image.
-
-* If you want to use a translated version of the button, you can reference it remotely or download it from [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button ![External link icon](../../icons/launch-glyph.svg "External link icon")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}.
 
 ## Repository considerations {: #button-repo}
 
