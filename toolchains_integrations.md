@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-05-22"
 
 keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
 
@@ -278,7 +278,7 @@ Configure Bitbucket to collaborate on code with your team:
 
 1. To create a private repo on the server, select the **Make this repository private** check box.
 1. To use Bitbucket Issues for issue tracking, select the **Enable Bitbucket Issues** check box.
-1. To track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. To track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:new_window}.
 1. Click **Create Integration**.
 1. From your toolchain, click the card for the Bitbucket repo that you want to work with. The Bitbucket website opens where you can view the contents of the repo.
 1. If you enabled Bitbucket Issues, click **Bitbucket Issues** to open it. You can use this instance of Bitbucket Issues for your entire toolchain, even if the toolchain contains multiple Bitbucket repos.    
@@ -476,7 +476,7 @@ These instructions apply to toolchains that already contain the Git repo that yo
 1. In the Tool Integrations section, click **Git Repos and Issue Tracking**.
 1. To create a copy of the Git repo, for the repository type, click **Clone**. Type a new repo name and the URL for the source repo.
 1. If you want to use Issues for issue tracking, select the **Enable Issues** check box.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:new_window}.
 1. Click **Create Integration**.
 
 After you clone the Git repo, you can remove it from your toolchain.
@@ -495,7 +495,7 @@ If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, fol
   d. If you have a Git repo and want to use it, for the repository type, click **Existing**. Type the URL.    
 
 1. If you want to use Issues for issue tracking, select the **Enable Issues** check box.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:new_window}.
 1. Click **Create Integration**.
 1. Click the card for the Git repo that you want to work with. Your project overview page opens.    
 
@@ -566,7 +566,7 @@ If you have a toolchain and are adding this tool integration to it, follow these
 
 1. If you are a GitHub.com user with an upgraded account, or you selected a {{site.data.keyword.ghe_short}} server and you want to make a new private repo on the server, select the **Make this repository private** check box.
 1. If you want to use GitHub's Issues for issue tracking, select the **Enable GitHub Issues** check box.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:new_window}.
 1. Click **Create Integration**.
 1. Click the card for the GitHub or {{site.data.keyword.ghe_short}} repo that you want to work with. Depending on the repo that you selected, either the GitHub website or your company's {{site.data.keyword.ghe_short}} repo opens, where you can view the contents of the repo.
 
@@ -686,7 +686,7 @@ If you have a toolchain and are adding this tool integration to it, follow these
 
 1. If you want to create a public repo on the server, clear the **Make this repository private** check box.
 1. If you want to use GitLab's Issues for issue tracking, select the **Enable GitLab Issues** check box.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:new_window}.
 1. Click **Create Integration**.
 1. Click the card for the GitLab repo that you want to work with. Depending on the repo that you selected, either the GitLab website or your company's GitLab repo opens, where you can view the contents of the repo.
 
@@ -1109,4 +1109,4 @@ Configure SonarQube to continuously analyze and measure the quality of your sour
 
 ### Learn more about SonarQube
 
-To learn more about SonarQube, see the [SonarQube article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window} on the IBM Cloud Garage Method.
+To learn more about SonarQube, see the [SonarQube article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window} on the IBM Cloud Garage Method. 
