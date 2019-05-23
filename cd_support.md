@@ -58,4 +58,4 @@ For more information about opening an IBM {{site.data.keyword.Bluemix_notm}} sup
 
 
 ## Support for {{site.data.keyword.Bluemix_notm}}
-For other problems or questions about your {{site.data.keyword.Bluemix_notm}} service, see [Getting support](/docs/get-support?topic=get-support-getting-customer-support).
+For other problems or questions about your {{site.data.keyword.Bluemix_notm}} service, see [Getting support](/docs/get-support?topic=get-support-getting-customer-support). 
