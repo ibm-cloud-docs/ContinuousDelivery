@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-05-23"
 
 keywords: troubleshoot, IBM Cloud Continuous Delivery
 
@@ -100,7 +100,7 @@ Instead of creating a {{site.data.keyword.gitrepos}} tool integration, create a 
 
 1. If you want to create a public repo on the server, clear the **Make this repository private** check box.
 1. If you want to use GitLab's Issues for issue tracking, select the **Enable GitLab Issues** check box.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:new_window}.
 1. Click **Create Integration**.
 
 For more information about configuring a GitLab tool integration, see [Configuring GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab).
