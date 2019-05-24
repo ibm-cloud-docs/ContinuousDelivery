@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2019
-lastupdated: "2019-02-25"
+lastupdated: "2019-05-23"
 
 keywords: IBM Cloud Live Synch, Use IBM Cloud Live Sync
 
@@ -58,7 +58,7 @@ Live Edit is supported for Node.js applications only.
 
 In the Eclipse Orion Web IDE (Web IDE), in the run bar, click **Live Edit**.
 
-![Image of Run bar with live edit](images/bluemix-live-sync-light.png)
+![Image of Run bar with live edit](images/live-sync-light.png)
 
 Use Live Edit to quickly preview changes to Node.js applications that run on {{site.data.keyword.Bluemix_notm}}. When you update your code with Live Edit turned on, you can refresh your web application's browser window to see those changes reflected seconds after you make them.
 
