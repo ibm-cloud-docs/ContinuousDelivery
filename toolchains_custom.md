@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-05-28"
 
 keywords: toolchain template, Configuration properties, readme file
 
@@ -193,6 +193,7 @@ In that example, the Git URL and Git branch are for a new toolchain template.
 | type | property | <`new` , `fork` , `clone` , `link`> | How to create the new repository |
 | has_issues | property | <`true` , `false`> | Use Issues |
 | enable_traceability | properties |  <`true` , `false`> | Determines whether to track the deployment of code changes by creating tags, labels and comments on commits, pull requests and referenced issues.|
+{: caption="Table 1. Repo keys and property values" caption-side="top"}
 
  If you define multiple repositories and configure them as `has_issues: true`, a single instance of GitHub Issue tracker is added to the toolchain. The tracker follows issues for all repositories that are set to `true`.
  {: tip}
@@ -235,6 +236,7 @@ In that example, the Git URL and Git branch are for a new toolchain template.
 | PROD_ORG_NAME | property | <`'{{form.pipeline.parameters.prod-organization}}'`> | Name of {{site.data.keyword.Bluemix_notm}} organization to deploy to |
 | PROD_REGION_ID | property | <`'{{form.pipeline.parameters.prod-region}}'`> | Name of {{site.data.keyword.Bluemix_notm}} region to deploy to |
 | execute | property | <`true` , `false`> | Start pipeline after creation |
+{: caption="Table 2. Pipeline keys and property values" caption-side="top"}
 
 <!--| services | property | <`repo-name-key`> |  GitHub repository parent key |
 | hidden | property | <`[form, description]`> |  |
@@ -284,6 +286,7 @@ This section of the `toolchain.yml` file defines the pipeline stages that are av
 | prod-organization | property | <`"{{organization}}"`> | Defines the {{site.data.keyword.Bluemix_notm}} organization for the production stage |
 | prod-space | property | <`prod`> | Defines the {{site.data.keyword.Bluemix_notm}} space for the production stage |
 | github-repo-name | property | <`"{{repo-name-key.parameters.repo_name}}"`> | Variable to pass the GitHub repository name to the toolchain creation page |
+{: caption="Table 3. Deployment configuration property keys and values" caption-side="top"}
 
 For more information about creating a `deploy.json` file, see [this section](#toolchains_custom_deploy_json).
 
