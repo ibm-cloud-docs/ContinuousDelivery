@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-05-27"
 
 keywords: Administrator Create, Editor Update, Update, user access
 
@@ -44,7 +44,7 @@ After you define the scope of the access policy, you assign a role. Review the f
 
 The following table details actions that are mapped to platform management roles. Platform management roles enable users to perform tasks on service resources at the platform level, for example assign user access for the service, create or delete service IDs, create instances, and bind instances to applications.
 
-| Platform management role | Description of actions | Example actions|
+| Platform Management Role | Description of Actions | Example Actions|
 |:-----------------|:-----------------|:-----------------|
 | Viewer, Operator | View toolchains and delivery pipelines. Run delivery pipelines. | <ul><li>Click a toolchain to open its Overview page.</li><li>Click the **Run Stage** icon of the stage that your pipeline job is in.</li></ul> |
 | Editor, Administrator | Create, view, update, and delete toolchains and delivery pipelines. |<ul><li>On the DevOps dashboard, on the **Toolchains** page, click **Create a Toolchain**.</li><li>On the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page.</li><li>On the DevOps dashboard, on the **Toolchains** page, click the toolchain to delete. Click the **More Actions** menu, which is next to **View app**. Click **Delete**.</li></ul> |
@@ -52,7 +52,7 @@ The following table details actions that are mapped to platform management roles
 
  For toolchains, the following actions exist:
 
-| Action | Operation on service | Role
+| Action | Operation on Service | Role
 |:-----------------|:-----------------|:--------------|
 | create | Create a toolchain in a resource group. | Administrator, Editor |
 | update | Update a toolchain in a resource group. For example, rename the toolchain. Change delivery pipelines that are bound to toolchains in a resource group. | Administrator, Editor |
