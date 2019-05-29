@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-05-27"
 
 keywords: Continuous Delivery, Support tickets, Continuous Delivery service
 
@@ -28,7 +28,7 @@ The {{site.data.keyword.contdelivery_full}} team actively monitors the developer
 <tr>
 <th style="width:20%"> &nbsp; &nbsp; &nbsp;</th>
  <th style="text-align:center;width=60%">
- <strong>Ask us a Question</strong> </th>
+ <strong>Ask Us a Question</strong> </th>
 <th> &nbsp; &nbsp; &nbsp;</th>
 </tr>
 <tr>
@@ -58,4 +58,4 @@ For more information about opening an IBM {{site.data.keyword.Bluemix_notm}} sup
 
 
 ## Support for {{site.data.keyword.Bluemix_notm}}
-For other problems or questions about your {{site.data.keyword.Bluemix_notm}} service, see [Getting support](/docs/get-support?topic=get-support-getting-customer-support). 
+For other problems or questions about your {{site.data.keyword.Bluemix_notm}} service, see [Getting support](/docs/get-support?topic=get-support-getting-customer-support).
