@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-05-07"
+lastupdated: "2019-05-27"
 
 keywords: IBM Cloud Public, Use Developer Insights, US South
 
@@ -66,9 +66,9 @@ The predefined DevOps toolchain templates are recommended examples that solve re
 <table valign="top" padding="2px">
   <caption>Table 2. Toolchain templates</caption>
   <tr>
-    <th style="width:25%; text-align:left; vertical-align:top">Template and available regions</th>
-    <th style="width:50%; text-align:left; vertical-align:top">Description and available tutorials</th>
-    <th style="text-align:left; vertical-align:top">Included tools</th>
+    <th style="width:25%; text-align:left; vertical-align:top">Template and Available Regions</th>
+    <th style="width:50%; text-align:left; vertical-align:top">Description and Available Tutorials</th>
+    <th style="text-align:left; vertical-align:top">Included Tools</th>
   </tr>
   <tr><td>
   <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain" target="_blank">“Develop a Cloud Foundry app” toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
