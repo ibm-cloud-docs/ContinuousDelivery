@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-02-25"
+lastupdated: "2019-05-27"
 
 keywords: Administrator Create, Administrator Update, Editor Update, Update
 
@@ -44,7 +44,7 @@ After you define the scope of the access policy, you assign a role. Review the f
 
 The following table details actions that are mapped to platform management roles. Platform management roles enable users to perform tasks on service resources at the platform level, for example assign user access for the service, create or delete service IDs, create instances, and bind instances to applications.
 
-| Platform management role | Description of actions | Example actions|
+| Platform Management Role | Description of Actions | Example Actions|
 |:-----------------|:-----------------|:-----------------|
 | Viewer, Operator | View instances of the {{site.data.keyword.contdelivery_short}} service. | <ul><li>Click a {{site.data.keyword.contdelivery_short}} service instance to open its dashboard.</li></ul>|
 | Editor, Administrator | Create, view, update, modify the plan for, and delete instances of the {{site.data.keyword.contdelivery_short}} service. |<ul><li>Provision an instance of {{site.data.keyword.contdelivery_short}} in a resource group.</li><li>Delete an instance of {{site.data.keyword.contdelivery_short}} from a resource group.</li><li>Change a {{site.data.keyword.contdelivery_short}} instance plan from Lite to Professional.</li></ul> |
@@ -53,7 +53,7 @@ The following table details actions that are mapped to platform management roles
 
  For {{site.data.keyword.contdelivery_short}}, the following actions exist:
 
-| Action | Operation on service | Role
+| Action | Operation on Service | Role
 |:-----------------|:-----------------|:--------------|
 | create | Provision a {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor |
 | update | Update a {{site.data.keyword.contdelivery_short}} service instance in a resource group. For example, rename the service instance. | Administrator, Editor |
@@ -66,7 +66,7 @@ The following table details actions that are mapped to platform management roles
 
 The following table details actions that are mapped to service access roles. Service access roles enable users access to {{site.data.keyword.contdelivery_short}} as well as the ability to call the {{site.data.keyword.contdelivery_short}} API.
 
-| Service access role | Description of actions | Example actions|
+| Service Access Role | Description of Actions | Example Actions|
 |:-----------------|:-----------------|:-----------------|
 | Writer, Manager | Add and remove users from the Authorized Users list on the Manage tab within a {{site.data.keyword.contdelivery_short}} service instance. | <ul><li>Add authorized user.</li><li>Remove authorized user.</li></ul>|
 {: caption="Table 3. IAM service access roles and actions" caption-side="top"}
