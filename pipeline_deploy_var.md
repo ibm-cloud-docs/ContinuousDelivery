@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-28"
 
 keywords: Environment properties, IBM Java, pipeline environments
 
@@ -42,8 +42,9 @@ The following properties and resources are available by default in pipeline envi
 {: #deliverypipeline_envprop}
 
 ### General-purpose properties
+The following table lists and describes each of the general-purpose environment properties that are available by default in pipeline environments.
 
-| Environment property | Description |
+| Environment Property | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | ARCHIVE_DIR | The directory to archive or to download archives into. |
 | BUILD_ID | The unique ID for the current job execution.  |
@@ -71,10 +72,12 @@ The following properties and resources are available by default in pipeline envi
 | TASK_ID | The unique ID of the job's current run. |
 | TMPDIR | A directory location where temporary files are stored. |
 | WORKSPACE | The path for the current working directory. |
+{: caption="Table 1. General-purpose environment properties" caption-side="top"}
 
 ### Runtime and tool properties
+The following table lists and describes each of the runtime and tool environment properties that are available by default in pipeline environments.
 
-| Environment property | Description |
+| Environment Property | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | ANT_HOME | The path to Apache Ant 1.9.2. |
 | ANT_JAVA8_HOME | The path to a 1.10+ version of Apache Ant that requires Java 8. |
@@ -84,13 +87,15 @@ The following properties and resources are available by default in pipeline envi
 | JAVA8_HOME | The path to IBM Java 8. |
 | MAVEN_HOME | The path to Apache Maven 3.2.1. |
 | NODE_HOME | The path to Node.js 0.10.29. |
+{: caption="Table 2. Runtime and tool environment properties" caption-side="top"}
 
 To use Apache Ant 1.10+ in your pipeline's scripts, set `ANT_HOME` to `$ANT_JAVA8_HOME` and `JAVA_HOME` to `$JAVA8_HOME`.
 {: tip}
 
 ### Deployment properties
+The following table lists and describes each of the deployment environment properties that are available by default in pipeline environments.
 
-| Environment property | Description |
+| Environment Property | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | CF_APP | For deployments, the name of the app to deploy. This property is required for deployment and can be specified in the script itself, the deploy job configuration interface, or the project's `manifest.yml` file. |
 | CF_ORG | For deployments, the name of the organization (org) to deploy to. |
@@ -99,6 +104,7 @@ To use Apache Ant 1.10+ in your pipeline's scripts, set `ANT_HOME` to `$ANT_JAVA
 | CF_SPACE_ID | For deployments, the ID of the space to deploy to.  |
 | CF_TARGET_URL | For deployments, the URL of {{site.data.keyword.Bluemix_short}} or Cloud Foundry. |
 | IDS_VERSION | For deployments, the version of the app that is being deployed or the source identifier. |
+{: caption="Table 3. Deployment environment properties" caption-side="top"}
 
 ## Preinstalled resources
 {: #deliverypipeline_resources}
@@ -106,11 +112,12 @@ To use Apache Ant 1.10+ in your pipeline's scripts, set `ANT_HOME` to `$ANT_JAVA
 Several runtimes, tools, and Node modules are preinstalled in every pipeline.
 
 ### Runtimes and tools
+The following table lists each of the preinstalled runtimes and tools that are available in every pipeline.
 
 All links are in the home directory.
 {: tip}
 
-| Resource | Link name | Path |
+| Resource | Link Name | Path |
 |----------|-----------|-----------|
 |Apache Ant 1.9.2|ant |/opt/IBM/ant |
 |Cloud Foundry CLI 6.14 |cf | /opt/IBM/cf |
@@ -123,6 +130,7 @@ All links are in the home directory.
 |Apache Maven 3.2.1 |maven |/opt/IBM/maven |
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
+{: caption="Table 4. Link names and paths for runtimes and tools" caption-side="top"}
 
 The pipeline environment offers 64-bit versions of IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2, and 6.7.0. To choose a version, use the export command.
 
