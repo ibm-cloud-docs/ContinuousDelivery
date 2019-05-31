@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-05-27"
+lastupdated: "2019-05-30"
 
 keywords: IBM Cloud Public, Use Developer Insights, US South
 
@@ -30,7 +30,7 @@ Toolchains are available on {{site.data.keyword.Bluemix_notm}} Public and Dedica
 ## Toolchain availability on {{site.data.keyword.Bluemix_notm}} Public compared to {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #public_and_dedicated}
 
-{{site.data.keyword.Bluemix_notm}} Public is an open-standards, cloud-based platform where you can build, run, and manage applications that are accessed by [http://cloud.ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com){:new_window}. {{site.data.keyword.Bluemix_notm}} Dedicated provides the capabilities of {{site.data.keyword.Bluemix_notm}} in a dedicated SoftLayer environment that is securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your network. Your company's {{site.data.keyword.Bluemix_notm}} Dedicated environment might not contain the same tool integrations as the {{site.data.keyword.Bluemix_notm}} Public site.
+{{site.data.keyword.Bluemix_notm}} Public is an open-standards, cloud-based platform where you can build, run, and manage applications that are accessed by [http://cloud.ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com){:new_window}. {{site.data.keyword.Bluemix_notm}} Dedicated provides the capabilities of {{site.data.keyword.Bluemix_notm}} in a dedicated infrastructure environment that is securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your network. Your company's {{site.data.keyword.Bluemix_notm}} Dedicated environment might not contain the same tool integrations as the {{site.data.keyword.Bluemix_notm}} Public site.
 
 For source-code management and issue tracking, {{site.data.keyword.Bluemix_notm}} Public generally uses {{site.data.keyword.gitrepos}} (hosted by IBM and built on [GitLab Community Edition ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://about.gitlab.com/){:new_window}) or GitHub (github.com). {{site.data.keyword.Bluemix_notm}} Dedicated can also use github.com, but it generally uses {{site.data.keyword.ghe_short}} that is either installed by your company or managed by IBM.
 
