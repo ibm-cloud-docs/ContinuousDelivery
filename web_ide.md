@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-01"
+lastupdated: "2019-05-30"
 
 keywords: Eclipse Orion {{site.data.keyword.webide}}, file types, Local Editor Settings icon
 
@@ -108,68 +108,6 @@ If you are developing a Node.js app, enable Live Edit mode:  <img  src="./images
 <td>With Live Edit mode enabled, access the debugger.
 </td></tr>
 </table>
-
-<!-- 3/6/2016: bl commands don't work with V2/CD
-## Editing outside of the {{site.data.keyword.webide}}
-{: #editlocal}
-
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.Bluemix_short}}.
-
-### Before you begin
-
-Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
-
-### Synchronizing your local environment with {{site.data.keyword.Bluemix_notm}}
-{: #edit_local_download}
-
-1. Open a command-line window.
-2. Sign in to {{site.data.keyword.Bluemix_notm}}:
-
-	```
-	bl login
-	```
-	{: pre}
-
-3. When you are prompted, enter your IBMid and password.
-4. View a list of your {{site.data.keyword.Bluemix_notm}} projects:
-
-	```
-	bl projects
-	```
-	{: pre}
-
-4. Synchronize your local environment with your project on {{site.data.keyword.Bluemix_notm}}:
-
-	```
-	bl sync projectName
-	```
-	{: pre}
-
-where `projectName` is your {{site.data.keyword.Bluemix_notm}} app's name.
-
-When you are finished editing, enter `q` to end synchronization.
-
-### Enabling the Desktop Sync feature to edit code locally
-
-The Desktop Sync feature is like Live Edit mode for the command line. You need the Desktop Sync feature to debug on the command line.
-1. In another command-line window, enable the Desktop Sync feature:
-
-	```
-	cd localDirectory
-	bl start
-	```
-	{: codeblock}
-
-2. Use the launch configuration that you created in the {{site.data.keyword.webide}}. After you select the launch configuration, the Desktop Sync feature is enabled in your local environment. In the command-line window that you just opened, you can view the app's URL, the debug URL, the manage URL, and view the {{site.data.keyword.Bluemix_live_notm}} state.
-
-3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace.
-
-### Disabling the Desktop Sync feature
-
-1. In the second command-line window, enter `bl stop`.
-2. In the first command-line window, enter `q`.
-
--->
 
 ## Supported languages
 {: #supported_languages}
