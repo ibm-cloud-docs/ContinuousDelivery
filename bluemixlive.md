@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2019
-lastupdated: "2019-05-23"
+lastupdated: "2019-05-31"
 
 keywords: IBM Cloud Live Synch, Use IBM Cloud Live Sync
 
@@ -139,7 +139,7 @@ Monitor memory and CPU usage within the instance that uses standard Linux comman
 
 After the {{site.data.keyword.Bluemix_notm}} Live Debug is installed, you can use the debug tools.
 
-Push the app and then browse to `https://_app-host.mybluemix.net_/bluemix-debug/manage` to access the {{site.data.keyword.Bluemix_notm}} debug user interface. When you are prompted to authenticate, enter your IBM ID user name and password or a one-time passcode.    
+Push the app and then append `/bluemix-debug/manage` to the URL to your app to access the {{site.data.keyword.Bluemix_notm}} debug user interface. When you are prompted to authenticate, enter your IBM ID user name and password or a one-time passcode.    
 
 The Debugger might take a minute or so to initialize.
 {: tip}
