@@ -44,7 +44,7 @@ Live Edit is supported for Node.js applications only.
 
 In the {{site.data.keyword.webide}}, in the run bar, click **Live Edit**.
 
-![Image of Run bar with live edit](images/live-sync-light.png)
+![Image of Run bar with live edit](images/cloud-live-sync-light.png)
 
 Use Live Edit to quickly preview changes to Node.js applications that run on {{site.data.keyword.Bluemix_notm}}. When you update your code with Live Edit turned on, you can refresh your web application's browser window to see those changes reflected seconds after you make them.
 
@@ -53,4 +53,4 @@ For a tutorial about using the Live Edit feature of {{site.data.keyword.Bluemix_
 When you change the files in your {{site.data.keyword.webide}}, they are automatically redeployed to your application instance on {{site.data.keyword.Bluemix_notm}}. If you need to restart the Node application, click the **Restart** button in the run bar.
 
 For a more consistent experience, when you use the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, 256 MB of extra memory is required and is added.
-{: tip} 
+{: tip}
