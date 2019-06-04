@@ -53,4 +53,4 @@ For a tutorial about using the Live Edit feature of {{site.data.keyword.Bluemix_
 When you change the files in your {{site.data.keyword.webide}}, they are automatically redeployed to your application instance on {{site.data.keyword.Bluemix_notm}}. If you need to restart the Node application, click the **Restart** button in the run bar.
 
 For a more consistent experience, when you use the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, 256 MB of extra memory is required and is added.
-{: tip}
+{: tip} 
