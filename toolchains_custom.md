@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-10"
 
 keywords: toolchain template, Configuration properties, readme file
 
@@ -401,23 +401,24 @@ stages:
  ## Configuring the pipeline interface
  {: #toolchains_custom_deploy_json}
 
- On the [toolchain creation](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window} page, when Delivery Pipeline is selected from the Configurable Integrations section, the section expands to display the following items:
+On the [toolchain creation](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started){: new_window} page, when Delivery Pipeline is selected from the Configurable Integrations section, the section expands to display the following items:
 
- 	* The application's name.
- 	* The region, organization, and space that your pipeline stages deploy to.
+ * The application's name.
+ * The region, organization, and space that your pipeline stages deploy to.
 
 You can configure those items for each tool.
 
- The layout of this section in the UI is defined by the `deploy.json` schema.
+The layout of this section in the UI is defined by the `deploy.json` schema.
 
- Within the schema, update the following properties to match the details of your application:
+Within the schema, update the following properties to match the details of your application:
+ 
+ * Title
+ * Description
+ * LongDescription
+ * All instances of `hello-world-name` and the associated details
 
- 	* Title
- 	* Description
- 	* LongDescription
- 	* All instances of `hello-world-name` and the associated details
 
- The following snippet is an example of a `deploy.json` file:
+The following snippet is an example of a `deploy.json` file:
 
  ```
  {
