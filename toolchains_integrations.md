@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-27"
+lastupdated: "2019-06-05"
 
 keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
 
@@ -923,7 +923,7 @@ Configure a custom tool so that it works with other tools in your toolchain and 
 
 ### Learn more about custom tool
 
-To learn more about the custom tool, see [Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window} or take this tutorial:
+To learn more about the custom tool, see [Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/introducing-custom-tool-integration-for-bluemix-toolchains/){: new_window} or take this tutorial:
 
   * [Add a custom tool integration to a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/add-a-custom-tool-integration-to-a-toolchain){:new_window}
 
