@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-06-11"
 
 keywords: Continuous Delivery, Support tickets, Continuous Delivery service
 
@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 # Getting help and support for {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-The {{site.data.keyword.contdelivery_full}} team actively monitors IBM Developer Answers and our Slack channel for questions about the {{site.data.keyword.contdelivery_short}} service and toolchains.
+The {{site.data.keyword.contdelivery_full}} team actively monitors our Slack channel and IBM Developer Answers for questions about the {{site.data.keyword.contdelivery_short}} service and toolchains.
 
 | Get Help | Ask Us a Question |
 |----------|---------|
