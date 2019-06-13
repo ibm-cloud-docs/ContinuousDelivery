@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-23"
+lastupdated: "2019-06-12"
 
 keywords: troubleshoot, IBM Cloud Continuous Delivery
 
@@ -174,13 +174,18 @@ Use any of the following methods to resolve this issue:
 
 * If your private key is not in the default location, use the following command to specify it in an environment variable:
 
-`GIT_SSH_COMMAND='ssh -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+```
+  GIT_SSH_COMMAND='ssh -i/path/to/private_key_file' git clone git@host:owner/repo.git
+```
 
 * To debug this issue by using connection information, add the -v or the -vvv flag to the `GIT_SSH_COMMAND` environment variable:
 
-`GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git`
-
-`GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+```
+  GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git
+```
+```
+  GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git
+```
 
 
 ## I tried adding a user to my GitLab project by way of email, but they didn't receive the invitation. How do I add them to my project?
@@ -214,7 +219,7 @@ When I attempt to create a toolchain from a template that I'm writing, I receive
 
 `This pipeline was created, but might be missing jobs, stages, or other resources. You can use this pipeline, or if you prefer, you can delete it and create another pipeline.`
 
-Typcially, this issue is caused by an error in your pipeline.yaml definition.
+Typically, this issue is caused by an error in your pipeline.yaml definition.
 {: tsCauses}
    
 You can use any of the following methods to debug this error:
@@ -223,6 +228,42 @@ You can use any of the following methods to debug this error:
 * Use the pipeline user interface to create an example pipeline that replicates the pipeline that you are trying to build with your template. Append `/yaml` to the pipeline URL to generate a similar pipeline.yaml file that you can use to look for obvious differences. For example, `https://cloud.ibm.com/devops/pipelines/<your pipeline id>/yaml?env_id=<your region>`.
 
 * Use the headless toolchain creation mechanism. On the **Create a Toolchain** page, open the debugger and evaluate the `window.Testflags = {nocreate: 1}` expression. When you click **Create a Toolchain** in this mode, the toolchain is not created. Instead, the information that is passed to the API is returned to the console where you can review it.
+
+
+## I tried to deploy to Kubernetes by using the Delivery Pipeline, why am I getting an error about an invalid object? 
+{: troubleshoot-cd-pipeline-kubernetes}
+{: troubleshoot}
+
+The 1.0 pipeline base image includes kubectl v1.14.2. You might receive an error if the Kubernetes cluster that you are connecting to is running a more recent version of Kubernetes. 
+
+When I attempt to deploy to Kubernetes by using the Delivery Pipeline, I receive the following error message:
+{: tsSymptoms}
+
+`error:SchemaeError(io.k8s.api.core.v1.SecretProjection): invalid object doesn't have additional properties`
+
+Typically, this issue is caused when the version of the kubectl command in your pipeline base image is incompatible with the version of Kubernetes that is running in the cluster.
+{: tsCauses}
+   
+You can use any of the following methods to resolve this problem:
+{: tsResolve}
+
+* Use a more recent pipeline base image version, which when created includes the currently released version of kubectl. For information about how to specify the latest image version, see [Specifying the image version](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline_versioned_base_images#specify_base_image_version).
+
+* Make sure that your pipeline job is running the correct version of kubectl. For example, add the following lines to the beginning of your pipeline job to run kubectl v1.14.2:
+
+```
+  curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.14.2/bin/linux/amd64/kubectl
+  chmod +x ./kubectl
+  sudo mv ./kubectl /usr/local/bin/kubectl
+```
+
+If you are running kubectl v1.14.2 from a 1.0 pipeline base image, the sudo option is not available. Replace the sudo line with the following command to add kubectl to your path:
+```
+   mkdir ~/.bin && export PATH=~/.bin:$PATH && mv ./kubectl ~/.bin/kubectl 
+```
+
+For more information about accessing the exact version of kubectl that you require, see [Install and set up kubectl ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux){:new_window}.
+{: tip}
 
 
 ## I configured a tool integration for my toolchain, why wasn't it configured?
