@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-14"
 
 keywords: IBM Cloud Continuous Delivery, tool integration, toolchain template
 
@@ -40,6 +40,9 @@ Before you can create a continuous delivery toolchain from a template, you must 
 
 ##Step 1: Select a toolchain template
 {: #select_a_toolchain_template}
+
+To quickly find the toolchain template that addresses your specific requirements, select the appropriate check boxes to filter by deployment target and tools.
+{: tip}
 
 1. On the **Create a Toolchain** page, click a [toolchain template ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops/create){: new_window}.
 1. Review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
@@ -80,4 +83,3 @@ Check out one of these tutorials on the [IBM&reg; Cloud Garage Method ![External
   * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
 
   * [Add a toolchain to an app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
- 
