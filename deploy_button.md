@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-14"
+lastupdated: "2019-06-14"
 
 keywords: IBM Cloud button, yml file, build file
 
@@ -32,7 +32,7 @@ When someone clicks your button, these actions occur:
 
 3. A toolchain is created that includes a new private clone of your Git repo, a pipeline for building and deploying code changes, the Eclipse Orion {{site.data.keyword.webide}} for editing code on the Cloud, and an issue tracker.
 
-  If the `.bluemix` directory contains a `toolchain.yml` file, the file is used to specify the tool integrations for the toolchain. For more information about the `toolchain.yml` file, see [Creating custom toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}.
+  If the `.bluemix` directory contains a `toolchain.yml` file, the file is used to specify the tool integrations for the toolchain. For more information about the `toolchain.yml` file, see [Creating custom toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom).
   {: tip}
 
 4. If the app requires a build file, the build file is detected automatically and the app is built.
@@ -115,7 +115,7 @@ To configure the pipeline for the toolchain in a `.bluemix` directory, include a
 
 If you do not have `pipeline.yml` file in the `.bluemix` directory, the Deploy to {{site.data.keyword.Bluemix_notm}} button will create a default pipeline with two stages: a Build stage and a Deploy stage that deploys to Cloud Foundry.
 
-To create a pipeline file, consult the example file in the [custom toolchain pipeline instructions](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml). Just as when you define a pipeline in the web interface, you define a pipeline in text by creating stages and jobs, setting inputs and environment variables, and adding scripts. You can also see a number of more complex pipeline files in [this demonstration project](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix).
+To create a pipeline file, consult the example file in the [custom toolchain pipeline instructions](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml). Just as when you define a pipeline in the web interface, you define a pipeline in text by creating stages and jobs, setting inputs and environment variables, and adding scripts. You can also see a number of more complex pipeline files in [this demonstration project  ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix){:new_window}.
 
 ### Container Dockerfile requirements
 {: container_dockerfile}
@@ -135,4 +135,4 @@ To create a `pipeline.yml` manually that is specifically for containers, see the
 
 A `manifest.yml` file is not required to be in your repo. However, if your app requires other services to run, you must provide a manifest file that declares those services.
 
-To learn more about manifest files, see [Application manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest). 
+To learn more about manifest files, see [Application manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
