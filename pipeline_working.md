@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-14"
 
 keywords: IBM Cloud, build types, build script
 
@@ -34,10 +34,10 @@ You can deploy to one or many regions and services. For example, you can set up 
 
 You can use any of the following methods to create a pipeline:
 
-   * [Create a toolchain from an existing Cloud Foundry application](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}. The resulting toolchain contains a pipeline.
+   * [Create a toolchain from an existing Cloud Foundry application](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app). The resulting toolchain contains a pipeline.
 
-   * [Create a toolchain from a template](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window} that includes at least one pipeline.
+   * [Create a toolchain from a template](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template) that includes at least one pipeline.
 
-   * [Add the {{site.data.keyword.deliverypipeline}} tool integration](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window} to an existing toolchain.
+   * [Add the {{site.data.keyword.deliverypipeline}} tool integration](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline) to an existing toolchain.
    
 From your {{site.data.keyword.deliverypipeline}}, change your configuration; check the status of builds, the deployed app, and recent deployments; see the most recent logs and deployment details; or delete your pipeline.
