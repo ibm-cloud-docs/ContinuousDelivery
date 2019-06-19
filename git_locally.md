@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-19"
 
 keywords: Git source control, personal access token, Git repos
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -35,7 +36,7 @@ You can manage and work with source code in a GitHub, GitHub Enterprise, or {{si
 | Git Type  | HTTPS Setup | HTTPS Use |  SSH Setup |
 |:-----------|:-------------|:------------|:-------------|
 | Git Repos and Issue Tracking  | [Personal access token](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat) | Git Repos and Issue tracking user name (not your IBM id) and personal access token | [Configure the SSH key](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key) |
-| Public GitHub (github.com) | Personal access token is not required, but you can set one up and use it | GitHub user name and password, or GitHub user name and Personal Access token, or just the personal access token as the user name | [Configure a GitHub SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
+| Public GitHub (github.com) | Personal access token is not required, but you can set one up and use it | GitHub user name and password, or GitHub user name and Personal Access token, or just the personal access token as the user name | [Configure a GitHub SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: external} |
 | GitHub Enterprise | [Personal access token](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) | GitHub Enterprise user name (not your IBM id) and personal access token | [Configure the GitHub Enterprise SSH key](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) |
 {: caption="Table 1. Git authentication setup" caption-side="top"}
 
@@ -46,7 +47,7 @@ If you prefer to use SSH, you can reuse a single key across all Git servers. Cre
 
     a. Check whether Git is installed. On a command line, type `git version`. If Git is installed, the version number is shown and you can begin.
 
-    b. If Git is not installed, [go to the Git website ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://git-scm.com/downloads){: new_window}.
+    b. If Git is not installed, [go to the Git website](http://git-scm.com/downloads){: external}.
 
     c. Download and install the version for your operating system. You can accept the default installation values.
 
@@ -73,12 +74,12 @@ Create a local copy of the project files by cloning the Git repo so that you can
 6. If you are prompted for authentication, enter the appropriate information, as defined in the previous table.
 
 
-After the download is complete, you have a local version of the files in your repo. For more information about using Git, see the [Git documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")]](http://git-scm.com/doc){: new_window}.
+After the download is complete, you have a local version of the files in your repo. For more information about using Git, see the [Git documentation](http://git-scm.com/doc){: external}.
 
 
 ## Accessing your repo by using Eclipse and the EGit plug-in
 {: #git_egit}
 
-If you use Eclipse and have a project that uses Git for source control, you can use the EGit plug-in to manage your repo from Eclipse. For more information about how to install and configure EGit, see the [EGit tutorial ![External link icon](../../icons/launch-glyph.svg "External link icon")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
+If you use Eclipse and have a project that uses Git for source control, you can use the EGit plug-in to manage your repo from Eclipse. For more information about how to install and configure EGit, see the [EGit tutorial](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: external}.
 
 If you use {{site.data.keyword.gitrepos}} and have any problems, see the [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local) documentation.
