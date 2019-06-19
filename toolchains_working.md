@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-18"
 
 keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
 
@@ -13,6 +13,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -34,9 +35,9 @@ Each toolchain is associated with a specific resource group or organization (org
 ##Creating a toolchain from a template   
 {: #creating_a_toolchain_from_a_template}
 
-You can use a template as a starting point to [create a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops/create){: new_window} that includes a specific set of tool integrations. Learn more about how to use the templates from the [IBM Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/category/tools){:new_window}.
+You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){:external} that includes a specific set of tool integrations. Learn more about how to use the templates from the [IBM Cloud Garage Method ](https://www.ibm.com/cloud/garage/category/tools){:external}.
 
-1. If you use {{site.data.keyword.Bluemix_notm}} Public, log in to [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com){:new_window}.
+1. If you use {{site.data.keyword.Bluemix_notm}} Public, log in to [{{site.data.keyword.Bluemix_notm}}](http://cloud.ibm.com){:external}.
 1. If you use {{site.data.keyword.Bluemix_notm}} Dedicated, log in to your Dedicated environment on {{site.data.keyword.Bluemix_notm}}.
 1. From the menu on the {{site.data.keyword.Bluemix_notm}} menu bar, click **DevOps**.
 1. On the DevOps dashboard, on the **Toolchains** page, click **Create a Toolchain**.
@@ -105,10 +106,10 @@ You can view a toolchain from an app by clicking **View toolchain** from your ap
 ## Take a tutorial: Using toolchains
 {: #toolchain_tutorials}
 
-Check out one of these tutorials on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage){:new_window}:
+Check out one of these tutorials on the [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external}:
 
-  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}.
 
-  * [Add a toolchain to an app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+  * [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}.
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}.
