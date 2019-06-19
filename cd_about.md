@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-18"
 
 keywords: IBM Cloud Public, Use Developer Insights, US South
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -30,9 +31,9 @@ Toolchains are available on {{site.data.keyword.Bluemix_notm}} Public and Dedica
 ## Toolchain availability on {{site.data.keyword.Bluemix_notm}} Public compared to {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #public_and_dedicated}
 
-{{site.data.keyword.Bluemix_notm}} Public is an open-standards, cloud-based platform where you can build, run, and manage applications that are accessed by [http://cloud.ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com){:new_window}. {{site.data.keyword.Bluemix_notm}} Dedicated provides the capabilities of {{site.data.keyword.Bluemix_notm}} in a dedicated infrastructure environment that is securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your network. Your company's {{site.data.keyword.Bluemix_notm}} Dedicated environment might not contain the same tool integrations as the {{site.data.keyword.Bluemix_notm}} Public site.
+{{site.data.keyword.Bluemix_notm}} Public is an open-standards, cloud-based platform where you can build, run, and manage applications that are accessed by [http://cloud.ibm.com](http://cloud.ibm.com){: external}. {{site.data.keyword.Bluemix_notm}} Dedicated provides the capabilities of {{site.data.keyword.Bluemix_notm}} in a dedicated infrastructure environment that is securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your network. Your company's {{site.data.keyword.Bluemix_notm}} Dedicated environment might not contain the same tool integrations as the {{site.data.keyword.Bluemix_notm}} Public site.
 
-For source-code management and issue tracking, {{site.data.keyword.Bluemix_notm}} Public generally uses {{site.data.keyword.gitrepos}} (hosted by IBM and built on [GitLab Community Edition ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://about.gitlab.com/){:new_window}) or GitHub (github.com). {{site.data.keyword.Bluemix_notm}} Dedicated can also use github.com, but it generally uses {{site.data.keyword.ghe_short}} that is either installed by your company or managed by IBM.
+For source-code management and issue tracking, {{site.data.keyword.Bluemix_notm}} Public generally uses {{site.data.keyword.gitrepos}} (hosted by IBM and built on [GitLab Community Edition](https://about.gitlab.com/){: external}) or GitHub (github.com). {{site.data.keyword.Bluemix_notm}} Dedicated can also use github.com, but it generally uses {{site.data.keyword.ghe_short}} that is either installed by your company or managed by IBM.
 
 {{site.data.keyword.contdelivery_short}} is available on {{site.data.keyword.Bluemix_notm}} Public in selected regions, and on {{site.data.keyword.Bluemix_notm}} Dedicated. Toolchains differ depending on whether you use {{site.data.keyword.contdelivery_short}} on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated.
 
@@ -42,7 +43,7 @@ Although toolchains are not currently available in all regions, you can configur
 |Toolchains |{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
 |Tool integrations 		|For a list of supported tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations). 		|The tool integrations that are available depend on how {{site.data.keyword.contdelivery_short}} was set up in your environment.			|
-|Creating a toolchain from a template		|Log in to [{{site.data.keyword.Bluemix_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cloud.ibm.com/devops){:new_window}		|Log in to your Dedicated environment on {{site.data.keyword.Bluemix_notm}}.			|
+|Creating a toolchain from a template		|Log in to [{{site.data.keyword.Bluemix_notm}}](http://cloud.ibm.com/devops){: external}.		|Log in to your Dedicated environment on {{site.data.keyword.Bluemix_notm}}.			|
 |Creating a toolchain from an app		|The app is configured for continuous delivery from a new GitHub repo that is populated with app starter code.		|The app is configured for continuous delivery from a new GitHub or GitHub Enterprise repo that is populated with app starter code.		|  
 |Delivery pipeline deployment regions		|All {{site.data.keyword.Bluemix_notm}} Public regions are available for Cloud Foundry deployment jobs. 		|The {{site.data.keyword.Bluemix_notm}} Dedicated region is available. Other Dedicated or Local regions within the same customer account might also be available depending on how {{site.data.keyword.contdelivery_short}} was set up in your specific environment.		|
 |Delivery pipeline deployment jobs		|All [job types](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs) are available.		|Job types that depend on {{site.data.keyword.Bluemix_notm}} services that are not installed in the Dedicated environment might not be available.	For example, container build and deploy job types might not be available in environments that do not have the {{site.data.keyword.containerlong_notm}}.	|
@@ -52,14 +53,14 @@ Although toolchains are not currently available in all regions, you can configur
 ## Toolchain templates
 {: #templates}
 
-You can use a template as a starting point to [create a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops/create){: new_window}. Toolchain templates include specific sets of tool integrations that support development, deployment, and operations tasks.
+You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external}. Toolchain templates include specific sets of tool integrations that support development, deployment, and operations tasks.
 
 Your company's {{site.data.keyword.Bluemix_notm}} Dedicated environment might not contain the same toolchain templates as the {{site.data.keyword.Bluemix_notm}} Public site. Toolchain templates that are available on both {{site.data.keyword.Bluemix_notm}} Public and {{site.data.keyword.Bluemix_notm}} Dedicated might contain a different set of tool integrations on {{site.data.keyword.Bluemix_notm}} Dedicated.
 {: note}
 
-Some toolchain templates include tool integrations that are part of the {{site.data.keyword.contdelivery_short}} service. If an instance of that service isn't already in your resource group or organization, when you click **Create** to create the toolchain, the service is automatically added with the selected free Lite plan. For more information and terms, see the [{{site.data.keyword.Bluemix_notm}} catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/services/continuous-delivery/){:new_window}.
+Some toolchain templates include tool integrations that are part of the {{site.data.keyword.contdelivery_short}} service. If an instance of that service isn't already in your resource group or organization, when you click **Create** to create the toolchain, the service is automatically added with the selected free Lite plan. For more information and terms, see the [{{site.data.keyword.Bluemix_notm}} catalog](https://cloud.ibm.com/catalog/services/continuous-delivery/){: external}.
 
-The "Develop and test microservices on Cloud Foundry" toolchain deploys an app with catalog and orders APIs that are backed by a Cloudant store. As part of deploying the app, a no-cost Cloudant service instance is created. For more information and terms, see the [{{site.data.keyword.Bluemix_notm}} catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/services/cloudant-nosql-db/){:new_window}.
+The "Develop and test microservices on Cloud Foundry" toolchain deploys an app with catalog and orders APIs that are backed by a Cloudant store. As part of deploying the app, a no-cost Cloudant service instance is created. For more information and terms, see the [{{site.data.keyword.Bluemix_notm}} catalog](https://cloud.ibm.com/catalog/services/cloudant-nosql-db/){: external}.
 
 The predefined DevOps toolchain templates are recommended examples that solve real world scenarios and each contains a sample app.  You can use your own app by specifying your git repo when you create the toolchain from the template.
 
@@ -199,7 +200,7 @@ The predefined DevOps toolchain templates are recommended examples that solve re
 </tr>
 
   <tr>
-  <td><a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" targe="_blank">
+  <td><a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" target="_blank">
 "Garage Method tutorial with Cloud Foundry" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
 
   Available in US South, US East, Germany, Tokyo, and United Kingdom
