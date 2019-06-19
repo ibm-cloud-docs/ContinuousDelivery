@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-12"
+lastupdated: "2019-06-19"
 
 keywords: troubleshoot, IBM Cloud Continuous Delivery
 
@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -100,7 +101,7 @@ Instead of creating a {{site.data.keyword.gitrepos}} tool integration, create a 
 
 1. If you want to create a public repo on the server, clear the **Make this repository private** check box.
 1. If you want to use GitLab's Issues for issue tracking, select the **Enable GitLab Issues** check box.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:new_window}.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}.
 1. Click **Create Integration**.
 
 For more information about configuring a GitLab tool integration, see [Configuring GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab).
@@ -127,7 +128,7 @@ After you have a personal access token, you can create a URL to access the repo 
 
 `https://user:XXXXXXX@git.ng.bluemix.net/group/node-hello-world`
 
-Where `user` is your GitLab user name, `XXXXXXX` is the access token, [`group` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/user/group/index.md){:new_window} is the group where the repo is stored, and `node-hello-world` is the repo name.
+Where `user` is your GitLab user name, `XXXXXXX` is the access token, [`group`](https://git.ng.bluemix.net/help/user/group/index.md){: external} is the group where the repo is stored, and `node-hello-world` is the repo name.
 
 If your GitLab repo isn't located within a GitLab group, the value of `group` is the same as your user name.
 {: tip}
@@ -262,7 +263,7 @@ If you are running kubectl v1.14.2 from a 1.0 pipeline base image, the sudo opti
    mkdir ~/.bin && export PATH=~/.bin:$PATH && mv ./kubectl ~/.bin/kubectl 
 ```
 
-For more information about accessing the exact version of kubectl that you require, see [Install and set up kubectl ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux){:new_window}.
+For more information about accessing the exact version of kubectl that you require, see [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux){: external}.
 {: tip}
 
 
