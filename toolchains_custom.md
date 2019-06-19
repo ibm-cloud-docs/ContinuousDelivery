@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-19"
 
 keywords: toolchain template, Configuration properties, readme file
 
@@ -11,6 +11,7 @@ subcollection: ContinuousDelivery
 ---
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -26,7 +27,7 @@ subcollection: ContinuousDelivery
 Improve your DevOps workflow by creating a custom toolchain template. You can get started quickly with an existing toolchain template, or create a toolchain template that includes only the tool integrations that you need. You can add or remove integrations from your toolchain at any time.
 {:shortdesc}
 
-You can [create a toolchain](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started) in several ways. After you create a custom toolchain template, you can share it by [creating a deploy to {{site.data.keyword.Bluemix_notm}} button](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deploy-button). For more information about the toolchain template SDK, see [Open Toolchain SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/open-toolchain/sdk/wiki/){:new_window}. For a step-by-step tutorial, see the [Garage Method site ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){:new_window}.
+You can [create a toolchain](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started) in several ways. After you create a custom toolchain template, you can share it by [creating a deploy to {{site.data.keyword.Bluemix_notm}} button](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deploy-button). For more information about the toolchain template SDK, see [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/){: external}. For a step-by-step tutorial, see the [Garage Method site](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain/){: external}.
 
 
 ## Getting started
@@ -34,7 +35,7 @@ You can [create a toolchain](/docs/services/ContinuousDelivery?topic=ContinuousD
 
 To create a custom toolchain template, begin by cloning the Simple Cloud Foundry toolchain template. Cloning an existing template gives you a starting point for your customized toolchain.
 
-1. Using the Git client of your choice, enter the following command to clone the [Simple Toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/open-toolchain/simple-toolchain){: new_window} template in GitHub.
+1. Using the Git client of your choice, enter the following command to clone the [Simple Toolchain](https://github.com/open-toolchain/simple-toolchain){: external} template in GitHub.
 
  ```
  git clone https://github.com/open-toolchain/simple-toolchain.git
@@ -43,7 +44,7 @@ To create a custom toolchain template, begin by cloning the Simple Cloud Foundry
 
  This template deploys a basic Hello World application from a single GitHub repository and includes a simple toolchain that is preconfigured for continuous delivery, source control, issue tracking, and online editing.
 
-2. If you want to start with a more complex toolchain template, clone the [Cloud-native Toolchain for Microservices template ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/open-toolchain/toolchain-demo){: new_window}.
+2. If you want to start with a more complex toolchain template, clone the [Cloud-native Toolchain for Microservices template](https://github.com/open-toolchain/toolchain-demo){: external}.
 
  ```
  git clone https://github.com/open-toolchain/toolchain-demo.git
@@ -91,7 +92,7 @@ When you work with YAML files, follow these guidelines:
 * All keys and properties are case-sensitive.
 
 Pay careful attention to the YAML file's formatting to reduce your chance of encountering errors.
-To check for errors, use a simple validator such as [this parser ![External link icon](https://cloud.ibm.com/devops/toolchains)](http://wiki.ess3.net/yaml/){: new_window}.
+To check for errors, use a simple validator such as [this parser](http://wiki.ess3.net/yaml/){: external}.
 {: important}
 
 
@@ -100,7 +101,7 @@ Each service subsection contains the following information:
 
 * name - A user-generated string that is used to identify this service in the context of the current file. You can use this name to mark a service as required.
 
-* service_id - A unique string that identifies the service. This string comes directly from the [service catalog ![External link icon](https://cloud.ibm.com/devops/toolchains)](https://github.com/open-toolchain/sdk/wiki/services.md){: new_window}.
+* service_id - A unique string that identifies the service. The service_id string comes directly from the [service catalog](https://github.com/open-toolchain/sdk/wiki/services.md){: external}.
 
 * parameters - Zero or more configuration parameters for the service. These parameters vary between services. Users must consult the catalog to determine which parameters are required by a particular service.
 
@@ -126,7 +127,7 @@ messages:
 ```
 
   The English strings are in `messages.yml` and other languages use the languages code, such as `messages_de.yml`. You can find the list of language codes in
-  [Tags for Identifying Languages ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops/toolchains)](https://tools.ietf.org/html/rfc5646){: new_window}.
+  [Tags for Identifying Languages](https://tools.ietf.org/html/rfc5646){: external}.
 
    To reference the externalize string, use `$ref` to retrieve the string.  For example,
 
@@ -143,7 +144,7 @@ messages:
     name: my_template
 ```
 
-For more information about UI strings, see the [Messages section of the Open Toolchain SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/devops/toolchains)](https://github.com/open-toolchain/sdk/wiki/Template-File-Format#messages-section){: new_window}.
+For more information about UI strings, see the [Messages section of the Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki/Template-File-Format#messages-section){: external}.
 
 
 ## Configuring the toolchain file
@@ -543,7 +544,7 @@ The following snippet is an example of a `deploy.json` file:
 
  ![Files needed to define a toolchain](images/files_for_toolchain_with_additional_tools.png)
 
-To see the list of available tool integrations, see [Services available in a toolchain template ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/open-toolchain/sdk/wiki/services.md){: new_window}. The following examples show how to format additions to a toolchain YAML file.
+To see the list of available tool integrations, see [Services available in a toolchain template](https://github.com/open-toolchain/sdk/wiki/services.md){: external}. The following examples show how to format additions to a toolchain YAML file.
 
 
 ### **Slack**
