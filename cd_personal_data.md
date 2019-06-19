@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -86,7 +87,7 @@ Before you delete data from an account, determine whether it is a personal accou
 
 If you own a personal account, you can make changes and delete your data. If you share your account with another user, you own the data, but you might want to contact them about the shared work. 
 
-If you can't log in to your IBM Cloud account, [contact IBM Support ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/support){:new_window}
+If you can't log in to your IBM Cloud account, [contact IBM Support](https://www.ibm.com/cloud/support){: external}.
  
 ###Corporate individual account
 
@@ -157,10 +158,10 @@ After the project is archived, you can import it into another GitLab instance.
 
 You can delete your {{site.data.keyword.gitrepos}} account and everything that is owned by that account.
 
-1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, on the [Account page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, in the Delete account section, click **Delete account**.
+1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, on the [Account page](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){: external}, in the Delete account section, click **Delete account**.
 1. All Git projects, including repositories and issues are deleted. You are also removed from any {{site.data.keyword.gitrepos}} groups that you belong to.
 
-After your account is deleted, some content will remain. This content is assigned to a system-wide Ghost User. For more information about deleting a {{site.data.keyword.gitrepos}} account, see [Deleting a user account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}.
+After your account is deleted, some content will remain. This content is assigned to a system-wide Ghost User. For more information about deleting a {{site.data.keyword.gitrepos}} account, see [Deleting a user account](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){: external}.
 {: tip}
 
 {{site.data.keyword.gitrepos}} uses a single sign-on mechanism that automatically creates a corresponding Git account for your IBM Cloud account the first time that you access the tool integration. After you delete your account, do not access {{site.data.keyword.gitrepos}}. If you access {{site.data.keyword.gitrepos}} again, a new account is automatically created that you must delete.
