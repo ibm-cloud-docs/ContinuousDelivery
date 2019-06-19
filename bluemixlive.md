@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud Live Synch, Use IBM Cloud Live Sync
 
@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -48,7 +49,7 @@ In the {{site.data.keyword.webide}}, in the run bar, click **Live Edit**.
 
 Use Live Edit to quickly preview changes to Node.js applications that run on {{site.data.keyword.Bluemix_notm}}. When you update your code with Live Edit turned on, you can refresh your web application's browser window to see those changes reflected seconds after you make them.
 
-For a tutorial about using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see [Use {{site.data.keyword.Bluemix_notm}} Live Sync to develop, debug, and deploy your app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-live-sync-to-develop-debug-and-deploy-your-app){:new_window}.
+For a tutorial about using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see [Use {{site.data.keyword.Bluemix_notm}} Live Sync to develop, debug, and deploy your app](https://www.ibm.com/cloud/garage/tutorials/use-live-sync-to-develop-debug-and-deploy-your-app){: external}.
 
 When you change the files in your {{site.data.keyword.webide}}, they are automatically redeployed to your application instance on {{site.data.keyword.Bluemix_notm}}. If you need to restart the Node application, click the **Restart** button in the run bar.
 
