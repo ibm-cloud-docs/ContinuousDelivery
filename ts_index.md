@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud Continuous Delivery, GitHub tool integration, error message
 
@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:faq: data-hd-content-type='faq'}
 {:codeblock: .codeblock}
@@ -157,7 +158,7 @@ Check the {{site.data.keyword.Bluemix_notm}} Status page to determine whether kn
 You can find the Status page by choosing either of the following options:
 
   * Log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click **Support** and select **Status**. Check the listed resources for the ![some issues](../../get-support/images/some_issues.svg) icon. This icon might indicate an outage.
-  * Access it directly at [{{site.data.keyword.Bluemix_notm}} - System Status ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/status){: new_window}.
+  * Access it directly at [{{site.data.keyword.Bluemix_notm}} - System Status](https://cloud.ibm.com/status){: external}.
 
 For more information about the {{site.data.keyword.Bluemix_notm}} Status page, see [Viewing {{site.data.keyword.Bluemix_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status).
 
