@@ -3,7 +3,7 @@
 copyright:
   years: 2017, 2019
 
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-18"
 
 keywords: Continuous delivery practices, {{site.data.keyword.contdelivery_full}}, IBM Cloud Garage Method
 
@@ -18,6 +18,7 @@ subcollection: ContinuousDelivery
 -->
 
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
@@ -27,7 +28,7 @@ subcollection: ContinuousDelivery
 
 
 
-With {{site.data.keyword.contdelivery_full}}, you can build, test, and deliver applications by using DevOps practices and industry-leading tools. Continuous Delivery supports a wide variety of practices; but which practices should you use? There is no one-size-fits-all answer. The practices you employ can vary from one software delivery project to the next.  The [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage){:new_window} is the IBM approach to rapidly deliver engaging applications. It combines continuous delivery with IBM Design Thinking, lean, DevOps, and agile practices. Those practices are focused on the cloud, but can benefit any software development effort.
+With {{site.data.keyword.contdelivery_full}}, you can build, test, and deliver applications by using DevOps practices and industry-leading tools. Continuous Delivery supports a wide variety of practices; but which practices should you use? There is no one-size-fits-all answer. The practices you employ can vary from one software delivery project to the next.  The [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external} is the IBM approach to rapidly deliver engaging applications. It combines continuous delivery with IBM Design Thinking, lean, DevOps, and agile practices. Those practices are focused on the cloud, but can benefit any software development effort.
 
 
 ## Adopting continuous delivery practices
@@ -40,26 +41,26 @@ To learn how to adopt a continuous delivery approach in your organization, use t
 
 The Cloud Garage Method site contains articles that describe continuous delivery at a high level.
 
-[Continuous Delivery ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/practice_continuous_delivery/] ){:new_window} is a practice by which you build and deploy your software so that it can be released into production at any time. One of the hallmarks of computer science is the shortening of various cycle times in the development and operations process.
+[Continuous Delivery](https://www.ibm.com/cloud/garage/content/deliver/practice_continuous_delivery/){:external} is a practice by which you build and deploy your software so that it can be released into production at any time. One of the hallmarks of computer science is the shortening of various cycle times in the development and operations process.
 
-With [Delivery Pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:new_window}, which is included in {{site.data.keyword.Bluemix_notm}} Continuous Delivery, you can achieve continuous delivery in a consistent and reliable way by dividing the software delivery process into stages. The goal is for code to progress through each stage automatically with minimal human intervention. With the [practice of using Delivery Pipelines ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/deliver/practice_delivery_pipeline/){:new_window}, you can automate the continuous deployment of your project.
+With [Delivery Pipeline](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:external}, which is included in {{site.data.keyword.Bluemix_notm}} Continuous Delivery, you can achieve continuous delivery in a consistent and reliable way by dividing the software delivery process into stages. The goal is for code to progress through each stage automatically with minimal human intervention. With the [practice of using Delivery Pipelines](https://www.ibm.com/cloud/garage/content/deliver/practice_delivery_pipeline/){:external}, you can automate the continuous deployment of your project.
 
 ## Continuous delivery tutorials
 {: #gm_cd_tutorials}
 
-[Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}. Learn how to create an open toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
+[Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}. Learn how to create an open toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
 
-[Add a toolchain to an app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}. Learn how to add an open toolchain to an app and use the toolchain to continuously deliver the app.
+[Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}. Learn how to add an open toolchain to an app and use the toolchain to continuously deliver the app.
 
-[Use the "Develop and test microservices on Cloud Foundry" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}. Learn how to create a toolchain from a template with three microservices and use the toolchain to continuously deliver an online store.
+[Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}. Learn how to create a toolchain from a template with three microservices and use the toolchain to continuously deliver an online store.
 
-For more tutorials, see the [Learning Lab ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/category/courses){:new_window}.
+For more tutorials, see the [Learning Lab](https://www.ibm.com/cloud/garage/category/courses){:external}.
 
 ## Continuous delivery courses
 {: #gm_cd_courses}
 
-[Get started with agile development and continuous delivery ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/course/get_started_agile_cd){:new_window}. Learn how to create a toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
+[Get started with agile development and continuous delivery](https://www.ibm.com/cloud/garage/content/course/get_started_agile_cd){:external}. Learn how to create a toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
 
-[Become an IBM Cloud Garage Method advocate ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/content/course/gm_advocate){:new_window}. Take this advanced course to get experience with the practices and tools from the Cloud Garage Method.
+[Become an IBM Cloud Garage Method advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate){:external}. Take this advanced course to get experience with the practices and tools from the Cloud Garage Method.
 
-To see all of the Cloud Garage Method learning materials, see the [Cloud Garage Method Learning Lab ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/category/courses){:new_window}.
+To see all of the Cloud Garage Method learning materials, see the [Cloud Garage Method Learning Lab](https://www.ibm.com/cloud/garage/category/courses){:external}.
