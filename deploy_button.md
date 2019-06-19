@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud button, yml file, build file
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -47,11 +48,11 @@ When someone clicks your button, these actions occur:
 
 See an app button example for a public {{site.data.keyword.gitrepos}} repo:
 
-[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){: external}
 
 See an app button example for a public GitHub repo:
 
-[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){: external}
 
 ## Creating a button {: #create-button}
 
@@ -103,10 +104,10 @@ If the app must be built before it can be deployed, you must include a build fil
 
 Supported builders include:
 
-* [Ant ![External link icon](../../icons/launch-glyph.svg "External link icon"):](http://ant.apache.org/manual/using.html){:new_window} `build.xml`, which builds output to the `./output/` folder
-* [Gradle ![External link icon](../../icons/launch-glyph.svg "External link icon"):](https://docs.gradle.org/current/userguide/getting_started.html){:new_window} `/build.gradle`, which builds output to the `.` folder
-* [Grunt ![External link icon](../../icons/launch-glyph.svg "External link icon"):](http://gruntjs.com/getting-started#the-gruntfile){:new_window} `/Gruntfile.js`, which builds output to the `.` folder
-* [Maven ![External link icon](../../icons/launch-glyph.svg "External link icon"):](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:new_window} `/pom.xml`, which builds output to the `./target/` folder
+* [Ant:](http://ant.apache.org/manual/using.html){: external} `build.xml`, which builds output to the `./output/` folder
+* [Gradle:](https://docs.gradle.org/current/userguide/getting_started.html){:external} `/build.gradle`, which builds output to the `.` folder
+* [Grunt:](http://gruntjs.com/getting-started#the-gruntfile){: external} `/Gruntfile.js`, which builds output to the `.` folder
+* [Maven:](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){: external} `/pom.xml`, which builds output to the `./target/` folder
 
 ### Pipeline file requirements
 {: pipeline_file}
@@ -115,7 +116,7 @@ To configure the pipeline for the toolchain in a `.bluemix` directory, include a
 
 If you do not have `pipeline.yml` file in the `.bluemix` directory, the Deploy to {{site.data.keyword.Bluemix_notm}} button will create a default pipeline with two stages: a Build stage and a Deploy stage that deploys to Cloud Foundry.
 
-To create a pipeline file, consult the example file in the [custom toolchain pipeline instructions](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml). Just as when you define a pipeline in the web interface, you define a pipeline in text by creating stages and jobs, setting inputs and environment variables, and adding scripts. You can also see a number of more complex pipeline files in [this demonstration project  ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix){:new_window}.
+To create a pipeline file, consult the example file in the [custom toolchain pipeline instructions](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml). Just as when you define a pipeline in the web interface, you define a pipeline in text by creating stages and jobs, setting inputs and environment variables, and adding scripts. You can also see a number of more complex pipeline files in [this demonstration project](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix){: external}.
 
 ### Container Dockerfile requirements
 {: container_dockerfile}
@@ -124,11 +125,11 @@ To deploy an app in a container by using the {{site.data.keyword.containerlong_n
 
 The Dockerfile acts as a kind of build script for the app. If a Dockerfile is detected in the repo, the app is automatically built into an image before it is deployed in a container. If the app itself must be built before the app is built into an image, include a build script for the app and a Dockerfile.
 
-To learn more about creating Dockerfiles, see the [Docker documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.docker.com/reference/builder/){:new_window}. To follow step-by-step instructions using a toolchain template to deploy to Kubernetes, see [Tutorial: Use the "Develop a Kubernetes app" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window} or [Tutorial: Use the "Develop a Kubernetes app with Helm" toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window}.
+To learn more about creating Dockerfiles, see the [Docker documentation](https://docs.docker.com/reference/builder/){: external}. To follow step-by-step instructions using a toolchain template to deploy to Kubernetes, see [Tutorial: Use the "Develop a Kubernetes app" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){: external} or [Tutorial: Use the "Develop a Kubernetes app with Helm" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){: external}.
 
-To learn about porting your Cloud Foundry app to a Kubernetes cluster, see [Tutorial: Port a Cloud Foundry app to deploy to Kubernetes in a toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){:new_window}.  
+To learn about porting your Cloud Foundry app to a Kubernetes cluster, see [Tutorial: Port a Cloud Foundry app to deploy to Kubernetes in a toolchain](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){: external}.  
 
-To create a `pipeline.yml` manually that is specifically for containers, see the [examples in GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/Puquios/){:new_window}.
+To create a `pipeline.yml` manually that is specifically for containers, see the [examples in GitHub](https://github.com/Puquios/){: external}.
 
 ### Manifest file requirements (for apps deployed to Cloud Foundry)
 {: #manifest_files}
