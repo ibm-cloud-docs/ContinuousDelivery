@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-19"
+lastupdated: "2019-06-20"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository
 
@@ -49,7 +49,7 @@ Because this tool integration is built on GitLab Community Edition and hosted by
 ## Using {{site.data.keyword.gitrepos}} locally
 {: #git_locally}
 
-You can locally access the Git repos that are stored in {{site.data.keyword.gitrepos}}. For instructions to set up Git locally, see [Start using Git on the command line](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){: external}.
+You can locally access the Git repos that are stored in {{site.data.keyword.gitrepos}}. For instructions to set up Git locally, see [Start using Git on the command line](https://us-south.git.cloud.ibm.com/help/gitlab-basics/start-using-git){: external}.
 
 {{site.data.keyword.gitrepos}} supports HTTPS connections only that use TLS1.2. If you use Eclipse to connect, you might be required to specify this protocol for your Java&trade; version by adding `-Dhttps.protocols=TLSv1.2` to your eclipse.ini file and then restarting Eclipse.
 {: tip}
@@ -65,21 +65,21 @@ Your {{site.data.keyword.Bluemix_notm}} login and password are only used to auth
 To authenticate with your Git repo over HTTPS, you must create a personal access token.
 {: tip}
 
-1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, on the [Access Tokens page](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){: external}, type the name of the application that you want to create an access token for. For example, `Git CLI`.
+1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, on the [Access Tokens page](https://us-south.git.cloud.ibm.com/profile/personal_access_tokens){: external}, type the name of the application that you want to create an access token for. For example, `Git CLI`.
 1. Optional: Choose an expiry date for the access token.
 1. Select the **api** check box to create a personal access token that uses api as the scope.
 1. Click **Create Personal Access Token**. Make note of your access token in a secure location for future use.
-1. On the [Account page](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){: external}, in the Change username section, find your {{site.data.keyword.gitrepos}} username. Your username is also displayed as the first segment of the URL for any personal Git repos that you create.
+1. On the [Account page](https://us-south.git.cloud.ibm.com/profile/account){: external}, in the Change username section, find your {{site.data.keyword.gitrepos}} username. Your username is also displayed as the first segment of the URL for any personal Git repos that you create.
 1. Use your {{site.data.keyword.gitrepos}} username and personal access token to authenticate with your Git repo from an external Git client.
 
-To learn more, see [Personal access tokens](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){: external}.
+To learn more, see [Personal access tokens](https://us-south.git.cloud.ibm.com/help/api/README.html#personal-access-tokens){: external}.
 
 ### Creating an SSH key  
 {:create_ssh }
 
-To create an SSH key, see [How to create your SSH Keys](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){: external}. Accessing your repositories with SSH authentication might require more configuration for proxies and firewalls.
+To create an SSH key, see [How to create your SSH Keys](https://us-south.git.cloud.ibm.com/help/gitlab-basics/create-your-ssh-keys){: external}. Accessing your repositories with SSH authentication might require more configuration for proxies and firewalls.
 
-To learn more, see [SSH](https://git.ng.bluemix.net/help/ssh/README){: external}.
+To learn more, see [SSH](https://us-south.git.cloud.ibm.com/help/ssh/README){: external}.
 
 ## Physical file and repo size limits
 {: #git_limits}
