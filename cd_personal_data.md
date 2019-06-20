@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-19"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
 
@@ -54,7 +54,7 @@ The IBM Cloud login structure provides you with the option to work in different 
  * Corporate account
  * Corporate individual account
 
-###Personal accounts
+### Personal accounts
 
 Typically, each user has their own account that is their personal account. You can easily identify your personal account because it usually contains your name, for example, *John Smith's Account*. 
 
@@ -62,13 +62,13 @@ You have full rights over all objects that are created in your personal account.
 
 If you have permission to create an object in an account, you also have the right to modify and delete it, regardless of which account the object is stored in. When two users collaborate, they often share a personal account.
 
-###Corporate accounts
+### Corporate accounts
 
 A corporate account is set up by your company. Typically, you are added automatically to the account, rather than being invited. Corporate accounts provide users with a place to work, communicate, and share resources and charging; however, this is just a convention. A corporate account is really no different than a personal account. Objects that are created in a corporate account are associated with the account and users can be invited to the account.
 
 Teams of people who work for a corporation often collaborate by using a corporate account.
 
-###Corporate individual accounts
+### Corporate individual accounts
 
 When you work for a corporation, the work in your account might be legally owned by the corporation. Many users who work for a corporation have a corporate individual account. If you log in to your account by using credentials that contain your corporation's name and also have what appears to be a personal account, the work within your personal account might belong to the corporation.
 
@@ -83,13 +83,13 @@ Regardless of what type of IBM Cloud account is used, if you have rights to the 
 
 Before you delete data from an account, determine whether it is a personal account or a corporate individual account.
 
-###Personal account
+### Personal account
 
 If you own a personal account, you can make changes and delete your data. If you share your account with another user, you own the data, but you might want to contact them about the shared work. 
 
 If you can't log in to your IBM Cloud account, [contact IBM Support](https://www.ibm.com/cloud/support){: external}.
  
-###Corporate individual account
+### Corporate individual account
 
 If you own a corporate individual account, you must coordinate any changes with both your corporation and other members of your team. Delete your personal data regardless of whether it is stored in a corporate account or a corporate individual account. Make sure that you don't delete work that you shared with other users.
 
@@ -108,14 +108,14 @@ The {{site.data.keyword.webide}} provides a personal workspace in the cloud. You
 Before you delete your {{site.data.keyword.webide}} data, you might want to export your work. After you delete your workspaces, they are removed from {{site.data.keyword.contdelivery_short}} and all files are deleted.
 {: important}
 
-###Exporting a Web IDE workspace
+### Exporting a Web IDE workspace
 
 To export a {{site.data.keyword.webide}} workspace:
 
 1. Select **File > Export > Zip**.
 1. Repeat for each workspace that you want to export.
 
-###Deleting your Web IDE workspaces
+### Deleting your Web IDE workspaces
 
 To delete your {{site.data.keyword.webide}} workspaces, including all of your personal data:
 
@@ -139,11 +139,11 @@ Your account profiles and settings, personal projects, groups, and snippets are 
 Before you delete your Git account, delete your personal data from other projects. After you delete your Git account, it might be difficult or impossible to find all of the projects that you contributed to.
 {: tip}
 
-###Personal and shared projects
+### Personal and shared projects
 
 You can invite other users to collaborate in projects. Git projects that you create inside your account are called personal projects. You can also create Git groups in which projects can be owned by multiple Git owners. You can create new projects for the group or transfer ownership of personal projects to the group. A Git group is often used to represent an IBM Cloud corporate account to indicate ownership of projects by the corporation.
 
-###Exporting a Git Repos and Issue Tracking project
+### Exporting a Git Repos and Issue Tracking project
 
 Before you delete a {{site.data.keyword.gitrepos}} project, you can export the project to archive it. 
 
@@ -154,14 +154,14 @@ Before you delete a {{site.data.keyword.gitrepos}} project, you can export the p
 
 After the project is archived, you can import it into another GitLab instance. 
 
-###Deleting your Git Repos and Issue Tracking account
+### Deleting your Git Repos and Issue Tracking account
 
 You can delete your {{site.data.keyword.gitrepos}} account and everything that is owned by that account.
 
-1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, on the [Account page](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){: external}, in the Delete account section, click **Delete account**.
+1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, on the [Account page](https://us-south.git.cloud.ibm.com/profile/account){: external}, in the Delete account section, click **Delete account**.
 1. All Git projects, including repositories and issues are deleted. You are also removed from any {{site.data.keyword.gitrepos}} groups that you belong to.
 
-After your account is deleted, some content will remain. This content is assigned to a system-wide Ghost User. For more information about deleting a {{site.data.keyword.gitrepos}} account, see [Deleting a user account](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){: external}.
+After your account is deleted, some content will remain. This content is assigned to a system-wide Ghost User. For more information about deleting a {{site.data.keyword.gitrepos}} account, see [Deleting a user account](https://us-south.git.cloud.ibm.com/profile/account/delete_account#associated-records){: external}.
 {: tip}
 
 {{site.data.keyword.gitrepos}} uses a single sign-on mechanism that automatically creates a corresponding Git account for your IBM Cloud account the first time that you access the tool integration. After you delete your account, do not access {{site.data.keyword.gitrepos}}. If you access {{site.data.keyword.gitrepos}} again, a new account is automatically created that you must delete.
@@ -181,7 +181,7 @@ Pipeline stages might include personal data such as credentials in the form of e
 
   ![Stages menu](images/pipeline_stages.png)
 
-###Modifying a pipeline stage
+### Modifying a pipeline stage
 
 To modify a pipeline stage:
 
@@ -194,7 +194,7 @@ To modify a pipeline stage:
   
 1. Delete a job from the pipeline stage. On the **JOBS** tab, select the job that you want to delete and click **Remove**.
  
-###Exporting a pipeline stage
+### Exporting a pipeline stage
 
 To export the definition for an entire pipeline, append `/yaml` to the pipeline URL:
 
@@ -212,7 +212,7 @@ To export artifacts and logs for a pipeline stage:
 1. Click **DOWNLOAD** > **Artifacts** to export the artifacts for the selected build.
 1. Click **DOWNLOAD** > **Logs** to export the logs for the selected build.  
 
-###Deleting a pipeline stage
+### Deleting a pipeline stage
 
 To delete a pipeline stage:
 
@@ -230,7 +230,7 @@ When a tool integration is created, {{site.data.keyword.contdelivery_short}} can
 
 Coordinate with other members of your team before you delete shared tool integrations or toolchains.
 
-###Modifying and deleting tool integrations
+### Modifying and deleting tool integrations
 
 When you create a tool integration, you are required to provide user credentials and other account information that pertains to the integration. If you used your own personal credentials and account information, replace this information with different values, or delete the tool integration.
 
@@ -247,7 +247,7 @@ To delete a tool integration:
 1. To delete a tool integration from your toolchain, click **Delete**.
 1. Confirm by clicking **Delete**.
 
-###Deleting toolchains
+### Deleting toolchains
 
 When you delete a toolchain, the deletion cannot be undone.
 
@@ -259,7 +259,7 @@ When you delete a toolchain, the deletion cannot be undone.
 When you delete a toolchain, the associated {{site.data.keyword.gitrepos}} repos are not deleted. Users who have access to those repos might have copies of the data if they performed a `git clone` or created a {{site.data.keyword.webide}} workspace. To make sure that all data is deleted, you must request that those users delete their copies of the data.
 {: tip}
 
-###Deleting all toolchains
+### Deleting all toolchains
 
 You cannot delete all of the toolchains within a resource group or organization at the same time. You must delete each toolchain, one at a time.
 
