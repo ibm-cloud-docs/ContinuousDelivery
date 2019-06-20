@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-19"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud button, yml file, build file
 
@@ -48,7 +48,7 @@ When someone clicks your button, these actions occur:
 
 See an app button example for a public {{site.data.keyword.gitrepos}} repo:
 
-[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){: external}
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://us-south.git.cloud.ibm.com/idsorg/sample-java-cloudant){: external}
 
 See an app button example for a public GitHub repo:
 
