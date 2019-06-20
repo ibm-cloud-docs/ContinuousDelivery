@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-20"
 
 keywords: users of a service instance, a-service, Git Repos
 
@@ -100,9 +100,9 @@ At the discretion of IBM, users who violate the acceptable usage behaviors of th
 Three types of {{site.data.keyword.gitrepos}} projects are available:
 
   1. Public projects are visible to all site visitors. The content in a public project is visible to everyone who accesses {{site.data.keyword.contdelivery_short}}, even if they are not invited to the project.
-  2. Private projects are visible to only select users. For more information about granting users access to a project, see [Project users](https://git.ng.bluemix.net/help/workflow/add-user/add-user.md){:external}.
+  2. Private projects are visible to only select users. For more information about granting users access to a project, see [Project users](https://us-south.git.cloud.ibm.com/help/workflow/add-user/add-user.md){:external}.
   3. Internal projects are visible to all logged-in users. Any user who has a {{site.data.keyword.Bluemix_notm}} account can view these projects.
 
-You can modify the project type in the project's settings. For more information, see [How to change project visibility](https://git.ng.bluemix.net/help/public_access/public_access#how-to-change-project-visibility){:external}.
+You can modify the project type in the project's settings. For more information, see [How to change project visibility](https://us-south.git.cloud.ibm.com/help/public_access/public_access#how-to-change-project-visibility){:external}.
 
 When you use {{site.data.keyword.gitrepos}}, the content that you contribute to a project is licensed under any terms that are specified in that project. When you create a project, include a file that describes the license that applies to the content. When you contribute to a project, your name and the email address that is associated with your commits might be visible to the public. The email address that is associated with your {{site.data.keyword.Bluemix_notm}} account is used when you create commits through the {{site.data.keyword.gitrepos}} web interface.
