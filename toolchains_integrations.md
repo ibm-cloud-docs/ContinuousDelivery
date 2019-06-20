@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-20"
 
 keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
 
@@ -460,7 +460,7 @@ To learn more about the Eclipse Orion {{site.data.keyword.webide}}, see [Editing
 ## Configuring Git Repos and Issue Tracking
 {: #grit}
 
-The {{site.data.keyword.gitrepos}} tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repos. You can have both local and remote copies of your repos. To learn more, see [{{site.data.keyword.gitrepos}}](https://git.ng.bluemix.net/help){:external}.
+The {{site.data.keyword.gitrepos}} tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repos. You can have both local and remote copies of your repos. To learn more, see [{{site.data.keyword.gitrepos}}](https://us-south.git.cloud.ibm.com/help){:external}.
 
 If you are configuring {{site.data.keyword.gitrepos}} as you are creating the toolchain, follow these steps:    
 
@@ -1108,4 +1108,4 @@ Configure SonarQube to continuously analyze and measure the quality of your sour
 
 ### Learn more about SonarQube
 
-To learn more about SonarQube, see the [SonarQube article](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){:external} on the IBM Cloud Garage Method.
+To learn more about SonarQube, see the [SonarQube article](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){:external} on the IBM Cloud Garage Method. 
