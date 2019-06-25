@@ -26,7 +26,7 @@ Continuous Delivery
         toolchains_using.md
         toolchains_integrations.md
         deploy_button.md
-        toolchains_custom.md
+        [Creating custom toolchain templates](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates)
 
     {: .topicgroup}
     Delivery Pipeline
