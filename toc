@@ -36,6 +36,7 @@ Continuous Delivery
         pipeline_deploy_var.md
         pipeline_versioned_base_images.md
         pipeline_custom_docker_images.md
+        private_workers.md
 
     {: .topicgroup}
     Eclipse Orion Web IDE
@@ -53,7 +54,9 @@ Continuous Delivery
         cd_iam_security.md
         toolchains_iam_security.md
         cd_data_security.md
-    {: .navgroup-end} 
+        
+    ha-dr.md
+    {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki)
@@ -65,4 +68,3 @@ Continuous Delivery
     ts_index.md
     troubleshoot_cd.md
     {: .navgroup-end}
-    
