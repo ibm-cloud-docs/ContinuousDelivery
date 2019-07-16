@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-06-19"
+lastupdated: "2019-07-16"
 
 keywords: run jobs, sequences of stages, job types
 
@@ -189,7 +189,7 @@ To define stage properties, open the Stage configuration page and click the **EN
 
 ![Stage properties page](images/StageProperties.png)
 
-You can also pass environment properties between jobs in the same stage by exporting the properties. For example, you can include the following command to use the `$API_KEY` property in another job within the stage: `export API_KEY=<insert API key here>`
+You can define a stage property by using an initial value (or a blank value), and then overriding that value in a job by exporting an environment variable. By overriding the initial value, subsequent jobs in the stage can see the new value. For example, you can include the following command to set the `$API_KEY` property and make it available to another job within the stage: `export API_KEY=<insert API key here>`
 {:tip}
 
 ### Computed properties
