@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-14"
 
 keywords: ADD STAGE, Run Stage icon, JOBS tab
 
@@ -146,7 +146,7 @@ execução, é possível cancelá-lo clicando no número da execução e depois 
 1. Use a `PIPELINE_LOG_URL` em uma tarefa posterior, dentro do mesmo estágio, para fazer download do arquivo de log para exportá-lo para um sistema diferente. Use um token de acesso do IBM Cloud para acessar o arquivo de log.
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
@@ -187,7 +187,7 @@ E possível fazer download dos artefatos para uma tarefa de Compilação de pipe
 1. Use a `PIPELINE_ARTIFACT_URL` em uma tarefa posterior, dentro do mesmo estágio, para fazer download dos artefatos para exportá-los para um sistema diferente. Use um token de acesso do IBM Cloud para acessar os artefatos.
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )

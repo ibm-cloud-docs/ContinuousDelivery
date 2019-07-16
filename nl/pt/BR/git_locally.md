@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-19"
 
 keywords: Git source control, personal access token, Git repos
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -36,8 +37,9 @@ subcollection: ContinuousDelivery
 |:-----------|:-------------|:------------|:-------------|
 | Git Repos and Issue Tracking  | [Token de acesso pessoal](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat) | O nome do usuário (não seu IBMid) do Git Repos and Issue tracking e o token de acesso pessoal | [Configurar a chave
 SSH](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key) |
-| GitHub público (github.com) | O token de acesso pessoal não é necessário, mas é possível configurar um e usá-lo | O nome do usuário e senha do GitHub ou o nome do usuário do GitHub e token de acesso pessoal ou apenas o token de acesso pessoal como o nome do usuário | [Configurar uma chave SSH do GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
+| GitHub público (github.com) | O token de acesso pessoal não é necessário, mas é possível configurar um e usá-lo | O nome do usuário e senha do GitHub ou o nome do usuário do GitHub e token de acesso pessoal ou apenas o token de acesso pessoal como o nome do usuário | [Configurar uma chave SSH do GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: external} |
 | GitHub corporativo | [Token de acesso pessoal](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) | O nome do usuário (não seu IBMid) do GitHub Enterprise e o token de acesso pessoal | [Configurar a chave SSH do GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) |
+{: caption="Tabela 1. Instalação de autenticação do Git" caption-side="top"}
 
 Se você preferir usar SSH, será possível reutilizar uma única chave ao longo de todos os servidores do Git. Crie ou localize sua chave e configure-a em cada servidor, conforme descrito nos links anteriores. Se você criar sua chave com uma passphrase, essa passphrase será solicitada ao usar a chave.
 {: tip}
@@ -46,7 +48,7 @@ Se você preferir usar SSH, será possível reutilizar uma única chave ao longo
 
     a. Verifique se o Git está instalado. Em uma linha de comandos, digite `git version`. Se o Git estiver instalado, o número da versão será mostrado e será possível iniciar.
 
-    b. Se o Git não estiver instalado, [acesse o website Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://git-scm.com/downloads){: new_window}.
+    b. Se o Git não estiver instalado, [acesse o website do Git](http://git-scm.com/downloads){: external}.
 
     c. Faça download e instale a versão para seu sistema operacional. É possível aceitar os valores de instalação padrão.
 
@@ -73,12 +75,12 @@ Crie uma cópia local dos arquivos de projeto clonando o repositório Git para q
 6. Se for solicitada autenticação, insira as informações apropriadas, conforme definido na tabela anterior.
 
 
-Depois que o download é concluído, você tem uma versão local dos arquivos em seu repositório. Para obter mais informações sobre como usar o Git, veja a [documentação do Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")]](http://git-scm.com/doc){: new_window}.
+Depois que o download é concluído, você tem uma versão local dos arquivos em seu repositório. Para obter mais informações sobre o uso do Git, consulte a [documentação do Git](http://git-scm.com/doc){: external}.
 
 
 ## Acessando seu repositório usando o Eclipse e o plug-in EGit
 {: #git_egit}
 
-Se você usa o Eclipse e tem um projeto que usa o Git para controle de fonte, é possível usar o plug-in EGit para gerenciar seu repositório do Eclipse. Para obter mais informações sobre como instalar e configurar o EGit, consulte o [Tutorial do EGit ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
+Se você usa o Eclipse e tem um projeto que usa o Git para controle de fonte, é possível usar o plug-in EGit para gerenciar seu repositório do Eclipse. Para obter mais informações sobre como instalar e configurar o EGit, consulte o [tutorial do EGit](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: external}.
 
 Se você usar o {{site.data.keyword.gitrepos}} e tiver algum problema, consulte a documentação do [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
 
 keywords: user management function, tool integrations, Cloud Foundry org
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -49,7 +50,7 @@ Se você tiver adiado a configuração de uma integração de ferramenta quando 
  Algumas das integrações de ferramenta são pré-configuradas e não requerem nenhum parâmetro de configuração. É possível atualizar as definições de configuração para apenas as integrações de ferramenta configuradas.
  {: tip}
 
- Quando tiver finalizado a atualização das configurações, clique em **Salvar integração**. Para obter mais informações sobre como configurar integrações de ferramentas específicas, veja [Configurando integrações de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
+ Quando tiver finalizado a atualização das configurações, clique em **Salvar integração**. Para obter mais informações sobre como configurar integrações de ferramentas específicas, veja [Configurando integrações de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 
 ## Incluindo uma integração de ferramenta
 {: #adding_a_tool_integration}
@@ -75,7 +76,7 @@ Se você excluir uma integração de ferramenta a partir de sua cadeia de ferram
 ## Gerenciando o acesso às cadeias de ferramentas em grupos de recursos
 {: #managing_access_resource_groups}
 
-É possível usar o serviço Identity and Access Management (IAM) para gerenciar o acesso do usuário às cadeias de ferramentas. Para obter mais informações sobre como gerenciar o controle de acesso com o IAM, consulte [Gerenciando o acesso de usuário às cadeias de ferramentas com o Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}. 
+É possível usar o serviço Identity and Access Management (IAM) para gerenciar o acesso do usuário às cadeias de ferramentas. Para obter mais informações sobre como gerenciar o controle de acesso com o IAM, consulte [Gerenciando o acesso de usuário às cadeias de ferramentas com o Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). 
 
 Apenas usuários que fazem parte da lista de usuários autorizados para a instância selecionada do {{site.data.keyword.contdelivery_short}} podem usar o Delivery Pipeline, o Eclipse Orion {{site.data.keyword.webide}} e os recursos do {{site.data.keyword.gitrepos}} de cadeias de ferramentas do {{site.data.keyword.contdelivery_short}}. É possível gerenciar a autorização de usuário autorizado por meio da guia Gerenciar da instância selecionada do {{site.data.keyword.contdelivery_short}}, dentro do grupo de recursos especificado.
 
@@ -94,7 +95,7 @@ A autorização de usuário autorizado se aplicará a todas as cadeias de ferram
 Deve-se incluir usuários na organização da cadeia de ferramentas na região em que a cadeia de ferramentas está hospedada. Se a cadeia de ferramentas estiver configurada para implementar apps em uma região diferente, ainda assim ela implementará apps nessa região.
 {: important}
 
-Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, ao incluir usuários em sua organização e espaços do {{site.data.keyword.Bluemix_notm}}, os usuários poderão efetuar login no {{site.data.keyword.ghe_short}} usando seus IDs e senhas do {{site.data.keyword.Bluemix_notm}}. Quando os usuários efetuarem login, as contas serão criadas para eles. Quando você incluir usuários em sua organização e espaços do {{site.data.keyword.Bluemix_notm}}, eles não serão incluídos automaticamente no repositório {{site.data.keyword.ghe_short}}. Alguém com privilégio do administrador para o repositório deverá inclui-los. Para obter mais informações, consulte [Usando o Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}. Se você estiver usando sua própria versão gerenciada do {{site.data.keyword.ghe_short}}, siga seus procedimentos internos.
+Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, ao incluir usuários em sua organização e espaços do {{site.data.keyword.Bluemix_notm}}, os usuários poderão efetuar login no {{site.data.keyword.ghe_short}} usando seus IDs e senhas do {{site.data.keyword.Bluemix_notm}}. Quando os usuários efetuarem login, as contas serão criadas para eles. Quando você incluir usuários em sua organização e espaços do {{site.data.keyword.Bluemix_notm}}, eles não serão incluídos automaticamente no repositório {{site.data.keyword.ghe_short}}. Alguém com privilégio do administrador para o repositório deverá inclui-los. Para obter mais informações, consulte [Usando o Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started). Se você estiver usando sua própria versão gerenciada do {{site.data.keyword.ghe_short}}, siga seus procedimentos internos.
 
 ###Dicas para gerenciar o acesso a uma cadeia de ferramentas
 
@@ -132,10 +133,22 @@ Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{sit
 
      * Designe uma função para o espaço selecionado na organização.
 
-     Por padrão, os gerentes da organização têm privilégios do administrador integrais para todas as cadeias de ferramentas associadas à organização. Para conceder privilégios do administrador integrais para o usuário, selecione a função **Gerenciador**. As funções Gerente de faturamento e Auditor não afetam o acesso da cadeia de ferramentas. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para obter mais informações, consulte [Funções do Cloud Foundry](/docs/iam?topic=iam-cfaccess#cfaccess){: new_window}.
+     Por padrão, os gerentes da organização têm privilégios do administrador integrais para todas as cadeias de ferramentas associadas à organização. Para conceder privilégios do administrador integrais para o usuário, selecione a função **Gerenciador**. As funções Gerente de faturamento e Auditor não afetam o acesso da cadeia de ferramentas. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para obter mais informações, consulte [Funções do Cloud Foundry](/docs/iam?topic=iam-cfaccess#cfaccess).
      {: tip}
 
    Depois que o usuário for um membro da organização, retorne à página Gerenciar da cadeia de ferramentas e inclua o usuário na cadeia de ferramentas.  
+
+
+## Organizando cadeias de ferramentas
+{: #organizing_toolchains}
+
+É possível incluir tags em suas cadeias de ferramentas para organizá-las e localizá-las posteriormente com facilidade. Uma tag é um rótulo que você designa a uma cadeia de ferramentas para filtragem fácil de cadeias de ferramentas em sua lista de cadeias de ferramentas.
+
+1. No painel do DevOps, na página **Cadeias de ferramentas**, localize a cadeia de ferramentas na qual deseja incluir uma tag e clique em **Incluir tags**.
+1. Insira um nome para a tag que deseja incluir na cadeia de ferramentas. É possível incluir múltiplas tags, que são separadas por vírgulas.
+1. Clique em **Salvar**.
+
+Para obter mais informações sobre identificações, consulte [Trabalhando com identificações](/docs/resources?topic=resources-tag#).
 
 
 ## Excluindo uma cadeia de ferramentas
@@ -154,10 +167,10 @@ Se você estiver usando o {{site.data.keyword.Bluemix_notm}} Dedicated for {{sit
 ##Consulte o tutorial: Usando cadeias de ferramentas
 {: #toolchain-tutorial}
 
-Consulte os tutoriais no [IBM &reg; Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage){:new_window}:
+Confira esses tutoriais sobre o [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external}:
 
-  * [Criar e usar sua primeira cadeia de ferramentas usando a cadeia de ferramentas "Desenvolver um app Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+  * [Crie e use sua primeira cadeia de ferramentas usando a cadeia de ferramentas "Desenvolver um app Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}.
 
-  * [Incluir uma cadeia de ferramentas em um app ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+  * [Inclua uma cadeia de ferramentas em um app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}.
 
-  * [Usar a cadeia de ferramentas "Desenvolver e testar microsserviços no Cloud Foundry"![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.
+  * [Use a cadeia de ferramentas "Desenvolver e testar microsserviços no Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}.

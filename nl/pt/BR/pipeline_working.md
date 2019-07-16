@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-14"
 
 keywords: IBM Cloud, build types, build script
 
@@ -40,10 +40,10 @@ mais serviços, testar em uma região e implementar para produção em múltipla
 
 É possível usar qualquer um dos métodos a seguir para criar um pipeline:
 
-   * [Crie uma cadeia de ferramentas por meio de um aplicativo do Cloud Foundry existente](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}. A cadeia de ferramentas resultante contém um pipeline.
+   * [Crie uma cadeia de ferramentas por meio de um aplicativo do Cloud Foundry existente](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app). A cadeia de ferramentas resultante contém um pipeline.
 
-   * [Crie uma cadeia de ferramentas por meio de um modelo](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window} que inclua pelo menos um pipeline.
+   * [Crie uma cadeia de ferramentas por meio de um modelo](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template) que inclua pelo menos um pipeline.
 
-   * [Inclua a integração de ferramenta do {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window} em uma cadeia de ferramentas existente.
+   * [Inclua a integração de ferramenta do {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline) em uma cadeia de ferramentas existente.
    
 No {{site.data.keyword.deliverypipeline}}, mude a configuração, verifique o status das construções, o app implementado e as implementações recentes; veja os logs mais recentes e os detalhes da implementação ou exclua seu pipeline.

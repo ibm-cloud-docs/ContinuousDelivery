@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-28"
 
 keywords: Environment properties, IBM Java, pipeline environments
 
@@ -42,6 +42,7 @@ As propriedades e recursos a seguir estão disponíveis, por padrão, em ambient
 {: #deliverypipeline_envprop}
 
 ### Propriedades de propósito geral
+A tabela a seguir lista e descreve cada uma das propriedades do ambiente de propósito geral que estão disponíveis por padrão em ambientes de pipeline.
 
 | Propriedade do ambiente | Descrição |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -71,8 +72,10 @@ As propriedades e recursos a seguir estão disponíveis, por padrão, em ambient
 | TASK_ID | O ID exclusivo da execução atual da tarefa. |
 | TMPDIR | Uma localização de diretório em que os arquivos temporários são armazenados. |
 | WORKSPACE | O caminho para o diretório atualmente em funcionamento. |
+{: caption="Tabela 1. Propriedades do ambiente de propósito geral" caption-side="top"}
 
 ### Propriedades de tempo de execução e ferramentas
+A tabela a seguir lista e descreve cada uma das propriedades de ambiente de tempo de execução e de ferramenta que estão disponíveis por padrão em ambientes de pipeline.
 
 | Propriedade do ambiente | Descrição |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -84,11 +87,13 @@ As propriedades e recursos a seguir estão disponíveis, por padrão, em ambient
 | JAVA8_HOME | O caminho para o IBM Java 8. |
 | MAVEN_HOME | O caminho para o Apache Maven 3.2.1. |
 | NODE_HOME | O caminho para o Node.js 0.10.29. |
+{: caption="Tabela 2. Propriedades de ambiente de tempo de execução e de ferramenta" caption-side="top"}
 
 Para usar o Apache Ant 1.10+ nos scripts de seu pipeline, configure `ANT_HOME` como `$ANT_JAVA8_HOME` e `JAVA_HOME` como `$JAVA8_HOME`.
 {: tip}
 
 ### Propriedades de implementação
+A tabela a seguir lista e descreve cada uma das propriedades do ambiente de implementação que estão disponíveis por padrão em ambientes de pipeline.
 
 | Propriedade do ambiente | Descrição |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -100,6 +105,7 @@ Para usar o Apache Ant 1.10+ nos scripts de seu pipeline, configure `ANT_HOME` c
 | CF_TARGET_URL | Para implementações, a URL do {{site.data.keyword.Bluemix_short}} ou do Cloud
 Foundry. |
 | IDS_VERSION | Para implementações, a versão do app que está sendo implementado ou o identificador de origem. |
+{: caption="Tabela 3. Propriedades do ambiente de implementação" caption-side="top"}
 
 ## Recursos pré-instalados
 {: #deliverypipeline_resources}
@@ -107,6 +113,7 @@ Foundry. |
 Vários tempos de execução, ferramentas e módulos de Nó são pré-instalados em cada pipeline.
 
 ### Tempos de execução e ferramentas
+A tabela a seguir lista cada um dos tempos de execução e ferramentas pré-instalados disponíveis em cada pipeline.
 
 Todos os links estão no diretório inicial.
 {: tip}
@@ -124,6 +131,7 @@ Todos os links estão no diretório inicial.
 |Apache Maven 3.2.1 |maven |/opt/IBM/maven |
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
+{: caption="Tabela 4. Nomes de link e caminhos para tempo de execução e ferramentas" caption-side="top"}
 
 O ambiente de pipeline oferece versões de 64 bits do IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2 e 6.7.0. Para escolher uma versão, use o comando de exportação.
 

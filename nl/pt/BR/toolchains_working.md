@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-18"
 
 keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
 
@@ -13,6 +13,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -31,14 +32,14 @@ poder coletivo de uma cadeia de ferramentas é maior que a soma de suas integra�
 As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Dedicated no {{site.data.keyword.Bluemix}}. É possível criar uma cadeia de ferramentas de duas formas: usar um modelo para criar uma cadeia de ferramentas ou criar uma cadeia de
 ferramentas a partir de um app.
 
-Cada cadeia de ferramentas é associada a um grupo de recursos ou organização (org.) específicos. Se uma cadeia de ferramentas estiver associada a um grupo de recursos, qualquer usuário que tenha permissão de Visualizador do Identity and Access Management (IAM) para o recurso de cadeia de ferramentas ou o grupo de recursos que a contenha poderá acessar a cadeia de ferramentas. Se a cadeia de ferramentas estiver associada a uma organização, qualquer usuário que for um membro dessa organização poderá ser incluído na lista de controle de acesso para qualquer uma de suas cadeias de ferramentas associadas. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas em organizações do Cloud Foundry, consulte [Gerenciando o acesso às cadeias de ferramentas em organizações do Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas em grupos de recursos, consulte [Gerenciando o acesso às cadeias de ferramentas em grupos de recursos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window}.
+Cada cadeia de ferramentas é associada a um grupo de recursos ou organização (org.) específicos. Se uma cadeia de ferramentas estiver associada a um grupo de recursos, qualquer usuário que tenha permissão de Visualizador do Identity and Access Management (IAM) para o recurso de cadeia de ferramentas ou o grupo de recursos que a contenha poderá acessar a cadeia de ferramentas. Se a cadeia de ferramentas estiver associada a uma organização, qualquer usuário que for um membro dessa organização poderá ser incluído na lista de controle de acesso para qualquer uma de suas cadeias de ferramentas associadas. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas em organizações do Cloud Foundry, consulte [Gerenciando o acesso às cadeias de ferramentas em organizações do Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs). Para obter mais informações sobre o controle de acesso para cadeias de ferramentas em grupos de recursos, consulte [Gerenciando o acesso às cadeias de ferramentas em grupos de recursos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups).
 
 ##Criando uma cadeia de ferramentas com base em um modelo   
 {: #creating_a_toolchain_from_a_template}
 
-É possível usar um modelo como um ponto de início para [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops/create){: new_window} que inclui um conjunto específico de integrações de ferramentas. Saiba mais sobre como usar os modelos no [IBM Cloud Garage Method ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/category/tools){:new_window}.
+É possível usar um modelo como um ponto de início para [criar uma cadeia de ferramentas](https://cloud.ibm.com/devops/create){:external} que inclua um conjunto específico de integrações de ferramentas. Saiba mais sobre como usar os modelos por meio do [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage/category/tools){:external}.
 
-1. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, efetue login no [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://cloud.ibm.com){:new_window}.
+1. Se você usar o {{site.data.keyword.Bluemix_notm}} Public, efetue login no [{{site.data.keyword.Bluemix_notm}}](http://cloud.ibm.com){:external}.
 1. Se você usar o {{site.data.keyword.Bluemix_notm}} Dedicated, efetue login no ambiente Dedicated no {{site.data.keyword.Bluemix_notm}}.
 1. No menu na barra de menus do {{site.data.keyword.Bluemix_notm}}, clique em **DevOps**.
 1. No painel DevOps, na página **Cadeias de ferramentas**, clique em **Criar uma cadeia de ferramentas**.
@@ -65,7 +66,7 @@ mostrará cada integração de ferramenta em sua fase de ciclo de vida na cadeia
 
 1. Na seção Integrações de ferramentas, selecione cada integração de ferramenta que deseja configurar para sua cadeia de ferramentas. Algumas integrações de ferramentas não requerem configuração. Para obter informações sobre como configurar as integrações de ferramentas, consulte
 [Configurando
-integrações de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
+integrações de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 1. Clique em **Criar**. Várias etapas são executadas automaticamente para configurar sua cadeia de ferramentas. As integrações de ferramentas configuradas são diferentes, dependendo de qual modelo de cadeia de ferramentas você selecionou e se está usando o {{site.data.keyword.Bluemix_notm}} Public ou o {{site.data.keyword.Bluemix_notm}} Dedicated. Por exemplo, quando você cria uma cadeia de ferramentas de Microsserviços no {{site.data.keyword.Bluemix_notm}} Public, estas etapas são executadas:
 
  * A cadeia de ferramentas é criada.
@@ -93,7 +94,7 @@ mostrará cada integração de ferramenta em sua fase de ciclo de vida na cadeia
 {{site.data.keyword.Bluemix_notm}}. Se você desejar usar um nome diferente, mude o nome da cadeia de ferramentas.
 1. Na seção Integrações de ferramentas, selecione cada integração de ferramenta que deseja configurar para sua cadeia de ferramentas. Algumas integrações de ferramentas não requerem configuração. Para obter informações sobre como configurar as integrações de ferramentas, consulte
 [Configurando
-integrações de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
+integrações de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 1. Clique em **Criar**. Várias etapas são executadas automaticamente para configurar sua cadeia de ferramentas. As integrações de ferramentas configuradas são diferentes, dependendo de se você está usando cadeias de ferramentas no {{site.data.keyword.Bluemix_notm}} Public ou no {{site.data.keyword.Bluemix_notm}} Dedicated. Por exemplo, quando você cria uma cadeia de ferramentas de um app no {{site.data.keyword.Bluemix_notm}} Public, estas etapas são executadas:
 
  * A cadeia de ferramentas é criada.
@@ -118,10 +119,10 @@ Após configurar a cadeia de ferramentas e as suas integrações de ferramenta, 
 ## Consulte o tutorial: Usando cadeias de ferramentas
 {: #toolchain_tutorials}
 
-Consulte um desses tutoriais no [IBM&reg; Cloud Garage Method ![Ícon de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage){:new_window}:
+Confira um destes tutoriais sobre o [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external}:
 
-  * [Criar e usar sua primeira cadeia de ferramentas usando a cadeia de ferramentas "Desenvolver um app Cloud Foundry" ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+  * [Crie e use sua primeira cadeia de ferramentas usando a cadeia de ferramentas "Desenvolver um app Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}.
 
-  * [Incluir uma cadeia de ferramentas em um app ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+  * [Inclua uma cadeia de ferramentas em um app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}.
 
-  * [Usar a cadeia de ferramentas "Desenvolver e testar microsserviços no Cloud Foundry"![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.
+  * [Use a cadeia de ferramentas "Desenvolver e testar microsserviços no Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}.

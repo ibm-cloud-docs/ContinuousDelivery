@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-03-27"
+lastupdated: "2019-06-18"
 
 keywords: IBM Cloud Public, Use Developer Insights, US South
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -30,19 +31,19 @@ As cadeias de ferramentas estão disponíveis no {{site.data.keyword.Bluemix_not
 ## Disponibilidade de cadeia de ferramentas no {{site.data.keyword.Bluemix_notm}} Public comparado ao {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #public_and_dedicated}
 
-O {{site.data.keyword.Bluemix_notm}} Public é uma plataforma baseada em nuvem de padrão aberto na qual é possível construir, executar e gerenciar aplicativos que são acessados por [http://cloud.ibm.com ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://cloud.ibm.com){:new_window}. O {{site.data.keyword.Bluemix_notm}} Dedicated fornece os recursos do {{site.data.keyword.Bluemix_notm}} em um ambiente dedicado do SoftLayer que está firmemente conectado ao ambiente do {{site.data.keyword.Bluemix_notm}} Public e à sua rede. O ambiente do {{site.data.keyword.Bluemix_notm}} Dedicated de sua empresa pode não conter as mesmas integrações de ferramentas do site do {{site.data.keyword.Bluemix_notm}} Public.
+O {{site.data.keyword.Bluemix_notm}} Public é uma plataforma de padrões abertos, baseada na nuvem, na qual é possível construir, executar e gerenciar aplicativos que são acessados pelo [http://cloud.ibm.com](http://cloud.ibm.com){: external}. O {{site.data.keyword.Bluemix_notm}} Dedicated fornece os recursos do {{site.data.keyword.Bluemix_notm}} em um ambiente de infraestrutura dedicado que é conectado com segurança ao ambiente e à sua rede do {{site.data.keyword.Bluemix_notm}} Public. O ambiente do {{site.data.keyword.Bluemix_notm}} Dedicated de sua empresa pode não conter as mesmas integrações de ferramentas do site do {{site.data.keyword.Bluemix_notm}} Public.
 
-Para gerenciamento de código-fonte e rastreamento de problemas, o {{site.data.keyword.Bluemix_notm}} Public geralmente usa o {{site.data.keyword.gitrepos}} (hospedado pela IBM e construído no [GitLab Community Edition ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://about.gitlab.com/){:new_window}) ou o GitHub (github.com). O {{site.data.keyword.Bluemix_notm}} Dedicated também pode usar github.com, mas geralmente usa o {{site.data.keyword.ghe_short}}, que é instalado por sua empresa ou gerenciado pela IBM.
+Para gerenciamento de código-fonte e rastreamento de problemas, o {{site.data.keyword.Bluemix_notm}} Public geralmente usa o {{site.data.keyword.gitrepos}} (hospedado pela IBM e desenvolvido com [GitLab Community Edition](https://about.gitlab.com/){: external}) ou GitHub (github.com). O {{site.data.keyword.Bluemix_notm}} Dedicated também pode usar github.com, mas geralmente usa o {{site.data.keyword.ghe_short}}, que é instalado por sua empresa ou gerenciado pela IBM.
 
 O {{site.data.keyword.contdelivery_short}} está disponível no {{site.data.keyword.Bluemix_notm}} Public em regiões selecionadas e no {{site.data.keyword.Bluemix_notm}} Dedicated. As cadeias de ferramentas são diferentes, dependendo de se você usa o {{site.data.keyword.contdelivery_short}} no {{site.data.keyword.Bluemix_notm}} Public ou no {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-Embora as cadeias de ferramentas não estejam atualmente disponíveis em todas as regiões, é possível configurar a sua cadeia de ferramentas para implementar os seus apps em todas as regiões. Para saber mais, experimente o [tutorial Implementar um aplicativo da web seguro em diversas regiões](/docs/tutorials?topic=solution-tutorials-multi-region-webapp){: new_window}.
+Embora as cadeias de ferramentas não estejam atualmente disponíveis em todas as regiões, é possível configurar a sua cadeia de ferramentas para implementar os seus apps em todas as regiões. Para saber mais, experimente o [tutorial Implementar um aplicativo da web seguro em diversas regiões](/docs/tutorials?topic=solution-tutorials-multi-region-webapp).
 {: tip}
 
 |Cadeias de ferramentas |{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
-|Integrações de ferramenta 		|Para obter uma lista de integrações de ferramentas suportadas, veja [Configurando integrações de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}. 		|As integrações de ferramentas que estão disponíveis dependem de como o {{site.data.keyword.contdelivery_short}} foi configurado em seu ambiente.			|
-|Criando uma cadeia de ferramentas com base em um modelo		|Efetue login no [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://cloud.ibm.com/devops){:new_window}		|Efetue login no ambiente Dedicated no {{site.data.keyword.Bluemix_notm}}.			|
+|Integrações de ferramenta 		|Para obter uma lista de integrações de ferramentas suportadas, veja [Configurando integrações de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations). 		|As integrações de ferramentas que estão disponíveis dependem de como o {{site.data.keyword.contdelivery_short}} foi configurado em seu ambiente.			|
+|Criando uma cadeia de ferramentas com base em um modelo		|Efetue login no [{{site.data.keyword.Bluemix_notm}}](http://cloud.ibm.com/devops){: external}.		|Efetue login no ambiente Dedicated no {{site.data.keyword.Bluemix_notm}}.			|
 |Criando uma cadeia de ferramentas com base em um aplicativo		|O app é configurado para entrega contínua por meio de um novo repositório GitHub que é preenchido com o código de início do app.		|O app é configurado para entrega contínua por meio de um novo repositório GitHub ou GitHub Enterprise que é preenchido com o código de início do app.		|  
 |Regiões de implementação do pipeline de entrega		|Todas as regiões do {{site.data.keyword.Bluemix_notm}} Public estão disponíveis para as tarefas de implementação do Cloud Foundry. 		|A região do {{site.data.keyword.Bluemix_notm}} Dedicated está disponível. Outras regiões Dedicated ou Local na mesma conta de cliente também poderão estar disponíveis, dependendo de como o {{site.data.keyword.contdelivery_short}} tiver sido configurado em seu ambiente específico.		|
 |Tarefas de implementação do pipeline de entrega		|Todos os [tipos de tarefas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs) estão disponíveis.		|Os tipos de tarefas que dependem de serviços do {{site.data.keyword.Bluemix_notm}} que não estão instalados no ambiente Dedicated podem não estar disponíveis.	Por exemplo, os tipos de tarefa de construção e implementação de contêiner podem não estar disponíveis em ambientes que não têm o {{site.data.keyword.containerlong_notm}}.	|
@@ -52,14 +53,14 @@ Embora as cadeias de ferramentas não estejam atualmente disponíveis em todas a
 ## Modelos de cadeias de ferramentas
 {: #templates}
 
-É possível usar um modelo como um ponto de início para [criar uma cadeia de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/devops/create){: new_window}. Os modelos de cadeia de ferramentas incluem conjuntos específicos de integrações de ferramentas que suportam as tarefas de desenvolvimento, implementação e operações.
+É possível usar um modelo como um ponto de início para [criar uma cadeia de ferramentas](https://cloud.ibm.com/devops/create){: external}. Os modelos de cadeia de ferramentas incluem conjuntos específicos de integrações de ferramentas que suportam as tarefas de desenvolvimento, implementação e operações.
 
 O ambiente do {{site.data.keyword.Bluemix_notm}} Dedicated de sua empresa pode não conter os mesmos modelos de cadeia de ferramentas que o site do {{site.data.keyword.Bluemix_notm}} Public. Os modelos de cadeias de ferramentas que estão disponíveis no {{site.data.keyword.Bluemix_notm}} Public e no {{site.data.keyword.Bluemix_notm}} Dedicated podem conter um conjunto diferente de integrações de ferramentas no {{site.data.keyword.Bluemix_notm}} Dedicated.
 {: note}
 
-Alguns modelos de cadeias de ferramentas incluem integrações de ferramentas que fazem parte do serviço {{site.data.keyword.contdelivery_short}}. Se uma instância desse serviço ainda não estiver em seu grupo de recursos ou em sua organização, quando você clicar em **Criar** para criar a cadeia de ferramentas, o serviço será incluído automaticamente com o plano Lite grátis selecionado. Para obter mais informações e termos, veja o [Catálogo do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/catalog/services/continuous-delivery/){:new_window}.
+Alguns modelos de cadeias de ferramentas incluem integrações de ferramentas que fazem parte do serviço {{site.data.keyword.contdelivery_short}}. Se uma instância desse serviço ainda não estiver em seu grupo de recursos ou em sua organização, quando você clicar em **Criar** para criar a cadeia de ferramentas, o serviço será incluído automaticamente com o plano Lite grátis selecionado. Para obter mais informações e termos, consulte o [catálogo do {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/catalog/services/continuous-delivery/){: external}.
 
-A cadeia de ferramentas "Microsserviços de desenvolvimento e teste no Cloud Foundry" implementa um app com APIs de catálogo e de solicitações que são suportadas por um armazenamento do Cloudant. Como parte da implementação do app, uma instância de serviço do Cloudant gratuita é criada. Para obter mais informações e termos, veja o [Catálogo do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/catalog/services/cloudant-nosql-db/){:new_window}.
+A cadeia de ferramentas "Microsserviços de desenvolvimento e teste no Cloud Foundry" implementa um app com APIs de catálogo e de solicitações que são suportadas por um armazenamento do Cloudant. Como parte da implementação do app, uma instância de serviço do Cloudant gratuita é criada. Para obter mais informações e termos, consulte o [catálogo do {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/catalog/services/cloudant-nosql-db/){: external}.
 
 Os modelos de cadeia de ferramentas predefinidos do DevOps são exemplos recomendados que resolvem os cenários do mundo real e cada um contém um app de amostra.  É possível usar seu próprio app especificando seu repositório git ao criar a cadeia de ferramentas por meio do modelo.
 
@@ -119,6 +120,42 @@ Os modelos de cadeia de ferramentas predefinidos do DevOps são exemplos recomen
   </li><li>{{site.data.keyword.containerlong_notm}}  (Cluster Kurbernetes) com um Gráfico de Helm
   </li></ul>
   </td></tr>
+  
+  <tr><td>
+  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-helm-toolchain" target="_blank">Cadeia de ferramentas "Desenvolver e testar microsserviços no Kubernetes com o Helm"  <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a> <br><br>
+
+  Disponível no Sul dos EUA, na Alemanha e no Reino Unido
+
+  </td><td>
+  Com essa cadeia de ferramentas nativa da nuvem, é possível usar uma combinação de pipelines de integração contínua e de implementação contínua para coordenar microsserviços desenvolvidos individualmente em liberações que são promovidas entre ambientes. Essa cadeia de ferramentas usa um app de armazenamento on-line de amostra que consiste em três microsserviços: uma API do Catálogo, uma API de Ordens e uma interface com o usuário que chama ambas essas APIs. A cadeia de ferramentas é pré-configurada para entrega contínua, controle de fonte, teste funcional, rastreamento de problemas, edição on-line e notificação de alerta. <br><br>
+  Experimente o tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-with-kubernetes-and-helm-toolchain" target="_blank">Use a cadeia de ferramentas "Desenvolver e testar microsserviços com o Kubernetes e o Helm" <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>	 <br><br>
+  </td><td><ul>
+  <li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}
+  </li><li>Git Repos and Issue Tracking
+  </li><li>{{site.data.keyword.DRA_full}}
+  </li><li>PagerDuty
+  </li><li>Sauce Labs
+  </li><li>{{site.data.keyword.containerlong_notm}}  (Cluster Kurbernetes) com um Gráfico de Helm
+  </li></ul>
+  </td></tr>
+  
+  <tr><td>
+  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcanary-testing-istio-toolchain" target="_blank">Cadeia de ferramentas "Teste canário no Kubernetes usando o Istio"
+   <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a> <br><br>
+
+  Disponível no Sul dos EUA, no Leste dos EUA, na Alemanha, em Tóquio e no Reino Unido
+
+  </td><td>
+  Com essa cadeia de ferramentas, é possível desenvolver com segurança, testar A/B e implementar um app em um cluster Kubernetes gerenciado pelo {{site.data.keyword.containerlong_notm}}. Embora a cadeia de ferramentas use um app Hello World do Node.js de amostra por padrão, é possível vincular ao seu próprio repositório GitHub. Essa cadeia de ferramentas é pré-configurada para entrega contínua com teste A/B, Vulnerability Advisor, controle de fonte, rastreamento de problemas e edição on-line. <br><br>
+  Experimente o tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-canary-testing-in-kubernetes-using-istio-toolchain" target="_blank">Use a cadeia de ferramentas "Executar seu primeiro teste canário no Kubernetes usando o Istio" <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>	 <br><br>
+  </td><td><ul>
+  <li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}
+  </li><li>Git Repos and Issue Tracking
+    </li><li>{{site.data.keyword.containerlong_notm}} (cluster Kubernetes)
+  </li></ul>
+  </td></tr>
 
   <tr><td>
   <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdra-toolchain-demo" target="_blank">Cadeia de ferramentas "Desenvolver e testar um app do Cloud Foundry"
@@ -162,13 +199,13 @@ Os modelos de cadeia de ferramentas predefinidos do DevOps são exemplos recomen
 </tr>
 
   <tr>
-  <td><a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" targe="_blank">Cadeia de ferramentas
+  <td><a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" target="_blank">Cadeia de ferramentas
 "Tutorial do Garage Method com Cloud Foundry" <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a> <br><br>
 
   Disponível no Sul dos EUA, no Leste dos EUA, na Alemanha, em Tóquio e no Reino Unido
 
 </td><td>
-Essa cadeia de ferramentas demonstra as práticas de DevOps apresentadas no Garage Method. A cadeia de ferramentas é pré-configurada para entrega contínua, controle de fonte, automação de teste, bem como monitoramento e operações automatizados. Ela vem com um app de amostra que é escrito em Node.js Express 4, que pode ser ampliado posteriormente. <br><br>Experimente o curso: <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Torne-se um porta-voz do Garage Method <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>
+Essa cadeia de ferramentas demonstra as práticas de DevOps apresentadas no Garage Method. A cadeia de ferramentas é pré-configurada para entrega contínua, controle de fonte, automação de teste, bem como monitoramento e operações automatizados. Ela vem com um app de amostra que é escrito em Node.js Express 4, que pode ser ampliado posteriormente. <br><br>Experimente o curso: <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Torne-se um advocate do Garage Method <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>
 </td><td>
 <ul>
 <li>{{site.data.keyword.deliverypipeline}}

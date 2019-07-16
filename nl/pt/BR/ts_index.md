@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-20"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud Continuous Delivery, GitHub tool integration, error message
 
@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:faq: data-hd-content-type='faq'}
 {:codeblock: .codeblock}
@@ -35,7 +36,7 @@ do {{site.data.keyword.contdelivery_full}}.
 {: #plan_exceeded}
 {: faq}
 
-{{site.data.keyword.contdelivery_short}}  oferece dois planos: Lite e Professional. Se você tiver o plano Lite do {{site.data.keyword.contdelivery_short}}, será possível usar cadeias de ferramentas gratuitamente, até os limites do plano. A mensagem de erro indica que você excedeu um ou mais limites do plano Lite. Por exemplo, você poderá exceder o plano se você tiver muitos usuários autorizados que estiverem associados à instância do serviço {{site.data.keyword.contdelivery_short}} ou se você executou o número máximo de tarefas do {{site.data.keyword.deliverypipeline}}. Para obter mais informações sobre os termos de seu plano, veja [Limitações e uso do plano](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
+{{site.data.keyword.contdelivery_short}}  oferece dois planos: Lite e Professional. Se você tiver o plano Lite do {{site.data.keyword.contdelivery_short}}, será possível usar cadeias de ferramentas gratuitamente, até os limites do plano. A mensagem de erro indica que você excedeu um ou mais limites do plano Lite. Por exemplo, você poderá exceder o plano se você tiver muitos usuários autorizados que estiverem associados à instância do serviço {{site.data.keyword.contdelivery_short}} ou se você executou o número máximo de tarefas do {{site.data.keyword.deliverypipeline}}. Para obter mais informações sobre os termos de seu plano, veja [Limitações e uso do plano](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 
 ## Meu serviço {{site.data.keyword.contdelivery_short}} afirma que os serviços do plano Lite são excluídos após 30 dias de inatividade. O que inatividade significa?
@@ -45,11 +46,11 @@ do {{site.data.keyword.contdelivery_full}}.
 Uma instância do serviço {{site.data.keyword.contdelivery_short}} é considerada ativa quando uma ou mais das cadeias de ferramentas dentro do mesmo grupo de recursos ou organização (org) do Cloud Foundry estão ativas. Uma cadeia de ferramentas é considerada ativa quando os usuários interagem com ela por meio da interface com o usuário, as tarefas do pipeline de entrega são acionadas, os repositórios que são gerenciados pelo {{site.data.keyword.gitrepos}} são acessados ou as áreas de trabalho do {{site.data.keyword.webide}} Eclipse Orion estão em uso. Para ser considerada inativa, todas essas condições devem estar ausentes para todas as cadeias de ferramentas associadas ao serviço {{site.data.keyword.contdelivery_short}} por 30 dias.
 
 
-## Eu criei uma cadeia de ferramentas; por que a página Cadeias de ferramentas mostra que um serviço de Entrega Contínua é necessário?
+## Eu criei uma cadeia de ferramentas; por que a página Cadeias de ferramentas mostra que um serviço de Continuous Delivery é necessário?
 {: #service_required_resource_group}
 {: faq}
 
-Os termos do plano para a instância do serviço {{site.data.keyword.contdelivery_short}} que está no mesmo grupo de recursos ou organização, uma vez que a cadeia de ferramentas gerencia o uso de algumas das integrações de ferramenta ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} e {{site.data.keyword.gitrepos}}) que estão contidas no serviço. A mensagem de erro indica que o grupo de recursos ou a organização não contém a instância necessária do serviço {{site.data.keyword.contdelivery_short}}. Para obter mais informações sobre os termos de seu plano, veja [Limitações e uso do plano](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
+Os termos do plano para a instância do serviço {{site.data.keyword.contdelivery_short}} que está no mesmo grupo de recursos ou organização, uma vez que a cadeia de ferramentas gerencia o uso de algumas das integrações de ferramenta ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} e {{site.data.keyword.gitrepos}}) que estão contidas no serviço. A mensagem de erro indica que o grupo de recursos ou a organização não contém a instância necessária do serviço {{site.data.keyword.contdelivery_short}}. Para obter mais informações sobre os termos de seu plano, veja [Limitações e uso do plano](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 
 ## Atualizei as informações para uma cadeia de ferramentas por meio de uma organização do Cloud Foundry, por que não vejo minhas mudanças na cadeia de ferramentas?
@@ -59,7 +60,7 @@ Os termos do plano para a instância do serviço {{site.data.keyword.contdeliver
 Quando você atualiza as informações da cadeia de ferramentas diretamente no Cloud Foundry, pode levar alguns minutos para que o serviço {{site.data.keyword.contdelivery_short}} atualize e mostre suas mudanças. Por exemplo, se você incluir ou remover um usuário de uma organização do Cloud Foundry, poderá levar alguns minutos para o {{site.data.keyword.contdelivery_short}} descobrir que há um novo usuário e permitir que esse usuário acesse a cadeia de ferramentas.
 
 
-## Eu criei uma cadeia de ferramentas em uma organização do Cloud Foundry; por que a página Cadeias de ferramentas mostra que um serviço de Entrega Contínua é necessário?
+## Eu criei uma cadeia de ferramentas em uma organização do Cloud Foundry; por que a página Cadeias de ferramentas mostra que um serviço de Continuous Delivery é necessário?
 {: #service_required_cloud_foundry}
 {: faq}
 
@@ -160,9 +161,9 @@ Verifique a página Status do {{site.data.keyword.Bluemix_notm}} para determinar
 É possível localizar a página Status, escolhendo uma das opções a seguir:
 
   * Efetue login no console do {{site.data.keyword.Bluemix_notm}}. Na barra de menus, clique em **Suporte** e selecione **Status**. Verifique os recursos listados para o ícone ![alguns problemas](../../get-support/images/some_issues.svg). Esse ícone pode indicar uma indisponibilidade.
-  * Acesse-a diretamente em [{{site.data.keyword.Bluemix_notm}} - Status do sistema ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/status){: new_window}.
+  * Acesse-o diretamente em [{{site.data.keyword.Bluemix_notm}} - Status do sistema](https://cloud.ibm.com/status){: external}.
 
-Para obter informações sobre a página Status do {{site.data.keyword.Bluemix_notm}}, consulte [Visualizando o status do {{site.data.keyword.Bluemix_notm}}](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}.
+Para obter mais informações sobre a página Status do {{site.data.keyword.Bluemix_notm}}, consulte [Visualizando status do {{site.data.keyword.Bluemix_notm}}](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status).
 
 
 ## Como passar os artefatos entre as tarefas de pipeline?

@@ -2,7 +2,7 @@
 
 Copyright:
  years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-18"
 
 keywords: IBM Cloud DevOps, enterprise application Developer, IBM Cloud Garage Method
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -31,9 +32,7 @@ e práticas modernas do DevOps, adotam arquiteturas nativas de nuvem e montam ca
 de ponta para liberar a produtividade. Por tudo isso em prática rapidamente é uma vantagem competitiva
 chave.
 
-O 
-<a href="https://www.ibm.com/cloud/garage">IBM Cloud Garage Method <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>
-descreve arquiteturas, práticas e cadeias de ferramentas do DevOps para permitir que as empresas inovem em escala. Use o {{site.data.keyword.Bluemix_notm}} Garage Method para ajudá-lo a transformar sua cultura e usar as ferramentas de forma efetiva e rápida.
+O [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage){:external} descreve arquiteturas, práticas e cadeias de ferramentas do DevOps para permitir que as empresas inovem em escala. Use o {{site.data.keyword.Bluemix_notm}} Garage Method para ajudá-lo a transformar sua cultura e usar as ferramentas de forma efetiva e rápida.
 
 Um desenvolvedor de aplicativos corporativos pode iniciar a construção e a implementação de aplicativos nativos da nuvem em minutos. Ele pode usar um conjunto completo de serviços para construir aplicativos
 cognitivos, Internet das Coisas (IoT), cadeia de blocos e dados intensivos. Com o IBM Cloud App Service, um desenvolvedor individual pode criar um projeto, selecionar um kit do iniciador de aplicativo e implementar um aplicativo pronto para produção no {{site.data.keyword.Bluemix_notm}}. A tecnologia de geração de código da plataforma cria um aplicativo iniciador no idioma e na estrutura preferenciais do desenvolvedor, que é customizado de acordo com suas necessidades e caso de uso. Quaisquer serviços que são

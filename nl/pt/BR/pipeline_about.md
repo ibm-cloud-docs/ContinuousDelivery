@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-06-19"
 
 keywords: run jobs, sequences of stages, job types
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -27,12 +28,12 @@ subcollection: ContinuousDelivery
 O {{site.data.keyword.contdelivery_full}} inclui o Delivery Pipeline para construir, testar e implementar de forma repetida com mínima intervenção humana. Em um pipeline, as sequências de estágios recuperam a entrada e executam tarefas, como construções, testes e implementações.
 {:shortdesc}
 
-As suas permissões para visualizar, modificar ou executar um pipeline são baseadas no controle de acesso para a cadeia de ferramentas que possui o pipeline. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas, consulte [Gerenciando acesso às cadeias de ferramentas em grupos de recursos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window} e [Gerenciando acesso a cadeias de ferramentas em organizações do Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
+As suas permissões para visualizar, modificar ou executar um pipeline são baseadas no controle de acesso para a cadeia de ferramentas que possui o pipeline. Para obter mais informações sobre o controle de acesso para cadeias de ferramentas, consulte [Gerenciando acesso às cadeias de ferramentas em grupos de recursos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups) e [Gerenciando acesso a cadeias de ferramentas em organizações do Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs).
 {: important}
 
-É possível especificar os scripts a serem executados em muitos dos tipos de tarefas que são fornecidos pelo pipeline, fornecendo controle direto sobre o que é executado pela tarefa. Esses scripts são executados em uma imagem do Docker que contém uma série de ferramentas de desenvolvimento padrão, incluindo ferramentas que são necessárias para interagir com os tempos de execução do {{site.data.keyword.Bluemix_notm}}. Para obter mais informações sobre o que a imagem padrão do Docker contém, veja [Recursos pré-instalados](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}. Se a sua tarefa requer ferramentas de desenvolvimento que não estão disponíveis na imagem padrão ou se você precisa de versões diferentes dessas ferramentas, é possível usar uma imagem customizada. Para obter mais informações sobre imagens customizadas, veja [Trabalhando com imagens customizadas do Docker](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}.
+É possível especificar os scripts a serem executados em muitos dos tipos de tarefas que são fornecidos pelo pipeline, fornecendo controle direto sobre o que é executado pela tarefa. Esses scripts são executados em uma imagem do Docker que contém uma série de ferramentas de desenvolvimento padrão, incluindo ferramentas que são necessárias para interagir com os tempos de execução do {{site.data.keyword.Bluemix_notm}}. Para obter mais informações sobre o que a imagem padrão do Docker contém, veja [Recursos pré-instalados](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). Se a sua tarefa requer ferramentas de desenvolvimento que não estão disponíveis na imagem padrão ou se você precisa de versões diferentes dessas ferramentas, é possível usar uma imagem customizada. Para obter mais informações sobre imagens customizadas, veja [Trabalhando com imagens customizadas do Docker](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images).
 
-Quando o pipeline executa scripts, as propriedades que descrevem o contexto em que a tarefa está em execução são passadas para o script usando variáveis de ambiente. Por exemplo, a URL do repositório que é a entrada para o estágio, o nome do estágio e a tarefa que está sendo executada, os parâmetros especificados pelo tipo de tarefa e assim por diante. Para visualizar uma lista de variáveis de ambiente disponíveis, veja [Recursos pré-instalados](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). 
+Quando o pipeline executa scripts, as propriedades que descrevem o contexto em que a tarefa está em execução são passadas para o script usando variáveis de ambiente. Por exemplo, a URL do repositório que é a entrada para o estágio, o nome do estágio e a tarefa que está sendo executada, os parâmetros especificados pelo tipo de tarefa e assim por diante. Para visualizar uma lista de variáveis de ambiente disponíveis, veja [Recursos pré-instalados](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources).
 
 É possível definir propriedades no nível de pipeline e no nível de estágio. As propriedades de pipeline são compartilhadas em todos os estágios e tarefas em um pipeline. As propriedades do estágio são exclusivas para um estágio específico e compartilhadas em todas as tarefas nesse estágio. Para obter mais informações sobre as propriedades, veja [Propriedades do ambiente (variáveis de ambiente)](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties).
 
@@ -59,6 +60,20 @@ for executado manualmente**.
 
 ![A guia ENTRADA](images/input_tab_only_execute.png)
 
+Mais opções de acionador de estágio estão disponíveis para estágios que usam o tipo de entrada de repositório Git. Por exemplo, é possível optar por executar tarefas automaticamente para eventos do Git na ramificação escolhida. Ao escolher esse tipo de acionador, deve-se selecionar um ou mais dos tipos de eventos a seguir:
+
+*	**Quando uma confirmação é enviada por push** é acionado quando um push é feito para a ramificação de repositório selecionada.
+*	**Quando uma solicitação pull/mesclagem é aberta ou atualizada** é acionado quando uma solicitação pull ou uma solicitação de mesclagem é aberta ou editada.
+*	**Quando uma solicitação pull/mesclagem é fechada** é acionado quando uma solicitação pull ou uma solicitação de mesclagem é fechada, mesmo sem uma confirmação associada.
+
+![A guia INPUT é acionada](images/input_tab_only_triggers.png)
+
+Se você selecionar a caixa de seleção **Quando uma solicitação pull/mesclagem é aberta ou atualizada**, o status do pipeline será retornado para o repositório Git. Quando uma solicitação pull ou uma solicitação de mesclagem aciona seu pipeline, uma verificação de status sequencial é exibida na página. Uma verificação de status é exibida para cada um dos estágios que são executados em seu pipeline e os links para os logs e o histórico para cada estágio são fornecidos. Conforme a verificação de status é executada, ela é atualizada de pendente para bem-sucedida ou com falha. Se seu pipeline contiver múltiplos estágios, cada estágio relatará seu status na lista de verificação.
+
+Esse feedback de status também é suportado pela ferramenta GitLab Community Edition hospedada pela IBM para solicitações de mesclagem.
+{: tip}
+
+Também é possível restringir a mesclagem com base nos resultados das verificações de status usando regras de proteção de ramificação do Git. Após uma regra de proteção de ramificação ser criada, toda a mesclagem será bloqueada até que todas as verificações de status necessárias sejam bem-sucedidas. 
 
 ### Estágio de Construção
 {: #build_stage}
@@ -115,7 +130,7 @@ incluir shell scripts do UNIX que incluam comandos de construção, teste ou imp
 as tarefas são executadas em contêineres ad hoc, as ações de uma não podem afetar os
 ambientes de execução das outras, mesmo que essas tarefas façam parte do mesmo estágio.
 
-Os scripts de construção e implementação de amostra podem ser localizados em [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons).
+Os scripts de construção e implementação de amostra podem ser localizados em [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons){: external}.
 
 Além disso, as tarefas de pipeline podem executar apenas os comandos a seguir como `sudo`:
   * `/usr/sbin/service`
@@ -135,7 +150,7 @@ Após a execução de uma tarefa, o contêiner que foi criado para ela é descar
 As tarefas podem ser executadas por até 60 minutos. Quando as tarefas excedem esse limite, elas falham. Se uma tarefa estiver excedendo o limite, divida-a em várias tarefas. Por exemplo, se uma tarefa executar três trabalhos, você poderá dividi-la em três tarefas: uma para cada trabalho.
 {: tip}
 
-Para saber como incluir uma tarefa em um estágio, veja [Incluindo uma tarefa em um estágio](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}.
+Para saber como incluir uma tarefa em um estágio, veja [Incluindo uma tarefa em um estágio](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job).
 
 ### Tarefas de construção
 
@@ -148,7 +163,7 @@ Se você usar o tipo de construtor **Simples**, o seu código não será compila
 
 Quando você implementa usando o Cloud Foundry, o Cloud Foundry inclui os artefatos corretos para permitir que seu app seja executado. Para obter mais informações, veja [Implementando aplicativos usando o comando cf](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps). O pipeline para um app Cloud Foundry contém um estágio de Implementação que executa um comando cf.
 
-O Cloud Foundry tenta [detectar o buildpack para uso do ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Você pode especificar o [Buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) para usar no arquivo manifest na pasta raiz de seu app. Os buildpacks geralmente examinam artefatos fornecidos pelo usuário para determinar quais dependências transferir por download e como configurar aplicativos para comunicação com os serviços de limite. Para obter mais informações sobre arquivos manifest, veja [Manifest do aplicativo](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
+O Cloud Foundry tenta [detectar o buildpack a ser usado](http://docs.cloudfoundry.org/buildpacks/detection.html){: external}. Você pode especificar o [Buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) para usar no arquivo manifest na pasta raiz de seu app. Os buildpacks geralmente examinam artefatos fornecidos pelo usuário para determinar quais dependências transferir por download e como configurar aplicativos para comunicação com os serviços de limite. Para obter mais informações sobre arquivos manifest, veja [Manifest do aplicativo](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
 
 ### Tarefas de implementação
 
@@ -274,4 +289,4 @@ evitar conflitos de rota ao implementar em vários destinos.
 
 Para usar os argumentos do comando `cf push`, abra as definições
 de configuração para uma tarefa de implementação e modifique o campo **Script
-de implementação**. Para obter mais informações, veja a [documentação Push do Cloud Foundry ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}.
+de implementação**. Para obter mais informações, consulte a [documentação do Cloud Foundry Push](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: external}.

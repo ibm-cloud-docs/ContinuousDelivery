@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -32,8 +33,8 @@ Dados pessoais são quaisquer informações relacionadas a uma pessoa física ou
  * {{site.data.keyword.gitrepos}}
  * Pipelines do {{site.data.keyword.contdelivery_short}}
  * Cadeias de ferramentas e integrações de ferramentas
- * [GitHub Enterprise on IBM Cloud ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
- * [{{site.data.keyword.DRA_full}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data){: new_window}
+ * [GitHub Enterprise on IBM Cloud](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data)
+ * [{{site.data.keyword.DRA_full}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data)
  
 A IBM não gerencia dados no serviço {{site.data.keyword.contdelivery_short}}. Antes de deixar o serviço {{site.data.keyword.contdelivery_short}} que está hospedado no {{site.data.keyword.Bluemix_notm}} Public, deve-se excluir os seus próprios dados.
 {: important}
@@ -53,7 +54,7 @@ A estrutura de login do IBM Cloud fornece a opção de trabalhar em diferentes c
  * Conta corporativa
  * Conta individual corporativa
 
-###Contas pessoais
+### Contas pessoais
 
 Geralmente, cada usuário tem sua própria conta que é a sua conta pessoal. É possível identificar facilmente sua conta pessoal, pois geralmente contém seu nome, por exemplo, *Conta do John Smith*. 
 
@@ -61,13 +62,13 @@ Você tem direitos totais sobre todos os objetos que são criados em sua conta p
 
 Se você tiver permissão para criar um objeto em uma conta, também terá o direito de modificá-lo e de excluí-lo, independentemente da conta na qual o objeto está armazenado. Quando dois usuários colaboram, eles geralmente compartilham uma conta pessoal.
 
-###Contas corporativas
+### Contas corporativas
 
 Uma conta corporativa é configurada por sua empresa. Geralmente, você é incluído automaticamente na conta, em vez de ser convidado. Contas corporativas fornecem aos usuários um local para trabalho, comunicação e compartilhamento de recursos e cobrança; no entanto, isso é apenas uma convenção. Na realidade, uma conta corporativa não é diferente de uma conta pessoal. Os objetos que são criados em uma conta corporativa estão associados à conta e os usuários podem ser convidados para a conta.
 
 Equipes de pessoas que trabalham para uma empresa frequentemente colaboram usando uma conta corporativa.
 
-###Contas corporativas individuais
+### Contas corporativas individuais
 
 Ao trabalhar para uma empresa, o trabalho em sua conta pode pertencer legalmente à empresa. Muitos usuários que trabalham para uma empresa têm uma conta individual corporativa. Se você efetua login em sua conta usando as credenciais que contêm o nome de sua empresa e também têm o que parece ser uma conta pessoal, o trabalho dentro de sua conta pessoal pode pertencer à empresa.
 
@@ -82,13 +83,13 @@ Independentemente do tipo de conta do IBM Cloud que é usado, se você tiver dir
 
 Antes de excluir dados de uma conta, determine se é uma conta pessoal ou uma conta individual corporativa.
 
-###Conta pessoal
+### Conta pessoal
 
 Se você possui uma conta pessoal, é possível fazer mudanças e excluir seus dados. Se você compartilha sua conta com outro usuário, você possui os dados, mas talvez você queira entrar em contato com esse usuário sobre o trabalho compartilhado. 
 
-Se você não pode efetuar login na sua conta do IBM Cloud, [entre em contato com o Suporte IBM ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/support){:new_window}
+Se você não puder efetuar login em sua conta do IBM Cloud, [entre em contato com o Suporte IBM](https://www.ibm.com/cloud/support){: external}.
  
-###Conta individual corporativa
+### Conta individual corporativa
 
 Se você possui uma conta individual corporativa, deve-se coordenar quaisquer mudanças com sua empresa e com outros membros de sua equipe. Exclua seus dados pessoais, independentemente se eles estão armazenados em uma conta corporativa ou em uma conta corporativa individual. Certifique-se de que você não exclua o trabalho que você compartilhou com outros usuários.
 
@@ -107,14 +108,14 @@ O {{site.data.keyword.webide}} fornece uma área de trabalho pessoal na nuvem. �
 Antes de excluir os seus dados do {{site.data.keyword.webide}}, talvez você queira exportar o seu trabalho. Depois de excluir suas áreas de trabalho, elas são removidas do {{site.data.keyword.contdelivery_short}} e todos os arquivos são excluídos.
 {: important}
 
-###Exportando uma área de trabalho do Web IDE
+### Exportando uma área de trabalho do Web IDE
 
 Para exportar uma área de trabalho do {{site.data.keyword.webide}}:
 
 1. Selecione **Arquivo > Exportar > Zip**.
 1. Repita para cada área de trabalho que você deseja exportar.
 
-###Excluindo suas áreas de trabalho do Web IDE
+### Excluindo suas áreas de trabalho do Web IDE
 
 Para excluir suas áreas de trabalho do {{site.data.keyword.webide}}, incluindo todos seus dados pessoais:
 
@@ -138,11 +139,11 @@ Seus perfis e configurações da conta, projetos pessoais, grupos e fragmentos e
 Antes de excluir a sua conta do Git, exclua os seus dados pessoais de outros projetos. Depois de excluir sua conta do Git, pode ser difícil ou impossível localizar todos os projetos para os quais você contribuiu.
 {: tip}
 
-###Projetos pessoais e compartilhados
+### Projetos pessoais e compartilhados
 
 É possível convidar outros usuários para colaborar em projetos. Os projetos Git que você cria dentro de sua conta são chamados de projetos pessoais. Também é possível criar grupos do Git nos quais os projetos podem ser de propriedade de múltiplos proprietários do Git. É possível criar novos projetos para o grupo ou transferir a propriedade de projetos pessoais para o grupo. Um grupo Git é frequentemente usado para representar uma conta corporativa do IBM Cloud para indicar a propriedade de projetos pela corporação.
 
-###Exportando um projeto do Git Repos and Issue Tracking
+### Exportando um projeto do Git Repos and Issue Tracking
 
 Antes de excluir um projeto do {{site.data.keyword.gitrepos}}, é possível exportar o projeto para arquivá-lo. 
 
@@ -153,14 +154,14 @@ Antes de excluir um projeto do {{site.data.keyword.gitrepos}}, é possível expo
 
 Depois que o projeto é arquivado, ele pode ser importado para outra instância do GitLab. 
 
-###Excluindo sua conta do Git Repos and Issue Tracking
+### Excluindo sua conta do Git Repos and Issue Tracking
 
 É possível excluir sua conta do {{site.data.keyword.gitrepos}} e tudo o que pertence a essa conta.
 
-1. No painel Configurações do usuário do {{site.data.keyword.gitrepos}}, na página [Conta ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, na seção Excluir conta, clique em **Excluir conta**.
+1. No painel Configurações do usuário do {{site.data.keyword.gitrepos}}, na [página Conta](https://us-south.git.cloud.ibm.com/profile/account){: external}, na seção Excluir conta, clique em **Excluir conta**.
 1. Todos os projetos do Git, incluindo repositórios e problemas são excluídos. Você também é removido de quaisquer grupos do {{site.data.keyword.gitrepos}} aos quais você pertence.
 
-Após a sua conta ser excluída, algum conteúdo permanecerá. Esse conteúdo será designado para um Usuário fantasma em todo o sistema Para obter mais informações sobre como excluir uma conta do {{site.data.keyword.gitrepos}}, consulte [Excluindo uma conta do usuário ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}.
+Após a sua conta ser excluída, algum conteúdo permanecerá. Esse conteúdo será designado para um Usuário fantasma em todo o sistema Para obter mais informações sobre excluir uma conta do {{site.data.keyword.gitrepos}}, consulte [Excluindo uma conta do usuário](https://us-south.git.cloud.ibm.com/profile/account/delete_account#associated-records){: external}.
 {: tip}
 
 O {{site.data.keyword.gitrepos}} usa um mecanismo de conexão única que cria automaticamente uma conta do Git correspondente para a sua conta do IBM Cloud na primeira vez que você acessar a integração da ferramenta. Depois de excluir sua conta, não acesse o {{site.data.keyword.gitrepos}}. Se você acessar o {{site.data.keyword.gitrepos}} novamente, uma nova conta será criada automaticamente, que deverá ser excluída.
@@ -180,7 +181,7 @@ Os estágios de pipeline podem incluir dados pessoais, como credenciais na forma
 
   ![Menu de estágios](images/pipeline_stages.png)
 
-###Modificando um Estágio de Pi
+### Modificando um Estágio de Pi
 
 Para modificar um estágio de pipeline:
 
@@ -193,7 +194,7 @@ Para modificar um estágio de pipeline:
   
 1. Excluir uma tarefa do estágio de pipeline. Na guia **TAREFAS**, selecione a tarefa que deseja excluir e clique em **Remover**.
  
-###Exportando um Estágio de Pipel
+### Exportando um Estágio de Pipel
 
 Para exportar a definição para um pipeline inteiro, anexe `/yaml` à URL do pipeline:
 
@@ -211,7 +212,7 @@ Para exportar artefatos e logs para um estágio de pipeline:
 1. Clique em **DOWNLOAD** > **Artefatos** para exportar os artefatos para a compilação selecionada.
 1. Clique em **DOWNLOAD** > **Logs** para exportar os logs para a compilação selecionada.  
 
-###Excluindo um Estágio de Pipel
+### Excluindo um Estágio de Pipel
 
 Para excluir um estágio de pipeline:
 
@@ -229,7 +230,7 @@ Quando uma integração de ferramenta é criada, o {{site.data.keyword.contdeliv
 
 Coordene com outros membros de sua equipe antes de excluir integrações de ferramentas ou cadeias de ferramentas compartilhadas.
 
-###Modificando e excluindo integrações de ferramentas
+### Modificando e excluindo integrações de ferramentas
 
 Ao criar uma integração de ferramenta, você é obrigado a fornecer credenciais do usuário e outras informações de conta que pertençam à integração. Se você usou suas próprias credenciais pessoais e informações de conta, substitua essas informações por valores diferentes ou exclua a integração de ferramenta.
 
@@ -246,7 +247,7 @@ Para excluir uma integração de ferramenta:
 1. Para excluir uma integração de ferramenta por meio de sua cadeia de ferramentas, clique em **Excluir**.
 1. Confirme clicando em **Excluir**.
 
-###Excluindo cadeias de ferramentas
+### Excluindo cadeias de ferramentas
 
 Quando você excluir uma cadeia de ferramentas, a exclusão não poderá ser desfeita.
 
@@ -258,7 +259,7 @@ Quando você excluir uma cadeia de ferramentas, a exclusão não poderá ser des
 Quando você excluir uma cadeia de ferramentas, os repositórios do {{site.data.keyword.gitrepos}} não serão excluídos. Os usuários que tiverem acesso àqueles repositórios poderão ter cópias dos dados se eles executaram um `git clone` ou criaram uma área de trabalho {{site.data.keyword.webide}}. Para certificar-se de que todos os dados sejam excluídos, deve-se solicitar que esses usuários excluam as suas cópias dos dados.
 {: tip}
 
-###Excluindo todas as cadeias de ferramentas
+### Excluindo todas as cadeias de ferramentas
 
 Não é possível excluir todas as cadeias de ferramentas dentro de um grupo de recursos ou uma organização ao mesmo tempo. Deve-se excluir cada cadeia de ferramentas por vez.
 

@@ -21,7 +21,7 @@ subcollection: ContinuousDelivery
 
 <!-- Name your file `at-events.md` and include it in the Reference nav group in your toc file. -->
 
-# {{site.data.keyword.cloudaccesstrailshort}}  eventos
+# Eventos do {{site.data.keyword.cloudaccesstrailshort}}
 {: #at_events}
 
 Use o serviço {{site.data.keyword.cloudaccesstrailfull}} para controlar como os usuários e aplicativos interagem com o serviço {{site.data.keyword.contdelivery_short}} no {{site.data.keyword.Bluemix}}. 

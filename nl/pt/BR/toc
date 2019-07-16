@@ -1,12 +1,12 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="ContinuousDelivery" audience="service" arm="1155710" href="/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started" path="services/ContinuousDelivery"}
-Entrega Contínua
+{: .toc subcollection="ContinuousDelivery" category="devops" audience="service" arm="1155710" href="/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started" path="services/ContinuousDelivery"}
+Continuous Delivery
 
     {: .navgroup id="learn"}
     index.md
-    cd_overview.md
+    [Aprenda sobre o Continuous Delivery](https://www.ibm.com/cloud/continuous-delivery)
     cd_about.md
     devops_intro.md
     garage_method.md
@@ -25,8 +25,8 @@ Entrega Contínua
         toolchains_working.md
         toolchains_using.md
         toolchains_integrations.md
-	      deploy_button.md
-	      toolchains_custom.md
+        deploy_button.md
+        [Criando modelos de cadeias de ferramentas customizados](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates)
 
     {: .topicgroup}
     Delivery Pipeline
@@ -36,6 +36,7 @@ Entrega Contínua
         pipeline_deploy_var.md
         pipeline_versioned_base_images.md
         pipeline_custom_docker_images.md
+        private_workers.md
 
     {: .topicgroup}
     Eclipse Orion Web IDE
@@ -47,14 +48,15 @@ Entrega Contínua
     git_locally.md
     di_working.md
     cd_personal_data.md
-    toolchains_post_upgrade.md
     
     {: .topicgroup}
     Segurança
         cd_iam_security.md
         toolchains_iam_security.md
         cd_data_security.md
-    {: .navgroup-end} 
+        
+    ha-dr.md
+    {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [Abrir SDK da cadeia de ferramentas](https://github.com/open-toolchain/sdk/wiki)
@@ -66,4 +68,3 @@ Entrega Contínua
     ts_index.md
     troubleshoot_cd.md
     {: .navgroup-end}
-    

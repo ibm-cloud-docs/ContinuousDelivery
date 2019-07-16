@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-06-20"
 
 keywords: troubleshoot, IBM Cloud Continuous Delivery
 
@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -103,9 +104,8 @@ Em vez de criar uma integração de ferramenta do {{site.data.keyword.gitrepos}}
 
 1. Se você desejar criar um repositório público no servidor, limpe a caixa de seleção **Tornar este repositório privado**.
 1. Se você desejar usar o Issues do GitLab para rastreamento de problemas, marque a caixa de seleção **Ativar o GitLab Issues**.
-1. Se desejar rastrear as mudanças de implementação de código criando tags e comentários sobre confirmações, além de rótulos e comentários sobre problemas referenciados pelas confirmações, marque a caixa de seleção **Rastrear mudanças de implementação de código**. Para obter mais informações, veja [Rastrear onde seu código é implementado com cadeias de ferramentas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
-1. Clique em
-**Criar integração**.
+1. Se desejar rastrear as mudanças de implementação de código criando tags e comentários sobre confirmações, além de rótulos e comentários sobre problemas referenciados pelas confirmações, marque a caixa de seleção **Rastrear mudanças de implementação de código**. Para obter mais informações, consulte [Rastrear onde seu código está implementado com cadeias de ferramentas](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}.
+1. Clique em **Criar integração**.
 
 Para obter mais informações sobre como configurar uma integração de ferramenta do GitLab, consulte [Configurando o GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab).
 
@@ -129,9 +129,9 @@ Caso o repositório tenha que ser privado, seu proprietário poderá conceder ac
 
 Depois de ter um token de acesso pessoal, será possível criar uma URL para acessar o repositório de outras regiões. Enquanto você estiver configurando a integração de ferramenta, no campo **URL do repositório de origem**, atualize a URL do repositório para usar seu nome de usuário e token de acesso.
 
-`https://user:XXXXXXX@git.ng.bluemix.net/group/node-hello-world`
+`https://user:XXXXXXX@us-south.git.cloud.ibm.com/group/node-hello-world`
 
-Em que `user` é o nome do usuário do GitLab, `XXXXXXX` é o token de acesso, [`group`![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git.ng.bluemix.net/help/user/group/index.md){:new_window} é o grupo no qual o repositório está armazenado e `node-hello-world` é o nome do repositório.
+Em que `user` é seu nome de usuário do GitLab, `XXXXXXX` é o token de acesso, [`group`](https://us-south.git.cloud.ibm.com/help/user/group/index.md){: external} é o grupo em que o repositório está armazenado e `node-hello-world` é o nome do repositório.
 
 Se o seu repositório do GitLab não estiver localizado em um grupo do GitLab, o valor de `group` será o mesmo que seu nome do usuário.
 {: tip}
@@ -178,13 +178,18 @@ Use qualquer um dos métodos a seguir para resolver esse problema:
 
 * Se a sua chave privada não estiver no local padrão, use o comando a seguir para especificá-la em uma variável de ambiente:
 
-`GIT_SSH_COMMAND='ssh -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+```
+  GIT_SSH_COMMAND='ssh -i/path/to/private_key_file' git clone git@host:owner/repo.git
+```
 
 * Para depurar esse problema usando informações de conexão, inclua o sinalizador -v ou -vvv na variável de ambiente `GIT_SSH_COMMAND`:
 
-`GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git`
-
-`GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+```
+  GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git
+```
+```
+  GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git
+```
 
 
 ## Tentei incluir um usuário no meu projeto do GitLab por meio do e-mail, mas ele não recebeu o convite. Como posso incluí-lo em meu projeto?
@@ -196,7 +201,7 @@ O convite pode ser bloqueado pelo e-mail do usuário.
 Convidei um usuário para o meu projeto do GitLab usando seu endereço de e-mail que está listado no {{site.data.keyword.gitrepos}}, mas ele não recebeu o e-mail.
 {: tsSymptoms}
    
-O e-mail pode ser bloqueado na caixa de entrada do usuário por filtros de spam.
+O e-mail pode ser bloqueado na caixa de entrada do usuário por filtros de spam. 
 {: tsCauses}
 
 É possível usar qualquer um dos métodos a seguir para resolver esse problema:
@@ -218,7 +223,7 @@ Quando eu tento criar uma cadeia de ferramentas por meio de um modelo que estou 
 
 `This pipeline was created, but might be missing jobs, stages, or other resources. You can use this pipeline, or if you prefer, you can delete it and create another pipeline.`
 
-Normalmente, esse problema é causado por um erro em sua definição de pipeline.yaml.
+Geralmente, esse problema é causado por um erro em sua definição de pipeline.yaml.
 {: tsCauses}
    
 É possível usar qualquer um dos métodos a seguir para depurar esse erro:
@@ -227,6 +232,42 @@ Normalmente, esse problema é causado por um erro em sua definição de pipeline
 * Use a interface com o usuário do pipeline para criar um pipeline de exemplo que replique o pipeline que você está tentando construir com seu modelo. Anexe `/yaml` à URL do pipeline para gerar um arquivo pipeline.yaml semelhante que pode ser usado para procurar diferenças óbvias. Por exemplo, `https://cloud.ibm.com/devops/pipelines/<your pipeline id>/yaml?env_id=<your region>`.
 
 * Use o mecanismo de criação da cadeia de ferramentas sem interface com o usuário. Na página **Criar uma cadeia de ferramentas**, abra o depurador e avalie a expressão `window.Testflags = {nocreate: 1}`. Quando você clica em **Criar uma cadeia de ferramentas** nesse modo, a cadeia de ferramentas não é criada. Em vez disso, as informações que são passadas para a API são retornadas para o console no qual é possível revisá-las.
+
+
+## Eu tentei implementar no Kubernetes usando o Delivery Pipeline, por que estou obtendo um erro sobre um objeto inválido? 
+{: troubleshoot-cd-pipeline-kubernetes}
+{: troubleshoot}
+
+A imagem base de pipeline 1.0 inclui kubectl v1.14.2. Você poderá receber um erro se o cluster Kubernetes ao qual você estiver se conectando estiver executando uma versão mais recente do Kubernetes. 
+
+Quando eu tento implementar no Kubernetes usando o Delivery Pipeline, eu recebo a mensagem de erro a seguir:
+{: tsSymptoms}
+
+`error:SchemaeError(io.k8s.api.core.v1.SecretProjection): invalid object doesn't have additional properties`
+
+Geralmente, esse problema é causado quando a versão do comando kubectl em sua imagem base do pipeline é incompatível com a versão do Kubernetes que está em execução no cluster.
+{: tsCauses}
+   
+É possível usar qualquer um dos métodos a seguir para resolver esse problema:
+{: tsResolve}
+
+* Use uma versão de imagem base de pipeline mais recente, que, quando criada, inclua a versão liberada atualmente do kubectl. Para obter informações sobre como especificar a versão de imagem mais recente, consulte [Especificando a versão de imagem](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline_versioned_base_images#specify_base_image_version).
+
+* Assegure-se de que sua tarefa de pipeline esteja executando a versão correta de kubectl. Por exemplo, inclua as linhas a seguir no início de sua tarefa de pipeline para executar kubectl v1.14.2:
+
+```
+  curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.14.2/bin/linux/amd64/kubectl
+  chmod +x ./kubectl
+  sudo mv ./kubectl /usr/local/bin/kubectl
+```
+
+Se você estiver executando kubectl v1.14.2 por meio de uma imagem base de pipeline 1.0, a opção sudo não estará disponível. Substitua a linha sudo pelo comando a seguir para incluir kubectl em seu caminho:
+```
+   mkdir ~/.bin && export PATH=~/.bin:$PATH && mv ./kubectl ~/.bin/kubectl 
+```
+
+Para obter mais informações sobre como acessar a versão exata do kubectl de que você precisa, consulte [Instalar e configurar kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux){: external}.
+{: tip}
 
 
 ## Eu configurei uma integração de ferramenta para minha cadeia de ferramentas, por que ela não estava configurada?
