@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-14"
 
 keywords: ADD STAGE, Run Stage icon, JOBS tab
 
@@ -119,7 +119,7 @@ Vous pouvez télécharger le fichier journal d'un travail de pipeline à partir 
 1. Utilisez le `PIPELINE_LOG_URL` dans un travail ultérieur de la même étape pour télécharger le fichier journal afin de l'exporter vers un système différent. Utilisez un jeton bearer IBM Cloud pour accéder au fichier journal.
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
@@ -160,7 +160,7 @@ Vous pouvez télécharger les artefacts pour un travail de génération de pipel
 1. Utilisez le `PIPELINE_ARTIFACT_URL` dans un travail ultérieur de la même étape pour télécharger les artefacts afin de les exporter vers un système différent. Utilisez un jeton bearer IBM Cloud pour accéder aux artefacts.
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )

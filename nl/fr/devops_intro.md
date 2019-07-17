@@ -2,7 +2,7 @@
 
 Copyright:
  years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-18"
 
 keywords: IBM Cloud DevOps, enterprise application Developer, IBM Cloud Garage Method
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -26,9 +27,7 @@ subcollection: ContinuousDelivery
 
 Pour pouvoir fournir des logiciels et des services à la vitesse exigée par le marché, les équipes doivent pouvoir itérer et expérimenter rapidement. Elles doivent déployer de nouvelles versions de manière fréquente, en fonction des retours et des données. Les équipes de développement de cloud les plus performantes adoptent la culture et les pratiques modernes de DevOps, utilisent des architectures natives du cloud et assemblent des chaînes d'outils à partir des meilleurs outils de leur catégorie afin de maximiser leur productivité. Ici, la rapidité est primordiale pour se démarquer de la concurrence.
 
-La méthode 
-<a href="https://www.ibm.com/cloud/garage">IBM Cloud Garage Method <img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>
-décrit les architectures, les pratiques et les chaînes d'outils DevOps conçues pour permettre aux entreprises d'innover à grande échelle. Utilisez {{site.data.keyword.Bluemix_notm}} Garage Method pour transformer votre culture et utiliser les outils efficacement et rapidement.
+[IBM Cloud Garage Method](https://www.ibm.com/cloud/garage){:external} décrit les architectures, les pratiques et les chaînes d'outils DevOps conçues pour permettre aux entreprises d'innover à grande échelle. Utilisez {{site.data.keyword.Bluemix_notm}} Garage Method pour transformer votre culture et utiliser les outils efficacement et rapidement.
 
 Le développeur d'applications d'une entreprise peut commencer à créer et à déployer des applications natives pour le cloud en quelques minutes. Il peut utiliser un ensemble complet de services pour construire des applications cognitives, des IoT, des chaînes de blocs, des applications mobiles et des applications à forte intensité de données. Avec IBM Cloud App Service, un développeur peut créer un projet, choisir un kit de démarrage d'application et déployer une application prête à la production sur {{site.data.keyword.Bluemix_notm}}. La technologie de génération de code de la plateforme crée une application de démarrage dans la langue et l'infrastructure préférées du développeur, qui est adaptée à ses besoins et à ses cas d'utilisation. Tous les services requis à l'appui du cas d'utilisation, tels que Watson Conversation, sont mis à disposition automatiquement. Les développeurs peuvent déboguer et tester sur leur poste de travail local ou dans le cloud, et utiliser une chaîne d'outils DevOps pour collaborer avec les autres et automatiser le processus de livraison.
 

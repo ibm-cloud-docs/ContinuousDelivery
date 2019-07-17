@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-06-20"
 
 keywords: troubleshoot, IBM Cloud Continuous Delivery
 
@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -78,7 +79,7 @@ Au lieu de créer une intégration d'outil dans {{site.data.keyword.gitrepos}}, 
 1. Sur le tableau de bord DevOps, sur la page Chaînes d'outils, cliquez sur la chaîne d'outils à laquelle vous souhaitez ajouter cette intégration. Vous pouvez également, depuis la page de présentation de l'application, sur la carte Continuous delivery, cliquer sur **Afficher la chaîne d'outils**, puis sur **Présentation**.
 1. Cliquez sur **Ajouter un outil**.
 1. Dans la section Intégrations d'outils, cliquez sur **GitLab**.
-1. Cliquez sur le serveur GitLab que vous souhaitez utiliser. Si le serveur GitLab où réside le référentiel auquel vous souhaitez accéder n'apparaît pas dans cette liste, ajoutez un serveur personnalisé : 
+1. Cliquez sur le serveur GitLab que vous souhaitez utiliser. Si le serveur GitLab où réside le référentiel auquel vous souhaitez accéder n'apparaît pas dans cette liste, ajoutez un serveur personnalisé :
 
  a. Cliquez sur **Ajouter un serveur personnalisé**.
 
@@ -101,7 +102,7 @@ Au lieu de créer une intégration d'outil dans {{site.data.keyword.gitrepos}}, 
 
 1. Si vous souhaitez créer un référentiel public sur le serveur, désélectionnez la case **Rendre ce référentiel privé**.
 1. Si vous souhaitez utiliser GitLab Issues pour le suivi des problèmes, sélectionnez la case **Activer GitLab Issues**.
-1. Si vous voulez suivre le déploiement des modifications du code en créant des étiquettes et des commentaires sur les validations, ainsi que des libellés et des commentaires sur les problèmes référencés par les validations, cochez la case **Suivi du déploiement des modifications du code**. Pour plus d'informations, voir [Suivi de l'emplacement du déploiement du code avec des chaînes d'outils ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Si vous voulez suivre le déploiement des modifications du code en créant des étiquettes et des commentaires sur les validations, ainsi que des libellés et des commentaires sur les problèmes référencés par les validations, cochez la case **Suivi du déploiement des modifications du code**. Pour plus d'informations, voir [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}.
 1. Cliquez sur **Créer une intégration**.
 
 Pour en savoir plus sur la configuration d'une intégration d'outil GitLab, voir [Configuration de GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab).
@@ -126,9 +127,9 @@ Si le référentiel doit être privé, le propriétaire du référentiel peut y 
 
 Une fois que vous avez un jeton d'accès personnel, vous pouvez créer une URL pour accéder au référentiel à partir d'autres régions. Pendant que vous configurez l'intégration d'outil, dans la zone **URL du référentiel source**, mettez à jour l'URL du référentiel avec votre nom d'utilisateur et votre jeton d'accès.
 
-`https://user:XXXXXXX@git.ng.bluemix.net/group/node-hello-world`
+`https://user:XXXXXXX@us-south.git.cloud.ibm.com/group/node-hello-world`
 
-où `user` est votre nom d'utilisateur GitLab, `XXXXXXX` est le jeton d'accès, [`group` ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/help/user/group/index.md){:new_window} est le groupe où le référentiel est stocké et `node-hello-world` est le nom du référentiel.
+Où `user` est votre nom d'utilisateur GitLab, `XXXXXXX` est le jeton d'accès, [`group`](https://us-south.git.cloud.ibm.com/help/user/group/index.md){: external} est le groupe dans lequel le référentiel est stocké et `node-hello-world` est le nom du référentiel.
 
 Si votre référentiel GitLab n'est pas situé dans un groupe GitLab, la valeur de `group` est la même que votre nom d'utilisateur.
 {: tip}
@@ -175,13 +176,18 @@ Utilisez l'une des méthodes suivantes pour résoudre ce problème :
 
 * Si votre clé privée n'est pas dans l'emplacement par défaut, utilisez la commande suivante pour la spécifier dans une variable d'environnement :
 
-`GIT_SSH_COMMAND='ssh -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+```
+  GIT_SSH_COMMAND='ssh -i/path/to/private_key_file' git clone git@host:owner/repo.git
+```
 
 * Pour résoudre ce problème en utilisant les informations de connexion, ajoutez l'indicateur -vv ou -vvv à la variable d'environnement `GIT_SSH_COMMAND` :
 
-`GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git`
-
-`GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+```
+  GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git
+```
+```
+  GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git
+```
 
 
 ## J'ai essayé d'ajouter un utilisateur à mon projet GitLab par email, mais il n'a pas reçu l'invitation. Comment puis-je l'ajouter à mon projet ?
@@ -193,7 +199,7 @@ L'invitation a pu être bloquée par la messagerie de l'utilisateur.
 J'ai invité un utilisateur à mon projet GitLab en utilisant son adresse e-mail qui est listée dans {{site.data.keyword.gitrepos}}, mais il n'a pas reçu l'e-mail.
 {: tsSymptoms}
    
-L'e-mail a peut-être été bloqué par le filtre antispam de la boîte de réception de l'utilisateur.
+L'e-mail a peut-être été bloqué par le filtre antispam de la boîte de réception de l'utilisateur. 
 {: tsCauses}
 
 Vous pouvez utiliser l'une des méthodes suivantes pour résoudre ce problème :
@@ -224,6 +230,42 @@ Vous pouvez utiliser les méthodes suivantes pour corriger cette erreur :
 * Utilisez l'interface utilisateur du pipeline pour créer un exemple de pipeline qui réplique le pipeline que vous essayez de construire avec votre modèle. Ajoutez `/yaml` à l'URL du pipeline pour générer un fichier pipeline.yaml similaire que vous pouvez utiliser pour rechercher les différences évidentes. Par exemple, `https://cloud.ibm.com/devops/pipelines/<your pipeline id>/yaml?env_id=<your region>`.
 
 * Utilisez le mécanisme de création de chaîne d'outils sans interface graphique. Sur la page **Créer une chaîne d'outils**, ouvrez le débogueur et évaluez l'expression `window.Testflags = {nocreate: 1}`. Lorsque vous cliquez sur **Créer une chaîne d'outils** dans ce mode, la chaîne d'outils n'est pas créée. Au lieu de cela, les informations qui sont transmises à l'API sont renvoyées à la console où vous pouvez les examiner.
+
+
+## J'ai essayé de déployer Kubernetes à l'aide de Delivery Pipeline, pourquoi est-ce que j'obtiens une erreur au sujet d'un objet non valide ? 
+{: troubleshoot-cd-pipeline-kubernetes}
+{: troubleshoot}
+
+L'image de base de pipeline 1.0 inclut kubectl v1.14.2. Il est possible que vous obteniez une erreur si le cluster Kubernetes auquel vous vous connectez utilise une version plus récente de Kubernetes. 
+
+Lorsque je tente de déployer dans Kubernetes à l'aide de Delivery Pipeline, je reçois le message d'erreur suivant :
+{: tsSymptoms}
+
+`error:SchemaeError(io.k8s.api.core.v1.SecretProjection): invalid object doesn't have additional properties`
+
+Ce problème se produit généralement lorsque la version de la commande kubectl dans votre image de base de pipeline n'est pas compatible avec la version de Kubernetes utilisée dans le cluster.
+{: tsCauses}
+   
+Vous pouvez utiliser l'une des méthodes suivantes pour résoudre ce problème :
+{: tsResolve}
+
+* Utilisez une version plus récente de l'image de base de pipeline, qui inclut la version en cours de kubectl lorsqu'elle est créée. Pour obtenir des informations sur la manière dont vous pouvez spécifier la dernière version d'image, voir [Spécification de la version d'image](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline_versioned_base_images#specify_base_image_version).
+
+* Vérifiez que votre travail de pipeline utilise la version correcte de kubectl. Par exemple, ajoutez les lignes suivantes au début de votre travail de pipeline pour exécuter kubectl v1.14.2 :
+
+```
+  curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.14.2/bin/linux/amd64/kubectl
+  chmod +x ./kubectl
+  sudo mv ./kubectl /usr/local/bin/kubectl
+```
+
+Si vous exécutez kubectl v1.14.2 à partir d'une image de base de pipeline de version 1.0, l'option sudo n'est pas disponible. Remplacez la ligne sudo par la commande suivante pour ajouter kubectl à votre chemin d'accès :
+```
+   mkdir ~/.bin && export PATH=~/.bin:$PATH && mv ./kubectl ~/.bin/kubectl 
+```
+
+Pour en savoir plus sur l'accès à la version exacte de kubectl dont vous avez besoin, voir [Installation et configuration de kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux){: external}.
+{: tip}
 
 
 ## J'ai configuré une intégration d'outil pour ma chaîne d'outils, pourquoi n'a-t-elle pas été configurée ?

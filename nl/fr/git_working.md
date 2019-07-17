@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-20"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -23,7 +24,7 @@ subcollection: ContinuousDelivery
 # {{site.data.keyword.gitrepos}}
 {: #git_working}
 
-Collaborez avec votre équipe et gérez votre code source avec un référentiel Git et le dispositif de suivi des problèmes qui est hébergé par IBM et basé sur [GitLab Community Edition ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://about.gitlab.com/){:new_window}.
+Collaborez avec votre équipe et gérez votre code source avec un référentiel Git et un dispositif de suivi des problèmes hébergé par IBM et basé sur [GitLab Community Edition](https://about.gitlab.com/){: external}.
 {: shortdesc}
 
 Invitez uniquement les personnes avec qui vous avez une relation personnelle ou d'affaires à collaborer à un projet. Les utilisateurs qui utilisent une invitation à un référentiel Git à des fins autres que pour collaborer sur un projet peuvent voir leur accès au service suspendu ou révoqué.
@@ -48,8 +49,7 @@ Cette intégration d'outil étant basée sur GitLab Community Edition et héberg
 ## Utilisation de {{site.data.keyword.gitrepos}} localement
 {: #git_locally}
 
-Vous pouvez accéder localement aux référentiels Git stockés dans {{site.data.keyword.gitrepos}}. Pour savoir comment configurer un référentiel Git localement, voir [Start using Git on the command line ![Icône delien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
-
+Vous pouvez accéder localement aux référentiels Git stockés dans {{site.data.keyword.gitrepos}}. Pour savoir comment configurer un référentiel Git localement, voir [Start using Git on the command line](https://us-south.git.cloud.ibm.com/help/gitlab-basics/start-using-git){: external}.
 
 {{site.data.keyword.gitrepos}} prend uniquement en charge les connexions HTTPS qui utilisent TLS1.2. Si vous utilisez Eclipse pour vous connecter, il se peut que vous deviez indiquer ce protocole pour votre version de Java&trade; en ajoutant `-Dhttps.protocols=TLSv1.2` à votre fichier eclipse.ini, puis en redémarrant Eclipse.
 {: tip}
@@ -65,21 +65,21 @@ Votre ID de connexion et votre mot de passe {{site.data.keyword.Bluemix_notm}} s
 Pour vous authentifier auprès de votre référentiel Git via HTTPS, vous devez créer un jeton d'accès personnel.
 {: tip}
 
-1. Dans le tableau de bord {{site.data.keyword.gitrepos}} User Settings, sur la [page Access Tokens ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, entrez le nom de l'application pour laquelle vous souhaitez créer un jeton d'accès. Par exemple, `Git CLI`.
+1. Sur le tableau de bord Paramètres utilisateurs de {{site.data.keyword.gitrepos}}, sur la [page Jetons d'accès](https://us-south.git.cloud.ibm.com/profile/personal_access_tokens){: external}, entrez le nom de l'application pour laquelle vous souhaitez créer un jeton d'accès. Par exemple, `Git CLI`.
 1. Facultatif : choisissez une date d'expiration pour le jeton d'accès.
 1. Cochez la case **api** pour créer un jeton d'accès personnel qui utilise l'API comme portée.
-1. Cliquez sur **Create Personal Access Token**. Notez votre jeton d'accès dans un emplacement sécurisé en vue d'une utilisation ultérieure.
-1. Sur la [page Account ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, dans la section Change username, recherchez votre nom d'utilisateur {{site.data.keyword.gitrepos}}. Votre nom d'utilisateur apparaît également en tant que premier segment de l'URL des référentiels Git personnels que vous créez.
+1. Cliquez sur **Créer un jeton d'accès personnel**. Notez votre jeton d'accès dans un emplacement sécurisé en vue d'une utilisation ultérieure.
+1. Sur la [page Compte](https://us-south.git.cloud.ibm.com/profile/account){: external}, dans la section Changer le nom d'utilisateur, recherchez votre nom d'utilisateur {{site.data.keyword.gitrepos}}. Votre nom d'utilisateur apparaît également en tant que premier segment de l'URL des référentiels Git personnels que vous créez.
 1. Utilisez votre nom d'utilisateur {{site.data.keyword.gitrepos}} et votre jeton d'accès personnel pour vous authentifier auprès de votre référentiel Git à partir d'un client Git externe.
 
-Pour en savoir plus, voir [Personal access tokens ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}.
+Pour en savoir plus, voir [Jetons d'accès personnels](https://us-south.git.cloud.ibm.com/help/api/README.html#personal-access-tokens){: external}.
 
 ### Création d'une clé SSH  
 {:create_ssh }
 
-Pour créer une clé SSH, voir [How to create your SSH Keys ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){:new_window}. L'accès à vos référentiels à l'aide d'une authentification SSH peut nécessiter une configuration supplémentaire pour les proxy et les pare-feux.
+Pour créer une clé SSH, voir [Comment créer vos clés SSH](https://us-south.git.cloud.ibm.com/help/gitlab-basics/create-your-ssh-keys){: external}. L'accès à vos référentiels à l'aide d'une authentification SSH peut nécessiter une configuration supplémentaire pour les proxy et les pare-feux.
 
-Pour en savoir plus, voir [SSH ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/help/ssh/README){:new_window}.
+Pour en savoir plus, voir [SSH](https://us-south.git.cloud.ibm.com/help/ssh/README){: external}.
 
 ## Limites de taille des référentiels et des fichiers physiques
 {: #git_limits}
@@ -89,8 +89,8 @@ La taille des fichiers est strictement limitée à 100 Mo. La limite de taille s
 ## Suivre un tutoriel : {{site.data.keyword.gitrepos}}
 {: #git_tutorials}
 
-Consultez l'un des tutoriels suivants sur [IBM&reg; Cloud Garage Method ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage){:new_window} :
+Consultez l'un des tutoriels suivants sur [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external} :
 
-  * [Création et utilisation de votre propre chaîne d'outils à l'aide de la chaîne d'outils "Développer une application Cloud Foundry"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}. Apprenez à créer une chaîne d'outils ouverte à partir d'un modèle et utilisez-la pour distribuer en continu une application "Hello World".
+  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}. Apprenez à créer une chaîne d'outils ouverte à partir d'un modèle et utilisez-la pour distribuer en continu une application "Hello World".
 
-  * [Utilisation de la chaîne d'outils "Développer et tester des microservices sur Cloud Foundry" ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}. Apprenez à créer une chaîne d'outils à partir d'un modèle avec trois microservices et utilisez-la pour distribuer un magasin en ligne en continu.
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}. Apprenez à créer une chaîne d'outils à partir d'un modèle avec trois microservices et utilisez-la pour distribuer un magasin en ligne en continu.

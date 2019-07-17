@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud button, yml file, build file
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -32,7 +33,7 @@ Lorsqu'un utilisateur clique sur votre bouton, les actions suivantes se produise
 
 3. Une chaîne d'outils est créée. Elle inclut un nouveau clone privé de votre référentiel Git, un pipeline pour la génération et le déploiement des modifications de code, l'interface Eclipse Orion {{site.data.keyword.webide}} pour l'édition du code sur le cloud, et un dispositif de suivi de problèmes.
 
-  Si le répertoire `.bluemix` contient un fichier `toolchain.yml`, celui-ci est utilisé pour spécifier les intégrations d'outils pour la chaîne d'outils. Pour plus d'informations sur le fichier `toolchain.yml`, voir [Création de chaînes d'outils personnalisées](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}.
+  Si le répertoire `.bluemix` contient un fichier `toolchain.yml`, celui-ci est utilisé pour spécifier les intégrations d'outils pour la chaîne d'outils. Pour plus d'informations sur le fichier `toolchain.yml`, voir [Création de chaînes d'outils personnalisées](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom).
   {: tip}
 
 4. Si l'application requiert un fichier de génération, celui-ci est détecté automatiquement et l'application est générée.
@@ -47,11 +48,11 @@ Lorsqu'un utilisateur clique sur votre bouton, les actions suivantes se produise
 
 Exemple de bouton d'un référentiel {{site.data.keyword.gitrepos}} public :
 
-[![Procédez au déploiement dans IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
+[![Procédez au déploiement dans IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://us-south.git.cloud.ibm.com/idsorg/sample-java-cloudant){: external}
 
 Exemple de bouton d'un référentiel GitHub public :
 
-[![Procédez au déploiement dans IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
+[![Procédez au déploiement dans IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){: external}
 
 ## Création d'un bouton {: #create-button}
 
@@ -91,8 +92,6 @@ Lorsque vous personnalisez le fragment pour votre bouton Déployer dans {{site.d
 
 * Si vous préférez stocker l'image en local, vous pouvez la télécharger et la stocker dans votre référentiel Git. Ajustez le chemin d'accès pour qu'il reflète l'emplacement relatif de l'image.
 
-* Si vous voulez utiliser une version traduite du bouton, vous pouvez la référencer à distance ou la télécharger depuis [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}.
-
 ## Remarques sur le référentiel {: #button-repo}
 
 Passez en revue ces remarques pour le référentiel que vous utilisez dans votre bouton Déployer dans {{site.data.keyword.Bluemix_notm}}.
@@ -105,10 +104,10 @@ Si l'application doit être générée avant de pouvoir être déployée, vous d
 
 Les générateurs pris en charge sont les suivants :
 
-* [Ant ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") : ](http://ant.apache.org/manual/using.html){:new_window} `build.xml`, qui génère une sortie dans le dossier `./output/`
-* [Gradle ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") : ](https://docs.gradle.org/current/userguide/getting_started.html){:new_window} `/build.gradle`, qui génère une sortie dans le dossier `.` 
-* [Grunt ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") : ](http://gruntjs.com/getting-started#the-gruntfile){:new_window} `/Gruntfile.js`, qui génère une sortie dans le dossier `.` 
-* [Maven ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") : ](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:new_window} `/pom.xml`, qui génère une sortie dans le dossier `./target/`.
+* [Ant :](http://ant.apache.org/manual/using.html){: external} `build.xml`, qui génère une sortie dans le dossier `./output/` ;
+* [Gradle :](https://docs.gradle.org/current/userguide/getting_started.html){:external} `/build.gradle`, qui génère une sortie dans le dossier `.`  ;
+* [Grunt :](http://gruntjs.com/getting-started#the-gruntfile){: external} `/Gruntfile.js`, qui génère une sortie dans le dossier `.`  ;
+* [Maven :](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){: external} `/pom.xml`, qui génère une sortie dans le dossier `./target/` 
 
 ### Exigences relatives au pipeline
 {: pipeline_file}
@@ -117,20 +116,20 @@ Afin de configurer le pipeline pour la chaîne d'outils dans un répertoire `.bl
 
 Si vous n'avez pas de fichier `pipeline.yml` dans le répertoire `.bluemix`, le bouton Déployer dans {{site.data.keyword.Bluemix_notm}} créera un pipeline par défaut avec deux étapes : une étape de génération et une étape de déploiement déployant dans Cloud Foundry.
 
-Pour créer un fichier de pipeline, examinez l'exemple de fichier dans la rubrique [Création de modèles de chaîne d'outils personnalisés](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml). Tout comme vous définissez un pipeline dans l'interface Web, vous définissez un pipeline dans du texte en créant des étapes et des travaux, en définissant des entrées et des variables d'environnement et en ajoutant des scripts. Vous pouvez également visualiser un certain nombre de fichiers de pipeline plus complexes dans [ce projet de démonstration](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix).
+Pour créer un fichier de pipeline, examinez l'exemple de fichier dans la rubrique [Création de modèles de chaîne d'outils personnalisés](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml). Tout comme vous définissez un pipeline dans l'interface Web, vous définissez un pipeline dans du texte en créant des étapes et des travaux, en définissant des entrées et des variables d'environnement et en ajoutant des scripts. Vous pouvez également visualiser un certain nombre de fichiers de pipeline plus complexes dans [ce projet de démonstration](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix){: external}.
 
-### Exigences relative au fichier Dockerfile d'un conteneur
+### Exigences relatives au fichier Dockerfile d'un conteneur
 {: container_dockerfile}
 
 Pour déployer une application dans un conteneur à l'aide d'{{site.data.keyword.containerlong_notm}}, vous devez inclure un fichier Dockerfile dans le répertoire principal du référentiel et vous devez ajouter un fichier `pipeline.yml` dans un répertoire `.bluemix`.
 
 Le fichier Dockerfile agit comme une sorte de script de génération pour l'application. Si un fichier Dockerfile est détecté dans le référentiel, l'application est générée automatiquement dans une image avant d'être déployée dans un conteneur. Si l'application proprement dite doit être générée avant que l'application ne soit générée dans une image, ajoutez un script de génération pour l'application et un fichier Dockerfile.
 
-Pour en savoir plus sur la création de fichiers Docker, voir la [documentation Docker ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.docker.com/reference/builder/){:new_window}. Pour suivre les instructions étape par étape à l'aide d'un modèle de chaîne d'outils pour déployer vers Kubernetes, voir le [tutoriel Utilisation d'une chaîne d'outils "Développer une application Kubernetes"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window} ou le [tutoriel Utilisation de la chaîne d'outils "Développer une application Kubernetes avec Helm"![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window}.
+Pour en savoir plus sur la création des fichiers Docker, voir la [documentation Docker](https://docs.docker.com/reference/builder/){: external}. Pour suivre les instructions détaillées sur l'utilisation d'un modèle de chaîne d'outils pour le déploiement dans Kubernetes, consultez le tutoriel [Use the "Develop a Kubernetes app" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){: external} ou le tutoriel [Use the "Develop a Kubernetes app with Helm" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){: external}.
 
-Pour en savoir plus sur le portage de votre application Cloud Foundry sur un cluster Kubernetes, voir le [tutoriel Portage de votre application Cloud Foundry pour un déploiement sur Kubernetes ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){:new_window}.  
+Pour en savoir plus sur le portage de votre application Cloud Foundry sur un cluster Kubernetes, consultez le tutoriel [Port a Cloud Foundry app to deploy to Kubernetes in a toolchain](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){: external}.  
 
-Pour créer manuellement un fichier `pipeline.yml` spécifiquement pour les conteneurs, voir les [exemples dans GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/Puquios/){:new_window}.
+Pour créer manuellement un fichier `pipeline.yml` spécifique aux conteneurs, consultez les [exemples dans GitHub](https://github.com/Puquios/){: external}.
 
 ### Exigences relatives au fichier manifeste (pour les applications déployées dans Cloud Foundry)
 {: #manifest_files}

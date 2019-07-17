@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-19"
 
 keywords: pipeline base image, custom Docker, IBM Cloud team uses
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -39,11 +40,11 @@ Le nom de l'image Docker dans les travaux d'images Docker personnalisées est co
 Si la zone **Nom d'image Docker** n'est pas renseignée, l'image de base du pipeline standard est utilisée. 
 {: tip}
 
-Par défaut, votre référentiel est recherché sur [Docker Hub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://hub.docker.com/){: new_window}. Si vous utilisez un autre registre Docker, tel que {{site.data.keyword.registrylong}}, vous pouvez utiliser le nom de DNS complet. Vous pouvez également utiliser le nom complet pour les images sur Docker Hub. Par exemple, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
+Par défaut, votre référentiel est recherché sur [Docker Hub](https://hub.docker.com/){: external}. Si vous utilisez un autre registre Docker, tel que {{site.data.keyword.registrylong}}, vous pouvez utiliser le nom de DNS complet. Vous pouvez également utiliser le nom complet pour les images sur Docker Hub. Par exemple, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
 
 La balise (`tag`) d'une image Docker est facultative. Si vous ne spécifiez pas une balise, elle sera définie par défaut sur `latest`. Une valeur par défaut `latest` est juste un nom de balise que le propriétaire du référentiel doit gérer. Cela ne signifie pas que cette image Docker est la dernière image du point de vue chronologique.
 
-Vous trouverez une vaste communauté de référentiels sur Docker Hub. IBM héberge une série de référentiels publics que l'équipe IBM Cloud utilise à l'adresse [https://hub.docker.com/u/ibmcom/ ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://hub.docker.com/u/ibmcom/){: new_window}. Les référentiels `ibmcom/ibmjava` et `ibmcom/ibmnode` sont utiles comme base pour la génération. 
+Vous trouverez une vaste communauté de référentiels sur Docker Hub. IBM héberge une série de référentiels publics que l'équipe IBM Cloud utilise à l'adresse [https://hub.docker.com/u/ibmcom/](https://hub.docker.com/u/ibmcom/){: external}. Les référentiels `ibmcom/ibmjava` et `ibmcom/ibmnode` sont utiles comme base pour la génération. 
 
 ## Utilisation d'un registre d'images privé
 {: #private_image_registry}
@@ -52,7 +53,7 @@ Si vous utilisez un registre privé nécessitant une authentification, vous deve
 
 Dans la plupart des registres, vous pouvez utiliser le nom d'utilisateur et le mot de passe qui vous ont été fournis. Si vous utilisez {{site.data.keyword.registrylong_notm}} pour stocker vos images privées, vous devez utiliser une clé d'API de plateforme pour l'authentification. 
 
-1. [Demandez une clé d'API de plateforme ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/iam/#/apikeys){: new_window} et sauvegardez la clé. 
+1. [Demandez une clé d'API de plateforme ](https://cloud.ibm.com/iam/#/apikeys){: external} et sauvegardez la clé. 
 1. Créez les propriétés d'environnement en deux étapes en utilisant `iamapikey` comme votre `DOCKER_USERNAME` et la clé d'API de plateforme sauvegardée comme `DOCKER_PASSWORD`.
 
  Données d'identification ![{{site.data.keyword.registrylong_notm}}](images/custom-image-private-repository.png)

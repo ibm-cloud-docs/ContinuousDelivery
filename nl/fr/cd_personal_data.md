@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -32,8 +33,8 @@ Par données personnelles, on entend toute information qui concerne ou identifie
  * {{site.data.keyword.gitrepos}}
  * Les pipelines {{site.data.keyword.contdelivery_short}}
  * Les chaînes d'outils et intégrations d'outils
- * [GitHub Enterprise sur IBM Cloud ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
- * [{{site.data.keyword.DRA_full}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data){: new_window}
+ * [GitHub Enterprise on IBM Cloud](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data)
+ * [{{site.data.keyword.DRA_full}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data)
  
 IBM ne gère pas les données dans le service {{site.data.keyword.contdelivery_short}}. Avant de quitter le service {{site.data.keyword.contdelivery_short}} hébergé dans {{site.data.keyword.Bluemix_notm}} Public, vous devez supprimer vos propres données.
 {: important}
@@ -53,7 +54,7 @@ La structure de connexion d'IBM Cloud offre la possibilité de travailler dans d
  * Compte d'entreprise
  * Compte d'entreprise individuel
 
-###Comptes personnels
+### Comptes personnels
 
 Généralement, chaque utilisateur possède son propre compte, qui est son compte personnel. Vous pouvez facilement identifier votre compte personnel car il contient généralement votre nom, par exemple : *Compte de John Smith*. 
 
@@ -61,13 +62,13 @@ Vous avez tous les droits sur tous les objets qui sont créés dans votre compte
 
 Si vous disposez d'un droit pour créer un objet dans un compte, vous avez également le droit de le modifier et de le supprimer, quel que soit le compte dans lequel l'objet est stocké. Lorsque deux utilisateurs collaborent, ils partagent souvent un compte personnel.
 
-###Comptes d'entreprise
+### Comptes d'entreprise
 
 Un compte d'entreprise est configuré par votre entreprise. Généralement, vous êtes ajouté automatiquement au compte, au lieu d'être invité. Les comptes d'entreprise offrent aux utilisateurs un lieu de travail, de communication, de partage des ressources et de la facturation. Cependant, il ne s'agit que d'une convention. En réalité, un compte d'entreprise n'est pas différent d'un compte personnel. Les objets qui sont créés dans un compte d'entreprise sont associés au compte et les utilisateurs peuvent être invités au compte.
 
 Les équipes de personnes qui travaillent pour une entreprise collaborent souvent au moyen d'un compte d'entreprise.
 
-###Comptes d'entreprise individuels
+### Comptes d'entreprise individuels
 
 Lorsque vous travaillez pour une société, le travail contenu dans votre compte peut appartenir légalement à la société. Beaucoup d'utilisateurs travaillant pour une entreprise possèdent un compte d'entreprise individuel. Si vous vous connectez à votre compte en utilisant des données d'identification qui contiennent le nom de votre société et possédez également une sorte de compte personnel, le travail contenu dans votre compte personnel pourrait appartenir à la société.
 
@@ -82,13 +83,13 @@ Quel que soit le type de compte IBM Cloud utilisé, si vous avez des droits sur 
 
 Avant de supprimer des données d'un compte, déterminez s'il s'agit d'un compte personnel ou d'un compte d'entreprise individuel.
 
-###Compte personnel
+### Compte personnel
 
 Si vous possédez un compte personnel, vous pouvez apporter des modifications et supprimer vos données. Si vous partagez votre compte avec un autre utilisateur, vous possédez les données, mais vous pourriez vouloir les contacter au sujet du travail partagé. 
 
-Si vous ne pouvez pas vous connecter à votre compte IBM Cloud, [contactez le support IBM![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/support){:new_window}
+Si vous ne pouvez pas vous connecter à votre compte IBM Cloud, [contactez le support IBM](https://www.ibm.com/cloud/support){: external}.
  
-###Compte d'entreprise individuel
+### Compte d'entreprise individuel
 
 Si vous possédez un compte d'entreprise individuel, vous devez coordonner tout changement avec votre entreprise et les autres membres de votre équipe. Vous pouvez supprimer vos données personnelles, qu'elles soient stockées dans un compte d'entreprise ou dans un compte d'entreprise individuel. Assurez-vous de ne pas supprimer les travaux que vous avez partagés avec d'autres utilisateurs.
 
@@ -107,14 +108,14 @@ L'interface {{site.data.keyword.webide}} fournit un espace de travail personnel 
 Avant de supprimer vos données dans {{site.data.keyword.webide}}, pensez à exporter votre travail. Une fois supprimés, vos espaces de travail seront retirés de {{site.data.keyword.contdelivery_short}} et tous les fichiers seront supprimés.
 {: important}
 
-###Exportation d'un espace de travail de l'interface Web IDE
+### Exportation d'un espace de travail de l'interface Web IDE
 
 Pour exporter un espace de travail de l'interface {{site.data.keyword.webide}} :
 
 1. Sélectionnez **Fichier > Exporter > Zip**.
 1. Répétez l'opération pour chaque espace de travail devant être exporté.
 
-###Suppression de vos espaces de travail de l'interface Web IDE
+### Suppression de vos espaces de travail de l'interface Web IDE
 
 Pour supprimer vos espaces de travail de l'interface {{site.data.keyword.webide}}, y compris l'ensemble de vos données personnelles :
 
@@ -138,11 +139,11 @@ Les profils et paramètres de votre compte, les projets personnels, les groupes 
 Avant de supprimer votre compte Git, supprimez vos données personnelles des autres projets. Après avoir supprimé votre compte Git, il peut être difficile ou impossible de trouver tous les projets auxquels vous avez contribué.
 {: tip}
 
-###Projets personnels et partagés
+### Projets personnels et partagés
 
 Vous pouvez inviter d'autres utilisateurs à collaborer à des projets. Les projets Git que vous créez à l'intérieur de votre compte sont appelés des projets personnels. Vous pouvez également créer des groupes Git dans lesquels des projets peuvent appartenir à plusieurs propriétaires de Git. Vous pouvez créer de nouveaux projets pour le groupe ou transférer la propriété de projets personnels au groupe. Un groupe Git est souvent utilisé pour représenter un compte d'entreprise IBM Cloud pour indiquer que les projets appartiennent à la société.
 
-###Exportation d'un projet dans Git Repos and Issue Tracking
+### Exportation d'un projet dans Git Repos and Issue Tracking
 
 Avant de supprimer un projet dans {{site.data.keyword.gitrepos}}, vous pouvez exporter le projet afin de l'archiver. 
 
@@ -153,14 +154,14 @@ Avant de supprimer un projet dans {{site.data.keyword.gitrepos}}, vous pouvez ex
 
 Une fois le projet archivé, vous pouvez l'importer dans une autre instance GitLab. 
 
-###Suppression de votre compte Git Repos and Issue Tracking
+### Suppression de votre compte Git Repos and Issue Tracking
 
 Vous pouvez supprimer votre compte {{site.data.keyword.gitrepos}} et tout ce qui appartient à ce compte.
 
-1. Sur le tableau de bord Paramètres utilisateur de {{site.data.keyword.gitrepos}}, sur la [page Compte![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, dans la section Supprimer le compte, cliquez sur **Supprimer le compte**.
+1. Sur le tableau de bord Paramètres utilisateurs de {{site.data.keyword.gitrepos}}, sur la [page Compte](https://us-south.git.cloud.ibm.com/profile/account){: external}, dans la section Supprimer le compte, cliquez sur **Supprimer le compte**.
 1. Tous les projets Git, y compris les référentiels et les problèmes sont supprimés. Vous êtes également supprimé de tous les groupes {{site.data.keyword.gitrepos}} auquel vous appartenez.
 
-Une fois votre compte supprimé, certains contenus sont conservés. Ces contenus sont affectés à un utilisateur fantôme à l'échelle du système. Pour en savoir plus sur la suppression d'un compte {{site.data.keyword.gitrepos}}, voir [Suppression d'un compte utilisateur ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}.
+Une fois votre compte supprimé, certains contenus sont conservés. Ces contenus sont affectés à un utilisateur fantôme à l'échelle du système. Pour en savoir plus sur la suppression d'un compte {{site.data.keyword.gitrepos}}, voir [Suppression d'un compte utilisateur](https://us-south.git.cloud.ibm.com/profile/account/delete_account#associated-records){: external}.
 {: tip}
 
 {{site.data.keyword.gitrepos}} utilise un mécanisme de connexion unique qui crée automatiquement un compte Git correspondant pour votre compte IBM Cloud la première fois que vous accédez à l'intégration d'outils. Après avoir supprimé votre compte, n'accédez pas à {{site.data.keyword.gitrepos}}. Si vous accédez à {{site.data.keyword.gitrepos}} à nouveau, un nouveau compte sera automatiquement créé et vous devrez le supprimer.
@@ -180,7 +181,7 @@ Les étapes d'un pipeline peuvent inclure des données personnelles comme des do
 
   ![Menu Etapes](images/pipeline_stages.png)
 
-###Modification d'une étape de pipeline
+### Modification d'une étape de pipeline
 
 Pour modifier une étape d'un pipeline :
 
@@ -193,7 +194,7 @@ Pour modifier une étape d'un pipeline :
   
 1. Supprimez un travail de l'étape du pipeline. Sur l'onglet **TRAVAUX**, sélectionnez le travail que vous souhaitez supprimer puis cliquez sur **Retirer**.
  
-###Exportation d'une étape de pipeline
+### Exportation d'une étape de pipeline
 
 Pour exporter la définition d'un pipeline entier, ajoutez `/yaml` à l'adresse URL du pipeline :
 
@@ -211,7 +212,7 @@ Pour exporter des artefacts et des journaux pour une étape de pipeline :
 1. Cliquez sur **Télécharger** > **Artefacts** pour exporter les artefacts pour la version sélectionnée.
 1. Cliquez sur **Télécharger** > **Journaux** pour exporter les journaux pour la version sélectionnée.  
 
-###Suppression d'une étape de pipeline
+### Suppression d'une étape de pipeline
 
 Pour supprimer une étape d'un pipeline :
 
@@ -229,7 +230,7 @@ Lorsqu'une intégration d'outil est créée, {{site.data.keyword.contdelivery_sh
 
 Coordonnez-vous avec les autres membres de votre équipe avant de supprimer des chaînes d'outils ou des intégrations d'outils partagées.
 
-###Modification et suppression d'intégrations d'outils
+### Modification et suppression d'intégrations d'outils
 
 Lorsque vous créez une intégration d'outil, vous devez fournir des informations d'identification et d'autres informations de compte relatives à l'intégration. Si vous avez utilisé vos informations d'identification et informations de compte personnelles, remplacez ces informations par des valeurs différentes ou supprimez l'intégration d'outil.
 
@@ -246,7 +247,7 @@ Pour supprimer une intégration d'outil :
 1. Pour supprimer une intégration d'outil de votre chaîne d'outils, cliquez sur **Supprimer**.
 1. Confirmez en cliquant sur **Supprimer**.
 
-###Suppression des chaînes d'outils
+### Suppression des chaînes d'outils
 
 Lorsque vous supprimez une chaîne d'outils, la suppression est irréversible.
 
@@ -258,7 +259,7 @@ Lorsque vous supprimez une chaîne d'outils, la suppression est irréversible.
 Lorsque vous supprimez une chaîne d'outils, les référentiels {{site.data.keyword.gitrepos}} associés ne sont pas supprimés. Les utilisateurs ayant accès à ces référentiels peuvent disposer de copies des données s'ils ont exécuté une commande `git clone` ou créé un espace de travail {{site.data.keyword.webide}}. Pour vous assurer que toutes les données sont supprimées, vous devez demander à ces utilisateurs de supprimer leurs copies des données.
 {: tip}
 
-###Suppression de toutes les chaînes d'outils
+### Suppression de toutes les chaînes d'outils
 
 Vous ne pouvez pas supprimer toutes les chaînes d'outils d'un groupe de ressources ou d'une organisation en même temps. Vous devez supprimer les chaînes d'outils une par une.
 

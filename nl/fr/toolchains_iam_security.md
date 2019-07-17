@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-14"
 
 keywords: Administrator Create, Editor Update, Update, user access
 
@@ -27,9 +27,9 @@ L'accès aux chaînes d'outils des groupes de ressources pour les utilisateurs d
 
 **Remarques **: 
 
-* L'accès utilisateur pour les instances de chaîne d'outils et les instances de service {{site.data.keyword.contdelivery_short}} est géré séparément. Pour plus d'informations sur la gestion de l'accès utilisateur aux instances de service {{site.data.keyword.contdelivery_short}} dans les groupes de ressources, voir [Gestion de l'accès utilisateur à {{site.data.keyword.contdelivery_short}} avec Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security){: new_window}.
+* L'accès utilisateur pour les instances de chaîne d'outils et les instances de service {{site.data.keyword.contdelivery_short}} est géré séparément. Pour plus d'informations sur la gestion de l'accès utilisateur aux instances de service {{site.data.keyword.contdelivery_short}} dans les groupes de ressources, voir [Gestion de l'accès utilisateur à {{site.data.keyword.contdelivery_short}} avec Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security).
 
-* L'accès des utilisateurs aux chaînes d'outils dans les organisations Cloud Foundry est géré différemment de l'accès utilisateur aux instances de service {{site.data.keyword.contdelivery_short}} dans les groupes de ressources. Pour plus d'informations sur la gestion de l'accès utilisateur aux chaînes d'outils dans les organisations Cloud Foundry, voir [Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
+* L'accès des utilisateurs aux chaînes d'outils dans les organisations Cloud Foundry est géré différemment de l'accès utilisateur aux instances de service {{site.data.keyword.contdelivery_short}} dans les groupes de ressources. Pour plus d'informations sur la gestion de l'accès utilisateur aux chaînes d'outils dans les organisations Cloud Foundry, voir [Gestion de l'accès aux chaînes d'outils dans les organisations Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs).
 
 Chaque utilisateur qui accède aux chaînes d'outils de votre compte doit se voir attribuer une règle d'accès avec un rôle d'utilisateur IAM défini. Cette règle détermine les actions que l'utilisateur peut effectuer dans le contexte du service ou de l'instance que vous sélectionnez. Les actions autorisées sont personnalisées et définies par le service {{site.data.keyword.Bluemix_notm}} en tant qu'opérations pouvant être réalisées sur le service. Les actions sont ensuite mappées à des rôles utilisateur IAM.
 
@@ -44,7 +44,7 @@ Après avoir défini la portée de la règle d'accès, vous lui affectez un rôl
 
 Le tableau suivant détaille les actions mappées sur les rôles de gestion de plateforme. Les rôles de gestion de plateforme permettent aux utilisateurs d'effectuer des tâches sur les ressources de service au niveau de la plateforme. Par exemple, attribuer un accès utilisateur au service, créer ou supprimer des ID de service, créer des instances et lier des instances aux applications.
 
-| Rôle Gestion de la plateforme | Description des actions | Exemples d'action|
+| Rôle de gestion de plateforme | Description des actions | Exemples d'actions|
 |:-----------------|:-----------------|:-----------------|
 | Afficheur, Opérateur | Voir les chaînes d'outils et les pipelines de distribution. Exécuter les pipelines de distribution. | <ul><li>Cliquez sur une chaîne d'outils pour ouvrir sa page Vue d'ensemble.</li><li>Cliquez sur l'icône **Exécuter une étape** de l'étape dans laquelle se trouve votre travail de pipeline.</li></ul> |
 | Editeur, Administrateur | Créer, afficher, mettre à jour et supprimer les chaînes d'outils et les pipelines de distribution. |<ul><li>Dans le tableau de bord DevOps, sur la page **Chaînes d'outils**, cliquez sur **Créer une chaîne d'outils**.</li><li>Dans le tableau de bord DevOps, dans la page **Chaînes d'outils**, cliquez sur la chaîne d'outils afin d'ouvrir sa page Vue
@@ -53,7 +53,7 @@ d'ensemble.</li><li>Dans le tableau de bord DevOps, dans la page **Chaînes d'ou
 
  Pour les chaînes d'outils, les actions suivantes existent :
 
-| Action | Opération sur le service | Rôle
+| Action | Opération sur service | Rôle
 |:-----------------|:-----------------|:--------------|
 | create | Créer une chaîne d'outils dans un groupe de ressources. | Administrateur, Editeur |
 | update | Mettre à jour une chaîne d'outils dans un groupe de ressources. Par exemple, renommer la chaîne d'outils. Modifier les pipelines de distribution liés aux chaînes d'outils dans un groupe de ressources. | Administrateur, Editeur |
@@ -66,5 +66,3 @@ d'ensemble.</li><li>Dans le tableau de bord DevOps, dans la page **Chaînes d'ou
 {: caption="Tableau 2. Actions et opérations de service" caption-side="top"}
 
 Pour plus d'informations sur l'affectation de rôles utilisateur dans l'interface utilisateur, voir [Gestion de l'accès IAM](/docs/iam?topic=iam-iammanidaccser).
-
-<!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

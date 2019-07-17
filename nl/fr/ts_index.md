@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-20"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud Continuous Delivery, GitHub tool integration, error message
 
@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:faq: data-hd-content-type='faq'}
 {:codeblock: .codeblock}
@@ -34,7 +35,7 @@ Obtenez des réponses aux questions fréquentes relatives à l'utilisation d'{{s
 {: #plan_exceeded}
 {: faq}
 
-{{site.data.keyword.contdelivery_short}} propose deux plans : Lite et Professional. Si vous utilisez le plan Lite de {{site.data.keyword.contdelivery_short}}, vous pouvez utiliser les chaînes d'outils gratuitement, dans les limites du plan. Le message d'erreur indique que vous avez dépassé une ou plusieurs limites du plan Lite. Par exemple, vous pouvez dépasser le plan si un trop grand nombre d'utilisateurs autorisés sont associés à l'instance de service {{site.data.keyword.contdelivery_short}} ou si vous avez exécuté le nombre maximal de travaux {{site.data.keyword.deliverypipeline}} défini. Pour plus d'informations sur les conditions de votre plan, voir [Utilisations des plans et limitations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
+{{site.data.keyword.contdelivery_short}} propose deux plans : Lite et Professional. Si vous utilisez le plan Lite de {{site.data.keyword.contdelivery_short}}, vous pouvez utiliser les chaînes d'outils gratuitement, dans les limites du plan. Le message d'erreur indique que vous avez dépassé une ou plusieurs limites du plan Lite. Par exemple, vous pouvez dépasser le plan si un trop grand nombre d'utilisateurs autorisés sont associés à l'instance de service {{site.data.keyword.contdelivery_short}} ou si vous avez exécuté le nombre maximal de travaux {{site.data.keyword.deliverypipeline}} défini. Pour plus d'informations sur les conditions de votre plan, voir [Utilisations des plans et limitations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 
 ## Mon service {{site.data.keyword.contdelivery_short}} indique que les services du plan Lite sont supprimés après 30 jours d'inactivité. Que signifie inactivité ?
@@ -48,7 +49,7 @@ Une instance du service {{site.data.keyword.contdelivery_short}} est considéré
 {: #service_required_resource_group}
 {: faq}
 
-Les dispositions du plan de l'instance du service {{site.data.keyword.contdelivery_short}} qui se trouve dans le même groupe de ressources ou la même organisation que la chaîne d'outils gèrent l'utilisation de certaines intégrations d'outils ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} et {{site.data.keyword.gitrepos}}) contenues dans le service. Le message d'erreur indique que le groupe de ressources ou l'organisation ne contient pas l'instance requise du service {{site.data.keyword.contdelivery_short}}. Pour plus d'informations sur les conditions de votre plan, voir [Utilisations des plans et limitations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
+Les dispositions du plan de l'instance du service {{site.data.keyword.contdelivery_short}} qui se trouve dans le même groupe de ressources ou la même organisation que la chaîne d'outils gèrent l'utilisation de certaines intégrations d'outils ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} et {{site.data.keyword.gitrepos}}) contenues dans le service. Le message d'erreur indique que le groupe de ressources ou l'organisation ne contient pas l'instance requise du service {{site.data.keyword.contdelivery_short}}. Pour plus d'informations sur les conditions de votre plan, voir [Utilisations des plans et limitations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 
 ## J'ai mis à jour les informations d'une chaîne d'outils d'une organisation Cloud Foundry, pourquoi est-ce que mes changements ne s'affichent pas dans la chaîne d'outils ?
@@ -161,9 +162,9 @@ Vérifiez la page Statut d'{{site.data.keyword.Bluemix_notm}} pour déterminer s
 Vous pouvez afficher la page Statut en choisissant l'une des options suivantes :
 
   * Connectez vous à la console {{site.data.keyword.Bluemix_notm}}. Dans la barre de menus, cliquez sur **Support** et sélectionnez **Statut**. Recherchez dans les ressources répertoriées l'icône ![](../../get-support/images/some_issues.svg) signalant un problème. Celle-ci peut indiquer une indisponibilité.
-  * Accédez directement à [{{site.data.keyword.Bluemix_notm}} - Statut du système ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/status){: new_window}.
+  * Un accès direct est disponible sous [{{site.data.keyword.Bluemix_notm}} - Statut du système](https://cloud.ibm.com/status){: external}.
 
-Pour plus d'informations sur la page Statut d'{{site.data.keyword.Bluemix_notm}}, voir [Affichage du statut d'{{site.data.keyword.Bluemix_notm}}](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}.
+Pour plus d'informations sur la page Statut d'{{site.data.keyword.Bluemix_notm}}, voir [Viewing {{site.data.keyword.Bluemix_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status).
 
 
 ## Comment puis-je transférer des artefacts entre les travaux de pipeline ?

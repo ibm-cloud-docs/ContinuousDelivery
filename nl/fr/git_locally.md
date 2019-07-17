@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-19"
 
 keywords: Git source control, personal access token, Git repos
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -35,8 +36,9 @@ Vous pouvez gérer et travailler avec le code source dans un référentiel GitHu
 | Type Git  | Configuration HTTPS | Utilisation HTTPS |  Configuration SSH |
 |:-----------|:-------------|:------------|:-------------|
 | Git Repos and Issue Tracking  | [Jeton d'accès personnel](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat) | Nom d'utilisateur Git Repos and Issue Tracking (pas votre ID IBM) et jeton d'accès personnel | [Configurer la clé SSH](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key) |
-| Public GitHub (github.com) | Le jeton d'accès personnel n'est pas requis, mais vous pouvez en configurer un et l'utiliser | Nom d'utilisateur et mot de passe GitHub ou nom d'utilisateur GitHub et jeton d'accès personnel ou simplement jeton d'accès personnel comme nom d'utilisateur | [Configurer une clé SSH GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
+| Public GitHub (github.com) | Le jeton d'accès personnel n'est pas requis, mais vous pouvez en configurer un et l'utiliser | Nom d'utilisateur et mot de passe GitHub ou nom d'utilisateur GitHub et jeton d'accès personnel ou simplement jeton d'accès personnel comme nom d'utilisateur | [Configurer une clé SSH GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: external} |
 | GitHub Enterprise | [Jeton d'accès personnel](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) | Nom d'utilisateur GitHub Enterprise (pas votre ID IBM) et jeton d'accès personnel | [Configurer la clé SSH GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) |
+{: caption="Tableau 1. Configuration de l'authentification Git" caption-side="top"}
 
 Si vous préférez utiliser SSH, vous pouvez réutiliser une seule et même clé sur tous les serveurs Git. Créez ou recherchez votre clé et configurez-la dans chaque serveur comme indiqué dans les liens précédents. Si vous créez votre clé avec une phrase passe, vous êtes invité à entrer cette phrase passe lorsque vous utilisez la clé.
 {: tip}
@@ -45,7 +47,7 @@ Si vous préférez utiliser SSH, vous pouvez réutiliser une seule et même clé
 
     a. Vérifiez si Git est installé. Sur une ligne de commande, tapez `git version`. Si Git est installé, le numéro de version est affiché et vous pouvez commencer.
 
-    b. Si Git n'est pas installé, [accédez au site Web de Git ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://git-scm.com/downloads){: new_window}.
+    b. Si Git n'est pas installé, [accédez au site Web Git](http://git-scm.com/downloads){: external}.
 
     c. Téléchargez et installez la version pour votre système d'exploitation Vous pouvez accepter les valeurs d'installation par défaut.
 
@@ -72,12 +74,12 @@ Créez une copie locale des fichiers de projet en clonant le référentiel Git d
 6. Si vous êtes invité à vous authentifier, entrez les informations appropriées, comme indiqué dans le tableau précédent.
 
 
-Une fois le téléchargement terminé, vous disposez d'une version locale des fichiers dans votre référentiel. Pour plus d'informations sur l'utilisation de Git, voir la [documentation de Git ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")]](http://git-scm.com/doc){: new_window}.
+Une fois le téléchargement terminé, vous disposez d'une version locale des fichiers dans votre référentiel. Pour en savoir plus sur l'utilisation de Git, voir la [documentation de Git](http://git-scm.com/doc){: external}.
 
 
 ## Accès à votre référentiel à l'aide d'Eclipse et du plug-in EGit
 {: #git_egit}
 
-Si vous utilisez Eclipse et possédez un projet qui utilise Git pour le contrôle des sources, vous pouvez utiliser le plug-in EGit pour gérer votre référentiel à partir d'Eclipse. Pour en savoir plus sur l'installation et la configuration d'EGit, voir le [tutoriel d'EGit ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
+Si vous utilisez Eclipse et possédez un projet qui utilise Git pour le contrôle des sources, vous pouvez utiliser le plug-in EGit pour gérer votre référentiel à partir d'Eclipse. Pour en savoir plus sur l'installation et la configuration d'EGit, voir le [tutoriel EGit](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: external}.
 
 Si vous rencontrez des problèmes lors de l'utilisation de {{site.data.keyword.gitrepos}}, consultez la [documentation de {{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local).

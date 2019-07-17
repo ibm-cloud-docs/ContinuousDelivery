@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-28"
 
 keywords: Environment properties, IBM Java, pipeline environments
 
@@ -43,6 +43,7 @@ défaut dans les environnements de pipeline.
 {: #deliverypipeline_envprop}
 
 ### Propriétés générales
+Le tableau suivant répertorie et décrit les propriétés d'environnement à usage général disponibles par défaut dans les environnements de pipeline.
 
 | Propriété d'environnement | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -72,8 +73,10 @@ défaut dans les environnements de pipeline.
 | TASK_ID | ID unique de l'exécution en cours du travail. |
 | TMPDIR | Emplacement du répertoire dans lequel sont stockés les fichiers temporaires. |
 | WORKSPACE | Chemin d'accès au répertoire de travail en cours. |
+{: caption="Tableau 1. Propriétés d'environnement à usage général" caption-side="top"}
 
 ### Propriétés d'exécution et d'outil
+Le tableau suivant répertorie et décrit les propriétés d'environnement des environnements d'exécution et des outils disponibles par défaut dans les environnements de pipeline.
 
 | Propriété d'environnement | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -85,11 +88,13 @@ défaut dans les environnements de pipeline.
 | JAVA8_HOME | Chemin d'accès à IBM Java 8. |
 | MAVEN_HOME | Chemin d'accès à Apache Maven 3.2.1. |
 | NODE_HOME | Chemin d'accès à Node.js 0.10.29. |
+{: caption="Tableau 2. Propriétés d'environnement des environnements d'exécution et des outils " caption-side="top"}
 
 Pour utiliser Apache Ant 1.10+ dans les scripts de votre pipeline, définissez `ANT_HOME` sur `$ANT_JAVA8_HOME` et `JAVA_HOME` sur `$JAVA8_HOME`.
 {: tip}
 
 ### Propriétés de déploiement
+Le tableau suivant répertorie et décrit les propriétés d'environnement de déploiement disponibles par défaut dans les environnements de pipeline.
 
 | Propriété d'environnement | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -100,6 +105,7 @@ Pour utiliser Apache Ant 1.10+ dans les scripts de votre pipeline, définissez `
 | CF_SPACE_ID | Pour les déploiements, ID de l'espace dans lequel effectuer le déploiement.  |
 | CF_TARGET_URL | Pour les déploiements, URL de {{site.data.keyword.Bluemix_short}} ou de Cloud Foundry. |
 | IDS_VERSION | Pour les déploiements, version de l'application qui est déployée ou identificateur source. |
+{: caption="Tableau 3. Propriétés d'environnement de déploiement" caption-side="top"}
 
 ## Ressources préinstallées
 {: #deliverypipeline_resources}
@@ -107,6 +113,7 @@ Pour utiliser Apache Ant 1.10+ dans les scripts de votre pipeline, définissez `
 Plusieurs environnements d'exécution, outils et modules de noeud sont préinstallés dans chaque pipeline.
 
 ### Environnements d'exécution et outils
+Le tableau suivant répertorie tous les environnements et outils préinstallés disponibles dans chaque pipeline.
 
 Tous les liens figurent dans le répertoire de base.
 {: tip}
@@ -124,6 +131,7 @@ Tous les liens figurent dans le répertoire de base.
 |Apache Maven 3.2.1 |maven |/opt/IBM/maven |
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
+{: caption="Tableau 4. Noms de lien et chemins d'accès des environnements d'exécution et les outils" caption-side="top"}
 
 L'environnement de pipeline offre les versions 64 bits d'IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2 et 6.7.0. Pour choisir une version, utilisez la commande export.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-14"
 
 keywords: IBM Cloud, build types, build script
 
@@ -37,10 +37,10 @@ Vous pouvez effectuer le déploiement dans une ou plusieurs régions et dans un 
 
 Vous pouvez utiliser l'une des méthodes suivantes pour créer un pipeline :
 
-   * [Créer une chaîne d'outils à partir d'une application Cloud Foundry existante](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}. La chaîne d'outils obtenue contient un pipeline.
+   * [Créer une chaîne d'outils à partir d'une application Cloud Foundry existante](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app). La chaîne d'outils obtenue contient un pipeline.
 
-   * [Créer une chaîne d'outils à partir d'un modèle](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window} comprenant au moins un pipeline.
+   * [Créer une chaîne d'outils à partir d'un modèle](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template) comprenant au moins un pipeline.
 
-   * [Ajouter l'intégration d'outils {{site.data.keyword.deliverypipeline}} ](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window} à une chaîne d'outils existante.
+   * [Ajouter l'intégration d'outils {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline) à une chaîne d'outils existante.
    
 A partir de {{site.data.keyword.deliverypipeline}}, modifiez votre configuration, vérifiez le statut des générations, l'application déployée et les déploiements récents, examinez les journaux les plus récents et les détails du déploiement, ou supprimez votre pipeline.
