@@ -54,8 +54,6 @@ Continuous Delivery
         cd_iam_security.md
         toolchains_iam_security.md
         cd_data_security.md
-        
-    ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
