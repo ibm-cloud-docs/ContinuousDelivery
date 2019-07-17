@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-08"
+lastupdated: "2019-06-11"
 
 keywords: Continuous Delivery, Support tickets, Continuous Delivery service
 
@@ -22,33 +22,39 @@ subcollection: ContinuousDelivery
 # Come ottenere aiuto e supporto per {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-Il team {{site.data.keyword.contdelivery_full}} monitora attivamente il forum developerWorks per rilevare eventuali domande sulle toolchain e sul servizio {{site.data.keyword.contdelivery_short}}.
+Il team {{site.data.keyword.contdelivery_full}} monitora attivamente il nostro canale Slack e IBM Developer Answers per rilevare eventuali domande sulle toolchain e sul servizio {{site.data.keyword.contdelivery_short}}.
 
-<table>
+| Ottieni supporto | Facci una domanda |
+|----------|---------|
+| Contattaci sul nostro canale Slack | <a class="xref" href="https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/slack_us.png" alt="Slack us"/></a> |
+| Esplora i post recenti e fai, e rispondi a, domande su IBM Developer Answers | <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/post_question.png" alt="IBM Developer Answers"/></a> |
+{: caption="Tabella 1. Guida e supporto per {{site.data.keyword.contdelivery_short}}" caption-side="top"}
+
+<!--<table>
 <tr>
 <th style="width:20%"> &nbsp; &nbsp; &nbsp;</th>
  <th style="text-align:center;width=60%">
- <strong>Fai una domanda</strong> </th>
+ <strong>Ask Us a Question</strong> </th>
 <th> &nbsp; &nbsp; &nbsp;</th>
 </tr>
 <tr>
 <td> </td>
   <td align="center">
-  <p>Ottieni assistenza rapidamente, direttamente da utenti di IBM {{site.data.keyword.contdelivery_short}} e altri servizi DevOps.</p>
+  <p>Get help fast, directly from IBM {{site.data.keyword.contdelivery_short}} and other DevOps Services users.</p>
   <b>dW Answers</b>
   <p>
-   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/ask-a-question.png" alt="Fai una domanda"/></a></p>
+   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,ibm-cloud" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
-    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Si apre in una nuova scheda o finestra)">Mostra le domande recenti <img class="image" src="../../icons/launch-glyph.svg" alt="Icona link esterno"/></a> sui servizi {{site.data.keyword.Bluemix_notm}} DevOps in dW Answers.</p>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Opens in a new tab or window)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on dW Answers.</p> 
  </td>
  <td></td>
     </tr>
-  </table>  
+  </table>  -->
 
 
 ## Ticket di supporto
 
-Se hai riscontrato problemi più gravi con il servizio {{site.data.keyword.contdelivery_short}}, apri un ticket di supporto.    
+Se hai riscontrato problemi più gravi con il servizio {{site.data.keyword.contdelivery_short}}, apri un ticket di supporto.   
 
 1. Accedi a {{site.data.keyword.Bluemix_notm}}.
 1. Dalla barra del menu, fai clic su **Supporto** e quindi su **Aggiungi ticket**.

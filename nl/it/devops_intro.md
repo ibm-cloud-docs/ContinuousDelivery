@@ -2,7 +2,7 @@
 
 Copyright:
  years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-18"
 
 keywords: IBM Cloud DevOps, enterprise application Developer, IBM Cloud Garage Method
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -26,9 +27,7 @@ subcollection: ContinuousDelivery
 
 Offrire software e servizi a una velocità che risponda alle esigenze del mercato richiede dei team in grado di iterare e sperimentare rapidamente. Devono distribuire nuove versioni frequentemente, in base ai feedback e ai dati. I team di sviluppo cloud di maggior successo adottano la cultura e le prassi moderne di DevOps, sfruttano le architetture native del cloud e assemblano le toolchain da strumenti all'avanguardia per esprimere al massimo la loro produttività. Eseguire tali operazioni in tempi brevi è un vantaggio competitivo chiave.
 
-L' 
-<a href="https://www.ibm.com/cloud/garage">IBM Cloud Garage Method <img src="../../icons/launch-glyph.svg" alt="Icona link esterno"></a>
-descrive le architetture, le prassi e le toolchain DevOps per consentire un'innovazione aziendale su larga scala. Utilizza il {{site.data.keyword.Bluemix_notm}} Garage Method per aiutarti a trasformare la tua cultura e utilizzare gli strumenti in modo efficace e veloce.
+[IBM Cloud Garage Method](https://www.ibm.com/cloud/garage){:external} descrive le architetture, le prassi e le toolchain DevOps per consentire un'innovazione aziendale su larga scala. Utilizza il {{site.data.keyword.Bluemix_notm}} Garage Method per aiutarti a trasformare la tua cultura e utilizzare gli strumenti in modo efficace e veloce.
 
 Uno sviluppatore di applicazioni aziendali può iniziare a creare e distribuire applicazioni native del cloud in pochi minuti. Possono utilizzare una gamma completa di servizi per creare applicazioni cognitive, IoT, blockchain, mobili e ad elevati volumi di dati. Con IBM Cloud App Service, un singolo sviluppatore può creare un progetto, scegliere uno starter kit applicativo e distribuire un'applicazione pronta per la produzione a {{site.data.keyword.Bluemix_notm}}. La tecnologia di generazione del codice della piattaforma crea un'applicazione starter nel linguaggio e nel framework preferiti dello sviluppatore, su misura per le sue esigenze e il suo caso d'uso. Viene eseguito automaticamente il provisioning di qualsiasi servizio necessario a supporto del caso d'uso, come ad esempio Watson Conversation. Gli sviluppatori possono eseguire il debug e i test sulla loro workstation locale oppure nel cloud e utilizzare una toolchain DevOps per collaborare con altri utenti e automatizzare il processo di distribuzione.
 

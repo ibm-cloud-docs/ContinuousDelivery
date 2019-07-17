@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-18"
 
 keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
 
@@ -13,6 +13,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -29,14 +30,14 @@ Una *toolchain* è una serie di integrazioni dello strumento che supporta le att
 
 Le toolchain aperte sono disponibili negli ambienti Pubblico e Dedicato in {{site.data.keyword.Bluemix}}. Puoi creare una toolchain in due modi: utilizzando un template o creandola da un'applicazione.
 
-Ogni toolchain viene associata a un'organizzazione (org) o a un gruppo di risorse specifico. Se una toolchain viene associata a un gruppo di risorse, qualsiasi utente con autorizzazione da visualizzatore IAM (Identity and Access Management) per la risorsa toolchain o per il gruppo di risorse che lo contiene, può accedere alla toolchain. Se la toolchain viene associata a un'organizzazione, tutti gli utenti che sono membri di tale organizzazione possono essere aggiunti all'elenco di controllo dell'accesso per ognuna delle rispettive toolchain associate. Per ulteriori informazioni sul controllo dell'accesso per le toolchain nelle organizzazioni Cloud Foundry, consulta [Gestione dell'accesso utente alle toolchain nelle organizzazioni Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}. Per ulteriori informazioni sul controllo dell'accesso per le toolchain nei gruppi di risorse, consulta [Gestione dell'accesso alle toolchain nei gruppi di risorse](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window}.
+Ogni toolchain viene associata a un'organizzazione (org) o a un gruppo di risorse specifico. Se una toolchain viene associata a un gruppo di risorse, qualsiasi utente con autorizzazione da visualizzatore IAM (Identity and Access Management) per la risorsa toolchain o per il gruppo di risorse che lo contiene, può accedere alla toolchain. Se la toolchain viene associata a un'organizzazione, tutti gli utenti che sono membri di tale organizzazione possono essere aggiunti all'elenco di controllo dell'accesso per ognuna delle rispettive toolchain associate. Per ulteriori informazioni sul controllo dell'accesso per le toolchain nelle organizzazioni Cloud Foundry, consulta [Gestione dell'accesso utente alle toolchain nelle organizzazioni Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs). Per ulteriori informazioni sul controllo dell'accesso per le toolchain nei gruppi di risorse, consulta [Gestione dell'accesso alle toolchain nei gruppi di risorse](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups).
 
 ##Creazione di una toolchain da un template   
 {: #creating_a_toolchain_from_a_template}
 
-Puoi utilizzare un template come punto di partenza nella [creazione di una toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/devops/create){: new_window} che includa una serie specifica di integrazioni dello strumento. Scopri come utilizzare i template da [IBM Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/category/tools){:new_window}.
+Puoi utilizzare un template come punto di partenza per [creare una toolchain](https://cloud.ibm.com/devops/create){:external} che includa un insieme specifico di integrazioni dello strumento.Scopri come utilizzare i template da [IBM Cloud Garage Method ](https://www.ibm.com/cloud/garage/category/tools){:external}.
 
-1. Se utilizzi {{site.data.keyword.Bluemix_notm}} Pubblico, accedi a [{{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://cloud.ibm.com){:new_window}.
+1. Se utilizzi {{site.data.keyword.Bluemix_notm}} Pubblico, accedi a [{{site.data.keyword.Bluemix_notm}}](http://cloud.ibm.com){:external}.
 1. Se utilizzi {{site.data.keyword.Bluemix_notm}} Dedicato, accedi al tuo ambiente dedicato in {{site.data.keyword.Bluemix_notm}}.
 1. Dal menu sulla barra dei menu di {{site.data.keyword.Bluemix_notm}}, fai clic su **DevOps**.
 1. Nel dashboard DevOps, nella pagina **Toolchain**, fai clic su **Create a Toolchain**.
@@ -58,7 +59,7 @@ Puoi utilizzare un template come punto di partenza nella [creazione di una toolc
    I gruppi di risorse sono disponibili nelle regioni Stati Uniti Sud, Stati Uniti Est, Regno Unito, Germania e Tokyo. Le organizzazioni Cloud Foundry sono supportate nelle regioni Stati Uniti Sud, Regno Unito e Germania.
    {: important}
 
-1. Nella sezione Integrazioni dello strumento, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
+1. Nella sezione Integrazioni dello strumento, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 1. Fai clic su **Create**. Diversi passi vengono eseguiti automaticamente per configurare la tua toolchain. Le integrazioni dello strumento configurate a seconda della toolchain selezionata e se stai utilizzando {{site.data.keyword.Bluemix_notm}} Pubblico o {{site.data.keyword.Bluemix_notm}} Dedicato. Ad esempio, quando crei una toolchain Microservizi in {{site.data.keyword.Bluemix_notm}} Pubblico, deve essere eseguita questa procedura:
 
  * La toolchain viene creata.
@@ -80,7 +81,7 @@ Se hai creato la tua applicazione utilizzando il tuo repository di codice, fai c
 1. Se hai creato la tua applicazione utilizzando un kit starter, fai clic su **Configure continuous delivery** nella pagina dei dettagli della tua applicazione. Seleziona quindi una destinazione di distribuzione. Se utilizzi {{site.data.keyword.Bluemix_notm}} Pubblico, la tua applicazione è configurata per la distribuzione continua da un nuovo repository GitHub che viene popolato con il codice starter dell'applicazione. Se utilizzi {{site.data.keyword.Bluemix_notm}} Dedicato, la tua applicazione è configurata per la distribuzione continua da un nuovo repository GitHub o {{site.data.keyword.ghe_short}} che viene popolato con il codice starter dell'applicazione.
 1. Nella pagina di configurazione della toolchain, esamina il diagramma della toolchain che stai per creare. Il diagramma mostra ogni integrazione dello strumento nella fase del suo ciclo di vita nella toolchain.
 1. Rivedi le informazioni predefinite per la configurazione della toolchain. Il nome della toolchain la identifica in {{site.data.keyword.Bluemix_notm}}. Se vuoi utilizzare un nome diverso, modifica il nome della toolchain.
-1. Nella sezione Integrazioni dello strumento, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
+1. Nella sezione Integrazioni dello strumento, seleziona ogni integrazione dello strumento che desideri configurare per la tua toolchain. Alcune delle integrazioni dello strumento non richiedono configurazione. Per informazioni sulla configurazione delle integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 1. Fai clic su **Create**. Diversi passi vengono eseguiti automaticamente per configurare la tua toolchain. Le integrazioni dello strumento configurate sono diverse a seconda che tu stia utilizzando {{site.data.keyword.Bluemix_notm}} Pubblico o {{site.data.keyword.Bluemix_notm}} Dedicato. Ad esempio, quando crei una toolchain da un'applicazione su {{site.data.keyword.Bluemix_notm}} Pubblico, devono essere eseguiti questi passi:
 
  * La toolchain viene creata.
@@ -105,10 +106,10 @@ Puoi visualizzare una toolchain da un'applicazione facendo clic su **Visualizza 
 ## Visualizza una esercitazione: utilizzo delle toolchain
 {: #toolchain_tutorials}
 
-Guarda una di queste esercitazioni su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window}:
+Guarda una di queste esercitazioni su [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external}:
 
-  * [Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app" ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+  * [Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app"](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}.
 
-  * [Aggiungi una toolchain a un'applicazione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+  * [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}.
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}.

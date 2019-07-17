@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-19"
 
 keywords: Eclipse Orion {{site.data.keyword.webide}}, file types, Local Editor Settings icon
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -109,68 +110,6 @@ Se stai sviluppando un'applicazione Node.js, abilita la modalità Live Edit:  <i
 </td></tr>
 </table>
 
-<!-- 3/6/2016: bl commands don't work with V2/CD
-## Editing outside of the {{site.data.keyword.webide}}
-{: #editlocal}
-
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.Bluemix_short}}.
-
-### Before you begin
-
-Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
-
-### Synchronizing your local environment with {{site.data.keyword.Bluemix_notm}}
-{: #edit_local_download}
-
-1. Open a command-line window.
-2. Sign in to {{site.data.keyword.Bluemix_notm}}:
-
-	```
-	bl login
-	```
-	{: pre}
-
-3. When you are prompted, enter your IBMid and password.
-4. View a list of your {{site.data.keyword.Bluemix_notm}} projects:
-
-	```
-	bl projects
-	```
-	{: pre}
-
-4. Synchronize your local environment with your project on {{site.data.keyword.Bluemix_notm}}:
-
-	```
-	bl sync projectName
-	```
-	{: pre}
-
-where `projectName` is your {{site.data.keyword.Bluemix_notm}} app's name.
-
-When you are finished editing, enter `q` to end synchronization.
-
-### Enabling the Desktop Sync feature to edit code locally
-
-The Desktop Sync feature is like Live Edit mode for the command line. You need the Desktop Sync feature to debug on the command line.
-1. In another command-line window, enable the Desktop Sync feature:
-
-	```
-	cd localDirectory
-	bl start
-	```
-	{: codeblock}
-
-2. Use the launch configuration that you created in the {{site.data.keyword.webide}}. After you select the launch configuration, the Desktop Sync feature is enabled in your local environment. In the command-line window that you just opened, you can view the app's URL, the debug URL, the manage URL, and view the {{site.data.keyword.Bluemix_live_notm}} state.
-
-3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace.
-
-### Disabling the Desktop Sync feature
-
-1. In the second command-line window, enter `bl stop`.
-2. In the first command-line window, enter `q`.
-
--->
-
 ## Linguaggi supportati
 {: #supported_languages}
 
@@ -224,8 +163,8 @@ Eclipse Orion {{site.data.keyword.webide}} fornisce assistenza del contenuto, de
 ## Visualizza una esercitazione: Eclipse Orion Web IDE
 {: #toolchain_web_ide_tutorials}
 
-Guarda una di queste esercitazioni su [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window}:
+Guarda una di queste esercitazioni su [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external}:
 
-  * [Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app" ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+  * [Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app"](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}.
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-14"
 
 keywords: ADD STAGE, Run Stage icon, JOBS tab
 
@@ -117,7 +117,7 @@ Puoi scaricare il file di log per un lavoro della pipeline da uno script e salva
 1. Utilizza il `PIPELINE_LOG_URL` in un lavoro successivo all'interno della stessa fase per scaricare il file di log per esportarlo su un sistema diverso. Utilizza un token Bearer IBM Cloud per accedere al file di log.
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
@@ -158,7 +158,7 @@ Puoi scaricare le risorse per un lavoro di build della pipeline da uno script e 
 1. Utilizza il `PIPELINE_ARTIFACT_URL` in un lavoro successivo all'interno della stessa fase per scaricare le risorse per esportarle su un sistema diverso. Utilizza un token Bearer IBM Cloud per accedere alle risorse.
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )

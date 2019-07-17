@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -32,8 +33,8 @@ I dati personali sono le informazioni correlate a una persona fisica o che la id
  * {{site.data.keyword.gitrepos}}
  * Pipeline {{site.data.keyword.contdelivery_short}}
  * Toolchain e integrazioni dello strumento
- * [GitHub Enterprise su IBM Cloud ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
- * [{{site.data.keyword.DRA_full}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data){: new_window}
+ * [GitHub Enterprise on IBM Cloud](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data)
+ * [{{site.data.keyword.DRA_full}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data)
  
 IBM non gestisce i dati nel servizio {{site.data.keyword.contdelivery_short}}. Prima di uscire dal servizio {{site.data.keyword.contdelivery_short}} che si trova in {{site.data.keyword.Bluemix_notm}} Pubblico, devi eliminare i tuoi dati.
 {: important}
@@ -53,7 +54,7 @@ La struttura di accesso di IBM Cloud ti offre l'opzione di lavorare in account d
  * Account aziendale
  * Account individuale aziendale
 
-###Account personali
+### Account personali
 
 Di norma, ciascun utente ha un suo account che è il suo account personale. Puoi identificare facilmente il tuo account personale perché di solito contiene il tuo nome, ad esempio *Account di John Smith*. 
 
@@ -61,13 +62,13 @@ Hai pieni diritti su tutti gli oggetti creati nel tuo account personale. Puoi in
 
 Se hai l'autorizzazione a creare un oggetto in un account, hai anche il diritto a modificarlo ed eliminarlo, indipendentemente dall'account in cui l'oggetto è archiviato. Quando collaborano, due utenti spesso condividono un account personale.
 
-###Account aziendali
+### Account aziendali
 
 Un account aziendale è configurato dalla tua azienda. Di norma, vieni aggiunto automaticamente all'account, piuttosto che essere invitato. Gli account aziendali forniscono agli utenti un posto per lavorare, comunicare e condividere risorse e addebito; tuttavia, questa è solo una convenzione. Un account aziendale in realtà non è diverso da un account personale. Gli oggetti creati in un account aziendale sono associati all'account e gli utenti possono essere invitati all'account.
 
 I team di persone che lavorano per un'azienda spesso collaborano utilizzando un account aziendale.
 
-###Account individuali aziendali
+### Account individuali aziendali
 
 Quando lavori per una società, il lavoro nel tuo account potrebbe appartenere, da un punto di vista legale, alla società stessa. Molti utenti che lavorano per una società hanno un account individuale aziendale. Se esegui l'accesso al tuo account utilizzando delle credenziali che contengono il nome della tua società e anche quello che sembra essere un account personale, il lavoro nel tuo account personale potrebbe appartenere alla società in questione.
 
@@ -82,13 +83,13 @@ Indipendentemente dal tipo di account IBM Cloud account utilizzato, se disponi d
 
 Prima di eliminare dati da un account, determina se si tratta di un account personale o di un account individuale aziendale.
 
-###Account personale
+### Account personale
 
 Se sei il proprietario di un account personale, puoi apportare modifiche ed eliminare i tuoi dati. Se condividi il tuo account con un altro utente, tu sei il proprietario dei dati ma sarebbe opportuno che tu contattassi tale utente in merito al lavoro condiviso. 
 
-Se non riesci ad accedere al tuo account IBM Cloud, [contatta il supporto IBM ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/support){:new_window}
+Se non riesci ad accedere al tuo account IBM Cloud, [contatta il supporto IBM](https://www.ibm.com/cloud/support){: external}.
  
-###Account individuale aziendale
+### Account individuale aziendale
 
 Se sei il proprietario di un account individuale aziendale, devi coordinare eventuali modifiche sia con la tua società che con gli altri membri del tuo team. Elimina i tuoi dati personali indipendentemente dal fatto che siano archiviati in un account aziendale o in un account individuale aziendale. Assicurati di non eliminare del lavoro che hai condiviso con altri utenti.
 
@@ -107,14 +108,14 @@ Se vuoi eliminare tutti i dati personali da {{site.data.keyword.contdelivery_sho
 Prima di eliminare i tuoi dati {{site.data.keyword.webide}}, sarebbe opportuno esportare il tuo lavoro. Dopo che li hai eliminati, i tuoi spazi di lavoro vengono rimossi da {{site.data.keyword.contdelivery_short}} e vengono eliminati tutti i file.
 {: important}
 
-###Esportazione di uno spazio di lavoro Web IDE
+### Esportazione di uno spazio di lavoro Web IDE
 
 Per esportare uno spazio di lavoro {{site.data.keyword.webide}}:
 
 1. Seleziona **File > Esporta > Zip**.
 1. Ripeti per ogni spazio di lavoro che vuoi esportare.
 
-###Eliminazione dei tuoi spazi di lavoro Web IDE
+### Eliminazione dei tuoi spazi di lavoro Web IDE
 
 Per eliminare i tuoi spazi di lavoro {{site.data.keyword.webide}}, compresi tutti i tuoi dati personali:
 
@@ -138,11 +139,11 @@ I profili, le impostazioni, i progetti personali, i gruppi e i frammenti del tuo
 Prima di eliminare il tuo account Git, elimina i tuoi dati personali dagli altri progetti. Dopo che hai eliminato il tuo account Git, potrebbe essere difficile, se non impossibile, trovare tutti i progetti a cui hai contribuito.
 {: tip}
 
-###Progetti personali e condivisi
+### Progetti personali e condivisi
 
 Puoi invitare altri utenti a collaborare ai progetti. I progetti Git che crei all'interno del tuo account sono detti progetti personali. Puoi anche creare dei gruppi Git in cui i progetti possono appartenere a più proprietari Git. Puoi creare dei nuovi progetti per il gruppo o trasferire la proprietà di progetti personali al gruppo. Un gruppo Git viene spesso utilizzato per rappresentare un account aziendale IBM Cloud per indicare l'appartenenza dei progetti alla società.
 
-###Esportazione di un progetto Git Repos and Issue Tracking
+### Esportazione di un progetto Git Repos and Issue Tracking
 
 Prima di eliminare un progetto {{site.data.keyword.gitrepos}}, puoi esportare il progetto per archiviarlo. 
 
@@ -153,14 +154,14 @@ Prima di eliminare un progetto {{site.data.keyword.gitrepos}}, puoi esportare il
 
 Dopo che il progetto è stato archiviato, puoi importarlo in un'altra istanza GitLab. 
 
-###Eliminazione del tuo account Git Repos and Issue Tracking
+### Eliminazione del tuo account Git Repos and Issue Tracking
 
 Puoi eliminare il tuo account {{site.data.keyword.gitrepos}} e tutto quanto appartiene a tale account.
 
-1. Nel dashboard User Settings {{site.data.keyword.gitrepos}}, nella [pagina Account ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, nella sezione Delete account, fai clic su **Delete account**.
+1. Nel dashboard {{site.data.keyword.gitrepos}} User Settings, nella [pagina Account](https://us-south.git.cloud.ibm.com/profile/account){: external}, nella sezione Delete account, fai clic su **Delete account**.
 1. Vengono eliminati tutti i progetti Git, compresi i repository e i problemi. Vieni anche rimosso da qualsiasi gruppo {{site.data.keyword.gitrepos}} a cui appartieni.
 
-Dopo che il tuo account è stato eliminato, del contenuto continuerà a esistere. Questo contenuto viene assegnato a un Ghost User a livello di sistema. Per ulteriori informazioni sull'eliminazione di un account {{site.data.keyword.gitrepos}}, consulta [Deleting a user account ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}.
+Dopo che il tuo account è stato eliminato, del contenuto continuerà a esistere. Questo contenuto viene assegnato a un Ghost User a livello di sistema. Per ulteriori informazioni sull'eliminazione di un account {{site.data.keyword.gitrepos}}, vedi [Deleting a user account](https://us-south.git.cloud.ibm.com/profile/account/delete_account#associated-records){: external}.
 {: tip}
 
 {{site.data.keyword.gitrepos}} utilizza un meccanismo SSO (single sign-on) che crea automaticamente un account Git corrispondente per il tuo account IBM Cloud la prima volta che accedi all'integrazione dello strumento. Dopo che hai eliminato il tuo account, non accedere a {{site.data.keyword.gitrepos}}. Se accedi nuovamente a {{site.data.keyword.gitrepos}}, viene creato automaticamente un nuovo account che devi eliminare.
@@ -180,7 +181,7 @@ Le fasi della pipeline possono includere dati personali quali le credenziali sot
 
   ![Menu Stages](images/pipeline_stages.png)
 
-###Modifica di una fase della pipeline
+### Modifica di una fase della pipeline
 
 Per modificare una fase della pipeline:
 
@@ -193,7 +194,7 @@ Per modificare una fase della pipeline:
   
 1. Elimina un lavoro dalla fase della pipeline. Nella scheda **JOBS**, seleziona il lavoro che vuoi eliminare e fai clic su **Remove**.
  
-###Esportazione di una fase della pipeline
+### Esportazione di una fase della pipeline
 
 Per esportare la definizione per un'intera pipeline, accoda `/yaml` all'URL della pipeline:
 
@@ -211,7 +212,7 @@ Per esportare le risorse utente e i log per una fase della pipeline:
 1. Fai clic su **DOWNLOAD** > **Artifacts** per esportare le risorse utente per la build selezionata.
 1. Fai clic su **DOWNLOAD** > **Logs** per esportare i log per la build selezionata.  
 
-###Eliminazione di una fase della pipeline
+### Eliminazione di una fase della pipeline
 
 Per eliminare una fase della pipeline:
 
@@ -229,7 +230,7 @@ Quando viene creata un'integrazione dello strumento, {{site.data.keyword.contdel
 
 Coordinati con gli altri membri del tuo team prima di eliminare le toolchain e le integrazioni dello strumento condivise.
 
-###Modifica ed eliminazione delle integrazioni dello strumento
+### Modifica ed eliminazione delle integrazioni dello strumento
 
 Quando crei un'integrazione dello strumento, ti viene richiesto di fornire le credenziali utente e altre informazioni di account pertinenti all'integrazione. Se hai usato le tue credenziali personali e le tue informazioni di account, sostituisci tali informazioni con valori differenti oppure elimina l'integrazione dello strumento.
 
@@ -246,7 +247,7 @@ Per eliminare un'integrazione dello strumento:
 1. Per eliminare un'integrazione dello strumento dalla tua toolchain, fai clic su **Delete**.
 1. Conferma facendo clic su **Delete**.
 
-###Eliminazione di toolchain
+### Eliminazione di toolchain
 
 Quando elimini una toolchain, l'eliminazione non può essere annullata.
 
@@ -258,7 +259,7 @@ Quando elimini una toolchain, l'eliminazione non può essere annullata.
 Quando elimini una toolchain, i repository {{site.data.keyword.gitrepos}} associati non vengono eliminati. Gli utenti che hanno accesso a tali repository potrebbero disporre di copie dei dati se hanno eseguito `clone git` o creato uno spazio di lavoro {{site.data.keyword.webide}}. Per assicurarti che tutti i dati vengano eliminati, devi richiedere che tali utenti eliminino le copie dei dati.
 {: tip}
 
-###Eliminazione di tutte le toolchain
+### Eliminazione di tutte le toolchain
 
 Non puoi eliminare tutte le toolchain in un'organizzazione o in un gruppo di risorse contemporaneamente. Devi eliminare ciascuna toolchain, una alla volta.
 

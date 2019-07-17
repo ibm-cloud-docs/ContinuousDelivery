@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-14"
 
 keywords: Administrator Create, Editor Update, Update, user access
 
@@ -27,9 +27,9 @@ L'accesso alle toolchain nei gruppi di risorse per gli utenti nel tuo account vi
 
 **Note**: 
 
-* L'accesso utente per le istanze del servizio {{site.data.keyword.contdelivery_short}} e le istanze della toolchain viene gestito separatamente. Per ulteriori informazioni sulla gestione dell'accesso utente alle istanze del servizio {{site.data.keyword.contdelivery_short}} nei gruppi di risorse, consulta [Gestione dell'accesso utente a {{site.data.keyword.contdelivery_short}} con Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security){: new_window}.
+* L'accesso utente per le istanze del servizio {{site.data.keyword.contdelivery_short}} e le istanze della toolchain viene gestito separatamente. Per ulteriori informazioni sulla gestione dell'accesso utente alle istanze del servizio {{site.data.keyword.contdelivery_short}} nei gruppi di risorse, consulta [Gestione dell'accesso utente a {{site.data.keyword.contdelivery_short}} con Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security).
 
-* L'accesso utente alle toolchain nelle organizzazioni Cloud Foundry viene gestito in modo diverso rispetto a quello delle istanze del servizio {{site.data.keyword.contdelivery_short}} nei gruppi di risorse. Per ulteriori informazioni sulla gestione dell'accesso utente alle toolchain nelle organizzazioni Cloud Foundry, consulta [Gestione dell'accesso utente alle toolchain nelle organizzazioni Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
+* L'accesso utente alle toolchain nelle organizzazioni Cloud Foundry viene gestito in modo diverso rispetto a quello delle istanze del servizio {{site.data.keyword.contdelivery_short}} nei gruppi di risorse. Per ulteriori informazioni sulla gestione dell'accesso utente alle toolchain nelle organizzazioni Cloud Foundry, consulta [Gestione dell'accesso utente alle toolchain nelle organizzazioni Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs).
 
 Ogni utente che accede alle toolchain nel tuo account deve avere assegnata una politica di accesso con un ruolo utente IAM definito. Tale politica determina quali azioni possono essere effettuate dall'utente all'interno del contesto del servizio o dell'istanza che selezioni. Le azioni consentite sono personalizzate e definite dal servizio {{site.data.keyword.Bluemix_notm}} come operazioni che è consentito eseguire sul servizio. Le azioni vengono poi associate ai ruoli utente IAM.
 
@@ -65,5 +65,3 @@ La seguente tabella illustra le azioni che sono associate ai ruoli di gestione d
 {: caption="Tabella 2. Operazioni e azioni del servizio" caption-side="top"}
 
 Per informazioni sull'assegnazione dei ruoli utente nell'IU, consulta [Gestione accesso IAM](/docs/iam?topic=iam-iammanidaccser).
-
-<!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

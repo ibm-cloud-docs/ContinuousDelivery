@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-06-19"
 
 keywords: run jobs, sequences of stages, job types
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -27,12 +28,12 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.contdelivery_full}} include Delivery Pipeline per creare , testare e distribuire in modo ripetibile con un minimo intervento umano. In una pipeline, le sequenze di fasi richiamano l'input ed eseguono i lavori, come le build, i test e le distribuzioni.
 {:shortdesc}
 
-Le tue autorizzazioni per visualizzare, modificare o eseguire una pipeline sono basate sul controllo dell'accesso per la toolchain che gestisce la pipeline. Per ulteriori informazioni sul controllo dell'accesso per le toolchain, fai riferimento a [Gestione dell'accesso alle toolchain nei gruppi di risorse](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window} e [Gestione dell'accesso alle toolchain nelle organizzazioni Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
+Le tue autorizzazioni per visualizzare, modificare o eseguire una pipeline sono basate sul controllo dell'accesso per la toolchain che gestisce la pipeline. Per ulteriori informazioni sul controllo dell'accesso per le toolchain, fai riferimento a [Gestione dell'accesso alle toolchain nei gruppi di risorse](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups) e [Gestione dell'accesso alle toolchain nelle organizzazioni Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs).
 {: important}
 
-Puoi specificare gli script da eseguire in molti dei tipi di lavoro forniti dalla pipeline, dandoti un controllo diretto su quello che viene eseguito dal lavoro. Tali script vengono eseguiti in un'immagine Docker che contiene diversi strumenti di sviluppo standard, compresi gli strumenti necessari per interagire con i runtime {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni su quello che l'immagine Docker standard contiene, vedi [Risorse preinstallate](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}. Se il tuo lavoro richiede degli strumenti di sviluppo che non sono disponibili nell'immagine standard, o se hai bisogno di versioni differenti di tali strumenti, puoi utilizzare un'immagine personalizzata. Per ulteriori informazioni sulle immagini personalizzate, vedi [Utilizzo di immagini docker personalizzate](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}.
+Puoi specificare gli script da eseguire in molti dei tipi di lavoro forniti dalla pipeline, dandoti un controllo diretto su quello che viene eseguito dal lavoro. Tali script vengono eseguiti in un'immagine Docker che contiene diversi strumenti di sviluppo standard, compresi gli strumenti necessari per interagire con i runtime {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni su quello che l'immagine Docker standard contiene, vedi [Risorse preinstallate](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). Se il tuo lavoro richiede degli strumenti di sviluppo che non sono disponibili nell'immagine standard, o se hai bisogno di versioni differenti di tali strumenti, puoi utilizzare un'immagine personalizzata. Per ulteriori informazioni sulle immagini personalizzate, vedi [Utilizzo di immagini docker personalizzate](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images).
 
-Quando la pipeline esegue gli script, le proprietà che descrivono il contesto in cui il lavoro è in esecuzione vengono passate allo script utilizzando le variabili di ambiente. Ad esempio, l'URL del repository che è l'input alla fase, il nome della fase e il lavoro che si sta eseguendo, i parametri specificati dal tipo di lavoro e così via. Per visualizzare un elenco delle variabili di ambiente disponibili, vedi [Risorse preinstallate](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). 
+Quando la pipeline esegue gli script, le proprietà che descrivono il contesto in cui il lavoro è in esecuzione vengono passate allo script utilizzando le variabili di ambiente. Ad esempio, l'URL del repository che è l'input alla fase, il nome della fase e il lavoro che si sta eseguendo, i parametri specificati dal tipo di lavoro e così via. Per visualizzare un elenco delle variabili di ambiente disponibili, vedi [Risorse preinstallate](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources).
 
 Puoi definire le proprietà sia a livello di pipeline che a livello di fase. Le proprietà di pipeline vengono condivise in tutte le fasi e tutti i lavori in una pipeline. Le proprietà di fase sono univoche per una specifica fase e condivise in tutti i lavori in tale fase. Per ulteriori informazioni sulle proprietà, vedi [Proprietà dell'ambiente (variabili di ambiente)](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties).
 
@@ -52,6 +53,20 @@ Potresti desiderare di avere maggiore controllo su una fase specifica. Se non de
 
 ![La scheda INPUT](images/input_tab_only_execute.png)
 
+Ulteriori opzioni di trigger della fase sono disponibili per le fasi che utilizzano il tipo di input del repository Git. Ad esempio, puoi scegliere di eseguire i lavori automaticamente per gli eventi Git sul ramo scelto. Quando scegli questo tipo di trigger, devi selezionare uno o più dei seguenti tipi di evento:
+
+*	**When a commit is pushed** viene attivato quando viene eseguito un push al ramo di repository selezionato.
+*	**When a pull/merge request is opened or updated** viene attivato quando viene aperta o modificata una richiesta di pull o di unione.
+*	**When a pull/merge request is closed** viene attivato quando viene chiusa una richiesta di pull o di unione, anche senza un commit associato.
+
+![I trigger della scheda INPUT](images/input_tab_only_triggers.png)
+
+Se selezioni la casella di spunta **When a pull/merge request is opened or updated**, lo stato della pipeline viene restituito al repository Git. Quando una richiesta di pull o di unione attiva la tua pipeline, nella pagina viene visualizzato un controllo dello stato inline. Un controllo dello stato viene visualizzato per ciascuna delle fasi eseguite nella tue pipeline e vengono forniti del collegamenti ai log e alla cronologia per ciascuna fase. Quando viene eseguito, il controllo dello stato viene aggiornato da pending (in sospeso) a successful (riuscito) o failed (non riuscito). Se la tua pipeline contiene più fasi, ciascuna fase notifica il suo stato nell'elenco di controllo.
+
+Questo feedback dello stato è supportato anche dallo strumento GitLab Community Edition ospitato da IBM per le richieste di unione.
+{: tip}
+
+Puoi anche limitare l'unione in base ai risultati dei controlli dello stato utilizzando le regole di protezione dei rami Git. Dopo che una regola di protezione dei rami è stata creata, tutta l'unione viene bloccata finché tutti i controlli dello stato richiesti hanno esito positivo. 
 
 ### Fase di build
 {: #build_stage}
@@ -95,7 +110,7 @@ I lavori vengono eseguiti in directory di lavoro separate all'interno dei conten
 
 Con eccezione dei lavori di creazione di tipo semplice, quando configuri un lavoro, puoi includere gli script shell UNIX che includono i comandi di creazione, verifica o distribuzione. Poiché i lavori sono eseguiti in un contenitore ad hoc, le azioni di un contenitore non possono influenzare gli ambienti di esecuzione di altri lavori, anche se tali lavori sono parte della stessa fase.
 
-Degli script di build e di distribuzione di esempio sono disponibili in [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons).
+Degli script di build e di distribuzione di esempio sono disponibili in [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons){: external}.
 
 In aggiunta, i lavori della pipeline possono eseguire solo i seguenti comandi come `sudo`:
   * `/usr/sbin/service`
@@ -115,7 +130,7 @@ Dopo l'esecuzione di un lavoro, il contenitore creato per esso viene eliminato. 
 I lavori possono essere eseguiti fino a un massimo di 60 minuti. Quando i lavori superano tale limite, vengono considerati con esito negativo. Se un lavoro sta per superare il limite, suddividilo in più lavori. Ad esempio, se un lavoro esegue tre attività, puoi suddividerlo in tre lavori: uno per ogni attività.
 {: tip}
 
-Per maggiori informazioni su come aggiungere un lavoro a una fase, consulta [Aggiunta di un lavoro a una fase](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}.
+Per maggiori informazioni su come aggiungere un lavoro a una fase, consulta [Aggiunta di un lavoro a una fase](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job).
 
 ### Lavori di creazione
 
@@ -128,7 +143,7 @@ Se utilizzi il tipo di builder **Simple**, il codice non viene compilato o creat
 
 Quando distribuisci utilizzando Cloud Foundry, Cloud Foundry include le risorse corrette per consentire l'esecuzione della tua applicazione. Per ulteriori informazioni, vedi [Distribuzione delle applicazioni mediante il comando cf](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps). La pipeline per un'applicazione Cloud Foundry contiene una fase di distribuzione che esegue un comando cf.
 
-Cloud Foundry tenta di [rilevare il pacchetto di build da utilizzare ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://docs.cloudfoundry.org/buildpacks/detection.html). Puoi specificare il [pacchetto di build](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) da utilizzare nel file manifest all'interno della cartella root della tua applicazione. I pacchetti di build generalmente esaminano le risorse fornite dall'utente per determinare quali dipendenze scaricare e come configurare le applicazioni per comunicare con i servizi associati. Per ulteriori informazioni sui file manifest, vedi [Manifest dell'applicazione](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
+Cloud Foundry prova a [rilevare il pacchetto di build da utilizzare](http://docs.cloudfoundry.org/buildpacks/detection.html){: external}. Puoi specificare il [pacchetto di build](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) da utilizzare nel file manifest all'interno della cartella root della tua applicazione. I pacchetti di build generalmente esaminano le risorse fornite dall'utente per determinare quali dipendenze scaricare e come configurare le applicazioni per comunicare con i servizi associati. Per ulteriori informazioni sui file manifest, vedi [Manifest dell'applicazione](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
 
 ### Lavori di distribuzione
 
@@ -221,4 +236,4 @@ Nella pipeline, puoi specificare tutto quanto può fare un file manifest utilizz
 
 Per prevenire i conflitti, puoi specificare una rotta utilizzando `cf push` seguito all'argomento del nome host, `-n` e un nome della rotta. Modificando lo script di distribuzione per le singole fasi, puoi prevenire conflitti di rotta quando distribuisci a più destinazioni.
 
-Per utilizzare gli argomenti del comando `cf push`, apri le impostazioni di configurazione per un lavoro di distribuzione e modifica il campo **Deploy Script**. Per ulteriori informazioni, consulta la documentazione [Cloud Foundry Push ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}.
+Per utilizzare gli argomenti del comando `cf push`, apri le impostazioni di configurazione per un lavoro di distribuzione e modifica il campo **Deploy Script**. Per ulteriori informazioni, vedi la [documentazione di Cloud Foundry Push](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: external}.

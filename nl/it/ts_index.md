@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-20"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud Continuous Delivery, GitHub tool integration, error message
 
@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:faq: data-hd-content-type='faq'}
 {:codeblock: .codeblock}
@@ -34,7 +35,7 @@ Ottieni le risposte alle domande frequenti sull'utilizzo di {{site.data.keyword.
 {: #plan_exceeded}
 {: faq}
 
-{{site.data.keyword.contdelivery_short}} offre due piani: Lite e Professional. Se hai il piano {{site.data.keyword.contdelivery_short}} Lite, puoi utilizzare le toolchain gratuitamente, fino ai limiti del piano. Il messaggio di errore indica che è stato superato uno o più limiti del piano Lite. Ad esempio, potresti aver superato il piano se hai troppi utenti autorizzati associati all'istanza del servizio {{site.data.keyword.contdelivery_short}} o se hai eseguito il numero massimo di lavori {{site.data.keyword.deliverypipeline}}. Per ulteriori informazioni sui termini del piano, consulta [Utilizzo e limitazioni del piano](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
+{{site.data.keyword.contdelivery_short}} offre due piani: Lite e Professional. Se hai il piano {{site.data.keyword.contdelivery_short}} Lite, puoi utilizzare le toolchain gratuitamente, fino ai limiti del piano. Il messaggio di errore indica che è stato superato uno o più limiti del piano Lite. Ad esempio, potresti aver superato il piano se hai troppi utenti autorizzati associati all'istanza del servizio {{site.data.keyword.contdelivery_short}} o se hai eseguito il numero massimo di lavori {{site.data.keyword.deliverypipeline}}. Per ulteriori informazioni sui termini del piano, consulta [Utilizzo e limitazioni del piano](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 
 ## Il mio servizio {{site.data.keyword.contdelivery_short}} indica che i servizi del piano Lite vengono eliminati dopo 30 giorni di inattività. Cosa si intende per inattività?
@@ -48,7 +49,7 @@ Un'istanza del servizio {{site.data.keyword.contdelivery_short}} viene considera
 {: #service_required_resource_group}
 {: faq}
 
-I termini del piano per l'istanza del servizio {{site.data.keyword.contdelivery_short}} che si trova nello stesso gruppo di risorse o organizzazione della toolchain gestisce l'utilizzo di alcune integrazioni dello strumento ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} e {{site.data.keyword.gitrepos}}) contenute nel servizio. Il messaggio di errore indica che il gruppo di risorse o l'organizzazione non contiene l'istanza richiesta del servizio {{site.data.keyword.contdelivery_short}}. Per ulteriori informazioni sui termini del piano, consulta [Utilizzo e limitazioni del piano](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
+I termini del piano per l'istanza del servizio {{site.data.keyword.contdelivery_short}} che si trova nello stesso gruppo di risorse o organizzazione della toolchain gestisce l'utilizzo di alcune integrazioni dello strumento ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} e {{site.data.keyword.gitrepos}}) contenute nel servizio. Il messaggio di errore indica che il gruppo di risorse o l'organizzazione non contiene l'istanza richiesta del servizio {{site.data.keyword.contdelivery_short}}. Per ulteriori informazioni sui termini del piano, consulta [Utilizzo e limitazioni del piano](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 
 ## Ho caricato le informazioni per una toolchain da un'organizzazione Cloud Foundry; perché non vedo alcuna modifica nella toolchain?
@@ -157,9 +158,9 @@ Controlla la pagina relativa allo stato di {{site.data.keyword.Bluemix_notm}} pe
 Puoi individuare la pagina Stato scegliendo una delle seguenti opzioni:
 
   * Accedi alla console {{site.data.keyword.Bluemix_notm}}. Dalla barra dei menu, fai clic su **Supporto** e seleziona **Stato**. Controlla le risorse elencate per l'icona di ![alcuni problemi](../../get-support/images/some_issues.svg). Questa icona potrebbe indicare un'interruzione.
-  * Accedi ad essa direttamente nella pagina di [stato dei sistemi {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/status){: new_window}.
+  * Accedi direttamente ad essa in [{{site.data.keyword.Bluemix_notm}} - Stato sistema](https://cloud.ibm.com/status){: external}.
 
-Per ulteriori informazioni sulla pagina relativa allo stato di {{site.data.keyword.Bluemix_notm}}, consulta [Visualizzazione dello stato di {{site.data.keyword.Bluemix_notm}}](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}.
+Per ulteriori informazioni sulla pagina relativa allo stato di {{site.data.keyword.Bluemix_notm}}, consulta [Viewing {{site.data.keyword.Bluemix_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status).
 
 
 ## Come eseguo il passaggio di risorse tra i lavori della pipeline?
@@ -173,7 +174,7 @@ Poiché tutti i lavori della pipeline in una fase ricevono lo stesso input di fa
 {: #pipeline_jobs_time_limit}
 {: faq}
 
-Ogni lavoro della pipeline può essere eseguito per un massimo di 60 minuti. Se supera questo limite di tempo, il lavoro non riesce. Esamina se l'attività eseguita dal lavoro della pipeline può essere divisa in passi più piccoli.Puoi dividere il lavoro della pipeline in diversi lavori della pipeline più brevi che vengono eseguiti per meno di 60 minuti.
+Ogni lavoro della pipeline può essere eseguito per un massimo di 60 minuti. Se supera questo limite di tempo, il lavoro non riesce. Esamina se l'attività eseguita dal lavoro della pipeline può essere divisa in passi più piccoli. Puoi dividere il lavoro della pipeline in diversi lavori della pipeline più brevi che vengono eseguiti per meno di 60 minuti.
 
 
 ## Quanto sono sicure le proprietà sicure della pipeline?

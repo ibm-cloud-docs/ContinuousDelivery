@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
 
 keywords: user management function, tool integrations, Cloud Foundry org
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -48,7 +49,7 @@ Se hai differito la configurazione di un'integrazione dello strumento quando hai
  Alcune delle integrazioni dello strumento sono preconfigurate e non richiedono alcun parametro di configurazione. Puoi aggiornare le impostazioni di configurazione solo per le integrazioni dello strumento che hai configurato.
  {: tip}
 
- Quando hai terminato di aggiornare le impostazioni, fai clic su **Save Integration**. Per ulteriori informazioni sulla configurazione di specifiche integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
+ Quando hai terminato di aggiornare le impostazioni, fai clic su **Save Integration**. Per ulteriori informazioni sulla configurazione di specifiche integrazioni dello strumento, consulta [Configurazione delle integrazioni dello strumento](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 
 ## Aggiunta di un'integrazione dello strumento
 {: #adding_a_tool_integration}
@@ -74,7 +75,7 @@ Se elimini un'integrazione dello strumento dalla tua toolchain, l'eliminazione n
 ## Gestione dell'accesso alle toolchain nei gruppi di risorse
 {: #managing_access_resource_groups}
 
-Puoi utilizzare il servizio IAM (Identity and Access Management) per gestire l'accesso utente alle toolchain. Per ulteriori informazioni sulla gestione del controllo dell'accesso con IAM, consulta [Gestione dell'accesso utente alle toolchain con Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}. 
+Puoi utilizzare il servizio IAM (Identity and Access Management) per gestire l'accesso utente alle toolchain. Per ulteriori informazioni sulla gestione del controllo dell'accesso con IAM, consulta [Gestione dell'accesso utente alle toolchain con Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). 
 
 Solo gli utenti che fanno parte dell'elenco di utenti autorizzati per l'istanza selezionata di {{site.data.keyword.contdelivery_short}} possono utilizzare le funzioni Delivery Pipeline, Eclipse Orion {{site.data.keyword.webide}} e {{site.data.keyword.gitrepos}} delle toolchain {{site.data.keyword.contdelivery_short}}. Puoi gestire la titolarità dell'utente autorizzato dalla scheda Manage dell'istanza selezionata di {{site.data.keyword.contdelivery_short}}, all'interno del gruppo di risorse specificato.
 
@@ -93,7 +94,7 @@ Puoi consentire agli utenti di accedere alla toolchain aggiungendoli all'organiz
 Devi aggiungere gli utenti all'organizzazione della toolchain nella regione in cui è ospitata la toolchain. Se la toolchain è stata configurata per distribuire le applicazioni in una regione differente, le distribuirà comunque a tale regione.
 {: important}
 
-Se stai utilizzando {{site.data.keyword.Bluemix_notm}} Dedicato per {{site.data.keyword.ghe_short}}, quando aggiungi gli utenti alla tua organizzazione o ai tuoi spazi {{site.data.keyword.Bluemix_notm}}, gli utenti possono accedere a {{site.data.keyword.ghe_short}} utilizzando i loro ID e password {{site.data.keyword.Bluemix_notm}}. Quando gli utenti accedono, vengono creati degli account per loro. Quando aggiungi utenti ai tuoi spazi o organizzazioni {{site.data.keyword.Bluemix_notm}}, non vengono automaticamente aggiunti al repository {{site.data.keyword.ghe_short}}. Qualcuno che dispone dei privilegi di amministratore per il repository li deve aggiungere. Per ulteriori informazioni, vedi [Using Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}. Se stai utilizzando la tua propria versione gestita di {{site.data.keyword.ghe_short}}, segui le procedure interne.
+Se stai utilizzando {{site.data.keyword.Bluemix_notm}} Dedicato per {{site.data.keyword.ghe_short}}, quando aggiungi gli utenti alla tua organizzazione o ai tuoi spazi {{site.data.keyword.Bluemix_notm}}, gli utenti possono accedere a {{site.data.keyword.ghe_short}} utilizzando i loro ID e password {{site.data.keyword.Bluemix_notm}}. Quando gli utenti accedono, vengono creati degli account per loro. Quando aggiungi utenti ai tuoi spazi o organizzazioni {{site.data.keyword.Bluemix_notm}}, non vengono automaticamente aggiunti al repository {{site.data.keyword.ghe_short}}. Qualcuno che dispone dei privilegi di amministratore per il repository li deve aggiungere. Per ulteriori informazioni, vedi [Using Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started). Se stai utilizzando la tua propria versione gestita di {{site.data.keyword.ghe_short}}, segui le procedure interne.
 
 ###Suggerimenti per la gestione dell'accesso a una toolchain
 
@@ -131,10 +132,22 @@ Se stai utilizzando {{site.data.keyword.Bluemix_notm}} Dedicato per {{site.data.
 
      * Assegna un ruolo per lo spazio selezionato nell'organizzazione.
 
-     Per impostazione predefinita, i gestori dell'organizzazione hanno tutti i privilegi di amministratore per tutte le toolchain associate ad essa. Per concedere tutti i privilegi di amministratore all'utente, seleziona il ruolo **Gestore**. I ruoli Gestore della fatturazione e Revisore non influenzano l'accesso alla toolchain. Puoi modificare i ruoli successivamente nella pagina della directory del team. Per ulteriori informazioni, consulta [Ruoli Cloud Foundry](/docs/iam?topic=iam-cfaccess#cfaccess){: new_window}.
+     Per impostazione predefinita, i gestori dell'organizzazione hanno tutti i privilegi di amministratore per tutte le toolchain associate ad essa. Per concedere tutti i privilegi di amministratore all'utente, seleziona il ruolo **Gestore**. I ruoli Gestore della fatturazione e Revisore non influenzano l'accesso alla toolchain. Puoi modificare i ruoli successivamente nella pagina della directory del team. Per ulteriori informazioni, consulta [Ruoli Cloud Foundry](/docs/iam?topic=iam-cfaccess#cfaccess).
      {: tip}
 
    Dopo che l'utente è un membro dell'organizzazione, ritorna alla pagina di gestione della toolchain e aggiungi l'utente alla toolchain.  
+
+
+## Organizzazioni delle toolchain
+{: #organizing_toolchains}
+
+Puoi aggiungere delle tag alle tue toolchain per organizzarle e trovarle facilmente successivamente. Una tag è un'etichetta che assegni a una toolchain per un facile filtro delle toolchain nel tuo elenco delle toolchain.
+
+1. Nel dashboard DevOps, nella pagina **Toolchain**, individua la toolchain a cui vuoi aggiungere una tag e fai clic su **Aggiungi tag**.
+1. Immetti un nome per la tag che vuoi aggiungere alla toolchain. Puoi aggiungere più tag, che sono separate da virgole.
+1. Fai clic su **Save**.
+
+Per ulteriori informazioni sulle tag, vedi [Gestione delle tag](/docs/resources?topic=resources-tag#).
 
 
 ## Eliminazione di una toolchain
@@ -153,10 +166,10 @@ Puoi eliminare una toolchain e specificare quali delle integrazioni dello strume
 ##Visualizza una esercitazione: utilizzo delle toolchain
 {: #toolchain-tutorial}
 
-Guarda queste esercitazioni in [IBM&reg; Cloud Garage Method ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage){:new_window}:
+Guarda queste esercitazioni su [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external}:
 
-  * [Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app" ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+  * [Crea e utilizza la tua prima toolchain utilizzando la toolchain "Develop a Cloud Foundry app"](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}.
 
-  * [Aggiungi una toolchain a un'applicazione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+  * [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}.
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}.

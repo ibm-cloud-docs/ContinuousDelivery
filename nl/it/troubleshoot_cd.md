@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-06-20"
 
 keywords: troubleshoot, IBM Cloud Continuous Delivery
 
@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -100,7 +101,7 @@ Invece di creare un'integrazione dello strumento {{site.data.keyword.gitrepos}},
 
 1. Se vuoi creare un repository pubblico sul server, deseleziona la casella di spunta **Make this repository private**.
 1. Se desideri utilizzare Problemi di GitLab per la traccia del problema, seleziona la casella di spunta **Enable GitLab Issues**.
-1. Se desideri tracciare la distribuzione delle modifiche del codice creando tag e commenti nei commit e le etichette e i commenti sui problemi a cui fanno riferimento i commit, seleziona la casella di spunta **Track deployment of code changes**. Per ulteriori informazioni, consulta [Track where your code is deployed with toolchains ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Se desideri tracciare la distribuzione delle modifiche del codice creando tag e commenti nei commit e le etichette e i commenti sui problemi a cui fanno riferimento i commit, seleziona la casella di spunta **Track deployment of code changes**. Per ulteriori informazioni, vedi [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}.
 1. Fai clic su **Create Integration**.
 
 Per ulteriori informazioni sulla configurazione di un'integrazione dello strumento GitLab, vedi [Configurazione di GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab).
@@ -125,9 +126,9 @@ Se il repository deve essere privato, il suo proprietario può concedere l'acces
 
 Una volta che disponi di un token di accesso personale, puoi creare un URL per accedere al repository da altre regioni. Mentre stai configurando l'integrazione dello strumento, nel campo **Source repository URL** aggiorna l'URL del repository per utilizzare i tuoi nome utente e token di accesso.
 
-`https://user:XXXXXXX@git.ng.bluemix.net/group/node-hello-world`
+`https://user:XXXXXXX@us-south.git.cloud.ibm.com/group/node-hello-world`
 
-Dove `user` è il tuo nome utente GitLab, `XXXXXXX` è il token di accesso, [`group` ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git.ng.bluemix.net/help/user/group/index.md){:new_window} è il gruppo in cui è archiviato il repository e `node-hello-world` è il nome del repository.
+Dove `user` è il tuo nome utente GitLab, `XXXXXXX` è il token di accesso, [`group`](https://us-south.git.cloud.ibm.com/help/user/group/index.md){: external} è il gruppo dove è archiviato il repository e `node-hello-world` è il nome del repository.
 
 Se il tuo repository GitLab non si trova all'interno di un gruppo GitLab, il valore di `group` è uguale al tuo nome utente.
 {: tip}
@@ -174,13 +175,18 @@ Utilizza uno qualsiasi dei seguenti metodi per risolvere questo problema:
 
 * Se la tua chiave privata non si trova nell'ubicazione predefinita, utilizza il seguente comando per specificarla in una variabile di ambiente:
 
-`GIT_SSH_COMMAND='ssh -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+```
+  GIT_SSH_COMMAND='ssh -i/path/to/private_key_file' git clone git@host:owner/repo.git
+```
 
 * Per eseguire il debug di questo problema utilizzando le informazioni di connessione, aggiungi l'indicatore -v o -vvv alla variabile di ambiente `GIT_SSH_COMMAND`:
 
-`GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git`
-
-`GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+```
+  GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git
+```
+```
+  GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git
+```
 
 
 ## Ho provato ad aggiungere un utente al mio progetto GitLab via email ma non ha ricevuto l'invito. Come lo aggiungo al mio progetto?
@@ -192,7 +198,7 @@ L'invito potrebbe essere bloccato dall'email dell'utente.
 Ho invitato un utente al mio progetto GitLab utilizzando il suo indirizzo email che è elencato in {{site.data.keyword.gitrepos}} ma non ha ricevuto l'email.
 {: tsSymptoms}
    
-È possibile che i filtri contro la posta indesiderata (spam) non consentano all'email di essere ricevuta nella casella di posta in arrivo.
+È possibile che i filtri contro la posta indesiderata (spam) non consentano all'email di essere ricevuta nella casella di posta in arrivo. 
 {: tsCauses}
 
 Per risolvere il problema, puoi utilizzare uno dei seguenti metodi:
@@ -223,6 +229,42 @@ Puoi utilizzare uno qualsiasi dei seguenti metodi per eseguire il debug di quest
 * Utilizza l'interfaccia utente della pipeline per creare una pipeline di esempio che replica la pipeline che stai provando a creare con il tuo template. Accoda `/yaml` all'URL della pipeline per generare un file pipeline.yaml simile che puoi utilizzare per cercare le ovvie differenze. Ad esempio, `https://cloud.ibm.com/devops/pipelines/<your pipeline id>/yaml?env_id=<your region>`.
 
 * Utilizza il meccanismo di creazione della toolchain headless. Nella pagina **Create a Toolchain**, apri il programma di debug e valuta l'espressione `window.Testflags = {nocreate: 1}`. Quando fai clic su **Create a Toolchain** in questa modalità, la toolchain non viene creata. Invece, le informazioni che vengono passate all'API vengono restituite alla console dove puoi esaminarle.
+
+
+## Ho provato a eseguire la distribuzione a Kubernetes utilizzando il Delivery Pipeline, perché sto ottenendo un errore relativo a un oggetto non valido? 
+{: troubleshoot-cd-pipeline-kubernetes}
+{: troubleshoot}
+
+L'immagine di base della pipeline 1.0 include kubectl v1.14.2. Potresti ricevere un errore se il cluster Kubernetes a cui ti stai connettendo sta eseguendo una versione più recente di Kubernetes. 
+
+Quando provo ad eseguire la distribuzione a Kubernetes utilizzando la Delivery Pipeline, ricevo il seguente messaggio di errore:
+{: tsSymptoms}
+
+`error:SchemaeError(io.k8s.api.core.v1.SecretProjection): invalid object doesn't have additional properties`
+
+Di norma, questo problema si verifica quando la versione del comando kubectl nella tua immagine di base della pipeline non è compatibile con la versione di Kubernetes in esecuzione nel cluster.
+{: tsCauses}
+   
+Per risolvere il problema, puoi utilizzare uno dei seguenti metodi:
+{: tsResolve}
+
+* Utilizza una versione dell'immagine di base della pipeline più recente che, quando creata, includa la versione attualmente rilasciata dikubectl. Per informazioni su come specificare la versione dell'immagine più recente, vedi [Specifica della versione dell'immagine](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline_versioned_base_images#specify_base_image_version).
+
+* Assicurati che il tuo lavoro della pipeline stia eseguendo la versione corretta di kubectl. Ad esempio, aggiungi le seguenti righe all'inizio del tuo lavoro della pipeline per eseguire kubectl v1.14.2:
+
+```
+  curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.14.2/bin/linux/amd64/kubectl
+  chmod +x ./kubectl
+  sudo mv ./kubectl /usr/local/bin/kubectl
+```
+
+Se stai eseguendo kubectl v1.14.2 da un'immagine di base della pipeline 1.0, l'opzione sudo non è disponibile. Sostituisci la riga sudo con il seguente comando per aggiungere kubectl al tuo percorso:
+```
+   mkdir ~/.bin && export PATH=~/.bin:$PATH && mv ./kubectl ~/.bin/kubectl
+```
+
+Per ulteriori informazioni sull'accesso all'esatta versione di kubectl di cui hai bisogno, vedi [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux){: external}.
+{: tip}
 
 
 ## Ho configurato un'integrazione dello strumento per la mia toolchain, perché non è stata configurata?

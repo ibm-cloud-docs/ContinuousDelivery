@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-19"
 
 keywords: pipeline base image, custom Docker, IBM Cloud team uses
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -39,11 +40,11 @@ Il nome dell'immagine Docker nei lavori dell'immagine Docker personalizzata è p
 Se il campo **Docker image name** non viene completato, viene utilizzata l'immagine di base della pipeline standard. 
 {: tip}
 
-Per impostazione predefinita, viene eseguita una ricerca nel tuo repository su [Docker Hub ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://hub.docker.com/){: new_window}. Se utilizzi un altro registro Docker, come ad esempio {{site.data.keyword.registrylong}}, puoi utilizzare il nome DNS completo. Puoi anche utilizzare il nome completo per le immagini su Docker Hub. Ad esempio, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
+Per impostazione predefinita, viene eseguita una ricerca nel tuo repository su [Docker Hub](https://hub.docker.com/){: external}. Se utilizzi un altro registro Docker, come ad esempio {{site.data.keyword.registrylong}}, puoi utilizzare il nome DNS completo. Puoi anche utilizzare il nome completo per le immagini su Docker Hub. Ad esempio, `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
 
 La `tag` per un'immagine Docker è facoltativa. Se non specifichi una tag, viene automaticamente impostata su `latest`. Un valore predefinito `latest` è solo un nome di tag che il proprietario del repository deve gestire. Non significa che, cronologicamente parlando, questa immagine Docker sia quella più recente.
 
-Puoi trovare una grande community di repository in Docker Hub. IBM ospita diversi repository pubblici che il team IBM Cloud utilizza all'indirizzo [https://hub.docker.com/u/ibmcom/ ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://hub.docker.com/u/ibmcom/){: new_window}. I repository `ibmcom/ibmjava` e `ibmcom/ibmnode` sono utili come base su cui creare. 
+Puoi trovare una grande community di repository in Docker Hub. IBM ospita diversi repository pubblici che il team IBM Cloud utilizza all'indirizzo [https://hub.docker.com/u/ibmcom/](https://hub.docker.com/u/ibmcom/){: external}. I repository `ibmcom/ibmjava` e `ibmcom/ibmnode` sono utili come base su cui creare. 
 
 ## Utilizzo di un registro di immagini privato
 {: #private_image_registry}
@@ -52,7 +53,7 @@ Se stai utilizzando un registro privato che richiede l'autenticazione, devi impo
 
 Per la maggior parte dei registri, puoi utilizzare il nome utente e la password che ti sono stati forniti. Se utilizzi {{site.data.keyword.registrylong_notm}} per archiviare le tue immagini private, devi utilizzare una chiave API della piattaforma per l'autenticazione. 
 
-1. [Richiedi una chiave API della piattaforma ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/iam/#/apikeys){: new_window} e assicurati di salvare la chiave. 
+1. [Richiedi una chiave API della piattaforma](https://cloud.ibm.com/iam/#/apikeys){: external} e assicurati di salvare la chiave. 
 1. Crea le due proprietà dell'ambiente della fase utilizzando `iamapikey` per il tuo `DOCKER_USERNAME` e la chiave API della piattaforma che hai salvato per la `DOCKER_PASSWORD`.
 
  Credenziali di ![{{site.data.keyword.registrylong_notm}}](images/custom-image-private-repository.png)

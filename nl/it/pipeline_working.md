@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-14"
 
 keywords: IBM Cloud, build types, build script
 
@@ -34,10 +34,10 @@ Puoi eseguire la distribuzione a uno o più regioni e servizi. Ad esempio, puoi 
 
 Puoi utilizzare uno qualsiasi dei seguenti metodi per creare una pipeline:
 
-   * [Crea una toolchain da un'applicazione Cloud Foundry esistente](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}. La toolchain risultante contiene una pipeline.
+   * [Crea una toolchain da un'applicazione Cloud Foundry esistente](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app). La toolchain risultante contiene una pipeline.
 
-   * [Crea una toolchain da un template](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window} che include almeno una pipeline.
+   * [Crea una toolchain da un template](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template) che include almeno una pipeline.
 
-   * [Aggiungi l'integrazione dello strumento {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window} a una toolchain esistente.
+   * [Aggiungi l'integrazione dello strumento {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline) a una toolchain esistente.
    
 Da {{site.data.keyword.deliverypipeline}}, puoi modificare la tua configurazione, controllare lo stato delle creazioni, dell'applicazione distribuita e delle ultime distribuzioni, visualizzare i log più recenti e i dettagli di distribuzione oppure eliminare la tua pipeline.
