@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-14"
 
 keywords: ADD STAGE, Run Stage icon, JOBS tab
 
@@ -103,7 +103,7 @@ subcollection: ContinuousDelivery
 ### スクリプトからのログのダウンロード
 {: #deliverypipeline_download_logs}
 
-パイプライン・ジョブのログ・ファイルをスクリプトからダウンロードして、パイプライン・ジョブの実行中に提供される `PIPELINE_LOG_URL` を保存できます。次の例は、パイプライン・ジョブのログ・ファイルを別のシステムにアップロードする手順を示しています。
+パイプライン・ジョブのログ・ファイルをスクリプトからダウンロードして、パイプライン・ジョブの実行中に提供される `PIPELINE_LOG_URL` を保存できます。 次の例は、パイプライン・ジョブのログ・ファイルを別のシステムにアップロードする手順を示しています。
 
 
 1. ステージの `JOB_LOG` 環境プロパティーをセットアップします。
@@ -113,10 +113,10 @@ subcollection: ContinuousDelivery
    ```shell
    export JOB_LOG="$PIPELINE_LOG_URL"
    ```
-1. 同じステージ内の後のジョブで `PIPELINE_LOG_URL` を使用してログ・ファイルをダウンロードし、それを別のシステムにエクスポートします。IBM Cloud ベアラー・トークンを使用して、ログ・ファイルにアクセスします。
+1. 同じステージ内の後のジョブで `PIPELINE_LOG_URL` を使用してログ・ファイルをダウンロードし、それを別のシステムにエクスポートします。 IBM Cloud ベアラー・トークンを使用して、ログ・ファイルにアクセスします。
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
@@ -127,7 +127,7 @@ subcollection: ContinuousDelivery
      -o job_log.txt \
      "$JOB_LOG"
    ```
-1. `X-More-Data` ヘッダーを確認します。ヘッダーが `true` に設定されている場合、ログ・ファイルは生成中または処理中です。ヘッダーが `false` に設定されている場合、ログ・ファイルはすぐに使用できます。
+1. `X-More-Data` ヘッダーを確認します。 ヘッダーが `true` に設定されている場合、ログ・ファイルは生成中または処理中です。 ヘッダーが `false` に設定されている場合、ログ・ファイルはすぐに使用できます。
 
    ```shell
    grep X-More-Data /tmp/headers.txt
@@ -143,7 +143,7 @@ subcollection: ContinuousDelivery
 ### スクリプトからの成果物のダウンロード
 {: #deliverypipeline_download_artifacts}
 
-パイプライン・ビルド・ジョブの成果物をスクリプトからダウンロードして、パイプライン・ジョブの実行中に提供される `PIPELINE_ARTIFACT_URL` を保存できます。次の例は、パイプライン・ジョブの成果物を別のシステムにアップロードする手順を示しています。
+パイプライン・ビルド・ジョブの成果物をスクリプトからダウンロードして、パイプライン・ジョブの実行中に提供される `PIPELINE_ARTIFACT_URL` を保存できます。 次の例は、パイプライン・ジョブの成果物を別のシステムにアップロードする手順を示しています。
 
 
 1. ステージの `JOB_ARTIFACT` 環境プロパティーをセットアップします。
@@ -154,10 +154,10 @@ subcollection: ContinuousDelivery
    export JOB_ARTIFACT="$PIPELINE_ARTIFACT_URL"
    ```
    
-1. 同じステージ内の後のジョブで `PIPELINE_ARTIFACT_URL` を使用して成果物をダウンロードし、それを別のシステムにエクスポートします。IBM Cloud ベアラー・トークンを使用して、成果物にアクセスします。
+1. 同じステージ内の後のジョブで `PIPELINE_ARTIFACT_URL` を使用して成果物をダウンロードし、それを別のシステムにエクスポートします。 IBM Cloud ベアラー・トークンを使用して、成果物にアクセスします。
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )

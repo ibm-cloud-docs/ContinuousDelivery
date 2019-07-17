@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-14"
 
 keywords: Administrator Create, Editor Update, Update, user access
 
@@ -27,9 +27,9 @@ subcollection: ContinuousDelivery
 
 **注**: 
 
-* ツールチェーン・インスタンスおよび {{site.data.keyword.contdelivery_short}} サービス・インスタンスのユーザー・アクセスは、個別に管理されます。 リソース・グループ内の {{site.data.keyword.contdelivery_short}} サービス・インスタンスへのユーザー・アクセスの管理について詳しくは、[Identity and Access Management を使用した {{site.data.keyword.contdelivery_short}} ユーザー・アクセスの管理](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security){: new_window}を参照してください。
+* ツールチェーン・インスタンスおよび {{site.data.keyword.contdelivery_short}} サービス・インスタンスのユーザー・アクセスは、個別に管理されます。 リソース・グループ内の {{site.data.keyword.contdelivery_short}} サービス・インスタンスへのユーザー・アクセスの管理について詳しくは、[Identity and Access Management を使用した {{site.data.keyword.contdelivery_short}} ユーザー・アクセスの管理](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security)を参照してください。
 
-* Cloud Foundry の組織のツールチェーンのユーザー・アクセスは、リソース・グループ内の {{site.data.keyword.contdelivery_short}} サービス・インスタンスへのユーザー・アクセスとは異なる方法で管理されます。 Cloud Foundry 組織内のツールチェーンへのユーザー・アクセスの管理について詳しくは、[Cloud Foundry の組織内のツールチェーンへのアクセスの管理](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}を参照してください。
+* Cloud Foundry の組織のツールチェーンのユーザー・アクセスは、リソース・グループ内の {{site.data.keyword.contdelivery_short}} サービス・インスタンスへのユーザー・アクセスとは異なる方法で管理されます。 Cloud Foundry 組織内のツールチェーンへのユーザー・アクセスの管理について詳しくは、[Cloud Foundry の組織内のツールチェーンへのアクセスの管理](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs)を参照してください。
 
 ご使用のアカウント内のツールチェーンにアクセスするすべてのユーザーには、IAM ユーザー役割が定義されたアクセス・ポリシーを割り当てる必要があります。 そのポリシーによって、選択したサービスまたはインスタンスのコンテキスト内でユーザーが実行できるアクションが決まります。 許可されるアクションは、サービス上で実行できる操作として、{{site.data.keyword.Bluemix_notm}} サービスによってカスタマイズされて定義されます。 その後、アクションは IAM ユーザー役割にマップされます。
 
@@ -54,10 +54,10 @@ subcollection: ContinuousDelivery
 
 | アクション | サービスに対する操作 | 役割
 |:-----------------|:-----------------|:--------------|
-| 作成 | リソース・グループ内にツールチェーンを作成します。 | 管理者、エディター |
-| 更新 | リソース・グループ内のツールチェーンを更新します。 例えば、ツールチェーンの名前を変更します。 リソース・グループ内のツールチェーンにバインドされているデリバリー・パイプラインを変更します。 | 管理者、エディター |
+| create | リソース・グループ内にツールチェーンを作成します。 | 管理者、エディター |
+| update | リソース・グループ内のツールチェーンを更新します。 例えば、ツールチェーンの名前を変更します。 リソース・グループ内のツールチェーンにバインドされているデリバリー・パイプラインを変更します。 | 管理者、エディター |
 | update_plan | 該当しません。 | 管理者、エディター |
-| 削除 | リソース・グループからツールチェーンを削除します。 | 管理者、エディター |
+| delete | リソース・グループからツールチェーンを削除します。 | 管理者、エディター |
 | retrieve | リソース・グループ内のツールチェーンの詳細を表示します。 リソース・グループ内のツールチェーンにバインドされているデリバリー・パイプラインを表示および実行します。 | 管理者、エディター、オペレーター、ビューアー |
 | list-bindings | リソース・グループ内のツールチェーンにバインドされているツール統合を表示します。 | 管理者、エディター、ビューアー |
 | create-bindings | ツール統合をリソース・グループのツールチェーンに追加します。 | 管理者、エディター |
@@ -65,5 +65,3 @@ subcollection: ContinuousDelivery
 {: caption="表 2. サービスのアクションおよび操作" caption-side="top"}
 
 UI でのユーザー役割の割り当てについては、[IAM アクセス権限の管理](/docs/iam?topic=iam-iammanidaccser)を参照してください。
-
-<!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

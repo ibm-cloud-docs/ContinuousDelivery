@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-19"
 
 keywords: pipeline base image, custom Docker, IBM Cloud team uses
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -39,11 +40,11 @@ subcollection: ContinuousDelivery
 **「Docker イメージ名」**フィールドが入力されていない場合は、標準のパイプライン基本イメージが使用されます。 
 {: tip}
 
-デフォルトでは、[Docker Hub ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://hub.docker.com/){: new_window} 上のリポジトリーが検索されます。 {{site.data.keyword.registrylong}} などの別の Docker レジストリーを使用する場合は、完全な DNS 名を使用できます。 また、Docker Hub 上のイメージの完全修飾名を使用することもできます。 例えば、`registry.hub.docker.com/library/maven:3.5.3-ibmjava` です。
+デフォルトでは、[Docker Hub](https://hub.docker.com/){: external} 上のリポジトリーが検索されます。{{site.data.keyword.registrylong}} などの別の Docker レジストリーを使用する場合は、完全な DNS 名を使用できます。 また、Docker Hub 上のイメージの完全修飾名を使用することもできます。 例えば、`registry.hub.docker.com/library/maven:3.5.3-ibmjava` です。
 
 Docker イメージの`「タグ」`はオプションです。 タグを指定しない場合、デフォルトで`「最新 (latest)」` に設定されます。 デフォルト値の`「最新 (latest)」`は、リポジトリー所有者が管理する必要があるタグ名です。 これは、この Docker イメージが発生順で最新のイメージであることを意味するものではありません。
 
-Docker Hub には、リポジトリーの大規模なコミュニティーがあります。 IBM は、[https://hub.docker.com/u/ibmcom/![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://hub.docker.com/u/ibmcom/){: new_window} で、IBM Cloud チームが使用する多数のパブリック・リポジトリーをホストしています。 `ibmcom/ibmjava` リポジトリーと `ibmcom/ibmnode` リポジトリーは、ビルドに役立ちます。 
+Docker Hub には、リポジトリーの大規模なコミュニティーがあります。 IBM は、[https://hub.docker.com/u/ibmcom/](https://hub.docker.com/u/ibmcom/){: external} で、IBM Cloud チームが使用する多数のパブリック・リポジトリーをホストしています。`ibmcom/ibmjava` リポジトリーと `ibmcom/ibmnode` リポジトリーは、ビルドに役立ちます。 
 
 ## プライベート・イメージ・レジストリーの使用
 {: #private_image_registry}
@@ -52,7 +53,7 @@ Docker Hub には、リポジトリーの大規模なコミュニティーがあ
 
 ほとんどのレジストリーでは、提供されたユーザー名とパスワードを使用できます。 {{site.data.keyword.registrylong_notm}} を使用してプライベート・イメージを保管する場合は、認証にプラットフォーム API キーを使用する必要があります。 
 
-1. [プラットフォーム API キーを要求![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/iam/#/apikeys){: new_window}し、鍵を保存したことを確認します。 
+1. [プラットフォーム API キーを要求](https://cloud.ibm.com/iam/#/apikeys){: external}し、鍵を保存したことを確認します。 
 1. `DOCKER_USERNAME` に `iamapikey` を使用し、また、`DOCKER_USERNAME` に保存したプラットフォーム API キーを使用して、2 つのステージ環境プロパティーを作成します。
 
  ![{{site.data.keyword.registrylong_notm}} 資格情報](images/custom-image-private-repository.png)

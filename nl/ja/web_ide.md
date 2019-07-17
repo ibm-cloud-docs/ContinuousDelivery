@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-19"
 
 keywords: Eclipse Orion {{site.data.keyword.webide}}, file types, Local Editor Settings icon
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -31,7 +32,7 @@ Eclipse Orion {{site.data.keyword.webide}} は、ブラウザー・ベースの�
 規制対象データを {{site.data.keyword.webide}} 内のファイルに保存しないでください。 規制対象データ用の手順は現在機能していません。
 {: tip}
 
-{{site.data.keyword.webide}} は、キーボードでアクセスすることができますが、スクリーン・リーダーでも良好に動作します。{{site.data.keyword.webide}} を使用してコードを編集することができますが、必要に応じて、任意のコード・エディターまたはテキスト・エディターを使用してコードを編集することもできます。{{site.data.keyword.webide}} で提供されている Git 機能を使用することもできます。あるいは、Git コマンド・ラインまたは github.com を使用して {{site.data.keyword.webide}} Git 機能にアクセスすることもできます。
+{{site.data.keyword.webide}} は、キーボードでアクセスすることができますが、スクリーン・リーダーでも良好に動作します。 {{site.data.keyword.webide}} を使用してコードを編集することができますが、必要に応じて、任意のコード・エディターまたはテキスト・エディターを使用してコードを編集することもできます。 {{site.data.keyword.webide}} で提供されている Git 機能を使用することもできます。あるいは、Git コマンド・ラインまたは github.com を使用して {{site.data.keyword.webide}} Git 機能にアクセスすることもできます。
 {: note}
 
 ## IDE のセットアップ
@@ -108,68 +109,6 @@ Node.js アプリを開発している場合は、ライブ編集モードを有
 </td></tr>
 </table>
 
-<!-- 3/6/2016: bl commands don't work with V2/CD
-## Editing outside of the {{site.data.keyword.webide}}
-{: #editlocal}
-
-To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.Bluemix_short}}.
-
-### Before you begin
-
-Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
-
-### Synchronizing your local environment with {{site.data.keyword.Bluemix_notm}}
-{: #edit_local_download}
-
-1. Open a command-line window.
-2. Sign in to {{site.data.keyword.Bluemix_notm}}:
-
-	```
-	bl login
-	```
-	{: pre}
-
-3. When you are prompted, enter your IBMid and password.
-4. View a list of your {{site.data.keyword.Bluemix_notm}} projects:
-
-	```
-	bl projects
-	```
-	{: pre}
-
-4. Synchronize your local environment with your project on {{site.data.keyword.Bluemix_notm}}:
-
-	```
-	bl sync projectName
-	```
-	{: pre}
-
-where `projectName` is your {{site.data.keyword.Bluemix_notm}} app's name.
-
-When you are finished editing, enter `q` to end synchronization.
-
-### Enabling the Desktop Sync feature to edit code locally
-
-The Desktop Sync feature is like Live Edit mode for the command line. You need the Desktop Sync feature to debug on the command line.
-1. In another command-line window, enable the Desktop Sync feature:
-
-	```
-	cd localDirectory
-	bl start
-	```
-	{: codeblock}
-
-2. Use the launch configuration that you created in the {{site.data.keyword.webide}}. After you select the launch configuration, the Desktop Sync feature is enabled in your local environment. In the command-line window that you just opened, you can view the app's URL, the debug URL, the manage URL, and view the {{site.data.keyword.Bluemix_live_notm}} state.
-
-3. Refresh the browser and verify that you can see the changes that you saved to static files in the local workspace.
-
-### Disabling the Desktop Sync feature
-
-1. In the second command-line window, enter `bl stop`.
-2. In the first command-line window, enter `q`.
-
--->
-
 ## サポートされる言語
 {: #supported_languages}
 
@@ -223,8 +162,8 @@ Eclipse Orion {{site.data.keyword.webide}} では、コンテンツ・アシス�
 ## チュートリアルを始める: Eclipse Orion Web IDE
 {: #toolchain_web_ide_tutorials}
 
-[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage){:new_window} の以下のチュートリアルのいずれかをチェックアウトします。
+[IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external} の以下のチュートリアルのいずれかをご確認ください。
 
-  * [ 「Develop a Cloud Foundry app」ツールチェーンを使用した初めてのツールチェーンの作成と使用 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン ")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。
+  * [「Develop a Cloud Foundry app」ツールチェーンを使用して、初めてツールチェーンを作成し、使用します](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}。
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。
+  * [「Develop and test microservices on Cloud Foundry」ツールチェーンを使用します](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}。 

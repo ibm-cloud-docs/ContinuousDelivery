@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-20"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -23,7 +24,7 @@ subcollection: ContinuousDelivery
 # {{site.data.keyword.gitrepos}}
 {: #git_working}
 
-IBM によってホストされ、[GitLab Community Edition ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://about.gitlab.com/){:new_window}上に構築されている Git リポジトリーおよび Issue Tracker を使用して、チームでの共同作業およびソース・コードの管理を行います。
+IBM によってホストされ、[GitLab Community Edition ](https://about.gitlab.com/){: external} 上に構築されている Git リポジトリーと Issue Tracker を使用して、チームでの共同作業やソース・コードの管理を行います。
 {: shortdesc}
 
 プロジェクトで共同作業する個人的関係やビジネス上の関係がある人だけを招待してください。 プロジェクトで共同作業をする以外の目的で Git レポへの招待を使用するユーザーによるサービスへのアクセスは、中断されたり取り消されたりする場合があります。
@@ -48,7 +49,7 @@ GitLab の代替機能として、GitHub と Git コマンド・ラインを利�
 ## {{site.data.keyword.gitrepos}} をローカルに使用する
 {: #git_locally}
 
-{{site.data.keyword.gitrepos}} に保管されている Git リポジトリーに、ローカルからアクセスできます。 ローカルで Git をセットアップする手順については、[Start using Git on the command line (コマンド・ラインでの Git の使用の開始) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window} を参照してください。
+{{site.data.keyword.gitrepos}} に保管されている Git リポジトリーに、ローカルからアクセスできます。 ローカルで Git をセットアップする手順については、[Start using Git on the command line](https://us-south.git.cloud.ibm.com/help/gitlab-basics/start-using-git){: external} を参照してください。
 
 {{site.data.keyword.gitrepos}} は、TLS1.2 を使用する HTTPS 接続のみをサポートします。 Eclipse を使用して接続する場合は、通常、使用する Java&trade; バージョンでこのプロトコルを指定する必要があります。そのためには、eclipse.ini ファイルに `-Dhttps.protocols=TLSv1.2` を追加してから Eclipse を再始動します。
 {: tip}
@@ -64,21 +65,21 @@ GitLab の代替機能として、GitHub と Git コマンド・ラインを利�
 HTTPS 経由で Git リポジトリーの認証を受けるために、個人用アクセス・トークンを作成する必要があります。
 {: tip}
 
-1. {{site.data.keyword.gitrepos}} ユーザー設定ダッシュボードの[「アクセス・トークン」ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window} で、アクセス・トークンを作成するアプリケーションの名前を入力します。 例えば、`「Git CLI」`と入力します。
+1. {{site.data.keyword.gitrepos}} ユーザー設定ダッシュボードの[「アクセス・トークン」ページ](https://us-south.git.cloud.ibm.com/profile/personal_access_tokens){: external}で、アクセス・トークンを作成するアプリケーションの名前を入力します。例えば、`「Git CLI」`と入力します。
 1. オプション: アクセス・トークンの有効期限日を選択します。
 1. **api** チェック・ボックスを選択して、スコープとして api を使用する個人用アクセス・トークンを作成します。
 1. **「個人用アクセス・トークンの作成 (Create Personal Access Token)」**をクリックします。 後で使用するために、アクセス・トークンを安全な場所にメモしておきます。
-1. [「Account」ページ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window} の「Change username」セクションで自分の {{site.data.keyword.gitrepos}} ユーザー名を見つけます。 ユーザー名は、作成した個人用 Git リポジトリーの URL の最初のセグメントとしても表示されています。
+1. [アカウント・ページ](https://us-south.git.cloud.ibm.com/profile/account){: external}の「ユーザー名の変更」セクションで自分の {{site.data.keyword.gitrepos}} ユーザー名を見つけます。ユーザー名は、作成した個人用 Git リポジトリーの URL の最初のセグメントとしても表示されています。
 1. {{site.data.keyword.gitrepos}} ユーザー名と個人用アクセス・トークンを使用して、外部 Git クライアントから Git リポジトリーの認証を受けます。
 
-詳しくは、[Personal access tokens ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window} を参照してください。
+詳しくは、[Personal access tokens](https://us-south.git.cloud.ibm.com/help/api/README.html#personal-access-tokens){: external} を参照してください。
 
 ### SSH 鍵の作成  
 {:create_ssh }
 
-SSH 鍵を作成するには、[How to create your SSH Keys ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){:new_window} を参照してください。 SSH 認証を使用してリポジトリーにアクセスするには、プロキシーおよびファイアウォールの追加構成が必要な場合があります。
+SSH 鍵を作成するには、[How to create your SSH Keys](https://us-south.git.cloud.ibm.com/help/gitlab-basics/create-your-ssh-keys){: external} を参照してください。SSH 認証を使用してリポジトリーにアクセスするには、プロキシーおよびファイアウォールの追加構成が必要な場合があります。
 
-詳しくは、[SSH ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/help/ssh/README){:new_window} を参照してください。
+詳しくは、[SSH](https://us-south.git.cloud.ibm.com/help/ssh/README){: external} を参照してください。
 
 ## 物理ファイルおよびリポジトリーのサイズ制限
 {: #git_limits}
@@ -88,8 +89,8 @@ SSH 鍵を作成するには、[How to create your SSH Keys ![外部リンク・
 ## チュートリアルを始める: {{site.data.keyword.gitrepos}}
 {: #git_tutorials}
 
-[IBM&reg; Cloud Garage Method ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage){:new_window} の以下のチュートリアルのいずれかをチェックアウトします。
+[IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external} の以下のチュートリアルのいずれかをご確認ください。
 
-  * [ 「Develop a Cloud Foundry app」ツールチェーンを使用した初めてのツールチェーンの作成と使用 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン ")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。 テンプレートからオープン・ツールチェーンを作成し、そのツールチェーンを使用して「Hello World」アプリの継続的デリバリーを行う方法を学習します。
+  * [「Develop a Cloud Foundry app」ツールチェーンを使用して、初めてツールチェーンを作成し、使用します](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}。テンプレートからオープン・ツールチェーンを作成し、そのツールチェーンを使用して「Hello World」アプリの継続的デリバリーを行う方法を学習します。
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。 3 つのマイクロサービスを使用するテンプレートからツールチェーンを作成し、そのツールチェーンを使用してオンライン・ストアの継続的デリバリーを行う方法を説明します。
+  * [「Develop and test microservices on Cloud Foundry」ツールチェーンを使用します](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}。3 つのマイクロサービスを使用するテンプレートからツールチェーンを作成し、そのツールチェーンを使用してオンライン・ストアの継続的デリバリーを行う方法を説明します。

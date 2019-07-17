@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-08"
+lastupdated: "2019-06-11"
 
 keywords: Continuous Delivery, Support tickets, Continuous Delivery service
 
@@ -22,33 +22,39 @@ subcollection: ContinuousDelivery
 # {{site.data.keyword.contdelivery_short}} のヘルプとサポートの入手    
 {: #cd_support}  
 
-{{site.data.keyword.contdelivery_full}} チームは、developerWorks フォーラムをアクティブに監視して、{{site.data.keyword.contdelivery_short}} のサービスとツールチェーンに関する質問を確認しています。 
+{{site.data.keyword.contdelivery_full}} チームは、Slack チャネルと IBM Developer Answers をアクティブに監視して、{{site.data.keyword.contdelivery_short}} のサービスとツールチェーンに関する質問を確認しています。
 
-<table>
+| ヘルプの利用 | 質問を投稿する |
+|----------|---------|
+| Slack チャネルで弊社に連絡する | <a class="xref" href="https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/" target="_blank" title="(新しいタブまたはウィンドウで開く)"><img class="image" src="images/slack_us.png" alt="Slack で連絡する"/></a> |
+| IBM Developer Answers で最近の投稿を探索したり、質問したり答えたりする | <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(新しいタブまたはウィンドウで開く)"><img class="image" src="images/post_question.png" alt="IBM Developer Answers"/></a> |
+{: caption="表 1. {{site.data.keyword.contdelivery_short}} のヘルプとサポート" caption-side="top"}
+
+<!--<table>
 <tr>
 <th style="width:20%"> &nbsp; &nbsp; &nbsp;</th>
  <th style="text-align:center;width=60%">
- <strong>質問を投稿する</strong> </th>
+ <strong>Ask Us a Question</strong> </th>
 <th> &nbsp; &nbsp; &nbsp;</th>
 </tr>
 <tr>
 <td> </td>
   <td align="center">
-  <p>IBM {{site.data.keyword.contdelivery_short}} および他の DevOps Services のユーザーからの直接の支援を素早く得ることができます。</p>
+  <p>Get help fast, directly from IBM {{site.data.keyword.contdelivery_short}} and other DevOps Services users.</p>
   <b>dW Answers</b>
   <p>
-   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(新しいタブまたはウィンドウで開く)"><img class="image" src="images/ask-a-question.png" alt="質問を投稿する"/></a></p>
+   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,ibm-cloud" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
-    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(新しいタブまたはウィンドウで開く)">dW Answers の最新の <img class="image" src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services の質問を表示する。</p>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Opens in a new tab or window)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on dW Answers.</p> 
  </td>
  <td></td>
     </tr>
-  </table>  
+  </table>  -->
 
 
 ## サポート・チケット
 
-より重大な問題がある場合や {{site.data.keyword.contdelivery_short}} サービスで問題が発生した場合は、サポート・チケットをオープンします。    
+より重大な問題がある場合や {{site.data.keyword.contdelivery_short}} サービスで問題が発生した場合は、サポート・チケットをオープンします。   
 
 1. {{site.data.keyword.Bluemix_notm}} にログインします。
 1. メニュー・バーで**「サポート」**をクリックし、次に**「チケットの追加」**をクリックします。

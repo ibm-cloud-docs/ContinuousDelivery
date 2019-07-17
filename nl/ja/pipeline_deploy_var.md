@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-28"
 
 keywords: Environment properties, IBM Java, pipeline environments
 
@@ -42,6 +42,7 @@ subcollection: ContinuousDelivery
 {: #deliverypipeline_envprop}
 
 ### 汎用プロパティー
+以下の表では、パイプライン環境内でデフォルトで使用できる汎用環境プロパティーをそれぞれリストして説明しています。
 
 | 環境プロパティー | 説明 |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -61,18 +62,20 @@ subcollection: ContinuousDelivery
 | IDS_URL | 現在のパイプラインの URL。 |
 | IDS_VERSION | デプロイ中のビルドの番号、または SCM ID。 このプロパティーは、デプロイ・ジョブでのみ利用できます。
 | JOB_NAME | 現在のパイプラインのコンテキストの固有ジョブ ID。 |
-| PIPELINE_ARTIFACT_URL | ジョブの完了後に現在のビルド・ジョブの成果物をダウンロードするために使用できる URL。成果物にアクセスするには、有効なベアラー・トークンを使用する必要があります。|
+| PIPELINE_ARTIFACT_URL | ジョブの完了後に現在のビルド・ジョブの成果物をダウンロードするために使用できる URL。 成果物にアクセスするには、有効なベアラー・トークンを使用する必要があります。 |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | パイプラインの実行の固有 ID。 |
 | PIPELINE_KUBERNETES_CLUSTER_NAME | 現在のジョブで選択されている Kubernetes クラスターの名前。 |
-| PIPELINE_LOG_URL | ジョブの完了後に現在のジョブのログ・ファイルをダウンロードするために使用できる URL。ログ・ファイルにアクセスするには、有効なベアラー・トークンを使用する必要があります。|
+| PIPELINE_LOG_URL | ジョブの完了後に現在のジョブのログ・ファイルをダウンロードするために使用できる URL。 ログ・ファイルにアクセスするには、有効なベアラー・トークンを使用する必要があります。 |
 | PIPELINE_STAGE_INPUT_JOB_ID | 現在のステージの入力のジョブの ID。 |
 | PIPELINE_STAGE_INPUT_REV | 現在のステージの入力のリビジョン。 |
 | PIPELINE_TRIGGERING_USER | パイプライン・ジョブの現行ユーザー|
 | TASK_ID | ジョブの現在の実行の固有 ID。 |
 | TMPDIR | 一時ファイルが保存されるディレクトリーの場所。 |
 | WORKSPACE | 現行の作業ディレクトリーのパス。 |
+{: caption="表 1. 汎用環境プロパティー" caption-side="top"}
 
 ### ランタイムとツールのプロパティー
+以下の表では、パイプライン環境内でデフォルトで使用できるランタイムとツールの環境プロパティーをそれぞれリストして説明しています。
 
 | 環境プロパティー | 説明 |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -84,11 +87,13 @@ subcollection: ContinuousDelivery
 | JAVA8_HOME | IBM Java 8 のパス。 |
 | MAVEN_HOME | Apache Maven 3.2.1 のパス。 |
 | NODE_HOME | Node.js 0.10.29 のパス。 |
+{: caption="表 2. ランタイムとツールの環境プロパティー" caption-side="top"}
 
 パイプラインのスクリプトで Apache Ant 1.10+ を使用するには、`ANT_HOME` を `$ANT_JAVA8_HOME` に、`JAVA_HOME` を `$JAVA8_HOME` に設定します。
 {: tip}
 
 ### デプロイメント・プロパティー
+以下の表では、パイプライン環境内でデフォルトで使用できるデプロイメント環境プロパティーをそれぞれリストして説明しています。
 
 | 環境プロパティー | 説明 |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -99,6 +104,7 @@ subcollection: ContinuousDelivery
 | CF_SPACE_ID | デプロイメントにおける、デプロイ先のスペースの ID。  |
 | CF_TARGET_URL | デプロイメントにおける、{{site.data.keyword.Bluemix_short}} または Cloud  Foundry の URL。　 |
 | IDS_VERSION | デプロイメントにおける、デプロイされるアプリケーションのバージョン、またはソース ID。 |
+{: caption="表 3. デプロイメント環境プロパティー" caption-side="top"}
 
 ## あらかじめインストールされているリソース
 {: #deliverypipeline_resources}
@@ -106,6 +112,7 @@ subcollection: ContinuousDelivery
 いくつかのランタイム、ツール、Node モジュールは、すべてのパイプラインにあらかじめインストールされています。
 
 ### ランタイムとツール
+以下の表では、すべてのパイプライン内で使用できる、あらかじめインストールされているランタイムとツールをそれぞれリストしています。
 
 すべてのリンクがホーム・ディレクトリー内にあります。
 {: tip}
@@ -123,6 +130,7 @@ subcollection: ContinuousDelivery
 |Apache Maven 3.2.1 |maven |/opt/IBM/maven |
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
+{: caption="表 4. ランタイムとツールに関するリンク・ネームとパス" caption-side="top"}
 
 パイプライン環境は 64 ビット・バージョンの IBM Node 0.10、0.10.48、0.12、0.12.17、4.2、4.4.5、4.6.0、6.2.2、および 6.7.0 を提供しています。 バージョンを選択するには、export コマンドを使用します。
 

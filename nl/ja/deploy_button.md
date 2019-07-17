@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud button, yml file, build file
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -32,7 +33,7 @@ subcollection: ContinuousDelivery
 
 3. ツールチェーンが作成されます。そこには、Git リポジトリーの新しいプライベート・クローン、コード変更をビルドしてデプロイするためのパイプライン、クラウド上でコードを編集するための Eclipse Orion {{site.data.keyword.webide}}、Issue Tracker が含まれます。
 
-  `.bluemix` ディレクトリーに `toolchain.yml` ファイルが含まれていれば、ツールチェーンのツール統合を指定するためにそのファイルが使用されます。 `toolchain.yml` ファイルについて詳しくは、[カスタム・ツールチェーンの作成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}を参照してください。
+  `.bluemix` ディレクトリーに `toolchain.yml` ファイルが含まれていれば、ツールチェーンのツール統合を指定するためにそのファイルが使用されます。 `toolchain.yml` ファイルについて詳しくは、[カスタム・ツールチェーンの作成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom)を参照してください。
   {: tip}
 
 4. アプリがビルド・ファイルを必要とする場合、ビルド・ファイルが自動的に検出されて、アプリがビルドされます。
@@ -47,11 +48,11 @@ subcollection: ContinuousDelivery
 
 パブリック {{site.data.keyword.gitrepos}} リポジトリーのアプリ・ボタンの例を以下に示します。
 
-[![IBM Cloud にデプロイ](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
+[![IBM Cloud にデプロイ](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://us-south.git.cloud.ibm.com/idsorg/sample-java-cloudant){: external}
 
 パブリック GitHub リポジトリーのアプリ・ボタンの例を以下に示します。
 
-[![IBM Cloud にデプロイ](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
+[![IBM Cloud にデプロイ](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){: external}
 
 ## ボタンの作成 {: #create-button}
 
@@ -91,8 +92,6 @@ Markdown でボタンを作成するには、このスニペットをコピー�
 
 * イメージをローカルに保管する場合は、イメージをダウンロードし、Git リポジトリーに保管できます。 イメージの相対ロケーションを使用するようにパスを調整してください。
 
-* 翻訳版のボタンを使用する場合は、そのボタンをリモートで参照するか、[ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window} からダウンロードすることができます。
-
 ## リポジトリーに関する考慮事項 {: #button-repo}
 
 「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンで使用するリポジトリーについて、以下の考慮事項を検討してください。
@@ -105,10 +104,10 @@ Markdown でボタンを作成するには、このスニペットをコピー�
 
 サポートされるビルダーとしては、以下のものがあります。
 
-* [Ant ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン"):](http://ant.apache.org/manual/using.html){:new_window} `build.xml`。ビルド出力は `./output/` フォルダーに置かれます
-* [Gradle ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン"):](https://docs.gradle.org/current/userguide/getting_started.html){:new_window} `/build.gradle`。ビルド出力は `.` フォルダーに置かれます
-* [Grunt ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン"):](http://gruntjs.com/getting-started#the-gruntfile){:new_window} `/Gruntfile.js`。ビルド出力は `.` フォルダーに置かれます
-* [Maven ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン"):](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:new_window} `/pom.xml`。ビルド出力は `./target/` フォルダーに置かれます
+* [Ant:](http://ant.apache.org/manual/using.html){: external} `build.xml`。ビルド出力は `./output/` フォルダーに置かれます
+* [Gradle:](https://docs.gradle.org/current/userguide/getting_started.html){:external} `/build.gradle`。ビルド出力は `.` フォルダーに置かれます
+* [Grunt:](http://gruntjs.com/getting-started#the-gruntfile){: external} `/Gruntfile.js`。ビルド出力は `.` フォルダーに置かれます
+* [Maven:](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){: external} `/pom.xml`。ビルド出力は `./target/` フォルダーに置かれます
 
 ### パイプライン・ファイルの要件
 {: pipeline_file}
@@ -117,7 +116,7 @@ Markdown でボタンを作成するには、このスニペットをコピー�
 
 `.bluemix` ディレクトリーに `pipeline.yml` ファイルがない場合は、「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンを使用すると、「ビルド」ステージと「デプロイ」ステージ (Cloud Foundry へのデプロイが行われる) という 2 つのステージを含むデフォルトのパイプラインが作成されます。
 
-パイプライン・ファイルを作成する際は、[カスタム・ツールチェーン・パイプラインに関する説明](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml)に記載されているサンプル・ファイルを参照してください。 Web インターフェースでパイプラインを定義する場合と同様に、ステージとジョブを作成し、入力と環境変数を設定し、スクリプトを追加することによって、テキストでパイプラインを定義します。 さらに[このデモンストレーション・プロジェクト](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix)に、より複雑なパイプライン・ファイルがいくつか用意されています。
+パイプライン・ファイルを作成する際は、[カスタム・ツールチェーン・パイプラインに関する説明](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml)に記載されているサンプル・ファイルを参照してください。 Web インターフェースでパイプラインを定義する場合と同様に、ステージとジョブを作成し、入力と環境変数を設定し、スクリプトを追加することによって、テキストでパイプラインを定義します。 さらに[このデモンストレーション・プロジェクト](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix){: external}に、より複雑なパイプライン・ファイルがいくつか用意されています。
 
 ### コンテナー Dockerfile の要件
 {: container_dockerfile}
@@ -126,11 +125,11 @@ Markdown でボタンを作成するには、このスニペットをコピー�
 
 Dockerfile は、アプリのビルド・スクリプトのようなものとして機能します。 リポジトリーで Dockerfile が検出されると、アプリは、コンテナーにデプロイされる前に自動的にイメージにビルドされます。 アプリがイメージにビルドされる前にアプリ自体をビルドする必要がある場合は、Dockerfile に加えてアプリのビルド・スクリプトを含めてください。
 
-Dockerfile の作成について詳しくは、[Docker 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.docker.com/reference/builder/){:new_window} を参照してください。 Kubernetes にデプロイするためにツールチェーン・テンプレートを使用するステップバイステップの手順については、[チュートリアル: 「Develop a Kubernetes app」ツールチェーンを使用する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window}または[チュートリアル: 「Develop a Kubernetes app with Helm」ツールチェーンを使用する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window} を参照してください。
+Dockerfile の作成について詳しくは、[Docker 資料](https://docs.docker.com/reference/builder/){: external}を参照してください。Kubernetes にデプロイするためにツールチェーン・テンプレートを使用するステップバイステップの手順については、[チュートリアル:「Develop a Kubernetes app」ツールチェーンを使用する](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){: external}、または[チュートリアル:「Develop a Kubernetes app with Helm」ツールチェーンを使用する](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){: external}を参照してください。
 
-Kubernetes クラスターへの Cloud Foundry アプリの移植について詳しくは、[Tutorial: Port a Cloud Foundry app to deploy to Kubernetes in a toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){:new_window} を参照してください。  
+Kubernetes クラスターへの Cloud Foundry アプリの移植について詳しくは、[チュートリアル: Port a Cloud Foundry app to deploy to Kubernetes in a toolchain ](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){: external} を参照してください。  
 
-コンテナー専用の `pipeline.yml` を手動で作成するには、[GitHub の例 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Puquios/){:new_window} を参照してください。
+コンテナー専用の `pipeline.yml` を手動で作成するには、[GitHub の例](https://github.com/Puquios/){: external}を参照してください。
 
 ### マニフェスト・ファイルの要件 (Cloud Foundry にデプロイされたアプリの場合)
 {: #manifest_files}

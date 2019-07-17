@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-06-19"
 
 keywords: run jobs, sequences of stages, job types
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -28,12 +29,12 @@ subcollection: ContinuousDelivery
 ビルド、テスト、およびデプロイメントなどのジョブを実行します。
 {:shortdesc}
 
-パイプラインを表示、変更、または実行する権限は、パイプラインを所有するツールチェーンのアクセス制御に基づいています。 ツールチェーンのアクセス制御について詳しくは、[リソース・グループ内のツールチェーンへのアクセスの管理](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window}および[Cloud Foundry の組織内のツールチェーンへのアクセスの管理](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}を参照してください。
+パイプラインを表示、変更、または実行する権限は、パイプラインを所有するツールチェーンのアクセス制御に基づいています。 ツールチェーンのアクセス制御について詳しくは、[リソース・グループ内のツールチェーンへのアクセスの管理](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups)および[Cloud Foundry の組織内のツールチェーンへのアクセスの管理](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs)を参照してください。
 {: important}
 
-パイプラインによって提供される各種ジョブ・タイプで実行するスクリプトを指定することによって、ジョブの実行内容を直接制御することができます。 スクリプトは Docker イメージ内で実行されますが、このイメージには {{site.data.keyword.Bluemix_notm}} ランタイムと対話するために必要なツールを含む標準開発ツールが多数含まれています。 標準の Docker イメージの内容について詳しくは、[あらかじめインストールされているリソース](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}を参照してください。 標準イメージでは利用できない開発ツールがジョブに必要である場合や、同じツールの異なるバージョンが必要である場合は、カスタム・イメージを使用することができます。 カスタム・イメージについて詳しくは、[カスタム Docker イメージの操作](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}を参照してください。
+パイプラインによって提供される各種ジョブ・タイプで実行するスクリプトを指定することによって、ジョブの実行内容を直接制御することができます。 スクリプトは Docker イメージ内で実行されますが、このイメージには {{site.data.keyword.Bluemix_notm}} ランタイムと対話するために必要なツールを含む標準開発ツールが多数含まれています。 標準の Docker イメージの内容について詳しくは、[あらかじめインストールされているリソース](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)を参照してください。標準イメージでは利用できない開発ツールがジョブに必要である場合や、同じツールの異なるバージョンが必要である場合は、カスタム・イメージを使用することができます。 カスタム・イメージについて詳しくは、[カスタム Docker イメージの操作](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images)を参照してください。
 
-パイプラインがスクリプトを実行すると、ジョブが実行されているコンテキストを記述するプロパティーが環境変数を使用してスクリプトに渡されます。 例えば、ステージへの入力であるレポの URL、ステージの名前と実行中のジョブの名前、ジョブ・タイプによって指定されたパラメーターなどが渡されます。 使用可能な環境変数のリストを表示するには、[あらかじめインストールされているリソース](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)を参照してください。 
+パイプラインがスクリプトを実行すると、ジョブが実行されているコンテキストを記述するプロパティーが環境変数を使用してスクリプトに渡されます。 例えば、ステージへの入力であるレポの URL、ステージの名前と実行中のジョブの名前、ジョブ・タイプによって指定されたパラメーターなどが渡されます。 使用可能な環境変数のリストを表示するには、[あらかじめインストールされているリソース](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)を参照してください。
 
 プロパティーの定義はパイプライン・レベルとステージ・レベルの両方で行うことができます。 パイプライン・プロパティーは、パイプライン内のすべてのステージとジョブで共有されます。 ステージ・プロパティーは特定のステージに固有で、そのステージのすべてのジョブで共有されます。 プロパティーについて詳しくは、[環境プロパティー (環境変数)](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties) を参照してください。
 
@@ -54,6 +55,20 @@ subcollection: ContinuousDelivery
 
 ![「入力」タブ](images/input_tab_only_execute.png)
 
+Git リポジトリー入力タイプを使用するステージでは、さらにステージ・トリガー・オプションを使用できます。例えば、選択したブランチ上の Git イベントに対してジョブを自動的に実行することを選択できます。このトリガー・タイプを選択する場合、以下のイベント・タイプを 1 つ以上選択する必要があります。
+
+*	**「コミットのプッシュ時 (When a commit is pushed)」**では、選択したリポジトリー・ブランチにプッシュが行われる際にトリガーします。
+*	**「プル/マージ要求のオープンまたは更新時 (When a pull/merge request is opened or updated)」**では、プル要求またはマージ要求を開いたり編集したりする際にトリガーします。
+*	**「プル/マージ要求のクローズ時 (When a pull/merge request is closed)」**では、プル要求またはマージ要求を閉じる際に、関連付けられているコミットがなくてもトリガーします。
+
+![「入力」タブのトリガー](images/input_tab_only_triggers.png)
+
+**「プル/マージ要求のオープンまたは更新時 (When a pull/merge request is opened or updated)」**チェック・ボックスを選択すると、パイプラインの状況が Git リポジトリーに返されます。プル要求またはマージ要求によりパイプラインがトリガーされると、ページ上にインライン状況検査が表示されます。状況検査はパイプライン内で実行されるステージごとに表示され、ステージごとにログと履歴へのリンクが提供されます。状況検査が実行されるにつれて、保留中から成功または失敗に更新されます。パイプラインに複数のステージが含まれている場合は、チェックリスト内で各ステージの状況が報告されます。
+
+IBM がホストする GitLab Community Edition ツールでも、マージ要求に対してこの状況フィードバックがサポートされています。
+{: tip}
+
+Git ブランチ保護ルールを使用して、状況検査の結果に基づいてマージを制限することもできます。ブランチ保護ルールの作成後は、必須の状況検査がすべて成功になるまで、マージはすべてブロックされます。 
 
 ### ビルド・ステージ
 {: #build_stage}
@@ -99,7 +114,7 @@ subcollection: ContinuousDelivery
 単純タイプのビルド・ジョブを除き、ジョブを構成する際は、ビルド・コマンド、テスト・コマンド、またはデプロイメントの各コマンドを含む UNIX シェル・スクリプトを含めることができます。 ジョブは暫定のコンテナーで実行されるため、複数のジョブが同じステージ
 の一部である場合でも、1 つのジョブのアクションが他のジョブの実行環境に影響を与えることはできません。
 
-サンプルのビルドおよびデプロイ・スクリプトは、[https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons) にあります。
+サンプルのビルドおよびデプロイ・スクリプトは、[https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons){: external} にあります。
 
 さらに、パイプライン・ジョブは、`sudo` として次のコマンドのみを実行できます。
   * `/usr/sbin/service`
@@ -120,7 +135,7 @@ subcollection: ContinuousDelivery
 ジョブに分割してください。 例えば、1 つのジョブが 3 つのタスクを実行する場合、1 つのタスクが 1 つのジョブとなるように、そのジョブを 3 つのジョブに分割することができます。
 {: tip}
 
-ジョブをステージに追加する方法については、[ジョブのステージへの追加](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}を参照してください。
+ジョブをステージに追加する方法については、[ジョブのステージへの追加](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job)を参照してください。
 
 ### ビルド・ジョブ
 
@@ -133,7 +148,7 @@ subcollection: ContinuousDelivery
 
 Cloud Foundry を使用してデプロイするとき、アプリを実行できるようにするための適切な成果物が Cloud Foundry に含まれています。 詳しくは、[cf コマンドを使用してのアプリケーションのデプロイ](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps)を参照してください。 Cloud Foundry アプリ用パイプラインには、cf コマンドを実行するデプロイ・ステージが含まれています。
 
-Cloud Foundry は、[使用するビルドパックを検出 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.cloudfoundry.org/buildpacks/detection.html) しようとします。 使用する[ビルドパック](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)は、アプリのルート・フォルダー内のマニフェスト・ファイルで指定できます。 ビルドパックは通常、ユーザー提供の成果物を調べることにより、どの依存関係をダウンロードするか、バインド済みサービスと通信するためにアプリケーションをどのように構成するかを判別します。 マニフェスト・ファイルについて詳しくは、[アプリケーション・マニフェスト](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)を参照してください。
+Cloud Foundry は、[使用するビルドパックを検出](http://docs.cloudfoundry.org/buildpacks/detection.html){: external}しようとします。使用する[ビルドパック](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)は、アプリのルート・フォルダー内のマニフェスト・ファイルで指定できます。 ビルドパックは通常、ユーザー提供の成果物を調べることにより、どの依存関係をダウンロードするか、バインド済みサービスと通信するためにアプリケーションをどのように構成するかを判別します。 マニフェスト・ファイルについて詳しくは、[アプリケーション・マニフェスト](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)を参照してください。
 
 ### デプロイ・ジョブ
 
@@ -221,10 +236,10 @@ Cloud Foundry にデプロイするジョブでは、権限ジョブが実行さ
 ## Cloud Foundry マニフェスト・ファイル
 {: #deliverypipeline_manifest}
 
-マニフェスト・ファイルは、`manifest.yml` という名前でプロジェクトのルート・ディレクトリーに格納されます。このファイルは、プロジェクトの {{site.data.keyword.Bluemix_notm}} へのデプロイ方法を制御します。 プロジェクト用のマニフェスト・ファイルの作成について詳しくは、[アプリケーション・マニフェストに関する {{site.data.keyword.Bluemix_notm}} の資料](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)を参照してください。プロジェクトを {{site.data.keyword.Bluemix_notm}} と統合するには、そのプロジェクトのルート・ディレクトリーにマニフェスト・ファイルが必要です。 ただし、そのファイルの情報に基づいてデプロイする必要はありません。
+マニフェスト・ファイルは、`manifest.yml` という名前でプロジェクトのルート・ディレクトリーに格納されます。このファイルは、プロジェクトの {{site.data.keyword.Bluemix_notm}} へのデプロイ方法を制御します。 プロジェクト用のマニフェスト・ファイルの作成について詳しくは、[アプリケーション・マニフェストに関する {{site.data.keyword.Bluemix_notm}} の資料](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)を参照してください。 プロジェクトを {{site.data.keyword.Bluemix_notm}} と統合するには、そのプロジェクトのルート・ディレクトリーにマニフェスト・ファイルが必要です。 ただし、そのファイルの情報に基づいてデプロイする必要はありません。
 
 パイプラインでは、`cf push` コマンド引数を使用して、マニフェスト・ファイルで指定可能なすべての設定を指定できます。 `cf push` コマンド引数は、複数のデプロイメント・ターゲットがあるプロジェクトで有用です。 複数のデプロイ・ジョブがすべてプロジェクト・マニフェスト・ファイルで指定されるルートを使用しようとすると、競合が発生します。
 
 競合を避けるには、`cf push`、続けてホスト名引数、`-n`、およびルート名を使用して、ルートを指定することができます。 個々のステージでデプロイメント・スクリプトを変更することにより、複数のターゲットにデプロイする際のルートの競合を回避できます。
 
-`cf push` コマンド引数を使用するには、デプロイ・ジョブの構成設定を開き、**「デプロイ・スクリプト」**フィールドを変更します。 詳しくは、[Cloud Foundry Push 資料![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window} を参照してください。
+`cf push` コマンド引数を使用するには、デプロイ・ジョブの構成設定を開き、**「デプロイ・スクリプト」**フィールドを変更します。 詳しくは、[Cloud Foundry Push 資料](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: external}を参照してください。

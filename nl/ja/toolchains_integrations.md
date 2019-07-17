@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-27"
 
 keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -36,6 +37,7 @@ subcollection: ContinuousDelivery
 |Bitbucket		|米国南部、米国東部、ドイツ、東京、英国		|いいえ		|
 |Cloud Event Management		|米国南部		|いいえ		|
 |{{site.data.keyword.deliverypipeline}} 		|米国南部、米国東部、ドイツ、東京、英国	   	|はい  		|
+|{{site.data.keyword.deliverypipeline}} Private Worker			|米国南部、米国東部、ドイツ、東京、英国		|いいえ		|
 |{{site.data.keyword.DRA_short}} 		|米国南部、ドイツ、英国		|いいえ			|
 |Eclipse Orion {{site.data.keyword.webide}}		|米国南部、米国東部、ドイツ、東京、英国		|はい			|
 |{{site.data.keyword.gitrepos}}	|米国南部、米国東部、ドイツ、東京、英国		|いいえ		|
@@ -68,11 +70,11 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 
 1. {{site.data.keyword.alertnotificationshort}} アカウントをお持ちでない場合、登録して取得します。
 
- a. IBM マーケットプレイスで [IBM {{site.data.keyword.alertnotificationshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/us-en/marketplace/alert-notification){: new_window} ページを開きます。
+ a. IBM Marketplace で [IBM {{site.data.keyword.alertnotificationshort}}](https://www.ibm.com/us-en/marketplace/alert-notification){:external} ページを開きます。
 
  b. サブスクリプションを購入するか、90 日間の無料評価版に申し込みます。
 
-1. {{site.data.keyword.alertnotificationshort}} アカウントのセットアップが終わったら、[My IBM ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://myibm.ibm.com/dashboard/){: new_window} を開きます。
+1. {{site.data.keyword.alertnotificationshort}} アカウントのセットアップが終わったら、[My IBM Dashboard](https://myibm.ibm.com/dashboard/){:external} を開きます。
 1. IBM {{site.data.keyword.alertnotificationshort}} の横の**「起動」**をクリックします。
 1. **「API キーの管理 (Manage API Keys)」**をクリックし、**「API キーの作成 (Create API Key)」**をクリックします。
 1. **「API キーの作成 (Create API Key)」**フィールドに説明を入力します。
@@ -95,11 +97,11 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 
 ### Alert Notification に関する詳細
 
-{{site.data.keyword.alertnotificationshort}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.alertnotificationshort}}」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/manage/tool_alert_notification/){: new_window} を参照するか、これらのチュートリアルを始めてください。
+{{site.data.keyword.alertnotificationshort}} について詳しくは、IBM Cloud Garage Method の[記事「IBM {{site.data.keyword.alertnotificationshort}}」](https://www.ibm.com/cloud/garage/content/manage/tool_alert_notification/){:external}を参照するか、以下のチュートリアルを始めてください。
 
-  * [ツールチェーンへのツール統合の追加![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/add-a-tool-integration-to-a-toolchain){:new_window}
+  * [ツールチェーンへのツール統合の追加](https://www.ibm.com/cloud/garage/tutorials/add-a-tool-integration-to-a-toolchain){:external}
 
-  * [{{site.data.keyword.Bluemix_notm}} Availability Monitoring と Alert Notification を使用した {{site.data.keyword.Bluemix_notm}} アプリケーションの管理 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [{{site.data.keyword.Bluemix_notm}} Availability Monitoring と Alert Notification を使用した {{site.data.keyword.Bluemix_notm}} アプリケーションの管理](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:external}
 
 
 ## Artifactory の構成
@@ -205,7 +207,7 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 
 ### Artifactory に関する詳細
 
-Artifactory について詳しくは、IBM Cloud Garage Method の[記事「Artifactory」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/deliver/tool_artifactory/){: new_window} を参照してください。
+Artifactory について詳しくは、IBM Cloud Garage Method の[記事「Artifactory」](https://www.ibm.com/cloud/garage/content/deliver/tool_artifactory/){:external}を参照してください。
 
 
 ## Availability Monitoring の追加
@@ -229,9 +231,9 @@ Artifactory について詳しくは、IBM Cloud Garage Method の[記事「Arti
 
 ### Availability Monitoring に関する詳細
 
-{{site.data.keyword.prf_hubshort}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.prf_hublong}}」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/practices/manage/tool_bluemix_availability_monitoring/){: new_window} を参照するか、このチュートリアルを始めてください。
+{{site.data.keyword.prf_hubshort}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.prf_hublong}}」](https://www.ibm.com/cloud/garage/practices/manage/tool_bluemix_availability_monitoring/){:external}を参照するか、以下のチュートリアルを始めてください。
 
-  * [{{site.data.keyword.Bluemix_notm}} Availability Monitoring と Alert Notification を使用した {{site.data.keyword.Bluemix_notm}} アプリケーションの管理 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [{{site.data.keyword.Bluemix_notm}} Availability Monitoring と Alert Notification を使用した {{site.data.keyword.Bluemix_notm}} アプリケーションの管理](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:external}
 
 
 ## Bitbucket の構成
@@ -278,17 +280,17 @@ bitbucket.org の新規か既存のリポジトリーにソース・コードを
 
 1. サーバー上にプライベート・リポジトリーを作成するには、**「このリポジトリーをプライベートにする (Make this repository private)」**チェック・ボックスを選択します。
 1. 問題のトラッキングに Bitbucket Issues を使用する場合は、**「Bitbucket Issues を使用可能にする (Enable Bitbucket Issues)」**チェック・ボックスにチェック・マークを付けます。
-1. コミットに対するタグおよびコメントと、コミットで参照される問題に対するラベルおよびコメントを作成することによって、コード変更のデプロイメントをトラッキングするには、**「コード変更のデプロイメントを追跡する (Track deployment of code changes)」**チェック・ボックスにチェック・マークを付けます。 詳しくは、[Track where your code is deployed with toolchains ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window} を参照してください。
+1. コミットに対するタグおよびコメントと、コミットで参照される問題に対するラベルおよびコメントを作成することによって、コード変更のデプロイメントをトラッキングするには、**「コード変更のデプロイメントを追跡する (Track deployment of code changes)」**チェック・ボックスにチェック・マークを付けます。 詳しくは、[Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external} を参照してください。
 1. **「統合の作成」**をクリックします。
 1. 作業対象の Bitbucket リポジトリーのカードをツールチェーンからクリックします。 Bitbucket の Web サイトが開きます。そこでリポジトリーの内容を表示できます。
-1. Bitbucket Issues を使用可能にした場合、**「Bitbucket Issues」**をクリックして開きます。 ツールチェーンに複数の Bitbucket リポジトリーが含まれれている場合でも、Bitbucket Issues のこのインスタンスをツールチェーン全体に使用できます。    
+1. Bitbucket Issues を使用可能にした場合、**「Bitbucket Issues」**をクリックして開きます。 ツールチェーンに複数の Bitbucket リポジトリーが含まれれている場合でも、Bitbucket Issues のこのインスタンスをツールチェーン全体に使用できます。
 
 リンクしようとしているリポジトリーに対する所有者またはマスター特権がない場合は、Web フックを使用できないので統合は制限されます。 リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。 Web フックがない場合、パイプラインを手動で開始する必要があります。
 {: tip}
 
 ### Bitbucket に関する詳細
 
-Bitbucket について詳しくは、IBM Cloud Garage Method の[記事「Bitbucket」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_bitbucket/){: new_window} を参照してください。
+Bitbucket について詳しくは、IBM Cloud Garage Method の[記事「Bitbucket」](https://www.ibm.com/cloud/garage/content/code/tool_bitbucket/){:external}を参照してください。
 
 
 ## Cloud Event Management の追加
@@ -318,7 +320,7 @@ Bitbucket について詳しくは、IBM Cloud Garage Method の[記事「Bitbuc
 
 ### Cloud Event Management に関する詳細
 
-Cloud Event Management について詳しくは、IBM Cloud Garage Method の[記事「Cloud Event Management」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/manage/tool_cloud_event_mgt/){: new_window} を参照してください。
+Cloud Event Management について詳しくは、IBM Cloud Garage Method の[記事「Cloud Event Management」](https://www.ibm.com/cloud/garage/content/manage/tool_cloud_event_mgt/){:external}を参照してください。
 
 
 ## Delivery Pipeline の構成
@@ -338,11 +340,11 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 1. 新しいパイプラインの名前を指定します。
 1. パイプラインを使用してユーザー・インターフェースをデプロイするよう計画している場合は、**「アプリケーションの表示メニューでアプリケーションを表示する (Show apps in the VIEW APP  menu)」**チェック・ボックスを選択します。 パイプラインが作成するすべてのアプリケーションが、ツールチェーンの「概要」ページの**「アプリケーションの表示 (View App)」**リストに表示されます。
 1. **「統合の作成」**をクリックして、{{site.data.keyword.deliverypipeline}} をツールチェーンに追加します。
-1. **「{{site.data.keyword.deliverypipeline}}」**をクリックして、パイプラインを表示し、構成します。 パイプラインの構成の基本を確認するには、『[パイプラインのビルドとデプロイ](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy){: new_window}』を参照してください。
+1. **「{{site.data.keyword.deliverypipeline}}」**をクリックして、パイプラインを表示し、構成します。 パイプラインの構成の基本を確認するには、『[パイプラインのビルドとデプロイ](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy)』を参照してください。
 
   GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーにコミットがプッシュされるとパイプラインが自動的に実行されるようにしたい場合は、以下のステップを実行します。
 
-   a. パイプラインのステージを定義する前に、ツールチェーン用に GitHub、{{site.data.keyword.ghe_short}}、または {{site.data.keyword.gitrepos}} を構成します。 パイプラインのステージには、リポジトリーの Git URL が必要です。 各パイプライン・ステージは、ツールチェーンと関連付けられた、GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーのうち 1 つのみを参照できます。 GitHub の構成手順については、[GitHub](#github) のセクションを参照してください。 Dedicated {{site.data.keyword.ghe_short}} の構成方法については、[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}を参照してください。{{site.data.keyword.gitrepos}} の構成手順については、[{{site.data.keyword.gitrepos}}](#gitbluemix) のセクションを参照してください。
+   a. パイプラインのステージを定義する前に、ツールチェーン用に GitHub、{{site.data.keyword.ghe_short}}、または {{site.data.keyword.gitrepos}} を構成します。 パイプラインのステージには、リポジトリーの Git URL が必要です。 各パイプライン・ステージは、ツールチェーンと関連付けられた、GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーのうち 1 つのみを参照できます。 GitHub の構成手順については、[GitHub](#github) のセクションを参照してください。 Dedicated {{site.data.keyword.ghe_short}} の構成方法については、[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated?topic=ghededicated-getting-started)を参照してください。{{site.data.keyword.gitrepos}} の構成手順については、[{{site.data.keyword.gitrepos}}](#grit) のセクションを参照してください。
 
    b. Web フックを使用します。 Web フックを使用しない場合、パイプラインは手動でのみ実行できます。 GitHub リポジトリーまたは {{site.data.keyword.ghe_short}} リポジトリーにリンクする場合に Web フックを使用するには、管理特権が必要です。 {{site.data.keyword.gitrepos}} リポジトリーにリンクするには、Master または Owner 特権が必要です。
 
@@ -361,7 +363,7 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 
 1. ステージを構成します。 **「環境プロパティー (ENVIRONMENT PROPERTIES)」**タブで、CF_APP_NAME プロパティーを作成します。
 
-  Sauce Labs ユーザー名とアクセス・キーは、テスト・ジョブ・スクリプトでは SAUCE_USERNAME と SAUCE_ACCESS_KEY の各環境変数として使用可能です。 テストを記述する際は、これらの環境変数を使用して Sauce Labs の認証を受ける必要があります。
+  Sauce Labs ユーザー名とアクセス・キーは、テスト・ジョブ・スクリプトでは SAUCE_USERNAME と SAUCE_ACCESS_KEY の各環境変数として使用可能です。 テストを記述する際は、これらの環境変数を使用して Sauce Labs の認証を受ける必要があります。
   {: tip}
 
 1. デプロイ・ジョブを構成します。 「デプロイ・スクリプト」**フィールドに、コマンド `export CF_APP_NAME="$CF_APP"` を含めます。** このコマンドは、アプリ名を環境プロパティーとしてエクスポートします。
@@ -389,11 +391,31 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 
 ### Delivery Pipeline に関する詳細
 
-{{site.data.keyword.deliverypipeline}} について詳しくは、[パイプラインでの作業](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working){: new_window}および IBM Cloud Garage Method の[記事「Delivery Pipeline」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} を参照するか、これらのチュートリアルを始めてください。
+{{site.data.keyword.deliverypipeline}} について詳しくは、[パイプラインでの作業](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working)および IBM Cloud Garage Method の[記事「Delivery Pipeline article」](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:external}を参照するか、これらのチュートリアルを始めてください。
 
-  * [Create a pipeline ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:new_window}
+  * [パイプラインの作成](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:external}
 
-  * [「Develop a Cloud Foundry app」ツールチェーンを使用した初めてのツールチェーンの作成と使用 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
+  * [「Develop a Cloud Foundry app」ツールチェーンを使用した初めてのツールチェーンの作成と使用](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}
+
+
+## {{site.data.keyword.deliverypipeline}} Private Worker の構成
+{: #privateworker}
+
+{{site.data.keyword.deliverypipeline}} Private Worker は、{{site.data.keyword.deliverypipeline}} ワークロードを独立して実行する 1 つ以上のプライベート・ワーカーと接続します。
+
+{{site.data.keyword.deliverypipeline}} Private Worker ツール統合を構成して、ツールチェーン内のパイプラインでプライベート・ワーカーを使用できるようにします。
+
+1. ツールチェーン作成時にこのツール統合を構成する場合は、「構成可能な統合」セクションで**「{{site.data.keyword.deliverypipeline}} Private Worker」**をクリックします。
+1. 既存のツールチェーンにこのツール統合を追加する場合は、DevOps ダッシュボードの「ツールチェーン」ページでそのツールチェーンをクリックして「概要」ページを開きます。 あるいは、アプリの「概要」ページの「継続的デリバリー」カードで、**「ツールチェーンの表示」**をクリックし、**「概要」**をクリックします。
+
+ a. **「ツールの追加」**をクリックします。
+
+ b. 「ツール統合」セクションで**「{{site.data.keyword.deliverypipeline}} Private Worker」**をクリックします。
+
+1. ツール統合の名前を入力します。この名前は、パイプライン・ステージの**「ワーカー」**タブで、プライベート・ワーカーのプールを識別します。
+1. サービス ID の API キーを入力して、1 つ以上のプライベート・ワーカーが作業を検索できる作業キューへのアクセスを認証します。サービス ID API キーがない場合は、**「作成」** をクリックして、このプライベート・ワーカー用の API キーを生成します。
+1. **「統合の作成」**をクリックします。
+1. ツールチェーンから**「{{site.data.keyword.deliverypipeline}} Private Worker」**をクリックして、このサービス ID に関連付けられた API キーを使用して登録されたすべてのワーカーのリストを表示します。
 
 
 ## DevOps Insights の追加
@@ -418,13 +440,13 @@ Cloud Event Management について詳しくは、IBM Cloud Garage Method の[�
 
 ### DevOps Insights に関する詳細
 
-{{site.data.keyword.DRA_short}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.DRA_short}}」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){: new_window} を参照するか、これらのチュートリアルを始めてください。
+{{site.data.keyword.DRA_short}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.DRA_short}}」](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){:external}を参照するか、以下のチュートリアルを始めてください。
 
-  * [Use the "Develop and test a Cloud Foundry app" toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
+  * [「Cloud Foundry アプリの開発とテスト」ツールチェーンの使用](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:external}
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+  * [「Develop and test microservices on Cloud Foundry」ツールチェーンの使用](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}
 
-  * [{{site.data.keyword.DRA_full}} の探索![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){:new_window}
+  * [Explore {{site.data.keyword.DRA_full}}](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){:external}
 
 
 ## Eclipse Orion Web IDE の追加
@@ -449,17 +471,17 @@ Eclipse Orion {{site.data.keyword.webide}} は、ソース管理タスクを作�
 
 ### Eclipse Orion Web IDE に関する詳細
 
-Eclipse Orion {{site.data.keyword.webide}} の詳細については、『[Eclipse Orion {{site.data.keyword.webide}} でのコード編集](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide)』を参照してください。 IBM Cloud Garage Method の [Eclipse Orion {{site.data.keyword.webide}} の記事 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} もお読みになれます。 これらのチュートリアルを参照して、Eclipse Orion {{site.data.keyword.webide}} を使用してください。
+Eclipse Orion {{site.data.keyword.webide}} の詳細については、『[Eclipse Orion {{site.data.keyword.webide}} でのコード編集](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide)』を参照してください。 IBM Cloud Garage Method の[記事「Eclipse Orion {{site.data.keyword.webide}}」](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){:external}もお読みになれます。以下のチュートリアルを参照して、Eclipse Orion {{site.data.keyword.webide}} を使用してください。
 
-  * [「Develop a Cloud Foundry app」ツールチェーンを使用した初めてのツールチェーンの作成と使用 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
+  * [「Develop a Cloud Foundry app」ツールチェーンを使用した初めてのツールチェーンの作成と使用](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+  * [「Develop and test microservices on Cloud Foundry」ツールチェーンの使用](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}
 
 
 ## Git Repos and Issue Tracking の構成
-{: #gitbluemix}
+{: #grit}
 
-{{site.data.keyword.gitrepos}} ツール統合は、GitLab Community Edition (Git リポジトリー用の Web ベースのホスティング・サービス) をベースにしています。 リポジトリーのローカルとリモートの両方のコピーを持つことができます。 詳しくは、[{{site.data.keyword.gitrepos}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/help){:new_window} を参照してください。
+{{site.data.keyword.gitrepos}} ツール統合は、GitLab Community Edition (Git リポジトリー用の Web ベースのホスティング・サービス) をベースにしています。 リポジトリーのローカルとリモートの両方のコピーを持つことができます。 詳しくは、[{{site.data.keyword.gitrepos}}](https://us-south.git.cloud.ibm.com/help){:external}を参照してください。
 
 ツールチェーンの作成時に {{site.data.keyword.gitrepos}} を構成する場合は、以下の手順に従います。    
 
@@ -476,7 +498,7 @@ Eclipse Orion {{site.data.keyword.webide}} の詳細については、『[Eclips
 1. 「ツール統合」セクションで**「Git Repos and Issue Tracking」**をクリックします。
 1. Git リポジトリーのコピーを作成する場合は、リポジトリーのタイプとして**「クローンを作成する (Clone)」**をクリックします。 新規リポジトリー名と、ソース・リポジトリーの URL を入力します。
 1. 問題のトラッキングに Issues を使用する場合は、**「Issues を使用可能にする (Enable Issues)」**チェック・ボックスにチェック・マークを付けます。
-1. コミットに対するタグおよびコメントと、コミットで参照される問題に対するラベルおよびコメントを作成することによって、コード変更のデプロイメントをトラッキングしたい場合は、**「コード変更のデプロイメントを追跡する (Track deployment of code changes)」**チェック・ボックスにチェック・マークを付けます。 詳しくは、[Track where your code is deployed with toolchains ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window} を参照してください。
+1. コミットに対するタグおよびコメントと、コミットで参照される問題に対するラベルおよびコメントを作成することによって、コード変更のデプロイメントをトラッキングしたい場合は、**「コード変更のデプロイメントを追跡する (Track deployment of code changes)」**チェック・ボックスにチェック・マークを付けます。 詳しくは、[Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external} を参照してください。
 1. **「統合の作成」**をクリックします。
 
 Git リポジトリーのクローンを作成したら、ツールチェーンから削除できます。
@@ -495,7 +517,7 @@ Git リポジトリーのクローンを作成したら、ツールチェーン�
   d. 既存の Git リポジトリーを使用する場合は、リポジトリーのタイプとして**「既存」**をクリックします。 URL を入力します。    
 
 1. 問題のトラッキングに Issues を使用する場合は、**「Issues を使用可能にする (Enable Issues)」**チェック・ボックスにチェック・マークを付けます。
-1. コミットに対するタグおよびコメントと、コミットで参照される問題に対するラベルおよびコメントを作成することによって、コード変更のデプロイメントをトラッキングしたい場合は、**「コード変更のデプロイメントを追跡する (Track deployment of code changes)」**チェック・ボックスにチェック・マークを付けます。 詳しくは、[Track where your code is deployed with toolchains ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window} を参照してください。
+1. コミットに対するタグおよびコメントと、コミットで参照される問題に対するラベルおよびコメントを作成することによって、コード変更のデプロイメントをトラッキングしたい場合は、**「コード変更のデプロイメントを追跡する (Track deployment of code changes)」**チェック・ボックスにチェック・マークを付けます。 詳しくは、[Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external} を参照してください。
 1. **「統合の作成」**をクリックします。
 1. 作業対象の Git リポジトリーのカードをクリックします。 プロジェクト概要のページが開きます。    
 
@@ -504,9 +526,9 @@ Git リポジトリーのクローンを作成したら、ツールチェーン�
 
 ### Git Repos and Issue Tracking に関する詳細
 
-{{site.data.keyword.gitrepos}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.gitrepos}}: Social coding hosted by IBM」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_git_repos_and_issue_tracking/){: new_window} を参照するか、このチュートリアルを始めてください。
+{{site.data.keyword.gitrepos}} について詳しくは、IBM Cloud Garage Method の[記事「{{site.data.keyword.gitrepos}}: Social coding hosted by IBM」](https://www.ibm.com/cloud/garage/content/code/tool_git_repos_and_issue_tracking/){:external}を参照するか、以下のチュートリアルを始めてください。
 
-  * [「Develop a Cloud Foundry app」ツールチェーンを使用した初めてのツールチェーンの作成と使用 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
+  * [「Develop a Cloud Foundry app」ツールチェーンを使用した初めてのツールチェーンの作成と使用](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}
 
 
 ## GitHub の構成
@@ -525,7 +547,7 @@ GitHub.com または会社の {{site.data.keyword.ghe_short}} インスタンス
 1. GitHub リポジトリーにソース・コードを格納している場合は、「構成可能な統合」セクションで**「GitHub」**をクリックします。 {{site.data.keyword.Bluemix_notm}} Public でこのツール統合を構成しており、GitHub へのアクセスを {{site.data.keyword.Bluemix_notm}} に許可していない場合は、**「許可」**をクリックして GitHub Web サイトに移動します。 アクティブな GitHub セッションがない場合は、ログインするよう求められます。 **「アプリケーションを許可 (Authorize Application)」** をクリックして、{{site.data.keyword.Bluemix_notm}} が GitHub アカウントにアクセスできるようにします。 アクティブな GitHub セッションはあるものの、最近パスワードを入力していない場合は、確認のために GitHub パスワードの入力を求められることがあります。
 1. 独自の {{site.data.keyword.ghe_short}} サーバー上でリポジトリーを使用している場合は、「構成可能な統合」セクションで**「カスタム・サーバーの追加」**をクリックします。
 
- ネットワークを介して {{site.data.keyword.Bluemix_notm}} Dedicated 環境からターゲット Git サーバーにアクセスできる必要があります。 パブリック・インターネット上で GitHub サーバーを使用できない場合や、パブリック・ドメイン・ネーム・サーバー (DNS) 上でホスト名が解決しない場合は、[サポート・チケットを開きます](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_support#support-ticket){: new_window}。 サポート・チケットを使用して、ネットワーク経路を開く要求や、DNS 設定を更新する要求を送信できます。
+ ネットワークを介して {{site.data.keyword.Bluemix_notm}} Dedicated 環境からターゲット Git サーバーにアクセスできる必要があります。 パブリック・インターネット上で GitHub サーバーを使用できない場合や、パブリック・ドメイン・ネーム・サーバー (DNS) 上でホスト名が解決しない場合は、[サポート・チケットを開きます](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_support#support-ticket)。 サポート・チケットを使用して、ネットワーク経路を開く要求や、DNS 設定を更新する要求を送信できます。
  {: important}
 
  カスタム GitHub サーバーのタイトルを入力し、サーバーのルート URL を指定します。 個人用アクセス・トークンを入力してから、**「カスタム統合の保存 (Save custom integration)」**をクリックします。
@@ -565,27 +587,26 @@ GitHub.com または会社の {{site.data.keyword.ghe_short}} インスタンス
 
 1. アップグレードしたアカウントを持つ GitHub.com ユーザーの場合、または {{site.data.keyword.ghe_short}} サーバーを選択してこのサーバー上に新規のプライベート・リポジトリーを作成する場合は、**「このリポジトリーをプライベートにする (Make this repository private)」**チェック・ボックスを選択します。
 1. 問題のトラッキングに GitHub Issues を使用する場合は、**「GitHub Issues を使用可能にする (Enable GitHub Issues)」**チェック・ボックスにチェック・マークを付けます。
-1. コミットに対するタグおよびコメントと、コミットで参照される問題に対するラベルおよびコメントを作成することによって、コード変更のデプロイメントをトラッキングしたい場合は、**「コード変更のデプロイメントを追跡する (Track deployment of code changes)」**チェック・ボックスにチェック・マークを付けます。 詳しくは、[Track where your code is deployed with toolchains ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window} を参照してください。
+1. コミットに対するタグおよびコメントと、コミットで参照される問題に対するラベルおよびコメントを作成することによって、コード変更のデプロイメントをトラッキングしたい場合は、**「コード変更のデプロイメントを追跡する (Track deployment of code changes)」**チェック・ボックスにチェック・マークを付けます。 詳しくは、[Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external} を参照してください。
 1. **「統合の作成」**をクリックします。
 1. 作業対象の GitHub または {{site.data.keyword.ghe_short}} リポジトリーのカードをクリックします。 選択したリポジトリーに応じて、GitHub Web サイトか会社の {{site.data.keyword.ghe_short}} リポジトリーが開きます。ここで、リポジトリーのコンテンツを表示できます。
 
   Eclipse Orion {{site.data.keyword.webide}} の統合ソース・コード管理ツールを使用して、GitHub リポジトリーを編集し、ワークスペースからアプリをデプロイすることができます。
   {: tip}
 
-1. GitHub Issues を使用可能にした場合、**「GitHub Issues」**をクリックして開きます。 ツールチェーンに複数の GitHub または {{site.data.keyword.ghe_short}} リポジトリーが含まれれている場合でも、GitHub Issues のこのインスタンスをツールチェーン全体に使用できます。    
+1. GitHub Issues を使用可能にした場合、**「GitHub Issues」**をクリックして開きます。 ツールチェーンに複数の GitHub または {{site.data.keyword.ghe_short}} リポジトリーが含まれれている場合でも、GitHub Issues のこのインスタンスをツールチェーン全体に使用できます。
 
 リンクしようとしているリポジトリーに対する管理特権をお持ちでない場合、Web フックを使用できないので統合は制限されます。 リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。 Web フックがない場合、パイプラインを手動で開始する必要があります。
 {: tip}
 
 ### GitHub に関する詳細
 
-GitHub について詳しくは、IBM Cloud Garage Method の [GitHub に関する記事 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_github/){: new_window} と [GitHub Issues に関する記事 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} を参照するか、次のチュートリアルを始めてください。
+GitHub について詳しくは、IBM Cloud Garage Method の[記事「GitHub」](https://www.ibm.com/cloud/garage/content/code/tool_github/){:external}と[記事「GitHub Issues」](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){:external}を参照するか、以下のチュートリアルを始めてください。
 
- * [Use the "Develop and test a Cloud Foundry app" toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
+ * [「Develop and test a Cloud Foundry app」ツールチェーンを使用する](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:external}
+ * [「GitHub と Jenkins による開発リスク分析」ツールチェーンを使用した導入の品質確保](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:external}
 
- * [「Deployment Risk Analytics with GitHub and Jenkins」ツールチェーンを使用して高品質開発を保証する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
-
- * [Create a custom toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
+ * [カスタム・ツールチェーンの作成](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:external}
 
 
 ## {{site.data.keyword.Bluemix_notm}} Dedicated での GitHub Enterprise および GitHub Issues の構成
@@ -594,13 +615,13 @@ GitHub について詳しくは、IBM Cloud Garage Method の [GitHub に関す�
  ここで説明する手順は、{{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}} に適用されます。 独自の管理版の {{site.data.keyword.ghe_short}} を使用している場合、内部手順によっては一部のステップが異なることがあります。
  {: important}
 
-{{site.data.keyword.ghe_long}} は、オンプレミス型の Web ベースの Git リポジトリー・ホスティング・サービスです。 Dedicated {{site.data.keyword.ghe_short}} は {{site.data.keyword.Bluemix_notm}} Dedicated ユーザー専用です。 GitHub Issues は、作業と計画を 1 つの場所に保持するトラッキング・ツールです。 これは、ユーザーが重要タスクに注力できるようにユーザーの開発リポジトリーと統合されます。 Dedicated {{site.data.keyword.ghe_short}} と GitHub Issues について詳しくは、[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}と IBM Cloud Garage Method の[記事「GitHub Issues」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} を参照してください。
+{{site.data.keyword.ghe_long}} は、オンプレミス型の Web ベースの Git リポジトリー・ホスティング・サービスです。 Dedicated {{site.data.keyword.ghe_short}} は {{site.data.keyword.Bluemix_notm}} Dedicated ユーザー専用です。 GitHub Issues は、作業と計画を 1 つの場所に保持するトラッキング・ツールです。 これは、ユーザーが重要タスクに注力できるようにユーザーの開発リポジトリーと統合されます。 Dedicated {{site.data.keyword.ghe_short}} と GitHub Issues について詳しくは、[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated?topic=ghededicated-getting-started)と IBM Cloud Garage Method の[記事「GitHub Issues」](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){:external}を参照してください。
 
-{{site.data.keyword.ghe_short}}  をツールチェーン内の 1 つのツール統合として構成して、会社の [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} インスタンス内でソース・コードを管理できるようにすることができます。
+{{site.data.keyword.ghe_short}}  をツールチェーン内の 1 つのツール統合として構成して、会社の [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated?topic=dedicated-dedicated#dedicated) インスタンス内でソース・コードを管理できるようにすることができます。
 
 1. ツールチェーンの作成時にこのツール統合を構成する場合は、次の手順を実行します。
 
- a. Dedicated {{site.data.keyword.ghe_short}} に初めてログインするときは、まずその前に LDAP を使用して会社のユーザー・レジストリーから自分のユーザー ID を {{site.data.keyword.Bluemix_notm}} Dedicated インスタンスに追加するよう、会社の地域管理者に依頼してください。 {{site.data.keyword.ghe_short}} アカウントのセットアップについては、[{{site.data.keyword.ghe_long}} の概説](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}を参照してください。
+ a. Dedicated {{site.data.keyword.ghe_short}} に初めてログインするときは、まずその前に LDAP を使用して会社のユーザー・レジストリーから自分のユーザー ID を {{site.data.keyword.Bluemix_notm}} Dedicated インスタンスに追加するよう、会社の地域管理者に依頼してください。 {{site.data.keyword.ghe_short}} アカウントのセットアップについては、[{{site.data.keyword.ghe_long}} の概説](/docs/services/ghededicated?topic=ghededicated-getting-started)を参照してください。
 
  b. 「構成可能な統合」セクションで**「{{site.data.keyword.ghe_short}}」**をクリックします。    
 
@@ -685,21 +706,21 @@ GitLab.com または会社の GitLab インスタンスの新規または既存�
 
 1. サーバー上にパブリック・リポジトリーを作成する場合は、**「このリポジトリーをプライベートにする (Make this repository private)」**チェック・ボックスをクリアします。
 1. 問題のトラッキングに GitLab Issues を使用する場合は、**「GitLab Issues を使用可能にする (Enable GitLab Issues)」**チェック・ボックスにチェック・マークを付けます。
-1. コミットに対するタグおよびコメントと、コミットで参照される問題に対するラベルおよびコメントを作成することによって、コード変更のデプロイメントをトラッキングしたい場合は、**「コード変更のデプロイメントを追跡する (Track deployment of code changes)」**チェック・ボックスにチェック・マークを付けます。 詳しくは、[Track where your code is deployed with toolchains ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window} を参照してください。
+1. コミットに対するタグおよびコメントと、コミットで参照される問題に対するラベルおよびコメントを作成することによって、コード変更のデプロイメントをトラッキングしたい場合は、**「コード変更のデプロイメントを追跡する (Track deployment of code changes)」**チェック・ボックスにチェック・マークを付けます。 詳しくは、[Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external} を参照してください。
 1. **「統合の作成」**をクリックします。
 1. 作業対象の GitLab リポジトリーのカードをクリックします。 選択したリポジトリーに応じて、GitLab Web サイトか会社の GitLab リポジトリーが開きます。ここで、リポジトリーのコンテンツを表示できます。
 
   Eclipse Orion {{site.data.keyword.webide}} の統合ソース・コード管理ツールを使用して、GitLab リポジトリーを編集し、ワークスペースからアプリをデプロイすることができます。
   {: tip}
 
-1. GitLab Issues を使用可能にした場合、**「GitLab Issues」**をクリックして開きます。 ツールチェーンに複数の GitLab リポジトリーが含まれれている場合でも、GitLab Issues のこのインスタンスをツールチェーン全体に使用できます。    
+1. GitLab Issues を使用可能にした場合、**「GitLab Issues」**をクリックして開きます。 ツールチェーンに複数の GitLab リポジトリーが含まれれている場合でも、GitLab Issues のこのインスタンスをツールチェーン全体に使用できます。
 
 リンクしようとしているリポジトリーに対する所有者またはマスター特権がない場合は、Web フックを使用できないので統合は制限されます。 リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。 Web フックがない場合、パイプラインを手動で開始する必要があります。
 {: tip}
 
 ### GitLab に関する詳細
 
-GitLab について詳しくは、IBM Cloud Garage Method の[記事「GitLab」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_gitlab/){: new_window} を参照してください。
+GitLab について詳しくは、IBM Cloud Garage Method の[記事「GitLab」](https://www.ibm.com/cloud/garage/content/code/tool_gitlab/){:external}を参照してください。
 
 
 ## Jenkins の構成
@@ -726,9 +747,9 @@ Jenkins ツール統合を使用すれば、Jenkins ジョブ通知をツール�
 1. 生成されたツールチェーン Web フックをコピーします。
 1. Jenkins サーバーで、以下のステップを実行します。
 
- a. [IBM Cloud DevOps プラグインをインストールします![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Installingtheplugin){: new_window}。
+ a. [IBM Cloud DevOps プラグインをインストールします](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Installingtheplugin){:external}。
 
- b. [ツールチェーンに通知を送信するように Jenkins を構成します![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Notifyingtoolchains){: new_window}。
+ b. [ツールチェーンに通知するように Jenkins を構成します](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Notifyingtoolchains){:external}。
 
  c. Jenkins ツール統合の「統合の構成 (Configure the Integration)」ページに戻ります。
 
@@ -737,14 +758,14 @@ Jenkins ツール統合を使用すれば、Jenkins ジョブ通知をツール�
 
 ### Jenkins に関する詳細
 
-Jenkins について詳しくは、IBM Cloud Garage Method の[記事「Jenkins」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){: new_window} を参照するか、このチュートリアルを始めてください。
+Jenkins について詳しくは、IBM Cloud Garage Method の[記事「Jenkins」](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){:external}を参照するか、以下のチュートリアルを始めてください。
 
-  * [「Deployment Risk Analytics with GitHub and Jenkins」ツールチェーンを使用して高品質開発を保証する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+  * [「GitHub と Jenkins による開発リスク分析」ツールチェーンを使用した導入の品質確保](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:external}
 
 ## JIRA の構成
 {: #jira}
 
-JIRA は、ユーザーのソフトウェアに関連する問題およびバグを追跡するツールです。 Jenkins または {{site.data.keyword.deliverypipeline}} によってデプロイメントが実行されるたびに、JIRA ツール統合はプロジェクトの問題を更新します。 JIRA ツール統合で問題をトラッキングするには、コミット・メッセージ内で JIRA Smart Commits を使用する必要があります。 JIRA Smart Commits について詳しくは、[Using Smart Commits ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html){: new_window} を参照してください。
+JIRA は、ユーザーのソフトウェアに関連する問題およびバグを追跡するツールです。 Jenkins または {{site.data.keyword.deliverypipeline}} によってデプロイメントが実行されるたびに、JIRA ツール統合はプロジェクトの問題を更新します。 JIRA ツール統合で問題をトラッキングするには、コミット・メッセージ内で JIRA Smart Commits を使用する必要があります。 JIRA Smart Commits について詳しくは、[Using Smart Commits](https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html){:external} を参照してください。
 
 品質コードの計画、追跡、および配信のために、JIRA を構成します。
 
@@ -786,9 +807,9 @@ JIRA は、ユーザーのソフトウェアに関連する問題およびバグ
 
 ### JIRA に関する詳細
 
-JIRA について詳しくは、IBM Cloud Garage Method の[記事「JIRA」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/code/tool_jira/){: new_window} を参照するか、このチュートリアルを始めてください。
+JIRA について詳しくは、IBM Cloud Garage Method の[記事「JIRA」](https://www.ibm.com/cloud/garage/content/code/tool_jira/){:external}を参照するか、以下のチュートリアルを始めてください。
 
-  * [「Developer Insights and Team Dynamics with GitHub and JIRA」ツールチェーンを使用して分析情報を得る ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain){:new_window}
+  * [「Developer Insights and Team Dynamics with GitHub and JIRA」ツールチェーンを使用して分析情報を得る](https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain){:external}
 
 
 ## Nexus の構成
@@ -894,7 +915,7 @@ JIRA について詳しくは、IBM Cloud Garage Method の[記事「JIRA」![�
 
 ### Nexus に関する詳細
 
-Nexus について詳しくは、IBM Cloud Garage Method の[記事「Nexus」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/deliver/tool_nexus/){: new_window} を参照してください。
+Nexus について詳しくは、IBM Cloud Garage Method の[記事「Nexus」](https://www.ibm.com/cloud/garage/content/deliver/tool_nexus/){:external}を参照してください。
 
 
 ## カスタム・ツール (その他のツール) の構成
@@ -922,9 +943,9 @@ Nexus について詳しくは、IBM Cloud Garage Method の[記事「Nexus」![
 
 ### カスタム・ツールに関する詳細
 
-カスタム・ツールについて詳しくは、[Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window} を参照するか、このチュートリアルを始めてください。
+カスタム・ツールについて詳しくは、[Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains](https://www.ibm.com/cloud/blog/introducing-custom-tool-integration-for-bluemix-toolchains/){:external} を参照するか、以下のチュートリアルを始めてください。
 
-  * [Add a custom tool integration to a toolchain![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/add-a-custom-tool-integration-to-a-toolchain){:new_window}
+  * [ツールチェーンへのカスタム・ツール統合の追加](https://www.ibm.com/cloud/garage/tutorials/add-a-custom-tool-integration-to-a-toolchain){:external}
 
 
 ## PagerDuty の構成
@@ -943,7 +964,7 @@ PagerDuty は、複数のモニタリング・システムのデータを単一�
 
 1. API キーを使用してアカウント・レベルで PagerDuty を統合する場合は、**「アカウント」**をクリックします。
 
- a. PagerDuty アカウントの API アクセス・キーを入力します。 PagerDuty アカウントをお持ちでない場合は、[登録して取得してください ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.pagerduty.com/sign-up/){: new_window}。 キーを確認する方法については、[Generating an API Key ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window} を参照してください。
+ a. PagerDuty アカウントの API アクセス・キーを入力します。 PagerDuty アカウントをお持ちでない場合、[登録して取得](https://www.pagerduty.com/sign-up/){:external}してください。キーを確認する方法については、[Generating an API Key](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){:external} を参照してください。
 
  b. PagerDuty サービスの名前を入力します。
 
@@ -962,11 +983,11 @@ PagerDuty は、複数のモニタリング・システムのデータを単一�
 
 ### PagerDuty に関する詳細
 
-PagerDuty について詳しくは、IBM Cloud Garage Method の [PagerDuty に関する記事![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){: new_window} を参照するか、このチュートリアルと Garage Method 支持者のコースを始めてください。
+PagerDuty について詳しくは、IBM Cloud Garage Method の[記事「PagerDuty」](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){:external}を参照するか、以下のチュートリアルと Garage Method 支持者のコースを始めてください。
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+  * [「Develop and test microservices on Cloud Foundry」ツールチェーンの使用](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}
 
-  * [Become a Garage Method advocate (Garage Method 支持者になる)![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
+  * [Become a Garage Method advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:external}
 
 
 ## Rational Team Concert の構成
@@ -1006,7 +1027,7 @@ IBM Rational Team Concert&trade; は、反復計画、変更管理、障害追�
 
 ### Rational Team Concert に関する詳細
 
-Rational Team Concert について詳しくは、IBM Cloud Garage Method の[記事「IBM Rational Team Concert」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/think/tool_rtc/){: new_window} を参照してください。
+Rational Team Concert について詳しくは、IBM Cloud Garage Method の[記事「IBM Rational Team Concert」](https://www.ibm.com/cloud/garage/content/think/tool_rtc/){:external}を参照してください。
 
 
 ## Sauce Labs の構成
@@ -1026,8 +1047,8 @@ Sauce Labs は、機能単体テストを実行します。 {{site.data.keyword.
 
  b. 「ツール統合」セクションで、**「Sauce Labs」**をクリックします。
 
-1. Sauce Labs アカウントと関連付けられたユーザー名を入力します。 [ Sauce Labs アカウント・ページにあるウェルカム・メッセージでユーザー名を確認できます ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://app.saucelabs.com/user-settings){: new_window}。
-1. Sauce Labs アカウントのアクセス・キーを入力します。 [Sauce Labs アカウント・ページでキーを確認できます ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://app.saucelabs.com/user-settings){: new_window}。
+1. Sauce Labs アカウントと関連付けられたユーザー名を入力します。 [ Sauce Labs アカウント・ページにあるウェルカム・メッセージでユーザー名を確認できます](https://app.saucelabs.com/user-settings){:external}。
+1. Sauce Labs アカウントのアクセス・キーを入力します。 [Sauce Labs アカウント・ページでキーを確認できます](https://app.saucelabs.com/user-settings){:external}。
 1. **「統合の作成」**をクリックします。
 1. **「Sauce Labs」**をクリックして saucelabs.com に移動し、ツールチェーンのテスト・アクティビティーを表示します。
 
@@ -1036,10 +1057,9 @@ Sauce Labs は、機能単体テストを実行します。 {{site.data.keyword.
 
 ### Sauce Labs に関する詳細
 
-Sauce Labs について詳しくは、IBM Cloud Garage Method の[記事「Sauce Labs」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: new_window} を参照するか、このチュートリアルを始めてください。
+Sauce Labs について詳しくは、IBM Cloud Garage Method の[記事「Sauce Labs」](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){:external}を参照するか、以下のチュートリアルを始めてください。
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
-
+  * [「Develop and test microservices on Cloud Foundry」ツールチェーンの使用](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}
 
 
 ## Slack の構成
@@ -1059,7 +1079,7 @@ Slack は、クラウド・ベースのリアルタイムでのメッセージ�
 
  b. 「ツール統合」セクションで、**「Slack」**をクリックします。
 
-1. 着信 Web フックとして Slack によって生成された Slack Web フック URL を入力します。 Slack チャネルがツール統合からツールチェーンに関する通知を受け取るためには Slack Web フック URL が必要です。 Web フックを作成または確認する方法については、[Incoming Webhooks ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://api.slack.com/incoming-webhooks){: new_window} を参照してください。
+1. 着信 Web フックとして Slack によって生成された Slack Web フック URL を入力します。 Slack チャネルがツール統合からツールチェーンに関する通知を受け取るためには Slack Web フック URL が必要です。 Web フックを作成または確認する方法については、[Incoming Webhooks](https://api.slack.com/incoming-webhooks){:external} を参照してください。
 
  Slack チャネルがツール統合からツールチェーンについての通知を受け取れるようにするために API キーを使用する場合は、代わりに Web フックを使用するように構成を更新する必要があります。
  {: tip}
@@ -1075,11 +1095,11 @@ Slack は、クラウド・ベースのリアルタイムでのメッセージ�
 
 ### Slack に関する詳細
 
-Slack について詳しくは、IBM Cloud Garage Method の [Slack に関する記事![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: new_window} を参照するか、このチュートリアルと Garage Method 支持者のコースを始めてください。
+Slack について詳しくは、IBM Cloud Garage Method の[記事「Slack」](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){:external}を参照するか、以下のチュートリアルと Garage Method 支持者のコースを始めてください。
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+  * [「Develop and test microservices on Cloud Foundry」ツールチェーンの使用](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}
 
-  * [Become a Garage Method advocate (Garage Method 支持者になる)![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
+  * [Become a Garage Method advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:external}
 
 
 ## SonarQube の構成
@@ -1108,4 +1128,4 @@ SonarQube は、ソース・コードの全体的な正常性と品質の概要�
 
 ### SonarQube に関する詳細
 
-SonarQube について詳しくは、IBM Cloud Garage Method の[記事「SonarQube」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window} を参照してください。
+SonarQube について詳しくは、IBM Cloud Garage Method の[記事「SonarQube」](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){:external}を参照してください。 

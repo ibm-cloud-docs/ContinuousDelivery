@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-14"
 
 keywords: IBM Cloud, build types, build script
 
@@ -35,10 +35,10 @@ subcollection: ContinuousDelivery
 
 以下のいずれかの方法を使用してパイプラインを作成できます。
 
-   * [既存の Cloud Foundry アプリケーションからツールチェーンを作成します](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}。 作成されたツールチェーンにはパイプラインが含まれています。
+   * [既存の Cloud Foundry アプリケーションからツールチェーンを作成します](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app)。 作成されたツールチェーンにはパイプラインが含まれています。
 
-   * 少なくとも 1 つのパイプラインを含む [テンプレートからツールチェーンを作成します](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window}。
+   * 少なくとも 1 つのパイプラインを含む [テンプレートからツールチェーンを作成します](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template)。
 
-   * [既存のツールチェーンに {{site.data.keyword.deliverypipeline}} ツール統合](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window} を追加します。
+   * [既存のツールチェーンに {{site.data.keyword.deliverypipeline}} ツール統合](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline) を追加します。
    
 {{site.data.keyword.deliverypipeline}} から、構成を変更したり、ビルドのステータス、デプロイされたアプリ、最近のデプロイメントを確認したり、最新のログとデプロイメントの詳細を参照したり、パイプラインを削除したりすることができます。
