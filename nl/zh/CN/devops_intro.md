@@ -2,7 +2,7 @@
 
 Copyright:
  years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-18"
 
 keywords: IBM Cloud DevOps, enterprise application Developer, IBM Cloud Garage Method
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -26,8 +27,7 @@ subcollection: ContinuousDelivery
 
 按市场要求的速度交付软件和服务需要团队快速进行迭代和试验。团队必须在反馈和数据的驱动下，频繁部署新版本。最成功的云开发团队采用现代的 DevOps 文化和实践，利用云本机体系结构，并通过同类中最佳的工具来组合工具链，从而充分发挥团队的生产力。快速执行这些操作是一项重要的竞争优势。
 
- 
-<a href="https://www.ibm.com/cloud/garage">IBM Cloud Garage Method <img src="../../icons/launch-glyph.svg" alt="外部链接图标"></a> 描述体系结构、做法和 DevOps 工具链，支持企业进行规模创新。使用 {{site.data.keyword.Bluemix_notm}} Garage Method 可帮助您快速有效地进行文化转换和工具使用。
+[IBM Cloud Garage Method](https://www.ibm.com/cloud/garage){:external} 描述用于支持企业进行规模创新的体系结构、实践和 DevOps 工具链。使用 {{site.data.keyword.Bluemix_notm}} Garage Method 可帮助您快速有效地进行文化转换和工具使用。
 
 企业应用程序开发者可以在数分钟内就开始构建和部署云本机应用程序。他们可以使用一整套服务来构建认知、IoT、区块链、移动和数据密集型应用程序。通过 IBM Cloud App Service，个人开发者可以创建项目，选取应用程序入门模板工具包，然后将生产就绪型应用程序部署到 {{site.data.keyword.Bluemix_notm}}。平台的代码生成技术会使用开发者的首选语言和框架来创建入门模板应用程序，该应用程序根据开发者的需求和用例进行定制。系统将自动供应支持用例所需的任何服务（如 Watson Conversation）。开发者可以在其本地工作站上或在云中进行调试和测试，使用 DevOps 工具链与其他人协作，以及自动完成交付过程。
 

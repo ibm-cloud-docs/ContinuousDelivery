@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud button, yml file, build file
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -33,7 +34,7 @@ subcollection: ContinuousDelivery
 
 3. 将创建一个工具链，该工具链包含您的 Git 存储库的新专用克隆、用于构建和部署代码更改的管道、用于在云上编辑代码的 Eclipse Orion {{site.data.keyword.webide}} 以及问题跟踪程序。
 
-  如果 `.bluemix` 目录包含 `toolchain.yml` 文件，那么该文件用于指定工具链的工具集成。有关 `toolchain.yml` 文件的更多信息，请参阅[创建定制工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}。
+  如果 `.bluemix` 目录包含 `toolchain.yml` 文件，那么该文件用于指定工具链的工具集成。有关 `toolchain.yml` 文件的更多信息，请参阅[创建定制工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom)。
   {: tip}
 
 4. 如果应用程序需要构建文件，那么会自动检测构建文件并构建应用程序。
@@ -48,10 +49,10 @@ subcollection: ContinuousDelivery
 
 下面是公共 {{site.data.keyword.gitrepos}} 存储库的应用程序按钮示例：
 
-[![部署到 IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
+[![部署到 IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://us-south.git.cloud.ibm.com/idsorg/sample-java-cloudant){: external}
 下面是公共 GitHub 存储库的应用程序按钮示例：
 
-[![部署到 IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
+[![部署到 IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){: external}
 ## 创建按钮 {: #create-button}
 
 要创建“部署到 {{site.data.keyword.Bluemix_notm}}”按钮，请复制并修改下列某个片段模板。在 URL 中指定 Git 存储库和分支。
@@ -90,8 +91,6 @@ subcollection: ContinuousDelivery
 
 * 如果您希望本地存储图像，那么可以下载图像并将其存储在 Git 存储库中。调整路径以使用图像的相对位置。
 
-* 如果要使用该按钮的翻译版本，那么可以远程引用相应版本或从 [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window} 下载相应版本。
-
 ## 存储库注意事项 {: #button-repo}
 
 查看在“部署到 {{site.data.keyword.Bluemix_notm}}”按钮中使用的存储库的以下注意事项。
@@ -104,10 +103,10 @@ subcollection: ContinuousDelivery
 
 支持的构建器包括：
 
-* [Ant ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")：](http://ant.apache.org/manual/using.html){:new_window}`build.xml`，用于将输出构建到 `./output/` 文件夹
-* [Gradle ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")：](https://docs.gradle.org/current/userguide/getting_started.html){:new_window}`/build.gradle`，用于将输出构建到 `.` 文件夹
-* [Grunt ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")：](http://gruntjs.com/getting-started#the-gruntfile){:new_window}`/Gruntfile.js`，用于将输出构建到 `.` 文件夹
-* [Maven ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")：](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:new_window}`/pom.xml`，用于将输出构建到 `./target/` 文件夹
+* [Ant：](http://ant.apache.org/manual/using.html){: external}`build.xml`，用于将输出构建到 `./output/` 文件夹
+* [Gradle：](https://docs.gradle.org/current/userguide/getting_started.html){:external}`/build.gradle`，用于将输出构建到 `.` 文件夹
+* [Grunt：](http://gruntjs.com/getting-started#the-gruntfile){: external}`/Gruntfile.js`，用于将输出构建到 `.` 文件夹
+* [Maven：](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){: external}`/pom.xml`，用于将输出构建到 `./target/` 文件夹
 
 ### 管道文件需求
 {: pipeline_file}
@@ -116,7 +115,7 @@ subcollection: ContinuousDelivery
 
 如果在 `.bluemix` 目录中没有 `pipeline.yml` 文件，那么“部署到 {{site.data.keyword.Bluemix_notm}}”按钮将创建具有两个阶段的缺省管道：“构建”阶段和用于部署到 Cloud Foundry 的“部署”阶段。
 
-要创建管道文件，请查阅[定制工具链管道指示信息](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml)中的示例文件。与在 Web 界面中定义管道一样，可以使用文本通过创建阶段和作业，设置输入和环境变量以及添加脚本来定义管道。您还可以在[此演示项目](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix)中查看大量更复杂的管道文件。
+要创建管道文件，请查阅[定制工具链管道指示信息](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml)中的示例文件。与在 Web 界面中定义管道一样，可以使用文本通过创建阶段和作业，设置输入和环境变量以及添加脚本来定义管道。您还可以在[此演示项目](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix){: external}中查看大量更复杂的管道文件。
 
 ### 容器 Dockerfile 需求
 {: container_dockerfile}
@@ -125,11 +124,11 @@ subcollection: ContinuousDelivery
 
 Dockerfile 类似于某种应用程序构建脚本。如果在存储库中检测到 Dockerfile，那么在容器中部署应用程序之前，会自动将该应用程序构建到映像中。如果必须先构建应用程序，然后才能将其构建到映像中，那么要包含应用程序的构建脚本和 Dockerfile。
 
-要了解有关创建 Dockerfile 的更多信息，请参阅 [Docker 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.docker.com/reference/builder/){:new_window}。要遵循使用工具链模板来部署到 Kubernetes 的逐步指示信息，请参阅[教程：使用“开发 Kubernetes 应用程序”工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window} 或[教程：使用“使用 Helm 开发 Kubernetes 应用程序”工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window}。
+要了解有关创建 Dockerfile 的更多信息，请参阅 [Docker 文档](https://docs.docker.com/reference/builder/){: external}。要遵循使用工具链模板来部署到 Kubernetes 的逐步指示信息，请参阅[教程：使用“开发 Kubernetes 应用程序”工具链](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){: external}或[教程：使用“使用 Helm 开发 Kubernetes 应用程序”工具链](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){: external}。
 
-要了解有关将 Cloud Foundry 应用程序移植到 Kubernetes 集群的信息，请参阅[教程：移植 Cloud Foundry 应用程序以部署到工具链中的 Kubernetes ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){:new_window}。  
+要了解有关将 Cloud Foundry 应用程序移植到 Kubernetes 集群的信息，请参阅[教程：移植 Cloud Foundry 应用程序以部署到工具链中的 Kubernetes](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){: external}。  
 
-要手动创建专用于容器的 `pipeline.yml`，请参阅 [GitHub 中的示例 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/Puquios/){:new_window}。
+要手动创建专门用于容器的 `pipeline.yml`，请参阅 [GitHub 中的示例](https://github.com/Puquios/){: external}。
 
 ### 清单文件需求（对于部署到 Cloud Foundry 的应用程序）
 {: #manifest_files}

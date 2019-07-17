@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-18"
 
 keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
 
@@ -13,6 +13,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -29,14 +30,14 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.Bluemix}} 上的 Public 和 Dedicated 环境中可使用开放式工具链。您可以使用两种方法来创建工具链：使用模板创建工具链，或者通过应用程序创建工具链。
 
-每个工具链都与特定资源组或组织相关联。如果工具链与资源组相关联，那么只要用户对工具链资源具有 Identity and Access Management (IAM) 查看者许可权，或者对包含该工具链的资源组具有该许可权，就可以访问该工具链。如果工具链与组织相关联，那么只要是该组织的成员，任何用户都可以被添加到与该组织相关联的工具链的访问控制表中。有关 Cloud Foundry 组织中工具链的访问控制的更多信息，请参阅[管理对 Cloud Foundry 组织中工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}。有关资源组中工具链的访问控制的更多信息，请参阅[管理对资源组中工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window}。
+每个工具链都与特定资源组或组织相关联。如果工具链与资源组相关联，那么只要用户对工具链资源具有 Identity and Access Management (IAM) 查看者许可权，或者对包含该工具链的资源组具有该许可权，就可以访问该工具链。如果工具链与组织相关联，那么只要是该组织的成员，任何用户都可以被添加到与该组织相关联的工具链的访问控制表中。有关 Cloud Foundry 组织中工具链的访问控制的更多信息，请参阅[管理对 Cloud Foundry 组织中工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs)。有关资源组中工具链的访问控制的更多信息，请参阅[管理对资源组中工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups)。
 
 ##通过模板创建工具链   
 {: #creating_a_toolchain_from_a_template}
 
-您可以使用模板作为起始点来[创建工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/devops/create){: new_window}，其包含一组特定工具集成。了解如何通过 [IBM Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/category/tools){:new_window} 使用模板的更多信息。
+可以将模板用作[创建工具链](https://cloud.ibm.com/devops/create){:external}的起点，以包含一组特定的工具集成。了解如何通过 [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage/category/tools){:external} 使用模板的更多信息。
 
-1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Public，请登录到 [{{site.data.keyword.Bluemix_notm}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://cloud.ibm.com){:new_window}。
+1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Public，请登录到 [{{site.data.keyword.Bluemix_notm}}](http://cloud.ibm.com){:external}。
 1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，请登录到 {{site.data.keyword.Bluemix_notm}} 上的 Dedicated 环境。
 1. 从 {{site.data.keyword.Bluemix_notm}} 菜单栏上的菜单中，单击 **DevOps**。
 1. 在 DevOps 仪表板的**工具链**页面上，单击**创建工具链**。
@@ -57,7 +58,7 @@ subcollection: ContinuousDelivery
    资源组在美国南部、美国东部、德国、东京和英国区域可用。在美国南部、英国和德国区域支持 Cloud Foundry 组织。
    {: important}
 
-1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。
+1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations)。
 1. 单击**创建**。此时将自动运行数个步骤，以设置工具链。设置的工具集成根据您所选的工具链模板以及您使用的是 {{site.data.keyword.Bluemix_notm}} Public 还是 {{site.data.keyword.Bluemix_notm}} Dedicated 而有所不同。例如，当您在 {{site.data.keyword.Bluemix_notm}} Public 上创建微服务工具链时，会运行以下步骤：
 
  * 将创建工具链。
@@ -79,7 +80,7 @@ subcollection: ContinuousDelivery
 1. 如果使用入门模板工具包创建了应用程序，请在应用程序的详细信息页面上单击**配置持续交付**。接下来，选择部署目标。如果您使用 {{site.data.keyword.Bluemix_notm}} Public，那么将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 存储库，进行持续交付。如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，那么将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 或 {{site.data.keyword.ghe_short}} 存储库，进行持续交付。
 1. 在工具链配置页面上，复查您即将创建的工具链的图。该图按生命周期阶段显示工具链中的每一个工具集成。
 1. 复查工具链设置的缺省信息。工具链的名称在 {{site.data.keyword.Bluemix_notm}} 中起到标识符的作用。如果要使用其他名称，请更改工具链的名称。
-1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。
+1. 在“工具集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行配置。有关配置工具集成的信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations)。
 1. 单击**创建**。此时将自动运行数个步骤，以设置工具链。设置的工具集成根据您是在 {{site.data.keyword.Bluemix_notm}} Public 上还是在 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用工具链而有所不同。例如，当您在 {{site.data.keyword.Bluemix_notm}} Public 上通过应用程序创建工具链时，会运行以下步骤：
 
  * 将创建工具链。
@@ -104,10 +105,10 @@ subcollection: ContinuousDelivery
 ## 学习教程：使用工具链
 {: #toolchain_tutorials}
 
-查阅 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage){:new_window} 上的下列某个教程：
+查看 [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external} 上的下列某个教程：
 
-  * [使用“开发 Cloud Foundry 应用程序”工具链来创建和使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。
+  * [使用“开发 Cloud Foundry 应用程序”工具链来创建和使用第一个工具链](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}。
 
-  * [添加工具链至应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}。
+  * [向应用程序添加工具链](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}。
 
-  * [使用“在 Cloud Foundry 上开发和测试微服务”工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。
+  * [使用“在 Cloud Foundry 上开发和测试微服务”工具链](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}。

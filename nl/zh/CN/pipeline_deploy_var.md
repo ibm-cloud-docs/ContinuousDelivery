@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-28"
 
 keywords: Environment properties, IBM Java, pipeline environments
 
@@ -42,6 +42,7 @@ subcollection: ContinuousDelivery
 {: #deliverypipeline_envprop}
 
 ### 一般用途属性
+下表列出并描述了缺省情况下在管道环境中可用的每个通用环境属性。
 
 |环境属性|描述|
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -71,8 +72,10 @@ subcollection: ContinuousDelivery
 |TASK_ID|作业当前运行的唯一标识。|
 |TMPDIR|存储临时文件的目录位置。|
 |WORKSPACE|当前工作目录的路径。|
+{: caption="表 1. 通用环境属性" caption-side="top"}
 
 ### 运行时和工具属性
+下表列出并描述了缺省情况下在管道环境中可用的每个运行时和工具环境属性。
 
 |环境属性|描述|
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -84,11 +87,13 @@ subcollection: ContinuousDelivery
 |JAVA8_HOME|IBM Java 8 的路径。|
 |MAVEN_HOME|Apache Maven 3.2.1 的路径。|
 |NODE_HOME|Node.js 0.10.29 的路径。|
+{: caption="表 2. 运行时和工具环境属性" caption-side="top"}
 
 要在管道脚本中使用 Apache Ant 1.10+，请将 `ANT_HOME` 设置为 `$ANT_JAVA8_HOME`，将 `JAVA_HOME` 设置为 `$JAVA8_HOME`。
 {: tip}
 
 ### 部署属性
+下表列出并描述了缺省情况下在管道环境中可用的每个部署环境属性。
 
 |环境属性|描述|
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -99,6 +104,7 @@ subcollection: ContinuousDelivery
 |CF_SPACE_ID|对于部署，它是要部署到的空间的标识。|
 |CF_TARGET_URL|对于部署，它是 {{site.data.keyword.Bluemix_short}} 或 Cloud Foundry 的 URL。|
 |IDS_VERSION|对于部署，它是要部署的应用程序的版本，或者是源标识。|
+{: caption="表 3. 部署环境属性" caption-side="top"}
 
 ## 预安装的资源
 {: #deliverypipeline_resources}
@@ -106,6 +112,7 @@ subcollection: ContinuousDelivery
 每个管道中都预安装了多个运行时、工具和 Node 模块。
 
 ### 运行时和工具
+下表列出了每个管道中可用的每个预安装运行时和工具。
 
 所有链接都位于主目录中。
 {: tip}
@@ -123,6 +130,7 @@ subcollection: ContinuousDelivery
 |Apache Maven 3.2.1|maven|/opt/IBM/maven|
 |IBM Node|node|/opt/IBM/node|
 |IBM Rational Team Concert&trade; SCM Tools|RTC-SCM-Tools|/opt/IBM/RTC-SCM-Tools|
+{: caption="表 4. 运行时和工具的链接名称和路径" caption-side="top"}
 
 管道环境提供 64 位版本的 IBM Node 0.10、0.10.48、0.12、0.12.17、4.2、4.4.5、4.6.0、6.2.2 和 6.7.0。要选择版本，请使用导出命令。
 

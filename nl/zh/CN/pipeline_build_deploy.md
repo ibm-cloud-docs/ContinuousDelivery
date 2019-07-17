@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-14"
 
 keywords: ADD STAGE, Run Stage icon, JOBS tab
 
@@ -116,7 +116,7 @@ subcollection: ContinuousDelivery
 1. 在同一阶段的后续作业中使用 `PIPELINE_LOG_URL` 来下载日志文件，以将其导出到其他系统。使用 IBM Cloud 不记名令牌来访问日志文件。
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
@@ -157,7 +157,7 @@ subcollection: ContinuousDelivery
 1. 在同一阶段的后续作业中使用 `PIPELINE_ARTIFACT_URL` 来下载工件，以将其导出到其他系统。使用 IBM Cloud 不记名令牌来访问工件。
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )

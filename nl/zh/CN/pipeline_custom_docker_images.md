@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-19"
 
 keywords: pipeline base image, custom Docker, IBM Cloud team uses
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -39,11 +40,11 @@ subcollection: ContinuousDelivery
 如果未填写 **Docker 映像名称**字段，那么将使用标准管道基本映像。
 {: tip}
 
-缺省情况下，会在 [Docker Hub ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://hub.docker.com/){: new_window} 上搜索您的存储库。如果使用的是其他 Docker 注册表（如 {{site.data.keyword.registrylong}}），那么可以使用完整的 DNS 名称。您还可以使用 Docker Hub 上映像的标准名称。例如，`registry.hub.docker.com/library/maven:3.5.3-ibmjava`。
+缺省情况下，会在 [Docker Hub](https://hub.docker.com/){: external} 上搜索您的存储库。如果使用的是其他 Docker 注册表（如 {{site.data.keyword.registrylong}}），那么可以使用完整的 DNS 名称。您还可以使用 Docker Hub 上映像的标准名称。例如，`registry.hub.docker.com/library/maven:3.5.3-ibmjava`。
 
 Docker 映像的 `tag` 是可选的。如果未指定标记，那么缺省情况下会将其设置为 `latest`。缺省值 `latest` 只是存储库所有者必须管理的标记名称。它并不意味着此 Docker 映像是时间上最新的映像。
 
-您可以在 Docker Hub 上找到大型存储库社区。IBM 在以下位置托管了若干公共存储库供 IBM Cloud 团队使用：[https://hub.docker.com/u/ibmcom/ ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://hub.docker.com/u/ibmcom/){: new_window}。`ibmcom/ibmjava` 和 `ibmcom/ibmnode` 存储库很适合作为构建基础。 
+您可以在 Docker Hub 上找到大型存储库社区。IBM 在以下位置托管了若干公共存储库供 IBM Cloud 团队使用：[https://hub.docker.com/u/ibmcom/](https://hub.docker.com/u/ibmcom/){: external}。`ibmcom/ibmjava` 和 `ibmcom/ibmnode` 存储库很适合作为构建基础。 
 
 ## 使用专用映像注册表
 {: #private_image_registry}
@@ -52,7 +53,7 @@ Docker 映像的 `tag` 是可选的。如果未指定标记，那么缺省情况
 
 对于大多数注册表，可以使用为您提供的用户名和密码。如果是使用 {{site.data.keyword.registrylong_notm}} 来存储专用映像，那么必须使用平台 API 密钥进行认证。 
 
-1. [请求平台 API 密钥 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/iam/#/apikeys){: new_window}，并确保保存该密钥。 
+1. [请求平台 API 密钥](https://cloud.ibm.com/iam/#/apikeys){: external}，并确保保存该密钥。 
 1. 通过将 `iamapikey` 用于 `DOCKER_USERNAME`，并将保存的平台 API 密钥用于 `DOCKER_PASSWORD`，创建两个阶段环境属性。
 
  ![{{site.data.keyword.registrylong_notm}} 凭证](images/custom-image-private-repository.png)

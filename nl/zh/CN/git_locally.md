@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-19"
 
 keywords: Git source control, personal access token, Git repos
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -35,8 +36,9 @@ subcollection: ContinuousDelivery
 |Git 类型|HTTPS 设置|HTTPS 使用|SSH 设置|
 |:-----------|:-------------|:------------|:-------------|
 |Git Repos and Issue Tracking|[个人访问令牌](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat)|Git Repos and Issue Tracking 用户名（不是您的 IBM 标识）和个人访问令牌|[配置 SSH 密钥](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key)|
-|公共 GitHub (github.com)|个人访问令牌不是必需的，但您可以设置并使用个人访问令牌|GitHub 用户名和密码，或 GitHub 用户名和个人访问令牌，或仅将个人访问令牌作为用户名|[配置 GitHub SSH 密钥](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)|
+|公共 GitHub (github.com)|个人访问令牌不是必需的，但您可以设置并使用个人访问令牌|GitHub 用户名和密码，或 GitHub 用户名和个人访问令牌，或仅将个人访问令牌作为用户名|[配置 GitHub SSH 密钥](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: external}|
 |GitHub Enterprise|[个人访问令牌](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth)|GitHub Enterprise 用户名（不是您的 IBM 标识）和个人访问令牌|[配置 GitHub Enterprise SSH 密钥](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth)|
+{: caption="表 1. Git 认证设置" caption-side="top"}
 
 如果更愿意使用 SSH，那么可以在所有 Git 服务器中复用单个密钥。如先前链接中所述，创建或找到密钥并在每个服务器中对其进行配置。如果使用口令创建密钥，那么在使用该密钥时，系统将提示您输入口令。
 {: tip}
@@ -45,7 +47,7 @@ subcollection: ContinuousDelivery
 
     a. 检查是否安装了 Git。在命令行上，输入 `git version`。如果安装了 Git，那么将显示版本号，然后您可以开始使用。
 
-    b. 如果未安装 Git，请[转至 Git Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://git-scm.com/downloads){: new_window}。
+    b. 如果未安装 Git，请[转至 Git Web 站点](http://git-scm.com/downloads){: external}。
 
     c. 下载并安装适用于您的操作系统的版本。可以接受缺省安装值。
 
@@ -72,12 +74,12 @@ subcollection: ContinuousDelivery
 6. 如果系统提示您进行认证，请输入上表中定义的相应信息。
 
 
-下载完成后，在存储库中即有本地版本的文件。有关使用 Git 的更多信息，请参阅 [Git 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")]](http://git-scm.com/doc){: new_window}。
+下载完成后，在存储库中即有本地版本的文件。有关使用 Git 的更多信息，请参阅 [Git 文档](http://git-scm.com/doc){: external}。
 
 
 ## 使用 Eclipse 和 EGit 插件访问存储库
 {: #git_egit}
 
-如果使用的是 Eclipse，并且具有使用 Git 进行源代码控制的项目，那么可以使用 EGit 插件通过 Eclipse 来管理存储库。有关安装和配置 EGit 的更多信息，请参阅 [EGit 教程 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}。
+如果使用的是 Eclipse，并且具有使用 Git 进行源代码控制的项目，那么可以使用 EGit 插件通过 Eclipse 来管理存储库。有关如何安装和配置 EGit 的更多信息，请参阅 [EGit 教程](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: external}。
 
 如果使用的是 {{site.data.keyword.gitrepos}} 并且发生任何问题，请参阅 [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local) 文档。

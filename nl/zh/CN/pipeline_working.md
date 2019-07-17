@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-14"
 
 keywords: IBM Cloud, build types, build script
 
@@ -34,10 +34,10 @@ subcollection: ContinuousDelivery
 
 您可以使用以下任一方法来创建管道：
 
-   * [从现有 Cloud Foundry 应用程序创建工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}。生成的工具链包含管道。
+   * [从现有 Cloud Foundry 应用程序创建工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app)。生成的工具链包含管道。
 
-   * [从模板创建工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window}（模板至少包含一个管道）。
+   * [从模板创建工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template)（模板至少包含一个管道）。
 
-   * 向现有工具链[添加 {{site.data.keyword.deliverypipeline}} 工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window}。
+   * 向现有工具链[添加 {{site.data.keyword.deliverypipeline}} 工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline)。
    
 通过 {{site.data.keyword.deliverypipeline}}，可更改配置，检查构建、已部署应用程序和最近部署的状态，查看最新日志和部署详细信息，也可以删除管道。

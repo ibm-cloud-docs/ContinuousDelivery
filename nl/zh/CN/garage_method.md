@@ -3,7 +3,7 @@
 copyright:
   years: 2017, 2019
 
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-18"
 
 keywords: Continuous delivery practices, {{site.data.keyword.contdelivery_full}}, IBM Cloud Garage Method
 
@@ -18,6 +18,7 @@ subcollection: ContinuousDelivery
 -->
 
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
@@ -28,7 +29,7 @@ subcollection: ContinuousDelivery
 
 
 通过 {{site.data.keyword.contdelivery_full}}，您可以使用 DevOps 实践和业界领先的工具来构建、测试和交付应用程序。
-Continuous Delivery 支持各种实践；但您应该使用哪些实践？对此并没有通用的答案。您使用的实践可能因软件交付项目的不同而变化。[IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage){:new_window} 是一种 IBM 方法，用于快速交付使用中的应用程序。它将持续交付与 IBM 设计思维实践、精益实践、DevOps 实践和灵敏性实践结合在一起。这些实践虽然致力于云，但也可让任何软件开发工作受益。
+Continuous Delivery 支持各种实践；但您应该使用哪些实践？对此并没有通用的答案。您使用的实践可能因软件交付项目的不同而变化。[IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external} 是一种 IBM 方法，用于快速交付使用中的应用程序。它将持续交付与 IBM 设计思维实践、精益实践、DevOps 实践和灵敏性实践结合在一起。这些实践虽然致力于云，但也可让任何软件开发工作受益。
 
 
 ## 采用持续交付实践
@@ -41,26 +42,26 @@ Continuous Delivery 支持各种实践；但您应该使用哪些实践？对此
 
 Cloud Garage Method 站点包含多篇介绍高级别持续交付的文章。
 
-[持续交付 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/deliver/practice_continuous_delivery/] ){:new_window} 是一个可用来构建和部署软件的实践，因此可随时发布到生产。计算机科学的其中一个标志是缩短了开发和操作流程的各种周期时间。
+[持续交付](https://www.ibm.com/cloud/garage/content/deliver/practice_continuous_delivery/){:external}是用于构建和部署软件，以便可随时将其发布到生产的一种实践。计算机科学的其中一个标志是缩短了开发和操作流程的各种周期时间。
 
-使用 [Delivery Pipeline ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:new_window}（随附于 {{site.data.keyword.Bluemix_notm}} Continuous Delivery），您可以通过将软件交付过程分成各个阶段，从而以一种一致且可靠的方式实现持续交付。目标是以最少的人为干预，自动在各个阶段执行代码。通过[使用 Delivery Pipeline 的实践 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/deliver/practice_delivery_pipeline/){:new_window}，可以自动执行项目的持续部署。
+使用 [Delivery Pipeline](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:external}（随附于 {{site.data.keyword.Bluemix_notm}} Continuous Delivery），您可以通过将软件交付过程分成各个阶段，以一致且可靠的方式实现持续交付。目标是以最少的人为干预，自动在各个阶段执行代码。通过[使用 Delivery Pipeline 的实践](https://www.ibm.com/cloud/garage/content/deliver/practice_delivery_pipeline/){:external}，可以自动执行项目的持续部署。
 
 ## 持续交付教程
 {: #gm_cd_tutorials}
 
-[使用“开发 Cloud Foundry 应用程序”工具链来创建和使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。了解如何通过模板创建开放式工具链，并使用工具链持续交付“Hello World”应用程序。
+[使用“开发 Cloud Foundry 应用程序”工具链来创建和使用第一个工具链](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}。了解如何通过模板创建开放式工具链，并使用工具链持续交付“Hello World”应用程序。
 
-[添加工具链至应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}。了解如何添加开放式工具链至应用程序并使用工具链来持续交付应用程序。
+[向应用程序添加工具链](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}。了解如何添加开放式工具链至应用程序并使用工具链来持续交付应用程序。
 
-[使用“在 Cloud Foundry 上开发和测试微服务”工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。了解如何通过具有三个微服务的模板创建工具链，并使用该工具链持续交付网上商店。
+[使用“在 Cloud Foundry 上开发和测试微服务”工具链](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}。了解如何通过具有三个微服务的模板创建工具链，并使用该工具链持续交付网上商店。
 
-有关更多教程，请参阅 [Learning Lab ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/category/courses){:new_window}。
+有关更多教程，请参阅 [Learning Lab](https://www.ibm.com/cloud/garage/category/courses){:external}。
 
 ## 持续交付课程
 {: #gm_cd_courses}
 
-[开始使用敏捷开发和持续交付 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/course/get_started_agile_cd){:new_window}。了解如何通过模板创建工具链，并使用工具链持续交付“Hello World”应用程序。
+[敏捷开发和持续交付入门](https://www.ibm.com/cloud/garage/content/course/get_started_agile_cd){:external}。了解如何通过模板创建工具链，并使用工具链持续交付“Hello World”应用程序。
 
-[成为 IBM Cloud Garage Method 倡导者 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/content/course/gm_advocate){:new_window}。参加此高级课程，以熟悉 Cloud Garage Method 的实践和工具。
+[成为 IBM Cloud Garage Method 支持者](https://www.ibm.com/cloud/garage/content/course/gm_advocate){:external}。参加此高级课程，以熟悉 Cloud Garage Method 的实践和工具。
 
-要查看所有 Cloud Garage Method 学习材料，请参阅 [Cloud Garage Method Learning Lab ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/category/courses){:new_window}。
+要查看所有 Cloud Garage Method 学习材料，请参阅 [Cloud Garage Method Learning Lab](https://www.ibm.com/cloud/garage/category/courses){:external}。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-06-20"
 
 keywords: troubleshoot, IBM Cloud Continuous Delivery
 
@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -100,7 +101,7 @@ GitHub 工具集成未添加到工具链。
 
 1. 如果要在服务器上创建公共存储库，请清除**使此存储库成为专用**复选框。
 1. 如果要使用 GitLab Issues 进行问题跟踪，请选中**启用 GitLab Issues** 复选框。
-1. 如果您要通过在提交上创建标记和注释，在提交所参考的问题上创建标签和注释，跟踪代码更改的部署，请选择**跟踪代码更改的部署**复选框。有关更多信息，请参阅[使用工具链跟踪代码部署位置 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}。
+1. 如果您要通过在提交上创建标记和注释，在提交所参考的问题上创建标签和注释，跟踪代码更改的部署，请选择**跟踪代码更改的部署**复选框。有关更多信息，请参阅[使用工具链跟踪代码部署位置](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}。
 1. 单击**创建集成**。
 
 有关配置 GitLab 工具集成的更多信息，请参阅[配置 GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)。
@@ -125,9 +126,9 @@ GitHub 工具集成未添加到工具链。
 
 拥有个人访问令牌后，可以创建用于访问其他区域中存储库的 URL。在配置工具集成时，在**源存储库 URL** 字段中，更新存储库 URL 以使用您的用户名和访问令牌。
 
-`https://user:XXXXXXX@git.ng.bluemix.net/group/node-hello-world`
+`https://user:XXXXXXX@us-south.git.cloud.ibm.com/group/node-hello-world`
 
-其中，`user` 是您的 GitLab 用户名，`XXXXXXX` 是访问令牌，[`group` ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/help/user/group/index.md){:new_window} 是存储库存储所在的组，`node-hello-world` 是存储库名称。
+其中，`user` 是您的 GitLab 用户名，`XXXXXXX` 是访问令牌，[`group`](https://us-south.git.cloud.ibm.com/help/user/group/index.md){: external} 是存储库存储所在的组，`node-hello-world` 是存储库名称。
 
 如果 GitLab 存储库不在 GitLab 组中，说明 `group` 的值与您的用户名相同。
 {: tip}
@@ -174,13 +175,18 @@ GitHub 工具集成未添加到工具链。
 
 * 如果专用密钥不在缺省位置，请使用以下命令在环境变量中指定专用密钥：
 
-`GIT_SSH_COMMAND='ssh -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+```
+  GIT_SSH_COMMAND='ssh -i/path/to/private_key_file' git clone git@host:owner/repo.git
+```
 
 * 要使用连接信息来调试此问题，请将 -v 或 -vvv 标志添加到 `GIT_SSH_COMMAND` 环境变量：
 
-`GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git`
-
-`GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+```
+  GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git
+```
+```
+  GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git
+```
 
 
 ## 我尝试通过电子邮件向 GitLab 项目添加用户，但用户收不到邀请。如何将用户添加到项目中？
@@ -223,6 +229,42 @@ GitHub 工具集成未添加到工具链。
 * 使用管道用户界面来创建示例管道，该管道将复制您尝试使用模板构建的管道。将 `/yaml` 附加到管道 URL 以生成类似的 pipeline.yaml 文件，您可以使用该文件来查找明显的差异。例如，`https://cloud.ibm.com/devops/pipelines/<your pipeline id>/yaml?env_id=<your region>`。
 
 * 使用无头工具链创建机制。在**创建工具链**页面上，打开调试器并对 `window.Testflags = {nocreate: 1}` 表达式求值。在此方式下单击**创建工具链**时，不会创建工具链。系统会改为将传递给 API 的信息返回到控制台，供您在其中复查这些信息。
+
+
+## 我尝试使用 Delivery Pipeline 部署到 Kubernetes，为什么会收到有关对象无效的错误？ 
+{: troubleshoot-cd-pipeline-kubernetes}
+{: troubleshoot}
+
+1.0 管道基本映像包含 kubectl V1.14.2。如果要连接到的 Kubernetes 集群运行的是更新版本的 Kubernetes，那么可能会收到错误。 
+
+我尝试使用 Delivery Pipeline 部署到 Kubernetes 时，收到以下错误消息：
+{: tsSymptoms}
+
+`error:SchemaeError(io.k8s.api.core.v1.SecretProjection): invalid object doesn't have additional properties`
+
+通常，管道基本映像中 kubectl 命令的版本与集群中运行的 Kubernetes 版本不兼容时，会导致此问题。
+{: tsCauses}
+   
+可以使用以下任一方法来解决此问题：
+{: tsResolve}
+
+* 使用更新的管道基本映像版本，映像在创建时包含当前发布的 kubectl 版本。有关如何指定最新映像版本的信息，请参阅[指定映像版本](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline_versioned_base_images#specify_base_image_version)。
+
+* 确保管道作业运行的是正确版本的 kubectl。例如，将以下行添加到管道作业的开头以运行 kubectl V1.14.2：
+
+```
+  curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.14.2/bin/linux/amd64/kubectl
+  chmod +x ./kubectl
+  sudo mv ./kubectl /usr/local/bin/kubectl
+```
+
+如果是从 1.0 管道基本映像运行 kubectl V1.14.2，那么 sudo 选项不可用。请将 sudo 行替换为以下命令，以将 kubectl 添加到路径：
+```
+   mkdir ~/.bin && export PATH=~/.bin:$PATH && mv ./kubectl ~/.bin/kubectl 
+```
+
+有关访问所需 kubectl 的确切版本的更多信息，请参阅[安装和设置 kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux){: external}。
+{: tip}
 
 
 ## 我为工具链配置了工具集成，为什么未配置成功？

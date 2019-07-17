@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
 
 keywords: user management function, tool integrations, Cloud Foundry org
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -48,7 +49,7 @@ subcollection: ContinuousDelivery
  有一些工具集成已经过预配置，不需要任何配置参数。您仅可以针对您所配置的工具集成更新配置设置。
  {: tip}
 
- 完成更新设置时，单击**保存集成**。有关配置特定工具集成的更多信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。
+ 完成更新设置时，单击**保存集成**。有关配置特定工具集成的更多信息，请参阅[配置工具集成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations)。
 
 ## 添加工具集成
 {: #adding_a_tool_integration}
@@ -74,7 +75,7 @@ subcollection: ContinuousDelivery
 ## 管理对资源组中工具链的访问权
 {: #managing_access_resource_groups}
 
-您可以使用 Identity and Access Management (IAM) 服务来管理用户对工具链的访问权。有关使用 IAM 管理访问控制的更多信息，请参阅[使用 Identity and Access Management 管理用户对工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}。 
+您可以使用 Identity and Access Management (IAM) 服务来管理用户对工具链的访问权。有关使用 IAM 管理访问控制的更多信息，请参阅[使用 Identity and Access Management 管理用户对工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security)。 
 
 仅当用户存在于所选的 {{site.data.keyword.contdelivery_short}} 实例的授权用户列表中时，才能使用 Delivery Pipeline、Eclipse Orion {{site.data.keyword.webide}} 和 {{site.data.keyword.contdelivery_short}} 工具链的 {{site.data.keyword.gitrepos}} 功能。在指定的资源组中，您可以从所选 {{site.data.keyword.contdelivery_short}} 实例的“管理”选项卡来管理授权用户权利。
 
@@ -93,7 +94,7 @@ subcollection: ContinuousDelivery
 必须在托管工具链的区域中向工具链的组织添加用户。如果工具链配置为将应用程序部署到其他区域，那么它仍会将应用程序部署到美国南部区域。
 {: important}
 
-将用户添加到 {{site.data.keyword.Bluemix_notm}} 组织和空间时，如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}，那么用户可以使用他们的 {{site.data.keyword.Bluemix_notm}} 标识和密码登录到 {{site.data.keyword.ghe_short}}。用户登录之后，将为他们创建帐户。将用户添加到 {{site.data.keyword.Bluemix_notm}} 组织和空间时，他们不会自动添加到 {{site.data.keyword.ghe_short}} 存储库。必须由具有存储库管理权限的人员进行添加。有关更多信息，请参阅[使用 Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}。如果您使用自己的 {{site.data.keyword.ghe_short}} 受管版本，请遵循内部过程。
+将用户添加到 {{site.data.keyword.Bluemix_notm}} 组织和空间时，如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}，那么用户可以使用他们的 {{site.data.keyword.Bluemix_notm}} 标识和密码登录到 {{site.data.keyword.ghe_short}}。用户登录之后，将为他们创建帐户。将用户添加到 {{site.data.keyword.Bluemix_notm}} 组织和空间时，他们不会自动添加到 {{site.data.keyword.ghe_short}} 存储库。必须由具有存储库管理权限的人员进行添加。有关更多信息，请参阅[使用 Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started)。如果您使用自己的 {{site.data.keyword.ghe_short}} 受管版本，请遵循内部过程。
 
 ###管理工具链访问权的提示
 
@@ -131,10 +132,22 @@ subcollection: ContinuousDelivery
 
      * 为组织中的所选空间分配角色。
 
-     缺省情况下，组织管理者对与组织相关联的所有工具链具有完全的管理特权。要向用户授予完全的管理特权，请选择**管理者**角色。“记帐管理者”和“审计员”角色不会影响工具链访问权。您可以日后在“团队目录”页面上更改这些角色。有关更多信息，请参阅 [Cloud Foundry 角色](/docs/iam?topic=iam-cfaccess#cfaccess){: new_window}。
+     缺省情况下，组织管理者对与组织相关联的所有工具链具有完全的管理特权。要向用户授予完全的管理特权，请选择**管理者**角色。“记帐管理者”和“审计员”角色不会影响工具链访问权。您可以日后在“团队目录”页面上更改这些角色。有关更多信息，请参阅 [Cloud Foundry 角色](/docs/iam?topic=iam-cfaccess#cfaccess)。
      {: tip}
 
    在用户成为组织的成员后，返回到工具链的“管理”页面，并将用户添加到工具链。  
+
+
+## 组织工具链
+{: #organizing_toolchains}
+
+您可以向工具链添加标记以对其进行组织，方便以后轻松找到这些工具链。标记是分配给工具链的标签，用于轻松过滤工具链列表中的工具链。
+
+1. 在 DevOps 仪表板的**工具链**页面上，找到要向其添加标记的工具链，然后单击**添加标记**。
+1. 输入要添加到工具链的标记的名称。可以添加多个标记，各标记之间用逗号分隔。
+1. 单击**保存**。
+
+有关标记的更多信息，请参阅[使用标记](/docs/resources?topic=resources-tag#)。
 
 
 ## 删除工具链
@@ -153,10 +166,10 @@ subcollection: ContinuousDelivery
 ##学习教程：使用工具链
 {: #toolchain-tutorial}
 
-在 [IBM&reg; Cloud Garage Method ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage){:new_window} 上查阅以下教程：
+查看 [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external} 上的以下教程：
 
-  * [使用“开发 Cloud Foundry 应用程序”工具链来创建和使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。
+  * [使用“开发 Cloud Foundry 应用程序”工具链来创建和使用第一个工具链](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}。
 
-  * [添加工具链至应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}。
+  * [向应用程序添加工具链](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}。
 
-  * [使用“在 Cloud Foundry 上开发和测试微服务”工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。
+  * [使用“在 Cloud Foundry 上开发和测试微服务”工具链](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}。

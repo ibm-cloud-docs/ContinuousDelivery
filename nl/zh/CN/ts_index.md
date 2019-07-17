@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-20"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud Continuous Delivery, GitHub tool integration, error message
 
@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:faq: data-hd-content-type='faq'}
 {:codeblock: .codeblock}
@@ -34,7 +35,7 @@ subcollection: ContinuousDelivery
 {: #plan_exceeded}
 {: faq}
 
-{{site.data.keyword.contdelivery_short}} 提供两个套餐：轻量和专业。如果您有 {{site.data.keyword.contdelivery_short}} 轻量套餐，那么可以免费使用工具链，直至达到套餐限制的数量。错误消息指示您已超过轻量套餐的一个或多个限制。例如，如果有太多授权用户与 {{site.data.keyword.contdelivery_short}} 服务实例相关联或者如果运行了最大数量的 {{site.data.keyword.deliverypipeline}} 作业，那么可能超出套餐。有关套餐条款的更多信息，请参阅[套餐限制和使用情况](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}。
+{{site.data.keyword.contdelivery_short}} 提供两个套餐：轻量和专业。如果您有 {{site.data.keyword.contdelivery_short}} 轻量套餐，那么可以免费使用工具链，直至达到套餐限制的数量。错误消息指示您已超过轻量套餐的一个或多个限制。例如，如果有太多授权用户与 {{site.data.keyword.contdelivery_short}} 服务实例相关联或者如果运行了最大数量的 {{site.data.keyword.deliverypipeline}} 作业，那么可能超出套餐。有关套餐条款的更多信息，请参阅[套餐限制和使用情况](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage)。
 
 
 ## {{site.data.keyword.contdelivery_short}} 服务声明，轻量套餐在 30 天不活动后会被删除。不活动是什么意思？
@@ -48,7 +49,7 @@ subcollection: ContinuousDelivery
 {: #service_required_resource_group}
 {: faq}
 
-位于工具链的相同资源组或组织中的 {{site.data.keyword.contdelivery_short}} 服务实例的套餐条款管理服务中包含的某些工具集成的使用（{{site.data.keyword.deliverypipeline}}、Eclipse Orion {{site.data.keyword.webide}} 和 {{site.data.keyword.gitrepos}}）。错误消息指示资源组或组织不包含必需的 {{site.data.keyword.contdelivery_short}} 服务实例。有关套餐条款的更多信息，请参阅[套餐限制和使用情况](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}。
+位于工具链的相同资源组或组织中的 {{site.data.keyword.contdelivery_short}} 服务实例的套餐条款管理服务中包含的某些工具集成的使用（{{site.data.keyword.deliverypipeline}}、Eclipse Orion {{site.data.keyword.webide}} 和 {{site.data.keyword.gitrepos}}）。错误消息指示资源组或组织不包含必需的 {{site.data.keyword.contdelivery_short}} 服务实例。有关套餐条款的更多信息，请参阅[套餐限制和使用情况](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage)。
 
 
 ## 我更新了 Cloud Foundry 组织中工具链的信息，为什么在工具链中看不到这些更改？
@@ -162,10 +163,9 @@ subcollection: ContinuousDelivery
 可以通过选择以下两个选项之一来找到“状态”页面：
 
   * 登录到 {{site.data.keyword.Bluemix_notm}} 控制台。从菜单栏中单击**支持**，然后选择**状态**。检查列出的资源中是否存在 ![某些问题](../../get-support/images/some_issues.svg) 图标。此图标可能指示有中断情况。
-  * 通过“[{{site.data.keyword.Bluemix_notm}} - 系统状态”![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/status){: new_window} 直接访问。
+  * 通过“[{{site.data.keyword.Bluemix_notm}} - 系统状态](https://cloud.ibm.com/status){: external}”直接访问。
 
-
-有关 {{site.data.keyword.Bluemix_notm}}“状态”页面的更多信息，请参阅[查看 {{site.data.keyword.Bluemix_notm}} 状态](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}。
+有关 {{site.data.keyword.Bluemix_notm}}“状态”页面的更多信息，请参阅[查看 {{site.data.keyword.Bluemix_notm}} 状态](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status)。
 
 
 ## 如何在管道作业之间传递工件？

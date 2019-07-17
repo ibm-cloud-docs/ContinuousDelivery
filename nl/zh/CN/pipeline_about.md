@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-06-19"
 
 keywords: run jobs, sequences of stages, job types
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -27,12 +28,12 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.contdelivery_full}} 包含 Delivery Pipeline，用于以可重复的方式进行构建、测试和部署，需要的人为干预最少。在管道中，阶段序列可检索输入并运行作业（例如，构建、测试和部署）。
 {:shortdesc}
 
-查看、修改或运行管道的许可权基于拥有管道的工具链的访问控制。有关工具链的访问控制的更多信息，请参阅[管理对资源组中工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window}和[管理对 Cloud Foundry 组织中工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}。
+查看、修改或运行管道的许可权基于拥有管道的工具链的访问控制。有关工具链的访问控制的更多信息，请参阅[管理对资源组中工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups)和[管理对 Cloud Foundry 组织中工具链的访问权](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs)。
 {: important}
 
-您可以指定由管道提供的要在多个作业类型中运行的脚本，这样就可以直接控制作业运行内容。这些脚本在包含多个标准开发工具的 Docker 映像中运行，其中包括与 {{site.data.keyword.Bluemix_notm}} 运行时进行交互所需的工具。有关标准 Docker 映像中包含哪些内容的更多信息，请参阅[预安装的资源](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}。如果作业需要的开发工具在标准映像中没有提供，或者您需要这些工具的不同版本，那么可以使用定制映像。有关定制映像的更多信息，请参阅[使用定制 Docker 映像](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}。
+您可以指定由管道提供的要在多个作业类型中运行的脚本，这样就可以直接控制作业运行内容。这些脚本在包含多个标准开发工具的 Docker 映像中运行，其中包括与 {{site.data.keyword.Bluemix_notm}} 运行时进行交互所需的工具。有关标准 Docker 映像中包含哪些内容的更多信息，请参阅[预安装的资源](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)。如果作业需要的开发工具在标准映像中没有提供，或者您需要这些工具的不同版本，那么可以使用定制映像。有关定制映像的更多信息，请参阅[使用定制 Docker 映像](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images)。
 
-当管道运行脚本时，会使用环境变量将描述作业运行位置上下文的属性传递到脚本。例如，作为阶段输入的存储库的 URL，要运行的阶段和作业的名称，作业类型所指定的参数，等等。要查看可用环境变量的列表，请参阅[预安装的资源](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)。 
+当管道运行脚本时，会使用环境变量将描述作业运行位置上下文的属性传递到脚本。例如，作为阶段输入的存储库的 URL，要运行的阶段和作业的名称，作业类型所指定的参数，等等。要查看可用环境变量的列表，请参阅[预安装的资源](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)。
 
 您可以在管道级别和阶段级别定义属性。管道属性是跨管道中所有阶段和作业共享的。阶段属性对特定阶段来说是唯一的，并且在该阶段中是跨所有作业共享的。有关属性的更多信息，请参阅[环境属性（环境变量）](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties)。
 
@@ -52,6 +53,20 @@ subcollection: ContinuousDelivery
 
 ![“输入”选项卡](images/input_tab_only_execute.png)
 
+对于使用 Git 存储库输入类型的阶段，有更多阶段触发器选项可用。例如，可以选择在所选分支上对 Git 事件自动运行作业。选择此触发器类型时，必须选择下列其中一个或多个事件类型：
+
+*	**推送提交时** - 在对所选存储库分支进行推送时触发。
+*	**打开或更新拉取/合并请求时** - 打开或编辑拉取请求或合并请求时触发。
+*	**关闭拉取/合并请求时** - 关闭拉取请求或合并请求时触发，即使没有关联的提交也不例外。
+
+![“输入”选项卡触发器](images/input_tab_only_triggers.png)
+
+如果选中**打开或更新拉取/合并请求时**复选框，那么管道的状态会返回到 Git 存储库。拉取请求或合并请求触发管道时，页面上会显示内联状态检查。系统将显示管道中运行的每个阶段的状态检查，并提供每个阶段的日志和历史记录的链接。在状态检查运行时，状态会从暂挂更新为成功或失败。如果管道包含多个阶段，那么每个阶段都会在检查列表中报告其状态。
+
+IBM 托管的 GitLab Community Edition 工具还支持此状态反馈用于合并请求。
+{: tip}
+
+您还可以使用 Git 分支保护规则来限制基于状态检查结果的合并。创建分支保护规则后，将阻止所有合并，直到所有必需的状态检查全部成功。 
 
 ### 构建阶段
 {: #build_stage}
@@ -96,7 +111,7 @@ subcollection: ContinuousDelivery
 
 除了简单类型构建作业之外，当您配置作业时，可以包括内含构建、测试或部署命令的 UNIX shell 脚本。因为作业在特定容器中运行，所以一个作业的操作无法影响其他作业的运行环境，即使这些作业属于相同的阶段也是如此。
 
-构建和部署脚本的样本可以在 [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons) 中找到。
+构建和部署脚本的样本可以在 [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons){: external} 中找到。
 
 此外，管道作业仅可以 `sudo` 运行以下命令：
   * `/usr/sbin/service`
@@ -116,7 +131,7 @@ subcollection: ContinuousDelivery
 作业最长可以运行 60 分钟。当作业超过此限制时即会失败。如果作业会超过此限制，请将其分成多个作业。例如，如果作业执行三个任务，那么您可以将其分成三个作业：每个任务一个作业。
 {: tip}
 
-要了解如何将作业添加到阶段，请参阅[将作业添加到阶段](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}。
+要了解如何将作业添加到阶段，请参阅[将作业添加到阶段](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job)。
 
 ### 构建作业
 
@@ -129,7 +144,7 @@ subcollection: ContinuousDelivery
 
 使用 Cloud Foundry 部署时，Cloud Foundry 会包含正确的工件以允许应用程序运行。有关更多信息，请参阅[使用 cf 命令部署应用程序](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps)。Cloud Foundry 应用程序的管道包含运行 cf 命令的部署阶段。
 
-Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://docs.cloudfoundry.org/buildpacks/detection.html)。可以在应用程序根文件夹的清单文件中指定要使用的 [buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)。buildpack 通常会检查用户提供的工件，以确定要下载的依赖项以及如何配置应用程序以与绑定服务进行通信。有关清单文件的更多信息，请参阅[应用程序清单](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)。
+Cloud Foundry 尝试[检测要使用的 buildpack](http://docs.cloudfoundry.org/buildpacks/detection.html){: external}。可以在应用程序根文件夹的清单文件中指定要使用的 [buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)。buildpack 通常会检查用户提供的工件，以确定要下载的依赖项以及如何配置应用程序以与绑定服务进行通信。有关清单文件的更多信息，请参阅[应用程序清单](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)。
 
 ### 部署作业
 
@@ -222,4 +237,4 @@ Cloud Foundry 尝试[检测 buildpack 以使用 ![外部链接图标](../../icon
 
 为避免冲突，可以使用 `cf push` 后接主机名自变量 `-n` 和路径名来指定路径。通过修改各个阶段的部署脚本，可以避免部署到多个目标时发生的路径冲突。
 
-若要使用 `cf push` 命令自变量，请打开部署作业的配置设置，并修改**部署脚本**字段。有关更多信息，请参阅 [Cloud Foundry Push 文档![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}。
+若要使用 `cf push` 命令自变量，请打开部署作业的配置设置，并修改**部署脚本**字段。有关更多信息，请参阅 [Cloud Foundry Push 文档](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: external}。

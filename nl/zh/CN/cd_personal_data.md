@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -32,8 +33,8 @@ subcollection: ContinuousDelivery
  * {{site.data.keyword.gitrepos}}
  * {{site.data.keyword.contdelivery_short}} 管道
  * 工具链和工具集成
- * [GitHub Enterprise on IBM Cloud ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
- * [{{site.data.keyword.DRA_full}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data){: new_window}
+ * [GitHub Enterprise on IBM Cloud](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data)
+ * [{{site.data.keyword.DRA_full}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data)
  
 IBM 不管理 {{site.data.keyword.contdelivery_short}} 服务中的数据。在退出在 {{site.data.keyword.Bluemix_notm}} Public 中托管的 {{site.data.keyword.contdelivery_short}} 服务之前，必须删除自己的数据。
 {: important}
@@ -53,7 +54,7 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
  * 公司帐户
  * 公司个人帐户
 
-###个人帐户
+### 个人帐户
 
 通常，每个用户都有自己的帐户，即其个人帐户。您可以轻松识别自己的个人帐户，因为该帐户通常包含您的姓名，如 *John Smith 的帐户*。 
 
@@ -61,13 +62,13 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 
 如果您有权在帐户中创建对象，那么您也有权对其进行修改和删除，而不管对象存储在哪个帐户中。两个用户协作时，他们通常会共享一个个人帐户。
 
-###公司帐户
+### 公司帐户
 
 公司帐户由您的公司设置。通常，会将您自动添加到该帐户，而不是邀请您加入。公司帐户向用户提供了一个工作、通信和共享资源并收费的场所；但是，这仅仅是约定。公司帐户实际上与个人帐户没有任何区别。在公司帐户中创建的对象将与该帐户相关联，并且可以邀请用户加入该帐户。
 
 为公司工作的人员组成的团队通常使用公司帐户进行协作。
 
-###公司个人帐户
+### 公司个人帐户
 
 为公司工作时，您帐户中的工作可能由该公司合法拥有。为公司工作的许多用户会拥有公司个人帐户。如果您登录到帐户时所使用的凭证包含公司名称，并且还包含看起来像是个人帐户的名称，那么您个人帐户中的工作可能属于该公司。
 
@@ -82,13 +83,13 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 
 在删除帐户中的数据之前，请确定帐户是个人帐户还是公司个人帐户。
 
-###个人帐户
+### 个人帐户
 
 如果您拥有个人帐户，那么可以更改和删除数据。如果您与其他用户共享您的帐户，那么您拥有这些数据，但您可能希望就共享工作与其他用户联系。 
 
-如果您无法登录到 IBM Cloud 帐户，请[联系 IBM 支持人员 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/support){:new_window}
+如果您无法登录到 IBM Cloud 帐户，请[联系 IBM 支持人员](https://www.ibm.com/cloud/support){: external}。
  
-###公司个人帐户
+### 公司个人帐户
 
 如果您拥有公司个人帐户，那么进行任何更改时，都必须与公司和团队的其他成员协调。您可删除自己的个人数据，而不管这些数据是存储在公司帐户还是公司个人帐户中。确保不会删除与其他用户共享的工作。
 
@@ -107,14 +108,14 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 在删除 {{site.data.keyword.webide}} 数据之前，您可能要导出工作。删除工作空间后，将从 {{site.data.keyword.contdelivery_short}} 中除去这些工作空间，并删除所有文件。
 {: important}
 
-###导出 Web IDE 工作空间
+### 导出 Web IDE 工作空间
 
 要导出 {{site.data.keyword.webide}} 工作空间，请执行以下操作：
 
 1. 选择**文件 > 导出 > Zip**。
 1. 对要导出的每个工作空间重复此操作。
 
-###删除 Web IDE 工作空间
+### 删除 Web IDE 工作空间
 
 要删除 {{site.data.keyword.webide}} 工作空间（包括您的所有个人数据），请执行以下操作：
 
@@ -138,11 +139,11 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 在删除 Git 帐户之前，请从其他项目中删除您的个人数据。删除 Git 帐户后，可能很难或者无法查找您向其添加了内容的所有项目。
 {: tip}
 
-###个人项目和共享项目
+### 个人项目和共享项目
 
 您可以邀请其他用户在项目中进行协作。在帐户内创建的 Git 项目称为个人项目。您还可以创建 Git 组，在其中项目可由多个 Git 所有者拥有。您可以为组创建新项目，也可以将个人项目的所有权转移到组。Git 组通常用于表示 IBM Cloud 公司帐户，以指示公司对项目的所有权。
 
-###导出 Git Repos and Issue Tracking 项目
+### 导出 Git Repos and Issue Tracking 项目
 
 删除 {{site.data.keyword.gitrepos}} 项目之前，可以导出该项目以对其进行归档。 
 
@@ -153,14 +154,14 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 
 对项目归档后，可以将其导入到其他 GitHub 实例。 
 
-###删除 Git Repos and Issue Tracking 帐户
+### 删除 Git Repos and Issue Tracking 帐户
 
 您可以删除自己的 {{site.data.keyword.gitrepos}} 帐户以及该帐户所拥有的所有内容。
 
-1. 在 {{site.data.keyword.gitrepos}}“用户设置”仪表板的[“帐户”页面 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}的“删除帐户”部分中，单击**删除帐户**。
+1. 在 {{site.data.keyword.gitrepos}}“用户设置”仪表板的[“帐户”页面](https://us-south.git.cloud.ibm.com/profile/account){: external}的“删除帐户”部分中，单击**删除帐户**。
 1. 这将删除所有 Git 项目，包括存储库和问题。此外，还会从您所属的任何 {{site.data.keyword.gitrepos}} 组中将您除去。
 
-删除帐户后，某些内容会保留。这些内容会分配给系统范围的 Ghost 用户。有关删除 {{site.data.keyword.gitrepos}} 帐户的更多信息，请参阅[删除用户帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}。
+删除帐户后，某些内容会保留。这些内容会分配给系统范围的 Ghost 用户。有关删除 {{site.data.keyword.gitrepos}} 帐户的更多信息，请参阅[删除用户帐户](https://us-south.git.cloud.ibm.com/profile/account/delete_account#associated-records){: external}。
 {: tip}
 
 {{site.data.keyword.gitrepos}} 使用单点登录机制，该机制会在您首次访问工具集成时，自动为您的 IBM Cloud 帐户创建相应的 Git 帐户。删除您的帐户后，不要访问 {{site.data.keyword.gitrepos}}。如果再次访问 {{site.data.keyword.gitrepos}}，系统将自动创建一个新帐户，您必须将其删除。
@@ -180,7 +181,7 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 
   ![“阶段”菜单](images/pipeline_stages.png)
 
-###修改管道阶段
+### 修改管道阶段
 
 要修改管道阶段，请执行以下操作：
 
@@ -193,7 +194,7 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
   
 1. 从管道阶段中删除作业。在**作业**选项卡上，选择要删除的作业，然后单击**除去**。
  
-###导出管道阶段
+### 导出管道阶段
 
 要导出整个管道的定义，请将 `/yaml` 附加到管道 URL：
 
@@ -211,7 +212,7 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 1. 单击**下载** > **工件**可导出所选构建的工件。
 1. 单击**下载** > **日志**可导出所选构建的日志。  
 
-###删除管道阶段
+### 删除管道阶段
 
 要删除管道阶段，请执行以下操作：
 
@@ -229,7 +230,7 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 
 在删除共享工具集成或工具链之前，请与团队的其他成员进行协调。
 
-###修改和删除工具集成
+### 修改和删除工具集成
 
 创建工具集成时，系统需要您提供用户凭证以及与该集成相关的其他帐户信息。如果您使用了自己的个人凭证和帐户信息，请将这些信息替换为其他值，或者删除该工具集成。
 
@@ -246,7 +247,7 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 1. 要从工具链中删除工具集成，请单击**删除**。
 1. 单击**删除**以确认。
 
-###删除工具链
+### 删除工具链
 
 如果删除工具链，那么该删除操作无法撤销。
 
@@ -258,7 +259,7 @@ IBM Cloud 登录结构提供了在不同帐户中工作的选项。通过使用 
 在删除工具链时，不会删除关联的 {{site.data.keyword.gitrepos}} 存储库。有权访问这些存储库的用户如果执行过 `git clone` 或者创建过 {{site.data.keyword.webide}} 工作空间，就可能有数据的副本。要确保删除所有数据，必须请求这些用户删除其数据副本。
 {: tip}
 
-###删除所有工具链
+### 删除所有工具链
 
 无法同时删除资源组或组织内的所有工具链。您必须一次删除一个工具链。
 
