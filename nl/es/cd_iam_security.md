@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-02-25"
+lastupdated: "2019-05-27"
 
 keywords: Administrator Create, Administrator Update, Editor Update, Update
 
@@ -27,9 +27,9 @@ El acceso a las instancias de servicio de {{site.data.keyword.contdelivery_full}
 
 **Notas**: 
 
-* El acceso de usuario para las instancias de servicio de {{site.data.keyword.contdelivery_short}} y las instancias de la cadena de herramientas se gestiona por separado. Para obtener más información sobre la gestión del acceso de usuario a las cadenas de herramientas de los grupos de recursos, consulte [Gestión del acceso de usuario a las cadenas de herramientas con Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}.
+* El acceso de usuario para las instancias de servicio de {{site.data.keyword.contdelivery_short}} y las instancias de la cadena de herramientas se gestiona por separado. Para obtener más información sobre la gestión del acceso de usuario a las cadenas de herramientas de los grupos de recursos, consulte [Gestión del acceso de usuario a las cadenas de herramientas con Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
 
-* El acceso de usuario para las cadenas de herramientas de organizaciones de Cloud Foundry se gestiona de forma distinta que el acceso de usuario a las cadenas de herramientas en grupos de recursos. Para obtener más información sobre cómo gestionar el acceso de usuario a las cadenas de herramientas de organizaciones de Cloud Foundry, consulte [Gestión del acceso a cadenas de herramientas de las organizaciones de Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
+* El acceso de usuario para las cadenas de herramientas de organizaciones de Cloud Foundry se gestiona de forma distinta que el acceso de usuario a las cadenas de herramientas en grupos de recursos. Para obtener más información sobre cómo gestionar el acceso de usuario a las cadenas de herramientas de organizaciones de Cloud Foundry, consulte [Gestión del acceso a cadenas de herramientas de las organizaciones de Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs).
 
 Todos los usuarios que acceden al servicio de {{site.data.keyword.contdelivery_short}} en su cuenta deben tener asignada una política de acceso con un rol de usuario IAM definido. Esta política determina qué acciones puede realizar el usuario dentro del contexto del servicio o instancia que seleccione. Las acciones permitidas se personalizan y definen mediante el servicio {{site.data.keyword.Bluemix_notm}} como operaciones que se permiten que se realicen en el servicio. A continuación, las acciones se correlacionan con los roles de usuario de IAM.
 
@@ -72,5 +72,3 @@ En la tabla siguiente se detallan las acciones que se correlacionan con los role
 {: caption="Tabla 3. Acciones y roles de acceso al servicio de IAM" caption-side="top"}
 
 Para obtener información sobre la asignación de roles de usuario en la interfaz de usuario, consulte [Gestión del acceso de IAM](/docs/iam?topic=iam-iammanidaccser).
-
-<!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

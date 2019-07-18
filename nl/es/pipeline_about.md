@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-06-19"
 
 keywords: run jobs, sequences of stages, job types
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -27,12 +28,12 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.contdelivery_full}} incluye Delivery Pipeline para crear, probar y desplegar de manera repetitiva con una mínima intervención humana. En un conducto, las secuencias de etapas recuperan la entrada y los trabajos de ejecución, como compilaciones, pruebas y despliegues.
 {:shortdesc}
 
-Los permisos para ver, modificar o ejecutar un conducto se basan en el control de accesos de la cadena de herramientas que es propietaria del conducto. Para obtener más información sobre el control de accesos para las cadenas de herramientas, consulte [Gestión del acceso a cadenas de herramientas en grupos de recursos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window} y [Gestión del acceso a cadenas de herramientas en organizaciones de Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
+Los permisos para ver, modificar o ejecutar un conducto se basan en el control de accesos de la cadena de herramientas que es propietaria del conducto. Para obtener más información sobre el control de accesos para las cadenas de herramientas, consulte [Gestión del acceso a cadenas de herramientas en grupos de recursos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups) y [Gestión del acceso a cadenas de herramientas en organizaciones de Cloud Foundry](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs).
 {: important}
 
-Puede especificar los scripts para que se ejecute en muchos de los tipos de trabajo que proporciona el conducto, lo que le proporciona un control directo sobre lo que ejecuta el trabajo. Estos scripts se ejecutan en una imagen de Docker que contiene un número de herramientas de desarrollo estándar, incluidas las herramientas necesarias para interactuar con los tiempos de ejecución de {{site.data.keyword.Bluemix_notm}}. Para obtener más información sobre lo que contiene el Docker estándar, consulte [Recursos preinstalados](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}. Si el job requiere herramientas de desarrollo que no están disponibles en la imagen estándar o si necesita diferentes versiones de estas herramientas, puede utilizar una imagen personalizada. Para obtener más información sobre las imágenes personalizadas, consulte [Trabajar con imágenes de Docker personalizadas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}.
+Puede especificar los scripts para que se ejecute en muchos de los tipos de trabajo que proporciona el conducto, lo que le proporciona un control directo sobre lo que ejecuta el trabajo. Estos scripts se ejecutan en una imagen de Docker que contiene un número de herramientas de desarrollo estándar, incluidas las herramientas necesarias para interactuar con los tiempos de ejecución de {{site.data.keyword.Bluemix_notm}}. Para obtener más información sobre lo que contiene el Docker estándar, consulte [Recursos preinstalados](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). Si el job requiere herramientas de desarrollo que no están disponibles en la imagen estándar o si necesita diferentes versiones de estas herramientas, puede utilizar una imagen personalizada. Para obtener más información sobre las imágenes personalizadas, consulte [Trabajar con imágenes de Docker personalizadas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images).
 
-Cuando el conducto ejecuta scripts, las propiedades que describen el contexto en el que se ejecuta el trabajo se pasan al script utilizando variables de entorno. Por ejemplo, el URL del repo que es la entrada a la etapa, el nombre de la etapa y el trabajo que se está ejecutando, los parámetros especificados por el tipo de trabajo, etc. Para ver una lista de las variables de entorno disponibles, consulte [Recursos preinstalados](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). 
+Cuando el conducto ejecuta scripts, las propiedades que describen el contexto en el que se ejecuta el trabajo se pasan al script utilizando variables de entorno. Por ejemplo, el URL del repo que es la entrada a la etapa, el nombre de la etapa y el trabajo que se está ejecutando, los parámetros especificados por el tipo de trabajo, etc. Para ver una lista de las variables de entorno disponibles, consulte [Recursos preinstalados](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources).
 
 Puede definir propiedades tanto en el nivel de conducto como en el nivel de etapa. Las propiedades de conducto se comparten en todas las etapas y trabajos de un conducto. Las propiedades de la etapa son exclusivas de una determinada etapa y se comparten en todos los trabajos de dicha etapa. Para obtener más información sobre las propiedades, consulte [Propiedades de entorno (variables de entorno)](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties).
 
@@ -52,6 +53,20 @@ Puede que desee un control más estricto de una etapa específica. Si no desea q
 
 ![El separador ENTRADA](images/input_tab_only_execute.png)
 
+Hay más opciones de desencadenante de etapas disponibles para las etapas que utilizan el tipo de entrada del repositorio Git. Por ejemplo, puede optar por ejecutar trabajos automáticamente para sucesos de Git en la rama elegida. Cuando elija este tipo de desencadenante, debe seleccionar uno o más de los tipos de sucesos siguientes:
+
+*	**Cuando se envía una confirmación** se desencadena cuando se realiza un envío a la rama de repositorio seleccionada.
+*	**Cuando se abre o actualiza una solicitud de extracción/fusión** se desencadena cuando se abre o se edita una solicitud de extracción o una fusión.
+*	**Cuando se cierra una solicitud de extracción/fusión** se desencadena cuando se cierra una solicitud de extracción o fusión, incluso sin una confirmación asociada.
+
+![Desencadenantes del separador ENTRADA](images/input_tab_only_triggers.png)
+
+Si marca el recuadro de selección **Cuando se abre o se actualiza una solicitud de extracción/fusión**, el estado del conducto se devuelve al repositorio Git. Cuando una solicitud de extracción o fusión desencadena el conducto, se muestra en la página una comprobación de estado en línea. Se muestra una comprobación de estado para cada una de las etapas que se ejecutan en el conducto y se proporcionan enlaces a los registros y al historial para cada etapa. A medida que se ejecuta la comprobación de estado, se actualiza de pendiente a satisfactoria o fallida. Si el conducto contiene varias etapas, cada etapa notifica su estado en la lista de comprobación.
+
+Este feedback de estado también recibe soporte de la herramienta GitLab Community Edition alojada por IBM para solicitudes de fusión.
+{: tip}
+
+También puede restringir la fusión según los resultados de las comprobaciones de estado utilizando reglas de protección de rama de Git. Después de crear una regla de protección de rama, se bloquea toda fusión hasta que todas las comprobaciones de estado necesarias sean correctas. 
 
 ### Etapa de compilación
 {: #build_stage}
@@ -95,7 +110,7 @@ Los trabajos se ejecutan en directorios de trabajo discretos dentro de los conte
 
 Excepto para los trabajos de compilación simples, al configurar un trabajo, puede incluir scripts shell UNIX que incluyan mandatos de compilación, prueba o despliegue. Dado que los trabajos se ejecutan en contenedores ad hoc, las acciones de un trabajo no pueden afectar a los entornos de ejecución de otros trabajos, incluso aunque estos trabajos formen parte de la misma etapa.
 
-Encontrará ejemplos de scripts de creación y despliegue en [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons).
+Encontrará ejemplos de scripts de creación y despliegue en [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons){: external}.
 
 Además, los trabajos de conducto sólo pueden ejecutar los siguientes mandatos como `sudo`:
   * `/usr/sbin/service`
@@ -115,7 +130,7 @@ Una vez que se ejecute un trabajo, el contenedor creado para él se descartará.
 Los trabajos se pueden ejecutar durante un máximo de 60 minutos. Cuando los trabajos superan dicho límite, fallarán. Si un trabajo está superando el límite, divídalo en varios trabajos. Por ejemplo, si un trabajo lleva a cabo tres tareas, puede dividirlo en tres trabajos: uno para cada tarea.
 {: tip}
 
-Para obtener más información sobre cómo añadir un trabajo a una etapa, consulte [Adición de un trabajo a una etapa](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}.
+Para obtener más información sobre cómo añadir un trabajo a una etapa, consulte [Adición de un trabajo a una etapa](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job).
 
 ### Trabajos de compilación
 
@@ -128,7 +143,7 @@ Si utiliza el tipo de constructor **Simple**, el código no se compilará ni cre
 
 Cuando se despliega utilizando Cloud Foundry, Cloud Foundry incluirá los artefactos correctos para permitir que se ejecute la app. Para obtener más información, consulte [Despliegue de apps mediante el mandato cf](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps). El conducto para una app de Cloud Foundry contiene una etapa de Despliegue que ejecuta un mandato cf.
 
-Cloud Foundry intenta [detectar el paquete de compilación para utilizar ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.cloudfoundry.org/buildpacks/detection.html). Puede especificar el [paquete de compilación](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) que se utilizará en el archivo de manifiesto en la carpeta raíz de la app. Los paquetes de compilación normalmente examinan los artefactos proporcionados por los usuarios para determinar qué dependencias se descargarán y cómo configurar las aplicaciones para que se comuniquen con servicios enlazados. Para obtener más información sobre los archivos de manifiesto, consulte [Manifiesto de aplicación](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
+Cloud Foundry intenta [detectar el paquete de compilación a utilizar](http://docs.cloudfoundry.org/buildpacks/detection.html){: external}. Puede especificar el [paquete de compilación](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) que se utilizará en el archivo de manifiesto en la carpeta raíz de la app. Los paquetes de compilación normalmente examinan los artefactos proporcionados por los usuarios para determinar qué dependencias se descargarán y cómo configurar las aplicaciones para que se comuniquen con servicios enlazados. Para obtener más información sobre los archivos de manifiesto, consulte [Manifiesto de aplicación](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
 
 ### Trabajos de despliegue
 
@@ -221,4 +236,5 @@ En el conducto, puede especificar todo lo que puede hacer un archivo de manifies
 
 Para evitar conflictos, puede especificar una ruta utilizando `cf push` seguido del argumento del nombre de host, `-n`, y un nombre de ruta. Al modificar el script de despliegue para etapas individuales, puede evitar conflictos de ruta al desplegar en varios destinos.
 
-Para utilizar los argumentos del mandato `cf push`, abra los valores de configuración para un trabajo de despliegue y modifique el campo **Desplegar script**. Para obtener más información, consulte la [documentación de Push de Cloud Foundry ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}.
+Para utilizar los argumentos del mandato `cf push`, abra los valores de configuración para un trabajo de despliegue y modifique el campo **Desplegar script**. Para obtener más información, consulte la
+[Documentación de Push de Cloud Foundry](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: external}.

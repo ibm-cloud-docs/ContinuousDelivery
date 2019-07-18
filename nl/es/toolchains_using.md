@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
 
 keywords: user management function, tool integrations, Cloud Foundry org
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -48,7 +49,7 @@ Si ha aplazado la configuración de una integración de herramientas al crear un
  Algunas de las integraciones de herramientas están preconfiguradas y no requieren ningún parámetro de configuración. Puede actualizar los valores de configuración sólo para las integraciones de herramientas que ha configurado.
  {: tip}
 
- Cuando haya terminado de configurar los ajustes, pulse **Guardar integración**. Para obtener más información sobre cómo configurar las integraciones de herramientas específicas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
+ Cuando haya terminado de configurar los ajustes, pulse **Guardar integración**. Para obtener más información sobre cómo configurar las integraciones de herramientas específicas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 
 ## Adición de una integración de herramienta
 {: #adding_a_tool_integration}
@@ -74,7 +75,7 @@ Si suprime una integración de herramientas de la cadena de herramientas, la sup
 ## Gestión del acceso a las cadenas de herramientas de los grupos de recursos
 {: #managing_access_resource_groups}
 
-Puede utilizar el servicio de Identity and Access Management (IAM) para gestionar el acceso de usuario a las cadenas de herramientas. Para obtener más información sobre la gestión del control de accesos con IAM, consulte [Gestión del acceso de usuario a cadenas de herramientas con Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}. 
+Puede utilizar el servicio de Identity and Access Management (IAM) para gestionar el acceso de usuario a las cadenas de herramientas. Para obtener más información sobre la gestión del control de accesos con IAM, consulte [Gestión del acceso de usuario a cadenas de herramientas con Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). 
 
 Solo los usuarios que forman parte de la lista de usuarios autorizados para la instancia seleccionada de {{site.data.keyword.contdelivery_short}} pueden utilizar las características de Delivery Pipeline, Eclipse Orion {{site.data.keyword.webide}} y {{site.data.keyword.gitrepos}} de las cadenas de herramientas de {{site.data.keyword.contdelivery_short}}. Puede gestionar la titularidad de usuario autorizado desde el separador Gestionar de la instancia seleccionada de {{site.data.keyword.contdelivery_short}}, dentro del grupo de recursos especificado.
 
@@ -93,7 +94,7 @@ Puede otorgar a los usuarios acceso a una cadena de herramientas añadiéndolos 
 Debe añadir usuarios a la organización de la cadena de herramientas en la región en la que se aloja la cadena de herramientas. Si la cadena de herramientas está configurada para desplegar apps en una región distinta, seguirá desplegando apps en dicha región.
 {: important}
 
-Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.ghe_short}}, cuando añada usuarios a la organización y a los espacios de {{site.data.keyword.Bluemix_notm}}, los usuarios podrán iniciar una sesión en {{site.data.keyword.ghe_short}} con su ID y contraseña de {{site.data.keyword.Bluemix_notm}}. Cuando los usuarios inician sesión, se les crearán cuentas. Al añadir usuarios a la organización y a los espacios de {{site.data.keyword.Bluemix_notm}}, no se añadirán automáticamente al repositorio de {{site.data.keyword.ghe_short}}. Debe añadirlos alguien que tenga privilegios de administración para el repositorio. Para obtener más información, consulte [Utilización de GitHub Enterprise dedicado](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}. Si utiliza su propia versión gestionada de {{site.data.keyword.ghe_short}}, siga los procedimientos internos.
+Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.ghe_short}}, cuando añada usuarios a la organización y a los espacios de {{site.data.keyword.Bluemix_notm}}, los usuarios podrán iniciar una sesión en {{site.data.keyword.ghe_short}} con su ID y contraseña de {{site.data.keyword.Bluemix_notm}}. Cuando los usuarios inician sesión, se les crearán cuentas. Al añadir usuarios a la organización y a los espacios de {{site.data.keyword.Bluemix_notm}}, no se añadirán automáticamente al repositorio de {{site.data.keyword.ghe_short}}. Debe añadirlos alguien que tenga privilegios de administración para el repositorio. Para obtener más información, consulte [Utilización de GitHub Enterprise dedicado](/docs/services/ghededicated?topic=ghededicated-getting-started). Si utiliza su propia versión gestionada de {{site.data.keyword.ghe_short}}, siga los procedimientos internos.
 
 ###Consejos para gestionar el acceso a una cadena de herramientas
 
@@ -131,10 +132,22 @@ Si utiliza {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.
 
      * Asigne un rol para el espacio seleccionado en la organización.
 
-     De forma predeterminada, los gestores de una organización tienen privilegios completos de administrador sobre todas las cadenas de herramientas asociadas a la organización. Para otorgar privilegios completos de administrador al usuario, seleccione el rol **Gestor**. Los roles Gestor de facturación y Auditor no afectan al acceso a la cadena de herramientas. Puede cambiar los roles más adelante en la página Directorio del equipo. Para obtener más información, consulte [Roles de Cloud Foundry](/docs/iam?topic=iam-cfaccess#cfaccess){: new_window}.
+     De forma predeterminada, los gestores de una organización tienen privilegios completos de administrador sobre todas las cadenas de herramientas asociadas a la organización. Para otorgar privilegios completos de administrador al usuario, seleccione el rol **Gestor**. Los roles Gestor de facturación y Auditor no afectan al acceso a la cadena de herramientas. Puede cambiar los roles más adelante en la página Directorio del equipo. Para obtener más información, consulte [Roles de Cloud Foundry](/docs/iam?topic=iam-cfaccess#cfaccess).
      {: tip}
 
    Una vez que el usuario sea miembro de la organización, vuelva a la página Gestionar de la cadena de herramientas y añada el usuario a la cadena de herramientas.  
+
+
+## Organización de cadenas de herramientas
+{: #organizing_toolchains}
+
+Puede añadir etiquetas a sus cadenas de herramientas para organizarlas y encontrarlas fácilmente más adelante. Una etiqueta es un código que se asigna a una cadena de herramientas para facilitar el filtrado de las cadenas de herramientas en la lista de cadenas de herramientas.
+
+1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, localice la cadena de herramientas a la que desee añadir una etiqueta y pulse **Añadir etiquetas**.
+1. Especifique un nombre para la etiqueta que desee añadir a la cadena de herramientas. Puede añadir varias etiquetas, separadas por comas.
+1. Pulse **Guardar**.
+
+Para obtener más información sobre las etiquetas, consulte [Cómo trabajar con etiquetas](/docs/resources?topic=resources-tag#).
 
 
 ## Supresión de una cadena de herramientas
@@ -153,10 +166,10 @@ Puede suprimir una cadena de herramientas y especificar qué integraciones de he
 ##Realice una guía de aprendizaje: Uso de las cadenas de herramientas
 {: #toolchain-tutorial}
 
-Consulte estas guías en [IBM&reg; Cloud Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage){:new_window}:
+Consulte estas guías de aprendizaje sobre [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external}:
 
-  * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+  * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}.
 
-  * [Añada una cadena de herramientas para una app ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}.
+  * [Añada una cadena de herramientas a una app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}.
 
-  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.
+  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}.

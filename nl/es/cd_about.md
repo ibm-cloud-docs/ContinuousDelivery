@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-03-27"
+lastupdated: "2019-06-18"
 
 keywords: IBM Cloud Public, Use Developer Insights, US South
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -24,25 +25,26 @@ subcollection: ContinuousDelivery
 # Disponibilidad, plantillas y guías de aprendizaje de cadenas de herramientas  
 {: #cd_about}  
 
-Las cadenas de herramientas están disponibles en {{site.data.keyword.Bluemix_notm}} público y dedicado. Las plantillas sirven como punto de partida para crear una cadena de herramientas.
+Las cadenas de herramientas están disponibles en {{site.data.keyword.Bluemix_notm}} público y dedicado. Puede utilizar una plantilla como punto de partida para crear una cadena de herramientas.
 {:shortdesc}
 
 ## Disponibilidad de cadenas de herramientas en {{site.data.keyword.Bluemix_notm}} público en comparación con {{site.data.keyword.Bluemix_notm}} dedicado
 {: #public_and_dedicated}
 
-{{site.data.keyword.Bluemix_notm}} público es una plataforma basada en la nube de estándares abiertos con la que puede crear, ejecutar y gestionar aplicaciones a las que accede [http://cloud.ibm.com ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://cloud.ibm.com){:new_window}. {{site.data.keyword.Bluemix_notm}} dedicado ofrece las funciones de {{site.data.keyword.Bluemix_notm}} en un entorno SoftLayer dedicado conectado de forma segura tanto al entorno de {{site.data.keyword.Bluemix_notm}} público como a la red. Es posible que el entorno {{site.data.keyword.Bluemix_notm}} dedicado de la empresa no contenga las mismas integraciones de herramientas que el sitio de {{site.data.keyword.Bluemix_notm}} público.
+{{site.data.keyword.Bluemix_notm}} público es una plataforma basada en la nube de estándares abiertos donde puede crear, ejecutar y gestionar aplicaciones a las que accede [http://cloud.ibm.com](http://cloud.ibm.com){: external}. {{site.data.keyword.Bluemix_notm}} dedicado ofrece las funciones de {{site.data.keyword.Bluemix_notm}} en un entorno de infraestructura dedicado que se conecta de forma segura tanto al entorno de {{site.data.keyword.Bluemix_notm}} público como a la red. Es posible que el entorno {{site.data.keyword.Bluemix_notm}} dedicado de la empresa no contenga las mismas integraciones de herramientas que el sitio de {{site.data.keyword.Bluemix_notm}} público.
 
-Para la gestión de código fuente y el seguimiento de problemas, {{site.data.keyword.Bluemix_notm}} público utiliza generalmente {{site.data.keyword.gitrepos}} (alojado en IBM y basado en [GitLab Community Edition ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://about.gitlab.com/){:new_window}) o GitHub (github.com). {{site.data.keyword.Bluemix_notm}} dedicado también puede utilizar github.com, aunque normalmente utiliza {{site.data.keyword.ghe_short}} instalado por la empresa o gestionado por IBM.
+Para la gestión de código fuente y el seguimiento de problemas, {{site.data.keyword.Bluemix_notm}} público utiliza generalmente {{site.data.keyword.gitrepos}} (alojado en IBM y basado en [GitLab Community Edition](https://about.gitlab.com/){: external})
+o GitHub (github.com). {{site.data.keyword.Bluemix_notm}} dedicado también puede utilizar github.com, aunque normalmente utiliza {{site.data.keyword.ghe_short}} instalado por la empresa o gestionado por IBM.
 
 {{site.data.keyword.contdelivery_short}} está disponible en {{site.data.keyword.Bluemix_notm}} público determinadas regiones y en {{site.data.keyword.Bluemix_notm}} dedicado. Las cadenas de herramientas difieren en función de si utiliza {{site.data.keyword.contdelivery_short}} en {{site.data.keyword.Bluemix_notm}} público o en {{site.data.keyword.Bluemix_notm}} dedicado.
 
-Aunque las cadenas de herramientas no están disponibles actualmente en todas las regiones, puede configurar la cadena de herramientas para que despliegue las apps en todas las regiones. Para saber más, vea la guía de aprendizaje [Desplegar una aplicación web segura en varias regiones](/docs/tutorials?topic=solution-tutorials-multi-region-webapp){: new_window}.
+Aunque las cadenas de herramientas no están disponibles actualmente en todas las regiones, puede configurar la cadena de herramientas para que despliegue las apps en todas las regiones. Para saber más, vea la guía de aprendizaje [Desplegar una aplicación web segura en varias regiones](/docs/tutorials?topic=solution-tutorials-multi-region-webapp).
 {: tip}
 
 |Cadenas de herramientas |{{site.data.keyword.Bluemix_notm}} público	|{{site.data.keyword.Bluemix_notm}} dedicado |
 |:----------|:------------------------------|:------------------|
-|Integraciones de herramientas 		|Para ver una lista de las integraciones de herramientas admitidas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}. 		|Las integraciones de herramientas disponibles dependen de cómo se haya configurado {{site.data.keyword.contdelivery_short}} en el entorno.			|
-|Creación de una cadena de herramientas a partir de una plantilla		|Inicie sesión en [{{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://cloud.ibm.com/devops){:new_window}		|Inicie la sesión en el entorno dedicado en {{site.data.keyword.Bluemix_notm}}.			|
+|Integraciones de herramientas 		|Para ver una lista de las integraciones de herramientas admitidas, consulte [Configurar integraciones de herramientas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations). 		|Las integraciones de herramientas disponibles dependen de cómo se haya configurado {{site.data.keyword.contdelivery_short}} en el entorno.			|
+|Creación de una cadena de herramientas a partir de una plantilla		|Inicie una sesión en [{{site.data.keyword.Bluemix_notm}}](http://cloud.ibm.com/devops){: external}.		|Inicie la sesión en el entorno dedicado en {{site.data.keyword.Bluemix_notm}}.			|
 |Creación de una cadena de herramientas desde una app		|La app se configura para una entrega continuada desde un nuevo repositorio de GitHub que ya contiene el código de inicio de la app.		|La app se configura para una entrega continua desde un nuevo repositorio de GitHub o GitHub Enterprise que ya contiene el código de inicio de la app.		|  
 |Regiones de despliegue de conducto de entrega		|Todas las regiones de {{site.data.keyword.Bluemix_notm}} público están disponibles para los trabajos de despliegue de Cloud Foundry. 		|La región de {{site.data.keyword.Bluemix_notm}} dedicado está disponible. Otras regiones dedicadas o locales dentro de la misma cuenta de cliente también pueden estar disponibles en función de cómo se haya configurado {{site.data.keyword.contdelivery_short}} en el entorno específico.		|
 |Trabajos de despliegue de conducto de entrega		|Todos los [tipos de trabajos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs) están disponibles.		|Los tipos de trabajos que dependen de servicios de {{site.data.keyword.Bluemix_notm}} que no estén instalados en el entorno dedicado pueden no estar disponibles.	Por ejemplo, los tipos de trabajos de despliegue y compilación de contenedores pueden no estar disponibles en entornos que no tengan el {{site.data.keyword.containerlong_notm}}.	|
@@ -52,14 +54,16 @@ Aunque las cadenas de herramientas no están disponibles actualmente en todas la
 ## Plantillas de cadenas de herramientas
 {: #templates}
 
-Puede utilizar una plantilla como punto de partida para [crear una cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/devops/create){: new_window}. Las plantillas de cadenas de herramientas incluyen conjuntos específicos de integraciones de herramientas que admiten tareas de desarrollo, despliegue y operaciones.
+Puede utilizar una plantilla como punto de partida para [crear una cadena de herramientas](https://cloud.ibm.com/devops/create){: external}. Las plantillas de cadenas de herramientas incluyen conjuntos específicos de integraciones de herramientas que admiten tareas de desarrollo, despliegue y operaciones.
 
 Es posible que el entorno {{site.data.keyword.Bluemix_notm}} dedicado de la empresa no contenga las mismas plantillas de cadena de herramientas que el sitio de {{site.data.keyword.Bluemix_notm}} público. Las plantillas de cadenas de herramientas que están disponibles tanto en {{site.data.keyword.Bluemix_notm}} público como en {{site.data.keyword.Bluemix_notm}} dedicado pueden contener un conjunto distinto de integraciones de herramientas en {{site.data.keyword.Bluemix_notm}} dedicado.
 {: note}
 
-Algunas plantillas de cadenas de herramientas incluyen integraciones que forman parte del servicio {{site.data.keyword.contdelivery_short}}. Si su organización o grupo de recursos aún no tiene ninguna instancia de dicho servicio, cuando pulse **Crear** para crear la cadena de herramientas, el servicio se añade automáticamente con el plan Lite gratuito seleccionado. Para obtener más información y ver las condiciones, consulte el [Catálogo de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/catalog/services/continuous-delivery/){:new_window}.
+Algunas plantillas de cadenas de herramientas incluyen integraciones que forman parte del servicio {{site.data.keyword.contdelivery_short}}. Si su organización o grupo de recursos aún no tiene ninguna instancia de dicho servicio, cuando pulse **Crear** para crear la cadena de herramientas, el servicio se añade automáticamente con el plan Lite gratuito seleccionado. Para obtener más información y términos, consulte el
+[catálogo de {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/catalog/services/continuous-delivery/){: external}.
 
-La cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" despliega una app con las API de catálogo y de pedidos que se han copiado en un almacén de Cloudant. Como parte del despliegue de la app, se crea una instancia del servicio Cloudant sin coste alguno. Para obtener más información y ver las condiciones, consulte el [Catálogo de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/catalog/services/cloudant-nosql-db/){:new_window}.
+La cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" despliega una app con las API de catálogo y de pedidos que se han copiado en un almacén de Cloudant. Como parte del despliegue de la app, se crea una instancia del servicio Cloudant sin coste alguno. Para obtener más información y términos, consulte el
+[catálogo de {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/catalog/services/cloudant-nosql-db/){: external}.
 
 Las plantillas de cadena de herramientas de DevOps predefinidas son ejemplos recomendados que resuelven situaciones del mundo real. Cada una contiene una app de ejemplo.  Puede utilizar su propia app especificando el repositorio git al crear la cadena de herramientas a partir de la plantilla.
 
@@ -119,6 +123,45 @@ Las plantillas de cadena de herramientas de DevOps predefinidas son ejemplos rec
   </li><li>{{site.data.keyword.containerlong_notm}} (clúster de Kurbernetes) con un diagrama Helm
   </li></ul>
   </td></tr>
+  
+  <tr><td>
+  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-helm-toolchain" target="_blank">
+  Cadena de herramientas "Desarrollar y probar microservicios en Kubernetes con Helm" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
+
+  Disponible en EE.UU. sur, Alemania y Reino Unido
+
+  </td><td>
+  Con esta cadena de herramientas nativa de la nube, puede utilizar una combinación de conductos de integración continua y de despliegue continuo para coordinar microservicios desarrollados individualmente en releases que se promocionan en entornos. Esta cadena de herramientas utiliza una app de almacenamiento en línea de ejemplo que consta de tres microservicios: una API de catálogo, una API de pedidos y una interfaz de usuario que llama a ambas API. La cadena de herramientas está preconfigurada para entrega continua, control de código fuente, pruebas funcionales, seguimiento de problemas, edición en línea y notificación de alertas. <br><br>
+  Pruebe la guía de aprendizaje:
+<a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-with-kubernetes-and-helm-toolchain" target="_blank">Utilice la cadena de herramientas "Desarrollar y probar microservicios con Kubernetes y Helm" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>	 <br><br>
+  </td><td><ul>
+  <li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}
+  </li><li>Git Repos and Issue Tracking
+  </li><li>{{site.data.keyword.DRA_full}}
+  </li><li>PagerDuty
+  </li><li>Sauce Labs
+  </li><li>{{site.data.keyword.containerlong_notm}} (clúster de Kurbernetes) con un diagrama Helm
+  </li></ul>
+  </td></tr>
+  
+  <tr><td>
+  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcanary-testing-istio-toolchain" target="_blank">Cadena de herramientas "Pruebas mínimas en Kubernetes utilizando Istio" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
+
+  Disponible en EE.UU. sur, EE.UU. este, Alemania, Tokio y Reino Unido
+
+  </td><td>
+  Con esta cadena de herramientas, puede desarrollar de forma segura, hacer pruebas A/B y desplegar una app en un clúster Kubernetes gestionado por el
+{{site.data.keyword.containerlong_notm}}. Aunque la cadena de herramientas utiliza una app Hello World Node.js de ejemplo de forma predeterminada, puede enlazar con su propio repositorio de GitHub en su lugar. La cadena de herramientas está preconfigurada para la entrega continua con pruebas A/B, Vulnerability Advisor, control de origen, seguimiento de problemas y edición en línea. <br><br>
+  Pruebe la guía de aprendizaje:
+<a href="https://www.ibm.com/cloud/garage/tutorials/use-canary-testing-in-kubernetes-using-istio-toolchain" target="_blank">Utilice la cadena de herramientas "Ejecutar su primera prueba mínima en Kubernetes utilizando Istio" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>	 <br><br>
+  </td><td><ul>
+  <li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}
+  </li><li>Git Repos and Issue Tracking
+    </li><li>{{site.data.keyword.containerlong_notm}} (clúster Kurbernetes)
+  </li></ul>
+  </td></tr>
 
   <tr><td>
   <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdra-toolchain-demo" target="_blank">Cadena de herramientas "Desarrollar y probar una app de Cloud Foundry"
@@ -162,7 +205,7 @@ Las plantillas de cadena de herramientas de DevOps predefinidas son ejemplos rec
 </tr>
 
   <tr>
-  <td><a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" targe="_blank">
+  <td><a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" target="_blank">
 Cadena de herramientas "Guía de aprendizaje de Garage Method con Cloud Foundry" <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> <br><br>
 
   Disponible en EE.UU. sur, EE.UU. este, Alemania, Tokio y Reino Unido

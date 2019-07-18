@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-27"
 
 keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -36,6 +37,7 @@ Las integraciones de herramientas que están disponibles para añadirse y config
 |Bitbucket		|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|No		|
 |Gestión de sucesos de nube		|EE.UU. sur		|No		|
 |{{site.data.keyword.deliverypipeline}} 		|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido	   	|Sí  		|
+|Trabajador privado de {{site.data.keyword.deliverypipeline}}			|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|No		|
 |{{site.data.keyword.DRA_short}} 		|EE.UU. sur, Alemania, Reino Unido		|No			|
 |Eclipse Orion {{site.data.keyword.webide}}		|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|Sí			|
 |{{site.data.keyword.gitrepos}}	|EE.UU. sur, EE.UU. este, Alemania, Tokio, Reino Unido		|No		|
@@ -68,11 +70,11 @@ Configure {{site.data.keyword.alertnotificationshort}} de modo que reciba notifi
 
 1. Si no tiene una cuenta de {{site.data.keyword.alertnotificationshort}}, regístrese para obtener una:
 
- a. Abra la página [IBM {{site.data.keyword.alertnotificationshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/us-en/marketplace/alert-notification){: new_window} en IBM Marketplace.
+ a. Abra la página [IBM {{site.data.keyword.alertnotificationshort}}](https://www.ibm.com/us-en/marketplace/alert-notification){:external} en IBM Marketplace.
 
  b. Adquiera una suscripción o regístrese para una prueba gratuita de 90 días.
 
-1. Una vez configurada la cuenta de {{site.data.keyword.alertnotificationshort}}, abra [Mi panel de control de IBM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://myibm.ibm.com/dashboard/){: new_window}.
+1. Una vez que se haya configurado su cuenta de {{site.data.keyword.alertnotificationshort}}, abra [Mi panel de control de IBM](https://myibm.ibm.com/dashboard/){:external}.
 1. Junto a IBM {{site.data.keyword.alertnotificationshort}}, pulse **Iniciar**.
 1. Pulse **Gestionar claves de API** y pulse **Crear clave de API**.
 1. En el campo **Crear clave de API**, escriba una descripción.
@@ -95,11 +97,11 @@ Configure {{site.data.keyword.alertnotificationshort}} de modo que reciba notifi
 
 ### Más información sobre Alert Notification
 
-Para obtener más información sobre {{site.data.keyword.alertnotificationshort}}, consulte el [artículo de IBM {{site.data.keyword.alertnotificationshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/manage/tool_alert_notification/){: new_window} en IBM Cloud Garage Method o realice estas guías de aprendizaje:
+Para obtener más información sobre {{site.data.keyword.alertnotificationshort}}, consulte el [artículo de IBM {{site.data.keyword.alertnotificationshort}}](https://www.ibm.com/cloud/garage/content/manage/tool_alert_notification/){:external} en IBM Cloud Garage Method o realice estas guías de aprendizaje:
 
-  * [Añadir una integración de herramientas a una cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/add-a-tool-integration-to-a-toolchain){:new_window}
+  * [Añadir una integración de herramientas a una cadena de herramientas](https://www.ibm.com/cloud/garage/tutorials/add-a-tool-integration-to-a-toolchain){:external}
 
-  * [Gestionar su aplicación {{site.data.keyword.Bluemix_notm}} utilizando {{site.data.keyword.Bluemix_notm}} Availability Monitoring and Alert Notification ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [Gestionar su aplicación de {{site.data.keyword.Bluemix_notm}} utilizando {{site.data.keyword.Bluemix_notm}} Availability Monitoring and Alert Notification](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:external}
 
 
 ## Configuración de Artifactory
@@ -203,7 +205,7 @@ Configure {{site.data.keyword.deliverypipeline}} para añadir un trabajo de comp
 
 ### Más información sobre Artifactory
 
-Para obtener más información sobre Artifactory, consulte el [artículo de Artifactory ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_artifactory/){: new_window} en el IBM Cloud Garage Method.
+Para obtener más información sobre Artifactory, consulte el [artículo de Artifactory](https://www.ibm.com/cloud/garage/content/deliver/tool_artifactory/){:external} en el IBM Cloud Garage Method.
 
 
 ## Adición de supervisión de disponibilidad
@@ -227,9 +229,9 @@ Para probar, supervisar y mejorar el estado de la app a medida que la crea, aña
 
 ### Más información acerca de Availability Monitoring
 
-Para obtener más información sobre {{site.data.keyword.prf_hubshort}}, consulte el [artículo de {{site.data.keyword.prf_hublong}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/practices/manage/tool_bluemix_availability_monitoring/){: new_window} en el IBM Cloud Garage Method o realice esta guía de aprendizaje:
+Para obtener más información sobre {{site.data.keyword.prf_hubshort}}, consulte el [artículo de {{site.data.keyword.prf_hublong}}](https://www.ibm.com/cloud/garage/practices/manage/tool_bluemix_availability_monitoring/){:external} en IBM Cloud Garage Method o realice esta guía de aprendizaje:
 
-  * [Gestionar su aplicación {{site.data.keyword.Bluemix_notm}} utilizando {{site.data.keyword.Bluemix_notm}} Availability Monitoring and Alert Notification ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:new_window}
+  * [Gestionar su aplicación de {{site.data.keyword.Bluemix_notm}} utilizando {{site.data.keyword.Bluemix_notm}} Availability Monitoring and Alert Notification](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:external}
 
 
 ## Configuración de Bitbucket
@@ -276,17 +278,17 @@ Configure Bitbucket para colaborar con su equipo en código:
 
 1. Para crear un repositorio privado en el servidor, marque el recuadro de selección **Convertir este repositorio en privado**.
 1. Para utilizar Bitbucket Issues para realizar un seguimiento de los problemas, seleccione el recuadro de selección **Habilitar Bitbucket Issues**.
-1. Para realizar un seguimiento del despliegue de cambios en el código mediante la creación de etiquetas y comentarios en las confirmaciones, y etiquetas y comentarios en los problemas a los que hacen referencia las confirmaciones, marque el recuadro de selección **Hacer un seguimiento del despliegue cambios de código**. Para obtener más información, consulte [Seguimiento de dónde se despliega el código con cadenas de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Para realizar un seguimiento del despliegue de cambios en el código mediante la creación de etiquetas y comentarios en las confirmaciones, y etiquetas y comentarios en los problemas a los que hacen referencia las confirmaciones, marque el recuadro de selección **Hacer un seguimiento del despliegue cambios de código**. Para obtener más información, consulte [Seguimiento de dónde se despliega el código con cadenas de herramientas](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
 1. Pulse **Crear integración**.
 1. En la cadena de herramientas, pulse la tarjeta correspondiente al repositorio Bitbucket con el que desee trabajar. Se abrirá el sitio web de Bitbucket, donde puede ver el contenido del repositorio.
-1. Si ha habilitado Bitbucket Issues, pulse **Bitbucket Issues** para abrirlo. Puede utilizar esta instancia de Bitbucket Issues para toda la cadena de herramientas, aunque la cadena de herramientas contenga varios repositorios Bitbucket.    
+1. Si ha habilitado Bitbucket Issues, pulse **Bitbucket Issues** para abrirlo. Puede utilizar esta instancia de Bitbucket Issues para toda la cadena de herramientas, aunque la cadena de herramientas contenga varios repositorios Bitbucket.
 
 Si no tiene privilegios de propietario o maestro para el repositorio al que está enlazando, la integración estará limitada porque no puede utilizar un webhook. Los webhooks se necesitan para ejecutar automáticamente un conducto cuando se envía una confirmación al repositorio. Sin un webhook, debe iniciar los conductos manualmente.
 {: tip}
 
 ### Más información sobre Bitbucket
 
-Para obtener más información sobre Bitbucket, consulte el [artículo de Bitbucket ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/code/tool_bitbucket/){: new_window} en el IBM Cloud Garage Method.
+Para obtener más información sobre Bitbucket, consulte el [artículo de Bitbucket](https://www.ibm.com/cloud/garage/content/code/tool_bitbucket/){:external} en el IBM Cloud Garage Method.
 
 
 ## Adición de Cloud Event Management
@@ -316,7 +318,7 @@ Para ayudar al equipo de DevOps a alcanzar un estado operativo fiable, calidad d
 
 ### Más información sobre Cloud Event Management
 
-Para obtener más información sobre Cloud Event Management, consulte el [artículo Cloud Event Management ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/manage/tool_cloud_event_mgt/){: new_window} en el IBM Cloud Garage Method.
+Para obtener más información sobre Cloud Event Management, consulte el [artículo Cloud Event Management](https://www.ibm.com/cloud/garage/content/manage/tool_cloud_event_mgt/){:external} en el IBM Cloud Garage Method.
 
 
 ## Configuración de Delivery Pipeline
@@ -336,11 +338,11 @@ Configure {{site.data.keyword.deliverypipeline}} para automatizar la creación, 
 1. Especifique un nombre para el nuevo conducto.
 1. Si tiene previsto utilizar el conducto para desplegar una interfaz de usuario, seleccione el recuadro de selección **Mostrar apps en el menú VER APP**. Todas las apps creadas por el conducto se muestran en la lista **Ver app** de la página de visión general de la cadena de herramientas.
 1. Pulse **Crear integración** para añadir el {{site.data.keyword.deliverypipeline}} a la cadena de herramientas.
-1. Pulse **{{site.data.keyword.deliverypipeline}}** para ver el conducto y configurarlo. Para obtener información básica sobre cómo configurar un conducto, consulte [Creación y despliegue de conductos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy){: new_window}.
+1. Pulse **{{site.data.keyword.deliverypipeline}}** para ver el conducto y configurarlo. Para obtener información básica sobre cómo configurar un conducto, consulte [Creación y despliegue de conductos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).
 
   Si desea que el conducto se ejecute automáticamente cuando se envíe una confirmación a su repositorio GitHub, {{site.data.keyword.ghe_short}} o Git (repo), siga estos pasos:
 
-   a. Configure GitHub, {{site.data.keyword.ghe_short}} o {{site.data.keyword.gitrepos}} para la cadena de herramientas antes de definir las fases del conducto. Las etapas del conducto necesitan los URL Git para los repositorios. Cada etapa de conducto puede hacer referencia a un único repositorio de GitHub, {{site.data.keyword.ghe_short}} o Git que esté asociado con la cadena de herramientas. Para obtener instrucciones sobre cómo configurar GitHub, consulte la sección [GitHub](#github). Para obtener instrucciones sobre cómo configurar {{site.data.keyword.ghe_short}}, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}. Para obtener instrucciones sobre cómo configurar {{site.data.keyword.gitrepos}}, consulte la sección [{{site.data.keyword.gitrepos}}](#gitbluemix).
+   a. Configure GitHub, {{site.data.keyword.ghe_short}} o {{site.data.keyword.gitrepos}} para la cadena de herramientas antes de definir las fases del conducto. Las etapas del conducto necesitan los URL Git para los repositorios. Cada etapa de conducto puede hacer referencia a un único repositorio de GitHub, {{site.data.keyword.ghe_short}} o Git que esté asociado con la cadena de herramientas. Para obtener instrucciones sobre cómo configurar GitHub, consulte la sección [GitHub](#github). Para obtener instrucciones sobre cómo configurar {{site.data.keyword.ghe_short}}, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started). Para obtener instrucciones sobre cómo configurar {{site.data.keyword.gitrepos}}, consulte la sección [{{site.data.keyword.gitrepos}}](#grit).
 
    b. Utilice un webhook. Sin un webhook, solo podrá ejecutar los conductos manualmente. Para utilizar un webhook cuando enlaza con un repositorio GitHub o {{site.data.keyword.ghe_short}}, necesita privilegios de administración. Para enlazar un repositorio de {{site.data.keyword.gitrepos}}, necesita privilegios de maestro o de propietario.
 
@@ -359,7 +361,7 @@ Configure el {{site.data.keyword.deliverypipeline}} para añadir un trabajo de p
 
 1. Configurar la etapa. En el separador **PROPIEDADES DE ENTORNO**, cree la propiedad CF_APP_NAME.
 
-  El nombre de usuario de Sauce Labs y la clave de acceso están disponibles en el script de trabajo de prueba como las variables de entorno SAUCE_USERNAME y SAUCE_ACCESS_KEY. Cuando escriba sus pruebas, debe utilizar estas variables de entorno para autenticarse con Sauce Labs.
+  El nombre de usuario de Sauce Labs y la clave de acceso están disponibles en el script de trabajo de prueba como las variables de entorno SAUCE_USERNAME y SAUCE_ACCESS_KEY. Cuando escriba sus pruebas, debe utilizar estas variables de entorno para autenticarse con Sauce Labs.
   {: tip}
 
 1. Configure el trabajo de despliegue. En el campo **Desplegar script**, incluya este mandato: `export CF_APP_NAME="$CF_APP"`. Este mandato exporta el nombre de la app como propiedad del entorno.
@@ -387,11 +389,31 @@ Configure el {{site.data.keyword.deliverypipeline}} para añadir un trabajo de p
 
 ### Más información acerca de Delivery Pipeline
 
-Para obtener más información sobre {{site.data.keyword.deliverypipeline}}, consulte [Cómo trabajar con conductos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working){: new_window} y el [artículo de Delivery Pipeline ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: new_window} en IBM Cloud Garage Method o realice estas guías de aprendizaje:
+Para obtener más información sobre {{site.data.keyword.deliverypipeline}}, consulte [Cómo trabajar con conductos](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working) y el [artículo de Delivery Pipeline](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:external} en IBM Cloud Garage Method o realice estas guías de aprendizaje:
 
-  * [Crear un conducto ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:new_window}
+  * [Crear un conducto](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:external}
 
-  * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
+  * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}
+
+
+## Configuración del trabajador privado de {{site.data.keyword.deliverypipeline}}
+{: #privateworker}
+
+El trabajador privado de {{site.data.keyword.deliverypipeline}} se conecta a uno o más trabajadores privados que ejecutan cargas de trabajo de {{site.data.keyword.deliverypipeline}} de manera aislada.
+
+Configure la integración de herramientas de trabajador privado de {{site.data.keyword.deliverypipeline}} para hacer que los trabajadores privados estén disponibles para los conductos de una cadena de herramientas:
+
+1. Si configura la integración de esta herramienta al crear la cadena de herramientas, en la sección Integraciones configurables, pulse **Trabajador privado de {{site.data.keyword.deliverypipeline}}**.
+1. Si tiene una cadena de herramientas y le está añadiendo esta integración de herramientas, en el panel de control de DevOps, en la página Cadenas de herramientas, pulse la cadena de herramientas para abrir su página Visión general. Si lo prefiere, en la página Visión general de la app, en la tarjeta de Entrega continua, pulse **Ver cadena de herramientas** y luego **Visión general**.
+
+ a. Pulse **Añadir una herramienta**.
+
+ b. En la sección Integraciones de herramientas, pulse **Trabajador privado de {{site.data.keyword.deliverypipeline}}**.
+
+1. Escriba un nombre para la integración de herramientas. Este nombre identifica una agrupación de trabajadores privados en el separador **Trabajadores** de la etapa del conducto.
+1. Escriba su clave de API de ID de servicio para autenticar el acceso a la cola de trabajo, en la que uno o más trabajadores privados pueden buscar trabajo. Si no tiene una clave de API de ID de servicio, pulse **Crear** para generar una para este trabajador privado.
+1. Pulse **Crear integración**.
+1. Desde su cadena de herramientas, pulse **Trabajador privado de {{site.data.keyword.deliverypipeline}}** para ver una lista de todos los trabajadores registrados utilizando una clave de API asociada con este ID de servicio.
 
 
 ## Adición de DevOps Insights
@@ -416,13 +438,13 @@ Añada {{site.data.keyword.DRA_short}} para mantener y mejorar la calidad de su 
 
 ### Más información sobre DevOps Insights
 
-Para obtener más información sobre {{site.data.keyword.DRA_short}}, consulte el [artículo de {{site.data.keyword.DRA_short}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){: new_window} en el IBM Cloud Garage Method o realice estas guías de aprendizaje:
+Para obtener más información sobre {{site.data.keyword.DRA_short}}, consulte el [artículo de {{site.data.keyword.DRA_short}}](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){:external} en IBM Cloud Garage Method o realice estas guías de aprendizaje:
 
-  * [Utilice la cadena de herramientas "Desarrollar y probar una app de Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
+  * [Utilice la cadena de herramientas "Desarrollar y probar una app de Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:external}
 
-  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}
 
-  * [Explore {{site.data.keyword.DRA_full}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){:new_window}
+  * [Explorar {{site.data.keyword.DRA_full}}](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){:external}
 
 
 ## Adición del IDE Eclipse Orion Web
@@ -447,17 +469,17 @@ Para completar las tareas de control del código fuente, añada la integración 
 
 ### Más información sobre el Eclipse Orion Web IDE
 
-Para obtener más información sobre el {{site.data.keyword.webide}} de Eclipse Orión, consulte [Edición de código con Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide). También puede leer el artículo [Eclipse Orion {{site.data.keyword.webide}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: new_window} en IBM Cloud Garage Method. Realice estas guías de aprendizaje para probar el uso de Eclipse Orion {{site.data.keyword.webide}}:
+Para obtener más información sobre el {{site.data.keyword.webide}} de Eclipse Orión, consulte [Edición de código con Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide). También puede leer el [artículo de Eclipse Orion {{site.data.keyword.webide}}](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){:external} en IBM Cloud Garage Method. Realice estas guías de aprendizaje para probar el uso de Eclipse Orion {{site.data.keyword.webide}}:
 
-  * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
+  * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}
 
-  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}
 
 
 ## Configuración de Git Repos and Issue Tracking
-{: #gitbluemix}
+{: #grit}
 
-La integración de la herramienta {{site.data.keyword.gitrepos}} se basa en GitLab Community Edition, que es un servicio de alojamiento basado en web para repositorios Git. Puede tener copias locales y remotas de sus repositorios. Para obtener más información, consulte [{{site.data.keyword.gitrepos}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help){:new_window}.
+La integración de la herramienta {{site.data.keyword.gitrepos}} se basa en GitLab Community Edition, que es un servicio de alojamiento basado en web para repositorios Git. Puede tener copias locales y remotas de sus repositorios. Para obtener más información, consulte [{{site.data.keyword.gitrepos}}](https://us-south.git.cloud.ibm.com/help){:external}.
 
 Si configura {{site.data.keyword.gitrepos}} mientras crea la cadena de herramientas, siga estos pasos:    
 
@@ -474,7 +496,7 @@ Estas instrucciones se aplican a las cadenas de herramientas que ya contienen el
 1. En la sección Integraciones de herramientas, pulse **Git Repos and Issue Tracking**.
 1. Para crear una copia del repositorio Git, para el tipo de repositorio, pulse **Clonar**. Escriba un nuevo nombre de repositorio y el URL del repositorio de origen.
 1. Si desea utilizar la aplicación Issues para realizar un seguimiento de los problemas, marque el recuadro de selección **Habilitar Issues**.
-1. Si desea realizar un seguimiento del despliegue de cambios en el código mediante la creación de etiquetas y comentarios en las confirmaciones, y etiquetas y comentarios en los problemas a los que hacen referencia las confirmaciones, marque el recuadro de selección **Hacer un seguimiento del despliegue cambios de código**. Para obtener más información, consulte [Seguimiento de dónde se despliega el código con cadenas de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Si desea realizar un seguimiento del despliegue de cambios en el código mediante la creación de etiquetas y comentarios en las confirmaciones, y etiquetas y comentarios en los problemas a los que hacen referencia las confirmaciones, marque el recuadro de selección **Hacer un seguimiento del despliegue cambios de código**. Para obtener más información, consulte [Seguimiento de dónde se despliega el código con cadenas de herramientas](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
 1. Pulse **Crear integración**.
 
 Después de clonar el repositorio Git, puede eliminarlo de la cadena de herramientas.
@@ -493,7 +515,7 @@ Si tiene una cadena de herramientas y le está añadiendo {{site.data.keyword.gi
   d. Si tiene un repositorio Git y desea utilizarlo, para el tipo de repositorio, pulse **Existente**. Escriba el URL.    
 
 1. Si desea utilizar la aplicación Issues para realizar un seguimiento de los problemas, marque el recuadro de selección **Habilitar Issues**.
-1. Si desea realizar un seguimiento del despliegue de cambios en el código mediante la creación de etiquetas y comentarios en las confirmaciones, y etiquetas y comentarios en los problemas a los que hacen referencia las confirmaciones, marque el recuadro de selección **Hacer un seguimiento del despliegue cambios de código**. Para obtener más información, consulte [Seguimiento de dónde se despliega el código con cadenas de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Si desea realizar un seguimiento del despliegue de cambios en el código mediante la creación de etiquetas y comentarios en las confirmaciones, y etiquetas y comentarios en los problemas a los que hacen referencia las confirmaciones, marque el recuadro de selección **Hacer un seguimiento del despliegue cambios de código**. Para obtener más información, consulte [Seguimiento de dónde se despliega el código con cadenas de herramientas](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
 1. Pulse **Crear integración**.
 1. Pulse la tarjeta correspondiente al repositorio Git con el que desee trabajar. Se abrirá la página de visión general del proyecto.    
 
@@ -502,9 +524,9 @@ Si no tiene privilegios de Maestro o de Propietario sobre el repositorio con el 
 
 ### Más información sobre Git Repos and Issue Tracking
 
-Para obtener más información sobre {{site.data.keyword.gitrepos}}, consulte el [artículo {{site.data.keyword.gitrepos}}: codificación social organizada por IBM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/code/tool_git_repos_and_issue_tracking/){: new_window} en IBM Cloud Garage Method o realice esta guía de aprendizaje:
+Para obtener más información sobre {{site.data.keyword.gitrepos}}, consulte el [artículo {{site.data.keyword.gitrepos}}: codificación social organizada por IBM](https://www.ibm.com/cloud/garage/content/code/tool_git_repos_and_issue_tracking/){:external} en IBM Cloud Garage Method o realice esta guía de aprendizaje:
 
-  * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}
+  * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}
 
 
 ## Configuración de GitHub
@@ -514,8 +536,7 @@ GitHub es un servicio de alojamiento basado en web para repositorios Git. Puede 
 
 {{site.data.keyword.ghe_short}} es un servicio de alojamiento basado en web para repositorios Git.
 
-GitHub
-Issues es una herramienta de seguimiento que mantiene todo su trabajo y sus planificaciones en un mismo lugar. Está integrado con el repositorio de desarrollo de modo que pueda centrarse en las tareas importantes.
+GitHub Issues es una herramienta de seguimiento que mantiene todo su trabajo y sus planificaciones en un mismo lugar. Está integrado con el repositorio de desarrollo de modo que pueda centrarse en las tareas importantes.
 
 Puede configurar GitHub como una integración de herramientas de la cadena de herramientas para que pueda gestionar el código fuente en un repositorio nuevo o existente en GitHub.com o en la instancia de {{site.data.keyword.ghe_short}} de su empresa. Entre en la codificación social a través de wikis, seguimiento de problemas y solicitudes de extracción.
 
@@ -524,7 +545,7 @@ Si configura la integración de esta herramienta mientras crea la cadena de herr
 1. Si está almacenando el código fuente en un repositorio GitHub, en la sección Integraciones configurables, pulse **GitHub**. Si está configurando esta integración de herramientas en {{site.data.keyword.Bluemix_notm}} Público y no ha autorizado a {{site.data.keyword.Bluemix_notm}} para que acceda a GitHub, pulse **Autorizar** para ir al sitio web de GitHub. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub. Si tiene una sesión de GitHub activa pero no ha especificado la contraseña recientemente, es posible que se le solicite que especifique su contraseña de GitHub para confirmar.
 1. Si está utilizando un repositorio en su propio servidor de {{site.data.keyword.ghe_short}}, en la sección Integraciones configurables, pulse **Añadir servidor personalizado**.
 
- La red debe poder acceder al servidor Git de destino desde un entorno de {{site.data.keyword.Bluemix_notm}} dedicado. Si el servidor de GitHub no está disponible en Internet público o el nombre de host no se resuelve en el Servidor de nombres de dominio (DNS) público, [abra una incidencia de soporte](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_support#support-ticket){: new_window}. Puede utilizar la incidencia de soporte para enviar una solicitud para abrir las rutas de red o actualizar los valores de DNS.
+ La red debe poder acceder al servidor Git de destino desde un entorno de {{site.data.keyword.Bluemix_notm}} dedicado. Si el servidor de GitHub no está disponible en Internet público o el nombre de host no se resuelve en el Servidor de nombres de dominio (DNS) público, [abra una incidencia de soporte](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_support#support-ticket). Puede utilizar la incidencia de soporte para enviar una solicitud para abrir las rutas de red o actualizar los valores de DNS.
  {: important}
 
  Escriba un título para el servidor de GitHub personalizado y especifique el URL raíz para el servidor. Escriba su señal de acceso personal y pulse **Guardar integración personalizada**.
@@ -533,7 +554,7 @@ Si configura la integración de esta herramienta mientras crea la cadena de herr
 
      a. En cualquier página de GitHub, pulse el icono de su perfil y, a continuación, pulse **Valores**.
 
-     b. En la barra lateral, pulse **Señales de acceso personales**.
+     b. En la barra lateral, pulse **Señales de acceso personal**.
 
      c. Pulse **Generar señal nueva**.
 
@@ -565,27 +586,26 @@ Si tiene una cadena de herramientas y le está añadiendo esta integración de h
 
 1. Si es un usuario de GitHub.com con una cuenta actualizada, o si ha seleccionado un servidor de {{site.data.keyword.ghe_short}} y desea crear un nuevo repositorio privado en el servidor, marque el recuadro de selección **Convertir este repositorio en privado**.
 1. Si desea utilizar GitHub Issues para realizar un seguimiento de los problemas, seleccione el recuadro de selección **Habilitar GitHub Issues**.
-1. Si desea realizar un seguimiento del despliegue de cambios en el código mediante la creación de etiquetas y comentarios en las confirmaciones, y etiquetas y comentarios en los problemas a los que hacen referencia las confirmaciones, marque el recuadro de selección **Hacer un seguimiento del despliegue cambios de código**. Para obtener más información, consulte [Seguimiento de dónde se despliega el código con cadenas de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Si desea realizar un seguimiento del despliegue de cambios en el código mediante la creación de etiquetas y comentarios en las confirmaciones, y etiquetas y comentarios en los problemas a los que hacen referencia las confirmaciones, marque el recuadro de selección **Hacer un seguimiento del despliegue cambios de código**. Para obtener más información, consulte [Seguimiento de dónde se despliega el código con cadenas de herramientas](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
 1. Pulse **Crear integración**.
 1. Pulse la tarjeta correspondiente al repositorio GitHub o {{site.data.keyword.ghe_short}} con el que desea trabajar. En función del repositorio seleccionado, se abrirá el sitio web de GitHub o el repositorio de {{site.data.keyword.ghe_short}} de su empresa, donde puede ver el contenido del repositorio.
 
   Puede utilizar estas herramientas integradas de gestión del código fuente en Eclipse Orion {{site.data.keyword.webide}} para editar el repositorio de GitHub y desplegar una app desde su espacio de trabajo.
   {: tip}
 
-1. Si ha habilitado GitHub Issues, pulse **GitHub Issues** para abrirlo. Puede utilizar esta instancia de GitHub Issues para toda la cadena de herramientas, aunque la cadena de herramientas contenga varios repositorios GitHub o {{site.data.keyword.ghe_short}}.    
+1. Si ha habilitado GitHub Issues, pulse **GitHub Issues** para abrirlo. Puede utilizar esta instancia de GitHub Issues para toda la cadena de herramientas, aunque la cadena de herramientas contenga varios repositorios GitHub o {{site.data.keyword.ghe_short}}.
 
 Si no tiene privilegios de administrador sobre el repositorio con el que va a enlazar, la integración se verá limitada porque no podrá utilizar un webhook. Los webhooks se necesitan para ejecutar automáticamente un conducto cuando se envía una confirmación al repositorio. Sin un webhook, debe iniciar los conductos manualmente.
 {: tip}
 
 ### Más información sobre GitHub
 
-Para obtener más información acerca de GitHub, consulte el [artículo de GitHub ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/code/tool_github/){: new_window} y el [artículo de GitHub Issues ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} en el IBM Cloud Garage Method o realice estas guías de aprendizaje:
+Para obtener más información acerca de GitHub, consulte el [artículo de GitHub](https://www.ibm.com/cloud/garage/content/code/tool_github/){:external} y el [artículo de GitHub Issues](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){:external} en IBM Cloud Garage Method o realice estas guías de aprendizaje:
 
- * [Utilice la cadena de herramientas "Desarrollar y probar una app de Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:new_window}
+ * [Utilice la cadena de herramientas "Desarrollar y probar una app de Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:external}
+ * [Garantice la calidad de los despliegues mediante la cadena de herramientas "Análisis de riesgos de despliegue con GitHub y Jenkins"](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:external}
 
- * [Garantice la calidad de los despliegues mediante la cadena de herramientas "Deployment Risk Analytics con GitHub y Jenkins" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
-
- * [Cree una cadena de herramientas personalizada ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:new_window}
+ * [Crear una cadena de herramientas personalizada](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:external}
 
 
 ## Configuración de GitHub Enterprise and Issues en {{site.data.keyword.Bluemix_notm}} dedicado
@@ -594,13 +614,13 @@ Para obtener más información acerca de GitHub, consulte el [artículo de GitHu
  Estas instrucciones se aplican a {{site.data.keyword.Bluemix_notm}} dedicado para {{site.data.keyword.ghe_short}}. Si utiliza su propia versión gestionada de {{site.data.keyword.ghe_short}}, algunos pasos pueden diferir en función de sus procedimientos internos.
  {: important}
 
-{{site.data.keyword.ghe_long}} es un servicio de alojamiento basado en web para repositorios Git. {{site.data.keyword.ghe_short}} Dedicado es solo para los clientes de {{site.data.keyword.Bluemix_notm}} Dedicado. GitHub Issues es una herramienta de seguimiento que mantiene todo su trabajo y sus planificaciones en un mismo lugar. Está integrado con el repositorio de desarrollo de modo que pueda centrarse en las tareas importantes. Para obtener más información sobre {{site.data.keyword.ghe_short}} dedicado y GitHub Issues, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window} y el [artículo GitHub Issues ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: new_window} en IBM Cloud Garage Method.
+{{site.data.keyword.ghe_long}} es un servicio de alojamiento basado en web para repositorios Git. {{site.data.keyword.ghe_short}} Dedicado es solo para los clientes de {{site.data.keyword.Bluemix_notm}} Dedicado. GitHub Issues es una herramienta de seguimiento que mantiene todo su trabajo y sus planificaciones en un mismo lugar. Está integrado con el repositorio de desarrollo de modo que pueda centrarse en las tareas importantes. Para obtener más información sobre los problemas de {{site.data.keyword.ghe_short}} Dedicado y GitHub, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started) y el [artículo de problemas de GitHub](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){:external} en IBM Cloud Garage Method.
 
-Puede configurar {{site.data.keyword.ghe_short}} como una integración de herramientas de la cadena de herramientas para que pueda gestionar el código fuente en la instancia de [{{site.data.keyword.Bluemix_notm}} Dedicado](/docs/dedicated?topic=dedicated-dedicated#dedicated){: new_window} de la empresa.
+Puede configurar {{site.data.keyword.ghe_short}} como una integración de herramientas de la cadena de herramientas para que pueda gestionar el código fuente en la instancia de [{{site.data.keyword.Bluemix_notm}} Dedicado](/docs/dedicated?topic=dedicated-dedicated#dedicated) de la empresa.
 
 1. Si configura la integración de esta herramienta mientras crea la cadena de herramientas, siga estos pasos:
 
- a. Antes de iniciar sesión en Dedicated {{site.data.keyword.ghe_short}} por primera vez, solicite al administrador de la zona de su empresa que añada el ID de usuario a la instancia de {{site.data.keyword.Bluemix_notm}} Dedicated desde el registro de usuarios de su empresa utilizando LDAP. Para obtener información sobre cómo configurar la cuenta de {{site.data.keyword.ghe_short}}, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}.
+ a. Antes de iniciar sesión en Dedicated {{site.data.keyword.ghe_short}} por primera vez, solicite al administrador de la zona de su empresa que añada el ID de usuario a la instancia de {{site.data.keyword.Bluemix_notm}} Dedicated desde el registro de usuarios de su empresa utilizando LDAP. Para obtener información sobre cómo configurar la cuenta de {{site.data.keyword.ghe_short}}, consulte [Iniciación a {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started).
 
  b. En la sección Integraciones configurables, pulse **{{site.data.keyword.ghe_short}}**.    
 
@@ -685,21 +705,21 @@ Si tiene una cadena de herramientas y le está añadiendo esta integración de h
 
 1. Si desea crear un repositorio público en el servidor, desmarque el recuadro de selección **Convertir este repositorio en privado**.
 1. Si desea utilizar los problemas de GitLab para el seguimiento de problemas, marque el recuadro de selección **Habilitar problemas de GitLab**.
-1. Si desea realizar un seguimiento del despliegue de cambios en el código mediante la creación de etiquetas y comentarios en las confirmaciones, y etiquetas y comentarios en los problemas a los que hacen referencia las confirmaciones, marque el recuadro de selección **Hacer un seguimiento del despliegue cambios de código**. Para obtener más información, consulte [Seguimiento de dónde se despliega el código con cadenas de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Si desea realizar un seguimiento del despliegue de cambios en el código mediante la creación de etiquetas y comentarios en las confirmaciones, y etiquetas y comentarios en los problemas a los que hacen referencia las confirmaciones, marque el recuadro de selección **Hacer un seguimiento del despliegue cambios de código**. Para obtener más información, consulte [Seguimiento de dónde se despliega el código con cadenas de herramientas](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
 1. Pulse **Crear integración**.
 1. Pulse la tarjeta correspondiente al repositorio de GitLab con el que desee trabajar. En función del repositorio que haya seleccionado, ya sea que se abra el sitio web de GitLab o el repositorio de GitLab de la empresa, donde pueda visualizar el contenido del repositorio.
 
   Puede utilizar estas herramientas integradas de gestión del código fuente en Eclipse Orion {{site.data.keyword.webide}} para editar el repositorio de GitLab y desplegar una app desde su espacio de trabajo.
   {: tip}
 
-1. Si ha habilitado Problemas de GitLab, pulse **Problemas de GitLab** para abrirla. Puede utilizar esta instancia de Problemas de GitLab para toda la cadena de herramientas, incluso si la cadena de herramientas contiene varios repositorios de GitLab.    
+1. Si ha habilitado Problemas de GitLab, pulse **Problemas de GitLab** para abrirla. Puede utilizar esta instancia de Problemas de GitLab para toda la cadena de herramientas, incluso si la cadena de herramientas contiene varios repositorios de GitLab.
 
 Si no tiene privilegios de propietario o maestro para el repositorio al que está enlazando, la integración estará limitada porque no puede utilizar un webhook. Los webhooks se necesitan para ejecutar automáticamente un conducto cuando se envía una confirmación al repositorio. Sin un webhook, debe iniciar los conductos manualmente.
 {: tip}
 
 ### Más información sobre GitLab
 
-Para obtener más información sobre GitLab, consulte el [artículo de GitLab ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/code/tool_gitlab/){: new_window} en el IBM Cloud Garage Method.
+Para obtener más información sobre GitLab, consulte el [artículo de GitLab](https://www.ibm.com/cloud/garage/content/code/tool_gitlab/){:external} en el IBM Cloud Garage Method.
 
 
 ## Configuración de Jenkins
@@ -726,9 +746,9 @@ Configure Jenkins para automatizar la creación, las pruebas y el despliegue aut
 1. Copie el webhook de la cadena de herramientas generado.
 1. En el servidor Jenkins, siga estos pasos:
 
- a. [Instale el plug-in de IBM Cloud DevOps ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Installingtheplugin){: new_window}.
+ a. [Instale el plugin de IBM Cloud DevOps](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Installingtheplugin){:external}.
 
- b. [Configure Jenkins para notificar a las cadenas de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Notifyingtoolchains){: new_window}.
+ b. [Configurar Jenkins para notificar cadenas de herramientas](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Notifyingtoolchains){:external}.
 
  c. Vuelva a la página Configurar la integración para la integración de herramientas de Jenkins.
 
@@ -737,14 +757,14 @@ Configure Jenkins para automatizar la creación, las pruebas y el despliegue aut
 
 ### Más información sobre Jenkins
 
-Para obtener más información sobre Jenkins, consulte el [artículo de Jenkins ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){: new_window} en el IBM Cloud Garage Method o realice esta guía de aprendizaje:
+Para obtener más información sobre Jenkins, consulte el [artículo de Jenkins](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){:external} en IBM Cloud Garage Method o realice esta guía de aprendizaje:
 
-  * [Garantice la calidad de los despliegues mediante la cadena de herramientas "Deployment Risk Analytics con GitHub y Jenkins" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:new_window}
+  * [Garantice la calidad de los despliegues utilizando la cadena de herramientas "Análisis de riesgos de despliegue con GitHub y Jenkins"](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){:external}
 
 ## Configuración de JIRA
 {: #jira}
 
-JIRA es una herramienta que realiza un seguimiento de problemas y errores relacionados con el software. La integración de herramientas JIRA actualiza los problemas del proyecto cuando Jenkins o {{site.data.keyword.deliverypipeline}} ejecutan un despliegue. Para que la integración de herramientas JIRA realice el seguimiento de los problemas, debe utilizar JIRA Smart Commits en los mensajes de confirmación. Para obtener más información sobre JIRA Smart Commits, consulte [Utilización de Smart Commits ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html){: new_window}.
+JIRA es una herramienta que realiza un seguimiento de problemas y errores relacionados con el software. La integración de herramientas JIRA actualiza los problemas del proyecto cuando Jenkins o {{site.data.keyword.deliverypipeline}} ejecutan un despliegue. Para que la integración de herramientas JIRA realice el seguimiento de los problemas, debe utilizar JIRA Smart Commits en los mensajes de confirmación. Para obtener más información sobre JIRA Smart Commits, consulte [Utilización de Smart Commits](https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html){:external}.
 
 Configure JIRA de modo que planifique, realice un seguimiento y distribuya código de calidad:
 
@@ -786,9 +806,9 @@ Configure JIRA de modo que planifique, realice un seguimiento y distribuya códi
 
 ### Más información sobre JIRA
 
-Para obtener más información sobre JIRA, consulte el [artículo de JIRA ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/code/tool_jira/){: new_window} en el IBM Cloud Garage Method o realice esta guía de aprendizaje:
+Para obtener más información sobre JIRA, consulte el [artículo de JIRA](https://www.ibm.com/cloud/garage/content/code/tool_jira/){:external} en IBM Cloud Garage Method o realice esta guía de aprendizaje:
 
-  * [Obtenga información mediante la cadena de herramientas "Developer Insights y Team Dynamics con GitHub y JIRA" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain){:new_window}
+  * [Obtenga información mediante la cadena de herramientas "Developer Insights y Team Dynamics con GitHub y JIRA"](https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain){:external}
 
 
 ## Configuración de Nexus
@@ -892,7 +912,7 @@ Configure {{site.data.keyword.deliverypipeline}} para añadir un trabajo de comp
 
 ### Más información sobre Nexus
 
-Para obtener más información sobre Nexus, consulte el [artículo de Nexus ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_nexus/){: new_window} en el IBM Cloud Garage Method.
+Para obtener más información sobre Nexus, consulte el [artículo de Nexus](https://www.ibm.com/cloud/garage/content/deliver/tool_nexus/){:external} en el IBM Cloud Garage Method.
 
 
 ## Configuración de una herramienta personalizada (Otras herramientas)
@@ -920,9 +940,9 @@ Configure una herramienta personalizada para que funcione con otras herramientas
 
 ### Más información sobre la herramienta personalizada
 
-Para obtener más información sobre la herramienta personalizada, consulte [Introducción a la integración de herramientas personalizadas para cadenas de herramientas de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window} o realice esta guía de aprendizaje:
+Para obtener más información sobre la herramienta personalizada, consulte [Introducción a la integración de herramientas personalizada para cadenas de herramientas de {{site.data.keyword.Bluemix_notm}}](https://www.ibm.com/cloud/blog/introducing-custom-tool-integration-for-bluemix-toolchains/){:external} o realice esta guía de aprendizaje:
 
-  * [Añadir una integración de herramientas personalizadas para una cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/add-a-custom-tool-integration-to-a-toolchain){:new_window}
+  * [Añadir una integración de herramientas personalizada a una cadena de herramientas](https://www.ibm.com/cloud/garage/tutorials/add-a-custom-tool-integration-to-a-toolchain){:external}
 
 
 ## Configuración de PagerDuty
@@ -941,7 +961,7 @@ Configure PagerDuty para enviar notificaciones cuando se producen errores en la 
 
 1. Si desea integrar PagerDuty en el nivel de cuenta utilizando una clave de API, pulse **Cuenta**:
 
- a. Escriba la clave de acceso de API para su cuenta de PagerDuty. Si no dispone de una cuenta de PagerDuty, [regístrese para obtener una ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.pagerduty.com/sign-up/){: new_window}. Para ver instrucciones para localizar la clave, consulte [Generación de una clave de API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
+ a. Escriba la clave de acceso de API para su cuenta de PagerDuty. Si no tiene ninguna cuenta de PagerDuty, [regístrese en una](https://www.pagerduty.com/sign-up/){:external}. Para ver instrucciones para localizar la clave, consulte [Generación de una clave de API](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){:external}.
 
  b. Escriba el nombre del servicio PagerDuty.
 
@@ -960,11 +980,11 @@ Configure PagerDuty para enviar notificaciones cuando se producen errores en la 
 
 ### Más información sobre PagerDuty
 
-Para obtener más información sobre PagerDuty, consulte el [artículo de PagerDuty ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){: new_window} en el IBM Cloud Garage Method o realice esta guía de aprendizaje y el curso de defensor de Garage Method:
+Para obtener más información sobre PagerDuty, consulte el [artículo de PagerDuty](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){:external} en el IBM Cloud Garage Method o realice esta guía de aprendizaje y el curso de defensor de Garage Method:
 
-  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}
 
-  * [Conviértase en un defensor de Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
+  * [Conviértase en un defensor de Garage Method](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:external}
 
 
 ## Configuración de Rational Team Concert
@@ -1004,7 +1024,7 @@ Configure Rational Team Concert para la entrega continua y seguir la aproximaci�
 
 ### Más información sobre Rational Team Concert
 
-Para obtener más información sobre Rational Team Concert, consulte el [artículo de IBM Rational Team Concert ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/think/tool_rtc/){: new_window} en el IBM Cloud Garage Method.
+Para obtener más información sobre Rational Team Concert, consulte el [artículo de IBM Rational Team Concert](https://www.ibm.com/cloud/garage/content/think/tool_rtc/){:external} en IBM Cloud Garage Method.
 
 
 ## Configuración de Sauce Labs
@@ -1024,8 +1044,8 @@ Configure Sauce Labs para ejecutar pruebas funcionales automatizadas en varios s
 
  b. En la sección Integraciones de herramientas, pulse **Sauce Labs**.
 
-1. Escriba el nombre de usuario asociado con su cuenta de Sauce Labs. Puede [encontrar su nombre de usuario en el mensaje de bienvenida en la página de la cuenta de Sauce Labs ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://app.saucelabs.com/user-settings){: new_window}.
-1. Escriba la clave de acceso para su cuenta de Sauce Labs. Puede [encontrar la clave en la página de la cuenta de Sauce Labs ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://app.saucelabs.com/user-settings){: new_window}.
+1. Escriba el nombre de usuario asociado con su cuenta de Sauce Labs. Puede [encontrar su nombre de usuario en el mensaje de bienvenida de la página de su cuenta de Sauce Labs](https://app.saucelabs.com/user-settings){:external}.
+1. Escriba la clave de acceso para su cuenta de Sauce Labs. Puede [encontrar la clave en la página de su cuenta de Sauce Labs](https://app.saucelabs.com/user-settings){:external}.
 1. Pulse **Crear integración**.
 1. Pulse **Sauce Labs** para ir a saucelabs.com y ver la actividad de pruebas de la cadena de herramientas.
 
@@ -1034,10 +1054,9 @@ Configure Sauce Labs para ejecutar pruebas funcionales automatizadas en varios s
 
 ### Más información sobre Sauce Labs
 
-Para obtener más información sobre Sauce Labs, consulte el [artículo de Sauce Labs ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: new_window} en el IBM Cloud Garage Method o realice esta guía de aprendizaje:
+Para obtener más información sobre Sauce Labs, consulte el [artículo de Sauce Labs](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){:external} en IBM Cloud Garage Method o realice esta guía de aprendizaje:
 
-  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
-
+  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}
 
 
 ## Configuración de Slack
@@ -1057,7 +1076,7 @@ Configure Slack para recibir notificaciones acerca de su cadena de herramientas 
 
  b. En la sección Integraciones de herramientas, pulse **Slack**.
 
-1. Escriba el URL del webhook de Slack, que genera Slack en forma de webhook de entrada. Necesita un URL de webhook de Slack para recibir notificaciones acerca de su cadena de herramientas desde las integraciones de herramientas. Para ver instrucciones sobre cómo crear o encontrar su webhook, consulte [Webhooks de entrada ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://api.slack.com/incoming-webhooks){: new_window}.
+1. Escriba el URL del webhook de Slack, que genera Slack en forma de webhook de entrada. Necesita un URL de webhook de Slack para recibir notificaciones acerca de su cadena de herramientas desde las integraciones de herramientas. Para ver instrucciones sobre cómo crear o encontrar su webhook, consulte [Webhooks de entrada](https://api.slack.com/incoming-webhooks){:external}.
 
  Si utiliza una clave de API para el canal de Slack para recibir notificaciones acerca de la cadena de herramientas desde las integraciones de herramientas, debe actualizar la configuración para que utilice un webhook en su lugar.
  {: tip}
@@ -1073,11 +1092,11 @@ Configure Slack para recibir notificaciones acerca de su cadena de herramientas 
 
 ### Más información sobre Slack
 
-Para obtener más información sobre Slack, consulte el [artículo de Slack ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: new_window} en el IBM Cloud Garage Method o realice esta guía de aprendizaje y el curso de defensor de Garage Method:
+Para obtener más información sobre Slack, consulte el [artículo de Slack](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){:external} en el IBM Cloud Garage Method o realice esta guía de aprendizaje y el curso de defensor de Garage Method:
 
-  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}
+  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}
 
-  * [Conviértase en un defensor de Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:new_window}
+  * [Conviértase en un defensor de Garage Method](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:external}
 
 
 ## Configuración de SonarQube
@@ -1106,4 +1125,4 @@ Configure SonarQube de modo que analice y evalúe continuamente la calidad del c
 
 ### Más información sobre SonarQube
 
-Para obtener más información sobre SonarQube, consulte el [artículo de SonarQube ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){: new_window} en el IBM Cloud Garage Method.
+Para obtener más información sobre SonarQube, consulte el [artículo de SonarQube](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){:external} en el IBM Cloud Garage Method. 

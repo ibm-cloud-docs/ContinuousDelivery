@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-14"
 
 keywords: IBM Cloud, build types, build script
 
@@ -34,10 +34,10 @@ Puede desplegar en una o más regiones y servicios. Por ejemplo, puede configura
 
 Puede utilizar cualquiera de los métodos siguientes para crear un conducto:
 
-   * [Crear una cadena de herramientas a partir de una aplicación Cloud Foundry existente](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}. La cadena de herramientas resultante contiene un conducto.
+   * [Crear una cadena de herramientas a partir de una aplicación Cloud Foundry existente](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app). La cadena de herramientas resultante contiene un conducto.
 
-   * [Crear una cadena de herramientas a partir de una plantilla](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window} que incluya al menos un conducto.
+   * [Crear una cadena de herramientas a partir de una plantilla](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template) que incluya al menos un conducto.
 
-   * [Añadir la integración de herramientas de {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window} a una cadena de herramientas existente.
+   * [Añadir la integración de herramientas de {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline) a una cadena de herramientas existente.
    
 En {{site.data.keyword.deliverypipeline}}, puede cambiar la configuración, comprobar el estado de las compilaciones, la app desplegada y los despliegues recientes, consultar los registros y detalles de despliegue más recientes o suprimir el conducto.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-28"
 
 keywords: Environment properties, IBM Java, pipeline environments
 
@@ -42,6 +42,7 @@ Las siguientes propiedades y recursos están disponibles de forma predeterminada
 {: #deliverypipeline_envprop}
 
 ### Propiedades de finalidad general
+En la tabla siguiente se listan y describen las propiedades de entorno de propósito general que están disponibles de forma predeterminada en entornos de conducto.
 
 | Propiedad de entorno | Descripción |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -71,8 +72,10 @@ Las siguientes propiedades y recursos están disponibles de forma predeterminada
 | TASK_ID | El ID exclusivo de la ejecución actual del trabajo. |
 | TMPDIR | Una ubicación de directorio donde se almacenan los archivos temporales. |
 | WORKSPACE | La vía de acceso para el directorio de trabajo actual. |
+{: caption="Tabla 1. Propiedades de entorno de propósito general" caption-side="top"}
 
 ### Propiedades de tiempo de ejecución y de herramientas
+En la tabla siguiente se listan y describen las propiedades de entorno de tiempo de ejecución y de herramientas que están disponibles de forma predeterminada en entornos de conducto.
 
 | Propiedad de entorno | Descripción |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -84,11 +87,13 @@ Las siguientes propiedades y recursos están disponibles de forma predeterminada
 | JAVA8_HOME | La vía de acceso para IBM Java 8. |
 | MAVEN_HOME | La vía de acceso para Apache Maven 3.2.1. |
 | NODE_HOME | La vía de acceso para Node.js 0.10.29. |
+{: caption="Tabla 2. Propiedades de entorno de tiempo de ejecución y de herramientas" caption-side="top"}
 
 Para utilizar Apache Ant 1.10+ en los scripts del conducto, establezca `ANT_HOME` en `$ANT_JAVA8_HOME` y `JAVA_HOME` en `$JAVA8_HOME`.
 {: tip}
 
 ### Propiedades de despliegue
+En la tabla siguiente se listan y describen las propiedades de entorno de despliegue que están disponibles de forma predeterminada en entornos de conducto.
 
 | Propiedad de entorno | Descripción |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -99,6 +104,7 @@ Para utilizar Apache Ant 1.10+ en los scripts del conducto, establezca `ANT_HOME
 | CF_SPACE_ID | Para despliegues, el ID del espacio en el que se desplegará.  |
 | CF_TARGET_URL | Para despliegues, el URL de {{site.data.keyword.Bluemix_short}} o Cloud Foundry. |
 | IDS_VERSION | Para despliegues, la versión de la app que se está desplegando o el identificador de origen. |
+{: caption="Tabla 3. Propiedades de entorno de despliegue" caption-side="top"}
 
 ## Recursos preinstalados
 {: #deliverypipeline_resources}
@@ -106,6 +112,7 @@ Para utilizar Apache Ant 1.10+ en los scripts del conducto, establezca `ANT_HOME
 Varios tiempos de ejecución, herramientas y módulos de Nodos están preinstalados en cada conducto.
 
 ### Tiempos de ejecución y herramientas
+En la tabla siguiente se listan los tiempos de ejecución y herramientas preinstalados que están disponibles en cada conducto.
 
 Todos los enlaces están en el directorio de inicio.
 {: tip}
@@ -123,6 +130,7 @@ Todos los enlaces están en el directorio de inicio.
 |Apache Maven 3.2.1 |maven |/opt/IBM/maven |
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
+{: caption="Tabla 4. Nombres y vías de acceso de enlace para tiempos de ejecución y herramientas" caption-side="top"}
 
 El entorno de conducto ofrece versiones de 64 bits de IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2 y 6.7.0. Para elegir una versión, utilice el mandato export.
 

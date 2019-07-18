@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-14"
 
 keywords: ADD STAGE, Run Stage icon, JOBS tab
 
@@ -117,7 +117,7 @@ Puede descargar el archivo de registro para un trabajo de conducto a partir de u
 1. Utilice `PIPELINE_LOG_URL` en un trabajo posterior dentro de la misma etapa para descargar el archivo de registro para exportarlo a un sistema distinto. Utilice una señal portadora de IBM Cloud para acceder al archivo de registro.
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
@@ -158,7 +158,7 @@ Puede descargar los artefactos para un trabajo de compilación de conducto a par
 1. Utilice `PIPELINE_ARTIFACT_URL` en un trabajo posterior dentro de la misma etapa para descargar los artefactos para exportarlos a un sistema distinto. Utilice una señal portadora de IBM Cloud para acceder a los artefactos.
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )

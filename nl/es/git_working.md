@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-20"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -23,7 +24,7 @@ subcollection: ContinuousDelivery
 # {{site.data.keyword.gitrepos}}
 {: #git_working}
 
-Colabore con su equipo y gestione su código fuente con un repositorio Git (repositorio) y un rastreador de problemas alojado en IBM que se basa en [GitLab Community Edition ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://about.gitlab.com/){:new_window}.
+Colabore con su equipo y gestione su código fuente con un repositorio Git (repositorio) y un rastreador de problemas alojado en IBM que se basa en [GitLab Community Edition](https://about.gitlab.com/){: external}.
 {: shortdesc}
 
 Invitar solo a los usuarios con los que tiene una relación personal o empresarial para colaborar en un proyecto. Es posible que el acceso al servicio se suspenda o revoque para los usuarios que utilicen una invitación a un repositorio Git para fines que no sean colaborar en un proyecto.
@@ -48,7 +49,8 @@ Dado que esta integración de herramientas se basa en GitLab Community Edition y
 ## Uso de {{site.data.keyword.gitrepos}} de forma local
 {: #git_locally}
 
-Puede acceder localmente a los repositorios Git almacenados en {{site.data.keyword.gitrepos}}. Para ver instrucciones sobre cómo configurar Git localmente, consulte [Empezar a utilizar Git en la línea de mandatos ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}.
+Puede acceder localmente a los repositorios Git almacenados en {{site.data.keyword.gitrepos}}. Para obtener instrucciones sobre cómo configurar Git de manera local, consulte
+[Empezar a utilizar Git en la línea de mandatos](https://us-south.git.cloud.ibm.com/help/gitlab-basics/start-using-git){: external}.
 
 {{site.data.keyword.gitrepos}} da soporte únicamente a conexiones HTTPS que utilicen TLS1.2. Si utiliza Eclipse para conectarse, podría necesitar especificar este protocolo para su versión de Java añadiendo `-Dhttps.protocols=TLSv1.2` a su archivo eclipse.ini y, a continuación, reiniciar Eclipse.
 {: tip}
@@ -64,21 +66,23 @@ El inicio de sesión y la contraseña de {{site.data.keyword.Bluemix_notm}} sól
 Para autenticarse en el repositorio Git a través de HTTPS, debe crear una señal de acceso personal.
 {: tip}
 
-1. En el panel de control de Valores de usuario de {{site.data.keyword.gitrepos}}, en la [página de Señales de acceso ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, escriba su nombre de su aplicación para la que desea crear una señal de acceso. Por ejemplo, `Git CLI`.
+1. En el panel de control de Valores de usuario de {{site.data.keyword.gitrepos}}, en la
+[página Señales de acceso](https://us-south.git.cloud.ibm.com/profile/personal_access_tokens){: external}, escriba el nombre de la aplicación para la que desee crear una señal de acceso. Por ejemplo, `Git CLI`.
 1. Opcional: Elija una fecha de caducidad para la señal de acceso.
 1. Seleccione el recuadro de selección **api** para crear una señal de acceso personal que utilice como ámbito a la api.
 1. Pulse **Crear señal de acceso personal**. Conserve su señal de acceso en una ubicación segura para utilizarla en el futuro.
-1. En la [página de Cuenta ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}, en la sección de Cambiar nombre de usuario, busque su nombre de usuario de {{site.data.keyword.gitrepos}}. El nombre de usuario también se visualiza como el primer segmento del URL para cualquier repositorio Git personal que cree.
+1. En la [página Cuenta](https://us-south.git.cloud.ibm.com/profile/account){: external}, en la sección Cambiar nombre de usuario, busque su nombre de usuario de {{site.data.keyword.gitrepos}}. El nombre de usuario también se visualiza como el primer segmento del URL para cualquier repositorio Git personal que cree.
 1. Utilice su nombre de usuario y contraseña de {{site.data.keyword.gitrepos}} y la señal de acceso personal con su repositorio Git desde un cliente Git externo.
 
-Para obtener más información, consulte [Señales de acceso personales ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}.
+Para obtener más información, consulte
+[Señales de acceso personal](https://us-south.git.cloud.ibm.com/help/api/README.html#personal-access-tokens){: external}.
 
 ### Creación de una clave SSH  
 {:create_ssh }
 
-Para crear una clave SSH, consulte [Cómo crear claves SSH ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){:new_window}. Para acceder a los repositorios con autenticación SSH es posible que se requiera configuración adicional para proxies y cortafuegos.
+Para crear una clave SSH, consulte [Cómo crear claves SSH](https://us-south.git.cloud.ibm.com/help/gitlab-basics/create-your-ssh-keys){: external}. Para acceder a los repositorios con autenticación SSH es posible que se requiera configuración adicional para proxies y cortafuegos.
 
-Para obtener más información, consulte [SSH ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/ssh/README){:new_window}.
+Para obtener más información, consulte [SSH](https://us-south.git.cloud.ibm.com/help/ssh/README){: external}.
 
 ## Límites en el tamaño de archivos y repositorios físicos
 {: #git_limits}
@@ -88,8 +92,8 @@ Los archivos están estrictamente limitados a 100 MB. El límite recomendado de 
 ## Guía de aprendizaje: {{site.data.keyword.gitrepos}}
 {: #git_tutorials}
 
-Consulte uno de estas guías de aprendizaje en [IBM&reg; Cloud Garage Method ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage){:new_window}:
+Consulte una de estas guías de aprendizaje sobre [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external}:
 
-  * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}. Aprenda a crear una cadena de herramientas abierta a partir de una plantilla y a utilizar la cadena de herramientas para conseguir una entrega continua de la app "Hello World".
+  * [Cree y utilice su primera cadena de herramientas utilizando la cadena de herramientas "Desarrollar una app de Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}. Aprenda a crear una cadena de herramientas abierta a partir de una plantilla y a utilizar la cadena de herramientas para conseguir una entrega continua de la app "Hello World".
 
-  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}. Aprenda a crear una cadena de herramientas a partir de una plantilla con tres microservicios y a utilizar la cadena de herramientas para conseguir una entrega continua de un almacén en línea.
+  * [Utilice la cadena de herramientas "Desarrollar y probar microservicios en Cloud Foundry"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}. Aprenda a crear una cadena de herramientas a partir de una plantilla con tres microservicios y a utilizar la cadena de herramientas para conseguir una entrega continua de un almacén en línea.

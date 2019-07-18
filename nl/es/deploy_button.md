@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud button, yml file, build file
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -32,7 +33,7 @@ Cuando el usuario pulsa el botón tienen lugar las siguientes acciones:
 
 3. Se crea una cadena de herramientas que incluye un nuevo clon privado del repositorio Git, un conducto para crear y desplegar cambios de código, Eclipse Orion {{site.data.keyword.webide}} para editar código en la nube y un rastreador de problemas.
 
-  Si el directorio `.bluemix` contiene un archivo `toolchain.yml`, el archivo se utilizará para especificar las integraciones de herramientas para la cadena de herramientas. Para obtener más información sobre el archivo `toolchain.yml`, consulte [Creación de cadenas de herramientas personalizadas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}.
+  Si el directorio `.bluemix` contiene un archivo `toolchain.yml`, el archivo se utilizará para especificar las integraciones de herramientas para la cadena de herramientas. Para obtener más información sobre el archivo `toolchain.yml`, consulte [Creación de cadenas de herramientas personalizadas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom).
   {: tip}
 
 4. Si la app requiere un archivo de compilación, este se detectará automáticamente y se compilará la app.
@@ -47,11 +48,11 @@ Cuando el usuario pulsa el botón tienen lugar las siguientes acciones:
 
 Ejemplo del botón de la app de un repositorio {{site.data.keyword.gitrepos}} público:
 
-[![Desplegar en IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
+[![Desplegar en IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://us-south.git.cloud.ibm.com/idsorg/sample-java-cloudant){: external}
 
 Ejemplo del botón de la app de un repositorio GitHub público:
 
-[![Desplegar en IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
+[![Desplegar en IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){: external}
 
 ## Creación de un botón {: #create-button}
 
@@ -91,8 +92,6 @@ Cuando personalice el fragmento de código para el botón Desplegar en {{site.da
 
 * Si prefiere almacenar la imagen localmente, puede descargarla y almacenarla en el repositorio de Git. Ajuste la vía de acceso para utilizar la ubicación relativa de la imagen.
 
-* Si desea utilizar una versión traducida del botón, puede hacer referencia a la misma remotamente o descargarla desde [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}.
-
 ## Consideraciones sobre el repositorio {: #button-repo}
 
 Revise estas consideraciones del repositorio que se utiliza en el botón Desplegar en {{site.data.keyword.Bluemix_notm}}.
@@ -105,10 +104,12 @@ Si la app debe compilarse antes de que se pueda desplegar, debe incluir un archi
 
 Entre los compiladores soportados se incluye:
 
-* [Ant ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo"):](http://ant.apache.org/manual/using.html){:new_window} `build.xml`, que crea la salida a la carpeta `./output/`
-* [Gradle ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo"):](https://docs.gradle.org/current/userguide/getting_started.html){:new_window} `/build.gradle`, que crea la salida a la carpeta `.`
-* [Grunt ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo"):](http://gruntjs.com/getting-started#the-gruntfile){:new_window} `/Gruntfile.js`, que crea la salida a la carpeta `.`
-* [Maven ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo"):](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:new_window} `/pom.xml`, que crea la salida a la carpeta `./target/`
+* [Ant:](http://ant.apache.org/manual/using.html){: external} `build.xml`, que crea la salida en la carpeta `./output/`
+* [Gradle:](https://docs.gradle.org/current/userguide/getting_started.html){:external} `/build.gradle`,
+que crea la salida en la carpeta `.`
+* [Grunt:](http://gruntjs.com/getting-started#the-gruntfile){: external} `/Gruntfile.js`,
+que crea la salida en la carpeta `.`
+* [Maven:](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){: external} `/pom.xml`, que crea la salida en la carpeta `./target/`
 
 ### Requisitos del archivo de conducto
 {: pipeline_file}
@@ -117,7 +118,7 @@ Para configurar el conducto para la cadena de herramientas en un directorio `.bl
 
 Si no tiene el archivo `pipeline.yml` en el directorio `.bluemix`, el botón Desplegar en {{site.data.keyword.Bluemix_notm}} creará un conducto predeterminado con dos etapas: una etapa de compilación y una etapa de despliegue que se despliega en Cloud Foundry.
 
-Para crear un archivo de conducto, consulte el archivo de ejemplo en las [instrucciones de conducto de la cadena de herramientas personalizada](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml). En el momento en que defina un conducto en la interfaz web, defina un conducto en el texto creando etapas y trabajos, estableciendo entradas y variables de entorno y añadiendo scripts. También puede ver varios archivos de conducto más complejos en [este proyecto de demostración](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix).
+Para crear un archivo de conducto, consulte el archivo de ejemplo en las [instrucciones de conducto de la cadena de herramientas personalizada](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml). En el momento en que defina un conducto en la interfaz web, defina un conducto en el texto creando etapas y trabajos, estableciendo entradas y variables de entorno y añadiendo scripts. También puede ver varios archivos de conducto más complejos en [este proyecto de demostración](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix){: external}.
 
 ### Requisitos del Dockerfile del contenedor
 {: container_dockerfile}
@@ -126,11 +127,12 @@ Para desplegar una app en un contenedor utilizando el {{site.data.keyword.contai
 
 El Dockerfile actúa como un tipo de script de construcción para la app. Si se detecta un Dockerfile en el repositorio, la app se creará automáticamente en una imagen antes de que se despliegue en un contenedor. Si la propia app debe compilarse antes de que la app se compile en una imagen, incluya un script de compilación para la app y un Dockerfile.
 
-Para obtener más información sobre cómo crear Dockerfiles, consulte la [documentación de Docker ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.docker.com/reference/builder/){:new_window}. Para seguir las instrucciones detalladas de uso de una plantilla de cadena de herramientas para desplegar en Kubernetes, consulte la [Guía de aprendizaje: Utilice la cadena de herramientas "Desarrollar una app de Kubernetes" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window} o la [Guía de aprendizaje: Utilice la cadena de herramientas "Desarrollar una app de Kubernetes con Helm" ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window}.
+Para obtener más información sobre cómo crear archivos de Docker (Dockerfiles), consulte la
+[Documentación de Docker](https://docs.docker.com/reference/builder/){: external}. Para seguir las instrucciones detalladas de uso de una plantilla de cadena de herramientas para desplegar en Kubernetes, consulte la [Guía de aprendizaje: Utilice la cadena de herramientas "Desarrollar una app de Kubernetes"](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){: external} o la [Guía de aprendizaje: Utilice la cadena de herramientas "Desarrollar una app de Kubernetes con Helm"](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){: external}.
 
-Para obtener información sobre cómo portar la app de Cloud Foundry a un clúster de Kubernetes, consulte [Guía de aprendizaje: Portar una app de Cloud Foundry para desplegar en Kubernetes en una cadena de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){:new_window}.  
+Para obtener información sobre cómo portar la app de Cloud Foundry a un clúster de Kubernetes, consulte [Guía de aprendizaje: Portar una app de Cloud Foundry para desplegar en Kubernetes en una cadena de herramientas](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){: external}.  
 
-Para crear un `pipeline.yml` manualmente que sea específicamente para contenedores, consulte los [ejemplos de GitHub ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/Puquios/){:new_window}.
+Para crear un `pipeline.yml` manualmente que sea específicamente para contenedores, consulte los [ejemplos de GitHub](https://github.com/Puquios/){: external}.
 
 ### Requisitos del archivo de manifiesto (para apps desplegadas en Cloud Foundry)
 {: #manifest_files}

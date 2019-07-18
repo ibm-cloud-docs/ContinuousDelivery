@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-06-20"
 
 keywords: troubleshoot, IBM Cloud Continuous Delivery
 
@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -100,7 +101,8 @@ En lugar de crear una integración de herramientas de {{site.data.keyword.gitrep
 
 1. Si desea crear un repositorio público en el servidor, desmarque el recuadro de selección **Convertir este repositorio en privado**.
 1. Si desea utilizar los problemas de GitLab para el seguimiento de problemas, marque el recuadro de selección **Habilitar problemas de GitLab**.
-1. Si desea realizar un seguimiento del despliegue de cambios en el código mediante la creación de etiquetas y comentarios en las confirmaciones, y etiquetas y comentarios en los problemas a los que hacen referencia las confirmaciones, marque el recuadro de selección **Hacer un seguimiento del despliegue cambios de código**. Para obtener más información, consulte [Seguimiento de dónde se despliega el código con cadenas de herramientas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
+1. Si desea realizar un seguimiento del despliegue de cambios en el código mediante la creación de etiquetas y comentarios en las confirmaciones, y etiquetas y comentarios en los problemas a los que hacen referencia las confirmaciones, marque el recuadro de selección **Hacer un seguimiento del despliegue cambios de código**. Para obtener más información, consulte
+[Seguimiento de dónde se despliega el código con cadenas de herramientas](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}.
 1. Pulse **Crear integración**.
 
 Para obtener más información sobre la configuración de una integración de herramientas de GitLab, consulte [Configuración de GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab).
@@ -125,9 +127,10 @@ Si el repositorio debe ser privado, el propietario del repositorio puede otorgar
 
 Una vez que tenga una señal de acceso personal, puede crear un URL para acceder al repositorio desde otras regiones. Mientras configure la integración de herramientas, en el campo **URL de repositorio de origen**, actualice el URL de repositorio para utilizar el nombre de usuario y la señal de acceso.
 
-`https://user:XXXXXXX@git.ng.bluemix.net/group/node-hello-world`
+`https://user:XXXXXXX@us-south.git.cloud.ibm.com/group/node-hello-world`
 
-Donde `user` es el nombre de usuario de GitLab, `XXXXXXX` es la señal de acceso, [`group` ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git.ng.bluemix.net/help/user/group/index.md){:new_window} es el grupo en el que se almacena el repositorio y `node-hello-world` es el nombre del repositorio.
+Donde `user` es su nombre de usuario de GitLab, `XXXXXXX` es la señal de acceso,
+[`group`](https://us-south.git.cloud.ibm.com/help/user/group/index.md){: external} es el grupo donde se almacena el repositorio y `node-hello-world` es el nombre del repositorio.
 
 Si su repositorio de GitLab no se encuentra dentro de un grupo de GitLab, el valor de `group` es el mismo que el nombre de usuario.
 {: tip}
@@ -174,13 +177,18 @@ Utilice cualquiera de los métodos siguientes para resolver este problema:
 
 * Si la clave privada no se encuentra en la ubicación predeterminada, utilice el mandato siguiente para especificarlo en una variable de entorno:
 
-`GIT_SSH_COMMAND='ssh -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+```
+  GIT_SSH_COMMAND='ssh -i/path/to/private_key_file' git clone git@host:owner/repo.git
+```
 
 * Para depurar este problema mediante la información de conexión, añada el distintivo -v o -vvv a la variable de entorno `GIT_SSH_COMMAND`:
 
-`GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git`
-
-`GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+```
+  GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git
+```
+```
+  GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git
+```
 
 
 ## He intentado añadir un usuario a mi proyecto de GitLab por correo electrónico, pero no ha recibido la invitación. ¿Cómo puedo añadirlo a mi proyecto?
@@ -223,6 +231,44 @@ Para depurar este error, puede utilizar cualquiera de los métodos siguientes:
 * Utilice la interfaz de usuario del conducto para crear un conducto de ejemplo que replique el conducto que está intentando crear con la plantilla. Añada `/yaml` al URL de conducto para generar un archivo pipeline.yaml similar que se puede utilizar para buscar diferencias obvias. Por ejemplo, `https://cloud.ibm.com/devops/pipelines/<your pipeline id>/yaml?env_id=<your region>`.
 
 * Utilice el mecanismo de creación de cadena de herramientas de modalidad autónoma. En la página **Crear una cadena de herramientas**, abra el depurador y evalúe la expresión `window.Testflags = {1}`. Cuando pulsa **Crear una cadena de herramientas** en esta modalidad, la cadena de herramientas no se crea. En su lugar, la información que se pasa a la API se devuelve a la consola, donde puede revisarla.
+
+
+## Al intentar desplegar en Kubernetes utilizando Delivery Pipeline, ¿por qué obtengo un error sobre un objeto no válido? 
+{: troubleshoot-cd-pipeline-kubernetes}
+{: troubleshoot}
+
+La imagen base del conducto 1.0 incluye kubectl v1.14.2. Es posible que reciba un error si el clúster Kubernetes al que se conecta ejecuta una versión más reciente de Kubernetes. 
+
+Al intentar desplegar en Kubernetes utilizando Delivery Pipeline, recibo el mensaje de error siguiente:
+{: tsSymptoms}
+
+`error:SchemaeError(io.k8s.api.core.v1.SecretProjection): el objeto no válido no tiene propiedades adicionales`
+
+Por lo general, este problema se produce cuando la versión del mandato kubectl de la imagen base del conducto es incompatible con la versión de Kubernetes que se ejecuta en el clúster.
+{: tsCauses}
+   
+Para resolver este problema, puede utilizar cualquiera de los métodos siguientes:
+{: tsResolve}
+
+* Utilice una versión más reciente de la imagen base del conducto, que incluya la versión más actual publicada de kubectl cuando se cree. Para obtener información sobre cómo especificar la versión de imagen más reciente, consulte
+[Especificación de la versión de la imagen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline_versioned_base_images#specify_base_image_version).
+
+* Asegúrese de que el trabajo de conducto ejecuta la versión correcta de kubectl. Por ejemplo, añada las líneas siguientes al principio del trabajo de conducto para ejecutar kubectl v1.14.2:
+
+```
+  curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.14.2/bin/linux/amd64/kubectl
+  chmod +x ./kubectl
+  sudo mv ./kubectl /usr/local/bin/kubectl
+```
+
+Si ejecuta kubectl v1.14.2 desde una imagen base de conducto 1.0, la opción sudo no estará disponible. Sustituya la línea sudo por el mandato siguiente para añadir kubectl a la vía de acceso (path):
+```
+   mkdir ~/.bin && export PATH=~/.bin:$PATH && mv ./kubectl ~/.bin/kubectl 
+```
+
+Para obtener más información sobre cómo acceder a la versión exacta de kubectl que necesita, consulte
+[Instalar y configurar kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux){: external}.
+{: tip}
 
 
 ## He configurado una integración de herramientas para mi cadena de herramientas. ¿Por qué no se ha configurado?

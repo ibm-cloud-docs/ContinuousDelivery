@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-20"
+lastupdated: "2019-06-19"
 
 keywords: IBM Cloud Continuous Delivery, GitHub tool integration, error message
 
@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:faq: data-hd-content-type='faq'}
 {:codeblock: .codeblock}
@@ -34,7 +35,7 @@ Aquí encontrará respuestas a las preguntas más frecuentes sobre el uso de {{s
 {: #plan_exceeded}
 {: faq}
 
-{{site.data.keyword.contdelivery_short}} ofrece dos planes: Lite y Professional. Si tiene el plan Lite de {{site.data.keyword.contdelivery_short}}, puede utilizar cadenas de herramientas de forma gratuita, hasta los límites del plan. El mensaje de error indica que ha sobrepasado uno o más límites del plan Lite. Por ejemplo, puede superar el plan si tiene demasiados usuarios autorizados que están asociados a la instancia de servicio de {{site.data.keyword.contdelivery_short}}, o si ha ejecutado el número máximo de trabajos de {{site.data.keyword.deliverypipeline}}. Para obtener más información sobre los términos del plan, consulte [Limitaciones y uso del plan](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
+{{site.data.keyword.contdelivery_short}} ofrece dos planes: Lite y Professional. Si tiene el plan Lite de {{site.data.keyword.contdelivery_short}}, puede utilizar cadenas de herramientas de forma gratuita, hasta los límites del plan. El mensaje de error indica que ha sobrepasado uno o más límites del plan Lite. Por ejemplo, puede superar el plan si tiene demasiados usuarios autorizados que están asociados a la instancia de servicio de {{site.data.keyword.contdelivery_short}}, o si ha ejecutado el número máximo de trabajos de {{site.data.keyword.deliverypipeline}}. Para obtener más información sobre los términos del plan, consulte [Limitaciones y uso del plan](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 
 ## El servicio My {{site.data.keyword.contdelivery_short}} indica que los servicios de plan Lite se suprimen después de 30 días de inactividad. ¿Qué significa inactividad?
@@ -48,7 +49,7 @@ Una instancia del servicio de {{site.data.keyword.contdelivery_short}} se consid
 {: #service_required_resource_group}
 {: faq}
 
-Los términos del plan para la instancia de servicio de {{site.data.keyword.contdelivery_short}} que se encuentra en el mismo grupo de recursos u organización que la cadena de herramientas gestiona el uso de algunas de las integraciones de herramientas ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} y {{site.data.keyword.gitrepos}}) contenidas en el servicio. El mensaje de error indica que el grupo de recursos o la organización no contiene la instancia necesaria del servicio de {{site.data.keyword.contdelivery_short}}. Para obtener más información sobre los términos del plan, consulte [Limitaciones y uso del plan](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage){: new_window}.
+Los términos del plan para la instancia de servicio de {{site.data.keyword.contdelivery_short}} que se encuentra en el mismo grupo de recursos u organización que la cadena de herramientas gestiona el uso de algunas de las integraciones de herramientas ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}} y {{site.data.keyword.gitrepos}}) contenidas en el servicio. El mensaje de error indica que el grupo de recursos o la organización no contiene la instancia necesaria del servicio de {{site.data.keyword.contdelivery_short}}. Para obtener más información sobre los términos del plan, consulte [Limitaciones y uso del plan](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 
 ## He actualizado información de una cadena de herramientas desde una organización de Cloud Foundry. ¿Por qué no veo mis cambios en la cadena de herramientas?
@@ -157,9 +158,9 @@ Consulte la página Estado de {{site.data.keyword.Bluemix_notm}} para determinar
 Para ver la página Estado, seleccione una de las dos opciones siguientes:
 
   * Inicie la sesión en la consola de {{site.data.keyword.Bluemix_notm}}. En la barra de menús, pulse **Soporte** y seleccione **Estado**. Compruebe la lista de recursos en busca del icono ![algunos problemas](../../get-support/images/some_issues.svg). Este icono podría indicar una parada.
-  * Acceda directamente a [{{site.data.keyword.Bluemix_notm}} - Estado del sistema ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://cloud.ibm.com/status){: new_window}.
+  * Acceda directamente a [{{site.data.keyword.Bluemix_notm}} - Estado del sistema](https://cloud.ibm.com/status){: external}.
 
-Para obtener más información sobre la página Estado de {{site.data.keyword.Bluemix_notm}}, consulte [Visualización del estado de {{site.data.keyword.Bluemix_notm}}](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status){: new_window}.
+Para obtener más información sobre la página Estado de {{site.data.keyword.Bluemix_notm}}, consulte [Visualización del estado de {{site.data.keyword.Bluemix_notm}}](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status).
 
 
 ## ¿Cómo puedo pasar artefactos entre trabajos de conducto?
