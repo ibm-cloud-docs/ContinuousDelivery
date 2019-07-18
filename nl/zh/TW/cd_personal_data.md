@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -32,8 +33,8 @@ subcollection: ContinuousDelivery
  * {{site.data.keyword.gitrepos}}
  * {{site.data.keyword.contdelivery_short}} 管線
  * 工具鏈及工具整合
- * [IBM Cloud 上的 GitHub Enterprise ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
- * [{{site.data.keyword.DRA_full}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data){: new_window}
+ * [GitHub Enterprise on IBM Cloud](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data)
+ * [{{site.data.keyword.DRA_full}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data)
  
 IBM 不會管理 {{site.data.keyword.contdelivery_short}} 服務中的資料。在您離開 {{site.data.keyword.Bluemix_notm}} Public 中所管理的 {{site.data.keyword.contdelivery_short}} 服務之前，必須刪除您自己的資料。
 {: important}
@@ -53,7 +54,7 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
  * 公司帳戶
  * 公司個別帳戶
 
-###個人帳戶
+### 個人帳戶
 
 一般而言，每一位使用者都會有自己的帳戶，即其個人帳戶。您可以輕鬆地識別個人帳戶，因為它通常會包含您的名稱（例如，*John Smith's Account*）。 
 
@@ -61,13 +62,13 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 
 如果您具有在帳戶中建立物件的許可權，則也具有修改及刪除它的權限（不論在其中儲存物件的帳戶為何）。兩位使用者分工合作時，通常會共用個人帳戶。
 
-###公司帳戶
+### 公司帳戶
 
 公司帳戶是由您的公司所設定。一般而言，會自動將您新增至該帳戶，而非透過邀請。公司帳戶提供一個位置讓使用者工作、進行通訊以及共用資源和費用；不過，這只是慣例。公司帳戶與個人帳戶實際上並沒有差別。在公司帳戶中建立的物件與該帳戶相關聯，而且可以邀請使用者加入該帳戶。
 
 為公司工作的人員團隊通常是使用公司帳戶進行分工合作。
 
-###公司個別帳戶
+### 公司個別帳戶
 
 當您為公司工作時，公司可能會合法地擁有您帳戶中的工作。許多為公司工作的使用者都會有公司個別帳戶。如果您使用包含公司名稱且也具有看來是個人帳戶的認證來登入帳戶，則您個人帳戶內的工作可能屬於公司。
 
@@ -82,13 +83,13 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 
 在您刪除帳戶中的資料之前，請判定它是個人帳戶還是公司個別帳戶。
 
-###個人帳戶
+### 個人帳戶
 
 如果您擁有個人帳戶，則可以進行變更以及刪除您的資料。如果您與另一位使用者共用您的帳戶，則您會擁有資料，但可能會想要聯絡他們告知有關所共用的工作。 
 
-如果您無法登入 IBM Cloud 帳戶，請[與 IBM 支援中心聯絡 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/support){:new_window}
+如果您無法登入 IBM Cloud 帳戶，請[與 IBM 支援中心聯絡](https://www.ibm.com/cloud/support){: external}。
  
-###公司個別帳戶
+### 公司個別帳戶
 
 如果您擁有公司個別帳戶，則必須與您公司及其他團隊成員共同處理任何變更。請刪除個人資料，不論它是儲存在公司帳戶還是公司個別帳戶中。請確定您未刪除與其他使用者共用的工作。
 
@@ -107,14 +108,14 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 在您刪除 {{site.data.keyword.webide}} 資料之前，可能會想要匯出工作。在您刪除工作區之後，就會從 {{site.data.keyword.contdelivery_short}} 中移除它們，並刪除所有檔案。
 {: important}
 
-###匯出 Web IDE 工作區
+### 匯出 Web IDE 工作區
 
 若要匯出 {{site.data.keyword.webide}} 工作區，請執行下列動作：
 
 1. 選取**檔案 > 匯出 > Zip**。
 1. 針對您要匯出的每一個工作區重複執行。
 
-###刪除 Web IDE 工作區
+### 刪除 Web IDE 工作區
 
 若要刪除 {{site.data.keyword.webide}} 工作區（包括您的所有個人資料），請執行下列動作：
 
@@ -138,11 +139,11 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 在您刪除 Git 帳戶之前，請刪除其他專案中的個人資料。在您刪除 Git 帳戶之後，可能很難或無法找到您參與的所有專案。
 {: tip}
 
-###個人及共用專案
+### 個人及共用專案
 
 您可以邀請其他使用者，以便對專案進行分工合作。您在帳戶內建立的 Git 專案稱為「個人專案」。您也可以建立可由多個 Git 擁有者擁有其專案的 Git 群組。您可以建立群組的新專案，或將個人專案的所有權轉移給群組。Git 群組通常用來代表 IBM Cloud 公司帳戶，以指出公司所擁有的專案。
 
-###匯出 Git Repos and Issue Tracking 專案
+### 匯出 Git Repos and Issue Tracking 專案
 
 在您刪除 {{site.data.keyword.gitrepos}} 專案之前，可以匯出專案以進行保存。 
 
@@ -153,14 +154,14 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 
 保存專案之後，就可以將它匯入至另一個 GitLab 實例。 
 
-###刪除 Git Repos and Issue Tracking 帳戶
+### 刪除 Git Repos and Issue Tracking 帳戶
 
 您可以刪除 {{site.data.keyword.gitrepos}} 帳戶以及該帳戶所擁有的所有項目。
 
-1. 在「{{site.data.keyword.gitrepos}} 使用者設定」儀表板之[帳戶頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window} 的「刪除帳戶」區段中，按一下**刪除帳戶**。
+1. 在「{{site.data.keyword.gitrepos}} 使用者設定」儀表板上，於[帳戶頁面](https://us-south.git.cloud.ibm.com/profile/account){: external}的「刪除帳戶」區段中，按一下**刪除帳戶**。
 1. 即會刪除所有 Git 專案（包括儲存庫及問題）。也會從您所屬的任何 {{site.data.keyword.gitrepos}} 群組中將您移除。
 
-在刪除您的帳戶之後，會保留部分內容。此內容會指派給系統層面的「Ghost 使用者」。如需刪除 {{site.data.keyword.gitrepos}} 帳戶的相關資訊，請參閱[刪除使用者帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}。
+在刪除您的帳戶之後，會保留部分內容。此內容會指派給系統層面的「Ghost 使用者」。如需刪除 {{site.data.keyword.gitrepos}} 帳戶的相關資訊，請參閱[刪除使用者帳戶](https://us-south.git.cloud.ibm.com/profile/account/delete_account#associated-records){: external}。
 {: tip}
 
 {{site.data.keyword.gitrepos}} 使用單一登入機制，以在您第一次存取工具整合時自動建立 IBM Cloud 帳戶的對應 Git 帳戶。在您刪除帳戶之後，請不要存取 {{site.data.keyword.gitrepos}}。如果您再次存取 {{site.data.keyword.gitrepos}}，則會自動建立您必須刪除的新帳戶。
@@ -180,7 +181,7 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 
   ![「階段」功能表](images/pipeline_stages.png)
 
-###修改管線階段
+### 修改管線階段
 
 若要修改管線階段，請執行下列動作：
 
@@ -193,7 +194,7 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
   
 1. 從管線階段中刪除工作。在**工作**標籤上，選取您要刪除的工作，然後按一下**移除**。
  
-###匯出管線階段
+### 匯出管線階段
 
 若要匯出整個管線的定義，請將 `/yaml` 附加至管線 URL 後面：
 
@@ -211,7 +212,7 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 1. 按一下**下載** > **構件**，以匯出所選取建置的構件。
 1. 按一下**下載** > **日誌**，以匯出所選取建置的日誌。  
 
-###刪除管線階段
+### 刪除管線階段
 
 若要刪除管線階段，請執行下列動作：
 
@@ -229,7 +230,7 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 
 請先與其他團隊成員合作，再刪除共用的工具整合或工具鏈。
 
-###修改及刪除工具整合
+### 修改及刪除工具整合
 
 當您建立工具整合時，需要提供使用者認證以及與整合相關的其他帳戶資訊。如果您已使用自己的個人認證及帳戶資訊，請將此資訊取代為不同的值，或刪除工具整合。
 
@@ -246,7 +247,7 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 1. 若要從工具鏈中刪除工具整合，請按一下**刪除**。
 1. 按一下**刪除**來進行確認。
 
-###刪除工具鏈
+### 刪除工具鏈
 
 當您刪除工具鏈時，無法復原刪除。
 
@@ -258,7 +259,7 @@ IBM Cloud 登入結構提供在不同的帳戶中工作的選項。使用 IBM Cl
 當您刪除工具鏈時，不會刪除相關聯的 {{site.data.keyword.gitrepos}} 儲存庫。如果可存取這些儲存庫的使用者已執行 `git clone` 或建立 {{site.data.keyword.webide}} 工作區，則可能會有資料的副本。若要確定已刪除所有資料，您必須要求這些使用者刪除其資料副本。
 {: tip}
 
-###刪除所有工具鏈
+### 刪除所有工具鏈
 
 您無法同時刪除資源群組或組織內的所有工具鏈。您必須逐一刪除每一個工具鏈。
 

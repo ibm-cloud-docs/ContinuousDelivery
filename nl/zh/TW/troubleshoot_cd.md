@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-11"
+lastupdated: "2019-06-20"
 
 keywords: troubleshoot, IBM Cloud Continuous Delivery
 
@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -100,7 +101,7 @@ GitHub 工具整合未新增至工具鏈。
 
 1. 如果您要在伺服器上建立公用儲存庫，請清除**將此儲存庫設為專用**勾選框。
 1. 如果您要使用 GitLab Issues 進行問題追蹤，請選取**啟用 GitLab Issues** 勾選框。
-1. 如果您要透過建立確定的標籤和註解以及確定所參照之問題的標籤和註解來追蹤程式碼變更部署，請選取**追蹤程式碼變更部署**勾選框。如需相關資訊，請參閱[使用工具鏈追蹤程式碼的部署位置 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}。
+1. 如果您要透過建立確定的標籤和註解以及確定所參照之問題的標籤和註解來追蹤程式碼變更部署，請選取**追蹤程式碼變更部署**勾選框。如需相關資訊，請參閱[使用工具鏈追蹤程式碼的部署位置](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}。
 1. 按一下**建立整合**。
 
 如需配置 GitLab 工具整合的相關資訊，請參閱[配置 GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)。
@@ -125,9 +126,9 @@ GitHub 工具整合未新增至工具鏈。
 
 在您有個人存取記號之後，可以建立 URL 以從其他地區存取儲存庫。配置工具整合時，請在**來源儲存庫 URL** 欄位中，更新儲存庫 URL 以使用使用者名稱及存取記號。
 
-`https://user:XXXXXXX@git.ng.bluemix.net/group/node-hello-world`
+`https://user:XXXXXXX@us-south.git.cloud.ibm.com/group/node-hello-world`
 
-其中 `user` 是 GitLab 使用者名稱、`XXXXXXX` 是存取記號、[`group` ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/user/group/index.md){:new_window} 是儲存庫儲存所在的群組，而 `node-hello-world` 是儲存庫名稱。
+其中 `user` 是 GitLab 使用者名稱、`XXXXXXX` 是存取記號、[`group`](https://us-south.git.cloud.ibm.com/help/user/group/index.md){: external} 是儲存庫儲存所在的群組，而 `node-hello-world` 是儲存庫名稱。
 
 如果您的 GitLab 儲存庫不在 GitLab 群組內，則 `group` 的值會與您的使用者名稱相同。
 {: tip}
@@ -174,13 +175,18 @@ GitHub 工具整合未新增至工具鏈。
 
 * 如果您的私密金鑰不在預設位置中，則請使用下列指令以在環境變數中指定它：
 
-`GIT_SSH_COMMAND='ssh -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+```
+  GIT_SSH_COMMAND='ssh -i/path/to/private_key_file' git clone git@host:owner/repo.git
+```
 
 * 若要使用連線資訊來除錯此問題，請將 -v 或 -vvv 旗標新增至 `GIT_SSH_COMMAND` 環境變數：
 
-`GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git`
-
-`GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git`
+```
+  GIT_SSH_COMMAND='ssh -vvv git clone git@host:owner/repo.git
+```
+```
+  GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git
+```
 
 
 ## 我已嘗試透過電子郵件將使用者新增至 GitLab 專案，但他們未收到邀請。如何將他們新增至專案？
@@ -214,7 +220,7 @@ GitHub 工具整合未新增至工具鏈。
 
 `This pipeline was created, but might be missing jobs, stages, or other resources. You can use this pipeline, or if you prefer, you can delete it and create another pipeline.`
 
-一般而言，pipeline.yaml 定義中的錯誤會導致此問題。
+通常，pipeline.yaml 定義中的錯誤會導致此問題。
 {: tsCauses}
    
 您可以使用下列任何方法來除錯此錯誤：
@@ -223,6 +229,42 @@ GitHub 工具整合未新增至工具鏈。
 * 使用管線使用者介面來建立範例管線，以抄寫您正在嘗試使用範本所建置的管線。將 `/yaml` 附加至管線 URL，以產生可用來尋找顯著差異的類似 pipeline.yaml 檔案。例如，`https://cloud.ibm.com/devops/pipelines/<your pipeline id>/yaml?env_id=<your region>`。
 
 * 使用遠端控制工具鏈建立機制。在**建立工具鏈**頁面上，開啟除錯器，並評估 `window.Testflags = {nocreate: 1}` 表示式。當您在此模式按一下**建立工具鏈**時，不會建立工具鏈。相反地，傳遞給 API 的資訊會傳回給主控台，而您可以在其中進行檢閱。
+
+
+## 我已嘗試使用 Delivery Pipeline 來部署 Kubebes，為何我會收到有關物件無效的錯誤？ 
+{: troubleshoot-cd-pipeline-kubernetes}
+{: troubleshoot}
+
+1.0 管線基礎映像檔包含 kibectl 1.14.2 版。如果您正在連接的 Kubernetes 叢集正在執行更新版本的 Kubernetes，則您可能會收到錯誤。 
+
+嘗試使用 Delivery Pipeline 部署至 Kubernetes 時，收到下列錯誤訊息：
+{: tsSymptoms}
+
+`error:SchemaeError(io.k8s.api.core.v1.SecretProjection): invalid object doesn't have additional properties`
+
+通常，當管線基礎映像檔中 kubectl 指令的版本與正在叢集中執行的 Kubernetes 版本不相容時，便會造成此問題。
+{: tsCauses}
+   
+您可以使用下列任何方法來解決此問題：
+{: tsResolve}
+
+* 使用更新的管線基礎映像檔版本，建立時，包括目前發行的 kubectl 版本。如需如何指定最新映像檔版本的相關資訊，請參閱[指定映像檔版本](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline_versioned_base_images#specify_base_image_version)。
+
+* 確定您的管線工作正在執行正確的 kibptl 版本。例如，將下列幾行新增至管線工作的開頭，以執行 kubbectl 1.14.2 版：
+
+```
+  curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.14.2/bin/linux/amd64/kubectl
+  chmod +x ./kubectl
+  sudo mv ./kubectl /usr/local/bin/kubectl
+```
+
+如果是從 1.0 管線基礎映像檔執行 kubectl 1.14.2 版，則無法使用 sudo 選項。請將 sudo 一行取代為下列指令，將 kubectl 新增至您的路徑：
+```
+   mkdir ~/.bin && export PATH=~/.bin:$PATH && mv ./kubectl ~/.bin/kubectl 
+```
+
+如需存取您需要的確切 kubectl 版本的相關資訊，請參閱[安裝及設定 kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux){: external}。
+{: tip}
 
 
 ## 我已配置工具鏈的工具整合，但為什麼並未配置它？

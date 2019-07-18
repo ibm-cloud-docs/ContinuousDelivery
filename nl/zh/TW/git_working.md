@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-01"
+lastupdated: "2019-06-20"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -23,7 +24,7 @@ subcollection: ContinuousDelivery
 # {{site.data.keyword.gitrepos}}
 {: #git_working}
 
-使用 IBM 所管理並以 [GitLab Community Edition ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://about.gitlab.com/){:new_window} 為建置基礎的 Git 儲存庫及問題追蹤器，來與團隊分工合作並且管理原始碼。
+使用 IBM 所管理並以 [GitLab Community Edition](https://about.gitlab.com/){: external} 為建置基礎的 Git 儲存庫及問題追蹤器，來與團隊分工合作並且管理原始碼。
 {: shortdesc}
 
 只邀請您有個人或業務關係的人，以合作進行一個專案。使用 Git 儲存庫邀請的使用者，如用途不是要合作進行專案，則其服務存取權可能會遭到暫停或撤銷。
@@ -48,7 +49,7 @@ GitHub 及 Git 指令行都是 GitLab 的可存取替代方案。
 ## 在本端使用 {{site.data.keyword.gitrepos}}
 {: #git_locally}
 
-您可以在本端存取 {{site.data.keyword.gitrepos}} 中所儲存的 Git 儲存庫。如需在本端設定 Git 的指示，請參閱[在指令行上開始使用 Git ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/gitlab-basics/start-using-git){:new_window}。
+您可以在本端存取 {{site.data.keyword.gitrepos}} 中所儲存的 Git 儲存庫。如需在本端設定 Git 的指示，請參閱[在指令行上開始使用 Git](https://us-south.git.cloud.ibm.com/help/gitlab-basics/start-using-git){: external}。
 
 {{site.data.keyword.gitrepos}} 只支援使用 TLS1.2 的 HTTPS 連線。如果您使用 Eclipse 來連接，您可能需要為您的 Java&trade; 版本指定此通訊協定，新增 `-Dhttps.protocols=TLSv1.2` 至 eclipse.ini 檔，然後重新啟動 Eclipse。
 {: tip}
@@ -64,21 +65,21 @@ GitHub 及 Git 指令行都是 GitLab 的可存取替代方案。
 若要透過 HTTPS 向 Git 儲存庫進行鑑別，您必須建立個人存取記號。
 {: tip}
 
-1. 在 {{site.data.keyword.gitrepos}} User Settings 儀表板上的 [Access Tokens 頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/profile/personal_access_tokens?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}，鍵入您要為其建立存取記號的應用程式名稱。例如 `Git CLI`。
+1. 在「{{site.data.keyword.gitrepos}} 使用者設定」儀表板的[存取記號頁面](https://us-south.git.cloud.ibm.com/profile/personal_access_tokens){: external}上，鍵入您要為其建立存取記號的應用程式名稱。例如 `Git CLI`。
 1. 選用項目：選擇存取記號的到期日期。
 1. 選取 **api** 勾選框，以建立使用 api 作為範圍的個人存取記號。
 1. 按一下 **Create Personal Access Token**。請將您的存取記號記錄在安全的位置，以供未來使用。
-1. 在 [Account 頁面 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window} 的 Change username 區段，找到您的 {{site.data.keyword.gitrepos}} 使用者名稱。您的使用者名稱也會顯示為您建立之任何個人 Git 儲存庫 URL 的第一個區段。
+1. 在[帳戶頁面](https://us-south.git.cloud.ibm.com/profile/account){: external}的「變更使用者名稱」區段中，找出您的 {{site.data.keyword.gitrepos}} 使用者名稱。您的使用者名稱也會顯示為您建立之任何個人 Git 儲存庫 URL 的第一個區段。
 1. 使用您的 {{site.data.keyword.gitrepos}} 使用者名稱及個人存取記號，從外部 Git 用戶端向 Git 儲存庫進行鑑別。
 
-若要進一步瞭解，請參閱 [Personal Access Tokens ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/api/README.html#personal-access-tokens){:new_window}。
+若要進一步瞭解，請參閱[個人存取記號](https://us-south.git.cloud.ibm.com/help/api/README.html#personal-access-tokens){: external}。
 
 ### 建立 SSH 金鑰  
 {:create_ssh }
 
-若要建立 SSH 金鑰，請參閱 [How to create your SSH Keys ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/gitlab-basics/create-your-ssh-keys){:new_window}。使用 SSH 鑑別來存取儲存庫，可能需要額外配置 Proxy 及防火牆。
+若要建立 SSH 金鑰，請參閱[如何建立您的 SSH 金鑰](https://us-south.git.cloud.ibm.com/help/gitlab-basics/create-your-ssh-keys){: external}。使用 SSH 鑑別來存取儲存庫，可能需要額外配置 Proxy 及防火牆。
 
-若要進一步瞭解，請參閱 [SSH ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git.ng.bluemix.net/help/ssh/README){:new_window}。
+若要進一步瞭解，請參閱 [SSH](https://us-south.git.cloud.ibm.com/help/ssh/README){: external}。
 
 ## 實體檔及儲存庫大小限制
 {: #git_limits}
@@ -88,8 +89,8 @@ GitHub 及 Git 指令行都是 GitLab 的可存取替代方案。
 ## 使用指導教學：{{site.data.keyword.gitrepos}}
 {: #git_tutorials}
 
-請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage){:new_window} 上的其中一個指導教學：
+請參閱 [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external} 上的其中一個指導教學：
 
-  * [使用「開發 Cloud Foundry 應用程式」工具鏈建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。學習如何從範本建立開放式工具鏈，以及使用工具鏈來持續交付 "Hello World" 應用程式。
+  * [使用「開發 Cloud Foundry 應用程式」工具鏈建立及使用您的第一個工具鏈](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}。學習如何從範本建立開放式工具鏈，以及使用工具鏈來持續交付 "Hello World" 應用程式。
 
-  * [使用「在 Cloud Foundry 上開發及測試微服務」工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。學習如何從具有三個微服務的範本建立工具鏈，以及使用工具鏈來持續交付線上商店。
+  * [使用「在 Cloud Foundry 上開發及測試微服務」工具鏈](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}。學習如何從具有三個微服務的範本建立工具鏈，以及使用工具鏈來持續交付線上商店。

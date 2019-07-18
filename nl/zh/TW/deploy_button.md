@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud button, yml file, build file
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -33,7 +34,7 @@ subcollection: ContinuousDelivery
 
 3. 建立的工具鏈包括 Git 儲存庫的新專用複製、用於建置及部署程式碼變更的管線、用於在「雲端」上編輯程式碼的 Eclipse Orion {{site.data.keyword.webide}}，以及問題追蹤器。
 
-  如果 `.bluemix` 目錄包含 `toolchain.yml` 檔案，則會使用此檔案來指定工具鏈的工具整合。如需 `toolchain.yml` 檔案的相關資訊，請參閱[建立自訂工具鏈](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}。
+  如果 `.bluemix` 目錄包含 `toolchain.yml` 檔案，則會使用此檔案來指定工具鏈的工具整合。如需 `toolchain.yml` 檔案的相關資訊，請參閱[建立自訂工具鏈](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom)。
   {: tip}
 
 4. 如果應用程式需要建置檔，則會自動偵測建置檔，並建置應用程式。
@@ -48,10 +49,10 @@ subcollection: ContinuousDelivery
 
 請參閱公用 {{site.data.keyword.gitrepos}} 儲存庫的應用程式按鈕範例：
 
-[![部署至 IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
+[![部署至 IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://us-south.git.cloud.ibm.com/idsorg/sample-java-cloudant){: external}
 請參閱公用 GitHub 儲存庫的應用程式按鈕範例：
 
-[![部署至 IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
+[![部署至 IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){: external}
 ## 建立按鈕 {: #create-button}
 
 若要建立「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕，請複製並修改下列其中一個 Snippet 範本。請在 URL 中指定 Git 儲存庫及分支。
@@ -90,8 +91,6 @@ subcollection: ContinuousDelivery
 
 * 如果您偏好在本端儲存影像，則可以下載影像，並將它儲存在 Git 儲存庫中。請調整路徑來使用影像的相對位置。
 
-* 如果您要使用按鈕的翻譯版本，則可以遠端參照它，或從 [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window} 進行下載。
-
 ## 儲存庫考量{: #button-repo}
 
 請針對「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕中所使用的儲存庫，檢閱這些考量。
@@ -104,10 +103,10 @@ subcollection: ContinuousDelivery
 
 支援的建置器包括：
 
-* [Ant ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")：](http://ant.apache.org/manual/using.html){:new_window}`build.xml`，可將輸出建置至 `./output/` 資料夾
-* [Gradle ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")：](https://docs.gradle.org/current/userguide/getting_started.html){:new_window}`/build.gradle`，可將輸出建置至 `.` 資料夾
-* [Grunt ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")：](http://gruntjs.com/getting-started#the-gruntfile){:new_window}`/Gruntfile.js`，可將輸出建置至 `.` 資料夾
-* [Maven ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")：](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:new_window}`/pom.xml`，可將輸出建置至 `./target/` 資料夾
+* [Ant：](http://ant.apache.org/manual/using.html){: external}`build.xml`，可將輸出建置至 `./output/` 資料夾
+* [Gradle：](https://docs.gradle.org/current/userguide/getting_started.html){:external}`/build.gradle`，可將輸出建置至 `.` 資料夾
+* [Grunt：](http://gruntjs.com/getting-started#the-gruntfile){: external}`/Gruntfile.js`，可將輸出建置至 `.` 資料夾
+* [Maven：](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){: external}`/pom.xml`，可將輸出建置至 `./target/` 資料夾
 
 ### 管線檔需求
 {: pipeline_file}
@@ -116,7 +115,7 @@ subcollection: ContinuousDelivery
 
 如果 `.bluemix` 目錄中沒有 `pipeline.yml` 檔案，則「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕將會使用兩個階段來建立預設管線：「建置」階段及部署至 Cloud Foundry 的「部署」階段。
 
-若要建立管線檔，請參閱[自訂工具鏈管線指示](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml)中的範例檔案。就像當您在 Web 介面中定義管線時，會建立階段及工作、設定輸入及環境變數，以及新增 Script，以文字定義管線。您也可以在[此示範專案](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix)中查看若干較複雜的管線檔。
+若要建立管線檔，請參閱[自訂工具鏈管線指示](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml)中的範例檔案。就像當您在 Web 介面中定義管線時，會建立階段及工作、設定輸入及環境變數，以及新增 Script，以文字定義管線。您也可以在[此示範專案](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix){: external}中查看若干較複雜的管線檔。
 
 ### 容器 Dockerfile 需求
 {: container_dockerfile}
@@ -125,11 +124,11 @@ subcollection: ContinuousDelivery
 
 Dockerfile 用來作為應用程式的一種建置 Script。如果在儲存庫中偵測到 Dockerfile，會先將應用程式自動建置至映像檔，再將它部署在容器中。如果必須先建置應用程式本身，再將應用程式建置至映像檔，請包括應用程式的建置 Script 以及 Dockerfile。
 
-若要進一步瞭解如何建立 Dockerfile，請參閱 [Docker 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.docker.com/reference/builder/){:new_window}。若要遵循使用工具鏈範本部署至 Kubernetes 的逐步指示，請參閱[指導教學：使用「開發 Kubernetes 應用程式」工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window} 或[指導教學：使用「使用 Helm 開發 Kubernetes 應用程式」工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window}。
+若要進一步瞭解如何建立 Dockerfile，請參閱 [Docker 文件](https://docs.docker.com/reference/builder/){: external}。若要遵循使用工具鏈範本部署至 Kubernetes 的逐步指示，請參閱[指導教學：使用「開發 Kubernetes 應用程式」工具鏈](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){: external}或[指導教學：使用「使用 Helm 開發 Kubernetes 應用程式」工具鏈](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){: external}。
 
-若要瞭解如何將 Cloud Foundry 應用程式移植至 Kubernetes 叢集，請參閱[指導教學：移植 Cloud Foundry 應用程式以部署至工具鏈中的 Kubernetes ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){:new_window}。  
+若要瞭解如何將 Cloud Foundry 應用程式移植至 Kubernetes 叢集，請參閱[指導教學：移植 Cloud Foundry 應用程式以部署至工具鏈中的 Kubernetes](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){: external}。  
 
-若要手動建立容器特有的 `pipeline.yml`，請參閱 [GitHub 中的範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Puquios/){:new_window}。
+若要手動建立容器特有的 `pipeline.yml`，請參閱 [GitHub 中的範例](https://github.com/Puquios/){: external}。
 
 ### 資訊清單檔需求（適用於部署至 Cloud Foundry 的應用程式）
 {: #manifest_files}

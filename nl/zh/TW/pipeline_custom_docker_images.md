@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-19"
 
 keywords: pipeline base image, custom Docker, IBM Cloud team uses
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -39,11 +40,11 @@ subcollection: ContinuousDelivery
 如果 **Docker 映像檔名稱**欄位未完成，則會使用標準管線基礎映像檔。
 {: tip}
 
-依預設，會在 [Docker Hub ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://hub.docker.com/){: new_window} 上搜尋您的儲存庫。如果您使用另一個 Docker 登錄（例如 {{site.data.keyword.registrylong}}），則可以使用完整 DNS 名稱。您也可以在 Docker Hub 上使用映像檔的完整名稱。例如，`registry.hub.docker.com/library/maven:3.5.3-ibmjava`。
+依預設，會在 [Docker Hub](https://hub.docker.com/){: external} 上搜尋您的儲存庫。如果您使用另一個 Docker 登錄（例如 {{site.data.keyword.registrylong}}），則可以使用完整 DNS 名稱。您也可以在 Docker Hub 上使用映像檔的完整名稱。例如，`registry.hub.docker.com/library/maven:3.5.3-ibmjava`。
 
 Docker 映像檔的 `tag` 是選用項目。依預設，如果您未指定標籤，則會設為 `latest`。預設值 `latest` 只是儲存庫擁有者必須管理的標籤名稱。這不表示依時間順序而言，此 Docker 映像檔是最新的映像檔。
 
-您可以在 Docker Hub 中找到大型儲存庫社群。IBM 會管理 [https://hub.docker.com/u/ibmcom/ ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://hub.docker.com/u/ibmcom/){: new_window} 上 IBM Cloud 團隊所使用的數個公用儲存庫。`ibmcom/ibmjava` 及 `ibmcom/ibmnode` 儲存庫可用作建置基礎。 
+您可以在 Docker Hub 中找到大型儲存庫社群。IBM 會管理 [https://hub.docker.com/u/ibmcom/](https://hub.docker.com/u/ibmcom/){: external} 上 IBM Cloud 團隊所使用的數個公用儲存庫。`ibmcom/ibmjava` 及 `ibmcom/ibmnode` 儲存庫可用作建置基礎。 
 
 ## 使用專用映像檔登錄
 {: #private_image_registry}
@@ -52,7 +53,7 @@ Docker 映像檔的 `tag` 是選用項目。依預設，如果您未指定標籤
 
 針對大部分登錄，您可以使用已提供給您的使用者名稱及密碼。如果您使用 {{site.data.keyword.registrylong_notm}} 來儲存專用映像檔，則必須使用平台「API 金鑰」來進行鑑別。 
 
-1. [要求平台 API 金鑰 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/iam/#/apikeys){: new_window}，並確定您已儲存金鑰。 
+1. [要求平台 API 金鑰](https://cloud.ibm.com/iam/#/apikeys){: external}，並確定您已儲存金鑰。 
 1. 針對 `DOCKER_USERNAME` 使用 `iamapikey` 並針對 `DOCKER_PASSWORD` 使用您所儲存的平台「API 金鑰」，來建立兩階段環境內容。
 
  ![{{site.data.keyword.registrylong_notm}} 認證](images/custom-image-private-repository.png)

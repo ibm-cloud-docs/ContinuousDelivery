@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-03-27"
+lastupdated: "2019-06-18"
 
 keywords: IBM Cloud Public, Use Developer Insights, US South
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -30,19 +31,19 @@ subcollection: ContinuousDelivery
 ## {{site.data.keyword.Bluemix_notm}} Public 與 {{site.data.keyword.Bluemix_notm}} Dedicated 的工具鏈可用性比較
 {: #public_and_dedicated}
 
-{{site.data.keyword.Bluemix_notm}} Public 是一種開放式標準雲端型平台，您可以在其中建置、執行及管理 [http://cloud.ibm.com ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://cloud.ibm.com){:new_window} 所存取的應用程式。{{site.data.keyword.Bluemix_notm}} Dedicated 在專用 SoftLayer 環境中提供 {{site.data.keyword.Bluemix_notm}} 功能，該環境可安全地連接至 {{site.data.keyword.Bluemix_notm}} Public 環境及網路。您公司的 {{site.data.keyword.Bluemix_notm}} Dedicated 環境可能未包含與 {{site.data.keyword.Bluemix_notm}} Public 網站相同的工具整合。
+{{site.data.keyword.Bluemix_notm}} Public 是一種開放式標準雲端型平台，您可以在其中建置、執行及管理 [http://cloud.ibm.com](http://cloud.ibm.com){: external} 所存取的應用程式。{{site.data.keyword.Bluemix_notm}} Dedicated 在專用基礎架構環境中提供 {{site.data.keyword.Bluemix_notm}} 功能，該環境可安全地連接至 {{site.data.keyword.Bluemix_notm}} Public 環境及網路。您公司的 {{site.data.keyword.Bluemix_notm}} Dedicated 環境可能未包含與 {{site.data.keyword.Bluemix_notm}} Public 網站相同的工具整合。
 
-對於原始碼管理及問題追蹤，{{site.data.keyword.Bluemix_notm}} Public 一般會使用 {{site.data.keyword.gitrepos}}（由 IBM 所管理並以 [GitLab Community Edition ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://about.gitlab.com/){:new_window} 為建置基礎）或 GitHub (github.com)。{{site.data.keyword.Bluemix_notm}} Dedicated 也可以使用 github.com，但一般會使用公司所安裝或 IBM 所管理的 {{site.data.keyword.ghe_short}}。
+對於原始碼管理及問題追蹤，{{site.data.keyword.Bluemix_notm}} Public 一般會使用 {{site.data.keyword.gitrepos}}（由 IBM 所管理並以 [GitLab Community Edition](https://about.gitlab.com/){: external} 為建置基礎）或 GitHub (github.com)。{{site.data.keyword.Bluemix_notm}} Dedicated 也可以使用 github.com，但一般會使用公司所安裝或 IBM 所管理的 {{site.data.keyword.ghe_short}}。
 
 在所選取地區的 {{site.data.keyword.Bluemix_notm}} Public 上以及 {{site.data.keyword.Bluemix_notm}} Dedicated 上可以使用 {{site.data.keyword.contdelivery_short}}。視您是在 {{site.data.keyword.Bluemix_notm}} Public 還是 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用 {{site.data.keyword.contdelivery_short}} 而定，工具鏈會有所不同。
 
-雖然工具鏈目前無法在所有地區中使用，但是您可以配置工具鏈將應用程式部署至所有地區。若要進一步瞭解，請嘗試[將安全 Web 應用程式部署至多個地區指導教學](/docs/tutorials?topic=solution-tutorials-multi-region-webapp){: new_window}。
+雖然工具鏈目前無法在所有地區中使用，但是您可以配置工具鏈將應用程式部署至所有地區。若要進一步瞭解，請嘗試[將安全 Web 應用程式部署至多個地區指導教學](/docs/tutorials?topic=solution-tutorials-multi-region-webapp)。
 {: tip}
 
 |工具鏈|{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
-|工具整合|如需所支援工具整合的清單，請參閱[配置工具整合](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。|可用的工具整合取決於 {{site.data.keyword.contdelivery_short}} 在您環境中的設定方式。|
-|從範本建立工具鏈|登入 [{{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://cloud.ibm.com/devops){:new_window}|登入 {{site.data.keyword.Bluemix_notm}} 的「專用」環境。|
+|工具整合|如需所支援工具整合的清單，請參閱[配置工具整合](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations)。|可用的工具整合取決於 {{site.data.keyword.contdelivery_short}} 在您環境中的設定方式。|
+|從範本建立工具鏈|登入 [{{site.data.keyword.Bluemix_notm}}](http://cloud.ibm.com/devops){: external}。|登入 {{site.data.keyword.Bluemix_notm}} 的「專用」環境。|
 |從應用程式建立工具鏈|應用程式會配置成從已移入應用程式入門範本程式碼的新 GitHub 儲存庫進行持續交付。|應用程式會配置成從已移入應用程式入門範本程式碼的新 GitHub 或 GitHub Enterprise 儲存庫進行持續交付。|  
 |交付管線部署地區|Cloud Foundry 部署工作可以使用所有 {{site.data.keyword.Bluemix_notm}} Public 地區。|{{site.data.keyword.Bluemix_notm}} Dedicated 地區可供使用。視 {{site.data.keyword.contdelivery_short}} 在您特定環境中的設定方式而定，也可使用相同客戶帳戶內的其他「專用」或「本端」地區。|
 |交付管線部署工作|所有[工作類型](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs)都可供使用。|可能無法使用與「專用」環境中未安裝之 {{site.data.keyword.Bluemix_notm}} 服務相依的工作類型。例如，在沒有 {{site.data.keyword.containerlong_notm}} 的環境中，可能無法使用容器建置及部署工作類型。|
@@ -52,21 +53,21 @@ subcollection: ContinuousDelivery
 ## 工具鏈範本
 {: #templates}
 
-您可以使用範本作為起點來[建立工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/devops/create){: new_window}。工具鏈範本包含可支援開發、部署及操作作業的特定工具整合集。
+您可以使用範本作為起點來[建立工具鏈](https://cloud.ibm.com/devops/create){: external}。工具鏈範本包含可支援開發、部署及操作作業的特定工具整合集。
 
 您公司的 {{site.data.keyword.Bluemix_notm}} Dedicated 環境可能未包含與 {{site.data.keyword.Bluemix_notm}} Public 網站相同的工具鏈範本。{{site.data.keyword.Bluemix_notm}} Public 及 {{site.data.keyword.Bluemix_notm}} Dedicated 上可用的工具鏈範本可能包含 {{site.data.keyword.Bluemix_notm}} Dedicated 上的不同工具整合集。
 {: note}
 
-部分工具鏈範本包含 {{site.data.keyword.contdelivery_short}} 服務所屬的工具整合。如果資源群組或組織中還沒有該服務的實例，則在按一下**建立**以建立工具鏈時，會使用所選取的免費「精簡」方案自動新增服務。如需相關資訊及術語，請參閱 [{{site.data.keyword.Bluemix_notm}} 型錄 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/catalog/services/continuous-delivery/){:new_window}。
+部分工具鏈範本包含 {{site.data.keyword.contdelivery_short}} 服務所屬的工具整合。如果資源群組或組織中還沒有該服務的實例，則在按一下**建立**以建立工具鏈時，會使用所選取的免費「精簡」方案自動新增服務。如需相關資訊及術語，請參閱 [{{site.data.keyword.Bluemix_notm}} 型錄](https://cloud.ibm.com/catalog/services/continuous-delivery/){: external}。
 
-「在 Cloud Foundry 上開發及測試微服務」工具鏈會部署具有 Cloudant 儲存庫所支援之型錄及訂單 API 的應用程式。部署應用程式時，會建立不需要成本的 Cloudant 服務實例。如需相關資訊及術語，請參閱 [{{site.data.keyword.Bluemix_notm}} 型錄 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/catalog/services/cloudant-nosql-db/){:new_window}。
+「在 Cloud Foundry 上開發及測試微服務」工具鏈會部署具有 Cloudant 儲存庫所支援之型錄及訂單 API 的應用程式。部署應用程式時，會建立不需要成本的 Cloudant 服務實例。如需相關資訊及術語，請參閱 [{{site.data.keyword.Bluemix_notm}} 型錄](https://cloud.ibm.com/catalog/services/cloudant-nosql-db/){: external}。
 
 預先定義的 DevOps 工具鏈範本是解決真實情境的建議範例，而且各包含一個範例應用程式。從範本建立工具鏈時，指定 git 儲存庫即可使用自己的應用程式。
 
 <table valign="top" padding="2px">
   <caption>表 2. 工具鏈範本</caption>
   <tr>
-    <th style="width:25%; text-align:left; vertical-align:top">範本及可用的地區</th>
+    <th style="width:25%; text-align:left; vertical-align:top">範本及可用地區</th>
     <th style="width:50%; text-align:left; vertical-align:top">說明及可用的指導教學</th>
     <th style="text-align:left; vertical-align:top">包含的工具</th>
   </tr>
@@ -113,6 +114,37 @@ subcollection: ContinuousDelivery
   </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>Git Repos and Issue Tracking</li><li>搭配 Helm 圖表的 {{site.data.keyword.containerlong_notm}}（Kurbernetes 叢集）
   </li></ul>
   </td></tr>
+  
+  <tr><td>
+  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-helm-toolchain" target="_blank">「在 Kubernetes 上使用 Helm 開發及測試微服務」工具鏈
+   <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a> <br><br>
+
+  可以在美國南部、德國及英國使用
+
+  </td><td>
+  搭配此雲端原生工具鏈，您可以使用持續整合與持續部署管線的組合，將個別開發的微服務協調至跨環境升級的版本。此工具鏈會使用範例線上商店應用程式，其中包含三個微服務：Catalog API、Orders API 以及呼叫這兩個 API 的使用者介面。已預先配置此工具鏈，以進行持續交付、來源控制、功能測試、問題追蹤、線上編輯及警示通知。<br><br>
+  嘗試指導教學：<a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-with-kubernetes-and-helm-toolchain" target="_blank">使用「利用 Kubernetes 及 Helm 開發及測試微服務」工具鏈 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>	 <br><br>
+  </td><td><ul>
+  <li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>Git Repos and Issue Tracking</li><li>{{site.data.keyword.DRA_full}}
+  </li><li>PagerDuty</li><li>Sauce Labs		</li><li>搭配 Helm 圖表的 {{site.data.keyword.containerlong_notm}}（Kurbernetes 叢集）
+  </li></ul>
+  </td></tr>
+  
+  <tr><td>
+  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcanary-testing-istio-toolchain" target="_blank">「在 Kubernetes 中使用 Istio 進行 Canary 測試」工具鏈
+   <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a> <br><br>
+
+  可以在美國南部、美國東部、德國、東京及英國使用
+
+  </td><td>
+  使用此工具鏈，您可以安全地開發應用程式、進行 A/B 測試，並將應用程式部署至 {{site.data.keyword.containerlong_notm}} 所管理的 Kubernetes 叢集。雖然，工具鏈依預設會使用範例 Node.js Hello World 應用程式，但您可以改為鏈結至自己的 GitHub 儲存庫。此工具鏈是針對持續交付預先配置的，搭配 A/B 測試、Vulnerability Advisor來源控制問題追蹤vio nhe 線上編輯。<br><br>
+  嘗試指導教學：<a href="https://www.ibm.com/cloud/garage/tutorials/use-canary-testing-in-kubernetes-using-istio-toolchain" target="_blank">使用「在 Kubernetes 使用 Istio 執行您的第一個 Canary 測試」工具鏈 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>	 <br><br>
+  </td><td><ul>
+  <li>{{site.data.keyword.deliverypipeline}}
+  </li><li>Eclipse Orion {{site.data.keyword.webide}}</li><li>Git Repos and Issue Tracking</li><li>{{site.data.keyword.containerlong_notm}}（Kurbernetes 叢集）
+  </li></ul>
+  </td></tr>
 
   <tr><td>
   <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdra-toolchain-demo" target="_blank">「開發及測試 Cloud Foundry 應用程式」工具鏈
@@ -149,7 +181,7 @@ subcollection: ContinuousDelivery
 </tr>
 
   <tr>
-  <td><a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" targe="_blank">
+  <td><a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" target="_blank">
 「搭配 Cloud Foundry 的 Garage Method 指導教學」工具鏈 <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a> <br><br>
 
   可以在美國南部、美國東部、德國、東京及英國使用

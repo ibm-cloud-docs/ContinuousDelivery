@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
 
 keywords: user management function, tool integrations, Cloud Foundry org
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -48,7 +49,7 @@ subcollection: ContinuousDelivery
  有一些工具整合已預先配置，且不需要任何配置參數。您只能更新您所配置之工具整合的配置設定。
  {: tip}
 
- 完成設定的更新後，請按一下**儲存整合**。如需配置特定工具整合的相關資訊，請參閱[配置工具整合](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。
+ 完成設定的更新後，請按一下**儲存整合**。如需配置特定工具整合的相關資訊，請參閱[配置工具整合](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations)。
 
 ## 新增工具整合
 {: #adding_a_tool_integration}
@@ -74,7 +75,7 @@ subcollection: ContinuousDelivery
 ## 管理對資源群組中工具鏈的存取
 {: #managing_access_resource_groups}
 
-您可以使用 Identity and Access Management (IAM) 服務，來管理使用者對工具鏈的存取。如需使用 IAM 管理存取控制的相關資訊，請參閱[使用 Identity and Access Management 管理使用者對工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}。 
+您可以使用 Identity and Access Management (IAM) 服務，來管理使用者對工具鏈的存取。如需使用 IAM 管理存取控制的相關資訊，請參閱[使用 Identity and Access Management 管理使用者對工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security)。 
 
 只有屬於所選取 {{site.data.keyword.contdelivery_short}} 實例之授權使用者清單的使用者，才能使用 {{site.data.keyword.contdelivery_short}} 工具鏈的 Delivery Pipeline、Eclipse Orion {{site.data.keyword.webide}} 及 {{site.data.keyword.gitrepos}} 特性。您可以從所指定資源群組內所選取 {{site.data.keyword.contdelivery_short}} 實例的「管理」標籤中管理授權使用者授權。
 
@@ -93,7 +94,7 @@ subcollection: ContinuousDelivery
 您必須將使用者新增至工具鏈管理所在地區的工具鏈組織。如果工具鏈配置成將應用程式部署至不同地區，則仍會將應用程式部署至該地區。
 {: important}
 
-如果您使用的是 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}，則將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，使用者可以使用其 {{site.data.keyword.Bluemix_notm}} ID 及密碼來登入 {{site.data.keyword.ghe_short}}。使用者登入時，就會建立他們的帳戶。將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，並不會將他們自動新增至 {{site.data.keyword.ghe_short}} 儲存庫。必須由具有儲存庫管理專用權的人員來新增他們。如需相關資訊，請參閱[使用 Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，請遵循內部程序。
+如果您使用的是 {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}，則將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，使用者可以使用其 {{site.data.keyword.Bluemix_notm}} ID 及密碼來登入 {{site.data.keyword.ghe_short}}。使用者登入時，就會建立他們的帳戶。將使用者新增至 {{site.data.keyword.Bluemix_notm}} 組織及空間時，並不會將他們自動新增至 {{site.data.keyword.ghe_short}} 儲存庫。必須由具有儲存庫管理專用權的人員來新增他們。如需相關資訊，請參閱[使用 Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started)。如果您使用的是專屬受管理版本的 {{site.data.keyword.ghe_short}}，請遵循內部程序。
 
 ###管理工具鏈存取權的提示
 
@@ -131,10 +132,22 @@ subcollection: ContinuousDelivery
 
      * 指派組織中所選取空間的角色。
 
-     依預設，組織管理員會具有所有與組織相關聯之工具鏈的完整管理者專用權。若要將完整管理者專用權授與使用者，請選取**管理員**角色。「帳單管理員」及「審核員」角色不會影響工具鏈存取權。您稍後可以在「團隊目錄」頁面上變更角色。如需相關資訊，請參閱 [Cloud Foundry 角色](/docs/iam?topic=iam-cfaccess#cfaccess){: new_window}。
+     依預設，組織管理員會具有所有與組織相關聯之工具鏈的完整管理者專用權。若要將完整管理者專用權授與使用者，請選取**管理員**角色。「帳單管理員」及「審核員」角色不會影響工具鏈存取權。您稍後可以在「團隊目錄」頁面上變更角色。如需相關資訊，請參閱 [Cloud Foundry 角色](/docs/iam?topic=iam-cfaccess#cfaccess)。
      {: tip}
 
    使用者成為組織成員之後，請回到工具鏈的「管理」頁面，並將使用者新增至工具鏈。  
+
+
+## 組織工具鏈
+{: #organizing_toolchains}
+
+您可以將標籤新增至工具鏈以組織它們，並在稍後輕鬆地找到它們。標籤是您指派給工具鏈的標籤，以方便在工具鏈清單中過濾工具鏈。
+
+1. 在 DevOps 儀表板的**工具鏈**頁面上，找出要新增標籤的工具鏈，然後按一下**新增標籤**。
+1. 輸入您要新增至工具鏈之標籤的名稱。您可以新增多個標籤，以逗點區隔。
+1. 按一下**儲存**。
+
+如需標籤的相關資訊，請參閱[使用標籤](/docs/resources?topic=resources-tag#)。
 
 
 ## 刪除工具鏈
@@ -153,10 +166,10 @@ subcollection: ContinuousDelivery
 ##使用指導教學：使用工具鏈
 {: #toolchain-tutorial}
 
-請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage){:new_window} 上的這些指導教學：
+請參閱 [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external} 上的下列指導教學：
 
-  * [使用「開發 Cloud Foundry 應用程式」工具鏈建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。
+  * [使用「開發 Cloud Foundry 應用程式」工具鏈建立及使用您的第一個工具鏈](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}。
 
-  * [將工具鏈新增至應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}。
+  * [將工具鏈新增至應用程式](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}。
 
-  * [使用「在 Cloud Foundry 上開發及測試微服務」工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。
+  * [使用「在 Cloud Foundry 上開發及測試微服務」工具鏈](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}.

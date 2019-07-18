@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-18"
 
 keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
 
@@ -13,6 +13,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -29,14 +30,14 @@ subcollection: ContinuousDelivery
 
 開放式工具鏈適用於 {{site.data.keyword.Bluemix}} 的「公用」及「專用」環境。您可以使用兩種方式來建立工具鏈：使用範本來建立工具鏈，或從應用程式建立工具鏈。
 
-每個工具鏈都會與特定資源群組或組織相關聯。如果工具鏈與資源群組相關聯，則具有工具鏈資源或包含它的資源群組之「Identity and Access Management (IAM) 檢視者」許可權的任何使用者都可以存取工具鏈。如果工具鏈與組織相關聯，則任何屬於該組織成員的使用者都可以新增至其任何相關聯工具鏈的存取控制清單。如需 Cloud Foundry 組織中工具鏈之存取控制的相關資訊，請參閱[管理對 Cloud Foundry 組織中工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}。如需資源群組中工具鏈之存取控制的相關資訊，請參閱[管理對資源群組中工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window}。
+每個工具鏈都會與特定資源群組或組織相關聯。如果工具鏈與資源群組相關聯，則具有工具鏈資源或包含它的資源群組之「Identity and Access Management (IAM) 檢視者」許可權的任何使用者都可以存取工具鏈。如果工具鏈與組織相關聯，則任何屬於該組織成員的使用者都可以新增至其任何相關聯工具鏈的存取控制清單。如需 Cloud Foundry 組織中工具鏈之存取控制的相關資訊，請參閱[管理對 Cloud Foundry 組織中工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs)。如需資源群組中工具鏈之存取控制的相關資訊，請參閱[管理對資源群組中工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups)。
 
 ##從範本建立工具鏈   
 {: #creating_a_toolchain_from_a_template}
 
-您可以使用範本作為起點來[建立工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/devops/create){: new_window}，而此工具鏈包含一組特定的工具整合。進一步瞭解如何使用 [IBM Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/category/tools){:new_window} 中的範本。
+您可以使用範本作為起點來[建立工具鏈](https://cloud.ibm.com/devops/create){:external}，其中包含一組特定工具整合的工具鏈。進一步瞭解如何使用 [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage/category/tools){:external} 中的範本。
 
-1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Public，請登入 [{{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://cloud.ibm.com){:new_window}。
+1. 如果使用 {{site.data.keyword.Bluemix_notm}} Public，請登入 [{{site.data.keyword.Bluemix_notm}}](http://cloud.ibm.com){:external}。
 1. 如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，請登入 {{site.data.keyword.Bluemix_notm}} 的「專用」環境。
 1. 從 {{site.data.keyword.Bluemix_notm}} 功能表列的功能表中，按一下 **DevOps**。
 1. 在 DevOps 儀表板的**工具鏈**頁面上，按一下**建立工具鏈**。
@@ -57,7 +58,7 @@ subcollection: ContinuousDelivery
    資源群組適用於美國南部、美國東部、英國、德國及東京地區。Cloud Foundry 組織在美國南部、英國及德國地區中受到支援。
    {: important}
 
-1. 在「工具整合」區段中，選取您要配置給工具鏈的每一個工具整合。有些工具整合不需要進行配置。如需配置工具整合的相關資訊，請參閱[配置工具整合](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。
+1. 在「工具整合」區段中，選取您要配置給工具鏈的每一個工具整合。有些工具整合不需要進行配置。如需配置工具整合的相關資訊，請參閱[配置工具整合](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations)。
 1. 按一下**建立**。會自動執行數個步驟來設定工具鏈。視您選取的工具鏈範本以及使用的是 {{site.data.keyword.Bluemix_notm}} Public 還是 {{site.data.keyword.Bluemix_notm}} Dedicated 而定，設定的工具整合會有所不同。例如，當您在 {{site.data.keyword.Bluemix_notm}} Public 上建立「微服務」工具鏈時，會執行下列步驟：
 
  * 建立工具鏈。
@@ -79,7 +80,7 @@ subcollection: ContinuousDelivery
 1. 如果您使用入門範本套件建立應用程式，請在應用程式的詳細資料頁面上按一下**配置持續交付**。接下來，選取部署目標。如果您使用 {{site.data.keyword.Bluemix_notm}} Public，應用程式會配置成從已移入應用程式入門範本程式碼的新 GitHub 儲存庫進行持續交付。如果您使用 {{site.data.keyword.Bluemix_notm}} Dedicated，應用程式會配置成從已移入應用程式入門範本程式碼的新 GitHub 或 {{site.data.keyword.ghe_short}} 儲存庫進行持續交付。
 1. 在工具鏈配置頁面上，檢閱即將建立之工具鏈的圖表。此圖會顯示每個工具整合在工具鏈中的生命週期階段。
 1. 檢閱工具鏈設定的預設資訊。在 {{site.data.keyword.Bluemix_notm}} 中，可透過工具鏈名稱來識別工具鏈。如果您要使用不同的名稱，請變更工具鏈的名稱。
-1. 在「工具整合」區段中，選取您要配置給工具鏈的每一個工具整合。有些工具整合不需要進行配置。如需配置工具整合的相關資訊，請參閱[配置工具整合](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}。
+1. 在「工具整合」區段中，選取您要配置給工具鏈的每一個工具整合。有些工具整合不需要進行配置。如需配置工具整合的相關資訊，請參閱[配置工具整合](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations)。
 1. 按一下**建立**。會自動執行數個步驟來設定工具鏈。視您是在 {{site.data.keyword.Bluemix_notm}} Public 還是 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用工具鏈而定，設定的工具整合會有所不同。例如，當您從 {{site.data.keyword.Bluemix_notm}} Public 的應用程式建立工具鏈時，會執行下列步驟：
 
  * 建立工具鏈。
@@ -104,10 +105,10 @@ subcollection: ContinuousDelivery
 ## 使用指導教學：使用工具鏈
 {: #toolchain_tutorials}
 
-請參閱 [IBM&reg; Cloud Garage Method ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage){:new_window} 上的其中一個指導教學：
+請參閱 [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external} 上的其中一個指導教學：
 
-  * [使用「開發 Cloud Foundry 應用程式」工具鏈建立及使用您的第一個工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}。
+  * [使用「開發 Cloud Foundry 應用程式」工具鏈建立及使用您的第一個工具鏈](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}。
 
-  * [將工具鏈新增至應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}。
+  * [將工具鏈新增至應用程式](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}。
 
-  * [使用「在 Cloud Foundry 上開發及測試微服務」工具鏈 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}。
+  * [使用「在 Cloud Foundry 上開發及測試微服務」工具鏈](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}。

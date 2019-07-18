@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-28"
 
 keywords: Environment properties, IBM Java, pipeline environments
 
@@ -42,6 +42,7 @@ subcollection: ContinuousDelivery
 {: #deliverypipeline_envprop}
 
 ### 一般用途的內容
+下表列出並說明依預設可在管線環境中使用的每一個通用環境內容。
 
 |環境內容|說明|
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -61,18 +62,20 @@ subcollection: ContinuousDelivery
 |IDS_URL|現行管線的 URL。|
 |IDS_VERSION|正在部署的建置號碼，或 SCM ID。此內容僅適用於部署工作。
 |JOB_NAME|現行管線環境定義中的唯一工作 ID。|
-|PIPELINE_ARTIFACT_URL|在工作完成之後，可用來下載現行「建置」工作構件的 URL。您必須使用有效的 Bearer 記號來存取構件。|
+|PIPELINE_ARTIFACT_URL|在工作完成之後，可用來下載現行「建置」工作構件的 URL。您必須使用有效的持有人記號來存取構件。|
 |PIPELINE_INITIAL_STAGE_EXECUTION_ID|管線執行作業的唯一 ID。|
 |PIPELINE_KUBERNETES_CLUSTER_NAME |現行工作中所選取 Kubernetes 叢集的名稱。|
-|PIPELINE_LOG_URL|在工作完成之後，可用來下載現行工作日誌檔的 URL。您必須使用有效的 Bearer 記號來存取日誌檔。|
+|PIPELINE_LOG_URL|在工作完成之後，可用來下載現行工作日誌檔的 URL。您必須使用有效的持有人記號來存取日誌檔。|
 |PIPELINE_STAGE_INPUT_JOB_ID|現行階段的輸入工作 ID。|
 |PIPELINE_STAGE_INPUT_REV|現行階段的輸入修訂。|
 | PIPELINE_TRIGGERING_USER |管線工作的現行使用者|
 |TASK_ID|工作現行執行作業的唯一 ID。|
 |TMPDIR|儲存暫存檔的目錄位置。|
 |WORKSPACE|現行工作目錄的路徑。|
+{: caption="表 1. 通用環境內容" caption-side="top"}
 
 ### 運行環境及工具內容
+下表列出並說明依預設可在管線環境中使用的每一個運行環境及工具環境內容。
 
 |環境內容|說明|
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -84,11 +87,13 @@ subcollection: ContinuousDelivery
 |JAVA8_HOME|IBM Java 8 的路徑。|
 |MAVEN_HOME|Apache Maven 3.2.1 的路徑。|
 |NODE_HOME|Node.js 0.10.29 的路徑。|
+{: caption="表 2. 運行環境及工具環境內容" caption-side="top"}
 
 若要在管線的 Script 中使用 Apache Ant 1.10+，請將 `ANT_HOME` 設為 `$ANT_JAVA8_HOME` 並將 `JAVA_HOME` 設為 `$JAVA8_HOME`。
 {: tip}
 
 ### 部署內容
+下表列出並說明依預設可在管線環境中使用的每一個部署環境內容。
 
 |環境內容|說明|
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -99,6 +104,7 @@ subcollection: ContinuousDelivery
 |CF_SPACE_ID|若為部署，此為要部署到其中的空間 ID。|
 |CF_TARGET_URL|若為部署，此為 {{site.data.keyword.Bluemix_short}} 或 Cloud Foundry 的 URL。|
 |IDS_VERSION|若為部署，此為正在部署的應用程式版本或原始檔 ID。|
+{: caption="表 3. 部署環境內容" caption-side="top"}
 
 ## 預先安裝的資源
 {: #deliverypipeline_resources}
@@ -106,6 +112,7 @@ subcollection: ContinuousDelivery
 在每個管線中，已預先安裝數個運行環境、工具及 Node 模組。
 
 ### 運行環境及工具
+下表列出可在每一個管線中使用的每一個預先安裝的運行環境及工具。
 
 所有鏈結都在起始目錄中。
 {: tip}
@@ -123,6 +130,7 @@ subcollection: ContinuousDelivery
 |Apache Maven 3.2.1|maven|/opt/IBM/maven|
 |IBM Node|node|/opt/IBM/node|
 |IBM Rational Team Concert&trade; SCM Tools|RTC-SCM-Tools|/opt/IBM/RTC-SCM-Tools|
+{: caption="表 4. 運行環境及工具的鏈結名稱及路徑" caption-side="top"}
 
 管線環境提供 64 位元版本的 IBM Node 0.10、0.10.48、0.12、0.12.17、4.2、4.4.5、4.6.0、6.2.2 及 6.7.0。若要選擇版本，請使用 export 指令。
 

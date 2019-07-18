@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-14"
 
 keywords: ADD STAGE, Run Stage icon, JOBS tab
 
@@ -113,10 +113,10 @@ subcollection: ContinuousDelivery
    ```shell
    export JOB_LOG="$PIPELINE_LOG_URL"
    ```
-1. 在相同階段的後面工作中使用 `PIPELINE_LOG_URL` 來下載日誌檔，以將它匯出至不同的系統。使用 IBM Cloud Bearer 記號來存取日誌檔。
+1. 在相同階段的後面工作中使用 `PIPELINE_LOG_URL` 來下載日誌檔，以將它匯出至不同的系統。使用 IBM Cloud 持有人記號來存取日誌檔。
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
@@ -154,10 +154,10 @@ subcollection: ContinuousDelivery
    export JOB_ARTIFACT="$PIPELINE_ARTIFACT_URL"
    ```
    
-1. 在相同階段的後面工作中使用 `PIPELINE_ARTIFACT_URL` 來下載構件，以將它們匯出至不同的系統。使用 IBM Cloud Bearer 記號來存取構件。
+1. 在相同階段的後面工作中使用 `PIPELINE_ARTIFACT_URL` 來下載構件，以將它們匯出至不同的系統。使用 IBM Cloud 持有人記號來存取構件。
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )

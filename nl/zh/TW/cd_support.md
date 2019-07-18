@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-08"
+lastupdated: "2019-06-11"
 
 keywords: Continuous Delivery, Support tickets, Continuous Delivery service
 
@@ -22,33 +22,39 @@ subcollection: ContinuousDelivery
 # 取得 {{site.data.keyword.contdelivery_short}} 的協助及支援    
 {: #cd_support}  
 
-{{site.data.keyword.contdelivery_full}} 團隊會主動監視 {{site.data.keyword.contdelivery_short}} 服務及工具鏈問題的 developerWorks 討論區。
+{{site.data.keyword.contdelivery_full}} 團隊會主動監視 Slack 頻道及 IBM Developer Answers，以取得 {{site.data.keyword.contdelivery_short}} 服務及工具鏈的相關問題。
 
-<table>
+| 取得協助 | 提出問題 |
+|----------|---------|
+| 透過 Slack 頻道聯繫我們 | <a class="xref" href="https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/slack_us.png" alt="Slack us"/></a> |
+| 瀏覽最新的文章，並 IBM Developer Answers 提出問題及回答問題 | <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/post_question.png" alt="IBM Developer Answers"/></a> |
+{: caption="表 1. {{site.data.keyword.contdelivery_short}} 的協助與支援" caption-side="top"}
+
+<!--<table>
 <tr>
 <th style="width:20%"> &nbsp; &nbsp; &nbsp;</th>
  <th style="text-align:center;width=60%">
- <strong>提出問題</strong> </th>
+ <strong>Ask Us a Question</strong> </th>
 <th> &nbsp; &nbsp; &nbsp;</th>
 </tr>
 <tr>
 <td> </td>
   <td align="center">
-  <p>直接從 IBM {{site.data.keyword.contdelivery_short}} 及其他 DevOps Services 使用者快速取得協助。</p>
+  <p>Get help fast, directly from IBM {{site.data.keyword.contdelivery_short}} and other DevOps Services users.</p>
   <b>dW Answers</b>
+  <p>
+   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,ibm-cloud" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
-   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/ask-a-question.png" alt="提問"/></a></p>
-   <p>
-    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="（在新分頁或視窗中開啟）">在 dW Answers 上顯示最新 <img class="image" src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services 問題。</p>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Opens in a new tab or window)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on dW Answers.</p> 
  </td>
  <td></td>
     </tr>
-  </table>  
+  </table>  -->
 
 
 ## 支援問題單
 
-如果您有更嚴重的問題或發生 {{site.data.keyword.contdelivery_short}} 服務的問題，請開立支援問題單。    
+如果您有更嚴重的問題或發生 {{site.data.keyword.contdelivery_short}} 服務的問題，請開立支援問題單。   
 
 1. 登入 {{site.data.keyword.Bluemix_notm}}。
 1. 從功能表列中，按一下**支援**，然後按一下**新增問題單**。

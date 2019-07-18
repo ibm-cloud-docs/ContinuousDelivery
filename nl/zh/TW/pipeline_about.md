@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-06-19"
 
 keywords: run jobs, sequences of stages, job types
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -27,12 +28,12 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.contdelivery_full}} 包括 Delivery Pipeline，以最少人為介入的可重複方式進行建置、測試及部署。在管線中，階段的序列會擷取輸入並執行工作（例如建置、測試及部署）。
 {:shortdesc}
 
-檢視、修改或執行管線的許可權是根據擁有管線的工具鏈的存取控制。如需工具鏈之存取控制的相關資訊，請參閱[管理對資源群組中工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window}及[管理對 Cloud Foundry 組織中工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}。
+檢視、修改或執行管線的許可權是根據擁有管線的工具鏈的存取控制。如需工具鏈之存取控制的相關資訊，請參閱[管理對資源群組中工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups)及[管理對 Cloud Foundry 組織中工具鏈的存取](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs)。
 {: important}
 
-您可以指定 Script 在管線提供的許多工作類型中執行，這樣能讓您直接控制工作執行的內容。這些 Script 會在 Docker 映像檔中執行，該映像檔包含許多標準開發工具，包括與 {{site.data.keyword.Bluemix_notm}} 運行環境互動所需的工具。如需標準 Docker 映像檔包含內容的相關資訊，請參閱[預先安裝的資源](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}。如果您的工作需要標準映像檔中未提供的開發工具，或是您需要那些工具的不同版本，可以使用自訂映像檔。如需自訂映像檔的相關資訊，請參閱[使用自訂 Docker 映像檔](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}。
+您可以指定 Script 在管線提供的許多工作類型中執行，這樣能讓您直接控制工作執行的內容。這些 Script 會在 Docker 映像檔中執行，該映像檔包含許多標準開發工具，包括與 {{site.data.keyword.Bluemix_notm}} 運行環境互動所需的工具。如需標準 Docker 映像檔包含內容的相關資訊，請參閱[預先安裝的資源](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)。如果您的工作需要標準映像檔中未提供的開發工具，或是您需要那些工具的不同版本，可以使用自訂映像檔。如需自訂映像檔的相關資訊，請參閱[使用自訂 Docker 映像檔](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images)。
 
-當管線執行 Script 時，說明工作執行所在環境定義的內容，會藉由環境變數而被傳遞給 Script。例如，階段輸入儲存庫的 URL、正在執行的階段及工作名稱、工作類型指定的參數等等。若要檢視可用環境變數的清單，請參閱[預先安裝的資源](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)。 
+當管線執行 Script 時，說明工作執行所在環境定義的內容，會藉由環境變數而被傳遞給 Script。例如，階段輸入儲存庫的 URL、正在執行的階段及工作名稱、工作類型指定的參數等等。若要檢視可用環境變數的清單，請參閱[預先安裝的資源](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)。
 
 您可以在管線層次以及階段層次定義內容。管線內容會在管線中的所有階段與工作之間共用。階段內容專屬於特定的階段，並且在該階段中的所有工作之間共用。如需內容的相關資訊，請參閱[環境內容（環境變數）](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties)。
 
@@ -52,6 +53,20 @@ subcollection: ContinuousDelivery
 
 ![「輸入」標籤](images/input_tab_only_execute.png)
 
+使用 Git 儲存庫輸入類型的階段可以使用其他階段觸發選項例如，您可以選擇針對所選取分支上的 Git 事件自動執行工作。當選擇此觸發類型時，您必須選取下列一個以上事件類型：
+
+*	對選取的儲存庫分支進行推送時，**當推送確定時**即會觸發。
+*	開啟或編輯取回要求或合併要求時，**當開啟或更新取回/合併要求時**即會觸發。
+*	關閉取回要求或合併要求時，即使沒有相關聯的確定，**當關閉取回/合併要求時**也會觸發。
+
+![INPUT 標籤觸發程式](images/input_tab_only_triggers.png)
+
+如果您選取**當開啟或更新取回/合併要求時**勾選框時，管線的狀態會傳回至 Git 儲存庫。當取回要求或合併要求觸發您的管線時，行內狀態檢查會顯示在頁面上。狀態檢查是針對管線中執行的每一個階段而顯示的，並會提供每一個階段之日誌及歷程的鏈結。當狀態檢查執行時，它會從擱置更新為成功或失敗。如果您的管線包含多個階段，則每一個階段都會在檢查清單中報告其狀態。
+
+IBM 管理的 GitLab Community Edition 工具也支援此狀態回饋用於合併要求。
+{: tip}
+
+您也可以使用 Git 分支保護規則，根據狀態檢查的結果來限制合併。在建立分支保護規則之後，會封鎖所有合併，直到所有需要的狀態檢查成功為止。 
 
 ### 建置階段
 {: #build_stage}
@@ -95,7 +110,7 @@ subcollection: ContinuousDelivery
 
 簡單類型的建置工作除外，當您配置工作時，可以納入含有建置、測試或部署指令的 UNIX Shell Script。因為工作是在特定容器中執行，所以某個工作的動作無法影響其他工作的執行環境，即使那些工作是相同階段的一部分也是一樣。
 
-在 [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons) 中可以找到範例建置及部署 Script。
+在 [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons){: external} 中可以找到範例建置及部署 Script。
 
 此外，管線工作只能以 `sudo` 身分執行下列指令：
   * `/usr/sbin/service`
@@ -115,7 +130,7 @@ subcollection: ContinuousDelivery
 工作最多可以執行 60 分鐘。工作超出此限制時，即會失敗。如果工作超出此限制，請將它分成多個工作。例如，如果工作執行三個作業，則可能會將它分成三個工作：一個作業一個工作。
 {: tip}
 
-若要瞭解如何將工作新增至階段，請參閱[將工作新增至階段](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}。
+若要瞭解如何將工作新增至階段，請參閱[將工作新增至階段](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job)。
 
 ### 建置工作
 
@@ -128,7 +143,7 @@ subcollection: ContinuousDelivery
 
 當您使用 Cloud Foundry 進行部署時，Cloud Foundry 會包括正確的構件來容許應用程式執行。如需相關資訊，請參閱[使用 cf 指令來部署應用程式](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps)。Cloud Foundry 應用程式的管線包含執行 cf 指令的「部署」階段。
 
-Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.cloudfoundry.org/buildpacks/detection.html)。您可以在應用程式根資料夾的資訊清單檔中指定要使用的[建置套件](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)。建置套件一般會檢查使用者提供的構件，來判定下載的相依關係以及如何配置應用程式以與連結服務進行通訊。如需資訊清單檔的相關資訊，請參閱[應用程式資訊清單](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)。
+Cloud Foundry 會嘗試[偵測要使用的建置套件](http://docs.cloudfoundry.org/buildpacks/detection.html){: external}。您可以在應用程式根資料夾的資訊清單檔中指定要使用的[建置套件](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)。建置套件一般會檢查使用者提供的構件，來判定下載的相依關係以及如何配置應用程式以與連結服務進行通訊。如需資訊清單檔的相關資訊，請參閱[應用程式資訊清單](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)。
 
 ### 部署工作
 
@@ -221,4 +236,4 @@ Cloud Foundry 會嘗試[偵測要使用的建置套件 ![外部鏈結圖示](../
 
 為了避免衝突，指定路徑時可以使用 `cf push`，再加上主機名稱引數 `-n` 及路徑名稱。藉由修改個別階段的部署 Script，即可避免在部署至多個目標時發生路徑衝突。
 
-若要使用 `cf push` 指令引數，請開啟部署工作的配置設定，並修改**部署 Script** 欄位。如需相關資訊，請參閱 [Cloud Foundry Push 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}。
+若要使用 `cf push` 指令引數，請開啟部署工作的配置設定，並修改**部署 Script** 欄位。如需相關資訊，請參閱 [Cloud Foundry Push 文件](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: external}。

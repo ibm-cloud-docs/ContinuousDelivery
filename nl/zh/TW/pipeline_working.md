@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-14"
 
 keywords: IBM Cloud, build types, build script
 
@@ -34,10 +34,10 @@ subcollection: ContinuousDelivery
 
 您可以使用下列任何方法來建立管線：
 
-   * [從現有 Cloud Foundry 應用程式建立工具鏈](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}。產生的工具鏈包含管線。
+   * [從現有 Cloud Foundry 應用程式建立工具鏈](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app)。產生的工具鏈包含管線。
 
-   * [從範本建立工具鏈](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window}，而範本包含至少一個管線。
+   * [從範本建立工具鏈](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template)，而範本包含至少一個管線。
 
-   * [新增 {{site.data.keyword.deliverypipeline}} 工具整合](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window}至現有工具鏈。
+   * [新增 {{site.data.keyword.deliverypipeline}} 工具整合](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline)至現有工具鏈。
    
 從 {{site.data.keyword.deliverypipeline}} 中變更配置；檢查建置的狀態、已部署的應用程式及最近的部署；查看最新日誌及部署詳細資料，或者刪除管線。
