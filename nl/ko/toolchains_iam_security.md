@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-14"
 
 keywords: Administrator Create, Editor Update, Update, user access
 
@@ -27,9 +27,9 @@ subcollection: ContinuousDelivery
 
 **참고**: 
 
-* {{site.data.keyword.contdelivery_short}} 서비스 인스턴스 및 도구 체인 인스턴스의 사용자 액세스는 별도로 관리됩니다. 리소스 그룹의 {{site.data.keyword.contdelivery_short}} 서비스 인스턴스에 대한 사용자 액세스 관리의 자세한 정보는 [Identity and Access Management를 사용하여 {{site.data.keyword.contdelivery_short}}에 대한 사용자 액세스 관리](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security){: new_window}를 참조하십시오.
+* {{site.data.keyword.contdelivery_short}} 서비스 인스턴스 및 도구 체인 인스턴스의 사용자 액세스는 별도로 관리됩니다. 리소스 그룹의 {{site.data.keyword.contdelivery_short}} 서비스 인스턴스에 대한 사용자 액세스 관리의 자세한 정보는 [Identity and Access Management를 사용하여 {{site.data.keyword.contdelivery_short}}에 대한 사용자 액세스 관리](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security)를 참조하십시오.
 
-* Cloud Foundry 조직의 도구 체인에 대한 사용자 액세스는 리소스 그룹의 {{site.data.keyword.contdelivery_short}} 서비스 인스턴스에 대한 사용자 액세스와는 다르게 관리됩니다. Cloud Foundry 조직의 도구 체인에 대한 사용자 액세스 관리의 자세한 정보는 [Cloud Foundry 조직의 도구 체인에 대한 액세스 관리](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}를 참조하십시오.
+* Cloud Foundry 조직의 도구 체인에 대한 사용자 액세스는 리소스 그룹의 {{site.data.keyword.contdelivery_short}} 서비스 인스턴스에 대한 사용자 액세스와는 다르게 관리됩니다. Cloud Foundry 조직의 도구 체인에 대한 사용자 액세스 관리의 자세한 정보는 [Cloud Foundry 조직의 도구 체인에 대한 액세스 관리](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs)를 참조하십시오.
 
 계정의 도구 체인에 액세스하는 모든 사용자에게 IAM 사용자 역할이 정의된 액세스 정책을 지정해야 합니다. 이 정책은 선택한 서비스 또는 인스턴스의 컨텍스트 내에서 사용자가 수행할 수 있는 조치를 판별합니다. 허용 가능한 조치는 서비스에서 수행할 수 있는 오퍼레이션으로서 {{site.data.keyword.Bluemix_notm}} 서비스에서 정의되고 사용자 정의됩니다. 그런 다음 조치는 IAM 사용자 역할에 맵핑됩니다.
 
@@ -44,7 +44,7 @@ subcollection: ContinuousDelivery
 
 다음 표에는 플랫폼 관리 역할에 맵핑된 조치에 대한 자세한 설명이 있습니다. 플랫폼 관리 역할을 사용하면 사용자가 플랫폼 레벨에서 서비스 리소스에 대한 태스크를 수행할 수 있습니다(예: 서비스에 대한 사용자 액세스 지정, 서비스 ID 작성 또는 삭제, 인스턴스 작성 및 애플리케이션에 인스턴스 바인드).
 
-| 플랫폼 관리 역할 | 조치 설명 | 조치 예|
+| 플랫폼 관리 역할 | 조치에 대한 설명 | 조치 예 |
 |:-----------------|:-----------------|:-----------------|
 | 뷰어, 운영자 | 도구 체인 및 Delivery Pipeline을 봅니다. Delivery Pipeline을 실행합니다. | <ul><li>도구 체인을 클릭하여 개요 페이지를 엽니다.</li><li>파이프라인 작업이 있는 단계의 **단계 실행** 아이콘을 클릭합니다.</li></ul> |
 | 편집자, 관리자 | 도구 체인 및 Delivery Pipeline을 작성하고 보고 업데이트하고 삭제합니다. |<ul><li>DevOps 대시보드의 **도구 체인** 페이지에서 **도구 체인 작성**을 클릭하십시오.</li><li>DevOps 대시보드의 **도구 체인** 페이지에서 도구 체인을 클릭하여 해당 개요 페이지를 여십시오.</li><li>DevOps 대시보드의 **도구 체인** 페이지에서 삭제할 도구 체인을 클릭하십시오. **앱 보기** 옆에 있는 **추가 조치** 메뉴를 클릭하십시오. **삭제**를 클릭하십시오.</li></ul> |
@@ -65,5 +65,3 @@ subcollection: ContinuousDelivery
 {: caption="표 2. 서비스 조치 및 오퍼레이션" caption-side="top"}
 
 UI에서 사용자 역할 지정에 대한 정보는 [IAM 액세스 관리](/docs/iam?topic=iam-iammanidaccser)를 참조하십시오.
-
-<!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

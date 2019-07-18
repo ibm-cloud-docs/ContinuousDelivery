@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-28"
 
 keywords: Environment properties, IBM Java, pipeline environments
 
@@ -42,8 +42,9 @@ subcollection: ContinuousDelivery
 {: #deliverypipeline_envprop}
 
 ### 범용 특성
+다음 표에서는 파이프라인 환경에서 기본적으로 사용 가능한 각 범용 환경 특성을 나열하고 설명합니다.
 
-|환경 특성 |설명 |
+| 환경 특성 |설명 |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 |ARCHIVE_DIR |아카이브 대상 디렉토리 또는 아카이브를 다운로드하는 디렉토리입니다. |
 |BUILD_ID |현재 작업 실행의 고유 ID입니다.  |
@@ -71,10 +72,12 @@ subcollection: ContinuousDelivery
 |TASK_ID |작업의 현재 실행 고유 ID입니다. |
 |TMPDIR |임시 파일을 저장하는 디렉토리 위치입니다. |
 |WORKSPACE |현재 작업 디렉토리의 경로입니다. |
+{: caption="표 1. 범용 환경 특성" caption-side="top"}
 
 ### 런타임 및 도구 특성
+다음 표에서는 파이프라인 환경에서 기본적으로 사용 가능한 각 런타임 및 도구 환경 특성을 나열하고 설명합니다.
 
-|환경 특성 |설명 |
+| 환경 특성 |설명 |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 |ANT_HOME |Apache Ant 1.9.2의 경로입니다. |
 |ANT_JAVA8_HOME |Java 8이 필요한 Apache Ant의 1.10+ 버전의 경로입니다. |
@@ -84,13 +87,15 @@ subcollection: ContinuousDelivery
 |JAVA8_HOME |IBM Java 8의 경로입니다. |
 |MAVEN_HOME |Apache Maven 3.2.1의 경로입니다. |
 |NODE_HOME |Node.js 0.10.29의 경로입니다. |
+{: caption="표 2. 런타임 및 도구 환경 특성" caption-side="top"}
 
 파이프라인의 스크립트에서 Apache Ant 1.10 이상 버전을 사용하려면 `ANT_HOME`을 `$ANT_JAVA8_HOME`으로 설정하고 `JAVA_HOME`을 `$JAVA8_HOME`으로 설정하십시오.
 {: tip}
 
 ### 배치 특성
+다음 표에서는 파이프라인 환경에서 기본적으로 사용 가능한 각 배치 환경 특성을 나열하고 설명합니다.
 
-|환경 특성 |설명 |
+| 환경 특성 |설명 |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 |CF_APP |배치 시 배치할 앱의 이름입니다. 이 특성은 배치에 필요하며 스크립트 자체, 배치 작업 구성 인터페이스 또는 프로젝트의 `manifest.yml` 파일에서 지정할 수 있습니다. |
 |CF_ORG |배치 시 사용할 배치 대상 조직의 이름입니다. |
@@ -99,6 +104,7 @@ subcollection: ContinuousDelivery
 |CF_SPACE_ID |배치 시 사용할 배치 대상 영역의 ID입니다.  |
 |CF_TARGET_URL |배치 시 {{site.data.keyword.Bluemix_short}} 또는 Cloud Foundry의 URL입니다. |
 |IDS_VERSION |배치 시 사용할 배치 중인 앱의 버전 또는 소스 ID입니다. |
+{: caption="표 3. 배치 환경 특성" caption-side="top"}
 
 ## 사전 설치된 자원
 {: #deliverypipeline_resources}
@@ -106,11 +112,12 @@ subcollection: ContinuousDelivery
 각 파이프라인마다 여러 런타임, 도구, 노드 모듈이 사전 설치됩니다.
 
 ### 런타임 및 도구
+다음 표에서는 모든 파이프라인에서 사용 가능한 각 사전 설치된 런타임 및 도구를 나열합니다.
 
 모든 링크는 홈 디렉토리에 있습니다.
 {: tip}
 
-|리소스 |링크 이름 |경로 |
+|리소스 | 링크 이름 |경로 |
 |----------|-----------|-----------|
 |Apache Ant 1.9.2|ant |/opt/IBM/ant |
 |Cloud Foundry CLI 6.14 |cf |/opt/IBM/cf |
@@ -123,6 +130,7 @@ subcollection: ContinuousDelivery
 |Apache Maven 3.2.1 |maven |/opt/IBM/maven |
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
+{: caption="표 4. 런타임 및 도구에 대한 링크 이름 및 경로" caption-side="top"}
 
 파이프라인 환경에서는 IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2, 6.7.0의 64비트 버전을 제공합니다. 버전을 선택하려면 내보내기 명령을 사용하십시오.
 

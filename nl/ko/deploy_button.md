@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud button, yml file, build file
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -32,7 +33,7 @@ subcollection: ContinuousDelivery
 
 3. Git 저장소의 새 개인용 복제본, 코드 변경사항 빌드 및 배치를 위한 파이프라인, Cloud에서 코드 편집을 위한 Eclipse Orion {{site.data.keyword.webide}} 및 문제 트래커를 포함한 도구 체인이 작성됩니다.
 
-  `.bluemix` 디렉토리에 `toolchain.yml` 파일이 포함된 경우 파일은 도구 체인에 대한 도구 통합을 지정하는 데 사용됩니다. `toolchain.yml` 파일에 대한 자세한 정보는 [사용자 정의 도구 체인 작성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}을 참조하십시오.
+  `.bluemix` 디렉토리에 `toolchain.yml` 파일이 포함된 경우 파일은 도구 체인에 대한 도구 통합을 지정하는 데 사용됩니다. `toolchain.yml` 파일에 대한 자세한 정보는 [사용자 정의 도구 체인 작성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom)을 참조하십시오.
   {: tip}
 
 4. 앱에 빌드 파일이 필요한 경우 빌드 파일이 자동으로 발견되어 앱을 빌드합니다.
@@ -47,11 +48,11 @@ subcollection: ContinuousDelivery
 
 공용 {{site.data.keyword.gitrepos}} 저장소에 대한 앱 단추 예를 참조하십시오.
 
-[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://us-south.git.cloud.ibm.com/idsorg/sample-java-cloudant){: external}
 
 공용 GitHub 저장소에 대한 앱 단추 예를 참조하십시오.
 
-[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){: external}
 
 ## 단추 작성 {: #create-button}
 
@@ -91,8 +92,6 @@ HTML에서 단추를 작성하려면 이 스니펫을 복사하여 공용 Git �
 
 * 이미지를 로컬로 저장하려는 경우 이미지를 다운로드하여 Git 저장소에 저장할 수 있습니다. 이미지의 상대 위치를 사용하도록 경로를 조정하십시오.
 
-* 단추의 변환된 버전을 사용하려는 경우 원격으로 참조하거나 [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}에서 다운로드할 수 있습니다.
-
 ## 저장소 고려사항 {: #button-repo}
 
 {{site.data.keyword.Bluemix_notm}}에 배치 단추에 사용하는 저장소에 대한 다음 고려사항을 검토하십시오.
@@ -105,10 +104,10 @@ HTML에서 단추를 작성하려면 이 스니펫을 복사하여 공용 Git �
 
 지원되는 빌더는 다음과 같습니다.
 
-* [Ant ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"):](http://ant.apache.org/manual/using.html){:new_window} `build.xml`. `./output/` 폴더에 출력을 빌드합니다.
-* [Gradle ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"):](https://docs.gradle.org/current/userguide/getting_started.html){:new_window} `/build.gradle`. `.` 폴더에 출력을 빌드합니다.
-* [Grunt ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"):](http://gruntjs.com/getting-started#the-gruntfile){:new_window} `/Gruntfile.js`. `.` 폴더에 출력을 빌드합니다.
-* [Maven ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘"):](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:new_window} `/pom.xml`. `./target/` 폴더에 출력을 빌드합니다.
+* [Ant:](http://ant.apache.org/manual/using.html){: external} `build.xml`. 이는 `./output/` 폴더에 출력을 빌드합니다.
+* [Gradle:](https://docs.gradle.org/current/userguide/getting_started.html){:external} `/build.gradle`. 이는 `.` 폴더에 출력을 빌드합니다.
+* [Grunt:](http://gruntjs.com/getting-started#the-gruntfile){: external} `/Gruntfile.js`. 이는 `.` 폴더에 출력을 빌드합니다.
+* [Maven:](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){: external} `/pom.xml`. 이는 `./target/` 폴더에 출력을 빌드합니다.
 
 ### 파이프라인 파일 요구사항
 {: pipeline_file}
@@ -117,7 +116,7 @@ HTML에서 단추를 작성하려면 이 스니펫을 복사하여 공용 Git �
 
 `pipeline.yml` 파일이 `.bluemix` 디렉토리에 없는 경우 {{site.data.keyword.Bluemix_notm}}에 배치 단추를 누르면 빌드 단계와 Cloud Foundry에 배치하는 배치 단계의 두 가지 단계로 기본 파이프라인을 작성합니다.
 
-파이프라인 파일을 작성하려면 [사용자 정의 도구 체인 파이프라인 지시사항](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml)에 있는 예제 파일을 참조하십시오. 웹 인터페이스의 파이프라인을 정의할 때 단계 및 작업을 작성하고 입력 및 환경 변수를 설정하며 스크립트를 추가하여 텍스트의 파이프라인을 정의합니다. 또한 [이 데모 프로젝트](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix)에서 좀 더 복잡한 다수의 파이프라인을 볼 수 있습니다.
+파이프라인 파일을 작성하려면 [사용자 정의 도구 체인 파이프라인 지시사항](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml)에 있는 예제 파일을 참조하십시오. 웹 인터페이스의 파이프라인을 정의할 때 단계 및 작업을 작성하고 입력 및 환경 변수를 설정하며 스크립트를 추가하여 텍스트의 파이프라인을 정의합니다. 또한 [이 데모 프로젝트](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix){: external}에서 좀 더 복잡한 다수의 파이프라인을 볼 수 있습니다.
 
 ### 컨테이너 Dockerfile 요구사항
 {: container_dockerfile}
@@ -126,11 +125,11 @@ HTML에서 단추를 작성하려면 이 스니펫을 복사하여 공용 Git �
 
 Dockerfile은 앱에 대한 빌드 스크립트 종류로 작동합니다. Dockerfile이 저장소에서 발견되면 앱이 컨테이너에 배치되기 전에 이미지에 자동으로 빌드됩니다. 앱이 이미지로 빌드되기 전에 앱이 자체적으로 빌드되어야 하는 경우 앱 및 Dockerfile에 대한 빌드 스크립트를 포함해야 합니다.
 
-Dockerfile 작성에 대해 자세히 알아보려면 [Docker 문서![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.docker.com/reference/builder/){:new_window}를 참조하십시오. Kubernetes에 배치하기 위해 도구 체인 템플리트를 사용하여 단계별 지시사항을 따르려면 [튜토리얼: "Kubernetes 앱 개발" 도구 체인 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window} 또는 [튜토리얼: "Helm으로 Kubernetes 앱 개발" 도구 체인 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window}을 참조하십시오.
+Dockerfile 작성에 대해 자세히 보려면 [Docker 문서](https://docs.docker.com/reference/builder/){: external}를 참조하십시오. 도구 체인 템플리트를 사용하여 Kubernetes에 배치하는 데 대한 단계별 지시사항은 [튜토리얼: "Kubernetes 앱 개발" 도구 체인 사용](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){: external} 또는 [튜토리얼: "Helm을 사용하여 Kubernetes 앱 개발" 도구 체인 사용](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){: external}을 참조하십시오.
 
-Kubernetes 클러스터에 Cloud Foundry 앱 포팅에 대해 자세히 살펴보려면 [튜토리얼: Cloud Foundry 앱을 포팅하여 도구 체인의 Kubernetes에 배치 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){:new_window}을 참조하십시오.  
+Cloud Foundry 앱을 Kubernetes 클러스터에 포팅에 대해 자세히 보려면 [튜토리얼: Cloud Foundry 앱을 포팅하여 도구 체인의 Kubernetes에 배치](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){: external}를 참조하십시오.  
 
-특히 컨테이너용인 `pipeline.yml`을 수동으로 작성하려면 [GitHub의 예![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Puquios/){:new_window}를 참조하십시오.
+특히 컨테이너를 위해 수동으로 `pipeline.yml`을 작성하려면 [GitHub의 예](https://github.com/Puquios/){: external}를 참조하십시오.
 
 ### Manifest 파일 요구사항(Cloud Foundry에 배치된 앱의 경우)
 {: #manifest_files}

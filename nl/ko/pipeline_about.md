@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-06-19"
 
 keywords: run jobs, sequences of stages, job types
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -27,12 +28,12 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.contdelivery_full}}에는 사용자 개입을 최소화하여 반복할 수 있는 방식으로 빌드, 테스트, 배치를 수행하는 Delivery Pipeline이 포함됩니다. 파이프라인에서는 일련의 단계에서 입력을 검색하고 작업(예: 빌드, 테스트 및 배치)을 실행합니다.
 {:shortdesc}
 
-파이프라인을 보거나 수정하거나 실행할 권한은 파이프라인을 소유한 도구 체인의 액세스 제어를 기반으로 합니다. 도구 체인의 액세스 제어에 대한 자세한 정보는 [리소스 그룹의 도구 체인에 대한 액세스 관리](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window} 및 [Cloud Foundry 조직의 도구 체인에 대한 액세스 관리](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}를 참조하십시오.
+파이프라인을 보거나 수정하거나 실행할 권한은 파이프라인을 소유한 도구 체인의 액세스 제어를 기반으로 합니다. 도구 체인의 액세스 제어에 대한 자세한 정보는 [리소스 그룹의 도구 체인에 대한 액세스 관리](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups) 및 [Cloud Foundry 조직의 도구 체인에 대한 액세스 관리](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs)를 참조하십시오.
 {: important}
 
-파이프라인에서 제공하는 다수의 작업 유형에서 실행될 스크립트를 지정하여 작업에 의해 실행되는 작업을 직접 제어할 수 있습니다. 이러한 스크립트는 {{site.data.keyword.Bluemix_notm}} 런타임과 상호작용하는데 필요한 도구를 포함한 많은 표준 개발 도구를 포함하고 있는 Docker 이미지에서 실행됩니다. 표준 Docker 이미지에 포함된 항목에 대한 자세한 정보는 [사전 설치된 리소스](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}를 참조하십시오. 작업에 표준 이미지에서 사용할 수 없는 개발 도구가 필요하거나 해당 도구의 다른 버전이 필요한 경우 사용자 정의 이미지를 사용할 수 있습니다. 사용자 정의 이미지에 대한 자세한 정보는 [사용자 정의 Docker 이미지에 대한 작업](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}을 참조하십시오.
+파이프라인에서 제공하는 다수의 작업 유형에서 실행될 스크립트를 지정하여 작업에 의해 실행되는 작업을 직접 제어할 수 있습니다. 이러한 스크립트는 {{site.data.keyword.Bluemix_notm}} 런타임과 상호작용하는데 필요한 도구를 포함한 많은 표준 개발 도구를 포함하고 있는 Docker 이미지에서 실행됩니다. 표준 Docker 이미지에 포함된 항목에 대한 자세한 정보는 [사전 설치된 리소스](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)를 참조하십시오. 작업에 표준 이미지에서 사용할 수 없는 개발 도구가 필요하거나 해당 도구의 다른 버전이 필요한 경우 사용자 정의 이미지를 사용할 수 있습니다. 사용자 정의 이미지에 대한 자세한 정보는 [사용자 정의 Docker 이미지에 대한 작업](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images)을 참조하십시오.
 
-파이프라인에서 스크립트를 실행하면 작업이 실행되고 있는 컨텍스트를 설명하는 특성은 환경 변수를 사용하여 스크립트에 전달됩니다. 예를 들면, 단계에 대한 입력인 저장소의 URL, 실행되고 있는 단계와 작업의 이름, 작업 유형에 의해 지정된 매개변수 등입니다. 사용 가능한 환경 변수 목록을 보려면 [사전 설치된 리소스](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)를 참조하십시오. 
+파이프라인에서 스크립트를 실행하면 작업이 실행되고 있는 컨텍스트를 설명하는 특성은 환경 변수를 사용하여 스크립트에 전달됩니다. 예를 들면, 단계에 대한 입력인 저장소의 URL, 실행되고 있는 단계와 작업의 이름, 작업 유형에 의해 지정된 매개변수 등입니다. 사용 가능한 환경 변수 목록을 보려면 [사전 설치된 리소스](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources)를 참조하십시오.
 
 파이프라인 레벨과 단계 레벨 모두에 특성을 정의할 수 있습니다. 파이프라인 특성은 파이프라인의 모든 단계와 작업에서 공유됩니다. 단계 특성은 특정 단계에 고유하며 해당 단계의 모든 작업에서 공유됩니다. 특성에 대한 자세한 정보는 [환경 특성(환경 변수)](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties)을 참조하십시오.
 
@@ -52,6 +53,20 @@ subcollection: ContinuousDelivery
 
 ![입력 탭](images/input_tab_only_execute.png)
 
+추가 단계 트리거 옵션은 Git 저장소 입력 유형을 사용하는 단계를 위해 사용할 수 있습니다. 예를 들어, 선택한 분기에서 Git 이벤트에 대해 작업을 자동으로 실행하도록 선택할 수 있습니다. 이 트리거 유형을 선택할 때 다음 이벤트 유형 중 하나 이상을 선택해야 합니다.
+
+*	선택한 저장소 분기에 대한 푸시가 이루어지는 경우 **커미트가 푸시될 때**가 트리거됨
+*	가져오기 요청 또는 병합 요청을 열거나 편집하는 경우 **가져오기/병합 요청을 열거나 업데이트할 때**가 트리거됩니다.
+*	연관된 커미트가 없어도 가져오기 요청 또는 병합 요청이 처리완료되는 경우 **가져오기/병합 요청이 처리완료될 때**가 트리거됩니다.
+
+![INPUT 탭 트리거](images/input_tab_only_triggers.png)
+
+**가져오기/병합 요청을 열거나 업데이트할 때** 선택란을 선택하면 파이프라인의 상태가 Git 저장소로 리턴됩니다. 가져오기 요청 또는 병합 요청이 파이프라인을 트리거하면 페이지에 인라인 상태 확인이 표시됩니다. 상태 확인은 파이프라인에서 실행되는 각 스테이지에 대해 표시되고 각 스테이지의 로그 및 히스토리에 대한 링크가 제공됩니다. 상태 확인이 실행되면 보류 중에서 성공 또는 실패로 업데이트됩니다. 파이프라인에 여러 단계가 포함되어 있는 경우 각 단계는 선택 목록에서 해당 상태를 보고합니다.
+
+이 상태 피드백은 병합 요청을 위해 IBM 호스팅 GitLab Community Edition 도구에서도 지원됩니다.
+{: tip}
+
+또한 Git 분기 보호 규칙을 사용하여 상태 검사 결과에 따라 병합을 제한할 수 있습니다. 분기 보호 규칙이 작성된 후 모든 필수 상태 검사가 성공할 때까지 모든 병합이 차단됩니다. 
 
 ### 빌드 단계
 {: #build_stage}
@@ -95,7 +110,7 @@ subcollection: ContinuousDelivery
 
 단순 유형 빌드 작업을 제외하곤, 작업을 구성할 때 빌드, 테스트 또는 배치 명령이 포함된 UNIX 쉘 스크립트를 포함시킬 수 있습니다. 작업은 임시 컨테이너에서 실행되므로 작업이 같은 단계에 속하는 경우에도 한 작업의 조치는 다른 작업의 실행 환경에 영향을 미칠 수 없습니다.
 
-샘플 빌드 및 배치 스크립트는 [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons)에서 찾을 수 있습니다.
+샘플 빌드 및 배치 스크립트는 [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons){: external}에서 찾을 수 있습니다.
 
 또한 파이프라인 작업은 `sudo`로서 다음 명령만 실행할 수 있습니다.
   * `/usr/sbin/service`
@@ -115,7 +130,7 @@ subcollection: ContinuousDelivery
 작업은 최대 60분 동안 실행될 수 있습니다. 작업이 이 한계를 초과하면 작업이 실패합니다. 하나의 작업이 이 한계를 초과하는 경우에는 작업을 여러 개의 작업으로 나누십시오. 예를 들어, 작업이 세 개의 태스크를 수행하는 경우 이 작업을 세 개의 작업(태스크당 하나의 작업)으로 나눌 수 있습니다.
 {: tip}
 
-단계에 작업을 추가하는 방법을 알아보려면 [단계에 작업 추가](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}를 참조하십시오.
+단계에 작업을 추가하는 방법을 알아보려면 [단계에 작업 추가](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job)를 참조하십시오.
 
 ### 빌드 작업
 
@@ -128,7 +143,7 @@ subcollection: ContinuousDelivery
 
 Cloud Foundry를 사용하여 배치할 때 Cloud Foundry에는 올바른 아티팩트가 포함되어 앱을 실행할 수 있습니다. 자세한 정보는 [cf 명령을 사용하여 애플리케이션 배치](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps)를 참조하십시오. Cloud Foundry 앱의 파이프라인에는 cf 명령을 실행하는 배치 단계가 포함됩니다.
 
-Cloud Foundry는 [사용할 빌드팩을 발견하려고 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.cloudfoundry.org/buildpacks/detection.html) 시도합니다. 앱의 루트 폴더에 있는 Manifest 파일에 사용할 [빌드팩](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)을 지정할 수 있습니다. 일반적으로 빌드팩은 사용자 제공 아티팩트를 확인하여 다운로드할 종속 항목 및 바인딩 서비스와 통신하기 위한 애플리케이션 구성 방법을 결정할 수 있습니다. Manifest 파일에 대한 자세한 정보는 [Application Manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)를 참조하십시오.
+Cloud Foundry는 [사용할 빌드팩 발견](http://docs.cloudfoundry.org/buildpacks/detection.html){: external}을 시도합니다. 앱의 루트 폴더에 있는 Manifest 파일에 사용할 [빌드팩](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks)을 지정할 수 있습니다. 일반적으로 빌드팩은 사용자 제공 아티팩트를 확인하여 다운로드할 종속 항목 및 바인딩 서비스와 통신하기 위한 애플리케이션 구성 방법을 결정할 수 있습니다. Manifest 파일에 대한 자세한 정보는 [Application Manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)를 참조하십시오.
 
 ### 배치 작업
 
@@ -221,4 +236,4 @@ Cloud Foundry에 배치하는 작업은 권한 작업이 실행되는 사용자�
 
 충돌을 피하려면 `cf push`와 그 뒤에 호스트 이름 인수 `-n` 및 라우트 이름을 사용하여 라우트를 지정하면 됩니다. 개별 단계의 배치 스크립트를 수정하면 여러 대상에 배치할 때 라우트 충돌을 피할 수 있습니다.
 
-`cf push` 명령 인수를 사용하려면 배치 작업의 구성 설정을 열어 **배치 스크립트** 필드를 수정하십시오. 자세한 정보는 [Cloud Foundry Push 문서![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}를 참조하십시오.
+`cf push` 명령 인수를 사용하려면 배치 작업의 구성 설정을 열어 **배치 스크립트** 필드를 수정하십시오. 자세한 정보는 [Cloud Foundry 푸시 문서](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: external}를 참조하십시오.

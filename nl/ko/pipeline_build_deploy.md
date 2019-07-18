@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-14"
 
 keywords: ADD STAGE, Run Stage icon, JOBS tab
 
@@ -104,20 +104,20 @@ subcollection: ContinuousDelivery
 ### 스크립트에서 로그 다운로드
 {: #deliverypipeline_download_logs}
 
-스크립트에서 파이프라인 작업에 대한 로그 파일을 다운로드하고 파이프라인 작업 실행 중에 제공된 `PIPELINE_LOG_URL`을 저장할 수 있습니다. 다음 예는 파이프라인 작업의 로그 파일을 다른 시스템에 업로드하는 단계를 보여줍니다. 
+스크립트에서 파이프라인 작업에 대한 로그 파일을 다운로드하고 파이프라인 작업 실행 중에 제공된 `PIPELINE_LOG_URL`을 저장할 수 있습니다. 다음 예는 파이프라인 작업의 로그 파일을 다른 시스템에 업로드하는 단계를 보여줍니다.
 
 
-1. 단계에 대한 `JOB_LOG` 환경 변수를 설정하십시오. 
+1. 단계에 대한 `JOB_LOG` 환경 변수를 설정하십시오.
 
-1. 파이프라인 작업에서 `PIPELINE_LOG_URL`을 저장하십시오. 
+1. 파이프라인 작업에서 `PIPELINE_LOG_URL`을 저장하십시오.
 
    ```shell
    export JOB_LOG="$PIPELINE_LOG_URL"
    ```
-1. 동일한 단계 내의 이후 작업에서 `PIPELINE_LOG_URL`을 사용해 로그 파일을 다운로드하여 다른 시스템으로 내보내십시오. IBM Cloud 베어러 토큰을 사용하여 로그 파일에 액세스하십시오. 
+1. 동일한 단계 내의 이후 작업에서 `PIPELINE_LOG_URL`을 사용해 로그 파일을 다운로드하여 다른 시스템으로 내보내십시오. IBM Cloud 베어러 토큰을 사용하여 로그 파일에 액세스하십시오.
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
@@ -128,13 +128,13 @@ subcollection: ContinuousDelivery
      -o job_log.txt \
      "$JOB_LOG"
    ```
-1. `X-More-Data` 헤더를 확인하십시오. 이 헤더가 `true`로 설정된 경우에는 로그 파일이 생성되거나 처리되는 중입니다. 이 헤더가 `false`로 설정된 경우에는 로그 파일이 사용할 준비가 된 것입니다. 
+1. `X-More-Data` 헤더를 확인하십시오. 이 헤더가 `true`로 설정된 경우에는 로그 파일이 생성되거나 처리되는 중입니다. 이 헤더가 `false`로 설정된 경우에는 로그 파일이 사용할 준비가 된 것입니다.
 
    ```shell
    grep X-More-Data /tmp/headers.txt
    X-More-Data: false
    ```
-1. 로그 파일을 시스템에 업로드하십시오. 
+1. 로그 파일을 시스템에 업로드하십시오.
 
    ```shell
    scp job_log.txt user@example.org:/job1/logs
@@ -144,21 +144,21 @@ subcollection: ContinuousDelivery
 ### 스크립트에서 아티팩트 다운로드
 {: #deliverypipeline_download_artifacts}
 
-스크립트에서 파이프라인 빌드 작업에 대한 아티팩트를 다운로드하고 파이프라인 작업 실행 중에 제공된 `PIPELINE_ARTIFACT_URL`을 저장할 수 있습니다. 다음 예는 파이프라인 작업의 아티팩트를 다른 시스템에 업로드하는 단계를 보여줍니다. 
+스크립트에서 파이프라인 빌드 작업에 대한 아티팩트를 다운로드하고 파이프라인 작업 실행 중에 제공된 `PIPELINE_ARTIFACT_URL`을 저장할 수 있습니다. 다음 예는 파이프라인 작업의 아티팩트를 다른 시스템에 업로드하는 단계를 보여줍니다.
 
 
-1. 단계에 대한 `JOB_ARTIFACT` 환경 변수를 설정하십시오. 
+1. 단계에 대한 `JOB_ARTIFACT` 환경 변수를 설정하십시오.
 
-1. 파이프라인 작업에서 `PIPELINE_ARTIFACT_URL`을 저장하십시오. 
+1. 파이프라인 작업에서 `PIPELINE_ARTIFACT_URL`을 저장하십시오.
 
    ```shell
    export JOB_ARTIFACT="$PIPELINE_ARTIFACT_URL"
    ```
    
-1. 동일한 단계 내의 이후 작업에서 `PIPELINE_ARTIFACT_URL`을 사용해 아티팩트를 다운로드하여 다른 시스템으로 내보내십시오. IBM Cloud 베어러 토큰을 사용하여 아티팩트에 액세스하십시오. 
+1. 동일한 단계 내의 이후 작업에서 `PIPELINE_ARTIFACT_URL`을 사용해 아티팩트를 다운로드하여 다른 시스템으로 내보내십시오. IBM Cloud 베어러 토큰을 사용하여 아티팩트에 액세스하십시오.
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
@@ -169,7 +169,7 @@ subcollection: ContinuousDelivery
    curl -O  "$DOWNLOAD_URL"
    ```
    
-1. 아티팩트를 시스템에 업로드하십시오. 
+1. 아티팩트를 시스템에 업로드하십시오.
 
    ```shell
    scp $(basename "$DOWNLOAD_URL") user@example.org:/job1/artifacts

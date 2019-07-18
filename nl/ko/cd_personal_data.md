@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -32,10 +33,10 @@ subcollection: ContinuousDelivery
  * {{site.data.keyword.gitrepos}}
  * {{site.data.keyword.contdelivery_short}} Pipelines
  * 도구 체인 및 도구 통합
- * [GitHub Enterprise on IBM Cloud ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
- * [{{site.data.keyword.DRA_full}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data){: new_window}
+ * [GitHub Enterprise on IBM Cloud](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data)
+ * [{{site.data.keyword.DRA_full}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data)
  
-IBM은 {{site.data.keyword.contdelivery_short}} 서비스의 데이터를 관리하지 않습니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 호스팅되는 {{site.data.keyword.contdelivery_short}} 서비스를 종료하기 전에 고유 데이터를 삭제해야 합니다.
+IBM은 {{site.data.keyword.contdelivery_short}} 서비스의 데이터를 관리하지 않습니다. {{site.data.keyword.Bluemix_notm}} Public에서 호스팅되는 {{site.data.keyword.contdelivery_short}} 서비스를 종료하기 전에 고유 데이터를 삭제해야 합니다.
 {: important}
 
 {{site.data.keyword.contdelivery_short}}는 리소스 그룹 또는 Cloud Foundry 조직 내에서 데이터를 관리하기 위한 적절한 권한을 제공합니다. 회사에는 이러한 권한을 제한하는 정책이 있을 수 있습니다. 적절한 권한이 없는 경우 {{site.data.keyword.Bluemix_notm}} 계정의 관리자에게 문의하십시오.
@@ -53,7 +54,7 @@ IBM Cloud 로그인 구조는 다른 계정에서 작업하기 위한 옵션을 
  * 회사 계정
  * 회사 개인 계정
 
-###개인 계정
+### 개인 계정
 
 일반적으로 각 사용자는 개인 계정인 고유한 계정을 갖습니다. 보통 이름이 포함되므로 개인 계정을 쉽게 식별할 수 있습니다(예: *John Smith의 계정*). 
 
@@ -61,13 +62,13 @@ IBM Cloud 로그인 구조는 다른 계정에서 작업하기 위한 옵션을 
 
 사용자가 계정에 오브젝트를 작성할 수 있는 권한이 있는 경우에는 오브젝트가 저장되는 계정에 상관없이 오브젝트를 수정하고 삭제할 수도 있습니다. 두 명의 사용자가 협업하는 경우 종종 개인 계정을 공유합니다.
 
-###회사 계정
+### 회사 계정
 
 회사 계정은 회사에서 설정합니다. 일반적으로, 사용자는 초대를 받기 보다는 자동으로 계정에 추가됩니다. 회사 계정은 사용자에게 작업하고, 통신하고, 리소스와 비용 청구를 공유하는 위치를 제공하지만, 단지 관습일 뿐입니다. 회사 계정은 실제로 개인 계정과 차이가 없습니다. 회사 계정에 작성되는 오브젝트는 계정과 연관되며 사용자를 계정에 초대할 수 있습니다.
 
 회사에 근무하는 사람들의 팀은 종종 회사 계정을 사용하여 협업합니다.
 
-###회사 개인 계정
+### 회사 개인 계정
 
 회사에 근무하는 경우 사용자 계정에서 이뤄지는 작업은 법적으로 회사에서 소유할 수 있습니다. 회사에 다니는 많은 사용자들은 회사 개인 계정이 있습니다. 회사 이름이 포함되고 개인 계정으로 표시되는 내용이 들어 있는 인증 정보를 사용하여 계정에 로그인하는 경우 개인 계정 내에서 하는 작업은 회사 소유일 수 있습니다.
 
@@ -82,13 +83,13 @@ IBM Cloud 로그인 구조는 다른 계정에서 작업하기 위한 옵션을 
 
 계정에서 데이터를 삭제하기 전에 개인 계정인지 또는 회사 개인 계정인지 판별하십시오.
 
-###개인 계정
+### 개인 계정
 
 개인 계정을 소유하는 경우 변경사항을 작성하고 데이터를 삭제할 수 있습니다. 다른 사용자와 계정을 공유하는 경우 사용자가 데이터를 소유하지만, 공유 작업에 대해서는 다른 사용자와 연락하려고 할 수 있습니다. 
 
-IBM Cloud 계정에 로그인할 수 없는 경우 [IBM 지원 센터에 문의 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/support){:new_window}하십시오.
+IBM Cloud 계정에 로그인할 수 없는 경우 [IBM 지원 센터에 문의](https://www.ibm.com/cloud/support){: external}하십시오.
  
-###회사 개인 계정
+### 회사 개인 계정
 
 회사 개인 계정을 소유하는 경우 변경사항에 대해서는 회사와 팀의 다른 구성원들과도 조정해야 합니다. 데이터가 회사 계정 또는 회사 개인 계정에 저장되어 있는지와 상관없이 개인 데이터를 삭제하십시오. 다른 사용자와 공유한 작업은 삭제하지 않아야 합니다.
 
@@ -107,14 +108,14 @@ IBM Cloud 계정에 로그인할 수 없는 경우 회사 담당자에게 문의
 {{site.data.keyword.webide}} 데이터를 삭제하기 전에 작업을 내보낼 수 있습니다. 작업공간을 삭제하고 나면 {{site.data.keyword.contdelivery_short}}에서 제거되고 모든 파일이 삭제됩니다.
 {: important}
 
-###Web IDE 작업공간 내보내기
+### Web IDE 작업공간 내보내기
 
 {{site.data.keyword.webide}} 작업공간을 내보내려면 다음을 수행하십시오.
 
 1. **파일 > 내보내기 > Zip**을 선택하십시오.
 1. 내보내려는 각 작업공간에 대해 이 단계를 반복하십시오.
 
-###Web IDE 작업공간 삭제
+### Web IDE 작업공간 삭제
 
 모든 개인 데이터를 포함하여 {{site.data.keyword.webide}} 작업공간을 삭제하려면 다음을 수행하십시오.
 
@@ -138,11 +139,11 @@ IBM Cloud 계정에 로그인할 수 없는 경우 회사 담당자에게 문의
 Git 계정을 삭제하기 전에 다른 프로젝트의 개인 데이터를 삭제하십시오. Git 계정을 삭제하고 나면 사용자가 참가한 모든 프로젝트를 찾기가 어렵거나 불가능할 수 있습니다.
 {: tip}
 
-###개인 및 공유 프로젝트
+### 개인 및 공유 프로젝트
 
 협업하기 위해 다른 사용자를 프로젝트에 초대할 수 있습니다. 계정 내에 작성하는 Git 프로젝트를 개인 프로젝트라고 부릅니다. 또한 여러 Git 소유자가 소유할 수 있는 Git 그룹을 작성할 수도 있습니다. 그룹에 대한 새 프로젝트를 작성하거나 개인 프로젝트의 소유권을 그룹에 이전할 수 있습니다. Git 그룹은 종종 회사가 프로젝트의 소유권을 표시하기 위해 IBM Cloud 회사 계정을 대표하는 데 사용됩니다.
 
-###Git 저장소 및 문제 추적 프로젝트 내보내기
+### Git 저장소 및 문제 추적 프로젝트 내보내기
 
 {{site.data.keyword.gitrepos}} 프로젝트를 삭제하기 전에 아카이브하기 위해 프로젝트를 내보낼 수 있습니다. 
 
@@ -153,14 +154,14 @@ Git 계정을 삭제하기 전에 다른 프로젝트의 개인 데이터를 삭
 
 프로젝트가 아카이브되고 나면 다른 GitLab 인스턴스로 프로젝트를 가져올 수 있습니다. 
 
-###Git 저장소 및 문제 추적 계정 삭제
+### Git 저장소 및 문제 추적 계정 삭제
 
 {{site.data.keyword.gitrepos}} 계정 및 해당 계정에서 소유하는 모든 것을 삭제할 수 있습니다.
 
-1. {{site.data.keyword.gitrepos}} 사용자 설정 대시보드에서 [계정 페이지 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window}의 계정 삭제 섹션에서 **계정 삭제**를 클릭하십시오.
+1. {{site.data.keyword.gitrepos}} 사용자 설정 대시보드에 있는 [계정 페이지](https://us-south.git.cloud.ibm.com/profile/account){: external}의 계정 삭제 섹션에서 **계정 삭제**를 클릭하십시오.
 1. 저장소 및 문제를 포함하여 모든 Git 프로젝트가 삭제됩니다. 또한 속해 있는 {{site.data.keyword.gitrepos}} 그룹에서도 제거됩니다.
 
-계정이 삭제된 후에도 일부 컨텐츠는 유지됩니다. 이 컨텐츠는 시스템 범위 고스트(Ghost) 사용자에게 지정됩니다. {{site.data.keyword.gitrepos}} 계정 삭제에 대한 자세한 정보는 [사용자 계정 삭제 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}을 참조하십시오.
+계정이 삭제된 후에도 일부 컨텐츠는 유지됩니다. 이 컨텐츠는 시스템 범위 고스트(Ghost) 사용자에게 지정됩니다. {{site.data.keyword.gitrepos}} 계정 삭제에 대한 자세한 정보는 [사용자 계정 삭제](https://us-south.git.cloud.ibm.com/profile/account/delete_account#associated-records){: external}를 참조하십시오.
 {: tip}
 
 {{site.data.keyword.gitrepos}}는 도구 통합에 처음 액세스할 때 IBM Cloud 계정에 대한 해당 Git 계정을 자동으로 작성하는 싱글 사인온 메커니즘을 사용합니다. 계정을 삭제하고 나면 {{site.data.keyword.gitrepos}}에 액세스하지 마십시오. 다시 {{site.data.keyword.gitrepos}}에 액세스하는 경우 삭제해야 하는 새 계정이 자동으로 작성됩니다.
@@ -180,7 +181,7 @@ Git 계정을 삭제하기 전에 다른 프로젝트의 개인 데이터를 삭
 
   ![단계 메뉴](images/pipeline_stages.png)
 
-###파이프라인 단계 수정
+### 파이프라인 단계 수정
 
 파이프라인 단계를 수정하려면 다음을 수행하십시오.
 
@@ -193,15 +194,15 @@ Git 계정을 삭제하기 전에 다른 프로젝트의 개인 데이터를 삭
   
 1. 파이프라인 단계에서 작업을 삭제하십시오. **작업** 탭에서 삭제하려는 작업을 선택하고 **제거**를 클릭하십시오.
  
-###파이프라인 단계 내보내기
+### 파이프라인 단계 내보내기
 
-전체 파이프라인에 대한 정의를 내보내려면 파이프라인 URL에 `/yaml`을 추가하십시오. 
+전체 파이프라인에 대한 정의를 내보내려면 파이프라인 URL에 `/yaml`을 추가하십시오.
 
 `https://cloud.ibm.com/devops/pipelines/<pipeline id>/yaml?env_id=<region id>`
 
-여기서 `<pipeline id>` 및 `<region id>`는 파이프라인 페이지 URL에 표시된 값입니다. 
+여기서 `<pipeline id>` 및 `<region id>`는 파이프라인 페이지 URL에 표시된 값입니다.
 
-결과 yaml 파일은 모든 파이프라인 단계의 정의를 포함합니다. 
+결과 yaml 파일은 모든 파이프라인 단계의 정의를 포함합니다.
 
 
 파이프라인 단계에 대한 아티팩트 및 로그를 내보내려면 다음을 수행하십시오.
@@ -211,7 +212,7 @@ Git 계정을 삭제하기 전에 다른 프로젝트의 개인 데이터를 삭
 1. **다운로드** > **아티팩트**를 클릭하여 선택된 빌드에 대한 아티팩트를 내보내십시오.
 1. **다운로드** > **로그**를 클릭하여 선택된 빌드에 대한 로그를 내보내십시오.  
 
-###파이프라인 단계 삭제
+### 파이프라인 단계 삭제
 
 파이프라인 단계를 삭제하려면 다음을 수행하십시오.
 
@@ -229,7 +230,7 @@ Git 계정을 삭제하기 전에 다른 프로젝트의 개인 데이터를 삭
 
 공유 도구 통합 또는 도구 체인을 삭제하기 전에 팀의 다른 구성원과 조정하십시오.
 
-###도구 통합 수정 및 삭제
+### 도구 통합 수정 및 삭제
 
 도구 통합을 작성할 때 사용자 인증 정보 및 통합과 관련된 다른 계정 정보를 제공해야 합니다. 고유 개인 인증 정보 및 계정 정보를 사용한 경우 이 정보를 다른 값으로 대체하거나 도구 통합을 삭제하십시오.
 
@@ -246,7 +247,7 @@ Git 계정을 삭제하기 전에 다른 프로젝트의 개인 데이터를 삭
 1. 도구 체인에서 도구 통합을 삭제하려면 **삭제**를 클릭하십시오.
 1. **삭제**를 클릭하여 확인하십시오.
 
-###도구 체인 삭제
+### 도구 체인 삭제
 
 도구 체인을 삭제하는 경우 삭제를 실행 취소할 수 없습니다.
 
@@ -258,7 +259,7 @@ Git 계정을 삭제하기 전에 다른 프로젝트의 개인 데이터를 삭
 도구 체인을 삭제하는 경우 연관된 {{site.data.keyword.gitrepos}} 저장소는 삭제되지 않습니다. 이 저장소에 대한 액세스 권한을 가진 사용자는 `git clone`을 수행했거나 {{site.data.keyword.webide}} 작업공간을 작성한 경우 데이터 사본을 가질 수 있습니다. 모든 데이터가 삭제되었는지 확인하려면 이 사용자가 데이터 사본을 삭제하도록 요청해야 합니다.
 {: tip}
 
-###모든 도구 체인 삭제
+### 모든 도구 체인 삭제
 
 동시에 리소스 그룹 또는 조직 내에서 모든 도구 체인을 삭제할 수는 없습니다. 각 도구 체인을 한 번에 하나씩 삭제해야 합니다.
 

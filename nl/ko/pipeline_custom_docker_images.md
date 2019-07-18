@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-19"
 
 keywords: pipeline base image, custom Docker, IBM Cloud team uses
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -40,11 +41,11 @@ subcollection: ContinuousDelivery
 **Docker 이미지 이름** 필드가 채워지지 않은 경우 표준 파이프라인 기본 이미지가 사용됩니다. 
 {: tip}
 
-기본적으로 [Docker 허브 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://hub.docker.com/){: new_window}의 저장소가 검색됩니다. {{site.data.keyword.registrylong}}와 같은 다른 Docker 레지스트리를 사용하는 경우 전체 DNS 이름을 사용할 수 있습니다. 또한 Docker 허브의 이미지에 대한 완전한 이름을 사용할 수 있습니다. (예: `registry.hub.docker.com/library/maven:3.5.3-ibmjava`)
+기본적으로 [Docker 허브](https://hub.docker.com/){: external}의 저장소가 검색됩니다. {{site.data.keyword.registrylong}}와 같은 다른 Docker 레지스트리를 사용하는 경우 전체 DNS 이름을 사용할 수 있습니다. 또한 Docker 허브의 이미지에 대한 완전한 이름을 사용할 수 있습니다. (예: `registry.hub.docker.com/library/maven:3.5.3-ibmjava`)
 
 Docker 이미지에 대한 `tag`는 선택사항입니다. 태그를 지정하지 않는 경우 기본적으로 `latest`로 설정됩니다. 기본값 `latest`는 저장소 소유자가 관리해야 하는 태그 이름입니다. 이 Docker 이미지가 시간 순서대로 최신 이미지라는 것을 의미하지 않습니다.
 
-Docker 허브에서 대규모의 저장소 커뮤니티를 찾을 수 있습니다. IBM은 IBM Cloud 팀이 [https://hub.docker.com/u/ibmcom/ ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://hub.docker.com/u/ibmcom/){: new_window}에서 사용하는 많은 공용 저장소를 호스팅합니다. `ibmcom/ibmjava` 및 `ibmcom/ibmnode` 저장소는 빌드하는 데 유용합니다. 
+Docker 허브에서 대규모의 저장소 커뮤니티를 찾을 수 있습니다. IBM은 [https://hub.docker.com/u/ibmcom/](https://hub.docker.com/u/ibmcom/){: external}에서 IBM Cloud 팀이 사용하는 많은 공용 저장소를 호스팅합니다. `ibmcom/ibmjava` 및 `ibmcom/ibmnode` 저장소는 빌드하는 데 유용합니다. 
 
 ## 개인용 이미지 레지스트리 사용
 {: #private_image_registry}
@@ -53,7 +54,7 @@ Docker 허브에서 대규모의 저장소 커뮤니티를 찾을 수 있습니�
 
 대부분의 레지스트리의 경우 제공된 사용자 이름 및 비밀번호를 사용할 수 있습니다. {{site.data.keyword.registrylong_notm}}를 사용하여 개인용 이미지를 저장하는 경우 인증을 위해 플랫폼 API 키를 사용해야 합니다. 
 
-1. [플랫폼 API 키를 요청 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/iam/#/apikeys){: new_window}하고 키를 저장하십시오. 
+1. [플랫폼 API 키를 요청](https://cloud.ibm.com/iam/#/apikeys){: external}하고 키를 저장하십시오. 
 1. `DOCKER_USERNAME`에 `iamapikey`를 사용하고 `DOCKER_PASSWORD`에 대해 저장한 플랫폼 API 키를 사용하여 두 가지 단계 환경 특성을 작성하십시오.
 
  ![{{site.data.keyword.registrylong_notm}} 인증 정보](images/custom-image-private-repository.png)

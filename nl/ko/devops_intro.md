@@ -2,7 +2,7 @@
 
 Copyright:
  years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-18"
 
 keywords: IBM Cloud DevOps, enterprise application Developer, IBM Cloud Garage Method
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -26,9 +27,7 @@ subcollection: ContinuousDelivery
 
 빠르게 반복하고 실험할 수 있도록 시장 수요가 팀에 요구하는 속도로 소프트웨어와 서비스를 제공합니다. 피드백과 데이터에 따라 새 버전을 자주 배치해야 합니다. 가장 성공적인 클라우드 개발 팀에서는 현대적 DevOps 문화 및 사례를 사용하고, 클라우드 네이티브 아키텍처를 수용하며, 생산성을 높이기 위해 최고 수준의 도구에서 도구를 어셈블링합니다. 이러한 작업을 빠르게 수행하는 것이 경쟁 우위를 차지하는 핵심입니다.
 
- 
-<a href="https://www.ibm.com/cloud/garage">IBM Cloud Garage Method <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>는
-아키텍처, 사례 및 DevOps 도구 체인을 설명하여 기업이 규모에 맞게 혁신할 수 있습니다. {{site.data.keyword.Bluemix_notm}} Garage Method를 사용하여 사용자 문화를 변화시키고 도구를 효과적이고 빠르게 사용할 수 있습니다.
+[IBM Cloud Garage Method](https://www.ibm.com/cloud/garage){:external}는 아키텍처, 사례 및 DevOps 도구 체인을 설명하여 기업이 규모에 맞게 혁신할 수 있습니다. {{site.data.keyword.Bluemix_notm}} Garage Method를 사용하여 사용자 문화를 변화시키고 도구를 효과적이고 빠르게 사용할 수 있습니다.
 
 엔터프라이즈 애플리케이션 개발자는 몇 분 안에 클라우드 네이티브 애플리케이션의 빌드 및 배치를 시작할 수 있습니다. 전체 서비스 세트를 사용하여 코그너티브, IoT, 블록체인, 모바일 및 데이터 집약적 애플리케이션을 빌드할 수 있습니다. IBM Cloud 앱 서비스를 사용하면 개별 개발자가 프로젝트를 작성하고, 애플리케이션 스타터 킷을 선택하고, 프로덕션 준비가 되어 있는 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치할 수 있습니다. 플랫폼의 코드 생성 기술은 스타터 애플리케이션을 개발자가 선호하는 언어 및 프레임워크에 작성하며 해당 요구 및 유스 케이스에 알맞게 조정합니다. Watson Conversation과 같은 유스 케이스를 지원하는 데 필요한 모든 서비스는 자동으로 프로비저닝됩니다. 개발자는 로컬 워크스테이션 또는 클라우드에서 디버그하고 테스트할 수 있으며 DevOps 도구 체인을 사용하여 다른 사용자와 협업하고 딜리버리 프로세스를 자동화할 수 있습니다.
 

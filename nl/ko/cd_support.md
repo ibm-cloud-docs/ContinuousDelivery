@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-08"
+lastupdated: "2019-06-11"
 
 keywords: Continuous Delivery, Support tickets, Continuous Delivery service
 
@@ -22,33 +22,39 @@ subcollection: ContinuousDelivery
 # {{site.data.keyword.contdelivery_short}}에 대한 도움 및 지원 받기    
 {: #cd_support}  
 
-{{site.data.keyword.contdelivery_full}} 팀은 {{site.data.keyword.contdelivery_short}} 서비스 및 도구 체인에 대한 질문에 대해 developerWorks 포럼을 적극적으로 모니터링합니다.
+{{site.data.keyword.contdelivery_full}} 팀은 {{site.data.keyword.contdelivery_short}} 서비스 및 도구 체인 질문에 대한 IBM Developer Answers 및 Slack 채널을 활발하게 모니터합니다.
 
-<table>
+| 도움 받기 | 질문하기 |
+|----------|---------|
+| Slack 채널에서 연락 | <a class="xref" href="https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/slack_us.png" alt="Slack us"/></a> |
+| 최신 게시물 탐색 및 IBM Developer Answers에서 질문 및 답변 | <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/post_question.png" alt="IBM Developer Answers"/></a> |
+{: caption="표 1. {{site.data.keyword.contdelivery_short}}에 대한 도움 및 지원 받기" caption-side="top"}
+
+<!--<table>
 <tr>
 <th style="width:20%"> &nbsp; &nbsp; &nbsp;</th>
  <th style="text-align:center;width=60%">
- <strong>질문하기</strong> </th>
+ <strong>Ask Us a Question</strong> </th>
 <th> &nbsp; &nbsp; &nbsp;</th>
 </tr>
 <tr>
 <td> </td>
   <td align="center">
-  <p>IBM {{site.data.keyword.contdelivery_short}} 및 다른 DevOps 서비스 사용자로부터 빠르고 직접적으로 도움을 받습니다.</p>
+  <p>Get help fast, directly from IBM {{site.data.keyword.contdelivery_short}} and other DevOps Services users.</p>
   <b>dW Answers</b>
   <p>
-   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(새 탭이나 창에서 열림)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
+   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,ibm-cloud" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
-    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(새 탭이나 창에서 열림)">dW Answers에 대한 최신 <img class="image" src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services 질문을 표시합니다.</p>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Opens in a new tab or window)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on dW Answers.</p> 
  </td>
  <td></td>
     </tr>
-  </table>  
+  </table>  -->
 
 
 ## 지원 티켓
 
-보다 심각한 문제가 있거나 {{site.data.keyword.contdelivery_short}} 서비스에서 문제점이 발견되면 지원 티켓을 여십시오.    
+보다 심각한 문제가 있거나 {{site.data.keyword.contdelivery_short}} 서비스에서 문제점이 발견되면 지원 티켓을 여십시오.   
 
 1. {{site.data.keyword.Bluemix_notm}}에 로그인하십시오.
 1. 메뉴 표시줄에서 **지원**을 클릭한 후에 **티켓 추가**를 클릭하십시오.
