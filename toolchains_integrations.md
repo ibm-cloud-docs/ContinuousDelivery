@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-27"
+lastupdated: "2019-07-25"
 
 keywords: tool integrations, IBM Cloud Public, Alert Notification, Configuring Artifactory
 
@@ -19,6 +19,7 @@ subcollection: ContinuousDelivery
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}   
 
 # Configuring tool integrations
@@ -61,6 +62,9 @@ If you want to start developing with your source code on {{site.data.keyword.Blu
 
 ## Configuring Alert Notification
 {: #alertnotification}
+
+The {{site.data.keyword.alertnotificationfull}} service is deprecated. As of 01 July 2019, customers with existing instances only of {{site.data.keyword.alertnotificationshort}} can use this service until 01 July 2020. For more information about the retirement of the {{site.data.keyword.alertnotificationshort}} service, see [Deprecating IBM {{site.data.keyword.alertnotificationshort}} Service](https://www.ibm.com/cloud/blog/announcements/deprecating-ibm-alert-notification-service){:external}.
+{: deprecated}
 
 {{site.data.keyword.alertnotificationfull}} is a hybrid cloud-based solution that you can use to centralize and simplify your notification strategy. It works with other cloud-based and on-premises applications. Alerts are forwarded to {{site.data.keyword.alertnotificationshort}} by using a secure RESTful API.
 
