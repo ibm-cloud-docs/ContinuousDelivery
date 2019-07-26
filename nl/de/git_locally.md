@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-19"
 
 keywords: Git source control, personal access token, Git repos
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -35,8 +36,9 @@ Sie können Ihren Quellcode in einem GitHub-, GitHub Enterprise- oder {{site.dat
 | Git-Typ  | HTTPS-Setup | HTTPS-Verwendung |  SSH-Setup |
 |:-----------|:-------------|:------------|:-------------|
 | Git Repos and Issue Tracking  | [Persönliches Zugriffstoken](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat) | Git Repos and Issue Tracking-Benutzername (nicht Ihre IBMid) und persönliches Zugriffstoken | [SSH-Schlüssel konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key) |
-| Öffentlicher GitHub (github.com) | Kein persönliches Zugriffstoken erforderlich, aber Sie können eines einrichten und verwenden | GitHub-Benutzername und Kennwort oder GitHub-Benutzername und persönliches Zugriffstoken oder nur persönliches Zugriffstoken als Benutzername | [GitHub-SSH-Schlüssel konfigurieren](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) |
+| Öffentlicher GitHub (github.com) | Kein persönliches Zugriffstoken erforderlich, aber Sie können eines einrichten und verwenden | GitHub-Benutzername und Kennwort oder GitHub-Benutzername und persönliches Zugriffstoken oder nur persönliches Zugriffstoken als Benutzername | [GitHub-SSH-Schlüssel konfigurieren](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: external} |
 | GitHub Enterprise | [Persönliches Zugriffstoken](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) | GitHub Enterprise-Benutzername (nicht Ihre IBMid) und persönliches Zugriffstoken | [GitHub Enterprise-SSH-Schlüssel konfigurieren](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) |
+{: caption="Tabelle 1. Git-Authentifizierungssetup" caption-side="top"}
 
 Wenn Sie lieber SSH verwenden möchten, können Sie einen einzigen Schlüssel für alle Git-Server verwenden. Erstellen oder suchen Sie Ihren Schlüssel und konfigurieren Sie ihn für jeden Server, wie dies in den vorherigen Links beschrieben ist. Wenn Sie Ihren Schlüssel mit einer Kennphrase erstellen, werden Sie zur Eingabe dieser Kennphrase aufgefordert, wenn Sie den Schlüssel verwenden.
 {: tip}
@@ -45,7 +47,7 @@ Wenn Sie lieber SSH verwenden möchten, können Sie einen einzigen Schlüssel f�
 
     a. Überprüfen Sie, ob Git installiert ist. Geben Sie in einer Befehlszeile `git version` ein. Wenn Git installiert ist, wird die Versionsnummer angezeigt und Sie können beginnen.
 
-    b. Wenn Git nicht nicht installiert ist, [rufen Sie die Git-Website auf ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://git-scm.com/downloads){: new_window}.
+    b. Wenn Git nicht installiert ist, [rufen Sie die Git-Website auf](http://git-scm.com/downloads){: external}.
 
     c. Laden Sie die Version für Ihr Betriebssystem herunter und installieren Sie sie. Sie können die Standardinstallationswerte übernehmen.
 
@@ -72,12 +74,12 @@ Sie können eine lokale Kopie der Projektdateien erstellen, indem Sie das Git-Re
 6. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die entsprechenden Informationen ein (wie in der vorherigen Tabelle definiert).
 
 
-Wenn der Download abgeschlossen ist, haben Sie eine lokale Version der Dateien in Ihrem Repository. Weitere Informationen zur Verwendung von Git finden Sie in der [Git-Dokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")]](http://git-scm.com/doc){: new_window}.
+Wenn der Download abgeschlossen ist, haben Sie eine lokale Version der Dateien in Ihrem Repository. Weitere Informationen zur Verwendung von Git finden Sie in der [Git-Dokumentation](http://git-scm.com/doc){: external}.
 
 
 ## Mit Eclipse und dem EGit-Plug-in auf das Repository zugreifen
 {: #git_egit}
 
-Wenn Sie Eclipse verwenden und ein Projekt haben, das Git für die Quellcodeverwaltung verwendet, können Sie das EGit-Plug-in verwenden, um Ihre Repositorys von Eclipse aus zu verwalten. Weitere Informationen zur Installation und Konfiguration von EGit finden Sie im [EGit-Lernprogramm ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")]](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: new_window}.
+Wenn Sie Eclipse verwenden und ein Projekt haben, das Git für die Quellcodeverwaltung verwendet, können Sie das EGit-Plug-in verwenden, um Ihre Repositorys von Eclipse aus zu verwalten. Weitere Informationen zur Installation und Konfiguration von EGit finden Sie im [EGit-Lernprogramm](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: external}.
 
-Wenn Sie bei der Verwendung von {{site.data.keyword.gitrepos}} auf Probleme stoßen, finden Sie weitere Informationen in der [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local)-Dokumentation. 
+Wenn Sie bei der Verwendung von {{site.data.keyword.gitrepos}} auf Probleme stoßen, finden Sie weitere Informationen in der [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local)-Dokumentation.

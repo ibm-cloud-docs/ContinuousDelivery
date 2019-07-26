@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-08"
+lastupdated: "2019-06-11"
 
 keywords: Continuous Delivery, Support tickets, Continuous Delivery service
 
@@ -22,33 +22,39 @@ subcollection: ContinuousDelivery
 # Hilfe und Unterstützung für {{site.data.keyword.contdelivery_short}} anfordern    
 {: #cd_support}  
 
-Das {{site.data.keyword.contdelivery_full}}-Team überwacht aktiv das developerWorks-Forum auf Fragen zum {{site.data.keyword.contdelivery_short}}-Service und zu Toolchains.
+Das {{site.data.keyword.contdelivery_full}}-Team überwacht aktiv unseren Slack-Kanal und IBM Developer Answers auf Fragen zum {{site.data.keyword.contdelivery_short}}-Service und zu Toolchains.
 
-<table>
+| Hilfe anfordern | Stellen Sie uns eine Frage |
+|----------|---------|
+| Erreichen Sie uns auf unserem Slack-Kanal | <a class="xref" href="https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/" target="_blank" title="(Wird auf einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/slack_us.png" alt="Kontakt über Slack"/></a> |
+| Lesen Sie die neuesten Beiträge und stellen oder beantworten Sie Fragen in IBM Developer Answers | <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Wird auf einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/post_question.png" alt="IBM Developer Answers"/></a> |
+{: caption="Tabelle 1. Hilfe und Unterstützung für {{site.data.keyword.contdelivery_short}}" caption-side="top"}
+
+<!--<table>
 <tr>
 <th style="width:20%"> &nbsp; &nbsp; &nbsp;</th>
  <th style="text-align:center;width=60%">
- <strong>Stellen Sie uns eine Frage</strong> </th>
+ <strong>Ask Us a Question</strong> </th>
 <th> &nbsp; &nbsp; &nbsp;</th>
 </tr>
 <tr>
 <td> </td>
   <td align="center">
-  <p>Erhalten Sie direkt von IBM {{site.data.keyword.contdelivery_short}} und anderen DevOps Services-Benutzern schnell Unterstützung.</p>
+  <p>Get help fast, directly from IBM {{site.data.keyword.contdelivery_short}} and other DevOps Services users.</p>
   <b>dW Answers</b>
   <p>
-   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/ask-a-question.png" alt="Frage stellen"/></a></p>
+   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,ibm-cloud" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
-    Hier können Sie die <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)">neuesten Fragen <img class="image" src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"/></a> {{site.data.keyword.Bluemix_notm}} zu DevOps Services auf dW Answers anzeigen.</p>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Opens in a new tab or window)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on dW Answers.</p> 
  </td>
  <td></td>
     </tr>
-  </table>  
+  </table>  -->
 
 
 ## Support-Tickets
 
-Wenn Sie ein ernsteres Problem haben oder Probleme mit dem {{site.data.keyword.contdelivery_short}}-Service auftreten, erstellen Sie ein Support-Ticket.    
+Wenn Sie ein ernsteres Problem haben oder Probleme mit dem {{site.data.keyword.contdelivery_short}}-Service auftreten, erstellen Sie ein Support-Ticket.   
 
 1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an.
 1. Klicken Sie in der Menüleiste auf **Support** und anschließend auf **Ticket hinzufügen**.

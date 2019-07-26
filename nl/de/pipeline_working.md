@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-14"
 
 keywords: IBM Cloud, build types, build script
 
@@ -34,10 +34,10 @@ Es ist eine Bereitstellung für eine oder mehrere Regionen bzw. einen oder mehre
 
 Sie können jede der folgenden Methoden zum Erstellen einer Pipeline verwenden:
 
-   * [Erstellen einer Toolchain aus einer vorhandenen Cloud Foundry-Anwendung](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app){: new_window}. Die resultierende Toolchain enthält eine Pipeline.
+   * [Erstellen einer Toolchain aus einer vorhandenen Cloud Foundry-Anwendung](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app). Die resultierende Toolchain enthält eine Pipeline.
 
-   * [Erstellen einer Toolchain aus einer Vorlage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template){: new_window}, die mindestens eine Pipeline enthält.
+   * [Erstellen einer Toolchain aus einer Vorlage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template), die mindestens eine Pipeline enthält.
 
-   * [Hinzufügen der {{site.data.keyword.deliverypipeline}}-Toolintegration](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline){: new_window} zu einer vorhandenen Toolchain.
+   * [Hinzufügen der {{site.data.keyword.deliverypipeline}}-Toolintegration](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline) zu einer vorhandenen Toolchain.
    
 Von {{site.data.keyword.deliverypipeline}} aus können Sie Ihre Konfiguration ändern, den Status von Builds, der bereitgestellten App und von kürzlich erfolgten Bereitstellungen überprüfen, die aktuellen Protokolle und Bereitstellungsdetails anzeigen und Ihre Pipeline löschen.

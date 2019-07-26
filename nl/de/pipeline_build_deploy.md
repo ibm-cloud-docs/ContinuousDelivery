@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-14"
 
 keywords: ADD STAGE, Run Stage icon, JOBS tab
 
@@ -104,20 +104,20 @@ Sie können ferner eine Stage auf der Seite mit dem Stageverlaufsprotokoll ausf�
 ### Protokolle aus einem Script herunterladen
 {: #deliverypipeline_download_logs}
 
-Sie können die Protokolldatei für einen Pipelinejob aus einem Script herunterladen und die `PIPELINE_LOG_URL` speichern, die während der Ausführung des Pipelinejobs bereitgestellt wird. Im folgenden Beispiel finden Sie die Schritte zum Herunterladen der Protokolldatei des Pipelinejobs auf ein anderes System. 
+Sie können die Protokolldatei für einen Pipelinejob aus einem Script herunterladen und die `PIPELINE_LOG_URL` speichern, die während der Ausführung des Pipelinejobs bereitgestellt wird. Im folgenden Beispiel finden Sie die Schritte zum Herunterladen der Protokolldatei des Pipelinejobs auf ein anderes System.
 
 
-1. Richten Sie eine `JOB_LOG`-Umgebungseigenschaft für Ihre Stage ein. 
+1. Richten Sie eine `JOB_LOG`-Umgebungseigenschaft für Ihre Stage ein.
 
-1. Speichern Sie die `PIPELINE_LOG_URL` in Ihrem Pipelinejob. 
+1. Speichern Sie die `PIPELINE_LOG_URL` in Ihrem Pipelinejob.
 
    ```shell
    export JOB_LOG="$PIPELINE_LOG_URL"
    ```
-1. Verwenden Sie die `PIPELINE_LOG_URL` in einem späteren Job in derselben Stage, um die Protokolldatei für den Export auf ein anderes System herunterzuladen. Verwenden Sie ein IBM Cloud-Trägertoken, um auf die Protokolldatei zuzugreifen. 
+1. Verwenden Sie die `PIPELINE_LOG_URL` in einem späteren Job in derselben Stage, um die Protokolldatei für den Export auf ein anderes System herunterzuladen. Verwenden Sie ein IBM Cloud-Trägertoken, um auf die Protokolldatei zuzugreifen.
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
@@ -128,13 +128,13 @@ Sie können die Protokolldatei für einen Pipelinejob aus einem Script herunterl
      -o job_log.txt \
      "$JOB_LOG"
    ```
-1. Prüfen Sie den Header `X-More-Data`. Wenn der Header auf `true` gesetzt ist, wird die Protokolldatei generiert oder verarbeitet. Wenn der Header auf `false` gesetzt ist, kann die Protokolldatei verwendet werden. 
+1. Prüfen Sie den Header `X-More-Data`. Wenn der Header auf `true` gesetzt ist, wird die Protokolldatei generiert oder verarbeitet. Wenn der Header auf `false` gesetzt ist, kann die Protokolldatei verwendet werden.
 
    ```shell
    grep X-More-Data /tmp/headers.txt
    X-More-Data: false
    ```
-1. Laden Sie die Protokolldatei auf Ihr System hoch. 
+1. Laden Sie die Protokolldatei auf Ihr System hoch.
 
    ```shell
    scp job_log.txt user@example.org:/job1/logs
@@ -144,21 +144,21 @@ Sie können die Protokolldatei für einen Pipelinejob aus einem Script herunterl
 ### Artefakte aus einem Script herunterladen
 {: #deliverypipeline_download_artifacts}
 
-Sie können die Artefakte für einen Pipeline-Buildjob aus einem Script herunterladen und die `PIPELINE_ARTIFACT_URL` speichern, die während der Ausführung des Pipelinejobs bereitgestellt wird. Im folgenden Beispiel finden Sie die Schritte zum Hochladen der Artefakte des Pipelinejobs auf ein anderes System. 
+Sie können die Artefakte für einen Pipeline-Buildjob aus einem Script herunterladen und die `PIPELINE_ARTIFACT_URL` speichern, die während der Ausführung des Pipelinejobs bereitgestellt wird. Im folgenden Beispiel finden Sie die Schritte zum Hochladen der Artefakte des Pipelinejobs auf ein anderes System.
 
 
-1. Richten Sie eine `JOB_ARTIFACT`-Umgebungseigenschaft für Ihre Stage ein. 
+1. Richten Sie eine `JOB_ARTIFACT`-Umgebungseigenschaft für Ihre Stage ein.
 
-1. Speichern Sie die `PIPELINE_ARTIFACT_URL` in Ihrem Pipelinejob. 
+1. Speichern Sie die `PIPELINE_ARTIFACT_URL` in Ihrem Pipelinejob.
 
    ```shell
    export JOB_ARTIFACT="$PIPELINE_ARTIFACT_URL"
    ```
    
-1. Verwenden Sie die `PIPELINE_ARTIFACT_URL` in einem späteren Job in derselben Stage, um die Artefakte für den Export auf ein anderes System herunterzuladen. Verwenden Sie ein IBM Cloud-Trägertoken, um auf die Artefakte zuzugreifen. 
+1. Verwenden Sie die `PIPELINE_ARTIFACT_URL` in einem späteren Job in derselben Stage, um die Artefakte für den Export auf ein anderes System herunterzuladen. Verwenden Sie ein IBM Cloud-Trägertoken, um auf die Artefakte zuzugreifen.
 
    ```shell
-   ibmcloud login -a api.ng.bluemix.net \
+   ibmcloud login -a cloud.ibm.com \
      --apikey <INSERT API KEY HERE>
 
    BEARER=$( ibmcloud iam oauth-tokens | grep "IAM token" | sed 's/^.*Bearer //g' )
@@ -169,7 +169,7 @@ Sie können die Artefakte für einen Pipeline-Buildjob aus einem Script herunter
    curl -O  "$DOWNLOAD_URL"
    ```
    
-1. Laden Sie die Artefakte auf Ihr System hoch. 
+1. Laden Sie die Artefakte auf Ihr System hoch.
 
    ```shell
    scp $(basename "$DOWNLOAD_URL") user@example.org:/job1/artifacts

@@ -2,7 +2,7 @@
 
 Copyright:
  years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-18"
 
 keywords: IBM Cloud DevOps, enterprise application Developer, IBM Cloud Garage Method
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -26,9 +27,7 @@ subcollection: ContinuousDelivery
 
 Eine Bereitstellung von Software und Services in der Geschwindigkeit, die der Markt verlangt, erfordert, dass Teams schnell Aufgaben wiederholen und experimentieren. Sie müssen häufig neue Versionen bereitstellen, die auf Feedback und Daten basieren. Die erfolgreichsten Cloud-Entwicklungsteams verwenden die moderne DevOps-Kultur und -Verfahren, nutzen Cloudarchitekturen und stellen Toolchains aus erstklassigen Tools zusammen, um ihre Produktivität zu maximieren. Dies schnell durchführen zu können, ist ein entscheidender Wettbewerbsvorteil..
 
-Die 
-<a href="https://www.ibm.com/cloud/garage">IBM Cloud Garage Method <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> beschreibt Architekturen,
-Vorgehensweisen und DevOps-Toolchains, die es Unternehmen ermöglichen, höchst innovativ zu sein. Mit {{site.data.keyword.Bluemix_notm}} Garage Method können Sie Ihre Unternehmenskultur umsetzen und die Tools effektiv und schnell nutzen.
+[IBM Cloud Garage Method](https://www.ibm.com/cloud/garage){:external} beschreibt Architekturen, Verfahren und DevOps-Toolchains, die es Unternehmen ermöglichen, im richtigen Maß innovativ zu sein. Mit {{site.data.keyword.Bluemix_notm}} Garage Method können Sie Ihre Unternehmenskultur umsetzen und die Tools effektiv und schnell nutzen.
 
 Ein Entwickler für Unternehmensanwendungen kann innerhalb von Minuten mit dem Erstellen und Bereitstellen von Cloudanwendungen beginnen. Sie können eine ganze Reihe von Services nutzen, um kognitive, IoT-, Blockchain-, mobile und datenintensive Anwendungen zu erstellen. Mit dem IBM Cloud App-Service kann ein einzelner Entwickler ein Projekt erstellen, ein Starter-Kit für Anwendungen auswählen und eine produktionsbereite Anwendung für {{site.data.keyword.Bluemix_notm}} bereitstellen. Die Technologie zur Codegenerierung der Plattform erstellt eine Starteranwendung in der bevorzugten Sprache und im bevorzugten Framework des Entwicklers, die auf Bedürfnisse und Anwendungsfall zugeschnitten ist. Alle Services, die zur Unterstützung des Anwendungsfalls erforderlich sind, z. B. Watson Conversation, werden automatisch bereitgestellt. Entwickler können auf ihrer lokalen Workstation oder in der Cloud debuggen und testen und eine DevOps-Toolchain verwenden, um mit anderen zusammenzuarbeiten und den Bereitstellungsprozess zu automatisieren.
 

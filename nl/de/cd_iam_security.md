@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-02-25"
+lastupdated: "2019-05-27"
 
 keywords: Administrator Create, Administrator Update, Editor Update, Update
 
@@ -27,9 +27,9 @@ Der Zugriff auf {{site.data.keyword.contdelivery_full}}-Serviceinstanzen in Ress
 
 **Hinweise**: 
 
-* Der Benutzerzugriff für {{site.data.keyword.contdelivery_short}}-Serviceinstanzen und Toolchaininstanzen wird separat verwaltet. Weitere Informationen zum Verwalten des Benutzerzugriffs auf Toolchains in Ressourcengruppen finden Sie im Abschnitt [Benutzerzugriff auf Toolchains mit Identity and Access Management verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}.
+* Der Benutzerzugriff für {{site.data.keyword.contdelivery_short}}-Serviceinstanzen und Toolchaininstanzen wird separat verwaltet. Weitere Informationen zum Verwalten des Benutzerzugriffs auf Toolchains in Ressourcengruppen finden Sie im Abschnitt [Benutzerzugriff auf Toolchains mit Identity and Access Management verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
 
-* Der Benutzerzugriff für Toolchains in Cloud Foundry-Organisationen wird anders verwaltet als der Benutzerzugriff auf Toolchains in Ressourcengruppen. Weitere Informationen zum Verwalten des Benutzerzugriffs auf Toolchains in Cloud Foundry-Organisationen finden Sie im Abschnitt [Zugriff auf Toolchains in Cloud Foundry-Organisationen verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
+* Der Benutzerzugriff für Toolchains in Cloud Foundry-Organisationen wird anders verwaltet als der Benutzerzugriff auf Toolchains in Ressourcengruppen. Weitere Informationen zum Verwalten des Benutzerzugriffs auf Toolchains in Cloud Foundry-Organisationen finden Sie im Abschnitt [Zugriff auf Toolchains in Cloud Foundry-Organisationen verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs).
 
 Jedem Benutzer, der auf den Service {{site.data.keyword.contdelivery_short}} in Ihrem Konto zugreift, muss eine Zugriffsrichtlinie mit einer definierten IAM-Benutzerrolle zugeordnet werden. Diese Richtlinie bestimmt, welche Aktionen der Benutzer im Kontext des ausgewählten Service oder der ausgewählten Instanz ausführen kann. Die zulässigen Aktionen werden durch den {{site.data.keyword.Bluemix_notm}}-Service angepasst und als Operationen definiert, die für den Service ausgeführt werden dürfen. Die Aktionen werden dann IAM-Benutzerrollen zugeordnet.
 
@@ -72,5 +72,3 @@ In der folgenden Tabelle werden Aktionen aufgeführt, die Servicezugriffsrollen 
 {: caption="Tabelle 3. IAM-Servicezugriffsrollen und -aktionen" caption-side="top"}
 
 Weitere Informationen zum Zuordnen von Benutzerrollen in der Benutzerschnittstelle finden Sie im Abschnitt [IAM-Zugriff verwalten](/docs/iam?topic=iam-iammanidaccser).
-
-<!--This link is not live in production yet. Use https://console.bluemix.net/docs/iam/iamusermanage.html#iamusermanage until the link above is available in production.-->

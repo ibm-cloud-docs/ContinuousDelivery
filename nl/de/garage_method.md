@@ -3,7 +3,7 @@
 copyright:
   years: 2017, 2019
 
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-18"
 
 keywords: Continuous delivery practices, {{site.data.keyword.contdelivery_full}}, IBM Cloud Garage Method
 
@@ -18,6 +18,7 @@ subcollection: ContinuousDelivery
 -->
 
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
@@ -27,7 +28,7 @@ subcollection: ContinuousDelivery
 
 
 
-Mit {{site.data.keyword.contdelivery_full}} können Anwendungen unter Verwendung bewährter DevOps-Verfahren und branchenführender Tools erstellt, getestet und bereitgestellt werden. Continuous Delivery unterstützt eine Vielzahl von Verfahren. Aber welche Verfahren sollten Sie anwenden? Darauf gibt es keine allgemeingültige Antwort. Die Verfahren, die Sie anwenden, sind vom Softwarebereitstellungsprojekt abhängig.  Die [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage){:new_window} ist ein Ansatz von IBM, um schnell ansprechende Anwendungen bereitzustellen. Hierbei werden Continuous Delivery mit IBM Design Thinking, schlanken, DevOps- und agilen Verfahren kombiniert. Diese Verfahren konzentrieren sich zwar vorrangig auf die Cloud, können aber jedem Softwareentwicklungsaufwand zugutekommen.
+Mit {{site.data.keyword.contdelivery_full}} können Anwendungen unter Verwendung bewährter DevOps-Verfahren und branchenführender Tools erstellt, getestet und bereitgestellt werden. Continuous Delivery unterstützt eine Vielzahl von Verfahren. Aber welche Verfahren sollten Sie anwenden? Darauf gibt es keine allgemeingültige Antwort. Die Verfahren, die Sie anwenden, sind vom Softwarebereitstellungsprojekt abhängig.  [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external} ist der Ansatz von IBM für das schnelle Bereitstellen ansprechender Anwendungen. Hierbei werden Continuous Delivery mit IBM Design Thinking, schlanken, DevOps- und agilen Verfahren kombiniert. Diese Verfahren konzentrieren sich zwar vorrangig auf die Cloud, können aber jedem Softwareentwicklungsaufwand zugutekommen.
 
 
 ## Continuous Delivery-Verfahren annehmen
@@ -40,26 +41,26 @@ Um zu erfahren, wie Sie einen Continuous Delivery-Ansatz in Ihrer Organisation �
 
 Auf der Cloud Garage Method-Site finden Sie Artikel mit einer allgemeinen Beschreibung von Continuous Delivery.
 
-[Continuous Delivery ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/deliver/practice_continuous_delivery/] ){:new_window} ist ein Verfahren, nach dem Sie Ihre Software so erstellen und bereitstellen, dass sie jederzeit für die Produktion freigegeben werden kann. Eines der Markenzeichen der Informatik ist die Verkürzung diverser Zykluszeiten im Entwicklungs- und Betriebsprozess.
+[Continuous Delivery](https://www.ibm.com/cloud/garage/content/deliver/practice_continuous_delivery/){:external} ist ein Verfahren, bei dem Sie Ihre Software so erstellen und bereitstellen, dass sie jederzeit für die Produktion freigegeben werden kann. Eines der Markenzeichen der Informatik ist die Verkürzung diverser Zykluszeiten im Entwicklungs- und Betriebsprozess.
 
-Mit [Delivery Pipeline ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:new_window}, einem Produkt, das in {{site.data.keyword.Bluemix_notm}} Continuous Delivery enthalten ist, können Sie die unterbrechungsfreie Bereitstellung auf konsistente und zuverlässige Weise erreichen, indem Sie den Vorgang der Softwarebereitstellung in Stages unterteilen. Das Ziel besteht darin, dass der Code jede dieser Stages automatisch mit minimalem manuellem Eingriff durchläuft. Mit der [praktischen Anwendung von Delivery Pipelines ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/deliver/practice_delivery_pipeline/){:new_window} können Sie die kontinuierliche Bereitstellung Ihres Projekts automatisieren..
+Mit [Delivery Pipeline](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:external}, einem Produkt, das in {{site.data.keyword.Bluemix_notm}} Continuous Delivery enthalten ist, können Sie die unterbrechungsfreie Bereitstellung auf konsistente und zuverlässige Weise erreichen, indem Sie den Vorgang der Softwarebereitstellung in Stages unterteilen. Das Ziel besteht darin, dass der Code jede dieser Stages automatisch mit minimalem manuellem Eingriff durchläuft. Mit der [Verwendung von Delivery Pipelines](https://www.ibm.com/cloud/garage/content/deliver/practice_delivery_pipeline/){:external} können Sie die kontinuierliche Bereitstellung Ihres Projekts automatisieren.
 
 ## Continuous Delivery-Lernprogramme
 {: #gm_cd_tutorials}
 
-[Erstellen und verwenden Sie Ihre erste Toolchain mithilfe der Toolchain zum Entwickeln einer Cloud Foundry-App ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}. Erfahren Sie, wie Sie eine offene Toolchain aus einer Vorlage erstellen und die Toolchain für die fortlaufende Bereitstellung einer 'Hello World'-App verwenden.
+[Erste Toolchain mithilfe der Toolchain zum Entwickeln einer Cloud Foundry-App erstellen und verwenden](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}. Erfahren Sie, wie Sie eine offene Toolchain aus einer Vorlage erstellen und die Toolchain für die fortlaufende Bereitstellung einer 'Hello World'-App verwenden.
 
-[Toolchain zu einer App hinzufügen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window} Erfahren Sie, wie Sie eine offene Toolchain zu einer App hinzufügen und die Toolchain für die fortlaufende Bereitstellung der App verwenden.
+[Einer App eine Toolchain hinzufügen](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}. Erfahren Sie, wie Sie eine offene Toolchain zu einer App hinzufügen und die Toolchain für die fortlaufende Bereitstellung der App verwenden.
 
-[Verwenden Sie die Toolchain zum Entwickeln und Testen von Microservices auf Cloud Foundry ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}. Erfahren Sie, wie Sie mithilfe einer Vorlage mit drei Microservices eine Toolchain erstellen und mithilfe der Toolchain ein Onlinegeschäft kontinuierlich bereitstellen.
+[Toolchain zum Entwickeln und Testen von Microservices auf Cloud Foundry verwenden](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}. Erfahren Sie, wie Sie mithilfe einer Vorlage mit drei Microservices eine Toolchain erstellen und mithilfe der Toolchain ein Onlinegeschäft kontinuierlich bereitstellen.
 
-Weitere Lernprogramme finden Sie im [Learning Lab ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/category/courses){:new_window}.
+Weitere Lernprogramme finden Sie im [Learning Lab](https://www.ibm.com/cloud/garage/category/courses){:external}.
 
 ## Continuous Delivery-Kurse
 {: #gm_cd_courses}
 
-[Finden Sie rasch den Einstieg in die agile Entwicklung und Continuous Delivery ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/course/get_started_agile_cd){:new_window}. Erfahren Sie, wie Sie eine Toolchain aus einer Vorlage erstellen und die Toolchain für die fortlaufende Bereitstellung einer 'Hello World'-App verwenden.
+[Erste Schritte mit agiler Entwicklung und Continuous Delivery](https://www.ibm.com/cloud/garage/content/course/get_started_agile_cd){:external}. Erfahren Sie, wie Sie eine Toolchain aus einer Vorlage erstellen und die Toolchain für die fortlaufende Bereitstellung einer 'Hello World'-App verwenden.
 
-[Werden Sie zu einem Befürworter von IBM Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/content/course/gm_advocate){:new_window}. Absolvieren Sie diesen Fortgeschrittenenkurs, um Erfahrung mit den Verfahren und Tools von Cloud Garage Method zu sammeln.
+[Werden Sie ein IBM Cloud Garage Method Advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate){:external}. Absolvieren Sie diesen Fortgeschrittenenkurs, um Erfahrung mit den Verfahren und Tools von Cloud Garage Method zu sammeln.
 
-Eine Übersicht über das gesamte Lernmaterial für Cloud Garage Method finden Sie im [Cloud Garage Method Learning Lab ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/category/courses){:new_window}.
+Eine Übersicht über das gesamte Cloud Garage Method-Schulungsmaterial finden Sie im [Cloud Garage Method Learning Lab](https://www.ibm.com/cloud/garage/category/courses){:external}.

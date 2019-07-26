@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -32,8 +33,8 @@ Persönliche Daten sind Informationen, die sich auf eine natürliche Person bezi
  * {{site.data.keyword.gitrepos}}
  * {{site.data.keyword.contdelivery_short}}-Pipelines
  * Toolchains und Toolintegrationen
- * [GitHub Enterprise on IBM Cloud ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data){: new_window}
- * [{{site.data.keyword.DRA_full}} ![Symbol zum externen Link](../../icons/launch-glyph.svg "Symbol zum externen Link")](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data){: new_window}
+ * [GitHub Enterprise on IBM Cloud](/docs/services/ghededicated?topic=ghededicated-ghe_personal_data)
+ * [{{site.data.keyword.DRA_full}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-deleting_data)
  
 IBM verwaltet keine Daten im Service {{site.data.keyword.contdelivery_short}}. Bevor Sie den Service {{site.data.keyword.contdelivery_short}}, der in {{site.data.keyword.Bluemix_notm}} Public gehostet wird, verlassen, müssen Sie Ihre eigenen Daten löschen.
 {: important}
@@ -53,7 +54,7 @@ Die IBM Cloud-Anmeldestruktur bietet Ihnen die Möglichkeit, in verschiedenen Ko
  * Unternehmenskonto
  * Individuelles Unternehmenskonto
 
-###Persönliche Konten
+### Persönliche Konten
 
 In der Regel hat jeder Benutzer sein eigenes Konto, das sein persönliches Konto ist. Sie können Ihr persönliches Konto leicht identifizieren, da es normalerweise Ihren Namen enthält. Beispiel *Konto von John Smith*. 
 
@@ -61,13 +62,13 @@ Sie haben volle Berechtigungen für alle Objekte, die in Ihrem persönlichen Kon
 
 Wenn Sie die Berechtigung zum Erstellen eines Objekts in einem Konto haben, haben Sie auch die Berechtigung, es zu ändern und zu löschen, unabhängig davon, in welchem Konto das Objekt gespeichert ist. Wenn zwei Benutzer zusammenarbeiten, teilen sie sich meistens ein persönliches Konto.
 
-###Unternehmenskonten
+### Unternehmenskonten
 
 Ein Unternehmenskonto wird von Ihrem Unternehmen eingerichtet. Sie werden in der Regel automatisch zum Konto hinzugefügt und nicht eingeladen. Unternehmenskonten bieten Benutzern einen Ort zum Arbeiten, Kommunizieren und Teilen von Ressourcen und Gebühren. Dies ist jedoch nur eine Konvention. Ein Unternehmenskonto unterscheidet sich kaum von einem persönlichen Konto. Objekte, die in einem Unternehmenskonto erstellt wurden, werden dem Konto zugewiesen und Benutzer können zum Konto eingeladen werden.
 
 Teams aus mehreren Personen, die für ein Unternehmen arbeiten, arbeiten oft über ein Unternehmenskonto zusammen.
 
-###Individuelle Unternehmenskonten
+### Individuelle Unternehmenskonten
 
 Wenn Sie für ein Unternehmen arbeiten, ist die Arbeit in Ihrem Konto möglicherweise rechtmäßig im Besitz des Unternehmens. Viele Benutzer, die für ein Unternehmen arbeiten, haben deshalb ein individuelles Unternehmenskonto. Wenn Sie sich bei Ihrem Konto anmelden, indem Sie Ihre Berechtigungsnachweise verwenden, die den Namen Ihres Unternehmens enthalten, und möglicherweise auch ein persönliches Konto hat, kann die Arbeit in Ihrem persönlichen Konto zum Unternehmen gehören.
 
@@ -82,13 +83,13 @@ Unabhängig davon, welcher Typ von IBM Cloud-Konto verwendet wird, können Sie d
 
 Bevor Sie Daten aus einem Konto löschen, müssen Sie prüfen, ob es sich um ein persönliches Konto oder ein individuelles Unternehmenskonto handelt.
 
-###Persönliches Konto
+### Persönliches Konto
 
 Wenn Sie ein persönliches Konto besitzen, können Sie Änderungen vornehmen und Daten löschen. Wenn Sie Ihr Konto für einen anderen Benutzer freigeben, besitzen Sie die Daten. Sie können sich jedoch mit den anderen Benutzern über die gemeinsame Arbeit austauschen. 
 
-Wenn Sie sich bei Ihrem IBM Cloud-Konto nicht anmelden können, [wenden Sie sich an den IBM Support ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/support){:new_window}.
+Wenn Sie sich bei Ihrem IBM Cloud-Konto nicht anmelden können, [wenden Sie sich an den IBM Support](https://www.ibm.com/cloud/support){: external}.
  
-###Individuelles Unternehmenskonto
+### Individuelles Unternehmenskonto
 
 Wenn Sie ein individuelles Unternehmenskonto besitzen, müssen Sie Änderungen mit Ihrem Unternehmen und anderen Mitgliedern Ihres Teams koordinieren. Löschen Sie Ihre persönlichen Daten, unabhängig davon, ob sie in einem Unternehmenskonto oder einem individuellen Unternehmenskonto gespeichert sind. Achten Sie darauf, dass Sie keine Arbeit löschen, die Sie mit anderen Benutzern gemeinsam nutzen.
 
@@ -107,14 +108,14 @@ Die {{site.data.keyword.webide}} stellt einen persönlichen Arbeitsbereich in de
 Bevor Sie Ihre {{site.data.keyword.webide}}-Daten löschen, sollten Sie Ihre Arbeit exportieren. Wenn Sie Ihre Arbeitsbereiche gelöscht haben, werden Sie aus {{site.data.keyword.contdelivery_short}} entfernt und alle Dateien sind gelöscht.
 {: important}
 
-###Web-IDE-Arbeitsbereiche exportieren
+### Web-IDE-Arbeitsbereiche exportieren
 
 Gehen Sie wie folgt vor, um einen {{site.data.keyword.webide}}-Arbeitsbereich zu exportieren:
 
 1. Wählen Sie **Datei > Exportieren > Zip** aus.
 1. Wiederholen Sie dies für jeden Arbeitsbereich, den Sie exportieren möchten.
 
-###Web-IDE-Arbeitsbereiche löschen
+### Web-IDE-Arbeitsbereiche löschen
 
 Gehen Sie wie folgt vor, um Ihren {{site.data.keyword.webide}}-Arbeitsbereich und alle persönlichen Daten zu löschen:
 
@@ -138,11 +139,11 @@ Ihre Kontoprofile und Einstellungen, persönlichen Projekte, Gruppen und Snippet
 Löschen Sie erst Ihre persönlichen Daten aus anderen Projekten, bevor Sie Ihr Git-Konto löschen. Wenn Sie Ihr Git-Konto gelöscht haben, kann es schwierig oder unmöglich sein, alle Projekte zu finden, an denen Sie mitgewirkt haben.
 {: tip}
 
-###Persönliche und gemeinsam genutzte Projekte
+### Persönliche und gemeinsam genutzte Projekte
 
 Sie können andere Benutzer für eine Zusammenarbeit an Projekten einladen. Git-Projekte, die Sie in Ihrem Konto erstellen, werden als persönliche Projekte bezeichnet. Sie können auch Git-Gruppen erstellen, in denen Projekte mehrere Git-Besitzer haben. Sie können für die Gruppe neue Projekte erstellen oder die Eigentumsrechte für persönliche Projekte an die Gruppe übertragen. Eine Git-Gruppe wird häufig zur Darstellung eines IBM Cloud-Unternehmenskontos verwendet, um die Eigentumsrechte an Projekten des Unternehmens anzuzeigen.
 
-###Git Repos and Issue Tracking-Projekte exportieren
+### Git Repos and Issue Tracking-Projekte exportieren
 
 Bevor Sie ein {{site.data.keyword.gitrepos}}-Projekt löschen, können Sie das Projekt für eine Archivierung exportieren. 
 
@@ -153,14 +154,14 @@ Bevor Sie ein {{site.data.keyword.gitrepos}}-Projekt löschen, können Sie das P
 
 Nachdem das Projekt archiviert wurde, können Sie es in eine andere GitLab-Instanz importieren. 
 
-###Ihr Git Repos and Issue Tracking-Konto löschen
+### Ihr Git Repos and Issue Tracking-Konto löschen
 
 Sie können Ihr {{site.data.keyword.gitrepos}}-Konto und alles, was zu diesem Konto gehört, löschen.
 
-1. Klicken Sie im {{site.data.keyword.gitrepos}}-Dashboard für Benutzereinstellungen auf der [Seite für das Konto ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git.ng.bluemix.net/profile/account?cm_sp=dw-bluemix-_-nospace-_-answers){:new_window} im Abschnitt zum Löschen des Kontos auf **Konto löschen**.
+1. Klicken Sie im {{site.data.keyword.gitrepos}}-Dashboard für Benutzereinstellungen auf der [Seite für das Konto](https://us-south.git.cloud.ibm.com/profile/account){: external} im Abschnitt zum Löschen des Kontos auf **Konto löschen**.
 1. Alle Git-Projekte sowie Repositorys und Probleme werden gelöscht. Sie werden außerdem aus allen {{site.data.keyword.gitrepos}}-Gruppen entfernen, denen Sie angehören.
 
-Nachdem Ihr Konto gelöscht wurde, bleiben einige Inhalte erhalten. Dieser Inhalt wird einem systemweiten Ghost-Benutzer zugewiesen. Weitere Informationen zum Löschen eines {{site.data.keyword.gitrepos}}-Kontos finden Sie in [Benutzerkonten löschen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git.ng.bluemix.net/profile/account/delete_account#associated-records){:new_window}.
+Nachdem Ihr Konto gelöscht wurde, bleiben einige Inhalte erhalten. Dieser Inhalt wird einem systemweiten Ghost-Benutzer zugewiesen. Weitere Informationen zum Löschen eines {{site.data.keyword.gitrepos}}-Kontos finden Sie in [Benutzerkonto löschen](https://us-south.git.cloud.ibm.com/profile/account/delete_account#associated-records){: external}.
 {: tip}
 
 {{site.data.keyword.gitrepos}} verwendet einen Single-Sign-On, der automatisch ein entsprechendes Git-Konto für Ihr IBM Cloud-Konto erstellt, wenn Sie das erste Mal auf die Toolintegration zugreifen. Wenn Sie Ihr Konto gelöscht haben, greifen Sie nicht auf {{site.data.keyword.gitrepos}} zu. Denn wenn Sie erneut auf {{site.data.keyword.gitrepos}} zugreifen, wird automatisch ein neues Konto erstellt, das Sie dann wieder löschen müssen.
@@ -180,7 +181,7 @@ Pipeline-Stages können persönliche Daten enthalten wie Berechtigungsnachweise 
 
   ![Menü 'Stages'](images/pipeline_stages.png)
 
-###Eine Pipeline-Stage ändern
+### Eine Pipeline-Stage ändern
 
 Gehen Sie wie folgt vor, um eine Pipeline-Stage zu ändern:
 
@@ -193,15 +194,15 @@ Gehen Sie wie folgt vor, um eine Pipeline-Stage zu ändern:
   
 1. Löschen Sie einen Job aus der Pipeline-Stage. Wählen Sie auf der Registerkarte **JOBS** den Job aus, den Sie löschen möchten, und klicken Sie auf **Entfernen**.
  
-###Eine Pipeline-Stage exportieren
+### Eine Pipeline-Stage exportieren
 
 Fügen Sie zum Exportieren der Definition einer gesamten Pipeline `/yaml` an die Pipeline-URL an:
 
 `https://cloud.ibm.com/devops/pipelines/<pipeline id>/yaml?env_id=<region id>`
 
-Dabei sind `<pipeline id>` und `<region id>` die Werte, die in der Seiten-URL der Pipeline angezeigt werden. 
+Dabei sind `<pipeline id>` und `<region id>` die Werte, die in der Seiten-URL der Pipeline angezeigt werden.
 
-Die resultierende YAML-Datei enthält Definitionen aller Pipeline-Stages. 
+Die resultierende YAML-Datei enthält Definitionen aller Pipeline-Stages.
 
 
 Gehen Sie wie folgt vor, um Artefakte und Protokolle für eine Pipeline-Stage zu exportieren:
@@ -211,7 +212,7 @@ Gehen Sie wie folgt vor, um Artefakte und Protokolle für eine Pipeline-Stage zu
 1. Klicken Sie auf **DOWNLOAD** > **Artefakte**, um die Artefakte für den ausgewählten Build zu exportieren.
 1. Klicken Sie auf **DOWNLOAD** > **Protokolle**, um die Protokolle für den ausgewählten Build zu exportieren.  
 
-###Eine Pipeline-Stage löschen
+### Eine Pipeline-Stage löschen
 
 Gehen Sie wie folgt vor, um eine Pipeline-Stage zu löschen:
 
@@ -229,7 +230,7 @@ Wenn eine Toolintegration erstellt wird, kann {{site.data.keyword.contdelivery_s
 
 Sprechen Sie sich mit den anderen Mitgliedern Ihres Teams ab, bevor Sie gemeinsam genutzte Toolintegrationen oder Toolchains löschen.
 
-###Toolintegrationen ändern und löschen
+### Toolintegrationen ändern und löschen
 
 Wenn Sie eine Toolintegration erstellen, müssen Sie Benutzerberechtigungen und andere Kontoinformationen bereitstellen, die sich auf die Integration beziehen. Wenn Sie Ihre persönlichen Berechtigungsnachweise und Kontoinformationen verwendet haben, ersetzen Sie diese Informationen durch andere Werte oder löschen Sie die Toolintegration.
 
@@ -246,7 +247,7 @@ Gehen Sie wie folgt vor, um eine Toolintegration zu löschen:
 1. Um eine Toolintegration aus Ihrer Toolchain zu löschen, klicken Sie auf **Löschen**.
 1. Bestätigen Sie dies, indem Sie nochmals auf **Löschen** klicken.
 
-###Toolchains löschen
+### Toolchains löschen
 
 Wenn Sie eine Toolchain löschen, kann diese Löschung nicht mehr rückgängig gemacht werden.
 
@@ -258,7 +259,7 @@ Wenn Sie eine Toolchain löschen, kann diese Löschung nicht mehr rückgängig g
 Wenn Sie eine Toolchain löschen, werden die zugeordneten {{site.data.keyword.gitrepos}}-Repositorys nicht gelöscht. Benutzer, die Zugriff auf diese Repositorys haben, verfügen möglicherweise über Kopien der Daten, falls sie `git clone` ausgeführt oder einen {{site.data.keyword.webide}}-Arbeitsbereich erstellt haben. Um sicherzustellen, dass alle Daten gelöscht werden, müssen Sie diese Benutzer bitten, ihre Kopien der Daten zu löschen.
 {: tip}
 
-###Alle Toolchains löschen
+### Alle Toolchains löschen
 
 Sie können nicht alle Toolchains in einer Ressourcengruppe oder Organisation gleichzeitig löschen. Sie müssen jede Toolchain einzeln löschen.
 

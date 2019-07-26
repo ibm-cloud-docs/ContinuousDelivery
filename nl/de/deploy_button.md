@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-20"
 
 keywords: IBM Cloud button, yml file, build file
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -32,7 +33,7 @@ Wenn ein Benutzer auf die Schaltfläche klickt, werden die folgenden Aktionen au
 
 3. Es wird eine Toolchain erstellt, die einen neuen privaten Klon Ihres Git-Repositorys, eine Pipeline für das Erstellen und Bereitstellen von Änderungen, die Eclipse Orion-{{site.data.keyword.webide}} für die Codebearbeitung in der Cloud und einen Tracker für Probleme umfasst.
 
-  Wenn das Verzeichnis `.bluemix` eine Datei `toolchain.yml` enthält, wird die Datei verwendet, um die Toolintegrationen für die Toolchain anzugeben. Weitere Informationen zur Datei `toolchain.yml` finden Sie unter [Angepasste Toolchains erstellen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom){: new_window}.
+  Wenn das Verzeichnis `.bluemix` eine Datei `toolchain.yml` enthält, wird die Datei verwendet, um die Toolintegrationen für die Toolchain anzugeben. Weitere Informationen zur Datei `toolchain.yml` finden Sie unter [Angepasste Toolchains erstellen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom).
   {: tip}
 
 4. Wenn für die App eine Builddatei erforderlich ist, wird die Builddatei automatisch erkannt und die App wird erstellt.
@@ -47,11 +48,11 @@ Wenn ein Benutzer auf die Schaltfläche klickt, werden die folgenden Aktionen au
 
 Das folgende Beispiel zeigt eine App-Schaltfläche für ein öffentliches {{site.data.keyword.gitrepos}}-Repository:
 
-[![In IBM Cloud bereitstellen](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://git.ng.bluemix.net/idsorg/sample-java-cloudant){:new_window}
+[![In IBM Cloud bereitstellen](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://us-south.git.cloud.ibm.com/idsorg/sample-java-cloudant){: external}
 
 Das folgende Beispiel zeigt eine App-Schaltfläche für ein öffentliches GitHub-Repository:
 
-[![In IBM Cloud bereitstellen](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){:new_window}
+[![In IBM Cloud bereitstellen](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){: external}
 
 ## Schaltfläche erstellen {: #create-button}
 
@@ -91,8 +92,6 @@ Wenn Sie das Snippet für die Schaltfläche zur Bereitstellung in {{site.data.ke
 
 * Wenn Sie die Abbildung lieber lokal speichern möchten, können Sie die Abbildung herunterladen und in Ihrem Git-Repository speichern. Passen Sie den Pfad an die relative Position der Abbildung an.
 
-* Wenn Sie eine übersetzte Version der Schaltfläche verwenden möchten, können Sie über Fernzugriff auf sie verweisen oder sie von folgender Site herunterladen: [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}.
-
 ## Hinweise zum Repository {: #button-repo}
 
 Beachten Sie die folgenden Hinweise zu dem Repository, das Sie in Ihrer Schaltfläche für die Bereitstellung in {{site.data.keyword.Bluemix_notm}} verwenden.
@@ -105,10 +104,10 @@ Wenn ein Build der App erforderlich ist, bevor sie bereitgestellt werden kann, m
 
 Unterstützte Buildprogramme:
 
-* [Ant ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link"):](http://ant.apache.org/manual/using.html){:new_window} `build.xml` erstellt Ausgabe im Ordner `./output/`
-* [Gradle ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link"):](https://docs.gradle.org/current/userguide/getting_started.html){:new_window} `/build.gradle` erstellt Ausgabe im Ordner `.` .
-* [Grunt ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link"):](http://gruntjs.com/getting-started#the-gruntfile){:new_window} `/Gruntfile.js` erstellt Ausgabe im Ordner `.` .
-* [Maven ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link"):](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:new_window} `/pom.xml` erstellt Ausgabe im Ordner `./target/`.
+* [Ant:](http://ant.apache.org/manual/using.html){: external} `build.xml` erstellt Ausgabe im Ordner `./output/`
+* [Gradle:](https://docs.gradle.org/current/userguide/getting_started.html){:external} `/build.gradle` erstellt Ausgabe im Ordner `.` .
+* [Grunt:](http://gruntjs.com/getting-started#the-gruntfile){: external} `/Gruntfile.js` erstellt Ausgabe im Ordner `.` .
+* [Maven:](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){: external} `/pom.xml` erstellt Ausgabe im Ordner `./target/`
 
 ### Erfordernis einer Pipelinedatei
 {: pipeline_file}
@@ -117,7 +116,7 @@ Um die Pipeline für die Toolchain in einem Verzeichnis `.bluemix` zu konfigurie
 
 Wenn die Datei `pipeline.yml` sich nicht im `.bluemix`-Verzeichnis befindet, erstellt die Schaltfläche für die Bereitstellung zu {{site.data.keyword.Bluemix_notm}} eine Standard-Pipeline mit zwei Stages: eine Build-Stage und eine Stage für eine Bereitstellung auf Cloud Foundry.
 
-Beim Erstellen einer Pipelinedatei können Sie sich an dem Beispiel bei den [Anweisungen zum Erstellen einer angepassten Toolchain-Pipeline](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml) orientieren. Genau wie beim Definieren einer Pipeline in der Webschnittstelle definieren Sie eine Pipeline im Text, indem Sie Stages und Jobs erstellen, Eingaben und Umgebungsvariablen festlegen und Scripts hinzufügen. In [diesem Demonstrationsprojekt](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix) wird auch eine Reihe komplexerer Pipelinedateien angezeigt.
+Beim Erstellen einer Pipelinedatei können Sie sich an dem Beispiel bei den [Anweisungen zum Erstellen einer angepassten Toolchain-Pipeline](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_custom#toolchains_custom_pipeline_yml) orientieren. Genau wie beim Definieren einer Pipeline in der Webschnittstelle definieren Sie eine Pipeline im Text, indem Sie Stages und Jobs erstellen, Eingaben und Umgebungsvariablen festlegen und Scripts hinzufügen. In [diesem Demonstrationsprojekt](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix){: external} wird auch eine Reihe komplexerer Pipelinedateien angezeigt.
 
 ### Erfordernis einer Container-Dockerfile
 {: container_dockerfile}
@@ -126,11 +125,11 @@ Um eine App in einem Container mithilfe von {{site.data.keyword.containerlong_no
 
 Die Dockerfile fungiert als eine Art Build-Script für die App. Wenn eine Dockerfile im Repository festgestellt wird, wird die App automatisch in einem Image erstellt, bevor sie in einem Container bereitgestellt wird. Wenn ein Build der App erforderlich ist, bevor sie in einem Image erstellt werden kann, fügen Sie ein Build-Script für die App und eine Dockerfile hinzu.
 
-Informationen zum Erstellen von Dockerfiles enthält die [Docker-Dokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.docker.com/reference/builder/){:new_window}. Schritt-für-Schritt-Anweisungen zur Verwendung einer Toolchain-Vorlage für die Bereitstellung in Kubernetes finden Sie in [Lernprogramm: Toolchain zur Entwicklung einer Kubernetes-App verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){:new_window} oder [Lernprogramm: Toolchain zur Entwicklung einer Kubernetes-App mit Helm verwenden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){:new_window}.
+Weitere Informationen zum Erstellen von Dockerfiles enthält die [Docker-Dokumentation](https://docs.docker.com/reference/builder/){: external}. Schritt-für-Schritt-Anweisungen zur Verwendung einer Toolchain-Vorlage für die Bereitstellung in Kubernetes finden Sie in [Lernprogramm: Toolchain zur Entwicklung einer Kubernetes-App verwenden](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){: external} oder [Lernprogramm: Toolchain zur Entwicklung einer Kubernetes-App mit Helm verwenden](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){: external}.
 
-Informationen zum Portieren Ihrer Cloud Foundry-App zu einem Kubernetes-Cluster finden Sie in [Lernprogramm: Eine Cloud Foundry-App zur Bereitstellung in Kubernetes in einer Toolchain portieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){:new_window}.  
+Informationen zum Portieren Ihrer Cloud Foundry-App zu einem Kubernetes-Cluster finden Sie in [Lernprogramm: Cloud Foundry-App für die Bereitstellung in Kubernetes in einer Toolchain portieren](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){: external}.  
 
-Informationen zum manuellen Erstellen einer Datei `pipeline.yml` speziell für Container finden Sie unter [Beispiele in GitHub ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/Puquios/){:new_window}.
+Informationen zum manuellen Erstellen einer Datei `pipeline.yml` speziell für Container finden Sie unter [Beispiele in GitHub](https://github.com/Puquios/){: external}.
 
 ### Anforderungen an Manifestdateien (für Apps, die auf Cloud Foundry bereitgestellt werden)<²
 {: #manifest_files}

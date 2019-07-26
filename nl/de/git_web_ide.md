@@ -58,7 +58,7 @@ Unabhängig von dem Standort, an dem Sie Code schreiben, können Sie diese Kurz�
 {: #start_working_on_branch_cmd}
 1. Geben Sie zum Anzeigen Ihrer lokalen Zweige `git branch -l` ein und drücken Sie die Eingabetaste.
 
-2. Geben Sie `git checkout <branchname>` ein und drücken Sie die Eingabetaste. 
+2. Geben Sie `git checkout <branchname>` ein und drücken Sie die Eingabetaste.
 
 
 ## Lokalen Zweig aktualisieren, um Änderungen des fernen Zweigs einzuschließen
@@ -91,7 +91,7 @@ Unabhängig von dem Standort, an dem Sie Code schreiben, können Sie diese Kurz�
 ### Git-Terminal
 {: #delete_branch_cmd}
 
-1. Geben Sie `git branch -d <branchname>` ein und drücken Sie die Eingabetaste. 
+1. Geben Sie `git branch -d <branchname>` ein und drücken Sie die Eingabetaste.
 
 ##Übertragung von lokalen Änderungen per Push-Operation an einen fernen Zweig erzwingen
 {: #force_push}
@@ -111,7 +111,7 @@ Wenn Sie die Übertragung eines lokalen Zweigs per Push-Operation an einen ferne
 ### Git-Terminal
 {: #force_push_cmd}
 
-1. Geben Sie `git push <origin> <remote branch> -f` ein und drücken Sie die Eingabetaste. 
+1. Geben Sie `git push <origin> <remote branch> -f` ein und drücken Sie die Eingabetaste.
 
 ## Änderungen, für die das Staging aufgehoben wurde, aus dem aktiven lokalen Zweig verwerfen
 {: #discard_changes}
@@ -288,7 +288,7 @@ entfernt wurden, werden in rotem Text angezeigt und beginnen mit einem Minuszeic
 
 1. Zeigen Sie das Commitprotokoll an und rufen Sie die ID der Commitoperation ab, die getaggt werden soll. Weitere Informationen finden Sie in [Commitprotokoll anzeigen](#view_commit_history).
 
-2. Geben Sie `git tag -a <tag_text> <commit_id>` ein und drücken Sie die Eingabetaste. 
+2. Geben Sie `git tag -a <tag_text> <commit_id>` ein und drücken Sie die Eingabetaste.
 
 ## Committername und E-Mail-Adresse ändern
 {: #change_the_committer_name_and_email_address}
@@ -305,15 +305,15 @@ Sie auf **Abschicken**, um die einzelnen Änderungen zu speichern.
 
 Gehen Sie wie folgt vor, um Ihren Namen und Ihre E-Mail-Adresse für ein einzelnes Repository zu aktualisieren:
 
-1. Geben Sie `git config user.email "<your@email.com>"` ein und drücken Sie die Eingabetaste. 
+1. Geben Sie `git config user.email "<your@email.com>"` ein und drücken Sie die Eingabetaste.
 
-2. Geben Sie `git config user.name "<Your Name>"` ein und drücken Sie die Eingabetaste. 
+2. Geben Sie `git config user.name "<Your Name>"` ein und drücken Sie die Eingabetaste.
 
 Gehen Sie wie folgt vor, um Ihren Namen und Ihre E-Mail-Adresse für alle Repositorys zu aktualisieren:
 
-1. Geben Sie `git config --global user.email "<your@email.com>"` ein und drücken Sie die Eingabetaste. 
+1. Geben Sie `git config --global user.email "<your@email.com>"` ein und drücken Sie die Eingabetaste.
 
-2. Geben Sie `git config --global user.name "<Your Name>"` ein und drücken Sie die Eingabetaste. 
+2. Geben Sie `git config --global user.name "<Your Name>"` ein und drücken Sie die Eingabetaste.
 
 ##Commitoperation zurücksetzen
 {: #revert}
@@ -330,7 +330,7 @@ Setzen Sie die Änderungen zurück, die durch eine Commitoperation in Ihrem akti
 ### Git-Terminal
 {: #revert_cmd}
 
-1. Geben Sie `git revert <commit ID>` ein und drücken Sie die Eingabetaste. 
+1. Geben Sie `git revert <commit ID>` ein und drücken Sie die Eingabetaste.
 
 ## Änderungen zusammenführen
 {: #merge_changes}
@@ -368,7 +368,7 @@ können Sie an diesem Zeitpunkt eine Testbereitstellung vornehmen, um sicherzust
 
 2. Checken Sie den als Ziel verwendeten Zweig aus. Weitere Informationen finden Sie in [Lokalen Zweig bearbeiten](#start_working_on_branch).
 
-3. Geben Sie `git merge <source_name>` ein und drücken Sie die Eingabetaste. 
+3. Geben Sie `git merge <source_name>` ein und drücken Sie die Eingabetaste.
 
 
 ## Zusammenführungskonflikt beheben
@@ -442,7 +442,7 @@ Namen des als Quelle verwendeten Zweigs.
 
 1. Checken Sie den zu aktualisierenden Zweig aus, indem Sie `git checkout <Name_des_als_Ziel_verwendeten_Zweigs>` eingeben und die Eingabetaste drücken.
 
-2. Geben Sie `git rebase <source_branchname>` ein und drücken Sie die Eingabetaste. 
+2. Geben Sie `git rebase <source_branchname>` ein und drücken Sie die Eingabetaste.
 
 3. Wenn Konflikte auftreten, [beheben Sie sie](#resolve_a_rebase_conflict).
 

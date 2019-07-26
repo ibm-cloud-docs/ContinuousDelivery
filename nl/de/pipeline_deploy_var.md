@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-12"
+lastupdated: "2019-05-28"
 
 keywords: Environment properties, IBM Java, pipeline environments
 
@@ -42,6 +42,7 @@ Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardm
 {: #deliverypipeline_envprop}
 
 ### Vielseitig einsetzbare Eigenschaften
+In der folgenden Tabelle werden alle vielseitig einsetzbaren Umgebungseigenschaften aufgelistet und beschrieben, die standardmäßig in Pipelineumgebungen verfügbar sind.
 
 | Umgebungseigenschaft | Beschreibung |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -71,8 +72,10 @@ Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardm
 | TASK_ID | Die eindeutige ID der aktuellen Jobausführung. |
 | TMPDIR | Eine Verzeichnisposition, an der temporäre Dateien gespeichert werden. |
 | WORKSPACE | Der Pfad zum aktuellen Arbeitsverzeichnis. |
+{: caption="Tabelle 1. Vielseitig einsetzbare Umgebungseigenschaften" caption-side="top"}
 
 ### Laufzeit- und Tooleigenschaften
+In der folgenden Tabelle werden alle Laufzeit- und Toolumgebungseigenschaften aufgelistet und beschrieben, die standardmäßig in Pipelineumgebungen verfügbar sind.
 
 | Umgebungseigenschaft | Beschreibung |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -84,11 +87,13 @@ Die folgenden Eigenschaften und Ressourcen sind in Pipeline-Umgebungen standardm
 | JAVA8_HOME | Der Pfad zu IBM Java 8. |
 | MAVEN_HOME | Der Pfad zu Apache Maven 3.2.1. |
 | NODE_HOME | Der Pfad zu Node.js 0.10.29. |
+{: caption="Tabelle 2. Laufzeit- und Toolumgebungseigenschaften" caption-side="top"}
 
 Wenn Sie Apache Ant 1.10+ in den Scripts Ihrer Pipeline verwenden möchten, setzen Sie `ANT_HOME` auf `$ANT_JAVA8_HOME` und `JAVA_HOME` auf `$JAVA8_HOME`.
 {: tip}
 
 ### Bereitstellungseigenschaften
+In der folgenden Tabelle werden alle Bereitstellungsumgebungseigenschaften aufgelistet und beschrieben, die standardmäßig in Pipelineumgebungen verfügbar sind.
 
 | Umgebungseigenschaft | Beschreibung |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -99,6 +104,7 @@ Wenn Sie Apache Ant 1.10+ in den Scripts Ihrer Pipeline verwenden möchten, setz
 | CF_SPACE_ID | Bei Bereitstellungen die ID des Bereichs, für den die Bereitstellung durchgeführt wird.  |
 | CF_TARGET_URL | Bei Bereitstellungen die URL von {{site.data.keyword.Bluemix_short}} oder Cloud Foundry. |
 | IDS_VERSION | Bei Bereitstellungen die Version der App, die bereitgestellt wird, oder die Quellenkennung. |
+{: caption="Tabelle 3. Bereitstellungsumgebungseigenschaften" caption-side="top"}
 
 ## Vorinstallierte Ressourcen
 {: #deliverypipeline_resources}
@@ -106,6 +112,7 @@ Wenn Sie Apache Ant 1.10+ in den Scripts Ihrer Pipeline verwenden möchten, setz
 In jeder Pipeline sind mehrere Laufzeiten, Tools und Node-Module vorinstalliert.
 
 ### Laufzeiten und Tools
+In der folgenden Tabelle werden alle vorinstallierten Laufzeiten und Tools aufgelistet, die in jeder Pipeline verfügbar sind.
 
 Alle Links befinden sich im Ausgangsverzeichnis.
 {: tip}
@@ -123,6 +130,7 @@ Alle Links befinden sich im Ausgangsverzeichnis.
 |Apache Maven 3.2.1 |maven |/opt/IBM/maven |
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
+{: caption="Tabelle 4. Linknamen und Pfade für Laufzeiten und Tools" caption-side="top"}
 
 Die Pipeline-Umgebung bietet 64-Bit-Versionen von IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2 und 6.7.0. Verwenden Sie zum Auswählen einer Version den Exportbefehl.
 

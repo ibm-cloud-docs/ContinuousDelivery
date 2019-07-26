@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-06-19"
 
 keywords: pipeline base image, custom Docker, IBM Cloud team uses
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -39,11 +40,11 @@ Der Docker-Imagename in benutzerdefinierten Docker-Imagejobs funktioniert genaus
 Wenn das Feld **Docker-Imagename** nicht ausgefüllt wird, wird das standardmäßige Pipeline-Basisimage verwendet. 
 {: tip}
 
-Standardmäßig wird Ihr Repository auf [Docker Hub ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://hub.docker.com/){: new_window} durchsucht. Wenn Sie eine andere Docker-Registry verwenden, z. B. {{site.data.keyword.registrylong}}, können Sie den vollständigen DNS-Namen verwenden. Sie können auch den vollständig qualifizierten Namen für Images auf Docker Hub verwenden. Beispiel: `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
+Standardmäßig wird Ihr Repository auf [Docker Hub](https://hub.docker.com/){: external} durchsucht. Wenn Sie eine andere Docker-Registry verwenden, z. B. {{site.data.keyword.registrylong}}, können Sie den vollständigen DNS-Namen verwenden. Sie können auch den vollständig qualifizierten Namen für Images auf Docker Hub verwenden. Beispiel: `registry.hub.docker.com/library/maven:3.5.3-ibmjava`.
 
 Der `Tag` ist für ein Docker-Image optional. Wenn Sie keinen Tag angeben, wird standardmäßig `latest` festgelegt. Der Standardwert von `latest` ist nur ein Tag-Name, den der Repository-Eigner verwalten muss. Dies bedeutet nicht, dass dieses Docker-Image chronologisch das neueste Image ist.
 
-Eine riesige Community an Repositorys finden Sie unter Docker Hub. IBM hostet zahlreiche öffentliche Repositorys, die das IBM Cloud-Team unter [https://hub.docker.com/u/ibmcom/ ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://hub.docker.com/u/ibmcom/){: new_window} nutzt. Die Repositorys `ibmcom/ibmjava` und `ibmcom/ibmnode` sind gute Basis-Repositorys. 
+Eine riesige Community an Repositorys finden Sie unter Docker Hub. IBM hostet öffentliche Repositorys, die das IBM Cloud-Team nutzt, unter [https://hub.docker.com/u/ibmcom/](https://hub.docker.com/u/ibmcom/){: external}. Die Repositorys `ibmcom/ibmjava` und `ibmcom/ibmnode` sind gute Basis-Repositorys. 
 
 ## Private Image-Registry verwenden
 {: #private_image_registry}
@@ -52,7 +53,7 @@ Wenn Sie eine private Registry verwenden, für die eine Authentifizierung erford
 
 Für die meisten Registrys können Sie den Benutzernamen und das Passwort verwenden, die Ihnen zur Verfügung gestellt wurden. Wenn Sie {{site.data.keyword.registrylong_notm}} zum Speichern Ihrer privaten Images verwenden, müssen Sie einen Plattform-API-Schlüssel für die Authentifizierung verwenden. 
 
-1. [Fordern Sie einen Plattform-API-Schlüssel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/iam/#/apikeys){: new_window} an und speichern Sie den API-Schlüssel. 
+1. [Fordern Sie einen Plattform-API-Schlüssel an](https://cloud.ibm.com/iam/#/apikeys){: external} und speichern Sie ihn. 
 1. Erstellen Sie zwei Stage-Umgebungseigenschaften, indem Sie `iamapikey` für `DOCKER_USERNAME` sowie den Plattform-API-Schlüssel verwenden, den Sie für `DOCKER_PASSWORD` gespeichert haben.
 
  ![{{site.data.keyword.registrylong_notm}}-Berechtigungsnachweise](images/custom-image-private-repository.png)

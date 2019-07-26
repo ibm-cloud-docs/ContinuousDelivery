@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-06-19"
 
 keywords: run jobs, sequences of stages, job types
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -27,12 +28,12 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.contdelivery_full}} enthält die Delivery Pipeline, die reproduzierbare Builds, Tests und Bereitstellungen ermöglicht und nur geringe manuelle Eingriffe erfordert. In einer Pipeline rufen Abfolgen von Stages Eingabe- und Ausgabejobs wie Builds, Tests und Bereitstellungen ab.
 {:shortdesc}
 
-Ihre Berechtigungen zum Anzeigen, Ändern oder Ausführen einer Pipeline basieren auf der Zugriffssteuerung für die Toolchain, die Eigner der Pipeline ist. Weitere Informationen zur Zugriffssteuerung für Toolchains finden Sie in den Abschnitten [Zugriff auf Toolchains in Ressourcengruppen verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups){: new_window} und [Zugriff auf Toolchains in Cloud Foundry-Organisationen verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs){: new_window}.
+Ihre Berechtigungen zum Anzeigen, Ändern oder Ausführen einer Pipeline basieren auf der Zugriffssteuerung für die Toolchain, die Eigner der Pipeline ist. Weitere Informationen zur Zugriffssteuerung für Toolchains finden Sie in den Abschnitten [Zugriff auf Toolchains in Ressourcengruppen verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups) und [Zugriff auf Toolchains in Cloud Foundry-Organisationen verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs).
 {: important}
 
-Sie können die Scripts angeben, die in einer Vielzahl von Jobtypen ausgeführt werden sollen, die von der Pipeline bereitgestellt werden; Sie können darüber steuern, was durch den Job ausgeführt wird. Diese Scripts werden in einem Docker-Image ausgeführt, das eine Reihe von Standardentwicklungstools enthält; dazu gehören Tools, die für die Interaktion mit den {{site.data.keyword.Bluemix_notm}}-Laufzeiten erforderlich sind. Weitere Informationen darüber, was das Standard-Docker-Image enthält, finden Sie im Abschnitt [Vorinstallierte Ressourcen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources){: new_window}. Wenn für Ihren Job Entwicklungstools erforderlich sind, die im Standardimage nicht verfügbar sind, oder Sie unterschiedliche Versionen dieser Tools benötigen, können Sie ein angepasstes Image verwenden. Weitere Informationen zu angepassten Images finden Sie im Abschnitt [Mit benutzerdefinierten Docker-Images arbeiten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images){: new_window}.
+Sie können die Scripts angeben, die in einer Vielzahl von Jobtypen ausgeführt werden sollen, die von der Pipeline bereitgestellt werden; Sie können darüber steuern, was durch den Job ausgeführt wird. Diese Scripts werden in einem Docker-Image ausgeführt, das eine Reihe von Standardentwicklungstools enthält; dazu gehören Tools, die für die Interaktion mit den {{site.data.keyword.Bluemix_notm}}-Laufzeiten erforderlich sind. Weitere Informationen darüber, was das Standard-Docker-Image enthält, finden Sie im Abschnitt [Vorinstallierte Ressourcen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). Wenn für Ihren Job Entwicklungstools erforderlich sind, die im Standardimage nicht verfügbar sind, oder Sie unterschiedliche Versionen dieser Tools benötigen, können Sie ein angepasstes Image verwenden. Weitere Informationen zu angepassten Images finden Sie im Abschnitt [Mit benutzerdefinierten Docker-Images arbeiten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images).
 
-Wenn die Pipeline Scripts ausführt, werden die Eigenschaften, die den Kontext beschreiben, in dem der Job ausgeführt wird, an das Script übergeben, und zwar mithilfe von Umgebungsvariablen. Beispiel: Die URL des Repositorys, das die Eingabe für die Stage ist, der Name der Stage und der Job, der ausgeführt wird, die Parameter, die durch den Jobtyp angegeben werden, usw. Informationen zum Anzeigen einer Liste der verfügbaren Umgebungsvariablen finden Sie unter [Vorinstallierte Ressourcen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). 
+Wenn die Pipeline Scripts ausführt, werden die Eigenschaften, die den Kontext beschreiben, in dem der Job ausgeführt wird, an das Script übergeben, und zwar mithilfe von Umgebungsvariablen. Beispiel: Die URL des Repositorys, das die Eingabe für die Stage ist, der Name der Stage und der Job, der ausgeführt wird, die Parameter, die durch den Jobtyp angegeben werden, usw. Informationen zum Anzeigen einer Liste der verfügbaren Umgebungsvariablen finden Sie unter [Vorinstallierte Ressourcen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources).
 
 Sie können Eigenschaften sowohl auf der Pipeline- als auch auf der Stage-Ebene definieren. Pipeline-Eigenschaften werden über alle Stages und Jobs in einer Pipeline gemeinsam genutzt. Stage-Eigenschaften sind für eine bestimmte Stage eindeutig und werden von allen Jobs dieser Stage gemeinsam genutzt. Weitere Informationen zu Eigenschaften finden Sie unter [Umgebungseigenschaften (Umgebungsvariablen)](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties).
 
@@ -52,6 +53,20 @@ Möglicherweise wünschen Sie eine engere Steuerung einer bestimmten Stage. Wenn
 
 ![Die Registerkarte EINGABE](images/input_tab_only_execute.png)
 
+Für Stages, die den Eingabetyp 'Git-Repository' verwenden, stehen weitere Optionen für Auslöser für Stages zur Verfügung. Sie können beispielsweise auswählen, dass Jobs automatisch für Git-Ereignisse in dem ausgewählten Zweig ausgeführt werden sollen. Wenn Sie diesen Auslösertyp auswählen, müssen Sie einen oder mehrere der folgenden Ereignistypen auswählen:
+
+*	**Wenn ein Commit mit Push-Operation übertragen wird** löst aus, wenn eine Push-Operation in den ausgewählten Repositoryzweig durchgeführt wird.
+*	**Wenn eine Pull-/Zusammenführungsanforderung geöffnet oder aktualisiert wird** löst aus, wenn eine Pull- oder eine Zusammenführungsanforderung geöffnet oder bearbeitet wird.
+*	**Wenn eine Pull-/Zusammenführungsanforderung geschlossen wird** löst aus, wenn eine Pull- oder eine Zusammenführungsanforderung geschlossen wird, auch ohne zugehörige Commitoperation.
+
+![Die Auslöser der Registerkarte EINGABE](images/input_tab_only_triggers.png)
+
+Wenn Sie das Kontrollkästchen **Wenn eine Pull-/Zusammenführungsanforderung geöffnet oder aktualisiert wird** auswählen, wird der Status der Pipeline an das Git-Repository zurückgegeben. Wenn eine Pull- oder eine Zusammenführungsanforderung Ihre Pipeline auslöst, wird auf der Seite eine integrierte Statusprüfung angezeigt. Für jede Stage, die in Ihrer Pipeline ausgeführt wird, wird eine Statusprüfung angezeigt, und es werden Links zu den Protokollen und der Historie für jede Stage bereitgestellt. Wenn die Statusprüfung ausgeführt wird, wird sie von 'anstehend' auf 'erfolgreich' oder 'fehlgeschlagen' aktualisiert. Wenn Ihre Pipeline mehrere Stages enthält, wird der Status jeder Stage in der Prüfliste aufgelistet.
+
+Diese Statusrückmeldung wird auch vom von IBM gehosteten GitLab Community Edition-Tool für Zusammenführungsanforderungen unterstützt.
+{: tip}
+
+Sie können auch das Zusammenführen basierend auf den Ergebnissen der Statusprüfungen durch Git-Zweigschutzregeln einschränken. Nachdem eine Zweigschutzregel erstellt wurde, wird jegliche Zusammenführung blockiert, bis alle erforderlichen Statusprüfungen erfolgreich sind. 
 
 ### Build-Stage
 {: #build_stage}
@@ -95,7 +110,7 @@ Jobs werden in diskreten Arbeitsverzeichnissen innerhalb von Docker-Containern a
 
 Wenn Sie einen Job konfigurieren, können Sie mit Ausnahme von Buildjobs vom einfachen Typ (Simple), UNIX-Shell-Scripts einbeziehen, die Build-, Test- oder Bereitstellungsbefehle einschießen. Da Jobs in Ad-hoc-Containern ausgeführt werden, können die Aktionen eines Jobs nicht die Ausführungsumgebungen anderer Jobs beeinflussen, selbst wenn diese Jobs Teil derselben Stage sind.
 
-Beispiele für Build- und Bereitstellungsscripts finden Sie in [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons).
+Beispiele für Build- und Bereitstellungsscripts finden Sie in [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons){: external}.
 
 Darüber hinaus können Pipeline-Jobs nur die folgenden Befehle als `sudo` ausführen:
   * `/usr/sbin/service`
@@ -115,7 +130,7 @@ Nachdem ein Job ausgeführt wurde, wird der Container, der für ihn erstellt wor
 Jobs können für eine Dauer von bis zu 60 Minuten ausgeführt werden. Wenn Jobs diesen Grenzwert überschreiten, schlagen sie fehl. Falls ein Job den Grenzwert überschreitet, teilen Sie ihn in mehrere Jobs auf. Wenn ein Job zum Beispiel drei Aufgaben ausführt, können Sie ihn möglicherweise in drei Jobs aufteilen: Ein Job für jede Aufgabe.
 {: tip}
 
-Informationen dazu, wie Sie einen Job zu einer Stage hinzufügen, enthält das Thema [Einen Job zu einer Stage hinzufügen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job){: new_window}.
+Informationen dazu, wie Sie einen Job zu einer Stage hinzufügen, enthält das Thema [Einen Job zu einer Stage hinzufügen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job).
 
 ### Buildjobs
 
@@ -128,7 +143,7 @@ Wenn Sie den Buildertyp **Simple** verwenden, wird Ihr Code nicht kompiliert ode
 
 Wenn Sie die Bereitstellung mithilfe von Cloud Foundry durchführen, enthält Cloud Foundry die richtigen Artefakte, damit Ihre App ausgeführt werden kann. Weitere Informationen finden Sie unter [Bereitstellung von Anwendungen mit dem Befehl 'cf'](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps). Die Pipeline für eine Cloud Foundry-App enthält eine Stage für die Bereitstellung, die einen Befehl 'cf' ausführt.
 
-Cloud Foundry versucht, das zu [verwendende Buildpack zu erkennen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.cloudfoundry.org/buildpacks/detection.html). Sie können das [Buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) angeben, das in der Manifestdatei im Stammordner Ihrer App verwendet werden soll. Buildpacks prüfen in der Regel die vom Benutzer bereitgestellten Artefakte, um festzustellen, welche Abhängigkeiten heruntergeladen werden müssen und wie die Anwendungen für die Kommunikation mit gebundenen Services konfiguriert werden müssen. Weitere Informationen zu Anwendungsmanifesten finden Sie unter [Anwendungsmanifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
+Cloud Foundry versucht, [das zu verwendende Buildpack zu erkennen](http://docs.cloudfoundry.org/buildpacks/detection.html){: external}. Sie können das [Buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) angeben, das in der Manifestdatei im Stammordner Ihrer App verwendet werden soll. Buildpacks prüfen in der Regel die vom Benutzer bereitgestellten Artefakte, um festzustellen, welche Abhängigkeiten heruntergeladen werden müssen und wie die Anwendungen für die Kommunikation mit gebundenen Services konfiguriert werden müssen. Weitere Informationen zu Anwendungsmanifesten finden Sie unter [Anwendungsmanifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
 
 ### Bereitstellungsjobs
 
@@ -222,4 +237,4 @@ Sie können in der Pipeline alles angeben, was eine Manifestdatei bei `cf push`-
 
 Um Konflikte zu vermeiden, können Sie eine Route mithilfe von `cf push` gefolgt vom Hostnamenargument, `-n` und einem Routennamen angeben. Bei der Änderungen des Bereitstellungsscripts für einzelne Stages können Sie Weiterleitungskonflikte vermeiden, wenn Sie mehrere Ziele implementieren.
 
-Öffnen Sie die Konfigurationseinstellungen für einen Bereitstellungsjob und ändern Sie das Feld **Bereitstellungsscript**, um `cf push`-Befehlsargumente zu verwenden. Weitere Informationen enthält die [Dokumentation zur Push-Operation von Cloud Foundry![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window}.
+Öffnen Sie die Konfigurationseinstellungen für einen Bereitstellungsjob und ändern Sie das Feld **Bereitstellungsscript**, um `cf push`-Befehlsargumente zu verwenden. Weitere Informationen enthält die [Dokumentation zur Cloud Foundry-Push-Operation](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: external}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-26"
+lastupdated: "2019-06-18"
 
 keywords: user management function, tool integrations, Cloud Foundry org
 
@@ -12,6 +12,7 @@ subcollection: ContinuousDelivery
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -48,7 +49,7 @@ Wenn Sie die Konfiguration einer Toolintegration beim Erstellen einer Toolchain 
  Einige Toolintegrationen sind vorkonfiguriert und erfordern keinerlei Konfigurationsparameter. Sie können die Konfigurationseinstellungen nur für die von Ihnen konfigurierten Toolintegrationen aktualisieren.
  {: tip}
 
- Wenn Sie die Aktualisierung der Einstellungen abgeschlossen haben, klicken Sie auf **Integration speichern**. Informationen zum Konfigurieren spezifischer Toolintegrationen finden Sie in [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations){: new_window}.
+ Wenn Sie die Aktualisierung der Einstellungen abgeschlossen haben, klicken Sie auf **Integration speichern**. Informationen zum Konfigurieren spezifischer Toolintegrationen finden Sie in [Toolintegrationen konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 
 ## Toolintegration hinzufügen
 {: #adding_a_tool_integration}
@@ -74,7 +75,7 @@ Wenn Sie eine Toolintegration aus Ihrer Toolchain löschen, kann diese Löschung
 ## Zugriff auf Toolchains in Ressourcengruppen verwalten
 {: #managing_access_resource_groups}
 
-Sie können den Service Identity and Access Management (IAM) verwenden, um den Benutzerzugriff auf Toolchains zu verwalten. Weitere Informationen zum Verwalten der Zugriffssteuerung mit IAM finden Sie im Abschnitt [Benutzerzugriff auf Toolchains mit Identity and Access Management verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security){: new_window}. 
+Sie können den Service Identity and Access Management (IAM) verwenden, um den Benutzerzugriff auf Toolchains zu verwalten. Weitere Informationen zum Verwalten der Zugriffssteuerung mit IAM finden Sie im Abschnitt [Benutzerzugriff auf Toolchains mit Identity and Access Management verwalten](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). 
 
 Nur Benutzer, die in der Liste der berechtigten Benutzer für die ausgewählte Instanz von {{site.data.keyword.contdelivery_short}} stehen, können die Features Delivery Pipeline, Eclipse Orion-{{site.data.keyword.webide}} und {{site.data.keyword.gitrepos}} von {{site.data.keyword.contdelivery_short}}-Toolchains verwenden. Sie können die Berechtigung für berechtigte Benutzer über die Registerkarte 'Verwalten' der ausgewählten Instanz von {{site.data.keyword.contdelivery_short}} in der angegebenen Ressourcengruppe verwalten.
 
@@ -93,7 +94,7 @@ Sie können Benutzern Zugriff auf eine Toolchain gewähren, indem Sie sie sowohl
 Sie müssen Benutzer der Organisation der Toolchain in der Region hinzufügen, in der die Toolchain gehostet wird. Wenn die Toolchain für die Bereitstellung von Apps in anderen Regionen konfiguriert ist, wird sie auch weiterhin Apps in diesen Regionen bereitstellen.
 {: important}
 
-Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated für {{site.data.keyword.ghe_short}} verwenden und Benutzer zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und deren Bereichen hinzufügen, so können sich die Benutzer mit ihrer {{site.data.keyword.Bluemix_notm}}-ID und dem zugehörigen Kennwort bei {{site.data.keyword.ghe_short}} anmelden. Wenn sich die Benutzer anmelden, werden Konten für sie erstellt. Wenn Sie Benutzer zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und deren Bereichen hinzufügen, werden sie nicht automatisch zum {{site.data.keyword.ghe_short}}-Repository hinzugefügt. Ein Benutzer mit Administratorberechtigungen für das Repository muss sie hinzufügen. Weitere Informationen finden Sie im Abschnitt zur Verwendung von [Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started){: new_window}. Wenn Sie Ihre eigene verwaltete Version von {{site.data.keyword.ghe_short}} verwenden, gehen Sie gemäß Ihren eigenen internen Prozeduren vor.
+Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated für {{site.data.keyword.ghe_short}} verwenden und Benutzer zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und deren Bereichen hinzufügen, so können sich die Benutzer mit ihrer {{site.data.keyword.Bluemix_notm}}-ID und dem zugehörigen Kennwort bei {{site.data.keyword.ghe_short}} anmelden. Wenn sich die Benutzer anmelden, werden Konten für sie erstellt. Wenn Sie Benutzer zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und deren Bereichen hinzufügen, werden sie nicht automatisch zum {{site.data.keyword.ghe_short}}-Repository hinzugefügt. Ein Benutzer mit Administratorberechtigungen für das Repository muss sie hinzufügen. Weitere Informationen finden Sie im Abschnitt zur Verwendung von [Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started). Wenn Sie Ihre eigene verwaltete Version von {{site.data.keyword.ghe_short}} verwenden, gehen Sie gemäß Ihren eigenen internen Prozeduren vor.
 
 ###Tipps für die Verwaltung des Zugriffs auf eine Toolchain
 
@@ -131,10 +132,22 @@ Wenn Sie {{site.data.keyword.Bluemix_notm}} Dedicated für {{site.data.keyword.g
 
      * Weisen Sie dem ausgewählten Bereich in der Organisation eine Rolle zu.
 
-     Standardmäßig verfügen Organisationsmanager über uneingeschränkte Administratorberechtigungen für alle Toolchains, die der Organisation zugeordnet sind. Um dem Benutzer die uneingeschränkten Administratorberechtigungen zu erteilen, wählen Sie die Rolle **Manager** aus. Die Rollen 'Abrechnungsmanager' und 'Auditor' haben keinerlei Einfluss auf den Zugriff auf Toolchains. Sie können die Rollen später auf der Seite 'Teamverzeichnis' ändern. Weitere Informationen finden Sie in [Cloud Foundry-Rollen](/docs/iam?topic=iam-cfaccess#cfaccess){: new_window}.
+     Standardmäßig verfügen Organisationsmanager über uneingeschränkte Administratorberechtigungen für alle Toolchains, die der Organisation zugeordnet sind. Um dem Benutzer die uneingeschränkten Administratorberechtigungen zu erteilen, wählen Sie die Rolle **Manager** aus. Die Rollen 'Abrechnungsmanager' und 'Auditor' haben keinerlei Einfluss auf den Zugriff auf Toolchains. Sie können die Rollen später auf der Seite 'Teamverzeichnis' ändern. Weitere Informationen finden Sie in [Cloud Foundry-Rollen](/docs/iam?topic=iam-cfaccess#cfaccess).
      {: tip}
 
    Nachdem der Benutzer nun zu einem Mitglied der Organisation geworden ist, kehren Sie zu der Verwaltungsseite der Toolchain zurück und fügen Sie den Benutzer zu der Toolchain hinzu.  
+
+
+## Toolchains organisieren
+{: #organizing_toolchains}
+
+Sie können Ihren Toolchains Tags hinzufügen, um sie zu organisieren und später leichter zu finden. Bei einem Tag handelt es sich um eine Kennzeichnung, die Sie einer Toolchain zuordnen, damit Sie in Ihrer Toolchain-Liste leicht nach Toolchains filtern können.
+
+1. Suchen Sie im DevOps-Dashboard auf der Seite **Toolchains** die Toolchain, der Sie einen Tag hinzufügen möchten, und klicken Sie auf **Tags hinzufügen**.
+1. Geben Sie einen Namen für den Tag ein, den Sie der Toolchain hinzufügen möchten. Sie können mehrere Tags hinzufügen, die durch Kommas voneinander getrennt sind.
+1. Klicken Sie auf **Speichern**.
+
+Weitere Informationen zu Tags finden Sie unter [Mit Tags arbeiten](/docs/resources?topic=resources-tag#).
 
 
 ## Toolchain löschen
@@ -153,10 +166,10 @@ Sie können eine Toolchain löschen und angeben, welche der zugehörigen Toolint
 ##Relevantes Lernprogramm: Toolchains verwenden
 {: #toolchain-tutorial}
 
-Informieren Sie sich in diesen Lernprogrammen zu [IBM&reg; Cloud Garage Method ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage){:new_window}:
+Informieren Sie sich in diesen Lernprogrammen in [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external}:
 
-  * [Erstellen und verwenden Sie Ihre erste Toolchain mithilfe der Toolchain zum Entwickeln einer Cloud Foundry-App ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:new_window}.
+  * [Erste Toolchain mithilfe der Toolchain zum Entwickeln einer Cloud Foundry-App erstellen und verwenden](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}.
 
-  * [Toolchain zu einer App hinzufügen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:new_window}
+  * [Einer App eine Toolchain hinzufügen](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}.
 
-  * [Verwenden Sie die Toolchain zum Entwickeln und Testen von Microservices auf Cloud Foundry ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:new_window}.
+  * [Toolchain zum Entwickeln und Testen von Microservices auf Cloud Foundry verwenden](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}.
