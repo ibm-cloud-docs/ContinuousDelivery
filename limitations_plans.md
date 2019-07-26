@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-06-27"
+lastupdated: "2019-07-26"
 
 keywords: users of a service instance, a-service, Git Repos
 
@@ -27,7 +27,7 @@ The use of {{site.data.keyword.contdelivery_full}} is limited to the building, d
 
 You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){:external} to create and use DevOps toolchains. A service instance might belong to either an {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) [resource group](/docs/services/resources?topic=resources-rgs) or to an {{site.data.keyword.Bluemix_notm}} organization (org).
 
-You can create *new* instances of the {{site.data.keyword.contdelivery_short}} service only in resource groups. The migration of toolchains from orgs to resource groups is not currently supported. If you are missing a {{site.data.keyword.contdelivery_short}} service for an org that contains toolchains, you can either create the toolchains again in a resource group or contact [IBM Support](https://cloud.ibm.com/unifiedsupport){:external} for help.
+You can create *new* instances of the {{site.data.keyword.contdelivery_short}} service only in resource groups. If you are missing a {{site.data.keyword.contdelivery_short}} service for an org that contains toolchains, you can either create the toolchains again in a resource group or contact [IBM Support](https://cloud.ibm.com/unifiedsupport){:external} for help. The migration of toolchains from orgs to resource groups is not currently supported.
 
 You can have one Lite service only per account. It is recommended that you use the Professional plan if you want to work with toolchains in multiple orgs or resource groups, or within multiple regions.
 {: tip}
@@ -36,9 +36,9 @@ You can have one Lite service only per account. It is recommended that you use t
 ## Authorized users
 {: #authorized_users}
 
-{{site.data.keyword.contdelivery_short}} [service plans](https://cloud.ibm.com/catalog/services/continuous-delivery){:external} are defined and priced based on the number of authorized users for a service instance. Anyone who contributes to an effort must be counted as an authorized user, including:
+{{site.data.keyword.contdelivery_short}} [service plans](https://cloud.ibm.com/catalog/services/continuous-delivery){:external} are defined and priced based on the number of authorized users for a service instance. Individual contributors, including the following examples, are counted as authorized users:
 
- * Users who interact with issues, issues boards, source code, or other artifacts in a {{site.data.keyword.gitrepos}} repository.
+ * Users who interact with issues, issues boards, source code, or other artifacts in a {{site.data.keyword.gitrepos}} repository (repo).
  * Users who manipulate, trigger (either directly in the user interface or indirectly by committing to a repo), or view the status of a delivery pipeline.
  * Users who interact with the Eclipse Orion {{site.data.keyword.webide}}.
  
@@ -47,7 +47,16 @@ The Lite plan is subject to limits. For more information about the Lite plan and
  
 ### How are users counted for instances of {{site.data.keyword.contdelivery_short}} in resource groups?
 
-Authorized users are counted and managed for each service instance by looking at the list of authorized users for billing and Lite plan limits. {{site.data.keyword.contdelivery_short}} service users are automatically added to this list. You can prevent users from accessing toolchains and automatically being added to a {{site.data.keyword.contdelivery_short}} service instance. For more information about using IAM to remove user access from the Resource Group that contains the toolchain (or from the toolchain itself), see [Managing user access to {{site.data.keyword.contdelivery_short}} with Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security). 
+Authorized users are counted and managed for each service instance by using the list of authorized users for billing and Lite plan limits. {{site.data.keyword.contdelivery_short}} service users are automatically added to this list when they complete any of the following activities:
+ 
+ * View, edit, or run a delivery pipeline.
+ * Trigger a delivery pipeline to run by way of a Git push, merge, or commit to the branch that is configured as an input trigger.
+ * Use the Eclipse Orion {{site.data.keyword.webide}}.
+
+When a delivery pipeline is triggered by a change to an IBM Git repo, all users who have Developer or greater access to the repo are added to the list of authorized users.
+{: tip}
+
+You can prevent users from accessing toolchains and automatically being added to the authorized user list for a {{site.data.keyword.contdelivery_short}} service instance by using IAM to remove access to the toolchain. You can also remove Developer access to any Git repos that are integrated with the toolchain. For more information about using IAM to manage access to toolchains in a resource group or the toolchain itself, see [Managing user access to {{site.data.keyword.contdelivery_short}} with Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). For more information about managing access to an IBM Git repo, see [Project's members](https://us-south.git.cloud.ibm.com/help/user/project/members/index.md){:external}.
 
 The method that you use to organize toolchains within resource groups directly impacts user access and billing. When a user uses toolchains in multiple resource groups, they are counted and billed for each service in those resource groups.
 {: tip}
@@ -64,7 +73,7 @@ Users are automatically added or added again when they use the {{site.data.keywo
 
 ### How are users counted for instances of {{site.data.keyword.contdelivery_short}} in orgs?
 
-Authorized users are counted by looking at all of the users in the {{site.data.keyword.Bluemix_notm}} org that contains the {{site.data.keyword.contdelivery_short}} service. For more information about orgs and spaces, see [Creating organizations and spaces](/docs/cloud-foundry?topic=cloud-foundry-create_orgs).
+Authorized users are counted by using the list of users in the {{site.data.keyword.Bluemix_notm}} org that contains the {{site.data.keyword.contdelivery_short}} service. For more information about orgs and spaces, see [Creating organizations and spaces](/docs/cloud-foundry?topic=cloud-foundry-create_orgs).
 
 To view the list of users in your org in an {{site.data.keyword.Bluemix_notm}} Public environment, from the menu bar, click **Manage > Account**. Then, click **Cloud Foundry orgs**.
 
