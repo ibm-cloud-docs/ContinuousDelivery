@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-07-26"
+lastupdated: "2019-07-29"
 
 keywords: users of a service instance, a-service, Git Repos
 
@@ -46,6 +46,9 @@ The Lite plan is subject to limits. For more information about the Lite plan and
 {: tip}
  
 ### How are users counted for instances of {{site.data.keyword.contdelivery_short}} in resource groups?
+
+The specific activities that are used to automatically count users, and the method for counting those users might change over time. However, the process for counting users will continue to comply with the terms of {{site.data.keyword.contdelivery_short}} plans. You can also manually add users to the list of authorized users, at any time.
+{: important}
 
 Authorized users are counted and managed for each service instance by using the list of authorized users for billing and Lite plan limits. {{site.data.keyword.contdelivery_short}} service users are automatically added to this list when they complete any of the following activities:
  
