@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-06-21"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository
 
@@ -24,7 +24,7 @@ subcollection: ContinuousDelivery
 # {{site.data.keyword.gitrepos}}
 {: #git_working}
 
-Collaborate with your team and manage your source code with a Git repository (repo) and issue tracker that is hosted by IBM and built on [GitLab Community Edition](https://about.gitlab.com/){: external}.
+Collaborate with your team and manage your source code with a Git repository (repo) and issue tracker that is hosted by IBM and built on [GitLab Community Edition](https://about.gitlab.com/){: external}. For more information about GitLab, see the [GitLab documentation](https://us-south.git.cloud.ibm.com/help){: external}.
 {: shortdesc}
 
 Invite only people that you have a personal or business relationship with to collaborate on a project. Users that use an invitation to a Git repo for purposes other than to collaborate on a project might have their access to the service suspended or revoked.
