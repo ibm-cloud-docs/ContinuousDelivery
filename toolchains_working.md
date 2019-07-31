@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-07-30"
 
 keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
 
@@ -55,11 +55,12 @@ You can use a template as a starting point to [create a toolchain](https://cloud
  * The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you want to use a different name, change the toolchain's name.
  * The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
  * The resource group or organization to create the toolchain in. Click the link to switch between selecting resource groups and orgs. If you want to use a different resource group or org, select it from the list of available resource groups or orgs.
+ * The provider for your source repository, such as GitHub, GitLab, or Bitbucket. If you want to use a different source provider, select it from the list of available repos.
  
    Resource groups are available in the US South, US East, United Kingdom, Germany, and Tokyo regions. Cloud Foundry orgs are supported in the US South, United Kingdom, and Germany regions.
    {: important}
 
-1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For information about configuring the tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
+1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For more information about configuring the tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on which toolchain template you selected and whether you are using {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. For example, when you create a Microservices toolchain on {{site.data.keyword.Bluemix_notm}} Public, these steps are run:
 
  * The toolchain is created.
@@ -81,7 +82,7 @@ If you created your app by using your own code repository, click **Configure con
 1. If you created your app by using a starter kit, click **Configure continuous delivery** on your app's details page. Next, select a deployment target. If you use {{site.data.keyword.Bluemix_notm}} Public, your app is configured for continuous delivery from a new GitHub repo that is populated with the app starter code. If you use {{site.data.keyword.Bluemix_notm}} Dedicated, your app is configured for continuous delivery from a new GitHub or {{site.data.keyword.ghe_short}} repo that is populated with the app starter code.
 1. On the toolchain configuration page, review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
 1. Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you want to use a different name, change the toolchain's name.
-1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For information about configuring the tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
+1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For more information about configuring the tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on whether you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. For example, when you create a toolchain from an app on {{site.data.keyword.Bluemix_notm}} Public, these steps are run:
 
  * The toolchain is created.
