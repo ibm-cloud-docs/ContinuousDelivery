@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-18"
+lastupdated: "2019-07-30"
 
 keywords: IBM Cloud Continuous Delivery, tool integration, toolchain template
 
@@ -62,6 +62,7 @@ To quickly find the toolchain template that addresses your specific requirements
  * The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you want to use a different name, change the toolchain's name.
  * The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
  * The resource group or organization to create the toolchain in. Click the link to switch between selecting resource groups and orgs. If you want to use a different resource group or org, select it from the list of available resource groups or orgs.
+ * The provider for your source repository, such as GitHub, GitLab, or Bitbucket. If you want to use a different source provider, select it from the list of available repos.
  
    Resource groups are available in the US South, US East, United Kingdom, Germany, and Tokyo regions. Cloud Foundry orgs are supported in the US South, United Kingdom, and Germany regions.
    {: important}
@@ -84,3 +85,4 @@ Check out one of these tutorials on the [IBM&reg; Cloud Garage Method](https://w
   * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}.
 
   * [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}.
+  
