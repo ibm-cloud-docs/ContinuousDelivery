@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-07-31"
 
 keywords: troubleshoot, IBM Cloud Continuous Delivery
 
@@ -128,7 +128,7 @@ After you have a personal access token, you can create a URL to access the repo 
 
 `https://user:XXXXXXX@us-south.git.cloud.ibm.com/group/node-hello-world`
 
-Where `user` is your GitLab user name, `XXXXXXX` is the access token, [`group`](https://us-south.git.cloud.ibm.com/help/user/group/index.md){: external} is the group where the repo is stored, and `node-hello-world` is the repo name.
+Where `user` is your GitLab user name, `XXXXXXX` is the access token, [group](https://us-south.git.cloud.ibm.com/help/user/group/index.md){: external} is the group where the repo is stored, and `node-hello-world` is the repo name.
 
 If your GitLab repo isn't located within a GitLab group, the value of `group` is the same as your user name.
 {: tip}
