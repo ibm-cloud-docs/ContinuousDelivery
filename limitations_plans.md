@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-07-29"
+lastupdated: "2019-08-01"
 
 keywords: users of a service instance, a-service, Git Repos
 
@@ -53,7 +53,6 @@ The specific activities that are used to automatically count users, and the meth
 Authorized users are counted and managed for each service instance by using the list of authorized users for billing and Lite plan limits. {{site.data.keyword.contdelivery_short}} service users are automatically added to this list when they complete any of the following activities:
  
  * View, edit, or run a delivery pipeline.
- * Trigger a delivery pipeline to run by way of a Git push, merge, or commit to the branch that is configured as an input trigger.
  * Use the Eclipse Orion {{site.data.keyword.webide}}.
 
 When a delivery pipeline is triggered by a change to an IBM Git repo, all users who have Developer or greater access to the repo are added to the list of authorized users.
