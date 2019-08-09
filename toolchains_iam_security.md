@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-08-07"
 
 keywords: Administrator Create, Editor Update, Update, user access
 
@@ -11,6 +11,7 @@ subcollection: ContinuousDelivery
 ---
 
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -23,34 +24,40 @@ subcollection: ContinuousDelivery
 # Managing user access to toolchains with Identity and Access Management
 {: #toolchains-iam-security}
 
-Access to toolchains in resource groups for users in your account is controlled by {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). 
+User access for toolchains in Cloud Foundry orgs is managed differently than user access to toolchains in resource groups. For more information about managing user access to toolchains in Cloud Foundry orgs, see [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs).
 
-**Notes**: 
+Toolchains that you create in your account might not be visible to other users by default. Access to toolchains in resource groups for users in your account is controlled by [{{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)](/docs/services/iam?topic=iam-iamoverview). You can assign access to [new users](#toolchains-access-new-users) and [existing users](#toolchains-access-existing-users) in your account.
 
-* User access for toolchain instances and {{site.data.keyword.contdelivery_short}} service instances is managed separately. For more information about managing user access to {{site.data.keyword.contdelivery_short}} service instances in resource groups, see [Managing user access to {{site.data.keyword.contdelivery_short}} with Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security).
+User access for {{site.data.keyword.contdelivery_short}} service instances is managed separately. For more information about managing user access to {{site.data.keyword.contdelivery_short}} service instances in resource groups, see [Managing user access to {{site.data.keyword.contdelivery_short}} with Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security).
+{: tip}
 
-* User access for toolchains in Cloud Foundry orgs is managed differently than user access to {{site.data.keyword.contdelivery_short}} service instances in resource groups. For more information about managing user access to toolchains in Cloud Foundry orgs, see [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs).
+Every user that accesses toolchains in your account must be assigned an IAM access policy. The policy determines which toolchains the user can access and what actions the user is allowed to take.
 
-Every user that accesses toolchains in your account must be assigned an access policy with an IAM user role defined. That policy determines what actions the user can perform within the context of the service or instance you select. The allowable actions are customized and defined by the {{site.data.keyword.Bluemix_notm}} service as operations that are allowed to be performed on the service. The actions are then mapped to IAM user roles.
+Policies enable access to be granted at different levels or scopes, including, but not limited to: 
 
-Policies enable access to be granted at different levels, including: 
+* Access across all toolchains in your account
+* Access across all toolchains in a resource group in your account
+* Access to a specific toolchain in your account
 
-* Access across all instances of the service in your account
-* Access to an individual service instance in your account
-* Access to a specific resource within an instance
-* Access to all IAM-enabled services in your account
+After you define the scope of the access policy, you assign a role. The role defines which actions the user is allowed to take. 
 
-After you define the scope of the access policy, you assign a role. Review the following tables which outline what actions each role allows within toolchains.
+| Role | Actions |
+|:-----------------|:-----------------|
+| Viewer, Operator | View  |
+| Editor, Administrator | View and edit |
+{: caption="Table 1. User roles" caption-side="top"}
 
-The following table details actions that are mapped to platform management roles. Platform management roles enable users to perform tasks on service resources at the platform level, for example assign user access for the service, create or delete service IDs, create instances, and bind instances to applications.
+
+The following table lists the IAM user roles and the available toolchain actions for each role.
 
 | Platform Management Role | Description of Actions | Example Actions|
 |:-----------------|:-----------------|:-----------------|
 | Viewer, Operator | View toolchains and delivery pipelines. Run delivery pipelines. | <ul><li>Click a toolchain to open its Overview page.</li><li>Click the **Run Stage** icon of the stage that your pipeline job is in.</li></ul> |
-| Editor, Administrator | Create, view, update, and delete toolchains and delivery pipelines. |<ul><li>On the DevOps dashboard, on the **Toolchains** page, click **Create a Toolchain**.</li><li>On the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page.</li><li>On the DevOps dashboard, on the **Toolchains** page, click the toolchain to delete. Click the **More Actions** menu, which is next to **View app**. Click **Delete**.</li></ul> |
-{: caption="Table 1. IAM user roles and actions" caption-side="top"}
+| Editor, Administrator | Create, view, update, and delete toolchains and delivery pipelines. |<ul><li>On the DevOps dashboard, on the Toolchains page, click **Create a Toolchain**.</li><li>On the DevOps dashboard, on the Toolchains page, click the toolchain to delete. Click the **More Actions** menu, which is next to **View app**. Click **Delete**.</li><li>On the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Click **Add a Tool**, and then select the tool integration that you want to add.</li><li>On the DevOps dashboard, on the Pipeline page, click the **Stage Configuration** icon, and then click **Configure Stage**.</li></ul> |
+{: caption="Table 2. IAM user roles and actions" caption-side="top"}
 
- For toolchains, the following actions exist:
+
+The following table lists and describes the available actions for toolchains:
 
 | Action | Operation on Service | Role
 |:-----------------|:-----------------|:--------------|
@@ -62,6 +69,43 @@ The following table details actions that are mapped to platform management roles
 | list-bindings | View the tool integrations that are bound to a toolchain in a resource group. | Administrator, Editor, Viewer |
 | create-bindings | Add a tool integration to a toolchain in a resource group. | Administrator, Editor |
 | delete-bindings | Remove a tool integration from a toolchain in a resource group. | Administrator, Editor |
-{: caption="Table 2. Service actions and operations" caption-side="top"}
+{: caption="Table 3. Service actions and operations" caption-side="top"}
 
-For information about assigning user roles in the UI, see [Managing IAM access](/docs/iam?topic=iam-iammanidaccser).
+## Assigning access to new users
+{: #toolchains-access-new-users}
+
+You can assign a new user access to all of the toolchains in your resource group.
+
+1. Go to **Manage** &gt; **Access (IAM)**, and select **Users**.
+2. Click **Invite users**.
+3. Specify the email address of the user that you want to invite.
+4. In the **Access** section, expand the **Services** option.
+5. Choose to assign access to a **Resource group** and select the resource group that contains the toolchains.
+6. Select **Viewer** access to provide the user with access to create, view, edit, or delete toolchains within the resource group.
+7. Select the **Toolchain** service.
+8. Select the **Editor** role to provide the user with access to create, view, edit, or delete toolchains within the resource group. Select the **Viewer** role to provide the user with access to view toolchains only or to run delivery pipelines.
+9. Click **Invite users**. 
+
+Depending on their role, the new user can now work with all of the toolchains within the specified resource group. They can add tool integrations, modify and run pipelines, and use the Eclipse Orion {{site.data.keyword.webide}}.
+
+
+## Assigning access to existing users
+{: #toolchains-access-existing-users}
+
+You can assign an existing user access to a toolchain in your resource group.
+
+1. Go to **Manage** &gt; **Access (IAM)**, and select **Users**.
+2. Select the name of the user that you want to assign access.
+3. Click **Access policies**.
+4. Click **Assign access**.
+5. Select **Assign access within a resource group** to assign access to all toolchains within the resource group.
+6. Choose to assign access to the resource group that contains the toolchains.
+7. Select **Viewer** access to provide the user with access to create, view, edit, or delete toolchains within the resource group.
+8. Select the **Toolchain** service.
+9. Select the **Editor** role to provide the user with access to create, view, edit, or delete toolchains within the resource group. Select the **Viewer** role to provide the user with access to view toolchains only or to run delivery pipelines.
+10. Click **Assign**.
+
+Depending on their role, the user can now work with all of the toolchains within the specified resource group. They can add tool integrations, modify and run pipelines, and use the Eclipse Orion {{site.data.keyword.webide}}.
+
+Although the most common and flexible methods for granting user access are described here, IAM supports other methods, such as by resource or resource type, or by resource group. For more information about how to assign users access to resources, such as toolchains, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser).
+{: tip}
