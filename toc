@@ -47,12 +47,12 @@ Continuous Delivery
     git_working.md
     git_locally.md
     di_working.md
-    cd_personal_data.md
     
     {: .topicgroup}
     Security
         cd_iam_security.md
         toolchains_iam_security.md
+        cd_personal_data.md
         cd_data_security.md
     {: .navgroup-end}
 
