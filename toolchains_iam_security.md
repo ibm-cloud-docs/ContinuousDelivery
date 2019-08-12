@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-08-07"
+lastupdated: "2019-08-12"
 
 keywords: Administrator Create, Editor Update, Update, user access
 
@@ -81,7 +81,7 @@ You can assign a new user access to all of the toolchains in your resource group
 3. Specify the email address of the user that you want to invite.
 4. In the **Access** section, expand the **Services** option.
 5. Choose to assign access to a **Resource group** and select the resource group that contains the toolchains.
-6. Select **Viewer** access to provide the user with access to create, view, edit, or delete toolchains within the resource group.
+6. Select **Viewer** (or higher) access to provide the user with access to create, view, edit, or delete toolchains within the resource group.
 7. Select the **Toolchain** service.
 8. Select the **Editor** role to provide the user with access to create, view, edit, or delete toolchains within the resource group. Select the **Viewer** role to provide the user with access to view toolchains only or to run delivery pipelines.
 9. Click **Invite users**. 
@@ -100,7 +100,7 @@ You can assign an existing user access to a toolchain in your resource group.
 4. Click **Assign access**.
 5. Select **Assign access within a resource group** to assign access to all toolchains within the resource group.
 6. Choose to assign access to the resource group that contains the toolchains.
-7. Select **Viewer** access to provide the user with access to create, view, edit, or delete toolchains within the resource group.
+7. Select **Viewer** (or higher) access to provide the user with access to create, view, edit, or delete toolchains within the resource group.
 8. Select the **Toolchain** service.
 9. Select the **Editor** role to provide the user with access to create, view, edit, or delete toolchains within the resource group. Select the **Viewer** role to provide the user with access to view toolchains only or to run delivery pipelines.
 10. Click **Assign**.
