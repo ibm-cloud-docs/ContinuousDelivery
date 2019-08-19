@@ -6,7 +6,8 @@ Continuous Delivery
 
     {: .navgroup id="learn"}
     index.md
-    [Learn about Continuous Delivery](https://www.ibm.com/cloud/continuous-delivery)
+    [What is Continuous Delivery?](https://www.ibm.com/cloud/learn/continuous-delivery)
+    [Why IBM Cloud Continuous Delivery?](https://www.ibm.com/cloud/continuous-delivery)
     cd_about.md
     devops_intro.md
     garage_method.md
