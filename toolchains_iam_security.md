@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-08-12"
+lastupdated: "2019-08-14"
 
 keywords: Administrator Create, Editor Update, Update, user access
 
@@ -21,10 +21,10 @@ subcollection: ContinuousDelivery
 {:download: .download}
 
 
-# Managing user access to toolchains with Identity and Access Management
+# Managing user access to toolchains in resource groups
 {: #toolchains-iam-security}
 
-User access for toolchains in Cloud Foundry orgs is managed differently than user access to toolchains in resource groups. For more information about managing user access to toolchains in Cloud Foundry orgs, see [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs).
+User access for toolchains in Cloud Foundry orgs is managed differently than user access to toolchains in resource groups. For more information about managing user access to toolchains in Cloud Foundry orgs, see [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-cf-security).
 
 Toolchains that you create in your account might not be visible to other users by default. Access to toolchains in resource groups for users in your account is controlled by [{{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)](/docs/services/iam?topic=iam-iamoverview). You can assign access to [new users](#toolchains-access-new-users) and [existing users](#toolchains-access-existing-users) in your account.
 
