@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-18"
+lastupdated: "2019-08-19"
 
 keywords: user management function, tool integrations, Cloud Foundry org
 
@@ -72,71 +72,14 @@ If you delete a tool integration from your toolchain, the deletion cannot be und
 1. To delete the tool integration from your toolchain, click **Delete**.
 1. Confirm by clicking **Delete**.  
 
-## Managing access to toolchains in resource groups
+## Managing access to toolchains
 {: #managing_access_resource_groups}
 
-You can use the Identity and Access Management (IAM) service to manage user access to toolchains. For more information about managing access control with IAM, see [Managing user access to toolchains with Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). 
+You can use the Identity and Access Management (IAM) service to manage user access to toolchains in resource groups. For more information about managing access control with IAM, see [Managing user access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
 
-Only users who are part of the authorized users list for the selected instance of {{site.data.keyword.contdelivery_short}} can use the Delivery Pipeline, Eclipse Orion {{site.data.keyword.webide}}, and {{site.data.keyword.gitrepos}} features of {{site.data.keyword.contdelivery_short}} toolchains. You can manage authorized user entitlement from the Manage tab of the selected instance of {{site.data.keyword.contdelivery_short}}, within the specified resource group.
+You can also grant users access to toolchains by adding them to both the Cloud Foundry org that the toolchain is associated with and the access control list for the toolchain. For more information about granting users access to toolchains in Cloud Foundry orgs, see [Managing user access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-cf-security).
 
-To access the key features of {{site.data.keyword.contdelivery_short}} in a toolchain, such as Delivery Pipeline, a user must have access to the toolchain in IAM, and the user must also be part of the Authorized Users list of the {{site.data.keyword.contdelivery_short}} instance.
-{: important}
-
-Authorized user entitlement applies to all toolchains that are contained in the same resource group as the instance of {{site.data.keyword.contdelivery_short}}.
-{: tip}
-
-
-## Managing access to toolchains in Cloud Foundry orgs
-{: #managing_access_orgs}
-
-You can grant users access to a toolchain by adding them to both the org that the toolchain is associated with and the access control list for the toolchain. Each toolchain is associated with a specific org, and any user that is a member of that org can be added to the access control list for any of the associated toolchains. The org that you are currently working in is displayed on the menu bar. To access a different set of toolchains, switch to a different org.
-
-You must add users to the toolchain's org in the region where the toolchain is hosted. If the toolchain is configured to deploy apps to a different region, it will still deploy apps to that region.
-{: important}
-
-If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, when you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, the users can log in to {{site.data.keyword.ghe_short}} by using their {{site.data.keyword.Bluemix_notm}} ID and password. When the users log in, accounts are created for them. When you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, they are not automatically added to the {{site.data.keyword.ghe_short}} repo. Someone who has admin privileges for the repo must add them. For more information, see [Using Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started). If you are using your own managed version of {{site.data.keyword.ghe_short}}, follow your internal procedures.
-
-###Tips for managing access to a toolchain
-
-* To manage toolchain access, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to manage and then click **Manage**. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and then click **Manage**.
-
-* To grant access to all of the members of the toolchain's org, click **Add org**. All of the members of that org can view the toolchain.
-
-* You can grant admin privileges to an org or a user. Admins can modify and delete the toolchain. To grant admin privileges, select the **ADMIN** check box for the org or user.
-
-* If you select the **ADMIN** check box for an org, all of the members of that org become admins. If you add members to the org after you grant admin privileges to the org, those members are given the same access as the rest of the org.
-
-* To grant access to a user who is a member of the toolchain's org, enter the user's ID and click **Add user**. The user can view the toolchain.
-
-* To grant access to a user who is not a member of the toolchain's org, follow these steps:
-
-   a. From the menu bar, click **Manage > Access (IAM)**.
-
-   b. Click **Access starts with the user**.
-   
-   c. From the row for the user that you want to assign access, select the **Actions** menu, and then click **Assign access**.
-   
-   d. Select **Assign access by using Cloud Foundry**.
-
-   e. Select **Assign organization**.
-
-   f. Assign the user access:
-
-     * Choose an organization to add the user to.
-
-     * Assign an organization role.
-
-     * Choose a region.
-
-     * Choose a space.
-
-     * Assign a role for the selected space in the organization.
-
-     By default, org managers have full admin privileges for all of the toolchains that are associated with the org. To grant full admin privileges to the user, select the **Manager** role. The Billing Manager and Auditor roles do not affect toolchain access. You can change the roles later on the Team Directory page. For more information, see [Cloud Foundry roles](/docs/iam?topic=iam-cfaccess#cfaccess).
-     {: tip}
-
-   After the user is a member of the org, return to the toolchain's Manage page and add the user to the toolchain.  
-
+Users with access to toolchains might be counted as authorized users of the {{site.data.keyword.contdelivery_full}} service. For more information about how authorized users are counted, see [Plan limitations and usage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 ## Organizing toolchains
 {: #organizing_toolchains}
