@@ -35,7 +35,7 @@ You can manage toolchains in the US South, US East, United Kingdom, Germany, and
 
 If you deferred the configuration of a tool integration when you created a toolchain, a **Configure** button is shown on its card. If you configured a tool integration when you created a toolchain, you can update the configuration settings.
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**, and then click **Overview**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click **View toolchain**.
 1. If you need to configure a tool integration for the first time, on its card, click **Configure**.
 
   ![Configure button](images/toolchain_tile_configure.png)
@@ -56,7 +56,7 @@ If you deferred the configuration of a tool integration when you created a toolc
 
 You can add and configure tool integrations for your toolchain. The available tool integrations differ depending on whether you use {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated.
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**, and then click **Overview**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click **View toolchain**.
 1. To see a list of tool integrations to add, click **Add a Tool**.
 1. Click a tool integration that you want to add.
 1. Enter any required information to configure the tool integration.
@@ -67,10 +67,18 @@ You can add and configure tool integrations for your toolchain. The available to
 
 If you delete a tool integration from your toolchain, the deletion cannot be undone.
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**, and then click **Overview**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click **View toolchain**.
 1. On the card for the tool integration that you want to delete, click the menu to access the configuration options.
 1. To delete the tool integration from your toolchain, click **Delete**.
 1. Confirm by clicking **Delete**.  
+
+## Viewing toolchain connections to services and clusters
+{: #view_toolchain_connections}
+
+You can view your toolchain's connections to services and clusters.
+
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click **View toolchain**.
+1. Select the **Connections** tab, and select the service or cluster that you want to view.
 
 ## Managing access to toolchains
 {: #managing_access_resource_groups}
@@ -98,7 +106,7 @@ For more information about tags, see [Working with tags](/docs/resources?topic=r
 
 You can delete a toolchain and specify which of the associated tool integrations you want to delete. When you delete a toolchain, the deletion cannot be undone.
 
-1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to delete. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click **View toolchain**.
 1. Click the **More Actions** menu, which is next to **View app**.
 1. Click **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.  
