@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-08-09"
+lastupdated: "2019-08-20"
 
-keywords: users of a service instance, a-service, Git Repos
+keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
 subcollection: ContinuousDelivery
 
