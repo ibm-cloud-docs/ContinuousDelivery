@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-19"
+lastupdated: "2019-08-20"
 
-keywords: Git source control, personal access token, Git repos
+keywords: Git source control, authentication, personal access token, SSH key, Git repos, Web IDE 
 
 subcollection: ContinuousDelivery
 
