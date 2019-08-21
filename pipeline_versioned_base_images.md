@@ -2,9 +2,9 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-20"
 
-keywords: pipeline versioned base image, image version, IBM Cloud team uses
+keywords: pipeline versioned base image, image version, pipeline job
 
 subcollection: ContinuousDelivery
 
