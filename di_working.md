@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-08-20"
 
-keywords: DevOps Insights, interactions of your team, {{site.data.keyword.DRA_full}}
+keywords: code quality, risk management, interactions of your team
 
 subcollection: ContinuousDelivery
 
@@ -29,7 +29,7 @@ With {{site.data.keyword.DRA_full}}, you can maintain and improve the quality of
 
 {{site.data.keyword.DRA_short}} collects and analyzes the results from unit tests, functional tests, and code coverage tools. It uses these results to determine whether your code meets predefined policies at specified gates in your deployment process. If your code does not meet or exceed a policy, the deployment is halted, preventing risks from being released. You can use {{site.data.keyword.DRA_short}} as a safety net for your continuous delivery environment or as a way to implement and improve quality standards. 
 
-In addition to **deployment gates**, {{site.data.keyword.DRA_short}} provides more capabilities to improve your overall DevOps process.  
+In addition to **deployment gates** {{site.data.keyword.DRA_short}}, provides more capabilities to improve your overall DevOps process.  
 
 **Developer Insights** provides a comprehensive way to explore your project’s development maturity. You can identify files with high error proneness and get a compliance view of the project against Developer practices.
 	
