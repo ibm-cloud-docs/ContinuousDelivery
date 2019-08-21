@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-08-14"
+lastupdated: "2019-08-20"
 
-keywords: Administrator Create, Administrator Update, Editor Update, Update
+keywords: Administrator Create, Administrator Update, Editor Update, service access roles, IAM, access policies
 
 subcollection: ContinuousDelivery
 
