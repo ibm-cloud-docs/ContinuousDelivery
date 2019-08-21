@@ -3,9 +3,9 @@
 copyright:
   years: 2017, 2019
 
-lastupdated: "2019-06-18"
+lastupdated: "2019-08-20"
 
-keywords: Continuous delivery practices, {{site.data.keyword.contdelivery_full}}, IBM Cloud Garage Method
+keywords: continuous delivery practices, DevOps practices, IBM Cloud Garage Method, learning resources
 
 subcollection: ContinuousDelivery
 
@@ -25,8 +25,6 @@ subcollection: ContinuousDelivery
 
 # Continuous delivery practices
 {: #gm_cd_best}
-
-
 
 With {{site.data.keyword.contdelivery_full}}, you can build, test, and deliver applications by using DevOps practices and industry-leading tools. Continuous Delivery supports a wide variety of practices; but which practices should you use? There is no one-size-fits-all answer. The practices you employ can vary from one software delivery project to the next.  The [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external} is the IBM approach to rapidly deliver engaging applications. It combines continuous delivery with IBM Design Thinking, lean, DevOps, and agile practices. Those practices are focused on the cloud, but can benefit any software development effort.
 
