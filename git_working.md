@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-21"
+lastupdated: "2019-08-20"
 
-keywords: Git Repos, Issue Tracking, Collaborate, Git repository
+keywords: Git Repos, Issue Tracking, Collaborate, Git repository, authentication, personal access token, SSH key
 
 subcollection: ContinuousDelivery
 
