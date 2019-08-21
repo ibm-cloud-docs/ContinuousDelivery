@@ -4,9 +4,9 @@
 
 copyright:
   years: 2015，2019
-lastupdated: "2019-06-19"
+lastupdated: "2019-08-20"
 
-keywords: IBM Cloud Live Synch, Use IBM Cloud Live Sync
+keywords: IBM Cloud Live Sync, Use IBM Cloud Live Sync, Web IDE, Live Edit
 
 subcollection: ContinuousDelivery
 
