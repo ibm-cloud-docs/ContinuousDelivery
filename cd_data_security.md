@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-31"
+lastupdated: "2019-08-20"
 
-keywords: secure environment, data, IBM Cloud Continuous Delivery, Data
+keywords: secure environment, data, Data, high availability, access
 
 subcollection: ContinuousDelivery
 
