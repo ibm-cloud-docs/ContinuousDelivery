@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-30"
+lastupdated: "2019-08-20"
 
-keywords: IBM Cloud Continuous Delivery, tool integration, toolchain template
+keywords: IBM Cloud Continuous Delivery, getting started, tutorial, create a toolchain, tool integration, toolchain template, DevOps toolchains
 
 subcollection: ContinuousDelivery
 
@@ -85,4 +85,3 @@ Check out one of these tutorials on the [IBM&reg; Cloud Garage Method](https://w
   * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}.
 
   * [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}.
-  
