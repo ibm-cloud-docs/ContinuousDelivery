@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-19"
+lastupdated: "2019-08-20"
 
-keywords: IBM Cloud Continuous Delivery, GitHub tool integration, error message
+keywords: GitHub tool integration, error message, Lite plan, toolchains, Cloud Foundry orgs, resource groups, IBM Cloud, Web IDE, Live Sync, pipeline jobs
 
 subcollection: ContinuousDelivery
 
