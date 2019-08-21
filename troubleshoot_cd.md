@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-31"
+lastupdated: "2019-08-20"
 
-keywords: troubleshoot, IBM Cloud Continuous Delivery
+keywords: troubleshoot, GitHub integration, Git Repos and Issue Tracking integration, GitLab project, Delivery Pipeline, toolchains, tool integrations, Live Edit, Web IDE
 
 subcollection: ContinuousDelivery
 
