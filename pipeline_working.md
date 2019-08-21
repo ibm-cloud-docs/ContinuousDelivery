@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-08-20"
 
-keywords: IBM Cloud, build types, build script
+keywords: IBM Cloud, build types, build jobs, deployment job, build script, create pipeline, 
 
 subcollection: ContinuousDelivery
 
