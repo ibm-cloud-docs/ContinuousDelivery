@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-20"
 
-keywords: IBM Cloud account, personal data, IBM Cloud Continuous Delivery
+keywords: IBM Cloud account, personal data, personal accounts, corporate accounts, access, Web IDE, Git Repos and Issue Tracking, pipeline data, toolchains, tool integrations
 
 subcollection: ContinuousDelivery
 
