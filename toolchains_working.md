@@ -3,9 +3,9 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-07-30"
+lastupdated: "2019-08-20"
 
-keywords: set of tool integrations, collective power of a toolchain, IBM Cloud
+keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
 subcollection: ContinuousDelivery
 
