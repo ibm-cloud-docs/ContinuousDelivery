@@ -2,9 +2,9 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-06-18"
+lastupdated: "2019-08-20"
 
-keywords: IBM Cloud Public, Use Developer Insights, US South
+keywords: IBM Cloud Public, IBM Cloud Dedicated, Use Developer Insights, toolchains, toolchain templates, toolchain tutorials, available regions, tools 
 
 subcollection: ContinuousDelivery
 
