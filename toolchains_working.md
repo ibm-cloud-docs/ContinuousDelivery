@@ -32,7 +32,7 @@ Open toolchains are available in the Public and Dedicated environments on {{site
 
 Each toolchain is associated with a specific resource group or organization (org). If a toolchain is associated with a resource group, any user that has Identity and Access Management (IAM) Viewer permission for the toolchain resource or the resource group that contains it can access the toolchain. If the toolchain is associated with an org, any user that is a member of that org can be added to the access control list for any of its associated toolchains. For more information about access control for toolchains in Cloud Foundry orgs, see [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_orgs). For more information about access control for toolchains in resource groups, see [Managing access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#managing_access_resource_groups).
 
-##Creating a toolchain from a template   
+## Creating a toolchain from a template   
 {: #creating_a_toolchain_from_a_template}
 
 You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){:external} that includes a specific set of tool integrations. Learn more about how to use the templates from the [IBM Cloud Garage Method ](https://www.ibm.com/cloud/garage/category/tools){:external}.
@@ -71,7 +71,7 @@ You can use a template as a starting point to [create a toolchain](https://cloud
  * If you configured a source code tool integration such as GitHub, the sample GitHub repo is cloned into your GitHub account.
 
 
-##Creating a toolchain from an app
+## Creating a toolchain from an app
 {: #creating_a_toolchain_from_an_app}
 
 You can create a toolchain from your app. The toolchain can support continuous development, deployment, monitoring, and more, and it is associated with your app. Each app can be associated with a toolchain. When you push changes to the toolchain's GitHub or {{site.data.keyword.ghe_short}} repo, the pipeline automatically builds and deploys the app.
@@ -90,8 +90,11 @@ If you created your app by using your own code repository, click **Configure con
  * If you configured GitHub, the sample GitHub repo is cloned into your GitHub account.
 
 
-##Viewing a toolchain
+## Viewing a toolchain
 {: #viewing_a_toolchain}
+
+### Viewing a toolchain in the console
+{: #viewing-toolchain-console}
 
 After you configure the toolchain and its tool integrations, you can view a visual representation of the toolchain.
 
@@ -103,6 +106,41 @@ You can view a toolchain from an app by clicking **View toolchain** from your ap
 
  If you have more than one GitHub, {{site.data.keyword.ghe_short}}, or Git repo, you might have multiple cards for the same tool integration because each repo is represented by its own card. If you have more than one pipeline, you might have multiple cards for the same tool integration because each pipeline is represented by its own card. For example, when you create a Microservices toolchain, each of the three microservices has its own GitHub, {{site.data.keyword.ghe_short}}, or Git repo and its own pipeline.
  {: tip}
+ 
+### Viewing a toolchain by using the CLI
+{: #viewing-toolchain-cli}
+
+The command-line interface (CLI) toolchain view depends on the currently targeted resource group. Use the following commands to identify or change your currently targeted resource group.
+
+* To view the currently targeted resource group, run the following command:
+  ```
+  ibmcloud target
+  ``` 
+  {: codeblock}
+
+* If no resource group is set, or if you would like to change the resource group, run the following command: 
+  ```
+  ibmcloud target -g [resource-group]
+  ```
+  {: codeblock}
+
+* To view toolchains in the targeted resource group, run the following command:
+  ```
+  ibmcloud dev toolchains
+  ```
+  {: codeblock}
+
+* To view the details for a specific toolchain, run the following command:
+  ```
+  ibmcloud dev toolchain-get [toolchain-name]
+  ```
+  {: codeblock}
+
+* To view the toolchain details in a browser, run the following command:
+  ```
+  ibmcloud dev toolchain-open [toolchain-name]
+  ```
+  {: codeblock}  
 
 ## Take a tutorial: Using toolchains
 {: #toolchain_tutorials}
