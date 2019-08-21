@@ -2,9 +2,9 @@
 
 Copyright:
  years: 2015, 2019
-lastupdated: "2019-06-18"
+lastupdated: "2019-08-20"
 
-keywords: IBM Cloud DevOps, enterprise application Developer, IBM Cloud Garage Method
+keywords: IBM Cloud DevOps, enterprise application Developer, IBM Cloud Garage Method, DevOps toolchain
 
 subcollection: ContinuousDelivery
 
