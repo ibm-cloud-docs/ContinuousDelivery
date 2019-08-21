@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-14"
+lastupdated: "2019-08-20"
 
-keywords: ADD STAGE, Run Stage icon, JOBS tab
+keywords: ADD STAGE, Run Stage icon, JOBS tab, Delivery Pipeline
 
 subcollection: ContinuousDelivery
 
