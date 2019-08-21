@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-28"
+lastupdated: "2019-08-20"
 
-keywords: Environment properties, IBM Java, pipeline environments
+keywords: environment properties, environment resources, IBM Java, pipeline environments
 
 subcollection: ContinuousDelivery
 
@@ -27,7 +27,7 @@ subcollection: ContinuousDelivery
 # Environment properties and resources
 {: #deliverypipeline_environment}
 
-The following properties and resources are available by default in pipeline environments.
+The following properties and resources are available by default in {{site.data.keyword.contdelivery_full}} {{site.data.keyword.deliverypipeline}} environments.
 
 <!--##Contents
 * [Environment properties](#env)
