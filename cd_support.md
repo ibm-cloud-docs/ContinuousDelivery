@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-11"
+lastupdated: "2019-08-20"
 
-keywords: Continuous Delivery, Support tickets, Continuous Delivery service
+keywords: Support tickets, help, questions, toolchains
 
 subcollection: ContinuousDelivery
 
