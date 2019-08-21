@@ -2,9 +2,9 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-08-14"
+lastupdated: "2019-08-20"
 
-keywords: Administrator Create, Editor Update, Update, user access
+keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
 subcollection: ContinuousDelivery
 
