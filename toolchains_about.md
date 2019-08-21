@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-27"
+lastupdated: "2019-08-20"
 
-keywords: Open toolchains, starting point, IBM Cloud
+keywords: Open toolchains, starting point, IBM Cloud Public, IBM Cloud Dedicated
 
 subcollection: ContinuousDelivery
 
