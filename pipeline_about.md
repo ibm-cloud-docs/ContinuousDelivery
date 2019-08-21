@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-08-12"
+lastupdated: "2019-08-20"
 
-keywords: run jobs, sequences of stages, job types
+keywords: run jobs, sequences of stages, job types, Delivery Pipeline
 
 subcollection: ContinuousDelivery
 
