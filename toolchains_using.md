@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-08-21"
 
 keywords: user management function, toolchains, tool integrations, user access, Cloud Foundry org
 
@@ -72,13 +72,13 @@ If you delete a tool integration from your toolchain, the deletion cannot be und
 1. To delete the tool integration from your toolchain, click **Delete**.
 1. Confirm by clicking **Delete**.  
 
-## Viewing toolchain connections to services and clusters
+## Viewing toolchain connections to apps, clusters, and services
 {: #view_toolchain_connections}
 
-You can view your toolchain's connections to services and clusters.
+You can view your toolchain's connections to Cloud Foundry apps, Kubernetes clusters, and services.
 
 1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click **View toolchain**.
-1. Select the **Connections** tab, and select the service or cluster that you want to view.
+1. Select the **Connections** tab, and select the app, cluster, or service that you want to view.
 
 ## Managing access to toolchains
 {: #managing_access_resource_groups}
