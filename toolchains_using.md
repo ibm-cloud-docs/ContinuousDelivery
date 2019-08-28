@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-21"
+lastupdated: "2019-08-27"
 
 keywords: user management function, toolchains, tool integrations, user access, Cloud Foundry org
 
