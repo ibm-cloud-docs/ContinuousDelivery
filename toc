@@ -37,6 +37,7 @@ Continuous Delivery
         pipeline_deploy_var.md
         pipeline_versioned_base_images.md
         pipeline_custom_docker_images.md
+        install_private_workers.md
         private_workers.md
 
     {: .topicgroup}
