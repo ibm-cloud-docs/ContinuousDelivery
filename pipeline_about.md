@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-09-06"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline
 
@@ -147,7 +147,7 @@ If you use the **Simple** builder type, your code is not compiled or built; it i
 
 When you deploy by using Cloud Foundry, Cloud Foundry includes the correct artifacts to allow your app to run. For more information, see [Deploying applications by using the cf command](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps). The pipeline for a Cloud Foundry app contains a Deploy stage that runs a cf command.
 
-Cloud Foundry tries to [detect the buildpack to use](http://docs.cloudfoundry.org/buildpacks/detection.html){: external}. You can specify the [buildpack](/docs/cloud-foundry-public?topic=cloud-foundry-public-using_buildpacks#using_buildpacks) to use in the manifest file in the root folder of your app. Buildpacks typically examine user-provided artifacts to determine what dependencies to download and how to configure applications to communicate with bound services. For more information about manifest files, see [Application manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
+Cloud Foundry tries to [detect the buildpack to use](http://docs.cloudfoundry.org/buildpacks/detection.html){: external}. You can specify the [buildpack](/docs/runtimes-common?topic=runtimes-common-available_buildpacks) to use in the manifest file in the root folder of your app. Buildpacks typically examine user-provided artifacts to determine what dependencies to download and how to configure applications to communicate with bound services. For more information about manifest files, see [Application manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
 
 ### Deploy jobs
 
