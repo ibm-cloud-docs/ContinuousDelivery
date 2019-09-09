@@ -68,4 +68,5 @@ Continuous Delivery
     cd_support.md
     ts_index.md
     troubleshoot_cd.md
+    release_notes_cd.md
     {: .navgroup-end}
