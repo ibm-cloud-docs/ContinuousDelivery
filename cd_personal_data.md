@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-09-10"
 
 keywords: IBM Cloud account, personal data, personal accounts, corporate accounts, access, Web IDE, Git Repos and Issue Tracking, pipeline data, toolchains, tool integrations
 
@@ -161,7 +161,7 @@ You can delete your {{site.data.keyword.gitrepos}} account and everything that i
 1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, on the [Account page](https://us-south.git.cloud.ibm.com/profile/account){: external}, in the Delete account section, click **Delete account**.
 1. All Git projects, including repositories and issues are deleted. You are also removed from any {{site.data.keyword.gitrepos}} groups that you belong to.
 
-After your account is deleted, some content will remain. This content is assigned to a system-wide Ghost User. For more information about deleting a {{site.data.keyword.gitrepos}} account, see [Deleting a user account](https://us-south.git.cloud.ibm.com/profile/account/delete_account#associated-records){: external}.
+After your account is deleted, some content will remain. This content is assigned to a system-wide Ghost User. For more information about deleting a {{site.data.keyword.gitrepos}} account, see [Deleting a user account](https://us-south.git.cloud.ibm.com/help/user/profile/account/delete_account#associated-records){: external}.
 {: tip}
 
 {{site.data.keyword.gitrepos}} uses a single sign-on mechanism that automatically creates a corresponding Git account for your IBM Cloud account the first time that you access the tool integration. After you delete your account, do not access {{site.data.keyword.gitrepos}}. If you access {{site.data.keyword.gitrepos}} again, a new account is automatically created that you must delete.
