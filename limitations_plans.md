@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-09-17"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -47,11 +47,11 @@ The Lite plan is subject to limits. For more information about the Lite plan and
  
 ### How are users counted for instances of {{site.data.keyword.contdelivery_short}} in resource groups?
 
-Users are counted and managed by using the list of authorized users that belongs to each  {{site.data.keyword.contdelivery_short}} service instance. Users are automatically added to this list when they complete any of the following activities:
- 
+Users are counted and managed by using the list of authorized users that belongs to each  {{site.data.keyword.contdelivery_short}} service instance. Users are automatically added to this list when they meet any of the following criteria:
+
  * View, edit, or run a delivery pipeline.
  * Use the Eclipse Orion {{site.data.keyword.webide}}.
- * Deliver a change to a repo in {{site.data.keyword.gitrepos}} that triggers a delivery pipeline. This includes all users who have Developer (or greater) access to the repo.
+ * Have Developer (or greater) access to a repo in {{site.data.keyword.gitrepos}} that allows them to commit and push changes to that repo.
 
 The specific activities that are used to automatically count users, and the method for counting those users might change over time. However, the process for counting users will continue to comply with the terms of {{site.data.keyword.contdelivery_short}} plans. You can also manually add users to the list of authorized users, at any time.
 {: important}
