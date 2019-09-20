@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-09-05"
+lastupdated: "2019-09-20"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -434,9 +434,11 @@ If you choose the `Latest` option, the pipeline jobs are run with the current im
   ```
  {: codeblock}
  
- After version 2.0, images no longer include `grunt`or `python`. You can choose to install `grunt`or `python`, if required.
+ After version 2.0, images no longer include grunt or python. If these tools are required for your build, you can install them manually. To install grunt, run `npm install -g grunt-cli`. Make sure that you don't change the Node.js version after you install grunt. To install python, run `apt-get -qq update && apt-get -qq install -y python`.
  {: tip}
 
+ The version of `yq` that is preinstalled in the image corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
+ 
  ## Configuring the image for a specific pipeline job
  {: #configure_image_for_job}
  
