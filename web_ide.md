@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-09-27"
 
 keywords: Eclipse Orion {{site.data.keyword.webide}}, file types, Local Editor Settings icon, edit code, deploy apps, supported languages
 
@@ -20,6 +20,7 @@ subcollection: ContinuousDelivery
 {:note: .note}
 {:tip: .tip}
 {:download: .download}
+{:table: .aria-labeledby="caption"}
 
 # Developing with the Eclipse Orion Web IDE
 {: #web_ide}
@@ -95,70 +96,61 @@ The {{site.data.keyword.webide}} is integrated with source code management tools
 1. Click the deploy icon <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="The deploy icon">. An instance of your app is deployed by using the current contents of your workspace and the environment that is defined in your launch configuration.
 2. After your app is deployed, you can use the run bar to stop, restart, or debug your app, view logs, and more.
 
-<table role="presentation">
-<tr><td><img src="./images/stop_button.png"  alt="The stop icon"></td><td>Stop the app.</td></tr>
-<tr><td> <img src="./images/open_app_url.png"  alt="The open app URL icon"></td><td> Open the deployed app.</td></tr>
-<tr><td><img src="./images/view_logs.png"  alt="The view logs icon"></td><td>View the logs of the deployed app.</td></tr>
-<tr><td><img src="./images/open_dashboard.png"  alt="The open dashboard icon"></td><td>Open the app's Dashboard.</td></tr>
-</table>
+| Run Bar Icon | Description | 
+|:-----------------|:-----------------|
+| ![Stop icon](images/stop_button.png) | Stop the app. |
+| ![Open app URL icon](images/open_app_url.png) | Open the deployed app. |
+| ![View logs icon](images/view_logs.png) | View the logs of the deployed app. |
+| ![Open dashboard icon](images/open_dashboard.png) | Open the app's dashboard. |
+{: caption="Table 1. Run bar icons" caption-side="top"}
 
-If you are developing a Node.js app, enable Live Edit mode:  <img  src="./images/enable_live_edit.png"  alt="The enable live edit slider">
+If you are developing a Node.js app, enable Live Edit mode to restart the app and access the debugger: ![The enable live edit slider](images/enable_live_edit.png)
 
-<table role="presentation"><tr><td><img src="./images/live_edit_restart.png"  alt="The Live Edit restart icon"></td><td>With Live Edit mode enabled, restart the app quickly, without redeployment.</td></tr>
-<tr><td> <img src="./images/debug_icon.png"  alt="The debug icon"></td>
-<td>With Live Edit mode enabled, access the debugger.
-</td></tr>
-</table>
+| Run Bar Icon | Description | 
+|:-----------------|:-----------------|
+| ![The Live Edit restart icon](images/live_edit_restart.png) | With Live Edit mode enabled, restart the app quickly, without redeployment. |
+| ![The debug icon](images/debug_icon.png) | With Live Edit mode enabled, access the debugger. |
+{: caption="Table 2. Live Edit mode icons" caption-side="top"}
 
 ## Supported languages
 {: #supported_languages}
 
 The Eclipse Orion {{site.data.keyword.webide}} provides content assist, tooltips, previews, validation, and highlights syntax for JavaScript, HTML, CSS, and Markdown files. You can also highlight syntax for these file types:
 
-<table role="presentation">
-<tr>
-<td>
-<ul><li>Arduino
-</li><li>C</li>
-<li>C#
-</li><li>C++
-</li><li>CoffeeScript
-</li><li>CSHTML
-</li><li>Embedded JavaScript (ejs)
-</li><li>Erlang
-</li><li>Go
-</li><li>HTML abstraction markup language (Haml)
-</li><li>Jade
-</li><li>Java
-</li><li>JSON
-</li><li>Less  
-</li><li>Lua  
-</li><li>Objective-C
-</li><li>PHP
-</li><li>Python</li></ul>
-</td>
-<td>
-<ul><li>Ruby
-</li><li>Sass/SCSS
-</li><li>SQL
-</li><li>Swift
-</li><li>TypeScript
-</li><li>Visual Basic (vb)
-</li><li>VMHTML
-</li><li>XHTML
-</li><li>XML
-</li><li>XQuery
-</li><li>YAML
-</li><li>Launch file 	
-</li><li>Dockerfile
-</li><li>gitignore
-</li><li>git config
-</li><li>cfignore
-</li><li>properties
-</li></ul>
-</td>
-</tr>
-</table>
+* Arduino
+* C#
+* C++
+* CoffeeScript
+* CSHTML
+* Embedded JavaScript (ejs)
+* Erlang
+* Go
+* HTML abstraction markup language (Haml)
+* Jade
+* Java
+* JSON
+* Less  
+* Lua  
+* Objective-C
+* PHP
+* Python
+* Ruby
+* Sass/SCSS
+* SQL
+* Swift
+* TypeScript
+* Visual Basic (vb)
+* VMHTML
+* XHTML
+* XML
+* XQuery
+* YAML
+* Launch file 	
+* Dockerfile
+* gitignore
+* git config
+* cfignore
+* properties
 
 ## Take a tutorial: Eclipse Orion Web IDE
 {: #toolchain_web_ide_tutorials}
