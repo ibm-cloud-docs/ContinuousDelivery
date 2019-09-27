@@ -39,15 +39,15 @@ The {{site.data.keyword.webide}} is keyboard accessible and works well with a sc
 ## Setting up the IDE
 {: #editorsetup}
 
-The {{site.data.keyword.webide}} is customizable so that you can choose the color schemes, technical tools, and settings that meet your development needs. To view and modify the settings, from the navigation sidebar on the left, click the **Settings** icon <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="The settings icon">.
+The {{site.data.keyword.webide}} is customizable so that you can choose the color schemes, technical tools, and settings that meet your development needs. To view and modify the settings, from the navigation sidebar on the left, click the **Settings** icon ![Settings icon](images/webide_settings_icon_light_small.png).
 
-If you often need to change certain settings while you edit, you can access those settings quickly from the **Local Editor Settings** icon <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Local Editor Settings icon">.
+If you often need to change certain settings while you edit, you can access those settings quickly from the **Local Editor Settings** icon ![Local Editor Settings icon](images/webide_local_settings_icon_light_small.png).
 
 ![Local Editor Settings](images/webide_local_editor_settings_light.png)
 
 By default, the settings for the editor style and font size are always shown. To include other editor settings in the menu, follow these steps:
 
-1. Click the **Local Editor Settings** icon <img class="inline" src="images/webide_local_settings_icon_light_small.png"  alt="Local Editor Settings icon">.
+1. Click the **Local Editor Settings** icon ![Local Editor Settings icon](images/webide_local_settings_icon_light_small.png).
 
 2. Click **Editor Settings**.
 
@@ -69,7 +69,7 @@ The second section is the editor pane. The editor provides several coding featur
 ![Web IDE](images/webide_light.png)
 
 ### Working with multiple files
-1. To work with two files at the same time, click the **Change split editor mode** icon <img class="inline" src="images/webide_split_editor_icon_light_small.png"  alt="Split Editor icon">.
+1. To work with two files at the same time, click the **Change split editor mode** icon ![Split Editor icon](images/webide_split_editor_icon_light_small.png).
 2. From the menu that opens, select a view.
 
  After you select a view, if a file was already open in the editor, it is shown in both editor views.
@@ -86,14 +86,14 @@ To see a list of the keyboard shortcuts in the editor, click **Tools** > **Show 
 ## Managing source code
 {: #sourcecontrol}
 
-The {{site.data.keyword.webide}} is integrated with source code management tools. To work with your Git repository, click the **Git Repository** icon <img class="inline" src="images/webide_git_icon_light_small.png"  alt="The Git Repository icon">.  For more information, see [Working with Git in the Eclipse Orion Web IDE](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_web_ide#git_web_ide).
+The {{site.data.keyword.webide}} is integrated with source code management tools. To work with your Git repository, click the **Git Repository** icon ![Git Repository icon](images/webide_git_icon_light_small.png). For more information, see [Working with Git in the Eclipse Orion Web IDE](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_web_ide#git_web_ide).
 
 ## Deploying an app from your workspace
 {: #deploy}
 
 1. To deploy your app, from the run bar, either select or create a launch configuration.
    ![Run bar](images/webide_runbar_light.png)   
-1. Click the deploy icon <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="The deploy icon">. An instance of your app is deployed by using the current contents of your workspace and the environment that is defined in your launch configuration.
+1. Click the deploy icon ![deploy icon](images/webide_deploy_button_light_small.png). An instance of your app is deployed by using the current contents of your workspace and the environment that is defined in your launch configuration.
 2. After your app is deployed, you can use the run bar to stop, restart, or debug your app, view logs, and more.
 
 | Run Bar Icon | Description | 
