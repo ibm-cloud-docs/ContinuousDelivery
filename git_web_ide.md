@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-09-30"
 
 keywords: commit message field, terminal Type git branch, Eclipse Orion {{site.data.keyword.webide}}, Git commands
 
@@ -50,7 +50,7 @@ No matter where you code, you can use this quick reference to do common tasks. W
 {: #start_working_on_branch_web}
 1. Click the **Reference** list and expand **local**.
 
-2. Click the checkout icon <img  class="inline" src="./images/checkout.png" alt="Checkout icon"> for the branch to modify.
+2. Click the Checkout icon ![Checkout icon](images/checkout.png) for the branch to modify.
 
 1. Make sure that your selected branch is shown in the **Reference** list.
 
@@ -81,11 +81,12 @@ No matter where you code, you can use this quick reference to do common tasks. W
 
 ### Eclipse Orion Web IDE
 {: #delete_branch_web}
+
 1. Make sure that the branch to delete is not checked out. If that branch is checked out, [check out another branch](#start_working_on_branch).
 
 1. Click the **Reference** list and expand **local**.
 
-2. Click **Delete** <img class="inline"  src="./images/delete.png" alt="Delete icon"> for the local branch to remove.
+2. Click **Delete** ![Delete icon](images/delete.png) for the local branch to remove.
 
 ### Git terminal
 {: #delete_branch_cmd}
@@ -119,7 +120,7 @@ When you force push a local branch to a remote one, you might lose commits on th
 {: #discard_changes_web}
 
 1. In the Working Directory Changes section, select the check box for each modified file that has changes you want to discard.
-2. Click the checkout icon <img class="inline"  src="./images/discard.png" alt="Check out the selected files, discarding all changes">.
+2. Click the Checkout icon ![Checkout icon](images/discard.png).
 
 ### Git terminal
 {: #discard_changes_cmd}
@@ -174,11 +175,11 @@ When you force push a local branch to a remote one, you might lose commits on th
 
   The commit history can also be viewed as a connected visual graph.
 
-1. Click the **graphical representation toggle** icon <img  class="inline" src="./images/graphicalhistoryicon.png" alt="Graphical history icon">.
+1. Click the **graphical representation toggle** icon ![Graphical representation toggle icon](images/graphicalhistoryicon.png).
 
   When toggled, the commit history and any incoming or outgoing changes for the active branch are drawn as a connected graph.  The visual representation shows all of the commits and the branches they were made on.
 
-  <img class="screen-shot" src="./images/visualhistoryexample.png" alt="Visual commit history">
+  ![Visual commit history icon](images/visualhistoryexample.png)
 
 ### Git terminal
 {: #view_commit_history_cmd}
@@ -189,7 +190,7 @@ When you force push a local branch to a remote one, you might lose commits on th
  * To view more entries, press Page Down.
  * To view previous entries, press Page Up.
 
-3. To stop viewing entries, press Q.
+3. To stop viewing entries, press **Q**.
 
 ## Compare changes that a commit introduced
 {: #compare_changes}
@@ -262,7 +263,7 @@ When you force push a local branch to a remote one, you might lose commits on th
 
 2. View the details of the commit by clicking it.
 
-3. In the commit pane, click **Create a tag for the commit** <img class="inline"  src="./images/tag.png" alt="Create a tag for the commit">.
+3. In the commit pane, click **Create a tag for the commit** ![Create a tag for the commit icon](images/tag.png).
 
 4. In the name field, type your tag text. Click **Submit**.
 
@@ -278,7 +279,8 @@ When you force push a local branch to a remote one, you might lose commits on th
 
 ### Eclipse Orion Web IDE
 {: #change_info_web}
-1. Click the configuration icon <img class="inline" src="./images/configurations.png" alt="Configuration icon">.
+
+1. Click the configuration icon ![Configuration icon](images/configurations.png).
 
 2. Change the user email address and name by updating the user.email and user.name values. Click **Submit** to save each change.
 
@@ -307,7 +309,7 @@ Revert the changes that a commit introduced into your active branch.
 
 1. Under History, select a commit.
 
-2. Click the revert icon <img class="inline" src="./images/revert.png" alt="Revert icon">.
+2. Click the revert icon ![Revert icon](images/revert.png).
 
 ### Git terminal
 {: #revert_cmd}
@@ -326,13 +328,13 @@ When you need to deliver changes from a source branch to a destination branch, y
 
 2. Check out the destination branch. For more information, see [Work on a local branch](#start_working_on_branch).
 
- <img class="screen-shot" src="./images/destinationbranch.png" alt="Check out destination branch">
+ ![Check out destination branch icon](images/destinationbranch.png)
 
 1. Click the **Reference** list, expand **local**, and click the name of the source branch. The changes from the source branch are shown in the Incoming section.
 
-  <img class="screen-shot" src="./images/sourcebranch.png" alt="Changes from the source branch shown in the Incoming section">
+  ![Changes from the source branch shown in the Incoming section](images/sourcebranch.png)
 
-1. In the Incoming section, click the **Merge** icon <img  class="inline" src="./images/mergeicon.png" alt="Merge icon in the Incoming section">
+1. In the Incoming section, click the **Merge** icon ![Merge icon in the Incoming section](images/mergeicon.png).
 
 1. In the **Reference** list, click the checkout icon for the branch that you just merged the changes into.
 
@@ -399,7 +401,7 @@ When you need to deliver changes from a source branch to a destination branch, y
 
 1. Click the name of the source branch.
 
-1. In the Incoming section, click the rebase icon <img  class="inline" src="./images/rebase.png" alt="Rebase icon">.
+1. In the Incoming section, click the rebase icon ![Rebase icon](images/rebase.png).
 
 5. If you encounter conflicts, [resolve them](#resolve_a_rebase_conflict).
 
