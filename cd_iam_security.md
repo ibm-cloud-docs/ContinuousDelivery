@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-09-30"
 
 keywords: Administrator Create, Administrator Update, Editor Update, service access roles, IAM, access policies
 
@@ -42,16 +42,16 @@ The following table details actions that are mapped to platform management roles
 
 | Platform Management Role | Description of Actions | Example Actions|
 |:-----------------|:-----------------|:-----------------|
-| Viewer, Operator | View instances of the {{site.data.keyword.contdelivery_short}} service. | <ul><li>Click a {{site.data.keyword.contdelivery_short}} service instance to open its dashboard.</li></ul>|
-| Editor, Administrator | Create, view, update, modify the plan for, and delete instances of the {{site.data.keyword.contdelivery_short}} service. |<ul><li>Provision an instance of {{site.data.keyword.contdelivery_short}} in a resource group.</li><li>Delete an instance of {{site.data.keyword.contdelivery_short}} from a resource group.</li><li>Change a {{site.data.keyword.contdelivery_short}} instance plan from Lite to Professional.</li></ul> |
-| Administrator | Update the Authorized Users list.| <ul><li>Add a user to the Authorized Users list.</li><li>Remove a user from the Authorized Users list.</li></ul> |
+| Viewer, Operator | View instances of the {{site.data.keyword.contdelivery_short}} service. | Click a {{site.data.keyword.contdelivery_short}} service instance to open its dashboard.|
+| Editor, Administrator | Create, view, update, modify the plan for, and delete instances of the {{site.data.keyword.contdelivery_short}} service. |<br>Provision an instance of {{site.data.keyword.contdelivery_short}} in a resource group.</br><br>Delete an instance of {{site.data.keyword.contdelivery_short}} from a resource group.</br><br>Change a {{site.data.keyword.contdelivery_short}} instance plan from Lite to Professional.</br> |
+| Administrator | Update the Authorized Users list.| <br>Add a user to the Authorized Users list.</br><br>Remove a user from the Authorized Users list.</br></ul> |
 {: caption="Table 1. IAM user roles and actions" caption-side="top"}
 
  The following table details actions that are mapped to service access roles. Service access roles enable users access to {{site.data.keyword.contdelivery_short}} as well as the ability to call the {{site.data.keyword.contdelivery_short}} API.
 
 | Service Access Role | Description of Actions | Example Actions|
 |:-----------------|:-----------------|:-----------------|
-| Writer, Manager | Add and remove users from the Authorized Users list on the Manage tab within a {{site.data.keyword.contdelivery_short}} service instance. | <ul><li>Add authorized user.</li><li>Remove authorized user.</li></ul>|
+| Writer, Manager | Add and remove users from the Authorized Users list on the Manage tab within a {{site.data.keyword.contdelivery_short}} service instance. | <br>Add authorized user.</br><br>Remove authorized user.</br></ul>|
 {: caption="Table 2. IAM service access roles and actions" caption-side="top"}
 
 For information about assigning user roles in the UI, see [Managing IAM access](/docs/iam?topic=iam-iammanidaccser).
