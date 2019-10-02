@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-10-02"
 
 keywords: IBM Cloud Public, IBM Cloud Dedicated, Use Developer Insights, toolchains, toolchain templates, toolchain tutorials, available regions, tools 
 
@@ -64,221 +64,18 @@ The "Develop and test microservices on Cloud Foundry" toolchain deploys an app w
 
 The predefined DevOps toolchain templates are recommended examples that solve real world scenarios and each contains a sample app.  You can use your own app by specifying your git repo when you create the toolchain from the template.
 
-<table valign="top" padding="2px">
-  <caption>Table 2. Toolchain templates</caption>
-  <tr>
-    <th style="width:25%; text-align:left; vertical-align:top">Template and Available Regions</th>
-    <th style="width:50%; text-align:left; vertical-align:top">Description and Available Tutorials</th>
-    <th style="text-align:left; vertical-align:top">Included Tools</th>
-  </tr>
-  <tr><td>
-  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain" target="_blank">“Develop a Cloud Foundry app” toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-
-  Available in US South, US East, Germany, Tokyo, and United Kingdom
-
-  </td><td>
-  With this toolchain, you can develop and deploy a Cloud Foundry app. By default, this toolchain uses a sample Node.js "Hello world" app, but you can link to your own GitHub repo instead. The toolchain is preconfigured for continuous delivery, source control, issue tracking, and online editing.	<br><br>
-
-  Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain" target="_blank">Introduce Toolchains by using the “Develop a Cloud Foundry app” toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-  </td><td><ul><li>
-  {{site.data.keyword.deliverypipeline}}
-  </li><li>Eclipse Orion {{site.data.keyword.webide}}
-  </li><li>GitHub and Issues
-  </li><li>{{site.data.keyword.Bluemix_notm}}
-  </li></ul>
-  </td></tr>
-
-  <tr><td>
-  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsecure-kube-toolchain" target="_blank">"Develop a Kubernetes app" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-
-  Available in US South, US East, Germany, Tokyo, and United Kingdom
-
-  </td><td>
-  With this toolchain, you can develop, and deploy an application securely into a Kubernetes cluster managed by the {{site.data.keyword.containerlong_notm}}. By default, the toolchain uses a sample Node.js "Hello World" app, but you can link to your own GitHub repository instead. This toolchain is preconfigured for continuous delivery with Vulnerability Advisor, source control, issue tracking, and online editing. <br><br>
-  Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain" target="_blank">Use the "Develop a Kubernetes app" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>  
-  <br><br>
-  </td><td><ul><li>{{site.data.keyword.deliverypipeline}}
-  </li><li>Eclipse Orion {{site.data.keyword.webide}}
-  </li><li>GitHub and Issues
-  </li><li>{{site.data.keyword.containerlong_notm}} (Kubernetes cluster)
-  </li></ul>
-  </td></tr>
-
-  <tr><td>
-  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-helm-toolchain" target="_blank">"Develop a Kubernetes app with Helm" toolchain
-   <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-
-  Available in US South, US East, Germany, Tokyo, and United Kingdom
-
-  </td><td>
-  With this toolchain, you can develop a Docker application and its Helm chart together in source control and build and deploy it automatically to a Kubernetes cluster. The toolchain performs smoke tests before building or deploying and ensures privacy by using a private container registry and namespaces for the container registry and the Kubernetes cluster. This toolchain also uses Vulnerability Advisor to ensure only secure images get deployed. <br><br>
-  Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain" target="_blank">Use the "Develop a Kubernetes app with Helm" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>	 <br><br>
-  </td><td><ul>
-  <li>{{site.data.keyword.deliverypipeline}}
-  </li><li>Eclipse Orion {{site.data.keyword.webide}}
-  </li><li>Git Repos and Issue Tracking
-  </li><li>{{site.data.keyword.containerlong_notm}} (Kurbernetes cluster) with a Helm chart
-  </li></ul>
-  </td></tr>
-  
-  <tr><td>
-  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-helm-toolchain" target="_blank">"Develop and test microservices on Kubernetes with Helm" toolchain
-   <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-
-  Available in US South, Germany, and United Kingdom
-
-  </td><td>
-  With this cloud-native toolchain, you can use a combination of continuous integration and continuous deployment pipelines to coordinate individually developed microservices into releases that are promoted across environments. This toolchain uses a sample online store app that consists of three microservices: a Catalog API, an Orders API, and a user interface that calls both of these APIs. The toolchain is preconfigured for continuous delivery, source control, functional testing, issue tracking, online editing, and alert notification. <br><br>
-  Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-with-kubernetes-and-helm-toolchain" target="_blank">Use the "Develop and test microservices with Kubernetes and Helm" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>	 <br><br>
-  </td><td><ul>
-  <li>{{site.data.keyword.deliverypipeline}}
-  </li><li>Eclipse Orion {{site.data.keyword.webide}}
-  </li><li>Git Repos and Issue Tracking
-  </li><li>{{site.data.keyword.DRA_full}}
-  </li><li>PagerDuty
-  </li><li>Sauce Labs
-  </li><li>{{site.data.keyword.containerlong_notm}} (Kurbernetes cluster) with a Helm chart
-  </li></ul>
-  </td></tr>
-  
-  <tr><td>
-  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcanary-testing-istio-toolchain" target="_blank">"Canary testing in Kubernetes using Istio" toolchain
-   <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-
-  Available in US South, US East, Germany, Tokyo, and United Kingdom
-
-  </td><td>
-  With this toolchain, you can securely develop, A/B test, and deploy an app into a Kubernetes cluster that is managed by the {{site.data.keyword.containerlong_notm}}. Although the toolchain uses a sample Node.js Hello World app by default, you can link to your own GitHub repo instead. This toolchain is preconfigured for continuous delivery with A/B testing, Vulnerability Advisor, source control, issue tracking, and online editing. <br><br>
-  Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-canary-testing-in-kubernetes-using-istio-toolchain" target="_blank">Use the "Run your first canary test in Kubernetes using the Istio toolchain" <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>	 <br><br>
-  </td><td><ul>
-  <li>{{site.data.keyword.deliverypipeline}}
-  </li><li>Eclipse Orion {{site.data.keyword.webide}}
-  </li><li>Git Repos and Issue Tracking
-    </li><li>{{site.data.keyword.containerlong_notm}} (Kurbernetes cluster)
-  </li></ul>
-  </td></tr>
-
-  <tr><td>
-  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdra-toolchain-demo" target="_blank">"Develop and test a Cloud Foundry app" toolchain
-   <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-
-  Available in US South, Germany, and United Kingdom
-
-  </td><td>
-  With this cloud-native toolchain, you can use DevOps Insights to gate the deployment of a simple Cloud Foundry application. By default, the toolchain uses a sample Node.js weather app, or you can link to your own GitHub repository. The toolchain runs unit tests using Mocha and checks code coverage by using Istanbul.<br><br>
-  Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain" target="_blank">Use the "Develop and test a Cloud Foundry app" toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>  <br><br>
-  </td><td><ul>
-  <li>{{site.data.keyword.deliverypipeline}}
-  </li><li>Eclipse Orion {{site.data.keyword.webide}}
-  </li><li>Git Repos and Issue Tracking
-  </li><li>{{site.data.keyword.DRA_full}}
-  </li></ul>
-  </td></tr>
-
-
-  <tr><td>
-  <a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-toolchain-hosted" target="_blank">
-  "Develop and test microservices on Cloud Foundry" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-
-  Available in US South, Germany, and United Kingdom
-
-  </td><td>
-  With this cloud-native toolchain, you can use a sample to create an online store that consists of three microservices: a Catalog API, an Orders API, and a UI that calls both of the APIs. The toolchain is preconfigured for continuous delivery, source control, functional testing, issue tracking, online editing, and alert notification. <br><br>
-  Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain" target="_blank">Use the "Develop and test microservices on Cloud Foundry" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a><br><br>
-  </td><td>
-  <ul>
-  <li>{{site.data.keyword.deliverypipeline}}
-  </li><li>Eclipse Orion {{site.data.keyword.webide}}
-  </li><li>GitHub and Issues
-  </li><li>{{site.data.keyword.Bluemix_notm}}
-  </li><li>{{site.data.keyword.DRA_full}}
-  </li><li>PagerDuty
-  </li><li>Sauce Labs
-  </li><li>Slack
-  </li></ul>
- </td>
-</tr>
-
-  <tr>
-  <td><a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial" target="_blank">
-"Garage Method tutorial with Cloud Foundry" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-
-  Available in US South, US East, Germany, Tokyo, and United Kingdom
-
-</td><td>
-This toolchain demonstrates the DevOps practices that are featured in the Garage Method. The toolchain is preconfigured for continuous delivery, source control, test automation, and automated monitoring and operations. It comes with a sample app that is written in Node.js Express 4, which you can further extend. <br><br>Try the course: <a href="https://www.ibm.com/cloud/garage/content/course/gm_advocate" target="_blank">Become a Garage Method advocate <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
-</td><td>
-<ul>
-<li>{{site.data.keyword.deliverypipeline}}
-</li><li>Eclipse Orion {{site.data.keyword.webide}}
-</li><li>GitHub and Issues
-</li><li>Google Analytics
-</li><li>{{site.data.keyword.Bluemix_notm}}
-</li><li>New Relic
-</li><li>PagerDuty
-</li><li>Sauce Labs
-</li><li>Slack
-</li></ul>
-</td></tr>
-
-<tr><td>
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fdevops-insights%2FDevOpsInsights_Demo_Toolchain_Template" target="_blank">"DevOps Insights Quick Start Demo" toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-
-  Available in US South, Germany, and United Kingdom
-
-</td><td>
-With this toolchain, you can explore {{site.data.keyword.DRA_short}}, with no setup required. To get started, log in to {{site.data.keyword.Bluemix}}. This demonstration contains data from a reference toolchain and three GitHub repos. Explore how to organize, test, build, and deploy data for all applications, from all teams, within the Quality Dashboard. Evaluate trends and understand areas that need improvements so that you know where to focus your resources. Review how team members collaborate per release within Team Dynamics.<br><br>
-Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights" target="_blank">Explore {{site.data.keyword.DRA_full}} <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-</td><td><ul><li>
-GitHub and Issues
-</li><li>{{site.data.keyword.DRA_full}}
-</li></ul>
-</td></tr>
-
-<tr><td>
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain" target="_blank">Build your own toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> <br><br>
-
-  Available in US South, US East, Germany, Tokyo, and United Kingdom
-
-</td><td>
-This toolchain has no preconfigured tools. If you are already familiar with toolchains, you can set up your own toolchain. <br><br>
-Try the tutorial: <a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Create a custom toolchain  <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
-</td><td> &nbsp;&nbsp; None
-</td></tr>
-
-<tr><td>Continuous Delivery Toolchain <br><br>
-
- Available in US South, US East, Germany, Tokyo, and United Kingdom
-
-</td><td>
-This toolchain is used when you enable continuous delivery for an app. <br><br>
-Try the tutorials:
-
-<ul><li><a href="https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app" target="_blank">Add a toolchain to an app <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
-<li><a href="https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain" target="_blank">Create a custom toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></li>
-</ul></td>
-<td><ul><li>{{site.data.keyword.deliverypipeline}}
-</li><li>Eclipse Orion {{site.data.keyword.webide}}
-</li><li>
-GitHub and Issues
-</li>
-<li>{{site.data.keyword.Bluemix_notm}}</li></ul>
-</td></tr>
-
-<tr><td>Custom toolchain template <br><br>
-
- Available in US South, US East, Germany, Tokyo, and United Kingdom
-
-</td><td>
-<br><br>
-You can create a custom toolchain template that can be used by others. <br><br>
-
-See the documentation:
-<a href="https://github.com/open-toolchain/sdk/wiki" target="_blank">Creating custom toolchain templates <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
- <br><br>
-Try the tutorial:
-<a href="https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain" target="_blank">Create a template for a custom toolchain <img src="../../icons/launch-glyph.svg" alt="External link icon"></a></td>
-<td>None
-</td></tr>
-
-</table>
+|Template and Available Regions |Description and Available Tutorials	|Included Tools |
+|:----------|:------------------------------|:------------------|
+|[“Develop a Cloud Foundry app” toolchain](http://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-toolchain){: external} <br><br>Available in US South, US East, Germany, Tokyo, and United Kingdom</br></br>		|With this toolchain, you can develop and deploy a Cloud Foundry app. By default, this toolchain uses a sample Node.js "Hello world" app, but you can link to your own GitHub repo instead. The toolchain is preconfigured for continuous delivery, source control, issue tracking, and online editing. <br><br>Try the tutorial: [Introduce Toolchains by using the “Develop a Cloud Foundry app” toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}</br></br> 		|{{site.data.keyword.deliverypipeline}}<br><br>Eclipse Orion {{site.data.keyword.webide}}</br><br>GitHub and Issues</br><br>{{site.data.keyword.Bluemix_notm}}</br></br>    |
+|[“Develop a Kubernetes app" toolchain](http://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsecure-kube-toolchain){: external} <br><br>Available in US South, US East, Germany, Tokyo, and United Kingdom</br></br>		|With this toolchain, you can develop, and deploy an application securely into a Kubernetes cluster managed by the {{site.data.keyword.containerlong_notm}}. By default, the toolchain uses a sample Node.js "Hello World" app, but you can link to your own GitHub repository instead. This toolchain is preconfigured for continuous delivery with Vulnerability Advisor, source control, issue tracking, and online editing. <br><br>Try the tutorial: [Use the "Develop a Kubernetes app" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain){: external}</br></br>  		|{{site.data.keyword.deliverypipeline}}<br><br>Eclipse Orion {{site.data.keyword.webide}}</br><br>GitHub and Issues</br><br>{{site.data.keyword.containerlong_notm}} (Kubernetes cluster)</br></br>			|
+|[“Develop a Kubernetes app with Helm" toolchain](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-helm-toolchain){: external} <br><br>Available in US South, US East, Germany, Tokyo, and United Kingdom</br></br>		|With this toolchain, you can develop a Docker application and its Helm chart together in source control and build and deploy it automatically to a Kubernetes cluster. The toolchain performs smoke tests before building or deploying and ensures privacy by using a private container registry and namespaces for the container registry and the Kubernetes cluster. This toolchain also uses Vulnerability Advisor to ensure only secure images get deployed. <br><br>Try the tutorial: [Use the "Develop a Kubernetes app with Helm" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain){: external}</br></br>  		|{{site.data.keyword.deliverypipeline}}<br><br>Eclipse Orion {{site.data.keyword.webide}}</br><br>Git Repos and Issue Tracking</br><br>{{site.data.keyword.containerlong_notm}} (Kurbernetes cluster) with a Helm chart</br></br>		|  
+|["Develop and test microservices on Kubernetes with Helm" toolchain](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-helm-toolchain){: external} <br><br>Available in US South, Germany, and United Kingdom</br></br>		|With this cloud-native toolchain, you can use a combination of continuous integration and continuous deployment pipelines to coordinate individually developed microservices into releases that are promoted across environments. This toolchain uses a sample online store app that consists of three microservices: a Catalog API, an Orders API, and a user interface that calls both of these APIs. The toolchain is preconfigured for continuous delivery, source control, functional testing, issue tracking, online editing, and alert notification. <br><br>Try the tutorial: [Use the "Develop and test microservices with Kubernetes and Helm" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-with-kubernetes-and-helm-toolchain){: external}</br></br>  		|{{site.data.keyword.deliverypipeline}}<br><br>Eclipse Orion {{site.data.keyword.webide}}</br><br>Git Repos and Issue Tracking</br><br>{{site.data.keyword.DRA_full}}</br><br>PagerDuty</br><br>Sauce Labs</br><br>{{site.data.keyword.containerlong_notm}} (Kurbernetes cluster) with a Helm chart</br></br>		| 
+|["Canary testing in Kubernetes using Istio" toolchain](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcanary-testing-istio-toolchain){: external} <br><br>US South, US East, Germany, Tokyo, and United Kingdom</br></br>		|With this toolchain, you can securely develop, A/B test, and deploy an app into a Kubernetes cluster that is managed by the {{site.data.keyword.containerlong_notm}}. Although the toolchain uses a sample Node.js Hello World app by default, you can link to your own GitHub repo instead. This toolchain is preconfigured for continuous delivery with A/B testing, Vulnerability Advisor, source control, issue tracking, and online editing. <br><br>Try the tutorial: [Use the "Run your first canary test in Kubernetes using the Istio toolchain"](https://www.ibm.com/cloud/garage/tutorials/use-canary-testing-in-kubernetes-using-istio-toolchain){: external}</br></br>  		|{{site.data.keyword.deliverypipeline}}<br><br>Eclipse Orion {{site.data.keyword.webide}}</br><br>Git Repos and Issue Tracking</br><br>{{site.data.keyword.containerlong_notm}} (Kubernetes cluster)</br></br>		|
+|["Develop and test a Cloud Foundry app" toolchain](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdra-toolchain-demo){: external} <br><br>US South, Germany, and United Kingdom</br></br>		|With this cloud-native toolchain, you can use DevOps Insights to gate the deployment of a simple Cloud Foundry application. By default, the toolchain uses a sample Node.js weather app, or you can link to your own GitHub repository. The toolchain runs unit tests using Mocha and checks code coverage by using Istanbul. <br><br>Try the tutorial: [Use the "Develop and test a Cloud Foundry app" toolchain"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){: external}</br></br>  		|{{site.data.keyword.deliverypipeline}}<br><br>Eclipse Orion {{site.data.keyword.webide}}</br><br>Git Repos and Issue Tracking</br><br>{{site.data.keyword.DRA_full}}</br></br>		|
+|["Develop and test microservices on Cloud Foundry" toolchain](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fmicroservices-toolchain-hosted){: external} <br><br>US South, Germany, and United Kingdom</br></br>		|With this cloud-native toolchain, you can use a sample to create an online store that consists of three microservices: a Catalog API, an Orders API, and a UI that calls both of the APIs. The toolchain is preconfigured for continuous delivery, source control, functional testing, issue tracking, online editing, and alert notification. <br><br>Try the tutorial: [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}</br></br>  		|{{site.data.keyword.deliverypipeline}}<br><br>Eclipse Orion {{site.data.keyword.webide}}</br><br>GitHub and Issues</br><br>{{site.data.keyword.Bluemix_notm}}</br><br>{{site.data.keyword.DRA_full}}</br><br>PagerDuty</br><br>Sauce Labs</br><br> Slack</br></br>		|
+|["Garage Method tutorial with Cloud Foundry" toolchain](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcloud-native-toolchain-tutorial){: external}. <br><br>US South, US East, Tokyo, Germany, and United Kingdom</br></br>		|This toolchain demonstrates the DevOps practices that are featured in the Garage Method. The toolchain is preconfigured for continuous delivery, source control, test automation, and automated monitoring and operations. It comes with a sample app that is written in Node.js Express 4, which you can further extend. <br><br>Try the tutorial: [Become a Garage Method advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate){: external}</br></br>  		|{{site.data.keyword.deliverypipeline}}<br><br>Eclipse Orion {{site.data.keyword.webide}}</br><br>GitHub and Issues</br><br>Google Analytics</br><br>{{site.data.keyword.Bluemix_notm}}</br><br>New Relic</br><br>PagerDuty</br><br>Sauce Labs</br><br> Slack</br></br>		|
+|["DevOps Insights Quick Start Demo" toolchain](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fdevops-insights%2FDevOpsInsights_Demo_Toolchain_Template){: external} <br><br>US South, Germany, and United Kingdom</br></br>		|With this toolchain, you can explore {{site.data.keyword.DRA_short}}, with no setup required. To get started, log in to {{site.data.keyword.Bluemix}}. This demonstration contains data from a reference toolchain and three GitHub repos. Explore how to organize, test, build, and deploy data for all applications, from all teams, within the Quality Dashboard. Evaluate trends and understand areas that need improvements so that you know where to focus your resources. Review how team members collaborate per release within Team Dynamics. <br><br>Try the tutorial: [Explore {{site.data.keyword.DRA_full}}](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){: external}</br></br>  		|GitHub and Issues<br><br>{{site.data.keyword.DRA_full}}</br></br>		|
+|[Build your own toolchain](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain){: external} <br><br>US South, US East, Tokyo, Germany, and United Kingdom</br></br>		|This toolchain has no preconfigured tools. If you are already familiar with toolchains, you can set up your own toolchain. <br><br>Try the tutorial: [Create a custom toolchain](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){: external}</br></br>  		|None		|
+|Continuous Delivery toolchain <br><br>US South, US East, Tokyo, Germany, and United Kingdom</br></br>		|This toolchain is used when you enable continuous delivery for an app. <br><br>Try the tutorials: <br><br>[Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app){: external}</br><br>[Create a custom toolchain](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){: external}</br></br>	|{{site.data.keyword.deliverypipeline}}<br><br>Eclipse Orion {{site.data.keyword.webide}}</br><br>GitHub and Issues</br><br>{{site.data.keyword.Bluemix_notm}}</br></br>		|
+|Custom toolchain template <br><br>US South, US East, Tokyo, Germany, and United Kingdom</br></br>		|You can create a custom toolchain template that can be used by others. <br><br>See the documentation: [Creating custom toolchain templates](https://github.com/open-toolchain/sdk/wiki){: external}</br><br>Try the tutorial: [Create a template for a custom toolchain](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain){: external}</br></br>  		|None		|
+{: caption="Table 2. Toolchain templates" caption-side="top"}
