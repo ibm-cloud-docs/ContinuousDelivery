@@ -33,6 +33,7 @@ Continuous Delivery
     Delivery Pipeline
         pipeline_about.md
         pipeline_working.md
+        tekton_pipeline.md
         pipeline_build_deploy.md
         pipeline_deploy_var.md
         pipeline_versioned_base_images.md
