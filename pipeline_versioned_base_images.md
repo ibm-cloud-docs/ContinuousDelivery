@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-09-20"
+lastupdated: "2019-10-01"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -430,6 +430,11 @@ If you choose the `Latest` option, the pipeline jobs are run with the current im
 	Ant:          Apache Ant(TM) version 1.9.14 compiled on March 12 2019
 	JVM:          1.8.0_222 (Private Build 25.222-b10)
 	OS:           Linux 4.9.184-linuxkit amd64
+	
+	# oc version
+	oc v3.11.0+0cbc58b
+	kubernetes v1.11.0+d4cacc0
+	features: Basic-Auth GSSAPI Kerberos SPNEGO
 
   ```
  {: codeblock}
