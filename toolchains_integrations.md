@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-03"
+lastupdated: "2019-10-08"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Alert Notification, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Jenkins, JIRA, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
 
@@ -1138,4 +1138,4 @@ Configure SonarQube to continuously analyze and measure the quality of your sour
 
 ### Learn more about SonarQube
 
-To learn more about SonarQube, see the [SonarQube article](https://www.ibm.com/cloud/garage/content/learn/tool_sonarqube/){:external} on the IBM Cloud Garage Method. 
+To learn more about SonarQube, see [Integrate your SonarQube analysis into your toolchain](https://www.ibm.com/blogs/cloud-archive/2017/06/integrate-sonarqube-analysis-into-your-toolchain/){:external}. 
