@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-08"
+lastupdated: "2019-10-11"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Alert Notification, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Jenkins, JIRA, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
 
@@ -876,7 +876,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add an npm build job:
 1. Configure the build job:
   ![npm build job](images/nexus_npm_job.png)
 
-  a. For the builder type, select **NPM Build**.
+  a. For the builder type, select **npm (Artifactory or Nexus)**.
 
   b. If you configured multiple instances of the Nexus tool integration, enter the name of the Nexus tool integration that you want to configure the npm build job for.
 
@@ -906,7 +906,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
 1. Configure the build job:
   ![Maven build job](images/nexus_maven_job.png)
 
-  a. For the builder type, select **Maven Build**.
+  a. For the builder type, select **Maven (Artifactory, Nexus, SonarQube)**.
 
   b. If you configured multiple instances of the Nexus tool integration, enter the name of the Nexus tool integration that you want to configure the Maven Build job for.
 
