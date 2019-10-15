@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-30"
+lastupdated: "2019-10-15"
 
 keywords: commit message field, terminal Type git branch, Eclipse Orion {{site.data.keyword.webide}}, Git commands
 
@@ -119,7 +119,7 @@ When you force push a local branch to a remote one, you might lose commits on th
 ### Eclipse Orion Web IDE
 {: #discard_changes_web}
 
-1. In the Working Directory Changes section, select the check box for each modified file that has changes you want to discard.
+1. In the Working Directory Changes section, select the checkbox for each modified file that has changes you want to discard.
 2. Click the Checkout icon ![Checkout icon](images/discard.png).
 
 ### Git terminal
@@ -133,7 +133,7 @@ When you force push a local branch to a remote one, you might lose commits on th
 ### Eclipse Orion Web IDE
 {: #commit_web}
 
-1. In the Working Directory Changes section, select the check box for each file to commit.
+1. In the Working Directory Changes section, select the checkbox for each file to commit.
 
 2. In the **Enter the commit message** field, type a message that describes your changes.
 
@@ -233,9 +233,9 @@ When you force push a local branch to a remote one, you might lose commits on th
 
 ### Eclipse Orion Web IDE
 {: #modify_last_commit_web}
-1. Select the check boxes for the items to add to the commit.
+1. Select the checkboxes for the items to add to the commit.
 
-1. Select the **Amend previous commit** check box.
+1. Select the **Amend previous commit** checkbox.
 
 2. If necessary, enter a new commit message.
 
@@ -368,7 +368,7 @@ When you need to deliver changes from a source branch to a destination branch, y
 		Text in merged branch.
 		>>>>>>> commit_ID_from_merged_branch
 		
-4. For each conflicting file, select the check box. Type a merge commit message, and click **Commit**.
+4. For each conflicting file, select the checkbox. Type a merge commit message, and click **Commit**.
 
 ### Git terminal
 {: #resolve_a_merge_conflict_cmd}
@@ -443,7 +443,7 @@ When you need to deliver changes from a source branch to a destination branch, y
 		Text in merged branch.
 		>>>>>>> commit_ID_from_merged_branch
 		{: tip}
-4. In the rebase pane, select the check box for each corrected file and click **Continue**.
+4. In the rebase pane, select the checkbox for each corrected file and click **Continue**.
 
 ### Git terminal
 {: #resolve_a_rebase_conflict_cmd}
