@@ -2,7 +2,7 @@
 
 copyright:
   years:  2019
-lastupdated: "2019-08-14"
+lastupdated: "2019-10-15"
 
 keywords: Cloud Foundry org, user access, toolchains
 
@@ -38,9 +38,9 @@ If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.ke
 
 * To grant access to all of the members of the toolchain's org, click **Add org**. All of the members of that org can view the toolchain.
 
-* You can grant admin privileges to an org or a user. Admins can modify and delete the toolchain. To grant admin privileges, select the **ADMIN** check box for the org or user.
+* You can grant admin privileges to an org or a user. Admins can modify and delete the toolchain. To grant admin privileges, select the **ADMIN** checkbox for the org or user.
 
-* If you select the **ADMIN** check box for an org, all of the members of that org become admins. If you add members to the org after you grant admin privileges to the org, those members are given the same access as the rest of the org.
+* If you select the **ADMIN** checkbox for an org, all of the members of that org become admins. If you add members to the org after you grant admin privileges to the org, those members are given the same access as the rest of the org.
 
 * To grant access to a user who is a member of the toolchain's org, enter the user's ID and click **Add user**. The user can view the toolchain.
 
