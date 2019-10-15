@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-10-15"
 
 keywords: GitHub tool integration, error message, Lite plan, toolchains, Cloud Foundry orgs, resource groups, IBM Cloud, Web IDE, Live Sync, pipeline jobs
 
@@ -139,7 +139,7 @@ For more information about deploying the contents of your workspace, see [Deploy
 {: #web_ide_git_view}
 {: faq} 
 
-The {{site.data.keyword.webide}} assumes by default that you want to push outgoing changes to your code repository each time that you go to the Git page. If you want to manually select which resources to commit, sync, reset, and replace, from the GIT preference page, clear the **Always select changed files** check box.
+The {{site.data.keyword.webide}} assumes by default that you want to push outgoing changes to your code repository each time that you go to the Git page. If you want to manually select which resources to commit, sync, reset, and replace, from the GIT preference page, clear the **Always select changed files** checkbox.
 
 
 ## Why doesn't the {{site.data.keyword.webide}} support the language that I use? 
