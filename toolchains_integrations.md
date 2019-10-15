@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-11"
+lastupdated: "2019-10-15"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Alert Notification, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Jenkins, JIRA, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
 
@@ -176,7 +176,7 @@ Configure {{site.data.keyword.deliverypipeline}} to add an npm build job:
   You can find the URL and user credentials that you used to connect to your registry in the configuration settings for the Artifactory tool integration.
   {: tip}
 
-  e. If your build job publishes to the Artifactory registry, and the format of your node module version is `x.y.z-SNAPSHOT.w`, select the **Increment snapshot module version** check box. The build job automatically updates the module version before the job publishes to the Artifactory registry. The job selects the highest version of the module from the npm registry and the local `package.json` file, and increments the module version by using semver. The build job does not deliver the changes to the SCM repo.
+  e. If your build job publishes to the Artifactory registry, and the format of your node module version is `x.y.z-SNAPSHOT.w`, select the **Increment snapshot module version** checkbox. The build job automatically updates the module version before the job publishes to the Artifactory registry. The job selects the highest version of the module from the npm registry and the local `package.json` file, and increments the module version by using semver. The build job does not deliver the changes to the SCM repo.
 
 1. Click **SAVE**. Whenever your pipeline runs, this build job uses the configuration information from the Artifactory tool integration to connect to your npm registry.
 
@@ -282,9 +282,9 @@ Configure Bitbucket to collaborate on code with your team:
 
  c. To fork a repo so that you can contribute changes through pull requests, click **Fork**.
 
-1. To create a private repo on the server, select the **Make this repository private** check box.
-1. To use Bitbucket Issues for issue tracking, select the **Enable Bitbucket Issues** check box.
-1. To track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
+1. To create a private repo on the server, select the **Make this repository private** checkbox.
+1. To use Bitbucket Issues for issue tracking, select the **Enable Bitbucket Issues** checkbox.
+1. To track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
 1. Click **Create Integration**.
 1. From your toolchain, click the card for the Bitbucket repo that you want to work with. The Bitbucket website opens where you can view the contents of the repo.
 1. If you enabled Bitbucket Issues, click **Bitbucket Issues** to open it. You can use this instance of Bitbucket Issues for your entire toolchain, even if the toolchain contains multiple Bitbucket repos.    
@@ -342,7 +342,7 @@ Configure {{site.data.keyword.deliverypipeline}} to automate the continuous buil
  b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}}**.
 
 1. Specify a name for your new pipeline.
-1. If you plan to use your pipeline to deploy a user interface, select the **Show apps in the VIEW APP menu** check box. All of the apps that your pipeline creates are shown in the **View App** list on the toolchain's Overview page.
+1. If you plan to use your pipeline to deploy a user interface, select the **Show apps in the VIEW APP menu** checkbox. All of the apps that your pipeline creates are shown in the **View App** list on the toolchain's Overview page.
 1. Select the type of pipeline that you want to create:
 
  * **Classic**: Provides an easy to use graphical user interface for defining stages and jobs that run on public shared infrastructure, with support for running individual stages on private workers.
@@ -394,7 +394,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
      node_modules/grunt-cli/bin/grunt test:sauce:parallel
      ```
 
-    d. If you want to see your test reports in the test job logs, select the **Enable Test Report** check box, and set the Test Result File Pattern to `test/*.xml`.
+    d. If you want to see your test reports in the test job logs, select the **Enable Test Report** checkbox, and set the Test Result File Pattern to `test/*.xml`.
 
 1. Click **SAVE**. Whenever your pipeline runs, your Sauce Labs tests run.
 
@@ -506,8 +506,8 @@ These instructions apply to toolchains that already contain the Git repo that yo
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Git Repos and Issue Tracking**.
 1. To create a copy of the Git repo, for the repository type, click **Clone**. Type a new repo name and the URL for the source repo.
-1. If you want to use Issues for issue tracking, select the **Enable Issues** check box.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
+1. If you want to use Issues for issue tracking, select the **Enable Issues** checkbox.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
 1. Click **Create Integration**.
 
 After you clone the Git repo, you can remove it from your toolchain.
@@ -525,8 +525,8 @@ If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, fol
   c. To create a copy of a Git repo, for the repository type, click **Clone**. Type a new repo name and the URL for the source repo.     
   d. If you have a Git repo and want to use it, for the repository type, click **Existing**. Type the URL.    
 
-1. If you want to use Issues for issue tracking, select the **Enable Issues** check box.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
+1. If you want to use Issues for issue tracking, select the **Enable Issues** checkbox.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
 1. Click **Create Integration**.
 1. Click the card for the Git repo that you want to work with. Your project overview page opens.    
 
@@ -571,7 +571,7 @@ If you are configuring this tool integration as you are creating the toolchain, 
 
      d. Add a description for the token.
 
-     e. Select the **repo** and **user** check boxes to define the access for the personal token.
+     e. Select the **repo** and **user** checkboxes to define the access for the personal token.
 
      f. Click **Generate token**.
 
@@ -595,9 +595,9 @@ If you have a toolchain and are adding this tool integration to it, follow these
 
  c. To fork a GitHub or {{site.data.keyword.ghe_short}} repo so that you can contribute changes through pull requests, click **Fork**.
 
-1. If you are a GitHub.com user with an upgraded account, or you selected a {{site.data.keyword.ghe_short}} server and you want to make a new private repo on the server, select the **Make this repository private** check box.
-1. If you want to use GitHub's Issues for issue tracking, select the **Enable GitHub Issues** check box.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
+1. If you are a GitHub.com user with an upgraded account, or you selected a {{site.data.keyword.ghe_short}} server and you want to make a new private repo on the server, select the **Make this repository private** checkbox.
+1. If you want to use GitHub's Issues for issue tracking, select the **Enable GitHub Issues** checkbox.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
 1. Click **Create Integration**.
 1. Click the card for the GitHub or {{site.data.keyword.ghe_short}} repo that you want to work with. Depending on the repo that you selected, either the GitHub website or your company's {{site.data.keyword.ghe_short}} repo opens, where you can view the contents of the repo.
 
@@ -653,7 +653,7 @@ You can configure {{site.data.keyword.ghe_short}} as a tool integration in your 
 
  c. To fork a repo so that you can contribute changes through pull requests, click **Fork**.
 
-1. To use GitHub Issues for issue tracking, select the **Enable GitHub Issues** check box.
+1. To use GitHub Issues for issue tracking, select the **Enable GitHub Issues** checkbox.
 1. Click **Create Integration**.
 1. Click the card for the {{site.data.keyword.ghe_short}} repo that you want to work with. Your company's {{site.data.keyword.ghe_short}} repo opens.
 
@@ -691,7 +691,7 @@ If you are configuring this tool integration as you are creating the toolchain, 
 
      c. Optional. Choose an expiry date for the access token.
 
-     d. Select the **api** check box to define the access for the personal token.
+     d. Select the **api** checkbox to define the access for the personal token.
 
      e. Click **Create personal access token**.
 
@@ -714,9 +714,9 @@ If you have a toolchain and are adding this tool integration to it, follow these
 
  c. To fork a GitLab repo so that you can contribute changes through merge requests, click **Fork**.
 
-1. If you want to create a public repo on the server, clear the **Make this repository private** check box.
-1. If you want to use GitLab's Issues for issue tracking, select the **Enable GitLab Issues** check box.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
+1. If you want to create a public repo on the server, clear the **Make this repository private** checkbox.
+1. If you want to use GitLab's Issues for issue tracking, select the **Enable GitLab Issues** checkbox.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
 1. Click **Create Integration**.
 1. Click the card for the GitLab repo that you want to work with. Depending on the repo that you selected, either the GitLab website or your company's GitLab repo opens, where you can view the contents of the repo.
 
@@ -794,7 +794,7 @@ Configure JIRA to plan, track, and deliver quality code:
 
  c. If you are connecting to a private JIRA instance, or you want to receive traceability information from a public JIRA instance, enter your JIRA user name and password.
 
- d. To track the deployment of code changes for the project by creating labels and comments for referenced issues, select the **Track deployment of code changes** check box. Make sure that you use JIRA Smart Commit to reference the JIRA issues in your GitHub commits. If you don't select this option, the JIRA tool integration ignores any commits.
+ d. To track the deployment of code changes for the project by creating labels and comments for referenced issues, select the **Track deployment of code changes** checkbox. Make sure that you use JIRA Smart Commit to reference the JIRA issues in your GitHub commits. If you don't select this option, the JIRA tool integration ignores any commits.
 
 1. If you want to create a JIRA project, for the JIRA type, click **New**:
 
@@ -810,7 +810,7 @@ Configure JIRA to plan, track, and deliver quality code:
 
  f. Type the administrator's password for this instance of JIRA.
 
- g. To track the deployment of code changes for the project by creating labels and comments for referenced issues, select the **Track deployment of code changes** check box. Make sure that you use JIRA Smart Commit to reference the JIRA issues in your GitHub commits. If you don't select this option, the JIRA tool integration ignores any commits.
+ g. To track the deployment of code changes for the project by creating labels and comments for referenced issues, select the **Track deployment of code changes** checkbox. Make sure that you use JIRA Smart Commit to reference the JIRA issues in your GitHub commits. If you don't select this option, the JIRA tool integration ignores any commits.
 
 1. Click **Create Integration**.
 1. From your toolchain, click **JIRA** to view the dashboard for the JIRA project that you connected to.
@@ -890,7 +890,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add an npm build job:
      ```
   **Tip:** You can find the URL and user credentials that you used to connect to your registry in the configuration settings for the Nexus tool integration.
 
-  e. If your build job publishes to the Nexus registry, and the format of your node module version is `x.y.z-SNAPSHOT.w`, select the **Increment snapshot module version** check box. The build job automatically updates the module version before it publishes to the Nexus registry. The build job selects the highest version of the module from the npm registry and the local `package.json` file, and increments the module version by using semver. The build job does not deliver the changes to the SCM repo.
+  e. If your build job publishes to the Nexus registry, and the format of your node module version is `x.y.z-SNAPSHOT.w`, select the **Increment snapshot module version** checkbox. The build job automatically updates the module version before it publishes to the Nexus registry. The build job selects the highest version of the module from the npm registry and the local `package.json` file, and increments the module version by using semver. The build job does not deliver the changes to the SCM repo.
 
 1. Click **SAVE**. Whenever your pipeline runs, this build job uses the configuration information from the Nexus tool integration to connect to your npm registry.
 
@@ -1031,7 +1031,7 @@ Configure Rational Team Concert to practice a DevOps approach and continuous del
 
  c. Type the name of the Rational Team Concert process template to use to create the project.
 
-1. To track the deployment of code changes for the project by creating tags and comments on work items, select the **Track deployment of code changes** check box.
+1. To track the deployment of code changes for the project by creating tags and comments on work items, select the **Track deployment of code changes** checkbox.
 1. Click **Create Integration**.
 1. From your toolchain, click **Rational Team Concert** to open the Rational Team Concert dashboard that you configured.
 
