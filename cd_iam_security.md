@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-09-30"
+lastupdated: "2019-10-11"
 
 keywords: Administrator Create, Administrator Update, Editor Update, service access roles, IAM, access policies
 
@@ -60,11 +60,12 @@ For {{site.data.keyword.contdelivery_short}}, the following actions exist:
 
 | Action | Operation on Service | Role
 |:-----------------|:-----------------|:--------------|
-| create | Provision a {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor |
-| update | Update a {{site.data.keyword.contdelivery_short}} service instance in a resource group. For example, rename the service instance. | Administrator, Editor |
-| update_plan | Change the plan for the {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor |
-| delete | Delete a {{site.data.keyword.contdelivery_short}} service instance from a resource group. | Administrator, Editor |
-| retrieve | View a {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor, Operator, Viewer |
-| add-auth-users | Add entries to the Authorized Users list on the Manage tab within the {{site.data.keyword.contdelivery_short}} service instance. | Administrator, Writer, Manager |
-| remove-auth-users | Remove entries from the Authorized Users list on the Manage tab within the {{site.data.keyword.contdelivery_short}} service instance. | Administrator, Writer, Manager |
+| continuous-delivery.instance.create | Provision a {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor |
+| continuous-delivery.instance.update | Update a {{site.data.keyword.contdelivery_short}} service instance in a resource group. For example, rename the service instance. | Administrator, Editor |
+| continuous-delivery.instance.update_plan | Change the plan for the {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor |
+| continuous-delivery.instance.delete | Delete a {{site.data.keyword.contdelivery_short}} service instance from a resource group. | Administrator, Editor |
+| continuous-delivery.instance.retrieve | View a {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor, Operator, Viewer |
+| continuous-delivery.instance.add-auth-users | Add entries to the Authorized Users list on the Manage tab within the {{site.data.keyword.contdelivery_short}} service instance. | Administrator, Writer, Manager |
+| continuous-delivery.instance.remove-auth-users | Remove entries from the Authorized Users list on the Manage tab within the {{site.data.keyword.contdelivery_short}} service instance. | Administrator, Writer, Manager |
+| continuous-delivery.instance.config-auth-users | Reserved for future use. | Administrator, Manager |
 {: caption="Table 3. Service actions and operations" caption-side="top"}
