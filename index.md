@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-10-15"
 
 keywords: IBM Cloud Continuous Delivery, getting started, tutorial, create a toolchain, tool integration, toolchain template, DevOps toolchains
 
@@ -42,7 +42,7 @@ Before you can create a continuous delivery toolchain from a template, you must 
 ##Step 1: Select a toolchain template
 {: #select_a_toolchain_template}
 
-To quickly find the toolchain template that addresses your specific requirements, select the appropriate check boxes to filter by deployment target and tools.
+To quickly find the toolchain template that addresses your specific requirements, select the appropriate checkboxes to filter by deployment target and tools.
 {: tip}
 
 1. On the **Create a Toolchain** page, click a [toolchain template](https://cloud.ibm.com/devops/create){:external}.
