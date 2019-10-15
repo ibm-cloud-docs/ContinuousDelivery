@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-10-11"
 
 keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
@@ -61,14 +61,16 @@ The following table lists and describes the available actions for toolchains:
 
 | Action | Operation on Service | Role
 |:-----------------|:-----------------|:--------------|
-| create | Create a toolchain in a resource group. | Administrator, Editor |
-| update | Update a toolchain in a resource group. For example, rename the toolchain. Change delivery pipelines that are bound to toolchains in a resource group. | Administrator, Editor |
-| update_plan | Not applicable. | Administrator, Editor |
-| delete | Delete a toolchain from a resource group. | Administrator, Editor |
-| retrieve | View the details for a toolchain in a resource group. View and run delivery pipelines that are bound to toolchains in a resource group. | Administrator, Editor, Operator, Viewer |
-| list-bindings | View the tool integrations that are bound to a toolchain in a resource group. | Administrator, Editor, Viewer |
-| create-bindings | Add a tool integration to a toolchain in a resource group. | Administrator, Editor |
-| delete-bindings | Remove a tool integration from a toolchain in a resource group. | Administrator, Editor |
+| toolchain.instance.create | Create a toolchain in a resource group. | Administrator, Editor |
+| toolchain.instance.update | Update a toolchain in a resource group. For example, rename the toolchain. Change delivery pipelines that are bound to toolchains in a resource group. | Administrator, Editor |
+| toolchain.instance.update_plan | Not applicable. | Administrator, Editor |
+| toolchain.instance.delete | Delete a toolchain from a resource group. | Administrator, Editor |
+| toolchain.instance.retrieve | View the details for a toolchain in a resource group. View and run delivery pipelines that are bound to toolchains in a resource group. | Administrator, Editor, Operator, Viewer |
+| toolchain.instance.list-bindings | View the tool integrations that are bound to a toolchain in a resource group. | Administrator, Editor, Viewer |
+| toolchain.instance.create-bindings | Add a tool integration to a toolchain in a resource group. | Administrator, Editor |
+| toolchain.instance.delete-bindings | Remove a tool integration from a toolchain in a resource group. | Administrator, Editor |
+| toolchain.instance.read-properties | Reserved for future use. | Administrator, Editor, Viewer |
+| toolchain.instance.update-properties | Reserved for future use. | Administrator, Editor |
 {: caption="Table 3. Service actions and operations" caption-side="top"}
 
 ## Assigning access to new users
