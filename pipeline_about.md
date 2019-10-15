@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-10-08"
+lastupdated: "2019-10-15"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline
 
@@ -65,7 +65,7 @@ More stage trigger options are available for stages that use the Git repository 
 
 ![The INPUT tab triggers](images/input_tab_only_triggers.png)
 
-If you select the **When a pull/merge request is opened or updated** check box, the status of the pipeline is returned to the Git repo. When a pull request or merge request triggers your pipeline, an inline status check is displayed on the page. A status check is displayed for each of the stages that are run in your pipeline, and links to the logs and history for each stage are provided. As the status check runs, it updates from pending to either successful or failed. If your pipeline contains multiple stages, each stage reports its status in the check list.
+If you select the **When a pull/merge request is opened or updated** checkbox, the status of the pipeline is returned to the Git repo. When a pull request or merge request triggers your pipeline, an inline status check is displayed on the page. A status check is displayed for each of the stages that are run in your pipeline, and links to the logs and history for each stage are provided. As the status check runs, it updates from pending to either successful or failed. If your pipeline contains multiple stages, each stage reports its status in the check list.
 
 This status feedback is also supported by the IBM hosted GitLab Community Edition tool for merge requests.
 {: tip}
@@ -87,8 +87,8 @@ The following Builder types are available:
   * **Build script** - This builder type can be any valid build script. By default, this builder type is set to 'ant'.
   * **Working directory** - Specifies the directory where the script is run.
   * **Build archive directory** - Specifies the directory that contains the job's output to be archived for use by a subsequent stage.
-  * **Enable test report** - Select this check box to specify that the build job runs tests that produce result files in JUnit XML format. A report based on the result files is displayed on the Tests tab of the Job Results page. If any tests failed, the job is marked as failed.
-  * **Enable code coverage report** - Select this check box to show more fields that you can use for the code coverage report. You can specify the Coverage runner (such as Istanbul, JaCoCo, ore Cobertura), the location of the Coverage result file, and the Coverage result directory, relative to the Working directory.
+  * **Enable test report** - Select this checkbox to specify that the build job runs tests that produce result files in JUnit XML format. A report based on the result files is displayed on the Tests tab of the Job Results page. If any tests failed, the job is marked as failed.
+  * **Enable code coverage report** - Select this checkbox to show more fields that you can use for the code coverage report. You can specify the Coverage runner (such as Istanbul, JaCoCo, ore Cobertura), the location of the Coverage result file, and the Coverage result directory, relative to the Working directory.
 * **Container Registry**
 * **Gradle (Artifactory, Nexus, or SonarQube)**
 * **Grunt**
