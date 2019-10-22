@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-09-17"
+lastupdated: "2019-10-15"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -32,7 +32,6 @@ You can create *new* instances of the {{site.data.keyword.contdelivery_short}} s
 You can have one Lite service only per account. It is recommended that you use the Professional plan if you want to work with toolchains in multiple orgs or resource groups, or within multiple regions.
 {: tip}
 
-
 ## Authorized users
 {: #authorized_users}
 
@@ -44,6 +43,8 @@ You can have one Lite service only per account. It is recommended that you use t
  
 The Lite plan is subject to limits. For more information about the Lite plan and the Professional plan, see the [service catalog](https://cloud.ibm.com/catalog/services/continuous-delivery){:external}.
 {: tip}
+
+You can maintain an activity log related to authorized users. For more information about viewing, managing, and auditing service-initiated and user-initiated activities in your {{site.data.keyword.contdelivery_full}} instances, see [{{site.data.keyword.at_full_notm}} events](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-at-events).
  
 ### How are users counted for instances of {{site.data.keyword.contdelivery_short}} in resource groups?
 
