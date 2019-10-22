@@ -62,7 +62,7 @@ Continuous Delivery
 
     {: .navgroup id="reference"}
     [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki)
-    at-events.md
+    cd_at_events.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
