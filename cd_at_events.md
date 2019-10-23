@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-10-15"
+lastupdated: "2019-10-23"
 
 keywords: event, security, IBM, activity tracker, LogDNA, Continuous Delivery
 
@@ -29,7 +29,7 @@ subcollection: containers
 You can view, manage, and audit service-initiated and user-initiated activities in your {{site.data.keyword.contdelivery_full}} and toolchain instances by using the {{site.data.keyword.at_full}} service.
 {: shortdesc}
 
-{{site.data.keyword.contdelivery_short}} automatically generates events for specific actions and forwards these event logs to {{site.data.keyword.at_full_notm}}. To access these logs, you must [provision an instance of {{site.data.keyword.at_full_notm}}](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started).
+{{site.data.keyword.contdelivery_short}} automatically generates events for specific actions and forwards these event logs to {{site.data.keyword.at_full_notm}}. To access these logs, you must [provision an instance of {{site.data.keyword.at_full_notm}}](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#gs_ov).
 
 ## Tracking {{site.data.keyword.contdelivery_short}} and toolchain events
 {: #cd-events}
