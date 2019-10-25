@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-10-04"
+lastupdated: "2019-10-22"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -63,7 +63,10 @@ Before you add and run a Tekton pipeline, make sure that you have the following 
 * [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli) installed locally.
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){:external} installed locally.
 * A Kubernetes cluster such as an [{{site.data.keyword.containerlong}} cluster](https://cloud.ibm.com/kubernetes/catalog/cluster){:external}.
-* A toolchain that contains both a repo tool integration (such as the GitHub tool integration) that contains your Tekton pipeline code and a {{site.data.keyword.deliverypipeline}} Private Worker tool integration that references your Kubernetes cluster.
+* A toolchain that contains the following tool integrations:
+
+  * A repo tool integration (such as the GitHub tool integration) that contains your Tekton pipeline code, including a Tekton yaml file. For more information about getting started with Tekton pipelines, see [Tekton Pipelines](https://github.com/tektoncd/pipeline/tree/v0.8.0/docs#tekton-pipelines){:external}.
+  * A {{site.data.keyword.deliverypipeline}} Private Worker tool integration that references your Kubernetes cluster. For more information about private workers, see [Installing Delivery Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
 
 ## Creating a {{site.data.keyword.deliverypipeline}} for Tekton 
 {: #create_tekton_pipeline}
