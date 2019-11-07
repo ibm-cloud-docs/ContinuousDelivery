@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-10-23"
+lastupdated: "2019-11-07"
 
 keywords: event, security, IBM, activity tracker, LogDNA, Continuous Delivery
 
@@ -73,6 +73,7 @@ The following table lists and describes the root actions that prompt user emails
 |:-----------------|:-----------------|
 | `continuous-delivery.instance.create` | Add a user email when the {{site.data.keyword.contdelivery_short}} service is provisioned. This email belongs to the user who created the service instance. The `root-action-service-instance` CRN identifies the {{site.data.keyword.contdelivery_short}} service instance.   | 
 | `continuous-delivery.instance.delete` | Remove user emails when the {{site.data.keyword.contdelivery_short}} service is de-provisioned. The `root-action-service-instance` CRN identifies the {{site.data.keyword.contdelivery_short}} service instance. |
+| `toolchain.git-repos-and-issue-tracking-repo.evaluate` | Add user emails after system evaluation of a {{site.data.keyword.gitrepos}} repo. Multiple emails that correspond to users with Developer (or greater) access to the repo might be added. The `root-action-service-instance` CRN identifies the toolchain that contains the {{site.data.keyword.gitrepos}} tool integration. |
 | `toolchain.pipeline-stage.start` | Add user emails when a delivery pipeline stage starts. If the pipeline stage is manually started, the email of the user who started the pipeline is added. If a pipeline stage is triggered by a change to a repository (repo) in the {{site.data.keyword.gitrepos}} tool integration, multiple emails that correspond to users with Developer (or greater) access to the repo might be added. The `root-action-service-instance` CRN identifies the toolchain that contains the pipeline. |
 | `toolchain.pipeline.read` | Add a user email when the user views a delivery pipeline. The `root-action-service-instance` CRN identifies the toolchain that contains the pipeline.  |
 | `toolchain.pipeline.update` | Add a user email when the user edits a delivery pipeline. The `root-action-service-instance` CRN identifies the toolchain that contains the pipeline.  |
