@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-10-15"
+lastupdated: "2019-11-14"
 
 keywords: IBM Cloud Continuous Delivery, getting started, tutorial, create a toolchain, tool integration, toolchain template, DevOps toolchains
 
@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {:download: .download}
 
 
-# Getting started tutorial
+# Getting started with Continuous Delivery
 {: #getting-started}
 
 Adopt a DevOps approach by using {{site.data.keyword.contdelivery_full}}, which includes open toolchains that automate the building and deployment of applications. You can get started by creating a simple deployment toolchain that supports development, deployment, and operations tasks. 
