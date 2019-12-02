@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2018, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-11-29"
 
 keywords: pipeline base image, custom Docker image, private image registry 
 
@@ -27,6 +27,9 @@ subcollection: ContinuousDelivery
 
 The pipeline base image might not support all of your build's requirements. For example, you might need more fine-grained control over the versions of node, java, or other tools. You can address this issue by including a first step in your pipeline jobs that installs a series of new packages and carefully configures environment variables, such as `PATH`, to set up your
 environment. However, a better approach is to use the pipeline's support for running a "Custom Docker Image" as the basis for your job.
+
+Custom Docker image support in the pipeline is used only to provide an image that a specific pipeline job uses while it is running. For example, you can provide an image that contains custom tools that are required by the script that the job runs. After the job completes, the container that it was running in is torn down.
+{: important}
 
 Whether you are using a Build, Test, or Deploy job type, you can select a Custom Docker Image subtype to provide the Docker image name to use and specify the script to run. For example, use the following options to run a Build job with Maven 3.5.3 and IBM Java:
 
