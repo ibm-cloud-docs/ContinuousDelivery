@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-09-04"
+lastupdated: "2019-11-29"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -205,4 +205,29 @@ Complete the following steps to delete a {{site.data.keyword.deliverypipeline}} 
 1. Confirm by clicking **Delete**. The {{site.data.keyword.deliverypipeline}} Private Worker tool integration is removed from the toolchain and is no longer available in the **Workers** tab in the delivery pipeline Stage Configuration page.
 
 If you delete the {{site.data.keyword.deliverypipeline}} Private Worker tool integration from a toolchain and the private worker is configured for a pipeline stage, it is still listed in the **Workers** tab of the Stage Configuration page. However, the private worker is disabled and labeled REMOVED. You must select a different private worker (if one exists) or use a public worker instead.
+{: tip}
+
+
+## Updating a {{site.data.keyword.deliverypipeline}} Private Worker
+{: #update_private_workers}
+ 
+Private workers can have one of the following statuses:
+ 
+ * **active**: The private worker is operating normally.
+ * **inactive**: The private worker is offline. Check your cluster. You might need to register the private worker again.
+ * **outdated**: The private worker is not the latest version. Although the private worker continues to operate normally, it is recommended that you update to the latest version.
+ * **unsupported**: The private worker version in use is no longer supported. The private worker cannot run and you need to update to the latest version.
+
+Complete the following steps to update a private worker to use the latest version:
+ 
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**.
+1. Click the card for the {{site.data.keyword.deliverypipeline}} Private Worker tool integration that you want to update.
+1. Click **Getting Started** and use the commands that are listed to complete the following actions:
+ 
+     * Unregister the private worker from the cluster.
+     * Uninstall the {{site.data.keyword.deliverypipeline}} support.
+     * Install the {{site.data.keyword.deliverypipeline}} Kubernetes Private Worker support.
+     * Register the private worker again in your cluster.
+
+Installing support for the private worker is a cluster action. You need to complete this action only once per update. 
 {: tip}
