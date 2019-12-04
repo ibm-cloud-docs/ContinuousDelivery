@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-10-15"
+lastupdated: "2019-11-29"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline
 
@@ -71,6 +71,28 @@ This status feedback is also supported by the IBM hosted GitLab Community Editio
 {: tip}
 
 You can also restrict merging based on the results of the status checks by using Git branch protection rules. After a branch protection rule is created, all merging is blocked until all of the required status checks are successful. 
+
+### Bitbucket Cloud pull requests
+{: #bitbucket_pull_request_limitations}
+
+Bitbucket Cloud currently does not support repository references for pull requests, which is required by the {{site.data.keyword.contdelivery_short}} service. This feature allows pull requests to be sent to the repo that you want to access by using references in the following format: `refs/pull/123/…` 
+
+You can [locally fetch and check out a pull request](https://confluence.atlassian.com/bbkb/how-to-locally-fetch-and-checkout-a-pull-request-724402529.html){: external} by using the source repo URL. However, if the source repo is a private forked repo, the {{site.data.keyword.contdelivery_short}} service does not have the access that is required to manage pull requests. To work around this limitation, you must explicitly provide the required access to the forked repo in the pipeline script. 
+
+In the following sample bash pipeline script, two users are using Bitbucket Cloud and they each have a private fork of their main repo (bitbucket.org/userA/repo-forked-A and bitbucket.org/userB/repo-forked-B). The script is set up to check out the pull request when a build job is triggered by a pull request open event or update event from one of the two forked repos.
+
+```
+case "$BITBUCKET_PR_SOURCE_HOST" in       #BITBUCKET_PR_SOURCE_HOST is an environment exported by pipeline if job is triggered by a bitbucket pull request
+  *userA*)                                #userA should be replaced to anything to identify a forked repo's url
+    url="https://$username:$password@$BITBUCKET_PR_SOURCE_HOST"    #you need to provide username and password for repo-forked-A
+    ;;
+  *userB/repo-forked-B*)                  #userB/repo-forked-B should be replaced to anything to identify a forked repo's url
+    url="https://$username1:password1@$BITBUCKET_PR_SOURCE_HOST"   #you need to provide username1 and password1 for repo-forked-B
+    ;;
+esac
+git fetch $url $BITBUCKET_PR_SOURCE_BRANCH   #BITBUCKET_PR_SOURCE_BRANCH is an environment exported by pipeline if job is triggered by a bitbucket pull request
+git checkout FETCH_HEAD
+```
 
 ### Build stage
 {: #build_stage}
