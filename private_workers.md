@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-12-03"
+lastupdated: "2019-12-05"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -232,7 +232,7 @@ Complete the following steps to update a private worker to use the latest versio
 Installing support for the private worker is a cluster action. You need to complete this action only once per update. 
 {: tip}
 
-## Working with the {{site.data.keyword.registrylong_notm}}
+## Accessing the {{site.data.keyword.registrylong_notm}} from an {{site.data.keyword.cloud_notm}} Private cluster
 {: #update_cluster_image_policy}
 
 To pull images from the {{site.data.keyword.registrylong}}, `icr.io`, you might need to update your ClusterImagePolicy. From the IBM Cloud CLI, type the following command:
