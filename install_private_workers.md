@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-09-04"
+lastupdated: "2019-12-03"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -55,8 +55,7 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
   
 * Permissions to pull images from gcr.io and DockerHub. Private workers require the tekton-pipelines infrastructure and must be able to pull tekton-releases images from gcr.io and DockerHub to complete the private worker installation.
 
-To pull images from the gcr.io and docker.io container registries, you might need to define a specific Kubernetes ClusterImagePolicy.
-{: tip}
+To pull images from the `gcr.io` and `docker.io` container registries, you might need to define a specific Kubernetes ClusterImagePolicy.{: tip}
   
 ### Self-hosting container images for {{site.data.keyword.deliverypipeline}} Private Worker
 {: #self_host_pw_} 
@@ -81,8 +80,31 @@ Security constraints might prevent you from pulling images from the gcr.io/tekto
 ## Installing a {{site.data.keyword.deliverypipeline}} Private Worker
 {: #install_pw}  
 
-{{site.data.keyword.deliverypipeline}} private workers depend on the tekton and tekton-pipelines infrastructure. Private workers need to  pull tekton-releases images from gcr.io (gcr.io/tekton-releases) and DockerHub (ibmcom/pipeline-private-worker). You might need to define a specific Kubernetes ClusterImagePolicy to pull images from these container registries.
+{{site.data.keyword.deliverypipeline}} private workers depend on the tekton and tekton-pipelines infrastructure. Private workers must pull tekton-releases images from `gcr.io` (`gcr.io/tekton-releases`) and DockerHub (`ibmcom/pipeline-private-worker`). You might need to define a specific Kubernetes ClusterImagePolicy to pull images from these container registries.
 {: tip}
+
+### Defining and updating a Kubernetes ClusterImagePolicy
+{: #define_cluster_image_policy}
+
+To define a specific Kubernetes ClusterImagePolicy for `ibmcom/*` and `gcr.io/tekton-releases`, type the following commands:
+
+```
+cat <<EOF | kubectl apply -f -
+apiVersion: securityenforcement.admission.cloud.ibm.com/v1beta1
+kind: ClusterImagePolicy
+metadata:
+  name: tekton-private-worker
+spec:
+  repositories:
+  - name: "gcr.io/tekton-releases/*"
+    policy:
+  - name: "docker.io/ibmcom/*"
+    policy:
+EOF
+```
+
+### Installing the {{site.data.keyword.deliverypipeline}} Private Worker by using the CLI
+{: #install_pw_cli}
 
 From the {{site.data.keyword.Bluemix_notm}} CLI, type the following command:
 
