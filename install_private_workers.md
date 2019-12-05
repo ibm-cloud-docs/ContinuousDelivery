@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-12-03"
+lastupdated: "2019-12-05"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -55,7 +55,8 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
   
 * Permissions to pull images from gcr.io and DockerHub. Private workers require the tekton-pipelines infrastructure and must be able to pull tekton-releases images from gcr.io and DockerHub to complete the private worker installation.
 
-To pull images from the `gcr.io` and `docker.io` container registries, you might need to define a specific Kubernetes ClusterImagePolicy.{: tip}
+To pull images from the `gcr.io` and `docker.io` container registries, you might need to define a specific Kubernetes ClusterImagePolicy.
+{: tip}
   
 ### Self-hosting container images for {{site.data.keyword.deliverypipeline}} Private Worker
 {: #self_host_pw_} 
@@ -74,7 +75,7 @@ Security constraints might prevent you from pulling images from the gcr.io/tekto
  {: tip}
 
 4. Replace the reference to each image in the installation file with the tag for the new image.
-5. Run the following command to install the private worker by using the specific container registery: `kubectl apply –filename updated_deployment.yaml`.
+5. Run the following command to install the private worker by using the specific container registry: `kubectl apply –filename updated_deployment.yaml`.
 
 
 ## Installing a {{site.data.keyword.deliverypipeline}} Private Worker
@@ -83,10 +84,7 @@ Security constraints might prevent you from pulling images from the gcr.io/tekto
 {{site.data.keyword.deliverypipeline}} private workers depend on the tekton and tekton-pipelines infrastructure. Private workers must pull tekton-releases images from `gcr.io` (`gcr.io/tekton-releases`) and DockerHub (`ibmcom/pipeline-private-worker`). You might need to define a specific Kubernetes ClusterImagePolicy to pull images from these container registries.
 {: tip}
 
-### Defining and updating a Kubernetes ClusterImagePolicy
-{: #define_cluster_image_policy}
-
-To define a specific Kubernetes ClusterImagePolicy for `ibmcom/*` and `gcr.io/tekton-releases`, type the following commands:
+For example, in {{site.data.keyword.cloud_notm}} Private, type the following commands to define a specific Kubernetes ClusterImagePolicy for `ibmcom/*` and `gcr.io/tekton-releases`:
 
 ```
 cat <<EOF | kubectl apply -f -
