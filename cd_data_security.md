@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-10-24"
+lastupdated: "2019-12-13"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -28,7 +28,7 @@ subcollection: ContinuousDelivery
 {: #cd_data_security}  
 
 {{site.data.keyword.contdelivery_full}} hosts your databases in a highly available and secure environment:
-   * Data is encrypted at rest (GPFS, LUKS, and built-in disk) and in flight (HTTPS and SSH). Client and system credentials are stored on encrypted disks.
+   * Data is encrypted at rest (GPFS, LUKS, and built-in disk) and in flight (HTTPS and SSH). Client and system credentials are stored on encrypted disks. Configuration data for tool integrations is encrypted when it is stored in databases that are internal to the {{site.data.keyword.contdelivery_short}} service. 
    * The application and data are configured for high availability.
    * Access to data is limited to only those users who require the data to support and maintain the service.
    
