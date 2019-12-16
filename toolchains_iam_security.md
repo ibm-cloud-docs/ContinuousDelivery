@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-10-11"
+lastupdated: "2019-12-16"
 
 keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
@@ -78,17 +78,17 @@ The following table lists and describes the available actions for toolchains:
 
 You can assign a new user access to all of the toolchains in your resource group.
 
-1. Go to **Manage** &gt; **Access (IAM)**, and select **Users**.
+1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. Click **Invite users**.
 3. Specify the email address of the user that you want to invite.
-4. In the **Access** section, expand the **Services** option.
-5. Choose to assign access to a **Resource group** and select the resource group that contains the toolchains.
-6. Select **Viewer** (or higher) access to provide the user with access to create, view, edit, or delete toolchains within the resource group.
-7. Select the **Toolchain** service.
-8. Select the **Editor** role to provide the user with access to create, view, edit, or delete toolchains within the resource group. Select the **Viewer** role to provide the user with access to view toolchains only or to run delivery pipelines.
-9. Click **Invite users**. 
+4. In the **Assign users additional access** section, click **IAM services**.
+5. Choose to assign access to the **Toolchain** service within **All resource groups**.
+6. In the **Platform access** section, select **Viewer** (or higher) access to provide the user with access to view toolchain service instances from the platform, perform platform actions that are required to configure and operate toolchain service instances, and assign access policies to other users.
+7. In the **Resource group access** section, select the **Editor** role to provide the user with access to create, view, edit, or delete the toolchain service from resource groups. Select the **Viewer** role to provide the user with access to view toolchains only or to run delivery pipelines.
+8. Click **Add**
+9. Click **Invite**. 
 
-Depending on their role, the new user can now work with all of the toolchains within the specified resource group. They can add tool integrations, modify and run pipelines, and use the Eclipse Orion {{site.data.keyword.webide}}.
+Depending on their role, the new user can now work with all of the toolchains within the specified resource groups. They can add tool integrations, modify and run pipelines, and use the Eclipse Orion {{site.data.keyword.webide}}.
 
 
 ## Assigning access to existing users
@@ -96,7 +96,7 @@ Depending on their role, the new user can now work with all of the toolchains wi
 
 You can assign an existing user access to a toolchain in your resource group.
 
-1. Go to **Manage** &gt; **Access (IAM)**, and select **Users**.
+1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. Select the name of the user that you want to assign access.
 3. Click **Access policies**.
 4. Click **Assign access**.
