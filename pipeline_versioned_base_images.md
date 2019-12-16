@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019
-lastupdated: "2019-10-01"
+lastupdated: "2019-12-09"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -436,6 +436,185 @@ If you choose the `Latest` option, the pipeline jobs are run with the current im
 	kubernetes v1.11.0+d4cacc0
 	features: Basic-Auth GSSAPI Kerberos SPNEGO
 
+  ```
+ {: codeblock}
+ 
+   * **Version 2.5**: To view the contents of version 2.5, from the running image, type `default_versions.sh`. This image includes the following tools:
+
+```
+	# node --version
+	v12.13.0
+
+	# npm --version
+	6.12.0
+
+	# jq --version
+	jq-1.6
+
+	# yq --version
+	yq version 2.4.1
+
+	# kubectl version --client
+	Client Version: version.Info{Major:"1", Minor:"16", GitVersion:"v1.16.2", GitCommit:"c97fe5036ef3df2967d086711e6c0c405941e14b", GitTreeState:"clean", BuildDate:"2019-10-15T19:18:23Z", GoVersion:"go1.12.10", Compiler:"gc", Platform:"linux/amd64"}
+
+	# helm version --client
+	Client: &version.Version{SemVer:"v2.16.0", GitCommit:"e13bc94621d4ef666270cfbe734aaabf342a49bb", GitTreeState:"clean"}
+
+	# ibmcloud -version
+	ibmcloud version 0.20.0+5d69177-2019-10-31T07:15:05+00:00
+
+	# ibmcloud plugin list
+	Listing installed plug-ins...
+
+	Plugin Name                            Version   Status   
+	cloud-functions/wsk/functions/fn       1.0.36       
+	container-registry                     0.1.437      
+	container-service/kubernetes-service   0.4.61       
+	doi                                    0.1.5        
+
+
+	# java -version
+	openjdk version "1.8.0_222"
+	OpenJDK Runtime Environment (build 1.8.0_222-8u222-b10-1ubuntu1~16.04.1-b10)
+	OpenJDK 64-Bit Server VM (build 25.222-b10, mixed mode)
+
+	# ant -version
+	Apache Ant(TM) version 1.10.7 compiled on September 1 2019
+
+	# mvn -version
+	Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+	Maven home: /opt/IBM/maven
+	Java version: 1.8.0_222, vendor: Private Build, runtime: /usr/lib/jvm/java-8-openjdk-amd64/jre
+	Default locale: en_US, platform encoding: UTF-8
+	OS name: "linux", version: "4.9.184-linuxkit", arch: "amd64", family: "unix"
+
+	# gradle -version
+
+	Welcome to Gradle 6.0.1!
+
+	Here are the highlights of this release:
+	 - Substantial improvements in dependency management, including
+	   - Publishing Gradle Module Metadata in addition to pom.xml
+	   - Advanced control of transitive versions
+	   - Support for optional features and dependencies
+	   - Rules to tweak published metadata
+	 - Support for Java 13
+	 - Faster incremental Java and Groovy compilation
+	 - New Zinc compiler for Scala
+	 - VS2019 support
+	 - Support for Gradle Enterprise plugin 3.0
+
+	For more details see https://docs.gradle.org/6.0.1/release-notes.html
+
+
+	------------------------------------------------------------
+	Gradle 6.0.1
+	------------------------------------------------------------
+
+	Build time:   2019-11-18 20:25:01 UTC
+	Revision:     fad121066a68c4701acd362daf4287a7c309a0f5
+
+	Kotlin:       1.3.50
+	Groovy:       2.5.8
+	Ant:          Apache Ant(TM) version 1.10.7 compiled on September 1 2019
+	JVM:          1.8.0_222 (Private Build 25.222-b10)
+	OS:           Linux 4.9.184-linuxkit amd64
+
+
+	# oc version
+	oc v3.11.0+0cbc58b
+	kubernetes v1.11.0+d4cacc0
+	features: Basic-Auth GSSAPI Kerberos SPNEGO
+  ```
+ {: codeblock}
+ 
+ * **Version 2.6**: To view the contents of version 2.6, from the running image, type `default_versions.sh`. This image includes the following tools:
+
+```
+	# node --version
+	v12.13.0
+
+	# npm --version
+	6.12.0
+
+	# jq --version
+	jq-1.6
+
+	# yq --version
+	yq version 2.4.1
+
+	# kubectl version --client
+	Client Version: version.Info{Major:"1", Minor:"16", GitVersion:"v1.16.2", GitCommit:"c97fe5036ef3df2967d086711e6c0c405941e14b", GitTreeState:"clean", BuildDate:"2019-10-15T19:18:23Z", GoVersion:"go1.12.10", Compiler:"gc", Platform:"linux/amd64"}
+
+	# helm version --client
+	Client: &version.Version{SemVer:"v2.16.0", GitCommit:"e13bc94621d4ef666270cfbe734aaabf342a49bb", GitTreeState:"clean"}
+
+	# ibmcloud -version
+	ibmcloud version 0.20.0+5d69177-2019-10-31T07:15:05+00:00
+
+	# ibmcloud plugin list
+	Listing installed plug-ins...
+
+	Plugin Name                            Version   Status   
+	container-registry                     0.1.437      
+	container-service/kubernetes-service   0.4.61       
+	doi                                    0.1.5        
+	schematics                             1.4.2        
+	cloud-functions/wsk/functions/fn       1.0.36       
+
+
+	# java -version
+	openjdk version "1.8.0_222"
+	OpenJDK Runtime Environment (build 1.8.0_222-8u222-b10-1ubuntu1~16.04.1-b10)
+	OpenJDK 64-Bit Server VM (build 25.222-b10, mixed mode)
+
+	# ant -version
+	Apache Ant(TM) version 1.10.7 compiled on September 1 2019
+
+	# mvn -version
+	Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+	Maven home: /opt/IBM/maven
+	Java version: 1.8.0_222, vendor: Private Build, runtime: /usr/lib/jvm/java-8-openjdk-amd64/jre
+	Default locale: en_US, platform encoding: UTF-8
+	OS name: "linux", version: "4.9.184-linuxkit", arch: "amd64", family: "unix"
+
+	# gradle -version
+
+	Welcome to Gradle 6.0.1!
+
+	Here are the highlights of this release:
+	 - Substantial improvements in dependency management, including
+	   - Publishing Gradle Module Metadata in addition to pom.xml
+	   - Advanced control of transitive versions
+	   - Support for optional features and dependencies
+	   - Rules to tweak published metadata
+	 - Support for Java 13
+	 - Faster incremental Java and Groovy compilation
+	 - New Zinc compiler for Scala
+	 - VS2019 support
+	 - Support for Gradle Enterprise plugin 3.0
+
+	For more details see https://docs.gradle.org/6.0.1/release-notes.html
+
+
+	------------------------------------------------------------
+	Gradle 6.0.1
+	------------------------------------------------------------
+
+	Build time:   2019-11-18 20:25:01 UTC
+	Revision:     fad121066a68c4701acd362daf4287a7c309a0f5
+
+	Kotlin:       1.3.50
+	Groovy:       2.5.8
+	Ant:          Apache Ant(TM) version 1.10.7 compiled on September 1 2019
+	JVM:          1.8.0_222 (Private Build 25.222-b10)
+	OS:           Linux 4.9.184-linuxkit amd64
+
+
+	# oc version
+	oc v3.11.0+0cbc58b
+	kubernetes v1.11.0+d4cacc0
+	features: Basic-Auth GSSAPI Kerberos SPNEGO
   ```
  {: codeblock}
  
