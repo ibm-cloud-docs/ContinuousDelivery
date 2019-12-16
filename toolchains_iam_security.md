@@ -85,7 +85,7 @@ You can assign a new user access to all of the toolchains in your resource group
 5. Choose to assign access to the **Toolchain** service within **All resource groups**.
 6. In the **Platform access** section, select **Viewer** (or higher) access to provide the user with access to view toolchain service instances from the platform, perform platform actions that are required to configure and operate toolchain service instances, and assign access policies to other users.
 7. In the **Resource group access** section, select the **Editor** role to provide the user with access to create, view, edit, or delete the toolchain service from resource groups. Select the **Viewer** role to provide the user with access to view toolchains only or to run delivery pipelines.
-8. Click **Add**
+8. Click **Add**.
 9. Click **Invite**. 
 
 Depending on their role, the new user can now work with all of the toolchains within the specified resource groups. They can add tool integrations, modify and run pipelines, and use the Eclipse Orion {{site.data.keyword.webide}}.
