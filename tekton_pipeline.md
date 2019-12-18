@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-10-22"
+lastupdated: "2019-12-16"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -50,7 +50,7 @@ The Tekton Pipelines project is an alpha release. You must update your pipeline 
 {{site.data.keyword.contdelivery_full}} provides two types of delivery pipelines that you can use to build, test, and deploy your applications.
 
 * **Classic**: Classic delivery pipelines are created graphically, with the status embedded in the pipeline diagram. These pipelines can run on shared workers in the cloud or on private workers that run on your own Kubernetes cluster. 
-* **Tekton**: Tekton delivery pipelines are created within yaml files that define pipelines as a set of Kubernetes resources. You can edit those yaml files to change the behaviour of a pipeline. Tekton pipelines currently run on private workers that run on your own cluster. The Tekton integration provides a dashboard that you can use to view the output of Tekton pipeline runs. It also provides mechanisms for identifying the pipeline definitions repo, the pipeline triggers, where the pipeline runs, and the storage and retrieval of properties.
+* **Tekton**: Tekton delivery pipelines are created within yaml files that define pipelines as a set of Kubernetes resources. You can edit those yaml files to change the behaviour of a pipeline. Tekton pipelines can run on private workers that run on your own cluster. They can also run on IBM-managed workers on the public cloud. The Tekton integration provides a dashboard that you can use to view the output of Tekton pipeline runs. It also provides mechanisms for identifying the pipeline definitions repo, the pipeline triggers, where the pipeline runs, and the storage and retrieval of properties.
 
 Both types of pipelines isolate jobs or steps from one another by running in separate containers, and by using an image that you choose. Classic and Tekton pipelines both exist in a [toolchain](https://cloud.ibm.com/devops/toolchains){:external} and depend on that toolchain to add more tool integrations that are used in the build, test, and deployment process.
 {: tip}
@@ -102,9 +102,16 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
  The private worker must be defined in the same toolchain as your Tekton pipeline.
  {: important}
 
-1. In the **Triggers** tab, click **Add trigger** to create either a manual or a Git repository trigger, and then associate that trigger with an event listener. Manual triggers run when you click the **Run** pipeline button and select the trigger. Git repository triggers run when the specified Git event type occurs for the specified Git repo and branch. The list of available event listeners is populated with the listeners that are defined in the pipeline code repo.
+1. In the **Triggers** tab, click **Add trigger** to create a manual, timed, or Git repository trigger, and then associate that trigger with an event listener. Manual triggers run when you click the **Run** pipeline button and select the trigger. Timed triggers run at a scheduled time that is defined by the [CRON](http://crontab.org/){:external} value. Git repository triggers run when the specified Git event type occurs for the specified Git repo and branch. The list of available event listeners is populated with the listeners that are defined in the pipeline code repo.
  
  Triggers are based on [Tekton trigger definitions](https://github.com/tektoncd/triggers){:external}. Git respository triggers use the event listener that they are mapped to to extract information from the incoming event payload and create Kubernetes resources. These resources are applied to a Tekton `PipelineRun` resource.
+ {: tip}
+
+ The CRON expression for timed triggers is based on the [UNIX crontab syntax](http://crontab.org/){:external} and is a sequence of five time and date fields: `minute`, `hour`, `day of the month`, `month`, and `day of the week`. These fields are separated by spaces in the format `X X X X X`. The following examples show strings that use various timed frequencies.
+   * `* * * * *` - The trigger runs every minute.
+   * `0 * * * *` - The trigger runs at the start of every hour.
+   * `0 9 * 1 MON-FRI` - The trigger runs at 9:00 AM every weekday in January.
+   * `0 * * NOV,DEC 1` - The trigger runs every hour on Mondays during November and December.
  {: tip}
 
 1. In the **Environment properties** tab, click **Add property** and define your own environment property. For example, you can define an `API_KEY` property that passes an API key that is used by all of the scripts in the pipeline to access {{site.data.keyword.cloud_notm}} resources. You can add the following types of properties:
