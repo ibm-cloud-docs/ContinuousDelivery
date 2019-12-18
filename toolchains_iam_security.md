@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2019
-lastupdated: "2019-12-16"
+lastupdated: "2019-12-17"
 
 keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
@@ -98,14 +98,12 @@ You can assign an existing user access to a toolchain in your resource group.
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. Select the name of the user that you want to assign access.
-3. Click **Access policies**.
-4. Click **Assign access**.
-5. Select **Assign access within a resource group** to assign access to all toolchains within the resource group.
-6. Choose to assign access to the resource group that contains the toolchains.
-7. Select **Viewer** (or higher) access to provide the user with access to create, view, edit, or delete toolchains within the resource group.
-8. Select the **Toolchain** service.
-9. Select the **Editor** role to provide the user with access to create, view, edit, or delete toolchains within the resource group. Select the **Viewer** role to provide the user with access to view toolchains only or to run delivery pipelines.
-10. Click **Assign**.
+3. In the **Assign users additional access** section, click **IAM services**.
+4. Choose to assign access to the **Toolchain** service within **All resource groups**.
+5. In the **Platform access** section, select **Viewer** (or higher) access to provide the user with access to view toolchain service instances from the platform, perform platform actions that are required to configure and operate toolchain service instances, and assign access policies to other users.
+6. In the **Resource group access** section, select the **Editor** role to provide the user with access to create, view, edit, or delete the toolchain service from resource groups. Select the **Viewer** role to provide the user with access to view toolchains only or to run delivery pipelines.
+7. Click **Add**.
+8. Click **Invite**. 
 
 Depending on their role, the user can now work with all of the toolchains within the specified resource group. They can add tool integrations, modify and run pipelines, and use the Eclipse Orion {{site.data.keyword.webide}}.
 
