@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-12-20"
 
-keywords: code quality, risk management, interactions of your team
+keywords: code quality, risk management, interactions of your team, devops insights
 
 subcollection: ContinuousDelivery
 
@@ -32,7 +32,5 @@ With {{site.data.keyword.DRA_full}}, you can maintain and improve the quality of
 In addition to **deployment gates**, {{site.data.keyword.DRA_short}} provides more capabilities to improve your overall DevOps process.  
 
 **Developer Insights** provides a comprehensive way to explore your project’s development maturity. You can identify files with high error proneness and get a compliance view of the project against Developer practices.
-	
-**Team Dynamics** uses social coding analysis to help you learn how your team collaborates and understand how it can work better.
 
 For more information, see [Getting started tutorial](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).
