@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-11-05"
+lastupdated: "2019-12-20"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Alert Notification, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Jenkins, JIRA, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
 
@@ -817,9 +817,7 @@ Configure JIRA to plan, track, and deliver quality code:
 
 ### Learn more about JIRA
 
-To learn more about JIRA, see the [JIRA article](https://www.ibm.com/cloud/garage/content/code/tool_jira/){:external} on the IBM Cloud Garage Method or take this tutorial:
-
-  * [Gain insights by using the "Developer Insights and Team Dynamics with GitHub and JIRA" toolchain](https://www.ibm.com/cloud/garage/tutorials/gain-insights-developer-insights-and-team-dynamics-with-github-and-jira-toolchain){:external}
+To learn more about JIRA, see the [JIRA article](https://www.ibm.com/garage/method/practices/code/tool_jira){:external} on the IBM Cloud Garage Method.
 
 
 ## Configuring Nexus
