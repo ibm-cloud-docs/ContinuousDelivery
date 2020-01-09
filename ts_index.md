@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-10-15"
+  years: 2015, 2020
+lastupdated: "2020-01-08"
 
 keywords: GitHub tool integration, error message, Lite plan, toolchains, Cloud Foundry orgs, resource groups, IBM Cloud, Web IDE, Live Sync, pipeline jobs
 
@@ -17,6 +17,7 @@ subcollection: ContinuousDelivery
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:faq: data-hd-content-type='faq'}
+{:support: data-reuse='support'}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -34,6 +35,7 @@ Get answers to frequently asked questions about using {{site.data.keyword.contde
 ## Why does the Toolchains page show that the {{site.data.keyword.contdelivery_short}} service Lite plan is exceeded?
 {: #plan_exceeded}
 {: faq}
+{: support}
 
 {{site.data.keyword.contdelivery_short}} offers two plans: Lite and Professional. If you have the {{site.data.keyword.contdelivery_short}} Lite plan, you can use toolchains for free, up to the limits of the plan. The error message indicates that you exceeded one or more limits of the Lite plan. For example, you might exceed the plan if you have too many authorized users who are associated with the {{site.data.keyword.contdelivery_short}} service instance, or if you ran the maximum number of {{site.data.keyword.deliverypipeline}} jobs. For more information about the terms of your plan, see [Plan limitations and usage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
@@ -41,6 +43,7 @@ Get answers to frequently asked questions about using {{site.data.keyword.contde
 ## My {{site.data.keyword.contdelivery_short}} service states that Lite plan services are deleted after 30 days of inactivity. What does inactivity mean?
 {: #plan_inactivity}
 {: faq}
+{: support}
 
 An instance of the {{site.data.keyword.contdelivery_short}} service is considered active when one or more of the toolchains within the same resource group or Cloud Foundry organization (org) are active. A toolchain is considered active if users interact with it by way of the user interface, delivery pipeline jobs are triggered, repositories that are managed by {{site.data.keyword.gitrepos}} are accessed, or Eclipse Orion {{site.data.keyword.webide}} workspaces are in use. To be considered inactive, all of these conditions must be absent for all of the toolchains that are associated with the {{site.data.keyword.contdelivery_short}} service, for 30 days.
 
@@ -48,6 +51,7 @@ An instance of the {{site.data.keyword.contdelivery_short}} service is considere
 ## I created a toolchain, why does the Toolchains page show that a Continuous Delivery service is required?
 {: #service_required_resource_group}
 {: faq}
+{: support}
 
 The terms of the plan for the {{site.data.keyword.contdelivery_short}} service instance that is in the same resource group or org as the toolchain manages the use of some of the tool integrations ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}}, and {{site.data.keyword.gitrepos}}) that are contained in the service. The error message indicates that the resource group or org doesn't contain the required instance of the {{site.data.keyword.contdelivery_short}} service. For more information about the terms of your plan, see [Plan limitations and usage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
@@ -55,6 +59,7 @@ The terms of the plan for the {{site.data.keyword.contdelivery_short}} service i
 ## I updated information for a toolchain from a Cloud Foundry org, why don't I see my changes in the toolchain?
 {: #updates_in_cloud_foundry}
 {: faq}
+{: support}
 
 When you update the toolchain information directly from Cloud Foundry, it might take a few minutes for the {{site.data.keyword.contdelivery_short}} service to refresh and show your changes. For example, if you add or remove a user from a Cloud Foundry org, it might take a few minutes for {{site.data.keyword.contdelivery_short}} to discover that there is a new user and to allow that user to access the toolchain.
 
@@ -73,6 +78,7 @@ You can either create the toolchain in a resource group or create the toolchain 
 ## How do I move my toolchain from a Cloud Foundry org to a resource group?
 {: #toolchain_move_to_resource_group}
 {: faq}
+{: support}
 
 A feature to automatically migrate toolchains from a Cloud Foundry org to a resource group is not available yet. Instead, you can manually create the toolchain again in a resource group, and then remove the original toolchain from the Cloud Foundry org.
 
@@ -152,6 +158,7 @@ The {{site.data.keyword.webide}} provides extensive tools and support for JavaSc
 ## How do I find the status of {{site.data.keyword.Bluemix_notm}} and the {{site.data.keyword.contdelivery_short}} service?
 {: #toolchains_load}
 {: faq}
+{: support}
 
 Check the {{site.data.keyword.Bluemix_notm}} Status page to determine whether known issues are affecting the {{site.data.keyword.Bluemix_notm}} platform and the major services in {{site.data.keyword.Bluemix_notm}}.
 
@@ -166,6 +173,7 @@ For more information about the {{site.data.keyword.Bluemix_notm}} Status page, s
 ## How do I pass artifacts between pipeline jobs?
 {: #artifacts_pipeline_jobs}
 {: faq}
+{: support}
 
 Because all pipeline jobs in a stage receive the same stage input, you cannot pass artifacts between jobs that are in the same stage. However, build jobs generate artifacts that jobs in other stages can use. To pass artifacts between two jobs, move each job into a separate stage. For more information about pipeline jobs, see [Jobs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs).
 
@@ -173,6 +181,7 @@ Because all pipeline jobs in a stage receive the same stage input, you cannot pa
 ## Is there a maximum time limit that my pipeline jobs can run?
 {: #pipeline_jobs_time_limit}
 {: faq}
+{: support}
 
 Each pipeline job can run for a maximum of 60 minutes. If a job exceeds this time limit, the job fails. Examine whether the work that the pipeline job does can be divided into smaller steps. You can divide the pipeline job into several shorter pipeline jobs that run for less than 60 minutes.
 
