@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2015, 2019
-lastupdated: "2019-12-20"
+  years: 2015, 2020
+lastupdated: "2020-01-08"
 
 keywords: IBM Cloud Public, IBM Cloud Dedicated, Use Developer Insights, toolchains, toolchain templates, toolchain tutorials, available regions, tools 
 
@@ -20,10 +20,13 @@ subcollection: ContinuousDelivery
 {:note: .note}
 {:important: .important}
 {:download: .download}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 
 # Toolchain availability, templates, and tutorials  
-{: #cd_about}  
+{: #cd_about}
+{: support}
 
 Toolchains are available on {{site.data.keyword.Bluemix_notm}} Public and Dedicated. You can use a template as a starting point to create a toolchain.
 {:shortdesc}
