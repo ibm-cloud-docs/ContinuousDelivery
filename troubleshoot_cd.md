@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-10-15"
+  years: 2015, 2020
+lastupdated: "2020-01-08"
 
 keywords: troubleshoot, GitHub integration, Git Repos and Issue Tracking integration, GitLab project, Delivery Pipeline, toolchains, tool integrations, Live Edit, Web IDE
 
@@ -22,6 +22,7 @@ subcollection: ContinuousDelivery
 {:note:.deprecated}
 {:tip: .tip}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
+{:support: data-reuse='support'}
 
 # Troubleshooting for {{site.data.keyword.contdelivery_short}}
 {: #troubleshoot-cd}
@@ -110,6 +111,7 @@ For more information about configuring a GitLab tool integration, see [Configuri
 ## Why can't I create a toolchain from a template that uses a private repo in a different region?
 {: troubleshoot-cd-grit-integration-private}
 {: troubleshoot}
+{: support}
 
 The toolchain template that you are using references a private {{site.data.keyword.gitrepos}} repo.
 
@@ -212,6 +214,7 @@ You can use any of the following methods to resolve this problem:
 ## Why isn't the pipeline created properly when I create a toolchain from the template that I'm writing? 
 {: troubleshoot-cd-pipeline-creation}
 {: troubleshoot}
+{: support}
 
 Your pipeline might be missing resources such as jobs and stages due to an error in your pipeline.yaml definition.
 
@@ -270,6 +273,7 @@ For more information about accessing the exact version of kubectl that you requi
 ## Why is my {{site.data.keyword.deliverypipeline}} Private Worker inactive?
 {: #troubleshoot-pw-inactive}
 {: troubleshoot}
+{: support}
 
 Private workers within a pool of workers can be in one of the following states:
 
@@ -290,6 +294,7 @@ To activate your {{site.data.keyword.deliverypipeline}} private worker, [install
 ## I tried to install support for {{site.data.keyword.deliverypipeline}} Private Workers in Kubernetes. Why did the installation fail?
 {: #troubleshoot-pw-install}
 {: troubleshoot}
+{: support}
 
 If there is an issue with the version of kubectl that you are running on the client machine, the {{site.data.keyword.deliverypipeline}} Private Worker installation fails. 
 
@@ -308,6 +313,7 @@ Install the latest version of kubectl on the client machine.
 ## Why can't I pull images for tekton-releases or pipeline-private-worker from some container registries?
 {: #troubleshoot-pw-images}
 {: troubleshoot}
+{: support}
 
 Cluster security prevents you from pulling down images. 
 
@@ -332,6 +338,7 @@ Make sure that the policy for pulling images in your cluster supports pulling im
 ## I configured a tool integration for my toolchain, why wasn't it configured?
 {: troubleshoot-tool-integration-error}
 {: troubleshoot}
+{: support}
 
 If an error occurs during the setup process or if the communication between the toolchain and the tool does not complete properly, the configuration fails.
 
@@ -357,6 +364,7 @@ You can try to configure the tool integration again:
 ## Why can't I add {{site.data.keyword.contdelivery_short}} to a Cloud Foundry org?
 {: troubleshoot-resource_groups}
 {: troubleshoot}
+{: support}
 
 You can no longer create instances of the {{site.data.keyword.contdelivery_short}} service in Cloud Foundry orgs. 
 
@@ -377,6 +385,7 @@ Create your toolchain again in resource groups, and then remove the original too
 ## Why can't I delete toolchains by using the `ibmcloud` CLI?
 {: troubleshoot-delete_toolchains_cli}
 {: troubleshoot}
+{: support}
 
 Currently, you can't delete toolchains by using the ibmcloud resource CLI. 
 
