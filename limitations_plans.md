@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-10-15"
+  years: 2016, 2020
+lastupdated: "2020-01-08"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -15,10 +15,14 @@ subcollection: ContinuousDelivery
 {:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 
 # Plan limitations and usage
 {: #limitations_usage}
+{: help} 
+{: support}
 
 The use of {{site.data.keyword.contdelivery_full}} is limited to the building, deploying, testing, and ongoing operations of applications on the {{site.data.keyword.Bluemix_notm}} platform or other compatible platform-as-a-service or infrastructure-as-a-service offerings.
 
@@ -40,6 +44,7 @@ You can have one Lite service only per account. It is recommended that you use t
  * Users who interact with issues, issues boards, source code, or other artifacts in a {{site.data.keyword.gitrepos}} repository (repo).
  * Users who manipulate, trigger (either directly in the user interface or indirectly by committing to a repo), or view the status of a delivery pipeline.
  * Users who interact with the Eclipse Orion {{site.data.keyword.webide}}.
+ * Users who interact with {{site.data.keyword.DRA_short}}.
  
 The Lite plan is subject to limits. For more information about the Lite plan and the Professional plan, see the [service catalog](https://cloud.ibm.com/catalog/services/continuous-delivery){:external}.
 {: tip}
