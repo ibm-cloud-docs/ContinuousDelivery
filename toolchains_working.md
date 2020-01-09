@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2019
+  years: 2015, 2020
 
-lastupdated: "2019-12-19"
+lastupdated: "2020-01-08"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -21,9 +21,13 @@ subcollection: ContinuousDelivery
 {:note: .note}
 {:important: .important}
 {:download: .download}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # Creating toolchains
 {: #toolchains_getting_started}
+{: help} 
+{: support}
 
 A *toolchain* is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
 {: shortdesc}
