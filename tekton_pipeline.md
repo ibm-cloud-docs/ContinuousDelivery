@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-12-16"
+  years: 2020
+lastupdated: "2020-01-14"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -52,6 +52,9 @@ The Tekton Pipelines project is an alpha release. You must update your pipeline 
 * **Classic**: Classic delivery pipelines are created graphically, with the status embedded in the pipeline diagram. These pipelines can run on shared workers in the cloud or on private workers that run on your own Kubernetes cluster. 
 * **Tekton**: Tekton delivery pipelines are created within yaml files that define pipelines as a set of Kubernetes resources. You can edit those yaml files to change the behaviour of a pipeline. Tekton pipelines can run on private workers that run on your own cluster. They can also run on IBM-managed workers on the public cloud. The Tekton integration provides a dashboard that you can use to view the output of Tekton pipeline runs. It also provides mechanisms for identifying the pipeline definitions repo, the pipeline triggers, where the pipeline runs, and the storage and retrieval of properties.
 
+When you use IBM-managed workers, only one Tekton pipeline can run per pipeline at a time. When you use private workers, multiple Tekton pipelines can run concurrently.
+{: important}
+
 Both types of pipelines isolate jobs or steps from one another by running in separate containers, and by using an image that you choose. Classic and Tekton pipelines both exist in a [toolchain](https://cloud.ibm.com/devops/toolchains){:external} and depend on that toolchain to add more tool integrations that are used in the build, test, and deployment process.
 {: tip}
 
@@ -67,6 +70,9 @@ Before you add and run a Tekton pipeline, make sure that you have the following 
 
   * A repo tool integration (such as the GitHub tool integration) that contains your Tekton pipeline code, including a Tekton yaml file. For more information about getting started with Tekton pipelines, see [Tekton Pipelines](https://github.com/tektoncd/pipeline/tree/v0.8.0/docs#tekton-pipelines){:external}.
   * A {{site.data.keyword.deliverypipeline}} Private Worker tool integration that references your Kubernetes cluster. For more information about private workers, see [Installing Delivery Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
+
+The toolchain and the {{site.data.keyword.deliverypipeline}} Private Worker tool integration must be in the same region. 
+{: important}
 
 ## Creating a {{site.data.keyword.deliverypipeline}} for Tekton 
 {: #create_tekton_pipeline}
@@ -112,6 +118,8 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    * `0 * * * *` - The trigger runs at the start of every hour.
    * `0 9 * 1 MON-FRI` - The trigger runs at 9:00 AM every weekday in January.
    * `0 * * NOV,DEC 1` - The trigger runs every hour on Mondays during November and December.
+ 
+ You can access the webhook payload that is delivered to a Git trigger from your Tekton pipeline resources. Although the exact fields are repo-specific, the general syntax for the webhook payload is `$(event.payloadFieldName)`.
  {: tip}
 
 1. In the **Environment properties** tab, click **Add property** and define your own environment property. For example, you can define an `API_KEY` property that passes an API key that is used by all of the scripts in the pipeline to access {{site.data.keyword.cloud_notm}} resources. You can add the following types of properties:
