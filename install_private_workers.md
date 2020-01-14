@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-12-05"
+  years: 2020
+lastupdated: "2020-01-14"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -103,6 +103,9 @@ EOF
 
 ### Installing the {{site.data.keyword.deliverypipeline}} Private Worker by using the CLI
 {: #install_pw_cli}
+
+The following steps are intended for Administrators who are preparing environments and private workers for multiple people or teams. To install private workers for your own use, see [Setting up a Delivery Pipeline Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers#set_up_private_worker).
+{: tip}
 
 From the {{site.data.keyword.Bluemix_notm}} CLI, type the following command:
 
