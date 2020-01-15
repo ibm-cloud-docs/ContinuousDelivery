@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years: 2017, 2019
+  years: 2017, 2020
 
-lastupdated: "2019-08-20"
+lastupdated: "2019-01-09"
 
-keywords: continuous delivery practices, DevOps practices, IBM Cloud Garage Method, learning resources
+keywords: continuous delivery practices, DevOps practices, IBM Cloud Garage Method, learning resources, DevOps Insights
 
 subcollection: ContinuousDelivery
 
@@ -62,3 +62,12 @@ For more tutorials, see the [Learning Lab](https://www.ibm.com/cloud/garage/cate
 [Become an IBM Cloud Garage Method advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate){:external}. Take this advanced course to get experience with the practices and tools from the Cloud Garage Method.
 
 To see all of the Cloud Garage Method learning materials, see the [Cloud Garage Method Learning Lab](https://www.ibm.com/cloud/garage/category/courses){:external}.
+
+## {{site.data.keyword.DRA_short}} tutorials
+{: #gm_di_tutorials}
+
+[Integrate DevOps Insights with an IBM Continuous Delivery pipeline](https://www.ibm.com/cloud/garage/tutorials/integrate-devops-insights-with-cd-pipeline){:external}. Learn how to configure a CD pipeline to send, build, and deploy information to {{site.data.keyword.DRA_short}} and define policies that analyze deployment risk.
+
+[Integrate DevOps Insights with Jenkins](https://www.ibm.com/cloud/garage/tutorials/use-jenkins-plugin-to-post-data-to-devops-insights){:external}. Learn how to set up and use the {{site.data.keyword.DRA_short}} Jenkins plug-in to publish build, test, and deployment data to {{site.data.keyword.DRA_short}}.
+
+[Integrate DevOps Insights using the IBM Cloud CLI](https://www.ibm.com/cloud/garage/tutorials/use-cli-to-post-data-to-devops-insights){:external}. Learn how to set up the environment and use the CLI to publish build, test, and deployment data to {{site.data.keyword.DRA_short}}.
