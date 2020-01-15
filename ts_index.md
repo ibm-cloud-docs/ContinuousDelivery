@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-08"
+lastupdated: "2020-01-13"
 
 keywords: GitHub tool integration, error message, Lite plan, toolchains, Cloud Foundry orgs, resource groups, IBM Cloud, Web IDE, Live Sync, pipeline jobs
 
@@ -30,7 +30,8 @@ subcollection: ContinuousDelivery
 {: #ts_cd}
 
 Get answers to frequently asked questions about using {{site.data.keyword.contdelivery_full}}.
-{:shortdesc}
+{:shortdesc} 
+
 
 ## Why does the Toolchains page show that the {{site.data.keyword.contdelivery_short}} service Lite plan is exceeded?
 {: #plan_exceeded}
@@ -191,3 +192,66 @@ Each pipeline job can run for a maximum of 60 minutes. If a job exceeds this tim
 {: faq}
 
 Pipeline secure properties are encrypted by using AES-128, and decrypted immediately before they are passed to your pipeline script. These properties are also masked by using asterisks in the properties user interface and in your pipeline log files. Before data is written to the log file for your pipeline job, it is scanned for exact matches to all of the values in the pipeline secure properties. If a match is found, it is masked by using asterisks. Be careful when you are working with secure properties and log files since only exact matches are masked. 
+
+
+## Can {{site.data.keyword.DRA_short}} be installed and run in an on-premises environment?
+{: #run-on-prem}
+{: faq}
+
+{{site.data.keyword.DRA_short}} isn't available for an on-premises environment. It's only available in {{site.data.keyword.IBM_notm}} Public Cloud.
+
+
+## My Jenkins or Travis CI is running in an on-premises environment or in another public cloud. Can I still publish build records, test records, deployment records to DevOps Insights, and use quality gates?
+{: #CI-on-prem}
+{: faq}
+
+Yes, it doesn't matter from where your pipeline tool is running.
+
+
+## I am deploying my applications to on-premises environments or other public clouds. Can I publish build records, test records, deployment records to {{site.data.keyword.DRA_short}}, and use quality gates for these applications? 
+{: #app-on-prem}
+{: faq}
+
+Yes, it doesn't matter where your applications are deployed.
+
+
+## Why can't I see my app on the Quality Dashboard page?
+{: #app-quality-dashboard}
+{: faq}
+
+For an application to show up in the Quality Dashboard page, it must have a build record for the selected branch, and at least one test record for that build. For more information about build and test records, see [Integrating your {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-setting-values-cli).
+
+You can find published build records on the Build Frequency page. For more information, see [Viewing the build frequency](/docs/ContinuousDelivery?topic=ContinuousDelivery-publish-build-cli#build-frequency-cli).
+
+
+## How do I delete {{site.data.keyword.DRA_short}}?
+{: #delete-insights-faq}
+{: faq}
+
+Deleting your tool integration deletes all data that is associated with that toolchain. For more information about how to delete your {{site.data.keyword.DRA_short}} instance, see [Deleting a DevOps Insights tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-deleting_data).  
+
+
+## Can I delete build, test, and deploy data from {{site.data.keyword.DRA_short}}?
+{: #delete-specific-data}
+{: faq}
+
+You can delete data sets from for toolchain, environment, application, and for a branch. For more information about how to delete a specific data set, see [Deleting {{site.data.keyword.DRA_short}} data sets](/docs/ContinuousDelivery?topic=ContinuousDelivery-deleting_data).
+
+
+## How do I find my toolchain ID?
+{: #find-toolchain-ID}
+{: faq}
+
+You can find your toolchain ID in the URL of your selected toolchain tool. For more information, see [Identifying your toolchain ID](/docs/ContinuousDelivery?topic=ContinuousDelivery-aggregating-multiple-sources). 
+
+
+## Do I need a {{site.data.keyword.contdelivery_short}} service instance to use {{site.data.keyword.DRA_short}}?
+{: #cd-for-di}
+
+Yes. To use {{site.data.keyword.DRA_short}}, you must create a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery) if you don't already have one. For more information, see [Scope of a service instance](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#service_scope). 
+
+
+## How am I billed for {{site.data.keyword.DRA_short}}?
+{: #billed-devops-insights}
+
+You are not billed for {{site.data.keyword.DRA_short}} as an individual service. {{site.data.keyword.DRA_short}} counts toward your {{site.data.keyword.contdelivery_short}} limitations and usage. A user of {{site.data.keyword.DRA_short}} is added to your {{site.data.keyword.contdelivery_short}} authorized users. For more information, see [Authorized users](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#authorized_users). 

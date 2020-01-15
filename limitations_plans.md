@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-01-08"
+lastupdated: "2020-01-13"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -29,11 +29,11 @@ The use of {{site.data.keyword.contdelivery_full}} is limited to the building, d
 ## Scope of a service instance
 {: #service_scope}
 
-You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){:external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, and Eclipse Orion {{site.data.keyword.webide}} tool integrations. A service instance might belong to either a [resource group](/docs/services/resources?topic=resources-rgs) or to an {{site.data.keyword.Bluemix_notm}} organization (org). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group or org meters and governs your usage of all of the toolchains in the same region and resource group or org.
+You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){:external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, {{site.data.keyword.DRA_short}}, and Eclipse Orion {{site.data.keyword.webide}} tool integrations. A service instance might belong to either a [resource group](/docs/services/resources?topic=resources-rgs) or to an {{site.data.keyword.Bluemix_notm}} organization (org). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group or org meters and governs your usage of all of the toolchains in the same region and resource group or org.
 
 You can create *new* instances of the {{site.data.keyword.contdelivery_short}} service only in resource groups. If you are missing a {{site.data.keyword.contdelivery_short}} service for an org that contains toolchains, you can either create the toolchains again in a resource group or contact [IBM Support](https://cloud.ibm.com/unifiedsupport){:external} for help. The migration of toolchains from orgs to resource groups is not currently supported.
 
-You can have one Lite service only per account. It is recommended that you use the Professional plan if you want to work with toolchains in multiple orgs or resource groups, or within multiple regions.
+You can have only one Lite service per account. It is recommended that you use the Professional plan if you want to work with toolchains in multiple orgs or resource groups, or within multiple regions.
 {: tip}
 
 ## Authorized users
@@ -75,7 +75,7 @@ The method that you use to organize toolchains within resource groups directly i
 You can manage the list of authorized users on the **Manage** tab within the  {{site.data.keyword.contdelivery_short}} service instance.
 
 1. Go to the [Resource list](https://cloud.ibm.com/resources){:external} for your {{site.data.keyword.Bluemix_notm}} account.
-2. In the **Name** column, in the filter text box, type **Continuous Delivery** to show your existing services.
+2. In the **Name** column, in the filter text box, type `Continuous Delivery` to view your existing services.
 3. For each service, click the hyperlink in the **Name** column.
 4. In the **Manage** tab, you can view, add, or remove users from the list of Authorized Users, as needed.
 

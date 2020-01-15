@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>compass_16</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="compass_16" transform="translate(1.000000, 1.000000)" fill-rule="nonzero">
+            <path d="M7.99993751,-0.499999996 C12.6949102,-0.500586794 16.5014132,3.30496485 16.502,7.99993751 C16.5025868,12.6949102 12.6970351,16.5014132 8.00206249,16.502 C3.30708984,16.5025868 -0.499413198,12.6970351 -0.499999996,8.00206249 C-0.500586794,3.30708984 3.30496485,-0.499413198 7.99993751,-0.499999996 Z" id="Shape" stroke="#30588C"></path>
+            <polygon id="Path" fill="#30588C" points="9.5 9.5 3 13 6.5 6.5 13 3"></polygon>
+            <circle id="Oval" fill="#FFFFFF" cx="8" cy="8" r="1"></circle>
+        </g>
+    </g>
+</svg>

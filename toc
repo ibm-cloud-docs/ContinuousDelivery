@@ -14,15 +14,23 @@ Continuous Delivery
     limitations_plans.md
 
     {: .topicgroup}
+    DevOps Insights
+        di_working.md
+        overview_data_aggregation.md
+        overview_observe_trends.md
+        overview_deploy_environment.md
+        overview_quality_gate.md
+
+    {: .topicgroup}
     Related links
-        [IBM Cloud DevOps Insights](/services/DevOpsInsights/DevOpsInsights-getting-started)
         [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    ha-dr.md
+
     {: .topicgroup}
     Toolchains
-        toolchains_about.md
         toolchains_working.md
         toolchains_using.md
         toolchains_integrations.md
@@ -35,7 +43,6 @@ Continuous Delivery
         pipeline_working.md
         tekton_pipeline.md
         pipeline_build_deploy.md
-        pipeline_deploy_var.md
         pipeline_versioned_base_images.md
         pipeline_custom_docker_images.md
         install_private_workers.md
@@ -49,8 +56,50 @@ Continuous Delivery
 
     git_working.md
     git_locally.md
-    di_working.md
-    
+
+     {: .topicgroup}
+     DevOps Insights
+        view_pipeline_activity.md
+        defining_policies.md
+        data_sets.md
+        deleting_data.md
+        add_devops_insights.md
+        tagging.md
+        migration_guide.md
+        aggregate_mult_sources.md
+        publish_test_data.md
+
+    {: .topicgroup}
+    Using the IBM Cloud CLI to integrate IBM Continuous Delivery Pipeline with DevOps Insights
+        cli_setting_values.md
+        cli_publish_build.md
+        cli_publish_deploy.md
+        cli_publish_test.md 
+        cli_evaluate_gates.md
+
+    {: .topicgroup}
+    Using idra (deprecated) to integrate IBM Continuous Delivery Pipeline with DevOps Insights
+        idra_publish_build.md
+        idra_publish_deploy.md
+        idra_publish_test.md
+        idra_evaluate_gates.md
+
+    {: .topicgroup}
+    Integrating Jenkins with DevOps Insights
+        jenkins_publish_build.md
+        jenkins_publish_deploy.md
+        jenkins_publish_test.md
+        jenkins_evaluate_gates.md
+        jenkins_communicate_toolchain.md
+
+    {: .topicgroup}
+    Integrating other CI/CD tools with DevOps Insights
+        cicd_setting_values.md
+        cicd_publish_build.md
+        cicd_publish_deploy.md
+        cicd_publish_test.md
+        cicd_evaluate_gates.md
+
     {: .topicgroup}
     Security
         cd_iam_security.md
@@ -62,7 +111,16 @@ Continuous Delivery
 
     {: .navgroup id="reference"}
     [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki)
+    pipeline_deploy_var.md
+    [Using Jenkins to integrate DevOps Insights](https://wiki.jenkins.io/display/JENKINS/IBM+Cloud+DevOps+Plugin)
+
+    {: .topicgroup}
+    Command reference
+        /devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
+        [grunt-idra3 (deprecated)](https://www.npmjs.com/package/grunt-idra3)
+
     cd_at_events.md
+    responsibilities_cd.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

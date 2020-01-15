@@ -444,3 +444,36 @@ The file system in your workspace might become out of sync if the app is modifie
 
 The state might clear after a minute or two when normal communications are reestablished and the files are synchronized. Otherwise, you can start and stop the app with Live Edit mode enabled.
 {: tsResolve}
+
+
+## Why can't I view my toolchains in my DevOps dashboard?
+{: #view-toolchain-ts}
+{: troubleshoot}
+
+When you go to the DevOps dashboard, your toolchains aren't displayed.
+{: tsSymptoms}
+
+Your toolchain doesn't show in the toolchain unless you have the proper location selected. {{site.data.keyword.DRA_short}} is only available in three locations: Dallas, Frankfurt, and London.
+{: tsCauses}
+
+On your toolchain page, change the location to Dallas, Frankfurt, or London to show all of your {{site.data.keyword.DRA_short}} integrated toolchains.
+{: tsResolve}
+
+
+## How do I find toolchains that support {{site.data.keyword.DRA_short}}?
+{: #find-toolchain-ts}
+{: faq}
+
+You can't find any toolchain templates that support {{site.data.keyword.DRA_short}}.
+{: tsSymptoms}
+
+Toolchains with {{site.data.keyword.DRA_short}} appear in the catalog when the correct locations are selected. {{site.data.keyword.DRA_short}} is available only in three locations: Dallas, Frankfurt, and London.
+{: tsCauses}
+
+Update your current location by completing the following steps:
+
+1. Click the **menu** icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+2. From the **LOCATION** menu, select Dallas, Frankfurt, or London depending on your location.
+3. Click **Create a Toolchain** to return to the toolchain templates page.
+{: tsResolve}
+
