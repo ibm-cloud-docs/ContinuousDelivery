@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-07-26"
+  years: 2019, 2020
+lastupdated: "2020-01-15"
 
 keywords: devops insights, devops, insights, ibmcloud cli, idra, migrating, test, tests, gate, gate failure, install, app
 
-subcollection: DevOpsInsights
+subcollection: ContinuousDelivery
 
 ---
 

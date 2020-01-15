@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-07-29"
+  years: 2016, 2020
+lastupdated: "2020-01-15"
 
 keywords: devops insights, devops, insights, integrate, adding, code coverage, test, tests, verification, install, app, dashboard, risk
 
-subcollection: DevOpsInsights
+subcollection: ContinuousDelivery
 
 ---
 

@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-13"
+  years: 2019, 2020
+lastupdated: "2020-01-15"
 
 keywords: devops insights, publish, test, results, jenkins, code coverage, tests, verification, app, sonarqube, dashboard
 
-subcollection: DevOpsInsights
+subcollection: ContinuousDelivery
 
 ---
 

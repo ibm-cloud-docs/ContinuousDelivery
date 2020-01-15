@@ -1,14 +1,13 @@
 ---
 
 copyright:
-  years: 2019
-
-lastupdated: "2019-07-26"
+  years: 2019, 2020
+lastupdated: "2020-01-15"
 
 
 keywords: devops insights, communicate, toolchain, pipeline, jenkins, gate, gate failing, app
 
-subcollection: DevOpsInsights
+subcollection: ContinuousDelivery
 
 ---
 

@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-09-11"
+  years: 2016, 2020
+lastupdated: "2020-01-15"
 
 keywords: devops insights, create, policy, rule, gate, code coverage, test, tests, gate failing, verification, app, dashboard
 
-subcollection: DevOpsInsights
+subcollection: ContinuousDelivery
 
 ---
 

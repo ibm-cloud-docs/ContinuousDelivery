@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-07-26"
+  years: 2019, 2020
+lastupdated: "2020-01-15"
 
 keywords: devops insights, quality, dashboard, trends, data sets, configure data, quality data, managing data sets, code coverage, test, tests, verification, app, sonarqube
 
-subcollection: DevOpsInsights
+subcollection: ContinuousDelivery
 
 ---
 

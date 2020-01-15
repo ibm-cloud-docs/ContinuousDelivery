@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-07-19"
+  years: 2019, 2020
+lastupdated: "2020-01-15"
 
 keywords: devops insights, quality, dashboard, code coverage, test, tests, verification, app
 
-subcollection: DevOpsInsights
+subcollection: ContinuousDelivery
 
 ---
 

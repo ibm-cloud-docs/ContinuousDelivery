@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-24"
+  years: 2019, 2020
+lastupdated: "2020-01-15"
 
 keywords: devops insights, observe trends, quality trends, trends, code coverage, test, tests, verification, app, sonarqube, dashboard
 
-subcollection: DevOpsInsights
+subcollection: ContinuousDelivery
 
 ---
 

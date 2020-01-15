@@ -2,11 +2,11 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-13"
+lastupdated: "2020-01-15"
 
 keywords: devops insights, manage, data, quality, delete, test, tests, app, dashboard
 
-subcollection: DevOpsInsights
+subcollection: ContinuousDelivery
 
 ---
 
