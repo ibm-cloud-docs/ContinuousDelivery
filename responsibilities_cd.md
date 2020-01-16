@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-12-17"
+  years: 2019, 2020
+lastupdated: "2020-01-16"
 
 keywords: customer responsibilities, IBM responsibilities, terms and conditions
 
@@ -67,11 +67,11 @@ Review the following sections for the specific responsibilities for you and for 
 
 | Task | IBM responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
-|Manage access to toolchains in resource groups and their associated IBM-hosted tools, except for {{site.data.keyword.gitrepos}}.|   | Grant, revoke, and manage access to toolchains by using {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). For more information about access management, see [Managing user access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). |
-|Manage access to toolchains in Cloud Foundry orgs.|   | Add, remove, and manage access to toolchains by updating the members and roles of users in both Cloud Foundry orgs and Cloud Foundry-based toolchains. For more information about access management, see [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-cf-security). |
-|Manage the {{site.data.keyword.contdelivery_short}} service's access to third-party tools that are integrated into toolchains. |   | Add, update, or delete third-party tool integration configurations (including access credentials for tool integrations) in toolchains. For more information about working with tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations). |
-|Manage access to repos in {{site.data.keyword.gitrepos}}. |   | From the **Settings** > **Members** page in the {{site.data.keyword.gitrepos}} dashboard, manage project members and role permissions. |
-|Manage all other access to third-party tools that are integrated with {{site.data.keyword.contdelivery_short}}. |   | Manage access by using the capabilities that are provided by the third-party tools.  |
+|Manage access to toolchains in resource groups and their associated IBM-hosted tools, except for {{site.data.keyword.gitrepos}}.| N/A  | Grant, revoke, and manage access to toolchains by using {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). For more information about access management, see [Managing user access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). |
+|Manage access to toolchains in Cloud Foundry orgs.| N/A  | Add, remove, and manage access to toolchains by updating the members and roles of users in both Cloud Foundry orgs and Cloud Foundry-based toolchains. For more information about access management, see [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-cf-security). |
+|Manage the {{site.data.keyword.contdelivery_short}} service's access to third-party tools that are integrated into toolchains. | N/A  | Add, update, or delete third-party tool integration configurations (including access credentials for tool integrations) in toolchains. For more information about working with tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations). |
+|Manage access to repos in {{site.data.keyword.gitrepos}}. | N/A  | From the **Settings** > **Members** page in the {{site.data.keyword.gitrepos}} dashboard, manage project members and role permissions. |
+|Manage all other access to third-party tools that are integrated with {{site.data.keyword.contdelivery_short}}. | N/A  | Manage access by using the capabilities that are provided by the third-party tools.  |
 {: caption="Table 2. Responsibilities for identity and access management" caption-side="top"}
 
 ## Security and regulation compliance
