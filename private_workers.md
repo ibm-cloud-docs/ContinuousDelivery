@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 lastupdated: "2019-12-05"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
