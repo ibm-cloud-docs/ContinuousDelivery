@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2019
+  years: 2015, 2020
 lastupdated: "2019-12-20"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Alert Notification, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Jenkins, JIRA, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
