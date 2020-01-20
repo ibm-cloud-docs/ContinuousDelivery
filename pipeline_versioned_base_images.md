@@ -1,7 +1,7 @@
 ---
 
 Copyright:
-  years: 2019
+  years: 2019, 2020
 lastupdated: "2019-12-09"
 
 keywords: pipeline versioned base image, image version, pipeline job
