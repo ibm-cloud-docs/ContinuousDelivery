@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017, 2019
+  years: 2017, 2020
 lastupdated: "2019-10-15"
 
 keywords: commit message field, terminal Type git branch, Eclipse Orion {{site.data.keyword.webide}}, Git commands
