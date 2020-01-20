@@ -1,7 +1,7 @@
 ---
 
 Copyright:
-  years: 2018, 2019
+  years: 2018, 2020
 lastupdated: "2019-11-29"
 
 keywords: pipeline base image, custom Docker image, private image registry 
