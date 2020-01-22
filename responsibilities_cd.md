@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-16"
+lastupdated: "2020-01-22"
 
 keywords: customer responsibilities, IBM responsibilities, terms and conditions
 
@@ -30,7 +30,7 @@ subcollection: ContinuousDelivery
 Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.contdelivery_full}}. For a high-level view of the service types in {{site.data.keyword.cloud}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
 {:shortdesc}
 
-You can integrate second party tools (such as a private Tekton worker that is running on your infrastructure) and third-party tools (such as Public GitHub) into {{site.data.keyword.contdelivery_short}} toolchains. However, IBM's management responsibilities do not extend to any second or third-party tools. 
+You can integrate third-party tools (such as Public GitHub), or tools that you manage (such as a private Tekton worker that is running on your infrastructure), into {{site.data.keyword.contdelivery_short}} toolchains. However, IBM’s management responsibilities do not extend to any tools that are managed by you or by third-parties.
 {:important}
 
 Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.contdelivery_short}}. For the overall terms of use, see [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview/terms-of-use?topic=overview-terms).
