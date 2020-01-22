@@ -94,4 +94,4 @@ IBM is responsible for maintaining backups and high availability of the {{site.d
 |----------|-----------------------|--------|
 |Back up toolchain data.| Maintain regular backups of toolchain and pipeline definitions, Git repos, and any other toolchain integration data that is stored and managed by IBM.  | To support global failover, create and maintain copies of your toolchain and pipeline definitions, including tool integration data and your Git repos, in another IBM region. |
 |Restore toolchain data.| Restore all toolchain and Git repos to the original {{site.data.keyword.cloud_notm}} region, when that region is available.    | To support global failover, manually switch to using the copied toolchains and repos in another region. |
-{: caption="Table 5. Responsibilites for disaster recovery" caption-side="top"}
+{: caption="Table 5. Responsibilites for disaster recovery" caption-side="top"} 
