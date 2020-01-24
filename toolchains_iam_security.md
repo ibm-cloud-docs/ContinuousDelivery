@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2019-12-17"
+lastupdated: "2020-01-24"
 
 keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
@@ -97,13 +97,14 @@ Depending on their role, the new user can now work with all of the toolchains wi
 You can assign an existing user access to a toolchain in your resource group.
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
-2. Select the name of the user that you want to assign access.
+2. From the row for the user that you want to assign access, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu.
+3. Click **Assign access**.
 3. In the **Assign users additional access** section, click **IAM services**.
 4. Choose to assign access to the **Toolchain** service within **All resource groups**.
 5. In the **Platform access** section, select **Viewer** (or higher) access to provide the user with access to view toolchain service instances from the platform, perform platform actions that are required to configure and operate toolchain service instances, and assign access policies to other users.
 6. In the **Resource group access** section, select the **Editor** role to provide the user with access to create, view, edit, or delete the toolchain service from resource groups. Select the **Viewer** role to provide the user with access to view toolchains only or to run delivery pipelines.
 7. Click **Add**.
-8. Click **Invite**. 
+8. Click **Assign**. 
 
 Depending on their role, the user can now work with all of the toolchains within the specified resource group. They can add tool integrations, modify and run pipelines, and use the Eclipse Orion {{site.data.keyword.webide}}.
 
