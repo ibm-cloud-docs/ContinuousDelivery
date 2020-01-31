@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-08"
+lastupdated: "2020-01-30"
 
 keywords: troubleshoot, GitHub integration, Git Repos and Issue Tracking integration, GitLab project, Delivery Pipeline, toolchains, tool integrations, Live Edit, Web IDE
 
@@ -46,14 +46,14 @@ If you are configuring the GitHub tool integration while you are creating your t
 {: tsResolve}
 
   1. In the Configurable Integrations section, click **GitHub**.
-  1. If you are creating the toolchain on {{site.data.keyword.Bluemix_notm}} Public and {{site.data.keyword.Bluemix_notm}} is not authorized to access GitHub, click **Authorize** to go to the GitHub website.
-  1. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account.
+  1. If you are creating the toolchain on {{site.data.keyword.cloud_notm}} Public and {{site.data.keyword.cloud_notm}} is not authorized to access GitHub, click **Authorize** to go to the GitHub website.
+  1. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
 
 If you already have a toolchain, update the GitHub tool integration's configuration:
 
  1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**, and then click **Overview**.
  1. On the GitHub card, click the menu and click **Configure**.
- 1. Update the configuration settings to authorize {{site.data.keyword.Bluemix_notm}} to access GitHub. Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account.
+ 1. Update the configuration settings to authorize {{site.data.keyword.cloud_notm}} to access GitHub. Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account.
  1. When you are finished updating the settings, click **Save Integration**.
  
 
@@ -106,6 +106,27 @@ Instead of creating a {{site.data.keyword.gitrepos}} tool integration, create a 
 1. Click **Create Integration**.
 
 For more information about configuring a GitLab tool integration, see [Configuring GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab).
+
+
+## I created a toolchain and the {{site.data.keyword.deliverypipeline}} service doesn't initialize. Why doesn't the pipeline initialization complete?
+{: troubleshoot-pipeline-initialization}
+{: troubleshoot}
+
+You might need to configure and save the GitHub tool integration again.
+
+The GitHub tool integration within your toolchain might be misconfigured, which is preventing the pipeline initialization from completing. 
+{: tsSymptoms}
+
+An eventing problem occurred which caused the GitHub tool integration to fail.
+{: tsCauses}
+
+Configure and save the GitHub tool integration again:
+{: tsResolve}
+
+  1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain that you created to open the Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
+  1. On the card for the GitHub tool integration, click the menu to access the configuration options.
+  1. Update the settings and click **Save Integration**.
+  1. Click the card for the Delivery Pipeline tool integration to view the pipeline setup. 
 
 
 ## Why can't I create a toolchain from a template that uses a private repo in a different region?
@@ -382,6 +403,46 @@ Create your toolchain again in resource groups, and then remove the original too
 {: tsResolve}
 
 
+## Why can't I create a toolchain to deploy my app to Cloud Foundry?
+{: troubleshoot-deploy_cf}
+{: troubleshoot}
+{: support}
+
+Before you can create a toolchain in a Cloud Foundry org, you must have an existing org and space, with the Developer role assigned. 
+
+You try to create a toolchain to deploy your app to Cloud Foundry. After you enter your API key, the **Organization** and **Space** fields are empty and you cannot create your toolchain.
+{: tsSymptoms} 
+
+A Cloud Foundry org and space can't be located in your account.
+{: tsCauses}
+
+[Add a Cloud Foundry org and space to your account](https://cloud.ibm.com/account/cloud-foundry){: external}, and assign the Developer role to users at the space level. For more information about Cloud Foundry orgs and spaces, see [Adding orgs and spaces](/docs/account?topic=account-orgsspacesusers).
+{: tsResolve}
+
+
+## I tried to deploy a sample starter application to Cloud Foundry. Why did the deployment fail?
+{: troubleshoot-sampleapp_deploy}
+{: troubleshoot}
+{: support}
+
+You exceeded the memory limit for your Cloud Foundry org. 
+
+I tried to deploy a sample starter application to Cloud Foundry. The deployment fails with the following error message:
+{: tsSymptoms}
+
+`You have exceeded your organization's memory limit: app requested more memory than available` 
+
+You exceeded the memory limit for your Cloud Foundry org. This memory limit depends on your account settings. For example, users within Lite plan accounts are limited to 256 MB of memory. You might need to upgrade your account.
+{: tsCauses}
+
+Upgrade your account:
+{: tsResolve}
+
+1. Go to the [{{site.data.keyword.cloud_notm}} dashboard](https://cloud.ibm.com/resources){: external} and stop any apps that are not in use. Running apps only are counted to determine whether the memory limit is exceeded.
+1. Reduce the minimum required memory that is specified in the app's `manifest.yml` file. Make sure that your app can still start with the reduced memory.
+1. [Upgrade your account](https://cloud.ibm.com/account/settings){: external}. For more information about account types and upgrading your account, see [Account types](/docs/account?topic=account-accounts).
+
+
 ## Why can't I delete toolchains by using the `ibmcloud` CLI?
 {: troubleshoot-delete_toolchains_cli}
 {: troubleshoot}
@@ -404,7 +465,10 @@ To delete a toolchain:
 1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to delete. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**.
 1. Click the **More Actions** menu, which is next to **View app**.
 1. Click **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
-1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.  
+1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.
+
+You can use the ibmcloud dev CLI to delete toolchains. After you [install the {{site.data.keyword.dev_cli_notm}} CLI plug-in](/docs/cli?topic=cloud-cli-install-devtools-manually), you can delete a toolchain from the command line by using the [`ibmcloud dev toolchain-delete`](/docs/cli?topic=cloud-cli-idt-cli#toolchain-delete) command. 
+{: tip}
 
 
 ## Why is Live Edit unavailable after I commit and push to a repo?
@@ -476,4 +540,3 @@ Update your current location by completing the following steps:
 2. From the **LOCATION** menu, select Dallas, Frankfurt, or London depending on your location.
 3. Click **Create a Toolchain** to return to the toolchain templates page.
 {: tsResolve}
-
