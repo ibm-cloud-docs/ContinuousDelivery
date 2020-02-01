@@ -540,4 +540,3 @@ Update your current location by completing the following steps:
 2. From the **LOCATION** menu, select Dallas, Frankfurt, or London depending on your location.
 3. Click **Create a Toolchain** to return to the toolchain templates page.
 {: tsResolve}
-

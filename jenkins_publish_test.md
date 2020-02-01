@@ -19,7 +19,6 @@ subcollection: ContinuousDelivery
 {:important: .important}
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
 
 # Publishing test results
 {: #publish-test-jenkins}
@@ -93,7 +92,7 @@ For each command, you need to specify the toolchain ID to export the environment
 ## Publishing SonarQube results (optional)
 {: #publishing-sonarqube-results}
 
-After you configure a SonarQube scanner and server by following the instructions in the [SonarQube documentation](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/){: external}, you can publish scan results to {{site.data.keyword.DRA_short}}.
+After you configure a SonarQube scanner and server by following the instructions in the [SonarQube documentation](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), you can publish scan results to {{site.data.keyword.DRA_short}}.
 
 To configure your Jenkins pipeline to accept these results, add the following parameters to it:
 

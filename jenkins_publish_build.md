@@ -19,7 +19,6 @@ subcollection: ContinuousDelivery
 {:important: .important}
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
 
 # Publishing a build record
 {: #publish-build-jenkins}
@@ -127,9 +126,9 @@ By default, the version number is set to be {pipeline name}:{build number}, you 
 ## Sample pipeline and code
 {: #pipeline-code-jenkins}
 
-Here are two complete pipeline examples that are defined as [declarative Jenkins file](https://github.com/jenkinsci/ibm-cloud-devops-plugin/blob/master/Declarative-Jenkinsfile){: external} and a [scripted Jenkins file](https://github.com/jenkinsci/ibm-cloud-devops-plugin/blob/master/Scripted-Jenkinsfile){: external}. 
+Here are two complete pipeline examples that are defined as [declarative Jenkins file](https://github.com/jenkinsci/ibm-cloud-devops-plugin/blob/master/Declarative-Jenkinsfile){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") and a [scripted Jenkins file](https://github.com/jenkinsci/ibm-cloud-devops-plugin/blob/master/Scripted-Jenkinsfile){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). 
 
-The [Git repo](https://github.com/devops-insights/DemoDRA){: external} contains a sample nodejs application code, tests, and Jenkins file that you can experiment with. Fork the repo and modify the Jenkins file with your actual information. 
+The [Git repo](https://github.com/devops-insights/DemoDRA){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") contains a sample nodejs application code, tests, and Jenkins file that you can experiment with. Fork the repo and modify the Jenkins file with your actual information. 
 
 If you didn't install NodeJS in your Jenkins environment, you might have to install the node.js Jenkins plug-in. If you installed NodeJS, you can comment out the "tools" section in the Jenkins file.
 {: note}

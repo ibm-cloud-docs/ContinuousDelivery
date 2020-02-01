@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-31"
+lastupdated: "2020-01-13"
 
 keywords: GitHub tool integration, error message, Lite plan, toolchains, Cloud Foundry orgs, resource groups, IBM Cloud, Web IDE, Live Sync, pipeline jobs
 
@@ -84,7 +84,7 @@ You can either create the toolchain in a resource group or create the toolchain 
 A feature to automatically migrate toolchains from a Cloud Foundry org to a resource group is not available yet. Instead, you can manually create the toolchain again in a resource group, and then remove the original toolchain from the Cloud Foundry org.
 
 
-## I tried to deploy an app to {{site.data.keyword.cloud_notm}}, why am I getting an error?
+## I tried to deploy an app to {{site.data.keyword.Bluemix_notm}}, why am I getting an error?
 {: #org_outofmemory}
 {: faq}
 
@@ -116,24 +116,13 @@ If you use the cf command line interface, complete the following steps:
 1. Restart your app for the changes to take effect.
 
 
-## How do I bring my own code and deploy it by using {{site.data.keyword.contdelivery_short}}
-{: #bmoc_deploy}
-{: faq}
-
-You can choose any of the following options to deploy your own code to {{site.data.keyword.contdelivery_short}}:
-
-  * Go to the [Create App](https://cloud.ibm.com/developer/appservice/create-app?navMode=dashboard){: external}, create your app, and then [enable {{site.data.keyword.contdelivery_short}}](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) for the app. 
-  * Create a toolchain by using one of the available templates (dependent on the deployment target and tool integrations). On the **Create a Toolchain** page, select the appropriate provider for your source repository, and then specify the link to your source code repo. After you create your toolchain, you might need to adjust the pipeline scripts for your deployment goals.
-  * Create an empty toolchain, and then add tool integrations to deploy your app. For more information about using this method to deploy your code to {{site.data.keyword.contdelivery_short}}, see [Set up a DevOps delivery pipeline for your app](/docs/apps?topic=containers-tutorial-byoc-kube).
-
-
-## I created an app, why doesn't the run bar show {{site.data.keyword.cloud_notm}} Live Sync icons in the {{site.data.keyword.webide}}?
+## I created an app, why doesn't the run bar show {{site.data.keyword.Bluemix_notm}} Live Sync icons in the {{site.data.keyword.webide}}?
 {: #ts_llz_lkb_3r}
 {: faq}
 
 ![Run bar](images/webide_runbar_light.png)   
 
-When you edit a Node.js app in the {{site.data.keyword.webide}}, the {{site.data.keyword.cloud_notm}} live edit, quick restart, and debug icons aren't available in the run bar in these circumstances:
+When you edit a Node.js app in the {{site.data.keyword.webide}}, the {{site.data.keyword.Bluemix_notm}} live edit, quick restart, and debug icons aren't available in the run bar in these circumstances:
 
 
 * The `manifest.yml` file isn't stored at the top level of your project.
@@ -167,19 +156,19 @@ The {{site.data.keyword.webide}} assumes by default that you want to push outgoi
 The {{site.data.keyword.webide}} provides extensive tools and support for JavaScript, HTML, and CSS. It also provides syntax highlighting for most popular languages. You can't extend the {{site.data.keyword.webide}} to support a particular language. To view a complete list of the languages that the {{site.data.keyword.webide}} supports, see [Supported languages](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide#supported_languages).
 
 
-## How do I find the status of {{site.data.keyword.cloud_notm}} and the {{site.data.keyword.contdelivery_short}} service?
+## How do I find the status of {{site.data.keyword.Bluemix_notm}} and the {{site.data.keyword.contdelivery_short}} service?
 {: #toolchains_load}
 {: faq}
 {: support}
 
-Check the {{site.data.keyword.cloud_notm}} Status page to determine whether known issues are affecting the {{site.data.keyword.cloud_notm}} platform and the major services in {{site.data.keyword.cloud_notm}}.
+Check the {{site.data.keyword.Bluemix_notm}} Status page to determine whether known issues are affecting the {{site.data.keyword.Bluemix_notm}} platform and the major services in {{site.data.keyword.Bluemix_notm}}.
 
 You can find the Status page by choosing either of the following options:
 
-  * Log in to the {{site.data.keyword.cloud_notm}} console. From the menu bar, click **Support** and select **Status**. Check the listed resources for the ![some issues](../../get-support/images/some_issues.svg) icon. This icon might indicate an outage.
-  * Access it directly at [{{site.data.keyword.cloud_notm}} - System Status](https://cloud.ibm.com/status){: external}.
+  * Log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click **Support** and select **Status**. Check the listed resources for the ![some issues](../../get-support/images/some_issues.svg) icon. This icon might indicate an outage.
+  * Access it directly at [{{site.data.keyword.Bluemix_notm}} - System Status](https://cloud.ibm.com/status){: external}.
 
-For more information about the {{site.data.keyword.cloud_notm}} Status page, see [Viewing {{site.data.keyword.Bluemix_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status).
+For more information about the {{site.data.keyword.Bluemix_notm}} Status page, see [Viewing {{site.data.keyword.Bluemix_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status).
 
 
 ## How do I pass artifacts between pipeline jobs?
@@ -187,9 +176,7 @@ For more information about the {{site.data.keyword.cloud_notm}} Status page, see
 {: faq}
 {: support}
 
-When a stage runs, the stage's input is passed to each of the jobs in the stage. Each job is given a clean container to run in. As a result, jobs within a stage cannot pass artifacts to each other. To pass artifacts between jobs, separate the jobs into two stages, and use the output from the job in the first stage as input to the second stage.
-
-For more information about pipeline jobs, see [Jobs](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs).
+Because all pipeline jobs in a stage receive the same stage input, you cannot pass artifacts between jobs that are in the same stage. However, build jobs generate artifacts that jobs in other stages can use. To pass artifacts between two jobs, move each job into a separate stage. For more information about pipeline jobs, see [Jobs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs).
 
 
 ## Is there a maximum time limit that my pipeline jobs can run?
@@ -197,7 +184,7 @@ For more information about pipeline jobs, see [Jobs](/docs/ContinuousDelivery?to
 {: faq}
 {: support}
 
-Each pipeline job can run for a maximum of 60 minutes. However, you can increase the time limit to 24 hours by using [{{site.data.keyword.deliverypipeline}} Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
+Each pipeline job can run for a maximum of 60 minutes. If a job exceeds this time limit, the job fails. Examine whether the work that the pipeline job does can be divided into smaller steps. You can divide the pipeline job into several shorter pipeline jobs that run for less than 60 minutes.
 
 
 ## How secure are the pipeline secure properties?

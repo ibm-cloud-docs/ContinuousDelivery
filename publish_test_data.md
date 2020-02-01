@@ -18,7 +18,6 @@ subcollection: ContinuousDelivery
 {:tip: .tip}
 {:download: .download}
 {:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
 
 # Publishing test data to {{site.data.keyword.DRA_short}}
 {: #publishing-test-data}
@@ -56,7 +55,7 @@ ibmcloud doi publishtestrecord --logicalappname "$MY_APP_NAME" --buildnumber "$M
 ```
 {:codeblock}
 
-For a sample test result files that you can upload to DevOps Insights, see [this GitHub repository with dummy data](https://github.com/devops-insights/example-upload-data-format){: external}. 
+For a sample test result files that you can upload to DevOps Insights, see [this GitHub repository with dummy data](https://github.com/devops-insights/example-upload-data-format){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). 
 
 
 ## Uploading Code Coverage Results
@@ -69,7 +68,7 @@ ibmcloud doi publishtestrecord --logicalappname "$MY_APP_NAME" --buildnumber "$M
 ```
 {:codeblock}
 
-For a sample test result files that you can upload to DevOps Insights, see [this GitHub repository with dummy data](https://github.com/devops-insights/example-upload-data-format){: external}.
+For a sample test result files that you can upload to DevOps Insights, see [this GitHub repository with dummy data](https://github.com/devops-insights/example-upload-data-format){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 
 ## Uploading IBM Application Scan reports
