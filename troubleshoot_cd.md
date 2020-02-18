@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-02-18"
 
 keywords: troubleshoot, GitHub integration, Git Repos and Issue Tracking integration, GitLab project, Delivery Pipeline, toolchains, tool integrations, Live Edit, Web IDE
 
@@ -21,6 +21,7 @@ subcollection: ContinuousDelivery
 {:pre: .pre}
 {:note:.deprecated}
 {:tip: .tip}
+{:important: .important}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:support: data-reuse='support'}
 
@@ -401,6 +402,39 @@ Resource groups have replaced Cloud Foundry orgs as the preferred containers for
 
 Create your toolchain again in resource groups, and then remove the original toolchain from the Cloud Foundry org. Alternatively, you can ignore the error message until a method to migrate existing toolchains from Cloud Foundry orgs to resource groups is provided.
 {: tsResolve}
+
+
+## Why can't I delete {{site.data.keyword.contdelivery_short}} from a Cloud Foundry org?
+{: troubleshoot-delete_cd}
+{: troubleshoot}
+{: support}
+
+You cannot delete an instance of the {{site.data.keyword.contdelivery_short}} service from your Cloud Foundry org if it contains any toolchains within the same account, region, and org as the service instance.
+
+I tried to delete {{site.data.keyword.contdelivery_short}} from a Cloud Foundry org. The deletion fails with the following error message: 
+{: tsSymptoms}
+
+`Service instance Continuous Delivery-ab: Service broker error: The Continuous Delivery service cannot be deleted because the org contains 20 toolchains. Before you can delete the service, you must delete all of the toolchains from the org. (CF-ServiceBrokerBadResponse - 10001)` 
+
+To delete a {{site.data.keyword.contdelivery_short}} service instance from a Cloud Foundry org, you cannot have any toolchains in the same account, region, and org as the service instance.
+{: tsCauses}
+
+Locate and delete any toolchains that are in the same account, region, and org as the {{site.data.keyword.contdelivery_short}} service instance.
+{: tsResolve}
+
+Org-based toolchains aren't visible from the command line or the resource list. To find and delete these toolchains, go to the [Toolchains](https://cloud.ibm.com/devops){: external} page. When you search for toolchains that are blocking the deletion of the {{site.data.keyword.contdelivery_short}} service instance, look in the account, region, and org where the service instance is located.
+{: tip}
+
+1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
+1. If you have more than one account, you can click your account name in the console menu bar to select another account that you can access. 
+1. Go to the [Resource list](https://cloud.ibm.com/resources){: external} for your {{site.data.keyword.cloud_notm}} account.
+1. Make note of the location and the org that the {{site.data.keyword.cloud_notm}} service is contained in.
+1. On the [Toolchains](https://cloud.ibm.com/devops/toolchains){: external} page, select the location and Cloud Foundry org for the {{site.data.keyword.contdelivery_short}} service instance. All of the toolchains that are associated with this service instance are displayed.
+1. [Delete each of the toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#deleting_a_toolchain). This action cannot be undone.
+1. After you delete all of the toolchains, delete the {{site.data.keyword.contdelivery_short}} service instance from the [Resource list](https://cloud.ibm.com/resources){: external}.
+
+You must repeat this procedure for each {{site.data.keyword.contdelivery_short}} service instance that is associated with toolchains.
+{: important}
 
 
 ## Why can't I create a toolchain to deploy my app to Cloud Foundry?
