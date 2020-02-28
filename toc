@@ -125,7 +125,14 @@ Continuous Delivery
 
     {: .navgroup id="help"}
     cd_support.md
-    ts_index.md
+    
+    {: .topicgroup}
+    FAQ
+        ts_index.md
+        faq_delivery_pipeline.md
+        faq_insights.md
+        faq_toolchains.md
+        faq_web_ide.md
     
     {: .topicgroup}
     Troubleshooting
