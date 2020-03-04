@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-27"
+lastupdated: "2020-03-04"
 
 keywords: troubleshoot, Live Edit, Web IDE
 
@@ -52,7 +52,7 @@ To rapidly develop a test version of your app by using Live Edit, deploy to a di
 3. Click **Save** and **Exit**.
 4. Click the **Run** button in the run bar. You might need to deploy multiple times to enable the Live Edit button.
 
-For more information about Live Edit, see [Live Edit](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-live-syn#live-edit).
+For more information about Live Edit, see [Live Edit](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-live-sync#live-edit).
 
 
 ## What does "not synchronized" mean in the {{site.data.keyword.webide}} run bar?
