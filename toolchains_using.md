@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2019-12-19"
+lastupdated: "2020-03-04"
 
 keywords: user management function, toolchains, tool integrations, user access, Cloud Foundry org
 
@@ -98,7 +98,7 @@ You can add tags to your toolchains to organize them and easily find them later.
 1. Enter a name for the tag that you want to add to the toolchain. You can add multiple tags, which are separated by commas.
 1. Click **Save**.
 
-For more information about tags, see [Working with tags](/docs/resources?topic=resources-tag#).
+For more information about tags, see [Working with tags](/docs/resources?topic=resources-tag).
 
 
 ## Deleting a toolchain
@@ -114,7 +114,7 @@ You can delete a toolchain and specify which of the associated tool integrations
  When you delete a GitHub, {{site.data.keyword.ghe_short}}, or {{site.data.keyword.gitrepos}} tool integration, the associated repo is not deleted from GitHub, {{site.data.keyword.ghe_short}}, or {{site.data.keyword.gitrepos}}. You must manually remove the repo.
  {: tip}
 
-##Take a tutorial: Using toolchains
+## Take a tutorial: Using toolchains
 {: #toolchain-tutorial}
 
 Check out these tutorials on the [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external}:
