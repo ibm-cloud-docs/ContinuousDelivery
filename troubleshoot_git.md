@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-27"
+lastupdated: "2020-03-03"
 
 keywords: troubleshoot, GitHub integration, Git Repos and Issue Tracking integration, GitLab project, tool integrations
 
@@ -162,6 +162,32 @@ Use any of the following methods to resolve this issue:
 ```
   GIT_SSH_COMMAND='ssh -vvv -i/path/to/private_key_file' git clone git@host:owner/repo.git
 ```
+
+
+## I tried to fetch changes from my {{site.data.keyword.gitrepos}} repo, why am I getting a `504 Gateway Time-out` error?
+{: #troubleshoot-grit-timeout-error}
+{: troubleshoot}
+
+Your repo is larger than 1 GB. The Git source control management system isn't designed to store large binary files.
+
+When I attempt to complete an operation on a {{site.data.keyword.gitrepos}} repo (such as a fetch or clone), I receive an error message:
+{: tsSymptoms}
+
+`git fetch
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504 Gateway Time-out
+fatal: The remote end hung up unexpectedly`
+   
+You have a large repo that is greater than 1 GB. The repo might also contain binary files that require more space than text files that are stored in a compressed format.
+{: tsCauses}
+
+You can use any of the following methods to resolve this problem:
+{: tsResolve}
+
+* Reduce the size of your {{site.data.keyword.gitrepos}} repo. For more information about reducing the size of your repo, see [Reducing the repository size using Git](https://docs.gitlab.com/ce/user/project/repository/reducing_the_repo_size_using_git.html){: external}.
+
+* Use SSH to bypass the default clone timeout of 180 seconds.
+
+* If you are attempting to clone a repo, complete a shallow clone (`git clone --depth`) to reduce the amount of data that is transferred by truncating the commit history. For more information about completing a shallow clone, see the [Git Reference documentation](https://git-scm.com/docs/git-clone#Documentation/git-clone.txt---depthltdepthgt){: external}.
 
 
 ## I tried adding a user to my GitLab project by way of email, but they didn't receive the invitation. How do I add them to my project?
