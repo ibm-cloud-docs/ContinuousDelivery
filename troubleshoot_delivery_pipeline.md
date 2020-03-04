@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-27"
+lastupdated: "2020-03-04"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations, private workers
 
@@ -174,3 +174,140 @@ The private worker installer pulls images from `gcr.io` and [Docker hub](https:/
 
 Make sure that the policy for pulling images in your cluster supports pulling images from `gcr.io` and `docker.io`. For example, if you are installing the private worker framework on {{site.data.keyword.cloud_notm}} Private, add those policies by using the {{site.data.keyword.cloud_notm}} Private Web console. For more information about managing image security enforcement by using the IBM Cloud Private Web console, see [Enforcing container image security](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/manage_images/image_security.html){: external}.
 {: tsResolve}
+
+## Why can't the {{site.data.keyword.deliverypipeline}} communicate through a firewall?
+{: #troubleshoot-firewall-configuration}
+{:troubleshoot}
+{: support}
+
+Your firewall configuration prevents the {{site.data.keyword.deliverypipeline}} from communicating with environments that are behind a firewall.
+
+When I attempt to use the {{site.data.keyword.deliverypipeline}}, it cannot communicate through my firewall.
+{: tsSymptoms}
+
+Your firewall must be configured to allow the {{site.data.keyword.deliverypipeline}} to communicate with environments that are behind a firewall.
+{: tsCauses}
+
+You can update your firewall configurations to allow the {{site.data.keyword.deliverypipeline}} to access resources that are behind the firewall. Use the following subnet ranges, for your specific region.
+{: tsResolve}
+
+```
+jp-tok
+161.202.235.192/27
+161.202.94.176/29
+169.56.44.32/29
+169.56.46.80/29
+169.56.46.88/29
+128.168.68.192/27
+128.168.69.104/29
+128.168.69.176/29
+128.168.69.96/29
+165.192.68.72/29
+165.192.70.184/29
+165.192.70.208/29
+165.192.70.32/27
+====
+us-south
+169.46.126.96/29
+169.46.16.104/29
+169.46.19.64/29
+169.46.33.200/29
+169.46.37.208/29
+169.46.57.88/29
+169.46.73.152/29
+169.46.9.32/29
+169.46.93.64/29
+169.47.250.40/29
+169.48.166.216/29
+169.60.247.128/26
+169.60.247.192/26
+169.60.43.192/29
+169.61.192.64/26
+169.61.193.224/29
+169.61.194.128/29
+169.61.194.136/29
+52.116.182.136/29
+169.47.106.160/29
+169.47.114.8/29
+169.47.98.88/29
+169.48.215.40/29
+169.48.219.200/29
+169.48.227.128/29
+169.59.195.160/29
+169.61.132.64/26
+169.61.136.136/29
+169.48.65.216/29
+169.48.72.96/29
+169.48.74.80/29
+169.61.38.72/29
+169.61.41.192/26
+169.61.41.64/26
+169.61.43.88/29
+169.61.47.104/29
+169.61.47.96/29
+169.62.177.240/29
+174.37.18.240/29
+====
+us-east
+169.47.136.96/29
+169.47.140.64/26
+169.47.145.16/29
+169.47.36.216/29
+169.47.53.56/29
+169.60.122.8/29
+169.60.82.104/29
+169.60.85.152/29
+169.60.92.192/26
+169.61.100.16/29
+169.61.100.24/29
+169.61.107.200/29
+169.61.113.200/29
+169.62.25.104/29
+169.62.28.88/29
+169.62.30.64/26
+169.62.7.232/29
+====
+eu-gb
+158.175.104.64/26
+158.175.106.136/29
+158.175.109.96/29
+158.175.110.240/29
+158.175.115.136/29
+158.175.122.200/29
+158.175.139.144/29
+158.175.71.8/29
+141.125.69.96/29
+141.125.70.224/28
+141.125.70.24/29
+141.125.71.80/29
+141.125.74.192/27
+158.176.67.200/29
+158.176.72.192/26
+158.176.78.40/29
+158.176.78.56/29
+158.176.83.104/29
+====
+eu-de
+158.177.198.40/29
+158.177.215.136/29
+159.122.111.24/29
+159.122.94.200/29
+159.122.96.192/27
+159.122.98.240/29
+169.50.34.48/29
+169.50.53.0/26
+161.156.129.96/29
+161.156.150.248/29
+161.156.157.192/26
+161.156.77.128/27
+161.156.77.192/29
+161.156.78.32/29
+161.156.94.56/29
+149.81.102.232/29
+149.81.114.64/29
+149.81.73.136/29
+149.81.73.160/27
+149.81.74.112/29
+149.81.81.120/29
+```
+{: screen}
