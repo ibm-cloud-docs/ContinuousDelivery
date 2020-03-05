@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-03-05"
 
 keywords: devops insights, publish, build, record, jenkins, test, tests, app, dashboard
 
@@ -47,7 +47,7 @@ These variables are required for the pipeline to integrate with {{site.data.keyw
 |---------------------------------|---------------------------|
 | `IBM_CLOUD_DEVOPS_API_KEY`      | A unique code that is passed in to an application programming interface (API) to identify the calling application or user. <br> Store the API key as Jenkins credentials. (secret text type). |
 | `IBM_CLOUD_DEVOPS_APP_NAME`     | The name of the application that your toolchain deploys. If applicationName parameter is passed to the step job, then this value is ignored for that step. |
-| `IBM_CLOUD_DEVOPS_TOOCLHAIN_ID` | The ID of your toolchain. |
+| `IBM_CLOUD_DEVOPS_TOOLCHAIN_ID` | The ID of your toolchain. |
 {: caption="Table 1. Jenkins environment variables and definitions" caption-side="top"}
 
 For each command, you need to specify the toolchain ID to export the environment variable. These environment variables and credentials are used by the {{site.data.keyword.DRA_full}} plug-in to interact with {{site.data.keyword.DRA_short}}. Here is an example of setting them in the declarative pipeline format.
