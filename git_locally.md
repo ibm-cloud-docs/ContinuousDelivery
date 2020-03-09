@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2019-08-20"
+lastupdated: "2020-03-09"
 
 keywords: Git source control, authentication, personal access token, SSH key, Git repos, Web IDE 
 
@@ -82,4 +82,4 @@ After the download is complete, you have a local version of the files in your re
 
 If you use Eclipse and have a project that uses Git for source control, you can use the EGit plug-in to manage your repo from Eclipse. For more information about how to install and configure EGit, see the [EGit tutorial](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: external}.
 
-If you use {{site.data.keyword.gitrepos}} and have any problems, see the [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_local) documentation.
+If you use {{site.data.keyword.gitrepos}} and have any problems, see the [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_locally) documentation.
