@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019, 2020
-lastupdated: "2020-02-26"
+lastupdated: "2020-03-06"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -47,8 +47,24 @@ If you choose the `Latest` option, the pipeline jobs are run with the current im
  
  After version 2.0, images no longer include grunt or python. If these tools are required for your build, you can install them manually. To install grunt, run `npm install -g grunt-cli`. Make sure that you don't change the Node.js version after you install grunt. To install python, run `apt-get -qq update && apt-get -qq install -y python`.
  {: important}
- 
- The following available image versions are listed in descending order, starting with the current version.
+
+Starting with version 2.2, images are available on DockerHub.
+
+| Base image version | DockerHub image version |
+|:-----------------|:-----------------|
+| 2.6 | `ibmcom/pipeline-base-image:2.6`| 
+| 2.5 | `ibmcom/pipeline-base-image:2.5`|
+| 2.4 | `ibmcom/pipeline-base-image:2.4.1`|
+| 2.3 | `ibmcom/pipeline-base-image:2.3`|
+| 2.2 | `ibmcom/pipeline-base-image:2.2`|
+| 2.1 | Not available |
+| 2.0 | Not available |
+| 1.0 | Not available |
+{: caption="Table 1. Mapping between versioned based images and DockerHub images" caption-side="top"}
+
+To access the DockerHub versioned base images, go to [ibmcom/pipeline-base-image](https://hub.docker.com/r/ibmcom/pipeline-base-image){: external}.
+
+The following available image versions are listed in descending order, starting with the current version.
  
  The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
  {: tip}
@@ -649,7 +665,6 @@ To view the contents of version 2.1, from the running image, type `default_versi
  {: #version_1_0}
 
 This earlier image matches the environment that pipeline jobs were run in before versioned base images were available. This image contains all of the versions of the tools that were available when the image was created, but it is no longer being updated. To access new versions of tools, update to the current image version. For more information about the contents of the 1.0 image version, see [Preinstalled resources](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources).
-
  
  ## Configuring the image for a specific pipeline job
  {: #configure_image_for_job}
