@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-03-16"
 
 keywords: devops insights, publish, deploy, record, deployment, jenkins, app
 
@@ -51,7 +51,7 @@ The following example commands include the parameters. The first command publish
 
 ```
 publishDeployRecord environment: "STAGING", appUrl: "http://staging-Weather-App.mybluemix.net", result:"SUCCESS"
-publishDeployRecord environmnet: "PRODUCTION", appUrl: "http://Weather-App.mybluemix.net", result:"SUCCESS"
+publishDeployRecord environment: "PRODUCTION", appUrl: "http://Weather-App.mybluemix.net", result:"SUCCESS"
 ```
 {:codeblock}
 
