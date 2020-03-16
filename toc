@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="ContinuousDelivery" category="devops" audience="service" arm="1155710" href="/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started" path="ContinuousDelivery"}
+{: .toc subcollection="ContinuousDelivery" category="devops" audience="service" href="/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started" product-page="https://www.ibm.com/cloud/continuous-delivery" console-page="/devops/toolchains" path="ContinuousDelivery"}
 Continuous Delivery
 
     {: .navgroup id="learn"}
