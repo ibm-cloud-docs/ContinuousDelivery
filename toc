@@ -28,6 +28,8 @@ Continuous Delivery
 
     {: .navgroup id="howto"}
     ha-dr.md
+    cd_create.md
+    cd_delete.md
 
     {: .topicgroup}
     Toolchains
