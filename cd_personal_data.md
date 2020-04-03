@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2019-09-10"
+lastupdated: "2020-03-30"
 
 keywords: IBM Cloud account, personal data, personal accounts, corporate accounts, access, Web IDE, Git Repos and Issue Tracking, pipeline data, toolchains, tool integrations
 
@@ -21,7 +21,7 @@ subcollection: ContinuousDelivery
 {:important: .important}
 {:download: .download}
 
-# Managing personal data in Continuous Delivery
+# Managing personal data for Continuous Delivery
 {: #cd_personal_data}
 
 You can modify, export, or delete personal data from {{site.data.keyword.contdelivery_full}}.
