@@ -2,7 +2,7 @@
 
 copyright:
   years:  2019, 2020
-lastupdated: "2019-10-15"
+lastupdated: "2020-03-30"
 
 keywords: Cloud Foundry org, user access, toolchains
 
@@ -21,7 +21,7 @@ subcollection: ContinuousDelivery
 {:download: .download}
 
 
-# Managing user access to toolchains in Cloud Foundry orgs
+# Managing access for toolchains in Cloud Foundry orgs
 {: #toolchains-cf-security}
 
 You can grant users access to a toolchain by adding them to both the org that the toolchain is associated with and the access control list for the toolchain. Each toolchain is associated with a specific org, and any user that is a member of that org can be added to the access control list for any of the associated toolchains. The org that you are currently working in is displayed on the menu bar. To access a different set of toolchains, switch to a different org.
