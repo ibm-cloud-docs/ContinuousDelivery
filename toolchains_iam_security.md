@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-01-24"
+lastupdated: "2020-03-30"
 
 keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
@@ -21,7 +21,7 @@ subcollection: ContinuousDelivery
 {:download: .download}
 
 
-# Managing user access to toolchains in resource groups
+# Managing access for toolchains in resource groups
 {: #toolchains-iam-security}
 
 User access for toolchains in Cloud Foundry orgs is managed differently than user access to toolchains in resource groups. For more information about managing user access to toolchains in Cloud Foundry orgs, see [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-cf-security).
