@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2019-12-13"
+lastupdated: "2020-04-03"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -24,16 +24,23 @@ subcollection: ContinuousDelivery
 {:download: .download}
 {:preview: .preview}
 
-# Securing your data    
+# Securing your data in {{site.data.keyword.contdelivery_short}}
 {: #cd_data_security}  
 
 {{site.data.keyword.contdelivery_full}} hosts your databases in a highly available and secure environment:
-   * Data is encrypted at rest (GPFS, LUKS, and built-in disk) and in flight (HTTPS and SSH). Client and system credentials are stored on encrypted disks. Configuration data for tool integrations is encrypted when it is stored in databases that are internal to the {{site.data.keyword.contdelivery_short}} service. 
+   * Data is encrypted at rest (GPFS, LUKS, and built-in disk) and in transit (HTTPS and SSH) by using encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service, or the services and infrastructure that it depends on.
+   * Client and system credentials are stored on encrypted disks. 
+   * Configuration data for tool integrations and {{site.data.keyword.deliverypipeline}} property values might include sensitive information. This data is encrypted by using encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service because it is stored in databases that are internal to the service. 
    * The application and data are configured for high availability.
    * Access to data is limited to only those users who require the data to support and maintain the service.
    
-## Maintaining secure credentials
+{{site.data.keyword.contdelivery_short}} does not support encryption that uses customer-provided keys.
+{: important}
+
+## Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}
 {: #cd_secure_credentials}
+
+The {{site.data.keyword.contdelivery_short}} service encrypts customer-owned sensitive data before it stores it in databases that are used internally by the service. Sensitive data includes third-party tool integration configuration data and {{site.data.keyword.deliverypipeline}} property values. Data is encrypted by using encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service.
 
 DevOps processes often require various types of credentials (such as usernames and passwords, API keys, service keys, and SSH keys) to interact with other systems to build, test, and deploy applications. You are responsible for ensuring that these credentials aren't inadvertently shared outside of their intended audience. Access to these credentials by malicious actors might disrupt your IT operations, cause unexpected costs, or use your resources to start attacks. IBM is not responsible for protecting and maintaining the security of your credentials.
 
@@ -49,3 +56,8 @@ To keep your credentials secure, make sure that you follow this guidance:
    * [HashiCorp Vault](https://www.vaultproject.io/){:external}
    
 For more information about secure DevOps best practices, see [DevOps Security](https://www.ibm.com/cloud/learn/devops-a-complete-guide?mhsrc=ibmsearch_a&mhq=Secure%20DevOps#toc-security-j2-0639C){:external}.
+
+## Deleting your data from {{site.data.keyword.contdelivery_short}}
+{: #cd_delete-data}
+
+When you delete a {{site.data.keyword.contdelivery_short}} service instance, the related toolchains, tool integrations, tools, and data (including personal data) are not deleted. For more information about how to manage and delete data that is stored with toolchains, tool integrations, and tools, see [Modifying, exploring, and deleting personal data](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_personal_data#managing_personal_data).
