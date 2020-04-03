@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2019-10-11"
+lastupdated: "2020-03-30"
 
 keywords: Administrator Create, Administrator Update, Editor Update, service access roles, IAM, access policies
 
@@ -20,7 +20,7 @@ subcollection: ContinuousDelivery
 {:download: .download}
 
 
-# Managing user access to Continuous Delivery in resource groups
+# Managing user access for Continuous Delivery in resource groups
 {: #cd-iam-security}
 
 Access to {{site.data.keyword.contdelivery_full}} service instances in resource groups for users in your account is controlled by {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). 
