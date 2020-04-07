@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-03-09"
+lastupdated: "2020-03-17"
 
-keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Alert Notification, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Jenkins, JIRA, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
+keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Alert Notification, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Jenkins, JIRA, Key Protect, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
 
 subcollection: ContinuousDelivery
 
@@ -47,6 +47,7 @@ The tool integrations that are available to add and configure for your toolchain
 |GitLab		|US South, US East, Germany, Tokyo, United Kingdom		|No		|
 |Jenkins		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
 |JIRA		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
+|{{site.data.keyword.keymanagementserviceshort}}		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
 |Nexus			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
 |Other Tool			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
 |PagerDuty			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
@@ -818,6 +819,34 @@ Configure JIRA to plan, track, and deliver quality code:
 ### Learn more about JIRA
 
 To learn more about JIRA, see the [JIRA article](https://www.ibm.com/garage/method/practices/code/tool_jira){:external} on the IBM Cloud Garage Method.
+
+
+## Configuring {{site.data.keyword.keymanagementserviceshort}}
+{: #keyprotect}
+
+{{site.data.keyword.keymanagementservicefull}} helps you to securely store and apply secrets for apps across {{site.data.keyword.cloud_notm}} services. To learn more about {{site.data.keyword.keymanagementserviceshort}}, see [Key types](/docs/key-protect?topic=key-protect-envelope-encryption#key-types).
+
+Before you create a {{site.data.keyword.keymanagementserviceshort}} tool integration, you must have an instance of the {{site.data.keyword.keymanagementserviceshort}} service provisioned in the region and resource group that you want to create the tool integration in. For instructions to provision an instance of the {{site.data.keyword.keymanagementserviceshort}} service, see [Provisioning the service](/docs/services/key-protect?topic=key-protect-provision).
+{: important}
+
+Configure {{site.data.keyword.keymanagementserviceshort}} to securely manage secrets, such as API keys, that are part of your  toolchain:
+
+1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.keymanagementserviceshort}}**.
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.  
+
+ a. Click **Add a Tool**.
+
+ b. In the Tool Integrations section, click **{{site.data.keyword.keymanagementserviceshort}}**.
+
+1. Specify a name for this instance of the {{site.data.keyword.keymanagementserviceshort}} tool integration to use in your toolchain.
+1. Review the default values for **Region** and **Resource-Group** and update, if required.
+1. Select the instance of the **{{site.data.keyword.keymanagementserviceshort}}** service that you want to use.
+1. Click **Create Integration**.
+1. From your toolchain, click **Key Protect**.
+
+### Learn more about {{site.data.keyword.keymanagementserviceshort}}
+
+To learn more about {{site.data.keyword.keymanagementserviceshort}}, see [About the service](/docs/services/key-protect?topic=key-protect-about).
 
 
 ## Configuring Nexus
