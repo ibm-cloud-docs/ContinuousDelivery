@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-14"
+lastupdated: "2020-04-07"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -99,16 +99,18 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
  a. Specify the Git repo and URL that contains the Tekton pipeline definition and related artifacts.
 
- b. Select the branch within your Git repo that you want to use.
+ b. Select the branch within your Git repo that you want to use, or type a tag.
  
  c. Specify the path to your pipeline definition within the Git repo. You can reference a specific definition within the same repo.
+
+ The pipeline definition is updated automatically.
  
 1. In the **Worker** tab, select the private worker that you want to use to run your Tekton pipeline on the associated cluster. For more information about private workers, see [Working with Delivery Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers).
 
  The private worker must be defined in the same toolchain as your Tekton pipeline.
  {: important}
 
-1. In the **Triggers** tab, click **Add trigger** to create a manual, timed, or Git repository trigger, and then associate that trigger with an event listener. Manual triggers run when you click the **Run** pipeline button and select the trigger. Timed triggers run at a scheduled time that is defined by the [CRON](http://crontab.org/){:external} value. Git repository triggers run when the specified Git event type occurs for the specified Git repo and branch. The list of available event listeners is populated with the listeners that are defined in the pipeline code repo.
+1. In the **Triggers** tab, click **Add trigger** to create a manual, timed, Git repository, or generic webhook trigger, and then associate that trigger with an event listener. Manual triggers run when you click the **Run** pipeline button and select the trigger. Timed triggers run at a scheduled time that is defined by the [CRON](http://crontab.org/){:external} value. Git repository triggers run when the specified Git event type occurs for the specified Git repo and branch. Generic webhook triggers run when a POST request that is configured with the secret setting goes to the generic webhook URL. The list of available event listeners is populated with the listeners that are defined in the pipeline code repo.
  
  Triggers are based on [Tekton trigger definitions](https://github.com/tektoncd/triggers){:external}. Git respository triggers use the event listener that they are mapped to to extract information from the incoming event payload and create Kubernetes resources. These resources are applied to a Tekton `PipelineRun` resource.
  {: tip}
@@ -118,6 +120,31 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    * `0 * * * *` - The trigger runs at the start of every hour.
    * `0 9 * 1 MON-FRI` - The trigger runs at 9:00 AM every weekday in January.
    * `0 * * NOV,DEC 1` - The trigger runs every hour on Mondays during November and December.
+
+ Generic webhook triggers provide a unique webhook URL for POST requests. You can secure generic webhook triggers to work with Git, a Slack outgoing webhook, an Artifactory webhook, and more by using any of the following methods:
+
+   * Token matches to compare the saved token and the token that is passed within the POST request. Supported token sources include a header, query, or payload. Token matches are used by GitLab webhooks and Slack outgoing webhooks.
+   * Payload digest matches to compare the signature and the hash that are generated from the digested payload by using HMAC hex digest with a saved token. Supported signature sources might include a header, query, or payload. Users must specify a digest algorithm. Payload digest matches are used by GitHub webhooks.
+   * Tekton task validation requires users to validate the webhook request within their Tekton tasks.
+
+ Specify the following values to use generic webhook triggers with GitHub webhooks:
+ 
+   * Securing: `Payload Digest Matches`
+   * Signature Source: `Header`
+   * Header Key Name: `X-Hub-Signature`
+   * Digest Algorithm: `sha1`.  
+ 
+ Specify the following values to use generic webhook triggers with GitLab webhooks:
+
+  * Securing: `Token Matches`
+  * Token Source: `Header`
+  * Header Key Name: `X-Gitlab-Token`
+
+ Specify the following values to use generic webhook triggers with Slack outgoing webhooks:
+
+  * Securing: `Token Matches`
+  * Token Source: `Payload`
+  * Header Key Name: `JSON Property Name / Form Key`
  
  You can access the webhook payload that is delivered to a Git trigger from your Tekton pipeline resources. Although the exact fields are repo-specific, the general syntax for the webhook payload is `$(event.payloadFieldName)`.
  {: tip}
