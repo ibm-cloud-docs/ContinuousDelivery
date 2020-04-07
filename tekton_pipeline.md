@@ -144,7 +144,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
   * Securing: `Token Matches`
   * Token Source: `Payload`
-  * Header Key Name: `JSON Property Name / Form Key`
+  * JSON Property Name / Form Key: `token`
  
  You can access the webhook payload that is delivered to a Git trigger from your Tekton pipeline resources. Although the exact fields are repo-specific, the general syntax for the webhook payload is `$(event.payloadFieldName)`.
  {: tip}
