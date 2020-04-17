@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-03-04"
+lastupdated: "2020-04-16"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations, private workers
 
@@ -73,6 +73,33 @@ You can use any of the following methods to debug this error:
 * Use the pipeline user interface to create an example pipeline that replicates the pipeline that you are trying to build with your template. Append `/yaml` to the pipeline URL to generate a similar pipeline.yaml file that you can use to look for obvious differences. For example, `https://cloud.ibm.com/devops/pipelines/<your pipeline id>/yaml?env_id=<your region>`.
 
 * Use the headless toolchain creation mechanism. On the **Create a Toolchain** page, open the debugger and evaluate the `window.Testflags = {nocreate: 1}` expression. When you click **Create a Toolchain** in this mode, the toolchain is not created. Instead, the information that is passed to the API is returned to the console where you can review it.
+
+
+## I tried to run a pipeline, why am I getting an error about access to the Git repository (repo)? 
+{: troubleshoot-cd-pipeline-git}
+{: troubleshoot}
+
+The pipeline uses an access token to clone the Git repo. If this access token isn't valid, the owner of the Git integration cannot access the Git repo. 
+
+Supported Git integrations include the GitHub, GitLab, Bitbucket, or Git Repos and Issue Tracking tool integrations.
+{: tip}
+
+When I attempt to run a pipeline, I receive the following error message:
+{: tsSymptoms}
+
+`The access token for this git repository is no longer valid. Please reconfigure the git integration to ensure the integration owner has access to this repository.`
+
+The access token that the pipeline uses to clone the Git repo is no longer valid. This issue might occur because the token was invalidated. The access token might also be invalid if the owner of the Git integration lost access to the repo because of permission changes.
+{: tsCauses}
+   
+Configure and save the Git integration again:
+{: tsResolve}
+
+  1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain that contains the Git integration that you want to update to open its Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
+  1. On the card for the Git integration, click the menu to access the configuration options.
+  1. Select the authorized Git account for the Git integration owner.
+  1. Click **Save Integration**.
+  1. Run your pipeline again. 
 
 
 ## I tried to deploy to Kubernetes by using the {{site.data.keyword.deliverypipeline}}, why am I getting an error about an invalid object? 
