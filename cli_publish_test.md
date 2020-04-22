@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-20"
 
 keywords: devops insights, publish, test, results, cli, code coverage, tests, verification, app, sonarqube, dashboard
 
@@ -103,7 +103,7 @@ Test records must provide data in one of the following supported formats:
 
 When your pipeline runs, it publishes the test result data to {{site.data.keyword.DRA_short}}. You can view the test result data on the Quality Dashboard page. 
 
-1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **Resource List**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **Resource List**.
 2. Select your toolchain.
 3. Click the **{{site.data.keyword.DRA_short}}** tile.
 4. Click **Quality Dashboard** in the navigation to open the page.
