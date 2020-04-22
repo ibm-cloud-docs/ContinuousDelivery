@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-20"
 
 keywords: devops insights, publish, build, record, cli, test, tests, app
 
@@ -62,7 +62,7 @@ The `status` field takes the values `pass` or `fail`.
 
 When the build job completes, the pipeline publishes a message to {{site.data.keyword.DRA_short}} that a build is complete. You can view the build record on the Build Frequency page. 
 
-1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **Resource List**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **Resource List**.
 2. Select your toolchain. 
 3. Click the **{{site.data.keyword.DRA_short}}** tile.
 4. Click **Build Frequency** in the navigation.  
