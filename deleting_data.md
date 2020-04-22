@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-17"
 
 keywords: devops insights, manage, data, quality, delete, test, tests, app, dashboard
 
@@ -34,7 +34,7 @@ You can delete data in following ways:
 
 For more information about toolchains, see [Creating a toolchain from an app](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app).
 
-{{site.data.keyword.IBM_notm}} doesn't manage data in {{site.data.keyword.DRA_short}}. If you quit using {{site.data.keyword.DRA_short}}, you must delete your own data. To delete your data, delete the {{site.data.keyword.DRA_short}} tool integration from your toolchain. If the {{site.data.keyword.DRA_short}} tool integration is not added again to the toolchain within seven days, the data is deleted.
+{{site.data.keyword.IBM_notm}} doesn't manage data in {{site.data.keyword.DRA_short}}. If you stop using {{site.data.keyword.DRA_short}}, you must delete your own data. To delete your data, delete the {{site.data.keyword.DRA_short}} tool integration from your toolchain. If the {{site.data.keyword.DRA_short}} tool integration is not added again to the toolchain within seven days, the data is deleted.
 {: important}
 
 
@@ -48,7 +48,7 @@ Data can’t be recovered after it is deleted.
 
 To see your manage data dashboard, complete the following steps: 
 
-1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**.
 2. Select your toolchain.
 3. Select the **{{site.data.keyword.DRA_short}}** tile.
 4. Select **Manage Data**.
