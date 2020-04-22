@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2020
 
-lastupdated: "2020-03-04"
+lastupdated: "2020-04-17"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -48,8 +48,8 @@ To see which toolchains and tool integrations are available, see [Toolchain avai
 You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){:external} that includes a specific set of tool integrations. Depending on the template that you use, you can create a toolchain that has a specific set of tool integrations or an empty toolchain that you can add tool integrations to. Learn more about how to use the templates from the [IBM Cloud Garage Method ](https://www.ibm.com/cloud/garage/category/tools){:external}.
 
 1. If you use {{site.data.keyword.cloud_notm}} Public, log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
-1. If you use {{site.data.keyword.cloud_notm}} Dedicated, log in to your Dedicated environment on {{site.data.keyword.cloud_notm}}.
-1. From the menu on the {{site.data.keyword.cloud_notm}} menu bar, click **DevOps**.
+1. If you use {{site.data.keyword.cloud_notm}} Dedicated, log in to your Dedicated environment on {{site.data.keyword.cloud_notm}}
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**.
 1. On the DevOps dashboard, on the **Toolchains** page, click **Create a Toolchain**.
 1. On the **Create a Toolchain** page, click a toolchain template.
 1. Review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
