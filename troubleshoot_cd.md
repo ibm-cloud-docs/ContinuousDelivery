@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-27"
+lastupdated: "2020-04-21"
 
 keywords: troubleshoot, toolchains, Cloud Foundry
 
@@ -75,7 +75,7 @@ Org-based toolchains aren't visible from the command line or the resource list. 
 {: tip}
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
-1. If you have more than one account, you can click your account name in the console menu bar to select another account that you can access. 
+1. If you have more than one account, you can click your account name in the {{site.data.keyword.cloud_notm}} console menu bar to select another account that you can access. 
 1. Go to the [Resource list](https://cloud.ibm.com/resources){: external} for your {{site.data.keyword.cloud_notm}} account.
 1. Make note of the location and the org that the {{site.data.keyword.cloud_notm}} service is contained in.
 1. On the [Toolchains](https://cloud.ibm.com/devops/toolchains){: external} page, select the location and Cloud Foundry org for the {{site.data.keyword.contdelivery_short}} service instance. All of the toolchains that are associated with this service instance are displayed.
