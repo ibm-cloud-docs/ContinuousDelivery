@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-01-13"
+lastupdated: "2020-04-22"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -72,9 +72,9 @@ For more information about using IAM to manage access to toolchains in a resourc
 The method that you use to organize toolchains within resource groups directly impacts user access and billing. When a user uses toolchains in multiple regions or resource groups, they are counted and billed for each {{site.data.keyword.contdelivery_short}} service instance within each unique pairing of region and resource group.
 {: tip}
 
-You can manage the list of authorized users on the **Manage** tab within the  {{site.data.keyword.contdelivery_short}} service instance.
+You can manage the list of authorized users on the **Manage** tab within the {{site.data.keyword.contdelivery_short}} service instance.
 
-1. Go to the [Resource list](https://cloud.ibm.com/resources){:external} for your {{site.data.keyword.Bluemix_notm}} account.
+1. Go to the [Resource list](https://cloud.ibm.com/resources){:external} for your {{site.data.keyword.Bluemix_cloud}} account.
 2. In the **Name** column, in the filter text box, type `Continuous Delivery` to view your existing services.
 3. For each service, click the hyperlink in the **Name** column.
 4. In the **Manage** tab, you can view, add, or remove users from the list of Authorized Users, as needed.
@@ -86,7 +86,7 @@ Users are automatically added or added again when they use the {{site.data.keywo
 
 Authorized users are counted by using the list of users in the {{site.data.keyword.Bluemix_notm}} Foundry org that contains the {{site.data.keyword.contdelivery_short}} service. For more information about orgs and spaces, see [Creating organizations and spaces](/docs/cloud-foundry?topic=cloud-foundry-create_orgs).
 
-To view the list of users in your org in an {{site.data.keyword.Bluemix_notm}} Public environment, from the menu bar, click **Manage > Account**. Then, click **Cloud Foundry orgs**.
+To view the list of users in your org in an {{site.data.keyword.cloud_notm}} Public environment, from the {{site.data.keyword.cloud_notm}} console, go to **Manage > Account**. Then, click **Cloud Foundry orgs**.
 
 ### How can you view billing and usage information?
 
