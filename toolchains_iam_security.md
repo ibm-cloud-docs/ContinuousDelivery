@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-03-30"
+lastupdated: "2020-04-21"
 
 keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
@@ -78,7 +78,7 @@ The following table lists and describes the available actions for toolchains:
 
 You can assign a new user access to all of the toolchains in your resource group.
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. Click **Invite users**.
 3. Specify the email address of the user that you want to invite.
 4. In the **Assign users additional access** section, click **IAM services**.
