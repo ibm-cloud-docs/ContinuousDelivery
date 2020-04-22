@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-17"
 
 keywords: devops insights, create, policy, rule, gate, edit rule, add rule, define policy, code coverage, test, tests, gate failing, verification, risk
 
@@ -31,7 +31,7 @@ A policy is a set of rules that you can customize, and a rule is the passing cri
 A policy is a set of rules that define the criteria that your gate uses to determine whether a build will be promoted to the next stage in a CI/CD tool. For example, you can create a policy that contains a unit test rule that requires 100 percent success and a test coverage rule that requires 80 percent coverage. A gate refers to this policy to prevent builds that don't satisfy both rules from proceeding.
 
 To create a policy, complete the following steps:
-1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**.
 2. Select your toolchain from the table.  
 3. Click the **{{site.data.keyword.DRA_short}}** tile.
 4. Select **Policies**.  
@@ -66,5 +66,3 @@ To edit rules, complete the following steps:
 1. From the Policies page, select the policy that has the rule you want to edit.
 2. Click the Edit icon ![write icon](images/icon_write.svg) for the rule.  
 3. Complete all required fields, and click **Save**.
-
-
