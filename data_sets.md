@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-17"
 
 keywords: devops insights, quality, dashboard, trends, data sets, configure data, quality data, managing data sets, code coverage, test, tests, verification, app, sonarqube
 
@@ -36,7 +36,7 @@ For more information about defining a policy, see [Defining policies and rules](
 
 View your current data sets by browsing your Quality Dashboard page. You can rearrange your data in the table to be in a more convenient order. To view your data sets, use the following steps:
 
-1. Click the **menu** icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**.
 2. Make sure the location that is selected is either Dallas, Frankfurt, or London.
 3. Select your toolchain from the table.
 4. Click the **{{site.data.keyword.DRA_short}}** tile.
@@ -90,4 +90,3 @@ You can add your own custom data sets. Custom data sets support JUnit or XUnit, 
 
 If a custom data set is deleted, any test results for that custom data set are deleted. For more information about deleting data sets, see [Deleting your {{site.data.keyword.DRA_short}} data](/docs/ContinuousDelivery?topic=ContinuousDelivery-deleting_data).
 {: note}
-
