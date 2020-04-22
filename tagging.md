@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-20"
 
 keywords: devops insights, tagging
 
@@ -37,7 +37,7 @@ Tags are case-sensitive. The maximum length of a tag is 128 characters. The reco
 
 You can add or remove tags from the {{site.data.keyword.DRA_full}} Quality Dashboard page:
 
-1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
 2. Select your toolchain > **{{site.data.keyword.DRA_short}}** > **Quality Dashboard**.
 3. Click **Add tags** for the associated application, type in your tag, and click **Save**. 
 
