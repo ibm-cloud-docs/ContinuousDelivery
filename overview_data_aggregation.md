@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-17"
 
 keywords: devops insights, quality, dashboard, code coverage, test, tests, verification, app
 
@@ -29,6 +29,4 @@ The quality dashboard provides quality data sets such as unit tests, code covera
 
 The Quality Dashboard page shows rows of information for each app that is associated with {{site.data.keyword.DRA_full}}. All of the information about successes and failures for each test for each app is available on one screen.  
 
-You can find the Quality Dashboard page in the {{site.data.keyword.DRA_short}} dashboard. Click the **menu** icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. From the DevOps dashboard, select your toolchain, then select the **{{site.data.keyword.DRA_short}}** tile. From the navigation menu, click **Quality Dashboard**.
-
-
+You can find the Quality Dashboard page in the {{site.data.keyword.DRA_short}} dashboard. From the {{site.data.keyword.cloud_notm}} console, click the **menu** icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. From the DevOps dashboard, select your toolchain, then select the **{{site.data.keyword.DRA_short}}** tile. From the navigation menu, click **Quality Dashboard**.
