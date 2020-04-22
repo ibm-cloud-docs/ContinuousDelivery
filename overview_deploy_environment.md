@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-17"
 
 keywords: devops insights, risk, analysis, application, environment, app, dashboard
 
@@ -29,5 +29,4 @@ Risk analysis is useful for customers that deploy to several environments. You c
 
 Within the risk analysis dashboard you can select from two tabs: **Application** and **Environment**. Within the **Application** tab, you can see the number of active builds and risk evaluations for each of your apps. In the **Environment** tab, you can view the location of the app, the number of deployed applications, and the risk evaluations associated with the environment.  
 
-To see the Risk Analysis page, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. Select your toolchain. Select the **{{site.data.keyword.DRA_short}}** tile, then from the navigation menu, click **Risk Analysis**.
-
+To see the Risk Analysis page, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. Select your toolchain. Select the **{{site.data.keyword.DRA_short}}** tile, then from the navigation menu, click **Risk Analysis**.
