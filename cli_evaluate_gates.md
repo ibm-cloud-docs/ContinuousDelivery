@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-20"
 
 keywords: devops insights, evaluating gates, cli, test, tests, gate, gate failing, app
 
@@ -59,7 +59,7 @@ ibmcloud doi evaluategate --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUI
 
 You can view the results of the gate evaluation on the Risk Analysis page, which relies on the presence of a gate after a staging deployment job in your pipeline. Make sure that you have a gate after you deploy to the staging environment, but before you deploy to a production environment. 
 
-1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **Resource List**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **Resource List**.
 2. Select your toolchain. 
 3. Click the **{{site.data.keyword.DRA_short}}** tile.
 4. Click **Risk Analysis** in the navigation.  
