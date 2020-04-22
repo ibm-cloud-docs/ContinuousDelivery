@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-20"
 
 keywords: devops insights, setting, values, cli, parameter values, consistent, test, tests, install, app, dashboard, risk, build.properties
 
@@ -58,7 +58,7 @@ Configure your pipeline to use these properties across all stages. Save these pr
 
 Next, on the pipeline configuration page, set a property with name `buildProperties` and the value `build.properties`. You must set the property name and the value for each stage in your pipeline.
 
-1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **Resource List**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **Resource List**.
 2. Select your toolchain.
 3. Select the **Delivery Pipeline** tile.
 4. Click the **Settings** icon ![gear icon](images/settings.svg) > **Configure Stage**.
