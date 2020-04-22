@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2019-01-10"
+lastupdated: "2020-04-17"
 
 keywords: code quality, risk management, interactions of your team, devops insights, getting started, devops, insights, tutorial, code coverage, test, tests, gate, gate failing, verification, install, app, dashboard
 
@@ -40,7 +40,7 @@ Authorize the use of GitHub repos. For more information, see [Authenticating wit
 ## Step 1. Add the toolchain by using a template
 {: #1-add-toolchain}
 
-1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
 2. Expand the **Location** menu, and select a location for your deployment. {{site.data.keyword.DRA_short}} is available in Dallas, London, and Frankfurt. 
 3. Click **Create a Toolchain**.
 4. Select the **Develop a Cloud Foundry app with {{site.data.keyword.DRA_short}}** tile.  
