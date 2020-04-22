@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2019-08-20"
+lastupdated: "2020-04-21"
 
 keywords: Support tickets, help, questions, toolchains
 
@@ -56,8 +56,8 @@ The {{site.data.keyword.contdelivery_full}} team actively monitors our Slack cha
 
 If you have a more serious issue or encounter problems with the {{site.data.keyword.contdelivery_short}} service, open a support ticket.   
 
-1. Log in to {{site.data.keyword.Bluemix_notm}}.
-1. From the menu bar, click **Support**, and then click **Add Ticket**.
+1. Log in to {{site.data.keyword.cloud_notm}}.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Support** and then click **Add Ticket**.
 1. Complete the form to indicate what you need technical support for.
 
 For more information about opening an IBM {{site.data.keyword.Bluemix_notm}} support ticket, or about support levels and ticket severities, see [Support plans](/docs/get-support?topic=get-support-support-plans).
