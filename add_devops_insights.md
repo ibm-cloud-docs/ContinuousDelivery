@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-20"
 
 keywords: devops insights, devops, insights, integrate, adding, code coverage, test, tests, verification, install, app, dashboard, risk
 
@@ -40,7 +40,7 @@ For more information about toolchains, see [Creating a toolchain from an app](/d
 
 You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it from the tool integration catalog.
 
-1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg) **> DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) **> DevOps**.
 2. Select your toolchain.  
 3. Click **Add a Tool**.
 4. Select the **{{site.data.keyword.DRA_short}}** tile.
