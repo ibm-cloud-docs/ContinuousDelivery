@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-17"
 
 keywords: devops insights, create, policy, rule, gate, code coverage, test, tests, gate failing, verification, app, dashboard
 
@@ -34,7 +34,7 @@ For more information about data sets, see [Managing data sets](/docs/ContinuousD
 
 ![Deployment Risk Policy](images/DRA_policy.png "Policy rules page of existing rule names and descriptions with the option to create a new policy rule") Figure 1. Policy and rules page
 
-To get to the Policy Rules page within {{site.data.keyword.DRA_short}}, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. In the toolchain dashboard, select your toolchain, and click the **{{site.data.keyword.DRA_short}}** tile. From the navigation menu, select **Policies**, and select a policy.
+To go to the Policy Rules page within {{site.data.keyword.DRA_short}}, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. In the toolchain dashboard, select your toolchain, and click the **{{site.data.keyword.DRA_short}}** tile. From the navigation menu, select **Policies**, and select a policy.
 
 
 ## Gate decisions
