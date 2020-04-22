@@ -3,7 +3,7 @@
 copyright:
   years: 2020
 
-lastupdated: "2020-03-10"
+lastupdated: "2020-04-17"
 
 keywords: ibmcloud, resource, service instance, create, IBM Cloud
 
@@ -38,7 +38,7 @@ You can have one active instance of {{site.data.keyword.contdelivery_short}} onl
 {: important}
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){:external}.
-1. From the menu bar, click **Catalog** and select **Developer Tools**.
+1. From the {{site.data.keyword.cloud_notm}} console, click **Catalog** and select **Developer Tools**.
 1. Click the **{{site.data.keyword.contdelivery_short}}** tile.
 1. Select the region that you want to create the {{site.data.keyword.contdelivery_short}} service in.
 1. Choose a Lite or Professional pricing plan. Lite plans offer the full capabilities of {{site.data.keyword.contdelivery_short}} to small teams at no cost, with usage limits. If you create a Lite-plan instance, it is automatically deleted 30 days after creation. For more information about {{site.data.keyword.contdelivery_short}} service plans, see [Plan limitations and usage](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
