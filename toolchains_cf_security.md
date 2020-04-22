@@ -2,7 +2,7 @@
 
 copyright:
   years:  2019, 2020
-lastupdated: "2020-03-30"
+lastupdated: "2020-04-21"
 
 keywords: Cloud Foundry org, user access, toolchains
 
@@ -46,7 +46,7 @@ If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.ke
 
 * To grant access to a user who is not a member of the toolchain's org, follow these steps:
 
-   a. From the menu bar, click **Manage > Access (IAM)**.
+   a. From the {{site.data.keyword.cloud_notm}} console, click **Manage > Access (IAM)**.
 
    b. Click **Access starts with the user**.
    
@@ -71,4 +71,4 @@ If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.ke
      By default, org managers have full admin privileges for all of the toolchains that are associated with the org. To grant full admin privileges to the user, select the **Manager** role. The Billing Manager and Auditor roles do not affect toolchain access. You can change the roles later on the Team Directory page. For more information, see [Cloud Foundry roles](/docs/iam?topic=iam-cfaccess#cfaccess).
      {: tip}
 
-   After the user is a member of the org, return to the toolchain's Manage page and add the user to the toolchain.  
+   After the user is a member of the org, return to the toolchain's Manage page and add the user to the toolchain.
