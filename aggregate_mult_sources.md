@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-20"
 
 keywords: devops insights, devops, insights, toolchain, aggregate, test, tests, gate, gate failing, app
 
@@ -53,7 +53,7 @@ For more information about integrating Jenkins or other CI/CD tools with {{site.
 
 Your toolchain ID is in the URL. To find your toolchain ID, use the following steps:
 
-1. From the {{site.data.keyword.Bluemix}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. From the {{site.data.keyword.cloud}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
 2. Select your toolchain. 
 3. Select the **{{site.data.keyword.DRA_short}}** tile. 
 4. In the url, select and copy everything after `?toolchainId=`. It's a string of 36 characters long, composed of alphanumeric characters and dashes. 
