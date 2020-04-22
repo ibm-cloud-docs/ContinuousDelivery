@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-21"
 
 keywords: devops insights, setting, values, cli, parameter values, consistent, other ci/cd tools, test, tests, install, app, risk
 
@@ -43,7 +43,7 @@ To set the toolchain ID as an environment variable, first identify and save the 
 
 Use the following steps to go to the {{site.data.keyword.contdelivery_short}} pipeline in your toolchain and set the toolchain ID as an environment variable:
 
-1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
 2. Select a location: Dallas, London, or Frankfurt to view your toolchains that contain instances of {{site.data.keyword.DRA_short}}. 
 3. Select your toolchain. 
 4. Select the **{{site.data.keyword.deliverypipeline}}** tile. 
