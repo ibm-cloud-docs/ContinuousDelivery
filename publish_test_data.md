@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-04-23"
 
 keywords: devops insights, uploading data types, data types, test data format, test data, unit test, code coverage, test, tests, verification, app, sonarqube, dashboard
 
