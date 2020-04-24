@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-04-22"
+lastupdated: "2020-04-24"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -74,7 +74,7 @@ The method that you use to organize toolchains within resource groups directly i
 
 You can manage the list of authorized users on the **Manage** tab within the {{site.data.keyword.contdelivery_short}} service instance.
 
-1. Go to the [Resource list](https://cloud.ibm.com/resources){:external} for your {{site.data.keyword.Bluemix_cloud}} account.
+1. Go to the [Resource list](https://cloud.ibm.com/resources){:external} for your {{site.data.keyword.cloud_notm}} account.
 2. In the **Name** column, in the filter text box, type `Continuous Delivery` to view your existing services.
 3. For each service, click the hyperlink in the **Name** column.
 4. In the **Manage** tab, you can view, add, or remove users from the list of Authorized Users, as needed.
@@ -84,13 +84,13 @@ Users are automatically added or added again when they use the {{site.data.keywo
 
 ### How are users counted for instances of {{site.data.keyword.contdelivery_short}} in orgs?
 
-Authorized users are counted by using the list of users in the {{site.data.keyword.Bluemix_notm}} Foundry org that contains the {{site.data.keyword.contdelivery_short}} service. For more information about orgs and spaces, see [Creating organizations and spaces](/docs/cloud-foundry?topic=cloud-foundry-create_orgs).
+Authorized users are counted by using the list of users in the {{site.data.keyword.cloud_notm}} Foundry org that contains the {{site.data.keyword.contdelivery_short}} service. For more information about orgs and spaces, see [Creating organizations and spaces](/docs/cloud-foundry?topic=cloud-foundry-create_orgs).
 
 To view the list of users in your org in an {{site.data.keyword.cloud_notm}} Public environment, from the {{site.data.keyword.cloud_notm}} console, go to **Manage > Account**. Then, click **Cloud Foundry orgs**.
 
 ### How can you view billing and usage information?
 
-You can view all of the instances of the {{site.data.keyword.contdelivery_short}} service in your account and the number of users and pipeline executions that are reported against each instance in an {{site.data.keyword.Bluemix_notm}} Public environment.
+You can view all of the instances of the {{site.data.keyword.contdelivery_short}} service in your account and the number of users and pipeline executions that are reported against each instance in an {{site.data.keyword.cloud_notm}} Public environment.
 
 1. From the menu bar, click **Manage > Billing and usage**.
 2. Click **Usage**.
@@ -107,6 +107,63 @@ The Lite service plan has other limitations, such as the number of Delivery Pipe
 
 Upgrading to the Professional plan will remove these limitations and reactivate the service.
 {: tip}
+
+### How can you change to a different service plan?
+
+You can upgrade from the {{site.data.keyword.contdelivery_short}} Lite service plan to the Professional plan.
+
+1. From the console, click the Menu icon ![Menu icon](../icons/icon_hamburger.svg) > **Resource list** to view your list of resources.
+1. Click the {{site.data.keyword.contdelivery_short}} service that you want to upgrade.
+1. Click **Plan** in the {{site.data.keyword.contdelivery_short}} service instance dashboard. 
+1. In the **Change pricing plan** section, select **Professional** to upgrade to the {{site.data.keyword.contdelivery_short}} Professional plan, and click **Save**.
+1. After you change your plan, you must restage your app. Go to your resource list to find the app that the service is bound to. Click the Menu icon ![Menu icon](../icons/icon_hamburger.svg) **> Resource list**. In the app menu, select **Restart App**.
+
+#### Changing a plan through the CLI
+
+As an alternative to the console, you can change the {{site.data.keyword.contdelivery_short}} service's pricing plan by using the {{site.data.keyword.cloud_notm}} command-line interface (CLI).
+
+1. Check whether the service is enabled with the resource controller.
+
+   ```
+   ibmcloud catalog service continuous-delivery
+   ```
+   {:codeblock}
+
+   If the service is enabled with the resource controller (RC), it lists `RC Compatible true`. Make note of the ID of the plan that you want to change to.
+
+   ```
+   ID                 59b735ee-5938-4ebd-a6b2-541aef2d1f68
+   Name               continuous-delivery
+   Kind               service
+   Provider           IBM
+   Tags               dev_ops, eu_access, gc_migrate, ibm_created, lite, rc_compatible
+   Active             true
+   Description        Support DevOps best practices by using Git, issue tracking, CI/CD pipelines, and the Eclipse Orion Web IDE in the Cloud.
+   Bindable           false
+   Original Name      continuous-delivery
+   RC Compatible      true
+   RC Provisionable   true
+   IAM Compatible     true
+   Children           Name                      Kind         ID                                            
+                      lite                      plan         a35fb0e9-4fc2-400e-8161-49078e5af632 
+                      professional              plan         9ca4dc64-bc7b-4aba-9c1c-8bbf30ff127e
+    ```
+
+1. Change the plan for your service instance.
+
+   - If the service is RC-enabled, change your plan by using the [`ibmcloud resource service-instance-update` command](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_update).
+
+     ```
+     ibmcloud resource service-instance-update <service_instance_name> --service-plan-id <plan_id>
+     ```
+     {: codeblock}
+
+   - If the service is not RC-enabled and is therefore based on Cloud Foundry, change your plan by using the [`ibmcloud cf update-service` command](/docs/cli?topic=cloud-cli-ibmcloud_commands_services#ibmcloud_service_update).
+
+     ```
+     ibmcloud cf update-service <service_instance_name> [-p <plan_name>]
+     ```
+     {:codeblock}
 
 ## Delivery Pipeline usage
 {: #pipeline_usage}
@@ -130,7 +187,7 @@ At the discretion of IBM, users who violate the acceptable usage behaviors of th
 
 {{site.data.keyword.gitrepos}} is built on GitLab Community Edition and hosted by IBM on {{site.data.keyword.Bluemix_notm}}, however, a few GitLab options are not available:
 
- * Because {{site.data.keyword.deliverypipeline}} provides continuous integration and continuous delivery for {{site.data.keyword.Bluemix_notm}}, the continuous integration features in GitLab are not supported.
+ * Because {{site.data.keyword.deliverypipeline}} provides continuous integration and continuous delivery for {{site.data.keyword.cloud_notm}}, the continuous integration features in GitLab are not supported.
  * GitLab admin functions are not available because they are managed by IBM.
  * {{site.data.keyword.gitrepos}} might not be fully accessible.
 
@@ -141,8 +198,8 @@ Three types of {{site.data.keyword.gitrepos}} projects are available:
 
   1. Public projects are visible to all site visitors. The content in a public project is visible to everyone who accesses {{site.data.keyword.contdelivery_short}}, even if they are not invited to the project.
   2. Private projects are visible to select users only. For more information about granting users access to a project, see [Project members](https://us-south.git.cloud.ibm.com/help/user/project/members/index.md){:external}.
-  3. Internal projects are visible to all logged-in users. Any user who has an {{site.data.keyword.Bluemix_notm}} account can view these projects.
+  3. Internal projects are visible to all logged-in users. Any user who has an {{site.data.keyword.cloud_notm}} account can view these projects.
 
 You can modify the project type in the project's settings. For more information about the project settings, see [How to change project visibility](https://us-south.git.cloud.ibm.com/help/public_access/public_access#how-to-change-project-visibility){:external}.
 
-When you use {{site.data.keyword.gitrepos}}, the content that you contribute to a project is licensed under any terms that are specified in that project. When you create a project, include a file that describes the license that applies to the content. When you contribute to a project, your name and the email address that is associated with your commits might be visible to the public. The email address that is associated with your {{site.data.keyword.Bluemix_notm}} account is used when you create commits through the {{site.data.keyword.gitrepos}} web interface.
+When you use {{site.data.keyword.gitrepos}}, the content that you contribute to a project is licensed under any terms that are specified in that project. When you create a project, include a file that describes the license that applies to the content. When you contribute to a project, your name and the email address that is associated with your commits might be visible to the public. The email address that is associated with your {{site.data.keyword.cloud_notm}} account is used when you create commits through the {{site.data.keyword.gitrepos}} web interface.
