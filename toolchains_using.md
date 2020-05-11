@@ -38,7 +38,7 @@ If you deferred the configuration of a tool integration when you created a toolc
 1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. If you need to configure a tool integration for the first time, on its card, click **Configure**.
 
-  ![Configure button](images/toolchain_tile_configure.png)
+  <img src="images/toolchain_tile_configure.png" alt="Configure button" width="167" style="width:167px; border-style: none"/>
 
  When you are finished configuring the tool integration, click **Save Integration**.
 
@@ -57,7 +57,7 @@ If you deferred the configuration of a tool integration when you created a toolc
 You can add and configure tool integrations for your toolchain. The available tool integrations differ depending on whether you use {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated.
 
 1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
-1. To see a list of tool integrations to add, click **Add a Tool**.
+1. To see a list of tool integrations to add, click **Add tool**.
 1. Click a tool integration that you want to add.
 1. Enter any required information to configure the tool integration.
 1. Click **Create Integration** to add the tool integration to your toolchain.
@@ -104,11 +104,10 @@ For more information about tags, see [Working with tags](/docs/resources?topic=r
 ## Deleting a toolchain
 {: #deleting_a_toolchain}
 
-You can delete a toolchain and specify which of the associated tool integrations you want to delete. When you delete a toolchain, the deletion cannot be undone.
+You can delete a toolchain. When you delete a toolchain, the deletion cannot be undone.
 
 1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
-1. Click the **More Actions** menu, which is next to **View app**.
-1. Click **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
+1. Click the **Actions** menu and select **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.  
 
  When you delete a GitHub, {{site.data.keyword.ghe_short}}, or {{site.data.keyword.gitrepos}} tool integration, the associated repo is not deleted from GitHub, {{site.data.keyword.ghe_short}}, or {{site.data.keyword.gitrepos}}. You must manually remove the repo.
