@@ -60,9 +60,9 @@ Complete the following steps to set up a private worker:
 
 Complete the following steps to configure the {{site.data.keyword.deliverypipeline}} Private Worker tool integration for your toolchain:
 
-1. To add the tool integration to your toolchain, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**.
+1. To add the tool integration to your toolchain, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}} Private Worker**.
 
@@ -81,7 +81,7 @@ For more information about the **{{site.data.keyword.deliverypipeline}} Private 
 
 Configure your Kubernetes cluster with a private worker:
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. Click the card for the {{site.data.keyword.deliverypipeline}} Private Worker tool integration that you want to configure.
 1. Click  **Getting Started** and then follow the steps to install and register a private worker on your Kubernetes cluster.
 
@@ -90,7 +90,7 @@ Configure your Kubernetes cluster with a private worker:
 
 Complete the following steps to use the private worker in your pipeline:
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. Click the card for the pipeline that you want to use the private worker with.
 1. On the Pipeline page, on the stage, click the **Stage Configuration** icon and then click **Configure Stage**.
 1. Click the **Workers** tab.
@@ -129,12 +129,12 @@ A service ID identifies a service or an application in the same way that a user 
 
 Complete the following steps to create a service ID:
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. On the card for the private workers tool integration that you want to modify, click the menu, and then click **Configure** to access the configuration options.
 1. Click **Create**.
 1. Enter a name and description for the service ID.
 1. Click **Save Integration**.
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. Click the card for the {{site.data.keyword.deliverypipeline}} Private Worker tool integration that you want to specify new user credentials for.
 1. Click **Getting Started**, and complete steps 2 and 3 to register and verify the private worker on your cluster.
 
@@ -145,7 +145,7 @@ An API key is a unique code that is passed to an API to identify the application
 
 Complete the following steps to update the API key for use with the {{site.data.keyword.deliverypipeline}} Private Worker tool integration:
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. On the card for the {{site.data.keyword.deliverypipeline}} Private Worker tool integration that you want to modify, click the menu, and then click **Configure** to access the configuration options.
 1. Specify your new API key. 
 1. Click **Save Integration**.
@@ -165,7 +165,7 @@ Complete the following steps to delete a private worker:
 
 Complete the following steps to delete the private worker from the pool of workers:
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. Click the card for the {{site.data.keyword.deliverypipeline}} Private Worker tool integration that you want to configure.
 1. Click **Overview**.
 1. Click the menu for the private worker that you want to delete to access the configuration options.
@@ -199,7 +199,7 @@ If you delete the {{site.data.keyword.deliverypipeline}} Private Worker tool int
 
 Complete the following steps to delete a {{site.data.keyword.deliverypipeline}} Private Worker tool integration:
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. On the card for the {{site.data.keyword.deliverypipeline}} Private Worker tool integration that you want to delete, click the menu to access the configuration options.
 1. To delete the tool integration from your toolchain, click **Delete**.
 1. Confirm by clicking **Delete**. The {{site.data.keyword.deliverypipeline}} Private Worker tool integration is removed from the toolchain and is no longer available in the **Workers** tab in the delivery pipeline Stage Configuration page.
@@ -220,7 +220,7 @@ Private workers can have one of the following statuses:
 
 Complete the following steps to update a private worker to use the latest version:
  
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**.
+1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. Click the card for the {{site.data.keyword.deliverypipeline}} Private Worker tool integration that you want to update.
 1. Click **Getting Started** and use the commands that are listed to complete the following actions:
  
