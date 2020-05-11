@@ -42,7 +42,7 @@ You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it fro
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) **> DevOps**.
 2. Select your toolchain.  
-3. Click **Add a Tool**.
+3. Click **Add tool**.
 4. Select the **{{site.data.keyword.DRA_short}}** tile.
 5. Click **Create Integration**.
 6. Click the **{{site.data.keyword.DRA_short}}** tile to view your {{site.data.keyword.DRA_short}} dashboard.
