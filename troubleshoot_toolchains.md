@@ -80,7 +80,7 @@ You can try to configure the tool integration again:
 
 1. On its tool card, hover over the `Setup failed` message and click **Reconfigure**.
 
- ![Reconfigure button](images/tool_reconfigure.png)
+ <img src="images/tool_reconfigure.png" alt="Reconfigure button" width="166" style="width:166px; border-style: none"/>
 
 1. Make sure that you are using valid configuration parameters. If the error was caused by an invalid configuration, an error message is displayed; for example, `The integration could not be set up. Check the settings and try again. Reason: Invalid api_key:fakeKey`. Update the settings for the tool integration and click **Save integration**.
 1. If the error was caused by a communication problem, click **Save integration** to try again.
@@ -122,9 +122,8 @@ Toolchains are a special type of resource on the Cloud platform that you current
 To delete a toolchain:
 {: tsResolve}
 
-1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to delete. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**.
-1. Click the **More Actions** menu, which is next to **View app**.
-1. Click **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
+1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to delete. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**.
+1. Click the **Actions** menu, then select **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.
 
 You can use the ibmcloud dev CLI to delete toolchains. After you [install the {{site.data.keyword.dev_cli_notm}} CLI plug-in](/docs/cli?topic=cloud-cli-install-devtools-manually), you can delete a toolchain from the command line by using the [`ibmcloud dev toolchain-delete`](/docs/cli?topic=cloud-cli-idt-cli#toolchain-delete) command. 
