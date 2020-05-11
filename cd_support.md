@@ -22,34 +22,12 @@ subcollection: ContinuousDelivery
 # Getting help and support for {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-The {{site.data.keyword.contdelivery_full}} team actively monitors our Slack channel and IBM Developer Answers for questions about the {{site.data.keyword.contdelivery_short}} service and toolchains.
+The {{site.data.keyword.contdelivery_full}} team actively monitors our Slack channel for questions about the {{site.data.keyword.contdelivery_short}} service and toolchains.
 
 | Get Help | Ask Us a Question |
 |----------|---------|
-| Reach out to us on our Slack channel | <a class="xref" href="https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/slack_us.png" alt="Slack us"/></a> |
-| Explore recent posts, and ask and answer questions on IBM Developer Answers | <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/post_question.png" alt="IBM Developer Answers"/></a> |
+| Reach out to us on our Slack channel | <a class="xref" href="https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/slack_us.png" width="148" style="width:148px; border-style: none" alt="Slack us"/></a> |
 {: caption="Table 1. Help and support for {{site.data.keyword.contdelivery_short}}" caption-side="top"}
-
-<!--<table>
-<tr>
-<th style="width:20%"> &nbsp; &nbsp; &nbsp;</th>
- <th style="text-align:center;width=60%">
- <strong>Ask Us a Question</strong> </th>
-<th> &nbsp; &nbsp; &nbsp;</th>
-</tr>
-<tr>
-<td> </td>
-  <td align="center">
-  <p>Get help fast, directly from IBM {{site.data.keyword.contdelivery_short}} and other DevOps Services users.</p>
-  <b>dW Answers</b>
-  <p>
-   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,ibm-cloud" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
-   <p>
-    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Opens in a new tab or window)">Show recent <img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on dW Answers.</p> 
- </td>
- <td></td>
-    </tr>
-  </table>  -->
 
 
 ## Support tickets
