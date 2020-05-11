@@ -88,9 +88,9 @@ Configure {{site.data.keyword.alertnotificationshort}} to receive notifications 
 ### Configuring Alert Notification
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.alertnotificationshort}}**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.  
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **{{site.data.keyword.alertnotificationshort}}**.
 
@@ -115,9 +115,9 @@ To learn more about {{site.data.keyword.alertnotificationshort}}, see the [IBM {
 Configure the Artifactory repository manager to store build artifacts in your Artifactory repository (repo):
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Artifactory**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.  
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **Artifactory**.
 
@@ -225,9 +225,9 @@ This tool integration is preconfigured and does not require any configuration pa
 
 To test, monitor, and improve your app's health as you build it, add the {{site.data.keyword.prf_hubshort}} tool integration:
 
-1. On the DevOps dashboard, on the Toolchains page, click the toolchain that you want to add {{site.data.keyword.prf_hubshort}} to. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+1. On the DevOps dashboard, on the Toolchains page, click the toolchain that you want to add {{site.data.keyword.prf_hubshort}} to. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **{{site.data.keyword.prf_hubshort}}**.
 
@@ -248,9 +248,9 @@ Store your source code in a new or existing repository on bitbucket.org and enga
 
 Configure Bitbucket to collaborate on code with your team:
 
-1. From the DevOps dashboard, click **Toolchains**. Click the toolchain that you want to add Bitbucket to. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+1. From the DevOps dashboard, click **Toolchains**. Click the toolchain that you want to add Bitbucket to. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **Bitbucket**.
 
@@ -308,9 +308,9 @@ This tool integration is preconfigured and does not require any configuration pa
 
 To help your DevOps team achieve reliable operational health, service quality, and continuous improvement goals, add Cloud Event Management to your toolchain:
 
-1. From the DevOps dashboard, click **Toolchains**. Click the toolchain that you want to add Cloud Event Management to. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+1. From the DevOps dashboard, click **Toolchains**. Click the toolchain that you want to add Cloud Event Management to. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **Cloud Event Management**.
 
@@ -336,14 +336,14 @@ To learn more about Cloud Event Management, see the [Cloud Event Management arti
 Configure {{site.data.keyword.deliverypipeline}} to automate the continuous building, testing, and deployment of your apps:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.deliverypipeline}}**. Depending on the template that you use, different fields might be available. Review the default field values and if needed, change those settings.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}}**.
 
 1. Specify a name for your new pipeline.
-1. If you plan to use your pipeline to deploy a user interface, select the **Show apps in the VIEW APP menu** checkbox. All of the apps that your pipeline creates are shown in the **View App** list on the toolchain's Overview page.
+1. If you plan to use your pipeline to deploy a user interface, select the **Show apps in the View app menu** checkbox. All of the apps that your pipeline creates are shown in the **View App** list on the toolchain's Overview page.
 1. Select the type of pipeline that you want to create:
 
  * **Classic**: Provides an easy to use graphical user interface for defining stages and jobs that run on public shared infrastructure, with support for running individual stages on private workers.
@@ -416,9 +416,9 @@ To learn more about {{site.data.keyword.deliverypipeline}}, see [Working with pi
 Configure the {{site.data.keyword.deliverypipeline}} Private Worker tool integration to make private workers available to pipelines in a toolchain:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.deliverypipeline}} Private Worker**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}} Private Worker**.
 
@@ -439,9 +439,9 @@ Configure the {{site.data.keyword.deliverypipeline}} Private Worker tool integra
 Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your code in {{site.data.keyword.Bluemix_notm}} by monitoring your deployments to identify risks before they are released.
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.DRA_short}}**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **{{site.data.keyword.DRA_short}}**.
 
@@ -470,9 +470,9 @@ The Eclipse Orion {{site.data.keyword.webide}} is an integrated web-based enviro
 To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webide}} tool integration:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Eclipse Orion {{site.data.keyword.webide}}**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **Eclipse Orion {{site.data.keyword.webide}}**.
 
@@ -503,8 +503,8 @@ If you have a toolchain and want to migrate a Git repo in your toolchain to {{si
 These instructions apply to toolchains that already contain the Git repo that you want to migrate to {{site.data.keyword.gitrepos}}. For information about adding different types of Git repos to your toolchain, see the [Configuring GitHub](#github), [Configuring GitHub Enterprise and Issues on {{site.data.keyword.Bluemix_notm}} Dedicated](#configghe), and [Configuring GitLab](#gitlab) sections.
 {: tip}
 
-1. On the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
-1. Click **Add a Tool**.
+1. On the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
+1. Click **Add tool**.
 1. In the Tool Integrations section, click **Git Repos and Issue Tracking**.
 1. To create a copy of the Git repo, for the repository type, click **Clone**. Type a new repo name and the URL for the source repo.
 1. If you want to use Issues for issue tracking, select the **Enable Issues** checkbox.
@@ -516,8 +516,8 @@ After you clone the Git repo, you can remove it from your toolchain.
 
 If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, follow these steps:    
 
-1. On the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
-1. Click **Add a Tool**.
+1. On the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
+1. Click **Add tool**.
 1. In the Tool Integrations section, click **Git Repos and Issue Tracking**.
 1. Select a repository type:     
 
@@ -579,12 +579,13 @@ If you are configuring this tool integration as you are creating the toolchain, 
      g. Copy the token to a secure location or password management app. For security reasons, after you leave the page, you can no longer see the token.
 
 1. Review the default target repo locations for the GitHub repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
- ![Default target repo locations](images/toolchain_github_config.png)
+
+ <img src="images/toolchain_github_config.png" alt="Default target repo locations" width="167" style="width:167px; border-style: none"/>
 
 If you have a toolchain and are adding this tool integration to it, follow these steps:
 
-1. On the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
-1. Click **Add a Tool**.
+1. On the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
+1. Click **Add tool**.
 1. In the Tool Integrations section, click **GitHub**.
 1. Click the GitHub server that you want to use.
 1. If you have a GitHub or {{site.data.keyword.ghe_short}} repo and want to use it, for the repository type, click **Existing** and type the URL.
@@ -639,9 +640,9 @@ You can configure {{site.data.keyword.ghe_short}} as a tool integration in your 
  c. Review the default name for the new {{site.data.keyword.ghe_short}} repo. If needed, change the name of the new repo. The following image shows an example of a repo that is cloned from a sample repo. You can use an existing repo or a new repo. To use a new repo, you can create an empty repo, clone a repo, or fork a repo.
  ![Default repo locations](images/toolchain_ghe_config.png)
 
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **{{site.data.keyword.ghe_short}}**.
 
@@ -702,8 +703,8 @@ If you are configuring this tool integration as you are creating the toolchain, 
 
 If you have a toolchain and are adding this tool integration to it, follow these steps:
 
-1. On the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
-1. Click **Add a Tool**.
+1. On the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
+1. Click **Add tool**.
 1. In the Tool Integrations section, click **GitLab**.
 1. Click the GitLab server that you want to use.
 1. If you have a GitLab repo and want to use it, for the repository type, click **Existing** and type the URL.
@@ -747,9 +748,9 @@ With the Jenkins tool integration, you can send your Jenkins job notifications t
 Configure Jenkins to automate the continuous building, testing, and deployment of your apps:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Jenkins**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.  
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **Jenkins**.
 
@@ -781,9 +782,9 @@ JIRA is a tool that tracks issues and bugs that are related to your software. Th
 Configure JIRA to plan, track, and deliver quality code:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **JIRA**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.  
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **JIRA**.
 
@@ -832,9 +833,9 @@ Before you create a {{site.data.keyword.keymanagementserviceshort}} tool integra
 Configure {{site.data.keyword.keymanagementserviceshort}} to securely manage secrets, such as API keys, that are part of your  toolchain:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.keymanagementserviceshort}}**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.  
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **{{site.data.keyword.keymanagementserviceshort}}**.
 
@@ -855,9 +856,9 @@ To learn more about {{site.data.keyword.keymanagementserviceshort}}, see [About 
 Configure the Nexus Repository Manager to store build artifacts in your Nexus repository (repo):
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Nexus**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.  
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **Nexus**.
 
@@ -962,9 +963,9 @@ If your team uses a tool that isn't included in the toolchains integrations list
 
 Configure a custom tool so that it works with other tools in your toolchain and is available to your team:
 
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **Other Tool**.
 
@@ -993,9 +994,9 @@ PagerDuty integrates data from multiple monitoring systems into a single view. W
 Configure PagerDuty to send notifications when pipeline stage failures occur so that you can fix problems faster and reduce downtime:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **PagerDuty**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **PagerDuty**.
 
@@ -1035,9 +1036,9 @@ IBM Rational Team Concert&trade; is a team collaboration tool that integrates de
 Configure Rational Team Concert to practice a DevOps approach and continuous delivery in your development environment:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Rational Team Concert**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.  
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **Rational Team Concert**.
 
@@ -1078,9 +1079,9 @@ Sauce Labs runs functional unit tests. When a Sauce Labs test suite is configure
 Configure Sauce Labs to run automated functional tests on multiple operating systems and browsers so that you can emulate the way that a user might use a website or an application:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Sauce Labs**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **Sauce Labs**.
 
@@ -1110,9 +1111,9 @@ Slack is a cloud-based, real-time messaging and notification system. Slack provi
 Configure Slack to receive notifications about your toolchain from the tool integrations, such as test and deployment activities:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Slack**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **Slack**.
 
@@ -1146,7 +1147,7 @@ SonarQube provides an overview of the overall health and quality of your source 
 
 Configure SonarQube to continuously analyze and measure the quality of your source code:
 
-1. From the DevOps dashboard, click **Toolchains**. Click the toolchain that you want to add SonarQube to. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.  
+1. From the DevOps dashboard, click **Toolchains**. Click the toolchain that you want to add SonarQube to. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
 
  a. Click **Add a Tool**.
 
