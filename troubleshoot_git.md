@@ -52,7 +52,7 @@ If you are configuring the GitHub tool integration while you are creating your t
 
 If you already have a toolchain, update the GitHub tool integration's configuration:
 
- 1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**, and then click **Overview**.
+ 1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**, and then click **Overview**.
  1. On the GitHub card, click the menu and click **Configure**.
  1. Update the configuration settings to authorize {{site.data.keyword.cloud_notm}} to access GitHub. Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account.
  1. When you are finished updating the settings, click **Save Integration**.
@@ -77,8 +77,8 @@ Because {{site.data.keyword.gitrepos}} is tightly integrated with the {{site.dat
 Instead of creating a {{site.data.keyword.gitrepos}} tool integration, create a generic GitLab integration and use this integration to point to the {{site.data.keyword.gitrepos}} repository (repo) in a different region.
 {: tsResolve}
 
-1. On the DevOps dashboard, on the Toolchains page, click the toolchain that you want to add this integration to. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
-1. Click **Add a Tool**.
+1. On the DevOps dashboard, on the Toolchains page, click the toolchain that you want to add this integration to. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
+1. Click **Add tool**.
 1. In the Tool Integrations section, click **GitLab**.
 1. Click the GitLab server that you want to use. If the GitLab server where the repo you want to access resides does not appear in this list, add a custom server:
 
