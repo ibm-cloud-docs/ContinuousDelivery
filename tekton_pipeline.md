@@ -80,15 +80,15 @@ The toolchain and the {{site.data.keyword.deliverypipeline}} Private Worker tool
 When you configure a {{site.data.keyword.deliverypipeline}} tool integration, you can select the type of pipeline that you want to create.
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.deliverypipeline}}**. Depending on the template that you use, different fields might be available. Review the default field values and if needed, change those settings.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain** and click **Overview**.
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
 
- a. Click **Add a Tool**.
+ a. Click **Add tool**.
 
  b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}}**.
 
 1. Specify a name for your new pipeline.
 1. Select **Tekton** to create a Tekton {{site.data.keyword.deliverypipeline}}. This type of pipeline provides a dashboard that you can use to view the output of Tekton pipeline runs on a defined Kubernetes cluster, with support for configuring the pipeline definitions repos, the pipeline triggers, where the pipeline runs, and simple secrets.
-1. If you plan to use your pipeline to deploy a user interface, select the **Show apps in the VIEW APP menu** checkbox. All of the apps that your pipeline creates are shown in the **View App** list on the toolchain's Overview page.
+1. If you plan to use your pipeline to deploy a user interface, select the **Show apps in the View app menu** checkbox. All of the apps that your pipeline creates are shown in the **View App** list on the toolchain's Overview page.
 1. Click **Create Integration** to add the {{site.data.keyword.deliverypipeline}} to your toolchain.
 
 ### Configuring a {{site.data.keyword.deliverypipeline}} for Tekton 
