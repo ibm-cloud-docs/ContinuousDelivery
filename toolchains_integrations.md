@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-03-17"
+lastupdated: "2020-05-04"
 
-keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Alert Notification, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Jenkins, JIRA, Key Protect, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
+keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Jenkins, JIRA, Key Protect, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
 
 subcollection: ContinuousDelivery
 
@@ -32,7 +32,6 @@ The tool integrations that are available to add and configure for your toolchain
 
 |Tool Integration |Available on {{site.data.keyword.Bluemix_notm}} Public	|Available on {{site.data.keyword.Bluemix_notm}} Dedicated (Environment Dependent)|
 |:----------|:------------------------------|:------------------|
-|{{site.data.keyword.alertnotificationshort}}		|US South		|No		|
 |Artifactory		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
 |Availability Monitoring		|US South		|No		|
 |Bitbucket		|US South, US East, Germany, Tokyo, United Kingdom		|No		|
@@ -59,54 +58,6 @@ The tool integrations that are available to add and configure for your toolchain
 
 If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
 {: tip}
-
-
-## Configuring Alert Notification
-{: #alertnotification}
-
-The {{site.data.keyword.alertnotificationfull}} service is deprecated. As of 01 July 2019, customers with existing instances only of {{site.data.keyword.alertnotificationshort}} can use this service until 01 July 2020. For more information about the retirement of the {{site.data.keyword.alertnotificationshort}} service, see [Deprecating IBM {{site.data.keyword.alertnotificationshort}} Service](https://www.ibm.com/cloud/blog/announcements/deprecating-ibm-alert-notification-service){:external}.
-{: deprecated}
-
-{{site.data.keyword.alertnotificationshort}} is a hybrid cloud-based solution that you can use to centralize and simplify your notification strategy. It works with other cloud-based and on-premises applications. Alerts are forwarded to {{site.data.keyword.alertnotificationshort}} by using a secure RESTful API.
-
-Configure {{site.data.keyword.alertnotificationshort}} to receive notifications about issues during your DevOps process.
-
-### Prerequisites
-
-1. If you don't have an {{site.data.keyword.alertnotificationshort}} account, sign up for one:
-
- a. Open the [IBM {{site.data.keyword.alertnotificationshort}}](https://www.ibm.com/us-en/marketplace/alert-notification){:external} page in IBM Marketplace.
-
- b. Either purchase a subscription or sign up for the free 90-day trial.
-
-1. After your {{site.data.keyword.alertnotificationshort}} account is set up, open your [My IBM Dashboard](https://myibm.ibm.com/dashboard/){:external}.
-1. Next to IBM {{site.data.keyword.alertnotificationshort}}, click **Launch**.
-1. Click **Manage API Keys** and click **Create API Key**.
-1. In the **Create API Key** field, type a description.
-1. Click **Generate**. The new API Key information, including the name and password, is displayed. You need that information for the tool integration configuration, so keep the New API Key window open. For security purposes, you cannot retrieve the API key password later.
-
-### Configuring Alert Notification
-
-1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.alertnotificationshort}}**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
-
- a. Click **Add tool**.
-
- b. In the Tool Integrations section, click **{{site.data.keyword.alertnotificationshort}}**.
-
-1. Type the URL for the {{site.data.keyword.alertnotificationshort}} API that you want to use. You can find the URL on the Manage API Keys page of the {{site.data.keyword.alertnotificationshort}} service; for example, `https://ibmnotifybm.mybluemix.net/api/alerts/v1`.
-1. Type the name of the API key for {{site.data.keyword.alertnotificationshort}}. You can find the API key name in the New API Key window.
-1. Type the password that {{site.data.keyword.alertnotificationshort}} generated for the API key. You can find the API key password in the New API Key window.
-1. Click **Create Integration**.
-1. From your toolchain, click **{{site.data.keyword.alertnotificationshort}}**.
-
-### Learn more about Alert Notification
-
-To learn more about {{site.data.keyword.alertnotificationshort}}, see the [IBM {{site.data.keyword.alertnotificationshort}} article](https://www.ibm.com/cloud/garage/content/manage/tool_alert_notification/){:external} on the IBM Cloud Garage Method or take these tutorials:
-
-  * [Add a tool integration to a toolchain](https://www.ibm.com/cloud/garage/tutorials/add-a-tool-integration-to-a-toolchain){:external}
-
-  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using {{site.data.keyword.Bluemix_notm}} Availability Monitoring and Alert Notification](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:external}
 
 
 ## Configuring Artifactory
