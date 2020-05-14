@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019, 2020
-lastupdated: "2020-03-06"
+lastupdated: "2020-05-14"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -48,10 +48,11 @@ If you choose the `Latest` option, the pipeline jobs are run with the current im
  After version 2.0, images no longer include grunt or python. If these tools are required for your build, you can install them manually. To install grunt, run `npm install -g grunt-cli`. Make sure that you don't change the Node.js version after you install grunt. To install python, run `apt-get -qq update && apt-get -qq install -y python`.
  {: important}
 
-Starting with version 2.2, images are available on DockerHub.
+Starting with version 2.2, images are available on [DockerHub](https://hub.docker.com/){: external}.
 
 | Base image version | DockerHub image version |
 |:-----------------|:-----------------|
+| 2.7 | `ibmcom/pipeline-base-image:2.7`| 
 | 2.6 | `ibmcom/pipeline-base-image:2.6`| 
 | 2.5 | `ibmcom/pipeline-base-image:2.5`|
 | 2.4 | `ibmcom/pipeline-base-image:2.4.1`|
@@ -68,6 +69,115 @@ The following available image versions are listed in descending order, starting 
  
  The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
  {: tip}
+ 
+ ### Version 2.7
+ {: #version_2_7}
+
+Starting with version 2.7, the default JVM is Java&trade; 11. You can access Java 8 from `/usr/local/openjdk-8`. Although two versions of Helm are available, the default version is 2.x (2.16.6). You can access Helm version 3 within the `helm3` tool. `yq` also provides versions 2.4.1 and 3.3.0.
+
+To view the contents of version 2.7, from the running image, type `default_versions.sh`. This image includes the following tools:
+
+```
+	# node --version
+	v12.16.3
+
+	# npm --version
+	6.14.4
+
+	# jq --version
+	jq-1.6
+
+	# yq --version
+	yq version 2.4.1
+
+	# yq3 --version
+	yq version 3.3.0
+
+	# kubectl version --client
+	Client Version: version.Info{Major:"1", Minor:"17", GitVersion:"v1.17.5", GitCommit:"e0fccafd69541e3750d460ba0f9743b90336f24f", GitTreeState:"clean", BuildDate:"2020-04-16T11:44:03Z", GoVersion:"go1.13.9", Compiler:"gc", Platform:"linux/amd64"}
+
+	# helm version --client
+	Client: &version.Version{SemVer:"v2.16.6", GitCommit:"dd2e5695da88625b190e6b22e9542550ab503a47", GitTreeState:"clean"}
+
+	# helm3 version --client
+	version.BuildInfo{Version:"v3.2.1", GitCommit:"fe51cd1e31e6a202cba7dead9552a6d418ded79a", GitTreeState:"clean", GoVersion:"go1.13.10"}
+
+	# ibmcloud -version
+	ibmcloud version 1.1.0+cc908fe-2020-04-29T04:06:12+00:00
+
+	# ibmcloud plugin list
+	Listing installed plug-ins...
+
+	Plugin Name                            Version   Status   
+	cloud-functions/wsk/functions/fn       1.0.39       
+	container-registry                     0.1.464      
+	container-service/kubernetes-service   1.0.57       
+	doi                                    0.2.1        
+	schematics                             1.4.8        
+
+
+	# ibmcloud dev --version
+	ibmcloud dev version 2.4.8
+
+	# java -version
+	openjdk version "11.0.7" 2020-04-14
+	OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.7+10)
+	Eclipse OpenJ9 VM AdoptOpenJDK (build openj9-0.20.0, JRE 11 Linux amd64-64-Bit Compressed References 20200416_574 (JIT enabled, AOT enabled)
+	OpenJ9   - 05fa2d361
+	OMR      - d4365f371
+	JCL      - 838028fc9d based on jdk-11.0.7+10)
+
+	# /usr/local/openjdk-8/bin/java -version
+	openjdk version "1.8.0_252"
+	OpenJDK Runtime Environment (build 1.8.0_252-b09)
+	Eclipse OpenJ9 VM (build openj9-0.20.0, JRE 1.8.0 Linux amd64-64-Bit Compressed References 20200416_608 (JIT enabled, AOT enabled)
+	OpenJ9   - 05fa2d361
+	OMR      - d4365f371
+	JCL      - cfa47e66cd5 based on jdk8u252-b09)
+
+	# ant -version
+	Apache Ant(TM) version 1.10.8 compiled on May 10 2020
+
+	# mvn -version
+	Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+	Maven home: /opt/IBM/maven
+	Java version: 11.0.7, vendor: Eclipse OpenJ9, runtime: /usr/local/openjdk-11
+	Default locale: c.u_US, platform encoding: UTF-8
+	OS name: "linux", version: "4.19.76-linuxkit", arch: "amd64", family: "unix"
+
+	# gradle -version
+
+	Welcome to Gradle 6.4!
+
+	Here are the highlights of this release:
+	 - Support for building, testing and running Java Modules
+	 - Precompiled script plugins for Groovy DSL
+	 - Single dependency lock file per project
+
+	For more details see https://docs.gradle.org/6.4/release-notes.html
+
+
+	------------------------------------------------------------
+	Gradle 6.4
+	------------------------------------------------------------
+
+	Build time:   2020-05-05 19:18:55 UTC
+	Revision:     42f7c3d0c3066b7b38bd0726760d4881e86fd19f
+
+	Kotlin:       1.3.71
+	Groovy:       2.5.10
+	Ant:          Apache Ant(TM) version 1.10.7 compiled on September 1 2019
+	JVM:          11.0.7 (Eclipse OpenJ9 openj9-0.20.0)
+	OS:           Linux 4.19.76-linuxkit amd64
+
+
+	# oc version
+	oc v3.11.0+0cbc58b
+	kubernetes v1.11.0+d4cacc0
+	features: Basic-Auth GSSAPI Kerberos SPNEGO
+
+  ```
+ {: codeblock}
  
  ### Version 2.6
  {: #version_2_6}
