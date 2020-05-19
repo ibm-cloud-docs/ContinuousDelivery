@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019, 2020
-lastupdated: "2020-05-14"
+lastupdated: "2020-05-19"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -109,11 +109,12 @@ To view the contents of version 2.7, from the running image, type `default_versi
 	Listing installed plug-ins...
 
 	Plugin Name                            Version   Status   
-	cloud-functions/wsk/functions/fn       1.0.39       
-	container-registry                     0.1.464      
-	container-service/kubernetes-service   1.0.57       
 	doi                                    0.2.1        
-	schematics                             1.4.8        
+	schematics                             1.4.10       
+	cloud-functions/wsk/functions/fn       1.0.39       
+	cloud-internet-services                1.9.7        
+	container-registry                     0.1.471      
+	container-service/kubernetes-service   1.0.57      
 
 
 	# ibmcloud dev --version
