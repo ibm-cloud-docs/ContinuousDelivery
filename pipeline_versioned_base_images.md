@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019, 2020
-lastupdated: "2020-05-19"
+lastupdated: "2020-05-21"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -73,7 +73,7 @@ The following available image versions are listed in descending order, starting 
  ### Version 2.7
  {: #version_2_7}
 
-Starting with version 2.7, the default JVM is Java&trade; 11. You can access Java 8 from `/usr/local/openjdk-8`. Although two versions of Helm are available, the default version is 2.x (2.16.6). You can access Helm version 3 within the `helm3` tool. `yq` also provides versions 2.4.1 and 3.3.0.
+Starting with version 2.7, the default JVM is Java&trade; 11. Java&trade; 8 was removed. If you still need Java&trade; 1.8, you can either use version 2.6 or your own custom image. Although two versions of Helm are available, the default version is 2.16.6. You can access Helm version 3.2.1 by using the `helm3` command.
 
 To view the contents of version 2.7, from the running image, type `default_versions.sh`. This image includes the following tools:
 
@@ -89,9 +89,6 @@ To view the contents of version 2.7, from the running image, type `default_versi
 
 	# yq --version
 	yq version 2.4.1
-
-	# yq3 --version
-	yq version 3.3.0
 
 	# kubectl version --client
 	Client Version: version.Info{Major:"1", Minor:"17", GitVersion:"v1.17.5", GitCommit:"e0fccafd69541e3750d460ba0f9743b90336f24f", GitTreeState:"clean", BuildDate:"2020-04-16T11:44:03Z", GoVersion:"go1.13.9", Compiler:"gc", Platform:"linux/amd64"}
@@ -109,12 +106,12 @@ To view the contents of version 2.7, from the running image, type `default_versi
 	Listing installed plug-ins...
 
 	Plugin Name                            Version   Status   
-	doi                                    0.2.1        
 	schematics                             1.4.10       
 	cloud-functions/wsk/functions/fn       1.0.39       
 	cloud-internet-services                1.9.7        
 	container-registry                     0.1.471      
-	container-service/kubernetes-service   1.0.57      
+	container-service/kubernetes-service   1.0.57       
+	doi                                    0.2.1        
 
 
 	# ibmcloud dev --version
@@ -127,14 +124,6 @@ To view the contents of version 2.7, from the running image, type `default_versi
 	OpenJ9   - 05fa2d361
 	OMR      - d4365f371
 	JCL      - 838028fc9d based on jdk-11.0.7+10)
-
-	# /usr/local/openjdk-8/bin/java -version
-	openjdk version "1.8.0_252"
-	OpenJDK Runtime Environment (build 1.8.0_252-b09)
-	Eclipse OpenJ9 VM (build openj9-0.20.0, JRE 1.8.0 Linux amd64-64-Bit Compressed References 20200416_608 (JIT enabled, AOT enabled)
-	OpenJ9   - 05fa2d361
-	OMR      - d4365f371
-	JCL      - cfa47e66cd5 based on jdk8u252-b09)
 
 	# ant -version
 	Apache Ant(TM) version 1.10.8 compiled on May 10 2020
