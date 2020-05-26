@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-05-19"
+lastupdated: "2020-05-26"
 
 keywords: event, security, IBM, activity tracker, LogDNA, Continuous Delivery
 
@@ -141,7 +141,7 @@ The following table lists the actions that generate {{site.data.keyword.webide}}
 | `toolchain.web-ide-workspace.delete` | Delete a {{site.data.keyword.webide}} workspace |
 | `toolchain.web-ide-file.create` | Create a file or folder in a {{site.data.keyword.webide}} workspace. If this event is triggered by copying a file or a folder, the **requestData** field contains the **trigger** field with a value of `File Copy` and the **source** field (the source path of the copied file).  |
 | `toolchain.web-ide-file.read` | View the contents of a file in a {{site.data.keyword.webide}} workspace |
-| `toolchain.web-ide-file.edit` | Change the contents of a file in a {{site.data.keyword.webide}} workspace. If this event is triggered by copying a file or folder, the **requestData** field contains the **trigger** field with a value of `FileCopy` and the **source** field (the source path of the copied file). |
+| `toolchain.web-ide-file.edit` | Change the contents of a file in a {{site.data.keyword.webide}} workspace. If this event is triggered by copying a file or folder, the **requestData** field contains the **trigger** field with a value of `File Copy` and the **source** field (the source path of the copied file). |
 | `toolchain.web-ide-file.update` | Update the path of a file or folder in a {{site.data.keyword.webide}} workspace. The **requestData** field for this event contains the **updateType** field with a value of `Path Change`, the **initialValue** field (the original path of the file or folder), and the **newValue** field (the new path of the file or folder). |
 | `toolchain.web-ide-file.delete` | Delete a file or folder from a {{site.data.keyword.webide}} workspace |
 | `toolchain.web-ide-workspace.import` | Import a file into a {{site.data.keyword.webide}} workspace. The **requestData** field for this event contains the **extractArchive** field. The value of this field is a Boolean operator that indicates whether a server-side request was initiated to extract the content from the file's archived content.  |
