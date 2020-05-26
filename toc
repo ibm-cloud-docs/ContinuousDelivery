@@ -115,6 +115,7 @@ Continuous Delivery
     {: .navgroup id="reference"}
     [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki)
     pipeline_deploy_var.md
+    tekton_deploy_var.md
     [Using Jenkins to integrate DevOps Insights](https://wiki.jenkins.io/display/JENKINS/IBM+Cloud+DevOps+Plugin)
 
     {: .topicgroup}
