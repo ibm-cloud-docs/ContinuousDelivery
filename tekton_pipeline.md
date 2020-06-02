@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-07"
+lastupdated: "2020-06-01"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -44,7 +44,7 @@ There are several advantages to using Tekton Pipelines:
 * **Decoupled**: You can use one pipeline to deploy to any Kubernetes cluster. You can run the tasks that comprise a pipeline in isolation. And you can switch resources (such as Git repos) between pipeline runs.
 * **Typed**: You can switch implementations for specific types of resources, such as images.
 
-The Tekton Pipelines project is an alpha release. You must update your pipeline with each new version of Tekton. For more information about the latest version of Tekton, see [https://github.com/tektoncd/pipeline/releases](https://github.com/tektoncd/pipeline/releases){:external}.
+The Tekton Pipelines project is a beta release. You must update your pipeline with each new version of Tekton. For more information about the latest version of Tekton, see [https://github.com/tektoncd/pipeline/releases](https://github.com/tektoncd/pipeline/releases){:external}.
 {: important}
 
 {{site.data.keyword.contdelivery_full}} provides two types of delivery pipelines that you can use to build, test, and deploy your applications.
@@ -65,7 +65,7 @@ Before you add and run a Tekton pipeline, make sure that you have the following 
 
 * [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli) installed locally.
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){:external} installed locally.
-* A Kubernetes cluster such as an [{{site.data.keyword.containerlong}} cluster](https://cloud.ibm.com/kubernetes/catalog/cluster){:external}.
+* A Kubernetes cluster (version 1.15 or higher) such as an [{{site.data.keyword.containerlong}} cluster](https://cloud.ibm.com/kubernetes/catalog/cluster){:external}.
 * A toolchain that contains the following tool integrations:
 
   * A repo tool integration (such as the GitHub tool integration) that contains your Tekton pipeline code, including a Tekton yaml file. For more information about getting started with Tekton pipelines, see [Tekton Pipelines](https://github.com/tektoncd/pipeline/tree/v0.8.0/docs#tekton-pipelines){:external}.
@@ -115,13 +115,13 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
  Triggers are based on [Tekton trigger definitions](https://github.com/tektoncd/triggers){:external}. Git respository triggers use the event listener that they are mapped to to extract information from the incoming event payload and create Kubernetes resources. These resources are applied to a Tekton `PipelineRun` resource.
  {: tip}
 
- The CRON expression for timed triggers is based on the [UNIX crontab syntax](http://crontab.org/){:external} and is a sequence of five time and date fields: `minute`, `hour`, `day of the month`, `month`, and `day of the week`. These fields are separated by spaces in the format `X X X X X`. The following examples show strings that use various timed frequencies.
+ The CRON expression for **timed triggers** is based on the [UNIX crontab syntax](http://crontab.org/){:external} and is a sequence of five time and date fields: `minute`, `hour`, `day of the month`, `month`, and `day of the week`. These fields are separated by spaces in the format `X X X X X`. The following examples show strings that use various timed frequencies.
    * `* * * * *` - The trigger runs every minute.
    * `0 * * * *` - The trigger runs at the start of every hour.
    * `0 9 * 1 MON-FRI` - The trigger runs at 9:00 AM every weekday in January.
    * `0 * * NOV,DEC 1` - The trigger runs every hour on Mondays during November and December.
 
- Generic webhook triggers provide a unique webhook URL for POST requests. You can secure generic webhook triggers to work with Git, a Slack outgoing webhook, an Artifactory webhook, and more by using any of the following methods:
+ **Generic webhook triggers** provide a unique webhook URL for POST requests. You can secure generic webhook triggers to work with Git, a Slack outgoing webhook, an Artifactory webhook, and more by using any of the following methods:
 
    * Token matches to compare the saved token and the token that is passed within the POST request. Supported token sources include a header, query, or payload. Token matches are used by GitLab webhooks and Slack outgoing webhooks.
    * Payload digest matches to compare the signature and the hash that are generated from the digested payload by using HMAC hex digest with a saved token. Supported signature sources might include a header, query, or payload. Users must specify a digest algorithm. Payload digest matches are used by GitHub webhooks.
@@ -155,21 +155,24 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
  * **Text area**: A property key with a multi-line value.
  * **Secure**: A property key with a single-line value that is secured with AES-128 encryption. This value is displayed by using the asterisk character.
  
- You can access these properties in your Tekton pipeline resources. For example, to access the `API_KEY` property, type `$(params.API_KEY)`.
- {: tip}
+ You can access these properties in your Tekton pipeline resources. For more information about these properties, see [Tekton Pipelines environment and resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines).
 
 1. Click **Save** and then **Close**.
 
 ## Viewing the {{site.data.keyword.deliverypipeline}} for Tekton dashboard 
 {: #view_tekton_dashboard}
 
-The Tekton {{site.data.keyword.deliverypipeline}} dashboard displays an empty table until at least one Tekton pipeline runs. After Tekton pipeline runs occur (either manually or as the result of external Git events), the table lists those runs, their status, and the last updated time of the run definition.
+The Tekton {{site.data.keyword.deliverypipeline}} dashboard displays an empty table until at least one Tekton pipeline runs. After Tekton pipeline runs occur (either manually or as the result of external events), the table lists those runs and related information such as status and run trigger, and the last updated time of the run definition.
 
 Pipeline runs can be in any of the following states:
 
-* **Pending**: The `PipelineRun` definition is queued and waiting to run.
-* **Running**: The `PipelineRun` definition is running in the cluster.
-* **Succeeded**: The `PipelineRun` definition successfully completed in the cluster.
-* **Failed**: The `PipelineRun` definition run failed. Review the log file for the run to determine the cause.
+* **Pending**: `PipelineRun` is requested.
+* **Running**: `PipelineRun` is running on the cluster.
+* **Succeeded**: `PipelineRun` successfully completed on the cluster.
+* **Failed**: `PipelineRun` failed. Review the log file for the run to determine the cause.
+* **Queued**: `PipelineRun` is accepted for processing and runs when worker capacity is available.
+* **Waiting**: `PipelineRun` is waiting to be queued.
+* **Cancelled**: `PipelineRun` was cancelled by the system or by the user. The system cancels `PipelineRun` when the number of waiting runs exceeds the allowed limit.
+* **Error**: `PipelineRun` contains errors that prevented it from being applied on the cluster. For more information about the cause of the error, see the run details.
 
 For detailed information about a selected run, click any row in the table. You view the `Task` definition and the steps in each `PipelineRun` definition. You can also view the status, logs, and details of each `Task` definition and step, and the overall status of the `PipelineRun` definition.
