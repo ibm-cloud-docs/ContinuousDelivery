@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-21"
+lastupdated: "2020-06-01"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -37,12 +37,12 @@ The private worker agents that are installed on private clusters request data on
 ## Prerequisites
 {: #pw_install_prereqs}
 
-Before you install a private worker, make sure that you have an {{site.data.keyword.cloud}} account to create authentication keys. You need kubectl version 1.14.5 or higher installed on the Administrator's desktop computer. And you must also have a [Kubernetes cluster](https://cloud.ibm.com/kubernetes/clusters){:external} (version 1.13.5 or higher) with Administrative access to install a private worker.
+Before you install a private worker, make sure that you have an {{site.data.keyword.cloud}} account to create authentication keys. You need kubectl version 1.14.5 or higher installed on the Administrator's desktop computer. And you must also have a [Kubernetes cluster](https://cloud.ibm.com/kubernetes/clusters){:external} (version 1.15 or higher) with Administrative access to install a private worker.
 
 * Suggested Kubernetes cluster configurations:
 
-  * {{site.data.keyword.containerlong_notm}} version 1.13 or higher to run workloads in isolation on {{site.data.keyword.Bluemix_notm}} Public.
-  * {{site.data.keyword.Bluemix_notm}} Private version 3.1.2 or higher to run workloads on-premises.
+  * {{site.data.keyword.containerlong_notm}} version 1.15 or higher to run workloads in isolation on {{site.data.keyword.cloud_notm}} Public.
+  * {{site.data.keyword.cloud_notm}} Private version 3.1.2 or higher to run non-beta version Tekton workloads on-premises.
   * [Docker Desktop community edition](https://www.docker.com/products/docker-desktop){:external} version 2.0.5.0 to run workloads locally.
   
 * System requirements:
@@ -179,7 +179,7 @@ oc adm policy remove-scc-from-user anyuid system:serviceaccount:tekton-pipelines
 
 ```
 
-For more information about SCC on OpenShift, see [OpenShift 4.1](https://docs.openshift.com/container-platform/4.1/authentication/managing-security-context-constraints.html){: external} or [OpenShift 3.11](https://docs.openshift.com/container-platform/3.11/admin_guide/manage_scc.html){: external}.
+For more information about SCC on OpenShift, see [OpenShift 4.3](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html){: external} or [OpenShift 3.11](https://docs.openshift.com/container-platform/3.11/admin_guide/manage_scc.html){: external}.
 
  
 ## Registering a {{site.data.keyword.deliverypipeline}} Private Worker
