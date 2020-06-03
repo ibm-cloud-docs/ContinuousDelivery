@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-04"
+lastupdated: "2020-06-01"
 
-keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Jenkins, JIRA, Key Protect, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
+keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Hashicorp Vault, Jenkins, JIRA, Key Protect, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
 
 subcollection: ContinuousDelivery
 
@@ -28,9 +28,9 @@ subcollection: ContinuousDelivery
 You can configure tool integrations that support development, deployment, and operations tasks while you create an open toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
 {:shortdesc}
 
-The tool integrations that are available to add and configure for your toolchain are different depending on whether you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. If you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public, the tool integrations that are available to you depend on the region of your toolchain and the availability of tool integrations in that region. If you are using toolchains on {{site.data.keyword.Bluemix_notm}} Dedicated, the tool integrations that are available to you depend on how {{site.data.keyword.contdelivery_full}} was set up on your specific environment.
+The tool integrations that are available to add and configure for your toolchain are different depending on whether you are using toolchains on {{site.data.keyword.cloud}} Public or {{site.data.keyword.cloud_notm}} Dedicated. If you are using toolchains on {{site.data.keyword.cloud_notm}} Public, the tool integrations that are available to you depend on the region of your toolchain and the availability of tool integrations in that region. If you are using toolchains on {{site.data.keyword.cloud_notm}} Dedicated, the tool integrations that are available to you depend on how {{site.data.keyword.contdelivery_full}} was set up on your specific environment.
 
-|Tool Integration |Available on {{site.data.keyword.Bluemix_notm}} Public	|Available on {{site.data.keyword.Bluemix_notm}} Dedicated (Environment Dependent)|
+|Tool Integration |Available on {{site.data.keyword.cloud_notm}} Public	|Available on {{site.data.keyword.cloud_notm}} Dedicated (Environment Dependent)|
 |:----------|:------------------------------|:------------------|
 |Artifactory		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
 |Availability Monitoring		|US South		|No		|
@@ -44,6 +44,7 @@ The tool integrations that are available to add and configure for your toolchain
 |GitHub		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
 |Dedicated {{site.data.keyword.ghe_short}} and Issues			|No		|Yes		|
 |GitLab		|US South, US East, Germany, Tokyo, United Kingdom		|No		|
+|HashiCorp Vault		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
 |Jenkins		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
 |JIRA		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
 |{{site.data.keyword.keymanagementserviceshort}}		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
@@ -54,9 +55,9 @@ The tool integrations that are available to add and configure for your toolchain
 |Sauce Labs		|US South, US East, Germany, Tokyo, United Kingdom		|No		|
 |Slack			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
 |SonarQube			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
-{: caption="Table 1. Tool integrations available for toolchains on {{site.data.keyword.Bluemix_notm}} Public and Dedicated" caption-side="top"}
+{: caption="Table 1. Tool integrations available for toolchains on {{site.data.keyword.cloud_notm}} Public and Dedicated" caption-side="top"}
 
-If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
+If you want to start developing with your source code on {{site.data.keyword.cloud_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.cloud_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
 {: tip}
 
 
@@ -98,8 +99,8 @@ Configure the Artifactory repository manager to store build artifacts in your Ar
 
 1. Click **Create Integration**.
 1. Click the card for the Artifactory repo that you want to work with. The Artifactory website opens, where you can view the contents of the repo.
-1. Optional: If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Public and you want to build your app by using Artifactory with npm, configure your pipeline to add an npm build job. For instructions to configure the build job, see the [Configuring an Artifactory npm build job in your pipeline](#config_artifactory_npm) section.
-1. Optional: If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Public and you want to build your app by using Artifactory with Maven, configure your pipeline to add a Maven build job. For instructions to configure the build job, see the [Configuring an Artifactory Maven build job in your pipeline](#config_artifactory_maven) section.
+1. Optional: If you are using a toolchain on {{site.data.keyword.cloud_notm}} Public and you want to build your app by using Artifactory with npm, configure your pipeline to add an npm build job. For instructions to configure the build job, see the [Configuring an Artifactory npm build job in your pipeline](#config_artifactory_npm) section.
+1. Optional: If you are using a toolchain on {{site.data.keyword.cloud_notm}} Public and you want to build your app by using Artifactory with Maven, configure your pipeline to add a Maven build job. For instructions to configure the build job, see the [Configuring an Artifactory Maven build job in your pipeline](#config_artifactory_maven) section.
 
 ### Configuring an Artifactory npm build job in your pipeline
 {: #config_artifactory_npm}
@@ -189,7 +190,7 @@ To test, monitor, and improve your app's health as you build it, add the {{site.
 
 To learn more about {{site.data.keyword.prf_hubshort}}, see the [{{site.data.keyword.prf_hublong}} article](https://www.ibm.com/cloud/garage/practices/manage/tool_bluemix_availability_monitoring/){:external} on the IBM Cloud Garage Method or take this tutorial:
 
-  * [Manage your {{site.data.keyword.Bluemix_notm}} application by using {{site.data.keyword.Bluemix_notm}} Availability Monitoring and Alert Notification](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:external}
+  * [Manage your {{site.data.keyword.cloud_notm}} application by using {{site.data.keyword.cloud_notm}} Availability Monitoring and Alert Notification](https://www.ibm.com/cloud/garage/tutorials/tutorial_gm_advocate_bam_and_an){:external}
 
 
 ## Configuring Bitbucket
@@ -205,7 +206,7 @@ Configure Bitbucket to collaborate on code with your team:
 
  b. In the Tool Integrations section, click **Bitbucket**.
 
-   If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you did not authorize {{site.data.keyword.Bluemix_notm}} to access Bitbucket, click **Authorize** to go to the Bitbucket website. If you don't have an active Bitbucket session, you are prompted to log in. Click **Grant access** to allow {{site.data.keyword.Bluemix_notm}} Toolchains to access the following parts of your Bitbucket account:
+   If you are configuring this tool integration on {{site.data.keyword.cloud_notm}} Public and you did not authorize {{site.data.keyword.cloud_notm}} to access Bitbucket, click **Authorize** to go to the Bitbucket website. If you don't have an active Bitbucket session, you are prompted to log in. Click **Grant access** to allow {{site.data.keyword.cloud_notm}} Toolchains to access the following parts of your Bitbucket account:
    
    * **Read your account information**. Get basic user information to populate the user interface.
    
@@ -572,7 +573,7 @@ To learn more about GitHub, see the [GitHub article](https://www.ibm.com/cloud/g
  * [Create a custom toolchain](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){:external}
 
 
-## Configuring GitHub Enterprise and Issues on {{site.data.keyword.Bluemix_notm}} Dedicated
+## Configuring GitHub Enterprise and Issues on {{site.data.keyword.cloud_notm}} Dedicated
 {: #configghe}
 
  These instructions apply to {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, some steps might differ depending on your internal procedures.
@@ -628,7 +629,7 @@ You can configure GitLab as a tool integration in your toolchain so that you can
 
 If you are configuring this tool integration as you are creating the toolchain, follow these steps:
 
-1. If you are storing your source code in a GitLab repo, in the Configurable Integrations section, click **GitLab**. If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you did not authorize {{site.data.keyword.Bluemix_notm}} to access GitLab, click **Authorize** to go to the GitLab website. If you don't have an active GitLab session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitLab account. If you have an active GitLab session but you didn't enter your password recently, you might be prompted to enter your GitLab password to confirm.
+1. If you are storing your source code in a GitLab repo, in the Configurable Integrations section, click **GitLab**. If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you did not authorize {{site.data.keyword.cloud_notm}} to access GitLab, click **Authorize** to go to the GitLab website. If you don't have an active GitLab session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitLab account. If you have an active GitLab session but you didn't enter your password recently, you might be prompted to enter your GitLab password to confirm.
 1. If you are using a repo on your own GitLab server, in the Configurable Integrations section, click **Add custom server**.
 
  The network must be able to access the target GitLab server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment.
@@ -684,6 +685,35 @@ If you don't have owner or master privileges for the repo that you are linking t
 ### Learn more about GitLab
 
 To learn more about GitLab, see the [GitLab article](https://www.ibm.com/cloud/garage/content/code/tool_gitlab/){:external} on the IBM Cloud Garage Method.
+
+
+## Configuring HashiCorp Vault
+{: #hashicorpvault}
+
+HashiCorp Vault for {{site.data.keyword.cloud_notm}} securely stores and applies secrets for apps across {{site.data.keyword.cloud_notm}} services.
+
+Before you create a HashiCorp Vault tool integration, you must have access to a running HashiCorp Vault server, as well as the information that is required to configure the server. Configuration details include the server URL and port number, the hierarchical secret path where a `kv-1` or `kv-2` engine is mounted, and the specific authentication method and credentials that you use to access the HashiCorp Vault server.
+{: important}
+
+Configure HashiCorp Vault to securely manage secrets such as API keys and secrets that are part of your toolchain or delivery pipeline:
+
+1. If you are configuring this tool integration as you are creating the toolchain, and a HashiCorp Vault tool integration exists within the template that you are configuring, click the **HashiCorp Vault** tab. Alternatively, in the **More tools** section, click **HashiCorp Vault**.
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
+
+ a. Click **Add tool**.
+
+ b. In the Tool Integrations section, click **HashiCorp Vault**.
+
+1. Type the name that you want to display for this tool integration on the HashiCorp Vault card in your toolchain.
+1. Type the URL for the HashiCorp Vault server that you want to open when you click the HashiCorp Vault card from your toolchain.
+1. Type the URL for the HashiCorp Vault tool integration.
+1. Type the path to the Secrets on the HashiCorp Vault server that is accessible when you use the configured Authentication method and associated authentication credentials.  
+1. Click **Create Integration**.
+1. From your toolchain, click **HashiCorp Vault** to use the HashiCorp Vault Secrets Picker and Pusher components to select secrets for use within your toolchain or delivery pipeline.  
+
+### Learn more about HashiCorp Vault
+
+To learn more about HashiCorp Vault, see [HashiCorp Vault](https://www.vaultproject.io/){:external}.
 
 
 ## Configuring Jenkins
