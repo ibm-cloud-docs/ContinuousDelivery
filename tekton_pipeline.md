@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-01"
+lastupdated: "2020-06-04"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -155,7 +155,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
  * **Text area**: A property key with a multi-line value.
  * **Secure**: A property key with a single-line value that is secured with AES-128 encryption. This value is displayed by using the asterisk character.
  
- You can access these properties in your Tekton pipeline resources. For more information about these properties, see [Tekton Pipelines environment and resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines).
+ You can access these properties in your Tekton pipeline resources. For more information about these properties, see [Tekton Pipelines environment and resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment).
 
 1. Click **Save** and then **Close**.
 
