@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-06-04"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -113,7 +113,7 @@ You can use a template as a starting point to [create a toolchain](https://cloud
 
 You can create a toolchain from your app. The toolchain can support continuous development, deployment, monitoring, and more, and it is associated with your app. Each app can be associated with a toolchain. When you push changes to the toolchain's GitHub or {{site.data.keyword.ghe_short}} repo, the pipeline automatically builds and deploys the app.
 
-If you created your app by using your own code repository, click **Deploy my app** on your app's details page. Then, follow the steps that are described in [Creating apps from your own code repository](/docs/apps?topic=creating-apps-tutorial-byoc#tutorial-byoc).
+If you created your app by using your own code repository, click **Deploy my app** on your app's details page. Then, follow the steps that are described in [Creating apps from your own code repository](/docs/apps?topic=apps-tutorial-byoc#tutorial-byoc).
 {: note}
 
 1. If you created your app by using a starter kit, click **Deploy my app** on your app's details page. Next, select a deployment target. If you use {{site.data.keyword.cloud_notm}} Public, your app is configured for continuous delivery from a new GitHub repo that is populated with the app starter code. If you use {{site.data.keyword.cloud_notm}} Dedicated, your app is configured for continuous delivery from a new GitHub or {{site.data.keyword.ghe_short}} repo that is populated with the app starter code.
