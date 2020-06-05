@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-27"
+lastupdated: "2020-06-04"
 
 keywords: troubleshoot, toolchains, tool integrations
 
@@ -126,7 +126,7 @@ To delete a toolchain:
 1. Click the **Actions** menu, then select **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.
 
-You can use the ibmcloud dev CLI to delete toolchains. After you [install the {{site.data.keyword.dev_cli_notm}} CLI plug-in](/docs/cli?topic=cloud-cli-install-devtools-manually), you can delete a toolchain from the command line by using the [`ibmcloud dev toolchain-delete`](/docs/cli?topic=cloud-cli-idt-cli#toolchain-delete) command. 
+You can use the ibmcloud dev CLI to delete toolchains. After you [install the {{site.data.keyword.dev_cli_notm}} CLI plug-in](/docs/cli?topic=cli-install-devtools-manually), you can delete a toolchain from the command line by using the [`ibmcloud dev toolchain-delete`](/docs/cli?topic=cli-idt-cli#toolchain-delete) command. 
 {: tip}
 
 
