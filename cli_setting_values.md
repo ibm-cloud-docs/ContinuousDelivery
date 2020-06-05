@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-20"
+lastupdated: "2020-06-04"
 
 keywords: devops insights, setting, values, cli, parameter values, consistent, test, tests, install, app, dashboard, risk, build.properties
 
@@ -35,7 +35,7 @@ Configure {{site.data.keyword.deliverypipeline}} in your toolchain to build, tes
 
 You need an API key to integrate with {{site.data.keyword.DRA_short}}. This API key has access to the toolchain, and is used to log in with the {{site.data.keyword.Bluemix}} command line interface (CLI). For more information, see [Managing user API keys](/docs/services/iam?topic=iam-userapikey#userapikey).
 
-Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI and {{site.data.keyword.dev_cli_short}}](/docs/cli?topic=cloud-cli-getting-started).
+Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI and {{site.data.keyword.dev_cli_short}}](/docs/cli?topic=cli-getting-started).
 
 
 ## Setting environment properties
