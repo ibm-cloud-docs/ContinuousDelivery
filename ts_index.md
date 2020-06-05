@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-27"
+lastupdated: "2020-06-04"
 
 keywords: error message, Lite plan, toolchains, IBM Cloud
 
@@ -45,13 +45,13 @@ An instance of the {{site.data.keyword.contdelivery_short}} service is considere
 {: #org_outofmemory}
 {: faq}
 
-When trying to deploy an app to {{site.data.keyword.Bluemix_notm}}, if you get the following error message, the amount of memory that is remaining in your organization is less than the amount of memory that is required by the app that you want to deploy.
+When trying to deploy an app to {{site.data.keyword.cloud_notm}}, if you get the following error message, the amount of memory that is remaining in your organization is less than the amount of memory that is required by the app that you want to deploy.
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
 You can either increase the memory quota of your account or reduce the memory that your apps use. The maximum memory quota for a trial account is 2 GB. To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [How do I upgrade or change my account?](/docs/account?topic=account-accountfaqs#changeacct). To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} console or the cf command line interface.
 
-If you use the {{site.data.keyword.Bluemix_notm}} console, complete the following steps:
+If you use the {{site.data.keyword.cloud_notm}} console, complete the following steps:
 
 1. In the Apps Dashboard, select your app. The app details page opens.
 1. In the runtime pane, you can reduce the maximum memory limit or the numbers of app instances, or both, for your app.
@@ -86,7 +86,7 @@ The [open-toolchain/commons](https://github.com/open-toolchain/commons){: extern
 
 You can choose any of the following options to deploy your own code to {{site.data.keyword.contdelivery_short}}:
 
-  * Go to the [Create App](https://cloud.ibm.com/developer/appservice/create-app?navMode=dashboard){: external} page, create your app, and then [enable {{site.data.keyword.contdelivery_short}}](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) for the app. 
+  * Go to the [Create App](https://cloud.ibm.com/developer/appservice/create-app?navMode=dashboard){: external} page, create your app, and then [enable {{site.data.keyword.contdelivery_short}}](/docs/apps/tutorials?topic=apps-tutorial-byoc) for the app. 
   * Create a toolchain by using one of the available templates (dependent on the deployment target and tool integrations). On the **Create a Toolchain** page, select the appropriate provider for your source repository, and then specify the link to your source code repo. After you create your toolchain, you might need to adjust the pipeline scripts for your deployment goals.
   * Create an empty toolchain, and then add tool integrations to deploy your app. For more information about using this method to deploy your code to {{site.data.keyword.contdelivery_short}}, see [Set up a DevOps delivery pipeline for your app](/docs/apps?topic=containers-tutorial-byoc-kube).
 
@@ -103,4 +103,4 @@ You can find the Status page by choosing either of the following options:
   * Log in to the {{site.data.keyword.cloud_notm}} console. From the menu bar, click **Support** and select **Status**. Check the listed resources for the ![some issues](../../get-support/images/some_issues.svg) icon. This icon might indicate an outage.
   * Access it directly at [{{site.data.keyword.cloud_notm}} - System Status](https://cloud.ibm.com/status){: external}.
 
-For more information about the {{site.data.keyword.cloud_notm}} Status page, see [Viewing {{site.data.keyword.Bluemix_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status).
+For more information about the {{site.data.keyword.cloud_notm}} Status page, see [Viewing {{site.data.keyword.cloud_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status).
