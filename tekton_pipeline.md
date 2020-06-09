@@ -63,7 +63,7 @@ Both types of pipelines isolate jobs or steps from one another by running in sep
 
 Before you add and run a Tekton pipeline, make sure that you have the following resources in place:
 
-* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli) installed locally.
+* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli) installed locally.
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){:external} installed locally.
 * A Kubernetes cluster (version 1.15 or higher) such as an [{{site.data.keyword.containerlong}} cluster](https://cloud.ibm.com/kubernetes/catalog/cluster){:external}.
 * A toolchain that contains the following tool integrations:
