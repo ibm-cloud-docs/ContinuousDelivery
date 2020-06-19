@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-03-09"
+lastupdated: "2020-06-19"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline
 
@@ -181,7 +181,7 @@ If you use the **Simple** builder type, your code is not compiled or built; it i
 
 When you deploy by using Cloud Foundry, Cloud Foundry includes the correct artifacts to allow your app to run. For more information, see [Deploying applications by using the cf command](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps). The pipeline for a Cloud Foundry app contains a Deploy stage that runs a cf command.
 
-Cloud Foundry tries to [detect the buildpack to use](http://docs.cloudfoundry.org/buildpacks/detection.html){: external}. You can specify the [buildpack](/docs/runtimes-common?topic=runtimes-common-available_buildpacks) to use in the manifest file in the root folder of your app. Buildpacks typically examine user-provided artifacts to determine what dependencies to download and how to configure applications to communicate with bound services. For more information about manifest files, see [Application manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
+Cloud Foundry tries to [detect the buildpack to use](http://docs.cloudfoundry.org/buildpacks/detection.html){: external}. You can specify the [buildpack](/docs/cloud-foundry?topic=cloud-foundry-available_buildpacks) to use in the manifest file in the root folder of your app. Buildpacks typically examine user-provided artifacts to determine what dependencies to download and how to configure applications to communicate with bound services. For more information about manifest files, see [Application manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
 
 ### Deploy jobs
 
@@ -206,7 +206,7 @@ You can also define your own environment properties. For example, you might defi
 You can add the following types of properties:
 
 * **Text**: A property key with a single-line value.
-* **Text Area**: A property key with a multi-line value.
+* **Text Area**: A property key with a multi-line value. A base64 version of each text area property value is also available. You can access this version by using the property key name with a trailing `_base641` suffix. You can decode the base64 version of a Text Area property and echo it by typing `echo "$(echo $multi_base64 | base64 -d)"`, where `multi` is the property key name you defined and `multi_base64` is the additional property that is provided. The pipeline base image contains built in support to manage multi-line encoding transparently. However, if you use a custom image you must append the `_base64` suffix property to prevent issues where your value is truncated by a line-ending.
 * **Secure**: A property key with a single-line value that is secured with AES-128 encryption. The value is displayed as asterisks.
 * **Properties**: A file in the project's repository. This file can contain multiple properties. Each property must be on its own line. To separate key-value pairs, use the equals sign (=). Enclose all string values in quotation marks. For example, `MY_STRING="SOME STRING VALUE"`.
 
