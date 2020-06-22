@@ -122,6 +122,7 @@ Continuous Delivery
     Command reference
         /devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
         [grunt-idra3 (deprecated)](https://www.npmjs.com/package/grunt-idra3)
+        /cli/cli-idt-cli
 
     cd_at_events.md
     responsibilities_cd.md
