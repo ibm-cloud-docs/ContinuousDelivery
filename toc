@@ -103,7 +103,7 @@ Continuous Delivery
         cicd_evaluate_gates.md
 
     {: .topicgroup}
-    Enhancing security for IBM Cloud Continuous Delivery
+    Enhancing security
         cd-architecture-workload-isolation.md
         cd_iam_security.md
         toolchains_iam_security.md
