@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-22"
+lastupdated: "2020-06-24"
 
 keywords: customer responsibilities, IBM responsibilities, terms and conditions
 
@@ -39,7 +39,7 @@ Review the following sections for the specific responsibilities for you and for 
 ## Incident and operations management
 {: #incident-and-ops}
 
-<!-- Include an introductory sentence or two about this table. Leave the cell blank for the responsible party column if they do not have responsibility for the given task.  -->
+Incident and operations management includes tasks such as monitoring, event management, high availability, problem determination, recovery, and full state backup and recovery.
 
 | Task | IBM responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
@@ -50,7 +50,7 @@ Review the following sections for the specific responsibilities for you and for 
 ## Change management
 {: #change-management}
 
-<!-- Include an introductory sentence or two about this table. Leave the cell blank for the responsible party column if they do not have responsibility for the given task.  -->
+Change management includes tasks such as deployment, configuration, upgrades, patching, configuration changes, and deletion.
 
 | Task | IBM responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
@@ -63,7 +63,7 @@ Review the following sections for the specific responsibilities for you and for 
 ## Identity and access management
 {: #iam-responsibilities}
 
-<!-- Include an introductory sentence or two about this table. Leave the cell blank for the responsible party column if they do not have responsibility for the given task.  -->
+Identity and access management includes tasks such as authentication, authorization, access control policies, and approving, granting, and revoking access.
 
 | Task | IBM responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
@@ -77,7 +77,7 @@ Review the following sections for the specific responsibilities for you and for 
 ## Security and regulation compliance
 {: #security-compliance}
 
-<!-- Include an introductory sentence or two about this table. Leave the cell blank for the responsible party column if they do not have responsibility for the given task.  -->
+Security and regulation compliance includes tasks such as security controls implementation and compliance certification.
 
 | Task | IBM responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
@@ -87,6 +87,8 @@ Review the following sections for the specific responsibilities for you and for 
 ## Disaster recovery
 {: #disaster-recovery}
 
+Disaster recovery includes tasks such as providing dependencies on disaster recovery sites, provision disaster recovery environments, data and configuration backup, replicating data and configuration to the disaster recovery environment, and failover on disaster events.
+
 IBM is responsible for maintaining backups and high availability of the {{site.data.keyword.contdelivery_short}} service in each supported region. However, because {{site.data.keyword.contdelivery_short}} toolchains are region-dependent, automated global failover is not supported. If a regional disaster occurs, the recovery time for toolchains depends on the recovery time for the region. You can implement manual failover to another region by creating and maintaining copies of your toolchains and Git repos that have idle pipelines, in another {{site.data.keyword.cloud_notm}} region.
 {:important}
 
@@ -94,4 +96,4 @@ IBM is responsible for maintaining backups and high availability of the {{site.d
 |----------|-----------------------|--------|
 |Back up toolchain data.| Maintain regular backups of toolchain and pipeline definitions, Git repos, and any other toolchain integration data that is stored and managed by IBM.  | To support global failover, create and maintain copies of your toolchain and pipeline definitions, including tool integration data and your Git repos, in another IBM region. |
 |Restore toolchain data.| Restore all toolchain and Git repos to the original {{site.data.keyword.cloud_notm}} region, when that region is available.    | To support global failover, manually switch to using the copied toolchains and repos in another region. |
-{: caption="Table 5. Responsibilites for disaster recovery" caption-side="top"} 
+{: caption="Table 5. Responsibilites for disaster recovery" caption-side="top"}
