@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-06-24"
 
 keywords: devops insights, evaluating gates, other ci/cd tools, test, tests, gate, gate failing, app, risk
 
@@ -37,7 +37,7 @@ Create a policy with rules. For more information, see [Defining policies and rul
 ## Defining gates for other CI/CD tools
 {: #gates-cicd}
 
-Place gates before build promotion in your CI/CD tool to check the quality of the build against your policies to ensure that it's safe to promote from one environment to another. Use the `evaluategate` command to perform the gate check. 
+Place gates before build promotion in your CI/CD tool to check the quality of the build against your policies to ensure that it's safe to promote from one environment to another. Use the `gate-evaluate` command to perform the gate check. 
 
 After you create the policy, you can use the following script for gate evaluation:
 ```
@@ -49,7 +49,7 @@ ibmcloud plugin install -f doi
 ibmcloud login --apikey $API_KEY --no-region
 
 # The following line assumes that MY_APP_NAME and MY_BUILD_NUMBER environment variables have already been set.  POLICY is the name of the policy being evaluated.
-ibmcloud doi evaluategate --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --policy POLICY
+ibmcloud doi gate-evaluate --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --policy POLICY
 ```
 {:codeblock}
 
