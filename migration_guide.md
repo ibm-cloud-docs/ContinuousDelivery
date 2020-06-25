@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-04"
+lastupdated: "2020-06-24"
 
 keywords: devops insights, devops, insights, ibmcloud cli, idra, migrating, test, tests, gate, gate failure, install, app
 
@@ -66,7 +66,7 @@ ibmcloud login --apikey $API_KEY --no-region
 
 ibmcloud plugin install doi
 
-ibmcloud doi publishbuildrecord --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --branch $GIT_BRANCH --repositoryurl $GIT_URL --commitid $GIT_COMMIT --status pass
+ibmcloud doi buildrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --branch $GIT_BRANCH --repositoryurl $GIT_URL --commitid $GIT_COMMIT --status pass
 ```
 {:codeblock}
 
@@ -80,10 +80,10 @@ The following table shows the differences of the command name.
 
 | Command Name              | grunt-idra3 CLI          | {{site.data.keyword.cloud_notm}} CLI |
 |---------------------------|--------------------------|----------------------------------------|
-| Publish build record      | `publishbuildrecord`     | `publishbuildrecord`                   |
-| Publish test results      | `publishtest` **result** | `publishtest` **record**               |
-| Publish deployment record | `publishdeployrecord`    | `publishdeployrecord`                  |
-| Evaluate gate             | `evaluategate`           | `evaluategate`                         |
+| Publish build record      | `publishbuildrecord`     | `buildrecord-publish`                  |
+| Publish test results      | `publishtest` **result** | `testrecord-publish` **record**        |
+| Publish deployment record | `publishdeployrecord`    | `deployrecord-publish`                 |
+| Evaluate gate             | `evaluategate`           | `gate-evaluate`                        |
 {: caption="Table 1. Command name differences" caption-side="top"}
 
 The following table shows the differences between the command parameters. 
