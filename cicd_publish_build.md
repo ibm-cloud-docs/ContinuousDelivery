@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-06-24"
 
 keywords: devops insights, publish, build, record, cli, test, tests, app
 
@@ -35,7 +35,7 @@ Before you publish a build record, you must set consistent parameter values. For
 ## Publishing a build record with other CI/CD tools
 {: #build-cicd}
 
-In a build job, use the following script to upload a build record. Use the **`publishbuildrecord`** is the command to upload a build record. 
+In a build job, use the following script to upload a build record. Use the **`buildrecord-publish`** command to upload a build record. 
 
 ```
 #!/bin/bash
@@ -49,7 +49,7 @@ ibmcloud login --apikey $API_KEY --no-region
 # Please set variable $GIT_BRANCH, $GIT_URL and $GIT_COMMIT for better build record data
 # Assumes you have set $MY_APP_NAME and $MY_BUILD_NUMBER as described earlier
 
-ibmcloud doi publishbuildrecord --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --branch $GIT_BRANCH --repositoryurl $GIT_URL --commitid $GIT_COMMIT --status pass
+ibmcloud doi buildrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --branch $GIT_BRANCH --repositoryurl $GIT_URL --commitid $GIT_COMMIT --status pass
 ```
 {:codeblock}
 
