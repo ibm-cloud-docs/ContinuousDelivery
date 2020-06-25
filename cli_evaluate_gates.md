@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-20"
+lastupdated: "2020-06-24"
 
 keywords: devops insights, evaluating gates, cli, test, tests, gate, gate failing, app
 
@@ -49,7 +49,7 @@ ibmcloud plugin install -f doi
 ibmcloud login --apikey $API_KEY --no-region
 
 # The following line assumes that MY_APP_NAME and MY_BUILD_NUMBER environment variables have already been set.  POLICY is the name of the policy being evaluated.
-ibmcloud doi evaluategate --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --policy "$POLICY_NAME"
+ibmcloud doi gate-evaluate --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --policy "$POLICY_NAME"
 ```
 {:codeblock}
 
