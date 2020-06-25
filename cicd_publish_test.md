@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-15"
+lastupdated: "2020-06-24"
 
 keywords: devops insights, publish, test, results, other ci/cd tools, code coverage, tests, verification, app, sonarqube, dashboard
 
@@ -37,7 +37,7 @@ Before you publish test results, you must publish a deployment record. For more 
 ## Publishing test results
 {: #test-cicd}
 
-Use the `publishtestrecord` command to upload a test record. The following example script uploads functional verification test (FVT) results to {{site.data.keyword.DRA_short}}:
+Use the `testrecord-publish` command to upload a test record. The following example script uploads functional verification test (FVT) results to {{site.data.keyword.DRA_short}}:
 
 ```
 # Run tests and generate a test results file here.
@@ -48,11 +48,11 @@ ibmcloud plugin install -f doi
 # Log in to IBM Cloud if you are not already logged in.  Assumes that $API_KEY environment variable has been set as a secured property
 ibmcloud login --apikey $API_KEY --no-region
 
-ibmcloud doi publishtestrecord --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --filelocation fvttest.json --type fvt
+ibmcloud doi testrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --filelocation fvttest.json --type fvt
 ```
 {:codeblock}
 
-In the example script, the `publishtestrecord` command specifies that the command uploads test records. The `--filelocation` flag indicates the location of the test results file relative to the root directory of the job. The `--type` flag indicates the type of test result.
+In the example script, the `testrecord-publish` command specifies that the command uploads test records. The `--filelocation` flag indicates the location of the test results file relative to the root directory of the job. The `--type` flag indicates the type of test result.
 
 The following example script runs tests and then uploads Mocha results and Istanbul code coverage results to {{site.data.keyword.DRA_short}}:
 
@@ -67,8 +67,8 @@ ibmcloud plugin install -f doi
 ibmcloud login --apikey $API_KEY --no-region
 
 #Publish test results.  Assumes that MY_APP_NAME and MY_BUILD_NUMBER environment variables are already set
-ibmcloud doi publishtestrecord --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --filelocation /test/results/mocha.xml --type unittest
-ibmcloud doi publishtestrecord --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --filelocation ./coverage/coverage-summary.json --type code
+ibmcloud doi testrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --filelocation /test/results/mocha.xml --type unittest
+ibmcloud doi testrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --filelocation ./coverage/coverage-summary.json --type code
 ```
 {:codeblock}
 
