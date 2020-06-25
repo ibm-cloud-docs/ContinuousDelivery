@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-20"
+lastupdated: "2020-06-24"
 
 keywords: devops insights, publish, build, record, cli, test, tests, app
 
@@ -49,7 +49,7 @@ ibmcloud login --apikey $API_KEY --no-region
 # $GIT_BRANCH, $GIT_URL, $GIT_COMMIT are environment variables made available by the Continuous Delivery pipeline
 # Assumes you have set $MY_APP_NAME and $MY_BUILD_NUMBER as described earlier
 
-ibmcloud doi publishbuildrecord --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --branch $GIT_BRANCH --repositoryurl $GIT_URL --commitid $GIT_COMMIT --status pass
+ibmcloud doi buildrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --branch $GIT_BRANCH --repositoryurl $GIT_URL --commitid $GIT_COMMIT --status pass
 ```
 {:codeblock}
 
