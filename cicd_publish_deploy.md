@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-06-24"
 
 keywords: devops insights, publish, deploy, record, cli, deployment, other ci/cd tools, app
 
@@ -35,7 +35,7 @@ Before you publish a deployment a record, you must publish a build record. For m
 ## Publishing a deployment record for {{site.data.keyword.contdelivery_short}}
 {: #deploy-cicd}
 
-In the deployment job, use the following script to upload a deployment record. The `--env` flag identifies the deployment environment. Use the `publishdeployrecord` command to upload a deployment record. 
+In the deployment job, use the following script to upload a deployment record. The `--env` flag identifies the deployment environment. Use the `deployrecord-publish` command to upload a deployment record. 
 
 ```
 #!/bin/bash
@@ -46,7 +46,7 @@ ibmcloud plugin install -f doi
 # Log in to IBM Cloud if you are not already logged in.  Assumes that $API_KEY environment variable has been set as a secured property
 ibmcloud login --apikey $API_KEY --no-region
 
-ibmcloud doi publishdeployrecord --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --env staging --status pass
+ibmcloud doi deployrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --env staging --status pass
 ```
 {:codeblock}
 
@@ -57,7 +57,7 @@ ibmcloud doi publishdeployrecord --logicalappname="$MY_APP_NAME" --buildnumber="
 Provide a `joburl` to upload deployment records. To include `joburl` as a parameter to upload a deployment record, pass it in as a parameter:
 
 ```
-ibmcloud doi publishdeploymentrecord --logicalappname "$MY_APP_NAME" --buildnumber "$MY_BUILD_NUMBER" --env staging --joburl "$JOB_URL" --status pass
+ibmcloud doi deploymentrecord-publish --logicalappname "$MY_APP_NAME" --buildnumber "$MY_BUILD_NUMBER" --env staging --joburl "$JOB_URL" --status pass
 ```
 {:codeblock}
 
