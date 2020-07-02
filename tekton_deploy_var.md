@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-05-26"
+lastupdated: "2020-06-23"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -147,3 +147,9 @@ spec:
         - echo -e "The environment for this Step is ";
           env
  ```         
+## Learn more about Tekton delivery pipelines
+{: #tekton_learn_more}
+
+To learn more about Tekton and Continuous Delivery, see [Tekton: A Modern Approach to Continuous Delivery](https://www.ibm.com/cloud/blog/tekton-a-modern-approach-to-continuous-delivery){:external} or take this tutorial:
+
+  * [Develop a Kubernetes app by using Tekton delivery pipelines](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-using-tekton-delivery-pipelines){:external}
