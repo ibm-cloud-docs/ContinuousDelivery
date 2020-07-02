@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-04"
+lastupdated: "2020-06-23"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 # Working with Tekton pipelines
 {: #tekton-pipelines}
 
-Tekton Pipelines is an open source project that you can use to configure and run continuous integration and {{site.data.keyword.contdelivery_short}} pipelines within a Kubernetes cluster. Tekton pipelines are defined in yaml files, which are typically stored in a Git repository (repo). 
+[Tekton Pipelines](https://tekton.dev/){:external} is an open source project that you can use to configure and run Continuous Integration and {{site.data.keyword.contdelivery_short}} pipelines within a Kubernetes cluster. Tekton pipelines are defined in yaml files, which are typically stored in a Git repository (repo).
 {: shortdesc}
 
 Tekton provides a set of [Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/){:external} extensions to Kubernetes to define pipelines. The following basic Tekton Pipeline resources are included in these extensions:
@@ -33,10 +33,12 @@ Tekton provides a set of [Custom Resources](https://kubernetes.io/docs/concepts/
 |Resource |Description	|
 |:----------|:------------------------------|
 |`Task`		|Defines a set of build steps such as compiling code, running tests, and building and deploying images.		|
+|`TaskRun`		|Instantiates a Task for execution with specific inputs, outputs, and execution parameters. Can be invoked on its own or as part of a `Pipeline`.		|
 |`Pipeline`		|Defines the set of tasks that compose a pipeline.		|
-| `PipelineResource`		|Defines an object that is an input (such as a Git repository) or an output (such as a Docker image) of the pipeline.   		|
-|`PipelineRun`		|Defines the execution of a pipeline. This resource references the Pipeline to run and which PipelineResource(s) to use as input and output.   |
+|`PipelineRun`		|Instantiates a Pipeline for execution with specific inputs, outputs, and execution parameters.		|
+| `PipelineResource`		|Defines an object that is an input (such as a Git repository) or an output (such as a Docker image) of the pipeline. This resource was not promoted to [Beta](https://tekton.dev/docs/pipelines/resources/) along with the other Tekton Pipeline custom resources.   		|
 {: caption="Table 1. Tekton pipeline resources" caption-side="top"}
+
 
 There are several advantages to using Tekton Pipelines:
 
@@ -63,13 +65,14 @@ Both types of pipelines isolate jobs or steps from one another by running in sep
 
 Before you add and run a Tekton pipeline, make sure that you have the following resources in place:
 
+* A [toolchain](https://cloud.ibm.com/devops/toolchains) that contains the following tool integrations:
+
+  * A repo tool integration (such as the GitHub tool integration) that contains your Tekton pipeline code, including a Tekton yaml file. Find sample pipeline and task definitions on [github](https://github.com/open-toolchain/hello-tekton). For more information about getting started with Tekton pipelines, see [Tekton Pipelines](https://github.com/tektoncd/pipeline/blob/master/docs/pipelines.md){:external} or take the [Develop a Kubernetes app by using Tekton delivery pipelines](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-using-tekton-delivery-pipelines){:external} tutorial.
+  * Optional. If you are not using the default shared Pipeline Worker, you can use a {{site.data.keyword.deliverypipeline}} Private Worker tool integration that references your Kubernetes cluster. For more information about private workers, see [Installing Delivery Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
+
 * [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli) installed locally.
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){:external} installed locally.
 * A Kubernetes cluster (version 1.15 or higher) such as an [{{site.data.keyword.containerlong}} cluster](https://cloud.ibm.com/kubernetes/catalog/cluster){:external}.
-* A toolchain that contains the following tool integrations:
-
-  * A repo tool integration (such as the GitHub tool integration) that contains your Tekton pipeline code, including a Tekton yaml file. For more information about getting started with Tekton pipelines, see [Tekton Pipelines](https://github.com/tektoncd/pipeline/tree/v0.8.0/docs#tekton-pipelines){:external}.
-  * A {{site.data.keyword.deliverypipeline}} Private Worker tool integration that references your Kubernetes cluster. For more information about private workers, see [Installing Delivery Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
 
 The toolchain and the {{site.data.keyword.deliverypipeline}} Private Worker tool integration must be in the same region. 
 {: important}
@@ -79,8 +82,9 @@ The toolchain and the {{site.data.keyword.deliverypipeline}} Private Worker tool
 
 When you configure a {{site.data.keyword.deliverypipeline}} tool integration, you can select the type of pipeline that you want to create.
 
-1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.deliverypipeline}}**. Depending on the template that you use, different fields might be available. Review the default field values and if needed, change those settings.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
+1. If you don't have a toolchain, select a template to [create a toolchain](https://cloud.ibm.com/devops/create){:external}. Depending on the template that you use, different fields might be available. Review the default field values and if needed, change those settings.
+1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the [Toolchains page](https://cloud.ibm.com/devops/toolchains){:external}, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain** and click **Overview**.
+1. Add the Delivery Pipeline integration to your toolchain:
 
  a. Click **Add tool**.
 
@@ -95,33 +99,42 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 {: #configure_tekton_pipeline}
 
 1. Click the **{{site.data.keyword.deliverypipeline}}** card to open the Tekton {{site.data.keyword.deliverypipeline}} dashboard.
-1. In the **Definitions** tab, complete the following tasks:
+1. In the **Definitions** section, complete the following tasks:
 
- a. Specify the Git repo and URL that contains the Tekton pipeline definition and related artifacts.
+ a. Specify the Git repo and URL that contains the Tekton pipeline definition and related artifacts. If your repo is not available, return to the toolchain Overview page and add your repo.
 
  b. Select the branch within your Git repo that you want to use, or type a tag.
  
- c. Specify the path to your pipeline definition within the Git repo. You can reference a specific definition within the same repo.
+ c. Specify the path to your pipeline definition within the Git repo. You can reference a specific definition within the same repo. You can also add multiple definition repos, if they are integrated with the toolchain. 
+
+ d. Save your changes.
 
  The pipeline definition is updated automatically.
  
-1. In the **Worker** tab, select the private worker that you want to use to run your Tekton pipeline on the associated cluster. For more information about private workers, see [Working with Delivery Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers).
+1. In the **Worker** section, select the IBM Managed shared worker or the private worker that you want to use to run your Tekton pipeline. For more information about private workers, see [Working with Delivery Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers).
 
  The private worker must be defined in the same toolchain as your Tekton pipeline.
  {: important}
 
-1. In the **Triggers** tab, click **Add trigger** to create a manual, timed, Git repository, or generic webhook trigger, and then associate that trigger with an event listener. Manual triggers run when you click the **Run** pipeline button and select the trigger. Timed triggers run at a scheduled time that is defined by the [CRON](http://crontab.org/){:external} value. Git repository triggers run when the specified Git event type occurs for the specified Git repo and branch. Generic webhook triggers run when a POST request that is configured with the secret setting goes to the generic webhook URL. The list of available event listeners is populated with the listeners that are defined in the pipeline code repo.
+1. In the **Triggers** section, click **Add trigger** to create a new trigger, and then associate that trigger with an event listener. The list of available event listeners is populated with the listeners that are defined in the pipeline code repo.
  
  Triggers are based on [Tekton trigger definitions](https://github.com/tektoncd/triggers){:external}. Git respository triggers use the event listener that they are mapped to to extract information from the incoming event payload and create Kubernetes resources. These resources are applied to a Tekton `PipelineRun` resource.
  {: tip}
 
- The CRON expression for **timed triggers** is based on the [UNIX crontab syntax](http://crontab.org/){:external} and is a sequence of five time and date fields: `minute`, `hour`, `day of the month`, `month`, and `day of the week`. These fields are separated by spaces in the format `X X X X X`. The following examples show strings that use various timed frequencies.
+ **Manual triggers** run when you click the **Run** pipeline button and select the trigger.
+
+ **Git repository triggers** run when the specified Git event type occurs for the specified Git repo and branch.
+  
+ You can access the webhook payload that is delivered to a Git trigger from your Tekton pipeline resources. Although the exact fields are repo-specific, the general syntax for the webhook payload is `$(event.payloadFieldName)`.
+ {: tip}
+
+ **Timed triggers** run at a scheduled time that is defined by the [CRON](http://crontab.org/){:external} value. The CRON expression for **timed triggers** is based on the [UNIX crontab syntax](http://crontab.org/){:external} and is a sequence of five time and date fields: `minute`, `hour`, `day of the month`, `month`, and `day of the week`. These fields are separated by spaces in the format `X X X X X`. The following examples show strings that use various timed frequencies.
    * `* * * * *` - The trigger runs every minute.
    * `0 * * * *` - The trigger runs at the start of every hour.
    * `0 9 * 1 MON-FRI` - The trigger runs at 9:00 AM every weekday in January.
    * `0 * * NOV,DEC 1` - The trigger runs every hour on Mondays during November and December.
 
- **Generic webhook triggers** provide a unique webhook URL for POST requests. You can secure generic webhook triggers to work with Git, a Slack outgoing webhook, an Artifactory webhook, and more by using any of the following methods:
+ **Generic webhook triggers** run when a POST request that is configured with the secret setting goes to the generic webhook URL. Generic webhook triggers provide a unique webhook URL for POST requests. You can secure generic webhook triggers to work with Git, a Slack outgoing webhook, an Artifactory webhook, and more by using any of the following methods:
 
    * Token matches to compare the saved token and the token that is passed within the POST request. Supported token sources include a header, query, or payload. Token matches are used by GitLab webhooks and Slack outgoing webhooks.
    * Payload digest matches to compare the signature and the hash that are generated from the digested payload by using HMAC hex digest with a saved token. Supported signature sources might include a header, query, or payload. Users must specify a digest algorithm. Payload digest matches are used by GitHub webhooks.
@@ -145,11 +158,10 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
   * Securing: `Token Matches`
   * Token Source: `Payload`
   * JSON Property Name / Form Key: `token`
- 
- You can access the webhook payload that is delivered to a Git trigger from your Tekton pipeline resources. Although the exact fields are repo-specific, the general syntax for the webhook payload is `$(event.payloadFieldName)`.
- {: tip}
 
-1. In the **Environment properties** tab, click **Add property** and define your own environment property. For example, you can define an `API_KEY` property that passes an API key that is used by all of the scripts in the pipeline to access {{site.data.keyword.cloud_notm}} resources. You can add the following types of properties:
+Save your changes.
+
+1. In the **Environment properties** section, click **Add property** and define your own environment property. For example, you can define an `API_KEY` property that passes an API key that is used by all of the scripts in the pipeline to access {{site.data.keyword.cloud_notm}} resources. You can add the following types of properties:
 
  * **Text**: A property key with a single-line value.
  * **Text area**: A property key with a multi-line value.
@@ -157,12 +169,12 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
  
  You can access these properties in your Tekton pipeline resources. For more information about these properties, see [Tekton Pipelines environment and resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment).
 
-1. Click **Save** and then **Close**.
+1. Click **Save**.
 
 ## Viewing the {{site.data.keyword.deliverypipeline}} for Tekton dashboard 
 {: #view_tekton_dashboard}
 
-The Tekton {{site.data.keyword.deliverypipeline}} dashboard displays an empty table until at least one Tekton pipeline runs. After Tekton pipeline runs occur (either manually or as the result of external events), the table lists those runs and related information such as status and run trigger, and the last updated time of the run definition.
+In the **PipelineRuns** section, the Tekton {{site.data.keyword.deliverypipeline}} dashboard displays an empty table until at least one Tekton pipeline runs. After Tekton pipeline runs occur (either manually or as the result of external events), the table lists those runs and related information such as status and run trigger, and the last updated time of the run definition.
 
 Pipeline runs can be in any of the following states:
 
@@ -175,4 +187,15 @@ Pipeline runs can be in any of the following states:
 * **Cancelled**: `PipelineRun` was cancelled by the system or by the user. The system cancels `PipelineRun` when the number of waiting runs exceeds the allowed limit.
 * **Error**: `PipelineRun` contains errors that prevented it from being applied on the cluster. For more information about the cause of the error, see the run details.
 
+![Tekton Dashboard](images/tekton-dashboard.png)
+
 For detailed information about a selected run, click any row in the table. You view the `Task` definition and the steps in each `PipelineRun` definition. You can also view the status, logs, and details of each `Task` definition and step, and the overall status of the `PipelineRun` definition.
+
+![Tekton PipelineRun details](images/tekton-pipeline-run-details.png)
+
+## Learn more about Tekton pipelines
+{: #learn_more_tekton_pipelines}
+
+To learn more about Tekton pipelines, see the [Tekton: A Modern Approach to Continuous Delivery](https://www.ibm.com/cloud/blog/tekton-a-modern-approach-to-continuous-delivery){:external} article or take this tutorial:
+
+  * [Develop a Kubernetes app by using Tekton delivery pipelines](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-using-tekton-delivery-pipelines){:external} tutorial.
