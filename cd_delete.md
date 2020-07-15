@@ -3,7 +3,7 @@
 copyright:
   years: 2020
 
-lastupdated: "2020-06-03"
+lastupdated: "2020-07-14"
 
 keywords: ibmcloud, resource, service instance, restore, CLI tool, IBM Cloud
 
@@ -12,7 +12,6 @@ subcollection: ContinuousDelivery
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
@@ -29,7 +28,7 @@ subcollection: ContinuousDelivery
 {: help} 
 {: support}
 
-You can delete a {{site.data.keyword.contdelivery_short}} service instance by using either the {{site.data.keyword.cloud_notm}} console or the {{site.data.keyword.cloud_notm}} CLI.
+You can delete resource group-based and Cloud Foundry organization (org)-based {{site.data.keyword.contdelivery_short}} service instances.
 {: shortdesc}
 
 To delete a {{site.data.keyword.contdelivery_short}} service instance, you must have either the Administrator or Editor user permissions.
@@ -37,8 +36,13 @@ To delete a {{site.data.keyword.contdelivery_short}} service instance, you must 
 Deleting an instance of the {{site.data.keyword.contdelivery_short}} service impacts your ability to use tool integrations within toolchains that are contained in the same region and resource group as the deleted service instance. For more information about this limitation, see [Plan limitations and usage](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 {: important}
 
-## Deleting a service instance from the console
-{: #deleting_cd_console}
+## Deleting a resource group-based service instance
+{: #deleting_cd_rg}
+
+You can delete a resource group-based {{site.data.keyword.contdelivery_short}} service instance by using either the {{site.data.keyword.cloud_notm}} console or the {{site.data.keyword.cloud_notm}} CLI.
+
+### Deleting a service instance from the console
+{: #deleting_rg_console}
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
 1. Go to the [Resource list](https://cloud.ibm.com/resources){: external} for your {{site.data.keyword.cloud_notm}} account.
@@ -46,8 +50,8 @@ Deleting an instance of the {{site.data.keyword.contdelivery_short}} service imp
 1. From the {{site.data.keyword.contdelivery_short}} service instance's **Actions** ![Overflow icon](images/overflow-icon-2.svg) menu, click **Delete**.
 1. Click **Delete** to confirm that you want to delete the {{site.data.keyword.contdelivery_short}} service.
 
-## Deleting a service instance by using the CLI
-{: #deleting_cd_cli}
+### Deleting a service instance by using the CLI
+{: #deleting_rg_cli}
 
 * To view service instances, run the [`ibmcloud resource service-instances`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instances) command:
   ```
@@ -61,7 +65,7 @@ Deleting an instance of the {{site.data.keyword.contdelivery_short}} service imp
   ```
   {: codeblock}
 
-## Restoring a deleted service instance
+### Restoring a deleted service instance
 {: #restoring_cd_instance}
 
 After you delete an instance of the {{site.data.keyword.contdelivery_short}} service, you can restore the deleted service instance within the data retention period of seven days. After the seven-day period expires, the service instance is permanently deleted. 
@@ -72,3 +76,37 @@ You can have one active instance of {{site.data.keyword.contdelivery_short}} onl
 
 * Restore the deleted service instance within the data retention period of seven days.
 * Permanently remove the deleted service instance by using the [`ibmcloud resource reclamation-delete`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_reclamation_delete) command, and then [create a {{site.data.keyword.contdelivery_short}} service](/docs/ContinuousDelivery?topic=ContinuousDelivery-create_cd_service) instance again.
+
+
+## Deleting a Cloud Foundry org-based service instance
+{: #deleting_cd_cf}
+
+You can no longer create Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances because they are deprecated. To prevent accidental deletion of existing service instances, you cannot delete any instances that contain toolchains within the org that they reside in. After you delete a Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instance, you cannot restore or re-create it. Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances do not have a reclamation period.
+{: important}
+
+1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
+1. Delete all of the toolchains in the Cloud Foundry org that contains the {{site.data.keyword.contdelivery_short}} service instance:
+
+  a. Go to the [Toolchains](https://cloud.ibm.com/devops/toolchains){: external} page for your {{site.data.keyword.cloud_notm}} account.
+  
+  b. Select the Cloud Foundry org and the location that you want to delete the service instance from.
+  
+  c. Complete the following steps for each toolchain in the Cloud Foundry org:
+  
+    *  From the toolchain's **Actions** ![Overflow icon](images/overflow-icon-2.svg) menu, click **Delete**.
+    
+    *  Type the name of the toolchain that you want to delete.
+    
+    *  Click **Delete** to confirm that you want to delete the toolchain.
+     
+1. Delete the {{site.data.keyword.contdelivery_short}} service instance:
+
+   a. Go to the [Resource list](https://cloud.ibm.com/resources){: external} for your {{site.data.keyword.cloud_notm}} account.
+   
+   b. In the **Cloud Foundry services** section, locate the active {{site.data.keyword.contdelivery_short}} service instance.
+   
+   c. From the {{site.data.keyword.contdelivery_short}} service instance's **Actions** ![Overflow icon](images/overflow-icon-2.svg) menu, click **Delete**.
+   
+   d. Type the name of the service instance that you want to delete.
+   
+   e. Click **Delete** to confirm that you want to delete the {{site.data.keyword.contdelivery_short}} service.
