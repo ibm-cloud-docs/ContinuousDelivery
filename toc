@@ -20,10 +20,6 @@ Continuous Delivery
         overview_observe_trends.md
         overview_deploy_environment.md
         overview_quality_gate.md
-
-    {: .topicgroup}
-    Related links
-        [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -126,6 +122,10 @@ Continuous Delivery
 
     cd_at_events.md
     responsibilities_cd.md
+    
+    {: .topicgroup}
+    Related links
+        [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
