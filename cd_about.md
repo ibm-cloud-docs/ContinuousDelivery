@@ -11,7 +11,6 @@ subcollection: ContinuousDelivery
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
