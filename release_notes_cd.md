@@ -7,7 +7,6 @@ lastupdated: "2019-09-05"
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
