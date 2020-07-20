@@ -12,7 +12,6 @@ subcollection: ContinuousDelivery
 
 
 {:screen: .screen}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
