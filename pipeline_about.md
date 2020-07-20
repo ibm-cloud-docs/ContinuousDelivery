@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-06-19"
+lastupdated: "2020-07-20"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline
 
@@ -11,7 +11,6 @@ subcollection: ContinuousDelivery
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
@@ -42,7 +41,7 @@ You can define properties at both the pipeline level and the stage level. Pipeli
 
 Stages organize input and jobs as your code is built, deployed, and tested. Stages accept input from either source control repositories (SCM repositories) or build jobs in other stages. For SCM repositories, the input is the contents of a particular branch in the repository; for build jobs, the input is the artifacts that are produced by the job. When you create your first stage, the **INPUT** tab contains default settings.
 
-When a stage runs, the stage's input is passed to each of the jobs in the stage. Each job is given a clean container to run in. As a result, jobs within a stage cannot pass artifacts to each other. To pass artifacts between jobs, separate the jobs into two stages, and use the output from the job in the first stage as input to the second stage.
+When a stage runs, the stage’s input is passed to each of the jobs in the stage. Each job is given a clean container to run in. As a result, jobs within a stage cannot pass artifacts to each other. To pass artifacts within jobs, separate the jobs into two stages, and use the output from the job in the first stage as input to the second stage. Any build job can be passed as input to any other job in another stage. By default, the output is created in the `./` folder. If you don’t want output from a build job, configure a folder as output and don’t send any output to that folder.
 {: tip}
 
 Similar to how you can define pipeline properties, you can also define stage properties for use in all of the jobs in a particular stage. For example, you might define a `TEST_URL` property that passes a URL to the deploy and test jobs in a stage. The deploy job deploys to that URL and the test job tests the running app at the URL. Stage properties are also passed to job scripts by using environment variables. If the same property is defined at both the pipeline level and the stage level, the value of the stage property is used.
