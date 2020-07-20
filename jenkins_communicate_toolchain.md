@@ -11,7 +11,6 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:tip: .tip}
