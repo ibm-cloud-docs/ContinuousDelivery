@@ -10,7 +10,6 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:screen: .screen}
