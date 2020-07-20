@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-04"
+lastupdated: "2020-07-15"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Hashicorp Vault, Jenkins, JIRA, Key Protect, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
 
@@ -11,7 +11,6 @@ subcollection: ContinuousDelivery
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
@@ -169,6 +168,9 @@ To learn more about Artifactory, see the [Artifactory article](https://www.ibm.c
 
 ## Adding Availability Monitoring
 {: #availabilitymonitoring}
+
+The {{site.data.keyword.prf_hublong}} service is deprecated. As of 07 July 2020, customers with existing instances only of {{site.data.keyword.prf_hubshort}} can use this service until 30 September 2020. For more information about the retirement of the {{site.data.keyword.prf_hubshort}} service, see [{{site.data.keyword.prf_hublong}} Deprecation](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-availability-monitoring-deprecation){:external}.
+{: deprecated}
 
 {{site.data.keyword.prf_hublong}} isolates problems, identifies patterns, and improves performance before users are affected. You can test your app from locations around the world, integrate with delivery pipelines, and gain insights about how to continuously optimize your code.
 
