@@ -10,7 +10,6 @@ keywords: public isolation for IBM Cloud Continuous Delivery, compute isolation 
 
 {:shortdesc: .shortdesc}
 {:table: .aria-labeledby="caption"}
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 {:codeblock: .codeblock}
 {:pre: .pre}
