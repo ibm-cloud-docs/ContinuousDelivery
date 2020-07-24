@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2019-08-20"
+lastupdated: "2020-07-22"
 
 keywords: ADD STAGE, Run Stage icon, JOBS tab, Delivery Pipeline
 
@@ -85,7 +85,7 @@ You can deploy a previous build. On the stage that contains the build, click **V
 ### Adding services to apps
 {: #deliverypipeline_add_services}
 
-You can add services to your apps and manage those services from your {{site.data.keyword.Bluemix_notm}} dashboard or the Cloud Foundry command line interface (CLI). You can also issue Cloud Foundry CLI commands in scripts for pipeline jobs. For example, you can add a service to an app in the script of a deploy job. For more information about adding services, see [Connecting services to external apps](/docs/resources?topic=resources-externalapp).
+You can add services to your apps and manage those services from your {{site.data.keyword.Bluemix_notm}} dashboard or the Cloud Foundry command line interface (CLI). You can also issue Cloud Foundry CLI commands in scripts for pipeline jobs. For example, you can add a service to an app in the script of a deploy job. For more information about adding services, see [Connecting services to external apps](/docs/account?topic=account-externalapp).
 
 ## Viewing logs
 {: #deliverypipeline_view_logs}
