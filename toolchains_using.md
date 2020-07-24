@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-03-04"
+lastupdated: "2020-07-22"
 
 keywords: user management function, toolchains, tool integrations, user access, Cloud Foundry org
 
@@ -23,7 +23,7 @@ subcollection: ContinuousDelivery
 # Using toolchains
 {: #toolchains-using}
 
-Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain.
+Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.cloud}}. You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain.
 {: shortdesc}
 
 You can manage toolchains in the US South, US East, United Kingdom, Germany, and Tokyo Public regions by using resource groups. You can use Cloud Foundry organizations (orgs) to manage toolchains in the US South, United Kingdom, and Germany Public regions. Access control and authorized user management function differently for toolchains depending on whether they are contained in a resource group or a Cloud Foundry org.
@@ -53,7 +53,7 @@ If you deferred the configuration of a tool integration when you created a toolc
 ## Adding a tool integration
 {: #adding_a_tool_integration}
 
-You can add and configure tool integrations for your toolchain. The available tool integrations differ depending on whether you use {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated.
+You can add and configure tool integrations for your toolchain. The available tool integrations differ depending on whether you use {{site.data.keyword.cloud_notm}} Public or {{site.data.keyword.cloud_notm}} Dedicated.
 
 1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. To see a list of tool integrations to add, click **Add tool**.
@@ -97,7 +97,7 @@ You can add tags to your toolchains to organize them and easily find them later.
 1. Enter a name for the tag that you want to add to the toolchain. You can add multiple tags, which are separated by commas.
 1. Click **Save**.
 
-For more information about tags, see [Working with tags](/docs/resources?topic=resources-tag).
+For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
 
 
 ## Deleting a toolchain
