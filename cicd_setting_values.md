@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-07-22"
 
 keywords: devops insights, setting, values, cli, parameter values, consistent, other ci/cd tools, test, tests, install, app, risk
 
@@ -32,7 +32,7 @@ You can set consistent parameter values by using other continuous integration an
 
 Configure your CI/CD tool to build, test, and deploy. You must complete this step before you continue with the integration.
 
-You need an API key for access to the toolchain, and to log in by using the `ibmcloud` commandline interface (CLI). For more information about creating and managing API keys, see [Managing user API keys](/docs/services/iam?topic=iam-userapikey#userapikey).
+You need an API key for access to the toolchain, and to log in by using the `ibmcloud` commandline interface (CLI). For more information about creating and managing API keys, see [Managing user API keys](/docs/services/account?topic=account-userapikey).
 
 
 ## Exporting your toolchain ID
