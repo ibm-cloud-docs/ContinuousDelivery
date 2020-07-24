@@ -2,7 +2,7 @@
 
 copyright:
   years:  2019, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-07-22"
 
 keywords: Cloud Foundry org, user access, toolchains
 
@@ -29,7 +29,7 @@ You can grant users access to a toolchain by adding them to both the org that th
 You must add users to the toolchain's org in the region where the toolchain is hosted. If the toolchain is configured to deploy apps to a different region, it will still deploy apps to that region.
 {: important}
 
-If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, when you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, the users can log in to {{site.data.keyword.ghe_short}} by using their {{site.data.keyword.Bluemix_notm}} ID and password. When the users log in, accounts are created for them. When you add users to your {{site.data.keyword.Bluemix_notm}} org and spaces, they are not automatically added to the {{site.data.keyword.ghe_short}} repo. Someone who has admin privileges for the repo must add them. For more information, see [Using Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started). If you are using your own managed version of {{site.data.keyword.ghe_short}}, follow your internal procedures.
+If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, when you add users to your {{site.data.keyword.cloud_notm}} org and spaces, the users can log in to {{site.data.keyword.ghe_short}} by using their {{site.data.keyword.cloud_notm}} ID and password. When the users log in, accounts are created for them. When you add users to your {{site.data.keyword.cloud_notm}} org and spaces, they are not automatically added to the {{site.data.keyword.ghe_short}} repo. Someone who has admin privileges for the repo must add them. For more information, see [Using Dedicated GitHub Enterprise](/docs/services/ghededicated?topic=ghededicated-getting-started). If you are using your own managed version of {{site.data.keyword.ghe_short}}, follow your internal procedures.
 
 ## Tips for managing access to a toolchain
 
@@ -67,7 +67,7 @@ If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.ke
 
      * Assign a role for the selected space in the organization.
 
-     By default, org managers have full admin privileges for all of the toolchains that are associated with the org. To grant full admin privileges to the user, select the **Manager** role. The Billing Manager and Auditor roles do not affect toolchain access. You can change the roles later on the Team Directory page. For more information, see [Cloud Foundry roles](/docs/iam?topic=iam-cfaccess#cfaccess).
+     By default, org managers have full admin privileges for all of the toolchains that are associated with the org. To grant full admin privileges to the user, select the **Manager** role. The Billing Manager and Auditor roles do not affect toolchain access. You can change the roles later on the Team Directory page. For more information, see [Cloud Foundry roles](/docs/account?topic=account-cfaccess#cfaccess).
      {: tip}
 
-   After the user is a member of the org, return to the toolchain's Manage page and add the user to the toolchain.
+   After the user is a member of the org, return to the toolchain's Manage page and add the user to the toolchain.  
