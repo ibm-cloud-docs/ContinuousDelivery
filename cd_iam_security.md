@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-03-30"
+lastupdated: "2020-07-22"
 
 keywords: Administrator Create, Administrator Update, Editor Update, service access roles, IAM, access policies
 
@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 # Managing user access for Continuous Delivery in resource groups
 {: #cd-iam-security}
 
-Access to {{site.data.keyword.contdelivery_full}} service instances in resource groups for users in your account is controlled by {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). 
+Access to {{site.data.keyword.contdelivery_full}} service instances in resource groups for users in your account is controlled by {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). 
 
 User access for toolchains is managed separately. For more information about managing user access to toolchains in resource groups, see [Managing user access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
 {: tip}
@@ -53,7 +53,7 @@ The following table details actions that are mapped to platform management roles
 | Writer, Manager | Add and remove users from the Authorized Users list on the Manage tab within a {{site.data.keyword.contdelivery_short}} service instance. | <br>Add authorized user.</br><br>Remove authorized user.</br></ul>|
 {: caption="Table 2. IAM service access roles and actions" caption-side="top"}
 
-For information about assigning user roles in the UI, see [Managing IAM access](/docs/iam?topic=iam-iammanidaccser).
+For information about assigning user roles in the UI, see [Managing IAM access](/docs/account?topic=account-assign-access-resources).
  
 For {{site.data.keyword.contdelivery_short}}, the following actions exist:
 
