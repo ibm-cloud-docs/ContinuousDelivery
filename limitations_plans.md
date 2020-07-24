@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-06-04"
+lastupdated: "2020-07-23"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -23,12 +23,12 @@ subcollection: ContinuousDelivery
 {: help} 
 {: support}
 
-The use of {{site.data.keyword.contdelivery_full}} is limited to the building, deploying, testing, and ongoing operations of applications on the {{site.data.keyword.Bluemix_notm}} platform or other compatible platform-as-a-service or infrastructure-as-a-service offerings.
+The use of {{site.data.keyword.contdelivery_full}} is limited to the building, deploying, testing, and ongoing operations of applications on the {{site.data.keyword.cloud_notm}} platform or other compatible platform-as-a-service or infrastructure-as-a-service offerings.
 
 ## Scope of a service instance
 {: #service_scope}
 
-You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){:external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, {{site.data.keyword.DRA_short}}, and Eclipse Orion {{site.data.keyword.webide}} tool integrations. A service instance might belong to either a [resource group](/docs/services/resources?topic=resources-rgs) or to an {{site.data.keyword.Bluemix_notm}} organization (org). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group or org meters and governs your usage of all of the toolchains in the same region and resource group or org.
+You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){:external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, {{site.data.keyword.DRA_short}}, and Eclipse Orion {{site.data.keyword.webide}} tool integrations. A service instance might belong to either a [resource group](/docs/services/account?topic=account-rgs) or to an {{site.data.keyword.Bluemix_notm}} organization (org). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group or org meters and governs your usage of all of the toolchains in the same region and resource group or org.
 
 You can create *new* instances of the {{site.data.keyword.contdelivery_short}} service only in resource groups. If you are missing a {{site.data.keyword.contdelivery_short}} service for an org that contains toolchains, you can either create the toolchains again in a resource group or contact [IBM Support](https://cloud.ibm.com/unifiedsupport){:external} for help. The migration of toolchains from orgs to resource groups is not currently supported.
 
@@ -176,8 +176,8 @@ The acceptable usage behaviors include, but are not limited to, these behaviors:
 The usage behaviors that are not permitted include, but are not limited to, these behaviors:
 
 * The use of pipeline jobs or workers for general compute behaviors, such as Bitcoin mining, distributed denial-of-service attacks, and malicious or offensive behavior to other clients or users within the {{site.data.keyword.Bluemix_notm}} platform or general internet users.
-* The use in the normal development process for sites or services that promote hate speech, or other activities that violate the [IBM Business Conduct Guidelines](https://www.ibm.com/investor/governance/business-conduct-guidelines.html){:external}.
-* The use of event-generated behavior for malicious intrusion or attacks against {{site.data.keyword.Bluemix_notm}} or other sites.
+* The use in the normal development process for sites or services that promote hate speech, or other activities that violate the [IBM Business Conduct Guidelines](https://www.ibm.com/investor/att/pdf/BCG_accessible_2020.pdf){:external}.
+* The use of event-generated behavior for malicious intrusion or attacks against {{site.data.keyword.cloud_notm}} or other sites.
 
 At the discretion of IBM, users who violate the acceptable usage behaviors of the {{site.data.keyword.contdelivery_short}} services or the IBM Business Conduct Guidelines can be disabled without notice. At the discretion of IBM, some services can be restored if users correct their usage behaviors after they are notified of the offensive action. Otherwise, accounts can be suspended or terminated.
 
