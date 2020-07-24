@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-07-22"
 
 keywords: devops insights, devops, insights, toolchain, aggregate, test, tests, gate, gate failing, app
 
@@ -62,7 +62,7 @@ If you want to find the toolchain ID for Jenkins, select Jenkins from the toolch
 
 For example: `https://cloud.ibm.com/devops/insights/overview?toolchainid=99c643c3-23d9-4030-9b1f-3aadfd7f9d09`. The Toolchain ID is `99c643c3-23d9-4030-9b1f-3aadfd7f9d09`. 
 
-The `API_KEY` used in the script to log in to the {{site.data.keyword.Bluemix_notm}} must have access to the new toolchain_id that is being provided. For more information about creating and managing API keys, see [Managing user API keys](/docs/services/iam?topic=iam-userapikey#userapikey)  
+The `API_KEY` used in the script to log in to the {{site.data.keyword.Bluemix_notm}} must have access to the new toolchain_id that is being provided. For more information about creating and managing API keys, see [Managing user API keys](/docs/services/account?topic=account-userapikey)  
 
 
 ## Publishing records to a centralized target toolchain
