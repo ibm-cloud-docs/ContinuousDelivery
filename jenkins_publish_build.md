@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-04-20"
+lastupdated: "2020-07-22"
 
 keywords: devops insights, publish, build, record, jenkins, test, tests, app, dashboard
 
@@ -60,7 +60,7 @@ environment {
 ```
 {:codeblock}
 
-For more information about creating an API key, see [Managing user API keys](/docs/services/iam?topic=iam-userapikey#userapikey).
+For more information about creating an API key, see [Managing user API keys](/docs/services/account?topic=account-userapikey).
 
 For more information about your toolchain ID, see [Identifying your toolchain ID](/docs/ContinuousDelivery?topic=ContinuousDelivery-aggregating-multiple-sources). 
 
