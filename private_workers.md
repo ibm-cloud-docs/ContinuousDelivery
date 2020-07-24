@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2019-12-05"
+lastupdated: "2020-07-22"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -124,7 +124,7 @@ After you set up your private worker, you can update the credentials that are us
 ### Creating a service ID
 {: #create_service_id}
 
-A service ID identifies a service or an application in the same way that a user ID identifies a user. You can use a service ID to enable an application outside of {{site.data.keyword.cloud}} to access your {{site.data.keyword.cloud}} service. For more information about service IDs, see [Creating and working with service IDs](/docs/iam?topic=iam-serviceids).
+A service ID identifies a service or an application in the same way that a user ID identifies a user. You can use a service ID to enable an application outside of {{site.data.keyword.cloud}} to access your {{site.data.keyword.cloud}} service. For more information about service IDs, see [Creating and working with service IDs](/docs/account?topic=account-serviceids).
 
 Complete the following steps to create a service ID:
 
@@ -140,7 +140,7 @@ Complete the following steps to create a service ID:
 ### Updating the API key
 {: #update_api_key}
 
-An API key is a unique code that is passed to an API to identify the application or user that is calling it. To prevent malicious use of an API, you can use API keys to track and control how that API is used. For more information about API keys, see [Understanding API keys](/docs/iam?topic=iam-manapikey).
+An API key is a unique code that is passed to an API to identify the application or user that is calling it. To prevent malicious use of an API, you can use API keys to track and control how that API is used. For more information about API keys, see [Understanding API keys](/docs/account?topic=account-manapikey).
 
 Complete the following steps to update the API key for use with the {{site.data.keyword.deliverypipeline}} Private Worker tool integration:
 
@@ -149,7 +149,7 @@ Complete the following steps to update the API key for use with the {{site.data.
 1. Specify your new API key. 
 1. Click **Save Integration**.
 
-You can revoke access to a private worker by deleting the corresponding API key. Due to caching policies and invalidation, it might take up to 60 minutes for a deleted API key to prevent jobs from running. For more information about deleting an API key, see [Deleting an API key for a service ID](/docs/iam?topic=iam-serviceidapikeys#delete_service_key).
+You can revoke access to a private worker by deleting the corresponding API key. Due to caching policies and invalidation, it might take up to 60 minutes for a deleted API key to prevent jobs from running. For more information about deleting an API key, see [Deleting an API key for a service ID](/docs/account?topic=account-serviceidapikeys#delete_service_key).
 {: tip}
 
 ## Deleting a {{site.data.keyword.deliverypipeline}} Private Worker
