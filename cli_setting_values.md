@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-04"
+lastupdated: "2020-07-22"
 
 keywords: devops insights, setting, values, cli, parameter values, consistent, test, tests, install, app, dashboard, risk, build.properties
 
@@ -32,7 +32,7 @@ As part of integrating {{site.data.keyword.deliverypipelinelong}} with {{site.da
 
 Configure {{site.data.keyword.deliverypipeline}} in your toolchain to build, test, and deploy. You must complete this step before you continue with the integration. For more information, see [Configuring {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline).
 
-You need an API key to integrate with {{site.data.keyword.DRA_short}}. This API key has access to the toolchain, and is used to log in with the {{site.data.keyword.Bluemix}} command line interface (CLI). For more information, see [Managing user API keys](/docs/services/iam?topic=iam-userapikey#userapikey).
+You need an API key to integrate with {{site.data.keyword.DRA_short}}. This API key has access to the toolchain, and is used to log in with the {{site.data.keyword.Bluemix}} command line interface (CLI). For more information, see [Managing user API keys](/docs/services/account?topic=account-userapikey).
 
 Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI and {{site.data.keyword.dev_cli_short}}](/docs/cli?topic=cli-getting-started).
 
