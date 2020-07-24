@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-07-22"
 
 keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 
 User access for toolchains in Cloud Foundry orgs is managed differently than user access to toolchains in resource groups. For more information about managing user access to toolchains in Cloud Foundry orgs, see [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-cf-security).
 
-Toolchains that you create in your account might not be visible to other users by default. Access to toolchains in resource groups for users in your account is controlled by [{{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)](/docs/services/iam?topic=iam-iamoverview). You can assign access to [new users](#toolchains-access-new-users) and [existing users](#toolchains-access-existing-users) in your account.
+Toolchains that you create in your account might not be visible to other users by default. Access to toolchains in resource groups for users in your account is controlled by [{{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)](/docs/services/account?topic=account-iamoverview). You can assign access to [new users](#toolchains-access-new-users) and [existing users](#toolchains-access-existing-users) in your account.
 
 User access for {{site.data.keyword.contdelivery_short}} service instances is managed separately. For more information about managing user access to {{site.data.keyword.contdelivery_short}} service instances in resource groups, see [Managing user access to {{site.data.keyword.contdelivery_short}} with Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security).
 {: tip}
@@ -107,5 +107,5 @@ You can assign an existing user access to a toolchain in your resource group.
 
 Depending on their role, the user can now work with all of the toolchains within the specified resource group. They can add tool integrations, modify and run pipelines, and use the Eclipse Orion {{site.data.keyword.webide}}.
 
-Although the most common and flexible methods for granting user access are described here, IAM supports other methods, such as by resource or resource type, or by resource group. For more information about how to assign users access to resources, such as toolchains, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser).
+Although the most common and flexible methods for granting user access are described here, IAM supports other methods, such as by resource or resource type, or by resource group. For more information about how to assign users access to resources, such as toolchains, see [Managing access to resources](/docs/account?topic=account-assign-access-resources).
 {: tip}
