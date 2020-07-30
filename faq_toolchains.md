@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-27"
+lastupdated: "2020-07-29"
 
 keywords: tool integrations, error message, Lite plan, toolchains, Cloud Foundry orgs, resource groups, IBM Cloud
 
@@ -46,6 +46,38 @@ Get answers to frequently asked questions about using toolchains.
 {: support}
 
 The terms of the plan for the {{site.data.keyword.contdelivery_short}} service instance that is in the same resource group or org as the toolchain manages the use of some of the tool integrations ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}}, and {{site.data.keyword.gitrepos}}) that are contained in the service. The error message indicates that the resource group or org doesn't contain the required instance of the {{site.data.keyword.contdelivery_short}} service. For more information about the terms of your plan, see [Plan limitations and usage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
+
+
+## Can I create a toolchain instance from a template programmatically?
+{: #toolchain_create_prog}
+{: faq}
+{: support}
+
+You can directly call the toolchain creation page endpoint to pass all of the parameter values. For more information about these parameters, see [Toolchain Creation Page Parameters](https://github.com/open-toolchain/sdk/wiki/Toolchain-Creation-page-parameters){: external}.
+
+
+## Do I need a separate toolchain instance for each piece of work that my team owns?
+{: #toolchain_separate_instance}
+{: faq}
+{: support}
+
+You can define multiple pipelines within a single toolchain. However, if these pieces of work are unrelated and only share a definition repo, you can create them in separate toolchains so that you can administer them separately.
+
+
+## Can I create a toolchain template and then use it to create a toolchain for each piece of work that my team owns?
+{: #toolchain_template_create}
+{: faq}
+{: support}
+
+Creating a custom template is more work, but it ensures that all of your toolchains have the same structure. By using a template, you can quickly add toolchains in the future. If you’re creating only a few toolchains and a standard template exists that is similar to what you need, use that template and customize your toolchains after they are created.
+
+
+## I created a toolchain template that specified a particular tag and then created toolchains from that template. If I edit my template to change the tag are my toolchains updated with that tag?
+{: #toolchain_template_tag}
+{: faq}
+{: support}
+
+Because the template doesn't link to the toolchains that were created from it, toolchains that were created from the original template are not updated with the new tag. 
 
 
 ## I updated information for a toolchain from a Cloud Foundry org, why don't I see my changes in the toolchain?
