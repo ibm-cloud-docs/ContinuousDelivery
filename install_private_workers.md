@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-07-30"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -122,7 +122,7 @@ Where `{REGION}` is the location of the toolchain's pipeline. You can specify an
 * us-south (Dallas, US)
 * us-east (Washington DC, US)
 
-The following code snippet shows an example of a private worker installation in the Germany region:
+The following code snippet shows an example of a private worker installation in the Frankfurt region:
 
 ```
 $ kubectl apply --filename https://private-worker-service.eu-de.devops.cloud.ibm.com/install  
@@ -192,7 +192,7 @@ A service ID represents a pool of one or more private workers that act together.
 #### Creating a service ID in the console
 {: #console_create_service_id}
 
-1. Log in to [{{site.data.keyword.Bluemix_notm}}](http://cloud.ibm.com){:external}.
+1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
 2. Go to [https://cloud.ibm.com/iam/serviceids](https://cloud.ibm.com/iam/serviceids){:external}.
 3. Click **Create**.
 4. Enter a name and description for the service ID. If you are creating a service ID for a pool of private workers, specify the name of the private workers pool, for example: **Pipeline Private Workers for Acme**.
@@ -202,7 +202,7 @@ A service ID represents a pool of one or more private workers that act together.
 #### Creating a service ID by using the CLI
 {: #cli_create_service_id}
 
-From the {{site.data.keyword.Bluemix_notm}} CLI, type the following command:
+From the {{site.data.keyword.cloud_notm}} CLI, type the following command:
 
 ```
 $ ibmcloud iam service-id-create **{worker-pool-name}** -d "**{worker-pool-description}**"
@@ -228,7 +228,7 @@ An API key is a unique code that is passed to an API to identify the application
 #### Creating an API key in the console
 {: #console_create_key}
 
-1. Log in to [{{site.data.keyword.Bluemix_notm}}](http://cloud.ibm.com){:external}.
+1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
 2. Go to [https://cloud.ibm.com/iam/serviceids](https://cloud.ibm.com/iam/serviceids){:external}.
 3. Select the Service ID that you want to create an API for.
 4. In the **API keys** tab, click **Create**.
@@ -239,7 +239,7 @@ An API key is a unique code that is passed to an API to identify the application
 #### Creating an API key by using the CLI
 {: #cli_create_key}
 
-From the {{site.data.keyword.Bluemix_notm}} CLI, type the following command:
+From the {{site.data.keyword.cloud_notm}} CLI, type the following command:
 
 ```
 $ ibmcloud iam service-api-key-create **{worker-api-key-name}** (**SERVICE\_ID\_NAME**|SERVICE\_ID\_UUID) \[-d, --description **DESCRIPTION**\] \[--file **FILE**\]
@@ -261,18 +261,18 @@ UUID           ApiKey-c1ee0fb5-90f2-476e-a260-a796e6d7f5f7
 
 ```
 
-### Registering the private worker with {{site.data.keyword.Bluemix_notm}}
+### Registering the private worker with {{site.data.keyword.cloud_notm}}
 {: #pw_register_cloud}
 
 To use the registration commands, you must be logged in to the Kubernetes cluster (with kubectl) into which you previously installed a private worker.
 {: tip}
 
-You must register a private worker with the specific {{site.data.keyword.Bluemix_notm}} region that corresponds to the location of the delivery pipelines that you want to enable.
+You must register a private worker with the specific {{site.data.keyword.cloud_notm}} region that corresponds to the location of the delivery pipelines that you want to enable.
 
 1. Go to `https://private-worker-service.{REGION}.devops.cloud.ibm.com`, where `{REGION}` is the location of the toolchain's pipeline. You can specify any of the following values for the region:
 
  * eu-de (Frankfurt, Germany)
- * eu-gb  (London), United Kingdom
+ * eu-gb  (London, United Kingdom)
  * jp-tok (Tokyo, Japan)
  * us-south (Dallas, US)
  * us-east (Washington DC, US)
