@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2019-08-20"
+lastupdated: "2020-07-20"
 
 keywords: IBM Cloud button, yml file, build file, toolchains
 
@@ -19,16 +19,16 @@ subcollection: ContinuousDelivery
 {:download: .download}
 
 
-# Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button {: #deploy-button}
+# Creating a Deploy to {{site.data.keyword.cloud_notm}} button {: #deploy-button}
 
-The Deploy to {{site.data.keyword.Bluemix_notm}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to {{site.data.keyword.Bluemix_notm}} by using a toolchain. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository (repo) so that your original app remains unaffected.  
+The Deploy to {{site.data.keyword.cloud_notm}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to {{site.data.keyword.cloud_notm}} by using a toolchain. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository (repo) so that your original app remains unaffected.  
 {: shortdesc}
 
 When someone clicks your button, these actions occur:
 
-1. If the person does not have an active {{site.data.keyword.Bluemix_notm}} account, they must create an account. They can create a trial account or a real account.
+1. If the person does not have an active {{site.data.keyword.cloud_notm}} account, they must create an account. They can create a trial account or a real account.
 
-2. The person can select a region, resource group (available in the US South, US East, United Kingdom, Germany, and Tokyo regions) or organization and space (available in the US South, United Kingdom, and Germany regions), and app name by clicking the {{site.data.keyword.deliverypipeline}} icon. The suggested app name is the same as the toolchain name, which is constructed from the name of your original Git repo and the time. The toolchain name can also be edited.
+2. The person can select a region, resource group (available in the Dallas, Washington, London, Frankfurt, and Tokyo regions) or organization and space (available in the Dallas, London, and Frankfurt regions), and app name by clicking the {{site.data.keyword.deliverypipeline}} icon. The suggested app name is the same as the toolchain name, which is constructed from the name of your original Git repo and the time. The toolchain name can also be edited.
 
 3. A toolchain is created that includes a new private clone of your Git repo, a pipeline for building and deploying code changes, the Eclipse Orion {{site.data.keyword.webide}} for editing code on the Cloud, and an issue tracker.
 
@@ -41,7 +41,7 @@ When someone clicks your button, these actions occur:
 
 6. If the app requires a container, a `pipeline.yml` file that defines the {{site.data.keyword.containerlong_notm}} and a Dockerfile that defines an image are used to deploy the app in the {{site.data.keyword.containerlong_notm}}.
 
-7. The app is deployed to the {{site.data.keyword.Bluemix_notm}} organization that the person selected.
+7. The app is deployed to the {{site.data.keyword.cloud_notm}} organization that the person selected.
 
 ## Examples of the button {: #button-examples}
 
@@ -55,7 +55,7 @@ See an app button example for a public GitHub repo:
 
 ## Creating a button {: #create-button}
 
-To create a Deploy to {{site.data.keyword.Bluemix_notm}} button, copy and modify one of the following snippet templates. Specify a Git repository and branch in the URL.
+To create a Deploy to {{site.data.keyword.cloud_notm}} button, copy and modify one of the following snippet templates. Specify a Git repository and branch in the URL.
 
 ### Creating a button in HTML
 
@@ -77,13 +77,13 @@ To create a button in Markdown, copy this snippet and insert a public Git reposi
 ```
 {: codeblock}
 
-If you don't include the `branch` parameter in your snippet's repository URL, the Deploy to {{site.data.keyword.Bluemix_notm}} button defaults to the repository's master branch.
+If you don't include the `branch` parameter in your snippet's repository URL, the Deploy to {{site.data.keyword.cloud_notm}} button defaults to the repository's master branch.
 
 ### Using the button snippets {: #button-snippet}
 
-After you create a Deploy to {{site.data.keyword.Bluemix_notm}} button snippet, you can insert it into blogs, articles, wikis, readme files, or anywhere else you want to promote your app.
+After you create a Deploy to {{site.data.keyword.cloud_notm}} button snippet, you can insert it into blogs, articles, wikis, readme files, or anywhere else you want to promote your app.
 
-When you customize the snippet for your Deploy to {{site.data.keyword.Bluemix_notm}} button, consider that both of the templates use a default path to an external button image in PNG format and in English.
+When you customize the snippet for your Deploy to {{site.data.keyword.cloud_notm}} button, consider that both of the templates use a default path to an external button image in PNG format and in English.
 
 * If you prefer to use an SVG image for the button instead of a PNG, change the path to the button image that is used in the snippet to `https://cloud.ibm.com/devops/setup/deploy/button.svg`.
 
@@ -93,7 +93,7 @@ When you customize the snippet for your Deploy to {{site.data.keyword.Bluemix_no
 
 ## Repository considerations {: #button-repo}
 
-Review these considerations for the repo that you use in your Deploy to {{site.data.keyword.Bluemix_notm}} button.
+Review these considerations for the repo that you use in your Deploy to {{site.data.keyword.cloud_notm}} button.
 
 
 ### Build file requirements
