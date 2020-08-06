@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-15"
+lastupdated: "2020-08-06"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Hashicorp Vault, Jenkins, JIRA, Key Protect, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
 
@@ -31,29 +31,29 @@ The tool integrations that are available to add and configure for your toolchain
 
 |Tool Integration |Available on {{site.data.keyword.cloud_notm}} Public	|Available on {{site.data.keyword.cloud_notm}} Dedicated (Environment Dependent)|
 |:----------|:------------------------------|:------------------|
-|Artifactory		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
-|Availability Monitoring		|US South		|No		|
-|Bitbucket		|US South, US East, Germany, Tokyo, United Kingdom		|No		|
-|Cloud Event Management		|US South		|No		|
-|{{site.data.keyword.deliverypipeline}} 		|US South, US East, Germany, Tokyo, United Kingdom	   	|Yes  		|
-|{{site.data.keyword.deliverypipeline}} Private Worker			|US South, US East, Germany, Tokyo, United Kingdom		|No		|
-|{{site.data.keyword.DRA_short}} 		|US South, Germany, United Kingdom		|No			|
-|Eclipse Orion {{site.data.keyword.webide}}		|US South, US East, Germany, Tokyo, United Kingdom		|Yes			|
-|{{site.data.keyword.gitrepos}}	|US South, US East, Germany, Tokyo, United Kingdom		|No		|
-|GitHub		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
+|Artifactory		|Dallas, Washington, Frankfurt, Tokyo, London		|Yes		|
+|Availability Monitoring		|Dallas		|No		|
+|Bitbucket		|Dallas, Washington, Frankfurt, Tokyo, London		|No		|
+|Cloud Event Management		|Dallas		|No		|
+|{{site.data.keyword.deliverypipeline}} 		|Dallas, Washington, Frankfurt, Tokyo, London	   	|Yes  		|
+|{{site.data.keyword.deliverypipeline}} Private Worker			|Dallas, Washington, Frankfurt, Tokyo, London		|No		|
+|{{site.data.keyword.DRA_short}} 		|Dallas, Frankfurt, London		|No			|
+|Eclipse Orion {{site.data.keyword.webide}}		|Dallas, Washington, Frankfurt, Tokyo, London		|Yes			|
+|{{site.data.keyword.gitrepos}}	|Dallas, Washington, Frankfurt, Tokyo, London		|No		|
+|GitHub		|Dallas, Washington, Frankfurt, Tokyo, London		|Yes		|
 |Dedicated {{site.data.keyword.ghe_short}} and Issues			|No		|Yes		|
-|GitLab		|US South, US East, Germany, Tokyo, United Kingdom		|No		|
-|HashiCorp Vault		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
-|Jenkins		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
-|JIRA		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
-|{{site.data.keyword.keymanagementserviceshort}}		|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
-|Nexus			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
-|Other Tool			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
-|PagerDuty			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
-|Rational Team Concert			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
-|Sauce Labs		|US South, US East, Germany, Tokyo, United Kingdom		|No		|
-|Slack			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
-|SonarQube			|US South, US East, Germany, Tokyo, United Kingdom		|Yes		|
+|GitLab		|Dallas, Washington, Frankfurt, Tokyo, London		|No		|
+|HashiCorp Vault		|Dallas, Washington, Frankfurt, Tokyo, London		|Yes		|
+|Jenkins		|Dallas, Washington, Frankfurt, Tokyo, London		|Yes		|
+|JIRA		|Dallas, Washington, Frankfurt, Tokyo, London		|Yes		|
+|{{site.data.keyword.keymanagementserviceshort}}		|Dallas, Washington, Frankfurt, Tokyo, London		|Yes		|
+|Nexus			|Dallas, Washington, Frankfurt, Tokyo, London		|Yes		|
+|Other Tool			|Dallas, Washington, Frankfurt, Tokyo, London		|Yes		|
+|PagerDuty			|Dallas, Washington, Frankfurt, Tokyo, London		|Yes		|
+|Rational Team Concert			|Dallas, Washington, Frankfurt, Tokyo, London		|Yes		|
+|Sauce Labs		|Dallas, Washington, Frankfurt, Tokyo, London		|No		|
+|Slack			|Dallas, Washington, Frankfurt, Tokyo, London		|Yes		|
+|SonarQube			|Dallas, Washington, Frankfurt, Tokyo, London		|Yes		|
 {: caption="Table 1. Tool integrations available for toolchains on {{site.data.keyword.cloud_notm}} Public and Dedicated" caption-side="top"}
 
 If you want to start developing with your source code on {{site.data.keyword.cloud_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.cloud_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
@@ -269,13 +269,8 @@ To help your DevOps team achieve reliable operational health, service quality, a
  b. In the Tool Integrations section, click **Cloud Event Management**.
 
 1. Click **Create Integration**.
-1. From your toolchain, click any of the following tool cards:
+1. From your toolchain, click the **Event Management** tool card to create policies that determine when users receive incident notifications.
 
- * **Cloud Event Management** to get started with Cloud Event Management.
-
- * **{{site.data.keyword.alertnotificationshort}}** to create policies that determine when users receive incident notifications.
-
- * **Runbook Automation** to manage your catalog of runbooks in Cloud Event Management.
 
 ### Learn more about Cloud Event Management
 
