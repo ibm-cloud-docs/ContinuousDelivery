@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-04-03"
+lastupdated: "2020-07-16"
 
 keywords: public isolation for IBM Cloud Continuous Delivery, compute isolation for Continuous Delivery, Continuous Delivery architecture, workload isolation in Continuous Delivery
 
@@ -41,14 +41,9 @@ The following table lists the major components of the {{site.data.keyword.contde
 | {{site.data.keyword.deliverypipeline}} private workers | You | Each pipeline job or step runs in isolation, in its own container on worker nodes that you manage, supported by network and storage that you define or manage. |
 {: caption="Table 1. Service component management" caption-side="top"}
 
-{{site.data.keyword.deliverypipeline}} jobs and steps run directly within containers on shared (IBM-managed) or private (customer-managed) Kubernetes worker nodes. All other components of the {{site.data.keyword.contdelivery_short}} service are deployed as microservices within IBM-managed Kubernetes clusters. These components are logically partitioned across a set of clusters. Except for {{site.data.keyword.DRA_short}}, each set of clusters is replicated across three zones in each region in which the {{site.data.keyword.contdelivery_short}} service is available. {{site.data.keyword.DRA_short}} runs in a single multi-zone cluster in each region.
+{{site.data.keyword.deliverypipeline}} jobs and steps run directly within containers on shared (IBM-managed) or private (customer-managed) Kubernetes worker nodes. All other components of the {{site.data.keyword.contdelivery_short}} service are deployed as microservices within IBM-managed Kubernetes clusters. These components are logically partitioned across a set of clusters. Each set of clusters is replicated across three zones in each region in which the {{site.data.keyword.contdelivery_short}} service is available.
 
-The following diagram shows how the {{site.data.keyword.contdelivery_short}} service components are organized into clusters by using visual indicators for each element.
-
-* Bold outline represents the IBM-managed cluster that is a multi-zone region cluster that runs {{site.data.keyword.DRA_short}} within a specific region
-* All other IBM-managed components run within three single-zone clusters per region, with each cluster hosted within a distinct data center in the region.
-
- ![Continuous Delivery clusters](images/cd-cluster-arch.png)
+ ![Continuous Delivery clusters](images/cd_cluster_arch.png)
  
 For more information about availability, see [High availability and disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-ha-dr).
  
