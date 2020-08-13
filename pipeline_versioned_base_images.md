@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019, 2020
-lastupdated: "2020-05-21"
+lastupdated: "2020-07-27"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -23,7 +23,7 @@ subcollection: ContinuousDelivery
 # Working with versioned base images
 {: #pipeline_versioned_base_images}
 
-When you develop applications for {{site.data.keyword.Bluemix_notm}}, you can use versioned base images to run pipeline jobs to make sure that you are using the current tools, libraries, and runtimes. Versioned base images help you to make sure that the bits that make up the application, and the environment that you deploy the application to, are consistent. You can control when the tools, libraries, or runtimes for your application change and update them when it makes sense during the development cycle.
+When you develop applications for {{site.data.keyword.cloud_notm}}, you can use versioned base images to run pipeline jobs to make sure that you are using the current tools, libraries, and runtimes. Versioned base images help you to make sure that the bits that make up the application, and the environment that you deploy the application to, are consistent. You can control when the tools, libraries, or runtimes for your application change and update them when it makes sense during the development cycle.
 
 As of 16 March 2020, the {{site.data.keyword.containerlong}} is releasing a new version 1.0 of the {{site.data.keyword.cloud_notm}} CLI plug-in. Because this version is not 100% compatible with earlier versions, you must upgrade your scripts after you start to use this version. For more information about this new version of the {{site.data.keyword.cloud_notm}} CLI plug-in, see [Big changes are coming to the {{site.data.keyword.containerlong_notm}} CLI plugin to change your experience for the better](https://www.ibm.com/cloud/blog/announcements/boost-your-productivity-with-a-new-cli-experience-for-the-ibm-cloud-kubernetes-service){: external}. To maintain compatibility with the current {{site.data.keyword.containerlong_notm}} runtimes after the new version 1.0 is available, {{site.data.keyword.contdelivery_short}} will update the current base image for the {{site.data.keyword.deliverypipeline}} to include this version. For production workloads, set any of your pipelines that are using the current base image to instead use version 2.6 until you can update your scripts to work with the new version.
 {: important}
@@ -51,6 +51,7 @@ Starting with version 2.2, images are available on [DockerHub](https://hub.docke
 
 | Base image version | DockerHub image version |
 |:-----------------|:-----------------|
+| 2.8 | `ibmcom/pipeline-base-image:2.8`|
 | 2.7 | `ibmcom/pipeline-base-image:2.7`| 
 | 2.6 | `ibmcom/pipeline-base-image:2.6`| 
 | 2.5 | `ibmcom/pipeline-base-image:2.5`|
@@ -68,6 +69,103 @@ The following available image versions are listed in descending order, starting 
  
  The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
  {: tip}
+ 
+ ### Version 2.8
+ {: #version_2_8}
+
+To view the contents of version 2.8, from the running image, type `default_versions.sh`. This image includes the following tools:
+
+```
+	# node --version
+	v12.18.2
+
+	# npm --version
+	6.14.7
+
+	# jq --version
+	jq-1.6
+
+	# yq --version
+	yq version 2.4.1
+
+	# kubectl version --client
+	Client Version: version.Info{Major:"1", Minor:"17", GitVersion:"v1.17.5", GitCommit:"e0fccafd69541e3750d460ba0f9743b90336f24f", GitTreeState:"clean", BuildDate:"2020-04-16T11:44:03Z", GoVersion:"go1.13.9", Compiler:"gc", Platform:"linux/amd64"}
+
+	# helm version --client
+	Client: &version.Version{SemVer:"v2.16.9", GitCommit:"8ad7037828e5a0fca1009dabe290130da6368e39", GitTreeState:"clean"}
+
+	# helm3 version --client
+	version.BuildInfo{Version:"v3.2.4", GitCommit:"0ad800ef43d3b826f31a5ad8dfbb4fe05d143688", GitTreeState:"clean", GoVersion:"go1.13.12"}
+
+	# ibmcloud -version
+	ibmcloud version 1.1.0+cc908fe-2020-04-29T04:06:12+00:00
+
+	# ibmcloud plugin list
+	Listing installed plug-ins...
+
+	Plugin Name                            Version   Status   
+	cloud-functions/wsk/functions/fn       1.0.44       
+	cloud-internet-services                1.9.9        
+	container-registry                     0.1.482      
+	container-service/kubernetes-service   1.0.118      
+	doi                                    0.2.5        
+	schematics                             1.4.17       
+
+
+	# ibmcloud dev --version
+	ibmcloud dev version 2.4.8
+
+	# java -version
+	openjdk version "11.0.7" 2020-04-14
+	OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.7+10)
+	Eclipse OpenJ9 VM AdoptOpenJDK (build openj9-0.20.0, JRE 11 Linux amd64-64-Bit Compressed References 20200416_574 (JIT enabled, AOT enabled)
+	OpenJ9   - 05fa2d361
+	OMR      - d4365f371
+	JCL      - 838028fc9d based on jdk-11.0.7+10)
+
+	# ant -version
+	Apache Ant(TM) version 1.10.8 compiled on May 10 2020
+
+	# mvn -version
+	Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+	Maven home: /opt/IBM/maven
+	Java version: 11.0.7, vendor: Eclipse OpenJ9, runtime: /usr/local/openjdk-11
+	Default locale: c.u_US, platform encoding: UTF-8
+	OS name: "linux", version: "4.19.76-linuxkit", arch: "amd64", family: "unix"
+
+	# gradle -version
+
+	Welcome to Gradle 6.5.1!
+
+	Here are the highlights of this release:
+	 - Experimental file-system watching
+	 - Improved version ordering
+	 - New samples
+
+	For more details see https://docs.gradle.org/6.5.1/release-notes.html
+
+
+	------------------------------------------------------------
+	Gradle 6.5.1
+	------------------------------------------------------------
+
+	Build time:   2020-06-30 06:32:47 UTC
+	Revision:     66bc713f7169626a7f0134bf452abde51550ea0a
+
+	Kotlin:       1.3.72
+	Groovy:       2.5.11
+	Ant:          Apache Ant(TM) version 1.10.7 compiled on September 1 2019
+	JVM:          11.0.7 (Eclipse OpenJ9 openj9-0.20.0)
+	OS:           Linux 4.19.76-linuxkit amd64
+
+
+	# oc version
+	oc v3.11.0+0cbc58b
+	kubernetes v1.11.0+d4cacc0
+	features: Basic-Auth GSSAPI Kerberos SPNEGO
+
+  ```
+ {: codeblock}
  
  ### Version 2.7
  {: #version_2_7}
