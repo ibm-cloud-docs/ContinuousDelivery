@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-30"
+lastupdated: "2020-08-17"
 
 keywords: user management function, toolchains, tool integrations, user access, Cloud Foundry org
 
@@ -34,7 +34,8 @@ You can manage toolchains in the Dallas, Washington, London, Frankfurt, and Toky
 
 If you deferred the configuration of a tool integration when you created a toolchain, a **Configure** button is shown on its card. If you configured a tool integration when you created a toolchain, you can update the configuration settings.
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. 
+1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. If you need to configure a tool integration for the first time, on its card, click **Configure**.
 
   <img src="images/toolchain_tile_configure.png" alt="Configure button" width="167" style="width:167px; border-style: none"/>
@@ -55,7 +56,8 @@ If you deferred the configuration of a tool integration when you created a toolc
 
 You can add and configure tool integrations for your toolchain. The available tool integrations differ depending on whether you use {{site.data.keyword.cloud_notm}} Public or {{site.data.keyword.cloud_notm}} Dedicated.
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. To see a list of tool integrations to add, click **Add tool**.
 1. Click a tool integration that you want to add.
 1. Enter any required information to configure the tool integration.
@@ -66,7 +68,8 @@ You can add and configure tool integrations for your toolchain. The available to
 
 If you delete a tool integration from your toolchain, the deletion cannot be undone.
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. 
+1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. On the card for the tool integration that you want to delete, click the menu to access the configuration options.
 1. To delete the tool integration from your toolchain, click **Delete**.
 1. Confirm by clicking **Delete**.  
@@ -76,7 +79,8 @@ If you delete a tool integration from your toolchain, the deletion cannot be und
 
 You can view your toolchain's connections to Cloud Foundry apps, Kubernetes clusters, and services.
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. 
+1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. Select the **Connections** tab, and select the app, cluster, or service that you want to view.
 
 ## Managing access to toolchains
@@ -93,7 +97,8 @@ Users with access to toolchains might be counted as authorized users of the {{si
 
 You can add tags to your toolchains to organize them and easily find them later. A tag is a label that you assign to a toolchain for easy filtering of toolchains in your toolchains list.
 
-1. On the DevOps dashboard, on the **Toolchains** page, locate the toolchain that you want to add a tag to and click **Add tags**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. 
+1. On the Toolchains page, locate the toolchain that you want to add a tag to and click **Add tags**.
 1. Enter a name for the tag that you want to add to the toolchain. You can add multiple tags, which are separated by commas.
 1. Click **Save**.
 
@@ -105,7 +110,8 @@ For more information about tags, see [Working with tags](/docs/account?topic=acc
 
 You can delete a toolchain. When you delete a toolchain, the deletion cannot be undone.
 
-1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. 
+1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. Click the **Actions** menu and select **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.  
 
