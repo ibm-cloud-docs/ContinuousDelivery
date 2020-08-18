@@ -2,7 +2,7 @@
 
 copyright:
   years:  2019, 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-08-17"
 
 keywords: Cloud Foundry org, user access, toolchains
 
@@ -33,7 +33,7 @@ If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.ke
 
 ## Tips for managing access to a toolchain
 
-* To manage toolchain access, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to manage and then click **Manage**. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain** and then click **Manage**.
+* To manage toolchain access, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain to manage and then click **Manage**. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain** and then click **Manage**.
 
 * To grant access to all of the members of the toolchain's org, click **Add org**. All of the members of that org can view the toolchain.
 
