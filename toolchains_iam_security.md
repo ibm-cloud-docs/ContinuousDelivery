@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-08-17"
 
 keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 
 User access for toolchains in Cloud Foundry orgs is managed differently than user access to toolchains in resource groups. For more information about managing user access to toolchains in Cloud Foundry orgs, see [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-cf-security).
 
-Toolchains that you create in your account might not be visible to other users by default. Access to toolchains in resource groups for users in your account is controlled by [{{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)](/docs/services/account?topic=account-iamoverview). You can assign access to [new users](#toolchains-access-new-users) and [existing users](#toolchains-access-existing-users) in your account.
+Toolchains that you create in your account might not be visible to other users by default. Access to toolchains in resource groups for users in your account is controlled by [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](/docs/services/account?topic=account-iamoverview). You can assign access to [new users](#toolchains-access-new-users) and [existing users](#toolchains-access-existing-users) in your account.
 
 User access for {{site.data.keyword.contdelivery_short}} service instances is managed separately. For more information about managing user access to {{site.data.keyword.contdelivery_short}} service instances in resource groups, see [Managing user access to {{site.data.keyword.contdelivery_short}} with Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-iam-security).
 {: tip}
@@ -52,7 +52,7 @@ The following table lists the IAM user roles and the available toolchain actions
 | Platform Management Role | Description of Actions | Example Actions|
 |:-----------------|:-----------------|:-----------------|
 | Viewer, Operator | View toolchains and delivery pipelines. Run delivery pipelines. | <ul><li>Click a toolchain to open its Overview page.</li><li>Click the **Run Stage** icon of the stage that your pipeline job is in.</li></ul> |
-| Editor, Administrator | Create, view, update, and delete toolchains and delivery pipelines. |<ul><li>On the DevOps dashboard, on the Toolchains page, click **Create a Toolchain**.</li><li>On the DevOps dashboard, on the Toolchains page, click the toolchain to delete. Click the **Actions** menu, then select **Delete**.</li><li>On the DevOps dashboard, on the Toolchains page, click the toolchain to open its Overview page. Click **Add tool**, and then select the tool integration that you want to add.</li><li>On the DevOps dashboard, on the Pipeline page, click the **Stage Configuration** icon, and then click **Configure Stage**.</li></ul> |
+| Editor, Administrator | Create, view, update, and delete toolchains and delivery pipelines. |<ul><li>From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click **Create a Toolchain**.</li><li>From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click the toolchain to delete. Click the **Actions** menu, then select **Delete**.</li><li>From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Click **Add tool**, and then select the tool integration that you want to add.</li><li>From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Pipeline page, click the **Stage Configuration** icon, and then click **Configure Stage**.</li></ul> |
 {: caption="Table 2. IAM user roles and actions" caption-side="top"}
 
 
