@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-14"
+lastupdated: "2020-08-18"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Hashicorp Vault, Jenkins, JIRA, Key Protect, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
 
@@ -31,7 +31,7 @@ The tool integrations that are available to add and configure for your toolchain
 
 |Tool Integration |Available on {{site.data.keyword.cloud_notm}} Public	|Available on {{site.data.keyword.cloud_notm}} Dedicated (Environment Dependent)|
 |:----------|:------------------------------|:------------------|
-|Artifactory		|Dallas, Washington, Frankfurt, Tokyo, London		|Yes 	|
+|Artifactory		|Dallas, Washington, Frankfurt, Tokyo, London		|Yes		|
 |Availability Monitoring		|Dallas		|No		|
 |Bitbucket		|Dallas, Washington, Frankfurt, Tokyo, London		|No		|
 |Cloud Event Management		|Dallas		|No		|
@@ -402,11 +402,11 @@ Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your 
 
 To learn more about {{site.data.keyword.DRA_short}}, see the [{{site.data.keyword.DRA_short}} article](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){:external} on the IBM Cloud Garage Method or take these tutorials:
 
-  * [Use the "Develop and test a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){: external}
+  * [Use the "Develop and test a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){:external}
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}
 
-  * [Explore {{site.data.keyword.DRA_full}}](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){: external}
+  * [Explore {{site.data.keyword.DRA_full}}](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){:external}
 
 
 ## Adding the Eclipse Orion Web IDE
@@ -534,7 +534,7 @@ If you are configuring this tool integration as you are creating the toolchain, 
 
 If you have a toolchain and are adding this tool integration to it, follow these steps:
 
-1. 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 1. Click **Add tool**.
 1. In the Tool Integrations section, click **GitHub**.
 1. Click the GitHub server that you want to use.
@@ -574,8 +574,8 @@ To learn more about GitHub, see the [GitHub article](https://www.ibm.com/cloud/g
 ## Configuring GitHub Enterprise and Issues on {{site.data.keyword.cloud_notm}} Dedicated
 {: #configghe}
 
-These instructions apply to {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, some steps might differ depending on your internal procedures.
-{: important}
+ These instructions apply to {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, some steps might differ depending on your internal procedures.
+ {: important}
 
 {{site.data.keyword.ghe_long}} is an on-premises, web-based hosting service for Git repos. Dedicated {{site.data.keyword.ghe_short}} is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only. GitHub Issues is a tracking tool that keeps your work and your plans in one place. It is integrated with your development repo so that you can focus on important tasks. For more information about Dedicated {{site.data.keyword.ghe_short}} and GitHub Issues, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated?topic=ghededicated-getting-started) and the [GitHub Issues article](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){:external} on the IBM Cloud Garage Method.
 
@@ -653,7 +653,7 @@ If you are configuring this tool integration as you are creating the toolchain, 
 
 If you have a toolchain and are adding this tool integration to it, follow these steps:
 
-1. 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 1. Click **Add tool**.
 1. In the Tool Integrations section, click **GitLab**.
 1. Click the GitLab server that you want to use.
