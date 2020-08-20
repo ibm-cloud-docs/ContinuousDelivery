@@ -2,9 +2,11 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-07-16"
+lastupdated: "2020-08-20"
 
 keywords: public isolation for IBM Cloud Continuous Delivery, compute isolation for Continuous Delivery, Continuous Delivery architecture, workload isolation in Continuous Delivery
+
+subcollection: ContinuousDelivery
 
 ---
 
