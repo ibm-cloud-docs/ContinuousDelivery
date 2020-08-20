@@ -2,7 +2,11 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2019-09-05"
+lastupdated: "2020-08-20"
+
+keywords: IBM Cloud, release notes, DevOps announcements, DevOps blog
+
+subcollection: ContinuousDelivery
 
 ---
 
