@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-03-03"
+lastupdated: "2020-08-19"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, authentication, personal access token, SSH key
 
@@ -41,8 +41,15 @@ The {{site.data.keyword.gitrepos}} tool integration supports teams to manage cod
    * Track issues and share ideas through the issue tracker
    * Document projects on the wiki system
 
-Because this tool integration is built on GitLab Community Edition and hosted by IBM on the {{site.data.keyword.Bluemix_notm}} Platform, a few GitLab options are not available. For example, Delivery Pipeline provides continuous integration and continuous delivery for {{site.data.keyword.Bluemix_notm}}; therefore, the continuous integration features in GitLab are not supported. In addition, the admin functions are not available because they are managed by IBM.
+Because this tool integration is built on GitLab Community Edition and hosted by IBM on the {{site.data.keyword.cloud_notm}} Platform, a few GitLab options are not available. For example, Delivery Pipeline provides continuous integration and continuous delivery for {{site.data.keyword.Bluemix_notm}}; therefore, the continuous integration features in GitLab are not supported. In addition, the admin functions are not available because they are managed by IBM.
 {: tip}
+
+## Using {{site.data.keyword.gitrepos}} with toolchains
+{: #git_toolchains}
+
+You can use a template that contains either a {{site.data.keyword.gitrepos}} or GitHub tool integration as a starting point to create a toolchain that you can add Git repositories (repos) to. Alternatively, you can start with an empty toolchain and add either a {{site.data.keyword.gitrepos}} or GitHub tool integration to it. By using a toolchain, you can associate Git repos with your resource groups or Cloud Foundry orgs and your {{site.data.keyword.contdelivery_short}} service instance. 
+
+For more information about using toolchains with Git, see [Creating toolchains with Git](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_git).
 
 
 ## Using {{site.data.keyword.gitrepos}} locally
@@ -56,7 +63,7 @@ You can locally access the Git repos that are stored in {{site.data.keyword.gitr
 ## Authenticating with {{site.data.keyword.gitrepos}}
 {: #git_authentication}
 
-Your {{site.data.keyword.Bluemix_notm}} login and password are only used to authenticate with {{site.data.keyword.gitrepos}} in a web browser. You cannot use your {{site.data.keyword.Bluemix_notm}} user credentials to authenticate from external Git clients. To complete remote Git operations, such as `clone` or `push`, from your local Git repo, you must use a personal access token or SSH key to authenticate with {{site.data.keyword.gitrepos}}.
+Your {{site.data.keyword.cloud_notm}} login and password are only used to authenticate with {{site.data.keyword.gitrepos}} in a web browser. You cannot use your {{site.data.keyword.cloud_notm}} user credentials to authenticate from external Git clients. To complete remote Git operations, such as `clone` or `push`, from your local Git repo, you must use a personal access token or SSH key to authenticate with {{site.data.keyword.gitrepos}}.
 
 ### Creating a personal access token
 {: #create_pat}
