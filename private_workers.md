@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-08-17"
+lastupdated: "2020-08-20"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -38,7 +38,7 @@ Before you set up a private worker, make sure that you have the following resour
 
 * Optional. A toolchain with a pipeline that contains at least one stage. You can create a toolchain by using the [{{site.data.keyword.deliverypipeline}} Private Worker tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers#configure_private_worker_integration). You can also create a toolchain by using the **Develop a Kubernetes app** toolchain template:
 
-  1. Log in to [{{site.data.keyword.Bluemix_notm}}](http://cloud.ibm.com){:external}.
+  1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
   2. Go to [https://cloud.ibm.com/devops/create](https://cloud.ibm.com/devops/create){:external} and select the **Develop a Kubernetes app** toolchain template.
   3. Complete the fields for the {{site.data.keyword.deliverypipeline}}.
   4. Click **Create** to create your Kubernetes app toolchain.
@@ -73,7 +73,7 @@ Complete the following steps to configure the {{site.data.keyword.deliverypipeli
 The list of workers is empty until you use {{site.data.keyword.deliverypipeline}} private workers for the first time. 
 {: tip}
 
-For more information about the **{{site.data.keyword.deliverypipeline}} Private Worker** tool integration, see [Configuring {{site.data.keyword.deliverypipeline}} Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations#privateworker).
+For more information about the **{{site.data.keyword.deliverypipeline}} Private Worker** tool integration, see [Configuring {{site.data.keyword.deliverypipeline}} Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-privateworker).
 
 ### Configuring your Kubernetes cluster
 {: #configure_kubernetes_cluster}
