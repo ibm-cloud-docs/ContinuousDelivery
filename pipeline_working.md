@@ -38,7 +38,7 @@ You can use any of the following methods to create a pipeline:
 
    * [Create a toolchain from a template](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template) that includes at least one pipeline.
 
-   * [Add the {{site.data.keyword.deliverypipeline}} tool integration](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#deliverypipeline) to an existing toolchain.
+   * [Add the {{site.data.keyword.deliverypipeline}} tool integration](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) to an existing toolchain.
    
 From your {{site.data.keyword.deliverypipeline}}, change your configuration; check the status of builds, the deployed app, and recent deployments; see the most recent logs and deployment details; or delete your pipeline.
 
