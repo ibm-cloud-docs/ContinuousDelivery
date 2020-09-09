@@ -35,7 +35,7 @@ Both GitHub and the Git command line are accessible alternatives to GitLab.
 Don't store regulated data in files or issues within Git repos. The procedures for regulated data are currently not in place.
 {: tip}
 
-The [{{site.data.keyword.gitrepos}} tool integration](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#grit) supports teams to manage code and collaborate in many ways:
+The [{{site.data.keyword.gitrepos}} tool integration](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-grit) supports teams to manage code and collaborate in many ways:
    * Manage Git repos through fine-grained access controls that keep code secure
    * Review code and enhance collaboration through merge requests
    * Track issues and share ideas through the issue tracker
