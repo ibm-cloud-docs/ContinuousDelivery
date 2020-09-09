@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-09-09"
 
 keywords: devops insights, publish, build, record, jenkins, test, tests, app, dashboard
 
@@ -34,7 +34,7 @@ You can publish a build record by using Jenkins to integrate your projects with 
 
 You must have a toolchain. For more information, see [Creating toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started). 
 
-Add the Jenkins tool to your app's toolchain. For more information, see [Configure Jenkins](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#jenkins). 
+Add the Jenkins tool to your app's toolchain. For more information, see [Configure Jenkins](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jenkins). 
 
 
 ## Publishing build records with Jenkins 
