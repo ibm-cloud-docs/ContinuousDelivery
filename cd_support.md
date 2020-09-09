@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-08-17"
 
 keywords: Support tickets, help, questions, toolchains
 
@@ -37,8 +37,8 @@ If you have a more serious issue or encounter problems with the {{site.data.keyw
 1. From the {{site.data.keyword.cloud_notm}} console, click **Support** and then click **Add Ticket**.
 1. Complete the form to indicate what you need technical support for.
 
-For more information about opening an IBM {{site.data.keyword.Bluemix_notm}} support ticket, or about support levels and ticket severities, see [Support plans](/docs/get-support?topic=get-support-support-plans).
+For more information about opening an IBM {{site.data.keyword.cloud_notm}} support ticket, or about support levels and ticket severities, see [Support plans](/docs/get-support?topic=get-support-support-plans).
 
 
-## Support for {{site.data.keyword.Bluemix_notm}}
-For other problems or questions about your {{site.data.keyword.Bluemix_notm}} service, see [Getting support](/docs/get-support?topic=get-support-getting-customer-support).
+## Support for {{site.data.keyword.cloud_notm}}
+For other problems or questions about your {{site.data.keyword.cloud_notm}} service, see [Getting support](/docs/get-support?topic=get-support-using-avatar#getting-support).
