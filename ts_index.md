@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-04"
+lastupdated: "2020-09-10"
 
 keywords: error message, Lite plan, toolchains, IBM Cloud
 
@@ -48,7 +48,7 @@ When trying to deploy an app to {{site.data.keyword.cloud_notm}}, if you get the
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
-You can either increase the memory quota of your account or reduce the memory that your apps use. The maximum memory quota for a trial account is 2 GB. To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [How do I upgrade or change my account?](/docs/account?topic=account-accountfaqs#changeacct). To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} console or the cf command line interface.
+You can either increase the memory quota of your account or reduce the memory that your apps use. The maximum memory quota for a trial account is 2 GB. To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [How do I upgrade or change my account?](/docs/account?topic=account-accountfaqs#changeacct). To reduce the memory that your apps use, use either the {{site.data.keyword.cloud_notm}} console or the cf command line interface.
 
 If you use the {{site.data.keyword.cloud_notm}} console, complete the following steps:
 
@@ -103,3 +103,17 @@ You can find the Status page by choosing either of the following options:
   * Access it directly at [{{site.data.keyword.cloud_notm}} - System Status](https://cloud.ibm.com/status){: external}.
 
 For more information about the {{site.data.keyword.cloud_notm}} Status page, see [Viewing {{site.data.keyword.cloud_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status).
+
+
+## How do I remove authorized users from the {{site.data.keyword.contdelivery_short}} service?
+{: #remove_authorized_users}
+{: faq}
+{: support}
+
+You can remove authorized users from the {{site.data.keyword.contdelivery_short}} service and prevent them from being added again.
+
+ * Remove the user's access in IAM to all toolchains in the resource group.
+ * Remove the user from the authorized user list in the {{site.data.keyword.contdelivery_short}} service instance.
+ * Remove Developer access from all {{site.data.keyword.gitrepos}} repos that are attached to all of the toolchains in the resource group.
+
+You can maintain an activity log related to authorized users. For more information about viewing, managing, and auditing service-initiated and user-initiated activities in your {{site.data.keyword.contdelivery_full}} instances, see [{{site.data.keyword.at_full_notm}} events](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-at-events). For more information about managing authorized users, see [Authorized users](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#authorized_users).
