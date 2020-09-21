@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019, 2020
-lastupdated: "2020-07-27"
+lastupdated: "2020-09-16"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -51,6 +51,7 @@ Starting with version 2.2, images are available on [DockerHub](https://hub.docke
 
 | Base image version | DockerHub image version |
 |:-----------------|:-----------------|
+| 2.9 | `ibmcom/pipeline-base-image:2.9`|
 | 2.8 | `ibmcom/pipeline-base-image:2.8`|
 | 2.7 | `ibmcom/pipeline-base-image:2.7`| 
 | 2.6 | `ibmcom/pipeline-base-image:2.6`| 
@@ -69,6 +70,106 @@ The following available image versions are listed in descending order, starting 
  
  The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
  {: tip}
+ 
+ ### Version 2.9
+ {: #version_2_9}
+
+To view the contents of version 2.8, from the running image, type `default_versions.sh`. This image includes the following tools:
+
+```
+	# node --version
+	v12.18.3
+
+	# npm --version
+	6.14.8
+
+	# jq --version
+	jq-1.6
+
+	# yq --version
+	yq version 2.4.1
+
+	# kubectl version --client
+	Client Version: version.Info{Major:"1", Minor:"17", GitVersion:"v1.17.11", GitCommit:"ea5f00d93211b7c80247bf607cfa422ad6fb5347", GitTreeState:"clean", BuildDate:"2020-08-13T15:20:25Z", GoVersion:"go1.13.15", Compiler:"gc", Platform:"linux/amd64"}
+
+	# buildctl --version
+	buildctl github.com/moby/buildkit v0.7.2 22e230744171b4442101731951bbbecf97796ea5
+
+	# helm version --client
+	Client: &version.Version{SemVer:"v2.16.10", GitCommit:"bceca24a91639f045f22ab0f41e47589a932cf5e", GitTreeState:"clean"}
+
+	# helm3 version --client
+	version.BuildInfo{Version:"v3.3.1", GitCommit:"249e5215cde0c3fa72e27eb7a30e8d55c9696144", GitTreeState:"clean", GoVersion:"go1.14.7"}
+
+	# ibmcloud -version
+	ibmcloud version 1.2.1+29ade2b-2020-09-04T12:46:49+00:00
+
+	# ibmcloud plugin list
+	Listing installed plug-ins...
+
+	Plugin Name                            Version   Status   
+	schematics                             1.4.18       
+	cloud-functions/wsk/functions/fn       1.0.46       
+	cloud-internet-services                1.10.0       
+	container-registry                     0.1.494      
+	container-service/kubernetes-service   1.0.157      
+	doi                                    0.2.6        
+
+
+	# ibmcloud dev --version
+	ibmcloud dev version 2.5.0
+
+	# java -version
+	openjdk version "11.0.7" 2020-04-14
+	OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.7+10)
+	Eclipse OpenJ9 VM AdoptOpenJDK (build openj9-0.20.0, JRE 11 Linux amd64-64-Bit Compressed References 20200416_574 (JIT enabled, AOT enabled)
+	OpenJ9   - 05fa2d361
+	OMR      - d4365f371
+	JCL      - 838028fc9d based on jdk-11.0.7+10)
+
+	# ant -version
+	Apache Ant(TM) version 1.10.8 compiled on May 10 2020
+
+	# mvn -version
+	Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+	Maven home: /opt/IBM/maven
+	Java version: 11.0.7, vendor: Eclipse OpenJ9, runtime: /usr/local/openjdk-11
+	Default locale: c.u_US, platform encoding: UTF-8
+	OS name: "linux", version: "4.19.76-linuxkit", arch: "amd64", family: "unix"
+
+	# gradle -version
+
+	Welcome to Gradle 6.6.1!
+
+	Here are the highlights of this release:
+	 - Experimental build configuration caching
+	 - Built-in conventions for handling credentials
+	 - Java compilation supports --release flag
+
+	For more details see https://docs.gradle.org/6.6.1/release-notes.html
+
+
+	------------------------------------------------------------
+	Gradle 6.6.1
+	------------------------------------------------------------
+
+	Build time:   2020-08-25 16:29:12 UTC
+	Revision:     f2d1fb54a951d8b11d25748e4711bec8d128d7e3
+
+	Kotlin:       1.3.72
+	Groovy:       2.5.12
+	Ant:          Apache Ant(TM) version 1.10.8 compiled on May 10 2020
+	JVM:          11.0.7 (Eclipse OpenJ9 openj9-0.20.0)
+	OS:           Linux 4.19.76-linuxkit amd64
+
+
+	# oc version
+	oc v3.11.0+0cbc58b
+	kubernetes v1.11.0+d4cacc0
+	features: Basic-Auth GSSAPI Kerberos SPNEGO
+
+  ```
+ {: codeblock}
  
  ### Version 2.8
  {: #version_2_8}
