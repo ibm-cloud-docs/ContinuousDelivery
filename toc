@@ -165,6 +165,7 @@ Continuous Delivery
     FAQ
         ts_index.md
         faq_delivery_pipeline.md
+        faq_pipeline_private_workers.md
         faq_insights.md
         faq_toolchains.md
         faq_web_ide.md
