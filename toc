@@ -173,6 +173,7 @@ Continuous Delivery
     Troubleshooting
         troubleshoot_cd.md
         troubleshoot_delivery_pipeline.md
+        troubleshoot_pipeline_private_workers.md
         troubleshoot_insights.md
         troubleshoot_git.md
         troubleshoot_toolchains.md
