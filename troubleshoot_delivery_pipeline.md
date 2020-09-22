@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-17"
+lastupdated: "2020-09-21"
 
-keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations, private workers
+keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
 subcollection: ContinuousDelivery
 
@@ -27,7 +27,7 @@ subcollection: ContinuousDelivery
 # Troubleshooting for {{site.data.keyword.deliverypipeline}}
 {: #troubleshoot-delivery-pipeline}
 
-General problems with using {{site.data.keyword.deliverypipeline}} might include pipeline creation, tool integration configuration, or private worker issues. In many cases, you can recover from these problems by following a few easy steps.
+General problems with using {{site.data.keyword.deliverypipeline}} might include pipeline creation or tool integration configuration issues. In many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}
 
 ## I created a toolchain and the {{site.data.keyword.deliverypipeline}} service doesn't initialize. Why doesn't the pipeline initialization complete?
@@ -94,7 +94,7 @@ The access token that the pipeline uses to clone the Git repo is no longer valid
 Configure and save the Git integration again:
 {: tsResolve}
 
-  1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain that you created to open the Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
+  1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain that contains the Git integration that you want to update to open its Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
   1. On the card for the Git integration, click the menu to access the configuration options.
   1. Select the authorized Git account for the Git integration owner.
   1. Click **Save Integration**.
@@ -136,69 +136,22 @@ If you are running kubectl v1.14.2 from a 1.0 pipeline base image, the sudo opti
 For more information about accessing the exact version of kubectl that you require, see [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux){: external}.
 {: tip}
 
-
-## Why is my {{site.data.keyword.deliverypipeline}} Private Worker inactive?
-{: #troubleshoot-pw-inactive}
+## I tried to run a pipeline, why am I getting a 403 error from the {{site.data.keyword.registrylong_notm}}? 
+{: troubleshoot-cd-pipeline-cr}
 {: troubleshoot}
-{: support}
 
-Private workers within a pool of workers can be in one of the following states:
+The {{site.data.keyword.registrylong}} pipeline pushes and pulls images to and from the [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_overview). The {{site.data.keyword.registrylong_notm}} service plan determines the amount of storage and pull traffic that you can use for your private images.
+{: tip}
 
-* Active with the current, supported version of private workers
-* Inactive with an unsupported version of private workers
-* Inactive
-
-Your private worker is inactive. Inactive private workers cannot handle incoming run requests. Pipeline stages that use an inactive private worker cannot complete.
-{: tsSymptoms}
-   
-There is an issue with your Kubernetes cluster and the worker cannot be contacted. Or, the version of the private worker that you are running is no longer supported.
-{: tsCauses}
-
-To activate your {{site.data.keyword.deliverypipeline}} private worker, [install](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers#install_pw) the private worker again. Then, [register](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers#register_pw) the {{site.data.keyword.deliverypipeline}} private worker on the Kubernetes cluster again.
-{: tsResolve}
-
-
-## I tried to install support for {{site.data.keyword.deliverypipeline}} Private Workers in Kubernetes. Why did the installation fail?
-{: #troubleshoot-pw-install}
-{: troubleshoot}
-{: support}
-
-If there is an issue with the version of kubectl that you are running on the client machine, the {{site.data.keyword.deliverypipeline}} Private Worker installation fails. 
-
-After you try to install support for private workers in Kubernetes, an error message is displayed to indicate that there is a schema mismatch and the installation fails.
+When I attempt to run a pipeline, I receive the following error message:
 {: tsSymptoms}
 
-`SchemaError(io.k8s.apimachinery.pkg.apis.meta.v1.APIGroup): invalid object doesn't have additional properties`
-   
-There is a mismatch between the versions of kubectl that you are running on the Kubernetes server and the Kubernetes client.
+`Failed to pull image "us.icr.io/sdl-ns/achilles:a100-p203-6-20190717161046-78fbc8a3a0fbc8571d887e57499642e0326e7035": rpc error: code = Unknown desc = failed to pull and unpack image "us.icr.io/sdl-ns/achilles:a100-p203-6-20190717161046-78fbc8a3a0fbc8571d887e57499642e0326e7035": failed to copy: httpReaderSeeker: failed open: unexpected status code https://us.icr.io/v2/sdl-ns/achilles/blobs/sha256:365b19774a508fd998bc636981cb9869a406786ad811e51937fa6fb089c86005: 403 Forbidden`
+
+You might have exceeded your [pull traffic quota limits](/docs/Registry?topic=Registry-registry_quota#registry_quota_get), which prevents the Docker image from being fetched.
 {: tsCauses}
-
-Install the latest version of kubectl on the client machine.
-{: tsResolve}
-
-
-## Why can't I pull images for tekton-releases or pipeline-private-worker from some container registries?
-{: #troubleshoot-pw-images}
-{: troubleshoot}
-{: support}
-
-Cluster security prevents you from pulling down images. 
-
-When you try to install the private worker framework, an error message is displayed.
-{: tsSymptoms}
-
-```
-Error from server (InternalError): error when creating "https://private-worker-service.us-south.devops.cloud.ibm.com/install": Internal error occurred: admission webhook "trust.hooks.securityenforcement.admission.cloud.ibm.com" denied the request: 
-Deny "gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller@sha256:80e040a58ce6c4d58ae893eb934777bce013ef8be079967dc3db783d76fa5aaa", no matching repositories in ClusterImagePolicy and no ImagePolicies in the "tekton-pipelines" namespace
-Error from server (InternalError): error when creating "https://private-worker-service.us-south.devops.cloud.ibm.com/install": Internal error occurred: admission webhook "trust.hooks.securityenforcement.admission.cloud.ibm.com" denied the request: 
-Deny "gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook@sha256:da75fbdaeb800813d85b99f7f54b665e8d0edbb2c5a7ffc6a99d66aede0291a3", no matching repositories in ClusterImagePolicy and no ImagePolicies in the "tekton-pipelines" namespace
-
-```
    
-The private worker installer pulls images from `gcr.io` and [Docker hub](https://hub.docker.com/r/ibmcom/pipeline-private-worker){: external}. Some platforms, such as IBM Cloud Private, do not allow these container registries on the default image policy.
-{: tsCauses}
-
-Make sure that the policy for pulling images in your cluster supports pulling images from `gcr.io` and `docker.io`. For example, if you are installing the private worker framework on {{site.data.keyword.cloud_notm}} Private, add those policies by using the {{site.data.keyword.cloud_notm}} Private Web console. For more information about managing image security enforcement by using the IBM Cloud Private Web console, see [Enforcing container image security](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/manage_images/image_security.html){: external}.
+Review your [quota limits and usage](/docs/Registry?topic=Registry-registry_quota#registry_quota_get) for storing and pulling images. [Free up used storage and change service plans](/docs/Registry?topic=Registry-registry_quota#registry_quota_freeup) or quota limits to stay within given quota limits.
 {: tsResolve}
 
 ## Why can't the {{site.data.keyword.deliverypipeline}} communicate through a firewall?
