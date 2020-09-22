@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-22"
+lastupdated: "2020-06-24"
 
 keywords: Delivery Pipeline, tool integration, toolchains, yaml, pipeline jobs
 
@@ -87,16 +87,3 @@ For more information about the `pipeline-run` command, see [pipeline-run](/docs/
 {: support}
 
 You can export the definition for an entire pipeline by appending `/yaml` to the pipeline URL. For more information about exporting the definition for an entire pipeline, see [Modifying, exporting, and deleting {{site.data.keyword.contdelivery_short}} pipeline data](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_personal_data#managing_pipeline_data).
-
-## How do I view the status of private workers on multiple clusters by using the CLI?
-{: #pipeline_private_worker_status}
-{: faq}
-{: support}
-
-You can use the following command within a script that traverses all of the clusters that private workers are installed on.
-
-```
-kubectl get workeragent -ojson | jq '.items[] | .status.versionStatus.state'
-```
-
-Consider upgrading any private workers that return results that are not `OK`.
