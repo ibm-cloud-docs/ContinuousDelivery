@@ -36,7 +36,6 @@ Continuous Delivery
         Tool integrations
             toolchains_integrations.md
             artifactory_integration.md
-            availability_monitoring_integration.md
             bitbucket_integration.md
             cem_integration.md
             delivery_pipeline_integration.md
