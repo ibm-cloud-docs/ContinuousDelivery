@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-19"
+lastupdated: "2020-09-24"
 
-keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Artifactory, Availability Monitoring, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Hashicorp Vault, Jenkins, JIRA, Key Protect, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
+keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Artifactory, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Hashicorp Vault, Jenkins, JIRA, Key Protect, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
 
 subcollection: ContinuousDelivery
 
@@ -32,7 +32,6 @@ The tool integrations that are available to add and configure for your toolchain
 |Tool Integration |Available on {{site.data.keyword.cloud_notm}} Public	|Available on {{site.data.keyword.cloud_notm}} Dedicated (Environment Dependent)|
 |:----------|:------------------------------|:------------------|
 |[Artifactory](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-artifactory)		|Dallas, Washington, Frankfurt, Tokyo, London		|Yes		|
-|[Availability Monitoring](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-availabilitymonitoring)		|Dallas		|No		|
 |[Bitbucket](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-bitbucket)		|Dallas, Washington, Frankfurt, Tokyo, London		|No		|
 |[Cloud Event Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cloudeventmanagement)		|Dallas		|No		|
 |[{{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) 		|Dallas, Washington, Frankfurt, Tokyo, London	   	|Yes  		|
