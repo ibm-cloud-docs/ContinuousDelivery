@@ -67,6 +67,7 @@ Continuous Delivery
         pipeline_working.md
         tekton_pipeline.md
         pipeline_build_deploy.md
+        pipeline_container_images.md
         pipeline_versioned_base_images.md
         pipeline_custom_docker_images.md
         install_private_workers.md
