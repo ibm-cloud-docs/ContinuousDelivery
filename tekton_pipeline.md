@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-08-17"
+lastupdated: "2020-10-06"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -157,6 +157,32 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
   * Securing: `Token Matches`
   * Token Source: `Payload`
   * JSON Property Name / Form Key: `token`
+
+ The following example shows how to use the curl command with a generic webhook that is secured with a `Token Matches` rule:
+
+   ![generic webhook example](images/pipeline_tekton_generic_webhook.png)
+
+ ```
+ curl -X POST \
+  https://devops-api.us-south.devops.cloud.ibm.com/v1/tekton-webhook/588236be-749b-4c67-ae57-a561abbbc9a8/run/7e82880e-4223-4c98-8ca9-ef6df36bb6dc \
+  -H 'Content-Type: application/json' \
+  -H 'token: 48a0f92c0932890048596906a22ae189c48c5619fbcf9600' \
+  -d '{
+    "somekey": "somevalue"
+  }'
+ ```
+ To obtain payload values in the pipeline definition, specify a Triggerbinding parameter with a value that is derived from the event:
+ 
+ ```
+  apiVersion: tekton.dev/v1beta1
+  kind: TriggerBinding
+  metadata:
+    name: binding
+  spec:
+    params:
+      - name: somekey
+        value: $(event.somekey)
+ ``` 
 
 Save your changes.
 
