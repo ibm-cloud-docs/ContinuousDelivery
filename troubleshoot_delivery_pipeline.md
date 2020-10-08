@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-07"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -136,6 +136,7 @@ If you are running kubectl v1.14.2 from a 1.0 pipeline base image, the sudo opti
 For more information about accessing the exact version of kubectl that you require, see [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux){: external}.
 {: tip}
 
+
 ## I tried to run a pipeline, why am I getting a 403 error from the {{site.data.keyword.registrylong_notm}}? 
 {: troubleshoot-cd-pipeline-cr}
 {: troubleshoot}
@@ -154,6 +155,25 @@ You might have exceeded your [pull traffic quota limits](/docs/Registry?topic=Re
 Review your [quota limits and usage](/docs/Registry?topic=Registry-registry_quota#registry_quota_get) for storing and pulling images. [Free up used storage and change service plans](/docs/Registry?topic=Registry-registry_quota#registry_quota_freeup) or quota limits to stay within given quota limits.
 {: tsResolve}
 
+
+## I tried to compile my app in a single pipeline job, why did it fail? 
+{: troubleshoot-compile-app}
+{: troubleshoot}
+
+You require 4 GB of memory (not file store) to build your app in a single pipeline job.
+
+When I attempt to compile my app in a single pipeline job, the build job fails with an unexpected error.
+{: tsSymptoms}
+
+Your app requires more than 4 GB of memory to compile in a single pipeline job.
+{: tsCauses}
+   
+To build your app in a single pipeline job:
+{: tsResolve}
+
+  1. Create an [{{site.data.keyword.contdelivery_full}} Pipeline Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
+  1. Configure your build job to use the [private worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers#configure_private_worker_integration).
+  
 ## Why can't the {{site.data.keyword.deliverypipeline}} communicate through a firewall?
 {: #troubleshoot-firewall-configuration}
 {:troubleshoot}
