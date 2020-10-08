@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-10-05"
 
 keywords: Delivery Pipeline, tool integration, toolchains, yaml, pipeline jobs
 
