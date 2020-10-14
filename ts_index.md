@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-10"
+lastupdated: "2020-10-14"
 
 keywords: error message, Lite plan, toolchains, IBM Cloud
 
@@ -99,7 +99,7 @@ Check the {{site.data.keyword.cloud_notm}} Status page to determine whether know
 
 You can find the Status page by choosing either of the following options:
 
-  * Log in to the {{site.data.keyword.cloud_notm}} console. From the menu bar, click **Support** and select **Status**. Check the listed resources for the ![some issues](../../get-support/images/some_issues.svg) icon. This icon might indicate an outage.
+  * In the {{site.data.keyword.cloud_notm}} console, go to **Support**. From the Today's notifications widget, click **View all**, and then click **Status** to view the status of resources in all {{site.data.keyword.cloud_notm}} locations. You can view a list of events, in chronological order, for maintenance and incidents. You can search across all notifications, or filter by type, geographic locations, and individual resources. You can also view planned maintenance windows for which prior notice is provided and unplanned incidents or outages, which are posted as soon as the IBM Cloud team becomes aware of them. Incident notifications are regularly updated until they're resolved.
   * Access it directly at [{{site.data.keyword.cloud_notm}} - System Status](https://cloud.ibm.com/status){: external}.
 
 For more information about the {{site.data.keyword.cloud_notm}} Status page, see [Viewing {{site.data.keyword.cloud_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status).
