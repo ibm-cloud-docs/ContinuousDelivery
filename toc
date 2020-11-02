@@ -84,6 +84,11 @@ Continuous Delivery
         git_working.md
         git_locally.md
         git_toolchains.md
+    
+    {: .topicgroup}
+       Code Risk Analyzer
+           cd_configure_cra.md
+           cd_cra_scan.md     
 
      {: .topicgroup}
      DevOps Insights
