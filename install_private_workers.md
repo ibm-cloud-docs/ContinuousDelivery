@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-10-20"
+lastupdated: "2020-11-05"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -162,25 +162,53 @@ To set up a pool of private workers, repeat this process with more Kubernetes cl
 ### Installing {{site.data.keyword.deliverypipeline}} Private Worker on OpenShift
 {: #open_shift_pw_}
 
-If you are using a private worker on OpenShift, you must set up security context constraints (SCCs) for the private worker and the applications that you are deploying.  
+If you are using a private worker on OpenShift, you must set up security context constraints (SCCs) for the private worker and the applications that you are deploying. For more information about SCC on OpenShift, see [OpenShift 4.3](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html){: external} or [OpenShift 3.11](https://docs.openshift.com/container-platform/3.11/admin_guide/manage_scc.html){: external}.
 
-1. Add the tekton-pipelines-controller service account to any uid SCC. Services that use this SCC can access any directories that have a root in the cluster.
+
+* Add the tekton-pipelines-controller and tekton-pipelines-webhook service accounts to any uid SCC. Services that use this SCC can access any directories that have a root in the cluster.
 
 ```
 oc adm policy add-scc-to-user anyuid system:serviceaccount:tekton-pipelines:tekton-pipelines-controller
+oc adm policy add-scc-to-user anyuid system:serviceaccount:tekton-pipelines:tekton-pipelines-webhook
+
+```
+ 
+* Add the tekton-pipelines-controller service account to the privileged SCC. Services that use this SCC can run pods with privileged access and use hostpath persistent volumes.
+
+```
+oc adm policy add-scc-to-user privileged system:serviceaccount:tekton-pipelines:tekton-pipelines-controller
 
 ```
 
-2. Remove any uid SCCs from the tekton-pipelines-controller service account.
+Cloud-orchestrated Tekton pipelines currently use hostpath volumes for Tekton pipeline run storage. Tekton pipelines that run on private workers that are hosted on OpenShift require an SCC to be applied to any container spec that reads from or writes to a workspace or PersistentVolume. To allow a container to access the volume, add the following YAML code snippet to the step in the Tekton task:
 
 ```
+securityContext:
+  privileged: true
+
+```
+As support is added for different storage types, this privilege escalation might not be needed.
+{: tip}
+
+#### Removing {{site.data.keyword.deliverypipeline}} Private Workers from OpenShift
+{: #open_shift_pw_remove}
+
+If you are no longer using a private worker on OpenShift, you must remove the SCCs for the private worker from service accounts. 
+
+* Remove any uid SCCs from the tekton-pipelines-controller and tekton-pipelines-webhook service accounts.
+
+```
+oc adm policy add-scc-to-user anyuid system:serviceaccount:tekton-pipelines:tekton-pipelines-webhook
 oc adm policy remove-scc-from-user anyuid system:serviceaccount:tekton-pipelines:tekton-pipelines-controller
 
 ```
+* Remove privileged SCCs from the tekton-pipelines-controller service account.
 
-For more information about SCC on OpenShift, see [OpenShift 4.3](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html){: external} or [OpenShift 3.11](https://docs.openshift.com/container-platform/3.11/admin_guide/manage_scc.html){: external}.
+```
+oc adm policy remove-scc-from-user privileged system:serviceaccount:tekton-pipelines:tekton-pipelines-controller
 
- 
+```
+
 ## Registering a {{site.data.keyword.deliverypipeline}} Private Worker
 {: #register_pw}
 
