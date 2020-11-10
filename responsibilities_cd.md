@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-24"
+lastupdated: "2020-11-10"
 
-keywords: customer responsibilities, IBM responsibilities, terms and conditions
+keywords: customer responsibilities, IBM responsibilities, terms and conditions, disaster recovery, toolchain backup
 
 subcollection: ContinuousDelivery
 
@@ -96,3 +96,105 @@ IBM is responsible for maintaining backups and high availability of the {{site.d
 |Back up toolchain data.| Maintain regular backups of toolchain and pipeline definitions, Git repos, and any other toolchain integration data that is stored and managed by IBM.  | To support global failover, create and maintain copies of your toolchain and pipeline definitions, including tool integration data and your Git repos, in another IBM region. |
 |Restore toolchain data.| Restore all toolchain and Git repos to the original {{site.data.keyword.cloud_notm}} region, when that region is available.    | To support global failover, manually switch to using the copied toolchains and repos in another region. |
 {: caption="Table 5. Responsibilites for disaster recovery" caption-side="top"}
+
+### Backing up your toolchains to a different region
+{: #toolchains-backup}
+
+IBM backs up and restores your toolchain data if a disaster occurs. You can also back up your toolchain to a different region by mirroring your Git repositories (repos), and then saving and restoring your toolchain. Backing up a toolchain provides faster failover and redundancy. It also ensures smooth operation if issues arise in the original region.
+
+#### Known limitations
+{: #backup_known_limitations}
+
+Backing up your toolchain creates a copy of the toolchain itself, but it does not copy all of the data that is referenced by the toolchain. Consider the following limitations when you back up a toolchain to a different region:
+
+* You cannot back up and restore Tekton pipelines.
+* You cannot back up and restore pipelines that use pipeline private workers.
+* Web IDE workspaces are not included in the copied toolchain. 
+* Pipeline logs and artifacts are not included in the copied toolchain.
+* Tool configuration secrets that are stored in Key Protect or HashiCorp Vault are not included in the copied toolchain.
+* {{site.data.keyword.DRA_short}} data is not included in the copied toolchain.
+
+#### Mirroring your Git repos
+{: #mirror_git_repo}
+
+If you use {{site.data.keyword.gitrepos}} for both your source and target repos, you can use the built-in GitLab mirroring feature. This feature automatically syncs your source and target repos. If you use a different Git provider, you must set up your own mirroring solution. Alternatively, to mirror changes in the source repo, manually clone and push your Git repos to the target repo.
+
+If you cannot mirror your projects, you can [export](https://us-south.git.cloud.ibm.com/help/user/project/settings/import_export.md#exporting-a-project-and-its-data){: external} and [import](https://us-south.git.cloud.ibm.com/help/user/project/settings/import_export.md#importing-the-project){: external} your projects instead. However, the source and target repos are not synchronized if changes are made to the source repo.
+{: tip}
+
+To mirror a {{site.data.keyword.gitrepos}} repo, complete the following steps:
+
+1. [Create a blank GitLab project](https://us-south.git.cloud.ibm.com/help/gitlab-basics/create-project.md#blank-projects){: external} in the target repo. Do not initialize this project with a README file.
+1. [Create a personal access token](https://us-south.git.cloud.ibm.com/help/user/profile/personal_access_tokens.md#creating-a-personal-access-token){: external} with the `write_repository` scope in the target region. Save a copy of this token.
+1. Use [Push mirroring](https://us-south.git.cloud.ibm.com/help/user/project/repository/repository_mirroring.md#pushing-to-a-remote-repository-core){: external} to push the source repo to the target repo:     
+
+  a. From the source repo, select **Settings** > **Repository**.
+
+  b. In **Mirror repository** section of the Repository page, type the URL of the target repo.
+
+  c. Select **Push** to specify the direction of the mirror.
+
+  d. Select **Password** to use the password authentication method.
+
+  e. Type the personal access token that you created in step 2.
+
+  f. Click **Mirror repository** to start the mirroring process. It might take up to five minutes for the process to start.
+  
+1. In the target region, locate the mirror of your repo to verify that it was successfully mirrored.
+  
+#### Saving and restoring your toolchain
+{: #save_restore_toolchain}
+
+To save a toolchain, download and run a script on your local workstation that creates a toolchain template in text form. This template is used to instantiate a copy of the source toolchain. For security reasons, secrets are not included in this toolchain template.  
+
+After you create a toolchain by using this template, you must configure your tool integrations. Then, restore secrets from the source toolchain by copying their values from the source toolchain to the target toolchain. Unlike GitLab mirroring, this procedure creates a one-time copy of the toolchain. Any subsequent changes to the source toolchain are not reflected in the copied version of the toolchain.
+
+Because the toolchain template is a copy, when instantiated, it references the source Git repo. To fix this issue, reconfigure the target toolchain with the target repo.
+{: tip}
+
+To save and restore a toolchain, complete the following steps:
+
+1. Create a temporary directory on your local workstation.
+1. Change directory into the temporary directory.
+1. Generate a textual representation of the source toolchain in the temporary directory by using the [toolchain-to-template script](https://github.com/open-toolchain/toolchain-to-template){: external}.
+1. [Create a temporary blank GitLab project](https://us-south.git.cloud.ibm.com/help/gitlab-basics/create-project.md#blank-projects){: external} in the target region.
+1. Type the following commands to initialize the temporary directory for Git operations and push the contents to the temporary GitLab project:     
+
+  a. git init
+
+  b. git add --all
+
+  c. git remote add origin *target repository url*
+
+  d. git commit -m "add template yaml files"
+
+  e. git push -u origin --all
+
+1. [Create a personal access token](https://us-south.git.cloud.ibm.com/help/user/profile/personal_access_tokens.md#creating-a-personal-access-token){: external} in the target region with the `api`, `read_user`, `read_api`, `read_repository`, and `write_repository` scope.
+1. Create a toolchain in the target region by constructing a URL and pasting it into your browser:     
+
+  a. Construct a target toolchain URL that contains the temporary repo, personal access token, and target region: 
+  
+  ```
+  https://cloud.ibm.com/devops/setup/deploy?repository=<temporary repository>&repository_token=<personal-access-token>&env_id=ibm:yp:<target region>
+  ```
+  For example, `https://cloud.ibm.com/devops/setup/deploy?repository=https://us-east.git.cloud.ibm.com/user/temp-repo&repository_token=aG7junk9dafiiT6w6&env_id=ibm:yp:us-east`.
+
+  b. Replace the source repo URL with the target repo URL that you created when mirroring your Git repos.
+
+  c. Click **Create**. Because you didn't update your secrets, your pipeline runs but does not succeed.     
+
+1. [Revoke the personal access token](https://us-south.git.cloud.ibm.com/help/user/profile/personal_access_tokens.md#creating-a-personal-access-token){: external} that you created in step 6.
+1. [Configure pipeline secrets](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties) by adding the secure property values that are required by your pipeline.
+1. [Run your target pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_stages) to make sure that they are working.
+1. If you are mirroring repos, disable commit triggers so that your target pipelines don't run when a change is mirrored from the target repo to the source repo:     
+
+  a. Select the **Run jobs only when this stage is run manually** option for the [Input stage](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_stages) of your pipeline.
+
+  b. Verify that your pipelines can be [started manually](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_stages).  
+  
+
+#### Using your backup toolchain
+{: #use_backup_toolchain}
+
+Backup toolchains are intended to provide short-term continuity if issues exist in a particular region. Do not commit to target repos directly or enable pipeline commit triggers on target pipelines. If you commit to the target repo directly and then return to using the source repo, you risk conflicts and inconsistencies because the repos are not synchronized. If you enable commit triggers and then return to using the source repo, both pipelines run when code is updated. To avoid these scenarios, run your pipelines manually and return to the source toolchain as soon as possible.
