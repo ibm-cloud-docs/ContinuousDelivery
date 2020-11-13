@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-08"
+lastupdated: "2020-11-13"
 
 keywords: Delivery Pipeline, container image
 
@@ -36,9 +36,9 @@ You can use either Classic pipelines or Tekton pipelines to build container imag
 ## Classic pipelines
 {: #pipeline_classic_images}
 
-You can use Classic pipelines to build container images by using the Container Registry job type. This job type provides context to access the {{site.data.keyword.registrylong}}, and uses the `cr build` command from the job's build script. Several of the toolchain templates use this script to build container images.
+You can use Classic pipelines to build container images by using the Container Registry job type. This job type provides context to access the {{site.data.keyword.registrylong}}, and uses the [Buildkit](https://github.com/moby/buildkit){: external} command from the job's [build script](https://github.com/open-toolchain/commons/blob/master/scripts/build_image_buildkit.sh). Several of the toolchain templates use this script to build container images.
 
-The [`cr build` command](/docs/container-registry-cli-plugin?topic=container-registry-cli-plugin-containerregcli#bx_cr_build) is deprecated. An alternative, which uses [Buildkit](https://github.com/moby/buildkit){: external} instead of the `cr build` command, is under development. This alternative will be available before the `cr build` command is removed from the {{site.data.keyword.registrylong}}. Detailed instructions for migrating your pipeline will be available then. For more information about this replacement, see the [{{site.data.keyword.registrylong}} is Deprecating Container Builds](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-container-registry-deprecating-container-builds){: external} blog post.
+The [`cr build`](/docs/container-registry-cli-plugin?topic=container-registry-cli-plugin-containerregcli#bx_cr_build) command is deprecated. To migrate your existing build container image job from the `cr build` command to the [Buildkit](https://github.com/moby/buildkit){: external} command, edit your stage properties and select your build container image job. Replace the line that sources `build_image.sh` with `source <(curl -sSL "https://raw.githubusercontent.com/open-toolchain/commons/master/scripts/build_image_buildkit.sh")`. For more information about this replacement, see the [{{site.data.keyword.registrylong}} is Deprecating Container Builds](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-container-registry-deprecating-container-builds){: external} blog post.
 {: deprecated}
 
 ## Tekton pipelines
@@ -53,5 +53,6 @@ The {{site.data.keyword.contdelivery_short}} service includes several Tekton tas
 
 * [icr-execute-in-dind-cluster](https://github.com/open-toolchain/tekton-catalog/blob/master/container-registry/README.md#icr-execute-in-dind-cluster){: external}: Runs Docker commands such as build and inspect, against a Docker engine that is running in a Kubernetes cluster. If a Docker DinD isn't available on the build cluster, a new one is deployed. Then, it pushes the resulting image to the {{site.data.keyword.registrylong}}.
 
-The [`cr build` command](/docs/container-registry-cli-plugin?topic=container-registry-cli-plugin-containerregcli#bx_cr_build) is deprecated. If you use this command, or reference it from the [icr-cr-build](https://github.com/open-toolchain/tekton-catalog/blob/master/container-registry/README.md#icr-cr-build){: external} task, you can migrate to one of the three Tekton tasks to build container images. For more information about this replacement, see the [{{site.data.keyword.registrylong}} is Deprecating Container Builds](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-container-registry-deprecating-container-builds){: external} blog post.
+The [`cr build`](/docs/container-registry-cli-plugin?topic=container-registry-cli-plugin-containerregcli#bx_cr_build) command is deprecated. If you use this command, or reference it from the [icr-cr-build](https://github.com/open-toolchain/tekton-catalog/blob/master/container-registry/README.md#icr-cr-build){: external} task, you can migrate to the [icr-containerize](https://github.com/open-toolchain/tekton-catalog/blob/master/container-registry/README.md#icr-containerize
+){:external}, [icr-execute-in-dind](https://github.com/open-toolchain/tekton-catalog/blob/master/container-registry/README.md#icr-execute-in-dind){: external}, or [icr-execute-in-dind-cluster](https://github.com/open-toolchain/tekton-catalog/blob/master/container-registry/README.md#icr-execute-in-dind-cluster){: external} Tekton tasks to build container images. For more information about this replacement, see the [{{site.data.keyword.registrylong}} is Deprecating Container Builds](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-container-registry-deprecating-container-builds){: external} blog post.
 {: deprecated}
