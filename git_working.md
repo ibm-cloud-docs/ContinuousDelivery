@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-21"
+lastupdated: "2020-11-20"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, authentication, personal access token, SSH key
 
@@ -64,6 +64,8 @@ You can locally access the Git repos that are stored in {{site.data.keyword.gitr
 {: #git_authentication}
 
 Your {{site.data.keyword.cloud_notm}} login and password are only used to authenticate with {{site.data.keyword.gitrepos}} in a web browser. You cannot use your {{site.data.keyword.cloud_notm}} user credentials to authenticate from external Git clients. To complete remote Git operations, such as `clone` or `push`, from your local Git repo, you must use a personal access token or SSH key to authenticate with {{site.data.keyword.gitrepos}}.
+
+The display name that appears for you throughout {{site.data.keyword.gitrepos}} is populated from your {{site.data.keyword.cloud_notm}} login information. This name might be visible to other users when they search for users to add to their projects. You can update the name that is displayed for you throughout {{site.data.keyword.gitrepos}} from your [Profile page](#git_update_name).
 
 ### Creating a personal access token
 {: #create_pat}
@@ -188,6 +190,14 @@ if [ "$EXPECTED_FINGERPRINT" == "$FINGERPRINT" ]; then
   cat /tmp/hostkey >> ~/.ssh/known_hosts
 fi
 ```
+
+### Updating your display name
+{: #git_update_name}
+
+You can update the display name that appears for you throughout {{site.data.keyword.gitrepos}}.
+
+1. On the [User Settings](https://us-south.git.cloud.ibm.com/profile){: external} page, in the **Main settings** section, update your full name.
+1. Click **Update profile settings** to change the name that is displayed for you throughout {{site.data.keyword.gitrepos}}. 
 
 ## Physical file and repo size limits
 {: #git_limits}
