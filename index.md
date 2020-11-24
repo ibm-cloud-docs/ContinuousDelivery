@@ -34,13 +34,13 @@ If you already have an instance of {{site.data.keyword.contdelivery_short}}, you
 {: tip}
 
 
-##Prerequisites
+## Prerequisites
 {: #cd_prereqs}
 
-Before you can create a continuous delivery toolchain from a template, you must create an instance of {{site.data.keyword.contdelivery_short}} by selecting it from the {{site.data.keyword.cloud_notm}} catalog. The toolchain integrates tools for planning, developing, deploying pipelines, and managing your applications. You can always add or remove tools from your toolchains. If you already have toolchains, you can [view existing toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing_a_toolchain). For more information about working with toolchains, see [Using toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using).
+Before you can create a continuous delivery toolchain from a template, you must create an instance of {{site.data.keyword.contdelivery_short}} by selecting it from the {{site.data.keyword.cloud_notm}} catalog. The toolchain integrates tools for planning, developing, deploying pipelines, and managing your applications. You can always add or remove tools from your toolchains. If you already have toolchains, you can [view existing toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing_a_toolchain). For more information about working with toolchains, see [Using toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using).
 
 
-##Step 1: Select a toolchain template
+## Step 1: Select a toolchain template
 {: #select_a_toolchain_template}
 
 To quickly find the toolchain template that addresses your specific requirements, select the appropriate checkboxes to filter by deployment target and tools.
@@ -55,7 +55,7 @@ To quickly find the toolchain template that addresses your specific requirements
  The diagram in the following image is an example. When you create a toolchain, the diagram shows each tool integration that is part of the toolchain.
  ![Toolchain_diagram](images/toolchain_diagram2.png)
  
-##Step 2: Create a toolchain 
+## Step 2: Create a toolchain 
 {: #create_a_toolchain}
  
 1. Review the default information for the toolchain settings:
@@ -78,7 +78,7 @@ To quickly find the toolchain template that addresses your specific requirements
  * If you configured Slack, the toolchain is set up to send notifications about deployment status to the Slack channel that you specified.
  * If you configured a source code tool integration such as GitHub, the sample GitHub repo is cloned into your GitHub account.
 
-##Next steps
+## Next steps
 {: #next_steps}
 
 Check out one of these tutorials on the [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external}:
