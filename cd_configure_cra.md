@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-11-02"
+lastupdated: "2020-11-27"
 
 keywords: Code Risk Analyzer, code repositories, DevOps Insights, scan pull requests, Tekton pipelines
 
@@ -26,8 +26,6 @@ subcollection: ContinuousDelivery
 # Configuring Code Risk Analyzer
 {: #cd-configure-cra-repos}
 
-Use of this service is not guaranteed to find all vulnerabilities in your applications. The application owner is responsible for testing any fixes that are recommended by the service.
-{: important}
 
 Code Risk Analyzer takes all of your Git-based code, configurations, and deployment artifacts, builds a dependency graph, and runs a pipeline of regulatory compliance control checks. It is embedded into existing development workflows, such as creating a change request or promoting a code change into the main development branch. It produces a bill of materials that reflects the composition of a deployment. And it identifies specific versions of packages and Linux&reg; operating systems distributions that contain published vulnerabilities.
 {: shortdesc}
@@ -205,13 +203,20 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
  a. Specify the Git repo and URL (https://github.com/open-toolchain/tekton-catalog) that contains the Tekton pipeline definition and related artifacts.
 
- b. Select the **master** branch within your Git repo.
+ b. Select the **master** branch.
  
- c. Specify the **toolchain** path to your pipeline definition within the Git repo. You can reference a specific definition within the same repo. You can also add multiple definition repos, if they are integrated with the toolchain.
+ c. Add the `toolchain` path. This is the path to your pipeline definition within the Git repo. You can reference a specific definition within the same repo. You can also add multiple definition repos, if they are integrated with the toolchain.
  
- d. Repeat the previous two steps to add the `git`, `utils`, `cra`, and `cra/sample` paths to the master branch within your Git repo.
+ d. Click **Validate** and save your changes.
  
- e. Click **Validate** and save your changes.
+ e. Repeat steps a and b to add each of the following paths to the master branch within your Git repo:
+ 
+  * `git`
+  * `util`
+  * `cra`
+  * `cra/sample`
+ 
+ f. Click **Validate** and save your changes.
 
  The pipeline definition is updated automatically.
  
@@ -220,8 +225,24 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
  The private worker must be defined in the same toolchain as your Tekton pipeline.
  {: important}
 
-1. In the **Triggers** section, click **Add trigger** to create a new Git repository trigger to run when the specified Git event occurs for the specified Git repo and branch. Then, associate that trigger with an event listener. For GitHub repos, select `github-pr-listener`. For Git Repository and Issue Tracking repos, select `gitlab-pr-listener`. You can add a trigger for each repo that you want to run the Code Risk Analyzer pipeline for.
+1. In the **Triggers** section, click **Add trigger** to create a new Git repository trigger to run when a Pull Request is opened or updated for the specified Git repo and branch. You can add a trigger for each repo that you want to run the Code Risk Analyzer for.
+
+ a. Select the repo that you want to run the pipeline on.
+
+ b. Select the target branch for the Pull Request, such as **master**.
+ 
+ c. Specify the events for the pipeline to run on. Currently, you must specify the `When a pull request is opened or updated` option.
+ 
+ d. Associate the trigger with an event listener:
+ 
+ * For GitHub repos, select **github-pr-listener**.
+ * For {{site.data.keyword.gitrepos}} repos, select **gitlab-pr-listener**.
+ * For {{site.data.keyword.ghe_short}} repos, select **github-ent-pr-listener**.
+
 1. Save your changes.
 1. In the **Environment properties** section, click **Add property**.
 1. Select **Secure** and specify the `apikey` property key to use the API key that you previously specified. You can access the Secure property in your Tekton pipeline resources. For more information about this property, see [Tekton Pipelines environment and resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment).
 1. Click **Save**.
+
+Use of this service is not guaranteed to find all vulnerabilities in your applications. The application owner is responsible for testing any fixes that are recommended by the service.
+{: important}
