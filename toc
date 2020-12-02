@@ -141,6 +141,8 @@ Continuous Delivery
         toolchains_cf_security.md
         cd_personal_data.md
         cd_data_security.md
+        
+    cd_monitoring_metrics.md    
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
