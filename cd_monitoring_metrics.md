@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-11-30"
+lastupdated: "2020-12-07"
 
 keywords: Sysdig, IBM Cloud, monitoring, supertenant
 
@@ -86,7 +86,7 @@ Complete the following steps to launch the Sysdig web UI from the {{site.data.ke
 
 Complete the following steps to launch the Sysdig web UI from the **Observability** page:
 
-1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Sysdig-launch).
+1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 1. Select **DASHBOARDS**.
 1. In the **Default Dashboards** section, expand **IBM**.
 1. Choose the {{site.data.keyword.contdelivery_short}} dashboard from the list.
