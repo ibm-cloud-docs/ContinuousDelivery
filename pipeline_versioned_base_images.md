@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019, 2020
-lastupdated: "2020-09-16"
+lastupdated: "2020-12-07"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -74,7 +74,7 @@ The following available image versions are listed in descending order, starting 
  ### Version 2.9
  {: #version_2_9}
 
-To view the contents of version 2.8, from the running image, type `default_versions.sh`. This image includes the following tools:
+To view the contents of version 2.9, from the running image, type `default_versions.sh`. This image includes the following tools:
 
 ```
 	# node --version
