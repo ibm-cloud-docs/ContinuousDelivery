@@ -47,7 +47,7 @@ If you choose the `Latest` option, the pipeline jobs are run with the current im
  After version 2.0, images no longer include grunt or python. If these tools are required for your build, you can install them manually. To install grunt, run `npm install -g grunt-cli`. Make sure that you don't change the Node.js version after you install grunt. To install python, run `apt-get -qq update && apt-get -qq install -y python`.
  {: important}
 
-Starting with version 2.2, images are available on [DockerHub](https://hub.docker.com/){: external}.
+Starting with and including version 2.2, images are available on [DockerHub](https://hub.docker.com/){: external}.
 
 | Base image version | DockerHub image version |
 |:-----------------|:-----------------|
