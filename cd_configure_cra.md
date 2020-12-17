@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-11-27"
+lastupdated: "2020-12-17"
 
 keywords: Code Risk Analyzer, code repositories, DevOps Insights, scan pull requests, Tekton pipelines
 
@@ -212,7 +212,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
  e. Repeat steps a and b to add each of the following paths to the master branch within your Git repo:
  
   * `git`
-  * `util`
+  * `utils`
   * `cra`
   * `cra/sample`
  
