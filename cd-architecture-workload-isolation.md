@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-08-20"
+lastupdated: "2020-12-18"
 
 keywords: public isolation for IBM Cloud Continuous Delivery, compute isolation for Continuous Delivery, Continuous Delivery architecture, workload isolation in Continuous Delivery
 
@@ -45,7 +45,7 @@ The following table lists the major components of the {{site.data.keyword.contde
 
 {{site.data.keyword.deliverypipeline}} jobs and steps run directly within containers on shared (IBM-managed) or private (customer-managed) Kubernetes worker nodes. All other components of the {{site.data.keyword.contdelivery_short}} service are deployed as microservices within IBM-managed Kubernetes clusters. These components are logically partitioned across a set of clusters. Each set of clusters is replicated across three zones in each region in which the {{site.data.keyword.contdelivery_short}} service is available.
 
- ![Continuous Delivery clusters](images/cd_cluster_arch.png)
+ ![Continuous Delivery clusters](images/CD_cluster_arch.png)
  
 For more information about availability, see [High availability and disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-ha-dr).
  
@@ -55,14 +55,16 @@ All {{site.data.keyword.contdelivery_short}} service plans share management, iso
 ## {{site.data.keyword.contdelivery_short}} workload isolation
 {: #cd-workload-isolation}
 
-All IBM-managed components of the {{site.data.keyword.contdelivery_short}} service support shared compute workloads. Each {{site.data.keyword.deliverypipeline}} worker job or step, shared or private, runs in its own container.
+The IBM-managed components of the {{site.data.keyword.contdelivery_short}} service are organized to provide compute isolation between the multi-tenant toolchain platform workloads and the single tenant {{site.data.keyword.deliverypipeline}} worker workloads of the service.
 
-The following diagram shows the management and isolation characteristics of the {{site.data.keyword.contdelivery_short}} service components by using visual indicators for each component.
+The following diagram shows the management and isolation characteristics of the {{site.data.keyword.contdelivery_short}} service components.
 
-* Solid outlines represent support for container-level compute workload isolation
-* Dashed outlines represent support for shared compute workloads
+* The **Multi-tenant toolchain platform** section represents the IBM-managed components of the service that provide multi-tenant, or shared, workloads.
+* The **Container level compute workload isolation** section represents the IBM-managed {{site.data.keyword.deliverypipeline}} shared workers component of the service. This component supports single tenant workloads.
+* The multi-tenant and single tenant workloads each run in different sets of clusters, and are compute-isolated from each other.
+* Each {{site.data.keyword.deliverypipeline}} job or step runs in its own container that is compute-isolated from the other containers within a cluster. This isolation applies to both IBM-managed shared workers and customer-managed shared workers.
 
- ![Continuous Delivery compute workloads](images/cd-compute-arch.png)
+ ![Continuous Delivery compute workloads](images/CD_Compute_Arch.png)
 
 ## {{site.data.keyword.contdelivery_short}} dependencies
 {: #cd-dependencies}
@@ -101,13 +103,9 @@ The following table lists the main dependencies of the {{site.data.keyword.contd
 
 For more information about the key components of the {{site.data.keyword.cloud_notm}} Platform, see [What is the {{site.data.keyword.cloud_notm}} Platform?](/docs/overview?topic=overview-whatis-platform)
 
-The following diagram shows the {{site.data.keyword.contdelivery_short}} dependencies by using visual indicators for each element.
+The following diagram shows the {{site.data.keyword.contdelivery_short}} dependencies.
 
-* Dashed outlines represent global platform components or services
-* Solid outlines represent regional services
-* Bold outlines (data services and logging services) represent participation in the processing of customer-owned data on behalf of the {{site.data.keyword.contdelivery_short}} service
-
-![Continuous Delivery dependencies](images/cd-dependencies-arch.png)
+![Continuous Delivery dependencies](images/CD_Dependencies_Arch.png)
 
 Excluding data backups, customer-owned data that is provided to the {{site.data.keyword.contdelivery_short}} service in a specific region is exchanged only with data and logging services in the same region. Data backups are stored in Cloud Object Storage cross-region buckets.
 
