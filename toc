@@ -60,9 +60,6 @@ Continuous Delivery
         
         deploy_button.md
         [Creating custom toolchain templates](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates)
-
-    {: .topicgroup}
-    Delivery Pipelines
     
     {: .topicgroup}
     Delivery Pipeline
