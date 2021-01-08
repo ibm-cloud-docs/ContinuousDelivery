@@ -193,6 +193,4 @@ Continuous Delivery
         troubleshoot_git.md
         troubleshoot_toolchains.md
         troubleshoot_web_ide.md
-    
-    release_notes_cd.md
     {: .navgroup-end}
