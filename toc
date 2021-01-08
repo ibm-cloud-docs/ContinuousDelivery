@@ -6,7 +6,7 @@ Continuous Delivery
 
     {: .navgroup id="learn"}
     index.md
-    [What is Continuous Delivery?](https://www.ibm.com/cloud/learn/continuous-delivery)
+    [What is continuous delivery?](https://www.ibm.com/cloud/learn/continuous-delivery)
     [Why IBM Cloud Continuous Delivery?](https://www.ibm.com/cloud/continuous-delivery)
     cd_about.md
     devops_intro.md
@@ -60,7 +60,8 @@ Continuous Delivery
         
         deploy_button.md
         [Creating custom toolchain templates](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates)
-        
+
+    
     {: .topicgroup}
     Delivery Pipeline
         pipeline_about.md
@@ -72,7 +73,12 @@ Continuous Delivery
         pipeline_custom_docker_images.md
         install_private_workers.md
         private_workers.md
-
+    
+    {: .topicgroup}
+    Pipeline Private Workers
+        install_private_workers.md
+        private_workers.md
+    
     {: .topicgroup}
     Eclipse Orion Web IDE
         web_ide.md
@@ -84,7 +90,7 @@ Continuous Delivery
         git_working.md
         git_locally.md
         git_toolchains.md
-    
+        
     {: .topicgroup}
        Code Risk Analyzer
            cd_configure_cra.md
@@ -101,6 +107,7 @@ Continuous Delivery
         migration_guide.md
         aggregate_mult_sources.md
         publish_test_data.md
+        
 
     {: .topicgroup}
     Using the IBM Cloud CLI to integrate IBM Continuous Delivery Pipeline with DevOps Insights

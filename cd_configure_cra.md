@@ -246,3 +246,4 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
 Use of this service is not guaranteed to find all vulnerabilities in your applications. The application owner is responsible for testing any fixes that are recommended by the service.
 {: important}
+
