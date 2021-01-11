@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2019, 2020
-lastupdated: "2020-12-15"
+  years: 2019, 2021
+lastupdated: "2021-01-11"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -51,6 +51,7 @@ Starting with and including version 2.2, images are available on [DockerHub](htt
 
 | Base image version | DockerHub image version |
 |:-----------------|:-----------------|
+| 2.11 | `ibmcom/pipeline-base-image:2.11`|
 | 2.10 | `ibmcom/pipeline-base-image:2.10`|
 | 2.9 | `ibmcom/pipeline-base-image:2.9`|
 | 2.8 | `ibmcom/pipeline-base-image:2.8`|
@@ -71,6 +72,140 @@ The following available image versions are listed in descending order, starting 
  
  The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
  {: tip}
+ 
+ ### Version 2.11
+ {: #version_2_11}
+
+To view the contents of version 2.11, from the running image, type `default_versions.sh`. This image includes the following tools:
+
+```
+	# node --version
+	v12.20.1
+
+	# npm --version
+	6.14.11
+
+	# jq --version
+	jq-1.6
+
+	# yq --version
+	yq version 2.4.1
+
+	# yq3 --version
+	yq version 3.4.1
+
+	# kubectl version --client
+	Client Version: version.Info{Major:"1", Minor:"17+", GitVersion:"v1.17.16-rc.0", GitCommit:"737e2c461a2999fa242d39e77b9252d0eee7167e", GitTreeState:"clean", BuildDate:"2020-12-09T11:14:02Z", GoVersion:"go1.13.15", Compiler:"gc", Platform:"linux/amd64"}
+
+	# buildctl --version
+	buildctl github.com/moby/buildkit v0.8.0 73fe4736135645a342abc7b587bba0994cccf0f9
+
+	# helm version --client
+	Client: &version.Version{SemVer:"v2.17.0", GitCommit:"a690bad98af45b015bd3da1a41f6218b1a451dbe", GitTreeState:"clean"}
+
+	# helm3 version --client
+	version.BuildInfo{Version:"v3.4.2", GitCommit:"23dd3af5e19a02d4f4baa5b2f242645a1a3af629", GitTreeState:"clean", GoVersion:"go1.14.13"}
+
+	# ibmcloud -version
+	ibmcloud version 1.3.0+4308925-2020-12-16T07:53:49+00:00
+
+	# ibmcloud plugin list
+	Listing installed plug-ins...
+
+	Plugin Name                            Version   Status   Private endpoints supported   
+	container-service/kubernetes-service   1.0.208            false   
+	doi                                    0.2.9              false   
+	schematics                             1.4.25             false   
+	cloud-functions/wsk/functions/fn       1.0.49             false   
+	cloud-internet-services                1.11.0             false   
+	container-registry                     0.1.497            false   
+
+
+	# ibmcloud dev --version
+	ibmcloud dev version 2.5.1
+
+	# java -version
+	openjdk version "11.0.9" 2020-10-20
+	OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.9+11)
+	Eclipse OpenJ9 VM AdoptOpenJDK (build openj9-0.23.0, JRE 11 Linux amd64-64-Bit Compressed References 20201022_810 (JIT enabled, AOT enabled)
+	OpenJ9   - 0394ef754
+	OMR      - 582366ae5
+	JCL      - 3b09cfd7e9 based on jdk-11.0.9+11)
+
+	# ant -version
+	Apache Ant(TM) version 1.10.9 compiled on September 27 2020
+
+	# mvn -version
+	Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+	Maven home: /opt/IBM/maven
+	Java version: 11.0.9, vendor: AdoptOpenJDK, runtime: /usr/local/openjdk-11
+	Default locale: c.u_US, platform encoding: UTF-8
+	OS name: "linux", version: "4.19.121-linuxkit", arch: "amd64", family: "unix"
+
+	# gradle -version
+
+	Welcome to Gradle 6.7.1!
+
+	Here are the highlights of this release:
+	 - File system watching is ready for production use
+	 - Declare the version of Java your build requires
+	 - Java 15 support
+
+	For more details see https://docs.gradle.org/6.7.1/release-notes.html
+
+
+	------------------------------------------------------------
+	Gradle 6.7.1
+	------------------------------------------------------------
+
+	Build time:   2020-11-16 17:09:24 UTC
+	Revision:     2972ff02f3210d2ceed2f1ea880f026acfbab5c0
+
+	Kotlin:       1.3.72
+	Groovy:       2.5.12
+	Ant:          Apache Ant(TM) version 1.10.8 compiled on May 10 2020
+	JVM:          11.0.9 (Eclipse OpenJ9 openj9-0.23.0)
+	OS:           Linux 4.19.121-linuxkit amd64
+
+
+	# oc version
+	oc v3.11.0+0cbc58b
+	kubernetes v1.11.0+d4cacc0
+	features: Basic-Auth GSSAPI Kerberos SPNEGO
+
+	# zip
+	Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+	This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+
+	# unzip
+	UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP.
+
+	# git --version
+	git version 2.17.1
+
+	# curl
+	curl 7.58.0 (x86_64-pc-linux-gnu) libcurl/7.58.0 OpenSSL/1.1.1 zlib/1.2.11 libidn2/2.0.4 libpsl/0.19.1 (+libidn2/2.0.4) nghttp2/1.30.0 librtmp/2.3
+
+	# wget
+	GNU Wget 1.19.4 built on linux-gnu.
+
+	# openssl version
+	OpenSSL 1.1.1  11 Sep 2018
+
+	# make
+	GNU Make 4.1
+
+	# docker
+	Client: Docker Engine - Community
+	 Version:           19.03.9
+	 API version:       1.40
+	 Go version:        go1.13.10
+	 Git commit:        9d988398e7
+	 Built:             Fri May 15 00:22:47 2020
+	 OS/Arch:           linux/amd64
+	 Experimental:      false
+```
+ {: codeblock}
  
  ### Version 2.10
  {: #version_2_10}

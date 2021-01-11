@@ -75,6 +75,9 @@ Continuous Delivery
         private_workers.md
     
     {: .topicgroup}
+    Delivery Pipeline
+    
+    {: .topicgroup}
     Pipeline Private Workers
         install_private_workers.md
         private_workers.md
