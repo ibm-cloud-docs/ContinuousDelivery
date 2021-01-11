@@ -60,22 +60,22 @@ Continuous Delivery
         
         deploy_button.md
         [Creating custom toolchain templates](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates)
-
-    
+        
     {: .topicgroup}
-    Delivery Pipeline
-        pipeline_about.md
-        pipeline_working.md
-        tekton_pipeline.md
-        pipeline_build_deploy.md
-        pipeline_container_images.md
-        pipeline_versioned_base_images.md
-        pipeline_custom_docker_images.md
-        install_private_workers.md
-        private_workers.md
-    
-    {: .topicgroup}
-    Delivery Pipeline
+    Delivery Pipelines
+        
+        {: .topicgroup}
+        Delivery pipeline (Classic)
+            pipeline_about.md
+            pipeline_working.md
+            pipeline_build_deploy.md
+            pipeline_container_images.md
+            pipeline_versioned_base_images.md
+            pipeline_custom_docker_images.md
+        
+        {: .topicgroup}   
+        Delivery pipeline (Tekton)
+            tekton_pipeline.md
     
     {: .topicgroup}
     Pipeline Private Workers
