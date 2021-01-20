@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-12-09"
+  years: 2019, 2021
+lastupdated: "2021-01-20"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -26,6 +26,8 @@ subcollection: ContinuousDelivery
 
 [Tekton Pipelines](https://tekton.dev/){:external} is an open source project that you can use to configure and run Continuous Integration and {{site.data.keyword.contdelivery_short}} pipelines within a Kubernetes cluster. Tekton pipelines are defined in yaml files, which are typically stored in a Git repository (repo).
 {: shortdesc}
+
+ ![Hybrid Tekton Pipelines](images/Hybrid_tekton_workers.png)
 
 Tekton provides a set of [Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/){:external} extensions to Kubernetes to define pipelines. The following basic Tekton Pipeline resources are included in these extensions:
 
