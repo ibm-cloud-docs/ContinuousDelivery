@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-04-17"
+  years: 2019, 2021
+lastupdated: "2021-01-25"
 
 keywords: devops insights, quality, dashboard, trends, data sets, configure data, quality data, managing data sets, code coverage, test, tests, verification, app, sonarqube
 
@@ -36,11 +36,10 @@ For more information about defining a policy, see [Defining policies and rules](
 View your current data sets by browsing your Quality Dashboard page. You can rearrange your data in the table to be in a more convenient order. To view your data sets, use the following steps:
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**.
-2. Make sure the location that is selected is either Dallas, Frankfurt, or London.
-3. Select your toolchain from the table.
-4. Click the **{{site.data.keyword.DRA_short}}** tile.
-5. Select **Quality Dashboard**.
-6. Click the **Overflow** icon ![ellipsis icon](images/overflow-icon-2.svg) > **Configure data set**.
+2. Select your toolchain from the table.
+3. Click the **{{site.data.keyword.DRA_short}}** tile.
+4. Select **Quality Dashboard**.
+5. Click the **Overflow** icon ![ellipsis icon](images/overflow-icon-2.svg) > **Configure data set**.
 
 
 ## Adding predefined data sets
@@ -49,14 +48,13 @@ View your current data sets by browsing your Quality Dashboard page. You can rea
 To add a data set to the application's test, use the following steps:
 
 1. Click the **menu** icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
-2. Make sure the location that is selected is either Dallas, Frankfurt, or London.
-3. Select your toolchain from the table.
-4. Click the **{{site.data.keyword.DRA_short}}** tile.
-5. Click **Quality Dashboard**.
-6. Click the **Overflow** icon ![ellipsis icon](images/overflow-icon-2.svg) > **Configure data set**.
-7. Click **Add Quality Data Set**.
-8. Select **Predefined Quality Data Sets**.
-9. Complete all required fields, and click **Submit**
+2. Select your toolchain from the table.
+3. Click the **{{site.data.keyword.DRA_short}}** tile.
+4. Click **Quality Dashboard**.
+5. Click the **Overflow** icon ![ellipsis icon](images/overflow-icon-2.svg) > **Configure data set**.
+6. Click **Add Quality Data Set**.
+7. Select **Predefined Quality Data Sets**.
+8. Complete all required fields, and click **Submit**
 
 The following are the seven pre-defined tags that are provided by {{site.data.keyword.DRA_short}}. 
 
@@ -78,14 +76,14 @@ The following are the seven pre-defined tags that are provided by {{site.data.ke
 You can add your own custom data sets. Custom data sets support JUnit or XUnit, Mocha, Cobertura, lcov, Istanbul, and JaCoCo. To add custom data sets, use the following steps:
 
 1. Click the **menu** icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
-2. Make sure the location that is selected is either Dallas, Frankfurt, or London.
-3. Select your toolchain from the table.
-4. Click the **{{site.data.keyword.DRA_short}}** tile.
-5. Click **Quality Dashboard**.
-6. Click the **Overflow** icon ![ellipsis icon](images/overflow-icon-2.svg) > **Configure data set**.
-7. Click **Add Quality Data Set**.
-8. Select **Custom Quality Data Sets**.
-9. Complete all required fields, and click **Submit**
+2. Select your toolchain from the table.
+3. Click the **{{site.data.keyword.DRA_short}}** tile.
+4. Click **Quality Dashboard**.
+5. Click the **Overflow** icon ![ellipsis icon](images/overflow-icon-2.svg) > **Configure data set**.
+6. Click **Add Quality Data Set**.
+7. Select **Custom Quality Data Sets**.
+8. Complete all required fields, and click **Submit**
 
 If a custom data set is deleted, any test results for that custom data set are deleted. For more information about deleting data sets, see [Deleting your {{site.data.keyword.DRA_short}} data](/docs/ContinuousDelivery?topic=ContinuousDelivery-deleting_data).
 {: note}
+
