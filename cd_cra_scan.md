@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-11-02"
+  years: 2020, 2021
+lastupdated: "2021-01-27"
 
 keywords: Code Risk Analyzer, code repositories, DevOps Insights, scan pull requests, Tekton pipelines
 
@@ -31,5 +31,5 @@ After you configure Code Risk Analyzer for your code repositories (repos), you c
 1. The Code Risk Analyzer pipeline that you previously configured runs automatically.
 1. The pipeline discovers your code repo dependencies, such as application packages, container images, or operating system packages.
 1. The pipeline identifies any vulnerabilities that are associated with these dependencies and posts a comment in your pull request. If too many vulnerabilities are found, the pull request comment might display only a subset of the vulnerabilities.
-1. The pipeline scans Dockerfiles and Kubernetes yaml files for best practices, and then posts a comment in your pull request.
+1. The pipeline scans Dockerfiles, Kubernetes yaml files, and Terraform files for best practices, and then posts a comment in your pull request.
 1. The pipeline adds a link to the Bill of Materials file in your pull request.
