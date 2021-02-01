@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-01-20"
+lastupdated: "2021-02-01"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -126,7 +126,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
  **Git repository triggers** run when the specified Git event type occurs for the specified Git repo and branch.
   
- You can access the webhook payload that is delivered to a Git trigger from your Tekton pipeline resources. Although the exact fields are repo-specific, the general syntax for the webhook payload is `$(event.payloadFieldName)`.
+ You can access the webhook payload that is delivered to a Git trigger from your Tekton pipeline resources. Although the exact fields are repo-specific, the general syntax for the webhook payload is `$(event.payloadFieldName)`. Before you can create a webhook, you must authorize Git Admin access for the corresponding Git integration. To authorize Git Admin access, [configure and save the Git integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#configuring_a_tool_integration) again.
  {: tip}
 
  **Timed triggers** run at a scheduled time that is defined by the [CRON](http://crontab.org/){:external} value. The CRON expression for **timed triggers** is based on the [UNIX crontab syntax](http://crontab.org/){:external} and is a sequence of five time and date fields: `minute`, `hour`, `day of the month`, `month`, and `day of the week`. These fields are separated by spaces in the format `X X X X X`. The maximum frequency for a timed trigger is once every five minutes. The following examples show strings that use various timed frequencies.
