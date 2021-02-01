@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-12-17"
+  years: 2020, 2021
+lastupdated: "2021-01-29"
 
 keywords: Code Risk Analyzer, code repositories, DevOps Insights, scan pull requests, Tekton pipelines
 
@@ -37,8 +37,10 @@ Code Risk Analyzer supports the Java&trade;, Node.js, and Python languages. The 
 |Java		|The repo must use Maven. Dependencies are calculated by using the `pom.xml` file.		|
 |Node.js		|Dependencies are calculated by using the `package-lock.json` file.		|
 |Python		|Dependencies are calculated by using the `requirements.txt` file.		|
+|Golang		|Supports `go mod` and `go dep` dependency management. For `go mod`, the `go.sum` file must be in the repo. For `go dep`, the `Gopkg.lock` file must be in the repo.		|
 | Dockerfiles		|Files with the `Dockerfile` pattern in the repo are considered. For container images, the Debian, Alpine, and Ubutu Linux distros are supported.  		|
 | Kubernetes		|Files that are suffixed with `.yaml` and `.yml` are considered. The `kind` value must be set to `Pod`, `ReplicaSet`, `ReplicationController`, `Deployment`, `Daemonset`, `Statefulset`, `Job`, or `CronJob`.   		|
+|Terraform		|The repo must use Terraform v0.13.5 and IBM Cloud as a Terraform provider for compliance checks.		|
 {: caption="Table 1. Supported content" caption-side="top"}
 
 Code Risk Analyzer supports only github.com repos, and {{site.data.keyword.gitrepos}} repos that are hosted by {{site.data.keyword.contdelivery_full}}.
@@ -239,11 +241,22 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
  * For {{site.data.keyword.gitrepos}} repos, select **gitlab-pr-listener**.
  * For {{site.data.keyword.ghe_short}} repos, select **github-ent-pr-listener**.
 
+1. Optional. If the repo contains Terraform files, in the **Triggers** section, specify the directory within your Git repo that you want to run Terraform scanning on.
+
+ a. In the **Show trigger properties** section, click **Add**.
+
+ b. Select **Text** and then specify the following property keys:
+ 
+ * `tf-dir` to input the directory path for your Terraform files.
+ * Optional. `tf-var-file` to input a comma-delimited list of variable definition files. These files are passed to the Terraform command by using the `var-file` option. Specify the variable definition files relative to the directory path in `tf-dir`.
+ 
 1. Save your changes.
-1. In the **Environment properties** section, click **Add property**.
-1. Select **Secure** and specify the `apikey` property key to use the API key that you previously specified. You can access the Secure property in your Tekton pipeline resources. For more information about this property, see [Tekton Pipelines environment and resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment).
+1. In the **Environment properties** section, click **Add property**, and then select **Secure**.
+
+* Enter the `apikey` property key to use the API key that you previously specified. You can access the Secure property in your Tekton pipeline resources. For more information about this property, see [Tekton Pipelines environment and resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment).
+* Optional. Enter the property key for each environment variable that you want to use for Terraform.
+
 1. Click **Save**.
 
 Use of this service is not guaranteed to find all vulnerabilities in your applications. The application owner is responsible for testing any fixes that are recommended by the service.
 {: important}
-
