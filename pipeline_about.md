@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2016, 2020
-lastupdated: "2020-07-22"
+  years: 2016, 2021
+lastupdated: "2021-02-02"
 
-keywords: run jobs, sequences of stages, job types, Delivery Pipeline
+keywords: run jobs, sequences of stages, job types, Delivery Pipeline, Classic
 
 subcollection: ContinuousDelivery
 
@@ -21,11 +21,14 @@ subcollection: ContinuousDelivery
 {:download: .download}
 
 
-# Delivery Pipeline overview
+# Classic Delivery Pipeline overview
 {: #deliverypipeline_about}
 
-{{site.data.keyword.contdelivery_full}} includes Delivery Pipeline to build, test, and deploy in a repeatable way with minimal human intervention. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
+{{site.data.keyword.contdelivery_full}} includes the Classic Delivery Pipeline to build, test, and deploy in a repeatable way with minimal human intervention. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
 {:shortdesc}
+
+For information about Tekton delivery pipelines, see [Working with Tekton pipelines](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines#configure_tekton_pipeline).
+{: tip}
 
 Your permissions to view, modify, or run a pipeline are based on the access control for the toolchain that owns the pipeline. For more information about access control for toolchains, see [Managing access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security) and [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-cf-security).
 {: important}
@@ -103,20 +106,19 @@ Many of the fields that are available in Build jobs are common across multiple B
 
 The following Builder types are available:
 
-* **Simple** - Jobs that use the **Simple** builder type take the current stage's input and without modifying it, archive it for use by future stages. Typically, the **Simple** builder type is only useful when the stage's input is from an SCM repository.
-* **Ant** - Use this builder type to use Apache Ant files to manage the build job.
-  * **Build script** - This builder type can be any valid build script. By default, this builder type is set to 'ant'.
-  * **Working directory** - Specifies the directory where the script is run.
-  * **Build archive directory** - Specifies the directory that contains the job's output to be archived for use by a subsequent stage.
-  * **Enable test report** - Select this checkbox to specify that the build job runs tests that produce result files in JUnit XML format. A report based on the result files is displayed on the Tests tab of the Job Results page. If any tests failed, the job is marked as failed.
-  * **Enable code coverage report** - Select this checkbox to show more fields that you can use for the code coverage report. You can specify the Coverage runner (such as Istanbul, JaCoCo, ore Cobertura), the location of the Coverage result file, and the Coverage result directory, relative to the Working directory.
-* **Container Registry**
-* **Gradle (Artifactory, Nexus, or SonarQube)**
-* **Grunt**
-* **IBM Globalization Pipeline**
-* **Maven (Artifactory, Nexus, or SonarQube)**
-* **npm (Artifactory or Nexus)**
-* **Shell Script**
+| Builder type | Description | Supported job types|
+|:-----------------|:-----------------|:-----------------|
+| Simple | Archives the current stage's input without modification for use by future stages. Typically, this builder type is useful only when the stage's input is from an SCM repository.  | <ul><li>**Pipeline image version**: Runs in a container by using a built-in docker image that provides a variety of built-in commands. To adopt newer versions of those commands, use a newer image version.</li></ul> |
+| Ant | Uses Apache Ant files to manage the build job. | <ul><li>**Pipeline image version**: Runs in a container by using a built-in docker image that provides a variety of built-in commands. To adopt newer versions of those commands, use a newer image version.</li><li>**Build script**: Runs in a new Ubuntu shell whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.</li><li>**Working directory**: Specifies the directory where the script is run.</li><li>**Build archive directory**: Specifies the directory that contains the job's output to archive for use by a subsequent stage.</li><li>**Enable test report**: Select this checkbox to specify that the build job runs tests that produce result files in JUnit XML format. A report based on the result files is displayed on the Tests tab of the Job Results page. If any tests fail, the job is marked as failed.</li><li>**Enable code coverage report**: Select this checkbox to show more fields that you can use for the code coverage report. You can specify the Coverage runner (such as Istanbul, JaCoCo, and Cobertura), the location of the Coverage result file, and the Coverage result directory, relative to the Working directory.</li></ul> |
+| Container registry | Builds docker images and uploads them to the IBM Cloud Container Registry. | <ul><li> **Pipeline image version**: Runs in a container by using a built-in docker image that provides a variety of built-in commands. To adopt newer versions of those commands, use a newer image version.</li><li>**API key**: IBM Cloud API keys provide permissions to account resources.</li><li>**Container Registry namespace**: The namespace where you want to store your built image.</li><li>**Docker image name**: The name of the image that this job builds and uploads to the IBM Cloud Container Registry.</li><li>**Build script**: Runs in a new Ubuntu shell whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.</li><li>**Working directory**: Specifies the directory where the script is run.</li><li>**Build archive directory**: Specifies the directory that contains the job's output to archive for use by a subsequent stage.</li><li>**Enable test report**: Select this checkbox to specify that the build job runs tests that produce result files in JUnit XML format. A report based on the result files is displayed on the Tests tab of the Job Results page. If any tests fail, the job is marked as failed.</li><li>**Enable code coverage report**: Select this checkbox to show more fields that you can use for the code coverage report. You can specify the Coverage runner (such as Istanbul, JaCoCo, and Cobertura), the location of the Coverage result file, and the Coverage result directory, relative to the Working directory.</li> |
+| Custom Docker image | Build by using your custom docker image with fine-grained control over the versions of node, java, or other tools. | <ul><li>**Docker image name**: The name of the image that this job builds and uploads to the IBM Cloud Container Registry.</li><li>**Build script**: Runs in a new Ubuntu shell whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.</li><li>**Build archive directory**: Specifies the directory that contains the job's output to be archived for use by a subsequent stage.</li><li>**Enable test report**: Select this checkbox to specify that the build job runs tests that produce result files in JUnit XML format. A report based on the result files is displayed on the Tests tab of the Job Results page. If any tests fail, the job is marked as failed.</li><li>**Enable code coverage report**: Select this checkbox to show more fields that you can use for the code coverage report. You can specify the Coverage runner (such as Istanbul, JaCoCo, and Cobertura), the location of the Coverage result file, and the Coverage result directory, relative to the Working directory.</li></ul> |
+| Gradle| Build by using Gradle. | <ul><li>**Pipeline image version**: Runs in a container by using a built-in docker image, which provides a variety of built-in commands. To adopt newer versions of those commands, use a newer image version.</li><li>**Build script**: Runs in a new Ubuntu shell whenever the job runs. In the script field, enter a script or reference scripts that are stored in to your project’s source control.</li><li>**Working directory**: Specifies the directory where the script is run.</li><li>**Build archive directory** - Specifies the directory that contains the job's output to be archived for use by a subsequent stage.</li><li>**Enable test report**: Select this checkbox to specify that the build job runs tests that produce result files in JUnit XML format. A report based on the result files is displayed on the Tests tab of the Job Results page. If any tests fail, the job is marked as failed.</li><li>**Enable code coverage report**: Select this checkbox to show more fields that you can use for the code coverage report. You can specify the Coverage runner (such as Istanbul, JaCoCo, and Cobertura), the location of the Coverage result file, and the Coverage result directory, relative to the Working directory.</li></ul></li>|
+| Grunt | Build by using Grunt. | <ul><li>**Pipeline image version**: Runs in a container using a built-in docker image that provides a variety of built-in commands. To adopt newer versions of those commands, use a newer image version.</li><li>**Build script**: Runs in a new Ubuntu shell whenever the job runs. In the script field, enter a script or reference scripts that are stored in to your project’s source control.</li><li>**Working directory**: Specifies the directory where the script is run.</li><li>**Build archive directory**: Specifies the directory that contains the job's output to archive for use by a subsequent stage.</li><li>**Enable test report**: Select this checkbox to specify that the build job runs tests that produce result files in JUnit XML format. A report based on the result files is displayed on the Tests tab of the Job Results page. If any tests fail, the job is marked as failed.</li><li>**Enable code coverage report**: Select this checkbox to show more fields that you can use for the code coverage report. You can specify the Coverage runner (such as Istanbul, JaCoCo, and Cobertura), the location of the Coverage result file, and the Coverage result directory, relative to the Working directory.</li></ul> |
+| Maven | Build by using Apache Maven. | <ul><li>**Pipeline image version**: Runs in a container by using a built-in docker image, which provides a variety of built-in commands. To adopt newer versions of those commands, use a newer image version.</li><li>**Build script**: Runs in a new Ubuntu shell whenever the job runs. In the script field, enter a script or reference scripts that are stored in to your project’s source control.</li><li>**Working directory**: Specifies the directory where the script is run.</li><li>**Build archive directory**: Specifies the directory that contains the job's output to archive for use by a subsequent stage.</li><li>**Enable test report**: Select this checkbox to specify that the build job runs tests that produce result files in JUnit XML format. A report based on the result files is displayed on the Tests tab of the Job Results page. If any tests fail, the job is marked as failed.</li><li>**Enable code coverage report**: Select this checkbox to show more fields that you can use for the code coverage report. You can specify the Coverage runner (such as Istanbul, JaCoCo, and Cobertura), the location of the Coverage result file, and the Coverage result directory, relative to the Working directory.</li></ul> |
+| {{site.data.keyword.deliverypipeline}} private workers | You | Each pipeline job or step runs in isolation, in its own container on worker nodes that you manage, supported by network and storage that you define or manage. |
+| {{site.data.keyword.deliverypipeline}} private workers | You | Each pipeline job or step runs in isolation, in its own container on worker nodes that you manage, supported by network and storage that you define or manage. |
+{: caption="Table 1. Builder types" caption-side="top"}
+
 
 ### Deploy stage
 The deploy stage specifies input from a Build stage.  The jobs in the deploy stage specify a **Deployer type**.  The following Deployer types are available:
