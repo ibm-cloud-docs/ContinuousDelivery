@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2021
-lastupdated: "2021-02-02"
+lastupdated: "2021-02-03"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline, Classic
 
@@ -126,8 +126,13 @@ The following Builder types are available:
 ### Deploy stage
 The deploy stage specifies input from a Build stage.  The jobs in the deploy stage specify a **Deployer type**.  The following Deployer types are available:
 
-1. **Cloud Foundry**
-2. **Kubernetes**
+| Deployer type | Description | Supported job types|
+|:-----------------|:-----------------|:-----------------|
+| Cloud Foundry | Deploys applications to Cloud Foundry servers, such as IBM Cloud.  | <ul><li>**Pipeline image version**: Runs in a container by using a built-in docker image that provides a variety of built-in commands. To adopt newer versions of those commands, use a newer image version.</li><li>**Cloud Foundry Type**: The type of environment you want to deploy to.</li><li>**API key**: The IBM Cloud API key to use to provide permissions to account resources.</li><li>**Application name**: The name that is assigned to the application during deployment. This name is assigned to the environment variable and is referenced in the IBM Cloud script.</li><li>**Deploy script**: Deploy command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.</li></ul> |
+| Custom Docker image | Deploys by using your custom Docker image with fine-grained control over the versions of node, java, or other tools. | <ul><li>**Pipeline image version**: Runs in a container by using a built-in docker image that provides a variety of built-in commands. To adopt newer versions of those commands, use a newer image version.</li><li>**Cloud Foundry Type**: The type of environment you want to deploy to.</li><li>**API key**: The IBM Cloud API key to use to provide permissions to account resources.</li><li>**Docker image name**: The name of the image that this job builds and uploads to the IBM Cloud Container Registry.</li><li>**Deploy script**: Deploy command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.</li></ul>|
+| Kubernetes | Deploys applications to Kubernetes clusters, such as those found within the IBM Cloud Container Service. | <ul><li>**Pipeline image version**: Runs in a container by using a built-in docker image that provides a variety of built-in commands. To adopt newer versions of those commands, use a newer image version.</li><li>**API key**: The IBM Cloud API key to use to provide permissions to account resources.</li><li>**Cluster name**: Name of the Kubernetes cluster; the platform that you deploy your Kubernetes components on.</li><li>**Deploy script**: Deploy command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.</li></ul>|
+{: caption="Table 2. Deployer types" caption-side="top"}
+
 
 #### API keys
 
@@ -191,7 +196,7 @@ Cloud Foundry tries to [detect the buildpack to use](http://docs.cloudfoundry.or
 
 Deploy jobs upload your project to {{site.data.keyword.Bluemix_notm}} as an app and are accessible from a URL. After a project is deployed, you can find the deployed app on your {{site.data.keyword.Bluemix_notm}} dashboard.
 
-Deploy jobs can deploy new apps or update existing apps. Even if you first deployed an app by using another method, such as the Cloud Foundry command line interface or the run bar in the Web IDE, you can update the app by using a deploy job. To update an app, in the deploy job, use that app's name.
+Deploy jobs can deploy new apps or update existing apps. Even if you first deployed an app by using another method, such as the Cloud Foundry command-line interface or the run bar in the Web IDE, you can update the app by using a deploy job. To update an app, in the deploy job, use that app's name.
 
 You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} to use one or more services, test in one region, and deploy to production in multiple regions.
 
