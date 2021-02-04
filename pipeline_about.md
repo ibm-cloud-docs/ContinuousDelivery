@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2021
-lastupdated: "2021-02-03"
+lastupdated: "2021-02-04"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline, Classic
 
@@ -124,7 +124,7 @@ The following Builder types are available:
 
 
 ### Deploy stage
-The deploy stage specifies input from a Build stage.  The jobs in the deploy stage specify a **Deployer type**.  The following Deployer types are available:
+The deploy stage specifies input from a Build stage. The jobs in the deploy stage specify a **Deployer type**.  The following Deployer types are available:
 
 | Deployer type | Description | Supported job types|
 |:-----------------|:-----------------|:-----------------|
@@ -132,6 +132,19 @@ The deploy stage specifies input from a Build stage.  The jobs in the deploy sta
 | Custom Docker image | Deploys by using your custom Docker image with fine-grained control over the versions of node, java, or other tools. | <ul><li>**Pipeline image version**: Runs in a container by using a built-in docker image that provides a variety of built-in commands. To adopt newer versions of those commands, use a newer image version.</li><li>**Cloud Foundry Type**: The type of environment you want to deploy to.</li><li>**API key**: The IBM Cloud API key to use to provide permissions to account resources.</li><li>**Docker image name**: The name of the image that this job builds and uploads to the IBM Cloud Container Registry.</li><li>**Deploy script**: Deploy command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.</li></ul>|
 | Kubernetes | Deploys applications to Kubernetes clusters, such as those found within the IBM Cloud Container Service. | <ul><li>**Pipeline image version**: Runs in a container by using a built-in docker image that provides a variety of built-in commands. To adopt newer versions of those commands, use a newer image version.</li><li>**API key**: The IBM Cloud API key to use to provide permissions to account resources.</li><li>**Cluster name**: Name of the Kubernetes cluster; the platform that you deploy your Kubernetes components on.</li><li>**Deploy script**: Deploy command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.</li></ul>|
 {: caption="Table 2. Deployer types" caption-side="top"}
+
+
+### Test stage
+The test stage specifies the test configuration. The jobs in the test stage specify a **Tester type**. The following Tester types are available:
+
+| Tester type | Description | Supported job types|
+|:-----------------|:-----------------|:-----------------|
+| Simple | Invokes a shell command to run the automated tests, with an optional test report.  | <ul><li>**Pipeline image version**: Not used.</li><li>**Test script**: Test command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.</li><li>**Working directory**: The directory where the test script is run.</li><li>**Enable test report**: Not used.</li><li>**Enable code coverage report**: Not used.</li></ul> |
+| Custom Docker image | Tests by using your custom Docker image with fine-grained control over the versions of node, java, or other tools. | <ul><li>**Docker image name**: The name of the Docker image to run the job with. To make sure that your jobs run in a clean context, run them in Docker containers.</li><li>**Test script**: Test command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.</li><li>**Working directory**: The directory where the test script is run.</li><li>**Enable test report**: Not used.</li><li>**Enable code coverage report**: Not used.</li></ul>|
+| Vulnerability Advisor | Runs a compliance and vulnerability check against the specified image, and displays the results. If any issues are found, this stage fails. | <ul><li>**Pipeline image version**: Runs in a container by using a built-in docker image that provides a variety of built-in commands. To adopt newer versions of those commands, use a newer image version.</li><li>**API key**: The IBM Cloud API key to use to provide permissions to account resources.</li><li>**API key**: The IBM Cloud API key that provides permissions to account resources.</li><li>**Container Registry namespace**: The namespace where your built image is stored.</li><li>**Docker image name**: The name of the Docker image to run the job with. To make sure that your jobs run in a clean context, run them in Docker containers.</li><li>**Docker image tag**: A tag for the Docker image that is displayed in the IBM Cloud Container Registry.</li><li>**Test script**: Test command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.</li><li>**Working directory**: The directory where the test script is run.</li><li>**Enable test report**: Not used.</li><li>**Enable code coverage report**: Not used.</li></ul>|
+| Simplified Cloud Foundry org and space shell | Provides a test job with options to run tests in different regions. | <ul><li>**Pipeline image version**: Runs in a container by using a built-in docker image that provides a variety of built-in commands. To adopt newer versions of those commands, use a newer image version.</li><li>**IBM Cloud region**: The environment to deploy to application to.</li><li>**Shell script**: Shell command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.</li><li>**Enable test report**: Not used.</li></ul>|
+| Sauce Labs | Runs Javascript, Node, or Java tests by using Sauce Labs. | <ul><li>**Pipeline image version**: Runs in a container by using a built-in docker image that provides a variety of built-in commands. To adopt newer versions of those commands, use a newer image version.</li><li>**Service instance**: Select a configuration instance or create one.</li></ul>|
+{: caption="Table 3. Tester types" caption-side="top"}
 
 
 #### API keys
