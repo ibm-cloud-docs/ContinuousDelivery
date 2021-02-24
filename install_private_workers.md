@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-11-05"
+  years: 2019, 2021
+lastupdated: "2021-02-24"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -54,15 +54,15 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
   * Inbound: N/A
   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either eu-de (Frankfurt, Germany), eu-gb (London, United Kingdom), jp-tok (Tokyo, Japan), us-south (Dallas, US), or us-east (Washington DC, US). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
   
-* Permissions to pull images from gcr.io and DockerHub. Private workers require the tekton-pipelines infrastructure and must be able to pull tekton-releases images from gcr.io and DockerHub to complete the private worker installation.
+* Permissions to pull images from icr.io. Private workers require the tekton-pipelines infrastructure and must be able to pull tekton-releases images from icr.io to complete the private worker installation.
 
-To pull images from the `gcr.io` and `docker.io` container registries, you might need to define a specific Kubernetes ClusterImagePolicy.
+To pull images from the `icr.io` container registry, you might need to define a specific Kubernetes ClusterImagePolicy.
 {: tip}
   
 ### Self-hosting container images for {{site.data.keyword.deliverypipeline}} Private Worker
 {: #self_host_pw_} 
 
-Security constraints might prevent you from pulling images from the gcr.io/tekton-releases and dockerhub/ibmcom container registries. In such scenarios, complete the following steps:
+Security constraints might prevent you from pulling images from the icr.io/continuous-delivery/pipeline container registry. In such scenarios, complete the following steps:
 
 1. Provision the container images on a supported container registry.
 2. Install the `deployment.yaml` file to reference the container images in this container registry. 
@@ -82,10 +82,10 @@ Security constraints might prevent you from pulling images from the gcr.io/tekto
 ## Installing a {{site.data.keyword.deliverypipeline}} Private Worker
 {: #install_pw}  
 
-{{site.data.keyword.deliverypipeline}} private workers depend on the tekton and tekton-pipelines infrastructure. Private workers must pull tekton-releases images from `gcr.io` (`gcr.io/tekton-releases`) and DockerHub (`ibmcom/pipeline-private-worker`). You might need to define a specific Kubernetes ClusterImagePolicy to pull images from these container registries. To add the ClusterImagePolicy type to your Kubernetes cluster, you must [install several Helm charts](/docs/Registry?topic=Registry-security_enforce).
+{{site.data.keyword.deliverypipeline}} private workers depend on the tekton and tekton-pipelines infrastructure. Private workers must pull tekton-releases images from `icr.io` (`icr.io/continuous-delivery/pipeline/`). You might need to define a specific Kubernetes ClusterImagePolicy to pull images from these container registries. To add the ClusterImagePolicy type to your Kubernetes cluster, you must [install several Helm charts](/docs/Registry?topic=Registry-security_enforce).
 {: tip}
 
-For example, in {{site.data.keyword.cloud_notm}} Private, type the following commands to define a specific Kubernetes ClusterImagePolicy for `ibmcom/*` and `gcr.io/tekton-releases`:
+For example, in {{site.data.keyword.cloud_notm}} Private, type the following commands to define a specific Kubernetes ClusterImagePolicy for `icr.io/continuous-delivery/pipeline`:
 
 ```
 cat <<EOF | kubectl apply -f -
@@ -95,9 +95,7 @@ metadata:
   name: tekton-private-worker
 spec:
   repositories:
-  - name: "gcr.io/tekton-releases/*"
-    policy:
-  - name: "docker.io/ibmcom/*"
+  - name: "icr.io/continuous-delivery/pipeline/*"
     policy:
 EOF
 ```
@@ -394,5 +392,5 @@ This script contains the following requirements:
 
 After you provision the container images on the ICP’s private registry, update the image's scope to global to make sure that the images can be accessed from any namespaces. For more information about updating the scope of an image, see [Changing image scope](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.2.0/manage_images/change_scope.html).
 
-You can provide pipeline users with access to the base images ([ibmcom/pipeline-base-image](https://hub.docker.com/r/ibmcom/pipeline-base-image)) that are used to run pipeline jobs, which are supplied by dockerhub. To use these images, you must configure your pipeline jobs by using the `Custom Dockerimage`. You must also reference the expected image in the ICP’s private registry, for example: `mycluster.icp:8500/ibmcom/pipeline-base-image:latest`.
+You can provide pipeline users with access to the base images (icr.io/continuous-delivery/pipeline/pipeline-base-image) that are used to run pipeline jobs, which are supplied by the global IBM Cloud Container Registry. To use these images, you must configure your pipeline jobs by using the `Custom Dockerimage`. You must also reference the expected image in the ICP’s private registry, for example: `mycluster.icp:8500/icr.io/continuous-delivery/pipeline/pipeline-base-image:latest`.
 {: tip}

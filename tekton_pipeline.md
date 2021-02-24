@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-02-01"
+lastupdated: "2021-02-24"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -60,6 +60,9 @@ When you use IBM-managed workers, only one Tekton pipeline can run per pipeline 
 
 Both types of pipelines isolate jobs or steps from one another by running in separate containers, and by using an image that you choose. Classic and Tekton pipelines both exist in a [toolchain](https://cloud.ibm.com/devops/toolchains){:external} and depend on that toolchain to add more tool integrations that are used in the build, test, and deployment process.
 {: tip}
+
+On 20 November 2020, Dockerhub introduced rate-limiting on anonymous image pulls. This change might impact users that are running tasks that reference Dockerhub-hosted images. It is recommended that you use an alternative registry, such as IBM Cloud Container Registry.
+{: important}
 
 ## Prerequisites
 {: #tekton_pipelines_prereqs}

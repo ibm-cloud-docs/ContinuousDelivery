@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019, 2021
-lastupdated: "2021-01-11"
+lastupdated: "2021-02-24"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -25,11 +25,15 @@ subcollection: ContinuousDelivery
 
 When you develop applications for {{site.data.keyword.cloud_notm}}, you can use versioned base images to run pipeline jobs to make sure that you are using the current tools, libraries, and runtimes. Versioned base images help you to make sure that the bits that make up the application, and the environment that you deploy the application to, are consistent. You can control when the tools, libraries, or runtimes for your application change and update them when it makes sense during the development cycle.
 
-As of 16 March 2020, the {{site.data.keyword.containerlong}} is releasing a new version 1.0 of the {{site.data.keyword.cloud_notm}} CLI plug-in. Because this version is not 100% compatible with earlier versions, you must upgrade your scripts after you start to use this version. For more information about this new version of the {{site.data.keyword.cloud_notm}} CLI plug-in, see [Big changes are coming to the {{site.data.keyword.containerlong_notm}} CLI plugin to change your experience for the better](https://www.ibm.com/cloud/blog/announcements/boost-your-productivity-with-a-new-cli-experience-for-the-ibm-cloud-kubernetes-service){: external}. To maintain compatibility with the current {{site.data.keyword.containerlong_notm}} runtimes after the new version 1.0 is available, {{site.data.keyword.contdelivery_short}} will update the current base image for the {{site.data.keyword.deliverypipeline}} to include this version. For production workloads, set any of your pipelines that are using the current base image to instead use version 2.6 until you can update your scripts to work with the new version.
+On 16 March 2020, the {{site.data.keyword.containerlong}} released a new version 1.0 of the {{site.data.keyword.cloud_notm}} CLI plug-in. Because this version is not 100% compatible with earlier versions, you must upgrade your scripts after you start to use this version. For more information about this new version of the {{site.data.keyword.cloud_notm}} CLI plug-in, see [Big changes are coming to the {{site.data.keyword.containerlong_notm}} CLI plugin to change your experience for the better](https://www.ibm.com/cloud/blog/announcements/boost-your-productivity-with-a-new-cli-experience-for-the-ibm-cloud-kubernetes-service){: external}. To maintain compatibility with the current {{site.data.keyword.containerlong_notm}} runtimes after the new version 1.0 is available, {{site.data.keyword.contdelivery_short}} will update the current base image for the {{site.data.keyword.deliverypipeline}} to include this version. For production workloads, set any of your pipelines that are using the current base image to instead use version 2.6 until you can update your scripts to work with the new version.
 {: important}
 
 You can also use [custom Docker images](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images) to control both the tools and which versions of those tools are used to build and deploy applications. However, this method requires that you are familiar with Docker and you must maintain and update the image that you create.
+
+On 20 November 2020, Dockerhub introduced rate-limiting on anonymous image pulls. This change might impact users that are running jobs by using Dockerhub-hosted custom images.
 {: tip}
+
+Pipeline base images are now also hosted in a global IBM Cloud Container Registry namespace. To list these images, run the `ibmcloud cr images --restrict continuous-delivery` command when you target the global IBM Cloud Container Registry.
 
 ## Specifying the image version
 {: #specify_base_image_version}
@@ -51,20 +55,22 @@ Starting with and including version 2.2, images are available on [DockerHub](htt
 
 | Base image version | DockerHub image version |
 |:-----------------|:-----------------|
-| 2.11 | `ibmcom/pipeline-base-image:2.11`|
-| 2.10 | `ibmcom/pipeline-base-image:2.10`|
-| 2.9 | `ibmcom/pipeline-base-image:2.9`|
-| 2.8 | `ibmcom/pipeline-base-image:2.8`|
-| 2.7 | `ibmcom/pipeline-base-image:2.7`| 
-| 2.6 | `ibmcom/pipeline-base-image:2.6`| 
-| 2.5 | `ibmcom/pipeline-base-image:2.5`|
-| 2.4 | `ibmcom/pipeline-base-image:2.4.1`|
-| 2.3 | `ibmcom/pipeline-base-image:2.3`|
-| 2.2 | `ibmcom/pipeline-base-image:2.2`|
+| 2.11 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.11`|
+| 2.10 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.10`|
+| 2.9 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.9`|
+| 2.8 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.8`|
+| 2.7 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.7`| 
+| 2.6 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.6`| 
+| 2.5 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.5`|
+| 2.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.4.1`|
+| 2.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.3`|
+| 2.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.2`|
 | 2.1 | Not available |
 | 2.0 | Not available |
 | 1.0 | Not available |
 {: caption="Table 1. Mapping between versioned based images and DockerHub images" caption-side="top"}
+
+To list IBM Cloud Container Registry hosted images, run the `ibmcloud cr images --restrict continuous-delivery` command when you target the global IBM Cloud Container Registry.
 
 To access the DockerHub versioned base images, go to [ibmcom/pipeline-base-image](https://hub.docker.com/r/ibmcom/pipeline-base-image){: external}.
 
