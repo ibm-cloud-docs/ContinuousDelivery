@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2018, 2020
-lastupdated: "2019-11-29"
+  years: 2018, 2021
+lastupdated: "2021-02-24"
 
 keywords: pipeline base image, custom Docker image, private image registry 
 
@@ -23,6 +23,9 @@ subcollection: ContinuousDelivery
 
 # Working with custom Docker images
 {: #custom_docker_images}
+
+On 20 November 2020, Dockerhub introduced rate-limiting on anonymous image pulls. This change might impact users that are running jobs by using Dockerhub-hosted custom images.
+{: important}
 
 The pipeline base image might not support all of your build's requirements. For example, you might need more fine-grained control over the versions of node, java, or other tools. You can address this issue by including a first step in your pipeline jobs that installs a series of new packages and carefully configures environment variables, such as `PATH`, to set up your
 environment. However, a better approach is to use the pipeline's support for running a "Custom Docker Image" as the basis for your job.
