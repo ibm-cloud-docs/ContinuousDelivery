@@ -31,7 +31,7 @@ General problems with using {{site.data.keyword.deliverypipeline}} might include
 {:shortdesc}
 
 ## I created a toolchain and the {{site.data.keyword.deliverypipeline}} service doesn't initialize. Why doesn't the pipeline initialization complete?
-{: troubleshoot-pipeline-initialization}
+{: #troubleshoot-pipeline-initialization}
 {: troubleshoot}
 
 You might need to configure and save the GitHub tool integration again.
@@ -52,7 +52,7 @@ Configure and save the GitHub tool integration again:
 
 
 ## Why isn't the pipeline created properly when I create a toolchain from the template that I'm writing? 
-{: troubleshoot-cd-pipeline-creation}
+{: #troubleshoot-cd-pipeline-creation}
 {: troubleshoot}
 {: support}
 
@@ -75,7 +75,7 @@ You can use any of the following methods to debug this error:
 
 
 ## I tried to run a pipeline, why am I getting an error about access to the Git repository (repo)? 
-{: troubleshoot-cd-pipeline-git}
+{: #troubleshoot-cd-pipeline-git}
 {: troubleshoot}
 
 The pipeline uses an access token to clone the Git repo. If this access token isn't valid, the owner of the Git integration cannot access the Git repo. 
@@ -102,7 +102,7 @@ Configure and save the Git integration again:
 
 
 ## I tried to deploy to Kubernetes by using the {{site.data.keyword.deliverypipeline}}, why am I getting an error about an invalid object? 
-{: troubleshoot-cd-pipeline-kubernetes}
+{: #troubleshoot-cd-pipeline-kubernetes}
 {: troubleshoot}
 
 The 1.0 pipeline base image includes kubectl v1.14.2. You might receive an error if the Kubernetes cluster that you are connecting to is running a more recent version of Kubernetes. 
@@ -138,7 +138,7 @@ For more information about accessing the exact version of kubectl that you requi
 
 
 ## I tried to run a pipeline, why am I getting a 403 error from the {{site.data.keyword.registrylong_notm}}? 
-{: troubleshoot-cd-pipeline-cr}
+{: #troubleshoot-cd-pipeline-cr}
 {: troubleshoot}
 
 The {{site.data.keyword.registrylong}} pipeline pushes and pulls images to and from the [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=Registry-registry_overview). The {{site.data.keyword.registrylong_notm}} service plan determines the amount of storage and pull traffic that you can use for your private images.
@@ -157,7 +157,7 @@ Review your [quota limits and usage](/docs/Registry?topic=Registry-registry_quot
 
 
 ## I tried to compile my app in a single pipeline job, why did it fail? 
-{: troubleshoot-compile-app}
+{: #troubleshoot-compile-app}
 {: troubleshoot}
 
 You require 4 GB of memory (not file store) to build your app in a single pipeline job.
