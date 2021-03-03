@@ -32,7 +32,7 @@ General problems with using {{site.data.keyword.contdelivery_full}} might includ
 
 
 ## Why can't I add {{site.data.keyword.contdelivery_short}} to a Cloud Foundry org?
-{: troubleshoot-resource_groups}
+{: #troubleshoot-resource_groups}
 {: troubleshoot}
 {: support}
 
@@ -53,7 +53,7 @@ Create your toolchain again in resource groups, and then remove the original too
 
 
 ## Why can't I delete {{site.data.keyword.contdelivery_short}} from a Cloud Foundry org?
-{: troubleshoot-delete_cd}
+{: #troubleshoot-delete_cd}
 {: troubleshoot}
 {: support}
 
@@ -86,7 +86,7 @@ You must repeat this procedure for each {{site.data.keyword.contdelivery_short}}
 
 
 ## I tried to deploy a sample starter application to Cloud Foundry. Why did the deployment fail?
-{: troubleshoot-sampleapp_deploy}
+{: #troubleshoot-sampleapp_deploy}
 {: troubleshoot}
 {: support}
 
@@ -109,7 +109,7 @@ Upgrade your account:
 
 
 ## I removed a user from the authorized user list. Why does this user keep getting added to the list again?
-{: troubleshoot-authorized_user}
+{: #troubleshoot-authorized_user}
 {: troubleshoot}
 {: support}
 
