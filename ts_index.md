@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-10-14"
+  years: 2015, 2021
+lastupdated: "2021-03-16"
 
 keywords: error message, Lite plan, toolchains, IBM Cloud
 
@@ -87,7 +87,7 @@ You can choose any of the following options to deploy your own code to {{site.da
 
   * Go to the [Create App](https://cloud.ibm.com/developer/appservice/create-app?navMode=dashboard){: external} page, create your app, and then [enable {{site.data.keyword.contdelivery_short}}](/docs/apps/tutorials?topic=apps-tutorial-byoc) for the app. 
   * Create a toolchain by using one of the available templates (dependent on the deployment target and tool integrations). On the **Create a Toolchain** page, select the appropriate provider for your source repository, and then specify the link to your source code repo. After you create your toolchain, you might need to adjust the pipeline scripts for your deployment goals.
-  * Create an empty toolchain, and then add tool integrations to deploy your app. For more information about using this method to deploy your code to {{site.data.keyword.contdelivery_short}}, see [Set up a DevOps delivery pipeline for your app](/docs/apps?topic=containers-tutorial-byoc-kube).
+  * Create an empty toolchain, and then add tool integrations to deploy your app. For more information about using this method to deploy your code to {{site.data.keyword.contdelivery_short}}, see [Continuous Deployment to Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes).
 
 
 ## How do I find the status of {{site.data.keyword.cloud_notm}} and the {{site.data.keyword.contdelivery_short}} service?
