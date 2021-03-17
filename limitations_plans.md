@@ -121,7 +121,7 @@ You can upgrade from the {{site.data.keyword.contdelivery_short}} Lite service p
 1. In the **Change pricing plan** section, select **Professional** to upgrade to the {{site.data.keyword.contdelivery_short}} Professional plan, and click **Save**.
 1. After you change your plan, you must restage your app. Go to your resource list to find the app that the service is bound to. Click the Menu icon ![Menu icon](../icons/icon_hamburger.svg) **> Resource list**. In the app menu, select **Restart App**.
 
-#### Changing a plan through the CLI
+### Changing a plan through the CLI
 {: cli}
 
 As an alternative to the console, you can change the {{site.data.keyword.contdelivery_short}} service's pricing plan by using the {{site.data.keyword.cloud_notm}} command-line interface (CLI).
