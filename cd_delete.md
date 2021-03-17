@@ -3,7 +3,7 @@
 copyright:
   years: 2020
 
-lastupdated: "2020-07-14"
+lastupdated: "2021-03-17"
 
 keywords: ibmcloud, resource, service instance, restore, CLI tool, IBM Cloud
 
@@ -22,6 +22,9 @@ subcollection: ContinuousDelivery
 {:download: .download}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
+{:ui: .ph data-hd-interface='ui'}
+{:cli: .ph data-hd-interface='cli'}
+{:api: .ph data-hd-interface='api'}
 
 # Deleting a {{site.data.keyword.contdelivery_short}} service instance
 {: #delete_cd_service}
@@ -43,6 +46,7 @@ You can delete a resource group-based {{site.data.keyword.contdelivery_short}} s
 
 ### Deleting a service instance from the console
 {: #deleting_rg_console}
+{: ui}
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
 1. Go to the [Resource list](https://cloud.ibm.com/resources){: external} for your {{site.data.keyword.cloud_notm}} account.
@@ -52,6 +56,7 @@ You can delete a resource group-based {{site.data.keyword.contdelivery_short}} s
 
 ### Deleting a service instance by using the CLI
 {: #deleting_rg_cli}
+{: cli}
 
 * To view service instances, run the [`ibmcloud resource service-instances`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instances) command:
   ```
