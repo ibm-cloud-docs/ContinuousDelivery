@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-09-01"
+lastupdated: "2021-03-17"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -16,6 +16,9 @@ subcollection: ContinuousDelivery
 {:important: .important}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
+{:ui: .ph data-hd-interface='ui'}
+{:cli: .ph data-hd-interface='cli'}
+{:api: .ph data-hd-interface='api'}
 
 
 # Plan limitations and usage
@@ -108,6 +111,7 @@ Upgrading to the Professional plan will remove these limitations and reactivate 
 {: tip}
 
 ### How can you change to a different service plan?
+{: ui}
 
 You can upgrade from the {{site.data.keyword.contdelivery_short}} Lite service plan to the Professional plan.
 
@@ -118,6 +122,7 @@ You can upgrade from the {{site.data.keyword.contdelivery_short}} Lite service p
 1. After you change your plan, you must restage your app. Go to your resource list to find the app that the service is bound to. Click the Menu icon ![Menu icon](../icons/icon_hamburger.svg) **> Resource list**. In the app menu, select **Restart App**.
 
 #### Changing a plan through the CLI
+{: cli}
 
 As an alternative to the console, you can change the {{site.data.keyword.contdelivery_short}} service's pricing plan by using the {{site.data.keyword.cloud_notm}} command-line interface (CLI).
 
