@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2020
+  years: 2015, 2021
 
-lastupdated: "2020-08-17"
+lastupdated: "2021-03-17"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -22,6 +22,9 @@ subcollection: ContinuousDelivery
 {:download: .download}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
+{:ui: .ph data-hd-interface='ui'}
+{:cli: .ph data-hd-interface='cli'}
+{:api: .ph data-hd-interface='api'}
 
 # Creating toolchains
 {: #toolchains_getting_started}
@@ -131,6 +134,7 @@ If you created your app by using your own code repository, click **Deploy my app
 
 ### Viewing a toolchain in the console
 {: #viewing-toolchain-console}
+{: ui}
 
 After you configure the toolchain and its tool integrations, you can view a visual representation of the toolchain.
 
@@ -146,6 +150,7 @@ You can view a toolchain from an app by clicking the toolchain name from your ap
  
 ### Viewing a toolchain by using the CLI
 {: #viewing-toolchain-cli}
+{: cli}
 
 The command-line interface (CLI) toolchain view depends on the currently targeted resource group. Use the following commands to identify or change your currently targeted resource group.
 
