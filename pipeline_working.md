@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2019-08-20"
+  years: 2015, 2021
+lastupdated: "2021-03-17"
 
 keywords: IBM Cloud, build types, build jobs, deployment job, build script, create pipeline, 
 
@@ -14,6 +14,9 @@ subcollection: ContinuousDelivery
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
+{:ui: .ph data-hd-interface='ui'}
+{:cli: .ph data-hd-interface='cli'}
+{:api: .ph data-hd-interface='api'}
 
 # Working with pipelines 
 {: #pipeline-working}
@@ -34,9 +37,9 @@ You can deploy to one or many regions and services. For example, you can set up 
 
 You can use any of the following methods to create a pipeline:
 
-   * [Create a toolchain from an existing Cloud Foundry application](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app). The resulting toolchain contains a pipeline.
+   * [Create a toolchain from an existing Cloud Foundry application](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app). The resulting toolchain contains a pipeline.
 
-   * [Create a toolchain from a template](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template) that includes at least one pipeline.
+   * [Create a toolchain from a template](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template) that includes at least one pipeline.
 
    * [Add the {{site.data.keyword.deliverypipeline}} tool integration](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) to an existing toolchain.
    
