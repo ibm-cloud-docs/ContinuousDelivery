@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-02-24"
+lastupdated: "2021-03-16"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -19,6 +19,9 @@ subcollection: ContinuousDelivery
 {:note: .note}
 {:important: .important}
 {:download: .download}
+{:ui: .ph data-hd-interface='ui'}
+{:cli: .ph data-hd-interface='cli'}
+{:api: .ph data-hd-interface='api'}
 
 
 # Installing {{site.data.keyword.deliverypipeline}} Private Workers
@@ -102,6 +105,7 @@ EOF
 
 ### Installing the {{site.data.keyword.deliverypipeline}} Private Worker by using the CLI
 {: #install_pw_cli}
+{: cli}
 
 The following steps are intended for Administrators who are preparing environments and private workers for multiple people or teams. To install private workers for your own use, see [Setting up a Delivery Pipeline Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers#set_up_private_worker).
 {: tip}
@@ -217,6 +221,7 @@ A service ID represents a pool of one or more private workers that act together.
 
 #### Creating a service ID in the console
 {: #console_create_service_id}
+{: ui}
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
 2. Go to [https://cloud.ibm.com/iam/serviceids](https://cloud.ibm.com/iam/serviceids){:external}.
@@ -227,6 +232,7 @@ A service ID represents a pool of one or more private workers that act together.
 
 #### Creating a service ID by using the CLI
 {: #cli_create_service_id}
+{: cli}
 
 From the {{site.data.keyword.cloud_notm}} CLI, type the following command:
 
@@ -253,6 +259,7 @@ An API key is a unique code that is passed to an API to identify the application
 
 #### Creating an API key in the console
 {: #console_create_key}
+{: ui}
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
 2. Go to [https://cloud.ibm.com/iam/serviceids](https://cloud.ibm.com/iam/serviceids){:external}.
@@ -264,6 +271,7 @@ An API key is a unique code that is passed to an API to identify the application
 
 #### Creating an API key by using the CLI
 {: #cli_create_key}
+{: cli}
 
 From the {{site.data.keyword.cloud_notm}} CLI, type the following command:
 
