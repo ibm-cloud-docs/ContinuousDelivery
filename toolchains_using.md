@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-17"
+  years: 2015, 2021
+lastupdated: "2021-03-24"
 
 keywords: user management function, toolchains, tool integrations, user access, Cloud Foundry org
 
@@ -26,7 +26,7 @@ subcollection: ContinuousDelivery
 Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.cloud}}. You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain.
 {: shortdesc}
 
-You can manage toolchains in the Dallas, Washington, London, Frankfurt, and Tokyo Public regions by using resource groups. You can use Cloud Foundry organizations (orgs) to manage toolchains in the Dallas, London, and Frankfurt Public regions. Access control and authorized user management function differently for toolchains depending on whether they are contained in a resource group or a Cloud Foundry org.
+You can manage toolchains in the Dallas, Washington, London, Frankfurt, Sydney, and Tokyo Public regions by using resource groups. You can use Cloud Foundry organizations (orgs) to manage toolchains in the Dallas, London, and Frankfurt Public regions. Access control and authorized user management function differently for toolchains depending on whether they are contained in a resource group or a Cloud Foundry org.
 {: important}
 
 ## Configuring a tool integration
