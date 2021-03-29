@@ -21,6 +21,10 @@ Continuous Delivery
         overview_deploy_environment.md
         overview_quality_gate.md
     {: .navgroup-end}
+    
+    {: .navgroup id="tutorial"}
+    cd-vsi-tutorial.md
+    {: .navgroup-end}
 
     {: .navgroup id="howto"}
     ha-dr.md
