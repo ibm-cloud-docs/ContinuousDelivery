@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-02-24"
+lastupdated: "2021-03-30"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -55,7 +55,7 @@ The Tekton Pipelines project is a beta release. You must update your pipeline wi
 * **Classic**: Classic delivery pipelines are created graphically, with the status embedded in the pipeline diagram. These pipelines can run on shared workers in the cloud or on private workers that run on your own Kubernetes cluster. 
 * **Tekton**: Tekton delivery pipelines are created within yaml files that define pipelines as a set of Kubernetes resources. You can edit those yaml files to change the behaviour of a pipeline. Tekton pipelines can run on private workers that run on your own cluster. They can also run on IBM-managed workers on the public cloud. The Tekton integration provides a dashboard that you can use to view the output of Tekton pipeline runs. It also provides mechanisms for identifying the pipeline definitions repo, the pipeline triggers, where the pipeline runs, and the storage and retrieval of properties.
 
-When you use IBM-managed workers, only one Tekton pipeline can run per pipeline at a time. When you use private workers, multiple Tekton pipelines can run concurrently.
+Pipelines run concurrently unless you configure them to serialize by using the new `Limit current runs by this trigger` switch.
 {: important}
 
 Both types of pipelines isolate jobs or steps from one another by running in separate containers, and by using an image that you choose. Classic and Tekton pipelines both exist in a [toolchain](https://cloud.ibm.com/devops/toolchains){:external} and depend on that toolchain to add more tool integrations that are used in the build, test, and deployment process.
