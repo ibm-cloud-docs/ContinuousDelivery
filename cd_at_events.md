@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-07-24"
+  years: 2019, 2021
+lastupdated: "2021-03-31"
 
-keywords: event, security, IBM, activity tracker, LogDNA, Continuous Delivery
+keywords: event, security, IBM, activity tracker, Continuous Delivery
 
 subcollection: ContinuousDelivery
 
