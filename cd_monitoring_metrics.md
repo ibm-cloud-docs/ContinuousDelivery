@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-12-07"
+  years: 2021
+lastupdated: "2021-03-31"
 
-keywords: Sysdig, IBM Cloud, monitoring, supertenant
+keywords: IBM Cloud, monitoring, supertenant
 
 subcollection: ContinuousDelivery
 
@@ -23,7 +23,7 @@ subcollection: ContinuousDelivery
 # Monitoring metrics for {{site.data.keyword.contdelivery_short}}
 {: #cd-monitor-sysdig}
 
-{{site.data.keyword.mon_full}} is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. {{site.data.keyword.mon_full_notm}} is operated by Sysdig in partnership with {{site.data.keyword.IBM_notm}}.
+{{site.data.keyword.mon_full}} is a third-party cloud-native, and container-intelligence management system that you can include as part of your {{site.data.keyword.cloud_notm}} architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams and developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
 {:shortdesc}
 
 
@@ -31,9 +31,9 @@ subcollection: ContinuousDelivery
 {: #cd_platform_metrics}
 
 You can configure one instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics. 
-* To configure the Sysdig instance, you must set the platform metrics configuration. 
-* If a Sysdig instance in a region is already enabled to collect platform metrics, metrics from enabled-Sysdig services are collected automatically and available for monitoring through this instance. For more information about enabled-Sysdig services, see [Cloud services]().
-* After a Sysdig instance in an account and region is enabled to collect platform metrics, it automatically collects metrics from all {{site.data.keyword.contdelivery_short}} service instances in the same account and region. You do not need to opt in to the {{site.data.keyword.contdelivery_short}} service metrics collection. You also cannot opt out of the {{site.data.keyword.contdelivery_short}} service metrics collection.
+* To configure the Monitoring instance, you must set the platform metrics configuration. 
+* If a Monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring services are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring services, see [Cloud services]().
+* After a Monitoring instance in an account and region is enabled to collect platform metrics, it automatically collects metrics from all {{site.data.keyword.contdelivery_short}} service instances in the same account and region. You do not need to opt in to the {{site.data.keyword.contdelivery_short}} service metrics collection. You also cannot opt out of the {{site.data.keyword.contdelivery_short}} service metrics collection.
 
 To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.contdelivery_short}} instance is provisioned.
 {: important}
@@ -62,15 +62,15 @@ After you provision the Sysdig instance, the **Observabvility** page opens. To c
 ## Viewing metrics
 {: #cd_view_metrics}
 
-To monitor {{site.data.keyword.contdelivery_short}} metrics, you must launch the Sysdig web UI instance that is enabled for platform metrics in the region where your {{site.data.keyword.contdelivery_short}} instance is available.
+To monitor {{site.data.keyword.contdelivery_short}} metrics, you must launch the Monitoring web UI instance that is enabled for platform metrics in the region where your {{site.data.keyword.contdelivery_short}} instance is available.
 {: important}
 
-There are different options to launch the Sysdig web UI and monitor metrics:
+There are different options to launch the Monitoring web UI and monitor metrics:
 
-### Launching the Sysdig web UI from the {{site.data.keyword.contdelivery_short}} dashboard
+### Launching the Monitoring web UI from the {{site.data.keyword.contdelivery_short}} dashboard
 {: #cd_view_metrics_opt1}
 
-Complete the following steps to launch the Sysdig web UI from the {{site.data.keyword.contdelivery_short}} dashboard:
+Complete the following steps to launch the Monitoring web UI from the {{site.data.keyword.contdelivery_short}} dashboard:
 
 1. Log in to {{site.data.keyword.cloud_notm}}. 
     
@@ -81,12 +81,12 @@ Complete the following steps to launch the Sysdig web UI from the {{site.data.ke
 1. From the **Manage** page, click the overflow menu ![overflow menu](../../icons/actions-icon-vertical.svg "Overflow menu"). Then, select **Monitoring** to view the {{site.data.keyword.contdelivery_short}} dashboard within the context of your {{site.data.keyword.contdelivery_short}} instance.
 
 
-### Launching the Sysdig web UI from the Observability page
+### Launching the Monitoring web UI from the Observability page
 {: #cd_view_metrics_opt2}
 
-Complete the following steps to launch the Sysdig web UI from the **Observability** page:
+Complete the following steps to launch the Monitoring web UI from the **Observability** page:
 
-1. [Launch the Sysdig web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
+1. [Launch the Monitoring web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
 1. Select **DASHBOARDS**.
 1. In the **Default Dashboards** section, expand **IBM**.
 1. Choose the {{site.data.keyword.contdelivery_short}} dashboard from the list.
@@ -117,7 +117,7 @@ The pipeline queue time tracks the elapsed time in seconds between the {{site.da
 #### User action
 {: #cd-task1-action}
 
-The {{site.data.keyword.contdelivery_short}} dashboard in Sysdig can help to identify trends in pipeline queue time. If the queue times for pipelines serviced by a private worker pool last several seconds or are trending upwards, check the configuration of the private worker pool, including the number and processing capacity of the nodes in the pool. You might lower queue times by scaling up the private worker pool, or by reducing the frequency, variety, or complexity of pipeline jobs and tasks that are dispatched to the private worker pool.
+The {{site.data.keyword.contdelivery_short}} dashboard in Monitoring can help to identify trends in pipeline queue time. If the queue times for pipelines serviced by a private worker pool last several seconds or are trending upwards, check the configuration of the private worker pool, including the number and processing capacity of the nodes in the pool. You might lower queue times by scaling up the private worker pool, or by reducing the frequency, variety, or complexity of pipeline jobs and tasks that are dispatched to the private worker pool.
 
 
 ## {{site.data.keyword.contdelivery_short}} predefined dashboards
@@ -127,7 +127,7 @@ The following table outlines the pre-defined dashboards that you can use to moni
 
 | Dashboard Name            | Description    |
 |:---------------------------|:----------------|
-| `{{site.data.keyword.contdelivery_short}}` | Default dashboard when you launch the Sysdig web UI from your service instance UI. |
+| `{{site.data.keyword.contdelivery_short}}` | Default dashboard when you launch the Monitoring web UI from your service instance UI. |
 {: caption="Table 2. Pre-defined dashboards" caption-side="top"}
 
 
@@ -146,7 +146,7 @@ You cannot change the Default dashboard. To customize the dashboard, you can cre
 ## Predefined alerts
 {: #cd_default_alerts}
 
-The following table outlines the pre-defined alerts that are available in Sysdig: 
+The following table outlines the pre-defined alerts that are available in Monitoring: 
 
 | Alert Name                                 | Description | 
 |:--------------------------------------------|:-------------|
