@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-03-31"
+lastupdated: "2021-04-01"
 
 keywords: IBM Cloud, monitoring, supertenant
 
@@ -56,7 +56,7 @@ Complete the following steps to configure platform metrics:
     
 5. Provision an instance of the {{site.data.keyword.mon_full_notm}} service.
 
-After you provision the Sysdig instance, the **Observabvility** page opens. To continue working with {{site.data.keyword.contdelivery_short}}, go back to the {{site.data.keyword.contdelivery_short}} UI.
+After you provision the Monitoring instance, the **Observabvility** page opens. To continue working with {{site.data.keyword.contdelivery_short}}, go back to the {{site.data.keyword.contdelivery_short}} UI.
 
 
 ## Viewing metrics
