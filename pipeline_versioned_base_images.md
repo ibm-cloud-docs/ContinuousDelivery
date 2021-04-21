@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019, 2021
-lastupdated: "2021-04-07"
+lastupdated: "2021-04-21"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -521,6 +521,9 @@ To view the contents of version 2.11, from the running image, type `default_vers
  
  ### Version 2.10
  {: #version_2_10}
+ 
+Starting with version 2.10, the versioned base image includes a Docker client.
+{: tip}
 
 To view the contents of version 2.10, from the running image, type `default_versions.sh`. This image includes the following tools:
 
