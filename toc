@@ -25,6 +25,7 @@ Continuous Delivery
     {: .navgroup id="tutorial"}
     cd-vsi-tutorial.md
     cd-kubernetes-razee-tutorial.md
+    cd-kubernetes-image-signing-tutorial.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
