@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-03-30"
+lastupdated: "2021-04-21"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -198,9 +198,10 @@ Save your changes.
 
 1. In the **Environment properties** section, click **Add property** and define your own environment property. For example, you can define an `API_KEY` property that passes an API key that is used by all of the scripts in the pipeline to access {{site.data.keyword.cloud_notm}} resources. You can add the following types of properties:
 
- * **Text**: A property key with a single-line value.
- * **Text area**: A property key with a multi-line value.
- * **Secure**: A property key with a single-line value that is secured with AES-128 encryption. This value is displayed by using the asterisk character.
+ * **Enumeration**: A property key with a value that can be selected from a user-defined list of options.
+ * **Secure value**: A property key with a single-line value that is secured with AES-128 encryption. This value is displayed by using the asterisk character.
+ * **Text value**: A property key with a text value that can either be single-line or multi-line. Previously, multi-line values were supported by a separate **Text area** property type.
+ * **Tool integration**: A property key with a value that is resolved at run time from a toolchain tool integration. By default, the value is a JSON string representation of the tool integration. A specific field or subset of the object can be retrieved by providing a value for the optional JSON filter. For example, if a GitHub integration is selected and the JSON filter `parameters.repo_url` is specified, the value reflects the URL of the Git repo that is configured in the tool integration when the `PipelineRun` resource runs.
  
  You can access these properties in your Tekton pipeline resources. For more information about these properties, see [Tekton Pipelines environment and resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment).
 
