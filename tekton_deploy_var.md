@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-06-23"
+  years: 2020, 2021
+lastupdated: "2021-04-21"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -83,7 +83,7 @@ spec:
 ## PipelineRun `ConfigMap` and `Secret`
 {: #tekton_envprop}
 
-The {{site.data.keyword.contdelivery_short}} Tekton PipelineRun resource creates a specific `ConfigMap` and `Secret` for environment properties. Secure properties are available in the `secure-properties` Kubernetes `Secret`. Non-secure properties are available in the `environment-properties` Kubernetes `ConfigMap`. The keys are the name of the field that is provided in the pipeline authoring UI.
+The {{site.data.keyword.contdelivery_short}} Tekton PipelineRun resource creates a specific `ConfigMap` and `Secret` for environment properties. Secure properties are available in the `secure-properties` Kubernetes `Secret`, including any `Tool integration` properties for which the selected field contains a secure value. Non-secure properties are available in the `environment-properties` Kubernetes `ConfigMap`. The keys are the name of the field that is provided in the pipeline authoring UI.
 
 When you access a `ConfigMap` or `Secret`, make sure that you locate the correct object name and references so that your pipeline can successfully complete.
 {: important}
