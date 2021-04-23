@@ -2,7 +2,7 @@
 
 Copyright:
  years: 2015, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-04-22"
 
 keywords: IBM Cloud DevOps, enterprise application Developer, IBM Cloud Garage Method, DevOps toolchain
 
@@ -38,7 +38,7 @@ Open toolchain integrates more tools around {{site.data.keyword.contdelivery_sho
 
 Code repos, issue tracking systems, build systems, and deployment systems represent a wealth of data that can be used to help you deliver apps more efficiently and effectively. {{site.data.keyword.DRA_full}} uses big data analysis to provide valuable insights to Executives, Managers, and Developers. {{site.data.keyword.DRA_short}} aggregates and analyzes data from your DevOps toolchain to advise you about the risk of deploying specific changes, and areas to improve both your codebase and team productivity. The Delivery Pipeline can automatically gate deployment to an environment based on the risk of a change.
 
-Resource groups are available in the Dallas, Washington, London, Frankfurt, Sydney, and Tokyo regions. Cloud Foundry orgs are supported in the Dallas, London, and Frankfurt regions.
+Resource groups are available in the Dallas, Washington, London, Frankfurt, Sydney, Osaka, and Tokyo regions. Cloud Foundry orgs are supported in the Dallas, London, and Frankfurt regions.
 {: note}
 
 {{site.data.keyword.cloud_notm}} DevOps provides concrete practices and architectures for cloud development. It enables Developers to get started quickly with new projects that employ the rich catalog of services on the {{site.data.keyword.cloud_notm}}. {{site.data.keyword.cloud_notm}} DevOps also provides Developers an open and integrated set of tools for automating delivery with speed and control.
