@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-04-08"
+lastupdated: "2021-04-23"
 
 keywords: Code Risk Analyzer, code repositories, DevOps Insights, scan pull requests, Tekton pipelines
 
@@ -100,7 +100,6 @@ You can use the Build your own toolchain template as a starting point to [create
 1. In the Tool Integrations section, click **{{site.data.keyword.DRA_short}}**.
 1. Click **Create Integration**.
 
-
 ## Adding a code repository (repo) to your toolchain
 {: #cra_add_dra}
 
@@ -170,7 +169,6 @@ If you don't have owner or master privileges for the repo that you are linking t
 If you don't have admin privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 {: tip}
 
-
 ## Creating an API key to authenticate with Code Risk Analyzer
 {: #cra_api_key}
 
@@ -180,7 +178,6 @@ If you don't have admin privileges for the repo that you are linking to, your in
 1. Click **Create**.
 1. Create a copy of the generated API key for future use.
  
-
 ## Creating and configuring a {{site.data.keyword.deliverypipeline}} for Tekton
 {: #cra_tekton_pipeline}
 
@@ -260,3 +257,74 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
 Use of this service is not guaranteed to find all vulnerabilities in your applications. The application owner is responsible for testing any fixes that are recommended by the service.
 {: important}
+
+## Configuring Code Risk Analyzer to ignore files
+{: #cra_ignore_files}
+
+The Code Risk Analyzer Discovery task searches for a `.craignore` file in the repo that is cloned and scanned. The `.craignore` file must follow the rules of [`.gitignore` files](https://git-scm.com/docs/gitignore){: external}. Similar to a `.gitignore` file, the `.craignore` file can include comments, directories to ignore, files to ignore, and other [patterns](https://git-scm.com/docs/gitignore#_pattern_format){: external}.
+
+The following example `.craignore` file shows how to exclude bash scripts, node_modules, and the Dockerfile.
+
+```
+# Ignore nested functional_tests directory
+**/functional_tests
+
+# Ignore bash scripts
+**/*.sh
+
+# This should allow this one file
+!test/gatling_tests/loginTobx.sh
+
+# Ignore node_modules
+node_modules
+
+# Exclude the dockerfile from scanning
+Dockerfile
+```
+
+## Configuring Code Risk Analyzer to omit vulnerabilities
+{: #cra_omit_vulnerabilities}
+
+The Code Risk Analyzer Vulnerability task searches for a `.cracveomit` file at the root of the repo that is cloned and scanned. This file is used to specify the CVEs to either omit indefinitely, until a remediation is available, or until a specified expiration date.
+
+The following example shows a JSON schema for the `.cracveomit` file.
+
+```json
+[
+    {
+        "cve": "string",
+	"alwaysOmit": "bool",
+	"untilRemediationAvailable": "bool",
+	"expiration": "string"
+    }
+]
+```
+
+The following properties are accepted for each entry in the `.cracveomit` file:
+
+ * **cve** - The vulnerability to omit. The value of this property is either a CVE ID or a Snyk ID.
+ * **alwaysOmit** - If this property is set to true, the vulnerability is omitted until it is changed. This property takes precedence over other property values.
+ * **untilRemediationAvailable** - If this property is set to true, the vulnerability is omitted  until a remediation path is available. If a remediation becomes available, the vulnerability is not omitted and a message is displayed. This property takes precedence over the expiration property  value.
+ * **expiration** - If this property is set to true and the expiration date is not reached, the vulnerability is omitted. If the expiration date is reached, the vulnerability is not omitted and a message is displayed. 
+ 
+The Code Risk Analyzer uses only these defined properties. You can add properties with no effect on functions. If a vulnerability that is  defined in the `.cracveomit` is ignored, a log is generated to explain the reason. If a vulnerability that is defined in the `.cracveomit` file is omitted, no log is displayed. The number of omissions and a list of the vulnerability IDs, with the package name, that are omitted are logged after a report is completed.
+
+The following code snippet shows a sample `.cracveomit` file.
+
+```json
+[
+    {
+        "cve": "CVE-2021-27290",
+        "alwaysOmit": true
+    },
+    {
+        "cve": "CVE-2020-8244",
+        "untilRemediationAvailable": true,
+    },
+    {
+        "cve": "SNYK-JAVA-ORGAPACHEHTTPCOMPONENTS-31517",
+        "expiration": "2022-02-10T22:08:41+04:00",
+        "comment": "Additional security measures are in place"
+    }
+]
+```
