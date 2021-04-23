@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-04-22"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -55,7 +55,7 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
 * Network access:
 
   * Inbound: N/A
-  * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either au-syd (Sydney, Australia), eu-de (Frankfurt, Germany), eu-gb (London, United Kingdom), jp-tok (Tokyo, Japan), us-south (Dallas, US), or us-east (Washington DC, US). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
+  * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either au-syd (Sydney, Australia), eu-de (Frankfurt, Germany), eu-gb (London, United Kingdom), jp-tok (Tokyo, Japan), jp-osa (Osaka, Japan), us-south (Dallas, US), or us-east (Washington DC, US). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
   
 * Permissions to pull images from icr.io. Private workers require the tekton-pipelines infrastructure and must be able to pull tekton-releases images from icr.io to complete the private worker installation.
 
@@ -122,6 +122,7 @@ Where `{REGION}` is the location of the toolchain's pipeline. You can specify an
 * eu-de (Frankfurt, Germany)
 * eu-gb  (London), United Kingdom
 * jp-tok (Tokyo, Japan)
+* jp-osa (Osaka, Japan)
 * us-south (Dallas, US)
 * us-east (Washington DC, US)
 
@@ -310,6 +311,7 @@ You must register a private worker with the specific {{site.data.keyword.cloud_n
  * eu-de (Frankfurt, Germany)
  * eu-gb  (London, United Kingdom)
  * jp-tok (Tokyo, Japan)
+ * jp-osa (Osaka, Japan)
  * us-south (Dallas, US)
  * us-east (Washington DC, US)
 
