@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-03-24"
+lastupdated: "2021-04-22"
 
 keywords: public isolation for IBM Cloud Continuous Delivery, compute isolation for Continuous Delivery, Continuous Delivery architecture, workload isolation in Continuous Delivery
 
@@ -123,6 +123,7 @@ The following table shows the cross-region location for Object Storage in which 
 | Frankfurt	(eu-de)	|EU Cross Region (Amsterdam, Frankfurt, Milan)		|
 | Tokyo (jp-tok)		|AP Cross Region (Tokyo, Seoul, Hong Kong S.A.R. of the PRC)		|
 | Sydney (au-syd)		|AP Cross Region (Tokyo, Sydney, Seoul, Hong Kong S.A.R. of the PRC)		|
+| Osaka (js-osa)		|AP Cross Region (Tokyo, Sydney, Osaka, Seoul, Hong Kong S.A.R. of the PRC)		|
 {: caption="Table 3. Object Storage location" caption-side="top"}
 
 For more information about Object Storage locations, see [Regional Endpoints](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints-region).
