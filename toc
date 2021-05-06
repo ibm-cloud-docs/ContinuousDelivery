@@ -23,9 +23,19 @@ Continuous Delivery
     {: .navgroup-end}
     
     {: .navgroup id="tutorial"}
-    cd-vsi-tutorial.md
+    [Introduce toolchains by using the Develop a Cloud Foundry app](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain)
+    [Use the Develop and test a Cloud Foundry app toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain)
+    [Use the Develop and test microservices on Cloud Foundry toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain)
+    [Create a template for a custom toolchain](https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain)
+    [Explore DevOps Insights](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights)
+    [Use the Develop a Kubernetes app toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain)
+    [Use the Develop a Kubernetes app with Helm toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain)
+    [Use the Develop and test microservices with Kubernetes and Helm toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-with-kubernetes-and-helm-toolchain)
+    [Use the Run your first canary test in Kubernetes using the Istio toolchain](https://www.ibm.com/cloud/garage/tutorials/use-canary-testing-in-kubernetes-using-istio-toolchain)
     cd-kubernetes-razee-tutorial.md
     cd-kubernetes-image-signing-tutorial.md
+    [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app)
+    cd-vsi-tutorial.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
