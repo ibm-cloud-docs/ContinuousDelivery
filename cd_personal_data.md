@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-08-17"
+  years: 2018, 2021
+lastupdated: "2021-05-13"
 
 keywords: IBM Cloud account, personal data, personal accounts, corporate accounts, access, Web IDE, Git Repos and Issue Tracking, pipeline data, toolchains, tool integrations
 
@@ -155,13 +155,12 @@ After the project is archived, you can import it into another GitLab instance.
 
 ### Deleting your Git Repos and Issue Tracking account
 
-You can delete your {{site.data.keyword.gitrepos}} account and everything that is owned by that account.
+You can delete your {{site.data.keyword.gitrepos}} account and most of the things that are owned by that account.
 
 1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, on the [Account page](https://us-south.git.cloud.ibm.com/profile/account){: external}, in the Delete account section, click **Delete account**.
 1. All Git projects, including repositories and issues are deleted. You are also removed from any {{site.data.keyword.gitrepos}} groups that you belong to.
 
-After your account is deleted, some content will remain. This content is assigned to a system-wide Ghost User. For more information about deleting a {{site.data.keyword.gitrepos}} account, see [Deleting a user account](https://us-south.git.cloud.ibm.com/help/user/profile/account/delete_account#associated-records){: external}.
-{: tip}
+After your account is deleted, some content will remain. This content is assigned to a system-wide Ghost User. For example, comments that you added to an issue remain, but they are attributed to the Ghost User. To delete all of the content that you authored, contact [IBM Support](https://www.ibm.com/cloud/support){: external}
 
 {{site.data.keyword.gitrepos}} uses a single sign-on mechanism that automatically creates a corresponding Git account for your IBM Cloud account the first time that you access the tool integration. After you delete your account, do not access {{site.data.keyword.gitrepos}}. If you access {{site.data.keyword.gitrepos}} again, a new account is automatically created that you must delete.
 {: important}
