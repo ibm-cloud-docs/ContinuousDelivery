@@ -2,10 +2,10 @@
 
 copyright:
    years: 2021
-lastupdated: "2021-03-29"
-lasttested: "2021-03-29"
+lastupdated: "2021-05-13"
+lasttested: "2021-05-13"
 
-keywords: Virtual Server Instance, code repositories, DevOps Insights, non-containerized, java application, vsi, gitops, toolchain, pipeline
+keywords: Virtual Server Instance, code repositories, DevOps Insights, non-containerized, java application, vsi, gitops, toolchain, pipeline, Virtual Machine, vm
 
 subcollection: ContinuousDelivery
 
@@ -23,16 +23,16 @@ completion-time: 40m
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
-# Develop and deploy an application to Virtual Server Instance
+# Develop and deploy an application to a Virtual Machine
 {: #tutorial-cd-vsi}
 {: toc-content-type="tutorial"}
 {: toc-services=""}
 {: toc-completion-time="40m"}
 
-This tutorial demonstrates how to set up a {{site.data.keyword.contdelivery_short}} toolchain and deliver a simple Java&trade; application to a Virtual Server Instance. You can set up source control, and then build, test, and deploy the code to different deployment stages.
+This tutorial demonstrates how to set up a {{site.data.keyword.contdelivery_short}} toolchain and deliver a simple application (app) to a Virtual Machine. You can set up source control, and then build, test, and deploy the code to different deployment stages.
 {: shortdesc}
 
-By default, the toolchain uses a sample Maven-based Java Hello World application (app), but you can also bring your own Maven-based Java app and link to it instead. This toolchain is configured with pipelines for continuous integration and continuous delivery with [Code Risk Analyzer (CRA)](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-configure-cra-repos), source control, issue tracking, and online editing.
+By default, the toolchain uses a sample Maven-based Java Hello World app, but you can also bring your own app and link to it instead. This toolchain is configured with pipelines for continuous integration and continuous delivery with [Code Risk Analyzer (CRA)](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-configure-cra-repos), source control, issue tracking, and online editing.
 
 The application code is stored in the application source control repository (repo). The build and deploy scripts are stored in the pipeline source control repository. You can customize the build and deploy scripts to meet the development requirements for the app.
 
@@ -42,7 +42,7 @@ The toolchain in this tutorial implements the following best practices:
 * Inserts the built binary into the deployment manifest automatically.
 * Creates a {{site.data.keyword.cos_short}} instance and Bucket to store the transient binary files that are built out-of-box. For advanced users, an existing Artifactory repo can be configured and integrated with the toolchain to support the versioning of build artifacts for traceability and compliance purposes.
 
-The toolchain implements three pipelines to build and deploy app code to a Virtual Server Instance.
+The toolchain implements three pipelines to build and deploy app code to a Virtual Machine.
 
 * **Continuous Integration (CI) Pipeline**: This pipeline is triggered when a change is merged to the master branch of the Application Source Code repo. The CI Pipeline runs the Unit Test, Code Coverage, and Static Scans on the Application Source Code. The CI Pipeline also generates the binary build artifact and uploads it to the {{site.data.keyword.cos_short}} Bucket or Artifactory, as configured in the toolchain. And the CI Pipeline generates the metadata of the build artifacts and stores it in the Inventory repo.
 
@@ -73,11 +73,11 @@ Set up and configure the Virtual Server Instance for the toolchain to deploy the
 {: #cd-vsi-create-toolchain}
 {: step}
 
-To create a **Develop a Java application and deploy to Virtual Server (Virtual Machine)** toolchain, click
+To create a **Develop an application for a Virtual Machine** toolchain, click
 
-[![Create toolchain](images/create_toolchain_button.png)](https://cloud.ibm.com/devops/create?env_id=ibm:yp:us-south){: external}
+[![Create toolchain](images/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-vsi-toolchain&env_id=ibm:yp:us-south){: external}
 
-Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click **Create a Toolchain**. On the **Create a Toolchain** page, click **Develop a Java application and deploy to Virtual Server (Virtual Machine)**.
+Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click **Create a Toolchain**. On the **Create a Toolchain** page, click **Develop an application for a Virtual Machine**.
 {: tip}
 
 ### Configure the simple Virtual Server Instance
@@ -97,7 +97,7 @@ This toolchain uses tools that are included in the {{site.data.keyword.contdeliv
 {: #cd-vsi-config-apprepo}
 
 1. In the **{{site.data.keyword.gitrepos}}** tab, review the default setting that specifies the location of your app's source code. 
-2. By default, the toolchain uses a sample Maven-based Java Hello World app. You can update the location setting to link to your own Maven-based Java app instead.
+2. By default, the toolchain uses a sample Maven-based Java Hello World app. You can update the location setting to link to your own app instead.
 
  ![App repo](images/create_toolchain_app_git_repo_updated.png)
  
