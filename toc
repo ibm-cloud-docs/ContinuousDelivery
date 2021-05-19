@@ -71,6 +71,7 @@ Continuous Delivery
             pagerduty_integration.md
             rtc_integration.md
             sauce_labs_integration.md
+            secrets_manager_integration.md
             slack_integration.md
             sonarqube_integration.md
         
