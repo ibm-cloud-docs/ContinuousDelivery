@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-04-22"
+lastupdated: "2021-05-26"
 
 keywords: IBM Cloud button, yml file, build file, toolchains
 
@@ -28,7 +28,7 @@ When someone clicks your button, these actions occur:
 
 1. If the person does not have an active {{site.data.keyword.cloud_notm}} account, they must create an account. They can create a trial account or a real account.
 
-2. The person can select a region, resource group (available in the Dallas, Washington, London, Frankfurt, Sydney, Osaka, and Tokyo regions) or organization and space (available in the Dallas, London, and Frankfurt regions), and app name by clicking the {{site.data.keyword.deliverypipeline}} icon. The suggested app name is the same as the toolchain name, which is constructed from the name of your original Git repo and the time. The toolchain name can also be edited.
+2. The person can select a region, resource group (available in the Dallas, Washington, Toronto, London, Frankfurt, Sydney, Osaka, and Tokyo regions) or organization and space (available in the Dallas, London, and Frankfurt regions), and app name by clicking the {{site.data.keyword.deliverypipeline}} icon. The suggested app name is the same as the toolchain name, which is constructed from the name of your original Git repo and the time. The toolchain name can also be edited.
 
 3. A toolchain is created that includes a new private clone of your Git repo, a pipeline for building and deploying code changes, the Eclipse Orion {{site.data.keyword.webide}} for editing code on the Cloud, and an issue tracker.
 
