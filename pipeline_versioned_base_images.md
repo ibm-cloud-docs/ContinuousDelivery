@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019, 2021
-lastupdated: "2021-04-21"
+lastupdated: "2021-05-28"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -18,12 +18,16 @@ subcollection: ContinuousDelivery
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # Working with versioned base images
 {: #pipeline_versioned_base_images}
 
 When you develop applications for {{site.data.keyword.cloud_notm}}, you can use versioned base images to run pipeline jobs to make sure that you are using the current tools, libraries, and runtimes. Versioned base images help you to make sure that the bits that make up the application, and the environment that you deploy the application to, are consistent. You can control when the tools, libraries, or runtimes for your application change and update them when it makes sense during the development cycle.
+
+As of 1 September 2021, the version 1.0 base image that is used to run pipelines will be removed from {{site.data.keyword.contdelivery_full}}. You must upgrade to a newer version of the base image. It is recommended that you select the `Latest` version to run pipeline jobs with the current image version.
+{: deprecated}
 
 On 16 March 2020, the {{site.data.keyword.containerlong}} released a new version 1.0 of the {{site.data.keyword.cloud_notm}} CLI plug-in. Because this version is not 100% compatible with earlier versions, you must upgrade your scripts after you start to use this version. For more information about this new version of the {{site.data.keyword.cloud_notm}} CLI plug-in, see [Big changes are coming to the {{site.data.keyword.containerlong_notm}} CLI plugin to change your experience for the better](https://www.ibm.com/cloud/blog/announcements/boost-your-productivity-with-a-new-cli-experience-for-the-ibm-cloud-kubernetes-service){: external}. To maintain compatibility with the current {{site.data.keyword.containerlong_notm}} runtimes after the new version 1.0 is available, {{site.data.keyword.contdelivery_short}} will update the current base image for the {{site.data.keyword.deliverypipeline}} to include this version. For production workloads, set any of your pipelines that are using the current base image to instead use version 2.6 until you can update your scripts to work with the new version.
 {: important}
@@ -1546,6 +1550,9 @@ To view the contents of version 2.1, from the running image, type `default_versi
 
  ### Version 1.0
  {: #version_1_0}
+
+As of 1 September 2021, the version 1.0 base image that is used to run pipelines will be removed from {{site.data.keyword.contdelivery_full}}. You must upgrade to a newer version of the base image. It is recommended that you select the `Latest` version to run pipeline jobs with the current image version.
+{: deprecated}
 
 This earlier image matches the environment that pipeline jobs were run in before versioned base images were available. This image contains all of the versions of the tools that were available when the image was created, but it is no longer being updated. To access new versions of tools, update to the current image version. For more information about the contents of the 1.0 image version, see [Preinstalled resources](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources).
  
