@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-26"
+lastupdated: "2021-05-31"
 
-keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Artifactory, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, Dedicated GitHub Enterprise and Issues, GitLab, Hashicorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
+keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Artifactory, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, GitLab, Hashicorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
 
 subcollection: ContinuousDelivery
 
@@ -40,7 +40,6 @@ The tool integrations that are available to add and configure for your toolchain
 |[Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-webide)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes			|
 |[{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-grit)	|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|No		|
 |[GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-github)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
-|[Dedicated {{site.data.keyword.ghe_short}} and Issues](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-configghe)			|No		|Yes		|
 |[GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-gitlab)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|No		|
 |[HashiCorp Vault](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
 |[Jenkins](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jenkins)	|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
