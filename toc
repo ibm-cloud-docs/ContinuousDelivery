@@ -60,7 +60,6 @@ Continuous Delivery
             web_ide_integration.md
             grit_integration.md
             github_integration.md
-            ghe_integration.md
             gitlab_integration.md
             hashicorp_vault_integration.md
             jenkins_integration.md
