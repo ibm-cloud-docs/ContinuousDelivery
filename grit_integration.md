@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-09-10"
+  years: 2015, 2021
+lastupdated: "2021-05-31"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Git Repos and Issue Tracking
 
@@ -34,7 +34,7 @@ If you are configuring {{site.data.keyword.gitrepos}} as you are creating the to
 
 If you have a toolchain and want to migrate a Git repo in your toolchain to {{site.data.keyword.gitrepos}}, follow these steps:
 
-These instructions apply to toolchains that already contain the Git repo that you want to migrate to {{site.data.keyword.gitrepos}}. For information about adding different types of Git repos to your toolchain, see the [Configuring GitHub](/docs/ContinuousDelivery?topic=ContinuousDelivery-github), [Configuring GitHub Enterprise and Issues on {{site.data.keyword.cloud_notm}} Dedicated](/docs/ContinuousDelivery?topic=ContinuousDelivery-configghe), and [Configuring GitLab](/docs/ContinuousDelivery?topic=ContinuousDelivery-gitlab).
+These instructions apply to toolchains that already contain the Git repo that you want to migrate to {{site.data.keyword.gitrepos}}. For information about adding different types of Git repos to your toolchain, see [Configuring GitHub](/docs/ContinuousDelivery?topic=ContinuousDelivery-github) and [Configuring GitLab](/docs/ContinuousDelivery?topic=ContinuousDelivery-gitlab).
 {: tip}
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
