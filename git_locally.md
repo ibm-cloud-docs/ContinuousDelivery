@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-03-09"
+  years: 2015, 2021
+lastupdated: "2021-05-31"
 
 keywords: Git source control, authentication, personal access token, SSH key, Git repos, Web IDE 
 
@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #git_local}
 
 
-You can manage and work with source code in a GitHub, GitHub Enterprise, or {{site.data.keyword.gitrepos}} repository (repo), locally or in the Eclipse Orion {{site.data.keyword.webide}}. To work locally, clone your repo with a Git client such as the Git command line interface, and edit the code with your favorite editor. If you work in Eclipse, you can install the EGit plug-in for version control.
+You can manage and work with source code in a GitHub or {{site.data.keyword.gitrepos}} repository (repo), locally or in the Eclipse Orion {{site.data.keyword.webide}}. To work locally, clone your repo with a Git client such as the Git command line interface, and edit the code with your favorite editor. If you work in Eclipse, you can install the EGit plug-in for version control.
 
 ## Cloning your Git project from the command line
 
@@ -36,7 +36,6 @@ You can manage and work with source code in a GitHub, GitHub Enterprise, or {{si
 |:-----------|:-------------|:------------|:-------------|
 | Git Repos and Issue Tracking  | [Personal access token](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat) | Git Repos and Issue tracking user name (not your IBM id) and personal access token | [Configure the SSH key](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key) |
 | Public GitHub (github.com) | Personal access token is not required, but you can set one up and use it | GitHub user name and password, or GitHub user name and Personal Access token, or just the personal access token as the user name | [Configure a GitHub SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: external} |
-| GitHub Enterprise | [Personal access token](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) | GitHub Enterprise user name (not your IBM id) and personal access token | [Configure the GitHub Enterprise SSH key](/docs/services/ghededicated?topic=ghededicated-getting-started#ghe_auth) |
 {: caption="Table 1. Git authentication setup" caption-side="top"}
 
 If you prefer to use SSH, you can reuse a single key across all Git servers. Create or locate your key and configure it in each server as described in the previous links. If you create your key with a passphrase, you are prompted for that passphrase when you use the key.
