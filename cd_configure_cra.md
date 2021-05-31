@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-04-23"
+lastupdated: "2021-05-31"
 
 keywords: Code Risk Analyzer, code repositories, DevOps Insights, scan pull requests, Tekton pipelines
 
@@ -112,14 +112,14 @@ Add and configure the repo that contains the code that you want Code Risk Analyz
 1. Click **Add tool**.
 1. In the Tool Integrations section, click **GitHub**.
 1. Click the GitHub server that you want to use.
-1. If you have a GitHub or {{site.data.keyword.ghe_short}} repo and want to use it, for the repository type, click **Existing** and type the URL.
-1. If you want to use a new GitHub or {{site.data.keyword.ghe_short}} repo, type a name for the repo, type the URL for the repo that you are cloning or forking, and select the repository type:
+1. If you have a GitHub repo and want to use it, for the repository type, click **Existing** and type the URL.
+1. If you want to use a new GitHub repo, type a name for the repo, type the URL for the repo that you are cloning or forking, and select the repository type:
 
  a. To create an empty repo, click **New**.
 
- b. To create a copy of a GitHub or {{site.data.keyword.ghe_short}} repo, click **Clone**.
+ b. To create a copy of a GitHub repo, click **Clone**.
 
- c. To fork a GitHub or {{site.data.keyword.ghe_short}} repo so that you can contribute changes through pull requests, click **Fork**.
+ c. To fork a GitHub repo so that you can contribute changes through pull requests, click **Fork**.
 
 1. Click **Create Integration**.
 
@@ -236,7 +236,6 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
  
  * For GitHub repos, select **github-pr-listener**.
  * For {{site.data.keyword.gitrepos}} repos, select **gitlab-pr-listener**.
- * For {{site.data.keyword.ghe_short}} repos, select **github-ent-pr-listener**.
 
 1. Optional. If the repo contains Terraform files, in the **Triggers** section, specify the directory within your Git repo that you want to run Terraform scanning on.
 
