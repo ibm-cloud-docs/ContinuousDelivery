@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-26"
+lastupdated: "2021-05-31"
 
 keywords: user management function, toolchains, tool integrations, user access, Cloud Foundry org
 
@@ -115,7 +115,7 @@ You can delete a toolchain. When you delete a toolchain, the deletion cannot be 
 1. Click the **Actions** menu and select **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.  
 
- When you delete a GitHub, {{site.data.keyword.ghe_short}}, or {{site.data.keyword.gitrepos}} tool integration, the associated repo is not deleted from GitHub, {{site.data.keyword.ghe_short}}, or {{site.data.keyword.gitrepos}}. You must manually remove the repo.
+ When you delete a GitHub or {{site.data.keyword.gitrepos}} tool integration, the associated repo is not deleted from GitHub or {{site.data.keyword.gitrepos}}. You must manually remove the repo.
  {: tip}
 
 ## Take a tutorial: Using toolchains
