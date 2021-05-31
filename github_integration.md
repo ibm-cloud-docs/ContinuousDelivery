@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-19"
+  years: 2015, 2021
+lastupdated: "2021-05-31"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, GitHub
 
@@ -35,11 +35,8 @@ You can configure GitHub as a tool integration in your toolchain so that you can
 
 If you are configuring this tool integration as you are creating the toolchain, follow these steps:
 
-1. If you are storing your source code in a GitHub repo, in the Configurable Integrations section, click **GitHub**. If you are configuring this tool integration on {{site.data.keyword.Bluemix_notm}} Public and you did not authorize {{site.data.keyword.cloud_notm}} to access GitHub, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account. If you have an active GitHub session but you didn't enter your password recently, you might be prompted to enter your GitHub password to confirm.
+1. If you are storing your source code in a GitHub repo, in the Configurable Integrations section, click **GitHub**. If you are configuring this tool integration on {{site.data.keyword.cloud_notm}} Public and you did not authorize {{site.data.keyword.cloud_notm}} to access GitHub, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account. If you have an active GitHub session but you didn't enter your password recently, you might be prompted to enter your GitHub password to confirm.
 1. If you are using a repo on your own {{site.data.keyword.ghe_short}} server, in the Configurable Integrations section, click **Add custom server**.
-
- The network must be able to access the target Git server from an {{site.data.keyword.cloud_notm}} Dedicated environment. If your GitHub server is not available on the public internet or the host name does not resolve on the public Domain Name Server (DNS), [open a support ticket](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_support#support-tickets). You can use the support ticket to submit a request to open the network routes or update the DNS settings.
- {: important}
 
  Type a title for your custom GitHub server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**.
 
