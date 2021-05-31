@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2015, 2021
-lastupdated: "2021-05-26"
+lastupdated: "2021-05-31"
 
 keywords: IBM Cloud Public, IBM Cloud Dedicated, Use Developer Insights, toolchains, toolchain templates, toolchain tutorials, available regions, tools 
 
@@ -35,9 +35,9 @@ Toolchains are available on {{site.data.keyword.cloud_notm}} Public and Dedicate
 
 {{site.data.keyword.cloud_notm}} Public is an open-standards, cloud-based platform where you can build, run, and manage applications that are accessed by [http://cloud.ibm.com](http://cloud.ibm.com){: external}. {{site.data.keyword.cloud_notm}} Dedicated provides the capabilities of {{site.data.keyword.cloud_notm}} in a dedicated infrastructure environment that is securely connected to both the {{site.data.keyword.cloud_notm}} Public environment and your network. Your company's {{site.data.keyword.cloud_notm}} Dedicated environment might not contain the same tool integrations as the {{site.data.keyword.cloud_notm}} Public site.
 
-For source-code management and issue tracking, {{site.data.keyword.cloud_notm}} Public generally uses {{site.data.keyword.gitrepos}} (hosted by IBM and built on [GitLab Community Edition](https://about.gitlab.com/){: external}) or GitHub (github.com). {{site.data.keyword.cloud_notm}} Dedicated can also use github.com, but it generally uses {{site.data.keyword.ghe_short}} that is either installed by your company or managed by IBM.
+For source-code management and issue tracking, {{site.data.keyword.cloud_notm}} Public generally uses {{site.data.keyword.gitrepos}} (hosted by IBM and built on [GitLab Community Edition](https://about.gitlab.com/){: external}) or GitHub (github.com). {{site.data.keyword.cloud_notm}} Dedicated can also use github.com.
 
-{{site.data.keyword.contdelivery_short}} is available on {{site.data.keyword.Bluemix_notm}} Public in selected regions, and on {{site.data.keyword.cloud_notm}} Dedicated. Toolchains differ depending on whether you use {{site.data.keyword.contdelivery_short}} on {{site.data.keyword.cloud_notm}} Public or {{site.data.keyword.cloud_notm}} Dedicated.
+{{site.data.keyword.contdelivery_short}} is available on {{site.data.keyword.cloud_notm}} Public in selected regions, and on {{site.data.keyword.cloud_notm}} Dedicated. Toolchains differ depending on whether you use {{site.data.keyword.contdelivery_short}} on {{site.data.keyword.cloud_notm}} Public or {{site.data.keyword.cloud_notm}} Dedicated.
 
 Although toolchains are not currently available in all regions, you can configure your toolchain to deploy your apps across all regions. To learn more, try the [Deploy a secure web application across multiple regions tutorial](/docs/solution-tutorials?topic=solution-tutorials-multi-region-webapp).
 {: tip}
@@ -46,7 +46,7 @@ Although toolchains are not currently available in all regions, you can configur
 |:----------|:------------------------------|:------------------|
 |Tool integrations 		|For a list of supported tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations). 		|The tool integrations that are available depend on how {{site.data.keyword.contdelivery_short}} was set up in your environment.			|
 |Creating a toolchain from a template		|Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com/devops){: external}.		|Log in to your Dedicated environment on {{site.data.keyword.cloud_notm}}.			|
-|Creating a toolchain from an app		|The app is configured for continuous delivery from a new GitHub repo that is populated with app starter code.		|The app is configured for continuous delivery from a new GitHub or GitHub Enterprise repo that is populated with app starter code.		|  
+|Creating a toolchain from an app		|The app is configured for continuous delivery from a new GitHub repo that is populated with app starter code.		|The app is configured for continuous delivery from a new GitHub repo that is populated with app starter code.		|  
 |Delivery pipeline deployment regions		|All {{site.data.keyword.cloud_notm}} Public regions are available for Cloud Foundry deployment jobs. 		|The {{site.data.keyword.cloud_notm}} Dedicated region is available. Other Dedicated or Local regions within the same customer account might also be available depending on how {{site.data.keyword.contdelivery_short}} was set up in your specific environment.		|
 |Delivery pipeline deployment jobs		|All [job types](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_jobs) are available.		|Job types that depend on {{site.data.keyword.cloud_notm}} services that are not installed in the Dedicated environment might not be available.	For example, container build and deploy job types might not be available in environments that do not have the {{site.data.keyword.containerlong_notm}}.	|
 {: caption="Table 1. Differences between toolchains on {{site.data.keyword.cloud_notm}} Dedicated and {{site.data.keyword.cloud_notm}} Public" caption-side="top"}
