@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2021
 
-lastupdated: "2021-05-26"
+lastupdated: "2021-05-31"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -40,7 +40,7 @@ Each toolchain is associated with a specific resource group or organization (org
 
 On {{site.data.keyword.cloud_notm}} Public, depending on the template or toolchain that you use, the toolchain might include a GitHub or Git repository (repo) that is populated with app starter code and a preconfigured delivery pipeline. When you push changes to the toolchain's repo, the delivery pipeline automatically builds and deploys the app to {{site.data.keyword.cloud_notm}}.
 
-On {{site.data.keyword.cloud_notm}} Dedicated, depending on the template or toolchain that you use, the toolchain might include a GitHub or GitHub Enterprise repo that is populated with app starter code and a preconfigured delivery pipeline. When you push changes to the toolchain's GitHub or GitHub Enterprise repo, the delivery pipeline automatically builds and deploys the apps to {{site.data.keyword.cloud_notm}}.
+On {{site.data.keyword.cloud_notm}} Dedicated, depending on the template or toolchain that you use, the toolchain might include a GitHub repo that is populated with app starter code and a preconfigured delivery pipeline. When you push changes to the toolchain's GitHub repo, the delivery pipeline automatically builds and deploys the apps to {{site.data.keyword.cloud_notm}}.
 
 To see which toolchains and tool integrations are available, see [Toolchain availability, templates, and tutorials](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_about).
 
@@ -113,12 +113,12 @@ You can use a template as a starting point to [create a toolchain](https://cloud
 ## Creating a toolchain from an app
 {: #creating_a_toolchain_from_an_app}
 
-You can create a toolchain from your app. The toolchain can support continuous development, deployment, monitoring, and more, and it is associated with your app. Each app can be associated with a toolchain. When you push changes to the toolchain's GitHub or {{site.data.keyword.ghe_short}} repo, the pipeline automatically builds and deploys the app.
+You can create a toolchain from your app. The toolchain can support continuous development, deployment, monitoring, and more, and it is associated with your app. Each app can be associated with a toolchain. When you push changes to the toolchain's GitHub repo, the pipeline automatically builds and deploys the app.
 
 If you created your app by using your own code repository, click **Deploy my app** on your app's details page. Then, follow the steps that are described in [Creating apps from your own code repository](/docs/apps?topic=apps-tutorial-byoc#tutorial-byoc).
 {: note}
 
-1. If you created your app by using a starter kit, click **Deploy my app** on your app's details page. Next, select a deployment target. If you use {{site.data.keyword.cloud_notm}} Public, your app is configured for continuous delivery from a new GitHub repo that is populated with the app starter code. If you use {{site.data.keyword.cloud_notm}} Dedicated, your app is configured for continuous delivery from a new GitHub or {{site.data.keyword.ghe_short}} repo that is populated with the app starter code.
+1. If you created your app by using a starter kit, click **Deploy my app** on your app's details page. Next, select a deployment target. If you use {{site.data.keyword.cloud_notm}} Public, your app is configured for continuous delivery from a new GitHub repo that is populated with the app starter code. If you use {{site.data.keyword.cloud_notm}} Dedicated, your app is configured for continuous delivery from a new GitHub repo that is populated with the app starter code.
 1. On the toolchain configuration page, review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
 1. Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.cloud_notm}}. If you want to use a different name, change the toolchain's name.
 1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For more information about configuring the tool integrations, see [Configuring tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations).
@@ -145,7 +145,7 @@ You can view a toolchain from an app by clicking the toolchain name from your ap
 1. On the Toolchains page, select a **Resource Group** or **Location**. All of the toolchains that are contained within the selected resource group or Cloud Foundry org are displayed. Click the toolchain that you want to view to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 2. To access a tool integration that is in your toolchain, click the tool.
 
- If you have more than one GitHub, {{site.data.keyword.ghe_short}}, or Git repo, you might have multiple cards for the same tool integration because each repo is represented by its own card. If you have more than one pipeline, you might have multiple cards for the same tool integration because each pipeline is represented by its own card. For example, when you create a Microservices toolchain, each of the three microservices has its own GitHub, {{site.data.keyword.ghe_short}}, or Git repo and its own pipeline.
+ If you have more than one GitHub or Git repo, you might have multiple cards for the same tool integration because each repo is represented by its own card. If you have more than one pipeline, you might have multiple cards for the same tool integration because each pipeline is represented by its own card. For example, when you create a Microservices toolchain, each of the three microservices has its own GitHub or Git repo and its own pipeline.
  {: tip}
  
 ### Viewing a toolchain by using the CLI
