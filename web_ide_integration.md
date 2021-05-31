@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-19"
+  years: 2015, 2021
+lastupdated: "2021-05-31"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Eclipse Orion Web IDE, Web IDE
 
@@ -39,7 +39,7 @@ To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webi
  b. In the Tool Integrations section, click **Eclipse Orion {{site.data.keyword.webide}}**.
 
 1. Click **Create Integration**.
-1. Click **Eclipse Orion {{site.data.keyword.webide}}**. Your workspace is pre-populated with your GitHub or {{site.data.keyword.ghe_short}} repos. The repos that are associated with your current toolchain are highlighted.
+1. Click **Eclipse Orion {{site.data.keyword.webide}}**. Your workspace is pre-populated with your GitHub repos. The repos that are associated with your current toolchain are highlighted.
 
 ## Learn more about the Eclipse Orion Web IDE
 
