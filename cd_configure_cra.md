@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-05-31"
+lastupdated: "2021-06-02"
 
 keywords: Code Risk Analyzer, code repositories, DevOps Insights, scan pull requests, Tekton pipelines
 
@@ -29,6 +29,9 @@ subcollection: ContinuousDelivery
 
 Code Risk Analyzer takes all of your Git-based code, configurations, and deployment artifacts, builds a dependency graph, and runs a pipeline of regulatory compliance control checks. It is embedded into existing development workflows, such as creating a change request or promoting a code change into the main development branch. It produces a bill of materials that reflects the composition of a deployment. And it identifies specific versions of packages and Linux&reg; operating systems distributions that contain published vulnerabilities.
 {: shortdesc}
+
+## Supported content
+{: #cra_supported_content}
 
 Code Risk Analyzer supports the Java&trade;, Node.js, and Python languages. The following table lists and describes the content that Code Risk Analyzer supports.
 
@@ -256,6 +259,19 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
 Use of this service is not guaranteed to find all vulnerabilities in your applications. The application owner is responsible for testing any fixes that are recommended by the service.
 {: important}
+
+## Configuring Code Risk Analyzer to build package manifest files
+{: #cra_build_package_manifests}
+
+The Code Risk Analyzer Discovery task automatically searches for the package manifest files that are listed in the table within the [Supported content](#cra_supported_content) section. If a package manifest file is not found in the repo, you can configure the Discovery task to automatically build the package manifest file for the supported languages.
+
+The following table lists and describes each of the supported environment properties.
+
+| Environment Property | Description |
+|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| nodejs-create-package-lock | A Boolean (`true` or `false`) value that indicates whether to create the `package-lock.json` file.  This environment property requires the repo to contain a `package.json` file. |
+| python-create-requirements-txt | A Boolean (`true` or `false`) value that indicates whether to create  the `requirements.txt` file.  This feature supports both Python 2 and Python 3. |
+{: caption="Table 2. Environment properties" caption-side="top"}
 
 ## Configuring Code Risk Analyzer to ignore files
 {: #cra_ignore_files}
