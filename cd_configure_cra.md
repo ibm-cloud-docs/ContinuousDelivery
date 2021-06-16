@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-06-02"
+lastupdated: "2021-06-16"
 
 keywords: Code Risk Analyzer, code repositories, DevOps Insights, scan pull requests, Tekton pipelines
 
@@ -72,7 +72,7 @@ Complete the following steps to enable Code Risk Analyzer to scan pull requests 
 1. Create an API key to authenticate with Code Risk Analyzer.
 1. Create and configure a Tekton pipeline.
 
-Code Risk Analyzer is currently available for toolchains only in the Dallas and Washington regions.
+Code Risk Analyzer is currently available for toolchains only in the Dallas, Washington, Sydney, Osaka, and Toronto regions.
 {: important}
 
 ## Building your own toolchain
