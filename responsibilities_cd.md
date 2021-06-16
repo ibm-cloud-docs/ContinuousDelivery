@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-11-10"
+  years: 2019, 2021
+lastupdated: "2021-06-16"
 
 keywords: customer responsibilities, IBM responsibilities, terms and conditions, disaster recovery, toolchain backup
 
@@ -102,18 +102,6 @@ IBM is responsible for maintaining backups and high availability of the {{site.d
 
 IBM backs up and restores your toolchain data if a disaster occurs. You can also back up your toolchain to a different region by mirroring your Git repositories (repos), and then saving and restoring your toolchain. Backing up a toolchain provides faster failover and redundancy. It also ensures smooth operation if issues arise in the original region.
 
-#### Known limitations
-{: #backup_known_limitations}
-
-Backing up your toolchain creates a copy of the toolchain itself, but it does not copy all of the data that is referenced by the toolchain. Consider the following limitations when you back up a toolchain to a different region:
-
-* You cannot back up and restore Tekton pipelines.
-* You cannot back up and restore pipelines that use pipeline private workers.
-* Web IDE workspaces are not included in the copied toolchain. 
-* Pipeline logs and artifacts are not included in the copied toolchain.
-* Tool configuration secrets that are stored in Key Protect or HashiCorp Vault are not included in the copied toolchain.
-* {{site.data.keyword.DRA_short}} data is not included in the copied toolchain.
-
 #### Mirroring your Git repos
 {: #mirror_git_repo}
 
@@ -193,8 +181,21 @@ To save and restore a toolchain, complete the following steps:
 
   b. Verify that your pipelines can be [started manually](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_stages).  
   
-
 #### Using your backup toolchain
 {: #use_backup_toolchain}
 
 Backup toolchains are intended to provide short-term continuity if issues exist in a particular region. Do not commit to target repos directly or enable pipeline commit triggers on target pipelines. If you commit to the target repo directly and then return to using the source repo, you risk conflicts and inconsistencies because the repos are not synchronized. If you enable commit triggers and then return to using the source repo, both pipelines run when code is updated. To avoid these scenarios, run your pipelines manually and return to the source toolchain as soon as possible.
+
+#### Known limitations
+{: #backup_known_limitations}
+
+Backing up your toolchain creates a copy of the toolchain itself, but it does not copy all of the data that is referenced by the toolchain. Consider the following limitations when you back up a toolchain to a different region:
+
+* You cannot back up and restore Tekton pipelines.
+* You cannot back up and restore pipelines that use pipeline private workers.
+* Eclipse Orion {{site.data.keyword.webide}} workspaces are not included in the copied toolchain.
+* Pipeline logs and artifacts are not included in the copied toolchain.
+* Tool configuration secrets that are stored in Key Protect or HashiCorp Vault are not included in the copied toolchain.
+* {{site.data.keyword.DRA_short}} data is not included in the copied toolchain.
+
+If your toolchain is subject to these limitations, you cannot use the script to back up and restore these aspects of your toolchain. Whenever the original toolchain is updated, you must keep the backup copy current.
