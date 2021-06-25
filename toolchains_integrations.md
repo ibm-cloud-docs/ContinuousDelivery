@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-31"
+lastupdated: "2021-06-07"
 
-keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Artifactory, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, GitLab, Hashicorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Slack, SonarQube
+keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Artifactory, Bitbucket, Cloud Event Management, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, GitLab, Hashicorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
 subcollection: ContinuousDelivery
 
@@ -51,6 +51,7 @@ The tool integrations that are available to add and configure for your toolchain
 |[Rational Team Concert](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-rationalteamconcert)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
 |[Sauce Labs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-saucelabs)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|No		|
 |[Secrets Manager](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[Security and Compliance Center](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-scc)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
 |[Slack](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-slack)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
 |[SonarQube](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-sonarqube)			|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
 {: caption="Table 1. Tool integrations available for toolchains on {{site.data.keyword.cloud_notm}} Public and Dedicated" caption-side="top"}
