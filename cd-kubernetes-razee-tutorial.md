@@ -154,6 +154,7 @@ In this step, you create a Develop a Kubernetes app with Razee toolchain. Before
    * `run-vulnerability-advisor-scan`: Runs [Vulnerability Advisor](/docs/services/Registry?topic=va-va_index) on the image to check for known vulnerabilities. If it finds a vulnerability, the job fails and prevents the image from being deployed. This safety feature prevents apps with security holes from being deployed. The image in this tutorial doesn't contain vulnerabilities, so it passes. In this tutorial template, the default configuration of the job is to not block on failure.
 
    * `publish-testrecord`: Publishes test records from Vulnerability Advisor to [{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-publishing-test-data).
+
 11. Review the `prepare-razee-deploy` task. This task updates the `deployment.yml` manifest file with details from the build artifacts and places those build artifacts and the `deployment.yml` file into the Razee configuration Git repo.
 
 12. Review the `trigger-razee-deploy` task. This task creates or updates the `config.yml` file that Razee uses to deploy the app  into your Kubernetes container. If the pipeline is running for the first time without running the Setup Razee stage, the pipeline stops without deploying the app to Kubernetes. 
@@ -184,7 +185,7 @@ In this step, you create a Develop a Kubernetes app with Razee toolchain. Before
 {: #cd-kube-razee-modify}
 {: step}
 
-Modify the app and redeploy it to view how Razee picks up the changes in the `config.yml` file automatically, and then redeploys the app. 
+Modify the app and redeploy it to view how Razee picks up the changes in the `config.yml` file automatically, and then redeploys the app. 
 
 1. On the toolchain's Overview page, click the **Git** card for your app.
 
@@ -193,11 +194,11 @@ Modify the app and redeploy it to view how Razee picks up the changes in the `co
 
 2. In the Git repo, click the `utils.js` file.
 
-3. Click **Edit** and update the code on line 4 to change the welcome message. 
+3. Click **Edit** and update the code on line 4 to change the welcome message. 
 
-4. Type a commit message and click **Commit changes** to push the change to the project's remote repo. 
+4. Type a commit message and click **Commit changes** to push the change to the project's remote repo. 
 
-5. On the toolchain's Overview page, click the **Delivery Pipeline** (ci-pipeline) card. Because your commit automatically started a build, the pipeline is running. Over the next few minutes, watch your change as it is built, tested, and deployed. 
+5. On the toolchain's Overview page, click the **Delivery Pipeline** (ci-pipeline) card. Because your commit automatically started a build, the pipeline is running. Over the next few minutes, watch your change as it is built, tested, and deployed. 
 
  You don't need to run the Manual Install Razee pipeline again. The Razee agent that is running on your Kubernetes cluster automatically picks up the change to the `config.yml` file that was generated during the **trigger-razee-deploy** stage. After the **trigger-razee-deploy** stage is completed, wait a few minutes for the agent to pick up the change and then refresh your app URL to view the updated message.
  {: tip}

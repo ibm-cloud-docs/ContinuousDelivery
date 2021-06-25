@@ -2,7 +2,7 @@
 
 Copyright:
  years: 2015, 2021
-lastupdated: "2021-05-31"
+lastupdated: "2021-06-09"
 
 keywords: IBM Cloud DevOps, enterprise application Developer, IBM Cloud Garage Method, DevOps toolchain, DevSecOps
 

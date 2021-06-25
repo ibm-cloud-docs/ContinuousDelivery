@@ -2,7 +2,7 @@
 
 copyright:
    years: 2020, 2021
-lastupdated: "2021-05-10"
+lastupdated: "2021-04-20"
 
 keywords: image signing, secure, Kubernetes, Kube, cluster, Docker image
 
@@ -33,7 +33,7 @@ In this tutorial, you learn how to use Docker image signing to validate image in
 
 The Develop a Kubernetes app with secure image signing template expands on the [Develop a Kubernetes app with Tekton Pipelines tutorial](https://www.ibm.com/cloud/architecture/tutorials/use-develop-kubernetes-app-toolchain-with-tekton-pipelines){:external} by adding validation controls to the Docker image. Digital signatures are applied to the Docker image at specific validation stages. An image security enforcement policy is applied to the Kubernetes cluster that requires the digital signatures are applied before you can continue the deployment. 
 
-This toolchain requires you to use a [Key Protect](https://cloud.ibm.com/docs/key-protect){:external} vault instance that is pre-populated with signing keys. 
+This toolchain requires you to use a [Key Protect](/docs/key-protect) vault instance that is pre-populated with signing keys. 
 
 The Hello World application (app) in this tutorial uses Docker with Node.js. It includes a DevOps toolchain that is preconfigured for continuous delivery with Vulnerability Advisor, Docker image signing checking, source control, issue tracking, and online editing. This app also includes deployment to the [{{site.data.keyword.containerlong}}](/docs/containers).
 
@@ -67,7 +67,7 @@ The toolchain that you create in this tutorial includes the following tool integ
 {: #cd-kube-image-signing-dev-cluster}
 {: step}
 
-To complete this tutorial, you need to set up a Kubernetes cluster on the {{site.data.keyword.containershort_notm}} service. The {{site.data.keyword.containershort_notm}} delivers powerful tools by combining Docker and Kubernetes technologies, an intuitive user experience, and built-in security and isolation to automate the deployment, operation, scaling, and monitoring of containerized apps in a cluster of compute hosts.
+To complete this tutorial, you need to set up a Kubernetes cluster on the {{site.data.keyword.containershort_notm}}. The {{site.data.keyword.containershort_notm}} delivers powerful tools by combining Docker and Kubernetes technologies, an intuitive user experience, and built-in security and isolation to automate the deployment, operation, scaling, and monitoring of containerized apps in a cluster of compute hosts.
 
 1. In the {{site.data.keyword.cloud}} catalog, go to the [Kubernetes Service](/kubernetes/catalog/cluster/create).
 1. Select **Standard** as the cluster type, and select **2 MB / 1 Worker** as the machine type. All other options can be left as default.  
@@ -92,7 +92,7 @@ To complete this tutorial, you need to set up a Kubernetes cluster on the {{site
  If you have more than one account, you can click your account name in the {{site.data.keyword.cloud_notm}} console menu bar to select another account that you can access. 
  {: tip}
 
-5. Review your {{site.data.keyword.gitrepos}} settings and, if required, update them. Although each toolchain contains a sample app, you can choose to use a different repo. By default, an empty configuration repo is created, but you can choose to point to an existing configuration repo that is in the same region. To create your source repo in a different Git repo provider than the default {{site.data.keyword.gitrepos}}, select the Git repo that you want to use. For more information about changing the Git provider for your toolchain, see the [Change Git provider in a toolchain tutorial](/cloud/architecture/tutorials/change-git-provider-in-a-toolchain){: external}.
+5. Review your {{site.data.keyword.gitrepos}} settings and, if required, update them. Although each toolchain contains a sample app, you can choose to use a different repo. By default, an empty configuration repo is created, but you can choose to point to an existing configuration repo that is in the same region. To create your source repo in a different Git repo provider than the default {{site.data.keyword.gitrepos}}, select the Git repo that you want to use. For more information about changing the Git provider for your toolchain, see the [Change Git provider in a toolchain tutorial](/cloud/architecture/tutorials/change-git-provider-in-a-toolchain){: external).
 
  Access to {{site.data.keyword.gitrepos}} repos is region-specific. If the template for the toolchain that you're creating keeps the source code for the app in a private repo in one region and you're trying to create a toolchain in another region, the toolchain can't clone the source code into your repo. For more information about how to handle this scenario, see [Why can't I create a toolchain from a template that uses a private repo in a different region?](/docs/ContinuousDelivery?topic=ContinuousDelivery-troubleshoot-git#why-can-t-i-use-the-git-repos-and-issue-tracking-tool-integration-in-my-toolchain-from-one-region-in-a-toolchain-within-a-different-region).
  {: important}
@@ -142,7 +142,7 @@ The toolchain creates three pipelines: ci-pipeline, dct init *namespace*, and pr
       
 2. Click **Run Pipeline**. Review the run parameters and click **Run**. The dct init pipeline starts the Docker Content Trust (DCT). For more information about the dct init run that you started, click the link in the **Name** column. You can view the task definition and the steps in each `PipelineRun` definition. You can also view the status, logs, and details of each task definition and step, and the overall status of the `PipelineRun` definition.
 
- * The **init-docker-content-trust** task starts DCT by using the information that you provided when you set up the Key Protect vault instance name and key names. The stage also allocates the keys and provisions them to be the delegation keys that are used to sign the Docker images. [Docker Content Trust](https://success.docker.com/article/introduction-to-docker-content-trust){: external} provides strong cryptographic guarantees over what code and what versions of software are run in your infrastructure. It integrates [The Update Framework (TUP)](https://theupdateframework.com/){: external} into Docker by using [Notary](https://youtu.be/at72dhg-SZY?t=4873){: external}, an open source tool that provides trust over any content.
+ * The **init-docker-content-trust** task starts DCT by using the information that you provided when you set up the Key Protect vault instance name and key names. The stage also allocates the keys and provisions them to be the delegation keys that are used to sign the Docker images. [Docker Content Trust](https://success.docker.com/article/introduction-to-docker-content-trust){: external) provides strong cryptographic guarantees over what code and what versions of software are run in your infrastructure. It integrates [The Update Framework (TUP)](https://theupdateframework.com/){: external) into Docker by using [Notary](https://youtu.be/at72dhg-SZY?t=4873){: external), an open source tool that provides trust over any content.
       
  * When a publisher who is using Docker Content Trust pushes an image to a remote registry, Docker Engine locally signs the image with the publisher’s private key. When a user pulls this image, Docker Engine uses the publisher’s public key to verify that the image is exactly what the publisher created. It also ensures that the image wasn't tampered with and that it is up to date.
       

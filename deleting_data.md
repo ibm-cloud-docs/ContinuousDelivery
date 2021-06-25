@@ -31,7 +31,7 @@ You can delete data in following ways:
 - Delete integration between Toolchain and {{site.data.keyword.DRA_short}}
 - Delete a repo from your toolchain
 
-For more information about toolchains, see [Creating a toolchain from an app](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app).
+For more information about toolchains, see [Creating a toolchain from an app](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app).
 
 {{site.data.keyword.IBM_notm}} doesn't manage data in {{site.data.keyword.DRA_short}}. If you stop using {{site.data.keyword.DRA_short}}, you must delete your own data. To delete your data, delete the {{site.data.keyword.DRA_short}} tool integration from your toolchain. If the {{site.data.keyword.DRA_short}} tool integration is not added again to the toolchain within seven days, the data is deleted.
 {: important}

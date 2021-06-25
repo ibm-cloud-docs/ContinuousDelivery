@@ -52,3 +52,4 @@ You must have at least one {{site.data.keyword.contdelivery_full}} in your toolc
   * Most frequently failing stages: A trend view of the top five most frequently failing stages to help you quickly identify the stages that are causing the most issues.
   * Most time-consuming stages: A trend view of the top five most time-consuming stages to help you understand where your pipeline runs are spending the most time.
   * Jobs: A granular view of all jobs. This view is helpful to isolate anomalies and directly link to the stage to investigate failures.
+

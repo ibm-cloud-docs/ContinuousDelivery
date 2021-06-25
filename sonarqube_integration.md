@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-19"
+  years: 2015, 2021
+lastupdated: "2021-06-24"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Sonarqube
 
@@ -46,6 +46,70 @@ Configure SonarQube to continuously analyze and measure the quality of your sour
 1. Click **Create Integration**.
 1. From your toolchain, click **SonarQube** to view the dashboard for the SonarQube instance that you connected to.
 
+## Adding Sonarqube to the continuous integration pipeline
+{: #sonarqube-ci-pipeline}
+
+### Default SonarQube instance
+{: #sonarqube-ci-pipeline-default}
+
+If you don't have your own SonarQube instance, enable the default SonarQube scan in an existing pipeline by adding the `opt-in-sonar` parameter to your continuous integration pipeline parameters (any value fits).
+
+The pipeline creates a SonarQube instance during the pipeline run. You can access this instance after the static-scan stage successfully runs.
+
+### Existing SonarQube instance
+{: #sonarqube-ci-pipeline-existing}
+
+To add your own SonarQube instance to your existing pipeline, [add the tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-sonarqube) to your toolchain, and then add the Sonarqube tool integration parameter to the pipeline.
+
+### Required parameters
+{: #sonarqube-cipipeline-parm}
+
+To run the SonarQube scan, the pipeline needs the following continuous integration parameters:
+
+|Name |Type	|Description |Required or Optional |
+|:----------|:------------------------------|:------------------|:----------|
+|cluster-name 		|text 		|The name of the Docker build cluster.			|Required			|
+|dev-region		|text		|The {{site.data.keyword.cloud_notm}} region that hosts the cluster.			|Required			|
+|opt-in-sonar		|text 		|The option to enable the sonarQube scan.		|Required			|
+|sonarqube		|tool integration		|The Sonarqube tool integration.	|Optional			|
+{: caption="Table 1. Continuous integration pipeline parameters}
+
+For more information about pipelines parameters, see [Pipeline parameters](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-pipeline-parm).
+
+If you add multiple SonarQube tool integrations to your pipeline, you can switch between them by changing the value of the sonarqube pipeline parameter, which is a tool integration parameter.
+{: tip}
+
+### Updating the quality gate
+{: #sonarqube-cipipeline-gate}
+
+If you use the SonarQube instance that the pipeline created, you can update the default quality gate.
+
+1. Go to the SonarQube dashboard that was created by the URL from the pipeline logs in the `static-scan` task. 
+
+  ![SonarQube dashboard](images/sonar-quality-gate.png)
+
+1. Click **Quality Gates** > **Create**. 
+1. Set your Quality Gate by using one of the following options:
+
+ * Click  **Set as Default** to set the newly created quality gate as the default.
+ * From the dashboard, select the project and then click **Project Settings** > **Quality Gate** to use the newly created quality gate for the project.
+
+1. Specify which quality gate you want to associate with the project. New scans are evaluated by this quality gate and evidence is created by the quality gate's results.
+
+To learn more about SonarQube, see [SonarQube Documentation](https://docs.sonarqube.org/latest/){: external}.
+
+### Using your own configuration file
+
+You can modify the default configuration without using your own SonarQube instance. Create a `sonar-project.properties` file in the repo that you want to created the configuration file in. If our script detects an existing `configuration sonar-project.properties` file in the repo, it uses that file instead of the default file. For more information about possible analysis parameters in the configuration file, see [Analysis Parameters](https://docs.sonarqube.org/latest/analysis/analysis-parameters/){: external} here. 
+
+Make sure that you add the correct login credentials and host URL to the configuration file.
+{: important}
+
+### Using another static scan implementation
+
+You can modify your `.one-pipeline.yaml` file to add your own custom script to the `static-scan` stage to use your own static scan implementation.
+
 ## Learn more about SonarQube
+{: #sonarqube-learn-more}
 
 To learn more about SonarQube, see [Integrate your SonarQube analysis into your toolchain](https://www.ibm.com/blogs/cloud-archive/2017/06/integrate-sonarqube-analysis-into-your-toolchain/){:external}. 

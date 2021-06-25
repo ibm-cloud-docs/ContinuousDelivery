@@ -33,4 +33,4 @@ The following figure shows unit test trends for builds from the master branch, a
 The quality trends graph correlates with the quality dashboard, and it is a good reference for noticing patterns in your builds. You can view trends for all test data. To view your quality trends dashboard, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. Select your toolchain. Click the {{site.data.keyword.DRA_short}} tile, and then click **Quality Trends**. 
 
 Click the dots within the graph to find out why there are dips in quality.
-{: tip}
+{: tip}  

@@ -31,7 +31,7 @@ Use {{site.data.keyword.DRA_full}} to help improve build quality for your projec
 
 To use {{site.data.keyword.DRA_short}}, you must have a toolchain. A toolchain is a group of tools that are attached to one of your applications. Think of the tools as enhancements to the app and the toolchain as a utility belt. {{site.data.keyword.DRA_short}} works with the other tools in the toolchain, like GitHub and {{site.data.keyword.deliverypipeline}}, to aggregate data for your application.
 
-For more information about toolchains, see [Creating a toolchain from an app](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app).
+For more information about toolchains, see [Creating a toolchain from an app](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app).
 
 
 ## Integrating {{site.data.keyword.DRA_short}}
