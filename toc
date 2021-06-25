@@ -49,7 +49,6 @@ Continuous Delivery
     cd-kubernetes-image-signing-tutorial.md
     [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app)
     cd-vsi-tutorial.md
-    /apps/apps-tutorial-apps-devsecops
     devsecops-tutorial.md
     {: .navgroup-end}
 
