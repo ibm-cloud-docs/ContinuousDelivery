@@ -26,7 +26,7 @@ subcollection: ContinuousDelivery
 # Manually approving change requests
 {: #cd-devsecops-approve-cr}
 
-With {{site.data.keyword.contdelivery_notm}}, you can either approve change requests manually or automatically.
+With {{site.data.keyword.contdelivery_full}}, you can either approve change requests manually or automatically.
 {: shortdesc}
 
 By default, standard change requests are created and if all of the required compliance checks pass, the deployment readiness is set to `true`. When a change request is of the standard type and the deployment readiness is set to `true`, it is automatically approved. 

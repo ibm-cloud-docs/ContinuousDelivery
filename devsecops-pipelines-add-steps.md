@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-18"
+lastupdated: "2021-06-25"
 
 keywords: DevSecOps
 
@@ -74,10 +74,12 @@ save_repo <repo-reference-name> \
     
 This way the rest of the pipeline will be able to scan these repositories for compliance violations and vulnerabilities
 
-Important! Paths saved using save_repo must be relative to the workspace path
+Paths saved by using `save_repo` must be relative to the workspace path.
+{: important}
 
 You don't need to install the pipelinectl tool for your scripts or base images, the reference pipeline provides the binaries for the context of your script
-Test
+
+## Test
 
 This stage is where you suppose to run your tests on your code repositories. You can access your repos added in the setup stage using the list_repos and load_repo pipelinectl interfaces.
 
@@ -134,7 +136,8 @@ test_runner -o results.json
 save_result test results.json
 ```
 
-Important! The first parameter of save_results must be the one-pipeline config stage name, like test, scan-artifact or acceptance-test. Otherwise the evidence collector won't be able to find it and attach it to the proper piece of evidence.
+The first parameter of save_results must be the one-pipeline config stage name, like test, scan-artifact or acceptance-test. Otherwise the evidence collector won't be able to find it and attach it to the proper piece of evidence.
+{: important}
 
 Using the save_result pipelinectl interface will ensure that the pipeline will find your result artifacts, and they will be uploaded to the evidence locker, and attached to the compliance evidence created by the pipeline.
 
@@ -169,7 +172,7 @@ Example evidence created for the unit tests while using save_result:
 }
 ```
 
-Build / containerize
+## Build or containerize
 
 In this stage you can build your artifacts. The pipeline provides some default features for docker image type artifacts, but you're able to build any kind of artifacts here. What is important, is to save the created artifacts for the pipeline, so later it can run scans on it, or use them in your release stage.
 
@@ -199,7 +202,8 @@ save_artifact <artifact-reference-name> \
     digest="${IMAGE_DIGEST}"
 ```    
 
-Important! preferred format for image name is the image-URL:build-tag, for example wcp-compliance-automation-team-docker-local.artifactory.swg-devops.com/compliance-baseimage:2.8.0
+The preferred format for image name is the image-URL:build-tag, for example wcp-compliance-automation-team-docker-local.artifactory.swg-devops.com/compliance-baseimage:2.8.0
+{: important]
 
 If you build docker images, use the save_artifact interface like in the example above, to send those images for the default built-in CISO signing and CR VA scanning.
 Release

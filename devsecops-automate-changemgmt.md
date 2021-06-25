@@ -26,7 +26,7 @@ subcollection: ContinuousDelivery
 # Automating change management
 {: #cd-devsecops-automate-changemgmt}
 
-Change management automation is one of the crucial parts of the one-pipeline reference implementation. With {{site.data.keyword.contdelivery_notm}}, developers, approvers, and auditors can track the compliance aspects of deployments. <staging>Every deployment must follow the [{{site.data.keyword.cloud_notm}} Change Management Policy](https://ibm.ent.box.com/s/z0nklp949ztsjm4vqn0gvo5k4bjx8eya){: external}.</staging>
+Change management automation is one of the crucial parts of the one-pipeline reference implementation. With {{site.data.keyword.contdelivery_full}}, developers, approvers, and auditors can track the compliance aspects of deployments. <staging>Every deployment must follow the [{{site.data.keyword.cloud_notm}} Change Management Policy](https://ibm.ent.box.com/s/z0nklp949ztsjm4vqn0gvo5k4bjx8eya){: external}.</staging>
 {: shortdesc}
 
 <!-- Does this first link need to be changed or can anyone access that box link?-->

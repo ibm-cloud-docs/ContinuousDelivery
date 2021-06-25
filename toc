@@ -69,12 +69,8 @@ Continuous Delivery
         devsecops-build-docker-images.md
         
         {: .topicgroup}
-        Configuring Git repos
-            devsecops-config-github.md
-            devsecops-manage-change-requests.md
-        
-        {: .topicgroup}
         Working with Git repos
+            devsecops-config-github.md
             devsecops-promote-branches.md
             devsecops-promote-master.md
             devsecops-redeploy-staging.md

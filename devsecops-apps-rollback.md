@@ -26,7 +26,7 @@ subcollection: ContinuousDelivery
 # Rolling back apps from production
 {: #cd-devsecops-apps-rollback}
 
-When you work with {{site.data.keyword.contdelivery_notm}}, you might need to roll back a deployed app to a previous version on prod because of an issue.
+When you work with {{site.data.keyword.contdelivery_full}}, you might need to roll back a deployed app to a previous version on prod because of an issue.
 {: shortdesc}
 
 1.  Choose a point in the Inventory to roll back to. All commits are reverted up to this point, and then promoted as a pull request.

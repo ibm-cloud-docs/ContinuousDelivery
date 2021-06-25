@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-07"
+lastupdated: "2021-06-25"
 
 keywords: DevSecOps, triggers
 
@@ -26,7 +26,7 @@ subcollection: ContinuousDelivery
 # Triggers
 {: #cd-devsecops-triggers}
 
-DevSecops continuous integration (CI) and continuous delivery (CD) pipelines provide a set of default triggers.
+DevSecops continuous integration and continuous delivery pipelines provide a set of default triggers.
 {:shortdesc}
 
 |Pipeline |Name	|Description |State |
@@ -42,4 +42,5 @@ DevSecops continuous integration (CI) and continuous delivery (CD) pipelines pro
 |Continuous delivery		|Manual Promotion Trigger		|Runs the promotion pipeline to promote inventory changes from the `source-environment` branch to the `target-environment` branch.	|Enabled			|
 {: caption="Table 1. Triggers" caption-side="top"}
 
-You may [add new triggers](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-add-pipeline-triggers) to the default ones.
+You can [add triggers](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-add-pipeline-triggers) to the set of default triggers.
+{: tip}
