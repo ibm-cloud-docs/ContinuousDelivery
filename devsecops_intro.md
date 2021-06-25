@@ -46,11 +46,6 @@ There are significant benefits to an organization when a standard set of process
 
 Learn more about [DevSecOps](https://www.ibm.com/cloud/learn/devsecops){: external}.
 
-DevSecOps with {{site.data.keyword.contdelivery_notm}} provides a reference architecture and workflow, along with a customizable reference implementation that can be used to build, scan, test, and deploy your cloud-native applications. It offers a set of toolchain templates that define integrations with Git repositories, pre-defined Tekton Pipelines, and integrations with other IBM Cloud tools such as KeyProtect or Cloud Object Storage, as well as other third-party tools. The pipelines provide for enforcement of best practices and automation for key functions for a secure pipeline, such as code and vulnerability scans and image signing. Additionally, the pipelines provide a customizable framework, where standard compliance tasks provide wrappers around custom executable scripts for steps like build, deploy, and test.
+For more information about the {{site.data.keyword.contdelivery_short}} DevSecOps reference architecture, see [DevSecOps architecture](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-arch).
 
-The reference implementation provides for a standard format for evidence and processes for evidence collection and durable storage. It also includes a change management process that allows for automated approvals for deployments as well as a mechanism for manual overrides for exceptional situations.
-
-Learn more about the [{{site.data.keyword.contdelivery_short}} DevSecOps reference architecture](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-arch).
-
-Get started and [Deploy a secure app with DevSecOps best practices](/docs/ContinuousDelivery?topic=ContinuousDelivery-tutorial-cd-devsecops).
-
+Get started and [deploy a secure app with DevSecOps best practices](/docs/ContinuousDelivery?topic=ContinuousDelivery-tutorial-cd-devsecops).
