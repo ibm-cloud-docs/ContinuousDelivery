@@ -34,8 +34,6 @@ completion-time: 2h
 {: toc-completion-time="2h"}
 
 Learn how to master DevSecOps best practices by using a complete reference implementation that is available as a service and powered by {{site.data.keyword.contdelivery_full}}, which includes Git Repo and Issue Tracking, [Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment), DevOps Insights, Code Risk Analyzer, and WebIDE. The implementation also includes Secrets Manager and Key Protect, Cloud Object Storage, Container Registry, and can be supplemented with more tools, such as external Git providers and artifact stores.
-
-Learn how to deploy a sample application by using {{site.data.keyword.contdelivery_full}} [toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started) that are specialized with DevSecOps compliance automation by using [Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment) for continuous deployment for [Kubernetes](https://www.ibm.com/in-en/cloud/kubernetes-service?p1=Search&p4=43700056949486555&p5=e&gclid=EAIaIQobChMIydzNjLyo8QIVC7aWCh2AIwXaEAAYASAAEgKyAfD_BwE&gclsrc=aw.ds). The toolchain is preconfigured for Continuous Delivery with inventory integration, change management with Git Reports and Issue Tracking (GRIT), evidence collection, and deployment to {{site.data.keyword.containerlong}}.
 {: shortdesc}
 
 ## Overview
