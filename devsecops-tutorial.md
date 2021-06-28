@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-06-28"
 
 keywords: tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevSecOps, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -214,6 +214,8 @@ You can set up the Cloud Object Storage locker later, by providing the necessary
 
 To get the Cloud Object Storage Endpoint, refer to your COS instance's page, and select the 'Endpoints' section in the menu. You need to copy the public endpoint that matches the bucket's region and resiliency.
 
+![DevSecOps Cloud Object Storage Endpoint menu](images/devsecops_set-up_cos-endpoint-menu.png)
+
 If you decide not to use Cloud Object Storage as an evidence locker, you can also set the required values after the creation of the toolchain by setting the cos-bucket-name, cos-endpoint environment variables in the CI Pipeline.
 
 ### Tekton Pipeline
@@ -337,7 +339,7 @@ In the DevSecOps world, shift left is a practice referred to preventing and find
 
 There are two ways to start a CI pipeline:
 * Automatically: after a successful PR pipeline, by approving and merging the PR to the master branch.
-* Manually: to trigger the CI pipeline manually, select the Delivery Pipeline card and click **Run Pipeline** and select ``Manual Trigger`.
+* Manually: to trigger the CI pipeline manually, select the Delivery Pipeline card and click **Run Pipeline** and select `Manual Trigger`.
 
 In this tutorial, the CI Pipeline was triggered after your merged your code changes to the master branch of your application repository.
 1. On the CI toolchain page, click on the `ci-pipeline` tile.
@@ -366,6 +368,15 @@ After a successful CI pipeline run, the sample application has been deployed on 
 The app url can be found at the end of the log of the `run stage` step of `deploy-dev` task of the CI Pipeline run. Use that url to verify the app is running.
 
 ![DevSecOps CI Sample App](images/devsecops_explore_ci_app_running_dev_namespace.png)
+
+### Pipeline Configuration
+{: #devsecops-ci-tool-integration-pipeline-config}
+
+The repository contains custom scripts to carry out pipeline tasks in the CI Pipelines (.pipeline-config.yaml). Refer to [hello-compliance-deployment](https://us-south.git.cloud.ibm.com/open-toolchain/hello-compliance-deployment) sample repository that contains some default configuration and scripts.
+
+By default, the setup Clone deployment configuration from the sample repository. After the repository is cloned, you can customize configurations and scripts for pipeline runs.
+
+More detailed information on customizing the CI pipelines can be found [here](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts). 
 
 ### Wrapping up
 Congratulations!
@@ -490,6 +501,8 @@ The default behavior of the toolchain is to Use existing issues repository to li
 The repository contains custom scripts to carry out pipeline tasks in the CD Pipeline (.pipeline-config.yaml). Refer to [hello-compliance-deployment](https://us-south.git.cloud.ibm.com/open-toolchain/hello-compliance-deployment) sample repository that contains some default configuration and scripts.
 
 By default, the setup Clone deployment configuration from the sample repository. After the repository is cloned, you can customize configurations and scripts for pipeline runs.
+
+More detailed information on customizing the CD pipeline can be found [here](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts). 
 
 **New repository name**: Name of the IBM hosted GRIT Repository created by the toolchain as your deployment configuration repository. The region of the repository remains the same as that of the toolchain. Choose a unique name for the new repository.
 
@@ -627,7 +640,7 @@ You can also set a target environment for the DOI interactions. This parameter i
 {: #devsecops-cd-tool-integration-optional-tools}
 
 #### Slack
-If you want to receive notifications about your PR/CI Pipeline events, you can configure the Slack Tool during the setup from the toolchain template, or you can add the Slack Tool later.
+If you want to receive notifications about your PR/CI Pipeline events, you can configure the [Slack Tool](/docs/ContinuousDelivery?topic=ContinuousDelivery-slack) during the setup from the toolchain template, or you can add the Slack Tool later.
 
 In order for a Slack channel to receive notifications from your tools, you need a Slack webhook URL. To get a webhook URL, see the Incoming Webhooks section of the [Slack API website](https://api.slack.com/messaging/webhooks){: external}.
 
