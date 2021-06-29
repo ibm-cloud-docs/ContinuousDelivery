@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-06-29"
 
 keywords: DevSecOps
 
@@ -35,10 +35,10 @@ The compliance automation pipeline stores the following information in your [evi
 * **Task logs**: After the pipeline runs, the logs for that run are sent to the evidence locker.
 * **Evidence**: Information about tasks and their result output, which can be either a failure or success.
 
-<staging>
+
 
 For more information about the format of the evidence that is sent, see [Evidence summary](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-evidence).
-</staging>
+
 
 
 ## Configuring your bucket
@@ -117,7 +117,6 @@ With one full deployment per week (4 in every month), we can calculate 664 Class
 
 Data amount that is collected varies by use-case, but with average sizes for Evidence (1 kB), test artifacts (100 kB), and logs (15 kB), we calculate 0.01 GByte data that is created and transferred per month.
 
-This example does not exceed the minimum operational and storage costs on the Pricing page: USD 0.0175 per month
 
 ## Resiliency
 {: #cd-devsecops-cos-bucket-resiliency}
