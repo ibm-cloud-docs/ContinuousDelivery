@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-06-29"
 
 keywords: DevSecOps
 
@@ -31,16 +31,30 @@ Pull request pipeline runs set compliance status checks on a pull request for th
 
 Attempts to merge a pull request into the master branch might be blocked because of failed compliance status checks. Opening or updating a pull request against the master branch triggers the pull request pipeline to run. You can run your own setup for the pipelines and tests in [custom script](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts){: external}.
 
-## Pipeline order
+## Stages and tasks
 {: #cd-devsecops-pipeline-order}
 
-|Task |Steps	|Description |
+Task or stage |Short description	|Customizable in `.pipeline-config.yaml` |
 |:----------|:------------------------------|:------------------|
-|code-pr-start 		|`start`, `prepare-next-stage` 		|The pipeline initialization.			|
-|code-setup		|`prepare`, `run-stage`, `prepare-next-stage`		|The user-defined script setup stage.			|
-|code-unit-tests		|`prepare`, `run-stage`, `prepare-next-stage` 		|The user-defined script unit tests stage.		|
-|code-pr-finish		|`prepare`, `detect-secrets`, `cra-discovery`, `cra-remediation`, `cra-remediation-comment`, `cra-cis-check`, `cra-cis-check-comment`		|Run compliance checks.		|
+|`start` 		 |Set up the pipeline environment. 		|No		|
+|`setup`		 |Set up your build and test environment.			|Yes|
+|`unit-tests`|Run unit tests and application tests on application code.		|Yes |
+|`compliance-checks` 	 |Run Code Risk Analyzer scans and other compliance checks on app repos.   	|No			|
+
 {: caption="Table 1. Pipeline order" caption-side="top"}
+
+## Scans and checks in compliance checks
+{: #cd-devsecops-pipeline-compliancechecks}
+
+* Detect secrets: The [IBM Detect Secrets](https://github.com/IBM/detect-secrets) tool identifies places where secrets are visible in application code.
+* Code Risk Analyzer vulnerability scan: Finds vulnerabilities for all of the app package dependencies, container base images, and operating system packages. Uses the Code Risk Analyzer tool.
+* Code Risk Analyzer CIS check: Runs configuration checks on Kubernetes deployment manifests. Uses the Code Risk Analyzer tool.
+* Code Risk Analyzer Bill of Material (BOM) check: The BOM for a specified repo that captures the pedigree of all of the dependencies. This BOM is collected at different granularities. For example, the BOM captures the list of base images that are used in the build, the list of packages from the base images, and the list of app packages that are installed over the base image. The BOM acts as a ground truth for the analytic results and can potentially be used to enforce policy gates. Uses the Code Risk Analyzer tool.
+* Repository compliance checking: Checks that branch protection settings are correct.
+    
+These scripts are run on all of the app repos that the pipeline is aware of. To add repos to these scans, use the [`pipelinectl`](/docs/ContinuousDelivery?topic=ContinuousDelivery-pipelinectl) interface that is provided in your setup stage.
+
+For more information about using multiple GitHub Enterprise repos in pull request and continuous integration pipelines, see [Using GitHub Enterprise repos in pull request and continuous integration pipelines](#cd-devsecops-gherepos-pipelines). For more information about the expected output from user script stages, see [Custom scripts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts).
 
 ### Task jobs
 {: #cd-devsecops-pipeline-jobs}
@@ -58,23 +72,18 @@ You can use Administrator rights to merge pull requests with failed status check
 ## Environment properties
 {: #cd-devsecops-environment-prop}
 
-The following table lists and describes the pull request parameters that are provided out of the box for pipelines:
+The following table lists and describes the pipeline parameters that are provided out of the box for PR pipelines:
 
 |Name |Type	|Description |Required or Optional |
 |:----------|:------------------------------|:------------------|:----------|
-|artifactory-dockerconfigjson 		|SECRET 		|The base64-encoded Docker `config.json` file that pulls the shift-left pipeline compliance images.			|Optional			|
-|baseimage-auth-user		|text		|The credentials for the base image of the application Dockerfile, required by the Code Risk Analyzer scan.			|Optional			|
-|baseimage-auth-email		|text 		|The credentials for the base image of the application Dockerfile, required by the Code Risk Analyzer scan.		|Optional			|
-|baseimage-auth-host		|text		|The credentials for the base image of the application Dockerfile, required by the Code Risk Analyzer scan.	|Optional			|
-|baseimage-auth-password		|SECRET		|The credentials for the base image of the application Dockerfile, required by the Code Risk Analyzer scan. |Optional			|
-|git-token		|SECRET		|The Git Repo and Issue Tracking Repository token.	|Optional			|
-|ibmcloud-api-key		|SECRET		|The {{site.data.keyword.cloud}} API key that interacts with the `ibmcloud` CLI tool.	|Required			|
-|pipeline-config		|text		|The configuration file that customizes pipeline behavior.	|Optional			|
-|pipeline-config-branch		|text		|The branch of the pipeline configuration.	|Optional			|
-|pipeline-config-repo		|text		|The repo URL of the pipeline configuration location.	|Optional			|
+|git-token		                |SECRET		|The Git Repo and Issue Tracking Repository token.	|Optional			|
+|ibmcloud-api-key		          |SECRET		|The {{site.data.keyword.cloud}} API key that interacts with the `ibmcloud` CLI tool.	|Required			|
+|pipeline-config-repo		      |text		  |The URL of the repository with pipeline configuration YAML and scripts.	|Optional			|
+|pipeline-config-branch		    |text		  |The branch in the pipeline-config-repo with configuration YAML and scripts.	|Optional			|
+|pipeline-config		          |text		  |The name of the configuration YAML file that customizes pipeline behavior.	|Optional			|
 |pipeline-dockerconfigjson		|SECRET		|The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional			|
-|pipeline-debug		|select		|The pipeline debug mode switch.	|Optional			|
-|slack-notifications		|text		|The switch that turns the Slack integration on or off.	|Optional			|
+|pipeline-debug		            |select		|The pipeline debug mode switch.	|Optional			|
+|slack-notifications		      |text		  |The switch that turns the Slack integration on or off.	|Optional			|
 {: caption="Table 2. Environment properties}
 
 You can add parameters to the pipelines on the pipeline UI, and access them from the [custom scripts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts).
