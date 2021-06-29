@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-14"
+lastupdated: "2021-06-29"
 
 keywords: DevSecOps
 
@@ -26,8 +26,12 @@ subcollection: ContinuousDelivery
 # Peer review compliance
 {: #cd-devsecops-peer-review}
 
+Peer code reviews are a general best practice in software development and they are also a key component of delivering secure and compliant software.
+{: shortdesc}
+
+The DevSecOps reference implementation helps to enforce the review of new code changes before they are merged and promoted to production. The reference implementation discovers instances of code that was not peer reviewed, collects evidence, and creates incident issues to track these items.
+
 Before you can merge code in the main branch, it must be reviewed by a person who did not upload the modified code.
-{:  shortdesc}
 
 The code repository (repo) must have at least two members, one member that has admin privileges and another member that has write privileges. If code is merged into a repo without a review, the action must be visible in the code repo audit trail. Periodically scan the audit trail to identify and analyze these exceptional situations.
 
