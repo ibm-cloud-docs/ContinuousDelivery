@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-16"
+lastupdated: "2021-06-29"
 
 keywords: DevSecOps
 
@@ -40,7 +40,7 @@ The promotion pipeline promotes inventory entries from one environment to anothe
 ## Running the promotion pipeline
 {: #cd-devsecops-promotion-pipelinerun}
 
-Use the manual promotion trigger to run the promotion Pipeline. If the source (master) branch is ahead of the target (prod) branch, the pipeline creates a promotion pull request that you can review and edit. If the source branch is behind the target, the promotion pipeline fails with the `All changes have already been promoted.` message.
+Use the manual promotion trigger to run the promotion pipeline. If the source (master) branch is ahead of the target (prod) branch, the pipeline creates a promotion pull request that you can review and edit. If the source branch is behind the target, the promotion pipeline fails with the `All changes have already been promoted` message.
 
 To modify the default values of the promotion pull request, or to promote from an alternative source to target, users can modify the inputs from the Pipeline Environment Variables UI.
 
@@ -61,12 +61,12 @@ The information from the body of the promotion pull request is used to create th
 |:----------|:------------------------------|:------------------|:----------|
 |source-environment 		|The source inventory branch of the promotion.		|`master`		|Required		|
 |target-environment		|The target inventory branch of the promotion.		|`prod`			|Required		|
-|priority		|The priority of the change. 		|`critical`, `high`, `moderate`, `low` or `planning`		|Optional		|
-|assignee		|The functional ID or the email of the person to assign the change request to in Change Request GRIT Organization.		||Optional		|
-|description 		|The description of the change that is appended to the change request description.   	||Optional		|
-|purpose 		|The reason why the change is required. 		||Optional		|
-|impact 		|Additional notes about what this change implementation impacts.   	||Optional		|
-|backout-plan		|The plan that describes how the change is rolled back in a failure. 		||Optional		|
+|priority		|The priority of the change. 		|`critical`, `high`, `moderate`, `low`, or `planning`		|Optional		|
+|assignee		|The functional ID or the email of the person to assign the change request to in the Change Request {{site.data.keyword.cloud_notm}} Organization.		|`''`		|Optional		|
+|description 		|The description of the change that is appended to the change request description.   	|`''`		|Optional		|
+|purpose 		|The reason why the change is required. 		|`''`		|Optional		|
+|impact 		|Additional notes about what this change implementation impacts.   	|`''`		|Optional		|
+|backout-plan		|The plan that describes how the change is rolled back in a failure. 		|`''`		|Optional		|
 |slack-notifications		|The switch to turn the Slack Integration on or off  	|0		|Optional		|
 {: caption="Table 1. Promotion pipeline inputs" caption-side="top"}
 
