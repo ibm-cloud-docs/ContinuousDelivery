@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-23"
+lastupdated: "2021-06-29"
 
 keywords: DevSecOps, COS, secure toolchain, compliance
 
@@ -23,20 +23,21 @@ subcollection: ContinuousDelivery
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# IAM permissions needed for various {{site.data.keyword.cloud_notm}} resources
+# IAM permissions for {{site.data.keyword.cloud_notm}} resources
 {: #cd-devsecops-iam-permissions}
 
-Certain IAM permissions are required for the various {{site.data.keyword.cloud_notm}} resources that are used with the DevSecOps CI/CD pipeline templates.
+Certain IAM permissions are required for the various {{site.data.keyword.cloud_notm}} resources that are used with the DevSecOps continuous integration and continuous delivery pipeline templates.
 {: shortdesc}
 
 | Role | Resource |
 |--|--|
-|  Administrator, Writer  |  {{site.data.keyword.cos_full_notm}} service in <your team's resource group name> resource group  |
-|  Administrator, Writer  |  {{site.data.keyword.contdelivery_full}} service in <your team's resource group name> resource group  |
-|  Administrator  |  Toolchain service in <your team's resource group name> resource group  |
-|  KeyPurge, Writer, Editor, Manager, Administrator  |   {{site.data.keyword.keymanagementservicefull}}  service in <your team's resource group name> resource group  |
-|  Viewer, Reader, Writer  |  {{site.data.keyword.containerlong}}  |
-|  Viewer, ReaderPlus  |  {{site.data.keyword.keymanagementserviceshort}} service in <your team's resource group name> resource group  |
+|  Administrator, Writer  |  The {{site.data.keyword.cos_full_notm}} service in your team's resource group.  |
+|  Administrator, Writer  |  The {{site.data.keyword.contdelivery_full}} service in your team's resource group.  |
+|  Administrator  |  The toolchain service in your team's resource group.  |
+|  KeyPurge, Writer, Editor, Manager, Administrator  |   The {{site.data.keyword.keymanagementservicefull}} service in your team's resource group.  |
+|  Viewer, Reader, Writer  |  The {{site.data.keyword.containerlong}}.  |
+|  Viewer, ReaderPlus  |  The {{site.data.keyword.keymanagementserviceshort}} service in your team's resource group.  |
+{: caption="Table 1. IAM roles and resources" caption-side="top"}
 
 ## Related information
 {: #cd-devsecops-iam-related-content}
