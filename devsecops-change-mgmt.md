@@ -2,11 +2,12 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-06-29"
 
 keywords: DevSecOps
 
 subcollection: ContinuousDelivery
+
 
 ---
 
