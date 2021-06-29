@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-06-29"
 
 keywords: DevSecOps
 
@@ -68,11 +68,14 @@ You can use any of the following methods to add static code to your pipeline:
 ## Scans and checks in compliance checks
 {: #cd-devsecops-pipeline-compliancechecks}
 
-* Detect secrets: The [IBM Detect Secrets](https://github.com/IBM/detect-secrets) tool identifies places where secrets are visible in application code.
-* Code Risk Analyzer vulnerability scan: Finds vulnerabilities for all of the app package dependencies, container base images, and operating system packages. Uses the Code Risk Analyzer tool.
-* Code Risk Analyzer CIS check: Runs configuration checks on Kubernetes deployment manifests. Uses the Code Risk Analyzer tool.
-* Code Risk Analyzer Bill of Material (BOM) check: The BOM for a specified repo that captures the pedigree of all of the dependencies. This BOM is collected at different granularities. For example, the BOM captures the list of base images that are used in the build, the list of packages from the base images, and the list of app packages that are installed over the base image. The BOM acts as a ground truth for the analytic results and can potentially be used to enforce policy gates. Uses the Code Risk Analyzer tool.
-* Repository compliance checking: Checks that branch protection settings are correct.
+| Scan or check |  Description | 
+|---------|------------|
+| Detect secrets | The [IBM Detect Secrets](https://github.com/IBM/detect-secrets) tool identifies where secrets are visible in app code. |
+| Code Risk Analyzer vulnerability scan | Finds vulnerabilities for all of the app package dependencies, container base images, and operating system packages. Uses the Code Risk Analyzer tool. |
+| Code Risk Analyzer CIS check |  Runs configuration checks on Kubernetes deployment manifests. Uses the Code Risk Analyzer tool. | 
+| Code Risk Analyzer Bill of Material (BOM) check | The BOM for a specified repo that captures the pedigree of all of the dependencies. This BOM is collected at different granularities. For example, the BOM captures the list of base images that are used in the build, the list of packages from the base images, and the list of app packages that are installed over the base image. The BOM acts as a ground truth for the analytic results and can potentially be used to enforce policy gates. Uses the Code Risk Analyzer tool. |
+| Repository compliance checking | Checks that branch protection settings are correct. |
+{: caption="Table 2. Compliance scans and checks" caption-side="top"}
     
 These scripts are run on all of the app repos that the pipeline is aware of. To add repos to these scans, use the [`pipelinectl`](/docs/ContinuousDelivery?topic=ContinuousDelivery-pipelinectl) interface that is provided in your setup stage.
 
