@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-29"
+lastupdated: "2021-06-30"
 
 keywords: DevSecOps, automate change management, change management
 
@@ -26,8 +26,10 @@ subcollection: ContinuousDelivery
 # Automating change management
 {: #cd-devsecops-automate-changemgmt}
 
-Change management automation is one of the crucial parts of the one-pipeline reference implementation. With {{site.data.keyword.contdelivery_full}}, developers, approvers, and auditors can track the compliance aspects of deployments. <staging>Every deployment must follow the [{{site.data.keyword.cloud_notm}} Change Management Policy](https://ibm.ent.box.com/s/z0nklp949ztsjm4vqn0gvo5k4bjx8eya){: external}.</staging>
+Change management automation is one of the crucial parts of the DevSecOps pipeline reference implementation. With {{site.data.keyword.contdelivery_full}}, developers, approvers, and auditors can track the compliance aspects of deployments. <staging>Every deployment must follow the [{{site.data.keyword.cloud_notm}} Change Management Policy](https://ibm.ent.box.com/s/z0nklp949ztsjm4vqn0gvo5k4bjx8eya){: external}.</staging>
 {: shortdesc}
+
+<!-- Does this first link need to be changed or can anyone access that box link?-->
 
 The pipelines collect [evidence](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-evidence) from every part of the build and deployment lifecycle. Every piece of evidence correlates to a certain build and deployment of the artifacts. So, for each deployed artifact, we should be able to tell, if its build or test deployment had incidents or not. This correlation is implemented through the [inventory model](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-inventory).
 
@@ -104,7 +106,7 @@ The content of the Description and Plan section is organized in the following wa
 ```
 Git changelog for mymicroservice:
 
-Git changelog of artifact '"uk.icr.io/mycontainerregistrynamespace/mymicroservice:one-pipeline4@sha256:733e74a13ad26d77a741204bcdc9c5f8f77023b26620ddaa7842d29b600014a0"'  
+Git changelog of artifact '"uk.icr.io/mycontainerregistrynamespace/mymicroservice:devsecops-pipeline4@sha256:733e74a13ad26d77a741204bcdc9c5f8f77023b26620ddaa7842d29b600014a0"'  
 
 COMMITS:
 94de4256c346c00fee9fd5f7bbfb114ed4da7c81 - implemented myfunction
