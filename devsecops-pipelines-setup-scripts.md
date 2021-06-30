@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-22"
+lastupdated: "2021-06-30"
 
 keywords: DevSecOps
 
@@ -26,10 +26,10 @@ subcollection: ContinuousDelivery
 # Setting up your pipeline scripts
 {: #cd-devsecops-setup-pipeline-scripts}
 
-You can use the cocoa CLI or the Git and GitHub CLI to run operations on the inventory.
+You can use the DevSecOps CLI or the Git CLI to run operations on the inventory.
 {: shortdesc}
 
-## cocoa CLI
+## DevSecOps CLI
 {: #cd-devsecops-setup-cli}
 
 1. Create a promotion pull request from the master branch to the target staging branch.
