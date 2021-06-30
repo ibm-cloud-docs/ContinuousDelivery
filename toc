@@ -241,6 +241,7 @@ Continuous Delivery
         /devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
         /cli/cli-idt-cli
         devsecops-pipelinectl.md
+        devsecops-cocoa-cli.md
         [grunt-idra3 (deprecated)](https://www.npmjs.com/package/grunt-idra3)
 
     cd_at_events.md
