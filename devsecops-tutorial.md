@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021
-lastupdated: "2021-06-28"
+lastupdated: "2021-06-30"
 
 keywords: tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevSecOps, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -62,6 +62,8 @@ Let's now get started with the creation and exploration of the CI and CD templat
 ## Before you begin
 {: #devsecops-tutorial-prereqs}
 
+To set up the prerequisites for your toolchains, follow these steps:
+
 1. Set up an [{{site.data.keyword.cloud_notm}} account](https://{DomainName}/registration){: external}. Depending on your {{site.data.keyword.cloud_notm}} account type, access to certain resources might be limited. Depending on your account plan limits, certain capabilities that are required by some DevSecOps toolchains might not be available. For more information, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started) and [Upgrading your account](/docs/account?topic=account-upgrading-account).
 1. Preconfigure your vault providers and integrations for [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud).
 1. Create a [Kubernetes cluster](/kubernetes/catalog/cluster/create){: external}. Be sure to select the **Free** pricing plan. The cluster might take some time to provision. As the cluster is created, it progresses through these stages: Deploying, Pending, and Ready. [Learn more.](/docs/containers?topic=containers-clusters).
@@ -71,6 +73,9 @@ Let's now get started with the creation and exploration of the CI and CD templat
 1. **Optional.** Validate that the [recommended IAM permissions](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-iam-permissions) are assigned to corresponding integrations.
 1. **Optional.** [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
 1. **Optional.** Create an [{{site.data.keyword.cos_full_notm}} instance and bucket](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-cos-config). [Learn more.](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage)
+
+If you want to automatically set up the DevSecOps infrastructure for your toolchains by using an [{{site.data.keyword.bplong}} workspace](/docs/schematics?topic=schematics-about-schematics) and a Terraform-based quick start template, skip the previous steps and go to [Set up your DevSecOps infrastructure and CI toolchain for deploying a secure app](/docs/apps?topic=apps-tutorial-apps-devsecops). After the prerequisites and CI toolchain are successfully configured, proceed to the [Continuous Delivery (CD) toolchain introduction](#devsecops-cd-toolchain-intro).
+{: tip}
 
 ## Continuous Integration (CI) toolchain introduction
 {: #devsecops-ci-toolchain-intro}
@@ -390,7 +395,7 @@ By completing the CI part of this tutorial, you:
 Let's proceed with Continuous Delivery (CD) now.
 
 ## Continuous Delivery (CD) toolchain introduction
-{: #devsecops-cd-toolchain-create}
+{: #devsecops-cd-toolchain-intro}
 
 ### Tekton CD pipeline with compliance automation for Kubernetes
 {: #devsecops-cd-toolchain-tekton-pipeline}
