@@ -120,7 +120,7 @@ Once you have captured the names of repositories from CI Toolchain, proceed with
 | :--: |
 ### OnePipeline Config
 
-The repository contains custom scripts to carry out pipeline tasks in the CD Pipeline (`.one-pipeline.yaml`). Refer to [hello-compliance-deployment](https://github.ibm.com/open-toolchain/hello-compliance-deployment) sample repository that contains some default configuration and scripts.
+The repository contains custom scripts to carry out pipeline tasks in the CD Pipeline (`.pipeline-config.yaml`). Refer to [hello-compliance-deployment](https://github.ibm.com/open-toolchain/hello-compliance-deployment) sample repository that contains some default configuration and scripts.
 
 By default, the setup `Clone deployment configuration` from the sample repository. Once the repository is cloned, you can customize configurations and scripts for pipeline runs. 
 
