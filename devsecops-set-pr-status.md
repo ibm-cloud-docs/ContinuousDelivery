@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-18"
+lastupdated: "2021-06-30"
 
 keywords: DevSecOps
 
@@ -26,9 +26,8 @@ subcollection: ContinuousDelivery
 # Setting pull request status
 {: #cd-devsecops-set-pr-status}
 
-After you [install the CoCoA CLI on Linux](docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-install-cocoa-cli) to set the status of a commit, you can use the `cocoa set-status` command to set the pull request status.
+You can use the CLI to set the pull request status.
 {: shortdesc}
-<!-- This installation guide about the CoCoA CLI maybe will be removed since it's not open-sourced and needs TaaS ? -->
 
 The current implementation is tested on GitHub. For a list of available values, see [GitHub statuses](https://docs.github.com/en/rest/reference/repos#statuses){: external}.
 {: tip}
