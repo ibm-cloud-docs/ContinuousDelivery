@@ -32,25 +32,25 @@ Learn about the inventory model, role, and purpose.
 ## Inventory structure and content
 {: #inventory-structure}
 
-Our Inventory model tracks the following:
+The Inventory model tracks the following items:
 
 * What artifact is deployed to which environment or region
 * Where was an artifact built (pipeline run, commit sha)
 * What is the signature of the built artifact
 
-Based on this data, we can keep track of evidence related during artifact builds and deployments and help Change Management and Compliance audits.
+Based on this data, you can track evidence during artifact builds and deployments and help Change Management and Compliance audits.
 
 ### Branches
-{: #inventory-brances}
+{: #inventory-branches}
 
-The Inventory is implemented in a Git repo. Git itself helps to keep track of and help the audit of changes.
+The Inventory is implemented in a Git repository (repo). Git itself helps to track and audit changes.
 
-Branches are used as Environments. The main branch (`master`) is written and updated by the CI pipeline. Other environments are updated from the master by using promotions. For more information, see the [Promotion](#inventory-promotion) section.
+Branches are used as environments. The main branch (`master`) is written and updated by the continuous integration pipeline. Other environments are updated from the master branch by using promotions. For more information about promotions, see the [Promotion](#inventory-promotion) section.
 
 ### Content
 {: #inventory-content}
 
-The Inventory contains an Inventory Entry for every artifact that participates in deployment. One Inventory Entry points to a single artifact. Inventory entries are JSON files, which you can see in the following example. The file name is the entry name, and it can be structured in folders.
+The Inventory contains an Inventory Entry for every artifact that participates in deployment. One Inventory Entry points to a single artifact. Inventory entries are JSON files that can be structured in folders and are named by using the entry name.
 
 Inventory folders are part of the entry name.
 {: important}
@@ -58,7 +58,7 @@ Inventory folders are part of the entry name.
 #### Example
 {: #inventory-content-example}
 
-Take the following entry names for a service:
+Use the following entry names for a service:
 
 * auth/service
 * auth/db
@@ -66,7 +66,7 @@ Take the following entry names for a service:
 * main_service
 * helm-charts/main_service
 
-This is implemented in the following structure in the inventory:
+The content is implemented in the inventory by using the following structure:
 
 ```
 /
@@ -85,7 +85,7 @@ This is implemented in the following structure in the inventory:
 ## Inventory entry format
 {: #inventory-entry-format}
 
-The `Entry` type represents the schema of the Inventory Entry (using typescript syntax, but it's fairly easy to convert it to JSON schema, for example):
+Although the `Entry` type represents the schema of the Inventory Entry by using typescript syntax, you can convert it to use JSON schema.
 
 ```
 interface Entry {
@@ -139,83 +139,82 @@ interface Entry {
 ## Inventory workflow
 {: #inventory-workflow}
 
-Inventory contains several branches other than `master`. These can represent deployment stages, environments or regions, or a mixture. This depends on the setup and usage.
+The inventory contains several branches other than the `master` branch. These branches can represent deployment stages, environments or regions, or a mixture of both. The structure of these branches depends on the setup and usage.
 
 ### CI writes to inventory 
 {: #ci-writes-to-inventory}
 
-The `master` branch is populated from CI builds. The last commit in the target (in this case named `staging`) has a tag that is attached showing that was the last concluded deployment.
+The `master` branch is populated from continuous integration builds. The last commit in the target (in this case named `staging`) contains a tag that shows that it was the last concluded deployment.
 
-![CI writes to inventory](images/inventory-1.svg "Flow diagram that shows how the master branch is populated")
+![Continuous integration writes to inventory](images/inventory-1.svg "Flow diagram that shows how the master branch is populated")
 
 ### Promotion
 {: #inventory-promotion}
 
-Promoting to a target branch happens by creating a PR. PR contents fill the Change Request fields. When it is reviewed, the Promotion PR can be merged.
+A pull request is created when you promote to a target branch happens. Pull request contents populate the Change Request fields. After the pull request is reviewed, you can merge it.
 
 ![Promoting a target branch by using a PR](images/inventory-2.svg "Flow diagram that shows how a promotion is done by using a PR")
 
 ### Delta and deployment
 {: #inventory-delta-deployment}
 
-After the Promotion PR is merged, the Deployment pipeline can start. Deployment delta is the difference between the contents of the last concluded deployment and the current deployment. Deployment delta lists the inventory items that are being deployed.
+After the promotion pull request is merged, the Deployment pipeline can start. The Deployment delta is the difference between the contents of the last concluded deployment and the current deployment. The Deployment delta lists the inventory items that are being deployed.
 
 ![Deployment pipeline flow showing deployment delta details](images/inventory-3.svg "Deployment pipeline flow showing deployment delta details")
 
 ### Conclude
 {: #inventory-conclude}
 
-When the deployment finishes, we move the latest tag ahead.
+When the deployment finishes, you can move the `latest` tag ahead.
 
 ![Deployment completes](images/inventory-4.svg "Deployment completes")
 
 ### Promote to further environments
 {: #promote-further-envs}
 
-Promotion and deployment can happen from any branch to another one.
+You can promote and deploy from any branch to another one.
 
 ![Promotion using a PR from staging to prod branch](images/inventory-5.svg "Promotion using a PR from staging to prod branch")
 
 ### Inventory landscape
 {: #inventory-landscape}
 
-The latest deployed state holds the content that is supposed to be deployed to an environment. Every promoted commit in the target branches has the relevant Pipeline Run ID and Change Request ID as a tag. Some commits can have multiple tags. Imagine a scenario of retrying a failed deployment, or doing a redeployment. The Inventory holds every piece of information to replay the deployments.
+The current deployed state contains the content to deploy to an environment. Every promoted commit in the target branches contains the relevant Pipeline Run ID and Change Request ID as a tag. Some commits can have multiple tags, for example, when you are retrying a failed deployment or deploying again. The Inventory holds every piece of information to replay the deployments.
 
 ![Deployment flow diagram with tags](images/inventory-6.svg "Deployment flow diagram with tags")
 
 #### Use of tags
 {: #inventory-tags}
 
-* `latest` tags the latest, successfully deployed, and concluded state of the inventory on a branch.
+| Tag | Description | 
+|:-----------------|:-----------------|
+| `latest` | Tags the current, successfully deployed, and concluded state of the inventory on a branch. |
+| `pipeline run id` | Tags the current inventory state in the branch, with the pipeline run ID or build number of the actual deployment. To avoid inventory content overlap when parallel deployments are triggered, use this tag to refer to the actual inventory point hash in the branch history. |
+| `change request id [optional]` | Tags the current state of a change request ID to track the change request IDs in the inventory, in a historical representation. |
+{: caption="Table 1. Inventory tags" caption-side="top"}
 
-* `pipeline run id` tags the most recent inventory state in the branch, with the pipeline run id or build number of the actual deployment. It can be used to refer to the actual inventory point hash in the branch history, so when parallel deployments are triggered, we can avoid inventory content overlapping.
-
-* `change request id [optional]` when we have a CR ID we can tag the current state, no practical reason, maybe to keep track the CR IDs in inventory in a historical representation
-
-### Single target - multiple region setup
+### Setup for a single target with multiple regions
 {: #single-target-multi-region}
 
-This is an iteration on this model where we introduce multiple latest tags for a single target environment, so multiple CD pipelines can work on the same target for different kind of use cases.
+Multiple `latest` tags are introduced for a single target environment so that multiple continuous delivery pipelines can work on the same target, for different types of use cases. You can use, for example, the same target environment (such as `us-south` or `eu-de`) for multiple regions in the prod target environment and the inventory branch.
 
-For example, take the prod target environment and inventory branch. The same target environment can be used for multiple regions, like us-south and eu-de.
+You do not need to set up a different branch for each region, such as `prod-us-south` and `prod-eu-de`, and run the promotion redundantly. Instead, specify these additional targets for the same inventory branch, and then use them as Git tags.
 
-Teams should not need to set up a different branch for each region, and run the promotion redundantly, like having a branch prod-us-south and prod-eu-de. We can help them if they are able to specify these additional targets for the same inventory branch, and use them as Git tags.
-
-In this setup, the prod branch would have multiple latest tags on the same branch, like `prod-latest:us-south` and `prod-latest:eu-de`, and each CD pipeline that is responsible for each region can use those to deploy.
+In this setup, the prod branch has multiple `latest` tags on the same branch, such as `prod-latest:us-south` and `prod-latest:eu-de`.  Each continuous delivery pipeline that is responsible for each region can use those tags to deploy.
 
 ![Prod branch with multiple latest tags per region](images/inventory-7.svg "Prod branch with multiple latest tags per region")
 
-As an example scenario, a set of changes that is eventually to be deployed everywhere, might be released to a single region first, then gradually deploying it to other regions, by using CD pipelines targeting those regions.
+As an example scenario, a set of changes that you plan to deploy everywhere might be released to a single region first, and then gradually deployed to other regions by using continuous delivery pipelines to target those regions.
 
 ## Inventory operations
 {: #inventory-operations}
 
-Some basic operations on the inventory, which executed with the CLI or using pure Git and GitHub CLI.
+The Inventory contains some basic operations that run by using the CLI or by using pure Git and  the GitHub CLI.
 
 ### CLI commands
-{#inventory-cli-commands}
+{: #inventory-cli-commands}
 
-1. Create a Promotion PR from master to target branch staging. 
+1. Create a promotion pull request from master to the target branch in staging. 
 
 ```
 cocoa inventory promote \
@@ -230,7 +229,7 @@ cocoa inventory promote \
 ```
 {: codeblock}
 
-2. Conclude a deployment - moving target_latest tag to the same commit as pipeline-run-id tag as a conclusion of deployment.
+2. Conclude a deployment by moving the `target_latest` tag to the same commit as the `pipeline-run-id` tag.
 
 ```
 cocoa inventory label move \
@@ -242,7 +241,7 @@ cocoa inventory label move \
 ### Git and GitHub CLI
 {: #inventory-git-gh-cli}
 
-1. Create a Promotion PR from master to target branch.
+1. Create a promotion pull request from master to the target branch in staging.
 
 ```
 promote() {
@@ -285,7 +284,7 @@ $ promote master staging
 ```
 {: codeblock}
 
-2. Conclude a deployment - moving `target-latest` tag to the same commit as `pipeline-run-id` tag as a conclusion of deployment.
+2. Conclude a deployment by moving the `target-latest` tag to the same commit as the `pipeline-run-id` tag.
 
 ```
 conclude () {
@@ -308,7 +307,7 @@ $ conclude staging pipeline-run-fe33b05c
 ```
 {: codeblock}
 
-3. Reverting staging to an earlier state (using Git and GitHub CLI)
+3. Revert staging to an earlier state by using Git and the GitHub CLI. 
 
 ```
 revert () {
@@ -343,7 +342,7 @@ $ revert staging ba3b8e5ed3320e6b4981077e1a1627f08de4f511
 ## Common use cases for working with Git repos
 {: #common-use-cases}
 
-Check out the example scenarios outlined in the following docs to learn more about working with Git repos:
+For more information about working with Git repos, see these example scenarios:
 
 * [Promoting to target branches](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-promote-branches)
 * [Promoting changes from the master branch](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-promote-master)
