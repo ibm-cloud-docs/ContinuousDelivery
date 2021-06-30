@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-06-24"
+lastupdated: "2021-06-30"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Sonarqube
 
@@ -107,9 +107,9 @@ Make sure that you add the correct login credentials and host URL to the configu
 
 ### Using another static scan implementation
 
-You can modify your `.one-pipeline.yaml` file to add your own custom script to the `static-scan` stage to use your own static scan implementation.
+You can modify your `.pipeline-config.yaml` file to add your own custom script to the `static-scan` stage to use your own static scan implementation.
 
 ## Learn more about SonarQube
 {: #sonarqube-learn-more}
 
-To learn more about SonarQube, see [Integrate your SonarQube analysis into your toolchain](https://www.ibm.com/blogs/cloud-archive/2017/06/integrate-sonarqube-analysis-into-your-toolchain/){:external}. 
+To learn more about SonarQube, see [Integrate your SonarQube analysis into your toolchain](https://www.ibm.com/blogs/cloud-archive/2017/06/integrate-sonarqube-analysis-into-your-toolchain/){:external}.
