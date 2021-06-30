@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-22"
+lastupdated: "2021-06-30"
 
 keywords: DevSecOps, CD, compliance, secure toolchain, IBM Cloud
 
@@ -355,32 +355,6 @@ Read more about the Security and Compliance Center [here](https://cloud.ibm.com/
 | :--: |
 
 The Delivery Pipeline Private Worker tool integration connects with one or more private workers that are capable of running Delivery Pipeline workloads in isolation. For more information, see [Working with Private Workers](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers).
-
-### Artifactory 
-
-The template comes with an artifactory integration to enable using cocoa compliance custom base image in the tekton tasks.
-Note: You can access the Artifactory [here](https://na.artifactory.swg-devops.com/artifactory/webapp/#/home)
-      Further material and guides about the artifactory are available [here](https://taas.w3ibm.mybluemix.net/guides#artifactory)
-
-| ![Artifactory](./images/devsecops_set-up_cd_artifactory.png) |
-| :--: |
-
-- **Integration name:**  Tool integration name in the toolchain
-    Default: `artifactory-{timestamp}`
-- **Integration URL:**  The url of the artifactory repository
-    Default: `https://wcp-compliance-automation-team-docker-local.artifactory.swg-devops.com`
-    This is where the cocoa base image is stored.
-- **Repository type:**  The artifactory repository type
-    Default: `Docker registry`
-    Note: This should not be changed, otherwise the pipeline will break.
-- **User ID:** The artifactory user
-    Required field.
-- **Authentication token:** The artifactory API key
-    An artifactory token can be created [here](https://na.artifactory.swg-devops.com/artifactory/webapp/#/profile) and stored in Key Protect
-    When an artifactory API key already exists in Key Protect, it can be imported here.
-    Required field.
-- **Release URL:**  The url of the artifactory repository
-    Default: `wcp-compliance-automation-team-docker-local.artifactory.swg-devops.com`
 
 ## Create the CD toolchain
 {: #cd-devsecops-tekton-cd-create}
