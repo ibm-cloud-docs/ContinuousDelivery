@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-24"
+lastupdated: "2021-06-30"
 
 keywords: DevSecOps, inventory model, inventory
 
@@ -213,7 +213,7 @@ As an example scenario, a set of changes that is eventually to be deployed every
 Some basic operations on the inventory, which executed with the CLI or using pure Git and GitHub CLI.
 
 ### CLI commands
-{#inventory-cocoa-cli}
+{#inventory-cli-commands}
 
 1. Create a Promotion PR from master to target branch staging. 
 
