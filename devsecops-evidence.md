@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-24"
+lastupdated: "2021-06-30"
 
 keywords: DevSecOps, compliance evidence
 
@@ -983,7 +983,7 @@ Any generic test, check, or scan can produce evidence within a pipeline stage by
  
 The evidence format contains the result of the task (passing or failing), links to the created artifacts, and links to any incident issue that is created based on the Task result.
 
-These tools focus only on evidence collection and do not change the behavior of your build process. The DevSecOps reference pipeline does not break due to failed Task results. An image can be built and deployed with failing tests and vulnerabilities if there is evidence of the checks and failures, the team is notified, a change request that is created during the deploy shows evidence of these issues, and the change request is manually approved.
+These tools focus only on evidence collection and do not change the behavior of your build process. The DevSecOps reference pipeline does not break due to failed Task results. An image can be built and deployed with failing tests and vulnerabilities if evidence of the checks and failures exists, the team is notified, a change request that is created during the deployment shows evidence of these issues, and the change request is manually approved.
 {:important: .important}
 
 ## Evidence collection
