@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-06-30"
 
 keywords: DevSecOps
 
@@ -211,7 +211,7 @@ Release
 At the end of the pipeline, the built artifacts must be added to the inventory, so they can be promoted to deployment.
 The release stage provides flexibility if you would like to add other artifacts to the inventory, like helm charts.
 
-In this stage you can use the cocoa cli cocoa inventory add command, and the data from pipelinectl commands, to create the inventory entries.
+In this stage you can use the CLI `cocoa inventory add` command, and the data from pipelinectl commands, to create the inventory entries.
 
 Example:
 
@@ -239,7 +239,7 @@ list_artifacts | while IFS= read -r artifact ; do
 done
 ```
 
-To use the cocoa cli, you need to install it in your scripts, or use a base image that has the cli pre-installed.
+To use the CLI, you need to install it in your scripts, or use a base image that has the cli pre-installed.
 Further information
 
     Documentation on stages for user-defined scripts
