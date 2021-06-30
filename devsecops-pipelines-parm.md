@@ -45,10 +45,10 @@ The following table lists and describes the pull request parameters for pipeline
 |cra-exclude-scopes		|text		|Specifies which scopes to use to exclude dependencies from scanning. This parameter value is  empty by default. Valid values include test and compile.	|Optional			|
 |git-token		|SECRET		|The Git repository (repo) access token.	|Optional			|
 |ibmcloud-api-key		|SECRET		|The {{site.data.keyword.cloud}} API key that interacts with the `ibmcloud` CLI tool.	|Required			|
-|one-pipeline-config		|text		|The configuration file that customizes pipeline behavior.	|Optional			|
-|one-pipeline-config-branch		|text		|The branch of the one-pipeline configuration.	|Optional			|
-|one-pipeline-config-repo		|text		|The repo URL of the one-pipeline configuration location.	|Optional			|
-|one-pipeline-dockerconfigjson		|SECRET		|The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional			|
+|pipeline-config		|text		|The configuration file that customizes pipeline behavior.	|Optional			|
+|pipeline-config-branch		|text		|The branch of the DevSecOps pipeline configuration.	|Optional			|
+|pipeline-config-repo		|text		|The repo URL of the DevSecOps pipeline configuration location.	|Optional			|
+|pipeline-dockerconfigjson		|SECRET		|The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional			|
 |onepipeline-dockerconfigjson		|SECRET		|Deprecated. The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional			|
 |pipeline-debug		|select		|The pipeline debug mode switch.	|Optional			|
 |slack-notifications		|text		|The switch that turns the Slack integration on or off.	|Optional			|
@@ -89,11 +89,11 @@ The following table lists and describes the continuous integration parameters fo
 |git-token		|SECRET		|The Git repo access token.	|Optional			|
 |ibmcloud-api-key		|SECRET		|The {{site.data.keyword.cloud}} API key that interacts with the `ibmcloud` CLI tool.	|Required			|
 |incident-label		|text		|The label for new incident issues.	|Optional			|
-|one-pipeline-config		|text		|The configuration file that customizes pipeline behavior.	|Required			|
-|one-pipeline-config-branch		|text		|The branch of the one-pipeline configuration.	|Optional			|
-|one-pipeline-config-repo		|text		|The repo URL of the one-pipeline configuration location.	|Optional			|
-|one-pipeline-dockerconfigjson		|SECRET		|The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional			|
-|one-pipeline-dockerconfigjson		|SECRET		|Deprecated. The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional			|
+|pipeline-config		|text		|The configuration file that customizes pipeline behavior.	|Required			|
+|pipeline-config-branch		|text		|The branch of the DevSecOps pipeline configuration.	|Optional			|
+|pipeline-config-repo		|text		|The repo URL of the DevSecOps pipeline configuration location.	|Optional			|
+|pipeline-dockerconfigjson		|SECRET		|The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional			|
+|pipeline-dockerconfigjson		|SECRET		|Deprecated. The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional			|
 |pipeline-debug		|select		|The pipeline debug mode switch.	|Optional			|
 |registry-namespace		|text		|The container registry namespace for the image.	|Required			|
 |registry-region		|text		|The {{site.data.keyword.cloud}} region for the image registry.	|Required			|
@@ -136,10 +136,10 @@ The following table lists and describes the continuous delivery parameters for p
 |emergency-label		|text		|Identifies the pull request as an emergency.	|Optional			|
 |git-token		|SECRET		|The Git repo access token.	|Optional			|
 |ibmcloud-api-key		|SECRET		|The {{site.data.keyword.cloud}} API key that interacts with the `ibmcloud` CLI tool.	|Required			|
-|one-pipeline-config		|text		|The configuration file that customizes pipeline behavior.	|Required			|
-|one-pipeline-config-branch		|text		|The branch of the one-pipeline configuration.	|Optional			|
-|one-pipeline-config-repo		|text		|The repo URL of the one-pipeline configuration location.	|Optional			|
-|one-pipeline-dockerconfigjson		|SECRET		|The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional	  	|
+|pipeline-config		|text		|The configuration file that customizes pipeline behavior.	|Required			|
+|pipeline-config-branch		|text		|The branch of the DevSecOps pipeline configuration.	|Optional			|
+|pipeline-config-repo		|text		|The repo URL of the DevSecOps pipeline configuration location.	|Optional			|
+|pipeline-dockerconfigjson		|SECRET		|The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional	  	|
 |pipeline-debug		|select		|The pipeline debug mode switch.	|Optional			|
 |region		|text		|The target region where the app is deployed.	|Optional			|
 |servicenow-api-base-url		|text		|The ServiceNow API base URL.	|Required			|
