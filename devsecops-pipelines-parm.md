@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-10"
+lastupdated: "2021-06-30"
 
 keywords: DevSecOps
 
@@ -43,11 +43,11 @@ The following table lists and describes the pull request parameters for pipeline
 |baseimage-auth-password		|SECRET		|The credentials for the base image of the application Dockerfile, required by the Code Risk Analyzer scan. |Optional			|
 |cra-exclude-devdependencies		|text		|Specifies whether to exclude dev dependencies from scanning (`true` or `false`). The  default value is `false`.	|Optional			|
 |cra-exclude-scopes		|text		|Specifies which scopes to use to exclude dependencies from scanning. This parameter value is  empty by default. Valid values include test and compile.	|Optional			|
-|git-token		|SECRET		|The Git repository access token.	|Optional			|
+|git-token		|SECRET		|The Git repository (repo) access token.	|Optional			|
 |ibmcloud-api-key		|SECRET		|The {{site.data.keyword.cloud}} API key that interacts with the `ibmcloud` CLI tool.	|Required			|
 |one-pipeline-config		|text		|The configuration file that customizes pipeline behavior.	|Optional			|
 |one-pipeline-config-branch		|text		|The branch of the one-pipeline configuration.	|Optional			|
-|one-pipeline-config-repo		|text		|The repository (repo) URL of the one-pipeline configuration location.	|Optional			|
+|one-pipeline-config-repo		|text		|The repo URL of the one-pipeline configuration location.	|Optional			|
 |one-pipeline-dockerconfigjson		|SECRET		|The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional			|
 |onepipeline-dockerconfigjson		|SECRET		|Deprecated. The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional			|
 |pipeline-debug		|select		|The pipeline debug mode switch.	|Optional			|
@@ -86,14 +86,14 @@ The following table lists and describes the continuous integration parameters fo
 |doi-environment		|text		|The {{site.data.keyword.DRA_short}} target environment.	|Optional			|
 |doi-logicalappname		|text		|The app name to use as the `--logicalappname` flag in `ibmcloud doi` commands	|Optional			|
 |doi-toolchain-id		|text		|The {{site.data.keyword.DRA_short}} instance toolchain ID.	|Optional			|
-|git-token		|SECRET		|The Git repository access token.	|Optional			|
+|git-token		|SECRET		|The Git repo access token.	|Optional			|
 |ibmcloud-api-key		|SECRET		|The {{site.data.keyword.cloud}} API key that interacts with the `ibmcloud` CLI tool.	|Required			|
 |incident-label		|text		|The label for new incident issues.	|Optional			|
 |one-pipeline-config		|text		|The configuration file that customizes pipeline behavior.	|Required			|
 |one-pipeline-config-branch		|text		|The branch of the one-pipeline configuration.	|Optional			|
 |one-pipeline-config-repo		|text		|The repo URL of the one-pipeline configuration location.	|Optional			|
 |one-pipeline-dockerconfigjson		|SECRET		|The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional			|
-|one-pipeline-dockerconfigjson		|SECRET		|(Deprecated) base64 encoded docker config.json for pulling images from a private registry	|Optional			|
+|one-pipeline-dockerconfigjson		|SECRET		|Deprecated. The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional			|
 |pipeline-debug		|select		|The pipeline debug mode switch.	|Optional			|
 |registry-namespace		|text		|The container registry namespace for the image.	|Required			|
 |registry-region		|text		|The {{site.data.keyword.cloud}} region for the image registry.	|Required			|
@@ -102,7 +102,7 @@ The following table lists and describes the continuous integration parameters fo
 |sonarqube		|tool integration		|The Sonarqube tool integration.	|Optional			|
 |static-scan-retry-count		|text		|The number of retries to wait for the Sonarqube instance to be established.	|Optional			|
 |static-scan-retry-sleep		|text		|The amount of wait time per retry iteration.	|Optional			|
-|vault-secret		|SECRET		|The base64-encoded private key for signing images using `.pfx` file data.	|Required			|
+|vault-secret		|SECRET		|The base64-encoded private key for signing images by using `.pfx` file data.	|Required			|
 |va-scan-retry-count		|text		|The number of retries to wait for the vulnerability report scan.	|Required			|
 |va-scan-retry-sleep	|text		|The number of wait times per retry iteration.	|Optional			|
 |version		|text		|The version of the app to deploy.	|Required			|
@@ -134,7 +134,7 @@ The following table lists and describes the continuous delivery parameters for p
 |doi-logicalappname		|text		|The app name to use as the `--logicalappname` flag in `ibmcloud doi` commands	|Optional			|
 |doi-toolchain-id		|text		|The {{site.data.keyword.DRA_short}} instance toolchain ID.	|Optional			|
 |emergency-label		|text		|Identifies the pull request as an emergency.	|Optional			|
-|git-token		|SECRET		|The Git repository access token.	|Optional			|
+|git-token		|SECRET		|The Git repo access token.	|Optional			|
 |ibmcloud-api-key		|SECRET		|The {{site.data.keyword.cloud}} API key that interacts with the `ibmcloud` CLI tool.	|Required			|
 |one-pipeline-config		|text		|The configuration file that customizes pipeline behavior.	|Required			|
 |one-pipeline-config-branch		|text		|The branch of the one-pipeline configuration.	|Optional			|
@@ -143,7 +143,7 @@ The following table lists and describes the continuous delivery parameters for p
 |pipeline-debug		|select		|The pipeline debug mode switch.	|Optional			|
 |region		|text		|The target region where the app is deployed.	|Optional			|
 |servicenow-api-base-url		|text		|The ServiceNow API base URL.	|Required			|
-|servicenow-api-token		|SECRET		|The API token used to access ServiceNow for change management.	|Optional			|
+|servicenow-api-token		|SECRET		|The API token that is used to access ServiceNow for change management.	|Optional			|
 |servicenow-configuration-item		|text		|The ServiceNow configuration item name, as it appears in ServiceNow.	|Optional			|
 |slack-notifications		|SECRET		|The switch that turns the Slack integration on or off.  |Optional			|
 |source-environment		|text		|The source environment that the app is promoted from.	|Required			|
