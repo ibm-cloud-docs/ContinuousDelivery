@@ -108,7 +108,7 @@ The Deploy stage deploys built artifacts into a dev environment. You can provide
 ## Release to inventory
 {: #cd-devsecops-pipeline-inventoryrel}
 
-Use the release to inventory user script stage to add artifacts to the inventory by using the `cocoa inventory add` CLI command. For more information about the command, see [cocoa inventory add](#cd-devsecops-cocoa-cli){: external}.
+Use the release to inventory user script stage to add artifacts to the inventory by using the `cocoa inventory add` CLI command. For more information about the command, see [cocoa inventory add](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-cli#inventory-add){: external}.
 
 You can use the `pipelinectl` interface to access your repos and artifacts by using the `list_repos`, `load_repo`, `list_artifacts` and `load_artifact` commands. For more information on the commands, see [pipelinectl](/docs/ContinuousDelivery?topic=ContinuousDelivery-pipelinectl).
 
