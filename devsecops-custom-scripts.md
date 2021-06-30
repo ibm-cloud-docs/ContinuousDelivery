@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-06-30"
 
 keywords: DevSecOps
 
@@ -30,7 +30,7 @@ subcollection: ContinuousDelivery
 Custom scripts are extension points in the pipeline where adopters, teams, and users can provide scripts to run custom tasks that are required by their continuous integration and continuous delivery strategies.
 {: shortdesc}
 
-Custom scripts control the pipeline stages. You can use a configuration file (`pipeline-config.yaml`) to configure the behavior of stages, script content, and the base image that runs the scripts. The scripts and configuration for pipeline stages are loaded from a Git repo that can either be the app repo (similar to `.travis.yml` or `Jenkinsfile`) or a custom repo.
+Custom scripts control the pipeline stages. You can use a configuration file (`pipeline-config.yaml`) to configure the behavior of stages, script content, and the base image that runs the scripts. The scripts and configuration for pipeline stages are loaded from a Git repository (repo) that can either be the application (app) repo (similar to `.travis.yml` or `Jenkinsfile`) or a custom repo.
 
 ## Stages
 {: #cd-devsecops-scripts-stages}
@@ -41,7 +41,7 @@ Stages in pull request, continuous integration, and continuous delivery pipeline
 
 * **Continuous integration pipeline stages**: setup, test, static-scan, containerize, sign-artifact, deploy, acceptance-test, scan artifact, release
 
-* **Continuous delivery pipeline stages**: set up, deploy, acceptance-test
+* **Continuous delivery pipeline stages**: setup, deploy, acceptance-test
 
 ### Stage descriptions
 {: #cd-devsecops-stage-desc}
@@ -66,11 +66,11 @@ You can use a `.pipeline-config.yaml` configuration file to extend pipeline beha
 
 For pull request and continuous integration pipelines, store the `.pipeline-config.yaml` configuration file in an app repo in the same manner as the `.travis.yml`, or `Jenkinsfile` files. For continuous delivery pipelines, store this file in a dedicated repo. 
 
-For all pipelines, you can customize the location and source of the `.pipeline-config.yaml` file with the following these pipeline UI parameters:
+For all pipelines, you can customize the location and source of the `.pipeline-config.yaml` file with the following pipeline UI parameters:
 
 * `pipeline-config` to set the path of the configuration file. The default value is `.pipeline-config.yaml`.
 * `pipeline-config-repo` to set the repo to pull the configuration and scripts from. The default value is the continuous integration app repo.
-* `pipeline-config-branch`to use as the branch for the configuration in the config repo. The default value is the continuous integration app repo branch, and the master branch in continuous delivery.
+* `pipeline-config-branch` to use as the branch for the configuration in the config repo. The default value is the continuous integration app repo branch, and the master branch in continuous delivery.
 
 ### Configuration parameters
 {: #cd-devsecops-scripts-configparm}
@@ -82,7 +82,7 @@ These settings are not pipeline parameters, they must be part of your `.pipeline
 
 * `image`: You can use any Docker image that is accessible by the pipeline worker as a base image for the task.
 
-* `script`: The script to run in the stage. Because this field is used as a script file make sure that the contents act like a script file in the base image that you provided. You can include other scripts next to this configuration file, and refer to them from this entry point. For example,:
+* `script`: The script to run in the stage. Because this field is used as a script file make sure that the contents act like a script file in the base image that you provided. You can include other scripts next to this configuration file, and refer to them from this entry point. For example:
 
 ```
 test:
@@ -92,23 +92,22 @@ test:
     scripts/unit-test.sh
 ```
 
-* `dind`: Specify whether to enable `docker-in-docker` for the script context. The default setting is false.
+* `dind`: Specify whether to enable `docker-in-docker` for the script context. The default setting is `false`.
 
-* `abort_on_failure`: By default the pipeline halts when the script fails. Set this to false allows the pipeline to continue, and the failed job is referenced in the evidence later.
+* `abort_on_failure`: By default, the pipeline stops when the script fails. Set this value to `false` to allow the pipeline to continue and reference the failed job in the evidence later.
 
-* `image_pull_policy`: Set the pod ImagePullPolicy setting for the base image (provided in image). Possible values are the same as for k8s: Always | IfNotPresent 
-Default value is IfNotPresent
+* `image_pull_policy`: Set the pod `ImagePullPolicy` setting that is provided in the image, for the base image. Possible values are the same as valid values for Kubernetes: `Always` or `IfNotPresent`. The default value is `IfNotPresent`.
 
 * `configmap`: Pull key-value pairs from a provided configmap that is accessible by `PipelineRun`. The following values are supported:
 
-    * `config-name`: Direct configmap name syntax, the stage runner tries to access and mount the configmap named `config-name`.
+    * `config-name`: The direct configmap name syntax. The stage runner tries to access and mount the configmap named `config-name`.
     * `$prop-name`: The indirect configmap name syntax. The configmap name is looked up from the environment-properties configmap, which contains every environment value that is set on the pipeline UI. For example, if there's a prop: my-config entry in the environment properties, then my-config is going to be used for $prop
 
 * `secret`: Pull key-value pairs from a provided configmap that is accessible by `PipelineRun`. The following values are supported:
 
     * `secret-name`: The direct Secret name syntax. The stage runner tries to access and mount the Secret named `secret-name`.
 
-    * `$prop-name`: The indirect Secret name syntax. The Secret name is looked up from the environment-properties configmap, which contains every environment value that is set on the pipeline UI. For example, if there's a prop: my-secret entry in the environment properties, my-secret is used for $prop.
+    * `$prop-name`: The indirect Secret name syntax. The Secret name is located in the environment-properties configmap, that contains every environment value that is set on the pipeline UI. For example, if the environment-properties configmap contains the `my-secret entry` property, `my-secret` is used for `$prop`.
 
 #### Example configuration
 {: #cd-devsecops-scripts-sample}
@@ -210,14 +209,14 @@ These values are not persisted, they're scoped for a single pipeline run.
 #### Example
 {: #cd-devsecops-scripts-sample}
 
-For example, you can create an Artifactory auth credential for your own build, if you add the required parameters to the pipeline UI:
+You can create an Artifactory auth credential for your own build by adding the required parameters to the pipeline UI:
 
     my-artifactory-email
     my-artifactory-user
     my-artifactory-password
     my-artifactory-url
 
-When these parameters are available in the pipeline, you can access them in the user scripts and create a Docker auth JSON file For example:
+When these parameters are available in the pipeline, you can access them in the user scripts and create a Docker auth JSON file. For example:
 
 ```
 
@@ -238,12 +237,12 @@ kubectl create secret docker-registry regcred \
 
 Besides the pipeline environment variables and secrets, these parameter values are provided for user script stages.
 
-You can access repos, artifacts, files, and env variables by using the `pipelinectl` command in the user scripts. Use the following methods: list_repos, load_repo, load_artifact, list_artifacts, get_env. 
+You can access repos, artifacts, files, and env variables by using the `pipelinectl` command in the user scripts. Use the following methods: `list_repos`, `load_repo`, `load_artifact`, `list_artifacts`, and `get_env`. 
 
 #### `pipelinectl`
 {: #cd-devsecops-scripts-pipelinectl}
 
-`app-repo` default is the default app repo that is cloned internally by the pipeline and added to the pipeline by using the `save_repo pipelinectl` interface with the `app-repo` reference name. If you set up the pipeline from the toolchain template, the default repo is either provided by the repo pipeline UI parameter or selected by its toolchain binding name. Use the `load_repo` command to access properties from the saved `app-repo`.
+`app-repo` is the default app repo that is cloned internally and added to the pipeline by using the `save_repo pipelinectl` interface with the `app-repo` reference name. If you set up the pipeline from the toolchain template, the default repo is either provided by the repo pipeline UI parameter or selected by its toolchain binding name. Use the `load_repo` command to access properties from the saved `app-repo`.
 
 #### Values in `/config/`
 {: #cd-devsecops-scripts-configvalue}
@@ -254,17 +253,17 @@ To support user script compatibility with an earlier version, these values are c
 | Path | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | `/config/api-key` | The value of `ibmcloud-api-key` copied, for script compatibility with an earlier version.|
-| `/workspace/git-token` | The Git token obtained in the beginning of the pipeline for script compatibility with an earlier version |
-| `/config/environment` | Deployment target environment for [inventory](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-inventory) |
-| `/config/deployment-delta-path` | Path to the JSON file that contains the deployment delta |
-| `/config/inventory-path` | Path to the inventory repo content |
-| `/config/git-branch` | Currently, checked out Git branch of the application repo |
-| `/config/git-commit` | Latest Git commit of the checked out application repo |
-| `/config/repository-url` | Application repo URL |
-| `/config/inventory-url` | Inventory repo URL |
-| `/config/image` | Built docker image artifact, containing the registry, namespace, name, and the digest of the image |
-| `/config/artifact` | Same as /config/image |
-| `/config/signature` | The image artifact signature |
+| `/workspace/git-token` | The Git token that is obtained in the beginning of the pipeline for script compatibility with an earlier version. |
+| `/config/environment` | The deployment target environment for [inventory](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-inventory). |
+| `/config/deployment-delta-path` | The path to the JSON file that contains the deployment delta. |
+| `/config/inventory-path` | The path to the inventory repo content. |
+| `/config/git-branch` | The current, checked out Git branch of the app repo. |
+| `/config/git-commit` | The  latest Git commit of the checked out app repo. |
+| `/config/repository-url` | The app repo URL. |
+| `/config/inventory-url` | The inventory repo URL. |
+| `/config/image` | The built Docker image artifact, that contains the registry, namespace, name, and digest of the image. |
+| `/config/artifact` | The built Docker image artifact, that contains the registry, namespace, name, and digest of the image. |
+| `/config/signature` | The image artifact signature. |
 {: caption="Table 1. `/config/` Values" caption-side="top"}
 
 These values are phased out and replaced by the stage I/O interface by way of pipelinectl.
@@ -277,20 +276,20 @@ Default ENV variables for the context of custom script stages, provided by the p
 
 | Path | Description |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| BUILD_NUMBER | Tekton pipeline build number|
-| PIPELINE_CONFIG_PATH | Path to the pipeline script library root |
-| PIPELINE_CONFIG_REPO_PATH | The directory where the pipeline config-repo is cloned |
-| PIPELINE_RUN_NAME | Tekton pipeline run name |
-| PIPELINE_RUN_ID | Tekton pipeline run ID |
-| PIPELINE_RUN_URL | Tekton pipeline run URL |
-| PIPELINE_ID | Tekton pipeline ID |
-| STAGE | User script stage |
-| TOOLCHAIN_DATA_PATH | The toolchain data path /toolchain/toolchain.json |
-| TRIGGER_TYPE | Pipeline trigger type |
-| TRIGGER_NAME | Pipeline trigger name |
-| TRIGGER_PAYLOAD | Payload received by way of the pipeline trigger event, if there was any. For more information about working with payloads, see [Accessing arguments from webhook payloads](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-webhook-payloads). |
-| TRIGGERED_BY | Some information on who triggered the pipeline (don't assume an email address, it can be a time-triggered run) |
-| WORKSPACE | Path to the shared workspace |
+| BUILD_NUMBER | The Tekton pipeline build number.|
+| PIPELINE_CONFIG_PATH | The path to the root of the pipeline script library. |
+| PIPELINE_CONFIG_REPO_PATH | The directory where the pipeline `config-repo` is cloned. |
+| PIPELINE_RUN_NAME | The Tekton pipeline run name. |
+| PIPELINE_RUN_ID | The Tekton pipeline run ID. |
+| PIPELINE_RUN_URL | The Tekton pipeline run URL. |
+| PIPELINE_ID | The Tekton pipeline ID. |
+| STAGE | The user script stage. |
+| TOOLCHAIN_DATA_PATH | The toolchain data path `/toolchain/toolchain.json` file. |
+| TRIGGER_TYPE | The pipeline trigger type. |
+| TRIGGER_NAME | The pipeline trigger name. |
+| TRIGGER_PAYLOAD | The payload that is received by way of the pipeline trigger event, if there was one. For more information about working with payloads, see [Accessing arguments from webhook payloads](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-webhook-payloads). |
+| TRIGGERED_BY | Information about who triggered the pipeline. This value can be an email address or a time-triggered pipeline run.  |
+| WORKSPACE | The path to the shared workspace. |
 {: caption="Table 2. Environment variables" caption-side="top"}
 
 You can access these environment variables in any script, for example, `. ${PIPELINE_ID}`.
@@ -298,12 +297,12 @@ You can access these environment variables in any script, for example, `. ${PIPE
 ### Accessing toolchain data from custom scripts
 {: #cd-devsecops-scripts-toolchaindata}
 
-Toolchain data can be read from the toolchain.json file that is provided by the pipeline at the path that is stored in the `TOOLCHAIN_DATA_PATH` environment variable or you can use toolchain integration and jsonpath, and access them in `/config` just like any variable, or get_env, which does the same effect. 
+You can read toolchain data from the `toolchain.json file` that is provided by the pipeline at the path that is stored in the `TOOLCHAIN_DATA_PATH` environment variable. You can also use the toolchain integration and `jsonpath`, and access them in `/config` in the same way as any other variable. Or, you can use `get_env`, which has the same effect. 
 
 ### Shared workspaces
 {: #cd-devsecops-scripts-workspaces}
 
-Because these custom scripts operate in the same workspace, you can pass data between them by writing it into a file and reading it in the other task. This workspace is mounted on a path that is provided in the `$WORKSPACE` variable.
+Because these custom scripts operate in the same workspace, you can pass data between them by writing it into a file and then reading it in the other task. This workspace is mounted on a path that is provided in the `$WORKSPACE` variable.
 
 ## Stage output
 {: #cd-devsecops-scripts-stageoutput}
@@ -313,17 +312,17 @@ Data expected to be available by other stages on the workspace, so make sure to 
 |Source stage |Description	|`Pipelinectl` method |Required |
 |:----------|:------------------------------|:------------------|:----------|
 |`setup` 		|You can [add more repos to the pipeline compliance checks and static code scan](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-gherepos-pipelines).		|`save_repo`		|No		|
-|`test`		|To [attach test results to the compliance evidence as evidence artifacts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-add-pipeline-steps), use the save_result command in this stage.		|`save_result`			|No		|
-|`static-scan`		|To [attach test results to the compliance evidence as evidence artifacts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-add-pipeline-steps), use the save_result command in this stage. 		|`save_result`		|No		|
+|`test`		|To [attach test results to the compliance evidence as evidence artifacts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-add-pipeline-steps), use the `save_result` command in this stage.		|`save_result`			|No		|
+|`static-scan`		|To [attach test results to the compliance evidence as evidence artifacts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-add-pipeline-steps), use the `save_result` command in this stage. 		|`save_result`		|No		|
 |`containerize`		|[Add artifact names and digests to the pipeline](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-config-github).		|`save_artifact`		|Yes		|
-|`sign-artifact` 		|Add image signature from GPG signing output   	|`save_artifact`			|Yes		|
-|`acceptance-test` 		|To [attach test results to the compliance evidence as evidence artifacts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-add-pipeline-steps), use the save_result command in this stage. 		|`save_result`			|No		|
+|`sign-artifact` 		|Add the image signature from the GPG signing output.   	|`save_artifact`			|Yes		|
+|`acceptance-test` 		|To [attach test results to the compliance evidence as evidence artifacts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-add-pipeline-steps), use the `save_result` command in this stage. 		|`save_result`			|No		|
 {: caption="Table 3. Stage output" caption-side="top"}
 
 ### Stage results API
 {: #cd-devsecops-scripts-resultsapi}
 
-The result states of these custom stages are saved with `pipelinectl`. The result state of a stage is either success, failure or skipped. These results can be used later to evaluate whether the custom stage ran successfully.
+The result states of these custom stages are saved with `pipelinectl`. The result state of a stage is either success, failure, or skipped. These results can be used later to evaluate whether the custom stage ran successfully.
 
 The following tasks and stages are available:
 
@@ -331,7 +330,7 @@ The following tasks and stages are available:
 
 * **Continuous integration pipeline stages**: setup, test, static-scan, containerize, sign-artifact, deploy, acceptance-test, scan artifact, release, detect-secrets, branch-protection, bom-check, cis-check, and vulnerability-scan. The detect-secrets, branch-protection, bom-check, cis-check, and vulnerability-scan stages are not custom stages. They are provided by the pipelines by default.
 
-* **Continuous delivery pipeline stages**: set up, deploy, acceptance-test, create-change-request, change-request-check-approval, change-request-change-state-to-implement, and close-change-request. The create-change-request, change-request-check-approval, change-request-change-state-to-implement, and close-change-request stages are not custom stage. They are provided by the pipelines by default.
+* **Continuous delivery pipeline stages**: set up, deploy, acceptance-test, create-change-request, change-request-check-approval, change-request-change-state-to-implement, and close-change-request. The create-change-request, change-request-check-approval, change-request-change-state-to-implement, and close-change-request stages are not custom stages. They are provided by the pipelines by default.
 
 #### Example usage
 
