@@ -26,7 +26,7 @@ subcollection: ContinuousDelivery
 # Adding test and build steps to pipelines
 {: #cd-devsecops-add-pipeline-steps}
 
-You can connect your existing test and build flow to the continuous integration pipeline by adding the results of your new or existing test and build scripts to the one-pipeline continuous integration flow.
+You can connect your existing test and build flow to the continuous integration pipeline by adding the results of your new or existing test and build scripts to the DevSecOps pipeline continuous integration flow.
 {: shortdesc}
 
 You can use the following stages within the continuous integration pipeline to add test and build steps:
@@ -136,7 +136,7 @@ test_runner -o results.json
 save_result test results.json
 ```
 
-The first parameter of save_results must be the one-pipeline config stage name, like test, scan-artifact or acceptance-test. Otherwise the evidence collector won't be able to find it and attach it to the proper piece of evidence.
+The first parameter of save_results must be the DevSecOps pipeline config stage name, like test, scan-artifact or acceptance-test. Otherwise the evidence collector won't be able to find it and attach it to the proper piece of evidence.
 {: important}
 
 Using the save_result pipelinectl interface will ensure that the pipeline will find your result artifacts, and they will be uploaded to the evidence locker, and attached to the compliance evidence created by the pipeline.
