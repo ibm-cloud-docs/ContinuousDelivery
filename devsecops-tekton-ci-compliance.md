@@ -124,7 +124,7 @@ The default behavior of the toolchain is to `Create new issues repository` that 
 
 ### Secrets
 
-Several tools in this toolchain require secrets to access privileged resources. An IBM Cloud API key is an example of such a secret. All secrets should be stored securely in a secrets vault and then referenced as required by the toolchain. The **Secrets** step allows you to specify which secret vault integrations will be added to your toolchain. Use the provided toggles to add or remove the vault integrations that you require. These can be configured in subsequent steps however you should familiarize yourself with the concepts in the [Managing Secrets](https://pages.github.ibm.com/one-pipeline/docs/#/managing-secrets?id=shift-left-secrets)-WIP documentation as this provides important information about preconfiguring your vault providers and integrations appropriately.
+Several tools in this toolchain require secrets to access privileged resources. An IBM Cloud API key is an example of such a secret. All secrets should be stored securely in a secrets vault and then referenced as required by the toolchain. The **Secrets** step allows you to specify which secret vault integrations will be added to your toolchain. Use the provided toggles to add or remove the vault integrations that you require. These can be configured in subsequent steps however you should familiarize yourself with the concepts in the [Protecting your sensitive data in Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials) documentation as this provides important information about preconfiguring your vault providers and integrations appropriately.
 
 | ![Choose secrets providers](images/devsecops_setup_secrets.png) |
 | :--: |
@@ -204,7 +204,7 @@ You need to provide the following information for the Pipelines to reach the men
 
 You can set up the COS locker later, by providing the necessary `cos-bucket-name` and `cos-endpoint`.
 
-| ![COS Endpoint](https://github.ibm.com/one-pipeline/docs/blob/master/assets/compliance-ci-toolchain/cos-endpoint-menu.png) |
+| ![COS Endpoint](images/cos-endpoint-menu.png) |
 | :--: |
 
 If you decide not to use Cloud Object Storage as an evidence locker, you can also set the required values after the creation of the toolchain by setting the `cos-bucket-name`, `cos-endpoint` environment variables in the CI Pipeline.
@@ -350,7 +350,7 @@ There are two ways to start a CI pipeline:
 
 If you want to trigger the CI pipeline manually select the Delivery Pipeline card.
 
-| ![Run CI Pipeline](https://github.ibm.com/one-pipeline/docs/blob/master/assets/compliance-ci-toolchain/run-ci-pipeline.png) |
+| ![Run CI Pipeline](images/run-ci-pipeline.png) |
 | :--: |
 
 ## Configure Pipeline
@@ -361,10 +361,10 @@ You can add a `commit-id` text property (click `Add property` button and select 
 
 For example:
 
-| ![commit-id](https://github.ibm.com/one-pipeline/docs/blob/master/assets/compliance-ci-toolchain/commit-id.png) |
+| ![commit-id](images/commit-id.png) |
 | :--: |
 
 Add the trigger parameters (click `Run Pipeline` button), select `"Manual Trigger"` and click `Run`.
 
-| ![CI Trigger](https://github.ibm.com/one-pipeline/docs/blob/master/assets/compliance-ci-toolchain/ci-trigger.png) |
+| ![CI Trigger](images/ci-trigger.png) |
 | :--: |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-01"
 
 keywords: DevSecOps, CD, compliance, secure toolchain, IBM Cloud
 
@@ -133,7 +133,7 @@ Incase you have deployment configuration repository from an exising CD Toolchain
 
 ### Secrets
 
-Several tools in this toolchain require secrets to access privileged resources. An IBM Cloud API key is an example of such a secret. All secrets should be stored securely in a secrets vault and then referenced as required by the toolchain. The **Secrets** step allows you to specify which secret vault integrations will be added to your toolchain. Use the provided toggles to add or remove the vault integrations that you require. These can be configured in subsequent steps however you should familiarize yourself with the concepts in the [Managing Secrets](https://pages.github.ibm.com/one-pipeline/docs/#/managing-secrets?id=shift-left-secrets)-WIP documentation as this provides important information about preconfiguring your vault providers and integrations appropriately.
+Several tools in this toolchain require secrets to access privileged resources. An IBM Cloud API key is an example of such a secret. All secrets should be stored securely in a secrets vault and then referenced as required by the toolchain. The **Secrets** step allows you to specify which secret vault integrations will be added to your toolchain. Use the provided toggles to add or remove the vault integrations that you require. These can be configured in subsequent steps however you should familiarize yourself with the concepts in the [Protecting your sensitive data in Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials) documentation as this provides important information about preconfiguring your vault providers and integrations appropriately.
 
 | ![Choose secrets providers](./images/devsecops_set-up_secrets_selection.png) |
 | :--: |
@@ -218,7 +218,7 @@ You can set up the COS locker later, by providing the necessary `cos-bucket-name
 
 To get the **Cloud Object Storage Endpoint**, please visit your COS Instance's page and select the _'Endpoints'_ section in the menu. You will need to copy the Public Endpoint matching the Bucket's _region_ and _resiliency_.
 
-| ![COS Endpoint](https://github.ibm.com/one-pipeline/docs/blob/master/assets/compliance-ci-toolchain/cos-endpoint-menu.png) |
+| ![COS Endpoint](images/cos-endpoint-menu.png) |
 | :--: |
 
 If you decide not to use Cloud Object Storage as an evidence locker, you can also set the required values after the creation of the toolchain by setting the `cos-bucket-name`, `cos-endpoint` environment variables in the CI Pipeline.
@@ -363,7 +363,7 @@ The Delivery Pipeline Private Worker tool integration connects with one or more 
 - Make sure CI Pipeline ran successfully before running the `Promotion Pipeline`.
 - The Promotion Pipeline creates a `Pull Request` with the content of the inventory on the Inventory Source Environment (eg: `master`) branch targeting the Inventory Target Environment branch (eg: `staging` or `prod`). An intermediary branch for the PR is created which can be discarded after the PR has been merged. 
 
-| ![Running the promotion pipeline](https://github.ibm.com/one-pipeline/docs/blob/master/assets/compliance-cd-toolchain/run-promotion-pipeline.png) |
+| ![Running the promotion pipeline](images/run-promotion-pipeline.png) |
 | :--: |
 
 - Once the `Promotion Pipeline` finishes successfully, the `promote` Task should provide you a link to the aforementioned `Pull Request` in the Inventory Repository. The pull request name is of the format `promote <Inventory Source Environment> to <Inventory Target Environment> `

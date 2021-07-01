@@ -151,7 +151,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -177,7 +177,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -205,7 +205,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -224,7 +224,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -250,7 +250,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -269,7 +269,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -298,7 +298,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }nce
     "script_control_hash": "jhfkdusd", // this is the hash of the script used to run the control
@@ -318,7 +318,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -348,7 +348,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -366,7 +366,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -384,7 +384,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -402,7 +402,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -420,7 +420,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -438,7 +438,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -456,7 +456,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -474,7 +474,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -499,7 +499,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -519,7 +519,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -551,7 +551,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -571,7 +571,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -606,7 +606,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -626,7 +626,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -655,7 +655,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -674,7 +674,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -713,7 +713,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -736,7 +736,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of the scan
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -759,7 +759,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -781,7 +781,7 @@ interface Summary {
     "evidence_type_id": "com.ibm.packages",
     "version": "1.0.0",
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -818,7 +818,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -834,7 +834,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -850,7 +850,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -866,7 +866,7 @@ interface Summary {
     "version": "1.0.0",
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "name": "dhksd", // the name of the image
@@ -901,7 +901,7 @@ interface Summary {
     "result": ["passed" | "failed"], // passed auto-approved or approved, failed otherwise.
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain
@@ -958,7 +958,7 @@ interface Summary {
     "result": ["passed" | "failed"], // passed auto-approved or approved, failed otherwise.
     "date": "2020-05-06T12:00:00Z", // date of task run
     "origin": {
-       "url":"https://github.ibm.com/one-pipeline/common-tekton-tasks/tree/master/stable/mytask", // where the task is taken from
+       "url":"https://us-south.git.cloud.ibm.com/open-toolchain/compliance-pipelines/-/blob/master/definitions/mytask.yaml", // where the task is taken from
        "version": "423792" // commit id representing the task version used to produce the evidence
     }
     "toolchain_crn": "crn:v1:bluemix:public:toolchain:us-south:a/190e0b4ce4cd013159917665213ddc51:7467a214-f404-4e23-acab-2e57e935d138::" // CRN of the toolchain

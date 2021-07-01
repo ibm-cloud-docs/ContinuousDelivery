@@ -37,7 +37,7 @@ It's incredible simple to configure the [CI Pipeline](/docs/ContinuousDelivery?t
 <!-- issue link below goes to internal GHE issue repo -->
 
 1. Add a GitHub Tool integration for each application you want to build on the toolchain pipelines.
-2. Add more GitHub integrations for any extra [issue](https://github.ibm.com/one-pipeline/compliance-incident-issues), [inventory](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-inventory), and [evidence](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-evidence) repositories that can be configured for certain applications.
+2. Add more GitHub integrations for any extra [issue](https://us-south.git.cloud.ibm.com/open-toolchain/compliance-incident-issues), [inventory](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-inventory), and [evidence](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-evidence) repositories that can be configured for certain applications.
    * Refer to the documentation pages and best practices to understand if you need these extra repositories for the applications.
    * You should be fine with one inventory and issues repository, but you might want to have a different evidence repository for each application due to how "inhumanly" readable the repository structure is. And a separate repo helps you to know which application you're looking at.
    * The Application repos can also serve as its own issues repo. That is if the GitHub issues option is enabled on the tool integration.
