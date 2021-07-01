@@ -118,7 +118,7 @@ Once you have captured the names of repositories from CI Toolchain, proceed with
 
 | ![Issues Repository](./images/devsecops_set-up_cd_issues_repo.png) |
 | :--: |
-### OnePipeline Config
+### Pipeline Configuration
 
 The repository contains custom scripts to carry out pipeline tasks in the CD Pipeline (`.pipeline-config.yaml`). Refer to [hello-compliance-deployment](https://github.ibm.com/open-toolchain/hello-compliance-deployment) sample repository that contains some default configuration and scripts.
 
@@ -270,7 +270,7 @@ Default: `prod`
 
 ### Change Request
 
-You can select IBM Cloud hosted GRIT(Git Issues and Issue Tracking) repository or ServiceNow to manage Change Requests.
+You can select IBM Cloud hosted GRIT (Git Issues and Issue Tracking) repository to manage Change Requests.
 
 | ![Change Request](./images/devsecops_set-up_cd_change_request.png) |
 | :--: |
@@ -285,19 +285,6 @@ Incase you have an existing Change Request repository from an exising CD Toolcha
 
 | ![GRIT](./images/devsecops_set-up_cd_change_request_mgmt.png) |
 | :--: |
-
-### ServiceNow (Not yet released)
-
-| ![ServiceNow](https://github.ibm.com/one-pipeline/docs/blob/master/assets/compliance-cd-toolchain/servicenow.png) |
-| :--: |
-
-- **ServiceNow API token:** To acquire a ServiceNow API token, submit a request on the Service Portal. Make sure the environment you request for matches the ServiceNow instance in the API URL field below.
-    - [PROD](https://watson.service-now.com/ess_portal?id=sc_cat_item&sys_id=02594e86db2c83408799327e9d961999)
-    - [TEST](https://watsontest.service-now.com/ess_portal?id=sc_cat_item&sys_id=02594e86db2c83408799327e9d961999)
-- **ServiceNow Configuration Item:** The name of the service/app to be associated with Change Requests
-    A ServiceNow Configuration item can be requested for [production](https://watson.service-now.com/nav_to.do?uri=%2Fx_ibmwc_ssef_app.do%23!%2Fhome) or [test](https://watsontest.service-now.com/nav_to.do?uri=%2Fx_ibmwc_ssef_app.do%23!%2Fhome) environments.
-- **ServiceNow API Base URL:** The Base URL of the ServiceNow API, can be changed to target the production environment, default is test environment.
-    Default: `https://watsontest.service-now.com`
 
 ### Optional Tools
 
@@ -337,7 +324,7 @@ Use this option if you wish to create a new instance of DevOps Insights to be us
 
 ### Security and Compliance
 
-To integrate the toolchain with the Security and Compliance Service, you need to provide a project name and the evidence locker repository name for the Fortress data collector.
+To integrate the toolchain with the Security and Compliance Service, you need to provide a project name and the evidence locker repository name for the Security and Compliance data collector.
 
 | ![Security and Compliance without Trigger](./images/devsecops_set-up_cd_SCC.png) |
 | :--: |

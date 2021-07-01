@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-01"
 
 keywords: DevSecOps
 
@@ -154,7 +154,7 @@ Example evidence created for the unit tests while using save_result:
   "issues": [],
   "artifacts": [
     {
-      "url": "https://s3.us-south.cloud-object-storage.appdomain.cloud/cocoa-cos-no-retention/ci/89a04de9-2795-4e8e-be90-52a92ac7f9c1/artifacts/compliance-app-COMPACT-20210218231513608/unit-tests-results.json_d9619521e7444fef0ff052e59fd54049",
+      "url": "https://s3.us-south.cloud-object-storage.appdomain.cloud/cos-bucket-name/ci/89a04de9-2795-4e8e-be90-52a92ac7f9c1/artifacts/compliance-app-COMPACT-20210218231513608/unit-tests-results.json_d9619521e7444fef0ff052e59fd54049",
       "hash": "d9619521e7444fef0ff052e59fd54049"
     }
   ],
@@ -165,7 +165,7 @@ Example evidence created for the unit tests while using save_result:
       "hash": null
     },
     {
-      "url": "https://s3.us-south.cloud-object-storage.appdomain.cloud/cocoa-cos-no-retention/ci/89a04de9-2795-4e8e-be90-52a92ac7f9c1/artifacts/logs/code-unit-tests/run-stage.log_dae902fb1455b1fc9c565273aa4fe1bc",
+      "url": "https://s3.us-south.cloud-object-storage.appdomain.cloud/cos-bucket-name/ci/89a04de9-2795-4e8e-be90-52a92ac7f9c1/artifacts/logs/code-unit-tests/run-stage.log_dae902fb1455b1fc9c565273aa4fe1bc",
       "hash": "dae902fb1455b1fc9c565273aa4fe1bc"
     }
   ]

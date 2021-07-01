@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-01"
 
 keywords: DevSecOps, cli, IBM Cloud
 
@@ -27,7 +27,7 @@ subcollection: ContinuousDelivery
 # DevSecOps CLI 
 {: #cd-devsecops-cli}
 
-A CLI Interface to enable working with services adopting OnePipeline compliance solutions, for example the shift-left reference pipelines. For more information about the Shift-Left compliance architecture, see [DevSecOps with {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-devsecops_intro).
+DevSecOps CLI is a CLI Interface to enable adopting compliance solutions under IBM Cloud DevSecOps reference implementation, for example the shift-left reference pipelines. For more information about the Shift-Left compliance architecture, see [DevSecOps with {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-devsecops_intro).
 {: shortdesc}
 
 ## CLI interface
@@ -116,14 +116,14 @@ GHE_REPO=               # The repository name
       "type": "check-run",
       "name": "secret-detection",
       "params": {
-        "name": "whitewater-detect-secrets"
+        "name": "detect-secrets"
       }
     },
     {
       "type": "branch-protection",
       "name": "code review",
       "params": {
-        "checks": ["travis/ci", "whitewater-detect-secrets"]
+        "checks": ["travis/ci", "detect-secrets"]
       }
     },
     {

@@ -31,10 +31,10 @@ With {{site.data.keyword.contdelivery_full}}, you can either approve change requ
 
 By default, standard change requests are created and if all of the required compliance checks pass, the deployment readiness is set to `true`. When a change request is of the standard type and the deployment readiness is set to `true`, it is automatically approved. 
 
-If one or more compliance checks fail, deployment readiness is set to `false`, the continuous delivery pipeline breaks, and the deployment stops because of the unapproved change request. A request for manual approval is also sent to the approvers that are assigned to the configuration item in ServiceNow.
+If one or more compliance checks fail, deployment readiness is set to `false`, the continuous delivery pipeline breaks, and the deployment stops because of the unapproved change request.
 
 You can deploy a manually approved change request by adding an emergency label to the promotion pull request 
-or by providing a manually pre-approved change request.
+or by providing a manually pre-approved (with label `status_approved`) change request.
 
 ## Adding emergency label to promotion PR
 {: #cd-devsecops-emergency-label}

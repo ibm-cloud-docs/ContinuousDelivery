@@ -56,7 +56,7 @@ A `Hint` is a suggested default name that is automatically resolved against the 
 | HashiCorp Vault Role ID | **Optional: CI & CD** Used to authenticate with the Hashicorp vault server | 
 | HashiCorp Vault Secret ID | **Optional: CI & CD** Used to authenticate with the Hashicorp vault server |
 
-{: caption="Table 1. OnePipeline Secrets" caption-side="top"}
+{: caption="Table 1. DevSecOps Secrets" caption-side="top"}
 
 While using Hashicorp vault service, ensure that the vault service uses [approle authentication](https://www.vaultproject.io/docs/auth/approle) method. When you use the approle authentication method, you need `role-id` and `secret-id` to successfully integrate Hashicorp server with the toolchain. Since `role-id` and `secret-id` are secrets in themselves, it is recommended to store them by using a [{{site.data.keyword.keymanagementservicelong_notm}} tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-keyprotect) so that they can be securely retrieved and applied in the toolchain workflow. All other toolchain secrets should be stored and retrieved by using Hashicorp.
 

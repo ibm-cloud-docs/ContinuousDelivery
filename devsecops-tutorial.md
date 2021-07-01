@@ -400,7 +400,7 @@ Let's proceed with Continuous Delivery (CD) now.
 ### Tekton CD pipeline with compliance automation for Kubernetes
 {: #devsecops-cd-toolchain-tekton-pipeline}
 
-This is the toolchain template for continuous deployment with security and compliance related best practices in DevSecOps. It is preconfigured for Continuous Delivery with inventory integration, change management with GRIT, evidence collection, and deployment to the IBM Kubernetes Service.
+This is the toolchain template for continuous deployment with security and compliance related best practices in DevSecOps. It is preconfigured for Continuous Delivery with inventory integration, change management with Git Repos and Issue Tracking, evidence collection, and deployment to the IBM Kubernetes Service.
 
 The integrated repositories, target cluster, and other integrations are configured during the setup process.
 
@@ -411,7 +411,7 @@ The toolchain includes a Tekton delivery pipeline, which can be manually trigger
 The CD toolchain contains only one pipeline for Continuous Delivery. It implements the following best practices:
 * change Management automation to help developers, approvers, and auditors track deployments from the lens of compliance.
 * creates an evidence summary from the evidence collected in the CI pipeline
-* creates a change request in GRIT based change management repository and adds deployment evidence to it
+* creates a change request in Git Repos and Issue Tracking based change management repository and adds deployment evidence to it
 * uses the inventory repository to promote built artifacts to deployment environments like staging and prod
 * checks the CR and auto approves if all checks have passed
 * if CR is approved, or emergency, deploys the image from the inventory to production
@@ -613,7 +613,7 @@ Once the API Key field is filled, the registry and cluster-related fields are fi
 ### Change request management
 {: #devsecops-cd-tool-integration-change-request}
 
-You can provide the IBM Cloud hosted Git Issues and Issue Tracking repository.
+IBM Cloud hosted GRIT(Git Repos and Issue Tracking) repository to manage Change Requests.
 
 ### Git Repo Issues and Tracking
 {: #devsecops-cd-tool-integration-GRIT}

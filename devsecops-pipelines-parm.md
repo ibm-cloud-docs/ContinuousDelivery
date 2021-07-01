@@ -142,9 +142,6 @@ The following table lists and describes the continuous delivery parameters for p
 |pipeline-dockerconfigjson		|SECRET		|The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional	  	|
 |pipeline-debug		|select		|The pipeline debug mode switch.	|Optional			|
 |region		|text		|The target region where the app is deployed.	|Optional			|
-|servicenow-api-base-url		|text		|The ServiceNow API base URL.	|Required			|
-|servicenow-api-token		|SECRET		|The API token that is used to access ServiceNow for change management.	|Optional			|
-|servicenow-configuration-item		|text		|The ServiceNow configuration item name, as it appears in ServiceNow.	|Optional			|
 |slack-notifications		|SECRET		|The switch that turns the Slack integration on or off.  |Optional			|
 |source-environment		|text		|The source environment that the app is promoted from.	|Required			|
 |target-environment		|text		|The target environment that the app is deployed to.	|Required			|

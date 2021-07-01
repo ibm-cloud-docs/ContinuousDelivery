@@ -59,7 +59,7 @@ The deployment Bill of Material (BOM) represents all of the artifacts that are d
 ## Collect evidence summary
 {: #cd-devsecops-pipeline-collect}
 
-An evidence summary is created from all of the evidence that was created during the relevant build that led to a deployment. Evidence that is created during the deployment itself is also added to the summary. The evidence summary is added to the change request's description and is used by the Fortress Integration.
+An evidence summary is created from all of the evidence that was created during the relevant build that led to a deployment. Evidence that is created during the deployment itself is also added to the summary. The evidence summary is added to the change request's description.
 
 ## Prepare and create change request
 {: #cd-devsecops-pipeline-prepcr}

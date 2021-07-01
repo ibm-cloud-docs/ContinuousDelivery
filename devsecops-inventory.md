@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-01"
 
 keywords: DevSecOps, inventory model, inventory
 
@@ -117,8 +117,8 @@ interface Entry {
 
 ```
 {
-  "repository_url": "https://github.ibm.com/cocoa-test/compliance-app-20201211-sanity",
-  "artifact": "us.icr.io/attila/hello-compliance-app:20201217081811-master-b85e3d472e9cc35b429c39e8c3f9eb282738c20a@sha256:da36831d5154307ac9ca4b8d900df2da0c6c14754977c32479dc62994b5722d0",
+  "repository_url": "https://github.com/test-org/compliance-app-20201211",
+  "artifact": "us.icr.io/namespace/hello-compliance-app:20201217081811-master-b85e3d472e9cc35b429c39e8c3f9eb282738c20a@sha256:da36831d5154307ac9ca4b8d900df2da0c6c14754977c32479dc62994b5722d0",
   "build_number": 21,
   "commit_sha": "b85e3d472e9cc35b429c39e8c3f9eb282738c20a",
   "name": "hello-compliance-app",
@@ -126,11 +126,11 @@ interface Entry {
   "version": "v1",
   "app_artifacts": {
     "signature": "owFNUX1IE3EY3vwAEy0VyoSJdkVWtu0+d3eTjNIIi0jETCSU3353cz+83V23myi2BlFgYiUFqSmZLciUzCJkRYJp9IEWFWXB0hAyrBQxEjIIuhFSf70vL8/7vM/zPi3JsaYEc+TnbqG8qrnTPDZ8w2WqiqwtacCghnQEgYQ5GzAkiLKO9PpoLyiwRtSsmugWNVGGIubE/D4bgpoNKXag60gCdo8oSYoVKl5VQsDAWIGqOkmcxAmSYHGO4AjC6gU+3eBxcYxICTRLijyEFOOiSR5SvMhBys2LLpIjWYqDJA6wwHYMeUG1+J8GL5CRW/TpVgFVG8VQ4vMAknE4BUA5OIoQGIKhKZwFkIeAdnECj+OCmxQADh2QoFmG5lkWUiTN8gJ0kDxPuxiWJAU8ekyvV6PegK54EcyGiqwDJItatg9Vy0D3a2IUpKg6UuS/T4KaaIC1fzuMDbfhmMGEvIY64FUxJ+Ew3PMU5SADgdNmKs5kTjBlrtsQ99iyY49nns8o6jsXWgkjPiYahClxVcrK5Flngumz2j7YdmD0ecutytsvxxNPHflKlRV2RyqD69NjC6Smji9XuukFyZ+lvM18gUr7F4NXge9YyZPik411tc1n9bKO/hDz7oGaX/ur94OnNHiwOG6n5ZsrsCsvtyvmkH4zOWlrRWuL7fzgj9zlcCTAhtu2LbeGLNfv3Ju0Jc9PZPk7Pm3Ov2CW+2xj8ReX6ooGamZ610yqRM/+8Qo2XnOeyZzbVKgs+f2+9unpJOve4Tmla+PdqftDWkHPm9Vq3nsyZ2DUkmP/nTb7qNw5l2SfWtiSemJx9nLaYOpx6amlOT18aeIwJQhHg1XOjJF9r18NXQvPuL9rH5tSQqbGhyN/AA==",
-    "provenance": "us.icr.io/attila/hello-compliance-app:20201217081811-master-b85e3d472e9cc35b429c39e8c3f9eb282738c20a@sha256:da36831d5154307ac9ca4b8d900df2da0c6c14754977c32479dc62994b5722d0"
+    "provenance": "us.icr.io/namespace/hello-compliance-app:20201217081811-master-b85e3d472e9cc35b429c39e8c3f9eb282738c20a@sha256:da36831d5154307ac9ca4b8d900df2da0c6c14754977c32479dc62994b5722d0"
   },
   "type": "type",
   "sha256": "da36831d5154307ac9ca4b8d900df2da0c6c14754977c32479dc62994b5722d0",
-  "provenance": "us.icr.io/attila/hello-compliance-app:20201217081811-master-b85e3d472e9cc35b429c39e8c3f9eb282738c20a@sha256:da36831d5154307ac9ca4b8d900df2da0c6c14754977c32479dc62994b5722d0",
+  "provenance": "us.icr.io/namespace/hello-compliance-app:20201217081811-master-b85e3d472e9cc35b429c39e8c3f9eb282738c20a@sha256:da36831d5154307ac9ca4b8d900df2da0c6c14754977c32479dc62994b5722d0",
   "signature": "signature"
 }
 ```
@@ -221,7 +221,7 @@ cocoa inventory promote \
   --source="master" \
   --target="staging" \
   --priority="moderate" \
-  --assigned-to="cocoa@hu.ibm.com" \
+  --assigned-to="assignee@ibm.com" \
   --description="Change description" \
   --purpose="Change purpose" \
   --impact="Change impact" \
@@ -275,7 +275,7 @@ promote() {
     --head "promote-$source-to-$target" \
     --title "Promote $source to $target" \
     --body "" \
-    --repo "https://github.ibm.com/org/inventory-repository"
+    --repo "https://github.com/org/inventory-repository"
 
   # promotion branch can be deleted once the PR was merged
 }

@@ -26,7 +26,7 @@ subcollection: ContinuousDelivery
 # Building Docker images
 {: #cd-devsecops-build-docker}
 
-You can build all of the Docker images in the `containerize` stage that you need. If you wish that the default built-in CISO sign and VA scan process those images, you need to let the pipeline be aware of these images.
+You can build all of the Docker images in the `containerize` stage that you need. If you wish to override the default built-in GPG Image signing for those images, you need to let the pipeline be aware of these images.
 {: shortdesc}
 
 ## Adding image artifacts
@@ -38,7 +38,7 @@ You can add image artifacts by using the `pipelinectl` interface. In the contain
 save_artifact <image-alias> type=image "name=${IMAGE}" "digest=${DIGEST}" [<prop>=<value>]
 ```
 
-Where the value of name must be a fully qualified image name, for example: `your-docker-repository.artifactory.swg-devops.com/your-image-name:your-image-tag` and `digest` must be the `sha256` digest of the image, for example,  `sha256:c43e802dcc7485590b54614006ced9338d5bd9a045115c89d5570bb95eeb52d9`.
+Where the value of name must be a fully qualified image name, for example: `your-docker-repository.namespace/imagename:imagetag` and `digest` must be the `sha256` digest of the image, for example,  `sha256:c43e802dcc7485590b54614006ced9338d5bd9a045115c89d5570bb95eeb52d9`.
 
 `<image-alias>` can be any string, its purpose to provide a human-readable name for your image among the other artifacts. You can add any properties to the artifact, like tags, timestamp, etc.
 
@@ -60,7 +60,7 @@ save_artifact service_debug type=image \
 ```
 {: screen}
 
-By using this interface, the default built-in CISO sign and VA scan tasks will be able to pick up these images and process them.
+By using this interface, the default built-in GPG Image signing will be able to pick up these images and process them.
 
 ## Loading image artifacts
 {: #cd-devsecops-load-artifacts}
@@ -88,17 +88,16 @@ done
 ```
 {: screen}
 
-The `signature` property is added by the default built-in CISO signing task.
+The `signature` property is added by the default built-in GPG Image signing task.
 {: tip}
 
-<staging>
+
 
 For more information, check out the following documentation:
 
-* [Documentation on stages for user-defined scripts](https://pages.github.ibm.com/one-pipeline/docs/#/custom-scripts)
-* [API documentation for pipelinectl](https://github.ibm.com/one-pipeline/compliance-baseimage/tree/master/pipelinectl)
-* [The default built-in CISO sign script](https://github.ibm.com/one-pipeline/compliance-baseimage/blob/master/one-pipeline/internal/ciso/sign_icr)
-* [The default built-in VA scan checker script](https://github.ibm.com/one-pipeline/compliance-baseimage/blob/master/one-pipeline/internal/container-registry/va_scan)
+* [Documentation on stages for user-defined scripts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts)
+* [API documentation for pipelinectl](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-pipelinectl)
+* [The default built-in GPG Image sign script](https://us-south.git.cloud.ibm.com/open-toolchain/hello-compliance-app/-/blob/master/scripts/sign_image.sh)
 
-</staging>
+
 

@@ -37,7 +37,7 @@ You can also use [custom Docker images](/docs/services/ContinuousDelivery?topic=
 On 20 November 2020, Dockerhub introduced rate-limiting on anonymous image pulls. This change might impact users that are running jobs by using Dockerhub-hosted custom images.
 {: tip}
 
-Pipeline base images are now also hosted in a global IBM Cloud Container Registry namespace. To list these images, run the `ibmcloud cr images --restrict continuous-delivery` command when you target the global IBM Cloud Container Registry.
+Pipeline base images are hosted in a global IBM Cloud Container Registry namespace. To list these images, run the `ibmcloud cr images --restrict continuous-delivery` command when you target the global IBM Cloud Container Registry.
 
 ## Specifying the image version
 {: #specify_base_image_version}
@@ -61,28 +61,7 @@ To add tools in a Red Hat UBI-based image, you must use the `yum` command. `apt-
  After version 2.0, images no longer include grunt or python. If these tools are required for your build, you can install them manually. To install grunt, run `npm install -g grunt-cli`. Make sure that you don't change the Node.js version after you install grunt. To install python on a 2.x vbi, run `apt-get -qq update && apt-get -qq install -y python`. If you are using a 3.x vbi, you can use `yum update -yq && yum install -yq python3-pip`.
  {: important}
 
-Starting with and including version 2.2, images are available on [DockerHub](https://hub.docker.com/){: external}.
-
-| Base image version | DockerHub image version |
-|:-----------------|:-----------------|
-| 2.13 | `ibmcom/pipeline-base-image:2.13`|
-| 2.12 | `ibmcom/pipeline-base-image:2.12`|
-| 2.11 | `ibmcom/pipeline-base-image:2.11`|
-| 2.10 | `ibmcom/pipeline-base-image:2.10`|
-| 2.9 | `ibmcom/pipeline-base-image:2.9`|
-| 2.8 | `ibmcom/pipeline-base-image:2.8`|
-| 2.7 | `ibmcom/pipeline-base-image:2.7`| 
-| 2.6 | `ibmcom/pipeline-base-image:2.6`| 
-| 2.5 | `ibmcom/pipeline-base-image:2.5`|
-| 2.4 | `ibmcom/pipeline-base-image:2.4.1`|
-| 2.3 | `ibmcom/pipeline-base-image:2.3`|
-| 2.2 | `ibmcom/pipeline-base-image:2.2`|
-| 2.1 | Not available |
-| 2.0 | Not available |
-| 1.0 | Not available |
-{: caption="Table 1. Mapping between versioned based images and DockerHub images" caption-side="top"}
-
-To list IBM Cloud Container Registry hosted images, run the `ibmcloud cr images --restrict continuous-delivery` command when you target the global IBM Cloud Container Registry.
+Images are available on the IBM Cloud Container Registry. To list these hosted images, run the `ibmcloud cr images --restrict continuous-delivery` command when you target the global IBM Cloud Container Registry.
 
 | Base image version | IBM Cloud Container Registry version |
 |:-----------------|:-----------------|
@@ -104,8 +83,6 @@ To list IBM Cloud Container Registry hosted images, run the `ibmcloud cr images 
 | 2.0 | Not available |
 | 1.0 | Not available |
 {: caption="Table 2. Mapping between versioned based images and IBM Cloud Registry versions" caption-side="top"}
-
-To access the DockerHub versioned base images, go to [ibmcom/pipeline-base-image](https://hub.docker.com/r/ibmcom/pipeline-base-image){: external}.
 
 The following available image versions are listed in descending order, starting with the current version.
  

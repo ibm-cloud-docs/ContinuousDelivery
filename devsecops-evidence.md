@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-01"
 
 keywords: DevSecOps, compliance evidence
 
@@ -95,11 +95,11 @@ This schema is saved to the evidence locker by using JSON format. The evidence f
       "hash": null
     },
     {
-      "url": "https://s3.us-south.cloud-object-storage.appdomain.cloud/cocoa-cos-no-retention/ci/fa26687f-7048-4ea6-b101-9211d3f77234/artifacts/code-unit-tests/prepare.log_d4356d5a1077c4f9d61b570949d6ee2b",
+      "url": "https://s3.us-south.cloud-object-storage.appdomain.cloud/cos-bucket-name/ci/fa26687f-7048-4ea6-b101-9211d3f77234/artifacts/code-unit-tests/prepare.log_d4356d5a1077c4f9d61b570949d6ee2b",
       "hash": "d4356d5a1077c4f9d61b570949d6ee2b"
     },
     {
-      "url": "https://s3.us-south.cloud-object-storage.appdomain.cloud/cocoa-cos-no-retention/ci/fa26687f-7048-4ea6-b101-9211d3f77234/artifacts/code-unit-tests/run-stage.log_1a083814ef86fb68a7c4b47abae76070",
+      "url": "https://s3.us-south.cloud-object-storage.appdomain.cloud/cos-bucket-name/ci/fa26687f-7048-4ea6-b101-9211d3f77234/artifacts/code-unit-tests/run-stage.log_1a083814ef86fb68a7c4b47abae76070",
       "hash": "1a083814ef86fb68a7c4b47abae76070"
     }
   ],
