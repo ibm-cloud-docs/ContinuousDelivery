@@ -31,9 +31,9 @@ subcollection: ContinuousDelivery
 
 * [Create a Kubernetes cluster](/docs/containers?topic=containers-getting-started) on IBM Cloud Kubernetes Service to deploy your application.
 * [Create toolchain secrets](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-toolchains-secrets) to access different integrations and secure them.
-* [Validate recommended IAM permissions](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-iam-permissions) are assigned to corressponding integrations.
-* [Compliance CI toolchain](https://us-south.git.cloud.ibm.com/open-toolchain/compliance-ci-toolchain){: external} configured with Devops Insight Integrations
+* [Compliance CI toolchain](https://github.ibm.com/open-toolchain/compliance-ci-toolchain){: external} configured with Devops Insight Integrations.
 * Optional. [COS Bucket](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-cos-config) as Compliance Evidence Locker to store pipeline run evidences.
+* [Validate recommended IAM permissions](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-iam-permissions) are assigned to corresponding integrations.
 
 ## Guided setup overview
 {: #cd-devsecops-tekton-cd-guided}
