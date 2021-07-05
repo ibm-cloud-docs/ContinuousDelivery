@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-22"
+lastupdated: "2021-07-05"
 
 keywords: DevSecOps, CI, compliance, secure toolchain, IBM Cloud
 
@@ -65,7 +65,7 @@ Start the CI toolchain configuration by using one of the following options:
 
 * Click the following **Create toolchain** button.
 
-  [![Create toolchain](images/create_toolchain_button.png "Create toolchain")](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.ibm.com/open-toolchain/compliance-ci-toolchain.git&env_id=ibm:yp:us-south){: external}
+  [![Create toolchain](images/create_toolchain_button.png "Create toolchain")](https://cloud.ibm.com/devops/setup/deploy?repository=https://us-south.git.cloud.ibm.com/open-toolchain/compliance-ci-toolchain&env_id=ibm:yp:us-south){: external}
 
 * From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click **Create toolchain**. On the Create a Toolchain page, click **CI-Develop with DevSecOps practices**.
 
@@ -141,7 +141,7 @@ Use [Key Protect](https://cloud.ibm.com/catalog/services/key-protect) to securel
 - **Resource Group**: Resource Group that the Key Protect service belongs.
 - **Service name**: Key Protect service name.
 
-A Key Protect tool integration is included in this template to securely manage the HashiCorp `Role ID` and `Secret ID` in accordance with the [best practices for vault](https://pages.github.ibm.com/vault-as-a-service/vault/usage/best-practices.html)-WIP recommended  by SOS. Ideally these two HashiCorp secrets should be stored in Key Protect as a prerequisite for users creating toolchains. Doing so will protect access to HashiCorp Vault, which is the default secrets repository for most consumers.
+To comply with best practices for using Hashicorp Vault, this template includes a Key Protect tool integration to securely manage the HashiCorp `Role ID` and `Secret ID`. By storing these HashiCorp secrets in Key Protect as a prerequisite for users to create toolchains, you protect access to HashiCorp Vault, which is the default secrets repo for most consumers.
 
 #### IBM Secrets Manager
 
@@ -159,18 +159,16 @@ Use [Secrets Manager](https://cloud.ibm.com/catalog/services/secrets-manager) to
 
 Use HashiCorp Vault to securely store secrets that are needed by your toolchain. Examples of secrets are API keys, user passwords or any other tokens that enable access to sensitive information. Your toolchain stores references to the HashiCorp secrets, not the literal secret values, which enables advanced capabilities like secret rotation.
 
-If your team does not have a HashiCorp Vault set up, you can follow [Vault Onboarding](https://pages.github.ibm.com/vault-as-a-service/vault/onboarding/project.html)-WIP to request a `Role ID`.
-
 | ![HashiCorp Vault](images/devsecops_set-up_hashicorp.png) |
 | :--: |
 
  - **Name**: A name for this tool integration. This name will be displayed in the toolchain.
- - **Server URL**: The server URL for your HashiCorp Vault Instance. (`https://vserv-us.sos.ibm.com:8200`, `https://vserv-eu.sos.ibm.com:8200`, `https://vserv-test.sos.ibm.com:8200`, `https://vserv.sos.ibm.com:8200`)
+ - **Server URL**: The server URL for your HashiCorp Vault Instance. (for instance `https://192.168.0.100:8200`)
  - **Integration URL**: The URL that you want to navigate to when you click the HashiCorp Vault Integration tile.
  - **Secrets Path**: The mount path where your secrets are stored in your HashiCorp Vault Instance.
  - **Authentication Method**: The Authentication method for your HashiCorp Vault Instance.
- - **Role ID:** Your team's [AppRole Role ID](https://pages.github.ibm.com/vault-as-a-service/vault/usage/approle-role-ids.html).
- - **Secret ID:** Your team's [Secret ID](https://pages.github.ibm.com/vault-as-a-service/vault/usage/manage-secret-ids.html).
+ - **Role ID:** Your team's [AppRole Role ID](https://www.hashicorp.com/blog/authenticating-applications-with-vault-approle).
+ - **Secret ID:** Your team's [Secret ID](https://www.hashicorp.com/blog/authenticating-applications-with-vault-approle).
 
 Note: _We advise you to use AppRole authentication method as this method can be used to read secret values._
 
@@ -316,7 +314,8 @@ Further material and guides about the artifactory are available [here](https://w
 - **Repository name:**  The name of the artifactory repository.
     This is where the images for pipeline tasks is stored.
 
-**Note**: _The User ID and the API Key token is required for pipeline working._
+The User ID and the API Key token are required by the pipeline.
+{: important}
 
 ## Create the CI toolchain
 {: #cd-devsecops-tekton-ci-create}
@@ -325,7 +324,8 @@ Further material and guides about the artifactory are available [here](https://w
 
   - Click the create button at the bottom of the **Summary** step, and wait for the toolchain to be created.
 
-  **Note**: _The individual toolchain integrations can be configured also after the pipeline has been created._
+  You can configure the individual toolchain integrations after the pipeline is created.
+  {: tip}
 
 | ![Summary](images/devsecops_set-up_summary_page.png) |
 | :--: |
