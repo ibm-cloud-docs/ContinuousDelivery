@@ -33,8 +33,8 @@ subcollection: ContinuousDelivery
 * [Install the IBM Cloud CLI](/docs/containers?topic=containers-getting-started) on your operating system to interact with IBM Cloud Resources.
 * [Create an image signing key](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-image-signing) with proper encoding to sign your application docker images.
 * [Create toolchain secrets](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-toolchains-secrets) to access different integrations and secure them.
-* [Validate recommended IAM permissions](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-iam-permissions) are assigned to corressponding integrations.
 * Optional. [COS Bucket](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-cos-config) as the compliance evidence locker to durably store pipeline run evidence.
+* [Validate recommended IAM permissions](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-iam-permissions) are assigned to corresponding integrations.
 
 ## Guided setup overview
 {: #cd-devsecops-tekton-ci-guided}
