@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-01"
 
 keywords: DevSecOps
 
@@ -39,7 +39,7 @@ cocoa inventory promote \
   --source="master" \
   --target="staging" \
   --priority="moderate" \
-  --assigned-to="cocoa@hu.ibm.com" \
+  --assigned-to="assignee@ibm.com" \
   --description="Change description" \
   --purpose="Change purpose" \
   --impact="Change impact" \
@@ -91,7 +91,7 @@ promote() {
     --head "promote-$source-to-$target" \
     --title "Promote $source to $target" \
     --body "" \
-    --repo "https://github.ibm.com/org/inventory-repository"
+    --repo "https://github.com/org/inventory-repository"
 
   # promotion branch can be deleted once the PR was merged
 }
