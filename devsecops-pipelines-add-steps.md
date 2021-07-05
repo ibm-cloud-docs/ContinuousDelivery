@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-01"
+lastupdated: "2021-07-05"
 
 keywords: DevSecOps
 
@@ -72,16 +72,16 @@ save_repo <repo-reference-name> \
     commit="${LATEST_GIT_COMMIT}"
 ```    
     
-This way the rest of the pipeline will be able to scan these repositories for compliance violations and vulnerabilities
+This way the rest of the pipeline can scan these repos for compliance violations and vulnerabilities.
 
 Paths saved by using `save_repo` must be relative to the workspace path.
 {: important}
 
-You don't need to install the pipelinectl tool for your scripts or base images, the reference pipeline provides the binaries for the context of your script
+You don't need to install the `pipelinectl` tool for your scripts or base images, the reference pipeline provides the binaries for the context of your script.
 
 ## Test
 
-This stage is where you suppose to run your tests on your code repositories. You can access your repos added in the setup stage using the list_repos and load_repo pipelinectl interfaces.
+This stage is where you run your tests on your code repos. You can access your repos added in the setup stage using the `list_repos` and `load_repo` pipelinectl interfaces.
 
 Example:
 
@@ -118,10 +118,11 @@ done
 exit $exit_code
 ```
 
-The unit-test compliance control will be determined by the exit code of the stage script itself. If your tests pass, exit with 0, if not, return a non-zero exit code at the end.
-Saving results
+The unit-test compliance control is determined by the exit code of the stage script itself. If your tests pass, exit with 0, if not, return a non-zero exit code at the end.
 
-Your tests probably generate some report artifacts, like a test results JSON or XML. To attach those to the created compliance evidence as evidence artifacts, use the save_result pipelinectl interface in this stage.
+#### Saving results
+
+Your tests might generate some report artifacts, such as a test results JSON or XML. To attach those to the created compliance evidence as evidence artifacts, use the save_result pipelinectl interface in this stage.
 
 
 ```
@@ -139,9 +140,9 @@ save_result test results.json
 The first parameter of save_results must be the DevSecOps pipeline config stage name, like test, scan-artifact or acceptance-test. Otherwise the evidence collector won't be able to find it and attach it to the proper piece of evidence.
 {: important}
 
-Using the save_result pipelinectl interface will ensure that the pipeline will find your result artifacts, and they will be uploaded to the evidence locker, and attached to the compliance evidence created by the pipeline.
+Using the `save_result` pipelinectl interface ensures that the pipeline finds your result artifacts, they are uploaded to the evidence locker, and attached to the compliance evidence that is created by the pipeline.
 
-Example evidence created for the unit tests while using save_result:
+Example evidence created for the unit tests while using `save_result`:
 
 ```
 {
@@ -176,7 +177,7 @@ Example evidence created for the unit tests while using save_result:
 
 In this stage you can build your artifacts. The pipeline provides some default features for docker image type artifacts, but you're able to build any kind of artifacts here. What is important, is to save the created artifacts for the pipeline, so later it can run scans on it, or use them in your release stage.
 
-To provide information on your built artifacts, use the save_artifact pipelinectl interface.
+To provide information on your built artifacts, use the `save_artifact` pipelinectl interface.
 
 Example:
 
@@ -202,16 +203,17 @@ save_artifact <artifact-reference-name> \
     digest="${IMAGE_DIGEST}"
 ```    
 
-The preferred format for image name is the image-URL:build-tag, for example wcp-compliance-automation-team-docker-local.artifactory.swg-devops.com/compliance-baseimage:2.8.0
+The preferred format for image name is `image-URL:build-tag`, for example, `wcp-compliance-automation-team-docker-local.artifactory.swg-devops.com/compliance-baseimage:2.8.0`.
 {: important]
 
-If you build docker images, use the save_artifact interface like in the example above, to send those images for the default built-in CISO signing and CR VA scanning.
-Release
+If you build Docker images, use the `save_artifact` interface to send those images for the default built-in image signing and CR VA scanning tasks.
+
+#### Release
 
 At the end of the pipeline, the built artifacts must be added to the inventory, so they can be promoted to deployment.
-The release stage provides flexibility if you would like to add other artifacts to the inventory, like helm charts.
+The release stage provides flexibility if you want to add other artifacts to the inventory, such as Helm charts.
 
-In this stage you can use the CLI `cocoa inventory add` command, and the data from pipelinectl commands, to create the inventory entries.
+In this stage, you can use the CLI `cocoa inventory add` command, and the data from `pipelinectl` commands, to create the inventory entries.
 
 Example:
 
@@ -239,13 +241,14 @@ list_artifacts | while IFS= read -r artifact ; do
 done
 ```
 
-To use the CLI, you need to install it in your scripts, or use a base image that has the cli pre-installed.
-Further information
+To use the CLI, you must install it in your scripts, or use a base image that has the CLI pre-installed.
+
+## Further information
 
     Documentation on stages for user-defined scripts
     API documentation for pipelinectl
     Example test script
     Example build scripts
     Example release script
-    The default built-in CISO sign script
+    The default built-in image signing script
     The default built-in VA scan checker script
