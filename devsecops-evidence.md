@@ -989,7 +989,7 @@ These tools focus only on evidence collection and do not change the behavior of 
 ## Evidence collection
 {: #cd-devsecops-evidence-collection}
 
-According to the [DevOps Architecture diagram](https://pages.github.ibm.com/CloudEngineering/system_architecture/devops/){: external}, the continuous integration and continuous delivery flows can be divided into three stages: code, build, and deploy.
+According to the [DevOps lifecycle](https://www.ibm.com/cloud/learn/devops-a-complete-guide#toc-how-devops-u5vApdai){: external}, the continuous integration and continuous delivery flows can be divided into three stages: code, build, and deploy.
 
 The DevOps architecture divides these flows into four stages by distinguishing between pre-production and production deployment. The DevSecOps reference architecture currently includes the pre-production and production deployment within the same stage.
 {:tip: .tip}
