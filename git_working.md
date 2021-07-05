@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-11-20"
+  years: 2015, 2021
+lastupdated: "2021-07-05"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, authentication, personal access token, SSH key
 
@@ -95,6 +95,34 @@ To learn more, see [SSH](https://us-south.git.cloud.ibm.com/help/ssh/README){: e
 The first time that you connect to a server by way of Git over SSH, the Git client prompts you to accept the host key fingerprint of the server. You can use the following host key fingerprints to verify SSH connections with the {{site.data.keyword.cloud_notm}} {{site.data.keyword.gitrepos}} servers. Proceed with the connection only if the host key fingerprint matches the specified value for the server that is provided in the following code snippets. 
 
 ```
+au-syd.git.cloud.ibm.com:
+  ECDSA:
+    SHA256:oUpjbxJ+UVIlBvcdcKuprZ0JEtCWkTu1yFTdfFHoEF8
+    MD5:ca:34:27:f1:49:fd:b4:9d:e8:ce:d2:7b:99:a1:dd:98
+  ED25519:
+    SHA256:uUqxTjqUQuBjmQGynGb8pXX6FQ2Ag0VLAh4TtuSZMAQ
+    MD5:87:ad:c9:26:bd:7f:bc:a8:1c:dc:07:ca:aa:d3:8c:9e
+  RSA:
+    SHA256:y+QM+SbgQ7SqzQXqwmJTPD0jni+qsDdqZg/sOgOFWbY
+    MD5:70:71:95:b5:2a:b4:04:ad:12:b4:77:c6:cf:fe:35:c8
+```
+{: screen}
+
+```
+ca-tor.git.cloud.ibm.com:
+  ECDSA:
+    SHA256:xqeLs5qKCCNd/SmSTgFktFJW8nTqnF5BmwJSZggguJI
+    MD5:fb:41:1a:b4:8c:4d:95:c3:67:d9:eb:4a:b1:94:c2:cb
+  ED25519:
+    SHA256:mT5EGA/63iaHQZrFkXevP+T/qaFN39JChMGUJtla4nE
+    MD5:6f:f2:4e:0e:90:0b:2b:e7:fc:f8:d2:1a:16:35:16:fc
+  RSA:
+    SHA256:mNvCu12YAUeJVCNfiHNfBKgezh0zgwdwxBs8wXnhPP8
+    MD5:60:d6:6a:2f:0c:db:52:e1:20:17:a9:3f:3f:fb:4d:91
+```
+{: screen}
+
+```
 eu-de.git.cloud.ibm.com:
   DSA:
     SHA256:c7Bm79CLA5y4tmnI+jB+wYp8esbIUcOSMxzHtU+hhNY
@@ -125,6 +153,20 @@ eu-gb.git.cloud.ibm.com:
   RSA:
     SHA256:5hSoluX8hoPrChwtWZH0rEzz3Cn5bQP18cZ7xj17Wbg
     MD5:e4:3b:99:ae:4b:ff:f5:f7:96:cf:cf:9a:38:3f:c7:65
+```
+{: screen}
+
+```
+jp-osa.git.cloud.ibm.com:
+  ECDSA:
+    SHA256:k+FNBh6Yvth9bWyvKnfreYhS+3s/+2MX7q2ci/tFAY0
+    MD5:a8:71:f1:dc:7a:28:9c:b6:fc:c6:54:1f:1c:c5:9c:08
+  ED25519:
+    SHA256:I62KQpR+VBmaJnInUj5AkStPA/Hpu555/tHBQjRjU7Q
+    MD5:dc:29:99:b3:4c:2a:e3:e7:b3:9b:b2:00:74:d2:b3:89
+  RSA:
+    SHA256:FPyK4sO5dzIVI/aL9Ril8GIK+uv2jiNVnTqYKDgkF24
+    MD5:18:4f:38:05:c8:68:61:e5:08:dc:a3:61:2d:13:45:c1
 ```
 {: screen}
 
@@ -209,6 +251,6 @@ Files are strictly limited to 100 MB. The suggested repo size limit is 1 GB. If 
 
 Check out one of these tutorials on the [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external}:
 
-  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}. Learn how to create an open toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
+  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}. Learn how to create an open toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
 
   * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}. Learn how to create a toolchain from a template with three microservices and use the toolchain to continuously deliver an online store.
