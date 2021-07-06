@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-01"
+lastupdated: "2021-07-06"
 
 keywords: DevSecOps, cli, IBM Cloud
 
@@ -57,30 +57,6 @@ Command line options can take various types of input values, such as numbers, st
 ## CLI commands
 {: #devsecops-cli-commands}
 
-### cocoa check pull-request-approval
-{: #pull-request-approval}
-
-Checks the approval state of a Pull Request on a given commit hash. If the Pull Request was not approved, it creates a new incident issue in the specified repository. The command can identify emergency pull requests marked with a label. In this case, it will have an exit code of `0`.
-
-Required environment variables:
-
-```
-GHE_TOKEN=            # Github Enterprise API Token
-GHE_ORG=              # The owner of the repository
-GHE_REPO=             # The repository name
-INCIDENT_ISSUE_REPO=  # The incident issue repo name
-EMERGENCY_LABEL=      # Emergency Label name
-GIT_COMMIT=           # Commit hash of the Pull Request
-```
-{: screen}
-
-Running the command:
-
-```sh
-$ cocoa check pull-request-approval
-```
-{: codeblock}
-
 ### cocoa check pull-request-status
 {: #pull-request-status}
 
@@ -95,7 +71,9 @@ Required environment variables:
 REQUIRED_CHECKS=        # Minimum required checks to be compliant set by client
 GIT_BRANCH=             # Branch name for branch protection check
 GIT_COMMIT=             # Commit hash of the Pull Request
-GHE_TOKEN=              # Github Enterprise API Token
+GHE_TOKEN=              # Github token (Required if using 'git' as git-provider)
+GITLAB_TOKEN=           # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as git-provider)
+GITLAB_URL=             # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as git-provider)
 GHE_ORG=                # The owner of the repository
 GHE_REPO=               # The repository name
 ```
@@ -140,95 +118,20 @@ GHE_REPO=               # The repository name
 Running the command:
 
 ```sh
-$ cocoa check pull-request-status
-```
-{: codeblock}
-
-### cocoa changelog
-{: #changelog}
-
-Prints the changelog between two revisions in the given repository to stdout.
-
-Options:
-
-```
---org   # Defaults to GHE_ORG env variable, github organization
---repo  # Defaults to GHE_REPO env variable, name of the github repository
-```
-{: screen}
-
-Required environment variables:
-
-```sh
-GHE_TOKEN=  # Github Enterprise API Token (Required)
-GHE_ORG=    # The owner of the repository (optional, when --org is not provided)
-GHE_REPO=   # The repository name (optional, when --repo is not provided)
-```
-{: screen}
-
-This command has three usage methods:
-
-* Check commits in range when both `--from` and `--to` options are provided.
-
-Options:
-
-```
---from  # git commit hash to calculate the changes from
---to    # git commit hash to calculate the changes to
-```
-{: screen}
-
-Running the command:
-
-```sh
-$ cocoa changelog \
-  --org=<github-organization> \
-  --repo=<github-repo-name> \
-  --from=<commit-hash-to-calculcate-changes-from> \
-  --to=<commit-hash-to-calculate-changes-to>
-```
-{: codeblock}
-
-* Contain all commits that belong to a specific pull request, when the `--pr` option is provided.
-
-Options:
-
-```
---pr # pull request number from which the changelog is calculated
-```
-{: screen}
-
-Running the command:
-
-```sh
-$ cocoa changelog \
-  --org=<github-organization> \
-  --repo=<github-repo-name> \
-  --pr=<pull-request-number>
-```
-{: codeblock}
-
-* If none of the above is provided the changelog contains the changes of the latest merged PR.
-
-Running the command:
-
-```sh
-$ cocoa changelog \
-  --org=<github-organization> \
-  --repo=<github-repo-name>
+$ cocoa check pull-request-status --git-provider=gitlab
 ```
 {: codeblock}
 
 ### cocoa change-request get
 {: #change-request-get}
 
-Queries a Change Request from the ServiceNow API and saves it to a file or prints it to the console.
+Queries a change request from the {{site.data.keyword.gitrepos}} or ServiceNow API and saves it to a file or prints it to the console.
 
 Required environment variables:
 
 ```
-SERVICENOW_TOKEN= # ServiceNow API Token
-SERVICENOW_URL=   # ServiceNow API URL, default is https://watsontest.service-now.com/api/ibmwc/change
+SERVICENOW_TOKEN=       # ServiceNow API Token 
+SERVICENOW_URL=         # ServiceNow API URL
 ```
 {: screen}
 
@@ -236,7 +139,7 @@ Options:
 
 ```
 --change-request-id='CHGXXXXXX' # (Required) The Change Request ID to query from ServiceNow.
---output='filename.json'         # (Optional) If provided, the Change Request data will be written to this file.
+--output='filename.json'        # (Optional) If provided, the Change Request data will be written to this file.
 ```
 {: screen}
 
@@ -247,7 +150,7 @@ Running the command:
 $ cocoa change-request get --change-request-id='CHG123456'
 
 # Read Change Request with number 'CHG123456' and output the JSON Data to the file named 'cr.json'.
-$ cocoa change-request get --change-request-id='CHG123456' --output='cr.json'
+$ cocoa change-request get --change-request-id='CHG123456' --output='cr.json' 
 ```
 {: codeblock}
 
@@ -279,7 +182,7 @@ Options:
 ```
 {: screen}
 
-* Provide a file name to parse the CR data from. JSON format is expected.
+* Provide a file name to parse the change request data from. JSON format is expected.
 
 Options:
 
@@ -312,15 +215,19 @@ Example file:
 Required environment variables:
 
 ```
-SERVICENOW_TOKEN=    # ServiceNow API Token
-SERVICENOW_URL=      # ServiceNow API URL, default is https://watsontest.service-now.com/api/ibmwc/change
+GITLAB_TOKEN=           # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as provider)
+GITLAB_URL=             # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as provider)
+GITLAB_ORG=             # The owner of the repository (Required if using 'gitlab' as provider)
+GITLAB_REPO=            # The repository name (Required if using 'gitlab' as provider)
+SERVICENOW_TOKEN=       # ServiceNow API Token (Required if using 'servicenow' as provider)
+SERVICENOW_URL=         # ServiceNow API URL (Required if using 'servicenow' as provider)
 ```
 {: screen}
 
 Running the command:
 
 ```sh
-$ cocoa change-request create --file=test.json
+$ cocoa change-request create --file=test.json --provider='gitlab'
 ```
 {: codeblock}
 
@@ -341,20 +248,25 @@ $ cocoa change-request create \
   --planned-end='2020-05-13 13:10:12' \
   --deployment-ready=<yes/no> \
   --type=<change-type> \
+  --provider='gitlab'
 ```
 {: codeblock}
 
 ### cocoa change-request change-state-to-implement
 {: #change-request-change-state-to-implement}
 
-Changes the state of a Change Request to `implement` through the ServiceNow API.
+Changes the state of a change request to `implement` by way of the {{site.data.keyword.gitrepos}} or ServiceNow API.
 
 Required environment variables:
 
 ```
-SERVICENOW_TOKEN=   # ServiceNow API Token
-SERVICENOW_URL=     # ServiceNow API URL, default is https://watsontest.service-now.com/api/ibmwc/change
-CHANGE_REQUEST_ID=  # ID of the Change Request to change state to implement
+GITLAB_TOKEN=           # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as provider)
+GITLAB_URL=             # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as provider)
+GITLAB_ORG=             # The owner of the repository (Required if using 'gitlab' as provider)
+GITLAB_REPO=            # The repository name (Required if using 'gitlab' as provider)
+SERVICENOW_TOKEN=       # ServiceNow API Token (Required if using 'servicenow' as provider)
+SERVICENOW_URL=         # ServiceNow API URL (Required if using 'servicenow' as provider)
+CHANGE_REQUEST_ID=      # ID of the Change Request to change state to implement
 ```
 {: screen}
 
@@ -362,7 +274,7 @@ CHANGE_REQUEST_ID=  # ID of the Change Request to change state to implement
 Running the command:
 
 ```sh
-$ cocoa change-request change-state-to-implement
+$ cocoa change-request change-state-to-implement --provider=gitlab
 ```
 {: codeblock}
 
@@ -376,22 +288,27 @@ Options:
 ```
 --close-category  # Choices: "successful" (default), "successful_issues", "unsuccessful", "cancel"
 --close-notes     # String, defaults to "Deployment done."
+--provider        #Change Management backend service provider [choices: "servicenow","gitlab"] [default: "servicenow"]
 ```
 {: screen}
 
 Required environment variables:
 
 ```
-SERVICENOW_TOKEN=   # ServiceNow API Token
-SERVICENOW_URL=     # ServiceNow API URL, default is https://watsontest.service-now.com/api/ibmwc/change
-CHANGE_REQUEST_ID=  # ID of the Change Request to be closed
+GITLAB_TOKEN=           # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as provider)
+GITLAB_URL=             # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as provider)
+GITLAB_ORG=             # The owner of the repository (Required if using 'gitlab' as provider)
+GITLAB_REPO=            # The repository name (Required if using 'gitlab' as provider)
+SERVICENOW_TOKEN=       # ServiceNow API Token (Required if using 'servicenow' as provider)
+SERVICENOW_URL=         # ServiceNow API URL (Required if using 'servicenow' as provider)
+CHANGE_REQUEST_ID=      # ID of the Change Request to be closed
 ```
 {: screen}
 
 Running the command:
 
 ```sh
-$ cocoa change-request close
+$ cocoa change-request close --provider=gitlab
 ```
 {: codeblock}
 
@@ -403,16 +320,20 @@ Queries the approval status of a given change request. If the Change Request is 
 Required environment variables:
 
 ```
-SERVICENOW_TOKEN=   # ServiceNow API Token
-SERVICENOW_URL=     # ServiceNow API URL, default is https://watsontest.service-now.com/api/ibmwc/change
-CHANGE_REQUEST_ID=  # ID of the Change Request to be checked
+GITLAB_TOKEN=           # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as provider)
+GITLAB_URL=             # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as provider)
+GITLAB_ORG=             # The owner of the repository (Required if using 'gitlab' as provider)
+GITLAB_REPO=            # The repository name (Required if using 'gitlab' as provider)
+SERVICENOW_TOKEN=       # ServiceNow API Token (Required if using 'servicenow' as provider)
+SERVICENOW_URL=         # ServiceNow API URL (Required if using 'servicenow' as provider)
+CHANGE_REQUEST_ID=      # ID of the Change Request to be checked
 ```
 {: screen}
 
 Running the command:
 
 ```sh
-$ cocoa change-request check-approval
+$ cocoa change-request check-approval --provider=gitlab
 ```
 {: codeblock}
 
@@ -424,9 +345,11 @@ Creates the change request data and prints it to the console or a given file.
 Required environment variables:
 
 ```
-GHE_TOKEN=              # Github Enterprise API Token (only required when parsing from pr)
+GHE_TOKEN=              # Github Enterprise API Token (only required when 'git' as git-provider and parsing from pr)
 GHE_ORG=                # The owner of the repository (optional, when --org is not provided)
 GHE_REPO=               # The repository name (optional, when --repo is not provided)
+GITLAB_TOKEN=           # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as git-provider)
+GITLAB_URL=             # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as git-provider)
 EMERGENCY_LABEL=        # Emergency Label (optional, when --emergency-label is not provided)
 ```
 {: screen}
@@ -467,6 +390,7 @@ Options:
 --type             # change request type, option: standard, emergency
 --emergency-label  # emergency label to look for in the pull request
 --file             # file name to print the cr data to (optional, prints to stdout by default)
+--git-provider     # Git provider [choices: "github", "gitlab"] [default: "github"] 
 ```
 {: screen}
 
@@ -476,6 +400,7 @@ Running the command:
 $ cocoa cr prepare \
   --org=<github-organization> \
   --repo=<github-repo-name> \
+  --git-provider=gitlab \
   --pr=<pr number>
 ```
 {: codeblock}
@@ -488,8 +413,12 @@ Requests approval for records in the new state with approval not requested. When
 Required environment variables:
 
 ```
-SERVICENOW_TOKEN=    # ServiceNow API Token
-SERVICENOW_URL=      # ServiceNow API URL, default is https://watsontest.service-now.com/api/ibmwc/change
+GITLAB_TOKEN=           # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as provider)
+GITLAB_URL=             # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as provider)
+GITLAB_ORG=             # The owner of the repository (Required if using 'gitlab' as provider)
+GITLAB_REPO=            # The repository name (Required if using 'gitlab' as provider)
+SERVICENOW_TOKEN=       # ServiceNow API Token (Required if using 'servicenow' as provider)
+SERVICENOW_URL=         # ServiceNow API URL (Required if using 'servicenow' as provider)
 ```
 {: screen}
 
@@ -505,7 +434,7 @@ Options:
 Running the command:
 
 ```sh
-$ cocoa change-request request-approval --crid="<insert-change-request-id-here>"
+$ cocoa change-request request-approval --crid="<insert-change-request-id-here>" --provider=gitlab
 ```
 {: codeblock}
 
@@ -517,8 +446,12 @@ Adds a Change Task to a specific Change Request.
 Required environment variables:
 
 ```
-SERVICENOW_TOKEN=    # ServiceNow API Token
-SERVICENOW_URL=      # ServiceNow API URL
+GITLAB_TOKEN=           # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as provider)
+GITLAB_URL=             # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as provider)
+GITLAB_ORG=             # The owner of the repository (Required if using 'gitlab' as provider)
+GITLAB_REPO=            # The repository name (Required if using 'gitlab' as provider)
+SERVICENOW_TOKEN=       # ServiceNow API Token (Required if using 'servicenow' as provider)
+SERVICENOW_URL=         # ServiceNow API URL (Required if using 'servicenow' as provider)
 ```
 {: screen}
 
@@ -528,6 +461,7 @@ Options:
 --description  A more detailed description for the Change Task.                         [string]
 --name         Name of the Change Task.                                                 [string] [required]
 --data         Data for the Change Task or a path prefixed with @ to read the data from. [string] [default: "@/dev/stdin"]
+--provider     Change Management backend service provider [choices: "servicenow","gitlab"] [default: "servicenow"]
 ```
 {: screen}
 
@@ -536,13 +470,15 @@ Running the command:
 ```sh
 $ cocoa change-request task add "CHGXXXXXXX" \
         --name='<task-name>' \
-        --data='<data-for-the-task>'
+        --data='<data-for-the-task>' \
+        --provider='gitlab'
 
 $ cat data.txt | cocoa change-request task add "CHGXXXXXXX" --name='<task-name>'
 
 $ cocoa change-request task add "CHGXXXXXXX" \
         --name='<task-name>' \
-        --data='@<path/to/file>'
+        --data='@<path/to/file>' \
+        --provider='gitlab'
 ```
 {: codeblock}
 
@@ -554,15 +490,19 @@ Gets a specific Change Task of a given Change Request.
 Required environment variables:
 
 ```
-SERVICENOW_TOKEN=    # ServiceNow API Token
-SERVICENOW_URL=      # ServiceNow API URL
+GITLAB_TOKEN=           # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as provider)
+GITLAB_URL=             # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as provider)
+GITLAB_ORG=             # The owner of the repository (Required if using 'gitlab' as provider)
+GITLAB_REPO=            # The repository name (Required if using 'gitlab' as provider)
+SERVICENOW_TOKEN=       # ServiceNow API Token (Required if using 'servicenow' as provider)
+SERVICENOW_URL=         # ServiceNow API URL (Required if using 'servicenow' as provider)
 ```
 {: screen}
 
 Running the command:
 
 ```sh
-$ cocoa change-request task get "CHGXXXXXXX" "CTASKXXXXXXX"
+$ cocoa change-request task get "CHGXXXXXXX" "CTASKXXXXXXX" --provider=gitlab
 ```
 {: codeblock}
 
@@ -574,8 +514,8 @@ Lists Change Tasks for a given Change Request.
 Required environment variables:
 
 ```
-SERVICENOW_TOKEN=    # ServiceNow API Token
-SERVICENOW_URL=      # ServiceNow API URL
+SERVICENOW_TOKEN=       # ServiceNow API Token 
+SERVICENOW_URL=         # ServiceNow API URL 
 ```
 {: screen}
 
@@ -594,8 +534,8 @@ Updates a Change Task in a specific Change Request.
 Required environment variables:
 
 ```
-SERVICENOW_TOKEN=    # ServiceNow API Token
-SERVICENOW_URL=      # ServiceNow API URL
+SERVICENOW_TOKEN=       # ServiceNow API Token 
+SERVICENOW_URL=         # ServiceNow API URL
 ```
 {: screen}
 
@@ -700,8 +640,10 @@ Required Options:
 
 Required environment variables:
 
-```
-GHE_TOKEN=          # Github token (Required if using 'git' backend)
+``` 
+GHE_TOKEN=          # Github token (Required if using 'git' as git-provider)
+GITLAB_TOKEN=       # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as git-provider)
+GITLAB_URL=         # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as git-provider)
 EVIDENCE_REPO_ORG=  # Evidence repo org (Required if using 'git' backend)
 EVIDENCE_REPO_NAME= # Evidence repo name (Required if using 'git' backend)
 COS_API_KEY=        # Cloud Object Storage API Key (Required if using 'cos' backend)
@@ -728,14 +670,15 @@ $ cocoa evidence upload \
   --pipeline-id=<pipeline-id> \
   --pipeline-run-id=<pipeline-run-id> \
   --pipeline-run-url=<pipeline-run-url> \
-  --toolchain-crn=<toolchain-crn>                   # Name of the toolchain cloud resource
+  --toolchain-crn=<toolchain-crn>  \                # Name of the toolchain cloud resource
+  --git-provider='gitlab'                           # Required for Git Repos and Issue Tracking [Default is git] 
 ```
 {: codeblock}
 
 CLI options can be also set from environment variables with the exception of `backend`, `issue`, `log` and `artifact`. Multiple issues/artifacts should be provided with multiple issue/artifact flags. For example:
 
 ```sh
-$ cocoa evidence upload --backend=git --artifact <url> <hash>  --artifact <url> <hash> --issue <issue-url> --issue <issue-url>
+$ cocoa evidence upload --backend=git --artifact <url> <hash>  --artifact <url> <hash> --issue <issue-url> --issue <issue-url> --git-provider='gitlab' 
 ```
 {: codeblock}
 
@@ -750,7 +693,9 @@ Queries evidences from the Evidence Locker and generates an Evidence Summary fro
 Required environment variables for git:
 
 ```
-GHE_TOKEN=          # (Required if using 'git' backend) Github token
+GHE_TOKEN=          # Github token (Required if using 'git' as git-provider)
+GITLAB_TOKEN=       # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as git-provider)
+GITLAB_URL=         # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as git-provider)
 EVIDENCE_REPO_ORG=  # (Required if using 'git' backend) Use this environment varibale to provide the owner organisation of the evidence repository
 EVIDENCE_REPO_NAME= # (Required if using 'git' backend) Use this environment varibale to provide the name of the evidence repository
 PIPELINE_RUN_ID=    # Can be used instead of '--pipeline-run-id' option
@@ -768,6 +713,7 @@ Options for git:
 --toolchain-crn     # (Required)
 --prefix-list       # (Required) a list of paths separated by comma where evidences can be found in the repository
 --output            # (Optional) file name to write the evidence summary into
+--git-provider      # Git provider [choices: "github", "gitlab"] [default: "github"]
 ```
 {: screen}
 
@@ -802,6 +748,7 @@ $ cocoa evidence summarize \
   --pipeline-run-id='id-123-123' \
   --toolchain-crn='crn-123-123' \
   --prefix-list='raw/ci/pipeline-run-id-1,raw/ci/pipeline-run-id-2' \
+  --git-provider='gitlab' \
   --output='summary.json'
 
 # Print the evidence summary to the console
@@ -809,6 +756,7 @@ $ cocoa evidence summarize \
   --backend='git' \
   --pipeline-run-id='id-123-123' \
   --toolchain-crn='crn-123-123' \
+  --git-provider='gitlab' \
   --prefix-list='raw/ci/pipeline-run-id-1,raw/ci/pipeline-run-id-2'
 ```
 {: codeblock}
@@ -825,13 +773,16 @@ Options:
 --pipeline-run-id   # The ID of the PipelineRun running the CLI command
 --namespace         # Specifies the pipeline the evidence is collected from
 --upload-path       # If present, it will override the artifact name with the specified value
+--git-provider      # Git provider [choices: "github", "gitlab"] [default: "github"]
 ```
 {: screen}
 
 Required environment variables:
 
 ```
-GHE_TOKEN=          # Github token (Required if using 'git' backend)
+GHE_TOKEN=          # Github token (Required if using 'git' as git-provider)
+GITLAB_TOKEN=       # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as git-provider)
+GITLAB_URL=         # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as git-provider)
 EVIDENCE_REPO_ORG=  # The Git repo org (Required if using 'git' backend)
 EVIDENCE_REPO_NAME= # The Git repo name (Required if using 'git' backend)
 COS_API_KEY=        # Cloud Object Storage API Key (Required if using 'cos' backend)
@@ -849,8 +800,9 @@ $ cocoa artifact upload
 
 $ cocoa artifact upload \
   --backend=[choices: "git", "cos"] \ # e.g. --backend=cos,git
-  --pipeline-run-id=<pipeline-run-id> # can be substituted by PIPELINE_RUN_ID
+  --pipeline-run-id=<pipeline-run-id> \ # can be substituted by PIPELINE_RUN_ID
   --namespace=[choices: "ci", "cd"] \ # Pipeline type the evidence was collected from, can be substituted by NAMESPACE
+  --git-provider='gitlab' \
   <file-path>
 ```
 {: codeblock}
@@ -865,7 +817,9 @@ Sets a given commit's status. The current implemetation is tested on GitHub. See
 Required environment variables:
 
 ```
-GHE_TOKEN=    # Github token
+GHE_TOKEN=    # Github token (Required if using 'git' as git-provider)
+GITLAB_TOKEN= # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as git-provider)
+GITLAB_URL=   # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as git-provider)
 GHE_ORG=      # Github organization/username
 GHE_REPO=     # Github repository
 GHE_COMMIT=   # Github commit hash
@@ -879,7 +833,8 @@ $ cocoa set-status \
  --state="pending" \
  --targetURL="https://cloud.ibm.com/devops/pipelines/tekton/some-toolchain/runs/some-pipelinerun/lint/lint?env_id=ibm:yp:us-south" \
  --context="tekton/lint" \
- --description="Tekton linter is running."
+ --description="Tekton linter is running." \
+ --git-provider='gitlab' 
 ```
 {: codeblock}
 
@@ -892,9 +847,11 @@ Currently the `type` `sha256` `provenance` and `signature` fields are optional p
 Required environment variables:
 
 ```
-GHE_TOKEN=   # Github Token (required).
-GHE_ORG=     # Github Organization (required if --org option is not specified).
-GHE_REPO=    # Github Repository (required if --repo option is not specified).
+GHE_TOKEN=    # Github token (Required if using 'git' as git-provider)
+GITLAB_TOKEN= # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as git-provider)
+GITLAB_URL=   # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as git-provider)
+GHE_ORG=      # Github Organization (required if --org option is not specified).
+GHE_REPO=     # Github Repository (required if --repo option is not specified).
 ```
 {: screen}
 
@@ -913,7 +870,8 @@ $ cocoa inventory add \
   --type=type \
   --sha256=786800e8e48938664fe2397ca14ab8dabd48f34656ef5cfda4143b4519cb714f \
   --provenance=us.icr.io/namespace/hello-compliance-app@sha256:786800e8e48938664fe2397ca14ab8dabd48f34656ef5cfda4143b4519cb714f \
-  --signature=123123valid
+  --signature=123123valid \
+  --git-provider='gitlab'
 ```
 {: codeblock}
 
@@ -925,7 +883,9 @@ Gets an entry from the inventory repository. The target can be a specific versio
 Required environment variables:
 
 ```
-GHE_TOKEN= # Github token
+GHE_TOKEN=    # Github token (Required if using 'git' as git-provider)
+GITLAB_TOKEN= # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as git-provider)
+GITLAB_URL=   # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as git-provider)
 ```
 {: screen}
 
@@ -938,6 +898,7 @@ $ cocoa inventory get \
   --repo='compliance-inventory-repo' \
   --entry='hello-compliance-app' \
   --environment='master' \
+  --git-provider='gitlab' \
   --property='name'
 
 # Uses the version as target, and pretty-prints the whole content of the inventory entry to the console.
@@ -945,6 +906,7 @@ $ cocoa inventory get \
   --org='Github-ID' \
   --repo='compliance-inventory-repo' \
   --entry='hello-compliance-app' \
+  --git-provider='gitlab' \
   --version='v1'
 ```
 {: codeblock}
@@ -957,7 +919,9 @@ Gets the latest commit hash by a given label or environment from the inventory r
 Required environment variables:
 
 ```
-GHE_TOKEN= # Github token
+GHE_TOKEN=    # Github token (Required if using 'git' as git-provider)
+GITLAB_TOKEN= # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as git-provider)
+GITLAB_URL=   # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as git-provider)
 ```
 {: screen}
 
@@ -968,12 +932,14 @@ Running the command:
 $ cocoa inventory get-sha \
   --org='Github-ID' \
   --repo='compliance-inventory-repo' \
+  --git-provider='gitlab' \
   --environment='staging'
 
 # Get the commit hash of the "pipeline-run-id" label
 $ cocoa inventory get-sha \
   --org='Github-ID' \
   --repo='compliance-inventory-repo' \
+  --git-provider='gitlab' \
   --label='pipeline-run-id'
 ```
 {: codeblock}
@@ -990,15 +956,18 @@ Options:
 --repo         # The name of the inventory repository.
 --environment  # The inventory branch
 --to-label     # Another label in the inventory, that will be looked up/removed
+--git-provider # Git provider [choices: "github", "gitlab"] [default: "github"]
 ```
 {: screen}
 
 Required environment variables:
 
 ```
-GHE_TOKEN=   # Github token
-GHE_ORG=     # Github Organization (required if --org option is not specified).
-GHE_REPO=    # Github Repository (required if --repo option is not specified).
+GHE_TOKEN=    # Github token (Required if using 'git' as git-provider)
+GITLAB_TOKEN= # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as git-provider)
+GITLAB_URL=   # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as git-provider)
+GHE_ORG=      # Github Organization (required if --org option is not specified).
+GHE_REPO=     # Github Repository (required if --repo option is not specified).
 ```
 {: screen}
 
@@ -1010,6 +979,7 @@ $ cocoa inventory label add \
   --org='Github-ID' \
   --repo='compliance-inventory-repo' \
   --environment='staging' \
+  --git-provider='gitlab' \
   "new-label-to-add"
 ```
 {: codeblock}
@@ -1020,6 +990,7 @@ $ cocoa inventory label add \
   --org='Github-ID' \
   --repo='compliance-inventory-repo' \
   --to-label="some-label" \
+  --git-provider='gitlab' \
   "new-label-to-add"
 ```
 {: codeblock}
@@ -1030,6 +1001,7 @@ $ cocoa inventory label move \
   --org='Github-ID' \
   --repo='compliance-inventory-repo' \
   --to-label="some-label" \
+  --git-provider='gitlab' \
   "label-to-move"
 ```
 {: codeblock}
@@ -1042,7 +1014,9 @@ Promotes entries from the inventory from one environment to another. The source 
 Required environment variables:
 
 ```
-GHE_TOKEN=        # Github token
+GHE_TOKEN=        # Github token (Required if using 'git' as git-provider)
+GITLAB_TOKEN=     # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as git-provider)
+GITLAB_URL=       # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as git-provider)
 GHE_ORG=          # Github Organization (required if --org option is not specified).
 GHE_REPO=         # Github Repository (required if --repo option is not specified).
 PIPELINE_RUN_ID=  # Can be used instead of --pipeline-run-id (either the option or the variable is required).
@@ -1062,7 +1036,8 @@ $ cocoa inventory promote \
   --description='desc' \
   --purpose='purpose' \
   --impact='impact' \
-  --backout-plan='rollback'
+  --backout-plan='rollback' \
+  --git-provider='gitlab'
 ```
 {: codeblock}
 
@@ -1081,13 +1056,16 @@ Options:
 --repo              # The incident issue repo name
 --app-repo-url      # The app repo URL
 --label             # Label(s) to add to the incident issue (optional) e.g: --label=foo --label=bar
+--git-provider      # Git provider [choices: "github", "gitlab"] [default: "github"]
 ```
 {: screen}
 
 Environment variables:
 
 ```
-GHE_TOKEN=                  # (Required) Github Enterprise API Token
+GHE_TOKEN=                  # Github token (Required if using 'git' as git-provider)
+GITLAB_TOKEN=               # Git Repos and Issue Tracking (GRIT) API Token (Required if using 'gitlab' as git-provider)
+GITLAB_URL=                 # Git Repos and Issue Tracking URL Example: https://<region>.git.cloud.ibm.com/api/v4 (Required if using 'gitlab' as git-provider)
 GHE_ORG=                    # Can be used instead of --org (either the option or the variable is required)
 GHE_REPO=                   # Can be used instead of --repo (either the option or the variable is required)
 PIPELINE_RUN_URL=           # Can be used instead of --pipeline-run-url (either the option or the variable is required)
@@ -1098,7 +1076,7 @@ APP_REPO_URL=               # Can be used instead of --app-repo-url (either the 
 Running the command:
 
 ```sh
-$ cocoa incident add --task=<failing-task-name> --commit-hash=<abc123>
+$ cocoa incident add --task=<failing-task-name> --commit-hash=<abc123> --git-provider=gitlab
 ```
 {: codeblock}
 
@@ -1138,4 +1116,107 @@ $ cocoa tekton get-pipeline-logs \
 ```
 {: codeblock}
 
+### cocoa check pull-request-approval
+{: #pull-request-approval}
 
+Cocoa check pull-request-approval is not supported in {{site.data.keyword.gitrepos}}.
+{: important}
+
+Checks the approval state of a pull request on a given commit hash. If the pull request is not approved, it creates an incident issue in the specified repo. The command can identify emergency pull requests that are marked with a label. In this scenario, the exit code is `0`.
+
+Required environment variables:
+
+```
+GHE_TOKEN=            # Github Enterprise API Token
+GHE_ORG=              # The owner of the repository
+GHE_REPO=             # The repository name
+INCIDENT_ISSUE_REPO=  # The incident issue repo name
+EMERGENCY_LABEL=      # Emergency Label name
+GIT_COMMIT=           # Commit hash of the Pull Request
+```
+{: screen}
+
+Running the command:
+
+```sh
+$ cocoa check pull-request-approval
+```
+{: codeblock}
+
+### cocoa changelog
+{: #changelog}
+
+Cocoa changelog is not supported in {{site.data.keyword.gitrepos}}.
+{: important}
+
+Prints the changelog between two revisions in the given repo to stdout.
+
+Options:
+
+```
+--org   # Defaults to GHE_ORG env variable, github organization
+--repo  # Defaults to GHE_REPO env variable, name of the github repository
+```
+{: screen}
+
+Required environment variables:
+
+```sh
+GHE_TOKEN=  # Github Enterprise API Token (Required)
+GHE_ORG=    # The owner of the repository (optional, when --org is not provided)
+GHE_REPO=   # The repository name (optional, when --repo is not provided)
+```
+{: screen}
+
+This command contains three usage methods:
+
+* Check commits in range when both `--from` and `--to` options are provided.
+
+Options:
+
+```
+--from  # git commit hash to calculate the changes from
+--to    # git commit hash to calculate the changes to
+```
+{: screen}
+
+Running the command:
+
+```sh
+$ cocoa changelog \
+  --org=<github-organization> \
+  --repo=<github-repo-name> \
+  --from=<commit-hash-to-calculcate-changes-from> \
+  --to=<commit-hash-to-calculate-changes-to>
+```
+{: codeblock}
+
+* Contain all commits that belong to a specific pull request when the `--pr` option is provided.
+
+Options:
+
+```
+--pr # pull request number from which the changelog is calculated
+```
+{: screen}
+
+Running the command:
+
+```sh
+$ cocoa changelog \
+  --org=<github-organization> \
+  --repo=<github-repo-name> \
+  --pr=<pull-request-number>
+```
+{: codeblock}
+
+* If the preceding information is not provided, the changelog contains the changes of the currently merged pull request.
+
+Running the command:
+
+```sh
+$ cocoa changelog \
+  --org=<github-organization> \
+  --repo=<github-repo-name>
+```
+{: codeblock}
