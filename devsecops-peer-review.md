@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-29"
+lastupdated: "2021-07-07"
 
 keywords: DevSecOps
 
@@ -44,13 +44,12 @@ The pipeline collects peer review compliance data during builds and deployments 
 
 This data collection contains a list of all of the pull request that  were merged in app repos since the last build.
 
-Pull request data is collected directly from the app repos, looking for each pull request that is related to commits between the repo commit that triggered the previous build and the latest available commit. These commits are stored in the inventory entries.
+Pull request data is collected directly from the app repos. Data for each pull request that is related to commits between the repo commit that triggered the previous build and the currently available commit is collected. These commits are stored in the inventory entries.
 
-Commits that do not contain a pull request create a compliance incident issue in the following releases of the pipeline.
-Direct commits to the main branches are not permitted.
+Commits that do not contain a pull request create a compliance incident issue in the following releases of the pipeline. You cannot commit directly to the main branches.
 {: important}
 
-Collected data is saved as an evidence artifact, uploaded to the evidence locker, and then referred to in the evidence itself. The final evidence result is determined by the approved pull requests. Unapproved, but merged pull requests fail this type of evidence.
+Collected data is saved as an evidence artifact, which is uploaded to the evidence locker, and then referred to in the evidence itself. The final evidence result is determined by the approved pull requests. Unapproved, but merged pull requests fail this type of evidence.
 
 ## Data that is collected in continuous delivery deployment runs 
 {: #cd-devsecops-cd-data}
