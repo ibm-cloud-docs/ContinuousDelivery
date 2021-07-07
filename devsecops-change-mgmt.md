@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-29"
+lastupdated: "2021-07-07"
 
 keywords: DevSecOps
 
@@ -47,6 +47,6 @@ The following diagram shows the data flow and connection between evidence, inven
  
  4. Change management automation uses data from the inventory, the evidence locker, and the promotion pull request to create the change request.
 
-Deployments also leave evidence behind as well. For example: about acceptance tests. Successfully deployed and tested artifacts are further promoted to production environments, such as prod.
+Deployments also leave evidence behind such as acceptance tests. Successfully deployed and tested artifacts are further promoted to production environments, such as `prod`.
 
-Every deployment to every environment and region needs to file a separate Change Request to the Change Management repo. Change management automation helps you to create these Change Requests based on all the evidence and information that is collected from the pipelines.
+Every deployment to every environment and region must file a separate change request to the Change Management repo. Change management automation helps you to create these change requests based on all of the evidence and information that is collected from the pipelines.
