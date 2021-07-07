@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-29"
+lastupdated: "2021-07-07"
 
 keywords: DevSecOps
 
@@ -35,21 +35,15 @@ The compliance automation pipeline stores the following information in your [evi
 * **Task logs**: After the pipeline runs, the logs for that run are sent to the evidence locker.
 * **Evidence**: Information about tasks and their result output, which can be either a failure or success.
 
-
-
 For more information about the format of the evidence that is sent, see [Evidence summary](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-evidence).
-
-
 
 ## Configuring your bucket
 {: #cd-devsecops-cos-bucket-config}
 
-To configure your {{site.data.keyword.cos_short}} bucket to act as a compliance evidence locker as part of a CI/CD pipeline, you can use the following information as a guide. The pipeline or toolchain template scripts do not set up the locker in {{site.data.keyword.cos_short}}.
+To configure your {{site.data.keyword.cos_short}} bucket to act as a compliance evidence locker as part of a continuous integration or continuous delivery pipeline, you can use the following information as a guide. The pipeline or toolchain template scripts do not set up the locker in {{site.data.keyword.cos_short}}.
 
-It's recommended that you set up a dedicated {{site.data.keyword.cos_short}} instance for compliance-related storage as evidence lockers must be created in-boundary to your applications. [Learn more](#cd-devsecops-cos-bucket-resiliency).
-{: note}
-
-
+It is recommended that you set up a dedicated {{site.data.keyword.cos_short}} instance for compliance-related storage as evidence lockers must be created in-boundary to your applications. [Learn more](#cd-devsecops-cos-bucket-resiliency).
+{: tip}
 
 ## Naming your bucket
 {: #cd-devsecops-cos-bucket-content-format}
@@ -61,7 +55,8 @@ It's recommended that you set up a dedicated {{site.data.keyword.cos_short}} ins
 ```
 {: codeblock}
 
-**Examples:**
+###  Examples:
+{: #cd-devsecops-cos-bucket-content-example}
 
 ```
 ci/48decaa9-9042-498f-b58d-3577e0ac0158/evidences/build-vulnerability-advisor.json_362c06afa88b3f304878f0d0979e834f
@@ -71,61 +66,58 @@ ci/48decaa9-9042-498f-b58d-3577e0ac0158/artifacts/app-image-va-report.json_b3f30
 {: codeblock}
 
 The name component `{NAMESPACE} / {PIPELINE_RUN_ID} / {TYPE}` is useful as a prefix when you're looking for collected data from a certain pipeline run.
-
-
+{: tip}
 
 ### Retention policy
 {: #cd-devsecops-cos-bucket-retention}
 
-{{site.data.keyword.cos_short}} buckets can be set to enforce a retention policy or period for uploaded objects, otherwise known as [Immutable Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-immutable). Immutable Object Storage preserves electronic records and maintains data integrity. Retention policies ensure that data is stored in a Write-One-Read-Many (WORM), non-erasable, and non-rewritable manner. Simply put, this means that objects in protected buckets cannot be altered or deleted within the retention period and protected buckets with objects cannot be deleted until the retention period is over. The policy is enforced until the end of a retention period and the removal of any legal holds. 
+You can set {{site.data.keyword.cos_short}} buckets to enforce a retention policy or period for uploaded objects, otherwise known as [Immutable Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-immutable). Immutable Object Storage preserves electronic records and maintains data integrity. Retention policies ensure that data is stored in a Write-One-Read-Many (WORM), non-erasable, and non-rewritable manner. You cannot change or delete objects in protected buckets within the retention period, or delete protected buckets with objects themselves until the retention period is over. The policy is enforced until the end of a retention period and the removal of any legal holds. 
 
 It is recommended that teams set a retention policy for the buckets that are used as their evidence locker that stores every object for a minimum of 365 days.
-
 
 ## Audit event log
 {: #cd-devsecops-cos-bucket-log}
 
 For buckets that are not configured, access log data is available for Immutable Object Storage through support requests.
 
-With [{{site.data.keyword.at_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-at), you can [audit the requests](/docs/cloud-object-storage?topic=cloud-object-storage-at-events) that are made against a bucket and the objects it contains. You can review all the {{site.data.keyword.cos_short}} events that are related to the evidence locker bucket on the {{site.data.keyword.at_full_notm}} web UI. (It is also possible to have all data that is collected in an instance of {{site.data.keyword.at_full_notm}} be archived and written to a separate bucket.)
+With [{{site.data.keyword.at_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-at), you can [audit the requests](/docs/cloud-object-storage?topic=cloud-object-storage-at-events) that are made against a bucket and the objects it contains. You can review all of the {{site.data.keyword.cos_short}} events that are related to the evidence locker bucket on the {{site.data.keyword.at_full_notm}} web UI. You can also have all of the data that is collected in an instance of {{site.data.keyword.at_full_notm}} archived and written to a separate bucket.
 
 ## Bucket access permissions
 {: #cd-devsecops-cos-bucket-permissions}
 
-Pipelines put objects (evidence, evidence summary, and artifacts) and read objects (for evidence summary) from Buckets. Our tools do not alter or delete objects or create, update, or delete Buckets.
+Pipelines put objects (evidence, evidence summary, and artifacts) and read objects (evidence summary) from Buckets. The tools do not alter or delete objects or create, update, or delete Buckets.
 
-The following access policies should be sufficient for accessing the {{site.data.keyword.cos_short}} buckets:
-* Object Reader (Needed for CD pipeline runs, to create Evidence Summary)
-* Object Writer (Needed for both CI and CD pipelines)
+Use the following access policies to access the {{site.data.keyword.cos_short}} buckets:
+
+* Object Reader, required for continuous delivery pipeline runs, to create Evidence Summary
+* Object Writer, required for both continuous integration and continuous delivery pipelines
 
 ## Storage classes
 {: #cd-devsecops-cos-bucket-classes}
 
-Costs vary for teams with different setups and deployment frequency. It is not recommended to use the free tier as {{site.data.keyword.cos_short}} buckets in the free tier cannot be configured to be immutable. For an example, see the following sample estimation.
+Costs vary for teams with different setups and deployment frequency. It is not recommended that you use the free tier as {{site.data.keyword.cos_short}} buckets because the free tier cannot be configured to be immutable. 
 
+### Sample estimation
+{: #cd-devsecops-cos-bucket-estimate}
 
-**Sample estimation**
+If you are working with a reference continuous integration or continuous delivery pipeline with six evidence in each, a single continuous integration and continuous delivery run pair makes 37 class A requests and six class B requests.
 
-If you are working with a reference CI/CD pipeline with 6 evidence in each, a single CI/CD run pair makes 37 class A requests and 6 class B requests.
+* Continuous integration writes six logs, six artifacts, and six evidence, which equals 18 PUT - Class A.
+* Continuous delivery reads six evidence (six GET - Class B), writes six evidence, six logs, six artifacts, and a summary, which equals 19 PUT - Class A.
 
-* CI writes 6 logs, 6 artifacts, and 6 evidence, which equals 18 PUT - Class A.
-* CD reads 6 evidence (6 GET - Class B), writes 6 evidence, 6 logs, 6 artifacts, and a summary, which equals 19 PUT - Class A.
+With an average of five microservices (five x continuous integration) and four deployment regions (four x continuous delivery), one full deployment equals 166 Class A and 24 Class B requests.
 
-With an average of 5 microservices (5 x CI) and 4 deployment regions - (4 x CD), meaning one full deployment means 166 Class A and 24 Class B requests.
+With one full deployment per week (four per every month), you can calculate 664 Class A and 96 Class B requests per month.
 
-With one full deployment per week (4 in every month), we can calculate 664 Class A and 96 Class B requests per month.
-
-Data amount that is collected varies by use-case, but with average sizes for Evidence (1 kB), test artifacts (100 kB), and logs (15 kB), we calculate 0.01 GByte data that is created and transferred per month.
+The data amount that is collected varies by use-case, but with average sizes for evidence (1 kB), test artifacts (100 kB), and logs (15 kB), you can calculate 0.01 GByte of data that is created and transferred per month.
 
 
 ## Resiliency
 {: #cd-devsecops-cos-bucket-resiliency}
 
-Using "Cross-Region" resiliency is recommended, or at least "Regional", if it needs to be kept in-boundary. For further details on exact regions, check out [Endpoints and storage locations](/docs/cloud-object-storage/basics?topic=cloud-object-storage-endpoints).
+It is recommended that you use `Cross-Region` or `Regional` resiliency, if it needs to be kept in-boundary. For more information about these regions, see [Endpoints and storage locations](/docs/cloud-object-storage/basics?topic=cloud-object-storage-endpoints).
 
 ## Bucket name
 {: #cd-devsecops-cos-bucket-name}
 
-No other conventions than the naming conventions of {{site.data.keyword.cos_short}} buckets:
-
-Bucket names must be globally unique and DNS-compliant; names 3 - 63 characters long must be made of lowercase letters, numbers, and dashes. Bucket names must begin and end with a lowercase letter or number. Bucket names that resemble IP addresses are not allowed. Must be unique across the whole {{site.data.keyword.cos_full_notm}} system, do not use any personal information (any part of a name, address, financial, or security accounts or SSN).
+{{site.data.keyword.cos_short}} bucket names must be globally unique and DNS-compliant. Names must be 3 - 63 characters in length and must contain lowercase letters, numbers, and dashes. Bucket names must begin and end with a lowercase letter or number. Names that resemble IP addresses are not allowed. Bucket names be unique across the entire {{site.data.keyword.cos_full_notm}} system and they cannot contain any personal information, such as any part of a name or address, or financial, security accounts, or SSN.
