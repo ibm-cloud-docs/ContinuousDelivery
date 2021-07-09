@@ -13,6 +13,7 @@ Continuous Delivery
     
     {: .topicgroup}
     DevSecOps
+        [What is DevSecOps?](https://www.ibm.com/cloud/learn/devsecops)
         devsecops_intro.md
         devsecops-arch.md
         devsecops-pipelines.md
