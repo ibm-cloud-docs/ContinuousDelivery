@@ -2,9 +2,9 @@
 
 copyright:
    years: 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-12"
 
-keywords: tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevSecOps, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
+keywords: tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, devsecops tutorial, devsecops, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
 subcollection: ContinuousDelivery
 
@@ -33,7 +33,7 @@ completion-time: 2h
 {: toc-services="apps, openshift, containers, ContinuousDelivery"}
 {: toc-completion-time="2h"}
 
-Learn how to master DevSecOps best practices by using a complete reference implementation that is available as a service and powered by {{site.data.keyword.contdelivery_full}}, which includes Git Repo and Issue Tracking, [Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment), DevOps Insights, Code Risk Analyzer, and WebIDE. The implementation also includes Secrets Manager and Key Protect, Cloud Object Storage, Container Registry, and can be supplemented with more tools, such as external Git providers and artifact stores.
+Use this tutorial to learn how to master DevSecOps best practices by using a complete reference implementation that is available as a service and powered by {{site.data.keyword.contdelivery_full}}, which includes Git Repo and Issue Tracking, [Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment), DevOps Insights, Code Risk Analyzer, and WebIDE. The implementation also includes Secrets Manager and Key Protect, Cloud Object Storage, Container Registry, and can be supplemented with more tools, such as external Git providers and artifact stores.
 {: shortdesc}
 
 ## Overview
