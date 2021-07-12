@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-09"
+lastupdated: "2021-07-12"
 
 keywords: DevSecOps, image signing, GPG key, secure toolchain, compliance, IBM Cloud
 
@@ -38,7 +38,7 @@ Download and install the [GPG command-line tools](https://www.gnupg.org/download
 
 ### OS X
  * Download and install [Mac GPG](https://gpgtools.org/){: external}
- * Verify the minimum version of the installed GPG. From the Terminal command prompt, run the following command:
+ * Verify the version of the installed GPG. From the Terminal command prompt, run the following command:
 
   ```
   $ gpg --version
@@ -46,6 +46,7 @@ Download and install the [GPG command-line tools](https://www.gnupg.org/download
   libgcrypt 1.9.3
   Copyright (C) 2021 Free Software Foundation, Inc.
   ```
+  * For versions of gpg lower than 2.3.1, it may not be possible to use the `--passphrase=''` option. In this case, the  password can be omitted in the following dialog by hitting enter when prompted.
 
 ### Windows  
  * Download and install [GitBash](https://gitforwindows.org/){: external} (required for `base64` encoding)
