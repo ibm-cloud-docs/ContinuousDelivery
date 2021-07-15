@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-08"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Sonarqube
 
@@ -43,6 +43,7 @@ Configure SonarQube to continuously analyze and measure the quality of your sour
  {: tip}
 
 1. Type the password or authentication token that you use to connect to the SonarQube server.
+1. If the server cannot be located on the public internet, select **Advanced**. {{site.data.keyword.cloud_notm}} cannot validate the connection details that you provide and certain functions that require API access to this server are disabled. The delivery pipeline works only by using a private worker that has network access to this server.
 1. Click **Create Integration**.
 1. From your toolchain, click **SonarQube** to view the dashboard for the SonarQube instance that you connected to.
 
@@ -112,4 +113,4 @@ You can modify your `.pipeline-config.yaml` file to add your own custom script t
 ## Learn more about SonarQube
 {: #sonarqube-learn-more}
 
-To learn more about SonarQube, see [Integrate your SonarQube analysis into your toolchain](https://www.ibm.com/blogs/cloud-archive/2017/06/integrate-sonarqube-analysis-into-your-toolchain/){:external}.
+To learn more about SonarQube, see [Integrate your SonarQube analysis into your toolchain](https://www.ibm.com/blogs/cloud-archive/2017/06/integrate-sonarqube-analysis-into-your-toolchain/){:external}. 
