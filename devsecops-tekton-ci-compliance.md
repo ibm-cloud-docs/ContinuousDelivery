@@ -223,8 +223,8 @@ The default behavior of the toolchain is to `Clone existing pipeline` that creat
 The name of the application.
     - Default: `hello-compliance-app`
 
-- **IBM Cloud API Key:**<a id="ibm-cloud-api-key"></a>
-The API key is used to interact with the `ibmcloud` CLI tool in several tasks. Incase you have already created a cluster, an API to access the cluster and stored the key in a secure vault (any of Key Protect, Secrets Manager or HashiCorp Vault), as prerequisite you can use the same in this step.
+- **IBM Cloud API Key:**
+The API key is used to interact with the `ibmcloud` CLI tool in several tasks. In case you have already created a cluster, an API to access the cluster and stored the key in a secure vault (any of Key Protect, Secrets Manager or HashiCorp Vault), as prerequisite you can use the same in this step.
 
     - Option-1: An existing key can be imported from an existing Secret Provider intance created as prerequisites (Key Protect Instance, Secret Manager Instance or HashiCorp Vault) by clicking the key icon (Recommended)
     - Option-2: An existing key can be copy & pasted (Not Recommended)
