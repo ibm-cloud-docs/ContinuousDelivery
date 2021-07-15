@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-07-15"
 
 keywords: tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, devsecops tutorial, devsecops, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -53,8 +53,8 @@ By default, the toolchain uses a sample Node.js "Hello World" app, but you can a
 {: #devsecops-tutorial-overview-pipelines}
 
 * **Pull Request (PR) Pipeline:** This pipeline is triggered when a merge or pull request is created in the Application Source Code Repository. Typically, this request is manually created by the application source code developer to merge changes from their development branch to the master branch or any other branch. The PR Pipeline runs the Unit Test and Static Scans on the Application Source Code.
-* **Continuous Integration (CI) Pipeline:** This pipeline is triggered when a change is merged to the master branch of the Application Source Code repository. The CI Pipeline runs the Unit Test, Code Coverage, Static Scans on the Application Source Code, CIS check, and Bill Of Materials (BOM) check. The CI Pipeline also generates the binary build artifact and a signature and uploads them to the IBM Container Registry as configured in the toolchain. And the CI Pipeline generates the metadata of the build artifacts and stores it in the Inventory repository. 
-* **Promotion (CD) Pipeline:** Manually running the Promotion Pipeline creates a new Merge / Pull request to push the latest code changes from the source (master) branch to the target branch (prod or stage) of your inventory repository. Merging this MR/PR triggers the CD pipeline.
+* **Continuous Integration (CI) Pipeline:** This pipeline is triggered when a change is merged to the master branch of the Application Source Code repository. The CI Pipeline runs the Unit Test, Code Coverage, Static Scans on the Application Source Code, CIS check, and Bill Of Materials (BOM) check. The CI Pipeline also generates the binary build artifact and a signature and uploads them to the IBM Container Registry as configured in the toolchain. And the CI Pipeline generates the metadata of the build artifacts and stores it in the Inventory repository. 
+* **Promotion (CD) Pipeline:** Manually running the Promotion Pipeline creates a new Merge / Pull request to push the latest code changes from the source (master) branch to the target branch (prod or stage) of your inventory repository. Merging this MR/PR triggers the CD pipeline.
 * **Continuous Deployment (CD) Pipeline:** The CD Pipeline is responsible for approval and deployment of the build artifacts to the deployment environment. The pipeline verifies the successful deployment of the application by running the health check. This pipeline must be manually triggered after you merge the Merge / Pull request created by the Promotion Pipeline. 
 
 Let's now get started with the creation and exploration of the CI and CD templates in that sequence.
@@ -183,7 +183,7 @@ The Git Repos and Issue Tracking repository records issues that are found while 
 
 Several tools in this toolchain require secrets to access privileged resources. An {{site.data.keyword.cloud_notm}} API key is an example of such a secret. All secrets should be stored securely in a secrets vault and then referenced as required by the toolchain.
 
-With {{site.data.keyword.cloud_notm}}, you can choose from various secrets management and data protection offerings that help you to protect your sensitive data and centralize your secret. The Secrets step allows you to specify which secret vault integrations are added to your toolchain. Use the provided toggles to add or remove the vault integrations that you require as explained in [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud). This documentation gives you information on prerequisites and how to use a list of prescribed secret names that are otherwise known as hints. By using hints in a template, a toolchain can be automatically populated with preconfigured secrets without any need to manually select them from various vault integrations that are attached to the toolchain.
+With {{site.data.keyword.cloud_notm}}, you can choose from various secrets management and data protection offerings that help you to protect your sensitive data and centralize your secret. The Secrets step allows you to specify which secret vault integrations are added to your toolchain. Use the provided toggles to add or remove the vault integrations that you require as explained in [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud). This documentation gives you information on prerequisites and how to use a list of prescribed secret names that are otherwise known as hints. By using hints in a template, a toolchain can be automatically populated with preconfigured secrets without any need to manually select them from various vault integrations that are attached to the toolchain.
 
 This tutorial uses IBM Secrets Manager as the vault for secrets.
 
@@ -473,7 +473,7 @@ If you want to set up your CI toolchain from scratch, configure these repositori
 ### Application-related repositories
 {: #devsecops-cd-tool-integration-application}
 
-**Inventory**: Change management is tracked in this repository. After each successful CI Pipeline run, CD pipeline creates a new branch that is named as the created CR number, and merges it to master after deployment is concluded. To fetch the respective URL, go to the CI Pipeline, select the respective tool card. Click the tool card menu, select "Configure" and copy the url under `Repository URL`
+**Inventory**: Change management is tracked in this repository. After each successful CI Pipeline run, CD pipeline creates a new branch that is named as the created CR number, and merges it to master after deployment is concluded. To fetch the respective URL, go to the CI Pipeline, select the respective tool card. Click the tool card menu, select "Configure" and copy the url under `Repository URL`
 
 Example: `https://<region>.git.cloud.ibm.com/myorg/my-compliance-ci-inventory`
 * **Issues**: Issues about incidents that happen during the build and deployment process are stored here. For example: https://<region>.git.cloud.ibm.com/myorg/my-compliance-ci-issues
@@ -520,7 +520,7 @@ In case you have deployment configuration repository from an existing CD Toolcha
 
 Several tools in this toolchain require secrets to access privileged resources. An {{site.data.keyword.cloud_notm}} API key is an example of such a secret. All secrets should be stored securely in a secrets vault and then referenced as required by the toolchain.
 
-With {{site.data.keyword.cloud_notm}}, you can choose from various secrets management and data protection offerings that help you to protect your sensitive data and centralize your secret. The Secrets step allows you to specify which secret vault integrations will be added to your toolchain. Use the provided toggles to add or remove the vault integrations that you require as explained in [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud). This documentation gives you information on prerequisites and how to leverage a list of prescribed secret names otherwise known as hints.  By using hints in a template, a toolchain can be automatically populated with preconfigured secrets without any need to manually select these from various vault integrations attached to the toolchain.
+With {{site.data.keyword.cloud_notm}}, you can choose from various secrets management and data protection offerings that help you to protect your sensitive data and centralize your secret. The Secrets step allows you to specify which secret vault integrations will be added to your toolchain. Use the provided toggles to add or remove the vault integrations that you require as explained in [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud). This documentation gives you information on prerequisites and how to leverage a list of prescribed secret names otherwise known as hints.  By using hints in a template, a toolchain can be automatically populated with preconfigured secrets without any need to manually select these from various vault integrations attached to the toolchain.
 
 This tutorial uses IBM Secrets Manager as the vault for secrets.
 
@@ -660,7 +660,7 @@ To integrate the toolchain with the Security and Compliance Service, you need to
 
 ![DevSecOps Security and Compliance](images/devsecops_set-up_cd_SCC_disabled.png)
 
-You can also configure the Security and Compliance integration to trigger a validation after a deployment:
+You can also configure the Security and Compliance integration to trigger a validation after a deployment. For more information about how to choose a profile name, see [Managing security and compliance with Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-manage-security-compliance).
 
 ![DevSecOps Security and Compliance Enabled](images/devsecops_set-up_cd_SCC_enabled.png)
 
@@ -729,7 +729,7 @@ Flow of the tasks in the CD Pipeline:
 ![DevSecOps CD Tasks](images/cd-tasks.png)
 
 After a successful CD pipeline run, you can find the sample app running on the prod namespace.
-The app url can be found under `run stage` substep of  `prod deployment` step of CD Pipeline run.
+The app url can be found under `run stage` substep of  `prod deployment` step of CD Pipeline run.
 Use that url to check that the app is running.
 
 ![DevSecOps App running](images/devsecops_explore_cd_app_running_prod_namespace.png)
