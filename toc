@@ -66,6 +66,7 @@ Continuous Delivery
         devsecops-image-signing.md
         devsecops-cos-configure.md
         devsecops-pipelines-add-steps.md
+        devsecops-apps-byoa.md
         devsecops-pipelines-setup-scripts.md
         devsecops-stage-results.md
         devsecops-build-docker-images.md
