@@ -160,7 +160,7 @@ The Application step that refers to the application source code repository is sh
 
 The region of the repository remains the same as that of the toolchain.
 
-If you want to link an existing Application Repository for the toolchain, select the `Bring your own app` option, and provide it as input to `Repository URL` field. As noted earlier, the toolchain currently supports linking only to existing GRIT repositories.
+If you want to link an existing Application Repository for the toolchain, select the `Bring your own app` option, and provide it as input to `Repository URL` field. As noted earlier, the toolchain currently supports linking only to existing GRIT repositories. If you want to know more about `Bring your own app`, see [Bringing your own app to DevSecOps](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-apps-byoa).
 
 ![DevSecOps application repository](images/devsecops_application_repo.png)
 
