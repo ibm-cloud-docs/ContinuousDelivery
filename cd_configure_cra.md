@@ -104,7 +104,7 @@ You can use the Build your own toolchain template as a starting point to [create
 1. Click **Create Integration**.
 
 ## Adding a code repository (repo) to your toolchain
-{: #cra_add_dra}
+{: #cra_add_repo_dra}
 
 Add and configure the repo that contains the code that you want Code Risk Analyzer to scan to your toolchain.
 
@@ -198,7 +198,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 1. Click **Create Integration** to add the {{site.data.keyword.deliverypipeline}} to your toolchain.
 
 ### Configuring a {{site.data.keyword.deliverypipeline}} for Tekton 
-{: #configure_tekton_pipeline}
+{: #configure_tekton_pipeline-cra}
 
 1. Click the **{{site.data.keyword.deliverypipeline}}** card to open the Tekton {{site.data.keyword.deliverypipeline}} dashboard.
 1. In the **Definitions** section, complete the following tasks:
