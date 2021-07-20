@@ -43,7 +43,7 @@ Attempts to merge a pull request into the master branch might be blocked because
 {: caption="Table 1. Pipeline order" caption-side="top"}
 
 ## Scans and checks in compliance checks
-{: #cd-devsecops-pipeline-compliancechecks}
+{: #cd-devsecops-cd-pipeline-compliancechecks}
 
 | Scan or check |  Description | 
 |---------|------------|
@@ -56,7 +56,7 @@ Attempts to merge a pull request into the master branch might be blocked because
     
 These scripts are run on all of the app repos that the pipeline is aware of. To add repos to these scans, use the [`pipelinectl`](/docs/ContinuousDelivery?topic=ContinuousDelivery-pipelinectl) interface that is provided in your setup stage.
 
-For more information about using multiple GitHub Enterprise repos in pull request and continuous integration pipelines, see [Using GitHub Enterprise repos in pull request and continuous integration pipelines](#cd-devsecops-gherepos-pipelines). For more information about the expected output from user script stages, see [Custom scripts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts).
+For more information about using multiple git repos in pull request and continuous integration pipelines, see [Using git repos in pull request and continuous integration pipelines](#cd-devsecops-gherepos-pipelines). For more information about the expected output from user script stages, see [Custom scripts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts).
 
 ## Task jobs
 {: #cd-devsecops-pipeline-jobs}
