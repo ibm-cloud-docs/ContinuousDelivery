@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-21"
+lastupdated: "2021-07-20"
 
 keywords: DevSecOps
 
@@ -23,14 +23,30 @@ subcollection: ContinuousDelivery
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Promoting to target branches
+# Promoting inventory entries from source to target branches
 {: #cd-devsecops-promote-branches}
 
-To set up the inventory, you can either partition the repo to target  branches or keep checking and create target branches as  you go.
+The [DevSecOps reference implementation](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-peer-review) helps to enforce the review of code changes before they are merged, promoted, and deployed to production.
 {: shortdesc}
 
-1. The continuous integration pipelines populate the master branch with inventory entries.
-2. Promote content from master to staging. If the staging branch exists, it shares a history with the master branch and creates a promotion pull request to staging. If the staging branch does not exist, you can create it by branching initial commit from master, and then creating a promotion pull request to staging.
-3. Approve and merge the pull request. The continuous delivery pipelines starts, tags the current commit with the Pipeline Run ID, and picks up the content of the staging branch from that tag.
-4. Because this is the first promotion to the new target, the deployment delta contains all of the items and attempts to deploy them.
-5. During the deployment, the change request is attached as a tag to the commit that the pipeline works with. A successful deployment completes by attaching the `latest-staging` tag to the commit that you are working  with.
+To promote code changes from the source (master) branch to the target (staging, prod) branch of your inventory repository (repo), complete the following steps:
+
+1. The continuous integration pipelines populate the source (master) branch with [inventory entries](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-change-mgmt). Use the continuous delivery promotion pipeline to promote this content from your source (master) branch to the target (staging or prod) branch.
+
+* From the continuous delivery pipeline dashboard, click **Run Pipeline**. 
+* Select **Manual Promotion Trigger**.
+* Click **Run**. The pipeline-run creates a merge request to promote your code changes from the source branch to the target branch.
+
+ ![Manual Promotion Trigger](images/manual-promotion-trigger.png)
+
+1. Approve and merge the pull request.
+
+* Click the pipeline-run and check the execution log of the promotion pipeline.
+
+ ![MR execution log](images/pr-exec-log.png)
+
+* Locate the URL of the merge request and open the merge request.
+* Populate the required fields (Priority, Change Request assignee, Additional Description, and other fields).
+* Merge the merge request to promote your changes from the source branch to the target branch.
+
+Now that your changes are promoted to the target branch, you can deploy them by using the [continuous delivery pipeline](/docs/ContinuousDelivery?topic=ContinuousDelivery-tutorial-cd-devsecops#devsecops-cd-toolchain-cd-pipeline-run).
