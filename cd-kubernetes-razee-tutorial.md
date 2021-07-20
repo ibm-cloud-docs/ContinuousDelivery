@@ -56,7 +56,7 @@ After you create the cluster and the toolchain, you change your app's code and p
 * [Create an API Key](https://cloud.ibm.com/docs/account?topic=account-userapikey#create_user_key).
 
 ### Related content
-{: #cd-vsi-related-content}
+{: #cd-kube-razee-related-content}
 
 * [Getting started with toolchains](https://cloud.ibm.com/devops/getting-started){: external}
 * [Getting started with {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started)
