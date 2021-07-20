@@ -57,7 +57,7 @@ Stages in pull request, continuous integration, and continuous delivery pipeline
  * `acceptance-test`: Run tests on deployed artifacts. You can also include your post-deployment tests in this stage.
 
 ## Configuration in `pipeline-config.yaml`
-{: #cd-devsecops-scripts-stages}
+{: #cd-devsecops-scripts-config}
 
 You can use a `.pipeline-config.yaml` configuration file to extend pipeline behavior.
 
@@ -110,7 +110,7 @@ test:
     * `$prop-name`: The indirect Secret name syntax. The Secret name is located in the environment-properties configmap, that contains every environment value that is set on the pipeline UI. For example, if the environment-properties configmap contains the `my-secret entry` property, `my-secret` is used for `$prop`.
 
 #### Example configuration
-{: #cd-devsecops-scripts-sample}
+{: #cd-devsecops-scripts-sample-config}
 
 ```
 version: '1' # fixed, this value is used to track schema changes
@@ -207,7 +207,7 @@ These values are not persisted, they're scoped for a single pipeline run.
 {: tip}
 
 #### Example
-{: #cd-devsecops-scripts-sample}
+{: #cd-devsecops-scripts-sample-artifactory}
 
 You can create an Artifactory auth credential for your own build by adding the required parameters to the pipeline UI:
 
