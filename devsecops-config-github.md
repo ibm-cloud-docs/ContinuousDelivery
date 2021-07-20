@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-20"
 
 keywords: DevSecOps
 
@@ -23,29 +23,18 @@ subcollection: ContinuousDelivery
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Configuring GitHub repos
+# Configuring your {{site.data.keyword.gitrepos}} repository
 {: #cd-devsecops-config-github}
 
-You can configure the branch protection rules on the settings tab in your GitHub repository (repo).
+[DevSecOps](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-arch) requires you to configure the [branch protection rules](https://us-south.git.cloud.ibm.com/help/user/project/protected_branches) of your {{site.data.keyword.gitrepos}} repository (repo).
 {: shortdesc}
 
-1. Add the required branch protection rules.
+Add the required branch protection rules:
 
- ![Branch protection rules](images/branch-protection-rules-screenshot.png)
+1. On the {{site.data.keyword.gitrepos}} repo Settings page, in the **Protected branches** section, select the branch to protect.
+1. Select **Maintainers** to specify who is allowed to merge to the selected branch.
+1. Select **Developers + Maintainers** to specify who is allowed to push to the selected branch.
+1. Toggle **Allow force push** so that this option is unavailable.
+1. Click **Protect**.
 
-1. Add the following rules to the master branch of your repo:
-
- ![Rules](images/rules-screenshot.png)
-
-1. Approve pull requests before merging them to master.
-
- ![Approve pull requests](images/rules-2-screenshot.png)
-
-1. Status checks must pass before you can merge a pull request. To set a status check, trigger a pull request pipeline or CI pipeline. Only existing status checks are listed in the UI.
-
-1. To set branch protection rules, issue the following cURL command after replacing the `$GH_TOKEN`, `$OWNER`, and `$REPO` variables. In the sample `hello-compliance-app`, this command sets the branch protection settings by default by way of the `.pipeline-config.yaml` setup stage.
-
-```
-curl -u ":$GH_TOKEN" https://api.github.com/repos/$OWNER/$REPO/branches/master/protection -XPUT -d '{"required_pull_request_reviews":{"dismiss_stale_reviews":true},"required_status_checks":{"strict":true,"contexts":["tekton/code-branch-protection","tekton/code-unit-tests","tekton/code-cis-check","tekton/code-vulnerability-scan","tekton/code-detect-secrets"]},"enforce_admins":null,"restrictions":null}'
-```
-{: codeblock}
+ ![Branch protection rules](images/grit-branch-protection-rules-screenshot.png)
