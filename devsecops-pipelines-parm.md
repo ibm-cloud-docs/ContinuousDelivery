@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-21"
 
 keywords: DevSecOps
 
@@ -122,7 +122,7 @@ The following table lists and describes the continuous delivery parameters for p
 |Name |Type	|Description |Required or Optional |
 |:----------|:------------------------------|:------------------|:----------|
 |artifactory-dockerconfigjson		|SECRET		|The base64-encoded Docker `config.json` file that stores credential information for artifactory.			|Optional			|
-|change-request-id		|text		|The ID of the manually set change.  		|Optional			|
+|change-request-id    |text   |The ID of an open change request. If this parameter is set to `notAvailable` by default, a change request is automatically created by the continuous delivery pipeline. |Optional			|
 |cluster	|text 		|The name of the Docker build cluster.		|Required			|
 |cluster-region		|text		|The {{site.data.keyword.cloud}} region that hosts the cluster.	|Required			|
 |compliance-baseimage		|text		|The baseimage for running most of the built-in pipeline code. |Optional			|
@@ -134,6 +134,7 @@ The following table lists and describes the continuous delivery parameters for p
 |doi-logicalappname		|text		|The app name to use as the `--logicalappname` flag in `ibmcloud doi` commands	|Optional			|
 |doi-toolchain-id		|text		|The {{site.data.keyword.DRA_short}} instance toolchain ID.	|Optional			|
 |emergency-label		|text		|Identifies the pull request as an emergency.	|Optional			|
+|force-redeploy    |text   |Because the deployment is a first deployment, this parameter forces a redeployment without a deployment delta. By default, this parameter is set to `false`. |Optional |
 |git-token		|SECRET		|The Git repo access token.	|Optional			|
 |ibmcloud-api-key		|SECRET		|The {{site.data.keyword.cloud}} API key that interacts with the `ibmcloud` CLI tool.	|Required			|
 |pipeline-config		|text		|The configuration file that customizes pipeline behavior.	|Required			|
