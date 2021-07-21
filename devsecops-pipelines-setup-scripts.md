@@ -154,4 +154,4 @@ $ revert staging ba3b8e5ed3320e6b4981077e1a1627f08de4f511
 
 ## Custom scripts
 
-For information about using custom scripts in pipelines, see [Custom scripts](docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts).
+For information about using custom scripts in pipelines, see [Custom scripts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts).
