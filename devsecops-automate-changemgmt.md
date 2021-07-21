@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-21"
 
 keywords: DevSecOps, automate change management, change management
 
@@ -171,4 +171,4 @@ You can start the DevSecOps reference continuous delivery pipeline by using a pr
 
  ![Pre-approved change request](images/pre-approved-cr.png)
 
-If the **change-request-id** property is set, the pipeline skips data collection for the change request and moves ahead to check the approval state of the change request.
+If the **change-request-id** property is set, the pipeline skips data collection for the change request and moves ahead to check the approval state of the change request. If the **change-request-id** is set to `notAvailable` by default, a change request is automatically created by the continuous delivery pipeline.
