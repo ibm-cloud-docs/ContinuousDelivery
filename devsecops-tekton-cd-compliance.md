@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-15"
+lastupdated: "2021-07-21"
 
 keywords: DevSecOps, CD, compliance, secure toolchain, IBM Cloud
 
@@ -89,6 +89,7 @@ If you have used [CI Pipeline Toolchain Template](https://us-south.git.cloud.ibm
 If you wish to set up your CI toolchain from scratch, configure these repositories during CI Toolchain creation and then use them here.
 
 ### Application Related Repositories
+{: #cd-devsecops-app-repos}
 
 - **Inventory:** Change management is tracked in this repository. Each successful CI Pipeline Run CD pipeline creates a new branch named as the created CR number, and merges it to master after deployment is concluded.
     E.g.: `https://<region>.git.cloud.ibm.com/myorg/my-compliance-ci-inventory`
@@ -105,6 +106,7 @@ If you wish to set up your CI toolchain from scratch, configure these repositori
 After you capture the names of repos from continous integration toolchain, proceed with the `Guided Setup` to begin continuous delivery toolchain creation. During the setup process, for each repository you can either provide the URL to an existing IBM hosted Git Repos and Issue Tracking (GRIT) repository created for your CI Toolchain or choose to create a new repository . Currently, the toolchain supports creating only GRIT repositories. Future releases will provide support to create repositories with GitHub, GitHub Enterprise (GHE) and other SCM Providers.
 
 ### Inventory
+{: #cd-devsecops-inventory}
 
  The default behavior of the toolchain is to `Use existing inventory` to link an existing Inventory Repository for the toolchain. As noted earlier, the toolchain currently supports linking only to existing GRIT repositories.
 
@@ -112,7 +114,9 @@ After you capture the names of repos from continous integration toolchain, proce
 
 | ![Inventory repository](images/devsecops_set-up_cd_inventory_repo.png) |
 | :--: |
+
 ### Issues
+{: #cd-devsecops-issues}
 
  The default behavior of the toolchain is to `Use existing issues repository` to link an existing Issues Repository for the toolchain. As noted earlier, the toolchain currently supports linking only to existing GRIT repositories.
 
@@ -120,7 +124,9 @@ After you capture the names of repos from continous integration toolchain, proce
 
 | ![Issues repository](images/devsecops_set-up_cd_issues_repo.png) |
 | :--: |
+
 ### Pipeline Configuration
+{: #cd-devsecops-pipeline-config}
 
 The repository contains custom scripts to carry out pipeline tasks in the CD Pipeline (`.pipeline-config.yaml`). Refer to [hello-compliance-deployment](https://us-south.git.cloud.ibm.com/open-toolchain/hello-compliance-deployment) sample repository that contains some default configuration and scripts.
 
@@ -134,6 +140,7 @@ If you have a deployment configuration repo from an exising continuous delivery 
 | :--: |
 
 ### Secrets
+{: #cd-devsecops-secrets}
 
 Several tools in this toolchain require secrets to access privileged resources. An IBM Cloud API key is an example of such a secret. All secrets should be stored securely in a secrets vault and then referenced as required by the toolchain. The **Secrets** step allows you to specify which secret vault integrations will be added to your toolchain. Use the provided toggles to add or remove the vault integrations that you require. These can be configured in subsequent steps however you should familiarize yourself with the concepts in the [Protecting your sensitive data in Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials) documentation as this provides important information about preconfiguring your vault providers and integrations appropriately.
 
@@ -141,6 +148,7 @@ Several tools in this toolchain require secrets to access privileged resources. 
 | :--: |
 
 ### IBM Key Protect
+{: #cd-devsecops-key-protect}
 
 Use [Key Protect](https://cloud.ibm.com/catalog/services/key-protect){: external} to securely store and apply secrets like API keys, Image Signature or HashiCorp credentials that are part of your toolchain. It's recommended that you create a Key Protect Service Instance before proceeding further. Incase you have already created a Key Protect Service Instance as prerequisite, you can link the same in this step.
 
@@ -155,6 +163,7 @@ Use [Key Protect](https://cloud.ibm.com/catalog/services/key-protect){: external
 To comply with best practices for using Hashicorp Vault, this template includes a Key Protect tool integration to securely manage the HashiCorp `Role ID` and `Secret ID`. By storing these HashiCorp secrets in Key Protect as a prerequisite for users to create toolchains, you protect access to HashiCorp Vault, which is the default secrets repo for most consumers.
 
 ### IBM Secrets Manager
+{: #cd-devsecops-secrets-manager}
 
 Use [Secrets Manager](https://cloud.ibm.com/catalog/services/secrets-manager){: external} to securely store and apply secrets like API keys, Image Signature or Hashicorp credentials that are part of your toolchain. It's recommended that you create a Secrets Manager Service Instance before proceeding further. Incase you have already created a Secrets Manager Service Instance as prerequisite, you can link the same in this step.
 
@@ -167,6 +176,7 @@ Use [Secrets Manager](https://cloud.ibm.com/catalog/services/secrets-manager){: 
 - **Service name**: Secrets Manager service name.
 
 ### Hashicorp Vault
+{: #cd-devsecops-vault}
 
 Use HashiCorp Vault to securely store secrets that are needed by your toolchain. Examples of secrets are API keys, user passwords or any other tokens that enable access to sensitive information. Your toolchain stores references to the HashiCorp secrets, not the literal secret values, which enables advanced capabilities like secret rotation.
 
@@ -185,6 +195,7 @@ You can use the `AppRole` authentication method to read secret values.
 {: tip}
 
 ### Evidence Storage
+{: #cd-devsecops-evidence-storage}
 
 All raw compliance evidence that belongs to the application is collected in this repository. This repository option should only be used for evaluation purpose. 
 
@@ -195,11 +206,13 @@ However, it is recommended to collect and store all the evidences in a COS bucke
 | ![Pipeline Config Repository](images/devsecops_set-up_evidence_storage.png) |
 | :--: |
 
-### Evidence 
+### Evidence
+{: #cd-devsecops-evidence}
 
 - **Repository URL**: URL of the Evidence Locker Repository configured in your CI Toolchain as captured in step above.
 
 ### COS bucket
+{: #cd-devsecops-cos-bucket}
 
 | ![COS bucket toggle](images/devsecops_set-up_cos-toggle.png) |
 | :--: |
@@ -225,7 +238,8 @@ To get the **Cloud Object Storage Endpoint**, please visit your COS Instance's p
 
 If you decide not to use Cloud Object Storage as an evidence locker, you can also set the required values after the creation of the toolchain by setting the `cos-bucket-name`, `cos-endpoint` environment variables in the CI Pipeline.
 
-### Tekton Pipeline
+### Tekton pipeline
+{: #cd-devsecops-tekton-pipeline}
 
 The toolchain comes with an integrated Tekton pipeline to automate continuous build, test and deploy of the application to development cluster. This repository contains Tekton resources defined in YAML files that carry out the pipeline tasks. Tekton definitions can be changed also once the toolchain is created. The default behavior of the toolchain is to `Use existing repository`. The `Repository URL` field can be set to the Tekton Repository URL that was created/used for CI Toolchain.
 
@@ -237,6 +251,7 @@ The Pipeline Repository contains configurations for both CI and CD Toolchains an
 | :--: |
 
 ### Deploy
+{: #cd-devsecops-deploy}
 
 Configure the target Kubernetes cluster where the application will be deployed. Choose the target kubernetes cluster that you intend to use as the production or stage environment. The toolchain deploys the build application image to the cluster and runs the acceptance-test and other compliance checks.
 
@@ -259,6 +274,7 @@ Once the API Key field is filled, the registry and cluster related fields will b
 | :--: |
 
 ### Inventory target and source branches
+{: #cd-devsecops-inventory-branches}
 
 - **Inventory Source Environment:** The environment from where you want to promote the application
 Default: `master`
@@ -271,6 +287,7 @@ Default: `prod`
 - **Emergency Label for change request PRs and issues:** Label on Change Request to be used for Emergency deployment
 
 ### Change Request
+{: #cd-devsecops-change-request}
 
 You can select IBM Cloud hosted GRIT (Git Issues and Issue Tracking) repository to manage Change Requests.
 
@@ -278,6 +295,7 @@ You can select IBM Cloud hosted GRIT (Git Issues and Issue Tracking) repository 
 | :--: |
 
 ### Git Repo and Issue Tracking
+{: #cd-devsecops-grit}
 
 - **New repository name:** Name of the GRIT Repository to be used for Change Request Management.
 
@@ -288,9 +306,11 @@ Incase you have an existing Change Request repository from an exising CD Toolcha
 | ![GRIT](images/devsecops_set-up_cd_change_request_mgmt.png) |
 | :--: |
 
-### Optional Tools
+### Optional tools
+{: #cd-devsecops-optional-tools}
 
 #### Slack
+{: #cd-devsecops-slack}
 
 If you want to receive notifications about your CD Pipeline events, you can configure the Slack Tool during the setup from the toolchain template, or you can add the Slack Tool later.
 
@@ -305,6 +325,7 @@ After creating your toolchain, you can toggle sending notifications with the `sl
 | :--: |
 
 #### Common DevOps Insights Toolchain
+{: #cd-devsecops-insights-toolchain}
 
 DevOps Insights can optionally be included in the created toolchain and after each compliance check evidence is published into it. The toolchain can use an existing DevOps Insights instance, to publish the deployment records to insights. You can link DevOps Insights integration from CI toolchain by providing the Integration ID to consolidate all the deployment data in single DevOps Insight Instance.
 
@@ -322,10 +343,12 @@ Make sure to only include the ID, not the full URL.
 You can also set a target environment for the DOI interactions, this parameter is optional. If you provide this parameter, it will be used instead of the target environment from the inventory.
 
 #### DevOps Insights
+{: #cd-devsecops-devops-insights}
 
 Use this option if you wish to create a new instance of DevOps Insights to be used for the toolchain. There is no configuration required and toolchain will create a new instance of Devops Insight if this option is selected. The CD pipeline will automatically use the insights instance included in the toolchain.
 
 ### Security and Compliance
+{: #cd-devsecops-sec}
 
 To integrate the toolchain with the Security and Compliance Service, you need to provide a project name and the evidence locker repository name for the Security and Compliance data collector.
 
@@ -340,6 +363,7 @@ You can also configure the Security and Compliance integration to trigger a vali
 Read more about the Security and Compliance Center [here](https://cloud.ibm.com/security-compliance/overview){: external}.
 
 ### Private Worker
+{: #cd-devsecops-private-worker}
 
 | ![Private Worker](images/devsecops_set-up_cd_private_worker.png) |
 | :--: |
