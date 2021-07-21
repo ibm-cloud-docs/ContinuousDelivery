@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-15"
+lastupdated: "2021-07-21"
 
 keywords: DevSecOps, CI, compliance, secure toolchain, IBM Cloud
 
@@ -84,6 +84,7 @@ The Toolchain region can differ from cluster and registry region.
 {: #cd-devsecops-tekton-ci-tool-integrations}
 
 ### Application
+{: #cd-devsecops-app-ci}
 
 The configuration of multiple repositories is required during the guided setup, each in their own step. 
 
@@ -101,6 +102,7 @@ The recommended options are displayed by default but you can click the **Advance
 In case you wish to link an existing Application Repository for the toolchain, you may choose `Bring your own app` option and provide it as input to `Repository URL` field. As noted earlier, the toolchain currently supports linking only to existing GRIT repositories.
 
 ### Inventory
+{: #cd-devsecops-inventory-ci}
 
 Change management is tracked in this repository. CD pipeline creates a new branch named as the created CR number, and merges it to master after deployment is concluded. 
 
@@ -111,7 +113,8 @@ The default behavior of the toolchain is to `Create new inventory` that creates 
 
 - **New repository name**: Name of the IBM hosted GRIT Repository created by the toolchain as your inventory repository. The region of the repository will remain the same as that of the toolchain.
 
-### Issues    
+### Issues
+{: #cd-devsecops-issues-ci}
 
 Issues about incidents that are captured during the build and deployment process are tracked in the repository.
 
@@ -123,6 +126,7 @@ The default behavior of the toolchain is to `Create new issues repository` that 
 - **New repository name**: Name of the IBM hosted GRIT Repository created by the toolchain as your inventory repository. The region of the repository will remain the same as that of the toolchain.
 
 ### Secrets
+{: #cd-devsecops-secrets-ci}
 
 Several tools in this toolchain require secrets to access privileged resources. An IBM Cloud API key is an example of such a secret. All secrets should be stored securely in a secrets vault and then referenced as required by the toolchain. The **Secrets** step allows you to specify which secret vault integrations will be added to your toolchain. Use the provided toggles to add or remove the vault integrations that you require. These can be configured in subsequent steps however you should familiarize yourself with the concepts in the [Protecting your sensitive data in Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials) documentation as this provides important information about preconfiguring your vault providers and integrations appropriately.
 
@@ -130,6 +134,7 @@ Several tools in this toolchain require secrets to access privileged resources. 
 | :--: |
 
 #### IBM Key Protect
+{: #cd-devsecops-key-protect-ci}
 
 Use [Key Protect](https://cloud.ibm.com/catalog/services/key-protect) to securely store and apply secrets like API keys, Image Signature, or HashiCorp credentials that are part of your toolchain. It's recommended that you create a Key Protect Service Instance before proceeding further. Incase you have already created a Key Protect Service Instance as prerequisite, you can link the same in this step.
 
@@ -144,6 +149,7 @@ Use [Key Protect](https://cloud.ibm.com/catalog/services/key-protect) to securel
 To comply with best practices for using Hashicorp Vault, this template includes a Key Protect tool integration to securely manage the HashiCorp `Role ID` and `Secret ID`. By storing these HashiCorp secrets in Key Protect as a prerequisite for users to create toolchains, you protect access to HashiCorp Vault, which is the default secrets repo for most consumers.
 
 #### IBM Secrets Manager
+{: #cd-devsecops-secrets-manager-ci}
 
 Use [Secrets Manager](https://cloud.ibm.com/catalog/services/secrets-manager) to securely store and apply secrets like API keys, Image Signature or Hashicorp credentials that are part of your toolchain. It's recommended that you create a Secrets Manager Service Instance before proceeding further. Incase you have already created a Secrets Manager Service Instance as prerequisite, you can link the same in this step.
 
@@ -156,6 +162,7 @@ Use [Secrets Manager](https://cloud.ibm.com/catalog/services/secrets-manager) to
 - **Service name**: Secrets Manager service name.
 
 #### Hashicorp Vault
+{: #cd-devsecops-vault-ci}
 
 Use HashiCorp Vault to securely store secrets that are needed by your toolchain. Examples of secrets are API keys, user passwords or any other tokens that enable access to sensitive information. Your toolchain stores references to the HashiCorp secrets, not the literal secret values, which enables advanced capabilities like secret rotation.
 
@@ -173,6 +180,7 @@ Use HashiCorp Vault to securely store secrets that are needed by your toolchain.
 Note: _We advise you to use AppRole authentication method as this method can be used to read secret values._
 
 ### Evidence Storage
+{: #cd-devsecops-evidence-storage-ci}
 
 All raw compliance evidence that belongs to the application is collected in this repository. This repository option should only be used for evaluation purpose. 
 
@@ -184,6 +192,7 @@ The default behavior of the toolchain is to `Create new evidence locker reposito
 **Note:** However, it is strongly recommended to collect and store all the evidences in a COS bucket which can be configured as described below.
 
 #### COS bucket
+{: #cd-devsecops-cos-bucket-ci}
 
 | ![COS bucket toggle](images/devsecops_set-up_cos-toggle.png) |
 | :--: |
@@ -207,7 +216,8 @@ You can set up the COS locker later, by providing the necessary `cos-bucket-name
 
 If you decide not to use Cloud Object Storage as an evidence locker, you can also set the required values after the creation of the toolchain by setting the `cos-bucket-name`, `cos-endpoint` environment variables in the CI Pipeline.
 
-### Tekton Pipeline
+### Tekton pipeline
+{: #cd-devsecops-tekton-pipeline-ci}
  
 The toolchain comes with an integrated Tekton pipeline to automate continuous build, test and deploy of the application to development cluster. This repository contains Tekton resources defined in YAML files that carry out the pipeline tasks. Tekton definitions can be changed also once the toolchain is created. These repositories can be contributed to or can be forked although it is recommended to use the default repository provided by this step.
 
@@ -215,7 +225,9 @@ The toolchain comes with an integrated Tekton pipeline to automate continuous bu
 | :--: |
 
 The default behavior of the toolchain is to `Clone existing pipeline` that creates a new repository as IBM hosted GRIT Repository. In case you wish to link an existing Pipeline Repository for the toolchain, you may choose `Use existing repository` option and provide it as input to `Repository URL` field. As noted earlier, the toolchain currently supports linking only to existing GRIT repositories.
+
 ### Deploy
+{: #cd-devsecops-deploy-ci}
 
 The default behavior of the toolchain is to `Clone existing pipeline` that creates a new repository as IBM hosted GRIT Repository. In case you wish to link an existing Pipeline Repository for the toolchain, you may choose `Use existing repository` option and provide it as input to `Repository URL` field. As noted earlier, the toolchain currently supports linking only to existing GRIT repositories.
 
@@ -241,7 +253,8 @@ Once the API Key field is filled, the registry and cluster related fields will b
 | ![Kubernetes cluster](images/devsecops_set-up_deployment_target.png) |
 | :--: |
 
-### Image Signing
+### Image signing
+{: #cd-devsecops-image-signing-ci}
 
 Any images built by this toolchain and recorded in the inventory must be signed before they can be deployed to production. The pipeline uses Skopeo as default tool to provide Image signing capability. You can use an existing GPG Key or [create a new GPG Key](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-image-signing).
 
@@ -256,9 +269,11 @@ Click on the `Key` Icon to use an existing key from your Secret Provider.
 - **Resource Group**: Resource Group that the Secrets Manager Provider belongs.
 - **Secret name**: Name/Alias of the secret i.e. GPG Key.
 
-### Optional Tools
+### Optional tools
+{: #cd-devsecops-optional-tools-ci}
 
 #### Slack
+{: #cd-devsecops-slack-ci}
 
 If you want to receive notifications about your PR/CI Pipeline events, you can configure the Slack Tool during the setup from the toolchain template, or you can add the Slack Tool later.
 
@@ -268,6 +283,7 @@ In order for a Slack channel to receive notifications from your tools, you need 
 | :--: |
 
 #### Common DevOps Insights Toolchain
+{: #cd-devsecops-insights-toolchain-ci}
 
 DevOps Insights can optionally be included in the created toolchain and after each compliance check evidence is published into it. The toolchain can use an existing DevOps Insights instance, to publish the deployment records to insights. You can link DevOps Insights integration from another toolchain by providing the Integration ID.
 
@@ -284,38 +300,22 @@ For example, if the URL is: `https://cloud.ibm.com/devops/toolchains/aaaaaaa-bbb
 You can also set a target environment for the DOI interactions, this parameter is optional. If you provide this parameter, it will be used instead of the target environment from the inventory.
 
 #### DevOps Insights
+{: #cd-devsecops-devops-insights-ci}
 
 Use this option if you wish to create a new instance of DevOps Insights to be used for the toolchain. There is no configuration required and toolchain will create a new instance of Devops Insight if this option is selected. The CI pipeline will automatically use the insights instance included in the toolchain.
 
 #### Orion WebIDE
+{: #cd-devsecops-webide-ci}
 
 Develop for the web and the cloud in this browser-based integrated development environment (IDE).
 
 #### SonarQube (Beta Release)
+{: #cd-devsecops-sonar-ci}
 
 If you add your own SonarQube instance, the static scan will run on this instance with your rules and quality gate. 
 
 | ![SonarQube tool](images/devsecops_set-up_sonarqube.png) |
 | :--: |
-
-#### Artifactory 
-
-The template comes with an artifactory integration to enable using custom images to carry out pipeline tasks in the tekton pipelines.
-
-Further material and guides about the artifactory are available [here](https://www.ibm.com/garage/method/practices/deliver/tool_artifactory).
-
-| ![Artifactory](images/devsecops_set-up_artifactory.png) |
-| :--: |
-
-- **User ID:** The artifactory user id
-- **API Key:** The artifactory API key.
-    An artifactory token can be created and stored in Key Protect.
-    When an artifactory API key already exists in Key Protect, it can be imported here.
-- **Repository name:**  The name of the artifactory repository.
-    This is where the images for pipeline tasks is stored.
-
-The User ID and the API Key token are required by the pipeline.
-{: important}
 
 ## Create the CI toolchain
 {: #cd-devsecops-tekton-ci-create}
@@ -337,12 +337,14 @@ The User ID and the API Key token are required by the pipeline.
 {: #cd-devsecops-tekton-ci-run-pipeline}
 
 ### Run PR Pipeline
+{: #cd-devsecops-run-pr-pipeline}
 
 - To start the PR pipeline, create a pull request in your application repository.
 
 - The corressponding Merge Request in your application repository will be in "Pending" state till all the stages of PR Pipeline finishes successfully.  
 
 ### Run CI Pipeline
+{: #cd-devsecops-run-ci-pipeline}
 
 There are two ways to start a CI pipeline:
 1. After a successful PR pipeline, approving and merging the PR to the master branch.
@@ -354,6 +356,7 @@ If you want to trigger the CI pipeline manually select the Delivery Pipeline car
 | :--: |
 
 ## Configure Pipeline
+{: #cd-devsecops-config-pipeline-ci}
 
 You can add a `commit-id` text property (click `Add property` button and select `"Text property"`), if you trigger the pipeline manually. If no `commit-id` is supplied, the Pipeline will take the latest commit ID from the master branch of your app.
 
