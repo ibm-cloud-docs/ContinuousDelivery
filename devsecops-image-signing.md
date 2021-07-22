@@ -66,6 +66,7 @@ Leave the passphrase and repeat field empty if the generate-key commands open a 
 {: important}
 
 ### OS X and Linux
+{: #cd-devsecops-gpg-linux}
 
 From your shell prompt, run:
   ```
@@ -78,8 +79,10 @@ From your shell prompt, run:
  * Once key is generated, select Option `O`
 
 ### Windows
+{: #cd-devsecops-gpg-windows}
 
 #### GPG Version > 1.4
+{: #cd-devsecops-gpg-version}
 
 From the Git bash command prompt, run:
   ```
@@ -92,6 +95,7 @@ From the Git bash command prompt, run:
  * Once key is generated, select Option `O`
 
 #### GPG Version < 1.4 (or any failure with above command)
+{: #cd-devsecops-gpg-version2}
 
 From the Git bash command prompt, run:
   ```
@@ -157,18 +161,21 @@ Double `base64` encoding of the GPG key is required before storing it in your {{
 Export and copy the GPG key to the clipboard.
 
 #### OS X 
+{: #cd-devsecops-gpg-copy-osx}
 
 ```
 gpg --export-secret-key <Email Address> | base64 | base64 | pbcopy
 ```
 
 #### Windows
+{: #cd-devsecops-gpg-copy-windows}
 
 ```
 gpg --export-secret-key <Email Address> | base64 -w0 | base64 -w0 | clip
 ```
 
-#### Linux 
+#### Linux
+{: #cd-devsecops-gpg-copy-linux}
 
 ```
 gpg --export-secret-key <Email Address> | base64 | base64
@@ -199,18 +206,22 @@ Single `base64` encoding of the GPG key is required before storing it in your {{
 Export and copy the GPG key to the clipboard.
 
 #### OS X
+{: #cd-devsecops-gpg-export-osx}
 
 ```
 gpg --export-secret-key <Email Address> | base64 | pbcopy
 ```
 
 #### Windows
+{: #cd-devsecops-gpg-export-windows}
 
 ```
 gpg --export-secret-key <Email Address> | base64 -w0 | clip
 ```
 
 #### Linux
+{: #cd-devsecops-gpg-export-linux}
+
 ```
 gpg --export-secret-key <Email Address> | base64
 ```
@@ -245,12 +256,14 @@ Securely store the GPG key in a {{site.data.keyword.keymanagementserviceshort}} 
 {: important}
 
 #### OS X / Linux
+{: #cd-devsecops-gpg-store-osx}
 
 ```
 gpg --export-secret-key <Email Address> | base64
 ```
 
 #### Windows
+{: #cd-devsecops-gpg-store-windows}
 
 ```
 gpg --export-secret-key <Email Address> | base64 -w0
