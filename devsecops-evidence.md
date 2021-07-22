@@ -76,7 +76,7 @@ These fields identify the specific continuous integration or continuous delivery
 This schema is saved to the evidence locker by using JSON format. The evidence format that is collected in different pipeline stages does not differ. Currently, their saved path indicates the pipeline stage, such as continuous integration or continuous delivery.
 
 ### Example
-{: cd-devsecops-format-example}
+{: #cd-devsecops-format-example}
 
 ```
 {
@@ -128,7 +128,7 @@ interface Summary {
 ```
 
 ### Example
-{: cd-devsecops-summary-example}
+{: #cd-devsecops-summary-example}
 
 ```
 {
