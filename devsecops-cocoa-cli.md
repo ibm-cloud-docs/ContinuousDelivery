@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-06"
+lastupdated: "2021-07-27"
 
 keywords: DevSecOps, cli, IBM Cloud
 
@@ -996,7 +996,7 @@ $ cocoa inventory label add \
 {: codeblock}
 
 ```sh
-# move or create the `latest-staging` label to another label (to the same commit)
+# move or create the `staging_latest` label to another label (to the same commit)
 $ cocoa inventory label move \
   --org='Github-ID' \
   --repo='compliance-inventory-repo' \
