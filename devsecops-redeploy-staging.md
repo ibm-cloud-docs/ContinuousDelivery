@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-21"
+lastupdated: "2021-06-27"
 
 keywords: DevSecOps
 
@@ -26,10 +26,10 @@ subcollection: ContinuousDelivery
 # Deploying content to staging again
 {: #cd-devsecops-redeploy-staging}
 
-You might need to deploy all of your content to staging again, where the inventory in staging does not contain any new items and the `latest-staging` tag points to the current commit.
+You might need to deploy all of your content to staging again, where the inventory in staging does not contain any new items and the `staging_latest` tag points to the current commit.
 {: shortdesc}
 
 1. The continuous delivery pipelins starts and tags the current commit with the Pipeline Run ID.
 2. The pipeline picks up the content of the staging branch from that tag.
-3. The pipeline calculates the deployment delta between the current commit and the contents of the `latest-staging` tag.  Because the content is identical, the delta is empty.
-4. The pipeline attempts to deploy. A successful deployment concludes by attaching the `latest-prod` tag to the commit that you work with. Because the content is identical, there are no changes.
+3. The pipeline calculates the deployment delta between the current commit and the contents of the `staging_latest` tag. Because the content is identical, the delta is empty.
+4. The pipeline attempts to deploy. A successful deployment concludes by attaching the `prod_latest` tag to the commit that you work with. Because the content is identical, there are no changes.
