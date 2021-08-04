@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-23"
+lastupdated: "2021-08-04"
 
 keywords: DevSecOps
 
@@ -28,6 +28,9 @@ subcollection: ContinuousDelivery
 
 Parameters are provided, out of the box, for pull request, continuous integration, and continuous delivery pipelines.
 {:shortdesc}
+
+You can add parameters to the pipelines on the pipeline UI, and access them from the [custom scripts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts).
+{: tip}
 
 ## Pull request parameters
 {: #cd-pr-parameters}
