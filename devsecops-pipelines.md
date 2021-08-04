@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-07"
+lastupdated: "2021-08-04"
 
 keywords: DevSecOps
 
@@ -58,58 +58,16 @@ To keep the final pipeline status in sync with the compliance results, a task at
 
 The pull request pipeline runs pre-set compliance status checks on a pull request for the specified application (app) repository (repo). These status checks might prevent you from merging the pull request into the master branch if the checks are unsuccessful. Open or update a pull request against the master branch to trigger the pull request pipeline run. Users can run their own setup for the pipeline and tests in custom stages. For more information about the pull request pipeline, see [Pull request pipeline](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-pr-pipeline).
 
-### Pipeline order
-{: #cd-devsecops-pipelines-order}
+## Continuous integration pipeline
+{: #cd-devsecops-pipelines-ci-pipeline}
 
-The following table describes the tasks and steps that run as part of the pull request pipeline.
+The continuous integration pipeline builds the deployable artifacts from the application (app) repositories (repos).
+Before it builds artifacts, the pipeline checks that the code is scanned and tested, in the same way that pull requests are processed. Built artifacts are also scanned for vulnerabilities and signed in the pipeline before they are marked ready for release and deployment in the [inventory](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-ci-pipeline#cd-devsecops-inventory). Unlike the pull request pipeline, the continuous integration pipeline collects evidence and result artifacts on each stage of the build, such as testing, scanning, and signing. This data correlates to the built artifacts and can be tracked through the deployment process and change management. For more information about the continuous integration pipeline, see [Continuous Integration pipeline](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-ci-pipeline).
 
-| Task | Steps | Description | Task jobs |
-|----------|---------|---------|---------|
-| code-pr-start | start<br>prepare-next-stage | pipeline initialization | Clone app repos, clone the pipeline repo, and set the initial pending state for status checks on {{site.data.keyword.gitrepos}} repos. |
-| code-setup | prepare<br>run-stage<br>prepare-next-stage | user-defined script setup stage | A placeholder for a user-defined `setup` [custom script](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts), where the user can complete their pipeline setup. |
-| code-unit-tests | prepare<br>run-stage<br>prepare-next-stage | user_defined script unit tests stage | A placeholder for a user-defined `test` [custom script](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts), where the user can run their own tests. |
-| code-pr-finish | prepare<br>detect-secrets<br>cra-discovery<br>cra-remediation<br>cra-remediation-comment<br>cra-cis-check<br>cra-cis-check-comment<br>finish | run compliance checks | Run all of the required compliance checks, comment the results to the pull request, and set their result as status on {{site.data.keyword.gitrepos}} repos. |
-{: caption="Table 1. Pull request pipeline order" caption-side="bottom"}
+## Continuous delivery pipeline
+{: #cd-devsecops-pipelines-cd-pipeline}
 
-#### Task jobs
-{: #cd-devsecops-pipelines-task-jobs}
-
-* `code-pr-start`: Clone app repos, clone the pipeline repo, and set the initial pending state for status checks on {{site.data.keyword.gitrepos}} repos.
-* `code-setup`: A placeholder for a user-defined `setup` [custom script](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts), where the user can complete their pipeline setup.
-* `code-unit-tests`:  A placeholder for a user-defined `test` [custom script](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts), where the user can run their own tests.
-* `code-pr-finish`: Run all of the required compliance checks, comment the results to the pull request, and set their result on {{site.data.keyword.gitrepos}} repos.
-
-### Merging pull requests with issues
-{: #cd-devsecops-pipelines-merge-pr}
-
-You can merge pull requests with failed status checks if you have administrator rights to the repo. However, merging these pull requests registers a `failure` result in its evidence for the failing task. This result is included in the evidence summary and change request description, and impacts the final compliance score in the Security and Compliance Center.
-
-![Pull request with failed status checks](images/pr-pipeline-admin-merge.png "Pull request with failed status checks"){: caption="Figure 1. Pull request with failed status checks" caption-side="bottom"}
-
-### Environment properties
-{: #cd-devsecops-pipelines-env-properties}
-
-The following table lists and describes the ready to use parameters that are provided for the pull request pipeline.
-
-| Name | Type | Description | Required or Optional |
-|----------|---------|---------|---------|
-| artifactory-dockerconfigjson | SECRET | The  base64-encoded Docker `config.json` file that pulls the pipeline compliance images. | Optional |
-| baseimage-auth-user | text | The credentials for the base image of the application Dockerfile that is required by the Code Risk Analyzer scan. | Optional |
-| baseimage-auth-email | text | The credentials for the base image of the application Dockerfile that is required by the Code Risk Analyzer scan. | Optional |
-| baseimage-auth-host | text | The credentials for the base image of the application Dockerfile that is required by the Code Risk Analyzer scan. | Optional |
-| baseimage-auth-password | SECRET | The credentials for the base image of the application Dockerfile that is required by the Code Risk Analyzer scan. | Optional |
-| git-token | SECRET | The {{site.data.keyword.gitrepos}}g access token. | Optional |
-| ibmcloud-api-key | SECRET | The {{site.data.keyword.cloud_notm}} API key that is used to interact with the `ibmcloud` cli tool. | Required |
-| pipeline-config | text | The configuration file that is used to customize pipeline behavior. | Optional |
-| pipeline-config-branch | text | The branch of the pipeline config. | Optional |
-| pipeline-config-repo | text | The repository URL of the pipeline config location. | Optional |
-| pipeline-dockerconfigjson | SECRET | The base64-encoded Docker `config.json` file that pulls images from a private registry. | Optional |
-| pipeline-debug | select | The pipeline debug mode switch. | Optional |
-| slack-notifications | text | The switch that turns the Slack integration on or off. | Optional |
-{: caption="Table 2. Pull request pipeline parameters" caption-side="bottom"}
-
-You can add parameters to the pipelines from the pipeline UI and access them from the [user-defined scripts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts).
-{: tip}
+The continuous delivery pipeline generates all of the evidence and change request summary content. The pipeline deploys the build artifacts to a specific environment, such as staging or prod, and then collects, creates, and uploads all existing log files, evidence, and artifacts to the evidence locker. For more information about the continuous delivery pipeline, see [Continuous Delivery pipeline](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-cd-pipeline).
 
 ## Integration with {{site.data.keyword.compliance_short}}
 {: #cd-devsecops-pipelines-scc}
