@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-29"
+lastupdated: "2021-08-04"
 
 keywords: DevSecOps
 
@@ -42,6 +42,8 @@ Attempts to merge a pull request into the master branch might be blocked because
 |`compliance-checks` 	 |Run Code Risk Analyzer scans and other compliance checks on app repos.   	|No			|
 {: caption="Table 1. Pipeline order" caption-side="top"}
 
+For more information about how to customize stages by using the `.pipeline-config.yaml` file, see [Custom scripts](#cd-devsecops-custom-scripts) and [Pipeline parameters](#cd-devsecops-pipeline-parm).
+
 ## Scans and checks in compliance checks
 {: #cd-devsecops-cd-pipeline-compliancechecks}
 
@@ -73,23 +75,3 @@ For more information about using multiple git repos in pull request and continuo
 {: #cd-devsecops-merge-pr}
 
 You can use Administrator rights to merge pull requests with failed status checks to the repo. However, these pull requests register a `failure` result in their evidence for the failing task. This result is included in the evidence summary and change request description, and impacts the final compliance score on the Security and Compliance Center.
-
-## Environment properties
-{: #cd-devsecops-environment-prop}
-
-The following table lists and describes the pipeline parameters that are provided out of the box for pull request pipelines:
-
-|Name |Type	|Description |Required or Optional |
-|:----------|:------------------------------|:------------------|:----------|
-|`git-token`		                |SECRET		|The {{site.data.keyword.gitrepos}} repo token.	|Optional			|
-|`ibmcloud-api-key`	          |SECRET		|The {{site.data.keyword.cloud}} API key that interacts with the `ibmcloud` CLI tool.	|Required			|
-|`pipeline-config-repo`		      |text		  |The URL of the repo that contains the pipeline configuration YAML and scripts.	|Optional			|
-|`pipeline-config-branch`		    |text		  |The branch in the `pipeline-config-repo` that contains the  configuration YAML and scripts.	|Optional			|
-|`pipeline-config`		          |text		  |The name of the configuration YAML file that customizes pipeline behavior.	|Optional			|
-|`pipeline-dockerconfigjson`		|SECRET		|The base64-encoded Docker `config.json` file that pulls images from a private registry.	|Optional			|
-|`pipeline-debug`		            |select		|The pipeline debug mode switch.	|Optional			|
-|`slack-notifications`		      |text		  |The switch that turns the Slack integration on or off.	|Optional			|
-{: caption="Table 4. Environment properties}
-
-You can add parameters to the pipelines on the pipeline UI, and access them from the [custom scripts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts).
-{: tip}
