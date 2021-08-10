@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-21"
+lastupdated: "2021-08-10"
 
 keywords: DevSecOps, CI, compliance, secure toolchain, IBM Cloud
 
@@ -39,7 +39,9 @@ subcollection: ContinuousDelivery
 ## Guided setup overview
 {: #cd-devsecops-tekton-ci-guided}
 
-Either of the two methods described in this tutorial takes you to the guided setup experience. This will guide you through the toolchain setup process in a logical order whilst presenting the recommended configuration options needed to create your toolchain.
+Either of the two methods described in this tutorial takes you to the guided setup experience. This guides you through the toolchain setup process in a logical order while presenting the recommended configuration options that are required to create your toolchain. You can also view the following video tutorial that demonstrates the setup process:
+
+![Getting Started with DevSecOps in IBM Cloud - Part 1 - Continuous Integration Toolchain](https://video.ibm.com/embed/channel/23944579/video/Getting-Started-with-DevSecOps-1){: video output="iframe" data-script="none" id="watsonmediaplayer" width="560" height="315" scrolling="no" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="border: 0 none transparent;"}
 
 A progress indicator is presented in the left margin showing the steps needed to complete the configuration and allowing navigation to a previous step with a mouse click. The configuration options for the current step are presented to the right of the progress indicator in the main area of the page.
 
