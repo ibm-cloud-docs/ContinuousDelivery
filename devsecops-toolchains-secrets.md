@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-29"
+lastupdated: "2021-08-13"
 
 keywords: DevSecOps, secrets in toolchains, managing secrets in toolchains
 
@@ -55,6 +55,7 @@ A `Hint` is a suggested default name that is automatically resolved against the 
 | Slack Web Hook | **Optional: CI & CD** This webhook is required if you choose to use the Slack tool integration to post toolchain status notifications |
 | HashiCorp Vault Role ID | **Optional: CI & CD** Used to authenticate with the Hashicorp vault server | 
 | HashiCorp Vault Secret ID | **Optional: CI & CD** Used to authenticate with the Hashicorp vault server |
+| SonarQube password or authentication token | **Optional: CI** Used to authenticate with the SonarQube source code analyzer |
 
 {: caption="Table 1. DevSecOps Secrets" caption-side="top"}
 
