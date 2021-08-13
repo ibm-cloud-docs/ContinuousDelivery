@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-05-31"
+lastupdated: "2021-08-13"
 
 keywords: IBM Cloud account, personal data, personal accounts, corporate accounts, access, Web IDE, Git Repos and Issue Tracking, pipeline data, toolchains, tool integrations
 
@@ -167,18 +167,22 @@ After your account is deleted, some content will remain. This content is assigne
 ## Modifying, exporting, and deleting Continuous Delivery pipeline data
 {: #managing_pipeline_data}
 
-{{site.data.keyword.contdelivery_short}} pipelines run scripts to build, test, and deploy your application to the IBM Cloud. To do this, pipelines provide stages, jobs, environment variables, and other objects that might contain personal data. You can delete these objects individually or you can delete an entire pipeline.
+{{site.data.keyword.contdelivery_short}} provides two different types of pipelines: Classic and Tekton. These pipelines run scripts to build, test, and deploy your application to the IBM Cloud. To do this, pipelines provide stages/tasks, jobs/steps, environment variables, and other objects that might contain personal data. You can delete these objects individually or you can delete an entire pipeline.
 
-Make sure that you coordinate with other members of your team before you delete shared objects or pipelines. Deleting a stage might cause a pipeline to fail.
+Make sure that you coordinate with other members of your team before you delete shared objects or pipelines. Deleting shared objects might cause a pipeline to fail.
 
 A pipeline cannot exist outside of a toolchain. If you delete a toolchain, all of the pipelines that are associated with the toolchain are also deleted. If you plan to delete an entire toolchain, you do not need to delete each pipeline individually. Instead, skip to the "Modifying and deleting toolchains and tool integrations" section, and follow the steps to delete a toolchain.
 {: important}
 
-Pipeline stages might include personal data such as credentials in the form of environment properties, and a pipeline definition that shows the current state of the pipeline. Stages might also include scripts inside jobs that you want to modify or delete, as well as artifacts and logs for the most recent pipeline runs that you want to export. Use the Configure Stage or Delete Stage actions to modify or delete a stage. Use the Download action to export artifacts or logs from a stage.
+## Classic pipelines
+{: #pipeline_classic}
+
+Classic pipeline stages might include personal data such as credentials in the form of environment properties, and a pipeline definition that shows the current state of the pipeline. Stages might also include scripts inside jobs that you want to modify or delete, as well as artifacts and logs for the most recent pipeline runs that you want to export. Use the Configure Stage or Delete Stage actions to modify or delete a stage. Use the Download action to export artifacts or logs from a stage.
 
   ![Stages menu](images/pipeline_stages.png)
 
-### Modifying a pipeline stage
+### Modifying a Classic pipeline stage
+{: #modifying_pipeline_classic_stage}
 
 To modify a pipeline stage:
 
@@ -191,7 +195,8 @@ To modify a pipeline stage:
   
 1. Delete a job from the pipeline stage. On the **JOBS** tab, select the job that you want to delete and click **Remove**.
  
-### Exporting a pipeline stage
+### Exporting a Classic pipeline stage
+{: #exporting_pipeline_classic_stage}
 
 To export the definition for an entire pipeline, append `/yaml` to the pipeline URL:
 
@@ -201,7 +206,6 @@ Where `<pipeline id>` and `<region id>` are the values that are displayed in the
 
 The resulting yaml file includes definitions of all of the pipeline stages.
 
-
 To export artifacts and logs for a pipeline stage:
 
 1. On the Pipeline page, click **View logs and history**.
@@ -209,12 +213,47 @@ To export artifacts and logs for a pipeline stage:
 1. Click **DOWNLOAD** > **Artifacts** to export the artifacts for the selected build.
 1. Click **DOWNLOAD** > **Logs** to export the logs for the selected build.  
 
-### Deleting a pipeline stage
+### Deleting a Classic pipeline stage
+{: #deleting_pipeline_classic_stage}
 
 To delete a pipeline stage:
 
 1. On the Pipeline page, click the **Settings** icon.
 1. Click **Delete Stage**.
+
+## Tekton pipelines
+{: #pipeline_tekton}
+
+Tekton pipelines might include personal data such as credentials in the form of environment properties or pipeline runs details. You can delete these runs, which removes the associated run details and logs. Use the Download action to export all of the data that is associated with the selected pipeline run.
+
+![Run actions](images/tekton-run-download.png)
+
+### Modifying a Tekton Pipeline
+{: #modifying_pipeline_tekton}
+
+To modify a Tekton Pipeline definition:
+
+1. On the Pipeline page, click **Definitions**. 
+1. Click **Add** to add a Git repo that was already added to the toolchain.
+1. Click the menu to access the options and click **Edit** or **Remove** to edit or remove an existing Git repo definition.
+
+To modify the worker to use to run the Tekton Pipeline:
+
+1. On the Pipeline page, click **Worker**.
+1. Select any worker that was added to the toolchain or the public managed workers.
+
+To modify the environment properties used by the tekton pipeline:
+
+1. On the Pipeline page, click **ENVIRONMENT PROPERTIES**.
+1. Edit, add, or remove properties from the page.
+
+### Deleting a Tekton Pipeline
+{: #deleting_pipeline_tekton}
+
+To delete a Tekton Pipeline:
+
+1. On the Toolchain page, on the Tekton Pipeline card, click the menu to access the configuration options.
+1. Click **Delete**.
 
 ## Modifying and deleting toolchains and tool integrations
 {: #managing_toolchains}
