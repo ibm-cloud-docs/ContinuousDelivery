@@ -73,7 +73,7 @@ To run the SonarQube scan, the pipeline needs the following continuous integrati
 |dev-region		|text		|The {{site.data.keyword.cloud_notm}} region that hosts the cluster.			|Required			|
 |opt-in-sonar		|text 		|The option to enable the sonarQube scan.		|Required			|
 |sonarqube		|tool integration		|The Sonarqube tool integration.	|Optional			|
-{: caption="Table 1. Continuous integration pipeline parameters}
+{: caption="Table 1. Continuous integration pipeline parameters" caption-side="top"}
 
 For more information about pipelines parameters, see [Pipeline parameters](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-pipeline-parm).
 
