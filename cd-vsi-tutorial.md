@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021
-lastupdated: "2021-05-13"
+lastupdated: "2021-08-25"
 lasttested: "2021-05-13"
 
 keywords: Virtual Server Instance, code repositories, DevOps Insights, non-containerized, java application, vsi, gitops, toolchain, pipeline, Virtual Machine, vm
@@ -62,6 +62,8 @@ Set up and configure the Virtual Server Instance for the toolchain to deploy the
 2. [Reserve a floating IP address](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console#reserving-a-floating-ip-address) to make the Virtual Server Instance accessible over the public internet. Alternatively, you can use the available DNS entry. This tutorial uses a floating IP address.
 3. Create the user (preferably non-privileged) and [SSH keys](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys#ssh-keys) for the Virtual Server Instance.
 4. Configure [Security Groups](/docs/security-groups?topic=security-groups-getting-started) for the Virtual Server Instance. Enable the toolchain to perform health checks on the deployed app by adding an inbound rule for `TCP` to allow port `8080` so that it can access the app endpoint. For more information about adding an inbound rule, see [Managing security groups](/docs/security-groups?topic=security-groups-managing-sg).
+5. Ensure that Java&trade; SDK is installed on your VM or use the following command to install it: `yum install -y tar java`.
+6. Optional. If you need to store secrets in `Key Protect`, perform base64 encoding of the value. For more information about the required command details, see [Image signing: generating a GPG key](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-image-signing#cd-devsecops-gpg-private-key).
 
 ### Related content
 {: #cd-vsi-related-content}
