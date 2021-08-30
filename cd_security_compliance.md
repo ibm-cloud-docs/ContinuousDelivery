@@ -2,7 +2,7 @@
 
 copyright:
   years:  2021
-lastupdated: "2021-07-15"
+lastupdated: "2021-08-30"
 
 keywords: security and compliance for {{site.data.keyword.contdelivery_short}}, security for {{site.data.keyword.contdelivery_short}}, compliance for {{site.data.keyword.contdelivery_short}}
 
@@ -87,4 +87,4 @@ As a security or compliance focal, you can use the {{site.data.keyword.complianc
 | *instance* | *toolchain_allowed_tool_integration_ids* | *strings_in_list* | [Services that can be added to the list](https://github.com/open-toolchain/sdk/wiki/services.md){: external} | An array list of Strings that indicates the tools that can be bound to a toolchain. |
 {: caption="Table 1. Rule properties for {{site.data.keyword.contdelivery_short}}" caption-side="top"}
 
-To learn more about config rules, check out [What is a config rule?](/docs/security-compliance?topic=security-compliance-what-is-rule)
+To learn more about constructing config rules, check out [Formatting rules and templates](/docs/security-compliance?topic=security-compliance-formatting-rules-templates).
