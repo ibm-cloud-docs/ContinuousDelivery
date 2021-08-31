@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-04"
+lastupdated: "2021-08-31"
 
 keywords: DevSecOps
 
@@ -128,6 +128,8 @@ The current, deployed state holds the content to deploy to an environment. Every
 The single target - multiple region setup is an iteration on this model where multiple `latest` tags for a single target environment are introduced. This model allows multiple continuous pipelines to work on the same target for different types of use cases.
 
 For example, you can use the same target environment for multiple regions (such as `us-south` and `eu-de`) in the prod target environment and the inventory branch.
+
+To specify the deployment region by the continuous delivery pipeline, use the `region` parameter. For more information about this parameter, see [Continuous Delivery Pipeline parameters](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-pipeline-parm#cd-parameters).
 
 Teams do not need to set up a different branch for each region, such as `prod-us-south` and `prod-eu-de`, and run the promotion redundantly. Instead, specify these additional targets for the same inventory branch and then use them as Git tags.
 
