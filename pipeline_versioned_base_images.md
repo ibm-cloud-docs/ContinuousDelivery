@@ -2,7 +2,7 @@
 
 Copyright:
   years: 2019, 2021
-lastupdated: "2021-06-16"
+lastupdated: "2021-09-02"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -65,8 +65,10 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 
 | Base image version | IBM Cloud Container Registry version |
 |:-----------------|:-----------------|
+| 3.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.2`|
 | 3.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.1`|
 | 3.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.0`|
+| 2.14 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.14`|
 | 2.13 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.13`|
 | 2.12 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.12`|
 | 2.11 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.11`|
@@ -79,9 +81,9 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 | 2.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.4.1`|
 | 2.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.3`|
 | 2.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.2`|
-| 2.1 | Not available |
-| 2.0 | Not available |
-| 1.0 | Not available |
+| 2.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.1`|
+| 2.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.0`|
+| 1.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:1.0`|
 {: caption="Table 2. Mapping between versioned based images and IBM Cloud Registry versions" caption-side="top"}
 
 The following available image versions are listed in descending order, starting with the current version.
@@ -89,6 +91,139 @@ The following available image versions are listed in descending order, starting 
  The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
  {: tip}
  
+ ### Version 3.2
+ {: #version_3_2}
+
+To view the contents of version 3.2, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 11. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built.
+
+This image includes the following tools:
+```
+	# node --version
+	v14.17.6
+
+	# npm --version
+	6.14.15
+
+	# jq --version
+	jq-1.6
+
+	# yq --version
+	yq (https://github.com/mikefarah/yq/) version 4.12.1
+
+	# kubectl version --client
+	Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.5", GitCommit:"6b1d87acf3c8253c123756b9e61dac642678305f", GitTreeState:"clean", BuildDate:"2021-03-18T01:10:43Z", GoVersion:"go1.15.8", Compiler:"gc", Platform:"linux/amd64"}
+
+	# buildctl --version
+	buildctl github.com/moby/buildkit v0.9.0 c8bb937807d405d92be91f06ce2629e6202ac7a9
+
+	# helm version --client
+	version.BuildInfo{Version:"v3.6.3", GitCommit:"d506314abfb5d21419df8c7e7e68012379db2354", GitTreeState:"clean", GoVersion:"go1.16.5"}
+
+	# ibmcloud -version
+	ibmcloud version 2.0.3+c7a1126-2021-08-27T19:17:51+00:00
+
+	# ibmcloud plugin list
+	Listing installed plug-ins...
+
+	Plugin Name                             Version   Status   Private endpoints supported   
+	cloud-internet-services                 1.13.4             true   
+	container-registry                      0.1.543            true   
+	container-service[kubernetes-service]   1.0.312            false   
+	doi                                     0.3.2              false   
+	schematics                              1.5.12             false   
+	cloud-functions[wsk/functions/fn]       1.0.56             false   
+
+
+	# ibmcloud dev --version
+	ibmcloud dev version 2.8.0
+
+	# java -version
+	openjdk version "11.0.10" 2021-01-19
+	OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.10+9)
+	Eclipse OpenJ9 VM AdoptOpenJDK (build openj9-0.24.0, JRE 11 Linux amd64-64-Bit Compressed References 20210120_910 (JIT enabled, AOT enabled)
+	OpenJ9   - 345e1b09e
+	OMR      - 741e94ea8
+	JCL      - 0a86953833 based on jdk-11.0.10+9)
+
+	# ant -version
+	Apache Ant(TM) version 1.10.11 compiled on July 10 2021
+
+	# mvn -version
+	Apache Maven 3.8.2 (ea98e05a04480131370aa0c110b8c54cf726c06f)
+	Maven home: /opt/IBM/maven
+	Java version: 11.0.10, vendor: AdoptOpenJDK, runtime: /usr/local/openjdk-11
+	Default locale: en_US, platform encoding: UTF-8
+	OS name: "linux", version: "5.10.47-linuxkit", arch: "amd64", family: "unix"
+
+	# gradle -version
+
+	Welcome to Gradle 7.2!
+
+	Here are the highlights of this release:
+	 - Toolchain support for Scala
+	 - More cache hits when Java source files have platform-specific line endings
+	 - More resilient remote HTTP build cache behavior
+
+	For more details see https://docs.gradle.org/7.2/release-notes.html
+
+
+	------------------------------------------------------------
+	Gradle 7.2
+	------------------------------------------------------------
+
+	Build time:   2021-08-17 09:59:03 UTC
+	Revision:     a773786b58bb28710e3dc96c4d1a7063628952ad
+
+	Kotlin:       1.5.21
+	Groovy:       3.0.8
+	Ant:          Apache Ant(TM) version 1.10.9 compiled on September 27 2020
+	JVM:          11.0.10 (Eclipse OpenJ9 openj9-0.24.0)
+	OS:           Linux 5.10.47-linuxkit amd64
+
+
+	# oc version
+	Client Version: 4.8.5
+
+	# zip
+	Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+	This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+
+	# unzip
+	UnZip 6.00 of 20 April 2009, by Info-ZIP.  Maintained by C. Spieler.  Send
+
+	# git --version
+	git version 2.27.0
+
+	# curl
+	curl 7.61.1 (x86_64-redhat-linux-gnu) libcurl/7.61.1 OpenSSL/1.1.1g zlib/1.2.11 brotli/1.0.6 libidn2/2.2.0 libpsl/0.20.2 (+libidn2/2.2.0) libssh/0.9.4/openssl/zlib nghttp2/1.33.0
+
+	# wget
+	GNU Wget 1.19.5 built on linux-gnu.
+
+	# openssl version
+	OpenSSL 1.1.1g FIPS  21 Apr 2020
+
+	# make
+	GNU Make 4.2.1
+
+	# docker
+	Client: Docker Engine - Community
+	 Version:           19.03.9
+	 API version:       1.40
+	 Go version:        go1.13.10
+	 Git commit:        9d988398e7
+	 Built:             Fri May 15 00:22:47 2020
+	 OS/Arch:           linux/amd64
+	 Experimental:      false
+
+	# dc --version
+	dc (GNU bc 1.07.1) 1.4.1
+
+	# ed --version
+	GNU ed 1.14.2
+```
+ {: codeblock}
+
  ### Version 3.1
  {: #version_3_1}
 
@@ -359,6 +494,147 @@ This image includes the following tools:
 	GNU ed 1.14.2
 ```
  {: codeblock}
+ 
+### Version 2.14
+ {: #version_2_14}
+
+To view the contents of version 2.14, from the running image, type `default_versions.sh`. This image includes the following tools:
+
+```
+	# node --version
+	v14.17.6
+
+	# npm --version
+	6.14.15
+
+	# jq --version
+	jq-1.6
+
+	# yq --version
+	yq version 2.4.1
+
+	# yq3 --version
+	yq version 3.4.1
+
+	# yq4 --version
+	yq (https://github.com/mikefarah/yq/) version 4.12.1
+
+	# kubectl version --client
+	Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.5", GitCommit:"6b1d87acf3c8253c123756b9e61dac642678305f", GitTreeState:"clean", BuildDate:"2021-03-18T01:10:43Z", GoVersion:"go1.15.8", Compiler:"gc", Platform:"linux/amd64"}
+
+	# buildctl --version
+	buildctl github.com/moby/buildkit v0.9.0 c8bb937807d405d92be91f06ce2629e6202ac7a9
+
+	# helm version --client
+	Client: &version.Version{SemVer:"v2.17.0", GitCommit:"a690bad98af45b015bd3da1a41f6218b1a451dbe", GitTreeState:"clean"}
+
+	# helm3 version --client
+	version.BuildInfo{Version:"v3.6.3", GitCommit:"d506314abfb5d21419df8c7e7e68012379db2354", GitTreeState:"clean", GoVersion:"go1.16.5"}
+
+	# ibmcloud -version
+	ibmcloud version 2.0.3+c7a1126-2021-08-27T19:17:51+00:00
+
+	# ibmcloud plugin list
+	Listing installed plug-ins...
+
+	Plugin Name                             Version   Status   Private endpoints supported   
+	container-service[kubernetes-service]   1.0.312            false   
+	doi                                     0.3.2              false   
+	schematics                              1.5.12             false   
+	cloud-functions[wsk/functions/fn]       1.0.56             false   
+	cloud-internet-services                 1.13.4             true   
+	container-registry                      0.1.543            true   
+
+
+	# ibmcloud dev --version
+	ibmcloud dev version 2.8.0
+
+	# java -version
+	openjdk version "11.0.10" 2021-01-19
+	OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.10+9)
+	Eclipse OpenJ9 VM AdoptOpenJDK (build openj9-0.24.0, JRE 11 Linux amd64-64-Bit Compressed References 20210120_910 (JIT enabled, AOT enabled)
+	OpenJ9   - 345e1b09e
+	OMR      - 741e94ea8
+	JCL      - 0a86953833 based on jdk-11.0.10+9)
+
+	# ant -version
+	Apache Ant(TM) version 1.10.11 compiled on July 10 2021
+
+	# mvn -version
+	Apache Maven 3.8.2 (ea98e05a04480131370aa0c110b8c54cf726c06f)
+	Maven home: /opt/IBM/maven
+	Java version: 11.0.10, vendor: AdoptOpenJDK, runtime: /usr/local/openjdk-11
+	Default locale: en_US, platform encoding: UTF-8
+	OS name: "linux", version: "5.10.47-linuxkit", arch: "amd64", family: "unix"
+
+	# gradle -version
+
+	Welcome to Gradle 7.2!
+
+	Here are the highlights of this release:
+	 - Toolchain support for Scala
+	 - More cache hits when Java source files have platform-specific line endings
+	 - More resilient remote HTTP build cache behavior
+
+	For more details see https://docs.gradle.org/7.2/release-notes.html
+
+
+	------------------------------------------------------------
+	Gradle 7.2
+	------------------------------------------------------------
+
+	Build time:   2021-08-17 09:59:03 UTC
+	Revision:     a773786b58bb28710e3dc96c4d1a7063628952ad
+
+	Kotlin:       1.5.21
+	Groovy:       3.0.8
+	Ant:          Apache Ant(TM) version 1.10.9 compiled on September 27 2020
+	JVM:          11.0.10 (Eclipse OpenJ9 openj9-0.24.0)
+	OS:           Linux 5.10.47-linuxkit amd64
+
+
+	# oc version
+	Client Version: 4.8.5
+
+	# zip
+	Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+	This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+
+	# unzip
+	UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP.
+
+	# git --version
+	git version 2.17.1
+
+	# curl
+	curl 7.58.0 (x86_64-pc-linux-gnu) libcurl/7.58.0 OpenSSL/1.1.1 zlib/1.2.11 libidn2/2.0.4 libpsl/0.19.1 (+libidn2/2.0.4) nghttp2/1.30.0 librtmp/2.3
+
+	# wget
+	GNU Wget 1.19.4 built on linux-gnu.
+
+	# openssl version
+	OpenSSL 1.1.1  11 Sep 2018
+
+	# make
+	GNU Make 4.1
+
+	# docker
+	Client: Docker Engine - Community
+	 Version:           19.03.9
+	 API version:       1.40
+	 Go version:        go1.13.10
+	 Git commit:        9d988398e7
+	 Built:             Fri May 15 00:22:47 2020
+	 OS/Arch:           linux/amd64
+	 Experimental:      false
+
+	# dc --version
+	dc (GNU bc 1.07.1) 1.4.1
+
+	# ed --version
+	GNU Ed 1.10
+```
+ {: codeblock}
 
 ### Version 2.13
  {: #version_2_13}
@@ -366,9 +642,6 @@ This image includes the following tools:
 To view the contents of version 2.13, from the running image, type `default_versions.sh`. This image includes the following tools:
 
 ```
-	Preparing to start the job...
-	Running on public worker: us-south-dev-public-worker
-	Pipeline image: latest
 	# node --version
 	v14.17.0
 
