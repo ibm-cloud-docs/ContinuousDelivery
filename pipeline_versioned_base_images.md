@@ -1677,7 +1677,7 @@ To view the contents of version 2.5, from the running image, type `default_versi
   ```
  {: codeblock}
  
-  ### Version 2.4
+ ### Version 2.4
  {: #version_2_4}
    
 To view the contents of version 2.4, from the running image, type `default_versions.sh`. This image includes the following tools:
@@ -1763,7 +1763,7 @@ To view the contents of version 2.4, from the running image, type `default_versi
   ```
  {: codeblock}
  
-  ### Version 2.3
+ ### Version 2.3
  {: #version_2_3}
  
  To view the contents of version 2.3, from the running image, type `default_versions.sh`. This image includes the following tools:
