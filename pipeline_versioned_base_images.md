@@ -2002,7 +2002,7 @@ To view the contents of version 2.1, from the running image, type `default_versi
   ```
  {: codeblock}
 
-  ### Version 2.0
+ ### Version 2.0
  {: #version_2_0}
  
  To view the contents of version 2.0, from the running image, type `default_versions.sh`. This image includes the following tools:
