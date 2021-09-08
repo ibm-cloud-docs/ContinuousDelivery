@@ -97,7 +97,6 @@ Continuous Delivery
             toolchains_integrations.md
             artifactory_integration.md
             bitbucket_integration.md
-            cem_integration.md
             delivery_pipeline_integration.md
             private_worker_integration.md
             insights_integration.md
