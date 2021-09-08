@@ -70,6 +70,7 @@ Continuous Delivery
         devsecops-pipelines-setup-scripts.md
         devsecops-stage-results.md
         devsecops-build-docker-images.md
+        devsecops-pipelines-add-triggers.md
         
         {: .topicgroup}
         Working with Git repos
