@@ -1,20 +1,14 @@
 ---
 
 copyright:
-  years: 2016, 2020
-lastupdated: "2019-09-17"
+  years: 2016, 2021
+lastupdated: "2021-09-13"
 
 keywords: environment properties, environment resources, IBM Java, pipeline environments
 
 subcollection: ContinuousDelivery
 
 ---
-<!-- Copyright info at top of file: REQUIRED
-    The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be surrounded by 3 dashes.
-    The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
-    Indentation as per the previous template must be preserved.
--->
 
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -27,15 +21,6 @@ subcollection: ContinuousDelivery
 {: #deliverypipeline_environment}
 
 The following properties and resources are available by default in {{site.data.keyword.contdelivery_full}} {{site.data.keyword.deliverypipeline}} environments.
-
-<!--##Contents
-* [Environment properties](#env)
-    * [General purpose properties](#gen)
-    * [Runtime and tool properties](#runtime)
-    * [Deployment properties](#deployment)
-* [Pre-installed resources](#resources)
-    * [Runtimes and tools](#tools)
-    * [Node modules](#node)-->
 
 ## Environment properties
 {: #deliverypipeline_envprop}
@@ -63,7 +48,7 @@ The following table lists and describes each of the general-purpose environment 
 | JOB_NAME | The unique job ID in the context of the current pipeline. |
 | PIPELINE_ARTIFACT_URL | The URL that you can use to download the artifacts of the current Build job after the job completes. You must use a valid Bearer token to access the artifacts. |
 | PIPELINE_INITIAL_STAGE_EXECUTION_ID | The unique ID for the run of the pipeline. |
-| PIPELINE_IMAGE_URL | The URL of the container image that is built by a Container Registry build job. This property is present only in a job whose stage input is a Container Registry build job. |
+| PIPELINE_IMAGE_URL | The URL of the container image that is built by a Container Registry build job. This property is present only in a job whose stage input is a Container Registry build job. This input Container Registry build job must explicitly export `PIPELINE_IMAGE_URL`, for example: `export PIPELINE_IMAGE_URL=$REGISTRY_URL/$REGISTRY_NAMESPACE/$IMAGE_NAME:$BUILD_NUMBER`. |
 | PIPELINE_KUBERNETES_CLUSTER_NAME | The name of the Kubernetes cluster that is selected in the current job. |
 | PIPELINE_LOG_URL | The URL that you can use to download the log file of the current job after the job completes. You must use a valid Bearer token to access the log files. |
 | PIPELINE_STAGE_INPUT_JOB_ID | The ID of the job that is input for the current stage. |
