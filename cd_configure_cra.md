@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-07-05"
+lastupdated: "2021-09-13"
 
 keywords: Code Risk Analyzer, code repositories, DevOps Insights, scan pull requests, Tekton pipelines
 
@@ -41,7 +41,7 @@ Code Risk Analyzer supports the Java&trade;, Node.js, and Python languages. The 
 |Node.js		|Dependencies are calculated by using the `package-lock.json` file.		|
 |Python		|Dependencies are calculated by using the `requirements.txt` file.		|
 |Golang		|Supports `go mod` and `go dep` dependency management. For `go mod`, the `go.sum` file must be in the repo. For `go dep`, the `Gopkg.lock` file must be in the repo.		|
-| Dockerfiles		|Files with the `Dockerfile` pattern in the repo are considered. For container images, the Debian, Alpine, and Ubutu Linux distros are supported.  		|
+| Dockerfiles		|Files with the `Dockerfile` pattern in the repo are considered. For container images, the Debian, Red Hat Enterprise Linux, Alpine, and Ubutu Linux distros are supported.  		|
 | Kubernetes		|Files that are suffixed with `.yaml` and `.yml` are considered. The `kind` value must be set to `Pod`, `ReplicaSet`, `ReplicationController`, `Deployment`, `Daemonset`, `Statefulset`, `Job`, or `CronJob`.   		|
 |Terraform		|The repo must use Terraform v0.13.5 and IBM Cloud as a Terraform provider for compliance checks.		|
 {: caption="Table 1. Supported content" caption-side="top"}
