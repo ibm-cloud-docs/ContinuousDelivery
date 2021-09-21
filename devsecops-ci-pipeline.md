@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-29"
+lastupdated: "2021-09-21"
 
 keywords: DevSecOps
 
@@ -29,7 +29,7 @@ subcollection: ContinuousDelivery
 The continuous integration pipeline builds the deployable artifacts from the application (app) repositories (repos).
 {: shortdesc}
 
-Before it builds artifacts, the pipeline checks that the code is scanned and tested, in the same way that pull requests are processed. Built artifacts are also scanned for vulnerabilities and signed in the pipeline before they are marked ready for release and deployment in the [inventory](#cd-devsecops-inventory). Unlike the pull request pipeline, the continuous integration pipeline collects evidence and result artifacts on each stage of the build, such as testing, scanning, and signing. This data correlates to the built artifacts and can be tracked through the deployment process and change management.
+Before it builds artifacts, the pipeline checks that the code is scanned and tested, in the same way that pull requests are processed. Built artifacts are also scanned for vulnerabilities and signed in the pipeline before they are marked ready for release and deployment in the [inventory](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-inventory). Unlike the pull request pipeline, the continuous integration pipeline collects evidence and result artifacts on each stage of the build, such as testing, scanning, and signing. This data correlates to the built artifacts and can be tracked through the deployment process and change management.
 
 ## Stages and tasks
 {: #cd-devsecops-cipipeline-stages}
@@ -50,7 +50,7 @@ Before it builds artifacts, the pipeline checks that the code is scanned and tes
 |`finish` 		|Collect, create, and upload the logs files, artifacts, and evidence to the evidence locker.   	|No			|
 {: caption="Table 1. Continuous integration stages and tasks" caption-side="top"}
 
-For more information about how to customize stages by using the `.pipeline-config.yaml` file, see [custom scripts](#cd-devsecops-custom-scripts) and [pipeline parameter](#cd-devsecops-pipeline-parm) lists.
+For more information about how to customize stages by using the `.pipeline-config.yaml` file, see [custom scripts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts) and [pipeline parameter](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-pipeline-parm) lists.
 
 ## Static code scan
 {: #cd-devsecops-pipeline-codescan}
@@ -79,7 +79,7 @@ You can use any of the following methods to add static code to your pipeline:
     
 These scripts are run on all of the app repos that the pipeline is aware of. To add repos to these scans, use the [`pipelinectl`](/docs/ContinuousDelivery?topic=ContinuousDelivery-pipelinectl) interface that is provided in your setup stage.
 
-For more information about using multiple git repos in pull request and continuous integration pipelines, see [Using multiple git repos in pull request and continuous integration pipelines](#cd-devsecops-gherepos-pipelines). For more information about the expected output from user script stages, see [Custom scripts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts).
+For more information about the expected output from user script stages, see [Custom scripts](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-custom-scripts).
 
 ## Build
 {: #cd-devsecops-pipeline-build}
