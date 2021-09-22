@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2021
-lastupdated: "2021-09-13"
+lastupdated: "2021-09-22"
 
 keywords: environment properties, environment resources, IBM Java, pipeline environments
 
@@ -74,9 +74,6 @@ The following table lists and describes each of the runtime and tool environment
 | NODE_HOME | The path to Node.js 0.10.29. |
 {: caption="Table 2. Runtime and tool environment properties" caption-side="top"}
 
-To use Apache Ant 1.10+ in your pipeline's scripts, set `ANT_HOME` to `$ANT_JAVA8_HOME` and `JAVA_HOME` to `$JAVA8_HOME`.
-{: tip}
-
 ### Deployment properties
 The following table lists and describes each of the deployment environment properties that are available by default in pipeline environments.
 
@@ -90,53 +87,3 @@ The following table lists and describes each of the deployment environment prope
 | CF_TARGET_URL | For deployments, the URL of {{site.data.keyword.Bluemix_short}} or Cloud Foundry. |
 | IDS_VERSION | For deployments, the version of the app that is being deployed or the source identifier. |
 {: caption="Table 3. Deployment environment properties" caption-side="top"}
-
-## Preinstalled resources
-{: #deliverypipeline_resources}
-
-Several runtimes, tools, and Node modules are preinstalled in every pipeline.
-
-### Runtimes and tools
-The following table lists each of the preinstalled runtimes and tools that are available in every pipeline.
-
-All links are in the home directory.
-{: tip}
-
-| Resource | Link Name | Path |
-|----------|-----------|-----------|
-|Apache Ant 1.9.2|ant |/opt/IBM/ant |
-|Cloud Foundry CLI 6.14 |cf | /opt/IBM/cf |
-|Gradle 1.12|gradle |/opt/IBM/gradle |
-|Gradle 2.9 |gradle2 |/opt/IBM/gradle2 |
-|IBM Cloud CLI (bx) 0.13.0 |ibmcloud |/usr/local/ibmcloud/bin/ibmcloud |
-|IBM Java (default)|java |/opt/IBM/java |
-|IBM Java 7 x86_64-71 |java7 |/opt/IBM/java7 |
-|IBM Java 8 x86_64-80|java8 |/opt/IBM/java8 |
-|Apache Maven 3.2.1 |maven |/opt/IBM/maven |
-|IBM Node |node |/opt/IBM/node |
-|IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
-{: caption="Table 4. Link names and paths for runtimes and tools" caption-side="top"}
-
-The pipeline environment offers 64-bit versions of IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2, and 6.7.0. To choose a version, use the export command.
-
-For example, to use Node 0.12.7, type this command: `export PATH=/opt/IBM/node-v0.12/bin:$PATH`
-
-To use Node 4.2.2, type this command: `export PATH=/opt/IBM/node-v4.2/bin:$PATH`
-
-### Node modules
-
-The following Node modules are globally installed in the pipeline environment:
-
-* grunt@0.4.5
-* grunt-cli@0.1.13
-* grunt-contrib-concat@0.4.0
-* grunt-contrib-jshint@0.10.0
-* grunt-contrib-nodeunit@0.4.1
-* grunt-contrib-qunit@0.5.1
-* grunt-contrib-uglify@0.5.0
-* grunt-contrib-watch@0.6.1
-* karma@0.12.23
-* karma-cli@0.0.4
-* karma-jasmine@0.1.5
-* karma-phantomjs-launcher@0.1.4
-* phantomjs@1.9.10
