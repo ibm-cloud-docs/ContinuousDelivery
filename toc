@@ -10,20 +10,6 @@ Continuous Delivery
     [Why IBM Cloud Continuous Delivery?](https://www.ibm.com/cloud/continuous-delivery)
     cd_about.md
     devops_intro.md
-    
-    {: .topicgroup}
-    DevSecOps
-        [What is DevSecOps?](https://www.ibm.com/cloud/learn/devsecops)
-        devsecops_intro.md
-        devsecops-arch.md
-        devsecops-pipelines.md
-        
-        {: .topicgroup}
-        DevSecOps practices
-            devsecops-change-mgmt.md
-            devsecops-peer-review.md
-            devsecops-cos-bucket-evidence.md
-    
     garage_method.md
     limitations_plans.md
 
@@ -50,8 +36,6 @@ Continuous Delivery
     cd-kubernetes-image-signing-tutorial.md
     [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app)
     cd-vsi-tutorial.md
-    /apps/apps-tutorial-apps-devsecops
-    devsecops-tutorial.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -59,34 +43,6 @@ Continuous Delivery
     cd_create.md
     cd_delete.md
     
-    {: .topicgroup}
-    DevSecOps
-        devsecops-tekton-ci-compliance.md
-        devsecops-tekton-cd-compliance.md
-        devsecops-image-signing.md
-        devsecops-cos-configure.md
-        devsecops-pipelines-add-steps.md
-        devsecops-apps-byoa.md
-        devsecops-pipelines-setup-scripts.md
-        devsecops-stage-results.md
-        devsecops-build-docker-images.md
-        devsecops-pipelines-add-triggers.md
-        
-        {: .topicgroup}
-        Working with Git repos
-            devsecops-config-github.md
-            devsecops-promote-branches.md
-            devsecops-redeploy-staging.md
-            devsecops-apps-rollback.md
-        
-        devsecops-set-pr-status.md
-        devsecops-approve-cr.md
-        devsecops-webhook-payloads.md
-        devsecops-automate-changemgmt.md
-        devsecops-toolchains-secrets.md
-        devsecops-multiple-apps.md
-        devsecops-scc-toolchains.md
-
     {: .topicgroup}
     Toolchains
         toolchains_working.md
@@ -217,23 +173,7 @@ Continuous Delivery
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki)
-    
-    {: .topicgroup}
-    DevSecOps
-        devsecops-iam-permissions.md
-        devsecops-pipelines-status.md
-        devsecops-pr-pipeline.md
-        devsecops-cd-pipeline.md
-        devsecops-ci-pipeline.md
-        devsecops-promotion-pipeline.md
-        devsecops-pipelines-parm.md
-        devsecops-pipelines-hosts.md
-        devsecops-triggers.md
-        devsecops-evidence.md
-        devsecops-inventory.md
-        devsecops-custom-scripts.md
-        
+    [Open Toolchain SDK](https://github.com/open-toolchain/sdk/wiki) 
     pipeline_deploy_var.md
     tekton_deploy_var.md
     [Using Jenkins to integrate DevOps Insights](https://wiki.jenkins.io/display/JENKINS/IBM+Cloud+DevOps+Plugin)
@@ -242,8 +182,6 @@ Continuous Delivery
     Command reference
         /devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
         /cli/cli-idt-cli
-        devsecops-pipelinectl.md
-        devsecops-cocoa-cli.md
         [grunt-idra3 (deprecated)](https://www.npmjs.com/package/grunt-idra3)
 
     cd_at_events.md
