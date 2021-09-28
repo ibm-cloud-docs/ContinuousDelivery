@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-01-27"
+lastupdated: "2021-09-28"
 
 keywords: Code Risk Analyzer, code repositories, DevOps Insights, scan pull requests, Tekton pipelines
 
@@ -19,12 +19,16 @@ subcollection: ContinuousDelivery
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
 # Scanning pull requests
 {: #cd-cra-scan-pr}
+
+These Code Risk Analyzer Tekton pipeline tasks and definitions are deprecated. As of 1 October, 2021, you must use the new Tekton pipeline tasks and definitions that are provided in the [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
+{: deprecated}
 
 After you configure Code Risk Analyzer for your code repositories (repos), you can create and scan pull requests. The Code Risk Analyzer starts the following process when you create a pull request for your repo:
 
