@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2021-09-13"
+lastupdated: "2021-09-28"
 
 keywords: Code Risk Analyzer, code repositories, DevOps Insights, scan pull requests, Tekton pipelines
 
@@ -19,6 +19,7 @@ subcollection: ContinuousDelivery
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
@@ -29,6 +30,9 @@ subcollection: ContinuousDelivery
 
 Code Risk Analyzer takes all of your Git-based code, configurations, and deployment artifacts, builds a dependency graph, and runs a pipeline of regulatory compliance control checks. It is embedded into existing development workflows, such as creating a change request or promoting a code change into the main development branch. It produces a bill of materials that reflects the composition of a deployment. And it identifies specific versions of packages and Linux&reg; operating systems distributions that contain published vulnerabilities.
 {: shortdesc}
+
+These Code Risk Analyzer Tekton pipeline tasks and definitions are deprecated. As of 1 October, 2021, you must use the new Tekton pipeline tasks and definitions that are provided in the [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
+{: deprecated}
 
 ## Supported content
 {: #cra_supported_content}
