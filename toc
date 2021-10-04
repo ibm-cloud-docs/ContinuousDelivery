@@ -180,6 +180,7 @@ Continuous Delivery
 
     {: .topicgroup}
     Command reference
+        /code-risk-analyzer-cli-plugin/code-risk-analyzer-cli-plugin-cra-cli-plugin
         /devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
         /cli/cli-idt-cli
         [grunt-idra3 (deprecated)](https://www.npmjs.com/package/grunt-idra3)
