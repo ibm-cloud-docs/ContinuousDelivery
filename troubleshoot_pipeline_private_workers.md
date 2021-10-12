@@ -28,7 +28,7 @@ subcollection: ContinuousDelivery
 {: #troubleshoot-pipeline-private-workers}
 
 General problems with using Pipeline Private Workers might include Kubernetes cluster and kubectl version issues. In many cases, you can recover from these problems by following a few easy steps.
-{:shortdesc}
+{: shortdesc}
 
 ## Why is my {{site.data.keyword.deliverypipeline}} Private Worker inactive?
 {: #troubleshoot-pw-inactive}

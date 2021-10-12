@@ -29,7 +29,7 @@ subcollection: ContinuousDelivery
 {: #faq_pipeline_private_workers}
 
 Get answers to frequently asked questions about using Pipeline Private Workers.
-{:shortdesc} 
+{: shortdesc} 
 
 
 ## How do I view the status of private workers on multiple clusters by using the CLI?

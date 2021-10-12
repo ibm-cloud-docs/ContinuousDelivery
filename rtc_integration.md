@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 {: #rationalteamconcert}
 
 IBM Rational Team Concert&trade; is a team collaboration tool that integrates development tasks, including iteration planning, change management, defect tracking, source control, build automation, and reporting.
-{:shortdesc}
+{: shortdesc}
 
 Configure Rational Team Concert to practice a DevOps approach and continuous delivery in your development environment:
 
@@ -59,4 +59,4 @@ Configure Rational Team Concert to practice a DevOps approach and continuous del
 
 ## Learn more about Rational Team Concert
 
-To learn more about Rational Team Concert, see the [IBM Rational Team Concert article](https://www.ibm.com/cloud/garage/content/think/tool_rtc/){:external} on the IBM Cloud Garage Method.
+To learn more about Rational Team Concert, see the [IBM Rational Team Concert article](https://www.ibm.com/cloud/garage/content/think/tool_rtc/){: external} on the IBM Cloud Garage Method.

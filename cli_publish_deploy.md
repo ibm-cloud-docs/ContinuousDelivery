@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #publish-deploy-cli}
 
 Deployment records inform {{site.data.keyword.DRA_short}} about the deployments that are made during the deployment process. This record contains the application name, build ID, environment name, status of the deployment, and more. 
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin
@@ -46,7 +46,7 @@ ibmcloud login --apikey $API_KEY --no-region
 
 ibmcloud doi deployrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --env staging --status pass
 ```
-{:codeblock}
+{: codeblock}
 
 ## Viewing deployment frequency
 {: #deploy-frequency-cli}

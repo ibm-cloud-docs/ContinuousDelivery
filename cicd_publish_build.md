@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #publish-build-cicd}
 
 You can publish a build record by using other continuous integration and continuous delivery (CI/CD) tools with the {{site.data.keyword.Bluemix_notm}} command line interface (CLI) to integrate with {{site.data.keyword.DRA_full}}. Build records notify {{site.data.keyword.DRA_short}} when a build is complete. This record contains the application name, branch, build ID, reference to Git repo, and other fields. You must publish build records to view any test records, deployment records, or evaluate policies in {{site.data.keyword.DRA_short}}.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin
@@ -50,7 +50,7 @@ ibmcloud login --apikey $API_KEY --no-region
 
 ibmcloud doi buildrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --branch $GIT_BRANCH --repositoryurl $GIT_URL --commitid $GIT_COMMIT --status pass
 ```
-{:codeblock}
+{: codeblock}
 
 The `status` field takes the `pass` or `fail` values.
 {: tip}

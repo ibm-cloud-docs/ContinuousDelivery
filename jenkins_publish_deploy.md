@@ -23,7 +23,7 @@ subcollection: ContinuousDelivery
 {: #publish-deploy-jenkins}
 
 You can publish a deployment record by using Jenkins to integrate your projects with {{site.data.keyword.DRA_full}}. Deployment records inform {{site.data.keyword.DRA_short}} about the deployments that are made during the deployment process. This record contains the application name, build ID, environment name, status of the deployment, and more. The application name and build ID in the deployment record must match the ones that are used in the build record for a specific build.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin
@@ -52,7 +52,7 @@ The following example commands include the parameters. The first command publish
 publishDeployRecord environment: "STAGING", appUrl: "http://staging-Weather-App.mybluemix.net", result:"SUCCESS"
 publishDeployRecord environment: "PRODUCTION", appUrl: "http://Weather-App.mybluemix.net", result:"SUCCESS"
 ```
-{:codeblock}
+{: codeblock}
 
 For each command, you need to specify the toolchain ID to export the environment variable. For more information, see [Environment variables and definitions](/docs/ContinuousDelivery?topic=ContinuousDelivery-publish-build-jenkins). 
 {: note} 

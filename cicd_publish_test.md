@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #publish-test-cicd}
 
 You can publish test results by using other continuous integration and continuous delivery (CI/CD) tools with the {{site.data.keyword.Bluemix}} command line interface (CLI) to integrate with {{site.data.keyword.DRA_full}}. Test results inform {{site.data.keyword.DRA_short}} about the tests that are run during the build process. These tests must generate some kind of JSON or XML-based file.
-{:shortdesc}
+{: shortdesc}
 
 The generated test file is published as a test record. Along with the test file, this record contains the application name, build number, types of test, and other fields. The application name and build ID in the test record must match the ones that are used in the build record for a specific build. After you run a test in your CI/CD tool, you can upload the results to {{site.data.keyword.DRA_short}}
 
@@ -49,7 +49,7 @@ ibmcloud login --apikey $API_KEY --no-region
 
 ibmcloud doi testrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --filelocation fvttest.json --type fvt
 ```
-{:codeblock}
+{: codeblock}
 
 In the example script, the `testrecord-publish` command specifies that the command uploads test records. The `--filelocation` flag indicates the location of the test results file relative to the root directory of the job. The `--type` flag indicates the type of test result.
 
@@ -69,7 +69,7 @@ ibmcloud login --apikey $API_KEY --no-region
 ibmcloud doi testrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --filelocation /test/results/mocha.xml --type unittest
 ibmcloud doi testrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --filelocation ./coverage/coverage-summary.json --type code
 ```
-{:codeblock}
+{: codeblock}
 
 The command supports the following `type` values:
 

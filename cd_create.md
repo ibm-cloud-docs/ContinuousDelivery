@@ -36,7 +36,7 @@ After you create a {{site.data.keyword.contdelivery_short}} service instance by 
 You can have one active instance of {{site.data.keyword.contdelivery_short}} only in a region and resource group. For information about deleting an existing service instance, see [Deleting a {{site.data.keyword.contdelivery_short}} service instance](/docs/ContinuousDelivery?topic=ContinuousDelivery-delete_cd_service).
 {: important}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){:external}.
+1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
 1. From the {{site.data.keyword.cloud_notm}} console, click **Catalog** and select **Services**.
 1. Select the **Developer Tools** category.
 1. Click the **{{site.data.keyword.contdelivery_short}}** tile.

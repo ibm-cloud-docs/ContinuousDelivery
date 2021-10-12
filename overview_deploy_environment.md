@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #deployment-environment}
 
 Risk analysis is useful for customers that deploy to several environments. You can view all of your apps deployments and deployment environments. With risk analysis, you get an overview of the risks that are associated with your applications from all of your environments. The Risk Analysis page is automatically populated with the most recent information that is sent from your continuous integration and continuous delivery (CI/CD) tools. 
-{:shortdesc}
+{: shortdesc}
 
 ![Deployment Risk analysis](images/DRA_risk_analysis.png "Risk Analysis page with the Environment tab selected") Figure 1. Risk Analysis page example
 

@@ -23,7 +23,7 @@ subcollection: ContinuousDelivery
 {: #publish-deploy-idra}
 
 You can publish a deployment record by using idra (deprecated) to integrate your {{site.data.keyword.deliverypipeline}} with {{site.data.keyword.DRA_short}}. Deployment records inform {{site.data.keyword.DRA_full}} about the deployments that are made during the deployment process. This record contains the application name, build ID, environment name, status of the deployment, and more. The application name and build ID in the deployment record must match the ones that are used in the build record for a specific build.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin
@@ -49,7 +49,7 @@ npm install -g grunt-idra3
 
 idra --publishdeployrecord --env=staging --status=pass
 ```
-{:codeblock}
+{: codeblock}
 
 Environment variables that you define in the pipeline provide context for publishing these records. You can define them by using the `export` command in your jobs' scripts. You can also set them in each pipeline stage's Environment Properties menu.
 

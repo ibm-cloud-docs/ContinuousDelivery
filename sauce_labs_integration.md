@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 {: #saucelabs}
 
 Sauce Labs runs functional unit tests. When a Sauce Labs test suite is configured as a test job in the {{site.data.keyword.deliverypipeline}}, the test suite can run tests against your web or mobile app as part of your continuous delivery process. These tests can provide valuable flow control for your projects, acting as gates to prevent the deployment of bad code.
-{:shortdesc}
+{: shortdesc}
 
  This tool integration is available only on {{site.data.keyword.cloud_notm}} Public.
  {: tip}
@@ -39,8 +39,8 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 
  b. In the Tool Integrations section, click **Sauce Labs**.
 
-1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message on your Sauce Labs account page](https://app.saucelabs.com/user-settings){:external}.
-1. Type the access key for your Sauce Labs account. You can [find the key on your Sauce Labs account page](https://app.saucelabs.com/user-settings){:external}.
+1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message on your Sauce Labs account page](https://app.saucelabs.com/user-settings){: external}.
+1. Type the access key for your Sauce Labs account. You can [find the key on your Sauce Labs account page](https://app.saucelabs.com/user-settings){: external}.
 1. Click **Create Integration**.
 1. Click **Sauce Labs** to go to saucelabs.com and view the test activity for the toolchain.
 
@@ -49,6 +49,6 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 
 ## Learn more about Sauce Labs
 
-To learn more about Sauce Labs, see the [Sauce Labs article](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){:external} on the IBM Cloud Garage Method or take this tutorial:
+To learn more about Sauce Labs, see the [Sauce Labs article](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: external} on the IBM Cloud Garage Method or take this tutorial:
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}

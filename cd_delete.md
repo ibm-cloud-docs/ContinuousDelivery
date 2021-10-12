@@ -48,7 +48,7 @@ You can delete a resource group-based {{site.data.keyword.contdelivery_short}} s
 {: #deleting_rg_console}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
+1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. Go to the [Resource list](https://cloud.ibm.com/resources){: external} for your {{site.data.keyword.cloud_notm}} account.
 1. In the **Services** section, locate the active {{site.data.keyword.contdelivery_short}} service instance.
 1. From the {{site.data.keyword.contdelivery_short}} service instance's **Actions** ![Overflow icon](images/overflow-icon-2.svg) menu, click **Delete**.
@@ -89,7 +89,7 @@ You can have one active instance of {{site.data.keyword.contdelivery_short}} onl
 You can no longer create Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances because they are deprecated. To prevent accidental deletion of existing service instances, you cannot delete any instances that contain toolchains within the org that they reside in. After you delete a Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instance, you cannot restore or re-create it. Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances do not have a reclamation period.
 {: important}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
+1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. Delete all of the toolchains in the Cloud Foundry org that contains the {{site.data.keyword.contdelivery_short}} service instance:
 
   a. Go to the [Toolchains](https://cloud.ibm.com/devops/toolchains){: external} page for your {{site.data.keyword.cloud_notm}} account.

@@ -31,7 +31,7 @@ completion-time: 30m
 In this tutorial, you learn how to use Docker image signing to validate image integrity as part of your {{site.data.keyword.contdelivery_full}} toolchain.
 {: shortdesc}
 
-The Develop a Kubernetes app with secure image signing template expands on the [Develop a Kubernetes app with Tekton Pipelines tutorial](https://www.ibm.com/cloud/architecture/tutorials/use-develop-kubernetes-app-toolchain-with-tekton-pipelines){:external} by adding validation controls to the Docker image. Digital signatures are applied to the Docker image at specific validation stages. An image security enforcement policy is applied to the Kubernetes cluster that requires the digital signatures are applied before you can continue the deployment. 
+The Develop a Kubernetes app with secure image signing template expands on the [Develop a Kubernetes app with Tekton Pipelines tutorial](https://www.ibm.com/cloud/architecture/tutorials/use-develop-kubernetes-app-toolchain-with-tekton-pipelines){: external} by adding validation controls to the Docker image. Digital signatures are applied to the Docker image at specific validation stages. An image security enforcement policy is applied to the Kubernetes cluster that requires the digital signatures are applied before you can continue the deployment. 
 
 This toolchain requires you to use a [Key Protect](/docs/key-protect) vault instance that is pre-populated with signing keys. 
 

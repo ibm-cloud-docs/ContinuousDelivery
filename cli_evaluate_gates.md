@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #evaluate-gates-cli}
 
 {{site.data.keyword.DRA_full}} gates check whether your test results comply with a defined policy. If the policy is not met, the gate fails by default. You can also configure gates to act in an advisory role to allow pipeline progression even after failure.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin
@@ -50,7 +50,7 @@ ibmcloud login --apikey $API_KEY --no-region
 # The following line assumes that MY_APP_NAME and MY_BUILD_NUMBER environment variables have already been set.  POLICY is the name of the policy being evaluated.
 ibmcloud doi gate-evaluate --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --policy "$POLICY_NAME"
 ```
-{:codeblock}
+{: codeblock}
 
 
 ## Viewing gate evaluation

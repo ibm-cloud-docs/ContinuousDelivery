@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 {: #artifactory}
 
 Configure the Artifactory repository manager to store build artifacts in your Artifactory repository (repo).
-{:shortdesc}
+{: shortdesc}
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Artifactory**.
 
@@ -126,4 +126,4 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
 
 ## Learn more about Artifactory
 
-To learn more about Artifactory, see the [Artifactory article](https://www.ibm.com/cloud/garage/content/deliver/tool_artifactory/){:external} on the IBM Cloud Garage Method.
+To learn more about Artifactory, see the [Artifactory article](https://www.ibm.com/cloud/garage/content/deliver/tool_artifactory/){: external} on the IBM Cloud Garage Method.

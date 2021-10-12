@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 {: #sonarqube}
 
 SonarQube provides an overview of the overall health and quality of your source code and highlights issues that are found in new code. The code analyzers detect tricky bugs, such as null-pointer dereferences, logic errors, and resource leaks, for more than 20 coding languages.
-{:shortdesc}
+{: shortdesc}
 
 Configure SonarQube to continuously analyze and measure the quality of your source code:
 
@@ -113,4 +113,4 @@ You can modify your `.pipeline-config.yaml` file to add your own custom script t
 ## Learn more about SonarQube
 {: #sonarqube-learn-more}
 
-To learn more about SonarQube, see [Integrate your SonarQube analysis into your toolchain](https://www.ibm.com/blogs/cloud-archive/2017/06/integrate-sonarqube-analysis-into-your-toolchain/){:external}. 
+To learn more about SonarQube, see [Integrate your SonarQube analysis into your toolchain](https://www.ibm.com/blogs/cloud-archive/2017/06/integrate-sonarqube-analysis-into-your-toolchain/){: external}. 

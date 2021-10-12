@@ -83,14 +83,14 @@ To authenticate with your Git repo over HTTPS, you must create a personal access
 To learn more, see [Personal access tokens](https://us-south.git.cloud.ibm.com/help/api/README.html#personal-access-tokens){: external}.
 
 ### Creating an SSH key  
-{:create_ssh }
+{: create_ssh }
 
 To create an SSH key, see [How to create your SSH Keys](https://us-south.git.cloud.ibm.com/help/gitlab-basics/create-your-ssh-keys){: external}. Accessing your repositories with SSH authentication might require more configuration for proxies and firewalls.
 
 To learn more, see [SSH](https://us-south.git.cloud.ibm.com/help/ssh/README){: external}.
 
 ### Verifying host key fingerprints
-{:verify_fingerprints }
+{: verify_fingerprints }
 
 The first time that you connect to a server by way of Git over SSH, the Git client prompts you to accept the host key fingerprint of the server. You can use the following host key fingerprints to verify SSH connections with the {{site.data.keyword.cloud_notm}} {{site.data.keyword.gitrepos}} servers. Proceed with the connection only if the host key fingerprint matches the specified value for the server that is provided in the following code snippets. 
 

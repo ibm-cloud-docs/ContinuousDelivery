@@ -28,7 +28,7 @@ subcollection: ContinuousDelivery
 {: #troubleshoot-insights}
 
 General problems with using {{site.data.keyword.DRA_short}} might include toolchains, toolchain templates, or tool integration configuration issues. In many cases, you can recover from these problems by following a few easy steps.
-{:shortdesc}
+{: shortdesc}
 
 
 ## How do I find toolchains that support {{site.data.keyword.DRA_short}}?

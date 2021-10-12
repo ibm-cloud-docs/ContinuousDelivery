@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 {: #pagerduty}
 
 PagerDuty integrates data from multiple monitoring systems into a single view. When a problem occurs, PagerDuty ensures that the team member who is best able to fix it at the time is notified. If the team member does not respond to the problem, escalations can be configured to route it to secondary representatives or operations managers.
-{:shortdesc}
+{: shortdesc}
 
 Configure PagerDuty to send notifications when pipeline stage failures occur so that you can fix problems faster and reduce downtime:
 
@@ -38,7 +38,7 @@ Configure PagerDuty to send notifications when pipeline stage failures occur so 
 
 1. If you want to integrate PagerDuty at the account level by using an API key, click **Account**:
 
- a. Type the API access key for your PagerDuty account. If you don't have a PagerDuty account, [register for one](https://www.pagerduty.com/sign-up/){:external}. For instructions to find the key, see [Generating an API Key](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){:external}.
+ a. Type the API access key for your PagerDuty account. If you don't have a PagerDuty account, [register for one](https://www.pagerduty.com/sign-up/){: external}. For instructions to find the key, see [Generating an API Key](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){:external}.
 
  b. Type the name of your PagerDuty service.
 
@@ -57,8 +57,8 @@ Configure PagerDuty to send notifications when pipeline stage failures occur so 
 
 ## Learn more about PagerDuty
 
-To learn more about PagerDuty, see the [PagerDuty article](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){:external} on the IBM Cloud Garage Method or take this tutorial and the Garage Method advocate course:
+To learn more about PagerDuty, see the [PagerDuty article](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){: external} on the IBM Cloud Garage Method or take this tutorial and the Garage Method advocate course:
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){:external}
+  * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}
 
-  * [Become a Garage Method advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){:external}
+  * [Become a Garage Method advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){: external}

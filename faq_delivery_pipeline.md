@@ -29,7 +29,7 @@ subcollection: ContinuousDelivery
 {: #faq_delivery_pipeline}
 
 Get answers to frequently asked questions about using {{site.data.keyword.deliverypipeline}}.
-{:shortdesc} 
+{: shortdesc} 
 
 
 ## How do I pass artifacts between pipeline jobs?

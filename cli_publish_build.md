@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #publish-build-cli}
 
 Build records notify {{site.data.keyword.DRA_full}} when a build is complete. This record contains the application name, branch, build ID, reference to Git repo, and other fields. You must publish build records to view any test records, deployment records, or evaluate policies in {{site.data.keyword.DRA_short}}.  
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin
@@ -50,7 +50,7 @@ ibmcloud login --apikey $API_KEY --no-region
 
 ibmcloud doi buildrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --branch $GIT_BRANCH --repositoryurl $GIT_URL --commitid $GIT_COMMIT --status pass
 ```
-{:codeblock}
+{: codeblock}
 
 The `status` field takes the values `pass` or `fail`.
 {: tip}

@@ -24,7 +24,7 @@ subcollection: ContinuousDelivery
 {: #publish-test-jenkins}
 
 You can publish test results by using Jenkins to integrate your projects with {{site.data.keyword.DRA_full}}. Test results inform {{site.data.keyword.DRA_short}} about the tests that are run during the build process. These tests must generate some kind of JSON or XML-based file. 
-{:shortdesc}
+{: shortdesc}
 
 The generated test file is published as a test record. Along with the test file, this record contains the application name, build number, types of test, and other fields. The application name and build ID in the test record must match the ones that are used in the build record for a specific build. After you run a test in a pipeline, you can upload the results to {{site.data.keyword.DRA_short}}.
 
@@ -83,7 +83,7 @@ publishTestResults type:'staticsecurityscan', fileLocation: './static-result.xml
 publishTestResults type:'dynamicsecurityscan', fileLocation: './dynamic-result.xml'
 publishTestResults type:'vulnerabilityadvisor', fileLocation: './vulnerability-advisor.json'
 ```
-{:codeblock}
+{: codeblock}
 
 For each command, you need to specify the toolchain ID to export the environment variable. For more information, see [Environment variables and definitions](/docs/ContinuousDelivery?topic=ContinuousDelivery-publish-build-jenkins). 
 {: note} 
@@ -133,7 +133,7 @@ stage ("SonarQube Quality Gate") {
     }
 }
 ```
-{:codeblock}
+{: codeblock}
 
 
 ## Viewing test results

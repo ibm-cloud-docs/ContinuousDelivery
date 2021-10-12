@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 {: #gitlab}
 
 GitLab is a web-based hosting service for Git repos. You can have both local and remote copies of your repos, which makes it easy to collaborate.
-{:shortdesc}
+{: shortdesc}
 
 You can configure GitLab as a tool integration in your toolchain so that you can manage source code in a new or existing repo on GitLab.com or your company's GitLab instance. Engage in social coding through wikis, issue tracking, and merge requests.
 
@@ -72,7 +72,7 @@ If you have a toolchain and are adding this tool integration to it, follow these
 
 1. If you want to create a public repo on the server, clear the **Make this repository private** checkbox.
 1. If you want to use GitLab's Issues for issue tracking, select the **Enable GitLab Issues** checkbox.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}.
 1. Click **Create Integration**.
 1. Click the card for the GitLab repo that you want to work with. Depending on the repo that you selected, either the GitLab website or your company's GitLab repo opens, where you can view the contents of the repo.
 
@@ -86,4 +86,4 @@ If you don't have owner or master privileges for the repo that you are linking t
 
 ## Learn more about GitLab
 
-To learn more about GitLab, see the [GitLab article](https://www.ibm.com/cloud/garage/content/code/tool_gitlab/){:external} on the IBM Cloud Garage Method.
+To learn more about GitLab, see the [GitLab article](https://www.ibm.com/cloud/garage/content/code/tool_gitlab/){: external} on the IBM Cloud Garage Method.

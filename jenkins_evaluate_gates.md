@@ -23,7 +23,7 @@ subcollection: ContinuousDelivery
 {: #evaluate-gates-jenkins}
 
 You can evaluate gates by using Jenkins to integrate your project with {{site.data.keyword.DRA_full}}. {{site.data.keyword.DRA_short}} gates check whether your test results comply with a defined policy. If the policy is not met, the {{site.data.keyword.DRA_short}} gate fails by default. You can also configure gates to act in an advisory role to allow pipeline progression even after failure.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin
@@ -52,7 +52,7 @@ The following example command includes the parameters. In this command, the pipe
 ```
 evaluateGate policy: 'Weather App Policy', forceDecision: 'true'
 ```
-{:codeblock}
+{: codeblock}
 
 
 ## Viewing gate evaluation

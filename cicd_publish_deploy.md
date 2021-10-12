@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #publish-deploy-cicd}
 
 You can publish a deployment record by using other continuous integration and continuous delivery (CI/CD) tools with the {{site.data.keyword.Bluemix}} command line interface (CLI) to integrate with {{site.data.keyword.DRA_full}}. Deployment records inform {{site.data.keyword.DRA_short}} about the deployments that are made during the deployment process. This record contains the application name, build ID, environment name, status of the deployment, and more. The application name and build ID in the deployment record must match the ones that are used in the build record for a specific build.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin
@@ -47,7 +47,7 @@ ibmcloud login --apikey $API_KEY --no-region
 
 ibmcloud doi deployrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --env staging --status pass
 ```
-{:codeblock}
+{: codeblock}
 
 
 ## Providing a job url to upload deployment records
@@ -58,7 +58,7 @@ Provide a `joburl` to upload deployment records. To include `joburl` as a parame
 ```
 ibmcloud doi deploymentrecord-publish --logicalappname "$MY_APP_NAME" --buildnumber "$MY_BUILD_NUMBER" --env staging --joburl "$JOB_URL" --status pass
 ```
-{:codeblock}
+{: codeblock}
 
 
 ## Viewing Deployment Frequency

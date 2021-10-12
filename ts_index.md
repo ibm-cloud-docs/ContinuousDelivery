@@ -29,7 +29,7 @@ subcollection: ContinuousDelivery
 {: #ts_cd}
 
 Get answers to frequently asked questions about using {{site.data.keyword.contdelivery_full}}.
-{:shortdesc} 
+{: shortdesc} 
 
 
 ## My {{site.data.keyword.contdelivery_short}} service states that Lite plan services are deleted after 30 days of inactivity. What does inactivity mean?

@@ -24,7 +24,7 @@ subcollection: ContinuousDelivery
 {: #publish-build-jenkins}
 
 You can publish a build record by using Jenkins to integrate your projects with {{site.data.keyword.DRA_full}}. Build records notify {{site.data.keyword.DRA_short}} when a build is complete. This record contains the application name, branch, build ID, reference to Git repo, and other fields. You must publish build records to view any test records, deployment records, or evaluate policies in {{site.data.keyword.DRA_short}}. 
-{:shortdesc}
+{: shortdesc}
 
 {{site.data.keyword.DRA_full}} tracks deployment risk based on published test data. When you integrate Jenkins with {{site.data.keyword.DRA_short}}, you are instrumenting {{site.data.keyword.DRA_short}} to gather information from your Jenkins project. Information that is gathered is presented in the {{site.data.keyword.DRA_short}} dashboard to provide visibility into your DevOps process. 
 
@@ -58,7 +58,7 @@ environment {
         IBM_CLOUD_DEVOPS_TOOLCHAIN_ID = '1111111-aaaa-2222-bbbb-333333333'
     }
 ```
-{:codeblock}
+{: codeblock}
 
 For more information about creating an API key, see [Managing user API keys](/docs/services/account?topic=account-userapikey).
 
@@ -102,7 +102,7 @@ stages {
     }
 }
 ```
-{:codeblock}
+{: codeblock}
 
 The Jenkins Pipeline doesn't show Git information as environment variables. You can get the Git commit ID by using the command sh(returnStdout: true, script: 'Git rev-parse HEAD').trim().
 

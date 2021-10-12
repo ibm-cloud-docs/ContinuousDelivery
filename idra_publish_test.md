@@ -23,7 +23,7 @@ subcollection: ContinuousDelivery
 {: #publish-test-idra}
 
 You can publish test results by using idra (deprecated) to integrate your {{site.data.keyword.deliverypipeline}} with {{site.data.keyword.DRA_short}}. Test results inform {{site.data.keyword.DRA_full}} about the tests that are run during the build process. These tests must generate some kind of JSON or XML-based file. The generated test file is published as a test record. Along with the test file, this record contains the application name, build number, types of test, and other fields. The application name and build ID in the test record must match the ones that are used in the build record for a specific build. After you run a test in a pipeline, you can upload the results to {{site.data.keyword.DRA_short}}.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin
@@ -62,7 +62,7 @@ npm install -g grunt-idra3
 
 idra --publishtestresult --filelocation=fvttest.json --type=fvt
 ```
-{:codeblock}
+{: codeblock}
 
 In the example script, the `idra` command with the `--publishtestresult` flag specifies that the script uploads results. The `--filelocation` flag indicates the location of the test results file relative to the root directory of the job. The `--type` flag indicates the type of test result.
 
@@ -83,7 +83,7 @@ npm install -g grunt-idra3
 idra --publishtestresult --filelocation=./test/results/mocha.xml --type=unittest
 idra --publishtestresult --filelocation=./coverage/coverage-summary.json --type=code
 ```
-{:codeblock}
+{: codeblock}
 
 The `idra` command supports the following `type` values:
 

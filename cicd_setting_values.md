@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #setting-values-cicd}
 
 You can set consistent parameter values by using other continuous integration and continuous delivery (CI/CD) tools to integrate with {{site.data.keyword.DRA_full}}. To publish build records, test records, deployment records, and to evaluate gate policies within the same pipeline, you must use the same app name and build number for each stage. You need to pass parameter values `logicalappname` and `buildnumber`, and export your toolchain ID to use consistently with {{site.data.keyword.DRA_short}}. To use consistent identifiers, set your properties as environment properties.
-{:shortdesc}
+{: shortdesc}
 
 {{site.data.keyword.DRA_short}} tracks deployment risk based on published test data. When you integrate {{site.data.keyword.DRA_short}} with your continuous integration and continuous delivery (CI/CD) tool, you're instrumenting {{site.data.keyword.DRA_short}} to gather information to provide you with important data for visibility of quality.
 
@@ -53,7 +53,7 @@ Use the following steps to go to the {{site.data.keyword.contdelivery_short}} pi
 ```
 export TOOLCHAIN_ID="YOUR_TOOLCHAIN_ID_HERE"
 ```
-{:codeblock}
+{: codeblock}
 
 
 ## Setting environment properties

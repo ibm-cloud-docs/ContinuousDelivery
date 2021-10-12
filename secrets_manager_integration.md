@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 {: #secretsmanager}
 
 {{site.data.keyword.secrets-manager_full}} helps you to securely store and apply secrets for apps across {{site.data.keyword.cloud_notm}} services.
-{:shortdesc}
+{: shortdesc}
 
 A *secret* is anything that provides access to sensitive information, such as an [API key](/docs/account?topic=account-manapikey). If you store secrets as arbitrary keys in {{site.data.keyword.secrets-manager_short}}, you can use this tool integration to access secrets wherever they are needed in the toolchain workflow. To learn more about arbitrary secrets in {{site.data.keyword.secrets-manager_short}}, see [Secret types](/docs/secrets-manager?topic=secrets-manager-what-is-secret#secret-types).
 

@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 {: #integrations}
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create an open toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
-{:shortdesc}
+{: shortdesc}
 
 The tool integrations that are available to add and configure for your toolchain are different depending on whether you are using toolchains on {{site.data.keyword.cloud}} Public or {{site.data.keyword.cloud_notm}} Dedicated. If you are using toolchains on {{site.data.keyword.cloud_notm}} Public, the tool integrations that are available to you depend on the region of your toolchain and the availability of tool integrations in that region. If you are using toolchains on {{site.data.keyword.cloud_notm}} Dedicated, the tool integrations that are available to you depend on how {{site.data.keyword.contdelivery_full}} was set up on your specific environment.
 

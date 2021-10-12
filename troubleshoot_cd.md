@@ -28,7 +28,7 @@ subcollection: ContinuousDelivery
 {: #troubleshoot-cd}
 
 General problems with using {{site.data.keyword.contdelivery_full}} might include Cloud Foundry issues. In many cases, you can recover from these problems by following a few easy steps.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Why can't I add {{site.data.keyword.contdelivery_short}} to a Cloud Foundry org?
@@ -73,7 +73,7 @@ Locate and delete any toolchains that are in the same account, region, and org a
 Org-based toolchains aren't visible from the command line or the resource list. To find and delete these toolchains, go to the [Toolchains](https://cloud.ibm.com/devops){: external} page. When you search for toolchains that are blocking the deletion of the {{site.data.keyword.contdelivery_short}} service instance, look in the account, region, and org where the service instance is located.
 {: tip}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
+1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. If you have more than one account, you can click your account name in the {{site.data.keyword.cloud_notm}} console menu bar to select another account that you can access. 
 1. Go to the [Resource list](https://cloud.ibm.com/resources){: external} for your {{site.data.keyword.cloud_notm}} account.
 1. Make note of the location and the org that the {{site.data.keyword.cloud_notm}} service is contained in.

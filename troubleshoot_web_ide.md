@@ -28,7 +28,7 @@ subcollection: ContinuousDelivery
 {: #troubleshoot-web-ide}
 
 General problems with using the Eclipse Orion {{site.data.keyword.webide}} might include issues with Live Edit mode. In many cases, you can recover from these problems by following a few easy steps.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Why is Live Edit unavailable after I commit and push to a repo?

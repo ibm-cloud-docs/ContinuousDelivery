@@ -25,9 +25,9 @@ subcollection: ContinuousDelivery
 {: #jira}
 
 JIRA is a tool that tracks issues and bugs that are related to your software. The JIRA tool integration updates your project's issues whenever Jenkins or {{site.data.keyword.deliverypipeline}} runs a deployment.
-{:shortdesc}
+{: shortdesc}
 
-In order for the JIRA tool integration to track your issues, you must use JIRA Smart Commits in your commit messages. To learn more about JIRA Smart Commits, see [Using Smart Commits](https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html){:external}.
+In order for the JIRA tool integration to track your issues, you must use JIRA Smart Commits in your commit messages. To learn more about JIRA Smart Commits, see [Using Smart Commits](https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html){: external}.
 
 Configure JIRA to plan, track, and deliver quality code:
 
@@ -69,4 +69,4 @@ Configure JIRA to plan, track, and deliver quality code:
 
 ## Learn more about JIRA
 
-To learn more about JIRA, see the [JIRA article](https://www.ibm.com/garage/method/practices/code/tool_jira){:external} on the IBM Cloud Garage Method.
+To learn more about JIRA, see the [JIRA article](https://www.ibm.com/garage/method/practices/code/tool_jira){: external} on the IBM Cloud Garage Method.

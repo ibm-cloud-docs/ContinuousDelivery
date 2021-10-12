@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #observe-trends}
 
 The Quality Trends page shows the number of test cases that are passed or failed for a particular build. You can view trends for quality data sets such as unit tests, functional verification tests, code coverages, SonarQube scans, and security scans for builds. 
-{:shortdesc}
+{: shortdesc}
 
 For more information about data sets, see [Managing data sets](/docs/ContinuousDelivery?topic=ContinuousDelivery-adding-data-sets).
 

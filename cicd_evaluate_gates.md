@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #evaluate-gates-cicd}
 
 You can evaluate gates by using other continuous integration and continuous delivery (CI/CD) tools with the {{site.data.keyword.Bluemix}} command line interface (CLI) to integrate with {{site.data.keyword.DRA_full}}. {{site.data.keyword.DRA_short}} gates check whether your test results comply with a defined policy. If the policy is not met, the {{site.data.keyword.DRA_short}} gate fails by default. You can also configure gates to act in an advisory role to allow CI/CD tool progression even after failure.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin
@@ -50,7 +50,7 @@ ibmcloud login --apikey $API_KEY --no-region
 # The following line assumes that MY_APP_NAME and MY_BUILD_NUMBER environment variables have already been set.  POLICY is the name of the policy being evaluated.
 ibmcloud doi gate-evaluate --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --policy POLICY
 ```
-{:codeblock}
+{: codeblock}
 
 
 ## Viewing gate evaluation

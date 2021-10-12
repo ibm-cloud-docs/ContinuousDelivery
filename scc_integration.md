@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 {: #scc}
 
 You can use the {{site.data.keyword.compliance_full}} to embed security checks into your everyday workflows to monitor for security and compliance. By monitoring for risks, you can identify security vulnerabilities and quickly work to mitigate the impact and fix the issues.
-{:shortdesc}
+{: shortdesc}
 
 Currently, you can use this tool integration only with toolchains that are created from the DevSecOps continuous ingtegration and continuous delivery templates. Before you configure a {{site.data.keyword.compliance_short}} tool integration, make sure that you have a Git repository (repo) that contains the evidence locker for your toolchain and a configured Git tool integration that points to this repo.
 {: important}

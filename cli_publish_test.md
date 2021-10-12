@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #publish-test-cli}
 
 Test results inform {{site.data.keyword.DRA_short}} about the tests that are run during the build process. These tests must generate a JSON or XML-based file. The generated test file is published as a test record. Along with the test file, this record contains the application name, build number, types of test, and other fields.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin
@@ -47,7 +47,7 @@ ibmcloud login --apikey $API_KEY --no-region
 
 ibmcloud doi testrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --filelocation fvttest.json --type fvt
 ```
-{:codeblock}
+{: codeblock}
 
 In the example script, `testrecord-publish` specifies that the command uploads test records. The `--filelocation` flag indicates the location of the test results file relative to the root directory of the job. The `--type` flag indicates the type of test result.
 
@@ -67,7 +67,7 @@ ibmcloud login --apikey $API_KEY --no-region
 ibmcloud doi testrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --filelocation /test/results/mocha.xml --type unittest
 ibmcloud doi testrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --filelocation ./coverage/coverage-summary.json --type code
 ```
-{:codeblock}
+{: codeblock}
 
 The command supports the following `type` values:
 

@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 {: #hashicorpvault}
 
 You can configure HashiCorp Vault as a tool integration in your toolchain so that you can access and refer to securely stored secrets in a HashiCorp Vault server.
-{:shortdesc}
+{: shortdesc}
 
 Before you configure the HashiCorp Vault tool integration for your toolchain, you need the authentication method and associated credentials with permission to access the HashiCorp Vault server that you want to connect to. For example, if the `authentication_method` is `github`, you must know your `token` credential. You also need to know the values for the `server url`, `integration url`, and `secrets path`. If the HashiCorp Vault server is bound to a specific port, include the port number in the server url. For example, `https://192.168.0.100:8200`.
 {: important}
@@ -48,4 +48,4 @@ Configure HashiCorp Vault to securely manage secrets such as API keys and secret
 
 ## Learn more about HashiCorp Vault
 
-To learn more about HashiCorp Vault, see [HashiCorp Vault](https://www.vaultproject.io/){:external}.
+To learn more about HashiCorp Vault, see [HashiCorp Vault](https://www.vaultproject.io/){: external}.

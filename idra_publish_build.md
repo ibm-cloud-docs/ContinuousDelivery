@@ -23,7 +23,7 @@ subcollection: ContinuousDelivery
 {: #publish-build-idra}
 
 You can publish a build record by using idra (deprecated) to integrate your {{site.data.keyword.deliverypipeline}} with {{site.data.keyword.DRA_full}}. Build records notify {{site.data.keyword.DRA_short}} when a build is complete. This record contains the application name, branch, build ID, reference to Git repo, and more. You must publish build records to view any test records, deployment records, or evaluate policies in {{site.data.keyword.DRA_short}}.  
-{:shortdesc}
+{: shortdesc}
 
 {{site.data.keyword.DRA_short}} tracks deployment risk based on published test data. When you integrate {{site.data.keyword.DRA_short}} with your {{site.data.keyword.deliverypipeline}}, you are instrumenting {{site.data.keyword.DRA_short}} to gather information from the pipeline. Information that is gathered from the pipeline is presented in {{site.data.keyword.DRA_short}} dashboard to provide visibility into your DevOps process.
 
@@ -58,7 +58,7 @@ npm install -g grunt-idra3
 
 idra --publishbuildrecord --branch=$GIT_BRANCH --repositoryurl=$GIT_URL --commitid=$GIT_COMMIT --status=pass
 ```
-{:codeblock}
+{: codeblock}
 
 Environment variables that you define in the pipeline provide context for publishing these records. You can define them by using the `export` command in your jobs' scripts. You can also set them in each pipeline stage's Environment Properties menu.
 

@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #migration-ibmcloud-cli}
 
 The grunt-idra3 CLI for {{site.data.keyword.DRA_full}} is deprecated and is replaced by {{site.data.keyword.cloud_notm}} CLI. To migrate to {{site.data.keyword.cloud_notm}} CLI, replace your call to idra with a call to the {{site.data.keyword.cloud_notm}} CLI. 
-{:shortdesc}
+{: shortdesc}
 
 grunt-idra3 CLI needs a node.js environment, but the {{site.data.keyword.cloud_notm}} CLI runs in any environment. It requires fewer environment variables, and also provides better assistance when you use the `--help` option.
 
@@ -52,7 +52,7 @@ npm install -g grunt-idra3
 
 idra --publishbuildrecord --branch=$GIT_BRANCH --repositoryurl=$GIT_URL --commitid=$GIT_COMMIT --status=pass
 ```
-{:codeblock}
+{: codeblock}
 
 Here is the same command invocation for the {{site.data.keyword.cloud_notm}} CLI:
 
@@ -67,7 +67,7 @@ ibmcloud plugin install doi
 
 ibmcloud doi buildrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --branch $GIT_BRANCH --repositoryurl $GIT_URL --commitid $GIT_COMMIT --status pass
 ```
-{:codeblock}
+{: codeblock}
 
 
 ## Comparing CLIs

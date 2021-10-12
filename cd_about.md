@@ -28,7 +28,7 @@ subcollection: ContinuousDelivery
 {: support}
 
 Toolchains are available on {{site.data.keyword.cloud_notm}} Public and Dedicated. You can use a template as a starting point to create a toolchain.
-{:shortdesc}
+{: shortdesc}
 
 ## Toolchain availability on {{site.data.keyword.cloud_notm}} Public compared to {{site.data.keyword.cloud_notm}} Dedicated
 {: #public_and_dedicated}

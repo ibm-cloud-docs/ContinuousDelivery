@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #tagging}
 
 A tag is a label that you assign to an application for improved organization and to solve problems of scale. You can use tags to organize your applications and easily find them later. If you have several applications, you can group them with specific tags so that you can easily find and analyze the information that you want. To easily filter and search for the information you need, you can attach a tag to an application for region, production, development, and more. 
-{:shortdesc}
+{: shortdesc}
 
 
 ## Tagging rules and limitations

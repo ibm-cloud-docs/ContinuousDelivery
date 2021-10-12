@@ -24,7 +24,7 @@ subcollection: ContinuousDelivery
 {: #di_working}
 
 {{site.data.keyword.DRA_full}} is a tool that aggregates code, test, build, and deployment data to provide visibility of quality for all of your teams. This tutorial walks you through the quickest steps for setting up {{site.data.keyword.DRA_short}} with {{site.data.keyword.contdelivery_full}} so that you can explore the features in {{site.data.keyword.DRA_short}}.
-{:shortdesc}
+{: shortdesc}
 
 With {{site.data.keyword.DRA_short}}, you can maintain and improve the quality of your code in {{site.data.keyword.cloud}}. You can monitor your deployments to identify risks before they are released, analyze development changes for error probability, and improve the interactions of your team.
 
@@ -112,11 +112,11 @@ The gate fails because the code coverage isn't met. When you gate your own deplo
 
 This tutorial focuses on implementing {{site.data.keyword.DRA_short}} with {{site.data.keyword.deliverypipelinelong}}, but as an alternative, you can use {{site.data.keyword.DRA_short}} with Jenkins and other CI/CD tools. Use the following tutorials for more information.  
 
-* [Integrate DevOps Insights with an IBM Continuous Delivery pipeline](https://www.ibm.com/cloud/garage/tutorials/integrate-devops-insights-with-cd-pipeline){:external}. Learn how to configure a CD pipeline to send, build, and deploy information to {{site.data.keyword.DRA_short}} and define policies that analyze deployment risk.
+* [Integrate DevOps Insights with an IBM Continuous Delivery pipeline](https://www.ibm.com/cloud/garage/tutorials/integrate-devops-insights-with-cd-pipeline){: external}. Learn how to configure a CD pipeline to send, build, and deploy information to {{site.data.keyword.DRA_short}} and define policies that analyze deployment risk.
 
-* [Integrate DevOps Insights with Jenkins](https://www.ibm.com/cloud/garage/tutorials/use-jenkins-plugin-to-post-data-to-devops-insights){:external}. Learn how to set up and use the {{site.data.keyword.DRA_short}} Jenkins plug-in to publish build, test, and deployment data to {{site.data.keyword.DRA_short}}.
+* [Integrate DevOps Insights with Jenkins](https://www.ibm.com/cloud/garage/tutorials/use-jenkins-plugin-to-post-data-to-devops-insights){: external}. Learn how to set up and use the {{site.data.keyword.DRA_short}} Jenkins plug-in to publish build, test, and deployment data to {{site.data.keyword.DRA_short}}.
 
-* [Integrate DevOps Insights using the IBM Cloud CLI](https://www.ibm.com/cloud/garage/tutorials/use-cli-to-post-data-to-devops-insights){:external}. Learn how to set up the environment and use the CLI to publish build, test, and deployment data to {{site.data.keyword.DRA_short}}.
+* [Integrate DevOps Insights using the IBM Cloud CLI](https://www.ibm.com/cloud/garage/tutorials/use-cli-to-post-data-to-devops-insights){: external}. Learn how to set up the environment and use the CLI to publish build, test, and deployment data to {{site.data.keyword.DRA_short}}.
 
 ## Next steps
 {: #tutorial-next-steps}

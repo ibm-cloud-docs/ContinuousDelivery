@@ -36,9 +36,9 @@ To see which toolchain templates contain the {{site.data.keyword.gitrepos}} or G
 ## Creating a toolchain from a template with {{site.data.keyword.gitrepos}} or GitHub   
 {: #creating_a_toolchain_git}
 
-You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){:external} that includes either a {{site.data.keyword.gitrepos}} or GitHub tool integration. Learn more about how to use the templates from the [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage/category/tools){:external}.
+You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes either a {{site.data.keyword.gitrepos}} or GitHub tool integration. Learn more about how to use the templates from the [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage/category/tools){:external}.
 
-1. If you use {{site.data.keyword.cloud_notm}} Public, log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
+1. If you use {{site.data.keyword.cloud_notm}} Public, log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. If you use {{site.data.keyword.cloud_notm}} Dedicated, log in to your Dedicated environment on {{site.data.keyword.cloud_notm}}
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**.
 1. On the DevOps dashboard, on the **Toolchains** page, click **Create a Toolchain**.
@@ -70,7 +70,7 @@ You can use a template as a starting point to [create a toolchain](https://cloud
 
 You can create an empty toolchain and then add a Git tool integration to the toolchain to start adding Git repos.
 
-1. If you use {{site.data.keyword.cloud_notm}} Public, log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
+1. If you use {{site.data.keyword.cloud_notm}} Public, log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. If you use {{site.data.keyword.cloud_notm}} Dedicated, log in to your Dedicated environment on {{site.data.keyword.cloud_notm}}
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**.
 1. On the DevOps dashboard, on the **Toolchains** page, click **Create a Toolchain**.
@@ -90,5 +90,5 @@ You can create an empty toolchain and then add a Git tool integration to the too
 1. For more information about configuring the {{site.data.keyword.gitrepos}} tool integration, see [Configuring tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-grit).
 
 
-For a tutorial about how to create a custom toolchain, see [Create a custom toolchain](https://www.ibm.com/cloud/architecture/tutorials/create-a-custom-toolchain){:external}.
+For a tutorial about how to create a custom toolchain, see [Create a custom toolchain](https://www.ibm.com/cloud/architecture/tutorials/create-a-custom-toolchain){: external}.
 {: tip}

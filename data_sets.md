@@ -23,7 +23,7 @@ subcollection: ContinuousDelivery
 {: #adding-data-sets}
 
 Data sets are defined to identify the types of tests that you run in your development process to define the passing criteria for an application. When you define rules in a policy, {{site.data.keyword.DRA_full}} provides seven pre-defined data sets that you can use to run in your development process. Or, use custom data sets to represent the various types of tests. You can have policy rules for each data set and define rules for custom data sets. Separate policies can be created for each application. Data sets appear on the Quality Dashboard page after you start populating data for the data set. 
-{:shortdesc}
+{: shortdesc}
 
 For more information about viewing the Quality Dashboard, see [DevOps data aggregation](/docs/ContinuousDelivery?topic=ContinuousDelivery-devops-data-aggregation).
 

@@ -24,7 +24,7 @@ subcollection: ContinuousDelivery
 {: #deliverypipeline}
 
 {{site.data.keyword.deliverypipeline}} automates the continuous deployment of your projects through sequences of stages that retrieve input and run jobs, such as builds, tests, and deployments.
-{:shortdesc}
+{: shortdesc}
 
 Configure {{site.data.keyword.deliverypipeline}} to automate the continuous building, testing, and deployment of your apps:
 
@@ -94,8 +94,8 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 
 ## Learn more about Delivery Pipeline
 
-To learn more about {{site.data.keyword.deliverypipeline}}, see [Working with pipelines](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working) and the [Delivery Pipeline article](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){:external} on the IBM Cloud Garage Method or take these tutorials:
+To learn more about {{site.data.keyword.deliverypipeline}}, see [Working with pipelines](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working) and the [Delivery Pipeline article](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: external} on the IBM Cloud Garage Method or take these tutorials:
 
-  * [Create a pipeline](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){:external}
+  * [Create a pipeline](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){: external}
 
-  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}
+  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}

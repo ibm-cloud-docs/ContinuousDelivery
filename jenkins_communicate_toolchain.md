@@ -24,7 +24,7 @@ subcollection: ContinuousDelivery
 {: #communicating-toolchains-jenkins}
 
 Communicate with your toolchain so you can automatically see when a pipeline stage passes or fails. You can communicate with your toolchain by sending your pipeline status to {{site.data.keyword.IBM_notm}}. 
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin
@@ -54,4 +54,4 @@ The following examples illustrate how to use the notifyOTC step in both declarat
 ```
 notifyOTC stageName: "Deploy", status: "SUCCESS"
 ```
-{:codeblock}
+{: codeblock}

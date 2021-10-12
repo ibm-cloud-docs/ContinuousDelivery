@@ -29,7 +29,7 @@ subcollection: ContinuousDelivery
 {: #faq_insights}
 
 Get answers to frequently asked questions about using {{site.data.keyword.DRA_short}}.
-{:shortdesc} 
+{: shortdesc} 
 
 
 ## Can {{site.data.keyword.DRA_short}} be installed and run in an on-premises environment?

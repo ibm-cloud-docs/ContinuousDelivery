@@ -39,13 +39,13 @@ The private worker agents that are installed on private clusters request data on
 ## Prerequisites
 {: #pw_install_prereqs}
 
-Before you install a private worker, make sure that you have an {{site.data.keyword.cloud}} account to create authentication keys. You need kubectl version 1.14.5 or higher installed on the Administrator's desktop computer. And you must also have a [Kubernetes cluster](https://cloud.ibm.com/kubernetes/clusters){:external} (version 1.15 or higher) with Administrative access to install a private worker.
+Before you install a private worker, make sure that you have an {{site.data.keyword.cloud}} account to create authentication keys. You need kubectl version 1.14.5 or higher installed on the Administrator's desktop computer. And you must also have a [Kubernetes cluster](https://cloud.ibm.com/kubernetes/clusters){: external} (version 1.15 or higher) with Administrative access to install a private worker.
 
 * Suggested Kubernetes cluster configurations:
 
   * {{site.data.keyword.containerlong_notm}} version 1.15 or higher to run workloads in isolation on {{site.data.keyword.cloud_notm}} Public.
   * {{site.data.keyword.cloud_notm}} Private version 3.1.2 or higher to run non-beta version Tekton workloads on-premises.
-  * [Docker Desktop community edition](https://www.docker.com/products/docker-desktop){:external} version 2.0.5.0 to run workloads locally.
+  * [Docker Desktop community edition](https://www.docker.com/products/docker-desktop){: external} version 2.0.5.0 to run workloads locally.
   
 * System requirements:
 
@@ -226,8 +226,8 @@ A service ID represents a pool of one or more private workers that act together.
 {: #console_create_service_id}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
-2. Go to [https://cloud.ibm.com/iam/serviceids](https://cloud.ibm.com/iam/serviceids){:external}.
+1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
+2. Go to [https://cloud.ibm.com/iam/serviceids](https://cloud.ibm.com/iam/serviceids){: external}.
 3. Click **Create**.
 4. Enter a name and description for the service ID. If you are creating a service ID for a pool of private workers, specify the name of the private workers pool, for example: **Pipeline Private Workers for Acme**.
 5. Click **Create**. 
@@ -264,8 +264,8 @@ An API key is a unique code that is passed to an API to identify the application
 {: #console_create_key}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
-2. Go to [https://cloud.ibm.com/iam/serviceids](https://cloud.ibm.com/iam/serviceids){:external}.
+1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
+2. Go to [https://cloud.ibm.com/iam/serviceids](https://cloud.ibm.com/iam/serviceids){: external}.
 3. Select the Service ID that you want to create an API for.
 4. In the **API keys** tab, click **Create**.
 5. Enter a name and description for the API key to specify the private worker installation, such as **Pipeline Private Worker in IBM Cloud Private**.

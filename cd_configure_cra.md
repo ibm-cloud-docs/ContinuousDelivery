@@ -82,9 +82,9 @@ Code Risk Analyzer is available for toolchains in all regions.
 ## Building your own toolchain
 {: #cra_build_toolchain}
 
-You can use the Build your own toolchain template as a starting point to [create an empty toolchain](https://cloud.ibm.com/devops/create){:external} that you can add the {{site.data.keyword.DRA_short}} tool integration to. If you already have a toolchain, you can use the existing toolchain instead of creating a new one.
+You can use the Build your own toolchain template as a starting point to [create an empty toolchain](https://cloud.ibm.com/devops/create){: external} that you can add the {{site.data.keyword.DRA_short}} tool integration to. If you already have a toolchain, you can use the existing toolchain instead of creating a new one.
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
+1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
 1. On the **Toolchains** page, click **Create a Toolchain**.
 1. On the **Create a Toolchain** page, click the **Build your own toolchain** template.
@@ -100,7 +100,7 @@ You can use the Build your own toolchain template as a starting point to [create
 ## Adding {{site.data.keyword.DRA_short}} to your toolchain
 {: #cra_add_dra}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){:external}.
+1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
 1. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 1. Click **Add tool**.
@@ -151,7 +151,7 @@ If you don't have admin privileges for the repo that you are linking to, your in
 
 1. If you want to create a public repo on the server, clear the **Make this repository private** checkbox.
 1. If you want to use GitLab's Issues for issue tracking, select the **Enable GitLab Issues** checkbox.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){:external}.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}.
 1. Click **Create Integration**.
 1. Click the card for the GitLab repo that you want to work with. Depending on the repo that you selected, either the GitLab website or your company's GitLab repo opens, where you can view the contents of the repo.
 
@@ -190,7 +190,7 @@ If you don't have admin privileges for the repo that you are linking to, your in
 
 When you configure a {{site.data.keyword.deliverypipeline}} tool integration, you can select the type of pipeline that you want to create.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the [Toolchains page](https://cloud.ibm.com/devops/toolchains){:external}, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the [Toolchains page](https://cloud.ibm.com/devops/toolchains){: external}, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 1. Add the Delivery Pipeline integration to your toolchain:
 
  a. Click **Add tool**.

@@ -53,7 +53,7 @@ To upload unit tests, functional verification tests or custom test data, use the
 ```
 ibmcloud doi testrecord-publish --logicalappname "$MY_APP_NAME" --buildnumber "$MY_BUILD_NUMBER" --filelocation "./test-sample-folder/unit_test_mocha.json" --type=unittest
 ```
-{:codeblock}
+{: codeblock}
 
 For a sample test result files that you can upload to DevOps Insights, see [this GitHub repository with dummy data](https://github.com/devops-insights/example-upload-data-format){: external}. 
 
@@ -66,7 +66,7 @@ To upload Code Coverage results or custom code data, use the following command:
 ```
 ibmcloud doi testrecord-publish --logicalappname "$MY_APP_NAME" --buildnumber "$MY_BUILD_NUMBER" --filelocation "./test-sample-folder/code_coverage_cobertura.xml" --type=code
 ```
-{:codeblock}
+{: codeblock}
 
 For a sample test result files that you can upload to DevOps Insights, see [this GitHub repository with dummy data](https://github.com/devops-insights/example-upload-data-format){: external}.
 
@@ -79,14 +79,14 @@ Users can get the report from the IBM AppScan CLI tool. Scan the application fro
 ```
 appscan.sh get_result -i $job_id -d "$APPSCAN_SCAN_NAME.zip" -t zip
 ```
-{:codeblock}
+{: codeblock}
 
 Unzip the results in a folder and go to that folder, then upload a file called Report-final.xml
 
 ```
 ibmcloud doi testrecord-publish --logicalappname "$MY_APP_NAME" --buildnumber "$MY_BUILD_NUMBER" --filelocation "./Report-final.xml" --type staticsecurityscan
 ```
-{:codeblock}
+{: codeblock}
 
 Change the type to `dynamicsecurityscan` if the report is from a dynamic scan.
 
@@ -101,7 +101,7 @@ After you run a scan by using SonarQube, you can upload SonarQube results by run
 ```
 ibmcloud doi testrecord-publish --logicalappname "$MY_APP_NAME" --buildnumber "$MY_BUILD_NUMBER" --filelocation ".scannerwork/report-task.txt" --type=sonarqube --token=$SONARQUBE_TOKEN
 ```
-{:codeblock}
+{: codeblock}
 
 report-task.txt is a file that is generated during the SonarQube scan.
 
@@ -114,11 +114,11 @@ To get the result of the vulnerability advisor scan from the CLI, use the follow
 ```
 ibmcloud cr va ${PIPELINE_IMAGE_URL} -o json > vulnerability_advisor.json
 ```
-{:codeblock}
+{: codeblock}
 
 You can get your image's repository and tag from the Vulnerability Advisor UI or in the CLI by using `ibmcloud cr image-list`. {{site.data.keyword.DRA_short}} accepts only the JSON output. You can upload Vulnerability Advisor output file to DevOps Insights by running this command.
 
 ```
 ibmcloud doi testrecord-publish --logicalappname "${APP_NAME}" --buildnumber "${BUILD_NUMBER}" --filelocation "vulnerability_advisor.json" --type vulnerabilityadvisor
 ```
-{:codeblock}
+{: codeblock}

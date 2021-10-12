@@ -29,7 +29,7 @@ subcollection: ContinuousDelivery
 {: #faq_web_ide}
 
 Get answers to frequently asked questions about using the Eclipse Orion {{site.data.keyword.webide}}.
-{:shortdesc} 
+{: shortdesc} 
 
 
 ## I created an app, why doesn't the run bar show {{site.data.keyword.cloud_notm}} Live Sync icons in the {{site.data.keyword.webide}}?

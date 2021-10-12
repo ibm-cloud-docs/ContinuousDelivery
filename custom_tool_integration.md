@@ -24,7 +24,7 @@ subcollection: ContinuousDelivery
 # Configuring a custom tool (Other Tool)
 {: #othertool}
 
-If your team uses a tool that isn't included in the toolchains integrations list, you can integrate a custom tool.{:shortdesc}
+If your team uses a tool that isn't included in the toolchains integrations list, you can integrate a custom tool.{: shortdesc}
 
 Configure a custom tool so that it works with other tools in your toolchain and is available to your team:
 
@@ -48,4 +48,4 @@ Configure a custom tool so that it works with other tools in your toolchain and 
 
 To learn more about the custom tool, take this tutorial:
 
-  * [Add a custom tool integration to a toolchain](https://www.ibm.com/cloud/garage/tutorials/add-a-custom-tool-integration-to-a-toolchain){:external}
+  * [Add a custom tool integration to a toolchain](https://www.ibm.com/cloud/garage/tutorials/add-a-custom-tool-integration-to-a-toolchain){: external}

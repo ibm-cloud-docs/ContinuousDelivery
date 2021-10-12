@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #evaluating-gates-idra}
 
 You can evaluate gates by using idra (deprecated) to integrate your {{site.data.keyword.deliverypipeline}} with {{site.data.keyword.DRA_full}}. {{site.data.keyword.DRA_short}} gates check whether your test results comply with a defined policy. If the policy is not met, the {{site.data.keyword.DRA_short}} gate fails by default. You can also configure gates to act in an advisory role to allow pipeline progression even after failure.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin
@@ -51,7 +51,7 @@ npm install -g grunt-idra3
 
 idra --evaluategate --policy="$POLICY_NAME"
 ```
-{:codeblock}
+{: codeblock}
 
 
 ## Viewing gate evaluation

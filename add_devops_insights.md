@@ -23,7 +23,7 @@ subcollection: ContinuousDelivery
 {: #add-devops-insights}
 
 Use {{site.data.keyword.DRA_full}} to help improve build quality for your projects. {{site.data.keyword.DRA_short}} is a tool that provides data for team insights and deployment risk. Get insights about your application by uploading unit tests, code coverage, functional verification tests, and static security scans for each application to {{site.data.keyword.DRA_short}}.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Before you begin

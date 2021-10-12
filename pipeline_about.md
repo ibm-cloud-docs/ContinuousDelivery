@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 {: #deliverypipeline_about}
 
 {{site.data.keyword.contdelivery_full}} includes the Classic Delivery Pipeline to build, test, and deploy in a repeatable way with minimal human intervention. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
-{:shortdesc}
+{: shortdesc}
 
 For information about Tekton delivery pipelines, see [Working with Tekton pipelines](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines#configure_tekton_pipeline).
 {: tip}
@@ -234,7 +234,7 @@ You can add the following types of properties:
 * **Properties**: A file in the project's repository. This file can contain multiple properties. Each property must be on its own line. To separate key-value pairs, use the equals sign (=). Enclose all string values in quotation marks. For example, `MY_STRING="SOME STRING VALUE"`.
 
 You can examine the environment properties for a pipeline job by running the `env` command in the job's script.
-{:tip}
+{: tip}
 
 ### Pipeline properties
 To define pipeline properties, from the overflow menu on the Pipeline page, select **Configure Pipeline**.
@@ -251,7 +251,7 @@ To define stage properties, open the Stage configuration page and click the **EN
 ![Stage properties page](images/StageProperties.png)
 
 You can define a stage property by using an initial value (or a blank value), and then overriding that value in a job by exporting an environment variable. By overriding the initial value, subsequent jobs in the stage can see the new value. For example, you can include the following command to set the `$API_KEY` property and make it available to another job within the stage: `export API_KEY=<insert API key here>`
-{:tip}
+{: tip}
 
 ### Computed properties
 You can compute the environment property values that are shared across stages by creating a `build.properties` file while the stage is running, and then have the next stage run the file. For example, your build job might include the following command in the build script:

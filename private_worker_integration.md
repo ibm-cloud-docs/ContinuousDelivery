@@ -25,7 +25,7 @@ subcollection: ContinuousDelivery
 {: #privateworker}
 
 {{site.data.keyword.deliverypipeline}} Private Worker connects with one or more private workers that run {{site.data.keyword.deliverypipeline}} workloads in isolation.
-{:shortdesc}
+{: shortdesc}
 
 Configure the {{site.data.keyword.deliverypipeline}} Private Worker tool integration to make private workers available to pipelines in a toolchain:
 

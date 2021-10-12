@@ -27,7 +27,7 @@ subcollection: ContinuousDelivery
 {: #deliverypipeline_build_deploy}
 
 {{site.data.keyword.contdelivery_full}} includes Delivery Pipeline, which you can use to implement a repeatable continuous integration and continuous delivery process.
-{:shortdesc}
+{: shortdesc}
 
 Complete the following tasks to configure a pipeline.
 

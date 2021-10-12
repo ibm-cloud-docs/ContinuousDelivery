@@ -33,7 +33,7 @@ In this tutorial, you learn how to develop a simple Hello World web application 
 
 You create an open toolchain and use that toolchain along with DevOps best practices to develop a simple Hello World web app. By using Razee, you can deploy the app to the [{{site.data.keyword.containerlong}}](/docs/containers) with a Kubernetes cluster.
 
-[Razee](https://razee.io/){:external} is an open source project that automates and manages the deployment of Kubernetes resources across clusters, environments, and cloud providers. Razee also helps you to visualize deployment information for your resources so that you can monitor the roll-out process and find deployment issues more quickly. For more information about how to set up Razee in your cluster to automate your deployment process, see the [Razee documentation](https://github.com/razee-io/Razee){: external}.
+[Razee](https://razee.io/){: external} is an open source project that automates and manages the deployment of Kubernetes resources across clusters, environments, and cloud providers. Razee also helps you to visualize deployment information for your resources so that you can monitor the roll-out process and find deployment issues more quickly. For more information about how to set up Razee in your cluster to automate your deployment process, see the [Razee documentation](https://github.com/razee-io/Razee){: external}.
 
 The toolchain that you create in this tutorial includes the following tool integrations:
 

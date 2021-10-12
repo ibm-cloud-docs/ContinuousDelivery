@@ -104,7 +104,7 @@ If the app must be built before it can be deployed, you must include a build fil
 Supported builders include:
 
 * [Ant:](http://ant.apache.org/manual/using.html){: external} `build.xml`, which builds output to the `./output/` folder
-* [Gradle:](https://docs.gradle.org/current/userguide/getting_started.html){:external} `/build.gradle`, which builds output to the `.` folder
+* [Gradle:](https://docs.gradle.org/current/userguide/getting_started.html){: external} `/build.gradle`, which builds output to the `.` folder
 * [Grunt:](http://gruntjs.com/getting-started#the-gruntfile){: external} `/Gruntfile.js`, which builds output to the `.` folder
 * [Maven:](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){: external} `/pom.xml`, which builds output to the `./target/` folder
 

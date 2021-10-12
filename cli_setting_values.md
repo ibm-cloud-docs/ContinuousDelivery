@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 {: #setting-values-cli}
 
 As part of integrating {{site.data.keyword.deliverypipelinelong}} with {{site.data.keyword.DRA_full}}, you set consistent parameter values to publish data to {{site.data.keyword.DRA_short}}.
-{:shortdesc}
+{: shortdesc}
 
 {{site.data.keyword.DRA_short}} tracks deployment risk based on published test data. When you integrate {{site.data.keyword.DRA_short}} with your {{site.data.keyword.deliverypipeline}}, you are instrumenting {{site.data.keyword.DRA_short}} to gather information from the pipeline. Information that is gathered from the pipeline is presented in {{site.data.keyword.DRA_short}} dashboard to provide visibility into your DevOps process.
 
@@ -49,7 +49,7 @@ Configure your pipeline to use these properties across all stages. Save these pr
   echo "MY_APP_NAME=${MY_APP_NAME}" >> $ARCHIVE_DIR/build.properties
   echo "MY_BUILD_NUMBER=${MY_BUILD_NUMBER}" >> $ARCHIVE_DIR/build.properties
   ```
-  {:codeblock}
+  {: codeblock}
 
 
 ## Setting environment properties within your delivery pipeline

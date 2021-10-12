@@ -30,7 +30,7 @@ Adopt a DevOps or DevSecOps approach by using {{site.data.keyword.contdelivery_f
 {: shortdesc}
 
 
-If you already have an instance of {{site.data.keyword.contdelivery_short}}, you can [create a toolchain](https://cloud.ibm.com/devops/create){:external} or [view existing toolchains](https://cloud.ibm.com/devops/toolchains){:external}.
+If you already have an instance of {{site.data.keyword.contdelivery_short}}, you can [create a toolchain](https://cloud.ibm.com/devops/create){: external} or [view existing toolchains](https://cloud.ibm.com/devops/toolchains){:external}.
 {: tip}
 
 
@@ -46,7 +46,7 @@ Before you can create a continuous delivery toolchain from a template, you must 
 To quickly find the toolchain template that addresses your specific requirements, select the appropriate checkboxes to filter by deployment target and tools.
 {: tip}
 
-1. On the **Create a Toolchain** page, click a [toolchain template](https://cloud.ibm.com/devops/create){:external}.
+1. On the **Create a Toolchain** page, click a [toolchain template](https://cloud.ibm.com/devops/create){: external}.
 1. Review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
 
  A few of the toolchain templates have multiple instances of a tool integration. For example, the Microservices toolchain template on {{site.data.keyword.cloud_notm}} Public contains three instances of GitHub and three instances of Delivery Pipeline, one for each of the three microservices.
@@ -81,8 +81,8 @@ To quickly find the toolchain template that addresses your specific requirements
 ## Next steps
 {: #next_steps}
 
-Check out one of these tutorials on the [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){:external}:
+Check out one of these tutorials on the [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external}:
 
-  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){:external}.
+  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}.
 
-  * [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){:external}.
+  * [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){: external}.

@@ -23,7 +23,7 @@ subcollection: ContinuousDelivery
 {: #viewing-data-overview}
 
 The {{site.data.keyword.DRA_full}} Overview page automatically displays historical data from all of the {{site.data.keyword.contdelivery_full}} within your toolchain for the US-south and EU-gb locations. You can view data about the last two weeks for stage failures, total time that is consumed by all stage runs, and the total number of jobs. 
-{:shortdesc}
+{: shortdesc}
 
 ![Example of auto-filled data provided by the {{site.data.keyword.DRA_short}} Overview page](images/pipeline_data_overview_page.png "Example of Auto-filled data provided by the {{site.data.keyword.DRA_short}} ") Figure 1. An example of the automatically filled data that is taken from the {{site.data.keyword.contdelivery_full}} attached to the same toolchain as this instance of the {{site.data.keyword.DRA_short}} Overview page. 
 

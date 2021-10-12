@@ -28,7 +28,7 @@ subcollection: ContinuousDelivery
 {: #troubleshoot-toolchains}
 
 General problems with using toolchains might include tool integration configuration, toolchain template, or Cloud Foundry issues. In many cases, you can recover from these problems by following a few easy steps.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Why can't I create a toolchain from a template that uses a private repo in a different region?

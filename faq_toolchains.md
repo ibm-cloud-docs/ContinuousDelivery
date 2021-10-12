@@ -29,7 +29,7 @@ subcollection: ContinuousDelivery
 {: #faq_toolchains}
 
 Get answers to frequently asked questions about using toolchains.
-{:shortdesc} 
+{: shortdesc} 
 
 
 ## Why does the Toolchains page show that the {{site.data.keyword.contdelivery_short}} service Lite plan is exceeded?
