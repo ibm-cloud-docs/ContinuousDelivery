@@ -116,17 +116,17 @@ To mirror a {{site.data.keyword.gitrepos}} repo, complete the following steps:
 1. [Create a personal access token](https://us-south.git.cloud.ibm.com/help/user/profile/personal_access_tokens.md#creating-a-personal-access-token){: external} with the `write_repository` scope in the target region. Save a copy of this token.
 1. Use [Push mirroring](https://us-south.git.cloud.ibm.com/help/user/project/repository/repository_mirroring.md#pushing-to-a-remote-repository-core){: external} to push the source repo to the target repo:     
 
-  a. From the source repo, select **Settings** > **Repository**.
+   a. From the source repo, select **Settings** > **Repository**.
 
-  b. In **Mirror repository** section of the Repository page, type the URL of the target repo.
+   b. In **Mirror repository** section of the Repository page, type the URL of the target repo.
 
-  c. Select **Push** to specify the direction of the mirror.
+   c. Select **Push** to specify the direction of the mirror.
 
-  d. Select **Password** to use the password authentication method.
+   d. Select **Password** to use the password authentication method.
 
-  e. Type the personal access token that you created in step 2.
+   e. Type the personal access token that you created in step 2.
 
-  f. Click **Mirror repository** to start the mirroring process. It might take up to five minutes for the process to start.
+   f. Click **Mirror repository** to start the mirroring process. It might take up to five minutes for the process to start.
   
 1. In the target region, locate the mirror of your repo to verify that it was successfully mirrored.
   
@@ -148,38 +148,38 @@ To save and restore a toolchain, complete the following steps:
 1. [Create a temporary blank GitLab project](https://us-south.git.cloud.ibm.com/help/gitlab-basics/create-project.md#blank-projects){: external} in the target region.
 1. Type the following commands to initialize the temporary directory for Git operations and push the contents to the temporary GitLab project:     
 
-  a. git init
+   a. git init
 
-  b. git add --all
+   b. git add --all
 
-  c. git remote add origin *target repository url*
+   c. git remote add origin *target repository url*
 
-  d. git commit -m "add template yaml files"
+   d. git commit -m "add template yaml files"
 
-  e. git push -u origin --all
+   e. git push -u origin --all
 
 1. [Create a personal access token](https://us-south.git.cloud.ibm.com/help/user/profile/personal_access_tokens.md#creating-a-personal-access-token){: external} in the target region with the `api`, `read_user`, `read_api`, `read_repository`, and `write_repository` scope.
 1. Create a toolchain in the target region by constructing a URL and pasting it into your browser:     
 
-  a. Construct a target toolchain URL that contains the temporary repo, personal access token, and target region: 
+   a. Construct a target toolchain URL that contains the temporary repo, personal access token, and target region: 
   
   ```
   https://cloud.ibm.com/devops/setup/deploy?repository=<temporary repository>&repository_token=<personal-access-token>&env_id=ibm:yp:<target region>
   ```
   For example, `https://cloud.ibm.com/devops/setup/deploy?repository=https://us-east.git.cloud.ibm.com/user/temp-repo&repository_token=aG7junk9dafiiT6w6&env_id=ibm:yp:us-east`.
 
-  b. Replace the source repo URL with the target repo URL that you created when mirroring your Git repos.
+   b. Replace the source repo URL with the target repo URL that you created when mirroring your Git repos.
 
-  c. Click **Create**. Because you didn't update your secrets, your pipeline runs but does not succeed.     
+   c. Click **Create**. Because you didn't update your secrets, your pipeline runs but does not succeed.     
 
 1. [Revoke the personal access token](https://us-south.git.cloud.ibm.com/help/user/profile/personal_access_tokens.md#creating-a-personal-access-token){: external} that you created in step 6.
 1. [Configure pipeline secrets](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties) by adding the secure property values that are required by your pipeline.
 1. [Run your target pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_stages) to make sure that they are working.
 1. If you are mirroring repos, disable commit triggers so that your target pipelines don't run when a change is mirrored from the target repo to the source repo:     
 
-  a. Select the **Run jobs only when this stage is run manually** option for the [Input stage](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_stages) of your pipeline.
+   a. Select the **Run jobs only when this stage is run manually** option for the [Input stage](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_stages) of your pipeline.
 
-  b. Verify that your pipelines can be [started manually](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_stages).  
+   b. Verify that your pipelines can be [started manually](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_stages).  
   
 #### Using your backup toolchain
 {: #use_backup_toolchain}

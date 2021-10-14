@@ -76,13 +76,13 @@ Configure the {{site.data.keyword.deliverypipeline}} to add an npm build job:
 1. Configure the build job:
   ![npm build job](images/nexus_npm_job.png)
 
-  a. For the builder type, select **npm (Artifactory or Nexus)**.
+   a. For the builder type, select **npm (Artifactory or Nexus)**.
 
-  b. If you configured multiple instances of the Nexus tool integration, enter the name of the Nexus tool integration that you want to configure the npm build job for.
+   b. If you configured multiple instances of the Nexus tool integration, enter the name of the Nexus tool integration that you want to configure the npm build job for.
 
-  c. For the tool integration type, select **Nexus**.
+   c. For the tool integration type, select **Nexus**.
 
-  d. For the build command, enter the commands to build your npm module or publish it to your registry. This example shows the commands to either build the module or publish it.
+   d. For the build command, enter the commands to build your npm module or publish it to your registry. This example shows the commands to either build the module or publish it.
      ```
      npm install
      # or
@@ -90,7 +90,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add an npm build job:
      ```
   **Tip:** You can find the URL and user credentials that you used to connect to your registry in the configuration settings for the Nexus tool integration.
 
-  e. If your build job publishes to the Nexus registry, and the format of your node module version is `x.y.z-SNAPSHOT.w`, select the **Increment snapshot module version** checkbox. The build job automatically updates the module version before it publishes to the Nexus registry. The build job selects the highest version of the module from the npm registry and the local `package.json` file, and increments the module version by using semver. The build job does not deliver the changes to the SCM repo.
+   e. If your build job publishes to the Nexus registry, and the format of your node module version is `x.y.z-SNAPSHOT.w`, select the **Increment snapshot module version** checkbox. The build job automatically updates the module version before it publishes to the Nexus registry. The build job selects the highest version of the module from the npm registry and the local `package.json` file, and increments the module version by using semver. The build job does not deliver the changes to the SCM repo.
 
 1. Click **SAVE**. Whenever your pipeline runs, this build job uses the configuration information from the Nexus tool integration to connect to your npm registry.
 
@@ -106,13 +106,13 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
 1. Configure the build job:
   ![Maven build job](images/nexus_maven_job.png)
 
-  a. For the builder type, select **Maven (Artifactory, Nexus, SonarQube)**.
+   a. For the builder type, select **Maven (Artifactory, Nexus, SonarQube)**.
 
-  b. If you configured multiple instances of the Nexus tool integration, enter the name of the Nexus tool integration that you want to configure the Maven Build job for.
+   b. If you configured multiple instances of the Nexus tool integration, enter the name of the Nexus tool integration that you want to configure the Maven Build job for.
 
-  c. For the tool integration type, select **Nexus**.
+   c. For the tool integration type, select **Nexus**.
 
-  d. For the build command, enter the commands to build your Maven module or publish it to your snapshot registry. This example shows the commands to either build the module or publish it.
+   d. For the build command, enter the commands to build your Maven module or publish it to your snapshot registry. This example shows the commands to either build the module or publish it.
      ```
      mvn -B clean package
      # or

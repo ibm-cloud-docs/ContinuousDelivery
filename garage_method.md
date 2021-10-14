@@ -40,7 +40,7 @@ The Cloud Garage Method site contains articles that describe continuous delivery
 
 [Continuous Delivery](https://www.ibm.com/cloud/garage/content/deliver/practice_continuous_delivery/){: external} is a practice by which you build and deploy your software so that it can be released into production at any time. One of the hallmarks of computer science is the shortening of various cycle times in the development and operations process.
 
-With [Delivery Pipeline](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: external}, which is included in {{site.data.keyword.Bluemix_notm}} Continuous Delivery, you can achieve continuous delivery in a consistent and reliable way by dividing the software delivery process into stages. The goal is for code to progress through each stage automatically with minimal human intervention. With the [practice of using Delivery Pipelines](https://www.ibm.com/cloud/garage/content/deliver/practice_delivery_pipeline/){:external}, you can automate the continuous deployment of your project.
+With [Delivery Pipeline](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: external}, which is included in {{site.data.keyword.Bluemix_notm}} Continuous Delivery, you can achieve continuous delivery in a consistent and reliable way by dividing the software delivery process into stages. The goal is for code to progress through each stage automatically with minimal human intervention. With the [practice of using Delivery Pipelines](https://www.ibm.com/cloud/garage/content/deliver/practice_delivery_pipeline/){: external}, you can automate the continuous deployment of your project.
 
 ## Continuous delivery tutorials
 {: #gm_cd_tutorials}

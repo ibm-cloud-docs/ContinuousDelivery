@@ -92,17 +92,17 @@ You can no longer create Cloud Foundry org-based {{site.data.keyword.contdeliver
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. Delete all of the toolchains in the Cloud Foundry org that contains the {{site.data.keyword.contdelivery_short}} service instance:
 
-  a. Go to the [Toolchains](https://cloud.ibm.com/devops/toolchains){: external} page for your {{site.data.keyword.cloud_notm}} account.
+   a. Go to the [Toolchains](https://cloud.ibm.com/devops/toolchains){: external} page for your {{site.data.keyword.cloud_notm}} account.
   
-  b. Select the Cloud Foundry org and the location that you want to delete the service instance from.
+   b. Select the Cloud Foundry org and the location that you want to delete the service instance from.
   
-  c. Complete the following steps for each toolchain in the Cloud Foundry org:
+   c. Complete the following steps for each toolchain in the Cloud Foundry org:
   
-    *  From the toolchain's **Actions** ![Overflow icon](images/overflow-icon-2.svg) menu, click **Delete**.
+     *  From the toolchain's **Actions** ![Overflow icon](images/overflow-icon-2.svg) menu, click **Delete**.
     
-    *  Type the name of the toolchain that you want to delete.
+     *  Type the name of the toolchain that you want to delete.
     
-    *  Click **Delete** to confirm that you want to delete the toolchain.
+     *  Click **Delete** to confirm that you want to delete the toolchain.
      
 1. Delete the {{site.data.keyword.contdelivery_short}} service instance:
 

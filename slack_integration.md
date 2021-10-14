@@ -59,6 +59,6 @@ Configure Slack to receive notifications about your toolchain from the tool inte
 
 To learn more about Slack, see the [Slack article](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: external} on the IBM Cloud Garage Method or take this tutorial and the Garage Method advocate course:
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}
+   * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}
 
-  * [Become a Garage Method advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){: external}
+   * [Become a Garage Method advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){: external}

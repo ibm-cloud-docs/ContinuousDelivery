@@ -75,20 +75,20 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
   The **Service Instance**, **Target**, **Organization**, and **Space** fields are populated with the Sauce Labs user name, region, org, and space that you are using.
   {: tip}
 
-  a. For the tester type, select **Sauce Labs**.
+   a. For the tester type, select **Sauce Labs**.
 
-  b. For the service instance, select the Sauce Labs user name that you used when you configured Sauce Labs for your toolchain.
+   b. For the service instance, select the Sauce Labs user name that you used when you configured Sauce Labs for your toolchain.
 
    To see the user name and access key that you used when you configured Sauce Labs for your toolchain, click **Configure**.
    {: tip}
 
-  c. In the **Test Execution Command** field, enter the commands that install the dependencies that are required by your tests and then run the tests. For example, for a Node.js app, you might enter these commands:
+   c. In the **Test Execution Command** field, enter the commands that install the dependencies that are required by your tests and then run the tests. For example, for a Node.js app, you might enter these commands:
      ```
      npm install
      node_modules/grunt-cli/bin/grunt test:sauce:parallel
      ```
 
-    d. If you want to see your test reports in the test job logs, select the **Enable Test Report** checkbox, and set the Test Result File Pattern to `test/*.xml`.
+   d. If you want to see your test reports in the test job logs, select the **Enable Test Report** checkbox, and set the Test Result File Pattern to `test/*.xml`.
 
 1. Click **SAVE**. Whenever your pipeline runs, your Sauce Labs tests run.
 
@@ -96,6 +96,6 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 
 To learn more about {{site.data.keyword.deliverypipeline}}, see [Working with pipelines](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working) and the [Delivery Pipeline article](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: external} on the IBM Cloud Garage Method or take these tutorials:
 
-  * [Create a pipeline](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){: external}
+   * [Create a pipeline](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){: external}
 
-  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}
+   * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}

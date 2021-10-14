@@ -38,10 +38,10 @@ Before you set up a private worker, make sure that you have the following resour
 
 * Optional. A toolchain with a pipeline that contains at least one stage. You can create a toolchain by using the [{{site.data.keyword.deliverypipeline}} Private Worker tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers#configure_private_worker_integration). You can also create a toolchain by using the **Develop a Kubernetes app** toolchain template:
 
-  1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
-  2. Go to [https://cloud.ibm.com/devops/create](https://cloud.ibm.com/devops/create){: external} and select the **Develop a Kubernetes app** toolchain template.
-  3. Complete the fields for the {{site.data.keyword.deliverypipeline}}.
-  4. Click **Create** to create your Kubernetes app toolchain.
+   1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
+   2. Go to [https://cloud.ibm.com/devops/create](https://cloud.ibm.com/devops/create){: external} and select the **Develop a Kubernetes app** toolchain template.
+   3. Complete the fields for the {{site.data.keyword.deliverypipeline}}.
+   4. Click **Create** to create your Kubernetes app toolchain.
 
 ## Setting up a {{site.data.keyword.deliverypipeline}} Private Worker
 {: #set_up_private_worker}

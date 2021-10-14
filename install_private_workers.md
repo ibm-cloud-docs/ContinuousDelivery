@@ -43,19 +43,19 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
 
 * Suggested Kubernetes cluster configurations:
 
-  * {{site.data.keyword.containerlong_notm}} version 1.15 or higher to run workloads in isolation on {{site.data.keyword.cloud_notm}} Public.
-  * {{site.data.keyword.cloud_notm}} Private version 3.1.2 or higher to run non-beta version Tekton workloads on-premises.
-  * [Docker Desktop community edition](https://www.docker.com/products/docker-desktop){: external} version 2.0.5.0 to run workloads locally.
+   * {{site.data.keyword.containerlong_notm}} version 1.15 or higher to run workloads in isolation on {{site.data.keyword.cloud_notm}} Public.
+   * {{site.data.keyword.cloud_notm}} Private version 3.1.2 or higher to run non-beta version Tekton workloads on-premises.
+   * [Docker Desktop community edition](https://www.docker.com/products/docker-desktop){: external} version 2.0.5.0 to run workloads locally.
   
 * System requirements:
 
-  * One 2CORE x 4 GB Kubernetes worker node, such as a Kubernetes Lite cluster.
-  * Kubernetes worker node affinity is not required.
+   * One 2CORE x 4 GB Kubernetes worker node, such as a Kubernetes Lite cluster.
+   * Kubernetes worker node affinity is not required.
   
 * Network access:
 
-  * Inbound: N/A
-  * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either au-syd (Sydney, Australia), eu-de (Frankfurt, Germany), eu-gb (London, United Kingdom), jp-tok (Tokyo, Japan), jp-osa (Osaka, Japan), us-south (Dallas, US), us-east (Washington DC, US), or ca-tor (Toronto, CA). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
+   * Inbound: N/A
+   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either au-syd (Sydney, Australia), eu-de (Frankfurt, Germany), eu-gb (London, United Kingdom), jp-tok (Tokyo, Japan), jp-osa (Osaka, Japan), us-south (Dallas, US), us-east (Washington DC, US), or ca-tor (Toronto, CA). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
   
 * Permissions to pull images from icr.io. Private workers require the tekton-pipelines infrastructure and must be able to pull tekton-releases images from icr.io to complete the private worker installation.
 
@@ -401,8 +401,8 @@ echo "to install the delivery pipeline private worker"
 
 This script contains the following requirements:
 
-  * The ibmcom and tekton-releases namespaces currently exist on the target ICP.
-  * The Docker client is connected to the ICP’s private container registry. For more information about authentication for the Docker CLI, see [Configuring authentication for the Docker CLI](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.2.0/manage_images/configuring_docker_cli.html){: external}.   
+   * The ibmcom and tekton-releases namespaces currently exist on the target ICP.
+   * The Docker client is connected to the ICP’s private container registry. For more information about authentication for the Docker CLI, see [Configuring authentication for the Docker CLI](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.2.0/manage_images/configuring_docker_cli.html){: external}.   
 
 After you provision the container images on the ICP’s private registry, update the image's scope to global to make sure that the images can be accessed from any namespaces. For more information about updating the scope of an image, see [Changing image scope](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.2.0/manage_images/change_scope.html).
 

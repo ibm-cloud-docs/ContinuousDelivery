@@ -94,11 +94,11 @@ The access token that the pipeline uses to clone the Git repo is no longer valid
 Configure and save the Git integration again:
 {: tsResolve}
 
-  1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain that contains the Git integration that you want to update to open its Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
-  1. On the card for the Git integration, click the menu to access the configuration options.
-  1. Select the authorized Git account for the Git integration owner.
-  1. Click **Save Integration**.
-  1. Run your pipeline again. 
+   1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain that contains the Git integration that you want to update to open its Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
+   1. On the card for the Git integration, click the menu to access the configuration options.
+   1. Select the authorized Git account for the Git integration owner.
+   1. Click **Save Integration**.
+   1. Run your pipeline again. 
 
 
 ## I tried to deploy to Kubernetes by using the {{site.data.keyword.deliverypipeline}}, why am I getting an error about an invalid object? 

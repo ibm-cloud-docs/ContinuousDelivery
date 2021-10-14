@@ -45,9 +45,9 @@ If {{site.data.keyword.cloud_notm}} is not authorized to access your GitHub acco
 If you are configuring the GitHub tool integration while you are creating your toolchain, follow these steps to authorize with GitHub:
 {: tsResolve}
 
-  1. In the Configurable Integrations section, click **GitHub**.
-  1. If you are creating the toolchain on {{site.data.keyword.cloud_notm}} Public and {{site.data.keyword.cloud_notm}} is not authorized to access GitHub, click **Authorize** to go to the GitHub website.
-  1. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
+   1. In the Configurable Integrations section, click **GitHub**.
+   1. If you are creating the toolchain on {{site.data.keyword.cloud_notm}} Public and {{site.data.keyword.cloud_notm}} is not authorized to access GitHub, click **Authorize** to go to the GitHub website.
+   1. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
 
 If you already have a toolchain, update the GitHub tool integration's configuration:
 

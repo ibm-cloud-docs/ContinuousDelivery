@@ -174,16 +174,16 @@ Except for Simple-type build jobs, when you configure a job, you can include UNI
 Sample build and deploy scripts can be found in [https://github.com/open-toolchain/commons](https://github.com/open-toolchain/commons){: external}.
 
 Additionally, pipeline jobs can run only the following commands as `sudo`:
-  * `/usr/sbin/service`
-  * `/usr/bin/apt-get`
-  * `/usr/bin/apt-key`
-  * `/usr/bin/dpkg`
-  * `/usr/bin/add-apt-repository`
-  * `/opt/IBM/node-v0.10.40-linux-x64/npm`
-  * `/opt/IBM/node-v0.12.7-linux-x64/npm`
-  * `/opt/IBM/node-v4.2.2-linux-x64/npm`
-  * `/usr/bin/Xvfb`
-  * `/usr/bin/pip`
+   * `/usr/sbin/service`
+   * `/usr/bin/apt-get`
+   * `/usr/bin/apt-key`
+   * `/usr/bin/dpkg`
+   * `/usr/bin/add-apt-repository`
+   * `/opt/IBM/node-v0.10.40-linux-x64/npm`
+   * `/opt/IBM/node-v0.12.7-linux-x64/npm`
+   * `/opt/IBM/node-v4.2.2-linux-x64/npm`
+   * `/usr/bin/Xvfb`
+   * `/usr/bin/pip`
 
 
 After a job runs, the container that was created for it is discarded. The results of a job run can persist, but the environment in which it ran does not.

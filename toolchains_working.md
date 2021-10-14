@@ -47,7 +47,7 @@ To see which toolchains and tool integrations are available, see [Toolchain avai
 ## Creating a toolchain from a template   
 {: #creating_a_toolchain_from_a_template}
 
-You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes a specific set of tool integrations. Depending on the template that you use, you can create a toolchain that has a specific set of tool integrations or an empty toolchain that you can add tool integrations to. Learn more about how to use the templates from the [IBM Cloud Garage Method ](https://www.ibm.com/cloud/garage/category/tools){:external}.
+You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes a specific set of tool integrations. Depending on the template that you use, you can create a toolchain that has a specific set of tool integrations or an empty toolchain that you can add tool integrations to. Learn more about how to use the templates from the [IBM Cloud Garage Method ](https://www.ibm.com/cloud/garage/category/tools){: external}.
 
 1. If you use {{site.data.keyword.cloud_notm}} Public, log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. If you use {{site.data.keyword.cloud_notm}} Dedicated, log in to your Dedicated environment on {{site.data.keyword.cloud_notm}}
@@ -92,9 +92,9 @@ You can use a template as a starting point to [create a toolchain](https://cloud
  
  e. To securely save the API key so that you can use it again in other toolchains and starter kit workflows:
  
-  * Select the **Save this key in a secrets store for reuse** checkbox to integrate with the default IBM Key Protect secrets store.
-  * If you don't have an existing instance of Key Protect, specify a name for the instance and the secret.
-  * Click **OK** to apply your new API key.
+   * Select the **Save this key in a secrets store for reuse** checkbox to integrate with the default IBM Key Protect secrets store.
+   * If you don't have an existing instance of Key Protect, specify a name for the instance and the secret.
+   * Click **OK** to apply your new API key.
    
  f. To validate that your Key Protect instance was successfully created, go to your [{{site.data.keyword.cloud}} Resource list](https://cloud.ibm.com/resources){: external} and expand the **Services** twistie. To view your API keys, from the menu bar, click **Manage** &gt; **Access (IAM)**, and select **{{site.data.keyword.cloud}} API keys**.
 
@@ -189,8 +189,8 @@ The command-line interface (CLI) toolchain view depends on the currently targete
 
 Check out one of these tutorials on the [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external}:
 
-  * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}.
+   * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}.
 
-  * [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){: external}.
+   * [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){: external}.
 
-  * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}.
+   * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}.

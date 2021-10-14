@@ -36,8 +36,8 @@ Complete the following tasks to configure a pipeline.
 
 1. On the Pipeline page, click **ADD STAGE**. The Stage Configuration page opens.
 2. Configure the stage.
-  1. On the **INPUT** tab, select an input for the stage.  For Build stages, the input tab includes a **Branch** field to specify the branch in the repo to use for input.
-  2. On the **JOBS** tab, add and configure at least one job. The first stage usually has at least a build job.
+   1. On the **INPUT** tab, select an input for the stage.  For Build stages, the input tab includes a **Branch** field to specify the branch in the repo to use for input.
+   2. On the **JOBS** tab, add and configure at least one job. The first stage usually has at least a build job.
 3. Click **SAVE**.
 
 ## Adding a job to a stage
