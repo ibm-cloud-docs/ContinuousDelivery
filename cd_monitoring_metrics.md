@@ -32,7 +32,7 @@ subcollection: ContinuousDelivery
 
 You can configure one instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics. 
 * To configure the Monitoring instance, you must set the platform metrics configuration. 
-* If a Monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring services are collected automatically and available for monitoring through this instance. For more information about enabled-monitoring services, see [Cloud services]().
+* If a Monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring services are collected automatically and available for monitoring through this instance.
 * After a Monitoring instance in an account and region is enabled to collect platform metrics, it automatically collects metrics from all {{site.data.keyword.contdelivery_short}} service instances in the same account and region. You do not need to opt in to the {{site.data.keyword.contdelivery_short}} service metrics collection. You also cannot opt out of the {{site.data.keyword.contdelivery_short}} service metrics collection.
 
 To monitor platform metrics, check that the {{site.data.keyword.mon_full_notm}} instance is provisioned in the same region where the {{site.data.keyword.contdelivery_short}} instance is provisioned.
