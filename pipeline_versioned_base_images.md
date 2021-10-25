@@ -63,8 +63,8 @@ Ubuntu based versioned based images are tagged as 2.x versions. Red Hat UBI base
 
 To add tools in a Red Hat UBI-based image, you must use the `yum` command. `apt-get` or `apt` commands are exclusively reserved for Ubuntu images. Because of these command restrictions, you cannot update existing pipelines to use version 3.x images without modifying the scripts. {: important}
  
- ## Image version contents
- {: #image_version_contents}
+## Image version contents
+{: #image_version_contents}
  
  After version 2.0, images no longer include grunt or python. If these tools are required for your build, you can install them manually. To install grunt, run `npm install -g grunt-cli`. Make sure that you don't change the Node.js version after you install grunt. To install python on a 2.x vbi, run `apt-get -qq update && apt-get -qq install -y python`. If you are using a 3.x vbi, you can use `yum update -yq && yum install -yq python3-pip`.
  {: important}
@@ -100,8 +100,8 @@ The following available image versions are listed in descending order, starting 
  The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
  {: tip}
  
- ### Version 3.3
- {: #version_3_3}
+### Version 3.3
+{: #version_3_3}
 
 To view the contents of version 3.3, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 11. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built.
 
@@ -237,8 +237,8 @@ This image includes the following tools:
 ```
  {: codeblock}
 
- ### Version 3.2
- {: #version_3_2}
+### Version 3.2
+{: #version_3_2}
 
 To view the contents of version 3.2, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 11. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built.
 
@@ -370,8 +370,8 @@ This image includes the following tools:
 ```
  {: codeblock}
 
- ### Version 3.1
- {: #version_3_1}
+### Version 3.1
+{: #version_3_1}
 
 To view the contents of version 3.1, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 11. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built.
 
@@ -505,8 +505,8 @@ This image includes the following tools:
 ```
  {: codeblock}
 
- ### Version 3.0
- {: #version_3_0}
+### Version 3.0
+{: #version_3_0}
 
 To view the contents of version 3.0, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 11. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built.
 
@@ -1073,8 +1073,8 @@ To view the contents of version 2.13, from the running image, type `default_vers
 ```
  {: codeblock}
 
- ### Version 2.12
- {: #version_2_12}
+### Version 2.12
+{: #version_2_12}
 
 To view the contents of version 2.12, from the running image, type `default_versions.sh`. This image includes the following tools:
 
@@ -1217,8 +1217,8 @@ To view the contents of version 2.12, from the running image, type `default_vers
 ```
  {: codeblock}
 
- ### Version 2.11
- {: #version_2_11}
+### Version 2.11
+{: #version_2_11}
 
 To view the contents of version 2.11, from the running image, type `default_versions.sh`. This image includes the following tools:
 
@@ -1351,8 +1351,8 @@ To view the contents of version 2.11, from the running image, type `default_vers
 ```
  {: codeblock}
  
- ### Version 2.10
- {: #version_2_10}
+### Version 2.10
+{: #version_2_10}
  
 Starting with version 2.10, the versioned base image includes a Docker client.
 {: tip}
@@ -1488,8 +1488,8 @@ To view the contents of version 2.10, from the running image, type `default_vers
 ```
  {: codeblock}
  
- ### Version 2.9
- {: #version_2_9}
+### Version 2.9
+{: #version_2_9}
 
 To view the contents of version 2.9, from the running image, type `default_versions.sh`. This image includes the following tools:
 
@@ -1588,8 +1588,8 @@ To view the contents of version 2.9, from the running image, type `default_versi
   ```
  {: codeblock}
  
- ### Version 2.8
- {: #version_2_8}
+### Version 2.8
+{: #version_2_8}
 
 To view the contents of version 2.8, from the running image, type `default_versions.sh`. This image includes the following tools:
 
@@ -1685,8 +1685,8 @@ To view the contents of version 2.8, from the running image, type `default_versi
   ```
  {: codeblock}
  
- ### Version 2.7
- {: #version_2_7}
+### Version 2.7
+{: #version_2_7}
 
 Starting with version 2.7, the default JVM is Java&trade; 11. Java&trade; 8 was removed. If you still need Java&trade; 1.8, you can either use version 2.6 or your own custom image. Although two versions of Helm are available, the default version is 2.16.6. You can access Helm version 3.2.1 by using the `helm3` command.
 
@@ -1784,8 +1784,8 @@ To view the contents of version 2.7, from the running image, type `default_versi
   ```
  {: codeblock}
  
- ### Version 2.6
- {: #version_2_6}
+### Version 2.6
+{: #version_2_6}
  
 To view the contents of version 2.6, from the running image, type `default_versions.sh`. This image includes the following tools:
 
@@ -1877,8 +1877,8 @@ To view the contents of version 2.6, from the running image, type `default_versi
   ```
  {: codeblock}
  
- ### Version 2.5
- {: #version_2_5}
+### Version 2.5
+{: #version_2_5}
  
 To view the contents of version 2.5, from the running image, type `default_versions.sh`. This image includes the following tools:
 
@@ -1969,8 +1969,8 @@ To view the contents of version 2.5, from the running image, type `default_versi
   ```
  {: codeblock}
  
- ### Version 2.4
- {: #version_2_4}
+### Version 2.4
+{: #version_2_4}
    
 To view the contents of version 2.4, from the running image, type `default_versions.sh`. This image includes the following tools:
 
@@ -2055,8 +2055,8 @@ To view the contents of version 2.4, from the running image, type `default_versi
   ```
  {: codeblock}
  
- ### Version 2.3
- {: #version_2_3}
+### Version 2.3
+{: #version_2_3}
  
  To view the contents of version 2.3, from the running image, type `default_versions.sh`. This image includes the following tools:
 
@@ -2135,8 +2135,8 @@ To view the contents of version 2.4, from the running image, type `default_versi
   ```
  {: codeblock}
 
- ### Version 2.2
- {: #version_2_2}
+### Version 2.2
+{: #version_2_2}
 
 To view the contents of version 2.2, from the running image, type `default_versions.sh`. This image includes the following tools:
 
@@ -2215,8 +2215,8 @@ To view the contents of version 2.2, from the running image, type `default_versi
   ```
  {: codeblock} 
  
- ### Version 2.1
- {: #version_2_1}
+### Version 2.1
+{: #version_2_1}
 
 To view the contents of version 2.1, from the running image, type `default_versions.sh`. This image includes the following tools:
 
@@ -2294,8 +2294,8 @@ To view the contents of version 2.1, from the running image, type `default_versi
   ```
  {: codeblock}
 
- ### Version 2.0
- {: #version_2_0}
+### Version 2.0
+{: #version_2_0}
  
  To view the contents of version 2.0, from the running image, type `default_versions.sh`. This image includes the following tools:
 
@@ -2376,8 +2376,8 @@ To view the contents of version 2.1, from the running image, type `default_versi
   ```
  {: codeblock}
 
- ## Configuring the image for a specific pipeline job
- {: #configure_image_for_job}
+## Configuring the image for a specific pipeline job
+{: #configure_image_for_job}
  
  In general, it is not recommended to configure the image to use for individual pipeline jobs. This method increases the effort to upgrade to a new image version since you must update each pipeline job. However, there might be circumstances in which you are required to configure the image for a specific pipeline job.
  {: important}
