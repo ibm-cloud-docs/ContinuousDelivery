@@ -1,9 +1,7 @@
 ---
 
-
-
 copyright:
-  years: 2015，2020
+  years: 2015, 2020
 lastupdated: "2019-12-07"
 
 keywords: IBM Cloud Live Sync, Use IBM Cloud Live Sync, Web IDE, Live Edit
