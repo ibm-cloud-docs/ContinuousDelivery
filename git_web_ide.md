@@ -29,8 +29,7 @@ No matter where you code, you can use this quick reference to do common tasks. W
 ## Create a local branch
 {: #create_branch}
 
-### Eclipse Orion Web IDE
-{: #create_branch_web}
+Use the Eclipse Orion Web IDE:
 
 1. Click the **Reference** list.
 
@@ -38,23 +37,23 @@ No matter where you code, you can use this quick reference to do common tasks. W
 
 2. Type your branch name, and then click **Submit**.
 
-### Git terminal
-{: #create_branch_cmd}
+Use the Git terminal:
+
 1. Type `git branch <branchname>` and press Enter.
 
 ## Work on a local branch
 {: #start_working_on_branch}
 
-### Eclipse Orion Web IDE
-{: #start_working_on_branch_web}
+Use the Eclipse Orion Web IDE:
+
 1. Click the **Reference** list and expand **local**.
 
 2. Click the Checkout icon ![Checkout icon](images/checkout.png) for the branch to modify.
 
 1. Make sure that your selected branch is shown in the **Reference** list.
 
-### Git terminal
-{: #start_working_on_branch_cmd}
+Use the Git terminal:
+
 1. To view your local branches, type `git branch -l` and press Enter.
 
 2. Type `git checkout <branchname>` and press Enter.
@@ -63,23 +62,20 @@ No matter where you code, you can use this quick reference to do common tasks. W
 ## Update a local branch to include changes from the remote branch
 {: #update_branch}
 
-### Eclipse Orion Web IDE
-{: #update_branch_web}
+Use the Eclipse Orion Web IDE:
 
 1. Click **Sync**.
 
 1. If you encounter conflicts, [resolve them](#resolve_a_rebase_conflict).
 
-### Git terminal
-{: #update_branch_cmd}
+Use the Git terminal:
 
 1. Type `git pull` and press Enter.
 
 ## Delete a local branch
 {: #delete_branch}
 
-### Eclipse Orion Web IDE
-{: #delete_branch_web}
+Use the Eclipse Orion Web IDE:
 
 1. Make sure that the branch to delete is not checked out. If that branch is checked out, [check out another branch](#start_working_on_branch).
 
@@ -87,8 +83,7 @@ No matter where you code, you can use this quick reference to do common tasks. W
 
 2. Click **Delete** ![Delete icon](images/delete.png) for the local branch to remove.
 
-### Git terminal
-{: #delete_branch_cmd}
+Use the Git terminal
 
 1. Type `git branch -d <branchname>` and press Enter.
 
@@ -100,37 +95,32 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 When you force push a local branch to a remote one, you might lose commits on the remote branch.
 {: important}
 
-### Eclipse Orion Web IDE
-{: #force_push_web}
+Use the Eclipse Orion Web IDE:
 
 1. In the Working Directory Changes section, in the Outgoing section, click the arrow for **Push**.
 2. Click **Force Push Branch**.
 3. Confirm the warning.
 
-### Git terminal
-{: #force_push_cmd}
+Use the Git terminal:
 
 1. Type `git push <origin> <remote branch> -f` and press Enter.
 
 ## Discard unstaged changes from the active local branch
 {: #discard_changes}
 
-### Eclipse Orion Web IDE
-{: #discard_changes_web}
+Use the Eclipse Orion Web IDE:
 
 1. In the Working Directory Changes section, select the checkbox for each modified file that has changes you want to discard.
 2. Click the Checkout icon ![Checkout icon](images/discard.png).
 
-### Git terminal
-{: #discard_changes_cmd}
+Use the Git terminal:
 
 1. Type `git checkout -- path/to/file/filename` to discard changes to a file.
 
 ## Commit files and push to the remote branch
 {: #commit}
 
-### Eclipse Orion Web IDE
-{: #commit_web}
+Use the Eclipse Orion Web IDE:
 
 1. In the Working Directory Changes section, select the checkbox for each file to commit.
 
@@ -143,8 +133,7 @@ When you force push a local branch to a remote one, you might lose commits on th
 
 4. Click **Push**.
 
-### Git terminal
-{: #commit_cmd}
+Use the Git terminal:
 
 1. Type `git status` and press Enter.
 
@@ -162,13 +151,12 @@ When you force push a local branch to a remote one, you might lose commits on th
   To save your commit message and close Vim, which might be your default text editor, press Esc, type `:wq`, and press Enter.
   {: tip}
 
-4. Type `git push` and press Enter.
+6. Type `git push` and press Enter.
 
 ## View the commit history
 {: #view_commit_history}
 
-### Eclipse Orion Web IDE
-{: #view_commit_history_web}
+Use the Eclipse Orion Web IDE:
 
 1. In the Active Branch section, expand **History** to see the commit history for that branch.
 
@@ -180,8 +168,7 @@ When you force push a local branch to a remote one, you might lose commits on th
 
   ![Visual commit history icon](images/visualhistoryexample.png)
 
-### Git terminal
-{: #view_commit_history_cmd}
+Use the Git terminal:
 
 1. Type `git log` and press Enter.
 
@@ -194,8 +181,7 @@ When you force push a local branch to a remote one, you might lose commits on th
 ## Compare changes that a commit introduced
 {: #compare_changes}
 
-### Eclipse Orion Web IDE
-{: #compare_changes_web}
+Use the Eclipse Orion Web IDE:
 
 1. View your commit history and locate the commit. For more information, see [View the commit history](#view_commit_history).
 
@@ -206,8 +192,7 @@ When you force push a local branch to a remote one, you might lose commits on th
   If a commit introduced a change to a line, the original line is shaded pink and the new line is shaded green.  Similarly, lines that were added by a commit are shaded green and lines that were removed by a commit are shaded pink.
   {: tip}
 
-### Git terminal
-{: #compare_changes_cmd}
+Use the Git terminal:
 
 1. Type `git log -p` and press Enter.
 
@@ -222,7 +207,7 @@ When you force push a local branch to a remote one, you might lose commits on th
   If a commit introduced a change to a line, the original line is in red text and starts with a minus sign (-). The new line is in green text and starts with a plus sign (+).  Similarly, lines that were added by a commit are in green text and start with a +. Lines that were removed by a commit are in red text and start with a -.
   {: tip}
 
-1. To stop viewing entries, press Q.
+4. To stop viewing entries, press Q.
 
 ## Modify the last commit
 {: #modify_last_commit}
@@ -230,18 +215,17 @@ When you force push a local branch to a remote one, you might lose commits on th
   When you modify the last commit after you push it to a remote repo, you rewrite the commit history. This change might cause commit failures and other problems for the other contributors in your project. Be sure that you know what you're doing before you modify a commit that you pushed to a remote repo.
   {: important}
 
-### Eclipse Orion Web IDE
-{: #modify_last_commit_web}
+Use the Eclipse Orion Web IDE:
+
 1. Select the checkboxes for the items to add to the commit.
 
-1. Select the **Amend previous commit** checkbox.
+2. Select the **Amend previous commit** checkbox.
 
-2. If necessary, enter a new commit message.
+3. If necessary, enter a new commit message.
 
-3. Click **Commit**.
+4. Click **Commit**.
 
-### Git terminal
-{: #modify_last_commit_cmd}
+Use the Git terminal:
 
 1. Check your status. As necessary, stage or unstage files.
 
@@ -255,8 +239,7 @@ When you force push a local branch to a remote one, you might lose commits on th
 ## Tag a commit
 {: #tag_commit}
 
-### Eclipse Orion Web IDE
-{: #tag_commit_web}
+Use the Eclipse Orion Web IDE:
 
 1. View your commit history and locate the commit. For more information, see [View the commit history](#view_commit_history).
 
@@ -266,8 +249,7 @@ When you force push a local branch to a remote one, you might lose commits on th
 
 4. In the name field, type your tag text. Click **Submit**.
 
-### Git terminal
-{: #tag_commit_cmd}
+Use the Git terminal:
 
 1. View the commit history and obtain the ID of the commit to tag. For more information, see [View the commit history](#view_commit_history).
 
@@ -276,42 +258,36 @@ When you force push a local branch to a remote one, you might lose commits on th
 ## Change the committer name and email address
 {: #change_the_committer_name_and_email_address}
 
-### Eclipse Orion Web IDE
-{: #change_info_web}
+Use the Eclipse Orion Web IDE:
 
 1. Click the configuration icon ![Configuration icon](images/configurations.png).
 
 2. Change the user email address and name by updating the user.email and user.name values. Click **Submit** to save each change.
 
-### Git terminal
-{: #change_info_cmd}
-
-To update your name and email address for a single repo:
+Use the Git terminal to update your name and email address for a single repo:
 
 1. Type `git config user.email "<your@email.com>"` and press Enter.
 
 2. Type `git config user.name "<Your Name>"` and press Enter.
 
-To update your name and email address for all repos:
+Use your Git terminal to update your name and email address for all repos:
 
 1. Type `git config --global user.email "<your@email.com>"` and press Enter.
 
 2. Type `git config --global user.name "<Your Name>"` and press Enter.
 
-##Revert a commit
+## Revert a commit
 {: #revert}
 
 Revert the changes that a commit introduced into your active branch.
 
-### Eclipse Orion Web IDE
-{: #revert_web}
+Use the Eclipse Orion Web IDE:
 
 1. Under History, select a commit.
 
 2. Click the revert icon ![Revert icon](images/revert.png).
 
-### Git terminal
-{: #revert_cmd}
+Use the Git terminal:
 
 1. Type `git revert <commit ID>` and press Enter.
 
@@ -320,8 +296,7 @@ Revert the changes that a commit introduced into your active branch.
 
 When you need to deliver changes from a source branch to a destination branch, you must first merge. Typically, the source branch is the branch you made changes in, and the destination branch is your master branch.
 
-### Eclipse Orion Web IDE
-{: #merge_changes_web}
+Use the Eclipse Orion Web IDE:
 
 1. Decide which branches to merge.
 
@@ -329,18 +304,17 @@ When you need to deliver changes from a source branch to a destination branch, y
 
  ![Check out destination branch icon](images/destinationbranch.png)
 
-1. Click the **Reference** list, expand **local**, and click the name of the source branch. The changes from the source branch are shown in the Incoming section.
+3. Click the **Reference** list, expand **local**, and click the name of the source branch. The changes from the source branch are shown in the Incoming section.
 
   ![Changes from the source branch shown in the Incoming section](images/sourcebranch.png)
 
-1. In the Incoming section, click the **Merge** icon ![Merge icon in the Incoming section](images/mergeicon.png).
+4. In the Incoming section, click the **Merge** icon ![Merge icon in the Incoming section](images/mergeicon.png).
 
-1. In the **Reference** list, click the checkout icon for the branch that you just merged the changes into.
+5. In the **Reference** list, click the checkout icon for the branch that you just merged the changes into.
 
-1. If you want to deliver the changes, click **Push**. Otherwise, at this point, you can create a test deployment to make sure that everything is working as expected.
+6. If you want to deliver the changes, click **Push**. Otherwise, at this point, you can create a test deployment to make sure that everything is working as expected.
 
-### Git terminal
-{: #merge_changes_cmd}
+Use the Git terminal:
 
 1. Decide which branches to merge.
 
@@ -352,8 +326,7 @@ When you need to deliver changes from a source branch to a destination branch, y
 ## Resolve a merge conflict
 {: #resolve_a_merge_conflict}
 
-### Eclipse Orion Web IDE
-{: #resolve_a_merge_conflict_web}
+Use the Eclipse Orion Web IDE:
 
 1. In the Changed Files pane, review the list of files that contain conflicts.
 
@@ -369,8 +342,7 @@ When you need to deliver changes from a source branch to a destination branch, y
 		
 4. For each conflicting file, select the checkbox. Type a merge commit message, and click **Commit**.
 
-### Git terminal
-{: #resolve_a_merge_conflict_cmd}
+Use the Git terminal:
 
 1. For the files that contain conflicts, review the Git message for the names.
 
@@ -389,29 +361,27 @@ When you need to deliver changes from a source branch to a destination branch, y
 ## Rebase branches
 {: #rebase_branches}
 
-### Eclipse Orion Web IDE
-{: #rebase_branches_web}
+Use the Eclipse Orion Web IDE:
 
 1. Decide which branches to rebase. You will rebase the contents of the source branch into the destination branch.
 
 2. Check out the destination branch. For more information, see [Work on a local branch](#start_working_on_branch).
 
-1. Click the **Reference** list.
+3. Click the **Reference** list.
 
-1. Click the name of the source branch.
+4. Click the name of the source branch.
 
-1. In the Incoming section, click the rebase icon ![Rebase icon](images/rebase.png).
+5. In the Incoming section, click the rebase icon ![Rebase icon](images/rebase.png).
 
-5. If you encounter conflicts, [resolve them](#resolve_a_rebase_conflict).
+6. If you encounter conflicts, [resolve them](#resolve_a_rebase_conflict).
 
-6. Repeat the previous step as many times as necessary to complete the rebase operation.
+7. Repeat the previous step as many times as necessary to complete the rebase operation.
 
-1. Click the **Reference** list, expand **origin**, and click the name of the source branch.
+8. Click the **Reference** list, expand **origin**, and click the name of the source branch.
 
-1. Click **Push**.
+9. Click **Push**.
 
-### Git terminal
-{: #rebase_branches_cmd}
+Use the Git terminal:
 
 1. Check out the branch to update by typing `git checkout <destination_branchname>` and pressing Enter.
 
@@ -427,8 +397,7 @@ When you need to deliver changes from a source branch to a destination branch, y
 ## Resolve a rebase conflict
 {: #resolve_a_rebase_conflict}
 
-### Eclipse Orion Web IDE
-{: #resolve_a_rebase_conflict_web}
+Use the Eclipse Orion Web IDE:
 
 1. In the Working Directory Changes section, review the list of conflicting files.
 
@@ -444,8 +413,7 @@ When you need to deliver changes from a source branch to a destination branch, y
 		{: tip}
 4. In the rebase pane, select the checkbox for each corrected file and click **Continue**.
 
-### Git terminal
-{: #resolve_a_rebase_conflict_cmd}
+Use the Git terminal:
 
 1. For the files that contain conflicts, review the Git message for the names.
 
