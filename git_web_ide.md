@@ -87,7 +87,7 @@ Use the Git terminal
 
 1. Type `git branch -d <branchname>` and press Enter.
 
-##Force push local changes to a remote branch
+## Force push local changes to a remote branch
 {: #force_push}
 
 Overwrite the contents of a referenced remote branch with the contents of your active local branch.
