@@ -26,7 +26,6 @@ completion-time: 40m
 # Develop and deploy an application to a Virtual Machine
 {: #tutorial-cd-vsi}
 {: toc-content-type="tutorial"}
-{: toc-services=""}
 {: toc-completion-time="40m"}
 
 This tutorial demonstrates how to set up a {{site.data.keyword.contdelivery_short}} toolchain and deliver a simple application (app) to a Virtual Machine. You can set up source control, and then build, test, and deploy the code to different deployment stages.
