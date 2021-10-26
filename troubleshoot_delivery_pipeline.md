@@ -28,7 +28,7 @@ subcollection: ContinuousDelivery
 {: #troubleshoot-delivery-pipeline}
 
 General problems with using {{site.data.keyword.deliverypipeline}} might include pipeline creation or tool integration configuration issues. In many cases, you can recover from these problems by following a few easy steps.
-{:shortdesc}
+{: shortdesc}
 
 ## I created a toolchain and the {{site.data.keyword.deliverypipeline}} service doesn't initialize. Why doesn't the pipeline initialization complete?
 {: #troubleshoot-pipeline-initialization}
