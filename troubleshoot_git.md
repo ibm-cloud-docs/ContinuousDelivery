@@ -28,7 +28,7 @@ subcollection: ContinuousDelivery
 {: #troubleshoot-git}
 
 General problems with using GitHub, GitLab, and {{site.data.keyword.gitrepos}} might include GitHub authentication or tool integration configuration issues. In many cases, you can recover from these problems by following a few easy steps.
-{:shortdesc}
+{: shortdesc}
 
 ## I tried to add the GitHub tool integration to my toolchain, why wasn't the tool integration added?
 {: troubleshoot-cannot-authorize-github}
