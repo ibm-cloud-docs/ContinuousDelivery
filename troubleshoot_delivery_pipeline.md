@@ -176,7 +176,7 @@ To build your app in a single pipeline job:
   
 ## Why can't the {{site.data.keyword.deliverypipeline}} communicate through a firewall?
 {: #troubleshoot-firewall-configuration}
-{:troubleshoot}
+{: troubleshoot}
 {: support}
 
 Your firewall configuration prevents the {{site.data.keyword.deliverypipeline}} from communicating with environments that are behind a firewall.
