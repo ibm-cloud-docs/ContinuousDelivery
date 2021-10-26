@@ -1,0 +1,270 @@
+---
+toc:
+  properties:
+    subcollection: ContinuousDelivery
+    version: 2
+    category: dev_ops
+    audience: service
+    href: /docs/ContinuousDelivery
+    console-page: "/devops/toolchains"
+    product-page: "https://www.ibm.com/cloud/continuous-delivery"
+    path: ContinuousDelivery
+    label: Continuous Delivery
+
+  entries: 
+  - navgroup: 
+      id: learn
+      topics:
+      - index.md
+      - link:
+          label: What is continuous delivery?
+          href: https://www.ibm.com/cloud/learn/continuous-delivery
+      - link:
+          label: Why IBM Cloud Continuous Delivery?
+          href: https://www.ibm.com/cloud/continuous-delivery    
+      - cd_about.md
+      - devops_intro.md
+      - garage_method.md
+      - limitations_plans.md
+      - topicgroup: 
+          label: DevOps Insights
+          topics:
+          - di_working.md
+          - overview_data_aggregation.md
+          - overview_observe_trends.md
+          - overview_deploy_environment.md
+          - overview_quality_gate.md
+
+  - navgroup: 
+      id: tutorial
+      topics: 
+      - link:
+          label: Introduce toolchains by using the Develop a Cloud Foundry app
+          href: https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain
+      - link:
+          label: Use the Develop and test a Cloud Foundry app toolchain
+          href: https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain
+      - link:
+          label: Use the Develop and test microservices on Cloud Foundry toolchain
+          href: https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain
+      - link:
+          label: Create a template for a custom toolchain
+          href: https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain
+      - link:
+          label: Explore DevOps Insights
+          href: https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights
+      - link:
+          label: Use the Develop a Kubernetes app toolchain
+          href: https://www.ibm.com/cloud/architecture/tutorials/use-develop-kubernetes-app-toolchain
+      - link:
+          label: Use the Develop a Kubernetes app with Helm toolchain
+          href: https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain
+      - link:
+          label: Use the Develop and test microservices with Kubernetes and Helm toolchain
+          href: https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-with-kubernetes-and-helm-toolchain
+      - link:
+          label: Use the Run your first canary test in Kubernetes using the Istio toolchain
+          href: https://www.ibm.com/cloud/garage/tutorials/use-canary-testing-in-kubernetes-using-istio-toolchain
+      - link:
+          label: Add a toolchain to an app
+          href: https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app
+
+      - cd-kubernetes-cra-tutorial.md
+      - cd-kubernetes-iter8-tutorial.md
+      - cd-kubernetes-razee-tutorial.md
+      - cd-kubernetes-image-signing-tutorial.md
+      - cd-kubernetes-tutorial.md
+      - cd-vm-tutorial.md
+      - cd-vsi-tutorial.md
+
+  - navgroup: 
+      id: howto
+      topics:
+      - ha-dr.md
+      - cd_create.md
+      - cd_delete.md
+      - topicgroup: 
+          label: Toolchains
+          topics: 
+          - toolchains_working.md
+          - toolchains_migrate.md
+          - toolchains_using.md
+          - topicgroup: 
+              label: Tool integrations
+              topics: 
+              - toolchains_integrations.md
+              - artifactory_integration.md
+              - bitbucket_integration.md
+              - delivery_pipeline_integration.md
+              - private_worker_integration.md
+              - insights_integration.md
+              - web_ide_integration.md
+              - grit_integration.md
+              - gitlab_integration.md
+              - hashicorp_vault_integration.md
+              - jenkins_integration.md
+              - jira_integration.md
+              - keyprotect_integration.md
+              - nexus_integration.md
+              - custom_tool_integration.md
+              - pager_duty_integration.md
+              - rtc_integration.md
+              - sauce_labs_integration.md
+              - secrets_manager_integration.md
+              - scc_integration.md
+              - slack_integration.md
+              - sonarqube_integration.md
+
+      - deploy_button.md
+      - link:
+          label: Creating custom toolchain templates
+          href: https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates    
+      - topicgroup: 
+          label: Delivery Pipelines
+          topics:
+          - topicgroup: 
+              label: Delivery pipeline (Classic)
+              topics: 
+               - pipeline_about.md
+               - pipeline_working.md
+               - pipeline_build_deploy.md
+               - pipeline_container_images.md
+               - pipeline_versioned_base_images.md
+               - pipeline_custom_docker_images.md
+          - topicgroup: 
+              label: Delivery pipeline (Tekton)
+              topics: 
+              - tekton_pipeline.md
+      - topicgroup: 
+          label: Pipeline Private Workers
+          topics: 
+          - install_private_workers.md
+          - private_workers.md
+      - topicgroup: 
+              label: Eclipse Orion Web IDE
+              topics: 
+              - web_ide.md
+              - git_web_ide.md
+              - bluemixlive.md
+      - topicgroup: 
+              label: Git source control
+              topics: 
+              - git_working.md
+              - git_locally.md
+              - git_toolchains.md
+      - topicgroup: 
+              label: Code Risk Analyzer
+              topics: 
+              - cd_configure_cra.md
+              - cd_cra_scan.md
+      - topicgroup: 
+              label: DevOps Insights
+              topics: 
+              - view_pipeline_activity.md
+              - defining_policies.md
+              - data_sets.md
+              - deleting_data.md
+              - add_devops_insights.md
+              - aggregrate_mult_sources.md
+              - publish_test_data.md
+      - topicgroup: 
+              label: Using the IBM CLI to integrate IBM Continuous Delivery Pipeline with DevOps Insights
+              topics: 
+              - cli_setting_values.md
+              - cli_publish_build.md
+              - cli_publish_deploy.md
+              - cli_publish_test.md
+              - cli_evaluate_gates.md
+      - topicgroup: 
+              label: Using idra (deprecated) to integrate IBM Continuous Delivery Pipeline with DevOps Insights
+              topics: 
+              - idra_publish_build.md
+              - idra_publish_deploy.md
+              - idra_publish_test.md
+              - idra_evaluate_gates.md
+      - topicgroup: 
+              label: Integrating Jenkins with DevOps Insights
+              topics: 
+              - jenkins_publish_build.md
+              - jenkins_publish_deploy.md
+              - jenkins_publish_test.md
+              - jenkins_evaluate_gates.md
+              - jenkins_communicate_toolchain.md
+      - topicgroup: 
+              label: Integrating other CI/CD tools with DevOps Insights
+              topics: 
+              - cicd_setting_values.md
+              - cicd_publish_build.md
+              - cicd_publish_deploy.md
+              - cicd_publish_test.md
+              - cicd_evaluate_gates.md
+      - topicgroup: 
+          label: Enhancing security
+          topics: 
+          - cd-architecture-workload-isolation.md
+          - cd_iam_security.md
+          - toolchains_iam_security.md
+          - toolchains_cf_security.md
+          - cd_personal_data.md
+          - cd_security_compliance.md
+          - cd_data_security.md
+
+      - cd_monitoring_metrics.md
+
+  - navgroup:
+      id: reference
+      topics:
+      - link:
+          label: Open Toolchain SDK
+          href: https://github.com/open-toolchain/sdk/wiki
+
+      - pipeline_deploy_var.md
+      - tekton_deploy_var.md
+
+      - link:
+          label: Using Jenkins to integrate DevOps Insights
+          href: https://wiki.jenkins.io/display/JENKINS/IBM+Cloud+DevOps+Plugin
+      
+      - topicgroup:
+          label: Command reference
+          topics:
+          - /code-risk-analyzer-cli-plugin/code-risk-analyzer-cli-plugin-cra-cli-plugin
+          - /devops-insights-cli-plugin/devops-insights-cli-plugin-CLI_devops-insights
+          - /cli/cli-idt-cli
+          - link:
+              label: grunt-idra3 (deprecated)
+              href: https://www.npmjs.com/package/grunt-idra3
+
+      - cd_at_events.md
+      - responsibiities_cd.md
+
+      - topicgroup:
+          label: Related links
+          topics:
+          - link:
+              label: IBM Cloud Garage Method
+              href: https://www.ibm.com/cloud/garage
+
+  - navgroup:
+      id: help
+      topics: 
+      - cd_support.md
+      - topicgroup:
+          label: FAQ
+          topics:
+          - ts_index.md
+          - faq_delivery_pipeline.md
+          - faq_pipeline_private_workers.md
+          - faq_insights.md
+          - faq_toolchains.md
+          - faq_web_ide.md
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - troubleshoot_cd.md
+          - troubleshoot_delivery_pipeline.md
+          - troubleshoot_pipeline_private_workers.md
+          - troubleshoot_insights.md
+          - troubleshoot_git.md
+          - troubleshoot_toolchains.md
+          - troubleshoot_web_ide.md
