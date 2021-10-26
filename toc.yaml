@@ -69,12 +69,8 @@ toc:
           label: Add a toolchain to an app
           href: https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app
 
-      - cd-kubernetes-cra-tutorial.md
-      - cd-kubernetes-iter8-tutorial.md
       - cd-kubernetes-razee-tutorial.md
       - cd-kubernetes-image-signing-tutorial.md
-      - cd-kubernetes-tutorial.md
-      - cd-vm-tutorial.md
       - cd-vsi-tutorial.md
 
   - navgroup: 
@@ -87,7 +83,6 @@ toc:
           label: Toolchains
           topics: 
           - toolchains_working.md
-          - toolchains_migrate.md
           - toolchains_using.md
           - topicgroup: 
               label: Tool integrations
