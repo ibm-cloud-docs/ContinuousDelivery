@@ -42,9 +42,16 @@ To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webi
 1. Click **Eclipse Orion {{site.data.keyword.webide}}**. Your workspace is pre-populated with your GitHub repos. The repos that are associated with your current toolchain are highlighted.
 
 ## Learn more about the Eclipse Orion Web IDE
+{: #webide_learn_more}
 
 To learn more about the Eclipse Orion {{site.data.keyword.webide}}, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide). You can also read the [Eclipse Orion {{site.data.keyword.webide}} article](https://www.ibm.com/cloud/garage/content/code/tool_eclipse_orion_web_ide/){: external} on the IBM Cloud Garage Method. Take these tutorials to try using the Eclipse Orion {{site.data.keyword.webide}}:
 
+<<<<<<< HEAD
   * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}
 
   * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}
+=======
+* [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}
+
+* [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}
+>>>>>>> 338eeed27 (Update web_ide_integration.md)
