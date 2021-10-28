@@ -9,7 +9,7 @@ keywords: error message, Lite plan, toolchains, IBM Cloud
 subcollection: ContinuousDelivery
 
 ---
-<!-- Common attributes used in the template are defined as follows: -->
+
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -85,9 +85,9 @@ The [open-toolchain/commons](https://github.com/open-toolchain/commons){: extern
 
 You can choose any of the following options to deploy your own code to {{site.data.keyword.contdelivery_short}}:
 
-  * Go to the [Create App](https://cloud.ibm.com/developer/appservice/create-app?navMode=dashboard){: external} page, create your app, and then [enable {{site.data.keyword.contdelivery_short}}](/docs/apps/tutorials?topic=apps-tutorial-byoc) for the app. 
-  * Create a toolchain by using one of the available templates (dependent on the deployment target and tool integrations). On the **Create a Toolchain** page, select the appropriate provider for your source repository, and then specify the link to your source code repo. After you create your toolchain, you might need to adjust the pipeline scripts for your deployment goals.
-  * Create an empty toolchain, and then add tool integrations to deploy your app. For more information about using this method to deploy your code to {{site.data.keyword.contdelivery_short}}, see [Continuous Deployment to Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes).
+* Go to the [Create App](https://cloud.ibm.com/developer/appservice/create-app?navMode=dashboard){: external} page, create your app, and then [enable {{site.data.keyword.contdelivery_short}}](/docs/apps/tutorials?topic=apps-tutorial-byoc) for the app. 
+* Create a toolchain by using one of the available templates (dependent on the deployment target and tool integrations). On the **Create a Toolchain** page, select the appropriate provider for your source repository, and then specify the link to your source code repo. After you create your toolchain, you might need to adjust the pipeline scripts for your deployment goals.
+* Create an empty toolchain, and then add tool integrations to deploy your app. For more information about using this method to deploy your code to {{site.data.keyword.contdelivery_short}}, see [Continuous Deployment to Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes).
 
 
 ## How do I find the status of {{site.data.keyword.cloud_notm}} and the {{site.data.keyword.contdelivery_short}} service?
@@ -99,8 +99,8 @@ Check the {{site.data.keyword.cloud_notm}} Status page to determine whether know
 
 You can find the Status page by choosing either of the following options:
 
-  * In the {{site.data.keyword.cloud_notm}} console, go to **Support**. From the Today's notifications widget, click **View all**, and then click **Status** to view the status of resources in all {{site.data.keyword.cloud_notm}} locations. You can view a list of events, in chronological order, for maintenance and incidents. You can search across all notifications, or filter by type, geographic locations, and individual resources. You can also view planned maintenance windows for which prior notice is provided and unplanned incidents or outages, which are posted as soon as the IBM Cloud team becomes aware of them. Incident notifications are regularly updated until they're resolved.
-  * Access it directly at [{{site.data.keyword.cloud_notm}} - System Status](https://cloud.ibm.com/status){: external}.
+* In the {{site.data.keyword.cloud_notm}} console, go to **Support**. From the Today's notifications widget, click **View all**, and then click **Status** to view the status of resources in all {{site.data.keyword.cloud_notm}} locations. You can view a list of events, in chronological order, for maintenance and incidents. You can search across all notifications, or filter by type, geographic locations, and individual resources. You can also view planned maintenance windows for which prior notice is provided and unplanned incidents or outages, which are posted as soon as the IBM Cloud team becomes aware of them. Incident notifications are regularly updated until they're resolved.
+* Access it directly at [{{site.data.keyword.cloud_notm}} - System Status](https://cloud.ibm.com/status){: external}.
 
 For more information about the {{site.data.keyword.cloud_notm}} Status page, see [Viewing {{site.data.keyword.cloud_notm}} status](/docs/get-support?topic=get-support-viewing-cloud-status#viewing-cloud-status).
 
