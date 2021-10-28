@@ -9,7 +9,7 @@ keywords: error message, toolchains, IBM Cloud, Web IDE, Live Sync
 subcollection: ContinuousDelivery
 
 ---
-<!-- Common attributes used in the template are defined as follows: -->
+
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
