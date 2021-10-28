@@ -68,6 +68,8 @@ The second section is the editor pane. The editor provides several coding featur
 ![Web IDE](images/webide_light.png)
 
 ### Working with multiple files
+{: #multiple_files}
+
 1. To work with two files at the same time, click the **Change split editor mode** icon ![Split Editor icon](images/webide_split_editor_icon_light_small.png).
 2. From the menu that opens, select a view.
 
@@ -78,6 +80,8 @@ The second section is the editor pane. The editor provides several coding featur
  2. In the file navigator, click a file.
 
 ### Keyboard shortcuts
+{: #keyboard_shortcuts}
+
 Many of the commands in the {{site.data.keyword.webide}} are accessible through keyboard shortcuts.
 
 To see a list of the keyboard shortcuts in the editor, click **Tools** > **Show keys**. Alternatively, you can see the list by pressing Alt+Shift+?, or on MacOS, Ctrl+Shift+?. You can customize a shortcut by hovering over the key, clicking the pencil, and typing the new key binding.
@@ -93,7 +97,7 @@ The {{site.data.keyword.webide}} is integrated with source code management tools
 1. To deploy your app, from the run bar, either select or create a launch configuration.
    ![Run bar](images/webide_runbar_light.png)   
 1. Click the deploy icon ![deploy icon](images/webide_deploy_button_light_small.png). An instance of your app is deployed by using the current contents of your workspace and the environment that is defined in your launch configuration.
-2. After your app is deployed, you can use the run bar to stop, restart, or debug your app, view logs, and more.
+1. After your app is deployed, you can use the run bar to stop, restart, or debug your app, view logs, and more.
 
 | Run Bar Icon | Description | 
 |:-----------------|:-----------------|
@@ -156,6 +160,6 @@ The Eclipse Orion {{site.data.keyword.webide}} provides content assist, tooltips
 
 Check out one of these tutorials on the [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external}:
 
-   * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}.
+* [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}.
 
-   * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}. 
+* [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}. 
