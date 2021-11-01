@@ -28,11 +28,11 @@ You can modify, export, or delete personal data from {{site.data.keyword.contdel
 
 Personal data is any information that relates to or identifies a natural person. For example, personal data can be a name, email address, avatar, token, or any number of identifiers that are used with {{site.data.keyword.contdelivery_short}}. The following {{site.data.keyword.contdelivery_short}} components contain personal data:
 
- * The Eclipse Orion {{site.data.keyword.webide}}
- * {{site.data.keyword.gitrepos}}
- * {{site.data.keyword.contdelivery_short}} Pipelines
- * Toolchains and tool integrations
- * [{{site.data.keyword.DRA_full}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-deleting_data)
+* The Eclipse Orion {{site.data.keyword.webide}}
+* {{site.data.keyword.gitrepos}}
+* {{site.data.keyword.contdelivery_short}} Pipelines
+* Toolchains and tool integrations
+* [{{site.data.keyword.DRA_full}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-deleting_data)
  
 IBM does not manage data in the {{site.data.keyword.contdelivery_short}} service. Before you leave the {{site.data.keyword.contdelivery_short}} service that is hosted in {{site.data.keyword.Bluemix_notm}} Public, you must delete your own data.
 {: important}
@@ -48,11 +48,12 @@ To work in IBM Cloud, you must log in with a user name and password. When you lo
 
 The IBM Cloud login structure provides you with the option to work in different accounts. Using the IBM Cloud user interface, you can switch from one account to another. When you log in, any of the following types of accounts might be associated with your user credentials: 
 
- * Personal account
- * Corporate account
- * Corporate individual account
+* Personal account
+* Corporate account
+* Corporate individual account
 
 ### Personal accounts
+{: #personal_accounts}
 
 Typically, each user has their own account that is their personal account. You can easily identify your personal account because it usually contains your name, for example, *John Smith's Account*. 
 
@@ -61,12 +62,14 @@ You have full rights over all objects that are created in your personal account.
 If you have permission to create an object in an account, you also have the right to modify and delete it, regardless of which account the object is stored in. When two users collaborate, they often share a personal account.
 
 ### Corporate accounts
+{: #corp_accounts}
 
 A corporate account is set up by your company. Typically, you are added automatically to the account, rather than being invited. Corporate accounts provide users with a place to work, communicate, and share resources and charging; however, this is just a convention. A corporate account is really no different than a personal account. Objects that are created in a corporate account are associated with the account and users can be invited to the account.
 
 Teams of people who work for a corporation often collaborate by using a corporate account.
 
 ### Corporate individual accounts
+{: #corp_individual_accounts}
 
 When you work for a corporation, the work in your account might be legally owned by the corporation. Many users who work for a corporation have a corporate individual account. If you log in to your account by using credentials that contain your corporation's name and also have what appears to be a personal account, the work within your personal account might belong to the corporation.
 
@@ -82,12 +85,14 @@ Regardless of what type of IBM Cloud account is used, if you have rights to the 
 Before you delete data from an account, determine whether it is a personal account or a corporate individual account.
 
 ### Personal account
+{: #personal_data_account}
 
 If you own a personal account, you can make changes and delete your data. If you share your account with another user, you own the data, but you might want to contact them about the shared work. 
 
 If you can't log in to your IBM Cloud account, [contact IBM Support](https://www.ibm.com/cloud/support){: external}.
  
 ### Corporate individual account
+{: #corp_individual_account}
 
 If you own a corporate individual account, you must coordinate any changes with both your corporation and other members of your team. Delete your personal data regardless of whether it is stored in a corporate account or a corporate individual account. Make sure that you don't delete work that you shared with other users.
 
@@ -107,6 +112,7 @@ Before you delete your {{site.data.keyword.webide}} data, you might want to expo
 {: important}
 
 ### Exporting a Web IDE workspace
+{: #export_webide_workspace}
 
 To export a {{site.data.keyword.webide}} workspace:
 
@@ -114,11 +120,12 @@ To export a {{site.data.keyword.webide}} workspace:
 1. Repeat for each workspace that you want to export.
 
 ### Deleting your Web IDE workspaces
+{: #delete_webide_workspace}
 
 To delete your {{site.data.keyword.webide}} workspaces, including all of your personal data:
 
 1. From any toolchain, navigate to the {{site.data.keyword.webide}}.
-1. Click the **Settings** icon <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="The settings icon"> in the navigation sidebar on the left.
+1. Click the **Settings** icon ![Settings icon](images/webide_settings_icon_light_small.png) in the navigation sidebar on the left.
 1. Click **USER PROFILE**.
 1. Click **Delete** to remove all of your data from the {{site.data.keyword.webide}}.
 
@@ -138,14 +145,16 @@ Before you delete your Git account, delete your personal data from other project
 {: tip}
 
 ### Personal and shared projects
+{: #personal_shared_proj}
 
 You can invite other users to collaborate in projects. Git projects that you create inside your account are called personal projects. You can also create Git groups in which projects can be owned by multiple Git owners. You can create new projects for the group or transfer ownership of personal projects to the group. A Git group is often used to represent an IBM Cloud corporate account to indicate ownership of projects by the corporation.
 
 ### Exporting a Git Repos and Issue Tracking project
+{: #export_grit_proj}
 
 Before you delete a {{site.data.keyword.gitrepos}} project, you can export the project to archive it. 
 
-1. Click the **Settings** icon <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="The settings icon"> in the navigation sidebar on the left.
+1. Click the **Settings** icon ![Settings icon](images/webide_settings_icon_light_small.png) in the navigation sidebar on the left.
 1. Click **General**.
 1. Click **Expand** to expand the Export project section.
 1. Click **Export project**.
@@ -153,6 +162,7 @@ Before you delete a {{site.data.keyword.gitrepos}} project, you can export the p
 After the project is archived, you can import it into another GitLab instance. 
 
 ### Deleting your Git Repos and Issue Tracking account
+{: #delete_grit_account}
 
 You can delete your {{site.data.keyword.gitrepos}} account and most of the things that are owned by that account.
 
@@ -178,8 +188,8 @@ A pipeline cannot exist outside of a toolchain. If you delete a toolchain, all o
 {: #pipeline_classic}
 
 Classic pipeline stages might include personal data such as credentials in the form of environment properties, and a pipeline definition that shows the current state of the pipeline. Stages might also include scripts inside jobs that you want to modify or delete, as well as artifacts and logs for the most recent pipeline runs that you want to export. Use the Configure Stage or Delete Stage actions to modify or delete a stage. Use the Download action to export artifacts or logs from a stage.
-
-  ![Stages menu](images/pipeline_stages.png)
+   
+![Stages menu](images/pipeline_stages.png)
 
 ### Modifying a Classic pipeline stage
 {: #modifying_pipeline_classic_stage}
@@ -191,7 +201,7 @@ To modify a pipeline stage:
 1. On the **ENVIRONMENT PROPERTIES** tab, edit or delete properties.
 1. Modify a job script within the pipeline stage. Select the job and change the values that are part of the Build, Deploy, or Test Configuration.
    
-   ![Modify job script](images/job_script.png)
+![Modify job script](images/job_script.png)
   
 1. Delete a job from the pipeline stage. On the **JOBS** tab, select the job that you want to delete and click **Remove**.
  
@@ -267,6 +277,7 @@ When a tool integration is created, {{site.data.keyword.contdelivery_short}} can
 Coordinate with other members of your team before you delete shared tool integrations or toolchains.
 
 ### Modifying and deleting tool integrations
+{: #mod_delete_tool}
 
 When you create a tool integration, you are required to provide user credentials and other account information that pertains to the integration. If you used your own personal credentials and account information, replace this information with different values, or delete the tool integration.
 
@@ -274,7 +285,7 @@ To modify a tool integration:
 
 1. On the tool's card, click the menu to access the configuration options.
 
-  ![Tool Configuration menu](images/toolchain_tile_menu.png)
+![Tool Configuration menu](images/toolchain_tile_menu.png)
 
 1. When you are finished updating the settings, click **Save Integration**.
 
@@ -284,6 +295,7 @@ To delete a tool integration:
 1. Confirm by clicking **Delete**.
 
 ### Deleting toolchains
+{: #data_delete_toolchains}
 
 When you delete a toolchain, the deletion cannot be undone.
 
@@ -295,6 +307,7 @@ When you delete a toolchain, the associated {{site.data.keyword.gitrepos}} repos
 {: tip}
 
 ### Deleting all toolchains
+{: #delete_all_toolchains}
 
 You cannot delete all of the toolchains within a resource group or organization at the same time. You must delete each toolchain, one at a time.
 
