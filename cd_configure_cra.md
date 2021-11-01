@@ -122,11 +122,11 @@ Add and configure the repo that contains the code that you want Code Risk Analyz
 1. If you have a GitHub repo and want to use it, for the repository type, click **Existing** and type the URL.
 1. If you want to use a new GitHub repo, type a name for the repo, type the URL for the repo that you are cloning or forking, and select the repository type:
 
- a. To create an empty repo, click **New**.
+a. To create an empty repo, click **New**.
 
- b. To create a copy of a GitHub repo, click **Clone**.
+b. To create a copy of a GitHub repo, click **Clone**.
 
- c. To fork a GitHub repo so that you can contribute changes through pull requests, click **Fork**.
+c. To fork a GitHub repo so that you can contribute changes through pull requests, click **Fork**.
 
 1. Click **Create Integration**.
 
@@ -143,11 +143,11 @@ If you don't have admin privileges for the repo that you are linking to, your in
 1. If you have a GitLab repo and want to use it, for the repository type, click **Existing** and type the URL.
 1. If you want to use a new GitLab repo, type a name for the repo, type the URL for the repo that you are cloning or forking, and select the repository type:
 
- a. To create an empty repo, click **New**.
+a. To create an empty repo, click **New**.
 
- b. To create a copy of a GitLab repo, click **Clone**.
+b. To create a copy of a GitLab repo, click **Clone**.
 
- c. To fork a GitLab repo so that you can contribute changes through merge requests, click **Fork**.
+c. To fork a GitLab repo so that you can contribute changes through merge requests, click **Fork**.
 
 1. If you want to create a public repo on the server, clear the **Make this repository private** checkbox.
 1. If you want to use GitLab's Issues for issue tracking, select the **Enable GitLab Issues** checkbox.
@@ -193,9 +193,9 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the [Toolchains page](https://cloud.ibm.com/devops/toolchains){: external}, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 1. Add the Delivery Pipeline integration to your toolchain:
 
- a. Click **Add tool**.
+a. Click **Add tool**.
 
- b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}}**.
+b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}}**.
 
 1. Specify a name for your new pipeline.
 1. Select **Tekton** to create a Tekton {{site.data.keyword.deliverypipeline}}. This type of pipeline provides a dashboard that you can use to view the output of Tekton pipeline runs on a defined Kubernetes cluster, with support for configuring the pipeline definitions repos, the pipeline triggers, where the pipeline runs, and simple secrets.
@@ -207,22 +207,22 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 1. Click the **{{site.data.keyword.deliverypipeline}}** card to open the Tekton {{site.data.keyword.deliverypipeline}} dashboard.
 1. In the **Definitions** section, complete the following tasks:
 
- a. Specify the Git repo and URL (https://github.com/open-toolchain/tekton-catalog) that contains the Tekton pipeline definition and related artifacts.
+a. Specify the Git repo and URL (https://github.com/open-toolchain/tekton-catalog) that contains the Tekton pipeline definition and related artifacts.
 
- b. Select the **master** branch.
+b. Select the **master** branch.
  
- c. Add the `toolchain` path. This is the path to your pipeline definition within the Git repo. You can reference a specific definition within the same repo. You can also add multiple definition repos, if they are integrated with the toolchain.
+c. Add the `toolchain` path. This is the path to your pipeline definition within the Git repo. You can reference a specific definition within the same repo. You can also add multiple definition repos, if they are integrated with the toolchain.
  
- d. Click **Validate** and save your changes.
+d. Click **Validate** and save your changes.
  
- e. Repeat steps a and b to add each of the following paths to the master branch within your Git repo:
+e. Repeat steps a and b to add each of the following paths to the master branch within your Git repo:
  
-   * `git`
-   * `utils`
-   * `cra`
-   * `cra/sample`
+* `git`
+* `utils`
+* `cra`
+* `cra/sample`
  
- f. Click **Validate** and save your changes.
+f. Click **Validate** and save your changes.
 
  The pipeline definition is updated automatically.
  
@@ -233,25 +233,25 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
 1. In the **Triggers** section, click **Add trigger** to create a new Git repository trigger to run when a Pull Request is opened or updated for the specified Git repo and branch. You can add a trigger for each repo that you want to run the Code Risk Analyzer for.
 
- a. Select the repo that you want to run the pipeline on.
+a. Select the repo that you want to run the pipeline on.
 
- b. Select the target branch for the Pull Request, such as **master**.
+b. Select the target branch for the Pull Request, such as **master**.
  
- c. Specify the events for the pipeline to run on. Currently, you must specify the `When a pull request is opened or updated` option.
+c. Specify the events for the pipeline to run on. Currently, you must specify the `When a pull request is opened or updated` option.
  
- d. Associate the trigger with an event listener:
+d. Associate the trigger with an event listener:
  
- * For GitHub repos, select **github-pr-listener**.
- * For {{site.data.keyword.gitrepos}} repos, select **gitlab-pr-listener**.
+* For GitHub repos, select **github-pr-listener**.
+* For {{site.data.keyword.gitrepos}} repos, select **gitlab-pr-listener**.
 
 1. Optional. If the repo contains Terraform files, in the **Triggers** section, specify the directory within your Git repo that you want to run Terraform scanning on.
 
- a. In the **Show trigger properties** section, click **Add**.
+a. In the **Show trigger properties** section, click **Add**.
 
- b. Select **Text** and then specify the following property keys:
+b. Select **Text** and then specify the following property keys:
  
- * `tf-dir` to input the directory path for your Terraform files.
- * Optional. `tf-var-file` to input a comma-delimited list of variable definition files. These files are passed to the Terraform command by using the `var-file` option. Specify the variable definition files relative to the directory path in `tf-dir`.
+* `tf-dir` to input the directory path for your Terraform files.
+* Optional. `tf-var-file` to input a comma-delimited list of variable definition files. These files are passed to the Terraform command by using the `var-file` option. Specify the variable definition files relative to the directory path in `tf-dir`.
  
 1. Save your changes.
 1. In the **Environment properties** section, click **Add property**, and then select **Secure**.
@@ -301,7 +301,8 @@ node_modules
 Dockerfile
 ```
 
-*`.craignore` is being deprecated for `.fileignore`*
+`.craignore` is deprecated for the `.fileignore` file.
+{: tip}
 
 ## Configuring Code Risk Analyzer to omit vulnerabilities
 {: #cra_omit_vulnerabilities}
@@ -323,10 +324,10 @@ The following example shows a JSON schema for the `.cveignore` file.
 
 The following properties are accepted for each entry in the `.cveignore` file:
 
- * **cve** - The vulnerability to omit. The value of this property is either a CVE ID or a Snyk ID.
- * **alwaysOmit** - If this property is set to true, the vulnerability is omitted until it is changed. This property takes precedence over other property values.
- * **untilRemediationAvailable** - If this property is set to true, the vulnerability is omitted  until a remediation path is available. If a remediation becomes available, the vulnerability is not omitted and a message is displayed. This property takes precedence over the expiration property  value.
- * **expiration** - If this property is set to true and the expiration date is not reached, the vulnerability is omitted. If the expiration date is reached, the vulnerability is not omitted and a message is displayed. 
+* **cve** - The vulnerability to omit. The value of this property is either a CVE ID or a Snyk ID.
+* **alwaysOmit** - If this property is set to true, the vulnerability is omitted until it is changed. This property takes precedence over other property values.
+* **untilRemediationAvailable** - If this property is set to true, the vulnerability is omitted  until a remediation path is available. If a remediation becomes available, the vulnerability is not omitted and a message is displayed. This property takes precedence over the expiration property  value.
+* **expiration** - If this property is set to true and the expiration date is not reached, the vulnerability is omitted. If the expiration date is reached, the vulnerability is not omitted and a message is displayed. 
  
 The Code Risk Analyzer uses only these defined properties. You can add properties with no effect on functions. If a vulnerability that is defined in the `.cveignore` is not omitted, a log is generated that explains the reason. If a vulnerability that is defined in the `.cveignore` file is omitted, no individual logging is displayed. The number of omissions and a list of the vulnerability IDs, with the package name, that are omitted are logged after a report is completed.
 
