@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Getting help and support
 {: #gettinghelp}
 
-If you have problems or questions when using {{site.data.keyword.cloud_notm}} DevOps and {{site.data.keyword.contdelivery_long}}, you can go directly to the [{{site.data.keyword.cloud_notm}} Support page](https://{DomainName}/unifiedsupport/supportcenter) to review featured FAQs, view cloud status, or post questions on Stack Overflow. You can also open a support case.
+If you have problems or questions when using {{site.data.keyword.cloud_notm}} DevOps and {{site.data.keyword.contdelivery_full}}, you can go directly to the [{{site.data.keyword.cloud_notm}} Support page](https://{DomainName}/unifiedsupport/supportcenter) to review featured FAQs, view cloud status, or post questions on Stack Overflow. You can also open a support case.
 {: shortdesc}
 
 * You can check the status of the {{site.data.keyword.cloud_notm}} platform and resources by going to the [Status page](https://cloud.ibm.com/status){: external}.
