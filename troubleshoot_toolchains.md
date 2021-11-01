@@ -72,14 +72,14 @@ After you add and configure a tool integration for your toolchain, an error mess
 When you add a tool integration, the toolchain communicates with the tool that is represented by the tool integration to provision any necessary resources and associate them with the toolchain. If an error occurs during the setup process or if the communication between the toolchain and the tool does not complete properly, the tool integration is put into an error state.
 {: tsCauses}
 
- ![Setup failed error](images/tool_setup_failed.png)
+![Setup failed error](images/tool_setup_failed.png)
 
 You can try to configure the tool integration again:
 {: tsResolve}
 
 1. On its tool card, hover over the `Setup failed` message and click **Reconfigure**.
 
- <img src="images/tool_reconfigure.png" alt="Reconfigure button" width="166" style="width:166px; border-style: none"/>
+![Reconfigure button](images/tool_reconfigure.png) 
 
 1. Make sure that you are using valid configuration parameters. If the error was caused by an invalid configuration, an error message is displayed; for example, `The integration could not be set up. Check the settings and try again. Reason: Invalid api_key:fakeKey`. Update the settings for the tool integration and click **Save integration**.
 1. If the error was caused by a communication problem, click **Save integration** to try again.
