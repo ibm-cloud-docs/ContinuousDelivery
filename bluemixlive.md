@@ -26,9 +26,7 @@ subcollection: ContinuousDelivery
 If you are building a Node.js application, you can use {{site.data.keyword.cloud}} Live Sync to quickly update the application instance on {{site.data.keyword.cloud_notm}} and develop without manually redeploying.   
 {: shortdesc}
 
-When you make a change, you can see that change in your running {{site.data.keyword.cloud_notm}} application immediately. {{site.data.keyword.cloud_notm}} Live Sync works
-<!--from both the command line and -->
-in the Eclipse Orion {{site.data.keyword.webide}} ({{site.data.keyword.webide}}). 
+When you make a change, you can see that change in your running {{site.data.keyword.cloud_notm}} application immediately. {{site.data.keyword.cloud_notm}} Live Sync works in the Eclipse Orion {{site.data.keyword.webide}} ({{site.data.keyword.webide}}). 
 
 ## Live Edit
 {: #live-edit}
