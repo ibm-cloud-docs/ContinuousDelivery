@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-27"
+lastupdated: "2021-11-01"
 
 keywords: getting help, getting support, continuous delivery, DevOps
 
