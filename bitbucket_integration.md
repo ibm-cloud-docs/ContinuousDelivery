@@ -31,38 +31,38 @@ Configure Bitbucket to collaborate on code with your team:
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain that you want to add Bitbucket to. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 
- a. Click **Add tool**.
+a. Click **Add tool**.
 
- b. In the Tool Integrations section, click **Bitbucket**.
+b. In the Tool Integrations section, click **Bitbucket**.
 
-   If you are configuring this tool integration on {{site.data.keyword.cloud_notm}} Public and you did not authorize {{site.data.keyword.cloud_notm}} to access Bitbucket, click **Authorize** to go to the Bitbucket website. If you don't have an active Bitbucket session, you are prompted to log in. Click **Grant access** to allow {{site.data.keyword.cloud_notm}} Toolchains to access the following parts of your Bitbucket account:
+If you are configuring this tool integration on {{site.data.keyword.cloud_notm}} Public and you did not authorize {{site.data.keyword.cloud_notm}} to access Bitbucket, click **Authorize** to go to the Bitbucket website. If you don't have an active Bitbucket session, you are prompted to log in. Click **Grant access** to allow {{site.data.keyword.cloud_notm}} Toolchains to access the following parts of your Bitbucket account:
    
-   * **Read your account information**. Get basic user information to populate the user interface.
+* **Read your account information**. Get basic user information to populate the user interface.
    
-   * **Read and modify your repositories' issues**. Allow {{site.data.keyword.contdelivery_short}} to update issues to indicate when the pipeline deploys commits that are attached to those issues. 
+* **Read and modify your repositories' issues**. Allow {{site.data.keyword.contdelivery_short}} to update issues to indicate when the pipeline deploys commits that are attached to those issues. 
    
-   * **Read your team's project settings and read repositories that are contained within your team's projects**. Allow {{site.data.keyword.contdelivery_short}} to integrate with repos that are owned by teams.
+* **Read your team's project settings and read repositories that are contained within your team's projects**. Allow {{site.data.keyword.contdelivery_short}} to integrate with repos that are owned by teams.
    
-   * **Read and modify your repositories and their pull requests**. Allow {{site.data.keyword.contdelivery_short}} to push sample code into repos, when users request the code.
+* **Read and modify your repositories and their pull requests**. Allow {{site.data.keyword.contdelivery_short}} to push sample code into repos, when users request the code.
    
-   * **Administer your repositories**. Allow {{site.data.keyword.contdelivery_short}} to create new repos, when requested by users.
+* **Administer your repositories**. Allow {{site.data.keyword.contdelivery_short}} to create new repos, when requested by users.
    
-   * **Read your team membership information**. Allow {{site.data.keyword.contdelivery_short}} to show a list of your teams in the **Owner** menu that is displayed when you create a new repo.
+* **Read your team membership information**. Allow {{site.data.keyword.contdelivery_short}} to show a list of your teams in the **Owner** menu that is displayed when you create a new repo.
    
-   * **Read and modify your repositories' webhooks**. Allow the pipeline to trigger builds when commits are pushed to a repo.
-   {: tip}
+* **Read and modify your repositories' webhooks**. Allow the pipeline to trigger builds when commits are pushed to a repo.
    
-   If you have an active Bitbucket session but you didn't enter your password recently, you might be prompted to enter your Bitbucket password to confirm.
+If you have an active Bitbucket session but you didn't enter your password recently, you might be prompted to enter your Bitbucket password to confirm.
+{: tip}
 
 1. Click the Bitbucket server that you want to use.
 1. If you have a Bitbucket repo that you want to use, type the URL for the repo. For the repository type, click **Existing**.
 1. If you want to use a new Bitbucket repo, type a name for the repo, type the URL for the repo that you are cloning or forking, and select the repository type:
 
- a. To create an empty repo, click **New**.
+a. To create an empty repo, click **New**.
 
- b. To create a copy of a repo, click **Clone**.
+b. To create a copy of a repo, click **Clone**.
 
- c. To fork a repo so that you can contribute changes through pull requests, click **Fork**.
+c. To fork a repo so that you can contribute changes through pull requests, click **Fork**.
 
 1. To create a private repo on the server, select the **Make this repository private** checkbox.
 1. To use Bitbucket Issues for issue tracking, select the **Enable Bitbucket Issues** checkbox.
@@ -75,5 +75,6 @@ If you don't have owner or master privileges for the repo that you are linking t
 {: tip}
 
 ## Learn more about Bitbucket
+{: #learn_more_bitbucket}
 
 To learn more about Bitbucket, see the [Bitbucket article](https://www.ibm.com/cloud/garage/content/code/tool_bitbucket/){: external} on the IBM Cloud Garage Method.
