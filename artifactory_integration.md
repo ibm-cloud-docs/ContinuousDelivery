@@ -74,7 +74,7 @@ Configure {{site.data.keyword.deliverypipeline}} to add an npm build job:
 1. Create a stage and set the input to the appropriate SCM repo.
 1. On the stage, add a build job.
 1. Configure the build job:
-  ![npm build job](images/artifactory_npm_job.png)
+![npm build job](images/artifactory_npm_job.png)
 
 a. For the builder type, select **NPM Build**.
 
@@ -83,7 +83,7 @@ b. If you configured multiple instances of the Artifactory tool integration, ent
 c. For the tool integration type, select **Artifactory**.
 
 d. For the build command, enter the commands to build your npm module or publish it to your registry. This example shows the commands to either build the module or publish it.
- ```
+ ```text
  npm install
  # or
  npm publish --registry "${NPM_RELEASE_URL}"
@@ -105,7 +105,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
 1. Create a stage and set the input to the appropriate SCM repo.
 1. On the stage, add a build job.
 1. Configure the build job:
-  ![Maven build job](images/artifactory_maven_job.png)
+![Maven build job](images/artifactory_maven_job.png)
 
 a. For the builder type, select **Maven Build**.
 
@@ -114,7 +114,7 @@ b. If you configured multiple instances of the Artifactory tool integration, ent
 c. For the tool integration type, select **Artifactory**.
 
 d. For the build command, enter the commands to build your Maven module or publish it to your snapshot registry. This example shows the commands to either build the module or publish it to a snapshot registry.
- ```
+ ```text
  mvn -B clean package
  # or
  mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
