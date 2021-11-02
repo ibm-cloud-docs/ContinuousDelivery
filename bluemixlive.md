@@ -40,7 +40,7 @@ Live Edit is supported for Node.js applications only.
 
 In the {{site.data.keyword.webide}}, in the run bar, click **Live Edit**.
 
-![Image of Run bar with live edit](images/cloud-live-sync-light.png)
+![Image of Run bar with live edit](images/cloud-live-sync-light.png){: caption="Figure 1. Run bar with Live Edit" caption-side="bottom"}
 
 Use Live Edit to quickly preview changes to Node.js applications that run on {{site.data.keyword.cloud_notm}}. When you update your code with Live Edit turned on, you can refresh your web application's browser window to see those changes reflected seconds after you make them.
 
