@@ -50,7 +50,7 @@ Test results must provide data in one of these supported formats:
 
 The following example script uploads FVT test results to {{site.data.keyword.DRA_short}}:
 
-```
+```text
 # Run tests and generate a test results file here.
 # Add user api key to stage environment variable as a secured property
 export LOGICAL_APP_NAME="SampleApp"
@@ -68,7 +68,7 @@ In the example script, the `idra` command with the `--publishtestresult` flag sp
 
 The following example script runs tests and then uploads Mocha results and Istanbul code coverage results to {{site.data.keyword.DRA_short}}:
 
-```
+```text
 # Add user api key to stage environment variable as a secured property
 export LOGICAL_APP_NAME="SampleApp"
 export BUILD_PREFIX="master"
