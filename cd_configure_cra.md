@@ -284,7 +284,7 @@ The Code Risk Analyzer Discovery and CIS tasks search for the `.cra/.fileignore`
 
 The following example `.fileignore` file shows how to exclude bash scripts, node_modules, and the Dockerfile.
 
-```
+```text
 # Ignore nested functional_tests directory
 **/functional_tests
 
