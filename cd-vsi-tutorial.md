@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021
-lastupdated: "2021-08-25"
+lastupdated: "2021-09-15"
 lasttested: "2021-05-13"
 
 keywords: Virtual Server Instance, code repositories, DevOps Insights, non-containerized, java application, vsi, gitops, toolchain, pipeline, Virtual Machine, vm
@@ -62,7 +62,7 @@ Set up and configure the Virtual Server Instance for the toolchain to deploy the
 3. Create the user (preferably non-privileged) and [SSH keys](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys#ssh-keys) for the Virtual Server Instance.
 4. Configure [Security Groups](/docs/security-groups?topic=security-groups-getting-started) for the Virtual Server Instance. Enable the toolchain to perform health checks on the deployed app by adding an inbound rule for `TCP` to allow port `8080` so that it can access the app endpoint. For more information about adding an inbound rule, see [Managing security groups](/docs/security-groups?topic=security-groups-managing-sg).
 5. Ensure that Java&trade; SDK is installed on your VM or use the following command to install it: `yum install -y tar java`.
-6. Optional. If you need to store secrets in `Key Protect`, perform base64 encoding of the value. For more information about the required command details, see [Image signing: generating a GPG key](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-image-signing#cd-devsecops-gpg-private-key).
+6. Optional. If you need to store secrets in `Key Protect`, perform base64 encoding of the value. For more information about the required command details, see [Image signing: generating a GPG key](/docs/devsecops?topic=devsecops-cd-devsecops-image-signing#cd-devsecops-gpg-private-key).
 
 ### Related content
 {: #cd-vsi-related-content}
@@ -86,7 +86,7 @@ Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the menu
 
 1. In the **Create** tab, review the default settings.
 
- ![Toolchain settings](images/create_toolchain_Page1.png)
+![Toolchain settings](images/create_toolchain_Page1.png){: caption="Figure 1. Toolchain settings" caption-side="bottom"}
 
 2. The toolchain's name identifies it in {{site.data.keyword.cloud_notm}}. If you want to use a different name, change the toolchain's name. Because the toolchain name is used to construct the URL that is used to access your app, make sure to specify a unique name.
 3. By default, the toolchain creates the source repo in {{site.data.keyword.gitrepos}}. To use a different provider for your Git source repo, such as GitHub or GitLab, select it from the list of available repos.
@@ -100,33 +100,33 @@ This toolchain uses tools that are included in the {{site.data.keyword.contdeliv
 1. In the **{{site.data.keyword.gitrepos}}** tab, review the default setting that specifies the location of your app's source code. 
 2. By default, the toolchain uses a sample Maven-based Java Hello World app. You can update the location setting to link to your own app instead.
 
- ![App repo](images/create_toolchain_app_git_repo_updated.png)
+![App repo](images/create_toolchain_app_git_repo_updated.png){: caption="Figure 2. App repo" caption-side="bottom"}
  
 ### Configure the Inventory repo
 {: #cd-vsi-config-inventoryapp}
 
 The Inventory Repository stores the metadata for builds and artifacts. To trigger the pipeline to deploy the artifacts that are described in the commit to the Virtual Server Instance, commit to the Inventory Repository, and then run the acceptance tasks.
 
- ![Toolchain inventory repo](images/create_toolchain_inventory_git_repo_updated.png)
+![Toolchain inventory repo](images/create_toolchain_inventory_git_repo_updated.png){: caption="Figure 3. Toolchain inventory repo" caption-side="bottom"}
 
 ### Configure the Delivery Pipeline
 {: #cd-vsi-config-pipeline}
 
 1. Go to the **Delivery Pipeline** tab.
 
- ![Delivery Pipeline configuration](images/create_toolchain_delivery_pipeline_with_options_updated.png)
+![Delivery Pipeline configuration](images/create_toolchain_delivery_pipeline_with_options_updated.png){: caption="Figure 4. Delivery Pipeline configuration" caption-side="bottom"}
 
 2. Specify an existing IBM Cloud API Key or create a key. The toolchain uses this key to interact with other Cloud Services that are integrated into the toolchain.
 3. Specify the region where the Virtual Server Instance is running, such as `us-south`.
 4. Specify the floating IP address of the Virtual Server Instance by using the `aaa.bbb.ccc.ddd` format.
 5. Select `SSH Key` Authentication Type and specify the following credentials:
 
-   * User Name: The username of the Virtual Server Instance user with permissions to deploy and run the application.
-   * SSH Key: The user's private SSH Key for running and deploying the application.
+* User Name: The username of the Virtual Server Instance user with permissions to deploy and run the application.
+* SSH Key: The user's private SSH Key for running and deploying the application.
 
 6. Run the following commands to create a new key-pair on the Virtual Server Instance for the user with permissions to deploy and run the applications.
 
-```
+```text
         # Create the SSH key
             `ssh-keygen -C cloud.ibm.com`
         # copy public key to the VSI
@@ -152,7 +152,7 @@ Any change to the source triggers the continuous integration pipeline. When a co
 After you create your toolchain, it shows each of the tool integrations that are part of the toolchain in a diagram. 
 The diagram in the following image is an example. The diagram that you view for your toolchains might show different tool integrations or different data for those integrations.
 
-![Newly created toolchain](images/newly_created_toolchain_updated.png)
+![Newly created toolchain](images/newly_created_toolchain_updated.png){: caption="Figure 5. New toolchain" caption-side="bottom"}
 
 ### Explore the pipelines
 {: #cd-vsi-explore-pipelines}
@@ -160,7 +160,7 @@ The diagram in the following image is an example. The diagram that you view for 
 You can explore the pipelines to understand the toolchain flow and the different operations that run within each pipeline.
 For example, to view multiple steps such as `cra-discovery-scan` and the details for Parameter and Status, click the CI Pipeline tool integration, and then click **Succeeded PipelineRuns**.
 
-![CI PIpelineRun details](images/ci-pipeline-details-updated.png)
+![CI PipelineRun details](images/ci-pipeline-details-updated.png){: caption="Figure 6. Continuous Integration PipelineRun details" caption-side="bottom"}
 
 ### Explore {{site.data.keyword.DRA_short}}
 {: #cd-vsi-explore-dra}
@@ -171,7 +171,7 @@ If your code does not meet or exceed a policy, the deployment is halted, prevent
 
 The following image shows the Quality Dashboard that provides quality data sets such as unit tests, code coverage, functional verification tests, and static security scans for each application. 
 
-![DevOps Insights Quality Dashboard](images/devops_insights_quality_dashbaord.png)
+![DevOps Insights Quality Dashboard](images/devops_insights_quality_dashbaord.png){: caption="Figure 7. DevOps Insights Quality Dashboard" caption-side="bottom"}
 
 ### Explore GitOps
 {: #cd-vsi-explore-gitops}
@@ -199,7 +199,8 @@ To access the advanced user options, go to the **More Tools** tab.
     * Specify the name of the bucket in your {{site.data.keyword.cos_short}} instance where you want to store the transient build artifacts. To upload objects to the bucket, it must reside in the same region where the toolchain is created.
 
     * Select the API Key that has read and write access to the bucket that you specified.
-![Cloud Object Storage Integration Details](images/custom_cos.png)
+    
+![Cloud Object Storage Integration Details](images/custom_cos.png){: caption="Figure 8. Cloud Object Storage integration details" caption-side="bottom"}
 
 * To use an Artifactory account to store transient build artifacts, specify details for your Artifactory instance:
 
@@ -210,7 +211,7 @@ To access the advanced user options, go to the **More Tools** tab.
    * Release URL:  Release URL for the Artifactory repo where artifacts are stored
 
 Some fields in the Artifactory are mandatory only when you use the Artifactory configuration.
-![Artifactory Integration Details](images/artifactory_details.png)
+![Artifactory Integration Details](images/artifactory_details.png){: caption="Figure 9. Artifactory integration details" caption-side="bottom"}
 {: tip}
 
 Click **Create** to create the toolchain. This process might take several minutes to complete.
