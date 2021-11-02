@@ -59,12 +59,14 @@ You can delete a resource group-based {{site.data.keyword.contdelivery_short}} s
 {: cli}
 
 * To view service instances, run the [`ibmcloud resource service-instances`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instances) command:
+
 ```text
 ~$ ibmcloud resource service-instances
 ``` 
 {: codeblock}
 
-* To delete the service instance, run the [`ibmcloud resource service-instance-delete`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_delete) command: 
+* To delete the service instance, run the [`ibmcloud resource service-instance-delete`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_delete) command:
+ 
 ```text
 ~$ ibmcloud resource service-instance-delete <name or id of service instance>
 ```
