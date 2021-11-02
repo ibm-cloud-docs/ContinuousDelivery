@@ -79,9 +79,9 @@ To complete this tutorial, you need to set up a Kubernetes cluster on the {{site
 
 1. To create your Kubernetes app with secure image signing toolchain, click
 
- [![Create toolchain](images/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fkey-management-admin-toolchain&env_id=ibm:yp:us-south){: external}
+[![Create toolchain](images/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fkey-management-admin-toolchain&env_id=ibm:yp:us-south){: external}
 
- Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click **Create a Toolchain**. On the **Create a Toolchain** page, click **Develop a Kubernetes app with secure image signing**.
+Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click **Create a Toolchain**. On the **Create a Toolchain** page, click **Develop a Kubernetes app with secure image signing**.
 
 2. On the Develop a Kubernetes app with secure image signing page, in the **About** tab, review the toolchain diagram. The diagram shows each tool integration in its lifecycle phase within the toolchain.
 
@@ -97,7 +97,7 @@ To complete this tutorial, you need to set up a Kubernetes cluster on the {{site
  Access to {{site.data.keyword.gitrepos}} repos is region-specific. If the template for the toolchain that you're creating keeps the source code for the app in a private repo in one region and you're trying to create a toolchain in another region, the toolchain can't clone the source code into your repo. For more information about how to handle this scenario, see [Why can't I create a toolchain from a template that uses a private repo in a different region?](/docs/ContinuousDelivery?topic=ContinuousDelivery-troubleshoot-git#why-can-t-i-use-the-git-repos-and-issue-tracking-tool-integration-in-my-toolchain-from-one-region-in-a-toolchain-within-a-different-region).
  {: important}
  
- 6. Next, create a Key Protect vault instance.
+6. Next, create a Key Protect vault instance.
 
 ### Create a Key Protect vault instance
 {: #cd-kube-image-signing-create-vault}
@@ -130,26 +130,26 @@ The toolchain creates three pipelines: ci-pipeline, dct init *namespace*, and pr
 
  The dct init dashboard displays an empty table until at least one Tekton pipeline runs. After a Tekton pipeline runs, either manually or because of external events, the table lists the run, its status, and the last updated time of the run definition. The following states are reported for pipeline runs:
 
- * **Pending**: The `PipelineRun` definition is queued and waiting to run.
+* **Pending**: The `PipelineRun` definition is queued and waiting to run.
  
- * **Running**: The `PipelineRun` definition is running in the cluster.
+* **Running**: The `PipelineRun` definition is running in the cluster.
 
- * **Succeeded**: The `PipelineRun` definition completed in the cluster.
+* **Succeeded**: The `PipelineRun` definition completed in the cluster.
 
- * **Failed**: The `PipelineRun` definition run failed. Review the log file for the run to determine the cause of failure.
+* **Failed**: The `PipelineRun` definition run failed. Review the log file for the run to determine the cause of failure.
 
  The pipeline definition is stored in the `pipeline.yaml` file within the `.pipeline` folder of the image-signed-kube-toolchain Git repo that was added to your toolchain. This repo contains the template files. Each task is stored within a separate section of this file. 
       
 2. Click **Run Pipeline**. Review the run parameters and click **Run**. The dct init pipeline starts the Docker Content Trust (DCT). For more information about the dct init run that you started, click the link in the **Name** column. You can view the task definition and the steps in each `PipelineRun` definition. You can also view the status, logs, and details of each task definition and step, and the overall status of the `PipelineRun` definition.
 
- * The **init-docker-content-trust** task starts DCT by using the information that you provided when you set up the Key Protect vault instance name and key names. The stage also allocates the keys and provisions them to be the delegation keys that are used to sign the Docker images. [Docker Content Trust](https://success.docker.com/article/introduction-to-docker-content-trust){: external} provides strong cryptographic guarantees over what code and what versions of software are run in your infrastructure. It integrates [The Update Framework (TUP)](https://theupdateframework.com/){: external} into Docker by using [Notary](https://youtu.be/at72dhg-SZY?t=4873){: external}, an open source tool that provides trust over any content.
+* The **init-docker-content-trust** task starts DCT by using the information that you provided when you set up the Key Protect vault instance name and key names. The stage also allocates the keys and provisions them to be the delegation keys that are used to sign the Docker images. [Docker Content Trust](https://success.docker.com/article/introduction-to-docker-content-trust){: external} provides strong cryptographic guarantees over what code and what versions of software are run in your infrastructure. It integrates [The Update Framework (TUP)](https://theupdateframework.com/){: external} into Docker by using [Notary](https://youtu.be/at72dhg-SZY?t=4873){: external}, an open source tool that provides trust over any content.
       
- * When a publisher who is using Docker Content Trust pushes an image to a remote registry, Docker Engine locally signs the image with the publisher’s private key. When a user pulls this image, Docker Engine uses the publisher’s public key to verify that the image is exactly what the publisher created. It also ensures that the image wasn't tampered with and that it is up to date.
+* When a publisher who is using Docker Content Trust pushes an image to a remote registry, Docker Engine locally signs the image with the publisher’s private key. When a user pulls this image, Docker Engine uses the publisher’s public key to verify that the image is exactly what the publisher created. It also ensures that the image wasn't tampered with and that it is up to date.
       
  Typically, this stage is run only once, but it can be run several times if the keys in the Key Protect vault change. For example, you might need to run the stage more than once as part of a key rotation policy that is required for compliance.
  {: tip}
  
- * The **apply-image-enforcement** task creates the image enforcement policy that is applied to your Kubernetes cluster. The stage also specifies that an image can't be deployed until the signatures are found and validated.
+* The **apply-image-enforcement** task creates the image enforcement policy that is applied to your Kubernetes cluster. The stage also specifies that an image can't be deployed until the signatures are found and validated.
 
 3. Return to the Toolchains page and click the **{{site.data.keyword.deliverypipeline}}** ci-pipeline card.
 
@@ -157,31 +157,31 @@ The toolchain creates three pipelines: ci-pipeline, dct init *namespace*, and pr
 
 5. Review the following tasks:
 
- * **extract-repository-url**: This task includes the **extract-value-jq** step that extracts values from the wanted configmap with a `jq` expression (`jq` is a command line tool for parsing JSON). The URL of your Git repo is extracted.
+* **extract-repository-url**: This task includes the **extract-value-jq** step that extracts values from the wanted configmap with a `jq` expression (`jq` is a command line tool for parsing JSON). The URL of your Git repo is extracted.
  
- * **git-clone**: This task includes the **fetch-git-token** step that fetches the Git personal access token that is required to access your Git repo from the command line. This task also includes the **clone-repo** step that fetches the credentials that are required to perform Git operations on a repo that is integrated in a {{site.data.keyword.contdelivery_short}} toolchain. It uses these credentials to clone (or perform the appropriate check out if pull request parameters are given) the repo.
+* **git-clone**: This task includes the **fetch-git-token** step that fetches the Git personal access token that is required to access your Git repo from the command line. This task also includes the **clone-repo** step that fetches the credentials that are required to perform Git operations on a repo that is integrated in a {{site.data.keyword.contdelivery_short}} toolchain. It uses these credentials to clone (or perform the appropriate check out if pull request parameters are given) the repo.
  
- * **extract-doi-enablement** and **publish-doi-buildrecord**: These tasks include the **extract-value-jq** and **publish-doi-buildrecord** steps. The **extract-value-jq** step extracts values from the wanted configmap with a `jq` expression (`jq` is a command line tool for parsing JSON). These values are used to set up [{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-publishing-test-data) for this pipeline. The **publish-build-record** step publishes build records to [{{site.data.keyword.DRA_short}}].
+* **extract-doi-enablement** and **publish-doi-buildrecord**: These tasks include the **extract-value-jq** and **publish-doi-buildrecord** steps. The **extract-value-jq** step extracts values from the wanted configmap with a `jq` expression (`jq` is a command line tool for parsing JSON). These values are used to set up [{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-publishing-test-data) for this pipeline. The **publish-build-record** step publishes build records to [{{site.data.keyword.DRA_short}}].
  
- * **cra-discovery-scan**, **code-vulnerability-scan**, **cra-cis-check**, and **cra-bom**: These tasks are included in the [Code Risk Analyzer](https://www.ibm.com/cloud/blog/announcements/find-source-code-vulnerabilities-with-code-risk-analyzer){: external} capability within {{site.data.keyword.contdelivery_short}}. Use Code Risk Analyzer to discover vulnerabilities in your Python, Node.js, and Java&reg; applications, and in your operating system stacks (base image). Code Risk Analyzer uses rich threat intelligence from [Snyk](https://snyk.io){: external} and [Clair](https://github.com/quay/clair){: external} and then provides fix recommendations. Code Risk Analyzer also integrates the comprehensive security coverage in Snyk to help you to automatically find, prioritize, and fix vulnerabilities in open source dependencies and containers early in your workflow. Complete the [Code Analyzer tutorial](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-with-code-risk-analyzer){: external} to try using the Code Risk Analyzer.
+* **cra-discovery-scan**, **code-vulnerability-scan**, **cra-cis-check**, and **cra-bom**: These tasks are included in the [Code Risk Analyzer](https://www.ibm.com/cloud/blog/announcements/find-source-code-vulnerabilities-with-code-risk-analyzer){: external} capability within {{site.data.keyword.contdelivery_short}}. Use Code Risk Analyzer to discover vulnerabilities in your Python, Node.js, and Java&reg; applications, and in your operating system stacks (base image). Code Risk Analyzer uses rich threat intelligence from [Snyk](https://snyk.io){: external} and [Clair](https://github.com/quay/clair){: external} and then provides fix recommendations. Code Risk Analyzer also integrates the comprehensive security coverage in Snyk to help you to automatically find, prioritize, and fix vulnerabilities in open source dependencies and containers early in your workflow. Complete the [Code Analyzer tutorial](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-with-code-risk-analyzer){: external} to try using the Code Risk Analyzer.
  
- * **docker-lint**: This task performs the **check-dockerfile** step that uses [Hadolint](https://hub.docker.com/r/hadolint/hadolint){: external} to lint the specified Dockerfile.
+* **docker-lint**: This task performs the **check-dockerfile** step that uses [Hadolint](https://hub.docker.com/r/hadolint/hadolint){: external} to lint the specified Dockerfile.
  
- * **unit-tests** and **publish-doi-code-tests**: These tasks run the **run-tests** and **publish-testrecord** steps. The **run-tests** step allows the pipeline to start a script that runs unit tests. No tests are run for this template. The **publish-testrecord** step publishes test records from Vulnerability Advisor to [{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-publishing-test-data).
+* **unit-tests** and **publish-doi-code-tests**: These tasks run the **run-tests** and **publish-testrecord** steps. The **run-tests** step allows the pipeline to start a script that runs unit tests. No tests are run for this template. The **publish-testrecord** step publishes test records from Vulnerability Advisor to [{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-publishing-test-data).
  
- * **containerize**: This task runs the **check-registry**, **build-image**, and **process-build-log** steps. The **check-registry** step logs in to the container registry and ensures that the specified namespace is available. This step also exports the expected environment variables and creates a dry-run Kubernetes `docker-registry` secret to get the content of a Docker `config.json` file and access the target {{site.data.keyword.registrylong_notm}}. The **build-image** step builds and pushes an image to the [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=registry-getting-started). The **process-build-log** step creates a build output properties file from the build image step for use in the pipeline and adds registry and image information.
+* **containerize**: This task runs the **check-registry**, **build-image**, and **process-build-log** steps. The **check-registry** step logs in to the container registry and ensures that the specified namespace is available. This step also exports the expected environment variables and creates a dry-run Kubernetes `docker-registry` secret to get the content of a Docker `config.json` file and access the target {{site.data.keyword.registrylong_notm}}. The **build-image** step builds and pushes an image to the [{{site.data.keyword.registrylong_notm}}](/docs/Registry?topic=registry-getting-started). The **process-build-log** step creates a build output properties file from the build image step for use in the pipeline and adds registry and image information.
       
- * **build-sign**: This task runs the **set-sign-context** and **sign-image** steps to access the specified Key Protect Vault Instance, retrieve the signing keys, and then sign the build with the build signer key.
+* **build-sign**: This task runs the **set-sign-context** and **sign-image** steps to access the specified Key Protect Vault Instance, retrieve the signing keys, and then sign the build with the build signer key.
 
- * **vulnerability-advisor** and **publish-doi-va-scan-record**: These tasks run the **run-vulnerability-advisor-scan** and **publish-testrecord** steps. The **run-vulnerability-advisor-scan** step runs [Vulnerability Advisor](/docs/Registry?topic=va-va_index) on the image to check for known vulnerabilities. If it finds a vulnerability, the job fails and prevents the image from being deployed. This safety feature prevents apps with security holes from being deployed. The image included in this tutorial no vulnerabilities, so it passes. In this tutorial template, the default configuration of the job is to not block on failure. The **publish-testrecord** step publishes test records from Vulnerability Advisor to [{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-publishing-test-data).
+* **vulnerability-advisor** and **publish-doi-va-scan-record**: These tasks run the **run-vulnerability-advisor-scan** and **publish-testrecord** steps. The **run-vulnerability-advisor-scan** step runs [Vulnerability Advisor](/docs/Registry?topic=va-va_index) on the image to check for known vulnerabilities. If it finds a vulnerability, the job fails and prevents the image from being deployed. This safety feature prevents apps with security holes from being deployed. The image included in this tutorial no vulnerabilities, so it passes. In this tutorial template, the default configuration of the job is to not block on failure. The **publish-testrecord** step publishes test records from Vulnerability Advisor to [{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-publishing-test-data).
 
- * **validation-sign**: This task runs the **set-sign-context** and **sign-image** steps to access the specified Key Protect Vault instance, retrieve the signing keys, and signs the build with the validation signer key.
+* **validation-sign**: This task runs the **set-sign-context** and **sign-image** steps to access the specified Key Protect Vault instance, retrieve the signing keys, and signs the build with the validation signer key.
 
- * **deploy-to-kubernetes**: This task checks for cluster readiness and namespace existence, configures the cluster namespace, updates the `deployment.yml` manifest file, and grants access to the private image registry. The task also checks for two signatures before the deployment can continue. A signature check is also performed at the cluster level by using the image-enforcement policy that was set in the DCT initialization pipeline. This task also sets environment variables and uses the deployment manifest file to deploy the app into the Kubernetes cluster.
+* **deploy-to-kubernetes**: This task checks for cluster readiness and namespace existence, configures the cluster namespace, updates the `deployment.yml` manifest file, and grants access to the private image registry. The task also checks for two signatures before the deployment can continue. A signature check is also performed at the cluster level by using the image-enforcement policy that was set in the DCT initialization pipeline. This task also sets environment variables and uses the deployment manifest file to deploy the app into the Kubernetes cluster.
 
- * **publish-deployable-task**: This task creates or updates a toolchain deployable mapping for a {{site.data.keyword.contdelivery_short}} toolchain. This task relies on toolchain endpoints that are described in the [IBM Toolchain API](https://otc-swagger.us-south.devops.dev.cloud.ibm.com/swagger-ui?url=https://otc-api.us-south.devops.dev.cloud.ibm.com/spec/swagger.json#/toolchain_deployable_mappings){: external}.
+* **publish-deployable-task**: This task creates or updates a toolchain deployable mapping for a {{site.data.keyword.contdelivery_short}} toolchain. This task relies on toolchain endpoints that are described in the [IBM Toolchain API](https://otc-swagger.us-south.devops.dev.cloud.ibm.com/swagger-ui?url=https://otc-api.us-south.devops.dev.cloud.ibm.com/spec/swagger.json#/toolchain_deployable_mappings){: external}.
 
- * **check-health**: This task makes sure that the app runs successfully.
+* **check-health**: This task makes sure that the app runs successfully.
 
 6. In the **deploy-to-kubernetes** task, click the **execute** step and in the log file, locate the `DEPLOYMENT SUCCEEDED` message. Click the link to view the running application.
 
