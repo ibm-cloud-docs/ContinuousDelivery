@@ -83,7 +83,7 @@ You export TOOLCHAIN_ID as environment variable for stages of the pipeline where
 {: tip}
 
 Here is an example of how to send build records to {{site.data.keyword.DRA_short}} in another toolchain. You must overwrite the toolchain ID before you call the command to evaluate gate, publish build, test, or deployment records. 
-```
+```bash
 #!/bin/bash
 
 #install the latest version of {{site.data.keyword.DRA_short}} plugin
