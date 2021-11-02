@@ -31,8 +31,7 @@ completion-time: 10m
 In this tutorial, you learn how to set up a continuous integration and delivery pipeline for containerized applications running on the {{site.data.keyword.containerlong}}. You set up source control, and then build, test, and deploy the code to different deployment stages. Then, you add integrations to other services like Slack notifications.
 {: shortdesc}
 
-![Architectural diagram](images/image.svg)
-{: figure caption="Figure 1. A diagram that shows the architecture for my tutorial."}
+![Architectural diagram](images/image.svg){: caption="Figure 1. Architectural diagram" caption-side="bottom"}
 
 The pipeline that you create has the following architecture:
 1. Workflow step 1
