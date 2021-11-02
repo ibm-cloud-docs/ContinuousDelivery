@@ -74,7 +74,8 @@ Configure {{site.data.keyword.deliverypipeline}} to add an npm build job:
 1. Create a stage and set the input to the appropriate SCM repo.
 1. On the stage, add a build job.
 1. Configure the build job:
-![npm build job](images/artifactory_npm_job.png)
+
+![npm build job](images/artifactory_npm_job.png){: caption="Figure 1. npm build job" caption-side="bottom"}
 
 a. For the builder type, select **NPM Build**.
 
@@ -105,7 +106,8 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
 1. Create a stage and set the input to the appropriate SCM repo.
 1. On the stage, add a build job.
 1. Configure the build job:
-![Maven build job](images/artifactory_maven_job.png)
+
+![Maven build job](images/artifactory_maven_job.png){: caption="Figure 2. Maven build job" caption-side="bottom"}
 
 a. For the builder type, select **Maven Build**.
 
