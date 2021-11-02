@@ -189,7 +189,7 @@ A pipeline cannot exist outside of a toolchain. If you delete a toolchain, all o
 
 Classic pipeline stages might include personal data such as credentials in the form of environment properties, and a pipeline definition that shows the current state of the pipeline. Stages might also include scripts inside jobs that you want to modify or delete, as well as artifacts and logs for the most recent pipeline runs that you want to export. Use the Configure Stage or Delete Stage actions to modify or delete a stage. Use the Download action to export artifacts or logs from a stage.
    
-![Stages menu](images/pipeline_stages.png)
+![Stages menu](images/pipeline_stages.png){: caption="Figure 1. Stages menu" caption-side="bottom"}
 
 ### Modifying a Classic pipeline stage
 {: #modifying_pipeline_classic_stage}
@@ -201,7 +201,7 @@ To modify a pipeline stage:
 1. On the **ENVIRONMENT PROPERTIES** tab, edit or delete properties.
 1. Modify a job script within the pipeline stage. Select the job and change the values that are part of the Build, Deploy, or Test Configuration.
    
-![Modify job script](images/job_script.png)
+![Modify job script](images/job_script.png){: caption="Figure 2. Modify job script" caption-side="bottom"}
   
 1. Delete a job from the pipeline stage. On the **JOBS** tab, select the job that you want to delete and click **Remove**.
  
@@ -236,7 +236,7 @@ To delete a pipeline stage:
 
 Tekton pipelines might include personal data such as credentials in the form of environment properties or pipeline runs details. You can delete these runs, which removes the associated run details and logs. Use the Download action to export all of the data that is associated with the selected pipeline run.
 
-![Run actions](images/tekton-run-download.png)
+![Run actions](images/tekton-run-download.png){: caption="Figure 3. Run actions" caption-side="bottom"}
 
 ### Modifying a Tekton Pipeline
 {: #modifying_pipeline_tekton}
@@ -285,7 +285,7 @@ To modify a tool integration:
 
 1. On the tool's card, click the menu to access the configuration options.
 
-![Tool Configuration menu](images/toolchain_tile_menu.png)
+![Tool Configuration menu](images/toolchain_tile_menu.png){: caption="Figure 4. Tool Configuration menu" caption-side="bottom"}
 
 1. When you are finished updating the settings, click **Save Integration**.
 
