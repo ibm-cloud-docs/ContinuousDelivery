@@ -45,7 +45,7 @@ The following table lists the major components of the {{site.data.keyword.contde
 
 {{site.data.keyword.deliverypipeline}} jobs and steps run directly within containers on shared (IBM-managed) or private (customer-managed) Kubernetes worker nodes. All other components of the {{site.data.keyword.contdelivery_short}} service are deployed as microservices within IBM-managed Kubernetes clusters. These components are logically partitioned across a set of clusters. Each set of clusters is replicated across three zones in each region in which the {{site.data.keyword.contdelivery_short}} service is available.
 
- ![Continuous Delivery clusters](images/CD_cluster_arch.png)
+![Continuous Delivery clusters](images/CD_cluster_arch.png){: caption="Figure 1. Continuous Delivery clusters" caption-side="bottom"}
  
 For more information about availability, see [High availability and disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-ha-dr).
  
@@ -64,7 +64,7 @@ The following diagram shows the management and isolation characteristics of the 
 * The multi-tenant and single tenant workloads each run in different sets of clusters, and are compute-isolated from each other.
 * Each {{site.data.keyword.deliverypipeline}} job or step runs in its own container that is compute-isolated from the other containers within a cluster. This isolation applies to both IBM-managed shared workers and customer-managed shared workers.
 
- ![Continuous Delivery compute workloads](images/CD_Compute_Arch.png)
+![Continuous Delivery compute workloads](images/CD_Compute_Arch.png){: caption="Figure 2. Continuous Delivery compute workloads" caption-side="bottom"}
 
 ## {{site.data.keyword.contdelivery_short}} dependencies
 {: #cd-dependencies}
@@ -105,7 +105,7 @@ For more information about the key components of the {{site.data.keyword.cloud_n
 
 The following diagram shows the {{site.data.keyword.contdelivery_short}} dependencies.
 
-![Continuous Delivery dependencies](images/CD_Dependencies_Arch.png)
+![Continuous Delivery dependencies](images/CD_Dependencies_Arch.png){: caption="Figure 3. Continuous Delivery dependencies" caption-side="bottom"}
 
 Excluding data backups, customer-owned data that is provided to the {{site.data.keyword.contdelivery_short}} service in a specific region is exchanged only with data and logging services in the same region. Data backups are stored in Cloud Object Storage cross-region buckets.
 
