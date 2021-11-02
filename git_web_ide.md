@@ -353,12 +353,12 @@ Use the Git terminal:
 
 3. Resolve each conflicting change, and then save the file. Delete all of the text that you do not want to keep. Each conflict is in this format:
 
-  	         <<<<<<< HEAD
+		 <<<<<<< HEAD
 		 Text in checked out branch.
 		 =======
 		 Text in merged branch.
 		 >>>>>>> merged_branch
-		
+
 4. Stage each file that you modified, and then commit the merge.
 
 ## Rebase branches
