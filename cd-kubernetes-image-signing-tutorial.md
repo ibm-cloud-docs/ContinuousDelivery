@@ -46,7 +46,7 @@ The toolchain that you create in this tutorial includes the following tool integ
 * A {{site.data.keyword.deliverypipeline}} that is used to initialize the Docker Content  Trust (DCT).
 * A {{site.data.keyword.deliverypipeline}} that runs when a merge or pull request is created in the Application Source Code repo. Typically, this request is created by the application source code developer to merge changes from their development  branch to another branch, such as the master branch. The pull request pipeline runs the Unit Test and Static Scans on the Application Source Code.
 
-![Secure image signing toolchain diagram](images/image-signing-tutorial.png){: figure caption="Figure 1. Secure image signing toolchain diagram"}
+![Secure image signing toolchain diagram](images/image-signing-tutorial.png){: caption="Figure 1. Secure image signing toolchain" caption-side="bottom"}
 
 ## Before you begin
 {: #cd-kube-image-signing-prereqs}
