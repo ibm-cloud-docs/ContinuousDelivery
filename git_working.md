@@ -30,16 +30,17 @@ Invite only people that you have a personal or business relationship with to col
 {: important}
 
 Both GitHub and the Git command line are accessible alternatives to GitLab.
-{: note}
+{: tip}
 
 Don't store regulated data in files or issues within Git repos. The procedures for regulated data are currently not in place.
 {: tip}
 
 The [{{site.data.keyword.gitrepos}} tool integration](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-grit) supports teams to manage code and collaborate in many ways:
-   * Manage Git repos through fine-grained access controls that keep code secure
-   * Review code and enhance collaboration through merge requests
-   * Track issues and share ideas through the issue tracker
-   * Document projects on the wiki system
+
+* Manage Git repos through fine-grained access controls that keep code secure
+* Review code and enhance collaboration through merge requests
+* Track issues and share ideas through the issue tracker
+* Document projects on the wiki system
 
 Because this tool integration is built on GitLab Community Edition and hosted by IBM on the {{site.data.keyword.cloud_notm}} Platform, a few GitLab options are not available. For example, Delivery Pipeline provides continuous integration and continuous delivery for {{site.data.keyword.Bluemix_notm}}; therefore, the continuous integration features in GitLab are not supported. In addition, the admin functions are not available because they are managed by IBM.
 {: tip}
@@ -94,7 +95,7 @@ To learn more, see [SSH](https://us-south.git.cloud.ibm.com/help/ssh/README){: e
 
 The first time that you connect to a server by way of Git over SSH, the Git client prompts you to accept the host key fingerprint of the server. You can use the following host key fingerprints to verify SSH connections with the {{site.data.keyword.cloud_notm}} {{site.data.keyword.gitrepos}} servers. Proceed with the connection only if the host key fingerprint matches the specified value for the server that is provided in the following code snippets. 
 
-```
+```text
 au-syd.git.cloud.ibm.com:
   ECDSA:
     SHA256:oUpjbxJ+UVIlBvcdcKuprZ0JEtCWkTu1yFTdfFHoEF8
@@ -108,7 +109,7 @@ au-syd.git.cloud.ibm.com:
 ```
 {: screen}
 
-```
+```text
 ca-tor.git.cloud.ibm.com:
   ECDSA:
     SHA256:xqeLs5qKCCNd/SmSTgFktFJW8nTqnF5BmwJSZggguJI
@@ -122,7 +123,7 @@ ca-tor.git.cloud.ibm.com:
 ```
 {: screen}
 
-```
+```text
 eu-de.git.cloud.ibm.com:
   DSA:
     SHA256:c7Bm79CLA5y4tmnI+jB+wYp8esbIUcOSMxzHtU+hhNY
@@ -139,7 +140,7 @@ eu-de.git.cloud.ibm.com:
 ```
 {: screen}
 
-```
+```text
 eu-gb.git.cloud.ibm.com:
   DSA:
     SHA256:Nt0JS/AQDue0WY7X/xRC5Weu3RTplWABACiCOku8CRc
@@ -156,7 +157,7 @@ eu-gb.git.cloud.ibm.com:
 ```
 {: screen}
 
-```
+```text
 jp-osa.git.cloud.ibm.com:
   ECDSA:
     SHA256:k+FNBh6Yvth9bWyvKnfreYhS+3s/+2MX7q2ci/tFAY0
@@ -170,7 +171,7 @@ jp-osa.git.cloud.ibm.com:
 ```
 {: screen}
 
-```
+```text
 jp-tok.git.cloud.ibm.com:
   DSA:
     SHA256:jX4dD9ojut+OCzEtmsR6hDpK+gJ8g0B5V5k+beFzj7E
@@ -187,7 +188,7 @@ jp-tok.git.cloud.ibm.com:
 ```
 {: screen}
 
-```
+```text
 us-east.git.cloud.ibm.com:
   DSA:
     SHA256:onqeRZxk/GaxBVY+Bxl97UgW5rBQzTH1dJ7sGJDFUp8
@@ -204,7 +205,7 @@ us-east.git.cloud.ibm.com:
 ```
 {: screen}
 
-```
+```text
 us-south.git.cloud.ibm.com:
   DSA:
     SHA256:EX4AoOpgTqHDmZ97Klhgkz06+rSNDfe+AHZBnXzW+oc
@@ -223,7 +224,7 @@ us-south.git.cloud.ibm.com:
 
 You can use following code snippet to verify the host key fingerprint for a headless connection to Git over SSH, by connecting to the us-south.git.cloud.ibm.com server. To use this code for a different server, update the `HOST` and `EXPECTED FINGERPRINT` values.
 
-```
+```text
 HOST="us-south.git.cloud.ibm.com"
 EXPECTED_FINGERPRINT="SHA256:PEAncMcnz8jNEOmBabCtJ13cg0oGI0YxLOMWVOkDgjc"
 ssh-keyscan -t rsa $HOST > /tmp/hostkey
@@ -251,6 +252,6 @@ Files are strictly limited to 100 MB. The suggested repo size limit is 1 GB. If 
 
 Check out one of these tutorials on the [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external}:
 
-   * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}. Learn how to create an open toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
+* [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}. Learn how to create an open toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
 
-   * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}. Learn how to create a toolchain from a template with three microservices and use the toolchain to continuously deliver an online store.
+* [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}. Learn how to create a toolchain from a template with three microservices and use the toolchain to continuously deliver an online store.
