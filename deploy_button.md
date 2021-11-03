@@ -19,7 +19,8 @@ subcollection: ContinuousDelivery
 {:download: .download}
 
 
-# Creating a Deploy to {{site.data.keyword.cloud_notm}} button {: #deploy-button}
+# Creating a Deploy to {{site.data.keyword.cloud_notm}} button
+{: #deploy-button}
 
 The Deploy to {{site.data.keyword.cloud_notm}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to {{site.data.keyword.cloud_notm}} by using a toolchain. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository (repo) so that your original app remains unaffected.  
 {: shortdesc}
@@ -32,8 +33,8 @@ When someone clicks your button, these actions occur:
 
 3. A toolchain is created that includes a new private clone of your Git repo, a pipeline for building and deploying code changes, the Eclipse Orion {{site.data.keyword.webide}} for editing code on the Cloud, and an issue tracker.
 
-  If the `.bluemix` directory contains a `toolchain.yml` file, the file is used to specify the tool integrations for the toolchain. For more information about the `toolchain.yml` file, see [Creating custom toolchain templates](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates){: external}.
-  {: tip}
+   If the `.bluemix` directory contains a `toolchain.yml` file, the file is used to specify the tool integrations for the toolchain. For more information about the `toolchain.yml` file, see [Creating custom toolchain templates](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates){: external}.
+   {: tip}
 
 4. If the app requires a build file, the build file is detected automatically and the app is built.
 
@@ -43,7 +44,8 @@ When someone clicks your button, these actions occur:
 
 7. The app is deployed to the {{site.data.keyword.cloud_notm}} organization that the person selected.
 
-## Examples of the button {: #button-examples}
+## Examples of the button
+{: #button-examples}
 
 See an app button example for a public {{site.data.keyword.gitrepos}} repo:
 
@@ -53,11 +55,13 @@ See an app button example for a public GitHub repo:
 
 [![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){: external}
 
-## Creating a button {: #create-button}
+## Creating a button
+{: #create-button}
 
 To create a Deploy to {{site.data.keyword.cloud_notm}} button, copy and modify one of the following snippet templates. Specify a Git repository and branch in the URL.
 
 ### Creating a button in HTML
+{: #create-button-html}
 
 To create a button in HTML, copy this snippet and insert a public Git repository URL and branch.
 
@@ -69,6 +73,7 @@ To create a button in HTML, copy this snippet and insert a public Git repository
 If you don't include the `branch` parameter in your snippet's repository URL, the Deploy to {{site.data.keyword.Bluemix_notm}} button defaults to the repository's master branch.
 
 ### Creating a button in Markdown
+{: #Create-button-markdown}
 
 To create a button in Markdown, copy this snippet and insert a public Git repository URL and branch.
 
@@ -79,7 +84,8 @@ To create a button in Markdown, copy this snippet and insert a public Git reposi
 
 If you don't include the `branch` parameter in your snippet's repository URL, the Deploy to {{site.data.keyword.cloud_notm}} button defaults to the repository's master branch.
 
-### Using the button snippets {: #button-snippet}
+### Using the button snippets
+{: #button-snippet}
 
 After you create a Deploy to {{site.data.keyword.cloud_notm}} button snippet, you can insert it into blogs, articles, wikis, readme files, or anywhere else you want to promote your app.
 
@@ -91,13 +97,14 @@ When you customize the snippet for your Deploy to {{site.data.keyword.cloud_notm
 
 * If you prefer to store the image locally, you can download the image and store it in your Git repo. Adjust the path to use the relative location of the image.
 
-## Repository considerations {: #button-repo}
+## Repository considerations
+{: #button-repo}
 
 Review these considerations for the repo that you use in your Deploy to {{site.data.keyword.cloud_notm}} button.
 
 
 ### Build file requirements
-{: build_file}
+{: #build_file}
 
 If the app must be built before it can be deployed, you must include a build file in your repo. If a build script file is detected in the root directory of the repo, an automated build of the code is triggered before deployment.
 
@@ -109,7 +116,7 @@ Supported builders include:
 * [Maven:](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html){: external} `/pom.xml`, which builds output to the `./target/` folder
 
 ### Pipeline file requirements
-{: pipeline_file}
+{: #pipeline_file}
 
 To configure the pipeline for the toolchain in a `.bluemix` directory, include a `pipeline.yml` file. For each `pipeline.yml` file in that directory, a pipeline is created when the toolchain is instantiated.
 
@@ -118,7 +125,7 @@ If you do not have `pipeline.yml` file in the `.bluemix` directory, the Deploy t
 To create a pipeline file, consult the example file in the [Creating custom toolchain templates](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates){: external} documentation. Just as when you define a pipeline in the web interface, you define a pipeline in text by creating stages and jobs, setting inputs and environment variables, and adding scripts. You can also see a number of more complex pipeline files in [this demonstration project](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix){: external}.
 
 ### Container Dockerfile requirements
-{: container_dockerfile}
+{: #container_dockerfile}
 
 To deploy an app in a container by using the {{site.data.keyword.containerlong_notm}}, you must include a Dockerfile in the root directory of the repo and, in a `.bluemix` directory, include a `pipeline.yml` file.
 
