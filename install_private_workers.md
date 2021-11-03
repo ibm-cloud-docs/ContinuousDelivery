@@ -59,8 +59,8 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
   
 * Permissions to pull images from icr.io. Private workers require the tekton-pipelines infrastructure and must be able to pull tekton-releases images from icr.io to complete the private worker installation.
 
-To pull images from the `icr.io` container registry, you might need to define a specific Kubernetes ClusterImagePolicy.
-{: tip}
+   To pull images from the `icr.io` container registry, you might need to define a specific Kubernetes ClusterImagePolicy.
+   {: tip}
   
 ### Self-hosting container images for {{site.data.keyword.deliverypipeline}} Private Worker
 {: #self_host_pw_} 
@@ -71,12 +71,12 @@ Security constraints might prevent you from pulling images from the icr.io/conti
 2. Install the `deployment.yaml` file to reference the container images in this container registry. 
 3. For each container image that is referenced in the regular deployment yaml file, complete the following steps:
 
- * docker pull the image to a local Dockerfile
- * docker tag the image with the new reference on the supported container registry
- * docker push this new image
+   * docker pull the image to a local Dockerfile
+   * docker tag the image with the new reference on the supported container registry
+   * docker push this new image
  
- You can obtain the deployment yaml file from `https://private-worker-service.$region.devops.cloud.ibm.com/install`.
- {: tip}
+   You can obtain the deployment yaml file from `https://private-worker-service.$region.devops.cloud.ibm.com/install`.
+   {: tip}
 
 4. Replace the reference to each image in the installation file with the tag for the new image.
 5. Run the following command to install the private worker by using the specific container registry: `kubectl apply –filename updated_deployment.yaml`.
@@ -90,7 +90,7 @@ Security constraints might prevent you from pulling images from the icr.io/conti
 
 For example, in {{site.data.keyword.cloud_notm}} Private, type the following commands to define a specific Kubernetes ClusterImagePolicy for `icr.io/continuous-delivery/pipeline`:
 
-```
+```text
 cat <<EOF | kubectl apply -f -
 apiVersion: securityenforcement.admission.cloud.ibm.com/v1beta1
 kind: ClusterImagePolicy
@@ -112,7 +112,7 @@ The following steps are intended for Administrators who are preparing environmen
 
 From the {{site.data.keyword.Bluemix_notm}} CLI, type the following command:
 
-```
+```text
 kubectl apply --filename
 https://private-worker-service.**{REGION}**.devops.cloud.ibm.com/install 
 ```
@@ -129,7 +129,7 @@ Where `{REGION}` is the location of the toolchain's pipeline. You can specify an
 
 The following code snippet shows an example of a private worker installation in the Frankfurt region:
 
-```
+```text
 $ kubectl apply --filename https://private-worker-service.eu-de.devops.cloud.ibm.com/install  
 
 namespace/tekton-pipelines created
@@ -172,7 +172,7 @@ If you are using a private worker on OpenShift, you must set up security context
 
 * Add the tekton-pipelines-controller and tekton-pipelines-webhook service accounts to any uid SCC. Services that use this SCC can access any directories that have a root in the cluster.
 
-```
+```text
 oc adm policy add-scc-to-user anyuid system:serviceaccount:tekton-pipelines:tekton-pipelines-controller
 oc adm policy add-scc-to-user anyuid system:serviceaccount:tekton-pipelines:tekton-pipelines-webhook
 
@@ -180,14 +180,14 @@ oc adm policy add-scc-to-user anyuid system:serviceaccount:tekton-pipelines:tekt
  
 * Add the tekton-pipelines-controller service account to the privileged SCC. Services that use this SCC can run pods with privileged access and use hostpath persistent volumes.
 
-```
+```text
 oc adm policy add-scc-to-user privileged system:serviceaccount:tekton-pipelines:tekton-pipelines-controller
 
 ```
 
 Cloud-orchestrated Tekton pipelines currently use hostpath volumes for Tekton pipeline run storage. Tekton pipelines that run on private workers that are hosted on OpenShift require an SCC to be applied to any container spec that reads from or writes to a workspace or PersistentVolume. To allow a container to access the volume, add the following YAML code snippet to the step in the Tekton task:
 
-```
+```text
 securityContext:
   privileged: true
 
@@ -202,14 +202,14 @@ If you are no longer using a private worker on OpenShift, you must remove the SC
 
 * Remove any uid SCCs from the tekton-pipelines-controller and tekton-pipelines-webhook service accounts.
 
-```
+```text
 oc adm policy add-scc-to-user anyuid system:serviceaccount:tekton-pipelines:tekton-pipelines-webhook
 oc adm policy remove-scc-from-user anyuid system:serviceaccount:tekton-pipelines:tekton-pipelines-controller
 
 ```
 * Remove privileged SCCs from the tekton-pipelines-controller service account.
 
-```
+```text
 oc adm policy remove-scc-from-user privileged system:serviceaccount:tekton-pipelines:tekton-pipelines-controller
 
 ```
@@ -239,7 +239,7 @@ A service ID represents a pool of one or more private workers that act together.
 
 From the {{site.data.keyword.cloud_notm}} CLI, type the following command:
 
-```
+```text
 $ ibmcloud iam service-id-create **{worker-pool-name}** -d "**{worker-pool-description}**"
 
 Creating service ID {worker-pool-name} bound to current account as username@domain.com...OK
@@ -278,7 +278,7 @@ An API key is a unique code that is passed to an API to identify the application
 
 From the {{site.data.keyword.cloud_notm}} CLI, type the following command:
 
-```
+```text
 $ ibmcloud iam service-api-key-create **{worker-api-key-name}** (**SERVICE\_ID\_NAME**|SERVICE\_ID\_UUID) \[-d, --description **DESCRIPTION**\] \[--file **FILE**\]
 
 Creating API key  {worker-api-key-name} of service
@@ -308,19 +308,19 @@ You must register a private worker with the specific {{site.data.keyword.cloud_n
 
 1. Go to `https://private-worker-service.{REGION}.devops.cloud.ibm.com`, where `{REGION}` is the location of the toolchain's pipeline. You can specify any of the following values for the region:
 
- * au-syd (Sydney, Australia)
- * eu-de (Frankfurt, Germany)
- * eu-gb  (London, United Kingdom)
- * jp-tok (Tokyo, Japan)
- * jp-osa (Osaka, Japan)
- * us-south (Dallas, US)
- * us-east (Washington DC, US)
- * ca-tor (Toronto, CA)
+   * au-syd (Sydney, Australia)
+   * eu-de (Frankfurt, Germany)
+   * eu-gb  (London, United Kingdom)
+   * jp-tok (Tokyo, Japan)
+   * jp-osa (Osaka, Japan)
+   * us-south (Dallas, US)
+   * us-east (Washington DC, US)
+   * ca-tor (Toronto, CA)
 
 2. Specify a meaningful name for your private worker. This name must start and end with lowercase alphanumeric characters and can also contain `_` or `.` characters.
 3. Run the following command with the service ID and API key that you created previously, and the private worker name:
 
-```
+```text
 $ kubectl apply --filename "https://private-worker-service.{**REGION**}.devops.cloud.ibm.com/install/worker?serviceId={**SERVICE_ID**}&apikey={**API_KEY**}&name={**worker-name**}"
 
 workeragent.devops.cloud.ibm.com/worker-name created
@@ -331,7 +331,7 @@ secret/worker-name-auth created
 
 To verify that the agent is registered correctly, type the following command:
 
-```
+```text
 $ kubectl get workeragents
 NAME         SERVICEID    REGISTERED   VERSION  AUTH
 worker-name  <ServiceId>  Succeeded    OK       OK
@@ -353,10 +353,11 @@ To update your private worker installation, complete the following steps:
 2. [Register the private worker](#register_pw) on your Kubernetes cluster again.
 
 ### Provisioning and updating the private worker installation file for IBM Cloud Private
+{: #provision_pw_install}
 
 If your pipeline worker is installed on {{site.data.keyword.cloud}} Private (ICP), you can use the following script to provision and update the private worker installation file.
 
-```
+```bash
 \#\!/bin/bash
 region=${region:-"us-south"}
 target_cr="mycluster.icp:8500"
@@ -401,8 +402,8 @@ echo "to install the delivery pipeline private worker"
 
 This script contains the following requirements:
 
-   * The ibmcom and tekton-releases namespaces currently exist on the target ICP.
-   * The Docker client is connected to the ICP’s private container registry. For more information about authentication for the Docker CLI, see [Configuring authentication for the Docker CLI](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.2.0/manage_images/configuring_docker_cli.html){: external}.   
+* The ibmcom and tekton-releases namespaces currently exist on the target ICP.
+* The Docker client is connected to the ICP’s private container registry. For more information about authentication for the Docker CLI, see [Configuring authentication for the Docker CLI](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.2.0/manage_images/configuring_docker_cli.html){: external}.   
 
 After you provision the container images on the ICP’s private registry, update the image's scope to global to make sure that the images can be accessed from any namespaces. For more information about updating the scope of an image, see [Changing image scope](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.2.0/manage_images/change_scope.html).
 
