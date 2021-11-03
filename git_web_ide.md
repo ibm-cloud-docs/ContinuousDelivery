@@ -66,7 +66,7 @@ Use the Eclipse Orion Web IDE:
 
 1. Click **Sync**.
 
-1. If you encounter conflicts, [resolve them](#resolve_a_rebase_conflict).
+2. If you encounter conflicts, [resolve them](#resolve_a_rebase_conflict).
 
 Use the Git terminal:
 
@@ -126,8 +126,8 @@ Use the Eclipse Orion Web IDE:
 
 2. In the **Enter the commit message** field, type a message that describes your changes.
 
-Provide a detailed commit message. Your message should provide enough details for someone to understand why the change was necessary without more information. You can include a link to an item in your team's issue tracker to help. The first line of the commit message should contain fewer than 50 characters. Add a blank line before you add other text.
-{: tip}
+   Provide a detailed commit message. Your message should provide enough details for someone to understand why the change was necessary without more information. You can include a link to an item in your team's issue tracker to help. The first line of the commit message should contain fewer than 50 characters. Add a blank line before you add other text.
+   {: tip}
 
 3. Click **Commit**.
 
@@ -143,13 +143,13 @@ Use the Git terminal:
 
 4. Enter the commit summary, add a blank line, and add the commit description.
 
-The commit summary should be fewer than 50 characters. The commit description should provide enough details for someone to understand why the change was necessary without more information. You can include a link to an item in your team's issue tracker to help.
-{: tip}
+   The commit summary should be fewer than 50 characters. The commit description should provide enough details for someone to understand why the change was necessary without more information. You can include a link to an item in your team's issue tracker to help.
+   {: tip}
 
 5. Save the commit message.
 
-To save your commit message and close Vim, which might be your default text editor, press Esc, type `:wq`, and press Enter.
-{: tip}
+   To save your commit message and close Vim, which might be your default text editor, press Esc, type `:wq`, and press Enter.
+   {: tip}
 
 6. Type `git push` and press Enter.
 
@@ -166,7 +166,7 @@ The commit history can also be viewed as a connected visual graph.
 
    When toggled, the commit history and any incoming or outgoing changes for the active branch are drawn as a connected graph.  The visual representation shows all of the commits and the branches they were made on.
 
-![Visual commit history icon](images/visualhistoryexample.png){: caption="Figure 1. Visual commit history" caption-side="bottom"}
+   ![Visual commit history icon](images/visualhistoryexample.png){: caption="Figure 1. Visual commit history" caption-side="bottom"}
 
 Use the Git terminal:
 
@@ -174,8 +174,8 @@ Use the Git terminal:
 
 2. Browse the committer's commits.
 
-* To view more entries, press Page Down.
-* To view previous entries, press Page Up.
+   * To view more entries, press Page Down.
+   * To view previous entries, press Page Up.
 
 3. To stop viewing entries, press **Q**.
 
@@ -190,25 +190,25 @@ Use the Eclipse Orion Web IDE:
 
 3. To review a file's changes, click **>**.
 
-If a commit introduced a change to a line, the original line is shaded pink and the new line is shaded green.  Similarly, lines that were added by a commit are shaded green and lines that were removed by a commit are shaded pink.
-{: tip}
+   If a commit introduced a change to a line, the original line is shaded pink and the new line is shaded green.  Similarly, lines that were added by a commit are shaded green and lines that were removed by a commit are shaded pink.
+   {: tip}
 
 Use the Git terminal:
 
 1. Type `git log -p` and press Enter.
 
-To view only a certain number of commits, type `git log -p -<number_of_commits_to_view>`.
-{: tip}
+   To view only a certain number of commits, type `git log -p -<number_of_commits_to_view>`.
+   {: tip}
 
 2. Navigate through the commits.
 
-* To view more entries, press Page Down.
-* To view previous entries, press Page Up.
+   * To view more entries, press Page Down.
+   * To view previous entries, press Page Up.
 
 3. Review the changes.
 
-If a commit introduced a change to a line, the original line is in red text and starts with a minus sign (-). The new line is in green text and starts with a plus sign (+).  Similarly, lines that were added by a commit are in green text and start with a +. Lines that were removed by a commit are in red text and start with a -.
-{: tip}
+   If a commit introduced a change to a line, the original line is in red text and starts with a minus sign (-). The new line is in green text and starts with a plus sign (+).  Similarly, lines that were added by a commit are in green text and start with a +. Lines that were removed by a commit are in red text and start with a -.
+   {: tip}
 
 4. To stop viewing entries, press Q.
 
@@ -236,8 +236,8 @@ Use the Git terminal:
 
 3. In your text editor, accept or modify the commit message.
 
-To save your commit message and close Vim, which might be your default text editor, press Esc, type `:wq`, and press Enter.
-{: tip}
+   To save your commit message and close Vim, which might be your default text editor, press Esc, type `:wq`, and press Enter.
+   {: tip}
 
 ## Tag a commit
 {: #tag_commit}
@@ -305,11 +305,11 @@ Use the Eclipse Orion Web IDE:
 
 2. Check out the destination branch. For more information, see [Work on a local branch](#start_working_on_branch).
 
-![Check out destination branch icon](images/destinationbranch.png){: caption="Figure 2. Destination branch" caption-side="bottom"}
+   ![Check out destination branch icon](images/destinationbranch.png){: caption="Figure 2. Destination branch" caption-side="bottom"}
 
 3. Click the **Reference** list, expand **local**, and click the name of the source branch. The changes from the source branch are shown in the Incoming section.
 
-![Changes from the source branch shown in the Incoming section](images/sourcebranch.png){: caption="Figure 3. Source branch changes" caption-side="bottom"}
+   ![Changes from the source branch shown in the Incoming section](images/sourcebranch.png){: caption="Figure 3. Source branch changes" caption-side="bottom"}
 
 4. In the Incoming section, click the **Merge** icon ![Merge icon in the Incoming section](images/mergeicon.png).
 
@@ -337,11 +337,11 @@ Use the Eclipse Orion Web IDE:
 
 3. Resolve each conflicting change. Delete all of the text that you do not want to keep. Each conflict is in this format:
 
- 		<<<<<<< HEAD
-		Text in checked out branch.
-		=======
-		Text in merged branch.
-		>>>>>>> commit_ID_from_merged_branch
+		 <<<<<<< HEAD
+		 Text in checked out branch.
+		 =======
+		 Text in merged branch.
+		 >>>>>>> commit_ID_from_merged_branch
 		
 4. For each conflicting file, select the checkbox. Type a merge commit message, and click **Commit**.
 
@@ -394,8 +394,8 @@ Use the Git terminal:
 
 4. Repeat the previous step as many times as necessary to complete the rebase operation.
 
-To stop the rebase operation, type `git rebase --abort` and press Enter.
-{: tip}
+   To stop the rebase operation, type `git rebase --abort` and press Enter.
+   {: tip}
 
 ## Resolve a rebase conflict
 {: #resolve_a_rebase_conflict}
@@ -413,7 +413,6 @@ Use the Eclipse Orion Web IDE:
 		 =======
 		 Text in merged branch.
 		 >>>>>>> commit_ID_from_merged_branch
-		 {: tip}
 
 4. In the rebase pane, select the checkbox for each corrected file and click **Continue**.
 
