@@ -39,7 +39,8 @@ Create a policy with rules. For more information, see [Defining policies and rul
 Place gates before build promotion in your CI/CD tool to check the quality of the build against your policies to ensure that it's safe to promote from one environment to another. Use the `gate-evaluate` command to perform the gate check. 
 
 After you create the policy, you can use the following script for gate evaluation:
-```
+
+```text
 
 #install the DevOps Insights plugin
 ibmcloud plugin install -f doi
