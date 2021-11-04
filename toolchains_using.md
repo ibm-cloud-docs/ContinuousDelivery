@@ -38,18 +38,18 @@ If you deferred the configuration of a tool integration when you created a toolc
 1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. If you need to configure a tool integration for the first time, on its card, click **Configure**.
 
-  <img src="images/toolchain_tile_configure.png" alt="Configure button" width="167" style="width:167px; border-style: none"/>
+   ![Configure button](images/toolchain_tile_configure.png){: caption="Figure 1. Configure tool integration" caption-side="bottom"}
 
- When you are finished configuring the tool integration, click **Save Integration**.
+   When you are finished configuring the tool integration, click **Save Integration**.
 
 1. If you need to update a tool integration's configuration, on its card, click the menu to access the configuration options.
 
-  ![Configuration menu](images/toolchain_tile_menu.png)
+   ![Configuration menu](images/toolchain_tile_menu.png){: caption="Figure 2. Update tool integration" caption-side="bottom"}
 
- A few of the tool integrations are preconfigured and don't require any configuration parameters. You can update the configuration settings for only the tool integrations that you configured.
- {: tip}
+   A few of the tool integrations are preconfigured and don't require any configuration parameters. You can update the configuration settings for only the tool integrations that you configured.
+   {: tip}
 
- When you are finished updating the settings, click **Save Integration**. For more information about configuring specific tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
+   When you are finished updating the settings, click **Save Integration**. For more information about configuring specific tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 
 ## Adding a tool integration
 {: #adding_a_tool_integration}
@@ -115,16 +115,16 @@ You can delete a toolchain. When you delete a toolchain, the deletion cannot be 
 1. Click the **Actions** menu and select **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.  
 
- When you delete a GitHub or {{site.data.keyword.gitrepos}} tool integration, the associated repo is not deleted from GitHub or {{site.data.keyword.gitrepos}}. You must manually remove the repo.
- {: tip}
+   When you delete a GitHub or {{site.data.keyword.gitrepos}} tool integration, the associated repo is not deleted from GitHub or {{site.data.keyword.gitrepos}}. You must manually remove the repo.
+   {: tip}
 
 ## Take a tutorial: Using toolchains
 {: #toolchain-tutorial}
 
 Check out these tutorials on the [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external}:
 
-   * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}.
+* [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}.
 
-   * [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){: external}.
+* [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){: external}.
 
-   * [Use the "Develop and test microservices on Cloud Foundry" toolchain"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}.
+* [Use the "Develop and test microservices on Cloud Foundry" toolchain"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}.
