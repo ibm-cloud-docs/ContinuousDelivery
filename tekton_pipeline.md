@@ -27,7 +27,7 @@ subcollection: ContinuousDelivery
 [Tekton Pipelines](https://tekton.dev/){: external} is an open source project that you can use to configure and run Continuous Integration and {{site.data.keyword.contdelivery_short}} pipelines within a Kubernetes cluster. Tekton pipelines are defined in yaml files, which are typically stored in a Git repository (repo).
 {: shortdesc}
 
- ![Hybrid Tekton Pipelines](images/Hybrid_tekton_workers.png)
+![Hybrid Tekton Pipelines](images/Hybrid_tekton_workers.png){: caption="Figure 1. Hybrid Tekton pipelines diagram" caption-side="bottom"}
 
 Tekton provides a set of [Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/){: external} extensions to Kubernetes to define pipelines. The following basic Tekton Pipeline resources are included in these extensions:
 
@@ -90,9 +90,9 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the [Toolchains page](https://cloud.ibm.com/devops/toolchains){: external}, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 1. Add the Delivery Pipeline integration to your toolchain:
 
- a. Click **Add tool**.
+   a. Click **Add tool**.
 
- b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}}**.
+   b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}}**.
 
 1. Specify a name for your new pipeline.
 1. Select **Tekton** to create a Tekton {{site.data.keyword.deliverypipeline}}. This type of pipeline provides a dashboard that you can use to view the output of Tekton pipeline runs on a defined Kubernetes cluster, with support for configuring the pipeline definitions repos, the pipeline triggers, where the pipeline runs, and simple secrets.
@@ -105,105 +105,107 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 1. Click the **{{site.data.keyword.deliverypipeline}}** card to open the Tekton {{site.data.keyword.deliverypipeline}} dashboard.
 1. In the **Definitions** section, complete the following tasks:
 
- a. Specify the Git repo and URL that contains the Tekton pipeline definition and related artifacts. If your repo is not available, return to the toolchain Overview page and add your repo.
+   a. Specify the Git repo and URL that contains the Tekton pipeline definition and related artifacts. If your repo is not available, return to the toolchain Overview page and add your repo.
 
- b. Select the branch within your Git repo that you want to use, or type a tag.
+   b. Select the branch within your Git repo that you want to use, or type a tag.
  
- c. Specify the path to your pipeline definition within the Git repo. You can reference a specific definition within the same repo. You can also add multiple definition repos, if they are integrated with the toolchain. 
+   c. Specify the path to your pipeline definition within the Git repo. You can reference a specific definition within the same repo. You can also add multiple definition repos, if they are integrated with the toolchain. 
 
- d. Save your changes.
+   d. Save your changes.
 
- The pipeline definition is updated automatically.
+   The pipeline definition is updated automatically.
  
 1. In the **Worker** section, select the IBM Managed shared worker or the private worker that you want to use to run your Tekton pipeline. For more information about private workers, see [Working with Delivery Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers).
 
- The private worker must be defined in the same toolchain as your Tekton pipeline.
- {: important}
+   The private worker must be defined in the same toolchain as your Tekton pipeline.
+   {: important}
 
 1. In the **Triggers** section, click **Add trigger** to create a new trigger, and then associate that trigger with an event listener. The list of available event listeners is populated with the listeners that are defined in the pipeline code repo.
  
- Triggers are based on [Tekton trigger definitions](https://github.com/tektoncd/triggers){: external}. Git respository triggers use the event listener that they are mapped to to extract information from the incoming event payload and create Kubernetes resources. These resources are applied to a Tekton `PipelineRun` resource.
- {: tip}
+   Triggers are based on [Tekton trigger definitions](https://github.com/tektoncd/triggers){: external}. Git respository triggers use the event listener that they are mapped to to extract information from the incoming event payload and create Kubernetes resources. These resources are applied to a Tekton `PipelineRun` resource.
+   {: tip}
 
- **Manual triggers** run when you click the **Run** pipeline button and select the trigger.
+   **Manual triggers** run when you click the **Run** pipeline button and select the trigger.
 
- **Git repository triggers** run when the specified Git event type occurs for the specified Git repo and branch.
+   **Git repository triggers** run when the specified Git event type occurs for the specified Git repo and branch.
   
- You can access the webhook payload that is delivered to a Git trigger from your Tekton pipeline resources. Although the exact fields are repo-specific, the general syntax for the webhook payload is `$(event.payloadFieldName)`. Before you can create a webhook, you must authorize Git Admin access for the corresponding Git integration. To authorize Git Admin access, [configure and save the Git integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#configuring_a_tool_integration) again.
- {: tip}
+   You can access the webhook payload that is delivered to a Git trigger from your Tekton pipeline resources. Although the exact fields are repo-specific, the general syntax for the webhook payload is `$(event.payloadFieldName)`. Before you can create a webhook, you must authorize Git Admin access for the corresponding Git integration. To authorize Git Admin access, [configure and save the Git integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#configuring_a_tool_integration) again.
+   {: tip}
 
- **Timed triggers** run at a scheduled time that is defined by the [CRON](http://crontab.org/){: external} value. The CRON expression for **timed triggers** is based on the [UNIX crontab syntax](http://crontab.org/){: external} and is a sequence of five time and date fields: `minute`, `hour`, `day of the month`, `month`, and `day of the week`. These fields are separated by spaces in the format `X X X X X`. The maximum frequency for a timed trigger is once every five minutes. The following examples show strings that use various timed frequencies.
-   * `*/5 * * * *` - The trigger runs every 5 minutes.
-   * `0 * * * *` - The trigger runs at the start of every hour.
-   * `0 9 * 1 MON-FRI` - The trigger runs at 9:00 AM every weekday in January.
-   * `0 * * NOV,DEC 1` - The trigger runs every hour on Mondays during November and December.
+   **Timed triggers** run at a scheduled time that is defined by the [CRON](http://crontab.org/){: external} value. The CRON expression for **timed triggers** is based on the [UNIX crontab syntax](http://crontab.org/){: external} and is a sequence of five time and date fields: `minute`, `hour`, `day of the month`, `month`, and `day of the week`. These fields are separated by spaces in the format `X X X X X`. The maximum frequency for a timed trigger is once every five minutes. The following examples show strings that use various timed frequencies.
 
- **Generic webhook triggers** run when a POST request that is configured with the secret setting goes to the generic webhook URL. Generic webhook triggers provide a unique webhook URL for POST requests. 
+    * `*/5 * * * *` - The trigger runs every 5 minutes.
+    * `0 * * * *` - The trigger runs at the start of every hour.
+    * `0 9 * 1 MON-FRI` - The trigger runs at 9:00 AM every weekday in January.
+    * `0 * * NOV,DEC 1` - The trigger runs every hour on Mondays during November and December.
+
+   **Generic webhook triggers** run when a POST request that is configured with the secret setting goes to the generic webhook URL. Generic webhook triggers provide a unique webhook URL for POST requests. 
  
- Because the PipelineRun UI does not hide the generic webhook payload values in the event payload section, do not include sensitive data in the payload. Instead, secure any data that is required by a generic webhook by using trigger properties, such as passwords or API key secrets.
- {: important} 
+   Because the PipelineRun UI does not hide the generic webhook payload values in the event payload section, do not include sensitive data in the payload. Instead, secure any data that is required by a generic webhook by using trigger properties, such as passwords or API key secrets.
+   {: important} 
  
- You can secure generic webhook triggers to work with Git, a Slack outgoing webhook, an Artifactory webhook, and more by using any of the following methods:
+   You can secure generic webhook triggers to work with Git, a Slack outgoing webhook, an Artifactory webhook, and more by using any of the following methods:
 
    * Token matches to compare the saved token and the token that is passed within the POST request. Supported token sources include a header, query, or payload. Token matches are used by GitLab webhooks and Slack outgoing webhooks.
    * Payload digest matches to compare the signature and the hash that are generated from the digested payload by using HMAC hex digest with a saved token. Supported signature sources might include a header, query, or payload. Users must specify a digest algorithm. Payload digest matches are used by GitHub webhooks.
    * Tekton task validation requires users to validate the webhook request within their Tekton tasks.
 
- Specify the following values to use generic webhook triggers with GitHub webhooks:
+   Specify the following values to use generic webhook triggers with GitHub webhooks:
  
    * Securing: `Payload Digest Matches`
    * Signature Source: `Header`
    * Header Key Name: `X-Hub-Signature`
    * Digest Algorithm: `sha1`.  
  
- Specify the following values to use generic webhook triggers with GitLab webhooks:
+   Specify the following values to use generic webhook triggers with GitLab webhooks:
 
    * Securing: `Token Matches`
    * Token Source: `Header`
    * Header Key Name: `X-Gitlab-Token`
 
- Specify the following values to use generic webhook triggers with Slack outgoing webhooks:
+   Specify the following values to use generic webhook triggers with Slack outgoing webhooks:
 
    * Securing: `Token Matches`
    * Token Source: `Payload`
    * JSON Property Name / Form Key: `token`
 
- The following example shows how to use the curl command with a generic webhook that is secured with a `Token Matches` rule:
+   The following example shows how to use the curl command with a generic webhook that is secured with a `Token Matches` rule:
 
-   ![generic webhook example](images/pipeline_tekton_generic_webhook.png)
+   ![Generic webhook example](images/pipeline_tekton_generic_webhook.png){: caption="Figure 2. Generic webhook example" caption-side="bottom"}
 
- ```
- curl -X POST \
-  https://devops-api.us-south.devops.cloud.ibm.com/v1/tekton-webhook/588236be-749b-4c67-ae57-a561abbbc9a8/run/7e82880e-4223-4c98-8ca9-ef6df36bb6dc \
-  -H 'Content-Type: application/json' \
-  -H 'token: 48a0f92c0932890048596906a22ae189c48c5619fbcf9600' \
-  -d '{
-    "somekey": "somevalue"
-  }'
- ```
- To obtain payload values in the pipeline definition, specify a Triggerbinding parameter with a value that is derived from the event:
+   ```text
+   curl -X POST \
+   https://devops-api.us-south.devops.cloud.ibm.com/v1/tekton-webhook/588236be-749b-4c67-ae57-a561abbbc9a8/run/7e82880e-4223-4c98-8ca9-ef6df36bb6dc \
+   -H 'Content-Type: application/json' \
+   -H 'token: 48a0f92c0932890048596906a22ae189c48c5619fbcf9600' \
+   -d '{
+   "somekey": "somevalue"
+   }'
+   ```
+
+   To obtain payload values in the pipeline definition, specify a Triggerbinding parameter with a value that is derived from the event:
  
- ```
-  apiVersion: tekton.dev/v1beta1
-  kind: TriggerBinding
-  metadata:
-    name: binding
-  spec:
-    params:
-      - name: somekey
-        value: $(event.somekey)
- ``` 
+   ```text
+   apiVersion: tekton.dev/v1beta1
+   kind: TriggerBinding
+   metadata:
+   name: binding
+   spec:
+   params:
+   - name: somekey
+   value: $(event.somekey)
+   ``` 
 
 Save your changes.
 
 1. In the **Environment properties** section, click **Add property** and define your own environment property. For example, you can define an `API_KEY` property that passes an API key that is used by all of the scripts in the pipeline to access {{site.data.keyword.cloud_notm}} resources. You can add the following types of properties:
 
- * **Enumeration**: A property key with a value that can be selected from a user-defined list of options.
- * **Secure value**: A property key with a single-line value that is secured with AES-128 encryption. This value is displayed by using the asterisk character.
- * **Text value**: A property key with a text value that can either be single-line or multi-line. Previously, multi-line values were supported by a separate **Text area** property type.
- * **Tool integration**: A property key with a value that is resolved at run time from a toolchain tool integration. By default, the value is a JSON string representation of the tool integration. A specific field or subset of the object can be retrieved by providing a value for the optional JSON filter. For example, if a GitHub integration is selected and the JSON filter `parameters.repo_url` is specified, the value reflects the URL of the Git repo that is configured in the tool integration when the `PipelineRun` resource runs.
+* **Enumeration**: A property key with a value that can be selected from a user-defined list of options.
+* **Secure value**: A property key with a single-line value that is secured with AES-128 encryption. This value is displayed by using the asterisk character.
+* **Text value**: A property key with a text value that can either be single-line or multi-line. Previously, multi-line values were supported by a separate **Text area** property type.
+* **Tool integration**: A property key with a value that is resolved at run time from a toolchain tool integration. By default, the value is a JSON string representation of the tool integration. A specific field or subset of the object can be retrieved by providing a value for the optional JSON filter. For example, if a GitHub integration is selected and the JSON filter `parameters.repo_url` is specified, the value reflects the URL of the Git repo that is configured in the tool integration when the `PipelineRun` resource runs.
  
- You can access these properties in your Tekton pipeline resources. For more information about these properties, see [Tekton Pipelines environment and resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment).
+You can access these properties in your Tekton pipeline resources. For more information about these properties, see [Tekton Pipelines environment and resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment).
 
 1. Click **Save**.
 
@@ -223,17 +225,17 @@ Pipeline runs can be in any of the following states:
 * **Cancelled**: `PipelineRun` was cancelled by the system or by the user. The system cancels `PipelineRun` when the number of waiting runs exceeds the allowed limit.
 * **Error**: `PipelineRun` contains errors that prevented it from being applied on the cluster. For more information about the cause of the error, see the run details.
 
-![Tekton Dashboard](images/tekton-dashboard.png)
+![Tekton Dashboard](images/tekton-dashboard.png){: caption="Figure 3. Tekton Dashboard" caption-side="bottom"}
 
 For detailed information about a selected run, click any row in the table. You view the `Task` definition and the steps in each `PipelineRun` definition. You can also view the status, logs, and details of each `Task` definition and step, and the overall status of the `PipelineRun` definition.
 
-![Tekton PipelineRun details](images/tekton-pipeline-run-details.png)
+![Tekton PipelineRun details](images/tekton-pipeline-run-details.png){: caption="Figure 4. Tekton PipelineRun details" caption-side="bottom"}
 
 ## Learn more about Tekton pipelines and resources
 {: #learn_more_tekton_pipelines}
 
 To learn more about Tekton pipelines, see the [Tekton: A Modern Approach to Continuous Delivery](https://www.ibm.com/cloud/blog/tekton-a-modern-approach-to-continuous-delivery){: external} and [IBM Cloud Continuous Delivery Tekton Pipelines Tools and Resources](https://www.ibm.com/cloud/blog/ibm-cloud-continuous-delivery-tekton-pipelines-tools-and-resources){: external} articles. You can also take this tutorial:
 
-   * [Develop a Kubernetes app by using Tekton delivery pipelines](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-using-tekton-delivery-pipelines){: external} tutorial.
+* [Develop a Kubernetes app by using Tekton delivery pipelines](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-using-tekton-delivery-pipelines){: external} tutorial.
 
 To learn more about the Tekton tasks that you can reference within your pipelines, see the [Open Toolchain Tekton Catalog](https://github.com/open-toolchain/tekton-catalog/tree/master/container-registry){: external}. This GitHub repo contains a set of tasks that you can reuse in your Tekton pipelines.
