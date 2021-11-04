@@ -51,8 +51,8 @@ The following table lists the IAM user roles and the available toolchain actions
 
 | Platform Management Role | Description of Actions | Example Actions|
 |:-----------------|:-----------------|:-----------------|
-| Viewer, Operator | View toolchains and delivery pipelines. Run delivery pipelines. | <ul><li>Click a toolchain to open its Overview page.</li><li>Click the **Run Stage** icon of the stage that your pipeline job is in.</li></ul> |
-| Editor, Administrator | Create, view, update, and delete toolchains and delivery pipelines. |<ul><li>From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click **Create a Toolchain**.</li><li>From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click the toolchain to delete. Click the **Actions** menu, then select **Delete**.</li><li>From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Click **Add tool**, and then select the tool integration that you want to add.</li><li>From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Pipeline page, click the **Stage Configuration** icon, and then click **Configure Stage**.</li></ul> |
+| Viewer, Operator | View toolchains and delivery pipelines. Run delivery pipelines. | * Click a toolchain to open its Overview page.  \n  \n * Click the **Run Stage** icon of the stage that your pipeline job is in. |
+| Editor, Administrator | Create, view, update, and delete toolchains and delivery pipelines. |* From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click **Create a Toolchain**.  \n  \n * From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click the toolchain to delete. Click the **Actions** menu, then select **Delete**.  \n  \n * From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Click **Add tool**, and then select the tool integration that you want to add.  \n  \n * From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Pipeline page, click the **Stage Configuration** icon, and then click **Configure Stage**. |
 {: caption="Table 2. IAM user roles and actions" caption-side="top"}
 
 
@@ -98,12 +98,12 @@ You can assign an existing user access to a toolchain in your resource group.
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. From the row for the user that you want to assign access, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu.
 3. Click **Assign access**.
-3. In the **Assign users additional access** section, click **IAM services**.
-4. Choose to assign access to the **Toolchain** service within **All resource groups**.
-5. In the **Platform access** section, select **Viewer** (or higher) access to provide the user with access to view toolchain service instances from the platform, perform platform actions that are required to configure and operate toolchain service instances, and assign access policies to other users.
-6. In the **Resource group access** section, select the **Editor** role to provide the user with access to create, view, edit, or delete the toolchain service from resource groups. Select the **Viewer** role to provide the user with access to view toolchains only or to run delivery pipelines.
-7. Click **Add**.
-8. Click **Assign**. 
+4. In the **Assign users additional access** section, click **IAM services**.
+5. Choose to assign access to the **Toolchain** service within **All resource groups**.
+6. In the **Platform access** section, select **Viewer** (or higher) access to provide the user with access to view toolchain service instances from the platform, perform platform actions that are required to configure and operate toolchain service instances, and assign access policies to other users.
+7. In the **Resource group access** section, select the **Editor** role to provide the user with access to create, view, edit, or delete the toolchain service from resource groups. Select the **Viewer** role to provide the user with access to view toolchains only or to run delivery pipelines.
+8. Click **Add**.
+9. Click **Assign**. 
 
 Depending on their role, the user can now work with all of the toolchains within the specified resource group. They can add tool integrations, modify and run pipelines, and use the Eclipse Orion {{site.data.keyword.webide}}.
 
