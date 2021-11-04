@@ -32,7 +32,7 @@ The existing CLI plug-in repository infrastructure for downloading and updating 
 
 If you do not upgrade the base image that is used by your pipelines, you might receive the following error:
 
-```
+```text
 Unable to fetch plug-ins from repository 'IBM Cloud':
 invalid character '<' looking for beginning of value
 ```
@@ -54,7 +54,7 @@ Pipeline base images are hosted in a global IBM Cloud Container Registry namespa
 2. Click **Configure Pipeline**.
 3. In the **Image version** tab, select either the **Experimental: RedHat UBI** or the **Ubuntu** image type. Then, based on the selected image type, select the default image version to use for all jobs in your pipeline. You can also customize this setting for each job in each stage of your pipeline.
 
-![Overflow icon](images/ubi-ubuntu-vbi.png)
+![Image version](images/ubi-ubuntu-vbi.png){: caption="Figure 1. Image version" caption-side="bottom"}
 
 If you choose the `Latest` option, the pipeline jobs are run with the current image version. The current image version is displayed in brackets after the `Latest` option. When a new image version is available, the image that is used changes. You might need to modify your pipeline to support any newer tools that are included in the new image.
 {: tip}
@@ -66,8 +66,8 @@ To add tools in a Red Hat UBI-based image, you must use the `yum` command. `apt-
 ## Image version contents
 {: #image_version_contents}
  
- After version 2.0, images no longer include grunt or python. If these tools are required for your build, you can install them manually. To install grunt, run `npm install -g grunt-cli`. Make sure that you don't change the Node.js version after you install grunt. To install python on a 2.x vbi, run `apt-get -qq update && apt-get -qq install -y python`. If you are using a 3.x vbi, you can use `yum update -yq && yum install -yq python3-pip`.
- {: important}
+After version 2.0, images no longer include grunt or python. If these tools are required for your build, you can install them manually. To install grunt, run `npm install -g grunt-cli`. Make sure that you don't change the Node.js version after you install grunt. To install python on a 2.x vbi, run `apt-get -qq update && apt-get -qq install -y python`. If you are using a 3.x vbi, you can use `yum update -yq && yum install -yq python3-pip`.
+{: important}
 
 Images are available on the IBM Cloud Container Registry. To list these hosted images, run the `ibmcloud cr images --restrict continuous-delivery` command when you target the global IBM Cloud Container Registry.
 
@@ -93,12 +93,12 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 | 2.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.2`|
 | 2.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.1`|
 | 2.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.0`|
-{: caption="Table 2. Mapping between versioned based images and IBM Cloud Registry versions" caption-side="top"}
+{: caption="Table 1. Mapping between versioned based images and IBM Cloud Registry versions" caption-side="top"}
 
 The following available image versions are listed in descending order, starting with the current version.
  
- The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
- {: tip}
+The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
+{: tip}
  
 ### Version 3.3
 {: #version_3_3}
@@ -109,7 +109,8 @@ The {{site.data.keyword.cloud_notm}} command-line interface (CLI) provides code 
 {: tip}
 
 This image includes the following tools:
-```
+
+```text
 	# node --version
 	v14.17.6
 
@@ -235,7 +236,7 @@ This image includes the following tools:
 	# ed --version
 	GNU ed 1.14.2
 ```
- {: codeblock}
+{: codeblock}
 
 ### Version 3.2
 {: #version_3_2}
@@ -243,7 +244,8 @@ This image includes the following tools:
 To view the contents of version 3.2, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 11. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built.
 
 This image includes the following tools:
-```
+
+```text
 	# node --version
 	v14.17.6
 
@@ -368,7 +370,7 @@ This image includes the following tools:
 	# ed --version
 	GNU ed 1.14.2
 ```
- {: codeblock}
+{: codeblock}
 
 ### Version 3.1
 {: #version_3_1}
@@ -376,7 +378,8 @@ This image includes the following tools:
 To view the contents of version 3.1, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 11. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built.
 
 This image includes the following tools:
-```
+
+```text
 	# node --version
 	v14.17.0
 
@@ -503,7 +506,7 @@ This image includes the following tools:
 	# ed --version
 	GNU ed 1.14.2
 ```
- {: codeblock}
+{: codeblock}
 
 ### Version 3.0
 {: #version_3_0}
@@ -511,7 +514,8 @@ This image includes the following tools:
 To view the contents of version 3.0, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 11. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built.
 
 This image includes the following tools:
-```
+
+```text
 	# node --version
 	v14.16.1
 
@@ -639,7 +643,7 @@ This image includes the following tools:
 	# ed --version
 	GNU ed 1.14.2
 ```
- {: codeblock}
+{: codeblock}
  
 ### Version 2.15
 {: #version_2_15}
@@ -650,7 +654,8 @@ The {{site.data.keyword.cloud_notm}} command-line interface (CLI) provides code 
 {: tip}
 
 This image includes the following tools:
-```
+
+```text
 # node --version
 v14.17.6
 
@@ -788,11 +793,11 @@ GNU Ed 1.10
 {: codeblock}
 
 ### Version 2.14
- {: #version_2_14}
+{: #version_2_14}
 
 To view the contents of version 2.14, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v14.17.6
 
@@ -929,11 +934,11 @@ To view the contents of version 2.14, from the running image, type `default_vers
  {: codeblock}
 
 ### Version 2.13
- {: #version_2_13}
+{: #version_2_13}
 
 To view the contents of version 2.13, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v14.17.0
 
@@ -1071,14 +1076,14 @@ To view the contents of version 2.13, from the running image, type `default_vers
 	# ed --version
 	GNU Ed 1.10
 ```
- {: codeblock}
+{: codeblock}
 
 ### Version 2.12
 {: #version_2_12}
 
 To view the contents of version 2.12, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v14.16.1
 
@@ -1215,14 +1220,14 @@ To view the contents of version 2.12, from the running image, type `default_vers
 	# ed --version
 	GNU Ed 1.10
 ```
- {: codeblock}
+{: codeblock}
 
 ### Version 2.11
 {: #version_2_11}
 
 To view the contents of version 2.11, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v12.20.1
 
@@ -1349,7 +1354,7 @@ To view the contents of version 2.11, from the running image, type `default_vers
 	 OS/Arch:           linux/amd64
 	 Experimental:      false
 ```
- {: codeblock}
+{: codeblock}
  
 ### Version 2.10
 {: #version_2_10}
@@ -1359,7 +1364,7 @@ Starting with version 2.10, the versioned base image includes a Docker client.
 
 To view the contents of version 2.10, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v12.20.0
 
@@ -1486,14 +1491,14 @@ To view the contents of version 2.10, from the running image, type `default_vers
 	 OS/Arch:           linux/amd64
 	 Experimental:      false
 ```
- {: codeblock}
+{: codeblock}
  
 ### Version 2.9
 {: #version_2_9}
 
 To view the contents of version 2.9, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v12.18.3
 
@@ -1585,15 +1590,15 @@ To view the contents of version 2.9, from the running image, type `default_versi
 	kubernetes v1.11.0+d4cacc0
 	features: Basic-Auth GSSAPI Kerberos SPNEGO
 
-  ```
- {: codeblock}
+```
+{: codeblock}
  
 ### Version 2.8
 {: #version_2_8}
 
 To view the contents of version 2.8, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v12.18.2
 
@@ -1682,8 +1687,8 @@ To view the contents of version 2.8, from the running image, type `default_versi
 	kubernetes v1.11.0+d4cacc0
 	features: Basic-Auth GSSAPI Kerberos SPNEGO
 
-  ```
- {: codeblock}
+```
+{: codeblock}
  
 ### Version 2.7
 {: #version_2_7}
@@ -1692,7 +1697,7 @@ Starting with version 2.7, the default JVM is Java&trade; 11. Java&trade; 8 was 
 
 To view the contents of version 2.7, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v12.16.3
 
@@ -1781,15 +1786,15 @@ To view the contents of version 2.7, from the running image, type `default_versi
 	kubernetes v1.11.0+d4cacc0
 	features: Basic-Auth GSSAPI Kerberos SPNEGO
 
-  ```
- {: codeblock}
+```
+{: codeblock}
  
 ### Version 2.6
 {: #version_2_6}
  
 To view the contents of version 2.6, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v12.13.0
 
@@ -1874,15 +1879,15 @@ To view the contents of version 2.6, from the running image, type `default_versi
 	oc v3.11.0+0cbc58b
 	kubernetes v1.11.0+d4cacc0
 	features: Basic-Auth GSSAPI Kerberos SPNEGO
-  ```
- {: codeblock}
+```
+{: codeblock}
  
 ### Version 2.5
 {: #version_2_5}
  
 To view the contents of version 2.5, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v12.13.0
 
@@ -1966,15 +1971,15 @@ To view the contents of version 2.5, from the running image, type `default_versi
 	oc v3.11.0+0cbc58b
 	kubernetes v1.11.0+d4cacc0
 	features: Basic-Auth GSSAPI Kerberos SPNEGO
-  ```
- {: codeblock}
+```
+{: codeblock}
  
 ### Version 2.4
 {: #version_2_4}
    
 To view the contents of version 2.4, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v10.16.3
 
@@ -2052,15 +2057,15 @@ To view the contents of version 2.4, from the running image, type `default_versi
 	kubernetes v1.11.0+d4cacc0
 	features: Basic-Auth GSSAPI Kerberos SPNEGO
 
-  ```
- {: codeblock}
+```
+{: codeblock}
  
 ### Version 2.3
 {: #version_2_3}
  
- To view the contents of version 2.3, from the running image, type `default_versions.sh`. This image includes the following tools:
+To view the contents of version 2.3, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v10.16.0
 
@@ -2132,15 +2137,15 @@ To view the contents of version 2.4, from the running image, type `default_versi
 	JVM:          1.8.0_212 (Oracle Corporation 25.212-b03)
 	OS:           Linux 4.9.184-linuxkit amd64
 
-  ```
- {: codeblock}
+```
+{: codeblock}
 
 ### Version 2.2
 {: #version_2_2}
 
 To view the contents of version 2.2, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v10.16.0
 
@@ -2212,15 +2217,15 @@ To view the contents of version 2.2, from the running image, type `default_versi
 	JVM:          1.8.0_212 (Oracle Corporation 25.212-b03)
 	OS:           Linux 4.9.184-linuxkit amd64
 
-  ```
- {: codeblock} 
+```
+{: codeblock} 
  
 ### Version 2.1
 {: #version_2_1}
 
 To view the contents of version 2.1, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v10.16.0
 
@@ -2291,15 +2296,15 @@ To view the contents of version 2.1, from the running image, type `default_versi
 	Ant:          Apache Ant(TM) version 1.9.13 compiled on July 10 2018
 	JVM:          1.8.0_212 (Oracle Corporation 25.212-b03)
 	OS:           Linux 4.4.0-141-generic amd64
-  ```
- {: codeblock}
+```
+{: codeblock}
 
 ### Version 2.0
 {: #version_2_0}
  
- To view the contents of version 2.0, from the running image, type `default_versions.sh`. This image includes the following tools:
+To view the contents of version 2.0, from the running image, type `default_versions.sh`. This image includes the following tools:
 
-```
+```text
 	# node --version
 	v10.15.3
 
@@ -2373,8 +2378,8 @@ To view the contents of version 2.1, from the running image, type `default_versi
 	Ant:          Apache Ant(TM) version 1.9.13 compiled on July 10 2018
 	JVM:          1.8.0_191 (Oracle Corporation 25.191-b12)
 	OS:           Linux 4.4.0-141-generic amd64
-  ```
- {: codeblock}
+```
+{: codeblock}
 
 ## Configuring the image for a specific pipeline job
 {: #configure_image_for_job}
@@ -2382,9 +2387,9 @@ To view the contents of version 2.1, from the running image, type `default_versi
  In general, it is not recommended to configure the image to use for individual pipeline jobs. This method increases the effort to upgrade to a new image version since you must update each pipeline job. However, there might be circumstances in which you are required to configure the image for a specific pipeline job.
  {: important}
  
- 1. On the stage, click the **Stage Configuration** icon, and then click **Configure Stage**.
- 2. In the **JOBS** tab, click the job that you want to modify.
- 3. The **Pipeline image version** option shows the current image version that is available, and the version that you are using for the selected pipeline job. To change the image version to use the current version to run the pipeline job, select **Latest**.
+1. On the stage, click the **Stage Configuration** icon, and then click **Configure Stage**.
+2. In the **JOBS** tab, click the job that you want to modify.
+3. The **Pipeline image version** option shows the current image version that is available, and the version that you are using for the selected pipeline job. To change the image version to use the current version to run the pipeline job, select **Latest**.
 
 To run pipeline jobs with the image that you selected on the pipeline configuration page, select **Pipeline default**.
 {: tip}
