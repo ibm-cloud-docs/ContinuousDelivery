@@ -30,10 +30,10 @@ The Eclipse Orion {{site.data.keyword.webide}} is a browser-based development en
 Best of all, the {{site.data.keyword.webide}} is powered by the web. You have nothing to install, nothing to maintain, and nothing to scale. You can develop anywhere that you have an internet connection.
 
 Don't store regulated data in files within the {{site.data.keyword.webide}}. The procedures for regulated data are currently not in place.
-{: tip}
+{: important}
 
 The {{site.data.keyword.webide}} is keyboard accessible and works well with a screen reader. You can use the {{site.data.keyword.webide}} to edit code or, if you prefer, you can edit code by using your favorite code editor or text editor. You can also use the Git capabilities that are provided with the {{site.data.keyword.webide}}; alternatively, you can use the Git command line or github.com to access the {{site.data.keyword.webide}} Git capabilities.
-{: note}
+{: tip}
 
 ## Setting up the IDE
 {: #editorsetup}
@@ -42,7 +42,7 @@ The {{site.data.keyword.webide}} is customizable so that you can choose the colo
 
 If you often need to change certain settings while you edit, you can access those settings quickly from the **Local Editor Settings** icon ![Local Editor Settings icon](images/webide_local_settings_icon_light_small.png).
 
-![Local Editor Settings](images/webide_local_editor_settings_light.png)
+![Local Editor Settings](images/webide_local_editor_settings_light.png){: caption="Figure 1. Local Editor Settings" caption-side="bottom"}
 
 By default, the settings for the editor style and font size are always shown. To include other editor settings in the menu, follow these steps:
 
@@ -52,7 +52,7 @@ By default, the settings for the editor style and font size are always shown. To
 
 3. To include or exclude a setting from the **Local Editor Settings** menu, click the star for each setting.
 
-![Editor Settings toggle](images/webide_editor_settings_toggle_light.png)
+   ![Editor Settings toggle](images/webide_editor_settings_toggle_light.png){: caption="Figure 2. Local Editor settings" caption-side="bottom"}
 
 
 ## Editing code
@@ -65,7 +65,7 @@ To upload files to the file navigator, drag them from your computer to the file 
 
 The second section is the editor pane. The editor provides several coding features, including content assist and syntax validation.
 
-![Web IDE](images/webide_light.png)
+![Web IDE](images/webide_light.png){: caption="Figure 3. Web IDE" caption-side="bottom"}
 
 ### Working with multiple files
 {: #multiple_files}
@@ -73,11 +73,12 @@ The second section is the editor pane. The editor provides several coding featur
 1. To work with two files at the same time, click the **Change split editor mode** icon ![Split Editor icon](images/webide_split_editor_icon_light_small.png).
 2. From the menu that opens, select a view.
 
- After you select a view, if a file was already open in the editor, it is shown in both editor views.
+   After you select a view, if a file was already open in the editor, it is shown in both editor views.
 
- To open or change a file that is shown in one of the editor views:
- 1. Move the cursor to the editor view that you want to change.
- 2. In the file navigator, click a file.
+To open or change a file that is shown in one of the editor views:
+
+1. Move the cursor to the editor view that you want to change.
+2. In the file navigator, click a file.
 
 ### Keyboard shortcuts
 {: #keyboard_shortcuts}
@@ -95,7 +96,9 @@ The {{site.data.keyword.webide}} is integrated with source code management tools
 {: #deploy}
 
 1. To deploy your app, from the run bar, either select or create a launch configuration.
-   ![Run bar](images/webide_runbar_light.png)   
+
+   ![Run bar](images/webide_runbar_light.png){: caption="Figure 4. Run bar" caption-side="bottom"}
+
 1. Click the deploy icon ![deploy icon](images/webide_deploy_button_light_small.png). An instance of your app is deployed by using the current contents of your workspace and the environment that is defined in your launch configuration.
 1. After your app is deployed, you can use the run bar to stop, restart, or debug your app, view logs, and more.
 
