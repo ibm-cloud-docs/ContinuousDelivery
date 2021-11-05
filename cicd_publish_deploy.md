@@ -36,7 +36,7 @@ Before you publish a deployment a record, you must publish a build record. For m
 
 In the deployment job, use the following script to upload a deployment record. The `--env` flag identifies the deployment environment. Use the `deployrecord-publish` command to upload a deployment record. 
 
-```
+```bash
 #!/bin/bash
 
 #install the DevOps Insights plugin
@@ -55,7 +55,7 @@ ibmcloud doi deployrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber=
 
 Provide a `joburl` to upload deployment records. To include `joburl` as a parameter to upload a deployment record, pass it in as a parameter:
 
-```
+```text
 ibmcloud doi deploymentrecord-publish --logicalappname "$MY_APP_NAME" --buildnumber "$MY_BUILD_NUMBER" --env staging --joburl "$JOB_URL" --status pass
 ```
 {: codeblock}
