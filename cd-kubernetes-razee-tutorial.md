@@ -98,7 +98,7 @@ In this step, you create a Develop a Kubernetes app with Razee toolchain. Before
    The namespace must be 4 - 30 characters in length and can include only lowercase letters, numbers, or underscore characters. If this is the first time that you're using Razee to deploy an app into your cluster, select the default Razee deployment option to install the Razee agent and register your app with the cluster.
    {: important}
 
-8. Click **Create** to create the toolchain and open its Overview page.
+7. Click **Create** to create the toolchain and open its Overview page.
 
 ## Explore the pipeline
 {: #cd-kube-razee-explore}
@@ -150,9 +150,10 @@ In this step, you create a Develop a Kubernetes app with Razee toolchain. Before
 
 10. Review the `vulnerability-advisor` and `publish-doi-va-scan-record` tasks. These tasks run the following steps:
 
-   * `run-vulnerability-advisor-scan`: Runs [Vulnerability Advisor](/docs/services/Registry?topic=va-va_index) on the image to check for known vulnerabilities. If it finds a vulnerability, the job fails and prevents the image from being deployed. This safety feature prevents apps with security holes from being deployed. The image in this tutorial doesn't contain vulnerabilities, so it passes. In this tutorial template, the default configuration of the job is to not block on failure.
+    * `run-vulnerability-advisor-scan`: Runs [Vulnerability Advisor](/docs/services/Registry?topic=va-va_index) on the image to check for known vulnerabilities. If it finds a vulnerability, the job fails and prevents the image from being deployed. This safety feature prevents apps with security holes from being deployed. The image in this tutorial doesn't contain vulnerabilities, so it passes. In this tutorial template, the default configuration of the job is to not block on failure.
 
-   * `publish-testrecord`: Publishes test records from Vulnerability Advisor to [{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-publishing-test-data).
+    * `publish-testrecord`: Publishes test records from Vulnerability Advisor to [{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-publishing-test-data).
+   
 
 11. Review the `prepare-razee-deploy` task. This task updates the `deployment.yml` manifest file with details from the build artifacts and places those build artifacts and the `deployment.yml` file into the Razee configuration Git repo.
 
@@ -188,10 +189,10 @@ Modify the app and redeploy it to view how Razee picks up the changes in the `co
 
 1. On the toolchain's Overview page, click the **Git** card for your app.
 
-You can also use the built-in Eclipse Orion {{site.data.keyword.webide}}, a local IDE, or your favorite editor to change the files that are in your repo.
-{: tip}
+   You can also use the built-in Eclipse Orion {{site.data.keyword.webide}}, a local IDE, or your favorite editor to change the files that are in your repo.
+   {: tip}
 
-2. In the Git repo, click the `utils.js` file.
+2. In the Git repo, click the `utils.js` file. 
 
 3. Click **Edit** and update the code on line 4 to change the welcome message. 
 
