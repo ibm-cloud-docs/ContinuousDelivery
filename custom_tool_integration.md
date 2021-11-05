@@ -30,9 +30,9 @@ Configure a custom tool so that it works with other tools in your toolchain and 
 
 1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**. 
 
- a. Click **Add tool**.
+   a. Click **Add tool**.
 
- b. In the Tool Integrations section, click **Other Tool**.
+   b. In the Tool Integrations section, click **Other Tool**.
 
 1. Type the tool name.
 1. Select the lifecycle phase that is most closely associated with the tool. This selection determines which category your tool is listed under on the Overview page.
@@ -45,7 +45,8 @@ Configure a custom tool so that it works with other tools in your toolchain and 
 1. Click **Create Integration**.
 
 ## Learn more about custom tool
+{: learn_custom_tool}
 
 To learn more about the custom tool, take this tutorial:
 
-   * [Add a custom tool integration to a toolchain](https://www.ibm.com/cloud/garage/tutorials/add-a-custom-tool-integration-to-a-toolchain){: external}
+* [Add a custom tool integration to a toolchain](https://www.ibm.com/cloud/garage/tutorials/add-a-custom-tool-integration-to-a-toolchain){: external}
