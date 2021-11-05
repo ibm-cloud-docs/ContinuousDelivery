@@ -37,26 +37,27 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Jenkins**.
 1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**. 
 
- a. Click **Add tool**.
+   a. Click **Add tool**.
 
- b. In the Tool Integrations section, click **Jenkins**.
+   b. In the Tool Integrations section, click **Jenkins**.
 
 1. Type the name that you want to display for this tool integration on the Jenkins card in your toolchain.
 1. Type the URL for the Jenkins server that you want to open when you click the Jenkins card from your toolchain.
 1. Copy the generated toolchain webhook.
 1. In your Jenkins server, complete these steps:
 
- a. [Install the IBM Cloud DevOps plug-in](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Installingtheplugin){: external}.
+   a. [Install the IBM Cloud DevOps plug-in](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Installingtheplugin){: external}.
 
- b. [Configure Jenkins to notify toolchains](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Notifyingtoolchains){: external}.
+   b. [Configure Jenkins to notify toolchains](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Notifyingtoolchains){: external}.
 
- c. Return to the Configure the Integration page for the Jenkins tool integration.
+   c. Return to the Configure the Integration page for the Jenkins tool integration.
 
 1. Click **Create Integration**.
 1. From your toolchain, click **Jenkins** to view the Jenkins server.  
 
 ## Learn more about Jenkins
+{: #learn_jenkins}
 
 To learn more about Jenkins, see the [Jenkins article](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){: external} on the IBM Cloud Garage Method or take this tutorial:
 
-   * [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){: external}
+* [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){: external}
