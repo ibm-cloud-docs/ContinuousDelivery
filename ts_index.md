@@ -59,15 +59,15 @@ If you use the cf command line interface, complete the following steps:
 
 1. Check how much memory is being used for your apps. The cf apps command lists all the apps that you deployed in your current space. The status of each app is also displayed.
 
-	  ```
-	  cf apps
-	  ```
+   ```text
+   cf apps
+   ```
 
 1. To reduce the amount of memory that is used by your app, reduce the number of app instances or the maximum memory limit, or both:
 
-	  ```
-	  cf push appname -p app_path -i instance_number -m memory_limit
-      ```
+   ```text
+   cf push appname -p app_path -i instance_number -m memory_limit
+   ```
     
 1. Restart your app for the changes to take effect.
 
