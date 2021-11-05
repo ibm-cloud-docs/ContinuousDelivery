@@ -45,11 +45,12 @@ Use the `logicalappname` and `buildnumber` parameters consistently for publishin
 The values of `MY_APP_NAME` and `MY_BUILD_NUMBER` are used in all stages. Use these values when you are integrating with {{site.data.keyword.contdelivery_short}}. For example, set `MY_APP_NAME` to `My First App` and set `MY_BUILD_NUMBER` to `$BRANCH:$BUILD_NUMBER`.
 
 Configure your pipeline to use these properties across all stages. Save these properties to the `build.properties` file in your build job and use the following script.
-  ```
-  echo "MY_APP_NAME=${MY_APP_NAME}" >> $ARCHIVE_DIR/build.properties
-  echo "MY_BUILD_NUMBER=${MY_BUILD_NUMBER}" >> $ARCHIVE_DIR/build.properties
-  ```
-  {: codeblock}
+
+```text
+echo "MY_APP_NAME=${MY_APP_NAME}" >> $ARCHIVE_DIR/build.properties
+echo "MY_BUILD_NUMBER=${MY_BUILD_NUMBER}" >> $ARCHIVE_DIR/build.properties
+```
+{: codeblock}
 
 
 ## Setting environment properties within your delivery pipeline
@@ -63,9 +64,9 @@ Next, on the pipeline configuration page, set a property with name `buildPropert
 4. Click the **Settings** icon ![gear icon](images/settings.svg) > **Configure Stage**.
 5. Select the **Environment properties** tab.
 6. If your API key isn't listed, click **+ Add property** > **Secure property**, and add your API key.  
-6. Click **+ Add property** > **Properties file**.
-7. Enter `buildProperties` as the name and `build.properties` as the value.
-8. Click **Save**.
+7. Click **+ Add property** > **Properties file**.
+8. Enter `buildProperties` as the name and `build.properties` as the value.
+9. Click **Save**.
 
 
 ## Next steps
