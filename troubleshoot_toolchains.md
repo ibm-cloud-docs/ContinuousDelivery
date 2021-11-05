@@ -32,7 +32,7 @@ General problems with using toolchains might include tool integration configurat
 
 
 ## Why can't I create a toolchain from a template that uses a private repo in a different region?
-{: troubleshoot-cd-grit-integration-private}
+{: #troubleshoot-cd-grit-integration-private}
 {: troubleshoot}
 {: support}
 
@@ -60,7 +60,7 @@ If your GitLab repo isn't located within a GitLab group, the value of `group` is
 
 
 ## I configured a tool integration for my toolchain, why wasn't it configured?
-{: troubleshoot-tool-integration-error}
+{: #troubleshoot-tool-integration-error}
 {: troubleshoot}
 {: support}
 
@@ -72,21 +72,21 @@ After you add and configure a tool integration for your toolchain, an error mess
 When you add a tool integration, the toolchain communicates with the tool that is represented by the tool integration to provision any necessary resources and associate them with the toolchain. If an error occurs during the setup process or if the communication between the toolchain and the tool does not complete properly, the tool integration is put into an error state.
 {: tsCauses}
 
-![Setup failed error](images/tool_setup_failed.png)
+![Setup failed error](images/tool_setup_failed.png){: caption="Figure 1. Setup failed error" caption-side="bottom"}
 
 You can try to configure the tool integration again:
 {: tsResolve}
 
 1. On its tool card, hover over the `Setup failed` message and click **Reconfigure**.
 
-![Reconfigure button](images/tool_reconfigure.png) 
+   ![Reconfigure button](images/tool_reconfigure.png){: caption="Figure 2. Reconfigure tool integration" caption-side="bottom"}
 
 1. Make sure that you are using valid configuration parameters. If the error was caused by an invalid configuration, an error message is displayed; for example, `The integration could not be set up. Check the settings and try again. Reason: Invalid api_key:fakeKey`. Update the settings for the tool integration and click **Save integration**.
 1. If the error was caused by a communication problem, click **Save integration** to try again.
 
 
 ## Why can't I create a toolchain to deploy my app to Cloud Foundry?
-{: troubleshoot-deploy_cf}
+{: #troubleshoot-deploy_cf}
 {: troubleshoot}
 {: support}
 
@@ -103,7 +103,7 @@ A Cloud Foundry org and space can't be located in your account.
 
 
 ## Why can't I delete toolchains by using the `ibmcloud` CLI?
-{: troubleshoot-delete_toolchains_cli}
+{: #troubleshoot-delete_toolchains_cli}
 {: troubleshoot}
 {: support}
 
