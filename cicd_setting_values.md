@@ -47,10 +47,10 @@ Use the following steps to go to the {{site.data.keyword.contdelivery_short}} pi
 3. Select your toolchain. 
 4. Select the **{{site.data.keyword.deliverypipeline}}** tile. 
 5. Click the **Settings** icon ![gear icon](images/settings.svg) > **Configure Stage**.
-5. Select the **Jobs** tab. 
-6. Make your changes in the script section. For each stage where you use commands to send build, test, and deployment records, set TOOLCHAIN_ID as the environment variable to the toolchain ID. Export the toolchain ID before they call the command. 
+6. Select the **Jobs** tab. 
+7. Make your changes in the script section. For each stage where you use commands to send build, test, and deployment records, set TOOLCHAIN_ID as the environment variable to the toolchain ID. Export the toolchain ID before they call the command. 
 
-```
+```text
 export TOOLCHAIN_ID="YOUR_TOOLCHAIN_ID_HERE"
 ```
 {: codeblock}
