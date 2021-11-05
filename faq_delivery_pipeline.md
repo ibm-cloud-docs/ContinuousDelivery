@@ -9,7 +9,7 @@ keywords: Delivery Pipeline, tool integration, toolchains, yaml, pipeline jobs
 subcollection: ContinuousDelivery
 
 ---
-<!-- Common attributes used in the template are defined as follows: -->
+
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -75,9 +75,10 @@ You can use the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in to 
 1. [Install the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in](/docs/cli?topic=cli-install-devtools-manually).
 1. From the command line, run the following command to manually start your pipeline:
 
-	  ```
-	  ibmcloud dev pipeline-run pipelineID --stage-id stageID
-      ```
+   ```text
+   ibmcloud dev pipeline-run pipelineID --stage-id stageID
+   ```
+   
 For more information about the `pipeline-run` command, see [pipeline-run](/docs/cli?topic=cli-idt-cli#pipeline-run).
 
 
