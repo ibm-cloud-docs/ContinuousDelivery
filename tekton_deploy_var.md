@@ -9,12 +9,6 @@ keywords: environment properties, environment resources, IBM Java, Tekton enviro
 subcollection: ContinuousDelivery
 
 ---
-<!-- Copyright info at top of file: REQUIRED
-    The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be surrounded by 3 dashes.
-    The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
-    Indentation as per the previous template must be preserved.
--->
 
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
@@ -30,11 +24,6 @@ subcollection: ContinuousDelivery
 {: #tekton_environment}
 
 The following information and resources are available by default to a {{site.data.keyword.contdelivery_full}} Tekton PipelineRun.
-
-<!--##Contents
-* [Annotations](#env)
-* [ConfigMaps and Secrets](#resources)
--->
 
 ## PipelineRun annotations
 {: #tekton_run_annotations}
@@ -145,11 +134,11 @@ spec:
       args:
         - echo -e "The environment for this Step is ";
           env
- ```         
+```         
 
 ## Learn more about Tekton delivery pipelines
 {: #tekton_learn_more}
 
 To learn more about Tekton and Continuous Delivery, see [Tekton: A Modern Approach to Continuous Delivery](https://www.ibm.com/cloud/blog/tekton-a-modern-approach-to-continuous-delivery){: external} or take this tutorial:
 
-   * [Develop a Kubernetes app by using Tekton delivery pipelines](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-using-tekton-delivery-pipelines){: external}
+* [Develop a Kubernetes app by using Tekton delivery pipelines](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-using-tekton-delivery-pipelines){: external}
