@@ -44,14 +44,9 @@ Send the pipeline status to your toolchain by using the **`notifyOTC`** command.
 | `status`     | The current pipeline stage's status. Using `SUCCESS`, `FAILURE`, or `ABORTED` automatically highlights the text in Slack. |
 {: caption="Table 1. Parameters and definitions for communicating with toolchains" caption-side="top"}
 
-<!--
-This goes in the bottom of the table when the notifying toolchains doc is in prod
-| `webhookUrl` | Optional: The [webhook URL](/docs/ContinuousDelivery?topic=ContinuousDelivery-notifying-toolchains-jenkins#Jenkins-webhook) that is shown on your toolchain's Jenkins tile. This parameter overrides the `IBM_CLOUD_DEVOPS_WEBHOOKURL` environment variable.|
--->
-
 The following examples illustrate how to use the notifyOTC step in both declarative and scripted pipeline definitions:
 
-```
+```text
 notifyOTC stageName: "Deploy", status: "SUCCESS"
 ```
 {: codeblock}
