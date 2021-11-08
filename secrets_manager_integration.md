@@ -37,9 +37,9 @@ Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.secrets-manager_short}}**. If {{site.data.keyword.secrets-manager_short}} is defined as an optional tool integration, it is located under **More Tools**.
 1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the {{site.data.keyword.contdelivery_short}} card, click **View toolchain**. Then, click **Overview**.  
 
- a. Click **Add tool**.
+   a. Click **Add tool**.
 
- b. In the Tool Integrations section, click **{{site.data.keyword.secrets-manager_short}}**.
+   b. In the Tool Integrations section, click **{{site.data.keyword.secrets-manager_short}}**.
 
 1. Specify a name for this instance of the {{site.data.keyword.secrets-manager_short}} tool integration to use in your toolchain. The name that you specify is used in the UI tools that select **{{site.data.keyword.secrets-manager_short}}** secrets. It is also used as part of the reference that resolves the secret values when the toolchain runs. This instance name is also displayed on the {{site.data.keyword.secrets-manager_short}} tool integration tile within the toolchain workspace.
 1. Review the default values for **Region** and **Resource-Group** and update, if required.
@@ -61,11 +61,11 @@ You must save third-party secrets, such as a Slack webhook or an Artifactory API
 
 1. Select a secret group and a secret name and click **OK** to apply the stored secret to the field that is associated with it.
 
-![Secret Reference to a Vault](images/secret-pill.png)
+![Secret Reference to a Vault](images/secret-pill.png){: caption="Figure 1. Secret reference to a vault" caption-side="bottom"}
 
 The name of the secret that you select appears in capsule form. You cannot edit the secret name inline, but you can click ![remove icon](images/secret-pill-delete-16.png) to delete the name. You can also replace the secret name by using the Secrets Picker control again. If you manually type or paste a secret name into the Secrets field, it is displayed in a different format:
 
-![Literal Secret Value](images/secret-literal.png)
+![Literal Secret Value](images/secret-literal.png){: caption="Figure 2. Secret value" caption-side="bottom"}
 
 The format that the secret is displayed in indicates whether the value references a secret that is stored in a backend vault or is a secret that is stored in your toolchain. By using references to secrets that are managed by secret providers such as  {{site.data.keyword.secrets-manager_short}}, your secret values are centralized and stored securely in a single location. This approach resolves secrets sprawl and proliferation, and means that you can update secrets without updating your toolchain. When you use secret references, the actual secret value is resolved when the toolchain runs by dynamically retrieving it from {{site.data.keyword.secrets-manager_short}}. This approach is useful when you must rotate the value of your toolchain secrets periodically.
 
@@ -96,10 +96,10 @@ To view your authorizations in {{site.data.keyword.cloud_notm}}, complete the fo
 1. From the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**.
 1. Click **Authorizations**.
 
-You can also access your authorizations on the [Manage authorizations](https://cloud.ibm.com/iam/authorizations){: external} page. 
-{: tip}
+   You can also access your authorizations on the [Manage authorizations](https://cloud.ibm.com/iam/authorizations){: external} page. 
+   {: tip}
 
-You can create the authorization manually, if required. To successfully resolve the secret references, your toolchain instance must have both `Viewer` and `SecretsReader` access to the correct {{site.data.keyword.secrets-manager_short}} service instance.
+   You can create the authorization manually, if required. To successfully resolve the secret references, your toolchain instance must have both `Viewer` and `SecretsReader` access to the correct {{site.data.keyword.secrets-manager_short}} service instance.
 
 ## Learn more about {{site.data.keyword.secrets-manager_short}}
 {: #secretsmanager_learn_more}
