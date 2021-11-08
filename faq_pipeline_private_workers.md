@@ -9,7 +9,7 @@ keywords: private workers
 subcollection: ContinuousDelivery
 
 ---
-<!-- Common attributes used in the template are defined as follows: -->
+
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -39,7 +39,7 @@ Get answers to frequently asked questions about using Pipeline Private Workers.
 
 You can use the following command within a script that traverses all of the clusters that private workers are installed on.
 
-```
+```text
 kubectl get workeragent -ojson | jq '.items[] | .status.versionStatus.state'
 ```
 
