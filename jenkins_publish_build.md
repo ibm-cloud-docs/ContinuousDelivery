@@ -44,14 +44,14 @@ These variables are required for the pipeline to integrate with {{site.data.keyw
 
 | Environment variable            | Definition                | 
 |---------------------------------|---------------------------|
-| `IBM_CLOUD_DEVOPS_API_KEY`      | A unique code that is passed in to an application programming interface (API) to identify the calling application or user. <br> Store the API key as Jenkins credentials. (secret text type). |
+| `IBM_CLOUD_DEVOPS_API_KEY`      | A unique code that is passed in to an application programming interface (API) to identify the calling application or user. Store the API key as Jenkins credentials. (secret text type). |
 | `IBM_CLOUD_DEVOPS_APP_NAME`     | The name of the application that your toolchain deploys. If applicationName parameter is passed to the step job, then this value is ignored for that step. |
 | `IBM_CLOUD_DEVOPS_TOOLCHAIN_ID` | The ID of your toolchain. |
 {: caption="Table 1. Jenkins environment variables and definitions" caption-side="top"}
 
 For each command, you need to specify the toolchain ID to export the environment variable. These environment variables and credentials are used by the {{site.data.keyword.DRA_full}} plug-in to interact with {{site.data.keyword.DRA_short}}. Here is an example of setting them in the declarative pipeline format.
 
-```
+```text
 environment {
         IBM_CLOUD_DEVOPS_API_KEY = credentials('BM_API_KEY')
         IBM_CLOUD_DEVOPS_APP_NAME = 'Weather-App'
@@ -78,7 +78,7 @@ Publish build records with the publishBuildRecord step. This step requires four 
 
 Here are the parameters in an example command:
 
-```
+```text
 stages {
     Stage(`Build) {
         environmnet {
@@ -131,7 +131,7 @@ Here are two complete pipeline examples that are defined as [declarative Jenkins
 The [Git repo](https://github.com/devops-insights/DemoDRA){: external} contains a sample nodejs application code, tests, and Jenkins file that you can experiment with. Fork the repo and modify the Jenkins file with your actual information. 
 
 If you didn't install NodeJS in your Jenkins environment, you might have to install the node.js Jenkins plug-in. If you installed NodeJS, you can comment out the "tools" section in the Jenkins file.
-{: note}
+{: tip}
 
 
 ## Viewing Build Frequency
