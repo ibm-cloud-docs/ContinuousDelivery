@@ -99,10 +99,10 @@ toc:
               - hashicorp_vault_integration.md
               - jenkins_integration.md
               - jira_integration.md
-              - keyprotect_integration.md
+              - key_protect_integration.md
               - nexus_integration.md
               - custom_tool_integration.md
-              - pager_duty_integration.md
+              - pagerduty_integration.md
               - rtc_integration.md
               - sauce_labs_integration.md
               - secrets_manager_integration.md
