@@ -45,10 +45,10 @@ An eventing problem occurred which caused the GitHub tool integration to fail.
 Configure and save the GitHub tool integration again:
 {: tsResolve}
 
-  1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain that you created to open the Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
-  1. On the card for the GitHub tool integration, click the menu to access the configuration options.
-  1. Update the settings and click **Save Integration**.
-  1. Click the card for the Delivery Pipeline tool integration to view the pipeline setup. 
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and  select **DevOps**. On the **Toolchains** page, click the toolchain that you created to open the Overview page. Alternatively,  on the App Details page in your app, click the toolchain name.
+1. On the card for the GitHub tool integration, click the menu to access the configuration options.
+1. Update the settings and click **Save Integration**.
+1. Click the card for the Delivery Pipeline tool integration to view the pipeline setup. 
 
 
 ## Why isn't the pipeline created properly when I create a toolchain from the template that I'm writing? 
@@ -94,11 +94,11 @@ The access token that the pipeline uses to clone the Git repo is no longer valid
 Configure and save the Git integration again:
 {: tsResolve}
 
-   1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain that contains the Git integration that you want to update to open its Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
-   1. On the card for the Git integration, click the menu to access the configuration options.
-   1. Select the authorized Git account for the Git integration owner.
-   1. Click **Save Integration**.
-   1. Run your pipeline again. 
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain that contains the Git integration that you want to update to open its Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
+1. On the card for the Git integration, click the menu to access the configuration options.
+1. Select the authorized Git account for the Git integration owner.
+1. Click **Save Integration**.
+1. Run your pipeline again. 
 
 
 ## I tried to deploy to Kubernetes by using the {{site.data.keyword.deliverypipeline}}, why am I getting an error about an invalid object? 
@@ -122,14 +122,15 @@ You can use any of the following methods to resolve this problem:
 
 * Make sure that your pipeline job is running the correct version of kubectl. For example, add the following lines to the beginning of your pipeline job to run kubectl v1.14.2:
 
-```
+```bash
   curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.14.2/bin/linux/amd64/kubectl
   chmod +x ./kubectl
   sudo mv ./kubectl /usr/local/bin/kubectl
 ```
 
 If you are running kubectl v1.14.2 from a 1.0 pipeline base image, the sudo option is not available. Replace the sudo line with the following command to add kubectl to your path:
-```
+
+```bash
    mkdir ~/.bin && export PATH=~/.bin:$PATH && mv ./kubectl ~/.bin/kubectl 
 ```
 
@@ -171,8 +172,8 @@ Your app requires more than 4 GB of memory to compile in a single pipeline job.
 To build your app in a single pipeline job:
 {: tsResolve}
 
-  1. Create an [{{site.data.keyword.contdelivery_full}} Pipeline Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
-  1. Configure your build job to use the [private worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers#configure_private_worker_integration).
+1. Create an [{{site.data.keyword.contdelivery_full}} Pipeline Private Worker](/docs/ContinuousDelivery? topic=ContinuousDelivery-install-private-workers).
+1. Configure your build job to use the [private worker](/docs/ContinuousDelivery? topic=ContinuousDelivery-private-workers#configure_private_worker_integration).
   
 ## Why can't the {{site.data.keyword.deliverypipeline}} communicate through a firewall?
 {: #troubleshoot-firewall-configuration}
@@ -190,7 +191,7 @@ Your firewall must be configured to allow the {{site.data.keyword.deliverypipeli
 You can update your firewall configurations to allow the {{site.data.keyword.deliverypipeline}} to access resources that are behind the firewall. Use the following subnet ranges, for your specific region.
 {: tsResolve}
 
-```
+```text
 jp-tok
 128.168.108.0/26
 128.168.68.192/27
