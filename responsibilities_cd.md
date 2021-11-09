@@ -107,7 +107,7 @@ IBM backs up and restores your toolchain data if a disaster occurs. You can also
 
 If you use {{site.data.keyword.gitrepos}} for both your source and target repos, you can use the built-in GitLab mirroring feature. This feature automatically syncs your source and target repos. If you use a different Git provider, you must set up your own mirroring solution. Alternatively, to mirror changes in the source repo, manually clone and push your Git repos to the target repo.
 
-If you cannot mirror your projects, you can [export](https://us-south.git.cloud.ibm.com/help/user/project/settings/import_export.md#exporting-a-project-and-its-data){: external} and [import](https://us-south.git.cloud.ibm.com/help/user/project/settings/import_export.md#importing-the-project){: external} your projects instead. However, the source and target repos are not synchronized if changes are made to the source repo.
+If you cannot mirror your projects, you can [export](https://us-south.git.cloud.ibm.com/help/user/project/settings/import_export.md#exporting-a-project-and-its-data){: external} and [import](https://us-south.git.cloud.ibm.com/help/user/project/settings/import_export.md#importing-the-project){: external} your projects instead. However, the source and target repos are not synchronized if changes are made to the source repo.
 {: tip}
 
 To mirror a {{site.data.keyword.gitrepos}} repo, complete the following steps:
@@ -133,11 +133,11 @@ To mirror a {{site.data.keyword.gitrepos}} repo, complete the following steps:
 #### Saving and restoring your toolchain
 {: #save_restore_toolchain}
 
-To save a toolchain, download and run a script on your local workstation that creates a toolchain template in text form. This template is used to instantiate a copy of the source toolchain. For security reasons, secrets are not included in this toolchain template.  
+To save a toolchain, download and run a script on your local workstation that creates a toolchain template in text form. This template is used to instantiate a copy of the source toolchain. For security reasons, secrets are not included in this toolchain template.  
 
-After you create a toolchain by using this template, you must configure your tool integrations. Then, restore secrets from the source toolchain by copying their values from the source toolchain to the target toolchain. Unlike GitLab mirroring, this procedure creates a one-time copy of the toolchain. Any subsequent changes to the source toolchain are not reflected in the copied version of the toolchain.
+After you create a toolchain by using this template, you must configure your tool integrations. Then, restore secrets from the source toolchain by copying their values from the source toolchain to the target toolchain. Unlike GitLab mirroring, this procedure creates a one-time copy of the toolchain. Any subsequent changes to the source toolchain are not reflected in the copied version of the toolchain.
 
-Because the toolchain template is a copy, when instantiated, it references the source Git repo. To fix this issue, reconfigure the target toolchain with the target repo.
+Because the toolchain template is a copy, when instantiated, it references the source Git repo. To fix this issue, reconfigure the target toolchain with the target repo.
 {: tip}
 
 To save and restore a toolchain, complete the following steps:
@@ -163,10 +163,10 @@ To save and restore a toolchain, complete the following steps:
 
    a. Construct a target toolchain URL that contains the temporary repo, personal access token, and target region: 
   
-  ```
-  https://cloud.ibm.com/devops/setup/deploy?repository=<temporary repository>&repository_token=<personal-access-token>&env_id=ibm:yp:<target region>
-  ```
-  For example, `https://cloud.ibm.com/devops/setup/deploy?repository=https://us-east.git.cloud.ibm.com/user/temp-repo&repository_token=aG7junk9dafiiT6w6&env_id=ibm:yp:us-east`.
+   ```text
+   https://cloud.ibm.com/devops/setup/deploy?repository=<temporary repository>&repository_token=<personal-access-token>&env_id=ibm:yp:<target region>
+   ```
+   For example, `https://cloud.ibm.com/devops/setup/deploy?repository=https://us-east.git.cloud.ibm.com/user/temp-repo&repository_token=aG7junk9dafiiT6w6&env_id=ibm:yp:us-east`.
 
    b. Replace the source repo URL with the target repo URL that you created when mirroring your Git repos.
 
@@ -184,7 +184,7 @@ To save and restore a toolchain, complete the following steps:
 #### Using your backup toolchain
 {: #use_backup_toolchain}
 
-Backup toolchains are intended to provide short-term continuity if issues exist in a particular region. Do not commit to target repos directly or enable pipeline commit triggers on target pipelines. If you commit to the target repo directly and then return to using the source repo, you risk conflicts and inconsistencies because the repos are not synchronized. If you enable commit triggers and then return to using the source repo, both pipelines run when code is updated. To avoid these scenarios, run your pipelines manually and return to the source toolchain as soon as possible.
+Backup toolchains are intended to provide short-term continuity if issues exist in a particular region. Do not commit to target repos directly or enable pipeline commit triggers on target pipelines. If you commit to the target repo directly and then return to using the source repo, you risk conflicts and inconsistencies because the repos are not synchronized. If you enable commit triggers and then return to using the source repo, both pipelines run when code is updated. To avoid these scenarios, run your pipelines manually and return to the source toolchain as soon as possible.
 
 #### Known limitations
 {: #backup_known_limitations}
