@@ -36,7 +36,7 @@ Test results inform {{site.data.keyword.DRA_short}} about the tests that are run
 
 The application name and build ID in the test record must match the ones that are used in the build record for a specific build. The following example script uploads functional verification test (FVT) results to {{site.data.keyword.DRA_short}}:
 
-```
+```text
 # Run tests and generate a test results file here.
 
 #install the DevOps Insights plugin
@@ -53,7 +53,7 @@ In the example script, `testrecord-publish` specifies that the command uploads t
 
 The following example script runs tests and then uploads Mocha results and Istanbul code coverage results to {{site.data.keyword.DRA_short}}:
 
-```
+```text
 # Run tests and generate a test results file here.
 istanbul cover --report lcov --report json-summary _mocha -- -R xunit -O output=./test/results/mocha.xml 'test/**/*.js'
 
