@@ -56,7 +56,7 @@ Change management includes tasks such as deployment, configuration, upgrades, pa
 |Update {{site.data.keyword.deliverypipeline}} images.| Provide updated {{site.data.keyword.deliverypipeline}} job container images. These images might include updates to command tools (such as `ibmcloud`) that might affect the function of existing pipeline job scripts.  | Update {{site.data.keyword.deliverypipeline}} job scripts to respond to changes in underlying container images, or configure pipeline job scripts to use specific versions of container images instead of the latest version. |
 |Deploy apps and other workloads by using the {{site.data.keyword.deliverypipeline}}.| Maintain the {{site.data.keyword.deliverypipeline}} service.  | Maintain the job scripts that are run by the {{site.data.keyword.deliverypipeline}} service, the inputs to pipeline job stages (such as source code), and the apps and other workloads that are deployed by job scripts. |
 |Support {{site.data.keyword.deliverypipeline}} private workers to allow pipeline workloads to run on customer infrastructure.| Provide and maintain the private worker agent that integrates customer-managed infrastructure into the {{site.data.keyword.deliverypipeline}} service.  | Install the private worker agent into your Kubernetes cluster with enough capacity to run your pipeline workloads. Update the agent as new versions become available. |
-{: caption="Table 1. Responsibilities for change management" caption-side="top"}
+{: caption="Table 2. Responsibilities for change management" caption-side="top"}
 
 
 ## Identity and access management
@@ -71,7 +71,7 @@ Identity and access management includes tasks such as authentication, authorizat
 |Manage the {{site.data.keyword.contdelivery_short}} service's access to third-party tools that are integrated into toolchains. | N/A  | Add, update, or delete third-party tool integration configurations (including access credentials for tool integrations) in toolchains. For more information about working with tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations). |
 |Manage access to repos in {{site.data.keyword.gitrepos}}. | N/A  | From the **Settings** > **Members** page in the {{site.data.keyword.gitrepos}} dashboard, manage project members and role permissions. |
 |Manage all other access to third-party tools that are integrated with {{site.data.keyword.contdelivery_short}}. | N/A  | Manage access by using the capabilities that are provided by the third-party tools.  |
-{: caption="Table 2. Responsibilities for identity and access management" caption-side="top"}
+{: caption="Table 3. Responsibilities for identity and access management" caption-side="top"}
 
 ## Security and regulation compliance
 {: #security-compliance}
