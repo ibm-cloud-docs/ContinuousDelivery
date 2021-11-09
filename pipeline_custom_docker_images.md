@@ -35,7 +35,7 @@ Custom Docker image support in the pipeline is used only to provide an image tha
 
 Whether you are using a Build, Test, or Deploy job type, you can select a Custom Docker Image subtype to provide the Docker image name to use and specify the script to run. For example, use the following options to run a Build job with Maven 3.5.3 and IBM Java:
 
- ![Maven build with custom image](images/custom-image-maven-build.png)
+![Maven build with custom image](images/custom-image-maven-build.png){: caption="Figure 1. Maven build with custom image" caption-side="bottom"}
 
 
 ## Specifying the Docker image name
@@ -62,7 +62,7 @@ For most registries, you can use the user name and password that were provided t
 1. [Request a platform API key](https://cloud.ibm.com/iam/#/apikeys){: external} and make sure that you save the key. 
 1. Create the two stage environment properties by using `iamapikey` for your `DOCKER_USERNAME` and the platform API Key that you saved for the `DOCKER_PASSWORD`.
 
- ![{{site.data.keyword.registrylong_notm}} credentials](images/custom-image-private-repository.png)
+   ![{{site.data.keyword.registrylong_notm}} credentials](images/custom-image-private-repository.png){: caption="Figure 2. Authentication credentials" caption-side="bottom"}
 
 
 ## Specifying the script
