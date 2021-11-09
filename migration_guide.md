@@ -39,8 +39,9 @@ To use the {{site.data.keyword.cloud_notm}} CLI, you must install it. Use the `-
 
 For more information about installing {{site.data.keyword.cloud_notm}} CLI, see [Installing the stand-alone {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli#install-ibmcloud-cli). 
 
-Here is an example of a grunt-idra3 CLI command invocation: 
-```
+Here is an example of a grunt-idra3 CLI command invocation:
+
+```bash
 #!/bin/bash
 export TOOLCHAIN_ID="toolchainid"
 export LOGICAL_APP_NAME="SampleApp"
@@ -56,7 +57,7 @@ idra --publishbuildrecord --branch=$GIT_BRANCH --repositoryurl=$GIT_URL --commit
 
 Here is the same command invocation for the {{site.data.keyword.cloud_notm}} CLI:
 
-```
+```bash
 #!/bin/bash
 export TOOLCHAIN_ID="toolchainid"
 export API_KEY="apikey"
