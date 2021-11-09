@@ -32,33 +32,34 @@ Configure PagerDuty to send notifications when pipeline stage failures occur so 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **PagerDuty**.
 1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**. 
 
- a. Click **Add tool**.
+   a. Click **Add tool**.
 
- b. In the Tool Integrations section, click **PagerDuty**.
+   b. In the Tool Integrations section, click **PagerDuty**.
 
 1. If you want to integrate PagerDuty at the account level by using an API key, click **Account**:
 
- a. Type the API access key for your PagerDuty account. If you don't have a PagerDuty account, [register for one](https://www.pagerduty.com/sign-up/){: external}. For instructions to find the key, see [Generating an API Key](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: external}.
+   a. Type the API access key for your PagerDuty account. If you don't have a PagerDuty account, [register for one](https://www.pagerduty.com/sign-up/){: external}. For instructions to find the key, see [Generating an API Key](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: external}.
 
- b. Type the name of your PagerDuty service.
+   b. Type the name of your PagerDuty service.
 
- c. Type the email address for the primary PagerDuty contact.
+   c. Type the email address for the primary PagerDuty contact.
 
- d. Type the phone number for the primary PagerDuty contact.
+   d. Type the phone number for the primary PagerDuty contact.
 
 1. If you want to integrate PagerDuty at the service level by using an integration key, click **Service**:
 
- a. Type the URL for the PagerDuty service that you want to post alerts to.
+   a. Type the URL for the PagerDuty service that you want to post alerts to.
 
- b. Type your PagerDuty integration key. You can find your key or create a key in the Integrations section of your PagerDuty service page.
+   b. Type your PagerDuty integration key. You can find your key or create a key in the Integrations section of your PagerDuty service page.
 
 1. Click **Create Integration**.
 1. Click **PagerDuty** to go to pagerduty.com. You can view the events that are associated with the PagerDuty service that you specified when you configured this tool integration for your toolchain.
 
 ## Learn more about PagerDuty
+{: #learn_pagerduty}
 
 To learn more about PagerDuty, see the [PagerDuty article](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){: external} on the IBM Cloud Garage Method or take this tutorial and the Garage Method advocate course:
 
-   * [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}
+* [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}
 
-   * [Become a Garage Method advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){: external}
+* [Become a Garage Method advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){: external}
