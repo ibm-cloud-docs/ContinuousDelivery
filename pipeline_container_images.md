@@ -9,12 +9,6 @@ keywords: Delivery Pipeline, container image
 subcollection: ContinuousDelivery
 
 ---
-<!-- Copyright info at top of file: REQUIRED
-    The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be surrounded by 3 dashes.
-    The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
-    Indentation as per the previous template must be preserved.
--->
 
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
@@ -52,6 +46,7 @@ The {{site.data.keyword.contdelivery_short}} service includes several Tekton tas
 * [icr-execute-in-dind](https://github.com/open-toolchain/tekton-catalog/blob/master/container-registry/README.md#icr-execute-in-dind){: external}: Runs Docker commands such as build and inspect, against a Docker engine that is running as a sidecar container. Then, it pushes the resulting image to the {{site.data.keyword.registrylong}}.
 
 * [icr-execute-in-dind-cluster](https://github.com/open-toolchain/tekton-catalog/blob/master/container-registry/README.md#icr-execute-in-dind-cluster){: external}: Runs Docker commands such as build and inspect, against a Docker engine that is running in a Kubernetes cluster. If a Docker DinD isn't available on the build cluster, a new one is deployed. Then, it pushes the resulting image to the {{site.data.keyword.registrylong}}.
+
 
 The [`cr build`](/docs/container-registry-cli-plugin?topic=container-registry-cli-plugin-containerregcli#bx_cr_build) command is deprecated. If you use this command, or reference it from the [icr-cr-build](https://github.com/open-toolchain/tekton-catalog/blob/master/container-registry/README.md#icr-cr-build){: external} task, you can migrate to the [icr-containerize](https://github.com/open-toolchain/tekton-catalog/blob/master/container-registry/README.md#icr-containerize
 ){: external}, [icr-execute-in-dind](https://github.com/open-toolchain/tekton-catalog/blob/master/container-registry/README.md#icr-execute-in-dind){: external}, or [icr-execute-in-dind-cluster](https://github.com/open-toolchain/tekton-catalog/blob/master/container-registry/README.md#icr-execute-in-dind-cluster){: external} Tekton tasks to build container images. For more information about this replacement, see the [{{site.data.keyword.registrylong}} is Deprecating Container Builds](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-container-registry-deprecating-container-builds){: external} blog post.
