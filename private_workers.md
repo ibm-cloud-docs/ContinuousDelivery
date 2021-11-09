@@ -61,9 +61,9 @@ Complete the following steps to configure the {{site.data.keyword.deliverypipeli
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 
- a. Click **Add tool**.
+   a. Click **Add tool**.
 
- b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}} Private Worker**.
+   b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}} Private Worker**.
 
 1. Type a name for the tool integration. This name identifies a pool of private workers in the **Workers** tab of the pipeline stage.
 1. Type your service ID API key to authenticate access to the work queue where one or more private workers can look for work. If you don't have a service ID API key, click **Create** to generate one for this private worker.
@@ -95,8 +95,8 @@ Complete the following steps to use the private worker in your pipeline:
 1. Click the **Workers** tab.
 1. Select the private worker that you want to use in your pipeline. 
 
- By default, jobs in a pipeline stage are run by using a pool of IBM-managed shared workers in the region where the pipeline is defined.
- {: tip}
+   By default, jobs in a pipeline stage are run by using a pool of IBM-managed shared workers in the region where the pipeline is defined.
+   {: tip}
  
 1. Click **Save**.
 1. You can manually run your stage or wait for a trigger to run the jobs on the stage by using the specified private worker on the associated Kubernetes cluster. You can view the log file output for the jobs to determine which worker was used.  
@@ -161,6 +161,7 @@ Complete the following steps to delete a private worker:
 1. Delete the private worker from your Kubernetes cluster.
 
 ### Deleting a {{site.data.keyword.deliverypipeline}} Private Worker from the pool of workers
+{: #delete_from_pool}
 
 Complete the following steps to delete the private worker from the pool of workers:
 
@@ -177,6 +178,7 @@ Although deleting a private worker tool integration from a toolchain prevents th
 {: tip}
 
 ### Deleting a {{site.data.keyword.deliverypipeline}} Private Worker from your Kubernetes cluster
+{: #delete_from_cluster}
 
 Complete the following steps in the console to delete the private worker from your cluster:
 
@@ -186,7 +188,7 @@ Complete the following steps in the console to delete the private worker from yo
 
 Run the following command to delete the private worker from your cluster by using the CLI:
 
-```
+```text
 kubectl delete --filename "https://private-worker-service.us-south.devops.dev.cloud.ibm.com/install/worker?serviceId=<SERVICE_ID>&apikey=<APIKEY>&name=<worker-name>"
 ```
 
@@ -212,10 +214,10 @@ If you delete the {{site.data.keyword.deliverypipeline}} Private Worker tool int
  
 Private workers can have one of the following statuses:
  
- * **active**: The private worker is operating normally.
- * **inactive**: The private worker is offline. Check your cluster. You might need to register the private worker again.
- * **outdated**: The private worker is not the latest version. Although the private worker continues to operate normally, it is recommended that you update to the latest version.
- * **unsupported**: The private worker version in use is no longer supported. The private worker cannot run and you need to update to the latest version.
+* **active**: The private worker is operating normally.
+* **inactive**: The private worker is offline. Check your cluster. You might need to register the private worker again.
+* **outdated**: The private worker is not the latest version. Although the private worker continues to operate normally, it is recommended that you update to the latest version.
+* **unsupported**: The private worker version in use is no longer supported. The private worker cannot run and you need to update to the latest version.
 
 Complete the following steps to update a private worker to use the latest version:
  
@@ -223,10 +225,10 @@ Complete the following steps to update a private worker to use the latest versio
 1. Click the card for the {{site.data.keyword.deliverypipeline}} Private Worker tool integration that you want to update.
 1. Click **Getting Started** and use the commands that are listed to complete the following actions:
  
-     * Unregister the private worker from the cluster.
-     * Uninstall the {{site.data.keyword.deliverypipeline}} support.
-     * Install the {{site.data.keyword.deliverypipeline}} Kubernetes Private Worker support.
-     * Register the private worker again in your cluster.
+   * Unregister the private worker from the cluster.
+   * Uninstall the {{site.data.keyword.deliverypipeline}} support.
+   * Install the {{site.data.keyword.deliverypipeline}} Kubernetes Private Worker support.
+   * Register the private worker again in your cluster.
 
 Installing support for the private worker is a cluster action. You need to complete this action only once per update. 
 {: tip}
@@ -236,7 +238,7 @@ Installing support for the private worker is a cluster action. You need to compl
 
 To pull images from the {{site.data.keyword.registrylong}}, `icr.io`, you might need to update your ClusterImagePolicy. From the IBM Cloud CLI, type the following command:
 
-```
+```text
 cat <<EOF | kubectl apply -f -
 apiVersion: securityenforcement.admission.cloud.ibm.com/v1beta1
 kind: ClusterImagePolicy
