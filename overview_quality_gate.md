@@ -31,7 +31,7 @@ For more information about toolchains, see [Creating a toolchain from an app](/d
 
 For more information about data sets, see [Managing data sets](/docs/ContinuousDelivery?topic=ContinuousDelivery-adding-data-sets).
 
-![Deployment Risk Policy](images/DRA_policy.png "Policy rules page of existing rule names and descriptions with the option to create a new policy rule") Figure 1. Policy and rules page
+![Deployment Risk Policy](images/DRA_policy.png){: caption="Figure 1. Policy and rules page" caption-side="bottom"}
 
 To go to the Policy Rules page within {{site.data.keyword.DRA_short}}, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. In the toolchain dashboard, select your toolchain, and click the **{{site.data.keyword.DRA_short}}** tile. From the navigation menu, select **Policies**, and select a policy.
 
@@ -41,10 +41,14 @@ To go to the Policy Rules page within {{site.data.keyword.DRA_short}}, from the 
 
 In your pipeline, you can enter a command by using the {{site.data.keyword.Bluemix_notm}} CLI to check the quality of a build against a predefined policy. When the policy is evaluated, you can check the decision in the {{site.data.keyword.DRA_short}} tool.
 
-**new Build detail page screenshot** ![Deployment Risk details](images/DRA_risk_details.png "Policy evaluation summary") Figure 2. Policy evaluation and test summary page
+### Build detail page
+{: #build_detail_page}
 
-From the Risk Analysis page, you can view gate decision reports on the Build Detail page. The Build detail page has information about your latest report. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. In the toolchain dashboard, select your toolchain, and click the **{{site.data.keyword.DRA_short}}** tile. Select **Risk Analysis** from the navigation menu. From there, click the **Application** tab. From the table, select the application that you want to view and select the build. 
+![Deployment Risk details](images/DRA_risk_details.png){: caption="Figure 2. Build detail" caption-side="bottom"}
 
-**Decision report screen shot**
+From the Risk Analysis page, you can view gate decision reports on the Build detail page. The Build detail page has information about your latest report. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. In the toolchain dashboard, select your toolchain, and click the **{{site.data.keyword.DRA_short}}** tile. Select **Risk Analysis** from the navigation menu. From there, click the **Application** tab. From the table, select the application that you want to view and select the build. 
 
-You can also view data for particular decisions based on the policy assigned to a build. From the Build detail page, navigate to the Decision report page. Select **View details** from the Decisions for this build table for the policiy decision you would like to view. 
+### Decision report
+{: #decision_report}
+
+You can also view data for particular decisions based on the policy assigned to a build. From the Build detail page, navigate to the Decision report page. Select **View details** from the Decisions for this build table for the policiy decision you want to view. 
