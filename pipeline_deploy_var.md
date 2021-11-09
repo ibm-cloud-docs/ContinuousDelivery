@@ -26,6 +26,8 @@ The following properties and resources are available by default in {{site.data.k
 {: #deliverypipeline_envprop}
 
 ### General-purpose properties
+{: #general_purpose_properties}
+
 The following table lists and describes each of the general-purpose environment properties that are available by default in pipeline environments.
 
 | Environment Property | Description |
@@ -41,7 +43,7 @@ The following table lists and describes each of the general-purpose environment 
 | IDS_JOB_ID | The unique ID of the job's configuration. |
 | IDS_JOB_NAME | The name of the job's configuration. |
 | IDS_OUTPUT_PROPS | Comma-separated names of your stage environment properties. |
-| IDS_PROJECT_NAME | The name of the project, for example, <code>Owner - Project Name</code>. |
+| IDS_PROJECT_NAME | The name of the project, for example, `Owner - Project Name`. |
 | IDS_STAGE_NAME | The name of the current stage. |
 | IDS_URL | The URL for the current pipeline. |
 | IDS_VERSION | The number for the build that is being deployed or the SCM identifier. This property is available only in deploy jobs.
@@ -60,6 +62,8 @@ The following table lists and describes each of the general-purpose environment 
 {: caption="Table 1. General-purpose environment properties" caption-side="top"}
 
 ### Runtime and tool properties
+{: #runtime_properties}
+
 The following table lists and describes each of the runtime and tool environment properties that are available by default in pipeline environments.
 
 | Environment Property | Description |
@@ -75,6 +79,8 @@ The following table lists and describes each of the runtime and tool environment
 {: caption="Table 2. Runtime and tool environment properties" caption-side="top"}
 
 ### Deployment properties
+{: #deployment_properties}
+
 The following table lists and describes each of the deployment environment properties that are available by default in pipeline environments.
 
 | Environment Property | Description |
