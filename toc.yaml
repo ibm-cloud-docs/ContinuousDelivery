@@ -26,6 +26,7 @@ toc:
       - devops_intro.md
       - garage_method.md
       - limitations_plans.md
+      - responsibilities.md
       - topicgroup: 
           label: DevOps Insights
           topics:
