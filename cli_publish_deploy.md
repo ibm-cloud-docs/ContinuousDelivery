@@ -35,7 +35,7 @@ Deployment records inform {{site.data.keyword.DRA_short}} about the deployments 
 
 The application name and build ID in the deployment record must match the ones that are used in the build record for a specific build. In the deployment job, use the following script to upload a deployment record. The `--env` flag identifies the deployment environment.
 
-```
+```bash
 #!/bin/bash
 
 #install the DevOps Insights plugin
