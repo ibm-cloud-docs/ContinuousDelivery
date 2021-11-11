@@ -40,7 +40,7 @@ Place your gates before the build promotion in your pipeline to check the qualit
 
 After you create the policy, you can use the following script for gate evaluation:
 
-```
+```text
 #install the DevOps Insights plugin
 ibmcloud plugin install -f doi
 
