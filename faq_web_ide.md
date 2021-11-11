@@ -36,7 +36,7 @@ Get answers to frequently asked questions about using the Eclipse Orion {{site.d
 {: #ts_llz_lkb_3r}
 {: faq}
 
-![Run bar](images/webide_runbar_light.png)   
+![Run bar](images/webide_runbar_light.png){: caption="Figure 1. Run bar" caption-side="bottom"}   
 
 When you edit a Node.js app in the {{site.data.keyword.webide}}, the {{site.data.keyword.cloud_notm}} live edit, quick restart, and debug icons aren't available in the run bar in these circumstances:
 
