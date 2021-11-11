@@ -28,8 +28,7 @@ A tag is a label that you assign to an application for improved organization and
 ## Tagging rules and limitations
 {: #tagging-rules-limits}
 
-Tags are case-sensitive. The maximum length of a tag is 128 characters. The recognized characters are A-Z, 0-9, white space, underscore, hyphen, period, and colon. Colons turn the tag into a string where you can isolate two logical parts, like a key:value pair. You can't use a colon in a tag without creating this pairing. A comma separates tags and can't be used within the tag name itself.
-<!-- the only different between these limitations and the resource limitations is that in DevOps Insights, the tags are case sensitive. -->
+Tags are case-sensitive. The maximum length of a tag is 128 characters. The recognized characters are A-Z, 0-9, white space, underscore, hyphen, period, and colon. Colons turn the tag into a string where you can isolate two logical parts, like a key value pair. You can't use a colon in a tag without creating this pairing. A comma separates tags and can't be used within the tag name itself.
 
 ## Adding and removing tags
 {: #adding-removing-tags}
