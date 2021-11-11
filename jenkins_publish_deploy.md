@@ -48,14 +48,14 @@ Publish deployment records with the publishDeployRecord step. This step requires
 
 The following example commands include the parameters. The first command publishes the deployment record for a staging environment. The second command publishes the deployment record for a production environment.
 
-```
+```text
 publishDeployRecord environment: "STAGING", appUrl: "http://staging-Weather-App.mybluemix.net", result:"SUCCESS"
 publishDeployRecord environment: "PRODUCTION", appUrl: "http://Weather-App.mybluemix.net", result:"SUCCESS"
 ```
 {: codeblock}
 
 For each command, you need to specify the toolchain ID to export the environment variable. For more information, see [Environment variables and definitions](/docs/ContinuousDelivery?topic=ContinuousDelivery-publish-build-jenkins). 
-{: note} 
+{: tip} 
 
 
 ## Viewing the deployment frequency
