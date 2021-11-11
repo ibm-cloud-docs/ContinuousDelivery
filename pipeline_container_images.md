@@ -40,6 +40,7 @@ The [`cr build`](/docs/container-registry-cli-plugin?topic=container-registry-cl
 
 The {{site.data.keyword.contdelivery_short}} service includes several Tekton tasks that you can reference within your pipelines to build container images. These tasks are stored in the [Open Toolchain Tekton Catalog](https://github.com/open-toolchain/tekton-catalog/tree/master/container-registry){: external}:
 
+
 * [icr-containerize](https://github.com/open-toolchain/tekton-catalog/blob/master/container-registry/README.md#icr-containerize
 ){: external}: Builds and pushes an image to the [{{site.data.keyword.registrylong}}](/docs/Registry?topic=Registry-getting-started). This task depends on [Buildkit](https://github.com/moby/buildkit){: external} to build the container image.
 
