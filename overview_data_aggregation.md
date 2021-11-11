@@ -24,7 +24,7 @@ subcollection: ContinuousDelivery
 The quality dashboard provides quality data sets such as unit tests, code coverage, functional verification tests, and static security scans for each application. The Quality Dashboard page works with {{site.data.keyword.deliverypipelinelong}}, Jenkins, Travis, and other continuous integration and continuous delivery (CI/CD) tools. You can also aggregate quality data for applications that run in multiple clouds or on-premises environments into a single instance of {{site.data.keyword.DRA_full}}. Each category provides more details about specific tests and to identify trends. You can specify the types of tests you want to represent in the dashboard. For more information about data sets, see [Managing data sets](/docs/ContinuousDelivery?topic=ContinuousDelivery-adding-data-sets). 
 {: shortdesc}
 
-![Deployment Risk Quality dashboard](images/DRA_quality_dashboard.png "Quality Dashboard") Figure 1. Quality Dashboard example
+![Deployment Risk Quality dashboard](images/DRA_quality_dashboard.png){: caption="Figure 1. Quality dashboard" caption-side="bottom"}
 
 The Quality Dashboard page shows rows of information for each app that is associated with {{site.data.keyword.DRA_full}}. All of the information about successes and failures for each test for each app is available on one screen.  
 
