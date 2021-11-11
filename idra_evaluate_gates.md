@@ -39,7 +39,8 @@ Create a policy with rules. For more information, see [Defining policies and rul
 Place gates before build promotion to ensure that it's safe to promote from one environment to another.
 
 After you create the policy, you can use the following script for gate evaluation:
-```
+
+```text
 # Add user api key to stage environment variable as a secured property
 export LOGICAL_APP_NAME="SampleApp"
 export BUILD_PREFIX="master"
