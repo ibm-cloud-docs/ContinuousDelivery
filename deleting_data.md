@@ -43,7 +43,7 @@ For more information about toolchains, see [Creating a toolchain from an app](/d
 With the Manage data dashboard, you can delete {{site.data.keyword.DRA_short}} data for a toolchain, an environment, an application, or a branch. All {{site.data.keyword.DRA_short}} data for builds, test results, and deployment records are deleted. This data includes predefined and custom data, but not repo data. 
 
 Data can’t be recovered after it is deleted.
-{: note}
+{: tip}
 
 To see your manage data dashboard, complete the following steps: 
 
@@ -79,7 +79,7 @@ Application data is all of the data that is associated with a certain app that i
 
 1. Go to **Manage Data** > **Quality Data**.
 2. Select **Application data**.
-2. Select the app that has the data you want to delete, and click **Delete**.
+3. Select the app that has the data you want to delete, and click **Delete**.
 
 ### Deleting branch data for an application
 {: #deleting-branch-application}
