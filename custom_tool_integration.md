@@ -45,7 +45,7 @@ Configure a custom tool so that it works with other tools in your toolchain and 
 1. Click **Create Integration**.
 
 ## Learn more about custom tool
-{: learn_custom_tool}
+{: #learn_custom_tool}
 
 To learn more about the custom tool, take this tutorial:
 
