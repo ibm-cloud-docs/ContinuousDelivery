@@ -58,7 +58,7 @@ To add a data set to the application's test, use the following steps:
 
 The following are the seven pre-defined tags that are provided by {{site.data.keyword.DRA_short}}. 
 
-| Pre-defined <br> Data Set Tag | Display label            | Data Type             | Supported Data Formats                                     |
+| Pre-defined Data Set Tag | Display label            | Data Type             | Supported Data Formats                                     |
 |--------------------------|-------------------------------|-----------------------|------------------------------------------------------------|
 | `unittest`                 | Unit Tests                    | Test Case             | JUnit (JSON), xUnit (xml), Mocha (JSON), KarmaMocha (JSON) |
 | `code`                     | Code Coverage                 | Code Coverage         | Cobertura (xml), lcov (info), Istanbul (JSON), JaCoCo (xml)|
@@ -85,5 +85,5 @@ You can add your own custom data sets. Custom data sets support JUnit or XUnit, 
 8. Complete all required fields, and click **Submit**
 
 If a custom data set is deleted, any test results for that custom data set are deleted. For more information about deleting data sets, see [Deleting your {{site.data.keyword.DRA_short}} data](/docs/ContinuousDelivery?topic=ContinuousDelivery-deleting_data).
-{: note}
+{: tip}
 
