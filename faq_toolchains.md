@@ -9,7 +9,7 @@ keywords: tool integrations, error message, Lite plan, toolchains, Cloud Foundry
 subcollection: ContinuousDelivery
 
 ---
-<!-- Common attributes used in the template are defined as follows: -->
+
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
