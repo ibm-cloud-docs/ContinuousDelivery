@@ -54,8 +54,8 @@ The following are types of tests that can be used and the formats that are suppo
 
 Publish build records with the publishTestResult step. This step requires two parameters. It can also accept one optional parameter.
 
-| Parameter         | |Definition                                                                                                                     |
-|-------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| Parameter           | Definition                     |
+|-----------------------|-------------------------------|
 | `type`            | The type of test result.                                                                                                        |
 | `fileLocation`    | The test result file's location.                                                                                                |
 | `environment`     | The environment is only required for the functional verification tests (fvt) on your test runs.                                 |
@@ -75,7 +75,8 @@ The following are the commands that are used to view the test results for a spec
 {: caption="Table 3. Test result and test types" caption-side="top"}
 
 The following example commands include the parameters. The first command publishes Mocha unit test results, and the second command publishes code coverage test results.
-```
+
+```text
 publishTestResults type:'unittest', fileLocation: './mochatest.json'
 publishTestResults type:'code', fileLocation: './tests/coverage/reports/coverage-summary.json'
 publishTestResults type:'fvt', fileLocation: './mochafvt.json', environment: 'STAGING'
@@ -86,7 +87,7 @@ publishTestResults type:'vulnerabilityadvisor', fileLocation: './vulnerability-a
 {: codeblock}
 
 For each command, you need to specify the toolchain ID to export the environment variable. For more information, see [Environment variables and definitions](/docs/ContinuousDelivery?topic=ContinuousDelivery-publish-build-jenkins). 
-{: note} 
+{: tip} 
 
 
 ## Publishing SonarQube results (optional)
@@ -106,7 +107,8 @@ To configure your Jenkins pipeline to accept these results, add the following pa
 {: caption="Table 4. Test result and test types" caption-side="top"}
 
 Here are the SonarQube parameters that are used in a sample stage:
-```
+
+```text
 stage ('SonarQube analysis') {
     steps {
         script {
