@@ -9,7 +9,7 @@ keywords: tool integration, toolchains, IBM Cloud, DevOps Insights, Quality Dash
 subcollection: ContinuousDelivery
 
 ---
-<!-- Common attributes used in the template are defined as follows: -->
+
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
