@@ -38,7 +38,7 @@ Before you publish test results, you must publish a deployment record. For more 
 
 Use the `testrecord-publish` command to upload a test record. The following example script uploads functional verification test (FVT) results to {{site.data.keyword.DRA_short}}:
 
-```
+```text
 # Run tests and generate a test results file here.
 
 #install the DevOps Insights plugin
@@ -55,7 +55,7 @@ In the example script, the `testrecord-publish` command specifies that the comma
 
 The following example script runs tests and then uploads Mocha results and Istanbul code coverage results to {{site.data.keyword.DRA_short}}:
 
-```
+```text
 # Run tests and generate a test results file here.
 istanbul cover --report lcov --report json-summary _mocha -- -R xunit -O output=./test/results/mocha.xml 'test/**/*.js'
 
