@@ -36,7 +36,7 @@ Before you publish a build record, you must set consistent parameter values. For
 
 In a build job, use the following script to upload a build record. Use the **`buildrecord-publish`** command to upload a build record. 
 
-```
+```bash
 #!/bin/bash
 
 #install the latest version of DevOps Insights plugin
