@@ -49,7 +49,8 @@ This step requires one parameter. It can also accept two of the three optional p
 {: caption="Table 1. Publishing build records parameters and definitions" caption-side="top"}
 
 The following example command includes the parameters. In this command, the pipeline continues running regardless of the gate's decision.
-```
+
+```text
 evaluateGate policy: 'Weather App Policy', forceDecision: 'true'
 ```
 {: codeblock}
