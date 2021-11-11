@@ -30,7 +30,8 @@ subcollection: ContinuousDelivery
 ## Platform metrics overview
 {: #cd_platform_metrics}
 
-You can configure one instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics. 
+You can configure one instance only of the {{site.data.keyword.mon_full_notm}} service per region to collect platform metrics.
+
 * To configure the Monitoring instance, you must set the platform metrics configuration. 
 * If a Monitoring instance in a region is already enabled to collect platform metrics, metrics from enabled-monitoring services are collected automatically and available for monitoring through this instance.
 * After a Monitoring instance in an account and region is enabled to collect platform metrics, it automatically collects metrics from all {{site.data.keyword.contdelivery_short}} service instances in the same account and region. You do not need to opt in to the {{site.data.keyword.contdelivery_short}} service metrics collection. You also cannot opt out of the {{site.data.keyword.contdelivery_short}} service metrics collection.
@@ -51,12 +52,12 @@ Complete the following steps to configure platform metrics:
 
 1. From the **Manage** page, click the overflow menu ![overflow menu](../../icons/actions-icon-vertical.svg "Overflow menu"). Then, select **Add monitoring** to configure *platform metrics* in the region of your {{site.data.keyword.contdelivery_short}} instance.
 
-    If the menu choices include the **Monitoring** option, then the account and region that contain the {{site.data.keyword.contdelivery_short}} instance is already configured for platform metrics. 
-    {: tip}
+   If the menu choices include the **Monitoring** option, then the account and region that contain the {{site.data.keyword.contdelivery_short}} instance is already configured for platform metrics. 
+   {: tip}
     
-5. Provision an instance of the {{site.data.keyword.mon_full_notm}} service.
+1. Provision an instance of the {{site.data.keyword.mon_full_notm}} service.
 
-After you provision the Monitoring instance, the **Observability** page opens. To continue working with {{site.data.keyword.contdelivery_short}}, go back to the {{site.data.keyword.contdelivery_short}} UI.
+   After you provision the Monitoring instance, the **Observability** page opens. To continue working with {{site.data.keyword.contdelivery_short}}, go back to the {{site.data.keyword.contdelivery_short}} UI.
 
 
 ## Viewing metrics
