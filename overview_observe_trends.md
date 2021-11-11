@@ -28,7 +28,7 @@ For more information about data sets, see [Managing data sets](/docs/ContinuousD
 
 The following figure shows unit test trends for builds from the master branch, and the number of passed and failed test cases for the build. 
 
-![Deployment Unit Test Trends](images/DRA_unit_test_trends.png "Quality Trends page has a graph of passed and failed tests for a selected app and data set") Figure 1. Quality Trends page example
+![Deployment Unit Test Trends](images/DRA_unit_test_trends.png){: caption="Figure 1. Quality Trends page" caption-side="bottom"}
 
 The quality trends graph correlates with the quality dashboard, and it is a good reference for noticing patterns in your builds. You can view trends for all test data. To view your quality trends dashboard, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. Select your toolchain. Click the {{site.data.keyword.DRA_short}} tile, and then click **Quality Trends**. 
 
