@@ -36,7 +36,7 @@ Build records notify {{site.data.keyword.DRA_full}} when a build is complete. Th
 
 In a build job, use the following script to upload a build record.
 
-```
+```bash
 #!/bin/bash
 
 #install the latest version of DevOps Insights plugin
