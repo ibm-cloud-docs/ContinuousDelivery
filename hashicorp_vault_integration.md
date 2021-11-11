@@ -35,9 +35,9 @@ Configure HashiCorp Vault to securely manage secrets such as API keys and secret
 1. If you are configuring this tool integration as you are creating the toolchain, and a HashiCorp Vault tool integration exists within the template that you are configuring, click the **HashiCorp Vault** tab. Alternatively, in the **More tools** section, click **HashiCorp Vault**.
 1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
 
- a. Click **Add tool**.
+   a. Click **Add tool**.
 
- b. In the Tool Integrations section, click **HashiCorp Vault**.
+   b. In the Tool Integrations section, click **HashiCorp Vault**.
 
 1. Type the name that you want to display for this tool integration on the HashiCorp Vault card in your toolchain. The secret name supports characters within the `a-z`, `A-Z`, and `0-9`ranges, and the space character. Characters that are outside of these ranges are not allowed and prevent the secret from resolving. For example, `my.secret` is an invalid secret name, but `my-secret` is valid.
 1. Type the URL for the HashiCorp Vault server that you want to open when you click the HashiCorp Vault card from your toolchain. Make sure that this URL is prefixed with the `http` or `https` protocol and ends with the HashiCorp Vault port number, such as `https://www.acme.com:8200`.
@@ -47,5 +47,6 @@ Configure HashiCorp Vault to securely manage secrets such as API keys and secret
 1. From your toolchain, click **HashiCorp Vault** to use the HashiCorp Vault Secrets Picker and Pusher components to select secrets for use within your toolchain or delivery pipeline.  
 
 ## Learn more about HashiCorp Vault
+{: #learn_hashicorp_vault}
 
 To learn more about HashiCorp Vault, see [HashiCorp Vault](https://www.vaultproject.io/){: external}.
