@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-04-21"
+lastupdated: "2021-11-12"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -37,7 +37,7 @@ Tekton provides a set of [Custom Resources](https://kubernetes.io/docs/concepts/
 |`TaskRun`		|Instantiates a Task for execution with specific inputs, outputs, and execution parameters. Can be invoked on its own or as part of a `Pipeline`.		|
 |`Pipeline`		|Defines the set of tasks that compose a pipeline.		|
 |`PipelineRun`		|Instantiates a Pipeline for execution with specific inputs, outputs, and execution parameters.		|
-| `PipelineResource`		|Defines an object that is an input (such as a Git repository) or an output (such as a Docker image) of the pipeline. This resource was not promoted to [Beta](https://tekton.dev/docs/pipelines/resources/) along with the other Tekton Pipeline custom resources.   		|
+| `PipelineResource`		|Defines an object that is an input (such as a Git repository) or an output (such as a Docker image) of the pipeline. This resource was not promoted to [Beta](https://tekton.dev/docs/pipelines/resources/){: external} along with the other Tekton Pipeline custom resources.   		|
 {: caption="Table 1. Tekton pipeline resources" caption-side="top"}
 
 
@@ -71,7 +71,7 @@ Before you add and run a Tekton pipeline, make sure that you have the following 
 
 * A [toolchain](https://cloud.ibm.com/devops/toolchains) that contains the following tool integrations:
 
-   * A repo tool integration (such as the GitHub tool integration) that contains your Tekton pipeline code, including a Tekton yaml file. Find sample pipeline and task definitions on [github](https://github.com/open-toolchain/hello-tekton). For more information about getting started with Tekton pipelines, see [Tekton Pipelines](https://github.com/tektoncd/pipeline/blob/master/docs/pipelines.md){: external} or take the [Develop a Kubernetes app by using Tekton delivery pipelines](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-using-tekton-delivery-pipelines){: external} tutorial.
+   * A repo tool integration (such as the GitHub tool integration) that contains your Tekton pipeline code, including a Tekton yaml file. Find sample pipeline and task definitions on [github](https://github.com/open-toolchain/hello-tekton){: external}. For more information about getting started with Tekton pipelines, see [Tekton Pipelines](https://github.com/tektoncd/pipeline/blob/master/docs/pipelines.md){: external} or take the [Develop a Kubernetes app by using Tekton delivery pipelines](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-using-tekton-delivery-pipelines){: external} tutorial.
    * Optional. If you are not using the default shared Pipeline Worker, you can use a {{site.data.keyword.deliverypipeline}} Private Worker tool integration that references your Kubernetes cluster. For more information about private workers, see [Installing Delivery Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
 
 * [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli) installed locally.
