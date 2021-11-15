@@ -112,7 +112,7 @@ If you cannot mirror your projects, you can [export](https://us-south.git.cloud.
 
 To mirror a {{site.data.keyword.gitrepos}} repo, complete the following steps:
 
-1. [Create a blank GitLab project](https://us-south.git.cloud.ibm.com/help/gitlab-basics/create-project.md#blank-projects){: external} in the target repo. Do not initialize this project with a README file.
+1. Create a blank GitLab project in the target repo. Do not initialize this project with a README file.
 1. [Create a personal access token](https://us-south.git.cloud.ibm.com/help/user/profile/personal_access_tokens.md#creating-a-personal-access-token){: external} with the `write_repository` scope in the target region. Save a copy of this token.
 1. Use [Push mirroring](https://us-south.git.cloud.ibm.com/help/user/project/repository/repository_mirroring.md#pushing-to-a-remote-repository-core){: external} to push the source repo to the target repo:     
 
@@ -145,7 +145,7 @@ To save and restore a toolchain, complete the following steps:
 1. Create a temporary directory on your local workstation.
 1. Change directory into the temporary directory.
 1. Generate a textual representation of the source toolchain in the temporary directory by using the [toolchain-to-template script](https://github.com/open-toolchain/toolchain-to-template){: external}.
-1. [Create a temporary blank GitLab project](https://us-south.git.cloud.ibm.com/help/gitlab-basics/create-project.md#blank-projects){: external} in the target region.
+1. Create a temporary blank GitLab project in the target region.
 1. Type the following commands to initialize the temporary directory for Git operations and push the contents to the temporary GitLab project:     
 
    a. git init
