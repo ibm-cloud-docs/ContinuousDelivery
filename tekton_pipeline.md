@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-11-15"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -230,6 +230,13 @@ Pipeline runs can be in any of the following states:
 For detailed information about a selected run, click any row in the table. You view the `Task` definition and the steps in each `PipelineRun` definition. You can also view the status, logs, and details of each `Task` definition and step, and the overall status of the `PipelineRun` definition.
 
 ![Tekton PipelineRun details](images/tekton-pipeline-run-details.png){: caption="Figure 4. Tekton PipelineRun details" caption-side="bottom"}
+
+## Viewing details for a TaskRun pod
+{: #view_pod_details}
+
+To view information about the underlying Kubernetes pod for a specific `TaskRun`, click the `Task` name and then click the **Pod** tab.
+
+You can view the details for the pod and any related events that are reported by the worker. This information can help you to debug specific failures or to determine where time is spent during a run.
 
 ## Learn more about Tekton pipelines and resources
 {: #learn_more_tekton_pipelines}
