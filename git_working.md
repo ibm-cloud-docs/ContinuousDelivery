@@ -86,9 +86,9 @@ To learn more, see [Personal access tokens](https://us-south.git.cloud.ibm.com/h
 ### Creating an SSH key  
 {: #create_ssh}
 
-To create an SSH key, see [How to create your SSH Keys](https://us-south.git.cloud.ibm.com/help/gitlab-basics/create-your-ssh-keys){: external}. Accessing your repositories with SSH authentication might require more configuration for proxies and firewalls.
+To create an SSH key, see [Generate an SSH key pair](https://us-south.git.cloud.ibm.com/help/ssh/index.html#generate-an-ssh-key-pair){: external}. Accessing your repositories with SSH authentication might require more configuration for proxies and firewalls.
 
-To learn more, see [SSH](https://us-south.git.cloud.ibm.com/help/ssh/README){: external}.
+To learn more, see [SSH](https://us-south.git.cloud.ibm.com/help/ssh/index.html){: external}.
 
 ### Verifying host key fingerprints
 {: #verify_fingerprints}
