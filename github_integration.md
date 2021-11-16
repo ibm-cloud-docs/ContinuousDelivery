@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-31"
+lastupdated: "2021-11-16"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, GitHub
 
@@ -16,7 +16,6 @@ subcollection: ContinuousDelivery
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
-{:note: .note}
 {:important: .important}
 {:deprecated: .deprecated}
 {:download: .download}   
@@ -38,27 +37,27 @@ If you are configuring this tool integration as you are creating the toolchain, 
 1. If you are storing your source code in a GitHub repo, in the Configurable Integrations section, click **GitHub**. If you are configuring this tool integration on {{site.data.keyword.cloud_notm}} Public and you did not authorize {{site.data.keyword.cloud_notm}} to access GitHub, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account. If you have an active GitHub session but you didn't enter your password recently, you might be prompted to enter your GitHub password to confirm.
 1. If you are using a repo on your own {{site.data.keyword.ghe_short}} server, in the Configurable Integrations section, click **Add custom server**.
 
-Type a title for your custom GitHub server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**.
+   Type a title for your custom GitHub server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**.
 
-If you don't have a personal access token, you can create one:
+   If you don't have a personal access token, you can create one:
 
-a. On any GitHub page, click your profile icon and then click **Settings**.
+   a. On any GitHub page, click your profile icon and then click **Settings**.
 
-b. On the sidebar, click **Personal access tokens**.
+   b. On the sidebar, click **Personal access tokens**.
 
-c. Click **Generate new token**.
+   c. Click **Generate new token**.
 
-d. Add a description for the token.
+   d. Add a description for the token.
 
-e. Select the **repo** and **user** checkboxes to define the access for the personal token.
+   e. Select the **repo** and **user** checkboxes to define the access for the personal token.
 
-f. Click **Generate token**.
+   f. Click **Generate token**.
 
-g. Copy the token to a secure location or password management app. For security reasons, after you leave the page, you can no longer see the token.
+   g. Copy the token to a secure location or password management app. For security reasons, after you leave the page, you can no longer see the token.
 
 1. Review the default target repo locations for the GitHub repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
 
-[Default target repo locations](images/toolchain_github_config.png){: figure caption="Figure 1. Default target repo locations"}
+   ![Default target repo locations](images/toolchain_github_config.png){: caption="Figure 1. Default target repo locations" caption-side="bottom"}
 
 If you have a toolchain and are adding this tool integration to it, follow these steps:
 
@@ -69,11 +68,11 @@ If you have a toolchain and are adding this tool integration to it, follow these
 1. If you have a GitHub or {{site.data.keyword.ghe_short}} repo and want to use it, for the repository type, click **Existing** and type the URL.
 1. If you want to use a new GitHub or {{site.data.keyword.ghe_short}} repo, type a name for the repo, type the URL for the repo that you are cloning or forking, and select the repository type:
 
-a. To create an empty repo, click **New**.
+   a. To create an empty repo, click **New**.
 
-b. To create a copy of a GitHub or {{site.data.keyword.ghe_short}} repo, click **Clone**.
+   b. To create a copy of a GitHub or {{site.data.keyword.ghe_short}} repo, click **Clone**.
 
-c. To fork a GitHub or {{site.data.keyword.ghe_short}} repo so that you can contribute changes through pull requests, click **Fork**.
+   c. To fork a GitHub or {{site.data.keyword.ghe_short}} repo so that you can contribute changes through pull requests, click **Fork**.
 
 1. If you are a GitHub.com user with an upgraded account, or you selected a {{site.data.keyword.ghe_short}} server and you want to make a new private repo on the server, select the **Make this repository private** checkbox.
 1. If you want to use GitHub's Issues for issue tracking, select the **Enable GitHub Issues** checkbox.
@@ -81,13 +80,13 @@ c. To fork a GitHub or {{site.data.keyword.ghe_short}} repo so that you can cont
 1. Click **Create Integration**.
 1. Click the card for the GitHub or {{site.data.keyword.ghe_short}} repo that you want to work with. Depending on the repo that you selected, either the GitHub website or your company's {{site.data.keyword.ghe_short}} repo opens, where you can view the contents of the repo.
 
-You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the GitHub repo and deploy an app from your workspace.
-{: tip}
+   You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the GitHub repo and deploy an app from your workspace.
+   {: tip}
 
 1. If you enabled GitHub Issues, click **GitHub Issues** to open it. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub or {{site.data.keyword.ghe_short}} repos.    
 
-If you don't have admin privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
-{: tip}
+   If you don't have admin privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
+   {: tip}
 
 ## Learn more about GitHub
 {: #learn_github}
@@ -95,6 +94,7 @@ If you don't have admin privileges for the repo that you are linking to, your in
 To learn more about GitHub, see the [GitHub article](https://www.ibm.com/cloud/garage/content/code/tool_github/){: external} and the [GitHub Issues article](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: external} on the IBM Cloud Garage Method or take these tutorials:
 
 * [Use the "Develop and test a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){: external}
+
 * [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){: external}
 
 * [Create a custom toolchain](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){: external}
