@@ -84,6 +84,7 @@ toc:
           label: Toolchains
           topics: 
           - toolchains_working.md
+          - toolchains_migrate.md
           - toolchains_using.md
           - topicgroup: 
               label: Tool integrations
