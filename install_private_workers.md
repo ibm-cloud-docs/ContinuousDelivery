@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-05-26"
+lastupdated: "2021-11-22"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -16,7 +16,6 @@ subcollection: ContinuousDelivery
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
-{:note: .note}
 {:important: .important}
 {:download: .download}
 {:ui: .ph data-hd-interface='ui'}
@@ -39,7 +38,7 @@ The private worker agents that are installed on private clusters request data on
 ## Prerequisites
 {: #pw_install_prereqs}
 
-Before you install a private worker, make sure that you have an {{site.data.keyword.cloud}} account to create authentication keys. You need kubectl version 1.14.5 or higher installed on the Administrator's desktop computer. And you must also have a [Kubernetes cluster](https://cloud.ibm.com/kubernetes/clusters){: external} (version 1.15 or higher) with Administrative access to install a private worker.
+Before you install a private worker, make sure that you have an {{site.data.keyword.cloud}} account to create authentication keys. You need the latest kubectl version that is installed on the Administrator's desktop computer. And you must also have a [Kubernetes cluster](https://cloud.ibm.com/kubernetes/clusters){: external} (version 1.15 or higher) with Administrative access to install a private worker.
 
 * Suggested Kubernetes cluster configurations:
 
@@ -50,12 +49,11 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
 * System requirements:
 
    * One 2CORE x 4 GB Kubernetes worker node, such as a Kubernetes Lite cluster.
-   * Kubernetes worker node affinity is not required.
   
 * Network access:
 
    * Inbound: N/A
-   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either au-syd (Sydney, Australia), eu-de (Frankfurt, Germany), eu-gb (London, United Kingdom), jp-tok (Tokyo, Japan), jp-osa (Osaka, Japan), us-south (Dallas, US), us-east (Washington DC, US), or ca-tor (Toronto, CA). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
+   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either au-syd (Sydney, Australia), eu-de (Frankfurt, Germany), eu-gb (London, United Kingdom), jp-tok (Tokyo, Japan), jp-osa (Osaka, Japan), us-south (Dallas, US), us-east (Washington DC, US), br-sao (Sao Paulo), or ca-tor (Toronto, CA). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
   
 * Permissions to pull images from icr.io. Private workers require the tekton-pipelines infrastructure and must be able to pull tekton-releases images from icr.io to complete the private worker installation.
 
@@ -85,23 +83,10 @@ Security constraints might prevent you from pulling images from the icr.io/conti
 ## Installing a {{site.data.keyword.deliverypipeline}} Private Worker
 {: #install_pw}  
 
-{{site.data.keyword.deliverypipeline}} private workers depend on the tekton and tekton-pipelines infrastructure. Private workers must pull tekton-releases images from `icr.io` (`icr.io/continuous-delivery/pipeline/`). You might need to define a specific Kubernetes ClusterImagePolicy to pull images from these container registries. To add the ClusterImagePolicy type to your Kubernetes cluster, you must [install several Helm charts](/docs/Registry?topic=Registry-security_enforce).
+{{site.data.keyword.deliverypipeline}} private workers depend on the Tekton and tekton-pipelines infrastructure. Private workers must pull tekton-releases images from `icr.io` (`icr.io/continuous-delivery/pipeline/`). You might need to define a specific Kubernetes ClusterImagePolicy to pull images from these container registries. To add the ClusterImagePolicy type to your Kubernetes cluster, you must [install several Helm charts](/docs/Registry?topic=Registry-security_enforce).
+
+For help with {{site.data.keyword.deliverypipeline}} Private Workers, see [Troubleshooting for {{site.data.keyword.deliverypipeline}} Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-troubleshoot-pipeline-private-workers#troubleshoot-pw-images).
 {: tip}
-
-For example, in {{site.data.keyword.cloud_notm}} Private, type the following commands to define a specific Kubernetes ClusterImagePolicy for `icr.io/continuous-delivery/pipeline`:
-
-```text
-cat <<EOF | kubectl apply -f -
-apiVersion: securityenforcement.admission.cloud.ibm.com/v1beta1
-kind: ClusterImagePolicy
-metadata:
-  name: tekton-private-worker
-spec:
-  repositories:
-  - name: "icr.io/continuous-delivery/pipeline/*"
-    policy:
-EOF
-```
 
 ### Installing the {{site.data.keyword.deliverypipeline}} Private Worker by using the CLI
 {: #install_pw_cli}
@@ -114,18 +99,19 @@ From the {{site.data.keyword.Bluemix_notm}} CLI, type the following command:
 
 ```text
 kubectl apply --filename
-https://private-worker-service.**{REGION}**.devops.cloud.ibm.com/install 
+https://private-worker-service.{REGION}.devops.cloud.ibm.com/install 
 ```
 Where `{REGION}` is the location of the toolchain's pipeline. You can specify any of the following values for the region:
 
 * au-syd (Sydney, Australia)
 * eu-de (Frankfurt, Germany)
-* eu-gb  (London), United Kingdom
+* eu-gb  (London, United Kingdom)
 * jp-tok (Tokyo, Japan)
 * jp-osa (Osaka, Japan)
 * us-south (Dallas, US)
 * us-east (Washington DC, US)
 * ca-tor (Toronto, CA)
+* br-sao (Sao Paulo, Brazil)
 
 The following code snippet shows an example of a private worker installation in the Frankfurt region:
 
@@ -164,55 +150,6 @@ clusterrolebinding.rbac.authorization.k8s.io/private-worker-agent created
 To set up a pool of private workers, repeat this process with more Kubernetes clusters.
 {: tip}
  
-### Installing {{site.data.keyword.deliverypipeline}} Private Worker on OpenShift
-{: #open_shift_pw_}
-
-If you are using a private worker on OpenShift, you must set up security context constraints (SCCs) for the private worker and the applications that you are deploying. For more information about SCC on OpenShift, see [OpenShift 4.3](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html){: external} or [OpenShift 3.11](https://docs.openshift.com/container-platform/3.11/admin_guide/manage_scc.html){: external}.
-
-
-* Add the tekton-pipelines-controller and tekton-pipelines-webhook service accounts to any uid SCC. Services that use this SCC can access any directories that have a root in the cluster.
-
-```text
-oc adm policy add-scc-to-user anyuid system:serviceaccount:tekton-pipelines:tekton-pipelines-controller
-oc adm policy add-scc-to-user anyuid system:serviceaccount:tekton-pipelines:tekton-pipelines-webhook
-
-```
- 
-* Add the tekton-pipelines-controller service account to the privileged SCC. Services that use this SCC can run pods with privileged access and use hostpath persistent volumes.
-
-```text
-oc adm policy add-scc-to-user privileged system:serviceaccount:tekton-pipelines:tekton-pipelines-controller
-
-```
-
-Cloud-orchestrated Tekton pipelines currently use hostpath volumes for Tekton pipeline run storage. Tekton pipelines that run on private workers that are hosted on OpenShift require an SCC to be applied to any container spec that reads from or writes to a workspace or PersistentVolume. To allow a container to access the volume, add the following YAML code snippet to the step in the Tekton task:
-
-```text
-securityContext:
-  privileged: true
-
-```
-As support is added for different storage types, this privilege escalation might not be needed.
-{: tip}
-
-#### Removing {{site.data.keyword.deliverypipeline}} Private Workers from OpenShift
-{: #open_shift_pw_remove}
-
-If you are no longer using a private worker on OpenShift, you must remove the SCCs for the private worker from service accounts. 
-
-* Remove any uid SCCs from the tekton-pipelines-controller and tekton-pipelines-webhook service accounts.
-
-```text
-oc adm policy add-scc-to-user anyuid system:serviceaccount:tekton-pipelines:tekton-pipelines-webhook
-oc adm policy remove-scc-from-user anyuid system:serviceaccount:tekton-pipelines:tekton-pipelines-controller
-
-```
-* Remove privileged SCCs from the tekton-pipelines-controller service account.
-
-```text
-oc adm policy remove-scc-from-user privileged system:serviceaccount:tekton-pipelines:tekton-pipelines-controller
-
-```
 
 ## Registering a {{site.data.keyword.deliverypipeline}} Private Worker
 {: #register_pw}
@@ -240,7 +177,7 @@ A service ID represents a pool of one or more private workers that act together.
 From the {{site.data.keyword.cloud_notm}} CLI, type the following command:
 
 ```text
-$ ibmcloud iam service-id-create **{worker-pool-name}** -d "**{worker-pool-description}**"
+$ ibmcloud iam service-id-create {worker-pool-name} -d "{worker-pool-description}"
 
 Creating service ID {worker-pool-name} bound to current account as username@domain.com...OK
 Service ID {worker-pool-name} is created successfully
@@ -279,7 +216,7 @@ An API key is a unique code that is passed to an API to identify the application
 From the {{site.data.keyword.cloud_notm}} CLI, type the following command:
 
 ```text
-$ ibmcloud iam service-api-key-create **{worker-api-key-name}** (**SERVICE\_ID\_NAME**|SERVICE\_ID\_UUID) \[-d, --description **DESCRIPTION**\] \[--file **FILE**\]
+$ ibmcloud iam service-api-key-create {worker-api-key-name} (SERVICE\_ID\_NAME|SERVICE\_ID\_UUID) \[-d, --description DESCRIPTION\] \[--file FILE\]
 
 Creating API key  {worker-api-key-name} of service
 SERVICE\_ID\_NAME as username@domain.com...
@@ -301,7 +238,7 @@ UUID           ApiKey-c1ee0fb5-90f2-476e-a260-a796e6d7f5f7
 ### Registering the private worker with {{site.data.keyword.cloud_notm}}
 {: #pw_register_cloud}
 
-To use the registration commands, you must be logged in to the Kubernetes cluster (with kubectl) into which you previously installed a private worker.
+Before you can register the private worker with {{site.data.keyword.cloud_notm}}, you must deploy the private worker framework by using the following command: `kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install`. To use the registration commands, you must be logged in to the Kubernetes cluster (with kubectl) into which you previously installed a private worker.
 {: tip}
 
 You must register a private worker with the specific {{site.data.keyword.cloud_notm}} region that corresponds to the location of the delivery pipelines that you want to enable.
@@ -316,12 +253,13 @@ You must register a private worker with the specific {{site.data.keyword.cloud_n
    * us-south (Dallas, US)
    * us-east (Washington DC, US)
    * ca-tor (Toronto, CA)
+   * br-sao (Sao Paulo, Brazil)
 
 2. Specify a meaningful name for your private worker. This name must start and end with lowercase alphanumeric characters and can also contain `_` or `.` characters.
 3. Run the following command with the service ID and API key that you created previously, and the private worker name:
 
 ```text
-$ kubectl apply --filename "https://private-worker-service.{**REGION**}.devops.cloud.ibm.com/install/worker?serviceId={**SERVICE_ID**}&apikey={**API_KEY**}&name={**worker-name**}"
+$ kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install/worker?serviceId={SERVICE_ID}&apikey={API_KEY}&name={WORKER_NAME}"
 
 workeragent.devops.cloud.ibm.com/worker-name created
 secret/worker-name-auth created
@@ -333,18 +271,33 @@ To verify that the agent is registered correctly, type the following command:
 
 ```text
 $ kubectl get workeragents
-NAME         SERVICEID    REGISTERED   VERSION  AUTH
-worker-name  <ServiceId>  Succeeded    OK       OK
-
+NAME           SERVICEID     AGENT   REGISTERED   VERSION   AUTH   CONSTRAINED   PAUSED
+<worker_name>  <ServiceId>   OK      Succeeded    OK        OK     false         false
 ```
 {: tip}
+
+
+## Using Private Worker agent attributes
+{: #install_pw_agent_states}
+
+The following attributes are available for private worker agents:
+
+* **NAME**: The name that was specified when the agent was registered. This name appears on the Private Worker integration page.
+* **SERVICEID**: The work queue ID from which this agent processes work requests.
+* **AGENT**: A value of `OK` indicates that the agent can process work requests.
+* **REGISTERED**: A value of `Succeeded` indicates that the agent successfully registered with the regional private worker service.
+* **VERSION**: A value of `OK` indicates whether the version of the agent is current.
+* **AUTH**: A value of `OK` indicates whether the agent `apikey` is valid.
+* **CONSTRAINED**: A value of `false` indicates that enough cluster resources are available for the agent to run tasks. A value of `True` specifies that the cluster is resource-constrained.`
+* **PAUSED**: A value of `false` indicates that the agent is operational and can run tasks. A value of `true` specifies that the agent is paused and cannot run any tasks. One reason that an agent might be paused is for cluster maintenance.
+
 
 ## Updating the {{site.data.keyword.deliverypipeline}} Private Worker installation
 {: #install_pw_update} 
 
 If the private worker is reported as inactive, you must update the installation.
 
-To view the version of your private worker, type the following command: `kubectl get workeragents`.
+To view the version of your private worker, type the following command: `kubectl -n tekton-pipelines describe deploy private-worker-agent`.
 {: tip}
 
 To update your private worker installation, complete the following steps:
