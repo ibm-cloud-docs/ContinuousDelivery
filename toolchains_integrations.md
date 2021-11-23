@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-08"
+lastupdated: "2021-11-22"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Eclipse Orion Web IDE, Git Repos and Issue Tracking, GitHub, GitLab, Hashicorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -31,28 +31,28 @@ The tool integrations that are available to add and configure for your toolchain
 
 |Tool Integration |Available on {{site.data.keyword.cloud_notm}} Public	|Available on {{site.data.keyword.cloud_notm}} Dedicated (Environment Dependent)|
 |:----------|:------------------------------|:------------------|
-|[Artifactory](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-artifactory)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
-|[Bitbucket](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-bitbucket)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|No		|
-|[{{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) 		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London	   	|Yes  		|
-|[{{site.data.keyword.deliverypipeline}} Private Worker](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-privateworker)			|Dallas, Washington, Toronto, Frankfurt, Tokyo, Osaka, Sydney, London		|No		|
-|[{{site.data.keyword.DRA_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-dra)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|No			|
-|[Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-webide)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes			|
-|[{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-grit)	|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|No		|
-|[GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-github)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
-|[GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-gitlab)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|No		|
-|[HashiCorp Vault](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
-|[Jenkins](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jenkins)	|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
-|[JIRA](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jira)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
-|[{{site.data.keyword.keymanagementserviceshort}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-keyprotect)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
-|[Nexus](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-nexus)			|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
-|[Other Tool](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-othertool)			|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
-|[PagerDuty](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pagerduty)			|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
-|[Rational Team Concert](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-rationalteamconcert)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
-|[Sauce Labs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-saucelabs)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|No		|
-|[Secrets Manager](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
-|[Security and Compliance Center](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-scc)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
-|[Slack](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-slack)		|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
-|[SonarQube](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-sonarqube)			|Dallas, Washington, Toronto, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[Artifactory](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-artifactory)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[Bitbucket](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-bitbucket)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|No		|
+|[{{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) 		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London	   	|Yes  		|
+|[{{site.data.keyword.deliverypipeline}} Private Worker](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-privateworker)			|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Osaka, Sydney, London		|No		|
+|[{{site.data.keyword.DRA_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-dra)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|No			|
+|[Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-webide)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes			|
+|[{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-grit)	|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|No		|
+|[GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-github)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-gitlab)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|No		|
+|[HashiCorp Vault](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[Jenkins](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jenkins)	|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[JIRA](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jira)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[{{site.data.keyword.keymanagementserviceshort}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-keyprotect)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[Nexus](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-nexus)			|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[Other Tool](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-othertool)			|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[PagerDuty](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pagerduty)			|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[Rational Team Concert](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-rationalteamconcert)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[Sauce Labs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-saucelabs)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|No		|
+|[Secrets Manager](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[Security and Compliance Center](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-scc)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[Slack](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-slack)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
+|[SonarQube](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-sonarqube)			|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
 {: caption="Table 1. Tool integrations available for toolchains on {{site.data.keyword.cloud_notm}} Public and Dedicated" caption-side="top"}
 
 If you want to start developing with your source code on {{site.data.keyword.cloud_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.cloud_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
