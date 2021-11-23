@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-07-05"
+lastupdated: "2021-11-22"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, authentication, personal access token, SSH key
 
@@ -120,6 +120,20 @@ ca-tor.git.cloud.ibm.com:
   RSA:
     SHA256:mNvCu12YAUeJVCNfiHNfBKgezh0zgwdwxBs8wXnhPP8
     MD5:60:d6:6a:2f:0c:db:52:e1:20:17:a9:3f:3f:fb:4d:91
+```
+{: screen}
+
+```text
+br-sao.git.cloud.ibm.com:
+  ECDSA:
+    SHA256:+wLtj6TSQyY/4kp9pa8BVk+JvHqD0+L3Wq5hF3WnyCQ
+    MD5:c2:6a:76:c6:03:86:a0:ca:4e:24:87:9a:50:c1:3d:66
+  ED25519:
+    SHA256:sFQy3djBGVtjYuLKWtbabS95QY+yL1JQw+Wfr7eWkvw
+    MD5:f7:f2:39:f6:d0:a8:a6:07:9e:a6:c3:83:24:f0:7b:a3
+  RSA:
+    SHA256:3EgFqSRmbynYuCg7mpYO+K7PdSBvG0IJHr0e0Q4bikI
+    MD5:af:9c:57:90:25:4d:0a:ed:5c:c5:30:97:95:de:9c:92
 ```
 {: screen}
 
