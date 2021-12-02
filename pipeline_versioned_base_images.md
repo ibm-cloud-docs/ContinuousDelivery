@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-06"
+lastupdated: "2021-12-02"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -73,10 +73,12 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 
 | Base image version | IBM Cloud Container Registry version |
 |:-----------------|:-----------------|
+| 3.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.4`|
 | 3.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.3`|
 | 3.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.2`|
 | 3.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.1`|
 | 3.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.0`|
+| 2.16 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.16`|
 | 2.15 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.15`|
 | 2.14 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.14`|
 | 2.13 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.13`|
@@ -99,7 +101,146 @@ The following available image versions are listed in descending order, starting 
  
 The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
 {: tip}
- 
+
+### Version 3.4
+{: #version_3_4}
+
+To view the contents of version 3.4, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 11. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built.
+
+The {{site.data.keyword.cloud_notm}} command-line interface (CLI) provides code risk analysis commands. You can use the {{site.data.keyword.cloud_notm}} CLI to analyze your code for vulnerabilities and compliance with certain rules. Code Risk Analyzer is available in all {{site.data.keyword.cloud_notm}} regions where toolchains are supported. For more information about Code Risk Analyzer, see [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
+{: tip}
+
+This image includes the following tools:
+
+```text
+	# node --version
+	v16.13.0
+
+	# npm --version
+	8.1.0
+
+	# jq --version
+	jq-1.6
+
+	# yq --version
+	yq (https://github.com/mikefarah/yq/) version 4.14.1
+
+	# kubectl version --client
+	Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.5", GitCommit:"6b1d87acf3c8253c123756b9e61dac642678305f", GitTreeState:"clean", BuildDate:"2021-03-18T01:10:43Z", GoVersion:"go1.15.8", Compiler:"gc", Platform:"linux/amd64"}
+
+	# buildctl --version
+	buildctl github.com/moby/buildkit v0.9.2 a14b4e097ae1dc7514c5febd6d75f742a166ea75
+
+	# helm version --client
+	version.BuildInfo{Version:"v3.7.1", GitCommit:"1d11fcb5d3f3bf00dbe6fe31b8412839a96b3dc4", GitTreeState:"clean", GoVersion:"go1.16.9"}
+
+	# ibmcloud -version
+	ibmcloud version 2.2.0+99934b5-2021-11-10T16:34:14+00:00
+
+	# ibmcloud plugin list
+	Listing installed plug-ins...
+
+	Plugin Name                             Version   Status             Private endpoints supported   
+	code-engine[ce]                         1.23.1                       true   
+	container-registry                      0.1.553                      true   
+	container-service[kubernetes-service]   1.0.344                      false   
+	cra                                     0.1.9                        false   
+	doi                                     0.3.3                        false   
+	schematics                              1.6.1                        false   
+	cloud-functions[wsk/functions/fn]       1.0.56                       false   
+	cloud-internet-services                 1.13.6                       true   
+
+
+	# ibmcloud dev --version
+	ibmcloud dev version 2.9.1
+
+	# java -version
+	openjdk version "11.0.11" 2021-04-20
+	OpenJDK Runtime Environment AdoptOpenJDK-11.0.11+9 (build 11.0.11+9)
+	Eclipse OpenJ9 VM AdoptOpenJDK-11.0.11+9 (build openj9-0.26.0, JRE 11 Linux amd64-64-Bit Compressed References 20210421_975 (JIT enabled, AOT enabled)
+	OpenJ9   - b4cc246d9
+	OMR      - 162e6f729
+	JCL      - 7796c80419 based on jdk-11.0.11+9)
+
+	# ant -version
+	Apache Ant(TM) version 1.10.12 compiled on October 13 2021
+
+	# mvn -version
+	Apache Maven 3.8.3 (ff8e977a158738155dc465c6a97ffaf31982d739)
+	Maven home: /opt/IBM/maven
+	Java version: 11.0.11, vendor: AdoptOpenJDK, runtime: /usr/local/openjdk-11
+	Default locale: en_US, platform encoding: UTF-8
+	OS name: "linux", version: "5.10.47-linuxkit", arch: "amd64", family: "unix"
+
+	# gradle -version
+
+	Welcome to Gradle 7.2!
+
+	Here are the highlights of this release:
+	 - Toolchain support for Scala
+	 - More cache hits when Java source files have platform-specific line endings
+	 - More resilient remote HTTP build cache behavior
+
+	For more details see https://docs.gradle.org/7.2/release-notes.html
+
+
+	------------------------------------------------------------
+	Gradle 7.2
+	------------------------------------------------------------
+
+	Build time:   2021-08-17 09:59:03 UTC
+	Revision:     a773786b58bb28710e3dc96c4d1a7063628952ad
+
+	Kotlin:       1.5.21
+	Groovy:       3.0.8
+	Ant:          Apache Ant(TM) version 1.10.9 compiled on September 27 2020
+	JVM:          11.0.11 (Eclipse OpenJ9 openj9-0.26.0)
+	OS:           Linux 5.10.47-linuxkit amd64
+
+
+	# oc version
+	Client Version: 4.9.7
+
+	# zip
+	Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+	This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+
+	# unzip
+	UnZip 6.00 of 20 April 2009, by Info-ZIP.  Maintained by C. Spieler.  Send
+
+	# git --version
+	git version 2.27.0
+
+	# curl
+	curl 7.61.1 (x86_64-redhat-linux-gnu) libcurl/7.61.1 OpenSSL/1.1.1k zlib/1.2.11 brotli/1.0.6 libidn2/2.2.0 libpsl/0.20.2 (+libidn2/2.2.0) libssh/0.9.4/openssl/zlib nghttp2/1.33.0
+
+	# wget
+	GNU Wget 1.19.5 built on linux-gnu.
+
+	# openssl version
+	OpenSSL 1.1.1k  FIPS 25 Mar 2021
+
+	# make
+	GNU Make 4.2.1
+
+	# docker
+	Client:
+	 Version:           20.10.9
+	 API version:       1.41
+	 Go version:        go1.16.8
+	 Git commit:        c2ea9bc
+	 Built:             Mon Oct  4 16:03:22 2021
+	 OS/Arch:           linux/amd64
+	 Context:           default
+
+	# dc --version
+	dc (GNU bc 1.07.1) 1.4.1
+
+	# ed --version
+	GNU ed 1.14.2
+```
+{: codeblock}
+
 ### Version 3.3
 {: #version_3_3}
 
@@ -644,7 +785,158 @@ This image includes the following tools:
 	GNU ed 1.14.2
 ```
 {: codeblock}
- 
+
+### Version 2.16
+{: #version_2_16}
+
+To view the contents of version 2.16, from the running image, type `default_versions.sh`.
+
+The {{site.data.keyword.cloud_notm}} command-line interface (CLI) provides code risk analysis commands. You can use the {{site.data.keyword.cloud_notm}} CLI to analyze your code for vulnerabilities and compliance with certain rules. Code Risk Analyzer is available in all {{site.data.keyword.cloud_notm}} regions where toolchains are supported. For more information about Code Risk Analyzer, see [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
+{: tip}
+
+This image updated its version of node.js to the current LTS version 16.13.0. If you need to keep the previous node.js version 14.17.6, you can either continue to use the previous image or you can add `nvm install v14.17.6` to the beginning of your script.
+{: tip}
+
+This image includes the following tools:
+
+```text
+	# node --version
+	v16.13.0
+
+	# npm --version
+	8.1.0
+
+	# jq --version
+	jq-1.6
+
+	# yq --version
+	yq version 2.4.1
+
+	# yq3 --version
+	yq version 3.4.1
+
+	# yq4 --version
+	yq (https://github.com/mikefarah/yq/) version 4.14.1
+
+	# kubectl version --client
+	Client Version: version.Info{Major:"1", Minor:"20", GitVersion:"v1.20.5", GitCommit:"6b1d87acf3c8253c123756b9e61dac642678305f", GitTreeState:"clean", BuildDate:"2021-03-18T01:10:43Z", GoVersion:"go1.15.8", Compiler:"gc", Platform:"linux/amd64"}
+
+	# buildctl --version
+	buildctl github.com/moby/buildkit v0.9.2 a14b4e097ae1dc7514c5febd6d75f742a166ea75
+
+	# helm version --client
+	Client: &version.Version{SemVer:"v2.17.0", GitCommit:"a690bad98af45b015bd3da1a41f6218b1a451dbe", GitTreeState:"clean"}
+
+	# helm3 version --client
+	version.BuildInfo{Version:"v3.7.1", GitCommit:"1d11fcb5d3f3bf00dbe6fe31b8412839a96b3dc4", GitTreeState:"clean", GoVersion:"go1.16.9"}
+
+	# ibmcloud -version
+	ibmcloud version 2.2.0+99934b5-2021-11-10T16:34:14+00:00
+
+	# ibmcloud plugin list
+	Listing installed plug-ins...
+
+	Plugin Name                             Version   Status             Private endpoints supported   
+	cloud-internet-services                 1.13.6                       true   
+	code-engine[ce]                         1.23.1                       true   
+	container-registry                      0.1.553                      true   
+	container-service[kubernetes-service]   1.0.344                      false   
+	cra                                     0.1.9                        false   
+	doi                                     0.3.3                        false   
+	schematics                              1.6.1                        false   
+	cloud-functions[wsk/functions/fn]       1.0.56                       false   
+
+
+	# ibmcloud dev --version
+	ibmcloud dev version 2.9.1
+
+	# java -version
+	openjdk version "11.0.11" 2021-04-20
+	OpenJDK Runtime Environment AdoptOpenJDK-11.0.11+9 (build 11.0.11+9)
+	Eclipse OpenJ9 VM AdoptOpenJDK-11.0.11+9 (build openj9-0.26.0, JRE 11 Linux amd64-64-Bit Compressed References 20210421_975 (JIT enabled, AOT enabled)
+	OpenJ9   - b4cc246d9
+	OMR      - 162e6f729
+	JCL      - 7796c80419 based on jdk-11.0.11+9)
+
+	# ant -version
+	Apache Ant(TM) version 1.10.12 compiled on October 13 2021
+
+	# mvn -version
+	Apache Maven 3.8.3 (ff8e977a158738155dc465c6a97ffaf31982d739)
+	Maven home: /opt/IBM/maven
+	Java version: 11.0.11, vendor: AdoptOpenJDK, runtime: /usr/local/openjdk-11
+	Default locale: en_US, platform encoding: UTF-8
+	OS name: "linux", version: "5.10.47-linuxkit", arch: "amd64", family: "unix"
+
+	# gradle -version
+
+	Welcome to Gradle 7.2!
+
+	Here are the highlights of this release:
+	 - Toolchain support for Scala
+	 - More cache hits when Java source files have platform-specific line endings
+	 - More resilient remote HTTP build cache behavior
+
+	For more details see https://docs.gradle.org/7.2/release-notes.html
+
+
+	------------------------------------------------------------
+	Gradle 7.2
+	------------------------------------------------------------
+
+	Build time:   2021-08-17 09:59:03 UTC
+	Revision:     a773786b58bb28710e3dc96c4d1a7063628952ad
+
+	Kotlin:       1.5.21
+	Groovy:       3.0.8
+	Ant:          Apache Ant(TM) version 1.10.9 compiled on September 27 2020
+	JVM:          11.0.11 (Eclipse OpenJ9 openj9-0.26.0)
+	OS:           Linux 5.10.47-linuxkit amd64
+
+
+	# oc version
+	Client Version: 4.9.7
+
+	# zip
+	Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+	This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+
+	# unzip
+	UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP.
+
+	# git --version
+	git version 2.34.1
+
+	# curl
+	curl 7.58.0 (x86_64-pc-linux-gnu) libcurl/7.58.0 OpenSSL/1.1.1 zlib/1.2.11 libidn2/2.0.4 libpsl/0.19.1 (+libidn2/2.0.4) nghttp2/1.30.0 librtmp/2.3
+
+	# wget
+	GNU Wget 1.19.4 built on linux-gnu.
+
+	# openssl version
+	OpenSSL 1.1.1  11 Sep 2018
+
+	# make
+	GNU Make 4.1
+
+	# docker
+	Client:
+	 Version:           20.10.9
+	 API version:       1.41
+	 Go version:        go1.16.8
+	 Git commit:        c2ea9bc
+	 Built:             Mon Oct  4 16:03:22 2021
+	 OS/Arch:           linux/amd64
+	 Context:           default
+
+	# dc --version
+	dc (GNU bc 1.07.1) 1.4.1
+
+	# ed --version
+	GNU Ed 1.10
+```
+{: codeblock}
+
 ### Version 2.15
 {: #version_2_15}
 
