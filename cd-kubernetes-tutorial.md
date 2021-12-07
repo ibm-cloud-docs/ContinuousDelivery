@@ -327,7 +327,6 @@ After the continuous delivery pipeline run succeeds, you can locate the app URL 
 
 ## Next steps
 {: #next-steps}
-{: step}
 
 If you want to remove the sample app that is running on Kubernetes, you must clean the Kubernetes cluster: 
 
@@ -346,7 +345,6 @@ If you want to remove the sample app that is running on Kubernetes, you must cle
 
 ## Looking for help?
 {: #cd-tutorial-help}
-{: step}
 
 Get help from the {{site.data.keyword.contdelivery_full}} development teams by joining us on [Slack](https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/){: external}.
 
