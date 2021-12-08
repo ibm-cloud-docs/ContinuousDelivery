@@ -73,6 +73,7 @@ toc:
       - cd-kubernetes-razee-tutorial.md
       - cd-kubernetes-image-signing-tutorial.md
       - cd-kubernetes-tutorial.md
+      - cd-vm-tutorial.md
       - cd-vsi-tutorial.md
 
   - navgroup: 
