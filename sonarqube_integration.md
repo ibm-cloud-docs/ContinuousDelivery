@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-15"
+lastupdated: "2021-12-28"
 
 keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Sonarqube
 
@@ -53,9 +53,7 @@ Configure SonarQube to continuously analyze and measure the quality of your sour
 ### Default SonarQube instance
 {: #sonarqube-ci-pipeline-default}
 
-If you don't have your own SonarQube instance, enable the default SonarQube scan in an existing pipeline by adding the `opt-in-sonar` parameter to your continuous integration pipeline parameters (any value fits).
-
-The pipeline creates a SonarQube instance during the pipeline run. You can access this instance after the static-scan stage successfully runs.
+If you don't have your own SonarQube instance, the pipeline creates a SonarQube instance during the pipeline run. You can access this instance after the static-scan stage successfully runs.
 
 ### Existing SonarQube instance
 {: #sonarqube-ci-pipeline-existing}
