@@ -165,7 +165,7 @@ toc:
               - data_sets.md
               - deleting_data.md
               - add_devops_insights.md
-              - aggregrate_mult_sources.md
+              - aggregate_mult_sources.md
               - publish_test_data.md
       - topicgroup: 
               label: Using the IBM CLI to integrate IBM Continuous Delivery Pipeline with DevOps Insights
