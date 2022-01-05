@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-01-25"
+  years: 2019, 2022
+lastupdated: "2022-01-05"
 
 keywords: devops insights, setting, values, cli, parameter values, consistent, other ci/cd tools, test, tests, install, app, risk
 
@@ -38,7 +38,7 @@ You need an API key for access to the toolchain, and to log in by using the `ibm
 ## Exporting your toolchain ID
 {: #export-id-cicd}
 
-To set the toolchain ID as an environment variable, first identify and save the toolchain ID for the {{site.data.keyword.DRA_short}} instance you would like to aggregate the data. For more information about how to find your toolchain ID, see [Identifying your toolchain ID](/docs/ContinuousDelivery?topic=ContinuousDelivery-aggregating-multiple-sources). 
+To set the toolchain ID as an environment variable, first identify and save the toolchain ID for the {{site.data.keyword.DRA_short}} instance you would like to aggregate the data. For more information about how to find your toolchain ID, see [Identifying your toolchain ID](/docs/ContinuousDelivery?topic=ContinuousDelivery-aggregating-multiple-sources#identifying-toolchain-ID). 
 
 Use the following steps to go to the {{site.data.keyword.contdelivery_short}} pipeline in your toolchain and set the toolchain ID as an environment variable:
 
