@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-11-15"
+  years: 2019, 2022
+lastupdated: "2022-01-18"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -55,7 +55,7 @@ The Tekton Pipelines project is a beta release. You must update your pipeline wi
 * **Classic**: Classic delivery pipelines are created graphically, with the status embedded in the pipeline diagram. These pipelines can run on shared workers in the cloud or on private workers that run on your own Kubernetes cluster. 
 * **Tekton**: Tekton delivery pipelines are created within yaml files that define pipelines as a set of Kubernetes resources. You can edit those yaml files to change the behaviour of a pipeline. Tekton pipelines can run on private workers that run on your own cluster. They can also run on IBM-managed workers on the public cloud. The Tekton integration provides a dashboard that you can use to view the output of Tekton pipeline runs. It also provides mechanisms for identifying the pipeline definitions repo, the pipeline triggers, where the pipeline runs, and the storage and retrieval of properties.
 
-Pipelines run concurrently unless you configure them to serialize by using the new `Limit current runs by this trigger` switch.
+Pipelines run concurrently unless you configure them to serialize by using the `Limit concurrent runs` option.
 {: important}
 
 Both types of pipelines isolate jobs or steps from one another by running in separate containers, and by using an image that you choose. Classic and Tekton pipelines both exist in a [toolchain](https://cloud.ibm.com/devops/toolchains){: external} and depend on that toolchain to add more tool integrations that are used in the build, test, and deployment process.
@@ -114,13 +114,16 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    d. Save your changes.
 
    The pipeline definition is updated automatically.
+   
+   The computed pipeline definition size limit is 1 MB. If you encounter errors when you save or run your pipeline, you might need to reduce the size of your pipeline definition, or split it into multiple pipelines.
+   {: important}
  
 1. In the **Worker** section, select the IBM Managed shared worker or the private worker that you want to use to run your Tekton pipeline. For more information about private workers, see [Working with Delivery Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers).
 
    The private worker must be defined in the same toolchain as your Tekton pipeline.
    {: important}
 
-1. In the **Triggers** section, click **Add trigger** to create a new trigger, and then associate that trigger with an event listener. The list of available event listeners is populated with the listeners that are defined in the pipeline code repo.
+1. In the **Triggers** section, click **Add** to create a trigger, select the type of trigger to add, and associate the trigger with an event listener. The list of available event listeners contains the listeners that are defined in the pipeline code repo.
  
    Triggers are based on [Tekton trigger definitions](https://github.com/tektoncd/triggers){: external}. Git respository triggers use the event listener that they are mapped to to extract information from the incoming event payload and create Kubernetes resources. These resources are applied to a Tekton `PipelineRun` resource.
    {: tip}
@@ -198,10 +201,10 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
    Save your changes.
 
-1. In the **Environment properties** section, click **Add property** and define your own environment property. For example, you can define an `API_KEY` property that passes an API key that is used by all of the scripts in the pipeline to access {{site.data.keyword.cloud_notm}} resources. You can add the following types of properties:
+1. In the **Environment properties** section, click **Add** and select a property type to define your own environment property. For example, you can define an `API_KEY` property that passes an API key that is used by all of the scripts in the pipeline to access {{site.data.keyword.cloud_notm}} resources. You can add the following types of properties:
 
    * **Enumeration**: A property key with a value that can be selected from a user-defined list of options.
-   * **Secure value**: A property key with a single-line value that is secured with AES-128 encryption. This value is displayed by using the asterisk character.
+   * **Secure value**: A property key with a single-line value that is secured with AES-128 encryption. This value is displayed by using the asterisk character. Alternatively, you can click the key icon to select a secret from a vault integration (such as IBM Key Protect), if such a tool is available in your toolchain.
    * **Text value**: A property key with a text value that can either be single-line or multi-line. Previously, multi-line values were supported by a separate **Text area** property type.
    * **Tool integration**: A property key with a value that is resolved at run time from a toolchain tool integration. By default, the value is a JSON string representation of the tool integration. A specific field or subset of the object can be retrieved by providing a value for the optional JSON filter. For example, if a GitHub integration is selected and the JSON filter `parameters.repo_url` is specified, the value reflects the URL of the Git repo that is configured in the tool integration when the `PipelineRun` resource runs.
  
