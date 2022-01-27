@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-22"
+  years: 2015, 2022
+lastupdated: "2022-01-27"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -415,3 +415,23 @@ br-sao
 
 ```
 {: screen}
+
+## Why did I receive a notification that repo references are fixed in my pipeline triggers or definitions?
+{: #troubleshoot-repo-references}
+{: troubleshoot}
+
+You changed, added, or removed repo integrations from your toolchain, which caused references to the integrations that are stored in the pipeline triggers or definitions to become invalid. 
+
+When I change, add, or remove repo integrations from my toolchain, warning icons and validation errors are displayed in my pipeline configuration.
+{: tsSymptoms}
+
+In certain scenarios, when you change, add, or remove repo integrations from your toolchain, references to these integrations that are stored in the pipeline triggers or definitions might become invalid.
+{: tsCauses}
+
+If a matching repo integration is located in the toolchain, the pipeline attempts to automatically update these references to fix the invalid integration references. A notification is displayed in the UI with one of the following messages:
+{: tsResolve}
+
+* `Repository reference fixed in the following triggers: [list of triggers]`
+* `Repository reference fixed in the following definitions: [list of definitions]`
+
+If you see one of these notifications, but no warnings or errors are displayed in the configuration, no further action is required. If warnings or errors still appear, you might need to update or create the trigger or definition again.
