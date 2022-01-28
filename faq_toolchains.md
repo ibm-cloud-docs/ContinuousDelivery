@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-07-30"
+  years: 2015, 2022
+lastupdated: "2022-01-28"
 
 keywords: tool integrations, error message, Lite plan, toolchains, Cloud Foundry orgs, resource groups, IBM Cloud
 
@@ -104,7 +104,7 @@ You can either create the toolchain in a resource group or create the toolchain 
 {: faq}
 {: support}
 
-A feature to automatically migrate toolchains from a Cloud Foundry org to a resource group is not available yet. Instead, you can manually create the toolchain again in a resource group, and then remove the original toolchain from the Cloud Foundry org.
+Go to the toolchain Overview page. A banner message appears indicating that the toolchain is eligible for migration. Click **migrate this toolchain** within the banner message to open the Migration wizard. The wizard guides you through the process of migrating your toolchain to a resource group. For more information about the migration process, see [Migrating toolchains to a resource group](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains).
 
 
 ## How do I find my toolchain ID?
