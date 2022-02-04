@@ -61,20 +61,20 @@ To quickly find the toolchain template that addresses your specific requirements
  
 1. Review the default information for the toolchain settings:
 
-* The toolchain's name identifies it in {{site.data.keyword.cloud_notm}}. If you want to use a different name, change the toolchain's name.
-* The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
-* The resource group to create the toolchain in. If you want to use a different resource group, select it from the list of available resource groups.
-* The provider for your source repository, such as GitHub, GitLab, or Bitbucket. If you want to use a different source provider, select it from the list of available repos.
+   * The toolchain's name identifies it in {{site.data.keyword.cloud_notm}}. If you want to use a different name, change the toolchain's name.
+   * The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
+   * The resource group to create the toolchain in. If you want to use a different resource group, select it from the list of available resource groups.
+   * The provider for your source repository, such as GitHub, GitLab, or Bitbucket. If you want to use a different source provider, select it from the list of available repos.
  
 1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For information about configuring the tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on which toolchain template you selected and whether you are using {{site.data.keyword.cloud_notm}} Public or {{site.data.keyword.cloud_notm}} Dedicated. For example, when you create a Microservices toolchain on {{site.data.keyword.cloud_notm}} Public, these steps are run:
 
-* The toolchain is created.
-* If you configured Delivery Pipeline, the pipelines are created and run.
-* If you configured Sauce Labs, the toolchain is set up to add Sauce Labs test jobs to the pipelines.
-* If you configured PagerDuty, the toolchain is set up to send alert notifications to the PagerDuty service that you specified.
-* If you configured Slack, the toolchain is set up to send notifications about deployment status to the Slack channel that you specified.
-* If you configured a source code tool integration such as GitHub, the sample GitHub repo is cloned into your GitHub account.
+   * The toolchain is created.
+   * If you configured Delivery Pipeline, the pipelines are created and run.
+   * If you configured Sauce Labs, the toolchain is set up to add Sauce Labs test jobs to the pipelines.
+   * If you configured PagerDuty, the toolchain is set up to send alert notifications to the PagerDuty service that you specified.
+   * If you configured Slack, the toolchain is set up to send notifications about deployment status to the Slack channel that you specified.
+   * If you configured a source code tool integration such as GitHub, the sample GitHub repo is cloned into your GitHub account.
 
 ## Next steps
 {: #next_steps}
