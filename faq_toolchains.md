@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-01-28"
+lastupdated: "2022-02-03"
 
 keywords: tool integrations, error message, Lite plan, toolchains, Cloud Foundry orgs, resource groups, IBM Cloud
 
@@ -85,18 +85,20 @@ Because the template doesn't link to the toolchains that were created from it, t
 {: faq}
 {: support}
 
+Cloud Foundry Org-based {{site.data.keyword.contdelivery_short}} service instances and toolchains are deprecated. You can no longer create Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances. As of 14 January 2022, you cannot create new toolchains within Cloud Foundry orgs. You can create new toolchains in resource groups. As of 14 February 2022, all toolchains within Cloud Foundry orgs that do not contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. As of 14 June 2022, all toolchains within Cloud Foundry orgs that contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. Before these dates, you can use the [toolchain migration wizard](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains) to migrate existing toolchains from Cloud Foundry orgs to resource groups.
+{: deprecated}
+
 When you update the toolchain information directly from Cloud Foundry, it might take a few minutes for the {{site.data.keyword.contdelivery_short}} service to refresh and show your changes. For example, if you add or remove a user from a Cloud Foundry org, it might take a few minutes for {{site.data.keyword.contdelivery_short}} to discover that there is a new user and to allow that user to access the toolchain.
 
 
-## I created a toolchain in a Cloud Foundry org, why does the Toolchains page show that a Continuous Delivery service is required?
+## Why does the Toolchains page show that a Continuous Delivery service is required?
 {: #service_cloud_foundry}
 {: faq}
+{: support}
 
-When you create a toolchain in a resource group or org that does not have an instance of the {{site.data.keyword.contdelivery_short}} service, the toolchain platform attempts to automatically create an instance of the service by using the Lite plan. The error message indicates that the toolchain platform couldn't create the service instance.
+Toolchains in a resource group or org must be accompanied by an instance of the {{site.data.keyword.contdelivery_short}} service in the same resource group or org. The error message indicates that neither the resource group or org contains an instance of the {{site.data.keyword.contdelivery_short}} service. For more information about this requirement, see [Plan limitations and usage](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
-This error might occur when you create a toolchain in the Dallas region and in a Cloud Foundry org that doesn't already have an instance of {{site.data.keyword.contdelivery_short}}. In the Dallas region, you must create all new instances of the {{site.data.keyword.contdelivery_short}} service in resource groups. 
-
-You can either create the toolchain in a resource group or create the toolchain in an org that already has an instance of {{site.data.keyword.contdelivery_short}}.
+If the toolchain is in a resource group, create an instance of the {{site.data.keyword.contdelivery_short}} service in the resource group. If the toolchain is in an org, migrate the toolchain to a resource group that has an instance of the {{site.data.keyword.contdelivery_short}} service. For more information about migrating toolchains, see [Migrating toolchains to a resource group](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains).
   
 
 ## How do I move my toolchain from a Cloud Foundry org to a resource group?
@@ -110,5 +112,6 @@ Go to the toolchain Overview page. A banner message appears indicating that the 
 ## How do I find my toolchain ID?
 {: #find-toolchain-ID}
 {: faq}
+{: support}
 
 You can find your toolchain ID in the URL of your selected toolchain tool. For more information, see [Identifying your toolchain ID](/docs/ContinuousDelivery?topic=ContinuousDelivery-aggregating-multiple-sources). 
