@@ -16,6 +16,8 @@ subcollection: ContinuousDelivery
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
+{:important: .important}
+{:deprecated: .deprecated}
 {:tip: .tip}
 {:download: .download}
 
