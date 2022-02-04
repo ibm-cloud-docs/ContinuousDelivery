@@ -19,6 +19,7 @@ subcollection: ContinuousDelivery
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
