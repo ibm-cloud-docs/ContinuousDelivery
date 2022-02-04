@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-22"
+  years: 2015, 2022
+lastupdated: "2022-02-03"
 
 keywords: IBM Cloud Public, IBM Cloud Dedicated, Use Developer Insights, toolchains, toolchain templates, toolchain tutorials, available regions, tools 
 
@@ -60,7 +60,7 @@ You can use a template as a starting point to [create a toolchain](https://cloud
 Your company's {{site.data.keyword.cloud_notm}} Dedicated environment might not contain the same toolchain templates as the {{site.data.keyword.cloud_notm}} Public site. Toolchain templates that are available on both {{site.data.keyword.cloud_notm}} Public and {{site.data.keyword.cloud_notm}} Dedicated might contain a different set of tool integrations on {{site.data.keyword.cloud_notm}} Dedicated.
 {: note}
 
-Some toolchain templates include tool integrations that are part of the {{site.data.keyword.contdelivery_short}} service. If an instance of that service isn't already in your resource group or organization, when you click **Create** to create the toolchain, the service is automatically added with the selected free Lite plan. For more information and terms, see the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog/services/continuous-delivery/){: external}.
+Some toolchain templates include tool integrations that are part of the {{site.data.keyword.contdelivery_short}} service. If an instance of that service isn't already in your resource group, when you click **Create** to create the toolchain, the service is automatically added with the selected free Lite plan. For more information and terms, see the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog/services/continuous-delivery/){: external}.
 
 The "Develop and test microservices on Cloud Foundry" toolchain deploys an app with catalog and orders APIs that are backed by a Cloudant store. As part of deploying the app, a no-cost Cloudant service instance is created. For more information and terms, see the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog/services/cloudant-nosql-db/){: external}.
 
