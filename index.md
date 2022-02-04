@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-22"
+  years: 2015, 2022
+lastupdated: "2022-02-03"
 
 keywords: IBM Cloud Continuous Delivery, getting started, tutorial, create a toolchain, tool integration, toolchain template, DevOps toolchains
 
@@ -63,11 +63,8 @@ To quickly find the toolchain template that addresses your specific requirements
 
 * The toolchain's name identifies it in {{site.data.keyword.cloud_notm}}. If you want to use a different name, change the toolchain's name.
 * The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
-* The resource group or organization to create the toolchain in. Click the link to switch between selecting resource groups and orgs. If you want to use a different resource group or org, select it from the list of available resource groups or orgs.
+* The resource group to create the toolchain in. If you want to use a different resource group, select it from the list of available resource groups.
 * The provider for your source repository, such as GitHub, GitLab, or Bitbucket. If you want to use a different source provider, select it from the list of available repos.
- 
-Resource groups are available in the Dallas, Washington, Toronto, Sao Paulo, London, Frankfurt, Sydney, Osaka, and Tokyo regions. Cloud Foundry orgs are supported in the Dallas, London, and Frankfurt regions.
-{: important}
  
 1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For information about configuring the tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on which toolchain template you selected and whether you are using {{site.data.keyword.cloud_notm}} Public or {{site.data.keyword.cloud_notm}} Dedicated. For example, when you create a Microservices toolchain on {{site.data.keyword.cloud_notm}} Public, these steps are run:
