@@ -19,6 +19,8 @@ subcollection: ContinuousDelivery
 {:note: .note}
 {:tip: .tip}
 {:important: .important}
+{:deprecated: .deprecated}
+
 
 # Using toolchains
 {: #toolchains-using}
