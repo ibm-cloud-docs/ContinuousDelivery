@@ -14,6 +14,7 @@ subcollection: ContinuousDelivery
 {:external: target="_blank" .external}
 {:tip: .tip}
 {:important: .important}
+{:deprecated: .deprecated}
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 {:ui: .ph data-hd-interface='ui'}
