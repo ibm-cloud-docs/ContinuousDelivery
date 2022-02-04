@@ -13,6 +13,8 @@ subcollection: ContinuousDelivery
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:codeblock: .codeblock}
+{:important: .important}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
