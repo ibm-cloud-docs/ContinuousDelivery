@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2020
-lastupdated: "2021-03-17"
+  years: 2016, 2022
+lastupdated: "2022-02-03"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -31,9 +31,12 @@ The use of {{site.data.keyword.contdelivery_full}} is limited to the building, d
 ## Scope of a service instance
 {: #service_scope}
 
+Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances and toolchains are deprecated. You can no longer create Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances. As of 14 January 2022, you cannot create new toolchains within Cloud Foundry orgs. You can create new toolchains in resource groups. As of 14 February 2022, all toolchains within Cloud Foundry orgs that do not contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. As of 14 June 2022, all toolchains within Cloud Foundry orgs that contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. Before these dates, you can use the [toolchain migration wizard](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains) to migrate existing toolchains from Cloud Foundry orgs to resource groups.
+{: deprecated}
+
 You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){: external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, {{site.data.keyword.DRA_short}}, and Eclipse Orion {{site.data.keyword.webide}} tool integrations. A service instance might belong to either a [resource group](/docs/services/account?topic=account-rgs) or to an {{site.data.keyword.Bluemix_notm}} organization (org). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group or org meters and governs your usage of all of the toolchains in the same region and resource group or org.
 
-You can create *new* instances of the {{site.data.keyword.contdelivery_short}} service only in resource groups. If you are missing a {{site.data.keyword.contdelivery_short}} service for an org that contains toolchains, you can either create the toolchains again in a resource group or contact [IBM Support](https://cloud.ibm.com/unifiedsupport){: external} for help. The migration of toolchains from orgs to resource groups is not currently supported.
+You can create *new* instances of the {{site.data.keyword.contdelivery_short}} service only in resource groups. If you are missing a {{site.data.keyword.contdelivery_short}} service for an org that contains toolchains, you can migrate the toolchains to a resource group that has an instance of the {{site.data.keyword.contdelivery_short}} service. For more information about migrating toolchains, see [Migrating toolchains to a resource group](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains).
 
 You can have only one Lite service per account. It is recommended that you use the Professional plan if you want to work with toolchains in multiple orgs or resource groups, or within multiple regions.
 {: tip}
