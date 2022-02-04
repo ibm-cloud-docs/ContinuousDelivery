@@ -45,20 +45,20 @@ You can use a template as a starting point to [create a toolchain](https://cloud
 1. Review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
 1. Review the default information for the toolchain settings:
 
-* The toolchain's name identifies it in {{site.data.keyword.cloud_notm}}. If you want to use a different name, change the toolchain's name.
-* The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
-* The resource group to create the toolchain in. If you want to use a different resource group, select it from the list of available resource groups.
-* The provider for your source repository, such as GitHub or GitLab. If you want to use a different source provider, select it from the list of available repos.
+   * The toolchain's name identifies it in {{site.data.keyword.cloud_notm}}. If you want to use a different name, change the toolchain's name.
+   * The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
+   * The resource group to create the toolchain in. If you want to use a different resource group, select it from the list of available resource groups.
+   * The provider for your source repository, such as GitHub or GitLab. If you want to use a different source provider, select it from the list of available repos.
 
 1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. For more information about configuring the tool integrations, see [Configuring tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations). 
 1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on which toolchain template you selected and whether you are using {{site.data.keyword.cloud_notm}} Public or {{site.data.keyword.cloud_notm}} Dedicated. For example, when you create a Microservices toolchain on {{site.data.keyword.cloud_notm}} Public, these steps are run:
 
-* The toolchain is created.
-* If you configured Delivery Pipeline, the pipelines are created and triggered.
-* If you configured Sauce Labs, the toolchain is set up to add Sauce Labs test jobs to the pipelines.
-* If you configured PagerDuty, the toolchain is set up to send alert notifications to the PagerDuty service that you specified.
-* If you configured Slack, the toolchain is set up to send notifications about deployment status to the Slack channel that you specified.
-* If you configured a source code tool integration such as GitHub, the sample GitHub repo is cloned into your GitHub account.
+   * The toolchain is created.
+   * If you configured Delivery Pipeline, the pipelines are created and triggered.
+   * If you configured Sauce Labs, the toolchain is set up to add Sauce Labs test jobs to the pipelines.
+   * If you configured PagerDuty, the toolchain is set up to send alert notifications to the PagerDuty service that you specified.
+   * If you configured Slack, the toolchain is set up to send notifications about deployment status to the Slack channel that you specified.
+   * If you configured a source code tool integration such as GitHub, the sample GitHub repo is cloned into your GitHub account.
 
 
 ## Creating an empty toolchain and adding the Git tool integration
@@ -73,9 +73,9 @@ You can create an empty toolchain and then add a Git tool integration to the too
 1. On the **Create a Toolchain** page, click the **Build your own toolchain** template.
 1. Review the default information for the toolchain settings:
 
-* The toolchain's name identifies it in {{site.data.keyword.cloud_notm}}. If you want to use a different name, change the toolchain's name.
-* The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
-* The resource group to create the toolchain in. If you want to use a different resource group, select it from the list of available resource groups.
+   * The toolchain's name identifies it in {{site.data.keyword.cloud_notm}}. If you want to use a different name, change the toolchain's name.
+   * The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
+   * The resource group to create the toolchain in. If you want to use a different resource group, select it from the list of available resource groups.
 
 1. Click **Create** to create your empty toolchain.
 1. Click **Add Tool**, and then select **GitHub** or **{{site.data.keyword.gitrepos}}** to add either of these tool integrations to your toolchain.
