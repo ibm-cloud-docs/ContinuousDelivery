@@ -23,6 +23,7 @@ subcollection: ContinuousDelivery
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # FAQs for toolchains
