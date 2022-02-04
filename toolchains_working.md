@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2021
+  years: 2015, 2022
 
-lastupdated: "2021-11-22"
+lastupdated: "2022-02-03"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -34,13 +34,14 @@ subcollection: ContinuousDelivery
 A *toolchain* is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
 {: shortdesc}
 
-Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.cloud}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app.
+Open toolchains are available on {{site.data.keyword.cloud}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app.
+
+Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances and toolchains are deprecated. You can no longer create Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances. As of 14 January 2022, you cannot create new toolchains within Cloud Foundry orgs. You can create new toolchains in resource groups. As of 14 February 2022, all toolchains within Cloud Foundry orgs that do not contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. As of 14 June 2022, all toolchains within Cloud Foundry orgs that contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. Before these dates, you can use the [toolchain migration wizard](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains) to migrate existing toolchains from Cloud Foundry orgs to resource groups.
+{: deprecated}
 
 Each toolchain is associated with a specific resource group or organization (org). If a toolchain is associated with a resource group, any user that has Identity and Access Management (IAM) Viewer permission for the toolchain resource or the resource group that contains it can access the toolchain. If the toolchain is associated with an org, any user that is a member of that org can be added to the access control list for any of its associated toolchains. For more information about access control for toolchains in Cloud Foundry orgs, see [Managing user access to toolchains in Cloud Foundry orgs](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-cf-security). For more information about access control for toolchains in resource groups, see [Managing user access to toolchains in resource groups](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
 
 On {{site.data.keyword.cloud_notm}} Public, depending on the template or toolchain that you use, the toolchain might include a GitHub or Git repository (repo) that is populated with app starter code and a preconfigured delivery pipeline. When you push changes to the toolchain's repo, the delivery pipeline automatically builds and deploys the app to {{site.data.keyword.cloud_notm}}.
-
-On {{site.data.keyword.cloud_notm}} Dedicated, depending on the template or toolchain that you use, the toolchain might include a GitHub repo that is populated with app starter code and a preconfigured delivery pipeline. When you push changes to the toolchain's GitHub repo, the delivery pipeline automatically builds and deploys the apps to {{site.data.keyword.cloud_notm}}.
 
 To see which toolchains and tool integrations are available, see [Toolchain availability, templates, and tutorials](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_about).
 
@@ -50,7 +51,6 @@ To see which toolchains and tool integrations are available, see [Toolchain avai
 You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes a specific set of tool integrations. Depending on the template that you use, you can create a toolchain that has a specific set of tool integrations or an empty toolchain that you can add tool integrations to. Learn more about how to use the templates from the [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage/category/tools){: external}.
 
 1. If you use {{site.data.keyword.cloud_notm}} Public, log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
-1. If you use {{site.data.keyword.cloud_notm}} Dedicated, log in to your Dedicated environment on {{site.data.keyword.cloud_notm}}
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
 1. On the **Toolchains** page, click **Create a Toolchain**.
 1. On the **Create a Toolchain** page, click a toolchain template.
@@ -67,11 +67,8 @@ You can use a template as a starting point to [create a toolchain](https://cloud
 
    * The toolchain's name identifies it in {{site.data.keyword.cloud_notm}}. If you want to use a different name, change the toolchain's name.
    * The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
-   * The resource group or organization to create the toolchain in. Click the link to switch between selecting resource groups and orgs. If you want to use a different resource group or org, select it from the list of available resource groups or orgs.
+   * The resource group to create the toolchain in. If you want to use a different resource group, select it from the list of available resource groups.
    * The provider for your source repository, such as GitHub, GitLab, or Bitbucket. If you want to use a different source provider, select it from the list of available repos.
- 
-   Resource groups are available in the Dallas, Washington, Toronto, Sao Paulo, London, Frankfurt, Sydney, Osaka, and Tokyo regions. Cloud Foundry orgs are supported in the Dallas, London, and Frankfurt regions.
-   {: important}
 
 1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For more information about configuring the tool integrations, see [Configuring tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 
