@@ -18,7 +18,7 @@ subcollection: ContinuousDelivery
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:note:.deprecated}
+{:deprecated: .deprecated}
 {:tip: .tip}
 {:important: .important}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
