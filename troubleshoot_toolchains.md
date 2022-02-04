@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-17"
+  years: 2015, 2022
+lastupdated: "2022-02-04"
 
 keywords: troubleshoot, toolchains, tool integrations
 
@@ -90,7 +90,7 @@ You can try to configure the tool integration again:
 {: troubleshoot}
 {: support}
 
-Before you can create a toolchain in a Cloud Foundry org, you must have an existing org and space, with the Developer role assigned. 
+Before you can create a toolchain that deploys to a Cloud Foundry org, you must have an existing org and space, with the Developer role assigned. 
 
 You try to create a toolchain to deploy your app to Cloud Foundry. After you enter your API key, the **Organization** and **Space** fields are empty and you cannot create your toolchain.
 {: tsSymptoms} 
