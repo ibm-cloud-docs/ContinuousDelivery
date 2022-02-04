@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-09-10"
+  years: 2015, 2022
+lastupdated: "2022-02-03"
 
 keywords: troubleshoot, toolchains, Cloud Foundry
 
@@ -36,7 +36,10 @@ General problems with using {{site.data.keyword.contdelivery_full}} might includ
 {: troubleshoot}
 {: support}
 
-You can no longer create instances of the {{site.data.keyword.contdelivery_short}} service in Cloud Foundry orgs. 
+Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances and toolchains are deprecated. You can no longer create Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances. As of 14 January 2022, you cannot create new toolchains within Cloud Foundry orgs. You can create new toolchains in resource groups. As of 14 February 2022, all toolchains within Cloud Foundry orgs that do not contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. As of 14 June 2022, all toolchains within Cloud Foundry orgs that contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. Before these dates, you can use the [toolchain migration wizard](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains) to migrate existing toolchains from Cloud Foundry orgs to resource groups.
+{: deprecated}
+
+You can no longer create instances of the {{site.data.keyword.contdelivery_short}} service in Cloud Foundry orgs. You can no longer create new toolchains in Cloud Foundry orgs.
 
 The following message is displayed on the Toolchains page for your toolchain in a Cloud Foundry org:
 {: tsSymptoms}
@@ -45,10 +48,10 @@ The following message is displayed on the Toolchains page for your toolchain in 
 
 When you click **Add the service** there is no option to create {{site.data.keyword.contdelivery_short}} in a Cloud Foundry org. You can only create {{site.data.keyword.contdelivery_short}} in a resource group.
 
-Resource groups have replaced Cloud Foundry orgs as the preferred containers for service instances. However, you can still create toolchains in Cloud Foundry orgs to support pre-existing {{site.data.keyword.contdelivery_short}} instances in Cloud Foundry orgs.
+Resource groups replaced Cloud Foundry orgs for the management of {{site.data.keyword.contdelivery_short}} service instances and toolchains.
 {: tsCauses}
 
-Create your toolchain again in resource groups, and then remove the original toolchain from the Cloud Foundry org. Alternatively, you can ignore the error message until a method to migrate existing toolchains from Cloud Foundry orgs to resource groups is provided.
+Migrate your toolchains from Cloud Foundry orgs to resource groups. For more information about migrating toolchains, see [Migrating toolchains to a resource group](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains).
 {: tsResolve}
 
 
@@ -67,10 +70,10 @@ I tried to delete {{site.data.keyword.contdelivery_short}} from a Cloud Foundry 
 To delete a {{site.data.keyword.contdelivery_short}} service instance from a Cloud Foundry org, you cannot have any toolchains in the same account, region, and org as the service instance.
 {: tsCauses}
 
-Locate and delete any toolchains that are in the same account, region, and org as the {{site.data.keyword.contdelivery_short}} service instance.
+Locate any toolchains that are in the same account, region, and org as the {{site.data.keyword.contdelivery_short}} service instance. For each toolchain, you can either migrate the toolchain to a resource group, or delete the toolchain. For more information about migrating toolchains, see [Migrating toolchains to a resource group](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains).
 {: tsResolve}
 
-Org-based toolchains aren't visible from the command line or the resource list. To find and delete these toolchains, go to the [Toolchains](https://cloud.ibm.com/devops){: external} page. When you search for toolchains that are blocking the deletion of the {{site.data.keyword.contdelivery_short}} service instance, look in the account, region, and org where the service instance is located.
+Org-based toolchains aren't visible from the command line or the resource list. To find and either migrate or delete these toolchains, go to the [Toolchains](https://cloud.ibm.com/devops){: external} page. When you search for toolchains that are blocking the deletion of the {{site.data.keyword.contdelivery_short}} service instance, look in the account, region, and org where the service instance is located.
 {: tip}
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
@@ -78,8 +81,8 @@ Org-based toolchains aren't visible from the command line or the resource list. 
 1. Go to the [Resource list](https://cloud.ibm.com/resources){: external} for your {{site.data.keyword.cloud_notm}} account.
 1. Make note of the location and the org that the {{site.data.keyword.cloud_notm}} service is contained in.
 1. On the [Toolchains](https://cloud.ibm.com/devops/toolchains){: external} page, select the location and Cloud Foundry org for the {{site.data.keyword.contdelivery_short}} service instance. All of the toolchains that are associated with this service instance are displayed.
-1. [Delete each of the toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#deleting_a_toolchain). This action cannot be undone.
-1. After you delete all of the toolchains, delete the {{site.data.keyword.contdelivery_short}} service instance from the [Resource list](https://cloud.ibm.com/resources){: external}.
+1. Either [migrate](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains) or [delete](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using#deleting_a_toolchain) each of the toolchains. These actions cannot be undone.
+1. After you migrate or delete all of the toolchains, delete the {{site.data.keyword.contdelivery_short}} service instance from the [Resource list](https://cloud.ibm.com/resources){: external}.
 
 You must repeat this procedure for each {{site.data.keyword.contdelivery_short}} service instance that is associated with toolchains.
 {: important}
