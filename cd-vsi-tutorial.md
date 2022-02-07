@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2021
-lastupdated: "2021-12-20"
+   years: 2021, 2022
+lastupdated: "2022-02-07"
 lasttested: "2021-05-13"
 
 keywords: Virtual Server Instance, code repositories, DevOps Insights, non-containerized, java application, vsi, gitops, toolchain, pipeline, Virtual Machine, vm
@@ -90,7 +90,7 @@ Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the menu
 2. The toolchain's name identifies it in {{site.data.keyword.cloud_notm}}. If you want to use a different name, change the toolchain's name. Because the toolchain name is used to construct the URL that is used to access your app, make sure to specify a unique name.
 3. By default, the toolchain creates the source repo in {{site.data.keyword.gitrepos}}. To use a different provider for your Git source repo, such as GitHub or GitLab, select it from the list of available repos.
 
-   This toolchain uses tools that are included in the {{site.data.keyword.contdelivery_short}} service. If an instance of that service isn't already in the selected resource group or organization (org), it is added automatically with the free Lite plan when you click **Create** to create the toolchain.
+   This toolchain uses tools that are included in the {{site.data.keyword.contdelivery_short}} service. If an instance of that service isn't already in the selected resource group, it is added automatically with the free Lite plan when you click **Create** to create the toolchain.
    {: tip}
 
 ### Configure the App repo
