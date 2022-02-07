@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-10-05"
+  years: 2015, 2022
+lastupdated: "2022-02-07"
 
 keywords: Delivery Pipeline, tool integration, toolchains, yaml, pipeline jobs
 
@@ -47,8 +47,7 @@ For more information about pipeline jobs, see [Jobs](/docs/ContinuousDelivery?to
 {: faq}
 {: support}
 
-Each pipeline job can run for a maximum of 60 minutes. However, you can increase the time limit to 24 hours by using [{{site.data.keyword.deliverypipeline}} Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
-
+The lengths of Classic pipeline jobs and Tekton pipeline runs are determined by the private worker that the pipeline run occurs on. On IBM Managed workers, this value is 6 hours. On self-managed [{{site.data.keyword.deliverypipeline}} Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers), the default length of time for a pipeline run is 24 hours.
 
 ## How secure are the pipeline secure properties?
 {: #pipeline_secure_properties}
