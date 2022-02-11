@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-11-22"
+  years: 2018, 2022
+lastupdated: "2022-02-11"
 
 keywords: high availability, disaster recovery, SLA
 
@@ -27,6 +27,6 @@ All {{site.data.keyword.cloud}} general availability (GA) services have a Servic
 
 {{site.data.keyword.contdelivery_short}} does not replicate data outside of a region, except for backup data. When possible, backup data is kept within the data centers of a country but data is always kept within a geography. European data does not leave the EU. To learn more about where {{site.data.keyword.contdelivery_short}} backup data is stored, see [Object Storage Location](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-compute-isolation#cd-object-storage).
 
-{{site.data.keyword.contdelivery_short}} is available only on the public cloud, but the tools that are used with {{site.data.keyword.contdelivery_short}} can run in dedicated or public cloud environments and in on-premises environments. 
+{{site.data.keyword.contdelivery_short}} is available only on the public cloud, but the tools that are used with {{site.data.keyword.contdelivery_short}} can run in public cloud environments and in on-premises environments. 
 
 See [ensure zero downtime](/docs/overview?topic=overview-zero-downtime#zero-downtime) to learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}. For more information about high availability and disaster recovery for {{site.data.keyword.contdelivery_short}}, see [Your responsibilities with using {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-responsibilities-cd#disaster-recovery). You can also find information about [Service Level Agreements](/docs/overview?topic=overview-slas).
