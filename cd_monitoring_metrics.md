@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-04-01"
+  years: 2021, 2022
+lastupdated: "2022-02-11"
 
 keywords: IBM Cloud, monitoring, supertenant
 
@@ -182,7 +182,7 @@ The following attributes are available for segmenting all of the metrics listed 
 
 | Attribute | Attribute Name | Attribute Description | Valid Values |
 |:-----------|:----------------|:-----------------------|:--------------|
-| `Cloud Type` | `ibm_ctype` | Type of Cloud         | Valid values are `public`, `dedicated`, or `local`. |
+| `Cloud Type` | `ibm_ctype` | Type of Cloud         | Valid values are `public` or `local`. |
 | `Location` | `ibm_location` | Location of the monitored resource. | You can specify a region, a data center, or `global`. |
 | `Resource group` | `ibm_resource_group_name` | Resource group that is associated with the service instance. | Choose a resource group from the ones that are available in your account. |
 | `Scope` | `ibm_scope` | The extent of the data samples that are considered.  | You can choose the scope to be the account, an organization, or a space GUID that is associated with this metric. |
