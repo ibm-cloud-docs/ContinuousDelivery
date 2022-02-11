@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-03"
+lastupdated: "2022-02-11"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, Git source control, authentication, GitHub 
 
@@ -37,8 +37,7 @@ To see which toolchain templates contain the {{site.data.keyword.gitrepos}} or G
 
 You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes either a {{site.data.keyword.gitrepos}} or GitHub tool integration. Learn more about how to use the templates from the [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage/category/tools){: external}.
 
-1. If you use {{site.data.keyword.cloud_notm}} Public, log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
-1. If you use {{site.data.keyword.cloud_notm}} Dedicated, log in to your Dedicated environment on {{site.data.keyword.cloud_notm}}
+1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**.
 1. On the DevOps dashboard, on the **Toolchains** page, click **Create a Toolchain**.
 1. On the **Create a Toolchain** page, click a toolchain template.
@@ -51,7 +50,7 @@ You can use a template as a starting point to [create a toolchain](https://cloud
    * The provider for your source repository, such as GitHub or GitLab. If you want to use a different source provider, select it from the list of available repos.
 
 1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. For more information about configuring the tool integrations, see [Configuring tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations). 
-1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on which toolchain template you selected and whether you are using {{site.data.keyword.cloud_notm}} Public or {{site.data.keyword.cloud_notm}} Dedicated. For example, when you create a Microservices toolchain on {{site.data.keyword.cloud_notm}} Public, these steps are run:
+1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on which toolchain template you selected. For example, when you create a Microservices toolchain on {{site.data.keyword.cloud_notm}} Public, these steps are run:
 
    * The toolchain is created.
    * If you configured Delivery Pipeline, the pipelines are created and triggered.
@@ -66,8 +65,7 @@ You can use a template as a starting point to [create a toolchain](https://cloud
 
 You can create an empty toolchain and then add a Git tool integration to the toolchain to start adding Git repos.
 
-1. If you use {{site.data.keyword.cloud_notm}} Public, log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
-1. If you use {{site.data.keyword.cloud_notm}} Dedicated, log in to your Dedicated environment on {{site.data.keyword.cloud_notm}}
+1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**.
 1. On the DevOps dashboard, on the **Toolchains** page, click **Create a Toolchain**.
 1. On the **Create a Toolchain** page, click the **Build your own toolchain** template.
