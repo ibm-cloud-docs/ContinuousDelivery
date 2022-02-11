@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-19"
+  years: 2015, 2022
+lastupdated: "2022-02-11"
 
-keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, GitLab
+keywords: tool integrations, IBM Cloud Public, GitLab
 
 subcollection: ContinuousDelivery
 
@@ -33,9 +33,6 @@ If you are configuring this tool integration as you are creating the toolchain, 
 
 1. If you are storing your source code in a GitLab repo, in the Configurable Integrations section, click **GitLab**. If you are configuring this tool integration on {{site.data.keyword.cloud_notm}} Public and you did not authorize {{site.data.keyword.cloud_notm}} to access GitLab, click **Authorize** to go to the GitLab website. If you don't have an active GitLab session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.cloud_notm}} to access your GitLab account. If you have an active GitLab session but you didn't enter your password recently, you might be prompted to enter your GitLab password to confirm.
 1. If you are using a repo on your own GitLab server, in the Configurable Integrations section, click **Add custom server**.
-
-The network must be able to access the target GitLab server from an {{site.data.keyword.Bluemix_notm}} Dedicated environment.
-{: tip}
 
 Type a title for your custom GitLab server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**.
 
