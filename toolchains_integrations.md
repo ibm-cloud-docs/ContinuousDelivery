@@ -29,7 +29,7 @@ You can configure tool integrations that support development, deployment, and op
 
 The tool integrations that are available to you depend on the region of your toolchain and the availability of tool integrations in that region.
 
-|Tool Integration |Available on {{site.data.keyword.cloud_notm}} Public	|
+|Tool Integration |Regions	|
 |:----------|:------------------------------|
 |[{{site.data.keyword.appconfig_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-app-configuration)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
 |[Artifactory](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-artifactory)		|Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|Yes		|
