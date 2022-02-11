@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-03"
+lastupdated: "2022-02-11"
 
 keywords: user management function, toolchains, tool integrations, user access, Cloud Foundry org
 
@@ -59,7 +59,7 @@ If you deferred the configuration of a tool integration when you created a toolc
 ## Adding a tool integration
 {: #adding_a_tool_integration}
 
-You can add and configure tool integrations for your toolchain. The available tool integrations differ depending on whether you use {{site.data.keyword.cloud_notm}} Public or {{site.data.keyword.cloud_notm}} Dedicated.
+You can add and configure tool integrations for your toolchain.
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
 1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
