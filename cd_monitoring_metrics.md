@@ -139,9 +139,9 @@ You cannot change the Default dashboard. To customize the dashboard, you can cre
 {: #cd_metrics_by_plan}
 
 | Metric Name |Lite|Professional|
-|:-----------|:--------|:--------|:--------|
+|:-----------|:--------|:--------|
 | [Pipeline queue time](#cd_ibm_toolchain_pipeline_queue_time_seconds) | ![Checkmark icon](../../icons/checkmark-icon.svg) | ![Checkmark icon](../../icons/checkmark-icon.svg) |
-{: caption="Table 3: Metrics Available by Plan Names" caption-side="top"}
+{: caption="Table 3: Metrics available by plan names" caption-side="top"}
 
 
 ## Predefined alerts
