@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-05-11"
+  years: 2021, 2022
+lastupdated: "2022-02-14"
 
-keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, IBM Secrets Manager
+keywords: tool integrations, IBM Cloud Public, IBM Secrets Manager
 
 subcollection: ContinuousDelivery
 

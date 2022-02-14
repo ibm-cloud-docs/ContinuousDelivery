@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-19"
+  years: 2015, 2022
+lastupdated: "2022-02-14"
 
-keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Rational Team Concert
+keywords: tool integrations, IBM Cloud Public, Rational Team Concert
 
 subcollection: ContinuousDelivery
 

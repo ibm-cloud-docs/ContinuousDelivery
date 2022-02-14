@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-05-31"
+  years: 2015, 2022
+lastupdated: "2022-02-14"
 
-keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Delivery Pipeline
+keywords: tool integrations, IBM Cloud Public, Delivery Pipeline
 subcollection: ContinuousDelivery
 
 ---

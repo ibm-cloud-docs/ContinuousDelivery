@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-09-15"
+  years: 2021, 2022
+lastupdated: "2022-02-14"
 
-keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Security and Compliance Center
+keywords: tool integrations, IBM Cloud Public, Security and Compliance Center
 
 subcollection: ContinuousDelivery
 

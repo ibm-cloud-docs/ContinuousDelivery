@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-05-31"
+  years: 2015, 2022
+lastupdated: "2022-02-14"
 
-keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Eclipse Orion Web IDE, Web IDE
+keywords: tool integrations, IBM Cloud Public, Eclipse Orion Web IDE, Web IDE
 
 subcollection: ContinuousDelivery
 

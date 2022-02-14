@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-12-28"
+  years: 2015, 2022
+lastupdated: "2022-02-14"
 
-keywords: tool integrations, IBM Cloud Public, IBM Cloud Dedicated, Sonarqube
+keywords: tool integrations, IBM Cloud Public, Sonarqube
 
 subcollection: ContinuousDelivery
 
