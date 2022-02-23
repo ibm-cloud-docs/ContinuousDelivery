@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-02-23"
 
 keywords: tool integrations, IBM Cloud Public, Bitbucket
 
