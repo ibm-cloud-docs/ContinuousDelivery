@@ -77,4 +77,4 @@ If you don't have owner or master privileges for the repo that you are linking t
 ## Learn more about Bitbucket
 {: #learn_more_bitbucket}
 
-To learn more about Bitbucket, see the [Bitbucket article](https://www.ibm.com/cloud/garage/content/code/tool_bitbucket/){: external} on the IBM Cloud Garage Method.
+To learn more about Bitbucket, see the [Bitbucket Cloud resources](https://support.atlassian.com/bitbucket-cloud/resources/){: external}.
