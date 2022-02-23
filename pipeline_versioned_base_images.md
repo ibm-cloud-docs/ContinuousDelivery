@@ -3268,4 +3268,4 @@ To view the contents of version 2.0, from the running image, type `default_versi
 3. The **Pipeline image version** option shows the current image version that is available, and the version that you are using for the selected pipeline job. To change the image version to use the current version to run the pipeline job, select **Latest**.
 
 To run pipeline jobs with the image that you selected on the pipeline configuration page, select **Pipeline default**.
-{: tip}
+{: tip} 
