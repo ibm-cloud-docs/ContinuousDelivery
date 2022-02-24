@@ -92,6 +92,7 @@ toc:
               label: Tool integrations
               topics: 
               - toolchains_integrations.md
+              - app_config_integration.md
               - artifactory_integration.md
               - bitbucket_integration.md
               - delivery_pipeline_integration.md
