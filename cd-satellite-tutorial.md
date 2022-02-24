@@ -2,7 +2,7 @@
 
 copyright:
    years: 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-02-24"
 
 keywords: deployment strategies, Satellite, satellite, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -110,7 +110,7 @@ The toolchain region can differ from the cluster and registry region.
 
 The toolchain creates a Continuous Deployment Pipeline to deploy the application Docker image on the cluster group that is defined in {{site.data.keyword.satelliteshort}}.
 
-1. Click **Multiple clusters via Satellite Config** to deploy your app by using {{site.data.keyword.satelliteshort}}.
+1. Click **Multiple clusters via Satellite** to deploy your app by using {{site.data.keyword.satelliteshort}}.
 
    ![Kubernetes secure app deployment strategies](images/sat_setup_ds-selection.png){: caption="Figure 2. Deployment strategies" caption-side="bottom"}
    
@@ -126,7 +126,7 @@ In the Application step, the recommended options for the application source code
 
 You can change the name of the app repo. The region of the repo remains the same as the region of the toolchain.
 
-The toolchain template provides a [sample NodeJS](https://us-south.git.cloud.ibm.com/open-toolchain/hello-compliance-app) app. If you want to link an existing Application repo for the toolchain, select **Bring your own app** and specify the URL for the repo. The toolchain supports linking only to existing {{site.data.keyword.gitrepos}} repos.
+The toolchain template provides a [Hello Containers Application](https://us-south.git.cloud.ibm.com/open-toolchain/hello-containers) app. If you want to link an existing Application repo for the toolchain, select **Bring your own app** and specify the URL for the repo. The toolchain supports linking only to existing {{site.data.keyword.gitrepos}} repos.
 
 By default, the application repo template is cloned to your {{site.data.keyword.gitrepos}} org. To change the org, enable **Advanced options** and specify the repo owner.
 {: tip}
@@ -184,7 +184,7 @@ If the API key has the required access, the following fields automatically load 
 
 * **Satellite Cluster group name:** The name of the cluster group that was created in {{site.data.keyword.satelliteshort}}. Your app is deployed to  this cluster group.
 
-* **Satellite cluster group namespace:** If the cluster namespace does not exist n the clusters within the cluster group, the toolchain creates it.
+* **Cluster namespace:** If the cluster namespace does not exist in the clusters within the cluster group, the toolchain creates it.
 
 ![Kubernetes secure app deployment target details for Rolling or Blue-Green](images/kub_setup_satellite_dep_target.png){: caption="Figure 7. Kubernetes secure app Rolling deployment target details" caption-side="bottom"}
 
