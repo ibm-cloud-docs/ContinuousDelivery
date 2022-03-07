@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-11-22"
+  years: 2019, 2022
+lastupdated: "2022-03-07"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -243,38 +243,37 @@ Before you can register the private worker with {{site.data.keyword.cloud_notm}}
 
 You must register a private worker with the specific {{site.data.keyword.cloud_notm}} region that corresponds to the location of the delivery pipelines that you want to enable.
 
-1. Go to `https://private-worker-service.{REGION}.devops.cloud.ibm.com`, where `{REGION}` is the location of the toolchain's pipeline. You can specify any of the following values for the region:
+1. Specify a meaningful name for your private worker. This name must start and end with lowercase alphanumeric characters and can also contain `_` or `.` characters.
+2. Run the following command with the service ID and API key that you created previously, the private worker name, and the `{REGION}` which is the location of the toolchain's pipeline.
 
-   * au-syd (Sydney, Australia)
-   * eu-de (Frankfurt, Germany)
-   * eu-gb  (London, United Kingdom)
-   * jp-tok (Tokyo, Japan)
-   * jp-osa (Osaka, Japan)
-   * us-south (Dallas, US)
-   * us-east (Washington DC, US)
-   * ca-tor (Toronto, CA)
-   * br-sao (Sao Paulo, Brazil)
+   ```text
+   $ kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install/worker?serviceId={SERVICE_ID}&apikey={API_KEY}&name={WORKER_NAME}"
 
-2. Specify a meaningful name for your private worker. This name must start and end with lowercase alphanumeric characters and can also contain `_` or `.` characters.
-3. Run the following command with the service ID and API key that you created previously, and the private worker name:
+   workeragent.devops.cloud.ibm.com/worker-name created
+   secret/worker-name-auth created
 
-```text
-$ kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install/worker?serviceId={SERVICE_ID}&apikey={API_KEY}&name={WORKER_NAME}"
+   ```
 
-workeragent.devops.cloud.ibm.com/worker-name created
-secret/worker-name-auth created
+   You can specify any of the following values for the `{REGION}`:
 
-```
+      * au-syd (Sydney, Australia)
+      * eu-de (Frankfurt, Germany)
+      * eu-gb  (London, United Kingdom)
+      * jp-tok (Tokyo, Japan)
+      * jp-osa (Osaka, Japan)
+      * us-south (Dallas, US)
+      * us-east (Washington DC, US)
+      * ca-tor (Toronto, CA)
+      * br-sao (Sao Paulo, Brazil)
+   {: tip}
 
+3. To verify that the agent is registered correctly, type the following command:
 
-To verify that the agent is registered correctly, type the following command:
-
-```text
-$ kubectl get workeragents
-NAME           SERVICEID     AGENT   REGISTERED   VERSION   AUTH   CONSTRAINED   PAUSED
-<worker_name>  <ServiceId>   OK      Succeeded    OK        OK     false         false
-```
-{: tip}
+   ```text
+   $ kubectl get workeragents
+   NAME           SERVICEID     AGENT   REGISTERED   VERSION   AUTH   CONSTRAINED   PAUSED
+   <worker_name>  <ServiceId>   OK      Succeeded    OK        OK     false         false
+   ```
 
 
 ## Using Private Worker agent attributes
