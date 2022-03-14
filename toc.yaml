@@ -2,6 +2,7 @@
 toc:
   properties:
     subcollection: ContinuousDelivery
+    service-name: continuous-delivery
     version: 2
     category: dev_ops
     audience: service
