@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-07"
+lastupdated: "2022-03-15"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -59,6 +59,9 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
 
    To pull images from the `icr.io` container registry, you might need to define a specific Kubernetes ClusterImagePolicy.
    {: tip}
+
+Because private workers are not compatible with {{site.data.keyword.openshiftlong}} Pipelines, it is recommended that you do not install them on a cluster with {{site.data.keyword.redhat_openshift_notm}} pipelines.
+{: important}  
   
 ### Self-hosting container images for {{site.data.keyword.deliverypipeline}} Private Worker
 {: #self_host_pw_} 
