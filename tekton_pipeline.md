@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-01-18"
+lastupdated: "2022-03-15"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -53,9 +53,6 @@ The Tekton Pipelines project is a beta release. You must update your pipeline wi
 
 * **Classic**: Classic delivery pipelines are created graphically, with the status embedded in the pipeline diagram. These pipelines can run on shared workers in the cloud or on private workers that run on your own Kubernetes cluster. 
 * **Tekton**: Tekton delivery pipelines are created within yaml files that define pipelines as a set of Kubernetes resources. You can edit those yaml files to change the behaviour of a pipeline. Tekton pipelines can run on private workers that run on your own cluster. They can also run on IBM-managed workers on the public cloud. The Tekton integration provides a dashboard that you can use to view the output of Tekton pipeline runs. It also provides mechanisms for identifying the pipeline definitions repo, the pipeline triggers, where the pipeline runs, and the storage and retrieval of properties.
-
-Pipelines run concurrently unless you configure them to serialize by using the `Limit concurrent runs` option.
-{: important}
 
 Both types of pipelines isolate jobs or steps from one another by running in separate containers, and by using an image that you choose. Classic and Tekton pipelines both exist in a [toolchain](https://cloud.ibm.com/devops/toolchains){: external} and depend on that toolchain to add more tool integrations that are used in the build, test, and deployment process.
 {: tip}
@@ -125,6 +122,9 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 1. In the **Triggers** section, click **Add** to create a trigger, select the type of trigger to add, and associate the trigger with an event listener. The list of available event listeners contains the listeners that are defined in the pipeline code repo.
  
    Triggers are based on [Tekton trigger definitions](https://github.com/tektoncd/triggers){: external}. Git respository triggers use the event listener that they are mapped to to extract information from the incoming event payload and create Kubernetes resources. These resources are applied to a Tekton `PipelineRun` resource.
+   {: tip}
+
+   Triggered pipeline runs are run concurrently unless you configure the trigger to serialize runs by using the `Limit concurrent runs` option. When this option is enabled, you can limit the number of simultaneous runs that can be started by this trigger. For example, if the maximum limit is set to 1, only one pipeline run for this trigger runs at a time and any others are queued in a waiting state. A maximum of 10 runs (4 if you are using IBM Managed Workers) are queued in a waiting state before subsequent requests are automatically cancelled.
    {: tip}
 
    **Manual triggers** run when you click the **Run** pipeline button and select the trigger.
