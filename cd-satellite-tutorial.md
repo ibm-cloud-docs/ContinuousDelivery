@@ -2,7 +2,7 @@
 
 copyright:
    years: 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-03-23"
 
 keywords: deployment strategies, Satellite, satellite, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -223,7 +223,7 @@ You can configure the individual toolchain integrations after the pipeline is cr
 {: #cd-explore-satellite-toolchain}
 {: step}
 
-After you create your toolchain, it shows each of the tool integrations that are part of the toolchain in a diagram. The diagram in the following image is an example. The diagram that you view for your toolchains might show different tool integrations or different data for those integrations.
+After you create your toolchain, it shows each of the tool integrations that are part of the toolchain in a diagram.
 
 ### Explore the pipelines
 {: #cd-satellite-pipelines}
@@ -240,11 +240,11 @@ You can explore the pipelines to understand the toolchain flow and the different
 
 To start the pull request pipeline, create a merge request in your app repo:
 
-1. On the toolchain page, click the app repo tile. By default, the app repo is named `compliance-app-<timestamp>`.
+1. On the Toolchain's Overview page, on the **Repositories** card, click the `compliance-app-<timestamp>` app repo.
 1. From the master repo, create a branch.
 1. Update some code in the sample node app or readme file and save these changes.
 1. Submit the merge request.
-1. On the toolchain page, click the `pr-pipeline` tile to start the pull request pipeline. The corresponding merge request in your app repo remains in the pending state until all of the stages of the pull request pipeline successfully complete.
+1. On the Toolchain's Overview page, click the `pr-pipeline` repo to start the pull request pipeline. The corresponding merge request in your app repo remains in the pending state until all of the stages of the pull request pipeline successfully complete.
 1. After the pull request pipeline run succeeds, you can select it to explore the completed steps.
 
 ![Pull request pipeline success](images/ds_kub_explore_pr_pipeline_success.png){: caption="Figure 10. Pull request pipeline success" caption-side="bottom"}
@@ -253,7 +253,7 @@ To start the continuous integration pipeline, merge the continuous integration m
 
 1. Go to the merge request.
 1. Merge the request so that your changes are copied to the master branch of your app repo. The continuous integration pipeline is automatically triggered.
-1. On the continuous integration toolchain page, click the `ci-pipeline` tile to start the continuous integration pipeline.
+1. On the continuous integration Toolchain Overview page, on the **Repositories** card, click the `ci-pipeline` repo to start the continuous integration pipeline.
 1. After the continuous integration pipeline run succeeds, you can click the pipeline run to explore the completed steps.
 
 ![Continuous integration pipeline success](images/sat_ci_pipeline_success.png){: caption="Figure 11. Continuous integration pipeline success" caption-side="bottom"}
