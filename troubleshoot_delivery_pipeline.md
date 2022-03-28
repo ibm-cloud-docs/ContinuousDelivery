@@ -45,10 +45,10 @@ An eventing problem occurred which caused the GitHub tool integration to fail.
 Configure and save the GitHub tool integration again:
 {: tsResolve}
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and  select **DevOps**. On the **Toolchains** page, click the toolchain that you created to open the Overview page. Alternatively,  on the App Details page in your app, click the toolchain name.
-1. On the card for the GitHub tool integration, click the menu to access the configuration options.
-1. Update the settings and click **Save Integration**.
-1. Click the card for the Delivery Pipeline tool integration to view the pipeline setup. 
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and  select **DevOps**. On the **Toolchains** page, click the toolchain that you created to open the Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
+1. On the Toolchain's Overview page, on the **Repositories** card, locate the GitHub tool integration.
+1. Click the menu to access the configuration options, update the settings, and click **Save Integration**.
+1. On the **Delivery pipelines** card, click the {{site.data.keyword.deliverypipeline}} tool integration to view the pipeline setup. 
 
 
 ## Why isn't the pipeline created properly when I create a toolchain from the template that I'm writing? 
@@ -95,9 +95,8 @@ Configure and save the Git integration again:
 {: tsResolve}
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain that contains the Git integration that you want to update to open its Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
-1. On the card for the Git integration, click the menu to access the configuration options.
-1. Select the authorized Git account for the Git integration owner.
-1. Click **Save Integration**.
+1. On the Toolchain's Overview page, on the **Repositories** card, locate the Git tool integration.
+1. Click the menu to access the configuration options, select the authorized Git account for the Git integration owner, and click **Save Integration**.
 1. Run your pipeline again. 
 
 
@@ -118,7 +117,7 @@ Typically, this issue is caused when the version of the kubectl command in your 
 You can use any of the following methods to resolve this problem:
 {: tsResolve}
 
-* Use a more recent pipeline base image version, which when created includes the currently released version of kubectl. For information about how to specify the latest image version, see [Specifying the image version](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline_versioned_base_images#specify_base_image_version).
+* Use a more recent pipeline base image version, which when created includes the currently released version of kubectl. For information about how to specify the latest image version, see [Specifying the image version](/docs/ContinuousDelivery?topic=ContinuousDelivery-pipeline_versioned_base_images#specify_base_image_version).
 
 * Make sure that your pipeline job is running the correct version of kubectl. For example, add the following lines to the beginning of your pipeline job to run kubectl v1.14.2:
 
