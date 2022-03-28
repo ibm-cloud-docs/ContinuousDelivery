@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-04-17"
+  years: 2019, 2022
+lastupdated: "2022-03-24"
 
 keywords: devops insights, manage, data, quality, delete, test, tests, app, dashboard
 
@@ -48,8 +48,8 @@ Data can’t be recovered after it is deleted.
 To see your manage data dashboard, complete the following steps: 
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**.
-2. Select your toolchain.
-3. Select the **{{site.data.keyword.DRA_short}}** tile.
+2. On the Toolchains page, select your toolchain.
+3. From your toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}**.
 4. Select **Manage Data**.
 5. Select **Quality Data**.
 
@@ -98,8 +98,8 @@ Branch data for an application is the data that is associated with a specific re
 To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete {{site.data.keyword.DRA_short}} from your toolchain. To delete {{site.data.keyword.DRA_short}} from your toolchain, complete the following steps:
 
 1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
-2. Select your toolchain.
-3. On the {{site.data.keyword.DRA_short}} tile, click the Overflow icon ![ellipsis icon](images/overflow-icon-2.svg) > **Delete**.
+2. On the Toolchains page, select your toolchain.
+3. From your toolchain's Overview page, on the **IBM Cloud tools** card, click the Overflow icon ![ellipsis icon](images/overflow-icon-2.svg) on your {{site.data.keyword.DRA_short}} instance. Then, select **Delete**.
 
 
 ## Deleting a repo
@@ -107,6 +107,6 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
 
 When you delete a repo, all of the data that is related to that repo is also deleted.
 
-1. To delete a repo, click the **menu** icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
-2. Select your toolchain from the table.
-3. From the repo tile, click the Overflow icon ![ellipsis icon](images/overflow-icon-2.svg) > **Delete**.
+1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+2. On the Toolchains page, select your toolchain.
+3. From your toolchain's Overview page, on the **Repositories** card, click the Overflow icon ![ellipsis icon](images/overflow-icon-2.svg) on the repo that you  want to delete. Then, select **Delete**.
