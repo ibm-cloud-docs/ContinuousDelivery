@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-08-20"
+  years: 2019, 2022
+lastupdated: "2022-03-24"
 
 keywords: devops insights, setting, values, cli, parameter values, consistent, test, tests, install, app, dashboard, risk, build.properties
 
@@ -60,7 +60,7 @@ Next, on the pipeline configuration page, set a property with name `buildPropert
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **Resource List**.
 2. Select your toolchain.
-3. Select the **Delivery Pipeline** tile.
+3. From your toolchain's Overview page, on the **Delivery pipelines** card, click the pipeline that you want to use.
 4. Click the **Settings** icon ![gear icon](images/settings.svg) > **Configure Stage**.
 5. Select the **Environment properties** tab.
 6. If your API key isn't listed, click **+ Add property** > **Secure property**, and add your API key.  
