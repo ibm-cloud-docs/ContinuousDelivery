@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-01-05"
+lastupdated: "2022-03-24"
 
 keywords: devops insights, devops, insights, toolchain, aggregate, test, tests, gate, gate failing, app
 
@@ -53,8 +53,8 @@ For more information about integrating Jenkins or other continuous integration a
 Your toolchain ID is contained within the URL. To find your toolchain ID, complete the following steps:
 
 1. From the {{site.data.keyword.cloud}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
-2. Select your toolchain. 
-3. Click the **{{site.data.keyword.DRA_short}}** card. 
+2. On the Toolchains page, select your toolchain.
+3. From your toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}**. 
 4. In the url, copy the everything in the string after `?toolchainId=`. This string is 36 characters in length, which is composed of alphanumeric characters and dashes. 
 
 If you want to find the toolchain ID for Jenkins, select Jenkins from the toolchain instead of {{site.data.keyword.DRA_short}}. You can also use the same method to find the toolchain ID in the URL. 
@@ -74,7 +74,7 @@ To publish your records to a centralized toolchain, complete the following steps
 
 1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **Resource List**.
 2. Select your toolchain.
-3. Select the **{{site.data.keyword.deliverypipeline}}** tile. 
+3. From your toolchain's Overview page, on the **Delivery pipelines** card, click the pipeline that you want to use.
 4. Click the **Settings** icon ![gear icon](images/settings.svg) and **Configure Stage**. 
 5. Make your changes in the script section. For each stage where you called commands to send build, test, and deployment records, set TOOLCHAIN_ID as the environment variable to the toolchain ID. Export the toolchain ID before the variables call the command. 
 6. Call commands for gate decisions, or send build, test, deployment records to {{site.data.keyword.DRA_short}}. For more information, see [Setting consistent parameter values by using the {{site.data.keyword.Bluemix}} CLI](/docs/ContinuousDelivery?topic=ContinuousDelivery-setting-values-cli).  
