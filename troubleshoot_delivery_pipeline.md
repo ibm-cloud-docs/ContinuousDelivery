@@ -172,8 +172,8 @@ Your app requires more than 4 GB of memory to compile in a single pipeline job.
 To build your app in a single pipeline job:
 {: tsResolve}
 
-1. Create an [{{site.data.keyword.contdelivery_full}} Pipeline Private Worker](/docs/ContinuousDelivery? topic=ContinuousDelivery-install-private-workers).
-1. Configure your build job to use the [private worker](/docs/ContinuousDelivery? topic=ContinuousDelivery-private-workers#configure_private_worker_integration).
+1. Create an [{{site.data.keyword.contdelivery_full}} Pipeline Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
+1. Configure your build job to use the [private worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers#configure_private_worker_integration).
   
 ## Why can't the {{site.data.keyword.deliverypipeline}} communicate through a firewall?
 {: #troubleshoot-firewall-configuration}
