@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-15"
+lastupdated: "2022-03-23"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -98,7 +98,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 ### Configuring a {{site.data.keyword.deliverypipeline}} for Tekton 
 {: #configure_tekton_pipeline}
 
-1. Click the **{{site.data.keyword.deliverypipeline}}** card to open the Tekton {{site.data.keyword.deliverypipeline}} dashboard.
+1. From your toolchain's Overview page, on the **Delivery pipelines** card, click the **{{site.data.keyword.deliverypipeline}}** to open the Tekton {{site.data.keyword.deliverypipeline}} dashboard.
 1. In the **Definitions** section, complete the following tasks:
 
    a. Specify the Git repo and URL that contains the Tekton pipeline definition and related artifacts. If your repo is not available, return to the toolchain Overview page and add your repo.
