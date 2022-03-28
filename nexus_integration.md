@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-03-23"
 
 keywords: tool integrations, IBM Cloud Public, Nexus
 
@@ -60,7 +60,7 @@ Configure the Nexus Repository Manager to store build artifacts in your Nexus re
    e. Type the URL for the Mirror or Public repo that you use to combine multiple public and private Maven repos. For example, this URL might be the URL of the virtual repo on your Nexus server that can access both your private repos and a cache of the Maven central repo.
 
 1. Click **Create Integration**.
-1. From your toolchain, click the card for the Nexus repo that you want to work with. The Nexus website opens, where you can view the contents of the repo.
+1. From your toolchain's Overview page, on the **Third-Party tools** card, click the Nexus repo that you want to work with. The Nexus website opens, where you can view the contents of the repo.
 1. Optional: If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Public and you want to build your app by using Nexus with npm, configure your pipeline to add an npm build job. For instructions to configure the build job, see the [Configuring a Nexus npm build job in your pipeline](#config_nexus_npm) section.
 1. Optional: If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Public and you want to build your app by using Nexus with Maven, configure your pipeline to add a Maven build job. For instructions to configure the build job, see the [Configuring a Nexus Maven build job in your pipeline](#config_nexus_maven) section.
 
