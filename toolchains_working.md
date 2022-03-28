@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2022
 
-lastupdated: "2022-02-11"
+lastupdated: "2022-03-23"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -142,9 +142,9 @@ You can view a toolchain from an app by clicking the toolchain name from your ap
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. 
 1. On the Toolchains page, select a **Resource Group** or **Location**. All of the toolchains that are contained within the selected resource group or Cloud Foundry org are displayed. Click the toolchain that you want to view to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
-1. To access a tool integration that is in your toolchain, click the tool.
+1. To access a tool integration that is in your toolchain, go to the appropriate card, such as **Delivery pipelines**, and then click the tool integration.
 
-   If you have more than one GitHub or Git repo, you might have multiple cards for the same tool integration because each repo is represented by its own card. If you have more than one pipeline, you might have multiple cards for the same tool integration because each pipeline is represented by its own card. For example, when you create a Microservices toolchain, each of the three microservices has its own GitHub or Git repo and its own pipeline.
+   If you have more than one GitHub or Git repo, you might have multiple instances of the same tool integration within the **Repositories** card because each repo is represented separately. If you have more than one pipeline, you might have multiple instances for the same tool integration because each pipeline is represented separately. For example, when you create a Microservices toolchain, each of the three microservices has its own GitHub or Git repo and its own pipeline.
    {: tip}
  
 ### Viewing a toolchain by using the CLI
