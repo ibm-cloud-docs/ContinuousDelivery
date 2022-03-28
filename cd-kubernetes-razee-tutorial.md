@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2020, 2021
-lastupdated: "2021-04-09"
+   years: 2020, 2022
+lastupdated: "2022-03-25"
 
 keywords: Razee, Kubernetes, Kube, cluster
 
@@ -104,7 +104,7 @@ In this step, you create a Develop a Kubernetes app with Razee toolchain. Before
 {: #cd-kube-razee-explore}
 {: step}
 
-1. Click the **Delivery Pipeline** (ci-pipeline) card to view the running pipeline. With a Tekton-based delivery pipeline, you can automate the continuous building, testing, and deployment of your apps. When a toolchain is created from this template, the sample app in your Git repo is automatically built and deployed.
+1. On the **Delivery pipelines** card, click **ci-pipeline** to view the running pipeline. With a Tekton-based delivery pipeline, you can automate the continuous building, testing, and deployment of your apps. When a toolchain is created from this template, the sample app in your Git repo is automatically built and deployed.
 
 2. The ci-pipeline dashboard displays an empty table until at least one Tekton pipeline runs. After a Tekton pipeline runs, either manually or because of external Git events, the table lists the run, its status, and the last updated time of the run definition. The following states are reported for pipeline runs:
 
@@ -187,7 +187,7 @@ In this step, you create a Develop a Kubernetes app with Razee toolchain. Before
 
 Modify the app and redeploy it to view how Razee picks up the changes in the `config.yml` file automatically, and then redeploys the app. 
 
-1. On the toolchain's Overview page, click the **Git** card for your app.
+1. On the Toolchain's Overview page, on the **Repositories** card, click the Git repo for your app.
 
    You can also use the built-in Eclipse Orion {{site.data.keyword.webide}}, a local IDE, or your favorite editor to change the files that are in your repo.
    {: tip}
@@ -198,7 +198,7 @@ Modify the app and redeploy it to view how Razee picks up the changes in the `co
 
 4. Type a commit message and click **Commit changes** to push the change to the project's remote repo. 
 
-5. On the toolchain's Overview page, click the **Delivery Pipeline** (ci-pipeline) card. Because your commit automatically started a build, the pipeline is running. Over the next few minutes, watch your change as it is built, tested, and deployed. 
+5. On the Toolchain's Overview page, on the **Delivery pipelines** card, click the **ci-pipeline**. Because your commit automatically started a build, the pipeline is running. Over the next few minutes, watch your change as it is built, tested, and deployed. 
 
    You don't need to run the Manual Install Razee pipeline again. The Razee agent that is running on your Kubernetes cluster automatically picks up the change to the `config.yml` file that was generated during the **trigger-razee-deploy** stage. After the **trigger-razee-deploy** stage is completed, wait a few minutes for the agent to pick up the change and then refresh your app URL to view the updated message.
    {: tip}
@@ -226,4 +226,4 @@ Next, you can continue to explore toolchains and DevOps practices:
 
    * [Develop a Kubernetes App with Helm](https://www.ibm.com/cloud/architecture/tutorials/use-develop-kubernetes-app-helm-toolchain-with-tekton-pipelines){: external}.
 
-   * [Work with Code Risk Analyzer](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-with-code-risk-analyzer){: external}.
+   * [Work with Code Risk Analyzer](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-with-code-risk-analyzer){: external}. 
