@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-04-17"
+  years: 2019, 2022
+lastupdated: "2022-03-24"
 
 keywords: devops insights, devops, insights, overview, pipeline data, cd pipeline
 
@@ -44,7 +44,7 @@ You must have at least one {{site.data.keyword.contdelivery_full}} in your toolc
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. 
 2. Select your toolchain on the Toolchains page.
-3. Click the **{{site.data.keyword.DRA_short}}** tile.
+3. From your toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}**.
 4. On the Overview page, you can view the following data:
 
    * Total stage failures: An aggregate of your pipeline's total number of stage failures and the total number of stages that you ran.  
@@ -52,4 +52,3 @@ You must have at least one {{site.data.keyword.contdelivery_full}} in your toolc
    * Most frequently failing stages: A trend view of the top five most frequently failing stages to help you quickly identify the stages that are causing the most issues.
    * Most time-consuming stages: A trend view of the top five most time-consuming stages to help you understand where your pipeline runs are spending the most time.
    * Jobs: A granular view of all jobs. This view is helpful to isolate anomalies and directly link to the stage to investigate failures.
-
