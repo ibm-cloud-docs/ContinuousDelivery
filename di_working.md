@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2020
-lastupdated: "2020-04-17"
+  years: 2016, 2022
+lastupdated: "2022-03-25"
 
 keywords: code quality, risk management, interactions of your team, devops insights, getting started, devops, insights, tutorial, code coverage, test, tests, gate, gate failing, verification, install, app, dashboard
 
@@ -66,9 +66,9 @@ For more information about pipelines, see [{{site.data.keyword.deliverypipeline}
 Explore the Quality Dashboard page to see the data aggregated from {{site.data.keyword.deliverypipeline}}. The quality dashboard provides quality data sets for each application.  
 
 1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
-2. Select the {{site.data.keyword.DRA_short}} toolchain from the table.
-3. Click the **{{site.data.keyword.DRA_short}}** tile. 
-4. Click **Quality Dashboard** in the navigation.
+2. On the Toolchains page, click the {{site.data.keyword.DRA_short}} toolchain to open its Overview page.
+3. On the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration. 
+4. Click **Quality Dashboard**.
 
 You can view details about the Weather Application and the quality of the code that was analyzed. These tests are available where the policy gates passed: code coverage, unit test, and the functional verification test. You can click the build ID, for example, `master:1`, to view a summary for that specific test. Click **View trends** to view trend details.
 
@@ -99,8 +99,8 @@ To make a gate fail, edit the code in the `routes/apivl.js` file so that the cod
 The gate fails because the code coverage isn't met. When you gate your own deployments, you can determine whether it failed or passed by looking at the Risk Analysis page. Also, you can define, change, and customize policies and rules to fit your needs when it comes to gating deployments. View the policies and rules that make the gate. 
 
 1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
-2. Select your new toolchain from the table.
-3. Select the **{{site.data.keyword.DRA_short}}** tile. 
+2. On the Toolchains page, click the {{site.data.keyword.DRA_short}} toolchain to open its Overview page.
+3. On the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration. 
 4. Click **Policies** > **Weather Unit Test, Code Coverage, and FVT Checks**. 
 5. Click **Code coverage** to view the minimum code coverage required. Anything equal to or over 80% will release to the next stage.  
 6. Click **Risk analysis** to check whether your deployment passed or failed the gate. Risk is evaluated based on the defined policies within {{site.data.keyword.DRA_short}}.
