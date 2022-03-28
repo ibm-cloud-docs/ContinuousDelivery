@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-04-17"
+  years: 2019, 2022
+lastupdated: "2022-03-24"
 
 keywords: devops insights, create, policy, rule, gate, edit rule, add rule, define policy, code coverage, test, tests, gate failing, verification, risk
 
@@ -31,14 +31,14 @@ A policy is a set of rules that define the criteria that your gate uses to deter
 
 To create a policy, complete the following steps:
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**.
-2. Select your toolchain from the table.  
-3. Click the **{{site.data.keyword.DRA_short}}** tile.
+2. On the Toolchains page, select your toolchain.
+3. From your toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}**.
 4. Select **Policies**.  
 5. Click **Create Policy**.  
-6. Complete all required fields, and click **Next**.  
+6. Complete all of the required fields, and click **Next**.  
 7. Click **Create Rule**.
-8. Complete all required fields.
-9. Optional: Select **Regression Check** box to opt out of test case regression. This option is only available for data sets Unit Tests, Code Coverage, and Functional Verification Tests.   
+8. Complete all of the required fields.
+9. Optional. Select the **Regression Check** box to opt out of test case regression. This option is available only for data sets, Unit Tests, Code Coverage, and Functional Verification Tests.   
 10. Click **Save**.
 
 If you want to add another rule, repeat from step 3.
@@ -65,5 +65,3 @@ To edit rules, complete the following steps:
 1. From the Policies page, select the policy that has the rule you want to edit.
 2. Click the Edit icon ![write icon](images/icon_write.svg) for the rule.  
 3. Complete all required fields, and click **Save**.
-
-
