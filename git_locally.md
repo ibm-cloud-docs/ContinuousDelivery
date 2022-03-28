@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-05-31"
+  years: 2015, 2022
+lastupdated: "2022-03-24"
 
 keywords: Git source control, authentication, personal access token, SSH key, Git repos, Web IDE 
 
@@ -54,7 +54,7 @@ You can manage and work with source code in a GitHub or {{site.data.keyword.gitr
 
 Create a local copy of the project files by cloning the Git repo so that you can access the contents of your repo outside the Web IDE by using any desktop tool.
 
-1. From your toolchain's Overview page, click the card for the repo you want to clone.
+1. From your toolchain's Overview page, on the **Repositories** card, click the repo that you want to clone.
 
 2. Gather your repo URL:
 
