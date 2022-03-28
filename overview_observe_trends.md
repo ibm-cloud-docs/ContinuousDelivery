@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-04-17"
+  years: 2019, 2022
+lastupdated: "2022-03-25"
 
 keywords: devops insights, observe trends, quality trends, trends, code coverage, test, tests, verification, app, sonarqube, dashboard
 
@@ -30,7 +30,12 @@ The following figure shows unit test trends for builds from the master branch, a
 
 ![Deployment Unit Test Trends](images/DRA_unit_test_trends.png){: caption="Figure 1. Quality Trends page" caption-side="bottom"}
 
-The quality trends graph correlates with the quality dashboard, and it is a good reference for noticing patterns in your builds. You can view trends for all test data. To view your quality trends dashboard, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. Select your toolchain. Click the {{site.data.keyword.DRA_short}} tile, and then click **Quality Trends**. 
+The Quality Trends graph correlates with the Quality dashboard, and it is a good reference for noticing patterns in your builds. You can view trends for all of the test data in your Quality Trends dashboard.
+
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. On the Toolchains page, click your toolchain to open its Overview page.
+1. On the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration.
+1. From the menu, select **Quality Trends**. 
 
 Click the dots within the graph to find out why there are dips in quality.
-{: tip}  
+{: tip}
