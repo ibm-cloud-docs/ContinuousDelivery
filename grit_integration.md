@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-03-23"
 
 keywords: tool integrations, IBM Cloud Public, Git Repos and Issue Tracking
 
@@ -59,17 +59,17 @@ If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, fol
 1. Select the server that you want to deploy code changes to. After you create the integration, you can edit it to manage the list of servers that you are authorized to work with. Click **Manage Authorization** to view a list of all of the servers and to delete the token that you provided to authorize with the server.
 1. Select a repository type:     
 
-a. To create an empty repo, for the repository type, click **New** and type a repository name.    
-b. To fork a Git repo so that you can contribute changes through merge requests, for the repository type, click **Fork**. Type the URL for the source repo.    
-c. To create a copy of a Git repo, for the repository type, click **Clone**. Type a new repo name and the URL for the source repo.     
-d. If you have a Git repo and want to use it, for the repository type, click **Existing**. Type the URL for the source repo.
+   a. To create an empty repo, for the repository type, click **New** and type a repository name.    
+   b. To fork a Git repo so that you can contribute changes through merge requests, for the repository type, click **Fork**. Type the URL for the source repo.    
+   c. To create a copy of a Git repo, for the repository type, click **Clone**. Type a new repo name and the URL for the source repo.     
+   d. If you have a Git repo and want to use it, for the repository type, click **Existing**. Type the URL for the source repo.
 
 1. Your username is automatically selected to assign ownership of this new integration to yourself. After the integration is created, another authorized user can reassign ownership of the integration to themself when they edit it.
 1. If you want to create a private repo, select the **Make this repository private** checkbox.
 1. If you want to use Issues for issue tracking, select the **Enable Issues** checkbox.
 1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}.
 1. Click **Create Integration**.
-1. Click the card for the Git repo that you want to work with. Your project overview page opens.    
+1. From your toolchain's Overview page, on the **Repositories** card, click the Git repo that you want to work with. Your project overview page opens.    
 
 If you don't have Master or Owner privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 {: tip}
