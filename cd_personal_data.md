@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-03"
+lastupdated: "2022-03-25"
 
 keywords: IBM Cloud account, personal data, personal accounts, corporate accounts, access, Web IDE, Git Repos and Issue Tracking, pipeline data, toolchains, tool integrations
 
@@ -126,7 +126,7 @@ To export a {{site.data.keyword.webide}} workspace:
 To delete your {{site.data.keyword.webide}} workspaces, including all of your personal data:
 
 1. From any toolchain, navigate to the {{site.data.keyword.webide}}.
-1. Click the **Settings** icon ![Settings icon](images/webide_settings_icon_light_small.png) in the navigation sidebar on the left.
+1. Click the **Settings** icon ![Settings icon](images/webide_settings_icon_light_small.png) in the navigation sidebar.
 1. Click **USER PROFILE**.
 1. Click **Delete** to remove all of your data from the {{site.data.keyword.webide}}.
 
@@ -155,7 +155,7 @@ You can invite other users to collaborate in projects. Git projects that you cre
 
 Before you delete a {{site.data.keyword.gitrepos}} project, you can export the project to archive it. 
 
-1. Click the **Settings** icon ![Settings icon](images/webide_settings_icon_light_small.png) in the navigation sidebar on the left.
+1. Click the **Settings** icon ![Settings icon](images/webide_settings_icon_light_small.png) in the navigation sidebar.
 1. Click **General**.
 1. Click **Expand** to expand the Export project section.
 1. Click **Export project**.
@@ -202,7 +202,7 @@ To modify a pipeline stage:
 1. On the **ENVIRONMENT PROPERTIES** tab, edit or delete properties.
 1. Modify a job script within the pipeline stage. Select the job and change the values that are part of the Build, Deploy, or Test Configuration.
    
-![Modify job script](images/job_script.png){: caption="Figure 2. Modify job script" caption-side="bottom"}
+   ![Modify job script](images/job_script.png){: caption="Figure 2. Modify job script" caption-side="bottom"}
   
 1. Delete a job from the pipeline stage. On the **JOBS** tab, select the job that you want to delete and click **Remove**.
  
@@ -263,8 +263,8 @@ To modify the environment properties used by the tekton pipeline:
 
 To delete a Tekton Pipeline:
 
-1. On the Toolchain page, on the Tekton Pipeline card, click the menu to access the configuration options.
-1. Click **Delete**.
+1. From your toolchain's Overview page, on the **Delivery pipelines** card, go to your Tekton pipeline instance.
+1. Click the menu on your Tekton pipeline to access the configuration options and click **Delete**.
 
 ## Modifying and deleting toolchains and tool integrations
 {: #managing_toolchains}
@@ -284,9 +284,9 @@ When you create a tool integration, you are required to provide user credentials
 
 To modify a tool integration:
 
-1. On the tool's card, click the menu to access the configuration options.
+1. On the instance of your tool integration, click the menu to access the configuration options.
 
-![Tool Configuration menu](images/toolchain_tile_menu.png){: caption="Figure 4. Tool Configuration menu" caption-side="bottom"}
+   ![Tool Configuration menu](images/toolchain_tile_menu.png){: caption="Figure 4. Tool Configuration menu" caption-side="bottom"}
 
 1. When you are finished updating the settings, click **Save Integration**.
 
