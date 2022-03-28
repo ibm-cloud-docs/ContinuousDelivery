@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2020
-lastupdated: "2020-04-17"
+  years: 2016, 2022
+lastupdated: "2022-03-25"
 
 keywords: devops insights, create, policy, rule, gate, code coverage, test, tests, gate failing, verification, app, dashboard
 
@@ -33,8 +33,12 @@ For more information about data sets, see [Managing data sets](/docs/ContinuousD
 
 ![Deployment Risk Policy](images/DRA_policy.png){: caption="Figure 1. Policy and rules page" caption-side="bottom"}
 
-To go to the Policy Rules page within {{site.data.keyword.DRA_short}}, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. In the toolchain dashboard, select your toolchain, and click the **{{site.data.keyword.DRA_short}}** tile. From the navigation menu, select **Policies**, and select a policy.
+To go to the Policy Rules page within {{site.data.keyword.DRA_short}}, complete the following steps:
 
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. On the Toolchains page, click your toolchain to open its Overview page.
+1. On the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration.
+1. From the menu, select **Policies** and then select a policy.
 
 ## Gate decisions
 {: #gate-decisions}
@@ -46,7 +50,13 @@ In your pipeline, you can enter a command by using the {{site.data.keyword.Bluem
 
 ![Deployment Risk details](images/DRA_risk_details.png){: caption="Figure 2. Build detail" caption-side="bottom"}
 
-From the Risk Analysis page, you can view gate decision reports on the Build detail page. The Build detail page has information about your latest report. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. In the toolchain dashboard, select your toolchain, and click the **{{site.data.keyword.DRA_short}}** tile. Select **Risk Analysis** from the navigation menu. From there, click the **Application** tab. From the table, select the application that you want to view and select the build. 
+From the Risk Analysis page, you can view gate decision reports on the Build detail page. The Build detail page has information about your latest report.
+
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. On the Toolchains page, click your toolchain to open its Overview page.
+1. On the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration.
+1. From the menu, select **Risk Analysis** and then click the **Application** tab.
+1. From the table, select the application that you want to view and then select the build.
 
 ### Decision report
 {: #decision_report}
