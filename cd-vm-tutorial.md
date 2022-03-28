@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2021
-lastupdated: "2021-12-07"
+   years: 2021, 2022
+lastupdated: "2022-03-23"
 
 keywords: deployment strategies, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -286,11 +286,11 @@ You can explore the pipelines to understand the toolchain flow and the different
 
 To start the pull request pipeline, create a merge request in your app repo:
 
-1. On the toolchain page, click the app repo card. By default, the app repo is named `compliance-app-<timestamp>`.
+1. On the Toolchain's Overview page, on the **Repositories** card, click the `compliance-app-<timestamp>` app repo.
 1. From the master repo, create a branch.
 1. Update some code in the sample node app or readme file and save these changes.
 1. Submit the merge request.
-1. On the toolchain page, click the `pr-pipeline` card to start the pull request pipeline. The corresponding merge request in your app repo remains in the pending state until all of the stages of the pull request pipeline successfully complete.
+1. On the Toolchain's Overview page, on the  **Repositories** card, click the `pr-pipeline` repo to start the pull request pipeline. The corresponding merge request in your app repo remains in the pending state until all of the stages of the pull request pipeline successfully complete.
 1. After the pull request pipeline run succeeds, you can select it to explore the completed steps.
 
 
@@ -298,7 +298,7 @@ To start the continuous integration pipeline, merge the continuous integration m
 
 1. Go to the merge request.
 1. Merge the request so that your changes are copied to the master branch of your app repo. The continuous integration pipeline is automatically triggered.
-1. On the continuous integration toolchain page, click the `ci-pipeline` card to start the continuous integration pipeline.
+1. On the continuous integration Toolchain Overview page, on the **Repositories** card, click the `ci-pipeline` repo to start the continuous integration pipeline.
 1. After the continuous integration pipeline run succeeds, you can click the pipeline run to explore the completed steps.
 
 ![Continuous integration pipeline success](images/ds-vpc-explore-ci-pipeline-success-bg.png){: caption="Figure 14. Continuous integration pipeline success" caption-side="bottom"}
@@ -337,7 +337,7 @@ This tutorial shows how the Blue-Green deployment strategy works by using the sa
 
 1. Update the app code and commit your changes. For the sample app, update the welcome message:
 
-   a. Go to the sample app repo card on the toolchain page.
+   a. On the Toolchain's Overview page, on the **Repositories** card, click the sample app repo.
 
    b. Update the welcome message in the `utils.js` file.
 
