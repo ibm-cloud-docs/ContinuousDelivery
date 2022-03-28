@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-04-20"
+  years: 2019, 2022
+lastupdated: "2022-03-25"
 
 keywords: devops insights, publish, deploy, record, idra, test, tests, app, dashboard
 
@@ -74,10 +74,9 @@ Be sure to use these variables consistently:
 When the deployment job completes, the pipeline publishes a message to {{site.data.keyword.DRA_short}} that the specified build and app was deployed. You can view the deployment record on the Deployment Frequency page. To view the Deployment Frequency page, use the following steps:
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
-2. Select your toolchain from the table.  
-3. Click the **{{site.data.keyword.DRA_short}}** tile.
+2. Select your toolchain.
+3. From your toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}**.
 4. Click **Deployment Frequency**.
-
 
 ## Next steps
 {: #next-deploy-idra} 
