@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-03-25"
+lastupdated: "2022-03-28"
 
 keywords: code quality, risk management, interactions of your team, devops insights, getting started, devops, insights, tutorial, code coverage, test, tests, gate, gate failing, verification, install, app, dashboard
 
@@ -89,9 +89,8 @@ To make a gate fail, edit the code in the `routes/apivl.js` file so that the cod
 3. Save the file by clicking **File**, and select **Save**. 
 4. Select the Git icon, enter a commit message, and click **Commit**. 
 5. Click **Push** to push your changes.
-6. Click the back arrow in the Eclipse editor to return to your toolchain. 
-7. Click the **{{site.data.keyword.deliverypipeline}}** tile to observe the gate fail in real time. 
-
+6. Click the back arrow in the Eclipse editor to return to your toolchain.
+7. On the toolchain's Overview page, on the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration to observe the gate fail in real time. 
 
 ## Step 5. Analyze the failed gate
 {: #5-risk-analysis}
