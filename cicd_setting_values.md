@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-01-05"
+lastupdated: "2022-03-25"
 
 keywords: devops insights, setting, values, cli, parameter values, consistent, other ci/cd tools, test, tests, install, app, risk
 
@@ -45,10 +45,10 @@ Use the following steps to go to the {{site.data.keyword.contdelivery_short}} pi
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
 2. Select a location to view your toolchains that contain instances of {{site.data.keyword.DRA_short}}. 
 3. Select your toolchain. 
-4. Select the **{{site.data.keyword.deliverypipeline}}** tile. 
+4. From your toolchain's Overview page, on the **Delivery pipelines** card, click **{{site.data.keyword.deliverypipeline}}**.
 5. Click the **Settings** icon ![gear icon](images/settings.svg) > **Configure Stage**.
-6. Select the **Jobs** tab. 
-7. Make your changes in the script section. For each stage where you use commands to send build, test, and deployment records, set TOOLCHAIN_ID as the environment variable to the toolchain ID. Export the toolchain ID before they call the command. 
+6. Click the **Jobs** tab. 
+7. Make your changes in the script section. For each stage where you use commands to send build, test, and deployment records, set `TOOLCHAIN_ID` as the environment variable to the toolchain ID. Export the toolchain ID before they call the command. 
 
 ```text
 export TOOLCHAIN_ID="YOUR_TOOLCHAIN_ID_HERE"
