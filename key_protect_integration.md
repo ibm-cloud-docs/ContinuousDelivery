@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2022-02-14"
+lastupdated: "2022-03-29"
 
 keywords: tool integrations, IBM Cloud Public, Key Protect
 
@@ -45,7 +45,7 @@ Configure {{site.data.keyword.keymanagementserviceshort}} to securely manage sec
 1. Review the default values for **Region** and **Resource-Group** and update, if required.
 1. Select the instance of the **{{site.data.keyword.keymanagementserviceshort}}** service that you want to use.
 1. Click **Create Integration**.
-1. From your toolchain, click **{{site.data.keyword.keymanagementserviceshort}}**.
+1. On the Toolchain's Overview page, on the **Third-Party tools** card, click **{{site.data.keyword.keymanagementserviceshort}}**.
 
 ## Applying secrets
 {: #apply_secrets}
