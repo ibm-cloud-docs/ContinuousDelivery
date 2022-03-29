@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-03-29"
 
 keywords: tool integrations, IBM Cloud Public, JIRA
 
@@ -65,7 +65,7 @@ Configure JIRA to plan, track, and deliver quality code:
    g. To track the deployment of code changes for the project by creating labels and comments for referenced issues, select the **Track deployment of code changes** checkbox. Make sure that you use JIRA Smart Commit to reference the JIRA issues in your GitHub commits. If you don't select this option, the JIRA tool integration ignores any commits.
 
 1. Click **Create Integration**.
-1. From your toolchain, click **JIRA** to view the dashboard for the JIRA project that you connected to.
+1. On the Toolchain's Overview page, on the **Third-Party tools** card, click **JIRA** to view the dashboard for the JIRA project that you connected to.
 
 ## Learn more about JIRA
 {: #learn_jira}
