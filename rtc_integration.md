@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-03-29"
 
 keywords: tool integrations, IBM Cloud Public, Rational Team Concert
 
@@ -55,7 +55,7 @@ Configure Rational Team Concert to practice a DevOps approach and continuous del
 
 1. To track the deployment of code changes for the project by creating tags and comments on work items, select the **Track deployment of code changes** checkbox.
 1. Click **Create Integration**.
-1. From your toolchain, click **Rational Team Concert** to open the Rational Team Concert dashboard that you configured.
+1. On your Toolchain's Overview page, on the **IBM Cloud tools** card, click **Rational Team Concert** to open the Rational Team Concert dashboard that you configured.
 
 ## Learn more about Rational Team Concert
 {: #learn_rtc}
