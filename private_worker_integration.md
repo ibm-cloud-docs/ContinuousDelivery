@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-03-29"
 
 keywords: tool integrations, IBM Cloud Public, Delivery Pipeline Private Worker
 
@@ -32,11 +32,11 @@ Configure the {{site.data.keyword.deliverypipeline}} Private Worker tool integra
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.deliverypipeline}} Private Worker**.
 1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 
- a. Click **Add tool**.
+   a. Click **Add tool**.
 
- b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}} Private Worker**.
+   b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}} Private Worker**.
 
 1. Type a name for the tool integration. This name identifies a pool of private workers in the **Workers** tab of the pipeline stage.
 1. Type your Service ID API key to authenticate access to the work queue where one or more private workers can look for work. If you don't have a Service ID API key, click **Create** to generate one for this private worker.
 1. Click **Create Integration**.
-1. From your toolchain, click **{{site.data.keyword.deliverypipeline}} Private Worker** to view a list of all of the workers that are registered by using an API key that is associated with this Service ID.
+1. From your toolchain, on the **Delivery pipelines** card, click the **{{site.data.keyword.deliverypipeline}} Private Worker** to view a list of all of the workers that are registered by using an API key that is associated with this Service ID.
