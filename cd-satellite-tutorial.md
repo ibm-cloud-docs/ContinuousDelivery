@@ -244,7 +244,7 @@ To start the pull request pipeline, create a merge request in your app repo:
 1. From the master repo, create a branch.
 1. Update some code in the sample node app or readme file and save these changes.
 1. Submit the merge request.
-1. On the Toolchain's Overview page, click the `pr-pipeline` repo to start the pull request pipeline. The corresponding merge request in your app repo remains in the pending state until all of the stages of the pull request pipeline successfully complete.
+1. On the Toolchain's Overview page, on the **Repositories** card, click the `pr-pipeline` repo to start the pull request pipeline. The corresponding merge request in your app repo remains in the pending state until all of the stages of the pull request pipeline successfully complete.
 1. After the pull request pipeline run succeeds, you can select it to explore the completed steps.
 
 ![Pull request pipeline success](images/ds_kub_explore_pr_pipeline_success.png){: caption="Figure 10. Pull request pipeline success" caption-side="bottom"}
