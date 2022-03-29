@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-03-29"
 
 keywords: tool integrations, IBM Cloud Public, Sauce Labs
 
@@ -41,7 +41,7 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message on your Sauce Labs account page](https://app.saucelabs.com/user-settings){: external}.
 1. Type the access key for your Sauce Labs account. You can [find the key on your Sauce Labs account page](https://app.saucelabs.com/user-settings){: external}.
 1. Click **Create Integration**.
-1. Click **Sauce Labs** to go to saucelabs.com and view the test activity for the toolchain.
+1. On your Toolchain's Overview page, on the **Third-Party tools** card, click **Sauce Labs** to go to saucelabs.com and view the test activity for the toolchain.
 
 If you added a Sauce Labs test job to the {{site.data.keyword.deliverypipeline}}, you can select the service instance. For instructions to configure a test job in your pipeline, see the [Configuring a Sauce Labs test job in your pipeline](#config_saucelabs) section.
 {: tip}
