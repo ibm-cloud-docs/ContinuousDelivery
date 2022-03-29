@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-03-29"
 
 keywords: tool integrations, IBM Cloud Public, Slack
 
@@ -53,7 +53,7 @@ If you use an API key for your Slack channel to receive notifications about your
    If the Slack channel and team that you specified cannot be reached, the `Setup Failed` error is displayed on the Slack card. Hover over the `Setup Failed` message and click **Reconfigure**. Make sure that you are using valid configuration parameters for the Slack webhook URL, Slack channel, and URL host name for your Slack team. Update the settings as required, and click **Save Integration**.
    {: tip}
 
-1. Click **Slack**. You can view all of the activity for your toolchain in the configured Slack channel.
+1. On your Toolchain's Overview page, on the **Third-Party tools** card, click **Slack**. You can view all of the activity for your toolchain in the configured Slack channel.
 
 ## Learn more about Slack
 {: #learn_slack}
