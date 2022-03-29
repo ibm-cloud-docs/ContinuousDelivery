@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-03-29"
 
 keywords: tool integrations, IBM Cloud Public, Jenkins
 
@@ -53,7 +53,7 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
    c. Return to the Configure the Integration page for the Jenkins tool integration.
 
 1. Click **Create Integration**.
-1. From your toolchain, click **Jenkins** to view the Jenkins server.  
+1. On the Toolchain's Overview page, on the **Third-Party tools** card, click **Jenkins** to view the Jenkins server.
 
 ## Learn more about Jenkins
 {: #learn_jenkins}
