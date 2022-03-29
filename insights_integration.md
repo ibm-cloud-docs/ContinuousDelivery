@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-03-29"
 
 keywords: tool integrations, IBM Cloud Public, DevOps Insights
 
@@ -40,7 +40,7 @@ Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your 
    b. In the Tool Integrations section, click **{{site.data.keyword.DRA_short}}**.
 
 1. Click **Create Integration**.
-1. Click **{{site.data.keyword.DRA_short}}**, and then complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline.
+1. On the Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}** and complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline.
 
 ## Learn more about DevOps Insights
 {: #learn_insights}
