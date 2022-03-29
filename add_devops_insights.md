@@ -44,7 +44,7 @@ You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it fro
 3. Click **Add tool**.
 4. Select the **{{site.data.keyword.DRA_short}}** tile.
 5. Click **Create Integration**.
-6. Click the **{{site.data.keyword.DRA_short}}** tile to view your {{site.data.keyword.DRA_short}} dashboard.
+6. On the Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}** to view your {{site.data.keyword.DRA_short}} dashboard.
 
 
 ## Next steps
