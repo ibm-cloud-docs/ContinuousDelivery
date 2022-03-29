@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-03-29"
 
 keywords: tool integrations, IBM Cloud Public, Security and Compliance Center
 
@@ -54,7 +54,7 @@ Configure {{site.data.keyword.compliance_short}} to embed security checks into y
    c. Select a **Profile name**. A profile is a collection of security controls. For more information about profiles, see [Working with profiles](/docs/security-compliance?topic=security-compliance-profiles).
 
 1. Click **Create Integration**.
-1. From your toolchain, click **{{site.data.keyword.compliance_short}}** .  
+1. On your Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.compliance_short}}** .  
  
 ## Learn more about {{site.data.keyword.compliance_short}}
 {: #learn_scc}
