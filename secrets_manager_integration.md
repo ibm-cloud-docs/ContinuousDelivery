@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-03-29"
 
 keywords: tool integrations, IBM Cloud Public, IBM Secrets Manager
 
@@ -45,7 +45,7 @@ Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets
 1. Review the default values for **Region** and **Resource-Group** and update, if required.
 1. Select the instance of the **{{site.data.keyword.secrets-manager_short}}** service that you want to use.
 1. Click **Create Integration**.
-1. From your toolchain, click **{{site.data.keyword.secrets-manager_short}}**.
+1. On the Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.secrets-manager_short}}**.
 
 ## Applying secrets
 {: #secretsmanager_apply_secrets}
