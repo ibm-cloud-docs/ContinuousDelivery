@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-03-29"
 
 keywords: tool integrations, IBM Cloud Public, PagerDuty
 
@@ -53,7 +53,7 @@ Configure PagerDuty to send notifications when pipeline stage failures occur so 
    b. Type your PagerDuty integration key. You can find your key or create a key in the Integrations section of your PagerDuty service page.
 
 1. Click **Create Integration**.
-1. Click **PagerDuty** to go to pagerduty.com. You can view the events that are associated with the PagerDuty service that you specified when you configured this tool integration for your toolchain.
+1. On your Toolchain's Overview page, on the **Third-Party tools** card, click **PagerDuty** to go to pagerduty.com. You can view the events that are associated with the PagerDuty service that you specified when you configured this tool integration for your toolchain.
 
 ## Learn more about PagerDuty
 {: #learn_pagerduty}
