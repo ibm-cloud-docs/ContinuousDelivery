@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-03-29"
 
 keywords: tool integrations, IBM Cloud Public, Hashicorp Vault
 
@@ -44,7 +44,7 @@ Configure HashiCorp Vault to securely manage secrets such as API keys and secret
 1. Type the URL for the HashiCorp Vault tool integration. This value can be any valid URL such as an organization-specific URL that is related to your organization's HashiCorp Vault server Web UI console or documentation.
 1. Type the path to the secrets on the HashiCorp Vault server that is accessible when you use the configured authentication method and the associated authentication credentials. This value must include only the secrets path and cannot include a secrets name at the end of the secrets path. If your authentication credentials contain the relevant LIST permission within the specified secrets path, you can view the list of secrets within that path.
 1. Click **Create Integration**.
-1. From your toolchain, click **HashiCorp Vault** to use the HashiCorp Vault Secrets Picker and Pusher components to select secrets for use within your toolchain or delivery pipeline.  
+1. On the Toolchain's Overview page, on the **Third-Party tools** card, click **HashiCorp Vault** to use the HashiCorp Vault Secrets Picker and Pusher components to select secrets for use within your toolchain or delivery pipeline.  
 
 ## Learn more about HashiCorp Vault
 {: #learn_hashicorp_vault}
