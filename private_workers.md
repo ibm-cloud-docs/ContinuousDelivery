@@ -228,4 +228,32 @@ Complete the following steps to update a private worker to use the latest versio
    ```text
    kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/update"
    ```
-   
+
+## Pipeline Private Worker images 
+The Private Worker install script pulls required images from global IBM Cloud Container Registry.
+It pulls the latest version images of pipeline private worker and respective tekton framework images which should include fixes for any vulnerability found.
+
+The image url for the pipeline private worker is: `icr.io/continuous-delivery/pipeline/pipeline-private-worker:<agent version>`.
+
+Current Private worker agent version is `0.11.9`.
+
+Private worker installation will also pull the following tekton framework images to the cluster.
+```text
+icr.io/continuous-delivery/pipeline/tekton/controller
+icr.io/continuous-delivery/pipeline/tekton/kubeconfigwriter
+icr.io/continuous-delivery/pipeline/tekton/git-init
+icr.io/continuous-delivery/pipeline/tekton/entrypoint
+icr.io/continuous-delivery/pipeline/tekton/nop
+icr.io/continuous-delivery/pipeline/tekton/imagedigestexporter
+icr.io/continuous-delivery/pipeline/tekton/pullrequest-init
+icr.io/continuous-delivery/pipeline/tekton/cloud-sdk
+icr.io/continuous-delivery/pipeline/tekton/webhook
+icr.io/continuous-delivery/pipeline/tekton/base
+```
+
+Private worker agent also uses these internal images.
+```text
+icr.io/continuous-delivery/pipeline/pipeline-private-worker-util
+icr.io/continuous-delivery/pipeline/tekton/kubectl-jq
+icr.io/continuous-delivery/pipeline/tekton/ubi
+```
