@@ -240,6 +240,7 @@ The image URL for the pipeline private worker is `icr.io/continuous-delivery/pip
 |:-----------------|:-----------------|:-----------------|
 | 0.11.10 | `icr.io/continuous-delivery/pipeline/pipeline-private-worker:0.11.10`| - |
 | 0.11.9 | `icr.io/continuous-delivery/pipeline/pipeline-private-worker:0.11.9`| - |
+{: caption="Table 2. Private Worker images" caption-side="top"}
 
 
 The private worker installation also pulls the following Tekton framework images to the cluster:
