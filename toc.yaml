@@ -77,6 +77,7 @@ toc:
       - cd-satellite-tutorial.md
       - cd-vm-tutorial.md
       - cd-vsi-tutorial.md
+      - cd-code-engine.md
 
   - navgroup: 
       id: howto
