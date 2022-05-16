@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-15"
+lastupdated: "2022-05-16"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -293,6 +293,37 @@ The following attributes are available for private worker agents:
 * **CONSTRAINED**: A value of `false` indicates that enough cluster resources are available for the agent to run tasks. A value of `True` specifies that the cluster is resource-constrained.`
 * **PAUSED**: A value of `false` indicates that the agent is operational and can run tasks. A value of `true` specifies that the agent is paused and cannot run any tasks. One reason that an agent might be paused is for cluster maintenance.
 
+
+## Configuring the {{site.data.keyword.deliverypipeline}} Private Worker to use private endpoints
+{: #install_pw_agent_pse}
+
+By default, private workers use public endpoints for communication. A cluster administrator can update the private worker configuration to use private endpoints so that communication between the private worker and the {{site.data.keyword.contdelivery_full}} service does not use the public internet.
+
+1. Get the name of the agent that is installed on the cluster:
+
+   ```text
+   kubectl get workeragents
+   ```
+
+2. Change the `apiUrl` for that agent:
+
+   ```text
+   kubectl patch workeragent {WORKER_NAME} --type='merge' -p '{"spec": {"apiUrl":"https://private-worker-service.private.{REGION}.devops.cloud.ibm.com"}}'
+   ```
+
+   Where `{REGION}` is the location of the toolchain's pipeline. Private endpoints are available in the following regions:
+
+    * `us-south (Dallas, US)`
+    * `us-east (Washington, US)`
+
+   You must have a [VRF enabled](/docs/account?topic=account-vrf-service-endpoint&interface=ui) {{site.data.keyword.cloud_notm}} account to use this feature.
+   {: important}
+
+3. Optional. To return to using public endpoints for the agent,  type the following command:
+
+   ```text
+   kubectl patch workeragent {WORKER_NAME} --type='merge' -p '{"spec": {"apiUrl":"https://private-worker-service.{REGION}.devops.cloud.ibm.com"}}'
+   ```
 
 ## Updating the {{site.data.keyword.deliverypipeline}} Private Worker installation
 {: #install_pw_update} 
