@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-25"
+lastupdated: "2022-05-20"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -30,32 +30,46 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
 
+## 23 May 2022
+{: #ContinuousDelivery-may2322}
+{: release-note}
+
+{{site.data.keyword.gitrepos}}
+:   Upgraded to [GitLab 14.9.4](https://about.gitlab.com/releases/2022/05/02/security-release-gitlab-14-10-1-released/){: external}.
+
+## 5 May 2022
+{: #ContinuousDelivery-may0522}
+{: release-note}
+
+{{site.data.keyword.gitrepos}}
+:   Upgraded to [GitLab 14.8.5](https://about.gitlab.com/releases/2022/03/31/critical-security-release-gitlab-14-9-2-released/){: external}.
+
 ## 1 March 2022
 {: #ContinuousDelivery-mar0122}
 {: release-note}
 
-Git Repos and Issue Tracking
+{{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 14.7.4](https://about.gitlab.com/releases/2022/02/25/critical-security-release-gitlab-14-8-2-released/){: external}.
 
 ## 17 February 2022
 {: #ContinuousDelivery-feb1722}
 {: release-note}
 
-Git Repos and Issue Tracking
+{{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 14.6.4](https://about.gitlab.com/releases/2022/02/03/security-release-gitlab-14-7-1-released/){: external}.
 
 ## 24 January 2022
 {: #ContinuousDelivery-jan2422}
 {: release-note}
 
-Git Repos and Issue Tracking
+{{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 14.5.3](https://about.gitlab.com/releases/2022/01/11/security-release-gitlab-14-6-2-released/){: external}.
 
 ## 7 January 2022
 {: #ContinuousDelivery-jan0722}
 {: release-note}
 
-Git Repos and Issue Tracking
+{{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 14.4.4](https://about.gitlab.com/releases/2021/12/06/security-release-gitlab-14-5-2-released/){: external}.
 
 ## 30 November 2021
@@ -69,14 +83,14 @@ IBM Cloud Continuous Delivery is now available in the Sao Paulo region.
 {: #ContinuousDelivery-nov2921}
 {: release-note}
 
-Git Repos and Issue Tracking
+{{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 14.4.2](https://about.gitlab.com/releases/2021/12/10/security-release-gitlab-runner-14-5-2-released/){: external}.
 
 ## 4 November 2021
 {: #ContinuousDelivery-nov0421}
 {: release-note}
 
-Git Repos and Issue Tracking
+{{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 14.3.4](https://about.gitlab.com/releases/2021/10/28/security-release-gitlab-14-4-1-released/){: external}.
 
 ## 31 October 2021
@@ -226,7 +240,7 @@ New Code Risk Analyzer scans source code repositories for:
 {: #ContinuousDelivery-oct3019}
 {: release-note}
 
-Git Repos and Issue Tracking
+{{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 12.2.7](https://about.gitlab.com/blog/2019/10/02/security-release-gitlab-12-dot-3-dot-3-released/){: external}.
 
 ## 10 October 2019
@@ -257,21 +271,21 @@ DevOps Insights
 {: #ContinuousDelivery-sep2019}
 {: release-note}
 
-Git Repos and Issue Tracking
+{{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 12.1.9](https://about.gitlab.com/2019/09/10/critical-security-release-gitlab-12-dot-2-dot-5-released/){: external}.
 
 ## 16 September 2019
 {: #ContinuousDelivery-sep1619}
 {: release-note}
 
-Git Repos and Issue Tracking
+{{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 12.0.8](https://about.gitlab.com/2019/08/29/security-release-gitlab-12-dot-2-dot-3-released/){: external}.
 
 ## 9 September 2019
 {: #ContinuousDelivery-sep0919}
 {: release-note}
 
-Git Repos and Issue Tracking
+{{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 11.11.8](https://about.gitlab.com/2019/08/12/critical-security-release-gitlab-12-dot-1-dot-6-released/){: external}.
 
 ## 5 September 2019
@@ -285,7 +299,7 @@ Develop and test microservices with Kubernetes and Helm template doesn't support
 {: #ContinuousDelivery-sep0419}
 {: release-note}
 
-Git Repos and Issue Tracking
+{{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 11.10.8](https://about.gitlab.com/2019/07/03/security-release-gitlab-12-dot-0-dot-3-released/){: external}.
 
 ## 3 September 2019
@@ -299,7 +313,7 @@ Git Repos and Issue Tracking
 {: #ContinuousDelivery-aug2819}
 {: release-note}
 
-Git Repos and Issue Tracking
+{{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 11.9.12](https://about.gitlab.com/2019/06/03/security-release-gitlab-11-dot-11-dot-1-released/){: external}.
 
 ## 24 June 2019
