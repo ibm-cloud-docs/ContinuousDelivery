@@ -42,7 +42,6 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: release-note}
 
 New toolchain template demonstrates how to deploy a sample NodeJS application with [Code Engine](https://cloud.ibm.com/docs/codeengine) by using a Tekton pipeline.
-
 :   [Code Engine Template](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcode-engine-toolchain&env_id=ibm:yp:us-south){: external}.
 
 ## 5 May 2022
