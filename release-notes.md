@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-20"
+lastupdated: "2022-05-26"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -36,6 +36,14 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 {{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 14.9.4](https://about.gitlab.com/releases/2022/05/02/security-release-gitlab-14-10-1-released/){: external}.
+
+## 18 May 2022
+{: #ContinuousDelivery-may1822}
+{: release-note}
+
+New toolchain template demonstrates how to deploy a sample NodeJS application with [Code Engine](https://cloud.ibm.com/docs/codeengine) by using a Tekton pipeline.
+
+:   [Code Engine Template](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcode-engine-toolchain&env_id=ibm:yp:us-south){: external}.
 
 ## 5 May 2022
 {: #ContinuousDelivery-may0522}
