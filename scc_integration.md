@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-05-30"
 
 keywords: tool integrations, IBM Cloud Public, Security and Compliance Center
 
@@ -52,6 +52,9 @@ Configure {{site.data.keyword.compliance_short}} to embed security checks into y
    b. Select a **Scope name**. A scope narrows the focus of the scan. For more information about scopes, see [Managing scopes](/docs/security-compliance?topic=security-compliance-scopes).
 
    c. Select a **Profile name**. A profile is a collection of security controls. For more information about profiles, see [Working with profiles](/docs/security-compliance?topic=security-compliance-profiles).
+
+    Select the {{site.data.keyword.cloud_notm}} Security Best Practices v1.0.0 profile for DevSecOps toolchains.
+    {: tip}
 
 1. Click **Create Integration**.
 1. On your Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.compliance_short}}** .  
