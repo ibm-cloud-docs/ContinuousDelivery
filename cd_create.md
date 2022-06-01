@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020
+  years: 2020, 2022
 
-lastupdated: "2020-07-22"
+lastupdated: "2022-06-01"
 
 keywords: ibmcloud, resource, service instance, create, IBM Cloud
 
@@ -45,4 +45,5 @@ You can have one active instance of {{site.data.keyword.contdelivery_short}} onl
 1. In the **Configure your resource** section, specify a name for the {{site.data.keyword.contdelivery_short}} instance that you are creating.
 1. Select the resource group where you want to create the {{site.data.keyword.contdelivery_short}} service instance. You cannot change the selected resource group after you create the {{site.data.keyword.contdelivery_short}} service instance. For more information about how to organize resources in your {{site.data.keyword.cloud_notm}} account, see [Best practices for organizing resources in a resource group](/docs/account?topic=account-account_setup).
 1. Specify the tags that you want to use to organize and filter the resources in your resource list. You can also use these tags to identify team usage or cost allocation. These tags are visible account wide. For more information about using tags, see [Working with tags](/docs/account?topic=account-tag).
+1. If you chose a Professional pricing plan, you can select the instance of the {{site.data.keyword.keymanagementservicefull}} service and the root key that is used to encrypt your personal information. Make sure that the {{site.data.keyword.keymanagementserviceshort}} instance and the root key exist and the toolchain resources are authorized to access {{site.data.keyword.keymanagementserviceshort}} in the **Manage Authorizations** section.
 1. Click **Create**.
