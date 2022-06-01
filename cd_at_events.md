@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-16"
+lastupdated: "2022-06-01"
 
 keywords: event, security, IBM, activity tracker, Continuous Delivery
 
