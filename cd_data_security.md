@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-06-03"
+  years: 2018, 2022
+lastupdated: "2022-06-01"
 
 keywords: secure environment, data, Data, high availability, access
 
