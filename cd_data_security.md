@@ -33,9 +33,6 @@ subcollection: ContinuousDelivery
 * Configuration data for tool integrations and {{site.data.keyword.deliverypipeline}} property values might include sensitive information. This data is encrypted by using encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service because it is stored in databases that are internal to the service. 
 * The application and data are configured for high availability.
 * Access to data is limited to only those users who require the data to support and maintain the service.
-   
-{{site.data.keyword.contdelivery_short}} does not support encryption that uses customer-provided keys.
-{: important}
 
 ## Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}
 {: #cd_secure_credentials}
