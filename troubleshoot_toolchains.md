@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-28"
+lastupdated: "2022-06-03"
 
 keywords: troubleshoot, toolchains, tool integrations
 
@@ -101,7 +101,6 @@ A Cloud Foundry org and space can't be located in your account.
 [Add a Cloud Foundry org and space to your account](https://cloud.ibm.com/account/cloud-foundry){: external}, and assign the Developer role to users at the space level. For more information about Cloud Foundry orgs and spaces, see [Adding orgs and spaces](/docs/account?topic=account-orgsspacesusers).
 {: tsResolve}
 
-
 ## Why can't I delete toolchains by using the `ibmcloud` CLI?
 {: #troubleshoot-delete_toolchains_cli}
 {: troubleshoot}
@@ -125,9 +124,8 @@ To delete a toolchain:
 1. Click the **Actions** menu, then select **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.
 
-You can use the ibmcloud dev CLI to delete toolchains. After you [install the {{site.data.keyword.dev_cli_notm}} CLI plug-in](/docs/cli?topic=cli-install-devtools-manually), you can delete a toolchain from the command line by using the [`ibmcloud dev toolchain-delete`](/docs/cli?topic=cli-idt-cli#toolchain-delete) command. 
+You can use the {{site.data.keyword.cloud_notm}} CLI {{dev_cli_short}} (`ibmcloud dev`) commands to delete toolchains. After you [install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-devtools-manually), you can delete a toolchain from the command line by using the [`ibmcloud dev toolchain-delete`](/docs/cli?topic=cli-idt-cli#toolchain-delete) command. 
 {: tip}
-
 
 ## Why can't I view my toolchains in my DevOps dashboard?
 {: #view-toolchain-ts}
