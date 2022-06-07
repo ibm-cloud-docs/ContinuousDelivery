@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-23"
+lastupdated: "2022-06-07"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -214,7 +214,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 ## Viewing the {{site.data.keyword.deliverypipeline}} for Tekton dashboard 
 {: #view_tekton_dashboard}
 
-In the **PipelineRuns** section, the Tekton {{site.data.keyword.deliverypipeline}} dashboard displays an empty table until at least one Tekton pipeline runs. After Tekton pipeline runs occur (either manually or as the result of external events), the table lists those runs and related information such as status and run trigger, and the last updated time of the run definition.
+In the **PipelineRuns** section, the Tekton {{site.data.keyword.deliverypipeline}} dashboard displays an empty table until at least one Tekton pipeline runs. After Tekton pipeline runs occur (either manually or as the result of external events), the table lists those runs and related information such as status, trigger, and duration.
 
 Pipeline runs can be in any of the following states:
 
@@ -227,11 +227,7 @@ Pipeline runs can be in any of the following states:
 * **Cancelled**: `PipelineRun` was cancelled by the system or by the user. The system cancels `PipelineRun` when the number of waiting runs exceeds the allowed limit.
 * **Error**: `PipelineRun` contains errors that prevented it from being applied on the cluster. For more information about the cause of the error, see the run details.
 
-![Tekton Dashboard](images/tekton-dashboard.png){: caption="Figure 3. Tekton Dashboard" caption-side="bottom"}
-
 For detailed information about a selected run, click any row in the table. You view the `Task` definition and the steps in each `PipelineRun` definition. You can also view the status, logs, and details of each `Task` definition and step, and the overall status of the `PipelineRun` definition.
-
-![Tekton PipelineRun details](images/tekton-pipeline-run-details.png){: caption="Figure 4. Tekton PipelineRun details" caption-side="bottom"}
 
 ## Viewing details for a TaskRun pod
 {: #view_pod_details}
