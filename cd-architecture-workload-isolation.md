@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021
-lastupdated: "2021-11-22"
+  years: 2020, 2022
+lastupdated: "2022-05-12"
 
 keywords: public isolation for IBM Cloud Continuous Delivery, compute isolation for Continuous Delivery, Continuous Delivery architecture, workload isolation in Continuous Delivery
 
@@ -52,6 +52,8 @@ For more information about availability, see [High availability and disaster rec
 All {{site.data.keyword.contdelivery_short}} service plans share management, isolation, and deployment characteristics. For more information about the {{site.data.keyword.contdelivery_short}} plans, see [Plan limitations and usage](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 {: tip}
 
+You can configure {{site.data.keyword.deliverypipeline}} Private Workers to communicate between customer clusters and {{site.data.keyword.deliverypipeline}} services by using [private endpoints](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers#install_pw_agent_pse).
+
 ## {{site.data.keyword.contdelivery_short}} workload isolation
 {: #cd-workload-isolation}
 
@@ -78,6 +80,9 @@ The {{site.data.keyword.contdelivery_short}} service depends on several {{site.d
 * Backing up service and customer data regularly
 
 The following table lists the main dependencies of the {{site.data.keyword.contdelivery_short}} service.
+
+The {{site.data.keyword.contdelivery_short}} service launches its dependencies over public endpoints.
+{: tip}
 
 | Dependency | Type | Purpose|
 |:-----------------|:-----------------|:-----------------|
@@ -130,4 +135,4 @@ The following table shows the cross-region location for Object Storage in which 
 
 For more information about Object Storage locations, see [Regional Endpoints](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints-region).
 
-For more information about {{site.data.keyword.contdelivery_short}} disaster recovery, see [Disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-responsibilities-cd#disaster-recovery). 
+For more information about {{site.data.keyword.contdelivery_short}} disaster recovery, see [Disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-responsibilities-cd#disaster-recovery).
