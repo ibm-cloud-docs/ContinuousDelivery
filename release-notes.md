@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-05-26"
+lastupdated: "2022-06-07"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -30,6 +30,13 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
 
+## 07 June 2022
+{: #ContinuousDelivery-june0722}
+{: release-note}
+
+Private information in {{site.data.keyword.contdelivery_short}} and toolchains can now be protected by the Customer Root Key as part of Bring Your Own Key.
+:   [Bring Your Own Key](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_professional_plan) is available only in a professional plan.
+
 ## 23 May 2022
 {: #ContinuousDelivery-may2322}
 {: release-note}
@@ -41,7 +48,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #ContinuousDelivery-may1822}
 {: release-note}
 
-New toolchain template demonstrates how to deploy a sample NodeJS application with [Code Engine](https://cloud.ibm.com/docs/codeengine) by using a Tekton pipeline.
+New toolchain template demonstrates how to deploy a sample NodeJS application with [Code Engine](/docs/codeengine) by using a Tekton pipeline.
 :   [Code Engine Template](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fcode-engine-toolchain&env_id=ibm:yp:us-south){: external}.
 
 ## 5 May 2022
@@ -83,7 +90,7 @@ New toolchain template demonstrates how to deploy a sample NodeJS application wi
 {: #ContinuousDelivery-nov3021}
 {: release-note}
 
-IBM Cloud Continuous Delivery is now available in the Sao Paulo region.
+{{site.data.keyword.contdelivery_full}} is now available in the Sao Paulo region.
 :   Each location has three different data centers and provides a full cloud service stack to enable high availability, redundancy, and geographical dispersion.
 
 ## 29 November 2021
@@ -140,7 +147,7 @@ New toolchain templates demonstrate release strategies
 {: #ContinuousDelivery-jul0921}
 {: release-note}
 
-IBM Cloud Continuous Delivery is now available in the Toronto Region.
+{{site.data.keyword.contdelivery_full}} is now available in the Toronto Region.
 :   Each location has three different data centers and provides a full cloud service stack to enable high availability, redundancy, and geographical dispersion.
 
 ## 29 June 2021
@@ -151,13 +158,6 @@ DevSecOps Reference Implementation
 :   A complete SDLC following NIST Configuration Management controls that you can configure in a few clicks by using toolchain templates. The workflow will build, scan, test, and deploy your cloud-native applications while ensuring security and compliance goals are met and evidence is retained for any future audits. The workflow can be customized to leverage other enterprise tools or implement custom policies.
 
     Read the [announcement](https://www.ibm.com/cloud/blog/announcements/devsecops-reference-implementation-for-audit-ready-compliance-across-development-teams){: external}.
-
-## 31 May 2021
-{: #ContinuousDelivery-may3121}
-{: release-note}
-
-IBM Cloud Continuous Delivery is now available in the Toronto region.
-:   Each location has three different data centers and provides a full cloud service stack to enable high availability, redundancy, and geographical dispersion.
 
 ## 24 May 2021
 {: #ContinuousDelivery-may2421}
@@ -172,14 +172,14 @@ Code Risk Analyzer now scans Terraform
 {: #ContinuousDelivery-apr3021}
 {: release-note}
 
-IBM Cloud Continuous Delivery is now available in the Osaka region.
+{{site.data.keyword.contdelivery_full}} is now available in the Osaka region.
 :   Each location has three different data centers and provides a full cloud service stack to enable high availability, redundancy, and geographical dispersion.
 
 ## 31 March 2021
 {: #ContinuousDelivery-mar3121}
 {: release-note}
 
-IBM Cloud Continuous Delivery is now available in the Sydney region.
+{{site.data.keyword.contdelivery_full}} is now available in the Sydney region.
 :   Each location has three different data centers and provides a full cloud service stack to enable high availability, redundancy, and geographical dispersion.
 
 ## 28 February 2021
