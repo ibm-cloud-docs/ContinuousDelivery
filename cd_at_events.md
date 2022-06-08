@@ -53,10 +53,12 @@ The following table lists the actions that generate toolchain management events:
 | Action | Description | 
 |:-----------------|:-----------------|
 | `toolchain.instance.create` | Create a toolchain | 
-| `toolchain.instance.update` | Rename a toolchain. This event is not sent when tool integrations are added to (`toolchain.tool-instance.deploy`) or removed from (`toolchain.tool-instance.undeploy`) a toolchain. |
+| `toolchain.instance.update` | Rename a toolchain. This event is not sent when tool integrations are added to (`toolchain.tool-instance.deploy`) or removed from (`toolchain.tool-instance.undeploy`) a toolchain. If the toolchain is secured by a customer root key in a professional plan, the event contains the root key identifier.|
 | `toolchain.instance.delete` | Delete a toolchain |
 | `toolchain.tool-instance.deploy` | Add a tool integration to a toolchain |
 | `toolchain.tool-instance.undeploy` | Remove a tool integration from a toolchain |
+| `toolchain.instance-key-state.update` | Update the status of the wrapped Data Encryption Key (wDEK) based on the status of the hyperwarp event when a Customer Root Key (CRK) status changes |
+| `toolchain.instance.unwrap` | Unwrap a wrapped Data Encryption Key (wDEK) in order to encrypt or decrypt customer personal information |
 {: caption="Table 2. Actions that generate toolchain management events" caption-side="top"}
 
 The following table lists the actions that generate toolchain data events:
