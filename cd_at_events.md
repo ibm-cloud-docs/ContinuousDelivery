@@ -185,4 +185,4 @@ The following table lists and describes the root actions that prompt user emails
 | `toolchain.pipeline.read` | Add a user email when the user views a delivery pipeline. The `root-action-service-instance` CRN identifies the toolchain that contains the pipeline.  |
 | `toolchain.pipeline.update` | Add a user email when the user edits a delivery pipeline. The `root-action-service-instance` CRN identifies the toolchain that contains the pipeline.  |
 | `toolchain.web-ide.read` | Add a user email when the user opens a workspace in the Eclipse Orion {{site.data.keyword.webide}}. The `root-action-service-instance` CRN identifies the toolchain that contains the {{site.data.keyword.webide}} workspace. |
-{: caption="Table 10. Actions that add or remove user emails from the authorized users list" caption-side="top"}
+{: caption="Table 10. Actions that add or remove user emails from the authorized users list" caption-side="top"} 
