@@ -239,6 +239,7 @@ toc:
               label: grunt-idra3 (deprecated)
               href: https://www.npmjs.com/package/grunt-idra3
 
+      - non_auth_endpoints.md
       - cd_at_events.md
       - responsibiities_cd.md
 
