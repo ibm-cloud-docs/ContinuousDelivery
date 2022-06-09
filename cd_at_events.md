@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-01"
+lastupdated: "2022-06-09"
 
 keywords: event, security, IBM, activity tracker, Continuous Delivery
 
@@ -57,7 +57,7 @@ The following table lists the actions that generate toolchain management events:
 | `toolchain.instance.delete` | Delete a toolchain |
 | `toolchain.tool-instance.deploy` | Add a tool integration to a toolchain |
 | `toolchain.tool-instance.undeploy` | Remove a tool integration from a toolchain |
-| `toolchain.instance-key-state.update` | Update the status of the wrapped Data Encryption Key (wDEK) based on the status of the hyperwarp event when a Customer Root Key (CRK) status changes |
+| `toolchain.instance-key-state.update` | Update the root key in the key management service (KMS) provider that the toolchain uses. For example, enable, disable, or rotate a root key in a KMS provider. |
 | `toolchain.instance.unwrap` | Unwrap a wrapped Data Encryption Key (wDEK) in order to encrypt or decrypt customer personal information |
 {: caption="Table 2. Actions that generate toolchain management events" caption-side="top"}
 
