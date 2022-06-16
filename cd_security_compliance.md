@@ -4,20 +4,13 @@ copyright:
   years:  2021, 2022
 lastupdated: "2022-06-16"
 
-keywords: security and compliance for {{site.data.keyword.contdelivery_short}}, security for {{site.data.keyword.contdelivery_short}}, compliance for {{site.data.keyword.contdelivery_short}}
+keywords: security and compliance for continuous delivery, security for continuous delivery, compliance for continuous delivery
 
 subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing security and compliance with {{site.data.keyword.contdelivery_short}}
 {: #cd-manage-security-compliance}
@@ -45,26 +38,12 @@ To start monitoring your resources, check out [Getting started with {{site.data.
 #### DevSecOps goals
 {: #cd-DevSecOps-goals}
 
-The following goals are available as part of the DevSecOps toolchain templates. To get started, see [Setting up Tekton continuous integration pipelines with compliance](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-tekton-ci-compliance).
-
-- Check whether {{site.data.keyword.contdelivery_short}} toolchain continuously scans source code to identify critical and high vulnerabilities
-- Check whether {{site.data.keyword.contdelivery_short}} toolchain has unit tests that are continuously run to validate source code changes
-- Check whether {{site.data.keyword.contdelivery_short}} has Code Risk Analyzer configured that collects a bill of materials for pipeline run
-- Check whether {{site.data.keyword.contdelivery_short}} toolchain is configured with image signing
-- Check whether {{site.data.keyword.contdelivery_short}} toolchain source code meets Center for Internet Security benchmarks
-- Check whether {{site.data.keyword.contdelivery_short}} toolchain has branch protection rules enabled	
-- Check whether {{site.data.keyword.contdelivery_short}} toochain has secret detection scans enabled for source code	
-- Check whether {{site.data.keyword.contdelivery_short}} production change request exists and is approved	
-- Check whether {{site.data.keyword.contdelivery_short}} acceptance tests exist and have passed
-- Check whether {{site.data.keyword.contdelivery_short}} Vulnerability Advisor scans images for OS vulnerability detection exist and have passed
-
-Use the {{site.data.keyword.cloud_notm}} Security Best Practices profile for DevSecOps toolchains.
-{: tip}
+Goals are available as part of the DevSecOps toolchain templates. For more information, see [Managing security and compliance with DevSecOps](/docs/devsecops?topic=devsecops-scc-manage-cd).
 
 #### Toolchain properties
 {: #cd-toolchain-goals}
 
-- Ensure that only the tool integrations within the toolchain are included in the allow list parameter array
+- Ensure that only the tool integrations within the toolchain are included in the allow list parameter array.
 
 #### Identity and Access Management
 {: #cd-iam-goals}
