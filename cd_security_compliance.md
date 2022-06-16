@@ -38,7 +38,7 @@ To start monitoring your resources, check out [Getting started with {{site.data.
 #### DevSecOps goals
 {: #cd-DevSecOps-goals}
 
-Goals are available as part of the DevSecOps toolchain templates. For more information, see [Managing security and compliance with DevSecOps](/docs/devsecops?topic=devsecops-scc-manage-cd).
+Goals are available as part of the DevSecOps toolchain templates. For more information, see [Managing security and compliance with DevSecOps](/docs/devsecops?topic=devsecops-scc-manage-devsecops).
 
 #### Toolchain properties
 {: #cd-toolchain-goals}
