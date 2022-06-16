@@ -48,11 +48,11 @@ Goals are available as part of the DevSecOps toolchain templates. For more infor
 #### Identity and Access Management
 {: #cd-iam-goals}
 
-- Check whether {{site.data.keyword.contdelivery_short}} has no more than # users with the IAM administrator role
-- Check whether {{site.data.keyword.contdelivery_short}} has no more than # service IDs with the IAM administrator role
-- Check whether {{site.data.keyword.contdelivery_short}} has at least # users with the IAM manager role
-- Check whether {{site.data.keyword.contdelivery_short}} has at least # service IDs with the IAM manager role
-- Check whether {{site.data.keyword.contdelivery_short}} access is managed only by IAM access groups
+- 3000622 - Check whether toolchain has no more than # users with the IAM administrator role.
+- 3000629 - Check whether toolchain has no more than # service IDs with the IAM administrator role.
+- 3000633 - Check whether {{site.data.keyword.contdelivery_short}} has at least # users with the IAM manager role.
+- 3000634 - Check whether {{site.data.keyword.contdelivery_short}} has at least # service IDs with the IAM manager role.
+- 3000638 - Check whether toolchain service access is managed only by IAM access groups.
 
 ## Governing {{site.data.keyword.contdelivery_short}} resource configuration
 {: #govern-cd}
