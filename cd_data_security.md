@@ -76,6 +76,7 @@ The following components encrypt personal data by using only the provider-manage
 |:-----------------|:-----------------|
 |Eclipse Orion {{site.data.keyword.webide}}		|User workspaces    |
 |{{site.data.keyword.gitrepos}}		|User property keys and values     |
+{: caption="Table 2. Values that are encrypted by using the provider-managed key" caption-side="top"}
 
 
 ## Protecting your data when you use third-party tool integrations
