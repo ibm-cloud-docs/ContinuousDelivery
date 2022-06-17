@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-01"
+lastupdated: "2022-06-17"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -69,6 +69,13 @@ Personal data that is encrypted by using a customer key can be protected only in
 |Integrations		| * Slack (Slack webhook) \n * Pagerduty (API access key, Integration key) \n * Sauce Labs  (Access key) \n * Artifactory (API key) \n * Hashicorp Vault (Token, Role ID, Secret ID, Password) \n *  Jenkins  (Jenkins API token) \n * JIRA (JIRA API token) \n * Nexus (Authentication token) \n * Rational Team Concert (Password) \n * Security and  Compliance Center ({{site.data.keyword.cloud_notm}} API key) \n * Sonarqube (SonarQube password or authentication token) |
 |{{site.data.keyword.DRA_full}}		|Attachment in test records |
 {: caption="Table 1. Values that are encrypted by using your own key" caption-side="top"}
+
+The following components encrypt personal data by using only the provider-managed encryption key.
+
+| Component | Value | 
+|:-----------------|:-----------------|
+|Eclipse Orion {{site.data.keyword.webide}}		|User workspaces    |
+|{{site.data.keyword.gitrepos}}		|User property keys and values     |
 
 
 ## Protecting your data when you use third-party tool integrations
