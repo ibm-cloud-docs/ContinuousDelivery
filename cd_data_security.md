@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-17"
+lastupdated: "2022-06-20"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -72,10 +72,11 @@ Personal data that is encrypted by using a customer key can be protected only in
 
 The following components encrypt personal data by using only the provider-managed encryption key.
 
+
 | Component | Value | 
 |:-----------------|:-----------------|
 |Eclipse Orion {{site.data.keyword.webide}}		|User workspaces    |
-|{{site.data.keyword.gitrepos}}		|User property keys and values     |
+|{{site.data.keyword.gitrepos}}		| * Issues, pull requests, and source code \n * Personal information, such as name, email, profile picture, address, and other information from the profile page     |
 {: caption="Table 2. Values that are encrypted by using the provider-managed key" caption-side="top"}
 
 
