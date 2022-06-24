@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-25"
+lastupdated: "2022-06-24"
 
 keywords: devops insights, quality, dashboard, code coverage, test, tests, verification, app
 
@@ -26,7 +26,7 @@ The quality dashboard provides quality data sets such as unit tests, code covera
 
 ![Deployment Risk Quality dashboard](images/DRA_quality_dashboard.png){: caption="Figure 1. Quality dashboard" caption-side="bottom"}
 
-The Quality Dashboard page shows rows of information for each app that is associated with {{site.data.keyword.DRA_full}}. All of the information about successes and failures for each test for each app is available on one screen.  
+The Quality Dashboard page shows rows of information for each app that is associated with {{site.data.keyword.DRA_full}}. All of the information about successes and failures for each test for each app is available on one screen. The Quality Dashboard page also displays the tags that are associated with the tests at the time of upload. By selecting a tag from the menu, you can limit the information that is shown on the page to that tag. By default, the page displays all of the tags that are associated with the tests.
 
 You can find the Quality Dashboard page in the {{site.data.keyword.DRA_short}} dashboard. 
 
