@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-09"
+lastupdated: "2022-06-24"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -30,6 +30,13 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
 
+## 23 June 2022
+{: #ContinuousDelivery-june2322}
+{: release-note}
+
+New toolchain template demonstrates how to use a pull-based deployment mechanism to continuously deploy Kubernetes resources to multiple clusters on [IBM Cloud Satellite](/docs/satellite) by using a Tekton pipeline.
+:   [Satellite Template](https://cloud.ibm.com/devops/setup/deploy?repository=https://us-south.git.cloud.ibm.com/open-toolchain/satellite-cd-toolchain&env_id=ibm:yp:us-south){: external}.
+
 ## 13 June 2022
 {: #ContinuousDelivery-june1322}
 {: release-note}
@@ -38,7 +45,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 :   Upgraded to [GitLab 14.10.4](https://about.gitlab.com/releases/2022/06/01/critical-security-release-gitlab-15-0-1-released/){: external}.
 
 ## 07 June 2022
-{: #ContinuousDelivery-june0722}
+{: #ContinuousDelivery-june2322}
 {: release-note}
 
 Private information in {{site.data.keyword.contdelivery_short}} and toolchains can now be protected by the Customer Root Key as part of Bring Your Own Key.
