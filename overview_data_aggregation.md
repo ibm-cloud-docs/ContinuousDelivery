@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-06-28"
 
 keywords: devops insights, quality, dashboard, code coverage, test, tests, verification, app
 
@@ -18,7 +18,7 @@ subcollection: ContinuousDelivery
 {:important: .important}
 {:pre: .pre}
 
-# DevOps data aggregation
+# DevOps data aggregation in the Insights quality dashboard
 {: #devops-data-aggregation}
 
 The quality dashboard provides quality data sets such as unit tests, code coverage, functional verification tests, and static security scans for each application. The Quality Dashboard page works with {{site.data.keyword.deliverypipelinelong}}, Jenkins, Travis, and other continuous integration and continuous delivery (CI/CD) tools. You can also aggregate quality data for applications that run in multiple clouds or on-premises environments into a single instance of {{site.data.keyword.DRA_full}}. Each category provides more details about specific tests and to identify trends. You can specify the types of tests you want to represent in the dashboard. For more information about data sets, see [Managing data sets](/docs/ContinuousDelivery?topic=ContinuousDelivery-adding-data-sets). 
