@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-07"
+lastupdated: "2022-06-29"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -228,6 +228,9 @@ Pipeline runs can be in any of the following states:
 * **Error**: `PipelineRun` contains errors that prevented it from being applied on the cluster. For more information about the cause of the error, see the run details.
 
 For detailed information about a selected run, click any row in the table. You view the `Task` definition and the steps in each `PipelineRun` definition. You can also view the status, logs, and details of each `Task` definition and step, and the overall status of the `PipelineRun` definition.
+
+The retention period for PipelineRuns and their logs depends on the plan that is selected for the {{site.data.keyword.contdelivery_short}} service instance. Tekton pipelines under the Professional plan are retained for one year. Tekton pipelines under the Lite plan are retained for 30 days. To retain any PipelineRuns beyond the retention period, in the PipelineRuns section, select **Actions** > **Download** to download a .zip file.
+{: important}
 
 ## Viewing details for a TaskRun pod
 {: #view_pod_details}
