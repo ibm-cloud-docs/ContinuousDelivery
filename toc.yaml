@@ -75,6 +75,7 @@ toc:
       - cd-kubernetes-razee-tutorial.md
       - cd-kubernetes-tutorial.md
       - cd-satellite-tutorial.md
+      - cd-only-satellite-tutorial.md
       - cd-vm-tutorial.md
       - cd-vsi-tutorial.md
       - cd-code-engine.md
