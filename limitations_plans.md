@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-06-20"
+lastupdated: "2022-06-29"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -183,6 +183,12 @@ As an alternative to the console, you can change the {{site.data.keyword.contdel
 ## Delivery Pipeline usage
 {: #pipeline_usage}
 
+The retention period for pipelines varies based on the pipeline type and the plan that is selected for the {{site.data.keyword.contdelivery_short}} service instance. 
+
+* Classic pipelines retain a maximum of 10 stage runs on either plan.
+* Tekton pipelines under the Professional plan retain PipelineRuns and their logs for one year.
+* Tekton pipelines under the Lite plan retain PipelineRuns and their logs for 30 days.
+
 The acceptable usage behaviors include, but are not limited to, these behaviors:
 
 * The compilation and assembly of artifacts for supported programming languages.
@@ -191,7 +197,7 @@ The acceptable usage behaviors include, but are not limited to, these behaviors:
 
 The usage behaviors that are not permitted include, but are not limited to, these behaviors:
 
-* The use of pipeline jobs or workers for general compute behaviors, such as Bitcoin mining, distributed denial-of-service attacks, and malicious or offensive behavior to other clients or users within the {{site.data.keyword.Bluemix_notm}} platform or general internet users.
+* The use of pipeline jobs or workers for general compute behaviors, such as Bitcoin mining, distributed denial-of-service attacks, and malicious or offensive behavior to other clients or users within the {{site.data.keyword.cloud_notm}} platform or general internet users.
 * The use in the normal development process for sites or services that promote hate speech, or other activities that violate the [IBM Business Conduct Guidelines](https://www.ibm.com/investor/att/pdf/BCG_accessible_2020.pdf){: external}.
 * The use of event-generated behavior for malicious intrusion or attacks against {{site.data.keyword.cloud_notm}} or other sites.
 
