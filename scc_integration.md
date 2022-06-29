@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-30"
+lastupdated: "2022-06-29"
 
 keywords: tool integrations, IBM Cloud Public, Security and Compliance Center
 
@@ -27,7 +27,7 @@ subcollection: ContinuousDelivery
 You can use the {{site.data.keyword.compliance_full}} to embed security checks into your everyday workflows to monitor for security and compliance. By monitoring for risks, you can identify security vulnerabilities and quickly work to mitigate the impact and fix the issues.
 {: shortdesc}
 
-Currently, you can use this tool integration only with toolchains that are created from the DevSecOps continuous ingtegration and continuous delivery templates. Before you configure a {{site.data.keyword.compliance_short}} tool integration, make sure that you have a Git repository (repo) that contains the evidence locker for your toolchain and a configured Git tool integration that points to this repo.
+Currently, you can use this tool integration only with toolchains that are created from the DevSecOps continuous integration and continuous delivery templates. Before you configure a {{site.data.keyword.compliance_short}} tool integration, make sure that you have a Git repository (repo) that contains the evidence locker for your toolchain and a configured Git tool integration that points to this repo.
 {: important}
 
 This tool integration verifies the security and compliance posture of your toolchain by identifying the location of the evidence locker and the path to the evidence summary. For more information about evidence format and structure, see [Evidence](/docs/devsecops?topic=devsecops-devsecops-evidence). You can also configure a pipeline task to trigger security and compliance scans by using this tool.
@@ -57,7 +57,7 @@ Configure {{site.data.keyword.compliance_short}} to embed security checks into y
     {: tip}
 
 1. Click **Create Integration**.
-1. On your Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.compliance_short}}** .  
+1. On your Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.compliance_short}}**.
  
 ## Learn more about {{site.data.keyword.compliance_short}}
 {: #learn_scc}
