@@ -145,6 +145,7 @@ toc:
           topics: 
           - install_private_workers.md
           - private_workers.md
+          - pipeline_standalone_agent.md
       - topicgroup: 
               label: Eclipse Orion Web IDE
               topics: 
