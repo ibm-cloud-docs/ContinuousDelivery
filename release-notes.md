@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-06-30"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -29,6 +29,16 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
+
+## 30 June 2022
+{: #ContinuousDelivery-june3022}
+{: release-note}
+
+Private workers can now be run in stand-alone mode.
+:   [Using {{site.data.keyword.deliverypipeline}} Private Workers in stand-alone mode](/docs/ContinuousDelivery?topic=ContinuousDelivery-standalone-mode-private-workers).
+
+Private workers can now be managed on a Satellite cluster, providing easier management of workers on {{site.data.keyword.redhat_openshift_full}} clusters by using the Operator Lifecycle Manager (OLM) framework.
+:   [Installing {{site.data.keyword.deliverypipeline}} Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers#pw_install_prereqs).
 
 ## 23 June 2022
 {: #ContinuousDelivery-june2322}
