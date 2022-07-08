@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2019-10-15"
+  years: 2017, 2022
+lastupdated: "2022-07-08"
 
 keywords: commit message field, terminal Type git branch, Eclipse Orion {{site.data.keyword.webide}}, Git commands
 
@@ -17,10 +17,14 @@ subcollection: ContinuousDelivery
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # Working with Git in the Eclipse Orion Web IDE
 {: #git_web_ide}
+
+The Eclipse Orion {{site.data.keyword.webide}} feature in the {{site.data.keyword.contdelivery_full}} service is deprecated. The {{site.data.keyword.contdelivery_short}} service does not provide a direct replacement. As of 8 August 2022, new toolchains will not include the {{site.data.keyword.webide}} as a default tool. You cannot create and add instances of the {{site.data.keyword.webide}} tool integration to existing toolchains. Existing instances of the {{site.data.keyword.webide}} continue to operate normally. As of 7 October 2022, the {{site.data.keyword.webide}} tool integration will be removed from existing toolchains and the associated data will be deleted. It is recommended that you export your data from your {{site.data.keyword.webide}} workspace before this date, or commit and push all of your outstanding changes into a Git repository.
+{: deprecated}
 
 You can run many common Git commands in the Eclipse Orion {{site.data.keyword.webide}}.
 
