@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-07-08"
 
 keywords: tool integrations, IBM Cloud Public, Eclipse Orion Web IDE, Web IDE
 
@@ -23,6 +23,9 @@ subcollection: ContinuousDelivery
 
 # Adding the Eclipse Orion Web IDE
 {: #webide}
+
+The Eclipse Orion {{site.data.keyword.webide}} feature in the {{site.data.keyword.contdelivery_full}} service is deprecated. The {{site.data.keyword.contdelivery_short}} service does not provide a direct replacement. As of 8 August 2022, new toolchains will not include the {{site.data.keyword.webide}} as a default tool. You cannot create and add instances of the {{site.data.keyword.webide}} tool integration to existing toolchains. Existing instances of the {{site.data.keyword.webide}} continue to operate normally. As of 7 October 2022, the {{site.data.keyword.webide}} tool integration will be removed from existing toolchains and the associated data will be deleted. It is recommended that you export your data from your {{site.data.keyword.webide}} workspace before this date, or commit and push all of your outstanding changes into a Git repository.
+{: deprecated}
 
 The Eclipse Orion {{site.data.keyword.webide}} is an integrated web-based environment where you can create, edit, run, debug, and complete source control tasks. You can seamlessly move from editing to running to submitting to deploying.
 
