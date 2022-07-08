@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-08"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -29,6 +29,17 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
+
+## 08 July 2022
+{: #ContinuousDelivery-july0822}
+{: release-note}
+
+The Eclipse Orion {{site.data.keyword.webide}} feature in the {{site.data.keyword.contdelivery_full}} service is deprecated.
+:   The {{site.data.keyword.contdelivery_short}} service does not provide a direct replacement.
+
+:   As of 8 August 2022, new toolchains will not include the {{site.data.keyword.webide}} as a default tool. You cannot create and add instances of the {{site.data.keyword.webide}} tool integration to existing toolchains. Existing instances of the {{site.data.keyword.webide}} continue to operate normally.
+
+:   As of 7 October 2022, the {{site.data.keyword.webide}} tool integration will be removed from existing toolchains and the associated data will be deleted. It is recommended that you export your data from your {{site.data.keyword.webide}} workspace before this date, or commit and push all of your outstanding changes into a Git repository.
 
 ## 30 June 2022
 {: #ContinuousDelivery-june3022}
@@ -355,6 +366,6 @@ Stricter enforcement of service plans
 :   A toolchain must be linked to a CD service in order for the Delivery Pipeline run.
 :   Users of the CD service are automatically added to the list of "Authorized Users."
 :   If you are using the Lite plan with more than five authorized users, the pipelines no longer run, pushes to Git Repos are unavailable, and DevOps Insights is unavailable.
-:   If you are using the Lite plan, after 500 Delivery Pipeline jobs are run during a month, pipelines do not run, pushes to Git Repos are unavailable, and DevOps Insights is unavailable for the remainder of that billing period. 
+:   If you are using the Lite plan, after 500 Delivery Pipeline jobs are run during a month, pipelines do not run, pushes to Git Repos are unavailable, and DevOps Insights is unavailable for the remainder of that billing period.
 
     Read the [announcement](https://www.ibm.com/cloud/blog/announcements/usage-and-billing-in-ibm-cloud-continuous-delivery){: external}.
