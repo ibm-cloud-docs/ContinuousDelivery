@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2019-09-27"
+  years: 2015, 2022
+lastupdated: "2022-07-08"
 
 keywords: Eclipse Orion {{site.data.keyword.webide}}, file types, Local Editor Settings icon, edit code, deploy apps, supported languages
 
@@ -18,11 +18,15 @@ subcollection: ContinuousDelivery
 {:important: .important}
 {:note: .note}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:download: .download}
 {:table: .aria-labeledby="caption"}
 
 # Developing with the Eclipse Orion Web IDE
 {: #web_ide}
+
+The Eclipse Orion {{site.data.keyword.webide}} feature in the {{site.data.keyword.contdelivery_full}} service is deprecated. The {{site.data.keyword.contdelivery_short}} service does not provide a direct replacement. As of 8 August 2022, new toolchains will not include the {{site.data.keyword.webide}} as a default tool. You cannot create and add instances of the {{site.data.keyword.webide}} tool integration to existing toolchains. Existing instances of the {{site.data.keyword.webide}} continue to operate normally. As of 7 October 2022, the {{site.data.keyword.webide}} tool integration will be removed from existing toolchains and the associated data will be deleted. It is recommended that you export your data from your {{site.data.keyword.webide}} workspace before this date, or commit and push all of your outstanding changes into a Git repository.
+{: deprecated}
 
 The Eclipse Orion {{site.data.keyword.webide}} is a browser-based development environment where you can develop for the web in JavaScript, HTML, and CSS with the help of content assist, code completion, and error checking. The {{site.data.keyword.webide}} works with nearly any language and you can highlight syntax for most file types. Source control is built in, and you can deploy code locally to test and debug your apps.
 {: shortdesc}
