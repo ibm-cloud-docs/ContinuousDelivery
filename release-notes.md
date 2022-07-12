@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-07-12"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -29,6 +29,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
+
+## 12 July 2022
+{: #ContinuousDelivery-july1222}
+{: release-note}
+
+{{site.data.keyword.gitrepos}}
+:   Upgraded to [GitLab 14.10.5](https://about.gitlab.com/releases/2022/06/30/critical-security-release-gitlab-15-1-1-released/){: external}.
 
 ## 08 July 2022
 {: #ContinuousDelivery-july0822}
