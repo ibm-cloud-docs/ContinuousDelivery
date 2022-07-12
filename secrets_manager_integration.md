@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-07-11"
 
 keywords: tool integrations, IBM Cloud Public, IBM Secrets Manager
 
@@ -27,9 +27,14 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.secrets-manager_full}} helps you to securely store and apply secrets for apps across {{site.data.keyword.cloud_notm}} services.
 {: shortdesc}
 
-A *secret* is anything that provides access to sensitive information, such as an [API key](/docs/account?topic=account-manapikey). If you store secrets as arbitrary keys in {{site.data.keyword.secrets-manager_short}}, you can use this tool integration to access secrets wherever they are needed in the toolchain workflow. To learn more about arbitrary secrets in {{site.data.keyword.secrets-manager_short}}, see [Secret types](/docs/secrets-manager?topic=secrets-manager-what-is-secret#secret-types).
+A *secret* is anything that provides access to sensitive information, such as an [API key](/docs/account?topic=account-manapikey). You can use the {{site.data.keyword.secrets-manager_short}} tool integration to access the following types of secrets, wherever they are required in the toolchain workflow:
 
-Before you configure a {{site.data.keyword.secrets-manager_short}} tool integration, make sure that you have an instance of the {{site.data.keyword.secrets-manager_short}} service provisioned in the region and resource group that you want to create the tool integration in. For instructions about how to provision an instance of the {{site.data.keyword.secrets-manager_short}} service, see [Provisioning the service](/docs/secrets-manager?topic=secrets-manager-create-instance#create-instance-ui).
+* Identity and Access Management (IAM) credentials secrets.
+* Arbitrary secrets that are stored in the {{site.data.keyword.secrets-manager_short}}.
+
+For more information about IAM credentials secrets, and Arbitrary secrets in {{site.data.keyword.secrets-manager_short}}, see [Working with secrets of different types](/docs/secrets-manager?topic=secrets-manager-what-is-secret#secret-types).
+
+Before you configure a {{site.data.keyword.secrets-manager_short}} tool integration, make sure that you have an instance of the {{site.data.keyword.secrets-manager_short}} service that is provisioned in the region and resource group that you want to create the tool integration in. For instructions about how to provision an instance of the {{site.data.keyword.secrets-manager_short}} service, see [Creating a {{site.data.keyword.secrets-manager_short}} instance in the UI](/docs/secrets-manager?topic=secrets-manager-create-instance#create-instance-ui).
 {: important}
 
 Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets that are part of your toolchain:
@@ -50,10 +55,37 @@ Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets
 ## Applying secrets
 {: #secretsmanager_apply_secrets}
 
-After your {{site.data.keyword.secrets-manager_short}} tool integration is configured, you can use it to apply secrets anywhere that they are needed by the toolchain. The following example applies a secret that is stored in {{site.data.keyword.secrets-manager_short}} to an {{site.data.keyword.cloud_notm}} API key that is required by the [Pipeline tool integration](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline). You can follow the same steps to apply secrets to any of the {{site.data.keyword.contdelivery_short}} tool integrations that require secret values.
+After your {{site.data.keyword.secrets-manager_short}} tool integration is configured, you can use it to apply secrets anywhere that they are needed by the toolchain. This tool integration and the Secrets dialog box support both the Arbitrary and the IAM credentials secret types.
 
-You must save third-party secrets, such as a Slack webhook or an Artifactory API token, in {{site.data.keyword.secrets-manager_short}} *before* you create a new toolchain. You can mint and store only IBM-managed secrets such as {{site.data.keyword.cloud_notm}} API keys in {{site.data.keyword.secrets-manager_short}} while you work with your toolchain.
+You can use Arbitrary secrets to store any predefined secret value, or to store dynamically minted {{site.data.keyword.cloud_notm}} API keys by using the Secrets dialog box. You must create IAM credentials secrets directly within your {{site.data.keyword.secrets-manager_short}} service instance. After you create these secrets, you can select IAM credentials secrets to use them within your toolchain by using the Secrets dialog box on any secure field. The Secrets dialog box displays both the Arbitrary and the IAM credentials secret types, with the secret type appended to the secret name in brackets.
+
+### Using IAM credentials secrets
+{: #iam_secrets}
+
+The IAM credentials secret type is fully integrated with IAM. {{site.data.keyword.secrets-manager_short}} auto-manages dynamic service IDs and API keys that are associated with an IAM credentials secret. {{site.data.keyword.contdelivery_short}} and {{site.data.keyword.secrets-manager_short}} service APIs engage to resolve authorized IAM Credentials secret references in {{site.data.keyword.contdelivery_short}} toolchains and pipeline workloads.
+
+When you create an IAM credentials secret in {{site.data.keyword.secrets-manager_short}}, make sure that you select the **Reuse IAM credentials until lease expires** checkbox. Also, specify a lease duration with a minimum of 12 hours when you use public worker agents to run your pipeline. If you use private worker agents, make sure that you set a minimum lease duration to the forced cancellation duration for a pipeline. It is recommended that you confirm these settings with your account administrator. By setting the reuse option and an appropriate lease duration, you can make sure that the dynamically managed IAM credentials service ID API key persists during your pipeline runs.
 {: important}
+
+![IAM credentials lease duration and reuse API key](images/secret-leaseduration.png){: caption="Figure 1. IAM credentials lease duration and reuse API key" caption-side="bottom"}
+
+By running the Rotate action on IAM credentials from the {{site.data.keyword.secrets-manager_short}} dashboard, you can maintain the compliance posture requirements for API Key rotations that are used by your {{site.data.keyword.contdelivery_short}} pipelines. {{site.data.keyword.secrets-manager_short}} works with IAM to generate a new API Key for an IAM credentials secret and manages the versioning of the secret.
+
+The IAM credentials secret type also helps to provide continuity of service during and after secret rotation:
+
+* New {{site.data.keyword.contdelivery_short}} pipeline workloads use the newly rotated API Key until its lease duration expires.
+* Existing {{site.data.keyword.contdelivery_short}} pipeline workloads that are running with the API Key that was issued before rotation can continue to run with the previous version until the lease duration of the previous version expires.
+
+![IAM credentials secret rotation](images/secret-iamcredentials-rotation.png){: caption="Figure 2. IAM credentials secret rotation" caption-side="bottom"}
+
+For more information about the IAM credentials secret type in {{site.data.keyword.secrets-manager_short}}, see [Creating IAM credentials](/docs/secrets-manager?topic=secrets-manager-iam-credentials).
+
+### Using Arbitrary secrets that are stored in {{site.data.keyword.secrets-manager_short}}
+{: #arbitrary_secrets}
+
+You must save third-party secrets, such as a Slack webhook or an Artifactory API token, in {{site.data.keyword.secrets-manager_short}} *before* you create a new toolchain. You can mint and store IBM-managed secrets, such as {{site.data.keyword.cloud_notm}} API keys in {{site.data.keyword.secrets-manager_short}}, as Arbitrary secret types while you work with your toolchain by using the Secrets dialog. However, you must mint IAM credentials secrets directly in {{site.data.keyword.secrets-manager_short}} before you can select these types of secrets within your toolchain by using the Secrets dialog box.
+
+The following example applies an Arbitrary secret type that is stored in {{site.data.keyword.secrets-manager_short}} to an {{site.data.keyword.cloud_notm}} API key that is required by the [{{site.data.keyword.deliverypipeline}} tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline). You can follow the same steps to apply secrets to any of the {{site.data.keyword.contdelivery_short}} tool integrations that require secret values.
 
 1. Click the key icon to retrieve secrets from secure stores such as {{site.data.keyword.secrets-manager_short}} for the {{site.data.keyword.cloud_notm}} API key.
 
@@ -61,18 +93,18 @@ You must save third-party secrets, such as a Slack webhook or an Artifactory API
 
 1. Select a secret group and a secret name and click **OK** to apply the stored secret to the field that is associated with it.
 
-![Secret Reference to a Vault](images/secret-pill.png){: caption="Figure 1. Secret reference to a vault" caption-side="bottom"}
+   ![Secret Reference to a Vault](images/secret-pill.png){: caption="Figure 3. Secret reference to a vault" caption-side="bottom"}
 
-The name of the secret that you select appears in capsule form. You cannot edit the secret name inline, but you can click ![remove icon](images/secret-pill-delete-16.png) to delete the name. You can also replace the secret name by using the Secrets Picker control again. If you manually type or paste a secret name into the Secrets field, it is displayed in a different format:
+   The name of the secret that you select appears in capsule form. You cannot edit the secret name inline, but you can click ![remove icon](images/secret-pill-delete-16.png) to delete the name. You can also replace the existing secret name by selecting the secret name again. If you manually type or paste a secret name into the Secrets field, it is displayed in a different format:
 
-![Literal Secret Value](images/secret-literal.png){: caption="Figure 2. Secret value" caption-side="bottom"}
+   ![Literal Secret Value](images/secret-literal.png){: caption="Figure 4. Secret value" caption-side="bottom"}
 
-The format that the secret is displayed in indicates whether the value references a secret that is stored in a backend vault or is a secret that is stored in your toolchain. By using references to secrets that are managed by secret providers such as  {{site.data.keyword.secrets-manager_short}}, your secret values are centralized and stored securely in a single location. This approach resolves secrets sprawl and proliferation, and means that you can update secrets without updating your toolchain. When you use secret references, the actual secret value is resolved when the toolchain runs by dynamically retrieving it from {{site.data.keyword.secrets-manager_short}}. This approach is useful when you must rotate the value of your toolchain secrets periodically.
+   The format that the secret is displayed in indicates whether the value references a secret that is stored in a backend vault or a secret that is stored in your toolchain. By using references to secrets that are managed by secret providers such as  {{site.data.keyword.secrets-manager_short}}, your secret values are centralized and stored securely in a single location. This approach resolves secrets sprawl and proliferation, and means that you can update secrets without updating your toolchain. When you use secret references, the actual secret value is resolved when the toolchain runs by dynamically retrieving it from {{site.data.keyword.secrets-manager_short}}. This approach is useful when you must rotate the value of your toolchain secrets periodically.
 
 ## Adding a {{site.data.keyword.secrets-manager_short}} tool integration to your toolchain template
 {: #secretsmanager_add_toolchain_template}
 
-You can add a {{site.data.keyword.secrets-manager_short}} tool integration to your toolchain template by adding a service definition to the toolchain.yml file in your template repo. This file is the design blueprint for your toolchain and includes all of the tool integrations that are available when you create a toolchain instance based on that template. To customize an existing toolchain template to include a {{site.data.keyword.secrets-manager_short}} tool integration, insert a YAML definition. 
+You can add a {{site.data.keyword.secrets-manager_short}} tool integration to your toolchain template by adding a service definition to the `toolchain.yaml` file in your template repo. This file is the design blueprint for your toolchain and includes all of the tool integrations that are available when you create a toolchain instance based on that template. To customize an existing toolchain template to include a {{site.data.keyword.secrets-manager_short}} tool integration, insert a YAML definition. 
 
 ```yaml
   sm-compliance-secrets:
@@ -104,4 +136,4 @@ To view your authorizations in {{site.data.keyword.cloud_notm}}, complete the fo
 ## Learn more about {{site.data.keyword.secrets-manager_short}}
 {: #secretsmanager_learn_more}
 
-To learn more about {{site.data.keyword.secrets-manager_short}}, see [Service Overview](/docs/secrets-manager?topic=secrets-manager-getting-started).
+To learn more about {{site.data.keyword.secrets-manager_short}}, see [Getting started with Secrets Manager](/docs/secrets-manager?topic=secrets-manager-getting-started).
