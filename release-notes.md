@@ -35,7 +35,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 14.10.5](https://about.gitlab.com/releases/2022/06/30/critical-security-release-gitlab-15-1-1-released/){: external}. 
+:   Upgraded to [GitLab 14.10.5](https://about.gitlab.com/releases/2022/06/30/critical-security-release-gitlab-15-1-1-released/){: external}.
 
 ## 08 July 2022
 {: #ContinuousDelivery-july0822}
