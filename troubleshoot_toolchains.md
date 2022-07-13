@@ -172,4 +172,4 @@ Use one of the following methods to enable the root key for encryption:
 
 * [Enable the root key for the {{site.data.keyword.keymanagementservicefull}} instance](/docs/key-protect?topic=key-protect-disable-keys#enable-root-key) that is associated with your {{site.data.keyword.contdelivery_short}} service, in the region where you want to view the toolchain.
 
-* [Enable the root key for the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-disable-keys#enable-ui) that is associated with your {{site.data.keyword.contdelivery_short}} service, in the region where you want to view the toolchain. 
+* [Enable the root key for the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-disable-keys#enable-ui) that is associated with your {{site.data.keyword.contdelivery_short}} service, in the region where you want to view the toolchain.
