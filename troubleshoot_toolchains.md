@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-03"
+lastupdated: "2022-07-07"
 
 keywords: troubleshoot, toolchains, tool integrations
 
@@ -139,3 +139,37 @@ Your toolchain doesn't show in the toolchain unless you have the proper location
 
 On your toolchain page, change the location to Dallas, Frankfurt, or London to show all of your {{site.data.keyword.DRA_short}} integrated toolchains.
 {: tsResolve}
+
+## Why can't I create a toolchain when the root key is disabled?
+{: #create-toolchain-root-key}
+{: troubleshoot}
+
+When you attempt to create a toolchain, the following notification is displayed: `The root key of the Key Management Service instance that was configured for the Continuous Delivery service in the selected resource group and region is disabled`.
+{: tsSymptoms}
+
+When you create a toolchain, you must protect it by using a root key for encryption that is enabled.
+{: tsCauses}
+
+Use one of the following methods to enable the root key for encryption: 
+{: tsResolve}
+
+* [Enable the root key for the {{site.data.keyword.keymanagementservicefull}} instance](/docs/key-protect?topic=key-protect-disable-keys#enable-root-key) that is associated with your {{site.data.keyword.contdelivery_short}} service, in the region where you want to create a toolchain. 
+
+* [Enable the root key for the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-disable-keys#enable-ui) that is associated with your {{site.data.keyword.contdelivery_short}} service, in the region where you want to create a toolchain.
+
+## Why can't I view the service instances that I created on the Toolchains page when the root key is disabled?
+{: #view-toolchain-root-key}
+{: troubleshoot}
+
+When you open your toolchain, the following notification is displayed: `The root key of the key management service instance that was used to encrypt this toolchain is disabled.`
+{: tsSymptoms}
+
+Because the information that is required to view the toolchain's service instances is decrypted when you open a toolchain, you must ensure that the root key for encryption is enabled.
+{: tsCauses}
+
+Use one of the following methods to enable the root key for encryption:
+{: tsResolve}
+
+* [Enable the root key for the {{site.data.keyword.keymanagementservicefull}} instance](/docs/key-protect?topic=key-protect-disable-keys#enable-root-key) that is associated with your {{site.data.keyword.contdelivery_short}} service, in the region where you want to view the toolchain.
+
+* [Enable the root key for the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-disable-keys#enable-ui) that is associated with your {{site.data.keyword.contdelivery_short}} service, in the region where you want to view the toolchain.
