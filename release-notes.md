@@ -30,6 +30,17 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
 
+## 22 July 2022
+{: #ContinuousDelivery-july2222}
+{: release-note}
+
+The Beta Terraform resources and data sources, Go SDKs, and HTTP APIs are now available for working with Toolchains and Tekton Pipelines.
+:   Terraform resources and data sources: [IBM-Cloud provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
+:   Go SDKs: Open-source repository (repo) [continuous-delivery-go-sdk](https://github.com/IBM/continuous-delivery-go-sdk){: external}.
+:   HTTP APIs: [{{site.data.keyword.contdelivery_short}} Toolchain](https://cloud.ibm.com/apidocs/toolchain){: external} and [{{site.data.keyword.contdelivery_short}} Tekton Pipeline](https://cloud.ibm.com/apidocs/tekton-pipeline){: external}.
+
+    Ask questions and provide feedback in the [#ask-your-question](https://ibm-devops-services.slack.com/archives/C5AHRCLHH){: external} Slack channel.
+
 ## 20 July 2022
 {: #ContinuousDelivery-july2022}
 {: release-note}
