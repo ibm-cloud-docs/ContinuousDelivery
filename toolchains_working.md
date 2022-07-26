@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2022
 
-lastupdated: "2022-06-20"
+lastupdated: "2022-07-25"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -62,7 +62,7 @@ You can use a template as a starting point to [create a toolchain](https://cloud
 
    The diagram in the following image is an example. When you create a toolchain, the diagram shows each tool integration that is part of the toolchain.
 
-   ![Toolchain diagram](images/toolchain_diagram2.png){: caption="Figure 1. Sample Toolchain" caption-side="bottom"}
+   ![Toolchain diagram](images/toolchain_diagram.png){: caption="Figure 1. Sample Toolchain" caption-side="bottom"}
 
 1. Review the default information for the toolchain settings:
 
