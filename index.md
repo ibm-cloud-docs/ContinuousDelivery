@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-11"
+lastupdated: "2022-07-26"
 
 keywords: IBM Cloud Continuous Delivery, getting started, tutorial, create a toolchain, tool integration, toolchain template, DevOps toolchains
 
@@ -43,18 +43,15 @@ Before you can create a continuous delivery toolchain from a template, you must 
 ## Step 1: Select a toolchain template
 {: #select_a_toolchain_template}
 
-To quickly find the toolchain template that addresses your specific requirements, select the appropriate checkboxes to filter by deployment target and tools.
+To quickly find the toolchain template that addresses your specific requirements, select the appropriate checkboxes to filter by deployment target, tools, and practices.
 {: tip}
 
 1. On the **Create a Toolchain** page, click a [toolchain template](https://cloud.ibm.com/devops/create){: external}.
-1. Review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
+1. Review the description of the toolchain that you are about to create. Depending on the type of template that you select, you can review this information on the Welcome page or from the About tab. Some templates provide a diagram that shows how each tool is connected to perform the template's objective.
 
- A few of the toolchain templates have multiple instances of a tool integration. For example, the Microservices toolchain template on {{site.data.keyword.cloud_notm}} Public contains three instances of GitHub and three instances of Delivery Pipeline, one for each of the three microservices.
- {: tip}
+   The diagram in the following image is an example. When you create a toolchain, the diagram shows each tool integration that is part of the toolchain.
 
- The diagram in the following image is an example. When you create a toolchain, the diagram shows each tool integration that is part of the toolchain.
-
-![Toolchain_diagram](images/toolchain_diagram2.png){: caption="Figure 1. Toolchain diagram" caption-side="bottom"}
+   ![Toolchain_diagram](images/toolchain_diagram.png){: caption="Figure 1. Toolchain diagram" caption-side="bottom"}
  
 ## Step 2: Create a toolchain 
 {: #create_a_toolchain}
@@ -64,22 +61,23 @@ To quickly find the toolchain template that addresses your specific requirements
    * The toolchain's name identifies it in {{site.data.keyword.cloud_notm}}. If you want to use a different name, change the toolchain's name.
    * The region to create the toolchain in. If you want to use a different region, select it from the list of available regions.
    * The resource group to create the toolchain in. If you want to use a different resource group, select it from the list of available resource groups.
-   * The provider for your source repository, such as GitHub, GitLab, or Bitbucket. If you want to use a different source provider, select it from the list of available repos.
  
-1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For information about configuring the tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
-1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on which toolchain template you selected. For example, when you create a Microservices toolchain on {{site.data.keyword.cloud_notm}} Public, these steps are run:
+1. Enter the requested information in each section of the template, as required. For more information about configuring the tool integrations, see [Configuring tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations).
+1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on which toolchain template you selected. For example, when you create a DevSecOps Continuous Integration (CI) toolchain, these steps are run:
 
    * The toolchain is created.
-   * If you configured Delivery Pipeline, the pipelines are created and run.
-   * If you configured Sauce Labs, the toolchain is set up to add Sauce Labs test jobs to the pipelines.
-   * If you configured PagerDuty, the toolchain is set up to send alert notifications to the PagerDuty service that you specified.
+   * Delivery Pipelines are created and configured based on the information that you provided.
+   * Source control repositories (repos) are configured for your inventory, compliance evidence, issue tracking, and a sample application for you to get started.
+   * {{site.data.keyword.DRA_short}} and SonarQube are configured to run automatically in your pipeline.
+   * If you configured a secrets management tool such as {{site.data.keyword.keymanagementservicefull}}, {{site.data.keyword.secrets-manager_full}}, or HashiCorp Vault, secrets such as API keys are securely stored and retrieved by your pipeline.
    * If you configured Slack, the toolchain is set up to send notifications about deployment status to the Slack channel that you specified.
-   * If you configured a source code tool integration such as GitHub, the sample GitHub repo is cloned into your GitHub account.
+
+After the toolchain is created, a notification appears that provides a link to a tutorial to learn more about how to use the template.
 
 ## Next steps
 {: #next_steps}
 
-Check out one of these tutorials on the [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external}:
+Check out one of these tutorials on the [IBM&reg; Architecture Center](https://www.ibm.com/cloud/architecture/toolchains){: external}:
 
 * [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}.
 
