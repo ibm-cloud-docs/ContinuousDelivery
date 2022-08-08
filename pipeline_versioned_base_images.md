@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-21"
+lastupdated: "2022-07-28"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -73,6 +73,7 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 
 | Base image version | IBM Cloud Container Registry version |
 |:-----------------|:-----------------|
+| 3.9 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.9`|
 | 3.8 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.8`|
 | 3.7 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.7`|
 | 3.6 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.6`|
@@ -82,6 +83,7 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 | 3.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.2`|
 | 3.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.1`|
 | 3.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.0`|
+| 2.21 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.21`|
 | 2.20 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.20`|
 | 2.19 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.19`|
 | 2.18 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.18`|
@@ -109,6 +111,149 @@ The following available image versions are listed in descending order, starting 
  
 The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
 {: tip}
+
+### Version 3.9
+{: #version_3_9}
+
+To view the contents of version 3.9, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built.
+
+The {{site.data.keyword.cloud_notm}} command-line interface (CLI) provides code risk analysis commands. You can use the {{site.data.keyword.cloud_notm}} CLI to analyze your code for vulnerabilities and compliance with certain rules. Code Risk Analyzer is available in all {{site.data.keyword.cloud_notm}} regions where toolchains are supported. For more information about Code Risk Analyzer, see [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
+{: tip}
+
+This image includes the following tools:
+
+```text
+# node --version
+v16.16.0
+
+# npm --version
+8.11.0
+
+# jq --version
+jq-1.6
+
+# yq --version
+yq (https://github.com/mikefarah/yq/) version 4.26.1
+
+# kubectl version --client
+Client Version: version.Info{Major:"1", Minor:"21", GitVersion:"v1.21.11", GitCommit:"38d3c1f3d5306401bcf39a71bad3b5a5106033d7", GitTreeState:"clean", BuildDate:"2022-03-16T14:08:11Z", GoVersion:"go1.16.15", Compiler:"gc", Platform:"linux/amd64"}
+
+# buildctl --version
+buildctl github.com/moby/buildkit v0.10.3 c8d25d9a103b70dc300a4fd55e7e576472284e31
+
+# helm version --client
+version.BuildInfo{Version:"v3.9.2", GitCommit:"1addefbfe665c350f4daf868a9adc5600cc064fd", GitTreeState:"clean", GoVersion:"go1.17.12"}
+
+# ibmcloud -version
+ibmcloud version 2.9.0+6abd6f8-2022-07-05T14:46:06+00:00
+
+# ibmcloud plugin list
+Listing installed plug-ins...
+
+Plugin Name                                Version   Status             Private endpoints supported   
+cloud-functions[wsk/functions/fn]          1.0.59                       false   
+cloud-internet-services[cis]               1.14.4                       true   
+code-engine[ce]                            1.38.1                       true   
+container-registry                         0.1.571                      true   
+container-service[kubernetes-service/ks]   1.0.431                      false   
+cra                                        0.1.22                       false   
+doi                                        0.3.8                        false   
+schematics                                 1.12.1                       true   
+
+
+# ibmcloud dev --version
+ibmcloud dev version 2.13.0
+
+# java -version
+openjdk version "17.0.3" 2022-04-19
+IBM Semeru Runtime Open Edition 17.0.3.0 (build 17.0.3+7)
+Eclipse OpenJ9 VM 17.0.3.0 (build openj9-0.32.0, JRE 17 Linux amd64-64-Bit Compressed References 20220422_184 (JIT enabled, AOT enabled)
+OpenJ9   - 9a84ec34e
+OMR      - ab24b6666
+JCL      - dc07fd49b92 based on jdk-17.0.3+7)
+
+# ant -version
+Apache Ant(TM) version 1.10.12 compiled on October 13 2021
+
+# mvn -version
+Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63)
+Maven home: /opt/IBM/maven
+Java version: 17.0.3, vendor: IBM Corporation, runtime: /usr/local/jdk17
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.10.104-linuxkit", arch: "amd64", family: "unix"
+
+# gradle -version
+
+Welcome to Gradle 7.5!
+
+Here are the highlights of this release:
+ - Support for Java 18
+ - Support for building with Groovy 4
+ - Much more responsive continuous builds
+ - Improved diagnostics for dependency resolution
+
+For more details see https://docs.gradle.org/7.5/release-notes.html
+
+
+------------------------------------------------------------
+Gradle 7.5
+------------------------------------------------------------
+
+Build time:   2022-07-14 12:48:15 UTC
+Revision:     c7db7b958189ad2b0c1472b6fe663e6d654a5103
+
+Kotlin:       1.6.21
+Groovy:       3.0.10
+Ant:          Apache Ant(TM) version 1.10.11 compiled on July 10 2021
+JVM:          17.0.3 (Eclipse OpenJ9 openj9-0.32.0)
+OS:           Linux 5.10.104-linuxkit amd64
+
+
+# oc version
+Client Version: 4.10.23
+
+# zip
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+
+# unzip
+UnZip 6.00 of 20 April 2009, by Info-ZIP.  Maintained by C. Spieler.  Send
+
+# git --version
+git version 2.31.1
+
+# curl
+curl 7.61.1 (x86_64-redhat-linux-gnu) libcurl/7.61.1 OpenSSL/1.1.1k zlib/1.2.11 brotli/1.0.6 libidn2/2.2.0 libpsl/0.20.2 (+libidn2/2.2.0) libssh/0.9.6/openssl/zlib nghttp2/1.33.0
+
+# wget
+GNU Wget 1.19.5 built on linux-gnu.
+
+# openssl version
+OpenSSL 1.1.1k  FIPS 25 Mar 2021
+
+# make
+GNU Make 4.2.1
+
+# docker
+Client:
+ Version:           20.10.16
+ API version:       1.41
+ Go version:        go1.17.10
+ Git commit:        aa7e414
+ Built:             Thu May 12 09:14:28 2022
+ OS/Arch:           linux/amd64
+ Context:           default
+
+# dc --version
+dc (GNU bc 1.07.1) 1.4.1
+
+# ed --version
+GNU ed 1.14.2
+
+# skopeo --version
+skopeo version 1.6.1
+```
+{: codeblock}
 
 ### Version 3.8
 {: #version_3_8}
@@ -1315,6 +1460,159 @@ dc (GNU bc 1.07.1) 1.4.1
 GNU ed 1.14.2
 ```
 {: codeblock}
+
+### Version 2.21
+{: #version_2_21}
+
+To view the contents of version 2.21, from the running image, type `default_versions.sh`.
+
+The {{site.data.keyword.cloud_notm}} command-line interface (CLI) provides code risk analysis commands. You can use the {{site.data.keyword.cloud_notm}} CLI to analyze your code for vulnerabilities and compliance with certain rules. Code Risk Analyzer is available in all {{site.data.keyword.cloud_notm}} regions where toolchains are supported. For more information about Code Risk Analyzer, see [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
+{: tip}
+
+This image updated its version of node.js to the current LTS version 16.16.0. If you need to use another node.js version, you can use `nvm install v<node version>` at the beginning of your script.
+{: tip}
+
+This image includes the following tools:
+
+```text
+# node --version
+v16.16.0
+
+# npm --version
+8.11.0
+
+# jq --version
+jq-1.6
+
+# yq --version
+yq version 2.4.1
+
+# yq3 --version
+yq version 3.4.1
+
+# yq4 --version
+yq (https://github.com/mikefarah/yq/) version 4.26.1
+
+# kubectl version --client
+Client Version: version.Info{Major:"1", Minor:"21", GitVersion:"v1.21.11", GitCommit:"38d3c1f3d5306401bcf39a71bad3b5a5106033d7", GitTreeState:"clean", BuildDate:"2022-03-16T14:08:11Z", GoVersion:"go1.16.15", Compiler:"gc", Platform:"linux/amd64"}
+
+# buildctl --version
+buildctl github.com/moby/buildkit v0.10.3 c8d25d9a103b70dc300a4fd55e7e576472284e31
+
+# helm version --client
+Client: &version.Version{SemVer:"v2.17.0", GitCommit:"a690bad98af45b015bd3da1a41f6218b1a451dbe", GitTreeState:"clean"}
+
+# helm3 version --client
+version.BuildInfo{Version:"v3.9.2", GitCommit:"1addefbfe665c350f4daf868a9adc5600cc064fd", GitTreeState:"clean", GoVersion:"go1.17.12"}
+
+# ibmcloud -version
+ibmcloud version 2.9.0+6abd6f8-2022-07-05T14:46:06+00:00
+
+# ibmcloud plugin list
+Listing installed plug-ins...
+
+Plugin Name                                Version   Status             Private endpoints supported   
+cloud-functions[wsk/functions/fn]          1.0.59                       false   
+cloud-internet-services[cis]               1.14.4                       true   
+code-engine[ce]                            1.38.1                       true 
+container-registry                         0.1.571                      true
+container-service[kubernetes-service/ks]   1.0.431                      false   
+cra                                        0.1.22                       false   
+doi                                        0.3.8                        false   
+schematics                                 1.12.1                       true   
+
+
+# ibmcloud dev --version
+ibmcloud dev version 2.13.0
+
+# java -version
+openjdk version "11.0.11" 2021-04-20
+OpenJDK Runtime Environment AdoptOpenJDK-11.0.11+9 (build 11.0.11+9)
+Eclipse OpenJ9 VM AdoptOpenJDK-11.0.11+9 (build openj9-0.26.0, JRE 11 Linux amd64-64-Bit Compressed References 20210421_975 (JIT enabled, AOT enabled)
+OpenJ9   - b4cc246d9
+OMR      - 162e6f729
+JCL      - 7796c80419 based on jdk-11.0.11+9)
+
+# ant -version
+Apache Ant(TM) version 1.10.12 compiled on October 13 2021
+
+# mvn -version
+Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63)
+Maven home: /opt/IBM/maven
+Java version: 11.0.11, vendor: AdoptOpenJDK, runtime: /usr/local/openjdk-11
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.10.104-linuxkit", arch: "amd64", family: "unix"
+
+# gradle -version
+
+Welcome to Gradle 7.5!
+
+Here are the highlights of this release:
+ - Support for Java 18
+ - Support for building with Groovy 4
+ - Much more responsive continuous builds
+ - Improved diagnostics for dependency resolution
+
+For more details see https://docs.gradle.org/7.5/release-notes.html
+
+
+------------------------------------------------------------
+Gradle 7.5
+------------------------------------------------------------
+
+Build time:   2022-07-14 12:48:15 UTC
+Revision:     c7db7b958189ad2b0c1472b6fe663e6d654a5103
+
+Kotlin:       1.6.21
+Groovy:       3.0.10
+Ant:          Apache Ant(TM) version 1.10.11 compiled on July 10 2021
+JVM:          11.0.11 (Eclipse OpenJ9 openj9-0.26.0)
+OS:           Linux 5.10.104-linuxkit amd64
+
+
+# oc version
+Client Version: 4.10.23
+
+# zip
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+
+# unzip
+UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP.
+
+# git --version
+git version 2.37.1
+
+# curl
+curl 7.58.0 (x86_64-pc-linux-gnu) libcurl/7.58.0 OpenSSL/1.1.1 zlib/1.2.11 libidn2/2.0.4 libpsl/0.19.1 (+libidn2/2.0.4) nghttp2/1.30.0 librtmp/2.3
+
+# wget
+GNU Wget 1.19.4 built on linux-gnu.
+
+# openssl version
+OpenSSL 1.1.1  11 Sep 2018
+
+# make
+GNU Make 4.1
+
+# docker
+Client:
+ Version:           20.10.16
+ API version:       1.41
+ Go version:        go1.17.10
+ Git commit:        aa7e414
+ Built:             Thu May 12 09:14:28 2022
+ OS/Arch:           linux/amd64
+ Context:           default
+
+# dc --version
+dc (GNU bc 1.07.1) 1.4.1
+
+# ed --version
+GNU Ed 1.10
+```
+{: codeblock}
+
 
 ### Version 2.20
 {: #version_2_20}
@@ -3776,4 +4074,4 @@ OS:           Linux 4.4.0-141-generic amd64
 3. The **Pipeline image version** option shows the current image version that is available, and the version that you are using for the selected pipeline job. To change the image version to use the current version to run the pipeline job, select **Latest**.
 
 To run pipeline jobs with the image that you selected on the pipeline configuration page, select **Pipeline default**.
-{: tip} 
+{: tip}
