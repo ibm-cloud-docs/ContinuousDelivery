@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-07-22"
+  years:  2018, 2022
+lastupdated: "2022-08-10"
 
 keywords: Administrator Create, Administrator Update, Editor Update, service access roles, IAM, access policies
 
@@ -59,11 +59,11 @@ For {{site.data.keyword.contdelivery_short}}, the following actions exist:
 
 | Action | Operation on Service | Role
 |:-----------------|:-----------------|:--------------|
-| continuous-delivery.instance.create | Provision a {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor |
-| continuous-delivery.instance.update | Update a {{site.data.keyword.contdelivery_short}} service instance in a resource group. For example, rename the service instance. | Administrator, Editor |
-| continuous-delivery.instance.update_plan | Change the plan for the {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor |
-| continuous-delivery.instance.delete | Delete a {{site.data.keyword.contdelivery_short}} service instance from a resource group. | Administrator, Editor |
-| continuous-delivery.instance.retrieve | View a {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor, Operator, Viewer |
+| resource-controller.instance.create | Provision a {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor |
+| resource-controller.instance.update | Update a {{site.data.keyword.contdelivery_short}} service instance in a resource group. For example, rename the service instance. | Administrator, Editor |
+| resource-controller.instance.update_plan | Change the plan for the {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor |
+| resource-controller.instance.delete | Delete a {{site.data.keyword.contdelivery_short}} service instance from a resource group. | Administrator, Editor |
+| resource-controller.instance.retrieve | View a {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor, Operator, Viewer |
 | continuous-delivery.instance.add-auth-users | Add entries to the Authorized Users list on the Manage tab within the {{site.data.keyword.contdelivery_short}} service instance. | Administrator, Writer, Manager |
 | continuous-delivery.instance.remove-auth-users | Remove entries from the Authorized Users list on the Manage tab within the {{site.data.keyword.contdelivery_short}} service instance. | Administrator, Writer, Manager |
 | continuous-delivery.instance.config-auth-users | Reserved for future use. | Administrator, Manager |
