@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2020
-lastupdated: "2020-08-17"
+  years:  2018, 2022
+lastupdated: "2022-08-10"
 
 keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
@@ -60,11 +60,11 @@ The following table lists and describes the available actions for toolchains:
 
 | Action | Operation on Service | Role
 |:-----------------|:-----------------|:--------------|
-| toolchain.instance.create | Create a toolchain in a resource group. | Administrator, Editor |
-| toolchain.instance.update | Update a toolchain in a resource group. For example, rename the toolchain. Change delivery pipelines that are bound to toolchains in a resource group. | Administrator, Editor |
-| toolchain.instance.update_plan | Not applicable. | Administrator, Editor |
-| toolchain.instance.delete | Delete a toolchain from a resource group. | Administrator, Editor |
-| toolchain.instance.retrieve | View the details for a toolchain in a resource group. View and run delivery pipelines that are bound to toolchains in a resource group. | Administrator, Editor, Operator, Viewer |
+| resource-controller.instance.create | Create a toolchain in a resource group. | Administrator, Editor |
+| resource-controller.instance.update | Update a toolchain in a resource group. For example, rename the toolchain. Change delivery pipelines that are bound to toolchains in a resource group. | Administrator, Editor |
+| resource-controller.instance.update_plan | Not applicable. | Administrator, Editor |
+| resource-controller.instance.delete | Delete a toolchain from a resource group. | Administrator, Editor |
+| resource-controller.instance.retrieve | View the details for a toolchain in a resource group. View and run delivery pipelines that are bound to toolchains in a resource group. | Administrator, Editor, Operator, Viewer |
 | toolchain.instance.list-bindings | View the tool integrations that are bound to a toolchain in a resource group. | Administrator, Editor, Viewer |
 | toolchain.instance.create-bindings | Add a tool integration to a toolchain in a resource group. | Administrator, Editor |
 | toolchain.instance.delete-bindings | Remove a tool integration from a toolchain in a resource group. | Administrator, Editor |
