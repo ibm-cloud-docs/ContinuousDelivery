@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-11"
+lastupdated: "2022-08-10"
 
 keywords: IBM Cloud, monitoring, supertenant
 
@@ -46,11 +46,11 @@ Complete the following steps to configure platform metrics:
 
 1. Log in to {{site.data.keyword.cloud_notm}}. 
     
-1. Click **View resources**.
+1. Click **Resource list**.
 
-1. In the **Services** section, click the {{site.data.keyword.contdelivery_short}} instance that you plan to monitor. 
+1. In the **Services and software** section, click the {{site.data.keyword.contdelivery_short}} instance that you plan to monitor. 
 
-1. From the **Manage** page, click the overflow menu ![overflow menu](../../icons/actions-icon-vertical.svg "Overflow menu"). Then, select **Add monitoring** to configure *platform metrics* in the region of your {{site.data.keyword.contdelivery_short}} instance.
+1. From the **Manage** page, click **Actions** > **Add monitoring** to configure *platform metrics* in the region of your {{site.data.keyword.contdelivery_short}} instance.
 
    If the menu choices include the **Monitoring** option, then the account and region that contain the {{site.data.keyword.contdelivery_short}} instance is already configured for platform metrics. 
    {: tip}
@@ -58,6 +58,9 @@ Complete the following steps to configure platform metrics:
 1. Provision an instance of the {{site.data.keyword.mon_full_notm}} service.
 
    After you provision the Monitoring instance, the **Observability** page opens. To continue working with {{site.data.keyword.contdelivery_short}}, go back to the {{site.data.keyword.contdelivery_short}} UI.
+
+Metrics are not visible until you [set up your Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines), configure at least one [private worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers) pool, and trigger some [Tekton pipeline triggers](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines#configure_tekton_pipeline) to generate the queue time metric.
+{: important}
 
 
 ## Viewing metrics
@@ -75,11 +78,11 @@ Complete the following steps to launch the Monitoring web UI from the {{site.dat
 
 1. Log in to {{site.data.keyword.cloud_notm}}. 
     
-1. Click **View resources**.
+1. Click **Resource list**.
 
-1. In the *Services* section, click the {{site.data.keyword.contdelivery_short}} instance that you plan to monitor. 
+1. In the **Services and software** section, click the {{site.data.keyword.contdelivery_short}} instance that you plan to monitor. 
 
-1. From the **Manage** page, click the overflow menu ![overflow menu](../../icons/actions-icon-vertical.svg "Overflow menu"). Then, select **Monitoring** to view the {{site.data.keyword.contdelivery_short}} dashboard within the context of your {{site.data.keyword.contdelivery_short}} instance.
+1. From the **Manage** page, click **Actions** > **Monitoring** to view the {{site.data.keyword.contdelivery_short}} dashboard within the context of your {{site.data.keyword.contdelivery_short}} instance.
 
 
 ### Launching the Monitoring web UI from the Observability page
