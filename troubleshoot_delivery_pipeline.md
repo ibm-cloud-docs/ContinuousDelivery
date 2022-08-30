@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-11"
+lastupdated: "2022-08-30"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -277,9 +277,11 @@ us-south
 169.60.226.32/29
 169.61.249.80/28
 52.118.135.32/27
+67.228.108.96/27
 67.228.197.224/28
 67.228.214.64/29
 67.228.230.240/29
+67.228.239.208/29
 ====
 us-east
 169.55.100.16/29
