@@ -42,37 +42,15 @@ toc:
       id: tutorial
       topics: 
       - link:
-          label: Introduce toolchains by using the Develop a Cloud Foundry app
-          href: https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain
-      - link:
-          label: Use the Develop and test a Cloud Foundry app toolchain
-          href: https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain
-      - link:
-          label: Use the Develop and test microservices on Cloud Foundry toolchain
-          href: https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain
-      - link:
           label: Create a template for a custom toolchain
           href: https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain
       - link:
           label: Explore DevOps Insights
           href: https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights
       - link:
-          label: Use the Develop a Kubernetes app toolchain
-          href: https://www.ibm.com/cloud/architecture/tutorials/use-develop-kubernetes-app-toolchain
-      - link:
-          label: Use the Develop a Kubernetes app with Helm toolchain
-          href: https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain
-      - link:
-          label: Use the Develop and test microservices with Kubernetes and Helm toolchain
-          href: https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-with-kubernetes-and-helm-toolchain
-      - link:
-          label: Use the Run your first canary test in Kubernetes using the Istio toolchain
-          href: https://www.ibm.com/cloud/garage/tutorials/use-canary-testing-in-kubernetes-using-istio-toolchain
-      - link:
           label: Add a toolchain to an app
           href: https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app
 
-      - cd-kubernetes-razee-tutorial.md
       - cd-kubernetes-tutorial.md
       - cd-satellite-tutorial.md
       - cd-only-satellite-tutorial.md
