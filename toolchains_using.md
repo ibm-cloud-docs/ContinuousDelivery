@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-20"
+lastupdated: "2022-09-02"
 
-keywords: user management function, toolchains, tool integrations, user access, Cloud Foundry org
+keywords: user management function, toolchains, tool integrations, user access
 
 subcollection: ContinuousDelivery
 
@@ -27,12 +27,6 @@ subcollection: ContinuousDelivery
 
 Open toolchains are available on {{site.data.keyword.cloud}}. You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain.
 {: shortdesc}
-
-Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances and toolchains are deprecated. You can no longer create Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances. As of 14 January 2022, you cannot create new toolchains within Cloud Foundry orgs. You can create new toolchains in resource groups. On 28 February 2022, all toolchains within Cloud Foundry orgs that did not contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service were deleted. As of 15 August 2022, all toolchains within Cloud Foundry orgs that contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. Before this date, you can use the [toolchain migration wizard](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains) to migrate existing toolchains from Cloud Foundry orgs to resource groups.
-{: deprecated}
-
-You can manage toolchains in the Dallas, Washington, Toronto, Sao Paulo, London, Frankfurt, Sydney, Osaka, and Tokyo Public regions by using resource groups. You can use Cloud Foundry organizations (orgs) to manage toolchains in the Dallas, London, and Frankfurt Public regions. Access control and authorized user management function differently for toolchains depending on whether they are contained in a resource group or a Cloud Foundry org.
-{: important}
 
 ## Configuring a tool integration
 {: #configuring_a_tool_integration}
@@ -82,7 +76,7 @@ If you delete a tool integration from your toolchain, the deletion cannot be und
 ## Viewing toolchain connections to apps, clusters, and services
 {: #view_toolchain_connections}
 
-You can view your toolchain's connections to Cloud Foundry apps, Kubernetes clusters, and services.
+You can view your toolchain's connections to Kubernetes clusters and services.
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. 
 1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
@@ -92,8 +86,6 @@ You can view your toolchain's connections to Cloud Foundry apps, Kubernetes clus
 {: #managing_access_resource_groups}
 
 You can use the Identity and Access Management (IAM) service to manage user access to toolchains in resource groups. For more information about managing access control with IAM, see [Managing user access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
-
-You can also grant users access to toolchains by adding them to both the Cloud Foundry org that the toolchain is associated with and the access control list for the toolchain. For more information about granting users access to toolchains in Cloud Foundry orgs, see [Managing user access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-cf-security).
 
 Users with access to toolchains might be counted as authorized users of the {{site.data.keyword.contdelivery_full}} service. For more information about how authorized users are counted, see [Plan limitations and usage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
@@ -126,10 +118,4 @@ You can delete a toolchain. When you delete a toolchain, the deletion cannot be 
 ## Take a tutorial: Using toolchains
 {: #toolchain-tutorial}
 
-Check out these tutorials on the [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external}:
-
-* [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}.
-
-* [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){: external}.
-
-* [Use the "Develop and test microservices on Cloud Foundry" toolchain"](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}.
+Try the [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){: external} tutorial on the [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/cloud/garage){: external}.
