@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-03-28"
+lastupdated: "2022-08-26"
 
 keywords: code quality, risk management, interactions of your team, devops insights, getting started, devops, insights, tutorial, code coverage, test, tests, gate, gate failing, verification, install, app, dashboard
 
@@ -84,13 +84,10 @@ For the Weather Application, the code coverage rule set for the policy is that t
 
 To make a gate fail, edit the code in the `routes/apivl.js` file so that the code coverage reaches only 60%. The gate fails because the code doesn't reach the necessary quality and deployment isn't pushed to production.  
 
-1. From your toolchain, click the **Eclipse Orion Web IDE** tile.
-2. Open the `routes/apivl.js` file, and uncomment lines 42-72.
-3. Save the file by clicking **File**, and select **Save**. 
-4. Select the Git icon, enter a commit message, and click **Commit**. 
-5. Click **Push** to push your changes.
-6. Click the back arrow in the Eclipse editor to return to your toolchain.
-7. On the toolchain's Overview page, on the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration to observe the gate fail in real time. 
+1. Open the `routes/apivl.js` file in an editor.
+2. Uncomment lines 42-72 and save the file.
+3. From a Git client, commit and push your changes.
+4. On your toolchain's Overview page, on the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration to observe the gate fail in real time. 
 
 ## Step 5. Analyze the failed gate
 {: #5-risk-analysis}
@@ -109,7 +106,7 @@ The gate fails because the code coverage isn't met. When you gate your own deplo
 ## Alternative tutorials
 {: #alternative-tutorials}
 
-This tutorial focuses on implementing {{site.data.keyword.DRA_short}} with {{site.data.keyword.deliverypipelinelong}}, but as an alternative, you can use {{site.data.keyword.DRA_short}} with Jenkins and other CI/CD tools. Use the following tutorials for more information.  
+You can also use {{site.data.keyword.DRA_short}} with Jenkins and other continuous integration and continuous delivery tools. Explore the following resources for more information about using {{site.data.keyword.DRA_short}} with Jenkins and other continuous integration and continuous delivery tools.  
 
 * [Integrate DevOps Insights with an IBM Continuous Delivery pipeline](https://www.ibm.com/cloud/garage/tutorials/integrate-devops-insights-with-cd-pipeline){: external}. Learn how to configure a CD pipeline to send, build, and deploy information to {{site.data.keyword.DRA_short}} and define policies that analyze deployment risk.
 
