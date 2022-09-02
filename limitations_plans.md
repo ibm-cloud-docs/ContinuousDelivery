@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-09-02"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -32,14 +32,9 @@ The use of {{site.data.keyword.contdelivery_full}} is limited to the building, d
 ## Scope of a service instance
 {: #service_scope}
 
-Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances and toolchains are deprecated. You can no longer create Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances. As of 14 January 2022, you cannot create new toolchains within Cloud Foundry orgs. You can create new toolchains in resource groups. On 28 February 2022, all toolchains within Cloud Foundry orgs that did not contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service were deleted. As of 15 August 2022, all toolchains within Cloud Foundry orgs that contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. Before this date, you can use the [toolchain migration wizard](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains) to migrate existing toolchains from Cloud Foundry orgs to resource groups.
-{: deprecated}
+You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){: external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, and {{site.data.keyword.DRA_short}} tool integrations. A service instance belongs to a [resource group](/docs/services/account?topic=account-rgs). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group meters and governs your usage of all of the toolchains in the same region and resource group.
 
-You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){: external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, {{site.data.keyword.DRA_short}}, and Eclipse Orion {{site.data.keyword.webide}} tool integrations. A service instance might belong to either a [resource group](/docs/services/account?topic=account-rgs) or to an {{site.data.keyword.Bluemix_notm}} organization (org). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group or org meters and governs your usage of all of the toolchains in the same region and resource group or org.
-
-You can create *new* instances of the {{site.data.keyword.contdelivery_short}} service only in resource groups. If you are missing a {{site.data.keyword.contdelivery_short}} service for an org that contains toolchains, you can migrate the toolchains to a resource group that has an instance of the {{site.data.keyword.contdelivery_short}} service. For more information about migrating toolchains, see [Migrating toolchains to a resource group](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains).
-
-You can have only one Lite service per account. It is recommended that you use the Professional plan if you want to work with toolchains in multiple orgs or resource groups, or within multiple regions.
+You can have only one Lite service per account. It is recommended that you use the Professional plan if you want to work with toolchains in multiple resource groups, or within multiple regions.
 {: tip}
 
 ## Authorized users
@@ -49,7 +44,6 @@ You can have only one Lite service per account. It is recommended that you use t
 
 * Users who interact with issues, issues boards, source code, or other artifacts in a {{site.data.keyword.gitrepos}} repository (repo).
 * Users who manipulate, trigger (either directly in the user interface or indirectly by committing to a repo), or view the status of a delivery pipeline.
-* Users who interact with the Eclipse Orion {{site.data.keyword.webide}}.
 * Users who interact with {{site.data.keyword.DRA_short}}.
  
 The Lite plan is subject to limits. For more information about the Lite plan and the Professional plan, see the [service catalog](https://cloud.ibm.com/catalog/services/continuous-delivery){: external}.
@@ -63,7 +57,6 @@ You can maintain an activity log related to authorized users. For more informati
 Users are counted and managed by using the list of authorized users that belongs to each  {{site.data.keyword.contdelivery_short}} service instance. Users are automatically added to this list when they meet any of the following criteria:
 
 * View, edit, or run a delivery pipeline.
-* Use the Eclipse Orion {{site.data.keyword.webide}}.
 * Have Developer (or greater) access to a repo in {{site.data.keyword.gitrepos}} that allows them to commit and push changes to that repo. Users of Git repos with the Guest or Reporter roles with read-only access are not counted as authorized users. 
 
 Users with the Guest or Reporter roles are not automatically added to the authorized users list. To prevent users from accessing toolchains and automatically being added to the authorized user list for a {{site.data.keyword.contdelivery_short}} service instance, complete the following actions:
@@ -88,13 +81,6 @@ You can manage the list of authorized users on the **Manage** tab within the {{s
 
 Users are automatically added or added again when they use the {{site.data.keyword.contdelivery_short}} service. 
 {: tip}
-
-### How are users counted for instances of {{site.data.keyword.contdelivery_short}} in orgs?
-{: #count_users_org}
-
-Authorized users are counted by using the list of users in the {{site.data.keyword.cloud_notm}} Foundry org that contains the {{site.data.keyword.contdelivery_short}} service. For more information about orgs and spaces, see [Creating organizations and spaces](/docs/cloud-foundry?topic=cloud-foundry-create_orgs).
-
-To view the list of users in your org in an {{site.data.keyword.cloud_notm}} Public environment, from the {{site.data.keyword.cloud_notm}} console, go to **Manage > Account**. Then, click **Cloud Foundry orgs**.
 
 ### How can you view billing and usage information?
 {: #view_billing_usage}
@@ -152,7 +138,7 @@ As an alternative to the console, you can change the {{site.data.keyword.contdel
    Provider           IBM
    Tags               dev_ops, eu_access, gc_migrate, ibm_created, lite, rc_compatible
    Active             true
-   Description        Support DevOps best practices by using Git, issue tracking, CI/CD pipelines, and the Eclipse Orion Web IDE in the Cloud.
+   Description        Support DevOps best practices by using Git, issue tracking, and CI/CD pipelines in the Cloud.
    Bindable           false
    Original Name      continuous-delivery
    RC Compatible      true
@@ -206,7 +192,7 @@ At the discretion of IBM, users who violate the acceptable usage behaviors of th
 ## Git Repos and Issue Tracking limitations
 {: #git_limitations}
 
-{{site.data.keyword.gitrepos}} is built on GitLab Community Edition and hosted by IBM on {{site.data.keyword.Bluemix_notm}}, however, a few GitLab options are not available:
+{{site.data.keyword.gitrepos}} is built on GitLab Community Edition and hosted by IBM on {{site.data.keyword.cloud_notm}}, however, a few GitLab options are not available:
 
 * Because {{site.data.keyword.deliverypipeline}} provides continuous integration and continuous delivery for {{site.data.keyword.cloud_notm}}, the continuous integration features in GitLab are not supported.
 * GitLab admin functions are not available because they are managed by IBM.
