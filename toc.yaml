@@ -42,14 +42,8 @@ toc:
       id: tutorial
       topics: 
       - link:
-          label: Create a template for a custom toolchain
-          href: https://www.ibm.com/cloud/garage/tutorials/create-a-template-for-a-custom-toolchain
-      - link:
           label: Explore DevOps Insights
           href: https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights
-      - link:
-          label: Add a toolchain to an app
-          href: https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app
 
       - cd-kubernetes-tutorial.md
       - cd-satellite-tutorial.md
