@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-11-22"
+  years: 2015, 2022
+lastupdated: "2022-09-02"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, authentication, personal access token, SSH key
 
@@ -48,7 +48,7 @@ Because this tool integration is built on GitLab Community Edition and hosted by
 ## Using {{site.data.keyword.gitrepos}} with toolchains
 {: #git_toolchains}
 
-You can use a template that contains either a {{site.data.keyword.gitrepos}} or GitHub tool integration as a starting point to create a toolchain that you can add Git repositories (repos) to. Alternatively, you can start with an empty toolchain and add either a {{site.data.keyword.gitrepos}} or GitHub tool integration to it. By using a toolchain, you can associate Git repos with your resource groups or Cloud Foundry orgs and your {{site.data.keyword.contdelivery_short}} service instance. 
+You can use a template that contains either a {{site.data.keyword.gitrepos}} or GitHub tool integration as a starting point to create a toolchain that you can add Git repositories (repos) to. Alternatively, you can start with an empty toolchain and add either a {{site.data.keyword.gitrepos}} or GitHub tool integration to it. By using a toolchain, you can associate Git repos with your resource groups and your {{site.data.keyword.contdelivery_short}} service instance. 
 
 For more information about using toolchains with Git, see [Creating toolchains with Git](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_git).
 
@@ -260,12 +260,3 @@ You can update the display name that appears for you throughout {{site.data.keyw
 {: #git_limits}
 
 Files are strictly limited to 100 MB. The suggested repo size limit is 1 GB. If your repo exceeds 1 GB, you might receive an email with a request to reduce the size of the repo.
-
-## Take a tutorial: {{site.data.keyword.gitrepos}}
-{: #git_tutorials}
-
-Check out one of these tutorials on the [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external}:
-
-* [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}. Learn how to create an open toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
-
-* [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}. Learn how to create a toolchain from a template with three microservices and use the toolchain to continuously deliver an online store.
