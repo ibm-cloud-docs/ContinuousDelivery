@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-08-26"
 
 keywords: tool integrations, IBM Cloud Public, DevOps Insights
 
@@ -30,7 +30,7 @@ subcollection: ContinuousDelivery
 This tool integration is available only on {{site.data.keyword.cloud_notm}} Public. It is preconfigured and does not require any configuration parameters. You cannot reconfigure this tool integration.
 {: tip}
 
-Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your code in {{site.data.keyword.Bluemix_notm}} by monitoring your deployments to identify risks before they are released.
+Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your code in {{site.data.keyword.cloud_notm}} by monitoring your deployments to identify risks before they are released.
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.DRA_short}}**.
 1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
@@ -45,10 +45,4 @@ Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your 
 ## Learn more about DevOps Insights
 {: #learn_insights}
 
-To learn more about {{site.data.keyword.DRA_short}}, see the [{{site.data.keyword.DRA_short}} article](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){: external} on the IBM Cloud Garage Method or take these tutorials:
-
-* [Use the "Develop and test a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-cloud-foundry-app-toolchain){: external}
-
-* [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}
-
-* [Explore {{site.data.keyword.DRA_full}}](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){: external}
+To learn more about {{site.data.keyword.DRA_short}}, see the [{{site.data.keyword.DRA_short}} article](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){: external} on the {{site.data.keyword.cloud_notm}} Garage Method or take the [Explore {{site.data.keyword.DRA_full}}](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){: external} tutorial.
