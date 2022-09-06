@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-03-17"
+  years: 2015, 2022
+lastupdated: "2022-08-26"
 
 keywords: IBM Cloud, build types, build jobs, deployment job, build script, create pipeline, 
 
@@ -37,11 +37,9 @@ You can deploy to one or many regions and services. For example, you can set up 
 
 You can use any of the following methods to create a pipeline:
 
-* [Create a toolchain from an existing Cloud Foundry application](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_an_app). The resulting toolchain contains a pipeline.
-
 * [Create a toolchain from a template](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#creating_a_toolchain_from_a_template) that includes at least one pipeline.
 
-* [Add the {{site.data.keyword.deliverypipeline}} tool integration](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) to an existing toolchain.
+* [Add the {{site.data.keyword.deliverypipeline}} tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) to an existing toolchain.
    
 From your {{site.data.keyword.deliverypipeline}}, change your configuration; check the status of builds, the deployed app, and recent deployments; see the most recent logs and deployment details; or delete your pipeline.
 
