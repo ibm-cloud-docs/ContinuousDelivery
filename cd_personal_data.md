@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-20"
+lastupdated: "2022-08-25"
 
-keywords: IBM Cloud account, personal data, personal accounts, corporate accounts, access, Web IDE, Git Repos and Issue Tracking, pipeline data, toolchains, tool integrations
+keywords: IBM Cloud account, personal data, personal accounts, corporate accounts, access, Git Repos and Issue Tracking, pipeline data, toolchains, tool integrations
 
 subcollection: ContinuousDelivery
 
@@ -29,25 +29,24 @@ You can modify, export, or delete personal data from {{site.data.keyword.contdel
 
 Personal data is any information that relates to or identifies a natural person. For example, personal data can be a name, email address, avatar, token, or any number of identifiers that are used with {{site.data.keyword.contdelivery_short}}. The following {{site.data.keyword.contdelivery_short}} components contain personal data:
 
-* The Eclipse Orion {{site.data.keyword.webide}}
 * {{site.data.keyword.gitrepos}}
 * {{site.data.keyword.contdelivery_short}} Pipelines
 * Toolchains and tool integrations
 * [{{site.data.keyword.DRA_full}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-deleting_data)
  
-IBM does not manage data in the {{site.data.keyword.contdelivery_short}} service. Before you leave the {{site.data.keyword.contdelivery_short}} service that is hosted in {{site.data.keyword.Bluemix_notm}} Public, you must delete your own data.
+IBM does not manage data in the {{site.data.keyword.contdelivery_short}} service. Before you leave the {{site.data.keyword.contdelivery_short}} service that is hosted in {{site.data.keyword.cloud_notm}} Public, you must delete your own data.
 {: important}
 
-{{site.data.keyword.contdelivery_short}} provides the appropriate permissions to manage data within a resource group or Cloud Foundry organization. Your company might have policies that limit these permissions. If you don't have the appropriate permissions, contact the administrator for your {{site.data.keyword.Bluemix_notm}} account.
+{{site.data.keyword.contdelivery_short}} provides the appropriate permissions to manage data within a resource group. Your company might have policies that limit these permissions. If you don't have the appropriate permissions, contact the administrator for your {{site.data.keyword.cloud_notm}} account.
 
-To manage your personal data, you must understand IBM Cloud accounts, how these accounts are used, and their associated access rights.
+To manage your personal data, you must understand {{site.data.keyword.cloud_notm}} accounts, how these accounts are used, and their associated access rights.
  
 ## Accounts and access rights
 {: #accounts_access_rights}
 
-To work in IBM Cloud, you must log in with a user name and password. When you log in, IBM Cloud associates at least one IBM Cloud account with your user credentials. When you create resources such as Cloud Foundry organizations, resource groups, toolchains, and {{site.data.keyword.contdelivery_short}} objects, they are associated with an IBM Cloud account.
+To work in {{site.data.keyword.cloud_notm}}, you must log in with a user name and password. When you log in, {{site.data.keyword.cloud_notm}} associates at least one {{site.data.keyword.cloud_notm}} account with your user credentials. When you create resources such as resource groups, toolchains, and {{site.data.keyword.contdelivery_short}} objects, they are associated with an {{site.data.keyword.cloud_notm}} account.
 
-The IBM Cloud login structure provides you with the option to work in different accounts. Using the IBM Cloud user interface, you can switch from one account to another. When you log in, any of the following types of accounts might be associated with your user credentials: 
+The {{site.data.keyword.cloud_notm}} login structure provides you with the option to work in different accounts. Using the {{site.data.keyword.cloud_notm}} user interface, you can switch from one account to another. When you log in, any of the following types of accounts might be associated with your user credentials: 
 
 * Personal account
 * Corporate account
@@ -81,7 +80,7 @@ If you work for a corporation that owns your work, a personal account that usual
 ## Modifying, exporting, and deleting personal data
 {: #managing_personal_data}
 
-Regardless of what type of IBM Cloud account is used, if you have rights to the objects in the account, you can modify, export, and delete them. Before you make changes, coordinate with other users to make sure that you don't unnecessarily modify or delete data.
+Regardless of what type of {{site.data.keyword.cloud_notm}} account is used, if you have rights to the objects in the account, you can modify, export, and delete them. Before you make changes, coordinate with other users to make sure that you don't unnecessarily modify or delete data.
 
 Before you delete data from an account, determine whether it is a personal account or a corporate individual account.
 
@@ -90,53 +89,24 @@ Before you delete data from an account, determine whether it is a personal accou
 
 If you own a personal account, you can make changes and delete your data. If you share your account with another user, you own the data, but you might want to contact them about the shared work. 
 
-If you can't log in to your IBM Cloud account, [contact IBM Support](https://www.ibm.com/cloud/support){: external}.
+If you can't log in to your {{site.data.keyword.cloud_notm}} account, [contact IBM Support](https://www.ibm.com/cloud/support){: external}.
  
 ### Corporate individual account
 {: #corp_individual_account}
 
 If you own a corporate individual account, you must coordinate any changes with both your corporation and other members of your team. Delete your personal data regardless of whether it is stored in a corporate account or a corporate individual account. Make sure that you don't delete work that you shared with other users.
 
-Before you start to manage your personal data for the {{site.data.keyword.contdelivery_short}} components, make sure that you are working in your IBM Cloud account. To view the IBM Cloud account that you are currently working in, on the menu bar, click your profile avatar. 
+Before you start to manage your personal data for the {{site.data.keyword.contdelivery_short}} components, make sure that you are working in your {{site.data.keyword.cloud_notm}} account. To view the {{site.data.keyword.cloud_notm}} account that you are currently working in, on the menu bar, click your profile avatar. 
 
-If you can't log in to your IBM Cloud account, contact your corporation and work with them to delete your personal data.
+If you can't log in to your {{site.data.keyword.cloud_notm}} account, contact your corporation and work with them to delete your personal data.
 
-If you want to delete all of your personal data from {{site.data.keyword.contdelivery_short}}, the order in which you delete that data is important. First, delete all of your {{site.data.keyword.webide}} workspaces. Next, delete your {{site.data.keyword.gitrepos}} data, and then delete your {{site.data.keyword.gitrepos}} account. Finally, delete your delivery pipelines, tool integrations, and toolchains.
+If you want to delete all of your personal data from {{site.data.keyword.contdelivery_short}}, the order in which you delete that data is important. First, delete your {{site.data.keyword.gitrepos}} data, and then delete your {{site.data.keyword.gitrepos}} account. Finally, delete your delivery pipelines, tool integrations, and toolchains.
 {: tip}
 
-## Exporting and deleting Web IDE data
-{: #managing_web_ide_data}
-
-The {{site.data.keyword.webide}} provides a personal workspace in the cloud. You can use the {{site.data.keyword.webide}} to clone Git repositories and edit files. You own your {{site.data.keyword.webide}} workspace; it is not shared by any other account.
-
-Before you delete your {{site.data.keyword.webide}} data, you might want to export your work. After you delete your workspaces, they are removed from {{site.data.keyword.contdelivery_short}} and all files are deleted.
-{: important}
-
-### Exporting a Web IDE workspace
-{: #export_webide_workspace}
-
-To export a {{site.data.keyword.webide}} workspace:
-
-1. Select **File > Export > Zip**.
-1. Repeat for each workspace that you want to export.
-
-### Deleting your Web IDE workspaces
-{: #delete_webide_workspace}
-
-To delete your {{site.data.keyword.webide}} workspaces, including all of your personal data:
-
-1. From any toolchain, navigate to the {{site.data.keyword.webide}}.
-1. Click the **Settings** icon ![Settings icon](images/webide_settings_icon_light_small.png) in the navigation sidebar.
-1. Click **USER PROFILE**.
-1. Click **Delete** to remove all of your data from the {{site.data.keyword.webide}}.
-
-The {{site.data.keyword.webide}} uses a single sign-on mechanism. The first time that you access this tool integration, a corresponding, but hidden, {{site.data.keyword.webide}} account is created for your IBM Cloud account. After you delete all of your workspaces, do not access the {{site.data.keyword.webide}}. If you access the {{site.data.keyword.webide}} again, a new account is automatically created that you must delete.
-{: important}
-
-## Modifying, exporting, and deleting Git Repos and Issue Tracking data
+## Modifying, exporting, and deleting {{site.data.keyword.gitrepos}} data
 {: #managing_grit_data}
 
-{{site.data.keyword.gitrepos}} provides a hosted Git service in the cloud. A single sign-on mechanism is used to associate your IBM Cloud account with a Git account. A full name and a short name are created for you in your Git account. Other users can use your short name to refer to you in a comment within a Git issue. You can customize your Git account and add personal data such as a description of yourself or an image. 
+{{site.data.keyword.gitrepos}} provides a hosted Git service in the cloud. A single sign-on mechanism is used to associate your {{site.data.keyword.cloud_notm}} account with a Git account. A full name and a short name are created for you in your Git account. Other users can use your short name to refer to you in a comment within a Git issue. You can customize your Git account and add personal data such as a description of yourself or an image. 
 
 {{site.data.keyword.gitrepos}} provides a powerful, but complex social coding environment in which users contribute to different projects and objects are shared. This environment can make it difficult to locate and delete your personal data.
 
@@ -148,9 +118,9 @@ Before you delete your Git account, delete your personal data from other project
 ### Personal and shared projects
 {: #personal_shared_proj}
 
-You can invite other users to collaborate in projects. Git projects that you create inside your account are called personal projects. You can also create Git groups in which projects can be owned by multiple Git owners. You can create new projects for the group or transfer ownership of personal projects to the group. A Git group is often used to represent an IBM Cloud corporate account to indicate ownership of projects by the corporation.
+You can invite other users to collaborate in projects. Git projects that you create inside your account are called personal projects. You can also create Git groups in which projects can be owned by multiple Git owners. You can create new projects for the group or transfer ownership of personal projects to the group. A Git group is often used to represent an {{site.data.keyword.cloud_notm}} corporate account to indicate ownership of projects by the corporation.
 
-### Exporting a Git Repos and Issue Tracking project
+### Exporting a {{site.data.keyword.gitrepos}} project
 {: #export_grit_proj}
 
 Before you delete a {{site.data.keyword.gitrepos}} project, you can export the project to archive it. 
@@ -162,7 +132,7 @@ Before you delete a {{site.data.keyword.gitrepos}} project, you can export the p
 
 After the project is archived, you can import it into another GitLab instance. 
 
-### Deleting your Git Repos and Issue Tracking account
+### Deleting your {{site.data.keyword.gitrepos}} account
 {: #delete_grit_account}
 
 You can delete your {{site.data.keyword.gitrepos}} account and most of the things that are owned by that account.
@@ -172,17 +142,17 @@ You can delete your {{site.data.keyword.gitrepos}} account and most of the thing
 
 After your account is deleted, some content will remain. This content is assigned to a system-wide Ghost User. For example, comments that you added to an issue remain, but they are attributed to the Ghost User. To delete all of the content that you authored, contact [IBM Support](https://www.ibm.com/cloud/support){: external}
 
-{{site.data.keyword.gitrepos}} uses a single sign-on mechanism that automatically creates a corresponding Git account for your IBM Cloud account the first time that you access the tool integration. After you delete your account, do not access {{site.data.keyword.gitrepos}}. If you access {{site.data.keyword.gitrepos}} again, a new account is automatically created that you must delete.
+{{site.data.keyword.gitrepos}} uses a single sign-on mechanism that automatically creates a corresponding Git account for your {{site.data.keyword.cloud_notm}} account the first time that you access the tool integration. After you delete your account, do not access {{site.data.keyword.gitrepos}}. If you access {{site.data.keyword.gitrepos}} again, a new account is automatically created that you must delete.
 {: important}
 
-## Modifying, exporting, and deleting Continuous Delivery pipeline data
+## Modifying, exporting, and deleting {{site.data.keyword.contdelivery_short}} pipeline data
 {: #managing_pipeline_data}
 
-{{site.data.keyword.contdelivery_short}} provides two different types of pipelines: Classic and Tekton. These pipelines run scripts to build, test, and deploy your application to the IBM Cloud. To do this, pipelines provide stages/tasks, jobs/steps, environment variables, and other objects that might contain personal data. You can delete these objects individually or you can delete an entire pipeline.
+{{site.data.keyword.contdelivery_short}} provides two different types of pipelines: Classic and Tekton. These pipelines run scripts to build, test, and deploy your application to the {{site.data.keyword.cloud_notm}}. To do this, pipelines provide stages/tasks, jobs/steps, environment variables, and other objects that might contain personal data. You can delete these objects individually or you can delete an entire pipeline.
 
 Make sure that you coordinate with other members of your team before you delete shared objects or pipelines. Deleting shared objects might cause a pipeline to fail.
 
-A pipeline cannot exist outside of a toolchain. If you delete a toolchain, all of the pipelines that are associated with the toolchain are also deleted. If you plan to delete an entire toolchain, you do not need to delete each pipeline individually. Instead, skip to the "Modifying and deleting toolchains and tool integrations" section, and follow the steps to delete a toolchain.
+A pipeline cannot exist outside of a toolchain. If you delete a toolchain, all of the pipelines that are associated with the toolchain are also deleted. If you plan to delete an entire toolchain, you do not need to delete each pipeline individually. Instead, go to the "Modifying and deleting toolchains and tool integrations" section, and follow the steps to delete a toolchain.
 {: important}
 
 ## Classic pipelines
@@ -304,16 +274,13 @@ When you delete a toolchain, the deletion cannot be undone.
 1. Click the **Actions** menu, and select **Delete**. Deleting a toolchain removes all of its tool integrations, including pipelines, which might delete resources that are managed by those integrations.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**. 
 
-When you delete a toolchain, the associated {{site.data.keyword.gitrepos}} repos are not deleted. Users who have access to those repos might have copies of the data if they performed a `git clone` or created a {{site.data.keyword.webide}} workspace. To make sure that all data is deleted, you must request that those users delete their copies of the data.
+When you delete a toolchain, the associated {{site.data.keyword.gitrepos}} repos are not deleted. Users who have access to those repos might have copies of the data if they performed a `git clone`. To make sure that all data is deleted, you must request that those users delete their copies of the data.
 {: tip}
 
 ### Deleting all toolchains
 {: #delete_all_toolchains}
 
-Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances and toolchains are deprecated. You can no longer create Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances. As of 14 January 2022, you cannot create new toolchains within Cloud Foundry orgs. You can create new toolchains in resource groups. On 28 February 2022, all toolchains within Cloud Foundry orgs that did not contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service were deleted. As of 15 August 2022, all toolchains within Cloud Foundry orgs that contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. Before this date, you can use the [toolchain migration wizard](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains) to migrate existing toolchains from Cloud Foundry orgs to resource groups.
-{: deprecated}
+You cannot delete all of the toolchains within a resource group at the same time. You must delete each toolchain, one at a time.
 
-You cannot delete all of the toolchains within a resource group or organization at the same time. You must delete each toolchain, one at a time.
-
-Toolchains are scoped by IBM Cloud region and resource group or Cloud Foundry organization. Make sure that you select each region and resource group or organization within the region to delete every toolchain that you created.
+Toolchains are scoped by {{site.data.keyword.cloud_notm}} region and resource group. Make sure that you select each region and resource group to delete every toolchain that you created.
 {: tip}
