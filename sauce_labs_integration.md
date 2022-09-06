@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-08-26"
 
 keywords: tool integrations, IBM Cloud Public, Sauce Labs
 
@@ -49,6 +49,4 @@ If you added a Sauce Labs test job to the {{site.data.keyword.deliverypipeline}}
 ## Learn more about Sauce Labs
 {: #learn_saucelabs}
 
-To learn more about Sauce Labs, see the [Sauce Labs article](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: external} on the IBM Cloud Garage Method or take this tutorial:
-
-* [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}
+To learn more about Sauce Labs, see the [Sauce Labs article](https://www.ibm.com/cloud/garage/content/deliver/tool_sauce_labs/){: external} on the {{site.data.keyword.cloud_notm}} Garage Method.
