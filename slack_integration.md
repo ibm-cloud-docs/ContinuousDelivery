@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-08-26"
 
 keywords: tool integrations, IBM Cloud Public, Slack
 
@@ -58,8 +58,4 @@ If you use an API key for your Slack channel to receive notifications about your
 ## Learn more about Slack
 {: #learn_slack}
 
-To learn more about Slack, see the [Slack article](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: external} on the IBM Cloud Garage Method or take this tutorial and the Garage Method advocate course:
-
-* [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}
-
-* [Become a Garage Method advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){: external}
+To learn more about Slack, see the [Slack article](https://www.ibm.com/cloud/garage/content/culture/tool_slack/){: external} on the {{site.data.keyword.cloud_notm}} Garage Method or [Become a Garage Method advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){: external}.
