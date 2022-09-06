@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2021
-lastupdated: "2021-11-15"
+  years: 2016, 2022
+lastupdated: "2022-08-26"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline, Classic
 
@@ -30,14 +30,14 @@ subcollection: ContinuousDelivery
 For information about Tekton delivery pipelines, see [Working with Tekton pipelines](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines#configure_tekton_pipeline).
 {: tip}
 
-Your permissions to view, modify, or run a pipeline are based on the access control for the toolchain that owns the pipeline. For more information about access control for toolchains, see [Managing access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security) and [Managing access to toolchains in Cloud Foundry orgs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-cf-security).
+Your permissions to view, modify, or run a pipeline are based on the access control for the toolchain that owns the pipeline. For more information about access control for toolchains, see [Managing access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
 {: important}
 
-You can specify the scripts to run in many of the job types that are provided by the pipeline, giving you direct control over what is run by the job. These scripts run in a Docker image that contains a number of standard development tools, including tools that are required for interacting with the {{site.data.keyword.Bluemix_notm}} runtimes. For more information about what the standard Docker image contains, see [Preinstalled resources](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). If your job requires development tools that are not available in the standard image, or you need different versions of those tools, you can use a custom image. For more information about custom images, see [Working with custom Docker images](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images).
+You can specify the scripts to run in many of the job types that are provided by the pipeline, giving you direct control over what is run by the job. These scripts run in a Docker image that contains a number of standard development tools, including tools that are required for interacting with the {{site.data.keyword.cloud_notm}} runtimes. For more information about what the standard Docker image contains, see [Preinstalled resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). If your job requires development tools that are not available in the standard image, or you need different versions of those tools, you can use a custom image. For more information about custom images, see [Working with custom Docker images](/docs/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images).
 
-When the pipeline runs scripts, properties that describe the context where the job is running are passed to the script by using environment variables. For example, the URL of the repo that is the input to the stage, the name of the stage and the job that is being run, the parameters specified by the job type, and so on. To view a list of the available environment variables, see [Preinstalled resources](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources).
+When the pipeline runs scripts, properties that describe the context where the job is running are passed to the script by using environment variables. For example, the URL of the repo that is the input to the stage, the name of the stage and the job that is being run, the parameters specified by the job type, and so on. To view a list of the available environment variables, see [Preinstalled resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources).
 
-You can define properties at both the pipeline level and the stage level. Pipeline properties are shared across all stages and jobs in a pipeline. Stage properties are unique to a particular stage, and shared across all jobs in that stage. For more information about properties, see [Environment properties (Environment variables)](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties).
+You can define properties at both the pipeline level and the stage level. Pipeline properties are shared across all stages and jobs in a pipeline. Stage properties are unique to a particular stage, and shared across all jobs in that stage. For more information about properties, see [Environment properties (Environment variables)](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#environment_properties).
 
 ## Stages
 {: #deliverypipeline_stages}
@@ -234,9 +234,9 @@ Cloud Foundry tries to [detect the buildpack to use](http://docs.cloudfoundry.or
 ### Deploy jobs
 {: #deploy_jobs}
 
-Deploy jobs upload your project to {{site.data.keyword.Bluemix_notm}} as an app and are accessible from a URL. After a project is deployed, you can find the deployed app on your {{site.data.keyword.Bluemix_notm}} dashboard.
+Deploy jobs upload your project to {{site.data.keyword.cloud_notm}} as an app and are accessible from a URL. After a project is deployed, you can find the deployed app on your {{site.data.keyword.cloud_notm}} dashboard.
 
-Deploy jobs can deploy new apps or update existing apps. Even if you first deployed an app by using another method, such as the Cloud Foundry command-line interface or the run bar in the Web IDE, you can update the app by using a deploy job. To update an app, in the deploy job, use that app's name.
+Deploy jobs can deploy new apps or update existing apps. Even if you first deployed an app by using another method, such as the Cloud Foundry command-line interface, you can update the app by using a deploy job. To update an app, in the deploy job, use that app's name.
 
 You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} to use one or more services, test in one region, and deploy to production in multiple regions.
 
@@ -323,7 +323,7 @@ Stages take their input from repositories and build jobs, and jobs within a stag
 ## Cloud Foundry Manifest files
 {: #deliverypipeline_manifest}
 
-Manifest files, which are named `manifest.yml` and stored in a project's root directory, control how your project is deployed to {{site.data.keyword.Bluemix_notm}}. For information about creating manifest files for a project, see the [{{site.data.keyword.Bluemix_notm}} documentation about application manifests](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest). To integrate with {{site.data.keyword.Bluemix_notm}}, your project must have a manifest file in its root directory. However, you are not required to deploy based on the information in the file.
+Manifest files, which are named `manifest.yml` and stored in a project's root directory, control how your project is deployed to {{site.data.keyword.cloud_notm}}. For information about creating manifest files for a project, see the [{{site.data.keyword.cloud_notm}} documentation about application manifests](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest). To integrate with {{site.data.keyword.cloud_notm}}, your project must have a manifest file in its root directory. However, you are not required to deploy based on the information in the file.
 
 In the pipeline, you can specify everything that a manifest file can do by using `cf push` command arguments. The `cf push` command arguments are helpful in projects that have multiple deployment targets. If multiple deploy jobs all try to use the route that is specified in the project manifest file, a conflict occurs.
 
