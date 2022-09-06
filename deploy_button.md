@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-20"
+lastupdated: "2022-08-25"
 
 keywords: IBM Cloud button, yml file, build file, toolchains
 
@@ -27,16 +27,13 @@ subcollection: ContinuousDelivery
 The Deploy to {{site.data.keyword.cloud_notm}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to {{site.data.keyword.cloud_notm}} by using a toolchain. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository (repo) so that your original app remains unaffected.  
 {: shortdesc}
 
-Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances and toolchains are deprecated. You can no longer create Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances. As of 14 January 2022, you cannot create new toolchains within Cloud Foundry orgs. You can create new toolchains in resource groups. On 28 February 2022, all toolchains within Cloud Foundry orgs that did not contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service were deleted. As of 15 August 2022, all toolchains within Cloud Foundry orgs that contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. Before this date, you can use the [toolchain migration wizard](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains) to migrate existing toolchains from Cloud Foundry orgs to resource groups.
-{: deprecated}
-
 When someone clicks your button, these actions occur:
 
 1. If the person does not have an active {{site.data.keyword.cloud_notm}} account, they must create an account. They can create a trial account or a real account.
 
 2. The person can select a region, resource group, and app name by clicking the {{site.data.keyword.deliverypipeline}} icon. The suggested app name is the same as the toolchain name, which is constructed from the name of your original Git repo and the time. The toolchain name can also be edited.
 
-3. A toolchain is created that includes a new private clone of your Git repo, a pipeline for building and deploying code changes, the Eclipse Orion {{site.data.keyword.webide}} for editing code on the Cloud, and an issue tracker.
+3. A toolchain is created that includes a new private clone of your Git repo, a pipeline for building and deploying code changes, and an issue tracker.
 
    If the `.bluemix` directory contains a `toolchain.yml` file, the file is used to specify the tool integrations for the toolchain. For more information about the `toolchain.yml` file, see [Creating custom toolchain templates](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates){: external}.
    {: tip}
@@ -75,7 +72,7 @@ To create a button in HTML, copy this snippet and insert a public Git repository
 ```
 {: codeblock}
 
-If you don't include the `branch` parameter in your snippet's repository URL, the Deploy to {{site.data.keyword.Bluemix_notm}} button defaults to the repository's master branch.
+If you don't include the `branch` parameter in your snippet's repository URL, the Deploy to {{site.data.keyword.cloud_notm}} button defaults to the repository's master branch.
 
 ### Creating a button in Markdown
 {: #Create-button-markdown}
@@ -125,7 +122,7 @@ Supported builders include:
 
 To configure the pipeline for the toolchain in a `.bluemix` directory, include a `pipeline.yml` file. For each `pipeline.yml` file in that directory, a pipeline is created when the toolchain is instantiated.
 
-If you do not have `pipeline.yml` file in the `.bluemix` directory, the Deploy to {{site.data.keyword.Bluemix_notm}} button will create a default pipeline with two stages: a Build stage and a Deploy stage that deploys to Cloud Foundry.
+If you do not have `pipeline.yml` file in the `.bluemix` directory, the Deploy to {{site.data.keyword.cloud_notm}} button will create a default pipeline with two stages: a Build stage and a Deploy stage that deploys to Cloud Foundry.
 
 To create a pipeline file, consult the example file in the [Creating custom toolchain templates](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates){: external} documentation. Just as when you define a pipeline in the web interface, you define a pipeline in text by creating stages and jobs, setting inputs and environment variables, and adding scripts. You can also see a number of more complex pipeline files in [this demonstration project](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix){: external}.
 
