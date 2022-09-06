@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-20"
+lastupdated: "2022-08-26"
 
-keywords: tool integrations, error message, Lite plan, toolchains, Cloud Foundry orgs, resource groups, IBM Cloud
+keywords: tool integrations, error message, Lite plan, toolchains, resource groups, IBM Cloud
 
 subcollection: ContinuousDelivery
 
@@ -46,7 +46,7 @@ Get answers to frequently asked questions about using toolchains.
 {: faq}
 {: support}
 
-The terms of the plan for the {{site.data.keyword.contdelivery_short}} service instance that is in the same resource group or org as the toolchain manages the use of some of the tool integrations ({{site.data.keyword.deliverypipeline}}, Eclipse Orion {{site.data.keyword.webide}}, and {{site.data.keyword.gitrepos}}) that are contained in the service. The error message indicates that the resource group or org doesn't contain the required instance of the {{site.data.keyword.contdelivery_short}} service. For more information about the terms of your plan, see [Plan limitations and usage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
+The terms of the plan for the {{site.data.keyword.contdelivery_short}} service instance that is in the same resource group as the toolchain manages the use of some of the tool integrations ({{site.data.keyword.deliverypipeline}} and {{site.data.keyword.gitrepos}}) that are contained in the service. The error message indicates that the resource group doesn't contain the required instance of the {{site.data.keyword.contdelivery_short}} service. For more information about the terms of your plan, see [Plan limitations and usage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 
 ## Can I create a toolchain instance from a template programmatically?
@@ -78,18 +78,7 @@ Creating a custom template is more work, but it ensures that all of your toolcha
 {: faq}
 {: support}
 
-Because the template doesn't link to the toolchains that were created from it, toolchains that were created from the original template are not updated with the new tag. 
-
-
-## I updated information for a toolchain from a Cloud Foundry org, why don't I see my changes in the toolchain?
-{: #updates_in_cloud_foundry}
-{: faq}
-{: support}
-
-Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances and toolchains are deprecated. You can no longer create Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances. As of 14 January 2022, you cannot create new toolchains within Cloud Foundry orgs. You can create new toolchains in resource groups. On 28 February 2022, all toolchains within Cloud Foundry orgs that did not contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service were deleted. As of 15 August 2022, all toolchains within Cloud Foundry orgs that contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. Before this date, you can use the [toolchain migration wizard](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains) to migrate existing toolchains from Cloud Foundry orgs to resource groups.
-{: deprecated}
-
-When you update the toolchain information directly from Cloud Foundry, it might take a few minutes for the {{site.data.keyword.contdelivery_short}} service to refresh and show your changes. For example, if you add or remove a user from a Cloud Foundry org, it might take a few minutes for {{site.data.keyword.contdelivery_short}} to discover that there is a new user and to allow that user to access the toolchain.
+Because the template doesn't link to the toolchains that were created from it, toolchains that were created from the original template are not updated with the new tag.
 
 
 ## Why does the Toolchains page show that a Continuous Delivery service is required?
@@ -97,17 +86,7 @@ When you update the toolchain information directly from Cloud Foundry, it might 
 {: faq}
 {: support}
 
-Toolchains in a resource group or org must be accompanied by an instance of the {{site.data.keyword.contdelivery_short}} service in the same resource group or org. The error message indicates that neither the resource group or org contains an instance of the {{site.data.keyword.contdelivery_short}} service. For more information about this requirement, see [Plan limitations and usage](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
-
-If the toolchain is in a resource group, create an instance of the {{site.data.keyword.contdelivery_short}} service in the resource group. If the toolchain is in an org, migrate the toolchain to a resource group that has an instance of the {{site.data.keyword.contdelivery_short}} service. For more information about migrating toolchains, see [Migrating toolchains to a resource group](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains).
-  
-
-## How do I move my toolchain from a Cloud Foundry org to a resource group?
-{: #toolchain_move_to_resource_group}
-{: faq}
-{: support}
-
-Go to the toolchain Overview page. A banner message appears indicating that the toolchain is eligible for migration. Click **migrate this toolchain** within the banner message to open the Migration wizard. The wizard guides you through the process of migrating your toolchain to a resource group. For more information about the migration process, see [Migrating toolchains to a resource group](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains).
+Toolchains in a resource group must be accompanied by an instance of the {{site.data.keyword.contdelivery_short}} service in the same resource group. The error message indicates that the resource group does not contain an instance of the {{site.data.keyword.contdelivery_short}} service. To resolve this error, create an instance of the {{site.data.keyword.contdelivery_short}} service in the resource group. For more information about this requirement, see [Plan limitations and usage](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 
 ## How do I find my toolchain ID?
