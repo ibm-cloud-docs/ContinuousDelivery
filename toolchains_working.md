@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2022
 
-lastupdated: "2022-07-25"
+lastupdated: "2022-08-26"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -37,10 +37,7 @@ A *toolchain* is a set of tool integrations that support development, deployment
 
 Open toolchains are available on {{site.data.keyword.cloud}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app.
 
-Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances and toolchains are deprecated. You can no longer create Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances. As of 14 January 2022, you cannot create new toolchains within Cloud Foundry orgs. You can create new toolchains in resource groups. On 28 February 2022, all toolchains within Cloud Foundry orgs that did not contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service were deleted. As of 15 August 2022, all toolchains within Cloud Foundry orgs that contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. Before this date, you can use the [toolchain migration wizard](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains) to migrate existing toolchains from Cloud Foundry orgs to resource groups.
-{: deprecated}
-
-Each toolchain is associated with a specific resource group or organization (org). If a toolchain is associated with a resource group, any user that has Identity and Access Management (IAM) Viewer permission for the toolchain resource or the resource group that contains it can access the toolchain. If the toolchain is associated with an org, any user that is a member of that org can be added to the access control list for any of its associated toolchains. For more information about access control for toolchains in Cloud Foundry orgs, see [Managing user access to toolchains in Cloud Foundry orgs](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-cf-security). For more information about access control for toolchains in resource groups, see [Managing user access to toolchains in resource groups](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
+Each toolchain is associated with a specific resource group. Any user that has Identity and Access Management (IAM) Viewer permission for the toolchain resource or the resource group that contains it can access the toolchain. For more information about access control for toolchains in resource groups, see [Managing user access to toolchains in resource groups](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
 
 On {{site.data.keyword.cloud_notm}} Public, depending on the template or toolchain that you use, the toolchain might include a GitHub or Git repository (repo) that is populated with app starter code and a preconfigured delivery pipeline. When you push changes to the toolchain's repo, the delivery pipeline automatically builds and deploys the app to {{site.data.keyword.cloud_notm}}.
 
@@ -49,7 +46,7 @@ To see which toolchains and tool integrations are available, see [Toolchain avai
 ## Creating a toolchain from a template   
 {: #creating_a_toolchain_from_a_template}
 
-You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes a specific set of tool integrations. Depending on the template that you use, you can create a toolchain that has a specific set of tool integrations or an empty toolchain that you can add tool integrations to. Learn more about how to use the templates from the [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage/category/tools){: external}.
+You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes a specific set of tool integrations. Depending on the template that you use, you can create a toolchain that has a specific set of tool integrations or an empty toolchain that you can add tool integrations to. Learn more about how to use the templates from the [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/cloud/garage/category/tools){: external}.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
@@ -141,7 +138,7 @@ You can view a toolchain from an app by clicking the toolchain name from your ap
 {: tip}
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. 
-1. On the Toolchains page, select a **Resource Group** or **Location**. All of the toolchains that are contained within the selected resource group or Cloud Foundry org are displayed. Click the toolchain that you want to view to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
+1. On the Toolchains page, select a **Resource Group** or **Location**. All of the toolchains that are contained within the selected resource group are displayed. Click the toolchain that you want to view to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. To access a tool integration that is in your toolchain, go to the appropriate card, such as **Delivery pipelines**, and then click the tool integration.
 
    If you have more than one GitHub or Git repo, you might have multiple instances of the same tool integration within the **Repositories** card because each repo is represented separately. If you have more than one pipeline, you might have multiple instances for the same tool integration because each pipeline is represented separately. For example, when you create a Microservices toolchain, each of the three microservices has its own GitHub or Git repo and its own pipeline.
@@ -191,10 +188,4 @@ ibmcloud dev toolchain-open [toolchain-name]
 ## Take a tutorial: Using toolchains
 {: #toolchain_tutorials}
 
-Check out one of these tutorials on the [IBM&reg; Cloud Garage Method](https://www.ibm.com/cloud/garage){: external}:
-
-* [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}.
-
-* [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){: external}.
-
-* [Use the "Develop and test microservices on Cloud Foundry" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-test-microservices-on-cloud-foundry-toolchain){: external}.
+Check out the [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){: external} tutorial on the [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/cloud/garage){: external}.
