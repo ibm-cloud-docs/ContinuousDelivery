@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-07-07"
+lastupdated: "2022-08-26"
 
 keywords: troubleshoot, toolchains, tool integrations
 
@@ -72,18 +72,15 @@ After you add and configure a tool integration for your toolchain, an error mess
 When you add a tool integration, the toolchain communicates with the tool that is represented by the tool integration to provision any necessary resources and associate them with the toolchain. If an error occurs during the setup process or if the communication between the toolchain and the tool does not complete properly, the tool integration is put into an error state.
 {: tsCauses}
 
-![Setup failed error](images/tool_setup_failed.png){: caption="Figure 1. Setup failed error" caption-side="bottom"}
-
 You can try to configure the tool integration again:
 {: tsResolve}
 
 1. On its tool card, hover over the `Setup failed` message and click **Reconfigure**.
 
-   ![Reconfigure button](images/tool_reconfigure.png){: caption="Figure 2. Reconfigure tool integration" caption-side="bottom"}
+   ![Reconfigure button](images/tool_reconfigure.png){: caption="Figure 1. Reconfigure tool integration" caption-side="bottom"}
 
 1. Make sure that you are using valid configuration parameters. If the error was caused by an invalid configuration, an error message is displayed; for example, `The integration could not be set up. Check the settings and try again. Reason: Invalid api_key:fakeKey`. Update the settings for the tool integration and click **Save integration**.
 1. If the error was caused by a communication problem, click **Save integration** to try again.
-
 
 ## Why can't I create a toolchain to deploy my app to Cloud Foundry?
 {: #troubleshoot-deploy_cf}
