@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-20"
+lastupdated: "2022-08-26"
 
 keywords: error message, Lite plan, toolchains, IBM Cloud
 
@@ -38,10 +38,7 @@ Get answers to frequently asked questions about using {{site.data.keyword.contde
 {: faq}
 {: support}
 
-Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances and toolchains are deprecated. You can no longer create Cloud Foundry org-based {{site.data.keyword.contdelivery_short}} service instances. As of 14 January 2022, you cannot create new toolchains within Cloud Foundry orgs. You can create new toolchains in resource groups. On 28 February 2022, all toolchains within Cloud Foundry orgs that did not contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service were deleted. As of 15 August 2022, all toolchains within Cloud Foundry orgs that contain a Professional plan instance of the {{site.data.keyword.contdelivery_short}} service will be deleted. Before this date, you can use the [toolchain migration wizard](/docs/ContinuousDelivery?topic=ContinuousDelivery-migrate_toolchains) to migrate existing toolchains from Cloud Foundry orgs to resource groups.
-{: deprecated}
-
-An instance of the {{site.data.keyword.contdelivery_short}} service is considered active when one or more of the toolchains within the same resource group or Cloud Foundry organization (org) are active. A toolchain is considered active if users interact with it by way of the user interface, delivery pipeline jobs are triggered, repositories that are managed by {{site.data.keyword.gitrepos}} are accessed, or Eclipse Orion {{site.data.keyword.webide}} workspaces are in use. To be considered inactive, all of these conditions must be absent for all of the toolchains that are associated with the {{site.data.keyword.contdelivery_short}} service, for 30 days.
+An instance of the {{site.data.keyword.contdelivery_short}} service is considered active when one or more of the toolchains within the same resource group is active. A toolchain is considered active if users interact with it by way of the user interface, delivery pipeline jobs are triggered, or repositories that are managed by {{site.data.keyword.gitrepos}} are accessed. To be considered inactive, all of these conditions must be absent for all of the toolchains that are associated with the {{site.data.keyword.contdelivery_short}} service, for 30 days.
 
 
 ## I tried to deploy an app to {{site.data.keyword.cloud_notm}}, why am I getting an error?
