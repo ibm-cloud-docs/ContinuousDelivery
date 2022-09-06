@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-08-25"
 
 keywords: tool integrations, IBM Cloud Public, Delivery Pipeline
 subcollection: ContinuousDelivery
@@ -97,8 +97,6 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 ## Learn more about Delivery Pipeline
 {: #learn_pipeline}
 
-To learn more about {{site.data.keyword.deliverypipeline}}, see [Working with pipelines](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working) and the [Delivery Pipeline article](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: external} on the IBM Cloud Garage Method or take these tutorials:
+To learn more about {{site.data.keyword.deliverypipeline}}, see [Working with pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working) and the [Delivery Pipeline article](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: external} on the IBM Cloud Garage Method or take this tutorial:
 
 * [Create a pipeline](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){: external}
-
-* [Create and use your first toolchain by using the "Develop a Cloud Foundry app" toolchain](https://www.ibm.com/cloud/garage/tutorials/introduce-develop-cloud-foundry-app-toolchain){: external}
