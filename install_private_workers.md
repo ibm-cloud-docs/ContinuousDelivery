@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-09-07"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -75,7 +75,6 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
    kubectl delete crd catalogsources.operators.coreos.com
    kubectl delete crd clusterserviceversions.operators.coreos.com
    kubectl delete crd installplans.operators.coreos.com
-   kubectl delete ns ibm-operators
    kubectl delete sa -n ibm-system olm-operator-serviceaccount 
    kubectl delete clusterrole system:controller:operator-lifecycle-manager
    kubectl delete clusterrolebinding olm-operator-binding-ibm-system 
