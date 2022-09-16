@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-09-15"
 
 keywords: IBM Cloud button, yml file, build file, toolchains
 
@@ -24,7 +24,7 @@ subcollection: ContinuousDelivery
 # Creating a Deploy to {{site.data.keyword.cloud_notm}} button
 {: #deploy-button}
 
-The Deploy to {{site.data.keyword.cloud_notm}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to {{site.data.keyword.cloud_notm}} by using a toolchain. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository (repo) so that your original app remains unaffected.  
+The Deploy to {{site.data.keyword.cloud_notm}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to {{site.data.keyword.cloud_notm}} by using a toolchain. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository (repo) so that your original app remains unaffected.
 {: shortdesc}
 
 When someone clicks your button, these actions occur:
@@ -51,11 +51,11 @@ When someone clicks your button, these actions occur:
 
 See an app button example for a public {{site.data.keyword.gitrepos}} repo:
 
-[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://us-south.git.cloud.ibm.com/idsorg/sample-java-cloudant){: external}
+[![Deploy to IBM Cloud button](https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg)](https://cloud.ibm.com/devops/setup/deploy?repository=https://us-south.git.cloud.ibm.com/idsorg/sample-java-cloudant){: target="_blank"}
 
 See an app button example for a public GitHub repo:
 
-[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){: external}
+[![Deploy to IBM Cloud button](https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/open-toolchain/starfighter){: target="_blank"}
 
 ## Creating a button
 {: #create-button}
@@ -68,7 +68,7 @@ To create a Deploy to {{site.data.keyword.cloud_notm}} button, copy and modify o
 To create a button in HTML, copy this snippet and insert a public Git repository URL and branch.
 
 ```HTML
-<a href="https://cloud.ibm.com/devops/setup/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://cloud.ibm.com/devops/setup/deploy/button.png" alt="Deploy to IBM Cloud"></a>
+<a href="https://cloud.ibm.com/devops/setup/deploy?repository=<git_repository_URL>&branch=<git_branch>"><img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud" target="_blank"></a>
 ```
 {: codeblock}
 
@@ -80,7 +80,7 @@ If you don't include the `branch` parameter in your snippet's repository URL, th
 To create a button in Markdown, copy this snippet and insert a public Git repository URL and branch.
 
 ```Markdown
-[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=<git_repository_URL>&branch=<git_branch>)
+[![Deploy to IBM Cloud button](https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg)](https://cloud.ibm.com/devops/setup/deploy?repository=<git_repository_URL>&branch=<git_branch>)
 ```
 {: codeblock}
 
@@ -91,13 +91,7 @@ If you don't include the `branch` parameter in your snippet's repository URL, th
 
 After you create a Deploy to {{site.data.keyword.cloud_notm}} button snippet, you can insert it into blogs, articles, wikis, readme files, or anywhere else you want to promote your app.
 
-When you customize the snippet for your Deploy to {{site.data.keyword.cloud_notm}} button, consider that both of the templates use a default path to an external button image in PNG format and in English.
-
-* If you prefer to use an SVG image for the button instead of a PNG, change the path to the button image that is used in the snippet to `https://cloud.ibm.com/devops/setup/deploy/button.svg`.
-
-* If you prefer to use an image for the button, change the path of the button image that is used in the snippet to `https://cloud.ibm.com/devops/setup/deploy/button_x2.png`. This image is twice the size of the default one.
-
-* If you prefer to store the image locally, you can download the image and store it in your Git repo. Adjust the path to use the relative location of the image.
+When you customize the snippet for your Deploy to {{site.data.keyword.cloud_notm}} button, consider that both of the templates use a default path to an external button image in SVG format and in English. If you prefer to store the image locally, you can download the image and store it in your Git repo. Adjust the path to use the relative location of the image.
 
 ## Repository considerations
 {: #button-repo}
@@ -135,7 +129,7 @@ The Dockerfile acts as a kind of build script for the app. If a Dockerfile is de
 
 To learn more about creating Dockerfiles, see the [Docker documentation](https://docs.docker.com/reference/builder/){: external}. To follow step-by-step instructions using a toolchain template to deploy to Kubernetes, see [Tutorial: Use the "Develop a Kubernetes app" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){: external} or [Tutorial: Use the "Develop a Kubernetes app with Helm" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){: external}.
 
-To learn about porting your Cloud Foundry app to a Kubernetes cluster, see [Tutorial: Port a Cloud Foundry app to deploy to Kubernetes in a toolchain](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){: external}.  
+To learn about porting your Cloud Foundry app to a Kubernetes cluster, see [Tutorial: Port a Cloud Foundry app to deploy to Kubernetes in a toolchain](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){: external}.
 
 To create a `pipeline.yml` manually that is specifically for containers, see the [examples in GitHub](https://github.com/Puquios/){: external}.
 
