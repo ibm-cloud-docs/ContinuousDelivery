@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-06-24"
+  years: 2015, 2022
+lastupdated: "2022-09-13"
 
 keywords: troubleshoot, private workers
 
@@ -87,8 +87,40 @@ Deny "gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook@sha256:da7
 
 ```
    
-The private worker installer pulls images from `gcr.io` and [Docker hub](https://hub.docker.com/r/ibmcom/pipeline-private-worker){: external}. Some platforms, such as IBM Cloud Private, do not allow these container registries on the default image policy.
+The private worker installer pulls images from `icr.io`. Some platforms, such as IBM Cloud Private, do not allow these container registries on the default image policy.
 {: tsCauses}
 
-Make sure that the policy for pulling images in your cluster supports pulling images from `gcr.io` and `docker.io`. For example, if you are installing the private worker framework on {{site.data.keyword.cloud_notm}} Private, add those policies by using the {{site.data.keyword.cloud_notm}} Private Web console. For more information about managing image security enforcement by using the IBM Cloud Private Web console, see [Enforcing container image security](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/manage_images/image_security.html){: external}.
+Make sure that the policy for pulling images in your cluster supports pulling images from `icr.io`. For example, if you are installing the private worker framework on {{site.data.keyword.cloud_notm}} Private, add those policies by using the {{site.data.keyword.cloud_notm}} Private Web console. For more information about managing image security enforcement by using the IBM Cloud Private Web console, see [Enforcing container image security](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/manage_images/image_security.html){: external}. For more information about managing image security enforcement by using Porteris, see [Portieris Policies](https://github.com/IBM/portieris/blob/master/POLICIES.md){: external}.
+{: tsResolve}
+
+The following example shows how to use the IBM Cloud CLI to create the ClusterImagePolicy:
+
+If you use Portieris as an admission controller, you might need to change the `apiVersion` in the example to `portieris.cloud.ibm.com/v1`.
+{: tip}
+
+```text
+cat <<EOF | kubectl apply -f -
+apiVersion: securityenforcement.admission.cloud.ibm.com/v1beta1
+kind: ClusterImagePolicy
+metadata:
+  name: iks-private-registries
+spec:
+  repositories:
+  - name: "*.icr.io/*"
+    policy:
+EOF
+```
+
+## Why is my {{site.data.keyword.deliverypipeline}} Private Worker not listed?
+{: #troubleshoot-pw-inactive}
+{: troubleshoot}
+{: support}
+
+My private worker agent is listed on the cluster with a status of `inactive`, but it is not listed on the private worker integration Overview page.
+{: tsSymptoms}
+   
+The API key that was used to install the worker agent might not be included in the `ServiceID` that is used by the private worker integration. 
+{: tsCauses}
+
+Remove the misconfigured worker agent from the cluster and install the worker agent again. Make sure that the API key that is included in the installation command also exists in the `ServiceId` that is used in the same installation command. Use the link for the `ServiceId` that is available on both the private worker integration page and the Identity and Access Management (IAM) page to generate a valid API key.
 {: tsResolve}
