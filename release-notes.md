@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-08"
+lastupdated: "2022-09-16"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -29,6 +29,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
+
+## 16 September 2022
+{: #ContinuousDelivery-sept1622}
+{: release-note}
+
+{{site.data.keyword.contdelivery_short}} service instances and toolchains that reside in Cloud Foundry orgs are no longer supported.
+:   Services instances and toolchains that reside in resource groups remain fully supported.
 
 ## 08 September 2022
 {: #ContinuousDelivery-sept0822}
