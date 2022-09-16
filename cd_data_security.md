@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-20"
+lastupdated: "2022-09-13"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -29,7 +29,7 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.contdelivery_full}} hosts your databases in a highly available and secure environment:
 
 * Data is encrypted at rest (GPFS, LUKS, and built-in disk) and in transit (HTTPS and SSH) by using encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service, or the services and infrastructure that it depends on.
-* [Personal data can be encrypted only in the Professional plan](#cd_professional_plan) by using a root key within an instance of the {{site.data.keyword.keymanagementservicefull}} service.
+* [Personal data can be encrypted only in the Professional plan](#cd_professional_plan) by using a root key within an instance of the {{site.data.keyword.keymanagementservicefull}} service or the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} service.
 * Client and system credentials are stored on encrypted disks. 
 * Configuration data for tool integrations and {{site.data.keyword.deliverypipeline}} property values might include sensitive information. This data is encrypted by using encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service because it is stored in databases that are internal to the service. 
 * The application and data are configured for high availability.
@@ -38,7 +38,7 @@ subcollection: ContinuousDelivery
 ## Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}
 {: #cd_secure_credentials}
 
-The {{site.data.keyword.contdelivery_short}} service encrypts customer-owned sensitive data before it stores it in databases that are used internally by the service. Sensitive data includes third-party tool integration configuration data and {{site.data.keyword.deliverypipeline}} property values. Data is encrypted by using encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service or by using encryption keys from the root key that is specified within an instance of the {{site.data.keyword.keymanagementservicefull}} service.
+The {{site.data.keyword.contdelivery_short}} service encrypts customer-owned sensitive data before it stores it in databases that are used internally by the service. Sensitive data includes third-party tool integration configuration data and {{site.data.keyword.deliverypipeline}} property values. Data is encrypted by using encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service or by using encryption keys from the root key that is specified within an instance of the {{site.data.keyword.keymanagementservicefull}} service or the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} service.
 
 DevOps processes often require various types of credentials (such as usernames and passwords, API keys, service keys, and SSH keys) to interact with other systems to build, test, and deploy applications. You are responsible for ensuring that these credentials aren't inadvertently shared outside of their intended audience. Access to these credentials by malicious actors might disrupt your IT operations, cause unexpected costs, or use your resources to start attacks. IBM is not responsible for protecting and maintaining the security of your credentials.
 
@@ -53,6 +53,7 @@ To keep your credentials secure, make sure that you follow this guidance:
 * [Classic pipeline secure environment properties](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about)
 * [Tekton pipeline secure environment properties](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines)
 * [{{site.data.keyword.keymanagementservicefull}}](/docs/key-protect?topic=key-protect-getting-started-tutorial)
+* [{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-get-started)
 * [HashiCorp Vault](https://www.vaultproject.io/){: external}
    
 For more information about secure DevOps best practices, see [DevOps Security](https://www.ibm.com/cloud/learn/devops-a-complete-guide?mhsrc=ibmsearch_a&mhq=Secure%20DevOps#toc-security-j2-0639C){: external}.
@@ -60,7 +61,7 @@ For more information about secure DevOps best practices, see [DevOps Security](h
 ## Protecting your personal data when you use the Professional plan 
 {: #cd_professional_plan}
 
-Personal data that is encrypted by using a customer key can be protected only in the {{site.data.keyword.contdelivery_short}} Professional plan. If you select your own KeyManagement Service, such as KeyProtect or {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}, the following values are encrypted by using your own key instead of the encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service.
+Personal data that is encrypted by using a customer key can be protected only in the {{site.data.keyword.contdelivery_short}} Professional plan. If you select your own KeyManagement Service, such as KeyProtect or {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, the following values are encrypted by using your own key instead of the encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service.
 
 | Component | Value | 
 |:-----------------|:-----------------|
@@ -75,7 +76,6 @@ The following components encrypt personal data by using only the provider-manage
 
 | Component | Value | 
 |:-----------------|:-----------------|
-|Eclipse Orion {{site.data.keyword.webide}}		|User workspaces    |
 |{{site.data.keyword.gitrepos}}		| * Issues, pull requests, and source code \n * Personal information, such as name, email, profile picture, address, and other information from the profile page     |
 {: caption="Table 2. Values that are encrypted by using the provider-managed key" caption-side="top"}
 
