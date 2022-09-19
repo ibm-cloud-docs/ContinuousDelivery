@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-07"
+lastupdated: "2022-09-16"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -513,3 +513,15 @@ After you provision the container images on the ICP’s private registry, update
 
 You can provide pipeline users with access to the base images (icr.io/continuous-delivery/pipeline/pipeline-base-image) that are used to run pipeline jobs, which are supplied by the global IBM Cloud Container Registry. To use these images, you must configure your pipeline jobs by using the `Custom Dockerimage`. You must also reference the expected image in the ICP’s private registry, for example: `mycluster.icp:8500/icr.io/continuous-delivery/pipeline/pipeline-base-image:latest`.
 {: tip}
+
+## Installing a multi-cluster worker pool
+{: #install_mc_worker_pool}
+
+You can install agents on multiple clusters that work in concert within a single private worker pool. By using this configuration, the private worker pool can manage more pipeline runs in parallel, and you can remove clusters from the maintenance rotation without deactivating the worker pool.
+
+Although having multiple agents on the same cluster supports multiple worker pools, it does not improve performance or throughput. 
+{: tip}
+
+To configure a multi-cluster worker pool, follow the instructions for [installing directly on a cluster](#install_pw) and [registering a {{site.data.keyword.deliverypipeline}} Private Worker](#register_pw) for each cluster that participates in the worker pool. Make sure that you update the worker name to identify the cluster on which the worker resides.
+
+The multiple worker agents are now listed in the private worker integration UI and jobs are scheduled on those agents based on the cluster load at pipeline run request time.
