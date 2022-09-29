@@ -22,7 +22,6 @@ The following information and resources are available by default to an {{site.da
 
 Table 1 describes the annotations that are included in a Tekton `PipelineRun`.
 
-
 | Run Annotation                          | Description                                                                                                                                                                                                                                                                                          |
 | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `devops.cloud.ibm.com/build-number`     | The build number for the pipeline. This number is the cumulative total of pipeline runs from all triggers.                                                                                                                                                                                           |
@@ -33,7 +32,7 @@ Table 1 describes the annotations that are included in a Tekton `PipelineRun`.
 | `devops.cloud.ibm.com/triggered-by`     | The user who initiated the trigger. This value is the IBMId of either the user who pressed **run** for `manual` triggers, the user who last saved the trigger for `timer` triggers, or the user who performed the Git action for `scm` triggers. This value is empty for `generic` triggers. |
 | `devops.cloud.ibm.com/pipeline-run-url` | The URL of the details page for this pipeline run.                                                                                                                                                                                                                                                   |
 | `devops.cloud.ibm.com/tekton-pipeline`  | The unique ID of this pipeline run.                                                                                                                                                                                                                                                                  |
-{: caption="Table 1. `PipelineRun` annotations" caption-side="top"}
+{: caption="Table 1. PipelineRun annotations" caption-side="top"}
 
 ### Accessing annotations
 {: #tekton_access_annotations}
@@ -133,9 +132,9 @@ spec:
 
 Supply chain Levels for Software Artifacts (SLSA), also known as "salsa", is a security framework. SLSA is a checklist of standards and controls to prevent tampering, improve integrity, and secure packages and infrastructure in your projects, businesses, or enterprises. SLSA gets you from safe enough to being as resilient as possible, at any link in the chain.
 
-To achieve SLSA level 1, the build process must be fully scripted, automated, and must generate provenance. [Provenance](https://slsa.dev/provenance) is metadata about how an artifact was built, including the build process, top-level source, and dependencies. Knowing the provenance allows software consumers to make risk-based security decisions. Provenance at SLSA level 1 does not protect against tampering, but it offers a basic level of code source identification and can aid in vulnerability management.
+To achieve SLSA level 1, the build process must be fully scripted and automated, and generate provenance. [Provenance](https://slsa.dev/provenance){: external} is metadata about how an artifact was built, including the build process, top-level source, and dependencies. Knowing the provenance allows software consumers to make risk-based security decisions. Provenance at SLSA level 1 does not protect against tampering, but it offers a basic level of code source identification and can aid in vulnerability management.
 
-To generate a provenance document in a {{site.data.keyword.contdelivery_short}} Tekton pipeline run, you must provide statements by using `slsa-provenance-statement` that are emitted in the pipeline step logs.
+To generate a provenance document in a {{site.data.keyword.contdelivery_short}} Tekton pipeline run, you must provide statements by using the `slsa-provenance-statement` statements that are emitted in the pipeline step logs.
 
 For example, in the steps that produce a build artifact, add the following statements:
 
@@ -145,10 +144,10 @@ For example, in the steps that produce a build artifact, add the following state
 ::slsa-provenance-statement::{"materials":[{"uri":"https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.18.6.tgz","digest":{"sha512":"TDCmlK5eOvH+eH7cdAFlNXeVJqWIQ7gW9tY1GJIpUtFb6CmjVyq2VM3u71bOyR8CRihcCgMUYoDNyLXao3+70Q=="}}]}
 ```
 
-The `slsa-provenance-statement` workflow command is defined as `::slsa-provenance-statement::` followed by a JSON format that defines a `subject` and `materials`. `Subject` is mandatory, if there is no subject, no SLSA document is created. `Materials` is optional and corresponds to external resources that are used to produce the artifacts. 
-{ :note}
+The `slsa-provenance-statement` workflow command is defined as `::slsa-provenance-statement::` followed by a JSON format that defines a `subject` and `materials`. `Subject` is mandatory and no SLSA document is created without a `subject`. `Materials` is optional and corresponds to external resources that are used to produce the artifacts. 
+{: tip}
 
-For more information on the SLSA level 1 provenance field definitions, see the [SLSA website](https://slsa.dev/provenance/v0.1#fields).
+For more information about the SLSA level 1 provenance field definitions, see the [SLSA website](https://slsa.dev/provenance/v0.1#fields){: external}.
 
 ### Retrieving the provenance document after a run
 {: #tekton_slsa_provenance_retrieve}
