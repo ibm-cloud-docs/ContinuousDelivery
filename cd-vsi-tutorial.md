@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021, 2022
-lastupdated: "2022-03-23"
+lastupdated: "2022-10-06"
 lasttested: "2021-05-13"
 
 keywords: Virtual Server Instance, code repositories, DevOps Insights, non-containerized, java application, vsi, gitops, toolchain, pipeline, Virtual Machine, vm
@@ -149,9 +149,6 @@ Any change to the source triggers the continuous integration pipeline. When a co
 {: step}
 
 After you create your toolchain, it shows each of the tool integrations that are part of the toolchain in a diagram. 
-The diagram in the following image is an example. The diagram that you view for your toolchains might show different tool integrations or different data for those integrations.
-
-![Newly created toolchain](images/newly_created_toolchain_updated.png){: caption="Figure 6. New toolchain" caption-side="bottom"}
 
 ### Explore the pipelines
 {: #cd-vsi-explore-pipelines}
@@ -159,7 +156,7 @@ The diagram in the following image is an example. The diagram that you view for 
 You can explore the pipelines to understand the toolchain flow and the different operations that run within each pipeline.
 For example, to view multiple steps such as `cra-discovery-scan` and the details for Parameter and Status, click the CI Pipeline tool integration, and then click **Succeeded PipelineRuns**.
 
-![CI PipelineRun details](images/ci-pipeline-details-updated.png){: caption="Figure 7. Continuous Integration PipelineRun details" caption-side="bottom"}
+![CI PipelineRun details](images/ci-pipeline-details-updated.png){: caption="Figure 6. Continuous Integration PipelineRun details" caption-side="bottom"}
 
 ### Explore {{site.data.keyword.DRA_short}}
 {: #cd-vsi-explore-dra}
@@ -170,7 +167,7 @@ If your code does not meet or exceed a policy, the deployment is halted, prevent
 
 The following image shows the Quality Dashboard that provides quality data sets such as unit tests, code coverage, functional verification tests, and static security scans for each application. 
 
-![DevOps Insights Quality Dashboard](images/devops_insights_quality_dashbaord.png){: caption="Figure 8. DevOps Insights Quality Dashboard" caption-side="bottom"}
+![DevOps Insights Quality Dashboard](images/devops_insights_quality_dashbaord.png){: caption="Figure 7. DevOps Insights Quality Dashboard" caption-side="bottom"}
 
 ### Explore GitOps
 {: #cd-vsi-explore-gitops}
@@ -199,7 +196,7 @@ To access the advanced user options, go to the **More Tools** tab.
 
    * Select the API Key that has read and write access to the bucket that you specified.
     
-   ![Cloud Object Storage Integration Details](images/custom_cos.png){: caption="Figure 9. Cloud Object Storage integration details" caption-side="bottom"}
+   ![Cloud Object Storage Integration Details](images/custom_cos.png){: caption="Figure 8. Cloud Object Storage integration details" caption-side="bottom"}
 
 * To use an Artifactory account to store transient build artifacts, specify details for your Artifactory instance:
 
@@ -210,7 +207,7 @@ To access the advanced user options, go to the **More Tools** tab.
    * Release URL:  Release URL for the Artifactory repo where artifacts are stored
 
 Some fields in the Artifactory are mandatory only when you use the Artifactory configuration.
-![Artifactory Integration Details](images/artifactory_details.png){: caption="Figure 10. Artifactory integration details" caption-side="bottom"}
+![Artifactory Integration Details](images/artifactory_details.png){: caption="Figure 9. Artifactory integration details" caption-side="bottom"}
 {: tip}
 
 Click **Create** to create the toolchain. This process might take several minutes to complete.
@@ -231,4 +228,4 @@ You might want to roll back the deployed code because of test results, code qual
 ## Next steps
 {: #cd-vsi-next-steps}
 
-Although this tutorial used an example Java app, you can also deploy other language-based apps on a Virtual Server Instance. To deploy a different language-based app to a Virtual Server Instance, delete both the toolchain and the Virtual Server Instance that you created for this tutorial.
+Although this tutorial used an example Java app, you can also deploy other language-based apps on a Virtual Server Instance. To deploy a different language-based app to a Virtual Server Instance, delete both the toolchain and the Virtual Server Instance that you created for this tutorial. 
