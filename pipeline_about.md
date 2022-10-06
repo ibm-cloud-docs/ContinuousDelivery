@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-10-06"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline, Classic
 
