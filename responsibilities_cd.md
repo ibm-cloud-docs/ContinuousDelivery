@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-10-06"
 
 keywords: customer responsibilities, IBM responsibilities, terms and conditions, disaster recovery, toolchain backup
 
