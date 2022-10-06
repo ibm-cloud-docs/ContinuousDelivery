@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-6-08"
+lastupdated: "2022-10-06"
 
 keywords: endpoints, authentication, IBM Cloud Public
 
@@ -103,24 +103,6 @@ The following table lists the {{site.data.keyword.DRA_short}} endpoints that do 
 | `https://tagging.[region].devopsinsights.cloud.ibm.com/status` | Get the readiness status of the service component |
 {: caption="Table 3. {{site.data.keyword.DRA_short}}" caption-side="top"}
 
-## Eclipse Orion {{site.data.keyword.webide}}
-{: #eclipse_orion_web_ide}
-
-The following table lists the Eclipse Orion {{site.data.keyword.webide}} endpoints that do not require authentication:
-
-|Endpoint|Description|
-|:-------------------------------------------|:------------------|
-| `https://cloud.ibm.com/devops/code/header` | Get the header content |
-| `https://cloud.ibm.com/devops/code/health` | Get the current health of the service component |
-| `https://cloud.ibm.com/devops/code/idsapi/region` | Get the information for the region |
-| `https://cloud.ibm.com/devops/code/readiness` | Get the current readiness of the service component to process requests |
-| `https://cloud.ibm.com/devops/code/status` | Get the current status of the service component |
-| `https://otc-orion-broker.[region].devops.cloud.ibm.com/status` | Get the current status of the service component |
-| `https://otc-orion-broker.[region].devops.cloud.ibm.com/version` | Get the version of the service component |
-| `https://otc-orion-server-consumption.[region].devops.cloud.ibm.com/healthcheck` | Get the current status of the service component |
-| `https://otc-orion-server-consumption.[region].devops.cloud.ibm.com/version` | Get the version of the service component |
-{: caption="Table 4. Eclipse Orion {{site.data.keyword.webide}}" caption-side="top"}
-
 ## {{site.data.keyword.gitrepos}}
 {: #git_repos_and_issue_tracking}
 
@@ -137,7 +119,7 @@ The following table lists the {{site.data.keyword.gitrepos}} endpoints that do n
 | `https://hosted-git-metrics.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://hosted-git-metrics.[region].devops.cloud.ibm.com/status-all` | Get the status of the service component and its dependencies |
 | `https://hosted-git-metrics.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-{: caption="Table 5. {{site.data.keyword.gitrepos}}" caption-side="top"}
+{: caption="Table 4. {{site.data.keyword.gitrepos}}" caption-side="top"}
 
 ## Third-party tool integrations
 {: #third-party_tool_integrations}
@@ -163,7 +145,7 @@ The following table lists the third-party tool integration endpoints that do not
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/status` | Get the status of the Tools Integration Broker service component |
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/toolint-broker/api/v1/form` | Forwards the Authenticate, Populate, and Validate (APV) requests to the appropriate broker |
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-{: caption="Table 6. Third-party tool integrations" caption-side="top"}
+{: caption="Table 5. Third-party tool integrations" caption-side="top"}
 
 ## Toolchain platform
 {: #toolchain_platform}
@@ -197,4 +179,4 @@ The following table lists the Toolchain platform endpoints that do not require a
 | `https://otc-ui.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 | `https://otc-webhook-manager.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://otc-webhook-manager.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-{: caption="Table 7. Toolchain platform" caption-side="top"}
+{: caption="Table 6. Toolchain platform" caption-side="top"}
