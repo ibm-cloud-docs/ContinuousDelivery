@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021, 2022
-lastupdated: "2022-03-23"
+lastupdated: "2022-10-06"
 
 keywords: deployment strategies, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -178,7 +178,6 @@ Configure the deployment target for the toolchain by specifying details for the 
 
 ![Deployment target Blue-Green strategy](images/ds-vpc-setup-dep-target-bg.png){: caption="Figure 7. Deployment target Blue-Green strategy" caption-side="bottom"}
 
-
 ### Configure VPC details
 {: #vpc-deployment-details}
 
@@ -237,19 +236,11 @@ Alternatively, you can use Artifactory if you have an Artifactory instance of yo
 {: #optional-tools}
 {: step}
 
-You can add the Eclipse Orion {{site.data.keyword.webide}} and {{site.data.keyword.DRA_short}} tool integrations to your toolchain without any additional configuration. 
+You can add the {{site.data.keyword.DRA_full}} tool integration to your toolchain without any additional configuration. 
 
-### Eclipse Orion {{site.data.keyword.webide}}
-{: #web-ide-optional}
+[{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) is included in the created toolchain. You do not need to provide any configuration steps for {{site.data.keyword.DRA_short}}. The continuous integration pipeline automatically uses the {{site.data.keyword.DRA_short}} instance that is included in the toolchain. {{site.data.keyword.DRA_short}} aggregates code, test, build, and deployment data to provide visibility into the velocity and quality of all of your teams and releases.
 
-The [Eclipse Orion {{site.data.keyword.webide}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-web_ide) is a browser-based development environment where you can develop for the web in JavaScript, HTML, and CSS with the help of content assist, code completion, and error checking. No additional configuration is required to use this tool.
-
-### {{site.data.keyword.DRA_short}}
-{: #devops-insights-optional}
-
-[{{site.data.keyword.DRA_full}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) is included in the created toolchain. You do not need to provide any configuration steps for {{site.data.keyword.DRA_short}}. The continuous integration pipeline automatically uses the {{site.data.keyword.DRA_short}} instance that is included in the toolchain. {{site.data.keyword.DRA_short}} aggregates code, test, build, and deployment data to provide visibility into the velocity and quality of all of your teams and releases.
-
-![VPC secure app optional tools](images/ds-vpc-setup-optional-tools.png){: caption="Figure 11. VPC secure app optional tools" caption-side="bottom"}
+Click **Continue**.
 
 ## Complete the toolchain setup
 {: #toolchain-summary}
@@ -260,16 +251,14 @@ On the Summary page, click **Create**. Several steps run automatically to set up
 You can configure the individual toolchain integrations after the pipeline is created.
 {: tip}
 
-![Kubernetes secure app toolchain summary](images/ds-vpc-setup-summary.png){: caption="Figure 12. VPC secure app toolchain summary" caption-side="bottom"}
+![Kubernetes secure app toolchain summary](images/ds-vpc-setup-summary.png){: caption="Figure 11. VPC secure app toolchain summary" caption-side="bottom"}
 
 
 ## Explore your new toolchain
 {: #cd-explore-toolchain}
 {: step}
 
-After you create your toolchain, it shows each of the tool integrations that are part of the toolchain in a diagram. The diagram in the following image is an example. The diagram that you view for your toolchains might show different tool integrations or different data for those integrations.
-
-![New toolchain](images/ds-vpc-explore-toolchain-created-bg.png){: caption="Figure 13. New toolchain" caption-side="bottom"}
+After you create your toolchain, it shows each of the tool integrations that are part of the toolchain in a diagram.
 
 ### Explore the pipelines
 {: #cd-pipelines}
@@ -290,7 +279,7 @@ To start the pull request pipeline, create a merge request in your app repo:
 1. From the master repo, create a branch.
 1. Update some code in the sample node app or readme file and save these changes.
 1. Submit the merge request.
-1. On the Toolchain's Overview page, on the  **Repositories** card, click the `pr-pipeline` repo to start the pull request pipeline. The corresponding merge request in your app repo remains in the pending state until all of the stages of the pull request pipeline successfully complete.
+1. On the Toolchain's Overview page, on the **Repositories** card, click the `pr-pipeline` repo to start the pull request pipeline. The corresponding merge request in your app repo remains in the pending state until all of the stages of the pull request pipeline successfully complete.
 1. After the pull request pipeline run succeeds, you can select it to explore the completed steps.
 
 
@@ -301,7 +290,7 @@ To start the continuous integration pipeline, merge the continuous integration m
 1. On the continuous integration Toolchain Overview page, on the **Repositories** card, click the `ci-pipeline` repo to start the continuous integration pipeline.
 1. After the continuous integration pipeline run succeeds, you can click the pipeline run to explore the completed steps.
 
-![Continuous integration pipeline success](images/ds-vpc-explore-ci-pipeline-success-bg.png){: caption="Figure 14. Continuous integration pipeline success" caption-side="bottom"}
+![Continuous integration pipeline success](images/ds-vpc-explore-ci-pipeline-success-bg.png){: caption="Figure 13. Continuous integration pipeline success" caption-side="bottom"}
 
 To evaluate if you have any failures in your pipeline run, check the final step of your pipeline, which has a pipeline evaluator.
 {: tip}
@@ -323,17 +312,17 @@ The blue-green deployment strategy that is used in this tutorial demonstrates ho
 * Automatically trigger the continuous delivery pipeline after each `Merge` action in the Inventory repo. After the merge, you must manually trigger the continuous delivery pipeline run.
 * Switch between blue and green deployments for an automated rollback.
 
-![Continuous delivery pipeline triggers for Blue-green Deployment](images/ds-vpc-explore-cd-pipeline-triggers-bg.png){: caption="Figure 15. Continuous delivery pipeline triggers for Blue-Green deployment" caption-side="bottom"}
+![Continuous delivery pipeline triggers for Blue-green Deployment](images/ds-vpc-explore-cd-pipeline-triggers-bg.png){: caption="Figure 14. Continuous delivery pipeline triggers for Blue-Green deployment" caption-side="bottom"}
 
 This tutorial shows how the Blue-Green deployment strategy works by using the sample app.
 
 1. Run the manual trigger from the continuous delivery pipeline to deploy the first version of the app.
 
-   ![Continuous delivery pipeline manual run](images/ds-vpc-explore-cd-manual-run-successful-bg.png){: caption="Figure 16. Continuous delivery pipeline manual run" caption-side="bottom"}
+   ![Continuous delivery pipeline manual run](images/ds-vpc-explore-cd-manual-run-successful-bg.png){: caption="Figure 15. Continuous delivery pipeline manual run" caption-side="bottom"}
 
 1. Locate the app URL within the `release` step of the continuous delivery pipeline and click the URL to verify that the app is running.
 
-   ![App URL location](images/ds-vpc-explore-app-url-bg.png){: caption="Figure 17. App URL location" caption-side="bottom"}
+   ![App URL location](images/ds-vpc-explore-app-url-bg.png){: caption="Figure 16. App URL location" caption-side="bottom"}
 
 1. Update the app code and commit your changes. For the sample app, update the welcome message:
 
@@ -349,7 +338,7 @@ This tutorial shows how the Blue-Green deployment strategy works by using the sa
 
 1. Test the rollback by running the `switch-blue-green` trigger from the continuous delivery pipeline.  Wait until  the switch trigger pipeline run completes successfully. 
 
-   ![Successful continuous delivery pipeline switch trigger](images/ds-vpc-explore-switch-trigger-successful-bg.png){: caption="Figure 18. Successful continuous delivery pipeline switch trigger" caption-side="bottom"}
+   ![Successful continuous delivery pipeline switch trigger](images/ds-vpc-explore-switch-trigger-successful-bg.png){: caption="Figure 17. Successful continuous delivery pipeline switch trigger" caption-side="bottom"}
 
 1. Check the app URL again to confirm that the previous version of the app is displayed.
 
