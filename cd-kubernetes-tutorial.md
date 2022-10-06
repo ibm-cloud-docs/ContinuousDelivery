@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021, 2022
-lastupdated: "2022-03-23"
+lastupdated: "2022-10-06"
 
 keywords: deployment strategies, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -216,19 +216,11 @@ If you selected the Canary deployment strategy, you must specify extra deploymen
 {: #optional tools}
 {: step}
 
-You can add the Eclipse Orion {{site.data.keyword.webide}} and {{site.data.keyword.DRA_short}} tool integrations to your toolchain without any additional configuration. 
+You can add the {{site.data.keyword.DRA_full}} tool integration to your toolchain without any additional configuration. 
 
-### Eclipse Orion {{site.data.keyword.webide}}
-{: #web-ide-optional}
+[{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) is included in the created toolchain. You do not need to provide any configuration steps for {{site.data.keyword.DRA_short}}. The continuous integration pipeline automatically uses the {{site.data.keyword.DRA_short}} instance that is included in the toolchain. {{site.data.keyword.DRA_short}} aggregates code, test, build, and deployment data to provide visibility into the velocity and quality of all of your teams and releases.
 
-The [Eclipse Orion {{site.data.keyword.webide}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-web_ide) is a browser-based development environment where you can develop for the web in JavaScript, HTML, and CSS with the help of content assist, code completion, and error checking. No additional configuration is required to use this tool.
-
-### {{site.data.keyword.DRA_short}}
-{: #devops-insights-optional}
-
-[{{site.data.keyword.DRA_full}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) is included in the created toolchain. You do not need to provide any configuration steps for {{site.data.keyword.DRA_short}}. The continuous integration pipeline automatically uses the {{site.data.keyword.DRA_short}} instance that is included in the toolchain. {{site.data.keyword.DRA_short}} aggregates code, test, build, and deployment data to provide visibility into the velocity and quality of all of your teams and releases.
-
-![Kubernetes secure app Optional tools](images/ds_kub_setup_optional.png){: caption="Figure 9. Kubernetes secure app optional tools" caption-side="bottom"}
+Click **Continue**.
 
 
 ## Complete the toolchain setup
@@ -240,7 +232,7 @@ On the Summary page, click **Create**. Several steps run automatically to set up
 You can configure the individual toolchain integrations after the pipeline is created.
 {: tip}
 
-![Kubernetes secure app toolchain Summary](images/ds_kub_setup_summary.png){: caption="Figure 10. Kubernetes secure app toolchain summary" caption-side="bottom"}
+![Kubernetes secure app toolchain Summary](images/ds_kub_setup_summary.png){: caption="Figure 9. Kubernetes secure app toolchain summary" caption-side="bottom"}
 
 
 ## Explore your new toolchain
@@ -268,10 +260,10 @@ To start the pull request pipeline, create a merge request in your app repo:
 1. From the master repo, create a branch.
 1. Update some code in the sample node app or readme file and save these changes.
 1. Submit the merge request.
-1. On the Toolchain's Overview page, on the **Repositories** card, click the `pr-pipeline` repo to start the pull request pipeline. The corresponding merge request in your app repo remains in the pending state until all of the stages of the pull request pipeline successfully complete.
+1. On the Toolchain's Overview page, on the  **Repositories** card, click the `pr-pipeline` repo to start the pull request pipeline. The corresponding merge request in your app repo remains in the pending state until all of the stages of the pull request pipeline successfully complete.
 1. After the pull request pipeline run succeeds, you can select it to explore the completed steps.
 
-![Pull request pipeline success](images/ds_kub_explore_pr_pipeline_success.png){: caption="Figure 11. Pull request pipeline success" caption-side="bottom"}
+![Pull request pipeline success](images/ds_kub_explore_pr_pipeline_success.png){: caption="Figure 10. Pull request pipeline success" caption-side="bottom"}
 
 To start the continuous integration pipeline, merge the continuous integration merge request in your app repo:
 
@@ -280,7 +272,7 @@ To start the continuous integration pipeline, merge the continuous integration m
 1. On the continuous integration Toolchain Overview page, on the **Repositories** card, click the `ci-pipeline` repo to start the continuous integration pipeline.
 1. After the continuous integration pipeline run succeeds, you can click the pipeline run to explore the completed steps.
 
-![Continuous integration pipeline success](images/ds_kub_explore_ci_pipeline_success.png){: caption="Figure 12. Continuous integration pipeline success" caption-side="bottom"}
+![Continuous integration pipeline success](images/ds_kub_explore_ci_pipeline_success.png){: caption="Figure 11. Continuous integration pipeline success" caption-side="bottom"}
 
 #### Shift left practice
 {: #cd-shift-left}
@@ -292,7 +284,7 @@ In the secure app development world, shift left is a practice that prevents and 
 
 Results from unit tests and vulnerability scans are published to the {{site.data.keyword.DRA_short}} instance within the toolchain. To review these results, click the {{site.data.keyword.DRA_short}} tile within the toolchain and go to the Quality Dashboard page.
 
-![Toolchain continuous integration results](images/ds_kub_explore_ci_test_results_DOI.png){: caption="Figure 13. Toolchain continuous integration results" caption-side="bottom"}
+![Toolchain continuous integration results](images/ds_kub_explore_ci_test_results_DOI.png){: caption="Figure 12. Toolchain continuous integration results" caption-side="bottom"}
 
 To evaluate if you have any failures in your pipeline run, check the final step of your pipeline, which has a pipeline evaluator.
 {: tip}
@@ -315,14 +307,14 @@ The rolling deployment strategy that is used in this tutorial demonstrates how y
 A {{site.data.keyword.gitrepos}} trigger is set up to trigger an automatic continuous delivery pipeline, but it is disabled by default. You can enable this trigger after the first time that you promote a change.
 {: tip}
 
-![Continuous delivery pipeline triggers for rolling deployment](images/ds_kub_explore_rolling_cd_pipeline_triggers.png){: caption="Figure 14. Triggers in continuous delivery pipeline for rolling deployment" caption-side="bottom"}
+![Continuous delivery pipeline triggers for rolling deployment](images/ds_kub_explore_rolling_cd_pipeline_triggers.png){: caption="Figure 13. Triggers in continuous delivery pipeline for rolling deployment" caption-side="bottom"}
 
 Because the rolling deployment strategy incrementally updates all of the production instances with the new software version, it doesn't incur any downtime. However, the rollback deployment strategy requires that you redeploy the previous release, which might take some time to complete.
 {: tip}
 
 After the continuous delivery pipeline run succeeds, you can locate the app URL within the `perform deployment` step of the continuous delivery pipeline.
 
-![App URL for rolling deployment](images/ds_kub_explore_rolling_app_url.png){: caption="Figure 15. Application URL in continuous delivery pipeline" caption-side="bottom"}
+![App URL for rolling deployment](images/ds_kub_explore_rolling_app_url.png){: caption="Figure 14. Application URL in continuous delivery pipeline" caption-side="bottom"}
 
 
 ## Next steps
@@ -338,7 +330,7 @@ If you want to remove the sample app that is running on Kubernetes, you must cle
 
 1. From the location where the sample app is running, select **namespace**.
 
-   ![Kubernetes namespace](images/ds_kub_misc_namespace.png){: caption="Figure 16. Kubernetes namespace" caption-side="bottom"}
+   ![Kubernetes namespace](images/ds_kub_misc_namespace.png){: caption="Figure 15. Kubernetes namespace" caption-side="bottom"}
 
 1. Delete the related deployments, services, and ingresses that are listed within the selected namespace.
 
