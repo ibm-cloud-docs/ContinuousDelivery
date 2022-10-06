@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-05-12"
+lastupdated: "2022-10-06"
 
 keywords: public isolation for IBM Cloud Continuous Delivery, compute isolation for Continuous Delivery, Continuous Delivery architecture, workload isolation in Continuous Delivery
 
@@ -35,7 +35,6 @@ The following table lists the major components of the {{site.data.keyword.contde
 |:-----------------|:-----------------|:-----------------|
 | Toolchain platform | IBM | Shared, compute, network, and storage |
 | Third-party tool integrations | IBM | Shared, compute, network, and storage |
-| Eclipse Orion {{site.data.keyword.webide}} | IBM | Shared, compute, network, and storage |
 | {{site.data.keyword.gitrepos}} | IBM | Shared, compute, network, and storage |
 | {{site.data.keyword.DRA_short}}| IBM | Shared, compute, network, and storage |
 | {{site.data.keyword.deliverypipeline}} | IBM | Shared, compute, network, and storage |
@@ -103,7 +102,7 @@ The {{site.data.keyword.contdelivery_short}} service launches its dependencies o
 | {{site.data.keyword.databases-for-postgresql_full}}  | Service | Serves as the database for {{site.data.keyword.deliverypipeline}} job and step logs. |
 | {{site.data.keyword.cos_short}}  | Service | Stores artifacts that are produced by {{site.data.keyword.deliverypipeline}} jobs and steps. Stores backups of {{site.data.keyword.contdelivery_short}} data. |
 | QRadar  | Service | Collects security events such as successful or failed login authorization attempts for use by IBM specialists who maintain and support the service. |
-| General Parallel File System (GPFS)  | Storage | Provides secure, high-performance distributed file system storage of Eclipse Orion {{site.data.keyword.webide}} workspaces and {{site.data.keyword.gitrepos}} repositories. GPFS runs on nodes within the same clusters that host the Eclipse Orion {{site.data.keyword.webide}} and {{site.data.keyword.gitrepos}} components. |
+| General Parallel File System (GPFS)  | Storage | Provides secure, high-performance distributed file system storage of {{site.data.keyword.gitrepos}} repositories. GPFS runs on nodes within the same clusters that host the {{site.data.keyword.gitrepos}} components. |
 {: caption="Table 2. {{site.data.keyword.contdelivery_short}} dependencies" caption-side="top"}
 
 For more information about the key components of the {{site.data.keyword.cloud_notm}} Platform, see [What is the {{site.data.keyword.cloud_notm}} Platform?](/docs/overview?topic=overview-whatis-platform)
@@ -135,4 +134,4 @@ The following table shows the cross-region location for Object Storage in which 
 
 For more information about Object Storage locations, see [Regional Endpoints](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints-region).
 
-For more information about {{site.data.keyword.contdelivery_short}} disaster recovery, see [Disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-responsibilities-cd#disaster-recovery).
+For more information about {{site.data.keyword.contdelivery_short}} disaster recovery, see [Disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-responsibilities-cd#disaster-recovery). 
