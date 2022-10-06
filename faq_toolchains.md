@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-10-06"
 
 keywords: tool integrations, error message, Lite plan, toolchains, resource groups, IBM Cloud
 
