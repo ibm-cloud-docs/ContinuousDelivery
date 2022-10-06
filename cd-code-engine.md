@@ -2,7 +2,7 @@
 
 copyright:
    years: 2022
-lastupdated: "2022-05-06"
+lastupdated: "2022-10-06"
 
 keywords: deployment strategies, toolchain, CD, automate, automation, continuous delivery, continuous integration, DevOps, IBM Cloud
 
@@ -180,19 +180,9 @@ Configure the target Code Engine project to deploy the app to. After the app pas
 {: #codeengine-optional-tools}
 {: step}
 
-You can add the Eclipse Orion {{site.data.keyword.webide}} and {{site.data.keyword.DRA_short}} tool integrations to your toolchain without any additional configuration. 
+You can add the {{site.data.keyword.DRA_full}} tool integration to your toolchain without any additional configuration.
 
-### Eclipse Orion {{site.data.keyword.webide}}
-{: #web-ide-optional}
-
-The [Eclipse Orion {{site.data.keyword.webide}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-web_ide) is a browser-based development environment where you can develop for the web in JavaScript, HTML, and CSS with the help of content assist, code completion, and error checking. No additional configuration is required to use this tool.
-
-### {{site.data.keyword.DRA_short}}
-{: #devops-insights-optional}
-
-[{{site.data.keyword.DRA_full}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) is included in the created toolchain. You do not need to provide any configuration steps for {{site.data.keyword.DRA_short}}. The continuous integration pipeline automatically uses the {{site.data.keyword.DRA_short}} instance that is included in the toolchain. {{site.data.keyword.DRA_short}} aggregates code, test, build, and deployment data to provide visibility into the velocity and quality of all of your teams and releases.
-
-![Code Engine secure app Optional tools](images/code_engine_optional_tools.png){: caption="Figure 6. Code Engine secure app optional tools" caption-side="bottom"}
+[{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working) is included in the created toolchain. You do not need to provide any configuration steps for {{site.data.keyword.DRA_short}}. The continuous integration pipeline automatically uses the {{site.data.keyword.DRA_short}} instance that is included in the toolchain. {{site.data.keyword.DRA_short}} aggregates code, test, build, and deployment data to provide visibility into the velocity and quality of all of your teams and releases.
 
 Click **Continue**.
 
@@ -205,7 +195,7 @@ On the Summary page, click **Create toolchain**. Several steps run automatically
 You can configure the individual toolchain integrations after the pipeline is created.
 {: tip}
 
-![Code Engine secure app toolchain Summary](images/code_engine_summary.png){: caption="Figure 7. Code Engine secure app toolchain summary" caption-side="bottom"}
+![Code Engine secure app toolchain Summary](images/code_engine_summary.png){: caption="Figure 6. Code Engine secure app toolchain summary" caption-side="bottom"}
 
 ## Explore your new toolchain
 {: #cd-explore-codeengine-toolchain}
@@ -234,7 +224,7 @@ To start the pull request pipeline, create a merge request in your app repo:
 1. On the Toolchain's Overview page, on the **Delivery pipelines** card, click the `pr-pipeline` pipeline to open the pull request pipeline dashboard. The corresponding merge request in your app repo remains in the pending state until all of the stages of the pull request pipeline successfully complete.
 1. After the pull request pipeline run succeeds, you can select it to explore the completed steps.
 
-![Pull request pipeline success](images/code_engine_explore_pr_pipeline_success.png){: caption="Figure 8. Pull request pipeline success" caption-side="bottom"}
+![Pull request pipeline success](images/code_engine_explore_pr_pipeline_success.png){: caption="Figure 7. Pull request pipeline success" caption-side="bottom"}
 
 To start the continuous integration pipeline, merge the continuous integration merge request in your app repo:
 
@@ -243,7 +233,7 @@ To start the continuous integration pipeline, merge the continuous integration m
 1. On the continuous integration Toolchain Overview page, on the **Delivery pipelines** card, click the `ci-pipeline` pipeline to open the continuous integration pipeline dashboard.
 1. After the continuous integration pipeline run succeeds, you can click the pipeline run to explore the completed steps.
 
-   ![Continuous integration pipeline success](images/code_engine_ci_pipeline_success.png){: caption="Figure 9. Continuous integration pipeline success" caption-side="bottom"}
+   ![Continuous integration pipeline success](images/code_engine_ci_pipeline_success.png){: caption="Figure 8. Continuous integration pipeline success" caption-side="bottom"}
 
 1. Expand the `deploy-application` task and click the `execute` step. Select the `Logs` tab, and scroll to the end of the log. Click the link to your deployed Code Engine app to view the running app.
 

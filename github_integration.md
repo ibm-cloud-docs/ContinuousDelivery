@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-02"
+lastupdated: "2022-10-06"
 
 keywords: tool integrations, IBM Cloud Public, GitHub
 
