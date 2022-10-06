@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-24"
+lastupdated: "2022-10-06"
 
-keywords: Git source control, authentication, personal access token, SSH key, Git repos, Web IDE 
+keywords: Git source control, authentication, personal access token, SSH key, Git repos 
 
 subcollection: ContinuousDelivery
 
@@ -21,7 +21,7 @@ subcollection: ContinuousDelivery
 # Setting up local clients to work with Git source control
 {: #git_local}
 
-You can manage and work with source code in a GitHub or {{site.data.keyword.gitrepos}} repository (repo), locally or in the Eclipse Orion {{site.data.keyword.webide}}. To work locally, clone your repo with a Git client such as the Git command line interface, and edit the code with your favorite editor. If you work in Eclipse, you can install the EGit plug-in for version control.
+You can manage and work with source code locally in a GitHub or {{site.data.keyword.gitrepos}} repository (repo). To work locally, clone your repo with a Git client such as the Git command line interface, and edit the code with your favorite editor. If you work in Eclipse, you can install the EGit plug-in for version control.
 
 ## Cloning your Git project from the command line
 {: #git_clone_cli}
@@ -52,7 +52,7 @@ You can manage and work with source code in a GitHub or {{site.data.keyword.gitr
 ### Cloning your project
 {: #git_clone}
 
-Create a local copy of the project files by cloning the Git repo so that you can access the contents of your repo outside the Web IDE by using any desktop tool.
+Create a local copy of the project files by cloning the Git repo so that you can access the contents of your repo by using any desktop tool.
 
 1. From your toolchain's Overview page, on the **Repositories** card, click the repo that you want to clone.
 
