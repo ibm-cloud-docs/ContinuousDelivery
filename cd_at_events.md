@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-09"
+lastupdated: "2022-10-06"
 
 keywords: event, security, IBM, activity tracker, Continuous Delivery
 
@@ -124,30 +124,6 @@ The following table lists the actions that generate {{site.data.keyword.delivery
 | `toolchain.pipeline-run.delete` | Delete the delivery pipeline when a pipeline job run is deleted by the {{site.data.keyword.contdelivery_short}} service. The delivery pipeline retains a limited number of runs.  |
 {: caption="Table 7. Actions that generate {{site.data.keyword.deliverypipeline}} data events" caption-side="top"}
 
-## Events for Eclipse Orion {{site.data.keyword.webide}}
-{: #webide-events}
-
-The following table lists the actions that generate {{site.data.keyword.webide}} management events:
-
-| Action | Description | 
-|:-----------------|:-----------------|
-| `toolchain.web-ide-workspace.create` | Create an Eclipse Orion {{site.data.keyword.webide}} workspace. The most common trigger for this event is the first time that a user opens the {{site.data.keyword.webide}} for a specific toolchain.|
-{: caption="Table 8. Actions that generate {{site.data.keyword.webide}} management events" caption-side="top"}
-
-The following table lists the actions that generate {{site.data.keyword.webide}} data events:
-
-| Action | Description | 
-|:-----------------|:-----------------|
-| `toolchain.web-ide-workspace.read` | View a {{site.data.keyword.webide}} workspace. This event is sent the first time that a user views an existing {{site.data.keyword.webide}} workspace in a session. |
-| `toolchain.web-ide-workspace.delete` | Delete a {{site.data.keyword.webide}} workspace |
-| `toolchain.web-ide-file.create` | Create a file or folder in a {{site.data.keyword.webide}} workspace. If this event is triggered by copying a file or a folder, the **requestData** field contains the **trigger** field with a value of `File Copy` and the **source** field (the source path of the copied file).  |
-| `toolchain.web-ide-file.read` | View the contents of a file in a {{site.data.keyword.webide}} workspace |
-| `toolchain.web-ide-file.edit` | Change the contents of a file in a {{site.data.keyword.webide}} workspace. If this event is triggered by copying a file or folder, the **requestData** field contains the **trigger** field with a value of `File Copy` and the **source** field (the source path of the copied file). |
-| `toolchain.web-ide-file.update` | Update the path of a file or folder in a {{site.data.keyword.webide}} workspace. The **requestData** field for this event contains the **updateType** field with a value of `Path Change`, the **initialValue** field (the original path of the file or folder), and the **newValue** field (the new path of the file or folder). |
-| `toolchain.web-ide-file.delete` | Delete a file or folder from a {{site.data.keyword.webide}} workspace |
-| `toolchain.web-ide-workspace.import` | Import a file into a {{site.data.keyword.webide}} workspace. The **requestData** field for this event contains the **extractArchive** field. The value of this field is a Boolean operator that indicates whether a server-side request was initiated to extract the content from the file's archived content.  |
-{: caption="Table 9. Actions that generate {{site.data.keyword.webide}} data events" caption-side="top"}
-
 ## Viewing events
 {: #cd_at_ui}
 
@@ -186,5 +162,4 @@ The following table lists and describes the root actions that prompt user emails
 | `toolchain.pipeline-stage.start` | Add user emails when a delivery pipeline stage starts. If the pipeline stage is manually started, the email of the user who started the pipeline is added. If a pipeline stage is triggered by a change to a repository (repo) in the {{site.data.keyword.gitrepos}} tool integration, multiple emails that correspond to users with Developer (or greater) access to the repo might be added. The `root-action-service-instance` CRN identifies the toolchain that contains the pipeline. |
 | `toolchain.pipeline.read` | Add a user email when the user views a delivery pipeline. The `root-action-service-instance` CRN identifies the toolchain that contains the pipeline.  |
 | `toolchain.pipeline.update` | Add a user email when the user edits a delivery pipeline. The `root-action-service-instance` CRN identifies the toolchain that contains the pipeline.  |
-| `toolchain.web-ide.read` | Add a user email when the user opens a workspace in the Eclipse Orion {{site.data.keyword.webide}}. The `root-action-service-instance` CRN identifies the toolchain that contains the {{site.data.keyword.webide}} workspace. |
-{: caption="Table 10. Actions that add or remove user emails from the authorized users list" caption-side="top"}
+{: caption="Table 8. Actions that add or remove user emails from the authorized users list" caption-side="top"} 
