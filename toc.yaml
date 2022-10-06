@@ -73,7 +73,6 @@ toc:
               - delivery_pipeline_integration.md
               - private_worker_integration.md
               - insights_integration.md
-              - web_ide_integration.md
               - github_integration.md
               - grit_integration.md
               - gitlab_integration.md
@@ -117,12 +116,6 @@ toc:
           - install_private_workers.md
           - private_workers.md
           - pipeline_standalone_agent.md
-      - topicgroup: 
-              label: Eclipse Orion Web IDE
-              topics: 
-              - web_ide.md
-              - git_web_ide.md
-              - bluemixlive.md
       - topicgroup: 
               label: Git source control
               topics: 
@@ -234,7 +227,6 @@ toc:
           - faq_pipeline_private_workers.md
           - faq_insights.md
           - faq_toolchains.md
-          - faq_web_ide.md
       - topicgroup:
           label: Troubleshooting
           topics:
@@ -244,4 +236,3 @@ toc:
           - troubleshoot_insights.md
           - troubleshoot_git.md
           - troubleshoot_toolchains.md
-          - troubleshoot_web_ide.md
