@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-10-06"
 
 keywords: secure environment, data, Data, high availability, access
 
