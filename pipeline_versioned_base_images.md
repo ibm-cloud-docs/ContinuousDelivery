@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-04"
+lastupdated: "2022-10-12"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -71,45 +71,45 @@ After version 2.0, images no longer include grunt or python. If these tools are 
 
 Images are available on the IBM Cloud Container Registry. To list these hosted images, run the `ibmcloud cr images --restrict continuous-delivery` command when you target the global IBM Cloud Container Registry.
 
-| Base image version | IBM Cloud Container Registry version |
-|:-----------------|:-----------------|
-| 3.11 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.11`|
-| 3.10 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.10`|
-| 3.9 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.9`|
-| 3.8 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.8`|
-| 3.7 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.7`|
-| 3.6 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.6`|
-| 3.5 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.5`|
-| 3.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.4`|
-| 3.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.3`|
-| 3.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.2`|
-| 3.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.1`|
-| 3.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.0`|
-| 2.23 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.23`|
-| 2.22 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.22`|
-| 2.21 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.21`|
-| 2.20 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.20`|
-| 2.19 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.19`|
-| 2.18 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.18`|
-| 2.17 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.17`|
-| 2.16 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.16`|
-| 2.15 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.15`|
-| 2.14 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.14`|
-| 2.13 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.13`|
-| 2.12 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.12`|
-| 2.11 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.11`|
-| 2.10 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.10`|
-| 2.9 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.9`|
-| 2.8 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.8`|
-| 2.7 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.7`| 
-| 2.6 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.6`| 
-| 2.5 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.5`|
-| 2.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.4.1`|
-| 2.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.3`|
-| 2.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.2`|
-| 2.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.1`|
-| 2.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.0`|
-{: caption="Table 1. Mapping between versioned based images and IBM Cloud Registry versions" caption-side="top"}
+| Base image version | IBM Cloud Container Registry version |sha256 value|
+| -------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 3.11 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.11`| sha256:d4f4a2e59127ff11426789bf1d86c88fcac3e9746241755f6af7ff9e79fd62f1|
+| 3.10 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.10`| sha256:8fae15566254a0300315e3c752021d6eabdea73aaa3372f86c6218579692eb67|
+| 3.9 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.9`| sha256:d1d42755854accd4957979e974c620cf892e8d38b123e5eac06abf378b353879|
+| 3.8 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.8`| sha256:8d0c33a4e5651a7d412ebfd751a45b613a6efde6167c70f1f1e8938d1bd8c613|
+| 3.7 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.7`| sha256:0444aa3cc5032ba4d7f7a59a4177dd43dc1126ad902f09079b0a66156bbe4bcf|
+| 3.6 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.6`| sha256:4bfa333cd47ee9d0e369edb147451ff008169f0dd84a115c16205b5cd0de64f6|
+| 3.5 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.5`| sha256:543249c585e351c14d5b9f16664625236e20e4ba85098ac26adb0d8cecbbcc97|
+| 3.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.4`| sha256:4aaabf49950796d9004f6e4f04ff53ab24dcd3fd29d8cc719a9b81f7546d31f2|
+| 3.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.3`| sha256:5b8f7e1964c0a82995689d636b60a1761dd08ce422b9195aadc0249e5da90dae|
+| 3.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.2`| sha256:d59863621d3ba1b9bd47f76950c751e842405f9c303d0d4d4298d964b664ee85|
+| 3.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.1`| sha256:c2468d28f15fa6970f13510c01477326f91a043881c2b4cd8f2b1ff8ed8c22a1|
+| 3.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.0`| sha256:42318979f165cc1ffd4d707022ceb5461360a9b6cd1216bc0c63391bdd042726|
+| 2.23 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.23`| sha256:8582554fda2c36c0750d734c78b692b96ac0f983d4d2e11a186e224ec2fa554f|
+| 2.22 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.22`| sha256:0653ba3abbdadf347fde238667b510757ecd9625dd7f7d53c512d7a5a2762612|
+| 2.21 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.21`| sha256:4ce661dc331005bc3cb828a677c760b2dda3c2951415141a91aeb0c0b9a351da|
+| 2.20 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.20`| sha256:655330f36771d274082b6c16a60620350597a9d6f2489a6246b9d2833d021211|
+| 2.19 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.19`| sha256:482d28e51d5acc65471b366bbdcabc97f69e49da933337a7c42f45907cd63173|
+| 2.18 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.18`| sha256:56cc0a6562e786f1b87b490e6a34ed655fa2c376ae3c8622690912dce7d9a608|
+| 2.17 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.17`| sha256:c1e9d5a9674a093635c386f96d35781aea7cad6cc1da86991ee1a85c854216f8|
+| 2.16 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.16`| sha256:3a3b5a981caed4238ef7297bb54b4a32b974b0499b12744347bc661d3f323916|
+| 2.15 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.15`| sha256:f4bff8348fbfdb738c3c681cb6da04cb215f742abe5e09b5d2f5ef07dcfbf21b|
+| 2.14 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.14`| sha256:7bad3379f15fce2d169ae066520b6bdfe719ee4fc8ae271988b4ca772ffb69d5|
+| 2.13 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.13`| sha256:916d4a7cac5ee3102b5fbbbbda67387051a6f7a545353e4ba4bd489246ec8855|
+| 2.12 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.12`| sha256:ff4053b0bca784d6d105fee1d008cfb20db206011453071e86b69ca3fde706a4|
+| 2.11 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.11`| sha256:61d35cdad7e77dbcedbf6ab47591b38121b03c5a4f41041f2d628cb8485602e1|
+| 2.10 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.10`| sha256:c59986a7a4e5931f1172ba3c6fc5f535edbbcc60daf6f3e092df9851283f8ceb|
+| 2.9 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.9`| sha256:2976e1374e87f5cddabcf80179d9708868d52dbf656fdde60f803553be633db2|
+| 2.8 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.8`| sha256:119e05bad27ccc899df5b895ccba41135fd5edbc5786a77c1c763621b00dee0f|
+| 2.7 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.7`| sha256:282677e79ccb9d20c699d384a54093894de03675752cd848a3133266c898c14c|
+| 2.6 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.6`| sha256:7f588468622a981f89cf5e1212aaf75fface9da6169b5345ca52ab63d8215907|
+| 2.5 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.5`| sha256:90bdb361ba94b75dfd7feb7c6a2577ece9f91e0392f20a5b4e9808120041b3e2|
+| 2.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.4.1`| sha256:ade4209bbc6923c02a3315c7e6dcc4376afc355db2765b792205be9b33f4243d|
+| 2.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.3`| sha256:1451dab959183c6378a804ce0744913028623e10c401e5ebc1a1f88c82443ba4|
+| 2.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.2`| sha256:2073c470e83418abf2c11ec92554c139aadd18f0c63fffb92c2c3f5e90c46ba6|
+| 2.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.1`| sha256:b5be69c4ae42a7af28a9d7ad25df548c77959b006507367507c9ff0f992306f2|
+| 2.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.0`| sha256:cc13eadecb8e99a7fe56a071427c2caa34149c31d1ad84f4f03c96f111dd0154|
+{: caption="Table 1. Mapping between versioned based images and IBM Cloud Registry versions with sha256 values" caption-side="top"}
 
 The following available image versions are listed in descending order, starting with the current version.
  
