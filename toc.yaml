@@ -187,9 +187,26 @@ toc:
           label: Open Toolchain SDK
           href: https://github.com/open-toolchain/sdk/wiki
 
+      - topicgroup:
+          label: Continuous Delivery API and SDK
+          topics:
+          - link:
+              label: Toolchain HTTP API
+              href: https://cloud.ibm.com/apidocs/toolchain
+          - link:
+              label: Tekton Pipeline HTTP API
+              href: https://cloud.ibm.com/apidocs/tekton-pipeline
+          - link:
+              label: Continuous Delivery Go SDK
+              href: https://github.com/IBM/continuous-delivery-go-sdk
+
+      - link:
+          label: Terraform resources
+          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest
+      
       - pipeline_deploy_var.md
       - tekton_deploy_var.md
-
+      
       - link:
           label: Using Jenkins to integrate DevOps Insights
           href: https://wiki.jenkins.io/display/JENKINS/IBM+Cloud+DevOps+Plugin
