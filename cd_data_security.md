@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-10-13"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -61,7 +61,7 @@ For more information about secure DevOps best practices, see [DevOps Security](h
 ## Protecting your personal data when you use the Professional plan 
 {: #cd_professional_plan}
 
-Personal data that is encrypted by using a customer key can be protected only in the {{site.data.keyword.contdelivery_short}} Professional plan. If you select your own KeyManagement Service, such as KeyProtect or {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, the following values are encrypted by using your own key instead of the encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service.
+Personal data that is encrypted by using a customer key can be protected only in the {{site.data.keyword.contdelivery_short}} Professional plan. If you select your own Key Management Service, such as Key Protect or {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, the following values are encrypted by using your own key instead of the encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service.
 
 | Component | Value | 
 |:-----------------|:-----------------|
@@ -73,12 +73,12 @@ Personal data that is encrypted by using a customer key can be protected only in
 
 The following components encrypt personal data by using only the provider-managed encryption key.
 
-
 | Component | Value | 
 |:-----------------|:-----------------|
 |{{site.data.keyword.gitrepos}}		| * Issues, pull requests, and source code \n * Personal information, such as name, email, profile picture, address, and other information from the profile page     |
 {: caption="Table 2. Values that are encrypted by using the provider-managed key" caption-side="top"}
 
+For more information about creating a {{site.data.keyword.contdelivery_short}} service instance that encrypts data with a customer key, see [Creating a {{site.data.keyword.contdelivery_short}} service instance](/docs/ContinuousDelivery?topic=ContinuousDelivery-create_cd_service).
 
 ## Protecting your data when you use third-party tool integrations
 {: #cd_secure_integrations}
