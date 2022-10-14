@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-18"
+lastupdated: "2022-10-14"
 
 keywords: tool integrations, IBM Cloud Public, App Configuraton, AppConfig
 
@@ -86,6 +86,24 @@ You can also access your authorizations on the [Manage authorizations](https://c
 {: tip}
 
 You can also create the authorization manually, if required. To successfully resolve {{site.data.keyword.appconfig_short}} references, your toolchain instance must have both `Viewer` and `Reader` access to the correct {{site.data.keyword.appconfig_short}} service instance.
+
+## Configuring {{site.data.keyword.appconfig_short}} by using the API
+{: #config-parameters}
+
+The {{site.data.keyword.appconfig_short}} tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+
+You must specify the `tool_type_id` property in the request body with the `appconfig` value.
+{: important}
+
+| Parameter | Usage | Type | Terraform argument | Description |
+| --- | --- | --- | --- | --- |
+| name | required, updatable | String | name | The name of this tool integration, for example, **my-appconfig** that is displayed in your toolchain. |
+| region | required, updatable | String | region | The region that your toolchain resides in. |
+| resource-group | required, updatable | String | resource_group | The resource group that contains your toolchain. |
+| instance-name | required, updatable | String | instance_name | The name of your {{site.data.keyword.appconfig_short}} instance. Select an option, such as `App Configuration-01`, based on the selected region and resource group. |
+| environment-name | required, updatable | String | environment_name | The {{site.data.keyword.appconfig_short}} environment. |
+| collection-name | required, updatable | String | collection_name | The {{site.data.keyword.appconfig_short}} collection. |
+{: caption="Table 1. {{site.data.keyword.appconfig_short}} tool integration parameters" caption-side="bottom"}
 
 ## Learn more about {{site.data.keyword.appconfig_short}}
 {: #learn_app-config}
