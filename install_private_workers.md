@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-09-16"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -401,7 +401,10 @@ By default, private workers use public endpoints for communication. A cluster ad
    kubectl patch workeragent {WORKER_NAME} --type='merge' -p '{"spec": {"apiUrl":"https://private-worker-service.private.{REGION}.devops.cloud.ibm.com"}}'
    ```
 
-   Where `{REGION}` is the location of the toolchain's pipeline. Private endpoints are available in all regions.
+   Where `{REGION}` is the location of the toolchain's pipeline. Private endpoints are available in the following regions:
+
+    * `us-south (Dallas, US)`
+    * `us-east (Washington, US)`
 
    You must have a [VRF enabled](/docs/account?topic=account-vrf-service-endpoint&interface=ui) {{site.data.keyword.cloud_notm}} account to use this feature.
    {: important}
