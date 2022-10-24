@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-21"
+lastupdated: "2022-10-24"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -238,7 +238,7 @@ The image URL for the pipeline private worker is `icr.io/continuous-delivery/pip
 
 | Pipeline private worker image version | {{site.data.keyword.registrylong}} version | Known vulnerabilities
 |:-----------------|:-----------------|:-----------------|
-| 0.12.0 | `icr.io/continuous-delivery/pipeline/pipeline-private-worker:0.12.0` | - |
+| 0.14.4 | `icr.io/continuous-delivery/pipeline/pipeline-private-worker:0.14.4` | - |
 {: caption="Table 2. Private Worker images" caption-side="top"}
 
 
