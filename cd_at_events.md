@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-10-25"
 
 keywords: event, security, IBM, activity tracker, Continuous Delivery
 
@@ -91,14 +91,14 @@ The following table lists the actions that generate {{site.data.keyword.DRA_shor
 |:-----------------|:-----------------|
 | `toolchain.insights.read` | View any build, deploy, or test record |
 | `toolchain.insights.update` | Publish a new build, deploy, or test record. The event's metadata includes `toolchainId` (unique identifier for toolchain) and might also contain the `build_artifact` (name of application), `build_id` (id of build), `branch` (Git branch of build), `environment_name` (name of environment where the test ran), and `operationId` (indicates how the update was completed, such as `postBuild`, `postResults`, `postDeployment`, `postResultsById`, `postLifeCycleStage`, `postBuildArtifactMetaData`, `putLifeCycleStage`, `putLifeCycleStagesOrder`, and `resultsMultipart`) values. The values that are included in the event's metadata is determined by the type of record (build, deployment, or test) that is published.      |
-| `toolchain.insights.policy.create` | Create a policy |
-| `toolchain.insights.policy.read` | View a policy |
-| `toolchain.insights.policy.update` | Update a policy. The event's metadata might include the `toolchainId` (unique identifier for toolchain) and `policyName` (name of policy that was updated) values. |
-| `toolchain.insights.policy.delete` | Delete a policy |
-| `toolchain.insights.data-toolchain.delete` | Delete data for a toolchain |
-| `toolchain.insights.data-environment.delete` | Delete data for a specific environment |
-| `toolchain.insights.data-application.delete` | Delete data for a specific application |
-| `toolchain.insights.data-branch.delete` | Delete data for a specific application and branch |
+| `toolchain.insights-policy.create` | Create a policy |
+| `toolchain.insights-policy.read` | View a policy |
+| `toolchain.insights-policy.update` | Update a policy. The event's metadata might include the `toolchainId` (unique identifier for toolchain) and `policyName` (name of policy that was updated) values. |
+| `toolchain.insights-policy.delete` | Delete a policy |
+| `toolchain.insights-data-toolchain.delete` | Delete data for a toolchain |
+| `toolchain.insights-data-environment.delete` | Delete data for a specific environment |
+| `toolchain.insights-data-application.delete` | Delete data for a specific application |
+| `toolchain.insights-data-branch.delete` | Delete data for a specific application and branch |
 {: caption="Table 5. Actions that generate {{site.data.keyword.DRA_short}} data events" caption-side="top"}
 
 ## Events for {{site.data.keyword.deliverypipeline}}
