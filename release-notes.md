@@ -120,7 +120,7 @@ New toolchain template demonstrates how to use a pull-based deployment mechanism
 :   Upgraded to [GitLab 14.10.4](https://about.gitlab.com/releases/2022/06/01/critical-security-release-gitlab-15-0-1-released/){: external}.
 
 ## 07 June 2022
-{: #ContinuousDelivery-june2322}
+{: #ContinuousDelivery-june0722}
 {: release-note}
 
 Private information in {{site.data.keyword.contdelivery_short}} and toolchains can now be protected by the Customer Root Key as part of Bring Your Own Key.
