@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-10-25"
 
 keywords: code quality, risk management, interactions of your team, devops insights, getting started, devops, insights, tutorial, code coverage, test, tests, gate, gate failing, verification, install, app, dashboard
 
@@ -101,18 +101,6 @@ The gate fails because the code coverage isn't met. When you gate your own deplo
 5. Click **Code coverage** to view the minimum code coverage required. Anything equal to or over 80% will release to the next stage.  
 6. Click **Risk analysis** to check whether your deployment passed or failed the gate. Risk is evaluated based on the defined policies within {{site.data.keyword.DRA_short}}.
 7. Select the build with the failed policy to view the test summary details.
-
-
-## Alternative tutorials
-{: #alternative-tutorials}
-
-You can also use {{site.data.keyword.DRA_short}} with Jenkins and other continuous integration and continuous delivery tools. Explore the following resources for more information about using {{site.data.keyword.DRA_short}} with Jenkins and other continuous integration and continuous delivery tools.  
-
-* [Integrate DevOps Insights with an IBM Continuous Delivery pipeline](https://www.ibm.com/cloud/garage/tutorials/integrate-devops-insights-with-cd-pipeline){: external}. Learn how to configure a CD pipeline to send, build, and deploy information to {{site.data.keyword.DRA_short}} and define policies that analyze deployment risk.
-
-* [Integrate DevOps Insights with Jenkins](https://www.ibm.com/cloud/garage/tutorials/use-jenkins-plugin-to-post-data-to-devops-insights){: external}. Learn how to set up and use the {{site.data.keyword.DRA_short}} Jenkins plug-in to publish build, test, and deployment data to {{site.data.keyword.DRA_short}}.
-
-* [Integrate DevOps Insights using the IBM Cloud CLI](https://www.ibm.com/cloud/garage/tutorials/use-cli-to-post-data-to-devops-insights){: external}. Learn how to set up the environment and use the CLI to publish build, test, and deployment data to {{site.data.keyword.DRA_short}}.
 
 ## Next steps
 {: #tutorial-next-steps}
