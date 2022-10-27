@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-10-27"
 
 keywords: troubleshoot, private workers
 
@@ -112,7 +112,7 @@ EOF
 ```
 
 ## Why is my {{site.data.keyword.deliverypipeline}} Private Worker not listed?
-{: #troubleshoot-pw-inactive}
+{: #troubleshoot-pw-listed}
 {: troubleshoot}
 {: support}
 
