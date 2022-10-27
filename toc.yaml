@@ -183,10 +183,6 @@ toc:
   - navgroup:
       id: reference
       topics:
-      - link:
-          label: Open Toolchain SDK
-          href: https://github.com/open-toolchain/sdk/wiki
-
       - topicgroup:
           label: Continuous Delivery API and SDK
           topics:
@@ -199,7 +195,9 @@ toc:
           - link:
               label: Continuous Delivery Go SDK
               href: https://github.com/IBM/continuous-delivery-go-sdk
-
+      - link:
+          label: Open Toolchain Templates SDK
+          href: https://github.com/open-toolchain/sdk/wiki
       - link:
           label: Terraform resources
           href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest
