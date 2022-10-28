@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-10-27"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -10,16 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Plan limitations and usage
@@ -99,7 +90,7 @@ The `AUTHORIZED_USERS_PER_MONTH` metric is calculated based on a monthly average
 ### What happens when you exceed the limits of your service plan?
 {: #exceed_limits}
 
-The Lite service plan has other limitations, such as the number of Delivery Pipeline jobs that can run or the storage consumption. For more information about the plan description, see the [service catalog](https://cloud.ibm.com/catalog/services/continuous-delivery){: external}. If any of the plan limitations are exceeded in a billing period, the service suspends. For example, Delivery Pipeline jobs do not run for the remainder of the billing period.
+The Lite service plan has other limitations, such as the number of Classic Delivery Pipeline jobs or Tekton steps that can run, or the storage consumption. For more information about the plan description, see the [service catalog](https://cloud.ibm.com/catalog/services/continuous-delivery){: external}. If any of the plan limitations are exceeded in a billing period, the service suspends. For example, Classic Delivery Pipeline jobs (or Tekton pipeline runs) do not run for the remainder of the billing period.
 
 Upgrading to the Professional plan will remove these limitations and reactivate the service.
 {: tip}
