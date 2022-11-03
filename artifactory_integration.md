@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-25"
+lastupdated: "2022-11-03"
 
 keywords: tool integrations, IBM Cloud Public, Artifactory
 
@@ -10,16 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}   
+{{site.data.keyword.attribute-definition-list}}
 
 # Configuring Artifactory
 {: #artifactory}
@@ -129,6 +120,28 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
    {: tip}
 
 1. Click **SAVE**. Whenever your pipeline runs, this build job uses the configuration information from the Artifactory tool integration to connect to your Maven repo.
+
+## Configuring Artifactory by using the API
+{: #config-parameters}
+
+The Artifactory tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+
+You must specify the `tool_type_id` property in the request body with the `artifactory` value.
+{: important}
+
+| Parameter | Usage | Type | Terraform argument | Description |
+| --- | --- | --- | --- | --- |
+| name | required, updatable | String | name | The name of this tool integration, for example, **my-artifactory** that is displayed in your toolchain. |
+| dashboard_url | optional, updatable | String | dashboard_url | The URL that you want to go to when you click the Artifactory card. |
+| type | required, updatable | String | type | The type of repo for your Artifactory tool integration. |
+| user_id | optional, updatable | String | user_id | The user ID or email for your Artifactory repo. |
+| token | optional, updatable | Password | token | The API key for your Artifactory repo. |
+| release_url | optional, updatable | String | release_url | The URL for your Artifactory release repo. |
+| mirror_url | optional, updatable | String | mirror_url | The URL for your Artifactory virtual repo, which is a repo that can show your private repos and a cache of the public repos. |
+| snapshot_url | optional, updatable | String | snapshot_url | The URL for your Artifactory snapshot repo. |
+| repository_name | optional, updatable | String | repository_name | The name of the Artifactory repo where your Docker images are located. |
+| repository_url | optional, updatable | String | repository_url | The URL of the Artifactory repos where your Docker images are located. |
+{: caption="Table 1. Artifactory tool integration parameters" caption-side="bottom"}
 
 ## Learn more about Artifactory
 {: #learn_more_artifactory}
