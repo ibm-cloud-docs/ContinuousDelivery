@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-07"
+lastupdated: "2022-11-03"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -12,23 +12,20 @@ content-type: release-note
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:screen: .screen}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
-{:release-note: data-hd-content-type='release-note'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for {{site.data.keyword.contdelivery_short}}
 {: #cd-relnotes}
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
+
+## 2 November 2022
+{: #ContinuousDelivery-nov0222}
+{: release-note}
+
+{{site.data.keyword.gitrepos}}
+:   Upgraded to [GitLab 15.3.4](https://about.gitlab.com/releases/2022/09/29/security-release-gitlab-15-4-1-released/){: external}.
 
 ## 6 October 2022
 {: #ContinuousDelivery-oct0622}
