@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-14"
+lastupdated: "2022-11-04"
 
 keywords: tool integrations, IBM Cloud Public, Other Tool, Custom Tool
 
@@ -49,4 +49,4 @@ Configure a custom tool so that it works with other tools in your toolchain and 
 
 To learn more about the custom tool, take this tutorial:
 
-* [Add a custom tool integration to a toolchain](https://www.ibm.com/cloud/garage/tutorials/add-a-custom-tool-integration-to-a-toolchain){: external}
+* [Add a custom tool integration to a toolchain](https://www.ibm.com/cloud/architecture/tutorials/add-a-custom-tool-integration-to-a-toolchain){: external}
