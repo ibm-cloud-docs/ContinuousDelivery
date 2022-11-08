@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-23"
+lastupdated: "2022-11-07"
 
 keywords: tool integrations, IBM Cloud Public, Nexus
 
@@ -10,16 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}   
+{{site.data.keyword.attribute-definition-list}}
 
 # Configuring Nexus
 {: #nexus}
@@ -129,6 +120,26 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
    {: tip}
 
 1. Click **SAVE**. Whenever your pipeline runs, this build job uses the configuration information from the Nexus tool integration to connect to your Maven repo.
+
+## Configuring Nexus by using the API
+{: #config-parameters}
+
+The Nexus tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+
+You must specify the `tool_type_id` property in the request body with the `nexus` value.
+{: important}
+
+| Parameter | Usage | Type | Terraform argument | Description |
+| --- | --- | --- | --- | --- |
+| name | required, updatable | String | name | The name of this tool integration, for example, **my-nexus** that is displayed in your toolchain. |
+| dashboard_url | optional, updatable | String | dashboard_url | The URL that you want to go to when you click the Nexus card. |
+| type | required, updatable | String | type | The type of repo for your Nexus tool integration. |
+| user_id | optional, updatable | String | user_id | The user ID or email for your Nexus repo. |
+| token | optional, updatable | Password | token | The password or authentication token for your Nexus repo. |
+| release_url | optional, updatable | String | release_url | The URL for your Nexus release repo. |
+| mirror_url | optional, updatable | String | mirror_url | The URL for your Nexus virtual repo, which is a repo that can see your private repos and is a cache of the public repos. |
+| snapshot_url | optional, updatable | String | snapshot_url | The URL for your Nexus snapshot repo. |
+{: caption="Table 1. Nexus tool integration parameters" caption-side="bottom"}
 
 ## Learn more about Nexus
 {: #learn_nexus}
