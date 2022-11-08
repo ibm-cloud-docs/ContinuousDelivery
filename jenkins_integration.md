@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-11-08"
 
 keywords: tool integrations, IBM Cloud Public, Jenkins
 
@@ -10,16 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}   
+{{site.data.keyword.attribute-definition-list}} 
 
 # Configuring Jenkins
 {: #jenkins}
@@ -54,6 +45,23 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
 
 1. Click **Create Integration**.
 1. On the Toolchain's Overview page, on the **Third-Party tools** card, click **Jenkins** to view the Jenkins server.
+
+## Configuring Jenkins by using the API
+{: #config-parameters}
+
+The Jenkins tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+
+You must specify the `tool_type_id` property in the request body with the `jenkins` value.
+{: important}
+
+| Parameter | Usage | Type | Terraform argument | Description |
+| --- | --- | --- | --- | --- |
+| name | required, updatable | String | name | The name of this tool integration, for example `my-jenkins`, that is displayed in your toolchain. |
+| dashboard_url | required, updatable | String | dashboard_url | The URL of the Jenkins server that you want to open when you click the Jenkins card in your toolchain. |
+| webhook_url | optional, updatable | String | webhook_url | The webhook to use in your Jenkins jobs to send notifications to other tools in your toolchain. |
+| api_user_name | optional, updatable | String | api_user_name | The username to use with the Jenkins server's API token, which is required so that {{site.data.keyword.DRA_short}} can collect data from Jenkins. You can find your API username on the Configuration page of your Jenkins instance. |
+| api_token | optional, updatable | Password | api_token | The API token to use for Jenkins REST API calls so that {{site.data.keyword.DRA_short}} can collect data from Jenkins. You can find the API token on the Configuration page of your Jenkins instance. |
+{: caption="Table 1. Jenkins tool integration parameters" caption-side="bottom"}
 
 ## Learn more about Jenkins
 {: #learn_jenkins}
