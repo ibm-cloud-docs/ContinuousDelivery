@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-11-08"
 
 keywords: tool integrations, IBM Cloud Public, PagerDuty
 
@@ -10,16 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}   
+{{site.data.keyword.attribute-definition-list}} 
 
 # Configuring PagerDuty
 {: #pagerduty}
@@ -54,6 +45,21 @@ Configure PagerDuty to send notifications when pipeline stage failures occur so 
 
 1. Click **Create Integration**.
 1. On your Toolchain's Overview page, on the **Third-Party tools** card, click **PagerDuty** to go to pagerduty.com. You can view the events that are associated with the PagerDuty service that you specified when you configured this tool integration for your toolchain.
+
+## Configuring PagerDuty by using the API
+{: #config-parameters}
+
+The PagerDuty tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+
+You must specify the `tool_type_id` property in the request body with the `pagerduty` value.
+{: important}
+
+| Parameter | Usage | Type | Terraform argument | Description |
+| --- | --- | --- | --- | --- |
+| service_url | optional, updatable | String | service_url | The URL of the PagerDuty service to post alerts to. |
+| service_key | optional, updatable | Password | service_key | Your tool integration key. You can find or create this key in the Integrations section of the PagerDuty service page. |
+| service_id | optional, updatable | String | service_id | service_id |
+{: caption="Table 1. PagerDuty tool integration parameters" caption-side="bottom"}
 
 ## Learn more about PagerDuty
 {: #learn_pagerduty}
