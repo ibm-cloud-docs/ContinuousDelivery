@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-11-08"
 
 keywords: tool integrations, IBM Cloud Public, Sauce Labs
 
@@ -10,15 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}   
+{{site.data.keyword.attribute-definition-list}}
 
 # Configuring Sauce Labs
 {: #saucelabs}
@@ -45,6 +37,20 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 
 If you added a Sauce Labs test job to the {{site.data.keyword.deliverypipeline}}, you can select the service instance. For instructions to configure a test job in your pipeline, see the [Configuring a Sauce Labs test job in your pipeline](#config_saucelabs) section.
 {: tip}
+
+## Configuring Sauce Labs by using the API
+{: #config-parameters}
+
+The Sauce Labs tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+
+You must specify the `tool_type_id` property in the request body with the `saucelabs` value.
+{: important}
+
+| Parameter | Usage | Type | Terraform argument | Description |
+| --- | --- | --- | --- | --- |
+| username | required, updatable | String | username | The user name for your Sauce Labs account. |
+| key | required, updatable | Password | key | Your Sauce Labs access key. You can find your access key on your Sauce Labs account page. |
+{: caption="Table 1. Sauce Labs tool integration parameters" caption-side="bottom"}
 
 ## Learn more about Sauce Labs
 {: #learn_saucelabs}
