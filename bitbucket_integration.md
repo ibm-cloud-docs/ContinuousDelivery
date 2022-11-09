@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-23"
+lastupdated: "2022-11-09"
 
 keywords: tool integrations, IBM Cloud Public, Bitbucket
 
@@ -10,21 +10,12 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}   
+{{site.data.keyword.attribute-definition-list}}
 
 # Configuring Bitbucket
 {: #bitbucket}
 
-Store your source code in a new or existing repository on bitbucket.org and engage in social coding through wikis, issue tracking, and pull requests.
+Store your source code in a new or existing repository (repo) on bitbucket.org and engage in social coding through wikis, issue tracking, and pull requests.
 {: shortdesc}
 
 Configure Bitbucket to collaborate on code with your team:
@@ -73,6 +64,32 @@ Configure Bitbucket to collaborate on code with your team:
 
 If you don't have owner or master privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
 {: tip}
+
+## Configuring Bitbucket by using the API
+{: #config-parameters}
+
+The Bitbucket tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+
+You must specify the `tool_type_id` property in the request body with the `bitbucketgit` value.
+{: important}
+
+| Parameter | Usage | Type | Terraform argument | Description |
+| --- | --- | --- | --- | --- |
+| git_id | optional, immutable | String | git_id | The ID of the Bitbucket server. |
+| api_root_url | optional, updatable | String | api_root_url | The URL of the Bitbucket API, such as `https://api.bitbucket.org`. |
+| default_branch | optional, updatable | String | default_branch | The name of the default branch, for example, `main`. |
+| owner_id | optional, immutable | String | owner_id | Your Bitbucket ID. |
+| repo_name | optional, immutable | String | repo_name | The name of the Bitbucket repo to create. |
+| repo_id | optional, immutable | String | repo_id | The ID of the Bitbucket repo. |
+| repo_url | optional, immutable | String | repo_url | The URL of the Bitbucket repo that you want to link to. |
+| source_repo_url | optional, immutable | String | source_repo_url | The URL of the Bitbucket repo that you want to fork or clone. |
+| token_url | optional, updatable | String | token_url | The URL of the integration token. |
+| type | required, immutable | String | type | The type of your Bitbucket repo. The allowed values are `new`, `fork`, `clone`, and `link`. |
+| private_repo | optional, immutable, `Default: false` | Boolean | private_repo | Select this checkbox to make this repo private. |
+| has_issues | optional, updatable, `Default: true` | Boolean | has_issues | Select this checkbox to enable Bitbucket Issues for lightweight issue tracking. |
+| enable_traceability | optional, updatable, `Default: false` | Boolean | enable_traceability | Select this checkbox to track the deployment of code changes by creating tags, labels and comments on commits, pull requests, and referenced issues. |
+| integration_owner | optional, updatable | String | integration_owner | Select the user who performs Git operations. |
+{: caption="Table 1. Bitbucket tool integration parameters" caption-side="bottom"}
 
 ## Learn more about Bitbucket
 {: #learn_more_bitbucket}
