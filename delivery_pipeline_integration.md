@@ -2,23 +2,14 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-11-09"
 
 keywords: tool integrations, IBM Cloud Public, Delivery Pipeline
 subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}   
+{{site.data.keyword.attribute-definition-list}}
 
 # Configuring Delivery Pipeline
 {: #deliverypipeline}
@@ -94,7 +85,20 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 
 1. Click **SAVE**. Whenever your pipeline runs, your Sauce Labs tests run.
 
-## Learn more about Delivery Pipeline
+## Configuring {{site.data.keyword.deliverypipeline}} by using the API
+{: #config-parameters}
+
+The {{site.data.keyword.deliverypipeline}} tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+
+You must specify the `tool_type_id` property in the request body with the `pipeline` value.
+{: important}
+
+| Parameter | Usage | Type | Terraform argument | Description |
+| --- | --- | --- | --- | --- |
+| name | optional, updatable | String | name | The name of this tool integration that is displayed in your toolchain. |
+{: caption="Table 1. {{site.data.keyword.deliverypipeline}} tool integration parameters" caption-side="bottom"}
+
+## Learn more about {{site.data.keyword.deliverypipeline}}
 {: #learn_pipeline}
 
 To learn more about {{site.data.keyword.deliverypipeline}}, see [Working with pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working) and the [Delivery Pipeline article](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: external} on the IBM Cloud Garage Method or take this tutorial:
