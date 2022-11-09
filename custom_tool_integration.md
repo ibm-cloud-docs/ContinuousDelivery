@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2022
 
-lastupdated: "2022-11-08"
+lastupdated: "2022-11-09"
 
 keywords: tool integrations, IBM Cloud Public, Other Tool, Custom Tool
 
@@ -46,7 +46,7 @@ You must specify the `customtool` property in the request body with the `artifac
 
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
-| type | required, updatable | String | type | The name of the tool that you are integrating, for example, `Delivery Pipeline`. |
+| type | required, updatable | String | type | The name of this tool integration, for example, `Delivery Pipeline`. |
 | lifecyclePhase | required, updatable | String | lifecycle_phase | The lifecycle phase of the {{site.data.keyword.cloud_notm}} Garage Method that is the most closely associated with this tool. |
 | imageUrl | optional, updatable | String | image_url | The URL of the icon to display on your tool integration's card. |
 | documentationUrl | optional, updatable | String | documentation_url | The URL for your tool's documentation. |
