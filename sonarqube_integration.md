@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-11-09"
 
 keywords: tool integrations, IBM Cloud Public, Sonarqube
 
@@ -10,16 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}   
+{{site.data.keyword.attribute-definition-list}}   
 
 # Configuring Sonarqube
 {: #sonarqube}
@@ -109,6 +100,23 @@ Make sure that you add the correct login credentials and host URL to the configu
 {: #sonarqube-static-scan}
 
 You can modify your `.pipeline-config.yaml` file to add your own custom script to the `static-scan` stage to use your own static scan implementation.
+
+## Configuring SonarQube by using the API
+{: #config-parameters}
+
+The SonarQube tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+
+You must specify the `tool_type_id` property in the request body with the `sonarqube` value.
+{: important}
+
+| Parameter | Usage | Type | Terraform argument | Description |
+| --- | --- | --- | --- | --- |
+| name | required, updatable | String | name | The name of this tool integration, for example, `my-sonarqube`, that is displayed in your toolchain. |
+| dashboard_url | required, updatable | String | dashboard_url | The URL of the SonarQube instance that you want to open when you click the SonarQube card in your toolchain. |
+| user_login | optional, updatable | String | user_login | If you are using an authentication token, leave this field empty. |
+| user_password | optional, updatable | Password | user_password | The password or SonarQube authentication token. |
+| blind_connection | optional, updatable, `Default: false` | Boolean | blind_connection | Set to `true` only if the server is not addressable on the public internet. {{site.data.keyword.cloud_notm}} cannot validate the connection details that you provide. |
+{: caption="Table 1. SonarQube tool integration parameters" caption-side="bottom"}
 
 ## Learn more about SonarQube
 {: #sonarqube-learn-more}
