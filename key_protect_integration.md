@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2022-03-29"
+  years: 2015, 2022
+lastupdated: "2022-11-09"
 
 keywords: tool integrations, IBM Cloud Public, Key Protect
 
@@ -10,16 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}   
+{{site.data.keyword.attribute-definition-list}}
 
 # Configuring {{site.data.keyword.keymanagementserviceshort}}
 {: #keyprotect}
@@ -105,6 +96,22 @@ You can also access your authorizations on the [Manage authorizations](https://c
 ![Toolchain Authorizations for Key Protect](images/s2s-auths.png){: caption="Figure 3. Toolchain authorizations for Key Protect" caption-side="bottom"}
 
 You can create the authorization manually, if required. To successfully resolve the secret references, your toolchain instance must have both `Viewer` and `ReaderPlus` access to the correct {{site.data.keyword.keymanagementserviceshort}} service instance.
+
+## Configuring {{site.data.keyword.keymanagementserviceshort}} by using the API
+{: #config-parameters}
+
+The {{site.data.keyword.keymanagementserviceshort}} tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+
+You must specify the `tool_type_id` property in the request body with the `keyprotect` value.
+{: important}
+
+| Parameter | Usage | Type | Terraform argument | Description |
+| --- | --- | --- | --- | --- |
+| name | required, updatable | String | name | The name for this tool integration that is displayed in your toolchain. |
+| region | required, updatable | String | region | The region that your {{site.data.keyword.keymanagementserviceshort}} instance resides in. |
+| resource-group | required, updatable | String | resource_group | The resource group that contains your {{site.data.keyword.keymanagementserviceshort}} instance. |
+| instance-name | required, updatable | String | instance_name | The name of your {{site.data.keyword.keymanagementserviceshort}} instance, such as `Key Protect-01`, that exists within the specified region and resource group. |
+{: caption="Table 1. {{site.data.keyword.keymanagementserviceshort}} tool integration parameters" caption-side="bottom"}
 
 ## Learn more about {{site.data.keyword.keymanagementserviceshort}}
 {: #keyprotect_learn_more}
