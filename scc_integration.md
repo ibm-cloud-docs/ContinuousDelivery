@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-11-10"
 
 keywords: tool integrations, IBM Cloud Public, Security and Compliance Center
 
@@ -10,16 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}   
+{{site.data.keyword.attribute-definition-list}}   
 
 # Configuring {{site.data.keyword.compliance_short}}
 {: #scc}
@@ -59,6 +50,25 @@ Configure {{site.data.keyword.compliance_short}} to embed security checks into y
 1. Click **Create Integration**.
 1. On your Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.compliance_short}}**.
  
+## Configuring {{site.data.keyword.compliance_short}} by using the API
+{: #config-parameters}
+
+The {{site.data.keyword.compliance_short}} tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+
+You must specify the `tool_type_id` property in the request body with the `security_compliance` value.
+{: important}
+
+| Parameter | Usage | Type | Terraform argument | Description |
+| --- | --- | --- | --- | --- |
+| name | required, updatable | String | name | The name of this tool integration, for example `my-security-compliance`, that is displayed in your toolchain. |
+| evidence_repo_name | required, updatable | String | evidence_repo_name | To collect and store evidence for all of the performed tasks, you must specify a Git repo as an evidence locker. |
+| trigger_scan | optional, updatable | String | trigger_scan | Enable trigger validation scans to provide details for a pipeline task to trigger a scan. |
+| evidence_namespace | optional, updatable | String | evidence_namespace | The type of pipeline evidence to display in {{site.data.keyword.compliance_short}} for this toolchain. The evidence locker is searched for continuous deployment pipeline evidence or continuous compliance pipeline evidence. |
+| api-key | optional, updatable | Password | api-key | The {{site.data.keyword.cloud_notm}} API key that is used to access the {{site.data.keyword.compliance_short}} API. You can obtain your API key by using the `ibmcloud iam api-key-create` command or by clicking **Create API key** from the [console](https://cloud.ibm.com/iam#/apikeys). You can view each API key only one time.  |
+| scope | optional, updatable | String | scope | Select an existing scope name to narrow the focus of the validation scan. For more information about scopes, see [Managing scopes](/docs/security-compliance?topic=security-compliance-scopes).
+| profile | optional, updatable | String | profile | Select an existing profile, where a profile is a collection of security controls. For more information about profiles, see [Understanding profiles](/docs/security-compliance?topic=security-compliance-custom-profiles&interface=ui#understand-profiles). |
+{: caption="Table 1. {{site.data.keyword.compliance_short}} tool integration parameters" caption-side="bottom"}
+
 ## Learn more about {{site.data.keyword.compliance_short}}
 {: #learn_scc}
 
