@@ -72,4 +72,4 @@ You must specify the `tool_type_id` property in the request body with the `secur
 ## Learn more about {{site.data.keyword.compliance_short}}
 {: #learn_scc}
 
-To learn more about {{site.data.keyword.compliance_short}}, see [Getting started with Security and Compliance Center](/docs/security-compliance?topic=security-compliance-getting-started).
+To learn more about {{site.data.keyword.compliance_short}}, see [Getting started with Security and Compliance Center](/docs/security-compliance?topic=security-compliance-getting-started). 
