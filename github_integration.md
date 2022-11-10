@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-11-10"
 
 keywords: tool integrations, IBM Cloud Public, GitHub
 
@@ -10,15 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}   
+{{site.data.keyword.attribute-definition-list}}
 
 # Configuring GitHub
 {: #github}
@@ -74,6 +66,32 @@ If you have a toolchain and are adding this tool integration to it, follow these
 
    If you don't have admin privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
    {: tip}
+
+## Configuring GitHub by using the API
+{: #config-parameters}
+
+The GitHub tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+
+You must specify the `tool_type_id` property in the request body with the `githubconsolidated` value.
+{: important}
+
+| Parameter | Usage | Type | Terraform argument | Description |
+| --- | --- | --- | --- | --- |
+| git_id | optional, immutable | String | git_id | The ID of the GitHub server.|  |
+| api_root_url | optional, updatable | String | api_root_url | The URL of the GitHub API, such as `https://api.github.example.com`. |
+| default_branch | optional, updatable | String | default_branch | The name of the default branch, for example, `main`. |
+| owner_id | optional, immutable | String | owner_id | Your GitHub ID. |
+| repo_name | optional, immutable | String | repo_name | The name of the GitHub repo to create. |
+| repo_url | optional, immutable | String | repo_url | The URL of the repo that you are linking to. |
+| source_repo_url | optional, immutable | String | source_repo_url | The URL of the repo that you are forking or cloning. |
+| token_url | optional, updatable | String | token_url | The integration token URL. |
+| type | required, immutable | String | type | The type of your GitHub repo. The allowed values are `new`, `fork`, `clone`, and `link`. |
+| private_repo | optional, immutable, `Default: false` | Boolean | private_repo | Select this checkbox to make this repo private. |
+| has_issues | optional, updatable, `Default: true` | Boolean | has_issues | Select this checkbox to enable GitHub Issues for lightweight issue tracking. |
+| auto_init | optional, immutable, `Default: false` | Boolean | auto_init | Select this checkbox to initialize this repo with a readme file. |
+| enable_traceability | optional, updatable, `Default: false` | Boolean | enable_traceability | Select this checkbox to track the deployment of code changes by creating tags, labels and comments on commits, pull requests, and referenced issues. |
+| integration_owner | optional, updatable | String | integration_owner | Select the user who Git operations are performed as. |
+{: caption="Table 1. GitHub tool integration parameters" caption-side="bottom"}
 
 ## Learn more about GitHub
 {: #learn_github}
