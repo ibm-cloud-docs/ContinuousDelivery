@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-10"
+lastupdated: "2022-11-11"
 
 keywords: tool integrations, IBM Cloud Public, DevOps Insights
 
@@ -44,4 +44,4 @@ You must specify the `tool_type_id` property in the request body with the `drase
 ## Learn more about DevOps Insights
 {: #learn_insights}
 
-To learn more about {{site.data.keyword.DRA_short}}, see the [{{site.data.keyword.DRA_short}} article](https://www.ibm.com/cloud/garage/content/learn/tool_devops_insights/){: external} on the {{site.data.keyword.cloud_notm}} Garage Method or take the [Explore {{site.data.keyword.DRA_full}}](https://www.ibm.com/cloud/garage/tutorials/explore-ibm-cloud-devops-insights){: external} tutorial.
+To learn more about {{site.data.keyword.DRA_short}}, take the [Explore {{site.data.keyword.DRA_full}}](https://www.ibm.com/cloud/architecture/tutorials/explore-ibm-cloud-devops-insights){: external} tutorial.
