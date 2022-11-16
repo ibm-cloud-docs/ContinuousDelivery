@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-16"
+lastupdated: "2022-11-16"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -405,6 +405,7 @@ By default, private workers use public endpoints for communication. A cluster ad
 
     * `us-south (Dallas, US)`
     * `us-east (Washington, US)`
+    * `eu-de (Frankfurt, DE)`
 
    You must have a [VRF enabled](/docs/account?topic=account-vrf-service-endpoint&interface=ui) {{site.data.keyword.cloud_notm}} account to use this feature.
    {: important}
