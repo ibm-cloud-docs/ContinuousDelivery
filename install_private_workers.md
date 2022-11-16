@@ -525,4 +525,4 @@ Although having multiple agents on the same cluster supports multiple worker poo
 
 To configure a multi-cluster worker pool, follow the instructions for [installing directly on a cluster](#install_pw) and [registering a {{site.data.keyword.deliverypipeline}} Private Worker](#register_pw) for each cluster that participates in the worker pool. Make sure that you update the worker name to identify the cluster on which the worker resides.
 
-The multiple worker agents are now listed in the private worker integration UI and jobs are scheduled on those agents based on the cluster load at pipeline run request time.
+The multiple worker agents are now listed in the private worker integration UI and jobs are scheduled on those agents based on the cluster load at pipeline run request time. 
