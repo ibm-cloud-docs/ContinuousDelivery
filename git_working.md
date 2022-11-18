@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-02"
+lastupdated: "2022-11-17"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, authentication, personal access token, SSH key
 
@@ -10,15 +10,8 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:download: .download}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # {{site.data.keyword.gitrepos}}
 {: #git_working}
@@ -248,6 +241,119 @@ if [ "$EXPECTED_FINGERPRINT" == "$FINGERPRINT" ]; then
 fi
 ```
 
+### Configuring your firewall to allow Git webhook messages
+{: #git_webhook_firewall}
+
+You can update your firewall configuration to allow webhook messages from {{site.data.keyword.gitrepos}} to reach endpoints that are behind the firewall. To allow Git webhook messages, open traffic to the following subnet ranges for your specific region.
+
+```text
+au-syd
+10.139.55.128/26
+10.195.7.128/26
+10.63.14.64/26
+130.198.80.128/28
+130.198.85.32/27
+135.90.66.176/28
+135.90.66.96/27
+168.1.36.32/27
+168.1.59.208/28
+====
+br-sao
+10.14.14.0/26
+10.15.17.0/26
+10.150.99.64/26
+163.107.68.48/28
+163.107.70.96/27
+163.109.70.160/28
+163.109.70.192/27
+169.57.162.64/27
+169.57.175.144/28
+====
+ca-tor
+10.11.30.0/26
+10.114.28.192/26
+10.243.29.0/26
+158.85.67.192/27
+163.74.68.224/28
+163.74.69.64/27
+163.75.66.144/28
+163.75.68.0/27
+169.53.183.48/28
+====
+eu-de
+10.123.37.224/27
+10.123.89.192/26
+10.135.250.0/26
+10.75.196.192/26
+10.75.51.0/27
+10.85.201.160/27
+149.81.122.0/26
+149.81.73.160/27
+158.177.146.128/27
+159.122.96.192/27
+161.156.157.192/26
+161.156.77.128/27
+169.50.53.0/26
+====
+eu-gb
+10.196.17.128/26
+10.45.57.192/26
+10.72.31.64/26
+141.125.70.224/28
+141.125.74.192/27
+158.175.104.64/26
+158.176.72.192/26
+====
+jp-osa
+10.10.15.128/26
+10.8.29.128/26
+10.9.10.128/26
+163.68.73.192/27
+163.68.73.80/28
+163.69.65.16/28
+163.69.67.224/27
+163.73.67.240/28
+163.73.68.0/27
+====
+jp-tok
+10.129.147.64/26
+10.129.50.128/27
+10.133.46.152/29
+10.192.14.0/27
+10.192.72.0/26
+10.193.16.192/27
+10.193.40.128/26
+128.168.108.0/26
+128.168.68.192/27
+161.202.235.192/27
+165.192.107.64/26
+165.192.70.32/27
+169.56.10.128/26
+====
+us-east
+10.183.12.0/26
+10.188.28.192/26
+10.190.252.64/26
+169.47.140.64/26
+169.47.160.64/26
+169.60.92.192/26
+169.62.30.64/26
+====
+us-south
+10.177.103.0/26
+10.184.211.0/25
+10.184.63.64/26
+10.185.27.0/26
+10.186.76.128/25
+10.187.66.0/26
+10.221.70.0/25
+169.48.211.176/28
+169.60.247.192/26
+169.61.132.64/26
+169.61.41.64/26
+```
+{: screen}
+
 ### Updating your display name
 {: #git_update_name}
 
@@ -259,4 +365,4 @@ You can update the display name that appears for you throughout {{site.data.keyw
 ## Physical file and repo size limits
 {: #git_limits}
 
-Files are strictly limited to 100 MB. The suggested repo size limit is 1 GB. If your repo exceeds 1 GB, you might receive an email with a request to reduce the size of the repo.
+Files are strictly limited to 100 MB. The suggested repo size limit is 1 GB. If your repo exceeds 1 GB, you might receive an email with a request to reduce the size of the repo. 
