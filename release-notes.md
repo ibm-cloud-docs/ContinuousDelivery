@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-11-16"
+lastupdated: "2022-11-18"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
+
+## 18 November 2022
+{: #ContinuousDelivery-nov1822}
+{: release-note}
+
+The Beta Terraform resources and data sources, Go SDKs, and HTTP APIs are updated, including several breaking changes.
+
+:   Read the [release notes](https://github.com/IBM/continuous-delivery-go-sdk/blob/main/RELEASE_NOTES.md){: external}.
 
 ## 16 November 2022
 {: #ContinuousDelivery-nov1622}
