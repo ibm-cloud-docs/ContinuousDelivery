@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-28"
+lastupdated: "2022-11-22"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -10,19 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:note:.deprecated}
-{:tip: .tip}
-{:important: .important}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Troubleshooting for {{site.data.keyword.deliverypipeline}}
 {: #troubleshoot-delivery-pipeline}
@@ -187,7 +175,7 @@ When I attempt to use the {{site.data.keyword.deliverypipeline}}, it cannot comm
 Your firewall must be configured to allow the {{site.data.keyword.deliverypipeline}} to communicate with environments that are behind a firewall.
 {: tsCauses}
 
-You can update your firewall configurations to allow the {{site.data.keyword.deliverypipeline}} to access resources that are behind the firewall. Use the following subnet ranges, for your specific region.
+You can update your firewall configurations to allow the {{site.data.keyword.deliverypipeline}} to access resources that are behind the firewall. Use the [{{site.data.keyword.cis_short_notm}} allowlist](/docs/cis?topic=cis-cis-allowlisted-ip-addresses) and the following subnet ranges, for your specific region.
 {: tsResolve}
 
 ```text
@@ -315,4 +303,4 @@ If a matching repo integration is located in the toolchain, the pipeline attempt
 * `Repository reference fixed in the following triggers: [list of triggers]`
 * `Repository reference fixed in the following definitions: [list of definitions]`
 
-If you see one of these notifications, but no warnings or errors are displayed in the configuration, no further action is required. If warnings or errors still appear, you might need to update or create the trigger or definition again.
+If you see one of these notifications, but no warnings or errors are displayed in the configuration, no further action is required. If warnings or errors still appear, you might need to update or create the trigger or definition again. 
