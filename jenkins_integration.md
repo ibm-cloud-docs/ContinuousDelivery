@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-08"
+lastupdated: "2022-11-22"
 
 keywords: tool integrations, IBM Cloud Public, Jenkins
 
@@ -56,11 +56,11 @@ You must specify the `tool_type_id` property in the request body with the `jenki
 
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
-| name | required, updatable | String | name | The name of this tool integration, for example `my-jenkins`, that is displayed in your toolchain. |
-| dashboard_url | required, updatable | String | dashboard_url | The URL of the Jenkins server that you want to open when you click the Jenkins card in your toolchain. |
-| webhook_url | optional, updatable | String | webhook_url | The webhook to use in your Jenkins jobs to send notifications to other tools in your toolchain. |
+| api_token | optional, updatable | Password | api_token | The API token to use for Jenkins REST API calls so that {{site.data.keyword.DRA_short}} can collect data from Jenkins. You can find the API token on the Configuration page of your Jenkins instance. You can use a toolchain secret reference for this parameter. For more information about secret references, see [Protecting your sensitive data in Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
 | api_user_name | optional, updatable | String | api_user_name | The username to use with the Jenkins server's API token, which is required so that {{site.data.keyword.DRA_short}} can collect data from Jenkins. You can find your API username on the Configuration page of your Jenkins instance. |
-| api_token | optional, updatable | Password | api_token | The API token to use for Jenkins REST API calls so that {{site.data.keyword.DRA_short}} can collect data from Jenkins. You can find the API token on the Configuration page of your Jenkins instance. |
+| dashboard_url | required, updatable | String | dashboard_url | The URL of the Jenkins server dashboard for this tool integration. In the graphical UI, the browser goes to this dashboard when you click the Jenkins tool integration card. |
+| name | required, updatable | String | name | The name of this tool integration. |
+| webhook_url | optional, updatable | String | webhook_url | The webhook to use in your Jenkins jobs to send notifications to other tools in your toolchain. |
 {: caption="Table 1. Jenkins tool integration parameters" caption-side="bottom"}
 
 ## Learn more about Jenkins
