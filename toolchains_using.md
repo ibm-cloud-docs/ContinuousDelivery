@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-09-02"
+lastupdated: "2022-11-24"
 
 keywords: user management function, toolchains, tool integrations, user access
 
@@ -10,77 +10,13 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Using toolchains
 {: #toolchains-using}
 
-Open toolchains are available on {{site.data.keyword.cloud}}. You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain.
+Open toolchains are available on {{site.data.keyword.cloud}}. You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain. For more information about working with tool integrations, see [Working with tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 {: shortdesc}
-
-## Configuring a tool integration
-{: #configuring_a_tool_integration}
-
-If you deferred the configuration of a tool integration when you created a toolchain, a **Configure** button is shown on its card. If you configured a tool integration when you created a toolchain, you can update the configuration settings.
-
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. 
-1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
-1. If you need to configure a tool integration for the first time, on its card, click **Configure**.
-
-   ![Configure button](images/toolchain_tile_configure.png){: caption="Figure 1. Configure tool integration" caption-side="bottom"}
-
-   When you are finished configuring the tool integration, click **Save Integration**.
-
-1. If you need to update a tool integration's configuration, on its card, click the menu to access the configuration options.
-
-   ![Configuration menu](images/toolchain_tile_menu.png){: caption="Figure 2. Update tool integration" caption-side="bottom"}
-
-   A few of the tool integrations are preconfigured and don't require any configuration parameters. You can update the configuration settings for only the tool integrations that you configured.
-   {: tip}
-
-   When you are finished updating the settings, click **Save Integration**. For more information about configuring specific tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
-
-## Adding a tool integration
-{: #adding_a_tool_integration}
-
-You can add and configure tool integrations for your toolchain.
-
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
-1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
-1. To see a list of tool integrations to add, click **Add tool**.
-1. Click a tool integration that you want to add.
-1. Enter any required information to configure the tool integration.
-1. Click **Create Integration** to add the tool integration to your toolchain.
-
-## Deleting a tool integration
-{: #deleting_a_tool_integration}
-
-If you delete a tool integration from your toolchain, the deletion cannot be undone.
-
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. 
-1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
-1. On the card for the tool integration that you want to delete, click the menu to access the configuration options.
-1. To delete the tool integration from your toolchain, click **Delete**.
-1. Confirm by clicking **Delete**.  
-
-## Viewing toolchain connections to apps, clusters, and services
-{: #view_toolchain_connections}
-
-You can view your toolchain's connections to Kubernetes clusters and services.
-
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. 
-1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
-1. Select the **Connections** tab, and select the app, cluster, or service that you want to view.
 
 ## Managing access to toolchains
 {: #managing_access_resource_groups}
@@ -101,21 +37,172 @@ You can add tags to your toolchains to organize them and easily find them later.
 
 For more information about tags, see [Working with tags](/docs/account?topic=account-tag).
 
+## Viewing toolchain connections to apps, clusters, and services
+{: #view_toolchain_connections}
+
+You can view your toolchain's connections to Kubernetes clusters and services.
+
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. 
+1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
+1. Select the **Connections** tab, and select the app, cluster, or service that you want to view.
+
 
 ## Deleting a toolchain
 {: #deleting_a_toolchain}
 
-You can delete a toolchain. When you delete a toolchain, the deletion cannot be undone.
+You can delete a toolchain. When you delete a toolchain, all of the tool integrations that belong to that toolchain are also deleted. The deletion cannot be undone.
+
+When you delete a {{site.data.keyword.deliverypipeline}} tool integration, the associated {{site.data.keyword.deliverypipeline}} is also deleted.
+{: tip}
+
+When you delete a GitHub or {{site.data.keyword.gitrepos}} tool integration, the associated repo is not deleted from GitHub or {{site.data.keyword.gitrepos}}. You must manually remove the repo.
+{: tip}
+
+### Deleting a toolchain by using the console
+{: #deleting_a_toolchain_ui}
+{: ui}
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. 
 1. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. Click the **Actions** menu and select **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
-1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.  
+1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.
 
-   When you delete a GitHub or {{site.data.keyword.gitrepos}} tool integration, the associated repo is not deleted from GitHub or {{site.data.keyword.gitrepos}}. You must manually remove the repo.
+### Deleting a toolchain from the CLI (Beta)
+{: #deleting_a_toolchain_cli}
+{: cli}
+
+1. Log in to {{site.data.keyword.cloud_notm}} by using the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
+
+   ```sh
+   ibmcloud login
+   ```
+   {: pre}
+
+   If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If you use this option, go to the link that is listed in the CLI output to generate a one-time passcode.
    {: tip}
+
+2. Optional. List all of the toolchains in the targeted account, region, and resource group to identify the instance that you want to delete.
+
+   ```sh
+   ibmcloud dev toolchains
+   ```
+   {: pre}
+
+3. Delete a toolchain by running the [`ibmcloud dev toolchain-delete`](/docs/ContinuousDelivery?topic=cli-idt-cli#toolchain-delete) command.
+
+   ```sh
+   ibmcloud dev toolchain-delete TOOLCHAIN-NAME
+   ```
+   {: pre}
+
+The following table lists and describes each of the variables that are used in the previous steps.
+
+| Variable | Description |
+|:---------|:------------|
+| `TOOLCHAIN_NAME` | The name of the toolchain that you want to delete. |
+{: caption="Table 1. Variables for deleting the toolchain from the CLI" caption-side="top"}
+
+### Deleting a toolchain with the API
+{: #deleting_a_toolchain_api}
+{: api}
+
+1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+   
+   ```bash
+   export CD_TOOLCHAIN_AUTH_TYPE=iam
+   export CD_TOOLCHAIN_APIKEY={iam_api_key}
+   export CD_TOOLCHAIN_URL=https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains
+   ```
+   {: pre}
+
+2. Delete the toolchain that you want to remove.
+
+   ```curl
+   curl -X DELETE \
+     https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id} \
+     -H 'Authorization: Bearer {token}'
+   ```
+   {: pre}
+   {: curl}
+
+   ```javascript
+   const CdToolchainV2 = require('continuous-delivery-node-sdk/cd-toolchain/v2');
+   ...
+   const toolchainService = CdToolchainV2.newInstance();
+   const response = await toolchainService.deleteToolchain({
+      toolchainId: toolchainId
+   });
+   ```
+   {: codeblock}
+   {: node}
+
+   ```go
+   import (
+	   "github.com/IBM/continuous-delivery-go-sdk/cdtoolchainv2"
+   )
+   ...
+   toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
+   toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
+   deleteToolchainOptions := toolchainClient.NewDeleteToolchainOptions(toolchainId)
+   response, err := toolchainClient.DeleteToolchain(deleteToolchainOptions)
+   ```
+   {: codeblock}
+   {: go}
+
+The following table lists and describes each of the variables that are used in the previous steps.   
+    
+| Variable | Description |
+|:---------|:------------|
+| `{iam_api_key}` | Your IAM API key. |
+| `{region}` | The region where the toolchain is located. For example, `us-south`. |
+| `{token}` | A valid IAM bearer token. |
+| `{toolchain_id}` | The ID of the toolchain that you want to delete. |
+{: caption="Table 2. Variables for deleting the toolchain with the API" caption-side="top"}
+
+### Deleting a toolchain with Terraform
+{: #deleting_a_toolchain_terraform}
+{: terraform}
+
+1. Locate the Terraform file (for example, `main.tf`) that contains the `resource` block for the existing toolchain. For more information about using Terraform with toolchains, see [Creating a toolchain with Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=terraform).
+
+   The `resource` in the following example describes an existing toolchain.
+
+   ```terraform
+   data "ibm_resource_group" "group" {
+     name = "default"
+   }
+
+   resource "ibm_cd_toolchain" "cd_toolchain" {
+     name              = "my toolchain"
+     resource_group_id = data.ibm_resource_group.group.id
+   }
+   ```
+   {: codeblock}
+
+2. Remove the `resource` block from your Terraform file.
+
+3. Initialize the Terraform CLI.
+
+   ```terraform
+   terraform init
+   ```
+   {: pre}
+   
+4. Create a Terraform execution plan. This plan summarizes all of the actions that must run to delete the toolchain.
+
+   ```terraform
+   terraform plan
+   ```
+   {: pre}
+
+5. Apply the Terraform execution plan. Terraform takes all of the required actions to delete the toolchain.
+
+   ```terraform
+   terraform apply
+   ```
+   {: pre}
 
 ## Take a tutorial: Using toolchains
 {: #toolchain-tutorial}
 
-Try the [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app?task=2){: external} tutorial on the [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/cloud/garage){: external}.
+Try the [Add a toolchain to an app](https://www.ibm.com/cloud/architecture/tutorials/add-a-toolchain-to-an-app?task=2){: external} tutorial on the [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/garage/method){: external}.
