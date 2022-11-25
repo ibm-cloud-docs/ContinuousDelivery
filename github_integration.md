@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-10"
+lastupdated: "2022-11-25"
 
 keywords: tool integrations, IBM Cloud Public, GitHub
 
@@ -77,20 +77,21 @@ You must specify the `tool_type_id` property in the request body with the `githu
 
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
-| git_id | optional, immutable | String | git_id | The ID of the GitHub server.|  |
-| api_root_url | optional, updatable | String | api_root_url | The URL of the GitHub API, such as `https://api.github.example.com`. |
-| default_branch | optional, updatable | String | default_branch | The name of the default branch, for example, `main`. |
-| owner_id | optional, immutable | String | owner_id | Your GitHub ID. |
-| repo_name | optional, immutable | String | repo_name | The name of the GitHub repo to create. |
-| repo_url | optional, immutable | String | repo_url | The URL of the repo that you are linking to. |
-| source_repo_url | optional, immutable | String | source_repo_url | The URL of the repo that you are forking or cloning. |
-| token_url | optional, updatable | String | token_url | The integration token URL. |
-| type | required, immutable | String | type | The type of your GitHub repo. The allowed values are `new`, `fork`, `clone`, and `link`. |
-| private_repo | optional, immutable, `Default: false` | Boolean | private_repo | Select this checkbox to make this repo private. |
-| has_issues | optional, updatable, `Default: true` | Boolean | has_issues | Select this checkbox to enable GitHub Issues for lightweight issue tracking. |
-| auto_init | optional, immutable, `Default: false` | Boolean | auto_init | Select this checkbox to initialize this repo with a readme file. |
-| enable_traceability | optional, updatable, `Default: false` | Boolean | enable_traceability | Select this checkbox to track the deployment of code changes by creating tags, labels and comments on commits, pull requests, and referenced issues. |
-| integration_owner | optional, updatable | String | integration_owner | Select the user who Git operations are performed as. |
+| api_root_url | optional, updatable | String | api_root_url | The URL of the API root for the GitHub server. |
+| auto_init | optional, immutable, `Default: false` | Boolean | auto_init | Set this value to `true` to initialize this repo with a readme file. This parameter is used only when you create a repo. |
+| default_branch | optional, updatable | String | default_branch | The default branch of the Git repo. |
+| enable_traceability | optional, updatable, `Default: false` | Boolean | enable_traceability | Set this value to `true` to track the deployment of code changes by creating tags, labels and comments on commits, pull requests, and referenced issues. |
+| git_id | optional, immutable | String | git_id | Set this value to `github` for github.com, or to the GUID of a custom GitHub Enterprise server. |
+| has_issues | optional, updatable, `Default: true` | Boolean | toolchain_issues_enabled | Set this value to `true` to enable issues on the GitHub repo and add an Issues tool card to the toolchain. Set the value to `false` to remove the tool integration card from the toolchain. This setting does not impact whether issues are enabled on the GitHub repo itself. |
+| integration_owner | optional, updatable | String | integration_owner | Select the user that the Git operations are performed as. |
+| owner_id | optional, immutable | String | owner_id | The GitHub user or organization that owns the repo. This parameter is required when you create a repo, or clone or fork a repo. This value is computed when you link to an existing repo. |
+| private_repo | optional, immutable, `Default: false` | Boolean | private_repo | Set this value to `true` to make the repo private when you create a repo or clone or fork a repo. This parameter is not used when you link to an existing repo. |
+| repo_id | optional, immutable | String | repo_id | The ID of the GitHub repo. |
+| repo_name | optional, immutable | String | repo_name | The name of the GitHub repo to create. This parameter is required when you create a repo, or clone or fork a repo. This value is computed when you link to an existing repo. |
+| repo_url | optional, immutable | String | repo_url | The URL of the GitHub repo for this tool integration. This parameter is required when you link to an existing repo. This value is computed when you create a repo, or clone or fork a repo. |
+| source_repo_url | optional, immutable | String | source_repo_url | The URL of the repo that you are forking or cloning. This parameter is required when you fork or clone a repo. It is not used when you create a repo or link to an existing repo. |
+| token_url | optional, updatable | String | token_url | The token URL that is used to authorize with the GitHub server. |
+| type | required, immutable | String | type | The operation to perform to initialize the new tool integration.  Use `new` to create a Git repo, `clone` to clone an existing repo into a new Git repo, `fork` to fork an existing Git repo, or `link` to link to an existing Git repo. |
 {: caption="Table 1. GitHub tool integration parameters" caption-side="bottom"}
 
 ## Learn more about GitHub
