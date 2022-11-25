@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-14"
+lastupdated: "2022-11-24"
 
 keywords: tool integrations, IBM Cloud Public, App Configuraton, AppConfig
 
@@ -88,12 +88,12 @@ You must specify the `tool_type_id` property in the request body with the `appco
 
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
-| name | required, updatable | String | name | The name of this tool integration, for example, **my-appconfig** that is displayed in your toolchain. |
-| region | required, updatable | String | region | The region that your toolchain resides in. |
-| resource-group | required, updatable | String | resource_group | The resource group that contains your toolchain. |
-| instance-name | required, updatable | String | instance_name | The name of your {{site.data.keyword.appconfig_short}} instance. Select an option, such as `App Configuration-01`, based on the selected region and resource group. |
-| environment-name | required, updatable | String | environment_name | The {{site.data.keyword.appconfig_short}} environment. |
-| collection-name | required, updatable | String | collection_name | The {{site.data.keyword.appconfig_short}} collection. |
+| collection-name | required, updatable | String | collection_id | The ID of the {{site.data.keyword.appconfig_short}} collection. |
+| environment-name | required, updatable | String | environment_id | The ID of the {{site.data.keyword.appconfig_short}} environment. |
+| instance-name | required, updatable | String | instance_id | The `guid` of the {{site.data.keyword.appconfig_short}} service instance. |
+| name | required, updatable | String | name | The name of this tool integration. {{site.data.keyword.appconfig_short}} references include this name to identify the {{site.data.keyword.appconfig_short}} instance where the configuration values reside. Make sure that each of the {{site.data.keyword.appconfig_short}} tools that are integrated into a toolchain have a unique name for resolution to function properly. |
+| region | required, updatable | String | location | The {{site.data.keyword.cloud_notm}} location where the {{site.data.keyword.appconfig_short}} service instance is located. |
+| resource-group | required, updatable | String | resource_group_name | The name of the resource group where the {{site.data.keyword.appconfig_short}} service instance is located. |
 {: caption="Table 1. {{site.data.keyword.appconfig_short}} tool integration parameters" caption-side="bottom"}
 
 ## Learn more about {{site.data.keyword.appconfig_short}}
