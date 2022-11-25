@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-10-27"
 
 keywords: deployment strategies, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -15,17 +15,7 @@ completion-time: 30m
 
 ---
 
-{:step: data-tutorial-type='step'}
-{:shortdesc: .shortdesc}
-{:table: .aria-labeledby="caption"}
-{:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:download: .download}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Deploy an app on Kubernetes
@@ -37,6 +27,9 @@ completion-time: 30m
 
 In this tutorial, you learn how to create an open toolchain by using different deployment strategies. You also learn how toolchains are implemented in the {{site.data.keyword.contdelivery_full}} service and how to develop and deploy a simple web application (app) by using toolchains.
 {: shortdesc}
+
+This tutorial is browser-based. You can also create a similar open toolchain in Terraform as shown in the {{site.data.keyword.cloud_notm}} Terraform Provider example [ibm-cd-toolchain-simple-helm](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cd-toolchain-simple-helm){: external}.
+{: tip}
 
 This tutorial uses deployment strategies that have Kubernetes as the deployment target. The toolchain that is used in this tutorial implements standard DevOps practices such as code scanning, acceptance tests, Git repos, and continuous integration and continuous delivery capabilities. After you create a Kubernetes cluster and a toolchain, you change your app's code and push the change to the {{site.data.keyword.gitrepos}} repo. When you push changes to your repo, the Tekton-based delivery pipeline automatically builds and deploys the code.
 
