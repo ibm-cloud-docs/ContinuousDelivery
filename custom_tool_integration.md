@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2022
 
-lastupdated: "2022-11-09"
+lastupdated: "2022-11-25"
 
 keywords: tool integrations, IBM Cloud Public, Other Tool, Custom Tool
 
@@ -16,7 +16,8 @@ subcollection: ContinuousDelivery
 # Configuring a custom tool (Other Tool)
 {: #othertool}
 
-If your team uses a tool that isn't included in the toolchains integrations list, you can integrate a custom tool.{: shortdesc}
+If your team uses a tool that isn't included in the toolchains integrations list, you can integrate a custom tool.
+{: shortdesc}
 
 Configure a custom tool so that it works with other tools in your toolchain and is available to your team:
 
@@ -36,27 +37,27 @@ Configure a custom tool so that it works with other tools in your toolchain and 
 1. (Advanced) Add more properties as needed. For example, list any information or attributes that are required for your tool to integrate with other tools in the toolchain.  
 1. Click **Create Integration**.
 
-## Configuring a custom tool by using the API
+## Configuring a custom tool (Other Tool) by using the API
 {: #config-parameters}
 
 The custom tool (Other Tool) tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
 
-You must specify the `customtool` property in the request body with the `artifactory` value.
+You must specify the `tool_type_id` property in the request body with the `customtool` value.
 {: important}
 
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
-| type | required, updatable | String | type | The name of this tool integration, for example, `Delivery Pipeline`. |
-| lifecyclePhase | required, updatable | String | lifecycle_phase | The lifecycle phase of the {{site.data.keyword.cloud_notm}} Garage Method that is the most closely associated with this tool. |
-| imageUrl | optional, updatable | String | image_url | The URL of the icon to display on your tool integration's card. |
-| documentationUrl | optional, updatable | String | documentation_url | The URL for your tool's documentation. |
-| name | required, updatable | String | name | The name for this specific tool integration, for example, `My Build and Deploy Pipeline`. |
-| dashboard_url | required, updatable | String | dashboard_url | The URL that you want to go to when you click the tool integration card. |
-| description | optional, updatable | String | description | A description for the tool instance. |
-| additional-properties | optional, updatable | String | additional_properties | Advanced. Any information that is required to integrate with other tools in your toolchain. |
-{: caption="Table 1. Custom tool tool integration parameters" caption-side="bottom"}
+| additional-properties | optional, updatable | String | additional_properties | Specifies any information that is required to integrate with other tools in the toolchain. |
+| dashboard_url | required, updatable | String | dashboard_url | The URL of the dashboard for this tool integration. In the graphical UI, the browser goes to this dashboard when you click the Other Tool tool integration card. |
+| description | optional, updatable | String | description | A description that outlines the function of this tool integration. |
+| documentationUrl | optional, updatable | String | documentation_url | The URL of this tool integration's documentation. |
+| imageUrl | optional, updatable | String | image_url | The URL of the icon that is displayed on the tool integration card in the graphical UI. |
+| lifecyclePhase | required, updatable | String | lifecycle_phase | The lifecycle phase of the {{site.data.keyword.cloud_notm}} Garage Method that is the most closely associated with this tool integration. |
+| name | required, updatable | String | name | The name of this tool integration. |
+| type | required, updatable | String | type | The type of tool that this custom tool is integrating with. |
+{: caption="Table 1. Custom tool (Other Tool) tool integration parameters" caption-side="bottom"}
 
-## Learn more about custom tool
+## Learn more about the custom tool (Other Tool)
 {: #learn_custom_tool}
 
 To learn more about the custom tool, take this tutorial:
