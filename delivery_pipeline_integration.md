@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-09"
+lastupdated: "2022-11-24"
 
 keywords: tool integrations, IBM Cloud Public, Delivery Pipeline
 subcollection: ContinuousDelivery
@@ -27,12 +27,12 @@ Configure {{site.data.keyword.deliverypipeline}} to automate the continuous buil
    b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}}**.
 
 1. Specify a name for your new pipeline.
-1. If you plan to use your pipeline to deploy a user interface, select the **Show apps in the View app menu** checkbox. All of the apps that your pipeline creates are shown in the **View App** list on the toolchain's Overview page.
 1. Select the type of pipeline that you want to create:
 
-   * **Classic**: Provides an easy to use graphical user interface for defining stages and jobs that run on public shared infrastructure, with support for running individual stages on private workers.
+   * **Classic**: Provides an easy-to-use graphical user interface for defining stages and jobs that run on public shared infrastructure, with support for running individual stages on private workers.
    * **Tekton**: Provides a dashboard that you can use to view the output of [Tekton pipeline](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines) runs on a defined Kubernetes cluster, with support for configuring pipeline definitions repos, the pipeline triggers, where the pipeline runs, and simple secrets.
 
+1. If you plan to use your pipeline to deploy a user interface, and your pipeline is a Classic pipeline, select the **Show apps in the View app menu** checkbox. All of the apps that your pipeline creates are shown in the **View App** list on the toolchain's Overview page.  
 1. Click **Create Integration** to add the {{site.data.keyword.deliverypipeline}} to your toolchain.
 1. From your toolchain, on the **Delivery pipelines** card, click the delivery pipeline to view and configure it. To learn the basics of configuring a pipeline, see [Building and deploying pipelines](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).
 
@@ -47,7 +47,7 @@ Configure {{site.data.keyword.deliverypipeline}} to automate the continuous buil
 ## Configuring a Sauce Labs test job in your pipeline
 {: #config_saucelabs}
 
-Before you configure a Sauce Labs test job in your pipeline, you need a working pipeline that has stages to build and deploy your app. You must also configure Sauce Labs for your toolchain. For instructions to configure Sauce Labs, see the [Sauce Labs](#saucelabs) section.
+Before you configure a Sauce Labs test job in your pipeline, you need a working pipeline that has stages to build and deploy your app. You must also configure Sauce Labs for your toolchain. For instructions about how to configure Sauce Labs, see the [Sauce Labs](#saucelabs) section.
 
 Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test job:
 
@@ -58,20 +58,20 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 
 1. Configure the stage. On the **ENVIRONMENT PROPERTIES** tab, create the CF_APP_NAME property.
 
-   The Sauce Labs user name and access key are available in the test job script as the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables. When you write your tests, you must use these environment variables to authenticate with Sauce Labs.
+   The Sauce Labs username and access key are available in the test job script as the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables. When you write your tests, you must use these environment variables to authenticate with Sauce Labs.
    {: tip}
 
 1. Configure the deploy job. In the **Deploy Script** field, include this command: `export CF_APP_NAME="$CF_APP"`. That command exports the app name as an environment property.
 1. Configure the test job. 
 
-   The **Service Instance**, **Target**, **Organization**, and **Space** fields are populated with the Sauce Labs user name, region, org, and space that you are using.
+   The **Service Instance**, **Target**, **Organization**, and **Space** fields are populated with the Sauce Labs username, region, org, and space that you are using.
    {: tip}
 
    a. For the tester type, select **Sauce Labs**.
 
-   b. For the service instance, select the Sauce Labs user name that you used when you configured Sauce Labs for your toolchain.
+   b. For the service instance, select the Sauce Labs username that you used when you configured Sauce Labs for your toolchain.
 
-   To see the user name and access key that you used when you configured Sauce Labs for your toolchain, click **Configure**.
+   To see the username and access key that you used when you configured Sauce Labs for your toolchain, click **Configure**.
    {: tip}
 
    c. In the **Test Execution Command** field, enter the commands that install the dependencies that are required by your tests and then run the tests. For example, for a Node.js app, you might enter these commands:
@@ -95,7 +95,7 @@ You must specify the `tool_type_id` property in the request body with the `pipel
 
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
-| name | optional, updatable | String | name | The name of this tool integration that is displayed in your toolchain. |
+| name | optional, updatable | String | name | The name of this tool integration. |
 {: caption="Table 1. {{site.data.keyword.deliverypipeline}} tool integration parameters" caption-side="bottom"}
 
 ## Learn more about {{site.data.keyword.deliverypipeline}}
