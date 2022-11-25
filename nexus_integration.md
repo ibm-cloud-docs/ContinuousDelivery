@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-07"
+lastupdated: "2022-11-25"
 
 keywords: tool integrations, IBM Cloud Public, Nexus
 
@@ -131,14 +131,14 @@ You must specify the `tool_type_id` property in the request body with the `nexus
 
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
-| name | required, updatable | String | name | The name of this tool integration, for example, **my-nexus** that is displayed in your toolchain. |
-| dashboard_url | optional, updatable | String | dashboard_url | The URL that you want to go to when you click the Nexus card. |
-| type | required, updatable | String | type | The type of repo for your Nexus tool integration. |
-| user_id | optional, updatable | String | user_id | The user ID or email for your Nexus repo. |
-| token | optional, updatable | Password | token | The password or authentication token for your Nexus repo. |
-| release_url | optional, updatable | String | release_url | The URL for your Nexus release repo. |
-| mirror_url | optional, updatable | String | mirror_url | The URL for your Nexus virtual repo, which is a repo that can see your private repos and is a cache of the public repos. |
-| snapshot_url | optional, updatable | String | snapshot_url | The URL for your Nexus snapshot repo. |
+| dashboard_url | optional, updatable | String | server_url | The URL of the Nexus server dashboard for this tool integration. In the graphical UI, the browser goes to this dashboard when you click the Nexus tool integration card. |
+| mirror_url | optional, updatable | String | mirror_url | The URL of your Nexus virtual repo where you can view your private repos and a cache of the public repos. |
+| name | required, updatable | String | name | The name of this tool integration. |
+| release_url | optional, updatable | String | release_url | The URL of your Nexus release repo. |
+| snapshot_url | optional, updatable | String | snapshot_url | The URL of your Nexus snapshot repo. |
+| token | optional, updatable | Password | token | The password or token for authenticating with the Nexus repo. You can use a toolchain secret reference for this parameter. For more information about secret references, see [Protecting your sensitive data in Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
+| type | required, updatable | String | type | The repo type for your Nexus tool integration. |
+| user_id | optional, updatable | String | user_id | The user ID or email address for authenticating with your Nexus repo. |
 {: caption="Table 1. Nexus tool integration parameters" caption-side="bottom"}
 
 ## Learn more about Nexus
