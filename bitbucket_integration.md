@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-09"
+lastupdated: "2022-11-25"
 
 keywords: tool integrations, IBM Cloud Public, Bitbucket
 
@@ -75,20 +75,20 @@ You must specify the `tool_type_id` property in the request body with the `bitbu
 
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
-| git_id | optional, immutable | String | git_id | The ID of the Bitbucket server. |
 | api_root_url | optional, updatable | String | api_root_url | The URL of the Bitbucket API, such as `https://api.bitbucket.org`. |
 | default_branch | optional, updatable | String | default_branch | The name of the default branch, for example, `main`. |
-| owner_id | optional, immutable | String | owner_id | Your Bitbucket ID. |
-| repo_name | optional, immutable | String | repo_name | The name of the Bitbucket repo to create. |
+| enable_traceability | optional, updatable, `Default: false` | Boolean | enable_traceability | Set this value to `true` to track the deployment of code changes by creating tags, labels and comments on commits, pull requests, and referenced issues. |
+| git_id | optional, immutable | String | git_id | Set this value to `bitbucketgit` for bitbucket.org, or to the GUID of a custom Bitbucket server. |
+| has_issues | optional, updatable, `Default: true` | Boolean | toolchain_issues_enabled | Set this value to `true` to enable issues on the Bitbucket repo and to add an Issues tool card to the toolchain. Set this value to `false` to remove the tool integration card from the toolchain. This setting does not impact whether Issues are enabled on the Bitbucket repo itself. |
+| integration_owner | optional, updatable | String | integration_owner | The user who performs Git operations. |
+| owner_id | optional, immutable | String | owner_id | The Bitbucket user or group that owns the repo. This parameter is required when you create a repo, or clone or fork a repo. This value is computed when you link to an existing repo. |
+| private_repo | optional, immutable, `Default: false` | Boolean | private_repo | Set this value to `true` to make the repo private when you create a repo, or when you clone or fork a repo. This parameter is not used when you link to an existing repo. |
 | repo_id | optional, immutable | String | repo_id | The ID of the Bitbucket repo. |
-| repo_url | optional, immutable | String | repo_url | The URL of the Bitbucket repo that you want to link to. |
-| source_repo_url | optional, immutable | String | source_repo_url | The URL of the Bitbucket repo that you want to fork or clone. |
-| token_url | optional, updatable | String | token_url | The URL of the integration token. |
-| type | required, immutable | String | type | The type of your Bitbucket repo. The allowed values are `new`, `fork`, `clone`, and `link`. |
-| private_repo | optional, immutable, `Default: false` | Boolean | private_repo | Select this checkbox to make this repo private. |
-| has_issues | optional, updatable, `Default: true` | Boolean | has_issues | Select this checkbox to enable Bitbucket Issues for lightweight issue tracking. |
-| enable_traceability | optional, updatable, `Default: false` | Boolean | enable_traceability | Select this checkbox to track the deployment of code changes by creating tags, labels and comments on commits, pull requests, and referenced issues. |
-| integration_owner | optional, updatable | String | integration_owner | Select the user who performs Git operations. |
+| repo_name | optional, immutable | String | repo_name | The name of the Bitbucket repo to create. This parameter is required when you create a repo, or clone or fork a repo. This value is computed when you link to an existing repo. |
+| repo_url | optional, immutable | String | repo_url | The URL of the Bitbucket repo for this tool integration. This parameter is required when you link to an existing repo. This value is computed when you create a repo, or clone or fork a repo. |
+| source_repo_url | optional, immutable | String | source_repo_url | The URL of the repo that you want to fork or clone. This parameter is required when you fork or clone a repo, but it is not used when you create a repo or link to an existing repo. |
+| token_url | optional, updatable | String | token_url | The token URL that is used to authorize with the Bitbucket server. |
+| type | required, immutable | String | type | The operation to perform to initialize the new tool integration. Use `new` to create a Git repo, `clone` to clone an existing repo into a new Git repo, `fork` to fork an existing Git repo, or `link` to link to an existing Git repo. |
 {: caption="Table 1. Bitbucket tool integration parameters" caption-side="bottom"}
 
 ## Learn more about Bitbucket
