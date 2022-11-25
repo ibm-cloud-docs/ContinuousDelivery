@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-11-21"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -10,15 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
-{:download: .download}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Working with Tekton pipelines
 {: #tekton-pipelines}
@@ -33,14 +25,13 @@ Tekton provides a set of [Custom Resources](https://kubernetes.io/docs/concepts/
 |Resource |Description	|
 |:----------|:------------------------------|
 |`Task`		|Defines a set of build steps such as compiling code, running tests, and building and deploying images.		|
-|`TaskRun`		|Instantiates a Task for execution with specific inputs, outputs, and execution parameters. Can be invoked on its own or as part of a `Pipeline`.		|
+|`TaskRun`		|Instantiates a Task for execution with specific inputs, outputs, and execution parameters. You can start the task on its own or as part of a pipeline.		|
 |`Pipeline`		|Defines the set of tasks that compose a pipeline.		|
 |`PipelineRun`		|Instantiates a Pipeline for execution with specific inputs, outputs, and execution parameters.		|
-| `PipelineResource`		|Defines an object that is an input (such as a Git repository) or an output (such as a Docker image) of the pipeline. This resource was not promoted to [Beta](https://tekton.dev/docs/pipelines/resources/){: external} along with the other Tekton Pipeline custom resources.   		|
 {: caption="Table 1. Tekton pipeline resources" caption-side="top"}
 
 
-There are several advantages to using Tekton Pipelines:
+You can take advantage of the following features when you use Tekton Pipelines:
 
 * **Cloud Native**: Tekton Pipelines run on Kubernetes, use Kubernetes clusters as a first class type, and use containers as their building blocks.
 * **Decoupled**: You can use one pipeline to deploy to any Kubernetes cluster. You can run the tasks that comprise a pipeline in isolation. And you can switch resources (such as Git repos) between pipeline runs.
@@ -52,7 +43,7 @@ The Tekton Pipelines project is a beta release. You must update your pipeline wi
 {{site.data.keyword.contdelivery_full}} provides two types of delivery pipelines that you can use to build, test, and deploy your applications.
 
 * **Classic**: Classic delivery pipelines are created graphically, with the status embedded in the pipeline diagram. These pipelines can run on shared workers in the cloud or on private workers that run on your own Kubernetes cluster. 
-* **Tekton**: Tekton delivery pipelines are created within yaml files that define pipelines as a set of Kubernetes resources. You can edit those yaml files to change the behaviour of a pipeline. Tekton pipelines can run on private workers that run on your own cluster. They can also run on IBM-managed workers on the public cloud. The Tekton integration provides a dashboard that you can use to view the output of Tekton pipeline runs. It also provides mechanisms for identifying the pipeline definitions repo, the pipeline triggers, where the pipeline runs, and the storage and retrieval of properties.
+* **Tekton**: Tekton delivery pipelines are created within yaml files that define pipelines as a set of Kubernetes resources. You can edit those yaml files to change the behavior of a pipeline. Tekton pipelines can run on private workers that run on your own cluster. They can also run on IBM-managed workers on the public cloud. The Tekton integration provides a dashboard that you can use to view the output of Tekton pipeline runs. It also provides mechanisms for identifying the pipeline definitions repo, the pipeline triggers, where the pipeline runs, and the storage and retrieval of properties.
 
 Both types of pipelines isolate jobs or steps from one another by running in separate containers, and by using an image that you choose. Classic and Tekton pipelines both exist in a [toolchain](https://cloud.ibm.com/devops/toolchains){: external} and depend on that toolchain to add more tool integrations that are used in the build, test, and deployment process.
 {: tip}
@@ -67,18 +58,19 @@ Before you add and run a Tekton pipeline, make sure that you have the following 
 
 * A [toolchain](https://cloud.ibm.com/devops/toolchains) that contains the following tool integrations:
 
-   * A repo tool integration (such as the GitHub tool integration) that contains your Tekton pipeline code, including a Tekton yaml file. Find sample pipeline and task definitions on [github](https://github.com/open-toolchain/hello-tekton){: external}. For more information about getting started with Tekton pipelines, see [Tekton Pipelines](https://github.com/tektoncd/pipeline/blob/master/docs/pipelines.md){: external} or take the [Develop a Kubernetes app by using Tekton delivery pipelines](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-using-tekton-delivery-pipelines){: external} tutorial.
+   * A repo tool integration (such as the GitHub tool integration) that contains your Tekton pipeline code, including a Tekton yaml file. Find sample pipeline and task definitions on [GitHub](https://github.com/open-toolchain/hello-tekton){: external}. For more information about getting started with Tekton pipelines, see [Tekton Pipelines](https://github.com/tektoncd/pipeline/blob/master/docs/pipelines.md){: external} or take the [Develop a Kubernetes app by using Tekton delivery pipelines](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-using-tekton-delivery-pipelines){: external} tutorial.
    * Optional. If you are not using the default shared Pipeline Worker, you can use a {{site.data.keyword.deliverypipeline}} Private Worker tool integration that references your Kubernetes cluster. For more information about private workers, see [Installing Delivery Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
 
 * [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli) installed locally.
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} installed locally.
-* A Kubernetes cluster (version 1.15 or higher) such as an [{{site.data.keyword.containerlong}} cluster](https://cloud.ibm.com/kubernetes/catalog/cluster){: external}.
+* A Kubernetes cluster (version 1.22 or higher) such as an [{{site.data.keyword.containerlong}} cluster](https://cloud.ibm.com/kubernetes/catalog/cluster){: external}.
 
 The toolchain and the {{site.data.keyword.deliverypipeline}} Private Worker tool integration must be in the same region. 
 {: important}
 
-## Creating a {{site.data.keyword.deliverypipeline}} for Tekton 
+## Creating a {{site.data.keyword.deliverypipeline}} for Tekton by using the console
 {: #create_tekton_pipeline}
+{: ui}
 
 When you configure a {{site.data.keyword.deliverypipeline}} tool integration, you can select the type of pipeline that you want to create.
 
@@ -95,8 +87,9 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 1. If you plan to use your pipeline to deploy a user interface, select the **Show apps in the View app menu** checkbox. All of the apps that your pipeline creates are shown in the **View App** list on the toolchain's Overview page.
 1. Click **Create Integration** to add the {{site.data.keyword.deliverypipeline}} to your toolchain.
 
-### Configuring a {{site.data.keyword.deliverypipeline}} for Tekton 
+### Configuring a {{site.data.keyword.deliverypipeline}} for Tekton by using the console
 {: #configure_tekton_pipeline}
+{: ui}
 
 1. From your toolchain's Overview page, on the **Delivery pipelines** card, click the **{{site.data.keyword.deliverypipeline}}** to open the Tekton {{site.data.keyword.deliverypipeline}} dashboard.
 1. In the **Definitions** section, complete the following tasks:
@@ -121,7 +114,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
 1. In the **Triggers** section, click **Add** to create a trigger, select the type of trigger to add, and associate the trigger with an event listener. The list of available event listeners contains the listeners that are defined in the pipeline code repo.
  
-   Triggers are based on [Tekton trigger definitions](https://github.com/tektoncd/triggers){: external}. Git respository triggers use the event listener that they are mapped to to extract information from the incoming event payload and create Kubernetes resources. These resources are applied to a Tekton `PipelineRun` resource.
+   Triggers are based on [Tekton trigger definitions](https://github.com/tektoncd/triggers){: external}. Git repo triggers use the event listener that they are mapped to to extract information from the incoming event payload and create Kubernetes resources. These resources are applied to a Tekton `PipelineRun` resource.
    {: tip}
 
    Triggered pipeline runs are run concurrently unless you configure the trigger to serialize runs by using the `Limit concurrent runs` option. When this option is enabled, you can limit the number of simultaneous runs that can be started by this trigger. For example, if the maximum limit is set to 1, only one pipeline run for this trigger runs at a time and any others are queued in a waiting state. A maximum of 10 runs (4 if you are using IBM Managed Workers) are queued in a waiting state before subsequent requests are automatically cancelled.
@@ -184,6 +177,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    "somekey": "somevalue"
    }'
    ```
+   {: codeblock}
 
    To obtain payload values in the pipeline definition, specify a Triggerbinding parameter with a value that is derived from the event:
  
@@ -196,7 +190,8 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    params:
    - name: somekey
    value: $(event.somekey)
-   ``` 
+   ```
+   {: codeblock}
 
    Save your changes.
 
@@ -211,10 +206,137 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
 1. Click **Save**.
 
-## Viewing the {{site.data.keyword.deliverypipeline}} for Tekton dashboard 
+## Creating a {{site.data.keyword.deliverypipeline}} for Tekton with the API
+{: #create_tekton_pipeline_api}
+{: api}
+
+1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}.
+1. [Determine the region and ID of the toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#viewing-toolchain-api) to which you want to add the {{site.data.keyword.deliverypipeline}} tool integration.
+1. Add the {{site.data.keyword.deliverypipeline}} tool integration to the toolchain.
+
+   ```curl
+   curl -X POST \
+     https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id}/tools \
+     -H 'Authorization: Bearer {token}' \
+     -H 'Accept: application/json` \
+     -H 'Content-Type: application/json' \
+       -d '{
+       "tool_type_id": "pipeline",
+       "parameters": {
+         "name":"{tool_integration_name}", "type":"tekton"
+         }
+     }'
+   ```
+   {: pre}
+
+The following table lists and describes each of the variables that are used in the previous step.   
+    
+| Variable | Description |
+|:---------|:------------|
+| `{region}` | The region in which the toolchain resides, for example, `us-south`. |
+| `{tool_integration_name}` | A name for your tool integration, for example, `ci-pipeline`.|
+| `{toolchain_id}` | The ID of the toolchain to which to add the tool integration. |
+| `{token}` | A valid IAM bearer token. |
+{: caption="Table 2. Variables for adding the {{site.data.keyword.deliverypipeline}} tool integration with the API" caption-side="top"}
+
+ 
+1. Configure the {{site.data.keyword.deliverypipeline}} to use public managed workers within the specified regions.
+
+   ```curl
+      curl -X POST \
+        https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines \
+        -H 'Authorization: Bearer {token}' \
+        -H 'Accept: application/json` \
+        -H 'Content-Type: application/json' \
+          -d '{
+          "id": "{pipeline_id}", "worker": { "id": "public" } }
+        }'
+   ```
+   {: pre}
+
+The following table lists and describes each of the variables that are used in the previous step.   
+    
+| Variable | Description |
+|:---------|:------------|
+| `{region}` | The region in which the toolchain resides, for example, `us-south`. |
+| `{pipeline_id}` | The ID of the pipeline that is returned from the previous step where the pipeline tool integration was created. |
+| `{token}` | A valid IAM bearer token. |
+{: caption="Table 3. Variables for configuring the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
+
+For more information about the {{site.data.keyword.deliverypipeline}} API, see the [API Docs](https://cloud.ibm.com/apidocs/tekton-pipeline){: external}.
+
+## Creating a {{site.data.keyword.deliverypipeline}} for Tekton with Terraform
+{: #create_tekton_pipeline_terraform}
+{: terraform}
+
+1. To install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform, follow the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
+
+1. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create a pipeline by using the HashiCorp Configuration Language. For more information about using this configuration language, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
+
+   A pipeline must belong to a toolchain. You can also create toolchains by [using Terraform](docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=terraform).
+   {: tip}
+   
+   The following example creates a toolchain and a pipeline by using the specified Terraform resources.
+  
+   ```terraform
+   data "ibm_resource_group" "group" {
+     name = "default"
+   }
+
+   resource "ibm_cd_toolchain" "my_toolchain" {
+     name              = "terraform_toolchain"
+     resource_group_id = data.ibm_resource_group.group.id
+   }
+
+   resource "ibm_cd_toolchain_tool_pipeline" "my_pipeline_tool" {
+     parameters {
+        name = "terraform-pipeline-integration"
+     }
+     toolchain_id = ibm_cd_toolchain.my_toolchain.id
+   }
+
+   resource "ibm_cd_tekton_pipeline" "my_tekton_pipeline" {
+    worker {
+        id = "public"
+    }
+    pipeline_id = ibm_cd_toolchain_tool_pipeline.my_pipeline_tool.tool_id
+   }
+   ```
+   {: codeblock}
+
+   For more information about the [`ibm_cd_toolchain_tool_pipeline`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_pipeline){: external} and [`ibm_cd_tekton_pipeline`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_tekton_pipeline){: external} resources, see the argument reference details in the Terraform Registry Documentation.
+  
+1. Initialize the Terraform CLI, if required.
+
+   ```terraform
+   terraform init
+   ```
+   {: pre}
+   
+1. Create a Terraform execution plan. This plan summarizes all of the actions that must run to create a toolchain.
+
+   ```terraform
+   terraform plan
+   ```
+   {: pre}
+
+1. Apply the Terraform execution plan. Terraform takes all of the required actions to create the toolchain.
+
+   ```terraform
+   terraform apply
+   ```
+   {: pre}
+
+## Viewing a {{site.data.keyword.deliverypipeline}} for Tekton dashboard 
 {: #view_tekton_dashboard}
 
-In the **PipelineRuns** section, the Tekton {{site.data.keyword.deliverypipeline}} dashboard displays an empty table until at least one Tekton pipeline runs. After Tekton pipeline runs occur (either manually or as the result of external events), the table lists those runs and related information such as status, trigger, and duration.
+You can view a pipeline by using the console UI, with the API, or with Terraform.
+
+### Viewing a {{site.data.keyword.deliverypipeline}} by using the console
+{: #viewing-pipeline-console}
+{: ui}
+
+In the **PipelineRuns** section, the Tekton {{site.data.keyword.deliverypipeline}} dashboard displays an empty table until at least one Tekton pipeline runs. After Tekton pipeline runs occur (either manually or as the result of external events), the table lists those runs and the related information such as status, trigger, and duration.
 
 Pipeline runs can be in any of the following states:
 
@@ -227,15 +349,176 @@ Pipeline runs can be in any of the following states:
 * **Cancelled**: `PipelineRun` was cancelled by the system or by the user. The system cancels `PipelineRun` when the number of waiting runs exceeds the allowed limit.
 * **Error**: `PipelineRun` contains errors that prevented it from being applied on the cluster. For more information about the cause of the error, see the run details.
 
-For detailed information about a selected run, click any row in the table. You view the `Task` definition and the steps in each `PipelineRun` definition. You can also view the status, logs, and details of each `Task` definition and step, and the overall status of the `PipelineRun` definition.
+For detailed information about a selected run, click any row in the table to view the `Task` definition and the steps in each `PipelineRun` definition. You can also view the status, logs, and details of each `Task` definition and step, and the overall status of the `PipelineRun` definition.
 
-The retention period for PipelineRuns and their logs depends on the plan that is selected for the {{site.data.keyword.contdelivery_short}} service instance. Tekton pipelines under the Professional plan are retained for one year. Tekton pipelines under the Lite plan are retained for 30 days. To retain any PipelineRuns beyond the retention period, in the PipelineRuns section, select **Actions** > **Download** to download a .zip file.
+The retention period for PipelineRuns and their logs depends on the plan that is selected for the {{site.data.keyword.contdelivery_short}} service instance. Tekton pipelines under the Professional plan are retained for one year. Tekton pipelines under the Lite plan are retained for 30 days. To retain any `PipelineRuns` beyond the retention period, in the PipelineRuns section, select **Actions > **Download** to download a .zip file.
 {: important}
+
+### Viewing a {{site.data.keyword.deliverypipeline}} with the API
+{: #viewing-pipeline-terraform}
+{: api}
+
+1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}.
+1. Get the pipeline data.
+   
+   ```curl
+   curl -X GET \
+     https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines/{pipeline_id} \
+     -H 'Authorization: Bearer {token}' \
+     -H 'Accept: application/json`
+   ```
+   {: pre}
+
+The following table lists and describes each of the variables that are used in the previous step.   
+    
+| Variable | Description |
+|:---------|:------------|
+| `{region}` | The region in which the pipeline resides, for example, `us-south`. |
+| `{pipeline_id}` | The ID of the pipeline that you want to view. |
+| `{token}` | A valid IAM bearer token. |
+{: caption="Table 4. Variables for viewing the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
+
+### Viewing a {{site.data.keyword.deliverypipeline}} with Terraform
+{: #viewing-pipeline-terraform}
+{: terraform}
+
+1. Locate the Terraform file (for example, `main.tf`) that contains the `resource` block for the existing pipeline.
+1. Add an `output` block to the Terraform file, if it does not already contain a block.
+
+   The `resource` in the following example describes an existing pipeline. The `output` block instructs Terraform to output the attributes of the specified resource.
+  
+   ```terraform
+   data "ibm_resource_group" "group" {
+     name = "default"
+   }
+
+   resource "ibm_cd_toolchain" "my_toolchain" {
+     name              = "terraform_toolchain"
+   resource_group_id = data.ibm_resource_group.group.id
+   }
+
+   resource "ibm_cd_toolchain_tool_pipeline" "my_pipeline_tool" {
+     parameters {
+       name = "terraform-pipeline-integration"
+     }
+     toolchain_id = ibm_cd_toolchain.my_toolchain.id
+   }
+
+   resource "ibm_cd_tekton_pipeline" "my_tekton_pipeline" {
+     worker {
+       id = "public"
+     }
+     pipeline_id = ibm_cd_toolchain_tool_pipeline.my_pipeline_tool.tool_id
+   }
+
+   output "my_tekton_pipeline_attributes" {
+     value = ibm_cd_tekton_pipeline.my_tekton_pipeline
+   }
+   ```
+   {: codeblock}
+
+   For more information about the [`ibm_cd_toolchain_tool_pipeline`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_pipeline){: external} and [`ibm_cd_tekton_pipeline`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_tekton_pipeline){: external} resources, see the argument reference details in the Terraform Registry Documentation.
+
+1. Initialize the Terraform CLI, if required.
+ 
+   ```terraform
+   terraform init
+   ```
+   {: pre}
+
+1. Apply the Terraform execution plan with the `refresh-only` option. Terraform refreshes its state and displays the attributes of the pipeline resource.
+
+   ```terraform
+   terraform apply -refresh-only -auto-approve
+   ```
+   {: pre}
+
+## Deleting a {{site.data.keyword.deliverypipeline}} with the API
+{: #deleting-pipeline-terraform}
+{: api}
+
+1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}.
+1. [Determine the region and ID of the toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#viewing-toolchain-api) that you want to add the {{site.data.keyword.DRA_short}} tool integration to.
+1. Delete the pipeline.
+   
+   ```curl
+   curl -X DELETE \
+     https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id}/tools/{pipeline_id} \
+     -H 'Authorization: Bearer {token}'
+   ```
+   {: pre}
+
+The following table lists and describes each of the variables that are used in the previous step.   
+    
+| Variable | Description |
+|:---------|:------------|
+| `{region}` | The region in which the toolchain resides, for example, `us-south`. |
+| `{toolchain_id}` | The ID of the toolchain that contains the pipeline to delete. |
+| `{pipeline_id}` | The ID of the pipeline that you want to delete. |
+| `{token}` | A valid IAM bearer token. |
+{: caption="Table 5. Variables for deleting the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
+
+## Deleting a {{site.data.keyword.deliverypipeline}} with Terraform
+{: #deleting-pipeline-terraform}
+{: terraform}
+
+1. Locate the Terraform file (for example, `main.tf`) that contains the `resource` block for the existing pipeline.
+
+   The `resource` in the following example describes an existing pipeline.
+
+   ```terraform
+   data "ibm_resource_group" "group" {
+     name = "default"
+   }
+
+   resource "ibm_cd_toolchain" "my_toolchain" {
+     name              = "terraform_toolchain"
+     resource_group_id = data.ibm_resource_group.group.id
+   }
+
+   resource "ibm_cd_toolchain_tool_pipeline" "my_pipeline_tool" {
+     parameters {
+        name = "terraform-pipeline-integration"
+     }
+     toolchain_id = ibm_cd_toolchain.my_toolchain.id
+   }
+
+   resource "ibm_cd_tekton_pipeline" "my_tekton_pipeline" {
+    worker {
+        id = "public"
+    }
+    pipeline_id = ibm_cd_toolchain_tool_pipeline.my_pipeline_tool.tool_id
+   }
+   ```
+   {: codeblock}
+
+1. Remove the `ibm_cd_toolchain_tool_pipeline` and `ibm_cd_tekton_pipeline` `resource` blocks from your Terraform file.
+1. Initialize the Terraform CLI, if required.
+
+   ```terraform
+   terraform init
+   ```
+   {: pre}
+
+1. Create a Terraform execution plan. This plan summarizes all of the actions that must run to delete the pipeline.
+
+   ```terraform
+   terraform plan
+   ```
+   {: pre}
+
+1. Apply the Terraform execution plan. Terraform takes all of the required actions to delete the pipeline.
+
+   ```terraform
+   terraform apply
+   ```
+   {: pre}
 
 ## Viewing details for a TaskRun pod
 {: #view_pod_details}
+{: ui}
 
-To view information about the underlying Kubernetes pod for a specific `TaskRun`, click the `Task` name and then click the **Pod** tab.
+To view information about the underlying Kubernetes pod for a specific `TaskRun`, click the `Task` name and then click **Pod**.
 
 You can view the details for the pod and any related events that are reported by the worker. This information can help you to debug specific failures or to determine where time is spent during a run.
 
