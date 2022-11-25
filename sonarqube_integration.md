@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-09"
+lastupdated: "2022-11-25"
 
 keywords: tool integrations, IBM Cloud Public, Sonarqube
 
@@ -111,11 +111,11 @@ You must specify the `tool_type_id` property in the request body with the `sonar
 
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
-| name | required, updatable | String | name | The name of this tool integration, for example, `my-sonarqube`, that is displayed in your toolchain. |
-| dashboard_url | required, updatable | String | dashboard_url | The URL of the SonarQube instance that you want to open when you click the SonarQube card in your toolchain. |
-| user_login | optional, updatable | String | user_login | If you are using an authentication token, leave this field empty. |
-| user_password | optional, updatable | Password | user_password | The password or SonarQube authentication token. |
-| blind_connection | optional, updatable, `Default: false` | Boolean | blind_connection | Set to `true` only if the server is not addressable on the public internet. {{site.data.keyword.cloud_notm}} cannot validate the connection details that you provide. |
+| blind_connection | optional, updatable, `Default: false` | Boolean | blind_connection | Set to `true` to instruct {{site.data.keyword.contdelivery_short}} to ignore the configuration validation of this integration. Also, set to `true` if the SonarQube server is not addressable on the public internet. |
+| dashboard_url | required, updatable | String | server_url | The URL of the SonarQube server dashboars for this tool integration. In the graphical UI, the browser goes to this dashboard when you click the SonarQube tool integration card. |
+| name | required, updatable | String | name | The name of this tool integration. |
+| user_login | optional, updatable | String | user_login | The user ID for authenticating with the SonarQube server. |
+| user_password | optional, updatable | Password | user_password | The password or token to authenticate with the SonarQube server. You can use a toolchain secrets reference for this parameter. For more information about secrets references, see [Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
 {: caption="Table 1. SonarQube tool integration parameters" caption-side="bottom"}
 
 ## Learn more about SonarQube
