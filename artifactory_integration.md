@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-03"
+lastupdated: "2022-11-24"
 
 keywords: tool integrations, IBM Cloud Public, Artifactory
 
@@ -131,16 +131,16 @@ You must specify the `tool_type_id` property in the request body with the `artif
 
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
-| name | required, updatable | String | name | The name of this tool integration, for example, **my-artifactory** that is displayed in your toolchain. |
-| dashboard_url | optional, updatable | String | dashboard_url | The URL that you want to go to when you click the Artifactory card. |
-| type | required, updatable | String | type | The type of repo for your Artifactory tool integration. |
-| user_id | optional, updatable | String | user_id | The user ID or email for your Artifactory repo. |
-| token | optional, updatable | Password | token | The API key for your Artifactory repo. |
-| release_url | optional, updatable | String | release_url | The URL for your Artifactory release repo. |
-| mirror_url | optional, updatable | String | mirror_url | The URL for your Artifactory virtual repo, which is a repo that can show your private repos and a cache of the public repos. |
-| snapshot_url | optional, updatable | String | snapshot_url | The URL for your Artifactory snapshot repo. |
-| repository_name | optional, updatable | String | repository_name | The name of the Artifactory repo where your Docker images are located. |
-| repository_url | optional, updatable | String | repository_url | The URL of the Artifactory repos where your Docker images are located. |
+| dashboard_url | optional, updatable | String | dashboard_url | The URL of the Artifactory server dashboard for this tool integration. In the graphical UI, the browser goes to this dashboard when you click the Artifactory tool integration card. |
+| mirror_url | optional, updatable | String | mirror_url | The URL of your Artifactory virtual repo where you can view your private repos and a cache of the public repos. |
+| name | required, updatable | String | name | The name of this tool integration. |
+| release_url | optional, updatable | String | release_url | The URL of your Artifactory release repo. |
+| repository_name | optional, updatable | String | repository_name | The name of your Artifactory repo where your Docker images are located. |
+| repository_url | optional, updatable | String | repository_url | The URL of your Artifactory repo where your Docker images are located. |
+| snapshot_url | optional, updatable | String | snapshot_url | The URL of your Artifactory snapshot repo. |
+| token | optional, updatable | Password | token | The Identity Token or API key for your Artifactory repo. You can use a toolchain secret reference for this parameter. For more information about toolchain secret references, see [Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
+| type | required, updatable | String | type | The repo type for your Artifactory tool integration. |
+| user_id | optional, updatable | String | user_id | The user ID or email address for your Artifactory repo. |
 {: caption="Table 1. Artifactory tool integration parameters" caption-side="bottom"}
 
 ## Learn more about Artifactory
