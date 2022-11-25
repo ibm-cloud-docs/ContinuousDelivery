@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-09"
+lastupdated: "2022-11-22"
 
 keywords: tool integrations, IBM Cloud Public, Delivery Pipeline Private Worker
 
@@ -42,7 +42,7 @@ You must specify the `tool_type_id` property in the request body with the `priva
 
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
-| name | required, updatable | String | name | The name for this tool integration, for example, `my-private-worker` that is displayed on your toolchain. |
-| workerQueueCredentials | required, updatable | Password | worker_queue_credentials | A secret from the secrets store, or a service ID API key that you create, that is used by the private worker to authenticate access to the work queue. |
-| workerQueueIdentifier | optional, updatable | String | worker_queue_identifier | The service ID that is used to access the work queue. |
+| name | required, updatable | String | name | The name of this tool integration. |
+| workerQueueCredentials | required, updatable | Password | worker_queue_credentials | The service ID API key that is used by the private worker to authenticate access to the work queue. You can use a toolchain secret reference for this parameter. For more information about secret references, see [Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
+| workerQueueIdentifier | optional, updatable | String | worker_queue_identifier | The service ID that identifies the run request queue for this private worker. |
 {: caption="Table 1. {{site.data.keyword.deliverypipeline}} Private Worker tool integration parameters" caption-side="bottom"}
