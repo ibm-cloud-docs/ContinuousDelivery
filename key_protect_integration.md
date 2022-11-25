@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-09"
+lastupdated: "2022-11-25"
 
 keywords: tool integrations, IBM Cloud Public, Key Protect
 
@@ -107,10 +107,10 @@ You must specify the `tool_type_id` property in the request body with the `keypr
 
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
-| name | required, updatable | String | name | The name for this tool integration that is displayed in your toolchain. |
-| region | required, updatable | String | region | The region that your {{site.data.keyword.keymanagementserviceshort}} instance resides in. |
-| resource-group | required, updatable | String | resource_group | The resource group that contains your {{site.data.keyword.keymanagementserviceshort}} instance. |
-| instance-name | required, updatable | String | instance_name | The name of your {{site.data.keyword.keymanagementserviceshort}} instance, such as `Key Protect-01`, that exists within the specified region and resource group. |
+| instance-name | required, updatable | String | instance_name | The name of the {{site.data.keyword.keymanagementserviceshort}} service instance. |
+| name | required, updatable | String | name | The name of this tool integration. Secret references include this name to identify the secrets store where the secrets reside. All of the secrets store tools that are integrated into a toolchain must have a unique name to allow secret resolution to function properly. |
+| region | required, updatable | String | location | The {{site.data.keyword.cloud_notm}} region where the {{site.data.keyword.keymanagementserviceshort}} service instance is located. |
+| resource-group | required, updatable | String | resource_group_name | The name of the resource group where the {{site.data.keyword.keymanagementserviceshort}} service instance is located. |
 {: caption="Table 1. {{site.data.keyword.keymanagementserviceshort}} tool integration parameters" caption-side="bottom"}
 
 ## Learn more about {{site.data.keyword.keymanagementserviceshort}}
