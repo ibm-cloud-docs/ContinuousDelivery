@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-09"
+lastupdated: "2022-11-25"
 
 keywords: tool integrations, IBM Cloud Public, Hashicorp Vault
 
@@ -47,18 +47,18 @@ You must specify the `tool_type_id` property in the request body with the `hashi
 
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
-| name | required, updatable | String | name | The name of this tool integration, for example `my-hashicorp-vault`, that is displayed in your toolchain. |
-| server_url | required, updatable | String | server_url | The server URL for your HashiCorp Vault instance. |
 | authentication_method | required, updatable | String | authentication_method | The authentication method for your HashiCorp Vault instance. |
-| token | optional, updatable | Password | token | The authentication token for your HashiCorp Vault instance. |
-| role_id | optional, updatable | Password | role_id | The authentication role ID for your HashiCorp Vault instance. |
-| secret_id | optional, updatable | Password | secret_id | The authentication secret ID for your HashiCorp Vault instance. |
-| dashboard_url | required, updatable | String | dashboard_url | The URL that you want to go to when you click the HashiCorp Vault integration tile. |
+| dashboard_url | required, updatable | String | dashboard_url | The URL of the HashiCorp Vault server dashboard for this tool integration. In the graphical UI, the browser goes to this dashboard when you click the HashiCorp Vault tool integration card. |
+| default_secret | optional, updatable | String | default_secret | The default secret name that is used if your HashiCorp Vault instance does not return a list of secret names. |
+| name | required, updatable | String | name | The name of this tool integration. Secret references include this name to identify the secrets store where the secrets reside. All of the secrets store tools that are integrated into a toolchain must have a unique name to allow secret resolution to function properly. |
+| password | optional, updatable | Password | password | The authentication password for your HashiCorp Vault instance when you use the `userpass` authentication method. This parameter is ignored for other authentication methods. You can use a toolchain secret reference for this parameter. For more information about using secret references, see [Protecting your sensitive data in Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
 | path | required, updatable | String | path | The mount path where your secrets are stored in your HashiCorp Vault instance. |
-| secret_filter | optional, updatable | String | secret_filter | A regular expression that filters the list of secret names that are returned from your HashiCorp Vault instance. |
-| default_secret | optional, updatable | String | default_secret | A default secret name that is used if a list of secret names is not returned from your HashiCorp Vault instance. |
-| username | optional, updatable | String | username | The authentication username for your HashiCorp Vault instance. |
-| password | optional, updatable | Password | password | The authentication password for your HashiCorp Vault instance. |
+| role_id | optional, updatable | Password | role_id | The authentication role ID for your HashiCorp Vault instance when you use the `approle` authentication method. This parameter is ignored for other authentication methods. Manage `role_id` as a secret and do not share this parameter in plain text. You can use a toolchain secret reference for this parameter. For more information about secret references, see [Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
+| secret_filter | optional, updatable | String | secret_filter | A regular expression to filter the list of secret names that are returned from your HashiCorp Vault instance. |
+| secret_id | optional, updatable | Password | secret_id | The authentication secret ID for your HashiCorp Vault instance when you use the `approle` authentication method. This parameter is ignored for other authentication methods. You can use a toolchain secret reference for this parameter. For more information about secret references, see [Protecting your sensitive data in Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
+| server_url | required, updatable | String | server_url | The server URL for your HashiCorp Vault instance. |
+| token | optional, updatable | Password | token | The authentication token for your HashiCorp Vault instance when you use the `github` and `token` authentication methods. This parameter is ignored for other authentication methods. You can use a toolchain secret reference for this parameter. For more information about secret references, see [Protecting your sensitive data in Continuous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
+| username | optional, updatable | String | username | The authentication username for your HashiCorp Vault instance when you use the `userpass` authentication method. This parameter is ignored for other authentication methods. |
 {: caption="Table 1. HashiCorp Vault tool integration parameters" caption-side="bottom"}
 
 ## Learn more about HashiCorp Vault
