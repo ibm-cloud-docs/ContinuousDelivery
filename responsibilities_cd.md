@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-11-21"
 
 keywords: customer responsibilities, IBM responsibilities, terms and conditions, disaster recovery, toolchain backup
 
@@ -10,18 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
+{{site.data.keyword.attribute-definition-list}}
 
 # Your responsibilities with using {{site.data.keyword.contdelivery_short}}
 {: #responsibilities-cd}
@@ -43,7 +32,7 @@ Incident and operations management includes tasks such as monitoring, event mana
 | Task | IBM responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
 |Maintain high availability and respond to incidents.| Operate the {{site.data.keyword.contdelivery_short}} service in accordance with the {{site.data.keyword.cloud_notm}} Public [Service Level Agreements (SLAs)](/docs/overview/terms-of-use?topic=overview-slas).  | Plan the deployment of your apps and data to meet your availability objectives. For more information about managing availability, see [How do I ensure zero downtime?](/docs/overview/terms-of-use?topic=overview-zero-downtime) |
-{: caption="Table 1. Responsibilites for incident and operations" caption-side="top"}
+{: caption="Table 1. Responsibilities for incident and operations" caption-side="top"}
 
 
 ## Change management
@@ -66,7 +55,7 @@ Identity and access management includes tasks such as authentication, authorizat
 
 | Task | IBM responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
-|Manage access to toolchains in resource groups and their associated IBM-hosted tools, except for {{site.data.keyword.gitrepos}}.| N/A  | Grant, revoke, and manage access to toolchains by using {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). For more information about access management, see [Managing user access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). |
+|Manage access to toolchains in resource groups and their associated IBM-hosted tools, except for {{site.data.keyword.gitrepos}}.| N/A  | Grant, revoke, and manage access to toolchains by using {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). For more information about access management, see [Managing user access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). |
 |Manage the {{site.data.keyword.contdelivery_short}} service's access to third-party tools that are integrated into toolchains. | N/A  | Add, update, or delete third-party tool integration configurations (including access credentials for tool integrations) in toolchains. For more information about working with tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations). |
 |Manage access to repos in {{site.data.keyword.gitrepos}}. | N/A  | From the **Settings** > **Members** page in the {{site.data.keyword.gitrepos}} dashboard, manage project members and role permissions. |
 |Manage all other access to third-party tools that are integrated with {{site.data.keyword.contdelivery_short}}. | N/A  | Manage access by using the capabilities that are provided by the third-party tools.  |
@@ -80,7 +69,7 @@ Security and regulation compliance includes tasks such as security controls impl
 | Task | IBM responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
 |Meet security and compliance objectives.| Provide a secure {{site.data.keyword.contdelivery_short}} service that complies with key standards. For more information about data security, see [How do I know that my data is safe?](/docs/overview/terms-of-use?topic=overview-security)  | Secure your workloads and data. To learn more about securing your cloud apps, see [Security to safeguard and monitor your cloud apps](https://www.ibm.com/cloud/garage/architectures/securityArchitecture){: external}. To learn more about securing your data while you are using the {{site.data.keyword.contdelivery_short}} service, see [Securing your data](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security). |
-{: caption="Table 4. Responsibilites for security and regulation compliance" caption-side="top"}
+{: caption="Table 4. Responsibilities for security and regulation compliance" caption-side="top"}
 
 ## Disaster recovery
 {: #disaster-recovery}
@@ -92,43 +81,22 @@ IBM is responsible for maintaining backups and high availability of the {{site.d
 
 | Task | IBM responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
-|Back up toolchain data.| Maintain regular backups of toolchain and pipeline definitions, Git repos, and any other toolchain integration data that is stored and managed by IBM.  | To support global failover, create and maintain copies of your toolchain and pipeline definitions, including tool integration data and your Git repos, in another IBM region. |
-|Restore toolchain data.| Restore all toolchain and Git repos to the original {{site.data.keyword.cloud_notm}} region, when that region is available.    | To support global failover, manually switch to using the copied toolchains and repos in another region. |
-{: caption="Table 5. Responsibilites for disaster recovery" caption-side="top"}
+|Back up toolchain data.| Maintain regular backups of toolchain and pipeline definitions, Git repos, and any other toolchain integration data that is stored and managed by IBM.  | To support global failover, create and maintain alternative toolchain and pipeline definitions, including tool integration data and your Git repos, in another IBM region. |
+|Restore toolchain data.| Restore all toolchain and Git repos to the original {{site.data.keyword.cloud_notm}} region, when that region is available.    | To support global failover, manually switch to using the alternative toolchains and repos in another region. |
+{: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}
+
+### Managing alternative toolchains in different regions
+{: #toolchains-alternative}
+
+You can define your toolchain by using Terraform Configuration Language, and then apply and maintain your toolchain definition in two regions: a primary region with active pipelines, and an alternative region with idle pipelines. If you use {{site.data.keyword.gitrepos}}, you can also mirror your Git repos from the primary region to the alternative region. Maintaining primary and alternative toolchains and Git repos provides faster failover and redundancy. It also ensures smooth operation if issues arise in the primary region. By codifying your toolchain in Terraform, you can update your toolchain and apply the changes to both regions.
+
+For more information about using Terraform, see [Setting up Terraform for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup).
 
 ### Backing up your toolchains to a different region
 {: #toolchains-backup}
 
-IBM backs up and restores your toolchain data if a disaster occurs. You can also back up your toolchain to a different region by mirroring your Git repositories (repos), and then saving and restoring your toolchain. Backing up a toolchain provides faster failover and redundancy. It also ensures smooth operation if issues arise in the original region.
+If you have an existing toolchain, such as one that is not defined by using Terraform, you can save a backup of your existing toolchain, and then restore a copy into an alternative region. If you use {{site.data.keyword.gitrepos}}, you can also mirror your Git repos from the primary region to the alternative region.
 
-#### Mirroring your Git repos
-{: #mirror_git_repo}
-
-If you use {{site.data.keyword.gitrepos}} for both your source and target repos, you can use the built-in GitLab mirroring feature. This feature automatically syncs your source and target repos. If you use a different Git provider, you must set up your own mirroring solution. Alternatively, to mirror changes in the source repo, manually clone and push your Git repos to the target repo.
-
-If you cannot mirror your projects, you can [export](https://us-south.git.cloud.ibm.com/help/user/project/settings/import_export.md#exporting-a-project-and-its-data){: external} and [import](https://us-south.git.cloud.ibm.com/help/user/project/settings/import_export.md#importing-the-project){: external} your projects instead. However, the source and target repos are not synchronized if changes are made to the source repo.
-{: tip}
-
-To mirror a {{site.data.keyword.gitrepos}} repo, complete the following steps:
-
-1. Create a blank GitLab project in the target repo. Do not initialize this project with a README file.
-1. [Create a personal access token](https://us-south.git.cloud.ibm.com/help/user/profile/personal_access_tokens.md#creating-a-personal-access-token){: external} with the `write_repository` scope in the target region. Save a copy of this token.
-1. Use [Push mirroring](https://us-south.git.cloud.ibm.com/help/user/project/repository/repository_mirroring.md#pushing-to-a-remote-repository-core){: external} to push the source repo to the target repo:     
-
-   a. From the source repo, select **Settings** > **Repository**.
-
-   b. In **Mirror repository** section of the Repository page, type the URL of the target repo.
-
-   c. Select **Push** to specify the direction of the mirror.
-
-   d. Select **Password** to use the password authentication method.
-
-   e. Type the personal access token that you created in step 2.
-
-   f. Click **Mirror repository** to start the mirroring process. It might take up to five minutes for the process to start.
-  
-1. In the target region, locate the mirror of your repo to verify that it was successfully mirrored.
-  
 #### Saving and restoring your toolchain
 {: #save_restore_toolchain}
 
@@ -180,11 +148,6 @@ To save and restore a toolchain, complete the following steps:
 
    b. Verify that your pipelines can be [started manually](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_stages).  
   
-#### Using your backup toolchain
-{: #use_backup_toolchain}
-
-Backup toolchains are intended to provide short-term continuity if issues exist in a particular region. Do not commit to target repos directly or enable pipeline commit triggers on target pipelines. If you commit to the target repo directly and then return to using the source repo, you risk conflicts and inconsistencies because the repos are not synchronized. If you enable commit triggers and then return to using the source repo, both pipelines run when code is updated. To avoid these scenarios, run your pipelines manually and return to the source toolchain as soon as possible.
-
 #### Known limitations
 {: #backup_known_limitations}
 
@@ -197,3 +160,36 @@ Backing up your toolchain creates a copy of the toolchain itself, but it does no
 * {{site.data.keyword.DRA_short}} data is not included in the copied toolchain.
 
 If your toolchain is subject to these limitations, you cannot use the script to back up and restore these aspects of your toolchain. Whenever the original toolchain is updated, you must keep the backup copy current.
+
+### Mirroring your Git repos
+{: #mirror_git_repo}
+
+If you use {{site.data.keyword.gitrepos}} for both your source and target repos, you can use the built-in GitLab mirroring feature. This feature automatically synchronizes your source and target repos. If you use a different Git provider, you must set up your own mirroring solution. Alternatively, to mirror changes in the source repo, manually clone and push your Git repos to the target repo.
+
+If you cannot mirror your projects, you can [export](https://us-south.git.cloud.ibm.com/help/user/project/settings/import_export.md#exporting-a-project-and-its-data){: external} and [import](https://us-south.git.cloud.ibm.com/help/user/project/settings/import_export.md#importing-the-project){: external} your projects instead. However, the source and target repos are not synchronized if changes are made to the source repo.
+{: tip}
+
+To mirror a {{site.data.keyword.gitrepos}} repo, complete the following steps:
+
+1. Create a blank GitLab project in the target repo. Do not initialize this project with a readme file.
+1. [Create a personal access token](https://us-south.git.cloud.ibm.com/help/user/profile/personal_access_tokens.md#creating-a-personal-access-token){: external} with the `write_repository` scope in the target region. Save a copy of this token.
+1. Use [Push mirroring](https://us-south.git.cloud.ibm.com/help/user/project/repository/repository_mirroring.md#pushing-to-a-remote-repository-core){: external} to push the source repo to the target repo:     
+
+   a. From the source repo, select **Settings** > **Repository**.
+
+   b. In **Mirror repository** section of the Repository page, type the URL of the target repo.
+
+   c. Select **Push** to specify the direction of the mirror.
+
+   d. Select **Password** to use the password authentication method.
+
+   e. Type the personal access token that you created in step 2.
+
+   f. Click **Mirror repository** to start the mirroring process. It might take up to five minutes for the process to start.
+  
+1. In the target region, locate the mirror of your repo to verify that it was successfully mirrored.
+
+### Using your backup toolchain
+{: #use_backup_toolchain}
+
+Backup or alternative toolchains are intended to provide short-term continuity if issues exist in a particular region. Do not commit to target (alternative) repos directly or enable pipeline commit triggers on target pipelines. If you commit to the target repo directly and then return to using the source (primary) repo, you risk conflicts and inconsistencies because the repos are not synchronized. If you enable commit triggers and then return to using the source repo, both pipelines run when code is updated. To avoid these scenarios, run your pipelines manually and return to the source toolchain as soon as possible.
