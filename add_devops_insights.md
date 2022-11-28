@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-11-11"
 
 keywords: devops insights, devops, insights, integrate, adding, code coverage, test, tests, verification, install, app, dashboard, risk
 
@@ -10,14 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:download: .download}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Adding {{site.data.keyword.DRA_short}} to your toolchain
 {: #add-devops-insights}
@@ -37,6 +30,10 @@ For more information about toolchains, see [Creating a toolchain from an app](/d
 ## Integrating {{site.data.keyword.DRA_short}}
 {: #integrate-insights-toolchain}
 
+### Integrating {{site.data.keyword.DRA_short}} by using the console
+{: #integrate-insights-toolchain-ui}
+{: ui}
+
 You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it from the tool integration catalog.
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) **> DevOps**.
@@ -46,6 +43,128 @@ You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it fro
 5. Click **Create Integration**.
 6. On the Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}** to view your {{site.data.keyword.DRA_short}} dashboard.
 
+### Integrating {{site.data.keyword.DRA_short}} with the API
+{: #integrate-insights-toolchain-api}
+{: api}
+
+1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+   
+   ```bash
+   export CD_TOOLCHAIN_AUTH_TYPE=iam
+   export CD_TOOLCHAIN_APIKEY={iam_api_key}
+   export CD_TOOLCHAIN_URL=https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains
+   ```
+   {: pre}
+
+2. [Determine the region and ID of the toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#viewing-toolchain-api) that you want to add the {{site.data.keyword.DRA_short}} tool integration to.
+
+3. Add the {{site.data.keyword.DRA_short}} tool integration to the toolchain.
+
+   ```curl
+   curl -X POST \
+     https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id}/tools \
+     -H 'Authorization: Bearer {token}' \
+     -H 'Accept: application/json` \
+     -H 'Content-Type: application/json' \
+       -d '{
+       "tool_type_id": "draservicebroker",
+       "name": "{tool_integration_name}"
+     }'
+   ```
+   {: pre}
+   {: curl}
+
+   ```javascript
+   const CdToolchainV2 = require('continuous-delivery-node-sdk/cd-toolchain/v2');
+   ...
+   const toolchainService = CdToolchainV2.newInstance();
+   const draPrototypeModel = {
+      toolchainId: toolchainId,
+      toolTypeId: 'draservicebroker',
+      name: toolIntegrationName
+   };
+   const draTool = await toolchainService.createTool(draPrototypeModel);
+   ```
+   {: codeblock}
+   {: node}
+
+   ```go
+   import (
+	   "github.com/IBM/continuous-delivery-go-sdk/cdtoolchainv2"
+   )
+   ...
+   toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
+   toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
+   createDraToolOptions := toolchainClient.NewCreateToolOptions(toolchainId, "draservicebroker")
+   createDraToolOptions.SetName(toolIntegrationName)
+   draTool, response, err := toolchainClient.CreateTool(createDraToolOptions)
+   ```
+   {: codeblock}
+   {: go}
+
+The following table lists and describes each of the variables that are used in the previous steps.   
+    
+| Variable | Description |
+|:---------|:------------|
+| `{iam_api_key}` | Your IAM API key. |
+| `{region}` | The region in which the toolchain resides. For example, `us-south`. |
+| `{tool_integration_name}` | A name for your tool integration. |
+| `{toolchain_id}` | The ID of the toolchain to which to add the tool integration. |
+| `{token}` | A valid IAM bearer token. |
+{: caption="Table 1. Variables for adding the {{site.data.keyword.DRA_short}} tool integration with the API" caption-side="top"}
+
+For more information about the {{site.data.keyword.DRA_short}} tool integration, see [Adding DevOps Insights](/docs/ContinuousDelivery?topic=ContinuousDelivery-dra).
+
+### Integrating {{site.data.keyword.DRA_short}} with Terraform
+{: #integrate-insights-toolchain-terraform}
+{: terraform}
+
+1. To install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform, follow the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
+
+2. Locate the Terraform file (for example, `main.tf`) that contains the resource block for the toolchain to which you want to add the {{site.data.keyword.DRA_short}} tool integration. In this file, add the configuration to create the tool integration.
+
+   The following example creates the toolchain if it does not exist, then adds the {{site.data.keyword.DRA_short}} tool integration by using the `ibm_cd_toolchain_tool_devopsinsights` resource.
+  
+   ```terraform
+   data "ibm_resource_group" "group" {
+     name = "default"
+   }
+
+   resource "ibm_cd_toolchain" "cd_toolchain" {
+     name              = "my toolchain"
+     resource_group_id = data.ibm_resource_group.group.id
+   }
+
+   resource "ibm_cd_toolchain_tool_devopsinsights" "cd_toolchain_tool_insights" {
+     toolchain_id = ibm_cd_toolchain.cd_toolchain.id
+   }
+   ```
+   {: codeblock}
+
+   For more information about `ibm_cd_toolchain_tool_devopsinsights`, see the argument reference details in the [Terraform Registry Documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_devopsinsights){: external}.
+  
+3. Initialize the Terraform CLI.
+
+   ```terraform
+   terraform init
+   ```
+   {: pre}
+   
+4. Create a Terraform execution plan. This plan summarizes all of the actions that must run to add the {{site.data.keyword.DRA_short}} tool integration to the toolchain.
+
+   ```terraform
+   terraform plan
+   ```
+   {: pre}
+
+5. Apply the Terraform execution plan. Terraform takes all of the required actions to add the {{site.data.keyword.DRA_short}} tool integration to the toolchain.
+
+   ```terraform
+   terraform apply
+   ```
+   {: pre}
+
+For more information about using Terraform with {{site.data.keyword.contdelivery_short}}, see [Setting up Terraform for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup).
 
 ## Next steps
 {: #adding-next-steps}
