@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-11-10"
 
 keywords: Delivery Pipeline, tool integration, toolchains, yaml, pipeline jobs
 
@@ -10,20 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:faq: data-hd-content-type='faq'}
-{:support: data-reuse='support'}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:download: .download}
+{{site.data.keyword.attribute-definition-list}}
 
 # FAQs for {{site.data.keyword.deliverypipeline}}
 {: #faq_delivery_pipeline}
@@ -87,3 +74,67 @@ For more information about the `pipeline-run` command, see [pipeline-run](/docs/
 {: support}
 
 You can export the definition for an entire pipeline by appending `/yaml` to the pipeline URL. For more information about exporting the definition for an entire pipeline, see [Modifying, exporting, and deleting {{site.data.keyword.contdelivery_short}} pipeline data](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_personal_data#managing_pipeline_data).
+
+
+## Can I manage delivery pipelines by using Terraform?
+{: #terraform}
+{: faq}
+{: support}
+
+You can use Terraform to provision, update, and de-provision Tekton pipelines, definitions, properties, triggers, and trigger properties. For more information about using Terraform with Tekton pipelines, see [Working with Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines), and the [`ibm_cd_tekton_pipeline` resources documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_tekton_pipeline){: external}.
+
+You cannot use Terraform to trigger Tekton pipeline runs, or to manage Tekton pipeline runs and logs. You can perform these tasks with the Tekton pipeline APIs, or by using the console.
+
+You cannot use Terraform to manage Classic pipelines. You can manage Classic pipelines only by using the console.
+
+
+## Can I manage delivery pipelines by using an API?
+{: #api}
+{: faq}
+{: support}
+
+You can use HTTP APIs or selected programming language SDKs to provision, update, and de-provision Tekton pipelines, definitions, properties, triggers, and trigger properties. You can also use the APIs and SDKs to trigger Tekton pipeline runs, and to manage Tekton pipeline runs and logs. For more information about using Tekton pipelines with the API, see [Working with Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines), and the [CD Tekton Pipeline API docs](https://cloud.ibm.com/apidocs/tekton-pipeline){: external}.
+
+You cannot use APIs to manage Classic pipelines. You can manage Classic pipelines only by using the console.
+
+
+## What is the difference between `ibm_cd_toolchain_tool_pipeline` and `ibm_cd_tekton_pipeline` in Terraform?
+{: #terraform_integrating_pipelines}
+{: faq}
+{: support}
+
+An `ibm_cd_tekton_pipeline` resource represents a Tekton Pipeline. An `ibm_cd_toolchain_tool_pipeline` resource represents the tool integration that binds a Tekton Pipeline into a toolchain. In the architecture of the {{site.data.keyword.contdelivery_short}} toolchain platform, tool integrations are distinct entities from the tools that they represent. A tool integration is owned by a toolchain, refers to a tool, and manages how the tool contributes its capabilities to the toolchain.
+
+To construct a toolchain that includes a Tekton pipeline, you must declare three resources:
+
+* An [`ibm_cd_toolchain` resource](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain){: external} that is the toolchain.
+* An [`ibm_cd_toolchain_tool_pipeline` resource](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_pipeline){: external} that is the tool integration that binds the Tekton pipeline into the toolchain.
+* An [`ibm_cd_tekton_pipeline` resource](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_tekton_pipeline){: external} that is the Tekton pipeline.
+
+The following example shows a toolchain that is constructed by declaring these resources.
+
+```terraform
+data "ibm_resource_group" "group" {
+  name = "default"
+}
+
+resource "ibm_cd_toolchain" "cd_toolchain" {
+  name              = "my toolchain"
+  resource_group_id = data.ibm_resource_group.group.id
+}
+
+resource "ibm_cd_toolchain_tool_pipeline" "cd_pipeline_integration" {
+  toolchain_id = ibm_cd_toolchain.cd_toolchain.id
+  parameters {
+    name = "my pipeline integration"
+  }
+}
+
+resource "ibm_cd_tekton_pipeline" "cd_pipeline" {
+  pipeline_id = ibm_cd_toolchain_tool_pipeline.cd_pipeline_integration.tool_id
+  worker {
+    id = "public"
+  }
+}
+```
+{: codeblock}
