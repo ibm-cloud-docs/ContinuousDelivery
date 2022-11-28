@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-13"
+lastupdated: "2022-11-23"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -10,18 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
+{{site.data.keyword.attribute-definition-list}}
 
 # Securing your data in {{site.data.keyword.contdelivery_short}}
 {: #cd_data_security}  
@@ -47,6 +36,8 @@ To keep your credentials secure, make sure that you follow this guidance:
 * Do not store credentials in Git repos. Depending on the repo settings, files within a repo might be visible to other members of your organization, other {{site.data.keyword.cloud_notm}} users, or the public internet.
 * Do not include user credentials in {{site.data.keyword.deliverypipeline}} definitions because they might be visible to other users. Specifically, do not place user credentials within {{site.data.keyword.deliverypipeline}} Classic job definition scripts, {{site.data.keyword.deliverypipeline}} Tekton yaml files, or scripts that are started by delivery pipelines.
 * Do not publish user credentials in log files that are created when a pipeline runs because these files might be shared.
+* Do not specify credentials in plain text in calls to {{site.data.keyword.contdelivery_short}} APIs, such as when you configure [tool integrations](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [Tekton pipeline environment properties](https://cloud.ibm.com/apidocs/tekton-pipeline#create-tekton-pipeline-properties){: external}, or [Tekton pipeline trigger properties](https://cloud.ibm.com/apidocs/tekton-pipeline#create-tekton-pipeline-trigger-properties){: external}. 
+* Do not specify credentials in plain text in Terraform configuration files, such as when you define tool integration resources, Tekton pipeline environment property resources, or Tekton pipeline trigger property resources. Instead, manage credentials in a secrets storage service and specify them by reference in API calls and Terraform configurations. For more information about managing secrets by reference, see [Protecting your credentials by using secrets references](#cd_secrets_references).
    
 {{site.data.keyword.cloud_notm}} provides several options that you can use for secure key storage and secrets.
 
@@ -58,25 +49,173 @@ To keep your credentials secure, make sure that you follow this guidance:
    
 For more information about secure DevOps best practices, see [DevOps Security](https://www.ibm.com/cloud/learn/devops-a-complete-guide?mhsrc=ibmsearch_a&mhq=Secure%20DevOps#toc-security-j2-0639C){: external}.
 
-## Protecting your personal data when you use the Professional plan 
+## Protecting your credentials by using secrets references
+{: #cd_secrets_references}
+
+Many of the properties that you can configure when you are working with {{site.data.keyword.contdelivery_short}} toolchains and delivery pipelines, such as passwords, API keys, certificates, or other tokens, are classified as secrets or credentials. To set the value of a secure property, you can either use plain text or a secrets reference. Using a secrets reference is the recommended method for setting the value of a secure property.
+
+When you set a secure property with a *plain text* secret value, {{site.data.keyword.contdelivery_short}} actively encrypts and stores the value internally. Although the value is kept secure within the {{site.data.keyword.contdelivery_short}} service, the service cannot protect the value on the client side. When you set a secure property by using the console in your browser, by calling an API, or by configuring a Terraform resource, the plain text secret might be exposed on your local systems. Plain text secrets are also more difficult to rotate. When a secret, such as an API key, must be rotated, all secure properties that carry the secret value must also be located and updated.
+
+When you set a secure property with a *secrets reference* value, the value is a specially formatted string that refers to the location or address of a secret that is managed within a secrets storage service such as [{{site.data.keyword.keymanagementservicefull}}](/docs/key-protect), [{{site.data.keyword.secrets-manager_full}}](/docs/secrets-manager), or HashiCorp Vault. Although {{site.data.keyword.contdelivery_short}} actively encrypts and stores the secrets reference value internally, the secret value is not exposed on the client side. When {{site.data.keyword.contdelivery_short}} must retrieve the secret to perform processing on your behalf, it internally retrieves the value from the referenced secrets store. Secrets references are also resilient to rotation. Typically, when a secret is rotated within a secrets store, the location or address of the secret remains the same. Only the secret value itself is changed.
+
+Make sure that you consider the following prerequisites for specifying a secrets reference within the scope of a toolchain:
+
+* The secrets store must be added to the toolchain as a tool integration. For more information about secrets store tool integrations, see [Configuring {{site.data.keyword.keymanagementserviceshort}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-keyprotect), [Configuring {{site.data.keyword.secrets-manager_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager), and [Configuring HashiCorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault).
+* An IAM service-to-service authorization policy must be configured to allow the source toolchain to retrieve secrets from the target secrets store. For more information about service-to-service authorizations, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth).
+
+When you work outside of the console, such as with the API or Terraform, use the following format for secrets reference values:
+
+* `{vault::SECRET_STORE_INTEGRATION_NAME.SECRET_NAME}` when you reference secrets that are contained within {{site.data.keyword.keymanagementserviceshort}}.
+* `{vault::SECRET_STORE_INTEGRATION_NAME.SECRET_GROUP_NAME.SECRET_NAME}` when you reference secrets that are contained within {{site.data.keyword.secrets-manager_short}}.
+* `{vault::SECRET_STORE_INTEGRATION_NAME.SECRET_NAME.FIELD_NAME}` when you reference secrets that are contained within HashiCorp Vault.
+
+where:
+
+* `SECRET_STORE_INTEGRATION_NAME` is the name of the secrets store integration in the toolchain, *not* the name of the secrets store service instance.
+* `SECRET_GROUP_NAME` is the name of the group that contains the secret within {{site.data.keyword.secrets-manager_short}}.
+* `SECRET_NAME` is the name of the secret in the secrets store.
+* `FIELD_NAME` is the name of the field within the HashiCorp Vault secret.
+
+For more information about managing secrets, see [Managing secrets in your toolchains](/docs/devsecops?topic=devsecops-cd-devsecops-toolchains-secrets).
+
+### Specifying secrets references by using the console
+{: #cd_secrets_references_ui}
+{: ui}
+
+When you use the console, the fields for tool integration configuration properties and {{site.data.keyword.deliverypipeline}} properties that are classified as secure are annotated with a key icon. You can click this icon to open a dialog from which you can select a secrets store and secret.
+
+### Specifying secrets references with the API
+{: #cd_secrets_references_api}
+{: api}
+
+You can work with secure properties with secrets reference values in calls to the API. The following example shows how to create a Slack tool integration with an API token (Slack webhook) that is stored in an instance of {{site.data.keyword.keymanagementserviceshort}}. This example assumes that the toolchain already contains a {{site.data.keyword.keymanagementserviceshort}} tool integration and that an IAM service-to-service authorization policy from the source toolchain to the target {{site.data.keyword.keymanagementserviceshort}} service instance is in place.
+
+```curl
+curl -X POST \
+  https://api.us-south.devops.cloud.ibm.com/toolchain/v2/toolchains/01234567-89ab-cdef-0123-456789abcdef/tools \
+  -H "Authorization: Bearer $TOKEN" \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "tool_type_id": "slack",
+    "parameters": {
+      "api_token": "{vault::my-kms-tool-integration.my-slack-webhook}",
+      "channel_name": "my_slack_channel_name",
+      "team_url": "my_slack_team_name"
+    }
+  }' 
+```
+{: pre}
+
+The following table lists and describes each of the secret reference values that are used in the previous example.
+
+| Value | Description |
+|:---------|:------------|
+| `my-kms-tool-integration` | The name of the {{site.data.keyword.keymanagementserviceshort}} tool integration in the toolchain. It is not the name of the {{site.data.keyword.keymanagementserviceshort}} service instance. |
+| `my-slack-webhook` | The name of the standard key that is managed in the {{site.data.keyword.keymanagementserviceshort}} service instance. |
+{: caption="Table 1. Secret reference values" caption-side="top"}
+
+### Specifying secrets references with Terraform
+{: #cd_secrets_references_terraform}
+{: terraform}
+
+You can work with secure properties with secrets reference values in Terraform. The following example shows a complete set of resources for a {{site.data.keyword.keymanagementserviceshort}} service instance, a standard key (Slack webhook), a toolchain, an IAM service-to-service authorization policy, a {{site.data.keyword.keymanagementserviceshort}} tool integration, and a Slack tool integration.
+
+This example includes an `ibm_kms_key` standard key resource with a `payload` that is set to the base64-encoded Slack webhook secret. This code snippet shows the relationship between the name of the key and the value of the secrets reference within the Slack tool integration resource. In practice, it is more secure to create the standard key ahead of time from a separate Terraform project or other process to which only limited, authorized personnel have access.
+{: tip}
+
+```terraform
+variable "slack_webhook" {}
+variable "slack_channel" {}
+variable "slack_team" {}
+
+data "ibm_resource_group" "rg" {
+    name = "default"
+}
+
+resource "ibm_resource_instance" "kms" {
+    name              = "my-kms-service-instance"
+    service           = "kms"
+    plan              = "tiered-pricing"
+    location          = "us-south"
+    resource_group_id = data.ibm_resource_group.rg.id
+}
+
+resource "ibm_kms_key" "key" {
+    instance_id  = ibm_resource_instance.kms.guid
+    key_name     = "my-slack-webhook"
+    standard_key = true
+    payload      = base64encode(var.slack_webhook)
+}
+
+resource "ibm_cd_toolchain" "toolchain" {
+    name              = "tf-toolchain-secret-refs"
+    resource_group_id = data.ibm_resource_group.rg.id
+}
+
+resource "ibm_iam_authorization_policy" "s2s" {
+    source_service_name         = "toolchain"
+    source_resource_instance_id = ibm_cd_toolchain.toolchain.id
+    target_service_name         = "kms"
+    target_resource_instance_id = ibm_resource_instance.kms.guid
+    roles                       = ["Viewer", "ReaderPlus"]
+}
+
+resource "ibm_cd_toolchain_tool_keyprotect" "integration" {
+    toolchain_id = ibm_cd_toolchain.toolchain.id
+    parameters {
+        name           = "my-kms-tool-integration"
+        region         = var.region
+        resource_group = data.ibm_resource_group.rg.name
+        instance_name  = ibm_resource_instance.kms.name
+    }
+    depends_on = [
+        ibm_iam_authorization_policy.s2s
+    ]
+}
+
+resource "ibm_cd_toolchain_tool_slack" "integration" {
+    toolchain_id = ibm_cd_toolchain.toolchain.id
+    parameters {
+        webhook      = "{vault::my-kms-tool-integration.my-slack-webhook}"
+        channel_name = var.slack_channel
+        team_name    = var.slack_team
+    }
+    depends_on = [
+        ibm_cd_toolchain_tool_keyprotect.integration
+    ]
+}
+```
+{: codeblock}
+
+The following table lists and describes each of the secrets reference values that are used in the previous example.
+
+| Value | Description |
+|:---------|:------------|
+| `my-kms-tool-integration` | The name of the {{site.data.keyword.keymanagementserviceshort}} tool integration in the toolchain. It is not the name of the {{site.data.keyword.keymanagementserviceshort}} service instance. |
+| `my-slack-webhook` | The name of the standard key that is managed in the {{site.data.keyword.keymanagementserviceshort}} service instance. |
+{: caption="Table 2. Secret reference values" caption-side="top"}
+
+
+## Protecting your data with customer-managed keys 
 {: #cd_professional_plan}
 
-Personal data that is encrypted by using a customer key can be protected only in the {{site.data.keyword.contdelivery_short}} Professional plan. If you select your own Key Management Service, such as Key Protect or {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, the following values are encrypted by using your own key instead of the encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service.
+By default, {{site.data.keyword.contdelivery_short}} encrypts your data by using keys that are internal to the {{site.data.keyword.contdelivery_short}} service. For greater security and control, you can configure {{site.data.keyword.contdelivery_short}} to encrypt your data by using keys that you manage. This option is available only under the Professional plan, and only at the time that you are provisioning an instance of the {{site.data.keyword.contdelivery_short}} service. If you select your own Key Management Service, such as {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, the following values are encrypted by using your own key instead of the encryption keys that are internal to the {{site.data.keyword.contdelivery_short}} service.
 
 | Component | Value | 
 |:-----------------|:-----------------|
 |Toolchain		|Properties and parameters     |
 |Pipeline		| * Property keys and values \n * Job logs \n * Job artifacts  |
-|Integrations		| * Slack (Slack webhook) \n * Pagerduty (API access key, Integration key) \n * Sauce Labs  (Access key) \n * Artifactory (API key) \n * Hashicorp Vault (Token, Role ID, Secret ID, Password) \n *  Jenkins  (Jenkins API token) \n * JIRA (JIRA API token) \n * Nexus (Authentication token) \n * Rational Team Concert (Password) \n * Security and  Compliance Center ({{site.data.keyword.cloud_notm}} API key) \n * Sonarqube (SonarQube password or authentication token) |
+|Integrations		| * Slack (Slack webhook) \n * Pagerduty (API access key, Integration key) \n * Sauce Labs (Access key) \n * Artifactory (API key) \n * Hashicorp Vault (Token, Role ID, Secret ID, Password) \n *  Jenkins (Jenkins API token) \n * JIRA (JIRA API token) \n * Nexus (Authentication token) \n * Rational Team Concert (Password) \n * Security and Compliance Center ({{site.data.keyword.cloud_notm}} API key) \n * Sonarqube (SonarQube password or authentication token) |
 |{{site.data.keyword.DRA_full}}		|Attachment in test records |
-{: caption="Table 1. Values that are encrypted by using your own key" caption-side="top"}
+{: caption="Table 3. Values that are encrypted by using your own key" caption-side="top"}
 
 The following components encrypt personal data by using only the provider-managed encryption key.
 
 | Component | Value | 
 |:-----------------|:-----------------|
 |{{site.data.keyword.gitrepos}}		| * Issues, pull requests, and source code \n * Personal information, such as name, email, profile picture, address, and other information from the profile page     |
-{: caption="Table 2. Values that are encrypted by using the provider-managed key" caption-side="top"}
+{: caption="Table 4. Values that are encrypted by using the provider-managed key" caption-side="top"}
 
 For more information about creating a {{site.data.keyword.contdelivery_short}} service instance that encrypts data with a customer key, see [Creating a {{site.data.keyword.contdelivery_short}} service instance](/docs/ContinuousDelivery?topic=ContinuousDelivery-create_cd_service).
 
@@ -94,7 +233,7 @@ To learn more about tool integrations, see [Configuring tool integrations](/docs
 
 {{site.data.keyword.gitrepos}} is an IBM-hosted component of the {{site.data.keyword.contdelivery_short}} service. All of the data that you provide to {{site.data.keyword.gitrepos}}, including but not limited to source files, issues, pull requests, and project configuration properties, is managed securely within {{site.data.keyword.contdelivery_short}}. However, {{site.data.keyword.gitrepos}} supports various mechanisms for exporting, sending, or otherwise sharing data to users and third parties.
 
-The ability of {{site.data.keyword.gitrepos}} to share information is typical of many social coding platforms. However, such sharing might conflict with regulatory controls that might apply to your business. After you create a project in {{site.data.keyword.gitrepos}}, but before you entrust any files, issues, records, or other data with the project, review the project settings and change any settings that you deem necessary to protect your data. Settings to review include visibility levels, email notifications, integrations, web hooks, access tokens, deploy tokens, and deploy keys.
+The ability of {{site.data.keyword.gitrepos}} to share information is typical of many social coding platforms. However, such sharing might conflict with regulatory controls that apply to your business. After you create a project in {{site.data.keyword.gitrepos}}, but before you entrust any files, issues, records, or other data with the project, review the project settings and change any settings that you deem necessary to protect your data. Settings to review include visibility levels, email notifications, integrations, web hooks, access tokens, deploy tokens, and deploy keys.
 
 ### Project visibility levels
 {: #cd_secure_grit_visibility}
@@ -102,7 +241,7 @@ The ability of {{site.data.keyword.gitrepos}} to share information is typical of
 {{site.data.keyword.gitrepos}} projects can have one of the following visibility levels: private, internal, or public.
 
 * Private projects are visible only to project members. This setting is the default visibility level for new projects, and is the most secure visibility level for your data.
-* Internal projects are visible to all users that are logged into {{site.data.keyword.cloud_notm}}.
+* Internal projects are visible to all users that are logged in to {{site.data.keyword.cloud_notm}}.
 * Public projects are visible to anyone.
 
 To limit project access to only project members, complete the following steps:
@@ -147,7 +286,47 @@ When you develop and configure your pipeline job and step scripts, make sure tha
 To learn more about Delivery Pipelines, see and [Working with pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about) and [Working with Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines).
 
 
+## Protecting your data when you use Terraform
+{: #cd_secure_terraform}
+
+When you use Terraform to manage {{site.data.keyword.contdelivery_short}} resources, some of the variables, arguments, and attributes that are processed by Terraform might carry secret values such as passwords or API tokens. These values might be specified by you in your Terraform configuration language files, they might be retrieved and stored in Terraform state by the Terraform tool, or both. The following list provides examples of secret values that you must protect when you use Terraform.
+
+* The IAM API Key that the {{site.data.keyword.cloud_notm}} Terraform Provider requires to authenticate to the {{site.data.keyword.cloud_notm}}. This key is specified in the `ibmcloud_api_key` argument of your Terraform module's `provider "ibm"` block.
+* The arguments or attributes that represent passwords, access tokens, API keys, or other kinds of secrets in some `ibm_cd_toolchain_tool` resources and data sources.
+* Property values that are designated as secrets in some `ibm_cd_tekton_pipeline_property` or `ibm_cd_tekton_pipeline_trigger_property` resources or data sources.
+
+Use {{site.data.keyword.bplong_notm}} and the following practices to limit the exposure of sensitive data:
+
+* Use Terraform variables to inject values into Terraform blocks.
+* Use {{site.data.keyword.bplong_notm}} to securely manage and share secrets.
+* Use {{site.data.keyword.bplong_notm}} to securely manage and share the Terraform state.
+* Use the {{site.data.keyword.contdelivery_short}} secrets references when you specify secrets within the `ibm_cd_toolchain_tool`, `ibm_cd_tekton_pipeline_property`, or `ibm_cd_tekton_pipeline_trigger_property` resources.
+
+If you are using the Terraform command-line tool, use the following practices to limit the exposure of sensitive data:
+
+* Use Terraform variables to inject values into Terraform blocks.
+* Allow the Terraform command-line tool to prompt for values when you run commands such as `terraform plan` or `terraform apply`.
+* Control access to your Terraform state since it might contain secrets. Local Terraform state is written in plain text.
+* Use the {{site.data.keyword.contdelivery_short}} secrets references when you specify secrets within the `ibm_cd_toolchain_tool`, `ibm_cd_tekton_pipeline_property`, or `ibm_cd_tekton_pipeline_trigger_property` resources.
+
+To limit the exposure of sensitive data, avoid the following practices:
+
+* Writing secrets in plain text inside any Terraform blocks, such as resource blocks, data blocks, or provider blocks.
+* Writing secrets in plain text within the `terraform.tfvars`, `terraform.tfvars.json`, `*.auto.tfvars`, or `*.auto.tfvars.json` files.
+* Delivering the `terraform.tfvars`, `terraform.tfvars.json`, `*.auto.tfvars`, or `*.auto.tfvars.json` files that contain secrets to source code repos.
+* Delivering your Terraform state into source code repos.
+
+Use {{site.data.keyword.bplong_notm}} instead of the Terraform command-line tool to process your Terraform configurations. {{site.data.keyword.bplong_notm}} offers several advantages such as secure storage of sensitive configuration properties.
+{: tip}
+
+For more information about {{site.data.keyword.bplong_notm}}, see the [{{site.data.keyword.bplong_notm}} documentation](/docs/schematics).
+
+For more information about sensitive data in Terraform state, see [Sensitive Data in State](https://developer.hashicorp.com/terraform/language/state/sensitive-data){: external}.
+
+For more information about how to set input variables in Terraform, see [Assigning Values to Root Module Variables](https://developer.hashicorp.com/terraform/language/values/variables#assigning-values-to-root-module-variables){: external}.
+
+
 ## Deleting your data from {{site.data.keyword.contdelivery_short}}
 {: #cd_delete-data}
 
-When you delete a {{site.data.keyword.contdelivery_short}} service instance, the related toolchains, tool integrations, tools, and data (including personal data) are not deleted. For more information about how to manage and delete data that is stored with toolchains, tool integrations, and tools, see [Modifying, exploring, and deleting personal data](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_personal_data#managing_personal_data).
+When you delete a {{site.data.keyword.contdelivery_short}} service instance, the related toolchains, tool integrations, tools, and data (including personal data) are not deleted. For more information about how to manage and delete data that is stored with toolchains, tool integrations, and tools, see [Modifying, exploring, and deleting personal data](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_personal_data#managing_personal_data). 
