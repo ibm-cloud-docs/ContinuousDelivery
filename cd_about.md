@@ -2,32 +2,22 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-11-15"
 
-keywords: IBM Cloud Public, Use Developer Insights, toolchains, toolchain templates, toolchain tutorials, available regions, tools 
+keywords: IBM Cloud Public, Use Developer Insights, toolchains, toolchain templates, toolchain tutorials, available regions, tools, Terraform 
 
 subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:download: .download}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Toolchain availability, templates, and tutorials  
 {: #cd_about}
 {: support}
 
-Toolchains are available on {{site.data.keyword.cloud_notm}} Public. You can use a template as a starting point to create a toolchain.
+Toolchains are available on {{site.data.keyword.cloud_notm}} Public. You can use a template or Terraform as a starting point to create a toolchain.
 {: shortdesc}
 
 Although toolchains are not currently available in all regions, you can configure your toolchain to deploy your apps across all regions. To learn more, try the [Deploy a secure web application across multiple regions tutorial](/docs/solution-tutorials?topic=solution-tutorials-multi-region-webapp).
@@ -54,3 +44,12 @@ The predefined DevOps toolchain templates are recommended examples that solve re
 |[Build your own toolchain](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain){: external}  \n  \n Available in Dallas, Washington, Toronto, Sao Paulo, Tokyo, Sydney, Osaka, Frankfurt, and London  \n  \n 		|This toolchain has no preconfigured tools. If you are already familiar with toolchains, you can set up your own toolchain.  \n  \n Try the tutorial: [Create a custom toolchain](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){: external}  \n  \n   		|None		|
 |Continuous Delivery toolchain  \n   \n Available in Dallas, Washington, Tokyo, Sydney, Frankfurt, and London  \n  \n 		|This toolchain is used when you enable continuous delivery for an app.  \n  \n Try the tutorials:  \n  \n [Add a toolchain to an app](https://www.ibm.com/cloud/garage/tutorials/add-a-toolchain-to-an-app){: external}  \n  \n [Create a custom toolchain](https://www.ibm.com/cloud/garage/tutorials/create-a-custom-toolchain){: external}  \n  \n 	|{{site.data.keyword.deliverypipeline}}  \n  \n GitHub and Issues  \n  \n {{site.data.keyword.cloud_notm}}  \n  \n 		|
 {: caption="Table 2. Toolchain templates" caption-side="top"}
+
+## Toolchain Terraform
+{: #terraform}
+
+You can use Terraform to define, create, and manage toolchains by using an *as code* approach.
+
+You can start with an {{site.data.keyword.cloud_notm}} Terraform Provider example, such as [ibm-cd-toolchain-simple-helm](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cd-toolchain-simple-helm){: external} or [ibm-cd-tekton-pipeline](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cd-tekton-pipeline){: external}, or you can write your own Terraform. 
+
+To start working with Terraform, see [Setting up Terraform for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup). For more information about the Terraform resources and data sources for {{site.data.keyword.cloud_notm}} including the {{site.data.keyword.contdelivery_short}} service, see the [{{site.data.keyword.cloud_notm}} Provider Documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}.
