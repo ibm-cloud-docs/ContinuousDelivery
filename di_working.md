@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-10-25"
+lastupdated: "2022-11-15"
 
 keywords: code quality, risk management, interactions of your team, devops insights, getting started, devops, insights, tutorial, code coverage, test, tests, gate, gate failing, verification, install, app, dashboard
 
@@ -10,15 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:download: .download}
-{:note: .note}
-{:important: .important}
-{:gif: data-image-type='gif'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Working with {{site.data.keyword.DRA_short}}
 {: #di_working}
@@ -46,9 +38,11 @@ Authorize the use of GitHub repos. For more information, see [Authenticating wit
 5. In the Tool Integrations section, create an API key for {{site.data.keyword.deliverypipeline}}. 
 6. Click **Create** to finish creating the toolchain.
 
-If you need to authorize {{site.data.keyword.cloud_notm}} to use GitHub, click the **GitHub** tile > **Authorize**.
-{: note}
+If you need to authorize {{site.data.keyword.cloud_notm}} to use GitHub, click **GitHub** > **Authorize**.
+{: tip}
 
+You can also create and manage a toolchain that includes a {{site.data.keyword.DRA_short}} tool integration by using Terraform. For more information about using Terraform, see [Setting up Terraform for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup).
+{: tip}
 
 ## Step 2. Run a build to send data to {{site.data.keyword.DRA_short}}
 {: #2-run-build}
