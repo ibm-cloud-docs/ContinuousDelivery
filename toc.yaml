@@ -242,6 +242,7 @@ toc:
           - faq_delivery_pipeline.md
           - faq_pipeline_private_workers.md
           - faq_insights.md
+          - faq_git.md
           - faq_toolchains.md
       - topicgroup:
           label: Troubleshooting
