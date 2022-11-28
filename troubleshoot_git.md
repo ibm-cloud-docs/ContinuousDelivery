@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-03-25"
+lastupdated: "2022-11-24"
 
 keywords: troubleshoot, GitHub integration, Git Repos and Issue Tracking integration, GitLab project, tool integrations
 
@@ -10,19 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:note:.deprecated}
-{:tip: .tip}
-{:important: .important}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Troubleshooting for GitHub, GitLab, and {{site.data.keyword.gitrepos}}
 {: #troubleshoot-git}
@@ -36,26 +24,33 @@ General problems with using GitHub, GitLab, and {{site.data.keyword.gitrepos}} m
 
 You must authorize with GitHub so that {{site.data.keyword.cloud_notm}} is authorized to access your GitHub account.
 
-The GitHub tool integration wasn't added to your toolchain.
+The GitHub tool integration wasn't added to your toolchain. If you are using Terraform or the API to create the GitHub tool integration, the attempt fails with the `User is not authorized with https://api.github.com` error message.
 {: tsSymptoms}
 
 If {{site.data.keyword.cloud_notm}} is not authorized to access your GitHub account, the tool integration is not added to your toolchain.
 {: tsCauses}
 
-If you are configuring the GitHub tool integration while you are creating your toolchain, follow these steps to authorize with GitHub:
+If you are configuring the GitHub tool integration by using the console while you are creating your toolchain, follow these steps to authorize with GitHub:
 {: tsResolve}
 
 1. In the Configurable Integrations section, click **GitHub**.
 1. If you are creating the toolchain on {{site.data.keyword.cloud_notm}} Public and {{site.data.keyword.cloud_notm}} is not authorized to access GitHub, click **Authorize** to go to the GitHub website.
-1. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
+1. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
 
-If you already have a toolchain, update the GitHub tool integration's configuration:
+If you are using the console and you already have a toolchain, update the GitHub tool integration's configuration:
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**, and then click **Overview**.
 1. On the Toolchain's Overview page, on the **Repositories** card, locate the GitHub tool integration.
-1. Click the menu to access the configuration options and update the configuration settings to authorize {{site.data.keyword.cloud_notm}} to access GitHub. Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
+1. Click the menu to access the configuration options and update the configuration settings to authorize {{site.data.keyword.cloud_notm}} to access GitHub. Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
 1. When you are finished updating the settings, click **Save Integration**.
- 
+
+If you are using Terraform or the API, use the console to authorize {{site.data.keyword.cloud_notm}} to access your GitHub account:
+
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, locate the toolchain to which you want to add the GitHub tool integration. Click the toolchain to open its Overview page.
+1. On the Toolchain's Overview page, click **Add**.
+1. On the **Add tool integration** page, click the **GitHub** tool card.
+1. On the **Configure GitHub** page, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account. You are redirected to the **Configure GitHub** page.
+1. Close the page without taking any further action in the console, and then try to create the GitHub tool integration with Terraform or the API again.
 
 ## Why can't I use the {{site.data.keyword.gitrepos}} tool integration in my toolchain from one region in a toolchain within a different region?
 {: #troubleshoot-cd-grit-integration}
@@ -207,3 +202,29 @@ You can use any of the following methods to resolve this problem:
 * Check your email spam folder to determine whether the email invitation was marked as spam. Emails are sent from a noreply@ address. Update your spam filters to allow emails from this address.
 
 * Investigate whether corporate spam filters that are outside of the user's control are blocking the email. Ask the user to log in to the {{site.data.keyword.gitrepos}} user interface and send you their user ID. You can add the user to the GitLab project by using their user ID.
+
+## When I use Terraform to update the configuration of an existing Git tool integration, why does the configuration fail?
+{: #troubleshoot-target-repo-exists}
+{: troubleshoot}
+
+The Git tool integration resource specifies a `type` of `clone`, `fork`, or `new`, and it specifies an existing target repo.
+
+When you use Terraform to update a Git tool integration, the configuration fails with the `The nonempty repository _REPO-URL_ already exists. Either delete the repository or change the Repository Type to 'Existing'` error message, where `REPO-URL` is the URL of the target repo.
+{: tsSymptoms}
+
+This error is often caused by the following actions:
+{: tsCauses}
+
+* Your Git tool integration Terraform resource specifies a `type` of `clone`, `fork`, or `new`. You changed the `repo_url` within the `initialization` block of the resource to the URL of a repo that exists.
+* Your Git tool integration Terraform resource specifies a `type` of `clone`, `fork`, or `new`. You did not change the `repo_url`, but you changed one or more other arguments within the `initialization` block of the resource. In this situation, the repo exists because it was created when the Git tool integration resource was previously applied by Terraform.
+
+The `clone`, `fork`, and `new` types instruct the Git tool integration to create the target repo (`repo_url`) on the premise that this repo does not exist. If the tool integration finds the target repo, it fails by design.
+
+Change the `type` from `clone`, `fork`, or `new` to `clone_if_not_exists`, `fork_if_not_exists`, or `new_if_not_exists`. These types instruct the Git tool integration to create the target repo if it does not exist, or to use the target repo as-is if it does exist.
+{: tsResolve}
+
+Although you can use other methods to resolve this error, these methods are not recommended because you might lose information. These methods also might require changes to your Terraform that are not good practices.
+
+* Change `repo_url` to a repo that is created when you apply your Terraform again. Changing a Terraform resource after the initial creation to avoid errors during subsequent updates is an anti-pattern. This method also leaves the previously created repos intact, but no longer bound to the toolchain.
+* Change `type` to `existing`, and then apply your Terraform again. Changing a Terraform resource after the initial creation to avoid errors during subsequent updates is an anti-pattern.
+* Manually delete the target repo, and then apply your Terraform again. Manual changes between otherwise automated Terraform operations are not recommended. If you delete the repo, the deletion cannot be undone, and can cause permanent data loss. 
