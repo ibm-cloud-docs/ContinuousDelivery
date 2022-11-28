@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-11-28"
 
 keywords: IBM Cloud account, personal data, personal accounts, corporate accounts, access, Git Repos and Issue Tracking, pipeline data, toolchains, tool integrations
 
@@ -10,16 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing personal data for Continuous Delivery
 {: #cd_personal_data}
@@ -44,7 +35,7 @@ To manage your personal data, you must understand {{site.data.keyword.cloud_notm
 ## Accounts and access rights
 {: #accounts_access_rights}
 
-To work in {{site.data.keyword.cloud_notm}}, you must log in with a user name and password. When you log in, {{site.data.keyword.cloud_notm}} associates at least one {{site.data.keyword.cloud_notm}} account with your user credentials. When you create resources such as resource groups, toolchains, and {{site.data.keyword.contdelivery_short}} objects, they are associated with an {{site.data.keyword.cloud_notm}} account.
+To work in {{site.data.keyword.cloud_notm}}, you must log in with a username and password. When you log in, {{site.data.keyword.cloud_notm}} associates at least one {{site.data.keyword.cloud_notm}} account with your user credentials. When you create resources such as resource groups, toolchains, and {{site.data.keyword.contdelivery_short}} objects, they are associated with an {{site.data.keyword.cloud_notm}} account.
 
 The {{site.data.keyword.cloud_notm}} login structure provides you with the option to work in different accounts. Using the {{site.data.keyword.cloud_notm}} user interface, you can switch from one account to another. When you log in, any of the following types of accounts might be associated with your user credentials: 
 
@@ -57,14 +48,14 @@ The {{site.data.keyword.cloud_notm}} login structure provides you with the optio
 
 Typically, each user has their own account that is their personal account. You can easily identify your personal account because it usually contains your name, for example, *John Smith's Account*. 
 
-You have full rights over all objects that are created in your personal account. You can invite other users to join your account, assign them rights over objects that you create, and assign them rights to create objects in your account. This means that the personal data of other users might be in your account, and your personal data might be in other user's accounts. 
+You have full rights over all objects that are created in your personal account. You can invite other users to join your account, assign them rights over objects that you create, and assign them rights to create objects in your account. Because of these rights, the personal data of other users might be in your account, and your personal data might be in other user's accounts. 
 
 If you have permission to create an object in an account, you also have the right to modify and delete it, regardless of which account the object is stored in. When two users collaborate, they often share a personal account.
 
 ### Corporate accounts
 {: #corp_accounts}
 
-A corporate account is set up by your company. Typically, you are added automatically to the account, rather than being invited. Corporate accounts provide users with a place to work, communicate, and share resources and charging; however, this is just a convention. A corporate account is really no different than a personal account. Objects that are created in a corporate account are associated with the account and users can be invited to the account.
+A corporate account is set up by your company. Typically, you are added automatically to the account, rather than being invited. Although corporate accounts provide users with a place to work, communicate, and share resources and charging, this set up is just a convention. A corporate account is really no different than a personal account. Objects that are created in a corporate account are associated with the account and users can be invited to the account.
 
 Teams of people who work for a corporation often collaborate by using a corporate account.
 
@@ -98,7 +89,7 @@ If you own a corporate individual account, you must coordinate any changes with 
 
 Before you start to manage your personal data for the {{site.data.keyword.contdelivery_short}} components, make sure that you are working in your {{site.data.keyword.cloud_notm}} account. To view the {{site.data.keyword.cloud_notm}} account that you are currently working in, on the menu bar, click your profile avatar. 
 
-If you can't log in to your {{site.data.keyword.cloud_notm}} account, contact your corporation and work with them to delete your personal data.
+If you can't log in to your {{site.data.keyword.cloud_notm}} account, contact your corporation, and work with them to delete your personal data.
 
 If you want to delete all of your personal data from {{site.data.keyword.contdelivery_short}}, the order in which you delete that data is important. First, delete your {{site.data.keyword.gitrepos}} data, and then delete your {{site.data.keyword.gitrepos}} account. Finally, delete your delivery pipelines, tool integrations, and toolchains.
 {: tip}
@@ -110,9 +101,9 @@ If you want to delete all of your personal data from {{site.data.keyword.contdel
 
 {{site.data.keyword.gitrepos}} provides a powerful, but complex social coding environment in which users contribute to different projects and objects are shared. This environment can make it difficult to locate and delete your personal data.
 
-Your account profiles and settings, personal projects, groups, and snippets are associated with your Git account. If you delete your Git account, these objects are deleted. To delete personal data in another project, navigate to the project, and then modify it to remove your personal data, or delete the project entirely. Make sure that you coordinate with other members of your team before you delete shared projects.
+Your account profiles and settings, personal projects, groups, and snippets are associated with your Git account. If you delete your Git account, these objects are deleted. To delete personal data in another project, go to the project, and then modify it to remove your personal data, or delete the project entirely. Make sure that you coordinate with other members of your team before you delete shared projects.
 
-Before you delete your Git account, delete your personal data from other projects. After you delete your Git account, it might be difficult or impossible to find all of the projects that you contributed to.
+Before you delete your Git account, delete your personal data from other projects. After you delete your Git account, it might be difficult, or impossible to find all of the projects that you contributed to.
 {: tip}
 
 ### Personal and shared projects
@@ -148,7 +139,7 @@ After your account is deleted, some content will remain. This content is assigne
 ## Modifying, exporting, and deleting {{site.data.keyword.contdelivery_short}} pipeline data
 {: #managing_pipeline_data}
 
-{{site.data.keyword.contdelivery_short}} provides two different types of pipelines: Classic and Tekton. These pipelines run scripts to build, test, and deploy your application to the {{site.data.keyword.cloud_notm}}. To do this, pipelines provide stages/tasks, jobs/steps, environment variables, and other objects that might contain personal data. You can delete these objects individually or you can delete an entire pipeline.
+{{site.data.keyword.contdelivery_short}} provides two different types of pipelines: Classic and Tekton. These pipelines run scripts to build, test, and deploy your application to the {{site.data.keyword.cloud_notm}} by providing stages and tasks, jobs and steps, environment variables, and other objects that might contain personal data. You can delete these objects individually or you can delete an entire pipeline.
 
 Make sure that you coordinate with other members of your team before you delete shared objects or pipelines. Deleting shared objects might cause a pipeline to fail.
 
@@ -158,7 +149,7 @@ A pipeline cannot exist outside of a toolchain. If you delete a toolchain, all o
 ## Classic pipelines
 {: #pipeline_classic}
 
-Classic pipeline stages might include personal data such as credentials in the form of environment properties, and a pipeline definition that shows the current state of the pipeline. Stages might also include scripts inside jobs that you want to modify or delete, as well as artifacts and logs for the most recent pipeline runs that you want to export. Use the Configure Stage or Delete Stage actions to modify or delete a stage. Use the Download action to export artifacts or logs from a stage.
+Classic pipeline stages might include personal data such as credentials in the form of environment properties, and a pipeline definition that shows the current state of the pipeline. Stages might also include scripts inside jobs that you want to modify or delete, and artifacts and logs for the most recent pipeline runs that you want to export. Use the Configure Stage or Delete Stage actions to modify or delete a stage. Use the Download action to export artifacts or logs from a stage.
    
 ![Stages menu](images/pipeline_stages.png){: caption="Figure 1. Stages menu" caption-side="bottom"}
 
@@ -228,6 +219,8 @@ To modify the environment properties used by the tekton pipeline:
 1. On the Pipeline page, click **ENVIRONMENT PROPERTIES**.
 1. Edit, add, or remove properties from the page.
 
+For more information about modifying Tekton Pipelines, see [Working with Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines).
+
 ### Deleting a Tekton Pipeline
 {: #deleting_pipeline_tekton}
 
@@ -235,6 +228,11 @@ To delete a Tekton Pipeline:
 
 1. From your toolchain's Overview page, on the **Delivery pipelines** card, go to your Tekton pipeline instance.
 1. Click the menu on your Tekton pipeline to access the configuration options and click **Delete**.
+
+For more information about deleting Tekton pipelines, see the following topics:
+
+* [Deleting a {{site.data.keyword.deliverypipeline}} with the API](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines&interface=api#deleting-pipeline-api)
+* [Deleting a {{site.data.keyword.deliverypipeline}} with Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines&interface=terraform#deleting-pipeline-terraform)
 
 ## Modifying and deleting toolchains and tool integrations
 {: #managing_toolchains}
@@ -250,37 +248,38 @@ Coordinate with other members of your team before you delete shared tool integra
 ### Modifying and deleting tool integrations
 {: #mod_delete_tool}
 
-When you create a tool integration, you are required to provide user credentials and other account information that pertains to the integration. If you used your own personal credentials and account information, replace this information with different values, or delete the tool integration.
+When you create a tool integration, you must provide user credentials and other account information that pertains to the integration. If you used your own personal credentials and account information, replace this information with different values, or delete the tool integration.
 
-To modify a tool integration:
+For more information about modifying tool integrations, see the following documentation:
 
-1. On the instance of your tool integration, click the menu to access the configuration options.
+* [Updating a tool integration by using the console](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=ui#update_integration_ui)
+* [Updating a tool integration with the API](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=api#update_integration_api)
+* [Updating a tool integration with Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=terraform#update_integration_terraform)
 
-   ![Tool Configuration menu](images/toolchain_tile_menu.png){: caption="Figure 4. Tool Configuration menu" caption-side="bottom"}
+For more information about deleting tool integrations, see the following documentation:
 
-1. When you are finished updating the settings, click **Save Integration**.
-
-To delete a tool integration:
-
-1. To delete a tool integration from your toolchain, click **Delete**.
-1. Confirm by clicking **Delete**.
+* [Deleting a tool integration by using the console](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=ui#delete_integration_ui)
+* [Deleting a tool integration with the API](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=api#delete_integration_api)
+* [Deleting a tool integration with Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=terraform#delete_integration_terraform)
 
 ### Deleting toolchains
 {: #data_delete_toolchains}
 
-When you delete a toolchain, the deletion cannot be undone.
+When you delete a toolchain, the deletion cannot be undone. Deleting a toolchain removes all of its tool integrations, including pipelines, which might delete resources that are managed by those tool integrations.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain to delete. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**.
-1. Click the **Actions** menu, and select **Delete**. Deleting a toolchain removes all of its tool integrations, including pipelines, which might delete resources that are managed by those integrations.
-1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**. 
+For more information about deleting toolchains, see the following documentation:
 
-When you delete a toolchain, the associated {{site.data.keyword.gitrepos}} repos are not deleted. Users who have access to those repos might have copies of the data if they performed a `git clone`. To make sure that all data is deleted, you must request that those users delete their copies of the data.
-{: tip}
+* [Deleting a toolchain by using the console](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using&interface=ui#deleting_a_toolchain_ui)
+* [Deleting a toolchain from the CLI (Beta)](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using&interface=cli#deleting_a_toolchain_cli)
+* [Deleting a toolchain from the API](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using&interface=api#deleting_a_toolchain_api)
+* [Deleting a toolchain from Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using&interface=terraform#deleting_a_toolchain_terraform)
 
 ### Deleting all toolchains
 {: #delete_all_toolchains}
 
-You cannot delete all of the toolchains within a resource group at the same time. You must delete each toolchain, one at a time.
+When you work by using the console, you cannot delete all of the toolchains within a resource group at the same time. You must delete each toolchain, one at a time.
 
-Toolchains are scoped by {{site.data.keyword.cloud_notm}} region and resource group. Make sure that you select each region and resource group to delete every toolchain that you created.
+By using the API, CLI, or Terraform, you can more readily delete multiple toolchains. For example, you can write a program or a script that iterates over a set of toolchains and deletes them by repeatedly calling the API or by running the `ibmcloud dev toolchain-delete` command. If you defined multiple toolchains in Terraform, you can delete the `ibm_cd_toolchain` resource blocks and run `terraform apply`, or you can use the `terraform destroy` command to delete the toolchain resources.
+
+Toolchains are scoped by {{site.data.keyword.cloud_notm}} region and resource group. Make sure that you target each region and resource group in an account to delete every toolchain that you created in that account.
 {: tip}
