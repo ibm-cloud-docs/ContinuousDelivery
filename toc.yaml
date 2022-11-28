@@ -110,6 +110,7 @@ toc:
               label: Delivery pipeline (Tekton)
               topics: 
               - tekton_pipeline.md
+      - terraform.md
       - topicgroup: 
           label: Pipeline Private Workers
           topics: 
