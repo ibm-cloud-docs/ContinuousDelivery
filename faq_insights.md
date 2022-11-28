@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-02-27"
+  years: 2015, 2022
+lastupdated: "2022-11-04"
 
 keywords: tool integration, toolchains, IBM Cloud, DevOps Insights, Quality Dashboard
 
@@ -10,20 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:faq: data-hd-content-type='faq'}
-{:support: data-reuse='support'}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:download: .download}
+{{site.data.keyword.attribute-definition-list}}
 
 # FAQs for {{site.data.keyword.DRA_short}}
 {: #faq_insights}
@@ -86,3 +73,19 @@ Yes. To use {{site.data.keyword.DRA_short}}, you must create a {{site.data.keywo
 {: #billed-devops-insights}
 
 You are not billed for {{site.data.keyword.DRA_short}} as an individual service. {{site.data.keyword.DRA_short}} counts toward your {{site.data.keyword.contdelivery_short}} limitations and usage. A user of {{site.data.keyword.DRA_short}} is added to your {{site.data.keyword.contdelivery_short}} authorized users. For more information, see [Authorized users](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#authorized_users). 
+
+
+## Can I manage {{site.data.keyword.DRA_short}} by using Terraform or APIs?
+{: #terraform_api}
+{: faq}
+{: support}
+
+You can use Terraform or APIs to add {{site.data.keyword.DRA_short}} to a toolchain or to remove it from a toolchain. For more information about working with the {{site.data.keyword.DRA_short}} tool integration, see [Working with tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations) and [Adding {{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-dra).
+
+You cannot use Terraform or APIs to manage {{site.data.keyword.DRA_short}} policies, rules, tags, or data. Instead, use the following methods to manage {{site.data.keyword.DRA_short}} policies, rules, tags, or data.
+
+* Manage {{site.data.keyword.DRA_short}} policies and rules by using either the console or the `ibmcloud` CLI `doi` plug-in. Although you cannot delete policies by using the `ibmcloud` CLI `doi` plug-in, you can use the console to delete policies.
+* Manage {{site.data.keyword.DRA_short}} tags only by using the console.
+* Manage {{site.data.keyword.DRA_short}} data sets only by using the console. For more information about managing {{site.data.keyword.DRA_short}} data sets, see [Managing data sets](/docs/ContinuousDelivery?topic=ContinuousDelivery-adding-data-sets).
+* Publish test data to {{site.data.keyword.DRA_short}} by using the `ibmcloud` CLI `doi` plug-in. For more information about publishing test data, see [Publishing test data to DevOps Insights](/docs/ContinuousDelivery?topic=ContinuousDelivery-publishing-test-data).
+* Explore build, environment, quality, deployment frequency, build frequency, and quality trend data only by using the console. For more information about exploring this data, see [Working with DevOps Insights](/docs/ContinuousDelivery?topic=ContinuousDelivery-di_working).
