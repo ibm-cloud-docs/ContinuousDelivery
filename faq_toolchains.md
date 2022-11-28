@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-11-25"
 
 keywords: tool integrations, error message, Lite plan, toolchains, resource groups, IBM Cloud
 
@@ -10,21 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:faq: data-hd-content-type='faq'}
-{:support: data-reuse='support'}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
+{{site.data.keyword.attribute-definition-list}}
 
 # FAQs for toolchains
 {: #faq_toolchains}
@@ -95,3 +81,31 @@ Toolchains in a resource group must be accompanied by an instance of the {{site.
 {: support}
 
 You can find your toolchain ID in the URL of your selected toolchain tool. For more information, see [Identifying your toolchain ID](/docs/ContinuousDelivery?topic=ContinuousDelivery-aggregating-multiple-sources). 
+
+
+## Can I manage toolchains by using Terraform?
+{: #terraform}
+{: faq}
+{: support}
+
+You can use Terraform to create, read, update, and delete toolchains and tool integrations. For more information about using Terraform with toolchains, see [Creating a toolchain with Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=terraform#creating_a_toolchain_terraform), [Deleting a toolchain with Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using&interface=terraform#deleting_a_toolchain_terraform), [Working with tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=terraform), and the [`ibm_cd_toolchain` resources documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain){: external}.
+
+
+## Can I manage toolchains by using an API?
+{: #api}
+{: faq}
+{: support}
+
+You can use HTTP APIs or selected programming language SDKs to create, read, update, and delete toolchains and tool integrations. For more information about using toolchains and tool integrations with the API, see [Creating a toolchain with the API](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#creating_a_toolchain_api), [Deleting a toolchain with the API](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-using&interface=api#deleting_a_toolchain_api), [Working with tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=api), and the [CD Toolchain API docs](https://cloud.ibm.com/apidocs/toolchain){: external}.
+
+
+## Can I use the console, APIs, or CLI to modify resources that are managed by Terraform?
+{: #resource_drift}
+{: faq}
+{: support}
+
+When you use Terraform to manage resources such as {{site.data.keyword.contdelivery_short}} service instances, toolchains, and Tekton pipelines, avoid changing the resources by using the console, APIs, or CLI, or by any other method outside of Terraform's control.
+
+If you circumvent Terraform by directly changing resources, you might cause [resource drift](https://developer.hashicorp.com/terraform/tutorials/state/resource-drift){: external}, a situation in which the states of your actual resources on {{site.data.keyword.cloud_notm}} deviate from the definition of the resources in Terraform. The next time that you apply the Terraform configuration, Terraform attempts to update your resources to align them with the Terraform configuration. This action might lead to unintended consequences, such as reverting changes or deleting and then re-creating resources.
+
+For more information about resource drift, see [Manage Resource Drift](https://developer.hashicorp.com/terraform/tutorials/state/resource-drift){: external}.
