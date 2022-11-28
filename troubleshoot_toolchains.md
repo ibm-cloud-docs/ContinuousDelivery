@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-11-25"
 
 keywords: troubleshoot, toolchains, tool integrations
 
@@ -10,19 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:note:.deprecated}
-{:tip: .tip}
-{:important: .important}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Troubleshooting for toolchains
 {: #troubleshoot-toolchains}
@@ -170,3 +158,66 @@ Use one of the following methods to enable the root key for encryption:
 * [Enable the root key for the {{site.data.keyword.keymanagementservicefull}} instance](/docs/key-protect?topic=key-protect-disable-keys#enable-root-key) that is associated with your {{site.data.keyword.contdelivery_short}} service, in the region where you want to view the toolchain.
 
 * [Enable the root key for the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-disable-keys#enable-ui) that is associated with your {{site.data.keyword.contdelivery_short}} service, in the region where you want to view the toolchain.
+
+## When I use Terraform or the API to configure a tool integration, why does the configuration fail with the `Could not find value for secret reference...` error?
+{: #troubleshoot-dangling-secret-ref}
+{: troubleshoot}
+
+The tool integration is configured with a reference to a secret, but the toolchain cannot find the referenced secret or secret store.
+
+When you use Terraform or the API to create or update a tool integration, the configuration fails with the `Could not find value for secret reference...` error message.
+{: tsSymptoms}
+
+Many tool integrations include configuration properties that are classified as secrets. When you set these properties in a Terraform resource or API call, you can set them as [secrets references](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secrets_references). A secret reference is a specially formatted string that identifies the name and location of a secret in a secret store that is integrated into the toolchain. The error indicates that the toolchain cannot find the identified secret. This error can occur when one or more of the segments in the secret reference `{vault:...}` string are incorrect. The error can also occur when a key of the specified group, name, or field does not exist in the secret store, or the secret store is not integrated into the toolchain.
+{: tsCauses}
+
+The error message includes the secret reference string that cannot be resolved.
+{: tsResolve}
+
+* Check that the secret store is integrated as a tool into the toolchain, and that the tool integration is correctly configured. If the tool integration is misconfigured, edit the tool integration to correct the error condition, and then save the configuration.
+* Check that the first segment of the `{vault::...}` secret reference matches the name of the secret store tool integration. For example, the secret reference `{vault::my-secret-store.my-secret}` expects the toolchain to have a secret store tool integration that is named `my-secret-store`. This value is the name of tool integration, *not* the name of the secret store service instance.
+* If the secret is stored in {{site.data.keyword.keymanagementserviceshort}}, check that the second segment of the `{vault::...}` secret reference matches the name of the key that you want to use in the {{site.data.keyword.keymanagementserviceshort}} service instance. For example, the secret reference `{vault::my-kms.my-key}` expects to find a key that is named `my-key` in the {{site.data.keyword.keymanagementserviceshort}} service instance. This service instance is integrated into the toolchain with a {{site.data.keyword.keymanagementserviceshort}} tool integration that is named `my-kms`.
+* If the secret is stored in {{site.data.keyword.secrets-manager_short}}, check that the second, and third segments of the `{vault::...}` secret reference match the names of the secret group and secret that you want to use in the {{site.data.keyword.secrets-manager_short}} service instance. For example, the secret reference `{vault::my-sm.my-group.my-key}` expects to find a secret that is named `my-key` in a secret group that is named `my-group`. This secret and secret group are stored within the {{site.data.keyword.secrets-manager_short}} service instance that is integrated into the toolchain by using a {{site.data.keyword.secrets-manager_short}} tool integration that is named `my-sm`.
+* If the secret is stored in HashiCorp Vault, check that the second, and third segments of the `{vault::...}` secret reference match the names of the secret and the secret field in the HashiCorp Vault server. For example, the secret reference `{vault::my-hcv.my-secret.my-field}` expects to find a secret that is named `my-secret` in the HashiCorp Vault server, and a field named `my-field` within that secret. This server is integrated into the toolchain by using a HashiCorp Vault tool integration that is named `my-hcv`.
+
+## When I use Terraform or the API to configure a tool integration, why does the configuration fail with the `A problem was encountered while attempting to resolve secret reference...` error?
+{: #troubleshoot-missing-s2s-auth}
+{: troubleshoot}
+
+The tool integration is configured with a reference to a secret, but the toolchain is not authorized to retrieve the secret from the secret store where the secret resides.
+
+When you use Terraform or the API to create or update a tool integration, the configuration fails with the `A problem was encountered while attempting to resolve secret reference...` error message.
+{: tsSymptoms}
+
+Many tool integrations include configuration properties that are classified as secrets. When you set these properties in a Terraform resource or API call, you can set them as [secrets references](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secrets_references). A secret reference is a specially formatted string that identifies the name and location of a secret in a secret store that is integrated into the toolchain. With {{site.data.keyword.cloud_notm}} secret store services such as {{site.data.keyword.keymanagementserviceshort}} and {{site.data.keyword.secrets-manager_short}}, the error indicates that the toolchain can contact the secret store service, but is not authorized to retrieve secrets from the service. Typically, this issue occurs because {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) does not have a service-to-service authorization policy that allows the toolchain to read secrets from the service.
+{: tsCauses}
+
+The error message includes the secret reference string that cannot be resolved.
+{: tsResolve}
+
+1. Examine the first segment of the `{vault::...}` secret reference. This segment is the name of the secret store tool integration in the toolchain. For example, the secret reference `{vault::my-kms.my-key}` identifies a secret store tool integration that is named `my-kms`.
+1. Examine the configuration of the secret store tool integration to identify the {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.secrets-manager_short}} service instance that the tool integration represents.
+1. By using IAM, add a service-to-service authorization policy from the toolchain to the {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.secrets-manager_short}} service instance. In the authorization policy, the toolchain is the *source* service, and the secret store is the *target* service. When you target {{site.data.keyword.keymanagementserviceshort}}, make sure that the policy grants the `Viewer` and `ReaderPlus` roles. When you target {{site.data.keyword.secrets-manager_short}}, make sure that the policy grants the `Viewer` and `SecretsReader` roles.
+
+For more information about service-to-service authorization policies, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth). 
+
+For an example of how to configure a service-to-service authorization policy from a toolchain to a secret store service instance with Terraform, see [Specifying secret references with Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security&interface=terraform#cd_secrets_references_terraform).
+
+## When I use Terraform or the API to configure a {{site.data.keyword.keymanagementserviceshort}}, {{site.data.keyword.secrets-manager_short}}, or {{site.data.keyword.appconfig_short}} tool integration, why does the configuration fail?
+{: #troubleshoot-missing-service}
+{: troubleshoot}
+
+The tool integration refers to a {{site.data.keyword.keymanagementserviceshort}}, {{site.data.keyword.secrets-manager_short}}, or {{site.data.keyword.appconfig_short}} service instance that does not exist.
+
+When you use Terraform or the API to create or update a {{site.data.keyword.keymanagementserviceshort}}, {{site.data.keyword.secrets-manager_short}}, or {{site.data.keyword.appconfig_short}} tool integration, the configuration fails with the `There was a problem with the provided service parameters, please check that they are valid` error message.
+{: tsSymptoms}
+
+The tool integration is configured with the name or ID of a {{site.data.keyword.keymanagementserviceshort}}, {{site.data.keyword.secrets-manager_short}}, or {{site.data.keyword.appconfig_short}} service instance that cannot be found or accessed. If you are using Terraform to manage both the service instance and the tool integration, Terraform might attempt to create, or update the tool integration before it creates the service instance.
+{: tsCauses}
+
+If you are using Terraform, check your Terraform configuration to make sure that the [`ibm_cd_toolchain_tool_keyprotect`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_keyprotect){: external}, [`ibm_cd_toolchain_tool_secretsmanager`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_secretsmanager){: external}, or [`ibm_cd_toolchain_tool_appconfig`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_appconfig){: external} tool integration resource depends on the {{site.data.keyword.keymanagementserviceshort}}, {{site.data.keyword.secrets-manager_short}}, or {{site.data.keyword.appconfig_short}} [`ibm_resource_instance`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance){: external} resource that the tool integration represents. You can specify this dependency within the tool integration resource by referring to attributes of the service instance resource, or by specifying a `depends_on` meta-argument that refers to the service instance resource. You can refer directly to the service instance resource, or indirectly through other intermediate resources. By declaring dependencies between resources correctly, you can coerce Terraform into creating, updating, and deleting resources in the correct sequence.
+{: tsResolve}
+
+For an example of how dependencies work between Terraform resources, see [Specifying secret references with Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security&interface=terraform#cd_secrets_references_terraform).
+
+If you are using the API, check the configuration parameters of the {{site.data.keyword.keymanagementserviceshort}}, {{site.data.keyword.secrets-manager_short}}, or {{site.data.keyword.appconfig_short}} tool integration that you are trying to create or update. Verify that the name or ID of the service instance that you are trying to integrate is correctly specified within the configuration of the tool integration.
