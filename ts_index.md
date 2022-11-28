@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-11-17"
 
 keywords: error message, Lite plan, toolchains, IBM Cloud
 
@@ -10,21 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:faq: data-hd-content-type='faq'}
-{:support: data-reuse='support'}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
+{{site.data.keyword.attribute-definition-list}}
 
 # FAQs for {{site.data.keyword.contdelivery_short}}
 {: #ts_cd}
@@ -121,3 +107,35 @@ You can remove authorized users from the {{site.data.keyword.contdelivery_short}
 * Remove Developer access from all {{site.data.keyword.gitrepos}} repos that are attached to all of the toolchains in the resource group.
 
 You can maintain an activity log related to authorized users. For more information about viewing, managing, and auditing service-initiated and user-initiated activities in your {{site.data.keyword.contdelivery_full}} instances, see [{{site.data.keyword.at_full_notm}} events](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-at-events). For more information about managing authorized users, see [Authorized users](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#authorized_users).
+
+
+## Can I manage {{site.data.keyword.contdelivery_short}} service instances by using Terraform?
+{: #terraform}
+{: faq}
+{: support}
+
+You can use Terraform to provision, update, and de-provision instances of the {{site.data.keyword.contdelivery_short}} service. For more information about using Terraform with {{site.data.keyword.contdelivery_short}}, see [Creating a {{site.data.keyword.contdelivery_short}} service instance with Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-create_cd_service&interface=terraform#create_cd_service_terraform), [Deleting a {{site.data.keyword.contdelivery_short}} service instance with Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-delete_cd_service&interface=terraform#deleting_rg_terraform), and the [`ibm_resource_instance` resource documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance){: external}.
+
+You cannot use Terraform to manage the list of authorized users for a {{site.data.keyword.contdelivery_short}} service instance. You can manage the list of authorized users only by using the console. For information about authorized user management, see [Authorized users](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage&interface=ui#authorized_users).
+
+
+## Can I manage {{site.data.keyword.contdelivery_short}} service instances by using an API?
+{: #api}
+{: faq}
+{: support}
+
+You can use HTTP APIs or selected programming language SDKs to provision, update, and de-provision instances of the {{site.data.keyword.contdelivery_short}} service. For more information about using {{site.data.keyword.contdelivery_short}} with the API, see [Creating a {{site.data.keyword.contdelivery_short}} service instance with the API](/docs/ContinuousDelivery?topic=ContinuousDelivery-create_cd_service&interface=api#create_cd_service_api) and [Deleting a {{site.data.keyword.contdelivery_short}} service instance with the API](/docs/ContinuousDelivery?topic=ContinuousDelivery-delete_cd_service&interface=api#deleting_rg_api).
+
+You cannot use APIs to manage the list of authorized users of a {{site.data.keyword.contdelivery_short}} service instance. You can manage the list of authorized users only by using the console. For information about authorized user management, see [Authorized users](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage&interface=ui#authorized_users).
+
+
+## Can I use the console, APIs, or CLI to modify resources that are managed by Terraform?
+{: #resource_drift}
+{: faq}
+{: support}
+
+When you use Terraform to manage resources such as {{site.data.keyword.contdelivery_short}} service instances, toolchains, and Tekton pipelines, avoid changing the resources by using the console, APIs, or CLI, or by any other method outside of Terraform's control.
+
+If you circumvent Terraform by directly changing resources, you might cause [resource drift](https://developer.hashicorp.com/terraform/tutorials/state/resource-drift){: external}, a situation in which the states of your actual resources on {{site.data.keyword.cloud_notm}} deviate from the definition of the resources in Terraform. The next time that you apply the Terraform configuration, Terraform attempts to update your resources to bring them back in alignment with the Terraform configuration. This action might lead to unintended consequences, such as reverting changes or deleting and then re-creating resources.
+
+For more information about resource drift, see [Manage Resource Drift](https://developer.hashicorp.com/terraform/tutorials/state/resource-drift){: external}. 
