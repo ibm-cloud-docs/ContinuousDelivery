@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-11-28"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -434,7 +434,7 @@ The following table lists and describes each of the variables that are used in t
    {: pre}
 
 ## Deleting a {{site.data.keyword.deliverypipeline}} with the API
-{: #deleting-pipeline-terraform}
+{: #deleting-pipeline-api}
 {: api}
 
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}.
