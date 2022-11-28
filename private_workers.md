@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-11-16"
+lastupdated: "2022-11-24"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -30,9 +30,9 @@ Before you set up a private worker, make sure that you have the following resour
 * Optional. A toolchain with a pipeline that contains at least one stage. You can create a toolchain by using the [{{site.data.keyword.deliverypipeline}} Private Worker tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers#configure_private_worker_integration). You can also create a toolchain by using the **Develop a Kubernetes app** toolchain template:
 
    1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
-   2. Go to [https://cloud.ibm.com/devops/create](https://cloud.ibm.com/devops/create){: external} and select the **Develop a Kubernetes app** toolchain template.
-   3. Complete the fields for the {{site.data.keyword.deliverypipeline}}.
-   4. Click **Create** to create your Kubernetes app toolchain.
+   1. Go to [https://cloud.ibm.com/devops/create](https://cloud.ibm.com/devops/create){: external} and select the **Develop a Kubernetes app** toolchain template.
+   1. Complete the fields for the {{site.data.keyword.deliverypipeline}}.
+   1. Click **Create** to create your Kubernetes app toolchain.
 
 ## Setting up a {{site.data.keyword.deliverypipeline}} Private Worker
 {: #set_up_private_worker}
@@ -45,11 +45,12 @@ For Tekton pipelines, you can also specify one worker per trigger, which overrid
 Complete the following steps to set up a private worker:
 
 1. Configure the {{site.data.keyword.deliverypipeline}} Private Worker tool integration for your toolchain.
-2. Configure your Kubernetes cluster with a private worker.
-3. Use the private worker in your pipeline.
+1. Configure your Kubernetes cluster with a private worker.
+1. Use the private worker in your pipeline.
 
-### Configuring the {{site.data.keyword.deliverypipeline}} Private Worker tool integration
+### Configuring the {{site.data.keyword.deliverypipeline}} Private Worker tool integration by using the console
 {: #configure_private_worker_integration}
+{: ui}
 
 Complete the following steps to configure the {{site.data.keyword.deliverypipeline}} Private Worker tool integration for your toolchain:
 
@@ -68,6 +69,95 @@ The list of workers is empty until you use {{site.data.keyword.deliverypipeline}
 {: tip}
 
 For more information about the **{{site.data.keyword.deliverypipeline}} Private Worker** tool integration, see [Configuring {{site.data.keyword.deliverypipeline}} Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-privateworker).
+
+### Configuring the {{site.data.keyword.deliverypipeline}} Private Worker tool integration with the API
+{: #configure_private_worker_integration_api}
+{: api}
+
+1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}.
+1. [Determine the region and ID of the toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#viewing-toolchain-api) to which you want to add the {{site.data.keyword.deliverypipeline}} tool integration.
+1. Add the {{site.data.keyword.deliverypipeline}} Private Worker tool integration to the toolchain.
+
+   ```curl
+   curl -X POST \
+     https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id}/tools \
+     -H 'Authorization: Bearer {token}' \
+     -H 'Accept: application/json` \
+     -H 'Content-Type: application/json' \
+       -d '{
+       "tool_type_id": "private_worker",
+       "parameters": {
+         "name":"{tool_integration_name}", "workerQueueCredentials":"{sid_apikey}"
+         }
+     }'
+   ```
+   {: pre}
+
+The following table lists and describes each of the variables that are used in the previous step.   
+    
+| Variable | Description |
+|:---------|:------------|
+| `{region}` | The region in which the toolchain resides, for example, `us-south`. |
+| `{tool_integration_name}` | A name for your tool integration, for example, `dev-worker`.|
+| `{toolchain_id}` | The ID of the toolchain to which to add the tool integration. |
+| `{token}` | A valid IAM bearer token. |
+| `{sid_apikey}` | A service ID API key that is used by the private worker to authenticate with the work queue. |
+{: caption="Table 1. Variables for adding the {{site.data.keyword.deliverypipeline}} Private Worker tool integration with the API" caption-side="top"}
+
+### Configuring the {{site.data.keyword.deliverypipeline}} Private Worker tool integration with Terraform
+{: #configure_private_worker_integration_terraform}
+{: terraform}
+
+1. To install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform, follow the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
+1. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create a pipeline by using the HashiCorp Configuration Language. For more information about using this configuration language, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
+
+   A private worker must belong to a toolchain. You can also create toolchains by [using Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=terraform).
+   {: important}
+   
+   The following example creates a toolchain and a private worker by using the specified Terraform resources.
+  
+   ```terraform
+   data "ibm_resource_group" "group" {
+     name = "default"
+   }
+
+   resource "ibm_cd_toolchain" "my_toolchain" {
+     name              = "terraform_toolchain"
+     resource_group_id = data.ibm_resource_group.group.id
+   }
+
+   resource "ibm_cd_toolchain_tool_privateworker" "my_private_worker" {
+     parameters {
+        name = "terraform-private-worker"
+        worker_queue_credentials = "{my_sid_apikey}"
+     }
+     toolchain_id = ibm_cd_toolchain.my_toolchain.id
+   }
+   ```
+   {: codeblock}
+
+   For more information about `ibm_cd_toolchain_tool_privateworker`, see the argument reference details in the [Terraform Registry Documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_privateworker){: external}.
+  
+1. Initialize the Terraform CLI, if required.
+
+   ```terraform
+   terraform init
+   ```
+   {: pre}
+   
+1. Create a Terraform execution plan. This plan summarizes all of the actions that must run to create a toolchain with a private worker.
+
+   ```terraform
+   terraform plan
+   ```
+   {: pre}
+
+1. Apply the Terraform execution plan. Terraform takes all of the required actions to create the toolchain and the private worker.
+
+   ```terraform
+   terraform apply
+   ```
+   {: pre}
 
 ### Configuring your Kubernetes cluster
 {: #configure_kubernetes_cluster}
@@ -107,7 +197,7 @@ If you are assigned the Toolchain Administrator role, or you have worker cluster
 | View the list of namespaces in the cluster		|`$ kubectl get ns` (while the pipeline is running). At least one namespace, prefixed with `pw-` is returned during the pipeline job execution. For example, `pw-f0fb3cdb-5173-4785-ae92-bb05268e041e`. 		|
 |View the pod that is running the pipeline job		|`$ kubectl get pods -n pw-f0fb3cdb-5173-4785-ae92-bb05268e041e`   |
 |Start a bash session within a pod that is named `pw-f0fb3cdb-5173-4785-ae92-bb05268e041e`		|`kubectl -n pw-f0fb3cdb-5173-4785-ae92-bb05268e041e exec -it job-pod-e56e78 bash`		|
-{: caption="Table 1. Private Worker output" caption-side="top"}
+{: caption="Table 2. Private Worker output" caption-side="top"}
 
 
 ## Modifying the {{site.data.keyword.deliverypipeline}} Private Worker tool integration credentials
@@ -186,8 +276,9 @@ Run the following command to delete the private worker from your cluster by usin
 kubectl delete --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install/worker?serviceId={SERVICE_ID}&apikey={APIKEY}&name={WORKER_NAME}"
 ```
 
-## Deleting the {{site.data.keyword.deliverypipeline}} Private Worker tool integration
-{: #delete_private_workers_tool_integration}
+## Deleting the {{site.data.keyword.deliverypipeline}} Private Worker tool integration by using the console
+{: #delete_private_workers_integration}
+{: ui}
 
 If you delete the {{site.data.keyword.deliverypipeline}} Private Worker tool integration from your toolchain, the deletion cannot be undone.
 {: important}
@@ -200,6 +291,84 @@ Complete the following steps to delete a {{site.data.keyword.deliverypipeline}} 
 1. Confirm by clicking **Delete**. The {{site.data.keyword.deliverypipeline}} Private Worker tool integration is removed from the toolchain and is no longer available in the **Workers** tab in the delivery pipeline Stage Configuration page.
 
 If you delete the {{site.data.keyword.deliverypipeline}} Private Worker tool integration from a toolchain and the private worker is configured for a pipeline stage, it is still listed in the **Workers** tab of the Stage Configuration page. However, the private worker is disabled and labeled REMOVED. You must select a different private worker (if one exists) or use a public worker instead.
+{: tip}
+
+## Deleting the {{site.data.keyword.deliverypipeline}} Private Worker tool integration with the API
+{: #delete_private_workers_integration_api}
+{: api}
+
+1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}.
+1. [Determine the region and ID of the toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#viewing-toolchain-api) to which you want to add the {{site.data.keyword.deliverypipeline}} tool integration.
+1. Remove the {{site.data.keyword.deliverypipeline}} Private Worker tool integration from the toolchain.
+
+   ```curl
+   curl -X DELETE \
+     https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id}/tools/{worker_id} \
+     -H 'Authorization: Bearer {token}'
+   ```
+   {: pre}
+
+The following table lists and describes each of the variables that are used in the previous step.   
+    
+| Variable | Description |
+|:---------|:------------|
+| `{region}` | The region in which the toolchain resides, for example, `us-south`. |
+| `{worker_id}` | The ID of the private worker tool to delete.|
+| `{toolchain_id}` | The ID of the toolchain to which to add the tool integration. |
+| `{token}` | A valid IAM bearer token. |
+{: caption="Table 3. Variables for deleting the {{site.data.keyword.deliverypipeline}} Private Worker tool integration with the API" caption-side="top"}
+
+## Deleting the {{site.data.keyword.deliverypipeline}} Private Worker tool integration with Terraform
+{: #delete_private_workers_integration_terraform}
+{: terraform}
+
+1. Locate the Terraform file (for example, `main.tf`) that contains the `resource` block for the existing pipeline.
+
+   The `resource` in the following example describes an existing pipeline.
+
+   ```terraform
+   data "ibm_resource_group" "group" {
+     name = "default"
+   }
+
+   resource "ibm_cd_toolchain" "my_toolchain" {
+     name              = "terraform_toolchain"
+     resource_group_id = data.ibm_resource_group.group.id
+   }
+
+   resource "ibm_cd_toolchain_tool_privateworker" "my_private_worker" {
+     parameters {
+        name = "terraform-private-worker"
+        worker_queue_credentials = "{my_sid_apikey}"
+     }
+     toolchain_id = ibm_cd_toolchain.my_toolchain.id
+   }
+   ```
+   {: codeblock}
+
+1. Remove the `ibm_cd_toolchain_privateworker` `resource` block from your terraform file.
+1. Initialize the Terraform CLI, if required.
+
+   ```terraform
+   terraform init
+   ```
+   {: pre}
+   
+1. Create a Terraform execution plan. This plan summarizes all of the actions that must run to create a toolchain with a private worker.
+
+   ```terraform
+   terraform plan
+   ```
+   {: pre}
+
+1. Apply the Terraform execution plan. Terraform takes all of the required actions to remove the private worker from your toolchain.
+
+   ```terraform
+   terraform apply
+   ```
+   {: pre}
+
+Because the private worker agent might be used in other toolchains, it remains on your clusters until you delete it.
 {: tip}
 
 ## Updating a {{site.data.keyword.deliverypipeline}} Private Worker
@@ -215,7 +384,7 @@ Private workers can have one of the following statuses:
 Complete the following steps to update a private worker to use the latest version:
  
  1. Log in as an authorized user to the cluster that hosts the worker.
- 2. Run the following command:
+ 1. Run the following command:
  
    ```text
    kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/update"
@@ -224,15 +393,14 @@ Complete the following steps to update a private worker to use the latest versio
 ## Pipeline Private Worker images 
 {: #private-workers-images}
 
-The private worker installation script pulls required images from the global {{site.data.keyword.registrylong}}. It pulls the most recent images of pipeline private workers and respective Tekton framework images that include fixes for any vulnerability found.
+The private worker installation script pulls required images from the global {{site.data.keyword.registrylong}}. It pulls the most recent images of pipeline private workers and respective Tekton framework images that include fixes for any vulnerability found. 
 
 The image URL for the pipeline private worker is `icr.io/continuous-delivery/pipeline/pipeline-private-worker:<agent version>`.
 
 | Pipeline private worker image version | {{site.data.keyword.registrylong}} version | Known vulnerabilities
 |:-----------------|:-----------------|:-----------------|
 | 0.14.5 | `icr.io/continuous-delivery/pipeline/pipeline-private-worker:0.14.5` | - |
-{: caption="Table 2. Private Worker images" caption-side="top"}
-
+{: caption="Table 4. Private Worker images" caption-side="top"}
 
 The private worker installation also pulls the following Tekton framework images to the cluster:
 
