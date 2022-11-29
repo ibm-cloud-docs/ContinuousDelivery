@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2022
 
-lastupdated: "2022-11-25"
+lastupdated: "2022-11-29"
 
 keywords: ibmcloud, resource, service instance, create, IBM Cloud, Terraform
 
@@ -122,10 +122,10 @@ For more information about plan IDs or about how to update your service plan aft
    ...
    ResourceController resourceControllerService = ResourceController.newInstance();
    CreateResourceInstanceOptions createCdInstanceOptions = new CreateResourceInstanceOptions.Builder()
-      .name(instanceName)
-      .target(region)
-      .resourceGroup(resourceGroupId)
-      .resourcePlanId(planId)
+      .name({instance_name})
+      .target({region})
+      .resourceGroup({resource_group_id})
+      .resourcePlanId({plan_id})
       .build();
    Response<ResourceInstance> response = resourceControllerService.createResourceInstance(createCdInstanceOptions).execute();
    ResourceInstance cdInstance = response.getResult();
@@ -134,15 +134,15 @@ For more information about plan IDs or about how to update your service plan aft
    {: java}
 
    ```javascript
-   const ResourceControllerV2 = require('ibm-platform-services/resource-controller/v2');
+   const ResourceControllerV2 = require('@ibm-cloud/ibm-platform-services/resource-controller/v2');
    const resourceControllerService = ResourceControllerV2.newInstance({});
    ...
    (async () => {
       const params = {
-         name: instanceName,
-         target: region,
-         resourceGroup: resourceGroupId,
-         resourcePlanId: planIds,
+         name: {instance_name},
+         target: {region},
+         resourceGroup: {resource_group_id},
+         resourcePlanId: {plan_id},
       };
       const res = await resourceControllerService.createResourceInstance(params);
       const cdInstanceGuid = res.result.guid;
@@ -156,10 +156,10 @@ For more information about plan IDs or about how to update your service plan aft
    ...
    resource_controller_service = ResourceControllerV2.new_instance()
    cd_instance = resource_controller_service.create_resource_instance(
-      name=instance_name,
-      target=region,
-      resource_group=resource_group_id,
-      resource_plan_id=plan_id
+      name={instance_name},
+      target={region},
+      resource_group={resource_group_id},
+      resource_plan_id={plan_id}
    ).get_result()
    ```
    {: codeblock}
@@ -173,10 +173,10 @@ For more information about plan IDs or about how to update your service plan aft
    resourceControllerServiceOptions := &resourcecontrollerv2.ResourceControllerV2Options{}
    resourceControllerService, err := resourcecontrollerv2.NewResourceControllerV2UsingExternalConfig(resourceControllerServiceOptions)
    createCdInstanceOptions := resourceControllerService.NewCreateResourceInstanceOptions(
-      instanceName,
-      region,
-      resourceGroupId,
-      planId,
+      {instance_name},
+      {region},
+      {resource_group_id},
+      {plan_id},
    )
    cdInstance, response, err := resourceControllerService.CreateResourceInstance(createCdInstanceOptions)
    ```
