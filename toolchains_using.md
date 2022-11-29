@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-24"
+lastupdated: "2022-11-29"
 
 keywords: user management function, toolchains, tool integrations, user access
 
@@ -111,7 +111,7 @@ The following table lists and describes each of the variables that are used in t
    ```bash
    export CD_TOOLCHAIN_AUTH_TYPE=iam
    export CD_TOOLCHAIN_APIKEY={iam_api_key}
-   export CD_TOOLCHAIN_URL=https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains
+   export CD_TOOLCHAIN_URL={base_url}
    ```
    {: pre}
 
@@ -119,19 +119,21 @@ The following table lists and describes each of the variables that are used in t
 
    ```curl
    curl -X DELETE \
-     https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id} \
+     "{base_url}/toolchains/{toolchain_id}" \
      -H 'Authorization: Bearer {token}'
    ```
    {: pre}
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('continuous-delivery-node-sdk/cd-toolchain/v2');
-   ...
+   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
    const toolchainService = CdToolchainV2.newInstance();
-   const response = await toolchainService.deleteToolchain({
-      toolchainId: toolchainId
-   });
+   ...
+   (async() => {
+      const response = await toolchainService.deleteToolchain({
+         toolchainId: {toolchain_id}
+      });
+   })();
    ```
    {: codeblock}
    {: node}
@@ -143,7 +145,7 @@ The following table lists and describes each of the variables that are used in t
    ...
    toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
    toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
-   deleteToolchainOptions := toolchainClient.NewDeleteToolchainOptions(toolchainId)
+   deleteToolchainOptions := toolchainClient.NewDeleteToolchainOptions({toolchain_id})
    response, err := toolchainClient.DeleteToolchain(deleteToolchainOptions)
    ```
    {: codeblock}
@@ -153,8 +155,8 @@ The following table lists and describes each of the variables that are used in t
     
 | Variable | Description |
 |:---------|:------------|
+| `{base_url}` | The Toolchain API endpoint URL. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
 | `{iam_api_key}` | Your IAM API key. |
-| `{region}` | The region where the toolchain is located. For example, `us-south`. |
 | `{token}` | A valid IAM bearer token. |
 | `{toolchain_id}` | The ID of the toolchain that you want to delete. |
 {: caption="Table 2. Variables for deleting the toolchain with the API" caption-side="top"}
