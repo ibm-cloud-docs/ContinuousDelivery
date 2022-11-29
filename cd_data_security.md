@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-11-23"
+lastupdated: "2022-11-29"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -183,6 +183,7 @@ resource "ibm_cd_toolchain_tool_slack" "integration" {
     }
     depends_on = [
         ibm_cd_toolchain_tool_keyprotect.integration
+        ibm_kms_key.key
     ]
 }
 ```
