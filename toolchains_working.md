@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2022
 
-lastupdated: "2022-11-25"
+lastupdated: "2022-11-29"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -120,7 +120,7 @@ If you created your app by using your own code repository, click **Deploy my app
    ```bash
    export CD_TOOLCHAIN_AUTH_TYPE=iam
    export CD_TOOLCHAIN_APIKEY={iam_api_key}
-   export CD_TOOLCHAIN_URL=https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains
+   export CD_TOOLCHAIN_URL={base_url}
    ```
    {: pre}
 
@@ -132,7 +132,7 @@ If you created your app by using your own code repository, click **Deploy my app
 
    ```curl
    curl -X POST \
-     https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains \
+     "{base_url}/toolchains" \
      -H 'Authorization: Bearer {token}' \
      -H 'Content-Type: application/json' \
        -d '{
@@ -144,15 +144,17 @@ If you created your app by using your own code repository, click **Deploy my app
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('continuous-delivery-node-sdk/cd-toolchain/v2');
-   ...
+   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
    const toolchainService = CdToolchainV2.newInstance();
-   const toolchainPrototypeModel = {
-      description: toolchainDescription,
-      name: toolchainName,
-      resourceGroupId: resourceGroupId
-   };
-   const response = await toolchainService.createToolchain(toolchainPrototypeModel);
+   ...
+   (async() => {
+      const toolchainPrototypeModel = {
+         description: {toolchain_description},
+         name: {toolchain_name},
+         resourceGroupId: {resource_group_id}
+      };
+      const response = await toolchainService.createToolchain(toolchainPrototypeModel);
+   })();
    ```
    {: codeblock}
    {: node}
@@ -164,8 +166,8 @@ If you created your app by using your own code repository, click **Deploy my app
    ...
    toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
    toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
-   createToolchainOptions := toolchainClient.NewCreateToolchainOptions(toolchainName, resourceGroupId)
-   createToolchainOptions.SetDescription(toolchainDescription)
+   createToolchainOptions := toolchainClient.NewCreateToolchainOptions({toolchain_name}, {resource_group_id})
+   createToolchainOptions.SetDescription({toolchain_description})
    toolchain, response, err := toolchainClient.CreateToolchain(createToolchainOptions)
    ```
    {: codeblock}
@@ -175,10 +177,11 @@ The following table lists and describes each of the variables that are used in t
     
 | Variable | Description |
 |:---------|:------------|
+| `{base_url}` | The Toolchain API endpoint URL. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
 | `{iam_api_key}` | Your IAM API key. |
-| `{region}` | The region in which to provision the toolchain. For example, `us-south`. |
 | `{resource_group_id}` | The ID of the resource group in which to provision the toolchain. To find the IDs of the available resource groups, run `ibmcloud resource groups`. |
 | `{token}` | A valid IAM bearer token. |
+| `{toolchain_description}` | A description for your toolchain. |
 | `{toolchain_name}` | A name for your toolchain. |
 {: caption="Table 1. Variables for provisioning a toolchain with the API" caption-side="top"}
 
@@ -303,7 +306,7 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
    ```bash
    export CD_TOOLCHAIN_AUTH_TYPE=iam
    export CD_TOOLCHAIN_APIKEY={iam_api_key}
-   export CD_TOOLCHAIN_URL=https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains
+   export CD_TOOLCHAIN_URL={base_url}
    ```
    {: pre}
 
@@ -315,7 +318,7 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
 
    ```curl
    curl -X GET \
-     https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains?resource_group_id={resource_group_id} \
+     "{base_url}/toolchains?resource_group_id={resource_group_id}" \
      -H 'Authorization: Bearer {token}' \
      -H 'Accept: application/json'
    ```
@@ -323,12 +326,14 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('continuous-delivery-node-sdk/cd-toolchain/v2');
-   ...
+   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
    const toolchainService = CdToolchainV2.newInstance();
-   const response = await toolchainService.listToolchains({
-      resourceGroupId: resourceGroupId
-   });
+   ...
+   (async() => {
+      const response = await toolchainService.listToolchains({
+         resourceGroupId: {resource_group_id}
+      });
+   })();
    ```
    {: codeblock}
    {: node}
@@ -340,7 +345,7 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
    ...
    toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
    toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
-   listToolchainsOptions := toolchainClient.NewListToolchainsOptions(resourceGroupId)
+   listToolchainsOptions := toolchainClient.NewListToolchainsOptions({resource_group_id})
    toolchains, response, err := toolchainClient.ListToolchains(listToolchainsOptions)
    ```
    {: codeblock}
@@ -350,7 +355,7 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
 
    ```curl
    curl -X GET \
-     https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id} \
+     {base_url}/toolchains/{toolchain_id} \
      -H 'Authorization: Bearer {token}' \
      -H 'Accept: application/json'
    ```
@@ -358,15 +363,20 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
    {: curl}
 
    ```javascript
-   const response = await toolchainService.getToolchainById({
-      toolchainId: toolchainId
-   });
+   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+   const toolchainService = CdToolchainV2.newInstance();
+   ...
+   (async() => {
+      const response = await toolchainService.getToolchainById({
+         toolchainId: {toolchain_id}
+      });
+   })();
    ```
    {: codeblock}
    {: node}
 
    ```go
-   getToolchainByIDOptions := toolchainClient.NewGetToolchainByIDOptions(toolchainId)
+   getToolchainByIDOptions := toolchainClient.NewGetToolchainByIDOptions({toolchain_id})
    toolchain, response, err := toolchainClient.GetToolchainByID(getToolchainByIDOptions)
    ```
    {: codeblock}
@@ -376,7 +386,7 @@ The following table lists and describes each of the variables that are used in t
     
 | Variable | Description |
 |:---------|:------------|
-| `{region}` | The region in which the toolchain resides. For example, `us-south`. |
+| `{base_url}` | The Toolchain API endpoint URL. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
 | `{resource_group_id}` | The ID of the resource group in which the toolchain resides. To find the IDs of the available resource groups, run `ibmcloud resource groups`. |
 | `{token}` | A valid IAM bearer token. |
 | `{toolchain_id}` | The ID of your toolchain. |
