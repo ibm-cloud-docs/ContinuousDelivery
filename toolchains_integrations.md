@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-11-29"
 
 keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Git Repos and Issue Tracking, GitHub, GitLab, Hashicorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -54,24 +54,26 @@ You can add tool integrations to your toolchain with the API.
    curl -X POST --location --header "Authorization: Bearer {iam_token}" \
      --header "Accept: application/json" \
      --header "Content-Type: application/json" \
-     --data '{ "name": "{tool_name}", "tool_type_id": "{tool_type_id}", "parameters": {json_parameters_object} }' \
+     --data '{ "name": "{tool_name}", "tool_type_id": "{tool_type_id}", "parameters": {tool_parameters} }' \
      "{base_url}/toolchains/{toolchain_id}/tools"
    ```
    {: pre}
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('continuous-delivery-node-sdk/cd-toolchain/v2');
-   ...
+   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
    const toolchainService = CdToolchainV2.newInstance();
-   const toolParameters = {};
-   const toolPrototypeModel = {
-      toolchainId: toolchainId,
-      toolTypeId: toolTypeId,
-      name: toolName,
-      parameters: toolParameters
-   };
-   const response = await toolchainService.createTool(toolPrototypeModel);
+   ...
+   (async() => {
+      const toolPrototypeModel = {
+         toolchainId: {tool_type_id},
+         toolTypeId: {tool_type_id},
+         name: {tool_name},
+         parameters: {tool_parameters}
+      };
+      const response = await toolchainService.createTool(toolPrototypeModel);
+   })();
+
    ```
    {: codeblock}
    {: node}
@@ -83,9 +85,9 @@ You can add tool integrations to your toolchain with the API.
    ...
    toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
    toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
-   createToolOptions := toolchainClient.NewCreateToolOptions(toolchainId, toolTypeId)
-   createToolOptions.SetName(toolName)
-   createToolOptions.SetParameters(toolParameters)
+   createToolOptions := toolchainClient.NewCreateToolOptions({tool_type_id}, {tool_type_id})
+   createToolOptions.SetName({tool_name})
+   createToolOptions.SetParameters({tool_parameters})
    tool, response, err := toolchainClient.CreateTool(createToolOptions)
    ```
    {: codeblock}
@@ -98,8 +100,8 @@ The following table lists and describes each of the variables that are used in t
 | `{base_url}` | The Toolchain API endpoint URL. For more information about supported values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
 | `{iam_api_key}` | Your IAM API key. |
 | `{iam_token}` | A valid IAM bearer token. |
-| `{json_parameters_object}` | Unique key-value pairs that represent the parameters to use to create the tool integration. For more information about the supported parameters for each tool integration, see [Tool integrations](#integrations). |
 | `{tool_name}` | The name of the tool integration. |
+| `{tool_parameters}` | Unique key-value pairs that represent the parameters to use to create the tool integration. For more information about the supported parameters for each tool integration, see [Tool integrations](#integrations). |
 | `{tool_type_id}` | The unique, short name that represents the type of the tool integration. |
 | `{toolchain_id}` | The toolchain in which to create the tool integration. |
 {: caption="Table 1. Variables for provisioning the tool integration with the API" caption-side="top"}
@@ -176,7 +178,7 @@ If you configured a tool integration when you created a toolchain, you can updat
    ```bash
    export CD_TOOLCHAIN_AUTH_TYPE=iam
    export CD_TOOLCHAIN_APIKEY={iam_api_key}
-   export CD_TOOLCHAIN_URL=export CD_TOOLCHAIN_URL={base_url}
+   export CD_TOOLCHAIN_URL={base_url}
    ```
    {: pre}
 
@@ -188,24 +190,25 @@ If you configured a tool integration when you created a toolchain, you can updat
    curl -X PATCH --location --header "Authorization: Bearer {iam_token}" \
      --header "Accept: application/json" \
      --header "Content-Type: application/merge-patch+json" \
-     --data '{ "name": "{new_tool_name}", "parameters": {new_json_parameters_object} }' \
+     --data '{ "name": "{new_tool_name}", "parameters": {new_tool_parameters} }' \
      "{base_url}/toolchains/{toolchain_id}/tools/{tool_id}"
    ```
    {: pre}
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('continuous-delivery-node-sdk/cd-toolchain/v2');
-   ...
+   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
    const toolchainService = CdToolchainV2.newInstance();
-   const newToolParameters = {};
-   const toolPatchModel = {
-      toolchainId: toolchainId,
-      toolId: toolId,
-      name: newToolName,
-      parameters: newToolParameters
-   };
-   const response = await toolchainService.updateTool(toolPatchModel);
+   ...
+   (async() => {
+      const toolPatchModel = {
+         toolchainId: {tool_type_id},
+         toolId: {tool_id},
+         name: {new_tool_name},
+         parameters: {new_tool_parameters}
+      };
+      const response = await toolchainService.updateTool(toolPatchModel);
+   })();
    ```
    {: codeblock}
    {: node}
@@ -217,9 +220,9 @@ If you configured a tool integration when you created a toolchain, you can updat
    ...
    toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
    toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
-   updateToolOptions := toolchainClient.NewUpdateToolOptions(toolchainId, toolId)
-   updateToolOptions.SetName(newToolName)
-   updateToolOptions.SetParameters(newToolParameters)
+   updateToolOptions := toolchainClient.NewUpdateToolOptions({tool_type_id}, {tool_id})
+   updateToolOptions.SetName({new_tool_name})
+   updateToolOptions.SetParameters({new_tool_parameters})
    tool, response, err := toolchainClient.UpdateTool(updateToolOptions)
    ```
    {: codeblock}
@@ -233,7 +236,7 @@ The following table lists and describes each of the variables that are used in t
 | `{iam_api_key}` | Your IAM API key. |
 | `{iam_token}` | A valid IAM bearer token. |
 | `{new_tool_name}` | The new name of the tool integration. |
-| `{new_json_parameters_object}` | The unique key-value pairs that represent the parameters to use to update the tool integration. To view a list of parameters for each tool integration, see [Tool integrations](#integrations). |
+| `{new_tool_parameters}` | The unique key-value pairs that represent the parameters to use to update the tool integration. To view a list of parameters for each tool integration, see [Tool integrations](#integrations). |
 | `{tool_id}` | The ID of the tool integration that you want to update. |
 | `{toolchain_id}` | The ID of the toolchain where the tool integration exists. |
 {: caption="Table 2. Variables for updating the tool integration with the API" caption-side="top"}
@@ -325,13 +328,15 @@ You can delete tool integrations from your toolchain with the API. If you delete
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('continuous-delivery-node-sdk/cd-toolchain/v2');
-   ...
+   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
    const toolchainService = CdToolchainV2.newInstance();
-   const response = await toolchainService.deleteTool({
-      toolchainId: toolchainId,
-      toolId: toolId
-   });
+   ...
+   (async() => {
+      const response = await toolchainService.deleteTool({
+         toolchainId: {tool_type_id},
+         toolId: {tool_id}
+      });
+   })();
    ```
    {: codeblock}
    {: node}
@@ -343,7 +348,7 @@ You can delete tool integrations from your toolchain with the API. If you delete
    ...
    toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
    toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
-   deleteToolOptions := toolchainClient.NewDeleteToolOptions(toolchainId, toolId)
+   deleteToolOptions := toolchainClient.NewDeleteToolOptions({tool_type_id}, {tool_id})
    response, err := toolchainClient.DeleteTool(deleteToolOptions)
    ```
    {: codeblock}
