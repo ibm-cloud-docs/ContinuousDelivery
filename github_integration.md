@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-11-25"
 
 keywords: tool integrations, IBM Cloud Public, GitHub
 
@@ -30,7 +30,7 @@ If you are configuring this tool integration as you are creating the toolchain, 
 
    * If you choose OAuth, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account. If you have an active GitHub session but you didn't enter your password recently, you might be prompted to enter your GitHub password to confirm.
 
-   * If you choose Personal Access Token, you must enter the personal access token to use to authorize with GitHub to clone repos and perform other actions on your behalf. If you don't have a personal access token, you can follow the documentation on the GitHub website to create one. Make sure that your personal access token has `repo`, `delete_repo`, `read:user`, and `workflow` rights.
+   * If you choose Personal Access Token, you must enter the personal access token to use to authorize with GitHub to clone repos and perform other actions on your behalf. If you don't have a personal access token, you can follow the documentation on the GitHub website to create one.
 
 
 1. If you are using a repo on your own {{site.data.keyword.ghe_short}} server, in the Configurable Integrations section, click **Add custom server**.
