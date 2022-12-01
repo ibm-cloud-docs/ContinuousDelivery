@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-12-01"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -17,8 +17,19 @@ content-type: release-note
 # Release notes for {{site.data.keyword.contdelivery_short}}
 {: #cd-relnotes}
 
-Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
+Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
 {: shortdesc}
+
+## 1 December 2022
+{: #ContinuousDelivery-dec0122}
+{: release-note}
+
+The Terraform resources and data sources, Go SDKs, and HTTP APIs for toolchains and Tekton pipelines are now generally available.
+:   Updates include a few breaking changes.
+
+:   The Terraform resources and data sources, Go SDKs, and HTTP APIs are now a generally available, fully supported feature.
+
+:   Read the [release notes](https://github.com/IBM/continuous-delivery-go-sdk/blob/main/RELEASE_NOTES.md){: external}.
 
 ## 18 November 2022
 {: #ContinuousDelivery-nov1822}
