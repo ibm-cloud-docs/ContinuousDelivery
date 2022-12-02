@@ -124,11 +124,6 @@ toc:
               - git_locally.md
               - git_toolchains.md
       - topicgroup: 
-              label: Code Risk Analyzer
-              topics: 
-              - cd_configure_cra.md
-              - cd_cra_scan.md
-      - topicgroup: 
               label: DevOps Insights
               topics: 
               - view_pipeline_activity.md
