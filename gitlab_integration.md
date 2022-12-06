@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-11-28"
 
 keywords: tool integrations, IBM Cloud Public, GitLab
 
@@ -26,7 +26,7 @@ If you are configuring this tool integration as you are creating the toolchain, 
 
    * If you choose OAuth, click **Authorize** to go to the GitLab website. If you don't have an active GitLab session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.cloud_notm}} to access your GitLab account. If you have an active GitLab session but you didn't enter your password recently, you might be prompted to enter your GitLab password to confirm.
 
-   * If you choose Personal Access Token, you must enter the personal access token to use to authorize with GitLab to clone repos and perform other actions on your behalf. If you don't have a personal access token, you can follow the documentation on the GitLab website to create one.
+   * If you choose Personal Access Token, you must enter the personal access token to use to authorize with GitLab to clone repos and perform other actions on your behalf. If you don't have a personal access token, you can follow the documentation on the GitLab website to create one. Make sure that your personal access token has `api` rights.
 
 1. If you are using a repo on your own GitLab server, in the Configurable Integrations section, click **Add custom server**.
 
@@ -90,4 +90,4 @@ You must specify the `tool_type_id` property in the request body with the `gitla
 ## Learn more about GitLab
 {: #learn_gitlab}
 
-To learn more about GitLab, see the [GitLab article](https://www.ibm.com/cloud/garage/content/code/tool_gitlab/){: external} on the IBM Cloud Garage Method. 
+To learn more about GitLab, see the [GitLab article](https://www.ibm.com/cloud/garage/content/code/tool_gitlab/){: external} on the IBM Cloud Garage Method.
