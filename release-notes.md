@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-14"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -19,6 +19,15 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
 {: shortdesc}
+
+## 14 December 2022
+{: #ContinuousDelivery-dec1422}
+{: release-note}
+
+The {{site.data.keyword.contdelivery_short}} service is now designated as {{site.data.keyword.cloud_notm}} for Financial Services Validated.
+:   This designation does not apply to all of the tools that you can integrate into toolchains. For more information about which tool integrations and tools are designated as {{site.data.keyword.cloud_notm}} for Financial Services Validated when they are used with {{site.data.keyword.contdelivery_short}} toolchains, see [Understanding tool integrations with {{site.data.keyword.cloud_notm}} for Financial Services](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations).
+
+:   For more information about {{site.data.keyword.cloud_notm}} for Financial Services, see [{{site.data.keyword.cloud_notm}} Framework for Financial Services](/docs/framework-financial-services).
 
 ## 7 December 2022
 {: #ContinuousDelivery-dec0722}
