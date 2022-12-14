@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-12-13"
 
 keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Git Repos and Issue Tracking, GitHub, GitLab, Hashicorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -17,6 +17,24 @@ subcollection: ContinuousDelivery
 
 You can add, update, and delete tool integrations by using the console, with the API, or with Terraform. You can configure tool integrations that support development, deployment, and operations tasks while you create an open toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
 {: shortdesc}
+
+## Understanding tool integrations with {{site.data.keyword.cloud_notm}} for Financial Services
+{: #financial_services_validated}
+
+Although the {{site.data.keyword.contdelivery_short}} and Toolchain services are designated as {{site.data.keyword.cloud_notm}} for Financial Services Validated, this designation does not apply to all of the tools that you can integrate into toolchains.
+
+The following tools and tool integrations are *not* Financial Services Validated:
+
+* The {{site.data.keyword.gitrepos}} component of the {{site.data.keyword.contdelivery_short}} service.
+* Tool integrations for services in the {{site.data.keyword.cloud_notm}} catalog that are not designated as Financial Services Validated.
+* Tool integrations for third-party, customer, or tools and services that are not owned and operated by {{site.data.keyword.cloud_notm}}.
+
+For more information about which tools and tool integrations are Financial Services Validated, see [Tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations#tool_integrations).
+
+For more information about {{site.data.keyword.cloud_notm}} for Financial Services, see [{{site.data.keyword.cloud_notm}} Framework for Financial Services](/docs/framework-financial-services).
+
+The {{site.data.keyword.contdelivery_short}} service is Financial Services Validated in the same regions as {{site.data.keyword.cloud_notm}} for Financial Services. For more information about which multi-zone regions are designated as Financial Services Validated, see [Deploy your {{site.data.keyword.cloud_notm}} resources only to approved multizone regions](/docs/framework-financial-services?topic=framework-financial-services-best-practices#best-practices-financial-services-regions).
+{: important}
 
 ## Adding a tool integration by using the console
 {: #create_integration_ui}
@@ -66,7 +84,7 @@ You can add tool integrations to your toolchain with the API.
    ...
    (async() => {
       const toolPrototypeModel = {
-         toolchainId: {tool_type_id},
+         toolchainId: {toolchain_id},
          toolTypeId: {tool_type_id},
          name: {tool_name},
          parameters: {tool_parameters}
@@ -85,13 +103,27 @@ You can add tool integrations to your toolchain with the API.
    ...
    toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
    toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
-   createToolOptions := toolchainClient.NewCreateToolOptions({tool_type_id}, {tool_type_id})
+   createToolOptions := toolchainClient.NewCreateToolOptions({toolchain_id}, {tool_type_id})
    createToolOptions.SetName({tool_name})
    createToolOptions.SetParameters({tool_parameters})
    tool, response, err := toolchainClient.CreateTool(createToolOptions)
    ```
    {: codeblock}
    {: go}
+
+   ```python
+   from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
+   ...
+   toolchainService = CdToolchainV2.new_instance()
+   tool = toolchainService.create_tool(
+      name = {tool_name},
+      toolchain_id = {toolchain_id},
+      tool_type_id = {tool_type_id},
+      parameters = {tool_parameters}
+   )
+   ```
+   {: codeblock}
+   {: python}
 
 The following table lists and describes each of the variables that are used in the previous steps.   
     
@@ -202,7 +234,7 @@ If you configured a tool integration when you created a toolchain, you can updat
    ...
    (async() => {
       const toolPatchModel = {
-         toolchainId: {tool_type_id},
+         toolchainId: {toolchain_id},
          toolId: {tool_id},
          name: {new_tool_name},
          parameters: {new_tool_parameters}
@@ -220,13 +252,26 @@ If you configured a tool integration when you created a toolchain, you can updat
    ...
    toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
    toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
-   updateToolOptions := toolchainClient.NewUpdateToolOptions({tool_type_id}, {tool_id})
+   updateToolOptions := toolchainClient.NewUpdateToolOptions({toolchain_id}, {tool_id})
    updateToolOptions.SetName({new_tool_name})
    updateToolOptions.SetParameters({new_tool_parameters})
    tool, response, err := toolchainClient.UpdateTool(updateToolOptions)
    ```
    {: codeblock}
    {: go}
+
+   ```python
+   from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
+   ...
+   toolchainService = CdToolchainV2.new_instance()
+   tool = toolchainService.update_tool(
+      toolchain_id = {toolchain_id},
+      tool_id = {tool_id},
+      toolchain_tool_prototype_patch = {new_tool_parameters}
+   ) 
+   ```
+   {: codeblock}
+   {: python}
 
 The following table lists and describes each of the variables that are used in the previous steps.   
     
@@ -333,7 +378,7 @@ You can delete tool integrations from your toolchain with the API. If you delete
    ...
    (async() => {
       const response = await toolchainService.deleteTool({
-         toolchainId: {tool_type_id},
+         toolchainId: {toolchain_id},
          toolId: {tool_id}
       });
    })();
@@ -348,11 +393,23 @@ You can delete tool integrations from your toolchain with the API. If you delete
    ...
    toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
    toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
-   deleteToolOptions := toolchainClient.NewDeleteToolOptions({tool_type_id}, {tool_id})
+   deleteToolOptions := toolchainClient.NewDeleteToolOptions({toolchain_id}, {tool_id})
    response, err := toolchainClient.DeleteTool(deleteToolOptions)
    ```
    {: codeblock}
    {: go}
+
+   ```python
+   from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
+   ...
+   toolchainService = CdToolchainV2.new_instance()
+   response = toolchainService.delete_tool(
+      toolchain_id = {toolchain_id},
+      tool_id = {tool_id}
+   )
+   ```
+   {: codeblock}
+   {: python}
 
 The following table lists and describes each of the variables that are used in the previous steps.   
     
@@ -361,7 +418,7 @@ The following table lists and describes each of the variables that are used in t
 | `{base_url}` | The Toolchain API endpoint URL. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url) for a list of values. |
 | `{iam_api_key}` | Your IAM API key. |
 | `{iam_token}` | A valid IAM bearer token. |
-| `{tool_id}` | The ID of the tool integration that you want to update. |
+| `{tool_id}` | The ID of the tool integration that you want to delete. |
 | `{toolchain_id}` | The ID of the toolchain where the tool integration exists. |
 {: caption="Table 3. Variables for deleting the tool integration with the API" caption-side="top"}
 
@@ -395,34 +452,40 @@ You can delete tool integrations from your toolchain with Terraform. If you dele
    {: pre}
 
 ## Tool integrations
-{: #integrations}
+{: #tool_integrations}
 
-The tool integrations that are available to you depend on the region of your toolchain and the availability of tool integrations in that region.
+The {{site.data.keyword.contdelivery_short}} service supports several tool integrations.
 
-|Tool integration |Tool type ID |Regions	|Financial services validated|
-|:----------|:----------|:------------------------------|:-----|
-|[{{site.data.keyword.appconfig_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-app-configuration)		|appconfig |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[Artifactory](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-artifactory)		|artifactory |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[Bitbucket](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-bitbucket)		|bitbucketgit |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[{{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) 		|pipeline |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London	   	| ![Checkmark icon](../icons/checkmark-icon.svg) 		|
-|[{{site.data.keyword.deliverypipeline}} Private Worker](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-privateworker)			|private_worker |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Osaka, Sydney, London		|		|
-|[{{site.data.keyword.DRA_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-dra)		|draservicebroker |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		| ![Checkmark icon](../icons/checkmark-icon.svg)			|
-|[{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-grit)	|hostedgit |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-github)		|githubconsolidated |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-gitlab)		|gitlab |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[HashiCorp Vault](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault)		|hashicorpvault |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[Jenkins](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jenkins)	|jenkins |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[JIRA](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jira)		|jira |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[{{site.data.keyword.keymanagementserviceshort}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-keyprotect)		|keyprotect |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[Nexus](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-nexus)			|nexus |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[Other Tool](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-othertool)			|customtool |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[PagerDuty](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pagerduty)			|pagerduty |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[Rational Team Concert](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-rationalteamconcert)		|rationalteamconcert |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[Sauce Labs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-saucelabs)		|saucelabs |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[Secrets Manager](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager)		|secretsmanager |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[Security and Compliance Center](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-scc)		|security_compliance |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[Slack](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-slack)		|slack |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
-|[SonarQube](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-sonarqube)			|sonarqube |Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, London		|		|
+Although the {{site.data.keyword.contdelivery_short}} and Toolchain services are designated as {{site.data.keyword.cloud_notm}} for Financial Services Validated, this designation does not apply to all of the tools that you can integrate into toolchains. The following table indicates which tool integrations and tools are designated as {{site.data.keyword.cloud_notm}} for Financial Services Validated when they are used with {{site.data.keyword.contdelivery_short}} toolchains.
+{: important}
+
+If you are using the [{{site.data.keyword.contdelivery_short}} Toolchain API to create a tool integration](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, set the `tool_type_id` parameter in the API request to the **Tool type ID** value for the tool integration that is listed in the following table.
+{: tip}
+
+|Tool integration |Tool type ID |Financial services validated|
+|:----------|:----------|:-----|
+|[{{site.data.keyword.appconfig_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-app-configuration)		|appconfig |		|
+|[Artifactory](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-artifactory)		|artifactory |		|
+|[Bitbucket](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-bitbucket)		|bitbucketgit |		|
+|[{{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) 		|pipeline | ![Checkmark icon](../icons/checkmark-icon.svg) 		|
+|[{{site.data.keyword.deliverypipeline}} Private Worker](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-privateworker)			|private_worker |		|
+|[{{site.data.keyword.DRA_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-dra)		|draservicebroker | ![Checkmark icon](../icons/checkmark-icon.svg)			|
+|[{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-grit)	|hostedgit |		|
+|[GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-github)		|githubconsolidated |		|
+|[GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-gitlab)		|gitlab |		|
+|[HashiCorp Vault](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault)		|hashicorpvault |		|
+|[Jenkins](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jenkins)	|jenkins |		|
+|[JIRA](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jira)		|jira |		|
+|[{{site.data.keyword.keymanagementserviceshort}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-keyprotect)		|keyprotect |		|
+|[Nexus](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-nexus)			|nexus |		|
+|[Other Tool](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-othertool)			|customtool |		|
+|[PagerDuty](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pagerduty)			|pagerduty |		|
+|[Rational Team Concert](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-rationalteamconcert)		|rationalteamconcert |		|
+|[Sauce Labs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-saucelabs)		|saucelabs |		|
+|[Secrets Manager](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager)		|secretsmanager | ![Checkmark icon](../icons/checkmark-icon.svg)		|
+|[Security and Compliance Center](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-scc)		|security_compliance | ![Checkmark icon](../icons/checkmark-icon.svg)		|
+|[Slack](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-slack)		|slack |		|
+|[SonarQube](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-sonarqube)			|sonarqube |		|
 {: caption="Table 4. Tool integrations available for toolchains on {{site.data.keyword.cloud_notm}} Public" caption-side="top"}
 
 If you want to start developing with your source code on {{site.data.keyword.cloud_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
