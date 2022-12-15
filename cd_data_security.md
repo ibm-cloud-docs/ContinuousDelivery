@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-12-12"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -88,24 +88,94 @@ When you use the console, the fields for tool integration configuration properti
 {: #cd_secrets_references_api}
 {: api}
 
-You can work with secure properties with secrets reference values in calls to the API. The following example shows how to create a Slack tool integration with an API token (Slack webhook) that is stored in an instance of {{site.data.keyword.keymanagementserviceshort}}. This example assumes that the toolchain already contains a {{site.data.keyword.keymanagementserviceshort}} tool integration and that an IAM service-to-service authorization policy from the source toolchain to the target {{site.data.keyword.keymanagementserviceshort}} service instance is in place.
+You can work with secure properties with secrets reference values in calls to the API, which requires an [IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+   
+```bash
+export CD_TOOLCHAIN_AUTH_TYPE=iam
+export CD_TOOLCHAIN_APIKEY={iam_api_key}
+export CD_TOOLCHAIN_URL=https://api.us-south.devops.cloud.ibm.com/toolchain/v2
+```
+{: pre}
+
+The following example shows how to create a Slack tool integration with an API token (Slack webhook) that is stored in an instance of {{site.data.keyword.keymanagementserviceshort}}. This example assumes that the toolchain already contains a {{site.data.keyword.keymanagementserviceshort}} tool integration and that an IAM service-to-service authorization policy from the source toolchain to the target {{site.data.keyword.keymanagementserviceshort}} service instance is in place.
 
 ```curl
 curl -X POST \
-  https://api.us-south.devops.cloud.ibm.com/toolchain/v2/toolchains/01234567-89ab-cdef-0123-456789abcdef/tools \
-  -H "Authorization: Bearer $TOKEN" \
-  -H 'Accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
+https://api.us-south.devops.cloud.ibm.com/toolchain/v2/toolchains/01234567-89ab-cdef-0123-456789abcdef/tools \
+-H "Authorization: Bearer $TOKEN" \
+-H 'Accept: application/json' \
+-H 'Content-Type: application/json' \
+-d '{
     "tool_type_id": "slack",
     "parameters": {
-      "api_token": "{vault::my-kms-tool-integration.my-slack-webhook}",
-      "channel_name": "my_slack_channel_name",
-      "team_url": "my_slack_team_name"
+    "api_token": "{vault::my-kms-tool-integration.my-slack-webhook}",
+    "channel_name": "my_slack_channel_name",
+    "team_url": "my_slack_team_name"
     }
-  }' 
+}' 
 ```
 {: pre}
+{: curl}
+
+```javascript
+const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+...
+(async () => {
+    const toolchainService = CdToolchainV2.newInstance();
+    const slackParameters = {
+        api_token: "{vault::my-kms-tool-integration.my-slack-webhook}",
+        channel_name: "my_slack_channel_name",
+        team_url: "my_slack_team_name"
+    };
+
+    const toolPrototypeModel = {
+        toolchainId: "01234567-89ab-cdef-0123-456789abcdef",
+        toolTypeId: "slack",
+        parameters: slackParameters
+    };
+
+    const slackTool = await toolchainService.createTool(toolPrototypeModel);
+})();
+```
+{: codeblock}
+{: node}
+
+```go
+import (
+    "github.com/IBM/continuous-delivery-go-sdk/cdtoolchainv2"
+)
+...
+toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
+toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
+slackParameters := map[string]interface{}{
+    "api_token": "{vault::my-kms-tool-integration.my-slack-webhook}",
+    "channel_name": "my_slack_channel_name",
+    "team_url": "my_slack_team_name"
+}
+createToolOptions := toolchainClient.NewCreateToolOptions("01234567-89ab-cdef-0123-456789abcdef", "slack")
+createToolOptions.SetParameters(slackParameters)
+slackTool, response, err := toolchainClient.CreateTool(createToolOptions)
+```
+{: codeblock}
+{: go}
+
+```python
+from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
+...
+toolchainService = CdToolchainV2.new_instance()
+slack_parameters = {
+    "api_token": "{vault::my-kms-tool-integration.my-slack-webhook}",
+    "channel_name": "my_slack_channel_name",
+    "team_url": "my_slack_team_name"
+}
+slackTool = toolchainService.create_tool(
+    toolchain_id = "01234567-89ab-cdef-0123-456789abcdef"
+    tool_type_id = "draservicebroker"
+    parameters = slack_parameters
+)
+```
+{: codeblock}
+{: python}
 
 The following table lists and describes each of the secret reference values that are used in the previous example.
 
