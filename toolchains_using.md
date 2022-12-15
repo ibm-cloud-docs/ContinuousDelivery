@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-12-14"
 
 keywords: user management function, toolchains, tool integrations, user access
 
@@ -109,8 +109,8 @@ The following table lists and describes each of the variables that are used in t
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
    
    ```bash
-   export CD_TOOLCHAIN_AUTH_TYPE=iam
-   export CD_TOOLCHAIN_APIKEY={iam_api_key}
+   export CD_TOOLCHAIN_AUTH_TYPE=iam && \
+   export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
    export CD_TOOLCHAIN_URL={base_url}
    ```
    {: pre}
@@ -151,11 +151,22 @@ The following table lists and describes each of the variables that are used in t
    {: codeblock}
    {: go}
 
+   ```python
+   from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
+   ...
+   toolchainService = CdToolchainV2.new_instance()
+   response = toolchainService.delete_toolchain(
+      toolchain_id = toolchain_id
+   )
+   ```
+   {: codeblock}
+   {: python}
+
 The following table lists and describes each of the variables that are used in the previous steps.   
     
 | Variable | Description |
 |:---------|:------------|
-| `{base_url}` | The Toolchain API endpoint URL. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
+| `{base_url}` | The Toolchain API endpoint URL, for example `https://api.us-south.devops.cloud.ibm.com/toolchain/v2`. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
 | `{iam_api_key}` | Your IAM API key. |
 | `{token}` | A valid IAM bearer token. |
 | `{toolchain_id}` | The ID of the toolchain that you want to delete. |
