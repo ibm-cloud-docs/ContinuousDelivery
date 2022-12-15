@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2022
 
-lastupdated: "2022-11-29"
+lastupdated: "2022-12-14"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -118,8 +118,8 @@ If you created your app by using your own code repository, click **Deploy my app
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
    
    ```bash
-   export CD_TOOLCHAIN_AUTH_TYPE=iam
-   export CD_TOOLCHAIN_APIKEY={iam_api_key}
+   export CD_TOOLCHAIN_AUTH_TYPE=iam && \
+   export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
    export CD_TOOLCHAIN_URL={base_url}
    ```
    {: pre}
@@ -173,11 +173,24 @@ If you created your app by using your own code repository, click **Deploy my app
    {: codeblock}
    {: go}
 
+   ```python
+   from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
+   ...
+   toolchainService = CdToolchainV2.new_instance()
+   toolchain = toolchainService.create_toolchain(
+      description = {toolchain_description},
+      name = {toolchain_name},
+      resource_group_id = {resource_group_id}
+   )
+   ```
+   {: codeblock}
+   {: python}
+
 The following table lists and describes each of the variables that are used in the previous steps.
     
 | Variable | Description |
 |:---------|:------------|
-| `{base_url}` | The Toolchain API endpoint URL. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
+| `{base_url}` | The Toolchain API endpoint URL, for example `https://api.us-south.devops.cloud.ibm.com/toolchain/v2`. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
 | `{iam_api_key}` | Your IAM API key. |
 | `{resource_group_id}` | The ID of the resource group in which to provision the toolchain. To find the IDs of the available resource groups, run `ibmcloud resource groups`. |
 | `{token}` | A valid IAM bearer token. |
@@ -304,8 +317,8 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
    
    ```bash
-   export CD_TOOLCHAIN_AUTH_TYPE=iam
-   export CD_TOOLCHAIN_APIKEY={iam_api_key}
+   export CD_TOOLCHAIN_AUTH_TYPE=iam && \
+   export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
    export CD_TOOLCHAIN_URL={base_url}
    ```
    {: pre}
@@ -351,7 +364,18 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
    {: codeblock}
    {: go}
 
-5. Get a specific toolchain.
+   ```python
+   from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
+   ...
+   toolchainService = CdToolchainV2.new_instance()
+   toolchains = toolchainService.list_toolchains(
+      resource_group_id = {resource_group_id}
+   )
+   ```
+   {: codeblock}
+   {: python}
+
+1. Get a specific toolchain.
 
    ```curl
    curl -X GET \
@@ -382,11 +406,19 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
    {: codeblock}
    {: go}
 
+   ```python
+   toolchain = toolchainService.get_toolchain_by_id(
+      toolchain_id = {toolchain_id}
+   )
+   ```
+   {: codeblock}
+   {: python}
+
 The following table lists and describes each of the variables that are used in the previous steps.
     
 | Variable | Description |
 |:---------|:------------|
-| `{base_url}` | The Toolchain API endpoint URL. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
+| `{base_url}` | The Toolchain API endpoint URL, for example `https://api.us-south.devops.cloud.ibm.com/toolchain/v2`. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
 | `{resource_group_id}` | The ID of the resource group in which the toolchain resides. To find the IDs of the available resource groups, run `ibmcloud resource groups`. |
 | `{token}` | A valid IAM bearer token. |
 | `{toolchain_id}` | The ID of your toolchain. |
