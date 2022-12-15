@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-11-11"
+lastupdated: "2022-12-14"
 
 keywords: devops insights, devops, insights, integrate, adding, code coverage, test, tests, verification, install, app, dashboard, risk
 
@@ -50,9 +50,9 @@ You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it fro
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
    
    ```bash
-   export CD_TOOLCHAIN_AUTH_TYPE=iam
-   export CD_TOOLCHAIN_APIKEY={iam_api_key}
-   export CD_TOOLCHAIN_URL=https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains
+   export CD_TOOLCHAIN_AUTH_TYPE=iam && \
+   export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
+   export CD_TOOLCHAIN_URL={base_url}
    ```
    {: pre}
 
@@ -62,7 +62,7 @@ You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it fro
 
    ```curl
    curl -X POST \
-     https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id}/tools \
+     {base_url}/toolchains/{toolchain_id}/tools \
      -H 'Authorization: Bearer {token}' \
      -H 'Accept: application/json` \
      -H 'Content-Type: application/json' \
@@ -75,15 +75,17 @@ You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it fro
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('continuous-delivery-node-sdk/cd-toolchain/v2');
+   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
    ...
-   const toolchainService = CdToolchainV2.newInstance();
-   const draPrototypeModel = {
-      toolchainId: toolchainId,
-      toolTypeId: 'draservicebroker',
-      name: toolIntegrationName
-   };
-   const draTool = await toolchainService.createTool(draPrototypeModel);
+   (async () => { 
+      const toolchainService = CdToolchainV2.newInstance();
+      const draPrototypeModel = {
+         toolchainId: {toolchain_id},
+         toolTypeId: 'draservicebroker',
+         name: {tool_integration_name}
+      };
+      const draTool = await toolchainService.createTool(draPrototypeModel);
+   })();
    ```
    {: codeblock}
    {: node}
@@ -95,19 +97,32 @@ You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it fro
    ...
    toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
    toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
-   createDraToolOptions := toolchainClient.NewCreateToolOptions(toolchainId, "draservicebroker")
-   createDraToolOptions.SetName(toolIntegrationName)
+   createDraToolOptions := toolchainClient.NewCreateToolOptions({toolchain_id}, "draservicebroker")
+   createDraToolOptions.SetName({tool_integration_name})
    draTool, response, err := toolchainClient.CreateTool(createDraToolOptions)
    ```
    {: codeblock}
    {: go}
 
+   ```python
+   from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
+   ...
+   toolchainService = CdToolchainV2.new_instance()
+   draTool = toolchainService.create_tool(
+      name = {tool_integration_name}
+      toolchain_id = {toolchain_id}
+      tool_type_id = "draservicebroker"
+   )
+   ```
+   {: codeblock}
+   {: python}
+
 The following table lists and describes each of the variables that are used in the previous steps.   
     
 | Variable | Description |
 |:---------|:------------|
+| `{base_url}` | The Toolchain API endpoint URL, for example `https://api.us-south.devops.cloud.ibm.com/toolchain/v2`. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
 | `{iam_api_key}` | Your IAM API key. |
-| `{region}` | The region in which the toolchain resides. For example, `us-south`. |
 | `{tool_integration_name}` | A name for your tool integration. |
 | `{toolchain_id}` | The ID of the toolchain to which to add the tool integration. |
 | `{token}` | A valid IAM bearer token. |
