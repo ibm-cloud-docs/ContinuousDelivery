@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-12-13"
+lastupdated: "2022-12-14"
 
 keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Git Repos and Issue Tracking, GitHub, GitLab, Hashicorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -58,8 +58,8 @@ You can add tool integrations to your toolchain with the API.
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
    
    ```bash
-   export CD_TOOLCHAIN_AUTH_TYPE=iam
-   export CD_TOOLCHAIN_APIKEY={iam_api_key}
+   export CD_TOOLCHAIN_AUTH_TYPE=iam && \
+   export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
    export CD_TOOLCHAIN_URL={base_url}
    ```
    {: pre}
@@ -134,7 +134,7 @@ The following table lists and describes each of the variables that are used in t
 | `{iam_token}` | A valid IAM bearer token. |
 | `{tool_name}` | The name of the tool integration. |
 | `{tool_parameters}` | Unique key-value pairs that represent the parameters to use to create the tool integration. For more information about the supported parameters for each tool integration, see [Tool integrations](#integrations). |
-| `{tool_type_id}` | The unique, short name that represents the type of the tool integration. |
+| `{tool_type_id}` | The unique, short name that represents the type of the tool integration. For a list of supported values, see [Tool integrations](#tool_integrations). |
 | `{toolchain_id}` | The toolchain in which to create the tool integration. |
 {: caption="Table 1. Variables for provisioning the tool integration with the API" caption-side="top"}
 
@@ -208,8 +208,8 @@ If you configured a tool integration when you created a toolchain, you can updat
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
    
    ```bash
-   export CD_TOOLCHAIN_AUTH_TYPE=iam
-   export CD_TOOLCHAIN_APIKEY={iam_api_key}
+   export CD_TOOLCHAIN_AUTH_TYPE=iam && \
+   export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
    export CD_TOOLCHAIN_URL={base_url}
    ```
    {: pre}
@@ -277,7 +277,7 @@ The following table lists and describes each of the variables that are used in t
     
 | Variable | Description |
 |:---------|:------------|
-| `{base_url}` | The Toolchain API endpoint URL. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
+| `{base_url}` | The Toolchain API endpoint URL, for example `https://api.us-south.devops.cloud.ibm.com/toolchain/v2`. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
 | `{iam_api_key}` | Your IAM API key. |
 | `{iam_token}` | A valid IAM bearer token. |
 | `{new_tool_name}` | The new name of the tool integration. |
@@ -354,8 +354,8 @@ You can delete tool integrations from your toolchain with the API. If you delete
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
    
    ```bash
-   export CD_TOOLCHAIN_AUTH_TYPE=iam
-   export CD_TOOLCHAIN_APIKEY={iam_api_key}
+   export CD_TOOLCHAIN_AUTH_TYPE=iam && \
+   export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
    export CD_TOOLCHAIN_URL={base_url}
    ```
    {: pre}
