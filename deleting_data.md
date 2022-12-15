@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-11-11"
+lastupdated: "2022-12-14"
 
 keywords: devops insights, manage, data, quality, delete, test, tests, app, dashboard
 
@@ -106,9 +106,9 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
    
    ```bash
-   export CD_TOOLCHAIN_AUTH_TYPE=iam
-   export CD_TOOLCHAIN_APIKEY={iam_api_key}
-   export CD_TOOLCHAIN_URL=https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains
+   export CD_TOOLCHAIN_AUTH_TYPE=iam && \
+   export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
+   export CD_TOOLCHAIN_URL={base_url}
    ```
    {: pre}
 
@@ -118,7 +118,7 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
 
    ```curl
    curl -X GET \
-     https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id}/tools \
+     {base_url}/toolchains/{toolchain_id}/tools \
      -H "Authorization: Bearer $TOKEN" \
      -H "Accept: application/json"
    ```
@@ -126,12 +126,12 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('continuous-delivery-node-sdk/cd-toolchain/v2');
+   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
    ...
    const toolchainService = CdToolchainV2.newInstance();
    const draTool = await toolchainService.getToolById({
-      toolchainId: toolchainId,
-      toolId: toolId
+      toolchainId: {toolchain_id},
+      toolId: {tool_integration_id}
    });
    ```
    {: codeblock}
@@ -144,17 +144,29 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
    ...
    toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
    toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
-   getToolByIDOptions := toolchainClient.NewGetToolByIDOptions(toolchainId, toolId)
+   getToolByIDOptions := toolchainClient.NewGetToolByIDOptions({toolchain_id}, {tool_integration_id})
    draTool, response, err := toolchainClient.GetToolByID(getToolByIDOptions)
    ```
    {: codeblock}
    {: go}
 
+   ```python
+   from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
+   ...
+   toolchainService = CdToolchainV2.new_instance()
+   draTool = toolchainService.get_tool_by_id(
+      toolchain_id = {toolchain_id},
+      tool_id = {tool_integration_id}
+   )
+   ```
+   {: codeblock}
+   {: python}
+
 4. Delete the {{site.data.keyword.DRA_short}} tool integration from the toolchain.
 
    ```curl
    curl -X DELETE \
-     https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id}/tools/{tool_integration_id} \
+     {base_url}/toolchains/{toolchain_id}/tools/{tool_integration_id} \
      -H 'Authorization: Bearer {token}' \
      -H 'Accept: application/json`
    ```
@@ -163,27 +175,36 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
 
    ```javascript
    const response = await toolchainService.deleteTool({
-      toolchainId: toolchainId,
-      toolId: draToolId
+      toolchainId: {toolchain_id},
+      toolId: {tool_integration_id}
    });
    ```
    {: codeblock}
    {: node}
 
    ```go
-   deleteToolOptions := toolchainClient.NewDeleteToolOptions(toolchainId, draToolId)
+   deleteToolOptions := toolchainClient.NewDeleteToolOptions({toolchain_id}, {tool_integration_id})
    response, err := toolchainClient.DeleteTool(deleteToolOptions)
    ```
    {: codeblock}
    {: go}
 
+   ```python
+   response = toolchainService.delete_tool(
+      toolchain_id = {toolchain_id},
+      tool_id = {tool_integration_id}
+   )
+   ```
+   {: codeblock}
+   {: python}
+
 The following table lists and describes each of the variables that are used in the previous steps.   
     
 | Variable | Description |
 |:---------|:------------|
+| `{base_url}` | The Toolchain API endpoint URL, for example `https://api.us-south.devops.cloud.ibm.com/toolchain/v2`. For more information about this endpoint URL, including a list of values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
 | `{iam_api_key}` | Your IAM API key. |
-| `{region}` | The region in which the toolchain resides. For example, `us-south`. |
-| `{tool_integration_id}` | The ID of the tool integration to delete. |
+| `{tool_integration_id}` | The ID of the tool integration. |
 | `{toolchain_id}` | The ID of the toolchain in which to delete the tool integration. |
 | `{token}` | A valid IAM bearer token. |
 {: caption="Table 1. Variables for deleting the {{site.data.keyword.DRA_short}} tool integration with the API" caption-side="top"}
