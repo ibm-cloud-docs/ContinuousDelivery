@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-12-09"
 
 keywords: public isolation for IBM Cloud Continuous Delivery, compute isolation for Continuous Delivery, Continuous Delivery architecture, workload isolation in Continuous Delivery
 
@@ -10,18 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:download: .download}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Learning about {{site.data.keyword.contdelivery_short}} and workload isolation
 {: #cd-compute-isolation}
@@ -125,9 +114,9 @@ The following table shows the cross-region location for Object Storage in which 
 | Washington (us-east)		|US Cross Region (Dallas, Washington, San Jose)   |
 | London (eu-gb)		|EU Cross Region (Amsterdam, Frankfurt, Milan)		|
 | Frankfurt	(eu-de)	|EU Cross Region (Amsterdam, Frankfurt, Milan)		|
-| Tokyo (jp-tok)		|AP Cross Region (Tokyo, Seoul, Hong Kong S.A.R. of the PRC)		|
-| Sydney (au-syd)		|AP Cross Region (Tokyo, Sydney, Seoul, Hong Kong S.A.R. of the PRC)		|
-| Osaka (js-osa)		|AP Cross Region (Tokyo, Sydney, Osaka, Seoul, Hong Kong S.A.R. of the PRC)		|
+| Tokyo (jp-tok)		|AP Cross Region (Osaka, Sydney, Tokyo)		|
+| Sydney (au-syd)		|AP Cross Region (Osaka, Sydney, Tokyo)		|
+| Osaka (jp-osa)		|AP Cross Region (Osaka, Sydney, Tokyo)		|
 | Toronto (ca-tor)	|US Cross Region (Dallas, Washington, San Jose, Toronto) 		|
 | Sao Paulo (br-sao)|US Cross Region (Dallas, Washington, San Jose, Toronto, Sao Paulo) 		|
 {: caption="Table 3. Object Storage location" caption-side="top"}
