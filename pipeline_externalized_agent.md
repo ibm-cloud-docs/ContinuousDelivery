@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-12-14"
+lastupdated: "2022-12-15"
 
 keywords: Delivery Pipeline Private Workers, externalized mode, private worker, kustomize, external secrets
 
@@ -34,6 +34,13 @@ By using the External Secrets operator, you can synchronize secrets from externa
 {: #cluster-config}
 
 Pipelines with externalized environment properties are supported on [pipeline private worker installations](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers&interface=ui) at version 0.14.9 or later, or on IBM-provided managed workers.
+
+If you are using your own private worker, you must run the following command on the cluster that hosts that worker.
+
+```text
+kubectl set env deployment/private-worker-agent -n tekton-pipelines ENABLE_CDPR="true"
+```
+{: codeblock}
 
 For more information about the images that the private worker installation places on a cluster, see [Pipeline Private Worker images](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers&interface=ui#private-workers-images).
 
