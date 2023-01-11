@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-03-24"
+  years: 2019, 2023
+lastupdated: "2023-01-11"
 
 keywords: devops insights, devops, insights, toolchain, aggregate, test, tests, gate, gate failing, app
 
@@ -10,17 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:download: .download}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Aggregating data from multiple sources into a single toolchain
 {: #aggregating-multiple-sources}
@@ -87,16 +77,16 @@ The following example shows how to send build records to {{site.data.keyword.DRA
 ```bash
 #!/bin/bash
 
-#install the latest version of {{site.data.keyword.DRA_short}} plugin
+#install the latest version of the DevOps Insights plugin
 ibmcloud plugin install -f doi
 
 # Login to IBMCloud if you are not already logged in.  Assumes that $API_KEY environment variable has been set as a secured property in environment variable
 ibmcloud login --apikey $API_KEY --no-region
 
-# Overwrite the default TOOLCHAIN_ID with the Toolchain ID of the {{site.data.keyword.DRA_short}} instance you would like to send data to
+# Overwrite the default TOOLCHAIN_ID with the Toolchain ID of the DevOps Insights instance you would like to send data to
 export TOOLCHAIN_ID="$DEVOPS_INSIGHTS_TOOLCHAIN_ID"
 
-# $GIT_BRANCH, $GIT_URL, $GIT_COMMIT are environment variables made available by the {{site.data.keyword.contdelivery_short}} pipeline
+# $GIT_BRANCH, $GIT_URL, $GIT_COMMIT are environment variables made available by the Continuous Delivery pipeline
 # Assumes you have set $MY_APP_NAME and $MY_BUILD_NUMBER as described earlier
 
 ibmcloud doi buildrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$MY_BUILD_NUMBER" --branch $GIT_BRANCH --repositoryurl $GIT_URL --commitid $GIT_COMMIT --status pass
