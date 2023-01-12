@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-12-12"
+  years: 2018, 2023
+lastupdated: "2023-01-11"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -91,8 +91,8 @@ When you use the console, the fields for tool integration configuration properti
 You can work with secure properties with secrets reference values in calls to the API, which requires an [IAM bearer token](https://{DomainName}/apidocs/toolchain#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
    
 ```bash
-export CD_TOOLCHAIN_AUTH_TYPE=iam
-export CD_TOOLCHAIN_APIKEY={iam_api_key}
+export CD_TOOLCHAIN_AUTH_TYPE=iam && \
+export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
 export CD_TOOLCHAIN_URL=https://api.us-south.devops.cloud.ibm.com/toolchain/v2
 ```
 {: pre}
@@ -150,7 +150,7 @@ toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolch
 slackParameters := map[string]interface{}{
     "api_token": "{vault::my-kms-tool-integration.my-slack-webhook}",
     "channel_name": "my_slack_channel_name",
-    "team_url": "my_slack_team_name"
+    "team_url": "my_slack_team_name",
 }
 createToolOptions := toolchainClient.NewCreateToolOptions("01234567-89ab-cdef-0123-456789abcdef", "slack")
 createToolOptions.SetParameters(slackParameters)
@@ -162,15 +162,15 @@ slackTool, response, err := toolchainClient.CreateTool(createToolOptions)
 ```python
 from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
 ...
-toolchainService = CdToolchainV2.new_instance()
+toolchain_service = CdToolchainV2.new_instance()
 slack_parameters = {
     "api_token": "{vault::my-kms-tool-integration.my-slack-webhook}",
     "channel_name": "my_slack_channel_name",
     "team_url": "my_slack_team_name"
 }
-slackTool = toolchainService.create_tool(
-    toolchain_id = "01234567-89ab-cdef-0123-456789abcdef"
-    tool_type_id = "draservicebroker"
+slack_tool = toolchain_service.create_tool(
+    toolchain_id = "01234567-89ab-cdef-0123-456789abcdef",
+    tool_type_id = "slack",
     parameters = slack_parameters
 )
 ```
