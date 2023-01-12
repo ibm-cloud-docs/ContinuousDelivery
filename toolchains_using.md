@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-12-14"
+  years: 2015, 2023
+lastupdated: "2023-01-11"
 
 keywords: user management function, toolchains, tool integrations, user access
 
@@ -154,8 +154,8 @@ The following table lists and describes each of the variables that are used in t
    ```python
    from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
    ...
-   toolchainService = CdToolchainV2.new_instance()
-   response = toolchainService.delete_toolchain(
+   toolchain_service = CdToolchainV2.new_instance()
+   response = toolchain_service.delete_toolchain(
       toolchain_id = toolchain_id
    )
    ```
