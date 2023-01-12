@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2022
-lastupdated: "2022-12-14"
+  years: 2016, 2023
+lastupdated: "2023-01-11"
 
 keywords: devops insights, devops, insights, integrate, adding, code coverage, test, tests, verification, install, app, dashboard, risk
 
@@ -107,10 +107,10 @@ You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it fro
    ```python
    from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
    ...
-   toolchainService = CdToolchainV2.new_instance()
-   draTool = toolchainService.create_tool(
-      name = {tool_integration_name}
-      toolchain_id = {toolchain_id}
+   toolchain_service = CdToolchainV2.new_instance()
+   dra_tool = toolchain_service.create_tool(
+      name = {tool_integration_name},
+      toolchain_id = {toolchain_id},
       tool_type_id = "draservicebroker"
    )
    ```
