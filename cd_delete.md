@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020, 2022
+  years: 2020, 2023
 
-lastupdated: "2022-11-29"
+lastupdated: "2023-01-11"
 
 keywords: ibmcloud, resource, service instance, restore, CLI tool, IBM Cloud
 
@@ -94,6 +94,7 @@ The following table lists and describes each of the variables that are used in t
 
    ```java
    import com.ibm.cloud.platform_services.resource_controller.v2.ResourceController;
+   import com.ibm.cloud.platform_services.resource_controller.v2.model.*;
    ...
    ResourceController resourceControllerService = ResourceController.newInstance();
    DeleteResourceInstanceOptions deleteCdInstanceOptions = new DeleteResourceInstanceOptions.Builder()
@@ -106,7 +107,7 @@ The following table lists and describes each of the variables that are used in t
    {: java}
 
    ```javascript
-   const ResourceControllerV2 = require('@ibm-cloud/ibm-platform-services/resource-controller/v2');
+   const ResourceControllerV2 = require('@ibm-cloud/platform-services/resource-controller/v2');
    const resourceControllerService = ResourceControllerV2.newInstance({});
    ...
    (async() => {
@@ -140,7 +141,7 @@ The following table lists and describes each of the variables that are used in t
    resourceControllerServiceOptions := &resourcecontrollerv2.ResourceControllerV2Options{}
    resourceControllerService, err := resourcecontrollerv2.NewResourceControllerV2UsingExternalConfig(resourceControllerServiceOptions)
    deleteCdInstanceOptions := resourceControllerService.NewDeleteResourceInstanceOptions(
-      cdInstanceGuid,
+      {instance_id},
    )
    deleteCdInstanceOptions.SetRecursive(false)
    response, err := resourceControllerService.DeleteResourceInstance(deleteCdInstanceOptions)
