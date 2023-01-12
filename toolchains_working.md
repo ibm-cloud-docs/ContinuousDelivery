@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2022
+  years: 2015, 2023
 
-lastupdated: "2022-12-14"
+lastupdated: "2023-01-11"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -176,8 +176,8 @@ If you created your app by using your own code repository, click **Deploy my app
    ```python
    from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
    ...
-   toolchainService = CdToolchainV2.new_instance()
-   toolchain = toolchainService.create_toolchain(
+   toolchain_service = CdToolchainV2.new_instance()
+   toolchain = toolchain_service.create_toolchain(
       description = {toolchain_description},
       name = {toolchain_name},
       resource_group_id = {resource_group_id}
