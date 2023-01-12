@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-12-14"
+  years: 2015, 2023
+lastupdated: "2023-01-11"
 
 keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Git Repos and Issue Tracking, GitHub, GitLab, Hashicorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -114,8 +114,8 @@ You can add tool integrations to your toolchain with the API.
    ```python
    from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
    ...
-   toolchainService = CdToolchainV2.new_instance()
-   tool = toolchainService.create_tool(
+   toolchain_service = CdToolchainV2.new_instance()
+   tool = toolchain_service.create_tool(
       name = {tool_name},
       toolchain_id = {toolchain_id},
       tool_type_id = {tool_type_id},
@@ -252,9 +252,11 @@ If you configured a tool integration when you created a toolchain, you can updat
    ...
    toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
    toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
-   updateToolOptions := toolchainClient.NewUpdateToolOptions({toolchain_id}, {tool_id})
-   updateToolOptions.SetName({new_tool_name})
-   updateToolOptions.SetParameters({new_tool_parameters})
+   toolPatchModel := map[string]interface{}{
+      "name": {new_tool_name},
+      "parameters": {new_tool_parameters},
+   }
+   updateToolOptions := toolchainClient.NewUpdateToolOptions({toolchain_id}, {tool_id}, toolPatchModel)
    tool, response, err := toolchainClient.UpdateTool(updateToolOptions)
    ```
    {: codeblock}
@@ -263,8 +265,8 @@ If you configured a tool integration when you created a toolchain, you can updat
    ```python
    from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
    ...
-   toolchainService = CdToolchainV2.new_instance()
-   tool = toolchainService.update_tool(
+   toolchain_service = CdToolchainV2.new_instance()
+   tool = toolchain_service.update_tool(
       toolchain_id = {toolchain_id},
       tool_id = {tool_id},
       toolchain_tool_prototype_patch = {new_tool_parameters}
@@ -366,7 +368,6 @@ You can delete tool integrations from your toolchain with the API. If you delete
    
    ```curl
    curl -X DELETE --location --header "Authorization: Bearer {iam_token}" \
-     --header "Accept: application/json" \
      "{base_url}/toolchains/{toolchain_id}/tools/{tool_id}"
    ```
    {: pre}
@@ -402,8 +403,8 @@ You can delete tool integrations from your toolchain with the API. If you delete
    ```python
    from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
    ...
-   toolchainService = CdToolchainV2.new_instance()
-   response = toolchainService.delete_tool(
+   toolchain_service = CdToolchainV2.new_instance()
+   response = toolchain_service.delete_tool(
       toolchain_id = {toolchain_id},
       tool_id = {tool_id}
    )
