@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-12-14"
+  years: 2019, 2023
+lastupdated: "2023-01-11"
 
 keywords: devops insights, manage, data, quality, delete, test, tests, app, dashboard
 
@@ -119,7 +119,7 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
    ```curl
    curl -X GET \
      {base_url}/toolchains/{toolchain_id}/tools \
-     -H "Authorization: Bearer $TOKEN" \
+     -H "Authorization: Bearer {token}" \
      -H "Accept: application/json"
    ```
    {: pre}
@@ -128,10 +128,9 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
    ```javascript
    const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
    ...
-   const toolchainService = CdToolchainV2.newInstance();
-   const draTool = await toolchainService.getToolById({
+   const toolchainService = CdToolchainV2.newInstance(); 
+   const tools = await toolchainService.listTools({
       toolchainId: {toolchain_id},
-      toolId: {tool_integration_id}
    });
    ```
    {: codeblock}
@@ -143,9 +142,9 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
    )
    ...
    toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
-   toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
-   getToolByIDOptions := toolchainClient.NewGetToolByIDOptions({toolchain_id}, {tool_integration_id})
-   draTool, response, err := toolchainClient.GetToolByID(getToolByIDOptions)
+	toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
+	listToolsOptions := toolchainClient.NewListToolsOptions({toolchain_id})
+	tools, response, err := toolchainClient.ListTools(listToolsOptions)
    ```
    {: codeblock}
    {: go}
@@ -153,10 +152,9 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
    ```python
    from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
    ...
-   toolchainService = CdToolchainV2.new_instance()
-   draTool = toolchainService.get_tool_by_id(
-      toolchain_id = {toolchain_id},
-      tool_id = {tool_integration_id}
+   toolchain_service = CdToolchainV2.new_instance()
+   tools = toolchain_service.list_tools(
+      toolchain_id = {toolchain_id}
    )
    ```
    {: codeblock}
@@ -167,8 +165,7 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
    ```curl
    curl -X DELETE \
      {base_url}/toolchains/{toolchain_id}/tools/{tool_integration_id} \
-     -H 'Authorization: Bearer {token}' \
-     -H 'Accept: application/json`
+     -H 'Authorization: Bearer {token}'
    ```
    {: pre}
    {: curl}
