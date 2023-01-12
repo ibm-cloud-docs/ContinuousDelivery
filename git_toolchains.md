@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-11-10"
+  years: 2020, 2023
+lastupdated: "2023-01-11"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, Git source control, authentication, GitHub 
 
@@ -88,7 +88,14 @@ To try a tutorial to create a custom toolchain, see [Create a custom toolchain](
 
 You can add a Git tool integration to any existing toolchain with the API.
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}.
+1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+   
+   ```bash
+   export CD_TOOLCHAIN_AUTH_TYPE=iam && \
+   export CD_TOOLCHAIN_APIKEY={iam_api_key} && \
+   export CD_TOOLCHAIN_URL=https://api.{region}.devops.cloud.ibm.com/toolchain/v2
+   ```
+   {: pre}
 
 2. [Determine the region and ID of the toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#viewing-toolchain-api) that you want to add the Git tool integration to.
 
@@ -112,6 +119,70 @@ You can add a Git tool integration to any existing toolchain with the API.
      }'
    ```
    {: pre}
+   {: curl}
+
+   ```javascript
+   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+   const toolchainService = CdToolchainV2.newInstance();
+   ...
+   (async() => {
+      const gitToolModel = {
+         toolchainId: {toolchain_id},
+         toolTypeId: 'githubconsolidated',
+         name: {tool_integration_name},
+         parameters: {
+            type: 'link',
+            git_id: 'github',
+            repo_url: 'https://github.com/{git_org}/{git-repo}.git',
+            has_issues: true
+         }
+      };
+      const gitTool = await toolchainService.createTool(gitToolModel);
+   })();
+   ```
+   {: codeblock}
+   {: node}
+
+   ```go
+   import (
+	   "github.com/IBM/continuous-delivery-go-sdk/cdtoolchainv2"
+   )
+   ...
+   toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
+   toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
+   createGitToolOptions := toolchainClient.NewCreateToolOptions({toolchain_id}, "githubconsolidated")
+   gitParameters := map[string]interface{}{
+    "type": "link",
+    "git_id": "github",
+    "repo_url": "https://github.com/{git_org}/{git-repo}.git",
+    "has_issues": true,
+   }
+   createGitToolOptions.SetName({tool_integration_name})
+   createGitToolOptions.SetParameters(gitParameters)
+   gitTool, response, err := toolchainClient.CreateTool(createGitToolOptions)
+   ```
+   {: codeblock}
+   {: go}
+
+   ```python
+   from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
+   ...
+   toolchain_service = CdToolchainV2.new_instance()
+   git_parameters = {
+      "type": "link",
+      "git_id": "github",
+      "repo_url": "https://github.com/{git_org}/{git-repo}.git",
+      "has_issues": True
+   }
+   git_tool = toolchain_service.create_tool(
+      name = {tool_integration_ame},
+      toolchain_id = {toolchain_id},
+      tool_type_id = "githubconsolidated",
+      parameters = git_parameters
+   )
+   ```
+   {: codeblock}
+   {: python}
 
 The following table lists and describes each of the variables that are used in the previous steps.   
     
@@ -119,6 +190,7 @@ The following table lists and describes each of the variables that are used in t
 |:---------|:------------|
 | `{git_org}` | The organization on github.com that contains the repo. |
 | `{git_repo}` | The repo on github.com to integrate into the toolchain. |
+| `{iam_api_key}` | Your IAM API key. |
 | `{region}` | The region in which the toolchain resides. For example, `us-south`. |
 | `{tool_integration_name}` | A name for your tool integration. |
 | `{toolchain_id}` | The ID of the toolchain to which to add the tool integration. |
