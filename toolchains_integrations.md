@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-11"
+lastupdated: "2023-01-17"
 
 keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Git Repos and Issue Tracking, GitHub, GitLab, Hashicorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -124,6 +124,23 @@ You can add tool integrations to your toolchain with the API.
    ```
    {: codeblock}
    {: python}
+
+   ```java
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.CdToolchain;
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.model.*;
+   ...
+   CdToolchain toolchainService = CdToolchain.newInstance();
+   CreateToolOptions createToolOptions = new CreateToolOptions.Builder()
+      .name({tool_name})
+      .parameters({tool_parameters})
+      .toolchainId({toolchain_id})
+      .toolTypeId({tool_type_id})
+      .build();
+   Response<ToolchainToolPost> response = toolchainService.createTool(createToolOptions).execute();
+   ToolchainToolPost tool = response.getResult();
+   ```
+   {: codeblock}
+   {: java}
 
 The following table lists and describes each of the variables that are used in the previous steps.   
     
@@ -269,11 +286,33 @@ If you configured a tool integration when you created a toolchain, you can updat
    tool = toolchain_service.update_tool(
       toolchain_id = {toolchain_id},
       tool_id = {tool_id},
-      toolchain_tool_prototype_patch = {new_tool_parameters}
+      toolchain_tool_prototype_patch = {
+         "name": {new_tool_name},
+         "parameters": {new_tool_parameters}
+      }
    ) 
    ```
    {: codeblock}
    {: python}
+
+   ```java
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.CdToolchain;
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.model.*;
+   ...
+   CdToolchain toolchainService = CdToolchain.newInstance();
+   HashMap<String,Object> toolchainToolPrototypePatch = new HashMap<>();
+   toolchainToolPrototypePatch.put("name", {new_tool_name});
+   toolchainToolPrototypePatch.put("parameters", {new_tool_parameters});
+   UpdateToolOptions updateToolOptions = new UpdateToolOptions.Builder()
+      .toolchainId({toolchain_id})
+      .toolId({tool_id})
+      .toolchainToolPrototypePatch(toolchainToolPrototypePatch)
+      .build();
+   Response<ToolchainToolPatch> response = toolchainService.updateTool(updateToolOptions).execute();
+   ToolchainToolPatch tool = response.getResult();
+   ```
+   {: codeblock}
+   {: java}
 
 The following table lists and describes each of the variables that are used in the previous steps.   
     
@@ -411,6 +450,20 @@ You can delete tool integrations from your toolchain with the API. If you delete
    ```
    {: codeblock}
    {: python}
+
+   ```java
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.CdToolchain;
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.model.*;
+   ...
+   CdToolchain toolchainService = CdToolchain.newInstance();
+   DeleteToolOptions deleteToolOptions = new DeleteToolOptions.Builder()
+      .toolchainId({toolchain_id})
+      .toolId({tool_id})
+      .build();
+   Response<Void> response = toolchainService.deleteTool(deleteToolOptions).execute();
+   ```
+   {: codeblock}
+   {: java}
 
 The following table lists and describes each of the variables that are used in the previous steps.   
     
