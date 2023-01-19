@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-01-11"
+lastupdated: "2023-01-17"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, Git source control, authentication, GitHub 
 
@@ -183,6 +183,28 @@ You can add a Git tool integration to any existing toolchain with the API.
    ```
    {: codeblock}
    {: python}
+
+   ```java
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.CdToolchain;
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.model.*;
+   ...
+   CdToolchain toolchainService = CdToolchain.newInstance();
+   HashMap<String, Object> gitParameters = new HashMap<>();
+   gitParameters.put("type", "link");
+   gitParameters.put("git_id", "github");
+   gitParameters.put("repo_url", "https://github.com/{git_org}/{git-repo}.git");
+   gitParameters.put("has_issues", true);
+   CreateToolOptions createGitToolOptions = new CreateToolOptions.Builder()
+      .name({tool_integration_name})
+      .parameters(gitParameters)
+      .toolchainId({toolchain_id})
+      .toolTypeId("githubconsolidated")
+      .build();
+   Response<ToolchainToolPost> response = toolchainService.createTool(createGitToolOptions).execute();
+   ToolchainToolPost gitTool = response.getResult();
+   ```
+   {: codeblock}
+   {: java}
 
 The following table lists and describes each of the variables that are used in the previous steps.   
     
