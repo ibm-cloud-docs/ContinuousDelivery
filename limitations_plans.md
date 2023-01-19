@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2022
-lastupdated: "2022-10-27"
+  years: 2016, 2023
+lastupdated: "2023-01-18"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -159,6 +159,15 @@ As an alternative to the console, you can change the {{site.data.keyword.contdel
 
 ## Delivery Pipeline usage
 {: #pipeline_usage}
+
+Delivery pipelines under a {{site.data.keyword.contdelivery_short}} service instance Lite plan have several limitations.
+
+* The 500-step and job run limit includes both pipeline steps for Tekton pipelines and pipeline job runs for Classic pipelines. If your pipeline has many steps within a single run, such as with the DevSecOps pipelines, you might reach this limit quickly.
+* Delivery pipeline failures, excluding skipped step runs and Classic job runs, are counted as part of the 500 Tekton step run limit per month. This 500-step run limit also applies to Classic job runs for Classic pipelines.
+* All of your toolchains and all of your pipelines within those toolchains that are in the same resource group contribute to the same limit of 500 Tekton step runs per month. The same limit is used because pipeline step runs and job runs are counted at the resource group level for a specific {{site.data.keyword.contdelivery_short}} instance. 
+
+A five-day grace period is offered the first time that you reach the 500-step run limit. This grace period is offered only *once*. 
+{: important}
 
 The retention period for pipelines varies based on the pipeline type and the plan that is selected for the {{site.data.keyword.contdelivery_short}} service instance. 
 
