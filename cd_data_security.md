@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-01-11"
+lastupdated: "2023-01-17"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -176,6 +176,26 @@ slack_tool = toolchain_service.create_tool(
 ```
 {: codeblock}
 {: python}
+
+```java
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.CdToolchain;
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.model.*;
+   ...
+   CdToolchain toolchainService = CdToolchain.newInstance();
+   HashMap<String, Object> slackParameters = new HashMap<>();
+   slackParameters.put("api_token", "{vault::my-kms-tool-integration.my-slack-webhook}");
+   slackParameters.put("channel_name", "my_slack_channel_name");
+   slackParameters.put("team_url", "my_slack_team_name");
+   CreateToolOptions createSlackToolOptions = new CreateToolOptions.Builder()
+      .parameters(slackParameters)
+      .toolchainId({toolchain_id})
+      .toolTypeId("slack")
+      .build();
+   Response<ToolchainToolPost> response = toolchainService.createTool(createSlackToolOptions).execute();
+   ToolchainToolPost slackTool = response.getResult();
+   ```
+   {: codeblock}
+   {: java}
 
 The following table lists and describes each of the secret reference values that are used in the previous example.
 
