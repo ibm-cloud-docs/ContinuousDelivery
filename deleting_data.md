@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-01-11"
+lastupdated: "2023-01-17"
 
 keywords: devops insights, manage, data, quality, delete, test, tests, app, dashboard
 
@@ -160,6 +160,20 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
    {: codeblock}
    {: python}
 
+   ```java
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.CdToolchain;
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.model.*;
+   ...
+   CdToolchain toolchainService = CdToolchain.newInstance();
+   ListToolsOptions listToolsOptions = new ListToolsOptions.Builder()
+      .toolchainId({toolchain_id})
+      .build();
+   Response<ToolchainToolCollection> response = toolchainService.listTools(listToolsOptions).execute();
+   ToolchainToolCollection tools = response.getResult();
+   ```
+   {: codeblock}
+   {: java}
+
 4. Delete the {{site.data.keyword.DRA_short}} tool integration from the toolchain.
 
    ```curl
@@ -194,6 +208,16 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
    ```
    {: codeblock}
    {: python}
+
+   ```java
+   DeleteToolOptions deleteToolOptions = new DeleteToolOptions.Builder()
+      .toolchainId({toolchain_id})
+      .toolId({tool_integration_id})
+      .build();
+   Response<Void> response = toolchainService.deleteTool(deleteToolOptions).execute();
+   ```
+   {: codeblock}
+   {: java}
 
 The following table lists and describes each of the variables that are used in the previous steps.   
     
