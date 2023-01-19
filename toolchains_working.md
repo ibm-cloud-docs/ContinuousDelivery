@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2015, [{CURRENT_YEAR}]
-lastupdated: "[{LAST_UPDATED_DATE}]"
+  years: 2015, 2023
+lastupdated: "2023-01-19"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
