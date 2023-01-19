@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-11"
+lastupdated: "2023-01-17"
 
 keywords: user management function, toolchains, tool integrations, user access
 
@@ -161,6 +161,19 @@ The following table lists and describes each of the variables that are used in t
    ```
    {: codeblock}
    {: python}
+
+   ```java
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.CdToolchain;
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.model.*;
+   ...
+   CdToolchain toolchainService = CdToolchain.newInstance();
+   DeleteToolchainOptions deleteToolchainOptions = new DeleteToolchainOptions.Builder()
+      .toolchainId({toolchain_id})
+      .build();
+   Response<Void> response = toolchainService.deleteToolchain(deleteToolchainOptions).execute();
+   ```
+   {: codeblock}
+   {: java}
 
 The following table lists and describes each of the variables that are used in the previous steps.   
     
