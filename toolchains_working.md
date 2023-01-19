@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2023
 
-lastupdated: "2023-01-11"
+lastupdated: "2023-01-17"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -185,6 +185,22 @@ If you created your app by using your own code repository, click **Deploy my app
    ```
    {: codeblock}
    {: python}
+
+   ```java
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.CdToolchain;
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.model.*;
+   ...
+   CdToolchain toolchainService = CdToolchain.newInstance();
+   CreateToolchainOptions createToolchainOptions = new CreateToolchainOptions.Builder()
+      .description({toolchain_description})
+      .name({toolchain_name})
+      .resourceGroupId({resource_group_id})
+      .build();
+   Response<ToolchainPost> response = toolchainService.createToolchain(createToolchainOptions).execute();
+   ToolchainPost toolchain = response.getResult();
+   ```
+   {: codeblock}
+   {: java}
 
 The following table lists and describes each of the variables that are used in the previous steps.
     
@@ -375,6 +391,20 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
    {: codeblock}
    {: python}
 
+   ```java
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.CdToolchain;
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.model.*;
+   ...
+   CdToolchain toolchainService = CdToolchain.newInstance();
+   ListToolchainsOptions listToolchainsOptions = new ListToolchainsOptions.Builder()
+      .resourceGroupId({resource_group_id})
+      .build();
+   Response<ToolchainCollection> response = toolchainService.listToolchains(listToolchainsOptions).execute();
+   ToolchainCollection toolchains = response.getResult();
+   ```
+   {: codeblock}
+   {: java}
+
 1. Get a specific toolchain.
 
    ```curl
@@ -413,6 +443,16 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
    ```
    {: codeblock}
    {: python}
+
+   ```java
+   GetToolchainByIdOptions getToolchainByIdOptions = new GetToolchainByIdOptions.Builder()
+      .toolchainId({toolchain_id})
+      .build();
+   Response<Toolchain> response = toolchainService.getToolchainById(getToolchainByIdOptions).execute();
+   Toolchain toolchain = response.getResult();
+   ```
+   {: codeblock}
+   {: java}
 
 The following table lists and describes each of the variables that are used in the previous steps.
     
