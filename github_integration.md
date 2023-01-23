@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-28"
+  years: 2015, 2023
+lastupdated: "2023-01-23"
 
 keywords: tool integrations, IBM Cloud Public, GitHub
 
@@ -78,6 +78,8 @@ You must specify the `tool_type_id` property in the request body with the `githu
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
 | api_root_url | optional, updatable | String | api_root_url | The URL of the API root for the GitHub server. |
+| api_token | optional, updatable | Password | api_token | The Personal Access Token (PAT). |
+| auth_type | optional, updatable | String | auth_type | Set this value to the authentication method to use to access the Git provider. |
 | auto_init | optional, immutable, `Default: false` | Boolean | auto_init | Set this value to `true` to initialize this repo with a readme file. This parameter is used only when you create a repo. |
 | default_branch | optional, updatable | String | default_branch | The default branch of the Git repo. |
 | enable_traceability | optional, updatable, `Default: false` | Boolean | enable_traceability | Set this value to `true` to track the deployment of code changes by creating tags, labels and comments on commits, pull requests, and referenced issues. |
