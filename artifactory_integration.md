@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-24"
+  years: 2015, 2023
+lastupdated: "2023-01-26"
 
 keywords: tool integrations, IBM Cloud Public, Artifactory
 
@@ -146,4 +146,4 @@ You must specify the `tool_type_id` property in the request body with the `artif
 ## Learn more about Artifactory
 {: #learn_more_artifactory}
 
-To learn more about Artifactory, see the [Artifactory article](https://www.ibm.com/cloud/garage/content/deliver/tool_artifactory/){: external} on the IBM Cloud Garage Method.
+To learn more about Artifactory, see the [Artifactory article](https://www.ibm.com/garage/method/practices/deliver/tool_artifactory/){: external} on the IBM Cloud Garage Method.
