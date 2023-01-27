@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-12-09"
+  years: 2020, 2023
+lastupdated: "2023-01-27"
 
 keywords: public isolation for IBM Cloud Continuous Delivery, compute isolation for Continuous Delivery, Continuous Delivery architecture, workload isolation in Continuous Delivery
 
@@ -33,7 +33,7 @@ The following table lists the major components of the {{site.data.keyword.contde
 
 {{site.data.keyword.deliverypipeline}} jobs and steps run directly within containers on shared (IBM-managed) or private (customer-managed) Kubernetes worker nodes. All other components of the {{site.data.keyword.contdelivery_short}} service are deployed as microservices within IBM-managed Kubernetes clusters. These components are logically partitioned across a set of clusters. Each set of clusters is replicated across three zones in each region in which the {{site.data.keyword.contdelivery_short}} service is available.
 
-![Continuous Delivery clusters](images/CD_cluster_arch.png){: caption="Figure 1. Continuous Delivery clusters" caption-side="bottom"}
+![Continuous Delivery clusters](images/CD_cluster_arch.svg){: caption="Figure 1. Continuous Delivery clusters" caption-side="bottom"}
  
 For more information about availability, see [High availability and disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-ha-dr).
  
@@ -98,7 +98,7 @@ For more information about the key components of the {{site.data.keyword.cloud_n
 
 The following diagram shows the {{site.data.keyword.contdelivery_short}} dependencies.
 
-![Continuous Delivery dependencies](images/CD_Dependencies_Arch.png){: caption="Figure 3. Continuous Delivery dependencies" caption-side="bottom"}
+![Continuous Delivery dependencies](images/CD_Dependencies_Arch.svg){: caption="Figure 3. Continuous Delivery dependencies" caption-side="bottom"}
 
 Excluding data backups, customer-owned data that is provided to the {{site.data.keyword.contdelivery_short}} service in a specific region is exchanged only with data and logging services in the same region. Data backups are stored in Cloud Object Storage cross-region buckets.
 
