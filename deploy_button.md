@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-10-06"
+  years: 2015, 2023
+lastupdated: "2023-01-25"
 
 keywords: IBM Cloud button, yml file, build file, toolchains
 
@@ -10,15 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:important: .important}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:download: .download}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Creating a Deploy to {{site.data.keyword.cloud_notm}} button
@@ -127,9 +119,7 @@ To deploy an app in a container by using the {{site.data.keyword.containerlong_n
 
 The Dockerfile acts as a kind of build script for the app. If a Dockerfile is detected in the repo, the app is automatically built into an image before it is deployed in a container. If the app itself must be built before the app is built into an image, include a build script for the app and a Dockerfile.
 
-To learn more about creating Dockerfiles, see the [Docker documentation](https://docs.docker.com/reference/builder/){: external}. To follow step-by-step instructions using a toolchain template to deploy to Kubernetes, see [Tutorial: Use the "Develop a Kubernetes app" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=0){: external} or [Tutorial: Use the "Develop a Kubernetes app with Helm" toolchain](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){: external}.
-
-To learn about porting your Cloud Foundry app to a Kubernetes cluster, see [Tutorial: Port a Cloud Foundry app to deploy to Kubernetes in a toolchain](https://www.ibm.com/cloud/garage/tutorials/port-a-cf-app-to-deploy-to-kubernetes-in-a-toolchain?task=0){: external}.
+To learn more about creating Dockerfiles, see the [Docker documentation](https://docs.docker.com/reference/builder/){: external}. To follow step-by-step instructions using a toolchain template to deploy to Kubernetes, see [Tutorial: Use the "Develop a Kubernetes app" toolchain](https://www.ibm.com/cloud/architecture/tutorials/use-develop-kubernetes-app-toolchain?task=0){: external} or [Tutorial: Use the "Develop a Kubernetes app with Helm" toolchain](https://www.ibm.com/cloud/architecture/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){: external}.
 
 To create a `pipeline.yml` manually that is specifically for containers, see the [examples in GitHub](https://github.com/Puquios/){: external}.
 
