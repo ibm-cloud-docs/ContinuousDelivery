@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-28"
+  years: 2015, 2023
+lastupdated: "2023-01-26"
 
 keywords: tool integrations, IBM Cloud Public, GitLab
 
@@ -90,4 +90,4 @@ You must specify the `tool_type_id` property in the request body with the `gitla
 ## Learn more about GitLab
 {: #learn_gitlab}
 
-To learn more about GitLab, see the [GitLab article](https://www.ibm.com/cloud/garage/content/code/tool_gitlab/){: external} on the IBM Cloud Garage Method.
+To learn more about GitLab, see the [GitLab article](https://www.ibm.com/garage/method/practices/code/tool_gitlab/){: external} on the IBM Cloud Garage Method.
