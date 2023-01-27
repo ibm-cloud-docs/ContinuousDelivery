@@ -390,7 +390,7 @@ New Code Risk Analyzer scans source code repositories for:
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 12.2.7](https://about.gitlab.com/blog/2019/10/02/security-release-gitlab-12-dot-3-dot-3-released/){: external}.
+:   Upgraded to [GitLab 12.2.7](https://about.gitlab.com/releases/2019/10/02/security-release-gitlab-12-dot-3-dot-3-released/){: external}.
 
 ## 10 October 2019
 {: #ContinuousDelivery-oct1019}
@@ -421,21 +421,21 @@ DevOps Insights
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 12.1.9](https://about.gitlab.com/2019/09/10/critical-security-release-gitlab-12-dot-2-dot-5-released/){: external}.
+:   Upgraded to [GitLab 12.1.9](https://about.gitlab.com/releases/2019/09/10/critical-security-release-gitlab-12-dot-2-dot-5-released/){: external}.
 
 ## 16 September 2019
 {: #ContinuousDelivery-sep1619}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 12.0.8](https://about.gitlab.com/2019/08/29/security-release-gitlab-12-dot-2-dot-3-released/){: external}.
+:   Upgraded to [GitLab 12.0.8](https://about.gitlab.com/releases/2019/08/29/security-release-gitlab-12-dot-2-dot-3-released/){: external}.
 
 ## 9 September 2019
 {: #ContinuousDelivery-sep0919}
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 11.11.8](https://about.gitlab.com/2019/08/12/critical-security-release-gitlab-12-dot-1-dot-6-released/){: external}.
+:   Upgraded to [GitLab 11.11.8](https://about.gitlab.com/releases/2019/08/12/critical-security-release-gitlab-12-dot-1-dot-6-released/){: external}.
 
 ## 5 September 2019
 {: #ContinuousDelivery-sept0519}
@@ -449,7 +449,7 @@ Develop and test microservices with Kubernetes and Helm template doesn't support
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 11.10.8](https://about.gitlab.com/2019/07/03/security-release-gitlab-12-dot-0-dot-3-released/){: external}.
+:   Upgraded to [GitLab 11.10.8](https://about.gitlab.com/releases/2019/07/03/security-release-gitlab-12-dot-0-dot-3-released/){: external}.
 
 ## 3 September 2019
 {: #ContinuousDelivery-sept0319}
@@ -463,7 +463,7 @@ Develop and test microservices with Kubernetes and Helm template doesn't support
 {: release-note}
 
 {{site.data.keyword.gitrepos}}
-:   Upgraded to [GitLab 11.9.12](https://about.gitlab.com/2019/06/03/security-release-gitlab-11-dot-11-dot-1-released/){: external}.
+:   Upgraded to [GitLab 11.9.12](https://about.gitlab.com/releases/2019/06/03/security-release-gitlab-11-dot-11-dot-1-released/){: external}.
 
 ## 24 June 2019
 {: #ContinuousDelivery-jun2419}
