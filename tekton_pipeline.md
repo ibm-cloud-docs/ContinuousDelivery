@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-11-28"
+  years: 2019, 2023
+lastupdated: "2023-01-27"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -18,7 +18,7 @@ subcollection: ContinuousDelivery
 [Tekton Pipelines](https://tekton.dev/){: external} is an open source project that you can use to configure and run Continuous Integration and {{site.data.keyword.contdelivery_short}} pipelines within a Kubernetes cluster. Tekton pipelines are defined in yaml files, which are typically stored in a Git repository (repo).
 {: shortdesc}
 
-![Hybrid Tekton Pipelines](images/Hybrid_tekton_workers.png){: caption="Figure 1. Hybrid Tekton pipelines diagram" caption-side="bottom"}
+![Hybrid Tekton Pipelines](images/Hybrid_tekton_workers.svg){: caption="Figure 1. Hybrid Tekton pipelines diagram" caption-side="bottom"}
 
 Tekton provides a set of [Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/){: external} extensions to Kubernetes to define pipelines. The following basic Tekton Pipeline resources are included in these extensions:
 
@@ -273,7 +273,7 @@ For more information about the {{site.data.keyword.deliverypipeline}} API, see t
 
 1. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create a pipeline by using the HashiCorp Configuration Language. For more information about using this configuration language, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
 
-   A pipeline must belong to a toolchain. You can also create toolchains by [using Terraform](docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=terraform).
+   A pipeline must belong to a toolchain. You can also create toolchains by [using Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=terraform).
    {: tip}
    
    The following example creates a toolchain and a pipeline by using the specified Terraform resources.
