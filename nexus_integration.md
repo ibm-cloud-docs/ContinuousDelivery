@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-25"
+  years: 2015, 2023
+lastupdated: "2023-01-26"
 
 keywords: tool integrations, IBM Cloud Public, Nexus
 
@@ -144,4 +144,4 @@ You must specify the `tool_type_id` property in the request body with the `nexus
 ## Learn more about Nexus
 {: #learn_nexus}
 
-To learn more about Nexus, see the [Nexus article](https://www.ibm.com/cloud/garage/content/deliver/tool_nexus/){: external} on the IBM Cloud Garage Method.
+To learn more about Nexus, see the [Nexus article](https://www.ibm.com/garage/method/practices/deliver/tool_nexus){: external} on the IBM Cloud Garage Method.
