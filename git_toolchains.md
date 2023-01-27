@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-01-17"
+lastupdated: "2023-01-25"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, Git source control, authentication, GitHub 
 
@@ -26,7 +26,7 @@ To see which toolchain templates contain the {{site.data.keyword.gitrepos}} or G
 {: #creating_a_toolchain_git}
 {: ui}
 
-You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes either a {{site.data.keyword.gitrepos}} or GitHub tool integration. Learn more about how to use the templates from the [IBM Cloud Garage Method](https://www.ibm.com/cloud/garage/category/tools){: external}.
+You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes either a {{site.data.keyword.gitrepos}} or GitHub tool integration. Learn more about how to use the templates from the [IBM Cloud Garage Method](https://www.ibm.com/cloud/architecture/toolchains){: external}.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**.
@@ -283,7 +283,7 @@ You can add a Git tool integration to any existing toolchain with Terraform.
    ```
    {: pre}
 
-For more information about each of the Git tool integration resources, including additional parameters that you can configure, see the argument reference details in the Terraform Registry documentation:
+For more information about each of the Git tool integration resources, including additional parameters that you can configure, see the argument reference details in the Terraform Registry documentation: 
 
 * Bitbucket: [`ibm_cd_toolchain_tool_bitbucketgit`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_bitbucketgit){: external}
 * GitHub: [`ibm_cd_toolchain_tool_githubconsolidated`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_githubconsolidated){: external}
