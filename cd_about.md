@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-26"
+lastupdated: "2023-01-27"
 
 keywords: IBM Cloud Public, Use Developer Insights, toolchains, toolchain templates, toolchain tutorials, available regions, tools, Terraform 
 
@@ -19,9 +19,6 @@ subcollection: ContinuousDelivery
 
 Toolchains are available on {{site.data.keyword.cloud_notm}} Public. You can use a template or Terraform as a starting point to create a toolchain.
 {: shortdesc}
-
-Although toolchains are not currently available in all regions, you can configure your toolchain to deploy your apps across all regions. To learn more, try the [Deploy a secure web application across multiple regions tutorial](/docs/solution-tutorials?topic=solution-tutorials-multi-region-webapp).
-{: tip}
 
 ## Toolchain templates
 {: #templates}
