@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-23"
+lastupdated: "2023-01-25"
 
 keywords: tool integrations, IBM Cloud Public, GitHub
 
@@ -99,4 +99,4 @@ You must specify the `tool_type_id` property in the request body with the `githu
 ## Learn more about GitHub
 {: #learn_github}
 
-To learn more about GitHub, see the [GitHub article](https://www.ibm.com/cloud/garage/content/code/tool_github/){: external} and the [GitHub Issues article](https://www.ibm.com/cloud/garage/content/think/tool_github_issues/){: external} on the IBM Cloud Garage Method or take the [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){: external} tutorial.
+To learn more about GitHub, see the [GitHub article](https://www.ibm.com/garage/method/practices/culture/tool_github/){: external} and the [GitHub and Issue Tracking: Social coding hosted by IBM article](https://www.ibm.com/garage/method/practices/code/tool_git_repos_and_issue_tracking){: external} on the IBM Cloud Garage Method or take the [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain](https://www.ibm.com/cloud/architecture/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){: external} tutorial.
