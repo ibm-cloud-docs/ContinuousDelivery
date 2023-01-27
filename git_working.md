@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-17"
+  years: 2015, 2023
+lastupdated: "2023-01-25"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, authentication, personal access token, SSH key
 
@@ -67,21 +67,21 @@ The display name that appears for you throughout {{site.data.keyword.gitrepos}} 
 To authenticate with your Git repo over HTTPS, you must create a personal access token.
 {: tip}
 
-1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, on the [Access Tokens page](https://us-south.git.cloud.ibm.com/profile/personal_access_tokens){: external}, type the name of the application that you want to create an access token for. For example, `Git CLI`.
+1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, from the menu, click your avatar and select **Edit profile**. Click **Access Tokens**. On the Access Tokens page, type the name of the application that you want to create an access token for. For example, `Git CLI`.
 1. Optional: Choose an expiry date for the access token.
 1. Select the **api** checkbox to create a personal access token that uses api as the scope.
 1. Click **Create Personal Access Token**. Make note of your access token in a secure location for future use.
-1. On the [Account page](https://us-south.git.cloud.ibm.com/profile/account){: external}, in the Change username section, find your {{site.data.keyword.gitrepos}} username. Your username is also displayed as the first segment of the URL for any personal Git repos that you create.
+1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, from the menu, click your avatar and select **Edit profile**. Click **Account**. On the Account page, in the Change username section, find your {{site.data.keyword.gitrepos}} username. Your username is also displayed as the first segment of the URL for any personal Git repos that you create.
 1. Use your {{site.data.keyword.gitrepos}} username and personal access token to authenticate with your Git repo from an external Git client.
 
-To learn more, see [Personal access tokens](https://us-south.git.cloud.ibm.com/help/api/README.html#personal-access-tokens){: external}.
+To learn more, see [Personal access tokens](https://us-south.git.cloud.ibm.com/help/user/profile/personal_access_tokens.md){: external}.
 
 ### Creating an SSH key  
 {: #create_ssh}
 
-To create an SSH key, see [Generate an SSH key pair](https://us-south.git.cloud.ibm.com/help/ssh/index.html#generate-an-ssh-key-pair){: external}. Accessing your repositories with SSH authentication might require more configuration for proxies and firewalls.
+To create an SSH key, see [Generate an SSH key pair](https://us-south.git.cloud.ibm.com/help/user/ssh.md#generate-an-ssh-key-pair){: external}. Accessing your repositories with SSH authentication might require more configuration for proxies and firewalls.
 
-To learn more, see [SSH](https://us-south.git.cloud.ibm.com/help/ssh/index.html){: external}.
+To learn more, see [Use SSH keys to communicate with GitLab](https://us-south.git.cloud.ibm.com/help/user/ssh.html){: external}.
 
 ### Verifying host key fingerprints
 {: #verify_fingerprints}
@@ -359,7 +359,7 @@ us-south
 
 You can update the display name that appears for you throughout {{site.data.keyword.gitrepos}}.
 
-1. On the [User Settings](https://us-south.git.cloud.ibm.com/profile){: external} page, in the **Main settings** section, update your full name.
+1. On the {{site.data.keyword.gitrepos}} User Settings dashboard, from the menu, click your avatar and select **Edit profile**. Click **Profile**. On the Profile page, in the **Main settings** section, update your full name.
 1. Click **Update profile settings** to change the name that is displayed for you throughout {{site.data.keyword.gitrepos}}. 
 
 ## Physical file and repo size limits
