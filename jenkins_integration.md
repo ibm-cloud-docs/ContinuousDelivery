@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-22"
+  years: 2015, 2023
+lastupdated: "2023-01-26"
 
 keywords: tool integrations, IBM Cloud Public, Jenkins
 
@@ -66,6 +66,6 @@ You must specify the `tool_type_id` property in the request body with the `jenki
 ## Learn more about Jenkins
 {: #learn_jenkins}
 
-To learn more about Jenkins, see the [Jenkins article](https://www.ibm.com/cloud/garage/content/deliver/tool_jenkins/){: external} on the IBM Cloud Garage Method or take this tutorial:
+To learn more about Jenkins, see the [Jenkins article](https://www.ibm.com/garage/method/practices/code/tool_jenkins/){: external} on the IBM Cloud Garage Method or take this tutorial:
 
-* [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain](https://www.ibm.com/cloud/garage/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){: external}
+* [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain](https://www.ibm.com/cloud/architecture/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){: external}
