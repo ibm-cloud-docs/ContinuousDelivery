@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-22"
+  years: 2015, 2023
+lastupdated: "2023-01-26"
 
 keywords: tool integrations, IBM Cloud Public, PagerDuty
 
@@ -64,4 +64,4 @@ You must specify the `tool_type_id` property in the request body with the `pager
 ## Learn more about PagerDuty
 {: #learn_pagerduty}
 
-To learn more about PagerDuty, see the [PagerDuty article](https://www.ibm.com/cloud/garage/content/manage/tool_pagerduty/){: external} on the {{site.data.keyword.cloud_notm}} Garage Method or take the [Become a Garage Method advocate](https://www.ibm.com/cloud/garage/content/course/gm_advocate/){: external} course.
+To learn more about PagerDuty, see the [PagerDuty article](https://www.ibm.com/garage/method/practices/manage/tool_pagerduty/){: external} on the {{site.data.keyword.cloud_notm}} Garage Method.
