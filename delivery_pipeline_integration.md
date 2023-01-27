@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-24"
+  years: 2015, 2023
+lastupdated: "2023-01-26"
 
 keywords: tool integrations, IBM Cloud Public, Delivery Pipeline
 subcollection: ContinuousDelivery
@@ -101,6 +101,4 @@ You must specify the `tool_type_id` property in the request body with the `pipel
 ## Learn more about {{site.data.keyword.deliverypipeline}}
 {: #learn_pipeline}
 
-To learn more about {{site.data.keyword.deliverypipeline}}, see [Working with pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working) and the [Delivery Pipeline article](https://www.ibm.com/cloud/garage/content/deliver/tool_delivery_pipeline/){: external} on the IBM Cloud Garage Method or take this tutorial:
-
-* [Create a pipeline](https://www.ibm.com/cloud/garage/tutorials/create-a-pipeline){: external}
+To learn more about {{site.data.keyword.deliverypipeline}}, see [Working with pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working) and the [Delivery Pipeline article](https://www.ibm.com/garage/method/practices/deliver/tool_delivery_pipeline){: external} on the IBM Cloud Garage Method.
