@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-25"
+  years: 2015, 2023
+lastupdated: "2023-01-26"
 
 keywords: tool integrations, IBM Cloud Public, Git Repos and Issue Tracking
 
@@ -94,4 +94,4 @@ You must specify the `tool_type_id` property in the request body with the `hoste
 ## Learn more about {{site.data.keyword.gitrepos}}
 {: #learn_grit}
 
-To learn more about {{site.data.keyword.gitrepos}}, see the [{{site.data.keyword.gitrepos}}: Social coding hosted by IBM article](https://www.ibm.com/cloud/garage/content/code/tool_git_repos_and_issue_tracking/){: external} on the {{site.data.keyword.cloud_notm}} Garage Method.
+To learn more about {{site.data.keyword.gitrepos}}, see the [{{site.data.keyword.gitrepos}}: Social coding hosted by IBM article](https://www.ibm.com/garage/method/practices/code/tool_git_repos_and_issue_tracking/){: external} on the {{site.data.keyword.cloud_notm}} Garage Method.
