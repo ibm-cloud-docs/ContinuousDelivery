@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-01-26"
+lastupdated: "2023-01-30"
 
 keywords: customer responsibilities, IBM responsibilities, terms and conditions, disaster recovery, toolchain backup
 
@@ -173,7 +173,7 @@ To mirror a {{site.data.keyword.gitrepos}} repo, complete the following steps:
 
 1. Create a blank GitLab project in the target repo. Do not initialize this project with a readme file.
 1. [Create a personal access token](https://us-south.git.cloud.ibm.com/help/user/profile/personal_access_tokens.md#creating-a-personal-access-token){: external} with the `write_repository` scope in the target region. Save a copy of this token.
-1. Use Push mirroring to push the source repo to the target repo:     
+1. Use [Push mirroring](https://us-south.git.cloud.ibm.com/help/user/project/repository/mirror/push.md){: external} to push the source repo to the target repo:     
 
    a. From the source repo, select **Settings** > **Repository**.
 
