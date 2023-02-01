@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-26"
+lastupdated: "2023-02-01"
 
 keywords: IBM Cloud Continuous Delivery, getting started, tutorial, create a toolchain, tool integration, toolchain template, DevOps toolchains, Terraform
 
@@ -68,9 +68,7 @@ After the toolchain is created, a notification appears that provides a link to a
 ## Next steps
 {: #next_steps}
 
-Check out this tutorial on the [IBM&reg; Architecture Center](https://www.ibm.com/cloud/architecture/toolchains){: external}:
-
-* [Add a toolchain to an app](https://www.ibm.com/cloud/architecture/tutorials/add-a-toolchain-to-an-app?task=2){: external}.
+Check out the available [toolchain templates and tutorials](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_about).
 
 ### Terraform resources and data sources, Go SDKs, and HTTP APIs
 {: #terraform}
