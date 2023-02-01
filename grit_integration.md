@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-26"
+lastupdated: "2023-01-30"
 
 keywords: tool integrations, IBM Cloud Public, Git Repos and Issue Tracking
 
@@ -76,6 +76,8 @@ You must specify the `tool_type_id` property in the request body with the `hoste
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
 | api_root_url | optional, updatable | String | api_root_url | The URL of the {{site.data.keyword.gitrepos}} API. |
+| api_token | optional, updatable | Password | api_token | The Personal Access Token (PAT). This parameter is required only if the `auth_type` is set to `pat`, otherwise it is ignored. |
+| auth_type | optional, updatable, `Default: oauth` | String | auth_type | Set the authentication method to use to access the Git provider. |
 | default_branch | optional, updatable | String | default_branch | The name of the default branch of the Git repo. |
 | enable_traceability | optional, updatable, `Default: false` | Boolean | enable_traceability | Set this value to `true` to track the deployment of code changes by creating tags, labels and comments on commits, pull requests, and referenced issues. |
 | git_id | optional, immutable | String | git_id | Set this value to `hostedgit` to target {{site.data.keyword.gitrepos}}. |
