@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-01-27"
+lastupdated: "2023-02-02"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -29,7 +29,6 @@ Tekton provides a set of [Custom Resources](https://kubernetes.io/docs/concepts/
 |`Pipeline`		|Defines the set of tasks that compose a pipeline.		|
 |`PipelineRun`		|Instantiates a Pipeline for execution with specific inputs, outputs, and execution parameters.		|
 {: caption="Table 1. Tekton pipeline resources" caption-side="top"}
-
 
 You can take advantage of the following features when you use Tekton Pipelines:
 
@@ -65,7 +64,7 @@ Before you add and run a Tekton pipeline, make sure that you have the following 
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} installed locally.
 * A Kubernetes cluster (version 1.22 or higher) such as an [{{site.data.keyword.containerlong}} cluster](https://cloud.ibm.com/kubernetes/catalog/cluster){: external}.
 
-The toolchain and the {{site.data.keyword.deliverypipeline}} Private Worker tool integration must be in the same region. 
+The toolchain and the {{site.data.keyword.deliverypipeline}} Private Worker tool integration must be in the same region.
 {: important}
 
 ## Creating a {{site.data.keyword.deliverypipeline}} for Tekton by using the console
@@ -210,59 +209,202 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 {: #create_tekton_pipeline_api}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}.
+1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/tekton-pipeline#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+
+   ```bash
+   export CD_TEKTON_PIPELINE_APIKEY={api_key}
+   ```
+   {: pre}
+
 1. [Determine the region and ID of the toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#viewing-toolchain-api) to which you want to add the {{site.data.keyword.deliverypipeline}} tool integration.
 1. Add the {{site.data.keyword.deliverypipeline}} tool integration to the toolchain.
 
    ```curl
    curl -X POST \
      https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id}/tools \
-     -H 'Authorization: Bearer {token}' \
+     -H 'Authorization: Bearer {iam_token}' \
      -H 'Accept: application/json` \
      -H 'Content-Type: application/json' \
-       -d '{
+     -d '{
        "tool_type_id": "pipeline",
        "parameters": {
-         "name":"{tool_integration_name}", "type":"tekton"
-         }
+         "name": "{tool_integration_name}",
+         "type" : "tekton"
+       }
      }'
    ```
    {: pre}
+   {: curl}
 
-The following table lists and describes each of the variables that are used in the previous step.   
-    
-| Variable | Description |
-|:---------|:------------|
-| `{region}` | The region in which the toolchain resides, for example, `us-south`. |
-| `{tool_integration_name}` | A name for your tool integration, for example, `ci-pipeline`.|
-| `{toolchain_id}` | The ID of the toolchain to which to add the tool integration. |
-| `{token}` | A valid IAM bearer token. |
-{: caption="Table 2. Variables for adding the {{site.data.keyword.deliverypipeline}} tool integration with the API" caption-side="top"}
+   ```javascript
+   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+   ...
+   (async () => { 
+      const toolchainService = CdToolchainV2.newInstance();
+      const pipelinePrototypeModel = {
+         toolchainId: {toolchain_id},
+         toolTypeId: 'pipeline',
+         name: {tool_integration_name},
+         type: "tekton"
+      };
+      const pipelineTool = await toolchainService.createTool(pipelinePrototypeModel);
+   })();
+   ```
+   {: codeblock}
+   {: node}
 
- 
+   ```go
+   import (
+	   "github.com/IBM/continuous-delivery-go-sdk/cdtoolchainv2"
+   )
+   ...
+   toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
+   toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
+   createPipelineToolOptions := toolchainClient.NewCreateToolOptions({toolchain_id}, "pipeline")
+   createPipelineToolOptions.SetName({tool_integration_name})
+   createPipelineToolOptions.SetType("tekton")
+   pipelineTool, response, err := toolchainClient.CreateTool(createPipelineToolOptions)
+   ```
+   {: codeblock}
+   {: go}
+
+   ```python
+   from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
+   ...
+   toolchain_service = CdToolchainV2.new_instance()
+   pipeline_tool = toolchain_service.create_tool(
+      name = {tool_integration_name},
+      toolchain_id = {toolchain_id},
+      tool_type_id = "pipeline",
+      type = "tekton"
+   )
+   ```
+   {: codeblock}
+   {: python}
+
+   ```java
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.CdToolchain;
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.model.*;
+   ...
+   CdToolchain toolchainService = CdToolchain.newInstance();
+   CreateToolOptions createPipelineToolOptions = new CreateToolOptions.Builder()
+      .name({tool_integration_name})
+      .toolchainId({toolchain_id})
+      .toolTypeId("pipeline")
+      .type("tekton")
+      .build();
+   Response<ToolchainToolPost> response = toolchainService.createTool(createPipelineToolOptions).execute();
+   ToolchainToolPost pipelineTool = response.getResult();
+   ```
+   {: codeblock}
+   {: java}
+
+   The following table lists and describes each of the variables that are used in the previous step.
+   
+   | Variable | Description |
+   |:---------|:------------|
+   | `{region}` | The region in which the toolchain resides, for example, `us-south`. |
+   | `{tool_integration_name}` | A name for your tool integration, for example, `ci-pipeline`.|
+   | `{toolchain_id}` | The ID of the toolchain to which to add the tool integration. |
+   | `{iam_token}` | A valid IAM bearer token. |
+   {: caption="Table 2. Variables for adding the {{site.data.keyword.deliverypipeline}} tool integration with the API" caption-side="top"}
+
 1. Configure the {{site.data.keyword.deliverypipeline}} to use public managed workers within the specified regions.
 
    ```curl
-      curl -X POST \
-        https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines \
-        -H 'Authorization: Bearer {token}' \
-        -H 'Accept: application/json` \
-        -H 'Content-Type: application/json' \
-          -d '{
-          "id": "{pipeline_id}", "worker": { "id": "public" } }
-        }'
+   curl -X POST \
+      https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines \
+      -H 'Authorization: Bearer {iam_token}' \
+      -H 'Accept: application/json` \
+      -H 'Content-Type: application/json' \
+      -d '{
+         "id": "{pipeline_id}",
+         "worker": { "id": "public" }
+      }'
    ```
    {: pre}
+   {: curl}
 
-The following table lists and describes each of the variables that are used in the previous step.   
-    
-| Variable | Description |
-|:---------|:------------|
-| `{region}` | The region in which the toolchain resides, for example, `us-south`. |
-| `{pipeline_id}` | The ID of the pipeline that is returned from the previous step where the pipeline tool integration was created. |
-| `{token}` | A valid IAM bearer token. |
-{: caption="Table 3. Variables for configuring the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
+   ```javascript
+   const CdTektonPipelineV2 = require('ibm-continuous-delivery/cd-tekton-pipeline/v2');
+   ...
+   (async () => { 
+      const tektonService = CdTektonPipelineV2.newInstance();
+      const workerIdentityModel = {
+         id: 'public',
+      };
+      const params = {
+         id: {pipeline_id},
+         worker: workerIdentityModel,
+      };
+      const res = await tektonService.createTektonPipeline(params);
+   })();
+   ```
+   {: codeblock}
+   {: node}
 
+   ```go
+   import {
+      "github.com/IBM/continuous-delivery-go-sdk/cdtektonpipelinev2"
+   }
+   ...
+   cdTektonPipelineOptions := &cdtektonpipelinev2.CdTektonPipelineV2Options{}
+   pipelineSvc, err = cdtektonpipelinev2.NewCdTektonPipelineV2UsingExternalConfig(cdTektonPipelineOptions)
+   createTektonPipelineOptions := pipelineSvc.NewCreateTektonPipelineOptions(
+      {pipeline_id}
+   )
+   workerIdentityModel := &cdtektonpipelinev2.WorkerIdentity{
+      ID: core.StringPtr("public"),
+   }
+   createTektonPipelineOptions.SetWorker(workerIdentityModel)
+   tektonPipeline, response, err := pipelineSvc.CreateTektonPipeline(createTektonPipelineOptions)
+   ```
+   {: codeblock}
+   {: go}
+
+   ```python
+   from ibm_continuous_delivery.cd_tekton_pipeline_v2 import CdTektonPipelineV2
+   ...
+   pipeline_service = CdTektonPipelineV2.new_instance()
+   worker_identity_model = {
+      'id': 'public',
+   }
+   response = pipeline_service.create_tekton_pipeline(
+      id = {pipeline_id},
+      worker = worker_identity_model
+   )
+   tekton_pipeline = response.get_result()
+   ```
+   {: codeblock}
+   {: python}
+
+   ```java
+   import com.ibm.cloud.continuous_delivery.cd_tekton_pipeline.v2.CdTektonPipeline;
+   import com.ibm.cloud.continuous_delivery.cd_tekton_pipeline.v2.model.*;
+   ...
+   CdTektonPipeline pipelineSvc = CdTektonPipeline.newInstance();
+   WorkerIdentity workerIdentityModel = new WorkerIdentity.Builder()
+      .id("public")
+      .build();
+   CreateTektonPipelineOptions createTektonPipelineOptions = new CreateTektonPipelineOptions.Builder()
+      .id({pipeline_id})
+      .worker(workerIdentityModel)
+      .build();
+   Response<TektonPipeline> response = pipelineSvc.createTektonPipeline(createTektonPipelineOptions).execute();
+   TektonPipeline tektonPipeline = response.getResult();
+   ```
+   {: codeblock}
+   {: java}
+
+   The following table lists and describes each of the variables that are used in the previous step.
+
+   | Variable | Description |
+   |:---------|:------------|
+   | `{region}` | The region in which the toolchain resides, for example, `us-south`. |
+   | `{pipeline_id}` | The ID of the pipeline that is returned from the previous step where the pipeline tool integration was created. |
+   | `{iam_token}` | A valid IAM bearer token. |
+   {: caption="Table 3. Variables for configuring the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
+   
 For more information about the {{site.data.keyword.deliverypipeline}} API, see the [API Docs](https://cloud.ibm.com/apidocs/tekton-pipeline){: external}.
 
 ## Creating a {{site.data.keyword.deliverypipeline}} for Tekton with Terraform
@@ -358,24 +500,86 @@ The retention period for PipelineRuns and their logs depends on the plan that is
 {: #viewing-pipeline-terraform}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}.
-1. Get the pipeline data.
-   
-   ```curl
-   curl -X GET \
-     https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines/{pipeline_id} \
-     -H 'Authorization: Bearer {token}' \
-     -H 'Accept: application/json`
+1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/tekton-pipeline#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+
+   ```bash
+   export CD_TEKTON_PIPELINE_APIKEY={api_key}
    ```
    {: pre}
 
-The following table lists and describes each of the variables that are used in the previous step.   
-    
+1. Get the pipeline data.
+
+   ```curl
+   curl -X GET \
+     https://api.{region}.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines/{pipeline_id} \
+     -H 'Authorization: Bearer {iam_token}' \
+     -H 'Accept: application/json`
+   ```
+   {: pre}
+   {: curl}
+
+   ```javascript
+   const CdTektonPipelineV2 = require('ibm-continuous-delivery/cd-tekton-pipeline/v2');
+   ...
+   (async () => { 
+      const pipelineSvc = CdTektonPipelineV2.newInstance();
+      const params = {
+         id: {pipeline_id},
+      };
+      const res = await pipelineSvc.getTektonPipeline(params);
+   })();
+   ```
+   {: codeblock}
+   {: node}
+
+   ```go
+   import {
+      "github.com/IBM/continuous-delivery-go-sdk/cdtektonpipelinev2"
+   }
+   ...
+   cdTektonPipelineOptions := &cdtektonpipelinev2.CdTektonPipelineV2Options{}
+   pipelineSvc, err = cdtektonpipelinev2.NewCdTektonPipelineV2UsingExternalConfig(cdTektonPipelineOptions)
+   getTektonPipelineOptions := pipelineSvc.NewGetTektonPipelineOptions(
+      {pipeline_id}
+   )
+   tektonPipeline, response, err := pipelineSvc.GetTektonPipeline(getTektonPipelineOptions)
+   ```
+   {: codeblock}
+   {: go}
+
+   ```python
+   from ibm_continuous_delivery.cd_tekton_pipeline_v2 import CdTektonPipelineV2
+   ...
+   pipeline_service = CdTektonPipelineV2.new_instance()
+   response = pipeline_service.get_tekton_pipeline(
+      id = {pipeline_id}
+   )
+   tekton_pipeline = response.get_result()
+   ```
+   {: codeblock}
+   {: python}
+
+   ```java
+   import com.ibm.cloud.continuous_delivery.cd_tekton_pipeline.v2.CdTektonPipeline;
+   import com.ibm.cloud.continuous_delivery.cd_tekton_pipeline.v2.model.*;
+   ...
+   CdTektonPipeline pipelineSvc = CdTektonPipeline.newInstance();
+   GetTektonPipelineOptions getTektonPipelineOptions = new GetTektonPipelineOptions.Builder()
+      .id({pipeline_id})
+      .build();
+   Response<TektonPipeline> response = pipelineSvc.getTektonPipeline(getTektonPipelineOptions).execute();
+   TektonPipeline tektonPipeline = response.getResult();
+   ```
+   {: codeblock}
+   {: java}
+
+The following table lists and describes each of the variables that are used in the previous step.
+
 | Variable | Description |
 |:---------|:------------|
 | `{region}` | The region in which the pipeline resides, for example, `us-south`. |
 | `{pipeline_id}` | The ID of the pipeline that you want to view. |
-| `{token}` | A valid IAM bearer token. |
+| `{iam_token}` | A valid IAM bearer token. |
 {: caption="Table 4. Variables for viewing the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
 
 ### Viewing a {{site.data.keyword.deliverypipeline}} with Terraform
@@ -437,25 +641,85 @@ The following table lists and describes each of the variables that are used in t
 {: #deleting-pipeline-api}
 {: api}
 
-1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/resource-controller#authentication){: external}.
+1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/tekton-pipeline#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.
+
+   ```bash
+   export CD_TEKTON_PIPELINE_APIKEY={api_key}
+   ```
+   {: pre}
+
 1. [Determine the region and ID of the toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=api#viewing-toolchain-api) that you want to add the {{site.data.keyword.DRA_short}} tool integration to.
 1. Delete the pipeline.
    
    ```curl
    curl -X DELETE \
      https://api.{region}.devops.cloud.ibm.com/toolchain/v2/toolchains/{toolchain_id}/tools/{pipeline_id} \
-     -H 'Authorization: Bearer {token}'
+     -H 'Authorization: Bearer {iam_token}'
    ```
    {: pre}
+   {: curl}
 
-The following table lists and describes each of the variables that are used in the previous step.   
-    
+   ```javascript
+   const CdTektonPipelineV2 = require('ibm-continuous-delivery/cd-tekton-pipeline/v2');
+   ...
+   (async () => { 
+      const pipelineSvc = CdTektonPipelineV2.newInstance();
+      const params = {
+         id: {pipeline_id},
+      };
+      const res = await pipelineSvc.deleteTektonPipeline(params);
+   })();
+   ```
+   {: codeblock}
+   {: node}
+
+   ```go
+   import {
+      "github.com/IBM/continuous-delivery-go-sdk/cdtektonpipelinev2"
+   }
+   ...
+   cdTektonPipelineOptions := &cdtektonpipelinev2.CdTektonPipelineV2Options{}
+   pipelineSvc, err = cdtektonpipelinev2.NewCdTektonPipelineV2UsingExternalConfig(cdTektonPipelineOptions)
+   deleteTektonPipelineOptions := pipelineSvc.NewDeleteTektonPipelineOptions(
+      {pipeline_id}
+   )
+   response, err := pipelineSvc.DeleteTektonPipeline(deleteTektonPipelineOptions)
+   ```
+   {: codeblock}
+   {: go}
+
+   ```python
+   from ibm_continuous_delivery.cd_tekton_pipeline_v2 import CdTektonPipelineV2
+   ...
+   pipeline_service = CdTektonPipelineV2.new_instance()
+   response = pipeline_service.delete_tekton_pipeline(
+      id={pipeline_id}
+   )
+   ```
+   {: codeblock}
+   {: python}
+
+   ```java
+   import com.ibm.cloud.continuous_delivery.cd_tekton_pipeline.v2.CdTektonPipeline;
+   import com.ibm.cloud.continuous_delivery.cd_tekton_pipeline.v2.model.*;
+   ...
+   CdTektonPipeline pipelineSvc = CdTektonPipeline.newInstance();
+   DeleteTektonPipelineOptions deleteTektonPipelineOptions = new DeleteTektonPipelineOptions.Builder()
+      .id({pipeline_id})
+      .build();
+   Response<Void> response = pipelineSvc.deleteTektonPipeline(deleteTektonPipelineOptions).execute();
+   ```
+   {: codeblock}
+   {: java}
+
+The following table lists and describes each of the variables that are used in the previous step.
+
 | Variable | Description |
 |:---------|:------------|
 | `{region}` | The region in which the toolchain resides, for example, `us-south`. |
 | `{toolchain_id}` | The ID of the toolchain that contains the pipeline to delete. |
 | `{pipeline_id}` | The ID of the pipeline that you want to delete. |
-| `{token}` | A valid IAM bearer token. |
+| `{iam_token}` | A valid IAM bearer token. |
 {: caption="Table 5. Variables for deleting the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
 
 ## Deleting a {{site.data.keyword.deliverypipeline}} with Terraform
