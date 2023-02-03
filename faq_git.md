@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-11-10"
+  years: 2023
+lastupdated: "2023-02-03"
 
 keywords: tool integrations, IBM Cloud, GitHub integration, Git Repos and Issue Tracking integration, GitLab project
 
@@ -57,3 +57,13 @@ For more information about the Git tool integration Terraform resources, see the
 * [ibm_cd_toolchain_tool_githubconsolidated](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_githubconsolidated){: external}
 * [ibm_cd_toolchain_tool_gitlab](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_gitlab){: external}
 * [ibm_cd_toolchain_tool_hostedgit](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_hostedgit){: external}
+
+##  What type of authentication should I use to access GitHub repos from my toolchain?
+{: #repo_authorization
+{: faq}
+{: support}
+
+Before you can use a repo integration, you must authorize it so that {site.data.keyword.cloud_notm}} can access your GitHub account by using one of the following authentication methods. 
+
+* **{site.data.keyword.cloud_notm}} OAuth app**: When you grant authorization by using the {site.data.keyword.cloud_notm}} OAuth App, you allow {site.data.keyword.cloud_notm}} to act as the authenticated user. You also can revoke permissions from the Oauth App.
+* **Personal Access Token**: Use a Personal Access Token (PAT) to provide granular access to a specific user or repo. Authorizing with a PAT is recommended when you use Terraform or the API.
