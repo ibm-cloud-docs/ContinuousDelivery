@@ -65,5 +65,5 @@ For more information about the Git tool integration Terraform resources, see the
 
 Before you can use a repo integration, you must authorize it so that {{site.data.keyword.cloud_notm}} can access your GitHub account by using one of the following authentication methods. 
 
-* **{site.data.keyword.cloud_notm}} OAuth app**: When you grant authorization by using the {{site.data.keyword.cloud_notm}} OAuth App, you allow {site.data.keyword.cloud_notm}} to act as the authenticated user. You also can revoke permissions from the Oauth App.
+* **{{site.data.keyword.cloud_notm}} OAuth app**: When you grant authorization by using the {{site.data.keyword.cloud_notm}} OAuth App, you allow {{site.data.keyword.cloud_notm}} to act as the authenticated user. You also can revoke permissions from the Oauth App.
 * **Personal Access Token**: Use a Personal Access Token (PAT) to provide granular access to a specific user or repo. Authorizing with a PAT is recommended when you use Terraform or the API.
