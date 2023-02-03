@@ -2,7 +2,7 @@
 
 copyright:
    years: 2020, 2022
-lastupdated: "2022-03-25"
+lastupdated: "2022-07-25"
 
 keywords: Razee, Kubernetes, Kube, cluster
 
@@ -41,8 +41,6 @@ The toolchain that you create in this tutorial includes the following tool integ
 * {{site.data.keyword.gitrepos}} and two separate Git repos. One repo that contains your app source code, along with its Dockerfile and Kubernetes deployment script. And a second Git repo that contains the Razee configuration files.
 * A {{site.data.keyword.deliverypipeline}} that runs when a change is merged to the master branch of the Application Source Code repo. This pipeline runs the Unit Test, Code Coverage, and Static Scans on  the Application Source Code. The continuous integration pipeline also generates the build artifacts and uploads them to the source repo. Finally, the pipeline updates the Razee configuration repo with information about the new build artifacts.
 * A {{site.data.keyword.deliverypipeline}} that runs when a merge or pull request is created in the Application Source Code repo. Typically, this request is created by the application source code developer to merge changes from their development  branch to another branch, such as the master branch. The pull request pipeline runs the Unit Test and Static Scans on the Application Source Code.
-
-![Architectural diagram](images/razee_tutorial.png){: caption="Figure 1. Architectural diagram" caption-side="bottom"}
 
 After you create the cluster and the toolchain, you change your app's code and push the change to the {{site.data.keyword.gitrepos}} repo. When you push changes to your repo, the delivery pipeline automatically builds and deploys the code.
 
@@ -185,20 +183,17 @@ In this step, you create a Develop a Kubernetes app with Razee toolchain. Before
 {: #cd-kube-razee-modify}
 {: step}
 
-Modify the app and redeploy it to view how Razee picks up the changes in the `config.yml` file automatically, and then redeploys the app. 
+Modify the app and redeploy it to view how Razee picks up the changes in the `config.yml` file automatically, and then redeploys the app. 
 
 1. On the Toolchain's Overview page, on the **Repositories** card, click the Git repo for your app.
 
-   You can also use the built-in Eclipse Orion {{site.data.keyword.webide}}, a local IDE, or your favorite editor to change the files that are in your repo.
-   {: tip}
-
 2. In the Git repo, click the `utils.js` file. 
 
-3. Click **Edit** and update the code on line 4 to change the welcome message. 
+3. Click **Edit** and update the code on line 4 to change the welcome message. 
 
-4. Type a commit message and click **Commit changes** to push the change to the project's remote repo. 
+4. Type a commit message and click **Commit changes** to push the change to the project's remote repo. 
 
-5. On the Toolchain's Overview page, on the **Delivery pipelines** card, click the **ci-pipeline**. Because your commit automatically started a build, the pipeline is running. Over the next few minutes, watch your change as it is built, tested, and deployed. 
+5. On the Toolchain's Overview page, on the **Delivery pipelines** card, click the **ci-pipeline**. Because your commit automatically started a build, the pipeline is running. Over the next few minutes, watch your change as it is built, tested, and deployed. 
 
    You don't need to run the Manual Install Razee pipeline again. The Razee agent that is running on your Kubernetes cluster automatically picks up the change to the `config.yml` file that was generated during the **trigger-razee-deploy** stage. After the **trigger-razee-deploy** stage is completed, wait a few minutes for the agent to pick up the change and then refresh your app URL to view the updated message.
    {: tip}

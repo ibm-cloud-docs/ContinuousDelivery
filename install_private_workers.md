@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2019, 2023
+  years: 2019, 2022
 lastupdated: "2023-01-05"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker

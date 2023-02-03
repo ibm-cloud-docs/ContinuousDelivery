@@ -65,3 +65,5 @@ To edit rules, complete the following steps:
 1. From the Policies page, select the policy that has the rule you want to edit.
 2. Click the Edit icon ![write icon](images/icon_write.svg) for the rule.  
 3. Complete all required fields, and click **Save**.
+
+

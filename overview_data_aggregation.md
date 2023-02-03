@@ -34,3 +34,5 @@ You can find the Quality Dashboard page in the {{site.data.keyword.DRA_short}} d
 1. On the Toolchains page, click your toolchain to open its Overview page.
 1. On the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration.
 1. From the menu, select **Quality Dashboard**. 
+
+

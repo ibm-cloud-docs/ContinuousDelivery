@@ -10,7 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}   
+{{site.data.keyword.attribute-definition-list}}  
 
 # Configuring Rational Team Concert
 {: #rationalteamconcert}

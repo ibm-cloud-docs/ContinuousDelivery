@@ -200,7 +200,7 @@ toc:
       
       - pipeline_deploy_var.md
       - tekton_deploy_var.md
-      
+
       - link:
           label: Using Jenkins to integrate DevOps Insights
           href: https://wiki.jenkins.io/display/JENKINS/IBM+Cloud+DevOps+Plugin
@@ -246,4 +246,4 @@ toc:
           - troubleshoot_pipeline_private_workers.md
           - troubleshoot_insights.md
           - troubleshoot_git.md
-          - troubleshoot_toolchains.md 
+          - troubleshoot_toolchains.md
