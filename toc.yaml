@@ -36,7 +36,7 @@ toc:
           - overview_observe_trends.md
           - overview_deploy_environment.md
           - overview_quality_gate.md
-      - release-notes.md    
+      - release-notes.md
 
   - navgroup: 
       id: tutorial
