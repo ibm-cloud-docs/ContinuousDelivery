@@ -36,8 +36,8 @@ If you are configuring the GitHub tool integration by using the console while yo
 1. In the Configurable Integrations section, click **GitHub**.
 1. If you are creating the toolchain on {{site.data.keyword.cloud_notm}} Public and {{site.data.keyword.cloud_notm}} is not authorized to access GitHub, select one of the following authentication methods to access GitHub.
 
-   * **OAuth** - Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
-   * **Personal Access Token** - Specify a valid personal access token for GitHub.
+   * **OAuth**: Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
+   * **Personal Access Token**: Specify a valid personal access token for GitHub.
      
 If you are using the console and you already have a toolchain, update the GitHub tool integration's configuration:
 
