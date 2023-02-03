@@ -224,7 +224,7 @@ For more information about creating toolchains with the API, see [Create a toolc
 
 1. To install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform, follow the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
 
-2. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create a toolchain by using the HashiCorp Configuration Language. For more information about using this configuration language, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
+2. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create a toolchain by using the HashiCorp Configuration Language. For more information about using this configuration language, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
 
    The following example creates a toolchain by using the `ibm_cd_toolchain` resource.
   
