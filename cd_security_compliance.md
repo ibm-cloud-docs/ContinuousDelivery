@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2021, 2022
-lastupdated: "2022-06-16"
+  years:  2021, 2023
+lastupdated: "2023-01-18"
 
 keywords: security and compliance for continuous delivery, security for continuous delivery, compliance for continuous delivery
 
@@ -38,7 +38,7 @@ To start monitoring your resources, check out [Getting started with {{site.data.
 #### DevSecOps goals
 {: #cd-DevSecOps-goals}
 
-Goals are available as part of the DevSecOps toolchain templates. For more information, see [Managing security and compliance with DevSecOps](/docs/devsecops?topic=devsecops-scc-manage-devsecops).
+Goals are available as part of the DevSecOps toolchain templates. For more information, see [Managing security and compliance](/docs/security-compliance?topic=security-compliance-getting-started).
 
 #### Toolchain properties
 {: #cd-toolchain-goals}

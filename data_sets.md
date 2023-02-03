@@ -86,3 +86,4 @@ You can add your own custom data sets. Custom data sets support JUnit or XUnit, 
 
 If a custom data set is deleted, any test results for that custom data set are deleted. For more information about deleting data sets, see [Deleting your {{site.data.keyword.DRA_short}} data](/docs/ContinuousDelivery?topic=ContinuousDelivery-deleting_data).
 {: tip}
+

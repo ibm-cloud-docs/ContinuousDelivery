@@ -36,7 +36,7 @@ toc:
           - overview_observe_trends.md
           - overview_deploy_environment.md
           - overview_quality_gate.md
-      - release-notes.md
+      - release-notes.md    
 
   - navgroup: 
       id: tutorial
@@ -200,7 +200,7 @@ toc:
       
       - pipeline_deploy_var.md
       - tekton_deploy_var.md
-      
+
       - link:
           label: Using Jenkins to integrate DevOps Insights
           href: https://wiki.jenkins.io/display/JENKINS/IBM+Cloud+DevOps+Plugin
@@ -246,4 +246,4 @@ toc:
           - troubleshoot_pipeline_private_workers.md
           - troubleshoot_insights.md
           - troubleshoot_git.md
-          - troubleshoot_toolchains.md 
+          - troubleshoot_toolchains.md
