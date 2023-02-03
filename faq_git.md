@@ -58,7 +58,7 @@ For more information about the Git tool integration Terraform resources, see the
 * [ibm_cd_toolchain_tool_gitlab](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_gitlab){: external}
 * [ibm_cd_toolchain_tool_hostedgit](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cd_toolchain_tool_hostedgit){: external}
 
-##  What type of authentication should I use to access GitHub repos from my toolchain?
+## What type of authentication should I use to access GitHub repos from my toolchain?
 {: #repo_authorization
 {: faq}
 {: support}
