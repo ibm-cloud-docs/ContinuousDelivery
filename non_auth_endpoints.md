@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-10-06"
+  years: 2023
+lastupdated: "2023-02-03"
 
 keywords: endpoints, authentication, IBM Cloud Public
 
@@ -10,16 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}  
-{:external: target="_blank" .external}  
-{:screen: .screen}  
-{:pre: .pre}  
-{:codeblock: .codeblock}  
-{:tip: .tip}  
-{:important: .important}  
-{:deprecated: .deprecated}  
-{:download: .download}  
-{:preview: .preview}
+{{site.data.keyword.attribute-definition-list}}
 
 # Endpoints that do not require authentication in {{site.data.keyword.contdelivery_short}}
 {: #non-auth-endpoints-cd}
@@ -110,15 +101,15 @@ The following table lists the {{site.data.keyword.gitrepos}} endpoints that do n
 
 |Endpoint|Description|
 |:-------------------------------------------|:------------------|
-| `https://github-enterprise-monitor.[region].devops.cloud.ibm.com/health` | Get the health of the service component |
-| `https://github-enterprise-monitor.[region].devops.cloud.ibm.com/load_balancer` | Get the status of the load balancer |
-| `https://github-enterprise-monitor.[region].devops.cloud.ibm.com/scorecard` | Get the status of the scorecard |
-| `https://github-enterprise-monitor.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
-| `https://github-enterprise-monitor.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 | `https://hosted-git-metrics.[region].devops.cloud.ibm.com/health` | Get the health of the service component |
 | `https://hosted-git-metrics.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://hosted-git-metrics.[region].devops.cloud.ibm.com/status-all` | Get the status of the service component and its dependencies |
 | `https://hosted-git-metrics.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
+| `https://hosted-git-monitor.[region].devops.cloud.ibm.com/health` | Get the health of the service component |
+| `https://hosted-git-monitor.[region].devops.cloud.ibm.com/load_balancer` | Get the status of the load balancer |
+| `https://hosted-git-monitor.[region].devops.cloud.ibm.com/scorecard` | Get the status of the scorecard |
+| `https://hosted-git-monitor.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
+| `https://hosted-git-monitor.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 {: caption="Table 4. {{site.data.keyword.gitrepos}}" caption-side="top"}
 
 ## Third-party tool integrations
@@ -154,10 +145,6 @@ The following table lists the Toolchain platform endpoints that do not require a
 
 |Endpoint|Description|
 |:-------------------------------------------|:------------------|
-| `https://continuous-delivery-broker.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
-| `https://continuous-delivery-broker.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-| `https://continuous-delivery-bss.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
-| `https://continuous-delivery-bss.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 | `https://otc-api.[region].devops.cloud.ibm.com/` | Get the status of the service component |
 | `https://otc-api.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://otc-api.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |

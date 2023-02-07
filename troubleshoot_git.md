@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-24"
+  years: 2015, 2023
+lastupdated: "2023-02-03"
 
 keywords: troubleshoot, GitHub integration, Git Repos and Issue Tracking integration, GitLab project, tool integrations
 
@@ -34,17 +34,19 @@ If you are configuring the GitHub tool integration by using the console while yo
 {: tsResolve}
 
 1. In the Configurable Integrations section, click **GitHub**.
-1. If you are creating the toolchain on {{site.data.keyword.cloud_notm}} Public and {{site.data.keyword.cloud_notm}} is not authorized to access GitHub, click **Authorize** to go to the GitHub website.
-1. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
+1. If you are creating the toolchain on {{site.data.keyword.cloud_notm}} Public and {{site.data.keyword.cloud_notm}} is not authorized to access GitHub, select one of the following authentication methods to access GitHub.
 
+   * **OAuth**: Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
+   * **Personal Access Token**: Specify a valid personal access token for GitHub.
+     
 If you are using the console and you already have a toolchain, update the GitHub tool integration's configuration:
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**, and then click **Overview**.
 1. On the Toolchain's Overview page, on the **Repositories** card, locate the GitHub tool integration.
-1. Click the menu to access the configuration options and update the configuration settings to authorize {{site.data.keyword.cloud_notm}} to access GitHub. Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
+1. Click the menu to access the configuration options and update the configuration settings to authorize {{site.data.keyword.cloud_notm}} to access GitHub. If you choose the OAuth authentication method, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account. If you choose the Personal Access Token authentication method, provide a valid personal access token for GitHub.
 1. When you are finished updating the settings, click **Save Integration**.
 
-If you are using Terraform or the API, use the console to authorize {{site.data.keyword.cloud_notm}} to access your GitHub account:
+If you are using Terraform or the API with the `OAuth` authentication method, use the console to authorize {{site.data.keyword.cloud_notm}} to access your GitHub account:
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, locate the toolchain to which you want to add the GitHub tool integration. Click the toolchain to open its Overview page.
 1. On the Toolchain's Overview page, click **Add**.

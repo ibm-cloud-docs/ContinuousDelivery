@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-02"
+lastupdated: "2023-02-06"
 
 keywords: troubleshoot, toolchains, Cloud Foundry
 
@@ -73,8 +73,8 @@ The pipeline that you started failed with an error message.
 You exceeded the 500-step and job run limit that includes both pipeline steps for Tekton pipelines and pipeline job runs for Classic pipelines. If your pipeline has many steps within a single run, such as with the DevSecOps pipelines, you might reach this limit quickly.
 {: tsSymptoms}
 
-Delivery pipeline failures, excluding skipped step runs and Classic job runs, are counted as part of the 500 Tekton step run limit per month. This 500-step run limit also applies to Classic job runs for Classic pipelines. All of your toolchains and all of your pipelines within those toolchains that are in the same resource group contribute to the same limit of 500 Tekton step runs per month. The same limit is used because pipeline step runs and job runs are counted at the resource group level for a specific Continuous Delivery instance.
+Delivery pipeline failures, excluding skipped step runs and Classic job runs, are counted as part of the 500-step run limit per month. All of your toolchains and all of your pipelines within those toolchains that are in the same resource group contribute to the same limit of 500 Tekton step runs per month. The same limit is used because pipeline step runs and job runs are counted at the resource group level for a specific {{site.data.keyword.contdelivery_short}} instance.
 {: tsCauses}
 
-A five-day grace period is offered the first time that you reach the 500-step run limit.
+A five-day grace period is offered the first time that you reach the 500-step run limit. If you regularly exceed the 500-step run limit within a billing period, it is recommended that you update the {{site.data.keyword.contdelivery_short}} instance for that resource group and region to use a Professional plan.
 {: tsResolve}

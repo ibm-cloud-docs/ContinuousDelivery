@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-01-25"
+lastupdated: "2023-02-03"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, Git source control, authentication, GitHub 
 
@@ -134,7 +134,8 @@ You can add a Git tool integration to any existing toolchain with the API.
             type: 'link',
             git_id: 'github',
             repo_url: 'https://github.com/{git_org}/{git-repo}.git',
-            has_issues: true
+            has_issues: true,
+
          }
       };
       const gitTool = await toolchainService.createTool(gitToolModel);
@@ -254,6 +255,8 @@ You can add a Git tool integration to any existing toolchain with Terraform.
        git_id = "github"
        repo_url = "https://github.com/my-org/my-repo.git"
        type = "link"
+       "auth_type" = "pat"
+       "api_token" = "<TOKEN>"
      }
      parameters {
        has_issues = true
