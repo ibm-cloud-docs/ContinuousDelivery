@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2023
 
-lastupdated: "2023-02-07"
+lastupdated: "2023-02-08"
 
 keywords: ibmcloud, resource, service instance, restore, CLI tool, IBM Cloud
 
@@ -213,4 +213,5 @@ After you delete an instance of the {{site.data.keyword.contdelivery_short}} ser
 
 To view which service instances are available for restoration and to restore a deleted service, see [Using resource reclamations](/docs/account?topic=account-resource-reclamation). If you try to restore a deleted service and an active {{site.data.keyword.contdelivery_short}} service instance exists, the restoration is blocked. For more information about how to view the details for a resource reclamation, see [Listing reclaimed resources by using the CLI](/docs/account?topic=account-resource-reclamation&interface=cli) or [Listing reclaimed resources by using the API](/docs/account?topic=account-resource-reclamation&interface=api).
 
-You can have one active instance of {{site.data.keyword.contdelivery_short}} only in a region and resource group. After you delete an instance of the {{site.data.keyword.contdelivery_short}} service from a region and resource group, you can restore the deleted service instance to create a service instance again within the data retention period of seven days.
+You can have one active instance of {{site.data.keyword.contdelivery_short}} only in a region and resource group. After you delete an instance of the {{site.data.keyword.contdelivery_short}} service from a region and resource group, you can restore the deleted service instance to create a service instance again within the data retention period of seven days. Alternatively, you can permanently remove the deleted service instance by using the [`ibmcloud resource reclamation-delete`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_reclamation_delete) command, and then [create a {{site.data.keyword.contdelivery_short}} service](/docs/ContinuousDelivery?topic=ContinuousDelivery-create_cd_service) instance again.
+
