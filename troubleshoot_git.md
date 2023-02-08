@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-02-08"
 
 keywords: troubleshoot, GitHub integration, Git Repos and Issue Tracking integration, GitLab project, tool integrations
 
@@ -46,7 +46,7 @@ If you are using the console and you already have a toolchain, update the GitHub
 1. Click the menu to access the configuration options and update the configuration settings to authorize {{site.data.keyword.cloud_notm}} to access GitHub. If you choose the OAuth authentication method, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account. If you choose the Personal Access Token authentication method, provide a valid personal access token for GitHub.
 1. When you are finished updating the settings, click **Save Integration**.
 
-If you are using Terraform or the API with the `OAuth` authentication method, use the console to authorize {{site.data.keyword.cloud_notm}} to access your GitHub account:
+If you are using Terraform or the API with the `OAuth` authentication method, switch to using a Personal Access Token (PAT) to provide granular access to a specific user or repo. Authorizing with a PAT is recommended when you use Terraform or the API. Otherwise, you can use the console to authorize {{site.data.keyword.cloud_notm}} to access your GitHub account:
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, locate the toolchain to which you want to add the GitHub tool integration. Click the toolchain to open its Overview page.
 1. On the Toolchain's Overview page, click **Add**.
