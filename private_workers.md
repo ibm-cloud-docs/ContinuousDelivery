@@ -436,4 +436,4 @@ For each subsequent release of a private worker image, the version number is upd
 * Agent changes result in a minor version increment, for example version 14.10 changes to version 14.11.
 * A new Tekton framework change results in a major version increment, for example version 14.11 changes to version 15.0.
 
-Whenever possible, {{site.data.keyword.contdelivery_full}} supports the `n-1` major version of the current private worker image. For example, if the current image is version 14.x, older 13.x images are also allowed to run. After the major version of the pipeline worker image is incremented to 15.x, version 14.x images are allowed, but any version 13.x or earlier images are considered outdated.
+Whenever possible, {{site.data.keyword.contdelivery_full}} supports the `n-1` major version of the current private worker image. For example, if the current image is version 14.x, previous version 13.x images are also allowed to run. After the major version of the pipeline worker image is incremented to 15.x, version 14.x images are allowed, but any version 13.x or earlier images are considered outdated.
