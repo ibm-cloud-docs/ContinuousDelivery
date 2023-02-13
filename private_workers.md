@@ -387,14 +387,14 @@ Complete the following steps to view the private worker status on the cluster wh
 
    The following information is listed for each agent:
    
-   * Name: the name registered for this worker
-   * ServiceID: the serviceId of this worker
-   * Agent: whether the worker agent is operating properly on the cluster (possible values: `OK` or an error message)
-   * Registered: the registration state of the worker (possible values: `Succeeded` or `Unregistered`)
-   * Version: the version of this worker with regards to the most recent version used by the framework (possible values: `OK` or `Outdated` or `Unsupported`)
-   * Auth: the validity of the api key used by the worker (possible values: `OK` or `Error`)
-   * Constrained: whether there are any cluster issues affecting the worker (possible values: `OK` or an error message)`
-   * Paused: whether the agent is active in looking for new tasks (possible values: `true` or `false`)
+   * Name: The name that is registered for this worker.
+   * ServiceID: The `serviceId` of this worker.
+   * Agent: Indicates whether the worker agent is operating correctly on the cluster by specifying `OK`, or displaying an error message.
+   * Registered: The registration state of the worker, such as `Succeeded` or `Unregistered`.
+   * Version: The version of this worker for the current version that is used by the framework, such as `OK`, `Outdated`, or `Unsupported`.
+   * Auth: The validity of the API key that is used by the worker, such as `OK` or `Error`.
+   * Constrained: Indicates whether there are any cluster issues that affect the worker by specifying `OK`, or displaying an error message.
+   * Paused: Indicates whether the agent is actively searching for new tasks by specifying `true` or `false`.
 
 To verify the overall status of a registered private worker pool, check the Overview page of the {{site.data.keyword.deliverypipeline}} private worker from the toolchain where it is used.
 
