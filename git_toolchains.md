@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-02-13"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, Git source control, authentication, GitHub 
 
@@ -255,8 +255,8 @@ You can add a Git tool integration to any existing toolchain with Terraform.
        git_id = "github"
        repo_url = "https://github.com/my-org/my-repo.git"
        type = "link"
-       "auth_type" = "pat"
-       "api_token" = "<TOKEN>"
+       auth_type = "pat"
+       api_token = "<TOKEN>"
      }
      parameters {
        has_issues = true
@@ -264,7 +264,9 @@ You can add a Git tool integration to any existing toolchain with Terraform.
    }
    ```
    {: codeblock}
-  
+
+   Where `<TOKEN>` represents a Personal Access Token (PAT) that belongs to the GitHub account that grants access to the target repo.
+
 3. Initialize the Terraform CLI.
 
    ```terraform
