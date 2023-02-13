@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-09"
+lastupdated: "2023-02-13"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -68,7 +68,7 @@ Complete the following steps to configure the {{site.data.keyword.deliverypipeli
 The list of workers is empty until you use {{site.data.keyword.deliverypipeline}} private workers for the first time. 
 {: tip}
 
-For more information about the **{{site.data.keyword.deliverypipeline}} Private Worker** tool integration, see [Configuring {{site.data.keyword.deliverypipeline}} Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-privateworker).
+For more information about the {{site.data.keyword.deliverypipeline}} Private Worker tool integration, see [Configuring {{site.data.keyword.deliverypipeline}} Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-privateworker).
 
 ### Configuring the {{site.data.keyword.deliverypipeline}} Private Worker tool integration with the API
 {: #configure_private_worker_integration_api}
@@ -371,26 +371,64 @@ The following table lists and describes each of the variables that are used in t
 Because the private worker agent might be used in other toolchains, it remains on your clusters until you delete it.
 {: tip}
 
-## Updating a {{site.data.keyword.deliverypipeline}} Private Worker
-{: #update_private_workers}
+## Viewing the {{site.data.keyword.deliverypipeline}} Private Worker status
+{: #status_private_workers}
  
+You can view the private worker status on a cluster to verify that the private worker is registered, and that it uses a valid API key. Private worker registration and API key assignment is set up during the initial private worker registration. These settings allow the private worker to communicate with the {{site.data.keyword.contdelivery_full}} framework and be considered Active.
+
+Complete the following steps to view the private worker status on the cluster where it is installed:
+
+1. Log in as an authorized user to the cluster that hosts the worker.
+1. Run the following command to list all of the agents that are registered on the cluster:
+ 
+   ```text
+   kubectl get workeragents
+   ```
+
+   The following information is listed for each agent:
+   
+   * Name: the name registered for this worker
+   * ServiceID: the serviceId of this worker
+   * Agent: whether the worker agent is operating properly on the cluster (possible values: `OK` or an error message)
+   * Registered: the registration state of the worker (possible values: `Succeeded` or `Unregistered`)
+   * Version: the version of this worker with regards to the most recent version used by the framework (possible values: `OK` or `Outdated` or `Unsupported`)
+   * Auth: the validity of the api key used by the worker (possible values: `OK` or `Error`)
+   * Constrained: whether there are any cluster issues affecting the worker (possible values: `OK` or an error message)`
+   * Paused: whether the agent is active in looking for new tasks (possible values: `true` or `false`)
+
+To verify the overall status of a registered private worker pool, check the Overview page of the {{site.data.keyword.deliverypipeline}} private worker from the toolchain where it is used.
+
+1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
+1. On the **Delivery pipelines** card, click the private workers tool integration for which you want to view a list of all of the registered workers. This worker pool contains one or more private workers that are installed on different clusters, but share a `ServiceId`. When work is assigned to a private worker pool, any of the private workers that are listed in the pool are eligible to run the workload.
+
+The following information is provided for each worker that is registered in this pool:
+
+* **Name**: The name of the registered worker.
+* **Status**: The current status of the worker.
+* **Version**: The current version of the worker. If the current version is out of date, a notification is displayed.
+* **Tekton Version**: The Tekton release version.
+* **Cluster**: The name of the cluster that the worker is registered on, if available.
+* **Last Active**: The last time that the agent reported in.
+
 Private workers can have one of the following statuses:
  
 * **active**: The private worker is operating normally.
 * **inactive**: The private worker is offline. Check your cluster. You might need to register the private worker again.
-* **outdated**: The private worker is not the latest version. Although the private worker continues to operate normally, it is recommended that you update to the latest version.
-* **unsupported**: The private worker version in use is no longer supported. The private worker cannot run and you need to update to the latest version.
+* **unsupported**: The private worker version in use is no longer supported. The private worker cannot run and you must update to the latest version.
+
+## Updating a {{site.data.keyword.deliverypipeline}} Private Worker
+{: #update_private_workers}
 
 Complete the following steps to update a private worker to use the latest version:
  
  1. Log in as an authorized user to the cluster that hosts the worker.
- 1. Run the following command:
+ 2. Run the following command:
  
    ```text
    kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/update"
    ```
 
-## Pipeline Private Worker images 
+## {{site.data.keyword.deliverypipeline}} Private Worker images 
 {: #private-workers-images}
 
 The private worker installation script pulls required images from the global {{site.data.keyword.registrylong}}. It pulls the most recent images of pipeline private workers and respective Tekton framework images that include fixes for any vulnerability found. 
@@ -426,8 +464,8 @@ icr.io/continuous-delivery/pipeline/tekton/kubectl-jq
 icr.io/continuous-delivery/pipeline/tekton/ubi
 ```
 
-### Support for previous Pipeline Private Worker images 
-{: #previous-private-workers-images}
+### Support for previous {{site.data.keyword.deliverypipeline}} Private Worker images 
+{: #previous-update_private_workers}
 
 To take advantage of the current features and fixes, and to maintain full compliance, it is recommended that you keep your private worker images up to date.
 
@@ -436,4 +474,4 @@ For each subsequent release of a private worker image, the version number is upd
 * Agent changes result in a minor version increment, for example version 14.10 changes to version 14.11.
 * A new Tekton framework change results in a major version increment, for example version 14.11 changes to version 15.0.
 
-Whenever possible, {{site.data.keyword.contdelivery_full}} supports the `n-1` major version of the current private worker image. For example, if the current image is version 14.x, previous version 13.x images are also allowed to run. After the major version of the pipeline worker image is incremented to 15.x, version 14.x images are allowed, but any version 13.x or earlier images are considered outdated.
+{{site.data.keyword.contdelivery_full}} supports the `n-1` major version of the current private worker image. For example, if the current image is version 14.x, previous version 13.x images are also allowed to run. After the major version of the pipeline worker image is incremented to 15.x, version 14.x images are allowed, but any version 13.x or earlier images are considered outdated.
