@@ -387,34 +387,34 @@ Complete the following steps to view the private worker status on the cluster wh
 
    The following information is listed for each agent:
    
-   * Name: The name that is registered for this worker.
-   * ServiceID: The `serviceId` of this worker.
-   * Agent: Indicates whether the worker agent is operating correctly on the cluster by specifying `OK`, or displaying an error message.
-   * Registered: The registration state of the worker, such as `Succeeded` or `Unregistered`.
-   * Version: The version of this worker for the current version that is used by the framework, such as `OK`, `Outdated`, or `Unsupported`.
-   * Auth: The validity of the API key that is used by the worker, such as `OK` or `Error`.
-   * Constrained: Indicates whether there are any cluster issues that affect the worker by specifying `OK`, or displaying an error message.
-   * Paused: Indicates whether the agent is actively searching for new tasks by specifying `true` or `false`.
+   * **Name**: The name that is registered for this worker.
+   * **ServiceID**: The `serviceId` of this worker.
+   * **Agent**: Indicates whether the worker agent is operating correctly on the cluster by specifying `OK`, or displaying an error message.
+   * **Registered**: The registration state of the worker, such as `Succeeded` or `Unregistered`.
+   * **Version**: The version of this worker for the current version that is used by the framework, such as `OK`, `Outdated`, or `Unsupported`.
+   * **Auth**: The validity of the API key that is used by the worker, such as `OK` or `Error`.
+   * **Constrained**: Indicates whether any cluster issues exist that affect the worker by specifying `OK`, or displaying an error message.
+   * **Paused**: Indicates whether the agent is actively searching for new tasks by specifying `true` or `false`.
 
 To verify the overall status of a registered private worker pool, check the Overview page of the {{site.data.keyword.deliverypipeline}} private worker from the toolchain where it is used.
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click a toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**.
 1. On the **Delivery pipelines** card, click the private workers tool integration for which you want to view a list of all of the registered workers. This worker pool contains one or more private workers that are installed on different clusters, but share a `ServiceId`. When work is assigned to a private worker pool, any of the private workers that are listed in the pool are eligible to run the workload.
 
-The following information is provided for each worker that is registered in this pool:
+   The following information is provided for each worker that is registered in this pool:
 
-* **Name**: The name of the registered worker.
-* **Status**: The current status of the worker.
-* **Version**: The current version of the worker. If the current version is out of date, a notification is displayed.
-* **Tekton Version**: The Tekton release version.
-* **Cluster**: The name of the cluster that the worker is registered on, if available.
-* **Last Active**: The last time that the agent reported in.
+   * **Name**: The name of the registered worker.
+   * **Status**: The current status of the worker.
+   * **Version**: The current version of the worker. If the current version is out of date, a notification is displayed.
+   * **Tekton Version**: The Tekton release version.
+   * **Cluster**: The name of the cluster that the worker is registered on, if available.
+   * **Last Active**: The last time that the agent reported in.
 
-Private workers can have one of the following statuses:
+   Private workers can have one of the following statuses:
  
-* **active**: The private worker is operating normally.
-* **inactive**: The private worker is offline. Check your cluster. You might need to register the private worker again.
-* **unsupported**: The private worker version in use is no longer supported. The private worker cannot run and you must update to the latest version.
+   * **active**: The private worker is operating normally.
+   * **inactive**: The private worker is offline. Check your cluster. You might need to register the private worker again.
+   * **unsupported**: The private worker version in use is no longer supported. The private worker cannot run and you must update to the latest version.
 
 ## Updating a {{site.data.keyword.deliverypipeline}} Private Worker
 {: #update_private_workers}
