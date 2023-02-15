@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-02-11"
+  years: 2018, 2023
+lastupdated: "2023-02-15"
 
 keywords: high availability, disaster recovery, SLA
 
@@ -11,13 +11,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # High availability and disaster recovery
