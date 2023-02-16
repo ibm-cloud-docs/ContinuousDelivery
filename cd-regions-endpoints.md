@@ -23,7 +23,7 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 
 {{site.data.keyword.contdelivery_short}} is available in the following regions (borders and geographic features in the illustration are artistic representations):
 
-[Regions where the {{site.data.keyword.contdelivery_short}} service is available.](images/world-map.svg){: caption="Figure 1. Displays the regions where you can create and manage {{site.data.keyword.contdelivery_short}} resources." caption-side="bottom"}
+![Regions where the {{site.data.keyword.contdelivery_short}} service is available.](images/world-map.svg){: caption="Figure 1. Displays the regions where you can create and manage {{site.data.keyword.contdelivery_short}} resources." caption-side="bottom"}
  
 You can create {{site.data.keyword.contdelivery_short}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions, which represent the
 geographic area where your {{site.data.keyword.contdelivery_short}} requests are handled and processed. To learn more, see [{{site.data.keyword.contdelivery_short}} high availability and disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-ha-dr).
