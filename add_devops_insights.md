@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2023
-lastupdated: "2023-01-17"
+lastupdated: "2023-02-16"
 
 keywords: devops insights, devops, insights, integrate, adding, code coverage, test, tests, verification, install, app, dashboard, risk
 
@@ -75,7 +75,7 @@ You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it fro
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+   const CdToolchainV2 = require('@ibm-cloud/continuous-delivery/cd-toolchain/v2');
    ...
    (async () => { 
       const toolchainService = CdToolchainV2.newInstance();

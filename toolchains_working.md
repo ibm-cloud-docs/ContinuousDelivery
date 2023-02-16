@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2015, 2023
-lastupdated: "2023-01-19"
+lastupdated: "2023-02-16"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -146,7 +146,7 @@ If you created your app by using your own code repository, click **Deploy my app
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+   const CdToolchainV2 = require('@ibm-cloud/continuous-delivery/cd-toolchain/v2');
    const toolchainService = CdToolchainV2.newInstance();
    ...
    (async() => {
@@ -357,7 +357,7 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+   const CdToolchainV2 = require('@ibm-cloud/continuous-delivery/cd-toolchain/v2');
    const toolchainService = CdToolchainV2.newInstance();
    ...
    (async() => {
@@ -419,7 +419,7 @@ ibmcloud dev toolchain-open [TOOLCHAIN-NAME]
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+   const CdToolchainV2 = require('@ibm-cloud/continuous-delivery/cd-toolchain/v2');
    const toolchainService = CdToolchainV2.newInstance();
    ...
    (async() => {

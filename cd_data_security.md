@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-01-17"
+lastupdated: "2023-02-16"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -118,7 +118,7 @@ https://api.us-south.devops.cloud.ibm.com/toolchain/v2/toolchains/01234567-89ab-
 {: curl}
 
 ```javascript
-const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+const CdToolchainV2 = require('@ibm-cloud/continuous-delivery/cd-toolchain/v2');
 ...
 (async () => {
     const toolchainService = CdToolchainV2.newInstance();

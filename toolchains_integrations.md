@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-17"
+lastupdated: "2023-02-16"
 
 keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Git Repos and Issue Tracking, GitHub, GitLab, Hashicorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -79,7 +79,7 @@ You can add tool integrations to your toolchain with the API.
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+   const CdToolchainV2 = require('@ibm-cloud/continuous-delivery/cd-toolchain/v2');
    const toolchainService = CdToolchainV2.newInstance();
    ...
    (async() => {
@@ -246,7 +246,7 @@ If you configured a tool integration when you created a toolchain, you can updat
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+   const CdToolchainV2 = require('@ibm-cloud/continuous-delivery/cd-toolchain/v2');
    const toolchainService = CdToolchainV2.newInstance();
    ...
    (async() => {
@@ -413,7 +413,7 @@ You can delete tool integrations from your toolchain with the API. If you delete
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+   const CdToolchainV2 = require('@ibm-cloud/continuous-delivery/cd-toolchain/v2');
    const toolchainService = CdToolchainV2.newInstance();
    ...
    (async() => {
