@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-15"
+lastupdated: "2023-02-16"
 
 keywords: high availability, disaster recovery, SLA
 
@@ -14,7 +14,7 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.attribute-definition-list}}
 
 
-# High availability and disaster recovery
+# {{site.data.keyword.contdelivery_short}} high availability and disaster recovery
 {: #ha-dr}
 
 All {{site.data.keyword.cloud}} general availability (GA) services have a Service Level Agreement of 99.99% availability. {{site.data.keyword.contdelivery_full}} is a GA service that is offered in multiple regions: Dallas, Washington, Toronto, Sao Paulo, Frankfurt, Tokyo, Sydney, Osaka, and London. Each location has three different data centers for redundancy. The data for each location is kept in the three data centers near that location. If all of the data centers in a location fail, the {{site.data.keyword.contdelivery_short}} service for that location becomes unavailable.
