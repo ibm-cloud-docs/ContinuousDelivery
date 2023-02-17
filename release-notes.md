@@ -26,7 +26,9 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 Java, Node, and Python SDKs for toolchains and Tekton pipelines are now generally available.
 :   Java SDK: [github.com/IBM/continuous-delivery-java-sdk](https://github.com/IBM/continuous-delivery-java-sdk){: external}
+
 :   Node SDK: [github.com/IBM/continuous-delivery-node-sdk](https://github.com/IBM/continuous-delivery-node-sdk){: external}
+
 :   Python SDK: [github.com/IBM/continuous-delivery-python-sdk](https://github.com/IBM/continuous-delivery-python-sdk){: external}
 
 ## 13 February 2023
