@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-17"
+lastupdated: "2023-02-16"
 
 keywords: user management function, toolchains, tool integrations, user access
 
@@ -126,7 +126,7 @@ The following table lists and describes each of the variables that are used in t
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+   const CdToolchainV2 = require('@ibm-cloud/continuous-delivery/cd-toolchain/v2');
    const toolchainService = CdToolchainV2.newInstance();
    ...
    (async() => {
