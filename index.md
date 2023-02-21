@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-16"
 
 keywords: IBM Cloud Continuous Delivery, getting started, tutorial, create a toolchain, tool integration, toolchain template, DevOps toolchains, Terraform
 
@@ -70,7 +70,7 @@ After the toolchain is created, a notification appears that provides a link to a
 
 Check out the available [toolchain templates and tutorials](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_about).
 
-### Terraform resources and data sources, Go SDKs, and HTTP APIs
+### Terraform resources and data sources, SDKs, and HTTP APIs
 {: #terraform}
 
 You can use Terraform to create and manage toolchains, tool integrations, and Tekton delivery pipelines *as code*. For more information about using Terraform with {{site.data.keyword.contdelivery_short}}, see [Setting up Terraform for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup) and try the Terraform toolchain template to [Develop a Kubernetes app with Helm toolchain](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cd-toolchain-simple-helm){: external}.
