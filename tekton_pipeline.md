@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-02"
+lastupdated: "2023-02-16"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -11,6 +11,7 @@ subcollection: ContinuousDelivery
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 # Working with Tekton pipelines
 {: #tekton-pipelines}
@@ -237,7 +238,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+   const CdToolchainV2 = require('@ibm-cloud/continuous-delivery/cd-toolchain/v2');
    ...
    (async () => { 
       const toolchainService = CdToolchainV2.newInstance();
@@ -326,7 +327,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    {: curl}
 
    ```javascript
-   const CdTektonPipelineV2 = require('ibm-continuous-delivery/cd-tekton-pipeline/v2');
+   const CdTektonPipelineV2 = require('@ibm-cloud/continuous-delivery/cd-tekton-pipeline/v2');
    ...
    (async () => { 
       const tektonService = CdTektonPipelineV2.newInstance();
@@ -519,7 +520,7 @@ The retention period for PipelineRuns and their logs depends on the plan that is
    {: curl}
 
    ```javascript
-   const CdTektonPipelineV2 = require('ibm-continuous-delivery/cd-tekton-pipeline/v2');
+   const CdTektonPipelineV2 = require('@ibm-cloud/continuous-delivery/cd-tekton-pipeline/v2');
    ...
    (async () => { 
       const pipelineSvc = CdTektonPipelineV2.newInstance();
@@ -660,7 +661,7 @@ The following table lists and describes each of the variables that are used in t
    {: curl}
 
    ```javascript
-   const CdTektonPipelineV2 = require('ibm-continuous-delivery/cd-tekton-pipeline/v2');
+   const CdTektonPipelineV2 = require('@ibm-cloud/continuous-delivery/cd-tekton-pipeline/v2');
    ...
    (async () => { 
       const pipelineSvc = CdTektonPipelineV2.newInstance();
