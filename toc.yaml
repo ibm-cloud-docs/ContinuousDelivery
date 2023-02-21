@@ -191,6 +191,15 @@ toc:
           - link:
               label: Continuous Delivery Go SDK
               href: https://github.com/IBM/continuous-delivery-go-sdk
+          - link:
+              label: Continuous Delivery Java SDK
+              href: https://github.com/IBM/continuous-delivery-java-sdk
+          - link:
+              label: Continuous Delivery Node SDK
+              href: https://github.com/IBM/continuous-delivery-node-sdk
+          - link:
+              label: Continuous Delivery Python SDK
+              href: https://github.com/IBM/continuous-delivery-python-sdk
       - link:
           label: Open Toolchain Templates SDK
           href: https://github.com/open-toolchain/sdk/wiki
