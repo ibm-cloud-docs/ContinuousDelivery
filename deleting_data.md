@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-01-17"
+lastupdated: "2023-02-16"
 
 keywords: devops insights, manage, data, quality, delete, test, tests, app, dashboard
 
@@ -126,7 +126,7 @@ To delete the {{site.data.keyword.DRA_short}} tool integration, you must delete 
    {: curl}
 
    ```javascript
-   const CdToolchainV2 = require('ibm-continuous-delivery/cd-toolchain/v2');
+   const CdToolchainV2 = require('@ibm-cloud/continuous-delivery/cd-toolchain/v2');
    ...
    const toolchainService = CdToolchainV2.newInstance(); 
    const tools = await toolchainService.listTools({
