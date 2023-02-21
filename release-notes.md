@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-02-21"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -20,8 +20,8 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
 {: shortdesc}
 
-## 17 February 2023
-{: #ContinuousDelivery-feb1723}
+## 21 February 2023
+{: #ContinuousDelivery-feb2123}
 {: release-note}
 
 Java, Node, and Python SDKs for toolchains and Tekton pipelines are now generally available.
