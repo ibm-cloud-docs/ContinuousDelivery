@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-25"
+lastupdated: "2023-02-23"
 
 keywords: tool integrations, IBM Cloud Public, IBM Secrets Manager
 
@@ -37,9 +37,18 @@ Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets
 
    b. In the Tool Integrations section, click **{{site.data.keyword.secrets-manager_short}}**.
 
-1. Specify a name for this instance of the {{site.data.keyword.secrets-manager_short}} tool integration to use in your toolchain. The name that you specify is used in the UI tools that select **{{site.data.keyword.secrets-manager_short}}** secrets. It is also used as part of the reference that resolves the secret values when the toolchain runs. This instance name is also displayed on the {{site.data.keyword.secrets-manager_short}} tool integration tile within the toolchain workspace.
-1. Review the default values for **Region** and **Resource-Group** and update, if required.
-1. Select the instance of the **{{site.data.keyword.secrets-manager_short}}** service that you want to use.
+1. Identify this instance of the {{site.data.keyword.secrets-manager_short}} tool integration by specifying either its name or its [Cloud Resource Name (CRN)](/docs/account?topic=account-crn).
+1. To identify your instance of the {{site.data.keyword.secrets-manager_short}} by using its name:  
+
+   a. Specify a name for this instance of the {{site.data.keyword.secrets-manager_short}} tool integration to use in your toolchain. The name that you specify is used in the UI tools that select **{{site.data.keyword.secrets-manager_short}}** secrets. It is also used as part of the reference that resolves the secret values when the toolchain runs. This instance name is also displayed on the {{site.data.keyword.secrets-manager_short}} tool integration tile within the toolchain workspace.
+
+   b. Review the default values for **Region** and **Resource-Group** and update, if required.
+   
+   c. Select the instance of the **{{site.data.keyword.secrets-manager_short}}** service that you want to use.
+
+1. To identify your instance of the {{site.data.keyword.secrets-manager_short}} by using its CRN, specify a CRN for your instance of the {{site.data.keyword.secrets-manager_short}} tool integration to use in your toolchain.
+1. Click **Create Integration**.
+1. On the Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.secrets-manager_short}}**. 
 1. Click **Create Integration**.
 1. On the Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.secrets-manager_short}}**.
 
@@ -135,6 +144,8 @@ You must specify the `tool_type_id` property in the request body with the `secre
 | Parameter | Usage | Type | Terraform argument | Description |
 | --- | --- | --- | --- | --- |
 | instance-name | required, updatable | String | instance_name | The name of the {{site.data.keyword.secrets-manager_short}} service instance. |
+| instance-crn  | required, updatable | String | instance_crn | The CRN of the {{site.data.keyword.secrets-manager_short}} service instance. |
+| instance-id-type | required, updatable | Enum | instance_name | The type of service instance identifier. By default, this value is set to `instance-name`. |
 | name | required, updatable | String | name | The name of this tool integration. Secret references include this name to identify the secrets store where the secrets reside. All of the secrets store tools that are integrated into a toolchain must have a unique name to allow secret resolution to function properly. |
 | region | required, updatable | String | location | The {{site.data.keyword.cloud_notm}} location where the {{site.data.keyword.secrets-manager_short}} service instance is located. |
 | resource-group | required, updatable | String | resource_group_name | The name of the resource group where the {{site.data.keyword.secrets-manager_short}} service instance is located. |
