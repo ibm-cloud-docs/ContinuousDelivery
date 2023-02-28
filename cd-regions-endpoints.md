@@ -31,15 +31,14 @@ geographic area where your {{site.data.keyword.contdelivery_short}} requests are
 ## Service endpoints
 {: #service-endpoints}
 
-{{site.data.keyword.contdelivery_short}} offers two connectivity options for interacting with its service APIs.
+{{site.data.keyword.contdelivery_short}} offers two connectivity options for interacting with its service APIs: public endpoints and private endpoints.
 
 ### Public endpoints
 {: #public-endpoints}
 
 By default, you can connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network. Your data is encrypted in transit by using supported ciphers of the Transport Security Layer (TLS) 1.2 and 1.3 protocol. For more information about TLS and these ciphers, see [Securing your data in {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security).
 
-Review the following table to determine the public APISee the following table to determine the public API
-endpoints to use when you connect to the [{{site.data.keyword.contdelivery_short}} API](https://cloud.ibm.com/docs?tab=api-docs&category=devops&subCategory=ContinuousDelivery){: external}.
+Review the following table to determine the public API endpoints to use when you connect to the [{{site.data.keyword.contdelivery_short}} API](https://cloud.ibm.com/docs?tab=api-docs&category=devops&subCategory=ContinuousDelivery){: external}.
 
 | Region           | Public endpoints                |
 | ---------------- | ------------------------------- |
@@ -57,12 +56,12 @@ endpoints to use when you connect to the [{{site.data.keyword.contdelivery_short
 ### Private endpoints
 {: #private-endpoints}
 
-You can also enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. When you enable VRF for your account, you can connect to {{site.data.keyword.contdelivery_short}} in selected regions by using a private IP address that is accessible only by using the {{site.data.keyword.cloud_notm}} private network.
+You can also enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint) for your infrastructure account. When you enable VRF for your account, you can connect to {{site.data.keyword.contdelivery_short}} in selected regions by using a private IP address that is accessible only by using the {{site.data.keyword.cloud_notm}} private network.
 
 To learn more about VRF, see
-[Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/dl?topic=dl-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud){: external}.
+[Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/dl?topic=dl-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
 
-To learn how to configure Delivery Pipeline Private Workers to connect to {{site.data.keyword.contdelivery_short}} by using private endpoints, see [Configuring the Delivery Pipeline Private Worker to use private endpoints](/docs/key-protect?topic=ContinuousDelivery-install-private-workers#install_pw_agent_pse).
+To learn how to configure Delivery Pipeline Private Workers to connect to {{site.data.keyword.contdelivery_short}} by using private endpoints, see [Configuring the Delivery Pipeline Private Worker to use private endpoints](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers#install_pw_agent_pse).
 
 Review the following table to determine the private API endpoints to use when you connect to the [{{site.data.keyword.contdelivery_short}} API](https://cloud.ibm.com/docs?tab=api-docs&category=devops&subCategory=ContinuousDelivery){: external}.
 
