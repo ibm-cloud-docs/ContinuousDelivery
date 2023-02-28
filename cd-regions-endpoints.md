@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-02-28"
 
 keywords: Continuous Delivery endpoints, available regions, locations
 
@@ -28,60 +28,48 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 You can create {{site.data.keyword.contdelivery_short}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions, which represent the
 geographic area where your {{site.data.keyword.contdelivery_short}} requests are handled and processed. To learn more, see [{{site.data.keyword.contdelivery_short}} high availability and disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-ha-dr).
 
-## Connectivity options
-{: #connectivity-options}
+## Service endpoints
+{: #service-endpoints}
 
 {{site.data.keyword.contdelivery_short}} offers two connectivity options for interacting with its service APIs.
 
 ### Public endpoints
-{: #connectivity-options-public}
+{: #public-endpoints}
 
 By default, you can connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network. Your data is encrypted in transit by using supported ciphers of the Transport Security Layer (TLS) 1.2 and 1.3 protocol. For more information about TLS and these ciphers, see [Securing your data in {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security).
 
+Review the following table to determine the public APISee the following table to determine the public API
+endpoints to use when you connect to the [{{site.data.keyword.contdelivery_short}} API](https://cloud.ibm.com/docs?tab=api-docs&category=devops&subCategory=ContinuousDelivery){: external}.
+
+| Region           | Public endpoints                |
+| ---------------- | ------------------------------- |
+| Dallas           | `us-south.devops.cloud.ibm.com` |
+| Washington DC    | `us-east.devops.cloud.ibm.com`  |
+| London           | `eu-gb.devops.cloud.ibm.com`    |
+| Frankfurt        | `eu-de.devops.cloud.ibm.com`    |
+| Sydney           | `au-syd.devops.cloud.ibm.com`   |
+| Tokyo            | `jp-tok.devops.cloud.ibm.com`   |
+| Osaka            | `jp-osa.devops.cloud.ibm.com`   |
+| Toronto          | `ca-tor.devops.cloud.ibm.com`   |
+| S&atilde;o-Paulo | `br-sao.devops.cloud.ibm.com`   |
+{: caption="Table 1. Public endpoints for interacting with {{site.data.keyword.contdelivery_short}} APIs over IBM Cloud's public network" caption-side="top"}
+
 ### Private endpoints
-{: #connectivity-options-private}
+{: #private-endpoints}
 
-For added benefits, you can also enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external}
-for your infrastructure account.
-
-When you enable VRF for your account, you can connect to {{site.data.keyword.contdelivery_short}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network.
+You can also enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your infrastructure account. When you enable VRF for your account, you can connect to {{site.data.keyword.contdelivery_short}} in selected regions by using a private IP address that is accessible only by using the {{site.data.keyword.cloud_notm}} private network.
 
 To learn more about VRF, see
 [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/dl?topic=dl-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud){: external}.
 
-To learn how to connect to {{site.data.keyword.contdelivery_short}} by using a private endpoint, see [Using private endpoints](/docs/key-protect?topic=key-protect-private-endpoints).
+To learn how to configure Delivery Pipeline Private Workers to connect to {{site.data.keyword.contdelivery_short}} by using private endpoints, see [Configuring the Delivery Pipeline Private Worker to use private endpoints](/docs/key-protect?topic=ContinuousDelivery-install-private-workers#install_pw_agent_pse).
 
-## Service endpoints
-{: #service-endpoints}
+Review the following table to determine the private API endpoints to use when you connect to the [{{site.data.keyword.contdelivery_short}} API](https://cloud.ibm.com/docs?tab=api-docs&category=devops&subCategory=ContinuousDelivery){: external}.
 
-If you are managing your {{site.data.keyword.contdelivery_short}} resources programmatically, see the following table to determine the API
-endpoints to use when you connect to the [{{site.data.keyword.contdelivery_short}} API](/apidocs/key-protect){: external}.
-
-| Region           | Public endpoints             |
-| ---------------- | ---------------------------- |
-| Dallas           | `us-south.kms.cloud.ibm.com` |
-| Washington DC    | `us-east.kms.cloud.ibm.com`  |
-| London           | `eu-gb.kms.cloud.ibm.com`    |
-| Frankfurt        | `eu-de.kms.cloud.ibm.com`    |
-| Sydney           | `au-syd.kms.cloud.ibm.com`   |
-| Tokyo            | `jp-tok.kms.cloud.ibm.com`   |
-| Osaka            | `jp-osa.kms.cloud.ibm.com`   |
-| Toronto          | `ca-tor.kms.cloud.ibm.com`   |
-| S&atilde;o-Paulo | `br-sao.kms.cloud.ibm.com`   |
-{: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.contdelivery_short}} APIs over IBM Cloud's public network" caption-side="top"}
-
-
-| Region           | Private endpoints                            |
-| ---------------- | -------------------------------------------- |
-| Dallas           | `private.us-south.kms.cloud.ibm.com`         |
-| Washington DC    | `private.us-east.kms.cloud.ibm.com`          |
-| London           | `private.eu-gb.kms.cloud.ibm.com`            |
-| Frankfurt        | `private.eu-de.kms.cloud.ibm.com`            |
-| Sydney           | `private.au-syd.kms.cloud.ibm.com`           |
-| Tokyo            | `private.jp-tok.kms.cloud.ibm.com`           |
-| Osaka            | `private.jp-osa.kms.cloud.ibm.com`           |
-| Toronto          | `private.ca-tor.kms.cloud.ibm.com`           |
-| S&atilde;o-Paulo | `private.br-sao.kms.cloud.ibm.com`           |
-{: caption="Table 2. Lists private endpoints for interacting with {{site.data.keyword.contdelivery_short}} APIs over IBM Cloud's private network" caption-side="top"}
-
-For more information about authenticating with {{site.data.keyword.contdelivery_short}}, see [Accessing the API](/docs/key-protect?topic=key-protect-set-up-api).
+| Region           | Private endpoints                       |
+| ---------------- | --------------------------------------- |
+| Dallas           | `private.us-south.devops.cloud.ibm.com` |
+| Washington DC    | `private.us-east.devops.cloud.ibm.com`  |
+| London           | `private.eu-gb.devops.cloud.ibm.com`    |
+| Frankfurt        | `private.eu-de.devops.cloud.ibm.com`    |
+{: caption="Table 2. Private endpoints for interacting with {{site.data.keyword.contdelivery_short}} APIs over IBM Cloud's private network" caption-side="top"}
