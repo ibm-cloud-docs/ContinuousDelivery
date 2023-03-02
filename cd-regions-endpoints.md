@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-28"
+lastupdated: "2023-03-02"
 
 keywords: Continuous Delivery endpoints, available regions, locations
 
@@ -25,13 +25,13 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 
 ![Regions where the {{site.data.keyword.contdelivery_short}} service is available.](images/world-map.svg){: caption="Figure 1. Displays the regions where you can create and manage {{site.data.keyword.contdelivery_short}} resources." caption-side="bottom"}
  
-You can create {{site.data.keyword.contdelivery_short}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions, which represent the
+You can create {{site.data.keyword.contdelivery_short}} resources, including toolchains, in one of the supported {{site.data.keyword.cloud_notm}} regions, which represent the
 geographic area where your {{site.data.keyword.contdelivery_short}} requests are handled and processed. To learn more, see [{{site.data.keyword.contdelivery_short}} high availability and disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-ha-dr).
 
 ## Service endpoints
 {: #service-endpoints}
 
-{{site.data.keyword.contdelivery_short}} offers two connectivity options for interacting with its service APIs: public endpoints and private endpoints.
+{{site.data.keyword.contdelivery_short}} offers two connectivity options for interacting with its service APIs: public endpoints (available in all regions) and private endpoints (available in selected regions).
 
 ### Public endpoints
 {: #public-endpoints}
