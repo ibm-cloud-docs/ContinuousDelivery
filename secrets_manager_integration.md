@@ -118,7 +118,7 @@ You can add a {{site.data.keyword.secrets-manager_short}} tool integration to yo
 For more information about customizing toolchain templates, see [Create a template for a custom toolchain](https://www.ibm.com/cloud/architecture/tutorials/create-a-template-for-a-custom-toolchain){: external}.
 
 ## Identifying secrets by CRN
-{ #identify_secrets_by_crn}
+{: #identify_secrets_by_crn}
 
 When you configure the {{site.data.keyword.secrets-manager_short}} tool integration to identify secrets by CRN, your toolchain can access arbitrary secrets that are stored in the {{site.data.keyword.secrets-manager_short}}.
 
