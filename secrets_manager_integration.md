@@ -115,14 +115,10 @@ You can add a {{site.data.keyword.secrets-manager_short}} tool integration to yo
       instance-name: ffs-secrets
 ```
 
-For more information about customizing toolchain templates, see [Create a template for a custom toolchain](https://www.ibm.com/cloud/architecture/tutorials/create-a-template-for-a-custom-toolchain){: external}.
-
 ## Identifying secrets by CRN
 {: #identify_secrets_by_crn}
 
-When you configure the {{site.data.keyword.secrets-manager_short}} tool integration to identify secrets by CRN, your toolchain can access arbitrary secrets that are stored in the {{site.data.keyword.secrets-manager_short}}.
-
-For more information about arbitrary secrets in {{site.data.keyword.secrets-manager_short}}, see [Working with secrets of different types](/docs/secrets-manager?topic=secrets-manager-what-is-secret#secret-types).
+When you configure the {{site.data.keyword.secrets-manager_short}} tool integration to identify secrets by CRN, your toolchain can access arbitrary secrets that are stored in the {{site.data.keyword.secrets-manager_short}}. For more information about arbitrary secrets in {{site.data.keyword.secrets-manager_short}}, see [Working with secrets of different types](/docs/secrets-manager?topic=secrets-manager-what-is-secret#secret-types).
 
 Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets that are part of your toolchain:
 
