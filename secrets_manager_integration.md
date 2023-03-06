@@ -57,27 +57,6 @@ After your {{site.data.keyword.secrets-manager_short}} tool integration is confi
 
 You can use Arbitrary secrets to store any predefined secret value, or to store dynamically minted {{site.data.keyword.cloud_notm}} API keys by using the Secrets dialog box. You must create IAM credentials secrets directly within your {{site.data.keyword.secrets-manager_short}} service instance. After you create these secrets, you can select IAM credentials secrets to use them within your toolchain by using the Secrets dialog box on any secure field. The Secrets dialog box displays both the Arbitrary and the IAM credentials secret types, with the secret type appended to the secret name in brackets.
 
-#### Using IAM credentials secrets
-{: #iam_secrets}
-
-The IAM credentials secret type is fully integrated with IAM. {{site.data.keyword.secrets-manager_short}} auto-manages dynamic service IDs and API keys that are associated with an IAM credentials secret. {{site.data.keyword.contdelivery_short}} and {{site.data.keyword.secrets-manager_short}} service APIs engage to resolve authorized IAM Credentials secret references in {{site.data.keyword.contdelivery_short}} toolchains and pipeline workloads.
-
-When you create an IAM credentials secret in {{site.data.keyword.secrets-manager_short}}, make sure that you select the **Reuse IAM credentials until lease expires** checkbox. Also, specify a lease duration with a minimum of 12 hours when you use public worker agents to run your pipeline. If you use private worker agents, make sure that you set a minimum lease duration to the forced cancellation duration for a pipeline. It is recommended that you confirm these settings with your account administrator. By setting the reuse option and an appropriate lease duration, you can make sure that the dynamically managed IAM credentials service ID API key persists during your pipeline runs.
-{: important}
-
-![IAM credentials lease duration and reuse API key](images/secret-leaseduration.png){: caption="Figure 1. IAM credentials lease duration and reuse API key" caption-side="bottom"}
-
-By running the Rotate action on IAM credentials from the {{site.data.keyword.secrets-manager_short}} dashboard, you can maintain the compliance posture requirements for API Key rotations that are used by your {{site.data.keyword.contdelivery_short}} pipelines. {{site.data.keyword.secrets-manager_short}} works with IAM to generate a new API Key for an IAM credentials secret and manages the versioning of the secret.
-
-The IAM credentials secret type also helps to provide continuity of service during and after secret rotation:
-
-* New {{site.data.keyword.contdelivery_short}} pipeline workloads use the newly rotated API Key until its lease duration expires.
-* Existing {{site.data.keyword.contdelivery_short}} pipeline workloads that are running with the API Key that was issued before rotation can continue to run with the previous version until the lease duration of the previous version expires.
-
-![IAM credentials secret rotation](images/secret-iamcredentials-rotation.png){: caption="Figure 2. IAM credentials secret rotation" caption-side="bottom"}
-
-For more information about the IAM credentials secret type in {{site.data.keyword.secrets-manager_short}}, see [Creating IAM credentials](/docs/secrets-manager?topic=secrets-manager-iam-credentials).
-
 #### Using Arbitrary secrets that are stored in {{site.data.keyword.secrets-manager_short}}
 {: #arbitrary_secrets}
 
@@ -98,6 +77,27 @@ The following example applies an Arbitrary secret type that is stored in {{site.
    ![Literal Secret Value](images/secret-literal.png){: caption="Figure 4. Secret value" caption-side="bottom"}
 
    The format that the secret is displayed in indicates whether the value references a secret that is stored in a backend vault or a secret that is stored in your toolchain. By using references to secrets that are managed by secret providers such as  {{site.data.keyword.secrets-manager_short}}, your secret values are centralized and stored securely in a single location. This approach resolves secrets sprawl and proliferation, and means that you can update secrets without updating your toolchain. When you use secret references, the actual secret value is resolved when the toolchain runs by dynamically retrieving it from {{site.data.keyword.secrets-manager_short}}. This approach is useful when you must rotate the value of your toolchain secrets periodically.
+
+#### Using IAM credentials secrets
+{: #iam_secrets}
+
+The IAM credentials secret type is fully integrated with IAM. {{site.data.keyword.secrets-manager_short}} auto-manages dynamic service IDs and API keys that are associated with an IAM credentials secret. {{site.data.keyword.contdelivery_short}} and {{site.data.keyword.secrets-manager_short}} service APIs engage to resolve authorized IAM Credentials secret references in {{site.data.keyword.contdelivery_short}} toolchains and pipeline workloads.
+
+When you create an IAM credentials secret in {{site.data.keyword.secrets-manager_short}}, make sure that you select the **Reuse IAM credentials until lease expires** checkbox. Also, specify a lease duration with a minimum of 12 hours when you use public worker agents to run your pipeline. If you use private worker agents, make sure that you set a minimum lease duration to the forced cancellation duration for a pipeline. It is recommended that you confirm these settings with your account administrator. By setting the reuse option and an appropriate lease duration, you can make sure that the dynamically managed IAM credentials service ID API key persists during your pipeline runs.
+{: important}
+
+![IAM credentials lease duration and reuse API key](images/secret-leaseduration.png){: caption="Figure 1. IAM credentials lease duration and reuse API key" caption-side="bottom"}
+
+By running the Rotate action on IAM credentials from the {{site.data.keyword.secrets-manager_short}} dashboard, you can maintain the compliance posture requirements for API Key rotations that are used by your {{site.data.keyword.contdelivery_short}} pipelines. {{site.data.keyword.secrets-manager_short}} works with IAM to generate a new API Key for an IAM credentials secret and manages the versioning of the secret.
+
+The IAM credentials secret type also helps to provide continuity of service during and after secret rotation:
+
+* New {{site.data.keyword.contdelivery_short}} pipeline workloads use the newly rotated API Key until its lease duration expires.
+* Existing {{site.data.keyword.contdelivery_short}} pipeline workloads that are running with the API Key that was issued before rotation can continue to run with the previous version until the lease duration of the previous version expires.
+
+![IAM credentials secret rotation](images/secret-iamcredentials-rotation.png){: caption="Figure 2. IAM credentials secret rotation" caption-side="bottom"}
+
+For more information about the IAM credentials secret type in {{site.data.keyword.secrets-manager_short}}, see [Creating IAM credentials](/docs/secrets-manager?topic=secrets-manager-iam-credentials).   
 
 ### Adding a {{site.data.keyword.secrets-manager_short}} tool integration to your toolchain template
 {: #secretsmanager_add_toolchain_template}
