@@ -120,10 +120,10 @@ You can add a {{site.data.keyword.secrets-manager_short}} tool integration to yo
 
 When you configure the {{site.data.keyword.secrets-manager_short}} tool integration to identify secrets by CRN, your toolchain can access arbitrary secrets that are stored in the {{site.data.keyword.secrets-manager_short}}. For more information about arbitrary secrets in {{site.data.keyword.secrets-manager_short}}, see [Working with secrets of different types](/docs/secrets-manager?topic=secrets-manager-what-is-secret#secret-types).
 
-Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets that are part of your toolchain:
-
 Currently, you cannot configure a {{site.data.keyword.secrets-manager_short}} tool integration to identify secrets by CRN during toolchain creation. Instead, complete the configuration *after* you create the toolchain.
 {: important}
+
+Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets that are part of your toolchain:
 
 1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the {{site.data.keyword.contdelivery_short}} card, click **View toolchain**. Then, click **Overview**.  
 
@@ -133,7 +133,7 @@ Currently, you cannot configure a {{site.data.keyword.secrets-manager_short}} to
 
 1. Specify a name for this instance of the {{site.data.keyword.secrets-manager_short}} tool integration to use in your toolchain.
 1. Choose to identify this instance by the service instance CRN.
-1. Specify the CRN of the **{{site.data.keyword.secrets-manager_short}}** service instance where your secrets are stored. This service instance can exist in a different account if your toolchain is [authorized to access secrets](#authorizing-your-toolchain-to-access-secrets) in that account.
+1. Specify the CRN of the {{site.data.keyword.secrets-manager_short}} service instance where your secrets are stored. This service instance can exist in a different account if your toolchain is [authorized to access secrets](#secretsmanager_authorize_secrets) in that account.
 1. Click **Create Integration**.
 
 ### Applying secrets
@@ -141,11 +141,11 @@ Currently, you cannot configure a {{site.data.keyword.secrets-manager_short}} to
 
 After you configure the {{site.data.keyword.secrets-manager_short}} tool integration and [authorize your toolchain](#authorizing-your-toolchain-to-access-secrets) to access secrets in that account, you can use it to apply secrets anywhere that they are required by the toolchain. 
 
-The Secrets dialog does not support tool integrations that are configured for **Service instance CRN**. To use an arbitrary secret in your toolchain, you must copy the CRN of the secret from the **{{site.data.keyword.secrets-manager_short}}** service instance and paste it into the edit box of secret field. The secret must reside in the **{{site.data.keyword.secrets-manager_short}}** service instance that was configured when you added the **{{site.data.keyword.secrets-manager_short}}** tool integration to your toolchain.
+The Secrets dialog does not support tool integrations that are configured for the Service instance CRN. To use an arbitrary secret in your toolchain, you must copy the CRN of the secret from the {{site.data.keyword.secrets-manager_short}} service instance and paste it into the edit box of secret field. The secret must reside in the {{site.data.keyword.secrets-manager_short}} service instance that was configured when you added the {{site.data.keyword.secrets-manager_short}} tool integration to your toolchain.
 
-When fields that contain a CRN secret are displayed, the {{site.data.keyword.secrets-manager_short}} tool integration attempts to retrieve the name of the secret. To open the **{{site.data.keyword.secrets-manager_short}}** service instance where the secret resides, click the secret. In the following scenarios, the secret name cannot be retrieved and a warning icon is displayed:
+When fields that contain a CRN secret are displayed, the {{site.data.keyword.secrets-manager_short}} tool integration attempts to retrieve the name of the secret. To open the {{site.data.keyword.secrets-manager_short}} service instance where the secret resides, click the secret. In the following scenarios, the secret name cannot be retrieved and a warning icon is displayed:
 
-* The toolchain does not contain a correctly configured **{{site.data.keyword.secrets-manager_short}}** integration.
+* The toolchain does not contain a correctly configured {{site.data.keyword.secrets-manager_short}} integration.
 * The toolchain authorization is incorrect.
 * The field does not contain a valid CRN.
 
