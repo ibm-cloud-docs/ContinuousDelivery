@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-14"
+lastupdated: "2023-03-06"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -437,23 +437,24 @@ The image URL for the pipeline private worker is `icr.io/continuous-delivery/pip
 
 | Pipeline private worker image version | {{site.data.keyword.registrylong}} version | Known vulnerabilities
 |:-----------------|:-----------------|:-----------------|
-| 0.14.5 | `icr.io/continuous-delivery/pipeline/pipeline-private-worker:0.14.5` | - |
+| 0.15.0 | `icr.io/continuous-delivery/pipeline/pipeline-private-worker:0.15.0` | - |
 {: caption="Table 4. Private Worker images" caption-side="top"}
 
 The private worker installation also pulls the following supporting open source images to the cluster:
 
 ```text
 icr.io/continuous-delivery/pipeline/tekton/controller
-icr.io/continuous-delivery/pipeline/tekton/kubeconfigwriter
 icr.io/continuous-delivery/pipeline/tekton/git-init
 icr.io/continuous-delivery/pipeline/tekton/entrypoint
 icr.io/continuous-delivery/pipeline/tekton/nop
+icr.io/continuous-delivery/pipeline/tekton/sidecarlogresults
 icr.io/continuous-delivery/pipeline/tekton/imagedigestexporter
-icr.io/continuous-delivery/pipeline/tekton/pullrequest-init
+icr.io/continuous-delivery/pipeline/tekton/workingdirinit
 icr.io/continuous-delivery/pipeline/tekton/cloud-sdk
+icr.io/continuous-delivery/pipeline/tekton/busybox
+icr.io/continuous-delivery/pipeline/tekton/powershell
+icr.io/continuous-delivery/pipeline/tekton/resolvers
 icr.io/continuous-delivery/pipeline/tekton/webhook
-icr.io/continuous-delivery/pipeline/tekton/base
-icr.io/continuous-delivery/pipeline/external-secrets/external-secrets
 ```
 
 The private worker agent also uses these internal images:
