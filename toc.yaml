@@ -59,7 +59,6 @@ toc:
           label: High availability and disaster recovery
           topics: 
           - ha-dr.md
-          - cd-ha-dr-toolchains.md
           - cd-ha-dr-alttoolchains.md
           - cd-ha-dr-copytoolchains.md
           - cd-ha-dr-mirrorgit.md
