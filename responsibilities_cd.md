@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-03-07"
 
 keywords: customer responsibilities, IBM responsibilities, terms and conditions, disaster recovery, toolchain backup
 
@@ -84,3 +84,5 @@ IBM is responsible for maintaining backups and high availability of the {{site.d
 |Back up toolchain data.| Maintain regular backups of toolchain and pipeline definitions, Git repos, and any other toolchain integration data that is stored and managed by IBM.  | To support global failover, create and maintain alternative toolchain and pipeline definitions, including tool integration data and your Git repos, in another IBM region. |
 |Restore toolchain data.| Restore all toolchain and Git repos to the original {{site.data.keyword.cloud_notm}} region, when that region is available.    | To support global failover, manually switch to using the alternative toolchains and repos in another region. |
 {: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}
+
+To learn more about disaster recovery, see [Continuous Delivery high availability and disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-ha-dr).
