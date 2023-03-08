@@ -171,7 +171,7 @@ To view your authorizations in {{site.data.keyword.cloud_notm}}, complete the fo
    {: important}
 
 ## Configuring {{site.data.keyword.secrets-manager_short}} by using the API
-{: #config-parameters}
+{: #secrets-manager-config-parameters}
 
 The {{site.data.keyword.secrets-manager_short}} tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
 

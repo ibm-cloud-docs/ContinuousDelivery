@@ -84,7 +84,7 @@ Before you start this tutorial, make sure that you have the following resources 
 
 
 ### Related content
-{: #related-content}
+{: #kubernetes-related-content}
 {: step}
 
 * [Getting started with {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started)
@@ -129,7 +129,7 @@ The toolchain creates a Continuous Deployment Pipeline to deploy the application
 
 
 ### Configure the application source code repo
-{: #tool-integration-application}
+{: #kubernetes-tool-integration-application}
 
 In the Application step, that recommended options for the application source code repo are displayed by default. To view all of the available options for the underlying Git integration, click **Advanced Options**. By default, the toolchain uses the default sample that clones the sample app as an IBM-hosted {{site.data.keyword.gitrepos}} repo.
 
@@ -143,7 +143,7 @@ By default, the application repo template is cloned to your {{site.data.keyword.
 {: tip}
 
 ### Configure the inventory repo
-{: #tool-integration-inventory}
+{: #kubernetes-tool-integration-inventory}
 
 The inventory repo records the details of the artifacts that are built by the continuous integration toolchains. You can either create a new inventory repo that is a clone of the [inventory repo template](https://us-south.git.cloud.ibm.com/open-toolchain/compliance-inventory){: external} or use an existing inventory repo that you share between toolchains.
 
@@ -153,7 +153,7 @@ By default, the inventory repo template is cloned to your {{site.data.keyword.gi
 {: tip}
 
 ### Securely store secrets
-{: #tool-integration-secrets}
+{: #kubernetes-tool-integration-secrets}
 {: step}
 
 Several tools within this toolchain require secrets, such as an {{site.data.keyword.cloud_notm}} API key. You must securely store all secrets in a secrets vault and reference them as required by the toolchain.
@@ -174,7 +174,7 @@ IBM Secrets Manager securely stores and applies secrets such as API keys, Image 
 For more information about managing your secrets in IBM Key Protect or HashiCorp, see [IBM Key Protect](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-key-protect-ci) or [HashiCorp](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-vault-ci).
 
 ## Configure the deployment target
-{: #deployment-target}
+{: #kubernetes-deployment-target}
 {: step}
 
 Configure the target Kubernetes cluster to deploy the app to. After the app passes the build, test, and scan phase, the pipeline deploys the built app image to the target Kubernetes cluster. This deployment is now ready for acceptance testing or integration testing.
@@ -206,7 +206,7 @@ If you selected the Canary deployment strategy, you must specify extra deploymen
 ![Kubernetes secure app deployment target details for Canary](images/ds_kub_setup_dep_target_canary.png){: caption="Figure 8. Kubernetes secure app Canary deployment target details" caption-side="bottom"}
 
 ## Add optional tool integrations
-{: #optional tools}
+{: #optional-tools}
 {: step}
 
 You can add the {{site.data.keyword.DRA_full}} tool integration to your toolchain without any additional configuration. 
@@ -217,7 +217,7 @@ Click **Continue**.
 
 
 ## Complete the toolchain setup
-{: #toolchain-summary}
+{: #kubernetes-toolchain-summary}
 {: step}
 
 On the Summary page, click **Create**. Several steps run automatically to set up your toolchain.
@@ -229,13 +229,13 @@ You can configure the individual toolchain integrations after the pipeline is cr
 
 
 ## Explore your new toolchain
-{: #cd-explore-toolchain}
+{: #cd-kubernetes-explore-toolchain}
 {: step}
 
 After you create your toolchain, it shows each of the tool integrations that are part of the toolchain in a diagram.
 
 ### Explore the pipelines
-{: #cd-pipelines}
+{: #cd-kubernetes-pipelines}
 
 You can explore the pipelines to understand the toolchain flow and the different operations that run within each pipeline. The toolchain that you just created contains three pipelines:
 
@@ -283,7 +283,7 @@ To evaluate if you have any failures in your pipeline run, check the final step 
 {: tip}
 
 ### Explore the continuous delivery pipeline
-{: #explore-cd-pipeline}
+{: #explore-cd-kubernetes-pipeline}
 
 The pull request and continuous integration pipelines are common across all of the deployment strategies. The continuous delivery pipeline design and implementation changes are based on the deployment strategy that you previously selected in this tutorial.
 
@@ -311,7 +311,7 @@ After the continuous delivery pipeline run succeeds, you can locate the app URL 
 
 
 ## Next steps
-{: #next-steps}
+{: #kubernetes-next-steps}
 
 If you want to remove the sample app that is running on Kubernetes, you must clean the Kubernetes cluster: 
 
@@ -329,7 +329,7 @@ If you want to remove the sample app that is running on Kubernetes, you must cle
 
 
 ## Looking for help?
-{: #cd-tutorial-help}
+{: #cd-kubernetes-tutorial-help}
 
 Get help from the {{site.data.keyword.contdelivery_full}} development teams by joining us on [Slack](https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/){: external}.
 

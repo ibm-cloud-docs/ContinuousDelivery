@@ -77,7 +77,7 @@ You can export the definition for an entire pipeline by appending `/yaml` to the
 
 
 ## Can I manage delivery pipelines by using Terraform?
-{: #terraform}
+{: #pipeline_terraform}
 {: faq}
 {: support}
 
@@ -89,7 +89,7 @@ You cannot use Terraform to manage Classic pipelines. You can manage Classic pip
 
 
 ## Can I manage delivery pipelines by using an API?
-{: #api}
+{: #manage_pipelines_api}
 {: faq}
 {: support}
 

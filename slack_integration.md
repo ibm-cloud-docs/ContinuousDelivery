@@ -47,7 +47,7 @@ If you use an API key for your Slack channel to receive notifications about your
 1. On your Toolchain's Overview page, on the **Third-Party tools** card, click **Slack**. You can view all of the activity for your toolchain in the configured Slack channel.
 
 ## Configuring Slack by using the API
-{: #config-parameters}
+{: #slack-config-parameters}
 
 The Slack tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
 

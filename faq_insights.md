@@ -76,7 +76,7 @@ You are not billed for {{site.data.keyword.DRA_short}} as an individual service.
 
 
 ## Can I manage {{site.data.keyword.DRA_short}} by using Terraform or APIs?
-{: #terraform_api}
+{: #insights_terraform_api}
 {: faq}
 {: support}
 

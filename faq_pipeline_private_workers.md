@@ -153,7 +153,7 @@ You can provide pipeline users with access to the base images (`icr.io/continuou
 {: tip}
 
 ## Can I manage private workers by using Terraform or APIs?
-{: #terraform_api}
+{: #pw_terraform_api}
 {: faq}
 {: support}
 

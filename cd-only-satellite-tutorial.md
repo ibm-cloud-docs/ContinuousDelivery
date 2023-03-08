@@ -15,17 +15,7 @@ completion-time: 30m
 
 ---
 
-{:step: data-tutorial-type='step'}
-{:shortdesc: .shortdesc}
-{:table: .aria-labeledby="caption"}
-{:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:download: .download}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Deploy Kubernetes resources to multiple clusters by using {{site.data.keyword.satellitelong_notm}} Config
@@ -71,7 +61,7 @@ Before you start this tutorial, make sure that you have the following resources 
    Alternatively, you can create a namespace on the [Container Registry](https://cloud.ibm.com/registry/namespaces) page. For more information about creating a namespace in this location, see [IBM Cloud Container Registry](https://cloud.ibm.com/docs/Registry?topic=Registry-getting-started#getting-started) service.
    
 ### Related content
-{: #related-content}
+{: #satellite-only-related-content}
 {: step}
 
 * [Getting started with {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started)
@@ -253,7 +243,7 @@ After your toolchain is set up and the {{site.data.keyword.deliverypipeline}} su
 * Verify that the app is running.
 
 ## Looking for help?
-{: #cd-tutorial-help}
+{: #cd-satelliteonly-tutorial-help}
 
 Get help from the {{site.data.keyword.contdelivery_full}} development teams by joining us on [Slack](https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/){: external}.
 

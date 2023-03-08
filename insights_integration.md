@@ -34,7 +34,7 @@ Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your 
 1. On the Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}** and complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline.
 
 ## Configuring {{site.data.keyword.DRA_short}} by using the API
-{: #config-parameters}
+{: #insights-config-parameters}
 
 The {{site.data.keyword.DRA_short}} tool integration is preconfigured and does not require any configuration parameters when you use the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} to [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
 

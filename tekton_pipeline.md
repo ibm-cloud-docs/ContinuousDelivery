@@ -498,7 +498,7 @@ The retention period for PipelineRuns and their logs depends on the plan that is
 {: important}
 
 ### Viewing a {{site.data.keyword.deliverypipeline}} with the API
-{: #viewing-pipeline-terraform}
+{: #viewing-pipeline-api}
 {: api}
 
 1. [Obtain an IAM bearer token](https://{DomainName}/apidocs/tekton-pipeline#authentication){: external}. Alternatively, if you are using an SDK, [obtain an IAM API key](https://{DomainName}/iam/apikeys){: external} and set the client options by using environment variables.

@@ -38,7 +38,7 @@ Configure HashiCorp Vault to securely manage secrets such as API keys and secret
 1. On the Toolchain's Overview page, on the **Third-Party tools** card, click **HashiCorp Vault** to use the HashiCorp Vault Secrets Picker and Pusher components to select secrets for use within your toolchain or delivery pipeline.  
 
 ## Configuring HashiCorp Vault by using the API
-{: #config-parameters}
+{: #hashicorp-config-parameters}
 
 The HashiCorp Vault tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
 

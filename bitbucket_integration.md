@@ -66,7 +66,7 @@ If you don't have owner or master privileges for the repo that you are linking t
 {: tip}
 
 ## Configuring Bitbucket by using the API
-{: #config-parameters}
+{: #bitbucket-config-parameters}
 
 The Bitbucket tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
 

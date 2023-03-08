@@ -15,17 +15,7 @@ completion-time: 30m
 
 ---
 
-{:step: data-tutorial-type='step'}
-{:shortdesc: .shortdesc}
-{:table: .aria-labeledby="caption"}
-{:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:download: .download}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Develop and deploy an app by using {{site.data.keyword.satellitelong_notm}}
@@ -280,7 +270,7 @@ A {{site.data.keyword.gitrepos}} trigger is set up to trigger an automatic conti
 
 
 ## Next steps
-{: #next-steps}
+{: #satellite-next-steps}
 
 If you want to remove the sample app that is running on Kubernetes, you must clean the Kubernetes cluster: 
 
@@ -298,7 +288,7 @@ If you want to remove the sample app that is running on Kubernetes, you must cle
 
 
 ## Looking for help?
-{: #cd-tutorial-help}
+{: #cd-satellite-tutorial-help}
 
 Get help from the {{site.data.keyword.contdelivery_full}} development teams by joining us on [Slack](https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/){: external}.
 

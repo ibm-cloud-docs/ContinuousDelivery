@@ -110,7 +110,7 @@ You can maintain an activity log related to authorized users. For more informati
 
 
 ## Can I manage {{site.data.keyword.contdelivery_short}} service instances by using Terraform?
-{: #terraform}
+{: #manage_cd_terraform}
 {: faq}
 {: support}
 
@@ -120,7 +120,7 @@ You cannot use Terraform to manage the list of authorized users for a {{site.dat
 
 
 ## Can I manage {{site.data.keyword.contdelivery_short}} service instances by using an API?
-{: #api}
+{: #manage_cd_api}
 {: faq}
 {: support}
 
@@ -130,7 +130,7 @@ You cannot use APIs to manage the list of authorized users of a {{site.data.keyw
 
 
 ## Can I use the console, APIs, or CLI to modify resources that are managed by Terraform?
-{: #resource_drift}
+{: #cd_resource_drift}
 {: faq}
 {: support}
 

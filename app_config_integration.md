@@ -64,7 +64,7 @@ After you configure your {{site.data.keyword.appconfig_short}} tool integration,
 1. Click **OK** to apply an {{site.data.keyword.appconfig_short}} reference to the field that is associated with it.
 
 ## Authorizing your toolchain to access feature flags and properties
-{: #authorize_secrets}
+{: #appconfig_authorize_secrets}
 
 References to feature flags and properties that are stored in an {{site.data.keyword.appconfig_short}} service instance are dynamically resolved when the toolchain runs. To access the required feature flags and properties, you must authorize your toolchain to access the {{site.data.keyword.appconfig_short}} instance. If you create a toolchain that has a valid {{site.data.keyword.appconfig_short}} tool integration, or add this tool integration to an existing toolchain, a request is automatically made to create the authorization.
 
@@ -79,7 +79,7 @@ You can also access your authorizations on the [Manage authorizations](https://c
 You can also create the authorization manually, if required. To successfully resolve {{site.data.keyword.appconfig_short}} references, your toolchain instance must have both `Viewer` and `Reader` access to the correct {{site.data.keyword.appconfig_short}} service instance.
 
 ## Configuring {{site.data.keyword.appconfig_short}} by using the API
-{: #config-parameters}
+{: #app-config-parameters}
 
 The {{site.data.keyword.appconfig_short}} tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
 

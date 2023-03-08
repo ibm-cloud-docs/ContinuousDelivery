@@ -76,7 +76,7 @@ Toolchains in a resource group must be accompanied by an instance of the {{site.
 
 
 ## How do I find my toolchain ID?
-{: #find-toolchain-ID}
+{: #find-toolchain-id}
 {: faq}
 {: support}
 
@@ -84,7 +84,7 @@ You can find your toolchain ID in the URL of your selected toolchain tool. For m
 
 
 ## Can I manage toolchains by using Terraform?
-{: #terraform}
+{: #manage_toolchains_terraform}
 {: faq}
 {: support}
 
@@ -92,7 +92,7 @@ You can use Terraform to create, read, update, and delete toolchains and tool in
 
 
 ## Can I manage toolchains by using an API?
-{: #api}
+{: #manage_toolchains_api}
 {: faq}
 {: support}
 
@@ -100,7 +100,7 @@ You can use HTTP APIs or selected programming language SDKs to create, read, upd
 
 
 ## Can I use the console, APIs, or CLI to modify resources that are managed by Terraform?
-{: #resource_drift}
+{: #toolchains_resource_drift}
 {: faq}
 {: support}
 

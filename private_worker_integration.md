@@ -33,7 +33,7 @@ Configure the {{site.data.keyword.deliverypipeline}} Private Worker tool integra
 1. From your toolchain, on the **Delivery pipelines** card, click the **{{site.data.keyword.deliverypipeline}} Private Worker** to view a list of all of the workers that are registered by using an API key that is associated with this Service ID.
 
 ## Configuring {{site.data.keyword.deliverypipeline}} Private Worker by using the API
-{: #config-parameters}
+{: #private-worker-config-parameters}
 
 The {{site.data.keyword.deliverypipeline}} Private Worker tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations. 
 

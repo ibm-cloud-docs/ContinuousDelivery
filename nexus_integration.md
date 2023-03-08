@@ -122,7 +122,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
 1. Click **SAVE**. Whenever your pipeline runs, this build job uses the configuration information from the Nexus tool integration to connect to your Maven repo.
 
 ## Configuring Nexus by using the API
-{: #config-parameters}
+{: #nexus-config-parameters}
 
 The Nexus tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
 

@@ -51,7 +51,7 @@ Configure {{site.data.keyword.compliance_short}} to embed security checks into y
 1. On your Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.compliance_short}}**.
  
 ## Configuring {{site.data.keyword.compliance_short}} by using the API
-{: #config-parameters}
+{: #scc-config-parameters}
 
 The {{site.data.keyword.compliance_short}} tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
 

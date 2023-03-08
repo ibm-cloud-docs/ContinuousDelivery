@@ -71,7 +71,7 @@ After the toolchain is created, a notification appears that provides a link to a
 Check out the available [toolchain templates and tutorials](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_about).
 
 ### Terraform resources and data sources, SDKs, and HTTP APIs
-{: #terraform}
+{: #terraform_resources}
 
 You can use Terraform to create and manage toolchains, tool integrations, and Tekton delivery pipelines *as code*. For more information about using Terraform with {{site.data.keyword.contdelivery_short}}, see [Setting up Terraform for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup) and try the Terraform toolchain template to [Develop a Kubernetes app with Helm toolchain](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cd-toolchain-simple-helm){: external}.
 

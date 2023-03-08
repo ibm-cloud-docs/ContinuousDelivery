@@ -81,7 +81,7 @@ In certain scenarios, you can add a {{site.data.keyword.keymanagementserviceshor
 {: tip}
 
 ## Authorizing your toolchain to access secrets
-{: #authorize_secrets}
+{: #key_protect_authorize_secrets}
 
 References to secrets that are stored in {{site.data.keyword.keymanagementserviceshort}} are dynamically resolved when the toolchain runs. To access the required secrets, you must authorize your toolchain to access the {{site.data.keyword.keymanagementserviceshort}} instance. If you create a toolchain that has a valid {{site.data.keyword.keymanagementserviceshort}} tool integration, or add this tool integration to an existing toolchain, a request is automatically made to create the necessary authorization.
 
@@ -98,7 +98,7 @@ You can also access your authorizations on the [Manage authorizations](https://c
 You can create the authorization manually, if required. To successfully resolve the secret references, your toolchain instance must have both `Viewer` and `ReaderPlus` access to the correct {{site.data.keyword.keymanagementserviceshort}} service instance.
 
 ## Configuring {{site.data.keyword.keymanagementserviceshort}} by using the API
-{: #config-parameters}
+{: #keyprotect-config-parameters}
 
 The {{site.data.keyword.keymanagementserviceshort}} tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
 

@@ -15,16 +15,7 @@ completion-time: 30m
 
 ---
 
-{:shortdesc: .shortdesc}
-{:table: .aria-labeledby="caption"}
-{:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}
-{:tip: .tip}
-{:important: .important}
-{:download: .download}
-{:external: target="_blank" .external}
-{:step: data-tutorial-type='step'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Develop and deploy an app on Virtual Private Cloud by using deployment strategies
 {: #tutorial-cd-vpc}
@@ -82,7 +73,7 @@ Before you start this tutorial, make sure that you have the following resources 
 * Optional. A set of secrets that are stored in a secrets management vault and managed centrally from a single location. For more information about selecting a secrets management and data protection offering, see [Managing {{site.data.keyword.cloud_notm}} secrets](/docs/secrets-manager?topic=secrets-manager-manage-secrets-ibm-cloud). If you don't already have an instance of the secrets management vault provider of your choice, create one.
 
 ### Related content
-{: #related-content}
+{: #vm-related-content}
 {: step}
 
 * [Getting started with {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started)
@@ -105,7 +96,7 @@ Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the menu
 
 
 ### Configure the toolchain name and region
-{: #kubernetes-toolchain-name-region}
+{: #vm-toolchain-name-region}
 
 Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.cloud_notm}}. Make sure that the toolchain's name is unique within your toolchains for the same region and resource group in {{site.data.keyword.cloud_notm}}.
 
@@ -126,7 +117,7 @@ The toolchain creates a Continuous Deployment Pipeline to deploy the application
 1. Click **Continue**.
 
 ### Configure the application source code repo
-{: #tool-integration-application}
+{: #vm-tool-integration-application}
 
 In the Application step, the recommended options for the application source code repo are displayed by default. To view all of the available options for the underlying Git integration, click **Advanced Options**. By default, the toolchain uses the default sample that clones the sample app as an IBM-hosted {{site.data.keyword.gitrepos}} repo.
 
@@ -140,7 +131,7 @@ By default, the application repo template is cloned to your {{site.data.keyword.
 {: tip}
 
 ### Configure the inventory repo
-{: #tool-integration-inventory}
+{: #vm-tool-integration-inventory}
 
 The inventory repo records the details of the artifacts that are built by the continuous integration toolchains. You can either create a new inventory repo that is a clone of the [inventory repo template](https://us-south.git.cloud.ibm.com/open-toolchain/compliance-inventory){: external} or use an existing inventory repo that you share between toolchains.
 
@@ -150,7 +141,7 @@ By default, the inventory repo template is cloned to your {{site.data.keyword.gi
 {: tip}
 
 ### Securely store secrets
-{: #tool-integration-secrets}
+{: #vm-tool-integration-secrets}
 {: step}
 
 Several tools within this toolchain require secrets, such as an {{site.data.keyword.cloud_notm}} API key. You must securely store all secrets in a secrets vault and reference them as required by the toolchain.
@@ -171,7 +162,7 @@ IBM Secrets Manager securely stores and applies secrets such as API keys, Image 
 For more information about managing your secrets in IBM Key Protect or HashiCorp, see [IBM Key Protect](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-key-protect-ci) or [HashiCorp](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-vault-ci).
 
 ## Configure the deployment target
-{: #deployment-target}
+{: #vm-deployment-target}
 {: step}
 
 Configure the deployment target for the toolchain by specifying details for the VPC, Bastion Host, Load Balancer, and Artifact Store. This tutorial uses the Blue-Green deployment strategy.
@@ -243,7 +234,7 @@ You can add the {{site.data.keyword.DRA_full}} tool integration to your toolchai
 Click **Continue**.
 
 ## Complete the toolchain setup
-{: #toolchain-summary}
+{: #vm-toolchain-summary}
 {: step}
 
 On the Summary page, click **Create**. Several steps run automatically to set up your toolchain.
@@ -255,13 +246,13 @@ You can configure the individual toolchain integrations after the pipeline is cr
 
 
 ## Explore your new toolchain
-{: #cd-explore-toolchain}
+{: #cd-vm-explore-toolchain}
 {: step}
 
 After you create your toolchain, it shows each of the tool integrations that are part of the toolchain in a diagram.
 
 ### Explore the pipelines
-{: #cd-pipelines}
+{: #cd-vm-pipelines}
 
 You can explore the pipelines to understand the toolchain flow and the different operations that run within each pipeline. The toolchain that you just created contains three pipelines:
 
@@ -296,7 +287,7 @@ To evaluate if you have any failures in your pipeline run, check the final step 
 {: tip}
 
 ### Explore the continuous delivery pipeline
-{: #explore-cd-pipeline}
+{: #explore-cd-vm-pipeline}
 
 The pull request and continuous integration pipelines are common across all of the deployment strategies. The continuous delivery pipeline design and implementation changes are based on the deployment strategy that you previously selected in this tutorial.
 
@@ -347,7 +338,7 @@ You can run the switch trigger multiple times to alternate between the previous 
 
 
 ## Looking for help?
-{: #cd-tutorial-help}
+{: #cd-vm-tutorial-help}
 
 Get help from the {{site.data.keyword.contdelivery_full}} development teams by joining us on [Slack](https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/){: external}.
 

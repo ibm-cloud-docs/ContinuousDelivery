@@ -20,7 +20,7 @@ Get answers to frequently asked questions about using GitHub, GitLab, and {{site
 
 
 ## Can I manage GitHub, GitLab, and {{site.data.keyword.gitrepos}} by using Terraform?
-{: #terraform}
+{: #git_terraform}
 {: faq}
 {: support}
 
@@ -30,7 +30,7 @@ You might be able to use Terraform to work directly with some GitHub and GitLab 
 {: tip}
 
 ## Can I manage GitHub, GitLab, and {{site.data.keyword.gitrepos}} by using an API?
-{: #api}
+{: #manage_git_api}
 {: faq}
 {: support}
 

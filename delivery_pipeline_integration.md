@@ -86,7 +86,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
 1. Click **SAVE**. Whenever your pipeline runs, your Sauce Labs tests run.
 
 ## Configuring {{site.data.keyword.deliverypipeline}} by using the API
-{: #config-parameters}
+{: #pipeline-config-parameters}
 
 The {{site.data.keyword.deliverypipeline}} tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
 

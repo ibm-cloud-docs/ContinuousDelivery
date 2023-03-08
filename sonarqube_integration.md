@@ -102,7 +102,7 @@ Make sure that you add the correct login credentials and host URL to the configu
 You can modify your `.pipeline-config.yaml` file to add your own custom script to the `static-scan` stage to use your own static scan implementation.
 
 ## Configuring SonarQube by using the API
-{: #config-parameters}
+{: #sonarqube-config-parameters}
 
 The SonarQube tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
 
