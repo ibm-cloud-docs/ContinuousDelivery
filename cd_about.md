@@ -43,7 +43,7 @@ The predefined DevOps toolchain templates are recommended examples that solve re
 {: caption="Table 1. Toolchain templates" caption-side="top"}
 
 ## Toolchain Terraform
-{: #manage_toolchains_terraform}
+{: #code_toolchains_terraform}
 
 You can use Terraform to define, create, and manage toolchains by using an *as code* approach.
 

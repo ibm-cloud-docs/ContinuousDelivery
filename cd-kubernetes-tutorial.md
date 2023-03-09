@@ -206,7 +206,7 @@ If you selected the Canary deployment strategy, you must specify extra deploymen
 ![Kubernetes secure app deployment target details for Canary](images/ds_kub_setup_dep_target_canary.png){: caption="Figure 8. Kubernetes secure app Canary deployment target details" caption-side="bottom"}
 
 ## Add optional tool integrations
-{: #optional-tools}
+{: #kubernetes-optional-tools}
 {: step}
 
 You can add the {{site.data.keyword.DRA_full}} tool integration to your toolchain without any additional configuration. 

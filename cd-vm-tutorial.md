@@ -224,7 +224,7 @@ Alternatively, you can use Artifactory if you have an Artifactory instance of yo
 {: tip}
 
 ## Add optional tool integrations
-{: #optional-tools}
+{: #vm-optional-tools}
 {: step}
 
 You can add the {{site.data.keyword.DRA_full}} tool integration to your toolchain without any additional configuration. 
