@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2015, 2023
-lastupdated: "2023-01-26"
+lastupdated: "2023-03-13"
 
 keywords: IBM Cloud DevOps, enterprise application Developer, IBM Cloud Garage Method, DevOps toolchain, DevSecOps
 
@@ -22,7 +22,7 @@ Delivering software and services at the speed the market demands requires teams 
 
 The [IBM Cloud Garage Method](https://www.ibm.com/garage/method){: external} describes architectures, practices, and DevOps toolchains to allow enterprises to innovate at scale. Use the {{site.data.keyword.cloud_notm}} Garage Method to help you to transform your culture and use the tools effectively and fast.
 
-An enterprise application Developer can start building and deploying cloud-native applications in minutes. They can use a full set of services to build cognitive, IoT, blockchain, mobile, and data-intensive applications. With the {{site.data.keyword.cloud_notm}} App Service, an individual Developer can create a project, pick an application starter kit, and deploy a production-ready application to {{site.data.keyword.cloud_notm}}. The platform's code generation technology creates a starter application in the Developer's preferred language and framework, which is tailored to their needs and use case. Any services that are required in support of the use case, such as Watson Conversation, are provisioned automatically. Developers can debug and test on their local workstation or in the cloud, and use a DevOps toolchain to collaborate with others and automate the delivery process.
+An enterprise application Developer can start building and deploying cloud-native applications in minutes. They can use a full set of services to build cognitive, IoT, blockchain, mobile, and data-intensive applications. With the {{site.data.keyword.cloud_notm}} App Service, an individual Developer can create a project and deploy a production-ready application to {{site.data.keyword.cloud_notm}}. The platform's code generation technology creates a starter application in the Developer's preferred language and framework, which is tailored to their needs and use case. Any services that are required in support of the use case, such as Watson Conversation, are provisioned automatically. Developers can debug and test on their local workstation or in the cloud, and use a DevOps toolchain to collaborate with others and automate the delivery process.
 
 As team members join a project, they need an integrated set of tools that span development, deployment, and production operations. IBM's Open Toolchain architecture enables a team to rapidly provision best-in-class DevSecOps tools from IBM, open source, and others. Integrations between these tools are configured automatically. Toolchains are a first class concept on the platform, so Developers can quickly organize everything that they need in one place, and evolve the toolchain over time. IBM provides [toolchain templates](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_about) and [Terraform resources and examples](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup) that support Garage Method best practices, which you can customize to promote proven toolchain patterns across your enterprise. IBM also provides [HTTP APIs and programming language SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} for you or for applications that you write to assemble and work with toolchains at a fine grained level.
 
