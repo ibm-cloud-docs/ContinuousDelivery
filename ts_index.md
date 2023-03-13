@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-17"
+  years: 2015, 2023
+lastupdated: "2023-03-13"
 
 keywords: error message, Lite plan, toolchains, IBM Cloud
 
@@ -71,9 +71,7 @@ The [open-toolchain/commons](https://github.com/open-toolchain/commons){: extern
 {: faq}
 
 You can choose any of the following options to deploy your own code to {{site.data.keyword.contdelivery_short}}:
-
-
-* Go to the [Create App](https://cloud.ibm.com/developer/appservice/create-app?navMode=dashboard){: external} page, create your app, and then [enable {{site.data.keyword.contdelivery_short}}](/docs/apps/tutorials?topic=apps-tutorial-byoc) for the app. 
+ 
 * Create a toolchain by using one of the available templates (dependent on the deployment target and tool integrations). On the **Create a Toolchain** page, select the appropriate provider for your source repository, and then specify the link to your source code repo. After you create your toolchain, you might need to adjust the pipeline scripts for your deployment goals.
 * Create an empty toolchain, and then add tool integrations to deploy your app. For more information about using this method to deploy your code to {{site.data.keyword.contdelivery_short}}, see [Continuous Deployment to Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes).
 
