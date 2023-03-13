@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2015, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-03-13"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -75,7 +75,7 @@ You can use a template as a starting point to [create a toolchain](https://cloud
    
    d.  Click **OK** to create the API key without saving a secure copy of the key. 
  
-   e. To securely save the API key so that you can use it again in other toolchains and starter kit workflows:
+   e. To securely save the API key so that you can use it again in other toolchain workflows:
  
     * Select the **Save this key in a secrets store for reuse** checkbox to integrate with the {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.secrets-manager_short}} secrets store.
     * If you don't have an existing instance of {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.secrets-manager_short}}, specify a name for the instance and the secret.
@@ -100,10 +100,7 @@ You can use a template as a starting point to [create a toolchain](https://cloud
 
 You can create a toolchain from your app. The toolchain can support continuous development, deployment, monitoring, and more, and it is associated with your app. Each app can be associated with a toolchain. When you push changes to the toolchain's GitHub repo, the pipeline automatically builds and deploys the app.
 
-If you created your app by using your own code repository, click **Deploy my app** on your app's details page. Then, follow the steps that are described in [Creating apps from your own code repository](/docs/apps?topic=apps-tutorial-byoc#tutorial-byoc).
-{: tip}
-
-1. If you created your app by using a starter kit, click **Deploy my app** on your app's details page. Next, select a deployment target. If you use {{site.data.keyword.cloud_notm}} Public, your app is configured for continuous delivery from a new GitHub repo that is populated with the app starter code.
+1. If you used {{site.data.keyword.cloud_notm}} Public to create your app, it is configured for continuous delivery from a new GitHub repo that is populated with the app starter code.
 1. On the toolchain configuration page, review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
 1. Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.cloud_notm}}. If you want to use a different name, change the toolchain's name.
 1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. A few of the tool integrations do not require configuration. For more information about configuring the tool integrations, see [Configuring tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations).
