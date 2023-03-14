@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-26"
+lastupdated: "2023-03-14"
 
 keywords: tool integrations, IBM Cloud Public, Artifactory
 
@@ -138,7 +138,7 @@ You must specify the `tool_type_id` property in the request body with the `artif
 | repository_name | optional, updatable | String | repository_name | The name of your Artifactory repo where your Docker images are located. |
 | repository_url | optional, updatable | String | repository_url | The URL of your Artifactory repo where your Docker images are located. |
 | snapshot_url | optional, updatable | String | snapshot_url | The URL of your Artifactory snapshot repo. |
-| token | optional, updatable | Password | token | The Identity Token or API key for your Artifactory repo. You can use a toolchain secret reference for this parameter. For more information about toolchain secret references, see [Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
+| token | optional, updatable | Password | token | The Identity Token for your Artifactory repo. You can use a toolchain secret reference for this parameter. For more information about toolchain secret references, see [Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
 | type | required, updatable | String | type | The repo type for your Artifactory tool integration. |
 | user_id | optional, updatable | String | user_id | The user ID or email address for your Artifactory repo. |
 {: caption="Table 1. Artifactory tool integration parameters" caption-side="bottom"}
