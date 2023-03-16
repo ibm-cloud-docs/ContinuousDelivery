@@ -14,7 +14,7 @@ subcollection: ContinuousDelivery
 
 
 # Subnet ranges for {{site.data.keyword.deliverypipeline}} 
-{: #pipeline_subnet-ranges}
+{: #pipeline-subnet-ranges}
 {: support}
 
 If your firewall configuration prevents the {{site.data.keyword.deliverypipeline}} from communicating with environments that are behind a firewall, you must update the configuration, including subnet ranges, to access resources that are behind the firewall.
