@@ -215,6 +215,11 @@ toc:
       
       - pipeline_deploy_var.md
       - tekton_deploy_var.md
+      - topicgroup:
+          label: Subnet ranges
+          topics:
+          - pipeline_subnet_ranges.md
+          - git_subnet_ranges.md
 
       - link:
           label: Using Jenkins to integrate DevOps Insights
