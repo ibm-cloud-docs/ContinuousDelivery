@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-25"
+  years: 2015, 2023
+lastupdated: "2023-03-20"
 
 keywords: troubleshoot, toolchains, tool integrations
 
@@ -168,17 +168,24 @@ The tool integration is configured with a reference to a secret, but the toolcha
 When you use Terraform or the API to create or update a tool integration, the configuration fails with the `Could not find value for secret reference...` error message.
 {: tsSymptoms}
 
-Many tool integrations include configuration properties that are classified as secrets. When you set these properties in a Terraform resource or API call, you can set them as [secrets references](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secrets_references). A secret reference is a specially formatted string that identifies the name and location of a secret in a secret store that is integrated into the toolchain. The error indicates that the toolchain cannot find the identified secret. This error can occur when one or more of the segments in the secret reference `{vault:...}` string are incorrect. The error can also occur when a key of the specified group, name, or field does not exist in the secret store, or the secret store is not integrated into the toolchain.
+Many tool integrations include configuration properties that are classified as secrets. When you set these properties in a Terraform resource or API call, you can set them as [secrets references](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secrets_references). A secret reference is a specially formatted string that identifies the name and location of a secret in a secret store that is integrated into the toolchain. This error indicates that the toolchain cannot find the identified secret, or that the secret store is not integrated into the toolchain. The error can occur for secrets references by name if one or more of the segments in the secrets reference `{vault:...}` string are incorrect, or if a key of the specified group, name, or field does not exist in the secret store. The error can occur for secrets references by CRN if the secret CRN references a secret that was deleted.
 {: tsCauses}
 
 The error message includes the secret reference string that cannot be resolved.
 {: tsResolve}
 
-* Check that the secret store is integrated as a tool into the toolchain, and that the tool integration is correctly configured. If the tool integration is misconfigured, edit the tool integration to correct the error condition, and then save the configuration.
+Complete the following tasks for secrets references by name:
+
+* Check that the secret store is integrated as a tool into the toolchain, and that the tool integration is correctly configured to identify by the service instance name. If the tool integration is misconfigured, edit the tool integration to correct the error condition, and then save the configuration.
 * Check that the first segment of the `{vault::...}` secret reference matches the name of the secret store tool integration. For example, the secret reference `{vault::my-secret-store.my-secret}` expects the toolchain to have a secret store tool integration that is named `my-secret-store`. This value is the name of tool integration, *not* the name of the secret store service instance.
 * If the secret is stored in {{site.data.keyword.keymanagementserviceshort}}, check that the second segment of the `{vault::...}` secret reference matches the name of the key that you want to use in the {{site.data.keyword.keymanagementserviceshort}} service instance. For example, the secret reference `{vault::my-kms.my-key}` expects to find a key that is named `my-key` in the {{site.data.keyword.keymanagementserviceshort}} service instance. This service instance is integrated into the toolchain with a {{site.data.keyword.keymanagementserviceshort}} tool integration that is named `my-kms`.
 * If the secret is stored in {{site.data.keyword.secrets-manager_short}}, check that the second, and third segments of the `{vault::...}` secret reference match the names of the secret group and secret that you want to use in the {{site.data.keyword.secrets-manager_short}} service instance. For example, the secret reference `{vault::my-sm.my-group.my-key}` expects to find a secret that is named `my-key` in a secret group that is named `my-group`. This secret and secret group are stored within the {{site.data.keyword.secrets-manager_short}} service instance that is integrated into the toolchain by using a {{site.data.keyword.secrets-manager_short}} tool integration that is named `my-sm`.
-* If the secret is stored in HashiCorp Vault, check that the second, and third segments of the `{vault::...}` secret reference match the names of the secret and the secret field in the HashiCorp Vault server. For example, the secret reference `{vault::my-hcv.my-secret.my-field}` expects to find a secret that is named `my-secret` in the HashiCorp Vault server, and a field named `my-field` within that secret. This server is integrated into the toolchain by using a HashiCorp Vault tool integration that is named `my-hcv`.
+* If the secret is stored in HashiCorp Vault, check that the second and third segments of the `{vault::...}` secret reference match the names of the secret and the secret field in the HashiCorp Vault server. For example, the secret reference `{vault::my-hcv.my-secret.my-field}` expects to find a secret that is named `my-secret` in the HashiCorp Vault server, and a field named `my-field` within that secret. This server is integrated into the toolchain by using a HashiCorp Vault tool integration that is named `my-hcv`.
+
+Complete the following tasks for secrets references by CRN:
+
+* Check that the secret store is integrated as a tool into the toolchain, and that the tool integration is correctly configured to identify by the service instance CRN. If the tool integration is misconfigured, edit the tool integration to correct the error condition, and then save the configuration.
+* Check that the CRN of the {{site.data.keyword.secrets-manager_short}} service instance that is configured in the tool integration matches the CRN of the failing secret. 
 
 ## When I use Terraform or the API to configure a tool integration, why does the configuration fail with the `A problem was encountered while attempting to resolve secret reference...` error?
 {: #troubleshoot-missing-s2s-auth}
@@ -195,9 +202,16 @@ Many tool integrations include configuration properties that are classified as s
 The error message includes the secret reference string that cannot be resolved.
 {: tsResolve}
 
-1. Examine the first segment of the `{vault::...}` secret reference. This segment is the name of the secret store tool integration in the toolchain. For example, the secret reference `{vault::my-kms.my-key}` identifies a secret store tool integration that is named `my-kms`.
-1. Examine the configuration of the secret store tool integration to identify the {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.secrets-manager_short}} service instance that the tool integration represents.
-1. By using IAM, add a service-to-service authorization policy from the toolchain to the {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.secrets-manager_short}} service instance. In the authorization policy, the toolchain is the *source* service, and the secret store is the *target* service. When you target {{site.data.keyword.keymanagementserviceshort}}, make sure that the policy grants the `Viewer` and `ReaderPlus` roles. When you target {{site.data.keyword.secrets-manager_short}}, make sure that the policy grants the `Viewer` and `SecretsReader` roles.
+Complete the following tasks for secrets references by name:
+
+* Examine the first segment of the `{vault::...}` secret reference. This segment is the name of the secret store tool integration in the toolchain. For example, the `{vault::my-kms.my-key}` secret reference identifies a secret store tool integration that is named `my-kms`.
+* Examine the secret store tool integration configuration to make sure that the `name` parameter matches the name of the secret store tool integration. Also, make sure that the tool integration is correctly configured to identify by the service instance name. And that the correct {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.secrets-manager_short}} service instance is selected.
+* By using IAM, add a service-to-service authorization policy from the toolchain to the {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.secrets-manager_short}} service instance. In the authorization policy, the toolchain is the *source* service, and the secret store is the *target* service. When you target {{site.data.keyword.keymanagementserviceshort}}, make sure that the policy grants the `Viewer` and `ReaderPlus` roles. When you target {{site.data.keyword.secrets-manager_short}}, make sure that the policy grants the `Viewer` and `SecretsReader` roles.
+
+Complete the following tasks for secrets references by CRN:
+
+* Examine the secret store tool integration configuration to make sure that it is correctly configured to identify by the service instance CRN. Also, make sure that the CRN for the {{site.data.keyword.secrets-manager_short}} service instance is correct.
+* Use IAM to add a service-to-service authorization policy from the toolchain to the {{site.data.keyword.secrets-manager_short}} service instance. In the authorization policy, the toolchain is the *source* service, and the {{site.data.keyword.secrets-manager_short}} instance is the *target* service. Make sure that the policy grants the `Viewer` and `SecretsReader` roles.
 
 For more information about service-to-service authorization policies, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth). 
 
