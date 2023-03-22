@@ -212,8 +212,6 @@ The following table lists and describes each of the secret reference values that
 | `my-slack-webhook` | The name of the standard key that is managed in the {{site.data.keyword.keymanagementserviceshort}} service instance. |
 {: caption="Table 1. Secret reference values" caption-side="top"}
 
-{: pre}
-
 #### Using secrets references by CRN
 {: #cd_secrets_references_crn}
 
