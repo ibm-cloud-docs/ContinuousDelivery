@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-03-24"
 
 keywords: troubleshoot, toolchains, tool integrations
 
@@ -205,7 +205,7 @@ The error message includes the secret reference string that cannot be resolved.
 Complete the following tasks for secrets references by name:
 
 * Examine the first segment of the `{vault::...}` secret reference. This segment is the name of the secret store tool integration in the toolchain. For example, the `{vault::my-kms.my-key}` secret reference identifies a secret store tool integration that is named `my-kms`.
-* Examine the secret store tool integration configuration to make sure that the `name` parameter matches the name of the secret store tool integration. Also, make sure that the tool integration is correctly configured to identify by the service instance name. And that the correct {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.secrets-manager_short}} service instance is selected.
+* Examine the secret store tool integration configuration to make sure that the `name` parameter matches the name of the secret store tool integration. Also, make sure that the tool integration is correctly configured to identify by the service instance name, and that the correct {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.secrets-manager_short}} service instance is selected.
 * By using IAM, add a service-to-service authorization policy from the toolchain to the {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.secrets-manager_short}} service instance. In the authorization policy, the toolchain is the *source* service, and the secret store is the *target* service. When you target {{site.data.keyword.keymanagementserviceshort}}, make sure that the policy grants the `Viewer` and `ReaderPlus` roles. When you target {{site.data.keyword.secrets-manager_short}}, make sure that the policy grants the `Viewer` and `SecretsReader` roles.
 
 Complete the following tasks for secrets references by CRN:
