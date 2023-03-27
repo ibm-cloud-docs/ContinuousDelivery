@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-03-20"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -58,12 +58,14 @@ When you set a secure property with a *plain text* secret value, {{site.data.key
 
 When you set a secure property with a *secrets reference* value, the value is a specially formatted string that refers to the location or address of a secret that is managed within a secrets storage service such as [{{site.data.keyword.keymanagementservicefull}}](/docs/key-protect), [{{site.data.keyword.secrets-manager_full}}](/docs/secrets-manager), or HashiCorp Vault. Although {{site.data.keyword.contdelivery_short}} actively encrypts and stores the secrets reference value internally, the secret value is not exposed on the client side. When {{site.data.keyword.contdelivery_short}} must retrieve the secret to perform processing on your behalf, it internally retrieves the value from the referenced secrets store. Secrets references are also resilient to rotation. Typically, when a secret is rotated within a secrets store, the location or address of the secret remains the same. Only the secret value itself is changed.
 
+Two types of secrets references are supported: by name or by [Cloud Resource Name (CRN)](/docs/account?topic=account-crn). Currently, only [{{site.data.keyword.secrets-manager_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager) tool integrations support referencing secrets by CRN. This format allows for greater flexibility because you can reference secrets from a {{site.data.keyword.secrets-manager_short}} instance in a different account if the correct [authorization](https://cloud.ibm.com/iam/authorizations){: external} is in place. 
+
 Make sure that you consider the following prerequisites for specifying a secrets reference within the scope of a toolchain:
 
 * The secrets store must be added to the toolchain as a tool integration. For more information about secrets store tool integrations, see [Configuring {{site.data.keyword.keymanagementserviceshort}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-keyprotect), [Configuring {{site.data.keyword.secrets-manager_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager), and [Configuring HashiCorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault).
 * An IAM service-to-service authorization policy must be configured to allow the source toolchain to retrieve secrets from the target secrets store. For more information about service-to-service authorizations, see [Using authorizations to grant access between services](/docs/account?topic=account-serviceauth).
 
-When you work outside of the console, such as with the API or Terraform, use the following format for secrets reference values:
+When you work outside of the console, such as with the API or Terraform, use the following format for secrets references by name:
 
 * `{vault::SECRET_STORE_INTEGRATION_NAME.SECRET_NAME}` when you reference secrets that are contained within {{site.data.keyword.keymanagementserviceshort}}.
 * `{vault::SECRET_STORE_INTEGRATION_NAME.SECRET_GROUP_NAME.SECRET_NAME}` when you reference secrets that are contained within {{site.data.keyword.secrets-manager_short}}.
@@ -76,13 +78,15 @@ where:
 * `SECRET_NAME` is the name of the secret in the secrets store.
 * `FIELD_NAME` is the name of the field within the HashiCorp Vault secret.
 
+To use a CRN secrets reference, obtain the secret CRN directly from the {{site.data.keyword.secrets-manager_short}} UI or programmatically by using the CLI, API, or SDKs.
+
 For more information about managing secrets, see [Managing secrets in your toolchains](/docs/devsecops?topic=devsecops-cd-devsecops-toolchains-secrets).
 
 ### Specifying secrets references by using the console
 {: #cd_secrets_references_ui}
 {: ui}
 
-When you use the console, the fields for tool integration configuration properties and {{site.data.keyword.deliverypipeline}} properties that are classified as secure are annotated with a key icon. You can click this icon to open a dialog from which you can select a secrets store and secret.
+When you use the console, the fields for tool integration configuration properties and {{site.data.keyword.deliverypipeline}} properties that are classified as secure are annotated with a key icon. For secrets references by name, click the key icon to open a dialog from which you can select a secrets store and secret. For secrets references by CRN, paste the CRN value directly into the property.
 
 ### Specifying secrets references with the API
 {: #cd_secrets_references_api}
@@ -97,7 +101,10 @@ export CD_TOOLCHAIN_URL=https://api.us-south.devops.cloud.ibm.com/toolchain/v2
 ```
 {: pre}
 
-The following example shows how to create a Slack tool integration with an API token (Slack webhook) that is stored in an instance of {{site.data.keyword.keymanagementserviceshort}}. This example assumes that the toolchain already contains a {{site.data.keyword.keymanagementserviceshort}} tool integration and that an IAM service-to-service authorization policy from the source toolchain to the target {{site.data.keyword.keymanagementserviceshort}} service instance is in place.
+#### Using secrets references by name
+{: #cd_secrets_references_name}
+
+The following example demonstrates how to use a secrets reference by name secret. It shows how to create a Slack tool integration with an API token (Slack webhook) that is stored in an instance of {{site.data.keyword.keymanagementserviceshort}}. This example assumes that the toolchain already contains a {{site.data.keyword.keymanagementserviceshort}} tool integration and that an IAM service-to-service authorization policy from the source toolchain to the target {{site.data.keyword.keymanagementserviceshort}} service instance is in place.
 
 ```curl
 curl -X POST \
@@ -205,13 +212,121 @@ The following table lists and describes each of the secret reference values that
 | `my-slack-webhook` | The name of the standard key that is managed in the {{site.data.keyword.keymanagementserviceshort}} service instance. |
 {: caption="Table 1. Secret reference values" caption-side="top"}
 
+#### Using secrets references by CRN
+{: #cd_secrets_references_crn}
+
+The following example demonstrates how to use a secrets reference by CRN secret. It shows how to create a Slack tool integration with an API token (Slack webhook) that is stored in an instance of {{site.data.keyword.secrets-manager_short}}. This example assumes that the toolchain already contains a {{site.data.keyword.secrets-manager_short}} tool integration and that an IAM service-to-service authorization policy from the source toolchain to the target {{site.data.keyword.secrets-manager_short}} service instance is in place.
+
+```curl
+curl -X POST \
+https://api.us-south.devops.cloud.ibm.com/toolchain/v2/toolchains/01234567-89ab-cdef-0123-456789abcdef/tools \
+-H "Authorization: Bearer $TOKEN" \
+-H 'Accept: application/json' \
+-H 'Content-Type: application/json' \
+-d '{
+    "tool_type_id": "slack",
+    "parameters": {
+    "api_token": "crn:v1:bluemix:public:secrets-manager:us-south:a/9bb43e401a7a87d15145da761da98571:604de62c-c04f-3f5e-b7e8-4acafe0ecde7:secret:5ec17023-b631-fbcb-ef9c-4f2eb01f1dda",
+    "channel_name": "my_slack_channel_name",
+    "team_url": "my_slack_team_name"
+    }
+}' 
+```
+{: pre}
+{: curl}
+
+```javascript
+const CdToolchainV2 = require('@ibm-cloud/continuous-delivery/cd-toolchain/v2');
+...
+(async () => {
+    const toolchainService = CdToolchainV2.newInstance();
+    const slackParameters = {
+        api_token: "crn:v1:bluemix:public:secrets-manager:us-south:a/9bb43e401a7a87d15145da761da98571:604de62c-c04f-3f5e-b7e8-4acafe0ecde7:secret:5ec17023-b631-fbcb-ef9c-4f2eb01f1dda",
+        channel_name: "my_slack_channel_name",
+        team_url: "my_slack_team_name"
+    };
+
+    const toolPrototypeModel = {
+        toolchainId: "01234567-89ab-cdef-0123-456789abcdef",
+        toolTypeId: "slack",
+        parameters: slackParameters
+    };
+
+    const slackTool = await toolchainService.createTool(toolPrototypeModel);
+})();
+```
+{: codeblock}
+{: node}
+
+```go
+import (
+    "github.com/IBM/continuous-delivery-go-sdk/cdtoolchainv2"
+)
+...
+toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
+toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
+slackParameters := map[string]interface{}{
+    "api_token": "crn:v1:bluemix:public:secrets-manager:us-south:a/9bb43e401a7a87d15145da761da98571:604de62c-c04f-3f5e-b7e8-4acafe0ecde7:secret:5ec17023-b631-fbcb-ef9c-4f2eb01f1dda",
+    "channel_name": "my_slack_channel_name",
+    "team_url": "my_slack_team_name",
+}
+createToolOptions := toolchainClient.NewCreateToolOptions("01234567-89ab-cdef-0123-456789abcdef", "slack")
+createToolOptions.SetParameters(slackParameters)
+slackTool, response, err := toolchainClient.CreateTool(createToolOptions)
+```
+{: codeblock}
+{: go}
+
+```python
+from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
+...
+toolchain_service = CdToolchainV2.new_instance()
+slack_parameters = {
+    "api_token": "crn:v1:bluemix:public:secrets-manager:us-south:a/9bb43e401a7a87d15145da761da98571:604de62c-c04f-3f5e-b7e8-4acafe0ecde7:secret:5ec17023-b631-fbcb-ef9c-4f2eb01f1dda",
+    "channel_name": "my_slack_channel_name",
+    "team_url": "my_slack_team_name"
+}
+slack_tool = toolchain_service.create_tool(
+    toolchain_id = "01234567-89ab-cdef-0123-456789abcdef",
+    tool_type_id = "slack",
+    parameters = slack_parameters
+)
+```
+{: codeblock}
+{: python}
+
+```java
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.CdToolchain;
+   import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.model.*;
+   ...
+   CdToolchain toolchainService = CdToolchain.newInstance();
+   HashMap<String, Object> slackParameters = new HashMap<>();
+   slackParameters.put("api_token", "crn:v1:bluemix:public:secrets-manager:us-south:a/9bb43e401a7a87d15145da761da98571:604de62c-c04f-3f5e-b7e8-4acafe0ecde7:secret:5ec17023-b631-fbcb-ef9c-4f2eb01f1dda");
+   slackParameters.put("channel_name", "my_slack_channel_name");
+   slackParameters.put("team_url", "my_slack_team_name");
+   CreateToolOptions createSlackToolOptions = new CreateToolOptions.Builder()
+      .parameters(slackParameters)
+      .toolchainId({toolchain_id})
+      .toolTypeId("slack")
+      .build();
+   Response<ToolchainToolPost> response = toolchainService.createTool(createSlackToolOptions).execute();
+   ToolchainToolPost slackTool = response.getResult();
+   ```
+   {: codeblock}
+   {: java}
+
 ### Specifying secrets references with Terraform
 {: #cd_secrets_references_terraform}
 {: terraform}
 
-You can work with secure properties with secrets reference values in Terraform. The following example shows a complete set of resources for a {{site.data.keyword.keymanagementserviceshort}} service instance, a standard key (Slack webhook), a toolchain, an IAM service-to-service authorization policy, a {{site.data.keyword.keymanagementserviceshort}} tool integration, and a Slack tool integration.
+You can work with secure properties with secrets reference values in Terraform.
 
-This example includes an `ibm_kms_key` standard key resource with a `payload` that is set to the base64-encoded Slack webhook secret. This code snippet shows the relationship between the name of the key and the value of the secrets reference within the Slack tool integration resource. In practice, it is more secure to create the standard key ahead of time from a separate Terraform project or other process to which only limited, authorized personnel have access.
+#### Using secrets references by name
+{: #cd_secretsreferences_name_terraform}
+
+The following example shows a complete set of resources for a {{site.data.keyword.keymanagementserviceshort}} service instance, a standard key (Slack webhook), a toolchain, an IAM service-to-service authorization policy, a {{site.data.keyword.keymanagementserviceshort}} tool integration, and a Slack tool integration that references the webhook secret by name.
+
+This example also includes an `ibm_kms_key` standard key resource with a `payload` that is set to the base64-encoded Slack webhook secret. It shows the relationship between the name of the key and the value of the secrets reference within the Slack tool integration resource. In practice, it is more secure to create the standard key ahead of time from a separate Terraform project or other process to which only limited, authorized personnel have access.
 {: tip}
 
 ```terraform
@@ -287,6 +402,74 @@ The following table lists and describes each of the secrets reference values tha
 | `my-slack-webhook` | The name of the standard key that is managed in the {{site.data.keyword.keymanagementserviceshort}} service instance. |
 {: caption="Table 2. Secret reference values" caption-side="top"}
 
+#### Using secrets references by CRN
+{: #cd_secretsreferences_crn_terraform}
+
+The following example assumes that an instance of {{site.data.keyword.secrets-manager_short}} exists. It shows resources for an arbitrary secret (Slack webhook), a toolchain, an IAM service-to-service authorization policy, a {{site.data.keyword.secrets-manager_short}} tool integration, and a Slack tool integration that references the webhook secret by CRN.
+
+This example includes an `ibm_sm_arbitrary_secret` key resource with a `payload` that is set to the Slack webhook secret. It shows how to use the CRN from the key resource as the value of the secrets reference within the Slack tool integration resource. In practice, it is more secure to create the standard key ahead of time from a separate Terraform project or other process to which only limited, authorized personnel have access.
+{: tip}
+
+```terraform
+variable "slack_webhook" {}
+variable "slack_channel" {}
+variable "slack_team" {}
+variable "secrets_manager_name" {}
+
+data "ibm_resource_group" "rg" {
+    name = "default"
+}
+
+data ibm_resource_instance "sm" {
+    name = var.secrets_manager_name
+}
+
+resource "ibm_sm_arbitrary_secret" "key" {
+    instance_id     = data.ibm_resource_instance.sm.guid
+    region          = data.ibm_resource_instance.sm.location
+    secret_group_id = "default"
+    name            = "my-slack-webhook"
+    payload         = "var.slack_webhook"
+}
+
+resource "ibm_cd_toolchain" "toolchain" {
+    name              = "tf-toolchain-secret-refs"
+    resource_group_id = data.ibm_resource_group.rg.id
+}
+
+resource "ibm_iam_authorization_policy" "s2s" {
+    source_service_name         = "toolchain"
+    source_resource_instance_id = ibm_cd_toolchain.toolchain.id
+    target_service_name         = "secrets-manager"
+    target_resource_instance_id = data.ibm_resource_instance.sm.guid
+    roles                       = ["Viewer", "SecretsReader"]
+}
+
+resource "ibm_cd_toolchain_tool_secretsmanager" "integration" {
+    toolchain_id = ibm_cd_toolchain.toolchain.id
+    parameters {
+        name             = "my-sm-tool-integration"
+        instance_id_type = "instance-crn"
+        instance_crn     = data.ibm_resource_instance.sm.resource_crn
+    }
+    depends_on = [
+        ibm_iam_authorization_policy.s2s
+    ]
+}
+
+resource "ibm_cd_toolchain_tool_slack" "integration" {
+    toolchain_id = ibm_cd_toolchain.toolchain.id
+    parameters {
+        webhook      = ibm_sm_arbitrary_secret.key.crn
+        channel_name = var.slack_channel
+        team_name    = var.slack_team
+    }
+    depends_on = [
+        ibm_cd_toolchain_tool_secretsmanager.integration
+    ]
+}
+```
+{: codeblock}
 
 ## Protecting your data with customer-managed keys 
 {: #cd_professional_plan}
@@ -420,4 +603,4 @@ For more information about how to set input variables in Terraform, see [Assigni
 ## Deleting your data from {{site.data.keyword.contdelivery_short}}
 {: #cd_delete-data}
 
-When you delete a {{site.data.keyword.contdelivery_short}} service instance, the related toolchains, tool integrations, tools, and data (including personal data) are not deleted. For more information about how to manage and delete data that is stored with toolchains, tool integrations, and tools, see [Modifying, exploring, and deleting personal data](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_personal_data#managing_personal_data). 
+When you delete a {{site.data.keyword.contdelivery_short}} service instance, the related toolchains, tool integrations, tools, and data (including personal data) are not deleted. For more information about how to manage and delete data that is stored with toolchains, tool integrations, and tools, see [Modifying, exploring, and deleting personal data](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_personal_data#managing_personal_data).
