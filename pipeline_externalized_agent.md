@@ -64,15 +64,17 @@ It is recommended that you separate your base properties and secrets by storing 
 A base properties folder must contain the following files:
 
 * `.cdexternalpropbase`: An empty file that marks the current directory as containing externalized base properties.
-* `environment-properties.env`: The externalized representation of non-secure pipeline properties in key value pairs.
-* `kustomization.yaml`: A YAML file that generates a config map from the environment properties, and identifies the secret stores and external secrets that are defined in the directory.
+* `environment-properties.env`: The externalized representation of nonsecure pipeline properties in key value pairs.
+* `kustomization.yaml`: A YAML file that generates a configmap from the environment properties, and identifies the secret stores and external secrets that are defined in the directory.
 * `external-secret-store.yaml`: An external secrets definition of an external secret store, such as [HashiCorp Vault](https://external-secrets.io/v0.6.1/provider/hashicorp-vault/#hashicorp-vault){: external}. You can have multiple stores that are used by different secrets.
 * `external-secret.yaml`: An external secrets definition of a secret that is stored in the secret store that is defined in the `external-secret-store.yaml` file. You can have multiple external secrets.
 
 #### Example
 {: #base-properties-example}
 
-1. In the repo that contains the existing Tekton resource definitions, add a folder named `base`.
+Complete the following steps in the repo that you use to contain the externalized properties:
+
+1. In the repo that contains the existing Tekton resource definitions, add a folder that is named `base`.
 2. Add the path of this folder to your pipeline definitions.
 3. In the `base` folder, add the `.cdexternalpropbase`, `environment-properties.env`, `kustomization.yaml`, `external-secret-store.yaml`, and `external-secret.yaml` files.
 4. Update these files to match the properties that you want to externalize.
@@ -169,7 +171,7 @@ Make sure that each externalized trigger within a pipeline has its own trigger p
 
 Each trigger properties folder must contain the following files:
 
-* `.cdexternalproptrigger`: A file that marks the current directory as containing trigger properties. This file must have a json object with the name of the trigger, as shown in the following example.
+* `.cdexternalproptrigger`: A file that marks the current directory as containing trigger properties. This file must have a JSON object with the name of the trigger, as shown in the following example.
 
    ```text
    {
@@ -177,14 +179,14 @@ Each trigger properties folder must contain the following files:
    }
    ```
 
-* `trigger-properties.env`: The externalized representation of non-secure pipeline properties within key value pairs.
-* `kustomization.yaml`: A YAML file that generates a config map from the trigger properties, and identifies the secret stores and external secrets that are defined in the directory.
+* `trigger-properties.env`: The externalized representation of nonsecure pipeline properties within key value pairs.
+* `kustomization.yaml`: A YAML file that generates a configmap from the trigger properties, and identifies the secret stores and external secrets that are defined in the directory.
 * `external-secret.yaml`: An external secrets definition of a secret that is defined in the base folder.
 
 #### Example
 {: #externalized-properties-example}
 
-For example, complete the following steps in the repo you are using to contain the externalized properties:
+Complete the following steps in the repo that you use to contain the externalized properties:
 
 1. In the repo that contains the externalized properties, add a folder with a unique name such as `trigger[#]`.
 2. Add the path of this folder to your pipeline definitions.
