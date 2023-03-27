@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-03-27"
 
 keywords: troubleshoot, toolchains, tool integrations
 
@@ -185,7 +185,9 @@ Complete the following tasks for secrets references by name:
 Complete the following tasks for secrets references by CRN:
 
 * Check that the secret store is integrated as a tool into the toolchain, and that the tool integration is correctly configured to identify by the service instance CRN. If the tool integration is misconfigured, edit the tool integration to correct the error condition, and then save the configuration.
-* Check that the CRN of the {{site.data.keyword.secrets-manager_short}} service instance that is configured in the tool integration matches the CRN of the failing secret. 
+* Check that the CRN of the {{site.data.keyword.secrets-manager_short}} service instance that is configured in the tool integration references the same instance as the CRN of the failing secret.
+
+Check that the CRN of the Secrets Manager service instance that is configured in the tool integration references the same instance as the CRN of the failing secret.
 
 ## When I use Terraform or the API to configure a tool integration, why does the configuration fail with the `A problem was encountered while attempting to resolve secret reference...` error?
 {: #troubleshoot-missing-s2s-auth}
