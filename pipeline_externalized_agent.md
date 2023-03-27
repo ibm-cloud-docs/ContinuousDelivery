@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-12-15"
+  years: 2022, 2023
+lastupdated: "2023-03-27"
 
 keywords: Delivery Pipeline Private Workers, externalized mode, private worker, kustomize, external secrets
 
@@ -26,7 +26,7 @@ After a pipeline is externalized, pipeline runs occur in the same way, depending
 
 The latest private worker agent versions support external properties natively. This support uses [Kustomize](https://kustomize.io/){: external} and [External Secrets](https://external-secrets.io/){: external}, and requires a pipeline that is configured to use external properties. 
 
-As of Kubernetes version 1.14, Kustomize is included in Kubernetes to provide a declarative means of cluster configuration and Kubernetes object creation by using `yaml` files. To use externalized properties, your pipelines require a `kustomize.yaml` file.
+As of Kubernetes version 1.14, Kustomize is included in Kubernetes to provide a declarative means of cluster configuration and Kubernetes object creation by using `yaml` files. To use externalized properties, your pipelines require a `kustomization.yaml` file.
 
 By using the External Secrets operator, you can synchronize secrets from external APIs with Kubernetes secrets. Supported providers include [{{site.data.keyword.secrets-manager_full}}](/docs/secrets-manager?topic=secrets-manager-getting-started). By using the operator, you can represent secrets and providers within `yaml` files that are stored in a repo, such as Git. To use externalized secure properties, your pipeline definitions must provide `yaml` files that define both a `SecretStore` and an `ExternalSecret`. 
 
@@ -47,18 +47,34 @@ For more information about the images that the private worker installation place
 ### Configuring a pipeline
 {: #pipeline-config}
 
-To configure a pipeline to use external properties, you must add a pipeline definition entry to the Definitions page. Make sure that this entry references a path to the location within your repo that contains the following files:
+To set up a pipeline to use external properties, you must specify two sets of attributes: *base properties* and *trigger properties*. 
 
-* `environment-properties.env`: The externalized representation of nonsecure pipeline properties in key value pairs.
-* `kustomization.yaml`: The kustomization file that is used at the start of a pipeline run.
-* `external-secret-store.yaml`: An External Secrets definition of an external secret store such as [HashiCorp Vault](https://external-secrets.io/v0.6.1/provider/hashicorp-vault/#hashicorp-vault){: external}.
-* `external-secret.yaml`: An External Secrets definition of a secret stored in the secret store that is defined in the `external-secret-store.yaml` file.
+*Base properties* represent the collection of properties and secrets that are global across trigger runs. You can find these values on the Environment Properties page within the pipeline UI. 
 
-For example, complete the following steps in the repo that contains the existing Tekton resource definitions:
+*Trigger properties* are the properties and secrets that are specified on an individual trigger. Property precedence means that trigger properties override base properties of the same name. While each pipeline has only one set of base properties, you can have many different sets of trigger properties.
 
-1. Add a folder named `base`.
+Properties with the same name in the pipeline UI override any externalized properties.
+{: important}
+
+It is recommended that you separate your base properties and secrets by storing your base properties in a single folder within a Git repository (repo), and storing each trigger secret in its own separate folder.
+
+### Base properties
+{: #pipeline-base-properties}
+
+A base properties folder must contain the following files:
+
+* `.cdexternalpropbase`: An empty file that marks the current directory as containing externalized base properties.
+* `environment-properties.env`: The externalized representation of non-secure pipeline properties in key value pairs.
+* `kustomization.yaml`: A YAML file that generates a config map from the environment properties, and identifies the secret stores and external secrets that are defined in the directory.
+* `external-secret-store.yaml`: An external secrets definition of an external secret store, such as [HashiCorp Vault](https://external-secrets.io/v0.6.1/provider/hashicorp-vault/#hashicorp-vault){: external}. You can have multiple stores that are used by different secrets.
+* `external-secret.yaml`: An external secrets definition of a secret that is stored in the secret store that is defined in the `external-secret-store.yaml` file. You can have multiple external secrets.
+
+#### Example
+{: #base-properties-example}
+
+1. In the repo that contains the existing Tekton resource definitions, add a folder named `base`.
 2. Add the path of this folder to your pipeline definitions.
-3. In the `base` folder, add the `environment-properties.env`, `kustomization.yaml`, `external-secret-store.yaml`, and `external-secret.yaml` files.
+3. In the `base` folder, add the `.cdexternalpropbase`, `environment-properties.env`, `kustomization.yaml`, `external-secret-store.yaml`, and `external-secret.yaml` files.
 4. Update these files to match the properties that you want to externalize.
 
 #### Example externalized `environment-properties.env` file
@@ -145,6 +161,35 @@ spec:
       property: value
 ```
 {: codeblock}
+
+### Trigger properties
+{: #pipeline-trigger-properties}
+
+Make sure that each externalized trigger within a pipeline has its own trigger properties folder that contains the properties and external secrets to use for that trigger.
+
+Each trigger properties folder must contain the following files:
+
+* `.cdexternalproptrigger`: A file that marks the current directory as containing trigger properties. This file must have a json object with the name of the trigger, as shown in the following example.
+
+   ```text
+   {
+       "triggerName" : "Deploy - External"
+   }
+   ```
+
+* `trigger-properties.env`: The externalized representation of non-secure pipeline properties within key value pairs.
+* `kustomization.yaml`: A YAML file that generates a config map from the trigger properties, and identifies the secret stores and external secrets that are defined in the directory.
+* `external-secret.yaml`: An external secrets definition of a secret that is defined in the base folder.
+
+#### Example
+{: #externalized-properties-example}
+
+For example, complete the following steps in the repo you are using to contain the externalized properties:
+
+1. In the repo that contains the externalized properties, add a folder with a unique name such as `trigger[#]`.
+2. Add the path of this folder to your pipeline definitions.
+3. In the `base` folder, add the `.cdexternalproptrigger`, `trigger-properties.env`, `kustomization.yaml`, and `external-secret.yaml` files.
+4. Update these files to match the properties that you want to externalize.
 
 ### Configuring a root secret
 {: #root-secret-config}
