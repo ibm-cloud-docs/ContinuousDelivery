@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-03-13"
+lastupdated: "2023-04-4"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -64,6 +64,7 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 
 | Base image version | IBM Cloud Container Registry version |sha256 value|
 | -------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 3.20 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.20`| sha256:82e68006004eeca8bdf838e2756d6b7fbb787baa42817feba8e847d8b1a27106|
 | 3.19 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.19`| sha256:ffb0bb00c37c4c2af01a53afc3597494275ed99a1e8ac3d4e653f105937509f0|
 | 3.18 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.18`| sha256:ba072e693cd646664711f60c7d3b4c34a25b4578bdc445a2d6855eff595fe67c|
 | 3.17 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.17`| sha256:3e2cbec3d0781b0e9ea9293d0a88e5b654635c065864718e74130a5124965197|
@@ -84,6 +85,7 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 | 3.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.2`| sha256:d59863621d3ba1b9bd47f76950c751e842405f9c303d0d4d4298d964b664ee85|
 | 3.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.1`| sha256:c2468d28f15fa6970f13510c01477326f91a043881c2b4cd8f2b1ff8ed8c22a1|
 | 3.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.0`| sha256:42318979f165cc1ffd4d707022ceb5461360a9b6cd1216bc0c63391bdd042726|
+| 2.32 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.32`| sha256:e66e380e37ad1f84891fbc9c708b7685356987895f2c397c20db0a5fae1efbed|
 | 2.31 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.31`| sha256:24d3c769801314b7502390c5c7054b303c534c2b3eceee3b87f1cb35f10f3e26|
 | 2.30 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.30`| sha256:2377117ad8e1305cd51e57aad59ca6bf7dedc028d128898df646f2854229a0de|
 | 2.29 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.29`| sha256:9454cc4fc70a21a1f5b59ede38910b30d29db69e5331e9e37a4d3516427ce66d|
@@ -123,12 +125,173 @@ The following available image versions are listed in descending order, starting 
 The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
 {: tip}
 
+### Version 3.20
+{: #version_3_20}
+
+To view the contents of version 3.20, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
+
+This image also contains the Terraform command-line interface (CLI).
+
+The {{site.data.keyword.cloud_notm}} CLI provides code risk analysis commands. You can use the {{site.data.keyword.cloud_notm}} CLI to analyze your code for vulnerabilities and compliance with certain rules. Code Risk Analyzer is available in all {{site.data.keyword.cloud_notm}} regions where toolchains are supported. For more information about Code Risk Analyzer, see [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
+{: tip}
+
+This image includes the following tools:
+
+```text
+# node --version
+v18.15.0
+
+# npm --version
+9.5.0
+
+# jq --version
+jq-1.6
+
+# yq --version
+yq (https://github.com/mikefarah/yq/) version v4.33.2
+
+# kubectl version --output=yaml --client
+clientVersion:
+  buildDate: "2023-03-15T13:39:54Z"
+  compiler: gc
+  gitCommit: 0ce7342c984110dfc93657d64df5dc3b2c0d1fe9
+  gitTreeState: clean
+  gitVersion: v1.25.8
+  goVersion: go1.19.7
+  major: "1"
+  minor: "25"
+  platform: linux/amd64
+kustomizeVersion: v4.5.7
+
+
+# buildctl --version
+buildctl github.com/moby/buildkit v0.11.5 252ae63bcf2a9b62777add4838df5a257b86e991
+
+# helm version --client
+version.BuildInfo{Version:"v3.11.2", GitCommit:"912ebc1cd10d38d340f048efaf0abda047c3468e", GitTreeState:"clean", GoVersion:"go1.18.10"}
+
+# ibmcloud -version
+ibmcloud version 2.15.0+79fb346-2023-02-21T22:06:52+00:00
+
+# ibmcloud plugin list
+Listing installed plug-ins...
+
+Plugin Name                                Version   Status   Private endpoints supported
+cloud-functions[wsk/functions/fn]          1.0.66             false
+cloud-internet-services[cis]               1.14.11            true
+code-engine[ce]                            1.43.0             true
+container-registry[cr]                     1.0.6              true
+container-service[kubernetes-service/ks]   1.0.498            false
+cra                                        1.2.1              false
+doi                                        0.4.2              false
+schematics[sch]                            1.12.8             true
+secrets-manager                            0.1.25             true
+
+
+# ibmcloud dev --version
+ibmcloud dev version 2.17.1
+
+# java -version
+openjdk version "17.0.6" 2023-01-17
+IBM Semeru Runtime Open Edition 17.0.6.0 (build 17.0.6+10)
+Eclipse OpenJ9 VM 17.0.6.0 (build openj9-0.36.0, JRE 17 Linux amd64-64-Bit Compressed References 20230117_397 (JIT enabled, AOT enabled)
+OpenJ9   - e68fb241f
+OMR      - f491bbf6f
+JCL      - 927b34f84c8 based on jdk-17.0.6+10)
+
+# ant -version
+Apache Ant(TM) version 1.10.13 compiled on January 4 2023
+
+# mvn -version
+Apache Maven 3.9.1 (2e178502fcdbffc201671fb2537d0cb4b4cc58f8)
+Maven home: /opt/IBM/maven
+Java version: 17.0.6, vendor: IBM Corporation, runtime: /usr/local/jdk17
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "6.1.18-200.fc37.x86_64", arch: "amd64", family: "unix"
+
+# gradle -version
+
+Welcome to Gradle 8.0.2!
+
+Here are the highlights of this release:
+ - Improvements to the Kotlin DSL
+ - Fine-grained parallelism from the first build with configuration cache
+ - Configurable Gradle user home cache cleanup
+
+For more details see https://docs.gradle.org/8.0.2/release-notes.html
+
+
+------------------------------------------------------------
+Gradle 8.0.2
+------------------------------------------------------------
+
+Build time:   2023-03-03 16:41:37 UTC
+Revision:     7d6581558e226a580d91d399f7dfb9e3095c2b1d
+
+Kotlin:       1.8.10
+Groovy:       3.0.13
+Ant:          Apache Ant(TM) version 1.10.11 compiled on July 10 2021
+JVM:          17.0.6 (Eclipse OpenJ9 openj9-0.36.0)
+OS:           Linux 6.1.18-200.fc37.x86_64 amd64
+
+
+# oc version
+Client Version: 4.12.8
+Kustomize Version: v4.5.7
+
+# zip
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+
+# unzip
+UnZip 6.00 of 20 April 2009, by Info-ZIP.  Maintained by C. Spieler.  Send
+
+# git --version
+git version 2.31.1
+
+# curl
+curl 7.61.1 (x86_64-redhat-linux-gnu) libcurl/7.61.1 OpenSSL/1.1.1k zlib/1.2.11 brotli/1.0.6 libidn2/2.2.0 libpsl/0.20.2 (+libidn2/2.2.0) libssh/0.9.6/openssl/zlib nghttp2/1.33.0
+
+# wget
+GNU Wget 1.19.5 built on linux-gnu.
+
+# openssl version
+OpenSSL 1.1.1k  FIPS 25 Mar 2021
+
+# make
+GNU Make 4.2.1
+
+# docker
+Client:
+ Version:           20.10.23
+ API version:       1.41
+ Go version:        go1.18.10
+ Git commit:        7155243
+ Built:             Thu Jan 19 17:30:35 2023
+ OS/Arch:           linux/amd64
+ Context:           default
+
+# dc --version
+dc (GNU bc 1.07.1) 1.4.1
+
+# ed --version
+GNU ed 1.14.2
+
+# skopeo --version
+skopeo version 1.9.4-dev
+
+# terraform version
+Terraform v1.4.4
+on linux_amd64
+```
+{: codeblock}
+
 ### Version 3.19
 {: #version_3_19}
 
 To view the contents of version 3.19, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
 
-This image also contains the Terraform command-line interface (CLI).
+This image also contains the Terraform CLI.
 
 The {{site.data.keyword.cloud_notm}} CLI provides code risk analysis commands. You can use the {{site.data.keyword.cloud_notm}} CLI to analyze your code for vulnerabilities and compliance with certain rules. Code Risk Analyzer is available in all {{site.data.keyword.cloud_notm}} regions where toolchains are supported. For more information about Code Risk Analyzer, see [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
 {: tip}
@@ -2989,6 +3152,174 @@ dc (GNU bc 1.07.1) 1.4.1
 
 # ed --version
 GNU ed 1.14.2
+```
+{: codeblock}
+
+### Version 2.32
+{: #version_2_32}
+
+To view the contents of version 2.32, from the running image, type `default_versions.sh`.
+
+The {{site.data.keyword.cloud_notm}} CLI provides code risk analysis commands. You can use the {{site.data.keyword.cloud_notm}} CLI to analyze your code for vulnerabilities and compliance with certain rules. Code Risk Analyzer is available in all {{site.data.keyword.cloud_notm}} regions where toolchains are supported. For more information about Code Risk Analyzer, see [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
+{: tip}
+
+This image is the first 2.x image to be built on top of Ubuntu 20.04. If you need to stay on Ubuntu 18.04, please use the previous version. The node.js version has been updated to latest TLS (18.15.0). If you need to use a different version of node.js, use `nvm install v<node version>` at the beginning of your script. This image now contains the Terraform CLI.
+{: tip}
+
+This image includes the following tools:
+
+```text
+# node --version
+v18.15.0
+
+# npm --version
+9.5.0
+
+# jq --version
+jq-1.6
+
+# yq --version
+yq version 2.4.1
+
+# yq3 --version
+yq version 3.4.1
+
+# yq4 --version
+yq (https://github.com/mikefarah/yq/) version v4.33.2
+
+# kubectl version --output=yaml --client
+clientVersion:
+  buildDate: "2023-03-15T13:39:54Z"
+  compiler: gc
+  gitCommit: 0ce7342c984110dfc93657d64df5dc3b2c0d1fe9
+  gitTreeState: clean
+  gitVersion: v1.25.8
+  goVersion: go1.19.7
+  major: "1"
+  minor: "25"
+  platform: linux/amd64
+kustomizeVersion: v4.5.7
+
+
+# buildctl --version
+buildctl github.com/moby/buildkit v0.11.5 252ae63bcf2a9b62777add4838df5a257b86e991
+
+# helm version --client
+Client: &version.Version{SemVer:"v2.17.0", GitCommit:"a690bad98af45b015bd3da1a41f6218b1a451dbe", GitTreeState:"clean"}
+
+# helm3 version --client
+version.BuildInfo{Version:"v3.11.2", GitCommit:"912ebc1cd10d38d340f048efaf0abda047c3468e", GitTreeState:"clean", GoVersion:"go1.18.10"}
+
+# ibmcloud -version
+ibmcloud version 2.15.0+79fb346-2023-02-21T22:06:52+00:00
+
+# ibmcloud plugin list
+Listing installed plug-ins...
+
+Plugin Name                                Version   Status   Private endpoints supported
+cloud-functions[wsk/functions/fn]          1.0.66             false
+cloud-internet-services[cis]               1.14.11            true
+code-engine[ce]                            1.43.0             true
+container-registry[cr]                     1.0.6              true
+container-service[kubernetes-service/ks]   1.0.498            false
+cra                                        1.2.1              false
+doi                                        0.4.2              false
+schematics[sch]                            1.12.8             true
+secrets-manager                            0.1.25             true
+
+
+# ibmcloud dev --version
+ibmcloud dev version 2.17.1
+
+# java -version
+openjdk version "11.0.18" 2023-01-17
+IBM Semeru Runtime Open Edition 11.0.18.0 (build 11.0.18+10)
+Eclipse OpenJ9 VM 11.0.18.0 (build openj9-0.36.1, JRE 11 Linux amd64-64-Bit Compressed References 20230214_644 (JIT enabled, AOT enabled)
+OpenJ9   - 0592661e4
+OMR      - f491bbf6f
+JCL      - 4e060ceb0b based on jdk-11.0.18+10)
+
+# ant -version
+Apache Ant(TM) version 1.10.13 compiled on January 4 2023
+
+# mvn -version
+Apache Maven 3.9.1 (2e178502fcdbffc201671fb2537d0cb4b4cc58f8)
+Maven home: /opt/IBM/maven
+Java version: 11.0.18, vendor: IBM Corporation, runtime: /usr/local/jdk11
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "6.1.18-200.fc37.x86_64", arch: "amd64", family: "unix"
+
+# gradle -version
+
+Welcome to Gradle 8.0.2!
+
+Here are the highlights of this release:
+ - Improvements to the Kotlin DSL
+ - Fine-grained parallelism from the first build with configuration cache
+ - Configurable Gradle user home cache cleanup
+
+For more details see https://docs.gradle.org/8.0.2/release-notes.html
+
+
+------------------------------------------------------------
+Gradle 8.0.2
+------------------------------------------------------------
+
+Build time:   2023-03-03 16:41:37 UTC
+Revision:     7d6581558e226a580d91d399f7dfb9e3095c2b1d
+
+Kotlin:       1.8.10
+Groovy:       3.0.13
+Ant:          Apache Ant(TM) version 1.10.11 compiled on July 10 2021
+JVM:          11.0.18 (Eclipse OpenJ9 openj9-0.36.1)
+OS:           Linux 6.1.18-200.fc37.x86_64 amd64
+
+
+# oc version
+Client Version: 4.12.8
+Kustomize Version: v4.5.7
+
+# zip
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+
+# unzip
+UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP.
+
+# git --version
+git version 2.40.0
+
+# curl
+curl 7.68.0 (x86_64-pc-linux-gnu) libcurl/7.68.0 OpenSSL/1.1.1f zlib/1.2.11 brotli/1.0.7 libidn2/2.2.0 libpsl/0.21.0 (+libidn2/2.2.0) libssh/0.9.3/openssl/zlib nghttp2/1.40.0 librtmp/2.3
+
+# wget
+GNU Wget 1.20.3 built on linux-gnu.
+
+# openssl version
+OpenSSL 1.1.1f  31 Mar 2020
+
+# make
+GNU Make 4.2.1
+
+# docker
+Client:
+ Version:           20.10.23
+ API version:       1.41
+ Go version:        go1.18.10
+ Git commit:        7155243
+ Built:             Thu Jan 19 17:30:35 2023
+ OS/Arch:           linux/amd64
+ Context:           default
+
+# dc --version
+dc (GNU bc 1.07.1) 1.4.1
+
+# ed --version
+GNU ed 1.16
+
+# terraform version
+Terraform v1.4.4
+on linux_amd64
 ```
 {: codeblock}
 
