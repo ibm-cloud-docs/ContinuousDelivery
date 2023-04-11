@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2023
 
-lastupdated: "2023-04-10"
+lastupdated: "2023-04-11"
 
 keywords: ibmcloud, resource, service instance, create, IBM Cloud, Terraform
 
@@ -66,7 +66,7 @@ You can have one active instance of {{site.data.keyword.contdelivery_short}} onl
 3. Create an instance of {{site.data.keyword.contdelivery_short}} within the targeted account, region, and resource group.
 
    ```sh
-   ibmcloud resource service-instance-create INSTANCE_NAME continuous-delivery PLAN REGION
+   ibmcloud resource service-instance-create INSTANCE_NAME continuous-delivery PLAN REGION -p ENCRYPTION
    ```
    {: pre}
 
@@ -75,7 +75,7 @@ The following table lists and describes each of the variables that are used in t
 | Variable | Description |
 |:---------|:------------|
 | `ACCOUNT` | The name or ID of the account in which to provision the service instance. To find the names and IDs of the available accounts, run `ibmcloud account list`. |
-| `ENCRYPTION` | To provision your service instance to use customer-managed encryption, append `-p '{"kms_info": {"id": <kms_instance_id>, "url": <kms_url>}, "kms_key": {"id": <kms_root_key_id>, "crn": <kms_transaction_crn>}}`. |
+| `ENCRYPTION` | Optional. To provision your service instance to use customer-managed encryption, append `-p '{"kms_info": {"id": <kms_instance_id>, "url": <kms_url>}, "kms_key": {"id": <kms_root_key_id>, "crn": <kms_transaction_crn>}}`. |
 | `INSTANCE_NAME` | The name for your service instance. |
 | `PLAN` | The name or ID of the pricing plan that you want to use. To find the names and IDs of the available plans, run `ibmcloud catalog service continuous-delivery`. |
 | `REGION` | The region in which to provision the service instance. For example, `us-south`. |
