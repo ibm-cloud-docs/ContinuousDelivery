@@ -77,6 +77,7 @@ toc:
               - artifactory_integration.md
               - bitbucket_integration.md
               - delivery_pipeline_integration.md
+              - event_notifications_integration.md
               - private_worker_integration.md
               - insights_integration.md
               - github_integration.md
