@@ -13,7 +13,7 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.attribute-definition-list}}   
 
 # Configuring {{site.data.keyword.en_short}}
-{: #scc}
+{: #event-notifications-integration}
 
 You can use the {{site.data.keyword.en_full_notm}} service to receive information about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like email, SMS, push notifications, webhook, slack, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}.
 {: shortdesc}
@@ -56,7 +56,7 @@ Configure {{site.data.keyword.compliance_short}} to embed security checks into y
 1. On your Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.en_short}}**.
  
 ## Configuring {{site.data.keyword.en_short}} by using the API
-{: #scc-config-parameters}
+{: #event-notifications-config-parameters}
 
 The {{site.data.keyword.en_short}} tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
 
