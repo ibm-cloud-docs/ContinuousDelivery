@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2022
-lastupdated: "2022-10-06"
+   years: 2022, 2023
+lastupdated: "2023-04-12"
 
 keywords: deployment strategies, toolchain, CD, automate, automation, continuous delivery, continuous integration, DevOps, IBM Cloud
 
@@ -200,7 +200,7 @@ You can explore the pipelines to understand the toolchain flow and the different
 
 * **Pull request pipeline:** Runs when a developer merges changes from their development branch to the master branch, or to any other branch in the repo. The pull request pipeline runs the Unit Test and Static Scans on the Application Source Code.
 * **Continuous integration pipeline:** Runs when you merge a change into the master branch of the Application Source Code repo. The continuous integration pipeline runs the Unit Test, Code Coverage, and Static Scans on the Application Source Code, CIS check, and Bill Of Materials (BOM) check. The continuous delivery pipeline also generates the binary build artifacts and uploads them to the {{site.data.keyword.containerlong}}, as configured in the toolchain. And the continuous integration pipeline generates the metadata of the build artifacts and stores it in the Inventory repo. 
-
+* **Continuous deployment pipeline:** Deploys a Code Engine component image (that the continuous integration pipeline builds and deploys) to a different Code Engine component to be hosted in a different project.
 
 ### Run the pull request and continuous integration pipelines
 {: #cd-pr-ci-pipelinerun}
@@ -225,10 +225,20 @@ To start the continuous integration pipeline, merge the continuous integration m
 
    ![Continuous integration pipeline success](images/code_engine_ci_pipeline_success.png){: caption="Figure 8. Continuous integration pipeline success" caption-side="bottom"}
 
-1. Expand the `deploy-application` task and click the `execute` step. Select the `Logs` tab, and scroll to the end of the log. Click the link to your deployed Code Engine app to view the running app.
+1. Expand the `deploy-component` task and click the `execute` step. Select the `Logs` tab, and scroll to the end of the log. Click the link to your deployed Code Engine app to view the running app.
 
 ## Next steps
 {: #code-engine-next-steps}
+
+If you want to deploy the Code Engine component (that the continuous integration pipeline builds and deploys) as another component, to be hosted in another Code engine project, follow these steps:
+
+1. On the continuous integration Toolchain Overview page, on the **Delivery pipelines** card, click the **cd-pipeline** pipeline to open the continuous deployment pipeline dashboard.
+1. Click **run pipeline** to start the `cd-manual-run` trigger.
+1. After the continuous deployment pipeline run succeeds, you can click the pipeline run to explore the completed steps.
+
+   ![Continuous deployment pipeline success](images/code_engine_cd_pipeline_success.svg){: caption="Figure 9. Continuous deployment pipeline success" caption-side="bottom"}
+
+1. Expand the **deploy-component** task and click the **execute** step. Click the **Logs** tab, and scroll to the end of the log. Click the link to your deployed Code Engine app to view the running app.
 
 If you want to remove the sample app that is running on {{site.data.keyword.codeengineshort}}, follow these steps: 
 
