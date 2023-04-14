@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-12"
+lastupdated: "2023-04-14"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Enabling event notifications for {{site.data.keyword.contdelivery_short}}
+# Enabling event notifications for toolchains
 {: #event-notifications-cd}
 
 As an administrator of {{site.data.keyword.contdelivery_full}}, you might want to send notifications of events in {{site.data.keyword.contdelivery_short}} to other users, or human destinations, by using email, SMS, or other supported delivery channels. Additionally, you might want to send these notifications of events to other applications to build logic by using event-driven programming using webhooks, for example. This is made possible by the integration between {{site.data.keyword.contdelivery_short}} and {{site.data.keyword.en_full}}.
