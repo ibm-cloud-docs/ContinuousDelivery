@@ -64,12 +64,12 @@ toc:
           - cd-ha-dr-mirrorgit.md
       - cd_create.md
       - cd_delete.md
-      - event-notifications-cd.md
       - topicgroup: 
           label: Toolchains
           topics: 
           - toolchains_working.md
           - toolchains_using.md
+          - event-notifications-cd.md
           - topicgroup: 
               label: Tool integrations
               topics: 
