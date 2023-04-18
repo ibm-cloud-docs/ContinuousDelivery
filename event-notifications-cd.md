@@ -166,7 +166,7 @@ The following table lists and describes each of the variables that are used in t
 | `{iam_token}` | A valid IAM bearer token. |
 | `{tool_name}` | The name of the tool integration. |
 | `{tool_parameters}` | Unique key-value pairs that represent the parameters to use to create the tool integration. For more information about the supported parameters for each tool integration, see [Tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=api#tool_integrations). |
-| `{tool_type_id}` | The unique, short name that represents the type of the tool integration. For a list of supported values, see [Tool integrations](ContinuousDelivery-integrations&interface=api#tool_integrations). |
+| `{tool_type_id}` | The unique, short name that represents the type of the tool integration. For a list of supported values, see [Tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=api#tool_integrations). |
 | `{toolchain_id}` | The toolchain in which to create the tool integration. |
 {: caption="Table 2. Variables for provisioning the tool integration with the API" caption-side="top"}
 
