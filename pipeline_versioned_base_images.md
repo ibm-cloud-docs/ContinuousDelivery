@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-04-17"
+lastupdated: "2023-04-18"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -3546,7 +3546,7 @@ To view the contents of version 2.32, from the running image, type `default_vers
 The {{site.data.keyword.cloud_notm}} CLI provides code risk analysis commands. You can use the {{site.data.keyword.cloud_notm}} CLI to analyze your code for vulnerabilities and compliance with certain rules. Code Risk Analyzer is available in all {{site.data.keyword.cloud_notm}} regions where toolchains are supported. For more information about Code Risk Analyzer, see [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
 {: tip}
 
-This image is the first version 2.x image that is built on Ubuntu version 20.04. If you need to remain on Ubuntu version 18.04, use the previous image version. This image updated its version of node.js to latest TLS (18.15.0). If you need to use a different version of node.js, use `nvm install v<node version>` at the beginning of your script. This image now contains the Terraform CLI.
+This image is the first version 2.x image that is built on Ubuntu version 20.04. If you need to remain on Ubuntu version 18.04, use the previous image version. This image updated its version of node.js to the latest TLS (18.15.0). If you need to use a different version of node.js, use `nvm install v<node version>` at the beginning of your script. This image now contains the Terraform CLI.
 {: important}
 
 This image includes the following tools:
