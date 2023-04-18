@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2023
 
-lastupdated: "2023-01-11"
+lastupdated: "2023-04-11"
 
 keywords: ibmcloud, resource, service instance, create, IBM Cloud, Terraform
 
@@ -66,7 +66,7 @@ You can have one active instance of {{site.data.keyword.contdelivery_short}} onl
 3. Create an instance of {{site.data.keyword.contdelivery_short}} within the targeted account, region, and resource group.
 
    ```sh
-   ibmcloud resource service-instance-create INSTANCE_NAME continuous-delivery PLAN REGION
+   ibmcloud resource service-instance-create INSTANCE_NAME continuous-delivery PLAN REGION -p ENCRYPTION
    ```
    {: pre}
 
@@ -75,6 +75,7 @@ The following table lists and describes each of the variables that are used in t
 | Variable | Description |
 |:---------|:------------|
 | `ACCOUNT` | The name or ID of the account in which to provision the service instance. To find the names and IDs of the available accounts, run `ibmcloud account list`. |
+| `ENCRYPTION` | Optional. To provision your service instance to use customer-managed encryption, append `-p '{"kms_info": {"id": <kms_instance_id>, "url": <kms_url>}, "kms_key": {"id": <kms_root_key_id>, "crn": <kms_transaction_crn>}}`. |
 | `INSTANCE_NAME` | The name for your service instance. |
 | `PLAN` | The name or ID of the pricing plan that you want to use. To find the names and IDs of the available plans, run `ibmcloud catalog service continuous-delivery`. |
 | `REGION` | The region in which to provision the service instance. For example, `us-south`. |
@@ -112,6 +113,7 @@ For more information about plan IDs or about how to update your service plan aft
        "target": "{region}",
        "resource_group": "{resource_group_id}",
        "resource_plan_id": "{plan_id}"
+       "parameters": "{parameters}"
      }'
    ```
    {: pre}
@@ -190,6 +192,7 @@ The following table lists and describes each of the variables that are used in t
 |:---------|:------------|
 | `{iam_api_key}` | Your IAM API key. |
 | `{instance_name}` | A name for your service instance. |
+| `{parameters}` | To provision your service instance to use customer-managed encryption, pass the following parameters: `'{"kms_info": {"id": <kms_instance_id>, "url": <kms_url>}, "kms_key": {"id": <kms_root_key_id>, "crn": <kms_transaction_crn>}}`. |
 | `{plan_id}` | The ID of the pricing plan that you want to use. |
 | `{region}` | The region in which to provision the service instance. For example, `us-south`. |
 | `{resource_group_id}` | The ID of the resource group in which to provision the service instance. To find the IDs of the available resource groups, run `ibmcloud resource groups`. |
@@ -224,6 +227,16 @@ For more information about creating service instances, see [Creating new resourc
    {: codeblock}
 
    For more information about `ibm_resource_instance`, see the argument reference details in the [Terraform Registry Documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance){: external}.
+   
+   To provision your service instance to use customer-managed encryption, add and populate the parameters attribute with your key management service instance ID and root key ID.
+   
+   ```terraform
+     parameters = {
+       kms_instance = <kms_instance_id>
+       kms_key = <kms_key>
+     }
+   ```
+   {: codeblock}
   
 3. Initialize the Terraform CLI.
 
