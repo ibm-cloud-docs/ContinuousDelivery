@@ -38,7 +38,7 @@ The following table lists the toolchain events.
 | `Pipeline run succeeded` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_success:1`  | This event is sent when either a Tekton pipeline run or a Classic pipeline stage completes successfully. |
 | `Pipeline run failed` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_fail:1` | This event is sent when either a Tekton pipeline run or a Classic pipeline stage completes with an error or a failure. | 
 | `Pipeline run cancelled` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_cancel:1` | This event is sent when either a Tekton pipeline run or a Classic pipeline is cancelled. | 
-{: caption="Table 1. Actions that generate event notifications" caption-side="bottom"
+{: caption="Table 1. Actions that generate event notifications" caption-side="bottom"}
 
 ## Enabling notifications
 {: #event-notifications-enable-cd}
