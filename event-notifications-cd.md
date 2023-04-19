@@ -15,10 +15,13 @@ subcollection: ContinuousDelivery
 # Enabling event notifications for toolchains
 {: #event-notifications-cd}
 
-As an administrator of toolchains, you might want to send notifications of events in a toolchain or a tool integration to other users, or human destinations, by using email, SMS, or other supported delivery channels. Also, you might want to send these notifications of events to other applications to build logic by using event-driven programming using webhooks, for example. This approach is made possible by the integration between toolchains and {{site.data.keyword.en_full}}.
+As an administrator of {{site.data.keyword.contdelivery_full}} toolchains, you might want to send notifications of events in a toolchain or a tool integration to other users, or human destinations, by using email, SMS, Slack, PagerDuty, or other supported delivery channels. Also, you might want to send these notifications of events to other applications to build logic by using event-driven programming using webhooks, for example. This approach is made possible by the integration between toolchains and {{site.data.keyword.en_full}}.
 {: shortdesc}
 
-To send information to {{site.data.keyword.en_short}}, you must add an {{site.data.keyword.en_short}} tool integration to your toolchain. For more information about working with {{site.data.keyword.en_short}}, see [Getting started with {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-getting-started).
+To send information to {{site.data.keyword.en_short}}, you must [add an {{site.data.keyword.en_short}} tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-integration) to your toolchain. For more information about working with {{site.data.keyword.en_short}}, see [Getting started with {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-getting-started).
+
+You can now distribute event notifications by using the [{{site.data.keyword.en_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-integration) tool integration. {{site.data.keyword.en_short}} is the preferred method for distributing notifications to Slack and other communication channels such as PagerDuty, email, SMS, push notifications, webhook, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}.
+{: tip}
 
 ## How events are collected and sent by toolchains
 {: #event-notifications-how-cd}
@@ -30,14 +33,17 @@ When an event of interest takes place in a toolchain or one of the supported too
 
 The following table lists the toolchain events.
 
+The `:1` characters that are appended to each subtype represent major version numbers.
+{: tip}
+
 | Event Name | Event Type | Subtype | Description |
 |:-----------|:----------------|:-----------------------|:--------------|
 | `Tool created` | `com.ibm.cloud.toolchain.toolchain` | `toolchain_bind:1`         | This event is sent when a tool integration is created and added to a toolchain. |
-| `Tool deleted` | `com.ibm.cloud.toolchain.toolchain` | `toolchain_bind:1` | This event is sent when a tool integration is deleted and removed from a toolchain. |
+| `Tool deleted` | `com.ibm.cloud.toolchain.toolchain` | `toolchain_unbind:1` | This event is sent when a tool integration is deleted and removed from a toolchain. |
 | `Pipeline run started` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_start:1` | This event is sent when either a Tekton pipeline run or a Classic pipeline stage starts. |
 | `Pipeline run succeeded` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_success:1`  | This event is sent when either a Tekton pipeline run or a Classic pipeline stage completes successfully. |
 | `Pipeline run failed` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_fail:1` | This event is sent when either a Tekton pipeline run or a Classic pipeline stage completes with an error or a failure. | 
-| `Pipeline run cancelled` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_cancel:1` | This event is sent when either a Tekton pipeline run or a Classic pipeline is cancelled. | 
+| `Pipeline run cancelled` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_cancel:1` | This event is sent when either a Tekton pipeline run or a Classic pipeline stage is cancelled. | 
 {: caption="Table 1. Actions that generate event notifications" caption-side="bottom"}
 
 ## Enabling notifications
@@ -169,7 +175,6 @@ The following table lists and describes each of the variables that are used in t
 | `{iam_token}` | A valid IAM bearer token. |
 | `{tool_name}` | The name of the tool integration. |
 | `{tool_parameters}` | Unique key-value pairs that represent the parameters to use to create the tool integration. For more information about the supported parameters for each tool integration, see [Tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=api#tool_integrations). |
-| `{tool_type_id}` | The unique, short name that represents the type of the tool integration. For a list of supported values, see [Tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=api#tool_integrations). |
 | `{toolchain_id}` | The toolchain in which to create the tool integration. |
 {: caption="Table 2. Variables for provisioning the tool integration with the API" caption-side="top"}
 
