@@ -35,8 +35,8 @@ Configure {{site.data.keyword.en_short}} to send critical events from toolchains
    b. In the Tool Integrations section, click **{{site.data.keyword.en_short}}**.
 
 1. Type the name that you want to display for this tool integration on the {{site.data.keyword.en_short}} card in your toolchain. This name is used to identify the tool integration in your toolchain.
-1. Select the instance of the **{{site.data.keyword.en_short}}** service that you want to use.
-1. Click **Create Integration**.
+1. Select the **{{site.data.keyword.en_short}}** instance to connect the toolchain to.
+1. Click **Create Integration** to add the {{site.data.keyword.en_short}} tool integration to your toolchain..
 1. On your Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.en_short}}**.
  
 ## Configuring {{site.data.keyword.en_short}} by using the API
