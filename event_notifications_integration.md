@@ -15,10 +15,13 @@ subcollection: ContinuousDelivery
 # Configuring {{site.data.keyword.en_short}}
 {: #event-notifications-integration}
 
-You can use the {{site.data.keyword.en_full_notm}} service to receive information about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Toolchains, Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like PagerDuty, Slack, email, SMS, push notifications, webhook, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}.
+You can use the {{site.data.keyword.en_full}} service to receive information about critical events that occur in your {{site.data.keyword.cloud}} account. You can filter and route event notifications from {{site.data.keyword.cloud_notm}} services like Toolchains, Monitoring, Security and Compliance Center, and Secrets Manager to communication channels like PagerDuty, Slack, email, SMS, push notifications, webhook, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}.
 {: shortdesc}
 
-By connecting a toolchain to an {{site.data.keyword.en_short}} service instance, the {{site.data.keyword.en_short}} tool integration enables the toolchain and its associated tool integration instances to send events to any of the supported destinations.
+Before you configure an {{site.data.keyword.en_short}} tool integration, make sure that you provision an instance of the [{{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-en-create-en-instance) service.
+{: important}
+
+By connecting a toolchain to an {{site.data.keyword.en_short}} service instance, the {{site.data.keyword.en_short}} tool integration enables the toolchain and its associated tool integration instances to send events to any of the destinations that are supported by the {{site.data.keyword.en_short}} service.
 
 Make sure that the selected {{site.data.keyword.en_short}} service instance has an [IAM authorization policy](/iam/authorizations/grant) that allows the toolchain to send events to this service instance. For more information about granting authorization with the {{site.data.keyword.en_short}} service instance, see [Why am I denied permission to integrate an Event Notifications instance?](/docs/event-notifications?topic=event-notifications-troubleshoot-integrate).
 {: important}
