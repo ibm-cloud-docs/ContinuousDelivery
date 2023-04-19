@@ -21,7 +21,7 @@ Jenkins is an open source, server-based tool that builds and tests software cont
 Before you create a Jenkins tool integration, you must have a Jenkins server.
 {: important}
 
-With the Jenkins tool integration, you can send your Jenkins job notifications to other tools in your toolchain, such as {{site.data.keyword.en_full}}, Slack, and PagerDuty. To trace code in deployments, you can add deployment messages to your Git commits and your related Git or JIRA issues. You can also view your deployments on the Toolchain Connections page. You can feed test results to {{site.data.keyword.DRA_short}}, add automated quality gates, and track your deployment risk.
+With the Jenkins tool integration, you can send your Jenkins job notifications to other tools in your toolchain, such as Slack, and PagerDuty. To trace code in deployments, you can add deployment messages to your Git commits and your related Git or JIRA issues. You can also view your deployments on the Toolchain Connections page. You can feed test results to {{site.data.keyword.DRA_short}}, add automated quality gates, and track your deployment risk.
 
 Configure Jenkins to automate the continuous building, testing, and deployment of your apps:
 
