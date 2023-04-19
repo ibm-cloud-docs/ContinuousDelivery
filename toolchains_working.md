@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2015, 2023
-lastupdated: "2023-03-13"
+lastupdated: "2023-04-19"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM, 
 
@@ -89,10 +89,14 @@ You can use a template as a starting point to [create a toolchain](https://cloud
 
    * The toolchain is created.
    * If you configured Delivery Pipeline, the pipelines are created and triggered.
+   * If you configured {{site.data.keyword.en_short}}, the toolchain is set up to send event notifications to the {{site.data.keyword.en_short}} service that you specified.
    * If you configured Sauce Labs, the toolchain is set up to add Sauce Labs test jobs to the pipelines.
    * If you configured PagerDuty, the toolchain is set up to send alert notifications to the PagerDuty service that you specified.
    * If you configured Slack, the toolchain is set up to send notifications about deployment status to the Slack channel that you specified.
    * If you configured a source code tool integration such as GitHub, the sample GitHub repo is cloned into your GitHub account.
+
+   You can now distribute event notifications by using the [{{site.data.keyword.en_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-integration) tool integration. {{site.data.keyword.en_full_notm}} is the preferred method for distributing notifications to PagerDuty and other communication channels such as Slack, email, SMS, push notifications, webhook, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}. For more information about using {{site.data.keyword.en_short}}, see [Enabling event notifications for toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd).
+   {: tip}
 
 ## Creating a toolchain from an app by using the console
 {: #creating_a_toolchain_from_an_app}
