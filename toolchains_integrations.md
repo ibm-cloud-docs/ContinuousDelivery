@@ -524,7 +524,7 @@ If you are using the [{{site.data.keyword.contdelivery_short}} Toolchain API to 
 |[{{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) 		|pipeline | ![Checkmark icon](../icons/checkmark-icon.svg) 		|
 |[{{site.data.keyword.deliverypipeline}} Private Worker](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-privateworker)			|private_worker |		|
 |[{{site.data.keyword.DRA_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-dra)		|draservicebroker | ![Checkmark icon](../icons/checkmark-icon.svg)			|
-|[{{site.data.keyword.en_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd)	|eventnotifications |		|
+|[{{site.data.keyword.en_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd)	|eventnotifications | ![Checkmark icon](../icons/checkmark-icon.svg)		|
 |[{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-grit)	|hostedgit |		|
 |[GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-github)		|githubconsolidated |		|
 |[GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-gitlab)		|gitlab |		|
