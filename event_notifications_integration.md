@@ -36,7 +36,7 @@ Configure {{site.data.keyword.en_short}} to send critical events from toolchains
 
 1. Type the name that you want to display for this tool integration on the {{site.data.keyword.en_short}} card in your toolchain. This name is used to identify the tool integration in your toolchain.
 1. Select the **{{site.data.keyword.en_short}}** instance to connect the toolchain to.
-1. Click **Create Integration** to add the {{site.data.keyword.en_short}} tool integration to your toolchain..
+1. Click **Create Integration** to add the {{site.data.keyword.en_short}} tool integration to your toolchain.
 1. On your Toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.en_short}}**.
 
 For more information about how to configure {{site.data.keyword.en_short}} by using the API or Terraform, see [Enabling notifications](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd&interface=api&code=curl#event-notifications-enable-cd).
