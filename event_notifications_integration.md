@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-04-19"
 
 keywords: tool integrations, IBM Cloud Public, Event Notifications
 
@@ -19,6 +19,9 @@ You can use the {{site.data.keyword.en_full_notm}} service to receive informatio
 {: shortdesc}
 
 By connecting a toolchain to an {{site.data.keyword.en_short}} service instance, the {{site.data.keyword.en_short}} tool integration enables the toolchain and its associated tool integration instances to send events to any of the supported destinations.
+
+Make sure that the selected {{site.data.keyword.en_short}} service instance has an [IAM authorization policy](/iam/authorizations/grant) that allows the toolchain to send events to this service instance. For more information about granting authorization with the {{site.data.keyword.en_short}} service instance, see [Why am I denied permission to integrate an Event Notifications instance?](/docs/event-notifications?topic=event-notifications-troubleshoot-integrate).
+{: important}
 
 Configure {{site.data.keyword.en_short}} to send critical events from toolchains and tool integration instances:
 
