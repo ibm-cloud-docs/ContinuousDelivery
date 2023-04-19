@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-04-19"
 
-keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Git Repos and Issue Tracking, GitHub, GitLab, Hashicorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
+keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Event Notifications, Git Repos and Issue Tracking, GitHub, GitLab, Hashicorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
 subcollection: ContinuousDelivery
 
@@ -524,6 +524,7 @@ If you are using the [{{site.data.keyword.contdelivery_short}} Toolchain API to 
 |[{{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) 		|pipeline | ![Checkmark icon](../icons/checkmark-icon.svg) 		|
 |[{{site.data.keyword.deliverypipeline}} Private Worker](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-privateworker)			|private_worker |		|
 |[{{site.data.keyword.DRA_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-dra)		|draservicebroker | ![Checkmark icon](../icons/checkmark-icon.svg)			|
+|[{{site.data.keyword.en_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd)	|eventnotifications |		|
 |[{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-grit)	|hostedgit |		|
 |[GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-github)		|githubconsolidated |		|
 |[GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-gitlab)		|gitlab |		|
