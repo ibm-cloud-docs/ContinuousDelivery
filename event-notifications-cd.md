@@ -254,7 +254,7 @@ The properties that are sent to {{site.data.keyword.en_short}} vary depending on
       "name": "<user>",
       "email": "<user_email>",
       "iam_id": "<iam_id>"
-   }.
+   },
    "toolchain.instance": {
       "crn": "crn:v1:bluemix:public:toolchain:<region>:a/<account_id>:<toolchain_id>::",
       "href": "https://api.<region>.devops.cloud.ibm.com/toolchain/v2/toolchains/<toolchain_id>",
