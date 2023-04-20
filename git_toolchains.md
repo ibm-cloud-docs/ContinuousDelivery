@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-04-19"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, Git source control, authentication, GitHub 
 
@@ -40,15 +40,19 @@ You can use a template as a starting point to [create a toolchain](https://cloud
    * The resource group to create the toolchain in. If you want to use a different resource group, select it from the list of available resource groups.
    * The provider for your source repository, such as GitHub or GitLab. If you want to use a different source provider, select it from the list of available repos.
 
-1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. For more information about configuring the tool integrations, see [Configuring tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations). 
+1. In the Tool Integrations section, select each tool integration that you want to configure for your toolchain. For more information about configuring the tool integrations, see [Configuring tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on which toolchain template you selected. For example, when you create a Microservices toolchain on {{site.data.keyword.cloud_notm}} Public, these steps are run:
 
    * The toolchain is created.
    * If you configured Delivery Pipeline, the pipelines are created and triggered.
    * If you configured Sauce Labs, the toolchain is set up to add Sauce Labs test jobs to the pipelines.
+   * If you configured {{site.data.keyword.en_short}}, the toolchain is set up to send event notifications to the {{site.data.keyword.en_short}} service that you specified.
    * If you configured PagerDuty, the toolchain is set up to send alert notifications to the PagerDuty service that you specified.
    * If you configured Slack, the toolchain is set up to send notifications about deployment status to the Slack channel that you specified.
    * If you configured a source code tool integration such as GitHub, the sample GitHub repo is cloned into your GitHub account.
+
+   You can now distribute event notifications by using the [{{site.data.keyword.en_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-integration) tool integration. {{site.data.keyword.en_full_notm}} is the preferred method for distributing notifications to PagerDuty and other communication channels such as Slack, email, SMS, push notifications, webhook, Microsoft&reg; Teams, ServiceNow, and {{site.data.keyword.IBM_notm}} {{site.data.keyword.openwhisk_short}}. For more information about using {{site.data.keyword.en_short}}, see [Enabling event notifications for toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd).
+   {: tip}
 
 ## Creating a toolchain from a template with {{site.data.keyword.gitrepos}} or GitHub with the API
 {: #creating_a_toolchain_git_api}
