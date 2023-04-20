@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-11-25"
+  years: 2021, 2023
+lastupdated: "2023-03-27"
 
 keywords: tool integrations, IBM Cloud Public, Security and Compliance Center
 
@@ -22,6 +22,11 @@ Currently, you can use this tool integration only with toolchains that are creat
 {: important}
 
 This tool integration verifies the security and compliance posture of your toolchain by identifying the location of the evidence locker and the path to the evidence summary. For more information about evidence format and structure, see [Evidence](/docs/devsecops?topic=devsecops-devsecops-evidence). You can also configure a pipeline task to trigger security and compliance scans by using this tool.
+
+{{site.data.keyword.compliance_short}} supports two scan types: the older hybrid cloud scan and the new cloud scan. Both of these scan types can find toolchains and associated evidence, as it is configured in the **Name**, **Evidence repository name or URL**, and **Evidence namespace** fields within the {{site.data.keyword.compliance_short}} tool integration.
+
+The **trigger validation scan after deploy** field, and the other three trigger scan option fields work only with hybrid cloud scans.
+{: tip}
 
 Configure {{site.data.keyword.compliance_short}} to embed security checks into your workflows to monitor for security and compliance:
 
@@ -66,7 +71,7 @@ You must specify the `tool_type_id` property in the request body with the `secur
 | name | required, updatable | String | name | The name of this tool integration. |
 | profile | optional, updatable | String | profile | The name of a {{site.data.keyword.compliance_short}} profile. You can use the predefined {{site.data.keyword.cloud_notm}} Security Best Practices v1.0.0 profile that contains the DevSecOps toolchain goals. Or, you can use a user-authored customized profile that is configured to contain those goals. When the `trigger_scan` parameter is set to `enabled`, the Validation scan uses the controls and goals in the configured profile. If the configuration contains a profile that does not check the DevSecOps toolchain goals, it might incorrectly indicate the toolchain status as `passed` even though some of the DevSecOps scans failed. This parameter is relevant only when the `trigger_scan` parameter is `enabled`. |
 | scope | optional, updatable | String | scope | The name of a {{site.data.keyword.compliance_short}} scope that was previously created in that service. When the `trigger_scan` parameter is set to `enabled`, the Validation scan scans all of the resources in that scope. Select a scope that contains this toolchain so that the scan finds the evidence that was recently updated by the DevSecOps `pipeline-run`. This parameter is relevant only when the `trigger_scan` parameter is `enabled`. |
-| trigger_scan | optional, updatable | String | trigger_scan | Set to `enabled` to indicate that a DevSecOps pipeline task must trigger a {{site.data.keyword.compliance_short}} run of a Validation scan. Each scan might incur charges. When enabled, the `api_key`, `scope`, and `profile` parameters are required to trigger that scan. |
+| trigger_scan | optional, updatable | String | trigger_scan | Set to `enabled` to indicate that a DevSecOps pipeline task must trigger a {{site.data.keyword.compliance_short}} run of a hybrid cloud validation scan. Each scan might incur charges. When enabled, the `api_key`, `scope`, and `profile` parameters are required to trigger that scan. |
 {: caption="Table 1. {{site.data.keyword.compliance_short}} tool integration parameters" caption-side="bottom"}
 
 ## Learn more about {{site.data.keyword.compliance_short}}
