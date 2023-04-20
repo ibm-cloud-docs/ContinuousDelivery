@@ -24,8 +24,8 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #ContinuousDelivery-apr2023}
 {: release-note}
 
-{{site.data.keyword.contdelivery_full}} toolchains are now integrated with the {{site.data.keyword.en_full}} service.
-:   [Enabling {{site.data.keyword.en_short}} for toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd){: external}
+{{site.data.keyword.contdelivery_short}} toolchains are now integrated with the {{site.data.keyword.en_full}} service.
+:   [Enabling {{site.data.keyword.en_short}} for toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd)
 
 ## 21 February 2023
 {: #ContinuousDelivery-feb2123}
