@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-26"
+lastupdated: "2023-04-19"
 
 keywords: tool integrations, IBM Cloud Public, Jenkins
 
