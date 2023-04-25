@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-03-06"
+lastupdated: "2023-04-25"
 
 keywords: tool integrations, IBM Cloud Public, IBM Secrets Manager
 
@@ -51,7 +51,7 @@ Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets
 1. Click **Create Integration**.
 
 ### Applying secrets
-{: #secretsmanager_apply_secrets}
+{: #secretsmanager_apply_secrets_name}
 
 After your {{site.data.keyword.secrets-manager_short}} tool integration is configured, you can use it to apply secrets anywhere that they are needed by the toolchain. This tool integration and the Secrets dialog box support both the Arbitrary and the IAM credentials secret types.
 
@@ -137,7 +137,7 @@ Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets
 1. Click **Create Integration**.
 
 ### Applying secrets
-{: #secretsmanager_apply_secrets}
+{: #secretsmanager_apply_secrets_crn}
 
 After you configure the {{site.data.keyword.secrets-manager_short}} tool integration and [authorize your toolchain](#authorizing-your-toolchain-to-access-secrets) to access secrets in that account, you can use it to apply secrets anywhere that they are required by the toolchain. 
 
