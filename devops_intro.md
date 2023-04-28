@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2015, 2023
-lastupdated: "2023-04-19"
+lastupdated: "2023-04-28"
 
 keywords: IBM Cloud DevOps, enterprise application Developer, IBM Cloud Garage Method, DevOps toolchain, DevSecOps
 
@@ -14,9 +14,6 @@ subcollection: ContinuousDelivery
 
 # {{site.data.keyword.cloud_notm}} DevOps
 {: #devops_intro}
-
-The {{site.data.keyword.cloud}} starter kits are deprecated. As of 18 February 2023, new applications cannot be created, and the starter kits will be removed from the catalog. For current users, existing apps will continue to operate and will be supported until the End of Support date on 31 March 2023. On this date, the Applications Details page will no longer be accessible, but you will still be able to access your application code and toolchains through your [{{site.data.keyword.cloud_notm}} Resource List](https://cloud.ibm.com/resources). For more information, see the [deprecation announcement](https://www.ibm.com/cloud/blog/announcements/deprecation-of-ibm-cloud-starter-kits){: external}.
-{: deprecated}
 
 Delivering software and services at the speed the market demands requires teams to iterate and experiment rapidly. They must deploy new versions frequently, driven by feedback and data. The most successful cloud development teams adopt modern DevSecOps culture and practices, embrace cloud-native architectures, and assemble toolchains from best-in-class tools to unleash their productivity. Doing these things quickly is a key competitive advantage.
 
