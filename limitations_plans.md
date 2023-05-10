@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2023
-lastupdated: "2023-05-05"
+lastupdated: "2023-05-10"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -37,7 +37,7 @@ You can have only one Lite service per account. It is recommended that you use t
 * Users who manipulate, trigger (either directly in the user interface or indirectly by committing to a repo), or view the status of a delivery pipeline.
 * Users who interact with {{site.data.keyword.DRA_short}}.
 
-If your toolchain integrates {{site.data.keyword.gitrepos}} projects in the `open-toolchain` group that is provided by IBM, such as in `_REGION_.git.cloud.ibm.com/open-toolchain`, members of these projects are not counted as authorized users of your toolchains.
+If your toolchain integrates {{site.data.keyword.gitrepos}} projects in the `open-toolchain` group that is provided by IBM, such as in `us-south.git.cloud.ibm.com/open-toolchain`, members of these projects are not counted as authorized users of your toolchains.
 {: exception}
 
 The Lite plan is subject to limits. For more information about the Lite plan and the Professional plan, see the [service catalog](https://cloud.ibm.com/catalog/services/continuous-delivery){: external}.
