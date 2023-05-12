@@ -269,3 +269,4 @@ toc:
           - troubleshoot_insights.md
           - troubleshoot_git.md
           - troubleshoot_toolchains.md
+          - troubleshoot_toolchain_events.md
