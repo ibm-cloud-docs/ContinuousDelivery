@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-05-15"
 
 keywords: endpoints, authentication, IBM Cloud Public
 
@@ -10,15 +10,15 @@ subcollection: ContinuousDelivery
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}
-
-# Endpoints that do not require authentication in {{site.data.keyword.contdelivery_short}}
-{: #non-auth-endpoints-cd}
-
-{{site.data.keyword.contdelivery_full}} provides many internet-accessible endpoints. Although most endpoints authenticate the caller before processing requests, some endpoints intentionally do not authenticate the caller.
+{{site.data.keyword.attribute-definition-list}}  
+  
+# Endpoints that do not require authentication in {{site.data.keyword.contdelivery_short}}  
+{: #non-auth-endpoints-cd}  
+  
+{{site.data.keyword.contdelivery_full}} provides many internet-accessible endpoints. Although most endpoints authenticate the caller before processing requests, some endpoints intentionally do not authenticate the caller.  
 {: shortdesc}
 
-The following inventory of endpoints that do not require authentication is organized by the major components of the {{site.data.keyword.contdelivery_short}} service.
+The following inventory of endpoints that do not require authentication is organized by the major components of the {{site.data.keyword.contdelivery_short}} service.  
 
 {{site.data.keyword.contdelivery_short}} is a regional service. In each of the documented endpoints, `[region]` represents the ID of [any region in which {{site.data.keyword.contdelivery_short}} is available](https://cloud.ibm.com/docs/overview?topic=overview-locations#mzr-table). For example, regions include `us-south`, `us-east`, `eu-gb`, and `jp-tok`.
 {: tip}
@@ -112,6 +112,17 @@ The following table lists the {{site.data.keyword.gitrepos}} endpoints that do n
 | `https://hosted-git-monitor.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 {: caption="Table 4. {{site.data.keyword.gitrepos}}" caption-side="top"}
 
+## Metrics
+{: #metrics}
+
+The following table lists the Metrics endpoints that do not require authentication:
+
+|Endpoint|Description|
+|:-------------------------------------------|:------------------|
+| `https://otc-metrics-listener.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
+| `https://otc-metrics-listener.[region].devops.cloud.ibm.com/version` | Get the version of the service component |
+{: caption="Table 5. Metrics" caption-side="top"}
+
 ## Third-party tool integrations
 {: #third-party_tool_integrations}
 
@@ -136,7 +147,7 @@ The following table lists the third-party tool integration endpoints that do not
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/status` | Get the status of the Tools Integration Broker service component |
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/toolint-broker/api/v1/form` | Forwards the Authenticate, Populate, and Validate (APV) requests to the appropriate broker |
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-{: caption="Table 5. Third-party tool integrations" caption-side="top"}
+{: caption="Table 6. Third-party tool integrations" caption-side="top"}
 
 ## Toolchain platform
 {: #toolchain_platform}
@@ -148,8 +159,6 @@ The following table lists the Toolchain platform endpoints that do not require a
 | `https://otc-api.[region].devops.cloud.ibm.com/` | Get the status of the service component |
 | `https://otc-api.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://otc-api.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-| `https://otc-metrics-listener.[region].devops.cloud.ibm.com/status` | Get the current status of the service component |
-| `https://otc-metrics-listener.[region].devops.cloud.ibm.com/version` | Get the version of the service component |
 | `https://otc-status.[region].devops.cloud.ibm.com/clusterhealth` | Get the cluster health check status for service component |
 | `https://otc-status.[region].devops.cloud.ibm.com/dependencies` | Get the otc dependency status |
 | `https://otc-status.[region].devops.cloud.ibm.com/monitoring/cache/current/{service}` | Get the cached status of the service component |
@@ -166,4 +175,4 @@ The following table lists the Toolchain platform endpoints that do not require a
 | `https://otc-ui.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 | `https://otc-webhook-manager.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://otc-webhook-manager.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-{: caption="Table 6. Toolchain platform" caption-side="top"}
+{: caption="Table 7. Toolchain platform" caption-side="top"}
