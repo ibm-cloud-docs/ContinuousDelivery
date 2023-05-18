@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-20"
+lastupdated: "2023-05-17"
 
 keywords: tool integrations, IBM Cloud Public, Event Notifications
 
@@ -43,7 +43,8 @@ The `:1` characters that are appended to each subtype represent major version nu
 | `Pipeline run started` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_start:1` | This event is sent when either a Tekton pipeline run or a Classic pipeline stage starts. |
 | `Pipeline run succeeded` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_success:1`  | This event is sent when either a Tekton pipeline run or a Classic pipeline stage completes successfully. |
 | `Pipeline run failed` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_fail:1` | This event is sent when either a Tekton pipeline run or a Classic pipeline stage completes with an error or a failure. | 
-| `Pipeline run cancelled` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_cancel:1` | This event is sent when either a Tekton pipeline run or a Classic pipeline stage is cancelled. | 
+| `Pipeline run cancelled` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_cancel:1` | This event is sent when either a Tekton pipeline run or a Classic pipeline stage is cancelled. |
+| `Pipeline run error` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_error:1` | This event is sent when a Tekton pipeline run encounters an error and probably did not complete successfully. |
 {: caption="Table 1. Actions that generate event notifications" caption-side="bottom"}
 
 ## Enabling notifications
