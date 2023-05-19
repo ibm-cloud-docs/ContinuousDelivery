@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-17"
+lastupdated: "2023-05-19"
 
 keywords: tool integrations, IBM Cloud Public, Event Notifications
 
@@ -42,9 +42,9 @@ The `:1` characters that are appended to each subtype represent major version nu
 | `Tool deleted` | `com.ibm.cloud.toolchain.toolchain` | `toolchain_unbind:1` | This event is sent when a tool integration is deleted and removed from a toolchain. |
 | `Pipeline run started` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_start:1` | This event is sent when either a Tekton pipeline run or a Classic pipeline stage starts. |
 | `Pipeline run succeeded` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_success:1`  | This event is sent when either a Tekton pipeline run or a Classic pipeline stage completes successfully. |
-| `Pipeline run failed` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_fail:1` | This event is sent when either a Tekton pipeline run or a Classic pipeline stage completes with an error or a failure. | 
+| `Pipeline run failed` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_fail:1` | This event is sent when either a Tekton pipeline run or a Classic pipeline stage completes with a failure status. For example, this event is sent when a deployment is attempted, but fails to complete successfully. |
 | `Pipeline run cancelled` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_cancel:1` | This event is sent when either a Tekton pipeline run or a Classic pipeline stage is cancelled. |
-| `Pipeline run error` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_error:1` | This event is sent when a Tekton pipeline run encounters an error and probably did not complete successfully. |
+| `Pipeline run error` | `com.ibm.cloud.toolchain.pipeline` | `pipeline_error:1` | This event is sent when a Tekton pipeline run encounters an error and probably did not complete successfully. This event is primarily used for infrastructure and configuration issues, such as when malformed Tekton prevents the pipeline run from starting. |
 {: caption="Table 1. Actions that generate event notifications" caption-side="bottom"}
 
 ## Enabling notifications
