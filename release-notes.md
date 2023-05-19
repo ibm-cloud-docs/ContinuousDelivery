@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-04-20"
+lastupdated: "2023-05-19"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -20,12 +20,26 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
 {: shortdesc}
 
+## 19 May 2023
+{: #ContinuousDelivery-may1923}
+{: release-note}
+
+{{site.data.keyword.gitrepos}}
+:   Upgraded to [GitLab 15.9.8](https://about.gitlab.com/releases/2023/05/10/security-release-gitlab-15-11-3-released/){: external}.
+
 ## 20 April 2023
 {: #ContinuousDelivery-apr2023}
 {: release-note}
 
 {{site.data.keyword.contdelivery_short}} toolchains are now integrated with the {{site.data.keyword.en_full}} service.
 :   [Enabling {{site.data.keyword.en_short}} for toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd)
+
+## 10 April 2023
+{: #ContinuousDelivery-apr1023}
+{: release-note}
+
+{{site.data.keyword.gitrepos}}
+:   Upgraded to [GitLab 15.8.5](https://about.gitlab.com/releases/2023/03/30/security-release-gitlab-15-10-1-released/){: external}.
 
 ## 21 February 2023
 {: #ContinuousDelivery-feb2123}
