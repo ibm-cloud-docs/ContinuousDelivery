@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-03-24"
+  years: 2019, 2023
+lastupdated: "2023-05-25"
 
 keywords: devops insights, quality, dashboard, trends, data sets, configure data, quality data, managing data sets, code coverage, test, tests, verification, app, sonarqube
 
@@ -10,14 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing data sets
 {: #adding-data-sets}
@@ -61,7 +54,7 @@ The following are the seven pre-defined tags that are provided by {{site.data.ke
 | Pre-defined Data Set Tag | Display label            | Data Type             | Supported Data Formats                                     |
 |--------------------------|-------------------------------|-----------------------|------------------------------------------------------------|
 | `unittest`                 | Unit Tests                    | Test Case             | JUnit (JSON), xUnit (xml), Mocha (JSON), KarmaMocha (JSON) |
-| `code`                     | Code Coverage                 | Code Coverage         | Cobertura (xml), lcov (info), Istanbul (JSON), JaCoCo (xml)|
+| `code`                     | Code Coverage                 | Code Coverage         | Cobertura (xml), lcov (info), JaCoCo (xml)|
 | `fvt`                      | Functional Verification Tests | Test Case             | JUnit (JSON), xUnit (xml), Mocha (JSON), KarmaMocha (JSON) |
 | `sonarqube`                | SonarQube                     | SonarQube             | SonarQube                                                  |
 | `dynamicsecurityscan`      | Dynamic Security Scan         | Dynamic Security Scan | {{site.data.keyword.Bluemix}} Application Security (xml)   |
@@ -73,7 +66,7 @@ The following are the seven pre-defined tags that are provided by {{site.data.ke
 ## Adding custom data sets
 {: #custom-data-sets}
 
-You can add your own custom data sets. Custom data sets support JUnit or XUnit, Mocha, Cobertura, lcov, Istanbul, and JaCoCo. To add custom data sets, use the following steps:
+You can add your own custom data sets. Custom data sets support JUnit or XUnit, Mocha, Cobertura, lcov, and JaCoCo. To add custom data sets, use the following steps:
 
 1. Click the **menu** icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
 2. On the Toolchains page, select your toolchain.

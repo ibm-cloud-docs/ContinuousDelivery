@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-03-25"
+  years: 2019, 2023
+lastupdated: "2023-05-25"
 
 keywords: devops insights, publish, test, results, cli, code coverage, tests, verification, app, sonarqube, dashboard
 
@@ -10,13 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:pre: .pre}
+{{site.data.keyword.attribute-definition-list}}
 
 # Publishing test results
 {: #publish-test-cli}
@@ -51,7 +45,7 @@ ibmcloud doi testrecord-publish --logicalappname="$MY_APP_NAME" --buildnumber="$
 
 In the example script, `testrecord-publish` specifies that the command uploads test records. The `--filelocation` flag indicates the location of the test results file relative to the root directory of the job. The `--type` flag indicates the type of test result.
 
-The following example script runs tests and then uploads Mocha results and Istanbul code coverage results to {{site.data.keyword.DRA_short}}:
+The following example script runs tests and then uploads Mocha results to {{site.data.keyword.DRA_short}}:
 
 ```text
 # Run tests and generate a test results file here.
@@ -89,7 +83,7 @@ Test records must provide data in one of the following supported formats:
 |------------------------------|--------------------------------------------------------------------------|
 | Unit test                    | Mocha, xUnit, Karma/Mocha                                                |
 | Functional verification test | Mocha, xUnit, Karma/Mocha                                                |
-| Code coverage                | Cobertura, Istanbul (json-summary report format), lcov, JaCoCo           |
+| Code coverage                | Cobertura, lcov, JaCoCo                                                  |
 | SonarQube                    | Scan data that is provided by SonarQube scans                            |
 | Static AppScan              | Static App Scans that are provided by IBM Application Security on Cloud  |
 | Dynamic AppScan             | Dynamic App Scans that are provided by IBM Application Security on Cloud |

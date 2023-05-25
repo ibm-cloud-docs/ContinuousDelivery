@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2022
-lastupdated: "2022-03-25"
+  years: 2016, 2023
+lastupdated: "2023-05-25"
 
 keywords: devops insights, create, policy, rule, gate, code coverage, test, tests, gate failing, verification, app, dashboard
 
@@ -10,12 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:download: .download}
+{{site.data.keyword.attribute-definition-list}}
 
 # Gate to ensure quality
 {: #gate-ensure-quality}
@@ -23,7 +18,7 @@ subcollection: ContinuousDelivery
 A gate policy is a set of rules that can be used to ensure that a build meets certain quality criteria before being deployed to your chosen environment. Gates check if your test results comply with a defined policy. If the policy is not met, the {{site.data.keyword.DRA_short}} gate fails by default and the build will not deploy. You can also configure gates to act in an advisory role to allow pipeline progression even after failure. 
 {: shortdesc}
 
-{{site.data.keyword.DRA_full}} supports many popular formats for test data like unit tests, functional verification tests, and custom data sets, {{site.data.keyword.DRA_short}} supports JUnit or XUnit, and Mocha. For code coverage and custom data sets, {{site.data.keyword.DRA_short}} supports Cobertura, lcov, Istanbul, and JaCoCo. You can use any tool within your toolchain to run your unit tests, code coverage tests, functional verification tests, and then capture your test results in any one of the supported formats.  
+{{site.data.keyword.DRA_full}} supports many popular formats for test data like unit tests, functional verification tests, and custom data sets, {{site.data.keyword.DRA_short}} supports JUnit or XUnit, and Mocha. For code coverage and custom data sets, {{site.data.keyword.DRA_short}} supports Cobertura, lcov, and JaCoCo. You can use any tool within your toolchain to run your unit tests, code coverage tests, functional verification tests, and then capture your test results in any one of the supported formats.  
 
 For more information about policies, see [Defining policies and rules](/docs/ContinuousDelivery?topic=ContinuousDelivery-defining-policies-rules).
 
