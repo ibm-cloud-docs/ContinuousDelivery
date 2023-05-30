@@ -100,7 +100,7 @@ You can add the {{site.data.keyword.en_short}} tool integration to your toolchai
    curl -X POST --location --header "Authorization: Bearer {iam_token}" \
      --header "Accept: application/json" \
      --header "Content-Type: application/json" \
-     --data '{ "name": "{tool_name}", "tool_type_id": "eventnotifications", "parameters": {tool_parameters} }' \
+     --data '{ "name": "{tool_name}", "tool_type_id": "eventnotifications", "parameters": { "name": {event_notifications_tool_integration_name}, "instance-crn": {event_notifications_service_crn} } }' \
      "{base_url}/toolchains/{toolchain_id}/tools"
    ```
    {: pre}
