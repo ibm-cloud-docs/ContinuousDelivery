@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-19"
+lastupdated: "2023-05-30"
 
 keywords: tool integrations, IBM Cloud Public, Event Notifications
 
@@ -100,7 +100,7 @@ You can add the {{site.data.keyword.en_short}} tool integration to your toolchai
    curl -X POST --location --header "Authorization: Bearer {iam_token}" \
      --header "Accept: application/json" \
      --header "Content-Type: application/json" \
-     --data '{ "name": "{tool_name}", "tool_type_id": "eventnotifications", "parameters": {tool_parameters} }' \
+     --data '{ "name": "{tool_name}", "tool_type_id": "eventnotifications", "parameters": { "name": {event_notifications_tool_integration_name}, "instance-crn": {event_notifications_service_crn} } }' \
      "{base_url}/toolchains/{toolchain_id}/tools"
    ```
    {: pre}
@@ -111,11 +111,15 @@ You can add the {{site.data.keyword.en_short}} tool integration to your toolchai
    const toolchainService = CdToolchainV2.newInstance();
    ...
    (async() => {
+      const toolParameters = {
+         "name": {event_notifications_tool_integration_name},
+         "instance-crn": {event_notifications_service_crn}
+      }
       const toolPrototypeModel = {
          toolchainId: {toolchain_id},
          toolTypeId: "eventnotifications",
          name: {tool_name},
-         parameters: {tool_parameters}
+         parameters: toolParameters
       };
       const response = await toolchainService.createTool(toolPrototypeModel);
    })();
@@ -131,9 +135,13 @@ You can add the {{site.data.keyword.en_short}} tool integration to your toolchai
    ...
    toolchainClientOptions := &cdtoolchainv2.CdToolchainV2Options{}
    toolchainClient, err := cdtoolchainv2.NewCdToolchainV2UsingExternalConfig(toolchainClientOptions)
+   toolParameters := map[string]interface{}{
+      "name": {event_notifications_tool_integration_name},
+      "instance-crn": {event_notifications_service_crn},
+   }
    createToolOptions := toolchainClient.NewCreateToolOptions({toolchain_id}, "eventnotifications")
    createToolOptions.SetName({tool_name})
-   createToolOptions.SetParameters({tool_parameters})
+   createToolOptions.SetParameters(toolParameters)
    tool, response, err := toolchainClient.CreateTool(createToolOptions)
    ```
    {: codeblock}
@@ -143,11 +151,14 @@ You can add the {{site.data.keyword.en_short}} tool integration to your toolchai
    from ibm_continuous_delivery.cd_toolchain_v2 import CdToolchainV2
    ...
    toolchain_service = CdToolchainV2.new_instance()
+   tool_parameters = {}
+   tool_parameters["name"] = {event_notifications_tool_integration_name}
+   tool_parameters["instance-crn"] = {event_notifications_service_crn}
    tool = toolchain_service.create_tool(
       name = {tool_name},
       toolchain_id = {toolchain_id},
       tool_type_id = "eventnotifications",
-      parameters = {tool_parameters}
+      parameters = tool_parameters
    )
    ```
    {: codeblock}
@@ -158,9 +169,12 @@ You can add the {{site.data.keyword.en_short}} tool integration to your toolchai
    import com.ibm.cloud.continuous_delivery.cd_toolchain.v2.model.*;
    ...
    CdToolchain toolchainService = CdToolchain.newInstance();
+   HashMap<String, Object> toolParameters = new HashMap<>();
+   toolParameters.put("name", {event_notifications_tool_integration_name});
+   toolParameters.put("instance-crn", {event_notifications_service_crn});
    CreateToolOptions createToolOptions = new CreateToolOptions.Builder()
       .name({tool_name})
-      .parameters({tool_parameters})
+      .parameters(toolParameters)
       .toolchainId({toolchain_id})
       .toolTypeId("eventnotifications")
       .build();
@@ -170,11 +184,27 @@ You can add the {{site.data.keyword.en_short}} tool integration to your toolchai
    {: codeblock}
    {: java}
 
+The following table lists and describes each of the variables that are used in the previous steps.   
+    
+| Variable | Description |
+|:---------|:------------|
+| `{base_url}` | The Toolchain API endpoint URL. For more information about supported values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
+| `{iam_api_key}` | Your IAM API key. |
+| `{iam_token}` | A valid IAM bearer token. |
+| `{tool_name}` | The name of the tool integration. |
+| `{event_notifications_tool_integration_name}` | The name of the {{site.data.keyword.en_short}} service instance. |
+| `{event_notifications_service_crn}` | The Cloud Resource Name (CRN) of the {{site.data.keyword.en_short}} service instance. |
+| `{toolchain_id}` | The toolchain in which to create the tool integration. |
+{: caption="Table 2. Variables for provisioning the tool integration with the API" caption-side="top"}
+
 ### Adding a tool integration with Terraform
 {: #event-notifications-enable-terraformcd}
 {: terraform}
 
 You can add the {{site.data.keyword.en_short}} tool integration to your toolchain by using Terraform.
+
+{{site.data.keyword.cloud_notm}} Terraform provider version 1.53.0 or later is required to add a tool integration by using Terraform.
+{: important}
 
 1. To install the Terraform command-line interface (CLI) and configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform, follow the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
 1. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create resource instances by using the HashiCorp Configuration Language (HCL). For more information about using this configuration language, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
@@ -223,13 +253,10 @@ The following table lists and describes each of the variables that are used in t
     
 | Variable | Description |
 |:---------|:------------|
-| `{base_url}` | The Toolchain API endpoint URL. For more information about supported values, see [Endpoint URL](https://{DomainName}/apidocs/toolchain#endpoint-url){: external}. |
-| `{iam_api_key}` | Your IAM API key. |
-| `{iam_token}` | A valid IAM bearer token. |
-| `{tool_name}` | The name of the tool integration. |
-| `{tool_parameters}` | Unique key-value pairs that represent the parameters to use to create the tool integration. For more information about the supported parameters for each tool integration, see [Tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=api#tool_integrations). |
+| `{event_notifications_tool_integration_name}` | The name of the {{site.data.keyword.en_short}} service instance. |
+| `{event_notifications_service_crn}` | The CRN of the {{site.data.keyword.en_short}} service instance. |
 | `{toolchain_id}` | The toolchain in which to create the tool integration. |
-{: caption="Table 2. Variables for provisioning the tool integration with the API" caption-side="top"}
+{: caption="Table 3. Variables for provisioning the tool integration with the API" caption-side="top"}
 
 ## Delivering notifications to select destinations
 {: #event-notifications-destinations-cd}
@@ -291,4 +318,4 @@ The following table provides detailed information about each event notification 
 | `toolchain.instance` | The object that represents the toolchain where the event originated. This object contains the following fields:  \n  \n `crn`: The CRN of the toolchain.  \n  \n `id`: The ID of the toolchain.  \n  \n `resource_group_id`: The ID of the toolchain's resource group.  \n  \n `name`: The name of the toolchain.  \n  \n `href`: The public API endpoint for the toolchain.  \n  \n `ui_href`: The UI endpoint for the toolchain.  \n  \n |
 | `toolchain.tool-instance` | The object that represents the toolchain instance that participates in the event. For the `toolchain_bind` and `toolchain_unbind` subtypes, this object is the tool integration instance that is being bound or unbound. For pipeline events, this object is the pipeline tool integration instance where the event originated. This object contains the following fields:  \n  \n `id`: The ID of the tool integration instance.  \n  \n `tool_type_id`: The ID of the [tool type](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=api#tool_integrations).  \n  \n `href`: The public API endpoint for the tool integration instance.  \n  \n `state`: The state of the tool integration instance.  \n  \n `referent`: An object that contains information about the tool that is represented by the tool integration instance. For example, `ui_href` which is the UI endpoint for the tool integration that is represented by the tool integration instance.  \n  \n `name`: Optional. The name of the tool integration instance.  \n  \n |
 | `toolchain.pipeline-run` | The object that represents the Tekton pipeline run or Classic pipeline stage run where the event originated. This object is applicable only to pipeline events and contains the following fields:  \n  \n `id`: The ID of the Tekton pipeline run or Classic pipeline stage.  \n  \n `ui_href`: The UI endpoint of the Tekton pipeline run or Classic pipeline stage.  \n  \n `run_number`: Optional. The run number of the Tekton pipeline run or the Classic pipeline stage.  \n  \n `start_time`: Optional. The time that the run started, in ISO 8601 format.  \n  \n `finish_time`: Optional. The time that the run finished, in ISO 8601 format.  \n  \n `duration`: Optional. The duration of the run, in ISO 8601 format.  \n  \n |
-{: caption="Table 3. Properties in an event notification payload" caption-side="bottom"}
+{: caption="Table 4. Properties in an event notification payload" caption-side="bottom"}
