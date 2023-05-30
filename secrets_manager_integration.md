@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-04-25"
+lastupdated: "2023-05-30"
 
 keywords: tool integrations, IBM Cloud Public, IBM Secrets Manager
 
@@ -57,7 +57,7 @@ After your {{site.data.keyword.secrets-manager_short}} tool integration is confi
 
 You can use Arbitrary secrets to store any predefined secret value, or to store dynamically minted {{site.data.keyword.cloud_notm}} API keys by using the Secrets dialog box. You must create IAM credentials secrets directly within your {{site.data.keyword.secrets-manager_short}} service instance. After you create these secrets, you can select IAM credentials secrets to use them within your toolchain by using the Secrets dialog box on any secure field. The Secrets dialog box displays both the Arbitrary and the IAM credentials secret types, with the secret type appended to the secret name in brackets.
 
-#### Using Arbitrary secrets that are stored in {{site.data.keyword.secrets-manager_short}}
+#### Using arbitrary secrets that are stored in {{site.data.keyword.secrets-manager_short}}
 {: #arbitrary_secrets}
 
 You must save third-party secrets, such as a Slack webhook or an Artifactory API token, in {{site.data.keyword.secrets-manager_short}} *before* you create a new toolchain. You can mint and store IBM-managed secrets, such as {{site.data.keyword.cloud_notm}} API keys in {{site.data.keyword.secrets-manager_short}}, as Arbitrary secret types while you work with your toolchain by using the Secrets dialog. However, you must mint IAM credentials secrets directly in {{site.data.keyword.secrets-manager_short}} before you can select these types of secrets within your toolchain by using the Secrets dialog box.
@@ -99,6 +99,17 @@ The IAM credentials secret type also helps to provide continuity of service duri
 
 For more information about the IAM credentials secret type in {{site.data.keyword.secrets-manager_short}}, see [Creating IAM credentials](/docs/secrets-manager?topic=secrets-manager-iam-credentials).   
 
+#### Using key-value secrets
+{: #key_value_secrets}
+
+You can select the key-value secrets to use in your toolchain by selecting an individual key from the key-value secret in the Secrets dialog. Alternatively, you can select the secret in its entirety.
+
+1. Click the key icon to retrieve secrets from secure stores such as {{site.data.keyword.secrets-manager_short}} for the {{site.data.keyword.cloud_notm}} API key.
+
+1. In the **Provider** field, specify the provider and the name of the {{site.data.keyword.secrets-manager_short}} tool integration that you use to manage your toolchain secrets. For example, to use the {{site.data.keyword.secrets-manager_short}} tool integration, select `Secrets Manager: ibm-secrets-manager-1`. You can use other providers to manage your toolchain secrets, such as [Hashicorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault) and [Key Protect](/docs/ContinuousDelivery?topic=ContinuousDelivery-keyprotect).
+
+1. Select a secret group and a secret name and click **OK** to apply the stored secret to the field that is associated with it. The name of the secret that you select appears in capsule form. You cannot edit the secret name inline, but you can click ![remove icon](images/secret-pill-delete-16.png) to delete the name. You can also replace the existing secret name by selecting the secret name again. If you manually type or paste a secret name into the Secrets field, it is displayed in a different format.
+
 ### Adding a {{site.data.keyword.secrets-manager_short}} tool integration to your toolchain template
 {: #secretsmanager_add_toolchain_template}
 
@@ -118,7 +129,7 @@ You can add a {{site.data.keyword.secrets-manager_short}} tool integration to yo
 ## Identifying secrets by CRN
 {: #identify_secrets_by_crn}
 
-When you configure the {{site.data.keyword.secrets-manager_short}} tool integration to identify secrets by CRN, your toolchain can access arbitrary secrets that are stored in the {{site.data.keyword.secrets-manager_short}}. For more information about arbitrary secrets in {{site.data.keyword.secrets-manager_short}}, see [Working with secrets of different types](/docs/secrets-manager?topic=secrets-manager-what-is-secret#secret-types).
+When you configure the {{site.data.keyword.secrets-manager_short}} tool integration to identify secrets by CRN, your toolchain can access arbitrary, key-value, and IAM credential secrets that are stored in the {{site.data.keyword.secrets-manager_short}}. For more information about the different types of secrets in {{site.data.keyword.secrets-manager_short}}, see [Working with secrets of different types](/docs/secrets-manager?topic=secrets-manager-what-is-secret#secret-types). You can use only entire key-value secrets for CRN secrets, not individual keys.
 
 Currently, you cannot configure a {{site.data.keyword.secrets-manager_short}} tool integration to identify secrets by CRN during toolchain creation. Instead, complete the configuration *after* you create the toolchain.
 {: important}
@@ -141,7 +152,10 @@ Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets
 
 After you configure the {{site.data.keyword.secrets-manager_short}} tool integration and [authorize your toolchain](#authorizing-your-toolchain-to-access-secrets) to access secrets in that account, you can use it to apply secrets anywhere that they are required by the toolchain. 
 
-The Secrets dialog does not support tool integrations that are configured for the Service instance CRN. To use an arbitrary secret in your toolchain, you must copy the CRN of the secret from the {{site.data.keyword.secrets-manager_short}} service instance and paste it into the edit box of secret field. The secret must reside in the {{site.data.keyword.secrets-manager_short}} service instance that was configured when you added the {{site.data.keyword.secrets-manager_short}} tool integration to your toolchain.
+You can use either of the following methods to select a CRN secret for use in your toolchain:
+
+* Copy the CRN of the secret from the {{site.data.keyword.secrets-manager_short}} service instance and paste it into the edit box of secret field. The secret must reside in the {{site.data.keyword.secrets-manager_short}} service instance that was configured when you added the {{site.data.keyword.secrets-manager_short}} tool integration to your toolchain.
+* Use the Secrets dialog to [identify secrets by name](#identifying-secrets-by-name). Make sure that you choose the CRN-configured tool card from the **Provider** option.
 
 When fields that contain a CRN secret are displayed, the {{site.data.keyword.secrets-manager_short}} tool integration attempts to retrieve the name of the secret. To open the {{site.data.keyword.secrets-manager_short}} service instance where the secret resides, click the secret. In the following scenarios, the secret name cannot be retrieved and a warning icon is displayed:
 
