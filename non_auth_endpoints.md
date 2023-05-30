@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-15"
+lastupdated: "2023-05-30"
 
 keywords: endpoints, authentication, IBM Cloud Public
 
@@ -169,8 +169,6 @@ The following table lists the Toolchain platform endpoints that do not require a
 | `https://otc-status.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 | `https://otc-status.[region].devops.cloud.ibm.com/versioncheck` | Get the versions of all apps in the clusters |
 | `https://otc-status.[region].devops.cloud.ibm.com/versioncheck/info` | Get information about the cluster version |
-| `https://otc-tiam.[region].devops.cloud.ibm.com/identity/v{v}/status` | Get the status of the service component |
-| `https://otc-tiam.[region].devops.cloud.ibm.com/identity/v{v}/version` | Get the build version of the service component |
 | `https://otc-ui.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://otc-ui.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 | `https://otc-webhook-manager.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
