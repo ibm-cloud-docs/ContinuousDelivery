@@ -157,8 +157,8 @@ You can use either of the following methods to select a CRN secret for use in yo
 * Copy the CRN of the secret from the {{site.data.keyword.secrets-manager_short}} service instance and paste it into the edit box of secret field. The secret must reside in the {{site.data.keyword.secrets-manager_short}} service instance that was configured when you added the {{site.data.keyword.secrets-manager_short}} tool integration to your toolchain.
 * Use the Secrets dialog to [identify secrets by name](#identifying-secrets-by-name).
   
-  When you choose a CRN secret, make sure that you select the CRN-configured tool card from the **Provider** option.
-  {: important}
+   When you choose a CRN secret, make sure that you select the CRN-configured tool card from the **Provider** option.
+   {: important}
 
 When fields that contain a CRN secret are displayed, the {{site.data.keyword.secrets-manager_short}} tool integration attempts to retrieve the name of the secret. To open the {{site.data.keyword.secrets-manager_short}} service instance where the secret resides, click the secret. In the following scenarios, the secret name cannot be retrieved and a warning icon is displayed:
 
