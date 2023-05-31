@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-02-08"
+lastupdated: "2023-05-31"
 
 keywords: troubleshoot, GitHub integration, Git Repos and Issue Tracking integration, GitLab project, tool integrations
 
@@ -34,16 +34,20 @@ If you are configuring the GitHub tool integration by using the console while yo
 {: tsResolve}
 
 1. In the Configurable Integrations section, click **GitHub**.
-1. If you are creating the toolchain on {{site.data.keyword.cloud_notm}} Public and {{site.data.keyword.cloud_notm}} is not authorized to access GitHub, select one of the following authentication methods to access GitHub.
-
-   * **OAuth**: Click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
-   * **Personal Access Token**: Specify a valid personal access token for GitHub.
+1. If you are creating the toolchain on {{site.data.keyword.cloud_notm}} Public and {{site.data.keyword.cloud_notm}} is not authorized to access GitHub, select the method of authentication that will be used to access Github.
+ 
+   * If you choose `OAuth`, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
+   * If you choose `Personal Access Token`, specify a valid personal access token for GitHub.
      
 If you are using the console and you already have a toolchain, update the GitHub tool integration's configuration:
 
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**, and then click **Overview**.
 1. On the Toolchain's Overview page, on the **Repositories** card, locate the GitHub tool integration.
-1. Click the menu to access the configuration options and update the configuration settings to authorize {{site.data.keyword.cloud_notm}} to access GitHub. If you choose the OAuth authentication method, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account. If you choose the Personal Access Token authentication method, provide a valid personal access token for GitHub.
+1. Click the menu to access the configuration options and update the configuration settings to authorize {{site.data.keyword.cloud_notm}} to access GitHub.
+
+   * If you choose `OAuth`, click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize IBM-Cloud** to allow {{site.data.keyword.cloud_notm}} to access your GitHub account.
+   * If you choose `Personal Access Token`, provide a valid personal access token for GitHub.
+   
 1. When you are finished updating the settings, click **Save Integration**.
 
 If you are using Terraform or the API with the `OAuth` authentication method, switch to using a Personal Access Token (PAT) to provide granular access to a specific user or repo. Authorizing with a PAT is recommended when you use Terraform or the API. Otherwise, you can use the console to authorize {{site.data.keyword.cloud_notm}} to access your GitHub account:
@@ -66,7 +70,7 @@ When I attempt to add the {{site.data.keyword.gitrepos}} tool integration to my 
 `Repository URL is not valid. The repository must be on {local GitLab URL}.`
 
 Where `{local GitLab URL}` is the URL of the {{site.data.keyword.gitrepos}} tool integration, in the region where the toolchain resides.
-   
+
 Because {{site.data.keyword.gitrepos}} is tightly integrated with the {{site.data.keyword.contdelivery_short}} service in the region in which they are running, you cannot use an instance of {{site.data.keyword.gitrepos}} across multiple regions.
 {: tsCauses}
 
@@ -78,16 +82,14 @@ Instead of creating a {{site.data.keyword.gitrepos}} tool integration, create a 
 1. In the Tool Integrations section, click **GitLab**.
 1. Click the GitLab server that you want to use. If the GitLab server where the repo you want to access resides does not appear in this list, add a custom server:
 
-   a. Click **Add custom server**.
+   a. Click **Custom Server**.
 
    b. Type a name for the server. This server name will appear in the list of available GitLab servers.
- 
+
    c. Type the Root URL of the custom GitLab server.
- 
+
    d. Enter a personal access token for your custom GitLab server. If you don't have a personal access token, [create one](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat).
- 
-   e. Click **Save custom integration**.
- 
+
 1. If you have a GitLab repo and want to use it, for the repository type, click **Existing** and type the URL.
 1. If you want to use a new GitLab repo, type a name for the repo, type the URL for the repo that you are cloning or forking, and select the repository type:
 
@@ -113,7 +115,7 @@ You must use a personal access token or an SSH key to perform Git operations.
 
 You try to push or clone a repo from the command line by using https and cannot authenticate even though you entered the correct password.
 {: tsSymptoms}
-   
+
 {{site.data.keyword.gitrepos}} uses a single sign-on mechanism that does not support Git authentication that uses a user name and password on the command line.
 {: tsCauses}
 
@@ -128,7 +130,7 @@ There might be issues with the location or the permissions for your private SSH 
 
 I added my SSH public key by way of the {{site.data.keyword.gitrepos}} user interface. When I try to clone a repo by using SSH, I am prompted for a password or security code, or an error message is displayed indicating that the authentication failed.
 {: tsSymptoms}
-   
+
 Any of the following SSH issues might prompt you to authenticate, or display an error message:
 {: tsCauses}
 
@@ -172,7 +174,7 @@ When I attempt to complete an operation on a {{site.data.keyword.gitrepos}} repo
 `git fetch
 error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504 Gateway Time-out
 fatal: The remote end hung up unexpectedly`
-   
+
 You have a large repo that is greater than 1 GB. The repo might also contain binary files that require more space than text files that are stored in a compressed format.
 {: tsCauses}
 
@@ -194,8 +196,8 @@ The invitation might be blocked by the user's email.
 
 I invited a user to my GitLab project by using their email address that is listed in {{site.data.keyword.gitrepos}}, but they didn't receive the email.
 {: tsSymptoms}
-   
-The email might be blocked from the user's inbox by spam filters. 
+
+The email might be blocked from the user's inbox by spam filters.
 {: tsCauses}
 
 You can use any of the following methods to resolve this problem:
@@ -229,4 +231,4 @@ Although you can use other methods to resolve this error, these methods are not 
 
 * Change `repo_url` to a repo that is created when you apply your Terraform again. Changing a Terraform resource after the initial creation to avoid errors during subsequent updates is an anti-pattern. This method also leaves the previously created repos intact, but no longer bound to the toolchain.
 * Change `type` to `existing`, and then apply your Terraform again. Changing a Terraform resource after the initial creation to avoid errors during subsequent updates is an anti-pattern.
-* Manually delete the target repo, and then apply your Terraform again. Manual changes between otherwise automated Terraform operations are not recommended. If you delete the repo, the deletion cannot be undone, and can cause permanent data loss. 
+* Manually delete the target repo, and then apply your Terraform again. Manual changes between otherwise automated Terraform operations are not recommended. If you delete the repo, the deletion cannot be undone, and can cause permanent data loss.
