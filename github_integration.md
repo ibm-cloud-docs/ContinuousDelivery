@@ -35,9 +35,9 @@ If you are configuring this tool integration as you are creating the toolchain, 
 
 1. If you are using a repo on your own {{site.data.keyword.ghe_short}} server, in the Configurable Integrations section, click **Custom Server**.
 
-   * Type a title for your custom GitHub server, specify the root URL for the server, and enter your personal access token.
+   a. Type a title for your custom GitHub server, specify the root URL for the server, and enter your personal access token.
 
-   * If you don't have a personal access token, you can follow the documentation on the GitHub website to create one.
+   b. If you don't have a personal access token, you can follow the documentation on the GitHub website to create one.
 
 1. Review the default target repo locations for the GitHub repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
 
