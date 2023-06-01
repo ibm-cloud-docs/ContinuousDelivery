@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-06-24"
+  years: 2019, 2023
+lastupdated: "2023-05-25"
 
 keywords: devops insights, uploading data types, data types, test data format, test data, unit test, code coverage, test, tests, verification, app, sonarqube, dashboard
 
@@ -10,14 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:download: .download}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Publishing test data to {{site.data.keyword.DRA_short}}
 {: #publishing-test-data}
@@ -36,7 +29,7 @@ The following table showed a list of supported tests and formats.
 | Display Label                 | Data Type             | Supported Data Formats and File Extension                  |
 |-------------------------------|-----------------------|------------------------------------------------------------|
 | Unit Tests                    | Test Case             | JUnit (JSON), xUnit (xml), Mocha (JSON), KarmaMocha (JSON) |
-| Code Coverage                 | Code Coverage         | Cobertura (xml), lcov (info), Istanbul (JSON), JaCoCo (xml)|
+| Code Coverage                 | Code Coverage         | Cobertura (xml), lcov (info), JaCoCo (xml)|
 | Functional Verification Tests | Test Case             | JUnit (JSON), xUnit (xml), Mocha (JSON), KarmaMocha (JSON) |
 | SonarQube                     | SonarQube             | SonarQube                                                  |
 | Dynamic Security Scan         | Dynamic Security Scan | {{site.data.keyword.Bluemix}} Application Security (xml)   |
