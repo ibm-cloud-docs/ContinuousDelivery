@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-05-31"
+lastupdated: "2023-06-01"
 
 keywords: tool integrations, IBM Cloud Public, IBM Secrets Manager
 
@@ -155,7 +155,7 @@ After you configure the {{site.data.keyword.secrets-manager_short}} tool integra
 You can use either of the following methods to select a CRN secret for use in your toolchain:
 
 * Copy the CRN of the secret from the {{site.data.keyword.secrets-manager_short}} service instance and paste it into the edit box of secret field. The secret must reside in the {{site.data.keyword.secrets-manager_short}} service instance that was configured when you added the {{site.data.keyword.secrets-manager_short}} tool integration to your toolchain.
-* Use the Secrets dialog to [identify secrets by name](#identifying-secrets-by-name).
+* Use the Secrets dialog to identify secrets by name. For information about how to use this method, see [Identifying secrets by name](#identify_secrets_by_name).
   
    When you choose a CRN secret, make sure that you select the CRN-configured tool card from the **Provider** option.
    {: important}
