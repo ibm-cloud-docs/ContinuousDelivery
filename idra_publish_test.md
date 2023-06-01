@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-01-15"
+  years: 2019, 2023
+lastupdated: "2023-05-25"
 
 keywords: devops insights, publish, test, results, idra, code coverage, tests, verification, app, sonarqube, dashboard
 
@@ -10,14 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
+{{site.data.keyword.attribute-definition-list}}
 
 # Publishing test results (deprecated)
 {: #publish-test-idra}
@@ -41,7 +34,7 @@ Test results must provide data in one of these supported formats:
 |------------------------------|--------------------------------------------------------------------------|
 | Functional verification test | Mocha, xUnit, Karma/Mocha                                                |
 | Unit test                    | Mocha, xUnit, Karma/Mocha                                                |
-| Code coverage                | Cobertura, Istanbul (json-summary report format), lcov, JaCoCo           |
+| Code coverage                | Cobertura, lcov, JaCoCo                                                  |
 | SonarQube                    | Scan data that is provided by SonarQube scans                            |
 | Static AppScan              | Static App Scans that are provided by IBM Application Security on Cloud  |
 | Dynamic AppScan             | Dynamic App Scans that are provided by IBM Application Security on Cloud |
@@ -66,7 +59,7 @@ idra --publishtestresult --filelocation=fvttest.json --type=fvt
 
 In the example script, the `idra` command with the `--publishtestresult` flag specifies that the script uploads results. The `--filelocation` flag indicates the location of the test results file relative to the root directory of the job. The `--type` flag indicates the type of test result.
 
-The following example script runs tests and then uploads Mocha results and Istanbul code coverage results to {{site.data.keyword.DRA_short}}:
+The following example script runs tests and then uploads Mocha results to {{site.data.keyword.DRA_short}}:
 
 ```text
 # Add user api key to stage environment variable as a secured property
