@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-01-15"
+  years: 2019, 2023
+lastupdated: "2023-05-25"
 
 keywords: devops insights, publish, test, results, jenkins, code coverage, tests, verification, app, sonarqube, dashboard
 
@@ -10,15 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Publishing test results
 {: #publish-test-jenkins}
@@ -43,13 +35,13 @@ The following are types of tests that can be used and the formats that are suppo
 |------------------------------------------------------|--------------------------------------------------------------------|
 | Unit Test                                            | JUnit (JSON), xUnit (xml), Mocha (JSON), KarmaMocha (JSON)         | 
 | Function Tests                                       | JUnit (JSON), xUnit (xml), Mocha (JSON), KarmaMocha (JSON)         | 
-| Code Coverage                                        | Cobertura (xml), lcov, Istanbul (JSON), JaCoCo (xml)               |
+| Code Coverage                                        | Cobertura (xml), lcov, JaCoCo (xml)               |
 | Sonarqube                                            | Sonarqube                                                          |
 | Static Security Scan                                 | {{site.data.keyword.IBM_notm}} Application Security on Cloud (xml) |
 | Dynamic Security Scan                                | {{site.data.keyword.IBM_notm}} Application Security on Cloud (xml) |
 | {{site.data.keyword.IBM_notm}} Vulnerability Advisor | {{site.data.keyword.IBM_notm}} Vulnerability Advisor (JSON)        |
 | Custom Data Sets - Tests                             | JUnit (JSON), xUnit (xml), Mocha (JSON), KarmaMocha (JSON)         |
-| Custom Data Sets - Code Coverage                     | Cobertura (xml), lcov, Istanbul (JSON), JaCoCo (xml)               |
+| Custom Data Sets - Code Coverage                     | Cobertura (xml), lcov, JaCoCo (xml)               |
 {: caption="Table 1. Supported tools and formats" caption-side="top"}
 
 Publish build records with the publishTestResult step. This step requires two parameters. It can also accept one optional parameter.
