@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-05-30"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -86,7 +86,7 @@ For more information about managing secrets, see [Managing secrets in your toolc
 {: #cd_secrets_references_ui}
 {: ui}
 
-When you use the console, the fields for tool integration configuration properties and {{site.data.keyword.deliverypipeline}} properties that are classified as secure are annotated with a key icon. For secrets references by name, click the key icon to open a dialog from which you can select a secrets store and secret. For secrets references by CRN, paste the CRN value directly into the property.
+When you use the console, the fields for tool integration configuration properties and {{site.data.keyword.deliverypipeline}} properties that are classified as secure are annotated with a key icon. Click this icon to open a dialog from which you can select a secrets store and secret. Alternatively, for secrets references by CRN, paste the CRN value directly into the property.
 
 ### Specifying secrets references with the API
 {: #cd_secrets_references_api}
