@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2022
-lastupdated: "2022-11-15"
+  years: 2016, 2023
+lastupdated: "2023-06-05"
 
 keywords: code quality, risk management, interactions of your team, devops insights, getting started, devops, insights, tutorial, code coverage, test, tests, gate, gate failing, verification, install, app, dashboard
 
@@ -34,7 +34,7 @@ Authorize the use of GitHub repos. For more information, see [Authenticating wit
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
 2. Expand the **Location** menu, and select a location for your deployment. {{site.data.keyword.DRA_short}} is available in Dallas, London, and Frankfurt. 
 3. Click **Create a Toolchain**.
-4. Select the **Develop a Cloud Foundry app with {{site.data.keyword.DRA_short}}** tile.  
+4. Select the **{{site.data.keyword.DRA_short}} Quick Start Demo** tile.  
 5. In the Tool Integrations section, create an API key for {{site.data.keyword.deliverypipeline}}. 
 6. Click **Create** to finish creating the toolchain.
 
