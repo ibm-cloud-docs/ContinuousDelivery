@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-27"
+lastupdated: "2023-06-05"
 
 keywords: troubleshoot, toolchains, tool integrations
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Troubleshooting for toolchains
 {: #troubleshoot-toolchains}
 
-General problems with using toolchains might include tool integration configuration, toolchain template, or Cloud Foundry issues. In many cases, you can recover from these problems by following a few easy steps.
+General problems with using toolchains might include tool integration configuration or toolchain template issues. In many cases, you can recover from these problems by following a few easy steps.
 {: shortdesc}
 
 
@@ -69,22 +69,6 @@ You can try to configure the tool integration again:
 
 1. Make sure that you are using valid configuration parameters. If the error was caused by an invalid configuration, an error message is displayed; for example, `The integration could not be set up. Check the settings and try again. Reason: Invalid api_key:fakeKey`. Update the settings for the tool integration and click **Save integration**.
 1. If the error was caused by a communication problem, click **Save integration** to try again.
-
-## Why can't I create a toolchain to deploy my app to Cloud Foundry?
-{: #troubleshoot-deploy_cf}
-{: troubleshoot}
-{: support}
-
-Before you can create a toolchain that deploys to a Cloud Foundry org, you must have an existing org and space, with the Developer role assigned. 
-
-You try to create a toolchain to deploy your app to Cloud Foundry. After you enter your API key, the **Organization** and **Space** fields are empty and you cannot create your toolchain.
-{: tsSymptoms} 
-
-A Cloud Foundry org and space can't be located in your account.
-{: tsCauses}
-
-[Add a Cloud Foundry org and space to your account](https://cloud.ibm.com/account/cloud-foundry){: external}, and assign the Developer role to users at the space level. For more information about Cloud Foundry orgs and spaces, see [Adding orgs and spaces](/docs/account?topic=account-orgsspacesusers).
-{: tsResolve}
 
 ## Why can't I delete toolchains by using the `ibmcloud` CLI?
 {: #troubleshoot-delete_toolchains_cli}
