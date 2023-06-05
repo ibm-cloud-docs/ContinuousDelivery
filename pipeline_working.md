@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-08-26"
+  years: 2015, 2023
+lastupdated: "2023-06-05"
 
 keywords: IBM Cloud, build types, build jobs, deployment job, build script, create pipeline, 
 
@@ -10,13 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:shortdesc: .shortdesc}
-{:ui: .ph data-hd-interface='ui'}
-{:cli: .ph data-hd-interface='cli'}
-{:api: .ph data-hd-interface='api'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Working with pipelines 
 {: #pipeline-working}
@@ -24,11 +18,11 @@ subcollection: ContinuousDelivery
 To automate your builds and deployments to {{site.data.keyword.cloud}}, use {{site.data.keyword.contdelivery_full}} pipelines.
 {: shortdesc}
 
-With pipelines, you can choose from several build types. You provide the build script, and {{site.data.keyword.contdelivery_short}} runs it; you don't need to set up build systems. Then, with one click, you can automatically deploy your app to one or many {{site.data.keyword.cloud_notm}} spaces, public Cloud Foundry servers, or Docker containers on the {{site.data.keyword.containerlong}}.
+With pipelines, you can choose from several build types. You provide the build script, and {{site.data.keyword.contdelivery_short}} runs it; you don't need to set up build systems. Then, with one click, you can automatically deploy your app to one or many {{site.data.keyword.cloud_notm}} spaces or Docker containers on the {{site.data.keyword.containerlong}}.
 
 Build jobs compile and package your app source code from Git repositories. The build jobs produce deployable artifacts, such as WAR files or Docker containers for the {{site.data.keyword.containerlong_notm}}. In addition, you can run unit tests within your build automatically. You can set up your build jobs so that each time a commit is pushed, a build is triggered.
 
-A deployment job takes output from a build job and deploys it to either the {{site.data.keyword.containerlong_notm}} or Cloud Foundry servers such as {{site.data.keyword.cloud_notm}}.
+A deployment job takes output from a build job and deploys it to the {{site.data.keyword.containerlong_notm}}.
 
 You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} to use one or more services, test in one region, and deploy to production in multiple regions.
 
