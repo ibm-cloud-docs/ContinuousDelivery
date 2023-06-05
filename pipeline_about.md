@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2023
-lastupdated: "2023-05-25"
+lastupdated: "2023-06-05"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline, Classic
 
@@ -122,8 +122,7 @@ The deploy stage specifies input from a Build stage. The jobs in the deploy stag
 
 | Deployer type | Description | Supported job types|
 |:-----------------|:-----------------|:-----------------|
-| Cloud Foundry | Deploys applications to Cloud Foundry servers, such as IBM Cloud.  | **Pipeline image version**: Runs in a container by using a built-in docker image that provides various built-in commands. To adopt newer versions of those commands, use a newer image version.  \n  \n **Cloud Foundry Type**: The type of environment you want to deploy to.  \n  \n **API key**: The IBM Cloud API key to use to provide permissions to account resources.  \n  \n **Application name**: The name that is assigned to the application during deployment. This name is assigned to the environment variable and is referenced in the IBM Cloud script.  \n  \n **Deploy script**: Deploy command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control. |
-| Custom Docker image | Deploys by using your custom Docker image with fine-grained control over the versions of node, Java&trade;, or other tools. | **Pipeline image version**: Runs in a container by using a built-in docker image that provides various built-in commands. To adopt newer versions of those commands, use a newer image version.  \n  \n **Cloud Foundry Type**: The type of environment you want to deploy to.  \n  \n **API key**: The IBM Cloud API key to use to provide permissions to account resources.  \n  \n **Docker image name**: The name of the image that this job builds and uploads to the IBM Cloud Container Registry.  \n  \n **Deploy script**: Deploy command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.|
+| Custom Docker image | Deploys by using your custom Docker image with fine-grained control over the versions of node, Java&trade;, or other tools. | **Pipeline image version**: Runs in a container by using a built-in docker image that provides various built-in commands. To adopt newer versions of those commands, use a newer image version.  \n  \n **API key**: The IBM Cloud API key to use to provide permissions to account resources.  \n  \n **Docker image name**: The name of the image that this job builds and uploads to the IBM Cloud Container Registry.  \n  \n **Deploy script**: Deploy command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.|
 | Kubernetes | Deploys applications to Kubernetes clusters, such as those found within the IBM Cloud Container Service. | **Pipeline image version**: Runs in a container by using a built-in docker image that provides various built-in commands. To adopt newer versions of those commands, use a newer image version.  \n  \n **API key**: The IBM Cloud API key to use to provide permissions to account resources.  \n  \n **Cluster name**: Name of the Kubernetes cluster; the platform that you deploy your Kubernetes components on.  \n  \n **Deploy script**: Deploy command to run whenever the job runs. In the script field, enter a script or reference scripts that are stored in your project’s source control.|
 {: caption="Table 2. Deployer types" caption-side="top"}
 
@@ -145,7 +144,7 @@ The test stage specifies the test configuration. The jobs in the test stage spec
 ### Deprecated job types
 {: #deprecated_job_types}
 
-Several job types, such as the IBM Globalization Pipeline Build job, the Simplified Cloud Foundry Org Build job, the Space Shell Test job, and the DevOps Insights Gate Test job are deprecated. Although these job types are deprecated, you might still be able to load them in the UI, with an indicator that the job type is deprecated. Alternatively, your job might revert to another job type that is still supported, with a warning notification.
+Several job types, such as the IBM Globalization Pipeline Build job, the Space Shell Test job, and the DevOps Insights Gate Test job are deprecated. Although these job types are deprecated, you might still be able to load them in the UI, with an indicator that the job type is deprecated. Alternatively, your job might revert to another job type that is still supported, with a warning notification.
 
 If you need to use the configuration from a deprecated job type, use one of the following methods to access the pipeline configuration.
 
@@ -165,12 +164,12 @@ If you need to use the configuration from a deprecated job type, use one of the 
 ### API keys
 {: #api_keys}
 
-Some of the standard pipeline jobs use {{site.data.keyword.cloud_notm}} API keys to access services, such as deploying to Cloud Foundry and Kubernetes. The [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](/docs/services/account?topic=account-iamoverview) service provides two types of API keys:
+Some of the standard pipeline jobs use {{site.data.keyword.cloud_notm}} API keys to access services, such as deploying to Kubernetes. The [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](/docs/services/account?topic=account-iamoverview) service provides two types of API keys:
 
 * **user API keys**: These API keys provide full access to all of the services and resources that the user has access to.
 * **service API keys**: You can configure service API keys to provide specific access to various services and resources.
 
-Some services, such as Cloud Foundry, cannot use service ID API keys. In such cases, the pipeline user interface prompts you to specify a user API key.
+Some services cannot use service ID API keys. In such cases, the pipeline user interface prompts you to specify a user API key.
 {: tip}
 
 Because pipeline jobs run user-created scripts that might use service API keys in arbitrary ways, the pipeline cannot determine the set of restrictions to apply to a particular key. In such cases, if you request that the pipeline creates an API key, it creates a user API key. To maintain strong security, instead use a service API key with access that is restricted to only the services and resources that you need in the script. In this instance, you must create the API key yourself. For more information about creating an API key, see [{{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey#create_user_key).
@@ -219,16 +218,12 @@ Jobs that take input from build jobs must reference build artifacts in the same 
 If you use the **Simple** builder type, your code is not compiled or built; it is packaged and made available for future stages.
 {: tip}
 
-When you deploy by using Cloud Foundry, Cloud Foundry includes the correct artifacts to allow your app to run. For more information, see [Deploying applications by using the cf command](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#deploy_apps). The pipeline for a Cloud Foundry app contains a Deploy stage that runs a cf command.
-
-Cloud Foundry tries to [detect the buildpack to use](http://docs.cloudfoundry.org/buildpacks/detection.html){: external}. You can specify the [buildpack](/docs/cloud-foundry?topic=cloud-foundry-available_buildpacks) to use in the manifest file in the root folder of your app. Buildpacks typically examine user-provided artifacts to determine what dependencies to download and how to configure applications to communicate with bound services. For more information about manifest files, see [Application manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
-
 ### Deploy jobs
 {: #deploy_jobs}
 
 Deploy jobs upload your project to {{site.data.keyword.cloud_notm}} as an app and are accessible from a URL. After a project is deployed, you can find the deployed app on your {{site.data.keyword.cloud_notm}} dashboard.
 
-Deploy jobs can deploy new apps or update existing apps. Even if you first deployed an app by using another method, such as the Cloud Foundry command-line interface, you can update the app by using a deploy job. To update an app, in the deploy job, use that app's name.
+Deploy jobs can deploy new apps or update existing apps. Even if you first deployed an app by using another method, you can update the app by using a deploy job. To update an app, in the deploy job, use that app's name.
 
 You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} to use one or more services, test in one region, and deploy to production in multiple regions.
 
@@ -291,8 +286,6 @@ All jobs start by running the `build.properties` file, if it exists.
 
 Build jobs automatically fetch the content in the current folder where the user script is run.  If you do not need the entire git repo content for later deployment, it is preferable that you configure an explicit output directory and then copy or create the relevant artifacts there.  Job scripts are run in the build result (output directory).
 
-Jobs that deploy to Cloud Foundry need to specify the Platform API key of a user under whose authority jobs run, and the region, org, and space of where to deploy the artifacts. If more services are required to run your app, you must specify them in the `manifest.yml` file.
-
 Deploy jobs that deploy to the {{site.data.keyword.containerlong_notm}} need to specify the Platform API key of a user under whose authority jobs run, a Dockerfile, and optionally a Helm chart.  
 
 The job script runs after the job has logged in to the target environment by using the Platform API key that is assigned to it (so that you can run `cf push`  or `kubectl` commands in the script).
@@ -311,14 +304,3 @@ This pipeline is shown in the following conceptual diagram:
 ![A conceptual diagram of stages and jobs in a pipeline](images/diagram.jpg){: caption="Figure 7. Conceptual model of a three-stage pipeline" caption-side="bottom"}
 
 Stages take their input from repositories and build jobs, and jobs within a stage run sequentially and independently of each other. In the example pipeline, the stages run sequentially, even though the Test and Prod stages both take the Build stage's output as their input.
-
-## Cloud Foundry Manifest files
-{: #deliverypipeline_manifest}
-
-Manifest files, which are named `manifest.yml` and stored in a project's root directory, control how your project is deployed to {{site.data.keyword.cloud_notm}}. For information about creating manifest files for a project, see the [{{site.data.keyword.cloud_notm}} documentation about application manifests](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest). To integrate with {{site.data.keyword.cloud_notm}}, your project must have a manifest file in its root directory. However, you are not required to deploy based on the information in the file.
-
-In the pipeline, you can specify everything that a manifest file can do by using `cf push` command arguments. The `cf push` command arguments are helpful in projects that have multiple deployment targets. If multiple deploy jobs all try to use the route that is specified in the project manifest file, a conflict occurs.
-
-To avoid conflicts, you can specify a route by using `cf push` followed by the host name argument, `-n`, and a route name. By modifying the deployment script for individual stages, you can avoid route conflicts when you deploy to multiple targets.
-
-To use the `cf push` command arguments, open the configuration settings for a deploy job and modify the **Deploy Script** field. For more information, see the [Cloud Foundry Push documentation](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: external}.
