@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-25"
+lastupdated: "2023-06-05"
 
 keywords: IBM Cloud button, yml file, build file, toolchains
 
@@ -108,8 +108,6 @@ Supported builders include:
 
 To configure the pipeline for the toolchain in a `.bluemix` directory, include a `pipeline.yml` file. For each `pipeline.yml` file in that directory, a pipeline is created when the toolchain is instantiated.
 
-If you do not have `pipeline.yml` file in the `.bluemix` directory, the Deploy to {{site.data.keyword.cloud_notm}} button will create a default pipeline with two stages: a Build stage and a Deploy stage that deploys to Cloud Foundry.
-
 To create a pipeline file, consult the example file in the [Creating custom toolchain templates](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates){: external} documentation. Just as when you define a pipeline in the web interface, you define a pipeline in text by creating stages and jobs, setting inputs and environment variables, and adding scripts. You can also see a number of more complex pipeline files in [this demonstration project](https://github.com/open-toolchain/toolchain-demo/tree/master/.bluemix){: external}.
 
 ### Container Dockerfile requirements
@@ -122,10 +120,3 @@ The Dockerfile acts as a kind of build script for the app. If a Dockerfile is de
 To learn more about creating Dockerfiles, see the [Docker documentation](https://docs.docker.com/reference/builder/){: external}. To follow step-by-step instructions using a toolchain template to deploy to Kubernetes, see [Tutorial: Use the "Develop a Kubernetes app" toolchain](https://www.ibm.com/cloud/architecture/tutorials/use-develop-kubernetes-app-toolchain?task=0){: external} or [Tutorial: Use the "Develop a Kubernetes app with Helm" toolchain](https://www.ibm.com/cloud/architecture/tutorials/use-develop-kubernetes-app-with-helm-toolchain?task=0){: external}.
 
 To create a `pipeline.yml` manually that is specifically for containers, see the [examples in GitHub](https://github.com/Puquios/){: external}.
-
-### Manifest file requirements (for apps deployed to Cloud Foundry)
-{: #manifest_files}
-
-A `manifest.yml` file is not required to be in your repo. However, if your app requires other services to run, you must provide a manifest file that declares those services.
-
-To learn more about manifest files, see [Application manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
