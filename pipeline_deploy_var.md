@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2021
-lastupdated: "2021-09-22"
+  years: 2016, 2023
+lastupdated: "2023-06-05"
 
 keywords: environment properties, environment resources, IBM Java, pipeline environments
 
@@ -10,12 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:download: .download}
+{{site.data.keyword.attribute-definition-list}}
 
 # Environment properties and resources
 {: #deliverypipeline_environment}
@@ -90,6 +85,6 @@ The following table lists and describes each of the deployment environment prope
 | CF_ORGANIZATION_ID | For deployments, the ID of the org to deploy to. |
 | CF_SPACE | For deployments, the name of the space to deploy to. |
 | CF_SPACE_ID | For deployments, the ID of the space to deploy to.  |
-| CF_TARGET_URL | For deployments, the URL of {{site.data.keyword.Bluemix_short}} or Cloud Foundry. |
+| CF_TARGET_URL | For deployments, the URL of {{site.data.keyword.cloud_notm}}. |
 | IDS_VERSION | For deployments, the version of the app that is being deployed or the source identifier. |
 {: caption="Table 3. Deployment environment properties" caption-side="top"}
