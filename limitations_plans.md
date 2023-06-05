@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2023
-lastupdated: "2023-05-10"
+lastupdated: "2023-06-05"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -110,7 +110,7 @@ You can upgrade from the {{site.data.keyword.contdelivery_short}} Lite service p
 4. In the **Change pricing plan** section, select **Professional** to upgrade to the {{site.data.keyword.contdelivery_short}} Professional plan, and click **Save**.
 5. After you change your plan, you must restage your app. Go to your resource list to find the app that the service is bound to. Click the Menu icon ![Menu icon](../icons/icon_hamburger.svg) **> Resource list**. In the app menu, select **Restart App**.
 
-#### Changing a plan through the CLI
+### Changing a plan through the CLI
 {: #change_plan_cli}
 {: cli}
 
