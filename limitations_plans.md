@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2023
-lastupdated: "2023-05-10"
+lastupdated: "2023-06-05"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -110,7 +110,7 @@ You can upgrade from the {{site.data.keyword.contdelivery_short}} Lite service p
 4. In the **Change pricing plan** section, select **Professional** to upgrade to the {{site.data.keyword.contdelivery_short}} Professional plan, and click **Save**.
 5. After you change your plan, you must restage your app. Go to your resource list to find the app that the service is bound to. Click the Menu icon ![Menu icon](../icons/icon_hamburger.svg) **> Resource list**. In the app menu, select **Restart App**.
 
-#### Changing a plan through the CLI
+### Changing a plan through the CLI
 {: #change_plan_cli}
 {: cli}
 
@@ -143,20 +143,11 @@ As an alternative to the console, you can change the {{site.data.keyword.contdel
                       professional              plan         9ca4dc64-bc7b-4aba-9c1c-8bbf30ff127e
    ```
 
-2. Change the plan for your service instance.
-
-   * If the service is RC-enabled, change your plan by using the [`ibmcloud resource service-instance-update` command](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_update).
+2. Change the plan for your service instance by using the [`ibmcloud resource service-instance-update` command](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_update).
 
    ```text
    ibmcloud resource service-instance-update <service_instance_name>
    --service-plan-id <plan_id>
-   ```
-   {: codeblock}
-
-   * If the service is not RC-enabled and is therefore based on Cloud Foundry, change your plan by using the [`ibmcloud cf update-service` command](/docs/cli?topic=cli-ibmcloud_commands_services#ibmcloud_service_update).
-
-   ```text
-   ibmcloud cf update-service <service_instance_name> [-p <plan_name>]
    ```
    {: codeblock}
 
