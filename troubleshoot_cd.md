@@ -4,7 +4,7 @@ copyright:
   years: 2015, 2023
 lastupdated: "2023-06-05"
 
-keywords: troubleshoot, toolchains, Cloud Foundry
+keywords: troubleshoot, toolchains
 
 subcollection: ContinuousDelivery
 
