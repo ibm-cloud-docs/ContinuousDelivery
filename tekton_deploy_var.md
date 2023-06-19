@@ -126,6 +126,7 @@ spec:
         - echo -e "The environment for this Step is ";
           env
 ```         
+
 ## Managed worker virtual machine (VM) sizing
 {: #tekton_tshirt_sizing}
 
