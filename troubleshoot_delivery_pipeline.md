@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-15"
+lastupdated: "2023-06-19"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -197,3 +197,32 @@ If a matching repo integration is located in the toolchain, the pipeline attempt
 * `Repository reference fixed in the following definitions: [list of definitions]`
 
 If you see one of these notifications, but no warnings or errors are displayed in the configuration, no further action is required. If warnings or errors still appear, you might need to update or create the trigger or definition again. 
+
+## Why does my pipeline time out when it tries to connect to {{site.data.keyword.cos_full_notm}} private endpoints?
+{: #troubleshoot-private-endpoints}
+{: troubleshoot}
+
+When you run a pipeline, requests to the {{site.data.keyword.cos_full_notm}} that use a private endpoint time out with no response. This time out can cause the pipeline to fail.
+{: tsSymptoms}
+
+{{site.data.keyword.cos_full_notm}} private endpoints are not accessible from all {{site.data.keyword.cloud_notm}} cluster types. Private {{site.data.keyword.cos_full_notm}} endpoints are not accessible from private workers that run on clusters within an {{site.data.keyword.vpc_full}} (VPC).
+{: tsCauses}
+
+Replace any `s3.private.*` {{site.data.keyword.cos_full_notm}} endpoints with `s3.direct.*` endpoints. `s3.direct.*` endpoints are direct endpoints that communicate with {{site.data.keyword.cos_full_notm}} from any {{site.data.keyword.cloud_notm}} cluster type. 
+{: tsResolve}
+
+## Why does my pipeline fail with an error that is related to secure properties?
+{: #troubleshoot-secure-properties}
+{: troubleshoot}
+
+PipelineRuns fails with an error when any of the secure properties in the pipeline don't resolve at the start of the pipeline run.
+{: tsSymptoms}
+
+Pipelines that cannot retrieve a secret value from a secrets store or from either Secrets Manager, Key Protect, or Hashicorp Vault, fail with an error message that indicates which properties cannot be resolved. Resolution failures can occur even if the properties are not used directly in the triggered run. For example, resolution failures might occur if the path to the secret in the store is no longer valid, the secret store is inaccessible, or for authorization issues.
+{: tsCauses}
+
+If your pipelines contain secure properties that do not currently resolve, update these properties to refer to valid, retrievable secrets that are located in Secrets Manager, Key Protect, or Hashicorp Vault.
+{: tsResolve}
+
+Make sure that your pipeline specifies only those secure properties that are required for the successful completion of a triggered `PipelineRun` as pipeline trigger properties, instead of as pipeline level environment properties. Use pipeline level environment properties only when required.
+{: important}
