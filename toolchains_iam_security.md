@@ -37,6 +37,8 @@ After you define the scope of the access policy, you assign a role. The role def
 | Editor, Administrator | Create, view, update, and delete toolchains and delivery pipelines. Run delivery pipelines. |* From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click **Create a Toolchain**.  \n  \n * From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click the toolchain to delete. Click the **Actions** menu, then select **Delete**.  \n  \n * From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Click **Add tool**, and then select the tool integration that you want to add.  \n  \n * From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Pipeline page, click the **Stage Configuration** icon, and then click **Configure Stage**. \n  \n * Click the **Run Stage** icon of the stage that your pipeline job is in.|
 {: caption="Table 1. IAM platform roles" caption-side="bottom"}
 
+The following table lists the IAM service access roles and the available actions for each role.
+
 | Service Role | Description of Actions | Example Actions|
 |:-----------------|:-----------------|:-----------------|
 | Pipeline Runner | Run delivery pipelines. | Click the **Run Stage** icon of the stage that your pipeline job is in. |
