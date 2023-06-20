@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-06-19"
+lastupdated: "2023-06-20"
 
 keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
@@ -28,7 +28,7 @@ Policies enable access to be granted at different levels or scopes, including, b
 * Access across all toolchains in a resource group in your account
 * Access to a specific toolchain in your account
 
-After you define the scope of the access policy, you assign a role. The role defines which actions the user is allowed to take. The following table lists the IAM user roles and the available toolchain actions for each role.
+After you define the scope of the access policy, you assign a role. The role defines which actions the user is allowed to take. The following table lists the IAM platform access roles and the available toolchain actions for each role.
 
 | Platform Role | Description of Actions | Example Actions|
 |:-----------------|:-----------------|:-----------------|
@@ -71,12 +71,13 @@ You can assign a new user access to all of the toolchains in your resource group
 1. From the {{site.data.keyword.cloud_notm}} console, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. Click **Invite users**.
 3. Specify the email address of the user that you want to invite.
-4. In the **Assign users additional access** section, click **IAM services**.
-5. Choose to assign access to the **Toolchain** service within **All resource groups**.
-6. In the **Platform access** section, select **Viewer** (or higher) access to provide the user with access to view toolchain service instances from the platform, perform platform actions that are required to configure and operate toolchain service instances, and assign access policies to other users.
-7. In the **Resource group access** section, select the **Editor** role to provide the user with access to create, view, edit, or delete the toolchain service from resource groups. Select the **Viewer** role to provide the user with access to view toolchains only. Select both the **Viewer** and **PipelineRunner** roles to provide the user with access to view toolchains or to run delivery pipelines.
-8. Click **Add**.
-9. Click **Invite**. 
+4. In the **How do you want to assign access?** section, click **Access Policy**.
+5. Choose to assign access to the **Toolchain** service.
+6. Scope the access to **Specific resources.** Select the **Resource group** attribute type and enter a resource group.
+7. In the **Resource group access** section, select **Viewer** (or higher) access to provide the user with access to view toolchain service instances from the platform, perform platform actions that are required to configure and operate toolchain service instances, and assign access policies to other users.
+8. In the **Roles and actions** section, select the **Editor** role to provide the user with access to create, view, edit, or delete the toolchain service from resource groups. Select the **Viewer** role to provide the user with access to view toolchains only. Select both the **Viewer** and **PipelineRunner** roles to provide the user with access to view toolchains or to run delivery pipelines.
+9. Click **Add**.
+10. Click **Invite**.
 
 Depending on their role, the new user can now work with all of the toolchains within the specified resource groups. They can add tool integrations and modify and run pipelines.
 
@@ -89,12 +90,13 @@ You can assign an existing user access to a toolchain in your resource group.
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. From the row for the user that you want to assign access, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu.
 3. Click **Assign access**.
-4. In the **Assign users additional access** section, click **IAM services**.
-5. Choose to assign access to the **Toolchain** service within **All resource groups**.
-6. In the **Platform access** section, select **Viewer** (or higher) access to provide the user with access to view toolchain service instances from the platform, perform platform actions that are required to configure and operate toolchain service instances, and assign access policies to other users.
-7. In the **Resource group access** section, select the **Editor** role to provide the user with access to create, view, edit, or delete the toolchain service from resource groups. Select the **Viewer** role to provide the user with access to view toolchains only. Select both the **Viewer** and **PipelineRunner** roles to provide the user with access to view toolchains or to run delivery pipelines.
-8. Click **Add**.
-9. Click **Assign**. 
+4. In the **How do you want to assign access?** section, click **Access Policy**.
+5. Choose to assign access to the **Toolchain** service.
+6. Scope the access to **Specific resources.** Select the **Resource group** attribute type and enter a resource group.
+7. In the **Resource group access** section, select **Viewer** (or higher) access to provide the user with access to view toolchain service instances from the platform, perform platform actions that are required to configure and operate toolchain service instances, and assign access policies to other users.
+8. In the **Roles and actions** section, select the **Editor** role to provide the user with access to create, view, edit, or delete the toolchain service from resource groups. Select the **Viewer** role to provide the user with access to view toolchains only. Select both the **Viewer** and **PipelineRunner** roles to provide the user with access to view toolchains or to run delivery pipelines.
+9. Click **Add**.
+10. Click **Assign**.
 
 Depending on their role, the user can now work with all of the toolchains within the specified resource group. They can add tool integrations and modify and run pipelines.
 
