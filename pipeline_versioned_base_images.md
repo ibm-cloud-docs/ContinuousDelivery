@@ -135,7 +135,7 @@ The version of `yq` that is preinstalled in the images corresponds to the yq too
 ### Version 3.24
 {: #version_3_24}
 
-To view the contents of version 3.23, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
+To view the contents of version 3.24, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
 
 This image also contains the Terraform command-line interface (CLI).
 
@@ -279,7 +279,7 @@ on linux_amd64
 
 To view the contents of version 3.23, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is still based on `ubi8` because `ubi9` doesn't provide the correct version of `openssl`. 
 
-This image also contains the Terraform command-line interface (CLI).
+This image also contains the Terraform CLI.
 
 The {{site.data.keyword.cloud_notm}} CLI provides code risk analysis commands. You can use the {{site.data.keyword.cloud_notm}} CLI to analyze your code for vulnerabilities and compliance with certain rules. Code Risk Analyzer is available in all {{site.data.keyword.cloud_notm}} regions where toolchains are supported. For more information about Code Risk Analyzer, see [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
 {: tip}
