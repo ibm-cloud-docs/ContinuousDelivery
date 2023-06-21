@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-05-30"
+lastupdated: "2023-06-19"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -525,6 +525,13 @@ To limit project access to only project members, complete the following steps:
 3. Locate the Project visibility setting.
 4. Select **Private**, if it is not already selected.
 5. Click **Save changes**.
+
+### Project membership
+{: #cd_secure_grit_membership}
+
+{{site.data.keyword.gitrepos}} is a cloud hosted social coding environment that is available to all {{site.data.keyword.contdelivery_short}} users. If you are a {{site.data.keyword.gitrepos}} project Maintainer or Owner, you can invite any user and group members to the project. {{site.data.keyword.cloud_notm}} places no restrictions on who you can invite to a project. Because you can invite anyone into a GitLab project, be careful to invite only those users or groups who are part of your company or organization, unless you explicitly intend otherwise.
+
+For more information about managing GitLab project members, see [Members of a project](https://docs.gitlab.com/ee/user/project/members/){: external}.
 
 ### Project email settings
 {: #cd_secure_grit_email}

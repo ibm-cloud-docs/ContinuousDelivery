@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-30"
+lastupdated: "2023-05-31"
 
 keywords: tool integrations, IBM Cloud Public, GitLab
 
@@ -10,7 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}  
+{{site.data.keyword.attribute-definition-list}}
 
 # Configuring GitLab
 {: #gitlab}
@@ -30,9 +30,9 @@ If you are configuring this tool integration as you are creating the toolchain, 
 
 1. If you are using a repo on your own GitLab server, in the Configurable Integrations section, click **Add custom server**.
 
-   * Type a title for your custom GitLab server and specify the root URL for the server. Enter your personal access token and then click **Save custom integration**.
+   a. Type a title for your custom GitHub server, specify the root URL for the server, and enter your personal access token.
 
-   * If you don't have a personal access token, you can follow the documentation on the GitLab website to create one.
+   b. If you don't have a personal access token, you can follow the documentation on the GitLab website to create one.
 
 1. Review the default target repo locations for the GitLab repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
 
@@ -56,7 +56,7 @@ If you have a toolchain and are adding this tool integration to it, follow these
 1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}.
 1. Click **Create Integration**.
 1. From your toolchain's Overview page, on the **Repositories** card, click the GitLab repo that you want to work with. Depending on the repo that you selected, either the GitLab website or your company's GitLab repo opens, where you can view the contents of the repo.
-1. If you enabled GitLab Issues, click **GitLab Issues** to open it. You can use this instance of GitLab Issues for your entire toolchain, even if the toolchain contains multiple GitLab repos.    
+1. If you enabled GitLab Issues, click **GitLab Issues** to open it. You can use this instance of GitLab Issues for your entire toolchain, even if the toolchain contains multiple GitLab repos.
 
    If you don't have owner or master privileges for the repo that you are linking to, your integration is limited because you can't use a webhook. Webhooks are required to automatically run a pipeline when a commit is pushed to the repo. Without a webhook, you must start your pipelines manually.
    {: tip}

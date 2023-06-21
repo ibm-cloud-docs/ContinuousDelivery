@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-09-23"
+  years: 2020, 2023
+lastupdated: "2023-06-19"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -127,7 +127,33 @@ spec:
           env
 ```         
 
-## SLSA Level 1 provenance
+## Managed worker virtual machine (VM) sizing
+{: #tekton_tshirt_sizing}
+
+When you run a pipeline by using the IBM Managed Worker pool, a VM with a specific default memory is allocated. Although most jobs can run successfully with the provided memory, certain pipelines require extra memory for intensive tasks.
+
+Users can specify a label on their tasks to indicate whether a task requires more (or less) memory for a specific task. This ability to identify the specific amount of resources that are required benefits resource usage and eventual cost savings.
+
+To indicate which VM profile to apply to a specific task within a Tekton pipeline, add the `runtimeClassName` label to the task with one of the following VM values. If no label is provided, the default VM profile is used.
+
+* `kata-tiny`: 128Mi
+* `kata-small`: 2Gi
+* `kata-medium`: 4Gi (default)
+* `kata-large`: 8Gi 
+
+For example:
+
+```text
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: task1
+  labels:
+    runtimeClassName: kata-tiny
+    and so on.
+``` 
+
+## SLSA level 1 provenance
 {: #tekton_slsa_provenance}
 
 Supply chain Levels for Software Artifacts (SLSA), also known as "salsa", is a security framework. SLSA is a checklist of standards and controls to prevent tampering, improve integrity, and secure packages and infrastructure in your projects, businesses, or enterprises. SLSA gets you from safe enough to being as resilient as possible, at any link in the chain.
