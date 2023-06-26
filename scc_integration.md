@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Configuring {{site.data.keyword.compliance_short}}
 {: #scc}
 
-The older hybrid cloud scan is deprecated. For more information about this deprecation, see the [31 March 2023 {{site.data.keyword.compliance_short}} announcement](https://cloud.ibm.com/status/announcement?component=compliance){: external}.
+The older hybrid cloud scan is deprecated. For more information about this deprecation, see the [31 Mar 2023 {{site.data.keyword.compliance_short}} announcement](https://cloud.ibm.com/status/announcement?component=compliance){: external}.
 {: deprecated}
 
 The **trigger validation scan after deploy** field and its related options are deprecated. For more information about this deprecation, see the [30 May 2023 {{site.data.keyword.contdelivery_short}} announcement](https://cloud.ibm.com/status/announcement?component=continuous-delivery){: external}.
