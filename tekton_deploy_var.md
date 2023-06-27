@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-06-19"
+lastupdated: "2023-06-27"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -152,6 +152,24 @@ metadata:
     runtimeClassName: kata-tiny
     and so on.
 ``` 
+
+You can also specify the same configuration in the `PipelineRun` as part of the `TriggerTemplate`. By specifying the `runtimeClassName` in the `PipelineRun`, users can select the VM profile that they want to use without changing the task definitions.
+
+For example:
+
+```yaml
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata:
+  generateName: pipeline-run-
+spec:
+  pipelineRef:
+    name: pipeline
+  taskRunSpecs:
+    - pipelineTaskName: task1
+      podTemplate:
+        runtimeClassName: kata-tiny
+```
 
 ## SLSA level 1 provenance
 {: #tekton_slsa_provenance}
