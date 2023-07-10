@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2023-01-05"
+lastupdated: "2023-07-07"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -268,7 +268,7 @@ You must register a private worker with the specific {{site.data.keyword.cloud_n
 2. Run the following command with the service ID and API key that you created previously, the private worker name, and the `{REGION}` which is the location of the toolchain's pipeline.
 
    ```text
-   $ kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install/worker?serviceId={SERVICE_ID}&apikey={API_KEY}&name={WORKER_NAME}"
+   $ kubectl create secret generic {WORKER_NAME}-auth --from-literal=apikey={API_KEY} && kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install/worker?serviceId={SERVICE_ID}&name={WORKER_NAME}"
 
    workeragent.devops.cloud.ibm.com/worker-name created
    secret/worker-name-auth created
