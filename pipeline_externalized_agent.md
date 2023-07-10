@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-03-27"
+lastupdated: "2023-07-10"
 
 keywords: Delivery Pipeline Private Workers, externalized mode, private worker, kustomize, external secrets
 
@@ -116,7 +116,7 @@ configMapGenerator:
 {: #externalized-secret-store-file}
 
 ```text
-## Pipeline Hashicorp vault secret store: base/external-secret-store.yaml
+## Pipeline HashiCorp vault secret store: base/external-secret-store.yaml
 apiVersion: external-secrets.io/v1beta1
 kind: SecretStore
 metadata:
