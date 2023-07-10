@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-07-10"
 
-keywords: tool integrations, IBM Cloud Public, Hashicorp Vault
+keywords: tool integrations, IBM Cloud Public, HashiCorp Vault
 
 subcollection: ContinuousDelivery
 
