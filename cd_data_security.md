@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-06-19"
+lastupdated: "2023-07-10"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -480,7 +480,7 @@ By default, {{site.data.keyword.contdelivery_short}} encrypts your data by using
 |:-----------------|:-----------------|
 |Toolchain		|Properties and parameters     |
 |Pipeline		| * Property keys and values \n * Job logs \n * Job artifacts  |
-|Integrations		| * Slack (Slack webhook) \n * Pagerduty (API access key, Integration key) \n * Sauce Labs (Access key) \n * Artifactory (API key) \n * Hashicorp Vault (Token, Role ID, Secret ID, Password) \n *  Jenkins (Jenkins API token) \n * JIRA (JIRA API token) \n * Nexus (Authentication token) \n * Rational Team Concert (Password) \n * Security and Compliance Center ({{site.data.keyword.cloud_notm}} API key) \n * Sonarqube (SonarQube password or authentication token) |
+|Integrations		| * Slack (Slack webhook) \n * Pagerduty (API access key, Integration key) \n * Sauce Labs (Access key) \n * Artifactory (API key) \n * HashiCorp Vault (Token, Role ID, Secret ID, Password) \n *  Jenkins (Jenkins API token) \n * JIRA (JIRA API token) \n * Nexus (Authentication token) \n * Rational Team Concert (Password) \n * Security and Compliance Center ({{site.data.keyword.cloud_notm}} API key) \n * Sonarqube (SonarQube password or authentication token) |
 |{{site.data.keyword.DRA_full}}		|Attachment in test records |
 {: caption="Table 3. Values that are encrypted by using your own key" caption-side="top"}
 
