@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-07-10"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -167,7 +167,7 @@ spec:
     name: pipeline
   taskRunSpecs:
     - pipelineTaskName: task1
-      podTemplate:
+      taskPodTemplate:
         runtimeClassName: kata-tiny
 ```
 
