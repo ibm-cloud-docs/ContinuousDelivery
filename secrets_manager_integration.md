@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2023-06-02"
+lastupdated: "2023-07-10"
 
 keywords: tool integrations, IBM Cloud Public, IBM Secrets Manager
 
@@ -66,7 +66,7 @@ The following example applies an Arbitrary secret type that is stored in {{site.
 
 1. Click the key icon to retrieve secrets from secure stores such as {{site.data.keyword.secrets-manager_short}} for the {{site.data.keyword.cloud_notm}} API key.
 
-1. In the **Provider** field, specify the provider and the name of the {{site.data.keyword.secrets-manager_short}} tool integration that you use to manage your toolchain secrets. For example, to use the {{site.data.keyword.secrets-manager_short}} tool integration, select `Secrets Manager: ibm-secrets-manager-1`. You can use other providers to manage your toolchain secrets, such as [Hashicorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault) and [Key Protect](/docs/ContinuousDelivery?topic=ContinuousDelivery-keyprotect).
+1. In the **Provider** field, specify the provider and the name of the {{site.data.keyword.secrets-manager_short}} tool integration that you use to manage your toolchain secrets. For example, to use the {{site.data.keyword.secrets-manager_short}} tool integration, select `Secrets Manager: ibm-secrets-manager-1`. You can use other providers to manage your toolchain secrets, such as [HashiCorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault) and [Key Protect](/docs/ContinuousDelivery?topic=ContinuousDelivery-keyprotect).
 
 1. Select a secret group and a secret name and click **OK** to apply the stored secret to the field that is associated with it.
 
@@ -106,7 +106,7 @@ You can select the key-value secrets to use in your toolchain by selecting an in
 
 1. Click the key icon to retrieve secrets from secure stores such as {{site.data.keyword.secrets-manager_short}} for the {{site.data.keyword.cloud_notm}} API key.
 
-1. In the **Provider** field, specify the provider and the name of the {{site.data.keyword.secrets-manager_short}} tool integration that you use to manage your toolchain secrets. For example, to use the {{site.data.keyword.secrets-manager_short}} tool integration, select `Secrets Manager: ibm-secrets-manager-1`. You can use other providers to manage your toolchain secrets, such as [Hashicorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault) and [Key Protect](/docs/ContinuousDelivery?topic=ContinuousDelivery-keyprotect).
+1. In the **Provider** field, specify the provider and the name of the {{site.data.keyword.secrets-manager_short}} tool integration that you use to manage your toolchain secrets. For example, to use the {{site.data.keyword.secrets-manager_short}} tool integration, select `Secrets Manager: ibm-secrets-manager-1`. You can use other providers to manage your toolchain secrets, such as [HashiCorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault) and [Key Protect](/docs/ContinuousDelivery?topic=ContinuousDelivery-keyprotect).
 
 1. Select a secret group and a secret name to apply the stored secret to the field that is associated with it. Optional: select a secret key. Click **OK**. The name of the secret that you select appears in capsule form. You cannot edit the secret name inline, but you can click ![remove icon](images/secret-pill-delete-16.png) to delete the name. You can also replace the existing secret name by selecting the secret name again. If you manually type or paste a secret name into the Secrets field, it is displayed in a different format.
 
