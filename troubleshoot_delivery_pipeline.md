@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-06-19"
+lastupdated: "2023-07-10"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -218,10 +218,10 @@ Replace any `s3.private.*` {{site.data.keyword.cos_full_notm}} endpoints with `s
 PipelineRuns fails with an error when any of the secure properties in the pipeline don't resolve at the start of the pipeline run.
 {: tsSymptoms}
 
-Pipelines that cannot retrieve a secret value from a secrets store or from either Secrets Manager, Key Protect, or Hashicorp Vault, fail with an error message that indicates which properties cannot be resolved. Resolution failures can occur even if the properties are not used directly in the triggered run. For example, resolution failures might occur if the path to the secret in the store is no longer valid, the secret store is inaccessible, or for authorization issues.
+Pipelines that cannot retrieve a secret value from a secrets store or from either Secrets Manager, Key Protect, or HashiCorp Vault, fail with an error message that indicates which properties cannot be resolved. Resolution failures can occur even if the properties are not used directly in the triggered run. For example, resolution failures might occur if the path to the secret in the store is no longer valid, the secret store is inaccessible, or for authorization issues.
 {: tsCauses}
 
-If your pipelines contain secure properties that do not currently resolve, update these properties to refer to valid, retrievable secrets that are located in Secrets Manager, Key Protect, or Hashicorp Vault.
+If your pipelines contain secure properties that do not currently resolve, update these properties to refer to valid, retrievable secrets that are located in Secrets Manager, Key Protect, or HashiCorp Vault.
 {: tsResolve}
 
 Make sure that your pipeline specifies only those secure properties that are required for the successful completion of a triggered `PipelineRun` as pipeline trigger properties, instead of as pipeline level environment properties. Use pipeline level environment properties only when required.
