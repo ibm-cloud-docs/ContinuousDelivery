@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-06-20"
+lastupdated: "2023-07-10"
 
 keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
@@ -41,7 +41,7 @@ The following table lists the IAM service access roles and the available actions
 
 | Service Role | Description of Actions | Example Actions|
 |:-----------------|:-----------------|:-----------------|
-| Pipeline Runner | Run delivery pipelines. | Click the **Run Stage** icon of the stage that your pipeline job is in. |
+| PipelineRunner | Run delivery pipelines. | Click the **Run Stage** icon of the stage that your pipeline job is in. |
 {: caption="Table 2. IAM service access roles" caption-side="bottom"}
 
 PipelineRunner access grants only the ability to run a delivery pipeline. To view a pipeline from the UI, an extra role such as the Viewer role is required.
