@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-25"
+  years: 2015, 2023
+lastupdated: "2023-07-10"
 
 keywords: tool integrations, IBM Cloud Public, Key Protect
 
@@ -48,7 +48,7 @@ You must save third-party secrets, such as a Slack webhook or an Artifactory API
 
 1. Click the key icon to retrieve secrets from secure stores such as {{site.data.keyword.keymanagementserviceshort}} for the {{site.data.keyword.cloud_notm}} API key.
 
-1. In the **Provider** field, specify the provider and the name of the {{site.data.keyword.keymanagementserviceshort}} tool integration that you use to manage your toolchain secrets. For example, to use the Key Protect tool integration, select `Key Project: ibm-keyprotect-secrets-1`. You can use other providers to manage your toolchain secrets, such as [Hashicorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault).
+1. In the **Provider** field, specify the provider and the name of the {{site.data.keyword.keymanagementserviceshort}} tool integration that you use to manage your toolchain secrets. For example, to use the Key Protect tool integration, select `Key Project: ibm-keyprotect-secrets-1`. You can use other providers to manage your toolchain secrets, such as [HashiCorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault).
 
 1. Select a secret name and click **OK** to apply the stored secret to the field that is associated with it.
 
