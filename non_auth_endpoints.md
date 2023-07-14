@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-30"
+lastupdated: "2023-07-14"
 
 keywords: endpoints, authentication, IBM Cloud Public
 
@@ -123,6 +123,17 @@ The following table lists the Metrics endpoints that do not require authenticati
 | `https://otc-metrics-listener.[region].devops.cloud.ibm.com/version` | Get the version of the service component |
 {: caption="Table 5. Metrics" caption-side="top"}
 
+## Slack Invite
+{: #slack_invite}
+
+The following table lists the Slack Invite endpoints that do not require authentication:
+
+|Endpoint|Description|
+|:-------------------------------------------|:------------------|
+| `https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/status` | Get the current status of the application |
+| `https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/version` | Get the version of the application |
+{: caption="Table 6. Slack Invite" caption-side="top"}
+
 ## Third-party tool integrations
 {: #third-party_tool_integrations}
 
@@ -147,7 +158,7 @@ The following table lists the third-party tool integration endpoints that do not
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/status` | Get the status of the Tools Integration Broker service component |
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/toolint-broker/api/v1/form` | Forwards the Authenticate, Populate, and Validate (APV) requests to the appropriate broker |
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-{: caption="Table 6. Third-party tool integrations" caption-side="top"}
+{: caption="Table 7. Third-party tool integrations" caption-side="top"}
 
 ## Toolchain platform
 {: #toolchain_platform}
@@ -173,4 +184,4 @@ The following table lists the Toolchain platform endpoints that do not require a
 | `https://otc-ui.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 | `https://otc-webhook-manager.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://otc-webhook-manager.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-{: caption="Table 7. Toolchain platform" caption-side="top"}
+{: caption="Table 8. Toolchain platform" caption-side="top"}
