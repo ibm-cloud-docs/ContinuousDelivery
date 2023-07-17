@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-04-19"
+lastupdated: "2023-07-12"
 
 keywords: tool integrations, IBM Cloud Public, Slack
 
@@ -68,6 +68,15 @@ You must specify the `tool_type_id` property in the request body with the `slack
 | toolchain_bind | optional, updatable, `Default: true` | Boolean | toolchain_bind | Generates `tool added to toolchain` notifications. |
 | toolchain_unbind | optional, updatable, `Default: true` | Boolean | toolchain_unbind | Generates `tool removed from toolchain` notifications. |
 {: caption="Table 1. Slack tool integration parameters" caption-side="bottom"}
+
+## Enabling Slack notifications for Tekton Pipelines
+{: #slack_tekton_pipelines}
+
+You can configure a Tekton Pipeline to send events to Slack integrations.
+
+1. From your toolchain's Overview page, on the **Delivery pipelines** card, click the **Delivery Pipeline** to open the Tekton Delivery Pipeline dashboard. 
+1. On the **Settings** > **Advanced Settings** page, enable **Event Notifications**.
+1. Save your changes.
 
 ## Learn more about Slack
 {: #learn_slack}
