@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-19"
+lastupdated: "2023-07-12"
 
 keywords: tool integrations, IBM Cloud Public, Event Notifications
 
@@ -54,6 +54,15 @@ You must specify the `tool_type_id` property in the request body with the `event
 | name | required, updatable | String | name | The name of this tool integration. |
 | instance-crn  | required, updatable | String | instance_crn | The Cloud Resource Name (CRN) of the {{site.data.keyword.en_short}} service instance. |
 {: caption="Table 1. {{site.data.keyword.en_short}} tool integration parameters" caption-side="bottom"}
+
+## Enabling notifications for Tekton Pipelines
+{: #event_notifications_tekton_pipelines}
+
+You can configure a Tekton Pipeline to send events to {{site.data.keyword.en_short}} integrations.
+
+1. From your toolchain's Overview page, on the **Delivery pipelines** card, click the **Delivery Pipeline** to open the Tekton Delivery Pipeline dashboard. 
+1. On the **Settings** > **Advanced Settings** page, enable **Event Notifications**.
+1. Save your changes.
 
 ## Learn more about {{site.data.keyword.en_short}}
 {: #learn_event_notifications}
