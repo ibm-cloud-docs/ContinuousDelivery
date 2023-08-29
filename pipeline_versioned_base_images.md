@@ -62,77 +62,372 @@ After version 2.0, images no longer include grunt or python. If these tools are 
 
 Images are available on the IBM Cloud Container Registry. To list these hosted images, run the `ibmcloud cr images --restrict continuous-delivery` command when you target the global IBM Cloud Container Registry.
 
-| Base image version | IBM Cloud Container Registry version |sha256 value|
-| -------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 3.25 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.25`| sha256:dd2000b525336acd00e9b95b74f15696797764725adbb25fa720e9431d558cbf|
-| 3.24 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.24`| sha256:7a52b892ae7704a7b6c4cf03a292356240305c0d7bc9c275d10df19d12db99c5|
-| 3.23 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.23`| sha256:e62fe158ebc7d875a0be5263da6872250fd8038b00cef0aada4b9f14f06dd827|
-| 3.21 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.21`| sha256:94b77206bbc38a0d0ecd7006c00c9773d4ddd6e864525736b3bc4ca87c64b991|
-| 3.20 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.20`| sha256:82e68006004eeca8bdf838e2756d6b7fbb787baa42817feba8e847d8b1a27106|
-| 3.19 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.19`| sha256:ffb0bb00c37c4c2af01a53afc3597494275ed99a1e8ac3d4e653f105937509f0|
-| 3.18 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.18`| sha256:ba072e693cd646664711f60c7d3b4c34a25b4578bdc445a2d6855eff595fe67c|
-| 3.17 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.17`| sha256:3e2cbec3d0781b0e9ea9293d0a88e5b654635c065864718e74130a5124965197|
-| 3.16 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.16`| sha256:a09c7918889289fa2106e54ba527793aad7152847a50e6584d59266ecc40d498|
-| 3.15 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.15`| sha256:506e7b8e96ad40fbf098b6b0a337bca7c9d07fa5cf58058e857c38d9e7625497|
-| 3.14 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.14`| sha256:b6f80270c9328c3014766fdb2dca9aea4f593f05c1bcaf5037d126bf042ebffe|
-| 3.13 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.13`| sha256:ae7f9e80bcc7947ae4df8d94a326240ca648c807183a72e232ecb03043348f20|
-| 3.12 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.12`| sha256:6f457e7ec323eac3ae05c6ca5bfaacee1ed669c50cdb5983c893c5351a184331|
-| 3.11 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.11`| sha256:d4f4a2e59127ff11426789bf1d86c88fcac3e9746241755f6af7ff9e79fd62f1|
-| 3.10 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.10`| sha256:8fae15566254a0300315e3c752021d6eabdea73aaa3372f86c6218579692eb67|
-| 3.9 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.9`| sha256:d1d42755854accd4957979e974c620cf892e8d38b123e5eac06abf378b353879|
-| 3.8 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.8`| sha256:8d0c33a4e5651a7d412ebfd751a45b613a6efde6167c70f1f1e8938d1bd8c613|
-| 3.7 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.7`| sha256:0444aa3cc5032ba4d7f7a59a4177dd43dc1126ad902f09079b0a66156bbe4bcf|
-| 3.6 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.6`| sha256:4bfa333cd47ee9d0e369edb147451ff008169f0dd84a115c16205b5cd0de64f6|
-| 3.5 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.5`| sha256:543249c585e351c14d5b9f16664625236e20e4ba85098ac26adb0d8cecbbcc97|
-| 3.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.4`| sha256:4aaabf49950796d9004f6e4f04ff53ab24dcd3fd29d8cc719a9b81f7546d31f2|
-| 3.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.3`| sha256:5b8f7e1964c0a82995689d636b60a1761dd08ce422b9195aadc0249e5da90dae|
-| 3.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.2`| sha256:d59863621d3ba1b9bd47f76950c751e842405f9c303d0d4d4298d964b664ee85|
-| 3.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.1`| sha256:c2468d28f15fa6970f13510c01477326f91a043881c2b4cd8f2b1ff8ed8c22a1|
-| 3.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.0`| sha256:42318979f165cc1ffd4d707022ceb5461360a9b6cd1216bc0c63391bdd042726|
-| 2.38 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.38`| sha256:2f11f01c9710ec711a17a9269be04f584e173c89b27b116c27ec93ec31981c07|
-| 2.37 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.37`| sha256:229503f75f9837a1fd0e8d38918d8904d3719eaeae84e8aaf94201e8409d78fd|
-| 2.36 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.36`| sha256:caf29e1e2ce8e1df165c4eb7a3124ae17b6438e2b04b8766dd0dfad502a79350|
-| 2.35 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.35`| sha256:f78e02d91386dbd9a2e1fb9686df130c36666ae67cfc0bc483f1f4ee34cdf9e2|
-| 2.33 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.33`| sha256:dc3a6d2a352b0019f8ce7ea4c10afd4017e45c48cb22ca692ab0b02b028538cc|
-| 2.32 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.32`| sha256:e66e380e37ad1f84891fbc9c708b7685356987895f2c397c20db0a5fae1efbed|
-| 2.31 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.31`| sha256:24d3c769801314b7502390c5c7054b303c534c2b3eceee3b87f1cb35f10f3e26|
-| 2.30 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.30`| sha256:2377117ad8e1305cd51e57aad59ca6bf7dedc028d128898df646f2854229a0de|
-| 2.29 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.29`| sha256:9454cc4fc70a21a1f5b59ede38910b30d29db69e5331e9e37a4d3516427ce66d|
-| 2.28 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.28`| sha256:5ce2b19d67e1e05bc70b0f5639ea7e7696cfac37aea62e9f2e75249f54d97c08|
-| 2.27 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.27`| sha256:e212bfbfa48f88f7b12ac77aa21fdc41d8eccf9ff89a2405706430738d09e24b|
-| 2.26 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.26`| sha256:31bd71102552d6d76b6660c4ca2cbae930367ff3d644acc0673e861085a23b12|
-| 2.25 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.25`| sha256:31f01a325fcb53651742fbb4af1d9a3ec425fc9b2662e1894c01389ff37426bf|
-| 2.24 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.24`| sha256:a97c10d27cdf8ee543cad4b29980ccdd5a697164f40ade7f399a0b7a3619f2ea|
-| 2.23 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.23`| sha256:8582554fda2c36c0750d734c78b692b96ac0f983d4d2e11a186e224ec2fa554f|
-| 2.22 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.22`| sha256:0653ba3abbdadf347fde238667b510757ecd9625dd7f7d53c512d7a5a2762612|
-| 2.21 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.21`| sha256:4ce661dc331005bc3cb828a677c760b2dda3c2951415141a91aeb0c0b9a351da|
-| 2.20 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.20`| sha256:655330f36771d274082b6c16a60620350597a9d6f2489a6246b9d2833d021211|
-| 2.19 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.19`| sha256:482d28e51d5acc65471b366bbdcabc97f69e49da933337a7c42f45907cd63173|
-| 2.18 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.18`| sha256:56cc0a6562e786f1b87b490e6a34ed655fa2c376ae3c8622690912dce7d9a608|
-| 2.17 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.17`| sha256:c1e9d5a9674a093635c386f96d35781aea7cad6cc1da86991ee1a85c854216f8|
-| 2.16 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.16`| sha256:3a3b5a981caed4238ef7297bb54b4a32b974b0499b12744347bc661d3f323916|
-| 2.15 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.15`| sha256:f4bff8348fbfdb738c3c681cb6da04cb215f742abe5e09b5d2f5ef07dcfbf21b|
-| 2.14 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.14`| sha256:7bad3379f15fce2d169ae066520b6bdfe719ee4fc8ae271988b4ca772ffb69d5|
-| 2.13 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.13`| sha256:916d4a7cac5ee3102b5fbbbbda67387051a6f7a545353e4ba4bd489246ec8855|
-| 2.12 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.12`| sha256:ff4053b0bca784d6d105fee1d008cfb20db206011453071e86b69ca3fde706a4|
-| 2.11 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.11`| sha256:61d35cdad7e77dbcedbf6ab47591b38121b03c5a4f41041f2d628cb8485602e1|
-| 2.10 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.10`| sha256:c59986a7a4e5931f1172ba3c6fc5f535edbbcc60daf6f3e092df9851283f8ceb|
-| 2.9 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.9`| sha256:2976e1374e87f5cddabcf80179d9708868d52dbf656fdde60f803553be633db2|
-| 2.8 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.8`| sha256:119e05bad27ccc899df5b895ccba41135fd5edbc5786a77c1c763621b00dee0f|
-| 2.7 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.7`| sha256:282677e79ccb9d20c699d384a54093894de03675752cd848a3133266c898c14c|
-| 2.6 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.6`| sha256:7f588468622a981f89cf5e1212aaf75fface9da6169b5345ca52ab63d8215907|
-| 2.5 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.5`| sha256:90bdb361ba94b75dfd7feb7c6a2577ece9f91e0392f20a5b4e9808120041b3e2|
-| 2.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.4.1`| sha256:ade4209bbc6923c02a3315c7e6dcc4376afc355db2765b792205be9b33f4243d|
-| 2.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.3`| sha256:1451dab959183c6378a804ce0744913028623e10c401e5ebc1a1f88c82443ba4|
-| 2.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.2`| sha256:2073c470e83418abf2c11ec92554c139aadd18f0c63fffb92c2c3f5e90c46ba6|
-| 2.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.1`| sha256:b5be69c4ae42a7af28a9d7ad25df548c77959b006507367507c9ff0f992306f2|
-| 2.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.0`| sha256:cc13eadecb8e99a7fe56a071427c2caa34149c31d1ad84f4f03c96f111dd0154|
+| Base image version | IBM Cloud Container Registry version |sha256 value|Creation date|
+| -------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------|
+| 3.27 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.27`| sha256:70708bdc8bfb23bfda9fa5effc644901cdd9e7314c91ac6c1cbc62bfb9e0a1a2|2023-08-18|
+| 3.26 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.26`| sha256:de8ee389e3cb5818eb3c65a015b86c1042c2adf0bad64467cd3ccd3d8c66e26d|2023-08-02|
+| 3.25 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.25`| sha256:dd2000b525336acd00e9b95b74f15696797764725adbb25fa720e9431d558cbf|2023-07-05|
+| 3.24 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.24`| sha256:7a52b892ae7704a7b6c4cf03a292356240305c0d7bc9c275d10df19d12db99c5|2023-06-19|
+| 3.23 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.23`| sha256:e62fe158ebc7d875a0be5263da6872250fd8038b00cef0aada4b9f14f06dd827|2023-05-29|
+| 3.21 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.21`| sha256:94b77206bbc38a0d0ecd7006c00c9773d4ddd6e864525736b3bc4ca87c64b991|2023-04-17|
+| 3.20 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.20`| sha256:82e68006004eeca8bdf838e2756d6b7fbb787baa42817feba8e847d8b1a27106|2023-04-03|
+| 3.19 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.19`| sha256:ffb0bb00c37c4c2af01a53afc3597494275ed99a1e8ac3d4e653f105937509f0|2023-03-13|
+| 3.18 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.18`| sha256:ba072e693cd646664711f60c7d3b4c34a25b4578bdc445a2d6855eff595fe67c|2023-02-21|
+| 3.17 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.17`| sha256:3e2cbec3d0781b0e9ea9293d0a88e5b654635c065864718e74130a5124965197|2023-02-06|
+| 3.16 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.16`| sha256:a09c7918889289fa2106e54ba527793aad7152847a50e6584d59266ecc40d498|2023-01-24|
+| 3.15 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.15`| sha256:506e7b8e96ad40fbf098b6b0a337bca7c9d07fa5cf58058e857c38d9e7625497|2023-01-16|
+| 3.14 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.14`| sha256:b6f80270c9328c3014766fdb2dca9aea4f593f05c1bcaf5037d126bf042ebffe|2022-12-14|
+| 3.13 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.13`| sha256:ae7f9e80bcc7947ae4df8d94a326240ca648c807183a72e232ecb03043348f20|2022-11-28|
+| 3.12 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.12`| sha256:6f457e7ec323eac3ae05c6ca5bfaacee1ed669c50cdb5983c893c5351a184331|2022-11-10|
+| 3.11 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.11`| sha256:d4f4a2e59127ff11426789bf1d86c88fcac3e9746241755f6af7ff9e79fd62f1|2022-10-04|
+| 3.10 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.10`| sha256:8fae15566254a0300315e3c752021d6eabdea73aaa3372f86c6218579692eb67|2022-08-30|
+| 3.9 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.9`| sha256:d1d42755854accd4957979e974c620cf892e8d38b123e5eac06abf378b353879|2022-07-28|
+| 3.8 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.8`| sha256:8d0c33a4e5651a7d412ebfd751a45b613a6efde6167c70f1f1e8938d1bd8c613|2022-06-22|
+| 3.7 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.7`| sha256:0444aa3cc5032ba4d7f7a59a4177dd43dc1126ad902f09079b0a66156bbe4bcf|2022-04-20|
+| 3.6 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.6`| sha256:4bfa333cd47ee9d0e369edb147451ff008169f0dd84a115c16205b5cd0de64f6|2022-02-22|
+| 3.5 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.5`| sha256:543249c585e351c14d5b9f16664625236e20e4ba85098ac26adb0d8cecbbcc97|2022-01-18|
+| 3.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.4`| sha256:4aaabf49950796d9004f6e4f04ff53ab24dcd3fd29d8cc719a9b81f7546d31f2|2021-11-29|
+| 3.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.3`| sha256:5b8f7e1964c0a82995689d636b60a1761dd08ce422b9195aadc0249e5da90dae|2021-09-24|
+| 3.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.2`| sha256:d59863621d3ba1b9bd47f76950c751e842405f9c303d0d4d4298d964b664ee85|2021-09-02|
+| 3.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.1`| sha256:c2468d28f15fa6970f13510c01477326f91a043881c2b4cd8f2b1ff8ed8c22a1|2021-06-10|
+| 3.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.0`| sha256:42318979f165cc1ffd4d707022ceb5461360a9b6cd1216bc0c63391bdd042726|2021-04-07|
+| 2.40 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.40`| sha256:8164d04f6c812be3a3a0790c541c72a9fd7ea65a8bc0a0264b8c4e82e0ed1868|2023-08-18|
+| 2.39 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.39`| sha256:499559f10a289300828536196947da164c09cece319e3ce3f30fd408cde55c5d|2023-08-02|
+| 2.38 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.38`| sha256:2f11f01c9710ec711a17a9269be04f584e173c89b27b116c27ec93ec31981c07|2023-07-05|
+| 2.37 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.37`| sha256:229503f75f9837a1fd0e8d38918d8904d3719eaeae84e8aaf94201e8409d78fd|2023-06-19|
+| 2.36 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.36`| sha256:caf29e1e2ce8e1df165c4eb7a3124ae17b6438e2b04b8766dd0dfad502a79350|2023-05-31|
+| 2.35 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.35`| sha256:f78e02d91386dbd9a2e1fb9686df130c36666ae67cfc0bc483f1f4ee34cdf9e2|2023-05-30|
+| 2.33 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.33`| sha256:dc3a6d2a352b0019f8ce7ea4c10afd4017e45c48cb22ca692ab0b02b028538cc|2023-04-17|
+| 2.32 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.32`| sha256:e66e380e37ad1f84891fbc9c708b7685356987895f2c397c20db0a5fae1efbed|2023-04-03|
+| 2.31 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.31`| sha256:24d3c769801314b7502390c5c7054b303c534c2b3eceee3b87f1cb35f10f3e26|2023-03-13|
+| 2.30 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.30`| sha256:2377117ad8e1305cd51e57aad59ca6bf7dedc028d128898df646f2854229a0de|2023-02-21|
+| 2.29 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.29`| sha256:9454cc4fc70a21a1f5b59ede38910b30d29db69e5331e9e37a4d3516427ce66d|2023-02-06|
+| 2.28 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.28`| sha256:5ce2b19d67e1e05bc70b0f5639ea7e7696cfac37aea62e9f2e75249f54d97c08|2023-01-24|
+| 2.27 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.27`| sha256:e212bfbfa48f88f7b12ac77aa21fdc41d8eccf9ff89a2405706430738d09e24b|2023-01-16|
+| 2.26 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.26`| sha256:31bd71102552d6d76b6660c4ca2cbae930367ff3d644acc0673e861085a23b12|2022-12-14|
+| 2.25 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.25`| sha256:31f01a325fcb53651742fbb4af1d9a3ec425fc9b2662e1894c01389ff37426bf|2022-11-28|
+| 2.24 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.24`| sha256:a97c10d27cdf8ee543cad4b29980ccdd5a697164f40ade7f399a0b7a3619f2ea|2022-11-10|
+| 2.23 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.23`| sha256:8582554fda2c36c0750d734c78b692b96ac0f983d4d2e11a186e224ec2fa554f|2022-10-04|
+| 2.22 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.22`| sha256:0653ba3abbdadf347fde238667b510757ecd9625dd7f7d53c512d7a5a2762612|2022-08-30|
+| 2.21 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.21`| sha256:4ce661dc331005bc3cb828a677c760b2dda3c2951415141a91aeb0c0b9a351da|2022-07-28|
+| 2.20 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.20`| sha256:655330f36771d274082b6c16a60620350597a9d6f2489a6246b9d2833d021211|2022-06-20|
+| 2.19 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.19`| sha256:482d28e51d5acc65471b366bbdcabc97f69e49da933337a7c42f45907cd63173|2022-04-20|
+| 2.18 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.18`| sha256:56cc0a6562e786f1b87b490e6a34ed655fa2c376ae3c8622690912dce7d9a608|2022-02-22|
+| 2.17 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.17`| sha256:c1e9d5a9674a093635c386f96d35781aea7cad6cc1da86991ee1a85c854216f8|2022-01-18|
+| 2.16 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.16`| sha256:3a3b5a981caed4238ef7297bb54b4a32b974b0499b12744347bc661d3f323916|2021-11-29|
+| 2.15 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.15`| sha256:f4bff8348fbfdb738c3c681cb6da04cb215f742abe5e09b5d2f5ef07dcfbf21b|2021-09-24|
+| 2.14 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.14`| sha256:7bad3379f15fce2d169ae066520b6bdfe719ee4fc8ae271988b4ca772ffb69d5|2021-09-02|
+| 2.13 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.13`| sha256:916d4a7cac5ee3102b5fbbbbda67387051a6f7a545353e4ba4bd489246ec8855|2021-06-10|
+| 2.12 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.12`| sha256:ff4053b0bca784d6d105fee1d008cfb20db206011453071e86b69ca3fde706a4|2021-04-07|
+| 2.11 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.11`| sha256:61d35cdad7e77dbcedbf6ab47591b38121b03c5a4f41041f2d628cb8485602e1|2021-01-08|
+| 2.10 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.10`| sha256:c59986a7a4e5931f1172ba3c6fc5f535edbbcc60daf6f3e092df9851283f8ceb|2020-12-11|
+| 2.9 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.9`| sha256:2976e1374e87f5cddabcf80179d9708868d52dbf656fdde60f803553be633db2|2020-09-21|
+| 2.8 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.8`| sha256:119e05bad27ccc899df5b895ccba41135fd5edbc5786a77c1c763621b00dee0f|2020-07-27|
+| 2.7 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.7`| sha256:282677e79ccb9d20c699d384a54093894de03675752cd848a3133266c898c14c|2020-05-20|
+| 2.6 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.6`| sha256:7f588468622a981f89cf5e1212aaf75fface9da6169b5345ca52ab63d8215907|2019-12-09|
+| 2.5 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.5`| sha256:90bdb361ba94b75dfd7feb7c6a2577ece9f91e0392f20a5b4e9808120041b3e2|2019-12-02|
+| 2.4 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.4.1`| sha256:ade4209bbc6923c02a3315c7e6dcc4376afc355db2765b792205be9b33f4243d|2019-10-01|
+| 2.3 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.3`| sha256:1451dab959183c6378a804ce0744913028623e10c401e5ebc1a1f88c82443ba4|2019-07-24|
+| 2.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.2`| sha256:2073c470e83418abf2c11ec92554c139aadd18f0c63fffb92c2c3f5e90c46ba6|2019-07-10|
+| 2.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.1`| sha256:b5be69c4ae42a7af28a9d7ad25df548c77959b006507367507c9ff0f992306f2|2019-06-17|
+| 2.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.0`| sha256:cc13eadecb8e99a7fe56a071427c2caa34149c31d1ad84f4f03c96f111dd0154|2019-05-08|
 {: caption="Table 1. Mapping between versioned based images and IBM Cloud Registry versions with sha256 values" caption-side="top"}
 
 The following available image versions are listed in descending order, starting with the current version.
  
 The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
 {: tip}
+
+### Version 3.27
+{: #version_3_27}
+
+To view the contents of version 3.27, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`. 
+
+This image also contains the Terraform command-line interface (CLI).
+
+The {{site.data.keyword.cloud_notm}} CLI provides code risk analysis commands. You can use the {{site.data.keyword.cloud_notm}} CLI to analyze your code for vulnerabilities and compliance with certain rules. Code Risk Analyzer is available in all {{site.data.keyword.cloud_notm}} regions where toolchains are supported. For more information about Code Risk Analyzer, see [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
+{: tip}
+
+The `cf install` command for the {{site.data.keyword.cloud_notm}} CLI is no longer available. The existing cf executable file is still available.
+{: important}
+
+This image includes the following tools:
+
+```text
+# node
+v18.17.1
+
+# npm
+9.6.7
+
+# jq
+jq-1.6
+
+# yq
+yq (https://github.com/mikefarah/yq/) version v4.35.1
+
+# kubectl
+v1.25.8
+
+# buildctl
+buildctl github.com/moby/buildkit v0.12.1 bb857a0d49f45aa0ce9cd554b78d4075553e20f9
+
+# helm
+v3.12.3+g3a31588
+
+# ibmcloud
+/usr/local/bin/ibmcloud version 2.18.0+53c524b-2023-07-19T19:35:24+00:00
+
+# ibmcloud plugins
+Listing installed plug-ins...
+
+Plug-in Name                                Version   Status             Private endpoints supported
+cloud-functions[wsk/functions/fn]          1.0.70                       false
+cloud-internet-services[cis]               1.15.3                       true
+code-engine[ce]                            1.45.3                       true
+container-registry[cr]                     1.2.2                        true
+container-service[kubernetes-service/ks]   1.0.540                      false
+cra                                        1.3.11                       false
+doi                                        0.4.3                        false
+schematics[sch]                            1.12.10                      true
+secrets-manager[sm]                        2.0.1                        true
+
+
+# ibmcloud dev
+3.1.0
+
+# java
+openjdk version "17.0.8" 2023-07-18
+IBM Semeru Runtime Open Edition 17.0.8.0 (build 17.0.8+7)
+Eclipse OpenJ9 VM 17.0.8.0 (build openj9-0.40.0, JRE 17 Linux amd64-64-Bit Compressed References 20230718_539 (JIT enabled, AOT enabled)
+OpenJ9   - d12d10c9e
+OMR      - e80bff83b
+JCL      - 77b0f754805 based on jdk-17.0.8+7)
+
+# ant
+Apache Ant(TM) version 1.10.13 compiled on January 4 2023
+
+# mvn
+Apache Maven 3.9.4 (dfbb324ad4a7c8fb0bf182e6d91b0ae20e3d2dd9)
+Maven home: /opt/IBM/maven
+Java version: 17.0.8, vendor: IBM Corporation, runtime: /usr/local/jdk17
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "6.4.11-200.fc38.aarch64", arch: "amd64", family: "unix"
+
+# gradle
+
+Welcome to Gradle 8.3!
+
+Here are the highlights of this release:
+ - Faster Java compilation
+ - Reduced memory usage
+ - Support for running on Java 20
+
+For more details see https://docs.gradle.org/8.3/release-notes.html
+
+
+------------------------------------------------------------
+Gradle 8.3
+------------------------------------------------------------
+
+Build time:   2023-08-17 07:06:47 UTC
+Revision:     8afbf24b469158b714b36e84c6f4d4976c86fcd5
+
+Kotlin:       1.9.0
+Groovy:       3.0.17
+Ant:          Apache Ant(TM) version 1.10.13 compiled on January 4 2023
+JVM:          17.0.8 (Eclipse OpenJ9 openj9-0.40.0)
+OS:           Linux 6.4.11-200.fc38.aarch64 amd64
+
+
+# oc
+4.13.8
+
+# zip
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+
+# unzip
+UnZip 6.00 of 20 April 2009, by Info-ZIP.  Maintained by C. Spieler.  Send
+
+# git
+git version 2.39.3
+
+# curl
+curl 7.61.1 (x86_64-redhat-linux-gnu) libcurl/7.61.1 OpenSSL/1.1.1k zlib/1.2.11 brotli/1.0.6 libidn2/2.2.0 libpsl/0.20.2 (+libidn2/2.2.0) libssh/0.9.6/openssl/zlib nghttp2/1.33.0
+
+# wget
+GNU Wget 1.19.5 built on linux-gnu.
+
+# openssl
+OpenSSL 1.1.1k  FIPS 25 Mar 2021
+
+# make
+GNU Make 4.2.1
+
+# docker
+23.0.6
+
+# dc --version
+dc (GNU bc 1.07.1) 1.4.1
+
+# ed --version
+GNU ed 1.14.2
+
+# skopeo
+skopeo version 1.11.2-dev
+
+# terraform
+Terraform v1.5.5
+on linux_amd64
+```
+{: codeblock}
+
+### Version 3.26
+{: #version_3_26}
+
+To view the contents of version 3.26, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`. 
+
+This image also contains the Terraform command-line interface (CLI).
+
+The {{site.data.keyword.cloud_notm}} CLI provides code risk analysis commands. You can use the {{site.data.keyword.cloud_notm}} CLI to analyze your code for vulnerabilities and compliance with certain rules. Code Risk Analyzer is available in all {{site.data.keyword.cloud_notm}} regions where toolchains are supported. For more information about Code Risk Analyzer, see [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
+{: tip}
+
+The `cf install` command for the {{site.data.keyword.cloud_notm}} CLI is no longer available and was removed. The existing cf executable file is still available.
+{: important}
+
+This image includes the following tools:
+
+```text
+# node
+v18.17.0
+
+# npm
+9.6.7
+
+# jq
+jq-1.6
+
+# yq
+yq (https://github.com/mikefarah/yq/) version v4.34.2
+
+# kubectl
+v1.25.8
+
+# buildctl
+buildctl github.com/moby/buildkit v0.12.0 18fc875d9bfd6e065cd8211abc639434ba65aa56
+
+# helm
+v3.12.2+g1e210a2
+
+# ibmcloud
+/usr/local/bin/ibmcloud version 2.18.0+53c524b-2023-07-19T19:35:24+00:00
+
+# ibmcloud plugins
+Listing installed plug-ins...
+
+Plug-in Name                                Version   Status             Private endpoints supported
+cloud-functions[wsk/functions/fn]          1.0.70                       false
+cloud-internet-services[cis]               1.15.3                       true
+code-engine[ce]                            1.45.3                       true
+container-registry[cr]                     1.2.2                        true
+container-service[kubernetes-service/ks]   1.0.540                      false
+cra                                        1.3.10                       false
+doi                                        0.4.3                        false
+schematics[sch]                            1.12.10                      true
+secrets-manager[sm]                        2.0.1                        true
+
+
+# ibmcloud dev
+3.1.0
+
+# java
+openjdk version "17.0.7" 2023-04-18
+IBM Semeru Runtime Open Edition 17.0.7.0 (build 17.0.7+7)
+Eclipse OpenJ9 VM 17.0.7.0 (build openj9-0.38.0, JRE 17 Linux amd64-64-Bit Compressed References 20230418_480 (JIT enabled, AOT enabled)
+OpenJ9   - d57d05932
+OMR      - 855813495
+JCL      - 9d7a231edbc based on jdk-17.0.7+7)
+
+# ant
+Apache Ant(TM) version 1.10.13 compiled on January 4 2023
+
+# mvn
+Apache Maven 3.9.3 (21122926829f1ead511c958d89bd2f672198ae9f)
+Maven home: /opt/IBM/maven
+Java version: 17.0.7, vendor: IBM Corporation, runtime: /usr/local/jdk17
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "6.4.7-200.fc38.aarch64", arch: "amd64", family: "unix"
+
+# gradle
+
+Welcome to Gradle 8.2.1!
+
+Here are the highlights of this release:
+ - Kotlin DSL: new reference documentation, assignment syntax by default
+ - Kotlin DSL is now the default with Gradle init
+ - Improved suggestions to resolve errors in console output
+ - Reduced sync memory consumption
+
+For more details see https://docs.gradle.org/8.2.1/release-notes.html
+
+
+------------------------------------------------------------
+Gradle 8.2.1
+------------------------------------------------------------
+
+Build time:   2023-07-10 12:12:35 UTC
+Revision:     a38ec64d3c4612da9083cc506a1ccb212afeecaa
+
+Kotlin:       1.8.20
+Groovy:       3.0.17
+Ant:          Apache Ant(TM) version 1.10.13 compiled on January 4 2023
+JVM:          17.0.7 (Eclipse OpenJ9 openj9-0.38.0)
+OS:           Linux 6.4.7-200.fc38.aarch64 amd64
+
+
+# oc
+4.13.5
+
+# zip
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+
+# unzip
+UnZip 6.00 of 20 April 2009, by Info-ZIP.  Maintained by C. Spieler.  Send
+
+# git
+git version 2.39.3
+
+# curl
+curl 7.61.1 (x86_64-redhat-linux-gnu) libcurl/7.61.1 OpenSSL/1.1.1k zlib/1.2.11 brotli/1.0.6 libidn2/2.2.0 libpsl/0.20.2 (+libidn2/2.2.0) libssh/0.9.6/openssl/zlib nghttp2/1.33.0
+
+# wget
+GNU Wget 1.19.5 built on linux-gnu.
+
+# openssl
+OpenSSL 1.1.1k  FIPS 25 Mar 2021
+
+# make
+GNU Make 4.2.1
+
+# docker
+23.0.6
+
+# dc --version
+dc (GNU bc 1.07.1) 1.4.1
+
+# ed --version
+GNU ed 1.14.2
+
+# skopeo
+skopeo version 1.11.2-dev
+
+# terraform
+Terraform v1.5.4
+on linux_amd64
+```
+{: codeblock}
 
 ### Version 3.25
 {: #version_3_25}
@@ -177,7 +472,7 @@ v3.12.1+gf32a527
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.69             false
 cloud-internet-services[cis]               1.15.2             true
 code-engine[ce]                            1.45.0             true
@@ -319,7 +614,7 @@ v3.12.1+gf32a527
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.69             false
 cloud-internet-services[cis]               1.15.2             true
 code-engine[ce]                            1.43.7             true
@@ -461,7 +756,7 @@ ibmcloud version 2.16.0+492aff3-2023-04-06T16:13:44+00:00
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.67             false
 cloud-internet-services[cis]               1.14.11            true
 code-engine[ce]                            1.43.5             true
@@ -613,7 +908,7 @@ ibmcloud version 2.16.0+492aff3-2023-04-06T16:13:44+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.66             false
 cloud-internet-services[cis]               1.14.11            true
 code-engine[ce]                            1.43.3             true
@@ -800,7 +1095,7 @@ ibmcloud version 2.15.0+79fb346-2023-02-21T22:06:52+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.66             false
 cloud-internet-services[cis]               1.14.11            true
 code-engine[ce]                            1.43.0             true
@@ -961,7 +1256,7 @@ ibmcloud version 2.15.0+79fb346-2023-02-21T22:06:52+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.64             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.41.3             true
@@ -1123,7 +1418,7 @@ ibmcloud version 2.14.0+fd1bfc6-2023-01-24T22:18:53+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.63             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.41.1             true
@@ -1284,7 +1579,7 @@ ibmcloud version 2.14.0+fd1bfc6-2023-01-24T22:18:53+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.63             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.8             true
@@ -1437,7 +1732,7 @@ ibmcloud version 2.13.0+05fd406-2022-11-30T20:39:15+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.63             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.6             true
@@ -1590,7 +1885,7 @@ ibmcloud version 2.13.0+05fd406-2022-11-30T20:39:15+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.62             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.5             true
@@ -1740,7 +2035,7 @@ ibmcloud version 2.13.0+05fd406-2022-11-30T20:39:15+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.62             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.3             true
@@ -1886,7 +2181,7 @@ ibmcloud version 2.12.1+b8488a1-2022-10-31T15:08:10+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.61             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.1             true
@@ -2032,7 +2327,7 @@ ibmcloud version 2.12.1+b8488a1-2022-10-31T15:08:10+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status             Private endpoints supported
+Plug-in Name                                Version   Status             Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.61                       false
 cloud-internet-services[cis]               1.14.9                       true
 code-engine[ce]                            1.40.0    Update Available   true
@@ -2178,7 +2473,7 @@ ibmcloud version 2.11.1+c18277d-2022-09-23T21:49:24+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported   
+Plug-in Name                                Version   Status   Private endpoints supported   
 cloud-functions[wsk/functions/fn]          1.0.61             false   
 cloud-internet-services[cis]               1.14.8             true   
 code-engine[ce]                            1.39.3             true   
