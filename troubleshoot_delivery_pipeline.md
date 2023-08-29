@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-07-10"
+lastupdated: "2023-08-25"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -225,4 +225,26 @@ If your pipelines contain secure properties that do not currently resolve, updat
 {: tsResolve}
 
 Make sure that your pipeline specifies only those secure properties that are required for the successful completion of a triggered `PipelineRun` as pipeline trigger properties, instead of as pipeline level environment properties. Use pipeline level environment properties only when required.
+{: important}
+
+## Why does my pipeline report an error fetching the pipeline definition?
+{: #troubleshoot-pipeline-definition}
+{: troubleshoot}
+
+An error appears on the {{site.data.keyword.deliverypipeline}} page in relation to fetching the pipeline definition. Alternatively, the error appears when attempting to trigger a PipelineRun.
+{: tsSymptoms}
+
+There are a number of reasons why a failure can occur when fetching the definition for a pipeline. For example, if the definition is defined in a very large repository, the request to fetch the definition can time out due to a delay in cloning the large repository before building the definition. Another example is when a definition input is targeted at a branch or path that no longer exists in the repository.
+{: tsCauses}
+
+Try resolving the problem by using one of the following options:
+{: tsResolve}
+
+* Reload the page to initiate a new request to fetch the definition. If this fails repeatedly, continue with the following options.
+* Validate that all referenced branches and paths in your definition inputs match with resources that exist in the repository.
+* Reduce the size of the repository containing your Tekton definition. Remove unnecessary files from the repository and update your `.gitignore` to exclude uploading any unnecessary files.
+* Only include the minimum necessary files of your pipeline definition -- do not target your entire repository. Move all Tekton definition related files to a subfolder of your repository, then edit the definition input in your {{site.data.keyword.deliverypipeline}} settings to target the path at the subfolder. This option reduces the time necessary to clone the definition files from your repository.
+* For large Tekton definitions, consider splitting the definition into multiple folders or multiple repositoriess. Then update the definition inputs in your {{site.data.keyword.deliverypipeline}} to target the necessary folders or repos.
+
+The computed pipeline definition size limit is 1 MB. If you encounter errors when you save or run your pipeline, you might need to reduce the size of your pipeline definition, or split it into multiple pipelines.
 {: important}
