@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-07-12"
+lastupdated: "2023-09-11"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -19,6 +19,15 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
 {: shortdesc}
+
+## 11 September 2023
+{: #ContinuousDelivery-sep1123}
+{: release-note}
+
+{{site.data.keyword.gitrepos}}
+:   Upgraded to [GitLab 16.0.8](https://about.gitlab.com/releases/2023/08/01/security-release-gitlab-16-2-2-released/){: external}.
+
+:   In GitLab 16.0, any personal, project, or group access token that does not have an expiration date will automatically have an expiration date set at one year. <https://docs.gitlab.com/ee/update/deprecations.html#non-expiring-access-tokens>{: external}.
 
 ## 12 July 2023
 {: #ContinuousDelivery-july1223}
