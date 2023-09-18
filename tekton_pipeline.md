@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-06-27"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -43,7 +43,7 @@ The Tekton Pipelines project is a beta release. You must update your pipeline wi
 {{site.data.keyword.contdelivery_full}} provides two types of delivery pipelines that you can use to build, test, and deploy your applications.
 
 * **Classic**: Classic delivery pipelines are created graphically, with the status embedded in the pipeline diagram. These pipelines can run on shared workers in the cloud or on private workers that run on your own Kubernetes cluster. 
-* **Tekton**: Tekton delivery pipelines are created within yaml files that define pipelines as a set of Kubernetes resources. You can edit those yaml files to change the behavior of a pipeline. Tekton pipelines can run on private workers that run on your own cluster. They can also run on IBM-managed workers on the public cloud. The Tekton integration provides a dashboard that you can use to view the output of Tekton pipeline runs. It also provides mechanisms for identifying the pipeline definitions repo, the pipeline triggers, where the pipeline runs, and the storage and retrieval of properties.
+* **Tekton**: Tekton delivery pipelines are created within yaml files that define pipelines as a set of Kubernetes resources. You can edit those yaml files to change the behavior of a pipeline. Tekton pipelines can run on private workers that run on your own cluster. They can also run on IBM-managed workers on the public cloud. The Tekton integration provides a dashboard that you can use to view the status of Tekton pipeline runs and trigger new runs. It also provides mechanisms for specifying the pipeline triggers, the pipeline definitions, the worker on which the pipeline is run, and the pipeline properties.
 
 Both types of pipelines isolate jobs or steps from one another by running in separate containers, and by using an image that you choose. Classic and Tekton pipelines both exist in a [toolchain](https://cloud.ibm.com/devops/toolchains){: external} and depend on that toolchain to add more tool integrations that are used in the build, test, and deployment process.
 {: tip}
@@ -83,7 +83,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    b. In the Tool Integrations section, click **{{site.data.keyword.deliverypipeline}}**.
 
 1. Specify a name for your new pipeline.
-1. Select **Tekton** to create a Tekton {{site.data.keyword.deliverypipeline}}. This type of pipeline provides a dashboard that you can use to view the output of Tekton pipeline runs on a defined Kubernetes cluster, with support for configuring the pipeline definitions repos, the pipeline triggers, where the pipeline runs, and simple secrets.
+1. Select **Tekton** to create a Tekton {{site.data.keyword.deliverypipeline}}. You can view the output of Tekton pipeline runs on a defined Kubernetes cluster, with support for configuring the pipeline definitions repos, the pipeline triggers, where the pipeline runs, and simple secrets.
 1. If you plan to use your pipeline to deploy a user interface, select the **Show apps in the View app menu** checkbox. All of the apps that your pipeline creates are shown in the **View App** list on the toolchain's Overview page.
 1. Click **Create Integration** to add the {{site.data.keyword.deliverypipeline}} to your toolchain.
 
@@ -91,29 +91,40 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 {: #configure_tekton_pipeline}
 {: ui}
 
-1. From your toolchain's Overview page, on the **Delivery pipelines** card, click the **{{site.data.keyword.deliverypipeline}}** to open the Tekton {{site.data.keyword.deliverypipeline}} dashboard.
-1. In the **Definitions** section, complete the following tasks:
+1. From your toolchain's Overview page, on the **Delivery pipelines** card, click the **{{site.data.keyword.deliverypipeline}}** to open the Tekton {{site.data.keyword.deliverypipeline}} Overview page. 
+1. Click **Settings**. In the **Definitions** section, complete the following tasks:
 
    a. Specify the Git repo and URL that contains the Tekton pipeline definition and related artifacts. If your repo is not available, return to the toolchain Overview page and add your repo.
 
    b. Select the branch within your Git repo that you want to use, or type a tag.
- 
+
    c. Specify the path to your pipeline definition within the Git repo. You can reference a specific definition within the same repo. You can also add multiple definition repos, if they are integrated with the toolchain. 
 
    d. Save your changes.
 
    The pipeline definition is updated automatically.
-   
+
    The computed pipeline definition size limit is 1 MB. If you encounter errors when you save or run your pipeline, you might need to reduce the size of your pipeline definition, or split it into multiple pipelines.
    {: important}
- 
+
 1. In the **Worker** section, select the IBM Managed shared worker or the private worker that you want to use to run your Tekton pipeline. For more information about private workers, see [Working with Delivery Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers).
 
    The private worker must be defined in the same toolchain as your Tekton pipeline.
    {: important}
 
-1. In the **Triggers** section, click **Add** to create a trigger, select the type of trigger to add, and associate the trigger with an event listener. The list of available event listeners contains the listeners that are defined in the pipeline code repo.
- 
+1. In the **Environment properties** section, click **Add** and select a property type to define your own environment property. For example, you can define an `API_KEY` property that passes an API key that is used by all of the scripts in the pipeline to access {{site.data.keyword.cloud_notm}} resources. You can add the following types of properties:
+
+   * **Enumeration**: A property key with a value that can be selected from a user-defined list of options.
+   * **Secure value**: A property key with a single-line value that is secured with AES-128 encryption. This value is displayed by using the asterisk character. Alternatively, you can click the key icon to select a secret from a vault integration (such as IBM Key Protect), if such a tool is available in your toolchain.
+   * **Text value**: A property key with a text value that can either be single-line or multi-line. Previously, multi-line values were supported by a separate **Text area** property type.
+   * **Tool integration**: A property key with a value that is resolved at run time from a toolchain tool integration. By default, the value is a JSON string representation of the tool integration. A specific field or subset of the object can be retrieved by providing a value for the optional JSON filter. For example, if a GitHub integration is selected and the JSON filter `parameters.repo_url` is specified, the value reflects the URL of the Git repo that is configured in the tool integration when the `PipelineRun` resource runs.
+
+   You can access these properties in your Tekton pipeline resources. For more information about these properties, see [Tekton Pipelines environment and resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment).
+
+1. Click **Save**.
+
+1. On the Pipeline Overview page, click **Add** to create a trigger, select the type of trigger to add, and associate the trigger with an event listener. The list of available event listeners contains the listeners that are defined in the pipeline code repo.
+
    Triggers are based on [Tekton trigger definitions](https://github.com/tektoncd/triggers){: external}. Git repo triggers use the event listener that they are mapped to to extract information from the incoming event payload and create Kubernetes resources. These resources are applied to a Tekton `PipelineRun` resource.
    {: tip}
 
@@ -195,16 +206,6 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
    Save your changes.
 
-1. In the **Environment properties** section, click **Add** and select a property type to define your own environment property. For example, you can define an `API_KEY` property that passes an API key that is used by all of the scripts in the pipeline to access {{site.data.keyword.cloud_notm}} resources. You can add the following types of properties:
-
-   * **Enumeration**: A property key with a value that can be selected from a user-defined list of options.
-   * **Secure value**: A property key with a single-line value that is secured with AES-128 encryption. This value is displayed by using the asterisk character. Alternatively, you can click the key icon to select a secret from a vault integration (such as IBM Key Protect), if such a tool is available in your toolchain.
-   * **Text value**: A property key with a text value that can either be single-line or multi-line. Previously, multi-line values were supported by a separate **Text area** property type.
-   * **Tool integration**: A property key with a value that is resolved at run time from a toolchain tool integration. By default, the value is a JSON string representation of the tool integration. A specific field or subset of the object can be retrieved by providing a value for the optional JSON filter. For example, if a GitHub integration is selected and the JSON filter `parameters.repo_url` is specified, the value reflects the URL of the Git repo that is configured in the tool integration when the `PipelineRun` resource runs.
- 
-   You can access these properties in your Tekton pipeline resources. For more information about these properties, see [Tekton Pipelines environment and resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment).
-
-1. Click **Save**.
 
 ## Creating a {{site.data.keyword.deliverypipeline}} for Tekton with the API
 {: #create_tekton_pipeline_api}
@@ -470,7 +471,7 @@ For more information about the {{site.data.keyword.deliverypipeline}} API, see t
    ```
    {: pre}
 
-## Viewing a {{site.data.keyword.deliverypipeline}} for Tekton dashboard 
+## Viewing a {{site.data.keyword.deliverypipeline}} for Tekton
 {: #view_tekton_dashboard}
 
 You can view a pipeline by using the console UI, with the API, or with Terraform.
@@ -479,7 +480,7 @@ You can view a pipeline by using the console UI, with the API, or with Terraform
 {: #viewing-pipeline-console}
 {: ui}
 
-In the **PipelineRuns** section, the Tekton {{site.data.keyword.deliverypipeline}} dashboard displays an empty table until at least one Tekton pipeline runs. After Tekton pipeline runs occur (either manually or as the result of external events), the table lists those runs and the related information such as status, trigger, and duration.
+The Tekton {{site.data.keyword.deliverypipeline}} Overview page displays an empty table until at least one trigger is added. After Tekton pipeline runs occur (either manually or as the result of external events), the table displays data about the recent runs that are associated with each trigger in the pipeline. Each row shows information about a single trigger and displays a graph of recent runs that are associated with that trigger. Information such as the success or failure of those runs, and the time when the most recent run occurred is also displayed. You can also perform actions for each trigger: run the trigger manually, mark it as a favorite, edit the trigger, enable or disable it, or delete it. You can also click one of the items in the graph to inspect the details of that individual `PipelineRun`. Or, you can click a trigger name to open the PipelineRuns page to every `PipelineRun` that is associated with that trigger. Related information such as the status, trigger, and duration of each `PipelineRun` is also available.
 
 Pipeline runs can be in any of the following states:
 
@@ -795,3 +796,4 @@ To learn more about Tekton pipelines, see the [Tekton: A Modern Approach to Cont
 * [Develop a Kubernetes app by using Tekton delivery pipelines](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-using-tekton-delivery-pipelines){: external} tutorial.
 
 To learn more about the Tekton tasks that you can reference within your pipelines, see the [Open Toolchain Tekton Catalog](https://github.com/open-toolchain/tekton-catalog/tree/master/container-registry){: external}. This GitHub repo contains a set of tasks that you can reuse in your Tekton pipelines. 
+

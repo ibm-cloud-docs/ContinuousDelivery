@@ -68,3 +68,4 @@ You must specify the `tool_type_id` property in the request body with the `hashi
 {: #learn_hashicorp_vault}
 
 To learn more about HashiCorp Vault, see [HashiCorp Vault](https://www.vaultproject.io/){: external}.
+

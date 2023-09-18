@@ -185,3 +185,4 @@ The following table lists the Toolchain platform endpoints that do not require a
 | `https://otc-webhook-manager.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://otc-webhook-manager.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 {: caption="Table 8. Toolchain platform" caption-side="top"}
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-08-28"
+lastupdated: "2023-08-17"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -37,9 +37,9 @@ Before you set up a private worker, make sure that you have the following resour
 ## Setting up a {{site.data.keyword.deliverypipeline}} Private Worker
 {: #set_up_private_worker}
 
-Toolchains provide an integrated set of tools to build, deploy, and manage your apps. Tool integrations are the building blocks of a toolchain. A pipeline that is contained within a toolchain that has one or more private worker integrations has extra options available on the **Workers** tab of the Stage Configuration page for Classic pipelines and on the **Worker** page for Tekton pipelines.
+Toolchains provide an integrated set of tools to build, deploy, and manage your apps. Tool integrations are the building blocks of a toolchain. A pipeline that is contained within a toolchain that has one or more private worker integrations has extra options available. For Classic pipelines, these options are available on the **Workers** tab of the Stage Configuration page. For Tekton pipelines, these options are available within the settings that are specified on the **Worker** page.
 
-For Tekton pipelines, you can also specify one worker per trigger, which overrides the worker that is configured at the pipeline level on the **worker** page.
+For Tekton pipelines, you can also specify one worker per trigger, which overrides the worker that is configured at the pipeline level on the **Worker** page.
 {: tip}
 
 Complete the following steps to set up a private worker:
@@ -473,3 +473,4 @@ For each subsequent release of a private worker image, the version number is upd
 * A new Tekton framework change results in a major version increment, for example version 14.11 changes to version 15.0.
 
 {{site.data.keyword.contdelivery_full}} supports the `n-1` major version of the current private worker image. For example, if the current image is version 14.x, previous version 13.x images are also allowed to run. After the major version of the pipeline worker image is incremented to 15.x, version 14.x images are allowed, but any version 13.x or earlier images are considered outdated.
+

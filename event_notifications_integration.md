@@ -68,3 +68,4 @@ You can configure a Tekton Pipeline to send events to {{site.data.keyword.en_sho
 {: #learn_event_notifications}
 
 To learn more about {{site.data.keyword.en_short}}, see [Getting started with {{site.data.keyword.en_short}}](/docs/event-notifications?topic=event-notifications-getting-started).
+

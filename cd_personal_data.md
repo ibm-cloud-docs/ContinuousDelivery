@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-11-28"
+  years: 2018, 2023
+lastupdated: "2023-06-27"
 
 keywords: IBM Cloud account, personal data, personal accounts, corporate accounts, access, Git Repos and Issue Tracking, pipeline data, toolchains, tool integrations
 
@@ -12,7 +12,7 @@ subcollection: ContinuousDelivery
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing personal data for Continuous Delivery
+# Managing personal data for {{site.data.keyword.contdelivery_short}}
 {: #cd_personal_data}
 
 You can modify, export, or delete personal data from {{site.data.keyword.contdelivery_full}}.
@@ -205,18 +205,18 @@ Tekton pipelines might include personal data such as credentials in the form of 
 
 To modify a Tekton Pipeline definition:
 
-1. On the Pipeline page, click **Definitions**. 
+1. On the Pipeline Overview page, click **Settings**, and then click **Definitions**.
 1. Click **Add** to add a Git repo that was already added to the toolchain.
 1. Click the menu to access the options and click **Edit** or **Remove** to edit or remove an existing Git repo definition.
 
 To modify the worker to use to run the Tekton Pipeline:
 
-1. On the Pipeline page, click **Worker**.
+1. On the Pipeline Overview page, click **Settings**, and then click **Worker**.
 1. Select any worker that was added to the toolchain or the public managed workers.
 
 To modify the environment properties used by the tekton pipeline:
 
-1. On the Pipeline page, click **ENVIRONMENT PROPERTIES**.
+1. On the Pipeline Overview page, click **Settings**, and then click **Environment properties**.
 1. Edit, add, or remove properties from the page.
 
 For more information about modifying Tekton Pipelines, see [Working with Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines).
@@ -283,3 +283,4 @@ By using the API, CLI, or Terraform, you can more readily delete multiple toolch
 
 Toolchains are scoped by {{site.data.keyword.cloud_notm}} region and resource group. Make sure that you target each region and resource group in an account to delete every toolchain that you created in that account.
 {: tip}
+

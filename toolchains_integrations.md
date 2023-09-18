@@ -545,3 +545,4 @@ If you are using the [{{site.data.keyword.contdelivery_short}} Toolchain API to 
 
 If you want to start developing with your source code on {{site.data.keyword.cloud_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
 {: tip}
+

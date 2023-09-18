@@ -102,3 +102,4 @@ Depending on their role, the user can now work with all of the toolchains within
 
 Although the most common and flexible methods for granting user access are described here, IAM supports other methods, such as by resource or resource type, or by resource group. For more information about how to assign users access to resources, such as toolchains, see [Managing access to resources](/docs/account?topic=account-assign-access-resources).
 {: tip}
+

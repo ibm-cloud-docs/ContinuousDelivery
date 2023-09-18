@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-07-10"
+lastupdated: "2023-09-06"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -64,6 +64,7 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 
 | Base image version | IBM Cloud Container Registry version |sha256 value|Creation date|
 | -------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------|
+| 3.28 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.28`| sha256:aa7f4f2e5bdd12ab0b59de1b8b031799e11d38aa45712424b3023c6e8471e8ba|2023-09-01|
 | 3.27 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.27`| sha256:70708bdc8bfb23bfda9fa5effc644901cdd9e7314c91ac6c1cbc62bfb9e0a1a2|2023-08-18|
 | 3.26 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.26`| sha256:de8ee389e3cb5818eb3c65a015b86c1042c2adf0bad64467cd3ccd3d8c66e26d|2023-08-02|
 | 3.25 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.25`| sha256:dd2000b525336acd00e9b95b74f15696797764725adbb25fa720e9431d558cbf|2023-07-05|
@@ -91,6 +92,7 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 | 3.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.2`| sha256:d59863621d3ba1b9bd47f76950c751e842405f9c303d0d4d4298d964b664ee85|2021-09-02|
 | 3.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.1`| sha256:c2468d28f15fa6970f13510c01477326f91a043881c2b4cd8f2b1ff8ed8c22a1|2021-06-10|
 | 3.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.0`| sha256:42318979f165cc1ffd4d707022ceb5461360a9b6cd1216bc0c63391bdd042726|2021-04-07|
+| 2.41 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.41`| sha256:7bf1281cd55814485ad7ddbc90982e34046148abec3806fdb3e613c352a0d20e|2023-09-01|
 | 2.40 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.40`| sha256:8164d04f6c812be3a3a0790c541c72a9fd7ea65a8bc0a0264b8c4e82e0ed1868|2023-08-18|
 | 2.39 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.39`| sha256:499559f10a289300828536196947da164c09cece319e3ce3f30fd408cde55c5d|2023-08-02|
 | 2.38 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.38`| sha256:2f11f01c9710ec711a17a9269be04f584e173c89b27b116c27ec93ec31981c07|2023-07-05|
@@ -137,6 +139,151 @@ The following available image versions are listed in descending order, starting 
  
 The version of `yq` that is preinstalled in the images corresponds to the yq tool created by [Mike Farah](https://github.com/mikefarah/yq){: external}.
 {: tip}
+
+### Version 3.28
+{: #version_3_28}
+
+To view the contents of version 3.28, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`. 
+
+This image also contains the Terraform command-line interface (CLI).
+
+The {{site.data.keyword.cloud_notm}} CLI provides code risk analysis commands. You can use the {{site.data.keyword.cloud_notm}} CLI to analyze your code for vulnerabilities and compliance with certain rules. Code Risk Analyzer is available in all {{site.data.keyword.cloud_notm}} regions where toolchains are supported. For more information about Code Risk Analyzer, see [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
+{: tip}
+
+The `cf install` command for the {{site.data.keyword.cloud_notm}} CLI is no longer available. The existing cf executable file is still available.
+{: important}
+
+This image includes the following tools:
+
+```text
+# node
+v18.17.1
+
+# npm
+9.6.7
+
+# jq
+jq-1.6
+
+# yq
+yq (https://github.com/mikefarah/yq/) version v4.35.1
+
+# kubectl
+v1.25.8
+
+# buildctl
+buildctl github.com/moby/buildkit v0.12.2 567a99433ca23402d5e9b9f9124005d2e59b8861
+
+# helm
+v3.12.3+g3a31588
+
+# ibmcloud
+/usr/local/bin/ibmcloud version 2.18.0+53c524b-2023-07-19T19:35:24+00:00
+
+# ibmcloud plugins
+Listing installed plug-ins...
+
+Plugin Name                                Version   Status             Private endpoints supported
+cloud-functions[wsk/functions/fn]          1.0.71                       false
+cloud-internet-services[cis]               1.15.4                       true
+code-engine[ce]                            1.45.3                       true
+container-registry[cr]                     1.3.1                        true
+container-service[kubernetes-service/ks]   1.0.540                      false
+cra                                        1.3.11                       false
+doi                                        0.4.3                        false
+schematics[sch]                            1.12.10                      true
+secrets-manager[sm]                        2.0.1                        true
+
+
+# ibmcloud dev
+3.1.0
+
+# java
+openjdk version "17.0.8.1" 2023-08-24
+IBM Semeru Runtime Open Edition 17.0.8.1 (build 17.0.8.1+1)
+Eclipse OpenJ9 VM 17.0.8.1 (build openj9-0.40.0, JRE 17 Linux amd64-64-Bit Compressed References 20230824_549 (JIT enabled, AOT enabled)
+OpenJ9   - d12d10c9e
+OMR      - e80bff83b
+JCL      - 8ecf238a124 based on jdk-17.0.8.1+1)
+
+# ant
+Apache Ant(TM) version 1.10.14 compiled on August 16 2023
+
+# mvn
+Apache Maven 3.9.4 (dfbb324ad4a7c8fb0bf182e6d91b0ae20e3d2dd9)
+Maven home: /opt/IBM/maven
+Java version: 17.0.8.1, vendor: IBM Corporation, runtime: /usr/local/jdk17
+Default locale: en_US, platform encoding: ANSI_X3.4-1968
+OS name: "linux", version: "6.4.12-200.fc38.aarch64", arch: "amd64", family: "unix"
+
+# gradle
+
+Welcome to Gradle 8.3!
+
+Here are the highlights of this release:
+ - Faster Java compilation
+ - Reduced memory usage
+ - Support for running on Java 20
+
+For more details see https://docs.gradle.org/8.3/release-notes.html
+
+
+------------------------------------------------------------
+Gradle 8.3
+------------------------------------------------------------
+
+Build time:   2023-08-17 07:06:47 UTC
+Revision:     8afbf24b469158b714b36e84c6f4d4976c86fcd5
+
+Kotlin:       1.9.0
+Groovy:       3.0.17
+Ant:          Apache Ant(TM) version 1.10.13 compiled on January 4 2023
+JVM:          17.0.8.1 (Eclipse OpenJ9 openj9-0.40.0)
+OS:           Linux 6.4.12-200.fc38.aarch64 amd64
+
+
+# oc
+4.13.9
+
+# zip
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+
+# unzip
+UnZip 6.00 of 20 April 2009, by Info-ZIP.  Maintained by C. Spieler.  Send
+
+# git
+git version 2.39.3
+
+# curl
+curl 7.61.1 (x86_64-redhat-linux-gnu) libcurl/7.61.1 OpenSSL/1.1.1k zlib/1.2.11 brotli/1.0.6 libidn2/2.2.0 libpsl/0.20.2 (+libidn2/2.2.0) libssh/0.9.6/openssl/zlib nghttp2/1.33.0
+
+# wget
+GNU Wget 1.19.5 built on linux-gnu.
+
+# openssl
+OpenSSL 1.1.1k  FIPS 25 Mar 2021
+
+# make
+GNU Make 4.2.1
+
+# docker
+23.0.6
+
+# dc --version
+dc (GNU bc 1.07.1) 1.4.1
+
+# ed --version
+GNU ed 1.14.2
+
+# skopeo
+skopeo version 1.11.2-dev
+
+# terraform
+Terraform v1.5.6
+on linux_amd64
+```
+{: codeblock}
 
 ### Version 3.27
 {: #version_3_27}
@@ -326,7 +473,7 @@ v3.12.2+g1e210a2
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status             Private endpoints supported
+Plugin Name                                Version   Status             Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.70                       false
 cloud-internet-services[cis]               1.15.3                       true
 code-engine[ce]                            1.45.3                       true
@@ -472,7 +619,7 @@ v3.12.1+gf32a527
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported
+Plugin Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.69             false
 cloud-internet-services[cis]               1.15.2             true
 code-engine[ce]                            1.45.0             true
@@ -614,7 +761,7 @@ v3.12.1+gf32a527
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported
+Plugin Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.69             false
 cloud-internet-services[cis]               1.15.2             true
 code-engine[ce]                            1.43.7             true
@@ -756,7 +903,7 @@ ibmcloud version 2.16.0+492aff3-2023-04-06T16:13:44+00:00
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported
+Plugin Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.67             false
 cloud-internet-services[cis]               1.14.11            true
 code-engine[ce]                            1.43.5             true
@@ -908,7 +1055,7 @@ ibmcloud version 2.16.0+492aff3-2023-04-06T16:13:44+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported
+Plugin Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.66             false
 cloud-internet-services[cis]               1.14.11            true
 code-engine[ce]                            1.43.3             true
@@ -1095,7 +1242,7 @@ ibmcloud version 2.15.0+79fb346-2023-02-21T22:06:52+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported
+Plugin Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.66             false
 cloud-internet-services[cis]               1.14.11            true
 code-engine[ce]                            1.43.0             true
@@ -1256,7 +1403,7 @@ ibmcloud version 2.15.0+79fb346-2023-02-21T22:06:52+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported
+Plugin Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.64             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.41.3             true
@@ -1418,7 +1565,7 @@ ibmcloud version 2.14.0+fd1bfc6-2023-01-24T22:18:53+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported
+Plugin Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.63             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.41.1             true
@@ -1579,7 +1726,7 @@ ibmcloud version 2.14.0+fd1bfc6-2023-01-24T22:18:53+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported
+Plugin Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.63             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.8             true
@@ -1732,7 +1879,7 @@ ibmcloud version 2.13.0+05fd406-2022-11-30T20:39:15+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported
+Plugin Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.63             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.6             true
@@ -1885,7 +2032,7 @@ ibmcloud version 2.13.0+05fd406-2022-11-30T20:39:15+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported
+Plugin Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.62             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.5             true
@@ -2035,7 +2182,7 @@ ibmcloud version 2.13.0+05fd406-2022-11-30T20:39:15+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported
+Plugin Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.62             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.3             true
@@ -2181,7 +2328,7 @@ ibmcloud version 2.12.1+b8488a1-2022-10-31T15:08:10+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported
+Plugin Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.61             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.1             true
@@ -2327,7 +2474,7 @@ ibmcloud version 2.12.1+b8488a1-2022-10-31T15:08:10+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status             Private endpoints supported
+Plugin Name                                Version   Status             Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.61                       false
 cloud-internet-services[cis]               1.14.9                       true
 code-engine[ce]                            1.40.0    Update Available   true
@@ -2473,7 +2620,7 @@ ibmcloud version 2.11.1+c18277d-2022-09-23T21:49:24+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plug-in Name                                Version   Status   Private endpoints supported   
+Plugin Name                                Version   Status   Private endpoints supported   
 cloud-functions[wsk/functions/fn]          1.0.61             false   
 cloud-internet-services[cis]               1.14.8             true   
 code-engine[ce]                            1.39.3             true   
@@ -4074,6 +4221,159 @@ GNU ed 1.14.2
 ```
 {: codeblock}
 
+### Version 2.41
+{: #version_2_41}
+
+To view the contents of version 2.41, from the running image, type `default_versions.sh`.
+
+The {{site.data.keyword.cloud_notm}} CLI provides code risk analysis commands. You can use the {{site.data.keyword.cloud_notm}} CLI to analyze your code for vulnerabilities and compliance with certain rules. Code Risk Analyzer is available in all {{site.data.keyword.cloud_notm}} regions where toolchains are supported. For more information about Code Risk Analyzer, see [Code Risk Analyzer plug-in](/docs/code-risk-analyzer-cli-plugin).
+{: tip}
+
+This image is built on Ubuntu version 20.04. If you need to use a different version of node.js, use `nvm install v<node version>` at the beginning of your script. This image now contains the Terraform CLI.
+{: tip}
+
+Support for `helm2` was discontinued on 13 November 2020. The `helm` tool within this image is the latest in the 3.x branch. The `helm3` tool is now named `helm`.
+The `helm3` symbolic link is deprecated and will be removed in upcoming releases.
+{: important}
+
+The `cf install` command for the {{site.data.keyword.cloud_notm}} CLI is no longer available. The existing cf executable file is still available.
+{: important}
+
+This image includes the following tools:
+
+```text
+# node
+v18.17.1
+
+# npm
+9.6.7
+
+# jq
+jq-1.6
+
+# yq
+yq version 2.4.1
+
+# yq3
+yq version 3.4.1
+
+# yq4
+yq (https://github.com/mikefarah/yq/) version v4.35.1
+
+# kubectl
+v1.25.8
+
+# buildctl
+buildctl github.com/moby/buildkit v0.12.2 567a99433ca23402d5e9b9f9124005d2e59b8861
+
+# helm
+v3.12.3+g3a31588
+
+# ibmcloud
+/usr/local/bin/ibmcloud version 2.18.0+53c524b-2023-07-19T19:35:24+00:00
+
+# ibmcloud plugins
+Listing installed plug-ins...
+
+Plugin Name                                Version   Status             Private endpoints supported
+cloud-functions[wsk/functions/fn]          1.0.71                       false
+cloud-internet-services[cis]               1.15.4                       true
+code-engine[ce]                            1.45.3                       true
+container-registry[cr]                     1.3.1                        true
+container-service[kubernetes-service/ks]   1.0.540                      false
+cra                                        1.3.11                       false
+doi                                        0.4.3                        false
+schematics[sch]                            1.12.10                      true
+secrets-manager[sm]                        2.0.1                        true
+
+
+# ibmcloud dev
+3.1.0
+
+# java
+openjdk version "11.0.20.1" 2023-08-24
+IBM Semeru Runtime Open Edition 11.0.20.1 (build 11.0.20.1+1)
+Eclipse OpenJ9 VM 11.0.20.1 (build openj9-0.40.0, JRE 11 Linux amd64-64-Bit Compressed References 20230824_836 (JIT enabled, AOT enabled)
+OpenJ9   - d12d10c9e
+OMR      - e80bff83b
+JCL      - 0880e8df04 based on jdk-11.0.20.1+1)
+
+# ant
+Apache Ant(TM) version 1.10.14 compiled on August 16 2023
+
+# mvn
+Apache Maven 3.9.4 (dfbb324ad4a7c8fb0bf182e6d91b0ae20e3d2dd9)
+Maven home: /opt/IBM/maven
+Java version: 11.0.20.1, vendor: IBM Corporation, runtime: /usr/local/jdk11
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "6.4.12-200.fc38.aarch64", arch: "amd64", family: "unix"
+
+# gradle
+
+Welcome to Gradle 8.3!
+
+Here are the highlights of this release:
+ - Faster Java compilation
+ - Reduced memory usage
+ - Support for running on Java 20
+
+For more details see https://docs.gradle.org/8.3/release-notes.html
+
+
+------------------------------------------------------------
+Gradle 8.3
+------------------------------------------------------------
+
+Build time:   2023-08-17 07:06:47 UTC
+Revision:     8afbf24b469158b714b36e84c6f4d4976c86fcd5
+
+Kotlin:       1.9.0
+Groovy:       3.0.17
+Ant:          Apache Ant(TM) version 1.10.13 compiled on January 4 2023
+JVM:          11.0.20.1 (Eclipse OpenJ9 openj9-0.40.0)
+OS:           Linux 6.4.12-200.fc38.aarch64 amd64
+
+
+# oc
+4.13.9
+
+# zip
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+
+# unzip
+UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP.
+
+# git
+git version 2.42.0
+
+# curl
+curl 7.68.0 (x86_64-pc-linux-gnu) libcurl/7.68.0 OpenSSL/1.1.1f zlib/1.2.11 brotli/1.0.7 libidn2/2.2.0 libpsl/0.21.0 (+libidn2/2.2.0) libssh/0.9.3/openssl/zlib nghttp2/1.40.0 librtmp/2.3
+
+# wget
+GNU Wget 1.20.3 built on linux-gnu.
+
+# openssl
+OpenSSL 1.1.1f  31 Mar 2020
+
+# make
+GNU Make 4.2.1
+
+# docker
+23.0.6
+
+# dc --version
+dc (GNU bc 1.07.1) 1.4.1
+
+# ed --version
+GNU ed 1.16
+
+# terraform
+Terraform v1.5.6
+on linux_amd64
+```
+{: codeblock}
+
 ### Version 2.40
 {: #version_2_40}
 
@@ -4396,7 +4696,7 @@ Support for `helm2` was discontinued on 13 November 2020. The `helm` tool within
 The `helm3` symbolic link is deprecated and will be removed in upcoming releases.
 {: important}
 
-The `cf install` command for the {{site.data.keyword.cloud_notm}} CLI is no longer available and was removed. The existing cf executable file is still available.
+The `cf install` command for the {{site.data.keyword.cloud_notm}} CLI is no longer available. The existing cf executable file is still available.
 {: important}
 
 This image includes the following tools:
@@ -4435,7 +4735,7 @@ v3.12.1+gf32a527
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.69             false
 cloud-internet-services[cis]               1.15.2             true
 code-engine[ce]                            1.45.0             true
@@ -4582,7 +4882,7 @@ v3.12.1+gf32a527
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.69             false
 cloud-internet-services[cis]               1.15.2             true
 code-engine[ce]                            1.43.7             true
@@ -4728,7 +5028,7 @@ ibmcloud version 2.16.0+492aff3-2023-04-06T16:13:44+00:00
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status             Private endpoints supported
+Plug-in Name                                Version   Status             Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.67                       false
 cloud-internet-services[cis]               1.14.11                      true
 code-engine[ce]                            1.43.5                       true
@@ -4875,7 +5175,7 @@ ibmcloud version 2.16.0+492aff3-2023-04-06T16:13:44+00:00
 # ibmcloud plugins
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.67             false
 cloud-internet-services[cis]               1.14.11            true
 code-engine[ce]                            1.43.5             true
@@ -5032,7 +5332,7 @@ ibmcloud version 2.16.0+492aff3-2023-04-06T16:13:44+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.66             false
 cloud-internet-services[cis]               1.14.11            true
 code-engine[ce]                            1.43.3             true
@@ -5226,7 +5526,7 @@ ibmcloud version 2.15.0+79fb346-2023-02-21T22:06:52+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.66             false
 cloud-internet-services[cis]               1.14.11            true
 code-engine[ce]                            1.43.0             true
@@ -5394,7 +5694,7 @@ ibmcloud version 2.15.0+79fb346-2023-02-21T22:06:52+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.64             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.41.3             true
@@ -5562,7 +5862,7 @@ ibmcloud version 2.14.0+fd1bfc6-2023-01-24T22:18:53+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.63             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.41.1             true
@@ -5730,7 +6030,7 @@ ibmcloud version 2.14.0+fd1bfc6-2023-01-24T22:18:53+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.63             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.8             true
@@ -5890,7 +6190,7 @@ ibmcloud version 2.13.0+05fd406-2022-11-30T20:39:15+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.63             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.6             true
@@ -6050,7 +6350,7 @@ ibmcloud version 2.13.0+05fd406-2022-11-30T20:39:15+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.62             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.5             true
@@ -6210,7 +6510,7 @@ ibmcloud version 2.13.0+05fd406-2022-11-30T20:39:15+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.62             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.3             true
@@ -6365,7 +6665,7 @@ ibmcloud version 2.12.1+b8488a1-2022-10-31T15:08:10+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported
+Plug-in Name                                Version   Status   Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.61             false
 cloud-internet-services[cis]               1.14.9             true
 code-engine[ce]                            1.40.1             true
@@ -6520,7 +6820,7 @@ ibmcloud version 2.12.1+b8488a1-2022-10-31T15:08:10+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status             Private endpoints supported
+Plug-in Name                                Version   Status             Private endpoints supported
 cloud-functions[wsk/functions/fn]          1.0.61                       false
 cloud-internet-services[cis]               1.14.9                       true
 code-engine[ce]                            1.40.0    Update Available   true
@@ -6675,7 +6975,7 @@ ibmcloud version 2.11.1+c18277d-2022-09-23T21:49:24+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported   
+Plug-in Name                                Version   Status   Private endpoints supported   
 cloud-functions[wsk/functions/fn]          1.0.61             false   
 cloud-internet-services[cis]               1.14.8             true   
 code-engine[ce]                            1.39.3             true   
@@ -6830,7 +7130,7 @@ ibmcloud version 2.10.0+e37e09e-2022-08-24T17:31:27+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status   Private endpoints supported   
+Plug-in Name                                Version   Status   Private endpoints supported   
 cloud-functions[wsk/functions/fn]          1.0.59             false   
 cloud-internet-services[cis]               1.14.5             true   
 code-engine[ce]                            1.39.1             true   
@@ -6983,7 +7283,7 @@ ibmcloud version 2.9.0+6abd6f8-2022-07-05T14:46:06+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status             Private endpoints supported   
+Plug-in Name                                Version   Status             Private endpoints supported   
 cloud-functions[wsk/functions/fn]          1.0.59                       false   
 cloud-internet-services[cis]               1.14.4                       true   
 code-engine[ce]                            1.38.1                       true 
@@ -7136,7 +7436,7 @@ ibmcloud version 2.7.0+04dfeac-2022-04-28T17:14:20+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                                Version   Status             Private endpoints supported   
+Plug-in Name                                Version   Status             Private endpoints supported   
 cloud-functions[wsk/functions/fn]          1.0.59                       false   
 cloud-internet-services[cis]               1.14.4                       true   
 code-engine[ce]                            1.35.0                       true   
@@ -7275,7 +7575,7 @@ version.BuildInfo{Version:"v3.8.2", GitCommit:"6e3701edea09e5d55a8ca2aae03a68917
 ibmcloud version 2.6.0+df1953d-2022-03-24T15:00:50+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
-Plugin Name                             Version   Status             Private endpoints supported   
+Plug-in Name                             Version   Status             Private endpoints supported   
 cra                                     0.1.15                       false   
 doi                                     0.3.5                        false   
 schematics                              1.8.1                        true   
@@ -7401,7 +7701,7 @@ ibmcloud version 2.4.0+4ca2c74-2022-01-20T18:32:41+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                             Version   Status   Private endpoints supported   
+Plug-in Name                             Version   Status   Private endpoints supported   
 doi                                     0.3.3              false   
 schematics                              1.7.2              false   
 cloud-functions[wsk/functions/fn]       1.0.58             false   
@@ -7552,7 +7852,7 @@ ibmcloud version 2.3.0+26fbf88-2021-12-09T17:14:46+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                             Version   Status   Private endpoints supported   
+Plug-in Name                             Version   Status   Private endpoints supported   
 container-registry                      0.1.556            true   
 container-service[kubernetes-service]   1.0.353            false   
 cra                                     0.1.11             false   
@@ -7703,7 +8003,7 @@ ibmcloud version 2.2.0+99934b5-2021-11-10T16:34:14+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                             Version   Status             Private endpoints supported   
+Plug-in Name                             Version   Status             Private endpoints supported   
 cloud-internet-services                 1.13.6                       true   
 code-engine[ce]                         1.23.1                       true   
 container-registry                      0.1.553                      true   
@@ -7851,7 +8151,7 @@ ibmcloud version 2.1.0+a4d550e-2021-09-22T13:31:04+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                             Version   Status   Private endpoints supported   
+Plug-in Name                             Version   Status   Private endpoints supported   
 cloud-internet-services                 1.13.4             true   
 container-registry                      0.1.547            true   
 container-service[kubernetes-service]   1.0.312            false   
@@ -7993,7 +8293,7 @@ ibmcloud version 2.0.3+c7a1126-2021-08-27T19:17:51+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                             Version   Status   Private endpoints supported   
+Plug-in Name                             Version   Status   Private endpoints supported   
 container-service[kubernetes-service]   1.0.312            false   
 doi                                     0.3.2              false   
 schematics                              1.5.12             false   
@@ -8134,7 +8434,7 @@ ibmcloud version 1.6.0+59b6322-2021-05-26T20:13:53+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   Private endpoints supported   
+Plug-in Name                            Version   Status   Private endpoints supported   
 cloud-internet-services                1.13.3             true   
 container-registry                     0.1.525            true   
 container-service/kubernetes-service   1.0.275            false   
@@ -8279,7 +8579,7 @@ ibmcloud version 1.4.0+4705d79-2021-02-24T21:18:06+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   Private endpoints supported   
+Plug-in Name                            Version   Status   Private endpoints supported   
 cloud-internet-services                1.13.1             false   
 container-registry                     0.1.514            false   
 container-service/kubernetes-service   1.0.233            false   
@@ -8420,7 +8720,7 @@ ibmcloud version 1.3.0+4308925-2020-12-16T07:53:49+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   Private endpoints supported   
+Plug-in Name                            Version   Status   Private endpoints supported   
 container-service/kubernetes-service   1.0.208            false   
 doi                                    0.2.9              false   
 schematics                             1.4.25             false   
@@ -8557,7 +8857,7 @@ ibmcloud version 1.2.3+3577aee6-2020-09-25T14:34:09+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   
+Plug-in Name                            Version   Status   
 cloud-functions/wsk/functions/fn       1.0.49       
 cloud-internet-services                1.11.0       
 container-registry                     0.1.497      
@@ -8688,7 +8988,7 @@ ibmcloud version 1.2.1+29ade2b-2020-09-04T12:46:49+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   
+Plug-in Name                            Version   Status   
 schematics                             1.4.18       
 cloud-functions/wsk/functions/fn       1.0.46       
 cloud-internet-services                1.10.0       
@@ -8785,7 +9085,7 @@ ibmcloud version 1.1.0+cc908fe-2020-04-29T04:06:12+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   
+Plug-in Name                            Version   Status   
 cloud-functions/wsk/functions/fn       1.0.44       
 cloud-internet-services                1.9.9        
 container-registry                     0.1.482      
@@ -8883,7 +9183,7 @@ ibmcloud version 1.1.0+cc908fe-2020-04-29T04:06:12+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   
+Plug-in Name                            Version   Status   
 schematics                             1.4.10       
 cloud-functions/wsk/functions/fn       1.0.39       
 cloud-internet-services                1.9.7        
@@ -8919,7 +9219,7 @@ Welcome to Gradle 6.4!
 
 Here are the highlights of this release:
  - Support for building, testing and running Java Modules
- - Precompiled script plugins for Groovy DSL
+ - Precompiled script plug-ins for Groovy DSL
  - Single dependency lock file per project
 
 For more details see https://docs.gradle.org/6.4/release-notes.html
@@ -8976,7 +9276,7 @@ ibmcloud version 0.20.0+5d69177-2019-10-31T07:15:05+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   
+Plug-in Name                            Version   Status   
 container-registry                     0.1.437      
 container-service/kubernetes-service   0.4.61       
 doi                                    0.1.5        
@@ -9069,7 +9369,7 @@ ibmcloud version 0.20.0+5d69177-2019-10-31T07:15:05+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   
+Plug-in Name                            Version   Status   
 cloud-functions/wsk/functions/fn       1.0.36       
 container-registry                     0.1.437      
 container-service/kubernetes-service   0.4.61       
@@ -9105,7 +9405,7 @@ Here are the highlights of this release:
  - Faster incremental Java and Groovy compilation
  - New Zinc compiler for Scala
  - VS2019 support
- - Support for Gradle Enterprise plugin 3.0
+ - Support for Gradle Enterprise plug-in 3.0
 
 For more details see https://docs.gradle.org/6.0.1/release-notes.html
 
@@ -9161,7 +9461,7 @@ ibmcloud version 0.18.1+09d36ed-2019-08-19T08:23:11+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   
+Plug-in Name                            Version   Status   
 doi                                    0.1.5        
 cloud-functions/wsk/functions/fn       1.0.32       
 container-registry                     0.1.404	
@@ -9191,7 +9491,7 @@ Here are the highlights of this release:
  - Incremental Groovy compilation
  - Groovy compile avoidance
  - Test fixtures for Java projects
- - Manage plugin versions via settings script
+ - Manage plug-in versions via settings script
 
 For more details see https://docs.gradle.org/5.6/release-notes.html
 
@@ -9246,7 +9546,7 @@ ibmcloud version 0.16.3+68cb57c-2019-06-20T08:59:16+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   
+Plug-in Name                            Version   Status   
 cloud-functions/wsk/functions/fn       1.0.32       
 container-registry                     0.1.395  
 container-service/kubernetes-service   0.3.58  
@@ -9325,7 +9625,7 @@ ibmcloud version 0.16.3+68cb57c-2019-06-20T08:59:16+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   
+Plug-in Name                            Version   Status   
 cloud-functions/wsk/functions/fn       1.0.32       
 container-registry                     0.1.395  
 container-service/kubernetes-service   0.3.58 
@@ -9404,7 +9704,7 @@ ibmcloud version 0.16.2+d1a5f92-2019-06-06T18:32:54+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   
+Plug-in Name                            Version   Status   
 cloud-functions/wsk/functions/fn       1.0.32       
 container-registry                     0.1.391      
 container-service/kubernetes-service   0.3.47  
@@ -9484,7 +9784,7 @@ ibmcloud version 0.14.0+3303164-2019-02-06T06:09:00+00:00
 # ibmcloud plugin list
 Listing installed plug-ins...
 
-Plugin Name                            Version   Status   
+Plug-in Name                            Version   Status   
 cloud-functions/wsk/functions/fn       1.0.30       
 container-registry                     0.1.380      
 container-service/kubernetes-service   0.2.99    Update Available   
@@ -9511,10 +9811,10 @@ OS name: "linux", version: "4.4.0-141-generic", arch: "amd64", family: "unix"
 Welcome to Gradle 5.2.1!
 
 Here are the highlights of this release:
- - Define sets of dependencies that work together with Java Platform plugin
- - New C++ plugins with dependency management built-in
+ - Define sets of dependencies that work together with Java Platform plug-in
+ - New C++ plug-ins with dependency management built-in
  - New C++ project types for gradle init
- - Service injection into plugins and project extensions
+ - Service injection into plug-ins and project extensions
 
 For more details see https://docs.gradle.org/5.2.1/release-notes.html
 
@@ -9547,3 +9847,4 @@ OS:           Linux 4.4.0-141-generic amd64
 
 To run pipeline jobs with the image that you selected on the pipeline configuration page, select **Pipeline default**.
 {: tip}
+

@@ -24,11 +24,11 @@ After a pipeline is externalized, pipeline runs occur in the same way, depending
 ## Configuring a pipeline to use externalized properties
 {: #external-properties-config}
 
-The latest private worker agent versions support external properties natively. This support uses [Kustomize](https://kustomize.io/){: external} and [External Secrets](https://external-secrets.io/){: external}, and requires a pipeline that is configured to use external properties. 
+The latest private worker agent versions support external properties natively. This support uses [Kustomize](https://kustomize.io/){: external} and [External Secrets](https://external-secrets.io/){: external}, and requires a pipeline that is configured to use external properties.
 
 As of Kubernetes version 1.14, Kustomize is included in Kubernetes to provide a declarative means of cluster configuration and Kubernetes object creation by using `yaml` files. To use externalized properties, your pipelines require a `kustomization.yaml` file.
 
-By using the External Secrets operator, you can synchronize secrets from external APIs with Kubernetes secrets. Supported providers include [{{site.data.keyword.secrets-manager_full}}](/docs/secrets-manager?topic=secrets-manager-getting-started). By using the operator, you can represent secrets and providers within `yaml` files that are stored in a repo, such as Git. To use externalized secure properties, your pipeline definitions must provide `yaml` files that define both a `SecretStore` and an `ExternalSecret`. 
+By using the External Secrets operator, you can synchronize secrets from external APIs with Kubernetes secrets. Supported providers include [{{site.data.keyword.secrets-manager_full}}](/docs/secrets-manager?topic=secrets-manager-getting-started). By using the operator, you can represent secrets and providers within `yaml` files that are stored in a repo, such as Git. To use externalized secure properties, your pipeline definitions must provide `yaml` files that define both a `SecretStore` and an `ExternalSecret`.
 
 ### Configuring a cluster
 {: #cluster-config}
@@ -47,9 +47,9 @@ For more information about the images that the private worker installation place
 ### Configuring a pipeline
 {: #pipeline-config}
 
-To set up a pipeline to use external properties, you must specify two sets of attributes: *base properties* and *trigger properties*. 
+To set up a pipeline to use external properties, you must specify two sets of attributes: *base properties* and *trigger properties*.
 
-*Base properties* represent the collection of properties and secrets that are global across trigger runs. You can find these values on the Environment Properties page within the pipeline UI. 
+*Base properties* represent the collection of properties and secrets that are global across trigger runs. You can find these values in the settings that are specified on the Environment properties page for the Tekton pipeline.
 
 *Trigger properties* are the properties and secrets that are specified on an individual trigger. Property precedence means that trigger properties override base properties of the same name. While each pipeline has only one set of base properties, you can have many different sets of trigger properties.
 
@@ -198,4 +198,5 @@ Complete the following steps in the repo that you use to contain the externalize
 
 To use external secrets, you must configure at least one secret store. This secret store requires its own access secret, named *root secret*.
 
-You must add this root secret as a secure property to the Environment properties page of the pipeline that is being externalized. The root secret name must match the `secretRef.key` value that is specified in the `SecretStore` definition, for example, `vault_secret_id`.
+You must add this root secret as a secure property to the settings that are specified in the Environment properties page for the pipeline that is being externalized. The root secret name must match the `secretRef.key` value that is specified in the `SecretStore` definition, for example, `vault_secret_id`.
+

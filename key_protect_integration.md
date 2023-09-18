@@ -117,3 +117,4 @@ You must specify the `tool_type_id` property in the request body with the `keypr
 {: #keyprotect_learn_more}
 
 To learn more about {{site.data.keyword.keymanagementserviceshort}}, see [Service overview](/docs/services/key-protect?topic=key-protect-about).
+

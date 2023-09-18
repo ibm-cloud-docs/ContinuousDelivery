@@ -36,8 +36,7 @@ Configure and save the GitHub tool integration again:
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and  select **DevOps**. On the **Toolchains** page, click the toolchain that you created to open the Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
 1. On the Toolchain's Overview page, on the **Repositories** card, locate the GitHub tool integration.
 1. Click the menu to access the configuration options, update the settings, and click **Save Integration**.
-1. On the **Delivery pipelines** card, click the {{site.data.keyword.deliverypipeline}} tool integration to view the pipeline setup. 
-
+1. On the **Delivery pipelines** card, click the {{site.data.keyword.deliverypipeline}} tool integration to view the pipeline setup.
 
 ## Why isn't the pipeline created properly when I create a toolchain from the template that I'm writing? 
 {: #troubleshoot-cd-pipeline-creation}
@@ -53,14 +52,13 @@ When I attempt to create a toolchain from a template that I'm writing, I receive
 
 Typically, this issue is caused by an error in your pipeline.yaml definition.
 {: tsCauses}
-   
+
 You can use any of the following methods to debug this error:
 {: tsResolve}
 
 * Use the pipeline user interface to create an example pipeline that replicates the pipeline that you are trying to build with your template. Append `/yaml` to the pipeline URL to generate a similar pipeline.yaml file that you can use to look for obvious differences. For example, `https://cloud.ibm.com/devops/pipelines/<your pipeline id>/yaml?env_id=<your region>`.
 
 * Use the headless toolchain creation mechanism. On the **Create a Toolchain** page, open the debugger and evaluate the `window.Testflags = {nocreate: 1}` expression. When you click **Create a Toolchain** in this mode, the toolchain is not created. Instead, the information that is passed to the API is returned to the console where you can review it.
-
 
 ## I tried to run a pipeline, why am I getting an error about access to the Git repository (repo)? 
 {: #troubleshoot-cd-pipeline-git}
@@ -85,8 +83,7 @@ Configure and save the Git integration again:
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain that contains the Git integration that you want to update to open its Overview page. Alternatively, on the App Details page in your app, click the toolchain name.
 1. On the Toolchain's Overview page, on the **Repositories** card, locate the Git tool integration.
 1. Click the menu to access the configuration options, select the authorized Git account for the Git integration owner, and click **Save Integration**.
-1. Run your pipeline again. 
-
+1. Run your pipeline again.
 
 ## I tried to deploy to Kubernetes by using the {{site.data.keyword.deliverypipeline}}, why am I getting an error about an invalid object? 
 {: #troubleshoot-cd-pipeline-kubernetes}
@@ -101,7 +98,7 @@ When I attempt to deploy to Kubernetes by using the Delivery Pipeline, I receive
 
 Typically, this issue is caused when the version of the kubectl command in your pipeline base image is incompatible with the version of Kubernetes that is running in the cluster.
 {: tsCauses}
-   
+
 You can use any of the following methods to resolve this problem:
 {: tsResolve}
 
@@ -124,7 +121,6 @@ If you are running kubectl v1.14.2 from a 1.0 pipeline base image, the sudo opti
 For more information about accessing the exact version of kubectl that you require, see [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux){: external}.
 {: tip}
 
-
 ## I tried to run a pipeline, why am I getting a 403 error from the {{site.data.keyword.registrylong_notm}}? 
 {: #troubleshoot-cd-pipeline-cr}
 {: troubleshoot}
@@ -139,10 +135,9 @@ When I attempt to run a pipeline, I receive the following error message:
 
 You might have exceeded your [pull traffic quota limits](/docs/Registry?topic=Registry-registry_quota#registry_quota_get), which prevents the Docker image from being fetched.
 {: tsCauses}
-   
+
 Review your [quota limits and usage](/docs/Registry?topic=Registry-registry_quota#registry_quota_get) for storing and pulling images. [Free up used storage and change service plans](/docs/Registry?topic=Registry-registry_quota#registry_quota_freeup) or quota limits to stay within given quota limits.
 {: tsResolve}
-
 
 ## I tried to compile my app in a single pipeline job, why did it fail? 
 {: #troubleshoot-compile-app}
@@ -155,7 +150,7 @@ When I attempt to compile my app in a single pipeline job, the build job fails w
 
 Your app requires more than 4 GB of memory to compile in a single pipeline job.
 {: tsCauses}
-   
+
 To build your app in a single pipeline job:
 {: tsResolve}
 
@@ -248,3 +243,4 @@ Try resolving the problem by using one of the following options:
 
 The computed pipeline definition size limit is 1 MB. If you encounter errors when you save or run your pipeline, you might need to reduce the size of your pipeline definition, or split it into multiple pipelines.
 {: important}
+
