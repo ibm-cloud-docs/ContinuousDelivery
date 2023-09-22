@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-09-11"
+lastupdated: "2023-09-06"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -535,6 +535,7 @@ Stricter enforcement of service plans
 :   A toolchain must be linked to a CD service in order for the Delivery Pipeline run.
 :   Users of the CD service are automatically added to the list of "Authorized Users."
 :   If you are using the Lite plan with more than five authorized users, the pipelines no longer run, pushes to Git Repos are unavailable, and DevOps Insights is unavailable.
-:   If you are using the Lite plan, after 500 Delivery Pipeline jobs are run during a month, pipelines do not run, pushes to Git Repos are unavailable, and DevOps Insights is unavailable for the remainder of that billing period. 
+:   If you are using the Lite plan, after 500 Delivery Pipeline jobs are run during a month, pipelines do not run, pushes to Git Repos are unavailable, and DevOps Insights is unavailable for the remainder of that billing period.
 
     Read the [announcement](https://www.ibm.com/cloud/blog/announcements/usage-and-billing-in-ibm-cloud-continuous-delivery){: external}.
+

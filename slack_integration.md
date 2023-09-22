@@ -82,3 +82,4 @@ You can configure a Tekton Pipeline to send events to Slack integrations.
 {: #learn_slack}
 
 To learn more about Slack, see the [Slack article](https://www.ibm.com/garage/method/practices/culture/tool_slack/){: external} on the {{site.data.keyword.cloud_notm}} Garage Method.
+

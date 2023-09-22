@@ -376,3 +376,4 @@ You can reuse the `apikey` that you used for the existing private worker.
 
 For more information about {{site.data.keyword.deliverypipeline}} Private Workers, see [Troubleshooting for {{site.data.keyword.deliverypipeline}} Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-troubleshoot-pipeline-private-workers#troubleshoot-pw-images) and [FAQs for Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-faq_pipeline_private_workers&interface=ui).
 {: tip} 
+

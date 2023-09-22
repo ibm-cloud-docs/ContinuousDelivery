@@ -209,3 +209,4 @@ You must specify the `tool_type_id` property in the request body with the `secre
 {: #secretsmanager_learn_more}
 
 To learn more about {{site.data.keyword.secrets-manager_short}}, see [Getting started with Secrets Manager](/docs/secrets-manager?topic=secrets-manager-getting-started).
+
