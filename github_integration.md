@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-05-31"
+lastupdated: "2023-09-26"
 
 keywords: tool integrations, IBM Cloud Public, GitHub
 
@@ -79,8 +79,9 @@ You must specify the `tool_type_id` property in the request body with the `githu
 | --- | --- | --- | --- | --- |
 | api_root_url | optional, updatable | String | api_root_url | The URL of the API root for the GitHub server. |
 | api_token | optional, updatable | Password | api_token | The Personal Access Token (PAT). This parameter is required only if the `auth_type` is set to `pat`, otherwise it is ignored. |
-| auth_type | optional, updatable, `Default: oauth` | String | auth_type | Set the authentication method to use to access the Git provider. |
+| auth_type | optional, updatable | String | auth_type | Set the authentication method to use to access the Git provider. |
 | auto_init | optional, immutable, `Default: false` | Boolean | auto_init | Set this value to `true` to initialize this repo with a readme file. This parameter is used only when you create a repo. |
+| blind_connection | optional, updatable, `Default: false` | Boolean | blind_connection | Setting this value to true means the server is not addressable on the public internet. {{site.data.keyword.cloud_notm}} can't validate the connection details you provide. Certain functionality that requires API access to the git server will be disabled. Delivery pipeline will only work using a private worker that has network access to the git server. |
 | default_branch | optional, updatable | String | default_branch | The default branch of the Git repo. |
 | enable_traceability | optional, updatable, `Default: false` | Boolean | enable_traceability | Set this value to `true` to track the deployment of code changes by creating tags, labels and comments on commits, pull requests, and referenced issues. |
 | git_id | optional, immutable | String | git_id | Set this value to `github` for github.com, or to the GUID of a custom GitHub Enterprise server. |
@@ -91,12 +92,14 @@ You must specify the `tool_type_id` property in the request body with the `githu
 | repo_id | optional, immutable | String | repo_id | The ID of the GitHub repo. |
 | repo_name | optional, immutable | String | repo_name | The name of the GitHub repo to create. This parameter is required when you create a repo, or clone or fork a repo. This value is computed when you link to an existing repo. |
 | repo_url | optional, immutable | String | repo_url | The URL of the GitHub repo for this tool integration. This parameter is required when you link to an existing repo. This value is computed when you create a repo, or clone or fork a repo. |
+| root_url | optional, updatable | String | root_url | The Root URL of the server. e.g. https://github.example.com |
 | source_repo_url | optional, immutable | String | source_repo_url | The URL of the repo that you are forking or cloning. This parameter is required when you fork or clone a repo. It is not used when you create a repo or link to an existing repo. |
+| title | optional, updatable | String | title | The title of the server. e.g. My GitHub Enterprise Server |
 | token_url | optional, updatable | String | token_url | The token URL that is used to authorize with the GitHub server. |
-| type | required, immutable | String | type | The operation to perform to initialize the new tool integration.  Use `new` to create a Git repo, `clone` to clone an existing repo into a new Git repo, `fork` to fork an existing Git repo, or `link` to link to an existing Git repo. |
+| type | required, immutable | String | type | The operation to perform to initialize the new tool integration. Use `new` to create a Git repo, `clone` to clone an existing repo into a new Git repo, `fork` to fork an existing Git repo, or `link` to link to an existing Git repo. |
 {: caption="Table 1. GitHub tool integration parameters" caption-side="bottom"}
 
 ## Learn more about GitHub
 {: #learn_github}
 
-To learn more about GitHub, see the [GitHub article](https://www.ibm.com/garage/method/practices/culture/tool_github/){: external} and the [GitHub and Issue Tracking: Social coding hosted by IBM article](https://www.ibm.com/garage/method/practices/code/tool_git_repos_and_issue_tracking){: external} on the IBM Cloud Garage Method or take the [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain](https://www.ibm.com/cloud/architecture/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){: external} tutorial.
+To learn more about GitHub, see the [GitHub article](https://www.ibm.com/garage/method/practices/culture/tool_github/){: external} and the [GitHub and Issue Tracking: Social coding hosted by IBM article](https://www.ibm.com/garage/method/practices/code/tool_git_repos_and_issue_tracking){: external} on the {{site.data.keyword.cloud_notm}} Garage Method or take the [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain](https://www.ibm.com/cloud/architecture/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){: external} tutorial.
