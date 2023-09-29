@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-03-29"
+  years: 2015, 2023
+lastupdated: "2023-09-26"
 
 keywords: tool integrations, IBM Cloud Public, JIRA
 
@@ -66,6 +66,23 @@ Configure JIRA to plan, track, and deliver quality code:
 
 1. Click **Create Integration**.
 1. On the Toolchain's Overview page, on the **Third-Party tools** card, click **JIRA** to view the dashboard for the JIRA project that you connected to.
+
+## Configuring JIRA by using the API
+{: #config-parameters}
+
+The JIRA tool integration supports the following configuration parameters that you can use with the [Toolchain HTTP API and SDKs](https://cloud.ibm.com/apidocs/toolchain){: external} when you [create](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [read](https://cloud.ibm.com/apidocs/toolchain#get-tool-by-id){: external}, and [update](https://cloud.ibm.com/apidocs/toolchain#update-tool){: external} tool integrations.
+
+You must specify the `tool_type_id` property in the request body with the `jira` value.
+{: important}
+
+| Parameter | Usage | Type | Terraform argument | Description |
+| --- | --- | --- | --- | --- |
+| api_url | required, updatable | String | api_url | The base API URL for your JIRA instance. |
+| enable_traceability | optional, updatable, `Default: false` | Boolean | enable_traceability | Track the deployment of code changes by creating tags, labels and comments on commits, pull requests and referenced issues. |
+| password | optional, updatable | Password | api_token | The api token for your JIRA account. Optional for public projects. You can use a toolchain secret reference for this parameter. For more information, see [Protecting your sensitive data in Continuous Delivery](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
+| project_key | required, updatable | String | project_key | The project key of your JIRA project. |
+| username | optional, updatable | String | username | The user name for your JIRA account. Optional for public projects. |
+{: caption="Table 1. JIRA tool integration parameters" caption-side="bottom"}
 
 ## Learn more about JIRA
 {: #learn_jira}

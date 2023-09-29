@@ -20,6 +20,13 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
 {: shortdesc}
 
+## 27 September 2023
+{: #ContinuousDelivery-sep2723}
+{: release-note}
+
+{{site.data.keyword.contdelivery_short}} toolchains APIs, SDKs, and Terraform now support looking up toolchains by name.
+:   For more information, see the [CD Toolchain API Docs](https://cloud.ibm.com/apidocs/toolchain#list-toolchains-request){: external} and the [Terraform IBM Cloud provider docs](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cd_toolchains){: external}.
+
 ## 11 September 2023
 {: #ContinuousDelivery-sep1123}
 {: release-note}
