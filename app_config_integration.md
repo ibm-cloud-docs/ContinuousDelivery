@@ -30,7 +30,7 @@ When you apply feature flags or properties to a toolchain, special {{site.data.k
 Before you create an {{site.data.keyword.appconfig_short}} tool integration in your toolchain, make sure that you provision an instance of the {{site.data.keyword.appconfig_short}} service in a region and resource group that your toolchain can refer to.
 {: important}
 
-1. If you are configuring this tool integration as you are creating the toolchain, and an {{site.data.keyword.appconfig_short}} tool integration exists within the template that you are configuring, click the **{{site.data.keyword.appconfig_short}}** tab. Alternatively, in the **More tools** section, click **{{site.data.keyword.appconfig_short}}**.
+1. If you are configuring this tool integration as you are creating the toolchain, and an {{site.data.keyword.appconfig_short}} tool integration exists within the template that you are configuring, click the **{{site.data.keyword.appconfig_short}}** tab. Alternatively, in the **More tools** section, click **{{site.data.keyword.appconfig_short}}**. To create an authorization between the toolchain and the **{{site.data.keyword.appconfig_short}}** service instance select the **Create an authorization for this toolchain** option from the **Authorization type** dropdown. This grants the toolchain access to the feature flags and properties stored in the **{{site.data.keyword.appconfig_short}}** service instance.
 
 1. If you have an existing toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the existing toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
 
@@ -43,6 +43,8 @@ Before you create an {{site.data.keyword.appconfig_short}} tool integration in y
 1. Select the **Region** and **Resource group** where your {{site.data.keyword.appconfig_short}} service instance exists.
 
 1. Select the appropriate **App Configuration Environment** and **App Configuration Collection** options from your chosen {{site.data.keyword.appconfig_short}} service instance.
+
+1. To create an authorization between the toolchain and the **{{site.data.keyword.appconfig_short}}** service instance click the **Create Authorization** button. This grants the toolchain access to the feature flags and properties stored in the **{{site.data.keyword.appconfig_short}}** service instance.
 
 1. Click **Create Integration**.
 
@@ -66,7 +68,7 @@ After you configure your {{site.data.keyword.appconfig_short}} tool integration,
 ## Authorizing your toolchain to access feature flags and properties
 {: #appconfig_authorize_secrets}
 
-References to feature flags and properties that are stored in an {{site.data.keyword.appconfig_short}} service instance are dynamically resolved when the toolchain runs. To access the required feature flags and properties, you must authorize your toolchain to access the {{site.data.keyword.appconfig_short}} instance. If you create a toolchain that has a valid {{site.data.keyword.appconfig_short}} tool integration, or add this tool integration to an existing toolchain, a request is automatically made to create the authorization.
+References to feature flags and properties that are stored in an {{site.data.keyword.appconfig_short}} service instance are dynamically resolved when the toolchain runs. To access the required feature flags and properties, you must authorize your toolchain to access the {{site.data.keyword.appconfig_short}} instance. If you are creating a toolchain from a template use the **Authorization type** dropdown when configuring the **{{site.data.keyword.appconfig_short}}** integration. If you are adding a **{{site.data.keyword.appconfig_short}}** integration to an existing toolchain use the **Create authorization** button.
 
 To view your authorizations in {{site.data.keyword.cloud_notm}}, complete the following steps:
 

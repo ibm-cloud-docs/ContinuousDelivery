@@ -32,12 +32,13 @@ When you configure the {{site.data.keyword.secrets-manager_short}} tool integrat
 
 * Identity and Access Management (IAM) credentials secrets.
 * Arbitrary secrets that are stored in the {{site.data.keyword.secrets-manager_short}}.
+* Key-value secrets.
 
-For more information about IAM credentials secrets, and Arbitrary secrets in {{site.data.keyword.secrets-manager_short}}, see [Working with secrets of different types](/docs/secrets-manager?topic=secrets-manager-what-is-secret#secret-types).
+For more information about IAM credentials secrets, Arbitrary secrets and Key-value secrets in {{site.data.keyword.secrets-manager_short}}, see [Working with secrets of different types](/docs/secrets-manager?topic=secrets-manager-what-is-secret#secret-types).
 
 Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets that are part of your toolchain:
 
-1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.secrets-manager_short}}**. If {{site.data.keyword.secrets-manager_short}} is defined as an optional tool integration, it is located under **More Tools**.
+1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.secrets-manager_short}}**. If {{site.data.keyword.secrets-manager_short}} is defined as an optional tool integration, it is located under **More Tools**. Choose to identify this instance by the service instance name. To create an authorization between the toolchain and the **{{site.data.keyword.secrets-manager_short}}** service instance select the **Create an authorization for this toolchain** option from the **Authorization type** dropdown. This grants the toolchain access to the secret material stored in the **{{site.data.keyword.secrets-manager_short}}** service instance.
 1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the {{site.data.keyword.contdelivery_short}} card, click **View toolchain**. Then, click **Overview**.  
 
    a. Click **Add tool**.
@@ -48,6 +49,7 @@ Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets
 1. Choose to identify this instance by the service instance name.
 1. Review the default values for **Region** and **Resource-Group** and update, if required.
 1. Select the instance of the **{{site.data.keyword.secrets-manager_short}}** service that you want to use.
+1. To create an authorization between the toolchain and the **{{site.data.keyword.secrets-manager_short}}** service instance click the **Create Authorization** button. This grants the toolchain access to the secret material stored in the **{{site.data.keyword.secrets-manager_short}}** service instance.
 1. Click **Create Integration**.
 
 ### Applying secrets
@@ -124,18 +126,18 @@ You can add a {{site.data.keyword.secrets-manager_short}} tool integration to yo
       region: us-south
       resource-group: default
       instance-name: ffs-secrets
+      setup-authorization-type: create
 ```
+{: codeblock}
 
 ## Identifying secrets by CRN
 {: #identify_secrets_by_crn}
 
 When you configure the {{site.data.keyword.secrets-manager_short}} tool integration to identify secrets by CRN, your toolchain can access arbitrary, key-value, and IAM credential secrets that are stored in the {{site.data.keyword.secrets-manager_short}}. For more information about the different types of secrets in {{site.data.keyword.secrets-manager_short}}, see [Working with secrets of different types](/docs/secrets-manager?topic=secrets-manager-what-is-secret#secret-types). You can use only entire key-value secrets for CRN secrets, not individual keys.
 
-Currently, you cannot configure a {{site.data.keyword.secrets-manager_short}} tool integration to identify secrets by CRN during toolchain creation. Instead, complete the configuration *after* you create the toolchain.
-{: important}
-
 Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets that are part of your toolchain:
 
+1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.secrets-manager_short}}**. If {{site.data.keyword.secrets-manager_short}} is defined as an optional tool integration, it is located under **More Tools**. Choose to identify this instance by the service instance CRN. To create an authorization between the toolchain and the **{{site.data.keyword.secrets-manager_short}}** service instance select the **Create an authorization for this toolchain** option from the **Authorization type** dropdown. This grants the toolchain access to the secret material stored in the **{{site.data.keyword.secrets-manager_short}}** service instance.
 1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the {{site.data.keyword.contdelivery_short}} card, click **View toolchain**. Then, click **Overview**.  
 
    a. Click **Add tool**.
@@ -145,6 +147,7 @@ Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets
 1. Specify a name for this instance of the {{site.data.keyword.secrets-manager_short}} tool integration to use in your toolchain.
 1. Choose to identify this instance by the service instance CRN.
 1. Specify the CRN of the {{site.data.keyword.secrets-manager_short}} service instance where your secrets are stored. This service instance can exist in a different account if your toolchain is [authorized to access secrets](#secretsmanager_authorize_secrets) in that account.
+1. To create an authorization between the toolchain and the **{{site.data.keyword.secrets-manager_short}}** service instance click the **Create Authorization** button. This grants the toolchain access to the secret material stored in the **{{site.data.keyword.secrets-manager_short}}** service instance.
 1. Click **Create Integration**.
 
 ### Applying secrets
@@ -169,10 +172,7 @@ When fields that contain a CRN secret are displayed, the {{site.data.keyword.sec
 ## Authorizing your toolchain to access secrets
 {: #secretsmanager_authorize_secrets}
 
-References to secrets that are stored in {{site.data.keyword.secrets-manager_short}} are dynamically resolved when the toolchain runs. To access the required secrets, you must authorize your toolchain to access the {{site.data.keyword.secrets-manager_short}} instance. If you create a toolchain that has a valid {{site.data.keyword.secrets-manager_short}} tool integration that is configured to identify secrets by name, or add this tool integration to an existing toolchain, a request is automatically issued to create the required authorization.
-
-An authorization is not created automatically for tool integrations that are configured to identify secrets by CRN.
-{: important}
+References to secrets that are stored in {{site.data.keyword.secrets-manager_short}} are dynamically resolved when the toolchain runs. To access the required secrets, you must authorize your toolchain to access the {{site.data.keyword.secrets-manager_short}} instance. If you are creating a toolchain from a template use the **Authorization type** dropdown when configuring the **{{site.data.keyword.secrets-manager_short}}** integration. If you are adding a **{{site.data.keyword.secrets-manager_short}}** integration to an existing toolchain use the **Create authorization** button.
 
 To view your authorizations in {{site.data.keyword.cloud_notm}}, complete the following steps:
 

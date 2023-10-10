@@ -25,7 +25,7 @@ Before you configure a {{site.data.keyword.keymanagementserviceshort}} tool inte
 
 Configure {{site.data.keyword.keymanagementserviceshort}} to securely manage secrets that are part of your toolchain:
 
-1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.keymanagementserviceshort}}**. If {{site.data.keyword.keymanagementserviceshort}} is defined as an optional tool integration, it is located under **More Tools**.
+1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.keymanagementserviceshort}}**. If {{site.data.keyword.keymanagementserviceshort}} is defined as an optional tool integration, it is located under **More Tools**. To create an authorization between the toolchain and the **{{site.data.keyword.keymanagementserviceshort}}** service instance select the **Create an authorization for this toolchain** option from the **Authorization type** dropdown. This grants the toolchain access to the secret material stored in the **{{site.data.keyword.keymanagementserviceshort}}** service instance.
 1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the {{site.data.keyword.contdelivery_short}} card, click **View toolchain**. Then, click **Overview**.  
 
    a. Click **Add tool**.
@@ -35,6 +35,7 @@ Configure {{site.data.keyword.keymanagementserviceshort}} to securely manage sec
 1. Specify a name for this instance of the {{site.data.keyword.keymanagementserviceshort}} tool integration to use in your toolchain. The name that you specify is used in the UI tools that select **{{site.data.keyword.keymanagementserviceshort}}** secrets. It is also used as part of the reference that resolves the secret values when the toolchain runs. This instance name is also displayed on the {{site.data.keyword.keymanagementserviceshort}} tool integration tile within the toolchain workspace.
 1. Review the default values for **Region** and **Resource-Group** and update, if required.
 1. Select the instance of the **{{site.data.keyword.keymanagementserviceshort}}** service that you want to use.
+1. To create an authorization between the toolchain and the **{{site.data.keyword.keymanagementserviceshort}}** service instance click the **Create Authorization** button. This grants the toolchain access to the secret material stored in the **{{site.data.keyword.keymanagementserviceshort}}** service instance.
 1. Click **Create Integration**.
 1. On the Toolchain's Overview page, on the **Third-Party tools** card, click **{{site.data.keyword.keymanagementserviceshort}}**.
 
@@ -73,6 +74,7 @@ You can add a {{site.data.keyword.keymanagementserviceshort}} tool integration t
       region: us-south
       resource-group: default
       instance-name: ffs-secrets
+      setup-authorization-type: create
 ```
 
 For more information about customizing toolchain templates, see [Create a template for a custom toolchain](https://www.ibm.com/cloud/architecture/tutorials/create-a-template-for-a-custom-toolchain){: external}.
@@ -83,7 +85,7 @@ In certain scenarios, you can add a {{site.data.keyword.keymanagementserviceshor
 ## Authorizing your toolchain to access secrets
 {: #key_protect_authorize_secrets}
 
-References to secrets that are stored in {{site.data.keyword.keymanagementserviceshort}} are dynamically resolved when the toolchain runs. To access the required secrets, you must authorize your toolchain to access the {{site.data.keyword.keymanagementserviceshort}} instance. If you create a toolchain that has a valid {{site.data.keyword.keymanagementserviceshort}} tool integration, or add this tool integration to an existing toolchain, a request is automatically made to create the necessary authorization.
+References to secrets that are stored in {{site.data.keyword.keymanagementserviceshort}} are dynamically resolved when the toolchain runs. To access the required secrets, you must authorize your toolchain to access the {{site.data.keyword.keymanagementserviceshort}} instance. If you are creating a toolchain from a template use the **Authorization type** dropdown when configuring the **{{site.data.keyword.keymanagementserviceshort}}** integration. If you are adding a **{{site.data.keyword.keymanagementserviceshort}}** integration to an existing toolchain use the **Create authorization** button.
 
 To view your authorizations in {{site.data.keyword.cloud_notm}}, complete the following steps:
 
