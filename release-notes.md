@@ -20,7 +20,7 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
 {: shortdesc}
 
-## 19 October 2023
+## 17 October 2023
 {: #ContinuousDelivery-otc1923}
 {: release-note}
 
