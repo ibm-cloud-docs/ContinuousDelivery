@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-10-02"
+lastupdated: "2023-10-17"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
 {: shortdesc}
+
+## 17 October 2023
+{: #ContinuousDelivery-otc1923}
+{: release-note}
+
+{{site.data.keyword.gitrepos}}
+:   Upgraded to [GitLab 16.2.8](https://about.gitlab.com/releases/2023/09/28/security-release-gitlab-16-4-1-released/){: external}.
 
 ## 4 October 2023
 {: #ContinuousDelivery-otc0423}
