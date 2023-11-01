@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-14"
+lastupdated: "2023-10-24"
 
 keywords: endpoints, authentication, IBM Cloud Public
 
@@ -64,6 +64,7 @@ The following table lists the {{site.data.keyword.deliverypipeline}} endpoints t
 | `https://pipeline-ui.[region].devops.cloud.ibm.com/readiness` | Get the readiness status of the service component |
 | `https://pipeline-ui.[region].devops.cloud.ibm.com/status` | Get the status of the Pipeline-ui service component |
 | `https://pipeline-ui.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
+| `https://private-worker-service.[region].devops.cloud.ibm.com/chains/public_key` | Get the public key used by chains for signing |
 | `https://private-worker-service.[region].devops.cloud.ibm.com/install` | Get the install script to install the private worker agent on the internal or external platform |
 | `https://private-worker-service.[region].devops.cloud.ibm.com/status` | Get the status of the Private Worker Service service component |
 | `https://private-worker-service.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
