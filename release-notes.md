@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-11-01"
+lastupdated: "2023-11-10"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
 {: shortdesc}
+
+## 10 November 2023
+{: #ContinuousDelivery-nov1023}
+{: release-note}
+
+{{site.data.keyword.contdelivery_full}} is now available in the Madrid region.
+:   Each location has three different data centers and provides a full cloud service stack to enable high availability, redundancy, and geographical dispersion.
 
 ## 3 November 2023
 {: #ContinuousDelivery-nov0323}

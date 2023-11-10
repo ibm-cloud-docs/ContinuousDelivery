@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2023-07-07"
+lastupdated: "2023-11-10"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -38,7 +38,19 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
 * Network access:
 
    * Inbound: Not required.
-   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either au-syd (Sydney, Australia), eu-de (Frankfurt, Germany), eu-gb (London, United Kingdom), jp-tok (Tokyo, Japan), jp-osa (Osaka, Japan), us-south (Dallas, US), us-east (Washington DC, US), br-sao (Sao Paulo), or ca-tor (Toronto, CA). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
+   * Outbound network access uses `(TCP:443)`, where the region matches the delivery pipeline location and is one of the following options: 
+     * au-syd (Sydney, Australia)
+     * eu-de (Frankfurt, Germany)
+     * eu-gb (London, United Kingdom)
+     * jp-tok (Tokyo, Japan)
+     * jp-osa (Osaka, Japan)
+     * us-south (Dallas, US)
+     * us-east (Washington DC, US)
+     * br-sao (Sao Paulo)
+     * ca-tor (Toronto, CA)
+     * eu-es (Madrid, Spain). 
+    
+      For example, for the Frankfurt region, specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
   
 * Permissions to pull images from icr.io. Private workers require the tekton-pipelines infrastructure and must be able to pull tekton-releases images from icr.io to complete the private worker installation.
 
