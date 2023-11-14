@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-11-10"
+lastupdated: "2023-11-13"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -20,12 +20,12 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
 {: shortdesc}
 
-## 10 November 2023
-{: #ContinuousDelivery-nov1023}
+## 3 November 2023
+{: #ContinuousDelivery-nov1323}
 {: release-note}
 
-{{site.data.keyword.contdelivery_full}} is now available in the Madrid region.
-:   Each location has three different data centers and provides a full cloud service stack to enable high availability, redundancy, and geographical dispersion.
+{{site.data.keyword.gitrepos}}
+:   Upgraded to [GitLab 16.4.2](https://about.gitlab.com/releases/2023/09/22/gitlab-16-4-released/){: external}.
 
 ## 3 November 2023
 {: #ContinuousDelivery-nov0323}
