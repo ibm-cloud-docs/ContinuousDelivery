@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-30"
+lastupdated: "2023-10-31"
 
 keywords: tool integrations, IBM Cloud Public, Event Notifications
 
@@ -304,7 +304,13 @@ The properties that are sent to {{site.data.keyword.en_short}} vary depending on
       "id": "<run_id>",
       "run_number": 11,
       "start_time": "2023-04-17T16:48:36.928Z",
-      "ui_href": "https://cloud.ibm.com/devops/pipelines/<tool_id>/<stage_id>/<run_id>?env_id=<region_id>"
+      "ui_href": "https://cloud.ibm.com/devops/pipelines/<tool_id>/<stage_id>/<run_id>?env_id=<region_id>",
+      "trigger": {
+         "href": "https://api.<region>.devops.cloud.ibm.com/pipeline/v2/tekton_pipelines/<tool_id>/triggers/<trigger_id>",
+         "id": "<trigger_id>",
+         "name": "my-trigger",
+         "type": "manual"
+      }
    }
 }
 ```
@@ -317,5 +323,5 @@ The following table provides detailed information about each event notification 
 | `subject` | Optional. The object that represents the subject that initiated the event. This object might contain the following fields:  \n  \n `name`: The name of the subject.  \n  \n `email`: The email of the subject.  \n  \n `iam_id`: The IAM ID of the subject.  \n  \n |
 | `toolchain.instance` | The object that represents the toolchain where the event originated. This object contains the following fields:  \n  \n `crn`: The CRN of the toolchain.  \n  \n `id`: The ID of the toolchain.  \n  \n `resource_group_id`: The ID of the toolchain's resource group.  \n  \n `name`: The name of the toolchain.  \n  \n `href`: The public API endpoint for the toolchain.  \n  \n `ui_href`: The UI endpoint for the toolchain.  \n  \n |
 | `toolchain.tool-instance` | The object that represents the toolchain instance that participates in the event. For the `toolchain_bind` and `toolchain_unbind` subtypes, this object is the tool integration instance that is being bound or unbound. For pipeline events, this object is the pipeline tool integration instance where the event originated. This object contains the following fields:  \n  \n `id`: The ID of the tool integration instance.  \n  \n `tool_type_id`: The ID of the [tool type](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations&interface=api#tool_integrations).  \n  \n `href`: The public API endpoint for the tool integration instance.  \n  \n `state`: The state of the tool integration instance.  \n  \n `referent`: An object that contains information about the tool that is represented by the tool integration instance. For example, `ui_href` which is the UI endpoint for the tool integration that is represented by the tool integration instance.  \n  \n `name`: Optional. The name of the tool integration instance.  \n  \n |
-| `toolchain.pipeline-run` | The object that represents the Tekton pipeline run or Classic pipeline stage run where the event originated. This object is applicable only to pipeline events and contains the following fields:  \n  \n `id`: The ID of the Tekton pipeline run or Classic pipeline stage.  \n  \n `ui_href`: The UI endpoint of the Tekton pipeline run or Classic pipeline stage.  \n  \n `run_number`: Optional. The run number of the Tekton pipeline run or the Classic pipeline stage.  \n  \n `start_time`: Optional. The time that the run started, in ISO 8601 format.  \n  \n `finish_time`: Optional. The time that the run finished, in ISO 8601 format.  \n  \n `duration`: Optional. The duration of the run, in ISO 8601 format.  \n  \n |
+| `toolchain.pipeline-run` | The object that represents the Tekton pipeline run or Classic pipeline stage run where the event originated. This object is applicable only to pipeline events and contains the following fields:  \n  \n `id`: The ID of the Tekton pipeline run or Classic pipeline stage.  \n  \n `ui_href`: The UI endpoint of the Tekton pipeline run or Classic pipeline stage.  \n  \n `run_number`: Optional. The run number of the Tekton pipeline run or the Classic pipeline stage.  \n  \n `start_time`: Optional. The time that the run started, in ISO 8601 format.  \n  \n `finish_time`: Optional. The time that the run finished, in ISO 8601 format.  \n  \n `duration`: Optional. The duration of the run, in ISO 8601 format.  \n  \n `trigger`: Optional. An object that contains information about the trigger that ran the Tekton pipeline. For example, `name`, which is the name of the Tekton pipeline trigger. \n  \n |
 {: caption="Table 4. Properties in an event notification payload" caption-side="bottom"}
