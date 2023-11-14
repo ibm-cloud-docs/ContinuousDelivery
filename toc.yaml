@@ -100,6 +100,7 @@ toc:
       - topicgroup: 
           label: Delivery Pipelines
           topics:
+          - pipeline_versioned_base_images.md
           - topicgroup: 
               label: Delivery pipeline (Classic)
               topics: 
@@ -107,7 +108,6 @@ toc:
                - pipeline_working.md
                - pipeline_build_deploy.md
                - pipeline_container_images.md
-               - pipeline_versioned_base_images.md
                - pipeline_custom_docker_images.md
           - topicgroup: 
               label: Delivery pipeline (Tekton)
