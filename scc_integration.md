@@ -18,12 +18,12 @@ subcollection: ContinuousDelivery
 You can use the {{site.data.keyword.compliance_full}} to embed security checks into your everyday workflows to monitor for security and compliance. By monitoring for risks, you can identify security vulnerabilities and quickly work to mitigate the impact and fix the issues.
 {: shortdesc}
 
-Currently, you can use this tool integration only with toolchains that are created from the DevSecOps continuous integration and continuous delivery templates. Before you configure a {{site.data.keyword.compliance_short}} tool integration, make sure that you have a Git repository (repo) that contains the evidence locker for your toolchain and a configured Git tool integration that points to this repo.
+Currently, you can use this tool integration only with toolchains that are created from the DevSecOps continuous delivery (CD) and continuous compliance (CC) templates. Before you configure a {{site.data.keyword.compliance_short}} tool integration, make sure that you have a Git repository (repo) that contains the evidence locker for your toolchain and a configured Git tool integration that points to this repo.
 {: important}
 
 This tool integration verifies the security and compliance posture of your toolchain by identifying the location of the evidence locker and the path to the evidence summary. For more information about evidence format and structure, see [Evidence](/docs/devsecops?topic=devsecops-devsecops-evidence). 
 
-{{site.data.keyword.compliance_short}} supports the new cloud scan. This scan can find toolchains and associated evidence, as it is configured in the **Name**, **Evidence repository name or URL**, and **Evidence namespace** fields within the {{site.data.keyword.compliance_short}} tool integration.
+{{site.data.keyword.compliance_short}} can scan an account or resource group. Those scans can find toolchains and associated evidence, as configured in the **Name**, **Evidence repository name or URL**, and **Evidence namespace** fields within the {{site.data.keyword.compliance_short}} tool integration.
 
 Configure {{site.data.keyword.compliance_short}} to embed security checks into your workflows to monitor for security and compliance:
 
