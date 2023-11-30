@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-10"
+lastupdated: "2023-03-02"
 
 keywords: Continuous Delivery endpoints, available regions, locations
 
@@ -51,7 +51,6 @@ Review the following table to determine the public API endpoints to use when you
 | Osaka            | `jp-osa.devops.cloud.ibm.com`   |
 | Toronto          | `ca-tor.devops.cloud.ibm.com`   |
 | S&atilde;o-Paulo | `br-sao.devops.cloud.ibm.com`   |
-| Madrid           | `eu-es.devops.cloud.ibm.com`   |
 {: caption="Table 1. Public endpoints for interacting with {{site.data.keyword.contdelivery_short}} APIs over IBM Cloud's public network" caption-side="top"}
 
 ### Private endpoints
