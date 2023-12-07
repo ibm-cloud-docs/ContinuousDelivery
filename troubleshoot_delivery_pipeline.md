@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-08-25"
+lastupdated: "2023-12-05"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -244,3 +244,22 @@ Try resolving the problem by using one of the following options:
 The computed pipeline definition size limit is 1 MB. If you encounter errors when you save or run your pipeline, you might need to reduce the size of your pipeline definition, or split it into multiple pipelines.
 {: important}
 
+## Why does my pipeline fail to connect to a {{site.data.keyword.openshiftlong_notm}} cluster?
+{: #troubleshoot-roks-access}
+{: troubleshoot}
+
+Pipelines that attempt an `oc login` can't log in to the target cluster that's running {{site.data.keyword.openshiftlong_notm}} version 4.13 and later.
+{: tsSymptoms}
+
+The issue is caused by change that is introduced in version 4.13 of [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-cs_versions_413#:~:text=Review%20information%20about%20version%204.13,based%20on%20Kubernetes%20version%201.26).  
+{: tsCauses}
+
+To work around the issue, use the following process:
+```
+ibmcloud login --apikey "${IBMCLOUD_API_KEY}" -r "${REGION}" -g "${RESOURCE_GROUP}"
+ibmcloud oc cluster config --cluster "${CLUSTER_NAME}" --endpoint private --admin
+kubectl config current-context
+oc version
+oc get pods -A  # To verify connection
+```
+{: tsResolve}

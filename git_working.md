@@ -258,4 +258,4 @@ You can update the display name that appears for you throughout {{site.data.keyw
 ## Physical file and repo size limits
 {: #git_limits}
 
-Files are strictly limited to 100 MB. The suggested repo size limit is 1 GB. If your repo exceeds 1 GB, you might receive an email with a request to reduce the size of the repo.
+Files are strictly limited to 100 MB. The suggested repo size limit is 1 GB. If your repo exceeds 1 GB, you might receive an email with a request to reduce the size of the repo. 
