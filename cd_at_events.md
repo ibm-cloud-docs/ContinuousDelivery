@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-10-25"
+  years: 2019, 2023
+lastupdated: "2023-12-05"
 
 keywords: event, security, IBM, activity tracker, Continuous Delivery
 
@@ -65,11 +65,14 @@ The following table lists the actions that generate toolchain data events:
 
 | Action | Description | 
 |:-----------------|:-----------------|
+| `toolchain.event.send` | Send a client bespoke toolchain event. The Activity Tracker event's metadata includes the bespoke toolchain event's `title` and `description` values. |
 | `toolchain.tool-instance.create` | Add a tool integration to a toolchain. This event is always followed by the toolchain.tool-instance.deploy event. | 
 | `toolchain.tool-instance.read` | View the configuration of a tool integration | 
 | `toolchain.tool-instance.update` | Save configuration changes to a tool integration | 
 | `toolchain.tool-instance.delete` | Remove a tool integration from a toolchain. This event is always preceded by the toolchain.tool-instance.undeploy event. |
 {: caption="Table 3. Actions that generate toolchain data events" caption-side="top"}
+
+Activity Tracker events are different from client bespoke toolchain events. When you invoke the [POST /toolchains/{toolchain_id}/events](https://cloud.ibm.com/apidocs/toolchain#create-toolchain-event){: external} API to send a bespoke toolchain event, the toolchain sends a notification event to any instances of {{site.data.keyword.en_short}} that are integrated into the toolchain. In addition, the toolchain sends an Activity Tracker event that serves as a record of the API having been invoked. {: tip}
 
 ## Events for {{site.data.keyword.DRA_short}}
 {: #insights-events}
