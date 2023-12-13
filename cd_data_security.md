@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-07-10"
+lastupdated: "2023-12-05"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -37,6 +37,7 @@ To keep your credentials secure, make sure that you follow this guidance:
 * Do not include user credentials in {{site.data.keyword.deliverypipeline}} definitions because they might be visible to other users. Specifically, do not place user credentials within {{site.data.keyword.deliverypipeline}} Classic job definition scripts, {{site.data.keyword.deliverypipeline}} Tekton yaml files, or scripts that are started by delivery pipelines.
 * Do not publish user credentials in log files that are created when a pipeline runs because these files might be shared.
 * Do not specify credentials in plain text in calls to {{site.data.keyword.contdelivery_short}} APIs, such as when you configure [tool integrations](https://cloud.ibm.com/apidocs/toolchain#create-tool){: external}, [Tekton pipeline environment properties](https://cloud.ibm.com/apidocs/tekton-pipeline#create-tekton-pipeline-properties){: external}, or [Tekton pipeline trigger properties](https://cloud.ibm.com/apidocs/tekton-pipeline#create-tekton-pipeline-trigger-properties){: external}. 
+* Do not include credentials, personal identifying information, or other sensitive information in calls to the [POST /toolchains/{toolchain_id}/events](https://cloud.ibm.com/apidocs/toolchain#create-toolchain-event){: external} API. The API sends events containing the data you specify to instances of {{site.data.keyword.en_short}} that are integrated into the toolchain. {{site.data.keyword.en_short}} will subsequently forward the events to configured destinations such as email, SMS, and Slack.
 * Do not specify credentials in plain text in Terraform configuration files, such as when you define tool integration resources, Tekton pipeline environment property resources, or Tekton pipeline trigger property resources. Instead, manage credentials in a secrets storage service and specify them by reference in API calls and Terraform configurations. For more information about managing secrets by reference, see [Protecting your credentials by using secrets references](#cd_secrets_references).
    
 {{site.data.keyword.cloud_notm}} provides several options that you can use for secure key storage and secrets.

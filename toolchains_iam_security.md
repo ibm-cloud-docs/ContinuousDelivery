@@ -2,7 +2,7 @@
 
 copyright:
   years:  2018, 2023
-lastupdated: "2023-07-10"
+lastupdated: "2023-12-05"
 
 keywords: toolchains, user access, resource groups, IAM, access policy, Administrator Create, Editor Update, Update
 
@@ -33,16 +33,20 @@ After you define the scope of the access policy, you assign a role. The role def
 | Platform Role | Description of Actions | Example Actions|
 |:-----------------|:-----------------|:-----------------|
 | Viewer | View toolchains and delivery pipelines. | * Click a toolchain to open its Overview page.  |
-| Operator | View toolchains and delivery pipelines. Run delivery pipelines. | * Click a toolchain to open its Overview page.  \n  \n * Click the **Run Stage** icon of the stage that your pipeline job is in. |
-| Editor, Administrator | Create, view, update, and delete toolchains and delivery pipelines. Run delivery pipelines. |* From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click **Create a Toolchain**.  \n  \n * From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click the toolchain to delete. Click the **Actions** menu, then select **Delete**.  \n  \n * From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Click **Add tool**, and then select the tool integration that you want to add.  \n  \n * From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Pipeline page, click the **Stage Configuration** icon, and then click **Configure Stage**. \n  \n * Click the **Run Stage** icon of the stage that your pipeline job is in.|
+| Operator | View toolchains and delivery pipelines. Run delivery pipelines. Send client bespoke toolchain events. | * Click a toolchain to open its Overview page.  \n  \n * Click the **Run Stage** icon of the stage that your pipeline job is in. |
+| Editor, Administrator | Create, view, update, and delete toolchains and delivery pipelines. Run delivery pipelines. Send client bespoke toolchain events. | * From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click **Create a Toolchain**.  \n  \n * From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click the toolchain to delete. Click the **Actions** menu, then select **Delete**.  \n  \n * From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Click **Add tool**, and then select the tool integration that you want to add.  \n  \n * From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the Pipeline page, click the **Stage Configuration** icon, and then click **Configure Stage**. \n  \n * Click the **Run Stage** icon of the stage that your pipeline job is in.|
 {: caption="Table 1. IAM platform roles" caption-side="bottom"}
 
 The following table lists the IAM service access roles and the available actions for each role.
 
 | Service Role | Description of Actions | Example Actions|
 |:-----------------|:-----------------|:-----------------|
+| EventSender | Send client bespoke toolchain events. | Invoke the [POST /toolchains/{toolchain_id}/events](https://cloud.ibm.com/apidocs/toolchain#create-toolchain-event){: external} API. |
 | PipelineRunner | Run delivery pipelines. | Click the **Run Stage** icon of the stage that your pipeline job is in. |
 {: caption="Table 2. IAM service access roles" caption-side="bottom"}
+
+EventSender access grants only the ability to send client bespoke toolchain events. To take other actions against a toolchain, other roles such as Viewer, Operator, Editor, or Administrator are required.
+{: tip}
 
 PipelineRunner access grants only the ability to run a delivery pipeline. To view a pipeline from the UI, an extra role such as the Viewer role is required.
 {: tip}
@@ -56,6 +60,7 @@ The following table lists and describes the available actions for toolchains:
 | resource-controller.instance.update_plan | Not applicable. | Administrator, Editor |
 | resource-controller.instance.delete | Delete a toolchain from a resource group. | Administrator, Editor |
 | resource-controller.instance.retrieve | View the details for a toolchain or for a tool integration that is bound to a toolchain in a resource group. | Administrator, Editor, Operator, Viewer |
+| toolchain.event.send | Send a client bespoke toolchain event. | Administrator, Editor, EventSender, Operator |
 | toolchain.instance.create-bindings | Add a tool integration to a toolchain in a resource group. | Administrator, Editor |
 | toolchain.instance.delete-bindings | Remove a tool integration from a toolchain in a resource group. | Administrator, Editor |
 | toolchain.instance.read-properties | Reserved for future use. | Administrator, Editor, Viewer |
