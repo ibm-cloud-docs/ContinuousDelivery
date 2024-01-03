@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-12-07"
+  years: 2019, 2024
+lastupdated: "2024-01-02"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
 {: shortdesc}
+
+## 2 January 2024
+{: #ContinuousDelivery-jan0224}
+{: release-note}
+
+The {{site.data.keyword.contdelivery_short}} toolchain API provides a new, beta method that you can use to generate bespoke (custom) toolchain events which the toolchain will forward to integrated instances of {{site.data.keyword.en_short}}.
+:   For more information, see [Enabling event notifications for toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd) and the [CD Toolchain API Docs](https://cloud.ibm.com/apidocs/toolchain#create-toolchain-event){: external}.
 
 ## 7 December 2023
 {: #ContinuousDelivery-dec0723}
