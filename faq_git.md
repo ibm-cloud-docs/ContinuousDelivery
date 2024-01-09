@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-02-03"
+  years: 2024
+lastupdated: "2024-01-09"
 
 keywords: tool integrations, IBM Cloud, GitHub integration, Git Repos and Issue Tracking integration, GitLab project
 
@@ -63,7 +63,19 @@ For more information about the Git tool integration Terraform resources, see the
 {: faq}
 {: support}
 
-Before you can use a repo integration, you must authorize it so that {{site.data.keyword.cloud_notm}} can access your GitHub account by using one of the following authentication methods. 
+Before you can use a repo integration, you must authorize it so that {{site.data.keyword.cloud_notm}} can access your GitHub account by using one of the following authentication methods.
 
 * **{{site.data.keyword.cloud_notm}} OAuth app**: When you grant authorization by using the {{site.data.keyword.cloud_notm}} OAuth App, you allow {{site.data.keyword.cloud_notm}} to act as the authenticated user. You can also revoke permissions from the Oauth App.
 * **Personal Access Token**: Use a Personal Access Token (PAT) to provide granular access to a specific user or repo. Authorizing with a PAT is recommended when you use Terraform or the API.
+
+## Why is my {{site.data.keyword.gitrepos}} account blocked?
+{: #git_account_blocked}
+{: faq}
+{: support}
+
+Git Repos and Issue Tracking is an {{site.data.keyword.cloud_notm}} service. All users must have an {{site.data.keyword.cloud_notm}} account or be invited to join an account. 
+
+We recommend using the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com) to invite users to join your account. For more information, see [Inviting users to an account](/docs/account?topic=account-iamuserinv).
+{: tip}
+
+After you create a new account or accept an invitation to join an account, allow up to 15 minutes for the reactivation process to be completed if your account was recently blocked.
