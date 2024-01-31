@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-12-05"
+  years: 2015, 2024
+lastupdated: "2024-01-31"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -262,4 +262,20 @@ kubectl config current-context
 oc version
 oc get pods -A  # To verify connection
 ```
+{: tsResolve}
+
+## Why does my pipeline fail when executing a Git clone command?
+{: #troubleshoot-git-clone}
+{: troubleshoot}
+
+Tekton Pipelines that are using the `git-clone-repo` command task might fail with the following error displayed: `Clone was not successful. Code 128 - Retrying shortly...`.
+{: tsSymptoms}
+
+The issue is caused by a performance change in the infrastructure of the public managed pipeline workers. 
+{: tsCauses}
+
+To resolve this issue:
+- Locate the tekton definitions of the `clone-repo` step in the `git-clone-repo` task. For more information, see the [Tekton Catalog example](https://github.com/open-toolchain/tekton-catalog/blob/8a9dab995e459eb879cd3552cbb89e8d90be54df/git/task-clone-repo.yaml#L207).
+- Add `rm -rf "lost+found"` to the definition prior to the `git clone` call. This ensures the directory for cloning is empty.
+- Run the pipeline again.
 {: tsResolve}
