@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-11-10"
+  years: 2018, 2024
+lastupdated: "2024-02-13"
 
 keywords: high availability, disaster recovery, SLA
 
@@ -24,3 +24,19 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.contdelivery_short}} is available only on the public cloud, but the tools that are used with {{site.data.keyword.contdelivery_short}} can run in public cloud environments and in on-premises environments. 
 
 See [ensure zero downtime](/docs/overview?topic=overview-zero-downtime#zero-downtime) to learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}. For more information about high availability and disaster recovery for {{site.data.keyword.contdelivery_short}}, see [Your responsibilities with using {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-responsibilities-cd#disaster-recovery). You can also find information about [Service Level Agreements](/docs/overview?topic=overview-slas).
+
+In the event that a region becomes unavailable, you can use {{site.data.keyword.contdelivery_short}} in another region. The following table lists recommended alternate regions to use. The recommendations are based on geographic proximity and data sovereignty; however, you can choose any alternate region that suits your requirements.
+
+| Region | Suggested alternate region |
+| ---------------  | ------------- |
+| Dallas           | Washington |
+| Frankfurt        | Madrid |
+| London           | Frankfurt |
+| Madrid           | Frankfurt |
+| Osaka            |  Tokyo |
+| São Paulo        | Dallas |
+| Sydney           |  Tokyo |
+| Tokyo            |  Osaka |
+| Toronto          | Washington|
+| Washington       | Dallas |
+{: caption="Table 1. Regions and suggested alternates" caption-side="top"}
