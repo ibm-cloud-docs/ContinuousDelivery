@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-3-15"
+  years: 2023, 2024
+lastupdated: "2024-2-15"
 
-keywords: IBM Cloud Public, firewall configuration
+keywords: IBM Cloud Public, firewall configuration, network zones
 
 subcollection: ContinuousDelivery
 
@@ -196,3 +196,8 @@ br-sao
 169.57.175.144/28
 ```
 {: screen}
+
+# Using the Toolchain service reference
+{: #toolchain-service-reference}
+
+If you are using context-based restrictions to control access to {{site.data.keyword.cloud_notm}} services, you can use the Toolchain service reference to allow {{site.data.keyword.deliverypipeline}} tasks to access those {{site.data.keyword.cloud_notm}} services without having to specify the IP address ranges listed in the previous section. The Toolchain service network zone IP ranges are internally maintained and updated, allowing you to define context-based restrictions network zones and rules without having to know the origin IP addresses of the Toolchain service. See [What are context-based restrictions?](/docs/account?topic=account-context-restrictions-whatis) for more information about using network zones.
