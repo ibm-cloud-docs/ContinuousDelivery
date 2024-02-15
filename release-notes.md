@@ -21,9 +21,9 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 ## 15 February 2024
-{: #ContinuousDelivery-jan0224}
+{: #ContinuousDelivery-feb1524}
 {: release-note}
-:   The Toolchain service can now be selected as a service reference when creating network zones under [context-based restrictions](/docs/account?topic=account-context-restrictions-whatis).
+The Toolchain service can now be selected as a service reference when creating network zones under [context-based restrictions](/docs/account?topic=account-context-restrictions-whatis).
 
 ## 2 January 2024
 {: #ContinuousDelivery-jan0224}
