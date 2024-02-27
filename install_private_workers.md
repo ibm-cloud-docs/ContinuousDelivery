@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-11-10"
+  years: 2019, 2024
+lastupdated: "2024-02-26"
 
 keywords: Delivery Pipeline Private Workers, Installation, Kubernetes cluster, private worker
 
@@ -38,19 +38,7 @@ Before you install a private worker, make sure that you have an {{site.data.keyw
 * Network access:
 
    * Inbound: Not required.
-   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is one of the following options:
-    * au-syd (Sydney, Australia)
-    * eu-de (Frankfurt, Germany)
-    * eu-gb (London, United Kingdom)
-    * jp-tok (Tokyo, Japan)
-    * jp-osa (Osaka, Japan)
-    * us-south (Dallas, US)
-    * us-east (Washington DC, US)
-    * br-sao (Sao Paulo)
-    * ca-tor (Toronto, CA)
-    * eu-es (Madrid, Spain).
-    
-    For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
+   * Outbound network access uses `(TCP:443)` where the region matches the delivery pipeline location and is either au-syd (Sydney, Australia), eu-de (Frankfurt, Germany), eu-gb (London, United Kingdom), jp-tok (Tokyo, Japan), jp-osa (Osaka, Japan), us-south (Dallas, US), us-east (Washington DC, US), br-sao (Sao Paulo), or ca-tor (Toronto, CA). For example, for the Frankfurt region specify `https://private-worker-service.eu-de.devops.cloud.ibm.com (TCP:443)`. For network access to the global endpoint for API key validation, use `https://iam.cloud.ibm.com (TCP:443)`. 
   
 * Permissions to pull images from icr.io. Private workers require the tekton-pipelines infrastructure and must be able to pull tekton-releases images from icr.io to complete the private worker installation.
 
@@ -280,7 +268,7 @@ You must register a private worker with the specific {{site.data.keyword.cloud_n
 2. Run the following command with the service ID and API key that you created previously, the private worker name, and the `{REGION}` which is the location of the toolchain's pipeline.
 
    ```text
-   $ kubectl create secret generic {WORKER_NAME}-auth --from-literal=apikey={API_KEY} && kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install/worker?serviceId={SERVICE_ID}&name={WORKER_NAME}"
+   $ kubectl create secret generic {WORKER_NAME}-auth -n default --from-literal=apikey={API_KEY} && kubectl apply --filename "https://private-worker-service.{REGION}.devops.cloud.ibm.com/install/worker?serviceId={SERVICE_ID}&name={WORKER_NAME}"
 
    workeragent.devops.cloud.ibm.com/worker-name created
    secret/worker-name-auth created
@@ -307,6 +295,9 @@ You must register a private worker with the specific {{site.data.keyword.cloud_n
    <worker_name>  <ServiceId>   OK      Succeeded    OK        OK     false         false
    ```
 
+The private workers are meant to be installed in the `default` namespace. They should never be installed in the `tekton-pipelines` namespace. This namespace is reserved for the Tekton framework and the agent deployment. Installing the worker agent in a different namespace than the `default` namespace can cause some unexpected side effects.
+   {: tip}
+
 ## Configuring the {{site.data.keyword.deliverypipeline}} Private Worker to use private endpoints
 {: #install_pw_agent_pse}
 
@@ -315,7 +306,7 @@ By default, private workers use public endpoints for communication. A cluster ad
 1. Get the name of the agent that is installed on the cluster:
 
    ```text
-   kubectl get workeragents
+   kubectl get workeragents -n default
    ```
 
 2. Change the `apiUrl` for that agent:
@@ -337,7 +328,7 @@ By default, private workers use public endpoints for communication. A cluster ad
 3. Optional. To return to using public endpoints for the agent,  type the following command:
 
    ```text
-   kubectl patch workeragent {WORKER_NAME} --type='merge' -p '{"spec": {"apiUrl":"https://private-worker-service.{REGION}.devops.cloud.ibm.com"}}'
+   kubectl patch workeragent {WORKER_NAME} -n default --type='merge' -p '{"spec": {"apiUrl":"https://private-worker-service.{REGION}.devops.cloud.ibm.com"}}'
    ```
 
 ## Configuring the Delivery Pipeline Private Worker to use Satellite link endpoints
