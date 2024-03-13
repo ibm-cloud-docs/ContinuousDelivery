@@ -99,7 +99,7 @@ Upgrading to the Professional plan will remove these limitations and reactivate 
 {: tip}
 
 ### How can you change to a different service plan?
-{: #change_serivce_plan}
+{: #change_service_plan}
 {: ui}
 
 You can upgrade from the {{site.data.keyword.contdelivery_short}} Lite service plan to the Professional plan.
