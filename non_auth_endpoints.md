@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-10-24"
+  years: 2024
+lastupdated: "2024-03-07"
 
 keywords: endpoints, authentication, IBM Cloud Public
 
@@ -30,12 +30,12 @@ The following table lists the Code Risk Analyzer endpoints that do not require a
 
 |Endpoint|Description|
 |:-------------------------------------------|:------------------|
+| `https://clairupdater.[region].devopsinsights.cloud.ibm.com/alive` | Get the liveness status of the service component |
+| `https://clairupdater.[region].devopsinsights.cloud.ibm.com/ready` | Get the readiness status of the service component |
+| `https://clairupdater.[region].devopsinsights.cloud.ibm.com/status` | Get the status of the service component |
 | `https://gitsecure.[region].devopsinsights.cloud.ibm.com/alive` | Get the liveness status of the service component |
 | `https://gitsecure.[region].devopsinsights.cloud.ibm.com/ready` | Get the readiness status of the service component |
 | `https://gitsecure.[region].devopsinsights.cloud.ibm.com/status` | Get the status of the service component |
-| `https://snykupdater.[region].devopsinsights.cloud.ibm.com/alive` | Get the liveness status of the service component |
-| `https://snykupdater.[region].devopsinsights.cloud.ibm.com/ready` | Get the readiness status of the service component |
-| `https://snykupdater.[region].devopsinsights.cloud.ibm.com/status` | Get the status of the service component |
 | `https://vcurator.[region].devopsinsights.cloud.ibm.com/alive` | Get the liveness status of the service component |
 | `https://vcurator.[region].devopsinsights.cloud.ibm.com/ready` | Get the readiness status of the service component |
 | `https://vcurator.[region].devopsinsights.cloud.ibm.com/status` | Get the status of the service component |
@@ -120,20 +120,12 @@ The following table lists the Metrics endpoints that do not require authenticati
 
 |Endpoint|Description|
 |:-------------------------------------------|:------------------|
+| `https://otc-consumption.[region].devops.cloud.ibm.com/healthcheck` | Get the current aggregated status of the consumption monitors that this application watches |
+| `https://otc-consumption.[region].devops.cloud.ibm.com/status` | Get the current health status of the application |
+| `https://otc-consumption.[region].devops.cloud.ibm.com/version` | Get the version of the application |
 | `https://otc-metrics-listener.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://otc-metrics-listener.[region].devops.cloud.ibm.com/version` | Get the version of the service component |
 {: caption="Table 5. Metrics" caption-side="top"}
-
-## Slack Invite
-{: #slack_invite}
-
-The following table lists the Slack Invite endpoints that do not require authentication:
-
-|Endpoint|Description|
-|:-------------------------------------------|:------------------|
-| `https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/status` | Get the current status of the application |
-| `https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/version` | Get the version of the application |
-{: caption="Table 6. Slack Invite" caption-side="top"}
 
 ## Third-party tool integrations
 {: #third-party_tool_integrations}
@@ -159,7 +151,7 @@ The following table lists the third-party tool integration endpoints that do not
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/status` | Get the status of the Tools Integration Broker service component |
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/toolint-broker/api/v1/form` | Forwards the Authenticate, Populate, and Validate (APV) requests to the appropriate broker |
 | `https://otc-toolint-broker.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
-{: caption="Table 7. Third-party tool integrations" caption-side="top"}
+{: caption="Table 6. Third-party tool integrations" caption-side="top"}
 
 ## Toolchain platform
 {: #toolchain_platform}
@@ -185,5 +177,17 @@ The following table lists the Toolchain platform endpoints that do not require a
 | `https://otc-ui.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
 | `https://otc-webhook-manager.[region].devops.cloud.ibm.com/status` | Get the status of the service component |
 | `https://otc-webhook-manager.[region].devops.cloud.ibm.com/version` | Get the build version of the service component |
+| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}` |  |
+| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers` |  |
+| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}` |  |
+| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances` |  |
+| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances/{instance_id}` |  |
+| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances/{instance_id}/groups` |  |
+| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances/{instance_id}/items` |  |
+| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances/{instance_id}/items/{item_id}` |  |
+| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances/{instance_id}/items/{item_id}/keys` |  |
+| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances/{instance_id}/items/{item_id}/metadata` |  |
+| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances/{instance_id}/types` |  |
+| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/regions` |  |
+| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/resource_groups` |  |
 {: caption="Table 8. Toolchain platform" caption-side="top"}
-
