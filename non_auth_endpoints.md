@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-03-07"
+lastupdated: "2024-03-19"
 
 keywords: endpoints, authentication, IBM Cloud Public
 
@@ -180,14 +180,5 @@ The following table lists the Toolchain platform endpoints that do not require a
 | `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}` |  |
 | `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers` |  |
 | `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}` |  |
-| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances` |  |
-| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances/{instance_id}` |  |
-| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances/{instance_id}/groups` |  |
-| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances/{instance_id}/items` |  |
-| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances/{instance_id}/items/{item_id}` |  |
-| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances/{instance_id}/items/{item_id}/keys` |  |
-| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances/{instance_id}/items/{item_id}/metadata` |  |
-| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/instances/{instance_id}/types` |  |
-| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/regions` |  |
-| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/resource_groups` |  |
-{: caption="Table 8. Toolchain platform" caption-side="top"}
+| `https://ref-resolver.[region].devops.cloud.ibm.com/accounts/{account_id}/providers/{provider_id}/apis/{api_id}` |  |
+{: caption="Table 7. Toolchain platform" caption-side="top"}
