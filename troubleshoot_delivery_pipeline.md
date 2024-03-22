@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-01-31"
+lastupdated: "2024-03-22"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -279,3 +279,20 @@ To resolve this issue:
 - Add `rm -rf "lost+found"` to the definition prior to the `git clone` call. This ensures the directory for cloning is empty.
 - Run the pipeline again.
 {: tsResolve}
+
+## Why does my pipeline fail to start on managed workers when executed from a trial account ?
+{: #troubleshoot-trial-account}
+{: troubleshoot}
+
+Classic pipelines that are executed from a trial account won't start due to the following error:
+```
+This type of account is not entitled to use managed workers. Private workers can be used instead or to gain access managed worker capability the account must be upgraded to a paid plan.
+```
+{: tsSymptoms}
+
+This behavior is caused by a revision of the permissions for trial accounts.
+{: tsCauses}
+
+Try the following options to resolve this issue:
+- Execute your pipelines using a private worker running on your own cluster.
+- Upgrade your trial account to a [Pay-As-You-Go](/docs/account?topic=account-accounts) account with a Lite plan.
