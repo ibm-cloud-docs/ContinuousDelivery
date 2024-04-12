@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-04-19"
+  years: 2020, 2024
+lastupdated: "2024-04-12"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, Git source control, authentication, GitHub 
 
@@ -60,7 +60,7 @@ You can use a template as a starting point to [create a toolchain](https://cloud
 
 You can create a toolchain from a template only by using the console. To view the steps for using the console, switch to the **UI** instructions.
 
-For more information about how to create a toolchain with the API instead of by using a template, see [Adding the Git tool integration to an existing toolchain with the API](#adding_to_toolchain_api).
+For more information about how to create a toolchain with the API instead of by using a template, see [Adding the Git tool integration to an existing toolchain with the API](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_git&interface=api#adding_to_toolchain_api).
 
 ## Creating a toolchain from a template with {{site.data.keyword.gitrepos}} or GitHub with Terraform
 {: #creating_a_toolchain_git_terraform}
@@ -68,7 +68,7 @@ For more information about how to create a toolchain with the API instead of by 
 
 You can create a toolchain from a template only by using the console. To view the steps for using the console, switch to the **UI** instructions.
 
-For more information about how to create a toolchain with Terraform instead of by using a template, see [Adding the Git tool integration to an existing toolchain with Terraform](#adding_to_toolchain_terraform).
+For more information about how to create a toolchain with Terraform instead of by using a template, see [Adding the Git tool integration to an existing toolchain with Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_git&interface=terraform#adding_to_toolchain_terraform).
 
 ## Adding the Git tool integration to an existing toolchain by using the console
 {: #adding_to_toolchain_ui}
