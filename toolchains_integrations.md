@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-07-10"
+  years: 2015, 2024
+lastupdated: "2024-04-12"
 
 keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Event Notifications, Git Repos and Issue Tracking, GitHub, GitLab, HashiCorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -524,11 +524,11 @@ If you are using the [{{site.data.keyword.contdelivery_short}} Toolchain API to 
 |[{{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) 		|pipeline | ![Checkmark icon](../icons/checkmark-icon.svg) 		|
 |[{{site.data.keyword.deliverypipeline}} Private Worker](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-privateworker)			|private_worker |		|
 |[{{site.data.keyword.DRA_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-dra)		|draservicebroker | ![Checkmark icon](../icons/checkmark-icon.svg)			|
-|[{{site.data.keyword.en_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd)	|eventnotifications | ![Checkmark icon](../icons/checkmark-icon.svg)		|
+|[{{site.data.keyword.en_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-integration)	|eventnotifications | ![Checkmark icon](../icons/checkmark-icon.svg)		|
 |[{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-grit)	|hostedgit |		|
 |[GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-github)		|githubconsolidated |		|
 |[GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-gitlab)		|gitlab |		|
-|[HashiCorp Vault](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault)		|hashicorpvault |		|
+|[HashiCorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault)		|hashicorpvault |		|
 |[Jenkins](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jenkins)	|jenkins |		|
 |[JIRA](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jira)		|jira |		|
 |[{{site.data.keyword.keymanagementserviceshort}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-keyprotect)		|keyprotect |		|

@@ -1,9 +1,8 @@
 ---
 
 copyright:
-   years: 2021, 2022
-lastupdated: "2022-10-06"
-lasttested: "2021-05-13"
+   years: 2021, 2024
+lastupdated: "2024-04-12"
 
 keywords: Virtual Server Instance, code repositories, DevOps Insights, non-containerized, java application, vsi, gitops, toolchain, pipeline, Virtual Machine, vm
 
@@ -15,13 +14,7 @@ completion-time: 40m
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}
-{:tip: .tip}
-{:external: target="_blank" .external}
-{:step: data-tutorial-type='step'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Develop and deploy an application to a Virtual Machine
 {: #tutorial-cd-vsi}
@@ -31,7 +24,7 @@ completion-time: 40m
 This tutorial demonstrates how to set up a {{site.data.keyword.contdelivery_short}} toolchain and deliver a simple application (app) to a Virtual Machine. You can set up source control, and then build, test, and deploy the code to different deployment stages.
 {: shortdesc}
 
-By default, the toolchain uses a sample Maven-based Java Hello World app, but you can also bring your own app and link to it instead. This toolchain is configured with pipelines for continuous integration and continuous delivery with [Code Risk Analyzer (CRA)](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-configure-cra-repos), source control, issue tracking, and online editing.
+By default, the toolchain uses a sample Maven-based Java Hello World app, but you can also bring your own app and link to it instead. This toolchain is configured with pipelines for continuous integration and continuous delivery with [Code Risk Analyzer](/docs/code-risk-analyzer-cli-plugin?topic=code-risk-analyzer-cli-plugin-cra-cli-plugin), source control, issue tracking, and online editing.
 
 The application code is stored in the application source control repository (repo). The build and deploy scripts are stored in the pipeline source control repository. You can customize the build and deploy scripts to meet the development requirements for the app.
 
