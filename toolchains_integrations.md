@@ -519,28 +519,28 @@ If you are using the [{{site.data.keyword.contdelivery_short}} Toolchain API to 
 |Tool integration |Tool type ID |Financial services validated|
 |:----------|:----------|:-----|
 |[{{site.data.keyword.appconfig_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-app-configuration)		|appconfig |		|
-|[Artifactory](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-artifactory)		|artifactory |		|
-|[Bitbucket](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-bitbucket)		|bitbucketgit |		|
-|[{{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) 		|pipeline | ![Checkmark icon](../icons/checkmark-icon.svg) 		|
-|[{{site.data.keyword.deliverypipeline}} Private Worker](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-privateworker)			|private_worker |		|
-|[{{site.data.keyword.DRA_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-dra)		|draservicebroker | ![Checkmark icon](../icons/checkmark-icon.svg)			|
-|[{{site.data.keyword.en_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-integration)	|eventnotifications | ![Checkmark icon](../icons/checkmark-icon.svg)		|
-|[{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-grit)	|hostedgit |		|
-|[GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-github)		|githubconsolidated |		|
-|[GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-gitlab)		|gitlab |		|
+|[Artifactory](/docs/ContinuousDelivery?topic=ContinuousDelivery-artifactory)		|artifactory |		|
+|[Bitbucket](/docs/ContinuousDelivery?topic=ContinuousDelivery-bitbucket)		|bitbucketgit |		|
+|[{{site.data.keyword.deliverypipeline}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) 		|pipeline | ![Checkmark icon](../icons/checkmark-icon.svg) 		|
+|[{{site.data.keyword.deliverypipeline}} Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-privateworker)			|private_worker |		|
+|[{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-dra)		|draservicebroker | ![Checkmark icon](../icons/checkmark-icon.svg)			|
+|[{{site.data.keyword.en_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-integration)	|eventnotifications | ![Checkmark icon](../icons/checkmark-icon.svg)		|
+|[{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-grit)	|hostedgit |		|
+|[GitHub](/docs/ContinuousDelivery?topic=ContinuousDelivery-github)		|githubconsolidated |		|
+|[GitLab](/docs/ContinuousDelivery?topic=ContinuousDelivery-gitlab)		|gitlab |		|
 |[HashiCorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault)		|hashicorpvault |		|
-|[Jenkins](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jenkins)	|jenkins |		|
-|[JIRA](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jira)		|jira |		|
-|[{{site.data.keyword.keymanagementserviceshort}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-keyprotect)		|keyprotect |		|
-|[Nexus](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-nexus)			|nexus |		|
-|[Other Tool](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-othertool)			|customtool |		|
-|[PagerDuty](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pagerduty)			|pagerduty |		|
-|[Rational Team Concert](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-rationalteamconcert)		|rationalteamconcert |		|
-|[Sauce Labs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-saucelabs)		|saucelabs |		|
-|[Secrets Manager](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager)		|secretsmanager | ![Checkmark icon](../icons/checkmark-icon.svg)		|
-|[Security and Compliance Center](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-scc)		|security_compliance | ![Checkmark icon](../icons/checkmark-icon.svg)		|
-|[Slack](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-slack)		|slack |		|
-|[SonarQube](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-sonarqube)			|sonarqube |		|
+|[Jenkins](/docs/ContinuousDelivery?topic=ContinuousDelivery-jenkins)	|jenkins |		|
+|[JIRA](/docs/ContinuousDelivery?topic=ContinuousDelivery-jira)		|jira |		|
+|[{{site.data.keyword.keymanagementserviceshort}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-keyprotect)		|keyprotect |		|
+|[Nexus](/docs/ContinuousDelivery?topic=ContinuousDelivery-nexus)			|nexus |		|
+|[Other Tool](/docs/ContinuousDelivery?topic=ContinuousDelivery-othertool)			|customtool |		|
+|[PagerDuty](/docs/ContinuousDelivery?topic=ContinuousDelivery-pagerduty)			|pagerduty |		|
+|[Rational Team Concert](/docs/ContinuousDelivery?topic=ContinuousDelivery-rationalteamconcert)		|rationalteamconcert |		|
+|[Sauce Labs](/docs/ContinuousDelivery?topic=ContinuousDelivery-saucelabs)		|saucelabs |		|
+|[Secrets Manager](/docs/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager)		|secretsmanager | ![Checkmark icon](../icons/checkmark-icon.svg)		|
+|[Security and Compliance Center](/docs/ContinuousDelivery?topic=ContinuousDelivery-scc)		|security_compliance | ![Checkmark icon](../icons/checkmark-icon.svg)		|
+|[Slack](/docs/ContinuousDelivery?topic=ContinuousDelivery-slack)		|slack |		|
+|[SonarQube](/docs/ContinuousDelivery?topic=ContinuousDelivery-sonarqube)			|sonarqube |		|
 {: caption="Table 4. Tool integrations available for toolchains on {{site.data.keyword.cloud_notm}} Public" caption-side="top"}
 
 If you want to start developing with your source code on {{site.data.keyword.cloud_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
