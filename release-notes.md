@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-02-15"
+lastupdated: "2024-04-12"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -269,7 +269,7 @@ The Eclipse Orion {{site.data.keyword.webide}} feature in the {{site.data.keywor
 {: release-note}
 
 Private workers can now be run in stand-alone mode.
-:   [Using {{site.data.keyword.deliverypipeline}} Private Workers in stand-alone mode](/docs/ContinuousDelivery?topic=ContinuousDelivery-standalone-mode-private-workers).
+:   [Using {{site.data.keyword.deliverypipeline}} Private Workers in stand-alone mode](/docs/ContinuousDelivery?topic=ContinuousDelivery-external-properties).
 
 Private workers can now be managed on a Satellite cluster, providing easier management of workers on {{site.data.keyword.redhat_openshift_full}} clusters by using the Operator Lifecycle Manager (OLM) framework.
 :   [Installing {{site.data.keyword.deliverypipeline}} Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers#pw_install_prereqs).
@@ -415,7 +415,7 @@ New toolchain templates demonstrate release strategies
 DevSecOps Reference Implementation
 :   A complete SDLC following NIST Configuration Management controls that you can configure in a few clicks by using toolchain templates. The workflow will build, scan, test, and deploy your cloud-native applications while ensuring security and compliance goals are met and evidence is retained for any future audits. The workflow can be customized to leverage other enterprise tools or implement custom policies.
 
-    Read the [announcement](https://www.ibm.com/cloud/blog/announcements/devsecops-reference-implementation-for-audit-ready-compliance-across-development-teams){: external}.
+    Read the [announcement](https://www.ibm.com/blog/announcement/devsecops-reference-implementation-for-audit-ready-compliance-across-development-teams/){: external}.
 
 ## 24 May 2021
 {: #ContinuousDelivery-may2421}
@@ -424,7 +424,7 @@ DevSecOps Reference Implementation
 Code Risk Analyzer now scans Terraform
 :   Misconfiguration of infrastructure and cloud service dependencies can put enterprise applications and data at risk. Now, Code Risk Analyzer looks for these issues by scanning Terraform Infrastructure as Code (IaC) files.
 
-    Read the [announcement](https://www.ibm.com/cloud/blog/announcements/code-risk-analyzer-adds-terraform-scanning){: external}.
+    Read the [announcement](https://www.ibm.com/blog/announcement/code-risk-analyzer-adds-terraform-scanning/){: external}.
 
 ## 30 April 2021
 {: #ContinuousDelivery-apr3021}
@@ -514,7 +514,7 @@ New Code Risk Analyzer scans source code repositories for:
 
 {{site.data.keyword.deliverypipeline}} now has Tekton option.
 :   Tekton Pipelines is an open source project that you can use to configure and run continuous integration/continuous delivery (CI/CD) pipelines within a Kubernetes cluster. Pipelines are defined as Tekton resources in YAML, typically stored in a Git repository.
-:   Read the [announcement](https://www.ibm.com/cloud/blog/announcements/build-and-deliver-using-tekton-enabled-pipelines){: external}.
+:   Read the [announcement](https://www.ibm.com/blog/announcement/build-and-deliver-using-tekton-enabled-pipelines/){: external}.
 
 ## 2 October 2019
 {: #ContinuousDelivery-oct0219}
@@ -523,7 +523,7 @@ New Code Risk Analyzer scans source code repositories for:
 New DevOps tab in your IBM Cloud Kubernetes Service cluster details.
 :   Find all toolchains whose delivery pipelines deployed to that cluster
 :   Easily create a new DevOps toolchain
-:   Read the [announcement](https://www.ibm.com/cloud/blog/announcements/connecting-ibm-cloud-kubernetes-service-and-ibm-continuous-delivery){: external}.
+:   Read the [announcement](https://www.ibm.com/blog/announcement/connecting-ibm-cloud-kubernetes-service-and-ibm-continuous-delivery/){: external}.
 
 ## 1 October 2019
 {: #ContinuousDelivery-oct0119}
