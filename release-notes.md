@@ -81,7 +81,7 @@ The {{site.data.keyword.contdelivery_short}} toolchain API provides a new, beta 
 {{site.data.keyword.gitrepos}}
 :   Upgraded to [GitLab 16.0.8](https://about.gitlab.com/releases/2023/08/01/security-release-gitlab-16-2-2-released/){: external}.
 
-:   In GitLab 16.0, any personal, project, or group access token that does not have an expiration date will automatically have an expiration date set at one year. <https://docs.gitlab.com/ee/update/deprecations.html#non-expiring-access-tokens>{: external}.
+:   In GitLab 16.0, any personal, project, or [group access token that does not have an expiration date](https://docs.gitlab.com/ee/update/deprecations.html#non-expiring-access-tokens){: external} will automatically have an expiration date set at one year.
 
 ## 12 July 2023
 {: #ContinuousDelivery-july1223}
