@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2021, 2022
-lastupdated: "2022-10-27"
+   years: 2021, 2024
+lastupdated: "2024-04-12"
 
 keywords: deployment strategies, tekton, pipeline, toolchain, CD, CI, automate, automation, continuous delivery, continuous integration, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -333,4 +333,4 @@ If you want to remove the sample app that is running on Kubernetes, you must cle
 
 Get help from the {{site.data.keyword.contdelivery_full}} development teams by joining us on [Slack](https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/){: external}.
 
-For more support options, see [Getting help and support for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-gettinghelp).
+For more support options, see [Getting help and support for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-help-and-support).

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-07-10"
+  years: 2021, 2024
+lastupdated: "2024-04-12"
 
 keywords: tool integrations, IBM Cloud Public, IBM Secrets Manager
 
@@ -153,7 +153,7 @@ Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets
 ### Applying secrets
 {: #secretsmanager_apply_secrets_crn}
 
-After you configure the {{site.data.keyword.secrets-manager_short}} tool integration and [authorize your toolchain](#authorizing-your-toolchain-to-access-secrets) to access secrets in that account, you can use it to apply secrets anywhere that they are required by the toolchain. 
+After you configure the {{site.data.keyword.secrets-manager_short}} tool integration and [authorize your toolchain](#secretsmanager_authorize_secrets) to access secrets in that account, you can use it to apply secrets anywhere that they are required by the toolchain. 
 
 You can use either of the following methods to select a CRN secret for use in your toolchain:
 

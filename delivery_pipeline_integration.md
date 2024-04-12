@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-01-26"
+  years: 2015, 2024
+lastupdated: "2024-04-12"
 
 keywords: tool integrations, IBM Cloud Public, Delivery Pipeline
 subcollection: ContinuousDelivery
@@ -38,7 +38,7 @@ Configure {{site.data.keyword.deliverypipeline}} to automate the continuous buil
 
    If you want the pipeline to automatically run when a commit is pushed to your GitHub or Git repository (repo), follow these steps:
 
-   a. Configure GitHub or {{site.data.keyword.gitrepos}} for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub or Git repos that are associated with your toolchain. For instructions to configure GitHub, see the [GitHub](#github) section. For instructions to configure {{site.data.keyword.gitrepos}}, see the [{{site.data.keyword.gitrepos}}](#grit) section.
+   a. Configure GitHub or {{site.data.keyword.gitrepos}} for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub or Git repos that are associated with your toolchain. For instructions to configure GitHub, see the [GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-github) section. For instructions to configure {{site.data.keyword.gitrepos}}, see the [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-grit) section.
 
    b. Use a webhook. Without a webhook, you can run pipelines manually only. To use a webhook when you link to a GitHub or {{site.data.keyword.ghe_short}} repo, you need admin privileges. To link to a {{site.data.keyword.gitrepos}} repo, you need Master or Owner privileges.
 
@@ -47,7 +47,7 @@ Configure {{site.data.keyword.deliverypipeline}} to automate the continuous buil
 ## Configuring a Sauce Labs test job in your pipeline
 {: #config_saucelabs}
 
-Before you configure a Sauce Labs test job in your pipeline, you need a working pipeline that has stages to build and deploy your app. You must also configure Sauce Labs for your toolchain. For instructions about how to configure Sauce Labs, see the [Sauce Labs](#saucelabs) section.
+Before you configure a Sauce Labs test job in your pipeline, you need a working pipeline that has stages to build and deploy your app. You must also configure Sauce Labs for your toolchain. For instructions about how to configure Sauce Labs, see the [Sauce Labs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-saucelabs) section.
 
 Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test job:
 

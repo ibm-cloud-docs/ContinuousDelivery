@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2022
-lastupdated: "2022-06-29"
+   years: 2022, 2024
+lastupdated: "2024-04-12"
 
 keywords: Satellite, satellite, tekton, pipeline, toolchain, CD, automate, automation, continuous delivery, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -247,4 +247,4 @@ After your toolchain is set up and the {{site.data.keyword.deliverypipeline}} su
 
 Get help from the {{site.data.keyword.contdelivery_full}} development teams by joining us on [Slack](https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/){: external}.
 
-For more support options, see [Getting help and support for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-gettinghelp).
+For more support options, see [Getting help and support for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-help-and-support).

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2022, 2023
-lastupdated: "2023-04-12"
+   years: 2022, 2024
+lastupdated: "2024-04-12"
 
 keywords: deployment strategies, toolchain, CD, automate, automation, continuous delivery, continuous integration, DevOps, IBM Cloud
 
@@ -255,4 +255,4 @@ If you want to remove the sample app that is running on {{site.data.keyword.code
 
 Get help from the {{site.data.keyword.contdelivery_full}} development teams by joining us on [Slack](https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/){: external}.
 
-For more support options, see [Getting help and support for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-gettinghelp).
+For more support options, see [Getting help and support for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-help-and-support).
