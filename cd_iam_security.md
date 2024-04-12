@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2024
-lastupdated: "2024-48-12"
+  years: 2018, 2024
+lastupdated: "2024-04-12"
 
 keywords: Administrator Create, Administrator Update, Editor Update, service access roles, IAM, access policies
 
@@ -10,8 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}
-
+{{site.data.keyword.attribute-definition-list}}  
 
 # Managing user access for Continuous Delivery in resource groups
 {: #cd-iam-security}
