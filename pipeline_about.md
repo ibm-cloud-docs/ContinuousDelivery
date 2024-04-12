@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2023
-lastupdated: "2023-06-05"
+  years: 2016, 2024
+lastupdated: "2024-04-12"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline, Classic
 
@@ -22,7 +22,7 @@ subcollection: ContinuousDelivery
 You can work with both Classic and Tekton delivery pipelines by using the browser, or by using the [{{site.data.keyword.cloud_notm}} CLI Developer Tools (`ibmcloud dev`) commands](/docs/ContinuousDelivery?topic=cli-idt-cli). You can also work with Tekton delivery pipelines by using the [Tekton pipeline HTTP API and SDKs](https://cloud.ibm.com/apidocs/tekton-pipeline){: external}, or by using the [{{site.data.keyword.cloud_notm}} Terraform Provider](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup). For more information about Tekton delivery pipelines, see [Working with Tekton pipelines](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines#configure_tekton_pipeline).
 {: tip}
 
-Your permissions to view, modify, or run a pipeline are based on the access control for the toolchain that owns the pipeline. For more information about access control for toolchains, see [Managing access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
+Your permissions to view, modify, or run a pipeline are based on the access control for the toolchain that owns the pipeline. For more information about access control for toolchains, see [Managing access to toolchains in resource groups](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
 {: important}
 
 You can specify the scripts to run in many of the job types that are provided by the pipeline, giving you direct control over what is run by the job. These scripts run in a Docker image that contains a number of standard development tools, including tools that are required for interacting with the {{site.data.keyword.cloud_notm}} runtimes. For more information about what the standard Docker image contains, see [Preinstalled resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment#deliverypipeline_resources). If your job requires development tools that are not available in the standard image, or you need different versions of those tools, you can use a custom image. For more information about custom images, see [Working with custom Docker images](/docs/ContinuousDelivery?topic=ContinuousDelivery-custom_docker_images#custom_docker_images).

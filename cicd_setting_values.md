@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-03-25"
+  years: 2019, 2024
+lastupdated: "2024-04-12"
 
 keywords: devops insights, setting, values, cli, parameter values, consistent, other ci/cd tools, test, tests, install, app, risk
 
@@ -10,13 +10,7 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:pre: .pre}
+{{site.data.keyword.attribute-definition-list}}
 
 # Setting consistent parameter values
 {: #setting-values-cicd}
@@ -32,7 +26,7 @@ You can set consistent parameter values by using other continuous integration an
 
 Configure your CI/CD tool to build, test, and deploy. You must complete this step before you continue with the integration.
 
-You need an API key for access to the toolchain, and to log in by using the `ibmcloud` commandline interface (CLI). For more information about creating and managing API keys, see [Managing user API keys](/docs/services/account?topic=account-userapikey).
+You need an API key for access to the toolchain, and to log in by using the `ibmcloud` commandline interface (CLI). For more information about creating and managing API keys, see [Managing user API keys](/docs/account?topic=account-userapikey).
 
 
 ## Exporting your toolchain ID

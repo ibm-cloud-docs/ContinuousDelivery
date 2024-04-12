@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-01-30"
+  years: 2015, 2024
+lastupdated: "2024-04-12"
 
 keywords: tool integrations, IBM Cloud Public, Git Repos and Issue Tracking
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Configuring {{site.data.keyword.gitrepos}}
 {: #grit}
 
-The [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working) tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repositories (repos). You can have both local and remote copies of your repos. To learn more, see [{{site.data.keyword.gitrepos}}](https://us-south.git.cloud.ibm.com/help){: external}. 
+The [{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-git_working) tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repositories (repos). You can have both local and remote copies of your repos. To learn more, see [{{site.data.keyword.gitrepos}}](https://us-south.git.cloud.ibm.com/help){: external}. 
 {: shortdesc}
 
 If you are configuring {{site.data.keyword.gitrepos}} as you are creating the toolchain, follow these steps:    

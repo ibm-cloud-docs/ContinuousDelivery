@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-03-25"
+  years: 2019, 2024
+lastupdated: "2024-04-12"
 
 keywords: devops insights, publish, build, record, jenkins, test, tests, app, dashboard
 
@@ -10,15 +10,8 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Publishing a build record
 {: #publish-build-jenkins}
@@ -34,7 +27,7 @@ You can publish a build record by using Jenkins to integrate your projects with 
 
 You must have a toolchain. For more information, see [Creating toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started). 
 
-Add the Jenkins tool to your app's toolchain. For more information, see [Configure Jenkins](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jenkins). 
+Add the Jenkins tool to your app's toolchain. For more information, see [Configure Jenkins](/docs/ContinuousDelivery?topic=ContinuousDelivery-jenkins). 
 
 
 ## Publishing build records with Jenkins 
@@ -60,7 +53,7 @@ environment {
 ```
 {: codeblock}
 
-For more information about creating an API key, see [Managing user API keys](/docs/services/account?topic=account-userapikey).
+For more information about creating an API key, see [Managing user API keys](/docs/account?topic=account-userapikey).
 
 For more information about your toolchain ID, see [Identifying your toolchain ID](/docs/ContinuousDelivery?topic=ContinuousDelivery-aggregating-multiple-sources). 
 

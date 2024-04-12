@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-03-07"
+  years: 2019, 2024
+lastupdated: "2024-04-12"
 
 keywords: customer responsibilities, IBM responsibilities, terms and conditions, disaster recovery, toolchain backup
 
@@ -55,8 +55,8 @@ Identity and access management includes tasks such as authentication, authorizat
 
 | Task | IBM responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
-|Manage access to toolchains in resource groups and their associated IBM-hosted tools, except for {{site.data.keyword.gitrepos}}.| N/A  | Grant, revoke, and manage access to toolchains by using {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). For more information about access management, see [Managing user access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). |
-|Manage the {{site.data.keyword.contdelivery_short}} service's access to third-party tools that are integrated into toolchains. | N/A  | Add, update, or delete third-party tool integration configurations (including access credentials for tool integrations) in toolchains. For more information about working with tool integrations, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations). |
+|Manage access to toolchains in resource groups and their associated IBM-hosted tools, except for {{site.data.keyword.gitrepos}}.| N/A  | Grant, revoke, and manage access to toolchains by using {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). For more information about access management, see [Managing user access to toolchains in resource groups](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). |
+|Manage the {{site.data.keyword.contdelivery_short}} service's access to third-party tools that are integrated into toolchains. | N/A  | Add, update, or delete third-party tool integration configurations (including access credentials for tool integrations) in toolchains. For more information about working with tool integrations, see [Configuring tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations). |
 |Manage access to repos in {{site.data.keyword.gitrepos}}. | N/A  | From the **Settings** > **Members** page in the {{site.data.keyword.gitrepos}} dashboard, manage project members and role permissions. |
 |Manage all other access to third-party tools that are integrated with {{site.data.keyword.contdelivery_short}}. | N/A  | Manage access by using the capabilities that are provided by the third-party tools.  |
 {: caption="Table 3. Responsibilities for identity and access management" caption-side="top"}
@@ -68,7 +68,7 @@ Security and regulation compliance includes tasks such as security controls impl
 
 | Task | IBM responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
-|Meet security and compliance objectives| Provide a secure {{site.data.keyword.contdelivery_short}} service that complies with key standards. For more information about data security, see [How do I know that my data is safe?](/docs/overview/terms-of-use?topic=overview-security)  | Secure your workloads and data. Integrate tools into your toolchains that satisfy your security and compliance requirements. To learn more about securing your cloud apps, see [Security to safeguard and monitor your cloud apps](https://www.ibm.com/cloud/architecture/architectures/application-security-arch){: external}. To learn more about securing your data while you are using the {{site.data.keyword.contdelivery_short}} service, see [Securing your data](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security). To learn more about regulatory compliance with the {{site.data.keyword.contdelivery_short}} service, see [Understanding tool integrations with {{site.data.keyword.cloud_notm}} for Financial Services](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations). |
+|Meet security and compliance objectives| Provide a secure {{site.data.keyword.contdelivery_short}} service that complies with key standards. For more information about data security, see [How do I know that my data is safe?](/docs/overview/terms-of-use?topic=overview-security)  | Secure your workloads and data. Integrate tools into your toolchains that satisfy your security and compliance requirements. To learn more about securing your cloud apps, see [Security to safeguard and monitor your cloud apps](https://www.ibm.com/cloud/architecture/architectures/application-security-arch){: external}. To learn more about securing your data while you are using the {{site.data.keyword.contdelivery_short}} service, see [Securing your data](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security). To learn more about regulatory compliance with the {{site.data.keyword.contdelivery_short}} service, see [Understanding tool integrations with {{site.data.keyword.cloud_notm}} for Financial Services](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations). |
 {: caption="Table 4. Responsibilities for security and regulation compliance" caption-side="top"}
 
 ## Disaster recovery

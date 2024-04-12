@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-07-10"
+  years: 2015, 2024
+lastupdated: "2024-04-12"
 
 keywords: tool integrations, IBM Cloud Public, Key Protect
 
@@ -20,7 +20,7 @@ subcollection: ContinuousDelivery
 
 A *secret* is anything that provides access to sensitive information, such as an [API key](/docs/account?topic=account-manapikey). If you store secrets as standard keys in {{site.data.keyword.keymanagementserviceshort}}, you can use this tool integration to access secrets wherever they are needed in the toolchain workflow. To learn more about standard keys in {{site.data.keyword.keymanagementserviceshort}}, see [Key types](/docs/key-protect?topic=key-protect-envelope-encryption#key-types).
 
-Before you configure a {{site.data.keyword.keymanagementserviceshort}} tool integration, make sure that you have an instance of the {{site.data.keyword.keymanagementserviceshort}} service provisioned in the region and resource group that you want to create the tool integration in. In certain scenarios, a {{site.data.keyword.keymanagementserviceshort}} service instance can be automatically generated. For example, if you are minting a new API key and choose to store it as a secret for later use, you automatically generate the {{site.data.keyword.keymanagementserviceshort}} service instance. For instructions to provision an instance of the {{site.data.keyword.keymanagementserviceshort}} service, see [Provisioning the service](/docs/services/key-protect?topic=key-protect-provision).
+Before you configure a {{site.data.keyword.keymanagementserviceshort}} tool integration, make sure that you have an instance of the {{site.data.keyword.keymanagementserviceshort}} service provisioned in the region and resource group that you want to create the tool integration in. In certain scenarios, a {{site.data.keyword.keymanagementserviceshort}} service instance can be automatically generated. For example, if you are minting a new API key and choose to store it as a secret for later use, you automatically generate the {{site.data.keyword.keymanagementserviceshort}} service instance. For instructions to provision an instance of the {{site.data.keyword.keymanagementserviceshort}} service, see [Provisioning the service](/docs/key-protect?topic=key-protect-provision).
 {: important}
 
 Configure {{site.data.keyword.keymanagementserviceshort}} to securely manage secrets that are part of your toolchain:
@@ -118,5 +118,5 @@ You must specify the `tool_type_id` property in the request body with the `keypr
 ## Learn more about {{site.data.keyword.keymanagementserviceshort}}
 {: #keyprotect_learn_more}
 
-To learn more about {{site.data.keyword.keymanagementserviceshort}}, see [Service overview](/docs/services/key-protect?topic=key-protect-about).
+To learn more about {{site.data.keyword.keymanagementserviceshort}}, see [Service overview](/docs/key-protect?topic=key-protect-about).
 

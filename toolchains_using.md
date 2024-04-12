@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-02-16"
+  years: 2015, 2024
+lastupdated: "2024-04-12"
 
 keywords: user management function, toolchains, tool integrations, user access
 
@@ -21,9 +21,9 @@ Open toolchains are available on {{site.data.keyword.cloud}}. You can use a tool
 ## Managing access to toolchains
 {: #managing_access_resource_groups}
 
-You can use the Identity and Access Management (IAM) service to manage user access to toolchains in resource groups. For more information about managing access control with IAM, see [Managing user access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
+You can use the Identity and Access Management (IAM) service to manage user access to toolchains in resource groups. For more information about managing access control with IAM, see [Managing user access to toolchains in resource groups](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
 
-Users with access to toolchains might be counted as authorized users of the {{site.data.keyword.contdelivery_full}} service. For more information about how authorized users are counted, see [Plan limitations and usage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
+Users with access to toolchains might be counted as authorized users of the {{site.data.keyword.contdelivery_full}} service. For more information about how authorized users are counted, see [Plan limitations and usage](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 ## Organizing toolchains
 {: #organizing_toolchains}

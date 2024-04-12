@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-06-03"
+  years: 2019, 2024
+lastupdated: "2024-04-12"
 
 keywords: devops insights, setting, values, cli, parameter values, consistent, test, tests, install, app, dashboard, risk, build.properties
 
@@ -10,13 +10,8 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:pre: .pre}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Setting consistent parameter values
 {: #setting-values-cli}
@@ -30,9 +25,9 @@ As part of integrating {{site.data.keyword.deliverypipelinelong}} with {{site.da
 ## Before you begin
 {: #prereq-values-cli}
 
-Configure {{site.data.keyword.deliverypipeline}} in your toolchain to build, test, and deploy. You must complete this step before you continue with the integration. For more information, see [Configuring {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline).
+Configure {{site.data.keyword.deliverypipeline}} in your toolchain to build, test, and deploy. You must complete this step before you continue with the integration. For more information, see [Configuring {{site.data.keyword.deliverypipeline}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline).
 
-You need an API key to integrate with {{site.data.keyword.DRA_short}}. This API key has access to the toolchain, and is used to log in with the {{site.data.keyword.cloud}} command line interface (CLI). For more information, see [Managing user API keys](/docs/services/account?topic=account-userapikey).
+You need an API key to integrate with {{site.data.keyword.DRA_short}}. This API key has access to the toolchain, and is used to log in with the {{site.data.keyword.cloud}} command line interface (CLI). For more information, see [Managing user API keys](/docs/account?topic=account-userapikey).
 
 Install the {{site.data.keyword.cloud_notm}} CLI. For more information, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI}}](/docs/cli?topic=cli-getting-started).
 
