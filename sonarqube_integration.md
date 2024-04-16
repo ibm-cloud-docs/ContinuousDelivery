@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-25"
+  years: 2015, 2024
+lastupdated: "2024-04-16"
 
 keywords: tool integrations, IBM Cloud Public, Sonarqube
 
@@ -86,12 +86,12 @@ If you use the SonarQube instance that the pipeline created, you can update the 
 
 1. Specify which quality gate you want to associate with the project. New scans are evaluated by this quality gate and evidence is created by the quality gate's results.
 
-To learn more about SonarQube, see [SonarQube Documentation](https://docs.sonarqube.org/latest/){: external}.
+To learn more about SonarQube, see [SonarQube Documentation](https://docs.sonarsource.com/sonarqube/latest/){: external}.
 
 ### Using your own configuration file
 {: #sonarqube-config-file}
 
-You can modify the default configuration without using your own SonarQube instance. Create a `sonar-project.properties` file in the repo that you want to created the configuration file in. If our script detects an existing `configuration sonar-project.properties` file in the repo, it uses that file instead of the default file. For more information about possible analysis parameters in the configuration file, see [Analysis Parameters](https://docs.sonarqube.org/latest/analysis/analysis-parameters/){: external} here. 
+You can modify the default configuration without using your own SonarQube instance. Create a `sonar-project.properties` file in the repo that you want to created the configuration file in. If our script detects an existing `configuration sonar-project.properties` file in the repo, it uses that file instead of the default file. For more information about possible analysis parameters in the configuration file, see [Analysis Parameters](https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/analysis-parameters/){: external} here. 
 
 Make sure that you add the correct login credentials and host URL to the configuration file.
 {: important}
@@ -118,7 +118,3 @@ You must specify the `tool_type_id` property in the request body with the `sonar
 | user_password | optional, updatable | Password | user_password | The password or token to authenticate with the SonarQube server. You can use a toolchain secrets reference for this parameter. For more information about secrets references, see [Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
 {: caption="Table 1. SonarQube tool integration parameters" caption-side="bottom"}
 
-## Learn more about SonarQube
-{: #sonarqube-learn-more}
-
-To learn more about SonarQube, see [Integrate your SonarQube analysis into your toolchain](https://www.ibm.com/blogs/cloud-archive/2017/06/integrate-sonarqube-analysis-into-your-toolchain/){: external}. 

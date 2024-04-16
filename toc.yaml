@@ -216,7 +216,7 @@ toc:
           - git_subnet_ranges.md
       - link:
           label: Using Jenkins to integrate DevOps Insights
-          href: https://wiki.jenkins.io/display/JENKINS/IBM+Cloud+DevOps+Plugin
+          href: https://plugins.jenkins.io/ibm-cloud-devops
       - topicgroup:
           label: Command reference
           topics:

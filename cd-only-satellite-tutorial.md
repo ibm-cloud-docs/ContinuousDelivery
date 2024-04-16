@@ -2,7 +2,7 @@
 
 copyright:
    years: 2022, 2024
-lastupdated: "2024-04-12"
+lastupdated: "2024-04-16"
 
 keywords: Satellite, satellite, tekton, pipeline, toolchain, CD, automate, automation, continuous delivery, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -174,7 +174,7 @@ If the API key has the required access, the following fields automatically load 
    You can immediately save the generated API key to an existing secrets vault of your choice.
    {: tip}
 
-* **Cluster namespace:** Specify a name for the [cluster namespace](https://docs.openshift.com/online/pro/dev_guide/projects.html#dev-guide-projects){: external} that you want to deploy the app to.
+* **Cluster namespace:** Specify a name for the [cluster namespace](https://access.redhat.com/support/policy/updates/openshift/online#dev-guide-projects){: external} that you want to deploy the app to.
 
 * **Branch:** Specify the Git branch of your source repo.
 

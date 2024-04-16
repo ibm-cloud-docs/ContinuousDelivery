@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-12-05"
+  years: 2015, 2024
+lastupdated: "2024-04-16"
 
 keywords: tool integrations, IBM Cloud Public, PagerDuty
 
@@ -35,7 +35,7 @@ Configure PagerDuty to send notifications when pipeline stage failures occur so 
 
 1. If you want to integrate PagerDuty at the account level by using an API key, click **Account**:
 
-   a. Type the API access key for your PagerDuty account. If you don't have a PagerDuty account, [register for one](https://www.pagerduty.com/sign-up/){: external}. For instructions to find the key, see [Generating an API Key](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: external}.
+   a. Type the API access key for your PagerDuty account. If you don't have a PagerDuty account, [register for one](https://www.pagerduty.com/sign-up/){: external}. For instructions to find the key, see [Generating an API Key](https://support.pagerduty.com/docs/api-access-keys#section-generating-an-api-key){: external}.
 
    b. Type the name of your PagerDuty service.
 
