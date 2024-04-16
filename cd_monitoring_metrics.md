@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-08-10"
+  years: 2021, 2024
+lastupdated: "2024-04-16"
 
 keywords: IBM Cloud, monitoring, supertenant
 
@@ -10,15 +10,8 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:download: .download}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Monitoring metrics for {{site.data.keyword.contdelivery_short}}
 {: #cd-monitor-sysdig}
@@ -90,10 +83,10 @@ Complete the following steps to launch the Monitoring web UI from the {{site.dat
 
 Complete the following steps to launch the Monitoring web UI from the **Observability** page:
 
-1. [Launch the Monitoring web UI](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-launch).
-1. Select **DASHBOARDS**.
-1. In the **Default Dashboards** section, expand **IBM**.
-1. Choose the {{site.data.keyword.contdelivery_short}} dashboard from the list.
+1. Log in to {{site.data.keyword.cloud_notm}}.
+1. [Launch the Monitoring UI](/docs/monitoring?topic=monitoring-launch#launch_step2).
+1. Click **Observability** and select **Monitoring**.
+1. From the list of instances that are available on {{site.data.keyword.cloud_notm}}, select the {{site.data.keyword.contdelivery_short}} instance that you want to monitor. Then, click **Open Dashboard**.
 
 To monitor a {{site.data.keyword.contdelivery_short}} instance, change the scope or make a copy of the Default dashboard.
 {: tip}
