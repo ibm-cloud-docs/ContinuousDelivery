@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-03-15"
+  years: 2015, 2024
+lastupdated: "2024-04-15"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, authentication, personal access token, SSH key
 
@@ -28,7 +28,7 @@ Both GitHub and the Git command line are accessible alternatives to GitLab.
 Don't store regulated data in files or issues within Git repos. The procedures for regulated data are currently not in place.
 {: tip}
 
-The [{{site.data.keyword.gitrepos}} tool integration](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-grit) supports teams to manage code and collaborate in many ways:
+The [{{site.data.keyword.gitrepos}} tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-grit) supports teams to manage code and collaborate in many ways:
 
 * Manage Git repos through fine-grained access controls that keep code secure
 * Review code and enhance collaboration through merge requests
@@ -244,7 +244,7 @@ fi
 ### Configuring your firewall to allow Git webhook messages
 {: #git_webhook_firewall}
 
-You can update your firewall configuration to allow webhook messages from {{site.data.keyword.gitrepos}} to reach endpoints that are behind the firewall. To allow Git webhook messages, open traffic to the [subnet ranges](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git-subnet-ranges) for your specific region.
+You can update your firewall configuration to allow webhook messages from {{site.data.keyword.gitrepos}} to reach endpoints that are behind the firewall. To allow Git webhook messages, open traffic to the [subnet ranges](/docs/ContinuousDelivery?topic=ContinuousDelivery-git-subnet-ranges) for your specific region.
 
 
 ### Updating your display name

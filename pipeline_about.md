@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-04-12"
+lastupdated: "2024-04-15"
 
 keywords: run jobs, sequences of stages, job types, Delivery Pipeline, Classic
 
@@ -19,7 +19,7 @@ subcollection: ContinuousDelivery
 {{site.data.keyword.contdelivery_full}} includes the Classic Delivery Pipeline to build, test, and deploy in a repeatable way with minimal human intervention. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
 {: shortdesc}
 
-You can work with both Classic and Tekton delivery pipelines by using the browser, or by using the [{{site.data.keyword.cloud_notm}} CLI Developer Tools (`ibmcloud dev`) commands](/docs/ContinuousDelivery?topic=cli-idt-cli). You can also work with Tekton delivery pipelines by using the [Tekton pipeline HTTP API and SDKs](https://cloud.ibm.com/apidocs/tekton-pipeline){: external}, or by using the [{{site.data.keyword.cloud_notm}} Terraform Provider](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup). For more information about Tekton delivery pipelines, see [Working with Tekton pipelines](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines#configure_tekton_pipeline).
+You can work with both Classic and Tekton delivery pipelines by using the browser, or by using the [{{site.data.keyword.cloud_notm}} CLI Developer Tools (`ibmcloud dev`) commands](/docs/cli?topic=cli-idt-cli). You can also work with Tekton delivery pipelines by using the [Tekton pipeline HTTP API and SDKs](https://cloud.ibm.com/apidocs/tekton-pipeline){: external}, or by using the [{{site.data.keyword.cloud_notm}} Terraform Provider](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup). For more information about Tekton delivery pipelines, see [Working with Tekton pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines#configure_tekton_pipeline).
 {: tip}
 
 Your permissions to view, modify, or run a pipeline are based on the access control for the toolchain that owns the pipeline. For more information about access control for toolchains, see [Managing access to toolchains in resource groups](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
@@ -164,7 +164,7 @@ If you need to use the configuration from a deprecated job type, use one of the 
 ### API keys
 {: #api_keys}
 
-Some of the standard pipeline jobs use {{site.data.keyword.cloud_notm}} API keys to access services, such as deploying to Kubernetes. The [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](/docs/services/account?topic=account-iamoverview) service provides two types of API keys:
+Some of the standard pipeline jobs use {{site.data.keyword.cloud_notm}} API keys to access services, such as deploying to Kubernetes. The [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](/docs/account?topic=account-iamoverview) service provides two types of API keys:
 
 * **user API keys**: These API keys provide full access to all of the services and resources that the user has access to.
 * **service API keys**: You can configure service API keys to provide specific access to various services and resources.
@@ -206,7 +206,7 @@ After a job runs, the container that was created for it is discarded. The result
 Jobs can run for up to 60 minutes. When jobs exceed that limit, they fail. If a job is exceeding the limit, break it into multiple jobs. For example, if a job performs three tasks, you might break it into three jobs: one for each task.
 {: tip}
 
-To learn how to add a job to a stage, see [Adding a job to a stage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job).
+To learn how to add a job to a stage, see [Adding a job to a stage](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy#deliverypipeline_add_job).
 
 ### Build jobs
 {: #build_jobs}
@@ -237,7 +237,7 @@ If your tests produce result files in JUnit XML format, a report that is based o
 ## Environment properties (Environment variables)
 {: #environment_properties}
 
-A set of predefined environment properties provides access to information about the job's execution environment. For a complete list of the predefined environment properties, see [Environment properties and resources](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment).
+A set of predefined environment properties provides access to information about the job's execution environment. For a complete list of the predefined environment properties, see [Environment properties and resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_environment).
 
 You can also define your own environment properties. For example, you might define an `API_KEY` property that passes an API key that is used to access {{site.data.keyword.Bluemix_notm}} resources by all scripts in the pipeline.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-12"
+lastupdated: "2024-04-15"
 
 keywords: user management function, toolchains, tool integrations, user access
 
@@ -88,7 +88,7 @@ When you delete a GitHub or {{site.data.keyword.gitrepos}} tool integration, the
    ```
    {: pre}
 
-3. Delete a toolchain by running the [`ibmcloud dev toolchain-delete`](/docs/ContinuousDelivery?topic=cli-idt-cli#toolchain-delete) command.
+3. Delete a toolchain by running the [`ibmcloud dev toolchain-delete`](/docs/cli?topic=cli-idt-cli#toolchain-delete) command.
 
    ```sh
    ibmcloud dev toolchain-delete TOOLCHAIN-NAME

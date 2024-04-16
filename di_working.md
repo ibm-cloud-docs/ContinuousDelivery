@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2023
-lastupdated: "2023-06-05"
+  years: 2016, 2024
+lastupdated: "2024-04-15"
 
 keywords: code quality, risk management, interactions of your team, devops insights, getting started, devops, insights, tutorial, code coverage, test, tests, gate, gate failing, verification, install, app, dashboard
 
@@ -25,7 +25,7 @@ With {{site.data.keyword.DRA_short}}, you can maintain and improve the quality o
 ## Before you begin
 {: #prereq-devops-insights}
 
-Authorize the use of GitHub repos. For more information, see [Authenticating with Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication). 
+Authorize the use of GitHub repos. For more information, see [Authenticating with Git Repos and Issue Tracking](/docs/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication). 
 
 
 ## Step 1. Add the toolchain by using a template
@@ -51,7 +51,7 @@ You run builds to see data within {{site.data.keyword.DRA_short}}. When you crea
 
 Click the **{{site.data.keyword.deliverypipeline}}** tile to view the build process. The process might take several minutes to finish. When the build stage completes, continue to step 3. 
 
-For more information about pipelines, see [{{site.data.keyword.deliverypipeline}} overview](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_about).
+For more information about pipelines, see [{{site.data.keyword.deliverypipeline}} overview](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_about#deliverypipeline_about).
 
 
 ## Step 3. View the data analyzed by {{site.data.keyword.DRA_short}}

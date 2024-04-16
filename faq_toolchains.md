@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-25"
+  years: 2015, 2024
+lastupdated: "2024-04-15"
 
 keywords: tool integrations, error message, Lite plan, toolchains, resource groups, IBM Cloud
 
@@ -24,7 +24,7 @@ Get answers to frequently asked questions about using toolchains.
 {: faq}
 {: support}
 
-{{site.data.keyword.contdelivery_short}} offers two plans: Lite and Professional. If you have the {{site.data.keyword.contdelivery_short}} Lite plan, you can use toolchains for free, up to the limits of the plan. The error message indicates that you exceeded one or more limits of the Lite plan. For example, you might exceed the plan if you have too many authorized users who are associated with the {{site.data.keyword.contdelivery_short}} service instance, or if you ran the maximum number of {{site.data.keyword.deliverypipeline}} jobs. For more information about the terms of your plan, see [Plan limitations and usage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
+{{site.data.keyword.contdelivery_short}} offers two plans: Lite and Professional. If you have the {{site.data.keyword.contdelivery_short}} Lite plan, you can use toolchains for free, up to the limits of the plan. The error message indicates that you exceeded one or more limits of the Lite plan. For example, you might exceed the plan if you have too many authorized users who are associated with the {{site.data.keyword.contdelivery_short}} service instance, or if you ran the maximum number of {{site.data.keyword.deliverypipeline}} jobs. For more information about the terms of your plan, see [Plan limitations and usage](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 
 ## I created a toolchain, why does the Toolchains page show that a Continuous Delivery service is required?
@@ -32,7 +32,7 @@ Get answers to frequently asked questions about using toolchains.
 {: faq}
 {: support}
 
-The terms of the plan for the {{site.data.keyword.contdelivery_short}} service instance that is in the same resource group as the toolchain manages the use of some of the tool integrations ({{site.data.keyword.deliverypipeline}} and {{site.data.keyword.gitrepos}}) that are contained in the service. The error message indicates that the resource group doesn't contain the required instance of the {{site.data.keyword.contdelivery_short}} service. For more information about the terms of your plan, see [Plan limitations and usage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
+The terms of the plan for the {{site.data.keyword.contdelivery_short}} service instance that is in the same resource group as the toolchain manages the use of some of the tool integrations ({{site.data.keyword.deliverypipeline}} and {{site.data.keyword.gitrepos}}) that are contained in the service. The error message indicates that the resource group doesn't contain the required instance of the {{site.data.keyword.contdelivery_short}} service. For more information about the terms of your plan, see [Plan limitations and usage](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 
 ## Can I create a toolchain instance from a template programmatically?
