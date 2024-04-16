@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2015, 2023
-lastupdated: "2023-04-28"
+  years: 2015, 2024
+lastupdated: "2024-04-16"
 
 keywords: set of tool integrations, toolchains, templates, collective power of a toolchain, IBM Cloud, IAM
 
@@ -32,7 +32,7 @@ To see which toolchains and tool integrations are available, see [Toolchain avai
 {: #creating_a_toolchain_from_a_template}
 {: ui}
 
-You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes a specific set of tool integrations. Depending on the template that you use, you can create a toolchain that has a specific set of tool integrations or an empty toolchain that you can add tool integrations to. Learn more about how to use the templates from the [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/cloud/architecture/toolchains){: external}.
+You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes a specific set of tool integrations. Depending on the template that you use, you can create a toolchain that has a specific set of tool integrations or an empty toolchain that you can add tool integrations to. Learn more about how to use the templates from the [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/architectures/hybrid){: external}.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
@@ -508,7 +508,3 @@ For more information about listing toolchains with the API and getting a toolcha
    ```
    {: pre}
 
-## Take a tutorial: Using toolchains
-{: #toolchain_tutorials}
-
-Check out the [Add a toolchain to an app](https://www.ibm.com/cloud/architecture/tutorials/add-a-toolchain-to-an-app?task=2){: external} tutorial on the [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/cloud/architecture/toolchains){: external}.

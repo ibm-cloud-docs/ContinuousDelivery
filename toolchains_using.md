@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-15"
+lastupdated: "2024-04-16"
 
 keywords: user management function, toolchains, tool integrations, user access
 
@@ -228,7 +228,3 @@ The following table lists and describes each of the variables that are used in t
    ```
    {: pre}
 
-## Take a tutorial: Using toolchains
-{: #toolchain-tutorial}
-
-Try the [Add a toolchain to an app](https://www.ibm.com/cloud/architecture/tutorials/add-a-toolchain-to-an-app?task=2){: external} tutorial on the [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/garage/method){: external}.

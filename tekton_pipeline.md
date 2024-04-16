@@ -63,7 +63,7 @@ Before you add and run a Tekton pipeline, make sure that you have the following 
 
 * [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli) installed locally.
 * [kubectl](https://kubernetes.io/docs/tasks/tools/){: external} installed locally.
-* A Kubernetes cluster (version 1.22 or higher) such as an [{{site.data.keyword.containerlong}} cluster](https://cloud.ibm.com/kubernetes/catalog/cluster){: external}.
+* A Kubernetes cluster (version 1.22 or higher) such as an [{{site.data.keyword.containerlong}} cluster](https://cloud.ibm.com/kubernetes/catalog/about){: external}.
 
 The toolchain and the {{site.data.keyword.deliverypipeline}} Private Worker tool integration must be in the same region.
 {: important}
