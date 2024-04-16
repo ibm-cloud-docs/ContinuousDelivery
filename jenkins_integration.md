@@ -63,7 +63,3 @@ You must specify the `tool_type_id` property in the request body with the `jenki
 | webhook_url | optional, updatable | String | webhook_url | The webhook to use in your Jenkins jobs to send notifications to other tools in your toolchain. |
 {: caption="Table 1. Jenkins tool integration parameters" caption-side="bottom"}
 
-## Learn more about Jenkins
-{: #learn_jenkins}
-
-To learn more about Jenkins, see the [Jenkins article](https://www.ibm.com/garage/method/practices/code/tool_jenkins/){: external} on the IBM Cloud Garage Method.

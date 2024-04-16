@@ -8,7 +8,7 @@ toc:
     audience: service
     href: /docs/ContinuousDelivery
     console-page: "/devops/toolchains"
-    product-page: "https://www.ibm.com/cloud/continuous-delivery"
+    product-page: "https://www.ibm.com/products/continuous-delivery"
     path: ContinuousDelivery
     label: Continuous Delivery
   entries: 
@@ -18,10 +18,10 @@ toc:
       - index.md
       - link:
           label: What is continuous delivery?
-          href: https://www.ibm.com/cloud/learn/continuous-delivery
+          href: https://www.ibm.com/topics/continuous-delivery
       - link:
           label: Why IBM Cloud Continuous Delivery?
-          href: https://www.ibm.com/cloud/continuous-delivery    
+          href: https://www.ibm.com/products/continuous-delivery    
       - cd_about.md
       - devops_intro.md
       - garage_method.md
@@ -234,7 +234,7 @@ toc:
           topics:
           - link:
               label: IBM Cloud Garage Method
-              href: https://www.ibm.com/garage/method
+              href: https://www.ibm.com/garage
   - navgroup:
       id: help
       topics: 

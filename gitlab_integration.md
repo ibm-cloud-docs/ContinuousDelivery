@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-05-31"
+  years: 2015, 2024
+lastupdated: "2024-04-16"
 
 keywords: tool integrations, IBM Cloud Public, GitLab
 
@@ -89,7 +89,3 @@ You must specify the `tool_type_id` property in the request body with the `gitla
 | type | required, immutable | String | type | The operation to perform to initialize the new tool integration. Use `new` to create a Git repo, `clone` to clone an existing repo into a new Git repo, `fork` to fork an existing Git repo, or `link` to link to an existing Git repo. |
 {: caption="Table 1. GitLab tool integration parameters" caption-side="bottom"}
 
-## Learn more about GitLab
-{: #learn_gitlab}
-
-To learn more about GitLab, see the [GitLab article](https://www.ibm.com/garage/method/practices/code/tool_gitlab/){: external} on the IBM Cloud Garage Method.

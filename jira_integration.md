@@ -74,8 +74,3 @@ You must specify the `tool_type_id` property in the request body with the `jira`
 | project_key | required, updatable | String | project_key | The project key of your JIRA project. |
 | username | optional, updatable | String | username | The user name for your JIRA account. Optional for public projects. |
 {: caption="Table 1. JIRA tool integration parameters" caption-side="bottom"}
-
-## Learn more about JIRA
-{: #learn_jira}
-
-To learn more about JIRA, see the [JIRA article](https://www.ibm.com/garage/method/practices/code/tool_jira){: external} on the IBM Cloud Garage Method.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-12"
+lastupdated: "2024-04-16"
 
 keywords: tool integrations, IBM Cloud Public, Git Repos and Issue Tracking
 
@@ -92,8 +92,3 @@ You must specify the `tool_type_id` property in the request body with the `hoste
 | token_url | optional, updatable | String | token_url | The token URL that is used to authorize with the {{site.data.keyword.gitrepos}} server. |
 | type | required, immutable | String | type | The operation to perform to initialize the new tool integration. Use `new` to create a Git repo, `clone` to clone an existing Git repo into a new Git repo, `fork` to fork an existing Git repo, or `link` to link to an existing Git repo. |
 {: caption="Table 1. {{site.data.keyword.gitrepos}} tool integration parameters" caption-side="bottom"}
-
-## Learn more about {{site.data.keyword.gitrepos}}
-{: #learn_grit}
-
-To learn more about {{site.data.keyword.gitrepos}}, see the [{{site.data.keyword.gitrepos}}: Social coding hosted by IBM article](https://www.ibm.com/garage/method/practices/code/tool_git_repos_and_issue_tracking/){: external} on the {{site.data.keyword.cloud_notm}} Garage Method.

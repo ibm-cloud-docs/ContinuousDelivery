@@ -66,8 +66,3 @@ You must specify the `tool_type_id` property in the request body with the `pager
 | service_key | optional, updatable | Password | service_key | The PagerDuty service tool integration key. You can find or create this key in the Integrations section of the PagerDuty service page. |
 | service_url | optional, updatable | String | service_url | The URL of the PagerDuty service to post alerts to. |
 {: caption="Table 1. PagerDuty tool integration parameters" caption-side="bottom"}
-
-## Learn more about PagerDuty
-{: #learn_pagerduty}
-
-To learn more about PagerDuty, see the [PagerDuty article](https://www.ibm.com/garage/method/practices/manage/tool_pagerduty/){: external} on the {{site.data.keyword.cloud_notm}} Garage Method.

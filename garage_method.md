@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-01-26"
+  years: 2017, 2024
+lastupdated: "2024-04-16"
 
 keywords: continuous delivery practices, DevOps practices, IBM Cloud Garage Method, learning resources, DevOps Insights
 
@@ -28,9 +28,9 @@ To learn how to adopt a continuous delivery approach in your organization, use t
 
 The Cloud Garage Method site contains articles that describe continuous delivery at a high level.
 
-[{{site.data.keyword.contdelivery_short}}](https://www.ibm.com/garage/method/practices/deliver/practice_continuous_delivery/){: external} is a practice by which you build and deploy your software so that it can be released into production at any time. One of the hallmarks of computer science is the shortening of various cycle times in the development and operations process.
+{{site.data.keyword.contdelivery_short}} is a practice by which you build and deploy your software so that it can be released into production at any time. One of the hallmarks of computer science is the shortening of various cycle times in the development and operations process.
 
-With [Delivery Pipeline](https://www.ibm.com/garage/method/practices/deliver/tool_delivery_pipeline/){: external}, which is included in {{site.data.keyword.contdelivery_short}}, you can achieve continuous delivery in a consistent and reliable way by dividing the software delivery process into stages. The goal is for code to progress through each stage automatically with minimal human intervention. With the [practice of using Delivery Pipelines](https://www.ibm.com/garage/method/practices/deliver/practice_delivery_pipeline/){: external}, you can automate the continuous deployment of your project.
+With Delivery Pipeline, which is included in {{site.data.keyword.contdelivery_short}}, you can achieve continuous delivery in a consistent and reliable way by dividing the software delivery process into stages. The goal is for code to progress through each stage automatically with minimal human intervention. With the practice of using Delivery Pipelines, you can automate the continuous deployment of your project.
 
 ## Continuous delivery tutorials
 {: #gm_cd_tutorials}
