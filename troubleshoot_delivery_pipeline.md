@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-03-22"
+lastupdated: "2024-04-16"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -118,7 +118,7 @@ If you are running kubectl v1.14.2 from a 1.0 pipeline base image, the sudo opti
    mkdir ~/.bin && export PATH=~/.bin:$PATH && mv ./kubectl ~/.bin/kubectl 
 ```
 
-For more information about accessing the exact version of kubectl that you require, see [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux){: external}.
+For more information about accessing the exact version of kubectl that you require, see [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/#install-kubectl-on-linux){: external}.
 {: tip}
 
 ## I tried to run a pipeline, why am I getting a 403 error from the {{site.data.keyword.registrylong_notm}}? 

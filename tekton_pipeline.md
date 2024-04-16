@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-06-27"
+  years: 2019, 2024
+lastupdated: "2024-04-16"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -62,7 +62,7 @@ Before you add and run a Tekton pipeline, make sure that you have the following 
    * Optional. If you are not using the default shared Pipeline Worker, you can use a {{site.data.keyword.deliverypipeline}} Private Worker tool integration that references your Kubernetes cluster. For more information about private workers, see [Installing Delivery Pipeline Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers).
 
 * [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli) installed locally.
-* [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external} installed locally.
+* [kubectl](https://kubernetes.io/docs/tasks/tools/){: external} installed locally.
 * A Kubernetes cluster (version 1.22 or higher) such as an [{{site.data.keyword.containerlong}} cluster](https://cloud.ibm.com/kubernetes/catalog/cluster){: external}.
 
 The toolchain and the {{site.data.keyword.deliverypipeline}} Private Worker tool integration must be in the same region.

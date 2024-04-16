@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-15"
+lastupdated: "2024-04-16"
 
 keywords: troubleshoot, GitHub integration, Git Repos and Issue Tracking integration, GitLab project, tool integrations
 
@@ -181,7 +181,7 @@ You have a large repo that is greater than 1 GB. The repo might also contain bin
 You can use any of the following methods to resolve this problem:
 {: tsResolve}
 
-* Reduce the size of your {{site.data.keyword.gitrepos}} repo. For more information about reducing the size of your repo, see [Reducing the repository size using Git](https://docs.gitlab.com/ce/user/project/repository/reducing_the_repo_size_using_git.html){: external}.
+* Reduce the size of your {{site.data.keyword.gitrepos}} repo. For more information about reducing the size of your repo, see [Reducing the repository size using Git](https://docs.gitlab.com/ee/user/project/repository/reducing_the_repo_size_using_git.html){: external}.
 
 * Use SSH to bypass the default clone timeout of 180 seconds.
 

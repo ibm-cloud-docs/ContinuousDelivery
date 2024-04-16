@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-04-15"
+lastupdated: "2024-04-16"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -23,7 +23,7 @@ The use of {{site.data.keyword.contdelivery_full}} is limited to the building, d
 ## Scope of a service instance
 {: #service_scope}
 
-You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){: external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, and {{site.data.keyword.DRA_short}} tool integrations. A service instance belongs to a [resource group](/docs/services/account?topic=account-rgs). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group meters and governs your usage of all of the toolchains in the same region and resource group.
+You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){: external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, and {{site.data.keyword.DRA_short}} tool integrations. A service instance belongs to a [resource group](/docs/account?topic=account-rgs). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group meters and governs your usage of all of the toolchains in the same region and resource group.
 
 You can have only one Lite service per account. It is recommended that you use the Professional plan if you want to work with toolchains in multiple resource groups, or within multiple regions.
 {: tip}
@@ -143,7 +143,7 @@ As an alternative to the console, you can change the {{site.data.keyword.contdel
                       professional              plan         9ca4dc64-bc7b-4aba-9c1c-8bbf30ff127e
    ```
 
-2. Change the plan for your service instance by using the [`ibmcloud resource service-instance-update` command](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_update).
+2. Change the plan for your service instance by using the [`ibmcloud resource service-instance-update` command](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_update).
 
    ```text
    ibmcloud resource service-instance-update <service_instance_name>

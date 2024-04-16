@@ -172,7 +172,7 @@ Some of the standard pipeline jobs use {{site.data.keyword.cloud_notm}} API keys
 Some services cannot use service ID API keys. In such cases, the pipeline user interface prompts you to specify a user API key.
 {: tip}
 
-Because pipeline jobs run user-created scripts that might use service API keys in arbitrary ways, the pipeline cannot determine the set of restrictions to apply to a particular key. In such cases, if you request that the pipeline creates an API key, it creates a user API key. To maintain strong security, instead use a service API key with access that is restricted to only the services and resources that you need in the script. In this instance, you must create the API key yourself. For more information about creating an API key, see [{{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey#create_user_key).
+Because pipeline jobs run user-created scripts that might use service API keys in arbitrary ways, the pipeline cannot determine the set of restrictions to apply to a particular key. In such cases, if you request that the pipeline creates an API key, it creates a user API key. To maintain strong security, instead use a service API key with access that is restricted to only the services and resources that you need in the script. In this instance, you must create the API key yourself. For more information about creating an API key, see [{{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey#create_user_key&interface=ui).
 
 ## Jobs
 {: #deliverypipeline_jobs}
