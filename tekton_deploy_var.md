@@ -201,5 +201,5 @@ To obtain provenance documents, download the pipeline run from the **Actions men
 ## Learn more about Tekton delivery pipelines
 {: #tekton_learn_more}
 
-To learn more about Tekton and {{site.data.keyword.contdelivery_short}}, see [Tekton: A Modern Approach to Continuous Delivery](https://www.ibm.com/cloud/blog/tekton-a-modern-approach-to-continuous-delivery){: external}.
+To learn more about Tekton and {{site.data.keyword.contdelivery_short}}, see [Tekton: A Modern Approach to Continuous Delivery](https://www.ibm.com/blog/tekton-a-modern-approach-to-continuous-delivery/){: external}.
 

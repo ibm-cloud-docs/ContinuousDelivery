@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-12"
+lastupdated: "2024-04-17"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -381,7 +381,7 @@ New in the DevSecOps reference implementation:
 :   Additional validations for image signing
 :   Improvements to the getting-started experience
 
-    Read the [announcement](https://www.ibm.com/cloud/blog/announcements/whats-new-with-devsecops-in-ibm-cloud){: external}.
+    Read the [announcement](https://www.ibm.com/blog/announcement/whats-new-with-devsecops-in-ibm-cloud/){: external}.
 
 ## 7 October 2021
 {: #ContinuousDelivery-oct0721}
@@ -392,7 +392,7 @@ New toolchain templates demonstrate release strategies
 :   Blue-Green: Deploy a new release to an environment identical to — and isolated from — current production for quicker rollbacks and ease of testing.
 :   Canary: Deploy a new release incrementally to the production environment, gradually replacing the older version of the application with the newer one, gating increments with a test to reducing risks.
 
-    Read the [announcement](https://www.ibm.com/cloud/blog/explore-deployment-strategies-with-ibm-cloud-continuous-delivery){: external}.
+    Read the [announcement](https://www.ibm.com/blog/explore-deployment-strategies-with-ibm-cloud-continuous-delivery/){: external}.
 
 ## 30 September 2021
 {: #ContinuousDelivery-sep3021}
@@ -463,8 +463,6 @@ New Code Risk Analyzer scans source code repositories for:
 :   Known vulnerabilities in operating system dependencies
 :   Conformance to the CIS Docker benchmark
 :   Configuration risks in Kubernetes YAML
-
-    Read the [announcement](https://www.ibm.com/cloud/blog/announcements/find-source-code-vulnerabilities-with-code-risk-analyzer){: external}.
 
 ## 30 September 2020
 {: #ContinuousDelivery-sep3020}
@@ -591,5 +589,5 @@ Stricter enforcement of service plans
 :   If you are using the Lite plan with more than five authorized users, the pipelines no longer run, pushes to Git Repos are unavailable, and DevOps Insights is unavailable.
 :   If you are using the Lite plan, after 500 Delivery Pipeline jobs are run during a month, pipelines do not run, pushes to Git Repos are unavailable, and DevOps Insights is unavailable for the remainder of that billing period.
 
-    Read the [announcement](https://www.ibm.com/cloud/blog/announcements/usage-and-billing-in-ibm-cloud-continuous-delivery){: external}.
+    Read the [announcement](https://www.ibm.com/blog/announcement/usage-and-billing-in-ibm-cloud-continuous-delivery/){: external}.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-16"
+lastupdated: "2024-04-17"
 
 keywords: troubleshoot, GitHub integration, Git Repos and Issue Tracking integration, GitLab project, tool integrations
 
@@ -101,7 +101,7 @@ Instead of creating a {{site.data.keyword.gitrepos}} tool integration, create a 
 
 1. If you want to create a public repo on the server, clear the **Make this repository private** checkbox.
 1. If you want to use GitLab's Issues for issue tracking, select the **Enable GitLab Issues** checkbox.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/blog/announcement/track-code-deployed-toolchains/){: external}.
 1. Click **Create Integration**.
 
 For more information about configuring a GitLab tool integration, see [Configuring GitLab](/docs/ContinuousDelivery?topic=ContinuousDelivery-gitlab).
