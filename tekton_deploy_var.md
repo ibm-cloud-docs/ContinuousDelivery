@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-12"
+lastupdated: "2024-04-17"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -201,5 +201,5 @@ To obtain provenance documents, download the pipeline run from the **Actions men
 ## Learn more about Tekton delivery pipelines
 {: #tekton_learn_more}
 
-To learn more about Tekton and {{site.data.keyword.contdelivery_short}}, see [Tekton: A Modern Approach to Continuous Delivery](https://www.ibm.com/cloud/blog/tekton-a-modern-approach-to-continuous-delivery){: external} or take the following tutorial: [Develop a Kubernetes app by using Tekton delivery pipelines](https://www.ibm.com/cloud/architecture/tutorials/develop-kubernetes-app-using-tekton-delivery-pipelines){: external}.
+To learn more about Tekton and {{site.data.keyword.contdelivery_short}}, see [Tekton: A Modern Approach to Continuous Delivery](https://www.ibm.com/cloud/blog/tekton-a-modern-approach-to-continuous-delivery){: external}.
 

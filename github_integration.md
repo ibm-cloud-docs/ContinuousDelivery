@@ -99,7 +99,3 @@ You must specify the `tool_type_id` property in the request body with the `githu
 | type | required, immutable | String | type | The operation to perform to initialize the new tool integration. Use `new` to create a Git repo, `clone` to clone an existing repo into a new Git repo, `fork` to fork an existing Git repo, or `link` to link to an existing Git repo. |
 {: caption="Table 1. GitHub tool integration parameters" caption-side="bottom"}
 
-## Learn more about GitHub
-{: #learn_github}
-
-To learn more about GitHub, take the [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain](https://www.ibm.com/cloud/architecture/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){: external} tutorial.

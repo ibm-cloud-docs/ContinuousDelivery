@@ -39,9 +39,6 @@ toc:
   - navgroup: 
       id: tutorial
       topics: 
-      - link:
-          label: Explore DevOps Insights
-          href: https://www.ibm.com/cloud/architecture/tutorials/explore-ibm-cloud-devops-insights
       - cd-kubernetes-tutorial.md
       - cd-satellite-tutorial.md
       - cd-only-satellite-tutorial.md

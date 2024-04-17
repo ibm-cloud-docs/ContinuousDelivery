@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-16"
+lastupdated: "2024-04-17"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, Git source control, authentication, GitHub 
 
@@ -82,9 +82,6 @@ You can add a Git tool integration to any existing toolchain by using the consol
 1. Either click a toolchain to which you want to add a Git tool integration, or create a toolchain. For information about creating toolchains, see [Creating toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=ui).
 1. On the Toolchain's Overview page, click **Add Tool**, and then select **GitHub** or **{{site.data.keyword.gitrepos}}** to add either of these tool integrations to your toolchain.
 1. Depending on which Git tool integration you select, you can [configure the the GitHub tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-github) or you can configure the [{{site.data.keyword.gitrepos}} tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-grit).
-
-To try a tutorial to create a custom toolchain, see [Create a custom toolchain](https://www.ibm.com/cloud/architecture/tutorials/create-a-custom-toolchain){: external}.
-{: tip}
 
 ## Adding the Git tool integration to an existing toolchain with the API
 {: #adding_to_toolchain_api}

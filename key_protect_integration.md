@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-12"
+lastupdated: "2024-04-17"
 
 keywords: tool integrations, IBM Cloud Public, Key Protect
 
@@ -76,8 +76,6 @@ You can add a {{site.data.keyword.keymanagementserviceshort}} tool integration t
       instance-name: ffs-secrets
       setup-authorization-type: create
 ```
-
-For more information about customizing toolchain templates, see [Create a template for a custom toolchain](https://www.ibm.com/cloud/architecture/tutorials/create-a-template-for-a-custom-toolchain){: external}.
 
 In certain scenarios, you can add a {{site.data.keyword.keymanagementserviceshort}} tool integration dynamically while creating a toolchain. For example, if you click **New** to mint a new API key, you can select the **Save this key in a secrets store for reuse** checkbox to save the API key in a {{site.data.keyword.keymanagementserviceshort}} instance to use it again later. If you do not already have a {{site.data.keyword.keymanagementserviceshort}} instance, a new instance is created for you.
 {: tip}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-16"
+lastupdated: "2024-04-17"
 
 keywords: continuous delivery practices, DevOps practices, IBM Cloud Garage Method, learning resources, DevOps Insights
 
@@ -35,14 +35,12 @@ With Delivery Pipeline, which is included in {{site.data.keyword.contdelivery_sh
 ## Continuous delivery tutorials
 {: #gm_cd_tutorials}
 
-See the [Learning Lab](https://www.ibm.com/cloud/architecture/courses){: external}.
+See the [Learning Lab](https://www.ibm.com/training/cloud){: external}.
 
 ## Continuous delivery courses
 {: #gm_cd_courses}
 
-[Get started with agile development and continuous delivery](https://www.ibm.com/cloud/architecture/content/course/get_started_agile_cd){: external}. Learn how to create a toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
-
-To see all of the {{site.data.keyword.cloud_notm}} Garage Method learning materials, see the [{{site.data.keyword.cloud_notm}} Garage Method Learning Lab](https://www.ibm.com/cloud/architecture/courses){: external}.
+To see all of the {{site.data.keyword.cloud_notm}} Garage Method learning materials, see the [{{site.data.keyword.cloud_notm}} Garage Method Learning Lab](https://www.ibm.com/training/cloud){: external}.
 
 ## {{site.data.keyword.DRA_short}} tutorials
 {: #gm_di_tutorials}
