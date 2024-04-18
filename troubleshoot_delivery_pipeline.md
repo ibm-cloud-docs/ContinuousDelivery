@@ -255,7 +255,7 @@ The issue is caused by change that is introduced in version 4.13 of [{{site.data
 {: tsCauses}
 
 To work around the issue, use the following process:
-```
+```text
 ibmcloud login --apikey "${IBMCLOUD_API_KEY}" -r "${REGION}" -g "${RESOURCE_GROUP}"
 ibmcloud oc cluster config --cluster "${CLUSTER_NAME}" --endpoint private --admin
 kubectl config current-context
@@ -285,7 +285,7 @@ To resolve this issue:
 {: troubleshoot}
 
 Classic pipelines that are executed from a trial account won't start due to the following error:
-```
+```text
 This type of account is not entitled to use managed workers. Private workers can be used instead or to gain access managed worker capability the account must be upgraded to a paid plan.
 ```
 {: tsSymptoms}
