@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-07-10"
+  years: 2021, 2024
+lastupdated: "2024-04-16"
 
 keywords: tool integrations, IBM Cloud Public, IBM Secrets Manager
 
@@ -20,7 +20,7 @@ subcollection: ContinuousDelivery
 
 A *secret* is anything that provides access to sensitive information, such as an [API key](/docs/account?topic=account-manapikey). You can use the {{site.data.keyword.secrets-manager_short}} tool integration to access secrets, wherever they are required in the toolchain workflow.
 
-Before you configure a {{site.data.keyword.secrets-manager_short}} tool integration, make sure that you [provision an instance of the {{site.data.keyword.secrets-manager_short}} service](/docs/secrets-manager?topic=secrets-manager-create-instance#create-instance-ui).
+Before you configure a {{site.data.keyword.secrets-manager_short}} tool integration, make sure that you [provision an instance of the {{site.data.keyword.secrets-manager_short}} service](/docs/secrets-manager?topic=secrets-manager-create-instance#create-instance-ui&interface=ui).
 {: important}
 
 You can configure the {{site.data.keyword.secrets-manager_short}} tool integration to identify secrets by name or by [Cloud Resource Name (CRN)](/docs/account?topic=account-crn).
@@ -153,7 +153,7 @@ Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets
 ### Applying secrets
 {: #secretsmanager_apply_secrets_crn}
 
-After you configure the {{site.data.keyword.secrets-manager_short}} tool integration and [authorize your toolchain](#authorizing-your-toolchain-to-access-secrets) to access secrets in that account, you can use it to apply secrets anywhere that they are required by the toolchain. 
+After you configure the {{site.data.keyword.secrets-manager_short}} tool integration and [authorize your toolchain](#secretsmanager_authorize_secrets) to access secrets in that account, you can use it to apply secrets anywhere that they are required by the toolchain. 
 
 You can use either of the following methods to select a CRN secret for use in your toolchain:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-12-05"
+  years: 2023, 2024
+lastupdated: "2024-04-16"
 
 keywords: tool integrations, IBM Cloud Public, Event Notifications
 
@@ -215,7 +215,7 @@ You can add the {{site.data.keyword.en_short}} tool integration to your toolchai
 {: important}
 
 1. To install the Terraform command-line interface (CLI) and configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform, follow the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
-1. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create resource instances by using the HashiCorp Configuration Language (HCL). For more information about using this configuration language, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
+1. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create resource instances by using the HashiCorp Configuration Language (HCL). For more information about using this configuration language, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
 
    The following example creates a {{site.data.keyword.deliverypipeline}} tool integration by using the `ibm_cd_toolchain_tool_pipeline` resource, where `toolchain_id` is a GUID that represents the toolchain in which to create the tool integration.
 

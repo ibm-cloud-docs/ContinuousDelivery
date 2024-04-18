@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2022
+  years: 2015, 2024
 
-lastupdated: "2022-11-25"
+lastupdated: "2024-04-16"
 
 keywords: tool integrations, IBM Cloud Public, Other Tool, Custom Tool
 
@@ -56,10 +56,3 @@ You must specify the `tool_type_id` property in the request body with the `custo
 | name | required, updatable | String | name | The name of this tool integration. |
 | type | required, updatable | String | type | The type of tool that this custom tool is integrating with. |
 {: caption="Table 1. Custom tool (Other Tool) tool integration parameters" caption-side="bottom"}
-
-## Learn more about the custom tool (Other Tool)
-{: #learn_custom_tool}
-
-To learn more about the custom tool, take this tutorial:
-
-* [Add a custom tool integration to a toolchain](https://www.ibm.com/cloud/architecture/tutorials/add-a-custom-tool-integration-to-a-toolchain){: external}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2023
-lastupdated: "2023-12-05"
+  years: 2018, 2024
+lastupdated: "2024-04-16"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -48,7 +48,7 @@ To keep your credentials secure, make sure that you follow this guidance:
 * [{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-get-started)
 * [HashiCorp Vault](https://www.vaultproject.io/){: external}
    
-For more information about secure DevOps best practices, see [DevOps Security](https://www.ibm.com/cloud/learn/devops-a-complete-guide?mhsrc=ibmsearch_a&mhq=Secure%20DevOps#toc-security-j2-0639C){: external}.
+For more information about secure DevOps best practices, see [DevOps Security](https://www.ibm.com/topics/devops?mhsrc=ibmsearch_a&mhq=Secure%20DevOps#toc-security-j2-0639C){: external}.
 
 ## Protecting your credentials by using secrets references
 {: #cd_secrets_references}

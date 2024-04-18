@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-10-06"
+  years: 2015, 2024
+lastupdated: "2024-04-15"
 
 keywords: Git source control, authentication, personal access token, SSH key, Git repos 
 
@@ -10,13 +10,8 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:download: .download}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Setting up local clients to work with Git source control
 {: #git_local}
@@ -33,7 +28,7 @@ You can manage and work with source code locally in a GitHub or {{site.data.keyw
 
    | Git Type  | HTTPS Setup | HTTPS Use |  SSH Setup |
    |:-----------|:-------------|:------------|:-------------|
-   | Git Repos and Issue Tracking  | [Personal access token](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat) | Git Repos and Issue tracking user name (not your IBM id) and personal access token | [Configure the SSH key](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key) |
+   | Git Repos and Issue Tracking  | [Personal access token](/docs/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat) | Git Repos and Issue tracking user name (not your IBM id) and personal access token | [Configure the SSH key](/docs/ContinuousDelivery?topic=ContinuousDelivery-git_working#creating-an-ssh-key) |
    | Public GitHub (github.com) | Personal access token is not required, but you can set one up and use it | GitHub user name and password, or GitHub user name and Personal Access token, or just the personal access token as the user name | [Configure a GitHub SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: external} |
    {: caption="Table 1. Git authentication setup" caption-side="top"}
 
@@ -79,4 +74,4 @@ After the download is complete, you have a local version of the files in your re
 
 If you use Eclipse and have a project that uses Git for source control, you can use the EGit plug-in to manage your repo from Eclipse. For more information about how to install and configure EGit, see the [EGit tutorial](http://eclipsesource.com/blogs/tutorials/egit-tutorial/){: external}.
 
-If you use {{site.data.keyword.gitrepos}} and have any problems, see the [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_locally) documentation.
+If you use {{site.data.keyword.gitrepos}} and have any problems, see the [{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_locally) documentation.

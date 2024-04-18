@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-01-30"
+  years: 2015, 2024
+lastupdated: "2024-04-17"
 
 keywords: tool integrations, IBM Cloud Public, Git Repos and Issue Tracking
 
@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 # Configuring {{site.data.keyword.gitrepos}}
 {: #grit}
 
-The [{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working) tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repositories (repos). You can have both local and remote copies of your repos. To learn more, see [{{site.data.keyword.gitrepos}}](https://us-south.git.cloud.ibm.com/help){: external}. 
+The [{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-git_working) tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repositories (repos). You can have both local and remote copies of your repos. To learn more, see [{{site.data.keyword.gitrepos}}](https://us-south.git.cloud.ibm.com/help){: external}. 
 {: shortdesc}
 
 If you are configuring {{site.data.keyword.gitrepos}} as you are creating the toolchain, follow these steps:    
@@ -36,7 +36,7 @@ These instructions apply to toolchains that already contain the Git repo that yo
 1. Your username is automatically selected to assign ownership of this new integration to yourself. After the integration is created, another authorized user can reassign ownership of the integration to themself when they edit it.
 1. If you want to create a private repo, select the **Make this repository private** checkbox.
 1. If you want to use Issues for issue tracking, select the **Enable Issues** checkbox.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information about tracking code deployments, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information about tracking code deployments, see [Track where your code is deployed with toolchains](https://www.ibm.com/blog/announcement/track-code-deployed-toolchains/){: external}.
 1. Click **Create Integration**.
 
 After you clone the Git repo, you can remove it from your toolchain.
@@ -58,7 +58,7 @@ If you have a toolchain and are adding {{site.data.keyword.gitrepos}} to it, fol
 1. Your username is automatically selected to assign ownership of this new integration to yourself. After the integration is created, another authorized user can reassign ownership of the integration to themself when they edit it.
 1. If you want to create a private repo, select the **Make this repository private** checkbox.
 1. If you want to use Issues for issue tracking, select the **Enable Issues** checkbox.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/blog/announcement/track-code-deployed-toolchains/){: external}.
 1. Click **Create Integration**.
 1. From your toolchain's Overview page, on the **Repositories** card, click the Git repo that you want to work with. Your project overview page opens.    
 
@@ -92,8 +92,3 @@ You must specify the `tool_type_id` property in the request body with the `hoste
 | token_url | optional, updatable | String | token_url | The token URL that is used to authorize with the {{site.data.keyword.gitrepos}} server. |
 | type | required, immutable | String | type | The operation to perform to initialize the new tool integration. Use `new` to create a Git repo, `clone` to clone an existing Git repo into a new Git repo, `fork` to fork an existing Git repo, or `link` to link to an existing Git repo. |
 {: caption="Table 1. {{site.data.keyword.gitrepos}} tool integration parameters" caption-side="bottom"}
-
-## Learn more about {{site.data.keyword.gitrepos}}
-{: #learn_grit}
-
-To learn more about {{site.data.keyword.gitrepos}}, see the [{{site.data.keyword.gitrepos}}: Social coding hosted by IBM article](https://www.ibm.com/garage/method/practices/code/tool_git_repos_and_issue_tracking/){: external} on the {{site.data.keyword.cloud_notm}} Garage Method.

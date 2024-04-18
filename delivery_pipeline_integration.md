@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-01-26"
+  years: 2015, 2024
+lastupdated: "2024-04-16"
 
 keywords: tool integrations, IBM Cloud Public, Delivery Pipeline
 subcollection: ContinuousDelivery
@@ -30,15 +30,15 @@ Configure {{site.data.keyword.deliverypipeline}} to automate the continuous buil
 1. Select the type of pipeline that you want to create:
 
    * **Classic**: Provides an easy-to-use graphical user interface for defining stages and jobs that run on public shared infrastructure, with support for running individual stages on private workers.
-   * **Tekton**: Provides a dashboard that you can use to view the output of [Tekton pipeline](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines) runs on a defined Kubernetes cluster, with support for configuring pipeline definitions repos, the pipeline triggers, where the pipeline runs, and simple secrets.
+   * **Tekton**: Provides a dashboard that you can use to view the output of [Tekton pipeline](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines) runs on a defined Kubernetes cluster, with support for configuring pipeline definitions repos, the pipeline triggers, where the pipeline runs, and simple secrets.
 
 1. If you plan to use your pipeline to deploy a user interface, and your pipeline is a Classic pipeline, select the **Show apps in the View app menu** checkbox. All of the apps that your pipeline creates are shown in the **View App** list on the toolchain's Overview page.  
 1. Click **Create Integration** to add the {{site.data.keyword.deliverypipeline}} to your toolchain.
-1. From your toolchain, on the **Delivery pipelines** card, click the delivery pipeline to view and configure it. To learn the basics of configuring a pipeline, see [Building and deploying pipelines](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).
+1. From your toolchain, on the **Delivery pipelines** card, click the delivery pipeline to view and configure it. To learn the basics of configuring a pipeline, see [Building and deploying pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).
 
    If you want the pipeline to automatically run when a commit is pushed to your GitHub or Git repository (repo), follow these steps:
 
-   a. Configure GitHub or {{site.data.keyword.gitrepos}} for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub or Git repos that are associated with your toolchain. For instructions to configure GitHub, see the [GitHub](#github) section. For instructions to configure {{site.data.keyword.gitrepos}}, see the [{{site.data.keyword.gitrepos}}](#grit) section.
+   a. Configure GitHub or {{site.data.keyword.gitrepos}} for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub or Git repos that are associated with your toolchain. For instructions to configure GitHub, see the [GitHub](/docs/ContinuousDelivery?topic=ContinuousDelivery-github) section. For instructions to configure {{site.data.keyword.gitrepos}}, see the [{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-grit) section.
 
    b. Use a webhook. Without a webhook, you can run pipelines manually only. To use a webhook when you link to a GitHub or {{site.data.keyword.ghe_short}} repo, you need admin privileges. To link to a {{site.data.keyword.gitrepos}} repo, you need Master or Owner privileges.
 
@@ -47,7 +47,7 @@ Configure {{site.data.keyword.deliverypipeline}} to automate the continuous buil
 ## Configuring a Sauce Labs test job in your pipeline
 {: #config_saucelabs}
 
-Before you configure a Sauce Labs test job in your pipeline, you need a working pipeline that has stages to build and deploy your app. You must also configure Sauce Labs for your toolchain. For instructions about how to configure Sauce Labs, see the [Sauce Labs](#saucelabs) section.
+Before you configure a Sauce Labs test job in your pipeline, you need a working pipeline that has stages to build and deploy your app. You must also configure Sauce Labs for your toolchain. For instructions about how to configure Sauce Labs, see the [Sauce Labs](/docs/ContinuousDelivery?topic=ContinuousDelivery-saucelabs) section.
 
 Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test job:
 
@@ -98,7 +98,3 @@ You must specify the `tool_type_id` property in the request body with the `pipel
 | name | optional, updatable | String | name | The name of this tool integration. |
 {: caption="Table 1. {{site.data.keyword.deliverypipeline}} tool integration parameters" caption-side="bottom"}
 
-## Learn more about {{site.data.keyword.deliverypipeline}}
-{: #learn_pipeline}
-
-To learn more about {{site.data.keyword.deliverypipeline}}, see [Working with pipelines](/docs/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working) and the [Delivery Pipeline article](https://www.ibm.com/garage/method/practices/deliver/tool_delivery_pipeline){: external} on the IBM Cloud Garage Method.

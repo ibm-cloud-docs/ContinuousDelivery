@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-07-10"
+  years: 2015, 2024
+lastupdated: "2024-04-16"
 
 keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Event Notifications, Git Repos and Issue Tracking, GitHub, GitLab, HashiCorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -162,7 +162,7 @@ The following table lists and describes each of the variables that are used in t
 You can add tool integrations to your toolchain with Terraform.
 
 1. To install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform, follow the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
-1. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create resource instances by using the HashiCorp Configuration Language (HCL). For more information about using this configuration language, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
+1. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create resource instances by using the HashiCorp Configuration Language (HCL). For more information about using this configuration language, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
 
    The following example creates a {{site.data.keyword.deliverypipeline}} tool integration by using the `ibm_cd_toolchain_tool_pipeline` resource, where `toolchain_id` is a GUID that represents the toolchain in which to create the tool integration. 
    
@@ -334,7 +334,7 @@ The following table lists and describes each of the variables that are used in t
 If you configured a tool integration when you created a toolchain, you can update the configuration settings with Terraform.
 
 1. Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform by following the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started){: external}.
-1. Use the Terraform configuration file that you used to create the tool integration. If your tool integration was not created with Terraform, run `terraform import` to avoid creating another tool integration. For more information about using this configuration language, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
+1. Use the Terraform configuration file that you used to create the tool integration. If your tool integration was not created with Terraform, run `terraform import` to avoid creating another tool integration. For more information about using this configuration language, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
 
    The following example updates the name of an existing {{site.data.keyword.deliverypipeline}} tool integration by using the `ibm_cd_toolchain_tool_pipeline` resource, where `toolchain_id` is a GUID that represents the toolchain where the tool integration exists.  
    
@@ -519,28 +519,28 @@ If you are using the [{{site.data.keyword.contdelivery_short}} Toolchain API to 
 |Tool integration |Tool type ID |Financial services validated|
 |:----------|:----------|:-----|
 |[{{site.data.keyword.appconfig_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-app-configuration)		|appconfig |		|
-|[Artifactory](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-artifactory)		|artifactory |		|
-|[Bitbucket](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-bitbucket)		|bitbucketgit |		|
-|[{{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) 		|pipeline | ![Checkmark icon](../icons/checkmark-icon.svg) 		|
-|[{{site.data.keyword.deliverypipeline}} Private Worker](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-privateworker)			|private_worker |		|
-|[{{site.data.keyword.DRA_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-dra)		|draservicebroker | ![Checkmark icon](../icons/checkmark-icon.svg)			|
-|[{{site.data.keyword.en_short}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd)	|eventnotifications | ![Checkmark icon](../icons/checkmark-icon.svg)		|
-|[{{site.data.keyword.gitrepos}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-grit)	|hostedgit |		|
-|[GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-github)		|githubconsolidated |		|
-|[GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-gitlab)		|gitlab |		|
-|[HashiCorp Vault](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault)		|hashicorpvault |		|
-|[Jenkins](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jenkins)	|jenkins |		|
-|[JIRA](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-jira)		|jira |		|
-|[{{site.data.keyword.keymanagementserviceshort}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-keyprotect)		|keyprotect |		|
-|[Nexus](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-nexus)			|nexus |		|
-|[Other Tool](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-othertool)			|customtool |		|
-|[PagerDuty](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pagerduty)			|pagerduty |		|
-|[Rational Team Concert](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-rationalteamconcert)		|rationalteamconcert |		|
-|[Sauce Labs](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-saucelabs)		|saucelabs |		|
-|[Secrets Manager](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager)		|secretsmanager | ![Checkmark icon](../icons/checkmark-icon.svg)		|
-|[Security and Compliance Center](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-scc)		|security_compliance | ![Checkmark icon](../icons/checkmark-icon.svg)		|
-|[Slack](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-slack)		|slack |		|
-|[SonarQube](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-sonarqube)			|sonarqube |		|
+|[Artifactory](/docs/ContinuousDelivery?topic=ContinuousDelivery-artifactory)		|artifactory |		|
+|[Bitbucket](/docs/ContinuousDelivery?topic=ContinuousDelivery-bitbucket)		|bitbucketgit |		|
+|[{{site.data.keyword.deliverypipeline}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline) 		|pipeline | ![Checkmark icon](../icons/checkmark-icon.svg) 		|
+|[{{site.data.keyword.deliverypipeline}} Private Worker](/docs/ContinuousDelivery?topic=ContinuousDelivery-privateworker)			|private_worker |		|
+|[{{site.data.keyword.DRA_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-dra)		|draservicebroker | ![Checkmark icon](../icons/checkmark-icon.svg)			|
+|[{{site.data.keyword.en_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-integration)	|eventnotifications | ![Checkmark icon](../icons/checkmark-icon.svg)		|
+|[{{site.data.keyword.gitrepos}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-grit)	|hostedgit |		|
+|[GitHub](/docs/ContinuousDelivery?topic=ContinuousDelivery-github)		|githubconsolidated |		|
+|[GitLab](/docs/ContinuousDelivery?topic=ContinuousDelivery-gitlab)		|gitlab |		|
+|[HashiCorp Vault](/docs/ContinuousDelivery?topic=ContinuousDelivery-hashicorpvault)		|hashicorpvault |		|
+|[Jenkins](/docs/ContinuousDelivery?topic=ContinuousDelivery-jenkins)	|jenkins |		|
+|[JIRA](/docs/ContinuousDelivery?topic=ContinuousDelivery-jira)		|jira |		|
+|[{{site.data.keyword.keymanagementserviceshort}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-keyprotect)		|keyprotect |		|
+|[Nexus](/docs/ContinuousDelivery?topic=ContinuousDelivery-nexus)			|nexus |		|
+|[Other Tool](/docs/ContinuousDelivery?topic=ContinuousDelivery-othertool)			|customtool |		|
+|[PagerDuty](/docs/ContinuousDelivery?topic=ContinuousDelivery-pagerduty)			|pagerduty |		|
+|[Rational Team Concert](/docs/ContinuousDelivery?topic=ContinuousDelivery-rationalteamconcert)		|rationalteamconcert |		|
+|[Sauce Labs](/docs/ContinuousDelivery?topic=ContinuousDelivery-saucelabs)		|saucelabs |		|
+|[Secrets Manager](/docs/ContinuousDelivery?topic=ContinuousDelivery-secretsmanager)		|secretsmanager | ![Checkmark icon](../icons/checkmark-icon.svg)		|
+|[Security and Compliance Center](/docs/ContinuousDelivery?topic=ContinuousDelivery-scc)		|security_compliance | ![Checkmark icon](../icons/checkmark-icon.svg)		|
+|[Slack](/docs/ContinuousDelivery?topic=ContinuousDelivery-slack)		|slack |		|
+|[SonarQube](/docs/ContinuousDelivery?topic=ContinuousDelivery-sonarqube)			|sonarqube |		|
 {: caption="Table 4. Tool integrations available for toolchains on {{site.data.keyword.cloud_notm}} Public" caption-side="top"}
 
 If you want to start developing with your source code on {{site.data.keyword.cloud_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}.

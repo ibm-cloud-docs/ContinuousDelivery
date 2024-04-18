@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2022
+  years: 2015, 2024
   
-lastupdated: "2022-11-14"
+lastupdated: "2024-04-16"
 
 keywords: private workers
 
@@ -145,9 +145,9 @@ echo "to install the delivery pipeline private worker"
 This script contains the following requirements:
 
 * The `ibmcom` and `tekton-releases` namespaces currently exist on the target {{site.data.keyword.cloud}} Private.
-* The Docker client is connected to the {{site.data.keyword.cloud}} Private’s private container registry. For more information about authentication for the Docker CLI, see [Configuring authentication for the Docker CLI](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.2.0/manage_images/configuring_docker_cli.html){: external}.   
+* The Docker client is connected to the {{site.data.keyword.cloud}} Private’s private container registry. For more information about authentication for the Docker CLI, see [Configuring authentication for the Docker CLI](https://www.ibm.com/docs/en/cloud-private/3.2.x?topic=images-configuring-authentication-docker-cli){: external}.   
 
-After you provision the container images on the {{site.data.keyword.cloud}} Private’s private registry, update the image's scope to global to make sure that the images can be accessed from any namespaces. For more information about updating the scope of an image, see [Changing image scope](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.2.0/manage_images/change_scope.html).
+After you provision the container images on the {{site.data.keyword.cloud}} Private’s private registry, update the image's scope to global to make sure that the images can be accessed from any namespaces. For more information about updating the scope of an image, see [Changing image scope](https://www.ibm.com/docs/en/cloud-private/3.2.x?topic=images-changing-image-scope){: external}.
 
 You can provide pipeline users with access to the base images (`icr.io/continuous-delivery/pipeline/pipeline-base-image`) that are used to run pipeline jobs, which are supplied by the global {{site.data.keyword.registrylong_notm}}. To use these images, you must configure your pipeline jobs by using the `Custom Dockerimage`. You must also reference the expected image in the {{site.data.keyword.cloud}} Private’s private registry, for example: `mycluster.icp:8500/icr.io/continuous-delivery/pipeline/pipeline-base-image:latest`.
 {: tip}

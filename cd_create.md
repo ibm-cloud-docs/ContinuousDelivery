@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020, 2023
+  years: 2020, 2024
 
-lastupdated: "2023-04-11"
+lastupdated: "2024-04-16"
 
 keywords: ibmcloud, resource, service instance, create, IBM Cloud, Terraform
 
@@ -207,7 +207,7 @@ For more information about creating service instances, see [Creating new resourc
 
 1. To install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform, follow the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
 
-2. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create resource instances by using the HashiCorp Configuration Language. For more information about using this configuration language, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
+2. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create resource instances by using the HashiCorp Configuration Language. For more information about using this configuration language, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
 
    The following example creates a {{site.data.keyword.contdelivery_short}} service instance by using the `ibm_resource_instance` resource, where `name` is a unique, descriptive name that identifies the resource instance.  
   

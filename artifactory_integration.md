@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-04-10"
+  years: 2015, 2024
+lastupdated: "2024-04-16"
 
 keywords: tool integrations, IBM Cloud Public, Artifactory
 
@@ -142,8 +142,3 @@ You must specify the `tool_type_id` property in the request body with the `artif
 | type | required, updatable | String | type | The repo type for your Artifactory tool integration. |
 | user_id | optional, updatable | String | user_id | The user ID or email address for your Artifactory repo. |
 {: caption="Table 1. Artifactory tool integration parameters" caption-side="bottom"}
-
-## Learn more about Artifactory
-{: #learn_more_artifactory}
-
-To learn more about Artifactory, see the [Artifactory article](https://www.ibm.com/garage/method/practices/deliver/tool_artifactory/){: external} on the IBM Cloud Garage Method.

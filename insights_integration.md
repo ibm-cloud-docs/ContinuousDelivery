@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-11"
+  years: 2015, 2024
+lastupdated: "2024-04-17"
 
 keywords: tool integrations, IBM Cloud Public, DevOps Insights
 
@@ -40,8 +40,3 @@ The {{site.data.keyword.DRA_short}} tool integration is preconfigured and does n
 
 You must specify the `tool_type_id` property in the request body with the `draservicebroker` value.
 {: important}
-
-## Learn more about DevOps Insights
-{: #learn_insights}
-
-To learn more about {{site.data.keyword.DRA_short}}, take the [Explore {{site.data.keyword.DRA_full}}](https://www.ibm.com/cloud/architecture/tutorials/explore-ibm-cloud-devops-insights){: external} tutorial.

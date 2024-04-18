@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-09-26"
+  years: 2015, 2024
+lastupdated: "2024-04-17"
 
 keywords: tool integrations, IBM Cloud Public, GitHub
 
@@ -59,7 +59,7 @@ If you have a toolchain and are adding this tool integration to it, follow these
 
 1. If you are a GitHub.com user with an upgraded account, or you selected a {{site.data.keyword.ghe_short}} server and you want to make a new private repo on the server, select the **Make this repository private** checkbox.
 1. If you want to use GitHub's Issues for issue tracking, select the **Enable GitHub Issues** checkbox.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/blog/announcement/track-code-deployed-toolchains/){: external}.
 1. Click **Create Integration**.
 1. From your toolchain's Overview page, on the **Repositories** card, click the GitHub or {{site.data.keyword.ghe_short}} repo that you want to work with. Depending on the repo that you selected, either the GitHub website or your company's {{site.data.keyword.ghe_short}} repo opens, where you can view the contents of the repo.
 1. If you enabled GitHub Issues, click **GitHub Issues** to open it. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub or {{site.data.keyword.ghe_short}} repos.
@@ -99,7 +99,3 @@ You must specify the `tool_type_id` property in the request body with the `githu
 | type | required, immutable | String | type | The operation to perform to initialize the new tool integration. Use `new` to create a Git repo, `clone` to clone an existing repo into a new Git repo, `fork` to fork an existing Git repo, or `link` to link to an existing Git repo. |
 {: caption="Table 1. GitHub tool integration parameters" caption-side="bottom"}
 
-## Learn more about GitHub
-{: #learn_github}
-
-To learn more about GitHub, see the [GitHub article](https://www.ibm.com/garage/method/practices/culture/tool_github/){: external} and the [GitHub and Issue Tracking: Social coding hosted by IBM article](https://www.ibm.com/garage/method/practices/code/tool_git_repos_and_issue_tracking){: external} on the {{site.data.keyword.cloud_notm}} Garage Method or take the [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain](https://www.ibm.com/cloud/architecture/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){: external} tutorial.

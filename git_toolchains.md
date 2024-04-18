@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-04-19"
+  years: 2020, 2024
+lastupdated: "2024-04-17"
 
 keywords: Git Repos, Issue Tracking, Collaborate, Git repository, Git source control, authentication, GitHub 
 
@@ -26,7 +26,7 @@ To see which toolchain templates contain the {{site.data.keyword.gitrepos}} or G
 {: #creating_a_toolchain_git}
 {: ui}
 
-You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes either a {{site.data.keyword.gitrepos}} or GitHub tool integration. Learn more about how to use the templates from the [IBM Cloud Garage Method](https://www.ibm.com/cloud/architecture/toolchains){: external}.
+You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes either a {{site.data.keyword.gitrepos}} or GitHub tool integration. Learn more about how to use the templates from the [IBM Cloud Garage Method](https://www.ibm.com/architectures/hybrid){: external}.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
 1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**.
@@ -60,7 +60,7 @@ You can use a template as a starting point to [create a toolchain](https://cloud
 
 You can create a toolchain from a template only by using the console. To view the steps for using the console, switch to the **UI** instructions.
 
-For more information about how to create a toolchain with the API instead of by using a template, see [Adding the Git tool integration to an existing toolchain with the API](#adding_to_toolchain_api).
+For more information about how to create a toolchain with the API instead of by using a template, see [Adding the Git tool integration to an existing toolchain with the API](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_git&interface=api#adding_to_toolchain_api).
 
 ## Creating a toolchain from a template with {{site.data.keyword.gitrepos}} or GitHub with Terraform
 {: #creating_a_toolchain_git_terraform}
@@ -68,7 +68,7 @@ For more information about how to create a toolchain with the API instead of by 
 
 You can create a toolchain from a template only by using the console. To view the steps for using the console, switch to the **UI** instructions.
 
-For more information about how to create a toolchain with Terraform instead of by using a template, see [Adding the Git tool integration to an existing toolchain with Terraform](#adding_to_toolchain_terraform).
+For more information about how to create a toolchain with Terraform instead of by using a template, see [Adding the Git tool integration to an existing toolchain with Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_git&interface=terraform#adding_to_toolchain_terraform).
 
 ## Adding the Git tool integration to an existing toolchain by using the console
 {: #adding_to_toolchain_ui}
@@ -82,9 +82,6 @@ You can add a Git tool integration to any existing toolchain by using the consol
 1. Either click a toolchain to which you want to add a Git tool integration, or create a toolchain. For information about creating toolchains, see [Creating toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=ui).
 1. On the Toolchain's Overview page, click **Add Tool**, and then select **GitHub** or **{{site.data.keyword.gitrepos}}** to add either of these tool integrations to your toolchain.
 1. Depending on which Git tool integration you select, you can [configure the the GitHub tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-github) or you can configure the [{{site.data.keyword.gitrepos}} tool integration](/docs/ContinuousDelivery?topic=ContinuousDelivery-grit).
-
-To try a tutorial to create a custom toolchain, see [Create a custom toolchain](https://www.ibm.com/cloud/architecture/tutorials/create-a-custom-toolchain){: external}.
-{: tip}
 
 ## Adding the Git tool integration to an existing toolchain with the API
 {: #adding_to_toolchain_api}

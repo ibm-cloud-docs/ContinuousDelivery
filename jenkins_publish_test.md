@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2023
-lastupdated: "2023-05-25"
+  years: 2019, 2024
+lastupdated: "2024-04-16"
 
 keywords: devops insights, publish, test, results, jenkins, code coverage, tests, verification, app, sonarqube, dashboard
 
@@ -85,7 +85,7 @@ For each command, you need to specify the toolchain ID to export the environment
 ## Publishing SonarQube results (optional)
 {: #publishing-sonarqube-results}
 
-After you configure a SonarQube scanner and server by following the instructions in the [SonarQube documentation](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/){: external}, you can publish scan results to {{site.data.keyword.DRA_short}}.
+After you configure a SonarQube scanner and server by following the instructions in the [SonarQube documentation](https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/scanners/jenkins-extension-sonarqube/){: external}, you can publish scan results to {{site.data.keyword.DRA_short}}.
 
 To configure your Jenkins pipeline to accept these results, add the following parameters to it:
 

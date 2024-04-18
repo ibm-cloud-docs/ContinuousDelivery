@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2018, 2022
-lastupdated: "2022-08-10"
+  years: 2018, 2024
+lastupdated: "2024-04-12"
 
 keywords: Administrator Create, Administrator Update, Editor Update, service access roles, IAM, access policies
 
@@ -10,21 +10,14 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-
+{{site.data.keyword.attribute-definition-list}}  
 
 # Managing user access for Continuous Delivery in resource groups
 {: #cd-iam-security}
 
 Access to {{site.data.keyword.contdelivery_full}} service instances in resource groups for users in your account is controlled by {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). 
 
-User access for toolchains is managed separately. For more information about managing user access to toolchains in resource groups, see [Managing user access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
+User access for toolchains is managed separately. For more information about managing user access to toolchains in resource groups, see [Managing user access to toolchains in resource groups](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
 {: tip}
 
 Every user that accesses {{site.data.keyword.contdelivery_short}} services in your account must be assigned an IAM access policy. The policy determines which {{site.data.keyword.contdelivery_short}} instances the user can access and what actions the user is allowed to take.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-11-25"
+  years: 2022, 2024
+lastupdated: "2024-04-16"
 
 keywords: Terraform, toolchains, Continuous Delivery
 
@@ -28,7 +28,7 @@ Before you begin, make sure that you have the [required access](/docs/Continuous
 
 1. Follow the [Terraform on {{site.data.keyword.cloud_notm}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started) to install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to create, update, or delete `continuous-delivery` service instances and `toolchain` resources. 
 
-2. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create a {{site.data.keyword.contdelivery_short}} service instance and to assign a user an access policy in Identity and Access Management (IAM) for that instance by using HCL. You also add the configuration to create a basic toolchain resource in the same resource group and region as the {{site.data.keyword.contdelivery_short}} service instance, and to assign a user an access policy in IAM for that resource. The toolchain and the {{site.data.keyword.contdelivery_short}} service instance that governs usage of the toolchain are in the same resource group and region. For more information about working with the Terraform configuration file, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}. 
+2. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create a {{site.data.keyword.contdelivery_short}} service instance and to assign a user an access policy in Identity and Access Management (IAM) for that instance by using HCL. You also add the configuration to create a basic toolchain resource in the same resource group and region as the {{site.data.keyword.contdelivery_short}} service instance, and to assign a user an access policy in IAM for that resource. The toolchain and the {{site.data.keyword.contdelivery_short}} service instance that governs usage of the toolchain are in the same resource group and region. For more information about working with the Terraform configuration file, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}. 
 
    The {{site.data.keyword.contdelivery_short}} service instance in the following example is named `my_cd`. It is created with the professional pricing plan in the `default` resource group and in the `us-south` region. The user `user1@ibm.com` is assigned the Manager role in the IAM access policy for the service instance.
 
@@ -95,7 +95,7 @@ Before you begin, make sure that you have the [required access](/docs/Continuous
    
 6. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, expand the Developer tools section, then select the {{site.data.keyword.contdelivery_short}} service instance that you created and note the instance ID.
 
-7. Verify that the access policy is successfully assigned. For more information about assigning access policies, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
+7. Verify that the access policy is successfully assigned. For more information about assigning access policies, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console&interface=ui).
 
 8. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, expand the Developer tools section, then select the toolchain resource that you created and note the instance ID.
 

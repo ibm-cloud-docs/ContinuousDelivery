@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-05-31"
+  years: 2015, 2024
+lastupdated: "2024-04-17"
 
 keywords: troubleshoot, GitHub integration, Git Repos and Issue Tracking integration, GitLab project, tool integrations
 
@@ -88,7 +88,7 @@ Instead of creating a {{site.data.keyword.gitrepos}} tool integration, create a 
 
    c. Type the Root URL of the custom GitLab server.
 
-   d. Enter a personal access token for your custom GitLab server. If you don't have a personal access token, [create one](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat).
+   d. Enter a personal access token for your custom GitLab server. If you don't have a personal access token, [create one](/docs/ContinuousDelivery?topic=ContinuousDelivery-git_working#create_pat).
 
 1. If you have a GitLab repo and want to use it, for the repository type, click **Existing** and type the URL.
 1. If you want to use a new GitLab repo, type a name for the repo, type the URL for the repo that you are cloning or forking, and select the repository type:
@@ -101,10 +101,10 @@ Instead of creating a {{site.data.keyword.gitrepos}} tool integration, create a 
 
 1. If you want to create a public repo on the server, clear the **Make this repository private** checkbox.
 1. If you want to use GitLab's Issues for issue tracking, select the **Enable GitLab Issues** checkbox.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/cloud/blog/announcements/track-code-deployed-toolchains/){: external}.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** checkbox. For more information, see [Track where your code is deployed with toolchains](https://www.ibm.com/blog/announcement/track-code-deployed-toolchains/){: external}.
 1. Click **Create Integration**.
 
-For more information about configuring a GitLab tool integration, see [Configuring GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-gitlab).
+For more information about configuring a GitLab tool integration, see [Configuring GitLab](/docs/ContinuousDelivery?topic=ContinuousDelivery-gitlab).
 
 
 ## Why can't I clone my {{site.data.keyword.gitrepos}} repo over https?
@@ -119,7 +119,7 @@ You try to push or clone a repo from the command line by using https and cannot 
 {{site.data.keyword.gitrepos}} uses a single sign-on mechanism that does not support Git authentication that uses a user name and password on the command line.
 {: tsCauses}
 
-To perform Git operations such as clone or push, you must use a personal access token or an SSH key. For more information about creating a personal access token or SSH key, see the [Getting started tutorial](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication).
+To perform Git operations such as clone or push, you must use a personal access token or an SSH key. For more information about creating a personal access token or SSH key, see the [Getting started tutorial](/docs/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication).
 {: tsResolve}
 
 ## Why am I prompted to authenticate when I try to clone my {{site.data.keyword.gitrepos}} repo by using SSH?
@@ -181,7 +181,7 @@ You have a large repo that is greater than 1 GB. The repo might also contain bin
 You can use any of the following methods to resolve this problem:
 {: tsResolve}
 
-* Reduce the size of your {{site.data.keyword.gitrepos}} repo. For more information about reducing the size of your repo, see [Reducing the repository size using Git](https://docs.gitlab.com/ce/user/project/repository/reducing_the_repo_size_using_git.html){: external}.
+* Reduce the size of your {{site.data.keyword.gitrepos}} repo. For more information about reducing the size of your repo, see [Reducing the repository size using Git](https://docs.gitlab.com/ee/user/project/repository/reducing_the_repo_size_using_git.html){: external}.
 
 * Use SSH to bypass the default clone timeout of 180 seconds.
 

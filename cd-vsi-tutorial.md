@@ -1,9 +1,8 @@
 ---
 
 copyright:
-   years: 2021, 2022
-lastupdated: "2022-10-06"
-lasttested: "2021-05-13"
+   years: 2021, 2024
+lastupdated: "2024-04-16"
 
 keywords: Virtual Server Instance, code repositories, DevOps Insights, non-containerized, java application, vsi, gitops, toolchain, pipeline, Virtual Machine, vm
 
@@ -15,13 +14,7 @@ completion-time: 40m
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}
-{:tip: .tip}
-{:external: target="_blank" .external}
-{:step: data-tutorial-type='step'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Develop and deploy an application to a Virtual Machine
 {: #tutorial-cd-vsi}
@@ -31,7 +24,7 @@ completion-time: 40m
 This tutorial demonstrates how to set up a {{site.data.keyword.contdelivery_short}} toolchain and deliver a simple application (app) to a Virtual Machine. You can set up source control, and then build, test, and deploy the code to different deployment stages.
 {: shortdesc}
 
-By default, the toolchain uses a sample Maven-based Java Hello World app, but you can also bring your own app and link to it instead. This toolchain is configured with pipelines for continuous integration and continuous delivery with [Code Risk Analyzer (CRA)](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-configure-cra-repos), source control, issue tracking, and online editing.
+By default, the toolchain uses a sample Maven-based Java Hello World app, but you can also bring your own app and link to it instead. This toolchain is configured with pipelines for continuous integration and continuous delivery with [Code Risk Analyzer](/docs/code-risk-analyzer-cli-plugin?topic=code-risk-analyzer-cli-plugin-cra-cli-plugin), source control, issue tracking, and online editing.
 
 The application code is stored in the application source control repository (repo). The build and deploy scripts are stored in the pipeline source control repository. You can customize the build and deploy scripts to meet the development requirements for the app.
 
@@ -58,7 +51,7 @@ Set up and configure the Virtual Server Instance for the toolchain to deploy the
 
 1. [Set up the Virtual Server Instance on IBM Cloud](/docs/vpc?topic=vpc-creating-virtual-servers).
 2. [Reserve a floating IP address](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console#reserving-a-floating-ip-address) to make the Virtual Server Instance accessible over the public internet. Alternatively, you can use the available DNS entry. This tutorial uses a floating IP address.
-3. Create the user (preferably non-privileged) and [SSH keys](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys#ssh-keys) for the Virtual Server Instance.
+3. Create the user (preferably non-privileged) and [SSH keys](/docs/vpc?topic=vpc-ssh-keys&interface=ui) for the Virtual Server Instance.
 4. Configure [Security Groups](/docs/security-groups?topic=security-groups-getting-started) for the Virtual Server Instance. Enable the toolchain to perform health checks on the deployed app by adding an inbound rule for `TCP` to allow port `8080` so that it can access the app endpoint. For more information about adding an inbound rule, see [Managing security groups](/docs/security-groups?topic=security-groups-managing-sg).
 5. Ensure that Java&trade; SDK is installed on your VM or use the following command to install it: `yum install -y tar java`.
 6. Optional. If you need to store secrets in `Key Protect`, perform base64 encoding of the value. For more information about the required command details, see [Image signing: generating a GPG key](/docs/devsecops?topic=devsecops-devsecops-image-signing).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-03-13"
+lastupdated: "2024-04-17"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -109,7 +109,7 @@ The following table lists and describes each of the variables that are used in t
 {: terraform}
 
 1. To install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform, follow the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
-1. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create a pipeline by using the HashiCorp Configuration Language. For more information about using this configuration language, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
+1. Create a Terraform configuration file that is named `main.tf`. In this file, add the configuration to create a pipeline by using the HashiCorp Configuration Language. For more information about using this configuration language, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
 
    A private worker must belong to a toolchain. You can also create toolchains by [using Terraform](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started&interface=terraform).
    {: important}
@@ -233,7 +233,7 @@ Complete the following steps to update the API key for use with the {{site.data.
 1. Specify your new API key. It is recommended that you do not use the API key directly. Instead, use a Secrets Manager to store the API key and add a reference to that stored key in your private worker configuration.
 1. Click **Save Integration**.
 
-You can revoke access to a private worker by deleting the corresponding API key. Due to caching policies and invalidation, it might take up to 60 minutes for a deleted API key to prevent jobs from running. For more information about deleting an API key, see [Deleting an API key for a service ID](/docs/account?topic=account-serviceidapikeys#delete_service_key).
+You can revoke access to a private worker by deleting the corresponding API key. Due to caching policies and invalidation, it might take up to 60 minutes for a deleted API key to prevent jobs from running. For more information about deleting an API key, see [Deleting an API key for a service ID](/docs/account?topic=account-serviceidapikeys#delete_service_key&interface=ui).
 {: tip}
 
 ## Deleting a {{site.data.keyword.deliverypipeline}} Private Worker
@@ -437,7 +437,7 @@ The image URL for the pipeline private worker is `icr.io/continuous-delivery/pip
 
 | Pipeline private worker image version | {{site.data.keyword.registrylong}} version | Known vulnerabilities
 |:-----------------|:-----------------|:-----------------|
-| 0.17.3 | `icr.io/continuous-delivery/pipeline/pipeline-private-worker:0.17.3` | - |
+| 0.17.4 | `icr.io/continuous-delivery/pipeline/pipeline-private-worker:0.17.3` | - |
 {: caption="Table 4. Private Worker images" caption-side="top"}
 
 The private worker installation also pulls the following supporting open source images to the cluster:

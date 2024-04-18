@@ -8,7 +8,7 @@ toc:
     audience: service
     href: /docs/ContinuousDelivery
     console-page: "/devops/toolchains"
-    product-page: "https://www.ibm.com/cloud/continuous-delivery"
+    product-page: "https://www.ibm.com/products/continuous-delivery"
     path: ContinuousDelivery
     label: Continuous Delivery
   entries: 
@@ -18,10 +18,10 @@ toc:
       - index.md
       - link:
           label: What is continuous delivery?
-          href: https://www.ibm.com/cloud/learn/continuous-delivery
+          href: https://www.ibm.com/topics/continuous-delivery
       - link:
           label: Why IBM Cloud Continuous Delivery?
-          href: https://www.ibm.com/cloud/continuous-delivery    
+          href: https://www.ibm.com/products/continuous-delivery    
       - cd_about.md
       - devops_intro.md
       - garage_method.md
@@ -39,9 +39,6 @@ toc:
   - navgroup: 
       id: tutorial
       topics: 
-      - link:
-          label: Explore DevOps Insights
-          href: https://www.ibm.com/cloud/architecture/tutorials/explore-ibm-cloud-devops-insights
       - cd-kubernetes-tutorial.md
       - cd-satellite-tutorial.md
       - cd-only-satellite-tutorial.md
@@ -120,7 +117,7 @@ toc:
           - install_private_workers.md
           - private_workers.md
           - pipeline_externalized_agent.md
-          - using-tekton-chains.md
+          - slsa.md
       - topicgroup: 
               label: Git source control
               topics: 
@@ -216,7 +213,7 @@ toc:
           - git_subnet_ranges.md
       - link:
           label: Using Jenkins to integrate DevOps Insights
-          href: https://wiki.jenkins.io/display/JENKINS/IBM+Cloud+DevOps+Plugin
+          href: https://plugins.jenkins.io/ibm-cloud-devops
       - topicgroup:
           label: Command reference
           topics:
@@ -234,7 +231,7 @@ toc:
           topics:
           - link:
               label: IBM Cloud Garage Method
-              href: https://www.ibm.com/garage/method
+              href: https://www.ibm.com/garage
   - navgroup:
       id: help
       topics: 

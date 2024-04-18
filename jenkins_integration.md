@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-04-19"
+  years: 2015, 2024
+lastupdated: "2024-04-16"
 
 keywords: tool integrations, IBM Cloud Public, Jenkins
 
@@ -37,9 +37,9 @@ Configure Jenkins to automate the continuous building, testing, and deployment o
 1. Copy the generated toolchain webhook.
 1. In your Jenkins server, complete these steps:
 
-   a. [Install the IBM Cloud DevOps plug-in](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Installingtheplugin){: external}.
+   a. [Install the IBM Cloud DevOps plug-in](https://plugins.jenkins.io/ibm-cloud-devops#IBMCloudDevOpsPlugin-Installingtheplugin){: external}.
 
-   b. [Configure Jenkins to notify toolchains](https://wiki.jenkins-ci.org/display/JENKINS/IBM+Cloud+DevOps+Plugin#IBMCloudDevOpsPlugin-Notifyingtoolchains){: external}.
+   b. [Configure Jenkins to notify toolchains](https://plugins.jenkins.io/ibm-cloud-devops#IBMCloudDevOpsPlugin-Notifyingtoolchains){: external}.
 
    c. Return to the Configure the Integration page for the Jenkins tool integration.
 
@@ -63,9 +63,3 @@ You must specify the `tool_type_id` property in the request body with the `jenki
 | webhook_url | optional, updatable | String | webhook_url | The webhook to use in your Jenkins jobs to send notifications to other tools in your toolchain. |
 {: caption="Table 1. Jenkins tool integration parameters" caption-side="bottom"}
 
-## Learn more about Jenkins
-{: #learn_jenkins}
-
-To learn more about Jenkins, see the [Jenkins article](https://www.ibm.com/garage/method/practices/code/tool_jenkins/){: external} on the IBM Cloud Garage Method or take this tutorial:
-
-* [Ensure quality deployments by using the "Deployment Risk Analytics with GitHub and Jenkins" toolchain](https://www.ibm.com/cloud/architecture/tutorials/ensure-quality-deployment-risk-analytics-with-github-and-jenkins-toolchain){: external}

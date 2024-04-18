@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-10-27"
+  years: 2015, 2024
+lastupdated: "2024-04-16"
 
 keywords: troubleshoot, private workers
 
@@ -10,19 +10,8 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:note:.deprecated}
-{:tip: .tip}
-{:important: .important}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Troubleshooting for Pipeline Private Workers
 {: #troubleshoot-pipeline-private-workers}
@@ -47,7 +36,7 @@ Your private worker is inactive. Inactive private workers cannot handle incoming
 There is an issue with your Kubernetes cluster and the worker cannot be contacted. Or, the version of the private worker that you are running is no longer supported.
 {: tsCauses}
 
-To activate your {{site.data.keyword.deliverypipeline}} private worker, [install](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers#install_pw) the private worker again. Then, [register](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers#register_pw) the {{site.data.keyword.deliverypipeline}} private worker on the Kubernetes cluster again.
+To activate your {{site.data.keyword.deliverypipeline}} private worker, [install](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers#install_pw) the private worker again. Then, [register](/docs/ContinuousDelivery?topic=ContinuousDelivery-install-private-workers#register_pw) the {{site.data.keyword.deliverypipeline}} private worker on the Kubernetes cluster again.
 {: tsResolve}
 
 ## I tried to install support for {{site.data.keyword.deliverypipeline}} Private Workers in Kubernetes. Why did the installation fail?
@@ -90,7 +79,7 @@ Deny "gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/webhook@sha256:da7
 The private worker installer pulls images from `icr.io`. Some platforms, such as IBM Cloud Private, do not allow these container registries on the default image policy.
 {: tsCauses}
 
-Make sure that the policy for pulling images in your cluster supports pulling images from `icr.io`. For example, if you are installing the private worker framework on {{site.data.keyword.cloud_notm}} Private, add those policies by using the {{site.data.keyword.cloud_notm}} Private Web console. For more information about managing image security enforcement by using the IBM Cloud Private Web console, see [Enforcing container image security](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/manage_images/image_security.html){: external}. For more information about managing image security enforcement by using Porteris, see [Portieris Policies](https://github.com/IBM/portieris/blob/master/POLICIES.md){: external}.
+Make sure that the policy for pulling images in your cluster supports pulling images from `icr.io`. For example, if you are installing the private worker framework on {{site.data.keyword.cloud_notm}} Private, add those policies by using the {{site.data.keyword.cloud_notm}} Private Web console. For more information about managing image security enforcement by using the IBM Cloud Private Web console, see [Enforcing container image security](https://www.ibm.com/docs/en/cloud-private/3.2.x?topic=images-enforcing-container-image-security){: external}. For more information about managing image security enforcement by using Porteris, see [Portieris Policies](https://github.com/IBM/portieris/blob/main/POLICIES.md){: external}.
 {: tsResolve}
 
 The following example shows how to use the IBM Cloud CLI to create the ClusterImagePolicy:

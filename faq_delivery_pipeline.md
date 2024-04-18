@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-10"
+  years: 2015, 2024
+lastupdated: "2024-04-16"
 
 keywords: Delivery Pipeline, tool integration, toolchains, yaml, pipeline jobs
 
@@ -58,7 +58,7 @@ For information about the environment properties and resources that are availabl
 
 You can use the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in to run a pipeline stage.
 
-1. [Install the {{site.data.keyword.cloud_notm}} developer tools CLI plug-in](/docs/cli?topic=cli-install-devtools-manually).
+1. [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 1. From the command line, run the following command to manually start your pipeline:
 
    ```text

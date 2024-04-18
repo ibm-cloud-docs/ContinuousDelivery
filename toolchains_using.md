@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-02-16"
+  years: 2015, 2024
+lastupdated: "2024-04-16"
 
 keywords: user management function, toolchains, tool integrations, user access
 
@@ -21,9 +21,9 @@ Open toolchains are available on {{site.data.keyword.cloud}}. You can use a tool
 ## Managing access to toolchains
 {: #managing_access_resource_groups}
 
-You can use the Identity and Access Management (IAM) service to manage user access to toolchains in resource groups. For more information about managing access control with IAM, see [Managing user access to toolchains in resource groups](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
+You can use the Identity and Access Management (IAM) service to manage user access to toolchains in resource groups. For more information about managing access control with IAM, see [Managing user access to toolchains in resource groups](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security).
 
-Users with access to toolchains might be counted as authorized users of the {{site.data.keyword.contdelivery_full}} service. For more information about how authorized users are counted, see [Plan limitations and usage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
+Users with access to toolchains might be counted as authorized users of the {{site.data.keyword.contdelivery_full}} service. For more information about how authorized users are counted, see [Plan limitations and usage](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 
 ## Organizing toolchains
 {: #organizing_toolchains}
@@ -88,7 +88,7 @@ When you delete a GitHub or {{site.data.keyword.gitrepos}} tool integration, the
    ```
    {: pre}
 
-3. Delete a toolchain by running the [`ibmcloud dev toolchain-delete`](/docs/ContinuousDelivery?topic=cli-idt-cli#toolchain-delete) command.
+3. Delete a toolchain by running the [`ibmcloud dev toolchain-delete`](/docs/cli?topic=cli-idt-cli#toolchain-delete) command.
 
    ```sh
    ibmcloud dev toolchain-delete TOOLCHAIN-NAME
@@ -228,7 +228,3 @@ The following table lists and describes each of the variables that are used in t
    ```
    {: pre}
 
-## Take a tutorial: Using toolchains
-{: #toolchain-tutorial}
-
-Try the [Add a toolchain to an app](https://www.ibm.com/cloud/architecture/tutorials/add-a-toolchain-to-an-app?task=2){: external} tutorial on the [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/garage/method){: external}.

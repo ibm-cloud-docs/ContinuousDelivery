@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2023
-lastupdated: "2023-06-05"
+  years: 2016, 2024
+lastupdated: "2024-04-16"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
 
@@ -23,7 +23,7 @@ The use of {{site.data.keyword.contdelivery_full}} is limited to the building, d
 ## Scope of a service instance
 {: #service_scope}
 
-You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){: external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, and {{site.data.keyword.DRA_short}} tool integrations. A service instance belongs to a [resource group](/docs/services/account?topic=account-rgs). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group meters and governs your usage of all of the toolchains in the same region and resource group.
+You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){: external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, and {{site.data.keyword.DRA_short}} tool integrations. A service instance belongs to a [resource group](/docs/account?topic=account-rgs). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group meters and governs your usage of all of the toolchains in the same region and resource group.
 
 You can have only one Lite service per account. It is recommended that you use the Professional plan if you want to work with toolchains in multiple resource groups, or within multiple regions.
 {: tip}
@@ -43,7 +43,7 @@ If your toolchain integrates {{site.data.keyword.gitrepos}} projects in the `ope
 The Lite plan is subject to limits. For more information about the Lite plan and the Professional plan, see the [service catalog](https://cloud.ibm.com/catalog/services/continuous-delivery){: external}.
 {: tip}
 
-You can maintain an activity log related to authorized users. For more information about viewing, managing, and auditing service-initiated and user-initiated activities in your {{site.data.keyword.contdelivery_full}} instances, see [{{site.data.keyword.at_full_notm}} events](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd-at-events).
+You can maintain an activity log related to authorized users. For more information about viewing, managing, and auditing service-initiated and user-initiated activities in your {{site.data.keyword.contdelivery_full}} instances, see [{{site.data.keyword.at_full_notm}} events](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-at-events).
  
 ### How are users counted for instances of {{site.data.keyword.contdelivery_short}} in resource groups?
 {: #count_users_rg}
@@ -61,7 +61,7 @@ Users with the Guest or Reporter roles are not automatically added to the author
 The specific activities that are used to automatically count users, and the method for counting those users might change over time. However, the process for counting users will continue to comply with the terms of {{site.data.keyword.contdelivery_short}} plans. You can also manually add users to the list of authorized users, at any time.
 {: important}
 
-For more information about using IAM to manage access to toolchains in a resource group or the toolchain itself, see [Managing user access to toolchains with Identity and Access Management](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). For more information about managing access to a {{site.data.keyword.gitrepos}} repo, see [Project's members](https://us-south.git.cloud.ibm.com/help/user/project/members/index.md){: external}.
+For more information about using IAM to manage access to toolchains in a resource group or the toolchain itself, see [Managing user access to toolchains with Identity and Access Management](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). For more information about managing access to a {{site.data.keyword.gitrepos}} repo, see [Project's members](https://us-south.git.cloud.ibm.com/help/user/project/members/index.md){: external}.
 
 The method that you use to organize toolchains within resource groups directly impacts user access and billing. When a user uses toolchains in multiple regions or resource groups, they are counted and billed for each {{site.data.keyword.contdelivery_short}} service instance within each unique pairing of region and resource group.
 {: tip}
@@ -143,7 +143,7 @@ As an alternative to the console, you can change the {{site.data.keyword.contdel
                       professional              plan         9ca4dc64-bc7b-4aba-9c1c-8bbf30ff127e
    ```
 
-2. Change the plan for your service instance by using the [`ibmcloud resource service-instance-update` command](/docs/cli/reference/ibmcloud?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_update).
+2. Change the plan for your service instance by using the [`ibmcloud resource service-instance-update` command](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_update).
 
    ```text
    ibmcloud resource service-instance-update <service_instance_name>

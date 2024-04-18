@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2022
-lastupdated: "2022-06-29"
+   years: 2022, 2024
+lastupdated: "2024-04-16"
 
 keywords: Satellite, satellite, tekton, pipeline, toolchain, CD, automate, automation, continuous delivery, DevOps, shift-left, shift left, secure DevOps, IBM Cloud
 
@@ -32,7 +32,7 @@ In this tutorial, you learn how to create an open toolchain by using {{site.data
 
 The toolchain that is used in this tutorial implements standard DevOps practices around continuous delivery capabilities. After you make sure that you meet all of the continuous integration requirements, this toolchain helps you to manage your deployments in {{site.data.keyword.cloud_notm}} {{site.data.keyword.satelliteshort}} locations. After you create clusters and associate them with a {{site.data.keyword.satelliteshort}} cluster group, you can create a toolchain to change your deployment source code and push the change to the GitHub repo. When you push changes to your repo, the Tekton-based delivery pipeline automatically deploys the code.
 
-[Tekton](https://www.ibm.com/cloud/blog/tekton-a-modern-approach-to-continuous-delivery){: external} is an open source, vendor-neutral, Kubernetes-native framework that you can use to build, test, and deploy apps. Tekton provides a set of shared components for implementing [continuous delivery](https://www.ibm.com/garage/method/practices/deliver/practice_continuous_delivery/){: external} systems. As an open source project, Tekton is managed by the [Continuous Delivery Foundation](https://cd.foundation/){: external}. The goal is to modernize continuous delivery by providing industry specifications for pipelines, workflows, and other building blocks. With Tekton, you can build, test, and deploy across cloud providers or on-premises systems by abstracting the underlying implementation details. Tekton pipelines are built into [{{site.data.keyword.contdelivery_short}}](https://www.ibm.com/cloud/blog/announcements/build-and-deliver-using-tekton-enabled-pipelines){: external}. For more information about the {{site.data.keyword.containerlong}}, see [{{site.data.keyword.containerlong}}](https://www.ibm.com/garage/method/practices/run/tool_ibm_container){: external}.
+[Tekton](https://www.ibm.com/blog/tekton-a-modern-approach-to-continuous-delivery/){: external} is an open source, vendor-neutral, Kubernetes-native framework that you can use to build, test, and deploy apps. Tekton provides a set of shared components for implementing continuous delivery systems. As an open source project, Tekton is managed by the [Continuous Delivery Foundation](https://cd.foundation/){: external}. The goal is to modernize continuous delivery by providing industry specifications for pipelines, workflows, and other building blocks. With Tekton, you can build, test, and deploy across cloud providers or on-premises systems by abstracting the underlying implementation details. Tekton pipelines are built into [{{site.data.keyword.contdelivery_short}}](https://www.ibm.com/blog/announcement/build-and-deliver-using-tekton-enabled-pipelines/){: external}.
 
 The template that is used in this tutorial works with the Standard plan for {{site.data.keyword.redhat_openshift_notm}}.
 {: tip}
@@ -174,7 +174,7 @@ If the API key has the required access, the following fields automatically load 
    You can immediately save the generated API key to an existing secrets vault of your choice.
    {: tip}
 
-* **Cluster namespace:** Specify a name for the [cluster namespace](https://docs.openshift.com/online/pro/dev_guide/projects.html#dev-guide-projects){: external} that you want to deploy the app to.
+* **Cluster namespace:** Specify a name for the [cluster namespace](https://access.redhat.com/support/policy/updates/openshift/online#dev-guide-projects){: external} that you want to deploy the app to.
 
 * **Branch:** Specify the Git branch of your source repo.
 
@@ -247,4 +247,4 @@ After your toolchain is set up and the {{site.data.keyword.deliverypipeline}} su
 
 Get help from the {{site.data.keyword.contdelivery_full}} development teams by joining us on [Slack](https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/){: external}.
 
-For more support options, see [Getting help and support for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-gettinghelp).
+For more support options, see [Getting help and support for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-help-and-support).

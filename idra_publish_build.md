@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-03-25"
+  years: 2019, 2024
+lastupdated: "2024-04-15"
 
 keywords: devops insights, publish, build, record, idra, test, tests, install, app, dashboard
 
@@ -10,14 +10,8 @@ subcollection: ContinuousDelivery
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
+{{site.data.keyword.attribute-definition-list}}
+
 
 # Publishing a build record (deprecated)
 {: #publish-build-idra}
@@ -37,7 +31,7 @@ You can publish a build record by using idra (deprecated) to integrate your {{si
 ## Before you begin
 {: #prereq-build-idra}
 
-You must configure {{site.data.keyword.deliverypipeline}} in your toolchain to build, test, and deploy. For more information, see [Configuring {{site.data.keyword.deliverypipeline}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline).
+You must configure {{site.data.keyword.deliverypipeline}} in your toolchain to build, test, and deploy. For more information, see [Configuring {{site.data.keyword.deliverypipeline}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline).
 
 
 ## Publishing a build record (deprecated)
