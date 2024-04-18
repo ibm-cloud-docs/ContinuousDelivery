@@ -117,7 +117,7 @@ toc:
           - install_private_workers.md
           - private_workers.md
           - pipeline_externalized_agent.md
-          - using-tekton-chains.md
+          - slsa.md
       - topicgroup: 
               label: Git source control
               topics: 

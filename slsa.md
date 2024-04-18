@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-10-26"
+lastupdated: "2024-04-17"
 
 keywords: private workers integration, delivery pipeline, tekton chains
 
@@ -10,10 +10,12 @@ subcollection: ContinuousDelivery
 
 ---
 
-# What is Tekton Chains?
-{: #tekton-chains-whatis}
+# What is SLSA?
+{: #slsa-whatis}
 
-Tekton Chains is a Kubernetes Custom Resource Definition (CRD) controller that you can use to manage your supply chain security in Tekton.
+Supply chain Levels for Software Artifacts (SLSA) is a security framework. SLSA is a checklist of standards and controls to prevent tampering, improve integrity, and secure packages and infrastructure in your projects, businesses, or enterprises. SLSA gets you from safe enough to being as resilient as possible, at any link in the chain.
+
+To achieve SLSA level 3, Tekton pipelines are using the Tekton Chains. Tekton Chains is a Kubernetes Custom Resource Definition (CRD) controller that you can use to manage your supply chain security in Tekton.
 For more information, see the [Tekton Chains documentation](https://github.com/tektoncd/chains).
 
 ## Setting up Tekton Chains on a private worker
@@ -131,7 +133,7 @@ Next, you need to set the private and public key pair that's used for signing by
 ## Triggering Tekton Chains
 {: #trigger-chains}
 
-To trigger Tekton Chains for your pipeline, add the task results to your Ttekton task definitions. You need two task results:
+To trigger Tekton Chains for your pipeline, add the task results to your Tekton task definitions. You need two task results:
 
 * one that has a name that matches `*_IMAGE_DIGEST`
 * one that has a name that matches `*_IMAGE_URL`
@@ -146,12 +148,12 @@ For example:
       description: The url of the built image
 ...
 ```
-Your task needs to set these two results within its script.
+Your task needs to set these two results within its script. You can also use any mechanism used by Tekton Chains.
 
 ## Pushing attestations to the image registry
 {: #push-attestations}
 
-By default, Tekton Chains is configured to save the attestation and signature to the oci registry and the Tekton CRDs. If you want to change the default behavior, edit the config map `chains-config` that's located in the `tekton-chains` namespace. For more information, see the [Tekton Chains documentation](https://github.com/tektoncd/chains).
+By default, Tekton Chains is configured to save the attestation and signature to the oci registry. If you want to change the default behavior, edit the config map `chains-config` that's located in the `tekton-chains` namespace. For more information, see the [Tekton Chains documentation](https://github.com/tektoncd/chains).
 
 ## Verifying signatures
 {: #verify-signatures}
@@ -160,4 +162,7 @@ To verify the signatures, you can use `cosign` as explained in the [Chains Signa
 
 When running on managed workers, you can retrieve the public key that's used for validation by using the private-worker endpoint `https://private-worker-service.{REGION}.devops.cloud.ibm.com/chains/public_key`. You can save the contents returned by this endpoint to a file and use that file as your public key in the `cosign` command line.
 
-To get the attestation itself, you can use the **Actions** > **Download** button from the pipeline run page. This will get you a zipped file that contains all logs, definitions, and a `chain_attestation_build-<pipeline run uuid>-<task name>.json` file that contains the attestation in the in-toto format.
+## Downloading signature and attestation
+{: #downloading-signature-and-attestation}
+
+To get the attestation or signature itself, you need to use the `cosign` tool with the command `download signature` or `download attestation`.

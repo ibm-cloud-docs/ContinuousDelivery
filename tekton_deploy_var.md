@@ -171,33 +171,6 @@ spec:
         runtimeClassName: kata-tiny
 ```
 
-## SLSA level 1 provenance
-{: #tekton_slsa_provenance}
-
-Supply chain Levels for Software Artifacts (SLSA), also known as "salsa", is a security framework. SLSA is a checklist of standards and controls to prevent tampering, improve integrity, and secure packages and infrastructure in your projects, businesses, or enterprises. SLSA gets you from safe enough to being as resilient as possible, at any link in the chain.
-
-To achieve SLSA level 1, the build process must be fully scripted and automated, and generate provenance. [Provenance](https://slsa.dev/spec/v1.0/provenance){: external} is metadata about how an artifact was built, including the build process, top-level source, and dependencies. Knowing the provenance allows software consumers to make risk-based security decisions. Provenance at SLSA level 1 does not protect against tampering, but it offers a basic level of code source identification and can aid in vulnerability management.
-
-To generate a provenance document in a {{site.data.keyword.contdelivery_short}} Tekton pipeline run, you must provide statements by using the `slsa-provenance-statement` statements that are emitted in the pipeline step logs.
-
-For example, in the steps that produce a build artifact, add the following statements:
-
-```yaml
-::slsa-provenance-statement::{"subject":[{"name": "icr.io/johndoe/hello-containers-slsa-demo:1-master-287919f9-20220915220023", "digest": {"sha256": "6038ec21bd927a6bb578f58eed3b43d389d27671f1c7bb44ac2c4d7260c3176d"}}]}
-::slsa-provenance-statement::{"materials":[{"uri":"https://registry.npmjs.org/@ampproject/remapping/-/remapping-2.2.0.tgz","digest":{"sha512":"qRmjj8nj9qmLTQXXmaR1cck3UXSRMPrbsLJAasZpF+t3riI71BXed5ebIOYwQntykeZuhjsdweEc9BxH5Jc26w=="}}]}
-::slsa-provenance-statement::{"materials":[{"uri":"https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.18.6.tgz","digest":{"sha512":"TDCmlK5eOvH+eH7cdAFlNXeVJqWIQ7gW9tY1GJIpUtFb6CmjVyq2VM3u71bOyR8CRihcCgMUYoDNyLXao3+70Q=="}}]}
-```
-
-The `slsa-provenance-statement` workflow command is defined as `::slsa-provenance-statement::` followed by a JSON format that defines a `subject` and `materials`. `Subject` is mandatory and no SLSA document is created without a `subject`. `Materials` is optional and corresponds to external resources that are used to produce the artifacts. 
-{: tip}
-
-For more information about the SLSA level 1 provenance field definitions, see the [SLSA website](https://slsa.dev/spec/v0.1/provenance#fields){: external}.
-
-### Retrieving the provenance document after a run
-{: #tekton_slsa_provenance_retrieve}
-
-To obtain provenance documents, download the pipeline run from the **Actions menu** on the **Pipeline run details** page. The provenance documents are part of the returned `.zip` file.
-
 ## Learn more about Tekton delivery pipelines
 {: #tekton_learn_more}
 
