@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-16"
+lastupdated: "2024-04-18"
 
 keywords: event, security, IBM, activity tracker, Continuous Delivery
 
@@ -31,7 +31,7 @@ The following table lists the actions that generate {{site.data.keyword.contdeli
 
 | Action | Description | 
 |:-----------------|:-----------------|
-| `continuous-delivery.auth-user.create` | Manually or automatically add authorized users. For more information about automatically adding authorized users, see [How are users counted for instances of {{site.data.keyword.contdelivery_short}} in resource groups?](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#how-are-users-counted-for-instances-of-continuous-delivery-in-resource-groups-) |
+| `continuous-delivery.auth-user.create` | Manually or automatically add authorized users. For more information about automatically adding authorized users, see [How are users counted for instances of {{site.data.keyword.contdelivery_short}} in resource groups?](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage&interface=ui#count_users_rg) |
 | `continuous-delivery.auth-user.read` | View the list of authorized users from the Manage tab of a {{site.data.keyword.contdelivery_short}} service instance |
 | `continuous-delivery.auth-user.delete` | Delete authorized users from the {{site.data.keyword.contdelivery_short}} service instance |
 {: caption="Table 1. Actions that generate {{site.data.keyword.contdelivery_short}} data events" caption-side="top"}

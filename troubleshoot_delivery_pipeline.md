@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-16"
+lastupdated: "2024-04-18"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -251,11 +251,11 @@ The computed pipeline definition size limit is 1 MB. If you encounter errors whe
 Pipelines that attempt an `oc login` can't log in to the target cluster that's running {{site.data.keyword.openshiftlong_notm}} version 4.13 and later.
 {: tsSymptoms}
 
-The issue is caused by change that is introduced in version 4.13 of [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-cs_versions_413#:~:text=Review%20information%20about%20version%204.13,based%20on%20Kubernetes%20version%201.26).  
+The issue is caused by change that is introduced in version 4.13 of [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-cs_versions_413).  
 {: tsCauses}
 
 To work around the issue, use the following process:
-```
+```text
 ibmcloud login --apikey "${IBMCLOUD_API_KEY}" -r "${REGION}" -g "${RESOURCE_GROUP}"
 ibmcloud oc cluster config --cluster "${CLUSTER_NAME}" --endpoint private --admin
 kubectl config current-context
@@ -285,7 +285,7 @@ To resolve this issue:
 {: troubleshoot}
 
 Classic pipelines that are executed from a trial account won't start due to the following error:
-```
+```text
 This type of account is not entitled to use managed workers. Private workers can be used instead or to gain access managed worker capability the account must be upgraded to a paid plan.
 ```
 {: tsSymptoms}

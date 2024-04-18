@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-17"
+lastupdated: "2024-04-18"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -168,6 +168,7 @@ The version of `yq` that is preinstalled in the images corresponds to the yq too
 
 ### Version 3.41
 {: #version_3_41}
+
 To view the contents of version 3.41, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions.  It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`.
 
 This image also contains the Terraform command-line interface (CLI).
@@ -320,6 +321,7 @@ v2.2.3
 
 ### Version 3.40
 {: #version_3_40}
+
 To view the contents of version 3.40, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions.  It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`.
 
 This image also contains the Terraform command-line interface (CLI).
@@ -469,6 +471,7 @@ on linux_amd64
 
 ### Version 3.39
 {: #version_3_39}
+
 To view the contents of version 3.39, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions.  It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`.
 
 This image also contains the Terraform command-line interface (CLI).
@@ -618,6 +621,7 @@ on linux_amd64
 
 ### Version 3.38
 {: #version_3_38}
+
 To view the contents of version 3.38, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions.  It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`.
 
 This image also contains the Terraform command-line interface (CLI).
@@ -767,6 +771,7 @@ on linux_amd64
 
 ### Version 3.37
 {: #version_3_37}
+
 To view the contents of version 3.37, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It does not provide the current LTS version of Node.js at the time that it was built as there is not ubi version of node.js `20.x` yet. It remains on node.js `18.x` for now. And it is based on `ubi8`.
 
 This image also contains the Terraform command-line interface (CLI).
@@ -916,6 +921,7 @@ on linux_amd64
 
 ### Version 3.36
 {: #version_3_36}
+
 To view the contents of version 3.36, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It does not provide the current LTS version of Node.js at the time that it was built as there is not ubi version of node.js `20.x` yet. It remains on node.js `18.x` for now. And it is based on `ubi8`.
 
 This image also contains the Terraform command-line interface (CLI).
@@ -1028,6 +1034,7 @@ on linux_amd64
 
 ### Version 3.35
 {: #version_3_35}
+
 To view the contents of version 3.35, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It does not provide the current LTS version of Node.js at the time that it was built as there is not ubi version of node.js `20.x` yet. It remains on node.js `18.x` for now. And it is based on `ubi8`.
 
 This image also contains the Terraform command-line interface (CLI).
@@ -1177,6 +1184,7 @@ on linux_amd64
 
 ### Version 3.34
 {: #version_3_34}
+
 To view the contents of version 3.34, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It does not provide the current LTS version of Node.js at the time that it was built as there is not ubi version of node.js `20.x` yet. It remains on node.js `18.x` for now. And it is based on `ubi8`.
 
 This image also contains the Terraform command-line interface (CLI).
@@ -1326,6 +1334,7 @@ on linux_amd64
 
 ### Version 3.33
 {: #version_3_33}
+
 To view the contents of version 3.33, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It does not provide the current LTS version of Node.js at the time that it was built as there is not ubi version of node.js `20.x` yet. It remains on node.js `18.x` for now. And it is based on `ubi8`.
 
 This image also contains the Terraform command-line interface (CLI).
@@ -1474,6 +1483,7 @@ on linux_amd64
 
 ### Version 3.32
 {: #version_3_32}
+
 To view the contents of version 3.32, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It does not provide the current LTS version of Node.js at the time that it was built as there is not ubi version of node.js `20.x` yet. It remains on node.js `18.x` for now. And it is based on `ubi8`.
 
 This image also contains the Terraform command-line interface (CLI).
@@ -1619,6 +1629,7 @@ on linux_amd64
 
 ### Version 3.31
 {: #version_3_31}
+
 To view the contents of version 3.31, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It does not provide the current LTS version of Node.js at the time that it was built as there is not ubi version of node.js `20.x` yet. It remains on node.js `18.x` for now. And it is based on `ubi8`.
 
 This image also contains the Terraform command-line interface (CLI).
@@ -1764,6 +1775,7 @@ on linux_amd64
 
 ### Version 3.30
 {: #version_3_30}
+
 To view the contents of version 3.30, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`.
 
 This image also contains the Terraform command-line interface (CLI).
@@ -1909,6 +1921,7 @@ on linux_amd64
 
 ### Version 3.29
 {: #version_3_29}
+
 To view the contents of version 3.29, from the running image, type `default_versions.sh`. The `3.x` branch provides images with the current tool versions. The current Java&trade; version is Java&trade; 17. Node.js no longer uses `nvm` to manage different node.js versions. It provides the current LTS version of Node.js at the time that it was built. And it is based on `ubi8`. 
 
 This image also contains the Terraform command-line interface (CLI).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-17"
+lastupdated: "2024-04-18"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -23,6 +23,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 ## 15 February 2024
 {: #ContinuousDelivery-feb1524}
 {: release-note}
+
 The Toolchain service can now be selected as a service reference when creating network zones under [context-based restrictions](/docs/account?topic=account-context-restrictions-whatis).
 
 ## 2 January 2024

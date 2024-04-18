@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-17"
+lastupdated: "2024-04-18"
 
 keywords: continuous delivery practices, DevOps practices, IBM Cloud Garage Method, learning resources, DevOps Insights
 
@@ -42,9 +42,3 @@ See the [Learning Lab](https://www.ibm.com/training/cloud){: external}.
 
 To see all of the {{site.data.keyword.cloud_notm}} Garage Method learning materials, see the [{{site.data.keyword.cloud_notm}} Garage Method Learning Lab](https://www.ibm.com/training/cloud){: external}.
 
-## {{site.data.keyword.DRA_short}} tutorials
-{: #gm_di_tutorials}
-
-[Integrate DevOps Insights with an IBM Continuous Delivery pipeline](https://www.ibm.com/cloud/architecture/tutorials/integrate-devops-insights-with-cd-pipeline){: external}. Learn how to configure a CD pipeline to send, build, and deploy information to {{site.data.keyword.DRA_short}} and define policies that analyze deployment risk.
-
-[Integrate DevOps Insights with Jenkins](https://www.ibm.com/cloud/architecture/tutorials/use-jenkins-plugin-to-post-data-to-devops-insights){: external}. Learn how to set up and use the {{site.data.keyword.DRA_short}} Jenkins plug-in to publish build, test, and deployment data to {{site.data.keyword.DRA_short}}.
