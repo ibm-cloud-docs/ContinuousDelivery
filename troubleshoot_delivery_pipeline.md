@@ -251,7 +251,7 @@ The computed pipeline definition size limit is 1 MB. If you encounter errors whe
 Pipelines that attempt an `oc login` can't log in to the target cluster that's running {{site.data.keyword.openshiftlong_notm}} version 4.13 and later.
 {: tsSymptoms}
 
-The issue is caused by change that is introduced in version 4.13 of [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-cs_versions_413#:~:text=Review information about version 4.13,based on Kubernetes version 1.26).  
+The issue is caused by change that is introduced in version 4.13 of [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-cs_versions_413).  
 {: tsCauses}
 
 To work around the issue, use the following process:
