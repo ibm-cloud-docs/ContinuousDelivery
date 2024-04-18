@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-04-16"
+lastupdated: "2024-04-18"
 
 keywords: tool integrations, IBM Cloud Public, IBM Secrets Manager
 
@@ -20,7 +20,7 @@ subcollection: ContinuousDelivery
 
 A *secret* is anything that provides access to sensitive information, such as an [API key](/docs/account?topic=account-manapikey). You can use the {{site.data.keyword.secrets-manager_short}} tool integration to access secrets, wherever they are required in the toolchain workflow.
 
-Before you configure a {{site.data.keyword.secrets-manager_short}} tool integration, make sure that you [provision an instance of the {{site.data.keyword.secrets-manager_short}} service](/docs/secrets-manager?topic=secrets-manager-create-instance#create-instance-ui&interface=ui).
+Before you configure a {{site.data.keyword.secrets-manager_short}} tool integration, make sure that you [provision an instance of the {{site.data.keyword.secrets-manager_short}} service](/docs/secrets-manager?topic=secrets-manager-create-instance&interface=ui#create-instance-ui&interface=ui).
 {: important}
 
 You can configure the {{site.data.keyword.secrets-manager_short}} tool integration to identify secrets by name or by [Cloud Resource Name (CRN)](/docs/account?topic=account-crn).

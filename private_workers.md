@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-17"
+lastupdated: "2024-04-18"
 
 keywords: private workers integration, delivery pipeline, Kubernetes cluster, API key, Service ID, pool of workers
 
@@ -233,7 +233,7 @@ Complete the following steps to update the API key for use with the {{site.data.
 1. Specify your new API key. It is recommended that you do not use the API key directly. Instead, use a Secrets Manager to store the API key and add a reference to that stored key in your private worker configuration.
 1. Click **Save Integration**.
 
-You can revoke access to a private worker by deleting the corresponding API key. Due to caching policies and invalidation, it might take up to 60 minutes for a deleted API key to prevent jobs from running. For more information about deleting an API key, see [Deleting an API key for a service ID](/docs/account?topic=account-serviceidapikeys#delete_service_key&interface=ui).
+You can revoke access to a private worker by deleting the corresponding API key. Due to caching policies and invalidation, it might take up to 60 minutes for a deleted API key to prevent jobs from running. For more information about deleting an API key, see [Deleting an API key for a service ID](/docs/account?topic=account-serviceidapikeys&interface=ui#delete_service_key&interface=ui).
 {: tip}
 
 ## Deleting a {{site.data.keyword.deliverypipeline}} Private Worker

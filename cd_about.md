@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-11-10"
+  years: 2015, 2024
+lastupdated: "2024-04-17"
 
 keywords: IBM Cloud Public, Use Developer Insights, toolchains, toolchain templates, toolchain tutorials, available regions, tools, Terraform 
 
@@ -49,4 +49,4 @@ You can use Terraform to define, create, and manage toolchains by using an *as c
 
 You can start with an {{site.data.keyword.cloud_notm}} Terraform Provider example, such as [ibm-cd-toolchain-simple-helm](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cd-toolchain-simple-helm){: external} or [ibm-cd-tekton-pipeline](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cd-tekton-pipeline){: external}, or you can write your own Terraform.
 
-To start working with Terraform, see [Setting up Terraform for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup). For more information about the Terraform resources and data sources for {{site.data.keyword.cloud_notm}} including the {{site.data.keyword.contdelivery_short}} service, see the [{{site.data.keyword.cloud_notm}} Provider Documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}.
+To start working with Terraform, see [Setting up Terraform for {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-terraform-setup). For more information about the Terraform resources and data sources for {{site.data.keyword.cloud_notm}} including the {{site.data.keyword.contdelivery_short}} service, see the [{{site.data.keyword.cloud_notm}} Provider Documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-03-19"
+lastupdated: "2024-04-18"
 
 keywords: endpoints, authentication, IBM Cloud Public
 
@@ -20,7 +20,7 @@ subcollection: ContinuousDelivery
 
 The following inventory of endpoints that do not require authentication is organized by the major components of the {{site.data.keyword.contdelivery_short}} service.  
 
-{{site.data.keyword.contdelivery_short}} is a regional service. In each of the documented endpoints, `[region]` represents the ID of [any region in which {{site.data.keyword.contdelivery_short}} is available](https://cloud.ibm.com/docs/overview?topic=overview-locations#mzr-table). For example, regions include `us-south`, `us-east`, `eu-gb`, and `jp-tok`.
+{{site.data.keyword.contdelivery_short}} is a regional service. In each of the documented endpoints, `[region]` represents the ID of [any region in which {{site.data.keyword.contdelivery_short}} is available](/docs/overview?topic=overview-locations#mzr-table). For example, regions include `us-south`, `us-east`, `eu-gb`, and `jp-tok`.
 {: tip}
 
 ## Code Risk Analyzer

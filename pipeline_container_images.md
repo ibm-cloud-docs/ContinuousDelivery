@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-17"
+lastupdated: "2024-04-18"
 
 keywords: Delivery Pipeline, container image
 
@@ -23,7 +23,7 @@ You can use either Classic pipelines or Tekton pipelines to build container imag
 
 You can use Classic pipelines to build container images by using the Container Registry job type. This job type provides context to access the {{site.data.keyword.registrylong}}, and uses the [Buildkit](https://github.com/moby/buildkit){: external} command from the job's [build script](https://github.com/open-toolchain/commons/blob/master/scripts/build_image_buildkit.sh). Several of the toolchain templates use this script to build container images.
 
-The [`cr build`](/docs/container-registry-cli-plugin?topic=container-registry-cli-plugin-containerregcli#bx_cr_build) command is deprecated. To migrate your existing build container image job from the `cr build` command to the [Buildkit](https://github.com/moby/buildkit){: external} command, edit your stage properties and select your build container image job. Replace the line that sources `build_image.sh` with `source <(curl -sSL "https://raw.githubusercontent.com/open-toolchain/commons/master/scripts/build_image_buildkit.sh")`. When you switch to use this script, you must provide a new `IBM_CLOUD_API_KEY` secret environment variable for the corresponding stage. This API key must have access to the namespace in which the image is built. If the `IBM_CLOUD_API_KEY` secret environment variable is not provided, 401 errors appear in the logs. For more information about this replacement, see the [{{site.data.keyword.registrylong}} is Deprecating Container Builds](https://www.ibm.com/blog/announcement/ibm-cloud-container-registry-deprecating-container-builds/){: external} blog post.
+The [`cr build`](/docs/Registry?topic=Registry-containerregcli#bx_cr_build) command is deprecated. To migrate your existing build container image job from the `cr build` command to the [Buildkit](https://github.com/moby/buildkit){: external} command, edit your stage properties and select your build container image job. Replace the line that sources `build_image.sh` with `source <(curl -sSL "https://raw.githubusercontent.com/open-toolchain/commons/master/scripts/build_image_buildkit.sh")`. When you switch to use this script, you must provide a new `IBM_CLOUD_API_KEY` secret environment variable for the corresponding stage. This API key must have access to the namespace in which the image is built. If the `IBM_CLOUD_API_KEY` secret environment variable is not provided, 401 errors appear in the logs. For more information about this replacement, see the [{{site.data.keyword.registrylong}} is Deprecating Container Builds](https://www.ibm.com/blog/announcement/ibm-cloud-container-registry-deprecating-container-builds/){: external} blog post.
 {: deprecated}
 
 ## Tekton pipelines

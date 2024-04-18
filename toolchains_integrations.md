@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-16"
+lastupdated: "2024-04-18"
 
 keywords: tool integrations, IBM Cloud Public, App Configuration, Artifactory, Bitbucket, Delivery Pipeline, DevOps Insights, Delivery Pipeline Private Worker, Event Notifications, Git Repos and Issue Tracking, GitHub, GitLab, HashiCorp Vault, Jenkins, JIRA, IBM Key Protect, IBM Secrets Manager, Nexus, Custom Tool, PagerDuty, Rational Team Concert, Sauce Labs, Security and Compliance Center, Slack, SonarQube
 
@@ -33,7 +33,7 @@ For more information about which tools and tool integrations are Financial Servi
 
 For more information about {{site.data.keyword.cloud_notm}} for Financial Services, see [{{site.data.keyword.cloud_notm}} Framework for Financial Services](/docs/framework-financial-services).
 
-The {{site.data.keyword.contdelivery_short}} service is Financial Services Validated in the same regions as {{site.data.keyword.cloud_notm}} for Financial Services. For more information about which multi-zone regions are designated as Financial Services Validated, see [Deploy your {{site.data.keyword.cloud_notm}} resources only to approved multizone regions](/docs/framework-financial-services?topic=framework-financial-services-best-practices#best-practices-financial-services-regions).
+The {{site.data.keyword.contdelivery_short}} service is Financial Services Validated in the same regions as {{site.data.keyword.cloud_notm}} for Financial Services. For more information about which multi-zone regions are designated as Financial Services Validated, see [Deploy your {{site.data.keyword.cloud_notm}} resources only to approved multizone regions](/docs/framework-financial-services?topic=framework-financial-services-about).
 {: important}
 
 ## Adding a tool integration by using the console
