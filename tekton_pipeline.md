@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-04-23"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -120,6 +120,8 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
    * **Tool integration**: A property key with a value that is resolved at run time from a toolchain tool integration. By default, the value is a JSON string representation of the tool integration. A specific field or subset of the object can be retrieved by providing a value for the optional JSON filter. For example, if a GitHub integration is selected and the JSON filter `parameters.repo_url` is specified, the value reflects the URL of the Git repo that is configured in the tool integration when the `PipelineRun` resource runs.
 
    You can access these properties in your Tekton pipeline resources. For more information about these properties, see [Tekton Pipelines environment and resources](/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton_environment).
+
+   Properties can be locked to prevent them from being overridden. Attempting to override a locked property at runtime will result in the run request being rejected. Locked properties are not displayed by default in the run side panel but can be displayed read-only by enabling the 'Show all properties' option.
 
 1. Click **Save**.
 
