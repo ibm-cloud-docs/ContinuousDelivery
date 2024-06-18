@@ -9,7 +9,7 @@ keywords: deployment strategies, tekton, pipeline, toolchain, CD, CI, automate, 
 subcollection: ContinuousDelivery
 
 content-type: tutorial
-services: apps, openshift, containers, ContinuousDelivery
+services: openshift, containers, ContinuousDelivery
 account-plan: paid
 completion-time: 30m
 
@@ -21,7 +21,7 @@ completion-time: 30m
 # Deploy an app on Kubernetes
 {: #tutorial-cd-kubernetes}
 {: toc-content-type="tutorial"}
-{: toc-services="apps, openshift, containers, ContinuousDelivery"}
+{: toc-services="openshift, containers, ContinuousDelivery"}
 {: toc-account-plan="paid"}
 {: toc-completion-time="30m"}
 
