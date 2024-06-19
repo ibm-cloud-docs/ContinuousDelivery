@@ -9,7 +9,7 @@ keywords: deployment strategies, Satellite, satellite, tekton, pipeline, toolcha
 subcollection: ContinuousDelivery
 
 content-type: tutorial
-services: satellite, apps, openshift, containers, ContinuousDelivery
+services: satellite, openshift, containers, ContinuousDelivery
 account-plan: paid
 completion-time: 30m
 
@@ -21,7 +21,7 @@ completion-time: 30m
 # Develop and deploy an app by using {{site.data.keyword.satellitelong_notm}}
 {: #tutorial-cd-satellite}
 {: toc-content-type="tutorial"}
-{: toc-services="satellite, apps, openshift, containers, ContinuousDelivery"}
+{: toc-services="satellite, openshift, containers, ContinuousDelivery"}
 {: toc-account-plan="paid"}
 {: toc-completion-time="30m"}
 
