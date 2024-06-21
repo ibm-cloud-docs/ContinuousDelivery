@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-06-19"
+lastupdated: "2024-06-21"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations, consolidated billing
 
@@ -59,9 +59,9 @@ By default, {{site.data.keyword.contdelivery_short}} service instances report us
 
 For example, a developer on a Git Repos and Issue Tracking project that is integrated into two toolchains in different resource groups will be counted and, under the Professional plan, billed for twice.
 
-You can enable the consolidated billing feature of a {{site.data.keyword.contdelivery_short}} service instance with the Professional plan in an enterprise account to cause the service to consolidate the authorized users from all {{site.data.keyword.contdelivery_short}} service instances in your enterprise hierarchy into one list. By using this feature, you can ensure that an authorized user email will only be counted and billed for once within your enterprise.
+You can enable the consolidated billing feature of a {{site.data.keyword.contdelivery_short}} service instance with the Professional plan in an enterprise account to cause the service to consolidate the authorized users from all {{site.data.keyword.contdelivery_short}} service instances in your enterprise hierarchy, within a region, into one list. By using this feature, you can ensure that an authorized user email will only be counted and billed for once within your enterprise and region.
 
-The consolidated billing feature is available with the {{site.data.keyword.contdelivery_short}} Professional plan only.
+The consolidated billing feature is available with the {{site.data.keyword.contdelivery_short}} Professional plan only. Consolidation occurs only within the region containing the {{site.data.keyword.contdelivery_short}} service instance which has the consolidated billing feature enabled.
 {: restriction}
 
 Consolidated billing is disabled by default.
@@ -85,7 +85,7 @@ To enable consolidated billing:
 8. In the **Enable consolidated billing** section, click the toggle button **On**.
 9. In the **Consolidated authorized users** section, review the list of **Email** addresses to ensure it is complete and correct.
 
-The **Consolidated billing** tab is available only in {{site.data.keyword.contdelivery_short}} service instances located within the enterprise account.
+The **Consolidated billing** tab is available only in {{site.data.keyword.contdelivery_short}} service instances with the Professional plan located within the enterprise account (the top most account in the enterprise hierarchy).
 {: tip}
 
 If you change the plan of a {{site.data.keyword.contdelivery_short}} service instance that has consolidated billing enabled from Professional to another plan, consolidated billing will be disabled automatically. To re-enable consolidated billing, you must first change the plan back to Professional.
@@ -94,13 +94,13 @@ If you change the plan of a {{site.data.keyword.contdelivery_short}} service ins
 ### How do you disable consolidated billing?
 {: #consolidated_billing_disable}
 
-1. Follow steps 1 to 7 in [How do you enable consolidated billing?](#enable_consolidate_billing).
+1. Follow steps 1 to 7 in [How do you enable consolidated billing?](#consolidated_billing_enable).
 2. In the **Enable consolidated billing** section, click the toggle button **Off**.
 
 ### How does consolidated billing work?
 {: #consolidated_billing_understanding}
 
-By default, each {{site.data.keyword.contdelivery_short}} service instance is responsible for reporting its own count of authorized users. When consolidated billing is enabled on a service instance in the enterprise account, that instance takes over responsibility for reporting the number of authorized users on behalf of all service instances in the enterprise hierarchy, including those in all child accounts, and including any other instances in other resource groups in the enterprise account. The instance gathers up the lists of authorized users from all instances in the hierarchy, eliminates duplicate email addresses, and reports a count of the resulting consolidated list of authorized user email addresses to the enterprise account.
+By default, each {{site.data.keyword.contdelivery_short}} service instance is responsible for reporting its own count of authorized users. When consolidated billing is enabled on a service instance in the enterprise account, that instance takes over responsibility for reporting the number of authorized users on behalf of all service instances in the same region and in the enterprise hierarchy, including those in all child accounts, and including any other instances in other resource groups in the enterprise account. The instance gathers up the lists of authorized users from all instances in the region and in the hierarchy, eliminates duplicate email addresses, and reports a count of the resulting consolidated list of authorized user email addresses to the enterprise account.
 
 To review the consolidated list of authorized user email addresses:
 
@@ -128,9 +128,9 @@ When consolidated billing is enabled on a service instance, the **Manage > Autho
 * Consolidated billing can be enabled on at most one service instance in the enterprise account.
 * Consolidated billing applies to authorized users only. Consolidated billing does not affect how pipeline runs are reported.
 * Consolidated billing is confined to a single given region. Usage cannot be consolidated from one region to another.
-* While consolidated billing is enabled on a {{site.data.keyword.contdelivery_short}} service instance, all other instances of the service in the enterprise hierarchy report zero authorized users, even though they continue to list their authorized users.
+* While consolidated billing is enabled on a {{site.data.keyword.contdelivery_short}} service instance, all other Professional plan instances of the service in the enterprise hierarchy report zero authorized users, even though they continue to list their authorized users.
 
-When consolidated billing is enabled on a {{site.data.keyword.contdelivery_short}} service instance, authorized user emails are consolidated from all other instances of the service in the enterprise hierarchy, including service instances that are [pending reclamation](/docs/account?topic=account-resource-reclamation). Before you delete an instance of the service that is participating in billing consolidation, you should manually delete the authorized users from the **Manage > Authorized users** tab of the instance.
+When consolidated billing is enabled on a {{site.data.keyword.contdelivery_short}} service instance, authorized user emails are consolidated from all other instances of the service in the enterprise hierarchy and in the same region, including service instances that are [pending reclamation](/docs/account?topic=account-resource-reclamation). Before you delete an instance of the service that is participating in billing consolidation, you should manually delete the authorized users from the **Manage > Authorized users** tab of the instance.
 {: important}
 
 ## Authorized users

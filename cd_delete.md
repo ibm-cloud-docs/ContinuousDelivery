@@ -26,7 +26,7 @@ To delete a {{site.data.keyword.contdelivery_short}} service instance, you must 
 Deleting an instance of the {{site.data.keyword.contdelivery_short}} service impacts your ability to use tool integrations within toolchains that are contained in the same region and resource group as the deleted service instance. For more information about this limitation, see [Plan limitations and usage](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
 {: important}
 
-If you delete an instance of {{site.data.keyword.contdelivery_short}} in an enterprise account that has [consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing) enabled, all {{site.data.keyword.contdelivery_short}} service instances in the enterprise hierarchy will revert to reporting their individual authorized user counts independently. The total number of authorized users being billed in your enterprise account may increase as a result.
+If you permanently delete an instance of {{site.data.keyword.contdelivery_short}} in an enterprise account that has [consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing) enabled, all {{site.data.keyword.contdelivery_short}} service instances in the enterprise hierarchy will revert to reporting their individual authorized user counts independently. The total number of authorized users being billed in your enterprise account may increase as a result.
 {: important}
 
 ## Deleting a {{site.data.keyword.contdelivery_short}} service instance by using the console

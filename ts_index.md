@@ -112,7 +112,7 @@ You can maintain an activity log related to authorized users. For more informati
 {: faq}
 {: support}
 
-The `AUTHORIZED_USERS_PER_MONTH` quantity is computed as an average of the number of authorized users per day. If authorized users are added or removed, the average will increase or decrease. For example, if a service instance has one authorized user for the first half of June, then a second authorized user is added on June 16, the `AUTHORIZED_USERS_PER_MONTH` quantity for the month of June will be `1.5`.
+The `AUTHORIZED_USERS_PER_MONTH` quantity is computed as an average of the number of authorized users per day. If authorized users are added or removed, the average will increase or decrease. For example, if a service instance has one authorized user for the first half of June, then a second authorized user is added on June 16, the `AUTHORIZED_USERS_PER_MONTH` quantity for the entire month of June will be `1.5`.
 
 
 ## Why is the `AUTHORIZED_USERS_PER_MONTH` quantity reported in {{site.data.keyword.cloud_notm}} Billing and usage equal to zero for my {{site.data.keyword.contdelivery_short}} service instance?
@@ -120,7 +120,7 @@ The `AUTHORIZED_USERS_PER_MONTH` quantity is computed as an average of the numbe
 {: faq}
 {: support}
 
-The service instance resides in an account in an enterprise, and is participating in consolidated billing. When consolidated billing is enabled on a {{site.data.keyword.contdelivery_short}} service instance in an enterprise account, only that instance will report a non-zero quantity of authorized users. All other {{site.data.keyword.contdelivery_short}} service instances in the enterprise hierarchy will report zero authorized users, even though they continue to list their authorized users. For more information about consolidated billing, see [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing).
+The service instance resides in an account in an enterprise, and is participating in consolidated billing. When consolidated billing is enabled on a {{site.data.keyword.contdelivery_short}} service instance in an enterprise account, only that instance will report a non-zero quantity of authorized users. All other {{site.data.keyword.contdelivery_short}} service instances in the enterprise hierarchy and in the same region will report zero authorized users, even though they continue to list their authorized users. For more information about consolidated billing, see [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing).
 
 
 ## Can I avoid being billed for the same authorized users in multiple instances of the {{site.data.keyword.contdelivery_short}} service?
@@ -128,7 +128,7 @@ The service instance resides in an account in an enterprise, and is participatin
 {: faq}
 {: support}
 
-If your {{site.data.keyword.contdelivery_short}} service instances are organized into an enterprise, you can enable consolidated billing on a {{site.data.keyword.contdelivery_short}} service instance in the enterprise account so that authorized users are only reported for billing once within the enterprise. For more information about consolidated billing, see [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing).
+If your {{site.data.keyword.contdelivery_short}} service instances are organized into an enterprise, you can enable consolidated billing on a {{site.data.keyword.contdelivery_short}} service instance in the enterprise account so that authorized users are only reported for billing once for all service instances within the enterprise and in the same region. For more information about consolidated billing, see [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing).
 
 
 ## Can I manage {{site.data.keyword.contdelivery_short}} service instances by using Terraform?

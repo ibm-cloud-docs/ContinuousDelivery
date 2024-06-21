@@ -57,7 +57,7 @@ For {{site.data.keyword.contdelivery_short}}, the following actions exist:
 | resource-controller.instance.update_plan | Change the plan for the {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor |
 | resource-controller.instance.delete | Delete a {{site.data.keyword.contdelivery_short}} service instance from a resource group. | Administrator, Editor |
 | resource-controller.instance.retrieve | View a {{site.data.keyword.contdelivery_short}} service instance in a resource group. | Administrator, Editor, Operator, Viewer |
-| continuous-delivery.consolidated-auth-users.list | View the consolidated authorized users list on the Manage tab within the {{site.data.keyword.contdelivery_short}} service instance. | Administrator, Editor, Operator, Viewer |
+| continuous-delivery.consolidated-auth-users.list | View the consolidated authorized users list on the Manage tab within the {{site.data.keyword.contdelivery_short}} service instance. | Administrator, Manager, Editor, Operator, Viewer |
 | continuous-delivery.instance.add-auth-users | Add entries to the Authorized Users list on the Manage tab within the {{site.data.keyword.contdelivery_short}} service instance. | Administrator, Writer, Manager |
 | continuous-delivery.instance.remove-auth-users | Remove entries from the Authorized Users list on the Manage tab within the {{site.data.keyword.contdelivery_short}} service instance. | Administrator, Writer, Manager |
 | continuous-delivery.instance.config-auth-users | Reserved for future use. | Administrator, Manager |
