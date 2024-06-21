@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-06-19"
 
 keywords: event, security, IBM, activity tracker, Continuous Delivery
 
@@ -27,6 +27,14 @@ As a security officer, auditor, or manager, you can use the Activity Tracker ser
 ## Events for {{site.data.keyword.contdelivery_short}}
 {: #cd-events}
 
+The following table lists the actions that generate {{site.data.keyword.contdelivery_short}} management events:
+
+| Action | Description | 
+|:-----------------|:-----------------|
+| `continuous-delivery.settings.read` | View the settings of a {{site.data.keyword.contdelivery_short}} service instance |
+| `continuous-delivery.settings.update` | Update the settings of a {{site.data.keyword.contdelivery_short}} service instance |
+{: caption="Table 1. Actions that generate {{site.data.keyword.contdelivery_short}} management events" caption-side="top"}
+
 The following table lists the actions that generate {{site.data.keyword.contdelivery_short}} data events:
 
 | Action | Description | 
@@ -34,7 +42,8 @@ The following table lists the actions that generate {{site.data.keyword.contdeli
 | `continuous-delivery.auth-user.create` | Manually or automatically add authorized users. For more information about automatically adding authorized users, see [How are users counted for instances of {{site.data.keyword.contdelivery_short}} in resource groups?](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage&interface=ui#count_users_rg) |
 | `continuous-delivery.auth-user.read` | View the list of authorized users from the Manage tab of a {{site.data.keyword.contdelivery_short}} service instance |
 | `continuous-delivery.auth-user.delete` | Delete authorized users from the {{site.data.keyword.contdelivery_short}} service instance |
-{: caption="Table 1. Actions that generate {{site.data.keyword.contdelivery_short}} data events" caption-side="top"}
+| `continuous-delivery.consolidated-auth-users.list` | View the list of consolidated authorized users from the Manage tab of a {{site.data.keyword.contdelivery_short}} service instance |
+{: caption="Table 2. Actions that generate {{site.data.keyword.contdelivery_short}} data events" caption-side="top"}
 
 ## Events for toolchains
 {: #toolchain-events}
@@ -50,7 +59,7 @@ The following table lists the actions that generate toolchain management events:
 | `toolchain.tool-instance.undeploy` | Remove a tool integration from a toolchain |
 | `toolchain.instance-key-state.update` | Update the root key in the key management service (KMS) provider that the toolchain uses. For example, enable, disable, or rotate a root key in a KMS provider. |
 | `toolchain.instance.unwrap` | Unwrap a wrapped Data Encryption Key (wDEK) in order to encrypt or decrypt customer personal information |
-{: caption="Table 2. Actions that generate toolchain management events" caption-side="top"}
+{: caption="Table 3. Actions that generate toolchain management events" caption-side="top"}
 
 The following table lists the actions that generate toolchain data events:
 
@@ -61,7 +70,7 @@ The following table lists the actions that generate toolchain data events:
 | `toolchain.tool-instance.read` | View the configuration of a tool integration | 
 | `toolchain.tool-instance.update` | Save configuration changes to a tool integration | 
 | `toolchain.tool-instance.delete` | Remove a tool integration from a toolchain. This event is always preceded by the toolchain.tool-instance.undeploy event. |
-{: caption="Table 3. Actions that generate toolchain data events" caption-side="top"}
+{: caption="Table 4. Actions that generate toolchain data events" caption-side="top"}
 
 Activity Tracker events are different from client bespoke toolchain events. When you invoke the [POST /toolchains/{toolchain_id}/events](https://cloud.ibm.com/apidocs/toolchain#create-toolchain-event){: external} API to send a bespoke toolchain event, the toolchain sends a notification event to any instances of {{site.data.keyword.en_short}} that are integrated into the toolchain. In addition, the toolchain sends an Activity Tracker event that serves as a record of the API having been invoked. {: tip}
 
@@ -77,7 +86,7 @@ The following table lists the actions that generate {{site.data.keyword.DRA_shor
 | `toolchain.insights-tag.update` | Update a tag |
 | `toolchain.insights-tag.delete` | Delete a tag |
 | `toolchain.insights-decision.evaluate` |Make a gate decision on a build  |
-{: caption="Table 4. Actions that generate {{site.data.keyword.DRA_short}} management events" caption-side="top"}
+{: caption="Table 5. Actions that generate {{site.data.keyword.DRA_short}} management events" caption-side="top"}
 
 The following table lists the actions that generate {{site.data.keyword.DRA_short}} data events:
 
@@ -93,7 +102,7 @@ The following table lists the actions that generate {{site.data.keyword.DRA_shor
 | `toolchain.insights-data-environment.delete` | Delete data for a specific environment |
 | `toolchain.insights-data-application.delete` | Delete data for a specific application |
 | `toolchain.insights-data-branch.delete` | Delete data for a specific application and branch |
-{: caption="Table 5. Actions that generate {{site.data.keyword.DRA_short}} data events" caption-side="top"}
+{: caption="Table 6. Actions that generate {{site.data.keyword.DRA_short}} data events" caption-side="top"}
 
 ## Events for {{site.data.keyword.deliverypipeline}}
 {: #pipeline-events}
@@ -104,7 +113,7 @@ The following table lists the actions that generate {{site.data.keyword.delivery
 |:-----------------|:-----------------|
 | `toolchain.pipeline.create` | Create a delivery pipeline or a Tekton pipeline for a toolchain |
 | `toolchain.pipeline-run.create` | Trigger a delivery pipeline or a Tekton pipeline to run manually or by using Git or a timer |
-{: caption="Table 6. Actions that generate {{site.data.keyword.deliverypipeline}} management events" caption-side="top"}
+{: caption="Table 7. Actions that generate {{site.data.keyword.deliverypipeline}} management events" caption-side="top"}
 
 The following table lists the actions that generate {{site.data.keyword.deliverypipeline}} data events:
 
@@ -116,7 +125,7 @@ The following table lists the actions that generate {{site.data.keyword.delivery
 | `toolchain.pipeline-run.read` | View the run logs for a delivery pipeline or a Tekton pipeline in the Tekton dashboard |
 | `toolchain.pipeline-run.update` | Update the delivery pipeline when a job completes within a stage or a user cancels a stage. Because the customer data that is included in a typical update might contain secret data, log output, large data, and more, this event does not include the `InitialValue` and `newValue` values. |
 | `toolchain.pipeline-run.delete` | Delete the delivery pipeline when a pipeline job run is deleted by the {{site.data.keyword.contdelivery_short}} service. The delivery pipeline retains a limited number of runs.  |
-{: caption="Table 7. Actions that generate {{site.data.keyword.deliverypipeline}} data events" caption-side="top"}
+{: caption="Table 8. Actions that generate {{site.data.keyword.deliverypipeline}} data events" caption-side="top"}
 
 ## Viewing events
 {: #cd_at_ui}
@@ -156,4 +165,4 @@ The following table lists and describes the root actions that prompt user emails
 | `toolchain.pipeline-stage.start` | Add user emails when a delivery pipeline stage starts. If the pipeline stage is manually started, the email of the user who started the pipeline is added. If a pipeline stage is triggered by a change to a repository (repo) in the {{site.data.keyword.gitrepos}} tool integration, multiple emails that correspond to users with Developer (or greater) access to the repo might be added. The `root-action-service-instance` CRN identifies the toolchain that contains the pipeline. |
 | `toolchain.pipeline.read` | Add a user email when the user views a delivery pipeline. The `root-action-service-instance` CRN identifies the toolchain that contains the pipeline.  |
 | `toolchain.pipeline.update` | Add a user email when the user edits a delivery pipeline. The `root-action-service-instance` CRN identifies the toolchain that contains the pipeline.  |
-{: caption="Table 8. Actions that add or remove user emails from the authorized users list" caption-side="top"} 
+{: caption="Table 9. Actions that add or remove user emails from the authorized users list" caption-side="top"} 

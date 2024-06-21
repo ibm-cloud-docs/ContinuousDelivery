@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-16"
+lastupdated: "2024-06-19"
 
 keywords: error message, Lite plan, toolchains, IBM Cloud
 
@@ -105,6 +105,30 @@ You can remove authorized users from the {{site.data.keyword.contdelivery_short}
 * Remove Developer access from all {{site.data.keyword.gitrepos}} repos that are attached to all of the toolchains in the resource group.
 
 You can maintain an activity log related to authorized users. For more information about viewing, managing, and auditing service-initiated and user-initiated activities in your {{site.data.keyword.contdelivery_full}} instances, see [{{site.data.keyword.at_full_notm}} events](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-at-events). For more information about managing authorized users, see [Authorized users](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#authorized_users).
+
+
+## Why is the `AUTHORIZED_USERS_PER_MONTH` quantity reported in {{site.data.keyword.cloud_notm}} Billing and usage different from the actual number of authorized users listed for my {{site.data.keyword.contdelivery_short}} service instance?
+{: #auth_user_counting}
+{: faq}
+{: support}
+
+The `AUTHORIZED_USERS_PER_MONTH` quantity is computed as an average of the number of authorized users per day. If authorized users are added or removed, the average will increase or decrease. For example, if a service instance has one authorized user for the first half of June, then a second authorized user is added on June 16, the `AUTHORIZED_USERS_PER_MONTH` quantity for the month of June will be `1.5`.
+
+
+## Why is the `AUTHORIZED_USERS_PER_MONTH` quantity reported in {{site.data.keyword.cloud_notm}} Billing and usage equal to zero for my {{site.data.keyword.contdelivery_short}} service instance?
+{: #auth_user_zero}
+{: faq}
+{: support}
+
+The service instance resides in an account in an enterprise, and is participating in consolidated billing. When consolidated billing is enabled on a {{site.data.keyword.contdelivery_short}} service instance in an enterprise account, only that instance will report a non-zero quantity of authorized users. All other {{site.data.keyword.contdelivery_short}} service instances in the enterprise hierarchy will report zero authorized users, even though they continue to list their authorized users. For more information about consolidated billing, see [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing).
+
+
+## Can I avoid being billed for the same authorized users in multiple instances of the {{site.data.keyword.contdelivery_short}} service?
+{: #avoid_multiple_billing}
+{: faq}
+{: support}
+
+If your {{site.data.keyword.contdelivery_short}} service instances are organized into an enterprise, you can enable consolidated billing on a {{site.data.keyword.contdelivery_short}} service instance in the enterprise account so that authorized users are only reported for billing once within the enterprise. For more information about consolidated billing, see [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing).
 
 
 ## Can I manage {{site.data.keyword.contdelivery_short}} service instances by using Terraform?

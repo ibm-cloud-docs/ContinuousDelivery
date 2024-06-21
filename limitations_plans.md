@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-04-16"
+lastupdated: "2024-06-19"
 
-keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations
+keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations, consolidated billing
 
 subcollection: ContinuousDelivery
 
@@ -23,24 +23,125 @@ The use of {{site.data.keyword.contdelivery_full}} is limited to the building, d
 ## Scope of a service instance
 {: #service_scope}
 
-You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){: external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, and {{site.data.keyword.DRA_short}} tool integrations. A service instance belongs to a [resource group](/docs/account?topic=account-rgs). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group meters and governs your usage of all of the toolchains in the same region and resource group.
+You must have a {{site.data.keyword.contdelivery_short}} [service instance](https://cloud.ibm.com/catalog/services/continuous-delivery){: external} to create and use DevOps toolchains that include the {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.gitrepos}}, and {{site.data.keyword.DRA_short}} tool integrations. A service instance resides in a region and belongs to a [resource group](/docs/account?topic=account-rgs). The {{site.data.keyword.contdelivery_short}} service instance in a specific region and resource group governs and meters your usage of all of the toolchains in the same region and resource group.
 
-You can have only one Lite service per account. It is recommended that you use the Professional plan if you want to work with toolchains in multiple resource groups, or within multiple regions.
+## Pricing plans
+{: #pricing_plans}
+
+The following table outlines the pricing plans of the {{site.data.keyword.contdelivery_short}} service:
+
+| Plan | Cost | Limits |
+|:-----|:-----|:-------|
+| **Lite** | Free | The Lite plan offers the full capabilities of {{site.data.keyword.contdelivery_short}} with limits on usage. |
+| **Professional** | Paid | The Professional plan offers the full capabilities of {{site.data.keyword.contdelivery_short}} with no limits on usage. |
+{: caption="Table 1. Pricing plans" caption-side="bottom"}
+
+You can have at most one Lite service instance per account. It is recommended that you use the Professional plan if you want to work with toolchains in multiple resource groups, or within multiple regions.
 {: tip}
+
+For more information about the plans, see [pricing plans](https://cloud.ibm.com/catalog/services/continuous-delivery){: external}.
+
+## Usage metrics
+{: #usage_metrics}
+
+{{site.data.keyword.contdelivery_short}} service instances track and report usage metrics within your {{site.data.keyword.cloud_notm}} account. Depending upon the pricing plan of a service instance, the metrics may affect usage cost, usage limits, or both. The following table outlines the usage metrics of the {{site.data.keyword.contdelivery_short}} service:
+
+| Usage | Metric | Summary |
+|:------|:-------|:--------|
+| Authorized users | `AUTHORIZED_USERS_PER_MONTH` | A count of the average number of authorized users of the service instance within a given month. |
+| Pipeline runs | `JOB_EXECUTIONS_PER_MONTH` | A count of the total number of pipeline Tekton step or classic job runs within a given month. |
+{: caption="Table 2. Usage metrics" caption-side="bottom"}
+
+## Consolidated billing
+{: #consolidated_billing}
+
+By default, {{site.data.keyword.contdelivery_short}} service instances report usage independently of each other. If you have organized your toolchains into multiple resource groups in a standalone {{site.data.keyword.cloud_notm}} account or across several {{site.data.keyword.cloud_notm}} accounts in an [enterprise](/docs/secure-enterprise?topic=secure-enterprise-what-is-enterprise), then users of your toolchains may be reported as authorized users multiple times from corresponding multiple instances of the {{site.data.keyword.contdelivery_short}} service.
+
+For example, a developer on a Git Repos and Issue Tracking project that is integrated into two toolchains in different resource groups will be counted and, under the Professional plan, billed for twice.
+
+You can enable the consolidated billing feature of a {{site.data.keyword.contdelivery_short}} service instance with the Professional plan in an enterprise account to cause the service to consolidate the authorized users from all {{site.data.keyword.contdelivery_short}} service instances in your enterprise hierarchy into one list. By using this feature, you can ensure that an authorized user email will only be counted and billed for once within your enterprise.
+
+The consolidated billing feature is available with the {{site.data.keyword.contdelivery_short}} Professional plan only.
+{: restriction}
+
+Consolidated billing is disabled by default.
+{: tip}
+
+### How do you enable consolidated billing?
+{: #consolidated_billing_enable}
+
+To enable consolidated billing, you must have an instance of {{site.data.keyword.contdelivery_short}} with the Professional plan in an enterprise account, and you must have access to the instance with the `Editor` or `Administrator` role.
+{: requirement}
+
+To enable consolidated billing:
+
+1. Login to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com).
+2. Select the enterprise account within which you want to consolidate billing.
+3. Go to the [Resource list](https://cloud.ibm.com/resources){: external}.
+4. In the **Product** column, in the filter text box, type `Continuous Delivery` to view your existing services.
+5. Locate the {{site.data.keyword.contdelivery_short}} service instance to which you want to consolidate billing.
+6. Click on the name of the instance.
+7. Click **Manage > Consolidated billing**.
+8. In the **Enable consolidated billing** section, click the toggle button **On**.
+9. In the **Consolidated authorized users** section, review the list of **Email** addresses to ensure it is complete and correct.
+
+The **Consolidated billing** tab is available only in {{site.data.keyword.contdelivery_short}} service instances located within the enterprise account.
+{: tip}
+
+If you change the plan of a {{site.data.keyword.contdelivery_short}} service instance that has consolidated billing enabled from Professional to another plan, consolidated billing will be disabled automatically. To re-enable consolidated billing, you must first change the plan back to Professional.
+{: note}
+
+### How do you disable consolidated billing?
+{: #consolidated_billing_disable}
+
+1. Follow steps 1 to 7 in [How do you enable consolidated billing?](#enable_consolidate_billing).
+2. In the **Enable consolidated billing** section, click the toggle button **Off**.
+
+### How does consolidated billing work?
+{: #consolidated_billing_understanding}
+
+By default, each {{site.data.keyword.contdelivery_short}} service instance is responsible for reporting its own count of authorized users. When consolidated billing is enabled on a service instance in the enterprise account, that instance takes over responsibility for reporting the number of authorized users on behalf of all service instances in the enterprise hierarchy, including those in all child accounts, and including any other instances in other resource groups in the enterprise account. The instance gathers up the lists of authorized users from all instances in the hierarchy, eliminates duplicate email addresses, and reports a count of the resulting consolidated list of authorized user email addresses to the enterprise account.
+
+To review the consolidated list of authorized user email addresses:
+
+1. Login to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com).
+2. Select the enterprise account.
+3. Go to the [Resource list](https://cloud.ibm.com/resources){: external}.
+4. In the **Product** column, in the filter text box, type `Continuous Delivery` to view your existing services.
+5. Locate the {{site.data.keyword.contdelivery_short}} service instance that has consolidated billing enabled.
+6. Click on the name of the instance.
+7. Click **Manage > Consolidated billing**.
+8. Review the list of **Email** addresses in the **Consolidated authorized users** section.
+
+The list of consolidated authorized users is read-only, because it is computed from the authorized users lists of all service instances in the enterprise hierarchy.
+{: note}
+
+When consolidated billing is enabled on a service instance, the **Manage > Authorized users** tabs on all other service instances in the enterprise hierarchy will inform you that the service instances are participating in consolidated billing.
+{: tip}
+
+### Limitations of consolidated billing
+{: #consolidated_billing_limitations}
+
+* Consolidated billing requires an enterprise account hierarchy. You cannot enable consolidated billing across resource groups in a standalone account.
+* Consolidated billing requires the Professional plan. Consolidated billing cannot be enabled on a {{site.data.keyword.contdelivery_short}} service instance with any other plan. Authorized users are consolidated only from {{site.data.keyword.contdelivery_short}} service instances with the Professional plan. For example, Lite plan {{site.data.keyword.contdelivery_short}} service instances do not participate in consolidated billing.
+* Consolidated billing can be enabled only on a service instance in the enterprise account.
+* Consolidated billing can be enabled on at most one service instance in the enterprise account.
+* Consolidated billing applies to authorized users only. Consolidated billing does not affect how pipeline runs are reported.
+* Consolidated billing is confined to a single given region. Usage cannot be consolidated from one region to another.
+* While consolidated billing is enabled on a {{site.data.keyword.contdelivery_short}} service instance, all other instances of the service in the enterprise hierarchy report zero authorized users, even though they continue to list their authorized users.
+
+When consolidated billing is enabled on a {{site.data.keyword.contdelivery_short}} service instance, authorized user emails are consolidated from all other instances of the service in the enterprise hierarchy, including service instances that are [pending reclamation](/docs/account?topic=account-resource-reclamation). Before you delete an instance of the service that is participating in billing consolidation, you should manually delete the authorized users from the **Manage > Authorized users** tab of the instance.
+{: important}
 
 ## Authorized users
 {: #authorized_users}
 
-{{site.data.keyword.contdelivery_short}} [service plans](https://cloud.ibm.com/catalog/services/continuous-delivery){: external} are defined and priced based on the number of authorized users for a service instance. Individual contributors, including the following examples, are counted as authorized users:
-
-* Users who interact with issues, issues boards, source code, or other artifacts in a {{site.data.keyword.gitrepos}} repository (repo).
-* Users who manipulate, trigger (either directly in the user interface or indirectly by committing to a repo), or view the status of a delivery pipeline.
-* Users who interact with {{site.data.keyword.DRA_short}}.
+{{site.data.keyword.contdelivery_short}} [pricing plans](https://cloud.ibm.com/catalog/services/continuous-delivery){: external} are defined and priced based on the number of authorized users for a service instance. Authorized users are added automatically to a service instance in response to usage of the service instance. You can review and manage the list of authorized users on the **Manage > Authorized users** tab of a {{site.data.keyword.contdelivery_short}} service instance. If [consolidated billing](#consolidated_billing) is enabled, you can review the consolidated list of authorized users on the **Manage > Consolidated billing** tab of the {{site.data.keyword.contdelivery_short}} service instance in the enterprise account.
 
 If your toolchain integrates {{site.data.keyword.gitrepos}} projects in the `open-toolchain` group that is provided by IBM, such as in `us-south.git.cloud.ibm.com/open-toolchain`, members of these projects are not counted as authorized users of your toolchains.
 {: exception}
 
-The Lite plan is subject to limits. For more information about the Lite plan and the Professional plan, see the [service catalog](https://cloud.ibm.com/catalog/services/continuous-delivery){: external}.
+The Lite plan is subject to limits. For more information about {{site.data.keyword.contdelivery_short}} plans, see the [service catalog](https://cloud.ibm.com/catalog/services/continuous-delivery){: external}.
 {: tip}
 
 You can maintain an activity log related to authorized users. For more information about viewing, managing, and auditing service-initiated and user-initiated activities in your {{site.data.keyword.contdelivery_full}} instances, see [{{site.data.keyword.at_full_notm}} events](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-at-events).
@@ -48,35 +149,37 @@ You can maintain an activity log related to authorized users. For more informati
 ### How are users counted for instances of {{site.data.keyword.contdelivery_short}} in resource groups?
 {: #count_users_rg}
 
-Users are counted and managed by using the list of authorized users that belongs to each  {{site.data.keyword.contdelivery_short}} service instance. Users are automatically added to this list when they meet any of the following criteria:
+Users are counted and managed by using the list of authorized users that belongs to each {{site.data.keyword.contdelivery_short}} service instance. Users are automatically added to this list when they meet any of the following criteria:
 
-* View, edit, or run a delivery pipeline.
-* Have Developer (or greater) access to a repo in {{site.data.keyword.gitrepos}} that allows them to commit and push changes to that repo. Users of Git repos with the Guest or Reporter roles with read-only access are not counted as authorized users. Users of Git Project Access Tokens with the Developer (or greater) role are counted as authorized users. These users appear in the list of authorized users as `bot` users.
+* View, edit, or run (either directly in the user interface or indirectly by committing to a repo) a delivery pipeline.
+* Interact with {{site.data.keyword.DRA_short}}.
+* Have Developer (or greater) access to a repo in {{site.data.keyword.gitrepos}} that allows them to commit and push changes to that repo. Users of Git Project Access Tokens with the Developer (or greater) role are counted as authorized users. These users appear in the list of authorized users as `bot` users.
 
-Users with the Guest or Reporter roles are not automatically added to the authorized users list. To prevent users from accessing toolchains and automatically being added to the authorized user list for a {{site.data.keyword.contdelivery_short}} service instance, complete the following actions:
+Users with only the Guest or Reporter roles are not automatically added to the authorized users list. To prevent users from accessing toolchains and automatically being added to the authorized user list for a {{site.data.keyword.contdelivery_short}} service instance, complete the following actions:
 
 * Remove the user's access to the toolchain from IAM.
-* Remove Developer access from all {{site.data.keyword.gitrepos}} repos that are attached to all of the toolchains in the resource group by removing their repo access or downgrading their role to Guest or Reporter.
+* Remove Developer and higher access from all {{site.data.keyword.gitrepos}} repos that are attached to all of the toolchains in the resource group and region by removing their repo access or downgrading their role to Guest or Reporter.
  
 The specific activities that are used to automatically count users, and the method for counting those users might change over time. However, the process for counting users will continue to comply with the terms of {{site.data.keyword.contdelivery_short}} plans. You can also manually add users to the list of authorized users, at any time.
 {: important}
 
 For more information about using IAM to manage access to toolchains in a resource group or the toolchain itself, see [Managing user access to toolchains with Identity and Access Management](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). For more information about managing access to a {{site.data.keyword.gitrepos}} repo, see [Project's members](https://us-south.git.cloud.ibm.com/help/user/project/members/index.md){: external}.
 
-The method that you use to organize toolchains within resource groups directly impacts user access and billing. When a user uses toolchains in multiple regions or resource groups, they are counted and billed for each {{site.data.keyword.contdelivery_short}} service instance within each unique pairing of region and resource group.
+The method that you use to organize toolchains within resource groups directly impacts user access and billing. By default, when a user uses toolchains in multiple regions or resource groups, they are counted and billed for each {{site.data.keyword.contdelivery_short}} service instance within each unique pairing of region and resource group. If you have an enterprise account and are using the {{site.data.keyword.contdelivery_short}} Professional plan, you may be able to reduce the total count of authorized users billed within the enterprise by [enabling consolidated billing](#consolidated_billing_enable).
 {: tip}
 
 You can manage the list of authorized users on the **Manage** tab within the {{site.data.keyword.contdelivery_short}} service instance.
 
 1. Go to the [Resource list](https://cloud.ibm.com/resources){: external} for your {{site.data.keyword.cloud_notm}} account.
-2. In the **Name** column, in the filter text box, type `Continuous Delivery` to view your existing services.
+2. In the **Product** column, in the filter text box, type `Continuous Delivery` to view your existing services.
 3. For each service, click the hyperlink in the **Name** column.
-4. In the **Manage** tab, you can view, add, or remove users from the list of Authorized Users, as needed.
+4. In the **Manage > Authorized users** tab, you can view, add, or remove users from the list of authorized users, as needed.
+5. If you have enabled consolidated billing, in the **Manage > Consolidated billing** tab you can view the consolidated list of authorized users.
 
 Users are automatically added or added again when they use the {{site.data.keyword.contdelivery_short}} service. 
 {: tip}
 
-### How can you view billing and usage information?
+## Viewing billing and usage information
 {: #view_billing_usage}
 
 You can view all of the instances of the {{site.data.keyword.contdelivery_short}} service in your account and the number of users and pipeline executions that are reported against each instance in an {{site.data.keyword.cloud_notm}} Public environment.
@@ -90,10 +193,13 @@ You can view all of the instances of the {{site.data.keyword.contdelivery_short}
 The `AUTHORIZED_USERS_PER_MONTH` metric is calculated based on a monthly average of users that is counted daily. 
 {: tip}
 
+If consolidated billing is enabled, the {{site.data.keyword.contdelivery_short}} service instance in the enterprise account that is enabled will report  the consolidated `AUTHORIZED_USERS_PER_MONTH` metrics. All other service instances in the enterprise hierarchy will report zero.
+{: remember}
+
 ### What happens when you exceed the limits of your service plan?
 {: #exceed_limits}
 
-The Lite service plan has other limitations, such as the number of Classic Delivery Pipeline jobs or Tekton steps that can run, or the storage consumption. For more information about the plan description, see the [service catalog](https://cloud.ibm.com/catalog/services/continuous-delivery){: external}. If any of the plan limitations are exceeded in a billing period, the service suspends. For example, Classic Delivery Pipeline jobs (or Tekton pipeline runs) do not run for the remainder of the billing period.
+The Lite service plan has limitations such as on the number of authorized users of the service, and on the number of Classic Delivery Pipeline jobs or Tekton steps that can run per month. For more information about the plan, see the [service catalog](https://cloud.ibm.com/catalog/services/continuous-delivery){: external}. If any of the plan limitations are exceeded in a billing period, the service suspends. For example, Classic Delivery Pipeline jobs and Tekton pipeline steps do not run for the remainder of the billing period.
 
 Upgrading to the Professional plan will remove these limitations and reactivate the service.
 {: tip}
