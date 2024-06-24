@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2024
 
-lastupdated: "2024-04-16"
+lastupdated: "2024-06-19"
 
 keywords: ibmcloud, resource, service instance, create, IBM Cloud, Terraform
 
@@ -25,6 +25,9 @@ After you create a {{site.data.keyword.contdelivery_short}} service instance, yo
 
 You can have one active instance of {{site.data.keyword.contdelivery_short}} only in a region and resource group. For information about deleting an existing service instance, see [Deleting a {{site.data.keyword.contdelivery_short}} service instance](/docs/ContinuousDelivery?topic=ContinuousDelivery-delete_cd_service).
 {: important}
+
+If you have multiple {{site.data.keyword.contdelivery_short}} service instances with the Professional plan in an [enterprise](/docs/secure-enterprise?topic=secure-enterprise-what-is-enterprise), you may be able to reduce the total number of authorized users for which your account is billed. To learn more, see [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing).
+{: tip}
 
 ## Creating a {{site.data.keyword.contdelivery_short}} service instance by using the console
 {: #create_cd_service_ui}

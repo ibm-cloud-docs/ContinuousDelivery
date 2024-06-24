@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020, 2023
+  years: 2020, 2024
 
-lastupdated: "2023-02-08"
+lastupdated: "2024-06-19"
 
 keywords: ibmcloud, resource, service instance, restore, CLI tool, IBM Cloud
 
@@ -24,6 +24,9 @@ You can delete resource group-based {{site.data.keyword.contdelivery_short}} ser
 To delete a {{site.data.keyword.contdelivery_short}} service instance, you must have either the Administrator or Editor user permissions.
 
 Deleting an instance of the {{site.data.keyword.contdelivery_short}} service impacts your ability to use tool integrations within toolchains that are contained in the same region and resource group as the deleted service instance. For more information about this limitation, see [Plan limitations and usage](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage).
+{: important}
+
+If you permanently delete an instance of {{site.data.keyword.contdelivery_short}} in an enterprise account that has [consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing) enabled, all {{site.data.keyword.contdelivery_short}} service instances in the enterprise hierarchy will revert to reporting their individual authorized user counts independently. The total number of authorized users being billed in your enterprise account may increase as a result.
 {: important}
 
 ## Deleting a {{site.data.keyword.contdelivery_short}} service instance by using the console

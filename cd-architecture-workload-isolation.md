@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2023
-lastupdated: "2023-01-27"
+  years: 2020, 2024
+lastupdated: "2024-06-19"
 
 keywords: public isolation for IBM Cloud Continuous Delivery, compute isolation for Continuous Delivery, Continuous Delivery architecture, workload isolation in Continuous Delivery
 
@@ -78,7 +78,8 @@ The {{site.data.keyword.contdelivery_short}} service launches its dependencies o
 | Identity and Access Management (IAM) | Platform | Provides authorization checks to {{site.data.keyword.contdelivery_short}} and toolchain resources and actions. Generates and authenticates IAM API keys such as those that are used by the {{site.data.keyword.deliverypipeline}} component. |
 | Search and tagging | Platform | Provides cached, high performance lookup of resources. |
 | Resource controller | Platform | Coordinates the provisioning, updating, and de-provisioning of {{site.data.keyword.contdelivery_short}} and toolchain resources. |
-| Usage metering| Platform | Receives usage metrics from the {{site.data.keyword.contdelivery_short}} service to report usage and compute bills for customer accounts. |
+| Account management | Platform | Provides metadata about {{site.data.keyword.cloud_notm}} accounts and enterprises that {{site.data.keyword.contdelivery_short}} uses in the computation of usage metrics. |
+| Usage metering | Platform | Receives usage metrics from the {{site.data.keyword.contdelivery_short}} service to report usage and compute bills for customer accounts. |
 | {{site.data.keyword.containerlong}} | Service | Hosts clusters of containers in which the internal microservices of the {{site.data.keyword.contdelivery_short}} service run. |
 | {{site.data.keyword.registrylong}} | Service | Stores container images that are used by {{site.data.keyword.deliverypipeline}} jobs and steps. |
 | {{site.data.keyword.la_full}}  | Service | Collects internal log events from the {{site.data.keyword.contdelivery_short}} service for use by IBM specialists in maintaining and supporting the service. |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-06-24"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -19,6 +19,13 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
 {: shortdesc}
+
+## 24 June 2024
+{: #ContinuousDelivery-june2424}
+{: release-note}
+
+The {{site.data.keyword.contdelivery_short}} service Professional plan now supports consolidated billing of authorized users within enterprise account hierarchies. This feature ensures that authorized user emails are counted and billed only once across all {{site.data.keyword.contdelivery_short}} service instances in your enterprise and in a region, rather than being counted and billed separately for each instance.
+:   For more information, see [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing).
 
 ## 15 February 2024
 {: #ContinuousDelivery-feb1524}
