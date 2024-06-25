@@ -27,6 +27,10 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 The {{site.data.keyword.contdelivery_short}} service Professional plan now supports consolidated billing of authorized users within enterprise account hierarchies. This feature ensures that authorized user emails are counted and billed only once across all {{site.data.keyword.contdelivery_short}} service instances in your enterprise and in a region, rather than being counted and billed separately for each instance.
 :   For more information, see [Consolidated billing](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage#consolidated_billing).
 
+
+{{site.data.keyword.deliverypipeline}}
+:   Upgraded to [Tekton Pipelines v0.59.1](https://github.com/tektoncd/pipeline/releases/tag/v0.59.1){: external}.
+
 ## 15 February 2024
 {: #ContinuousDelivery-feb1524}
 {: release-note}
