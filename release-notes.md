@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-07-01"
+lastupdated: "2024-07-09"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -20,6 +20,12 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
 {: shortdesc}
 
+## 09 July 2024
+{: #ContinuousDelivery-july2424}
+{: release-note}
+
+{{site.data.keyword.gitrepos}}
+:   Upgraded to [GitLab 17.0.3](https://about.gitlab.com/releases/2024/06/26/patch-release-gitlab-17-1-1-released/){: external}.
 ## 01 July 2024
 {: #ContinuousDelivery-july2424}
 {: release-note}
