@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-04-16"
+lastupdated: "2024-07-25"
 
 keywords: secure environment, data, Data, high availability, access
 
@@ -80,8 +80,6 @@ where:
 * `FIELD_NAME` is the name of the field within the HashiCorp Vault secret.
 
 To use a CRN secrets reference, obtain the secret CRN directly from the {{site.data.keyword.secrets-manager_short}} UI or programmatically by using the CLI, API, or SDKs.
-
-For more information about managing secrets, see [Managing secrets in your toolchains](/docs/devsecops?topic=devsecops-cd-devsecops-toolchains-secrets).
 
 ### Specifying secrets references by using the console
 {: #cd_secrets_references_ui}

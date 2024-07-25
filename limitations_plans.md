@@ -284,7 +284,7 @@ The acceptable usage behaviors include, but are not limited to, these behaviors:
 The usage behaviors that are not permitted include, but are not limited to, these behaviors:
 
 * The use of pipeline jobs or workers for general compute behaviors, such as Bitcoin mining, distributed denial-of-service attacks, and malicious or offensive behavior to other clients or users within the {{site.data.keyword.cloud_notm}} platform or general internet users.
-* The use in the normal development process for sites or services that promote hate speech, or other activities that violate the [IBM Business Conduct Guidelines](https://www.ibm.com/investor/att/pdf/BCG_accessible_2020.pdf){: external}.
+* The use in the normal development process for sites or services that promote hate speech, or other activities that violate the [IBM Business Conduct Guidelines](https://www.ibm.com/investor/att/pdf/IBM_Business_Conduct_Guidelines.pdf){: external}.
 * The use of event-generated behavior for malicious intrusion or attacks against {{site.data.keyword.cloud_notm}} or other sites.
 
 At the discretion of IBM, users who violate the acceptable usage behaviors of the {{site.data.keyword.contdelivery_short}} services or the IBM Business Conduct Guidelines can be disabled without notice. At the discretion of IBM, some services can be restored if users correct their usage behaviors after they are notified of the offensive action. Otherwise, accounts can be suspended or terminated.
