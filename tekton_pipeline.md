@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-23"
+lastupdated: "2024-07-26"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -208,6 +208,129 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
    Save your changes.
 
+### Configuring {{site.data.keyword.deliverypipeline}} triggers for Tekton pipelines
+{: #configure_triggering_events}
+{: ui}
+
+You can configure triggers for Tekton pipelines based on various events in your Git repo. Filter Git triggers by using the following options:
+
+1. `Branch`: Trigger the pipeline for a specific branch of the selected repo when the specified event occurs.
+1. `Pattern`: Trigger the pipeline based on a glob match against tags and branch names in the selected repo when the specified event occurs.
+1. `CEL filter`: Trigger the pipeline when the event matches the provided Common Expression Language (CEL) filter.
+
+The `Branch` and `Pattern` options filter events by selecting check boxes that you can use to specify events such as `commit push`, `pull request opened`, `updated`, or `closed`. Also, you can specify pull request events by selecting the `Exclude draft pull requests` filtering feature to prevent pipeline triggers for draft pull requests. Or, you can select the `Label filters` filtering feature to allow filtering based on pull request labels according to user-defined criteria in the filters table.
+
+The `CEL filter` option supports more advanced use cases, such as matching against other fields in the event payload. This option currently supports only the pull request and push events. The `CEL filter` is also available as an optional feature on the Generic Webhook trigger to provide event filtering against the webhook payload. 
+
+#### CEL overview
+{: #cel_overview}
+
+CEL is a powerful and flexible expression language designed to evaluate conditions and perform validations in a concise and readable manner. CEL is ideally suited for use cases that require complex conditional logic, such as filtering events.
+
+In Tekton pipeline, the CEL option is introduced to provide more powerful and flexible event filtering. The webhook payload is evaluated against the CEL expression that is provided by the user. If the CEL expression evaluates to `true`, the pipeline run is triggered. 
+
+The following features are supported in CEL:
+
+* Arithmetic operators (`+`, `-`, `*`, `/`, `%`)
+* Comparison operators (`=`, `!=`, `<`, `>`, `<=`, `>=`)
+* Logical operators (`&&`, `||`)
+* String operators (`contains`, `matches`, `startsWith`, `endsWith`)
+* Collection operators (`in`, `!in`)
+* Variables (refer to variables directly by their names)
+* Literals (support literals such as strings, numbers, booleans, and null)
+
+CEL includes the following extensions to provide more functionality to the base CEL language:
+
+* `Sets extension` to support advanced set operations and provide more flexibility in event filtering. For more information about this extension, see [Sets](https://github.com/google/cel-go/tree/v0.20.1/ext#sets){: external}.
+* `matchesGlob` to provide compatibility when converting the existing pattern field to the new CEL filter option. The native CEL `matches` operator is recommended for more advanced regular expression matching.
+
+For more information about CEL, see the [CEL documentation](https://github.com/google/cel-go/tree/v0.20.1/){: external}.
+
+#### Converting to CEL
+{: #converting_to_cel}
+
+Complete the following steps to convert your existing event filtering selection to a CEL expression:
+
+1. Edit the Git trigger that you want to convert.
+1. In the **Trigger on** section, select the **CEL filter** option.
+
+   ![CEL filter option](images/cel_filter_option.png){: caption="Figure 3. CEL filter option" caption-side="bottom"}
+   
+   The following elements are automatically converted into an equivalent CEL expression:
+     
+   * Branch or Pattern
+   * Events, such as `commit push`, `pull request opened`, `updated`, and `closed`
+   * Exclude draft pull requests
+   * Label filters
+
+   ![CEL filter conversion](images/cel_filter_conversion.png){: caption="Figure 4. CEL filter conversion" caption-side="bottom"}
+   
+   The generated CEL expression is written into a text area field, which you can edit as needed.
+
+   Because no filters exist on Generic Webhook triggers for conversion, the conversion to a CEL filter applies only to Git triggers.
+   {: tip}
+   
+   If you save the trigger with the CEL option selected, it replaces the previously selected events with the CEL expression. If you switch to the Branch or Pattern option after you saves the CEL filter option, your previous event selections are not saved. Conversion from the CEL option to the Branch or Pattern option is not supported.
+
+#### CEL expression examples
+{: #cel_examples}
+
+The following examples are common CEL expressions for each of the supported Git types: `GitHub`, `GitLab` and `BitBucket`. You can copy and modify these examples to meet your requirements.
+
+**GitHub examples**:
+      
+Run when a pull request is opened or updated against the specified branch:
+         
+```text
+   header['x-github-event'] == 'pull_request' && 
+      (body.action == 'opened' || body.action == 'synchronize') && 
+      body.pull_request.base.ref == 'main'
+   ```
+      
+Run when a commit is pushed to the specified branch:
+         
+```text
+   header['x-github-event'] == 'push' && body.ref == 'refs/heads/main'
+```
+
+**GitLab examples**:
+
+Run when a pull request is opened or updated against the specified branch:
+
+```text
+   header['x-gitlab-event'] == 'Merge Request Hook' && 
+      (body.object_attributes.action === 'open' || body.object_attributes.action === 'update') && 
+      body.object_attributes.target_branch == 'main'
+```
+      
+Run when a commit is pushed to the specified branch:
+
+```text
+   header['x-gitlab-event'] == 'Push Hook' && body.ref == 'refs/heads/main'
+```
+
+**BitBucket examples**:
+
+Run when a pull request is opened or updated against the specified branch:
+
+```text
+   (header['x-event-key'] == 'pullrequest:created' || header['x-event-key'] == 'pullrequest:updated') && 
+       body.pullrequest.destination.branch.name == 'main'
+```
+      
+Run when a commit is pushed to the specified branch:
+
+```text
+   header['x-event-key'] == 'repo:push' && body.push.changes[0].new.name == 'main'
+```
+
+#### Checking the event payload
+{: #checking_event_payload}
+
+When you write CEL expressions for event filtering, you must understand the structure and content of the webhook payload against which the expression will be evaluated. You can inspect the payload for an existing run from the Pipeline Run details page.
+
+To view the event payload, go to the Pipeline Run details page and click **Show context**. You can view the raw webhook payload that triggered the pipeline run and confirm the relevant fields for your CEL expressions to match the conditions that you want.
+   
 
 ## Creating a {{site.data.keyword.deliverypipeline}} for Tekton with the API
 {: #create_tekton_pipeline_api}
