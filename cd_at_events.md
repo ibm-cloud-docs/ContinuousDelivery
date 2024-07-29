@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-06-19"
+lastupdated: "2024-07-29"
 
 keywords: event, security, IBM, activity tracker, Continuous Delivery
 
@@ -111,8 +111,8 @@ The following table lists the actions that generate {{site.data.keyword.delivery
 
 | Action | Description | 
 |:-----------------|:-----------------|
-| `toolchain.pipeline.create` | Create a delivery pipeline or a Tekton pipeline for a toolchain |
-| `toolchain.pipeline-run.create` | Trigger a delivery pipeline or a Tekton pipeline to run manually or by using Git or a timer |
+| `toolchain.pipeline.create` | Create a Classic delivery pipeline or a Tekton delivery pipeline for a toolchain. |
+| `toolchain.pipeline-run.create` | Trigger a Classic delivery pipeline or a Tekton delivery pipeline to either run manually, at a scheduled time, when a specified Git event occurs, or by way of a POST request to the generic webhook URL. |
 {: caption="Table 7. Actions that generate {{site.data.keyword.deliverypipeline}} management events" caption-side="top"}
 
 The following table lists the actions that generate {{site.data.keyword.deliverypipeline}} data events:
