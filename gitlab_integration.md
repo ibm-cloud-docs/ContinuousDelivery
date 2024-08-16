@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-08-16"
 
 keywords: tool integrations, IBM Cloud Public, GitLab
 
