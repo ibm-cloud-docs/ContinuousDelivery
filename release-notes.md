@@ -17,8 +17,10 @@ content-type: release-note
 # Release notes for {{site.data.keyword.contdelivery_short}}
 {: #cd-relnotes}
 
-Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
+Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
+
+
 
 ## 09 July 2024
 {: #ContinuousDelivery-july2424}

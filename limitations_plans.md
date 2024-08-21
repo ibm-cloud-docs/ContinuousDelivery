@@ -28,6 +28,8 @@ You must have a {{site.data.keyword.contdelivery_short}} [service instance](http
 ## Pricing plans
 {: #pricing_plans}
 
+
+
 The following table outlines the pricing plans of the {{site.data.keyword.contdelivery_short}} service:
 
 | Plan | Cost | Limits |
@@ -35,6 +37,10 @@ The following table outlines the pricing plans of the {{site.data.keyword.contde
 | **Lite** | Free | The Lite plan offers the full capabilities of {{site.data.keyword.contdelivery_short}} with limits on usage. |
 | **Professional** | Paid | The Professional plan offers the full capabilities of {{site.data.keyword.contdelivery_short}} with no limits on usage. |
 {: caption="Table 1. Pricing plans" caption-side="bottom"}
+
+
+
+
 
 You can have at most one Lite service instance per account. It is recommended that you use the Professional plan if you want to work with toolchains in multiple resource groups, or within multiple regions.
 {: tip}
