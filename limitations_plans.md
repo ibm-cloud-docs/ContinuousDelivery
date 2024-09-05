@@ -15,7 +15,7 @@ subcollection: ContinuousDelivery
 
 # Plan limitations and usage
 {: #limitations_usage}
-{: help} 
+{: help}
 {: support}
 
 The use of {{site.data.keyword.contdelivery_full}} is limited to the building, deploying, testing, and ongoing operations of applications on the {{site.data.keyword.cloud_notm}} platform or other compatible platform-as-a-service or infrastructure-as-a-service offerings.
@@ -151,7 +151,7 @@ The Lite plan is subject to limits. For more information about {{site.data.keywo
 {: tip}
 
 You can maintain an activity log related to authorized users. For more information about viewing, managing, and auditing service-initiated and user-initiated activities in your {{site.data.keyword.contdelivery_full}} instances, see [{{site.data.keyword.at_full_notm}} events](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-at-events).
- 
+
 ### How are users counted for instances of {{site.data.keyword.contdelivery_short}} in resource groups?
 {: #count_users_rg}
 
@@ -165,7 +165,7 @@ Users with only the Guest or Reporter roles are not automatically added to the a
 
 * Remove the user's access to the toolchain from IAM.
 * Remove Developer and higher access from all {{site.data.keyword.gitrepos}} repos that are attached to all of the toolchains in the resource group and region by removing their repo access or downgrading their role to Guest or Reporter.
- 
+
 The specific activities that are used to automatically count users, and the method for counting those users might change over time. However, the process for counting users will continue to comply with the terms of {{site.data.keyword.contdelivery_short}} plans. You can also manually add users to the list of authorized users, at any time.
 {: important}
 
@@ -182,7 +182,7 @@ You can manage the list of authorized users on the **Manage** tab within the {{s
 4. In the **Manage > Authorized users** tab, you can view, add, or remove users from the list of authorized users, as needed.
 5. If you have enabled consolidated billing, in the **Manage > Consolidated billing** tab you can view the consolidated list of authorized users.
 
-Users are automatically added or added again when they use the {{site.data.keyword.contdelivery_short}} service. 
+Users are automatically added or added again when they use the {{site.data.keyword.contdelivery_short}} service.
 {: tip}
 
 ## Viewing billing and usage information
@@ -196,7 +196,7 @@ You can view all of the instances of the {{site.data.keyword.contdelivery_short}
 4. Click **View details** for the plan that you want to view information about.
 5. Click **View instance details** for the instance of {{site.data.keyword.contdelivery_short}} that you want to view usage information for.
 
-The `AUTHORIZED_USERS_PER_MONTH` metric is calculated based on a monthly average of users that is counted daily. 
+The `AUTHORIZED_USERS_PER_MONTH` metric is calculated based on a monthly average of users that is counted daily.
 {: tip}
 
 If consolidated billing is enabled, the {{site.data.keyword.contdelivery_short}} service instance in the enterprise account that is enabled will report  the consolidated `AUTHORIZED_USERS_PER_MONTH` metrics. All other service instances in the enterprise hierarchy will report zero.
@@ -218,7 +218,7 @@ You can upgrade from the {{site.data.keyword.contdelivery_short}} Lite service p
 
 1. From the console, click the Menu icon ![Menu icon](../icons/icon_hamburger.svg) > **Resource list** to view your list of resources.
 2. Click the {{site.data.keyword.contdelivery_short}} service that you want to upgrade.
-3. Click **Plan** in the {{site.data.keyword.contdelivery_short}} service instance dashboard. 
+3. Click **Plan** in the {{site.data.keyword.contdelivery_short}} service instance dashboard.
 4. In the **Change pricing plan** section, select **Professional** to upgrade to the {{site.data.keyword.contdelivery_short}} Professional plan, and click **Save**.
 5. After you change your plan, you must restage your app. Go to your resource list to find the app that the service is bound to. Click the Menu icon ![Menu icon](../icons/icon_hamburger.svg) **> Resource list**. In the app menu, select **Restart App**.
 
@@ -250,8 +250,8 @@ As an alternative to the console, you can change the {{site.data.keyword.contdel
    RC Compatible      true
    RC Provisionable   true
    IAM Compatible     true
-   Children           Name                      Kind         ID                                            
-                      lite                      plan         a35fb0e9-4fc2-400e-8161-49078e5af632 
+   Children           Name                      Kind         ID
+                      lite                      plan         a35fb0e9-4fc2-400e-8161-49078e5af632
                       professional              plan         9ca4dc64-bc7b-4aba-9c1c-8bbf30ff127e
    ```
 
@@ -270,12 +270,12 @@ Delivery pipelines under a {{site.data.keyword.contdelivery_short}} service inst
 
 * The 500-step and job run limit includes both pipeline steps for Tekton pipelines and pipeline job runs for Classic pipelines. If your pipeline has many steps within a single run, such as with the DevSecOps pipelines, you might reach this limit quickly.
 * Delivery pipeline failures, excluding skipped step runs and Classic job runs, are counted as part of the 500 Tekton step run limit per month. This 500-step run limit also applies to Classic job runs for Classic pipelines.
-* All of your toolchains and all of your pipelines within those toolchains that are in the same resource group contribute to the same limit of 500 Tekton step runs per month. The same limit is used because pipeline step runs and job runs are counted at the resource group level for a specific {{site.data.keyword.contdelivery_short}} instance. 
+* All of your toolchains and all of your pipelines within those toolchains that are in the same resource group contribute to the same limit of 500 Tekton step runs per month. The same limit is used because pipeline step runs and job runs are counted at the resource group level for a specific {{site.data.keyword.contdelivery_short}} instance.
 
-A five-day grace period is offered the first time that you reach the 500-step run limit. This grace period is offered only *once*. 
+A five-day grace period is offered the first time that you reach the 500-step run limit. This grace period is offered only *once*.
 {: important}
 
-The retention period for pipelines varies based on the pipeline type and the plan that is selected for the {{site.data.keyword.contdelivery_short}} service instance. 
+The retention period for pipelines varies based on the pipeline type and the plan that is selected for the {{site.data.keyword.contdelivery_short}} service instance.
 
 * Classic pipelines retain a maximum of 10 stage runs on either plan.
 * Tekton pipelines under the Professional plan retain PipelineRuns and their logs for one year.
@@ -316,3 +316,35 @@ Three types of {{site.data.keyword.gitrepos}} projects are available:
 For more information about the project settings, see [Change project visibility](https://us-south.git.cloud.ibm.com/help/user/public_access.md#change-project-visibility){: external}.
 
 When you use {{site.data.keyword.gitrepos}}, the content that you contribute to a project is licensed under any terms that are specified in that project. When you create a project, include a file that describes the license that applies to the content. When you contribute to a project, your name and the email address that is associated with your commits might be visible to the public. The email address that is associated with your {{site.data.keyword.cloud_notm}} account is used when you create commits through the {{site.data.keyword.gitrepos}} web interface.
+
+## Link a Continuous Delivery service instance to a Git Project
+{: #git_projects_cd_instance_linking_validating}
+
+Linking a Continuous Delivery (CD) service instance to a Git project enables linking your Git project direcly to an exising Git repo. This integration allows you to streamline your development workflow and ensure that your code is always up-to-date and deployable.
+
+To link your CD service instance and toolchain instance to a Git project, you can use UI or API.
+
+### Link CD and toolchain instances in the UI
+{: #git_projects_cd_instance_linking_validating-ui}
+
+You can link CD and toolchain instances in the UI when you're creating a new project. It is mandatory to link an existing CD and toolchain instances in UI. You can change the linked instances later in **My Projects**.
+
+
+For existing projects, go to **Projects** > **My Project**. Select and configure the project you want to add instancs to.
+
+
+### Link CD and toolchain instances using API
+{: #git_projects_cd_instance_linking_validating-ui}
+
+You can link CD and toolchain instances when you're using API to create a new project.
+
+* Use an optional header `IBM-CLOUD-API-KEY` to add CD and toolchains while creating a project. Generate a key for your API key from [here](https://cloud.ibm.com/login?redirect=%2Fiam%2Fapikeys).
+
+* Add parameters `toolchain_ID` and `cd_instance` in your request body to link your Git project to a specific CD and toolchain instance.
+
+To find your CD and toolchain instance IDs:
+1. go to [Resources](https://cloud.ibm.com/resources) in [IBM Console](https://cloud.ibm.com).
+2. From your Resources, click the required toolchain or CD instance.
+3. Click **Details** to view and copy the GUID and CRN details.
+4. For `toolchain_ID` parameter, use the toolchain's GUID. For `cd_instance` paramter, use either GUID or CRN as its value.
+{: #note}
