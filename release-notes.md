@@ -20,6 +20,16 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
 
+## September 2024
+{: #ContinuousDelivery-sep2024}
+{: release-note}
+
+Enabling Direct Integration with an Existing Git Repository
+:   Link CD service  and toolchain instance to a Git project for seamless integration, automating code deployment and real-time collaboration.
+:   For more information, see [Link a Continuous Delivery service instance to a Git Project](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage&interface=ui#git_projects).
+
+
+
 
 
 ## 09 July 2024
@@ -618,4 +628,3 @@ Stricter enforcement of service plans
 :   If you are using the Lite plan, after 500 Delivery Pipeline jobs are run during a month, pipelines do not run, pushes to Git Repos are unavailable, and DevOps Insights is unavailable for the remainder of that billing period.
 
     Read the [announcement](https://www.ibm.com/blog/announcement/usage-and-billing-in-ibm-cloud-continuous-delivery/){: external}.
-
