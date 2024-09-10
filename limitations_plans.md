@@ -343,6 +343,9 @@ You can link CD and toolchain instances when you're using API to create a new pr
 
 * Use an optional header `IBM-CLOUD-API-KEY` to add CD and toolchains while creating a project. Generate a key for your API key from [here](https://cloud.ibm.com/login?redirect=%2Fiam%2Fapikeys).
 
+To successfully link a toolchain and CD instance parameters, you must use the `IBM-CLOUD-API-KEY` header.
+{: note}
+
 * Add parameters `toolchain_ID` and `cd_instance` in your request body to link your Git project to a specific CD and toolchain instance.
 
 :   To find your CD and toolchain instance IDs:
