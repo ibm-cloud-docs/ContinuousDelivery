@@ -345,7 +345,7 @@ You can link CD and toolchain instances when you're using API to create a new pr
 
 * Add parameters `toolchain_ID` and `cd_instance` in your request body to link your Git project to a specific CD and toolchain instance.
 
-To find your CD and toolchain instance IDs:
+:   To find your CD and toolchain instance IDs:
 1. go to [Resources](https://cloud.ibm.com/resources) in [IBM Console](https://cloud.ibm.com).
 2. From your Resources, click the required toolchain or CD instance.
 3. Click **Details** to view and copy the GUID and CRN details.
