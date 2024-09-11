@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-06-21"
+lastupdated: "2024-09-11"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations, consolidated billing
 
@@ -355,7 +355,7 @@ To successfully link a toolchain and CD instance parameters, you must use the `I
  The `toolchain_id` parameter supersedes the `cd_instance` parameter. If both are provided, the toolchain ID is used. However, if only the `cd_instance` parameter is given, a default toolchain is automatically created for the specified CD instance.
  {: note}
 
-:   To find your CD and toolchain instance IDs:
+To find your CD and toolchain instance IDs:
 
    1. Go to [Resources](https://cloud.ibm.com/resources) in [IBM Console](https://cloud.ibm.com).
    1. From your Resources, click the required toolchain or CD instance.
