@@ -346,10 +346,14 @@ You can link CD and toolchain instances when you're using API to create a new pr
 To successfully link a toolchain and CD instance parameters, you must use the `IBM-CLOUD-API-KEY` header.
 {: note}
 
-* Add parameters `toolchain_ID` and `cd_instance` in your request body to link your Git project to a specific CD and toolchain instance.
+* Add request parameters `toolchain_ID` and `cd_instance` to link your Git project to a specific CD and toolchain instance.
+
+ The `toolchain_id` parameter supersedes the `cd_instance` parameter. If both are provided, the toolchain ID is used. However, if only the `cd_instance` parameter is given, the user can create a default toolchain by specifying it.
+ {: note}
 
 :   To find your CD and toolchain instance IDs:
-1. go to [Resources](https://cloud.ibm.com/resources) in [IBM Console](https://cloud.ibm.com).
-2. From your Resources, click the required toolchain or CD instance.
-3. Click **Details** to view and copy the GUID and CRN details.
-4. For `toolchain_ID` parameter, use the toolchain's GUID. For `cd_instance` paramter, use either GUID or CRN as its value.
+
+   1. Go to [Resources](https://cloud.ibm.com/resources) in [IBM Console](https://cloud.ibm.com).
+   1. From your Resources, click the required toolchain or CD instance.
+   1. Click **Details** to view and copy the GUID and CRN details.
+   1. For `toolchain_ID` parameter, use the toolchain's GUID. For `cd_instance` paramter, use either GUID or CRN as its value.
