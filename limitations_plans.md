@@ -327,10 +327,14 @@ To link your CD service instance and toolchain instance to a Git project, you ca
 ### Link CD and toolchain instances in the UI
 {: #git_projects_cd_instance_linking_validating-ui}
 
-You can link CD and toolchain instances in the UI when you're creating a new project. It is mandatory to link a toolchain and an existing CD  instances in the UI. You can change the linked instances later in **Projects** > **General** > **Settings**..
+#### Linking a new project
+{: #git_projects_cd_instance_linking_validating-ui-new}
 
+You can link CD and toolchain instances in the UI when you're creating a new project. It is mandatory to link an existing CD and a toolchain instances in the UI.
 
- To link a CD instance with  existing projects, follow these steps:
+#### Linking an exisiting project
+{: #git_projects_cd_instance_linking_validating-ui-new}
+
 1. Go to **Projects** > **General** > **Settings**
 1. Select the project you want to add instances to.
 1. Go to **Continuous Delivery** > **Expand** to update or add a CD instance.
@@ -348,7 +352,7 @@ To successfully link a toolchain and CD instance parameters, you must use the `I
 
 * Add request parameters `toolchain_ID` and `cd_instance` to link your Git project to a specific CD and toolchain instance.
 
- The `toolchain_id` parameter supersedes the `cd_instance` parameter. If both are provided, the toolchain ID is used. However, if only the `cd_instance` parameter is given, the user can create a default toolchain by specifying it.
+ The `toolchain_id` parameter supersedes the `cd_instance` parameter. If both are provided, the toolchain ID is used. However, if only the `cd_instance` parameter is given, a default toolchain is automatically created for the specified CD instance.
  {: note}
 
 :   To find your CD and toolchain instance IDs:
