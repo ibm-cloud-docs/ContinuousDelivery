@@ -320,12 +320,14 @@ When you use {{site.data.keyword.gitrepos}}, the content that you contribute to 
 ## Link a Continuous Delivery service instance to a Git Project
 {: #git_projects_cd_instance_linking_validating}
 
+
 Linking a Continuous Delivery (CD) service instance to a Git project enables linking your Git project direcly to an exising Git repo. This integration allows you to streamline your development workflow and ensure that your code is always up-to-date and deployable.
 
 To link your CD service instance and toolchain instance to a Git project, you can use UI or API.
 
 ### Link CD and toolchain instances in the UI
 {: #git_projects_cd_instance_linking_validating-ui}
+{: ui}
 
 #### Linking a new project
 {: #git_projects_cd_instance_linking_validating-ui-new}
@@ -341,7 +343,8 @@ You can link CD and toolchain instances in the UI when you're creating a new pro
 
 
 ### Link CD and toolchain instances using API
-{: #git_projects_cd_instance_linking_validating-ui}
+{: #git_projects_cd_instance_linking_validating-api}
+{: api}
 
 You can link CD and toolchain instances when you're using API to create a new project.
 
