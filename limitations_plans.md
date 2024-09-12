@@ -363,4 +363,5 @@ To find your Continuous Delivery and toolchain instance IDs:
    1. Go to [Resources](https://cloud.ibm.com/resources) in [IBM Console](https://cloud.ibm.com).
    1. From your Resources, click the required toolchain or Continuous Delivery instance.
    1. Click **Details** to view and copy the GUID and CRN details.
-   1. For `toolchain_ID` parameter, use the toolchain's GUID. For `cd_instance` paramter, use either GUID or CRN as its value.
+      For `toolchain_ID` parameter, use the toolchain's GUID. For `cd_instance` paramter, use either GUID or CRN as its value.
+      {: note}
