@@ -25,7 +25,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: release-note}
 
 Enabling Direct Integration with an Existing Git Repository
-:   Link a Continuous Delivery(CD) service  and toolchain instance to a Git project for seamless integration, automating code deployment and real-time collaboration.
+:   Link a Continuous Delivery service and toolchain instance to a Git project for seamless integration, automating code deployment, and real-time collaboration.
 :   For more information, see [Link a Continuous Delivery service instance to a Git Project](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage&interface=ui#git_projects).
 
 
