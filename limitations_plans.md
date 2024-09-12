@@ -325,24 +325,24 @@ Linking a Continuous Delivery (CD) service instance to a Git project enables lin
 
 To link your CD service instance and toolchain instance to a Git project, you can use UI or API.
 
-### Link CD and toolchain instances in the UI
+### Link Continuous Delivery and toolchain instances in the UI
 {: #git_projects_cd_instance_linking_validating-ui}
 {: ui}
 
 #### Linking a new project
 {: #git_projects_cd_instance_linking_validating-ui-new}
 
-You can link CD and toolchain instances in the UI when you're creating a new project. It is mandatory to link an existing CD and a toolchain instances in the UI.
+You must link Continuous Delivery and toolchain instances in the UI when you're creating a new project. It is mandatory to link an existing CD and a toolchain instances in the UI.
 
 #### Linking an exisiting project
 {: #git_projects_cd_instance_linking_validating-ui-new}
 
 1. Go to **Projects** > **General** > **Settings**
 1. Select the project you want to add instances to.
-1. Go to **Continuous Delivery** > **Expand** to update or add a CD instance.
+1. Go to **Continuous Delivery** > **Expand** to update or add a Continuous Delivery instance.
 
 
-### Link CD and toolchain instances using API
+### Link Continuous Delivery and toolchain instances using API
 {: #git_projects_cd_instance_linking_validating-api}
 {: api}
 
@@ -350,17 +350,17 @@ You can link CD and toolchain instances when you're using API to create a new pr
 
 * Use an optional header `IBM-CLOUD-API-KEY` to add CD and toolchains while creating a project. Generate a key for your API key from [here](https://cloud.ibm.com/login?redirect=%2Fiam%2Fapikeys).
 
-To successfully link a toolchain and CD instance parameters, you must use the `IBM-CLOUD-API-KEY` header.
+To successfully link a toolchain and Continuous Delivery instance parameters, you must use the `IBM-CLOUD-API-KEY` header.
 {: note}
 
-* Add request parameters `toolchain_ID` and `cd_instance` to link your Git project to a specific CD and toolchain instance.
+* Add request parameters `toolchain_ID` and `cd_instance` to link your Git project to a specific Continuous Delivery and toolchain instance.
 
  The `toolchain_id` parameter supersedes the `cd_instance` parameter. If both are provided, the toolchain ID is used. However, if only the `cd_instance` parameter is given, a default toolchain is automatically created for the specified CD instance.
  {: note}
 
-To find your CD and toolchain instance IDs:
+To find your Continuous Delivery and toolchain instance IDs:
 
    1. Go to [Resources](https://cloud.ibm.com/resources) in [IBM Console](https://cloud.ibm.com).
-   1. From your Resources, click the required toolchain or CD instance.
+   1. From your Resources, click the required toolchain or Continuous Delivery instance.
    1. Click **Details** to view and copy the GUID and CRN details.
    1. For `toolchain_ID` parameter, use the toolchain's GUID. For `cd_instance` paramter, use either GUID or CRN as its value.
