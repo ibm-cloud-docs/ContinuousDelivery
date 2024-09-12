@@ -339,7 +339,7 @@ You must link Continuous Delivery and toolchain instances in the UI when you're 
 
 1. Go to **Projects** > **General** > **Settings**
 1. Select the project you want to add instances to.
-1. Go to **Continuous Delivery** > **Expand** to update or add a Continuous Delivery instance.
+1. Go to **Continuous Delivery** > **Expand** to update or add a Continuous Delivery and toolchain instance.
 
 
 ### Link Continuous Delivery and toolchain instances using API
