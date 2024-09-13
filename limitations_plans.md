@@ -320,10 +320,9 @@ When you use {{site.data.keyword.gitrepos}}, the content that you contribute to 
 ## Link a Continuous Delivery service instance to a Git Project
 {: #git_projects_cd_instance_linking_validating}
 
+ Git projects must be linked to a Continuous Delivery service instance using a toolchain because Git Repos and Issue Tracking are a component of the Continuous Delivery service.  Adding your project to a toolchain makes it easier to use other tools such as Continuous Delivery Pipelines or DevOps Insights. Thus, it streamlines your development workflows and improves your code quality.
 
-Linking a Continuous Delivery (CD) service instance to a Git project enables linking your Git project direcly to an exising Git repo. This integration allows you to streamline your development workflow and ensure that your code is always up-to-date and deployable.
-
-To link your CD service instance and toolchain instance to a Git project, you can use UI or API.
+To link your CD service instance and toolchain instance to a Git project, you can use the UI or API.
 
 ### Link Continuous Delivery and toolchain instances in the UI
 {: #git_projects_cd_instance_linking_validating-ui}
@@ -342,11 +341,11 @@ You must link Continuous Delivery and toolchain instances in the UI when you're 
 1. Go to **Continuous Delivery** > **Expand** to update or add a Continuous Delivery and toolchain instance.
 
 
-### Link Continuous Delivery and toolchain instances using API
+### Link Continuous Delivery and toolchain instances using the API
 {: #git_projects_cd_instance_linking_validating-api}
 {: api}
 
-You can link CD and toolchain instances when you're using API to create a new project.
+You can link CD and toolchain instances when you're using the API to create a new project.
 
 * Use an optional header `IBM-CLOUD-API-KEY` to add CD and toolchains while creating a project. Generate a key for your API key from [here](https://cloud.ibm.com/login?redirect=%2Fiam%2Fapikeys).
 
