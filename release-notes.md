@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-08-22"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -55,7 +55,7 @@ The {{site.data.keyword.contdelivery_short}} service Professional plan now suppo
 
 
 {{site.data.keyword.deliverypipeline}}
-:   Upgraded to [Tekton Pipelines v0.59.1](https://github.com/tektoncd/pipeline/releases/tag/v0.59.1){: external}.
+:   Upgraded to [Tekton Pipelines v0.59.2](https://github.com/tektoncd/pipeline/releases/tag/v0.59.2){: external}.
 
 ## 15 February 2024
 {: #ContinuousDelivery-feb1524}
