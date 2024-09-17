@@ -62,7 +62,8 @@ The {{site.data.keyword.contdelivery_short}} service Professional plan now suppo
 {: #ContinuousDelivery-feb1524}
 {: release-note}
 
-The Toolchain service can now be selected as a service reference when creating network zones under [context-based restrictions](/docs/account?topic=account-context-restrictions-whatis).
+{{site.data.keyword.deliverypipeline}}
+The toolchain service can now be selected as a service reference when creating network zones under [Context-based restrictions](/docs/account?topic=account-context-restrictions-whatis).
 
 ## 2 January 2024
 {: #ContinuousDelivery-jan0224}
