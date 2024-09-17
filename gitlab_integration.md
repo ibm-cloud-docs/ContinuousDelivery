@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-04-17"
+  years: 2016, 2024
+lastupdated: "2024-08-16"
 
 keywords: tool integrations, IBM Cloud Public, GitLab
 
@@ -33,6 +33,8 @@ If you are configuring this tool integration as you are creating the toolchain, 
    a. Type a title for your custom GitHub server, specify the root URL for the server, and enter your personal access token.
 
    b. If you don't have a personal access token, you can follow the documentation on the GitLab website to create one.
+
+   c. If your GitHub server is air-gapped or is not accessible on the public internet, you can connect and integrate a {{site.data.keyword.deliverypipeline}} Private Worker to run on your own Kubernetes infrastructure to access internal or on-premises resources. For more information about {{site.data.keyword.deliverypipeline}} Private Workers, see [Working with {{site.data.keyword.deliverypipeline}} Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers).
 
 1. Review the default target repo locations for the GitLab repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
 
@@ -74,6 +76,7 @@ You must specify the `tool_type_id` property in the request body with the `gitla
 | api_root_url | optional, updatable | String | api_root_url | The URL of the GitLab API. |
 | api_token | optional, updatable | Password | api_token | The Personal Access Token (PAT). This parameter is required only if the `auth_type` is set to `pat`, otherwise it is ignored. |
 | auth_type | optional, updatable, `Default: oauth` | String | auth_type | Set the authentication method to use to access the Git provider. |
+| blind_connection | optional, updatable, `Default: false` | Boolean | blind_connection | Set this value to true to indicate that the server is not addressable on the public internet because {{site.data.keyword.cloud_notm}} can't validate the connection details that you provide. Certain functions that require API access to the Git server will be disabled. {{site.data.keyword.deliverypipeline}} works only by using a private worker that has network access to the Git server. |
 | default_branch | optional, updatable | String | default_branch | The name of the default branch of the Git repo. |
 | enable_traceability | optional, updatable, `Default: false` | Boolean | enable_traceability | Set this value to `true` to track the deployment of code changes by creating tags, labels and comments on commits, pull requests, and referenced issues. |
 | git_id | optional, immutable | String | git_id | Set this value to `gitlab` for gitlab.com, or to the GUID of a custom GitLab server. |

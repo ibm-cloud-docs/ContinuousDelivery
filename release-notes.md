@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-08-22"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -17,8 +17,21 @@ content-type: release-note
 # Release notes for {{site.data.keyword.contdelivery_short}}
 {: #cd-relnotes}
 
-Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years. 
+Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
+
+## September 2024
+{: #ContinuousDelivery-sep2024}
+{: release-note}
+
+Enabling Direct Integration with an Existing Git Repository
+:   Link a Continuous Delivery service and toolchain instance to a Git project for seamless integration, automating code deployment, and real-time collaboration. It is **mandatory** to link Continuous Delivery service and toolchain instance for creating a new project in the UI.
+
+:   For more information, see [Link a Continuous Delivery service instance to a Git Project](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage&interface=ui#git_projects).
+
+
+
+
 
 ## 09 July 2024
 {: #ContinuousDelivery-july2424}
@@ -43,13 +56,14 @@ The {{site.data.keyword.contdelivery_short}} service Professional plan now suppo
 
 
 {{site.data.keyword.deliverypipeline}}
-:   Upgraded to [Tekton Pipelines v0.59.1](https://github.com/tektoncd/pipeline/releases/tag/v0.59.1){: external}.
+:   Upgraded to [Tekton Pipelines v0.59.2](https://github.com/tektoncd/pipeline/releases/tag/v0.59.2){: external}.
 
 ## 15 February 2024
 {: #ContinuousDelivery-feb1524}
 {: release-note}
 
-The Toolchain service can now be selected as a service reference when creating network zones under [context-based restrictions](/docs/account?topic=account-context-restrictions-whatis).
+{{site.data.keyword.deliverypipeline}}
+The toolchain service can now be selected as a service reference when creating network zones under [Context-based restrictions](/docs/account?topic=account-context-restrictions-whatis).
 
 ## 2 January 2024
 {: #ContinuousDelivery-jan0224}
@@ -616,4 +630,3 @@ Stricter enforcement of service plans
 :   If you are using the Lite plan, after 500 Delivery Pipeline jobs are run during a month, pipelines do not run, pushes to Git Repos are unavailable, and DevOps Insights is unavailable for the remainder of that billing period.
 
     Read the [announcement](https://www.ibm.com/blog/announcement/usage-and-billing-in-ibm-cloud-continuous-delivery/){: external}.
-

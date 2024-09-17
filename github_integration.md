@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2024
-lastupdated: "2024-04-17"
+  years: 2016, 2024
+lastupdated: "2024-08-16"
 
 keywords: tool integrations, IBM Cloud Public, GitHub
 
@@ -38,6 +38,8 @@ If you are configuring this tool integration as you are creating the toolchain, 
    a. Type a title for your custom GitHub server, specify the root URL for the server, and enter your personal access token.
 
    b. If you don't have a personal access token, you can follow the documentation on the GitHub website to create one.
+
+   c. If your GitHub server is air-gapped or is not accessible on the public internet, you can connect and integrate a {{site.data.keyword.deliverypipeline}} Private Worker to run on your own Kubernetes infrastructure to access internal or on-premises resources. For more information about {{site.data.keyword.deliverypipeline}} Private Workers, see [Working with {{site.data.keyword.deliverypipeline}} Private Workers](/docs/ContinuousDelivery?topic=ContinuousDelivery-private-workers).
 
 1. Review the default target repo locations for the GitHub repos. Those repos are cloned from the sample repos. If needed, change the names of the target repos.
 
