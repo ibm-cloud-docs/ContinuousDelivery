@@ -347,7 +347,7 @@ You must link Continuous Delivery and toolchain instances in the UI when you're 
 
 You can link CD and toolchain instances when you're using the API to create a new project.
 
-* Use an optional header `IBM-CLOUD-API-KEY` to add CD and toolchains while creating a project. Generate a key for your API key from [here](https://cloud.ibm.com/login?redirect=%2Fiam%2Fapikeys).
+* Use an optional header `IBM-CLOUD-API-KEY` to add CD and toolchains while creating a project. Generate the key value for your API key from [here](https://cloud.ibm.com/login?redirect=%2Fiam%2Fapikeys).
 
 To successfully link a toolchain and Continuous Delivery instance parameters, you must use the `IBM-CLOUD-API-KEY` header.
 {: note}
