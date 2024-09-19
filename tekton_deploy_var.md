@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-17"
+lastupdated: "2024-09-16"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -127,7 +127,7 @@ spec:
           env
 ```         
 
-## Managed worker virtual machine (VM) sizing
+## Managed worker virtual machine sizing
 {: #tekton_tshirt_sizing}
 
 When you run a pipeline by using the IBM Managed Worker pool, a VM with a specific default memory is allocated. Although most jobs can run successfully with the provided memory, certain pipelines require extra memory for intensive tasks.
@@ -171,8 +171,14 @@ spec:
         runtimeClassName: kata-tiny
 ```
 
+## Monitoring and gracefully handling memory constraints
+{: #memory-monitoring}
+
+When running a pipeline, you have the option to select the size of memory available. For users interested in monitoring their memory usage, a sidecar feature can be enabled to track how high the memory usage gets during the pipeline's execution. To do this, you must be using the preprocessor and have the environment variable `memory-high-watermark` set to `true` for the pipeline run. With this enabled, after a run completes, you can download the logs for that run and for each stage in the log directory you will find `sidecar-memory-highwater-mark.log`. In that log will be a list memory high watermarks, the last line in the log will have the peak memory usage for that stage.
+
+When you run a pipeline by using the IBM Managed Worker pool, a VM with a specific default memory is allocated. For pipeline runs that may be running close to the default memory size, unexpected failures may occur due to running out of memory. This can be hard to diagnose as users will normally see generic exit codes. To address this, users can enable Kubernetes memory constraints to gracefully exit with `OOMKilled`. By enabling this feature, users will get confirmation that the cause of their failure is due to running out of memory and can leverage the sizing above to address the issue. To enable this feature, users must be using the preprocessor and a set the pipeline environment variable key `memory-ceiling` and set its value to `true`. This will add the necessary Kubernetes limits to trigger `OOMKilled`. 
+
 ## Learn more about Tekton delivery pipelines
 {: #tekton_learn_more}
 
 To learn more about Tekton and {{site.data.keyword.contdelivery_short}}, see [Tekton: A Modern Approach to Continuous Delivery](https://www.ibm.com/blog/tekton-a-modern-approach-to-continuous-delivery/){: external}.
-
