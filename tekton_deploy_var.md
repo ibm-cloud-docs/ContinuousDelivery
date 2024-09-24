@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2024
-lastupdated: "2024-04-17"
+lastupdated: "2024-09-16"
 
 keywords: environment properties, environment resources, IBM Java, Tekton environments
 
@@ -127,7 +127,7 @@ spec:
           env
 ```         
 
-## Managed worker virtual machine (VM) sizing
+## Managed worker virtual machine sizing
 {: #tekton_tshirt_sizing}
 
 When you run a pipeline by using the IBM Managed Worker pool, a VM with a specific default memory is allocated. Although most jobs can run successfully with the provided memory, certain pipelines require extra memory for intensive tasks.
@@ -171,8 +171,14 @@ spec:
         runtimeClassName: kata-tiny
 ```
 
+
+
+
+
+
+ 
+
 ## Learn more about Tekton delivery pipelines
 {: #tekton_learn_more}
 
 To learn more about Tekton and {{site.data.keyword.contdelivery_short}}, see [Tekton: A Modern Approach to Continuous Delivery](https://www.ibm.com/blog/tekton-a-modern-approach-to-continuous-delivery/){: external}.
-
