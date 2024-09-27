@@ -136,7 +136,8 @@ When consolidated billing is enabled on a service instance, the **Manage > Autho
 * Consolidated billing is confined to a single given region. Usage cannot be consolidated from one region to another.
 * While consolidated billing is enabled on a {{site.data.keyword.contdelivery_short}} service instance, all other Professional plan instances of the service in the enterprise hierarchy report zero authorized users, even though they continue to list their authorized users.
 
-If you delete a {{site.data.keyword.contdelivery_short}} service instance in an enterprise account that has consolidated billing enabled, consolidated billing will cease, and all other instances of the service in the enterprise and region will resume normal billing. If you restore the deleted service instance while it is pending reclamation, consolidated billing will not automatically be re-enabled. If desired, you can re-enable consolidated billing from the **Manage > Consolidated billing** tab of the restored {{site.data.keyword.contdelivery_short}} service instance.
+Consilidated billing ceases if you delete a {{site.data.keyword.contdelivery_short}} service instance in an enterprise account that has consolidated billing enabled. Alsom all other instances of the service in the enterprise and region will resume normal billing.
+If you restore the deleted service instance while the reclamation is pending, consolidated billing will not automatically be reenabled. You can also reenable consolidated billing from the **Manage > Consolidated billing** tab of the restored {{site.data.keyword.contdelivery_short}} service instance.
 {: tip}
 
 ## Authorized users
