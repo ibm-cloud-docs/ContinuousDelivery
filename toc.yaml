@@ -198,6 +198,7 @@ toc:
           - link:
               label: Continuous Delivery Python SDK
               href: https://github.com/IBM/continuous-delivery-python-sdk
+          - api-change-log.md
       - link:
           label: Open Toolchain Templates SDK
           href: https://github.com/open-toolchain/sdk/wiki
