@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-09-25"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -20,8 +20,17 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.contdelivery_full}} that are grouped by date. Release notes are available for a minimum of three years.
 {: shortdesc}
 
-## September 2024
-{: #ContinuousDelivery-sep2024}
+## 25 September 2024
+{: #ContinuousDelivery-sep2524}
+{: release-note}
+
+The {{site.data.keyword.contdelivery_short}} toolchain API method for generating bespoke toolchain events to {{site.data.keyword.en_short}}, [POST /toolchains/:toolchain_id/events](https://cloud.ibm.com/apidocs/toolchain#create-toolchain-event), is now generally available.
+:  The `text_plain` property of the request payload is changed from a string to a JSON object of the form `{“content”: “string”}`. The API is otherwise unchanged from the Beta.
+:  For more information, see [Enabling event notifications for toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd) and the [CD Toolchain API Docs](https://cloud.ibm.com/apidocs/toolchain#create-toolchain-event){: external}.
+
+
+## 06 September 2024
+{: #ContinuousDelivery-sep0624}
 {: release-note}
 
 Enabling Direct Integration with an Existing Git Repository
