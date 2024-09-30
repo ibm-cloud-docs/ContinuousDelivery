@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-04-18"
+lastupdated: "2024-09-26"
 
 keywords: troubleshoot, Delivery Pipeline, toolchains, tool integrations
 
@@ -239,7 +239,7 @@ Try resolving the problem by using one of the following options:
 * Validate that all referenced branches and paths in your definition inputs match with resources that exist in the repository.
 * Reduce the size of the repository containing your Tekton definition. Remove unnecessary files from the repository and update your `.gitignore` to exclude uploading any unnecessary files.
 * Only include the minimum necessary files of your pipeline definition -- do not target your entire repository. Move all Tekton definition related files to a subfolder of your repository, then edit the definition input in your {{site.data.keyword.deliverypipeline}} settings to target the path at the subfolder. This option reduces the time necessary to clone the definition files from your repository.
-* For large Tekton definitions, consider splitting the definition into multiple folders or multiple repositoriess. Then update the definition inputs in your {{site.data.keyword.deliverypipeline}} to target the necessary folders or repos.
+* For large Tekton definitions, consider splitting the definition into multiple folders or multiple repositories. Then update the definition inputs in your {{site.data.keyword.deliverypipeline}} to target the necessary folders or repos.
 
 The computed pipeline definition size limit is 1 MB. If you encounter errors when you save or run your pipeline, you might need to reduce the size of your pipeline definition, or split it into multiple pipelines.
 {: important}
@@ -280,7 +280,7 @@ To resolve this issue:
 - Run the pipeline again.
 {: tsResolve}
 
-## Why does my pipeline fail to start on managed workers when executed from a trial account ?
+## Why does my pipeline fail to start on managed workers when executed from a trial account?
 {: #troubleshoot-trial-account}
 {: troubleshoot}
 
@@ -296,3 +296,18 @@ This behavior is caused by a revision of the permissions for trial accounts.
 Try the following options to resolve this issue:
 - Execute your pipelines using a private worker running on your own cluster.
 - Upgrade your trial account to a [Pay-As-You-Go](/docs/account?topic=account-accounts) account with a Lite plan.
+
+## Why does my pipeline fail to trigger for pull request events from forked repositories?
+{: #troubleshoot-fork-event}
+{: troubleshoot}
+
+Pipelines by default do not respond to pull request events from forked repositories
+{: tsSymptoms}
+
+This behavior is by design to prevent inadvertent execution of pipelines.
+{: tsCauses}
+
+To enable pipelines to execute on events from forked repositories do the following:
+
+Tekton Pipelines: On the git trigger panel, enable the `Include pull request events from forks` toggle
+Classic Pipelines: On the Input tab of the stage configuration, enable the `Include pull request events from forks` toggle 
