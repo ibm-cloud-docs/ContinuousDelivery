@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-09-23"
+lastupdated: "2024-09-26"
 
 keywords: pipeline versioned base image, image version, pipeline job
 
@@ -64,7 +64,7 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 
 | Base image version | IBM Cloud Container Registry version |sha256 value|Creation date|
 | -------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------|
-| 3.51 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.50`| sha256:35bca00e4129c058d4cb59e923d1bf011d05cc55a5f3d0b089e2aaa919fe939b|2024-09-20|
+| 3.51 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.51`| sha256:35bca00e4129c058d4cb59e923d1bf011d05cc55a5f3d0b089e2aaa919fe939b|2024-09-20|
 | 3.50 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.50`| sha256:ef5794fcb0c7e4a037609fac7ac59536faa9af529efc811a22c6e178dbfbfbb2|2024-09-03|
 | 3.49 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.49`| sha256:63f81c27a83f4e9e005f40543c2ef6e34ce92e04b1c714850ef7ff95af684558|2024-08-12|
 | 3.48 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.48`| sha256:52a600bbd2008c4dc10e5833eeb09c557637fae06c61e23708d03d4161701b07|2024-07-23|
@@ -115,7 +115,7 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 | 3.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.2`| sha256:d59863621d3ba1b9bd47f76950c751e842405f9c303d0d4d4298d964b664ee85|2021-09-02|
 | 3.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.1`| sha256:c2468d28f15fa6970f13510c01477326f91a043881c2b4cd8f2b1ff8ed8c22a1|2021-06-10|
 | 3.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-ubi:3.0`| sha256:42318979f165cc1ffd4d707022ceb5461360a9b6cd1216bc0c63391bdd042726|2021-04-07|
-| 2.64 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.63`| sha256:ac8fde7275dce8d6f2be1a11e90ceed9ae9df82bd3b8d4454a196a0c2c65e8a1|2024-09-20|
+| 2.64 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.64`| sha256:ac8fde7275dce8d6f2be1a11e90ceed9ae9df82bd3b8d4454a196a0c2c65e8a1|2024-09-20|
 | 2.63 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.63`| sha256:c17f242f0dad99cb9fead6196f4a26a577b2790fe8df5654b69bdb155c3518fa|2024-09-03|
 | 2.62 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.62`| sha256:c0c7bd61969ec2e63eccd94a50734a9e97e7cea8f915ffface5a3d20fc4025e5|2024-08-12|
 | 2.61 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.61`| sha256:14802d84daaae24e6d0ca0997b468fffc9ea642276717316a043ca760db326f9|2024-07-23|

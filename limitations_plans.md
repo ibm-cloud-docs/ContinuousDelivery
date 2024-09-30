@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-09-11"
+lastupdated: "2024-09-24"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations, consolidated billing
 
@@ -136,8 +136,10 @@ When consolidated billing is enabled on a service instance, the **Manage > Autho
 * Consolidated billing is confined to a single given region. Usage cannot be consolidated from one region to another.
 * While consolidated billing is enabled on a {{site.data.keyword.contdelivery_short}} service instance, all other Professional plan instances of the service in the enterprise hierarchy report zero authorized users, even though they continue to list their authorized users.
 
-When consolidated billing is enabled on a {{site.data.keyword.contdelivery_short}} service instance, authorized user emails are consolidated from all other instances of the service in the enterprise hierarchy and in the same region, including service instances that are [pending reclamation](/docs/account?topic=account-resource-reclamation). Before you delete an instance of the service that is participating in billing consolidation, you should manually delete the authorized users from the **Manage > Authorized users** tab of the instance.
-{: important}
+
+Deleting a {{site.data.keyword.contdelivery_short}} service instance in a Consilidated Blling-enabled enterprise account stops billing for that instance.Other instances of the service in the enterprise and region resume normal billing.
+Consolidated billing is not automatically reactivated when a deleted service instance is restored during reclamation. To re-enable consolidated billing for a restored service instance, go to **Manage > Consolidated billing** in your restored {{site.data.keyword.contdelivery_short}} service instance tab.
+{: tip}
 
 ## Authorized users
 {: #authorized_users}
