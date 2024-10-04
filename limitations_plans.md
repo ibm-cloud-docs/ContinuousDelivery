@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-04"
 
 keywords: users of a service instance, authorized users, pipeline usage, Git Repos and Issue Tracking limitations, consolidated billing
 
@@ -30,7 +30,7 @@ You must have a {{site.data.keyword.contdelivery_short}} [service instance](http
 
 
 
-The following table outlines the pricing plans of the {{site.data.keyword.contdelivery_short}} service:
+The following table outlines the pricing plans of {{site.data.keyword.contdelivery_short}}:
 
 | Plan | Cost | Limits |
 |:-----|:-----|:-------|
@@ -50,18 +50,24 @@ For more information about the plans, see [pricing plans](https://cloud.ibm.com/
 ## Usage metrics
 {: #usage_metrics}
 
-{{site.data.keyword.contdelivery_short}} service instances track and report usage metrics within your {{site.data.keyword.cloud_notm}} account. Depending upon the pricing plan of a service instance, the metrics may affect usage cost, usage limits, or both. The following table outlines the usage metrics of the {{site.data.keyword.contdelivery_short}} service:
+{{site.data.keyword.contdelivery_short}} service instances track and report usage metrics within your {{site.data.keyword.cloud_notm}} account. Depending on the pricing plan of a service instance, the metrics might affect usage cost, usage limits, or both. The following table outlines the usage metrics of {{site.data.keyword.contdelivery_short}}:
+
+
 
 | Usage | Metric | Summary |
 |:------|:-------|:--------|
 | Authorized users | `AUTHORIZED_USERS_PER_MONTH` | A count of the average number of authorized users of the service instance within a given month. |
 | Pipeline runs | `JOB_EXECUTIONS_PER_MONTH` | A count of the total number of pipeline Tekton step or classic job runs within a given month. |
-{: caption="Table 2. Usage metrics" caption-side="bottom"}
+{: caption="Table 2. Usage metrics for Lite and Professional plans" caption-side="bottom"}
+
+
+
+
 
 ## Consolidated billing
 {: #consolidated_billing}
 
-By default, {{site.data.keyword.contdelivery_short}} service instances report usage independently of each other. If you have organized your toolchains into multiple resource groups in a standalone {{site.data.keyword.cloud_notm}} account or across several {{site.data.keyword.cloud_notm}} accounts in an [enterprise](/docs/secure-enterprise?topic=secure-enterprise-what-is-enterprise), then users of your toolchains may be reported as authorized users multiple times from corresponding multiple instances of the {{site.data.keyword.contdelivery_short}} service.
+By default, {{site.data.keyword.contdelivery_short}} service instances report usage independently of each other. If you have organized your toolchains into multiple resource groups in a standalone {{site.data.keyword.cloud_notm}} account or across several {{site.data.keyword.cloud_notm}} accounts in an [enterprise](/docs/secure-enterprise?topic=secure-enterprise-what-is-enterprise), then users of your toolchains might be reported as authorized users multiple times from corresponding multiple instances of the {{site.data.keyword.contdelivery_short}} service.
 
 For example, a developer on a Git Repos and Issue Tracking project that is integrated into two toolchains in different resource groups will be counted and, under the Professional plan, billed for twice.
 
@@ -173,7 +179,7 @@ The specific activities that are used to automatically count users, and the meth
 
 For more information about using IAM to manage access to toolchains in a resource group or the toolchain itself, see [Managing user access to toolchains with Identity and Access Management](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security). For more information about managing access to a {{site.data.keyword.gitrepos}} repo, see [Project's members](https://us-south.git.cloud.ibm.com/help/user/project/members/index.md){: external}.
 
-The method that you use to organize toolchains within resource groups directly impacts user access and billing. By default, when a user uses toolchains in multiple regions or resource groups, they are counted and billed for each {{site.data.keyword.contdelivery_short}} service instance within each unique pairing of region and resource group. If you have an enterprise account and are using the {{site.data.keyword.contdelivery_short}} Professional plan, you may be able to reduce the total count of authorized users billed within the enterprise by [enabling consolidated billing](#consolidated_billing_enable).
+The method that you use to organize toolchains within resource groups directly impacts user access and billing. By default, when a user uses toolchains in multiple regions or resource groups, they are counted and billed for each {{site.data.keyword.contdelivery_short}} service instance within each unique pairing of region and resource group. If you have an enterprise account and are using the {{site.data.keyword.contdelivery_short}} Professional plan, you might be able to reduce the total count of authorized users billed within the enterprise by [enabling consolidated billing](#consolidated_billing_enable).
 {: tip}
 
 You can manage the list of authorized users on the **Manage** tab within the {{site.data.keyword.contdelivery_short}} service instance.
@@ -297,7 +303,7 @@ The usage behaviors that are not permitted include, but are not limited to, thes
 
 At the discretion of IBM, users who violate the acceptable usage behaviors of the {{site.data.keyword.contdelivery_short}} services or the IBM Business Conduct Guidelines can be disabled without notice. At the discretion of IBM, some services can be restored if users correct their usage behaviors after they are notified of the offensive action. Otherwise, accounts can be suspended or terminated.
 
-## Git Repos and Issue Tracking limitations
+## Git repos and issue tracking limitations
 {: #git_limitations}
 
 {{site.data.keyword.gitrepos}} is built on GitLab Community Edition and hosted by IBM on {{site.data.keyword.cloud_notm}}, however, a few GitLab options are not available:
@@ -306,12 +312,12 @@ At the discretion of IBM, users who violate the acceptable usage behaviors of th
 * GitLab admin functions are not available because they are managed by IBM.
 * {{site.data.keyword.gitrepos}} might not be fully accessible.
 
-## Git Repos and Issue Tracking user information and content
+## Git repos and issue tracking user information and content
 {: #git_projects}
 
 Three types of {{site.data.keyword.gitrepos}} projects are available:
 
-* Public projects are visible to all site visitors. The content in a public project is visible to everyone who accesses {{site.data.keyword.contdelivery_short}}, even if they are not invited to the project.
+* Public projects are visible to all site visitors. The content in a public project is visible to everyone who accesses {{site.data.keyword.contdelivery_short}} even if they are not invited to the project.
 * Private projects are visible to select users only. For more information about granting users access to a project, see [Project members](https://us-south.git.cloud.ibm.com/help/user/project/members/index.md){: external}.
 * Internal projects are visible to all logged-in users. Any user who has an {{site.data.keyword.cloud_notm}} account can view these projects.
 
@@ -326,7 +332,7 @@ When you use {{site.data.keyword.gitrepos}}, the content that you contribute to 
 
 To link your Continuous Delivery service instance and toolchain instance to a Git project, you can use the UI or API.
 
-### Link Continuous Delivery and toolchain instances in the UI
+### Linking Continuous Delivery and toolchain instances in the UI
 {: #git_projects_cd_instance_linking_validating-ui}
 {: ui}
 
