@@ -32,7 +32,7 @@ Notifications that are posted to public Slack channels are visible to everyone o
 Configure Slack to receive notifications about your toolchain from the tool integrations, such as test and deployment activities:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Slack**.
-1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**. 
+1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**. 
 
    a. Click **Add tool**.
 
@@ -80,5 +80,3 @@ You can configure a Tekton Pipeline to send events to Slack integrations.
 1. From your toolchain's Overview page, on the **Delivery pipelines** card, click the **Delivery Pipeline** to open the Tekton Delivery Pipeline dashboard. 
 1. On the **Settings** > **Advanced Settings** page, enable **Event Notifications**.
 1. Save your changes.
-
-

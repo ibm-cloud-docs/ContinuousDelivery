@@ -30,7 +30,7 @@ For more information about data sets, see [Managing data sets](/docs/ContinuousD
 
 To go to the Policy Rules page within {{site.data.keyword.DRA_short}}, complete the following steps:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
 1. On the Toolchains page, click your toolchain to open its Overview page.
 1. On the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration.
 1. From the menu, select **Policies** and then select a policy.
@@ -47,7 +47,7 @@ In your pipeline, you can enter a command by using the {{site.data.keyword.Bluem
 
 From the Risk Analysis page, you can view gate decision reports on the Build detail page. The Build detail page has information about your latest report.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
 1. On the Toolchains page, click your toolchain to open its Overview page.
 1. On the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration.
 1. From the menu, select **Risk Analysis** and then click the **Application** tab.

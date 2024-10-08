@@ -70,7 +70,7 @@ To create a **Develop an application for a Virtual Machine** toolchain, click
 
 [![Create toolchain](images/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fsimple-vsi-toolchain&env_id=ibm:yp:us-south){: external}
 
-Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click **Create a Toolchain**. On the **Create a Toolchain** page, click **Develop an application for a Virtual Machine**.
+Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the **Toolchains** page, click **Create a Toolchain**. On the **Create a Toolchain** page, click **Develop an application for a Virtual Machine**.
 {: tip}
 
 ### Configure the simple Virtual Server Instance

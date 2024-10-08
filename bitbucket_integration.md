@@ -20,7 +20,7 @@ Store your source code in a new or existing repository (repo) on bitbucket.org a
 
 Configure Bitbucket to collaborate on code with your team:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain that you want to add Bitbucket to. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click the toolchain that you want to add Bitbucket to. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 
    a. Click **Add tool**.
 

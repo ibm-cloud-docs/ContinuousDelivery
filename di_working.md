@@ -31,7 +31,7 @@ Authorize the use of GitHub repos. For more information, see [Authenticating wit
 ## Step 1. Add the toolchain by using a template
 {: #1-add-toolchain}
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
 2. Expand the **Location** menu, and select a location for your deployment. {{site.data.keyword.DRA_short}} is available in Dallas, London, and Frankfurt. 
 3. Click **Create a Toolchain**.
 4. Select the **{{site.data.keyword.DRA_short}} Quick Start Demo** tile.  
@@ -59,7 +59,7 @@ For more information about pipelines, see [{{site.data.keyword.deliverypipeline}
 
 Explore the Quality Dashboard page to see the data aggregated from {{site.data.keyword.deliverypipeline}}. The quality dashboard provides quality data sets for each application.  
 
-1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
 2. On the Toolchains page, click the {{site.data.keyword.DRA_short}} toolchain to open its Overview page.
 3. On the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration. 
 4. Click **Quality Dashboard**.
@@ -88,7 +88,7 @@ To make a gate fail, edit the code in the `routes/apivl.js` file so that the cod
 
 The gate fails because the code coverage isn't met. When you gate your own deployments, you can determine whether it failed or passed by looking at the Risk Analysis page. Also, you can define, change, and customize policies and rules to fit your needs when it comes to gating deployments. View the policies and rules that make the gate. 
 
-1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
 2. On the Toolchains page, click the {{site.data.keyword.DRA_short}} toolchain to open its Overview page.
 3. On the **IBM Cloud tools** card, click the {{site.data.keyword.DRA_short}} tool integration. 
 4. Click **Policies** > **Weather Unit Test, Code Coverage, and FVT Checks**. 

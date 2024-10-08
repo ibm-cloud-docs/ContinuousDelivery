@@ -26,7 +26,7 @@ Before you configure a {{site.data.keyword.keymanagementserviceshort}} tool inte
 Configure {{site.data.keyword.keymanagementserviceshort}} to securely manage secrets that are part of your toolchain:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.keymanagementserviceshort}}**. If {{site.data.keyword.keymanagementserviceshort}} is defined as an optional tool integration, it is located under **More Tools**. To create an authorization between the toolchain and the **{{site.data.keyword.keymanagementserviceshort}}** service instance select the **Create an authorization for this toolchain** option from the **Authorization type** dropdown. This grants the toolchain access to the secret material stored in the **{{site.data.keyword.keymanagementserviceshort}}** service instance.
-1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the {{site.data.keyword.contdelivery_short}} card, click **View toolchain**. Then, click **Overview**.  
+1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the {{site.data.keyword.contdelivery_short}} card, click **View toolchain**. Then, click **Overview**.  
 
    a. Click **Add tool**.
 
@@ -117,4 +117,3 @@ You must specify the `tool_type_id` property in the request body with the `keypr
 {: #keyprotect_learn_more}
 
 To learn more about {{site.data.keyword.keymanagementserviceshort}}, see [Service overview](/docs/key-protect?topic=key-protect-about).
-

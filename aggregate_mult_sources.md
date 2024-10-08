@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-04-15"
+lastupdated: "2024-10-08"
 
 keywords: devops insights, devops, insights, toolchain, aggregate, test, tests, gate, gate failing, app
 
@@ -42,7 +42,7 @@ For more information about integrating Jenkins or other continuous integration a
 
 Your toolchain ID is contained within the URL. To find your toolchain ID, complete the following steps:
 
-1. From the {{site.data.keyword.cloud}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. From the {{site.data.keyword.cloud}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
 2. On the Toolchains page, select your toolchain.
 3. From your toolchain's Overview page, on the **IBM Cloud tools** card, click **{{site.data.keyword.DRA_short}}**. 
 4. In the url, copy the everything in the string after `?toolchainId=`. This string is 36 characters in length, which is composed of alphanumeric characters and dashes. 
@@ -62,7 +62,7 @@ To publish data to a single toolchain, you must modify the scripts of your pipel
 
 To publish your records to a centralized toolchain, complete the following steps:
 
-1. Click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **Resource List**.
+1. Click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg), and select **Resource list**.
 2. Select your toolchain.
 3. From your toolchain's Overview page, on the **Delivery pipelines** card, click the pipeline that you want to use.
 4. Click the **Settings** icon ![gear icon](images/settings.svg) and **Configure Stage**. 
