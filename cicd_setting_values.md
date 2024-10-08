@@ -36,7 +36,7 @@ To set the toolchain ID as an environment variable, first identify and save the 
 
 Use the following steps to go to the {{site.data.keyword.contdelivery_short}} pipeline in your toolchain and set the toolchain ID as an environment variable:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
 2. Select a location to view your toolchains that contain instances of {{site.data.keyword.DRA_short}}. 
 3. Select your toolchain. 
 4. From your toolchain's Overview page, on the **Delivery pipelines** card, click **{{site.data.keyword.deliverypipeline}}**.

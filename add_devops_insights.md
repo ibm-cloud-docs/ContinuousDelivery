@@ -36,7 +36,7 @@ For more information about toolchains, see [Creating a toolchain from an app](/d
 
 You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it from the tool integration catalog.
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) **> DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
 2. Select your toolchain.  
 3. Click **Add tool**.
 4. Select the **{{site.data.keyword.DRA_short}}** tile.

@@ -29,7 +29,7 @@ To see which toolchain templates contain the {{site.data.keyword.gitrepos}} or G
 You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes either a {{site.data.keyword.gitrepos}} or GitHub tool integration. Learn more about how to use the templates from the [IBM Cloud Garage Method](https://www.ibm.com/architectures/hybrid){: external}.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
 1. On the DevOps dashboard, on the **Toolchains** page, click **Create a Toolchain**.
 1. On the **Create a Toolchain** page, click a toolchain template.
 1. Review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.

@@ -40,7 +40,7 @@ If you are configuring this tool integration as you are creating the toolchain, 
 
 If you have a toolchain and are adding this tool integration to it, follow these steps:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 1. Click **Add tool**.
 1. In the Tool Integrations section, click **GitLab**.
 1. Click the GitLab server that you want to use.
@@ -91,4 +91,3 @@ You must specify the `tool_type_id` property in the request body with the `gitla
 | token_url | optional, updatable | String | token_url | The token URL that is used to authorize with the GitLab server. |
 | type | required, immutable | String | type | The operation to perform to initialize the new tool integration. Use `new` to create a Git repo, `clone` to clone an existing repo into a new Git repo, `fork` to fork an existing Git repo, or `link` to link to an existing Git repo. |
 {: caption="Table 1. GitLab tool integration parameters" caption-side="bottom"}
-

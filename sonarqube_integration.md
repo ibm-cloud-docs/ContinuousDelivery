@@ -20,7 +20,7 @@ SonarQube provides an overview of the overall health and quality of your source 
 
 Configure SonarQube to continuously analyze and measure the quality of your source code:
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**. 
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**. 
  
    a. Click **Add a Tool**.
 
@@ -117,4 +117,3 @@ You must specify the `tool_type_id` property in the request body with the `sonar
 | user_login | optional, updatable | String | user_login | The user ID for authenticating with the SonarQube server. |
 | user_password | optional, updatable | Password | user_password | The password or token to authenticate with the SonarQube server. You can use a toolchain secrets reference for this parameter. For more information about secrets references, see [Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
 {: caption="Table 1. SonarQube tool integration parameters" caption-side="bottom"}
-

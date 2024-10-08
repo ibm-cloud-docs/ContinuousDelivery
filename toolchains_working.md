@@ -35,9 +35,9 @@ To see which toolchains and tool integrations are available, see [Toolchain avai
 You can use a template as a starting point to [create a toolchain](https://cloud.ibm.com/devops/create){: external} that includes a specific set of tool integrations. Depending on the template that you use, you can create a toolchain that has a specific set of tool integrations or an empty toolchain that you can add tool integrations to. Learn more about how to use the templates from the [{{site.data.keyword.cloud_notm}} Garage Method](https://www.ibm.com/architectures/hybrid){: external}.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](http://cloud.ibm.com){: external}.
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**.
-1. On the **Toolchains** page, click **Create a Toolchain**.
-1. On the **Create a Toolchain** page, click a toolchain template.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**.
+1. On the Toolchains page, click **Create a Toolchain**.
+1. On the Create a Toolchain page, click a toolchain template.
 1. Review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
 
    A few of the toolchain templates have multiple instances of a tool integration. For example, the "Develop and test microservices with Kubernetes and Helm" toolchain template on {{site.data.keyword.cloud_notm}} Public contains four instances of GitHub and four instances of Delivery Pipeline.
@@ -275,7 +275,7 @@ After you configure the toolchain and its tool integrations, you can view a visu
 You can view a toolchain from an app by clicking the toolchain name from your app's Details page.
 {: tip}
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. 
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. 
 1. On the Toolchains page, select a **Resource Group** and **Location**. All of the toolchains that are contained within the selected resource group and location are displayed. Click the toolchain that you want to view to open its Overview page. Alternatively, on the App details page in your app, click the toolchain name.
 1. To access a tool integration that is in your toolchain, go to the appropriate card, such as **Delivery pipelines**, and then click the tool integration.
 
@@ -507,4 +507,3 @@ For more information about listing toolchains with the API and getting a toolcha
    terraform apply -refresh-only -auto-approve
    ```
    {: pre}
-

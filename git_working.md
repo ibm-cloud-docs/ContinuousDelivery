@@ -229,6 +229,20 @@ us-south.git.cloud.ibm.com:
 ```
 {: screen}
 
+```text
+eu-es.git.cloud.ibm.com:
+  ECDSA:
+    SHA256:jbsXwbEhA7FTdqrJ9aXpdA8l5qgexfE/wlTZFKD5qnw
+    MD5:7f:9e:87:04:01:99:c9:e3:6a:41:e6:48:57:8a:86:45
+  ED25519:
+    SHA256:IMCPA+d8NHAgkkV725xTgfLcVahg3NtS8U9ZuSBeDFY
+    MD5:1d:ce:2c:52:8c:81:22:27:48:47:c3:ce:b9:ba:76:ae
+  RSA:
+    SHA256:HIsuc+yc2pFzIpalxtHkXgduPSvHm4F352Zc9WszeZU
+    MD5:b7:09:56:fb:68:76:fb:47:a1:78:01:64:fc:22:98:3a
+```
+{: screen}
+
 You can use following code snippet to verify the host key fingerprint for a headless connection to Git over SSH, by connecting to the us-south.git.cloud.ibm.com server. To use this code for a different server, update the `HOST` and `EXPECTED FINGERPRINT` values.
 
 ```text

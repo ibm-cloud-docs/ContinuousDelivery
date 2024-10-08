@@ -89,8 +89,8 @@ Toolchains are a special type of resource on the Cloud platform that you current
 To delete a toolchain:
 {: tsResolve}
 
-1. From the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click the toolchain to delete. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**.
-1. Click the **Actions** menu, then select **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
+1. From the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click the toolchain to delete. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View toolchain**.
+1. Click the **Actions** menu, and select **Delete**. Deleting a toolchain removes all of its tool integrations, which might delete resources that are managed by those integrations.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.
 
 You can use the {{site.data.keyword.cloud_notm}} CLI {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands to delete toolchains. After you [install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli), you can delete a toolchain from the command line by using the [`ibmcloud dev toolchain-delete`](/docs/cli?topic=cli-idt-cli#toolchain-delete) command. 

@@ -80,7 +80,7 @@ To create a **Deploy your application to multiple clusters** toolchain, click
 [![Create toolchain](images/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fus-south.git.cloud.ibm.com%2Fopen-toolchain%2Fsatellite-cd-toolchain&env_id=ibm:yp:us-south){: external} 
 
 
-Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg), and select **DevOps**. On the **Toolchains** page, click **Create a Toolchain**. On the **Create a Toolchain** page, click **Deploy your application to multiple clusters**.
+Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the **Toolchains** page, click **Create a Toolchain**. On the **Create a Toolchain** page, click **Deploy your application to multiple clusters**.
 {: tip}
 
 ### Review the Welcome page

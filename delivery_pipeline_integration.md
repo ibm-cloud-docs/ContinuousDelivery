@@ -20,7 +20,7 @@ subcollection: ContinuousDelivery
 Configure {{site.data.keyword.deliverypipeline}} to automate the continuous building, testing, and deployment of your apps:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **{{site.data.keyword.deliverypipeline}}**. Depending on the template that you use, different fields might be available. Review the default field values and if needed, change those settings.
-1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the toolchain that you want to add {{site.data.keyword.deliverypipeline}} to. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
+1. If you have a toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click the toolchain that you want to add {{site.data.keyword.deliverypipeline}} to. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.
 
    a. Click **Add tool**.
 
@@ -97,4 +97,3 @@ You must specify the `tool_type_id` property in the request body with the `pipel
 | --- | --- | --- | --- | --- |
 | name | optional, updatable | String | name | The name of this tool integration. |
 {: caption="Table 1. {{site.data.keyword.deliverypipeline}} tool integration parameters" caption-side="bottom"}
-

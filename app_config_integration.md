@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-11-24"
+  years: 2022, 2024
+lastupdated: "2024-10-08"
 
 keywords: tool integrations, IBM Cloud Public, App Configuraton, AppConfig
 
@@ -32,7 +32,7 @@ Before you create an {{site.data.keyword.appconfig_short}} tool integration in y
 
 1. If you are configuring this tool integration as you are creating the toolchain, and an {{site.data.keyword.appconfig_short}} tool integration exists within the template that you are configuring, click the **{{site.data.keyword.appconfig_short}}** tab. Alternatively, in the **More tools** section, click **{{site.data.keyword.appconfig_short}}**. To create an authorization between the toolchain and the **{{site.data.keyword.appconfig_short}}** service instance select the **Create an authorization for this toolchain** option from the **Authorization type** dropdown. This grants the toolchain access to the feature flags and properties stored in the **{{site.data.keyword.appconfig_short}}** service instance.
 
-1. If you have an existing toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the menu icon ![hamburger icon](images/icon_hamburger.svg) and select **DevOps**. On the Toolchains page, click the existing toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
+1. If you have an existing toolchain and are adding this tool integration to it, from the {{site.data.keyword.cloud_notm}} console, click the **Menu** icon ![hamburger icon](images/icon_hamburger.svg) > **DevOps**. On the Toolchains page, click the existing toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View toolchain**. Then, click **Overview**.  
 
    a. Click **Add tool**.
 
