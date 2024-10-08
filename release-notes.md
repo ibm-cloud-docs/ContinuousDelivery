@@ -2,7 +2,8 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-09-25"
+
+lastupdated: "2024-10-08"
 
 keywords: IBM Cloud Continuous Delivery, release notes, CD
 
@@ -28,6 +29,12 @@ The {{site.data.keyword.contdelivery_short}} toolchain API method for generating
 :  The `text_plain` property of the request payload is changed from a string to a JSON object of the form `{“content”: “string”}`. The API is otherwise unchanged from the Beta.
 :  For more information, see [Enabling event notifications for toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-event-notifications-cd) and the [CD Toolchain API Docs](https://cloud.ibm.com/apidocs/toolchain#create-toolchain-event){: external}.
 
+## 19 August 2024
+{: #ContinuousDelivery-august2424}
+{: release-note}
+
+{{site.data.keyword.gitrepos}}
+:   Upgraded to [GitLab 17.1.4](https://about.gitlab.com/releases/2024/08/07/patch-release-gitlab-17-2-2-released/){: external}.
 
 ## 06 September 2024
 {: #ContinuousDelivery-sep0624}
@@ -37,7 +44,6 @@ Enabling Direct Integration with an Existing Git Repository
 :   Link a Continuous Delivery service and toolchain instance to a Git project for seamless integration, automating code deployment, and real-time collaboration. It is **mandatory** to link Continuous Delivery service and toolchain instance for creating a new project in the UI.
 
 :   For more information, see [Link a Continuous Delivery service instance to a Git Project](/docs/ContinuousDelivery?topic=ContinuousDelivery-limitations_usage&interface=ui#git_projects).
-
 
 
 
