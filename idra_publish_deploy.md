@@ -59,7 +59,7 @@ Environment variables that you define in the pipeline provide context for publis
 | `IBM_CLOUD_API_KEY`   | The {{site.data.keyword.Bluemix_notm}} user's API key.                                         | All jobs that start the idra CLI and enforce {{site.data.keyword.DRA_short}} risk policies.  |
 | `LOGICAL_APP_NAME`    | The app's name on the dashboard.                                                               | All jobs that build, test, deploy, and enforce {{site.data.keyword.DRA_short}} risk policies. |
 | `BUILD_PREFIX`        | Text that is added as a prefix to the stage's builds. This text also appears on the dashboard. | All jobs that build, test, deploy, and enforce {{site.data.keyword.DRA_short}} risk policies. |
-{: caption="Table 1. Environment variable and purpose" caption-side="top"}
+{: caption="Environment variable and purpose" caption-side="top"}
 
 Be sure to use these variables consistently:
 

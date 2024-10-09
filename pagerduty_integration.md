@@ -65,4 +65,4 @@ You must specify the `tool_type_id` property in the request body with the `pager
 | service_id | optional, updatable | String | service_id | The service ID of the PagerDuty service. |
 | service_key | optional, updatable | Password | service_key | The PagerDuty service tool integration key. You can find or create this key in the Integrations section of the PagerDuty service page. |
 | service_url | optional, updatable | String | service_url | The URL of the PagerDuty service to post alerts to. |
-{: caption="Table 1. PagerDuty tool integration parameters" caption-side="bottom"}
+{: caption="PagerDuty tool integration parameters" caption-side="bottom"}

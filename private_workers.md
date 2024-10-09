@@ -102,7 +102,7 @@ The following table lists and describes each of the variables that are used in t
 | `{toolchain_id}` | The ID of the toolchain to which to add the tool integration. |
 | `{token}` | A valid IAM bearer token. |
 | `{sid_apikey}` | A service ID API key that is used by the private worker to authenticate with the work queue. |
-{: caption="Table 1. Variables for adding the {{site.data.keyword.deliverypipeline}} Private Worker tool integration with the API" caption-side="top"}
+{: caption="Variables for adding the {{site.data.keyword.deliverypipeline}} Private Worker tool integration with the API" caption-side="top"}
 
 ### Configuring the {{site.data.keyword.deliverypipeline}} Private Worker tool integration with Terraform
 {: #configure_private_worker_integration_terraform}
@@ -197,7 +197,7 @@ If you are assigned the Toolchain Administrator role, or you have worker cluster
 | View the list of namespaces in the cluster		|`$ kubectl get ns` (while the pipeline is running). At least one namespace, prefixed with `pw-` is returned during the pipeline job execution. For example, `pw-f0fb3cdb-5173-4785-ae92-bb05268e041e`. 		|
 |View the pod that is running the pipeline job		|`$ kubectl get pods -n pw-f0fb3cdb-5173-4785-ae92-bb05268e041e`   |
 |Start a bash session within a pod that is named `pw-f0fb3cdb-5173-4785-ae92-bb05268e041e`		|`kubectl -n pw-f0fb3cdb-5173-4785-ae92-bb05268e041e exec -it job-pod-e56e78 bash`		|
-{: caption="Table 2. Private Worker output" caption-side="top"}
+{: caption="Private Worker output" caption-side="top"}
 
 
 ## Modifying the {{site.data.keyword.deliverypipeline}} Private Worker tool integration credentials
@@ -316,7 +316,7 @@ The following table lists and describes each of the variables that are used in t
 | `{worker_id}` | The ID of the private worker tool to delete.|
 | `{toolchain_id}` | The ID of the toolchain to which to add the tool integration. |
 | `{token}` | A valid IAM bearer token. |
-{: caption="Table 3. Variables for deleting the {{site.data.keyword.deliverypipeline}} Private Worker tool integration with the API" caption-side="top"}
+{: caption="Variables for deleting the {{site.data.keyword.deliverypipeline}} Private Worker tool integration with the API" caption-side="top"}
 
 ## Deleting the {{site.data.keyword.deliverypipeline}} Private Worker tool integration with Terraform
 {: #delete_private_workers_integration_terraform}
@@ -438,7 +438,7 @@ The image URL for the pipeline private worker is `icr.io/continuous-delivery/pip
 | Pipeline private worker image version | {{site.data.keyword.registrylong}} version | Known vulnerabilities
 |:-----------------|:-----------------|:-----------------|
 | 0.18.0 | `icr.io/continuous-delivery/pipeline/pipeline-private-worker:0.18.0` | - |
-{: caption="Table 4. Private Worker images" caption-side="top"}
+{: caption="Private Worker images" caption-side="top"}
 
 The private worker installation also pulls the following supporting open source images to the cluster:
 

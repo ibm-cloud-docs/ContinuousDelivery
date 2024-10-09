@@ -42,7 +42,7 @@ The following are types of tests that can be used and the formats that are suppo
 | {{site.data.keyword.IBM_notm}} Vulnerability Advisor | {{site.data.keyword.IBM_notm}} Vulnerability Advisor (JSON)        |
 | Custom Data Sets - Tests                             | JUnit (JSON), xUnit (xml), Mocha (JSON), KarmaMocha (JSON)         |
 | Custom Data Sets - Code Coverage                     | Cobertura (xml), lcov, JaCoCo (xml)               |
-{: caption="Table 1. Supported tools and formats" caption-side="top"}
+{: caption="Supported tools and formats" caption-side="top"}
 
 Publish build records with the publishTestResult step. This step requires two parameters. It can also accept one optional parameter.
 
@@ -53,7 +53,7 @@ Publish build records with the publishTestResult step. This step requires two pa
 | `environment`     | The environment is only required for the functional verification tests (fvt) on your test runs.                                 |
 | `buildNumber`     | Optional: Set value to any string to represent the version number.                                                              |
 | `applicationName` | Optional: Set the application name. If this value is set, the environment variable `IBM_CLOUD_DEVOPS_APP_NAME` is ignored. |
-{: caption="Table 2. Publishing build records parameters and definitions" caption-side="top"}
+{: caption="Publishing build records parameters and definitions" caption-side="top"}
 
 The following are the commands that are used to view the test results for a specific test. 
 
@@ -64,7 +64,7 @@ The following are the commands that are used to view the test results for a spec
 | `code`                | Code Coverage Tests           |
 | `staticsecurityscan`  | Static Security Scan Result   | 
 | `dynamicsecurityscan` | Dynamic Security Scan         | 
-{: caption="Table 3. Test result and test types" caption-side="top"}
+{: caption="Test result and test types" caption-side="top"}
 
 The following example commands include the parameters. The first command publishes Mocha unit test results, and the second command publishes code coverage test results.
 
@@ -96,7 +96,7 @@ To configure your Jenkins pipeline to accept these results, add the following pa
 | `SQProjectKey`    | The project key of the SonarQube project you want to scan.                                                                     |
 | `buildNumber`     | Optional: The set value to any string that represents version number.                                                             |
 | `applicationName` | Optional: Set the application name. If this value is set, the environment variable `IBM_CLOUD_DEVOPS_APP_NAME` is ignored. |
-{: caption="Table 4. Test result and test types" caption-side="top"}
+{: caption="Test result and test types" caption-side="top"}
 
 Here are the SonarQube parameters that are used in a sample stage:
 

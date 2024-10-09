@@ -45,7 +45,7 @@ Pipeline base images are hosted in a global IBM Cloud Container Registry namespa
 2. Click **Configure Pipeline**.
 3. In the **Image version** tab, select either the **Experimental: RedHat UBI** or the **Ubuntu** image type. Then, based on the selected image type, select the default image version to use for all jobs in your pipeline. You can also customize this setting for each job in each stage of your pipeline.
 
-![Image version](images/ubi-ubuntu-vbi.png){: caption="Figure 1. Image version" caption-side="bottom"}
+![Image version](images/ubi-ubuntu-vbi.png){: caption="Image version" caption-side="bottom"}
 
 If you choose the `Latest` option, the pipeline jobs are run with the current image version. The current image version is displayed in brackets after the `Latest` option. When a new image version is available, the image that is used changes. You might need to modify your pipeline to support any newer tools that are included in the new image.
 {: tip}
@@ -181,7 +181,7 @@ Images are available on the IBM Cloud Container Registry. To list these hosted i
 | 2.2 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.2`| sha256:2073c470e83418abf2c11ec92554c139aadd18f0c63fffb92c2c3f5e90c46ba6|2019-07-10|
 | 2.1 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.1`| sha256:b5be69c4ae42a7af28a9d7ad25df548c77959b006507367507c9ff0f992306f2|2019-06-17|
 | 2.0 | `icr.io/continuous-delivery/pipeline/pipeline-base-image:2.0`| sha256:cc13eadecb8e99a7fe56a071427c2caa34149c31d1ad84f4f03c96f111dd0154|2019-05-08|
-{: caption="Table 1. Mapping between versioned based images and IBM Cloud Registry versions with sha256 values" caption-side="top"}
+{: caption="Mapping between versioned based images and IBM Cloud Registry versions with sha256 values" caption-side="top"}
 
 The following available image versions are listed in descending order, starting with the current version.
  

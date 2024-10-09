@@ -93,7 +93,7 @@ Review the default information for the toolchain settings. The toolchain's name 
 The toolchain region can differ from the cluster and registry region.
 {: tip}
 
-![Kubernetes secure app toolchain name and region](images/sat_setup_name_region.png){: caption="Figure 1. Kubernetes secure app toolchain name and region" caption-side="bottom"}
+![Kubernetes secure app toolchain name and region](images/sat_setup_name_region.png){: caption="Kubernetes secure app toolchain name and region" caption-side="bottom"}
 
 ### Select the deployment strategy
 {: #satellite-toolchain-select-strategy}
@@ -102,7 +102,7 @@ The toolchain creates a Continuous Deployment Pipeline to deploy the application
 
 1. Click **Multiple clusters via Satellite** to deploy your app by using {{site.data.keyword.satelliteshort}}.
 
-   ![Kubernetes secure app deployment strategies](images/sat_setup_ds-selection.png){: caption="Figure 2. Deployment strategies" caption-side="bottom"}
+   ![Kubernetes secure app deployment strategies](images/sat_setup_ds-selection.png){: caption="Deployment strategies" caption-side="bottom"}
    
 1. Click **Continue**.
 
@@ -112,7 +112,7 @@ The toolchain creates a Continuous Deployment Pipeline to deploy the application
 
 In the Application step, the recommended options for the application source code repo are displayed by default. To view all of the available options for the underlying Git integration, click **Advanced Options**. By default, the toolchain uses the default sample that clones the sample app as an IBM-hosted {{site.data.keyword.gitrepos}} repo.
 
-![Kubernetes secure app repository](images/sat_kub_setup_app_repo.png){: caption="Figure 3. Kubernetes secure app repository" caption-side="bottom"}
+![Kubernetes secure app repository](images/sat_kub_setup_app_repo.png){: caption="Kubernetes secure app repository" caption-side="bottom"}
 
 You can change the name of the app repo. The region of the repo remains the same as the region of the toolchain.
 
@@ -126,7 +126,7 @@ By default, the application repo template is cloned to your {{site.data.keyword.
 
 The inventory repo records the details of the artifacts that are built by the continuous integration toolchains. You can either create a new inventory repo that is a clone of the [inventory repo template](https://us-south.git.cloud.ibm.com/open-toolchain/compliance-inventory){: external} or use an existing inventory repo that you share between toolchains.
 
-![Kubernetes secure app inventory repo](images/sat_kub_setup_inventory_repo.png){: caption="Figure 4. Kubernetes secure app inventory repo" caption-side="bottom"}
+![Kubernetes secure app inventory repo](images/sat_kub_setup_inventory_repo.png){: caption="Kubernetes secure app inventory repo" caption-side="bottom"}
 
 By default, the inventory repo template is cloned to your {{site.data.keyword.gitrepos}} org. To change the org, select **Advanced options** and specify the repo owner.
 {: tip}
@@ -144,11 +144,11 @@ By using hints within a template, a toolchain is automatically populated with pr
 
 This tutorial uses the [IBM Secrets Manager](/docs/secrets-manager?topic=secrets-manager-getting-started) as the secrets vault.
 
-![Kubernetes secure app secrets options](images/sat_kub_setup_secrets.png){: caption="Figure 5. Kubernetes secure app secrets options" caption-side="bottom"}
+![Kubernetes secure app secrets options](images/sat_kub_setup_secrets.png){: caption="Kubernetes secure app secrets options" caption-side="bottom"}
 
 IBM Secrets Manager securely stores and applies secrets such as API keys, Image Signature, or HashiCorp credentials that are part of your toolchain.
 
-![Kubernetes secure app secrets options](images/sat_kub_secrets_manager.png){: caption="Figure 6. Kubernetes Secure app secrets options" caption-side="bottom"}
+![Kubernetes secure app secrets options](images/sat_kub_secrets_manager.png){: caption="Kubernetes Secure app secrets options" caption-side="bottom"}
 
 For more information about managing your secrets in IBM Key Protect or HashiCorp, see [IBM Key Protect](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-key-protect-ci) or [HashiCorp](/docs/devsecops?topic=devsecops-cd-devsecops-tekton-ci-compliance#cd-devsecops-vault-ci).
 
@@ -176,7 +176,7 @@ If the API key has the required access, the following fields automatically load 
 
 * **Cluster namespace:** If the cluster namespace does not exist in the clusters within the cluster group, the toolchain creates it.
 
-![Kubernetes secure app deployment target details for Rolling or Blue-Green](images/kub_setup_satellite_dep_target.png){: caption="Figure 7. Kubernetes secure app Rolling deployment target details" caption-side="bottom"}
+![Kubernetes secure app deployment target details for Rolling or Blue-Green](images/kub_setup_satellite_dep_target.png){: caption="Kubernetes secure app Rolling deployment target details" caption-side="bottom"}
 
 ## Add optional tool integrations
 {: #satellite-optional-tools}
@@ -198,7 +198,7 @@ On the Summary page, click **Create**. Several steps run automatically to set up
 You can configure the individual toolchain integrations after the pipeline is created.
 {: tip}
 
-![Kubernetes secure app toolchain Summary](images/sat_summary.png){: caption="Figure 8. Kubernetes secure app toolchain summary" caption-side="bottom"}
+![Kubernetes secure app toolchain Summary](images/sat_summary.png){: caption="Kubernetes secure app toolchain summary" caption-side="bottom"}
 
 
 ## Explore your new toolchain
@@ -229,7 +229,7 @@ To start the pull request pipeline, create a merge request in your app repo:
 1. On the Toolchain's Overview page, on the **Repositories** card, click the `pr-pipeline` repo to start the pull request pipeline. The corresponding merge request in your app repo remains in the pending state until all of the stages of the pull request pipeline successfully complete.
 1. After the pull request pipeline run succeeds, you can select it to explore the completed steps.
 
-![Pull request pipeline success](images/ds_kub_explore_pr_pipeline_success.png){: caption="Figure 9. Pull request pipeline success" caption-side="bottom"}
+![Pull request pipeline success](images/ds_kub_explore_pr_pipeline_success.png){: caption="Pull request pipeline success" caption-side="bottom"}
 
 To start the continuous integration pipeline, merge the continuous integration merge request in your app repo:
 
@@ -238,7 +238,7 @@ To start the continuous integration pipeline, merge the continuous integration m
 1. On the continuous integration Toolchain Overview page, on the **Repositories** card, click the `ci-pipeline` repo to start the continuous integration pipeline.
 1. After the continuous integration pipeline run succeeds, you can click the pipeline run to explore the completed steps.
 
-![Continuous integration pipeline success](images/sat_ci_pipeline_success.png){: caption="Figure 10. Continuous integration pipeline success" caption-side="bottom"}
+![Continuous integration pipeline success](images/sat_ci_pipeline_success.png){: caption="Continuous integration pipeline success" caption-side="bottom"}
 
 #### Shift left practice
 {: #cd-satellite-shift-left}
@@ -266,7 +266,7 @@ You can start a continuous delivery pipeline in either of the following ways:
 A {{site.data.keyword.gitrepos}} trigger is set up to trigger an automatic continuous delivery pipeline, but it is disabled by default. You can enable this trigger after the first time that you promote a change.
 {: tip}
 
-![Continuous delivery pipeline triggers for rolling deployment](images/sat_cd_pipeline_triggers_rolling.png){: caption="Figure 11. Triggers in continuous delivery pipeline for rolling deployment" caption-side="bottom"}
+![Continuous delivery pipeline triggers for rolling deployment](images/sat_cd_pipeline_triggers_rolling.png){: caption="Triggers in continuous delivery pipeline for rolling deployment" caption-side="bottom"}
 
 
 ## Next steps
@@ -282,7 +282,7 @@ If you want to remove the sample app that is running on Kubernetes, you must cle
 
 1. From the location where the sample app is running, select **namespace**.
 
-   ![Kubernetes namespace](images/ds_kub_misc_namespace.png){: caption="Figure 12. Kubernetes namespace" caption-side="bottom"}
+   ![Kubernetes namespace](images/ds_kub_misc_namespace.png){: caption="Kubernetes namespace" caption-side="bottom"}
 
 1. Delete the related deployments, services, and ingresses that are listed within the selected namespace.
 

@@ -55,4 +55,4 @@ You must specify the `tool_type_id` property in the request body with the `custo
 | lifecyclePhase | required, updatable | String | lifecycle_phase | The lifecycle phase of the {{site.data.keyword.cloud_notm}} Garage Method that is the most closely associated with this tool integration. |
 | name | required, updatable | String | name | The name of this tool integration. |
 | type | required, updatable | String | type | The type of tool that this custom tool is integrating with. |
-{: caption="Table 1. Custom tool (Other Tool) tool integration parameters" caption-side="bottom"}
+{: caption="Custom tool (Other Tool) tool integration parameters" caption-side="bottom"}

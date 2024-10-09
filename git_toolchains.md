@@ -219,7 +219,7 @@ The following table lists and describes each of the variables that are used in t
 | `{tool_integration_name}` | A name for your tool integration. |
 | `{toolchain_id}` | The ID of the toolchain to which to add the tool integration. |
 | `{token}` | A valid IAM bearer token. |
-{: caption="Table 1. Variables for adding the Git tool integration with the API" caption-side="top"}
+{: caption="Variables for adding the Git tool integration with the API" caption-side="top"}
 
 For more information about each of the Git tool integrations, including additional parameters that you can configure, see the following topics:
 

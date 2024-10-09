@@ -65,7 +65,7 @@ You can try to configure the tool integration again:
 
 1. On its tool card, hover over the `Setup failed` message and click **Reconfigure**.
 
-   ![Reconfigure button](images/tool_reconfigure.png){: caption="Figure 1. Reconfigure tool integration" caption-side="bottom"}
+   ![Reconfigure button](images/tool_reconfigure.png){: caption="Reconfigure tool integration" caption-side="bottom"}
 
 1. Make sure that you are using valid configuration parameters. If the error was caused by an invalid configuration, an error message is displayed; for example, `The integration could not be set up. Check the settings and try again. Reason: Invalid api_key:fakeKey`. Update the settings for the tool integration and click **Save integration**.
 1. If the error was caused by a communication problem, click **Save integration** to try again.

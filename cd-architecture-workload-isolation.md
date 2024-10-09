@@ -29,11 +29,11 @@ The following table lists the major components of the {{site.data.keyword.contde
 | {{site.data.keyword.deliverypipeline}} | IBM | Shared, compute, network, and storage |
 | {{site.data.keyword.deliverypipeline}} shared workers | IBM | Each pipeline job or step runs in isolation, in its own container, on a pool of IBM-managed shared worker nodes with shared network and storage. |
 | {{site.data.keyword.deliverypipeline}} private workers | You | Each pipeline job or step runs in isolation, in its own container on worker nodes that you manage, supported by network and storage that you define or manage. |
-{: caption="Table 1. Service component management" caption-side="top"}
+{: caption="Service component management" caption-side="top"}
 
 {{site.data.keyword.deliverypipeline}} jobs and steps run directly within containers on shared (IBM-managed) or private (customer-managed) Kubernetes worker nodes. All other components of the {{site.data.keyword.contdelivery_short}} service are deployed as microservices within IBM-managed Kubernetes clusters. These components are logically partitioned across a set of clusters. Each set of clusters is replicated across three zones in each region in which the {{site.data.keyword.contdelivery_short}} service is available.
 
-![Continuous Delivery clusters](images/CD_cluster_arch.svg){: caption="Figure 1. Continuous Delivery clusters" caption-side="bottom"}
+![Continuous Delivery clusters](images/CD_cluster_arch.svg){: caption="Continuous Delivery clusters" caption-side="bottom"}
  
 For more information about availability, see [High availability and disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-ha-dr).
  
@@ -54,7 +54,7 @@ The following diagram shows the management and isolation characteristics of the 
 * The multi-tenant and single tenant workloads each run in different sets of clusters, and are compute-isolated from each other.
 * Each {{site.data.keyword.deliverypipeline}} job or step runs in its own container that is compute-isolated from the other containers within a cluster. This isolation applies to both IBM-managed shared workers and customer-managed shared workers.
 
-![Continuous Delivery compute workloads](images/CD_Compute_Arch.png){: caption="Figure 2. Continuous Delivery compute workloads" caption-side="bottom"}
+![Continuous Delivery compute workloads](images/CD_Compute_Arch.png){: caption="Continuous Delivery compute workloads" caption-side="bottom"}
 
 ## {{site.data.keyword.contdelivery_short}} dependencies
 {: #cd-dependencies}
@@ -93,13 +93,13 @@ The {{site.data.keyword.contdelivery_short}} service launches its dependencies o
 | {{site.data.keyword.cos_short}}  | Service | Stores artifacts that are produced by {{site.data.keyword.deliverypipeline}} jobs and steps. Stores backups of {{site.data.keyword.contdelivery_short}} data. |
 | QRadar  | Service | Collects security events such as successful or failed login authorization attempts for use by IBM specialists who maintain and support the service. |
 | General Parallel File System (GPFS)  | Storage | Provides secure, high-performance distributed file system storage of {{site.data.keyword.gitrepos}} repositories. GPFS runs on nodes within the same clusters that host the {{site.data.keyword.gitrepos}} components. |
-{: caption="Table 2. {{site.data.keyword.contdelivery_short}} dependencies" caption-side="top"}
+{: caption="{{site.data.keyword.contdelivery_short}} dependencies" caption-side="top"}
 
 For more information about the key components of the {{site.data.keyword.cloud_notm}} Platform, see [What is the {{site.data.keyword.cloud_notm}} Platform?](/docs/overview?topic=overview-whatis-platform)
 
 The following diagram shows the {{site.data.keyword.contdelivery_short}} dependencies.
 
-![Continuous Delivery dependencies](images/CD_Dependencies_Arch.svg){: caption="Figure 3. Continuous Delivery dependencies" caption-side="bottom"}
+![Continuous Delivery dependencies](images/CD_Dependencies_Arch.svg){: caption="Continuous Delivery dependencies" caption-side="bottom"}
 
 Excluding data backups, customer-owned data that is provided to the {{site.data.keyword.contdelivery_short}} service in a specific region is exchanged only with data and logging services in the same region. Data backups are stored in Cloud Object Storage cross-region buckets.
 
@@ -121,7 +121,7 @@ The following table shows the cross-region location for Object Storage in which 
 | Osaka (jp-osa)		|AP Cross Region (Osaka, Sydney, Tokyo)		|
 | Toronto (ca-tor)	|US Cross Region (Dallas, Washington, San Jose, Toronto) 		|
 | Sao Paulo (br-sao)|US Cross Region (Dallas, Washington, San Jose, Toronto, Sao Paulo) 		|
-{: caption="Table 3. Object Storage location" caption-side="top"}
+{: caption="Object Storage location" caption-side="top"}
 
 For more information about Object Storage locations, see [Regional Endpoints](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints-region).
 

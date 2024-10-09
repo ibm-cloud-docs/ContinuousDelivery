@@ -209,7 +209,7 @@ The following table lists and describes each of the secret reference values that
 |:---------|:------------|
 | `my-kms-tool-integration` | The name of the {{site.data.keyword.keymanagementserviceshort}} tool integration in the toolchain. It is not the name of the {{site.data.keyword.keymanagementserviceshort}} service instance. |
 | `my-slack-webhook` | The name of the standard key that is managed in the {{site.data.keyword.keymanagementserviceshort}} service instance. |
-{: caption="Table 1. Secret reference values" caption-side="top"}
+{: caption="Secret reference values" caption-side="top"}
 
 #### Using secrets references by CRN
 {: #cd_secrets_references_crn}
@@ -399,7 +399,7 @@ The following table lists and describes each of the secrets reference values tha
 |:---------|:------------|
 | `my-kms-tool-integration` | The name of the {{site.data.keyword.keymanagementserviceshort}} tool integration in the toolchain. It is not the name of the {{site.data.keyword.keymanagementserviceshort}} service instance. |
 | `my-slack-webhook` | The name of the standard key that is managed in the {{site.data.keyword.keymanagementserviceshort}} service instance. |
-{: caption="Table 2. Secret reference values" caption-side="top"}
+{: caption="Secret reference values" caption-side="top"}
 
 #### Using secrets references by CRN
 {: #cd_secretsreferences_crn_terraform}
@@ -481,14 +481,14 @@ By default, {{site.data.keyword.contdelivery_short}} encrypts your data by using
 |Pipeline		| * Property keys and values \n * Job logs \n * Job artifacts  |
 |Integrations		| * Slack (Slack webhook) \n * Pagerduty (API access key, Integration key) \n * Sauce Labs (Access key) \n * Artifactory (API key) \n * HashiCorp Vault (Token, Role ID, Secret ID, Password) \n *  Jenkins (Jenkins API token) \n * JIRA (JIRA API token) \n * Nexus (Authentication token) \n * Rational Team Concert (Password) \n * Security and Compliance Center ({{site.data.keyword.cloud_notm}} API key) \n * Sonarqube (SonarQube password or authentication token) |
 |{{site.data.keyword.DRA_full}}		|Attachment in test records |
-{: caption="Table 3. Values that are encrypted by using your own key" caption-side="top"}
+{: caption="Values that are encrypted by using your own key" caption-side="top"}
 
 The following components encrypt personal data by using only the provider-managed encryption key.
 
 | Component | Value | 
 |:-----------------|:-----------------|
 |{{site.data.keyword.gitrepos}}		| * Issues, pull requests, and source code \n * Personal information, such as name, email, profile picture, address, and other information from the profile page     |
-{: caption="Table 4. Values that are encrypted by using the provider-managed key" caption-side="top"}
+{: caption="Values that are encrypted by using the provider-managed key" caption-side="top"}
 
 For more information about creating a {{site.data.keyword.contdelivery_short}} service instance that encrypts data with a customer key, see [Creating a {{site.data.keyword.contdelivery_short}} service instance](/docs/ContinuousDelivery?topic=ContinuousDelivery-create_cd_service).
 
@@ -610,4 +610,3 @@ For more information about how to set input variables in Terraform, see [Assigni
 {: #cd_delete-data}
 
 When you delete a {{site.data.keyword.contdelivery_short}} service instance, the related toolchains, tool integrations, tools, and data (including personal data) are not deleted. For more information about how to manage and delete data that is stored with toolchains, tool integrations, and tools, see [Modifying, exploring, and deleting personal data](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_personal_data#managing_personal_data).
-

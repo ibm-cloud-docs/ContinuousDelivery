@@ -61,4 +61,4 @@ You must specify the `tool_type_id` property in the request body with the `jenki
 | dashboard_url | required, updatable | String | dashboard_url | The URL of the Jenkins server dashboard for this tool integration. In the graphical UI, the browser goes to this dashboard when you click the Jenkins tool integration card. |
 | name | required, updatable | String | name | The name of this tool integration. |
 | webhook_url | optional, updatable | String | webhook_url | The webhook to use in your Jenkins jobs to send notifications to other tools in your toolchain. |
-{: caption="Table 1. Jenkins tool integration parameters" caption-side="bottom"}
+{: caption="Jenkins tool integration parameters" caption-side="bottom"}

@@ -32,7 +32,7 @@ Table 1 describes the annotations that are included in a Tekton `PipelineRun`.
 | `devops.cloud.ibm.com/triggered-by`     | The user who initiated the trigger. This value is the IBMId of either the user who pressed **run** for `manual` triggers, the user who last saved the trigger for `timer` triggers, or the user who performed the Git action for `scm` triggers. This value is empty for `generic` triggers. |
 | `devops.cloud.ibm.com/pipeline-run-url` | The URL of the details page for this pipeline run.                                                                                                                                                                                                                                                   |
 | `devops.cloud.ibm.com/tekton-pipeline`  | The unique ID of this pipeline run.                                                                                                                                                                                                                                                                  |
-{: caption="Table 1. PipelineRun annotations" caption-side="top"}
+{: caption="PipelineRun annotations" caption-side="top"}
 
 ### Accessing annotations
 {: #tekton_access_annotations}

@@ -19,7 +19,7 @@ subcollection: ContinuousDelivery
 [Tekton Pipelines](https://tekton.dev/){: external} is an open source project that you can use to configure and run Continuous Integration and {{site.data.keyword.contdelivery_short}} pipelines within a Kubernetes cluster. Tekton pipelines are defined in yaml files, which are typically stored in a Git repository (repo).
 {: shortdesc}
 
-![Hybrid Tekton Pipelines](images/Hybrid_tekton_workers.svg){: caption="Figure 1. Hybrid Tekton pipelines diagram" caption-side="bottom"}
+![Hybrid Tekton Pipelines](images/Hybrid_tekton_workers.svg){: caption="Hybrid Tekton pipelines diagram" caption-side="bottom"}
 
 Tekton provides a set of [Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/){: external} extensions to Kubernetes to define pipelines. The following basic Tekton Pipeline resources are included in these extensions:
 
@@ -29,7 +29,7 @@ Tekton provides a set of [Custom Resources](https://kubernetes.io/docs/concepts/
 |`TaskRun`		|Instantiates a Task for execution with specific inputs, outputs, and execution parameters. You can start the task on its own or as part of a pipeline.		|
 |`Pipeline`		|Defines the set of tasks that compose a pipeline.		|
 |`PipelineRun`		|Instantiates a Pipeline for execution with specific inputs, outputs, and execution parameters.		|
-{: caption="Table 1. Tekton pipeline resources" caption-side="top"}
+{: caption="Tekton pipeline resources" caption-side="top"}
 
 You can take advantage of the following features when you use Tekton Pipelines:
 
@@ -179,7 +179,7 @@ When you configure a {{site.data.keyword.deliverypipeline}} tool integration, yo
 
    The following example shows how to use the curl command with a generic webhook that is secured with a `Token Matches` rule:
 
-   ![Generic webhook example](images/pipeline_tekton_generic_webhook.png){: caption="Figure 2. Generic webhook example" caption-side="bottom"}
+   ![Generic webhook example](images/pipeline_tekton_generic_webhook.png){: caption="Generic webhook example" caption-side="bottom"}
 
    ```text
    curl -X POST \
@@ -254,7 +254,7 @@ Complete the following steps to convert your existing event filtering selection 
 1. Edit the Git trigger that you want to convert.
 1. In the **Trigger on** section, select the **CEL filter** option.
 
-   ![CEL filter option](images/cel_filter_option.png){: caption="Figure 3. CEL filter option" caption-side="bottom"}
+   ![CEL filter option](images/cel_filter_option.png){: caption="CEL filter option" caption-side="bottom"}
    
    The following elements are automatically converted into an equivalent CEL expression:
      
@@ -263,7 +263,7 @@ Complete the following steps to convert your existing event filtering selection 
    * Exclude draft pull requests
    * Label filters
 
-   ![CEL filter conversion](images/cel_filter_conversion.png){: caption="Figure 4. CEL filter conversion" caption-side="bottom"}
+   ![CEL filter conversion](images/cel_filter_conversion.png){: caption="CEL filter conversion" caption-side="bottom"}
    
    The generated CEL expression is written into a text area field, which you can edit as needed.
 
@@ -434,7 +434,7 @@ To view the event payload, go to the Pipeline Run details page and click **Show 
    | `{tool_integration_name}` | A name for your tool integration, for example, `ci-pipeline`.|
    | `{toolchain_id}` | The ID of the toolchain to which to add the tool integration. |
    | `{iam_token}` | A valid IAM bearer token. |
-   {: caption="Table 2. Variables for adding the {{site.data.keyword.deliverypipeline}} tool integration with the API" caption-side="top"}
+   {: caption="Variables for adding the {{site.data.keyword.deliverypipeline}} tool integration with the API" caption-side="top"}
 
 1. Configure the {{site.data.keyword.deliverypipeline}} to use public managed workers within the specified regions.
 
@@ -530,7 +530,7 @@ To view the event payload, go to the Pipeline Run details page and click **Show 
    | `{region}` | The region in which the toolchain resides, for example, `us-south`. |
    | `{pipeline_id}` | The ID of the pipeline that is returned from the previous step where the pipeline tool integration was created. |
    | `{iam_token}` | A valid IAM bearer token. |
-   {: caption="Table 3. Variables for configuring the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
+   {: caption="Variables for configuring the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
    
 For more information about the {{site.data.keyword.deliverypipeline}} API, see the [API Docs](https://cloud.ibm.com/apidocs/tekton-pipeline){: external}.
 
@@ -707,7 +707,7 @@ The following table lists and describes each of the variables that are used in t
 | `{region}` | The region in which the pipeline resides, for example, `us-south`. |
 | `{pipeline_id}` | The ID of the pipeline that you want to view. |
 | `{iam_token}` | A valid IAM bearer token. |
-{: caption="Table 4. Variables for viewing the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
+{: caption="Variables for viewing the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
 
 ### Viewing a {{site.data.keyword.deliverypipeline}} with Terraform
 {: #viewing-pipeline-terraform}
@@ -847,7 +847,7 @@ The following table lists and describes each of the variables that are used in t
 | `{toolchain_id}` | The ID of the toolchain that contains the pipeline to delete. |
 | `{pipeline_id}` | The ID of the pipeline that you want to delete. |
 | `{iam_token}` | A valid IAM bearer token. |
-{: caption="Table 5. Variables for deleting the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
+{: caption="Variables for deleting the {{site.data.keyword.deliverypipeline}} with the API" caption-side="top"}
 
 ## Deleting a {{site.data.keyword.deliverypipeline}} with Terraform
 {: #deleting-pipeline-terraform}

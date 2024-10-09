@@ -99,4 +99,4 @@ You must specify the `tool_type_id` property in the request body with the `githu
 | title | optional, updatable | String | title | The title of the server. e.g. My GitHub Enterprise Server |
 | token_url | optional, updatable | String | token_url | The token URL that is used to authorize with the GitHub server. |
 | type | required, immutable | String | type | The operation to perform to initialize the new tool integration. Use `new` to create a Git repo, `clone` to clone an existing repo into a new Git repo, `fork` to fork an existing Git repo, or `link` to link to an existing Git repo. |
-{: caption="Table 1. GitHub tool integration parameters" caption-side="bottom"}
+{: caption="GitHub tool integration parameters" caption-side="bottom"}

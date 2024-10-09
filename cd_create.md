@@ -83,7 +83,7 @@ The following table lists and describes each of the variables that are used in t
 | `PLAN` | The name or ID of the pricing plan that you want to use. To find the names and IDs of the available plans, run `ibmcloud catalog service continuous-delivery`. |
 | `REGION` | The region in which to provision the service instance. For example, `us-south`. |
 | `RESOURCE_GROUP` | The name or ID of the resource group in which to provision the service instance. To find the names and IDs of the available resource groups, run `ibmcloud resource groups`. |
-{: caption="Table 1. Variables for provisioning the {{site.data.keyword.contdelivery_short}} service from the CLI" caption-side="top"}
+{: caption="Variables for provisioning the {{site.data.keyword.contdelivery_short}} service from the CLI" caption-side="top"}
 
 For more information about plan IDs or about how to update your service plan after you create an instance, see [Updating your service plan](/docs/billing-usage?topic=billing-usage-changing).
 
@@ -200,7 +200,7 @@ The following table lists and describes each of the variables that are used in t
 | `{region}` | The region in which to provision the service instance. For example, `us-south`. |
 | `{resource_group_id}` | The ID of the resource group in which to provision the service instance. To find the IDs of the available resource groups, run `ibmcloud resource groups`. |
 | `{token}` | A valid IAM bearer token. |
-{: caption="Table 2. Variables for provisioning the {{site.data.keyword.contdelivery_short}} service with the API" caption-side="top"}
+{: caption="Variables for provisioning the {{site.data.keyword.contdelivery_short}} service with the API" caption-side="top"}
 
 For more information about creating service instances, see [Creating new resource instances by using the API](/docs/account?topic=account-manage_resource&interface=api&code=curl#create-resource-instance-api).
 

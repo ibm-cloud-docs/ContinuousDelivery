@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-08"
+lastupdated: "2024-10-09"
 
 keywords: tool integrations, IBM Cloud Public, App Configuraton, AppConfig
 
@@ -96,7 +96,7 @@ You must specify the `tool_type_id` property in the request body with the `appco
 | name | required, updatable | String | name | The name of this tool integration. {{site.data.keyword.appconfig_short}} references include this name to identify the {{site.data.keyword.appconfig_short}} instance where the configuration values reside. Make sure that each of the {{site.data.keyword.appconfig_short}} tools that are integrated into a toolchain have a unique name for resolution to function properly. |
 | region | required, updatable | String | location | The {{site.data.keyword.cloud_notm}} location where the {{site.data.keyword.appconfig_short}} service instance is located. |
 | resource-group | required, updatable | String | resource_group_name | The name of the resource group where the {{site.data.keyword.appconfig_short}} service instance is located. |
-{: caption="Table 1. {{site.data.keyword.appconfig_short}} tool integration parameters" caption-side="bottom"}
+{: caption="{{site.data.keyword.appconfig_short}} tool integration parameters" caption-side="bottom"}
 
 ## Learn more about {{site.data.keyword.appconfig_short}}
 {: #learn_app-config}

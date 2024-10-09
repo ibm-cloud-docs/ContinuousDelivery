@@ -100,7 +100,7 @@ The following table lists and describes each of the variables that are used in t
 | Variable | Description |
 |:---------|:------------|
 | `TOOLCHAIN_NAME` | The name of the toolchain that you want to delete. |
-{: caption="Table 1. Variables for deleting the toolchain from the CLI" caption-side="top"}
+{: caption="Variables for deleting the toolchain from the CLI" caption-side="top"}
 
 ### Deleting a toolchain with the API
 {: #deleting_a_toolchain_api}
@@ -183,7 +183,7 @@ The following table lists and describes each of the variables that are used in t
 | `{iam_api_key}` | Your IAM API key. |
 | `{token}` | A valid IAM bearer token. |
 | `{toolchain_id}` | The ID of the toolchain that you want to delete. |
-{: caption="Table 2. Variables for deleting the toolchain with the API" caption-side="top"}
+{: caption="Variables for deleting the toolchain with the API" caption-side="top"}
 
 ### Deleting a toolchain with Terraform
 {: #deleting_a_toolchain_terraform}

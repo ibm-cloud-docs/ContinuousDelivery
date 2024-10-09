@@ -75,11 +75,11 @@ The following example applies an Arbitrary secret type that is stored in {{site.
 
 1. Select a secret group and a secret name and click **OK** to apply the stored secret to the field that is associated with it.
 
-   ![Secret Reference to a Vault](images/secret-pill.png){: caption="Figure 1. Secret reference to a vault" caption-side="bottom"}
+   ![Secret Reference to a Vault](images/secret-pill.png){: caption="Secret reference to a vault" caption-side="bottom"}
 
    The name of the secret that you select appears in capsule form. You cannot edit the secret name inline, but you can click ![remove icon](images/secret-pill-delete-16.png) to delete the name. You can also replace the existing secret name by selecting the secret name again. If you manually type or paste a secret name into the Secrets field, it is displayed in a different format:
 
-   ![Literal Secret Value](images/secret-literal.png){: caption="Figure 2. Secret value" caption-side="bottom"}
+   ![Literal Secret Value](images/secret-literal.png){: caption="Secret value" caption-side="bottom"}
 
    The format that the secret is displayed in indicates whether the value references a secret that is stored in a backend vault or a secret that is stored in your toolchain. By using references to secrets that are managed by secret providers such as  {{site.data.keyword.secrets-manager_short}}, your secret values are centralized and stored securely in a single location. This approach resolves secrets sprawl and proliferation, and means that you can update secrets without updating your toolchain. When you use secret references, the actual secret value is resolved when the toolchain runs by dynamically retrieving it from {{site.data.keyword.secrets-manager_short}}. This approach is useful when you must rotate the value of your toolchain secrets periodically.
 
@@ -91,7 +91,7 @@ The IAM credentials secret type is fully integrated with IAM. {{site.data.keywor
 When you create an IAM credentials secret in {{site.data.keyword.secrets-manager_short}}, make sure that you select the **Reuse IAM credentials until lease expires** checkbox. Also, specify a lease duration with a minimum of 12 hours when you use public worker agents to run your pipeline. If you use private worker agents, make sure that you set a minimum lease duration to the forced cancellation duration for a pipeline. It is recommended that you confirm these settings with your account administrator. By setting the reuse option and an appropriate lease duration, you can make sure that the dynamically managed IAM credentials service ID API key persists during your pipeline runs.
 {: important}
 
-![IAM credentials lease duration and reuse API key](images/secret-leaseduration.png){: caption="Figure 3. IAM credentials lease duration and reuse API key" caption-side="bottom"}
+![IAM credentials lease duration and reuse API key](images/secret-leaseduration.png){: caption="IAM credentials lease duration and reuse API key" caption-side="bottom"}
 
 By running the Rotate action on IAM credentials from the {{site.data.keyword.secrets-manager_short}} dashboard, you can maintain the compliance posture requirements for API Key rotations that are used by your {{site.data.keyword.contdelivery_short}} pipelines. {{site.data.keyword.secrets-manager_short}} works with IAM to generate a new API Key for an IAM credentials secret and manages the versioning of the secret.
 
@@ -100,7 +100,7 @@ The IAM credentials secret type also helps to provide continuity of service duri
 * New {{site.data.keyword.contdelivery_short}} pipeline workloads use the newly rotated API Key until its lease duration expires.
 * Existing {{site.data.keyword.contdelivery_short}} pipeline workloads that are running with the API Key that was issued before rotation can continue to run with the previous version until the lease duration of the previous version expires.
 
-![IAM credentials secret rotation](images/secret-iamcredentials-rotation.png){: caption="Figure 4. IAM credentials secret rotation" caption-side="bottom"}
+![IAM credentials secret rotation](images/secret-iamcredentials-rotation.png){: caption="IAM credentials secret rotation" caption-side="bottom"}
 
 For more information about the IAM credentials secret type in {{site.data.keyword.secrets-manager_short}}, see [Creating IAM credentials](/docs/secrets-manager?topic=secrets-manager-iam-credentials).   
 
@@ -206,7 +206,7 @@ You must specify the `tool_type_id` property in the request body with the `secre
 | region | required, updatable | String | location | The {{site.data.keyword.cloud_notm}} location where the {{site.data.keyword.secrets-manager_short}} service instance is located. This parameter is used only when you use `instance-name` as the `instance_id_type`. |
 | resource-group | required, updatable | String | resource_group_name | The name of the resource group where the {{site.data.keyword.secrets-manager_short}} service instance is located. This parameter is used only when you use `instance-name` as the `instance_id_type`. |
 | instance-name | required, updatable | String | instance_name | The name of the {{site.data.keyword.secrets-manager_short}} service instance. This parameter is used only when you use `instance-name` as the `instance_id_type`. |
-{: caption="Table 1. {{site.data.keyword.secrets-manager_short}} tool integration parameters" caption-side="bottom"}
+{: caption="{{site.data.keyword.secrets-manager_short}} tool integration parameters" caption-side="bottom"}
 
 ## Learn more about {{site.data.keyword.secrets-manager_short}}
 {: #secretsmanager_learn_more}

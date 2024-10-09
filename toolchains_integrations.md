@@ -153,7 +153,7 @@ The following table lists and describes each of the variables that are used in t
 | `{tool_parameters}` | Unique key-value pairs that represent the parameters to use to create the tool integration. For more information about the supported parameters for each tool integration, see [Tool integrations](#integrations). |
 | `{tool_type_id}` | The unique, short name that represents the type of the tool integration. For a list of supported values, see [Tool integrations](#tool_integrations). |
 | `{toolchain_id}` | The toolchain in which to create the tool integration. |
-{: caption="Table 1. Variables for provisioning the tool integration with the API" caption-side="top"}
+{: caption="Variables for provisioning the tool integration with the API" caption-side="top"}
 
 ## Adding a tool integration with Terraform
 {: #create_integration_terraform}
@@ -325,7 +325,7 @@ The following table lists and describes each of the variables that are used in t
 | `{new_tool_parameters}` | The unique key-value pairs that represent the parameters to use to update the tool integration. To view a list of parameters for each tool integration, see [Tool integrations](#integrations). |
 | `{tool_id}` | The ID of the tool integration that you want to update. |
 | `{toolchain_id}` | The ID of the toolchain where the tool integration exists. |
-{: caption="Table 2. Variables for updating the tool integration with the API" caption-side="top"}
+{: caption="Variables for updating the tool integration with the API" caption-side="top"}
 
 ## Updating a tool integration with Terraform
 {: #update_integration_terraform}
@@ -474,7 +474,7 @@ The following table lists and describes each of the variables that are used in t
 | `{iam_token}` | A valid IAM bearer token. |
 | `{tool_id}` | The ID of the tool integration that you want to delete. |
 | `{toolchain_id}` | The ID of the toolchain where the tool integration exists. |
-{: caption="Table 3. Variables for deleting the tool integration with the API" caption-side="top"}
+{: caption="Variables for deleting the tool integration with the API" caption-side="top"}
 
 ## Deleting a tool integration with Terraform
 {: #delete_integration_terraform}
@@ -541,7 +541,7 @@ If you are using the [{{site.data.keyword.contdelivery_short}} Toolchain API to 
 |[Security and Compliance Center](/docs/ContinuousDelivery?topic=ContinuousDelivery-scc)		|security_compliance | ![Checkmark icon](../icons/checkmark-icon.svg)		|
 |[Slack](/docs/ContinuousDelivery?topic=ContinuousDelivery-slack)		|slack |		|
 |[SonarQube](/docs/ContinuousDelivery?topic=ContinuousDelivery-sonarqube)			|sonarqube |		|
-{: caption="Table 4. Tool integrations available for toolchains on {{site.data.keyword.cloud_notm}} Public" caption-side="top"}
+{: caption="Tool integrations available for toolchains on {{site.data.keyword.cloud_notm}} Public" caption-side="top"}
 
 If you want to start developing with your source code on {{site.data.keyword.cloud_notm}} Public, configure the GitHub tool integration or the {{site.data.keyword.gitrepos}} tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
 {: tip}

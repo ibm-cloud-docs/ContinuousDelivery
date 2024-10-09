@@ -100,7 +100,7 @@ Consider the following tasks when you monitor an instance of the {{site.data.key
 | Task                                      | Predefined Alert | What to Look For  |
 |:-------------------------------------------|:------------------|:-------------------|
 | Monitor how long delivery pipeline runs remain queued before they begin executing on a private pipeline worker pool. | {{site.data.keyword.contdelivery_short}} Pipeline queue time | If the queue time repeatedly exceeds more than 10 seconds, the private worker pool might not have enough capacity to handle the pipeline runs being requested of it. You might need to scale up the worker pool, create a new worker pool, or reduce the number of pipeline runs.|
-{: caption="Table 1. {{site.data.keyword.contdelivery_short}} moitoring tasks" caption-side="top"}
+{: caption="{{site.data.keyword.contdelivery_short}} moitoring tasks" caption-side="top"}
 
 
 ### Monitor delivery pipeline queue times
@@ -125,7 +125,7 @@ The following table outlines the pre-defined dashboards that you can use to moni
 | Dashboard Name            | Description    |
 |:---------------------------|:----------------|
 | `{{site.data.keyword.contdelivery_short}}` | Default dashboard when you launch the Monitoring web UI from your service instance UI. |
-{: caption="Table 2. Pre-defined dashboards" caption-side="top"}
+{: caption="Pre-defined dashboards" caption-side="top"}
 
 
 You cannot change the Default dashboard. To customize the dashboard, you can create a copy of it.
@@ -148,7 +148,7 @@ The following table outlines the pre-defined alerts that are available in Monito
 | Alert Name                                 | Description | 
 |:--------------------------------------------|:-------------|
 | {{site.data.keyword.contdelivery_short}} high pipeline queue time | Use this alert to monitor the queue time for pipeline requests to let you know if a private worker pool is taking too long to process requests. |
-{: caption="Table 4. Pre-defined alerts" caption-side="top"}
+{: caption="Pre-defined alerts" caption-side="top"}
 
 
 ## {{site.data.keyword.contdelivery_short}} metrics dictionary
@@ -183,7 +183,7 @@ The following attributes are available for segmenting all of the metrics listed 
 | `Resource group` | `ibm_resource_group_name` | Resource group that is associated with the service instance. | Choose a resource group from the ones that are available in your account. |
 | `Scope` | `ibm_scope` | The extent of the data samples that are considered.  | You can choose the scope to be the account, an organization, or a space GUID that is associated with this metric. |
 | `Service name` | `ibm_service_name` | Name of the service that generates this metric. | `toolchain` | 
-{: caption="Table 6. Global segmentation attributes" caption-side="top"}
+{: caption="Global segmentation attributes" caption-side="top"}
 
 
 ### Additional attributes
@@ -197,4 +197,4 @@ Check each individual metric for the supported segmentation options.
 | Attribute | Attribute Name | Attribute Description |
 |:-----------|:----------------|:-----------------------|
 | `Private worker pool` | `ibm_toolchain_pipeline_worker_pool` | The unique id of a {{site.data.keyword.contdelivery_short}} pipeline private worker pool. |
-{: caption="Table 7. Additional segmentation attributes" caption-side="top"}
+{: caption="Additional segmentation attributes" caption-side="top"}

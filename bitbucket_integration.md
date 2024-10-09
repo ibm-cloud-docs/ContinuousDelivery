@@ -89,7 +89,7 @@ You must specify the `tool_type_id` property in the request body with the `bitbu
 | source_repo_url | optional, immutable | String | source_repo_url | The URL of the repo that you want to fork or clone. This parameter is required when you fork or clone a repo, but it is not used when you create a repo or link to an existing repo. |
 | token_url | optional, updatable | String | token_url | The token URL that is used to authorize with the Bitbucket server. |
 | type | required, immutable | String | type | The operation to perform to initialize the new tool integration. Use `new` to create a Git repo, `clone` to clone an existing repo into a new Git repo, `fork` to fork an existing Git repo, or `link` to link to an existing Git repo. |
-{: caption="Table 1. Bitbucket tool integration parameters" caption-side="bottom"}
+{: caption="Bitbucket tool integration parameters" caption-side="bottom"}
 
 
 ## Learn more about Bitbucket

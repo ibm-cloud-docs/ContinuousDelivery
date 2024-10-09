@@ -45,4 +45,4 @@ You must specify the `tool_type_id` property in the request body with the `priva
 | name | required, updatable | String | name | The name of this tool integration. |
 | workerQueueCredentials | required, updatable | Password | worker_queue_credentials | The service ID API key that is used by the private worker to authenticate access to the work queue. You can use a toolchain secret reference for this parameter. For more information about secret references, see [Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
 | workerQueueIdentifier | optional, updatable | String | worker_queue_identifier | The service ID that identifies the run request queue for this private worker. |
-{: caption="Table 1. {{site.data.keyword.deliverypipeline}} Private Worker tool integration parameters" caption-side="bottom"}
+{: caption="{{site.data.keyword.deliverypipeline}} Private Worker tool integration parameters" caption-side="bottom"}

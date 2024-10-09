@@ -53,11 +53,11 @@ You must save third-party secrets, such as a Slack webhook or an Artifactory API
 
 1. Select a secret name and click **OK** to apply the stored secret to the field that is associated with it.
 
-![Secret Reference to a Vault](images/secret-pill.png){: caption="Figure 1. Secret reference to a vault" caption-side="bottom"}
+![Secret Reference to a Vault](images/secret-pill.png){: caption="Secret reference to a vault" caption-side="bottom"}
 
 The name of the secret that you select appears in capsule form. You cannot edit the secret name inline, but you can click ![remove icon](images/secret-pill-delete-16.png) to delete the name. You can also replace the secret name by using the Secrets Picker control again. If you manually type or paste a secret name into the Secrets field, it is displayed in a different format:
 
-![Literal Secret Value](images/secret-literal.png){: caption="Figure 2. Secret value" caption-side="bottom"}
+![Literal Secret Value](images/secret-literal.png){: caption="Secret value" caption-side="bottom"}
 
 The format that the secret is displayed in indicates whether the value references a secret that is stored in a backend vault or is a secret that is stored in your toolchain. By using references to secrets that are managed by secret providers such as  {{site.data.keyword.keymanagementserviceshort}}, your secret values are centralized and stored securely in a single location. This approach resolves secrets sprawl and proliferation, and means that you can update secrets without updating your toolchain. When you use secret references, the actual secret value is resolved when the toolchain runs by dynamically retrieving it from {{site.data.keyword.keymanagementserviceshort}}. This approach is useful when you must rotate the value of your toolchain secrets periodically.
 
@@ -93,7 +93,7 @@ To view your authorizations in {{site.data.keyword.cloud_notm}}, complete the fo
 You can also access your authorizations on the [Manage authorizations](https://cloud.ibm.com/iam/authorizations){: external} page. 
 {: tip}
 
-![Toolchain Authorizations for Key Protect](images/s2s-auths.png){: caption="Figure 3. Toolchain authorizations for Key Protect" caption-side="bottom"}
+![Toolchain Authorizations for Key Protect](images/s2s-auths.png){: caption="Toolchain authorizations for Key Protect" caption-side="bottom"}
 
 You can create the authorization manually, if required. To successfully resolve the secret references, your toolchain instance must have both `Viewer` and `ReaderPlus` access to the correct {{site.data.keyword.keymanagementserviceshort}} service instance.
 
@@ -111,7 +111,7 @@ You must specify the `tool_type_id` property in the request body with the `keypr
 | name | required, updatable | String | name | The name of this tool integration. Secret references include this name to identify the secrets store where the secrets reside. All of the secrets store tools that are integrated into a toolchain must have a unique name to allow secret resolution to function properly. |
 | region | required, updatable | String | location | The {{site.data.keyword.cloud_notm}} region where the {{site.data.keyword.keymanagementserviceshort}} service instance is located. |
 | resource-group | required, updatable | String | resource_group_name | The name of the resource group where the {{site.data.keyword.keymanagementserviceshort}} service instance is located. |
-{: caption="Table 1. {{site.data.keyword.keymanagementserviceshort}} tool integration parameters" caption-side="bottom"}
+{: caption="{{site.data.keyword.keymanagementserviceshort}} tool integration parameters" caption-side="bottom"}
 
 ## Learn more about {{site.data.keyword.keymanagementserviceshort}}
 {: #keyprotect_learn_more}

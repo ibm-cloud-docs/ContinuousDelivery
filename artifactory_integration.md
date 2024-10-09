@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2024
-lastupdated: "2024-10-08"
+lastupdated: "2024-10-09"
 
 keywords: tool integrations, IBM Cloud Public, Artifactory
 
@@ -66,7 +66,7 @@ Configure {{site.data.keyword.deliverypipeline}} to add an npm build job:
 1. On the stage, add a build job.
 1. Configure the build job:
 
-   ![npm build job](images/artifactory_npm_job.png){: caption="Figure 1. npm build job" caption-side="bottom"}
+   ![npm build job](images/artifactory_npm_job.png){: caption="npm build job" caption-side="bottom"}
 
    a. For the builder type, select **NPM Build**.
 
@@ -100,7 +100,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Maven Build job:
 1. On the stage, add a build job.
 1. Configure the build job:
 
-   ![Maven build job](images/artifactory_maven_job.png){: caption="Figure 2. Maven build job" caption-side="bottom"}
+   ![Maven build job](images/artifactory_maven_job.png){: caption="Maven build job" caption-side="bottom"}
 
    a. For the builder type, select **Maven Build**.
 
@@ -141,4 +141,4 @@ You must specify the `tool_type_id` property in the request body with the `artif
 | token | optional, updatable | Password | token | The Access Token for your Artifactory repo. You can use a toolchain secret reference for this parameter. For more information about toolchain secret references, see [Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
 | type | required, updatable | String | type | The repo type for your Artifactory tool integration. |
 | user_id | optional, updatable | String | user_id | The user ID or email address for your Artifactory repo. |
-{: caption="Table 1. Artifactory tool integration parameters" caption-side="bottom"}
+{: caption="Artifactory tool integration parameters" caption-side="bottom"}

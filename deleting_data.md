@@ -228,7 +228,7 @@ The following table lists and describes each of the variables that are used in t
 | `{tool_integration_id}` | The ID of the tool integration. |
 | `{toolchain_id}` | The ID of the toolchain in which to delete the tool integration. |
 | `{token}` | A valid IAM bearer token. |
-{: caption="Table 1. Variables for deleting the {{site.data.keyword.DRA_short}} tool integration with the API" caption-side="top"}
+{: caption="Variables for deleting the {{site.data.keyword.DRA_short}} tool integration with the API" caption-side="top"}
 
 For more information about the {{site.data.keyword.DRA_short}} tool integration, see [Adding DevOps Insights](/docs/ContinuousDelivery?topic=ContinuousDelivery-dra).
 

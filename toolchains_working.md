@@ -45,7 +45,7 @@ You can use a template as a starting point to [create a toolchain](https://cloud
 
    The diagram in the following image is an example. When you create a toolchain, the diagram shows each tool integration that is part of the toolchain.
 
-   ![Toolchain diagram](images/toolchain_diagram.png){: caption="Figure 1. Sample Toolchain" caption-side="bottom"}
+   ![Toolchain diagram](images/toolchain_diagram.png){: caption="Sample Toolchain" caption-side="bottom"}
 
 1. Review the default information for the toolchain settings:
 
@@ -212,7 +212,7 @@ The following table lists and describes each of the variables that are used in t
 | `{token}` | A valid IAM bearer token. |
 | `{toolchain_description}` | A description for your toolchain. |
 | `{toolchain_name}` | A name for your toolchain. |
-{: caption="Table 1. Variables for provisioning a toolchain with the API" caption-side="top"}
+{: caption="Variables for provisioning a toolchain with the API" caption-side="top"}
 
 For more information about creating toolchains with the API, see [Create a toolchain](https://cloud.ibm.com/apidocs/toolchain#create-toolchain){: external} in the {{site.data.keyword.cloud_notm}} API Docs.
 
@@ -462,7 +462,7 @@ The following table lists and describes each of the variables that are used in t
 | `{resource_group_id}` | The ID of the resource group in which the toolchain resides. To find the IDs of the available resource groups, run `ibmcloud resource groups`. |
 | `{token}` | A valid IAM bearer token. |
 | `{toolchain_id}` | The ID of your toolchain. |
-{: caption="Table 2. Variables for viewing a toolchain with the API" caption-side="top"}
+{: caption="Variables for viewing a toolchain with the API" caption-side="top"}
 
 For more information about listing toolchains with the API and getting a toolchain with the API, see [Get a list of toolchains](https://cloud.ibm.com/apidocs/toolchain#list-toolchains){: external} and [Get a toolchain](https://cloud.ibm.com/apidocs/toolchain#get-toolchain-by-id){: external} in the {{site.data.keyword.cloud_notm}} API Docs.
 

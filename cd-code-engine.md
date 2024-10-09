@@ -88,7 +88,7 @@ Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the **Me
    The toolchain region can differ from the cluster and registry region.
    {: tip}
 
-   ![Code Engine app toolchain name and region](images/code_engine_setup_name_region.png){: caption="Figure 1. Code Engine secure app toolchain name and region" caption-side="bottom"}
+   ![Code Engine app toolchain name and region](images/code_engine_setup_name_region.png){: caption="Code Engine secure app toolchain name and region" caption-side="bottom"}
 
 1. Click **Start**.
 
@@ -97,7 +97,7 @@ Alternatively, from the {{site.data.keyword.cloud_notm}} console, click the **Me
 
 1. In the Application step, the recommended options for the application source code repo are displayed by default. To view all of the available options for the underlying Git integration, click **Advanced Options**. By default, the toolchain uses the default sample that clones the sample app as an IBM-hosted {{site.data.keyword.gitrepos}} repo.
 
-   ![Code Engine secure app repo](images/code_engine_secure_app_repository.png){: caption="Figure 2. Code Engine secure app repo" caption-side="bottom"}
+   ![Code Engine secure app repo](images/code_engine_secure_app_repository.png){: caption="Code Engine secure app repo" caption-side="bottom"}
 
    You can change the name of the app repo. The region of the repo remains the same as the region of the toolchain.
    {: tip}
@@ -122,11 +122,11 @@ Several tools within this toolchain require secrets, such as an {{site.data.keyw
 
    This tutorial uses the [IBM Secrets Manager](/docs/secrets-manager?topic=secrets-manager-getting-started) as the secrets vault.
 
-   ![Code Engine secure app secrets options](images/code_engine_setup_secrets.png){: caption="Figure 3. Code Engine secure app secrets options" caption-side="bottom"}
+   ![Code Engine secure app secrets options](images/code_engine_setup_secrets.png){: caption="Code Engine secure app secrets options" caption-side="bottom"}
 
    IBM Secrets Manager securely stores and applies secrets such as API keys, Image Signature, or HashiCorp credentials that are part of your toolchain.
 
-   ![Code Engine Secrets Manager options](images/code_engine_secrets_manager.png){: caption="Figure 4. Code Engine Secrets Manager options" caption-side="bottom"}
+   ![Code Engine Secrets Manager options](images/code_engine_secrets_manager.png){: caption="Code Engine Secrets Manager options" caption-side="bottom"}
 
 1. Click **Continue**.
 
@@ -162,7 +162,7 @@ Configure the target Code Engine project to deploy the app to. After the app pas
 
    * **Code Engine project:** The name of the project that was created in {{site.data.keyword.codeengineshort}}. Your app is deployed to this project.
 
-   ![Code Engine secure app deployment target details for Rolling or Blue-Green](images/code_engine_dep_target.png){: caption="Figure 5. Code Engine secure app rolling deployment target details" caption-side="bottom"}
+   ![Code Engine secure app deployment target details for Rolling or Blue-Green](images/code_engine_dep_target.png){: caption="Code Engine secure app rolling deployment target details" caption-side="bottom"}
 
 1. Click **Continue**.
 
@@ -185,7 +185,7 @@ On the Summary page, click **Create toolchain**. Several steps run automatically
 You can configure the individual toolchain integrations after the pipeline is created.
 {: tip}
 
-![Code Engine secure app toolchain Summary](images/code_engine_summary.png){: caption="Figure 6. Code Engine secure app toolchain summary" caption-side="bottom"}
+![Code Engine secure app toolchain Summary](images/code_engine_summary.png){: caption="Code Engine secure app toolchain summary" caption-side="bottom"}
 
 ## Explore your new toolchain
 {: #cd-explore-codeengine-toolchain}
@@ -214,7 +214,7 @@ To start the pull request pipeline, create a merge request in your app repo:
 1. On the Toolchain's Overview page, on the **Delivery pipelines** card, click the `pr-pipeline` pipeline to open the pull request pipeline dashboard. The corresponding merge request in your app repo remains in the pending state until all of the stages of the pull request pipeline successfully complete.
 1. After the pull request pipeline run succeeds, you can select it to explore the completed steps.
 
-![Pull request pipeline success](images/code_engine_explore_pr_pipeline_success.png){: caption="Figure 7. Pull request pipeline success" caption-side="bottom"}
+![Pull request pipeline success](images/code_engine_explore_pr_pipeline_success.png){: caption="Pull request pipeline success" caption-side="bottom"}
 
 To start the continuous integration pipeline, merge the continuous integration merge request in your app repo:
 
@@ -223,7 +223,7 @@ To start the continuous integration pipeline, merge the continuous integration m
 1. On the continuous integration Toolchain Overview page, on the **Delivery pipelines** card, click the `ci-pipeline` pipeline to open the continuous integration pipeline dashboard.
 1. After the continuous integration pipeline run succeeds, you can click the pipeline run to explore the completed steps.
 
-   ![Continuous integration pipeline success](images/code_engine_ci_pipeline_success.png){: caption="Figure 8. Continuous integration pipeline success" caption-side="bottom"}
+   ![Continuous integration pipeline success](images/code_engine_ci_pipeline_success.png){: caption="Continuous integration pipeline success" caption-side="bottom"}
 
 1. Expand the `deploy-component` task and click the `execute` step. Select the `Logs` tab, and scroll to the end of the log. Click the link to your deployed Code Engine app to view the running app.
 
@@ -236,7 +236,7 @@ If you want to deploy the Code Engine component (that the continuous integration
 1. Click **run pipeline** to start the `cd-manual-run` trigger.
 1. After the continuous deployment pipeline run succeeds, you can click the pipeline run to explore the completed steps.
 
-   ![Continuous deployment pipeline success](images/code_engine_cd_pipeline_success.svg){: caption="Figure 9. Continuous deployment pipeline success" caption-side="bottom"}
+   ![Continuous deployment pipeline success](images/code_engine_cd_pipeline_success.svg){: caption="Continuous deployment pipeline success" caption-side="bottom"}
 
 1. Expand the **deploy-component** task and click the **execute** step. Click the **Logs** tab, and scroll to the end of the log. Click the link to your deployed Code Engine app to view the running app.
 

@@ -62,7 +62,7 @@ To run the SonarQube scan, the pipeline needs the following continuous integrati
 |dev-region		|text		|The {{site.data.keyword.cloud_notm}} region that hosts the cluster.			|Required			|
 |opt-in-sonar		|text 		|The option to enable the sonarQube scan.		|Required			|
 |sonarqube		|tool integration		|The Sonarqube tool integration.	|Optional			|
-{: caption="Table 1. Continuous integration pipeline parameters}
+{: caption="Continuous integration pipeline parameters}
 
 For more information about pipelines parameters, see [Pipeline parameters](/docs/devsecops?topic=devsecops-cd-devsecops-pipeline-parm).
 
@@ -76,7 +76,7 @@ If you use the SonarQube instance that the pipeline created, you can update the 
 
 1. Go to the SonarQube dashboard that was created by the URL from the pipeline logs in the `static-scan` task. 
 
-   ![SonarQube dashboard](images/sonar-quality-gate.png){: caption="Figure 1. SonarQube dashboars" caption-side="bottom"}
+   ![SonarQube dashboard](images/sonar-quality-gate.png){: caption="SonarQube dashboars" caption-side="bottom"}
 
 1. Click **Quality Gates** > **Create**. 
 1. Set your Quality Gate by using one of the following options:
@@ -116,4 +116,4 @@ You must specify the `tool_type_id` property in the request body with the `sonar
 | name | required, updatable | String | name | The name of this tool integration. |
 | user_login | optional, updatable | String | user_login | The user ID for authenticating with the SonarQube server. |
 | user_password | optional, updatable | Password | user_password | The password or token to authenticate with the SonarQube server. You can use a toolchain secrets reference for this parameter. For more information about secrets references, see [Protecting your sensitive data in {{site.data.keyword.contdelivery_short}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_data_security#cd_secure_credentials). |
-{: caption="Table 1. SonarQube tool integration parameters" caption-side="bottom"}
+{: caption="SonarQube tool integration parameters" caption-side="bottom"}

@@ -74,7 +74,7 @@ The command supports the following `type` values:
 | `staticsecurityscan`  | Static security scan results from IBM Application Security on Cloud  |
 | `dynamicsecurityscan` | Dynamic security scan results from IBM Application Security on Cloud |
 | `vulnerabilityadvisor`| Vulnerability Advisor results from IBM Vulnerability Advisor on Cloud|
-{: caption="Table 1. Test record types" caption-side="top"}
+{: caption="Test record types" caption-side="top"}
 
 
 Test records must provide data in one of the following supported formats:
@@ -88,7 +88,7 @@ Test records must provide data in one of the following supported formats:
 | Static AppScan              | Static App Scans that are provided by IBM Application Security on Cloud  |
 | Dynamic AppScan             | Dynamic App Scans that are provided by IBM Application Security on Cloud |
 | Vulnerability Advisor Results| Vulnerability Advisor results from IBM Vulnerability Advisor on Cloud    |
-{: caption="Table 2. Supported formats" caption-side="top"}
+{: caption="Supported formats" caption-side="top"}
 
 
 ## Viewing test results

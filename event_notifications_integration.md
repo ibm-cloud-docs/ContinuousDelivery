@@ -53,7 +53,7 @@ You must specify the `tool_type_id` property in the request body with the `event
 | --- | --- | --- | --- | --- |
 | name | required, updatable | String | name | The name of this tool integration. |
 | instance-crn  | required, updatable | String | instance_crn | The Cloud Resource Name (CRN) of the {{site.data.keyword.en_short}} service instance. |
-{: caption="Table 1. {{site.data.keyword.en_short}} tool integration parameters" caption-side="bottom"}
+{: caption="{{site.data.keyword.en_short}} tool integration parameters" caption-side="bottom"}
 
 ## Enabling notifications for Tekton Pipelines
 {: #event_notifications_tekton_pipelines}

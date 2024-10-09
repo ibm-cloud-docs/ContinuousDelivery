@@ -39,4 +39,4 @@ In the event that a region becomes unavailable, you can use {{site.data.keyword.
 | Tokyo            |  Osaka |
 | Toronto          | Washington|
 | Washington       | Dallas |
-{: caption="Table 1. Regions and suggested alternates" caption-side="top"}
+{: caption="Regions and suggested alternates" caption-side="top"}

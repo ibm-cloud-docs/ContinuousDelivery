@@ -35,7 +35,7 @@ The following table showed a list of supported tests and formats.
 | Dynamic Security Scan         | Dynamic Security Scan | {{site.data.keyword.Bluemix}} Application Security (xml)   |
 | Static Security Scan          | Static Security Scan  | {{site.data.keyword.Bluemix}} Application Security (xml)   |
 | Vulnerability Advisor         | Vulnerability Advisor | Vulnerability Advisor (JSON)                               |
-{: caption="Table 1. Default {{site.data.keyword.DRA_short}} data sets" caption-side="top"}
+{: caption="Default {{site.data.keyword.DRA_short}} data sets" caption-side="top"}
 
 
 ## Uploading test case results
