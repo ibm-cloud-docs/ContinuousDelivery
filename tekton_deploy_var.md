@@ -136,10 +136,9 @@ Users can specify a label on their tasks to indicate whether a task requires mor
 
 To indicate which VM profile to apply to a specific task within a Tekton pipeline, add the `runtimeClassName` label to the task with one of the following VM values. If no label is provided, the default VM profile is used.
 
-* `kata-tiny`: 128Mi
-* `kata-small`: 2Gi
-* `kata-medium`: 4Gi (default)
-* `kata-large`: 8Gi 
+* `small`: 2Gi
+* `medium`: 4Gi (default)
+* `large`: 8Gi 
 
 For example:
 
@@ -149,7 +148,7 @@ kind: Task
 metadata:
   name: task1
   labels:
-    runtimeClassName: kata-tiny
+    runtimeClassName: medium
     and so on.
 ``` 
 
@@ -168,7 +167,7 @@ spec:
   taskRunSpecs:
     - pipelineTaskName: task1
       taskPodTemplate:
-        runtimeClassName: kata-tiny
+        runtimeClassName: medium
 ```
 
 
