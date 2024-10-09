@@ -7,8 +7,6 @@ toc:
     category: dev_ops
     audience: service
     href: /docs/ContinuousDelivery
-    console-page: "/devops/toolchains"
-    product-page: "https://www.ibm.com/products/continuous-delivery"
     path: ContinuousDelivery
     label: Continuous Delivery
   entries: 

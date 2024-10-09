@@ -34,6 +34,9 @@ When you configure the {{site.data.keyword.secrets-manager_short}} tool integrat
 * Arbitrary secrets that are stored in the {{site.data.keyword.secrets-manager_short}}.
 * Key-value secrets.
 
+References to secrets **by name** are currently not able to resolve a secret that includes the period character in the secret name because this character is used to delimit each section of the canonical path.
+{: note}
+
 For more information about IAM credentials secrets, Arbitrary secrets and Key-value secrets in {{site.data.keyword.secrets-manager_short}}, see [Working with secrets of different types](/docs/secrets-manager?topic=secrets-manager-what-is-secret#secret-types).
 
 Configure {{site.data.keyword.secrets-manager_short}} to securely manage secrets that are part of your toolchain:
