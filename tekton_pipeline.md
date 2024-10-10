@@ -218,9 +218,9 @@ You can configure triggers for Tekton pipelines based on various events in your 
 1. `Pattern`: Trigger the pipeline based on a glob match against tags and branch names in the selected repo when the specified event occurs.
 1. `CEL filter`: Trigger the pipeline when the event matches the provided Common Expression Language (CEL) filter.
 
-The `Branch` and `Pattern` options filter events by selecting check boxes that you can use to specify events such as `commit push`, `pull request opened`, `updated`, or `closed`. Also, you can specify pull request events by selecting the `Exclude draft pull requests` filtering feature to prevent pipeline triggers for draft pull requests. Or, you can select the `Label filters` filtering feature to allow filtering based on pull request labels according to user-defined criteria in the filters table.
+The `Branch` and `Pattern` options filter events by selecting checkboxes that you can use to specify events such as `commit push`, `pull request opened`, `updated`, or `closed`. Also, you can specify pull request events by switching the `Include draft pull request events` filtering feature to allow or skip pipeline triggers for draft pull requests. Similarly, you can specify if you want to allow pipeline triggers for pull requests from forked repositories through the `Include draft pull request events` toggle. Or, you can select the `Label filters` filtering feature to allow filtering based on pull request labels according to user-defined criteria in the filters table.
 
-The `CEL filter` option supports more advanced use cases, such as matching against other fields in the event payload. This option currently supports only the pull request and push events. The `CEL filter` is also available as an optional feature on the Generic Webhook trigger to provide event filtering against the webhook payload. 
+The `CEL filter` option supports more advanced use cases, such as matching against other fields in the event payload. This option supports push events, all pull request events, issues events, issue comments events, as well as release events. The `CEL filter` is also available as an optional feature on the Generic Webhook trigger to provide event filtering based on the webhook payload. 
 
 #### CEL overview
 {: #cel_overview}
@@ -260,7 +260,8 @@ Complete the following steps to convert your existing event filtering selection 
      
    * Branch or Pattern
    * Events, such as `commit push`, `pull request opened`, `updated`, and `closed`
-   * Exclude draft pull requests
+   * Include draft pull request events
+   * Include pull request events from forks
    * Label filters
 
    ![CEL filter conversion](images/cel_filter_conversion.png){: caption="CEL filter conversion" caption-side="bottom"}
@@ -293,21 +294,59 @@ Run when a commit is pushed to the specified branch:
    header['x-github-event'] == 'push' && body.ref == 'refs/heads/main'
 ```
 
+Run when a comment containing the specified string is added to a pull request:
+
+```text
+   header['x-github-event'] == 'issue_comment' && 
+      body.action == 'created' && has(body.issue.pull_request) &&
+      body.comment.body.contains('/lgtm')
+```
+{: codeblock}
+
+Run when an issue is created with the specified label:
+
+```text
+   header['x-github-event'] == 'issues' && 
+      body.action == 'opened' && 
+      body.issue.labels.exists(label, label.name == 'urgent')
+```
+{: codeblock}
+
 **GitLab examples**:
 
-Run when a pull request is opened or updated against the specified branch:
+Run when a merge request is opened or updated against the specified branch:
 
 ```text
    header['x-gitlab-event'] == 'Merge Request Hook' && 
-      (body.object_attributes.action === 'open' || body.object_attributes.action === 'update') && 
+      (body.object_attributes.action == 'open' || body.object_attributes.action == 'update') && 
       body.object_attributes.target_branch == 'main'
 ```
-      
+{: codeblock}
+
 Run when a commit is pushed to the specified branch:
 
 ```text
    header['x-gitlab-event'] == 'Push Hook' && body.ref == 'refs/heads/main'
 ```
+
+Run when a comment containing the specified string is added to a merge request:
+
+```text
+   header['x-gitlab-event'] == 'Note Hook' && 
+      body.object_attributes.noteable_type == 'MergeRequest' && 
+      body.object_attributes.action == 'create' &&
+      body.object_attributes.note.contains('/lgtm')
+```
+{: codeblock}
+
+Run when an issue is created with the specified label:
+
+```text
+   header['x-gitlab-event'] == 'Issue Hook' && 
+      (body.object_attributes.action == 'open') && 
+      body.object_attributes.labels.exists(label, label.name == 'urgent')
+```
+{: codeblock}
 
 **BitBucket examples**:
 
@@ -324,6 +363,21 @@ Run when a commit is pushed to the specified branch:
    header['x-event-key'] == 'repo:push' && body.push.changes[0].new.name == 'main'
 ```
 
+Run when a comment containing the specified string is added to a pull request:
+
+```text
+   header['x-event-key'] == 'pullrequest:comment_created' && 
+      body.comment.content.raw.contains('/lgtm')
+```
+{: codeblock}
+
+Run when an issue is created with the specified label:
+
+```text
+   header['x-event-key'] == 'issue:created' && 
+      body.issue.kind == 'bug'
+```
+{: codeblock}
 #### Checking the event payload
 {: #checking_event_payload}
 
