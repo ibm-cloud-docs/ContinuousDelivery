@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2024
-lastupdated: "2024-07-26"
+lastupdated: "2024-10-11"
 
 keywords: Tekton integration, delivery pipeline, Tekton delivery pipeline
 
@@ -378,6 +378,7 @@ Run when an issue is created with the specified label:
       body.issue.kind == 'bug'
 ```
 {: codeblock}
+
 #### Checking the event payload
 {: #checking_event_payload}
 
